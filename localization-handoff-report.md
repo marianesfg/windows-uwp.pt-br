@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\networking\websockets.md](https://github.com/Microsoft/windows-apps/blob/f07518dd19f9940d2f1d3d18d47f3f5a4ab6d989/windows-apps-src/networking/websockets.md) | HandedOffSuccess | [Details](#6a1a57d46ec79d433686536c42327441f82ec11c3158)
+ [windows-apps-src\publish\app-management-and-services.md](https://github.com/Microsoft/windows-apps/blob/4063868fe9b77e1d8c5c2d8cec978017f9cfa980/windows-apps-src/publish/app-management-and-services.md) | HandedOffSuccess | [Details](#5efd82cf351c06b1753d492020c43153fe21de8a3268)
 
 ## Item Details
-##### <a name='6a1a57d46ec79d433686536c42327441f82ec11c3158'></a> Source: [windows-apps-src\networking\websockets.md](https://github.com/Microsoft/windows-apps/blob/f07518dd19f9940d2f1d3d18d47f3f5a4ab6d989/windows-apps-src/networking/websockets.md)
+##### <a name='5efd82cf351c06b1753d492020c43153fe21de8a3268'></a> Source: [windows-apps-src\publish\app-management-and-services.md](https://github.com/Microsoft/windows-apps/blob/4063868fe9b77e1d8c5c2d8cec978017f9cfa980/windows-apps-src/publish/app-management-and-services.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [websockets.db78d3487abb889cd595e917ef5a96f0484317ac.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/0b3183a6ba4da8794b818f46854bc10fd2f32b6f/ol-handoff/Microsoft/windows-apps.pt-br/master/websockets.db78d3487abb889cd595e917ef5a96f0484317ac.pt-br.xlf)
-* Handoff Datetime: 2016-03-15 17:57:15
+* Handoff File: [app-management-and-services.b0c3ca5f50e4a0a78cd617e3ebf34e7abb400b02.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/2880d40c371a44ead1f6a8bd3cea11c3e42b1ede/ol-handoff/Microsoft/windows-apps.pt-br/master/app-management-and-services.b0c3ca5f50e4a0a78cd617e3ebf34e7abb400b02.pt-br.xlf)
+* Handoff Datetime: 2016-03-15 19:54:53
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
