@@ -1,19 +1,32 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/68a7e100ec90cc4728aaa1896b87fa1a13dfb848/windows-apps-src/gaming/e2e.md) | HandedOffSuccess | [Details](#af5243a21500abd36f4af9c26c021b999d9a0eba2052)
+ [windows-apps-src\audio-video-camera\custom-video-effects.md](https://github.com/Microsoft/windows-apps/blob/fa583bb3cadd7c7b86856e39d940cdbafe305ce5/windows-apps-src/audio-video-camera/custom-video-effects.md) | HandedOffSuccess | [Details](#a3f5e78af3f3b7ace06d0cc5eff22b9b5d5fc05a458)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/fa583bb3cadd7c7b86856e39d940cdbafe305ce5/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#6e79f94a49e1a61f99eb947a1ba34cb09a40145e3631)
 
 ## Item Details
-##### <a name='af5243a21500abd36f4af9c26c021b999d9a0eba2052'></a> Source: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/68a7e100ec90cc4728aaa1896b87fa1a13dfb848/windows-apps-src/gaming/e2e.md)
+##### <a name='a3f5e78af3f3b7ace06d0cc5eff22b9b5d5fc05a458'></a> Source: [windows-apps-src\audio-video-camera\custom-video-effects.md](https://github.com/Microsoft/windows-apps/blob/fa583bb3cadd7c7b86856e39d940cdbafe305ce5/windows-apps-src/audio-video-camera/custom-video-effects.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/21855959a9f5332b38921f2decb335a75f28861e/ol-handoff/Microsoft/windows-apps.pt-br/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.pt-br.xlf)
-* Handoff Datetime: 2016-04-04 20:24:39
+* Handoff File: [custom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/cfc47e4537e3b3f40fa1abc5ae2ffaeff4470745/ol-handoff/Microsoft/windows-apps.pt-br/master/custom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.pt-br.xlf)
+* Handoff Datetime: 2016-04-04 20:52:29
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='6e79f94a49e1a61f99eb947a1ba34cb09a40145e3631'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/fa583bb3cadd7c7b86856e39d940cdbafe305ce5/windows-apps-src/TOC.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/cfc47e4537e3b3f40fa1abc5ae2ffaeff4470745/ol-handoff/Microsoft/windows-apps.pt-br/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf)
+* Handoff Datetime: 2016-04-04 20:52:29
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
