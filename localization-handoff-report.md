@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/f4ab3610a3ad3df90e06fd2f23e8244ce8449916/windows-apps-src/packaging/app-capability-declarations.md) | OutofSyncHandedBackSuccess | [Details](#c1819ddc1e6335b225fcc0e38a40dcb4c9eaf7203255)
+ [windows-apps-src\devices-sensors\enumerate-devices-over-a-network.md](https://github.com/Microsoft/windows-apps/blob/6eca7156c8f81a9a89e006c09a232a255f3a8725/windows-apps-src/devices-sensors/enumerate-devices-over-a-network.md) | OutofSyncHandedBackSuccess | [Details](#9d2d58f2423688f895da1de56eef6448bb42692d1991)
 
 ## Item Details
-##### <a name='c1819ddc1e6335b225fcc0e38a40dcb4c9eaf7203255'></a> Source: [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/f4ab3610a3ad3df90e06fd2f23e8244ce8449916/windows-apps-src/packaging/app-capability-declarations.md)
+##### <a name='9d2d58f2423688f895da1de56eef6448bb42692d1991'></a> Source: [windows-apps-src\devices-sensors\enumerate-devices-over-a-network.md](https://github.com/Microsoft/windows-apps/blob/6eca7156c8f81a9a89e006c09a232a255f3a8725/windows-apps-src/devices-sensors/enumerate-devices-over-a-network.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/1d5396e5bf8d3590b5e13505fefc6271f9fb0a8a/ol-handoff/Microsoft/windows-apps.pt-br/master/app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.pt-br.xlf)
-* Handoff Datetime: 2016-04-15 18:16:59
+* Handoff File: [enumerate-devices-over-a-network.389d6d6a3fd86f8097e453e300c1ae4c6a425044.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/26ac9f0bfd56ad3488ecf8b141f1c2f6be3093b4/ol-handoff/Microsoft/windows-apps.pt-br/master/enumerate-devices-over-a-network.389d6d6a3fd86f8097e453e300c1ae4c6a425044.pt-br.xlf)
+* Handoff Datetime: 2016-04-15 21:16:16
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps.pt-br/blob/149c863f61fcc324db3e3dea8782e6276b20d1c2/windows-apps-src/packaging/app-capability-declarations.md)
-* Current Handback File: [app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/18f7494fe80578448c47b9ba618e4f4ad7301261/ol-handback/Microsoft/windows-apps.pt-br/master/app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.pt-br.xlf)
+* Current Target File: [windows-apps-src\devices-sensors\enumerate-devices-over-a-network.md](https://github.com/Microsoft/windows-apps.pt-br/blob/149c863f61fcc324db3e3dea8782e6276b20d1c2/windows-apps-src/devices-sensors/enumerate-devices-over-a-network.md)
+* Current Handback File: [enumerate-devices-over-a-network.389d6d6a3fd86f8097e453e300c1ae4c6a425044.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/18f7494fe80578448c47b9ba618e4f4ad7301261/ol-handback/Microsoft/windows-apps.pt-br/master/enumerate-devices-over-a-network.389d6d6a3fd86f8097e453e300c1ae4c6a425044.pt-br.xlf)
 * Current Handback Datetime: 2016-04-15 12:23:25
 * [Back to Top](#report-top)
 
