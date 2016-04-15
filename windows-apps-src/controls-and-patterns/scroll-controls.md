@@ -18,13 +18,13 @@ Um controle do visualizador de rolagem é composto de tanto conteúdo quanto cab
 
 **Observação**  Windows: existem dois modos de exibição do movimento panorâmico baseados no dispositivo de entrada detectado: os indicadores de movimento panorâmico para toque e as barras de rolagem para outros dispositivos de entrada, que incluem mouse, touchpad, teclado e caneta.
 
-![Uma amostra da aparência dos controles de barra de rolagem e indicador de movimento panorâmico](images/SCROLLBAR.png)
+![Uma amostra da aparência dos controles de barra de rolagem e indicador de movimento panorâmico](images/Scrollbar.png)
 
 ## Exemplos
 
 Um [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx) permite que o conteúdo seja exibido em uma área menor que o tamanho real. Quando o conteúdo do visualizador de rolagem não é totalmente visível, esse visualizador mostra barras de rolagem que o usuário pode usar para mover a área de conteúdo que está visível. A área que inclui todo o conteúdo do visualizador de rolagem é a *extensão*. A área visível do conteúdo é o *visor*.
 
-![Uma captura de tela que ilustra o controle de barra de rolagem padrão](images/ScrollBar_Standard.jpg)
+![Uma captura de tela que ilustra o controle de barra de rolagem padrão](images/Scrollbar_Standard.jpg)
 
 ## Criar um visualizador de rolagem
 

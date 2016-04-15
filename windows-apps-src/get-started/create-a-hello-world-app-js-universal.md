@@ -435,7 +435,7 @@ Adicione um controle [**Rating**](https://msdn.microsoft.com/library/windows/app
 
 2.  Execute o aplicativo no computador local. Observe o novo controle [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895).
 
-   ![O aplicativo "Hello, world" com um controle de Biblioteca do Windows para JavaScript](images/helloworld-4-JS.png)
+   ![O aplicativo "Hello, world" com um controle de Biblioteca do Windows para JavaScript](images/helloworld-4-js.png)
 
 Agora, clicar no controle de [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) altera a classificação, mas não faz mais nada. Vamos usar um manipulador de eventos para fazer algo quando o usuário altera a classificação.
 

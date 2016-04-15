@@ -46,7 +46,7 @@ Para criar um painel de navegação sem o controle de modo divisão, serão nece
 
 O botão do painel de navegação é visualizado, por padrão, como três linhas horizontais empilhadas e é conhecido como o botão "hambúrguer". O botão permite ao usuário abrir e fechar o painel quando necessário e não se move com o painel. Recomendamos colocar o botão no canto superior esquerdo do seu aplicativo. O botão não se move com o painel.
 
-![Exemplo de botão do painel de navegação](images/NAVPANE_BUTTONONLY.png)
+![Exemplo de botão do painel de navegação](images/navpane_buttononly.png)
 
 O botão geralmente está associado a uma cadeia de caracteres de texto. No nível superior do aplicativo, o título do aplicativo pode ser exibido ao lado do botão. Em níveis inferiores do aplicativo, a cadeia de caracteres de texto pode ser associada à página em que o usuário está no momento.
 
@@ -54,7 +54,7 @@ O botão geralmente está associado a uma cadeia de caracteres de texto. No nív
 
 Cabeçalhos para categorias de navegação entram no painel. Pontos de entrada para as configurações do aplicativo e o gerenciamento de contas, se aplicáveis, também entram no painel. Os cabeçalhos de navegação podem ser de nível superior ou ficar aninhados no nível superior/segundo nível.
 
-![Exemplo de painel do painel de navegação](images/NAVPANE_PANE.png)
+![Exemplo de painel do painel de navegação](images/navpane_pane.png)
 
 ### <span id="Content_area"></span><span id="content_area"></span><span id="CONTENT_AREA"></span>Área de conteúdo
 

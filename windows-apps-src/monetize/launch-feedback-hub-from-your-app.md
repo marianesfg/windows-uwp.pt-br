@@ -51,7 +51,7 @@ private async void feedbackButton_Click(object sender, RoutedEventArgs e)
 
 Para iniciar o Hub de Feedback, recomendamos que você adicione um elemento de interface do usuário em seu aplicativo (por exemplo, um botão) que exiba o seguinte ícone de feedback padrão da fonte Segoe MDL2 Assets e o código de caractere E939.
 
-![]Feedback icon](images/feedback_icon.png)
+![]Feedback icon](images/feedback_icon.PNG)
 
 Também recomendamos que você use uma ou mais das seguintes opções de posicionamento para vinculação ao Hub de Feedback em seu aplicativo.
 * **Diretamente na barra de aplicativos**. Dependendo de sua implementação, convém usar apenas o ícone ou adicionar texto (como mostrado abaixo).

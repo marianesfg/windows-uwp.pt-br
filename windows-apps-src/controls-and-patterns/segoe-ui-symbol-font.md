@@ -188,7 +188,7 @@ Além disso, tenha em mente que a fonte **Segoe MDL2 Assets** inclui muito mais 
 | U+E008 | ![checkmarkzerowidthlegacy](images/checkmarkzerowidthlegacy.png)               | CheckMarkZeroWidthLegacy        | Marca de seleção (largura zero) |
 | U+E009 | ![checkboxfillzerowidthlegacy](images/checkboxfillzerowidthlegacy.png)         | CheckboxFillZeroWidthLegacy     | Preenchimento (largura zero)       |
 | U+E0A2 | ![checkboxcompositelegacy](images/checkboxcompositelegacy.png)                 | CheckboxCompositeLegacy         | Composição               |
-| U+E739 | ![caixa de seleção](images/checkbox.png)                                               | Caixa de seleção                        | Caixa de seleção                |
+| U+E739 | ![caixa de seleção](images/Checkbox.png)                                               | Caixa de seleção                        | Caixa de seleção                |
 | U+E73A | ![checkboxcomposite](images/checkboxcomposite.png)                             | CheckboxComposite               | Caixa de seleção composta      |
 | U+E73B | ![checkboxfill](images/checkboxfill.png)                                       | CheckboxFill                    | Caixa de seleção preenchida         |
 | U+E73C | ![checkboxindeterminate](images/checkboxindeterminate.png)                     | CheckboxIndeterminate           | Estado indeterminado     |

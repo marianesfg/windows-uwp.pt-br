@@ -278,7 +278,7 @@ O Visual Studio inicia o emulador selecionado e, em seguida, implanta e inicia o
 ## Etapa 2: crie um manipulador de eventos
 
 1.  No MainPage.xaml, no modo de exibição XAML ou de design, selecione o [**Botão**](https://msdn.microsoft.com/library/windows/apps/BR209265) "Diga "Olá" no [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635) que você adicionou anteriormente.
-2.  Abra a **Janela Propriedades** pressionando Alt+Enter e, em seguida, escolha o botão Eventos (![botão Eventos](IMAGES/EVENTSBUTTON.png)).
+2.  Abra a **Janela Propriedades** pressionando Alt+Enter e, em seguida, escolha o botão Eventos (![botão Eventos](images/eventsbutton.png)).
 3.  Encontre o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737). Na caixa de texto dele, digite o nome da função que manipula o evento **Click**. Para este exemplo, digite "Button\_Click".
 
 ![Janela Propriedades, exibição de Eventos](images/xaml-hw-event.png)
@@ -350,7 +350,7 @@ No momento, no aplicativo do Windows, o texto está muito pequeno e difícil de 
 
 1.  No projeto do Windows, abra MainPage.xaml.
 2.  No modo de exibição XAML ou de design, selecione o [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) "Qual é o seu nome?" que você adicionou previamente.
-3.  Na janela **Propriedades** (**F4**), selecione o botão Propriedades (![botão Propriedades](IMAGES/PROPERTIESBUTTON.png)) na parte superior direita.
+3.  Na janela **Propriedades** (**F4**), selecione o botão Propriedades (![botão Propriedades](images/propertiesbutton.png)) na parte superior direita.
 4.  Expanda o grupo **Texto** e defina o tamanho da fonte como 18 px.
 5.  Expanda o grupo **Diversos** e localize a propriedade **Estilo**.
 6.  Clique no marcador de propriedade (caixa verde à direita da propriedade **Estilo**), em seguida, no menu, selecione **Recurso do Sistema** > **BaseTextBlockStyle**.
