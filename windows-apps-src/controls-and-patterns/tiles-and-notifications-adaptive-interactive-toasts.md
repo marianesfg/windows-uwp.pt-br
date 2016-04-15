@@ -1,0 +1,647 @@
+---
+Description: As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional.
+title: Notificações do sistema interativas e adaptáveis
+ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
+label: Notificações do sistema interativas e adaptáveis
+template: detail.hbs
+---
+
+# Notificações do sistema interativas e adaptáveis
+
+
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
+
+As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional.
+
+O modelo de notificações do sistema interativas e adaptáveis tem estas atualizações sobre o catálogo de modelos de notificação do sistema herdados:
+
+-   A opção de incluir botões e entradas nas notificações.
+-   Três tipos diferentes de ativação para a notificação do sistema principal e para cada ação.
+-   A opção para criar uma notificação para determinados cenários, inclusive alarmes, lembretes e chamadas de entrada.
+
+**Observação**   Para ver os modelos herdados do Windows 8.1 e Windows Phone 8.1, consulte o [catálogo de modelos de notificação do sistema herdados](https://msdn.microsoft.com/library/windows/apps/hh761494).
+
+ 
+
+## <span id="toast_structure"></span><span id="TOAST_STRUCTURE"></span>Estrutura de notificação do sistema
+
+
+Notificações do sistema são construídas usando XML, que normalmente contém estes elementos-chave:
+
+-   &lt;visual&gt; abrange o conteúdo disponível para que os usuários vejam visualmente, incluindo texto e imagens
+-   &lt;actions&gt; contém botões/entradas que o desenvolvedor quer adicionar dentro da notificação
+-   &lt;audio&gt; especifica o som reproduzido quando a notificação aparece
+
+Este é um exemplo de código:
+
+```XML
+<toast launch="app-defined-string">
+  <visual>
+    <binding template="ToastGeneric">
+      <text>Sample</text>
+      <text>This is a simple toast notification example</text>
+      <image placement="AppLogoOverride" src="oneAlarm.png" />
+    </binding>
+  </visual>
+  <actions>
+    <action content="check" arguments="check" imageUri="check.png" />
+    <action content="cancel" arguments="cancel" />
+  </actions>
+  <audio src="ms-winsoundevent:Notification.Reminder"/>
+</toast>
+```
+
+E uma representação visual da estrutura:
+
+![estrutura de notificação do sistema](images/adaptivetoasts-structure.jpg)
+
+### <span id="Visual"></span><span id="visual"></span><span id="VISUAL"></span>Visual
+
+Dentro do elemento visual, você deve ter exatamente um elemento de associação que contém o conteúdo visual da notificação do sistema.
+
+As notificações de bloco em aplicativos da Plataforma Universal do Windows (UWP) oferecem suporte a vários modelos que são baseados em diferentes tamanhos de bloco. As notificações do sistema, no entanto, têm apenas um nome de template: **ToastGeneric**. Ter apenas o nome de um modelo significa:
+
+-   Você pode alterar o conteúdo da notificação do sistema, como adicionar outra linha de texto, adicionar uma imagem embutida ou alterar a imagem em miniatura de exibição do ícone do aplicativo para outra coisa, e fazer qualquer uma dessas coisas sem se preocupar com a alteração do modelo inteiro ou a criação de uma carga inválida devido a uma discrepância entre o nome do modelo e o conteúdo.
+-   Você pode usar o mesmo código para construir a mesma carga para a **notificação do sistema** voltada para a entrega a diferentes tipos de dispositivos Microsoft Windows, incluindo telefones, tablets, computadores e Xbox One. Cada um desses dispositivos aceitará a notificação e a exibirá para o usuário em suas políticas de interface do usuário com as funcionalidades visuais apropriadas e o modelo de interação.
+
+Para todos os atributos com suporte na seção visual e seus elementos filho, consulte a seção Esquema abaixo. Para obter mais exemplos, consulte a seção Exemplos de XML abaixo.
+
+### <span id="Actions"></span><span id="actions"></span><span id="ACTIONS"></span>Ações
+
+Em aplicativos UWP, você pode adicionar botões e outras entradas às suas notificações do sistema, o que permite aos usuários fazer mais fora do aplicativo. Essas ações são especificadas no elemento &lt;actions&gt;, do qual há dois tipos que você pode especificar:
+
+-   &lt;action&gt; Isso aparece como um botão em dispositivos móveis e desktop. É possível especificar até cinco ações do sistema ou personalizadas dentro de uma notificação do sistema.
+-   &lt;input&gt; Isso permite que os usuários forneçam entrada, como responder rapidamente a uma mensagem ou selecionar uma opção em um menu suspenso.
+
+&lt;action&gt; e &lt;input&gt; são adaptáveis na família de dispositivos Windows. Por exemplo, em dispositivos móveis ou desktop, uma &lt;action&gt; para um usuário é um botão no qual tocar/clicar. Uma &lt;input&gt; de texto é uma caixa em que os usuários podem inserir texto usando um teclado físico ou virtual. Esses elementos também se adaptam a cenários de interação futuros, como uma ação anunciada por voz ou uma entrada de texto gerada por ditado.
+
+Quando uma ação é executada pelo usuário, você pode executar um destes procedimentos especificando o atributo [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) dentro do elemento &lt;action&gt;:
+
+-   Ativar o aplicativo em primeiro plano, com um argumento de ação específica que pode ser usado para navegar até uma página/um contexto específica(o).
+-   Ativar a tarefa em segundo plano do aplicativo sem afetar o usuário.
+-   Ativar outro aplicativo por meio da inicialização de protocolo.
+-   Especificar uma ação do sistema para executar. As atuais ações do sistema disponíveis são adiar e ignorar o alarme/lembrete agendado, o que será explicado com mais detalhes em uma seção abaixo.
+
+Para todos os atributos com suporte na seção visual e seus elementos filho, consulte a seção Esquema abaixo. Para obter mais exemplos, consulte a seção Exemplos de XML abaixo.
+
+### <span id="Audio"></span><span id="audio"></span><span id="AUDIO"></span>Áudio
+
+Sons personalizados atualmente não têm suporte em aplicativos UWP destinados à plataforma de área de trabalho; em vez disso, você pode escolher na lista de ms-winsoundevents para seu aplicativo na área de trabalho. Os aplicativos UWP em plataformas móveis permitem os dois ms-winsoundevents, juntamente com sons personalizados nestes formatos:
+
+-   ms-appx:///
+-   ms-appdata:///
+
+Consulte a [página de esquema de áudio](https://msdn.microsoft.com/library/windows/apps/br230842) para obter informações sobre áudio em notificações do sistema, que inclui uma lista completa de ms-winsoundevents.
+
+## <span id="Alarms__reminders__and_incoming_calls"></span><span id="alarms__reminders__and_incoming_calls"></span><span id="ALARMS__REMINDERS__AND_INCOMING_CALLS"></span>Alarmes, lembretes e chamadas de entrada
+
+
+Você pode usar notificações do sistema para alarmes, lembretes e chamadas de entrada. Essas notificações especiais têm uma aparência que é consistente com as notificações do sistema padrão, apesar de as notificações do sistema especiais apresentarem alguns padrões e IU personalizados com base em cenário:
+
+-   Uma notificação do sistema de lembrete permanecerá na tela até que o usuário a ignore ou execute uma ação. No Windows Mobile, as notificações do sistema de lembrete também aparecerão pré-expandidas.
+-   Além de compartilhar os comportamentos acima com notificações de lembrete, as notificações de alarme também reproduzem automaticamente o áudio em loop.
+-   As notificações de chamadas de entrada são exibidas em tela inteira em dispositivos Windows Mobile. Isso é feito especificando o atributo scenario dentro do elemento raiz de uma notificação do sistema – &lt;toast&gt;:
+    &lt;toast scenario=" { default | alarm | reminder | incomingCall } " &gt;
+
+## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>Exemplos de XML
+
+
+**Observação**  As capturas de tela de notificação do sistema para estes exemplos foram tiradas de um aplicativo na área de trabalho. Em dispositivos móveis, uma notificação do sistema pode estar recolhida quando aparece, com um elemento na parte inferior da notificação do sistema para expandi-la.
+
+ 
+
+**Notificação com conteúdo visual avançado**
+
+Este exemplo mostra como você pode ter várias linhas de texto, uma pequena imagem opcional para substituir o logotipo do aplicativo e uma miniatura da imagem embutida opcional.
+
+```XML
+<toast launch="app-defined-string">
+  <visual>
+<binding template="ToastGeneric">
+    <text>Photo Share</text>
+      <text>Andrew sent you a picture</text>
+      <text>See it in full size!</text>
+      <image placement="appLogoOverride" src="A.png" />
+    <image placement="inline" src="hiking.png" />
+    </binding>
+  </visual>
+</toast>
+```
+
+![notificação com conteúdo visual avançado](images/adaptivetoasts-xmlsample01.png)
+
+ 
+
+**Notificação com ações, exemplo 1**
+
+Este exemplo mostra...
+
+```XML
+<toast launch="app-defined-string">
+  <visual>
+    <binding template="ToastGeneric">
+      <text>Microsoft Company Store</text>
+      <text>New Halo game is back in stock!</text>
+      <image placement="appLogoOverride" src="A.png" />
+    </binding>
+  </visual>
+  <actions>
+    <action activationType="foreground" content="see more details" arguments="details" imageUri="check.png"/>
+    <action activationType="background" content="remind me later" arguments="later" imageUri="cancel.png"/>
+  </actions>
+</toast>
+```
+
+![notificação com ações, exemplo 1](images/adaptivetoasts-xmlsample02.png)
+
+ 
+
+**Notificação com ações, exemplo 2**
+
+Este exemplo mostra...
+
+```XML
+<toast launch="app-defined-string">
+  <visual>
+    <binding template="ToastGeneric">
+      <text>Cortana</text>
+      <text>We noticed that you are near Wasaki.</text>
+      <text>Thomas left a 5 star rating after his last visit, do you want to try?</text>
+      <image placement="appLogoOverride" src="A.png" />
+    </binding>
+  </visual>
+  <actions>
+    <action activationType="foreground" content="reviews" arguments="reviews" />
+    <action activationType="protocol" content="show map" arguments="bingmaps:?q=sushi" />
+  </actions>
+</toast>
+```
+
+![notificação com ações, exemplo 2](images/adaptivetoasts-xmlsample03.png)
+
+ 
+
+**Notificação com entrada de texto e ações, exemplo 1**
+
+Este exemplo mostra...
+
+```XML
+<toast launch="developer-defined-string">
+  <visual>
+    <binding template="ToastGeneric">
+      <text>Andrew B.</text>
+      <text>Shall we meet up at 8?</text>
+      <image placement="appLogoOverride" src="A.png" />
+    </binding>
+  </visual>
+  <actions>
+    <input id="message" type="text" placeHolderContent="reply here" />
+    <action activationType="background" content="reply" arguments="reply" />
+    <action activationType="foreground" content="video call" arguments="video" />
+  </actions>
+</toast>
+```
+
+![notificação com ações de entrada e texto](images/adaptivetoasts-xmlsample04.png)
+
+ 
+
+**Notificação com entrada de texto e ações, exemplo 2**
+
+Este exemplo mostra...
+
+```XML
+<toast launch="developer-defined-string">
+  <visual>
+    <binding template="ToastGeneric">
+      <text>Andrew B.</text>
+      <text>Shall we meet up at 8?</text>
+      <image placement="appLogoOverride" src="A.png" />
+    </binding>
+  </visual>
+  <actions>
+    <input id="message" type="text" placeHolderContent="reply here" />
+    <action activationType="background" content="reply" arguments="reply" imageUri="send.png" hint-inputId="message"/>
+  </actions>
+</toast>
+```
+
+![notificação com entrada e texto e ações](images/adaptivetoasts-xmlsample05.png)
+
+ 
+
+**Notificação com entrada de seleção e ações**
+
+Este exemplo mostra...
+
+```XML
+<toast launch="developer-defined-string">
+  <visual>
+    <binding template="ToastGeneric">
+      <text>Spicy Heaven</text>
+      <text>When do you plan to come in tomorrow?</text>
+      <image placement="appLogoOverride" src="A.png" />
+    </binding>
+  </visual>
+  <actions>
+    <input id="time" type="selection" defaultInput="2" >
+  <selection id="1" content="Breakfast" />
+  <selection id="2" content="Lunch" />
+  <selection id="3" content="Dinner" />
+    </input>
+    <action activationType="background" content="Reserve" arguments="reserve" />
+    <action activationType="background" content="Call Restaurant" arguments="call" />
+  </actions>
+</toast>
+```
+
+![notificação com entrada de seleção e ações](images/adaptivetoasts-xmlsample06.png)
+
+ 
+
+**Notificação de lembrete**
+
+Este exemplo mostra...
+
+```XML
+<toast scenario="reminder" launch="developer-pre-defined-string">
+  <visual>
+    <binding template="ToastGeneric">
+      <text>Adam&#39;s Hiking Camp</text>
+      <text>You have an upcoming event for this Friday!</text>
+      <text>RSVP before it"s too late.</text>
+      <image placement="appLogoOverride" src="A.png" />
+      <image placement="inline" src="hiking.png" />
+    </binding>
+  </visual>
+  <actions>
+    <action activationType="background" content="RSVP" arguments="rsvp" />
+    <action activationType="background" content="Reminder me later" arguments="later" />
+  </actions>
+</toast>
+```
+
+![notificação de lembrete](images/adaptivetoasts-xmlsample07.png)
+
+ 
+
+## <span id="Activation_samples"></span><span id="activation_samples"></span><span id="ACTIVATION_SAMPLES"></span>Exemplos de ativação
+
+
+Como mencionado acima, o corpo e as ações na notificação do sistema são capazes de ativar aplicativos de diferentes maneiras. O exemplo abaixo mostrará como lidar com tipos diferentes de ativações do corpo da notificação do sistema e/ou das ações de notificação do sistema.
+
+**Primeiro plano**
+
+Neste cenário, um aplicativo usa a ativação em primeiro plano para responder a uma ação dentro de uma notificação do sistema acionável iniciando o aplicativo e navegando até o conteúdo correto.
+
+Ativação de notificações do sistema usada para invocar OnLaunched(). No Windows 10, a notificação do sistema tem seu próprio tipo de ativação e invocará OnActivated().
+
+```
+async protected override void OnActivated(IActivatedEventArgs args)
+{
+        //Initialize your app if it&#39;s not yet initialized;
+    //Find out if this is activated from a toast;
+    If (args.Kind == ActivationKind.ToastNotification)
+    {
+                //Get the pre-defined arguments and user inputs from the eventargs;
+        var toastArgs = args as ToastNotificationActivatedEventArgs;
+        var arguments = toastArgs.Arguments;
+        var input = toastArgs.UserInput["1"]; 
+}
+     
+    //...
+}
+```
+
+**Segundo plano**
+
+Neste cenário, um aplicativo usa uma tarefa em segundo plano para manipular uma ação dentro de uma notificação do sistema interativa. O código abaixo mostra como declarar essa tarefa em segundo plano para manipular ativações de notificações do sistema dentro do manifesto do aplicativo e como obter argumentos das ações e das entradas de usuário quando os botões são clicados.
+
+```
+<!-- Manifest Declaration -->
+<!-- A new task type toastNotification is added -->
+<Extension Category = "windows.backgroundTasks" 
+EntryPoint = "Tasks.BackgroundTaskClass" >
+  <BackgroundTasks>
+    <Task Type="systemEvent" />
+  </BackgroundTasks>
+</Extension>
+```
+
+```
+namespace ToastNotificationTask
+{
+    public sealed class ToastNotificationBackgroundTask : IBackgroundTask
+    {
+        public void Run(IBackgroundTaskInstance taskInstance)
+        {
+        //Inside here developer can retrieve and consume the pre-defined 
+        //arguments and user inputs;
+        var details = taskInstance.TriggerDetails as ToastNotificationActionTriggerDetail;
+        var arguments = details.Arguments;
+        var input = details.Input.Lookup("1");
+
+            // ...
+        }        
+    }
+}
+```
+
+## <span id="Schemas___visual__and__audio_"></span><span id="schemas___visual__and__audio_"></span><span id="SCHEMAS___VISUAL__AND__AUDIO_"></span>Esquemas:  &lt;visual&gt; e &lt;audio&gt;
+
+
+Nos esquemas a seguir, o sufixo "?" significa que o atributo é opcional.
+
+```
+<toast launch? duration? activationType? scenario? >
+    <visual version? lang? baseUri? addImageQuery? >
+        <binding template? lang? baseUri? addImageQuery? >
+            <text lang? >content</text>
+            <text />
+            <image src placement? alt? addImageQuery? hint-crop? />
+        </binding>
+    </visual>
+    <audio src? loop? silent? />
+    <actions>
+    </actions>
+</toast>
+```
+
+**Atributos em &lt;toast&gt;**
+
+launch?
+
+-   launch? = string
+-   Esse é um atributo opcional.
+-   Uma cadeia de caracteres que é passada para o aplicativo quando ele é ativado pela notificação do sistema.
+-   Dependendo do valor de activationType, esse valor pode ser recebido pelo aplicativo em primeiro plano, dentro de tarefa em segundo plano ou por outro aplicativo que é iniciado por protocolo a partir do aplicativo original.
+-   O formato e o conteúdo dessa cadeia de caracteres são definidos pelo aplicativo para seu uso próprio.
+-   Quando o usuário toca ou clica na notificação do sistema para iniciar o aplicativo associado, a cadeia de caracteres de inicialização fornece o contexto ao aplicativo que o permite mostrar ao usuário uma exibição relevante para o conteúdo da notificação do sistema, em vez de inicializar em sua maneira padrão.
+-   Se a ativação ocorreu porque o usuário clicou em uma ação, em vez do corpo da notificação do sistema, o desenvolvedor recupera os "argumentos" predefinidos dessa marca &lt;action&gt;, em vez do "launch" predefinido na marca &lt;toast&gt;.
+
+duration?
+
+-   duration? = "short|long"
+-   Esse é um atributo opcional. O valor padrão é "short".
+-   Isso fica aqui apenas para cenários específicos e appCompat. Você não precisa mais disso para o cenário de alarme.
+-   Não recomendamos o uso dessa propriedade.
+
+activationType?
+
+-   activationType? = "foreground | background | protocol | system"
+-   Esse é um atributo opcional.
+-   O valor padrão é "foreground".
+
+scenario?
+
+-   scenario? = "default | alarm | reminder | incomingCall"
+-   Esse é um atributo opcional, o valor padrão é "default".
+-   Você não precisa disso, a menos que seu cenário seja exibir um alarme, lembrete ou chamada de entrada.
+-   Não use isso apenas para manter sua notificação persistente na tela.
+
+**Atributos em &lt;visual&gt;**
+
+version?
+
+-   version? = nonNegativeInteger
+-   Esse atributo não é necessário porque o controle de versão será preterido em &lt;visual&gt;. Fique atento a um novo modelo de controle de versão que você especificará a partir de uma hierarquia mais alta, se necessário.
+
+lang?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+
+baseUri?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+
+addImageQuery?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+
+**Atributos em &lt;binding&gt;**
+
+template?
+
+-   \[Importante\] template? = "ToastGeneric"
+-   Se você estiver usando qualquer um dos novos recursos de notificação interativa e adaptável, comece a usar o modelo "ToastGeneric" em vez do modelo herdado.
+-   Usar os modelos herdados com as novas ações pode funcionar agora, mas esse não é o caso de uso esperado, e não podemos garantir que isso continuará a funcionar.
+
+lang?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+
+baseUri?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+
+addImageQuery?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+
+**Atributos em &lt;text&gt;**
+
+lang?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230847) para obter detalhes sobre esse atributo opcional.
+
+**Atributos em &lt;image&gt;**
+
+src
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230844) para obter detalhes sobre esse atributo obrigatório.
+
+placement?
+
+-   placement? = "inline" | "appLogoOverride"
+-   Esse atributo é opcional.
+-   Isso especifica onde essa imagem será exibida.
+-   "inline" significa dentro do corpo da notificação do sistema, abaixo do texto; "appLogoOverride" significa substituir o ícone do aplicativo (que aparece no canto superior esquerdo da notificação do sistema).
+-   Você pode ter até uma imagem para cada valor de posicionamento.
+
+alt?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230844) para obter detalhes sobre esse atributo opcional.
+
+addImageQuery?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230844) para obter detalhes sobre esse atributo opcional.
+
+hint-crop?
+
+-   hint-crop? = "none" | "circle"
+-   Esse atributo é opcional.
+-   "none" é o valor padrão que significa nenhum corte.
+-   "circle" corta a imagem em formato circular. Use isso para imagens de perfil de um contato, imagens de uma pessoa e assim por diante.
+
+**Atributos em &lt;audio&gt;**
+
+src?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230842) para obter detalhes sobre esse atributo opcional.
+
+loop?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230842) para obter detalhes sobre esse atributo opcional.
+
+silent?
+
+-   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230842) para obter detalhes sobre esse atributo opcional.
+
+## <span id="Schemas___action_"></span><span id="schemas___action_"></span><span id="SCHEMAS___ACTION_"></span>Esquemas: &lt;action&gt;
+
+
+Nos esquemas a seguir, o sufixo "?" significa que o atributo é opcional.
+
+```
+<toast>
+    <visual>
+    </visual>
+    <audio />
+    <actions>
+        <input id type title? placeHolderContent? defaultInput? >
+            <selection id content />
+        </input>
+        <action content arguments activationType? imageUri? hint-inputId />
+    </actions>
+</toast>
+```
+
+**Atributos em &lt;input&gt;**
+
+id
+
+-   id = string
+-   Esse atributo é obrigatório.
+-   O atributo id é obrigatório e é usado pelos desenvolvedores para recuperar entradas do usuário depois que o aplicativo é ativado (em primeiro plano ou em segundo plano).
+
+type
+
+-   type = "text | selection"
+-   Esse atributo é obrigatório.
+-   Ele é usado para especificar uma entrada de texto ou entrada de uma lista de seleções predefinidas.
+-   No celular e desktop, isso serve para especificar se você deseja uma entrada de caixa de texto ou uma entrada de caixa de listagem.
+
+title?
+
+-   title? = string
+-   O atributo title é opcional e é para os desenvolvedores especificarem um título para a entrada para a renderização de shells quando há funcionalidade.
+-   Para celular e desktop, esse título será exibido acima da entrada.
+
+placeHolderContent?
+
+-   placeHolderContent? = string
+-   O atributo placeHolderContent é opcional e é o texto de dica cinza para o tipo de entrada de texto. Esse atributo é ignorado quando o tipo de entrada não é "text".
+
+defaultInput?
+
+-   defaultInput? = string
+-   O atributo defaultInput é opcional e é usado para fornecer um valor de entrada padrão.
+-   Se o tipo de entrada for "text", isso será tratado como uma entrada de cadeia de caracteres.
+-   Se o tipo de entrada for "selection", isso deve ser a identificação de uma das seleções disponíveis dentro dos elementos dessa entrada.
+
+**Atributos em &lt;selection&gt;**
+
+id
+
+-   Esse atributo é obrigatório. Ele é usado para identificar as seleções do usuário. A identificação é retornada para seu aplicativo.
+
+content
+
+-   Esse atributo é obrigatório. Ele fornece a cadeia de caracteres a ser exibida para esse elemento de seleção.
+
+**Atributos em &lt;action&gt;**
+
+content
+
+-   content = string
+-   O atributo content é obrigatório. Ele fornece a cadeia de caracteres de texto exibida no botão.
+
+arguments
+
+-   arguments = string
+-   O atributo arguments é obrigatório. Ele descreve os dados definidos pelo aplicativo que, mais tarde, o aplicativo pode recuperar quando ele for ativado quando o usuário executar essa ação.
+
+activationType?
+
+-   activationType? = "foreground | background | protocol | system"
+-   O atributo activationType é opcional e seu valor padrão é "foreground".
+-   Descreve o tipo de ativação que essa ação causará: em primeiro plano, em segundo plano, iniciar outro aplicativo por meio de inicialização por protocolo ou invocar uma ação do sistema.
+
+imageUri?
+
+-   imageUri? = string
+-   imageUri é opcional e é usado para fornecer um ícone de imagem para essa ação exibir dentro do botão somente com o conteúdo de texto.
+
+hint-inputId
+
+-   hint-inputId = string
+-   O atributo hint-inpudId é obrigatório. Ele é usado especificamente para o cenário de resposta rápida.
+-   O valor deve ser que a identificação do elemento input desejado a ser associado.
+-   No celular e desktop, isso colocará o botão diretamente ao lado da caixa de entrada.
+
+## <span id="Attributes_for_system-handled_actions"></span><span id="attributes_for_system-handled_actions"></span><span id="ATTRIBUTES_FOR_SYSTEM-HANDLED_ACTIONS"></span>Atributos para ações manipuladas pelo sistema
+
+
+O sistema pode manipular ações para adiar e ignorar notificações se você não quiser que seu aplicativo manipular o adiamento/reagendamento de notificações como tarefa em segundo plano. As ações manipuladas pelo sistema podem ser combinadas (ou especificadas individualmente), mas não é recomendável implementar uma ação de adiamento sem uma ação de descarte.
+
+Combinação de comandos do sistema: SnoozeAndDismiss
+
+```
+<toast>
+    <visual>
+    </visual>
+    <audio />
+    <actions hint-systemCommands? = "SnoozeAndDismiss" />
+</toast>
+```
+
+Ações individuais manipuladas pelo sistema
+
+```
+<toast>
+    <visual>
+    </visual>
+    <audio />
+<actions>
+<input id="snoozeTime" type="selection" defaultInput="10">
+  <selection id="5" content="5 minutes" />
+  <selection id="10" content="10 minutes" />
+  <selection id="20" content="20 minutes" />
+  <selection id="30" content="30 minutes" />
+  <selection id="60" content="1 hour" />
+</input>
+<action activationType="system" arguments="snooze" hint-inputId="snoozeTime" content=""/>
+<action activationType="system" arguments="dismiss" content=""/>
+</actions>
+</toast>
+```
+
+Para construir ações individuais de adiamento e descarte, faça o seguinte:
+
+-   Especifique activationType = "system"
+-   Especifique arguments = "snooze" | "dismiss"
+-   Especifique o conteúdo:
+    -   Se você quiser que cadeias de caracteres localizadas de "snooze" e "dismiss" sejam exibidas nas ações, especifique o conteúdo para ser uma cadeia de caracteres vazia: &lt;action content = ""/&gt;
+    -   Se você quiser uma cadeia de caracteres personalizada, basta fornecer seu valor: &lt;action content="Lembrar-me mais tarde" /&gt;
+-   Especifica a entrada:
+    -   Se você não quiser que o usuário selecione um intervalo de adiamento e, em vez disso, apenas que sua notificação seja adiada apenas uma vez por um intervalo de tempo definido pelo sistema (consistente com o sistema operacional), não construa qualquer &lt;input&gt;.
+    -   Se você quiser fornecer seleções de intervalo de adiamento:
+        -   Especifique hint-inputId na ação snooze
+        -   Combine a identificação da entrada com a hint-inputId da ação snooze: &lt;input id="snoozeTime"&gt;&lt;/input&gt;&lt;action hint-inputId="snoozeTime"/&gt;
+        -   Especifique a identificação da seleção para ser um nonNegativeInteger que representa o intervalo de adiamento em minutos: &lt;selection id="240" /&gt; significa adiar por 4 horas
+        -   Certifique-se de que o valor de defaultInput em &lt;input&gt; corresponda a uma das identificações dos elementos &lt;selection&gt; filho
+        -   Forneça até (mas não mais que) 5 valores de &lt;selection&gt;
+
+ 
+
+ 
+
+
+
+
+
+
+<!--HONumber=Mar16_HO1-->
+
+

@@ -1,0 +1,119 @@
+---
+Description: O controle Hub usa um padrão de navegação hierárquico para oferecer suporte a aplicativos com uma arquitetura de informações relacionais.
+title: Controles Hub
+ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
+label: Hub
+template: detail.hbs
+---
+# Controle/padrão Hub
+
+
+Um controle Hub permite organizar o conteúdo do aplicativo em seções ou categorias distintas, mas relacionadas. A seções de um hub devem ser percorridas em uma ordem preferencial e podem servir como ponto de partida para experiências mais detalhadas.
+
+![Exemplo de um hub](images/hub_example_tablet.png)
+
+O conteúdo em um hub pode ser mostrado em uma exibição panorâmica robusta em que os usuários têm uma prévia do que é novo, do que está disponível e do que é relevante. Normalmente os hubs têm um cabeçalho de página, e cada uma das várias seções de conteúdo tem um cabeçalho de seção.
+
+O controle hub tem vários recursos que o fazem funcionar bem para a criação de um padrão de navegação de conteúdo.
+
+-   **Navegação visual**
+
+    Um hub permite que o conteúdo seja exibido em uma matriz diversificada, breve e fácil de pesquisar.
+
+-   **Categorização**
+
+    Cada seção do hub permite que seu conteúdo seja organizado em uma ordem lógica.
+
+-   **Tipos de conteúdo misto**
+
+    Com tipos de conteúdo misto, razões e tamanhos de ativos variáveis são comuns. Um hub permite que cada tipo de conteúdo seja dispostos de forma exclusiva e organizada em cada seção.
+
+-   **Larguras de conteúdo e página variáveis**
+
+    Por ser um modelo panorâmico, o hub permite a variação nas larguras da seção. Isso é ótimo para conteúdo de diferentes profundidades e permite que um número pequeno a alto de itens sejam formatados igualmente bem.
+
+-   **Arquitetura flexível**
+
+    Se preferir manter a arquitetura do aplicativo superficial, você poderá ajustar todo o conteúdo de canal em um resumo de seções do Hub.
+
+<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+
+-   [**Classe Hub (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn251843)
+-   [**Classe HubSection (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn251845)
+-   [**Objeto Hub (HTML)**](https://msdn.microsoft.com/library/windows/apps/dn255137)
+
+
+## Esse é o controle correto?
+
+O controle Hub funciona bem para exibir grandes quantidades de conteúdo organizado em uma hierarquia. Os hubs priorizam a navegação e a descoberta de novo conteúdo, tornando-se úteis para exibir itens em uma loja ou uma coleção de mídia.
+
+Um Hub é apenas um dos vários elementos de navegação que você pode usar. Para saber mais sobre padrões de navegação e os outros elementos de navegação, consulte [Noções básicas de design de navegação de aplicativos UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/windows/apps/dn958438).
+
+## Arquitetura do hub
+
+O controle hub tem um padrão de navegação hierárquico que dá suporte a aplicativos com uma arquitetura de informações relacionais. Um hub consiste em categorias de conteúdo diferentes, cada uma mapeada para as páginas de seção do aplicativo. As páginas de seção podem ser exibidas na forma que melhor represente o cenário e o conteúdo contido na seção.
+
+![estrutura delineada de um aplicativo hierárquico Food with Friends](images/navigation_diagram_food_with_friends_app_new.png)
+
+## Layouts e movimento panorâmico/rolagem
+
+Há várias maneiras de criar o dispor e navegar pelo conteúdo em um hub; basta ter certeza de que as listas de conteúdo em um hub sempre tenham movimento panorâmico na direção perpendicular à da rolagem do hub.
+
+**Movimento panorâmico horizontal**
+
+![Exemplo de um Hub de movimento panorâmico horizontal](images/controls_hub_horizontal_pan.png)
+**Movimento panorâmico vertical**
+
+![Exemplo de um Hub de movimento panorâmico vertical](images/controls_hub_vertical_pan.png)
+**Movimento panorâmico horizontal com lista/grade de rolagem vertical**
+
+![Exemplo de um Hub de movimento panorâmico horizontal com uma lista de rolagem vertical](images/controls_hub_horizontal_vertical_scroll.png)
+**Movimento panorâmico vertical com lista/grade de rolagem horizontal**
+
+![Exemplo de um hub de movimento panorâmico horizontal](images/controls_hub_vertical_horizontal_scroll.png)
+
+## Exemplos
+
+O hub proporciona uma grande flexibilidade de design. Isso permite projetar aplicativos que possuam uma grande variedade de experiências atraentes e visualmente ricas. Você pode usar uma imagem de celebridade ou uma seção de conteúdo para o primeiro grupo; uma imagem grande da celebridade pode ser cortada tanto na vertical quanto na horizontal, sem perder o centro de interesse. Veja a seguir um exemplo de uma única imagem de celebridade e como ela pode ser cortada para paisagem, retrato e largura estreita.
+
+![imagem de celebridade cortada para diferentes tamanhos de janela](images/hub_hero_cropped2.png)
+
+Em dispositivos móveis, uma seção de hub está visível por vez.
+
+![Exemplo de um padrão de hub em uma tela pequena](images/phone_hub_example.png)
+
+## Recomendações
+
+-   Para que os usuários saibam que há mais conteúdo em uma seção do hub, recomendamos recortar o conteúdo de forma que uma parte dele seja mostrada.
+-   Dependendo das necessidades do aplicativo, é possível adicionar diversas seções de hub ao controle hub, cada uma oferecendo seu próprio propósito funcional. Por exemplo, uma seção poderia conter uma série de links e controles, enquanto outra poderia ser um repositório de miniaturas. Um usuário pode se movimentar entre essas seções usando o suporte a gestos integrado no controle hub.
+-   O refluxo dinâmico de conteúdo é a melhor maneira de acomodar tamanhos de janela diferentes.
+-   Se houver muitas seções no hub, considere a adição do zoom semântico. Isso também facilita a localização de seções quando o aplicativo é redimensionado para uma largura estreita.
+-   Recomendamos que um item em uma seção de hub não leve a outro hub; em vez disso, você pode usar cabeçalhos interativos para navegar para seções ou páginas de outro hub.
+-   O hub é um ponto de partida que deve ser personalizado para atender às necessidades do seu aplicativo. É possível alterar os seguintes aspectos de um hub:
+    -   Número de seções
+    -   Tipo de conteúdo em cada seção
+    -   Colocação e ordem das seções
+    -   Tamanho das seções
+    -   Espaçamento entre seções
+    -   Espaçamento entre uma seção e a parte superior ou inferior do hub
+    -   Estilo do texto e tamanho em cabeçalhos e conteúdo
+    -   Cor do plano de fundo, seções, cabeçalhos de seção e conteúdo de seção
+
+\[Este artigo contém informações que são específicas a aplicativos UWP e ao Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
+## Artigos relacionados
+-----------------------------------------------
+
+**Para designers**
+- [Noções básicas de navegação](https://msdn.microsoft.com/library/windows/apps/dn958438)
+
+**Para desenvolvedores (XAML)**
+- [Navegação hierárquica, do início ao fim](https://msdn.microsoft.com/library/windows/apps/xaml/dn440585)
+- [**Classe Windows.UI.Xaml.Controls Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)
+- [Amostra de controle Hub em XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
+- [Usando um Hub](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
+
+
+<!--HONumber=Mar16_HO1-->
+
+

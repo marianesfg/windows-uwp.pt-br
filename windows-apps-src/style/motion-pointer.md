@@ -1,0 +1,48 @@
+---
+Description: Use animações de ponteiro para fornecer aos usuários feedback visual quando o usuário tocar em um item.
+title: Animações para clique de ponteiro em aplicativos UWP
+ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
+label: Motion--Pointer animations
+template: detail.hbs
+---
+
+# Animações para clique de ponteiro
+
+Use animações de ponteiro para fornecer aos usuários feedback visual quando o usuário tocar em um item. A animação de ponteiro para baixo encolhe e inclina um pouco o item pressionado e aparece quando um item é tocado pela primeira vez. A animação de ponteiro para cima, que restaura o item à sua posição original, aparece quando o usuário libera o ponteiro.
+
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
+
+**APIs importantes**
+
+-   [**Classe PointerUpThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/hh969168)
+-   [**Classe PointerDownThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/hh969164)
+
+
+
+## O que fazer e o que não fazer
+
+
+-   Ao usar uma animação de ponteiro para cima, dispare imediatamente a animação quando o usuário liberar o ponteiro. Isso faz com que o usuário tenha feedback instantâneo de que sua ação foi reconhecida, mesmo que a ação disparada pelo toque (por exemplo, navegar até uma nova página) esteja com uma resposta mais lenta.
+
+## Artigos relacionados
+
+**Para desenvolvedores (XAML)**
+* [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
+* [Animando cliques de ponteiro](https://msdn.microsoft.com/library/windows/apps/xaml/jj649432)
+* [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [**Classe PointerUpThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/hh969168)
+* [**Classe PointerDownThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/hh969164)
+
+ 
+
+ 
+
+
+
+
+
+
+<!--HONumber=Mar16_HO3-->
+
+

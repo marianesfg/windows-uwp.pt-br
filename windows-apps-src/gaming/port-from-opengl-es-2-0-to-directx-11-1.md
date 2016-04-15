@@ -1,0 +1,63 @@
+---
+title: Compatibilizar do OpenGL ES 2.0 para o Direct3D 11
+description: Inclui artigos, visões gerais e guias passo a passo para a portabilidade de uma pipeline de elementos gráficos em OpenGL ES 2.0 para um Direct3D 11 e o Windows Runtime.
+ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
+---
+
+# Compatibilizar do OpenGL ES 2.0 para o Direct3D 11
+
+
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
+Inclui artigos, visões gerais e guias passo a passo para a portabilidade de uma pipeline de elementos gráficos em OpenGL ES 2.0 para um Direct3D 11 e o Windows Runtime.
+
+> **Observação**   Uma etapa intermediária na portabilidade do seu projeto OpenGL ES 2.0 é usar o ANGLE para Windows Store. O ANGLE permite executar conteúdo do OpenGL ES no Windows, o que converte chamadas de API do OpenGL ES em chamadas de API do DirectX 11. Para obter mais informações sobre o ANGLE, vá para [ANGLE for Windows Store Wiki](http://go.microsoft.com/fwlink/p/?linkid=618387).
+
+ 
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tópico</th>
+<th align="left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>[Map OpenGL ES 2.0 to Direct3D 11.1](map-concepts-and-infrastructure.md)</p></td>
+<td align="left"><p>Ao iniciar o processo de portabilidade da sua arquitetura de elementos gráficos do OpenGL ES 2.0 para o Direct3D pela primeira vez, familiarize-se com as diferenças principais entre as APIs. Os tópicos desta seção ajudam você a planejar sua estratégia de compatibilização e as alterações de API que você deve fazer ao mover o processamento de elementos gráficos para Direct3D.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[Walkthrough sample ports from OpenGL ES 2.0](walkthrough-sample-ports-from-opengl-es-2-0.md)</p></td>
+<td align="left"><p>Este conjunto de tópicos mostra várias situações de portabilidade de elementos gráficos em OpenGL ES 2.0 de diferentes graus de dificuldade.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[OpenGL ES 2.0 to Direct3D 11.1 reference](opengl-es-2-0-to-directx-11-1-reference.md)</p></td>
+<td align="left"><p>Use estes tópicos de referência para procurar por mapeamento de API e exemplos de código curtos quando fizer a portabilidade de OpenGL ES 2.0 para Direct3D 11.</p></td>
+</tr>
+</tbody>
+</table>
+
+ 
+
+> **Observação**  
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+ 
+
+ 
+
+ 
+
+
+
+
+
+
+<!--HONumber=Mar16_HO1-->
+
+

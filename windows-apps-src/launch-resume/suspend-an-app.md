@@ -1,0 +1,134 @@
+---
+title: Manipular a suspensão do aplicativo
+description: Saiba como salvar dados de aplicativo importantes quando o sistema suspende o seu aplicativo.
+ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
+---
+
+# Manipular a suspensão do aplicativo
+
+
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
+
+**APIs importantes**
+
+-   [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341)
+
+Saiba como salvar dados de aplicativo importantes quando o sistema suspende o seu aplicativo. O exemplo registra um manipulador de eventos para o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) e salva uma cadeia de caracteres em um arquivo.
+
+## Registrar o manipulador de eventos de suspensão
+
+
+Registre-se para manipular o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341), que indica que o aplicativo deve salvar seus dados antes de ser suspenso pelo sistema.
+
+> [!div class="tabbedCodeSnippets"]
+```cs
+using System;
+using Windows.ApplicationModel;
+using Windows.ApplicationModel.Activation;
+using Windows.UI.Xaml;
+
+partial class MainPage
+{
+   public MainPage()
+   {
+      InitializeComponent();
+      Application.Current.Suspending += new SuspendingEventHandler(App_Suspending);
+   }
+}
+```
+```vb
+Public NotInheritable Class MainPage
+
+   Public Sub New()
+      InitializeComponent() 
+      AddHandler Application.Current.Suspending, AddressOf App_Suspending
+   End Sub
+   
+End Class
+```
+```cpp
+using namespace Windows::ApplicationModel;
+using namespace Windows::ApplicationModel::Activation;
+using namespace Windows::Foundation;
+using namespace Windows::UI::Xaml;
+using namespace AppName;
+
+MainPage::MainPage()
+{
+   InitializeComponent();
+   Application::Current->Suspending += 
+       ref new SuspendingEventHandler(this, &amp;MainPage::App_Suspending);
+}
+```
+
+## Salvar os dados do aplicativo antes da suspensão
+
+
+Quando manipula o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341), o aplicativo tem uma oportunidade de salvar seus dados importantes na função do manipulador. O aplicativo deve usar a API de armazenamento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para salvar dados simples do aplicativo de maneira síncrona.
+
+> [!div class="tabbedCodeSnippets"]
+```cs
+partial class MainPage
+{
+    async void App_Suspending(
+        Object sender, 
+        Windows.ApplicationModel.SuspendingEventArgs e)
+    {
+        // TODO: This is the time to save app data in case the process is terminated
+    }
+}
+```
+```vb
+Public NonInheritable Class MainPage
+
+    Private Sub App_Suspending(
+        sender As Object, 
+        e As Windows.ApplicationModel.SuspendingEventArgs) Handles OnSuspendEvent.Suspending
+
+        ' TODO: This is the time to save app data in case the process is terminated
+    End Sub
+
+End Class
+```
+```cpp
+void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
+{
+    // TODO: This is the time to save app data in case the process is terminated
+}
+```
+
+## Comentários
+
+
+O sistema suspende o aplicativo sempre que o usuário alternar para outro aplicativo, para a área de trabalho ou para a tela inicial. O sistema retoma o seu aplicativo sempre que o usuário alterna de volta para ele. Quando o sistema retoma o aplicativo, o conteúdo das variáveis e estruturas de dados é o mesmo de antes da suspensão do aplicativo pelo sistema. O sistema retoma o aplicativo exatamente de onde parou, o que faz parecer ao usuário que ele estava sendo executado em tela de fundo.
+
+O sistema tenta manter o aplicativo e seus dados na memória enquanto ele está suspenso. Entretanto, caso não tenha recursos suficientes para manter o aplicativo na memória, o sistema encerra o aplicativo. Quando o usuário alterna de volta para um aplicativo suspenso que foi encerrado, o sistema envia um evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) e deve restaurar os dados do aplicativo em seu método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
+
+O sistema não notifica um aplicativo quando é terminado, por isso seu aplicativo deve salvar seus dados de aplicativo e liberar recursos exclusivos e identificadores de arquivo quando suspenso, e restaurá-los quando ativado após o término.
+
+> **Observação**   Se for necessário realizar trabalho assíncrono quando o aplicativo estiver suspenso, você precisará adiar a conclusão da suspensão até que o trabalho seja concluído. Você pode usar o método [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690) no objeto [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688) (disponível via argumentos de evento) para atrasar a conclusão da suspensão até que você chame o método [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685) no objeto retornado [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684).
+
+> **Observação**  Para melhorar a capacidade de resposta do sistema no Windows 8.1, os aplicativos recebem acesso de prioridade baixa aos recursos durante a suspensão. Para dar suporte a essa nova prioridade, o tempo limite da operação de suspensão é estendido para que o aplicativo tenha o equivalente do tempo limite de 5 segundos para prioridade normal no Windows ou entre 1 e 10 segundos no Windows Phone. Você não pode estender ou alterar esse período de tempo limite.
+
+> **Observação sobre a depuração com Visual Studio: **  o Visual Studio impede que o Windows suspenda um aplicativo que esteja anexado ao depurador. Isso ocorre para permitir que o usuário exiba a interface de usuário de depuração do Visual Studio enquanto o aplicativo está em execução. Quando você está depurando um aplicativo, é possível enviar a ele um evento de suspensão usando o Visual Studio. Verifique se a barra de ferramentas **Local de Depuração** está sendo mostrada e clique no ícone de **Suspender**.
+
+## Tópicos relacionados
+
+
+* [Manipular a ativação do aplicativo](activate-an-app.md)
+* [Manipular a retomada do aplicativo](resume-an-app.md)
+* [Diretrizes da experiência do usuário para execução, suspensão e reinício](https://msdn.microsoft.com/library/windows/apps/dn611862)
+* [Ciclo de vida do aplicativo](app-lifecycle.md)
+
+ 
+
+ 
+
+
+
+
+
+<!--HONumber=Mar16_HO1-->
+
+

@@ -1,0 +1,295 @@
+---
+ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
+description: Este artigo descreve como adicionar conteúdo de multimídia de streaming adaptável com a proteção de conteúdo da Microsoft PlayReady a um aplicativo da Plataforma Universal do Windows (UWP).
+title: Streaming adaptável com PlayReady
+---
+
+# Streaming adaptável com PlayReady
+
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
+\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não faz nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
+
+Este artigo descreve como adicionar conteúdo de multimídia de streaming adaptável com a proteção de conteúdo da Microsoft PlayReady a um aplicativo da Plataforma Universal do Windows (UWP). Esse recurso atualmente oferece suporte para reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP).
+
+Este artigo lida apenas com os aspectos de streaming adaptável específicos para o PlayReady. Para obter informações sobre a implementação de streaming adaptável em geral, consulte [Streaming adaptável](adaptive-streaming.md).
+
+Você precisará das seguintes instruções using:
+
+```csharp
+using LicenseRequest;
+using System;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using Windows.Foundation.Collections;
+using Windows.Media.Protection;
+using Windows.Media.Protection.PlayReady;
+using Windows.Media.Streaming.Adaptive;
+using Windows.UI.Xaml.Controls;
+```
+
+O namespace **LicenseRequest** é de **CommonLicenseRequest.cs**, um arquivo do PlayReady fornecido pela Microsoft para licenciados.
+
+Você precisará declarar algumas variáveis globais:
+
+```csharp
+private AdaptiveMediaSource ams = null;
+private MediaProtectionManager protectionManager = null;
+private string playReadyLicenseUrl = "";
+private string playReadyChallengeCustomData = "";
+```
+
+Também convém declarar a constante a seguir:
+
+```csharp
+private const int MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = -2147174251;
+```
+
+## Configurando o MediaProtectionManager
+
+Para adicionar proteção de conteúdo PlayReady ao seu aplicativo UWP, você precisará configurar um objeto [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040). Você fará isso ao inicializar seu objeto [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912).
+
+O código a seguir configura um [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040):
+
+```csharp
+private void SetUpProtectionManager(ref MediaElement mediaElement)
+{
+    protectionManager = new MediaProtectionManager();
+
+    protectionManager.ComponentLoadFailed += 
+        new ComponentLoadFailedEventHandler(ProtectionManager_ComponentLoadFailed);
+
+    protectionManager.ServiceRequested += 
+        new ServiceRequestedEventHandler(ProtectionManager_ServiceRequested);
+
+    PropertySet cpSystems = new PropertySet();
+
+    cpSystems.Add(
+        "{F4637010-03C3-42CD-B932-B48ADF3A6A54}", 
+        "Windows.Media.Protection.PlayReady.PlayReadyWinRTTrustedInput");
+
+    protectionManager.Properties.Add("Windows.Media.Protection.MediaProtectionSystemIdMapping", cpSystems);
+
+    protectionManager.Properties.Add(
+        "Windows.Media.Protection.MediaProtectionSystemId", 
+        "{F4637010-03C3-42CD-B932-B48ADF3A6A54}");
+
+    protectionManager.Properties.Add(
+        "Windows.Media.Protection.MediaProtectionContainerGuid", 
+        "{9A04F079-9840-4286-AB92-E65BE0885F95}");
+
+    mediaElement.ProtectionManager = protectionManager;
+}
+```
+
+Este código pode simplesmente ser copiado para o seu aplicativo, já que ele é obrigatório para configurar a proteção de conteúdo.
+
+O evento [ComponentLoadFailed](https://msdn.microsoft.com/library/windows/apps/br207041) é acionado quando a carga de dados binários falha. Precisamos adicionar um manipulador de eventos para lidar com isso, indicando que a carga não foi concluída:
+
+```csharp
+private void ProtectionManager_ComponentLoadFailed(
+    MediaProtectionManager sender, 
+    ComponentLoadFailedEventArgs e)
+{
+    e.Completion.Complete(false);
+}
+```
+
+Da mesma forma, precisamos adicionar um manipulador de eventos para o evento [ServiceRequested](https://msdn.microsoft.com/library/windows/apps/br207045), que é acionado quando um serviço é solicitado. Este código verifica qual é o tipo de solicitação e responde adequadamente:
+
+```csharp
+private async void ProtectionManager_ServiceRequested(
+    MediaProtectionManager sender, 
+    ServiceRequestedEventArgs e)
+{
+    if (e.Request is PlayReadyIndividualizationServiceRequest)
+    {
+        PlayReadyIndividualizationServiceRequest IndivRequest = 
+            e.Request as PlayReadyIndividualizationServiceRequest;
+
+        bool bResultIndiv = await ReactiveIndivRequest(IndivRequest, e.Completion);
+    }
+    else if (e.Request is PlayReadyLicenseAcquisitionServiceRequest)
+    {
+        PlayReadyLicenseAcquisitionServiceRequest licenseRequest = 
+            e.Request as PlayReadyLicenseAcquisitionServiceRequest;
+
+        LicenseAcquisitionRequest(
+            licenseRequest, 
+            e.Completion, 
+            playReadyLicenseUrl, 
+            playReadyChallengeCustomData);
+    }
+}
+```
+
+## Solicitações de serviço de individualização
+
+O código a seguir cria reativamente uma solicitação de serviço de individualização do PlayReady. Passamos a solicitação como um parâmetro para a função. Colocamos a chamada em um bloco try/catch e se não houver exceções, dizemos que a solicitação foi concluída com êxito:
+
+```csharp
+async Task<bool> ReactiveIndivRequest(
+    PlayReadyIndividualizationServiceRequest IndivRequest, 
+    MediaProtectionServiceCompletion CompletionNotifier)
+{
+    bool bResult = false;
+    Exception exception = null;
+
+    try
+    {
+        await IndivRequest.BeginServiceRequest();
+    }
+    catch (Exception ex)
+    {
+        exception = ex;
+    }
+    finally
+    {
+        if (exception == null)
+        {
+            bResult = true;
+        }
+        else
+        {
+            COMException comException = exception as COMException;
+            if (comException != null &amp;&amp; comException.HResult == MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED)
+            {
+                IndivRequest.NextServiceRequest();
+            }
+        }
+    }
+
+    if (CompletionNotifier != null) CompletionNotifier.Complete(bResult);
+    return bResult;
+}
+```
+
+Como alternativa, podemos fazer proativamente uma solicitação de serviço de individualização, neste caso, chamamos a função abaixo em vez de chamar o código `ReactiveIndivRequest` de `ProtectionManager_ServiceRequested`:
+
+```csharp
+async void ProActiveIndivRequest()
+{
+    PlayReadyIndividualizationServiceRequest indivRequest = new PlayReadyIndividualizationServiceRequest();
+    bool bResultIndiv = await ReactiveIndivRequest(indivRequest, null);
+}
+```
+
+## Solicitações de serviço de aquisição de licença
+
+Se em vez disso a solicitação era [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285), chamamos a função abaixo para solicitar e obter a licença do PlayReady. Informamos ao objeto MediaProtectionServiceCompletion que passamos se a solicitação foi bem-sucedida ou não, e concluímos a solicitação:
+
+```csharp
+async void LicenseAcquisitionRequest(
+    PlayReadyLicenseAcquisitionServiceRequest licenseRequest, 
+    MediaProtectionServiceCompletion CompletionNotifier, 
+    string Url, 
+    string ChallengeCustomData)
+{
+    bool bResult = false;
+    string ExceptionMessage = string.Empty;
+
+    try
+    {
+        if (!string.IsNullOrEmpty(Url))
+        {
+            if (!string.IsNullOrEmpty(ChallengeCustomData))
+            {
+                System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
+                byte[] b = encoding.GetBytes(ChallengeCustomData);
+                licenseRequest.ChallengeCustomData = Convert.ToBase64String(b, 0, b.Length);
+            }
+
+            PlayReadySoapMessage soapMessage = licenseRequest.GenerateManualEnablingChallenge();
+
+            byte[] messageBytes = soapMessage.GetMessageBody();
+            HttpContent httpContent = new ByteArrayContent(messageBytes);
+
+            IPropertySet propertySetHeaders = soapMessage.MessageHeaders;
+
+            foreach (string strHeaderName in propertySetHeaders.Keys)
+            {
+                string strHeaderValue = propertySetHeaders[strHeaderName].ToString();
+
+                if (strHeaderName.Equals("Content-Type", StringComparison.OrdinalIgnoreCase))
+                {
+                    httpContent.Headers.ContentType = MediaTypeHeaderValue.Parse(strHeaderValue);
+                }
+                else
+                {
+                    httpContent.Headers.Add(strHeaderName.ToString(), strHeaderValue);
+                }
+            }
+
+            CommonLicenseRequest licenseAcquision = new CommonLicenseRequest();
+
+            HttpContent responseHttpContent = 
+                await licenseAcquision.AcquireLicense(new Uri(Url), httpContent);
+
+            if (responseHttpContent != null)
+            {
+                Exception exResult = licenseRequest.ProcessManualEnablingResponse(
+                                         await responseHttpContent.ReadAsByteArrayAsync());
+
+                if (exResult != null)
+                {
+                    throw exResult;
+                }
+                bResult = true;
+            }
+            else
+            {
+                ExceptionMessage = licenseAcquision.GetLastErrorMessage();
+            }
+        }
+        else
+        {
+            await licenseRequest.BeginServiceRequest();
+            bResult = true;
+        }
+    }
+    catch (Exception e)
+    {
+        ExceptionMessage = e.Message;
+    }
+
+    CompletionNotifier.Complete(bResult);
+}
+```
+
+## Inicializando o AdaptiveMediaSource
+
+Por fim, você precisará de uma função para inicializar o [AdaptiveMediaSource](https://msdn.microsoft.com/library/windows/apps/dn946912), criada de um determinado [Uri](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) e [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926). O **Uri** deve ser o link para o arquivo de mídia (HLS ou DASH); o **MediaElement** deve ser definido em seu XAML.
+
+```csharp
+async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
+{
+    AdaptiveMediaSourceCreationResult result = await AdaptiveMediaSource.CreateFromUriAsync(uri);
+    if (result.Status == AdaptiveMediaSourceCreationStatus.Success)
+    {
+        ams = result.MediaSource;
+        SetUpProtectionManager(ref m);
+        m.SetMediaStreamSource(ams);
+    }
+    else
+    {
+        // Error handling
+    }
+}
+```
+
+Você pode chamar essa função em qualquer evento que manipular o início do streaming adaptável—por exemplo, em um evento de clique de um botão.
+
+ 
+
+ 
+
+
+
+
+
+
+<!--HONumber=Mar16_HO1-->
+
+
