@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\troubleshoot-ad-mediation.md](https://github.com/Microsoft/windows-apps/blob/9dc480a47368c8b87e788281395e80ebaf33784c/windows-apps-src/monetize/troubleshoot-ad-mediation.md) | OutofSyncHandedBackSuccess | [Details](#78029778e4ac7fdc5adf622084ba56f5424a7a923237)
+ [windows-apps-src\xbox-apps\devkit-activation.md](https://github.com/Microsoft/windows-apps/blob/7d832fee5bcd3a15cee1e7d8f4c66da9b0afa5e1/windows-apps-src/xbox-apps/devkit-activation.md) | OutofSyncHandedBackSuccess | [Details](#9ad9904150acb00982c96eebeaf010f7023d33203681)
 
 ## Item Details
-##### <a name='78029778e4ac7fdc5adf622084ba56f5424a7a923237'></a> Source: [windows-apps-src\monetize\troubleshoot-ad-mediation.md](https://github.com/Microsoft/windows-apps/blob/9dc480a47368c8b87e788281395e80ebaf33784c/windows-apps-src/monetize/troubleshoot-ad-mediation.md)
+##### <a name='9ad9904150acb00982c96eebeaf010f7023d33203681'></a> Source: [windows-apps-src\xbox-apps\devkit-activation.md](https://github.com/Microsoft/windows-apps/blob/7d832fee5bcd3a15cee1e7d8f4c66da9b0afa5e1/windows-apps-src/xbox-apps/devkit-activation.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [troubleshoot-ad-mediation.597b8b3549bcf2234c187a1e36f7a3ba47e6bb45.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/239ab429aab318d4cefda46bb84cb6bffa6c7570/ol-handoff/Microsoft/windows-apps.pt-br/master/troubleshoot-ad-mediation.597b8b3549bcf2234c187a1e36f7a3ba47e6bb45.pt-br.xlf)
-* Handoff Datetime: 2016-04-19 17:49:53
+* Handoff File: [devkit-activation.22024c3019b2f91b62bafe755f4aefb6138eab84.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/f3528f8e80d90814fb4ac524ca9274a90cfa0def/ol-handoff/Microsoft/windows-apps.pt-br/master/devkit-activation.22024c3019b2f91b62bafe755f4aefb6138eab84.pt-br.xlf)
+* Handoff Datetime: 2016-04-19 18:45:05
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\troubleshoot-ad-mediation.md](https://github.com/Microsoft/windows-apps.pt-br/blob/149c863f61fcc324db3e3dea8782e6276b20d1c2/windows-apps-src/monetize/troubleshoot-ad-mediation.md)
-* Current Handback File: [troubleshoot-ad-mediation.597b8b3549bcf2234c187a1e36f7a3ba47e6bb45.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/18f7494fe80578448c47b9ba618e4f4ad7301261/ol-handback/Microsoft/windows-apps.pt-br/master/troubleshoot-ad-mediation.597b8b3549bcf2234c187a1e36f7a3ba47e6bb45.pt-br.xlf)
+* Current Target File: [windows-apps-src\xbox-apps\devkit-activation.md](https://github.com/Microsoft/windows-apps.pt-br/blob/149c863f61fcc324db3e3dea8782e6276b20d1c2/windows-apps-src/xbox-apps/devkit-activation.md)
+* Current Handback File: [devkit-activation.22024c3019b2f91b62bafe755f4aefb6138eab84.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/18f7494fe80578448c47b9ba618e4f4ad7301261/ol-handback/Microsoft/windows-apps.pt-br/master/devkit-activation.22024c3019b2f91b62bafe755f4aefb6138eab84.pt-br.xlf)
 * Current Handback Datetime: 2016-04-15 12:23:25
 * [Back to Top](#report-top)
 
