@@ -1,40 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\accessibility\accessibility.md](https://github.com/Microsoft/windows-apps/blob/824fa91ae98c3f752e261e203b20d26553db01ff/windows-apps-src/accessibility/accessibility.md) | OutofSyncHandedBackSuccess | [Details](#2a2b247c5b17f73b4ae62a7d077b61ccd06ae9749)
- [windows-apps-src\layout\test.md](https://github.com/Microsoft/windows-apps/blob/f5fd6d719beb5f34d8b2969b931d42ee49bfbd9e/windows-apps-src/layout/test.md) | HandedOffSuccess | [Details](#f14347012d412c87329ff71da33113863ffd00e93175)
+ [windows-apps-src\publish\link-to-your-app.md](https://github.com/Microsoft/windows-apps/blob/d36f14604bd8c2ce0d5778a67f5b5b9460d9fbf3/windows-apps-src/publish/link-to-your-app.md) | OutofSyncHandedBackSuccess | [Details](#891b99b52f7e3b347c0e2f9d298f144313cc7b2d3470)
 
 ## Item Details
-##### <a name='2a2b247c5b17f73b4ae62a7d077b61ccd06ae9749'></a> Source: [windows-apps-src\accessibility\accessibility.md](https://github.com/Microsoft/windows-apps/blob/824fa91ae98c3f752e261e203b20d26553db01ff/windows-apps-src/accessibility/accessibility.md)
+##### <a name='891b99b52f7e3b347c0e2f9d298f144313cc7b2d3470'></a> Source: [windows-apps-src\publish\link-to-your-app.md](https://github.com/Microsoft/windows-apps/blob/d36f14604bd8c2ce0d5778a67f5b5b9460d9fbf3/windows-apps-src/publish/link-to-your-app.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [accessibility.c5af33aaf4b5c1afcbdc516d45cbba0978a332da.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/96537fcad8426aa8f2bd955688181521a61bbd2d/ol-handoff/Microsoft/windows-apps.pt-br/master/accessibility.c5af33aaf4b5c1afcbdc516d45cbba0978a332da.pt-br.xlf)
-* Handoff Datetime: 2016-04-21 23:18:06
+* Handoff File: [link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/db6b95803e35f835d82f14d56d578aad87b33580/ol-handoff/Microsoft/windows-apps.pt-br/master/link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.pt-br.xlf)
+* Handoff Datetime: 2016-04-21 23:48:10
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\accessibility\accessibility.md](https://github.com/Microsoft/windows-apps.pt-br/blob/149c863f61fcc324db3e3dea8782e6276b20d1c2/windows-apps-src/accessibility/accessibility.md)
-* Current Handback File: [accessibility.c5af33aaf4b5c1afcbdc516d45cbba0978a332da.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/18f7494fe80578448c47b9ba618e4f4ad7301261/ol-handback/Microsoft/windows-apps.pt-br/master/accessibility.c5af33aaf4b5c1afcbdc516d45cbba0978a332da.pt-br.xlf)
+* Current Target File: [windows-apps-src\publish\link-to-your-app.md](https://github.com/Microsoft/windows-apps.pt-br/blob/149c863f61fcc324db3e3dea8782e6276b20d1c2/windows-apps-src/publish/link-to-your-app.md)
+* Current Handback File: [link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/18f7494fe80578448c47b9ba618e4f4ad7301261/ol-handback/Microsoft/windows-apps.pt-br/master/link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.pt-br.xlf)
 * Current Handback Datetime: 2016-04-15 12:23:25
-* [Back to Top](#report-top)
-
-##### <a name='f14347012d412c87329ff71da33113863ffd00e93175'></a> Source: [windows-apps-src\layout\test.md](https://github.com/Microsoft/windows-apps/blob/f5fd6d719beb5f34d8b2969b931d42ee49bfbd9e/windows-apps-src/layout/test.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [test.cdcf91b592fe1e9eb688524669174320f25c7f54.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/96537fcad8426aa8f2bd955688181521a61bbd2d/ol-handoff/Microsoft/windows-apps.pt-br/master/test.cdcf91b592fe1e9eb688524669174320f25c7f54.pt-br.xlf)
-* Handoff Datetime: 2016-04-21 23:18:06
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 
