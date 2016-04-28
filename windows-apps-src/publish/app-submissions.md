@@ -2,11 +2,11 @@
 Description: assim que tiver criado seu aplicativo reservando um nome, você poderá começar a trabalhar na publicação dele. A primeira etapa é criar um envio.
 title: envio de aplicativos
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
-palavras-chave: enviar um aplicativo
-palavras-chave: informações obrigatórias
-palavras-chave: campos obrigatórios
-palavras-chave: dados obrigatórios
-palavras-chave: lista de verificação
+keywords: enviar um aplicativo
+keywords: informações obrigatórias
+keywords: campos obrigatórios
+keywords: dados obrigatórios
+keywords: lista de verificação
 ---
 
 # Envios de aplicativo

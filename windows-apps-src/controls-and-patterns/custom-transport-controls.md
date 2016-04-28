@@ -1,6 +1,6 @@
 ---
 Description: O media player tem controles de transporte XAML personalizáveis para gerenciar o controle de conteúdo de áudio e vídeo.
-Como criar controles personalizados de transporte de mídia
+title: Como criar controles personalizados de transporte de mídia
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Como criar controles personalizados de transporte de mídia
 template: detail.hbs

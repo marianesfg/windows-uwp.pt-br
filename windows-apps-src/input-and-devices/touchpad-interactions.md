@@ -2,7 +2,7 @@
 Description: Crie aplicativos UWP (Plataforma Universal do Windows) com experiências de interação do usuário intuitivas e exclusivas otimizadas para touchpad, mas que sejam funcionalmente consistentes em diferentes dispositivos de entrada.
 title: Interações por touchpad
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
-rótulo: Interações por touchpad
+label: Interações por touchpad
 template: detail.hbs
 ---
 

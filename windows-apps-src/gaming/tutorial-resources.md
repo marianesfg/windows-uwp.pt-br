@@ -2,7 +2,7 @@
 title: Estender o exemplo de jogo
 description: Parabéns! A esta altura, você já entende os componentes principais de um jogo UWP (Plataforma Universal do Windows) DirectX 3D básico.
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
-palavras-chave: ["DirectX, XAML"]
+keywords: ["DirectX, XAML"]
 ---
 
 # Estender o exemplo de jogo

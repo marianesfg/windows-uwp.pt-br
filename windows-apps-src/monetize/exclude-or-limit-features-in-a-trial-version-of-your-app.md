@@ -2,10 +2,10 @@
 Description: Se você permitir que os clientes usem seu aplicativo gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do aplicativo excluindo ou limitando alguns recursos durante o período de avaliação.
 title: Excluir ou limitar recursos em uma versão de avaliação
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-palavras-chave: avaliação gratuita
-palavras-chave: período de avaliação gratuita
-palavras-chave: código de exemplo de avaliação gratuita
-palavras-chave: código de exemplo de avaliação gratuita
+keywords: avaliação gratuita
+keywords: período de avaliação gratuita
+keywords: código de exemplo de avaliação gratuita
+keywords: código de exemplo de avaliação gratuita
 ---
 
 # Excluir ou limitar recursos em uma versão de avaliação
