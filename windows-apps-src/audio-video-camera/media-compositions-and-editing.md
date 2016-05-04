@@ -58,7 +58,7 @@ Declare uma variável de membro do tipo [**MediaStreamSource**](https://msdn.mic
 
 [!code-cs[DeclareMediaStreamSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetDeclareMediaStreamSource)]
 
-Chame o método do objeto **MediaComposition** [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) para criar um **MediaStreamSource** para a composição e, em seguida, chame o método [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) do **MediaElement**. Agora a composição pode ser exibida na interface do usuário.
+Chame o método do objeto **MediaComposition** [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) para criar um **MediaStreamSource** para a composição e, em seguida, chame o método [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) do **MediaElement**. Agora a composição pode ser exibida na interface do usuário.
 
 
 [!code-cs[UpdateMediaElementSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetUpdateMediaElementSource)]
@@ -77,7 +77,7 @@ Para renderizar uma composição de mídia para um arquivo de vídeo simples par
 
 [!code-cs[Namespace2](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace2)]
 
-Depois de permitir que o usuário selecione um arquivo de saída com um [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871), renderize a composição para o arquivo selecionado chamando o objeto **MediaComposition** [**RenderToFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652690). O restante do código no exemplo a seguir simplesmente segue o padrão de manipulação de um [**AsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/desktop/br205807).
+Depois de permitir que o usuário selecione um arquivo de saída com um [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871), renderize a composição para o arquivo selecionado chamando o objeto **MediaComposition** [**RenderToFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652690). O restante do código no exemplo a seguir simplesmente segue o padrão de manipulação de um [**AsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/desktop/br205807).
 
 [!code-cs[RenderCompositionToFile](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetRenderCompositionToFile)]
 
