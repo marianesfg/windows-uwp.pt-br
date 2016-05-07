@@ -1,53 +1,53 @@
 ---
-title: Exibir rotas e trajetos em um mapa
-description: Solicite rotas e trajeto e os exiba no aplicativo.
+author: PatrickFarley
+title: Display routes and directions on a map
+description: Request routes and directions, and display them in your app.
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
 ---
 
-# Exibir rotas e trajetos em um mapa
+# Display routes and directions on a map
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Solicite rotas e trajeto e os exiba no aplicativo.
+Request routes and directions, and display them in your app.
 
-**Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe a amostra a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
+**Tip** To learn more about using maps in your app, download the following sample from the [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) on GitHub.
 
--   [Amostra de mapa da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Universal Windows Platform (UWP) map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-**Dica**  Caso o mapeamento não seja um dos principais recursos do aplicativo, leve em consideração iniciar o aplicativo Mapas do Windows em vez disso. Você pode usar os esquemas de URI `bingmaps:`, `ms-drive-to:` e `ms-walk-to:` para iniciar o aplicativo Mapas do Windows para mapas específicos e trajetos curva a curva. Para obter mais informações, consulte [Iniciar o aplicativo Mapas do Windows](https://msdn.microsoft.com/library/windows/apps/mt228341).
+**Tip**  If mapping isn't a core feature of your app, consider launching the Windows Maps app instead. You can use the `bingmaps:`, `ms-drive-to:`, and `ms-walk-to:` URI schemes to launch the Windows Maps app to specific maps and turn-by-turn directions. For more info, see [Launch the Windows Maps app](https://msdn.microsoft.com/library/windows/apps/mt228341).
 
- 
+ 
 
-## Uma introdução aos resultados de MapRouteFinder
-
-
-Aqui está como as classes de rotas e sentidos estão relacionadas:
-
--   A classe [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) tem métodos que obtêm rotas e trajetos.
--   Esses métodos retornam um [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939).
--   O [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) contém um objeto [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937). Acesse esse objeto por meio da propriedade [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) do **MapRouteFinderResult**.
--   [
-            **MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) contém uma coleção de objetos [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955). Acesse essa coleção por meio da propriedade [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) do **MapRoute**.
--   Cada [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) contém uma coleção de objetos [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961). Acesse essa coleção por meio da propriedade [**Maneuvers**](https://msdn.microsoft.com/library/windows/apps/dn636959) do **MapRouteLeg**.
-
-## Exibir trajetos
+## An intro to MapRouteFinder results
 
 
-Obtenha rotas e trajetos ao dirigir ou caminhar chamando os métodos da classe [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938), por exemplo, [**GetDrivingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636943) ou [**GetWalkingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636953). O objeto [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) contém um objeto [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) que você pode acessar por meio da propriedade [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940).
+Here's how the classes for routes and directions are related:
 
-Ao solicitar uma rota, você pode especificar o seguinte:
+-   The [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) class has methods that get routes and directions.
+-   These methods return a [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939).
+-   The [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) contains a [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) object. Access this object through the [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) property of the **MapRouteFinderResult**.
+-   The [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) contains a collection of [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) objects. Access this collection through the [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) property of the **MapRoute**.
+-   Each [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) contains a collection of [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961) objects. Access this collection through the [**Maneuvers**](https://msdn.microsoft.com/library/windows/apps/dn636959) property of the **MapRouteLeg**.
 
--   Você pode fornecer somente um ponto de partida e um ponto de chegada, ou pode fornecer uma série de pontos intermediários para calcular a rota.
--   Você pode especificar otimizações - por exemplo, minimizar a distância.
--   Você pode especificar restrições - por exemplo, evitar rodovias.
+## Display directions
 
-O [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) calculado possui propriedades que fornecem o tempo de finalização da rota, a distância da rota e a coleção de objetos [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) que contêm as etapas da rota. Cada objeto **MapRouteLeg** contém uma coleção de objetos [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961). O objeto **MapRouteManeuver** contém trajetos que é possível acessar por meio da propriedade [**InstructionText**](https://msdn.microsoft.com/library/windows/apps/dn636964).
 
-**Importante**  Você deve especificar uma chave de autenticação de mapas antes que possa usar os serviços de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).
+Get a driving or walking route and directions by calling the methods of the [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) class—for example, [**GetDrivingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636943) or [**GetWalkingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636953). The [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) object contains a [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) object that you can access through its [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) property.
 
- 
+When you request a route, you can specify the following things:
+
+-   You can provide a start point and end point only, or you can provide a series of waypoints to compute the route.
+-   You can specify optimizations - for example, minimize the distance.
+-   You can specify restrictions - for example, avoid highways.
+
+The computed [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) has properties that provide the time to traverse the route, the length of the route, and the collection of [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) objects that contain the legs of the route. Each **MapRouteLeg** object contains a collection of [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961) objects. The **MapRouteManeuver** object contains directions that you can access through its [**InstructionText**](https://msdn.microsoft.com/library/windows/apps/dn636964) property.
+
+**Important**  You must specify a maps authentication key before you can use map services. For more info, see [Request a maps authentication key](authentication-key.md).
+
+ 
 
 ```csharp
 using System;
@@ -104,7 +104,7 @@ private async void button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Este exemplo exibe os seguintes resultados para a caixa de texto `tbOutputText`.
+This example displays the following results to the `tbOutputText` text box.
 
 ``` syntax
 Total estimated time (minutes) = 18.4833333333333
@@ -122,14 +122,14 @@ Turn right onto James St.
 You have reached your destination.
 ```
 
-## Exibir rotas
+## Display routes
 
 
-Para exibir um [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) em um [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), construa um [**MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122) com o **MapRoute**. Em seguida, adicione o **MapRouteView** à coleção [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047) do **MapControl**.
+To display a [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) on a [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), construct a [**MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122) with the **MapRoute**. Then, add the **MapRouteView** to the [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047) collection of the **MapControl**.
 
-**Importante**  Você deve especificar uma chave de autenticação de mapas para usar serviços de mapa ou o controle de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).
+**Important**  You must specify a maps authentication key before you can use map services or the map control. For more info, see [Request a maps authentication key](authentication-key.md).
 
- 
+ 
 
 ```csharp
 using System;
@@ -176,20 +176,15 @@ private async void ShowRouteOnMap()
 }
 ```
 
-Esse exemplo exibe o seguinte em um [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) chamado **MapWithRoute**.
+This example displays the following on a [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) named **MapWithRoute**.
 
-![controle de mapa com rota exibida.](images/routeonmap.png)
+![map control with route displayed.](images/routeonmap.png)
 
-## Tópicos relacionados
+## Related topics
 
-* [Central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
-* [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo do aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-<!--HONumber=Mar16_HO1-->
-
+* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
+* [UWP map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Design guidelines for maps](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Build 2015 video: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP traffic app sample](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 

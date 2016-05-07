@@ -1,17 +1,18 @@
 ---
+author: mcleblanc
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
-title: Otimizar sua marcação XAML
-description: Analisar marcações XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu aplicativo.
+title: Optimize your XAML markup
+description: Parsing XAML markup to construct objects in memory is time-consuming for a complex UI. Here are some things you can do to improve XAML markup parse and load time and memory efficiency for your app.
 ---
-# Otimizar sua marcação XAML
+# Optimize your XAML markup
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Analisar marcações XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu aplicativo.
+Parsing XAML markup to construct objects in memory is time-consuming for a complex UI. Here are some things you can do to improve XAML markup parse and load time and memory efficiency for your app.
 
-Na inicialização do aplicativo, limite a marcação XAML que é carregada para apenas o que você precisa para sua interface do usuário inicial. Examine a marcação em sua página inicial e confirmar se ela contém apenas o que é necessário. Se a página fizer referência a um controle de usuário ou um recurso definido em um arquivo diferente, a estrutura analisará esse arquivo também.
+At app startup, limit the XAML markup that is loaded to only what you need for your initial UI. Examine the markup in your initial page and confirm it contains nothing that it doesn't need. If a page references a user control or a resource defined in a different file, then the framework parses that file, too.
 
-Neste exemplo, como InitialPage.xaml usa um recurso de ExampleResourceDictionary.xaml, todo o ExampleResourceDictionary.xaml deve ser analisado na inicialização.
+In this example, because InitialPage.xaml uses one resource from ExampleResourceDictionary.xaml, the whole of ExampleResourceDictionary.xaml must be parsed at startup.
 
 **InitialPage.xaml.**
 
@@ -42,7 +43,7 @@ Neste exemplo, como InitialPage.xaml usa um recurso de ExampleResourceDictionary
 </ResourceDictionary>
 ```
 
-Se você usar um recurso em várias páginas em todo o aplicativo, armazenando-o em App.xaml é uma boa prática e evita a duplicação. Mas App.xaml é analisado na inicialização do aplicativo para que qualquer recurso usado em apenas uma página (a menos que essa página seja a página inicial) seja colocado nos recursos locais da página. Este contraexemplo mostra um App.xaml que contém recursos que são usados por apenas uma página (que não é a página inicial). Isso aumenta desnecessariamente o tempo de inicialização do aplicativo.
+If you use a resource on many pages throughout your app, then storing it in App.xaml is a good practice, and avoids duplication. But App.xaml is parsed at app startup so any resource that is used in only one page (unless that page is the initial page) should be put into the page's local resources. This counter-example shows App.xaml containing resources that are used by only one page (that's not the initial page). This needlessly increases app startup time.
 
 **InitialPage.xaml.**
 
@@ -77,15 +78,15 @@ Se você usar um recurso em várias páginas em todo o aplicativo, armazenando-o
 </Application> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-A maneira de tornar o contraexemplo acima mais eficiente é mover `SecondPageTextBrush` para SecondPage.xaml e `ThirdPageTextBrush` para ThirdPage.xaml. `InitialPageTextBrush` pode permanecer em App.xaml porque os recursos de aplicação devem ser analisados na inicialização do aplicativo de qualquer forma.
+The way to make the above counter-example more efficient is to move `SecondPageTextBrush` into SecondPage.xaml and to move `ThirdPageTextBrush` into ThirdPage.xaml. `InitialPageTextBrush` can remain in App.xaml because application resources must be parsed at app startup in any case.
 
-## Minimizar a contagem de elementos
+## Minimize element count
 
-Embora a plataforma XAML seja capaz de exibir grandes quantidades de elementos, você pode fazer com que a disposição e a renderização de seu aplicativo sejam mais rápidas, usando a menor quantidade de elementos para alcançar os elementos visuais desejados.
+Although the XAML platform is capable of displaying large numbers of elements, you can make your app lay out and render faster by using the fewest number of elements to achieve the visuals you want.
 
--   Os painéis de layout têm uma propriedade [**Background**](https://msdn.microsoft.com/library/windows/apps/BR227512), então não é preciso puxar um [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) na frente de um painel apenas para colori-lo.
+-   Layout panels have a [**Background**](https://msdn.microsoft.com/library/windows/apps/BR227512) property so there's no need to put a [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) in front of a Panel just to color it.
 
-**Ineficiente.**
+**Inefficient.**
 
 ```xml
 <Grid> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
@@ -93,19 +94,19 @@ Embora a plataforma XAML seja capaz de exibir grandes quantidades de elementos, 
     </Grid> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-**Eficiente.**
+**Efficient.**
 
 ```xml
 <Grid Background="Black"/>
 ```
 
--   Se você reutilizar bastante o mesmo elemento baseado em vetor, se torna mais eficiente usar um elemento [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) ao invés. Os elementos baseados em vetor podem ser mais caros porque a CPU precisa criar cada elemento individual separadamente. O arquivo de imagem precisa ser decodificado apenas uma vez.
+-   If you reuse the same vector-based element enough times, it becomes more efficient to use an [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) element instead. Vector-based elements can be more expensive because the CPU must create each individual element separately. The image file needs to be decoded only once.
 
-## Consolide vários pinceis com a mesma aparência em um recurso
+## Consolidate multiple brushes that look the same into one resource
 
-A plataforma XAML tenta armazenar objetos comumente usados em cache de forma que eles possam ser reutilizados com mais frequência possível. Porém, o XAML não consegue dizer facilmente se um pincel declarado em um pedaço de marcação é o mesmo que um pincel declarado em outro. O exemplo aqui usa [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) para demonstrar, mas o caso é mais provável e mais importante com [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068).
+The XAML platform tries to cache commonly-used objects so that they can be reused as often as possible. But XAML cannot easily tell if a brush declared in one piece of markup is the same as a brush declared in another. The example here uses [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) to demonstrate, but the case is more likely and more important with [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068).
 
-**Ineficiente.**
+**Inefficient.**
 
 ```xml
 <Page ... > <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
@@ -124,9 +125,9 @@ A plataforma XAML tenta armazenar objetos comumente usados em cache de forma que
 </Page> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-Além disso, procure por pinceis que usam cores pré-definidas: `"Orange"` e `"#FFFFA500"` são a mesma cor. Para corrigir a duplicação, defina o pincel como um recurso. Se os controles em outras páginas usam o mesmo pincel, mova-o para App.xaml.
+Also check for brushes that use predefined colors: `"Orange"` and `"#FFFFA500"` are the same color. To fix the duplication, define the brush as a resource. If controls in other pages use the same brush, move it to App.xaml.
 
-**Eficiente.**
+**Efficient.**
 
 ```xml
 <Page ... >
@@ -141,14 +142,14 @@ Além disso, procure por pinceis que usam cores pré-definidas: `"Orange"` e `"#
 </Page>
 ```
 
-## Minimizar o excesso de desenho
+## Minimize overdrawing
 
-O excesso de desenho se dá quando mais de um objeto é desenhado nos mesmos pixels de tela. Às vezes, há um compromisso entre essa orientação e o desejo de minimizar a contagem de elementos.
+Overdrawing is where more than one object is drawn in the same screen pixels. Note that there is sometimes a trade-off between this guidance and the desire to minimize element count.
 
--   Se um elemento não está visível porque é transparente ou está escondido atrás de outros elementos e não contribui para o layout, exclua-o. Se o elemento não é visível no estado visual inicial, mas é visível em outros estados visuais, então defina [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) para **Collapsed** no próprio elemento e altere o valor para **Visible** nos estados adequados. Haverá exceções a essa heurística: em geral, o valor que uma propriedade possui na maioria dos estados visuais é melhor definida localmente no elemento.
--   Use um elemento composto em vez de mostrar vários elementos em camadas para criar um efeito. Nesse exemplo, o resultado é uma forma de dois tons em que a metade superior é preta (do plano de fundo do [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)) e a metade inferior é cinza (do [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) branco semitransparente em combinação alfa sobre o plano de fundo preto do **Grid**). Aqui, 150% dos pixels necessários para obter o resultado estão sendo preenchidos.
+-   If an element isn't visible because it's transparent or hidden behind other elements, and it's not contributing to layout, then delete it. If the element is not visible in the initial visual state but it is visible in other visual states then set [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) to **Collapsed** on the element itself and change the value to **Visible** in the appropriate states. There will be exceptions to this heuristic: in general, the value a property has in the major of visual states is best set locally on the element.
+-   Use a composite element instead of layering multiple elements to create an effect. In this example, the result is a two-toned shape where the top half is black (from the background of the [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)) and the bottom half is gray (from the semi-transparent white [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) alpha-blended over the black background of the **Grid**). Here, 150% of the pixels necessary to achieve the result are being filled.
 
-**Ineficiente.**
+**Inefficient.**
     
 ```xml
     <Grid Background="Black"> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
@@ -160,7 +161,7 @@ O excesso de desenho se dá quando mais de um objeto é desenhado nos mesmos pix
     </Grid> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-**Eficiente.**
+**Efficient.**
 
 ```xml
     <Grid>
@@ -173,9 +174,9 @@ O excesso de desenho se dá quando mais de um objeto é desenhado nos mesmos pix
     </Grid>
 ```
 
--   Um painel de layout pode ter duas finalidades: colorir uma área e definir o layout dos elementos filho. Se um elemento adicional na ordem z já está colorindo uma área, então um painel de layout na frente não precisa pintar área: em vez disso, ele pode apenas se concentrar em dispor seus filhos. Aqui está um exemplo.
+-   A layout panel can have two purposes: to color an area, and to lay out child elements. If an element further back in z-order is already coloring an area then a layout panel in front does not need to paint that area: instead it can just focus on laying out its children. Here's an example.
 
-**Ineficiente.**
+**Inefficient.**
 
 ```xml
     <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
@@ -188,7 +189,7 @@ O excesso de desenho se dá quando mais de um objeto é desenhado nos mesmos pix
     </GridView> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-**Eficiente.**
+**Efficient.**
 
 ```xml
     <GridView Background="Blue">  
@@ -200,11 +201,11 @@ O excesso de desenho se dá quando mais de um objeto é desenhado nos mesmos pix
     </GridView> 
 ```
 
-Se o [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) precisa ser testado para ocorrências, defina um valor de plano de fundo transparente nele.
+If the [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) has to be hit-testable then set a background value of transparent on it.
 
--   Use um elemento [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209253) para desenhar uma borda em torno de um objeto. Nesse exemplo, um [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) é usado como uma borda provisória em torno de um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683). Mas todos os pixels na célula central se excedem.
+-   Use a [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209253) element to draw a border around an object. In this example, a [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) is used as a makeshift border around a [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683). But all the pixels in the center cell are overdrawn.
 
-**Ineficiente.**
+**Inefficient.**
 
 ```xml
     <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
@@ -223,7 +224,7 @@ Se o [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) precis
     </Grid> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-**Eficiente.**
+**Efficient.**
 
 ```xml
     <Border BorderBrush="Blue" BorderThickness="5" Width="300" Height="45">
@@ -231,15 +232,15 @@ Se o [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) precis
     </Border>
 ```
 
--   Fique atento às margens. Dois elementos vizinhos ficarão sobrepostos (possivelmente por acidente) caso margens negativas se estendam para as bordas de outro e causem excesso de desenhos.
+-   Be aware of margins. Two neighboring elements will overlap (possibly accidentally) if negative margins extend into another’s render bounds and cause overdrawing.
 
-Use [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/Hh701823) como um diagnóstico visual. Você pode encontrar objetos sendo desenhados que você não sabia que estavam na cena.
+Use [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/Hh701823) as a visual diagnostic. You may find objects being drawn that you weren't aware were in the scene.
 
-## Armazenar conteúdo estático em cache
+## Cache static content
 
-Outra fonte de excesso de desenho é uma forma feita a partir de muitos elementos sobrepostos. Se você definir [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084) para **BitmapCache** no [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) que contém a forma composta, então a plataforma renderiza o elemento em um bitmap uma vez e, depois, o utiliza a cada quadro, em vez de exceder os desenhos.
+Another source of overdrawing is a shape made from many overlapping elements. If you set [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084) to **BitmapCache** on the [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) that contains the composite shape then the platform renders the element to a bitmap once and then uses that bitmap each frame instead of overdrawing.
 
-**Ineficiente.**
+**Inefficient.**
 
 ```xml
 <Canvas Background="White">
@@ -249,13 +250,13 @@ Outra fonte de excesso de desenho é uma forma feita a partir de muitos elemento
 </Canvas>
 ```
 
-![Diagrama de Venn com três círculos sólidos](images/solidvenn.png)
+![Venn diagram with three solid circles](images/solidvenn.png)
 
-A imagem acima é o resultado, mas este é um mapa das regiões com excesso de desenho. O vermelho mais escuro indica maiores quantidades de desenho em sobreposição.
+The image above is the result, but here's a map of the overdrawn regions. Darker red indicates higher amounts of overdraw.
 
-![Diagrama de Venn que mostra áreas sobrepostas](images/translucentvenn.png)
+![Venn diagram that shows overlapping areas](images/translucentvenn.png)
 
-**Eficiente.**
+**Efficient.**
 
 ```xml
 <Canvas Background="White" CacheMode="BitmapCache">
@@ -265,26 +266,21 @@ A imagem acima é o resultado, mas este é um mapa das regiões com excesso de d
 </Canvas>
 ```
 
-Observe o uso de [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084). Não use essa técnica se qualquer uma das subformas for animada, porque o cache de bitmap provavelmente precisará ser regenerado a cada quadro, destruindo o propósito.
+Note the use of [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084). Don't use this technique if any of the sub-shapes animate because the bitmap cache will likely need to be regenerated every frame, defeating the purpose.
 
 ## ResourceDictionaries
 
-ResourceDictionaries geralmente são usados para armazenar seus recursos em um nível um pouco global. Os recursos aos quais seu aplicativo fará referência em vários lugares. Por exemplo, estilos, pincéis, modelos e assim por diante. No geral, otimizamos ResourceDictionaries para não instanciar recursos, a menos que seja solicitado. Mas há alguns lugares onde você precisa ter um pouco de cuidado.
+ResourceDictionaries are generally used to store your resources at a somewhat global level. Resources that your app wants to reference in multiple places. For example, styles, brushes, templates, and so on. In general, we have optimized ResourceDictionaries to not instantiate resources unless they're asked for. But there are few places where you need to be a little careful.
 
-**Recurso com x:Name**. Os recursos com x:Name não se beneficiarão com a otimização da plataforma, mas em vez disso, eles serão instanciados assim que ResourceDictionary for criado. Isso ocorre porque x:Name instrui a plataforma de que seu aplicativo precisa de acesso de campo a esse recurso de forma que a plataforma precise criar algo para o qual irá criar um referência.
+**Resource with x:Name**. Any resource with x:Name will not benefit from the platform optimization, but instead it will be instantiated as soon as the ResourceDictionary is created. This happens because x:Name tells the platform that your app needs field access to this resource, so the platform needs to create something to create a reference to.
 
-**ResourceDictionaries em um UserControl**. ResourceDictionaries definidos dentro de um UserControl provocam uma penalidade. A plataforma criará uma cópia de tal ResourceDictionary para cada instância do UserControl. Se você tiver um UserControl que é muito usado, mova ResourceDictionary do UserControl e coloque-o no nível de página.
+**ResourceDictionaries in a UserControl**. ResourceDictionaries defined inside of a UserControl carry a penalty. The platform will create a copy of such a ResourceDictionary for every instance of the UserControl. If you have a UserControl that is used a lot, then move the ResourceDictionary out of the UserControl and put it the page level.
 
-## Usar o XBF2
+## Use XBF2
 
-XBF2 é uma representação binária da marcação XAML que evita todos os custos da análise de texto em tempo de execução. Ele também otimiza o binário para a criação de árvore e o carregamento, além de proporcionar um "caminho rápido" para que tipos XAML melhorem os custos de criação de objeto e de heap, por exemplo VSM, ResourceDictionary, Styles e assim por diante. Ele é totalmente mapeado por memória de forma que não haja uma volume de heap no carregamento e leitura de uma página XAML. Além disso, ele reduz o volume de disco das páginas XAML armazenadas em um appx. XBF2 é uma representação mais compacta e pode reduzir o volume de disco de arquivos XAML/XBF1 comparativos em até 50%. Por exemplo, o aplicativo Fotos integrado experimentou uma redução em torno de 60% após a conversão para XBF2, baixando de cerca de ~ 1mb de ativos XBF1 para ~ 400kb de ativos XBF2. Também vimos aplicativos se beneficiarem entre 15 e 20% em termos de uso de CPU e 10 e 15% em relação ao heap do Win32.
+XBF2 is a binary representation of XAML markup that avoids all text-parsing costs at runtime. It also optimizes your binary for load and tree creation, and allows "fast-path" for XAML types to improve heap and object creation costs, for example VSM, ResourceDictionary, Styles, and so on. It is completely memory-mapped so there is no heap footprint for loading and reading a XAML Page. In addition, it reduces the disk footprint of stored XAML pages in an appx. XBF2 is a more compact representation and it can reduce disk footprint of comparative XAML/XBF1 files by up to 50%. For example, the built-in Photos app saw around a 60% reduction after conversion to XBF2 dropping from around ~1mb of XBF1 assets to ~400kb of XBF2 assets. We have also seen apps benefit anywhere from 15 to 20% in CPU and 10 to 15% in Win32 heap.
 
-Dicionários e controles XAML internos que a estrutura fornece já são totalmente habilitados para XBF2. Para seu próprio aplicativo, assegure-se de que o arquivo de projeto declare TargetPlatformVersion 8.2 ou posterior.
+XAML built-in controls and dictionaries that the framework provides are already fully XBF2-enabled. For your own app, ensure that your project file declares TargetPlatformVersion 8.2 or later.
 
-Para verificar se você tem o XBF2, abra seu aplicativo em um editor binário; o 12º e o 13º bytes são 00 02 se você tiver o XBF2.
-
-
-
-<!--HONumber=Mar16_HO1-->
-
+To check whether you have XBF2, open your app in a binary editor; the 12th and 13th bytes are 00 02 if you have XBF2.
 

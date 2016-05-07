@@ -1,127 +1,123 @@
 ---
+author: drewbatgit
 ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
-description: A classe SystemMediaTransportControls permite que seu aplicativo use os controles de transporte de mídia do sistema que estão integrados ao Windows e atualize os metadados que os controles exibem sobre a mídia que seu aplicativo está reproduzindo atualmente.
-title: Controles de transporte de mídia do sistema
+description: The SystemMediaTransportControls class enables your app to use the system media transport controls that are built into Windows and to update the metadata that the controls display about the media your app is currently playing.
+title: System Media Transport Controls
 ---
 
-# Controles de transporte de mídia do sistema
+# System Media Transport Controls
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-A classe [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) permite que seu aplicativo use os controles de transporte de mídia do sistema que estão integrados ao Windows e atualize os metadados que os controles exibem sobre a mídia que seu aplicativo está reproduzindo atualmente.
+The [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) class enables your app to use the system media transport controls that are built into Windows and to update the metadata that the controls display about the media your app is currently playing.
 
-Os controles de transporte do sistema são diferentes dos controles de transporte no objeto [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). Esses controles de transporte aparecem quando você pressiona teclas de mídia no hardware, como o controle de volume nos fones de ouvido ou os botões de mídia nos teclados. Se o usuário pressionar a tecla de pausa em um teclado e seu aplicativo der suporte a [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677), seu aplicativo será notificado e você poderá tomar a medida apropriada.
+The system transport controls are different than the transport controls on the [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) object. The system transport controls are the controls that pop up when hardware media keys are pressed, such as the volume control on a pair of headphones or the media buttons on keyboards. If the user presses the pause key on a keyboard and your app supports the [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677), your app is notified and you can take the appropriate action.
 
-Seu aplicativo também pode atualizar as informações de mídia, como o título da música e a imagem em miniatura mostrada pelos [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677).
+Your app can also update the media info, such as the song title and thumbnail image that the [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) displays.
 
-**Observação**  
-A [Amostra UWP de controles de transporte de mídia do sistema](http://go.microsoft.com/fwlink/?LinkId=619488) implementa o código abordado nesta visão geral. Você pode baixar a amostra para ver o código usado no contexto ou usá-lo como ponto de partida para seu próprio aplicativo.
+**Note**  
+The [System Media Transport Controls UWP sample](http://go.microsoft.com/fwlink/?LinkId=619488) implements the code discussed in this overview. You can download the sample to see the code in context or to use as a starting point for your own app.
 
-## Configurar os controles de transporte
+## Set up transport controls
 
-No arquivo XAML da página, defina um [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) que será controlado pelos controles de transporte de mídia do sistema. Os eventos [**CurrentStateChanged**](https://msdn.microsoft.com/library/windows/apps/br227375) e [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/br227394) são usados para atualizar os controles de transporte de mídia do sistema e serão abordados neste artigo.
+In the page's XAML file, define a [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) that will be controlled by the system media transport controls. The [**CurrentStateChanged**](https://msdn.microsoft.com/library/windows/apps/br227375) and [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/br227394) events are used to update the system media transport controls and will be discussed later in this article.
 
 [!code-xml[MediaElementSystemMediaTransportControls](./code/SMTCWin10/cs/MainPage.xaml#SnippetMediaElementSystemMediaTransportControls)]
 
-Adicione um botão ao arquivo XAML que permita que o usuário selecione um arquivo para reproduzir.
+Add a button to the XAML file that allows the user to select a file to play.
 
 [!code-xml[OpenButton](./code/SMTCWin10/cs/MainPage.xaml#SnippetOpenButton)]
 
-Em sua página code-behind, adicione diretivas de uso aos namespaces a seguir.
+In your code behind page, add using directives for the following namespaces.
 
 [!code-cs[Namespace](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetNamespace)]
 
-Adicione um manipulador de clique de botão que use um [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para permitir que o usuário selecione um arquivo e chame [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) para torná-lo o arquivo ativo para o **MediaElement**.
+Add a button click handler that uses a [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) to allow the user to select a file, then call [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) to make it the active file for the **MediaElement**.
 
 [!code-cs[OpenMediaFile](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetOpenMediaFile)]
 
-Obtenha uma instância dos [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) chamando [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708).
+Get an instance of the [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) by calling [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708).
 
-Ative os botões que seu aplicativo usará configurando a propriedade "is enabled" correspondente do objeto **SystemMediaTransportControls**, como [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714), [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713), [**IsNextEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278712) e [**IsPreviousEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278715). Veja uma lista completa de controles disponíveis na documentação de referência aos **SystemMediaTransportControls**.
+Enable the buttons that your app will use by setting the corresponding "is enabled" property of the **SystemMediaTransportControls** object, such as [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714), [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713), [**IsNextEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278712), and [**IsPreviousEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278715). See the **SystemMediaTransportControls** reference documentation for a complete list of available controls.
 
-Registre um manipulador para o evento [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706) para receber notificações quando o usuário pressionar um botão.
+Register a handler for the [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706) event to receive notifications when the user presses a button.
 
 [!code-cs[SystemMediaTransportControlsSetup](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsSetup)]
 
-## Manipular pressionamentos de botões de controles de transporte de mídia do sistema
+## Handle system media transport controls button presses
 
-O evento [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706) é acionado pelos controles de transporte do sistema quando um dos botões ativados é pressionado. A propriedade [**Button**](https://msdn.microsoft.com/library/windows/apps/dn278685) dos [**SystemMediaTransportControlsButtonPressedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn278683) passados para o manipulador de eventos é membro da enumeração [**SystemMediaTransportControlsButton**](https://msdn.microsoft.com/library/windows/apps/dn278681) que indica quais dos botões ativados foram pressionados.
+The [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706) event is raised by the system transport controls when one of the enabled buttons is pressed. The [**Button**](https://msdn.microsoft.com/library/windows/apps/dn278685) property of the [**SystemMediaTransportControlsButtonPressedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn278683) passed into the event handler is a member of the [**SystemMediaTransportControlsButton**](https://msdn.microsoft.com/library/windows/apps/dn278681) enumeration that indicates which of the enabled buttons was pressed.
 
-Para atualizar objetos no thread da interface do usuário no manipulador de eventos [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706), como um objeto [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926), você precisa realizar marshaling das chamadas por meio de [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211). Isso ocorre porque o manipulador de eventos **ButtonPressed** não é chamado a partir do thread da interface do usuário e, portanto, uma exceção será gerada se você tentar modificar diretamente a interface do usuário.
+In order to update objects on the UI thread from the [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706) event handler, such as a [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) object, you must marshal the calls through the [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211). This is because the **ButtonPressed** event handler is not called from the UI thread and therefore an exception will be thrown if you attempt to modify the UI directly.
 
 [!code-cs[SystemMediaTransportControlsButtonPressed](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsButtonPressed)]
 
-## Atualizar os controles de transporte de mídia do sistema com o status atual da mídia
+## Update the system media transport controls with the current media status
 
-Você deve notificar os [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) quando o estado da mídia mudar para que o sistema possa atualizar os controles para refletir o estado atual. Para fazer isso, configure a propriedade [**PlaybackStatus**](https://msdn.microsoft.com/library/windows/apps/dn278719) com o valor [**MediaPlaybackStatus**](https://msdn.microsoft.com/library/windows/apps/dn278665) apropriado no evento [**CurrentStateChanged**](https://msdn.microsoft.com/library/windows/apps/br227375) do [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926), que é lançado quando o estado da mídia muda.
+You should notify the [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) when the state of the media has changed so that the system can update the controls to reflect the current state. To do this, set the [**PlaybackStatus**](https://msdn.microsoft.com/library/windows/apps/dn278719) property to the appropriate [**MediaPlaybackStatus**](https://msdn.microsoft.com/library/windows/apps/dn278665) value from within the [**CurrentStateChanged**](https://msdn.microsoft.com/library/windows/apps/br227375) event of the [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926), which is raised when the media state changes.
 
 [!code-cs[SystemMediaTransportControlsStateChange](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsStateChange)]
 
-## Atualizar os controles de transporte de mídia do sistema com miniaturas e informações de mídia
+## Update the system media transport controls with media info and thumbnails
 
-Use a classe [**SystemMediaTransportControlsDisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278686) para atualizar as informações da mídia mostradas pelos controles de transporte, como o título da música ou a capa do álbum do item de mídia atualmente em reprodução. Obtenha uma instância dessa classe com a propriedade [**SystemMediaTransportControls.DisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278707). Para cenários típicos, a maneira recomendada de passar os metadados é chamar [**CopyFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn278694), passando o arquivo de mídia atualmente em execução. O atualizador de exibição extrairá automaticamente os metadados e a imagem em miniatura do arquivo.
+Use the [**SystemMediaTransportControlsDisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278686) class to update the media info that is displayed by the transport controls, such as the song title or the album art for the currently playing media item. Get an instance of this class with the [**SystemMediaTransportControls.DisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278707) property. For typical scenarios, the recommended way to pass the metadata is to call [**CopyFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn278694), passing in the currently playing media file. The display updater will automatically extract the metadata and thumbnail image from the file.
 
-Chame [**Update**](https://msdn.microsoft.com/library/windows/apps/dn278701) para fazer com que os controles de transporte de mídia do sistema atualizem sua interface do usuário com os novos metadados e a miniatura.
+Call the [**Update**](https://msdn.microsoft.com/library/windows/apps/dn278701) to cause the system media transport controls to update its UI with the new metadata and thumbnail.
 
 [!code-cs[SystemMediaTransportControlsUpdater](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsUpdater)]
 
-Se seu cenário exigir, você poderá atualizar os metadados exibidos pelos controles de transporte de mídia do sistema manualmente configurando os valores dos objetos [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/dn278696), [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/dn278695) ou [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/dn278702) expostos pela classe [**DisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278707).
+If your scenario requires it, you can update the metadata displayed by the system media transport controls manually by setting the values of the [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/dn278696), [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/dn278695), or [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/dn278702) objects exposed by the [**DisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278707) class.
 
 [!code-cs[SystemMediaTransportControlsUpdaterManual](./code/SMTCWin10/cs/MainPage.xaml.cs#SystemMediaTransportControlsUpdaterManual)]
 
-## Atualizar as propriedades de linha do tempo dos controles de transporte de mídia do sistema
+## Update the system media transport controls timeline properties
 
-Os controles de transporte do sistema exibem informações sobre a linha do tempo do item de mídia atualmente em execução, incluindo a posição de reprodução atual, a hora de início e a hora de término do item de mídia. Para atualizar as propriedades de linha do tempo dos controles de transporte do sistema, crie um novo objeto [**SystemMediaTransportControlsTimelineProperties**](https://msdn.microsoft.com/library/windows/apps/mt218746). Configure as propriedades do objeto para refletir o estado atual do item de mídia em reprodução. Chame [**SystemMediaTransportControls.UpdateTimelineProperties**](https://msdn.microsoft.com/library/windows/apps/mt218760) para fazer com que os controles atualizem a linha do tempo.
+The system transport controls display information about the timeline of the currently playing media item, including the current playback position, the start time, and the end time of the media item. To update the system transport controls timeline properties, create a new [**SystemMediaTransportControlsTimelineProperties**](https://msdn.microsoft.com/library/windows/apps/mt218746) object. Set the properties of the object to reflect the current state of the playing media item. Call [**SystemMediaTransportControls.UpdateTimelineProperties**](https://msdn.microsoft.com/library/windows/apps/mt218760) to cause the controls to update the timeline.
 
 [!code-cs[UpdateTimelineProperties](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetUpdateTimelineProperties)]
 
--   Você deve fornecer um valor para [**StartTime**](https://msdn.microsoft.com/library/windows/apps/mt218751), [**EndTime**](https://msdn.microsoft.com/library/windows/apps/mt218747) e [**Position**](https://msdn.microsoft.com/library/windows/apps/mt218755) para que os controles do sistema mostrem uma linha do tempo para o item em execução.
+-   You must provide a value for the [**StartTime**](https://msdn.microsoft.com/library/windows/apps/mt218751), [**EndTime**](https://msdn.microsoft.com/library/windows/apps/mt218747) and [**Position**](https://msdn.microsoft.com/library/windows/apps/mt218755) in order for the system controls to display a timeline for your playing item.
 
--   [**MinSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218749) e [**MaxSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218748) permitem que você especifique o intervalo na linha do tempo que o usuário pode buscar. Um cenário típico para isso é permitir que os provedores de conteúdo incluam pausas para anúncios em suas mídias.
+-   [**MinSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218749) and [**MaxSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218748) allow you to specify the range within the timeline that the user can seek. A typical scenario for this is to allow content providers to include advertisement breaks in their media.
 
-    Você deve configurar [**MinSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218749) e [**MaxSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218748) para que a [**PositionChangeRequest**](https://msdn.microsoft.com/library/windows/apps/mt218755) seja lançada.
+    You must set [**MinSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218749) and [**MaxSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218748) in order for the [**PositionChangeRequest**](https://msdn.microsoft.com/library/windows/apps/mt218755) to be raised.
 
--   É recomendável manter os controles do sistema em sincronia com a reprodução da mídia, atualizando essas propriedades aproximadamente a cada 5 segundos durante a reprodução e novamente sempre que o estado da reprodução mudar, por exemplo, ao pausar ou buscar uma nova posição.
+-   It is recommended that you keep the system controls in sync with your media playback by updating these properties approximately every 5 seconds during playback and again whenever the state of playback changes, such as pausing or seeking to a new position.
 
-## Responder às alterações de propriedade do player
+## Respond to player property changes
 
-Há um conjunto de propriedades de controles de transporte do sistema que se relacionam ao estado atual do player de mídia em si, em vez do estado do item de mídia em reprodução. Cada uma dessas propriedades é relacionada a um evento que é lançado quando o usuário ajusta o controle associado. Essas propriedades e eventos incluem:
+There is a set of system transport controls properties that relate to the current state of the media player itself, rather than the state of the playing media item. Each of these properties is matched with an event that is raised when the user adjusts the associated control. These properties and events include:
 
-| Propriedade                                                                  | Evento                                                                                                   |
+| Property                                                                  | Event                                                                                                   |
 |---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | [**AutoRepeatMode**](https://msdn.microsoft.com/library/windows/apps/mt218753) | [**AutoRepeatModeChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218754) |
 | [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/mt218756)     | [**PlaybackRateChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218757)     |
 | [**ShuffleEnabled**](https://msdn.microsoft.com/library/windows/apps/mt218758) | [**ShuffleEnabledChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218759) |
 
- 
-Para manipular a interação do usuário com um desses controles, registre um manipulador para o evento associado primeiro.
+ 
+To handle user interaction with one of these controls, first register a handler for the associated event.
 
 [!code-cs[RegisterPlaybackChangedHandler](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetRegisterPlaybackChangedHandler)]
 
-No manipulador do evento, certifique-se primeiramente de que o valor solicitado esteja em um intervalo válido e esperado. Se estiver, configure a propriedade correspondente no [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) e configure a propriedade correspondente no objeto [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677).
+In the handler for the event, first make sure that the requested value is within a valid and expected range. If it is, set the corresponding property on [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) and then set the corresponding property on the [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) object.
 
 [!code-cs[PlaybackChangedHandler](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetPlaybackChangedHandler)]
 
--   Para que um desses eventos de propriedade do player seja lançado, você deve definir um valor inicial para a propriedade. Por exemplo, [**PlaybackRateChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218757) não será lançado até que você tenha definido um valor para a propriedade [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/mt218756) pelo menos uma vez.
+-   In order for one of these player property events to be raised, you must set an initial value for the property. For example, [**PlaybackRateChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218757) will not be raised until after you have set a value for the [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/mt218756) property at least one time.
 
-## Usar os controles de transporte de mídia do sistema para áudio em segundo plano
+## Use the system media transport controls for background audio
 
-Para usar os controles de transporte de mídia do sistema para áudio em segundo plano, você deve ativar os botões de reprodução e pausa configurando [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714) e [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713) como true. O aplicativo também deve manipular o evento [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706).
+To use the system media transport controls for background audio, you must enable the play and pause buttons by setting [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714) and [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713) to true. Your app must also handle the [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706) event.
 
-Para obter uma instância dos [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) a partir da tarefa em segundo plano do aplicativo, você deve usar [**BackgroundMediaPlayer.Current.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635), em vez de [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708), que só pode ser usado em seu aplicativo em primeiro plano.
+To get an instance of [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) from within your app's background task, you must use [**BackgroundMediaPlayer.Current.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635) instead of [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708), which can only be used from within your foreground app.
 
-Para obter informações sobre como reproduzir áudio em segundo plano, consulte [Áudio em segundo plano](background-audio.md).
+For more information on playing audio in the background, see [Background audio](background-audio.md).
 
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

@@ -1,17 +1,18 @@
 ---
-title: Passo a passo de exemplos de portabilidade do OpenGL ES 2.0
-description: Este conjunto de tópicos mostra várias situações de portabilidade de elementos gráficos em OpenGL ES 2.0 de diferentes graus de dificuldade.
+author: mtoepke
+title: Walkthrough sample ports from OpenGL ES 2.0
+description: This set of topics walks a number of OpenGL ES 2.0 graphics pipeline porting scenarios of differing complexity.
 ms.assetid: 07390da1-83f3-7fbb-5696-d1da3a2bc870
 ---
 
-# Passo a passo: exemplos de portabilidade do OpenGL ES 2.0
+# Walkthrough sample ports from OpenGL ES 2.0
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este conjunto de tópicos mostra várias situações de portabilidade de elementos gráficos em OpenGL ES 2.0 de diferentes graus de dificuldade.
+This set of topics walks a number of OpenGL ES 2.0 graphics pipeline porting scenarios of differing complexity.
 
-## Guias passo a passo de portabilidade do OpenGL ES 2.0 para Direct3D 11
+## OpenGL ES 2.0 to Direct3D 11 walkthroughs
 
 ## 
 <table>
@@ -21,29 +22,24 @@ Este conjunto de tópicos mostra várias situações de portabilidade de element
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Tópico</th>
-<th align="left">Descrição</th>
+<th align="left">Topic</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><p>[How to: port a simple OpenGL ES 2.0 renderer to Direct3D 11.1](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)</p></td>
-<td align="left"><p>Para o primeiro exercício de portabilidade, vamos começar com noções básicas: trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de aplicativo do DirectX 11 (Windows Universal) do Visual Studio 2015.</p></td>
+<td align="left"><p>For the first porting exercise, we'll start with the basics: bringing a simple renderer for a spinning, vertex-shaded cube from OpenGL ES 2.0 into Direct3D, such that it matches the DirectX 11 App (Universal Windows) template from Visual Studio 2015.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

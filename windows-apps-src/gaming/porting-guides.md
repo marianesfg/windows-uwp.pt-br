@@ -1,15 +1,16 @@
 ---
-title: Guias de portabilidade para jogos
-description: Fornece guias para a portabilidade dos seus jogos existentes para Direct3D 11, a Plataforma Universal do Windows (UWP) e o Windows 10.
+author: mtoepke
+title: Game porting guides
+description: Provides guides for porting your existing games to Direct3D 11, Universal Windows Platform (UWP), and Windows 10.
 ms.assetid: 1dff815b-d3bd-557e-52c1-58e40f4dd6b1
 ---
 
-# Guias de portabilidade para jogos
+# Game porting guides
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Fornece guias para a portabilidade dos seus jogos existentes para Direct3D 11, a Plataforma Universal do Windows (UWP) e o Windows 10.
+Provides guides for porting your existing games to Direct3D 11, Universal Windows Platform (UWP), and Windows 10.
 
 <table>
 <colgroup>
@@ -18,37 +19,32 @@ Fornece guias para a portabilidade dos seus jogos existentes para Direct3D 11, a
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Tópico</th>
-<th align="left">Descrição</th>
+<th align="left">Topic</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Port from DirectX 9 to Universal Windows Platform](porting-your-directx-9-game-to-windows-store.md)</p></td>
-<td align="left"><p>Esta seção inclui artigos, visões gerais e guias passo a passo para portabilidade de jogos do DirectX 9 para UWP.</p></td>
+<td align="left"><p>This section includes articles, overviews, and walkthroughs for porting DirectX 9 games to UWP.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Port from OpenGL ES 2.0 to Direct3D 11.1](port-from-opengl-es-2-0-to-directx-11-1.md)</p></td>
-<td align="left"><p>Inclui artigos, visões gerais e guias passo a passo para a portabilidade de uma pipeline de elementos gráficos em OpenGL ES 2.0 para um Direct3D 11 e o Windows Runtime.</p></td>
+<td align="left"><p>Includes articles, overviews, and walkthroughs for porting an OpenGL ES 2.0 graphics pipeline to a Direct3D 11 and the Windows Runtime.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
-> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que escrevem da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Note**  This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
+ 
 
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

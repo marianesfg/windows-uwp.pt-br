@@ -1,55 +1,56 @@
 ---
-description: Um namescope XAML armazena relacionamentos entre os nomes de objetos definidos por XAML e suas instâncias equivalentes. Esse conceito é semelhante ao significado mais abrangente do termo namescope em outras linguagens e tecnologias de programação.
-title: namescopes XAML
+author: jwmsft
+description: A XAML namescope stores relationships between the XAML-defined names of objects and their instance equivalents. This concept is similar to the wider meaning of the term namescope in other programming languages and technologies.
+title: XAML namescopes
 ms.assetid: EB060CBD-A589-475E-B83D-B24068B54C21
 ---
 
-# Namescopes XAML
+# XAML namescopes
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Um *namescope XAML* armazena relacionamentos entre os nomes de objetos definidos por XAML e suas instâncias equivalentes. Esse conceito é semelhante ao significado mais abrangente do termo *namescope* em outras linguagens e tecnologias de programação.
+A *XAML namescope* stores relationships between the XAML-defined names of objects and their instance equivalents. This concept is similar to the wider meaning of the term *namescope* in other programming languages and technologies.
 
-## Como os namescopes XAML são definidos?
+## How XAML namescopes are defined
 
-Os nomes em namescopes XAML permitem que o código do usuário faça referência a objetos inicialmente declarados em XAML. O resultado interno de analisar XAML é que o tempo de execução cria um conjunto de objetos que retêm alguns ou todos os relacionamentos que esses objetos tinham nas declarações XAML. Esses relacionamentos são mantidos como propriedades específicas dos objetos criados ou expostos como métodos utilitários nas APIs de modelo de programação.
+Names in XAML namescopes enable user code to reference the objects that were initially declared in XAML. The internal result of parsing XAML is that the runtime creates a set of objects that retain some or all of the relationships these objects had in the XAML declarations. These relationships are maintained as specific object properties of the created objects, or are exposed to utility methods in the programming model APIs.
 
-O uso mais comum de um nome em um namescope XAML é como referência direta a uma instância de objeto, habilitada pelo ciclo de compilação de marcação como uma ação de compilação do projeto, combinada a um método **InitializeComponent** gerado nos modelos de classe parcial.
+The most typical use of a name in a XAML namescope is as a direct reference to an object instance, which is enabled by the markup compile pass as a project build action, combined with a generated **InitializeComponent** method in the partial class templates.
 
-Você também pode usar o método utilitário [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) por conta própria em tempo de execução para retornar uma referência a objetos que foram definidos com um nome na marcação XAML.
+You can also use the utility method [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) yourself at run time to return a reference to objects that were defined with a name in the XAML markup.
 
-### Mais sobre ações de compilação e XAML
+### More about build actions and XAML
 
-Tecnicamente, o que ocorre é que a própria linguagem XAML passa por um ciclo do compilador de marcação ao mesmo tempo em que a linguagem XAML e a classe parcial definida para code-behind são compiladas juntas. Cada elemento de objeto com um atributo **Name** ou [atributo x:Name](x-name-attribute.md) definido na marcação gera um campo interno com um nome que corresponde ao nome XAML. Inicialmente, esse campo fica vazio. Então, a classe gera um método **InitializeComponent** chamado apenas após o carregamento de toda a linguagem XAML. Na lógica **InitializeComponent** cada campo interno é preenchido com o valor de retorno [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para a cadeia de nome equivalente. Você pode observar esta infraestrutura olhando os arquivos ".g" (gerados) criados para cada página XAML na subpasta /obj de um projeto de aplicativo do Windows Runtime após a compilação. Você também pode ver os campos e o método **InitializeComponent** como membros dos assemblies resultantes quando refletir sobre eles ou examinar o conteúdo da linguagem de sua interface.
+What happens technically is that the XAML itself undergoes a markup compiler pass at the same time that the XAML and the partial class it defines for code-behind are compiled together. Each object element with a **Name** or [x:Name attribute](x-name-attribute.md) defined in the markup generates an internal field with a name that matches the XAML name. This field is initially empty. Then the class generates an **InitializeComponent** method that is called only after all the XAML is loaded. Within the **InitializeComponent** logic, each internal field is then populated with the [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) return value for the equivalent name string. You can observe this infrastructure for yourself by looking at the ".g" (generated) files that are created for each XAML page in the /obj subfolder of a Windows Runtime app project after compilation. You can also see the fields and **InitializeComponent** method as members of your resulting assemblies if you reflect over them or otherwise examine their interface language contents.
 
-**Observação** Especificamente para extensões de componentes Visual C++ (aplicativos C++/CX), um campo de suporte para uma referência **x:Name** não é criado para o elemento raiz de um arquivo XAML. Se você precisa mencionar o objeto raiz do code-behind C++/CX, use outras APIs ou outro percurso de árvore. Por exemplo, você pode chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para um elemento filho nomeado conhecido e depois chamar [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
+**Note**  Specifically for Visual C++ component extensions (C++/CX) apps, a backing field for an **x:Name** reference is not created for the root element of a XAML file. If you need to reference the root object from C++/CX code-behind, use other APIs or tree traversal. For example you can call [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) for a known named child element and then call [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
 
-## Criando objetos em tempo de execução com XamlReader.Load
+## Creating objects at run time with XamlReader.Load
 
-A linguagem XAML também pode ser usada como entrada de cadeia para o método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048), que atua de forma análoga à operação inicial de análise da origem XAML. **XamlReader.Load** cria uma nova árvore de objetos desconectada no tempo de execução. Essa árvore pode ser anexada a algum ponto da árvore de objetos principal. Você deve conectar a árvore de objetos criada de forma explícita, seja adicionando-a a uma coleção de propriedades de conteúdo, como **Children**, ou definindo alguma outra propriedade que use um valor de objeto (por exemplo, carregar um novo [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) para um valor de propriedade [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378)).
+XAML can be also be used as the string input for the [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048) method, which acts analogously to the initial XAML source parse operation. **XamlReader.Load** creates a new disconnected tree of objects at run time. The disconnected tree can then be attached to some point on the main object tree. You must explicitly connect your created object tree, either by adding it to a content property collection such as **Children**, or by setting some other property that takes an object value (for example, loading a new [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) for a [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378) property value).
 
-### Implicações de XamlReader.Load relativas ao namescope XAML
+### XAML namescope implications of XamlReader.Load
 
-O namescope XAML preliminar definido pela nova árvore de objetos criada por [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048) avalia a exclusividade de todos os nomes definidos na linguagem XAML fornecida. Se, neste ponto, esses nomes no XAML fornecido não forem exclusivos internamente, **XamlReader.Load** emitirá uma exceção. A árvore de objetos desconectada não tenta mesclar seu namescope XAML com o namescope XAML do aplicativo principal (se ou quando está conectada à árvore de objetos do aplicativo principal). Após a conexão das árvores, o aplicativo fica com uma árvore de objetos unificada, mas ela contém namescopes XAML discretos. As divisões ocorrem nos pontos de conexão entre os objetos, onde você define alguma propriedade como valor retornado de uma chamada **XamlReader.Load**.
+The preliminary XAML namescope defined by the new object tree created by [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048) evaluates any defined names in the provided XAML for uniqueness. If names in the provided XAML are not internally unique at this point, **XamlReader.Load** throws an exception. The disconnected object tree does not attempt to merge its XAML namescope with the main application XAML namescope, if or when it is connected to the main application object tree. After you connect the trees, your app has a unified object tree, but that tree has discrete XAML namescopes within it. The divisions occur at the connection points between objects, where you set some property to be the value returned from a **XamlReader.Load** call.
 
-A complicação de ter namescopes XAML discretos e desconectados é que as chamadas ao método [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) (bem como as referências de objetos gerenciados) deixam de operar em relação a um namescope XAML unificado. Em vez disso, o objeto em particular em que é chamado o **FindName** implicará o escopo, sendo esse escopo o namescope XAML em que o objeto da chamada se encontra. No caso de referência direta de objeto gerenciado, o escopo está implícito pela classe em que o código existe. Normalmente, o code-behind para interação (em tempo de execução) de uma "página" de conteúdo do aplicativo existe na classe parcial que apoia a "página" raiz. Por isso, o namescope XAML é o namescope XAML raiz.
+The complication of having discrete and disconnected XAML namescopes is that calls to the [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) method as well as direct managed object references no longer operate against a unified XAML namescope. Instead, the particular object that **FindName** is called on implies the scope, with the scope being the XAML namescope that the calling object is within. In the direct managed object reference case, the scope is implied by the class where the code exists. Typically, the code-behind for run-time interaction of a "page" of app content exists in the partial class that backs the root "page", and therefore the XAML namescope is the root XAML namescope.
 
-Se você chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para obter um objeto nomeado no namescope XAML raiz, o método não encontrará os objetos de um namescope XAML discreto criado por [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048). De modo semelhante, se você chamar **FindName** de um objeto obtido do namescope XAML discreto, o método não encontrará os objetos nomeados na namescope XAML raiz.
+If you call [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) to get a named object in the root XAML namescope, the method will not find the objects from a discrete XAML namescope created by [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048). Conversely, if you call **FindName** from an object obtained from out of the discrete XAML namescope, the method will not find named objects in the root XAML namescope.
 
-O problema do namescope XAML discreto afeta somente a localização de objetos por nome em namescopes XAML mediante o uso da chamada [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715).
+This discrete XAML namescope issue only affects finding objects by name in XAML namescopes when using the [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) call.
 
-Para obter referências a objetos definidos em um namescope XAML diferente, você pode usar várias técnicas:
+To get references to objects that are defined in a different XAML namescope, you can use several techniques:
 
--   Navegue por toda a árvore em etapas discretas com propriedades de coleção e/ou [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) cuja existência é conhecida na estrutura da árvore de objetos (como a coleção retornada por [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514)).
--   Quando você faz a chamada de um namescope XAML discreto e deseja o namescope XAML raiz, é sempre fácil obter uma referência à janela principal exibida no momento. Você pode obter a raiz visual (o elemento XAML raiz, também conhecido como origem do conteúdo) da janela do aplicativo atual em uma linha de código com a chamada `Window.Current.Content`. Em seguida, você pode converter em [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) e chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) a partir desse escopo.
--   Quando você faz a chamada do namescope XAML raiz e deseja um objeto em um namescope XAML discreto, a melhor coisa a fazer é planejar antecipadamente o código e manter uma referência ao objeto retornado por [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048) e adicionado em seguida à árvore de objetos principal. Agora, esse objeto é válido para chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) no namescope XAML discreto. Você pode manter esse objeto disponível como uma variável global ou transferi-lo usando parâmetros de método.
--   Examinando a árvore visual, é possível evitar completamente as considerações a respeito de namescope XAML e nomes. A API [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/br243038) permite percorrer a árvore visual em termos de objetos pais e coleções de filhos. Isso é feito puramente com base em posições e índices.
+-   Walk the entire tree in discrete steps with [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) and/or collection properties that are known to exist in your object tree structure (such as the collection returned by [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514)).
+-   If you are calling from a discrete XAML namescope and want the root XAML namescope, it is always easy to get a reference to the main window currently displayed. You can get the visual root (the root XAML element, also known as the content source) from the current application window in one line of code with the call `Window.Current.Content`. You can then cast to [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) and call [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) from this scope.
+-   If you are calling from the root XAML namescope and want an object within a discrete XAML namescope, the best thing to do is to plan ahead in your code and retain a reference to the object that was returned by [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048) and then added to the main object tree. This object is now a valid object for calling [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) within the discrete XAML namescope. You could keep this object available as a global variable or otherwise pass it by using method parameters.
+-   You can avoid names and XAML namescope considerations entirely by examining the visual tree. The [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/br243038) API enables you to traverse the visual tree in terms of parent objects and child collections, based purely on position and index.
 
-## Namescopes XAML em modelos
+## XAML namescopes in templates
 
-Os modelos em XAML permitem reutilizar e reaplicar conteúdo de forma simples, mas os modelos também podem incluir elementos com nomes definidos no nível de modelo. O mesmo modelo pode ser usado várias vezes em uma página. Por esse motivo, os modelos definem seus próprios namescopes XAML, independente da página que os contém, na qual o estilo ou modelo é aplicado. Considere este exemplo:
+Templates in XAML provide the ability to reuse and reapply content in a straightforward way, but templates might also include elements with names defined at the template level. That same template might be used multiple times in a page. For this reason, templates define their own XAML namescopes, independent of the containing page where the style or template is applied. Consider this example:
 
-```xaml
+```xml
 <Page
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  >
@@ -66,21 +67,16 @@ Os modelos em XAML permitem reutilizar e reaplicar conteúdo de forma simples, m
 </Page>
 ```
 
-Aqui, o mesmo modelo é aplicado a dois controles diferentes. Se os modelos não tiverem namescopes XAML discretos, o nome "MyTextBlock", usado no modelo, causará um conflito de nomes. Cada instanciação do modelo tem seu próprio namescope XAML. Por isso, neste exemplo, cada namescope XAML do modelo instanciado contém exatamente um nome. Porém, o namescope XAML raiz não contém o nome de cada modelo.
+Here, the same template is applied to two different controls. If templates did not have discrete XAML namescopes, the "MyTextBlock" name used in the template would cause a name collision. Each instantiation of the template has its own XAML namescope, so in this example each instantiated template's XAML namescope would contain exactly one name. However, the root XAML namescope does not contain the name from either template.
 
-Em função dos namescopes XAML separados, localizar elementos nomeados em um modelo do escopo da página na qual o modelo é aplicado exige uma técnica diferente. Em vez de chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) em algum objeto na árvore de objetos, primeiro é preciso obter o objeto com o modelo aplicado e chamar [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/br209416). Se você for um autor de controles e estiver gerando uma convenção em que um elemento nomeado específico em um modelo aplicado é o destino de um comportamento definido para o controle, será possível usar o método **GetTemplateChild** do código de implementação de controle. O método **GetTemplateChild** é protegido. Por isso, somente o autor de controles tem acesso a ele. Além disso, há convenções que os autores de controles devem seguir para nomear partes e partes de modelos, bem como para registrá-las como valores de atributos aplicados à classe do controle. Essa técnica torna os nomes de partes importantes detectáveis aos usuários de controles que desejam aplicar um modelo diferente (o que demandaria a substituição das partes nomeadas para manter a funcionalidade do controle).
+Because of the separate XAML namescopes, finding named elements within a template from the scope of the page where the template is applied requires a different technique. Rather than calling [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) on some object in the object tree, you first obtain the object that has the template applied, and then call [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/br209416). If you are a control author and you are generating a convention where a particular named element in an applied template is the target for a behavior that is defined by the control itself, you can use the **GetTemplateChild** method from your control implementation code. The **GetTemplateChild** method is protected, so only the control author has access to it. Also, there are conventions that control authors should follow in order to name parts and template parts and report these as attribute values applied to the control class. This technique makes the names of important parts discoverable to control users who might wish to apply a different template, which would need to replace the named parts in order to maintain control functionality.
 
-## Tópicos relacionados
+## Related topics
 
-* [Visão geral do XAML](xaml-overview.md)
-* [Atributo x:Name](x-name-attribute.md)
-* [Início rápido: modelos de controle](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
+* [XAML overview](xaml-overview.md)
+* [x:Name attribute](x-name-attribute.md)
+* [Quickstart: Control templates](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
 * [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)
 * [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)
- 
-
-
-
-<!--HONumber=Mar16_HO1-->
-
+ 
 
