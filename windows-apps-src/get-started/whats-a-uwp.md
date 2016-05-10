@@ -1,7 +1,7 @@
 ---
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
 title: O que é um aplicativo da Plataforma Universal do Windows (UWP)?
-description: Saiba mais sobre os diferentes tipos de aplicativos que chamamos de Aplicativos Universais do Windows: aplicativos da Windows Store, aplicativos da Loja do Windows Phone e aplicativos do Windows Runtime.
+description: Saiba mais sobre os diferentes tipos de aplicativos que chamamos de Aplicativos Universais do Windows - aplicativos da Windows Store, aplicativos da Loja do Windows Phone e aplicativos do Windows Runtime.
 ---
 
 # O que é um aplicativo da Plataforma Universal do Windows (UWP)?
