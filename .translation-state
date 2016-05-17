@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "fcc0198409513b7f272d4fd37d0856ca2139ec3c",
-  "LastTranslatedCommit": "f30e5ebd014880ae4a33df61aab41216b4f1a3b1",
+  "LastTranslatedCommit": "3d2938080919b544d70097f071a5ec7ec8875ddf",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
       "FileHash": "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3",
@@ -25058,7 +25058,7 @@
       "TargetFilePath": null,
       "HandbackFilePath": null,
       "HandbackFileCommit": null,
-      "HandbackDateTime": "2016-05-17T15:08:43.9530107Z",
+      "HandbackDateTime": "2016-05-17T15:39:49.1388682Z",
       "HandbackException": {
         "internal_error_code": "handback_validate_file_extension_name_invalide",
         "internal_error_message": "Handback file extension name: .png is different with handoff file extension name: .PNG.",
@@ -25068,7 +25068,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 3,
+      "HandbackFailureTimes": 4,
       "UpdatedDateTime": "0001-01-01T00:00:00",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
@@ -48694,7 +48694,7 @@
       "TargetFilePath": null,
       "HandbackFilePath": null,
       "HandbackFileCommit": null,
-      "HandbackDateTime": "2016-05-17T15:08:43.9530107Z",
+      "HandbackDateTime": "2016-05-17T15:39:49.1388682Z",
       "HandbackException": {
         "internal_error_code": "handback_validate_file_extension_name_invalide",
         "internal_error_message": "Handback file extension name: .png is different with handoff file extension name: .PNG.",
@@ -48704,7 +48704,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 3,
+      "HandbackFailureTimes": 4,
       "UpdatedDateTime": "0001-01-01T00:00:00",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
