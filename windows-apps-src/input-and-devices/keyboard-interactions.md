@@ -1,361 +1,363 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Respond to keystroke actions from hardware or software keyboards in your apps using both keyboard and class event handlers.
-title: Keyboard interactions
+Description: Responda às ações de pressionamento de tecla de teclados de hardware ou de software nos aplicativos usando o teclado e manipuladores de eventos de classe.
+title: Interações por teclado
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
 ---
 
-# Keyboard interactions
+# Interações por teclado
 
 
-Keyboard input is an important part of the overall user interaction experience for apps. The keyboard is indispensable to people with certain disabilities or users who just consider it a more efficient way to interact with an app. For example, users should be able to navigate your app by using Tab and arrow keys, activate UI elements by using Spacebar and Enter, and access commands by using keyboard shortcuts.
-![keyboard hero image](images/input-patterns/input-keyboard-small.jpg)
+A entrada por teclado é uma parte importante da experiência geral da interação do usuário com aplicativos. O teclado é indispensável para pessoas portadoras de determinadas deficiências ou usuários que simplesmente o consideram um método mais eficiente de interagir com um aplicativo. Por exemplo, os usuários devem ser capazes de navegar pelo seu aplicativo usando as teclas Tab e de direção, de ativar elementos da interface do usuário ao usar as teclas Barra de Espaços e Enter, e acessar comandos ao usar atalhos de teclado.
+![imagem hero do teclado](images/input-patterns/input-keyboard-small.jpg)
 
 
 
-**Important APIs**
+**APIs importantes**
 
 -   [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)
 -   [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)
 -   [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)
 
 
-A well-designed keyboard UI is an important aspect of software accessibility. It enables users with vision impairments or who have certain motor disabilities to navigate an app and interact with its features. Such users might not be able to operate a mouse and instead rely on various assistive technologies such as keyboard enhancement tools, on-screen keyboards, screen enlargers, screen readers, and voice input utilities.
+Uma interface de usuário do teclado bem projetada é um aspecto importante da acessibilidade do software. Ela permite que os usuários com deficiência visual ou que possuam determinadas deficiências motoras naveguem em um aplicativo e interajam com seus recursos. Esses usuários talvez não consigam usar um mouse e, em vez disso, usem diversas tecnologias assistenciais, como ferramentas avançadas de teclado, teclados virtuais, ampliadores de tela, leitores de tela e utilitários de entrada de voz.
 
-Users can interact with universal apps through a hardware keyboard and two software keyboards: the On-Screen Keyboard (OSK) and the touch keyboard.
+Os usuários podem interagir com aplicativos universais por meio de teclado de hardware e dois teclados de software: o teclado virtual (OSK) e o teclado touch.
 
-<span></span>On-Screen Keyboard  
-The On-Screen Keyboard is a visual, software keyboard that you can use instead of the physical keyboard to type and enter data using touch, mouse, pen/stylus or other pointing device (a touch screen is not required). The On-Screen Keyboard is provided for systems that don't have a physical keyboard, or for users whose mobility impairments prevent them from using traditional physical input devices. The On-Screen Keyboard emulates most, if not all, the functionality of a hardware keyboard.
+<span></span>Teclado virtual  
+O teclado virtual é um teclado de software visual, que você pode usar no lugar do teclado físico para digitar e inserir dados usando touch, mouse, caneta ou outro dispositivo apontador (uma tela touch não é necessária). O teclado virtual é fornecido para sistemas que não têm um teclado físico ou para usuários cujos problemas de mobilidade impedem o uso de dispositivos de entrada físicos tradicionais. O teclado virtual emula a maior parte, se não toda a funcionalidades de um teclado de hardware.
 
-The On-Screen Keyboard can be turned on from the Keyboard page in Settings &gt; Ease of access.
+O teclado virtual pode ser ativado na página Teclado em Configurações &gt; Facilidade de acesso.
 
-**Note**  The On-Screen Keyboard has priority over the touch keyboard, which won't be shown if the On-Screen Keyboard is present.
+**Observação**  O teclado virtual tem prioridade sobre o teclado touch, que não será mostrado se o Teclado Virtual estiver presente.
 
- 
+ 
 
-![the on-screen keyboard](images/input-patterns/osk.png)
+![o teclado virtual](images/input-patterns/osk.png)
 
-<sup>On-Screen Keyboard</sup>
+<sup>Teclado virtual</sup>
 
-<span id="Touch_keyboard"></span><span id="touch_keyboard"></span><span id="TOUCH_KEYBOARD"></span>Touch keyboard  
-The touch keyboard is a visual, software keyboard used for text entry with touch input. It is not a replacement for the On-Screen Keyboard as it's used for text input only (it doesn't emulate the hardware keyboard).
+<span id="Touch_keyboard"></span><span id="touch_keyboard"></span><span id="TOUCH_KEYBOARD"></span>Teclado virtual  
+O teclado virtual é um teclado de software visual usado para entrada de texto por touch. Ele não é substitui o teclado virtual, pois é usado somente para entrada de texto (ele não emula o teclado de hardware).
 
-Depending on the device, the touch keyboard appears when a text field or other editable text control gets focus, or when the user manually enables it through the **Notification Center**:
+Dependendo do dispositivo, o teclado virtual aparece quando um campo de texto ou outro controle de texto editável é focalizado ou quando o usuário o ativa manualmente por meio do **Centro de Notificações**:
 
-![touch keyboard icon in the notification center](images/input-patterns/touch-keyboard-notificationcenter.png)
+![ícone de teclado virtual no centro de notificações](images/input-patterns/touch-keyboard-notificationcenter.png)
 
-**Note**  The user might have to go to the **Tablet mode** screen in Settings &gt; System and turn on "Make Windows more touch-friendly when using your device as a tablet" to enable the automatic appearance of the touch keyboard.
+**Observação**  O usuário talvez precise ir para a tela **Modo Tablet** em Configurações &gt; Sistema e ativar "O Windows fica mais fácil de usar com toque quando você usa o dispositivo como tablet" para habilitar a exibição automática do teclado virtual.
 
- 
+ 
 
-If your app sets focus programmatically to a text input control, the touch keyboard is not invoked. This eliminates unexpected behaviors not instigated directly by the user. However, the keyboard does automatically hide when focus is moved programmatically to a non-text input control.
+Se o seu aplicativo define o foco por meio de programação para um controle de entrada de texto, o teclado virtual não é invocado. Isso elimina comportamentos inesperados não instigados diretamente pelo usuário. No entanto, o teclado é ocultado automaticamente quando o foco é movido por meio de programação para um controle de entrada que não é de texto.
 
-The touch keyboard typically remains visible while the user navigates between controls in a form. This behavior can vary based on the other control types within the form.
+Normalmente, o teclado virtual permanece visível enquanto o usuário navega entre controles em um formulário. Esse comportamento pode variar com base nos outros tipos de controle no formulário.
 
-The following is a list of non-edit controls that can receive focus during a text entry session using the touch keyboard without dismissing the keyboard. Rather than needlessly churn the UI and potentially disorient the user, the touch keyboard remains in view because the user is likely to go back and forth between these controls and text entry with the touch keyboard.
+A seguir há uma lista de controles que não são de edição que podem receber o foco durante uma sessão de entrada de texto por meio do teclado virtual sem descartar o teclado. Ao invés de mover desnecessariamente a interface do usuário e possivelmente desorientar o usuário, o teclado virtual permanece à vista, pois pode ser que o usuário alterne entre esses controles e a entrada de texto com o teclado virtual.
 
--   Check box
--   Combo box
--   Radio button
--   Scroll bar
--   Tree
--   Tree item
+-   Caixa de seleção
+-   Caixa de combinação
+-   Botão de opção
+-   Barra de rolagem
+-   Árvore
+-   Item de árvore
 -   Menu
--   Menu bar
--   Menu item
--   Toolbar
--   List
--   List item
+-   Barra de menu
+-   Item de menu
+-   Barra de ferramentas
+-   Lista
+-   Item de lista
 
-Here are examples of different modes for the touch keyboard. The first image is the default layout, the second is the thumb layout (which might not be available in all languages).
+Veja aqui exemplos de modos diferentes do teclado virtual. A primeira imagem ilustra o layout padrão; a segunda, o layout em miniatura (que pode não estar disponível em todos os idiomas).
 
-Here are examples of different modes for the touch keyboard. The first image is the default layout, the second is the thumb layout (which might not be available in all languages).
+Consulte aqui exemplos de modos diferentes do teclado virtual. A primeira imagem ilustra o layout padrão; a segunda, o layout em miniatura (que pode não estar disponível em todos os idiomas).
 <table>
 <tr>
-	<td>**The touch keyboard in default layout mode:  **</td>
-	<td>![the touch keyboard in default layout mode](images/touchkeyboard-standard.png)</td>
+    <td>**O teclado virtual no modo de layout padrão:  **</td>
+    <td>![the touch keyboard in default layout mode](images/touchkeyboard-standard.png)</td>
 </tr>
 <tr>
-	<td>**The touch keyboard in expanded layout mode:  **</td>
-	<td>![the touch keyboard in expanded layout mode](images/touchkeyboard-expanded.png)</td>
+    <td>**O teclado virtual no modo de layout expandido:  **</td>
+    <td>![the touch keyboard in expanded layout mode](images/touchkeyboard-expanded.png)</td>
 </tr>
 <tr>
-	<td>**The touch keyboard in default thumb layout mode:  **</td>
-	<td>![the touch keyboard in thumb layout mode](images/touchkeyboard-thumb.png)</td>
+    <td>**O teclado virtual no modo de layout em miniatura padrão:  **</td>
+    <td>![the touch keyboard in thumb layout mode](images/touchkeyboard-thumb.png)</td>
 </tr>
 <tr>
-	<td>**The touch keyboard in numeric thumb layout mode:  **</td>
-	<td>![the touch keyboard in numeric thumb layout mode](images/touchkeyboard-numeric-thumb.png)</td>
+    <td>**O teclado virtual no modo de layout em miniatura numérico:  **</td>
+    <td>![the touch keyboard in numeric thumb layout mode](images/touchkeyboard-numeric-thumb.png)</td>
 </tr>
 </table>
 
 
-Successful keyboard interactions enable users to accomplish basic app scenarios using only the keyboard; that is, users can reach all interactive elements and activate default functionality. A number of factors can affect the degree of success, including keyboard navigation, access keys for accessibility, and accelerator (or shortcut) keys for advanced users.
+Interações de teclado bem-sucedidas permitem que os usuários utilizem cenários básicos de aplicativos apenas com o teclado, ou seja, os usuários podem acessar todos os elementos interativos da interface do usuário e ativar a funcionalidade padrão. Diversos fatores podem afetar o grau de sucesso, incluindo a navegação por teclado, as teclas de acesso para acessibilidade e as teclas de aceleração (atalho) para usuários avançados.
 
-**Note**  The touch keyboard does not support toggle and most system commands (see [Patterns](#keyboard_command_patterns)).
+**Observações**  O teclado virtual não dá suporte à alternância e a maioria dos comandos do sistema (consulte [Padrões](#keyboard_command_patterns)).
 
-## <span id="Navigation"></span><span id="navigation"></span><span id="NAVIGATION"></span>Navigation
-
-
-To use a control (including navigation elements) with the keyboard, the control must have focus. One way for a control to receive keyboard focus is to make it accessible via tab navigation. A well designed keyboard navigation model provides a logical and predictable tab order that enables a user to explore and use your app quickly and efficiently.
-
-All interactive controls should have tab stops (unless they are in a group), whereas non-interactive controls, such as labels, should not.
-
-A set of related controls can be made into a control group and assigned a single tab stop. Control groups are used for sets of controls that behave like a single control, such as radio buttons. They can also be used when there too many controls to navigate efficiently with the Tab key alone. The arrow keys, Home, End, Page Up, and Page Down move input focus among the controls within a group (it is not possible to navigate out of a control group using these keys).
-
-You should set initial keyboard focus on the element that users will intuitively (or most likely) interact with first when your app starts. Often, this is the main content view of the app so that a user can immediately start using the arrow keys to scroll the app content.
-
-Don’t set initial keyboard focus on an element with potentially negative, or even disastrous, results. This can prevent loss of data or system access.
-
-Try to rank and present the most important commands, controls, and content first in both the tab order and the display order (or visual hierarchy). However, the actual display position can depend on the parent layout container and certain properties of the child elements that influence the layout. In particular, layouts that use a grid metaphor or a table metaphor can have a reading order quite different from the tab order. This is not always a problem, but you should test your app's functionality, both as a touchable UI and as a keyboard-accessible UI.
-
-Tab order should follow reading order, whenever possible. This can reduce confusion and is dependent on locale and language.
-
-Associate keyboard buttons with appropriate UI (back and forward buttons) in your app.
-
-Try to make navigating back to the start screen of your app and between key content as easy and straightforward as possible.
-
-Use the arrow keys as keyboard shortcuts for proper inner navigation among child elements of composite elements. If tree view nodes have separate child elements for handling expand–collapse and node activation, use the left and right arrow keys to provide keyboard expand–collapse functionality. This is consistent with the platform controls.
-
-Because the touch keyboard occludes a large portion of the screen, the Universal Windows Platform (UWP) ensures that the input field with focus scrolls into view as a user navigates through the controls on the form, including controls that are not currently in view. Custom controls should emulate this behavior.
-
-![a form with and without the touch keyboard showing](images/input-patterns/touch-keyboard-pan1.png)
-
-In some cases, there are UI elements that should stay on the screen the entire time. Design the UI so that the form controls are contained in a panning region and the important UI elements are static. For example:
-
-![a form that contains areas that should always stay in view](images/input-patterns/touch-keyboard-pan2.png)
-## <span id="Activation"></span><span id="activation"></span><span id="ACTIVATION"></span>Activation
+## <span id="Navigation"></span><span id="navigation"></span><span id="NAVIGATION"></span>Navegação
 
 
-A control can be activated in a number of different ways, whether it currently has focus or not.
+Para usar um controle (incluindo os elementos de navegação) com o teclado, o controle precisa ter foco. Uma maneira de um controle receber o foco do teclado é torná-lo acessível via navegação por tabulação. Um modelo de navegação de teclado bem projetado oferece uma ordem de tabulação previsível e lógica que permite que um usuário explore e use seu aplicativo de forma rápida e eficiente.
 
-<span id="Spacebar__Enter__and_Esc"></span><span id="spacebar__enter__and_esc"></span><span id="SPACEBAR__ENTER__AND_ESC"></span>Spacebar, Enter, and Esc  
-The spacebar should activate the control with input focus. The Enter key should activate a default control or the control with input focus. A default control is the control with initial focus or one that responds exclusively to the Enter key (typically it changes with input focus). In addition, the Esc key should close or exit transitory UI, such as menus and dialogs.
+Todos os controles interativos devem ter paradas de tabulação (a menos que estejam em um grupo), enquanto os controles não interativos, como rótulos, não devem.
 
-The Calculator app shown here uses the spacebar to activate the button with focus, locks the Enter key to the “=” button, and locks the Esc key to the “C” button.
+Um conjunto de controles relacionados pode ser incluído em um grupo de controles e ter atribuída uma única parada de tabulação. Grupos de controle são usados para conjuntos de controles que se comportam como um único controle, como botões de opção. Eles também podem ser usados quando há muitos controles para navegar de forma eficiente somente com a tecla Tab. As teclas de seta, Home, End, Page Up e Page Down movem o foco de entrada entre os controles dentro de um grupo (não é possível navegar para fora de um grupo de controles usando essas teclas).
 
-![the calculator app](images/input-patterns/calculator.png)
+Você deve definir o foco de teclado inicial no elemento com o qual os usuários intuitivamente (ou mais provavelmente) vão interagir primeiro quando seu aplicativo for iniciado. Frequentemente, esse é o modo de exibição de conteúdo principal do aplicativo para que um usuário possa iniciar usando as teclas de seta para rolar o conteúdo do aplicativo.
 
-<span id="Keyboard_modifiers"></span><span id="keyboard_modifiers"></span><span id="KEYBOARD_MODIFIERS"></span>Keyboard modifiers  
-Keyboard modifiers fall into the following categories: 
+Não defina o foco inicial do teclado em um elemento com resultados potencialmente negativos ou até mesmo desastrosos. Isso pode impedir a perda de dados ou o acesso ao sistema.
+
+Experimente classificar e apresentar os comandos, os controles e os conteúdos mais importantes primeiro na ordem de tabulação e na ordem de exibição (ou hierarquia visual). Entretanto, a posição de exibição real pode depender do contêiner de layout pai e de certas propriedades dos elementos filho que influenciam o layout. Em particular, layouts que usam uma metáfora de grade ou uma metáfora de tabela podem ter uma ordem de leitura bem diferente da ordem de tabulação. Isso não é sempre um problema, mas você deve testar a funcionalidade do aplicativo, como uma interface do usuário com touch e uma interface do usuário acessível por teclado.
+
+A ordem de tabulação deve seguir a ordem de leitura, sempre que possível. Isso pode reduzir a confusão e depende da localidade e do idioma.
+
+Associe botões de teclado à interface do usuário adequada (botões Voltar e Avançar) no seu aplicativo.
+
+Tente tornar a navegação de volta para a tela inicial de seu aplicativo e entre o conteúdo principal tão fácil e simples quanto possível.
+
+Use as teclas de seta como atalhos de teclado para permitir uma navegação interna adequada entre elementos filho de elementos compostos. Se os nós de exibição de árvore tiverem elementos filho separados para lidar com expansão e recolhimento e ativação de nós, use as teclas de seta para esquerda e direita para obter a funcionalidade de expansão e recolhimento. Isso é consistente com os controles da plataforma.
+
+Devido ao fato de o teclado virtual obstruir uma grande parte da tela, a UWP (Plataforma Universal do Windows) garante que o campo de entrada com foco role para a exibição à medida que um usuário navegar pelos controles no formulário, incluindo os controles que não estiverem em exibição no momento. Controles personalizados devem emular esse comportamento.
+
+![um formulário com e sem o teclado virtual em exibição](images/input-patterns/touch-keyboard-pan1.png)
+
+Em alguns casos, há elementos da interface do usuário que devem ficar na tela o tempo todo. Projete a interface do usuário de forma que os controles do formulário fiquem em uma região de movimento panorâmico e os elementos importantes da interface fiquem estáticos. Por exemplo:
+
+![um formulário que contém áreas que devem ser sempre exibidas](images/input-patterns/touch-keyboard-pan2.png)
+## <span id="Activation"></span><span id="activation"></span><span id="ACTIVATION"></span>Ativação
+
+
+Um controle poderá ser ativado de diversas formas diferentes, se ele tiver foco no momento ou não.
+
+<span id="Spacebar__Enter__and_Esc"></span><span id="spacebar__enter__and_esc"></span><span id="SPACEBAR__ENTER__AND_ESC"></span>Barra de espaços, Enter e Esc  
+A barra de espaços deve ativar o controle com foco de entrada. A tecla Enter deve ativar o controle com foco de entrada ou um controle padrão. Um controle padrão é o controle com foco inicial ou que responde exclusivamente à tecla Enter (geralmente ele é alterado com foco de entrada). Além disso, a tecla Esc deve fechar ou sair da interface do usuário transitória, como menus e caixas de diálogo.
+
+O aplicativo Calculadora mostrado aqui usa a barra de espaços para ativar o botão com foco, bloqueia a tecla Enter para o botão "=" e bloqueia a tecla Esc para o botão "C".
+
+![o aplicativo calculadora](images/input-patterns/calculator.png)
+
+<span id="Keyboard_modifiers"></span><span id="keyboard_modifiers"></span><span id="KEYBOARD_MODIFIERS"></span>Modificadores de teclado  
+Os modificadores de teclado se enquadram nas seguintes categorias: 
 
  
-| Category | Description | 
+| Categoria | Descrição | 
 |----------|-------------| 
-| Shortcut key | Perform a common action without UI such as "Ctrl-S" for **Save**. Implement keyboard shortcuts for key app functionality. Not every command has, or requires, a shortcut. |   
-| Access key/Hot key | Assigned to every visible, top-level control such as "Alt-F" for the **File** menu. An access key does not invoke or activate a command. |
-| Accelerator key | Perform default system or app-defined commands such as "Alt-PrtScrn" for screen capture, "Alt-Tab" to switch apps, or "F1" for help. A command associated with an accelerator key does not have to be a menu item. |
-| Application key/Menu key | Show context menu. |
-| Window key/Command key | Activate system commands such as **System Menu**, **Lock Screen**, or **Show Desktop**. |
+| Tecla de atalho | Execute uma ação comum sem interface do usuário, como"Ctrl-S" para **Salvar**. Implemente os atalhos de teclado para a funcionalidade principal do aplicativo. Nem todo comando tem ou exige um atalho. |   
+| Tecla de acesso | Atribuída a cada controle visível, de nível superior, como "Alt-F" para o menu **Arquivo**. Uma tecla de acesso não invoca ou ativa um comando. |
+| Tecla aceleradora | Execute comandos definidos pelo aplicativo ou sistema padrão, como "Alt-PrtScrn" para captura de tela, "Alt-Tab" para alternar entre aplicativos ou "F1" para obter ajuda. Um comando associado a uma tecla aceleradora não precisa ser um item de menu. |
+| Tecla do aplicativo/Tecla do menu | Mostre o menu de contexto. |
+| Tecla de janela/Tecla de comando | Ative comandos do sistema, como **Menu do sistema**, **Tela de bloqueio** ou **Mostrar área de trabalho** |
 
-Access keys and accelerator keys support interaction with controls directly instead of navigating to them using the Tab key.
-> While some controls have intrinsic labels, such as command buttons, check boxes, and radio buttons, other controls have external labels, such as list views. For controls with external labels, the access key is assigned to the label, which, when invoked, sets focus to an element or value within the associated control.
-
-
-The example here, shows the access keys for the **Page Layout** tab in **Word**.
-
-![the access keys for the page layout tab in word](images/input-patterns/accesskeys-show.png)
-
-Here, the Indent Left text field value is highlighted after entering the access key identified in the associated label.
-
-![the indent left text field value is highlighted after entering the access key identified in the associated label](images/input-patterns/accesskeys-entered.png)
-
-## <span id="Usability_and_accessibility"></span><span id="usability_and_accessibility"></span><span id="USABILITY_AND_ACCESSIBILITY"></span>Usability and accessibility
+As teclas de acesso e as teclas aceleradoras dão suporte à interação com controles diretamente em vez do uso da tecla Tab.
+> Embora alguns controles tenham rótulos intrínsecos, como botões de comando, caixas de seleção e botões de opção, outros controles têm rótulos externos, como modos de exibição de lista. Para controles com rótulos externos, a tecla de acesso é atribuída ao rótulo, que, quando invocado, define o foco para um elemento ou valor dentro do controle associado.
 
 
-A well-designed keyboard interaction experience is an important aspect of software accessibility. It enables users with vision impairments or who have certain motor disabilities to navigate an app and interact with its features. Such users might be unable to operate a mouse and must, instead, rely on various assistive technologies that include keyboard enhancement tools and on-screen keyboards (along with screen enlargers, screen readers, and voice input utilities). For these users, comprehensiveness is more important than consistency.
+O exemplo aqui mostra as teclas de acesso da guia **Layout da Página** no **Word**
 
-Experienced users often have a strong preference for using the keyboard, because keyboard-based commands can be entered more quickly and don't require removing their hands from the keyboard. For these users, efficiency and consistency are crucial; comprehensiveness is important only for the most frequently used commands.
+![as teclas de acesso da guia layout de página no word](images/input-patterns/accesskeys-show.png)
 
-There are subtle distinctions when designing for usability and accessibility, which is why two different keyboard access mechanisms are supported.
+Aqui, o valor do campo de texto Recuo à esquerda está realçado após a inserção da tecla de acesso identificada no rótulo associado.
 
-Access keys have the following characteristics:
+![o valor do campo de texto recuo à esquerda está realçado após a inserção da tecla de acesso identificada no rótulo associado](images/input-patterns/accesskeys-entered.png)
 
--   An access key is a shortcut to a UI element in your app.
--   They use the Alt key plus an alphanumeric key.
--   They are primarily for accessibility.
--   They are assigned to all menus and most dialog box controls.
--   They aren't intended to be memorized, so they are documented directly in the UI by underlining the corresponding control label character.
--   They have effect only in the current window, and navigate to the corresponding menu item or control.
--   They aren't assigned consistently because they can't always be. However, access keys should be assigned consistently for commonly used commands, especially commit buttons.
--   They are localized.
-
-Because access keys aren't intended to be memorized, they are assigned to a character that is early in the label to make them easy to find, even if there is a keyword that appears later in the label.
-
-In contrast, accelerator keys have the following characteristics:
-
--   An accelerator key is a shortcut to an app command.
--   They primarily use Ctrl and Function key sequences (Windows system shortcut keys also use Alt+non-alphanumeric keys and the Windows logo key).
--   They are primarily for efficiency for advanced users.
--   They are assigned only to the most commonly used commands.
--   They are intended to be memorized, and are documented only in menus, tooltips, and Help.
--   They have effect throughout the entire program, but have no effect if they don't apply.
--   They must be assigned consistently because they are memorized and not directly documented.
--   They aren't localized.
-
-Because accelerator keys are intended to be memorized, the most frequently used accelerator keys ideally use letters from the first or most memorable characters within the command's keywords, such as Ctrl+C for Copy and Ctrl+Q for Request.
-
-Users should be able to accomplish all tasks supported by your app using only the hardware keyboard or the On-Screen Keyboard.
-
-You should provide an easy way for users who rely on screen readers and other assistive technology to discover your app's accelerator keys. Communicate accelerator keys by using tooltips, accessible names, accessible descriptions, or some other form of on-screen communication. At a minimum, access and accelerator keys should be well documented in your app's Help content.
-
-Don’t assign well-known or standard accelerator keys to other functionality. For example, Ctrl+F is typically used for find or search.
-
-Don’t bother trying to assign access keys to all interactive controls in a dense UI. Just ensure the most important and the most used have access keys, or use control groups and assign an access key to the control group label.
-
-Don't change commands using keyboard modifiers. Doing so is undiscoverable and can cause confusion.
-
-Don't disable a control while it has input focus. This can interfere with keyboard input.
-
-To ensure successful keyboard interaction experiences, it is critical to test your app thoroughly and exclusively with the keyboard.
-
-## <span id="Text_input"></span><span id="text_input"></span><span id="TEXT_INPUT"></span>Text input
+## <span id="Usability_and_accessibility"></span><span id="usability_and_accessibility"></span><span id="USABILITY_AND_ACCESSIBILITY"></span>Usabilidade e acessibilidade
 
 
-Always query the device capabilities when relying on keyboard input. On some devices (such as phone), the touch keyboard can only be used for text input as it does not provide many of the accelerators or command keys found on a hardware keyboard (such as alt, the function keys, or the Windows Logo key).
+Uma experiência de interação do teclado bem projetada é um aspecto importante da acessibilidade do software. Ela permite que os usuários com deficiência visual ou que possuam determinadas deficiências motoras naveguem em um aplicativo e interajam com seus recursos. Esses usuários talvez não consigam usar um mouse e devem, em vez disso, contar com diversas tecnologias assistenciais que incluem ferramentas avançadas de teclado e teclados virtuais (junto com ampliadores de tela, leitores de tela e utilitários de entrada de voz). Para esses usuários, a capacidade de abrangência é mais importante do que consistência.
 
-Don't make users navigate the app using the touch keyboard. Depending on the control getting focus, the touch keyboard might get dismissed.
+Os usuários experientes muitas vezes têm uma forte preferência por usar o teclado, pois os comandos de teclado podem ser inseridos mais rapidamente e não exigem remover as mãos do teclado. Para esses usuários, eficiência e consistência são cruciais; capacidade de abrangência é importante apenas para os comandos usados com mais frequência.
 
-Try to display the keyboard throughout the entire interaction with your form. This eliminates UI churn that can disorient the user in the middle of a form or text entry flow.
+Há distinções sutis ao projetar para usabilidade e acessibilidade, por isso, há suporte para dois mecanismos de acesso de teclado diferentes.
 
-Ensure that users can always see the input field that they're typing into. The touch keyboard occludes half of the screen, so the input field with focus should scroll into view as the user traverses the form.
+Teclas de acesso têm as seguintes características:
 
-A standard hardware keyboard or OSK consists of seven types of keys, each supporting unique functionality:
+-   Uma tecla de acesso é um atalho para um elemento da interface do usuário em seu aplicativo.
+-   Elas usam a tecla Alt mais uma tecla alfanumérica.
+-   Elas são principalmente para acessibilidade.
+-   Elas são atribuídas a todos os menus e a maioria dos controles de caixa de diálogo.
+-   Elas não devem ser memorizadas, portanto, estão documentadas diretamente na interface do usuário, com o caractere de rótulo de controle correspondente sublinhado.
+-   Elas têm efeito somente na janela atual e navegam até o item de menu ou controle correspondente.
+-   Elas não são atribuídas consistentemente porque nem sempre podem. No entanto, as teclas de acesso devem ser atribuídas consistentemente a comandos usados comumente, em especial os botões de confirmação.
+-   Elas são localizadas.
 
--   Character key: sends a literal character to the window with input focus.
--   Modifier key: alters the function of a primary key when pressed simultaneously, such as Ctrl, Alt, Shift, and the Windows logo key.
--   Navigation key: moves input focus or text input location, such as the Tab, Home, End, Page Up, Page Down, and directional arrow keys.
--   Editing key: manipulates text, such as the Shift, Tab, Enter, Insert, Backspace, and Delete keys.
--   Function key: performs a special function, such as F1 through F12 keys.
--   Toggle key: puts the system into a mode, such as Caps Lock, ScrLk, and Num Lock keys.
--   Command key: performs a system task or command activation, such as Spacebar, Enter, Esc, Pause/Break, and Print Screen keys.
+Como as teclas de acesso não precisam ser memorizadas, a elas são atribuídos um caractere que está no início do rótulo para torná-las fáceis de encontrar, mesmo se houver uma palavra-chave que apareça posteriormente no rótulo.
 
-In addition to these categories, a secondary class of keys and key combinations exist that can be used as shortcuts to app functionality:
+Em compensação, as teclas aceleradoras têm as seguintes características:
 
--   Access key: exposes controls or menu items by pressing the Alt key with a character key, indicated by underlining of the access key character assignment in a menu, or displaying of the access key character(s) in an overlay.
--   Accelerator key: exposes app commands by pressing a function key or the Ctrl key with a character key. Your app might or might not have UI that corresponds to the command.
+-   Uma tecla aceleradora é um atalho para um comando do aplicativo.
+-   Elas usam principalmente as sequências de tecla Ctrl e Função (teclas de atalho de sistema do Windows também usam teclas Alt + teclas não alfanuméricas e o logotipo do Windows).
+-   Elas são principalmente para eficiência de usuários avançados.
+-   Elas são atribuídas apenas a comandos usados mais comumente.
+-   Elas devem ser memorizadas e estão documentadas apenas em menus, dicas de ferramentas e na Ajuda.
+-   Elas têm efeito em todo o programa, mas não têm nenhum efeito caso não se apliquem.
+-   Elas devem ser atribuídas consistentemente porque são memorizadas e não diretamente documentadas.
+-   Elas não são localizadas.
 
-Another class of key combinations, known as secure attention sequence (SAS), cannot be intercepted by an app. This is a security feature intended to protect the user's system during login, and include Ctrl-Alt-Del and Win-L.
+Como as teclas aceleradoras destinam-se a ser memorizadas, idealmente, as teclas aceleradoras usadas com mais frequência usam letras dos primeiros caracteres ou dos caracteres mais memorizáveis nas palavras-chave do comando, como Ctrl + C para Copiar e Ctrl + Q para Solicitar.
 
-The Notepad app is shown here with the expanded File menu that includes both access keys and accelerator keys.
+Os usuários devem conseguir realizar todas as tarefas com suporte em seu aplicativo usando somente o teclado de hardware ou o Teclado Virtual.
 
-![the notepad app with expanded file menu that includes both access keys and accelerator keys.](images/input-patterns/notepad.png)
+Você deve oferecer aos usuários que dependem de leitores de tela e outras tecnologias auxiliares uma maneira fácil de descobrir as teclas aceleradoras em seu aplicativo. Comunique as teclas aceleradoras usando dicas de ferramentas, nomes acessíveis, descrições acessíveis ou alguma outra forma de comunicação na tela. No mínimo, as teclas de acesso e aceleradoras devem ser bem documentadas no conteúdo da Ajuda do seu aplicativo.
 
-## <span id="Keyboard_commands"></span><span id="keyboard_commands"></span><span id="KEYBOARD_COMMANDS"></span>Keyboard commands
+Não atribua teclas aceleradoras conhecidas ou padrão à outra funcionalidade. Por exemplo, Ctrl + F normalmente é usado para localizar ou pesquisar.
+
+Não se preocupe tentando atribuir as teclas de acesso a todos os controles interativos em uma interface do usuário densa. Basta garantir que os mais importantes e mais usados tenham teclas de acesso, ou use os grupos de controle e atribua uma tecla de acesso ao rótulo do grupo de controle.
+
+Não altere comandos usando modificadores de teclado. Isso não pode ser descoberto e pode causar confusão.
+
+Não desabilite um controle enquanto ele tem foco de entrada. Isso pode interferir na entrada do teclado.
+
+Para garantir experiências de interação do teclado bem-sucedidas, é fundamental testar seu aplicativo completamente e exclusivamente com o teclado.
+
+## <span id="Text_input"></span><span id="text_input"></span><span id="TEXT_INPUT"></span>Entrada de texto
 
 
-The following is a comprehensive list of the keyboard interactions provided across the various devices that support keyboard input. Some devices and platforms require native keystrokes and interactions, these are noted.
+Sempre consulte as funcionalidades do dispositivo ao contar com a entrada do teclado. Em alguns dispositivos (como um telefone), o teclado virtual só pode ser usado para entrada de texto, já que ele não fornece muitos teclas aceleradoras ou de comando encontradas em um teclado de hardware, (como a tecla Alt, as teclas de função ou a tecla do logotipo do Windows).
 
-When designing custom controls and interactions, use this keyboard language consistently to make your app feel familiar, dependable, and easy to learn.
+Não faça com que os usuários tenham de navegar o aplicativo usando o teclado virtual. Dependendo do controle que tem o foco, o teclado virtual pode ser ignorado.
 
-Don't redefine the default keyboard shortcuts.
+Tente exibir o teclado virtual durante toda a interação com seu formulário. Isso elimina a variação de interface do usuário que pode confundir o usuário no meio de um fluxo de entrada de texto ou de formulário.
 
-The following tables list frequently used keyboard commands. For a complete list of keyboard commands, see [Windows Keyboard Shortcut Keys](http://go.microsoft.com/fwlink/p/?linkid=325424).
+Verifique se os usuários sempre podem ver o campo de entrada no qual estão digitando. O teclado virtual fecha metade da tela, para que o campo de entrada com foco role para a exibição conforme o usuário percorrer o formulário.
 
-**Navigation commands**
+Um teclado de hardware padrão ou teclado virtual consiste em sete tipos de teclas, cada uma com funcionalidade única:
 
-| Action                               | Key command                                      |
+-   Tecla de caractere: envia um caractere literal para a janela com o foco de entrada.
+-   Tecla modificadora: altera a função de uma tecla primária quando pressionada simultaneamente, como Ctrl, Alt, Shift e a tecla de logotipo do Windows.
+-   Tecla de navegação: move o foco de entrada ou de localização da entrada do texto, como Tab, Home, End, Page Up, Page Down e as teclas de seta direcional.
+-   Tecla de edição: manipula texto, como as teclas Shift, Tab, Enter, Insert, Backspace e Delete.
+-   Tecla de função: desempenha uma função especial, como as teclas F1 a F12.
+-   Tecla de alternância: coloca o sistema em um modo, como as teclas Caps Lock, ScrLk e Num Lock.
+-   Tecla de comando: executa uma tarefa ou um comando de ativação do sistema, como as teclas Barra de espaços, Enter, Esc, Pause/Break e Print Screen.
+
+Além dessas categorias, existe uma classe de secundária de teclas e combinações de teclas que pode ser usada como atalhos para a funcionalidade do aplicativo:
+
+-   Tecla de acesso: expõe controles ou itens de menu, quando pressionada a tecla Alt com uma tecla de caractere, indicada pelo sublinhado da atribuição de caractere da tecla de acesso em um menu, ou pela exibição do(s) caractere(s) de tecla de acesso em uma sobreposição.
+-   Tecla aceleradora: expõe comandos do aplicativo, pressionando uma tecla de função ou a tecla Ctrl com uma tecla de caractere. Seu aplicativo pode ou não ter uma interface do usuário que corresponde exatamente ao comando.
+
+Outra classe de combinações de teclas, conhecida como sequência segura (SAS), não pode ser interceptada por um aplicativo. Esse é um recurso de segurança destinado a proteger o sistema do usuário durante o logon e inclui Ctrl-Alt-Del e Win-L.
+
+O aplicativo Bloco de notas é mostrado aqui com menu Arquivo expandido que inclui as teclas de acesso e as teclas aceleradoras.
+
+![o a aplicativo bloco de notas com o menu arquivo expandido que inclui as teclas de acesso e as teclas aceleradoras.](images/input-patterns/notepad.png)
+
+## <span id="Keyboard_commands"></span><span id="keyboard_commands"></span><span id="KEYBOARD_COMMANDS"></span>Comandos de teclado
+
+
+A seguir há uma lista abrangente das interações de teclado fornecidas em vários dispositivos que dão suporte à entrada de teclado. Alguns dispositivos e plataformas exigem interações e pressionamentos de teclas nativos; eles são indicados.
+
+Ao projetar interações e controles personalizados, use este idioma do teclado consistentemente para tornar seu aplicativo familiar, confiável e fácil de aprender.
+
+Não redefina os atalhos de teclado padrão.
+
+As tabelas seguintes listam os comandos de teclado usados ​​com frequência. Para ver uma lista completa de comandos de teclado, consulte [Teclas de atalho de teclado do Windows](http://go.microsoft.com/fwlink/p/?linkid=325424)
+
+**Comandos de navegação**
+
+| Ação                               | Comando de tecla                                      |
 |--------------------------------------|--------------------------------------------------|
-| Back                                 | Alt+Left or the back button on special keyboards |
-| Forward                              | Alt+Right                                        |
-| Up                                   | Alt+Up                                           |
-| Cancel or Escape from current mode   | Esc                                              |
-| Move through items in a list         | Arrow key (Left, Right, Up, Down)                |
-| Jump to next list of items           | Ctrl+Left                                        |
-| Semantic zoom                        | Ctrl++ or Ctrl+-                                 |
-| Jump to a named item in a collection | Start typing item name                           |
-| Next page                            | Page Up, Page Down or Spacebar                   |
-| Next tab                             | Ctrl+Tab                                         |
-| Previous tab                         | Ctrl+Shift+Tab                                   |
-| Open app bar                         | Windows+Z                                        |
-| Activate or Navigate into an item    | Enter                                            |
-| Select                               | Spacebar                                         |
-| Continuously select                  | Shift+Arrow key                                  |
-| Select all                           | Ctrl+A                                           |
+| Voltar                                 | Alt+À esquerda ou o botão Voltar em teclados especiais |
+| Avançar                              | Alt+À direita                                        |
+| Para cima                                   | Alt+Acima                                           |
+| Cancelar ou sair do modo atual   | Esc                                              |
+| Percorrer itens em uma lista         | Tecla de cursor (à esquerda, à direita, acima, abaixo)                |
+| Saltar para a próxima lista de itens           | CTRL+À esquerda                                        |
+| Zoom semântico                        | Ctrl++ ou Ctrl+-                                 |
+| Ir para um item nomeado em uma coleção | Começar a digitar o nome do item                           |
+| Próxima página                            | Page Up, Page Down ou Barra de Espaço                   |
+| Guia Próximo                             | Ctrl+Tab                                         |
+| Guia Anterior                         | Ctrl+Shift+Tab                                   |
+| Abrir barra de aplicativos                         | Windows+Z                                        |
+| Ativar ou navegar em um item    | Tecla Enter                                            |
+| Selecionar                               | Barra de espaço                                         |
+| Selecionar continuamente                  | Shift+Tecla de cursor                                  |
+| Selecionar tudo                           | Ctrl+A                                           |
 
- 
+ 
 
-**Common commands**
+**Comandos comuns**
 
-| Action                                                 | Key command     |
+| Ação                                                 | Comando de tecla     |
 |--------------------------------------------------------|-----------------|
-| Pin an item                                            | Ctrl+Shift+1    |
-| Save                                                   | Ctrl+S          |
-| Find                                                   | Ctrl+F          |
-| Print                                                  | Ctrl+P          |
-| Copy                                                   | Ctrl+C          |
-| Cut                                                    | Ctrl+X          |
-| New item                                               | Ctrl+N          |
-| Paste                                                  | Ctrl+V          |
-| Open                                                   | Ctrl+O          |
-| Open address (for example, a URL in Internet Explorer) | Ctrl+L or Alt+D |
+| Fixar um item                                            | Ctrl+Shift+1    |
+| Salvar                                                   | Ctrl+S          |
+| Localizar                                                   | Ctrl+F          |
+| Impressão                                                  | Ctrl+P          |
+| Copiar                                                   | Ctrl+C          |
+| Recortar                                                    | Ctrl+X          |
+| Novo item                                               | Ctrl+N          |
+| Colar                                                  | Ctrl+V          |
+| Abrir                                                   | Ctrl+O          |
+| Abrir um endereço (por exemplo, uma URL no Internet Explorer) | Ctrl+L ou Alt+D |
 
- 
+ 
 
-**Media navigation commands**
+**Comandos de navegação de mídia**
 
-| Action       | Key command |
+| Ação       | Comando de tecla |
 |--------------|-------------|
-| Play/Pause   | Ctrl+P      |
-| Next item    | Ctrl+F      |
-| Preview item | Ctrl+B      |
+| Reproduzir/Pausar   | Ctrl+P      |
+| Próximo item    | Ctrl+F      |
+| Visualizar item | Ctrl+B      |
 
- 
+ 
 
-Note: The media navigation key commands for Play/Pause and Next item are the same as the key commands for Print and Find, respectively. Common commands should take priority over media navigation commands. For example, if an app supports both plays media and prints, the key command Ctrl+P should print.
-## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>Visual feedback
-
-
-Use focus rectangles only with keyboard interactions. If the user initiates a touch interaction, make the keyboard UI gradually fade away. This keeps the UI clean and uncluttered.
-
-Don't display visual feedback if an element doesn't support interaction (such as static text). Again, this keeps the UI clean and uncluttered.
-
-Try to display visual feedback concurrently for all elements that represent the same input target.
-
-Try to provide on-screen buttons (such as + and -) as hints for emulating touch-based manipulations such as panning, rotating, zooming, and so on.
-
-For more general guidance on visual feedback, see [Guidelines for visual feedback](guidelines-for-visualfeedback.md).
+Observação: os comandos de tecla de navegação de mídia para Reproduzir/Pausar e Próximo item são iguais aos comandos de tecla para Imprimir e Localizar, respectivamente. Comandos comuns devem ter prioridade sobre comandos de navegação de mídia. Por exemplo, se um aplicativo der suporte para reprodução de mídia e impressão, o comando de tecla Ctrl+P deverá imprimir.
+## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>Comentários visuais
 
 
-## <span id="keyboard_events"></span><span id="KEYBOARD_EVENTS"></span>Keyboard events and focus
+Use retângulos de foco somente com interações de teclado. Se o usuário iniciar uma interação touch, faça com que a interface do usuário de teclado desapareça gradualmente. Dessa forma, a interface do usuário fica mais organizada.
+
+Não exiba comentários visuais quando um elemento não permite interação (como texto estático). Novamente, isso mantém a interface do usuário mais organizada.
+
+Tente exibir comentários visuais simultaneamente para todos os elementos que representam o mesmo destino de entrada.
+
+Tente fornecer botões virtuais (por exemplo, + e -) como dicas para emulação de manipulações baseadas em touch, ou seja, movimento panorâmico, rotação, zoom etc.
+
+Para obter diretrizes mais gerais sobre comentários visuais, consulte [Diretrizes de comentários visuais](guidelines-for-visualfeedback.md)
 
 
-The following keyboard events can occur for both hardware and touch keyboards.
+## <span id="keyboard_events"></span><span id="KEYBOARD_EVENTS"></span>Foco e eventos do teclado
 
-| Event                                      | Description                    |
+
+Os seguintes eventos podem ocorrer para teclados físicos e virtuais.
+
+| Evento                                      | Descrição                    |
 |--------------------------------------------|--------------------------------|
-| [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) | Occurs when a key is pressed.  |
-| [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)     | Occurs when a key is released. |
+| [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) | Ocorre quando uma tecla é pressionada.  |
+| [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)     | Ocorre quando uma tecla é solta. |
 
 
-**Important**  
-Some Windows Runtime controls handle input events internally. In these cases, it might appear that an input event doesn't occur because your event listener doesn't invoke the associated handler. Typically, this subset of keys is processed by the class handler to provide built in support of basic keyboard accessibility. For example, the [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) class overrides the [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) events for both the Space key and the Enter key (as well as [**OnPointerPressed**](https://msdn.microsoft.com/library/windows/apps/hh967989)) and routes them to the [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) event of the control. When a key press is handled by the control class, the [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events are not raised.
+**Importante**  
+Alguns controles do Windows Runtime manipulam eventos de entrada internamente. Nestes casos, pode parecer que não ocorre um evento de entrada, porque o ouvinte de evento não chama o manipulador associado. Geralmente, este subconjunto de teclas é processado pelo manipulador de classe para proporcionar suporte interno de acessibilidade de teclado básico. Por exemplo, a classe [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) sobrepõe os eventos [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) para a tecla Enter ou a barra de espaço (bem como [**OnPointerPressed**](https://msdn.microsoft.com/library/windows/apps/hh967989)) e os encaminha para o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) do controle. Quando uma tecla é manipulada pela classe de controle, os eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) não são acionados.
 
-This provides a built-in keyboard equivalent for invoking the button, similar to tapping it with a finger or clicking it with a mouse. Keys other than Space or Enter still fire [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events. For more info about how class-based handling of events works (specifically, the "Input event handlers in controls" section), see [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584).
-
-
-Controls in your UI generate keyboard events only when they have input focus. An individual control gains focus when the user clicks or taps directly on that control in the layout, or uses the Tab key to step into a tab sequence within the content area.
-
-You can also call a control's [**Focus**](https://msdn.microsoft.com/library/windows/apps/hh702161) method to force focus. This is necessary when you implement shortcut keys, because keyboard focus is not set by default when your UI loads. For more info, see the [Shortcut keys example](#shortcut_keys_example) later in this topic.
-
-For a control to receive input focus, it must be enabled, visible, and have [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/br209422) and [**HitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933) property values of **true**. This is the default state for most controls. When a control has input focus, it can raise and respond to keyboard input events as described later in this topic. You can also respond to a control that is receiving or losing focus by handling the [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/br208927) and [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943) events.
-
-By default, the tab sequence of controls is the order in which they appear in the Extensible Application Markup Language (XAML). However, you can modify this order by using the [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461) property. For more info, see [Implementing keyboard accessibility](https://msdn.microsoft.com/library/windows/apps/hh868161).
-
-## <span id="keyboard_event_handlers"></span><span id="KEYBOARD_EVENT_HANDLERS"></span>Keyboard event handlers
+Isso fornece um teclado integrado equivalente para invocar o botão, semelhante a tocar com um dedo ou clicar com o mouse. Outras teclas, além da tecla Enter e da barra de espaço, ainda acionam os eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Para obter mais informações sobre como a manipulação baseada em classes de eventos funciona (especificamente, a seção "Manipuladores de evento de entrada em controles"), consulte [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/mt185584)
 
 
-An input event handler implements a delegate that provides the following information:
+Os controles em sua interface do usuário geram eventos de teclado apenas quando possuem foco de entrada. Um controle individual ganha foco quando o usuário clica ou toca diretamente nesse controle no layout, ou utiliza a tecla Tab para avançar na sequência de tabulação dentro da área de conteúdo.
 
--   The sender of the event. The sender reports the object where the event handler is attached.
--   Event data. For keyboard events, that data will be an instance of [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072). The delegate for handlers is [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904). The most relevant properties of **KeyRoutedEventArgs** for most handler scenarios are [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) and possibly [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075).
--   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). Because the keyboard events are routed events, the event data provides **OriginalSource**. If you deliberately allow events to bubble up through an object tree, **OriginalSource** is sometimes the object of concern rather than sender. However, that depends on your design. For more information about how you might use **OriginalSource** rather than sender, see the "Keyboard Routed Events" section of this topic, or [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584).
+Você também pode chamar um método [**Focus**](https://msdn.microsoft.com/library/windows/apps/hh702161) do controle para forçar o foco. Isso é necessário quando você implementa teclas de atalho porque o foco do teclado não está definido por padrão quando a interface do usuário é carregada. Para obter mais informações, consulte [Exemplos de tecla de atalho](#shortcut_keys_example) posteriormente neste tópico.
 
-### <span id="attaching_a_keyboard_event_handler"></span><span id="ATTACHING_A_KEYBOARD_EVENT_HANDLER"></span>Attaching a keyboard event handler
+Para um controle receber o foco de entrada, ele deve estar habilitado, visível e apresentar valores de propriedade [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/br209422) e [**HitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933) como **true**. Esse é o estado padrão da maioria dos controles. Quando um controle tem um foco de entrada, ele pode acionar e responder a eventos de entrada de teclado conforme descrito posteriormente neste tópico. Você também pode responder a um controle que recebe ou perde foco manipulando os eventos [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/br208927) e [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943).
 
-You can attach keyboard event-handler functions for any object that includes the event as a member. This includes any [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) derived class. The following XAML example shows how to attach handlers for the [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) event for a [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704).
+Por padrão, a sequência de tabulação de controles está na ordem que aparece na Extensible Application Markup Language (XAML). No entanto, é possível modificar essa ordem usando a propriedade [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461). Para saber mais, consulte [Implementando a acessibilidade de teclado](https://msdn.microsoft.com/library/windows/apps/hh868161)
+
+## <span id="keyboard_event_handlers"></span><span id="KEYBOARD_EVENT_HANDLERS"></span>Manipuladores de eventos do teclado
+
+
+Um manipulador de eventos de entrada implementa um delegado que fornece as seguintes informações:
+
+-   O remetente do evento. O remetente relata o objeto ao qual o manipulador de eventos está anexado.
+-   Dados do evento. Para eventos do teclado, esses dados serão uma instância de [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072). O delegado para manipuladores é [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904). As propriedades mais relevantes de **KeyRoutedEventArgs** para a maioria dos cenários de manipulação são [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) e possivelmente [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)
+-   [
+              **OriginalSource**
+            ](https://msdn.microsoft.com/library/windows/apps/br208810). Como eventos do teclado são eventos roteados, os dados dos eventos fornecem **OriginalSource**. Se você deliberadamente permite que eventos subam a árvore de um objeto, **OriginalSource** é, por vezes, o objeto em questão em vez do remetente. No entanto, isso depende do seu design. Para saber mais sobre como você pode usar **OriginalSource** em vez do remetente, consulte a seção "Eventos roteados do teclado" deste tópico, ou [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/mt185584)
+
+### <span id="attaching_a_keyboard_event_handler"></span><span id="ATTACHING_A_KEYBOARD_EVENT_HANDLER"></span>Anexando um manipulador de eventos do teclado
+
+Você pode anexar funções de manipulação de eventos do teclado a qualquer objeto que inclua o evento como um membro. Isso inclui qualquer classe derivada de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). O exemplo de XAML a seguir mostra como anexar manipuladores ao evento [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) de um [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)
 
 ```XAML
 <Grid KeyUp="Grid_KeyUp">
@@ -363,11 +365,11 @@ You can attach keyboard event-handler functions for any object that includes the
 </Grid>
 ```
 
-You can also attach an event handler in code. For more info, see [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584).
+Você também pode anexar um manipulador de eventos em código. Para obter mais informações, consulte [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/mt185584)
 
-### <span id="defining_a_keyboard_event_handler"></span><span id="DEFINING_A_KEYBOARD_EVENT_HANDLER"></span>Defining a keyboard event handler
+### <span id="defining_a_keyboard_event_handler"></span><span id="DEFINING_A_KEYBOARD_EVENT_HANDLER"></span>Definindo um manipulador de eventos do teclado
 
-The following example shows the incomplete event handler definition for the [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) event handler that was attached in the preceding example.
+O exemplo a seguir mostra a definição do manipulador de eventos incompleta para o manipulador de eventos [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) que foi anexado no exemplo anterior.
 
 ```CSharp
 void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
@@ -389,35 +391,37 @@ void MyProject::MainPage::Grid_KeyUp(
 {//handling code here}
 ```
 
-### <span id="using_keyroutedeventargs"></span><span id="USING_KEYROUTEDEVENTARGS"></span>Using KeyRoutedEventArgs
+### <span id="using_keyroutedeventargs"></span><span id="USING_KEYROUTEDEVENTARGS"></span>Usando KeyRoutedEventArgs
 
-All keyboard events use [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072) for event data, and **KeyRoutedEventArgs** contains the following properties:
+Todos os eventos do teclado usam [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072) para dados de eventos, e **KeyRoutedEventArg** contém as seguintes propriedades:
 
 -   [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074)
 -   [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)
 -   [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)
--   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) (inherited from [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809))
+-   [
+              **OriginalSource**
+            ](https://msdn.microsoft.com/library/windows/apps/br208810) (herdado de [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)
 
 ### <span id="key"></span><span id="KEY"></span>Key
 
-The [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) event is raised if a key is pressed. Likewise, [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) is raised if a key is released. Usually, you listen to the events to process a specific key value. To determine which key is pressed or released, check the [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) value in the event data. **Key** returns a [**VirtualKey**](https://msdn.microsoft.com/library/windows/apps/br241812) value. The **VirtualKey** enumeration includes all the supported keys.
+O evento [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) será acionado se a tecla for pressionada. Da mesma forma, [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) será acionado se a tecla for liberada. Normalmente, você escuta eventos para processar um valor de tecla específico. Para determinar qual tecla é pressionada ou liberada, verifique o valor de [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) nos dados do evento. **Key** retorna um valor [**VirtualKey**](https://msdn.microsoft.com/library/windows/apps/br241812). A enumeração **VirtualKey** inclui todas as teclas com suporte.
 
-### <span id="modifier_keys"></span><span id="MODIFIER_KEYS"></span>Modifier keys
+### <span id="modifier_keys"></span><span id="MODIFIER_KEYS"></span>Teclas modificadoras
 
-Modifier keys are keys such as Ctrl or Shift that users typically press in combination with other keys. Your app can use these combinations as keyboard shortcuts to invoke app commands.
+As teclas modificadoras são teclas como Ctrl ou Shift que os usuários normalmente pressionam em combinação com outras teclas. Seu aplicativo pode usar essas combinações como atalhos de teclado para chamar comandos do aplicativo.
 
-You detect shortcut key combinations by using code in your [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) event handlers. You can then track the pressed state of the modifier keys you are interested in. When a keyboard event occurs for a non-modifier key, you can check whether a modifier key is in the pressed state at the same time.
+É possível detectar combinações de teclas de atalho usando os manipuladores de evento [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Você pode controlar o estado pressionado das teclas modificadoras em que tem interesse. Quando ocorre um evento de teclado para uma tecla não modificadora, é possível verificar se uma tecla modificadora está no estado pressionado ao mesmo tempo.
 
-**Note**  The Alt key is represented by the **VirtualKey.Menu** value.
+**Observação**  A tecla Alt é representada pelo valor **VirtualKey.Menu**.
 
- 
+ 
 
-## <span id="shortcut_keys_example"></span><span id="SHORTCUT_KEYS_EXAMPLE"></span>Shortcut keys example
+## <span id="shortcut_keys_example"></span><span id="SHORTCUT_KEYS_EXAMPLE"></span>Amostra de teclas de atalho
 
 
-The following example demonstrates how to implement shortcut keys. In this example, users can control media playback using Play, Pause, and Stop buttons or Ctrl+P, Ctrl+A, and Ctrl+S keyboard shortcuts. The button XAML shows the shortcuts by using tooltips and [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081) properties in the button labels. This self-documentation is important to increase the usability and accessibility of your app. For more info, see [Keyboard accessibility](https://msdn.microsoft.com/library/windows/apps/mt244347).
+O exemplo a seguir mostra como implementar as teclas de atalho. Neste exemplo, os usuários podem controlar a reprodução de mídia usando os botões Play, Pause e Stop, ou os atalhos de teclado Ctrl+P, Ctrl+A e Ctrl+S. O botão XAML mostra os atalhos usando dicas de ferramentas e propriedades [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081) nos rótulos dos botões. Esta autodocumentação é importante para aumentar a usabilidade e acessibilidade de seu aplicativo. Para obter mais informações, consulte [Acessibilidade do teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
 
-Note also that the page sets input focus to itself when it is loaded. Without this step, no control has initial input focus, and the app does not raise input events until the user sets the input focus manually (for example, by tabbing to or clicking a control).
+Observe também que a página define o foco de entrada para si própria quando é carregada. Sem essa etapa, nenhum controle terá foco de entrada inicial e o aplicativo não acionará eventos de entrada até que o usuário defina o foco de entrada manualmente (por exemplo, pressionando TAB ou clicando em um controle).
 
 ```XAML
 <Grid KeyDown="Grid_KeyDown">
@@ -571,16 +575,16 @@ Private Sub MediaButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-**Note**  Setting [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/hh759762) or [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/hh759763) in XAML provides string information, which documents the shortcut key for invoking that particular action. The information is captured by Microsoft UI Automation clients such as Narrator, and is typically provided directly to the user. Setting **AutomationProperties.AcceleratorKey** or **AutomationProperties.AccessKey** does not have any action on its own. You will still need to attach handlers for [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) or [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events in order to actually implement the keyboard shortcut behavior in your app. Also, the underline text decoration for an access key is not provided automatically. You must explicitly underline the text for the specific key in your mnemonic as inline [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982) formatting if you wish to show underlined text in the UI.
+**Observação**  A configuração de [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/hh759762) ou [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/hh759763) em XAML oferece informações sobre cadeia de caracteres, que documentam a tecla de atalho para invocar a ação em particular. As .informações são capturadas por clientes de Automação da Interface do Usuário da Microsoft como o Narrador e são tipicamente fornecidas diretamente ao usuário. A configuração de **AutomationProperties.AcceleratorKey** ou de **AutomationProperties.AccessKey** não tem qualquer ação por conta própria. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) ou [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para realmente implementar o comportamento de atalho de teclado em seu aplicativo. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982) embutida se desejar mostrar texto sublinhado na interface do usuário.
 
- 
+ 
 
-## <span id="keyboard_routed_events"></span><span id="KEYBOARD_ROUTED_EVENTS"></span>Keyboard routed events
+## <span id="keyboard_routed_events"></span><span id="KEYBOARD_ROUTED_EVENTS"></span>Eventos de teclado roteados
 
 
-Certain events are routed events, including [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Routed events use the bubbling routing strategy. The bubbling routing strategy means that an event originates from a child object and is then routed up to successive parent objects in the object tree. This presents another opportunity to handle the same event and interact with the same event data.
+Alguns eventos são eventos roteados, inclusive [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Eventos roteados usam a estratégia de roteamento por propagação. A estratégia de roteamento por propagação indica que um evento se origina de um objeto filho e então é encaminhado para sucessivos objetos pai na árvore de objetos. Isso apresenta outra oportunidade para manipular o mesmo evento e interagir com os mesmos dados de eventos.
 
-Consider the following XAML example, which handles [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events for a [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) and two [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) objects. In this case, if you release a key while focus is held by either **Button** object, it raises the **KeyUp** event. The event is then bubbled up to the parent **Canvas**.
+Considere o exemplo em XAML a seguir, que manipula eventos [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para um objeto [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) e dois objetos [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265). Neste caso, se você soltar uma tecla enquanto o foco é mantido por cada objeto **Button**, ele aciona o evento **KeyUp**. O evento é, então, propagado para o **Canvas** pai
 
 ```XAML
 <StackPanel KeyUp="StackPanel_KeyUp">
@@ -590,7 +594,7 @@ Consider the following XAML example, which handles [**KeyUp**](https://msdn.micr
 </StackPanel>
 ```
 
-The following example shows how to implement the [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) event handler for the corresponding XAML content in the preceding example.
+O exemplo a seguir mostra como implementar o manipulador de eventos [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) no conteúdo XAML correspondente do exemplo anterior.
 
 ```CSharp
 void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
@@ -601,55 +605,55 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 }
 ```
 
-Notice the use of the [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) property in the preceding handler. Here, **OriginalSource** reports the object that raised the event. The object could not be the [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) because the **StackPanel** is not a control and cannot have focus. Only one of the two buttons within the **StackPanel** could possibly have raised the event, but which one? You use **OriginalSource** to distinguish the actual event source object, if you are handling the event on a parent object.
+Observe o uso da propriedade [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) no manipulador anterior. Aqui, **OriginalSource** relata o objeto que acionou o evento. O objeto não poderia ser o [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635), pois o **StackPanel** não é um controle e não pode ter foco. Apenas um dos dois botões dentro de **StackPanel** poderiam ter possivelmente acionado o evento, mas qual deles? Você usa **OriginalSource** para distinguir o objeto de origem do evento real se estiver manipulando o evento em um objeto pai.
 
-### <span id="handled_property"></span><span id="HANDLED_PROPERTY"></span>The Handled property in event data
+### <span id="handled_property"></span><span id="HANDLED_PROPERTY"></span>A propriedade Handled nos dados do evento
 
-Depending on your event handling strategy, you might want only one event handler to react to a bubbling event. For instance, if you have a specific [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) handler attached to one of the [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) controls, it would have the first opportunity to handle that event. In this case, you might not want the parent panel to also handle the event. For this scenario, you can use the [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) property in the event data.
+Dependendo da sua estratégia de manipulação de eventos, você pode querer que apenas um manipulador de eventos reaja a um evento propagado. Por exemplo, se você tiver um manipulador [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) específico anexado a um dos controles [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265), ele terá a mesma oportunidade de manipular o evento. Nesse caso, talvez você não queira que o painel pai manipule também o evento. Nesse cenário, use a propriedade [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) nos dados do evento.
 
-The purpose of the [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) property in a routed event data class is to report that another handler you registered earlier on the event route has already acted. This influences the behavior of the routed event system. When you set **Handled** to **true** in an event handler, that event stops routing and is not sent to successive parent elements.
+O objetivo da propriedade [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) em uma classe de dados de eventos roteados é informar que outro manipulador registrado por você anteriormente na rota do evento já atuou. Isso influencia o comportamento do sistema de eventos roteados. Quando você define **Handled** como **true** em um manipulador de eventos, o roteamento desse evento para, e ele não é enviado para os elementos pais sucessivos.
 
-### <span id="addhandler_and_already_handled_keyboard_events"></span><span id="ADDHANDLER_AND_ALREADY_HANDLED_KEYBOARD_EVENTS"></span>AddHandler and already-handled keyboard events
+### <span id="addhandler_and_already_handled_keyboard_events"></span><span id="ADDHANDLER_AND_ALREADY_HANDLED_KEYBOARD_EVENTS"></span>AddHandler e eventos do teclado já manipulados
 
-You can use a special technique for attaching handlers that can act on events that you already marked as handled. This technique uses the [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) method to register a handler, rather than using XAML attributes or language-specific syntax for adding handlers, such as += in C\#. A limitation of this technique in general is that the **AddHandler** API takes a parameter of type [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808) that identifies the routed event in question. Not all routed events provide a **RoutedEvent** identifier, and this consideration thus affects which routed events can still be handled in the [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) case. The [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events have routed event identifiers ([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) and [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418)) on [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). However, other events such as [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) do not have routed event identifiers and thus cannot be used with the **AddHandler** technique.
+Você pode usar uma técnica especial para anexar manipuladores que podem atuar em eventos que já estão marcados como manipulados. Essa técnica usa o método [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) para registrar um manipulador, em vez de usar atributos XAML ou sintaxe específica de linguagem para adicionar manipuladores, como += em C\#. Uma limitação dessa técnica, em geral, é que a API **AddHandler** obtém um parâmetro do tipo [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808), que identifica o evento roteado em questão. Nem todos os eventos roteados fornecem um identificador **RoutedEvent**, e essa consideração afeta os eventos roteados que podem ainda ser manipulados no caso [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073). Os eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) possuem identificadores de eventos roteados ([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) e [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418)) em [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). Contudo, outros eventos, como [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706), não possuem identificadores de eventos roteados e, portanto, não podem ser usados com a técnica **AddHandler**.
 
-## <span id="commanding"></span><span id="COMMANDING"></span>Commanding
-
-
-A small number of UI elements provide built-in support for commanding. Commanding uses input-related routed events in its underlying implementation. It enables processing of related UI input, such as a certain pointer action or a specific accelerator key, by invoking a single command handler.
-
-If commanding is available for a UI element, consider using its commanding APIs instead of any discrete input events. For more info, see [**ButtonBase.Command**](https://msdn.microsoft.com/library/windows/apps/br227740).
-
-You can also implement [**ICommand**](https://msdn.microsoft.com/library/windows/apps/br227885) to encapsulate command functionality that you invoke from ordinary event handlers. This enables you to use commanding even when there is no **Command** property available.
-
-## <span id="text_input_and_controls"></span><span id="TEXT_INPUT_AND_CONTROLS"></span>Text input and controls
+## <span id="commanding"></span><span id="COMMANDING"></span>Comando
 
 
-Certain controls react to keyboard events with their own handling. For instance, [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) is a control that is designed to capture and then visually represent text that was entered by using the keyboard. It uses [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) and [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) in its own logic to capture keystrokes, then also raises its own [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) event if the text actually changed.
+Um pequeno número de elementos da interface do usuário fornece suporte interno para comandos. Comandos usam eventos roteados relacionados à entrada na sua implementação subjacente. Eles permitem o processamento de entrada relacionada da interface do usuário, como uma determinada ação do ponteiro ou uma tecla de aceleração específica, invocando um único manipulador de comandos.
 
-You can still generally add handlers for [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) and [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) to a [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683), or any related control that is intended to process text input. However, as part of its intended design, a control might not respond to all key values that are directed to it through key events. Behavior is specific to each control.
+Se comandos estiverem disponíveis para um elemento da interface do usuário, considere usar as respectivas APIs de comando em vez de qualquer evento de entrada à parte. Para obter mais informações, consulte [**ButtonBase.Command**](https://msdn.microsoft.com/library/windows/apps/br227740)
 
-As an example, [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736) (the base class for [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)) processes [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) so that it can check for the Spacebar or Enter key. **ButtonBase** considers **KeyUp** equivalent to a mouse left button down for purposes of raising a [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) event. This processing of the event is accomplished when **ButtonBase** overrides the virtual method [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983). In its implementation, it sets [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) to **true**. The result is that any parent of a button that is listening for a key event, in the case of a Spacebar, would not receive the already-handled event for its own handlers.
+Também é possível implementar [**ICommand**](https://msdn.microsoft.com/library/windows/apps/br227885) para encapsular a funcionalidade do comando que você invoca de manipuladores de eventos comuns. Isso permite usar comandos mesmo quando não há nenhuma propriedade **Command** disponível.
 
-Another example is [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683). Some keys, such as the ARROW keys, are not considered text by **TextBox** and are instead considered specific to the control UI behavior. The **TextBox** marks these event cases as handled.
-
-Custom controls can implement their own similar override behavior for key events by overriding [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) / [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983). If your custom control processes specific accelerator keys, or has control or focus behavior that is similar to the scenario described for [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683), you should place this logic in your own **OnKeyDown** / **OnKeyUp** overrides.
-
-## <span id="the_touch_keyboard"></span><span id="THE_TOUCH_KEYBOARD"></span>The touch keyboard
+## <span id="text_input_and_controls"></span><span id="TEXT_INPUT_AND_CONTROLS"></span>Entrada de texto e controles
 
 
-Text input controls provide automatic support for the touch keyboard. When the user sets the input focus to a text control by using touch input, the touch keyboard appears automatically. When the input focus is not on a text control, the touch keyboard is hidden.
+Certos controles reagem a eventos do teclado com a sua própria manipulação. Por exemplo, [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) é um controle projetado para capturar e depois representar visualmente o texto que foi inserido com o uso de um teclado. Ele usa [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) e [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) na sua própria lógica, para capturar toques de tecla, depois ativa também seu próprio evento [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) caso o texto seja realmente alterado.
 
-When the touch keyboard appears, it automatically repositions your UI to ensure that the focused element remains visible. This can cause other important areas of your UI to move off screen. However, you can disable the default behavior and make your own UI adjustments when the touch keyboard appears. For more info, see [Responding to the appearance of the on-screen keyboard sample](http://go.microsoft.com/fwlink/p/?linkid=231633).
+Geralmente, você ainda pode adicionar manipuladores para [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) e [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) a uma [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683), ou a qualquer controle relacionado feito para processar entrada de texto. Contudo, de acordo com o seu design, um controle pode não responder a todos os valores de teclas a ele direcionados por eventos de teclas. Cada controle tem um comportamento específico.
 
-If you create a custom control that requires text input, but does not derive from a standard text input control, you can add touch keyboard support by implementing the correct UI Automation control patterns. For more info, see [Respond to the presence of the touch keyboard](respond-to-the-presence-of-the-touch-keyboard.md) and the [Touch keyboard sample](http://go.microsoft.com/fwlink/p/?linkid=246019).
+Como exemplo, [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736) (a classe base para [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)) processa [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para que possa verificar a barra de espaço ou a tecla Enter. **ButtonBase** considera **KeyUp** equivalente a um botão esquerdo do mouse apertado para emitir um evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737). Esse processamento do evento é realizado quando **ButtonBase** substitui o método virtual [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983). Em sua implementação, ele define [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) como **true**. O resultado é que qualquer pai de um botão que estiver ouvindo um evento de tecla, no caso de uma barra de espaço, não receberá o evento já manipulado pelos próprios manipuladores.
 
-Key presses on the touch keyboard raise [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events just like key presses on hardware keyboards. However, the touch keyboard will not raise input events for Ctrl+A, Ctrl+Z, Ctrl+X, Ctrl+C, and Ctrl+V, which are reserved for text manipulation in the input control.
+Outro exemplo é [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683). Algumas teclas, como as teclas de SETA, não são consideradas texto por **TextBox** e são, em vez disso, consideradas específicas do comportamento da interface do usuário do controle. **TextBox** marca esses casos de evento como manipulados.
 
-You can make it much faster and easier for users to enter data in your app by setting the input scope of the text control to match the kind of data you expect the user to enter. The input scope provides a hint at the type of text input expected by the control so the system can provide a specialized touch keyboard layout for the input type. For example, if a text box is used only to enter a 4-digit PIN, set the [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) property to [**Number**](https://msdn.microsoft.com/library/windows/apps/hh702028). This tells the system to show the numeric keypad layout, which makes it easier for the user to enter the PIN. For more detail, see [Use input scope to change the touch keyboard](https://msdn.microsoft.com/library/windows/apps/mt280229).
+Controles personalizados podem implementar o próprio comportamento de substituição para eventos de teclas substituindo [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) / [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983). Se o seu controle personalizado processa teclas aceleradoras específicas ou tem um comportamento de controle ou foco semelhante ao cenário descrito para [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683), você deve colocar essa lógica nas próprias substituições de **OnKeyDown** / **OnKeyUp**.
+
+## <span id="the_touch_keyboard"></span><span id="THE_TOUCH_KEYBOARD"></span>O teclado virtual
 
 
-## Additional articles in this section
+Os controles de entrada de texto oferecem suporte automático para o teclado virtual. Quando o usuário define o foco de entrada como um controle de texto usando a entrada por toque, o teclado virtual aparece automaticamente. Quando o foco de entrada não está em um controle de texto, o teclado virtual é ocultado.
+
+Quando o teclado virtual aparece, ele reposiciona automaticamente sua interface de usuário para garantir que elemento focado permaneça visível. Isso pode fazer com que outras áreas importantes de sua interface de usuário se movam para fora da tela. No entanto, você pode desabilitar o comportamento padrão e fazer seus próprios ajustes de interface de usuário quando o teclado virtual aparece. Para obter mais informações, consulte [Respondendo ao aparecimento da amostra de teclado virtual](http://go.microsoft.com/fwlink/p/?linkid=231633)
+
+Se você criar um controle personalizado que exige entrada de texto, mas não deriva de um controle de entrada de texto padrão, será possível adicionar suporte de teclado virtual implementando os padrões corretos de controle de Automação da Interface do Usuário. Para obter mais informações, consulte [Responder à presença do teclado virtual](respond-to-the-presence-of-the-touch-keyboard.md) e o [Amostra de teclado virtual](http://go.microsoft.com/fwlink/p/?linkid=246019)
+
+O pressionamento das teclas no teclado virtual aciona os eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) assim como o pressionamento das teclas no teclado físico. No entanto, o teclado virtual não acionará eventos de entrada para Ctrl+A, Ctrl+Z, Ctrl+X, Ctrl+C e Ctrl+V, os quais são reservados para a manipulação de texto no controle de entrada.
+
+Você pode tornar a entrada de dados muito mais rápida e fácil para os usuários em seu aplicativo definindo o escopo de entrada do controle de texto para corresponder ao tipo de dados que o usuário deve inserir. O escopo de entrada oferece uma dica sobre o tipo de entrada de texto esperado pelo controle, para que o sistema possa fornecer um layout de teclado virtual especializado para o tipo de entrada. Por exemplo, se uma caixa de texto for usada somente para a inserção de um PIN de 4 dígitos, defina a propriedade [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) como [**Number**](https://msdn.microsoft.com/library/windows/apps/hh702028). Isso informa ao sistema para mostrar o layout do teclado numérico, facilitando a inserção do PIN. Para obter mais detalhes, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://msdn.microsoft.com/library/windows/apps/mt280229)
+
+
+## Artigos adicionais nesta seção
 <table>
 <colgroup>
 <col width="50%" />
@@ -657,46 +661,51 @@ You can make it much faster and easier for users to enter data in your app by se
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Topic</th>
-<th align="left">Description</th>
+<th align="left">Tópico</th>
+<th align="left">Descrição</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Respond to the presence of the touch keyboard](respond-to-the-presence-of-the-touch-keyboard.md)</p></td>
-<td align="left"><p>Learn how to tailor the UI of your app when showing or hiding the touch keyboard.</p></td>
+<td align="left"><p>[Responder à presença do teclado virtual](respond-to-the-presence-of-the-touch-keyboard.md)</p></td>
+<td align="left"><p>Saiba como adaptar a interface do usuário do seu aplicativo ao mostrar ou ocultar o teclado virtual.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 
-## <span id="related_topics"></span>Related articles
+## <span id="related_topics"></span>Artigos relacionados
 
 
-**Developers**
-* [Identify input devices](identify-input-devices.md)
-* [Respond to the presence of the touch keyboard](respond-to-the-presence-of-the-touch-keyboard.md)
+**Desenvolvedores**
+* [Identificar dispositivos de entrada](identify-input-devices.md)
+* [Responder à presença do teclado virtual](respond-to-the-presence-of-the-touch-keyboard.md)
 
 **Designers**
-* [Keyboard design guidelines](https://msdn.microsoft.com/library/windows/apps/hh972345)
+* [Diretrizes de design do teclado](https://msdn.microsoft.com/library/windows/apps/hh972345)
 
-**Samples**
-* [Basic input sample](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Low latency input sample](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Focus visuals sample](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+**Exemplos**
+* [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Archive Samples**
-* [Input sample](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Input: Device capabilities sample](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Input: Touch keyboard sample](http://go.microsoft.com/fwlink/p/?linkid=246019)
-* [Responding to the appearance of the on-screen keyboard sample](http://go.microsoft.com/fwlink/p/?linkid=231633)
-* [XAML text editing sample](http://go.microsoft.com/fwlink/p/?LinkID=251417)
- 
+**Exemplos de arquivo morto**
+* [Amostra de entrada](http://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Entrada: amostra de recursos de dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: amostra de teclado virtual](http://go.microsoft.com/fwlink/p/?linkid=246019)
+* [Respondendo ao aparecimento da amostra de teclado na tela](http://go.microsoft.com/fwlink/p/?linkid=231633)
+* [Amostra de edição de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
+ 
 
- 
+ 
 
 
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

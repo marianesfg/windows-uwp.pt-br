@@ -1,139 +1,152 @@
 ---
 author: drewbatgit
 ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
-description: This article shows you how to enumerate MIDI (Musical Instrument Digital Interface) devices and send and receive MIDI messages from a Universal Windows app.
+description: Este artigo mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo Universal do Windows.
 title: MIDI
 ---
 
 # MIDI
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-This article shows you how to enumerate MIDI (Musical Instrument Digital Interface) devices and send and receive MIDI messages from a Universal Windows app.
+Este artigo mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo Universal do Windows.
 
-## Enumerate MIDI devices
+## Enumerar dispositivos MIDI
 
-Before enumerating and using MIDI devices, add the following namespaces to your project.
+Antes de enumerar e usar dispositivos MIDI, adicione os seguintes namespaces ao seu projeto.
 
-[!code-cs[Using](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetUsing)]
+[!code-cs[Usando](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetUsing)]
 
-Add a [**ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868) control to your XAML page that will allow the user to select one of the MIDI input devices attached to the system. Add another one to list the MIDI output devices.
+Adicione um controle [**ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868) à página XAML que irá permitir que o usuário selecione um dos dispositivos de entrada MIDI conectados ao sistema. Adicione outro para listar os dispositivos de saída MIDI.
 
 [!code-xml[MidiListBoxes](./code/MIDIWin10/cs/MainPage.xaml#SnippetMidiListBoxes)]
 
-The [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) method [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) class is used to enumerate many different types of devices that are recognized by Windows. To specify that you only want the method to find MIDI input devices, use the selector string returned by [**MidiInPort.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn894779). **FindAllAsync** returns a [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/br225395) that contains a **DeviceInformation** for each MIDI input device registered with the system. If the returned collection contains no items, then there are no available MIDI input devices. If there are items in the collection, loop through the **DeviceInformation** objects and add the name of each device to the MIDI input device **ListBox**.
+O método [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) da classe [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) é usado para enumerar os vários tipos diferentes de dispositivos que são reconhecidos pelo Windows. Para especificar que você deseja apenas que o método localize dispositivos de entrada MIDI, use a cadeia de caracteres do seletor retornada por [**MidiInPort.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn894779). **FindAllAsync** retorna um [**DeviceInformationCollection** ](https://msdn.microsoft.com/library/windows/apps/br225395) que contém um **DeviceInformation** para cada dispositivo de entrada MIDI registrado no sistema. Se a coleção retornada não contém itens, então não há nenhum dispositivo de entrada MIDI disponível. Se houver itens na coleção, execute um loop pelos objetos **DeviceInformation** e adicione o nome de cada dispositivo ao dispositivo de entrada MIDI **ListBox**. EnumerateMidiInputDevices
 
-[!code-cs[EnumerateMidiInputDevices](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetEnumerateMidiInputDevices)]
+[!code-cs[Enumerar os dispositivos de saída MIDI funciona exatamente da mesma maneira que enumerar dispositivos de entrada, exceto por ter que especificar a cadeia de caracteres do seletor retornado por [**MidiOutPort.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn894845) ao chamar **FindAllAsync**](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetEnumerateMidiInputDevices)]
 
-Enumerating MIDI output devices works the exact same way as enumerating input devices, except that you should specify the selector string returned by [**MidiOutPort.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn894845) when calling **FindAllAsync**.
+EnumerateMidiOutputDevices
 
-[!code-cs[EnumerateMidiOutputDevices](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetEnumerateMidiOutputDevices)]
+[!code-cs[Criar uma classe auxiliar de inspetor de dispositivo](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetEnumerateMidiOutputDevices)]
 
-## Create a device watcher helper class
+## O namespace [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/br225459) fornece o [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/br225446) que pode notificar seu aplicativo quando dispositivos forem adicionados ou removidos do sistema, ou se as informações para um dispositivo forem atualizadas.
 
-The [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/br225459) namespace provides the [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/br225446) which can notify your app if devices are added or removed from the system, or if the information for a device is updated. Since MIDI-enabled apps typically are interested in both input and output devices, this example creates a helper class that implements the **DeviceWatcher** pattern, so that the same code can be used for both MIDI input and MIDI output devices, without the need for duplication.
+Desde que os aplicativos habilitados para MIDI normalmente estão interessados em dispositivos de entrada e saída, este exemplo cria uma classe auxiliar que implementa o padrão **DeviceWatcher**, de modo que o mesmo código pode ser usado para ambos os MIDI de entrada e saída, sem a necessidade de duplicação. Adicione uma nova classe ao seu projeto para servir como o inspetor de dispositivos.
 
-Add a new class to your project to serve as your device watcher. In this example the class is named **MyMidiDeviceWatcher**. The rest of the code in this section is used to implement the helper class.
+Neste exemplo,a classe é denominada **MyMidiDeviceWatcher**. O restante do código desta seção é usado para implementar a classe auxiliar. Adicione algumas variáveis de membro à classe:
 
-Add some member variables to the class:
+Um objeto [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/br225446) que monitorará trocas de dispositivos.
 
--   A [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/br225446) object that will monitor for device changes.
--   A device selector string that will contain the MIDI in port selector string for one instance and the MIDI out port selector string for another instance.
--   A [**ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868) control that will be populated with the names of the available devices.
--   A [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) that is required to update the UI from a thread other than the UI thread.
+-   Uma cadeia caracteres do seletor de dispositivo que conterá o MIDI de entrada para uma instância e a cadeia de caracteres do seletor para outra instância de MIDI de saída.
+-   Um controle [**ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868) que será preenchido com os nomes dos dispositivos disponíveis.
+-   Um [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) que é necessário para atualizar a interface do usuário de um thread diferente do thread da interface do usuário.
+-   WatcherVariables
 
-[!code-cs[WatcherVariables](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherVariables)]
+[!code-cs[Adicione uma propriedade [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/br225395) que é usada para acessar a lista atual de dispositivos fora da classe auxiliar.](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherVariables)]
 
-Add a [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/br225395) property that is used to access the current list of devices from outside the helper class.
+DeclareDeviceInformationCollection
 
-[!code-cs[DeclareDeviceInformationCollection](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetDeclareDeviceInformationCollection)]
+[!code-cs[No construtor de classe, o chamador passa à cadeia de caracteres do seletor de dispositivos MIDI, o **ListBox** para listar os dispositivos e o **Dispatcher** necessário para atualizar a interface do usuário.](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetDeclareDeviceInformationCollection)]
 
-In class constructor, the caller passes in the MIDI device selector string, the **ListBox** for listing the devices, and the **Dispatcher** needed to update the UI.
+Chame [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) para criar uma nova instância da classe **DeviceWatcher**, passando a cadeia de caracteres do seletor de dispositivo MIDI.
 
-Call [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) to create a new instance of the **DeviceWatcher** class, passing in the MIDI device selector string.
+Registre manipuladores para os manipuladores de eventos do inspetor.
 
-Register handlers for the watcher's event handlers.
+WatcherConstructor
 
-[!code-cs[WatcherConstructor](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherConstructor)]
+[!code-cs[O **DeviceWatcher** tem os eventos a seguir:](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherConstructor)]
 
-The **DeviceWatcher** has the following events:
+[
+              **Added**
+            ](https://msdn.microsoft.com/library/windows/apps/br225450) - Gerado quando um novo dispositivo é adicionado ao sistema.
 
--   [**Added**](https://msdn.microsoft.com/library/windows/apps/br225450) - Raised when a new device is added to the system.
--   [**Removed**](https://msdn.microsoft.com/library/windows/apps/br225453) - Raised when a device is removed from the system.
--   [**Updated**](https://msdn.microsoft.com/library/windows/apps/br225458) - Raised when the information associated with an existing device is updated.
--   [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451) - Raised when the watcher has completed its enumeration of the requested device type.
+-   [
+              **Removed**
+            ](https://msdn.microsoft.com/library/windows/apps/br225453) - Gerado quando um dispositivo é removido do sistema.
+-   [
+              **Updated**
+            ](https://msdn.microsoft.com/library/windows/apps/br225458) - Gerado quando as informações associadas a um dispositivo existente são atualizadas.
+-   [
+              **EnumerationCompleted**
+            ](https://msdn.microsoft.com/library/windows/apps/br225451) - Gerado quando o inspetor concluiu sua enumeração do tipo de dispositivo solicitado.
+-   No manipulador para cada um desses eventos, um método auxiliar, **UpdateDevices**, é chamado para atualizar o **ListBox** com a lista atual de dispositivos.
 
-In the event handler for each of these events, a helper method, **UpdateDevices**, is called to update the **ListBox** with the current list of devices. Because **UpdateDevices** updates UI elements and these event handlers are not called on the UI thread, each call must be wrapped in a call to [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317), which causes the specified code to be run on the UI thread.
+Por **UpdateDevices** atualizar elementos de interface do usuário e esses manipuladores de eventos não serem chamados no thread da interface do usuário, cada chamada deve ser encapsulada em uma chamada para [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317), que faz com que o código especificado seja executado no thread da interface do usuário. WatcherEventHandlers
 
-[!code-cs[WatcherEventHandlers](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherEventHandlers)]
+[!code-cs[O método auxiliar **UpdateDevices** chama [**DeviceInformation.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) e atualiza o **ListBox** com os nomes dos dispositivos retornados como descrito anteriormente neste artigo.](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherEventHandlers)]
 
-The **UpdateDevices** helper method calls [**DeviceInformation.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) and updates the **ListBox** with the names of the returned devices as described previously in this article.
+WatcherUpdateDevices
 
-[!code-cs[WatcherUpdateDevices](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherUpdateDevices)]
+[!code-cs[Adicione métodos para iniciar o inspetor, usando o método [**Start**](https://msdn.microsoft.com/library/windows/apps/br225454) do objeto **DeviceWatcher** e para parar o inspetor, use o método [**Stop**](https://msdn.microsoft.com/library/windows/apps/br225456).](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherUpdateDevices)]
 
-Add methods to start the watcher, using the **DeviceWatcher** object's [**Start**](https://msdn.microsoft.com/library/windows/apps/br225454) method, and to stop the watcher, using the [**Stop**](https://msdn.microsoft.com/library/windows/apps/br225456) method.
+WatcherStopStart
 
-[!code-cs[WatcherStopStart](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherStopStart)]
+[!code-cs[Forneça um destruidor para cancelar o registro de manipuladores de eventos do inspetor e defina o inspetor de dispositivos como nulo.](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherStopStart)]
 
-Provide a destructor to unregister the watcher event handlers and set the device watcher to null.
+WatcherDestructor
 
-[!code-cs[WatcherDestructor](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherDestructor)]
+[!code-cs[Criar portas MIDI para enviar e receber mensagens](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherDestructor)]
 
-## Create MIDI ports to send and receive messages
+## No code-behind da página, declare variáveis membros para armazenar duas instâncias da classe auxiliar **MyMidiDeviceWatcher**, um para dispositivos de entrada e outro para dispositivos de saída.
 
-In the code behind for your page, declare member variables to hold two instances of the **MyMidiDeviceWatcher** helper class, one for input devices and one for output devices.
+DeclareDeviceWatchers
 
-[!code-cs[DeclareDeviceWatchers](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetDeclareDeviceWatchers)]
+[!code-cs[Crie uma nova instância do inspetor de classes auxiliares, passando a cadeia de caracteres do seletor de dispositivo, o **ListBox** para que sejam preenchidos e o objeto **CoreDispatcher** que pode ser acessado por meio da propriedade **Dispatcher** da página.](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetDeclareDeviceWatchers)]
 
-Create a new instance of the watcher helper classes, passing in the device selector string, the **ListBox** to be populated, and the **CoreDispatcher** object that can be accessed through the page's **Dispatcher** property. Then, call the method to start each object's **DeviceWatcher**.
+Em seguida, chame o método para iniciar cada **DeviceWatcher** do objeto Logo após cada **DeviceWatcher** ser iniciado, será concluído o processo de enumerar os dispositivos atuais conectados ao sistema e aumentar seu evento [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451), o que fará com que cada **ListBox** possa ser atualizado com os dispositivos MIDI atuais.
 
-Shortly after each **DeviceWatcher** is started, it will finish enumerating the current devices connected to the system and raise its [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451) event, which will cause each **ListBox** to be updated with the current MIDI devices.
+StartWatchers
 
-[!code-cs[StartWatchers](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetStartWatchers)]
+[!code-cs[Logo após cada **DeviceWatcher** ser iniciado, será concluído o processo de enumerar os dispositivos atuais conectados ao sistema e aumentar seu evento [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451), o que fará com que cada **ListBox** possa ser atualizado com os dispositivos MIDI atuais.](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetStartWatchers)]
 
-Shortly after each **DeviceWatcher** is started, it will finish enumerating the current devices connected to the system and raise its [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451) event, which will cause each **ListBox** to be updated with the current MIDI devices.
+Quando o usuário seleciona um item no **ListBox** de entrada MIDI, o evento [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776) é gerado.
 
-When the user selects an item in the MIDI input **ListBox**, the [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776) event is raised. In the handler for this event, access the **DeviceInformationCollection** property of the helper class to get the current list of devices. If there are entries in the list, select the **DeviceInformation** object with the index corresponding to the **ListBox** control's [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/br209768).
+No manipulador para este evento, acesse a propriedade **DeviceInformationCollection** da classe auxiliar para obter a lista atual de dispositivos. Se houver entradas na lista, selecione o objeto **DeviceInformation** com o índice correspondente para o **ListBox** do controle [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/br209768) Crie o objeto [**MidiInPort**](https://msdn.microsoft.com/library/windows/apps/dn894770) que representa o dispositivo de entrada selecionado chamando [**MidiInPort.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn894776) e passando a propriedade [**Id**](https://msdn.microsoft.com/library/windows/apps/br225437) do dispositivo selecionado.
 
-Create the [**MidiInPort**](https://msdn.microsoft.com/library/windows/apps/dn894770) object representing the selected input device by calling [**MidiInPort.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn894776), passing in the [**Id**](https://msdn.microsoft.com/library/windows/apps/br225437) property of the selected device.
+Registre um manipulador para o evento [**MessageReceived**](https://msdn.microsoft.com/library/windows/apps/dn894781), que é acionado sempre que uma mensagem de MIDI é recebida por meio do dispositivo especificado.
 
-Register a handler for the [**MessageReceived**](https://msdn.microsoft.com/library/windows/apps/dn894781) event, which is raised whenever a MIDI message is received through the specified device.
+InPortSelectionChanged
 
-[!code-cs[InPortSelectionChanged](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetInPortSelectionChanged)]
+[!code-cs[Quando o manipulador **MessageReceived** é chamado, a mensagem estará contida na propriedade [**Message**](https://msdn.microsoft.com/library/windows/apps/dn894783) do **MidiMessageReceivedEventArgs**.](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetInPortSelectionChanged)]
 
-When the **MessageReceived** handler is called, the message is contained in the [**Message**](https://msdn.microsoft.com/library/windows/apps/dn894783) property of the **MidiMessageReceivedEventArgs**. The [**Type**](https://msdn.microsoft.com/library/windows/apps/dn894726) of the message object is a value from the [**MidiMessageType**](https://msdn.microsoft.com/library/windows/apps/dn894786) enumeration indicating the type of message that was received. The data of the message depends on the type of the message. This example checks to see if the message is a note on message and, if so, outputs the midi channel, note, and velocity of the message.
+O [**Type**](https://msdn.microsoft.com/library/windows/apps/dn894726) do objeto de mensagem é um valor da enumeração [**MidiMessageType**](https://msdn.microsoft.com/library/windows/apps/dn894786) indicando o tipo de mensagem que foi recebida. Os dados da mensagem dependem do tipo da mensagem. Este exemplo verifica se a mensagem é uma observação sobre a mensagem e, em caso afirmativo, produz o canal midi, observação e a velocidade da mensagem. MessageReceived
 
-[!code-cs[MessageReceived](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetMessageReceived)]
+[!code-cs[O manipulador [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776) para o dispositivo de saída **ListBox** funciona da mesma forma que o manipulador para dispositivos de entrada, exceto em casos em que nenhum manipulador de evento é registrado.](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetMessageReceived)]
 
-The [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776) handler for the output device **ListBox** works the same as the handler for input devices, except no event handler is registered.
+OutPortSelectionChanged
 
-[!code-cs[OutPortSelectionChanged](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetOutPortSelectionChanged)]
+[!code-cs[Depois que o dispositivo de saída é criado, você pode enviar uma mensagem, criando um novo [**IMidiMessage**](https://msdn.microsoft.com/library/windows/apps/dn911508) para o tipo de mensagem que deseja enviar.](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetOutPortSelectionChanged)]
 
-Once the output device is created, you can send a message by creating a new [**IMidiMessage**](https://msdn.microsoft.com/library/windows/apps/dn911508) for the type of message you want to send. In this example, the message is a [**NoteOnMessage**](https://msdn.microsoft.com/library/windows/apps/dn894817). The [**SendMessage**](https://msdn.microsoft.com/library/windows/apps/dn894730) method of the [**IMidiOutPort**](https://msdn.microsoft.com/library/windows/apps/dn894727) object is called to send the message.
+Neste exemplo, a mensagem é um [**NoteOnMessage**](https://msdn.microsoft.com/library/windows/apps/dn894817). O método [**SendMessage**](https://msdn.microsoft.com/library/windows/apps/dn894730) do objeto [**IMidiOutPort**](https://msdn.microsoft.com/library/windows/apps/dn894727) é chamado para enviar a mensagem. SendMessage
 
-[!code-cs[SendMessage](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetSendMessage)]
+[!code-cs[Quando seu aplicativo é desativado, certifique-se de limpar os recursos de aplicativos.](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetSendMessage)]
 
-When your app is deactivated, be sure to clean up your apps resources. Unregister your event handlers and set the MIDI in port and out port objects to null. Stop the device watchers and set them to null.
+Cancele o registro de manipuladores de eventos e defina o MIDI na porta e os objetos de porta de saída para nulo. Pare os inspetores de dispositivo e defina-os como null. CleanUp
 
-[!code-cs[CleanUp](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetCleanUp)]
+[!code-cs[Usando o sintetizador Windows General MIDI interno](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetCleanUp)]
 
-## Using the built-in Windows General MIDI synth
+## Quando você enumerar dispositivos MIDI de saída usando a técnica descrita acima, seu aplicativo descobre um dispositivo MIDI chamado "Microsoft GS Wavetable Synth".
 
-When you enumerate output MIDI devices using the technique described above, your app will discover a MIDI device called "Microsoft GS Wavetable Synth". This is a built-in General MIDI synthesizer that you can play from your app. However, attempting to create a MIDI outport to this device will fail unless you have included the SDK extension for the built-in synth in your project.
+Este é um sintetizador General MIDI interno que você pode jogar de seu aplicativo. No entanto, a tentativa de criar um outport MIDI para este dispositivo falhará, a menos que você tenha incluído a extensão do SDK para o sintetizador interno em seu projeto. Para incluir a extensão do SDK General MIDI Synth no seu projeto de aplicativo
 
-**To include the General MIDI Synth SDK extension in your app project**
+**No **Gerenciador de Soluções**, no seu projeto, clique com o botão direito do mouse em **Referências** e selecione **Adicionar referência...****
 
-1.  In **Solution Explorer**, under your project, right-click **References** and select **Add reference...**
-2.  Expand the **Universal Windows** node.
-3.  Select **Extensions**.
-4.  From the list of extensions, select **Microsoft General MIDI DLS for Universal Windows Apps**.
-    **Note**  If there are multiple versions of the extension, be sure to select the version that matches the target for your app. You can see which SDK version your app is targeting on the **Application** tab of the project Properties.
+1.  Expanda o nó **Universal do Windows**.
+2.  Selecione **Extensões**
+3.  Na lista de extensões, selecione **Microsoft General MIDI DLS para aplicativos universais do Windows**
+4.  **Observação**  Se houver várias versões da extensão, certifique-se de selecionar a versão que corresponde ao seu aplicativo.
+    Você pode ver qual versão do SDK destina-se ao seu aplicativo na guia **Aplicativo** das propriedades do projeto. You can see which SDK version your app is targeting on the <bpt id="p1">**</bpt>Application<ept id="p1">**</ept> tab of the project Properties.
 
- 
+ 
 
- 
+ 
 
 
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

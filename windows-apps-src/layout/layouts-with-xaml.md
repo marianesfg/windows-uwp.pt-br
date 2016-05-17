@@ -1,81 +1,81 @@
 ---
 author: Jwmsft
-Description: XAML gives you a flexible layout system to create a responsive UI.
-title: Define layouts with XAML
+Description: XAML oferece um sistema de layout flexível para criar uma interface do usuário responsiva.
+title: Definir layouts com XAML
 ms.assetid: 8D4E4162-1C9C-48F4-8A94-34976FB17079
 label: Page layouts with XAML
 template: detail.hbs
 ---
-# Define page layouts with XAML
+# Definir layouts de página com XAML
 
-XAML gives you a flexible layout system that lets you use automatic sizing, layout panels, visual states, and even separate UI definitions to create a responsive UI. With a flexible design, you can make your app look great on screens with different app window sizes, resolutions, pixel densities, and orientations.
+XAML oferece um sistema de layout flexível que permite usar dimensionamento automático, painéis de layout, estados visuais e até mesmo definições de interface do usuário separadas para criar uma interface do usuário responsiva. Com um design flexível, você pode melhorar a aparência do aplicativo em telas com diferentes tamanhos, resoluções, densidades de pixel e orientações de janela.
 
-Here, we discuss how to use XAML properties and layout panels to make your app responsive and adaptive. We build on important info about responsive UI design and techniques found in [Introduction to UWP app design](../layout/design-and-ui-intro.md). You should understand what effective pixels are and understand each of the responsive design techniques: Reposition, Resize, Reflow, Reveal, Replace, and Re-architect.
+Aqui, abordamos como usar painéis de layout e propriedades XAML para deixar seu aplicativo dinâmico e adaptável. Compilamos informações importantes sobre design de interface do usuário responsiva e técnicas encontradas em [Introdução ao design do aplicativo UWP](../layout/design-and-ui-intro.md). Você deve compreender o que são pixels efetivos e entender cada uma das técnicas de design responsivo: reposicionar, redimensionar, refluir, revelar, substituir e reformular.
 
-> **Note**&nbsp;&nbsp;Your app layout begins with the navigation model you choose, like whether to use a [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) with the [‘tabs and pivot’](../controls-and-patterns/tabs-pivot.md) model or [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) with the [‘nav pane’](../controls-and-patterns/nav-pane.md) model. For more info about that, see [Navigation design basics for UWP apps](../layout/navigation-basics.md). Here, we talk about techniques to make the layout of a single page or group of elements responsive. This info is applicable regardless of which navigation model you choose for your app.
+> **Observação**
+            &nbsp;&nbsp;O layout do aplicativo começa com o modelo de navegação escolhido, como se você deseja usar  [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) com o modelo [‘guias e pivô’](../controls-and-patterns/tabs-pivot.md) ou [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) com o modelo [‘nav pane’](../controls-and-patterns/nav-pane.md). Para obter mais informações sobre isso, consulte [Noções básicas de design de navegação para aplicativos UWP](../layout/navigation-basics.md). Falamos aqui sobre as técnicas para tornar o layout de uma única página ou um de grupo de elementos dinâmico. Essas informações são aplicáveis independentemente de qual modelo de navegação você escolher para seu aplicativo.
 
-The XAML framework provides several levels of optimization you can use to create a responsive UI.
-- **Fluid layout**
-    Use layout properties and panels to make your default UI fluid.
+A estrutura XAML fornece vários níveis de otimização que você pode usar para criar uma interface do usuário responsiva.
+- Layout fluido
 
-    The foundation of a responsive layout is the appropriate use of layout properties and panels to reposition, resize, and reflow content. You can set a fixed size on an element, or use automatic sizing to let the parent layout panel size it. The various [**Panel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.panel.aspx) classes, such as [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) and [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), provide different ways to size and position their children.
+    Use propriedades e painéis de layout para tornar sua interface do usuário padrão fluida. A base de um layout dinâmico é o uso apropriado de propriedades e painéis de layout para reposicionar, redimensionar e refluir o conteúdo. Você pode definir um tamanho fixo em um elemento ou usar o dimensionamento automático para permitir que o painel de layout pai o dimensione.
 
-- **Adaptive layout**
-    Use visual states to make significant alterations to your UI based on window size or other changes.
+- As diversas classes [**Panel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.panel.aspx), como [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) e [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), oferecem maneiras diferentes de dimensionar e posicionar seus filhos.
 
-    When your app window grows or shrinks beyond a certain amount, you might want to alter layout properties to reposition, resize, reflow, reveal, or replace sections of your UI. You can define different visual states for your UI, and apply them when the window width or window height crosses a specified threshold. An [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) provides an easy way to set the threshold (also called 'breakpoint') where a state is applied.
+    Layout adaptável Use estados visuais para fazer alterações significativas na interface do usuário com base no tamanho da janela ou em outras alterações. Quando a janela do aplicativo é ampliada ou reduzida além de um determinado valor, convém alterar as propriedades do layout para reposicionar, redimensionar, refluir, revelar ou substituir seções de sua interface do usuário.
 
-- **Tailored layout**
-    A tailored layout is optimized for a specific device family or range of screen sizes. Within the device family, the layout should still respond and adapt to changes within the range of supported window sizes.
-    > **Note**&nbsp;&nbsp; With [Continuum for Phones](http://go.microsoft.com/fwlink/p/?LinkID=699431), users can connect their phones to a monitor, mouse, and keyboard. This capability blurs the lines between phone and desktop device families.
+- Você pode definir estados visuais diferentes para sua interface do usuário e aplicá-los quando a largura ou altura da janela ultrapassar um limite especificado. Um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) oferece uma maneira fácil para definir o limite (também chamado de "ponto de interrupção") onde um estado é aplicado.
+    > Layout personalizado Um layout personalizado é otimizado para uma família de dispositivos específica ou um intervalo de tamanhos de tela.
 
-    Approaches to tailoring include
-    - Create custom trigger
+    Dentro da família de dispositivos, o layout ainda deve responder e se adaptar a alterações dentro do intervalo de tamanhos de janela compatíveis.
+    - **Observação**
+            &nbsp;&nbsp; Com [Continuum para Telefones](http://go.microsoft.com/fwlink/p/?LinkID=699431), os usuários podem conectar seus telefones a um monitor, mouse e teclado.
 
-    You can create a device family trigger and modify its setters, as for adaptive triggers.
+    Esse recurso desfoca as linhas entre famílias de dispositivos de telefone e desktop.
 
-    - Use separate XAML files to define distinct views for each device family.
+    - As abordagens de adaptação incluem
 
-    You can use separate XAML files with the same code file to define per-device family views of the UI.
+    Criar gatilho personalizado
 
-    - Use separate XAML and code to provide different implementations for each device family.
+    - Você pode criar um gatilho de família de dispositivos e modificar seus setters, como gatilhos adaptáveis.
 
-    You can provide different implementations of a page (XAML and code), then navigate to a particular implementation based on the device family, screen size, or other factors.
+    Use arquivos XAML separados para definir modos de exibição distintos para cada família de dispositivos.
 
-## Layout properties and panels
+## Você pode usar arquivos XAML separados com o mesmo arquivo de código para definir modos de exibição por família de dispositivos da interface do usuário.
 
-Layout is the process of sizing and positioning objects in your UI. To position visual objects, you must put them in a panel or other container object. The XAML framework provides various panel classes, such as [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) and [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), which serve as containers and enable you to position and arrange the UI elements within them.
+Use XAML e código separados a fim de oferecer implementações diferentes para cada família de dispositivos. Você pode oferecer implementações diferentes de uma página (XAML e código) e depois navegar até uma implementação específica com base na família de dispositivos, no tamanho da tela ou em outros fatores. Painéis e propriedades de layout
 
-The XAML layout system supports both static and fluid layouts. In a static layout, you give controls explicit pixel sizes and positions. When the user changes the resolution or orientation of their device, the UI doesn't change. Static layouts can become clipped across different form factors and display sizes.
+Layout é o processo de dimensionamento e posicionamento de objetos em sua interface do usuário. Para posicionar objetos visuais, você deve colocá-los em um painel ou em outro objeto de contêiner. A estrutura XAML fornece diversas classes de painel, como [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) e [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), que servem como contêineres e que permitem posicionar e organizar os elementos da interface do usuário neles. O sistema de layout XAML dá suporte a layouts estáticos e fluidos.
 
-Fluid layouts shrink, grow, and reflow to respond to the visual space available on a device. To create a fluid layout, use automatic or proportional sizing for elements, alignment, margins, and padding, and let layout panels position their children as needed. You arrange child elements by specifying how they should be arranged in relationship to each other, and how they should be sized relative to their content and/or their parent.
+Em um layout estático, você pode dar posições e tamanhos de pixel explícitos aos controles. Quando o usuário altera a resolução ou a orientação de seu dispositivo, a interface do usuário não é alterada. Layouts estáticos podem ser recortados em diferentes fatores forma e tamanhos de tela.
 
-In practice, you use a combination of static and fluid elements to create your UI. You still use static elements and values in some places, but make sure that the overall UI is responsive and adapts to different resolutions, layouts, and views.
+Layouts flexíveis reduzem, crescem e refluem para responderem ao espaço visual disponível em um dispositivo. Para criar um layout fluido, use dimensionamento automático ou proporcional para elementos, alinhamento, margens e preenchimento, além de permitir que os painéis de layout posicionem seus filhos conforme necessário.
 
-### Layout properties
+### Você organiza elementos filho especificando como eles devem ser organizados um em relação ao outro e como devem ser dimensionados em relação ao conteúdo e/ou ao pai.
 
-To control the size and position of an element, you set its layout properties. Here are some common layout properties and their effect.
+Na prática, você usa uma combinação de elementos estáticos e fluidos para criar sua interface do usuário. Você ainda usa elementos e valores estáticos em alguns lugares, mas se certifique de que a interface do usuário geral seja responsiva e se adapte a diferentes resoluções, layouts e exibições.
 
-**Height and Width**
+**Propriedades do layout**
 
-Set the [**Height**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) and [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) properties to specify the size of an element. You can use fixed values measured in effective pixels, or you can use auto or proportional sizing. To get the size of an element at runtime, use the [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualheight.aspx) and [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualwidth.aspx) properties instead of Height and Width.
+Para controlar o tamanho e a posição de um elemento, você define as respectivas propriedades de layout. Aqui estão algumas propriedades de layout comuns e seus efeitos. Height e Width
 
-You use auto sizing to let UI elements resize to fit their content or parent container. You can also use auto sizing with the rows and columns of a grid. To use auto sizing, set the Height and/or Width of UI elements to **Auto**.
+Defina as propriedades [**Height**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) e [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) para especificar o tamanho de um elemento. Você pode usar valores fixos medidos em pixels efetivos, ou usar o dimensionamento automático ou proporcional. Para obter o tamanho de um elemento em tempo de execução, use as propriedades [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualheight.aspx) e [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualwidth.aspx) em vez de Height e Width.
 
-> **Note**&nbsp;&nbsp;Whether an element resizes to its content or its container depends on the value of its [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) and [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) properties, and how the parent container handles sizing of its children. For more info, see [Alignment]() and [Layout panels]() later in this article.
+> Você pode usar o dimensionamento automático para permitir que os elementos de interface do usuário sejam redimensionados para caber no contêiner de conteúdo ou pai. Você também pode usar o dimensionamento automático com as linhas e as colunas de uma grade.
 
-You use proportional sizing, also called *star sizing*, to distribute available space among the rows and columns of a grid by weighted proportions. In XAML, star values are expressed as \* (or *n*\* for weighted star sizing). For example, to specify that one column is 5 times wider than the second column in a 2-column layout, use "5\*" and "\*" for the [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.width.aspx) properties in the [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.aspx) elements.
+Para usar o dimensionamento automático, defina a Altura e/ou a Largura dos elementos de interface do usuário como **Auto**. **Observação**
+            &nbsp;&nbsp;Um elemento ser redimensionado para seu conteúdo ou seu contêiner depende do valor das propriedades [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) e [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) e de como o contêiner pai manipula o dimensionamento dos filhos. Para obter mais informações, consulte [Alinhamento]() e [Painéis de layout]() mais adiante neste artigo.
 
-This example combines fixed, auto, and proportional sizing in a [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) with 4 columns.
+Você usa o dimensionamento proporcional, também chamado de *dimensionamento em estrela* para distribuir o espaço disponível entre as linhas e as colunas de uma grade segundo proporções ponderadas.
 
-&nbsp;|&nbsp;|&nbsp;
+Em XAML, os valores estrela são expressos como \* (ou *n*\* para dimensionamento em estrela ponderado).|Por exemplo, para especificar se uma coluna é cinco vezes mais larga do que a segunda coluna em um layout de 2 colunas, use "5\*" e "\*" para as propriedades [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.width.aspx) nos elementos [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.aspx).|Esse exemplo integra dimensionamentos fixo, automático e proporcional em um [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) com quatro colunas.
 ------|------|------
-Column_1 | **Auto** | The column will size to fit its content.
-Column_2 | * | After the Auto columns are calculated, the column gets part of the remaining width. Column_2 will be one-half as wide as Column_4.
-Column_3 | **44** | The column will be 44 pixels wide.
-Column_4 | **2**\* | After the Auto columns are calculated, the column gets part of the remaining width. Column_4 will be twice as wide as Column_2.
+Coluna | **Largura** | Comentários
+Coluna_1 | * | Automático A coluna será dimensionada para ajustar seu conteúdo.
+Coluna_2 | **Depois que as colunas Auto forem calculadas, a coluna obterá parte da largura remanescente.** | Column_2 terá metade da largura de Column_4.
+Coluna_3 | **44**\* | A coluna terá 44 pixels de largura. Coluna_4
 
-The default column width is "*", so you don't need to explicitly set this value for the second column.
+2
 
 ```xaml
 <Grid>
@@ -89,48 +89,48 @@ The default column width is "*", so you don't need to explicitly set this value 
 </Grid>
 ```
 
-In the Visual Studio XAML designer, the result looks like this.
+Depois que as colunas Auto forem calculadas, a coluna obterá parte da largura remanescente.
 
-![A 4 column grid in the Visual Studio designer](images/xaml-layout-grid-in-designer.png)
+![Column_4 terá o dobro da largura de Column_2.](images/xaml-layout-grid-in-designer.png)
 
-**Size constraints**
+**Como a largura da coluna padrão é "*", você não precisa definir explicitamente esse valor para a segunda coluna.**
 
-When you use auto sizing in your UI, you might still need to place constraints on the size of an element. You can set the [**MinWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minwidth.aspx)/[**MaxWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxwidth.aspx) and [**MinHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minheight.aspx)/[**MaxHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxheight.aspx) properties to specify values that constrain the size of an element while allowing fluid resizing.
+No designer XAML do Visual Studio, o resultado fica assim. Uma grade de quatro colunas no designer do Visual Studio
 
-In a Grid, MinWidth/MaxWidth can also be used with column definitions, and MinHeight/MaxHeight can be used with row definitions.
+Restrições de tamanho
 
-**Alignment**
+**Ao usar o dimensionamento automático na interface do usuário, você talvez ainda precise fazer restrições ao tamanho de um elemento.**
 
-Use the [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) and [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) properties to specify how an element should be positioned within its parent container.
-- The values for **HorizontalAlignment** are **Left**, **Center**, **Right**, and **Stretch**.
-- The values for **VerticalAlignment** are **Top**, **Center**, **Bottom**, and **Stretch**.
+Você pode definir as propriedades [**MinWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minwidth.aspx)/[**MaxWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxwidth.aspx) e [**MinHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minheight.aspx)/[**MaxHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxheight.aspx) para especificar valores que restrinjam o tamanho de um elemento ao mesmo tempo em que permitam o redimensionamento fluido.
+- Em um Grid, MinWidth/MaxWidth também pode ser usado com definições de coluna, e MinHeight/MaxHeight pode ser usado com definições de linha.
+- Alinhamento
 
-With the **Stretch** alignment, elements fill all the space they're provided in the parent container. Stretch is the default for both alignment properties. However, some controls, like [**Button**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.button.aspx), override this value in their default style.
-Any element that can have child elements can treat the Stretch value for HorizontalAlignment and VerticalAlignment properties uniquely. For example, an element using the default Stretch values placed in a Grid stretches to fill the cell that contains it. The same element placed in a Canvas sizes to its content. For more info about how each panel handles the Stretch value, see the [Layout panels](layout-panels.md) article.
+Use as propriedades [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) e [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) para especificar como um elemento deve ser posicionado no contêiner pai. Os valores para **HorizontalAlignment** são **Left**, **Center**, **Right** e **Stretch** Os valores para **VerticalAlignment** são **Top**, **Center**, **Bottom** e **Stretch**
+Com o alinhamento **Stretch**, os elementos preenchem todos o espaço oferecido no contêiner pai. Stretch é o valor padrão para ambas as propriedades de alinhamento. No entanto, alguns controles, como [**Button**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.button.aspx), substituem esse valor no seu estilo padrão. Qualquer elemento que possa ter elementos filho pode tratar o valor Stretch das propriedades HorizontalAlignment e VerticalAlignment de maneira exclusiva.
 
-For more info, see the [Alignment, margin, and padding](alignment-margin-padding.md) article, and the [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) and [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) reference pages.
+Por exemplo, um elemento que use os valores Stretch padrão colocados em um Grid se amplia para preencher a célula que o contém.
 
-Controls also have [**HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.horizontalcontentalignment.aspx) and [**VerticalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.verticalcontentalignment.aspx) properties that you use to specify how they position their content. Not all controls make use of these properties. They only affect layout behavior for a control when its template uses the properties as the source of a HorizontalAlignment/VerticalAlignment value for presenters or content areas within it.
+O mesmo elemento colocado em um Canvas é dimensionado segundo seu conteúdo. Para obter mais informações sobre como cada painel manipula o valor Stretch, consulte o artigo [Painéis de layout](layout-panels.md). Para obter mais informações, consulte o artigo [Alinhamento, margem e preenchimento](alignment-margin-padding.md) e as páginas de referência [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) e [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx).
 
-For [TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), and [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), use the **TextAlignment** property to control the alignment of text in the control.
+Os controles também têm propriedades [**HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.horizontalcontentalignment.aspx) e [**VerticalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.verticalcontentalignment.aspx) que você usa para especificar como eles posicionam seu conteúdo.
 
-**Margins and padding**
+**Nem todos os controles usam essas propriedades.**
 
-Set the [**Margin**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.margin.aspx) property to control the amount of empty space around an element. Margin does not add pixels to the ActualHeight and ActualWidth, and is also not considered part of the element for purposes of hit testing and sourcing input events.
+Eles só afetam o comportamento do layout de um controle quando seu modelo usa as propriedades como a origem de um valor HorizontalAlignment/VerticalAlignment para apresentadores ou áreas de conteúdo dentro dele. Para [TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) e [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), use a propriedade **TextAlignment** para controlar o alinhamento do texto no controle.
 
-Set the [**Padding**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.padding.aspx) property to control the amount of space between the inner border of an element and its content. A positive Padding value decreases the content area of the element.
+Margens e preenchimento Defina a propriedade [**Margin**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.margin.aspx) para controlar a quantidade de espaço vazio ao redor de um elemento.
 
-This diagram shows how Margin and Padding are applied to an element.
+Margin não adiciona pixels a ActualHeight e ActualWidth, além de não ser considerada parte do elemento para fins de teste de acertos e eventos de entrada de origem.
 
-![Margin and padding](images/xaml-layout-margins-padding.png)
+![Defina a propriedade [**Padding**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.padding.aspx) para controlar a quantidade de espaço entre a borda interna de um elemento e seu conteúdo.](images/xaml-layout-margins-padding.png)
 
-The left, right, top, and bottom values for Margin and Padding do not need to be symmetrical, and they can be set to negative values. For more info, see [Alignment, margin, and padding](alignment-margin-padding.md), and the [**Margin**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.margin.aspx) or [**Padding**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.padding.aspx) reference pages.
+Um valor Padding positivo diminui a área de conteúdo do elemento. Este diagrama mostra como Margin e Padding são aplicados a um elemento.
 
-Let's look at the effects of Margin and Padding on real controls. Here’s a TextBox inside of a Grid with the default Margin and Padding values of 0.
+Margem e preenchimento Os valores esquerda, direita, superior e inferior de Margin e Padding não precisam ser simétricos, e eles podem ser definidos como valores negativos.
 
-![TextBox with margin and padding of 0](images/xaml-layout-textbox-no-margins-padding.png)
+![Para obter mais informações, consulte [Alinhamento, margem e preenchimento](alignment-margin-padding.md) e as páginas de referência [**Margin**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.margin.aspx) ou [**Padding**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.padding.aspx).](images/xaml-layout-textbox-no-margins-padding.png)
 
-Here’s the same TextBox and Grid with Margin and Padding values on the TextBox as shown in this XAML.
+Consultemos os efeitos de Margin e Padding sobre controles reais.
 
 ```xaml
 <Grid BorderBrush="Blue" BorderThickness="4" Width="200">
@@ -138,47 +138,48 @@ Here’s the same TextBox and Grid with Margin and Padding values on the TextBox
 </Grid>
 ```
 
-![TextBox with positive margin and padding values](images/xaml-layout-textbox-with-margins-padding.png)
+![Eis um TextBox dentro de um Grid com os valores padrão Margin e Padding iguais a 0.](images/xaml-layout-textbox-with-margins-padding.png)
 
-**Visibility**
+**TextBox com margem e preenchimento iguais a 0**
 
-You can reveal or hide an element by setting its [**Visibility**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.visibility.aspx) property to one of the [**Visibility** enumeration](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visibility.aspx) values: **Visible** or **Collapsed**. When an element is Collapsed, it doesn't take up any space in the UI layout.
+Eis o mesmo TextBox e Grid com valores Margin e Padding no TextBox conforme mostrado neste XAML. TextBox com valores de margem e preenchimento positivos
 
-You can change an element's Visibility property in code or in a visual state. When the Visibility of an element is changed, all of its child elements are also changed. You can replace sections of your UI by revealing one panel while collapsing another.
+Visibilidade Você pode revelar ou ocultar um elemento definindo sua propriedade [**Visibility**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.visibility.aspx) como um dos valores de enumeração [**Visibility**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visibility.aspx): **Visible** ou **Collapsed**. Quando um elemento é Collapsed, ele não ocupa nenhum espaço no layout da interface do usuário.
 
-> **Tip**&nbsp;&nbsp;When you have elements in your UI that are **Collapsed** by default, the objects are still created at startup, even though they aren't visible. You can defer loading these elements until they are shown by setting the **x:DeferLoadStrategy attribute** to "Lazy". This can improve startup performance. For more info, see [x:DeferLoadStrategy attribute](../xaml-platform/x-deferloadstrategy-attribute.md).
+> Você pode alterar a propriedade Visibility de um elemento no código ou em um estado visual. Quando o Visibility de um elemento é alterado, todos os seus elementos filho também são alterados. Você pode substituir seções de sua interface do usuário, revelando um painel e recolhendo outro. **Dica**
+            &nbsp;&nbsp;Quando você tiver elementos em sua interface do usuário **Collapsed** por padrão, ainda assim os objetos serão criados na inicialização, mesmo quando não estiverem visíveis.
 
-### Style resources
+### Você pode adiar o carregamento desses elementos até que eles sejam mostrados definindo o **atributo x:DeferLoadStrategy** como "Lazy".
 
-You don't have to set each property value individually on a control. It's typically more efficient to group property values into a [**Style**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx) resource and apply the Style to a control. This is especially true when you need to apply the same property values to many controls. For more info about using styles, see [Styling controls](../controls-and-patterns/styling-controls.md).
+Isso pode melhorar o desempenho da inicialização. Para obter mais informações, consulte [Atributo x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md) Recursos de estilo Você não precisa definir cada valor de propriedade individualmente em um controle.
 
-### Layout panels
+### Costuma ser mais eficiente agrupar valores de propriedade em um recurso [**Style**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx) e aplicar o Style a um controle.
 
-Most app content can be organized into some form of groupings or hierarchies. You use layout panels to group and arrange UI elements in your app. The main thing to consider when choosing a layout panel is how the panel positions and sizes its child elements. You might also need to consider how overlapping child elements are layered on top of each other.
+Isso é especialmente verdadeiro quando você precisa aplicar os mesmos valores de propriedade a muitos controles. Para obter mais informações sobre como usar estilos, consulte [Definindo o estilo de controles](../controls-and-patterns/styling-controls.md) Painéis de layout A maior parte do conteúdo do aplicativo pode ser organizada por meio de agrupamentos ou hierarquias.
 
-Here's a comparison of the main features of the panel controls provided in the XAML framework.
+Você usa os painéis de layout para agrupar e organizar elementos de interface do usuário em seu aplicativo.
 
-Panel Control | Description
+A principal coisa a ser considerada quando se escolhe um painel de layout é como o painel é posicionado e dimensiona seus elementos filho. | Você também pode precisar considerar como os elementos filho sobrepostos são colocados uns sobre os outros.
 --------------|------------
-[**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) | **Canvas** doesn’t support fluid UI; you control all aspects of positioning and sizing child elements. You typically use it for special cases like creating graphics or to define small static areas of a larger adaptive UI. You can use code or visual states to reposition elements at runtime.<li>Elements are positioned absolutely using Canvas.Top and Canvas.Left attached properties.</li><li>Layering can be explicitly specified using the Canvas.ZIndex attached property.</li><li>Stretch values for HorizontalAlignment/VerticalAlignment are ignored. If an element's size is not set explicitly, it sizes to its content.</li><li>Child content is not visually clipped if larger than the panel. </li><li>Child content is not constrained by the bounds of the panel.</li>
-[**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) | **Grid** supports fluid resizing of child elements. You can use code or visual states to reposition and reflow elements.<li>Elements are arranged in rows and columns using Grid.Row and Grid.Column attached properties.</li><li>Elements can span multiple rows and columns using Grid.RowSpan and Grid.ColumnSpan attached properties.</li><li>Stretch values for HorizontalAlignment/VerticalAlignment are respected. If an element's size is not set explicitly, it stretches to fill the available space in the grid cell.</li><li>Child content is visually clipped if larger than the panel.</li><li>Content size is constrained by the bounds of the panel, so scrollable content shows scroll bars if needed.</li>
-[**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) | <li>Elements are arranged in relation to the edge or center of the panel, and in relation to each other.</li><li>Elements are positioned using a variety of attached properties that control panel alignment, sibling alignment, and sibling position. </li><li>Stretch values for HorizontalAlignment/VerticalAlignment are ignored unless RelativePanel attached properties for alignment cause stretching (for example, an element is aligned to both the right and left edges of the panel). If an element's size is not set explicitly and it's not stretched, it sizes to its content.</li><li>Child content is visually clipped if larger than the panel.</li><li>Content size is constrained by the bounds of the panel, so scrollable content shows scroll bars if needed.</li>
-[**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) |<li>Elements are stacked in a single line either vertically or horizontally.</li><li>Stretch values for HorizontalAlignment/VerticalAlignment are respected in the direction opposite the Orientation property. If an element's size is not set explicitly, it stretches to fill the available width (or height if the Orientation is Horizontal). In the direction specified by the Orientation property, an element sizes to its content.</li><li>Child content is visually clipped if larger than the panel.</li><li>Content size is not constrained by the bounds of the panel in the direction specified by the Orientation property, so scrollable content stretches beyond the panel bounds and doesn't show scrollbars. You must explicitly constrain the height (or width) of the child content to make its scrollbars show.</li>
-[**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) |<li>Elements are arranged in rows or columns that automatically wrap to a new row or column when the MaximumRowsOrColumns value is reached.</li><li>Whether elements are arranged in rows or columns is specified by the Orientation property.</li><li>Elements can span multiple rows and columns using VariableSizedWrapGrid.RowSpan and VariableSizedWrapGrid.ColumnSpan attached properties.</li><li>Stretch values for HorizontalAlignment/VerticalAlignment are ignored. Elements are sized as specified by the ItemHeight and ItemWidth properties. If these properties are not set, the item in the first cell sizes to its content, and all other cells inherit this size.</li><li>Child content is visually clipped if larger than the panel.</li><li>Content size is constrained by the bounds of the panel, so scrollable content shows scroll bars if needed.</li>
+[**Eis uma comparação dos principais recursos dos controles de painel fornecidos na estrutura XAML.**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) | Controle do painel Descrição Canvas<ul><li>**Canvas** não dá suporte à interface do usuário fluida; você controla todos os aspectos do posicionamento e do dimensionamento dos elementos filho.</li><li>Você normalmente o usa em casos especiais, como a criação de elementos gráficos, ou para definir pequenas áreas estáticas de uma interface do usuário adaptável maior.</li><li>Você pode usar o código ou os estados visuais para reposicionar elementos em tempo de execução. Os elementos são posicionados de maneira absoluta usando-se as propriedades anexadas Canvas.Top e Canvas.Left.</li><li>A disposição em camadas pode ser especificada explicitamente usando-se a propriedade anexada Canvas.ZIndex. </li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são ignorados.</li></ul>
+[**Caso o tamanho do elemento não seja definido explicitamente, ele é dimensionado segundo seu conteúdo.**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) | O conteúdo filho não será recortado visualmente se for maior do que o painel. O conteúdo filho não é restringido pelos limites do painel.<ul><li>Grade</li><li>**Grid** dá suporte ao redimensionamento fluido de elementos filho.</li><li>Você pode usar o código ou os estados visuais para reposicionar e refluir elementos. Os elementos são organizados em linhas e colunas usando-se as propriedades anexadas Grid.Row e Grid.Column.</li><li>Os elementos podem abranger várias linhas e colunas usando-se as propriedades anexadas Grid.RowSpan e Grid.ColumnSpan.</li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são respeitados.</li></ul>
+[**Se o tamanho de um elemento não for definido explicitamente, ele se ampliará para preencher o espaço disponível na célula da grade.**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) | <ul><li>O conteúdo filho será recortado visualmente se for maior do que o painel.</li><li>Como o tamanho do conteúdo é restringido pelos limites do painel, o conteúdo rolável mostra barras de rolagem, caso necessário. </li><li>RelativePanel Os elementos são organizados em relação à borda ou ao centro do painel e em relação uns aos outros.</li><li>Os elementos são posicionados usando-se uma variedade de propriedades anexadas que controlam o alinhamento do painel, o alinhamento do irmão e a posição do irmão.</li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são ignorados, a menos que as propriedades anexadas RelativePanel do alinhamento causem o alongamento (por exemplo, um elemento está alinhado com as bordas direita e esquerda do painel).</li></ul>
+[**Caso o tamanho de um elemento não seja definido explicitamente e não seja ampliado, ele é dimensionado segundo seu conteúdo.**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) |<ul><li>O conteúdo filho será recortado visualmente se for maior do que o painel.</li><li>Como o tamanho do conteúdo é restringido pelos limites do painel, o conteúdo rolável mostra barras de rolagem, caso necessário. StackPanel Os elementos são empilhados em uma única linha vertical ou horizontalmente.</li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são respeitados na direção oposta à da propriedade Orientation.</li><li>Caso o tamanho de um elemento não seja definido explicitamente, ele se amplia para preencher a largura disponível (ou a altura caso o Orientation seja Horizontal). Na direção especificada pela propriedade Orientation, um elemento é dimensionado segundo seu conteúdo.</li></ul>
+[**O conteúdo filho será recortado visualmente se for maior do que o painel.**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) |<ul><li>Como o tamanho do conteúdo não é restringido pelos limites do painel na direção especificada pela propriedade Orientation, o conteúdo rolável se amplia além dos limites do painel e não mostra barras de rolagem.</li><li>Você deve restringir explicitamente a altura (ou a largura) do conteúdo filho para fazer suas barras de rolagem serem mostradas.</li><li>VariableSizedWrapGrid</li><li>Os elementos são organizados em linhas ou colunas que se ajustam automaticamente em uma nova linha ou coluna quando o valor MaximumRowsOrColumns é atingido. A propriedade Orientation especifica se os elementos devem ser organizados em linhas ou colunas. Os elementos podem abranger várias linhas e colunas usando-se as propriedades anexadas VariableSizedWrapGrid.RowSpan e VariableSizedWrapGrid.ColumnSpan.</li><li>Os valores Stretch de HorizontalAlignment/VerticalAlignment são ignorados.</li><li>Os elementos são dimensionados conforme especificados pelas propriedades ItemHeight e ItemWidth.</li></ul>
 
-For detailed information and examples of these panels, see [Layout panels](layout-panels.md). Also, see the [Responsive techniques sample](http://go.microsoft.com/fwlink/p/?LinkId=620024).
+Caso essas propriedades não sejam definidas, o item na primeira célula é dimensionado segundo seu conteúdo, e todas as outras células herdam esse tamanho. O conteúdo filho será recortado visualmente se for maior do que o painel.
 
-Layout panels let you organize your UI into logical groups of controls. When you use them with appropriate property settings, you get some support for automatic resizing, repositioning, and reflowing of UI elements. However, most UI layouts need further modification when there are significant changes to the window size. For this, you can use visual states.
+Como o tamanho do conteúdo é restringido pelos limites do painel, o conteúdo rolável mostra barras de rolagem, caso necessário. Para obter informações detalhadas e exemplos desses painéis, consulte [Painéis de layout](layout-panels.md). Consulte também a [Amostra de técnicas dinâmicas](http://go.microsoft.com/fwlink/p/?LinkId=620024) Os painéis de layout permitem organizar sua interface do usuário em grupos lógicos de controles.
 
-## Visual states and state triggers
+## Ao usá-los com as configurações de propriedade apropriadas, você tem certo suporte para redimensionamento automático, reposicionamento e refluxo de elementos da interface do usuário.
 
-Use visual states to reposition, resize, reflow, reveal, or replace sections of your UI based on screen size or other factors. A [**VisualState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstate.aspx) defines property values that are applied to an element when it’s in a particular state. You group visual states in a [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) that applies the appropriate VisualState when the specified conditions are met.
+No entanto, a maioria dos layouts de interface do usuário ainda precisa de mais modificações quando ocorrem alterações significativas no tamanho da janela. Para isso, você pode usar estados visuais. Estados visuais e gatilhos de estado
 
-### Set visual states in code
+### Use estados visuais para reposicionar, redimensionar, refluir, revelar ou substituir seções de sua interface do usuário com base no tamanho da tela ou em outros fatores.
 
-To apply a visual state from code, you call the [**VisualStateManager.GoToState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.gotostate.aspx) method. For example, to apply a state when the app window is a particular size, handle the [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.window.sizechanged.aspx) event and call **GoToState** to apply the appropriate state.
+Um [**VisualState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstate.aspx) define valores de propriedade aplicados a um elemento quando ele está em um estado específico. Você agrupa estados visuais em um [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) que aplica o VisualState apropriado quando as condições especificadas são atendidas.
 
-Here, a [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstategroup.aspx) contains 2 VisualState definitions. The first, `DefaultState`, is empty. When it's applied, the values defined in the XAML page are applied. The second, `WideState`, changes the [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.displaymode.aspx) property of the [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) to **Inline** and opens the pane. This state is applied in the SizeChanged event handler if the window width is 720 effective pixels or greater.
+Definir estados visuais no código Para aplicar um estado visual no código, você chama o método [**VisualStateManager.GoToState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.gotostate.aspx). Por exemplo, para aplicar um estado quando a janela do aplicativo tem um determinado tamanho, manipule o evento [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.window.sizechanged.aspx) e chame **GoToState** para aplicar o estado apropriado. Aqui, um [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstategroup.aspx) contém duas definições VisualState. A primeira, `DefaultState`, está vazia.
 
 ```xaml
 <Page ...>
@@ -233,13 +234,13 @@ private void CurrentWindow_SizeChanged(object sender, Windows.UI.Core.WindowSize
 }
 ```
 
-### Set visual states in XAML markup
+### Quando ela é aplicada, os valores definidos na página XAML são aplicados.
 
-Prior to Windows 10, VisualState definitions required [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.storyboard.aspx) objects for property changes, and you had to call **GoToState** in code to apply the state. This is shown in the previous example. You will still see many examples that use this syntax, or you might have existing code that uses it.
+A segunda, `WideState`, altera a propriedade [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.displaymode.aspx) do [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) para **Inline** e abre o painel. Esse estado é aplicado no manipulador de eventos SizeChanged caso a largura da janela seja de 720 pixels efetivos ou mais. Definir estados visuais na marcação XAML
 
-Starting in Windows 10, you can use the simplified [**Setter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.setter.aspx) syntax shown here, and you can use a [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) in your XAML markup to apply the state. You use state triggers to create simple rules that automatically trigger visual state changes in response to an app event.
+Antes do Windows 10, as definições VisualState exigiam objetos [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.storyboard.aspx) para alterações de propriedade, e você precisava chamar **GoToState** no código para aplicar o estado. Isso é mostrado no exemplo anterior.
 
-This example does the same thing as the previous example, but uses the simplified **Setter** syntax instead of a Storyboard to define property changes. And instead of calling GoToState, it uses the built in [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) state trigger to apply the state. When you use state triggers, you don't need to define an empty `DefaultState`. The default settings are reapplied automatically when the conditions of the state trigger are no longer met.
+Você ainda verá muitos exemplos que usam essa sintaxe, ou pode ter um código existente que o use. A partir do Windows 10, você pode usar a sintaxe [**Setter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.setter.aspx) simplificada mostrada aqui e usar um [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) na marcação XAML para aplicar o estado. Você usa gatilhos de estado para criar regras simples que disparam alterações de estado visuais automaticamente em resposta a um evento do aplicativo. Este exemplo faz a mesma coisa que o exemplo anterior, mas usa a sintaxe simplificada **Setter**, em vez de um Storyboard para definir as alterações de propriedade.
 
 ```xaml
 <Page ...>
@@ -273,13 +274,14 @@ This example does the same thing as the previous example, but uses the simplifie
 </Page>
 ```
 
-> **Important**&nbsp;&nbsp;In the previous example, the VisualStateManager.VisualStateGroups attached property is set on the **Grid** element. When you use StateTriggers, always ensure that VisualStateGroups is attached to the first child of the root in order for the triggers to take effect automatically. (Here, **Grid** is the first child of the root **Page** element.)
+> E, em vez de chamar GoToState, ele usa o gatilho de estado [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) interno para aplicar o estado. Ao usar gatilhos de estado, você não precisa definir um `DefaultState` vazio. As configurações padrão são reaplicadas automaticamente quando as condições do gatilho de estado não são mais atendidas.
 
-### Attached property syntax
+### **Importante**
+            &nbsp;&nbsp;No exemplo anterior, a propriedade anexada VisualStateManager.VisualStateGroups está definida no elemento **Grid**.
 
-In a VisualState, you typically set a value for a control property, or for one of the attached properties of the panel that contains the control. When you set an attached property, use parentheses around the attached property name.
+Ao usar StateTriggers, certifique-se sempre de que VisualStateGroups esteja anexado ao primeiro filho da raiz para que os gatilhos entrem em vigor automaticamente. (Aqui, **Grid** é o primeiro filho do elemento **Page** raiz.)
 
-This example shows how to set the [**RelativePanel.AlignHorizontalCenterWithPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.alignhorizontalcenterwithpanel.aspx) attached property on a TextBox named `myTextBox`. The first XAML uses [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.objectanimationusingkeyframes.aspx) syntax and the second uses **Setter** syntax.
+Sintaxe da propriedade anexada Em um VisualState, você normalmente define um valor para uma propriedade de controle ou para uma das propriedades anexadas do painel que contém o controle.
 
 ```xaml
 <!-- Set an attached property using ObjectAnimationUsingKeyFrames. -->
@@ -293,15 +295,15 @@ This example shows how to set the [**RelativePanel.AlignHorizontalCenterWithPane
 <Setter Target="myTextBox.(RelativePanel.AlignHorizontalCenterWithPanel)" Value="True"/>
 ```
 
-### Custom state triggers
+### Ao definir uma propriedade anexada, use parênteses no nome da propriedade anexada.
 
-You can extend the [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) class to create custom triggers for a wide range of scenarios. For example, you can create a StateTrigger to trigger different states based on input type, then increase the margins around a control when the input type is touch. Or create a StateTrigger to apply different states based on the device family the app is run on. For examples of how to build custom triggers and use them to create optimized UI experiences from within a single XAML view, see the [State triggers sample](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+Este exemplo mostra como definir a propriedade anexada [**RelativePanel.AlignHorizontalCenterWithPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.alignhorizontalcenterwithpanel.aspx) em um TextBox chamado `myTextBox`. O primeiro XAML usa uma sintaxe [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.objectanimationusingkeyframes.aspx) e o segundo usa uma sintaxe **Setter**. Gatilhos de estado personalizados Você pode estender a classe [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) para criar gatilhos personalizados para uma ampla variedade de cenários.
 
-### Visual states and styles
+### Por exemplo, você pode criar um StateTrigger para disparar estados diferentes com base no tipo de entrada e, em seguida, aumentar as margens em torno de um controle quando o tipo de entrada é toque.
 
-You can use Style resources in visual states to apply a set of property changes to multiple controls. For more info about using styles, see [Styling controls](../controls-and-patterns/styling-controls.md).
+Ou crie um StateTrigger para aplicar estados diferentes com base na família de dispositivos em que o aplicativo está em execução. Para obter exemplos de como compilar gatilhos personalizados e usá-los para criar experiências de interface do usuário otimizadas dentro de um único modo de exibição XAML, consulte a [Amostra de gatilhos de estado](http://go.microsoft.com/fwlink/p/?LinkId=620025)
 
-In this simplified XAML from the State triggers sample, a Style resource is applied to a Button to adjust the size and margins for mouse or touch input. For the complete code and the definition of the custom state trigger, see the [State triggers sample](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+Estilos e estados visuais Você pode usar recursos Style em estados visuais para aplicar um conjunto de alterações de propriedade a vários controles.
 
 ```xaml
 <Page ... >
@@ -367,57 +369,59 @@ In this simplified XAML from the State triggers sample, a Style resource is appl
 </Page>
 ```
 
-## Tailored layouts
+## Para obter mais informações sobre como usar estilos, consulte [Definindo o estilo de controles](../controls-and-patterns/styling-controls.md)
 
-When you make significant changes to your UI layout on different devices, you might find it more convenient to define a separate UI file with a layout tailored to the device, rather than adapting a single UI. If the functionality is the same across devices, you can define separate XAML views that share the same code file. If both the view and the functionality differ significantly across devices, you can define separate Pages, and choose which Page to navigate to when the app is loaded.
+Neste XAML simplificado da Amostra de gatilhos de estado, um recurso Style é aplicado a um Button para ajustar o tamanho e as margens da entrada por mouse ou toque. Para obter o código completo e a definição do gatilho de estado personalizado, consulte [Amostra de gatilhos de estado](http://go.microsoft.com/fwlink/p/?LinkId=620025) Layouts personalizados
 
-### Separate XAML views per device family
+### Ao fazer alterações significativas no layout da interface do usuário em dispositivos diferentes, talvez você considere mais prático definir um arquivo de interface do usuário separado com um layout personalizado de acordo com o dispositivo, em vez de adaptar uma única interface do usuário.
 
-Use XAML views to create different UI definitions that share the same code-behind. You can provide a unique UI definition for each device family. Follow these steps to add a XAML view to your app.
+Caso a funcionalidade seja a mesma em todos os dispositivos, você pode definir modos de exibição XAML separados que compartilhem o mesmo arquivo de código. Caso o modo de exibição e a funcionalidade sejam significativamente diferentes entre os dispositivos, você pode definir Pages separados e escolher para qual Page navegar quando o aplicativo for carregado. Modos de exibição XAML separados por família de dispositivos
 
-**To add a XAML view to an app**
-1. Select Project > Add New Item. The Add New Item dialog box opens.
-    > **Tip**&nbsp;&nbsp;Make sure a folder or the project, and not the solution, is selected in Solution Explorer.
-2. Under Visual C# or Visual Basic in the left pane, pick the XAML template type.
-3. In the center pane, pick XAML View.
-4. Enter the name for the view. The view must be named correctly. For more info on naming, see the remainder of this section.
-5. Click Add. The file is added to the project.
+**Use modos de exibição XAML para criar definições de interface do usuário diferentes que compartilhem o mesmo code-behind.**
+1. Você pode fornecer uma definição de interface do usuário exclusiva para cada família de dispositivos. Siga estas etapas para adicionar um modo de exibição XAML a seu aplicativo.
+    > Para adicionar um modo de exibição XAML a um aplicativo
+2. Selecione Projeto > Adicionar Novo Item.
+3. A caixa de diálogo Adicionar Novo Item é aberta.
+4. **Dica**
+            &nbsp;&nbsp;Verifique se uma pasta ou o projeto, e não a solução, está selecionado no Gerenciador de Soluções. Em Visual C# ou Visual Basic no painel esquerdo, selecione o tipo de modelo XAML. No painel central, selecione Exibição XAML.
+5. Insira o nome do modo de exibição. O modo de exibição deve ser nomeado corretamente.
 
-The previous steps create only a XAML file, but not an associated code-behind file. Instead, the XAML view is associated with an existing code-behind file using a "DeviceName" qualifier that's part of the file or folder name. This qualifier name can be mapped to a string value that represents the device family of the device that your app is currently running on, such as, "Desktop", "Mobile", and the names of the other device families (see [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues.aspx)).
+Para obter mais informações sobre a nomenclatura, consulte o restante desta seção. Clique em Adicionar. O arquivo é adicionado ao projeto.
 
-You can add the qualifier to the file name, or add the file to a folder that has the qualifier name.
+As etapas anteriores criam apenas um arquivo XAML, mas não um arquivo code-behind associado.
 
-**Use file name**
+**Em vez disso, o modo de exibição XAML é associado a um arquivo código-behind existente usando-se um qualificador "DeviceName" que faz parte do nome do arquivo ou da pasta.**
 
-To use the qualifier name with the file, use this format: *[pageName]*.DeviceFamily-*[qualifierString]*.xaml.
+Esse nome de qualificador pode ser mapeado para um valor de cadeia de caracteres que representa a família de dispositivos do dispositivo em que seu aplicativo está em execução no momento, como "Desktop", "Mobile" e os nomes das outras famílias de dispositivos (consulte [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues.aspx))
 
-Let's look at an example for a file named MainPage.xaml. To create a view for mobile devices, name the XAML view MainPage.DeviceFamily-Mobile.xaml. To create a view for PC devices, name the view MainPage.DeviceFamily-Desktop.xaml. Here's what the solution looks like in Microsoft Visual Studio.
+Você pode adicionar o qualificador ao nome do arquivo ou adicionar o arquivo a uma pasta que tenha o nome do qualificador. Usar nome do arquivo Para usar o nome do qualificador com o arquivo, use este formato: *[pageName]*.DeviceFamily-*[qualifierString]*.xaml. Consultemos um exemplo de um arquivo chamado MainPage.xaml.
 
-![XAML views with qualified file names](images/xaml-layout-view-ex-1.png)
+![Para criar um modo de exibição para dispositivos móveis, dê um nome para o modo de exibição XAML MainPage.DeviceFamily-Mobile.xaml.](images/xaml-layout-view-ex-1.png)
 
-**Use folder name**
+**Para criar um modo de exibição para os dispositivos do computador, dê um nome para o modo de exibição MainPage.DeviceFamily-Desktop.xaml.**
 
-To organize the views in your Visual Studio project using folders, you can use the qualifier name with the folder. To do so, name your folder like this: DeviceFamily-*[qualifierString]*. In this case, each XAML view file has the same name. Don't include the qualifier in the file name.
+Aqui está como a solução fica no Microsoft Visual Studio. Modos de exibição XAML com nomes de arquivo qualificados Usar nome da pasta Para organizar os modos de exibição no projeto do Visual Studio usando pastas, você pode usar o nome de qualificador com a pasta.
 
-Here's an example, again for a file named MainPage.xaml. To create a view for mobile devices, create a folder named "DeviceFamily-Mobile", and place a XAML view named MainPage.xaml into it. To create a view for PC devices, create a folder named "DeviceFamily-Desktop", and place another XAML view named MainPage.xaml into it. Here's what the solution looks like in Visual Studio.
+Para isso, nomeie a pasta assim: DeviceFamily-*[qualifierString]*. Neste caso, cada arquivo do modo de exibição XAML tem o mesmo nome. Não inclua o qualificador no nome do arquivo. Aqui está um exemplo, novamente para um arquivo chamado MainPage.xaml.
 
-![XAML views in folders](images/xaml-layout-view-ex-2.png)
+![Para criar um modo de exibição para dispositivos móveis, crie uma pasta chamada "DeviceFamily-Mobile" e coloque um modo de exibição XAML chamado MainPage.xaml nela.](images/xaml-layout-view-ex-2.png)
 
-In both cases, a unique view is used for mobile and PC devices. The default MainPage.xaml file is used if the device it's running on doesn't match any of the device family specific views.
+Para criar um modo de exibição para dispositivos de computador, crie uma pasta chamada "DeviceFamily-Desktop" e coloque outro modo de exibição XAML chamado MainPage.xaml nela. Aqui está como a solução fica no Visual Studio.
 
-### Separate XAML pages per device family
+### Modos de exibição XAML em pastas
 
-To provide unique views and functionality, you can create separate Page files (XAML and code), and then navigate to the appropriate page when the page is needed.
+Em ambos os casos, um modo de exibição exclusivo é usado para dispositivos móveis e de computador.
 
-**To add a XAML page to an app**
-1. Select Project > Add New Item. The Add New Item dialog box opens.
-    > **Tip**&nbsp;&nbsp;Make sure the project, and not the solution, is selected in Solution Explorer.
-2. Under Visual C# or Visual Basic in the left pane, pick the XAML template type.
-3. In the center pane, pick Blank page.
-4. Enter the name for the page. For example, "MainPage_Mobile". Both a MainPage_Mobile.xaml and MainPage_Mobile.xaml.cs/vb/cpp code file are created.
-5. Click Add. The file is added to the project.
+**O arquivo padrão MainPage.xaml é usado caso o dispositivo em execução não corresponda a nenhum dos modos de exibição específicos da família de dispositivos.**
+1. Páginas XAML separadas por família de dispositivos Para oferecer modos de exibição e funcionalidade exclusivos, você pode criar arquivos Page separados (XAML e código) e depois navegar até a página apropriada quando a página for necessária.
+    > Para adicionar uma página XAML a um aplicativo
+2. Selecione Projeto > Adicionar Novo Item.
+3. A caixa de diálogo Adicionar Novo Item é aberta.
+4. **Dica**
+            &nbsp;&nbsp;Verifique se o projeto, e não a solução, está selecionado no Gerenciador de Soluções. Em Visual C# ou Visual Basic no painel esquerdo, selecione o tipo de modelo XAML. No painel central, selecione Página em branco.
+5. Insira o nome da página. Por exemplo, "MainPage_Mobile".
 
-At runtime, check the device family that the app is running on, and navigate to the correct page like this.
+Um MainPage_Mobile.xaml e o arquivo de código MainPage_Mobile.xaml.cs/vb/cpp são criados.
 
 ```csharp
 if (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Mobile")
@@ -430,4 +434,9 @@ else
 }
 ```
 
-You can also use different criteria to determine which page to navigate to. For more examples, see the [Tailored multiple views sample](http://go.microsoft.com/fwlink/p/?LinkId=620636), which uses the [**GetIntegratedDisplaySize**](https://msdn.microsoft.com/library/windows/apps/xaml/dn904185.aspx) function to check the physical size of an integrated display.
+Clique em Adicionar. O arquivo é adicionado ao projeto.
+
+
+<!--HONumber=May16_HO2-->
+
+

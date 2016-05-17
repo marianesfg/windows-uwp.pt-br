@@ -1,188 +1,193 @@
 ---
 author: mcleblanc
-title: Support your app with background tasks
-description: The topics in this section show how to run your own lightweight code in the background by responding to triggers with background tasks.
+title: Dar suporte a seu aplicativo com tarefas em segundo plano
+description: Os tópicos nesta seção mostram como executar seu próprio código leve em segundo plano ao responder a gatilhos com tarefas em segundo plano.
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
 ---
 
-# Support your app with background tasks
+# Dar suporte a seu aplicativo com tarefas em segundo plano
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-The topics in this section show how to run your own lightweight code in the background by responding to triggers with background tasks. Background tasks are lightweight classes that the OS runs in the background. You can use background tasks to provide functionality when your app is suspended or not running. You can also use background tasks for real-time communication apps like VOIP, mail, and IM.
+Os tópicos nesta seção mostram como executar seu próprio código leve em segundo plano ao responder a gatilhos com tarefas em segundo plano. As tarefas em segundo plano são classes leves que o SO executa em segundo plano. Você pode usar tarefas em segundo plano para fornecer funcionalidade quando o seu aplicativo é suspenso ou não está em execução. Também é possível usar tarefas em segundo plano para aplicativos de comunicação em tempo real como VOIP, mail e IM.
 
-Background tasks are separate classes that implement the [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) interface. You register a background task by using the [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) class. The class name is used to specify the entry point when you registering the background task.
+As tarefas em segundo plano são classes separadas que implementam a interface de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). Você registra uma tarefa em segundo plano usando a classe [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). O nome de classe é usado para especificar o ponto de entrada quando você registra a tarefa em segundo plano.
 
-To get started quickly with a background task, see [Create and register a background task](create-and-register-a-background-task.md).
+Para começar rapidamente com uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano](create-and-register-a-background-task.md)
 
-**Tip**  Starting with Windows 10, you no longer need to place an app on the lock screen in order to register background tasks.
+**Dica** A partir do Windows 10, você não precisa mais colocar um aplicativo na tela de bloqueio para registrar tarefas em segundo plano.
 
- 
+ 
 
-## Background tasks for system events
+## Tarefas em segundo plano de eventos do sistema
 
 
-Your app can respond to system-generated events by registering a background task with the [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) class. An app can use any of the following system event triggers (defined in [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839))
+O aplicativo pode responder a eventos gerados pelo sistema registrando uma tarefa em segundo plano com a classe [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838). Um aplicativo pode usar qualquer um dos gatilhos de eventos do sistema a seguir (definidos em [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839)
 
-| Trigger name                     | Description                                                                                                    |
+| Nome do gatilho                     | Descrição                                                                                                    |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------|
-| **InternetAvailable**            | The Internet becomes available.                                                                                |
-| **NetworkStateChange**           | A network change such as a change in cost or connectivity occurs.                                              |
-| **OnlineIdConnectedStateChange** | Online ID associated with the account changes.                                                                 |
-| **SmsReceived**                  | A new SMS message is received by an installed mobile broadband device.                                         |
-| **TimeZoneChange**               | The time zone changes on the device (for example, when the system adjusts the clock for daylight saving time). |
+| **InternetAvailable**            | A Internet fica disponível.                                                                                |
+| **NetworkStateChange**           | Ocorre uma mudança de rede, como uma mudança no custo ou na conectividade.                                              |
+| **OnlineIdConnectedStateChange** | A ID online associada à conta é alterada.                                                                 |
+| **SmsReceived**                  | Um nova mensagem SMS é recebida por um disponível de banda larga móvel instalado.                                         |
+| **TimeZoneChange**               | O fuso horário muda no dispositivo (por exemplo, quando o sistema ajusta o relógio para o horário de verão). |
 
- 
+ 
 
-For more info see [Respond to system events with background tasks](respond-to-system-events-with-background-tasks.md).
+Para obter mais informações, consulte o tópico [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
 
-## Conditions for background tasks
+## Condições para tarefas em segundo plano
 
 
-You can control when the background task runs, even after it is triggered, by adding a condition. Once triggered, a background task will not run until all of its conditions are met. The following conditions (represented by the [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) enumeration) can be used.
+Você pode controlar quando a tarefa em segundo plano é executada, mesmo depois que for disparado, adicionando a condição. Depois de disparada, a tarefa em segundo plano não será executada até que todas as suas condições sejam atendidas. As seguintes condições (representadas pela enumeração [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)) podem ser usadas.
 
-| Condition name           | Description                       |
+| Nome da condição           | Descrição                       |
 |--------------------------|-----------------------------------|
-| **InternetAvailable**    | The Internet must be available.   |
-| **InternetNotAvailable** | The Internet must be unavailable. |
-| **SessionConnected**     | The session must be connected.    |
-| **SessionDisconnected**  | The session must be disconnected. |
-| **UserNotPresent**       | The user must be away.            |
-| **UserPresent**          | The user must be present.         |
+| **InternetAvailable**    | A Internet deve estar disponível.   |
+| **InternetNotAvailable** | A Internet deve estar indisponível. |
+| **SessionConnected**     | A sessão deve estar conectada.    |
+| **SessionDisconnected**  | A sessão deve estar desconectada. |
+| **UserNotPresent**       | O usuário deve estar ausente.            |
+| **UserPresent**          | O usuário deve estar presente.         |
 
- 
+ 
 
-For more info see [Set conditions for running a background task](set-conditions-for-running-a-background-task.md).
+Para obter mais informações, consulte o tópico sobre [Definir condições para a execução de uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 
-## Application manifest requirements
-
-
-Before your app can successfully register a background task, it must be declared in the application manifest. For more info see [Declare background tasks in the application manifest](declare-background-tasks-in-the-application-manifest.md).
-
-## Background tasks
+## Requisitos do manifesto do aplicativo
 
 
-The following real-time triggers can be used to run lightweight custom code in the background:
+Antes que o aplicativo possa registrar com êxito uma tarefa em segundo plano, ela deve ser declarada no manifesto do aplicativo. Para obter mais informações, consulte [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 
-**Control Channel:  **Background tasks can keep a connection alive, and receive messages on the control channel, by using the [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). If your app is listening to a socket, you can use the Socket Broker instead of the **ControlChannelTrigger**. For more details on using the Socket Broker, see [SocketActivityTrigger](https://msdn.microsoft.com/library/windows/apps/dn806009). The **ControlChannelTrigger** is not supported on Windows Phone.
-
-**Timer:  **Background tasks can run as frequently as every 15 minutes, and they can be set to run at a certain time by using the [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). For more info see [Run a background task on a timer](run-a-background-task-on-a-timer-.md).
-
-**Push Notification:  **Background tasks respond to the [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) to receive raw push notifications.
-
-**Note**  
-
-Universal Windows apps must call [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) before registering any of the background trigger types.
-
-To ensure that your Universal Windows app continues to run properly after you release an update, you must call [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) and then call [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) when your app launches after being updated. For more information, see [Guidelines for background tasks](guidelines-for-background-tasks.md).
-
-## System event triggers
+## Tarefas em segundo plano
 
 
-> **Note**  The [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839) enumeration includes the following system event triggers.
+Os gatilhos em tempo real a seguir podem ser usados para executar código personalizado leve em segundo plano:
 
-| Trigger name            | Description                                                       |
+**Canal de Controle:  **As tarefas em segundo plano podem manter a conexão ativada e receber mensagens no canal de controle usando o [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Se seu aplicativo estiver ouvindo um soquete, você poderá usar o Agente de Soquete em vez do **ControlChannelTrigger**. Para obter mais detalhes sobre como usar o Agente de Soquete, consulte [SocketActivityTrigger](https://msdn.microsoft.com/library/windows/apps/dn806009). O **ControlChannelTrigger** não é compatível com o Windows Phone.
+
+**Temporizador:  **É possível executar tarefas em segundo plano a cada 15 minutos, e elas podem ser configuradas para execução em um horário específico com [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para obter mais informações, consulte [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
+
+**Notificação por Push:  **As tarefas em segundo plano respondem ao [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) para receber notificações por push brutas.
+
+**Observação**  
+
+Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
+
+Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
+
+## Gatilhos de eventos do sistema
+
+
+> **Observação**  A enumeração [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839) inclui os gatilhos de eventos do sistema a seguir.
+
+| Nome do gatilho            | Descrição                                                       |
 |-------------------------|-------------------------------------------------------------------|
-| **UserPresent**         | The background task is triggered when the user becomes present.   |
-| **UserAway**            | The background task is triggered when the user becomes absent.    |
-| **ControlChannelReset** | The background task is triggered when a control channel is reset. |
-| **SessionConnected**    | The background task is triggered when the session is connected.   |
+| **UserPresent**         | A tarefa em segundo plano é disparada quando o usuário está presente.   |
+| **UserAway**            | A tarefa em segundo plano é disparada quando o usuário se ausenta.    |
+| **ControlChannelReset** | A tarefa em segundo plano é disparada quando um canal de controle é redefinido. |
+| **SessionConnected**    | A tarefa em segundo plano é disparada quando a sessão é conectada.   |
 
- 
+ 
 
-The following system event triggers make it possible to recognize when the user has moved an app on or off the lock screen.
+Os gatilhos de eventos do sistema a seguir tornam possível reconhecer quando o usuário moveu um aplicativo de ou para a tela de bloqueio.
 
-| Trigger name                     | Description                                  |
+| Nome do gatilho                     | Descrição                                  |
 |----------------------------------|----------------------------------------------|
-| **LockScreenApplicationAdded**   | An app tile is added to the lock screen.     |
-| **LockScreenApplicationRemoved** | An app tile is removed from the lock screen. |
+| **LockScreenApplicationAdded**   | Um bloco de aplicativos é adicionado à tela de bloqueio.     |
+| **LockScreenApplicationRemoved** | Um bloco de aplicativos é removido da tela de bloqueio. |
 
- 
-## Background task resource constraints
-
-
-Background tasks are lightweight. Keeping background execution to a minimum ensures the best user experience with foreground apps and battery life. This is enforced by applying resource constraints to background tasks:
-
--   Background tasks are limited to 30 seconds of wall-clock usage.
-
-## Additional background task resource constraints
+ 
+## Restrições de recursos de tarefas em segundo plano
 
 
-### Memory constraints
+As tarefas em segundo plano são leves. Manter a execução em segundo plano em um nível mínimo garante a melhor experiência do usuário com aplicativos em primeiro plano e para a vida da bateria. Isso é reforçado pela aplicação de restrições de recursos a tarefas em segundo plano:
 
-Due to the resource constraints for low-memory devices, background tasks may have a memory limit that determines the maximum amount of memory the background task can use. If your background task attempts an operation that would exceed this limit, the operation will fail and may generate an out-of-memory exception that the task can handle. If the task does not handle the out-of-memory exception, or the nature of the attempted operation is such that an out-of-memory exception was not generated, then the task will be terminated immediately. You can use the [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831) APIs to query your current memory usage and limit in order to discover your cap (if any), and to monitor your background task's ongoing memory usage.
+-   As tarefas em segundo plano estão limitadas a 30 segundos de uso do relógio.
 
-### Per-device limit for apps with background tasks for low-memory devices
-
-On memory-constrained devices, there is a limit to the number of apps that can be installed on a device and use background tasks at any given time. If this number is exceeded, the call to [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485), which is required to register all background tasks, will fail.
-
-### Battery Saver
-
-Unless you exempt your app so that it can still run background tasks and receive push notifications when Battery Saver is on, the Battery Saver feature, when enabled, will prevent background tasks from running when the device is not connected to external power and the battery goes below a specified amount of power remaining. This will not prevent you from registering background tasks.
-
-## Background task resource guarantees for real-time communication
+## Restrições adicionais de recursos de tarefas em segundo plano
 
 
-To prevent resource quotas from interfering with real-time communication functionality, background tasks using the [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) and [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) receive guaranteed CPU resource quotas for every running task. The resource quotas are as mentioned above, and remain constant for these background tasks.
+### Restrições de memória
 
-Your app doesn't have to do anything differently to get the guaranteed resource quotas for [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) and [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) background tasks. The system always treats these as critical background tasks.
+Devido às restrições de recurso para dispositivos de baixa memória, as tarefas em segundo plano podem ter um limite de memória que determina a quantidade máxima de memória que as tarefas em segundo plano podem usar. Se a tarefa em segundo plano tentar uma operação que exceda esse limite, a operação falhará e poderá gerar uma exceção de falta de memória que a tarefa pode manipular. Se a tarefa não manipular a exceção de falta de memória, ou a natureza da operação não tenha gerado uma exceção de falta de memória, a tarefa será encerrada imediatamente. Você pode usar as APIs [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831) para consultar o uso atual da memória e o limite para descobrir seu limite (se houver), bem como para monitorar o uso de memória contínuo de sua tarefa em segundo plano.
 
-## Maintenance trigger
+### Limite por dispositivo para aplicativos com tarefas em segundo plano para dispositivos de pouca memória
 
+Em dispositivos com memória restrita, existe um limite quanto ao número de aplicativos que podem ser instalados em um dispositivo e usam tarefas em segundo plano em um determinado tempo. Se esse número for excedido, a chamada para [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485), que é necessária para todas as tarefas em segundo plano, falhará.
 
-Maintenance tasks only run when the device is plugged in to AC power. For more info see [Use a maintenance trigger](use-a-maintenance-trigger.md).
+### Economia de Bateria
 
-## Background task for sensors and devices
+A menos que você isente seu aplicativo para que ele ainda possa executar tarefas em segundo plano e receber notificações por push quando a Economia de Bateria estiver ativada, o recurso Economia de Bateria, quando habilitado, impedirá que tarefas em segundo plano sejam executadas quando o dispositivo não estiver conectado à energia externa e a bateria estiver com uma carga restante abaixo do especificado. Isso não o impedirá de registrar tarefas em segundo plano.
 
-
-Your app can access sensors and peripheral devices from a background task with the [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) class. You can use this trigger for long-running operations such as data synchronization or monitoring. Unlike tasks for system events, a **DeviceUseTrigger** task can only be triggered while your app is running in the foreground and no conditions can be set on it.
-
-Some critical device operations, such as long running firmware updates, cannot be performed with the [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Such operations can be performed only on the PC, and only by a privileged app that uses the [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). A *privileged app* is an app that the device's manufacturer has authorized to perform those operations. Device metadata is used to specify which app, if any, has been designated as the privileged app for a device. For more info, see [Device sync and update for Windows Store device apps](http://go.microsoft.com/fwlink/p/?LinkId=306619)
-
-## Managing background tasks
+## O recurso de tarefa em segundo plano garante a comunicação em tempo real
 
 
-Background tasks can report progress, completion, and cancellation to your app using events and local storage. Your app can also catch exceptions thrown by a background task, and manage background task registration during app updates. For more info see:
+Para evitar que as cotas de recursos interfiram na funcionalidade de comunicação em tempo real, as tarefas em segundo plano que usam o [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) e o [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) recebem cotas de recursos da CPU garantidas para cada execução de tarefa. As cotas de recursos são conforme mencionadas acima e permanecem constantes para essas tarefas em segundo plano.
 
-[Handle a cancelled background task](handle-a-cancelled-background-task.md)
+O aplicativo não precisa fazer nada além de obter as cotas de recursos garantidas para as tarefas em segundo plano [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) e [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543). O sistema sempre trata essas tarefas em segundo plano como essenciais.
 
-[Monitor background task progress and completion](monitor-background-task-progress-and-completion.md)
-
-**Note**  
-This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
-## Related topics
+## Gatilho de manutenção
 
 
-**Conceptual guidance for multitasking in Windows 10**
+As tarefas de manutenção são executadas apenas quando o dispositivo está conectado à alimentação AC. Para obter mais informações, consulte [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 
-* [Launching, resuming, and multitasking](index.md)
+## Tarefa em segundo plano para sensores e dispositivos
 
-**Related background task guidance**
 
-* [Access sensors and devices from a background task](access-sensors-and-devices-from-a-background-task.md)
-* [Guidelines for background tasks](guidelines-for-background-tasks.md)
-* [Create and register a background task](create-and-register-a-background-task.md)
-* [Debug a background task](debug-a-background-task.md)
-* [Declare background tasks in the application manifest](declare-background-tasks-in-the-application-manifest.md)
-* [Handle a cancelled background task](handle-a-cancelled-background-task.md)
-* [Monitor background task progress and completion](monitor-background-task-progress-and-completion.md)
-* [Register a background task](register-a-background-task.md)
-* [Respond to system events with background tasks](respond-to-system-events-with-background-tasks.md)
-* [Run a background task on a timer](run-a-background-task-on-a-timer-.md)
-* [Set conditions for running a background task](set-conditions-for-running-a-background-task.md)
-* [Update a live tile from a background task](update-a-live-tile-from-a-background-task.md)
-* [Use a maintenance trigger](use-a-maintenance-trigger.md)
-* [How to trigger suspend, resume, and background events in Windows Store apps (when debugging)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-* [Device sync and update for Windows Store device apps](http://go.microsoft.com/fwlink/p/?LinkId=306619)
+Seu aplicativo pode acessar sensores e dispositivos periféricos a partir de uma tarefa em segundo plano com a classe [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Você pode usar esse gatilho para operações de longa duração, como sincronização ou monitoramento de dados. Ao contrário das tarefas para eventos de sistema, uma tarefa **DeviceUseTrigger** só pode ser disparada enquanto o aplicativo está sendo executado em primeiro plano e nenhuma condição pode ser definida nele.
 
- 
+Algumas operações críticas de dispositivos, como atualizações de firmware de longa execução não podem ser executadas com o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Elas podem ser executadas somente no computador por um aplicativo privilegiado que usa o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Um *aplicativo privilegiado* é um aplicativo que o fabricante do dispositivo autorizou a executar tais operações. Os metadados do dispositivo são usados para especificar qual aplicativo, se houver, foi designado como o aplicativo privilegiado para um dispositivo. Para obter mais informações, consulte [Sincronização e atualização de dispositivos para aplicativos de dispositivos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkId=306619)
 
- 
+## Gerenciando tarefas em segundo plano
 
+
+Tarefas em segundo plano podem indicar o progresso, a conclusão e o cancelamento para o seu aplicativo usando eventos e o armazenamento local. Seu aplicativo também pode capturar exceções lançadas por uma tarefa em segundo plano, além de gerenciar o registro desse tipo de tarefa durante atualizações de aplicativo. Para obter mais informações, consulte:
+
+[Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
+
+[Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
+
+**Observação**  
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132)
+
+ 
+
+## Tópicos relacionados
+
+
+**Orientação conceitual sobre multitarefa no Windows 10**
+
+* [Inicialização, continuação e multitarefa](index.md)
+
+**Diretrizes relacionadas para tarefas em segundo plano**
+
+* [Acessar sensores e dispositivos a partir de uma tarefa em segundo plano](access-sensors-and-devices-from-a-background-task.md)
+* [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
+* [Criar e registrar uma tarefa em segundo plano](create-and-register-a-background-task.md)
+* [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
+* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
+* [Registrar uma tarefa em segundo plano](register-a-background-task.md)
+* [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
+* [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
+* [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
+* [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
+* [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Sincronização e atualização de dispositivos para aplicativos de dispositivos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkId=306619)
+
+ 
+
+ 
+
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

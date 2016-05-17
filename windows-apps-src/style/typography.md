@@ -1,7 +1,7 @@
 ---
 author: mijacobs
-Description: As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design.
-title: Typography
+Description: Como a representação visual da linguagem, a tarefa principal da tipografia é ser clara. Seu estilo nunca deve atrapalhar essa meta. Porém, a tipografia também tem um papel importante como componente de layout, pois afeta consideravelmente a densidade e a complexidade do design, além de exercer forte influência na experiência do usuário desse design.
+title: Tipografia
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 label: Typography
 template: detail.hbs
@@ -9,33 +9,33 @@ extraBodyClass: style-typography
 brief: As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design.
 ---
 
-# Typography for UWP apps
+# Tipografia para aplicativos UWP
 
-As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design.
+Como a representação visual da linguagem, a tarefa principal da tipografia é ser clara. Seu estilo nunca deve atrapalhar essa meta. Porém, a tipografia também tem um papel importante como componente de layout, pois afeta consideravelmente a densidade e a complexidade do design, além de exercer forte influência na experiência do usuário desse design.
 
-## Typeface
+## Face de tipos
 
-We’ve selected Segoe UI for use on all Microsoft digital designs. Segoe UI provides a wide range of characters and is designed to maintain optimal legibility across sizes and pixel densities. It offers a clean, light, and open aesthetic that complements the content of the system.
+Selecionamos Segoe UI para uso em todos os designs digitais da Microsoft. A Segoe UI fornece uma ampla variedade de caracteres e é projetada para manter a legibilidade ideal em todos os tamanhos e densidades de pixel. Ela oferece uma estética limpa, leve e aberta que complementa o conteúdo do sistema.
 
-![Sample text of Segoe UI font](images/segoe-sample.png)
+![Texto de exemplo da fonte Segoe UI](images/segoe-sample.png)
 
-## Weights
+## Espessuras
 
-We approach typography with an eye to simplicity and efficiency. We choose to use one typeface, a minimum of weights and sizes, and a clear hierarchy. Positioning and alignment follow the default style for the given language. In English the sequence runs left to right, top to bottom. Relationships between text and images are clear and straightforward.
+Abordamos a tipografia em busca de simplicidade e eficiência. Podemos optar por usar uma face de tipos, um mínimo de espessuras e tamanhos e uma hierarquia clara. O posicionamento e o alinhamento seguem o estilo padrão do idioma específico. Em inglês, a sequência é executada da esquerda para a direita, de cima para baixo. As relações entre texto e imagens são claras e simples.
 
-![Shows supported font weights. Light, semilight, regular, semibold, and bold](images/weights.png)
+![Mostra espessuras de fonte compatíveis. Leve, semileve, regular, seminegrito e negrito](images/weights.png)
 
-## Line spacing
+## Espaçamento entre linhas
 
-![Example of line spacing at 125%](images/line-spacing.png)
+![Exemplo de espaçamento entre linhas de 125%](images/line-spacing.png)
 
-Line spacing should be calculated at 125% of the font size, rounding to the closest multiple of four when necessary. For example with 15px Segoe UI, 125% of 15px is 18.75px. We recommend rounding up and setting line height to 20px to stay on the 4px grid. This ensures a good reading experience and adequate space for diacritical marks. See the Type ramp section below for specific examples.
+O espaçamento entre linhas deve ser calculado em 125% do tamanho da fonte, arredondando para o múltiplo mais próximo de quatro, quando necessário. Por exemplo, com Segoe UI 15 px, 125% de 15 px é 18,75 px. Recomendamos o arredondamento e a definição da altura da linha como 20 px para permanecer na grade 4 px. Isso garante uma experiência de leitura boa e espaço adequado para as marcas diacríticas. Veja a seção Rampa de tipos abaixo para obter exemplos específicos.
 
-When stacking larger type on top of smaller type, the distance from the last baseline of the larger type to the first baseline of the smaller type should be equal to the larger type's line height.
+Ao empilhar um tipo maior sobre um tipo menor, a distância da última linha de base do tipo maior para a primeira linha de base do tipo menor deve ser igual à altura da linha do tipo maior.
 
-![Shows how large type stacks on small type](images/line-height-stacking.png)
+![Mostra como o tipo maior é empilhado sobre o tipo menor](images/line-height-stacking.png)
 
-In XAML, this is accomplished by stacking two [TextBlocks](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) and setting the appropriate margin.
+Em XAML, isso é feito empilhando dois [TextBlocks](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) e definindo a margem apropriada.
 
 ```xaml
 <StackPanel Width="200">
@@ -59,19 +59,19 @@ In XAML, this is accomplished by stacking two [TextBlocks](https://msdn.microsof
 
 <!-- OP version -->
 
-## Kerning and tracking
+## Kerning e tracking
 
-Segoe is a humanist typeface, with a soft, friendly appearance, it has organic, open forms based on handwritten text. To ensure optimum legibility and maintain it’s humanist integrity, the kerning and tracking settings must have specific values.
+Segoe é uma face de tipos humanista, com uma aparência suave e amigável, ela tem formatos orgânicos e abertos com base em texto manuscrito. Para garantir a legibilidade ideal e manter a integridade humanista, as configurações de kerning e tracking devem ter valores específicos.
 
-Kerning should be set to “metrics” and tracking should be set to “0”.
+Kerning deve ser definido como "métricas" e tracking deve ser definido como "0".
 
 <img src="images/kerning-tracking.png" alt="Shows the difference between kerning and tracking" />
 
-## Word and letter spacing
+## Espaçamento entre letras e palavras
 
-Similar to kerning and tracking, word spacing and letter spacing use specific settings to ensure optimum legibility and humanist integrity.
+Semelhante ao kerning e tracking, o espaçamento entre letras e o espaçamento entre palavras usam configurações específicas para garantir a legibilidade ideal e a integridade humanista.
 
-Word spacing by default is always 100% and letter spacing should be set to “0”.
+O espaçamento entre palavras por padrão sempre é 100% e o espaçamento entre letras deve ser definido como "0".
 
 <img src="images/word-letter.png" alt="Shows the difference between word and letter spacing" />
 
@@ -79,102 +79,107 @@ Word spacing by default is always 100% and letter spacing should be set to “0�
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            In a XAML text control use [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) to control kerning and [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) to control tracking. By default Typography.Kerning is set to “true” and FontStretch is set to “Normal”, which are the recommended values.
+            Em um controle de texto XAML use [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) para controlar kerning e [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar o rastreamento. Por padrão Typography.Kerning é definido como "true" e FontStretch é definido como "Normal", que são os valores recomendados.
     </div>
 </aside>
 
 
 <!-- OP version -->
-## Alignment
+## Alinhamento
 
-Generally, we recommend that visual elements and columns of type be left-aligned. In most instances, this flush-left and ragged-right approach provides consistent anchoring of the content and a uniform layout.
+Em geral, recomendamos que os elementos visuais e as colunas de tipo sejam alinhados à esquerda. Na maioria dos casos, essa abordagem flush à esquerda e irregular à direita fornece ancoragem consistente do conteúdo e um layout uniforme.
 
 <img src="images/alignment.png" alt="Shows flush-left text" />
 
-## Line endings
+## Terminações de linha
 
-When typography is not positioned as flush left and ragged right, try to ensure even line endings and avoid hyphenation.
+Quando a tipografia não está posicionada como flush à esquerda e irregular à direita, tente garantir terminações de linha pares e evitar a hifenização.
 
 <img src="images/line-endings.png" alt="Shows even line endings" />
 
-## Paragraphs
+## Parágrafos
 
-To provide aligned column edges, paragraphs should be indicated by skipping a line without indentation.
+Para fornecer bordas de coluna alinhada, os parágrafos devem ser indicados, ignorando uma linha sem recuo.
 
-![Shows a full line of space between paragraphs](images/paragraphs.png)
+![Mostra uma linha inteira de espaço entre parágrafos](images/paragraphs.png)
 
-## Character count
+## Contagem de caracteres
 
-If a line is too short, the eye will have to travel left and right too often, breaking the reader’s rhythm. If possible, 50–60 letters per line is best for ease of reading.
+Se uma linha for muito curta, o olho terá que se deslocar muito frequentemente à esquerda e à direita, quebrando o ritmo do leitor. Se possível, de 50 a 60 letras por linha é melhor para facilitar a leitura.
 
-Segoe provides a wide range of characters and is designed to maintain optimal legibility in both small and large sizes as well as low and high pixel densities. Using the optimal number of letters in a text column line ensures good legibility in an application.
+Segoe fornece uma ampla variedade de caracteres e é projetada para manter a legibilidade ideal em tamanhos pequenos e grandes, bem como densidades de pixel altas e baixas. Usar o número ideal de letras em uma linha de coluna de texto garante uma legibilidade boa em um aplicativo.
 
-Lines that are too long will strain the eye and may disorient the user. Lines that are too short force the reader’s eye to travel too much and can cause fatigue.
+Linhas muito longas afetam a atenção e podem confundir o usuário. Linhas muito curtas forçam o olho do leitor a se deslocar muito e podem causar fadiga.
 
-![Shows 3 paragraphs with different line lengths](images/character-count.png)
+![Mostra três parágrafos com tamanhos de linha diferentes](images/character-count.png)
 
-## Hanging text alignment
+## Alinhamento de texto deslocado
 
-The horizontal alignment of icons with text can be handled in a number of ways depending on the size of the icon and the amount of text. When the text, either single or multiple lines, fits within the height of the icon, the text should be vertically centered.
+O alinhamento horizontal dos ícones com texto pode ser manipulado de diversas maneiras, dependendo do tamanho do ícone e da quantidade de texto. Quando o texto, uma ou várias linhas, se encaixa dentro da altura do ícone, o texto deve ser centralizado verticalmente.
 
-Once the height of the text extends beyond the height of the icon, the first line of text should align vertically and the additional text should flow on naturally below. When using characters with larger cap, ascender and descender heights, care should be taken to observe the same alignment guidance.
+Depois que a altura do texto se estende além da altura do ícone, a primeira linha de texto deve se alinhar verticalmente e o texto adicional deve fluir naturalmente para baixo. Ao usar caracteres com limite maior, aumentar e diminuir alturas, tome cuidado para observar as mesmas diretrizes de alinhamento.
 
-![Shows several icon and text pairings](images/hanging-text-alignment.png)
+![Mostra vários emparelhamentos de ícone e texto](images/hanging-text-alignment.png)
 
 <aside class="aside-dev">
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            XAML's [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) property provides access to the cap height and baseline font metrics. It can be used to visually vertically center or top-align type.
+            A propriedade [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) de XAML fornece acesso às medidas de fonte iniciais e de limite de altura. Ela pode ser usada para o tipo de alinhamento superior, central ou vertical.
     </div>
 </aside>
 
-## Clipping and ellipses
+## Recorte e elipses
 
-Clip by default—assume that text will wrap unless the redline specifies otherwise. When using non-wrapping text, we recommend clipping rather than using ellipses. Clipping can occur at the edge of the container, at the edge of the device, at the edge of a scrollbar, etc.
+Recorte por padrão: pressuponha que o texto será ajustado, a menos que a linha vermelha especifique o contrário. Ao usar texto sem disposição, recomendamos o recorte em vez do uso de elipses. O recorte pode ocorrer na borda do contêiner, na borda do dispositivo, na borda de uma barra de rolagem, etc.
 
-Exceptions—for containers which are not well-defined (e.g. no differentiating background color), then non-wrapping text can be redlined to use the ellipse ”…”.
+Exceções: para contêineres que não são bem definidos (por exemplo, nenhuma cor da tela de fundo diferente), o texto sem disposição pode ter uma linha vermelha para uso da elipse "…".
 
-![Shows a device frame with some text clipping](images/clipping.png)
+![Mostra um quadro de dispositivo com alguns recortes de texto](images/clipping.png)
 
-# Type ramp
+# Rampa de tipos
 
-Different sizes of Segoe UI should be used to create hierarchy in a type ramp. This hierarchy builds a structure which enables users to easily navigate through written communication.
+Tamanhos diferentes de Segoe UI devem ser usados para criar hierarquia em uma rampa de tipos. Essa hierarquia cria uma estrutura que permite aos usuários navegar facilmente por meio de comunicação escrita.
 
 <figure class="figure-img" >
     <img src="images/type-ramp.png" alt="Shows the type ramp"  />
-        <figcaption>All sizes are in effective pixels. For more details, see the TODO: link</figcaption>
+        <figcaption>Todos os tamanhos estão em pixels efetivos. Para obter mais detalhes, veja o link TODO:</figcaption>
 </figure>
 
 <aside class="aside-dev">
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            Most levels of the ramp are available as XAML [static resources](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) that follow the `*TextBlockStyle` naming convention (ex: `HeaderTextBlockStyle`). 
+            A maioria dos níveis de rampa está disponível como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) XAML que seguem a convenção de nomenclatura `*TextBlockStyle` (por ex.: 
     </div>
 </aside>
 
 
-## Primary and secondary text
+## Texto principal e secundário
 
-To create additional hierarchy beyond the type ramp, set secondary text to 60% opacity. In the [theming color palette](color.md#color-themes), you would use BaseMedium. Primary text should always be at 100% opacity, or BaseHigh.
-
-
-## All caps titles
-
-Certain page titles should be in ALL CAPS to add yet another dimension of hierarchy. These titles should use BaseAlt with the character spacing set to 75 thousandths of an em. This treatment may also be used to help with app navigation.
-
-However, proper names change their meaning when capitalized in certain languages, so any page titles based on names or user input should *not* be converted to all caps.
+Para criar hierarquia adicional além da rampa de tipos, defina o texto secundário com opacidade de 60%. Na [paleta de cores de temas](color.md#color-themes), você usaria BaseMedium. O texto principal deve ter sempre 100% de opacidade ou BaseHigh.
 
 
-## Do's and don'ts
-* Use Body for most text
-* Use Base for titles when space is constrained
-* Incorporate SubtitleAlt to create contrast and hierarchy by emphasizing top level content
-* Don't use Caption for long strings or any primary action
-* Don't use Header or Subheader if text needs to wrap
-* Don't combine Subtitle and SubtitleAlt on the same page
+## Títulos em maiúsculas
 
-## Related articles
+Determinados títulos de página devem ser em maiúsculas para adicionar outra dimensão de hierarquia. Esses títulos devem usar BaseAlt com o espaçamento entre caracteres definido como 75 milésimos de um eme. Esse tratamento também pode ser usado para ajudar na navegação do aplicativo.
 
-* [Text controls](../controls-and-patterns/text-controls.md)
+No entanto, nomes próprios mudam seu significado quando estão em maiúsculas em certos idiomas; portanto, títulos de página com base em nomes ou entradas do usuário *não* devem ser convertidos em maiúsculas.
+
+
+## O que fazer e o que não fazer
+* Usar Corpo para a maioria dos textos
+* Usar Base para títulos quando o espaço é limitado
+* Incorporar SubtitleAlt para criar contraste e hierarquia, enfatizando o conteúdo de nível superior
+* Não usar Legenda para cadeias de caracteres longas ou qualquer ação principal
+* Não usar Cabeçalho ou Subcabeçalho se for preciso quebra automática de linha
+* Não combinar Subtítulo e SubtitleAlt na mesma página
+
+## Artigos relacionados
+
+* [Controles de texto](../controls-and-patterns/text-controls.md)
+
+
+<!--HONumber=May16_HO2-->
+
+

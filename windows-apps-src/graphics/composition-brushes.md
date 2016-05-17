@@ -1,43 +1,49 @@
 ---
 author: scottmill
 ms.assetid: 03dd256f-78c0-e1b1-3d9f-7b3afab29b2f
-title: Composition brushes
-description: A brush paints the area of a Visual with its output. Different brushes have different types of output.
+title: Pincéis de composição
+description: Um pincel pinta a área de um Visual com sua saída. Pincéis diferentes têm diferentes tipos de saída.
 ---
-# Composition brushes
+# Pincéis de composição
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-A brush paints the area of a [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) with its output. Different brushes have different types of output. The Composition API provides three brush types:
+Um pincel pinta a área de um [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) com sua saída. Pincéis diferentes têm diferentes tipos de saída. A API de composição fornece três tipos de pincel:
 
--   [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) paints a visual with a solid color
--   [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) paints a visual with the contents of a composition surface
--   [**CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406) paints a visual with the contents of a composition effect
+-   [
+              **CompositionColorBrush**
+            ](https://msdn.microsoft.com/library/windows/apps/Mt589399) pinta um elemento visual com uma cor sólida
+-   [
+              **CompositionSurfaceBrush**
+            ](https://msdn.microsoft.com/library/windows/apps/Mt589415) pinta um elemento visual com o conteúdo de uma superfície de composição
+-   [
+              **CompositionEffectBrush**
+            ](https://msdn.microsoft.com/library/windows/apps/Mt589406) pinta um elemento visual com o conteúdo de um efeito de composição
 
-All brushes inherit from [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398); they are created directly or indirectly by the [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) and are device-independent resources. Although brushes are device-independent, [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) and [**CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406) paint a [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) with contents from a composition surface which are device-dependent.
+Todos os pincéis são herdados de [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398); eles são criados direta ou indiretamente pelo [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) e são recursos independentes do dispositivo. Embora os pincéis sejam independentes do dispositivo, [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) e [**CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406) pintam um [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) com o conteúdo de uma superfície de composição que depende do dispositivo.
 
--   [Prerequisites](./composition-brushes.md#prerequisites)
--   [Color Basics](./composition-brushes.md#color-basics)
-    -   [Alpha Modes](./composition-brushes.md#alpha-modes)
--   [Using Color Brush](./composition-brushes.md#using-color-brush)
--   [Using Surface Brush](./composition-brushes.md#using-surface-brush)
--   [Configuring Stretch and Alignment](./composition-brushes.md#configuring-stretch-and-alignment)
+-   [Pré-requisitos](./composition-brushes.md#prerequisites)
+-   [Noções básicas de cor](./composition-brushes.md#color-basics)
+    -   [Modos Alfa](./composition-brushes.md#alpha-modes)
+-   [Usando o pincel de cor](./composition-brushes.md#using-color-brush)
+-   [Usando o pincel de superfície](./composition-brushes.md#using-surface-brush)
+-   [Configurando a ampliação e o alinhamento](./composition-brushes.md#configuring-stretch-and-alignment)
 
-## Prerequisites
+## Pré-requisitos
 
-This overview assumes that you are familiar with the structure of a basic Composition application, as described in [Composition UI](visual-layer.md).
+Esta visão geral parte do princípio de que você já está familiarizado com a estrutura de um aplicativo básico de composição, conforme descrito em [Interface do usuário de composição](visual-layer.md)
 
-## Color Basics
+## Noções básicas de cor
 
-Before you paint with a [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399), you need to choose colors. The Composition API uses the Windows Runtime structure, Color, to represent a color. The Color structure uses sRGB encoding. sRGB encoding divides colors into four channels: alpha, red, green, and blue. Each component is represented by a floating point value with a normal range of 0.0 to 1.0. A value of 0.0 indicates the complete absence of that color, while a value of 1.0 indicates that the color is fully present. For the alpha component, 0.0 represents a fully transparent color and 1.0 represents a fully opaque color.
+Antes de pintar com um [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399), você precisa escolher as cores. A API de composição usa a estrutura do Windows Runtime, Color, para representar uma cor. A estrutura Color usa a codificação sRGB. A codificação sRGB divide as cores em quatro canais: alfa, vermelho, verde e azul. Cada componente é representado por um valor de ponto flutuante com um intervalo normal de 0.0 a 1.0. Um valor de 0.0 indica a ausência completa da cor, enquanto um valor de 1.0 indica que a cor está totalmente presente. Para o componente alfa, 0.0 representa uma cor totalmente transparente e 1.0 representa uma cor totalmente opaca.
 
-### Alpha Modes
+### Modos Alfa
 
-Color values in [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) are always interpreted as straight alpha.
+Os valores de cor no [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) sempre são interpretados como alfa puro.
 
-## Using Color Brush
+## Usando o pincel de cor
 
-To create a color brush, call the Compositor.[**CreateColorBrush**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositor.createcolorbrush.aspx) method, which returns a [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399). The default color for **CompositionColorBrush** is \#00000000. The following illustration and code shows a small visual tree to create a rectangle that is stroked with a black color brush and painted with a solid color brush that has the color value of 0x9ACD32.
+Para criar um pincel de cor, chame o método Compositor.[**CreateColorBrush**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositor.createcolorbrush.aspx), que retorna um [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399). A cor padrão para **CompositionColorBrush** é \#00000000. A ilustração e o código a seguir mostram uma pequena árvore visual para criar um retângulo tracejado com um pincel de cor preta e pintado com um pincel de cor sólida que tem o valor de cor 0x9ACD32.
 
 ![CompositionColorBrush](images/composition-compositioncolorbrush.png)
 ```cs
@@ -62,21 +68,20 @@ Visual2.Size = new Vector2(150, 150);
 Visual2.Offset = new Vector3(3, 3, 0);
 ```
 
-Unlike other brushes, creating a [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) is a relatively inexpensive operation. You may create **CompositionColorBrush** objects each time you render with little to no performance impact.
+Ao contrário de outros pincéis, criar um [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) é uma operação relativamente barata. Você pode criar objetos **CompositionColorBrush** a cada renderização, com pouco ou nenhum impacto no desempenho.
 
-## Using Surface Brush
+## Usando o pincel de superfície
 
-A [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) paints a visual with a composition surface (represented by a [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) object). The following illustration shows a square visual painted with a bitmap of licorice rendered onto a **ICompositionSurface** using D2D.
+Um [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) pinta um elemento visual com uma superfície de composição (representada por um objeto [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819)). A ilustração a seguir mostra um elemento visual quadrado pintado com um bitmap da imagem licorice renderizado em um **ICompositionSurface** usando D2D.
 
-![CompositionSurfaceBrush](images/composition-compositionsurfacebrush.png)
-The first example initializes a composition surface for use with the brush. The composition surface is created using a helper method, LoadImage that takes in a [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) and a Url as a string. It loads the image from the Url, renders the image onto a [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) and sets the surface as content of the **CompositionSurfaceBrush**. Note, **ICompositionSurface** is exposed in Native code only, hence LoadImage method is implemented in native code.
+![CompositionSurfaceBrush O primeiro exemplo inicializa uma superfície de composição para uso com o pincel. A superfície de composição é criada usando um método auxiliar, LoadImage, que recebe um [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) e uma URL como uma cadeia de caracteres. Ela carrega a imagem da URL, renderiza a imagem em um [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) e define a superfície como conteúdo do **CompositionSurfaceBrush**.
 
 ```cs
 LoadImage(Brush,
           "ms-appx:///Assets/liqorice.png");
 ```
 
-To create the surface brush, call the Compositor.[**CreateSurfaceBrush**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositor.createsurfacebrush.aspx) method. The method returns a [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) object. The code below illustrates the code that can be used to paint a visual with contents of a **CompositionSurfaceBrush**.
+Observe que **ICompositionSurface** fica exposto somente no código nativo, portanto, o método LoadImage é implementado em código nativo. Para criar o pincel de superfície, chame o método Compositor.[**CreateSurfaceBrush**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositor.createsurfacebrush.aspx). O método retorna um objeto [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415).
 
 ```cs
 Compositor _compositor;
@@ -89,24 +94,31 @@ LoadImage(_surfaceBrush, "ms-appx:///Assets/liqorice.png");
 visual.Brush = _surfaceBrush;
 ```
 
-## Configuring Stretch and Alignment
+## O exemplo a seguir ilustra o código que pode ser usado para pintar um elemento visual com o conteúdo de um **CompositionSurfaceBrush**
 
-Sometimes, the contents of the [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) for a [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) doesn’t completely fill the areas of the visual that is being painted. When this happens, the Composition API uses the brush’s [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) and [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) mode settings to determine how to fill the remaining area.
+Configurando a ampliação e o alinhamento Às vezes, o conteúdo do [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) para um [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) não preenche completamente as áreas do elemento visual que está sendo pintado.
 
--   [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) and [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) are of type float and can be used to control the positioning of the brush inside the visual bounds.
-    -   Value 0.0 aligns the left/top corner of the brush with the left/top corner of the visual
-    -   Value of 0.5 aligns the center of the brush with the center of the visual
-    -   Value of 1.0 aligns the right/bottom corner of the brush with the right/bottom corner of the visual
--   The [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) property accepts these values, which the [**CompositionStretch**](https://msdn.microsoft.com/library/windows/apps/Dn706786) enumeration defines:
-    -   None: The brush doesn't stretch to fill the visual bounds. Be careful with this Stretch setting: if the brush is larger than the visual bounds, the contents of the brush will be clipped. The portion of brush used to paint the visual bounds can be controlled by using the [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) and [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) properties.
-    -   Uniform: The brush is scaled to fit the visual bounds; the aspect ratio of the brush is preserved. This is the default value.
-    -   UniformToFill: The brush is scaled so that it completely fills the visual bounds; the aspect ratio of the brush is preserved.
-    -   Fill: The brush is scaled to fit the visual bounds. Because the brush’s height and width are scaled independently, the original aspect ratio of the brush might not be preserved. That is, the brush might be distorted to completely fill the visual bounds.
+-   Quando isso acontece, a API de composição usa as configurações de modo [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) e [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) do pincel para determinar como preencher a área restante.
+    -   [
+              **HorizontalAlignmentRatio**
+            ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) e [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) são do tipo float e podem ser usados para controlar o posicionamento do pincel dentro dos limites do elemento visual.
+    -   O valor 0.0 alinha o canto esquerdo/superior do pincel com o canto esquerdo/superior do elemento visual
+    -   O valor de 0,5 alinha o centro do pincel com o centro do elemento visual
+-   O valor de 1.0 alinha o canto direito/inferior do pincel com o canto direito/inferior do elemento visual
+    -   A propriedade [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) aceita estes valores, que a enumeração [**CompositionStretch**](https://msdn.microsoft.com/library/windows/apps/Dn706786) define: None: o pincel não se amplia para preencher os limites do elemento visual. Tome cuidado com essa configuração de ampliação: se o pincel for maior do que os limites do elemento visual, o conteúdo do pincel será recortado.
+    -   A parte do pincel usada para pintar os limites do elemento visual pode ser controlada usando as propriedades [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) e [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio). Uniform: o pincel é dimensionado para caber nos limites do elemento visual; a taxa de proporção do pincel é preservada.
+    -   Esse é o valor padrão.
+    -   UniformToFill: o pincel é dimensionado para preencher completamente os limites do elemento visual; a taxa de proporção do pincel é preservada. Fill: o pincel é dimensionado para caber nos limites do elemento visual. Como a altura e a largura do pincel são escalonadas independentemente, a taxa de proporção original do pincel pode não ser preservada.
 
- 
+ 
 
- 
+ 
 
 
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 
