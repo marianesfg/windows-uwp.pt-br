@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/f4be0775cdccf98ecad9a2c7ff8395d9a5a250e7/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md) | HandedOffSuccess | [Details](#da4fe234efd615615a670be914e24e423f4813083369)
+ [windows-apps-src\publish\setting-up-your-payout-account-and-tax-forms.md](https://github.com/Microsoft/windows-apps/blob/f17132514a42c50d6bfe716f6be706748c287043/windows-apps-src/publish/setting-up-your-payout-account-and-tax-forms.md) | HandedOffSuccess | [Details](#45cb4e8b65f1aeb75c049a88c143a23350d47b643538)
 
 ## Item Details
-##### <a name='da4fe234efd615615a670be914e24e423f4813083369'></a> Source: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/f4be0775cdccf98ecad9a2c7ff8395d9a5a250e7/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
+##### <a name='45cb4e8b65f1aeb75c049a88c143a23350d47b643538'></a> Source: [windows-apps-src\publish\setting-up-your-payout-account-and-tax-forms.md](https://github.com/Microsoft/windows-apps/blob/f17132514a42c50d6bfe716f6be706748c287043/windows-apps-src/publish/setting-up-your-payout-account-and-tax-forms.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/546daaaa363b6997cf8a79d4b7f30edb692d8c8d/ol-handoff/Microsoft/windows-apps.pt-br/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.pt-br.xlf)
-* Handoff Datetime: 2016-05-19 05:40:40
+* Handoff File: [setting-up-your-payout-account-and-tax-forms.713eef0ce6c8021be69a291d8f7972e14807c5ae.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/328e2ef6844716d729160ab294e9d545b16accd2/ol-handoff/Microsoft/windows-apps.pt-br/master/setting-up-your-payout-account-and-tax-forms.713eef0ce6c8021be69a291d8f7972e14807c5ae.pt-br.xlf)
+* Handoff Datetime: 2016-05-19 18:11:28
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
