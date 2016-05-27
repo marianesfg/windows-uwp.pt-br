@@ -6,22 +6,19 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/e19b36e39e4e664efc7f8d5d1d045e7d61cbe9cb/windows-apps-src/gaming/e2e.md) | OutofSyncHandedBackSuccess | [Details](#ab40d0fb462338b35eed64f732b6c6f2fcb5fc0b2115)
+ [windows-apps-src\accessibility\designing-inclusive-software.md](https://github.com/Microsoft/windows-apps/blob/ea4d413e0b2ade1429d255afbc6a1a73ea308051/windows-apps-src/accessibility/designing-inclusive-software.md) | HandedOffSuccess | [Details](#6f1c0663034f81bb0ddfe42c04fbe60562b45c1c15)
 
 ## Item Details
-##### <a name='ab40d0fb462338b35eed64f732b6c6f2fcb5fc0b2115'></a> Source: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/e19b36e39e4e664efc7f8d5d1d045e7d61cbe9cb/windows-apps-src/gaming/e2e.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='6f1c0663034f81bb0ddfe42c04fbe60562b45c1c15'></a> Source: [windows-apps-src\accessibility\designing-inclusive-software.md](https://github.com/Microsoft/windows-apps/blob/ea4d413e0b2ade1429d255afbc6a1a73ea308051/windows-apps-src/accessibility/designing-inclusive-software.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/d46ce033b078af3579f7ac0419a2492e49ef0100/ol-handoff/Microsoft/windows-apps.pt-br/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.pt-br.xlf)
-* Handoff Datetime: 2016-05-27 17:55:11
+* Handoff File: [designing-inclusive-software.cace2c94cd90e8f06f4407c372de9ef7748f95e7.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/899cf0805aa2d173f329a94391d0cee38a16bc61/ol-handoff/Microsoft/windows-apps.pt-br/master/designing-inclusive-software.cace2c94cd90e8f06f4407c372de9ef7748f95e7.pt-br.xlf)
+* Handoff Datetime: 2016-05-27 18:27:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps.pt-br/blob/36cf8771435bcb09afc717d0596d6bcdcf33f42c/windows-apps-src/gaming/e2e.md)
-* Current Handback File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/984857ef45f7eab39ab9d0937ffe6df712cd3312/ol-handback/Microsoft/windows-apps.pt-br/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.pt-br.xlf)
-* Current Handback Datetime: 2016-05-17 13:12:18
 * [Back to Top](#report-top)
 
 
