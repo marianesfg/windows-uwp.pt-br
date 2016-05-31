@@ -371,15 +371,9 @@
 ##### [Passo a passo: exemplos de portabilidade do OpenGL ES 2.0](gaming/walkthrough-sample-ports-from-opengl-es-2-0.md)
 ###### [Como: fazer a portabilidade de um renderizador OpenGL ES 2.0 simples para Direct3D 11,1](gaming/port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
 ####### [Fazer a portabilidade dos objetos do sombreador](gaming/port-the-shader-config.md)
-            
-####### 
-            [Fazer a portabilidade de dados e buffers de vértice](gaming/port-the-vertex-buffers-and-data-config.md)
-            
-####### 
-            [Fazer a portabilidade do GLSL](gaming/port-the-glsl.md)
-            
-####### 
-            [Desenhar na tela](gaming/draw-to-the-screen.md)
+####### [Fazer a portabilidade de dados e buffers de vértice](gaming/port-the-vertex-buffers-and-data-config.md)
+####### [Fazer a portabilidade do GLSL](gaming/port-the-glsl.md)
+####### [Desenhar na tela](gaming/draw-to-the-screen.md)
 ##### [Referência do OpenGL ES 2.0 para Direct3D 11.1](gaming/opengl-es-2-0-to-directx-11-1-reference.md)
 ###### [Referência de GLSL para HLSL](gaming/glsl-to-hlsl-reference.md)
 ### [Recursos de programação de jogos](gaming/additional-directx-game-programming-resources.md)
