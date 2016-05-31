@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Os controles de data e hora permitem que você visualize e defina a data e hora. Este artigo fornece diretrizes de design e ajuda você a escolher o controle correto.
 title: Diretrizes para os controles de data e hora
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
@@ -43,7 +44,7 @@ A visão de calendário é composta de três visões separadas: a visão de mês
 
 ### Seletor de data do calendário
 
-**CalendarDatePicker** é um controle suspenso otimizado para selecionar uma única data em uma visão de calendário, onde informações contextuais como o dia da semana ou o preenchimento do calendário são importantes. Você pode modificar o calendário para fornecer contexto adicional ou limitar as datas disponíveis.
+**CalendarDatePicker** é um controle suspenso que é otimizado para selecionar uma única data em uma visão de calendário, onde informações contextuais como o dia da semana ou o preenchimento do calendário são importantes. Você pode modificar o calendário para fornecer contexto adicional ou limitar as datas disponíveis.
 
 O ponto de entrada exibirá o texto de espaço reservado se uma data não tiver sido definida; caso contrário, ele exibirá a data escolhida. Quando o usuário seleciona o ponto de entrada, uma visão de calendário se expande para que o usuário faça uma seleção de data. A visão de calendário se sobrepõe à outra interface do usuário; ela não remove a outra interface do usuário.
 
@@ -97,7 +98,8 @@ Um conceito relacionado é a classe Calendar, que influencia como as datas são 
 
 O .NET também dá suporte a um tipo chamado [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx), que é implicitamente conversível para um [**DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx). Portanto, você pode ver um tipo de "DateTime"usado em código .NET que é usado para definir valores que são realmente DateTimeOffset. Para saber mais sobre a diferença entre DateTime e DateTimeOffset, consulte Comentários na classe [**DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx).
 
-> **Observação**&nbsp;&nbsp;Propriedades que usam objetos de data não podem ser definidas como uma cadeia de caracteres de atributo XAML, pois o analisador de XAML do Tempo de Execução do Windows não tem uma lógica de conversão para converter cadeias de caracteres em datas como objetos DateTime/DateTimeOffset. Você normalmente define esses valores no código. Outra técnica possível é definir uma data que está disponível como um objeto de dados ou no contexto de dados e, em seguida, definir a propriedade como um atributo XAML que faz referência a uma expressão [\{Binding\} expressão de marcação](../xaml-platform/binding-markup-extension.md) que pode acessar a data como dados.
+> **Observação**
+            &nbsp;&nbsp;Propriedades que usam objetos de data não podem ser definidas como uma cadeia de caracteres de atributo XAML, pois o analisador de XAML do Windows Runtime não tem uma lógica de conversão para converter cadeias de caracteres em datas como objetos DateTime/DateTimeOffset. Você normalmente define esses valores no código. Outra técnica possível é definir uma data que está disponível como um objeto de dados ou no contexto de dados e, em seguida, definir a propriedade como um atributo XAML que faz referência a uma expressão [\{Binding\} expressão de marcação](../xaml-platform/binding-markup-extension.md) que pode acessar a data como dados.
 
 
 ## Tópicos relacionados
@@ -109,6 +111,6 @@ O .NET também dá suporte a um tipo chamado [**DateTime**](https://msdn.microso
 - [**Classe TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

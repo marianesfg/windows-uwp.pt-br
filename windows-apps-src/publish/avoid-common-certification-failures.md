@@ -1,15 +1,16 @@
 ---
-Description: analise esta lista para ajudar a evitar problemas que, frequentemente, impedem aplicativos de serem certificados ou que podem ser identificados durante uma verificação pontual após o aplicativo ser publicado.
-title: evitar falhas de certificação comuns
+author: jnHs
+Description: Analise esta lista para ajudar a evitar problemas que, frequentemente, impedem aplicativos de serem certificados ou que podem ser identificados durante uma verificação pontual após o aplicativo ser publicado.
+title: Evitar erros comuns de certificação
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
 ---
 
-# Evitar falhas de certificação comuns
+# Evitar erros comuns de certificação
 
 
 Analise esta lista para ajudar a evitar problemas que, frequentemente, impedem aplicativos de serem certificados ou que podem ser identificados durante uma verificação pontual após o aplicativo ser publicado.
 
-> **Nota**  Você também deve analisar as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944) para garantir que seu aplicativo atenda a todos os requisitos listados aqui.
+> **Observação**  Você também deve analisar as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944) para garantir que seu aplicativo atenda a todos os requisitos listados aqui.
 
  
 
@@ -39,6 +40,6 @@ Analise esta lista para ajudar a evitar problemas que, frequentemente, impedem a
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

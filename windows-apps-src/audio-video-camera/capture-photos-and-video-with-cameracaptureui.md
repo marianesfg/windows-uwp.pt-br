@@ -1,12 +1,13 @@
 ---
+author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
-description: este artigo descreve como usar a classe CameraCaptureUI para capturar fotos ou vídeos usando a interface do usuário da câmera integrada ao Windows.
-title: capturar fotos e vídeos com CameraCaptureUI
+description: Este artigo descreve como usar a classe CameraCaptureUI para capturar fotos ou vídeos usando a interface do usuário da câmera integrada ao Windows
+title: Capturar fotos e vídeos com CameraCaptureUI
 ---
 
 # Capturar fotos e vídeos com CameraCaptureUI
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo descreve como usar a classe CameraCaptureUI para capturar fotos ou vídeos usando a interface do usuário da câmera integrada ao Windows Esse recurso é fácil de usar e permite que seu aplicativo obtenha uma foto capturada pelo usuário ou um vídeo com apenas algumas linhas de código.
@@ -41,7 +42,7 @@ Para exibir a imagem na interface do usuário, declare um controle [**Image**](h
 
 [!code-xml[ImageControl](./code/CameraCaptureUIWin10/cs/MainPage.xaml#SnippetImageControl)]
 
-Para usar o bitmap de software na página XAML, inclua o namespace [**Windows**](https://msdn.microsoft.com/library/windows/apps/br243258) em uso em seu projeto.
+Para usar o bitmap de software na página XAML, inclua o namespace [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) em uso em seu projeto.
 
 [!code-cs[UsingSoftwareBitmapSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingSoftwareBitmapSource)]
 
@@ -68,7 +69,7 @@ Adicione os namespaces [**Windows.Media.Editing**](https://msdn.microsoft.com/li
 
 [!code-cs[UsingMediaComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingMediaComposition)]
 
-Declare as variáveis para um objeto [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) e uma [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn282716) que você deseja manter no escopo para o tempo de vida da página.
+Declare as variáveis para um objeto [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) e uma [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn282716) que você deseja manter na análise para o tempo de vida da página.
 
 [!code-cs[DeclareMediaComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetDeclareMediaComposition)]
 
@@ -106,6 +107,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

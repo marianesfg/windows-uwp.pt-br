@@ -1,22 +1,23 @@
 ---
-title: Planejar sua compatibilização DirectX
-description: Planeje o seu projeto de compatibilização de jogo do DirectX 9 para o DirectX 11 e Plataforma Universal do Windows (UWP)-- atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime.
+author: mtoepke
+title: Planejar a portabilidade do DirectX
+description: Planeje o seu projeto de portabilidade para jogos do DirectX 9 para o DirectX 11 e Plataforma Universal do Windows (UWP): atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime.
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 ---
 
-# Planejar sua compatibilização DirectX
+# Planejar a portabilidade do DirectX
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
--   Planejar sua compatibilização DirectX
+-   Planejar a portabilidade do DirectX
 -   [Alterações importantes do Direct3D 9 para o Direct3D 11](understand-direct3d-11-1-concepts.md)
 -   [Mapeamento de recursos](feature-mapping.md)
 
 
-Planeje o seu projeto de compatibilização de jogo do DirectX 9 para o DirectX 11 e Plataforma Universal do Windows (UWP): atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime.
+Planeje o seu projeto de portabilidade para jogos do DirectX 9 para o DirectX 11 e Plataforma Universal do Windows (UWP): atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime.
 
 ## Planejar para a compatibilização do código de elementos gráficos
 
@@ -62,6 +63,6 @@ Há dois conceitos que você usará com frequência:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

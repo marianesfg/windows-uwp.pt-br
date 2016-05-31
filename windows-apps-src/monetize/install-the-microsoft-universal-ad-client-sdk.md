@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 28C6D865-2A5C-4B64-82E3-49A862A36850
 description: O controle Ad Mediator e as ferramentas de desenvolvedor relacionadas estão disponíveis no SDK do Microsoft Universal Ad Client.
 title: Instalar o SDK do Universal Ad Client
@@ -6,6 +7,6 @@ redirect_url: https://msdn.microsoft.com/windows/uwp/monetize/monetize-your-app-
 ---
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

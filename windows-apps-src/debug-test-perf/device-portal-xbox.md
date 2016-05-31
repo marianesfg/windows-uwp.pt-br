@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Device Portal para Xbox
 description: Saiba como habilitar o Device Portal para Xbox One.
@@ -14,8 +15,7 @@ description: Saiba como habilitar o Device Portal para Xbox One.
 
 1. Selecione o bloco Dev Home na tela inicial (consulte a imagem)  
 ![DevHome do Device Portal](images/device-portal/xbox-dev-home-tile.png)
-2. Dentro da Dev Home, navegue até a ferramenta **Gerenciamento Remoto** 
-![Ferramenta Gerenciamento Remoto do Device Portal](images/device-portal/xbox-remote-management-tool.png)
+2. No Dev Home, navegue para a ferramenta **Gerenciamento Remoto** ![Ferramenta Gerenciamento Remoto do Device Portal](images/device-portal/xbox-remote-management-tool.png)
 3. Selecione **Gerenciar o Windows Device Portal** e pressione **A**
 4. Marque a configuração **Habilitar Windows Device Portal**
 5. Insira um Nome de usuário e uma Senha, a serem usados para autenticar o acesso ao seu kit de desenvolvimento a partir de um navegador, e salve-os em seguida.
@@ -26,16 +26,13 @@ description: Saiba como habilitar o Device Portal para Xbox One.
 
 ## Páginas do Device Portal
 
-O Device Portal no Xbox fornece o conjunto padrão de páginas. Para obter descrições detalhadas, consulte [Visão geral do Windows Device Portal](device-portal.md).
+O Device Portal no Xbox fornece um conjunto padrão de páginas. Para obter descrições detalhadas, consulte [Visão geral do Windows Device Portal](device-portal.md).
 
 - Aplicativos
-- Processos
 - Desempenho
-- ETW (Rastreamento de Eventos para Windows)
-- Rastreamento de desempenho
-- Dispositivos
 - Rede
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
 
 

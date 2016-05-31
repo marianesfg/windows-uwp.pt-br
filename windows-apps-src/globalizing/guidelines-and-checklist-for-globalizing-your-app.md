@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 Description: Siga estas práticas recomendadas ao globalizar seus aplicativos para um público-alvo maior e ao localizar seus aplicativos para um mercado específico.
 Search.Refinement.TopicID: 180
 title: Diretrizes de globalização e localização
@@ -7,10 +8,10 @@ label: Do's and don'ts
 template: detail.hbs
 ---
 
-# O que fazer e o que não fazer em relação à globalização e à localização
+# O que fazer e o que não fazer em globalização e localização
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **APIs importantes**
@@ -73,7 +74,7 @@ Prepare seu aplicativo para adaptar-se a diferentes mercados escolhendo termos e
 </tr>
 <tr class="even">
 <td align="left"><p>Não use coloquialismos e metáforas.</p></td>
-<td align="left"><p>O idioma que é específico para um grupo demográfico, como cultura e idade, pode ser difícil de compreender ou traduzir, porque só as pessoas daquele grupo demográfico usam aquele idioma. Da mesma forma, as metáforas podem fazer sentido para uma pessoa, mas não significar nada para outra pessoa. Por exemplo, o termo &quot;bluebird&quot; (dia ensolarado depois de uma tempestade de neve) é algo específico de pessoas que fazem parte de uma cultura de esqui, mas outros que não pertencem àquela cultura podem não entender a expressão. Se você planeja localizar seu aplicativo e usar uma voz ou tom informal, explique adequadamente para os tradutores o significado e a voz a ser usada.</p></td>
+<td align="left"><p>O idioma que é específico para um grupo demográfico, como cultura e idade, pode ser difícil de compreender ou traduzir, porque só as pessoas daquele grupo demográfico usam aquele idioma. Da mesma forma, as metáforas podem fazer sentido para uma pessoa, mas não significar nada para outra pessoa. Por exemplo, um &quot;meu&quot; é algo específico da parte de uma cultura local, mas outros que não pertençam àquela cultura podem não entender a expressão. Se você planeja localizar seu aplicativo e usar uma voz ou tom informal, explique adequadamente para os tradutores o significado e a voz a ser usada.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Não use jargão técnico, abreviações ou acrônimos.</p></td>
@@ -85,7 +86,7 @@ Prepare seu aplicativo para adaptar-se a diferentes mercados escolhendo termos e
 </tr>
 <tr class="odd">
 <td align="left"><p>Evite ofensas políticas em mapas ou quando estiver se referindo a regiões.</p></td>
-<td align="left"><p>Os mapas podem incluir regiões controversas ou limites nacionais e são uma fonte frequente de ofensas políticas. Tenha cuidado para que nenhuma interface de usuário usada para selecionar uma nação se refira a ela como um &quot;país/região&quot;. Colocar um território em disputa em uma lista rotulada como &quot;Países&quot;, como em um formulário de endereço, pode trazer problemas para você.</p></td>
+<td align="left"><p>Os mapas podem incluir regiões controversas ou limites nacionais e são uma fonte frequente de ofensas políticas. Tome cuidado para que nenhuma interface de usuário usada para selecionar uma nação se refira a ela como um &quot;país/região&quot;. Colocar um território em disputa em uma lista rotulada como &quot;Países&quot;, como em um formulário de endereço, pode trazer problemas para você.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Não use somente comparação de cadeia de caracteres para comparar marcas de idiomas.</p></td>
@@ -166,7 +167,7 @@ Prepare seu aplicativo para adaptar-se a diferentes mercados escolhendo termos e
 </tr>
 <tr class="even">
 <td align="left"><p>Não reutilize as cadeias de caracteres em diferentes contextos.</p></td>
-<td align="left"><p>Não reutilize cadeias de caracteres em diferentes contextos, porque até mesmos palavras simples como &quot;on&quot; e &quot;off&quot; podem ser traduzidas de maneiras diferentes, dependendo do contexto.</p></td>
+<td align="left"><p>Não reutilize cadeias de caracteres em diferentes contextos, porque até mesmos palavras simples como &quot;ativado&quot; e &quot;desativado&quot;" podem ser traduzidas de formas diferentes, dependendo do contexto.</p></td>
 </tr>
 </tbody>
 </table>
@@ -176,7 +177,7 @@ Prepare seu aplicativo para adaptar-se a diferentes mercados escolhendo termos e
 ## <span id="related_topics"></span>Artigos relacionados
 
 
-**Amostras**
+**Exemplos**
 * [Amostra de recursos e localização de aplicativos](http://go.microsoft.com/fwlink/p/?linkid=254478)
 * [Amostra de preferências de globalização](http://go.microsoft.com/fwlink/p/?linkid=231608)
  
@@ -187,6 +188,6 @@ Prepare seu aplicativo para adaptar-se a diferentes mercados escolhendo termos e
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

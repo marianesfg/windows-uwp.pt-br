@@ -1,16 +1,13 @@
 ---
-Description: em um aplicativo da Plataforma Universal do Windows (UWP), elementos de comando são os elementos interativos da interface do usuário que permitem ao usuário executar ações, como enviar um email, excluir um item ou enviar um formulário.
-title: noções básicas de design de comando para aplicativos da Plataforma Universal do Windows (UWP)
+author: mijacobs
+Description: Em um aplicativo da Plataforma Universal do Windows (UWP), elementos de comando são os elementos interativos da interface do usuário que permitem ao usuário executar ações, como enviar um email, excluir um item ou enviar um formulário.
+title: Noções básicas de design de comando para aplicativos da Plataforma Universal do Windows (UWP)
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
-label: noções básicas de design de comando
+label: Command design basics
 template: detail.hbs
 ---
 
 #  Noções básicas de design de comandos para aplicativos UWP
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Em um aplicativo da Plataforma Universal do Windows (UWP), *elementos de comando* são os elementos interativos da interface do usuário que permitem ao usuário executar ações, como enviar um email, excluir um item ou enviar um formulário. Este artigo descreve os elementos de comando, como botões e caixas de seleção, as interações a que eles dão suporte e as superfícies de comando (por exemplo, barras de comandos e menus de contexto) para hospedá-los.
 
@@ -36,7 +33,7 @@ Usar os elementos certos para as interações certas pode significar a diferenç
 
  
 
-(Para obter uma lista completa, consulte [Controles e elementos de interface do usuário](https://dev.windows.com/design/controls-patterns)
+Para obter uma lista completa, consulte [Controles e elementos de interface do usuário](https://dev.windows.com/design/controls-patterns)
 
 ## <span id="_________Place_commands_on_the_right_surface_______"></span><span id="_________place_commands_on_the_right_surface_______"></span><span id="_________PLACE_COMMANDS_ON_THE_RIGHT_SURFACE_______"></span> Colocar comandos na superfície certa
 
@@ -71,15 +68,15 @@ Aqui está uma lista das superfícies de comando que o Windows fornece e recomen
 <p>No entanto, escolha com atenção os comandos que você colocará na tela. O excesso de comandos na tela do aplicativo ocupa espaço valioso e pode sobrecarregar o usuário. Se o comando não for usado com frequência, considere a possibilidade de colocá-lo em outra superfície de comando, como no menu ou na área &quot;Mais&quot; da barra de comandos.</p></td>
 </tr>
 <tr class="even">
-<td align="left">[Command bar](https://msdn.microsoft.com/library/windows/apps/hh465302)
+<td align="left">[Barra de comandos](https://msdn.microsoft.com/library/windows/apps/hh465302)
 <p><img src="images/controls-appbar-icons-200.png" alt="Example of a command bar with icons" /></p></td>
 <td align="left"><p>As barras de comandos fornecem aos usuários acesso fácil a ações. Você pode usar uma barra de comandos para mostrar comandos ou opções específicos do contexto do usuário, como o modo de desenho ou seleção de fotos.</p>
 <p>As barras de comandos podem ser posicionadas na parte superior, na parte inferior ou na parte superior e inferior da tela. Esse design de uma aplicativo de edição de fotos mostra a área de conteúdo e a barra de comandos:</p>
 <p><img src="images/commands-appcanvas-example.png" alt="A photo app" /></p>
-<p>Para obter mais informações sobre as barras de comando, consulte o artigo [Guidelines for command bar](https://msdn.microsoft.com/library/windows/apps/hh465302).</p></td>
+<p>Para saber mais sobre barras de comandos, consulte o artigo [Diretrizes para barra de comandos](https://msdn.microsoft.com/library/windows/apps/hh465302).</p></td>
 </tr>
 <tr class="odd">
-<td align="left">[Menus and context menus](../controls-and-patterns/dialogs-popups-menus.md)
+<td align="left">[Menus e menus de contexto](../controls-and-patterns/dialogs-popups-menus.md)
 <p><img src="images/controls-contextmenu-singlepane.png" alt="Example of a single-pane context menu" /></p></td>
 <td align="left"><p>Às vezes, é mais eficiente agrupar vários comandos em um menu de comando. Os menus permitem apresentar mais opções em menos espaço. Eles podem incluir controles interativos.</p>
 <p>Os menus de contexto podem fornecer atalhos para ações comumente usadas e fornecer acesso aos comandos secundários que são relevantes somente em determinados contextos.</p>
@@ -92,16 +89,16 @@ Aqui está uma lista das superfícies de comando que o Windows fornece e recomen
 </ul>
 <p>Este exemplo mostra o design de um aplicativo de metrô que usa um menu de contexto para modificar a rota, marcar uma rota ou selecionar outro trem.</p>
 <p><img src="images/subway/uap-subway-ak-8in-dashboard-200.png" alt="A context menu in an subway app" /></p>
-<p>Para obter mais informações sobre menus de contexto, consulte o artigo [Guidelines for context menu](https://msdn.microsoft.com/library/windows/apps/hh465308).</p></td>
+<p>Para saber mais sobre menus de contexto, consulte o artigo [Diretrizes para menu de contexto](https://msdn.microsoft.com/library/windows/apps/hh465308).</p></td>
 </tr>
 <tr class="even">
-<td align="left">[Dialog controls](../controls-and-patterns/dialogs-popups-menus.md)
+<td align="left">[Controles de caixa de diálogo](../controls-and-patterns/dialogs-popups-menus.md)
 <p><img src="images/controls-dialog-twobutton-200.png" alt="Example of a simple two-button dialog" /></p></td>
 <td align="left"><p>Caixas de diálogo são sobreposições de interface do usuário modais que fornecem informações contextuais do aplicativo. Na maioria dos casos, as caixas de diálogo bloqueiam interações com a janela do aplicativo até que sejam explicitamente ignoradas e muitas vezes solicitam algum tipo de ação do usuário.</p>
-<p>As caixas de diálogo podem causar interrupções e só devem ser usadas em determinadas situações. Para obter mais informações, consulte a seção [When to confirm or undo actions](#whentoconfirm).</p></td>
+<p>As caixas de diálogo podem causar interrupções e só devem ser usadas em determinadas situações. Para obter mais informações, consulte a seção [Quando confirmar ou desfazer ações](#whentoconfirm).</p></td>
 </tr>
 <tr class="odd">
-<td align="left">[Flyout](../controls-and-patterns/dialogs-popups-menus.md)
+<td align="left">[Submenu](../controls-and-patterns/dialogs-popups-menus.md)
 <p><img src="images/controls-flyout-default-200.png" alt="Image of default flyout" /></p></td>
 <td align="left"><p>Um pop-up leve e contextual que exibe a interface do usuário relacionada ao que o usuário está fazendo. Use um submenu para:</p>
 <p></p>
@@ -110,7 +107,7 @@ Aqui está uma lista das superfícies de comando que o Windows fornece e recomen
 <li>Mostrar mais detalhes sobre um item.</li>
 <li>Solicitar que o usuário confirme uma ação sem bloquear a interação com o aplicativo.</li>
 </ul>
-<p>Os submenus podem ser ignorados tocando ou clicando em algum lugar fora do submenu. Para obter mais informações sobre controles do submenu, consulte o artigo [Dialogs, menus, and popups](../controls-and-patterns/dialogs-popups-menus.md).</p></td>
+<p>Os submenus podem ser ignorados tocando ou clicando em algum lugar fora do submenu. Para saber mais sobre controles do submenu, consulte o artigo [Caixas de diálogo, menus e pop-ups](../controls-and-patterns/dialogs-popups-menus.md).</p></td>
 </tr>
 </tbody>
 </table>
@@ -144,7 +141,7 @@ Não importa se a interface do usuário foi bem projetada e se o usuário é cui
 Consulte a [Cartilha de interação](../input-and-devices/input-primer.md) para obter mais detalhes sobre a otimização de experiências do usuário em relação a um tipo de entrada ou um dispositivo específico.
 
 
-[Este artigo contém informações que são específicas a aplicativos UWP e ao Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
  
 
@@ -155,6 +152,6 @@ Consulte a [Cartilha de interação](../input-and-devices/input-primer.md) para 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

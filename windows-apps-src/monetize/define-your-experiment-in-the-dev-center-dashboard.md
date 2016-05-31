@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 Description: Antes de executar um experimento em seu aplicativo UWP (Plataforma Universal do Windows) com os testes A/B, você deve definir seu experimento no painel do Centro de Desenvolvimento.
 title: Definir seu experimento no painel do Centro de Desenvolvimento
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
@@ -79,6 +80,6 @@ Depois de definir seu experimento no painel do Centro de Desenvolvimento, você 
   * [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

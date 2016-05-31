@@ -1,12 +1,13 @@
 ---
+author: jwmsft
 description: Você pode usar a classe PropertyPath e a sintaxe de cadeia de caracteres para instanciar um valor PropertyPath em XAML ou em código.
-title: Sintaxe de caminho de propriedade
+title: Sintaxe de Property-path'
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ---
 
-# Sintaxe de caminho de propriedade
+# Sintaxe de Property-path
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Você pode usar a classe [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) e a sintaxe de cadeia de caracteres para instanciar um valor **PropertyPath** vem XAML ou em código. Valores **PropertyPath** são usados por vinculação de dados. Uma sintaxe semelhante é usada para direcionar animações em storyboard. Porém, o direcionamento da animação não cria valores de sintaxe de Property-path subjacentes, mas mantém as informações como uma cadeia de caracteres. Nos dois cenários, um caminho de propriedade descreve uma passagem de uma ou mais relações objeto-propriedade que eventualmente são resolvidas para uma única propriedade.
 
@@ -46,7 +47,7 @@ Um caminho de propriedade para vinculação de dados pode incluir referências a
 
 Por exemplo, considere um objeto comercial em que haja uma lista de "Times" (lista ordenada), cada uma tendo um dicionário de "Jogadores" onde cada jogador é citado pelo último nome. Um exemplo de caminho de propriedade para um jogador específico no segundo time é: "Times\[1\].Jogadores\[Smith\]". (Você usa 1 para indicar o segundo item em "Times" porque a lista é indexada com zero.)
 
-**Observação**  Indexar suporte para fontes de dados é limitado, consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Observação**  Indexar suporte para fontes de dados C++ é limitado, consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### Propriedades anexadas
 
@@ -99,7 +100,9 @@ A classe [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br24
 
 Na maioria das vezes, é possível aplicar um [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) em XAML sem usar nenhum código. Mas, em alguns casos, pode ser que você queria definir um objeto **PropertyPath** usando um código e atribuí-lo a uma propriedade em tempo de execução.
 
-[**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) tem um construtor [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261), mas não tem um construtor padrão. A cadeia de caracteres que você passa para esse construtores é definida usando uma sintaxe de caminho de propriedade, como explicado anteriormente. Ela também é a mesma cadeia de caracteres que você usaria para atribuir [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) como atributo XAML. O único outro API da classe **PropertyPath** na propriedade [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260), que é somente para leitura. Você poderia usar essa propriedade como a cadeia de caracteres de construção para outra instância **PropertyPath**.
+[
+              **PropertyPath**
+            ](https://msdn.microsoft.com/library/windows/apps/br244259) tem um construtor [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261), mas não tem um construtor padrão. A cadeia de caracteres que você passa para esse construtores é definida usando uma sintaxe de caminho de propriedade, como explicado anteriormente. Ela também é a mesma cadeia de caracteres que você usaria para atribuir [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) como atributo XAML. O único outro API da classe **PropertyPath** na propriedade [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260), que é somente para leitura. Você poderia usar essa propriedade como a cadeia de caracteres de construção para outra instância **PropertyPath**.
 
 ## Tópicos relacionados
 
@@ -113,6 +116,6 @@ Na maioria das vezes, é possível aplicar um [**PropertyPath**](https://msdn.mi
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

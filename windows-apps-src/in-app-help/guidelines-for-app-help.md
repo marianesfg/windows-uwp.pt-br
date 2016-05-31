@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: Estas diretrizes descrevem como criar conteúdo da ajuda eficaz para seu aplicativo.
 title: Diretrizes da ajuda do aplicativo
 label: Guidelines for app help
@@ -7,7 +8,7 @@ template: detail.hbs
 
 # Diretrizes da ajuda do aplicativo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Os aplicativos podem ser complexos e o fornecimento de ajuda eficaz pode melhorar consideravelmente a experiência dos usuários. Nem todos os aplicativos precisam fornecer ajuda para seus usuários e o tipo de ajuda que deve ser fornecido pode variar bastante, dependendo do aplicativo.
 
@@ -29,7 +30,7 @@ Toda ajuda, qualquer que seja, deve seguir estes princípios:
 
 -   **Simples:** os usuários que procuram a ajuda querem respostas claras apresentadas diretamente a eles.
 
--   **Relevante:** os usuários não querem precisar pesquisar por seu problema específico. Eles querem uma ajuda mais relevante apresentada diretamente para eles (isso é chamado de "Ajuda contextual") ou querem uma interface fácil de navegar.
+-   **Relevante:** os usuários não querem ter a necessidade de procurar seu problema específico. Eles querem uma ajuda mais relevante apresentada diretamente para eles (isso é chamado de "Ajuda contextual") ou querem uma interface fácil de navegar.
 
 -   **Direta:** quando um usuário procura a ajuda, eles querem ver a ajuda. Se seu aplicativo incluir páginas para relatório de bugs, envio de comentários, exibição dos termos de serviço ou funções semelhantes, é bom que sua ajuda tenha links para essas páginas. Mas eles devem ser incluídos como algo secundário na página principal da ajuda e não como itens de igual ou maior importância.
 
@@ -60,6 +61,6 @@ Para tutoriais detalhados, funções avançadas ou bibliotecas de tópicos da aj
 \[Este artigo contém informações que são específicas aos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

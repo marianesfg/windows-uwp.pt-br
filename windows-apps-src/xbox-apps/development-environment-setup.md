@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Configurar seu ambiente de desenvolvimento da UWP no Xbox
 description: Etapas para configurar e testar sua UWP no ambiente de desenvolvimento do Xbox.
 area: Xbox
@@ -24,7 +25,8 @@ Este artigo discute as etapas para configurar e testar seu ambiente de desenvolv
 
 Instale o Windows 10 SDK Preview (compilação 14295). Para obter informações de instalação, consulte [Baixe atualizações do Insider Preview para desenvolvedores](http://go.microsoft.com/fwlink/p/?LinkId=780552).
 
-  > **Importante**&nbsp;&nbsp;Você precisará instalar o SDK mais recente, mas _não_ precisará instalar a última versão do Windows Insider Preview para o sistema operacional.
+  > **Importante**
+            &nbsp;&nbsp;Você precisa instalar o SDK mais recente, mas _não_ precisa instalar a versão mais recente do Windows Insider Preview do sistema operacional.
 
 ## Criar seu primeiro aplicativo
 
@@ -49,7 +51,7 @@ Instale o Windows 10 SDK Preview (compilação 14295). Para obter informações 
   1. Em **Computador remoto**, insira o endereço IP do sistema ou o nome do host do console Xbox One. Para saber mais sobre como obter o endereço IP ou o nome do host, consulte [Introdução às ferramentas do Xbox One](introduction-to-xbox-tools.md).
   1. Na lista suspensa **Modo de Autenticação**, selecione **Universal (Protocolo Descriptografado)**.
 
-    ![C# BlankApp Property Pages](images/vs_remote.jpg)
+    ![Páginas de Propriedades de BlankApp em C#](images/vs_remote.jpg)
 
 ### Iniciando um projeto C++
 
@@ -77,11 +79,11 @@ Instale o Windows 10 SDK Preview (compilação 14295). Para obter informações 
   1. Para obter um PIN, abra **Dev Home** na tela inicial do seu console Xbox One.
   1. Selecione **Emparelhar com o Visual Studio**.
 
-    ![Pair with Visual Studio dialog](images/devhome_visualstudio.png)
+    ![Caixa de diálogo Emparelhar com o Visual Studio](images/devhome_visualstudio.png)
 
   1. Insira seu PIN na caixa de diálogo **Emparelhar com o Visual Studio**. O PIN a seguir é apenas um exemplo. O seu será diferente.
 
-    ![Pair with Visual Studio PIN dialog](images/devhome_pin.png)
+    ![Caixa de diálogo Emparelhar com o PIN do Visual Studio](images/devhome_pin.png)
 
   1. Erros de implantação, se houver, aparecerão na janela **Saída**.
 
@@ -99,6 +101,6 @@ Parabéns! Você criou e implantou com êxito o seu primeiro aplicativo UWP no X
 ----
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

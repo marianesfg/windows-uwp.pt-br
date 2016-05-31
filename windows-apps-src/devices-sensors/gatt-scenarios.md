@@ -1,13 +1,14 @@
 ---
+author: DBirtolo
 ms.assetid: 28B30708-FE08-4BE9-AE11-5429F963C330
-title: GATT de Bluetooth
+title: GATT Bluetooth
 description: Este artigo fornece uma visão geral do GATT (Perfil de Atributo Genérico) de Bluetooth para aplicativos UWP (Plataforma Universal do Windows), juntamente com o código de exemplo para três cenários comuns de GATT.
 ---
 # GATT de Bluetooth
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** APIs importantes
+** APIs importantes **
 
 -   [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/Dn263413)
 -   [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685)
@@ -43,7 +44,7 @@ Por conveniência, o Bluetooth SIG mantém uma [lista de perfis públicos](http:
 
 Nesse exemplo, o aplicativo usa medições de temperatura de um dispositivo Bluetooth que implementa o Serviço de Termômetro de Integridade do Bluetooth LE. O aplicativo especifica que quer ser notificado quando uma nova medição de temperatura estiver disponível. Ao registrar um manipulador de eventos para o evento "Valor característico do termômetro alterado", o aplicativo receberá notificações de evento de valor característica alterado enquanto estiver sendo executado em primeiro plano.
 
-Observe que, quando o aplicativo está suspenso, ele deve liberar todos os recursos do dispositivo e, quando retomar, deve executar enumeração do dispositivo e inicialização novamente.
+Observe que, quando o aplicativo está suspenso, ele deve liberar todos os recursos do dispositivo e, quando retomar, deve executar enumeração do dispositivo e inicialização novamente. Se a interação de dispositivo em segundo plano é desejada, confira [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx) ou [GattCharacteristicNotificationTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.gattcharacteristicnotificationtrigger.aspx). DeviceUseTrigger é normalmente melhor para eventos de frequência mais alta enquanto GattCharacteristicNotificationTrigger é melhor para a manipulação de eventos não frequentes.  
 
 ```csharp
 double convertTemperatureData(byte[] temperatureData)
@@ -132,7 +133,7 @@ void MainPage::Initialize()
                 ref new TypedEventHandler<
                     GattCharacteristic^, 
                     GattValueChangedEventArgs^>(
-                        this, &amp;MainPage::TemperatureMeasurementChanged);
+                        this, &MainPage::TemperatureMeasurementChanged);
 
             create_task(thermometerCharacteristic->
                 WriteClientCharacteristicConfigurationDescriptorAsync(
@@ -354,7 +355,7 @@ void MainPage::Initialize()
                 ref new TypedEventHandler<
                     GattCharacteristic^, 
                     GattValueChangedEventArgs^>
-                    (this, &amp;MainPage::BatteryLevelChanged);
+                    (this, &MainPage::BatteryLevelChanged);
 
             create_task(batteryLevelCharacteristic
                 ->WriteClientCharacteristicConfigurationDescriptorAsync(
@@ -395,6 +396,6 @@ void MainPage::BatteryLevelChanged(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

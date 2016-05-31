@@ -1,14 +1,15 @@
 ---
+author: jwmsft
 title: Atributo xDeferLoadStrategy
-description: xDeferLoadStrategy atrasa a criação de um elemento e seus filhos, reduzindo o tempo de inicialização, mas aumentando um pouco o uso da memória. Cada elemento afetado adiciona cerca de 600 bytes para o uso da memória.
+description: xDeferLoadStrategy atrasa a criação de um elemento e seus filhos, o que reduz o tempo de inicialização, mas aumenta um pouco o uso da memória. Cada elemento afetado adiciona cerca de 600 bytes para o uso da memória.
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 ---
 
 # Atributo x:DeferLoadStrategy
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**x:DeferLoadStrategy="Lazy"** atrasa a criação de um elemento e seus filhos, reduzindo o tempo de inicialização, mas aumentando um pouco o uso da memória. Cada elemento afetado adiciona cerca de 600 bytes para o uso da memória. Quanto maior for a árvore de elementos que você adiar, mais tempo de inicialização você vai economizar, mas ao custo de um volume de memória maior. Portanto, é possível usar esse atributo em excesso até o limite de redução do seu desempenho.
+**x:DeferLoadStrategy="Lazy"** atrasa a criação de um elemento e seus filhos, o que reduz o tempo de inicialização, mas aumenta um pouco o uso da memória. Cada elemento afetado adiciona cerca de 600 bytes para o uso da memória. Quanto maior for a árvore de elementos que você adiar, mais tempo de inicialização você vai economizar, mas ao custo de um volume de memória maior. Portanto, é possível usar esse atributo em excesso até o limite de redução do seu desempenho.
 
 ## Uso do atributo XAML
 
@@ -54,7 +55,7 @@ Uma diretriz geral é avaliar o aplicativo antes e depois, para garantir que voc
 
 ## Exemplo
 
-```xaml
+```xml
 <Grid x:Name="DeferredGrid" x:DeferLoadStrategy="Lazy">
     <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
@@ -82,6 +83,6 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

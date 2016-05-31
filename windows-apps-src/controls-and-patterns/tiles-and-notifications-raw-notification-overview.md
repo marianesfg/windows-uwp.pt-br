@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: As notificações brutas são notificações por push curtas com finalidade geral.
 title: Visão geral de notificações brutas
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
-label: a ser definido
+label: TBD
 template: detail.hbs
 ---
 
 # Visão geral de notificações brutas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 As notificações brutas são notificações por push curtas com finalidade geral. Elas são estritamente para instrução e não incluem componente de interface do usuário. Assim como nas outras notificações por push, o recurso WNS (Serviços de Notificação por Push do Windows) envia notificações brutas de seu serviço em nuvem para o aplicativo.
@@ -125,6 +126,6 @@ Você pode saber mais baixando a [Amostra de notificações de dados brutos](htt
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

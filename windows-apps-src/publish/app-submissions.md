@@ -1,12 +1,6 @@
 ---
-Description: assim que tiver criado seu aplicativo reservando um nome, você poderá começar a trabalhar na publicação dele. A primeira etapa é criar um envio.
-title: envio de aplicativos
-ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
-keywords: enviar um aplicativo
-keywords: informações obrigatórias
-keywords: campos obrigatórios
-keywords: dados obrigatórios
-keywords: lista de verificação
+author: jnHs Description: assim que tiver criado seu aplicativo reservando um nome, você poderá começar a trabalhar na publicação dele. A primeira etapa é criar um envio.
+title: envios de aplicativo ms.assetid: palavras-chave 363BB9E4-4437-4238-A80F-ABDFC70D96E4: enviar palavras-chave de um aplicativo: palavras-chave de informações necessárias: palavras-chave de dados necessárias: lista de verificação
 ---
 
 # Envios de aplicativo
@@ -95,9 +89,9 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 | **Observações**                     | Opcional                                    | [Notas para certificação](notes-for-certification.md)             |
 
  
-**Nota**  Para obter informações sobre a publicação de aplicativos de linha de negócios (LOB) diretamente para empresas, consulte [Distribute LOB apps to enterprises](distribute-lob-apps-to-enterprises.md).
+**Observação**  Para obter informações sobre a publicação de aplicativos de linha de negócios (LOB) diretamente para empresas, consulte [Distribuir aplicativos LOB para empresas](distribute-lob-apps-to-enterprises.md).
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

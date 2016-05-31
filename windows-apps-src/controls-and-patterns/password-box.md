@@ -1,17 +1,18 @@
 ---
-Description: Uma caixa de senha é uma caixa de entrada de texto que oculta os caracteres digitados nela, para fins de privacidade.
+author: Jwmsft
+Description: Caixa de senha é uma caixa de entrada de texto que oculta os caracteres digitados nela, para fins de privacidade.
 title: Diretrizes para caixas de senha
 ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
-label: caixa de senha
+label: Password box
 template: detail.hbs
 ---
 # Caixa de senha
-Uma caixa de senha é uma caixa de entrada de texto que oculta os caracteres digitados nela, para fins de privacidade. Uma caixa de senha se parece com uma caixa de texto, exceto que ela renderiza caracteres de espaço reservado no lugar do texto que foi inserido. Você pode configurar o caractere de espaço reservado.
+Caixa de senha é uma caixa de entrada de texto que oculta os caracteres digitados nela, para fins de privacidade. Uma caixa de senha se parece com uma caixa de texto, exceto que ela renderiza caracteres de espaço reservado no lugar do texto que foi inserido. Você pode configurar o caractere de espaço reservado.
 
 Por padrão, a caixa de senha oferece uma maneira para o usuário visualizar a senha pressionando um botão de revelar. Você pode desabilitar o botão de revelação ou fornecer um mecanismo alternativo para revelar a senha, como uma caixa de seleção.
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs Importantes</span>
+<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
 
 -   [**Classe PasswordBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
 -   [**Propriedade Password**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx)
@@ -19,7 +20,7 @@ Por padrão, a caixa de senha oferece uma maneira para o usuário visualizar a s
 -   [**Propriedade PasswordRevealMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx)
 -   [**Evento PasswordChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)
 
-## Este é o controle correto?
+## Esse é o controle correto?
 
 Use um controle **PasswordBox** para coletar uma senha ou outros dados particulares, como números de documentos.
 
@@ -111,7 +112,8 @@ Por padrão, o botão de revelação de senha (ou botão de "espiada") é exibid
 
 O valor da propriedade [PasswordRevealMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx) não é único fator que determina se um botão de revelar a senha é visível para o usuário. Outros fatores incluem se o controle é exibido acima de uma largura mínima, se a PasswordBox tem foco e se o campo de entrada de texto contém pelo menos um caractere. O botão de revelar a senha é exibido apenas quando a PasswordBox recebe foco pela primeira vez e um caractere é inserido. Se a PasswordBox perde foco e o retoma em seguida, o botão de revelar não é exibido novamente, a menos que a senha seja apagada e a entrada de caracteres recomece.
 
-> **Cuidado**&nbsp;&nbsp;Antes do Windows 10, o botão de revelar a senha não era exibido por padrão. Se a segurança de seu aplicativo exigir que a senha esteja sempre oculta, certifique-se de definir PasswordRevealMode como Hidden.
+> **Cuidado**
+            &nbsp;&nbsp;Antes do Windows 10, o botão de revelar a senha não era exibido por padrão. Se a segurança de seu aplicativo exigir que a senha esteja sempre oculta, certifique-se de definir PasswordRevealMode como Hidden.
 
 ### Modos ocultos e visíveis
 
@@ -153,7 +155,7 @@ Esta PasswordBox tem esta aparência.
     
 ## Escolha o teclado correto para seu controle de texto
 
-Para ajudar os usuários a inserir dados usando o teclado virtual ou o Soft Input Panel (SIP), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira. A PasswordBox oferece suporte apenas ao valores de escopo de entrada **Password** e **NumericPin**. Qualquer outro valor é ignorado.
+Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira. A PasswordBox oferece suporte apenas ao valores de escopo de entrada **Password** e **NumericPin**. Qualquer outro valor é ignorado.
 
 Para obter mais informações sobre como usar escopos de entrada, consulte [Usar o escopo de entrada para alterar o teclado virtual]().
 
@@ -166,7 +168,7 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 -   Mostre uma caixa de senha apenas para logons.
 -   Quando uma caixa de senha é usada para inserir um PIN, considere fornecer uma resposta instantânea assim que o último número for inserido, em vez de usar um botão de confirmação.
 
-\[Este artigo contém informações específicas para aplicativos da Plataforma Universal do Windows (UWP) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Artigos relacionados
 
@@ -186,6 +188,6 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

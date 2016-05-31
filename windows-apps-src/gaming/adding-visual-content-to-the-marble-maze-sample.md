@@ -1,13 +1,14 @@
 ---
-title: Inserindo conteúdo visual na amostra do Marble Maze
+author: mtoepke
+title: Adicionando conteúdo visual ao exemplo do Marble Maze
 description: Este documento descreve como o jogo Marble Maze usa Direct3D e Direct2D no ambiente do aplicativo da Plataforma Universal do Windows (UWP) para que você aprenda e adapte os parâmetros quando trabalhar com o conteúdo do seu próprio jogo.
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
 ---
 
-# Inserindo conteúdo visual na amostra do Marble Maze
+# Adicionando conteúdo visual ao exemplo do Marble Maze
 
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este documento descreve como o jogo Marble Maze usa Direct3D e Direct2D no ambiente do aplicativo da Plataforma Universal do Windows (UWP) para que você aprenda e adapte os parâmetros quando trabalhar com o conteúdo do seu próprio jogo. Para saber mais sobre como os componentes visuais do jogo se encaixam na estrutura geral do aplicativo Marble Maze, consulte [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md).
@@ -24,7 +25,7 @@ Também nos concentramos primeiro em adicionar ativos 3D e, em seguida, ativos 2
 
 Também precisamos repetir algumas dessas etapas várias vezes durante o processo de desenvolvimento. Por exemplo, conforme fazíamos mudanças aos modelos de malha e de bola de gude, também tivemos que mudar parte do código de sombreador que dá suporte a tais modelos.
 
-> **Observação**   O código de amostra que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 Seguem alguns dos principais pontos discutidos neste documento para quando você trabalhar com DirectX e conteúdo visual de jogos, ou seja, quando inicializar as bibliotecas de elementos gráficos do DirectX, carregar recursos de cena e atualizar e renderizar a cena.
@@ -47,10 +48,10 @@ O Marble Maze usa o Direct3D 11.1 para renderizar os ativos de jogo 3D, ou seja,
 
 O processo de desenvolvimento de jogos requer planejamento. Se você não conhecer o elementos gráficos do DirectX, pode ler Creating a DirectX game para familiarizar-se com os conceitos básicos da criação de um jogo DirectX UWP. Ao ler esse documento e trabalhar com o código-fonte do Marble Maze, você pode consultar os seguintes recursos para obter informações mais detalhadas sobre elementos gráficos DirectX.
 
--   [Direct3D 11 Graphics](https://msdn.microsoft.com/library/windows/desktop/ff476080) Descreve o Direct3D 11, uma API poderosa de elementos gráficos 3D com aceleração por hardware para renderizar a geometrias 3D na Plataforma Windows.
--   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) Descreve o Direct2D, uma API poderosa de elementos gráficos 2D com aceleração por hardware que fornece alto desempenho e alta qualidade para renderizar geometrias 2D, bitmaps e texto.
--   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) Descreve o DirectWrite, que dá suporte à renderização de texto em alta qualidade.
--   [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902) Descreve o WIC, uma plataforma extensível que fornece API de baixo nível para imagens digitais.
+-   [Elementos gráficos Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080) Descreve o Direct3D 11, uma poderosa API de elementos gráficos 3D com aceleração de hardware para a renderização da geometria 3D na plataforma Windows.
+-   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) Descreve o Direct2D, uma API de elementos gráficos 2D com aceleração de hardware que fornece alto desempenho e renderização de alta qualidade para geometria 2D, bitmaps e texto.
+-   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) Descreve a DirectWrite, que dá suporte à renderização de texto de alta qualidade.
+-   [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902) Descreve o WIC, uma plataforma extensível que fornece uma API de baixo nível para imagens digitais.
 
 ### Níveis de recursos
 
@@ -126,7 +127,7 @@ void DeviceResources::CreateDeviceIndependentResources()
 
 ###  Criando os dispositivos Direct3D e Direct2D
 
-O método **DeviceResources::CreateDeviceResources** chama o [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) para criar o objeto de dispositivo para representar o adaptador de vídeo do Direct3D. Devido ao Marble Maze dar suporte a recursos a partir do nível 9.1, o método **DeviceResources::CreateDeviceResources** especifica os níveis 9.1 a 11.1 na matriz de **\\** valores. O Direct3D passa pela lista em ordem e dá ao aplicativo o primeiro nível de recurso que estiver disponível. Portanto, as entradas de matriz **D3D\_FEATURE\_LEVEL** são listadas da maior para a menor para que o aplicativo obtenha o recurso de nível mais alto disponível. O método **DeviceResources::CreateDeviceResources** obtém o dispositivo Direct3D 11.1 consultando o dispositivo Direct3D 11 que volta do **D3D11CreateDevice**.
+O método **DeviceResources::CreateDeviceResources** chama o [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) para criar o objeto de dispositivo para representar o adaptador de vídeo do Direct3D. Como o Marble Maze dá suporte a recursos a partir do nível 9.1, o método **DeviceResources::CreateDeviceResources** especifica os níveis 9.1 a 11.1 na matriz de valores **\\**. O Direct3D passa pela lista em ordem e dá ao aplicativo o primeiro nível de recurso que estiver disponível. Portanto, as entradas de matriz **D3D\_FEATURE\_LEVEL** são listadas da maior para a menor para que o aplicativo obtenha o recurso de nível mais alto disponível. O método **DeviceResources::CreateDeviceResources** obtém o dispositivo Direct3D 11.1 consultando o dispositivo Direct3D 11 que volta do **D3D11CreateDevice**.
 
 ```cpp
 // This array defines the set of DirectX hardware feature levels this app will support. 
@@ -881,12 +882,12 @@ else
 ## Próximas etapas
 
 
-Leia [Adicionando entrada e interatividade à amostra do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md) para saber mais sobre algumas das principais práticas que você deve ter em mente ao trabalhar com dispositivos de entrada. Este documento discute como o Marble Maze dá suporte a touch, acelerômetro, controle do Xbox 360 e entrada de mouse.
+Leia [Adicionando entrada e interatividade ao exemplo do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md) para saber mais sobre algumas das principais práticas que você deve ter em mente ao trabalhar com dispositivos de entrada. Este documento discute como o Marble Maze dá suporte a touch, acelerômetro, controle do Xbox 360 e entrada de mouse.
 
 ## Tópicos relacionados
 
 
-* [Inserindo entradas e interatividade na amostra do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md)
+* [Adicionando entrada e interatividade ao exemplo do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md)
 * [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md)
 * [Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
@@ -899,6 +900,6 @@ Leia [Adicionando entrada e interatividade à amostra do Marble Maze](adding-inp
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

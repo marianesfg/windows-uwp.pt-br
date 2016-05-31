@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Use os relatórios de desempenho de afiliadas em nível de aplicativos e de contas no painel do Centro de Desenvolvimento do Windows para visualizar os dados de desempenho para anúncios das afiliadas em seus aplicativos.
 title: Relatório de desempenho de afiliadas
 ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
@@ -17,18 +18,19 @@ As seções a seguir fornecem mais detalhes sobre esses relatórios.
 
 ## Relatório de desempenho de anúncios de afiliadas em nível de aplicativo
 
-Esse relatório fornece dados de desempenho de anúncios de afiliadas em forma de gráfico e tabela para o aplicativo selecionado atualmente no painel. Para ver esse relatório, selecione um de seus aplicativos no painel e clique em **Análises** &gt; **Desempenho de afiliadas** no painel de navegação.
+Esse relatório fornece dados de desempenho de anúncios de afiliadas em forma de gráfico e tabela para o aplicativo selecionado atualmente no painel. Para ver esse relatório, selecione um de seus aplicativos no painel e clique em **Análises**&gt;**Desempenho de afiliadas** no painel de navegação.
 
 Os dados são obtidos destas sete métricas de desempenho que rastreamos para os anúncios em seu aplicativo:
 
--   **Receita estimada**: o valor estimado de dinheiro que você recebeu como uma comissão para as compras aprovadas feitas por usuários clicando nos anúncios de afiliadas em seu aplicativo.
--   **Impressões**: a quantidade de vezes que um anúncio de afiliada foi exibido em seu aplicativo.
--   **Cliques**: a quantidade de vezes que alguém clicou em um anúncio de afiliada em seu aplicativo.
--   **CTR**: taxa de cliques, indicando a quantidade de vezes que um anúncio de afiliada foi clicado, dividida pela quantidade de impressões de anúncios de afiliadas.
+-   **Lucros estimados (aprovados)**: o valor estimado de dinheiro que você recebeu como uma comissão para as compras aprovadas feitas por usuários clicando nos anúncios de afiliadas em seu aplicativo.
+-   **Lucros estimados (aprovação pendente)**: o valor estimado de dinheiro que você poderia receber como uma comissão para as compras que estão com aprovação pendente.
+-   **Impressões**: a quantidade de vezes em que um anúncio de afiliada foi exibido em seu aplicativo.
+-   **Cliques**: a quantidade de vezes em que alguém clicou em um anúncio de afiliada em seu aplicativo.
+-   **CTR**: taxa de cliques, indicando a quantidade de vezes em que um anúncio de afiliada foi clicado, dividida pela quantidade de impressões de anúncios de afiliadas.
 -   **Compras (aprovadas)**: o número de compras aprovadas feitas por usuários clicando em anúncios de afiliadas em seu aplicativo.
 -   **Compras (aprovação pendente)**: o número de compras com aprovação pendente que foram feitas por usuários clicando em anúncios de afiliadas em seu aplicativo.
 
-> **Observação** Os dados de **Receita estimada**, as **Compras (aprovadas)** e as **Compras (aprovação pendente)** para um dia específico poderão mudar depois de as compras serem aprovadas ou rejeitadas.
+> **Observação**  Depois que um usuário compra um produto na Loja, há um período de espera de 45 dias antes que a compra seja aprovada para o programa de anúncios de afiliada. Por causa desse período de espera, os dados de **Lucros estimados (aprovados)**, **Lucros estimados (aprovação pendente)**, **Compras (aprovadas)** e **Compras (aprovação pendente)** de um dia específico podem mudar depois que as compras são aprovadas ou rejeitadas.
 
 ## Relatório de desempenho de anúncios de afiliadas em nível de painel
 
@@ -43,6 +45,6 @@ A seção **Desempenho de afiliadas** em sua página **Visão geral do painel** 
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

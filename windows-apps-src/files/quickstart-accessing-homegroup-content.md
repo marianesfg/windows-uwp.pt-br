@@ -1,11 +1,12 @@
 ---
+author: TylerMSFT
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: Acessando o conteúdo do Grupo Doméstico
 description: Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo imagens, músicas e vídeos.
 ---
 # Acessando o conteúdo do Grupo Doméstico
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** APIs importantes **
@@ -185,7 +186,10 @@ Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Domés
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **Abra a seleção de arquivos do usuário para obter acesso à leitura e defina o fluxo do arquivo como a origem do ** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) e reproduza o arquivo.
+3.  **Abra a seleção de arquivos do usuário para obter acesso à leitura e defina o fluxo do arquivo como a origem do**
+            [
+              **MediaElement**
+            ](https://msdn.microsoft.com/library/windows/apps/br242926) e reproduza o arquivo.
     ```csharp
     if (file != null)
     {
@@ -209,6 +213,6 @@ Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Domés
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,24 +1,20 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Este tópico descreve o zoom e o redimensionamento de elementos do Windows e fornece as diretrizes da experiência do usuário para o uso desses mecanismos de interação em seus aplicativos.
 title: Diretrizes de zoom óptico e redimensionamento
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
-label: Zoom óptico e redimensionamento
+label: Optical zoom and resizing
 template: detail.hbs
 ---
 
 # Zoom óptico e redimensionamento
 
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+Este artigo descreve o zoom e o redimensionamento de elementos do Windows e fornece as diretrizes da experiência do usuário para o uso desses mecanismos de interação em seus aplicativos.
 
 **APIs importantes**
 
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 -   [**Entrada (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
-
-Este artigo descreve o zoom e o redimensionamento de elementos do Windows e fornece as diretrizes da experiência do usuário para o uso desses mecanismos de interação em seus aplicativos.
-
 
 
 O zoom óptico permite que os usuários ampliem o modo de exibição do conteúdo em uma área de conteúdo (isso é executado na própria área de conteúdo), enquanto o redimensionamento permite que alterem o tamanho relativo de um ou mais objetos sem alterar o modo de exibição da área de conteúdo (isso é executado em objetos na área de conteúdo).
@@ -72,14 +68,15 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
 ## <span id="related_topics"></span>Artigos relacionados
 
 
-**Amostras**
+**Exemplos**
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Amostras de arquivo-morto**
+* [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
+**Exemplos de arquivo-morto**
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de teste de toque](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: amostra de tinta simplificada](http://go.microsoft.com/fwlink/p/?linkid=246570)
@@ -95,6 +92,6 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

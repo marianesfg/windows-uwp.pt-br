@@ -1,13 +1,14 @@
 ---
-title: Compatibilizar os objetos de sombreadores
-description: Ao compatibilizar o renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar que o programa principal consegue se comunicar com os objetos de sombreador depois de eles serem compilados.
+author: mtoepke
+title: Fazer a portabilidade de objetos de sombreador
+description: Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar-se de que o programa principal consiga se comunicar com os objetos de sombreador depois de eles serem compilados.
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
 ---
 
-# Compatibilizar os objetos de sombreadores
+# Fazer a portabilidade de objetos de sombreador
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -15,7 +16,7 @@ ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
 -   [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)
 -   [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)
 
-Ao compatibilizar o renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar que o programa principal consegue se comunicar com os objetos de sombreador depois de eles serem compilados.
+Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar-se de que o programa principal consiga se comunicar com os objetos de sombreador depois de eles serem compilados.
 
 > **Observação**   Você criou um projeto Direct3D novo? Caso não tenha criado, siga as instruções em [Criar um novo projeto DirectX 11 para a Plataforma Universal do Windows (UWP)](user-interface.md). Este guia passo a passo parte do pressuposto de que você criou os recursos DXGI e Direct3D para desenhar na tela, os quais são fornecidos no modelo.
 
@@ -219,7 +220,7 @@ renderer->mvpLoc = glGetUniformLocation(renderer->programObject, "u_mvpMatrix");
 
 O Direct3D não tem um conceito de "atributo" ou "uniforme" com o mesmo sentido (ou, pelo menos, não compartilha essa sintaxe). Em vez disso, ele tem buffers constantes, representados como sub-recursos Direct3D (recursos esses compartilhados entre o programa principal e os programas de sombreador). Alguns desses sub-recursos, como posições e cores de vértice, são descritos como semântica HLSL. Para saber mais sobre buffers constantes e semântica HLSL relacionados a conceitos do OpenGL ES 2.0, leia o tópico sobre [portabilidade de uniformes, atributos e objetos de buffer de quadros](porting-uniforms-and-attributes.md).
 
-Ao mover esse processo para o Direct3D, convertemos o uniforme para um buffer constante (cbuffer) do Direct3D e atribuímos a ele um registro de pesquisa com a semântica HLSL **registro**. Os dois atributos de vértice são manipulados como elementos de entrada para os estágios de pipeline de sombreador, e também são atribuídos [HLSL semantics](https://msdn.microsoft.com/library/windows/desktop/bb205574) (POSITION and COLOR0) que informam aos sombreadores. O sombreador de pixel usa um SV\_POSITION, com o prefixo SV\_ indicando que é um valor de sistema gerado pela GPU. (Neste caso, é uma posição de pixel gerada durante conversão de varredura) VertexShaderInput e PixelShaderInput não são declarados como buffers constantes porque o primeiro será usado para definir o buffer de vértices (consulte [Compatibilizar buffers de vértices e dados](port-the-vertex-buffers-and-data-config.md)), e os dados para o segundo são gerados como resultado de um estágio anterior no pipeline, que, neste caso, é o sombreador de vértice.
+Ao mover esse processo para o Direct3D, convertemos o uniforme para um buffer constante (cbuffer) do Direct3D e atribuímos a ele um registro de pesquisa com a semântica HLSL **registro**. Os dois atributos de vértice são manipulados como elementos de entrada para os estágios de pipeline de sombreador, e também são atribuídos [HLSL semantics](https://msdn.microsoft.com/library/windows/desktop/bb205574) (POSITION and COLOR0) que informam aos sombreadores. O sombreador de pixel usa um SV\_POSITION, com o prefixo SV\_ indicando que é um valor de sistema gerado pela GPU. (Neste caso, é uma posição de pixel gerada durante conversão de varredura) VertexShaderInput e PixelShaderInput não são declarados como buffers constantes porque o primeiro será usado para definir o buffer de vértices (consulte [Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)), e os dados para o segundo são gerados como resultado de um estágio anterior no pipeline, que, neste caso, é o sombreador de vértice.
 
 Direct3D: definições HLSL para buffers constantes e dados de vértice
 
@@ -291,18 +292,18 @@ m_d3dContext->UpdateSubresource(
   0);
 ```
 
-O buffer de vértices é criado e atualizado de forma semelhante, e é discutido na próxima etapa, [Compatibilizar buffers de vértices e dados](port-the-vertex-buffers-and-data-config.md).
+O buffer de vértices é criado e atualizado de forma semelhante, e é discutido na próxima etapa, [Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md).
 
 Próxima etapa
 ---------
 
-[Compatibilizar buffers de vértices e dados](port-the-vertex-buffers-and-data-config.md)
+[Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
 ## Tópicos relacionados
 
 
 [Como: compatibilizar um renderizador simples do OpenGL ES 2.0 ao Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
 
-[Compatibilizar buffers de vértices e dados](port-the-vertex-buffers-and-data-config.md)
+[Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
 
 [Fazer a portabilidade do GLSL](port-the-glsl.md)
 
@@ -317,6 +318,6 @@ Próxima etapa
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

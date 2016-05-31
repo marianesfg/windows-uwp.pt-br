@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 title: Impressão 3D do seu aplicativo
 description: Saiba como adicionar a funcionalidade de impressão 3D ao seu aplicativo Universal do Windows. Esse tópico aborda como iniciar a caixa de diálogo de impressão 3D após verificar se o seu modelo 3D é imprimível e está no formato correto.
 ms.assetid: D78C4867-4B44-4B58-A82F-EDA59822119C
@@ -7,14 +8,14 @@ ms.assetid: D78C4867-4B44-4B58-A82F-EDA59822119C
 # Impressão 3D do seu aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
 
 -   [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/dn998169)
 
-Aprenda a adicionar a funcionalidade de impressão 3D ao seu aplicativo Universal do Windows. Este tópico aborda como iniciar a caixa de diálogo de impressão 3D após assegurar que seu modelo 3D é imprimível e está no formato correto.
+Saiba como adicionar a funcionalidade de impressão 3D ao seu aplicativo Universal do Windows. Este tópico aborda como carregar dados de geometria 3D em seu aplicativo e iniciar a caixa de diálogo de impressão 3D após assegurar que seu modelo 3D é imprimível e está no formato correto. Para obter um exemplo de trabalho desses procedimentos em ação, consulte o [Exemplo UWP de impressão 3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting).
 
 ## Configuração de classe
 
@@ -34,9 +35,9 @@ Em seguida, dê à sua classe alguns campos de membro úteis. Declare um objeto 
 ## Crie uma interface do usuário simples
 
 
-Esta amostra usa três controles de usuário: um botão de carregamento, que levará um arquivo para a memória de programa, um botão de correção, que modificará o arquivo conforme necessário e um botão de impressão, que iniciará o trabalho de impressão. O código a seguir gera esses botões (com seus manipuladores de eventos de clique) no arquivo XAML da sua classe:
+Este exemplo usa três controles de usuário: um botão de carregamento, que levará um arquivo para a memória de programa, um botão de correção, que modificará o arquivo conforme necessário e um botão de impressão, que iniciará o trabalho de impressão. O código a seguir gera esses botões (com seus manipuladores de eventos de clique) no arquivo XAML da sua classe:
 
-[!code-xml[Buttons](./code/3dprinthowto/cs/MainPage.xaml#SnippetButtons)]
+[!code-xml[Botões](./code/3dprinthowto/cs/MainPage.xaml#SnippetButtons)]
 
 Insira um **TextBlock** para feedback de interface do usuário.
 
@@ -55,7 +56,7 @@ Em seu método `OnLoadClick`, use a classe [FileOpenPicker](https://msdn.microso
 
 Neste momento, você pode carregar um arquivo de dados 3D na memória do seu aplicativo. Entretanto, dados de geometria 3D vêm em muitos formatos diferentes, e nem todos são eficientes para impressão 3D. O Windows 10 usa o tipo de arquivo no Formato de manufatura 3D (.3mf) para todas as tarefas de impressão 3D.
 
-> **Observação**  O tipo de arquivo 3MF oferece uma grande quantidade de funcionalidades não abordadas neste tutorial. Para saber mais sobre 3MF e os recursos que ele fornece produtores e consumidores de produtos 3D, consulte o [3MF especificação](http://3mf.io/what-is-3mf/3mf-specification/).
+> **Observação**  O tipo de arquivo 3MF oferece uma grande quantidade de funcionalidades não abordadas neste tutorial. Para saber mais sobre 3MF e os recursos que ele fornece produtores e consumidores de produtos 3D, consulte o [3MF especificação](http://3mf.io/what-is-3mf/3mf-specification/). Para saber como aproveitar esses recursos usando as APIs do Windows 10, consulte o tutorial [Gerar um pacote 3MF](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf).
 
 Felizmente, o aplicativo [3D Builder](https://www.microsoft.com/store/apps/3d-builder/9wzdncrfj3t6) pode abrir arquivos nos formatos 3D mais populares e salvá-los como arquivos .3mf. Neste exemplo, onde o tipo de arquivo pode variar, uma solução muito simples é abrir o 3D Builder e solicitar que o usuário salve os dados importados como um arquivo .3mf e recarregue-o.
 
@@ -96,7 +97,7 @@ Em seguida, chame o **CreateTask**, usando a delegação definida recentemente, 
 
 O **Print3DTask** devolvido é atribuído à variável de classe declarada no início. Agora você pode usar (opcionalmente) essa referência para lidar com determinados eventos lançados pela tarefa:
 
-[!code-cs[Optional](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetOptional)]
+[!code-cs[Opcional](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetOptional)]
 
 > **Observação**  Você deve implementar um método `Task_Submitting` e `Task_Completed` se quiser registrá-los nesses eventos.
 
@@ -113,10 +114,13 @@ Depois de registrar seu manipulador de eventos **TaskRequested**, você pode cha
 
 [!code-cs[ShowDialog](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetShowDialog)]
 
-Por fim, é uma boa prática registrar os manipuladores de eventos quando seu aplicativo retoma o controle:
-[!code-cs[DeregisterMyTaskRequested](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetDeregisterMyTaskRequested)]
+Por fim, é uma boa prática registrar os manipuladores de eventos quando seu aplicativo retoma o controle: [!code-cs[DeregisterMyTaskRequested](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetDeregisterMyTaskRequested)]
 
+## Tópicos relacionados
 
+[Gerar um pacote 3MF](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf)
+
+[Exemplo UWP de impressão 3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
  
 
  
@@ -126,6 +130,6 @@ Por fim, é uma boa prática registrar os manipuladores de eventos quando seu ap
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: A extensão de marcação Binding é convertida, em um tempo de carregamento XAML, para uma instância da classe Binding.
 title: Extensão de marcação Binding
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
@@ -6,7 +7,7 @@ ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 
 # Extensão de marcação {Binding}
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Observação**  Um novo mecanismo de associação está disponível para Windows 10, que é otimizado para o desempenho e a produtividade do desenvolvedor. Consulte [extensão de marcação {x: Bind}](x-bind-markup-extension.md).
 
@@ -37,7 +38,9 @@ A extensão de marcação **{Binding}** é convertida, em um tempo de carregamen
 | Termo | Descrição |
 |------|-------------|
 | *propertyPath* | Uma cadeia de caracteres que especifica o caminho de propriedade para a associação. Mais informações estão na seção [caminho de propriedade](#property-path) abaixo. |
-| *bindingProperties* | *propName*=*valor*\ [, *propName*=*valor*\] *<br/>Uma ou mais propriedades de associação que são especificadas usando uma sintaxe de par nome/valor. |
+| *bindingProperties* | *propName*
+            =
+            *value*\[, *propName*=*value*\]*<br/>Uma ou mais propriedades de associação que são especificadas usando uma sintaxe de par nome/valor. |
 | *propName* | O nome da cadeia de caracteres da propriedade a ser definido no objeto [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Por exemplo, "Converter". | 
 | *value* | O valor a se definir a propriedade. A sintaxe do argumento depende da propriedade da seção [Propriedades da classe Binding que podem ser definidas com {Binding}](#properties-of-binding) abaixo. |
 
@@ -72,21 +75,25 @@ Para saber mais sobre a sintaxe de cadeia de caracteres para um caminho de propr
 | [**FallbackValue**](https://msdn.microsoft.com/library/windows/apps/dn279345) | Especifica um valor a ser exibido quando a fonte ou caminho não podem ser resolvidos. | 
 | [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209829) | Especifica o mode de associação como uma dessas cadeias de caracteres: "OneTime", "OneWay" ou "TwoWay". Elas correspondem aos nomes de constantes da enumeração [**BindingMode**](https://msdn.microsoft.com/library/windows/apps/br209822). O padrão depende do destino da associação, mas, na maioria das vezes, é "OneWay". Perceba que isso é diferente do padrão para **{x:Bind}**, que é "OneTime". | 
 | [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) | Especifica a fonte de dados descrevendo a posição da fonte de associação relativa à posição do destino da associação. Isso se expressa em termos do gráfico do objeto de tempo de execução; por exemplo, especificando os pais do objeto. Definindo a [Extensão de marcação {RelativeSource}](relativesource-markup-extension.md). |
-| [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) | Especifica a fonte de dados do objeto. Dentro da extensão de marcação **Binding**, a [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946). |
+| [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) | Especifica a fonte de dados do objeto. Na extensão de marcação de **Binding**, a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) requer uma referência de objeto, como uma referência de [extensão de marcação {StaticResource}](staticresource-markup-extension.md). Se essa propriedade não for especificada, o contexto de dados de atuação especificará a origem. É mais comum não especificar um valor Source em associações individuais e, em vez disso, usar o **DataContext** compartilhado para várias associações. Para obter mais informações, consulte [**DataContext**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.datacontext.aspx) ou [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946). |
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | Especifica um valor a ser exibido quando o valor de origem é solucionado, mas é explicitamente **null**. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | Especifica o tempo das atualizações da fonte de associação. Se não estiver especificado, o padrão é **Default**. |
 
-**Observação**  Se você estiver convertendo marcação de **{x:Bind}** para **{Binding}**, tome cuidado com as diferenças nos valores padrão da propriedade **Mode**.
+**Observação**  Se você estiver convertendo a marcação de **{x:Bind}** para **{Binding}**, examine as diferenças nos valores padrão da propriedade **Mode**.
 
-[**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) e **ConverterLanguage** são todos relacionados à situação de conversão de um valor ou tipo de uma fonte de associação a um tipo ou valor que é compatível com a propriedade do destino da associação. Para obter mais informações, consulte a seção de "Conversões de dados" em [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
+[
+              **Converter**
+            ](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) e **ConverterLanguage** são todos relacionados à situação de conversão de um valor ou tipo de uma fonte de associação a um tipo ou valor que é compatível com a propriedade do destino da associação. Para obter mais informações, consulte a seção de "Conversões de dados" em [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-[**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) e [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) especificam uma fonte de associação, então são mutualmente exclusivas.
+[
+              **Source**
+            ](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) e [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) especificam uma fonte de associação, então são mutualmente exclusivas.
 
 **Dica**  Se você precisar especificar uma única chave para um valor, como em [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) ou [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), coloque uma barra invertida antes dela: `\{`. De forma alternativa, colo a cadeia de caracteres inteira que contém a chave que precisa de escape entre apóstrofos; por exemplo, `ConverterParameter='{Mix}'`.
 
 ## Exemplos
 
-```XAML
+```XML
 <!-- binding a UI element to a view model -->    
 <Page ... >
     <Page.DataContext>
@@ -97,7 +104,7 @@ Para saber mais sobre a sintaxe de cadeia de caracteres para um caminho de propr
 </Page>
 ```
 
-```XAML
+```XML
 <!-- binding a UI element to another UI element -->
 <Page ... >
     <Page.Resources>
@@ -123,6 +130,6 @@ O Microsoft IntelliSense no Microsoft Visual Studio exibe as propriedades de con
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

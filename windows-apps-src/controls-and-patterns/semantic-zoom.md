@@ -1,14 +1,15 @@
 ---
+author: Jwmsft
 Description: Um controle de zoom semântico permite que o usuário aplique zoom entre duas diferentes exibições do mesmo conjunto de dados.
 title: Zoom semântico
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
-label: Zoom semântico
+label: Semantic zoom
 template: detail.hbs
 ---
 
 # Zoom semântico
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 O controle de zoom semântico permite que o usuário aplique zoom entre duas exibições diferentes do mesmo conteúdo, tornando possível navegar rapidamente por um grande conjunto de dados. A exibição ampliada é o modo de exibição principal do conteúdo. Você pode mostrar o conjunto de dados completo nesse modo de exibição. A exibição reduzida é um modo de exibição de alto nível do mesmo conteúdo. Normalmente, você mostra os cabeçalhos de grupo para um conjunto de dados agrupado nesse modo de exibição. Por exemplo, ao ver um catálogo de endereços, o usuário poderia ampliar uma letra para ver os nomes associados à letra. 
 
@@ -41,7 +42,7 @@ Um catálogo de endereços é um exemplo de conjunto de dados que pode ser muito
 -   Use os nomes dos grupos para os itens em uma coleção agrupada.
 -   Use ordens de classificação para uma coleção desagrupada, porém classificada; por exemplo, a ordem cronológica para datas e ordem alfabética para uma lista de nomes.
 
-\[Este artigo contém informações que são específicas aos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Artigos relacionados
 
@@ -54,7 +55,7 @@ Um catálogo de endereços é um exemplo de conjunto de dados que pode ser muito
 
 **Amostras (DirectX)**
 * [Amostra de entrada por toque do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
-* [Entrada: amostra de manipulações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
+* [Entrada: amostra de interações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
  
 
  
@@ -64,6 +65,6 @@ Um catálogo de endereços é um exemplo de conjunto de dados que pode ser muito
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

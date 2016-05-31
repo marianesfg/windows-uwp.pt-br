@@ -1,15 +1,16 @@
 ---
+author: DelfCo
 Description: Coloque recursos de cadeia de caracteres da interface do usuário em arquivos de recurso. Você poderá então referenciar essas cadeias de caracteres no código ou na marcação.
 title: Colocar cadeias de caracteres da interface do usuário em recursos
 ms.assetid: E420B9BB-C0F6-4EC0-BA3A-BA2875B69722
-label: Colocar cadeias de caracteres da interface do usuário em recursos
+label: Put UI strings into resources
 template: detail.hbs
 ---
 
 # Colocar cadeias de caracteres da interface do usuário em recursos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **APIs importantes**
@@ -29,25 +30,23 @@ Este tópico mostra as etapas para adicionar vários recursos de cadeia de carac
 2.  Abra package.appxmanifest no Visual Studio, vá até a guia **Aplicativo** e (para este exemplo) defina o idioma Padrão como "en-US". Se houver vários arquivos package.appxmanifest em sua solução, faça isso para cada um deles.
     <br>**Observação**  Isso especifica o idioma padrão do projeto. Os recursos de idioma padrão serão usados se o idioma de preferência do usuário ou os idiomas de exibição não corresponderem aos recursos de idioma fornecidos no aplicativo.
 3.  Crie uma pasta para conter os arquivos de recursos.
-    1.  No Gerenciador de Soluções, clique com o botão direito no projeto (o projeto Compartilhado se sua solução contiver vários projetos) e selecione **Adicionar** &gt; **Nova Pasta**.
+    1.  No Gerenciador de Soluções, clique com o botão direito no projeto (o projeto Compartilhado se sua solução contiver vários projetos) e selecione **Adicionar**&gt;**Nova Pasta**.
     2.  Dê o nome "Cadeias de caracteres" à nova pasta.
-    3.  Se a nova pasta não estiver visível no Gerenciador de Soluções, selecione **Projeto** &gt; **Mostrar Todos os Arquivos** no menu do Microsoft Visual Studio enquanto o projeto ainda estiver selecionado.
+    3.  Se a nova pasta não estiver visível no Gerenciador de Soluções, selecione **Projeto**&gt;**Mostrar Todos os Arquivos** no menu do Microsoft Visual Studio enquanto o projeto ainda estiver selecionado.
 
 4.  Crie uma subpasta e um arquivo de recursos para inglês (Estados Unidos).
-    1.  Clique com o botão direito na pasta de cadeias de caracteres e adicione uma nova pasta abaixo dela. Dê a esta pasta o nome "en-US". O arquivo de recursos deve ser colocado em uma pasta que tenha recebido o nome de marca de idioma [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302). Veja [Como nomear recursos usando qualificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324) para saber mais sobre o qualificador de idioma e uma lista de marcas de idioma comuns.
-    2.  Clique com o botão direito do mouse na pasta en-US e selecione **Adicionar** &gt; **Novo Item...**.
+    1.  Clique com o botão direito na pasta de cadeias de caracteres e adicione uma nova pasta abaixo dela. Dê a esta pasta o nome "en-US". O arquivo de recursos deve ser colocado em uma pasta que tenha recebido o nome de marca de idioma [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302). Consulte [Como nomear recursos usando qualificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324) para saber mais sobre o qualificador de idioma e uma lista de marcas de idioma comuns.
+    2.  Clique com o botão direito do mouse na pasta en-US e selecione **Adicionar**&gt;**Novo Item...**.
     3.  **XAML:** selecione "Arquivo de Recursos (.resw)".
         <br>**HTML:** selecione "Arquivo de Recursos (.resjson)".
 
     4.  Clique em **Adicionar**. Isso adiciona um arquivo de recursos com o nome padrão "Resources.resw" (para **XAML**) ou "resources.rejson" (para **HTML**). Recomendamos que você use esse nome de arquivo padrão. Os aplicativos podem particionar seus recursos em outros arquivos, mas você deve ter cuidado de fazer a referência a eles corretamente (veja [Como carregar recursos de cadeias de caracteres](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)).
-    5.  **Apenas XAML:** se você tiver arquivos .resx apenas com recursos de cadeias de caracteres de projetos .NET anteriores, selecione **Adicionar** &gt; **Item Existente...**, adicione o arquivo .resx e renomeie-o para .resw.
+    5.  **Apenas XAML: ** se você tiver arquivos .resx apenas com recursos de cadeias de caracteres de projetos .NET anteriores, selecione **Adicionar**&gt;**Item existente**, adicione o arquivo .resx e renomeie-o para .resw.
     6.  Abra o arquivo e use o editor para adicionar estes recursos:
 
         **XAML:**
 
-        Strings/en-US/Resources.resw
-        ![adicionar recursos, inglês](images/addresource-en-us.png)
-        Neste exemplo, "Greeting.Text" e "Farewell" identificam as cadeias de caracteres que serão exibidas. "Greeting.Width" identifica a propriedade Width da cadeia de caracteres "Greeting". Os comentários são um bom lugar para fornecer qualquer instrução especial para tradutores que localizarem as cadeias de caracteres para outros idiomas.
+        Strings/en-US/Resources.resw ![adicionar recursos, inglês](images/addresource-en-us.png) neste exemplo, "Greeting.Text" e "Farewell" identificam as cadeias de caracteres a serem exibidas. "Greeting.Width" identifica a propriedade Width da cadeia de caracteres "Greeting". Os comentários são um bom lugar para fornecer qualquer instrução especial para tradutores que localizarem as cadeias de caracteres para outros idiomas.
 
         **HTML:**
 
@@ -74,7 +73,7 @@ Este tópico mostra as etapas para adicionar vários recursos de cadeia de carac
 
 Você precisa associar cada controle que necessita de texto localizado ao arquivo .resw. Para fazer isso, use o atributo **x:Uid** dos elementos XAML da seguinte forma:
 
-```XAML
+```XML
 <TextBlock x:Uid="Greeting" Text="" />
 ```
 
@@ -82,7 +81,7 @@ Para o nome do recurso, você dá o valor do atributo **Uid**, e também especif
 
 Observe que as propriedades anexadas são tratadas de maneira diferente em arquivos resw, como AutomationPeer.Name. Você precisa escrever explicitamente o namespace da seguinte forma:
 
-```XAML
+```XML
 MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name</code></pre></td>
 ```
 
@@ -100,7 +99,7 @@ var str = loader.GetString("Farewell");
 ```
 
 **C++**
-```ManagedCPlusPlus
+```cpp
 auto loader = ref new Windows::ApplicationModel::Resources::ResourceLoader();
 auto str = loader->GetString("Farewell");
 ```
@@ -198,8 +197,7 @@ auto str = loader->GetString("Farewell");
 
     **XAML:**
 
-    strings/fr-FR/Resources.resw
-    ![adicionar recursos, francês](images/addresource-fr-fr.png)
+    strings/fr-FR/Resources.resw ![adicionar recursos, francês](images/addresource-fr-fr.png)
     **HTML:**
 
     strings/fr-FR/resources.resjson
@@ -246,6 +244,6 @@ Teste o aplicativo nos outros idiomas.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

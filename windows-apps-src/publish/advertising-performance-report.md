@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Para visualizar dados de desempenho para as unidades de anúncio em seus aplicativos, use os relatórios de desempenho de anúncios em nível de aplicativo e de conta no painel do Centro de Desenvolvimento do Windows.
 title: Relatório de desempenho de anúncios
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
@@ -13,23 +14,25 @@ Para exibir dados de desempenho para as unidades de anúncios em seus aplicativo
 -   [Relatório de desempenho de anúncios em nível de conta](advertising-performance-report.md#account-level-advertising-performance-report). Esse relatório fornece dados de desempenho detalhados para unidades de anúncios da Microsoft e anúncios de comunidade para todos os aplicativos que estão registrados em sua conta de desenvolvedor.
 -   [Relatório de desempenho de anúncios em nível de painel](advertising-performance-report.md#dashboard-level-advertising-performance-report). Este relatório na sua página **Visão geral do painel** fornece um resumo dos dados de desempenho para unidades de anúncios da Microsoft em todos os aplicativos que são registrados em sua conta de desenvolvedor.
 
-Por padrão, os relatórios são filtrados pelo desempenho dos últimos 30 dias, em todos os dispositivos. Para alterar esses filtros, clique em **Filtros de página** e escolha um período diferente ou um tipo de dispositivo individual. Observe que todos os dados são agregados com base na utilização UTC, não na sua zona de tempo em particular.
+Por padrão, os relatórios são filtrados pelo desempenho dos últimos 30 dias, em todos os dispositivos. Para alterar esses filtros, clique em **Filtros de página** e escolha um período diferente ou um tipo de dispositivo individual. 
+
+> **Observação** pode haver diferenças entre os relatórios de desempenho de anúncios no Centro de Desenvolvimento e no pubCenter. O desempenho de anúncios no Centro de Desenvolvimento é agregado com base no UTC (não em seu fuso horário específico), enquanto os relatórios do pubCenter são agregados com base no seu fuso horário específico.
 
 As seções a seguir fornecem mais detalhes sobre esses relatórios.
 
 ## Relatório de desempenho de anúncios no nível do aplicativo
 
-Esta página fornece dados de desempenho em forma de gráfico, mapa do mundo e tabela para as unidades de anúncios da Microsoft do aplicativo selecionado no momento no painel. Para ver esse relatório, selecione um de seus aplicativos no painel e clique em **Análises** &gt; **Desempenho de anúncios** no painel de navegação.
+Esta página fornece dados de desempenho em forma de gráfico, mapa do mundo e tabela para as unidades de anúncios da Microsoft do aplicativo selecionado no momento no painel. Para exibir esse relatório, selecione um dos seus aplicativos no painel e clique em **Análises**&gt;**Desempenho de anúncios** no painel de navegação.
 
 Os dados são obtidos destas métricas de desempenho que rastreamos para os anúncios em seu aplicativo:
 
 -   **Receita estimada**: a quantidade estimada de dinheiro que você recebeu dos anúncios executados em seu aplicativo.
 -   **eCPM**: o custo efetivo por milhares de impressões.
--   **Solicitações**: o número de vezes que uma solicitação de anúncio foi enviada do seu aplicativo.
--   **Impressões**: a quantidade de vezes que um anúncio foi exibido em seu aplicativo.
+-   **Solicitações**: o número de vezes em que uma solicitação de anúncio foi enviada do seu aplicativo.
+-   **Impressões**: a quantidade de vezes em que um anúncio foi exibido em seu aplicativo.
 -   **Taxa de preenchimento**: a porcentagem de solicitações de anúncio enviadas de seu aplicativo nas quais um anúncio foi exibido.
--   **Cliques**: a quantidade de vezes que alguém clicou em um anúncio em seu aplicativo.
--   **CTR**: taxa de cliques, indicando a quantidade de vezes que um anúncio foi clicado, dividida pela quantidade de impressões.
+-   **Cliques**: a quantidade de vezes em que alguém clicou em um anúncio em seu aplicativo.
+-   **CTR**: taxa de clickthrough, que significa o número de vezes que um anúncio foi clicado, dividido pelo número de impressões.
 
 Para examinar todas essas métricas de desempenho para as unidades de anúncios em seu aplicativo, consulte a tabela abaixo dos modos de exibição de gráfico e mapa.
 
@@ -67,8 +70,8 @@ Os dados são obtidos destas métricas de desempenho que rastreamos para os anú
 
 -   **Solicitações**: o número de vezes que uma solicitação de anúncio de comunidade foi enviada do seu aplicativo.
 -   **Taxa de preenchimento**: a porcentagem de solicitações de anúncio de comunidade enviadas de seu aplicativo nas quais um anúncio foi exibido.
--   **Cliques**: a quantidade de vezes que alguém clicou em um anúncio de comunidade em seu aplicativo.
--   **CTR**: taxa de cliques, indicando a quantidade de vezes que um anúncio de comunidade foi clicado, dividida pela quantidade de impressões.
+-   **Cliques**: a quantidade de vezes em que alguém clicou em um anúncio de comunidade em seu aplicativo.
+-   **CTR**: taxa de cliques, indicando a quantidade de vezes em que um anúncio de comunidade foi clicado, dividida pela quantidade de impressões.
 -   **Créditos obtidos**: o número de créditos de anúncios de comunidade obtidos com esse aplicativo. Para obter mais detalhes sobre como os créditos são obtidos, veja [Sobre os anúncios da comunidade](about-community-ads.md).
 -   **Créditos gastos**: o número de créditos de anúncios da comunidade gastos para este aplicativo. Para obter mais detalhes sobre como os créditos são gastos, veja [Sobre os anúncios da comunidade](about-community-ads.md).
 
@@ -87,6 +90,6 @@ A seção **Desempenho de anúncios** na página **Visão geral do painel** forn
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

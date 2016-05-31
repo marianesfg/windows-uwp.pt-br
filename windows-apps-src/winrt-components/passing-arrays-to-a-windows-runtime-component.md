@@ -1,13 +1,14 @@
 ---
-title: Passando matrizes para um componente do Tempo de Execução do Windows
-description: Na Plataforma Universal do Windows (UWP), os parâmetros servem para entrada ou saída, nunca ambos. Isso significa que o conteúdo de uma matriz passada para um método, bem como a matriz propriamente dita, é de entrada ou de saída.
+author: martinekuan
+title: Passagem de matrizes para um componente do Tempo de Execução do Windows
+description: Na Plataforma Universal do Windows (UWP), parâmetros são de entrada ou de saída, jamais ambos. Isso significa que o conteúdo de uma matriz passada para um método, bem como a matriz propriamente dita, é de entrada ou de saída.
 ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
 ---
 
-# Passando matrizes para um componente do Tempo de Execução do Windows
+# Passagem de matrizes para um componente do Tempo de Execução do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
@@ -62,6 +63,6 @@ Caso o chamador seja um código gerenciado, a matriz original permanece disponí
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

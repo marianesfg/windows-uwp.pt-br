@@ -1,13 +1,14 @@
 ---
+author: mtoepke
 title: Carregar recursos no jogo em DirectX
-description: A maioria dos jogos, em algum momento, carrega recursos e ativos (por exemplo, sombreadores, texturas, malhas predefinidas ou outros dados gráficos) do armazenamento local ou algum outro fluxo de dados.
+description: A maioria dos jogos, em algum momento, carrega recursos e ativos (por exemplo, sombreadores, texturas, malhas predefinidas ou outros dados gráficos) do armazenamento local ou de algum outro fluxo de dados.
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
 ---
 
 # Carregar recursos no jogo em DirectX
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A maioria dos jogos, em algum momento, carrega recursos e ativos (por exemplo, sombreadores, texturas, malhas predefinidas ou outros dados gráficos) do armazenamento local ou de algum outro fluxo de dados. Aqui, vamos examinar uma exibição de alto nível daquilo que é preciso considerar ao carregar esses arquivos para uso no jogo da UWP (Plataforma Universal do Windows).
 
@@ -47,15 +48,15 @@ O código completo desses exemplos pode ser encontrado nos seguintes links.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Complete code for BasicLoader](complete-code-for-basicloader.md)</p></td>
+<td align="left"><p>[Concluir código para BasicLoader](complete-code-for-basicloader.md)</p></td>
 <td align="left"><p>Conclua o código para classe e métodos que convertam e carreguem objetos da malha de elementos gráficos na memória.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Complete code for BasicReaderWriter](complete-code-for-basicreaderwriter.md)</p></td>
+<td align="left"><p>[Concluir código para BasicReaderWriter](complete-code-for-basicreaderwriter.md)</p></td>
 <td align="left"><p>Conclua código para classe e métodos de leitura e gravação de arquivos de dados binários em geral. Usado pela classe [BasicLoader](complete-code-for-basicloader.md).</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Complete code for DDSTextureLoader](complete-code-for-ddstextureloader.md)</p></td>
+<td align="left"><p>[Concluir código para DDSTextureLoader](complete-code-for-ddstextureloader.md)</p></td>
 <td align="left"><p>Conclua código para a classe e o método que carrega uma textura DDS da memória.</p></td>
 </tr>
 </tbody>
@@ -704,6 +705,6 @@ Nesse ponto, você deverá estar apto a entender e criar ou modificar métodos d
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

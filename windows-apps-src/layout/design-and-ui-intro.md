@@ -1,16 +1,13 @@
 ---
-Description: Este artigo descreve os recursos, os benefícios e os requisitos da UWP (Plataforma Universal do Windows) de uma perspectiva de design. Descubra o que a plataforma oferece gratuitamente e as ferramentas que estão à disposição.
+author: mijacobs
+Description: Este artigo descreve os recursos, os benefícios e os requisitos da Universal Windows Platform (UWP) de uma perspectiva de design. Descubra o que a plataforma oferece gratuitamente e as ferramentas que estão à disposição.
 title: Introdução ao design de aplicativos UWP (Plataforma Universal do Windows)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
-label: Introdução ao design de aplicativos UWP
+label: Intro to UWP app design
 template: detail.hbs
 ---
 
 #  Introdução ao design de aplicativos UWP 
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Um aplicativo UWP (Plataforma Universal do Windows) pode ser executado em qualquer dispositivo baseado no Windows, como um telefone, tablet ou computador.
 
@@ -103,14 +100,14 @@ Para simplificar, vamos definir a anatomia de um aplicativo de uma perspectiva d
 <td align="left"><p><img src="images/1895065-hig-anatomyofanapp-02.png" alt="Navigation, command, and content areas of an address book app" /></p>
 <p></p></td>
 <td align="left"><strong>Elementos de navegação</strong>
-          <p>Os elementos de navegação ajudam os usuários a escolher o conteúdo que desejam exibir. Exemplos de elementos de navegação incluem [tabs and pivots](../controls-and-patterns/tabs-pivot.md), [hyperlinks](../controls-and-patterns/hyperlinks.md) e [nav panes](../controls-and-patterns/nav-pane.md).</p>
-<p>Os elementos de navegação são abordados detalhadamente no artigo [Navigation design basics](navigation-basics.md).</p>
+<p>Os elementos de navegação ajudam os usuários a escolher o conteúdo que desejam exibir. Exemplos de elementos de navegação incluem [guias e pivôs](../controls-and-patterns/tabs-pivot.md), [hiperlinks](../controls-and-patterns/hyperlinks.md) e [painéis de navegação](../controls-and-patterns/nav-pane.md).</p>
+<p>Os elementos de navegação são abordados em detalhes no artigo [Noções básicas de design de navegação](navigation-basics.md).</p>
 <strong>Elementos de comando</strong>
-          <p>Os elementos de comando iniciam ações, como manipulação, gravação ou compartilhamento de conteúdo. Exemplos de elementos de comando incluem [button](../controls-and-patterns/buttons.md) e [command bar](../controls-and-patterns/app-bars.md). Os elementos de comando também podem incluir atalhos do teclado que não ficam realmente visíveis na tela.</p>
-<p>Os elementos de comando são abordados detalhadamente no artigo [Command design basics](commanding-basics.md).</p>
+<p>Os elementos de comando iniciam ações, como manipulação, gravação ou compartilhamento de conteúdo. Exemplos de elementos de comando incluem [botão](../controls-and-patterns/buttons.md) e a [barra de comandos](../controls-and-patterns/app-bars.md). Os elementos de comando também podem incluir atalhos do teclado que não ficam realmente visíveis na tela.</p>
+<p>Elementos de comando são abordados em detalhes no artigo [Noções básicas de design de comando](commanding-basics.md).</p>
 <strong>Elementos de conteúdo</strong>
-          <p>Os elementos de conteúdo exibem o conteúdo do aplicativo. Para um aplicativo de pintura, o conteúdo pode ser um desenho; para um aplicativo de notícias, o conteúdo pode ser um artigo de notícias.</p>
-<p>Os elementos de conteúdo são abordados detalhadamente no artigo [Content design basics](content-basics.md).</p></td>
+<p>Os elementos de conteúdo exibem o conteúdo do aplicativo. Para um aplicativo de pintura, o conteúdo pode ser um desenho; para um aplicativo de notícias, o conteúdo pode ser um artigo de notícias.</p>
+<p>Os elementos de conteúdo são abordados em detalhes no artigo [Noções básicas de design do conteúdo](content-basics.md).</p></td>
 </tr>
 </tbody>
 </table>
@@ -218,6 +215,6 @@ Veja um exemplo dessa técnica aplicada ao design para um aplicativo inicial int
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

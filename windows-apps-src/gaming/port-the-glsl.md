@@ -1,13 +1,14 @@
 ---
-title: Compatibilizar o GLSL
-description: Quando você tiver movido o código que cria e configura os seus buffers e objetos de sombreador, será o momento de compatibilizar o código dentro dos sombreadores da linguagem de sombreadores GL do OpenGL ES 2.0 (GLSL) à linguagem de sombreadores de alto nível do Direct3D 11 (HLSL).
+author: mtoepke
+title: Fazer a portabilidade do GLSL
+description: Quando você tiver movido o código que cria e configura os seus buffers e objetos de sombreador, será o momento de fazer a portabilidade do código dentro dos sombreadores da linguagem de sombreadores GL do OpenGL ES 2.0 (GLSL) para a linguagem de sombreadores de alto nível do Direct3D 11 (HLSL).
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
 ---
 
-# Compatibilizar o GLSL
+# Fazer a portabilidade do GLSL
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -15,7 +16,7 @@ ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
 -   [Semântica HLSL](https://msdn.microsoft.com/library/windows/desktop/bb205574)
 -   [Constantes de sombreador (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581)
 
-Quando você tiver movido o código que cria e configura os seus buffers e objetos de sombreador, será o momento de compatibilizar o código dentro dos sombreadores da linguagem de sombreadores GL do OpenGL ES 2.0 (GLSL) à linguagem de sombreadores de alto nível do Direct3D 11 (HLSL).
+Quando você tiver movido o código que cria e configura os seus buffers e objetos de sombreador, será o momento de fazer a portabilidade do código dentro dos sombreadores da linguagem de sombreadores GL do OpenGL ES 2.0 (GLSL) para a linguagem de sombreadores de alto nível do Direct3D 11 (HLSL).
 
 No OpenGL ES 2.0, os sombreadores devolvem dados depois da execução, usando intrínsecos como **gl\_Position**, **gl\_FragColor** ou **gl\_FragData\[n\]** (onde n é o índice de um destino de renderização específico). No Direct3D, não há intrínsecos específicos e os sombreadores devolvem dados como o tipo de retorno das duas respectivas funções principais().
 
@@ -148,12 +149,10 @@ A cor do pixel na posição é gravada no destino de renderização. Agora, vamo
 ## Etapa anterior
 
 
-[Compatibilizar buffers de vértices e dados](port-the-vertex-buffers-and-data-config.md)
-Próxima etapa
+[Fazer a portabilidade de buffers de vértices e dados](port-the-vertex-buffers-and-data-config.md) Próxima etapa
 ---------
 
-[Desenhar na tela](draw-to-the-screen.md)
-Comentários
+[Desenhar na tela](draw-to-the-screen.md) Observações
 -------
 
 Entender a semântica HLSL e o compactação de buffers constantes pode evitar certa dor de cabeça, e oferecer oportunidade de otimização. Caso tenha chance, leia [Sintaxe variável (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Introdução a buffers no Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898) e [Como: criar um buffer constante](https://msdn.microsoft.com/library/windows/desktop/ff476896). Caso não consiga fazer isso, consulte algumas dicas iniciais sobre semântica e buffers constantes para ter sempre em mente:
@@ -170,9 +169,9 @@ Entender a semântica HLSL e o compactação de buffers constantes pode evitar c
 
 [Como: compatibilizar um renderizador simples do OpenGL ES 2.0 ao Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
 
-[Compatibilizar os objetos de sombreadores](port-the-shader-config.md)
+[Fazer a portabilidade de objetos de sombreador](port-the-shader-config.md)
 
-[Realizar a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
+[Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
 
 [Desenhar na tela](draw-to-the-screen.md)
 
@@ -185,6 +184,6 @@ Entender a semântica HLSL e o compactação de buffers constantes pode evitar c
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

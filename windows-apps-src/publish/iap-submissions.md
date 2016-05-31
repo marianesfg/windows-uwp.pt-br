@@ -1,13 +1,14 @@
 ---
+author: jnHs
 Description: Os IAPs são publicados por meio do painel do Centro de Desenvolvimento do Windows.
-title: envios de IAPs
+title: Envios de IAP
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 ---
 
 # Envios de IAP
 
 
-Um IAP (produto no aplicativo) é um item suplementar do seu aplicativo que pode ser comprado pelos clientes. Um IAP pode ser um divertido e novo recurso suplementar, um novo nível de jogo ou qualquer coisa que você ache que manterá os usuários envolvidos. Os IAPs não são somente uma ótima forma de ganhar dinheiro, eles também ajudam a direcionar a interação e o compromisso do cliente.
+IAP (produto no aplicativo) é um item suplementar do seu aplicativo que pode ser comprado pelos clientes. Um IAP pode ser um divertido e novo recurso suplementar, um novo nível de jogo ou qualquer coisa que você ache que manterá os usuários envolvidos. Os IAPs não são somente uma ótima forma de ganhar dinheiro, eles também ajudam a direcionar a interação e o compromisso do cliente.
 
 Os IAPs são publicados por meio do painel do Centro de Desenvolvimento do Windows. Você também precisará [habilitar as IAPs](https://msdn.microsoft.com/library/windows/apps/mt219684) no código de seu aplicativo.
 
@@ -62,6 +63,6 @@ Se quiser remover um IAP oferecido anteriormente, você poderá fazer isso crian
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

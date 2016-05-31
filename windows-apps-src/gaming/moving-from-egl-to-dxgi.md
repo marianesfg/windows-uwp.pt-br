@@ -1,13 +1,14 @@
 ---
-title: Comparar código EGL a DXGI e a Direct3D
+author: mtoepke
+title: Comparar código EGL com DXGI e Direct3D
 description: A DXGI (interface gráfica do DirectX) e várias APIs Direct3D desempenham a mesma função que EGL. Este tópico o ajuda a entender a DXGI e o Direct3D 11 do ponto de vista do EGL.
 ms.assetid: 90f5ecf1-dd5d-fea3-bed8-57a228898d2a
 ---
 
-# Comparar código EGL a DXGI e a Direct3D
+# Comparar código EGL com DXGI e Direct3D
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -20,7 +21,7 @@ A DXGI (interface gráfica do DirectX) e várias APIs Direct3D desempenham a mes
 
 Assim como o EGL, a DXGI e o Direct3D fornecem métodos de configuração de recursos gráficos, obtenção de um contexto de renderização para desenho dos sombreadores e exibição de resultados em uma janela. No entanto, DXGI e Direct3D têm muitas opções adicionais e exigem mais esforço para serem configurados corretamente em caso de migração da EGL.
 
-> **Observação**   Esta orientação está baseada na especificação aberta do Khronos Group para EGL 1.4, encontrada aqui: [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). Diferenças na sintaxe específica de outras plataformas e linguagens de programação não são abordadas por esta orientação.
+> **Observação**   Esta orientação é baseada na especificação aberta do Khronos Group para EGL 1.4, encontrada aqui: [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). Diferenças na sintaxe específica de outras plataformas e linguagens de programação não são abordadas por esta orientação.
 
  
 
@@ -410,6 +411,6 @@ Em um aplicativo UWP, você pode fechar a CoreWindow com [**CoreWindow::Close**]
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

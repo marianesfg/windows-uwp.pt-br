@@ -1,13 +1,14 @@
 ---
+author: mcleblanc
 ms.assetid: 159681E4-BF9E-4A57-9FEE-EC7ED0BEFFAD
-title: MVVM e dicas de desempenho de linguagem
-description: Este tópico discute algumas considerações de desempenho relacionadas à sua escolha de padrões de design de software e linguagem de programação.
+title: Dicas de MVVM e desempenho de linguagem
+description: Este tópico aborda algumas considerações de desempenho relacionadas à sua escolha de padrões de design de software e linguagem de programação.
 ---
 # MVVM e dicas de desempenho de linguagem
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este tópico discute algumas considerações de desempenho relacionadas à sua escolha de padrões de design de software e linguagem de programação.
+Este tópico aborda algumas considerações de desempenho relacionadas à sua escolha de padrões de design de software e linguagem de programação.
 
 ## O padrão MVVM (Model-View-ViewModel)
 
@@ -39,6 +40,6 @@ Há várias definições concretas do padrão MVVM e das estruturas de terceiros
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

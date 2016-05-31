@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 title: Visão geral de mapas e local
 description: Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo.
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
@@ -7,7 +8,7 @@ ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
 # Visão geral de mapas e local
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo.
@@ -25,12 +26,12 @@ Exiba mapas com modos de exibição 2D, 3D ou Streetside no seu aplicativo usand
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Solicitar uma chave de autenticação de mapas](authentication-key.md) | O aplicativo deve ser autenticado para poder usar o [MapControl](https://msdn.microsoft.com/library/windows/apps/dn637004) e mapear serviços no namespace [Windows.Services.Maps](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este artigo descreve como solicitar uma chave de autenticação de mapas na [central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo. |
-| [Exibir mapas com modos de exibição 2D, 3D e Streetside](display-maps.md) | Exiba mapas personalizáveis no aplicativo usando a classe [MapControl](https://msdn.microsoft.com/library/windows/apps/dn637004). Este tópico também apresenta modos de exibição 3D e Streetside. |
+| [Solicitar uma chave de autenticação de mapas](authentication-key.md) | O aplicativo precisa ser autenticado para poder usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este artigo descreve como solicitar uma chave de autenticação de mapas na [central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo. |
+| [Diretrizes de design para mapas](controls-map.md) | O controle de mapa pode exibir mapas de rodovias e vistas aéreas, trajeto, resultados de pesquisa e informações sobre trânsito. |
+| [Exibir mapas com modos de exibição 2D, 3D e Streetside](display-maps.md) | Exiba mapas personalizáveis no seu aplicativo usando a classe [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). Este tópico também apresenta modos de exibição 3D e Streetside. |
 | [Exibir pontos de interesse (POI) em um mapa](display-poi.md) | Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML. |
 | [Sobrepor imagens lado a lado em um mapa](overlay-tiled-images.md) | Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão. |
-| [Diretrizes de design para mapas](controls-map.md) | O controle de mapa pode exibir mapas de rodovias e vistas aéreas, trajeto, resultados de pesquisa e informações sobre trânsito. |
-| [Diretrizes de design para aplicativos com detecção de localização](guidelines-and-checklist-for-detecting-location.md) | Diretrizes de desempenho para aplicativos que exigirem acesso à localização de um usuário. |
+
 
 
 ## Serviços de mapa de acesso
@@ -39,22 +40,22 @@ Adicione rotas, trajeto e funcionalidades de geocódigo ao aplicativo usando API
 
 | Tópico | Descrição |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Solicitar uma chave de autenticação de mapas](authentication-key.md) | O aplicativo precisa ser autenticado para poder usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este artigo descreve como solicitar uma chave de autenticação de mapas na [central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo. |
+| [Exibir pontos de interesse (POI) em um mapa](display-poi.md) | Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML. |
 | [Exibir rotas e trajeto](routes-and-directions.md) | Solicite rotas e trajeto e os exiba no aplicativo. |
-| [Executar geocodificação e geocodificação reversa](geocoding.md) | Converta endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe [MapLocationFinder](https://msdn.microsoft.com/library/windows/apps/dn627550) no namespace [Windows.Services.Maps](https://msdn.microsoft.com/library/windows/apps/dn636979). |
+| [Executar geocodificação e geocodificação reversa](geocoding.md) | Converta endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). |
 
 
-## Obter o local do usuário
+## Obter a localização do usuário
 
 Obtenha o local atual e seja notificado quando o local mudar no aplicativo usando APIs do namespace [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603). Esses membros da API também são usados com frequência em parâmetros das APIs de mapas. As APIs do namespace [**Windows.Devices.Geolocation.Geofencing**](https://msdn.microsoft.com/library/windows/apps/dn263744) notificam o aplicativo quando o usuário insere ou sai de uma cerca geográfica (uma área geográfica predefinida).
 
 | Tópico | Descrição |
 |-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Solicitar uma chave de autenticação de mapas](authentication-key.md) | O aplicativo deve ser autenticado para poder usar o [MapControl](https://msdn.microsoft.com/library/windows/apps/dn637004) e mapear serviços no namespace [Windows.Services.Maps](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este artigo descreve como solicitar uma chave de autenticação de mapas na [central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo. |
-| [Executar geocodificação e geocodificação reversa](geocoding.md) | Converta endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe MapLocationFinder. |
-| [Exibir mapas com modos de exibição 2D, 3D e Streetside](display-maps.md) | Exiba mapas personalizáveis no aplicativo usando a classe [MapControl](https://msdn.microsoft.com/library/windows/apps/dn637004). Este tópico também apresenta modos de exibição 3D e Streetside. |
-| [Mapas](controls-map.md) | O controle de mapa pode exibir mapas de rodovias e vistas aéreas, trajeto, resultados de pesquisa e informações sobre trânsito. |
-| [Exibir pontos de interesse (POI) em um mapa](display-poi.md) | Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML. |
-| [Sobrepor imagens lado a lado em um mapa](overlay-tiled-images.md) | Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão. |
+| [Solicitar uma chave de autenticação de mapas](authentication-key.md) | O aplicativo precisa ser autenticado para poder usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este artigo descreve como solicitar uma chave de autenticação de mapas na [central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo. |
+| [Diretrizes de design para aplicativos com detecção de localização](guidelines-and-checklist-for-detecting-location.md) | Diretrizes de desempenho para aplicativos que exigirem acesso à localização de um usuário. |
+| [Obter a localização do usuário](get-location.md) | Obtenha acesso à localização do usuário e recupere-o. |
+| [Diretriz de design para cerca geográfica](guidelines-for-geofencing.md) | Diretrizes de desempenho para aplicativos que utilizam o recurso cerca geográfica. |
 | [Configurar uma cerca geográfica](set-up-a-geofence.md) | Configure uma cerca geográfica no aplicativo e saiba como manipular notificações em primeiro e segundo planos. |
 
 ## Iniciar o aplicativo Mapas do Windows
@@ -79,6 +80,6 @@ O aplicativo pode iniciar o aplicativo Mapas do Windows conforme mostrado aqui p
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,15 +1,16 @@
 ---
+author: mtoepke
 title: Controles move-look para jogos
-description: Aprenda como adicionar controles move-look tradicionais usando o mouse e o teclado ao seu jogo DirectX.
+description: Aprenda a adicionar controles move-look tradicionais (também conhecidos como controles mouselook) usando o mouse e o teclado ao seu jogo do DirectX.
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
 ---
 
 # <span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles move-look para jogos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Aprenda como adicionar controles move-look tradicionais (também conhecidos como controle mouselook) usando o mouse e o teclado ao seu jogo do DirectX.
+Aprenda a adicionar controles move-look tradicionais (também conhecidos como controles mouselook) usando o mouse e o teclado ao seu jogo do DirectX.
 
 Também é discutido o suporte a move-look para dispositivos touch, com o controlador de movimento definido como a seção inferior esquerda da tela, que se comporta como uma entrada direcional, e o controlador de visão definido para o restante da tela, com a câmera centralizada no último lugar que o jogador tocou nessa área.
 
@@ -152,7 +153,7 @@ Agora definiremos os campos que serão usados para armazenar informações sobre
 Agora definimos os campos que usaremos para o controlador de visão, nas implementações para mouse e touch.
 
 -   **m\_lookInUse** indica se o controle de visão está em uso.
--   **m\_lookPointerID** é a ID exclusiva do ponteiro de visão atual. Nós o usamos para diferenciar o ponteiro de visão do ponteiro de movimento quando verificamos o valor do ID de ponteiro.
+-   **m\_lookPointerID** é o ID exclusivo do ponteiro de visão atual. Nós o usamos para diferenciar o ponteiro de visão do ponteiro de movimento quando verificamos o valor do ID de ponteiro.
 -   **m\_lookLastPoint** é o último ponto, em coordenadas da cena, que foi capturado no quadro anterior.
 -   **m\_lookLastDelta** é a diferença calculada entre o atual **m\_position** e **m\_lookLastPoint**.
 
@@ -583,6 +584,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

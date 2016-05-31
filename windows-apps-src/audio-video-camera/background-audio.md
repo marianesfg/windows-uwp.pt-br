@@ -1,21 +1,22 @@
 ---
+author: drewbatgit
 ms.assetid: 923D8156-81D3-4A1E-9D02-DB219F600FDB
-description: este artigo descreve como criar aplicativos da Plataforma Universal do Windows (UWP) que toquem áudio em segundo plano.
-title: áudio em segundo plano
+description: Este artigo descreve como criar aplicativos da Plataforma Universal do Windows (UWP) que toquem áudio em segundo plano.
+title: Áudio em segundo plano
 ---
 
 # Áudio em segundo plano
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo descreve como criar aplicativos da Plataforma Universal do Windows (UWP) que toquem áudio em segundo plano. Isso significa que, mesmo depois que o usuário minimizar o aplicativo, retornar à tela inicial ou navegar para fora do aplicativo de alguma outra forma, seu aplicativo poderá continuar a reproduzir o áudio. Este artigo aborda os componentes de um aplicativo de áudio em segundo plano e como eles funcionam em conjunto.
 
 Os cenários de reprodução de áudio em segundo plano incluem:
 
--   **Playlists de execução longa:** o usuário traz brevemente um aplicativo em primeiro plano para selecionar e iniciar uma playlist, após isso, ele espera que ela continue tocando em segundo plano.
+-   **Playlists de longa duração:** o usuário ativa brevemente um aplicativo em primeiro plano para selecionar e iniciar uma playlist, esperando que depois disso a playlist continue sendo reproduzida em segundo plano.
 
--   **Usando alternador de tarefas:** o usuário traz brevemente um aplicativo em primeiro plano para iniciar a reprodução de áudio, depois alterna para outro aplicativo aberto usando o alternador de tarefas. O usuário espera que o áudio continue sendo reproduzido em segundo plano.
+-   **Usando o alternador de tarefas:** o usuário ativa brevemente um aplicativo em primeiro plano para iniciar a reprodução de áudio e, em seguida, alterna para outro aplicativo aberto usando o alternador de tarefas. O usuário espera que o áudio continue sendo reproduzido em segundo plano.
 
 A implementação de áudio em segundo plano descrita neste artigo permitirá que seu aplicativo seja executado universalmente em todos os dispositivos Windows, incluindo móveis, desktop e Xbox.
 
@@ -134,6 +135,6 @@ A tabela a seguir lista as políticas que são aplicadas em quais tipos de dispo
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

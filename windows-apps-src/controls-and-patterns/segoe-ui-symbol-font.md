@@ -1,31 +1,30 @@
 ---
+author: Jwmsft
 Description: Este artigo lista e fornece diretrizes de uso dos glifos que vêm com a fonte Segoe MDL2 Assets.
 Search.Refinement.TopicID: 184
 title: Diretrizes para ícones Segoe MDL2
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
-label: Ícones Segoe MDL2
+label: Segoe MDL2 icons
 template: detail.hbs
 ---
 
 # Diretrizes para ícones Segoe MDL2
 
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+Este artigo lista e fornece diretrizes de uso dos glifos que vêm com a fonte Segoe MDL2 Assets. Para obter a fonte, você deve instalar o Windows 10.
 
 **APIs importantes**
 
 -   [**Enumeração Symbol (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn252842)
 -   [**Enumeração AppBarIcon (HTML)**](https://msdn.microsoft.com/library/windows/apps/hh770557)
 
-Este artigo lista e fornece diretrizes de uso dos glifos que vêm com a fonte Segoe MDL2 Assets. Para obter a fonte, você deve instalar o Windows 10.
+
 
 ## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Recomendações
 
 
--   Use estes glifos somente quando puder especificar explicitamente a fonte **Segoe MDL2 Assets** .
+-   Use estes glifos somente quando puder especificar explicitamente a fonte **Segoe MDL2 Assets**.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
+## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretriz de uso adicional
 
 
 A fonte de ícones **Segoe UI Symbol** do Windows 8/8.1 foi substituída pela fonte **Segoe MDL2 Assets** a partir do lançamento do Windows 10. Ela pode ser usada da mesma maneira que a fonte mais antiga, mas muitos glifos foram redesenhados no estilo de ícone do Windows 10 com métricas da fonte definidas de modo que os ícones sejam alinhados dentro do quadrado-em da fonte, em vez de em uma linha de base tipográfica.
@@ -188,7 +187,7 @@ Além disso, tenha em mente que a fonte **Segoe MDL2 Assets** inclui muito mais 
 | U+E008 | ![checkmarkzerowidthlegacy](images/checkmarkzerowidthlegacy.png)               | CheckMarkZeroWidthLegacy        | Marca de seleção (largura zero) |
 | U+E009 | ![checkboxfillzerowidthlegacy](images/checkboxfillzerowidthlegacy.png)         | CheckboxFillZeroWidthLegacy     | Preenchimento (largura zero)       |
 | U+E0A2 | ![checkboxcompositelegacy](images/checkboxcompositelegacy.png)                 | CheckboxCompositeLegacy         | Composição               |
-| U+E739 | ![caixa de seleção](images/Checkbox.png)                                               | Caixa de seleção                        | Caixa de seleção                |
+| U+E739 | ![caixa de seleção](images/checkbox.png)                                               | Caixa de seleção                        | Caixa de seleção                |
 | U+E73A | ![checkboxcomposite](images/checkboxcomposite.png)                             | CheckboxComposite               | Caixa de seleção composta      |
 | U+E73B | ![checkboxfill](images/checkboxfill.png)                                       | CheckboxFill                    | Caixa de seleção preenchida         |
 | U+E73C | ![checkboxindeterminate](images/checkboxindeterminate.png)                     | CheckboxIndeterminate           | Estado indeterminado     |
@@ -385,7 +384,7 @@ Use um código adicional para criar círculos ao redor desses glifos.
 
  
 
-## <span id="AppBar_glyphs"></span><span id="appbar_glyphs"></span><span id="APPBAR_GLYPHS"></span>Glifos da barra de aplicativos
+## <span id="AppBar_glyphs"></span><span id="appbar_glyphs"></span><span id="APPBAR_GLYPHS"></span>Glifos AppBar
 
 
 Use os glifos da lista seguinte para [**AppBar**](https://msdn.microsoft.com/library/windows/apps/br229670). Por convenção, eles são referenciados por seus nomes de enumeração. E eles foram criados como ícones de 20x20px sem círculo.
@@ -895,7 +894,7 @@ Use os glifos da lista seguinte para [**AppBar**](https://msdn.microsoft.com/lib
 <tr class="even">
 <td align="left">U+E8C9</td>
 <td align="left"><img src="images/important.png" alt="Important" /></td>
-<td align="left">Important</td>
+<td align="left">Importante</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -1598,8 +1597,10 @@ Use os glifos da lista seguinte para [**AppBar**](https://msdn.microsoft.com/lib
 
 **Para designers**
 * [Diretrizes de fontes](fonts.md)
-* [W3C nos quais idiomas são escritos da direita para a esquerda (RTL)?](http://www.i18nguy.com/temp/rtl.mdl)
-**Para desenvolvedores (XAML)**
+* [W3C no qual os idiomas são escritos da direita para a esquerda (RTL)?](http://www.i18nguy.com/temp/rtl.mdl)
+            
+          
+           **Para desenvolvedores (XAML)                        **
 * [**Enumeração Symbol**](https://msdn.microsoft.com/library/windows/apps/dn252842)
 
 
@@ -1610,6 +1611,6 @@ Use os glifos da lista seguinte para [**AppBar**](https://msdn.microsoft.com/lib
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

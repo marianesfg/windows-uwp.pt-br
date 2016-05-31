@@ -8,7 +8,7 @@ author: awkoren
 # Tarefas comuns de criptografia
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Estes artigos fornecem código de exemplo para tarefas comuns de criptografia da Plataforma Universal do Windows (UWP), como criar números aleatórios, comparar buffers, converter entre cadeias de caracteres e dados binários, copiar de e para matrizes de bytes e codificar e decodificar dados.
 
@@ -23,6 +23,6 @@ Estes artigos fornecem código de exemplo para tarefas comuns de criptografia da
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

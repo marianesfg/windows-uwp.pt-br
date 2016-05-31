@@ -1,15 +1,13 @@
 ---
-Description: Este tópico descreve a nova IU do Windows para rotação. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esse novo mecanismo de interação em seu aplicativo da Windows Store.
+author: Karl-Bridge-Microsoft
+Description: Este tópico descreve a nova IU do Windows para rotação. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esse novo mecanismo de interação no seu aplicativo da Windows Store.
 title: Rotação
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
-label: Rotação
+label: Rotation
 template: detail.hbs
 ---
 
 # Rotação
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artigo descreve a nova IU do Windows para rotação. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esse novo mecanismo de interação no seu aplicativo UWP.
 
@@ -85,7 +83,7 @@ O Windows 8 suporta três tipos de rotação: livre, restringida e combinada.
 </tr>
 <tr class="odd">
 <td align="left">Rotação combinada</td>
-<td align="left"><p>A rotação combinada suporta a rotação livre com zonas (semelhantes a trilhos em [Guidelines for panning](guidelines-for-panning.md)) em cada ponto de alinhamento de 90 graus imposta pela rotação restringida. Se o usuário soltar o objeto fora de uma das zonas de 90 graus, o objeto permanecerá naquela posição. Caso contrário, o objeto girará automaticamente para um ponto de alinhamento.</p>
+<td align="left"><p>A rotação combinada suporta a rotação livre com zonas (parecidas com trilhos em [Diretrizes para movimento panorâmico](guidelines-for-panning.md)) em cada ponto de alinhamento de 90 graus imposta pela rotação restringida. Se o usuário soltar o objeto fora de uma das zonas de 90 graus, o objeto permanecerá naquela posição. Caso contrário, o objeto girará automaticamente para um ponto de alinhamento.</p>
 <div class="alert">
 <strong>Observação</strong>  Um trilho da interface do usuário é um recurso no qual uma área ao redor de um alvo restringe o movimento em algum valor específico ou local para influenciar sua seleção.
 </div>
@@ -101,14 +99,15 @@ O Windows 8 suporta três tipos de rotação: livre, restringida e combinada.
 ## <span id="related_topics"></span>Tópicos relacionados
 
 
-**Amostras**
+**Exemplos**
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Amostras de arquivo-morto**
+* [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
+**Exemplos de arquivo-morto**
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de teste de toque](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: amostra de tinta simplificada](http://go.microsoft.com/fwlink/p/?linkid=246570)
@@ -124,6 +123,6 @@ O Windows 8 suporta três tipos de rotação: livre, restringida e combinada.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

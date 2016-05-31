@@ -1,12 +1,13 @@
 ---
+author: TylerMSFT
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar e consultar arquivos e pastas
-description: Acesse arquivos e pastas que estejam em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta.
+description: Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta.
 ---
 # Enumerar e consultar arquivos e pastas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta.
@@ -52,36 +53,36 @@ Neste exemplo, usamos primeiro o método [**StorageFolder.GetFilesAsync**](https
 > // Get a read-only vector of the file objects
 > // and pass it to the continuation. 
 > create_task(picturesFolder->GetFilesAsync())        
->     // outputString is captured by value, which creates a copy 
->     // of the shared_ptr and increments its reference count.
->     .then ([outputString] (IVectorView\<StorageFile^>^ files)
-> {        
->     for ( unsigned int i = 0 ; i < files->Size; i++)
->     {
->         *outputString += files->GetAt(i)->Name->Data();
->         *outputString += L"\n";
->     }
-> })
->     // We need to explicitly state the return type 
->     // here: -> IAsyncOperation<...>
->     .then([picturesFolder]() -> IAsyncOperation\<IVectorView\<StorageFolder^>^>^ 
-> {
->     return picturesFolder->GetFoldersAsync();
-> })
->     // Capture "this" to access m_OutputTextBlock from within the lambda.
->     .then([this, outputString](IVectorView\<StorageFolder^>^ folders)
-> {        
->     *outputString += L"Folders:\n";
+>    // outputString is captured by value, which creates a copy 
+>    // of the shared_ptr and increments its reference count.
+>    .then ([outputString] (IVectorView\<StorageFile^>^ files)
+>    {        
+>        for ( unsigned int i = 0 ; i < files->Size; i++)
+>        {
+>            *outputString += files->GetAt(i)->Name->Data();
+>            *outputString += L"\n";
+>       }
+>    })
+>    // We need to explicitly state the return type 
+>    // here: -> IAsyncOperation<...>
+>    .then([picturesFolder]() -> IAsyncOperation\<IVectorView\<StorageFolder^>^>^ 
+>    {
+>        return picturesFolder->GetFoldersAsync();
+>    })
+>    // Capture "this" to access m_OutputTextBlock from within the lambda.
+>    .then([this, outputString](IVectorView\<StorageFolder^>^ folders)
+>    {        
+>        *outputString += L"Folders:\n";
 > 
->     for ( unsigned int i = 0; i < folders->Size; i++)
->     {
->         *outputString += folders->GetAt(i)->Name->Data();
->         *outputString += L"\n";
->     }
+>        for ( unsigned int i = 0; i < folders->Size; i++)
+>        {
+>           *outputString += folders->GetAt(i)->Name->Data();
+>           *outputString += L"\n";
+>        }
 > 
->     // Assume m_OutputTextBlock is a TextBlock defined in the XAML.
->     m_OutputTextBlock->Text = ref new String((*outputString).c_str());
-> });
+>        // Assume m_OutputTextBlock is a TextBlock defined in the XAML.
+>        m_OutputTextBlock->Text = ref new String((*outputString).c_str());
+>     });
 > ```
 > ```cs
 > StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
@@ -131,7 +132,7 @@ Neste exemplo, usamos primeiro o método [**StorageFolder.GetFilesAsync**](https
 > ```
 
 
-> **Observação**  Em C# ou Visual Basic, lembre-se de clicar a palavra-chave **async** na declaração de qualquer método no qual você utilize o operador **await**.
+> **Observação**  Em C# ou Visual Basic, lembre-se de colocar a palavra-chave **async** na declaração de qualquer método no qual você utilize o operador **await**.
  
 
 Como alternativa, você pode usar o método [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286) para obter todos os itens (arquivos e subpastas) em um local específico. O seguinte exemplo usa o método **GetItemsAsync** para obter todos os arquivos e subpastas na pasta raiz da [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (e não em subpastas). Em seguida, o exemplo lista o nome de cada arquivo e subpasta. Se o item é uma subpasta, o exemplo anexa `"folder"` ao nome.
@@ -203,9 +204,9 @@ Como alternativa, você pode usar o método [**GetItemsAsync**](https://msdn.mic
 > Next item
 > ```
 
-## Query files in a location and enumerate matching files
+## Consultar arquivos em um local e enumerar os arquivos correspondentes
 
-Neste exemplo, consultamos todos os arquivos em [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156), agrupados por mês e, dessa vez, o exemplo faz recursão em subpastas. Primeiro, chamamos [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) e passamos o valor [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) para o método. Isso nos dá um objeto [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066).
+Neste exemplo, consultamos todos os arquivos na [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) agrupados por mês e, desta vez, o exemplo retorna em subpastas. Primeiro, chamamos [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) e passamos o valor [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) para o método. Isso nos dá um objeto [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066).
 
 Em seguida, chamamos [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br208074), que retorna objetos [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representam pastas virtuais. Nesse caso, estamos agrupando por mês, para que as pastas virtuais representem um grupo de arquivos com o mesmo mês.
 
@@ -306,7 +307,7 @@ Em seguida, chamamos [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn
 > Next folder
 > ```
 
-A saída do exemplo é semelhante à seguinte.
+O resultado do exemplo é parecido com o seguinte:
 
 ``` syntax
 July ‎2015 (2)
@@ -319,6 +320,6 @@ July ‎2015 (2)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

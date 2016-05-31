@@ -1,6 +1,7 @@
 ---
-Description: você pode fornecer informações adicionais sobre seu aplicativo na seção Declarações do aplicativo da página Propriedades do aplicativo durante o processo de envio.
-title: declarações do aplicativo
+author: jnHs
+Description: Você pode fornecer informações adicionais sobre seu aplicativo na seção Declarações do aplicativo da página Propriedades do aplicativo durante o processo de envio.
+title: Declarações de aplicativo
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ---
 
@@ -40,7 +41,7 @@ Se você deseja impedir que seu aplicativo seja instalado em unidades alternativ
 
 Não há opção de restringir a instalação para que o aplicativo possa ser instalado apenas em mídia de armazenamento removível.
 
-> **Nota**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
+> **Observação**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
 
 ## O Windows pode incluir dados do aplicativo em backups automáticos no OneDrive.
 
@@ -48,7 +49,7 @@ Esta caixa é marcada por padrão, para permitir que os dados do seu aplicativo 
 
 Se você deseja impedir que os dados do aplicativo sejam incluídos em backups automáticos, desmarque essa caixa.
 
-> **Nota**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
+> **Observação**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
 
  
 
@@ -61,6 +62,6 @@ Se você deseja impedir que os dados do aplicativo sejam incluídos em backups a
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

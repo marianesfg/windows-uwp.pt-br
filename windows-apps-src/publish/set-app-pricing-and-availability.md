@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: A página Preço e disponibilidade do processo de envio de aplicativo permite que você determine quanto seu aplicativo vai custar, se você oferecerá uma avaliação gratuita e como, quando e onde ele estará disponível para os clientes.
 title: Definir a disponibilidade e o preço do aplicativo
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
@@ -35,7 +36,7 @@ Por padrão, seu aplicativo será listado em todos os mercados possíveis com se
 ## Preço de venda
 
 
-Se você quiser oferecer seu aplicativo por um preço reduzido por um período limitado de tempo, será possível criar e agendar uma promoção. Para saber mais, veja [Colocar aplicativos e IAPs em promoção](put-apps-and-iaps-on-sale.md).
+Se você quiser oferecer seu aplicativo por um preço reduzido por um período limitado de tempo, será possível criar e agendar uma promoção. Para saber mais, consulte [Colocar aplicativos e IAPs em promoção](put-apps-and-iaps-on-sale.md).
 
 ## Distribuição e visibilidade
 
@@ -50,7 +51,7 @@ Se você quiser ocultar seu aplicativo na Loja, mas ainda quiser torná-lo dispo
 -   **Ocultar este aplicativo na Loja. Os clientes com um link direto para o detalhe do aplicativo ainda podem baixá-lo, exceto no Windows 8 e no Windows 8.1**: nenhum cliente poderá localizar seu aplicativo na Loja por meio de pesquisa ou navegação, mas qualquer cliente com o link direto para a listagem do aplicativo pode baixá-lo em dispositivos Windows 10 ou Windows Phone 8.1 e versões anteriores.
 -   **Ocultar esse aplicativo e disponibilizá-lo somente para as pessoas que você especificar abaixo, que podem baixá-lo em dispositivos Windows Phone 8.x. Um código promocional pode ser usado para baixar o aplicativo em dispositivos Windows 10**: nenhum cliente pode encontrar seu aplicativo na Loja por meio de pesquisas ou navegação, e somente os clientes do Windows Phone 8.x cujos endereços de email (associados às respectivas contas da Microsoft) que você inserir na caixa (separados por ponto-e-vírgula) poderão baixar o aplicativo usando o link direto para sua listagem. Você também pode [gerar códigos promocionais](generate-promotional-codes.md) para distribuição a pessoas específicas no Windows 10. Essa opção é frequentemente usada para [teste beta](beta-testing-and-targeted-distribution.md) no Windows Phone 8.1 e versões anteriores. Observe que essa opção só pode ser selecionada se você nunca tiver publicado o aplicativo com a opção **Distribuição e visibilidade** definida como **Qualquer pessoa pode encontrar seu aplicativo na Loja**.
 
-> **Observação**  Para parar completamente de oferecer um aplicativo para novos clientes, clique em **Tornar aplicativo indisponível** na página de visão geral do aplicativo. Depois que você confirmar que deseja tornar o aplicativo indisponível, em algumas horas ele não estará mais visível na Loja, e os novos clientes não poderão obtê-lo por meio de qualquer método. Esta ação substituirá qualquer uma das opções que você escolheu aqui: ele não estará disponível para novos clientes. Para disponibilizá-lo para novos clientes novamente, você pode a qualquer momento clicar em **Tornar aplicativo disponível** na página de visão geral do aplicativo. Para saber mais, veja [Removendo um aplicativo da Loja](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+> **Observação**  Para parar completamente de oferecer um aplicativo para novos clientes, clique em **Tornar aplicativo indisponível** na página de visão geral do aplicativo. Depois que você confirmar que deseja tornar o aplicativo indisponível, em algumas horas ele não estará mais visível na Loja, e os novos clientes não poderão obtê-lo por meio de qualquer método. Esta ação substituirá qualquer uma das opções que você escolheu aqui: ele não estará disponível para novos clientes. Para disponibilizá-lo para novos clientes novamente, você pode a qualquer momento clicar em **Tornar aplicativo disponível** na página de visão geral do aplicativo. Para saber mais, consulte [Removendo um aplicativo da Loja](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 ## Famílias de dispositivos Windows 10
 
@@ -75,7 +76,7 @@ Para saber mais sobre famílias de dispositivos, veja [Guia para aplicativos UWP
 
 Por padrão, seu aplicativo pode ser oferecido para que as organizações comprem por volume. Você pode indicar se e como seu aplicativo pode ser oferecido nesta seção.
 
-Para saber mais, veja [Opções de licenciamento para organizações](organizational-licensing.md).
+Para saber mais, consulte [Opções de licenciamento para organizações](organizational-licensing.md).
 
 ## Data de publicação
 
@@ -97,6 +98,6 @@ Você também pode mudar a data de lançamento após enviar o aplicativo, desde 
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

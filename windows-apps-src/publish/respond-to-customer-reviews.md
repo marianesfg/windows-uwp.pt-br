@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Você pode responder diretamente às críticas ao seu aplicativo para mostrar aos clientes que a opinião deles é ouvida.
 title: Responder às críticas dos clientes
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
@@ -9,7 +10,7 @@ ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
 
 Você pode responder diretamente às críticas ao seu aplicativo para mostrar aos clientes que a opinião deles é ouvida. Com uma resposta às críticas, você pode informar aos clientes os recursos que foram adicionados ou os bugs que foram corrigidos com base nos comentários deles, ou obter um feedback mais específico sobre como melhorar seu aplicativo. Você também pode optar por ter sua resposta exibida na Loja para que todos os clientes do Windows 10 a consultem.
 
-> **Observação**  Você não poderá responder diretamente às críticas escritas por clientes que optaram por não receber respostas a críticas. Respostas também não podem ser deixadas para quaisquer críticas feitas por clientes de fora dos EUA. com dispositivos Windows Phone 8.
+> **Observação**  Você não poderá responder diretamente às críticas escritas por clientes que optaram por não receber respostas a críticas. As respostas também não podem ser deixadas para nenhuma análise criada por clientes de fora dos EUA com dispositivos Windows Phone 8.
 
 Para ver as críticas do seu aplicativo e fornecer respostas, encontre o aplicativo apropriado em seu painel do Centro de Desenvolvimento do Windows. No menu de navegação para a esquerda, expanda **Análises** e, em seguida, clique em **Avaliações** para exibir o [Relatório de avaliações](reviews-report.md).
 
@@ -46,6 +47,6 @@ Sua relação com seus clientes cabe a você. A Microsoft não se envolve em con
 Ouvir e responder aos seus clientes é apenas o começo. Agir sobre os comentários recebidos também é fundamental. Se você fizer melhorias significativas, demonstre-as na loja com confiança [criando um novo envio](app-submissions.md) para atualizar seu aplicativo.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

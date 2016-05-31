@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: O padrão mestre/detalhes exibe uma lista mestra e os detalhes do item atualmente selecionado. Esse padrão é usado com frequência para email e listas de contatos/catálogos de endereços.
 title: Mestre/detalhes
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
-label: Mestre/detalhes
+label: Master/details
 template: detail.hbs
 ---
 # Padrão mestre/detalhes
@@ -71,16 +72,16 @@ Este design de aplicativo que rastreia o mercado de ações usa um padrão mestr
 
 ![Exemplo de aplicativo usando o padrão mestre-detalhes na área de trabalho](images/uap-finance-desktop700.png)
 
-\[Este artigo contém informações que são específicas aos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Artigos relacionados
 
 - [Listas](lists.md)
-- [Pesquisa](search.md)
+- [Pesquisar](search.md)
 - [Aplicativo e barras de comandos](app-bars.md)
 - [**Classe ListView (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,12 +1,13 @@
 ---
+author: drewbatgit
 ms.assetid: D20C8E01-4E78-4115-A2E8-07BB3E67DDDC
-description: este artigo mostra como acessar e usar a lâmpada do dispositivo, se houver uma. A funcionalidade da lâmpada é gerenciada separadamente da funcionalidade da câmera e do flash da câmera do dispositivo.
-title: lanterna independente da câmera
+description: Este artigo mostra como acessar e usar a lâmpada do dispositivo, se houver uma. A funcionalidade da lâmpada é gerenciada separadamente da câmera e do flash da câmera do dispositivo.
+title: Lanterna independente da câmera
 ---
 
 # Lanterna independente da câmera
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como acessar e usar a lâmpada do dispositivo, se houver uma. A funcionalidade da lâmpada é gerenciada separadamente da câmera e do flash da câmera do dispositivo. Além de oferecer uma referência para a lâmpada e o ajuste de suas configurações, este artigo também mostra como liberar o recurso da lâmpada corretamente quando ela não estiver em uso e como detectar quando a disponibilidade da lâmpada muda caso esteja sendo usada por outro aplicativo.
@@ -74,6 +75,6 @@ Quando você não estiver mais usando a lâmpada, deverá desativá-la e chamar 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

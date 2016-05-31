@@ -1,13 +1,14 @@
 ---
+author: mcleblanc
 title: Iniciar um aplicativo para obter resultados
-description: Saiba como iniciar um aplicativo a partir de outro aplicativo e trocar dados entre os dois. Isso é chamado de iniciar um aplicativo para obter resultados.
+description: Saiba como iniciar um aplicativo a partir de outro aplicativo e trocar dados entre os dois. Isso é chamado de "iniciar" um aplicativo para obter resultados.
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
 ---
 
 # Iniciar um aplicativo para obter resultados
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -34,7 +35,7 @@ O atributo **ReturnResults** na extensão do protocolo aceita um destes valores:
 
 Neste exemplo de extensão de protocolo, o aplicativo pode ser iniciado somente para obter resultados. Isso simplifica a lógica do método **OnActivated**, discutido a seguir, porque só será necessário lidar com o caso "iniciado para obter resultados" e não com as outras maneiras de ativação do aplicativo.
 
-```xaml
+```xml
 <Applications>
    <Application ...>
 
@@ -154,8 +155,8 @@ async Task<string> LaunchAppForResults()
 
     string theResult = "";
     LaunchUriResult result = await Windows.System.Launcher.LaunchUriForResultsAsync(testAppUri, options, inputData);
-    if (result.Status == LaunchUriStatus.Success &amp;&amp;
-        result.Result != null &amp;&amp;
+    if (result.Status == LaunchUriStatus.Success &&
+        result.Result != null &&
         result.Result.ContainsKey("ReturnedData"))
     {
         ValueSet theValues = result.Result;
@@ -167,7 +168,7 @@ async Task<string> LaunchAppForResults()
 
 Neste exemplo, um [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) que contém a chave **TestData** é passado para o aplicativo iniciado. O aplicativo iniciado cria um **ValueSet** com uma chave denominada **ReturnedData** que contém o resultado retornado para o chamador.
 
-Você deve criar e implantar o aplicativo que será iniciado para obter resultados antes de executar o aplicativo de chamada. Caso contrário, [**LaunchUriResult.Status**](https://msdn.microsoft.com/library/windows/apps/dn906892) reportará ****LaunchUriStatus.AppUnavailable.
+Você deve criar e implantar o aplicativo que será iniciado para obter resultados antes de executar o aplicativo de chamada. Caso contrário, [**LaunchUriResult.Status**](https://msdn.microsoft.com/library/windows/apps/dn906892) reportará **LaunchUriStatus.AppUnavailable**.
 
 O nome da família do aplicativo iniciado será necessário ao definir [**TargetApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/dn893511). Para obter o nome da família, faça a seguinte chamada a partir do aplicativo iniciado:
 
@@ -201,6 +202,6 @@ Em seguida, passá-lo para o aplicativo iniciado por meio de **LaunchUriForResul
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,13 +1,14 @@
 ---
-title: programação assíncrona (DirectX e C++)
-description: este tópico cobre vários pontos a serem considerados quando se utiliza programação assíncrona e threading com DirectX.
+author: mtoepke
+title: Programação assíncrona (DirectX e C++)
+description: Este tópico cobre vários pontos a serem considerados ao utilizar a programação assíncrona e threading com o DirectX.
 ms.assetid: 17613cd3-1d9d-8d2f-1b8d-9f8d31faaa6b
 ---
 
 # Programação assíncrona (DirectX e C++)
 
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico cobre vários pontos a serem considerados quando se utiliza programação assíncrona e threading com DirectX.
 
@@ -28,7 +29,7 @@ Entretanto, se o jogo for suficientemente complexo ou se você estiver tentando 
 
 O aplicativo pode manipular esses componentes em vários threads simultâneos. A E/S de arquivo, principalmente o carregamento de ativos, se beneficia bastante com o carregamento assíncrono, pois o jogo ou o aplicativo podem estar em um estado interativo enquanto milhares (ou centenas de milhares) de megabytes de ativos estão sendo carregados ou transmitidos. A maneira mais fácil de criar e gerenciar esses threads é usando a [Biblioteca de padrões paralelos](https://msdn.microsoft.com/library/dd492418.aspx) e o padrão **task**, como contido no namespace **concurrency** definido em PPLTasks.h. O uso da [Biblioteca de padrões paralelos](https://msdn.microsoft.com/library/dd492418.aspx) aproveita-se diretamente de CPUs com multinúcleo e hiperprocessamento, e pode melhorar tudo, desde tempos de carregamento percebidos até os engates e atrasos que ocorrem com cálculos de CPU ou processamento de rede intensos.
 
-> **Nota**   Em um aplicativo da Plataforma Universal do Windows (UWP), a interface do usuário é executada inteiramente em um single-threaded apartment (STA). Se você estiver criando uma interface do usuário para o jogo em DirectX que usa [interoperabilidade XAML](directx-and-xaml-interop.md), só será possível acessar os controles usando STA.
+> **Observação**   Em um aplicativo da Plataforma Universal do Windows (UWP), a interface do usuário é executada inteiramente em um single-threaded apartment (STA). Se você estiver criando uma interface do usuário para o jogo em DirectX que usa [interoperabilidade XAML](directx-and-xaml-interop.md), só será possível acessar os controles usando STA.
 
  
 
@@ -62,6 +63,6 @@ Crie um contexto adiado usando [**ID3D11Device::CreateDeferredContext**](https:/
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

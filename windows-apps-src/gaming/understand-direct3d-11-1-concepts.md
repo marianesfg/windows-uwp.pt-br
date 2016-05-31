@@ -1,22 +1,23 @@
 ---
+author: mtoepke
 title: Alterações importantes do Direct3D 9 para o Direct3D 11
-description: Este tópico explica diferenças de alto nível entre o DirectX 9 e o DirectX 11.
+description: Este tópico explica as diferenças de alto nível entre o DirectX 9 e o DirectX 11.
 ms.assetid: 35a9e388-b25e-2aac-0534-577b15dae364
 ---
 
 # Alterações importantes do Direct3D 9 para o Direct3D 11
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
--   [Planeje a compatibilização do DirectX](plan-your-directx-port.md)
+-   [Planejar a portabilidade do DirectX](plan-your-directx-port.md)
 -   Alterações importantes do Direct3D 9 para o Direct3D 11
 -   [Mapeamento de recursos](feature-mapping.md)
 
 
-Este tópico explica de alto nível entre o DirectX 9 e o DirectX 11.
+Este tópico explica as diferenças de alto nível entre o DirectX 9 e o DirectX 11.
 
 Basicamente, o Direct3D 11 é o mesmo tipo de API que o Direct3D 9: uma interface virtualizada de baixo nível no hardware gráfico. Ele ainda permite realizar operações de desenho de gráficos em diversas implementações de hardware. O layout da API gráfica mudou desde o Direct3D 9; o conceito de um contexto de dispositivo foi expandido, e a API foi adicionada especificamente para a infraestrutura gráfica. Os recursos armazenados no dispositivo Direct3D têm um novo mecanismo de polimorfismo de dados, chamado "exibição de recurso".
 
@@ -110,6 +111,6 @@ O Direct3D 9 gerenciava as restrições de sombreadores usando uma matriz compar
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

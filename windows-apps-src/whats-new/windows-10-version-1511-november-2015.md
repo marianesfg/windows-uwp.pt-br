@@ -1,5 +1,5 @@
 ---
-Description: O Windows 10 versão 1511 e as atualizações das ferramentas de desenvolvedor continuarão a fornecer as ferramentas, os recursos e as experiências avançadas da Plataforma Universal do Windows.
+author: QuinnRadich Description: O Windows 10 versão 1511 e as atualizações das ferramentas de desenvolvedor continuarão a fornecer as ferramentas, os recursos e as experiências avançadas da Plataforma Universal do Windows.
 title: Novidades para desenvolvedores no Windows 10, versão 1511: novembro de 2015
 ---
 
@@ -78,11 +78,11 @@ O Kit de Certificação de Aplicativos Windows foi atualizado com testes aprimor
                                     
 ## Downloads de design ## 
 
-Confira nossos novos modelos de design de aplicativo UWP para Adobe Photoshop. Nós também atualizamos nossos modelos do Microsoft PowerPoint e Adobe Illustrator e disponibilizamos uma versão em PDF de nossas diretrizes. <a href="/design/assets">Visite a página de Downloads de design</a>    
+Confira nossos novos modelos de design de aplicativo UWP para Adobe Photoshop. Nós também atualizamos nossos modelos do Microsoft PowerPoint e Adobe Illustrator e disponibilizamos uma versão em PDF de nossas diretrizes. <a href="/design/assets">Visite a página de Downloads de design</a>.    
 
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

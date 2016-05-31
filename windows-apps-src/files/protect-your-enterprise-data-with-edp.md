@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 Description: 'Este tópico mostra exemplos das tarefas de codificação necessárias para obter algumas das situações de Proteção de dados empresariais (EDP) relacionados a arquivos mais comuns.'
 MS-HAID: 'dev\_files.protect\_your\_enterprise\_data\_with\_edp'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -8,11 +9,11 @@ title: 'Usar a Proteção de dados empresariais (EDP) para proteger arquivos'
 
 # Usar a Proteção de dados empresariais (EDP) para proteger arquivos
 
-__Observação__ A Proteção de dados empresariais (EDP) não pode ser aplicada ao Windows 10, Versão 1511 (compilação 10586) ou anterior.
+__Observação__ A EDP (Proteção de Dados Empresariais) não pode ser aplicada ao Windows 10, Versão 1511 (compilação 10586) ou anterior.
 
 Este tópico mostra exemplos das tarefas de codificação necessárias para obter algumas das situações de Proteção de dados empresariais (EDP) relacionados a arquivos mais comuns. Para a noção de desenvolvedor completa de como EDP está relacionada a arquivos, streams, área de transferência, rede, tarefas em segundo plano e proteção de dados sob bloqueio, consulte [Proteção de dados empresariais (EDP)](../enterprise/edp-hub.md).
 
-**Observação**  A [amostra de Proteção de dados empresariais (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) trata de muitos das situações demonstradas neste tópico.
+**Observação**  O [exemplo de EDP (proteção de dados empresariais)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) trata de muitas das situações demonstradas neste tópico.
 
 ## Pré-requisitos
 
@@ -24,7 +25,7 @@ Este tópico mostra exemplos das tarefas de codificação necessárias para obte
 
     Um aplicativo que garante de forma autônoma que os dados empresariais permaneçam sob o controle administrativo da empresa é conhecido como aplicativo habilitado para empresas. Um aplicativo habilitado é mais avançado, inteligente, flexível e confiável que um não habilitado. Seu aplicativo avisa ao sistema que é habilitado declarando a funcionalidade restrita **enterpriseDataPolicy**. Entretanto, ser habilitado significa mais do que definir uma funcionalidade. Para obter mais informações, consulte [Aplicativos habilitados para empresas](../enterprise/edp-hub.md#enterprise-enlightened-apps).
 
--   **Entender programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
+-   **Entender programação assíncrona para aplicativos UWP (Plataforma Universal do Windows)**
 
     Para saber mais sobre como escrever aplicativos assíncronos em in C\# ou Visual Basic, consulte [Chamar APIs assíncronas no Visual Basic ou C#](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber mais sobre como escrever aplicativos assíncronos em in C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
@@ -41,7 +42,7 @@ string localFolderPath = ApplicationData.Current.LocalFolder.Path;
 
 Quando você tiver o caminho, poderá usar o Explorador de Arquivos para localizar facilmente os arquivos que o seu aplicativo cria. Dessa forma, você poderá confirmar que são protegidos e que são protegidos para a identidade correta.
 
-No Explorador de Arquivos, **Alterar opções de pasta e pesquisa** e na guia **Exibir**, marque **Mostrar arquivos criptografados em cor**. Também use os comandos **Exibir** &gt; **Adicionar colunas** do Explorador de Arquivos para adicionar a coluna **Criptografado a** para que você possa ver a identidade da empresa para quem você protege seus arquivos.
+No Explorador de Arquivos, **Alterar opções de pasta e pesquisa** e na guia **Exibir**, marque **Mostrar arquivos criptografados em cor**. Use também o comando **Exibir**&gt;**Adicionar colunas** do Explorador de Arquivos para adicionar a coluna **Criptografados em** para poder ver a identidade da empresa na qual você está protegendo seus arquivos.
 
 ## Proteger dados empresariais em um novo arquivo (para um aplicativo interativo)
 
@@ -109,7 +110,7 @@ private async void SaveEnterpriseDataToFile(string enterpriseData, string identi
         await FileProtectionManager.CreateProtectedAndOpenAsync(storageFolder,
             "sample.txt", identity, CreationCollisionOption.ReplaceExisting);
 
-    // It&#39;s important to successfully protect a file *before* writing enterprise data to it.
+    // It's important to successfully protect a file *before* writing enterprise data to it.
     if (protectedFileCreateResult.ProtectionInfo.Identity == identity &&
         protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus.Protected)
     {
@@ -244,14 +245,14 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 }
 ```
 
-**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que escrevem da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
 ## Tópicos relacionados
 
 
-[amostra de proteção de dados corporativos (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
+[exemplo de EDP (proteção de dados empresariais)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
 
 [**Windows.Security.EnterpriseData namespace**](https://msdn.microsoft.com/library/windows/apps/dn279153)
 
@@ -263,6 +264,6 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

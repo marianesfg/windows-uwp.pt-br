@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: Salvar um arquivo com um seletor
 description: Use o FileSavePicker para permitir que os usuários especifiquem o nome e o local em que desejam que o aplicativo salve um arquivo.
@@ -7,7 +8,7 @@ description: Use o FileSavePicker para permitir que os usuários especifiquem o 
 # Salvar um arquivo com um seletor
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -53,14 +54,17 @@ Defina propriedades no objeto do seletor de arquivos que forem relevantes para s
 
 Este exemplo define três propriedades: [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880), [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) e [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878).
 
-> **Observação**  Os objetos[**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) exibem o seletor de arquivos usando [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891).
+> **Observação**
+             Os objetos[**
+            FileSavePicker**
+            ](https://msdn.microsoft.com/library/windows/apps/br207871) exibem o seletor de arquivos usando [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891).
 
      
 - Como nosso usuário está salvando um documento ou arquivo de texto, a amostra define [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880) como a pasta local do aplicativo usando [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621). Configure [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) para um local apropriado para o tipo de arquivo que será salvo, como Música, Imagens, Vídeos ou Documentos. A partir do local inicial, o usuário pode navegar para outros locais.
  
 - Como desejamos que nosso aplicativo abra o arquivo depois dele ser salvo, usamos [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) para especificar os tipos de arquivos que a amostra suporta (documentos do Microsoft Word e arquivos de texto). Certifique-se de que todos os tipos de arquivos sejam suportados por seu aplicativo. Os usuários poderão salvar seus arquivos como qualquer tipo de arquivo que você especificar. Eles também podem alterar o tipo de arquivo selecionando outro tipo de arquivo que você especificou. A primeira opção de tipo de arquivo na lista será selecionada por padrão: para controlar isso, configure a propriedade [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873).
 
-> **Observação**  O seletor de arquivos também utiliza o tipo de arquivo atualmente selecionado para filtrar quais arquivos são exibidos, de forma que os únicos tipos de arquivos que correspondem aos tipos de arquivos selecionados são exibidos para o usuário.
+> **Observação**  O seletor de arquivos também usa o tipo de arquivo atualmente selecionado para filtrar quais arquivos são exibidos, de forma que somente os tipos de arquivos que correspondam aos tipos de arquivos selecionados sejam exibidos para o usuário.
 
 - Para poupar o usuário da digitação, o exemplo define um [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878). Torne seu nome de arquivo sugerido relevante para o arquivo que está sendo salvo. Por exemplo, como no Word, você pode sugerir o nome de arquivo existente se houver um, ou a primeira linha de um documento se o usuário estiver salvando um arquivo que ainda não possui nome.
 
@@ -112,6 +116,6 @@ O exemplo verifica se o arquivo é válido e grava seu próprio nome de arquivo 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

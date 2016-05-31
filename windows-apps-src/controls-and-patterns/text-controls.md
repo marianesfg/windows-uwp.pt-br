@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Considere com que frequência lemos texto em nossas vidas diárias - em emails, livros, sinais de trânsito, preços em um cardápio, marcas de pressão dos pneus ou cartazes em postes.
 title: Controles de texto
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
-label: Controles de texto
+label: Text controls
 template: detail.hbs
 ---
 # Controles de texto
@@ -21,7 +22,7 @@ Controles de texto consistem em caixas de entrada de texto, caixas de senha, cai
 -   [**Classe TextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)
 -   [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
 
-## Este é o controle correto?
+## Esse é o controle correto?
 
 O controle de texto que você deverá usar dependerá do cenário. Use essas informações para selecionar o controle de texto correto para usar em seu aplicativo.
 
@@ -56,13 +57,13 @@ Use **RichEditBox** para exibir e editar arquivos Rich Text. Você não usa um R
 Há muitas maneiras de se obter a entrada do usuário em seu aplicativo. Estas perguntas ajudarão a responder se uma das caixas de entrada de texto padrão ou outro controle é a melhor opção para obter a entrada do usuário.
 
 -   **É prático enumerar todos os valores válidos de forma eficiente?** Se sim, então considere usar um dos controles de seleção, como [caixa de seleção](checkbox.md), [lista suspensa](lists.md), caixa de listagem, [botão de opção](radio-button.md), [controle deslizante](slider.md), [botão de alternância](toggles.md), [seletor de data](date-and-time.md) ou seletor de hora.
--   **Há um conjunto razoavelmente pequeno de valores válidos?** Se for o caso, considere a possibilidade de utilizar uma [lista suspensa](lists.md) ou uma caixa de listagem, especialmente se os valores têm mais do que alguns caracteres de comprimento.
--   **Os dados válidos estão completamente irrestritos? Ou os dados válidos estão restritos apenas pelo formato (restrição de tamanho ou dos tipos de caractere)?** Se sim, use um controle de entrada de texto. Você pode limitar o número de caracteres que podem ser inseridos e validar o formato no código do aplicativo.
+-   **Há um conjunto razoavelmente pequeno de valores válidos?** Nesse caso, considere uma [lista suspensa](lists.md) ou uma caixa de listagem, especialmente se os valores tiverem mais do que alguns caracteres.
+-   **Os dados válidos estão completamente irrestritos? Ou os dados válidos estão restritos apenas pelo formato (restrição de tamanho ou tipos de caractere)?** Em caso afirmativo, use um controle de entrada de texto. Você pode limitar o número de caracteres que podem ser inseridos e validar o formato no código do aplicativo.
 -   **O valor representa um tipo de dados que tem um controle comum especializado?** Se sim, use o controle apropriado em vez de um controle de entrada de texto. Por exemplo, use um [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681), em vez de um controle de entrada de texto, para aceitar uma entrada de data.
 -   Se os dados forem estritamente numéricos:
     -   **O valor que está sendo inserido é aproximado e/ou relativo a outra quantidade na mesma página?** Se for o caso, utilize um [controle deslizante](slider.md).
-    -   **O usuário se beneficiaria com um feedback instantâneo sobre o efeito das alterações de configuração?** Se sim, use um [controle deslizante](slider.md), possivelmente com um controle anexo.
-    -   **Há bastante probabilidade de o valor inserido ser ajustado após o resultado ser observado, como volume ou brilho ser ajustado?** Se for o caso, use um [controle deslizante](slider.md).
+    -   **O usuário se beneficiaria com um feedback instantâneo sobre o efeito das alterações de configuração?** Se for caso, utilize um [controle deslizante](slider.md), possivelmente com um controle anexo.
+    -   **Há alguma probabilidade de o valor inserido ser ajustado após o resultado ser observado, como volume ou brilho ser ajustado?** Se for o caso, utilize um [controle deslizante](slider.md).
     
 ## Exemplos
 
@@ -100,10 +101,9 @@ Consulte estes artigos para obter diretrizes de fonte:
 
 **Aplica-se a:** TextBox, PasswordBox RichEditBox
 
-Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode definir o escopo de entrada do controle de texto para corresponder ao tipo de dados que o usuário deve inserir.
+Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira.
 
->Dica 
->Essas informações se aplicam somente ao SIP. Elas não se aplicam a teclados de hardware nem ao Teclado Virtual disponível nas opções de Facilidade de Acesso do Windows.
+>Dica Essas informações se aplicam somente ao SIP. Elas não se aplicam a teclados de hardware nem ao Teclado Virtual disponível nas opções de Facilidade de Acesso do Windows.
 
 O teclado virtual pode ser usado para entrada de texto, quando o aplicativo é executado em um dispositivo com tela sensível ao toque. O teclado virtual é invocado quando o usuário toca em um campo de entrada editável, como um TextBox ou um RichEditBox. Você pode tornar a entrada de dados muito mais rápida e fácil para os usuários em seu aplicativo definindo o escopo de entrada do controle de texto para corresponder ao tipo de dados que o usuário deve inserir. O escopo de entrada oferece uma dica para o sistema sobre o tipo de entrada de texto esperado pelo controle, para que o sistema possa fornecer um layout de teclado virtual especializado para o tipo de entrada.
 
@@ -130,7 +130,7 @@ O texto renderizado tem a aparência a seguir:
 
 ![Bloco de texto com fonte de cor](images/text-block-color-fonts.png)
 
-Para saber mais, veja a propriedade [**IsColorFontEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.iscolorfontenabled.aspx).
+Para saber mais, consulte a propriedade [**IsColorFontEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.iscolorfontenabled.aspx).
 
 ## Diretrizes para separadores de linha e parágrafo
 
@@ -144,7 +144,7 @@ Seu aplicativo pode usar o separador de linha para indicar um final da linha nã
 
 Seu aplicativo pode inserir um separador de parágrafo entre parágrafos de texto. O uso desse separador permite a criação de arquivos de texto sem formatação que podem ser formatados com larguras de linha diferentes em sistemas operacionais diversos. O sistema de destino pode ignorar todos os separadores de linha e interromper parágrafos apenas nos separadores de parágrafo.
 
-\[Este artigo contém informações que são específicas dos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Artigos relacionados
 
@@ -160,6 +160,6 @@ Seu aplicativo pode inserir um separador de parágrafo entre parágrafos de text
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

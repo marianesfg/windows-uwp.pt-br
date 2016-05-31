@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: Use este método na API de análise da Windows Store para obter dados de opinião para um determinado intervalo de datas e outros filtros opcionais.
 title: Obter avaliações de aplicativo
@@ -7,7 +8,7 @@ title: Obter avaliações de aplicativo
 # Obter avaliações de aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use este método na API de análise da Windows Store para obter dados de opinião para um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
@@ -37,7 +38,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
 
  
 
@@ -92,7 +93,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 <tr class="even">
 <td align="left">filter</td>
 <td align="left">string</td>
-<td align="left">Uma ou mais instruções que filtram as linhas na resposta. Para saber mais, consulte a seção [filter fields](#filter-fields) a seguir.</td>
+<td align="left">Uma ou mais instruções que filtram as linhas na resposta. Para saber mais, consulte a seção [campos de filtro](#filter-fields) a seguir.</td>
 <td align="left">Não</td>
 </tr>
 <tr class="odd">
@@ -131,7 +132,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
  
 ### Campos de filtro
 
-O parâmetro *filter* do corpo da solicitação contém uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um campo e um valor que estão associados a operadores **eq** ou **ne** e alguns campos também dão suporte a operadores **contains**, **gt**, **lt**, **ge** e **le**. Instruções podem ser combinadas usando-se **and** ou **or**.
+O parâmetro *filter* do corpo da solicitação contém uma ou mais instruções que filtram as linhas da resposta. Cada instrução contém um campo e um valor que estão associados a operadores **eq** ou **ne** e alguns campos também dão suporte a operadores **contains**, **gt**, **lt**, **ge** e **le**. Instruções podem ser combinadas usando-se **and** ou **or**.
 
 Este é um exemplo de cadeia de caracteres *filtro*: *filter=contains(reviewText,'great') and contains(reviewText,'ads') and deviceRAM lt 2048 and market eq 'US'*
 
@@ -284,7 +285,7 @@ Para obter uma lista dos campos com suporte e os operadores de suporte para cada
 
 Os exemplos a seguir demonstram várias solicitações para a obtenção de dados de opinião. Substitua o valor de *applicationId* pela ID do produto de seu aplicativo.
 
-```
+```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
 Authorization: Bearer <your access token>
 
@@ -382,6 +383,6 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

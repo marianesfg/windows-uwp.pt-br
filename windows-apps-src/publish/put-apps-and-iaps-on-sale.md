@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Você também pode promover o seu aplicativo ou IAP (produto no aplicativo) na Windows Store colocando-o em promoção por um tempo limitado.
 title: Colocar aplicativos e IAPs em promoção
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
@@ -64,6 +65,6 @@ Desde que a promoção não tenha sido iniciada no momento em que o processo de 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

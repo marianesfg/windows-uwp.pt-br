@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 Description: Neste passo a passo, você criará e executará seu primeiro experimento com testes A/B.
 title: Criar e executar seu primeiro experimento com testes A/B
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
@@ -38,7 +39,7 @@ Para seguir este passo a passo, você deve ter uma conta do Centro de Desenvolvi
 9. Confirme que a caixa de seleção **Distribuir igualmente** está marcada para que as variações sejam distribuídas igualmente no seu aplicativo.
 10. Clique em **Salvar** e depois em **Ativar**.
 
-> **Importante**  Depois de ativar um experimento, você não pode mais modificar seus parâmetros, a menos que ele seja um experimento de teste (você clicou na caixa de seleção **Experimento de teste** quando criou o experimento). Em geral, recomendamos codificar o experimento no seu aplicativo antes de ativar esse experimento. Por questões de simplicidade, neste guia passo a passo, você pode ativar o experimento agora.
+> **Importante**  Depois de ativar um experimento, você não pode mais modificar os parâmetros dele, a menos que ele seja um experimento de teste (você clicou na caixa de seleção **Experimento de teste** quando criou o experimento). Em geral, recomendamos codificar o experimento no seu aplicativo antes de ativar esse experimento. Por questões de simplicidade, neste guia passo a passo, você pode ativar o experimento agora.
 
 ## Codificar o experimento no seu aplicativo
 
@@ -159,7 +160,7 @@ Aguarde várias horas depois de concluir a seção anterior e, em seguida, siga 
 2. Na seção **Experimentos**, clique no filtro **Ativo** e, em seguida, clique em **Otimizar Cliques de Botão** para acessar a página desse experimento.
 3. Confirme que os resultados mostrados nas seções **Resumo dos resultados** e **Detalhes dos resultados** correspondem ao que você espera ver. Para saber mais sobre essas seções, veja [Gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md#review-the-results-of-your-experiment).
 
-  >**Observação** O Centro de Desenvolvimento relata apenas o primeiro evento de conversão de cada usuário em um período de 24 horas. Se um usuário acionar vários eventos de conversão em seu aplicativo em um período de 24 horas, apenas o primeiro evento de conversão será relatado. Isso se destina a ajudar a impedir que um usuário único com muitos eventos de conversão distorça os resultados do experimento de um grupo de amostra de usuários.
+  >**Observação** O Centro de Desenvolvimento relata apenas o primeiro evento de conversão de cada usuário em um período de 24 horas. Se um usuário aciona vários eventos de conversão em seu aplicativo em um período de 24 horas, apenas o primeiro evento de conversão é relatado. Isso se destina a ajudar a impedir que um usuário único com muitos eventos de conversão distorça os resultados do experimento de um grupo de amostra de usuários.
 
 4. Agora, você está pronto para finalizar o experimento. Na seção **Resumo dos resultados**, na coluna **Variação B**, clique em **Alternar**. Isso alterna todos os usuários do seu aplicativo para o botão azul.
 5. Clique em **OK** para confirmar que você deseja finalizar o experimento.
@@ -174,6 +175,6 @@ Aguarde várias horas depois de concluir a seção anterior e, em seguida, siga 
   * [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

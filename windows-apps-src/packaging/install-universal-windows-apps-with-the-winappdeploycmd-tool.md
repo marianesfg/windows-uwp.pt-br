@@ -1,11 +1,12 @@
 ---
+author: msatranjr
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: Instalar aplicativos usando a ferramenta WinAppDeployCmd.exe
-description: O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo da Plataforma Universal do Windows (UWP) de um computador com o Windows 10 em qualquer dispositivo com o Windows 10 Mobile.
+description: O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo da Plataforma Universal do Windows (UWP) de uma máquina com o Windows 10 em qualquer dispositivo com o Windows 10 Mobile.
 ---
 # Instalar aplicativos usando a ferramenta WinAppDeployCmd.exe
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo da Plataforma Universal do Windows (UWP) de uma máquina com o Windows 10 em qualquer dispositivo com o Windows 10 Mobile. É possível usar essa ferramenta para implantar um pacote .appx quando o dispositivo com o Windows 10 Mobile está conectado por USB ou disponível na mesma sub-rede sem a necessidade do Microsoft Visual Studio ou a solução desse aplicativo. Este artigo descreve como instalar aplicativos UWP usando essa ferramenta.
 
@@ -72,7 +73,7 @@ A tabela a seguir descreve as opções de **WinAppDeployCmd.exe**.
 | &lt;x&gt;              | Tempo limite em segundos. (O padrão é 10)                                          |
 | &lt;address&gt;        | Endereço IP ou identificador exclusivo do dispositivo de destino.                        |
 | &lt;a&gt;&lt;b&gt; ... | Caminho de dependência para cada uma das dependências do pacote do aplicativo.                    |
-| &lt;p&gt;              | Um PIN alfanumérico mostrado nas configurações do dispositivo para estabelecer uma conexão. |
+| &lt;p&gt;              | PIN alfanumérico mostrado nas configurações do dispositivo para estabelecer uma conexão. |
 | &lt;path&gt;           | Caminho do sistema de arquivos.                                                            |
 | &lt;name&gt;           | Nome do pacote completo para o pacote do aplicativo a ser desinstalado.                          |
 
@@ -107,6 +108,6 @@ WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

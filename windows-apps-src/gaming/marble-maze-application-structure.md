@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Estrutura do aplicativo Marble Maze
 description: A estrutura de um aplicativo UWP (Plataforma Universal do Windows) DirectX é diferente daquela de um aplicativo de área de trabalho tradicional.
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
@@ -7,12 +8,12 @@ ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
 # Estrutura do aplicativo Marble Maze
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 A estrutura de um aplicativo UWP (Plataforma Universal do Windows) DirectX é diferente daquela de um aplicativo de área de trabalho tradicional. Em vez de funcionar com tipos de identificador como **HWND** e funções como **CreateWindow**, o Windows Runtime oferece interfaces como [**Windows::UI::Core::ICoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208296) para que seja possível desenvolver aplicativos UWP de uma maneira mais moderna orientada a objetos. Esta seção da documentação mostra como o código do aplicativo Marble Maze está estruturado.
 
-> **Observação**   O código de amostra que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 ## 
@@ -116,7 +117,7 @@ A classe **MarbleMaze** define o sinalizador *m\_deferredResourcesReady* para in
 
 Para saber mais sobre programação assíncrona para aplicativos UWP, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
->> > **Dica**   Se você estiver escrevendo um código de jogo que faz parte de uma Biblioteca C++ do Windows Runtime (em outras palavras, uma DLL), considere a leitura de [Criando operações assíncronas em C++ para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/hh750113.aspx) para aprender a criar operações assíncronas que podem ser consumidas por aplicativos e outras bibliotecas.
+>> > **Dica**   Se você estiver escrevendo um código de jogo que faça parte de uma Biblioteca C++ do Windows Runtime (em outras palavras, uma DLL), considere a leitura de [Criando operações assíncronas em C++ para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/hh750113.aspx) para aprender a criar operações assíncronas que podem ser consumidas por aplicativos e outras bibliotecas.
 
  
 
@@ -372,6 +373,6 @@ Leia [Adicionando conteúdo visual à amostra do Marble Maze](adding-visual-cont
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: O código que se integra ao dispositivo propriamente dito e aos sensores envolve a entrada do usuário e a saída para ele.
 title: Portabilidade do Windows Phone Silverlight para a UWP para modelo de aplicativo, dispositivo e E/S
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
@@ -6,7 +7,7 @@ ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
 
 #  Portabilidade do Windows Phone Silverlight para a UWP para modelo de aplicativo, dispositivo e E/S
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O tópico anterior era [Portando XAML e a interface do usuário](wpsl-to-uwp-porting-xaml-and-ui.md).
 
@@ -63,12 +64,22 @@ Um aplicativo do Windows Phone Silverlight pode usar a classe **Microsoft.Phone.
 
 | Windows Phone Silverlight                                                               | UWP                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Propriedades **ApplicationCurrentMemoryUsage** e **ApplicationCurrentMemoryUsageLimit** | Propriedades [**MemoryManager.AppMemoryUsage**](https://msdn.microsoft.com/library/windows/apps/dn633832) e [**AppMemoryUsageLimit**](https://msdn.microsoft.com/library/windows/apps/dn633836)                                                                                                                                    |
+| Propriedades **ApplicationCurrentMemoryUsage** e **ApplicationCurrentMemoryUsageLimit** | Propriedades [
+              **MemoryManager.AppMemoryUsage**
+            ](https://msdn.microsoft.com/library/windows/apps/dn633832) e [**AppMemoryUsageLimit**](https://msdn.microsoft.com/library/windows/apps/dn633836)                                                                                                                                    |
 | Propriedade **ApplicationPeakMemoryUsage**                                                 | Use as ferramentas de criação de perfil de memória no Visual Studio. Para saber mais, veja [Analisar o uso da memória](http://msdn.microsoft.com/library/windows/apps/dn645469.aspx).                                                                                                                                                                          |
-| Propriedade **DeviceFirmwareVersion**                                                      | Propriedade [**EasClientDeviceInformation.SystemFirmwareVersion**](https://msdn.microsoft.com/library/windows/apps/dn608144) (somente para famílias de dispositivos de desktop)                                                                                                                                                                             |
-| Propriedade **DeviceHardwareVersion**                                                      | Propriedade [**EasClientDeviceInformation.SystemHardwareVersion**](https://msdn.microsoft.com/library/windows/apps/dn608145) (somente família de dispositivos de desktop)                                                                                                                                                                             |
-| Propriedade **DeviceManufacturer**                                                         | Propriedade [**EasClientDeviceInformation.SystemManufacturer**](https://msdn.microsoft.com/library/windows/apps/hh701398) (somente família de dispositivos de desktop)                                                                                                                                                                                |
-| Propriedade **DeviceName**                                                                 | Propriedade [**EasClientDeviceInformation.SystemProductName**](https://msdn.microsoft.com/library/windows/apps/hh701401) (somente família de dispositivos de desktop)                                                                                                                                                                                 |
+| Propriedade **DeviceFirmwareVersion**                                                      | Propriedade [
+              **EasClientDeviceInformation.SystemFirmwareVersion**
+            ](https://msdn.microsoft.com/library/windows/apps/dn608144) (somente para famílias de dispositivos de desktop)                                                                                                                                                                             |
+| Propriedade **DeviceHardwareVersion**                                                      | Propriedade [
+              **EasClientDeviceInformation.SystemHardwareVersion**
+            ](https://msdn.microsoft.com/library/windows/apps/dn608145) (somente família de dispositivos de desktop)                                                                                                                                                                             |
+| Propriedade **DeviceManufacturer**                                                         | Propriedade [
+              **EasClientDeviceInformation.SystemManufacturer**
+            ](https://msdn.microsoft.com/library/windows/apps/hh701398) (somente família de dispositivos de desktop)                                                                                                                                                                                |
+| Propriedade **DeviceName**                                                                 | Propriedade [
+              **EasClientDeviceInformation.SystemProductName**
+            ](https://msdn.microsoft.com/library/windows/apps/hh701401) (somente família de dispositivos de desktop)                                                                                                                                                                                 |
 | Propriedade **DeviceTotalMemory**                                                          | Sem equivalente                                                                                                                                                                                                                                                                                                                      |
 | Propriedade **IsKeyboardDeployed**                                                         | Sem equivalente. Essa propriedade fornece informações sobre teclados de hardware para dispositivos móveis, que não são comumente usados.                                                                                                                                                                                                        |
 | Propriedade **IsKeyboardPresent**                                                          | Sem equivalente. Essa propriedade fornece informações sobre teclados de hardware para dispositivos móveis, que não são comumente usados.                                                                                                                                                                                                        |
@@ -90,6 +101,6 @@ O próximo tópico é [Portando negócios e as camadas de dados](wpsl-to-uwp-bus
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

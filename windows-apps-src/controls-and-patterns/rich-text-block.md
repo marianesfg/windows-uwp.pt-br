@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Use RichTextBlock com elementos RichTextBlockOverflow para criar layouts de texto avançados.
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
-label: Bloco Rich Text
+label: Rich text block
 template: detail.hbs
 ---
 # Bloco Rich Text
@@ -124,9 +125,9 @@ As propriedades anexadas da classe [Typography](https://msdn.microsoft.com/libra
 
 ## Recomendações
 
-Veja Tipografia e Diretrizes para fontes.
+Consulte Tipografia e Diretrizes para fontes.
 
-\[Este artigo contém informações que são específicas aos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Artigos relacionados
 
@@ -146,6 +147,6 @@ Veja Tipografia e Diretrizes para fontes.
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

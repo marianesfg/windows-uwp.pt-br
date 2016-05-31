@@ -1,13 +1,14 @@
 ---
+author: mtoepke
 title: Referência de GLSL para HLSL
-description: Você porta seu código GLSL (OpenGL Shader Language) para o código Microsoft HLSL (High Level Shader Language) ao portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11 para criar um jogo para a UWP (Plataforma Universal do Windows).
+description: Porte seu código GLSL (OpenGL Shader Language) para código Microsoft HLSL (High Level Shader Language) ao portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11 para criar um jogo para a UWP (Plataforma Universal do Windows).
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
 ---
 
 # Referência de GLSL para HLSL
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Porte seu código GLSL (OpenGL Shader Language) para código Microsoft HLSL (High Level Shader Language) ao [portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md) para criar um jogo para a UWP (Plataforma Universal do Windows). O GLSL citado neste documento é compatível com OpenGL ES 2.0; o HLSL é compatível com Direct3D 11. Para saber mais sobre as diferenças entre o Direct3D 11 e versões anteriores do Direct3D, consulte [Mapeamento de recursos](feature-mapping.md).
 
@@ -55,7 +56,7 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 </tr>
 <tr class="even">
 <td align="left">Compilação de sombreador integrada à API gráfica</td>
-<td align="left">O compilador HLSL [compiles the shader](https://msdn.microsoft.com/library/windows/desktop/bb509633) em uma representação binária intermediária antes de o Direct3D passá-lo para o driver.
+<td align="left">O compilador HLSL [compila o sombreador](https://msdn.microsoft.com/library/windows/desktop/bb509633) em uma representação binária intermediária antes de o Direct3D passá-lo ao driver.
 <div class="alert">
 <strong>Observação</strong>  Essa representação binária é independente de hardware. Normalmente, ela é compilada no momento da compilação do aplicativo, e não no tempo de execução dele.
 </div>
@@ -64,11 +65,11 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left">[Variable](#variables) modificadores de armazenamento</td>
-<td align="left">Buffers e transferências de dados constantes via declarações de layout de entrada</td>
+<td align="left">Modificadores de armazenamento de [variável](#variables)</td>
+<td align="left">Buffers constantes e transferências de dados via declarações de layout de entrada</td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Types](#types)</p>
+<td align="left"><p>[Tipos](#types)</p>
 <p>Tipo comum de vetor: vec2/3/4</p>
 <p>lowp, mediump, highp</p></td>
 <td align="left"><p>Tipo comum de vetor: float2/3/4</p>
@@ -86,7 +87,7 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 <td align="left">Matrizes da linha principal (padrão)</td>
 <td align="left">Matrizes de coluna principal (padrão)
 <div class="alert">
-<strong>Observação</strong>   Use o modificador de tipo <strong>row_major</strong> para alterar o layout de uma variável. Para obter mais informações, consulte [Variable Syntax](https://msdn.microsoft.com/library/windows/desktop/bb509706). Você também pode especificar um pragma ou um sinalizador de compilador para alterar o padrão global.
+<strong>Observação</strong>   Use o modificador de tipo <strong>row_major</strong> para alterar o layout de uma variável. Para obter mais informações, consulte [Sintaxe de variáveis](https://msdn.microsoft.com/library/windows/desktop/bb509706). Você também pode especificar um pragma ou um sinalizador de compilador para alterar o padrão global.
 </div>
 <div>
  
@@ -129,7 +130,7 @@ No GLSL, você deve aplicar modificadores (qualificadores) a uma declaração de
 <p>Você passa uma variável uniforme do código do aplicativo para o sombreador de vértice, para o sombreador de fragmento ou para ambos. Você deve definir os valores de todos os uniformes antes de desenhar triângulos com os sombreadores, de modo que os valores sejam os mesmos em todo o desenho de uma malha de triângulos. Esses valores são uniformes. Alguns uniformes são definidos para todo e quadro, e outros são exclusivos de um par específico de sombreadores de vértice-pixel.</p>
 <p>As variáveis uniformes são específicas aos polígonos.</p></td>
 <td align="left"><p>Use buffers constantes.</p>
-<p>Consulte [How to: Create a Constant Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476896) e [Shader Constants](https://msdn.microsoft.com/library/windows/desktop/bb509581).</p></td>
+<p>Consulte [Como: criar um buffer constante](https://msdn.microsoft.com/library/windows/desktop/ff476896) e [Constantes de sombreador](https://msdn.microsoft.com/library/windows/desktop/bb509581).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>variação</strong></p>
@@ -139,13 +140,13 @@ No GLSL, você deve aplicar modificadores (qualificadores) a uma declaração de
 <tr class="odd">
 <td align="left"><p><strong>atributo</strong></p>
 <p>Um atributo é uma parte da descrição de um vértice que você passa do código do aplicativo para o sombreador de vértice. Ao contrário de um uniforme, você pode definir o valor do atributo de cada vértice, que, por sua vez, permite que cada vértice tenha um valor diferente. As variáveis de atributo são específicas aos vértices.</p></td>
-<td align="left"><p>Defina um buffer de vértice no código de seu aplicativo Direct3D e corresponda-o à entrada de vértice definida no sombreador de vértice. Opcionalmente, defina um buffer de índice. Consulte [How to: Create a Vertex Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476899) e [How to: Create an Index Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476897).</p>
-<p>Crie um layout de entrada no código de seu aplicativo Direct3D e corresponda os valores semânticos aos da entrada do vértice. Consulte [Create the input layout](https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout).</p></td>
+<td align="left"><p>Defina um buffer de vértice no código do aplicativo em Direct3D e corresponda-o à entrada de vértice definida no sombreador de vértice. Você também pode definir um buffer de índice. Veja [Como: criar um buffer de vértice](https://msdn.microsoft.com/library/windows/desktop/ff476899) e [Como: criar um buffer de índice](https://msdn.microsoft.com/library/windows/desktop/ff476897).</p>
+<p>Crie um layout de entrada no código de seu aplicativo Direct3D e corresponda os valores semânticos aos da entrada do vértice. Consulte [Criar o layout de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>const</strong></p>
 <p>Constantes que são compiladas no sombreador e nunca mudam.</p></td>
-<td align="left">Use uma <strong>static const</strong>. <strong>static</strong> indica que o valor não é exposto a buffers constantes; <strong>const</strong> indica que o sombreador não pode alterar o valor. Por isso, o valor é conhecido no momento da compilação com base em seu inicializador.</td>
+<td align="left">Use uma <strong>static const</strong>. <strong>static</strong> indica que o valor não é exposto a buffers constantes, <strong>const</strong> indica que o sombreador não pode alterar o valor. Por isso, o valor é conhecido no momento da compilação com base em seu inicializador.</td>
 </tr>
 </tbody>
 </table>
@@ -177,7 +178,7 @@ Use esta tabela para fazer a portabilidade de tipos do GLSL para o HLSL.
 <td align="left">tipos escalares: float, int, bool</td>
 <td align="left"><p>tipos escalares: float, int, bool</p>
 <p>também uint, double</p>
-<p>Para obter mais informações, consulte [Scalar Types](https://msdn.microsoft.com/library/windows/desktop/bb509646).</p></td>
+<p>Para obter mais informações, consulte [Tipos escalares](https://msdn.microsoft.com/library/windows/desktop/bb509646).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>tipo de vetor</p>
@@ -199,8 +200,8 @@ Use esta tabela para fazer a portabilidade de tipos do GLSL para o HLSL.
 <li>min16uint</li>
 </ul></li>
 </ul>
-<p>Para obter mais informações, consulte [Vector Type](https://msdn.microsoft.com/library/windows/desktop/bb509707) e [Keywords](https://msdn.microsoft.com/library/windows/desktop/bb509568).</p>
-<p>O vetor também é um tipo definido como float4 (typedef vector &lt;float, 4&gt; vector;). Para obter mais informações, consulte [User-Defined Type](https://msdn.microsoft.com/library/windows/desktop/bb509702).</p></td>
+<p>Para obter mais informações, consulte [Tipo de vetor](https://msdn.microsoft.com/library/windows/desktop/bb509707) e [Palavras-chave](https://msdn.microsoft.com/library/windows/desktop/bb509568).</p>
+<p>o vetor também é um tipo definido como float4 (typedef vector &lt;float, 4&gt; vector;). Para obter mais informações, consulte [Tipo definido pelo usuário](https://msdn.microsoft.com/library/windows/desktop/bb509702).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>tipo de matriz</p>
@@ -223,9 +224,9 @@ Use esta tabela para fazer a portabilidade de tipos do GLSL para o HLSL.
 <li>min16uint</li>
 </ul></li>
 </ul>
-<p>Você também pode usar o [matrix type](https://msdn.microsoft.com/library/windows/desktop/bb509623) para definir uma matriz.</p>
+<p>Você também pode usar o [tipo de matriz](https://msdn.microsoft.com/library/windows/desktop/bb509623) para definir uma matriz.</p>
 <p>Por exemplo: matrix &lt;float, 2, 2&gt; fMatrix = {0.0f, 0.1, 2.1f, 2.2f};</p>
-<p>a matriz também é um tipo definido como float4x4 ((typedef matrix &lt;float, 4, 4&gt; matrix;). Para obter mais informações, consulte [User-Defined Type](https://msdn.microsoft.com/library/windows/desktop/bb509702).</p></td>
+<p>a matriz também é um tipo definido como float4x4 (typedef matrix &lt;float, 4, 4&gt; matrix;). Para obter mais informações, consulte [Tipo definido pelo usuário](https://msdn.microsoft.com/library/windows/desktop/bb509702).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>qualificadores de precisão para float, int, sampler</p>
@@ -246,10 +247,10 @@ Use esta tabela para fazer a portabilidade de tipos do GLSL para o HLSL.
 <p>Valor mínimo de ponto fixo mínimo assinado de 2,8 bits (2 bits de números inteiros e componente fracionário de 8 bits). O componente fracionário de 8 bits pode incluir 1 em vez de excluir, proporcionando o intervalo totalmente inclusivo de -2 a 2.</p></li>
 <li>min16int: inteiro mínimo assinado de 16 bits</li>
 <li><p>min12int: inteiro mínimo assinado de 12 bits</p>
-<p>Este tipo serve para 10Level9 ([9_x feature levels](https://msdn.microsoft.com/library/windows/desktop/ff476876)), em que os inteiros são representados por números de ponto flutuante. Essa é a precisão que você pode conseguir ao emular um inteiro com um número de ponto flutuante de 16 bits.</p></li>
+<p>Esse tipo serve para 10Level9 ([níveis de recursos 9_x](https://msdn.microsoft.com/library/windows/desktop/ff476876)), em que os inteiros são representados por números de ponto flutuante. Essa é a precisão que você pode conseguir ao emular um inteiro com um número de ponto flutuante de 16 bits.</p></li>
 <li>min16uint: inteiro mínimo não assinado de 16 bits</li>
 </ul>
-<p>Para obter mais informações, consulte [Scalar Types](https://msdn.microsoft.com/library/windows/desktop/bb509646) e [Using HLSL minimum precision](https://msdn.microsoft.com/library/windows/desktop/hh968108).</p></td>
+<p>Para obter mais informações, consulte [Tipos escalares](https://msdn.microsoft.com/library/windows/desktop/bb509646) e o tópico sobre [uso da precisão mínima do HLSL](https://msdn.microsoft.com/library/windows/desktop/hh968108).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">sampler2D</td>
@@ -264,7 +265,7 @@ Use esta tabela para fazer a portabilidade de tipos do GLSL para o HLSL.
 
  
 
-## Portando variáveis globais predefinidas do GLSL para o HLSL
+## Fazendo a portabilidade de variáveis globais predefinidas do GLSL para HLSL
 
 
 Use esta tabela para portar variáveis globais predefinidas do GLSL para o HLSL.
@@ -321,7 +322,7 @@ Use esta tabela para portar variáveis globais predefinidas do GLSL para o HLSL.
 <p>Cor do fragmento para o anexo de cor n</p></td>
 <td align="left"><p>SV_Target[n]</p>
 <p>Esta semântica é do tipo <strong>float4</strong>.</p>
-<p>Valor de saída do sombreador de pixel armazenado no destino de renderização n, em que 0 &lt;= n &lt;= 7.</p></td>
+<p>Valor de saída do sombreador de pixel armazenado no destino de renderização 0 &lt;= n &lt;= 7.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>gl_FragCoord</strong></p>
@@ -544,7 +545,7 @@ m_d3dDeviceContext->PSSetShader(pixelShader.Get(),nullptr,0);
 m_d3dDeviceContext->IASetInputLayout(inputLayout.Get());
 m_d3dDeviceContext->IASetVertexBuffers(0, 1, vertexBuffer.GetAddressOf(), &stride, &offset);
 
-// Set the primitive’s topology.
+// Set the primitive's topology.
 m_d3dDeviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
 // Draw a triangle with 3 vertices. triangleVertices is an array of 3 vertices.
@@ -565,6 +566,6 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

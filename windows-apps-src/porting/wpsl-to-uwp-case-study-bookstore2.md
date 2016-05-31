@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: Este estudo de caso, que se baseia nas informações fornecidas no Bookstore, começa com um aplicativo do Windows Phone Silverlight que exibe dados agrupados em um LongListSelector.
 title: Estudo de caso Windows Phone Silverlight para UWP, Bookstore2
@@ -61,7 +62,7 @@ No MainPage.xaml, estas alterações iniciais de portabilidade são necessárias
 
 A substituição do **LongListSelector** por um controle [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) tem várias etapas, portanto, vamos começar. Um **LongListSelector** associa-se diretamente à fonte de dados agrupados, mas um **SemanticZoom** contém controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) ou [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705), que associam-se indiretamente aos dados por meio de um adaptador [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833). O **CollectionViewSource** precisa estar presente na marcação como um recurso, por isso vamos começar adicionando isso à marcação no MainPage.xaml dentro de `<Page.Resources>`.
 
-```xaml
+```xml
     <CollectionViewSource
         x:Name="AuthorHasACollectionOfBookSku"
         Source="{Binding Authors}"
@@ -72,7 +73,7 @@ Observe que a associação no **LongListSelector.ItemsSource** torna-se o valor 
 
 Em seguida, substitua o `phone:LongListSelector` por essa marcação, o que nos dará um **SemanticZoom** preliminar para trabalharmos.
 
-```xaml
+```xml
     <SemanticZoom>
         <SemanticZoom.ZoomedInView>
             <ListView
@@ -97,7 +98,7 @@ A noção **LongListSelector** de modos de lista plana e de lista de atalhos é 
 
 Não precisamos mais de `AuthorNameJumpListStyle`, pelo menos não inteiramente. Precisamos apenas do modelo de dados para os grupos (que são os autores neste aplicativo) no modo de exibição reduzida. Portanto, excluímos o estilo `AuthorNameJumpListStyle` e o substituímos por esse modelo de dados.
 
-```xaml
+```xml
    <DataTemplate x:Key="ZoomedOutAuthorTemplate">
         <Border Margin="9.6,0.8" Background="{Binding Converter={StaticResource JumpListItemBackgroundConverter}}">
             <TextBlock Margin="9.6,0,9.6,4.8" Text="{Binding Group.Name}" Style="{StaticResource SubtitleTextBlockStyle}"
@@ -140,7 +141,7 @@ Antes de abordar a parte adaptável do Gerenciador de Estado Visual, precisamos 
 -   Substitua o conteúdo de `AuthorGroupHeaderTemplateWide` por `<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Text="{Binding Name}"/>`.
 -   Substitua o conteúdo de `ZoomedOutAuthorTemplateWide` por:
 
-```xaml
+```xml
     <Grid HorizontalAlignment="Left" Width="250" Height="250" >
         <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"/>
         <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
@@ -153,7 +154,7 @@ Antes de abordar a parte adaptável do Gerenciador de Estado Visual, precisamos 
 
 -   Substitua o conteúdo de `BookTemplateWide` por:
 
-```xaml
+```xml
     <Grid HorizontalAlignment="Left" Width="250" Height="250">
         <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"/>
         <Image Source="{Binding CoverImage}" Stretch="UniformToFill"/>
@@ -171,7 +172,7 @@ Antes de abordar a parte adaptável do Gerenciador de Estado Visual, precisamos 
 
 -   Para o estado largo, os grupos na exibição ampliada precisarão de mais espaço livre vertical ao redor deles. Criar e fazer referência ao modelo do painel de itens produzirá os resultados que queremos. É assim a aparência da marcação.
 
-```xaml
+```xml
    <ItemsPanelTemplate x:Key="ZoomedInItemsPanelTemplate">
         <ItemsWrapGrid Orientation="Horizontal" GroupPadding="0,0,0,20"/>
     </ItemsPanelTemplate>
@@ -187,7 +188,7 @@ Antes de abordar a parte adaptável do Gerenciador de Estado Visual, precisamos 
 
 -   Por fim, adicione a marcação apropriada do Gerenciador de Estado Visual como o primeiro filho de `LayoutRoot`.
 
-```xaml
+```xml
     <Grid x:Name="LayoutRoot" ... >
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -214,7 +215,7 @@ O que resta são alguns ajustes de estilo final.
 -   Adicione `FontWeight="SemiBold"` ao **TextBlock** em `AuthorGroupHeaderTemplate` e `ZoomedOutAuthorTemplate`.
 -   Em `narrowSeZo`, os cabeçalhos de grupo e os autores na exibição reduzida são alinhados à esquerda, em vez de alongados, portanto vamos trabalhar nisso. Criaremos um [**HeaderContainerStyle**](https://msdn.microsoft.com/library/windows/apps/dn251841) para a exibição ampliada com [**HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/br209417) definido como `Stretch`. E criaremos um [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/br242817) para a exibição reduzida contendo esse mesmo [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817). Veja aqui como ficou a aparência.
 
-```xaml
+```xml
    <Style x:Key="AuthorGroupHeaderContainerStyle" TargetType="ListViewHeaderItem">
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
     </Style>
@@ -245,8 +246,7 @@ Essa última sequência de operações de estilo deixa o aplicativo com esta apa
 
 ![o aplicativo do windows 10 portado em execução em um dispositivo de desktop, exibição ampliada, dois tamanhos de janela](images/w8x-to-uwp-case-studies/c02-07-desk10-zi-ported.png)
 
-O aplicativo do Windows 10 portado em execução em um dispositivo de desktop, exibição ampliada, dois tamanhos de janela
- 
+O aplicativo do Windows 10 portado em execução em um dispositivo de desktop, exibição ampliada, dois tamanhos de janela  
 ![o aplicativo do windows 10 portado em execução em um dispositivo de desktop, exibição reduzida, dois tamanhos de janela](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
 
 O aplicativo do Windows 10 portado em execução em um dispositivo de desktop, exibição reduzida, dois tamanhos de janela
@@ -297,6 +297,6 @@ E agora podemos optar por remover `ItemsPath="BookSkus"` se quisermos, e o aplic
 Este estudo de caso envolveu uma interface do usuário mais ambiciosa do que a anterior. Todos os recursos e conceitos de  **LongListSelector** do Windows Phone Silverlight, e muito mais, estavam disponíveis para um aplicativo UWP na forma de **SemanticZoom**, **ListView**, **GridView** e **CollectionViewSource**. Mostramos como reutilizar ou copiar e editar o código imperativo e a marcação em um aplicativo UWP para obter funcionalidade, interface do usuário e interações personalizadas para adequação aos fatores forma de dispositivos Windows mais estreitos e largos, e todos os tamanhos intermediários.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

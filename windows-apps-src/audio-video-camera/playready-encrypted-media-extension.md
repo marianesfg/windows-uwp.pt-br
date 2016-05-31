@@ -1,12 +1,13 @@
 ---
+author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: Esta seção descreve como modificar o seu aplicativo da Web PlayReady para dar suporte às alterações feitas desde a versão anterior do Windows 8.1 até a versão do Windows 10.
+description: Esta seção descreve como modificar seu aplicativo Web PlayReady para oferecer suporte às alterações feitas na versão do Windows 8.1 anterior para a versão do Windows 10.
 title: Extensão de mídia criptografada do PlayReady
 ---
 
 # Extensão de mídia criptografada do PlayReady
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Esta seção descreve como modificar o seu aplicativo da Web PlayReady para dar suporte às alterações feitas desde a versão anterior do Windows 8.1 até a versão do Windows 10.
@@ -28,7 +29,7 @@ A lista a seguir descreve os novos recursos e alterações feitas à Extensão d
 
     Você pode usar um objeto PlayReady com vários identificadores-chave (KeyIDs) como no Windows 8.1 ou [dados de modelo de descriptografia de conteúdo (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) com várias KeyIDs.
 
-    **Observação**  No Windows 10, vários identificadores-chave são suportados em &lt;KeyID&gt; em CDMData.
+    **Observação**  No Windows 10, vários identificadores-chave têm suporte em &lt;KeyID&gt; em CDMData.
 
      
 
@@ -64,7 +65,7 @@ Para usar hardware DRM do PlayReady, o seu aplicativo Web JavaScript deve usar o
 
 Ocasionalmente, não há suporte para parte do conteúdo no DRM de hardware. Não há suporte para conteúdo Cocktail no DRM de hardware. Se você deseja reproduzir conteúdo Cocktail, recuse o DRM de hardware. Alguns hardwares DRM darão suporte HEVC e outros, não. Se você deseja reproduzir conteúdo HEVC e o hardware DRM não dá suporte a ele, você terá que recusar também.
 
-**Observação**  Para determinar se o conteúdo HEVC é suportado, depois de instanciar `com.microsoft.playready`, use o método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
+**Observação**  Para determinar se o conteúdo HEVC tem suporte, depois de instanciar `com.microsoft.playready`, use o método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
 
  
 
@@ -97,7 +98,7 @@ Para configurar uma parada segura para controles de página personalizados ou a�
 
 O exemplo a seguir mostra como usar parada segura no seu aplicativo Web:
 
-``` syntax
+```JavaScript
 // JavaScript source code
 
 var g_prkey = null;
@@ -299,6 +300,6 @@ Consulte as [aplicativos de exemplo](https://code.msdn.microsoft.com/windowsapps
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

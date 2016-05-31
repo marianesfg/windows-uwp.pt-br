@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Manipular a retomada do aplicativo
 description: Saiba como atualizar o conteúdo exibido quando o sistema retomar o aplicativo.
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
@@ -7,7 +8,7 @@ ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
 # Manipular a retomada do aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -51,7 +52,7 @@ MainPage::MainPage()
 {
     InitializeComponent();
     Application::Current->Resuming += 
-        ref new EventHandler<Platform::Object^>(this, &amp;MainPage::App_Resuming);
+        ref new EventHandler<Platform::Object^>(this, &MainPage::App_Resuming);
 }
 ```
 
@@ -110,6 +111,6 @@ Caso o seu aplicativo não tenha conteúdo algum para atualizar, não há necess
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

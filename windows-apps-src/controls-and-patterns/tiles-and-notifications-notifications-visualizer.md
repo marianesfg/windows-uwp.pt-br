@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: Visualizador de Notificações é um novo aplicativo da Plataforma Universal do Windows (UWP) na Loja que ajuda os desenvolvedores no design de blocos dinâmicos adaptáveis para Windows 10.
 title: Visualizador de notificações
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
-label: a ser definido
+label: TBD
 template: detail.hbs
 ---
 
 # Visualizador de notificações
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Visualizador de Notificações é um novo aplicativo da Plataforma Universal do Windows (UWP) na [Loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores no design de blocos dinâmicos adaptáveis para Windows 10.
@@ -63,6 +64,6 @@ Esta captura de tela do aplicativo mostra o editor de blocos:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

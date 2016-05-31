@@ -1,7 +1,6 @@
-#Amostras de XAML para desenvolvedores
-Este tópico lista amostras de XAML para desenvolvedores de aplicativos do Xbox One.
+author: Mtoepke #XAML exemplos para desenvolvedores Este tópico lista exemplos de XAML para os desenvolvedores de aplicativos do Xbox One.
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

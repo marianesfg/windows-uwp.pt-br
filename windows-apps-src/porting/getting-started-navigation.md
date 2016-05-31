@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Introdução à navegação
 description: Introdução à navegação
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
@@ -6,7 +7,7 @@ ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
 
 # Introdução: navegação
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Adicionando navegação
 
@@ -81,6 +82,6 @@ Para saber mais sobre navegação, consulte [Navegação](https://msdn.microsoft
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

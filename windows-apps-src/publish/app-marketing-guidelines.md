@@ -1,6 +1,7 @@
 ---
-Description: aprenda a promover seus aplicativos e conteúdo na Windows Store. Estas diretrizes cobrem como usar os ativos que estão disponíveis para você, junto com recomendações para promover seus aplicativos em impressão, TV, mídias sociais e anúncios digitais.
-title: diretrizes para marketing de aplicativo da Windows Store
+author: jnHs
+Description: Aprenda a promover seus aplicativos e conteúdo na Windows Store. Estas diretrizes cobrem como usar os ativos que estão disponíveis para você, junto com recomendações para promover seus aplicativos em impressão, TV, mídias sociais e anúncios digitais.
+title: Diretrizes de marketing para aplicativos da Windows Store
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
 ---
 
@@ -12,19 +13,22 @@ Aprenda a promover seus aplicativos e conteúdo na Windows Store. Estas diretriz
 
 Criamos selos promocionais especiais para ajudar a levar mais clientes até a listagem do seu aplicativo na Windows Store. Esses selos estão disponíveis em 44 idiomas. Lembre-se de que existem determinados requisitos que você precisa seguir ao usar essas imagens. Esses requisitos, além de exemplos de uso e diretrizes, estão disponíveis em um arquivo PDF.
 
-[![Download button](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) Windows Store Marketing Guidelines (PDF, em inglês)
+[
+              ![Download button](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) Windows Store Marketing Guidelines (PDF, em inglês)
 
 ## Gerador de selos e imagens
 
 Você pode usar nosso [gerador de selos](http://go.microsoft.com/fwlink/p/?LinkID=534236) para gerar um HTML que exiba o selo da Loja (no idioma de sua escolha) e vincule diretamente para a listagem de Loja de seu aplicativo. Você também pode baixar o conjunto completo de imagens de selo (nos formatos PNG e PDF) no link abaixo.
 
-[![Botão baixar](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529771) Todas as imagens de selo
+[
+              ![Botão Baixar](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529771) Todas as imagens de selo
 
 ## Imagens de dispositivo
 
 Para promover o seu aplicativo, convém mostrar sua aparência quando executado em um dispositivo Windows. Temos uma variedade de imagens de chassi de dispositivo as serem selecionadas, inclusive telefones, tablets, notebooks e computadores. Práticas recomendadas e especificações técnicas sobre como usar essas imagens podem ser encontradas em [Windows Store Marketing Guidelines](http://go.microsoft.com/fwlink/p/?LinkId=529769).
 
-[![Botão baixar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) Arte de dispositivo Windows
+[
+              ![Botão Baixar](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) Arte de dispositivo Windows
 
 ## Licença de marcas da Microsoft
 
@@ -49,6 +53,6 @@ A Microsoft é a única proprietária das Marcas da Microsoft e da respectiva re
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

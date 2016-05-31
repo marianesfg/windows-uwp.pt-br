@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Manipular a ativação do aplicativo
 description: Aprenda a manipular ativação de aplicativo substituindo o método OnLaunched.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
@@ -7,7 +8,7 @@ ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
 # Manipular a ativação do aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -24,7 +25,7 @@ A classe [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/wi
 
 Defina a classe do seu aplicativo.
 
-```xaml
+```xml
 <Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
              x:Class="AppName.App" >
@@ -32,7 +33,7 @@ Defina a classe do seu aplicativo.
 
 Substitua o método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). Esse método é chamado sempre que o usuário abre o aplicativo. O parâmetro [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) contém o estado anterior do seu aplicativo e os argumentos de ativação.
 
-**Observação**  Para aplicativos Loja do Windows Phone, esse método é chamado cada vez que o usuário abre o aplicativo no Bloco iniciar ou na Lista de aplicativos, mesmo quando ele está suspenso na memória. No Windows, abrir um aplicativo suspenso no Bloco iniciar ou na Lista de aplicativos chama esse método.
+**Observação**  Para aplicativos da Loja do Windows Phone, esse método é chamado cada vez que o usuário abre o aplicativo no bloco Iniciar ou na lista de aplicativos, mesmo quando ele está suspenso na memória. No Windows, abrir um aplicativo suspenso no Bloco iniciar ou na Lista de aplicativos chama esse método.
 
 > [!div class="tabbedCodeSnippets"]
 ```cs
@@ -180,6 +181,6 @@ Se o valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/wi
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

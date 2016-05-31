@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Saiba como um usuário pode interagir com um aplicativo em segundo plano usando a voz e a tela da Cortana durante a execução de um comando de voz.
 title: Interagir com um aplicativo em segundo plano
 ms.assetid: 6C60F03C-A242-435D-96BB-736892CC1CA6
@@ -8,16 +9,15 @@ template: detail.hbs
 
 # Interagir com um aplicativo em segundo plano na Cortana
 
+Habilite a interação do usuário com um aplicativo em segundo plano, por meio de entrada de controle por voz e de texto na tela da **Cortana** durante e execução de um comando de voz.
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**Windows.ApplicationModel.VoiceCommands**](https://msdn.microsoft.com/library/windows/apps/dn706594)
--   [**Elementos e atributos de VCD (Definição do Comando de Voz) v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
+-   [**Elementos e atributos de Voice Command Definition (VCD) v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
 
-Habilite a interação do usuário com um aplicativo em segundo plano, por meio de entrada de controle por voz e de texto na tela da **Cortana** durante e execução de um comando de voz.
 
 A Cortana dá suporte a um fluxo de trabalho completo de curva a curva com seu aplicativo. Esse fluxo de trabalho é definido por seu aplicativo e pode dar suporte a funcionalidades, como: 
 
@@ -32,7 +32,7 @@ A Cortana dá suporte a um fluxo de trabalho completo de curva a curva com seu a
 
 Este tópico complementa [Iniciar um aplicativo em segundo plano com comandos de voz na Cortana](launch-a-background-app-with-voice-commands-in-cortana.md). Continuaremos demonstrando recursos com um aplicativo de planejamento e gerenciamento de viagens chamado **Adventure Works**.
 
-Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal do Windows (UWP), consulte estes tópicos para familiarizar-se com as tecnologias discutidas aqui.
+Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal do Windows (UWP), consulte estes tópicos para familiarizar-se com as tecnologias abordadas aqui.
 
 -   [Criar seu primeiro aplicativo](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   Saiba mais sobre eventos com [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/mt185584)
@@ -174,7 +174,7 @@ private async Task SendCompletionMessageForDestination(string destination)
 }
 ```
 
-## <span id="Hand-off_screen"></span><span id="hand-off_screen"></span><span id="HAND-OFF_SCREEN"></span>Tela de entrega
+## <span id="Hand-off_screen"></span><span id="hand-off_screen"></span><span id="HAND-OFF_SCREEN"></span>Tela de transição
 
 Depois que um comando de voz é reconhecido, a **Cortana** deve chamar ReportSuccessAsync e apresentar comentários em aproximadamente 500 ms. Se o serviço de aplicativo não puder concluir a ação especificada pelo comando de voz em 500 ms, a **Cortana** apresentará uma tela de entrega até que seu aplicativo chame ReportSuccessAsync ou por até cinco segundos.
 
@@ -343,7 +343,7 @@ private async Task SendCompletionMessageForCancellation(string destination)
 }
 ```
 
-## <span id="Disambiguation_screen"></span><span id="disambiguation_screen"></span><span id="DISAMBIGUATION_SCREEN"></span>Tela de desambiguação
+## <span id="Disambiguation_screen"></span><span id="disambiguation_screen"></span><span id="DISAMBIGUATION_SCREEN"></span>Tela de diferenciação
 
 
 Quando uma ação especificada por um comando de voz tem mais de um resultado possível, um serviço de aplicativo pode solicitar mais informações do usuário.
@@ -459,9 +459,9 @@ var userMessage = new VoiceCommandUserMessage();
 
 **Designers**
 * [Diretrizes de design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
-* [Diretrizes de design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+* [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
 
-**Amostras**
+**Exemplos**
 * [Amostra de comando de voz da Cortana](http://go.microsoft.com/fwlink/p/?LinkID=619899)
  
 
@@ -472,6 +472,6 @@ var userMessage = new VoiceCommandUserMessage();
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

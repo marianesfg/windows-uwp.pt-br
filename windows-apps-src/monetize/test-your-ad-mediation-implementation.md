@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 54ECD653-7FC2-4A95-AC5A-972C4FB5A54B
 description: Antes de enviar seu aplicativo, recomendamos que você teste sua implementação de controle de anúncios.
 title: Testar sua implementação de controle de anúncios
@@ -7,7 +8,7 @@ title: Testar sua implementação de controle de anúncios
 # Testar sua implementação de controle de anúncios
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Antes de enviar seu aplicativo, recomendamos que você teste sua implementação de controle de anúncios.
 
@@ -20,7 +21,7 @@ As redes de publicidade girarão em ordem sequencial, com uma rede exibida após
 
 Os anúncios de teste serão exibidos em redes de publicidade que deem suporte a eles. Observe que os anúncios de teste, às vezes, podem se parecer com erros. Revise os eventos para determinar se houve erros.
 
-**Observação**  Ao testar um aplicativo Silverlight do Windows Phone, o Google AdMob sempre retornará um erro de **Solicitação Inválida** já que ele não usa metadados de teste. Para verificar sua implementação do Google AdMob, você deve inserir os parâmetros necessários, conforme descrito na próxima seção.
+> **Observação**  Ao testar um aplicativo Silverlight do Windows Phone, o Google AdMob sempre retornará um erro de **Solicitação Inválida** já que ele não usa metadados de teste. Para verificar sua implementação do Google AdMob, você deve inserir os parâmetros necessários, conforme descrito na próxima seção.
 
  
 
@@ -48,9 +49,6 @@ Quando você enviar o pacote do aplicativo para o painel do Centro de Desenvolvi
  
 
 
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

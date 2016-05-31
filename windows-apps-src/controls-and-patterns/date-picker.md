@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: O seletor de data oferece uma maneira padronizada de permitir que os usuários escolham um valor de data localizado usando entrada por toque, mouse ou teclado. 
 title: Seletor de data
 ms.assetid: d4a01425-4dee-4de3-9a05-3e85c3fc03cb
@@ -44,7 +45,8 @@ O seletor de data resultante tem esta aparência:
 
 ![Exemplo de seletor de data](images/date-picker-closed.png)
 
-> **Observação**&nbsp;&nbsp;Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os controles de Data e Hora.
+> **Observação**
+            &nbsp;&nbsp;Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os controles de Data e Hora.
 
 
 
@@ -56,6 +58,6 @@ O seletor de data resultante tem esta aparência:
 - [Seletor de hora](time-picker.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

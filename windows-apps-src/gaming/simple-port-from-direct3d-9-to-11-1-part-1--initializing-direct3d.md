@@ -1,13 +1,14 @@
 ---
+author: mtoepke
 title: Inicializar o Direct3D 11.
-description: Mostra como converter o código de inicialização do Direct3D 9 para utilizá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e seu respectivo contexto e como usar DXGI para configurar uma cadeia de troca.
+description: Consulte como converter o código de inicialização do Direct3D 9 para usá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca.
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
 ---
 
-# Inicializar o Direct3D 11
+# Inicializar o Direct3D 11.
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
@@ -16,7 +17,7 @@ ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
 -   [Parte 3: fazer a portabilidade do loop do jogo](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
-Consulte como converter o código de inicialização do Direct3D 9 para utilizá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e seu respectivo contexto e como usar DXGI para configurar uma cadeia de troca. Parte 1 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Consulte como converter o código de inicialização do Direct3D 9 para usá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca. Parte 1 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 ## Inicializar o dispositivo Direct3D
 
@@ -225,6 +226,6 @@ Agora que temos um identificador de dispositivo e um destino de renderização e
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

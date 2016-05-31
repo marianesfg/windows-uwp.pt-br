@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Veja algumas informações importantes de que você precisará para garantir o recebimento de pagamentos pelos seus aplicativos e produtos no aplicativo (IAPs), além de lucros do Microsoft Advertising.
 title: Recebendo pagamento
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
@@ -55,6 +56,6 @@ Depois de definir o status de espera de pagamento para **Ativado**, todos os pag
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

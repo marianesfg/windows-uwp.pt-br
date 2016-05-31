@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Animações significativas e bem desenvolvidas dão vida aos aplicativos e tornam a experiência avançada e refinada. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais.
 title: Movimento e animação em aplicativos UWP
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
@@ -43,7 +44,7 @@ Conforme um usuário passa mais tempo dentro de seu aplicativo, ou conforme as t
 
     Animações podem ser utilizadas para permitir que o usuário saiba que o telefone está processando e não travado, e pode exibir passivamente novas informações nas quais o usuário pode estar interessado.
 
-<h2>Nesta seção</h2>
+## Nesta seção
 <table>
 <thead>
 <tr class="header">
@@ -53,19 +54,19 @@ Conforme um usuário passa mais tempo dentro de seu aplicativo, ou conforme as t
 </thead>
 <tbody>
     <tr>
-        <td>[Add and delete](motion-list.md)
+        <td>[Adicionar e excluir](motion-list.md)
         </td>
         <td>Animações de lista permitem inserir ou remover um ou vários itens de uma coleção, como um álbum de fotos ou uma lista de resultados de pesquisa.
         </td>
     </tr> 
     <tr>
-        <td>[Drag and drop](motion-dragdrop.md)
+        <td>[Arrastar e soltar](motion-dragdrop.md)
         </td>
         <td>Use animações de arrastar e soltar quando os usuários moverem objetos, como ao mover um item dentro de uma lista ou ao soltar um item em cima de outro.
         </td>
     </tr>
     <tr>
-        <td>[Edge](motion-edgebased.md)
+        <td>[Borda](motion-edgebased.md)
         </td>
         <td>Animações de borda mostram ou ocultam a interface do usuário que tem origem na borda da tela. As ações de mostrar e ocultar podem ser iniciadas pelo usuário ou pelo aplicativo. A interface do usuário pode sobrepor o aplicativo ou fazer parte da superfície principal do aplicativo. Se a interface do usuário fizer parte da superfície do aplicativo, talvez seja necessário redimensionar o restante do aplicativo para acomodá-la.
         </td>
@@ -77,19 +78,19 @@ Conforme um usuário passa mais tempo dentro de seu aplicativo, ou conforme as t
         </td>
     </tr>   
     <tr>
-        <td>[Pointer](motion-pointer.md)
+        <td>[Ponteiro](motion-pointer.md)
         </td>
         <td>As animações de ponteiro fornecem aos usuários feedback visual quando o usuário tocar em um item. A animação de ponteiro para baixo encolhe e inclina um pouco o item pressionado e aparece quando um item é tocado pela primeira vez. A animação de ponteiro para cima, que restaura o item à sua posição original, aparece quando o usuário libera o ponteiro.
         </td>
     </tr>   
     <tr>
-        <td>[Pop-up animations](motion-popup-animations.md)
+        <td>[Animações pop-up](motion-popup-animations.md)
         </td>
         <td>Use animações pop-up para mostrar e ocultar a interface do usuário pop-up para submenus ou elementos de interface do usuário pop-up personalizados. Os elementos pop-up são contêineres que aparecem sobre o conteúdo do aplicativo e desaparecem quando o usuário toca ou clica fora do elemento pop-up.
         </td>
     </tr>     
     <tr>
-        <td>[Reposition](motion-reposition.md)
+        <td>[Reposicionar](motion-reposition.md)
         </td>
         <td>Mova elementos para uma nova posição.
         </td>
@@ -109,6 +110,6 @@ Conforme um usuário passa mais tempo dentro de seu aplicativo, ou conforme as t
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

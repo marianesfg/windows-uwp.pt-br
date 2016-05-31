@@ -1,11 +1,6 @@
 ---
-ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
-title: Habilitar seu dispositivo para desenvolvimento
-description: Há uma abordagem diferente para desenvolvimento para dispositivos Windows 10.
-keywords: Introdução
-keywords: Licença de desenvolvedor
-keywords: Visual Studio, licença de desenvolvedor
-keywords: habilitar dispositivo
+author: martinekuan ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD title: Habilitar seu dispositivo para descrição de desenvolvimento: existe uma abordagem diferente para o desenvolvimento de dispositivos Windows 10.
+keywords: Introdução às palavras-chave: palavras-chave de licença de desenvolvedor: Visual Studio, palavras-chave de licença de desenvolvedor: habilitar dispositivo
 ---
 # Habilitar seu dispositivo para desenvolvimento
 
@@ -97,7 +92,7 @@ Use gpedit.msc para definir as políticas de grupo para habilitar seu dispositiv
 **Usar gpedit para habilitar seu dispositivo**
 
 1.  Execute **Gpedit.msc**.
-2.  Vá para Política do Computador Local &gt; Configuração do Computador &gt; Modelos Administrativos &gt; Componentes do Windows &gt; Implantação de Pacotes de Aplicativos
+2.  Vá para Política do Computador Local &gt; Configuração do Computador &gt; Modelos Administrativos &gt; Componentes do Windows &gt; App Package Deployment
 3.  Para habilitar o sideload, edite as políticas para habilitar:
 
     -   **Permitir instalação de todos os aplicativos confiáveis**
@@ -177,6 +172,6 @@ Erro: DEP0700: Falha no registro do aplicativo.
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

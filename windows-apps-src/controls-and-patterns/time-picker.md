@@ -1,8 +1,9 @@
 ---
-Description: O seletor de hora oferece uma maneira padronizada de permitir que os usuários escolham um valor de hora localizado usando entrada por toque, mouse ou teclado.
+author: Jwmsft
+Description: O seletor de hora oferece uma maneira padronizada de permitir que os usuários escolham um valor usando entrada por toque, mouse ou teclado.
 title: Seletor de hora
 ms.assetid: 5124ecda-09e6-449e-9d4a-d969dca46aa3
-label: Seletor de hora
+label: Time picker
 template: detail.hbs
 ---
 
@@ -15,7 +16,7 @@ O seletor de hora oferece uma maneira padronizada de permitir que os usuários e
 -   [**Classe TimePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)
 -   [**Propriedade Time**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.time.aspx)
 
-## Este é o controle correto?
+## Esse é o controle correto?
 Use um seletor de hora para permitir que um usuário selecione um valor de hora único.
 
 Para obter mais informações sobre como escolher o controle correto, consulte o artigo [Controles de data e hora](date-and-time.md).
@@ -43,9 +44,10 @@ O seletor de hora resultante tem esta aparência:
 
 ![Exemplo de seletor de hora](images/time-picker-closed.png)
 
-> **Observação**&nbsp;&nbsp;Para obter informações importantes sobre valores de data e hora, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os *controles de Data e Hora*.
+> **Observação**
+            &nbsp;&nbsp;Para obter informações importantes sobre valores de data e hora, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os *Controles de data e hora*.
 
-\[Este artigo contém informações que são específicas aos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Tópicos relacionados
 
@@ -55,6 +57,6 @@ O seletor de hora resultante tem esta aparência:
 - [Seletor de data](date-picker.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

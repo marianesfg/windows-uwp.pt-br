@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Se for solicitado que você forneça um número de ID de IVA durante o processo de registro do Centro de Desenvolvimento, apresentamos algumas informações para você começar.
 title: Informações sobre IVA
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
@@ -245,6 +246,6 @@ Observe que a Microsoft não oferece consultoria fiscal, e a tabela a seguir é 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

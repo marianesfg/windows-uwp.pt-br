@@ -1,13 +1,14 @@
 ---
-Description: o relatório Canais e conversões no painel Centro de Desenvolvimento do Windows permite saber como os clientes no Windows 10 chegaram à listagem de seu aplicativo.
-title: relatório Canais e conversões
+author: jnHs
+Description: O relatório de Canais e conversões no painel Centro de Desenvolvimento do Windows permite saber como os clientes no Windows 10 chegaram à listagem de seu aplicativo.
+title: Relatório de canais e conversões
 ms.assetid: C359B9FB-A17B-4A8E-B8EE-19F2F98AA4FF
 ---
 
-# Relatório Canais e conversões
+# Relatório de canais e conversões
 
 
-O relatório **Canais e conversões** no painel Centro de Desenvolvimento do Windows permite saber como os clientes no Windows 10 chegaram à listagem de seu aplicativo. Ele permite acompanhar [campanhas de promoção personalizadas](create-a-custom-app-promotion-campaign.md) de seu aplicativo ou suas IAPs e saber quantas dessas visitas resultaram em novas aquisições. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline.
+O relatório de **Canais e conversões** no painel Centro de Desenvolvimento do Windows permite saber como os clientes no Windows 10 chegaram à listagem de seu aplicativo. Ele permite acompanhar [campanhas de promoção personalizadas](create-a-custom-app-promotion-campaign.md) de seu aplicativo ou suas IAPs e saber quantas dessas visitas resultaram em novas aquisições. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline.
 
 > **Importante**   Esse relatório mostra apenas os dados de exibição de página e conversão de clientes no Windows 10.
 
@@ -15,9 +16,9 @@ O relatório **Canais e conversões** no painel Centro de Desenvolvimento do Win
 
 Nesse relatório, um *canal* se refere ao método em que um cliente chegou à página de listagem do seu aplicativo (por exemplo, navegação e pesquisa na Loja, um link de um site externo, um link de uma das suas campanhas personalizadas, etc.). Os seguintes tipos de canal estão incluídos:
 
--   **Tráfego da Loja:** o cliente estava navegando ou pesquisando a Loja quando visualizou a listagem do aplicativo.
--   **Site externo:** o cliente seguiu um link (sem qualquer ID da campanha personalizada) até a listagem do aplicativo em um site.
--   **Mecanismo de pesquisa:** o cliente seguiu um link até a listagem do aplicativo que foi retornada por um mecanismo de pesquisa online.
+-   **Tráfego da Loja:** o cliente estava navegando ou pesquisando a Loja quando visualizou os detalhes do seu aplicativo.
+-   **Site externo:** o cliente seguiu um link (sem qualquer ID da campanha personalizada) até a os detalhes do seu aplicativo em um site.
+-   **Mecanismo de pesquisa:** o cliente seguiu um link até os detalhes do seu aplicativo que foi retornada por um mecanismo de pesquisa online.
 -   **Campanha personalizada:** o cliente seguiu um link que usava uma [ID da campanha personalizada](create-a-custom-app-promotion-campaign.md).
 
 Uma *exibição de página* significa que um cliente viu a página de listagem da Loja do seu aplicativo, por meio da Loja baseada na Web ou dentro do aplicativo Loja no Windows 10.
@@ -92,6 +93,6 @@ Para campanhas personalizadas, você também pode ver o número de conversões d
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

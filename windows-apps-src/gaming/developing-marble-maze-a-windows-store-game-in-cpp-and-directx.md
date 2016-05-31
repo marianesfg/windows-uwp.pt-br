@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX
 description: Esta seção da documentação descreve como usar o DirectX e o Visual C++ para criar um jogo 3D UWP (Plataforma Universal do Windows).
 ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
@@ -7,7 +8,7 @@ ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
 # Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Esta seção da documentação descreve como usar o DirectX e o Visual C++ para criar um jogo 3D UWP (Plataforma Universal do Windows). Esta documentação mostra como criar um jogo 3D denominado Marble Maze que adota novos fatores forma, como tablets, e também funciona em desktops e notebooks tradicionais.
@@ -85,9 +86,9 @@ Recomendamos que você comece com os princípios básicos da amostra do Marble M
 |--------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Princípios básicos da amostra do Marble Maze](marble-maze-sample-fundamentals.md)                                                   | Fornece uma visão geral da estrutura do jogo e algumas das orientações de código e estilo seguidas pelo código-fonte.                                                                                                                                 |
 | [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md)                                               | Descreve como o código do aplicativo Marble Maze é estruturado e como a estrutura de um aplicativo UWP DirectX é diferente daquela de um aplicativo de área de trabalho tradicional.                                                                                    |
-| [Adicionando conteúdo visual à amostra do Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)                   | Descreve algumas das práticas fundamentais que você deve ter em mente ao trabalhar com o Direct3D e o Direct2D. Também descreve como o Marble Maze aplica essas práticas para conteúdo visual.                                                                           |
-| [Adicionando entrada e interatividade à amostra do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md) | Descreve como o Marble Maze trabalha com dispositivos de acelerômetro, toque e controlador do Xbox 360 para permitir que os usuários naveguem pelos menus e interajam com o tabuleiro do jogo. Também descreve algumas das práticas recomendadas que você deve ter em mente ao trabalhar com entrada. |
-| [Adicionando áudio à amostra do Marble Maze](adding-audio-to-the-marble-maze-sample.md)                                     | Descreve como o Marble Maze trabalha com áudio para adicionar música e efeitos sonoros à experiência do jogo.                                                                                                                                                  |
+| [Adicionando conteúdo visual ao exemplo do Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)                   | Descreve algumas das práticas fundamentais que você deve ter em mente ao trabalhar com o Direct3D e o Direct2D. Também descreve como o Marble Maze aplica essas práticas para conteúdo visual.                                                                           |
+| [Adicionando entrada e interatividade ao exemplo do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md) | Descreve como o Marble Maze trabalha com dispositivos de acelerômetro, toque e controlador do Xbox 360 para permitir que os usuários naveguem pelos menus e interajam com o tabuleiro do jogo. Também descreve algumas das práticas recomendadas que você deve ter em mente ao trabalhar com entrada. |
+| [Adicionando áudio ao exemplo do Marble Maze](adding-audio-to-the-marble-maze-sample.md)                                     | Descreve como o Marble Maze trabalha com áudio para adicionar música e efeitos sonoros à experiência do jogo.                                                                                                                                                  |
 
  
 
@@ -100,6 +101,6 @@ Recomendamos que você comece com os princípios básicos da amostra do Marble M
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

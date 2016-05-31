@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: Crie páginas de ajuda externa para fornecer instruções detalhadas e conselhos sobre seu aplicativo.
 title: Diretrizes para criar páginas de ajuda externa
 label: External help
@@ -7,7 +8,7 @@ template: detail.hbs
 
 # Páginas de ajuda externa
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Se seu aplicativo exigir ajuda detalhada para conteúdo complexo, considere hospedar estas instruções em uma página da Web.
 
@@ -37,6 +38,6 @@ As páginas de ajuda externa são o local ideal para fornecer aos usuários tuto
 * [Diretrizes da ajuda do aplicativo](guidelines-for-app-help.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Iniciar o aplicativo Configurações do Windows
 description: Saiba como iniciar o aplicativo Configurações do Windows a partir de seu aplicativo. Este tópico descreve o esquema de URI ms-settings. Use esse esquema de URI para iniciar o aplicativo Configurações do Windows para páginas de configurações específicas.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
@@ -7,7 +8,7 @@ ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
 # Iniciar o aplicativo Configurações do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -29,7 +30,7 @@ Para iniciar diretamente o aplicativo **Configurações**, use o esquema de URI 
 
 Neste exemplo, um controle de hiperlink XAML é usado para iniciar a página de configurações de privacidade do microfone usando o URI `ms-settings:privacy-microphone`.
 
-```xaml
+```xml
 <!--Set Visibility to Visible when access to the microphone is denied -->  
 <TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic" 
                  Visibility="Collapsed" Margin="0,15,0,0" TextWrapping="Wrap" >
@@ -125,6 +126,6 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

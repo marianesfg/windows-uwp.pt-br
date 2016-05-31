@@ -1,15 +1,14 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Crie aplicativos UWP (Plataforma Universal do Windows) com experiências de interação do usuário intuitivas e exclusivas otimizadas para touchpad, mas que sejam funcionalmente consistentes em diferentes dispositivos de entrada.
 title: Interações por touchpad
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
-label: Interações por touchpad
+label: Touchpad interactions
 template: detail.hbs
 ---
 
 # Diretrizes de design do touchpad
 
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Projete seu aplicativo de forma que os usuários possam interagir com ele por meio de um touchpad. Um touchpad combina a entrada multi-touch indireta com a entrada de precisão de um dispositivo apontador, como um mouse. Essa combinação torna o touchpad adequado para uma interface do usuário otimizada para touch e destinos menores de aplicativos de produtividade.
 
@@ -44,15 +43,15 @@ Os gestos e as diretrizes discutidos neste tópico podem ajudar a garantir que s
 
 Um conjunto conciso de interações por touchpad é usado de forma consistente em todo o sistema. Otimize seu aplicativo para a entrada por toque e mouse. Essa linguagem permite que o aplicativo se comporte de modo familiar aos seus usuários, aumentando o nível de confiança deles e tornando o aplicativo mais fácil de aprender e usar.
 
-Os usuários podem definir muito mais gestos de touchpad de precisão e comportamentos de interação do que podem para um touchpad padrão. Essas duas imagens mostram as páginas de configurações de touchpad diferentes de Configurações &gt; Dispositivos &gt; Mouse e touchpad para um touchpad padrão e um touchpad de precisão, respectivamente.
+Os usuários podem definir muito mais gestos de touchpad de precisão e comportamentos de interação do que podem para um touchpad padrão. Essas duas imagens mostram as páginas de configurações de touchpad diferentes de Configurações&gt; Dispositivos&gt; Mouse e touchpad para um touchpad padrão e um touchpad de precisão, respectivamente.
 
 ![configurações de touchpad padrão](images/mouse-touchpad-settings-standard.png)
 
-<sup>Configurações\\ touchpad\\ padrão</sup>
+<sup>Configurações Standard\\ touchpad\\</sup>
 
 ![configurações do windows precision touchpad](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Configurações\\ Windows\\ Precision\\ Touchpad</sup>
+<sup>Configurações Windows\\ Precision\\ Touchpad\\</sup>
 
 Aqui estão alguns exemplos de gestos otimizados de touchpad para realizar tarefas comuns.
 
@@ -147,22 +146,26 @@ Se você precisa personalizar o cursor do mouse:
 
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
-**Exemplos**
+            
+          
+            **Exemplos**
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Exemplos de arquivo-morto**
+* [Exemplo de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+            
+          
+            **Exemplos do arquivo**
 * [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos e manipulações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: gestos e interações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

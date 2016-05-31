@@ -1,13 +1,14 @@
 ---
+author: DBirtolo
 ms.assetid: 95481C7E-E905-4477-955B-90D292634E2E
 title: Impressão e digitalização
-description: Esta seção descreve como imprimir e digitalizar a partir de seu aplicativo Universal do Windows.
+description: Esta seção descreve como imprimir e digitalizar em seu aplicativo Universal do Windows.
 ---
 # Impressão e digitalização
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Esta seção descreve como imprimir e digitalizar a partir de seu aplicativo Universal do Windows.
+Esta seção descreve como imprimir e digitalizar em seu aplicativo Universal do Windows.
 
 | Tópico | Descrição | 
 |-------|-------------|
@@ -25,6 +26,6 @@ Esta seção descreve como imprimir e digitalizar a partir de seu aplicativo Uni
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

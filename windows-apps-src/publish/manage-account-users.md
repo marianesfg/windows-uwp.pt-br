@@ -1,5 +1,6 @@
 ---
-Description: Você pode usar o Active Directory do Azure para adicionar usuários à sua conta do Centro de Desenvolvimento.
+author: jnHs
+Description: Adicione os usuários à sua conta do Centro de Desenvolvimento e atribua a eles funções com permissões específicas.
 title: Gerenciar usuários de contas
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
 ---
@@ -16,27 +17,39 @@ Você pode usar o Active Directory do Azure para adicionar usuários à sua cont
 ## Associar sua conta do Centro de Desenvolvimento ao Active Directory do Azure de sua organização
 
 
-O Centro de Desenvolvimento do Windows aproveita o Active Directory do Azure para o gerenciamento de vários usuários e a atribuição de funções. Se sua organização já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem Azure AD. Caso contrário, você pode [baixá-lo gratuitamente](http://go.microsoft.com/fwlink/p/?LinkId=703757).
+O Centro de Desenvolvimento do Windows aproveita o Active Directory do Azure para o gerenciamento de vários usuários e a atribuição de funções. Se sua organização já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem Azure AD. Caso contrário, você pode criar um novo Azure AD no Centro de Desenvolvimento sem nenhum custo adicional. 
 
-Observe que apenas uma conta do Centro de Desenvolvimento pode ser associada a um Active Directory do Azure. Da mesma forma, apenas um Active Directory do Azure pode ser associado uma conta do Centro de Desenvolvimento.
+Observe que apenas uma conta do Centro de Desenvolvimento pode ser associada a um Azure AD. Da mesma forma, apenas um Azure AD pode ser associado uma conta do Centro de Desenvolvimento.
 
-Para configurar a associação:
+> **Observação**  Você só poderá adicionar usuários à sua conta do Centro de Desenvolvimento se eles fizerem parte do Azure AD de sua organização (ou se você criar novas contas do Azure AD para eles). Você não poderá adicionar usuários à sua conta do Centro de Desenvolvimento com suas contas pessoais da Microsoft.
+
+Para associar sua conta do Centro de Desenvolvimento ao Azure AD existente de sua organização:
 
 1.  Acesse suas **Configurações da conta** e clique em **Gerenciar usuários**.
-2.  Clique no botão para associar sua conta ao Azure AD.
+2.  Clique no botão **Associar o Azure AD com a sua conta do Centro de Desenvolvimento**.
 3.  Entre em sua conta do Azure AD. Essa conta deve ter permissões de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para configurar a associação.
 4.  Revise os nomes da organização e do domínio da conta do Azure AD. Para concluir a associação, clique em **Confirmar**.
+5.  Se a associação for bem-sucedida, você estará pronto para adicionar e gerenciar usuários da conta na página **Gerenciar usuários** da sua conta, conforme descrito nas seções abaixo.
+  
+Para criar um novo Azure AD para associar à sua conta do Centro de Desenvolvimento:
+1.  Acesse suas **Configurações da conta** e clique em **Gerenciar usuários**.
+2.  Clique no botão **Criar novo Azure AD**.
+3.  Insira as informações de diretório para seu novo Azure AD:
+- **Nome de domínio**: o nome exclusivo que usaremos para seu domínio do Azure AD, junto com ". onmicrosoft.com". Por exemplo, se você inseriu "exemplo", seu domínio do Azure AD seria "example.onmicrosoft.com". 
+- **Email de contato**: um endereço de email onde possamos contatá-lo sobre a sua conta, se necessário.
+- **Informações de conta de usuário do administrador global**: o nome, sobrenome, nome de usuário e senha que você deseja usar para a nova conta de administrador. 
+4.  Clique em **Criar** para confirmar as novas informações de domínio e conta.
+5.  Entre com o nome de usuário e senha do novo Azure AD para começar a adicionar e gerenciar usuários de contas adicionais na página **Gerenciar usuários** da sua conta, conforme descrito nas seções a seguir.
 
-Se a associação for bem-sucedida, você estará pronto para adicionar e gerenciar usuários da conta na página **Gerenciar usuários** da sua conta.
 
-> **Observação**  Você só pode adicionar usuários à sua conta do Centro de Desenvolvimento se eles fizerem parte do Active Directory do Azure da sua organização. Você não poderá adicionar os usuários à sua conta do Centro de Desenvolvimento com suas contas da Microsoft.
+> **Importante**  Depois de associar sua conta do Centro de Desenvolvimento ao Azure AD, você sempre precisará entrar no Centro de Desenvolvimento usando a conta de administrador global do Azure AD (e não uma conta pessoal da Microsoft) para adicionar e gerenciar usuários de contas.
 
 ## Adicionar e gerenciar usuários da conta, grupos e aplicativos Azure AD
 
 
 Depois de estabelecer a associação, você pode adicionar usuários, grupos e aplicativos Azure AD à sua conta. Pode também alterar funções, editar detalhes da conta ou remover usuários.
 
-> **Observação**  Se a sua organização usa a [integração de diretório](http://go.microsoft.com/fwlink/p/?LinkID=724033) para sincronizar o serviço de diretório local com o Azure AD, não será possível criar novos usuários, grupos ou aplicativos do Azure AD no Centro de Desenvolvimento. Você (ou outro admin em seu diretório local) precisará criá-los diretamente no diretório local antes de vê-los e adicioná-los no Centro de Desenvolvimento.
+> **Observação**  Se a sua organização usa a [integração de diretório](http://go.microsoft.com/fwlink/p/?LinkID=724033) para sincronizar o serviço de diretório local com o Azure AD, não será possível criar novos usuários, grupos nem aplicativos do Azure AD no Centro de Desenvolvimento. Você (ou outro admin em seu diretório local) precisará criá-los diretamente no diretório local antes de vê-los e adicioná-los no Centro de Desenvolvimento.
 
 Ao gerenciar usuários, tenha o seguinte em mente:
 
@@ -51,7 +64,7 @@ Ao gerenciar usuários, tenha o seguinte em mente:
 
 Cada usuário, grupo ou aplicativo Azure AD que você adicionar a uma conta deve receber pelo menos uma das funções a seguir. Cada função tem um conjunto específico de permissões para executar determinadas funções na conta.
 
-> **Observação**  O proprietário da conta é a pessoa que a criou com uma conta da Microsoft (em vez de quaisquer usuários adicionados por meio do Azure AD). Esse proprietário da conta é a única pessoa com acesso completo à conta, incluindo a capacidade de excluir aplicativos, criar e editar todos os usuários da conta e alterar todas as informações financeiras e configurações da conta. A conta da Microsoft que foi usada para criar a conta deve ser utilizada durante a criação de pacotes de aplicativo no Microsoft Visual Studio.
+> **Observação**  O proprietário da conta é a pessoa que a criou com uma conta da Microsoft (em vez de usuários adicionados por meio do Azure AD). Esse proprietário da conta é a única pessoa com acesso completo à conta, incluindo a capacidade de excluir aplicativos, criar e editar todos os usuários da conta e alterar todas as informações financeiras e configurações da conta. A conta da Microsoft que foi usada para criar a conta deve ser utilizada durante a criação de pacotes de aplicativo no Microsoft Visual Studio.
 
 | Função                 | Descrição              |
 |----------------------|--------------------------|
@@ -108,7 +121,7 @@ Se você precisar alterar a senha para uma conta de usuário que adicionou à su
 1.  Na página **Gerenciar usuários**, clique no nome da conta de usuário que deseja editar.
 2.  Clique no botão **Redefinir senha** na parte inferior da página.
 3.  Uma página de confirmação será exibida mostrando as informações de logon do usuário, incluindo uma senha temporária.
-  > **Importante**  Certifique-se de imprimir ou copiar essas informações e fornecê-las ao usuário, já que você não conseguirá acessar a senha temporária depois que sair dessa página.
+  > **Importante**  Certifique-se de imprimir ou copiar essas informações e fornecê-las ao usuário, já que você não conseguirá acessar a senha temporária depois de sair dessa página.
 
 ### Adicionar e gerenciar grupos
 
@@ -212,6 +225,6 @@ Para remover um usuário, um grupo ou um aplicativo Azure AD de sua conta do Cen
 
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

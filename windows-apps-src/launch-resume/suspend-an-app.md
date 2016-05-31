@@ -1,20 +1,21 @@
 ---
+author: mcleblanc
 title: Manipular a suspensão do aplicativo
-description: Saiba como salvar dados de aplicativo importantes quando o sistema suspende o seu aplicativo.
+description: Saiba como salvar dados importantes quando o sistema suspende o seu aplicativo.
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
 ---
 
 # Manipular a suspensão do aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
 
 -   [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341)
 
-Saiba como salvar dados de aplicativo importantes quando o sistema suspende o seu aplicativo. O exemplo registra um manipulador de eventos para o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) e salva uma cadeia de caracteres em um arquivo.
+Saiba como salvar dados importantes quando o sistema suspende o seu aplicativo. O exemplo registra um manipulador de eventos para o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) e salva uma cadeia de caracteres em um arquivo.
 
 ## Registrar o manipulador de eventos de suspensão
 
@@ -58,7 +59,7 @@ MainPage::MainPage()
 {
    InitializeComponent();
    Application::Current->Suspending += 
-       ref new SuspendingEventHandler(this, &amp;MainPage::App_Suspending);
+       ref new SuspendingEventHandler(this, &MainPage::App_Suspending);
 }
 ```
 
@@ -129,6 +130,6 @@ O sistema não notifica um aplicativo quando é terminado, por isso seu aplicati
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

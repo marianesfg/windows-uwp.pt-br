@@ -1,13 +1,14 @@
 ---
-title: Manipular a pré-inicialização de aplicativos
-description: Aprenda a manipular a pré-inicialização de aplicativos substituindo o método OnLaunched.
+author: mcleblanc
+title: Manipular a pré-inicialização do aplicativo
+description: Saiba como manipular a pré-inicialização de aplicativos substituindo o método OnLaunched.
 ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
 ---
 
-# Manipular a pré-inicialização de aplicativos
+# Manipular a pré-inicialização do aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -58,7 +59,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
             // TODO: This is not a prelaunch activation. Perform operations which
             // assume that the user explicitly launched the app such as updating
             // the online presence of the user on a social network, updating a 
-            // what&#39;s new feed, etc.
+            // what's new feed, etc.
         }
 
         // Place the frame in the current Window
@@ -67,7 +68,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
     if (rootFrame.Content == null)
     {
-        // When the navigation stack isn&#39;t restored navigate to the first page,
+        // When the navigation stack isn't restored navigate to the first page,
         // configuring the new page by passing required information as a navigation parameter
         rootFrame.Navigate(typeof(MainPage), e.Arguments);
     }
@@ -98,7 +99,7 @@ public sealed partial class MainPage : Page
     void WindowVisibilityChangedEventHandler(System.Object sender, Windows.UI.Core.VisibilityChangedEventArgs e)
     {
         // Perform operations that should take place when the application becomes visible rather than 
-        // when it is prelaunched, such as building a what&#39;s new feed 
+        // when it is prelaunched, such as building a what's new feed 
     }
 }
 ```
@@ -114,7 +115,7 @@ public sealed partial class MainPage : Page
     -   Um exemplo de implicação de desempenho é que você poderá aguardar até o usuário alternar para o aplicativo a fim de recuperar as informações de clima atuais, em vez de carregá-las quando o aplicativo é pré-inicializado e, depois, recarregá-las quando o aplicativo ficar visível, para garantir que as informações estejam atualizadas.
 -   Caso o aplicativo limpe o Bloco Dinâmico quando iniciado, adie isso até o evento de visibilidade alterada.
 -   A telemetria do aplicativo deve distinguir ativações de bloco normais e ativações de pré-lançamento de maneira que seja possível identificar o cenário em que problemas ocorrem.
--   Se você tiver o Microsoft Visual Studio 2015 Atualização 1 e o Windows 10, versão 1511, poderá simular a pré-inicialização do seu aplicativo no Visual Studio 2015 escolhendo **Depurar** &gt; **Outros Destinos de Depuração** &gt; **Debug Windows Universal App PreLaunch**.
+-   Se você tiver o Microsoft Visual Studio 2015 Atualização 1 e o Windows 10, versão 1511, poderá simular a pré-inicialização do seu aplicativo no Visual Studio 2015 escolhendo **Depurar**&gt;**Outros Destinos de Depuração**&gt;**Debug Windows Universal App PreLaunch**.
 
 ## Tópicos relacionados
 
@@ -128,6 +129,6 @@ public sealed partial class MainPage : Page
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

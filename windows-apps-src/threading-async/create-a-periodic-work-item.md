@@ -1,11 +1,12 @@
 ---
+author: TylerMSFT
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
 title: Criar um item de trabalho periódico
 description: Saiba como criar um item de trabalho periódico que se repete periodicamente.
 ---
 # Criar um item de trabalho periódico
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -18,7 +19,9 @@ Saiba como criar um item de trabalho periódico que se repete periodicamente.
 
 Use o método [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) para criar um item de trabalho periódico. Forneça um lambda que realize o trabalho e use o parâmetro *period* para especificar o intervalo entre os envios. O período é especificado usando uma estrutura [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996). O item de trabalho será reenviado sempre que o período acabar, assim, verifique se o período é longo o suficiente para o trabalho ser concluído.
 
-[**CreateTimer**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) retorna um objeto [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587). Armazene esse objeto no caso de o temporizador ter que ser cancelado.
+[
+              **CreateTimer**
+            ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) retorna um objeto [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587). Armazene esse objeto no caso de o temporizador ter que ser cancelado.
 
 > **Observação**  Evite especificar um valor igual a zero (ou qualquer valor inferior a um milésimo de segundo) para o intervalo. Isso faz com que o temporizador periódico se comporte como um temporizador de disparo único.
 
@@ -156,14 +159,14 @@ O exemplo a seguir cria um item de trabalho periódico que se repete a cada 60 s
 > 
 >         }),
 >         period,
->         ref new TimerDestroyedHandler([&amp;](ThreadPoolTimer ^ source)
+>         ref new TimerDestroyedHandler([&](ThreadPoolTimer ^ source)
 >         {
 >             // 
 >             // TODO: Handle periodic timer cancellation.
 >             // 
 > 
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
->                 ref new DispatchedHandler([&amp;]()
+>                 ref new DispatchedHandler([&]()
 >                 {
 >                     // 
 >                     // UI components can be accessed within this scope.
@@ -200,6 +203,6 @@ Para obter mais informações sobre temporizadores de uso único, consulte [Usar
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Iniciar o aplicativo Mapas do Windows
 description: Saiba como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo.
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
@@ -7,7 +8,7 @@ ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
 # Iniciar o aplicativo Mapas do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Saiba como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo. Este tópico descreve os esquemas de URI (Uniform Resource Identifier) **bingmaps:**, **ms-drive-to:**, **ms-walk-to:** e *ms-settings:*. Use esses esquemas de URI para iniciar o aplicativo Mapas do Windows para ver mapas, trajetos e resultados de pesquisa específicos ou para baixar mapas offline de Mapas do Windows no aplicativo Configurações.
@@ -415,7 +416,7 @@ O URI para iniciar uma solicitação de trajetos a pé curva a curva não precis
 ## Referência de parâmetro ms-settings:
 
 
-A sintaxe para parâmetros específicos do aplicativo Mapas para o esquema de URI **ms-settings:** é definida abaixo. **maps-downloadmaps** é especificado junto com o URI **ms-settings:** na forma de **ms-settings:maps-downloadmaps?** para indicar a página de configurações de mapas offline.
+A sintaxe para parâmetros específicos do aplicativo Mapas para o esquema de URI **ms-settings:** é definida abaixo. **mapas downloadmaps** é especificado junto com a URI **ms-settings:** na forma de **ms-configurações: mapas-downloadmaps? ** para indicar a página de configurações de mapas offline.
 
  
 
@@ -427,6 +428,6 @@ A sintaxe para parâmetros específicos do aplicativo Mapas para o esquema de UR
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

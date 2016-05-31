@@ -1,8 +1,9 @@
 ---
-Description: crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário. Mostramos aqui como adicionar controles ao seu aplicativo.
-title: adicionar controles e manipular eventos
+author: Jwmsft
+Description: Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário. Mostramos aqui como adicionar controles ao seu aplicativo.
+title: Adicionar controles e manipular eventos
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
-label: Introdução aos controles e eventos
+label: Intro to controls and events
 template: detail.hbs
 ---
 # Introdução aos controles e eventos
@@ -123,7 +124,7 @@ Você também pode associar um evento ao manipulador de eventos no code-behind. 
 Button1.Click += new RoutedEventHandler(Button_Click);
 ```
 
-\[Este artigo contém informações específicas para aplicativos da Plataforma Universal do Windows (UWP) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Tópicos relacionados
 
@@ -132,6 +133,6 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 -   [Submenus](dialogs-popups-menus.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

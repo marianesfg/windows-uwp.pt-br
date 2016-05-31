@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: Este artigo descreve como enviar uma notificação de bloco local para um bloco primário e um bloco secundário usando modelos de bloco adaptável.
 title: Enviar uma notificação de bloco local
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
-label: a ser definido
+label: TBD
 template: detail.hbs
 ---
 
 # Enviar uma notificação de bloco local
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Os blocos dos aplicativos primários no Windows 10 são definidos no manifesto do aplicativo, e os blocos secundários são criados e definidos programaticamente pelo código do aplicativo. Este artigo descreve como enviar uma notificação de bloco local para um bloco primário e um bloco secundário usando modelos de bloco adaptável. (Notificação local é aquela que é enviada pelo código do aplicativo, e não uma enviada por push ou obtida em um servidor Web.)
@@ -166,7 +167,7 @@ TileUpdateManager.CreateTileUpdaterForApplication().Update(notification);
 
 **Bloco secundário**
 
-Para enviar uma notificação para um bloco secundário, primeiro assegure-se de que o bloco secundário exista. Se você tentar criar um atualizador de bloco para um bloco secundário que não existe (por exemplo, se o usuário desafixou o bloco secundário), uma exceção será acionada. É possível usar [**SecondaryTile.Exists**](https://msdn.microsoft.com/library/windows/apps/br242205)(tileId) para descobrir se o bloco secundário está fixado, criar um atualizador para o bloco secundário e enviar a notificação.
+Para enviar uma notificação para um bloco secundário, primeiro assegure-se de que o bloco secundário exista. Se você tentar criar um atualizador de bloco para um bloco secundário que não existe (por exemplo, se o usuário desafixou o bloco secundário), uma exceção será acionada. É possível usar [**SecondaryTile.Exists**](https://msdn.microsoft.com/library/windows/apps/br242205) (tileId) para descobrir se o bloco secundário está fixado, criar um atualizador para o bloco secundário e enviar a notificação.
 
 Este exemplo de código envia uma notificação para um bloco secundário.
 
@@ -314,6 +315,6 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

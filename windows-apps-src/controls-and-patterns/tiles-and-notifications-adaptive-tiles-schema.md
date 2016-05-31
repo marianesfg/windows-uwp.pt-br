@@ -1,16 +1,13 @@
 ---
-Description: Veja os elementos e atributos que você usa para criar blocos adaptáveis.
+author: mijacobs
+Description: Veja os elementos e os atributos que você usa para criar blocos adaptáveis.
 title: Esquema e modelos de blocos adaptáveis
 ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
-label: Modelos e esquema de blocos adaptáveis
+label: Adaptive tile schema and templates
 template: detail.hbs
 ---
 
 # Modelos de blocos adaptáveis: esquema e orientação
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Veja os elementos e os atributos que você usa para criar blocos adaptáveis. Para obter instruções e exemplos, consulte [Criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md).
 
@@ -131,11 +128,6 @@ textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle
 </subgroup>
 ```
 
-**Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
 ## <span id="related_topics"></span>Tópicos relacionados
 
 
@@ -149,6 +141,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

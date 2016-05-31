@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 title: 'Tamanhos de tela e pontos de interrupção para um design responsivo'
 description: .
 ms.assetid: BF42E810-CDC8-47D2-9C30-BAA19DCBE2DA
@@ -7,11 +8,6 @@ template: detail.hbs
 ---
 
 #  Tamanhos de tela e pontos de interrupção para um design responsivo
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
 
 O número de destinos de dispositivo e tamanhos de tela do ecossistema do Windows 10 é muito grande para você se preocupar com a otimização de sua interface do usuário em cada um deles. Em vez disso, recomendamos projetar para algumas larguras principais (também chamadas de "pontos de interrupção"): 360, 640, 1024 e 1366 epx.
 
@@ -41,8 +37,8 @@ Esta tabela descreve as classes de tamanho diferentes e fornece recomendações 
 <tr class="odd">
 <td align="left">Tamanho da tela típico (diagonal)</td>
 <td align="left">4&quot; a 6&quot;</td>
-<td align="left">7&quot; a 12&quot;, ou TVs</td>
-<td align="left">13&quot; e maiores</td>
+<td align="left">7&quot; a 12&quot; ou TVs</td>
+<td align="left">13&quot; e maior</td>
 </tr>
 <tr class="even">
 <td align="left">Dispositivos comuns</td>
@@ -66,29 +62,29 @@ Esta tabela descreve as classes de tamanho diferentes e fornece recomendações 
 <td align="left" valign="top">Recomendações gerais</td>
 <td align="left" valign="top"><ul>
 <li>Centralize elementos de guia.</li>
-<li>Defina as margens esquerda e direita de janela para 12px para criar uma separação visual entre as margens esquerdas e direita da janela do aplicativo.</li>
-<li>Encaixe [app bars](../controls-and-patterns/app-bars.md) na parte inferior da janela para melhorar a acessibilidade</li>
+<li>Defina as margens esquerda e direita de janela para 12px para criar uma separação visual entre as margens esquerda e direita da janela do aplicativo.</li>
+<li>Encaixe [barras de aplicativo](../controls-and-patterns/app-bars.md) na parte inferior da janela para melhorar a acessibilidade</li>
 <li>Usar uma coluna/região de cada vez</li>
 <li>Use um ícone para representar a pesquisa (não mostre uma caixa de pesquisa).</li>
-<li>Coloque o [navigation pane](../controls-and-patterns/nav-pane.md) no modo de sobreposição para conservar espaço na tela.</li>
-<li>Se você estiver usando o [master details pattern](../controls-and-patterns/master-details.md), use o modo de apresentação empilhada para economizar espaço na tela.</li>
+<li>Coloque o [painel de navegação](../controls-and-patterns/nav-pane.md) no modo de sobreposição para conservar espaço na tela.</li>
+<li>Se você estiver usando o [padrão de detalhes mestre](../controls-and-patterns/master-details.md), use o modo de apresentação empilhada para economizar espaço na tela.</li>
 </ul></td>
 <td align="left" valign="top"><ul>
 <li>Crie elementos de guia alinhados à esquerda.</li>
-<li>Defina as margens esquerda e direita de janela para 24px para criar uma separação visual entre as margens esquerdas e direita da janela do aplicativo.</li>
-<li>Coloque elementos de comando, como [app bars](../controls-and-patterns/app-bars.md), na parte superior da janela do aplicativo.</li>
+<li>Defina as margens esquerda e direita de janela para 24px para criar uma separação visual entre as margens esquerda e direita da janela do aplicativo.</li>
+<li>Coloque elementos de comando, como [barras de aplicativo](../controls-and-patterns/app-bars.md), na parte superior da janela do aplicativo.</li>
 <li>Até duas colunas/regiões</li>
 <li>Mostre a caixa de pesquisa.</li>
-<li>Coloque o [navigation pane](../controls-and-patterns/nav-pane.md) no modo de fragmento de forma que uma faixa estreita de ícones sempre seja exibida.</li>
-
+<li>Coloque o [painel de navegação](../controls-and-patterns/nav-pane.md) no modo de fragmento de forma que uma faixa estreita de ícones sempre seja exibida.</li>
+<li>Considere fazer mais adaptações para [experiências de TV](http://go.microsoft.com/fwlink/?LinkId=760736).</li>
 </ul></td>
 <td align="left" valign="top"><ul>
 <li>Crie elementos de guia alinhados à esquerda.</li>
-<li>Defina as margens esquerda e direita de janela para 24px para criar uma separação visual entre as margens esquerdas e direita da janela do aplicativo.</li>
-<li>Coloque elementos de comando, como [app bars](../controls-and-patterns/app-bars.md), na parte superior da janela do aplicativo.</li>
+<li>Defina as margens esquerda e direita de janela para 24px para criar uma separação visual entre as margens esquerda e direita da janela do aplicativo.</li>
+<li>Coloque elementos de comando, como [barras de aplicativo](../controls-and-patterns/app-bars.md), na parte superior da janela do aplicativo.</li>
 <li>Até três colunas/regiões</li>
 <li>Mostre a caixa de pesquisa.</li>
-<li>Coloque o [navigation pane](../controls-and-patterns/nav-pane.md) no modo encaixado para que ele sempre apareça.</li>
+<li>Coloque o [painel de navegação](../controls-and-patterns/nav-pane.md) no modo encaixado para que ele sempre apareça.</li>
 </ul></td>
 </tr>
 </tbody>
@@ -98,6 +94,6 @@ Com o [**Continuum para Telefones**](http://go.microsoft.com/fwlink/p/?LinkID=69
  
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: A Windows Store impõe certas regras relacionadas a números de versão, que funcionam de maneira um pouco diversa em diferentes versões do sistema operacional.
 title: Numeração de versão do pacote
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
@@ -9,7 +10,7 @@ ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
 
 Cada pacote que você fornece precisa ter um número de versão (fornecido como um valor no atributo **Version** do elemento **Package/Identity** no manifesto do aplicativo). A Windows Store impõe certas regras relacionadas a números de versão, que funcionam de maneira um pouco diversa em diferentes versões do sistema operacional.
 
-> **Observação**  Este tópico refere-se a "pacotes", mas, a menos que seja especificado, as mesmas regras aplicam-se a números de versão para arquivos .appx e .appxbundle
+> **Observação**  Este tópico se refere a "pacotes", mas, a menos que seja especificado, as mesmas regras aplicam-se a números de versão para arquivos .appx e .appxbundle
 
 ## Numeração de versão para pacotes do Windows 10
 
@@ -22,7 +23,7 @@ Quando for escolher um pacote do Windows 10 de seu envio publicado, a Windows St
 
 Você pode até oferecer vários pacotes do Windows 10 com o mesmo número de versão. Contudo, os pacotes que compartilharem um número de versão não poderão ter também a mesma arquitetura, pois a identidade completa que a Loja usa para cada um de seus pacotes deve ser única. Para obter mais informações, consulte [**Identity**](https://msdn.microsoft.com/library/windows/apps/br211441).
 
-Se você fornecer vários pacotes do Windows 10 que usam o mesmo número de versão, a arquitetura (na ordem x64, x86, ARM, neutro) será usada para decidir qual tem a maior classificação na consideração de qual pacote fornecer para determinado dispositivo. Ao classificar pacotes de aplicativos que usem o mesmo número de versão, a classificação de arquitetura mais alta dentro do pacote será considerada: um pacote de aplicativos que contém um pacote x64 terá uma classificação maior do que aquele que contém somente um pacote x86.
+Se você fornecer vários pacotes do Windows 10 que usam o mesmo número de versão, a arquitetura (na ordem x64, x86, ARM, neutro) será usada para decidir qual tem a maior classificação na consideração de qual pacote fornecer para determinado dispositivo. Ao classificar lotes de aplicativos que usem o mesmo número de versão, a classificação de arquitetura mais alta dentro do lote será considerada: um lote de aplicativos que contém um pacote x64 terá uma classificação maior do que aquele que contém somente um pacote x86.
 
 Isso dá uma grande flexibilidade para desenvolver seu aplicativo ao longo do tempo. Você pode carregar e enviar novos pacotes que usam números de versão menores para adicionar suporte a dispositivos acessíveis aos quais não oferecia suporte anteriormente. Você pode adicionar pacotes com maior número de versão com dependências mais estritas para aproveitar o hardware ou os recursos do sistema operacional, ou pode adicionar pacotes com maior número de versão que servem como atualizações para alguns ou toda a sua base de clientes existentes.
 
@@ -76,6 +77,6 @@ Aqui estão alguns exemplos do que acontece em diferentes situações de atualiz
 > **Observação**  Diferentemente dos pacotes. appx, os números de versão em todos os pacotes .xap não são considerados ao determinar qual pacote fornecer a um determinado cliente. Para atualizar um cliente de um pacote .xap para um mais recente, certifique-se de remover o .xap mais antigo no novo envio.
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

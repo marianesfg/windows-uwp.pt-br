@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 772DEBF2-1578-4330-9C14-70BCC6F55005
 description: A Microsoft dá suporte ao controle de anúncios, o que permite otimizar a receita de publicidade no aplicativo com o controle de solicitações de anúncios em faixa de várias redes de publicidade.
 title: Usar controle de anúncios para maximizar a receita
@@ -7,7 +8,7 @@ title: Usar controle de anúncios para maximizar a receita
 #  Usar controle de anúncios para maximizar a receita
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A Microsoft dá suporte ao controle de anúncios, o que permite otimizar a receita de publicidade no aplicativo com o controle de solicitações de anúncios em faixa de várias redes de publicidade. Redes de publicidade diferentes podem ter seus pontos fortes, com algumas tendo um custo mais alto por milhares de visualizações (eCPM) ou uma taxa de preenchimento mais alta (porcentagem de anúncios veiculados quando seu aplicativo faz uma solicitação) em certos mercados do que outras. Com uma única rede de publicidade, você pode acabar com solicitações de anúncios não processadas, o que lhe causará perda de receita em potencial. Com o controle de anúncios, você maximiza a monetização de anúncios ao garantir a exibição constante de um anúncio ativo.
 
@@ -35,7 +36,7 @@ Siga estas etapas para instalar e configurar o controle de anúncios em seu apli
 ## Usando o Microsoft Advertising sem o controle de anúncios
 
 
-Se você não quiser usar o controle de anúncios ou se o tipo de projeto atualmente não for compatível com o controle de anúncios, você ainda poderá veicular anúncios do Microsoft Advertising sem usar o controle de anúncios. Para saber mais, veja [AdControl em XAML e .NET](https://msdn.microsoft.com/library/mt313186.aspx) e [AdControl em HTML 5 e JavaScript](https://msdn.microsoft.com/library/mt313130.aspx).
+Se você não quiser usar o controle de anúncios ou se o tipo de projeto atualmente não for compatível com o controle de anúncios, você ainda poderá veicular anúncios do Microsoft Advertising sem usar o controle de anúncios. Para saber mais, consulte [AdControl em XAML e .NET](https://msdn.microsoft.com/library/mt313186.aspx) e [AdControl em HTML 5 e JavaScript](https://msdn.microsoft.com/library/mt313130.aspx).
 
 ## Tópicos relacionados
 
@@ -49,6 +50,6 @@ Se você não quiser usar o controle de anúncios ou se o tipo de projeto atualm
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

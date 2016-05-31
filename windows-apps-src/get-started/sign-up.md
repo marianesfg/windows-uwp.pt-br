@@ -1,11 +1,12 @@
 ---
+author: martinekuan
 ms.assetid: 16AB1111-4BA8-4352-B796-E97AA9243E31
 title: Você está pronto para se inscrever?
 description: Registre-se agora para criar uma conta de desenvolvedor, colocar seus aplicativos na Windows Store e participar de outros programas da Microsoft.
 ---
 # Você está pronto para se inscrever?
 
-Registre-se agora para criar uma conta de desenvolvedor e colocar seus aplicativos na Windows Store e participar de outros programas da Microsoft.
+Registre-se agora para criar uma conta de desenvolvedor, colocar seus aplicativos na Windows Store e participar de outros programas da Microsoft.
 
 [Inscreva-se agora!](http://go.microsoft.com/fwlink/p/?LinkId=615100)
 
@@ -19,6 +20,6 @@ Assim que você abre sua conta de desenvolvedor, pode [criar seu aplicativo, res
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

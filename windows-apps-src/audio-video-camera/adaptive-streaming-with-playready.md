@@ -1,18 +1,25 @@
 ---
+author: eliotcowley
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
-description: Este artigo descreve como adicionar conteúdo de multimídia de streaming adaptável com a proteção de conteúdo da Microsoft PlayReady a um aplicativo da Plataforma Universal do Windows (UWP).
+description: Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um aplicativo UWP (Plataforma Universal do Windows).
 title: Streaming adaptável com PlayReady
 ---
 
 # Streaming adaptável com PlayReady
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não faz nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
+Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um aplicativo UWP (Plataforma Universal do Windows). 
 
-Este artigo descreve como adicionar conteúdo de multimídia de streaming adaptável com a proteção de conteúdo da Microsoft PlayReady a um aplicativo da Plataforma Universal do Windows (UWP). Esse recurso atualmente oferece suporte para reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP).
+Esse recurso atualmente oferece suporte à reprodução de conteúdo Dynamic Streaming over HTTP (DASH).
+
+Não há suporte para HLS (HTTP Live Streaming da Apple) com PlayReady.
+
+No momento, também não há suporte nativo a Smooth Streaming; no entanto, o PlayReady é extensível e usando um código adicional ou bibliotecas, o Smooth Streaming protegido com PlayReady pode ter suporte, aproveitando o DRM (gerenciamento de direitos digitais) do software ou inclusive do hardware.
 
 Este artigo lida apenas com os aspectos de streaming adaptável específicos para o PlayReady. Para obter informações sobre a implementação de streaming adaptável em geral, consulte [Streaming adaptável](adaptive-streaming.md).
+
+Este artigo usa código do [Exemplo de streaming adaptável](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) no repositório **Windows-universal-samples** da Microsoft no GitHub. O Cenário 4 lida com o uso de streaming adaptável com PlayReady. Você pode baixar o repositório em um arquivo ZIP, navegando até o nível raiz do repositório e clicando no botão **Baixar o ZIP**.
 
 Você precisará das seguintes instruções using:
 
@@ -44,7 +51,7 @@ private string playReadyChallengeCustomData = "";
 Também convém declarar a constante a seguir:
 
 ```csharp
-private const int MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = -2147174251;
+private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 ```
 
 ## Configurando o MediaProtectionManager
@@ -154,7 +161,7 @@ async Task<bool> ReactiveIndivRequest(
         else
         {
             COMException comException = exception as COMException;
-            if (comException != null &amp;&amp; comException.HResult == MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED)
+            if (comException != null && comException.HResult == MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED)
             {
                 IndivRequest.NextServiceRequest();
             }
@@ -290,6 +297,6 @@ Você pode chamar essa função em qualquer evento que manipular o início do st
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

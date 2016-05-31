@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Se você encontrar erros ao carregar pacotes do aplicativo durante o processo de envio do aplicativo, precisará resolvê-los antes de enviar seu aplicativo para a Loja.
 title: Resolver erros de carregamento de pacote
 ms.assetid: 0D01E43C-F3A7-4FA2-B479-1B5579FF531A
@@ -23,7 +24,7 @@ Para obter informações sobre como resolver erros relacionados a números de ve
 
 Além disso, lembre-se de que, se o seu envio tiver mais de um XAP do Windows Phone 8.1, ele deverá ter o mesmo número de versão.
 
-**Observação**  Para perguntas adicionais relacionadas a outras mensagens de erro e ajuda para resolvê-las, visite nossos [fóruns](http://go.microsoft.com/fwlink/p/?LinkId=224196).
+**Observação**  Para ver perguntas adicionais relacionadas a outras mensagens de erro e obter ajuda para resolvê-las, visite nossos [fóruns](http://go.microsoft.com/fwlink/p/?LinkId=224196).
 
  
 
@@ -36,6 +37,6 @@ Além disso, lembre-se de que, se o seu envio tiver mais de um XAP do Windows Ph
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

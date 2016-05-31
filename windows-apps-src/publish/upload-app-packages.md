@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: A página Pacotes é onde você carrega todos os arquivos de pacote (.xap, .appx, .appxupload e/ou .appxbundle) para o aplicativo que você está enviando. Você pode carregar pacotes para qualquer sistema operacional visado por seu aplicativo nesta etapa.
 title: Carregue os pacotes do aplicativo
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
@@ -18,7 +19,7 @@ Para carregar os pacotes, arraste-os para o campo de carregamento ou clique em p
 
 Caso tenha criado [pacotes de pré-lançamento](package-flights.md) para seu aplicativo, você verá uma lista suspensa com a opção para copiar pacotes de um dos pacotes de pré-lançamento. Selecione o pacote de pré-lançamento que tiver os pacotes que você deseja puxar. Em seguida, você pode selecionar qualquer um ou todos os seus pacotes para incluir nesse envio.
 
-> **Importante** Para o Windows 10, você deve sempre carregar o arquivo .appxupload aqui, e não o .appX ou .appxbundle. Para obter mais informações sobre o empacotamento de aplicativos UWP da Loja, consulte [Empacotando aplicativos Universais do Windows para Windows 10](../packaging/packaging-uwp-apps.md).
+> **Importante** Para o Windows 10, você deve sempre carregar o arquivo .appxupload aqui e não o .appX nem o .appxbundle. Para obter mais informações sobre o empacotamento de aplicativos UWP da Loja, consulte [Empacotando aplicativos Universais do Windows para Windows 10](../packaging/packaging-uwp-apps.md).
 
 Se detectarmos problemas com seus pacotes ao validá-los, você precisará remover o pacote, corrigir o problema e tentar carregá-lo novamente. Para saber mais, consulte [Corrigir erros de carregamento de pacote](resolve-package-upload-errors.md).
 
@@ -54,6 +55,6 @@ Quando detectarmos que você tem pacotes redundantes, forneceremos uma opção p
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

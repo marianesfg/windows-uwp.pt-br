@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Se seu aplicativo usa um AdMediatorControl ou AdControl para exibir anúncios na barra de notificação, você pode aumentar sua taxa de preenchimento de anúncio e receita mostrando anúncios afiliados da Microsoft em seu aplicativo.
 title: Pacotes de pré-lançamento
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
@@ -43,9 +44,9 @@ Depois que tiver salvado os detalhes do pacote de pré-lançamento, você verá 
 
 Você tem a opção de selecionar pacotes que estavam associados a um envio publicado anterior (um envio de versão completa ou um dos seus pacotes de pré-lançamento, se você tiver mais de um). Caso precise [carregar novos pacotes](upload-app-packages.md) para usar para esse pacote de pré-lançamento, pode carregá-los aqui (usando o mesmo processo de quando carrega pacotes de aplicativo para um envio de versão completa comum). Clique em **Salvar** quando terminar de especificar os pacotes a serem incluídos no pacote de pré-lançamento.
 
-Tenha em mente que as pessoas em seu grupo de versão de pré-lançamento só poderão receber os pacotes que você incluir no envio de um pacote de pré-lançamento disponível para esse grupo. Elas não poderão acessar nenhum pacote do seu envio de versão completa. Certifique-se de que você forneça pacotes para dar suporte a todos os tipos de dispositivo que os clientes que recebem esse pacote de pré-lançamento usam. Na maioria dos casos, convém incluir pacotes que dão suporte ao mesmo conjunto de famílias de dispositivos compatíveis com o envio de versão completa.
+Se seu aplicativo der suporte a várias famílias de dispositivos, verifique se que você incluiu pacotes para dar suporte ao mesmo conjunto de famílias de dispositivos na sua versão de pré-lançamento. As pessoas em seus grupos de versão de pré-lançamento **só** poderão obter pacotes dessa versão. Elas não poderão acessar nenhum pacote de outras versões de pré-lançamento nem de seu envio de versão completa. 
 
-Lembre-se também que suas informações de detalhes da Loja da versão completa são usadas em um grupo de versão de pré-lançamento, incluindo a disponibilidade da família de dispositivos. Isso significa que se o envio de versão completa não incluir pacotes que dão suporte a uma determinada família de dispositivos, os clientes da versão de pré-lançamento não poderão baixar o aplicativo nesse tipo de dispositivo, mesmo se você tiver incluído pacotes que dão suporte a essa família de dispositivos em seu pacote de pré-lançamento.
+Lembre-se também de que suas informações de listagem da Loja vêm de seu envio de versão completa, incluindo quais famílias de dispositivos são compatíveis com seu aplicativo. os clientes em seus grupos de versão de pré-lançamento só poderão baixar o aplicativo em uma família de dispositivos que seja compatível com seu envio de versão completa. Para obter mais informações, consulte [Suporte à família de dispositivos](#device-family-support). 
 
 ## Configurar opções adicionais de pacote de pré-lançamento
 
@@ -58,6 +59,16 @@ Quando tiver especificado os pacotes e configurado todas as opções necessária
 As pessoas em seus grupos de versão de pré-lançamento associados a esse pacote de pré-lançamento que já possuem seu aplicativo receberão agora uma atualização usando os pacotes incluídos em seu pacote de pré-lançamento. Se essas pessoas ainda não tiverem seu aplicativo, elas receberão os pacotes de seu pacote de pré-lançamento quando o instalarem. 
 
 > Observação  As pessoas que tiverem um pacote que está disponível apenas em um pacote de pré-lançamento podem dar ao aplicativo uma classificação por estrelas e deixar opiniões, mas elas não serão exibidas para outros clientes. (Isso exclui o legado 7.x e pacotes XAP 8.0. Classificações e opiniões deixadas por membros de seus grupos de versão de pré-lançamento usando esses pacotes ficarão visíveis para outros clientes). Você pode ver os comentários de todos os clientes, incluindo aqueles em seus grupos de versão de pré-lançamento, nos relatórios de Classificações e opiniões do aplicativo.
+
+## Suporte à família de dispositivos
+
+Na maioria dos casos, convém incluir pacotes que dão suporte ao mesmo conjunto de famílias de dispositivos compatíveis com o envio de versão completa. A disponibilidade da família de dispositivos para um aplicativo sempre se baseará no envio de versão completa, o cliente estando ou não em um grupo de versão de pré-lançamento.
+
+**Se seu envio de versão completa der suporte a uma família de dispositivos incompatível com o seu pacote de pré-lançamento**, as pessoas em seu grupo de versão de pré-lançamento não poderão baixar o aplicativo nessa família de dispositivos. Por exemplo, se seu envio de versão completa incluir pacotes Móveis e de Desktop e, em seguida, você criar um pacote de pré-lançamento que inclua apenas um pacote Móvel, as pessoas no seu grupo de versão de pré-lançamento só poderão baixar o aplicativo em dispositivos móveis, mesmo que você tenha um pacote de desktop disponível para os clientes que não estão na versão de pré-lançamento. Mesmo se você estiver usando apenas o pacote de versão de pré-lançamento para testar alterações em seu pacote móvel, você deve incluir o pacote de desktop do seu envio de versão completa no pacote de pré-lançamento para que os clientes do grupo de versão de pré-lançamento possam baixar seu aplicativo em dispositivos desktop.
+
+**Se seu pacote de pré-lançamento der suporte a uma família de dispositivos incompatível com seu envio de versão completa**, ninguém conseguirá baixar o aplicativo nessa família de dispositivos, estejam ou não em seu grupo de versão de pré-lançamento. Por exemplo, se o seu envio de versão completa incluir apenas um pacote móvel e, em seguida, você criar um pacote de pré-lançamento que inclua pacotes móveis e desktop, as pessoas em seu grupo de versão de pré-lançamento ainda só poderão baixar o aplicativo em dispositivos móveis. O pacote de desktop não será oferecido a ninguém, nem mesmo às pessoas em seu grupo de versão de pré-lançamento. Se você quiser disponibilizar um pacote de desktop para pessoas em seu grupo de versão de pré-lançamento, você precisará primeiro atualizar seu envio de versão completa para incluir um pacote de desktop. Para proporcionar a melhor experiência para todos os clientes do seu aplicativo, seu envio de versão completa deve dar suporte às mesma famílias de dispositivos que o seu pacote de pré-lançamento. 
+
+**Observação**  Os pacotes adicionados ao seus pacotes de pré-lançamento podem dar suporte a qualquer versão de sistema operacional (ou qualquer compilação do Windows 10), mas como observado acima, as pessoas em grupos de versão de pré-lançamento devem usar um dispositivo que esteja executando uma versão do Windows 10 que dê suporte a pacotes de pré-lançamento (Windows.Desktop compilação 10586 ou posterior; Windows.Mobile compilação 10586.63 ou posterior) para obter pacotes do pacote de pré-lançamento.
 
 ## Atualizar ou modificar seu pacote de pré-lançamento
 
@@ -87,11 +98,11 @@ Observe que todas as mesmas regras de validação do pacote serão aplicadas, me
 
 ## Excluir um pacote de pré-lançamento
 
-Para excluir um pacote de pré-lançamento ao qual você não quer mais dar suporte, clique no nome dele na página de visão geral do aplicativo. Na página de visão geral da versão de pré-lançamento, clique em **Excluir pacote de pré-lançamento**. (Se você tiver um envio não publicado do pacote de pré-lançamento em andamento, você precisará exclui-lo primeiro). Isso pode levar até 30 minutos para ser concluído.
+Para excluir um pacote de pré-lançamento ao qual você não quer mais dar suporte, clique no nome dele na página de visão geral do aplicativo. Na página de visão geral da versão de pré-lançamento, clique em **Modificar**, em seguida, clique no link **Excluir** para excluir o pacote de pré-lançamento. (Se você tiver um envio não publicado do pacote de pré-lançamento em andamento, você precisará exclui-lo primeiro). Isso pode levar até 30 minutos para ser concluído.
 
-Quando você exclui uma versão de pré-lançamento, quaisquer clientes que estiverem nela receberão uma atualização de aplicativo, caso haja um pacote com um número de versão maior do que o que eles receberam por meio do pacote de pré-lançamento (ou assim que tal pacote ficar disponível). Caso eles desinstalem o aplicativo e o instalem novamente, isso será tratado como uma nova aquisição e eles receberão a versão superior disponível no momento. 
+Quando você exclui um pacote de pré-lançamento, todos os clientes que tiverem pacotes distribuídos nesse pacote de pré-lançamento receberão uma atualização de aplicativo, caso haja um pacote com um número de versão maior (ou assim que esse pacote ficar disponível). Caso eles desinstalem o aplicativo e o instalem novamente, isso será tratado como uma nova aquisição e eles receberão a versão superior disponível no momento. 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

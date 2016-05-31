@@ -1,17 +1,18 @@
 ---
-title: Mapear os recursos do DirectX 9 para APIs do DirectX 11
+author: mtoepke
+title: Correlacionar recursos do DirectX 9 com APIs do DirectX 11
 description: Compreenda como os recursos utilizados por seu jogo do Direct3D 9 serão convertidos para o Direct3D 11 e a UWP (Plataforma Universal do Windows).
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
 ---
 
-# Mapear os recursos do DirectX 9 para APIs do DirectX 11
+# Correlacionar recursos do DirectX 9 com APIs do DirectX 11
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
--   [Planejar a portabilidade do DirectX](plan-your-directx-port.md)
+-   [Planeje a compatibilização do DirectX](plan-your-directx-port.md)
 -   [Alterações importantes do Direct3D 9 para o Direct3D 11](understand-direct3d-11-1-concepts.md)
 -   Mapeamento de recursos
 
@@ -129,7 +130,7 @@ Use a tabela a seguir para converter o código do Direct3D 9 em Direct3D 11. Iss
 <td align="left"><p>[<strong>IDirect3DDevice9</strong>](https://msdn.microsoft.com/library/windows/desktop/bb174336)</p></td>
 <td align="left"><p>[<strong>ID3D11Device2</strong>](https://msdn.microsoft.com/library/windows/desktop/dn280493)</p>
 <p>[<strong>ID3D11DeviceContext2</strong>](https://msdn.microsoft.com/library/windows/desktop/dn280498)</p>
-<p>Os estágios de pipeline dos elementos gráficos são descritos no tópico [Graphics Pipeline](https://msdn.microsoft.com/library/windows/desktop/ff476882).</p></td>
+<p>Os estágios de pipeline gráfico são descritos no tópico sobre [pipeline gráfico](https://msdn.microsoft.com/library/windows/desktop/ff476882).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[<strong>IDirect3D9</strong>](https://msdn.microsoft.com/library/windows/desktop/bb174300)</p></td>
@@ -432,7 +433,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM & DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>Observação</strong>   DXT3 e DXT4 são iguais na perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
+<strong>Observação</strong>   Observação   DXT3 e DXT4 são iguais na perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
 </div>
 <div>
  
@@ -668,6 +669,6 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

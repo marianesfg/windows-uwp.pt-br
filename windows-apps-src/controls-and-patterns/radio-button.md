@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Botões de opção permitem que os usuários selecionem uma opção entre duas ou mais escolhas.
 title: Diretrizes de botões de opção
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
-label: Botões de opção
+label: Radio buttons
 template: detail.hbs
 ---
 # Botões de opção
@@ -51,9 +52,10 @@ Botões de opção nas configurações do navegador Microsoft Edge.
 
 Botões de opção funcionam em grupos. Há 2 maneiras de agrupar controles de botão de opção:
 - Colocá-los dentro do mesmo contêiner pai.
-- Definir a propriedade [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) em cada botão de opção como o mesmo valor.
+- Defina a propriedade [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) em cada botão de opção como o mesmo valor.
 
-> **Observação**&nbsp;&nbsp;Um grupo de botões de opção se comportam como um controle único quando acessados pelo teclado. Apenas a opção selecionada pode ser acessada usando a tecla Tab, mas os usuários podem alternar pelo grupo usando as teclas de seta.
+> **Observação**
+            &nbsp;&nbsp;Um grupo de botões de opção se comportam como um controle único quando acessados pelo teclado. Apenas a opção selecionada pode ser acessada usando a tecla Tab, mas os usuários podem alternar pelo grupo usando as teclas de seta.
 
 Neste exemplo, o primeiro grupo de botões de opção é implicitamente agrupado por estar no painel empilhado. O segundo grupo é dividido entre 2 painéis empilhados e, portanto, são explicitamente agrupados por GroupName.
 
@@ -179,6 +181,6 @@ Esta ilustração mostra a maneira correta de posicionar e espaçar os botões d
 - [**Classe Windows.UI.Xaml.Controls RadioButton**](https://msdn.microsoft.com/library/windows/apps/br227544)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

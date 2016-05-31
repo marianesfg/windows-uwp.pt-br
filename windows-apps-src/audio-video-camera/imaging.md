@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: Este artigo explica como carregar e salvar arquivos de imagem usando BitmapDecoder e BitmapEncoder e como usar o objeto SoftwareBitmap para representar imagens de bitmap.
 title: Imagens
@@ -6,18 +7,24 @@ title: Imagens
 
 # Imagens
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo explica como carregar e salvar arquivos de imagem usando [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) e [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) e como usar o objeto [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) para representar imagens de bitmap.
 
 A classe **SoftwareBitmap** é uma API versátil que pode ser criada a partir de várias origens incluindo arquivos de imagem, objetos [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/br243259), superfícies do Direct3D e código. **O SoftwareBitmap** permite que você converta facilmente entre modos alfa e formatos de pixel diferentes e permite acesso de baixo nível a dados de pixel. Além disso, o **SoftwareBitmap** é uma interface comum usada por vários recursos do Windows, incluindo:
 
--   [**CapturedFrame**](https://msdn.microsoft.com/library/windows/apps/dn278725) permite que você obtenha os quadros capturados pela câmera como um **SoftwareBitmap**.
+-   [
+              **CapturedFrame**
+            ](https://msdn.microsoft.com/library/windows/apps/dn278725) permite que você obtenha os quadros capturados pela câmera como um **SoftwareBitmap**.
 
--   [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) permite que você obtenha uma representação **SoftwareBitmap** de um **VideoFrame**.
+-   [
+              **VideoFrame**
+            ](https://msdn.microsoft.com/library/windows/apps/dn930917) permite que você obtenha uma representação **SoftwareBitmap** de um **VideoFrame**.
 
--   [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) permite que você detecte rostos em um **SoftwareBitmap**.
+-   [
+              **FaceDetector**
+            ](https://msdn.microsoft.com/library/windows/apps/dn974129) permite que você detecte rostos em um **SoftwareBitmap**.
 
 O código de exemplo neste artigo usa APIs dos namespaces a seguir.
 
@@ -103,7 +110,7 @@ Chame [**CreateCopyFromSurfaceAsync**](https://msdn.microsoft.com/library/window
 
 A classe **SoftwareBitmap** fornece o método estático [**Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362) que permite criar facilmente um novo **SoftwareBitmap** que usa o formato de pixel e o modo alfa especificados de um **SoftwareBitmap** existente. Observe que o bitmap recém-criado tem uma cópia separada dos dados de imagem. As modificações no novo bitmap não afetarão o bitmap de origem.
 
-[!code-cs[Convert](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
+[!code-cs[Converter](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
 
 ## Transcodificar um arquivo de imagem
 
@@ -124,6 +131,6 @@ Você pode transcodificar um arquivo de imagem diretamente de um [**BitmapDecode
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

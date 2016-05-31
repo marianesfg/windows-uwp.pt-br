@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: O media player tem controles de transporte XAML personalizáveis para gerenciar o controle de conteúdo de áudio e vídeo.
 title: Como criar controles personalizados de transporte de mídia
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
-label: Como criar controles personalizados de transporte de mídia
+label: Create custom media transport controls
 template: detail.hbs
 ---
 # Criar controles personalizados de transporte
@@ -11,7 +12,8 @@ MediaElement tem controles de transporte XAML personalizáveis para gerenciar o 
 
 Antes de começar, você deve estar familiarizado com as classes MediaElement e MediaTransportControls. Para obter mais informações, consulte o Guia do controle MediaElement. 
 
-> **Dica**&nbsp;&nbsp;Os exemplos neste tópico se baseiam na [Amostra de controles de transporte de mídia](http://go.microsoft.com/fwlink/p/?LinkId=620023). Você pode baixar a amostra para exibir e executar o código completo.
+> **Dica**
+            &nbsp;&nbsp;Os exemplos neste tópico se baseiam na [Amostra de controles de transporte de mídia](http://go.microsoft.com/fwlink/p/?LinkId=620023). Você pode baixar a amostra para exibir e executar o código completo.
 
 <span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
 
@@ -31,7 +33,8 @@ No entanto, talvez haja cenários em que você precise personalizar ainda mais a
 
 Você pode personalizar a aparência do controle modificando o modelo padrão. Para modificar o comportamento do controle ou adicionar novos comandos, você pode criar um controle personalizado derivado de MediaTransportControls.
 
->**Dica**&nbsp;&nbsp;Os modelos de controle personalizáveis são um recurso avançado da plataforma XAML, mas também há consequências que você deve levar em consideração. Quando você personaliza um modelo, ele se torna uma parte estática de seu aplicativo e, portanto, não receberá as atualizações da plataforma feitas no modelo pela Microsoft. Se atualizações de modelo forem feitas pela Microsoft, você deverá pegar o novo modelo e modificá-lo novamente para obter os benefícios do modelo atualizado.
+>**Dica**
+            &nbsp;&nbsp;Os modelos de controle personalizáveis são um recurso avançado da plataforma XAML, mas também há consequências que você deve levar em consideração. Quando você personaliza um modelo, ele se torna uma parte estática de seu aplicativo e, portanto, não receberá as atualizações da plataforma feitas no modelo pela Microsoft. Se atualizações de modelo forem feitas pela Microsoft, você deverá pegar o novo modelo e modificá-lo novamente para obter os benefícios do modelo atualizado.
 
 ## Estrutura do modelo
 
@@ -40,11 +43,16 @@ O [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/win
 - A segunda seção define os diversos estados visuais que são usados pelos MediaTransportControls.
 - A terceira seção contém o [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) que contém vários elementos MediaTransportControls juntos e define o layout dos componentes.
 
-> **Observação**&nbsp;&nbsp;Para obter mais informações sobre como modificar modelos, consulte [Modelos de controle](). Você pode usar um editor de texto ou editores semelhantes no IDE para abrir os arquivos XAML em \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic. O modelo e o estilo padrão para cada controle são definidos no arquivo **generic.xaml**. Você pode encontrar o modelo MediaTransportControls em generic.xaml procurando por "MediaTransportControls".
+> **Observação**
+            &nbsp;&nbsp;Para obter mais informações sobre como modificar modelos, consulte [Modelos de controle](). Você pode usar um editor de texto ou editores semelhantes no IDE para abrir os arquivos XAML em \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic. O modelo e o estilo padrão para cada controle são definidos no arquivo **generic.xaml**. Você pode encontrar o modelo MediaTransportControls em generic.xaml procurando por "MediaTransportControls".
 
 Nas seguintes seções, você aprende a personalizar diversos dos principais elementos dos controles de transporte: 
-- [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): permite que um usuário navegue em sua mídia e também exibe o progresso
-- [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): contém todos os botões.
+- [
+              **Slider**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): permite que um usuário navegue em sua mídia e também exibe o progresso
+- [
+              **CommandBar**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): contém todos os botões.
 Para obter mais informações, consulte a seção Anatomia do tópico de referência MediaTransportControls. 
 
 ## Personalizar os controles de transporte
@@ -166,7 +174,8 @@ Como o menu de estouro é composto de botões de texto, você deve adicionar um 
 </CommandBar.SecondaryCommands>
 ```
 
-> **Importante**&nbsp;&nbsp;Você ainda precisa deixar o botão visível e habilitá-lo para usá-lo no menu de estouro. Neste exemplo, o elemento PlaybackRateButton não permanece visível no menu de estouro, a menos que a propriedade IsPlaybackRateButtonVisible seja true. Ele não é habilitado, a menos que a propriedade IsPlaybackRateEnabled seja true. A definição dessas propriedades é mostrada na seção anterior.
+> **Importante**
+            &nbsp;&nbsp;Você ainda precisa deixar o botão visível e habilitá-lo para usá-lo no menu de estouro. Neste exemplo, o elemento PlaybackRateButton não permanece visível no menu de estouro, a menos que a propriedade IsPlaybackRateButtonVisible seja true. Ele não é habilitado, a menos que a propriedade IsPlaybackRateEnabled seja true. A definição dessas propriedades é mostrada na seção anterior.
 
 ### Adicionando um botão personalizado
 
@@ -254,13 +263,13 @@ private void MediaElement_MediaOpened(object sender, RoutedEventArgs e)
 }
 ```
 
-\[Este artigo contém informações que são específicas aos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Artigos relacionados
 
 - [Reprodução de mídia](media-playback.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

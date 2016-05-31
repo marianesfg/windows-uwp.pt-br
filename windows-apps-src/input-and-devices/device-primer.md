@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Conhecer os dispositivos que dão suporte a aplicativos UWP (Plataforma Universal do Windows) o ajudará a oferecer a melhor experiência de usuário para cada fator forma.
 title: Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Windows)
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
@@ -9,7 +10,7 @@ template: detail.hbs
 #  Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Windows)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 ![dispositivos da plataforma Windows](images/device-primer/1894834-hig-device-primer-01-500.png)
@@ -186,13 +187,13 @@ Recursos típicos do dispositivo
 
  
 
-\[Este artigo contém informações que são específicas a aplicativos UWP e ao Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
  
 
  
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Fornece um identificador exclusivo para elementos de marcação. Para o XAML da UWP (Plataforma Universal do Windows), este identificador exclusivo é usado por processos e ferramentas de localização XAML, como o uso de recursos de um arquivo de recursos .resw.
 title: Diretiva xUid
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
@@ -6,7 +7,7 @@ ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
 
 # Diretiva x:Uid
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Fornece um identificador exclusivo para elementos de marcação. Para o XAML da UWP (Plataforma Universal do Windows), este identificador exclusivo é usado por processos e ferramentas de localização XAML, como o uso de recursos de um arquivo de recursos .resw.
 
@@ -30,7 +31,9 @@ Use **x:Uid** para identificar um elemento de objeto em seu XAML. Normalmente, e
 <Button x:Uid="GoButton" Content="Go"/>
 ```
 
-Para especificar o conteúdo para substituir o texto de exibição **Go**, você deve especificar um novo recurso proveniente de um arquivo de recursos. O arquivo de recursos deve conter uma entrada para o recurso nomeado "GoButton.Content". [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366) neste caso é uma propriedade específica herdada da classe [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265). Você também pode fornecer valores localizados para outras propriedades desse botão, por exemplo, um valor baseado em recursos para "GoButton.FlowDirection". Para saber mais sobre como usar **x:Uid** e os arquivos de recursos juntos, veja [Guia de início rápido: Traduzindo recursos da interface do usuário](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
+Para especificar o conteúdo para substituir o texto de exibição **Go**, você deve especificar um novo recurso proveniente de um arquivo de recursos. O arquivo de recursos deve conter uma entrada para o recurso nomeado "GoButton.Content". [
+              **Content**
+            ](https://msdn.microsoft.com/library/windows/apps/br209366) neste caso é uma propriedade específica herdada da classe [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265). Você também pode fornecer valores localizados para outras propriedades desse botão, por exemplo, um valor baseado em recursos para "GoButton.FlowDirection". Para saber mais sobre como usar **x:Uid** e os arquivos de recursos juntos, veja [Guia de início rápido: Traduzindo recursos da interface do usuário](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
 A validade de quais cadeias de caracteres podem ser usadas para um valor **x:Uid** é controlada de maneira prática, por meio da qual as cadeias de caracteres são legais enquanto identificadores em um arquivo de recursos e um caminho de recurso.
 
@@ -44,6 +47,6 @@ Não coloque **x:Uid** em elementos de propriedade, o que não é permitido no X
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

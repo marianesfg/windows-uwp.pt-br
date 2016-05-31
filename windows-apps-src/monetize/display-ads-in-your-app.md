@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: O SDK de Microsoft Store Engagement and Monetization oferece várias maneiras de monetizar seu aplicativo com anúncios.
 title: Apresentar anúncios em seus aplicativos
@@ -7,33 +8,37 @@ title: Apresentar anúncios em seus aplicativos
 # Apresentar anúncios em seus aplicativos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-O SDK de Microsoft Store Engagement and Monetization oferece várias maneiras de monetizar seu aplicativo com anúncios.
+O [SDK de Microsoft Store Engagement and Monetization](monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md) oferece várias maneiras de monetizar seus aplicativos com anúncios.
 
-## Anúncios de banner e vídeo da Microsoft
+## Exibir anúncios em faixa e anúncios intersticiais em vídeo usando as bibliotecas do Microsoft Advertising
 
-Ganhe mais dinheiro com seus aplicativos do Windows incluindo anúncios com vídeo e banners da Microsoft. Os anúncios aparecem em aplicativos do Windows para PCs, tablets e telefones. Você pode monitorar o desempenho do anúncio em tempo real usando o painel do Centro de Desenvolvimento do Windows.
+Ganhe mais dinheiro com seus aplicativos do Windows, incluindo anúncios em faixa e intersticiais em vídeo. Os anúncios são exibidos em aplicativos do Windows para computadores, tablets e telefones. Você pode monitorar o desempenho do anúncio em tempo real usando o painel do Centro de Desenvolvimento do Windows.
 
-Para incluir anúncios da Microsoft nos seus aplicativos, use o SDK de Microsoft Store Engagement and Monetization. Use os seguintes recursos para começar.
+Para incluir anúncios em seus aplicativos, use os controles **AdControl** e **InterstitialAd** nas bibliotecas de publicidade que são distribuídas no SDK de Microsoft Store Engagement and Monetization. Você pode usar esses controles para mostrar anúncios em faixa e intersticiais em vídeos da Microsoft em seus aplicativos XAML ou HTML/JavaScript para Windows 10, Windows 8.1, Windows Phone 8.1 e Windows Phone 8.
 
-| **Recurso**                                                                         | **Descrição**                                                                                                                                 |
-|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Monetize seus aplicativo com anúncios]( http://go.microsoft.com/fwlink/p/?LinkId=699559)     | Saiba mais sobre as diferentes maneiras de monetizar seus aplicativos com anúncios e comece a adicionar anúncios aos seus aplicativos usando o SDK de Microsoft Store Engagement and Monetization.                 |
-| [Bibliotecas de publicidade da Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=619606) | Saiba mais sobre como usar as bibliotecas de publicidade no SDK de Microsoft Store Engagement and Monetization para mostrar anúncios em aplicativos para os sistemas operacionais Windows 10, Windows 8.1, Windows Phone 8.1 e Windows Phone 8. |
-| [Relatório de desempenho de anúncios](https://msdn.microsoft.com/library/windows/apps/mt186436)           | Depois de integrar anúncios no seu aplicativo, consulte esse relatório para rastrear o desempenho deles.                                                   |
+Para obter mais informações, consulte [Exibir anúncios usando as bibliotecas do Microsoft Advertising](display-ads-using-the-microsoft-advertising-libraries.md). Depois que você publicar um aplicativo com anúncios, use o [relatório de desempenho de publicidade](../publish/advertising-performance-report.md) para controlar o desempenho dos anúncios.                                           
 
-## Controle de anúncios
+## Use o controle de anúncios para anúncios em faixa de várias redes de publicidade
 
-Além de mostrar anúncios da Microsoft, você também pode usar o controle de anúncios para otimizar sua receita com publicidade, controlando solicitações de anúncios de banner provenientes de várias redes de anúncios. Para saber mais, consulte [Usar o controle de anúncios para maximizar a receita de anúncios](use-ad-mediation-to-maximize-revenue.md).
+Você pode usar a classe **AdMediatorControl** em seus aplicativos XAML para otimizar sua receita de publicidade, exibindo anúncios em faixa de várias redes de publicidade. Depois de adicionar esse controle ao seu aplicativo, você pode definir suas configurações de mediação de anúncios no painel do Centro de Desenvolvimento do Windows e mediar as solicitações de anúncios em faixa das redes de publicidade que você escolher. Para obter mais informações, consulte [Usar a mediação de anúncios para maximizar a receita de anúncios](use-ad-mediation-to-maximize-revenue.md).
 
-Para saber mais sobre as diferenças para o desenvolvedor entre o controle de anúncios e a exibição de anúncios de banner exclusivamente da Microsoft, consulte [Qual é a diferença: AdMediator ou AdControl](https://msdn.microsoft.com/library/mt463352.aspx).
+## Diferenças entre as bibliotecas do Microsoft Advertising e a mediação de anúncios
 
- 
+O SDK de Microsoft Store Engagement and Monetization inclui as bibliotecas de mediação de anúncios e do Microsoft Advertising. Entretanto, essas bibliotecas fornecem classes diferentes e têm finalidades distintas.
 
- 
+* Use as classes **AdControl** e **InterstitialAd** nas bibliotecas do Microsoft Advertising se quiser exibir anúncios em banner ou intersticiais em vídeo em um aplicativo XAML ou JavaScript.
+* Use a classe **AdMediatorControl** nas bibliotecas de mediação de anúncios, se você quiser exibir anúncios em faixa de várias redes de publicidade em um aplicativo XAML.
+
+Para obter mais informações, consulte [Qual é a diferença: AdMediatorControl ou AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
+
+## Tópicos relacionados
+
+* [SDK de Microsoft Store Engagement and Monetization](monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md)
+* [Monetize seus aplicativo com anúncios]( http://go.microsoft.com/fwlink/p/?LinkId=699559)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

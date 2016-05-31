@@ -1,15 +1,13 @@
 ---
+author: Jwmsft
 Description: Saiba como navegar em um aplicativo básico de duas páginas da Plataforma Universal do Windows (UWP) passo a passo.
-title: Navegação passo a passo entre duas páginas
+title: Navegação ponto a ponto entre duas páginas
 ms.assetid: 0A364C8B-715F-4407-9426-92267E8FB525
-label: Navegação passo a passo entre duas páginas
+label: Peer-to-peer navigation between two pages
 template: detail.hbs
 ---
 
 # <span id="dev_navigation.peer-to-peer_navigation_between_two_pages"></span>Navegação ponto a ponto entre duas páginas
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Saiba como navegar em um aplicativo básico de duas páginas da Plataforma Universal do Windows (UWP) passo a passo.
 
@@ -26,8 +24,8 @@ Saiba como navegar em um aplicativo básico de duas páginas da Plataforma Unive
 ## <span id="Create_the_blank_app"></span><span id="create_the_blank_app"></span><span id="CREATE_THE_BLANK_APP"></span>Criar o aplicativo em branco
 
 
-1.  On the Microsoft Visual Studio menu, choose **Arquivo &gt; Novo projeto**.
-2.  No painel esquerdo da caixa de diálogo do **Novo projeto**, selecione o nó **Visual C# -&gt; Windows -&gt; Universal** ou o **Visual C++ -&gt; Windows -&gt; Universal**.
+1.  No menu do Microsoft Visual Studio, escolha **Arquivo &gt; Novo projeto**.
+2.  No painel esquerdo da caixa de diálogo **Novo Projeto**, escolha o nó **Visual C# -&gt; Windows -&gt; Universal** ou o nó **Visual C++ -&gt; Windows -&gt; Universal**.
 3.  No painel central, selecione **Aplicativo em Branco**.
 4.  Na caixa **Nome**, insira **NavApp1** e selecione o botão **OK**.
 
@@ -37,7 +35,7 @@ Saiba como navegar em um aplicativo básico de duas páginas da Plataforma Unive
 
      
 
-5.  Para executar o programa, escolha **Depurar** &gt; **Iniciar depuração** no menu ou pressione F5.
+5.  Para executar o programa, escolha **Depurar**&gt;**Iniciar Depuração** no menu ou pressione F5.
 
     Uma página em branco é exibida.
 
@@ -51,7 +49,7 @@ Em seguida, adicione duas páginas de conteúdo ao projeto.
 Execute as seguintes etapas duas vezes para adicionar duas páginas para navegar entre elas.
 
 1.  Em **Gerenciador de soluções**, clique com botão direito no nó de projeto **BlankApp** para abrir o menu de atalho.
-2.  Choose **Adicionar** &gt; **Novo item** no menu de atalho.
+2.  Escolha **Adicionar**&gt;**Novo Item** no menu de atalho.
 3.  Na caixa de diálogo **Adicionar novo item**, selecione **Página em branco** no painel do meio.
 4.  Na caixa **Nome**, insira **Page1** (ou **Page2**) e pressione o botão **Adicionar**.
 
@@ -84,8 +82,8 @@ Esses arquivos agora devem ser listados como parte do seu projeto NavApp1.
 <li>Page2.xaml.cpp</li>
 <li>Page2.xaml.h
 <div class="alert">
-<strong>Observação</strong>
-          <p>Funções são declaradas no arquivo de cabeçalho (.h) e implementadas no arquivo de code-behind (.cpp).</p>
+<strong>Observação</strong>  
+<p>Funções são declaradas no arquivo de cabeçalho (.h) e implementadas no arquivo de code-behind (.cpp).</p>
 </div>
 <div>
  
@@ -108,7 +106,7 @@ Adicione o conteúdo a seguir à IU de Page1.xaml.
     </table>
 ```
 
--   Adicione o seguinte elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento filho do elemento raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) and after the `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
+-   Adicione o seguinte elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como um filho do elemento raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) e depois o elemento `pageTitle`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
 
     <span codelanguage="XAML"></span>
 ```    XAML
@@ -166,7 +164,7 @@ Faça as seguintes alterações à IU de Page2.xaml.
     </table>
 ```
 
--   Adicione o seguinte elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento filho do elemento raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) and after the `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
+-   Adicione o seguinte elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como um filho do elemento raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) e depois o elemento `pageTitle`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
 
     <span codelanguage="XAML"></span>
 ```    XAML
@@ -312,7 +310,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
-**Observação**  O código aqui usa o valor de retorno de [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) para fazer uma exceção de aplicativo caso a navegação ao quadro da janela inicial do aplicativo falhe. Quando **Navigate** retorna **true**, a navegação acontece.
+**Observação**  O código aqui usa o valor de retorno de [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) para lançar uma exceção de aplicativo caso a navegação ao quadro da janela inicial do aplicativo falhe. Quando **Navigate** retorna **true**, a navegação acontece.
 
  
 
@@ -336,7 +334,7 @@ No nosso exemplo, `Page1` é passado ao método [**Navigate**](https://msdn.micr
 
 Sempre que uma página é carregada no quadro, ela é adicionada como um [**PageStackEntry**](https://msdn.microsoft.com/library/windows/apps/dn298572) ao [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543) ou [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547) do [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504).
 
-## <span id="Pass_information_between_pages"></span><span id="pass_information_between_pages"></span><span id="PASS_INFORMATION_BETWEEN_PAGES"></span>Passar informações entre páginas
+## <span id="Pass_information_between_pages"></span><span id="pass_information_between_pages"></span><span id="PASS_INFORMATION_BETWEEN_PAGES"></span>Transmitir informações entre páginas
 
 
 Nosso aplicativo navega entre duas páginas, mas ainda não faz nada de interessante. Geralmente, quando um aplicativo tem várias páginas, as páginas precisam compartilhar informações. Vamos passar algumas informações da primeira para a segunda página.
@@ -353,7 +351,7 @@ Aqui, adicionamos um rótulo [**TextBlock**](https://msdn.microsoft.com/library/
 </StackPanel>
 ```
 
-No manipulador evento `HyperlinkButton_Click` do arquivo de code-behind Page1.xaml, adicione um parâmetro referenciando a propriedade `Text` do `name` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) para o método `Navigate`.
+No manipulador de evento `HyperlinkButton_Click` do arquivo de code-behind Page1.xaml, adicione um parâmetro referenciando a propriedade `Text` do `name`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) para o método `Navigate`.
 
 ```ManagedCPlusPlus
 void Page1::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
@@ -448,6 +446,6 @@ public Page1()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

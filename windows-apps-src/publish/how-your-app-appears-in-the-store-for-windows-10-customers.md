@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Se você tiver publicado aplicativos anteriormente na Loja para Windows ou para Windows Phone, esses aplicativos também estarão disponíveis para clientes em dispositivos Windows 10.
 title: Como seu aplicativo aparece na Loja para clientes do Windows 10
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
@@ -76,9 +77,9 @@ Em muitos casos, as novas [categorias e subcategorias](category-and-subcategory-
 | Saúde + bem-estar &gt; dieta + nutrição  | Saúde + bem-estar              |
 | Saúde + bem-estar &gt; bem-estar           | Saúde + bem-estar              |
 | Saúde + bem-estar &gt; saúde            | Saúde + bem-estar              |
-| Estilo de vida &gt; arte + entretenimento      | Estilo de vida                     |
-| Estilo de vida &gt; fora de casa + sobre              | Estilo de vida                     |
-| Estilo de vida &gt; alimentação + restaurantes            | Alimentação + restaurantes                 |
+| Estilo de vida &gt; arte e entretenimento      | Estilo de vida                     |
+| Estilo de vida &gt; fora de casa              | Estilo de vida                     |
+| Estilo de vida &gt; bares + restaurantes            | Alimentação + restaurantes                 |
 | Estilo de vida &gt; compras                 | Compras                      |
 | Notícias + clima &gt; internacional       | Notícias + clima                |
 | Notícias + clima &gt; local + nacional    | Notícias + clima                |
@@ -112,10 +113,10 @@ Em muitos casos, as novas [categorias e subcategorias](category-and-subcategory-
 | Jogos &gt; Cartas             | Jogos &gt; Cartas + tabuleiro              |
 | Jogos &gt; Crianças             | Jogos &gt; Família + crianças             |
 | Jogos &gt; família           | Jogos &gt; Família + crianças             |
-| Jogos &gt; Quebra-cabeças           | Jogos &gt; Desafios           |
+| Jogos &gt; Desafios           | Jogos &gt; Desafios           |
 | Jogos &gt; Corrida           | Jogos &gt; Corrida + voo           |
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

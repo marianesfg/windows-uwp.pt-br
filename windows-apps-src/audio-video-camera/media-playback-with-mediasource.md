@@ -1,17 +1,20 @@
 ---
+author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
-description: A classe MediaSource fornece uma maneira comum referenciar e reproduzir mídia de diferentes fontes, como arquivos locais ou remotos, e expõe um modelo comum para acessar dados de mídia, independentemente do formato de mídia subjacente.
+description: A classe MediaSource fornece uma maneira comum de fazer referência e reproduzir mídia de diferentes origens, como arquivos locais ou remotos, e expõe um modelo comum para acessar dados de mídia, independentemente do formato da mídia subjacente.
 title: Reprodução de mídia com o MediaSource
 ---
 
 # Reprodução de mídia com o MediaSource
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não faz nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
-A classe [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) fornece uma maneira comum de referenciar e reproduzir mídia de diferentes fontes, como arquivos locais ou remotos, e expõe um modelo comum para acessar dados de mídia, independentemente do formato de mídia subjacente. A classe [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) estende a funcionalidade do **MediaSource**, permitindo que você gerencie e selecione várias faixas de áudio, vídeo e metadados contidas em um item de mídia. [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite que você crie listas de reprodução a partir de um ou mais itens de reprodução de mídia.
+A classe [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) fornece uma maneira comum de referenciar e reproduzir mídia de diferentes fontes, como arquivos locais ou remotos, e expõe um modelo comum para acessar dados de mídia, independentemente do formato de mídia subjacente. A classe [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) estende a funcionalidade do **MediaSource**, permitindo que você gerencie e selecione várias faixas de áudio, vídeo e metadados contidas em um item de mídia. [
+              **MediaPlaybackList**
+            ](https://msdn.microsoft.com/library/windows/apps/dn930955) permite que você crie listas de reprodução a partir de um ou mais itens de reprodução de mídia.
 
 O código neste artigo foi adaptado da amostra do [SDK de reprodução de vídeo](http://go.microsoft.com/fwlink/p/?LinkId=620020&clcid=0x409). Você pode baixar essa amostra para ver o código usado no contexto ou usá-lo como ponto de partida para seu próprio aplicativo.
 
@@ -123,7 +126,7 @@ Crie um novo objeto de indicação, adequado para o tipo de faixa de metadados q
 
 [!code-cs[AddDataTrack](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetAddDataTrack)]
 
-O evento **CueEntered** é lançado quando chega a hora de início de uma indicação, desde que a faixa associada tenha um modo de apresentação de **ApplicationPresented**, **Hidden** ou **PlatformPresented**. Os eventos de indicação não serão lançados para faixas de metadados enquanto o modo de apresentação da faixa for **Disabled**. Este exemplo simplesmente gera os dados personalizados associados à indicação para a janela de depuração.
+O evento **CueEntered** é acionado quando o horário de início de uma indicação tiver sido atingido, desde que a faixa associada tenha um modo de apresentação de **ApplicationPresented**, **Hidden** ou **PlatformPresented.** Eventos de sinalização não serão gerados para faixas de metadados enquanto o modo de apresentação para a faixa for **Desabilitado**. Este exemplo simplesmente gera os dados personalizados associados à indicação para a janela de depuração.
 
 [!code-cs[DataCueEntered](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetDataCueEntered)]
 
@@ -138,7 +141,7 @@ Este exemplo adiciona uma faixa de texto personalizada especificando **TimedMeta
 [
             **MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite criar uma playlist de itens de mídia, que são representados por objetos **MediaPlaybackItem**.
 
-**Observação** itens em uma [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) são renderizadas usando-se a reprodução sem intervalos. O sistema usará metadados fornecidos em arquivos MP3 ou AAC codificados para determinar o atraso ou a compensação de preenchimento necessária à reprodução sem intervalos. Se os arquivos MP3 ou AAC codificados não fornecerem esses metadados, o sistema determinará o atraso ou o preenchimento heuristicamente. Para os formatos sem perdas, como PCM, FLAC ou ALAC, o sistema não executa nenhuma ação porque esses codificadores não apresentam atraso ou preenchimento.
+**Observação**  Itens em uma [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) são renderizadas usando-se a reprodução sem intervalos. O sistema usará metadados fornecidos em arquivos MP3 ou AAC codificados para determinar o atraso ou a compensação de preenchimento necessária à reprodução sem intervalos. Se os arquivos MP3 ou AAC codificados não fornecerem esses metadados, o sistema determinará o atraso ou o preenchimento heuristicamente. Para os formatos sem perdas, como PCM, FLAC ou ALAC, o sistema não executa nenhuma ação porque esses codificadores não apresentam atraso ou preenchimento.
 
 Para começar, declare uma variável para armazenar seu **MediaPlaybackList**.
 
@@ -152,7 +155,7 @@ No manipulador de eventos **CurrentItemChanged**, atualize a interface do usuár
 
 [!code-cs[MediaPlaybackListItemChanged](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetMediaPlaybackListItemChanged)]
 
-Chame [**MovePrevious**](https://msdn.microsoft.com/library/windows/apps/mt146455) ou [**MoveNext**](https://msdn.microsoft.com/library/windows/apps/mt146454) para fazer com que o media player reproduza o item anterior ou seguinte na sua **MediaPlaybackList**..
+Chame [**MovePrevious**](https://msdn.microsoft.com/library/windows/apps/mt146455) ou [**MoveNext**](https://msdn.microsoft.com/library/windows/apps/mt146454) para fazer com que o media player reproduza o item anterior ou seguinte na sua **MediaPlaybackList**.
 
 [!code-cs[PrevButton](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetPrevButton)]
 
@@ -175,6 +178,6 @@ Defina a propriedade [**AutoRepeatEnabled**](https://msdn.microsoft.com/library/
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

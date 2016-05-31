@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Descrevemos o conceito de programação de eventos em um aplicativo do Windows Runtime quando você usa as extensões de componente (C++/CX) C#, Visual Basic ou Visual C++ como linguagem de programação e XAML para a definição da interface do usuário.
 title: Visão geral de eventos e eventos roteados
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
@@ -6,7 +7,7 @@ ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 
 # Visão geral de eventos e eventos roteados
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs importantes**
 -   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
@@ -30,13 +31,14 @@ Você define a interface do usuário para o seu aplicativo do Windows Runtime ge
 
 Para conectar os eventos em XAML, você pode especificar o nome em forma de cadeia de caracteres do método do manipulador que já definiu ou vai definir posteriormente no code-behind. Por exemplo, esta XAML define um objeto [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) com outras propriedades ([atributo x:Name](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366)) atribuídas como atributos e transfere um manipulador para o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) do botão referenciando um método chamado `showUpdatesButton_Click`:
 
-```XAML
+```XML
 <Button x:Name="showUpdatesButton"
   Content="{Binding ShowUpdatesText}"
   Click="showUpdatesButton_Click"/>
 ```
 
-**Dica**  *Conexão de eventos* é um termo de programação. Refere-se ao processo ou código por meio do qual você indica que as ocorrências de um evento devem chamar um método do manipulador nomeado. Na maioria dos modelos de código de procedimento, a conexão de eventos é um código "AddHandler" implícito ou explícito que nomeia ambos, o evento e o método, e geralmente envolve uma instância de objeto de destino. Em XAML, o "AddHandler" é implícito, e a conexão de eventos consiste inteiramente em nomear o evento com o nome do atributo de um elemento de objeto, e nomear o manipulador com o valor desse atributo.
+**Dica**
+            *Conexão de eventos* é um termo de programação. Refere-se ao processo ou código por meio do qual você indica que as ocorrências de um evento devem chamar um método do manipulador nomeado. Na maioria dos modelos de código de procedimento, a conexão de eventos é um código "AddHandler" implícito ou explícito que nomeia ambos, o evento e o método, e geralmente envolve uma instância de objeto de destino. Em XAML, o "AddHandler" é implícito, e a conexão de eventos consiste inteiramente em nomear o evento com o nome do atributo de um elemento de objeto, e nomear o manipulador com o valor desse atributo.
 
 Você escreve o manipulador real na linguagem de programação que está usando para todo o código do aplicativo e code-behind. Com o atributo `Click="showUpdatesButton_Click"`, você criou um contrato em que, quando a marcação XAML é compilada e analisada, a etapa de compilação de IDE na ação de compilação do ambiente de desenvolvimento e a eventual análise XAML quando as cargas de aplicativo podem encontrar um método chamado `showUpdatesButton_Click` como parte do código do aplicativo. `showUpdatesButton_Click` deve ser um método que implementa uma assinatura de método compatível (com base em um delegado) para qualquer manipulador do evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737). Por exemplo, este código define o manipulador `showUpdatesButton_Click`.
 
@@ -80,7 +82,7 @@ Para alguns eventos, os valores de propriedade específicos dos dados de evento 
 
 ### Manipuladores de eventos que usam o padrão **async**
 
-Em alguns casos, você desejará usar APIs que usam um padrão **async** em um manipulador de eventos. Por exemplo, talvez você use [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) em [**AppBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) para exibir um seletor de arquivos e interagir com ele. No entanto, muitas das APIs de seletor de arquivos são assíncronas. Elas precisam ser chamadas dentro de um escopo **async**/awaitable, e o compilador fará essa imposição. Portanto, o que você pode fazer é adicionar a palavra-chave **async** ao manipulador de eventos, de forma que ele agora seja **async** **void**. Agora, o seu manipulador de eventos pode fazer chamadas **async**/awaitable.
+Em alguns casos, você desejará usar APIs que usam um padrão **async** em um manipulador de eventos. Por exemplo, talvez você use [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) em [**AppBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) para exibir um seletor de arquivos e interagir com ele. No entanto, muitas das APIs de seletor de arquivos são assíncronas. Elas precisam ser chamadas dentro de um escopo **async**/awaitable, e o compilador fará essa imposição. Portanto, o que você pode fazer é adicionar a palavra-chave **async** ao manipulador de eventos, de forma que ele agora seja **async****void**. Agora, o seu manipulador de eventos pode fazer chamadas **async**/awaitable.
 
 Para conhecer um exemplo de manipulação de eventos de interação do usuário usando o padrão **async**, consulte [Acesso a arquivos e seletores](https://msdn.microsoft.com/library/windows/apps/jj655411) (parte da série [Criar seu primeiro aplicativo do Windows Runtime em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)). Veja também [Chamar APIs assíncronas em C).
 
@@ -92,7 +94,7 @@ Em C#, a sintaxe é usar o operador `+=`. Você registra o manipulador fazendo r
 
 Se você está usando código para adicionar manipuladores de eventos a objetos que aparecem na interface do usuário em tempo de execução, uma prática comum é adicionar esses manipuladores em resposta a um evento de ciclo de vida do objeto ou de retorno de chamada – como, por exemplo, [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) ou [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737), de maneira que os manipuladores de eventos no objeto relevante estejam prontos para eventos iniciados pelo usuário no tempo de execução. Este exemplo mostra uma estrutura de tópicos XAML da estrutura da página e, em seguida, fornece a sintaxe da linguagem C# para adicionar um manipulador de eventos a um objeto.
 
-```xaml
+```xml
 <Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
   <StackPanel>
     <TextBlock Name="textBlock1">Put the pointer over this text</TextBlock>
@@ -135,11 +137,11 @@ Em C++, você também usa a sintaxe **+=**, mas há diferenças no formulário b
 
 -   Não há inferência de delegado, portanto, você deve usar **ref new** para a instância do delegado.
 -   O construtor do delegado possui dois parâmetros e requer o objeto de destino como o primeiro parâmetro. Tipicamente, você especifica **this**.
--   O construtor do delegado requer o endereço do método como o segundo parâmetro, de maneira que o operador de referência **&** preceda o nome do método.
+-   O construtor delegate requer o endereço do método como o segundo parâmetro, de maneira que o operador de referência **&** preceda o nome do método.
 
 ```cpp
 textBlock1->PointerEntered += 
-ref new PointerEventHandler(this,&amp;BlankPage::textBlock1_PointerExited);
+ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerExited);
 ```
 
 ### Removendo manipuladores de eventos em código
@@ -154,7 +156,9 @@ Há alguns casos em que você quer remover manipuladores de eventos explicitamen
 -   Eventos estáticos personalizados.
 -   Manipuladores para navegações de página.
 
-[**FrameworkElement.Unloaded**](https://msdn.microsoft.com/library/windows/apps/br208748) ou [**Page.NavigatedFrom**](https://msdn.microsoft.com/library/windows/apps/br227507) são possíveis disparadores de eventos que têm posições apropriadas em gerenciamento de estados e vida útil de objetos de maneira que você pode usá-los para remover manipuladores para outros eventos.
+[
+              **FrameworkElement.Unloaded**
+            ](https://msdn.microsoft.com/library/windows/apps/br208748) ou [**Page.NavigatedFrom**](https://msdn.microsoft.com/library/windows/apps/br227507) são possíveis disparadores de eventos que têm posições apropriadas em gerenciamento de estados e vida útil de objetos de maneira que você pode usá-los para remover manipuladores para outros eventos.
 
 Por exemplo, é possível remover um manipulador de eventos chamado **textBlock1\_PointerEntered** do objeto de destino **textBlock1** usando esse código.
 
@@ -241,16 +245,19 @@ Certos objetos participam de uma relação com a árvore visual primária que é
 Determinar se um elemento está visível para a entrada por mouse, toque e de caneta é chamado de *teste de clique*. Para ações de toque e também para eventos específicos de interação ou de manipulação resultantes de uma ação de toque, é preciso que o elemento esteja visível para teste de clique, para ser a origem do evento e acionar o evento associado à ação. Caso contrário, a ação passa pelo elemento em direção a qualquer elemento subjacente ou aos elementos pai na árvore visual que interage com essa entrada. Há vários fatores que influenciam o teste de clique, mas é possível determinar se um determinado elemento pode acionar eventos de entrada verificando sua propriedade [**IsHitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933). Esta propriedade retorna **true** apenas quando o elemento segue estes critérios:
 
 -   O valor de propriedade [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) do elemento é [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006).
--   O valor da propriedade **Background** ou **Fill** do elemento não é **null**. Um valor **null** [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) resulta em transparência e invisibilidade do teste de clique. (Para tornar um elemento transparente, mas também visível para teste de clique, use um pincel [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) em vez de **null**.)
+-   O valor da propriedade **Background** ou **Fill** do elemento não é **null**. Um valor **null**[**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) resulta em transparência e invisibilidade do teste de clique. (Para tornar um elemento transparente, mas também visível para teste de clique, use um pincel [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) em vez de **null**.)
 
-**Observação**  **Background** e **Fill** em segundo plano não são definidos por [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) e, em vez disso, são definidos por diferentes classes derivadas, como [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) e [**Shape**](https://msdn.microsoft.com/library/windows/apps/br243377). As implicações dos pincéis usados para as propriedades primeiro plano e tela de fundo são as mesmas para teste de clique e eventos de entrada, independentemente da subclasse que implementa as propriedades.
+**Observação**
+            **Background** e **Fill** não são definidos por [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) e, em vez disso, são definidos por diferentes classes derivadas, como [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) e [**Shape**](https://msdn.microsoft.com/library/windows/apps/br243377). As implicações dos pincéis usados para as propriedades primeiro plano e tela de fundo são as mesmas para teste de clique e eventos de entrada, independentemente da subclasse que implementa as propriedades.
 
 -   Se o elemento for um controle, o valor da sua propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) deverá ser **true**.
 -   É preciso que o elemento tenha dimensões reais em layout. Um elemento em que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) e [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) são iguais a 0 não acionará eventos.
 
-Alguns controles têm regras especiais para teste de hit. Por exemplo, o [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) não tem uma propriedade **Background**, mas ainda pode executar o teste de clique em toda a região de suas dimensões. [
-							Os controles **Image**](https://msdn.microsoft.com/library/windows/apps/br242752) e [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) podem executar teste de clique nas dimensões do retângulo definido, independentemente do conteúdo transparente – por exemplo, canal alfa no arquivo de origem de mídia que está sendo exibido. [
-							Os controles **WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) têm um comportamento especial de teste de clique, pois a entrada pode ser manipulada pelo HTML hospedado e acionar eventos de script.
+Alguns controles têm regras especiais para teste de hit. Por exemplo, o [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) não tem uma propriedade **Background**, mas ainda pode executar o teste de clique em toda a região de suas dimensões. Os controles [
+              **Image**
+            ](https://msdn.microsoft.com/library/windows/apps/br242752) e [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) podem executar teste de clique nas dimensões do retângulo definido, independentemente do conteúdo transparente – por exemplo, canal alfa no arquivo de origem de mídia que está sendo exibido. Os controles [
+              **WebView**
+            ](https://msdn.microsoft.com/library/windows/apps/br227702) têm um comportamento especial de teste de clique, pois a entrada pode ser manipulada pelo HTML hospedado e acionar eventos de script.
 
 A maioria das classes [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) e [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) não executa teste de clique na tela de fundo, mas essas classes ainda podem manipular os eventos de entrada do usuário que são roteados dos elementos que os contêm.
 
@@ -264,7 +271,7 @@ Um pequeno número de elementos da interface do usuário dão suporte a *comando
 
 Para fins de definir eventos personalizados, o modo de adicionar o evento e o que isso significa para seu design de classe dependem bastante da linguagem de programação sendo usada.
 
--   Para C# e Visual Basic, você está definindo um evento de CLR. Você pode usar o padrão de evento .NET padrão, desde que não esteja usando acessadores personalizados (**add**/**remove**). Outras dicas:
+-   Para C# e Visual Basic, você está definindo um evento de CLR. Você pode usar o padrão de evento .NET, desde que não esteja usando acessadores personalizados(**add**/**remove**). Outras dicas:
     -   Para o manipulador de eventos, é uma ótima ideia usar [**System.EventHandler<TEventArgs>**](https://msdn.microsoft.com/library/windows/apps/xaml/db0etb8x.aspx) porque ele tem conversão interna para o delegado de evento genérico do Windows Runtime [**EventHandler<T>**](https://msdn.microsoft.com/library/windows/apps/br206577).
     -   Não use como base de sua classe de dados de eventos o [**System.EventArgs**](https://msdn.microsoft.com/library/windows/apps/xaml/system.eventargs.aspx) porque ele não é convertido para o Windows Runtime. Use uma classe de dados de eventos existente ou nenhuma classe base.
     -   Se estiver usando acessadores personalizados, veja [Eventos personalizados e acessadores de eventos nos Componentes de Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh972883.aspx).
@@ -288,6 +295,6 @@ A definição de um evento personalizado normalmente é feita como parte do exer
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

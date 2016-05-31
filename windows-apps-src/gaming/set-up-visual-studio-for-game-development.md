@@ -1,13 +1,14 @@
 ---
+author: mtoepke
 title: Ferramentas do Visual Studio para programação de jogos
-description: Uma visão geral de ferramentas específicas do DirectX disponíveis no Visual Studio.
+description: Uma visão geral das ferramentas específicas do DirectX disponíveis no Visual Studio.
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 ---
 
 # Ferramentas do Visual Studio para programação de jogos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
@@ -37,7 +38,7 @@ Crie [arquivos de compilação personalizada](#custom) para convertê-los em arq
 
 Para obter mais informações, consulte [Trabalhando com texturas e imagens](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> **Observação**  Não use o editor de imagens como substituto de um aplicativo completo de edição de imagens, embora ele possa ser usado em muitos cenários simples de exibição e edição.
+> **Observação**  Não use o Editor de Imagens como substituto de um aplicativo completo de edição de imagens, embora ele possa ser usado em muitos cenários simples de exibição e edição.
 
  
 
@@ -56,7 +57,7 @@ Consulte uma captura de tela de um modelo no editor com iluminação aplicada.
 
 Para obter mais informações, consulte [Trabalhando com modelos 3D](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
 
-> **Observação**  Não use o editor de modelos como substituto de um aplicativo completo de edição de modelos, embora ele possa ser usado em muitos cenários simples de exibição e edição.
+> **Observação**  Não use o Editor de Modelos como substituto de um aplicativo completo de edição de modelos, embora ele possa ser usado em muitos cenários simples de exibição e edição.
 
  
 
@@ -146,6 +147,6 @@ Para obter mais informações, consulte o tópico sobre [depuração de elemento
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

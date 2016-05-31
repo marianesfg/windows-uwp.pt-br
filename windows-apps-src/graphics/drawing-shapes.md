@@ -1,11 +1,12 @@
 ---
+author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: Desenhar formas
 description: Aprenda a desenhar formas, como elipses, retângulos, polígonos e caminhos. A classe Path é uma maneira de visualizar uma linguagem de desenho baseada em vetor bastante complexa em uma interface do usuário XAML; por exemplo, você pode desenhar curvas de Bézier.
 ---
 # Desenhar formas
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** APIs importantes **
@@ -103,7 +104,7 @@ Uma [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345) é simp
 
 Não use os valores [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) para especificar uma forma de [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345), em vez disso, use valores [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) discretos para [**X1**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.x1.aspx), [**Y1**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.y1.aspx), [**X2**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.x2.aspx) e [**Y2**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.y2.aspx). Isso permite a marcação mínima para as linhas horizontais ou verticais. Por exemplo, `<Line Stroke="Red" X2="400"/>` define uma linha horizontal com comprimento de 400 pixels. Por padrão, as outras propriedades X,Y são 0, portanto, em termos de pontos, este XAML desenha uma linha de `(0,0)` a `(400,0)`. Você pode então usar [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027) para mover **Line** na íntegra, caso queira começar em um ponto que não seja (0,0).
 
-## <span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> Polyline
+## <span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> Polilinha
 
 Uma [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) é semelhante a um [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) por ser delimitada por um conjunto de pontos. A única diferença é que o último ponto de uma **Polyline** não está conectado ao primeiro ponto.
 
@@ -194,6 +195,6 @@ Um motivo para usar [**PathGeometry**](https://msdn.microsoft.com/library/window
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

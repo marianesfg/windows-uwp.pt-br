@@ -1,15 +1,16 @@
 ---
-title: Componentes do Windows Runtime
-description: Os componentes do Windows Runtime são objetos independentes para os quais você pode criar uma instância e usar em qualquer linguagem, incluindo C#, Visual Basic, JavaScript e C++.
+author: martinekuan
+title: Componentes do Tempo de Execução do Windows
+description: Os componentes do Tempo de Execução do Windows são objetos independentes para os quais você pode criar uma instância e usar em qualquer linguagem, incluindo C#, Visual Basic, JavaScript e C++.
 ms.assetid: 55887622-828b-4318-87f2-25592268f7c1
 ---
 
-# Componentes do Windows Runtime
+# Componentes do Tempo de Execução do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Os componentes do Windows Runtime são objetos independentes para os quais você pode criar uma instância e usar em qualquer linguagem, incluindo C#, Visual Basic, JavaScript e C++.
+Os componentes do Tempo de Execução do Windows são objetos independentes para os quais você pode criar uma instância e usar em qualquer linguagem, incluindo C#, Visual Basic, JavaScript e C++.
 
 É possível usar o Visual Studio e o C#, o Visual Basic ou o C++ para criar componentes do Windows Runtime que podem ser usados em aplicativos UWP (Plataforma Universal do Windows).
 
@@ -30,6 +31,6 @@ Os componentes do Windows Runtime são objetos independentes para os quais você
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

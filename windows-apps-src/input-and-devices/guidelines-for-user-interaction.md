@@ -1,15 +1,16 @@
 ---
-Description: Crie aplicativos UWP (Plataforma Universal do Windows) com experiências de interação do usuário intuitivas e exclusivas otimizadas para toque, mas que sejam funcionalmente consistentes em diferentes dispositivos de entrada.
+author: Karl-Bridge-Microsoft
+Description: Crie aplicativos para a UWP (Plataforma Universal do Windows) com a experiência de interação exclusiva e diferenciada otimizada para toque, mas funcionalmente consistente com todos os tipos de dispositivos de entrada.
 title: Diretrizes de design de toque
 ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
-label: Diretrizes de design de toque
+label: Touch design guidelines
 template: detail.hbs
 ---
 
 # Diretrizes de design de toque
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Crie aplicativos para a UWP (Plataforma Universal do Windows) com a experiência de interação exclusiva e diferenciada otimizada para toque, mas funcionalmente consistente com todos os tipos de dispositivos de entrada.
@@ -38,12 +39,7 @@ Você encontrará ao longo das diretrizes a informação de que a entrada por to
 
 A tabela a seguir mostra algumas das diferenças entre os dispositivos de entrada, as quais você deve considerar ao projetar aplicativos da Windows Store otimizados para toque.
 
-Fator
-Interações por toque
-Interações de mouse, teclado e caneta/stylus
-Touchpad
-Precisão
-A área de contato da ponta do dedo é maior do que uma coordenada x-y única, o que aumenta a probabilidade de ativações de comando acidentais.
+Interações de toque de fator Interações do mouse, teclado e caneta Precisão do toque A área de contato da ponta do dedo é maior do que uma coordenada x-y única, o que aumenta a probabilidade de ativações de comando acidentais.
 O mouse e a caneta/stylus fornecem uma coordenada x-y precisa.
 Igual ao mouse.
 O formato da área de contato altera ao longo do movimento.
@@ -52,8 +48,7 @@ Igual ao mouse.
 Não há cursor do mouse para ajudar no direcionamento.
 O cursor do mouse, o cursor da caneta/stylus e o foco do teclado, todos ajudarão no direcionamento.
 Igual ao mouse.
-Anatomia humana
-Movimentos com as pontas dos dedos são imprecisos porque dificultam um movimento em linha reta usando um ou mais dedos. Isso se deve à curvatura das articulações das mãos e ao número de articulações envolvidas no movimento.
+Anatomia humana Os movimentos com as pontas dos dedos são imprecisos porque dificultam um movimento em linha reta com um ou mais dedos. Isso se deve à curvatura das articulações das mãos e ao número de articulações envolvidas no movimento.
 É fácil realizar um movimento em linha reta com o mouse ou caneta/stylus porque a mão que os controla percorre uma distância física menor do que o cursor na tela.
 Igual ao mouse.
 Algumas áreas na superfície de toque de um dispositivo de vídeo podem ser inacessíveis devido à postura do dedo e à posição do punho do usuário sobre o dispositivo.
@@ -62,15 +57,13 @@ A postura do dedo e a alça podem ser um problema.
 Os objetos podem ser obscurecidos por uma ou mais pontas de dedos ou pela mão do usuário. Isso é conhecido como oclusão.
 Os dispositivos de entrada indireta não causam oclusão.
 Igual ao mouse.
-Estado do objeto
-O toque usa um modelo de dois estados: a superfície de toque de um dispositivo de vídeo é tocada (on) ou não (off). Não há estado de foco que possa disparar comentários visuais adicionais.
+Estado do objeto O toque usa um modelo de dois estados: a superfície de toque de um dispositivo de vídeo é tocada (on) ou não (off). Não há estado de foco que possa disparar comentários visuais adicionais.
 Um mouse, caneta/stylus e teclado, todos expõem um modelo de três estados: acima (off), abaixo (on) (ativado), e focalizar (foco).
 
 A focalização permite que os usuários explorem e aprendam usando as dicas de ferramentas associadas aos elementos da interface do usuário. Os efeitos de focalização e de foco podem retransmitir os objetos que são interativos e também ajudar no direcionamento.
 
 Igual ao mouse.
-Interação sofisticada
-Suporta multitoque, pontos de entrada múltiplos (pontas dos dedos) em uma superfície de toque.
+Interação sofisticada Dá suporte a multitoque, pontos de entrada múltiplos (pontas dos dedos) em uma superfície de toque.
 Suporta um ponto de entrada único.
 Igual ao toque.
 Suporta a manipulação direta de objetos através de gestos como tocar, arrastar, deslizar, apertar e girar.
@@ -105,20 +98,20 @@ O direcionamento é otimizado através de:
 
     Toda a área de contato do dedo determina o objeto de destino mais provável.
 
--   Esfregar
+-   Anulação
 
     Os itens em um grupo são redirecionados com facilidade arrastando o dedo entre eles (por exemplo, botões de opção). O item atual é ativado quando o toque é liberado.
 
 -   Balanço
 
-    Itens empacotados densamente (por exemplo, hiperlinks) são redirecionados com facilidade ao pressionar o dedo e, sem deslizar, balançá-lo para frente e para trás sobre os itens. Por causa da oclusão, o item atual é identificado por uma dica de ferramenta ou pela barra de status e é ativado quando o toque é liberado.
+    Itens empacotados densamente (por exemplo, hiperlinks) são redirecionados com facilidade ao pressionar o dedo e, sem deslizar, balançá-lo para frente e para trás sobre os itens. Devido à oclusão, o item atual é identificado por uma dica de ferramenta ou pela barra de status e é ativado quando o toque é liberado.
 
 **Precisão**
 
 Crie interações soltas usando:
 
 -   Pontos de alinhamento que facilitam a parada nos locais desejados quando os usuários interagem com o conteúdo.
--   "Trilhos" direcionais que ajudam no movimento panorâmico vertical ou horizontal, mesmo quando a mão se desloca em um leve arco. Para obter mais informações, consulte [Diretrizes de movimento panorâmico](guidelines-for-panning.md).
+-   "Trilhos" direcionais que ajudam no movimento panorâmico vertical ou horizontal, mesmo quando a mão se desloca em um leve arco. Para saber mais, veja [Diretrizes para movimento panorâmico](guidelines-for-panning.md).
 
 **Oclusão**
 
@@ -138,7 +131,7 @@ Para evitar a oclusão de dedo e mão:
 
 -   Alças para precisão
 
-    Quando a precisão é necessária (por exemplo, seleção de texto), inclua alças de seleção que sejam deslocadas para aumentar a precisão. Para obter mais informações, consulte [Diretrizes de seleção de texto e imagens (aplicativos do Windows Runtime)](guidelines-for-textselection.md).
+    Quando a precisão é necessária (por exemplo, seleção de texto), inclua alças de seleção que sejam deslocadas para aumentar a precisão. Para saber mais, veja [Diretrizes para seleção de texto e imagens (aplicativos do Tempo de Execução do Windows)](guidelines-for-textselection.md).
 
 **Tempo**
 
@@ -179,6 +172,6 @@ Além disso, as dicas a seguir são altamente recomendadas:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

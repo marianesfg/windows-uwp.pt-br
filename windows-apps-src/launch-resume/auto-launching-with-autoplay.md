@@ -1,13 +1,14 @@
 ---
-title: Iniciando automaticamente com Reprodução Automática
-description: Você pode usar a Reprodução Automática para fornecer seu aplicativo como uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como uma câmera ou um player de mídia, ou dispositivos com volume, como pen drives, cartões de memória SD ou DVDs.
+author: mcleblanc
+title: Iniciando automaticamente com a Reprodução Automática
+description: Você pode usar a Reprodução Automática para fornecer seu aplicativo como uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como uma câmera ou um player de mídia, ou dispositivos com volume, como pen drives, cartões de memória ou DVDs.
 ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
 ---
 
-# <span id="dev_launch_resume.auto-launching_with_autoplay"></span>Iniciando automaticamente com Reprodução Automática
+# <span id="dev_launch_resume.auto-launching_with_autoplay"></span>Iniciando automaticamente com a Reprodução Automática
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Você pode usar a **Reprodução Automática** para fornecer seu aplicativo como uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como uma câmera ou um player de mídia, ou dispositivos com volume, como pen drives, cartões de memória ou DVDs. Também é possível usar a **Reprodução Automática** para oferecer seu aplicativo como uma opção quando os usuários compartilham arquivos entre dois computadores usando proximidade (encostar).
@@ -63,7 +64,7 @@ A configuração **Nome de exibição da ação** identifica a cadeia de caracte
 
 Abra o arquivo MainPage.xaml e adicione o seguinte XAML à seção &lt;Grade&gt; padrão.
 
-```xaml
+```xml
 <TextBlock FontSize="18">File List</TextBlock>
 <TextBlock x:Name="FilesBlock" HorizontalAlignment="Left" TextWrapping="Wrap" 
            VerticalAlignment="Top" Margin="0,20,0,0" Height="280" Width="240" />
@@ -223,7 +224,7 @@ Você pode registrar aplicativos como opções de eventos de dispositivo de **Re
 
 Nesta seção, mostramos como identificar seu aplicativo como uma opção **Reprodução Automática** quando uma câmera é conectada a um computador. O aplicativo registra como um manipulador para o evento **WPD\\ImageSourceAutoPlay**. Esse é um evento comum que o sistema Dispositivo Portátil do Windows (WPD) gera quando câmeras e outros dispositivos de imagem o notifica que são uma ImageSource usando MTP. Para saber mais, consulte [Dispositivos portáteis do Windows](https://msdn.microsoft.com/library/windows/hardware/ff597729).
 
-**Importante**  as APIS [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) fazem parte da [família de dispositivos da área de trabalho](https://msdn.microsoft.com/library/windows/apps/dn894631). Os aplicativos podem usar essas APIs somente em dispositivos com Windows 10 na família de dispositivos da área de trabalho, como computadores.
+**Importante**  As APIS [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) fazem parte da [família de dispositivos da área de trabalho](https://msdn.microsoft.com/library/windows/apps/dn894631). Os aplicativos podem usar essas APIs somente em dispositivos com Windows 10 na família de dispositivos da área de trabalho, como computadores.
 
  
 
@@ -256,7 +257,7 @@ As APIs necessárias para acessar o armazenamento em um Dispositivo Portátil do
 
 Abra o arquivo MainPage.xaml e adicione o seguinte XAML à seção &lt;Grade&gt; padrão.
 
-```xaml
+```xml
 <StackPanel Orientation="Vertical" Margin="10,0,-10,0">
     <TextBlock FontSize="24">Device Information</TextBlock>
     <StackPanel Orientation="Horizontal">
@@ -405,7 +406,7 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 
 1.  Pressione F5 para compilar e implantar o aplicativo (no modo de depuração).
 2.  Para executar o aplicativo, conecte uma câmera ao seu computador. Em seguida, selecione o aplicativo na lista de opções da Reprodução Automática.
-    **Note**  Nem todas as câmeras anunciam o evento de dispositivo de Reprodução Automática **WPD\\ImageSource**.
+    **Observação**  Nem todas as câmeras anunciam o evento de dispositivo de Reprodução Automática **WPD\\ImageSource**.
 
      
 
@@ -451,7 +452,7 @@ O valor **Evento de Conteúdo** é o texto que você forneceu para a chave **Cus
 
 Abra o arquivo MainPage.xaml e adicione o seguinte XAML à seção &lt;Grade&gt; padrão.
 
-```xaml
+```xml
 <StackPanel Orientation="Vertical">
     <TextBlock FontSize="28" Margin="10,0,800,0">Files</TextBlock>
     <TextBlock x:Name="FilesBlock" FontSize="22" Height="600" Margin="10,0,800,0" />
@@ -577,6 +578,6 @@ Você pode registrar seu aplicativo como um conteúdo de Reprodução Automátic
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

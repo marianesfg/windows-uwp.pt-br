@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 title: Solicitar uma chave de autenticação de mapas
 description: Seu aplicativo Universal do Windows deve ser autenticado para que possa usar o MapControl e os serviços de mapa no namespace Windows.Services.Maps.
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
@@ -7,12 +8,12 @@ ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 # Solicitar uma chave de autenticação de mapas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Seu [aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows/apps/dn894631) deve ser autenticado para que possa usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este tópico descreve como solicitar uma chave de autenticação de mapas a partir da [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo.
 
-**Dica** Para saber mais sobre o uso de mapas no seu aplicativo, baixe a amostra a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
+**Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe a amostra a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
 
 -   [Amostra de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -37,10 +38,10 @@ Para criar uma nova chave
 
 7.  Preencha o formulário **Criar Chave** e clique em **Criar**.
 
-    -   **Nome do aplicativo:** o nome do seu aplicativo.
-    -   **URL do aplicativo (opcional):** a URL do seu aplicativo.
-    -   **Tipo de chave:** selecione **Básica** ou **Corporativa**.
-    -   **Tipo de aplicativo:** selecione **Aplicativo Universal do Windows** para uso no seu aplicativo Universal do Windows.
+    -   **Nome do aplicativo:** o nome do aplicativo.
+    -   **URL do aplicativo (opcional):** a URL do aplicativo.
+    -   **Tipo de chave:** selecione **Básico** ou **Empresa**.
+    -   **Tipo de aplicativo:** selecione **Aplicativo Universal Windows** para usar no aplicativo Universal do Windows.
 
     Este é um exemplo da aparência do formulário.
 
@@ -65,7 +66,7 @@ Para autenticar o [**MapControl**](https://msdn.microsoft.com/library/windows/ap
 
 -   Este exemplo define **MapServiceToken** como o valor da chave de autenticação na marcação XAML.
 
-    ```xaml
+    ```xml
     <Maps:MapControl x:Name="MapControl1" MapServiceToken="abcdef-abcdefghijklmno"/>
     ```
 
@@ -90,6 +91,6 @@ Para usar serviços no namespace [**Windows.Services.Maps**](https://msdn.micros
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

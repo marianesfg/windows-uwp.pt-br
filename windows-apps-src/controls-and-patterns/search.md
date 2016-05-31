@@ -1,27 +1,26 @@
 ---
+author: Jwmsft
 Description: A pesquisa é uma das principais maneiras para os usuários encontrarem conteúdo em seu aplicativo. As diretrizes neste artigo abordam elementos da experiência de pesquisa, escopos da pesquisa, implementação e exemplos de pesquisa em contexto.
 title: Pesquisar e localizar na página
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
-label: Pesquisar
+label: Search
 template: detail.hbs
 ---
 
 # Pesquisar e localizar na página
 
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+A pesquisa é uma das principais maneiras para os usuários encontrarem conteúdo em seu aplicativo. As diretrizes neste artigo abordam elementos da experiência de pesquisa, escopos da pesquisa, implementação e exemplos de pesquisa em contexto.
 
 **APIs importantes**
 
 -   [**Classe AutoSuggestBox (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)
 
-A pesquisa é uma das principais maneiras para os usuários encontrarem conteúdo em seu aplicativo. As diretrizes neste artigo abordam elementos da experiência de pesquisa, escopos da pesquisa, implementação e exemplos de pesquisa em contexto.
+
 
 ## <span id="Elements_of_the_search_experience"></span><span id="elements_of_the_search_experience"></span><span id="ELEMENTS_OF_THE_SEARCH_EXPERIENCE"></span>Elementos da experiência de pesquisa
 
 
-**Entrada.**  O texto é o modo mais comum de entrada de pesquisa e o foco destas diretrizes. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
+**Entrada.**  Texto é o modo mais comum de entrada de pesquisa e o foco destas diretrizes. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
 
 **Entrada zero.**  Depois que o usuário tiver ativado o campo de entrada, mas antes de ter inserido texto, você pode exibir o que é chamado de "tela de entrada zero". A tela de entrada zero normalmente aparecerá na tela do aplicativo para que a [sugestão automática](auto-suggest-box.md) substitua esse conteúdo quando o usuário começar a inserir a consulta. Histórico de pesquisa recente, pesquisas mais populares, sugestões de pesquisa contextual e dicas são todos bons candidatos para o estado de entrada zero.
 
@@ -97,7 +96,7 @@ Conforme o escopo da pesquisa se torna mais limitado ou contextual, o posicionam
 
 No caso de listas roláveis, é útil sempre ter a entrada de pesquisa visível. Recomendamos que a entrada de pesquisa seja fixa e a rolagem de conteúdo seja feita atrás dela.
 
-A funcionalidade de entrada zero e formulação de consulta é opcional para pesquisas contextuais/refinadas, em que a lista será filtrada em tempo real pela entrada do usuário. As exceções incluem casos em que sugestões de formatação de consulta podem estar disponíveis, como opções de filtragem de caixa de entrada (para:&lt;cadeia de caracteres de entrada&gt;, de:&lt;cadeia de caracteres de entrada&gt;, assunto:&lt;cadeia de caracteres de entrada&gt; e assim por diante).
+A funcionalidade de entrada zero e formulação de consulta é opcional para pesquisas contextuais/refinadas, em que a lista será filtrada em tempo real pela entrada do usuário. As exceções incluem casos em que sugestões de formatação de consulta podem estar disponíveis, como opções de filtragem de caixa de entrada (para: &lt;cadeia de caracteres de entrada&gt;, de: &lt;cadeia de caracteres de entrada&gt;, assunto: &lt;cadeia de caracteres de entrada&gt;, e assim por diante).
 
 ## <span id="examples"></span><span id="EXAMPLES"></span>Exemplo
 
@@ -217,6 +216,6 @@ Para saber mais sobre como adicionar comandos à sua barra de comando, veja [Bar
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

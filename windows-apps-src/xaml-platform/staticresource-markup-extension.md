@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Fornece um valor para qualquer atributo XAML analisando uma referência a um recurso já definido. Recursos são definidos em um ResourceDictionary, e o uso de StaticResource faz referência à chave desse recurso no ResourceDictionary.
 title: Extensão de marcação StaticResource
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
@@ -6,7 +7,7 @@ ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
 
 # Extensão de marcação {StaticResource}
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Fornece um valor para qualquer atributo XAML analisando uma referência a um recurso já definido. Recursos são definidos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), e o uso de **StaticResource** faz referência à chave desse recurso no **ResourceDictionary**.
 
@@ -45,7 +46,7 @@ A [extensão de marcação {ThemeResource}](themeresource-markup-extension.md) �
 
 Este exemplo de XAML foi obtido do [exemplo de vinculação de dados XAML](http://go.microsoft.com/fwlink/p/?linkid=226854).
 
-```xaml
+```xml
 <StackPanel Margin="5">
     <!-- Add converter as a resource to reference it from a Binding. --> 
     <StackPanel.Resources>
@@ -81,6 +82,6 @@ Como uma chave de recurso existe como parte de qualquer uso de **{StaticResource
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

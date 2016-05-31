@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
 description: Este tópico descreve os efeitos projetados para uso em cenários de captura de vídeo. Isso inclui o efeito de estabilização de vídeo.
 title: Efeitos para captura de vídeo
@@ -6,7 +7,7 @@ title: Efeitos para captura de vídeo
 
 # Efeitos para captura de vídeo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico descreve os efeitos projetados para uso em cenários de captura de vídeo. Isso inclui o efeito de estabilização de vídeo.
 
@@ -83,6 +84,6 @@ Para limpar o efeito de estabilização de vídeo, chame [**ClearEffectsAsync**]
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,5 +1,6 @@
 ---
-Description: O controle Hub usa um padrão de navegação hierárquico para oferecer suporte a aplicativos com uma arquitetura de informações relacionais.
+author: Jwmsft
+Description: O controle hub usa um padrão de navegação hierárquico para oferecer suporte a aplicativos com uma arquitetura de informação relacional.
 title: Controles Hub
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
@@ -61,13 +62,13 @@ Há várias maneiras de criar o dispor e navegar pelo conteúdo em um hub; basta
 
 **Movimento panorâmico horizontal**
 
-![Exemplo de um Hub de movimento panorâmico horizontal](images/controls_hub_horizontal_pan.png)
+![Exemplo de hub de movimento panorâmico horizontal](images/controls_hub_horizontal_pan.png)
 **Movimento panorâmico vertical**
 
-![Exemplo de um Hub de movimento panorâmico vertical](images/controls_hub_vertical_pan.png)
+![Exemplo de hub de movimento panorâmico vertical](images/controls_hub_vertical_pan.png)
 **Movimento panorâmico horizontal com lista/grade de rolagem vertical**
 
-![Exemplo de um Hub de movimento panorâmico horizontal com uma lista de rolagem vertical](images/controls_hub_horizontal_vertical_scroll.png)
+![Exemplo de hub de movimento panorâmico horizontal com uma lista de rolagem vertical](images/controls_hub_horizontal_vertical_scroll.png)
 **Movimento panorâmico vertical com lista/grade de rolagem horizontal**
 
 ![Exemplo de um hub de movimento panorâmico horizontal](images/controls_hub_vertical_horizontal_scroll.png)
@@ -99,21 +100,16 @@ Em dispositivos móveis, uma seção de hub está visível por vez.
     -   Estilo do texto e tamanho em cabeçalhos e conteúdo
     -   Cor do plano de fundo, seções, cabeçalhos de seção e conteúdo de seção
 
-\[Este artigo contém informações que são específicas a aplicativos UWP e ao Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Artigos relacionados
------------------------------------------------
 
-**Para designers**
 - [Noções básicas de navegação](https://msdn.microsoft.com/library/windows/apps/dn958438)
-
-**Para desenvolvedores (XAML)**
-- [Navegação hierárquica, do início ao fim](https://msdn.microsoft.com/library/windows/apps/xaml/dn440585)
-- [**Classe Windows.UI.Xaml.Controls Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)
-- [Amostra de controle Hub em XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
+- [**Classe de Hub Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/dn251843)
+- [Exemplo de controle Hub em XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
 - [Usando um Hub](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

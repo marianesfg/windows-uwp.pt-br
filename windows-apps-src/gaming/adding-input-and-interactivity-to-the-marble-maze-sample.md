@@ -1,18 +1,19 @@
 ---
-title: Inserindo entradas e interatividade na amostra do Marble Maze
+author: mtoepke
+title: Adicionando entrada e interatividade ao exemplo do Marble Maze
 description: Jogos de aplicativos da Plataforma Universal do Windows (UWP) funcionam em uma variedade de dispositivos, como computadores de mesa, laptops e tablets.
 ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
 ---
 
-# Inserindo entradas e interatividade na amostra do Marble Maze
+# Adicionando entrada e interatividade ao exemplo do Marble Maze
 
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Jogos de aplicativos da Plataforma Universal do Windows (UWP) funcionam em uma variedade de dispositivos, como computadores de mesa, laptops e tablets. Um dispositivo pode ter diversos mecanismos de entrada e controle. Dê suporte a vários dispositivos de entrada para permitir que o seu jogo acomode uma ampla variedade de preferências e recursos entre seus clientes. Este documento descreve as principais práticas a serem consideradas quando se trabalha com dispositivos de entrada e mostra como o Marble Maze as aplica.
 
-> **Observação**   O código de amostra que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 Seguem alguns dos pontos principais discutidos neste documento para quando você trabalhar com entrada no seu jogo:
@@ -27,7 +28,7 @@ Seguem alguns dos pontos principais discutidos neste documento para quando você
 ## Dispositivos de entrada compatíveis com o Marble Maze
 
 
-O Marble Maze aceita dispositivos controladores comuns do Xbox 360 , mouse e toque para selecionar itens de menu e o controlador do Xbox 360, mouse, toque e acelerômetro para controlar o jogo. O Marble Maze usa a API XInput para sondar a entrada do controlador. O toque permite aos aplicativos acompanhar e responder à entrada pela ponta do dedo. Um acelerômetro é um sensor que mede a força aplicada ao longo dos eixos x, y e z. Usando o Windows Runtime, você pode pesquisar o estado atual do dispositivo do acelerômetro, e também receber eventos de touch através mecanismo que lida com eventos do Windows Runtime.
+O Marble Maze aceita dispositivos controladores comuns do Xbox 360, mouse e toque para selecionar itens de menu e o controlador do Xbox 360, mouse, toque e acelerômetro para controlar o jogo. O Marble Maze usa a API XInput para sondar a entrada do controlador. O toque permite aos aplicativos acompanhar e responder à entrada pela ponta do dedo. Um acelerômetro é um sensor que mede a força aplicada ao longo dos eixos x, y e z. Usando o Windows Runtime, você pode pesquisar o estado atual do dispositivo do acelerômetro, e também receber eventos de touch através mecanismo que lida com eventos do Windows Runtime.
 
 > **Observação**  Este documento usa touch para referir-se tanto a touch quanto à entrada de mouse e ponteiro para referir-se a qualquer dispositivo que use eventos de ponteiro. Pelo touch e o mouse usarem eventos de ponteiro padrão, você pode usar qualquer um desses dispositivos para selecionar itens do menu e controlar o jogo.
 
@@ -67,7 +68,7 @@ A classe MarbleMaze contém um objeto do acelerômetro.
 Windows::Devices::Sensors::Accelerometer^           m_accelerometer;
 ```
 
-O objeto Acelerômetro é inicializado no método  MarbleMaze::Initialize, como visto no exemplo a seguir. O método Windows::Devices::Sensors::Accelerometer::GetDefault retorna uma instância do acelerômetro padrão. Se não houver um acelerômetro padrão Accelerometer::GetDefault, o valor de m\_accelerometer continuar nullptr.
+O objeto Acelerômetro é inicializado no método MarbleMaze::Initialize, como visto no exemplo a seguir. O método Windows::Devices::Sensors::Accelerometer::GetDefault retorna uma instância do acelerômetro padrão. Se não houver um acelerômetro padrão Accelerometer::GetDefault, o valor de m\_accelerometer continuar nullptr.
 
 ```cpp
 // Returns accelerometer ref if there is one; nullptr otherwise.
@@ -503,13 +504,13 @@ Esta seção não descreve o funcionamento da simulação física. Para saber ma
 ## Próximas etapas
 
 
-Leia [Adicionando áudio à amostra do Marble Maze](adding-audio-to-the-marble-maze-sample.md) para saber mais sobre as principais práticas a serem consideradas quando você trabalha com áudio. O documento discute como o Marble Maze usa o Microsoft Media Foundation e XAudio2 para carregar, mixar e reproduzir recursos de áudio.
+Leia [Adicionando áudio ao exemplo do Marble Maze](adding-audio-to-the-marble-maze-sample.md) para saber mais sobre as principais práticas a serem consideradas quando você trabalha com áudio. O documento discute como o Marble Maze usa o Microsoft Media Foundation e XAudio2 para carregar, mixar e reproduzir recursos de áudio.
 
 ## Tópicos relacionados
 
 
-* [Inserindo áudio na amostra do Marble Maze](adding-audio-to-the-marble-maze-sample.md)
-* [Inserindo conteúdo visual na amostra do Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
+* [Adicionando áudio ao exemplo do Marble Maze](adding-audio-to-the-marble-maze-sample.md)
+* [Adicionando conteúdo visual ao exemplo do Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
 * [Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
@@ -521,6 +522,6 @@ Leia [Adicionando áudio à amostra do Marble Maze](adding-audio-to-the-marble-m
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

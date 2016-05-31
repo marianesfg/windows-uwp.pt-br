@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 label: Buttons
 template: detail.hbs
 ---
@@ -8,7 +9,7 @@ Um botão dá ao usuário uma forma de acionar uma ação imediata.
 ![Exemplo de botões](images/controls/button.png)
 
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs Importantes</span>
+<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
 
 -   [**Classe Button**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
 -   [**Classe RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)
@@ -154,39 +155,34 @@ O escopo do histórico de navegação (no aplicativo ou global) depende do dispo
 
 A interface do usuário para o botão Voltar do sistema é otimizada para cada tipo de dispositivo e entrada, mas a experiência de navegação é global e consistente entre dispositivos e aplicativos da Plataforma Universal do Windows (UWP). Essas diferentes experiências incluem:
 
-Dispositivos
-Telefone
-![sistema Voltar em um telefone](images/nav-back-phone.png)
+Telefone de dispositivo ![sistema Voltar em um telefone](images/nav-back-phone.png)
 -   Sempre presente.
 -   Um botão de hardware ou software na parte inferior do dispositivo.
 -   Navegação regressiva global no aplicativo e entre aplicativos.
 
-<span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>Tablet
-![sistema Voltar em um tablet (no modo tablet)](images/nav-back-tablet.png)
+<span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>Tablet ![sistema Voltar em um tablet (no modo tablet)](images/nav-back-tablet.png)
 -   Sempre presente no modo Tablet.
 
     Não está disponível no modo de área de trabalho. Em vez disso, o botão Voltar da barra de título pode ser habilitado. Consulte [Computador, laptop, tablet](#PC).
 
-    Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho indo para **Configurações &gt; Sistema &gt; Modo tablet** e definindo **Deixar o Windows mais fácil para o toque ao usar o seu dispositivo como tablet**.
+    Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho indo para **Configurações &gt; Sistema &gt; modo Tablet** e definindo **Deixar o Windows mais fácil para o toque ao usar o seu dispositivo como tablet**.
 
 -   Um botão de software na barra de navegação na parte inferior do dispositivo.
 -   Navegação regressiva global no aplicativo e entre aplicativos.
 
-<span id="PC"></span><span id="pc"></span>Computador, notebook, tablet
-![sistema Voltar em um computador ou notebook](images/nav-back-pc.png)
+<span id="PC"></span><span id="pc"></span>PC, Laptop, Tablet ![sistema Voltar em um computador ou notebook](images/nav-back-pc.png)
 -   Opcional no modo Área de trabalho.
 
     Não está disponível no modo Tablet. Consulte [Tablet](#Tablet).
 
     Desabilitado por padrão. Deve aceitar para habilitá-lo.
 
-    Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho indo para **Configurações &gt; Sistema &gt; Modo tablet** e definindo **Deixar o Windows mais fácil para o toque ao usar o seu dispositivo como tablet**.
+    Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho indo para **Configurações &gt; Sistema &gt; modo Tablet** e definindo **Deixar o Windows mais fácil para o toque ao usar o seu dispositivo como tablet**.
 
 -   Um botão de software na barra de título do aplicativo.
 -   Navegação regressiva somente no aplicativo. Não oferece suporte à navegação entre aplicativos.
 
-Surface Hub
-![sistema Voltar em um Surface Hub](images/nav-back-surfacehub.png)
+Surface Hub ![sistema Voltar em um Surface Hub](images/nav-back-surfacehub.png)
 -   Sempre presente.
 -   Um botão de software na parte inferior do dispositivo.
 -   Navegação regressiva dentro do aplicativo e entre aplicativos.
@@ -228,6 +224,6 @@ Surface Hub
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

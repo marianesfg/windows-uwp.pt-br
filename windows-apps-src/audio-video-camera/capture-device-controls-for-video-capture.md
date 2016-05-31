@@ -1,12 +1,13 @@
 ---
+author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
-description: este artigo mostra como os controles de dispositivo de vídeo permitem cenários de captura de vídeo aprimorados, incluindo: vídeo HDR e prioridade de exposição.
-title: controles de dispositivo de captura para captura de vídeo
+description: Este artigo mostra como os controles de dispositivo de vídeo permitem cenários de captura de vídeo aprimorados, incluindo vídeo HDR e prioridade de exposição.
+title: Controles de dispositivo de captura para captura de vídeo
 ---
 
 # Controles de dispositivo de captura para captura de vídeo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como os controles de dispositivo de vídeo permitem cenários de captura de vídeo aprimorados, incluindo: vídeo HDR e prioridade de exposição.
@@ -52,6 +53,6 @@ Habilite ou desabilite o controle de prioridade de exposição. Defina [**Exposu
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

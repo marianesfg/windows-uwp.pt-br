@@ -1,8 +1,9 @@
 ---
-Description: fornece uma lista por função de alguns dos controles que você pode usar em seus aplicativos.
-title: lista os controles por função
+author: Jwmsft
+Description: Fornece uma lista por função de alguns dos controles que você pode usar em seus aplicativos.
+title: Controles por função
 ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
-label: lista os controles por função
+label: Controls by function
 template: detail.hbs
 ---
 # Controles por função
@@ -802,7 +803,7 @@ Referência: [RadioButton](https://msdn.microsoft.com/library/windows/apps/xaml/
 
 Design e instruções: [Guia do controle de botão de opção](radio-button.md)
  
-### Controle Deslizante
+### Controle deslizante
 Um controle que permite que o usuário selecione de uma lista de valores movendo um controle de Thumb paralelo a uma faixa.
 
 ![Controle deslizante](images/controls/slider.png)
@@ -843,6 +844,6 @@ Referência: [ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/xaml
 Design e instruções: [Guia do controle de alternância](toggles.md) 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,11 +1,12 @@
 ---
+author: Jwmsft
 ms.assetid: ad7a739c-fd70-4068-9007-da28028abea3
 title: Elementos gráficos e animação
-description: Com os tópicos desta seção, você pode começar a usar elementos gráficos e animações em seus aplicativos da loja.
+description: Com os tópicos desta seção, você poderá começar a usar elementos gráficos e animações nos seus aplicativos da Loja.
 ---
 # Elementos gráficos e animação
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Com os tópicos desta seção, você poderá começar a usar elementos gráficos e animações nos seus aplicativos da loja.
 
@@ -33,6 +34,6 @@ Os elementos gráficos e animação são projetados para uso por desenvolvedores
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

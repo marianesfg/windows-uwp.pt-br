@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Fazer a portabilidade do loop do jogo
 description: Mostra como implementar uma janela para um jogo da Plataforma Universal do Windows (UWP) e como ativar o loop do jogo, inclusive como criar uma IFrameworkView para controlar uma CoreWindow em tela inteira.
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
@@ -7,7 +8,7 @@ ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
 # Fazer a portabilidade do loop do jogo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
@@ -138,6 +139,6 @@ Visite os seguintes artigos aprofundados sobre desenvolvimento de jogos da Windo
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

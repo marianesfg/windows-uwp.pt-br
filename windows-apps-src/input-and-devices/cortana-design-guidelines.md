@@ -1,22 +1,18 @@
 ---
-Description: estenda a Cortana com a funcionalidade oferecida pelo seu aplicativo usando comandos de voz.
-title: diretrizes para design da Cortana
+author: Karl-Bridge-Microsoft
+Description: Estenda a Cortana com a funcionalidade oferecida pelo seu aplicativo usando comandos de voz.
+title: Diretrizes para design da Cortana
 ms.assetid: A92C084B-9913-4718-9A04-569D51ACE55D
-label: diretrizes
+label: Guidelines
 template: detail.hbs
 ---
 
 # Diretrizes para design da Cortana
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-
-
 Essas diretrizes e recomendações descrevem como seu aplicativo pode usar a **Cortana** da melhor forma para interagir com o usuário, ajudá-lo a realizar uma tarefa e comunicar claramente como tudo está sendo feito.
 
-A **Cortana** permite que os aplicativos em execução em segundo plano solicitem confirmação ou desambiguação do usuário e, em troca, fornece comentários sobre o status do comando de voz. O processo é leve, rápido e não força o usuário a deixar a experiência da **Cortana** ou alternar o contexto para o aplicativo.
+A **Cortana** permite que os aplicativos executados em segundo plano peçam ao usuário para confirmar ou remover a ambiguidade e, por sua vez, fornece ao usuário comentários sobre o status do comando de voz. O processo é leve, rápido e não força o usuário a deixar a experiência da **Cortana** ou alternar o contexto para o aplicativo.
 
 Embora o usuário deva achar que a **Cortana** esteja ajudando a tornar o processo o mais leve e fácil possível, provavelmente você desejará que a **Cortana** também seja explícita de que é seu aplicativo que está realizando a tarefa.
 
@@ -133,17 +129,35 @@ Recomendamos marcar o idioma padrão nos arquivos de recursos de cadeia de carac
 **Importante**  
 O ícone do aplicativo usado na área de título da tela da Cortana é o ícone Square44x44Logo especificado no arquivo "Package.appxmanifest". 
 
-Você também pode especificar um ícone para cada resultado de uma consulta que é exibido na área de conteúdo da tela da Cortana. Tamanhos de imagem válidos para ícones de resultados são:
+Você também pode especificar um ícone para cada bloco de resultado de uma consulta do usuário. Tamanhos de imagem válidos para ícones de resultados são:
 
--   68(l) x 68(a)
--   68(l) x 92(a)
--   280(l) x 140(a)
+-   68 l x 68 a
+-   68 l x 92 a
+-   280 l x 140 a
 
+## <span id="Result_tile_templates"></span><span id="result_tile_templates"></span><span id="RESULT_TILE_TEMPLATES"></span>Modelos de bloco de resultado
+
+Um conjunto de modelos é fornecido para os blocos de resultado exibidos na tela da Cortana. Use esses modelos para especificar o título do bloco e se o bloco inclui texto e uma imagem de ícone de resultado. Cada bloco pode incluir até três linhas de texto e uma imagem, dependendo do modelo especificado.
+
+Estes são os modelos com suporte (com exemplos):
+
+| Nome | Exemplo |
+| --- | --- |
+| Somente título  | ![Somente título](images/cortana/voicecommandcontenttiletype_titleonly_small.png) |
+| Título com texto   | ![Título com texto](images/cortana/voicecommandcontenttiletype_titlewithtext_small.png) |
+| Título com ícone 68x68   | Nenhuma imagem |
+| Título com ícone 68x68 e texto   | ![Título com ícone 68x68 e texto](images/cortana/voicecommandcontenttiletype_titlewith68x68iconandtext_small.png) |
+| Título com ícone 68x92   | Nenhuma imagem |
+| Título com ícone 68x92 e texto    | ![Título com ícone 68x92 e texto](images/cortana/voicecommandcontenttiletype_titlewith68x92iconandtext_small.png) |
+| Título com ícone 280x140   | Nenhuma imagem |
+| Título com ícone 280x140 e texto    | ![Título com ícone 280x140 e texto](images/cortana/voicecommandcontenttiletype_titlewith280x140iconandtext_small.png) |
+
+Consulte [VoiceCommandContentTileType](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandcontenttiletype.aspx) para saber mais sobre os modelos da Cortana.
 
 ## <span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Exemplo
 
 
-Este exemplo demonstra um fluxo de tarefa de ponta a ponta para um aplicativo em segundo plano na **Cortana**. Estamos usando o aplicativo **Adventure Works** para cancelar uma viagem a Las Vegas.
+Este exemplo demonstra um fluxo de tarefa de ponta a ponta para um aplicativo em segundo plano na **Cortana**. Estamos usando o aplicativo **Adventure Works** para cancelar uma viagem a Las Vegas. Este exemplo usa o modelo "Título com ícone 68x68 e texto".
 
 ![fluxo de ponta a ponta do aplicativo em segundo plano na cortana](images/speech/e2e-canceltrip.png)
 
@@ -152,7 +166,7 @@ As etapas estão descritas na imagem a seguir:
 1.  O usuário toca no microfone para iniciar a **Cortana**.
 2.  O usuário diz "Cancele minha viagem Adventure Works para Vegas" para iniciar o aplicativo **Adventure Works** em segundo plano. O aplicativo usa a fala e a tela da **Cortana** para interagir com o usuário.
 3.  A **Cortana** transita para uma tela de entrega que apresenta os comentários de confirmação ao usuário ("Vou resolver isso na Adventure Works."), uma barra de status e um botão Cancelar.
-4.  Nesse caso, o usuário tem várias viagens que correspondem à consulta, portanto, o aplicativo apresenta uma tela de desambiguação que lista todos os resultados correspondentes e pergunta, "Qual delas você quer cancelar?"
+4.  Nesse caso, o usuário tem várias viagens que correspondem à consulta, portanto, o aplicativo apresenta uma tela de desambiguidade que lista todos os resultados correspondentes e pergunta, "Qual delas você quer cancelar?"
 5.  O usuário especifica o item "Conferência Vegas Tech".
 6.  Como o cancelamento não pode ser desfeito, o aplicativo apresenta uma tela de confirmação que pede ao usuário que confirme sua intenção.
 7.  O usuário diz: "sim".
@@ -162,14 +176,13 @@ Exploramos essas etapas mais detalhadamente aqui.
 
 ### <span id="Handoff"></span><span id="handoff"></span><span id="HANDOFF"></span>Entrega
 
-|                                                                                                          |
-|----------------------------------------------------------------------------------------------------------|
-| ![ponta a ponta: localizar viagem sem nenhuma tela de entrega ](images/speech/cortana-backgroundapp-result.png)              |
-| Localizar viagem sem nenhuma tela de entrega                                                                              |
-| ![ponta a ponta: cancelar viagem com tela de entrega ](images/speech/cortana-backgroundapp-progress-result.png) |
-| Cancelar viagem com tela de entrega                                                                          |
+| ![ponta a ponta: localizar viagem sem nenhuma tela de entrega ](images/speech/cortana-backgroundapp-result.png) |
+|--- |
+| Localizar viagem sem nenhuma tela de entrega |
 
- 
+| ![ponta a ponta: cancelar viagem com tela de entrega ](images/speech/cortana-backgroundapp-progress-result.png) |
+|--- |
+| Cancelar viagem com tela de entrega | 
 
 Tarefas que levam menos de 500ms para o aplicativo responder e não requerem informações adicionais do usuário podem ser concluídas sem a participação adicional da **Cortana**, além da exibição da tela de conclusão.
 
@@ -198,12 +211,9 @@ As cadeias de caracteres da GUI e da TTS podem ser as mesmas, mas não precisam 
 
 ### <span id="Progress"></span><span id="progress"></span><span id="PROGRESS"></span>Progresso
 
-|                                                                                             |
-|---------------------------------------------------------------------------------------------|
 | ![ponta a ponta: cancelar viagem com tela de progresso ](images/speech/e2e-canceltrip-progress.png) |
-| Cancelar viagem com tela de progresso                                                            |
-
- 
+| --- |
+| Cancelar viagem com tela de progresso |  
 
 Quando uma tarefa demora um pouco entre as etapas, seu aplicativo deve intervir e atualizar o usuário sobre o que está acontecendo em uma tela de progresso. O ícone do aplicativo é exibido e você deve fornecer as cadeias de caracteres de progresso da GUI e da TTS para indicar que a tarefa está em andamento.
 
@@ -238,12 +248,9 @@ Use um verbo de ação que confirme que a tarefa está em andamento.
 
 ### <span id="Confirmation"></span><span id="confirmation"></span><span id="CONFIRMATION"></span>Confirmação
 
-|                                                                                                     |
-|-----------------------------------------------------------------------------------------------------|
 | ![ponta a ponta: cancelar viagem com tela de confirmação ](images/speech/e2e-canceltrip-confirmation.png) |
-| Cancelar viagem com tela de confirmação                                                                |
-
- 
+| --- |
+| Cancelar viagem com tela de confirmação | 
 
 Algumas tarefas podem ser confirmadas implicitamente, pela natureza do comando do usuário. Outras são potencialmente mais sensíveis e exigem confirmação explícita. Aqui estão algumas diretrizes para quando usar confirmações explícitas e implícitas.
 
@@ -287,22 +294,19 @@ Forneça uma variação da pergunta para um nova solicitação, no caso de o com
 
  
 
-### <span id="Disambiguation"></span><span id="disambiguation"></span><span id="DISAMBIGUATION"></span>Desambiguação
+### <span id="Disambiguation"></span><span id="disambiguation"></span><span id="DISAMBIGUATION"></span>Desambiguidade
 
-|                                                                                                        |
-|--------------------------------------------------------------------------------------------------------|
-| ![ponta a ponta: cancelar viagem com tela de desambiguação](images/speech/cortana-disambiguation-screen.png) |
-| Cancelar viagem com tela de desambiguação                                                                 |
-
- 
+| ![ponta a ponta: cancelar viagem com tela de desambiguidade](images/speech/cortana-disambiguation-screen.png) |
+| --- |
+| Cancelar viagem com tela de desambiguidade | 
 
 Algumas tarefas podem exigir que o usuário faça escolhas em uma lista de entidades para concluir a tarefa.
 
-As cadeias de caracteres na tela de desambiguação da GUI e da TTS são especificadas pelo seu aplicativo, e o ícone do aplicativo, se fornecido, é exibido em vez do avatar da **Cortana**.
+As cadeias de caracteres na tela de desambiguidade da GUI e da TTS são especificadas pelo seu aplicativo, e o ícone do aplicativo, se fornecido, é exibido em vez do avatar da **Cortana**.
 
-Depois que o cliente responder à pergunta de desambiguação, o aplicativo deverá fornecer a próxima tela dentro de 500ms para evitar a ida para uma tela de progresso.
+Depois que o cliente responder à pergunta de desambiguidade, o aplicativo deverá fornecer a próxima tela dentro de 500ms para evitar a ida para uma tela de progresso.
 
-### <span id="GUI_and_TTS_guidelines_for_disambiguation_screens"></span><span id="gui_and_tts_guidelines_for_disambiguation_screens"></span><span id="GUI_AND_TTS_GUIDELINES_FOR_DISAMBIGUATION_SCREENS"></span>Diretrizes de GUI e TTS para telas de desambiguação
+### <span id="GUI_and_TTS_guidelines_for_disambiguation_screens"></span><span id="gui_and_tts_guidelines_for_disambiguation_screens"></span><span id="GUI_AND_TTS_GUIDELINES_FOR_DISAMBIGUATION_SCREENS"></span>Diretrizes de GUI e TTS para telas de desambiguidade
 
 Use o tempo presente.
 
@@ -328,10 +332,9 @@ Forneça uma variação da pergunta para um nova solicitação, no caso de o com
 
 ### <span id="Completion"></span><span id="completion"></span><span id="COMPLETION"></span>Conclusão
 
-|                                                                                                 |
-|-------------------------------------------------------------------------------------------------|
 | ![ponta a ponta: cancelar viagem com tela de conclusão ](images/speech/e2e-canceltrip-completion.png) |
-| Cancelar viagem com tela de conclusão                                                              |
+| --- |
+| Cancelar viagem com tela de conclusão |
 
  
 
@@ -358,10 +361,9 @@ Se a entidade for mostrada, ou se foi feita uma referência a ela anteriormente,
 
 ### <span id="Error"></span><span id="error"></span><span id="ERROR"></span>Erro
 
-|                                                                                      |
-|--------------------------------------------------------------------------------------|
 | ![ponta a ponta: cancelar viagem com tela de erro](images/speech/e2e-canceltrip-error.png) |
-| Cancelar viagem com tela de erro                                                        |
+| --- |
+| Cancelar viagem com tela de erro |
 
  
 
@@ -374,7 +376,8 @@ Quando um dos seguintes erros ocorrem, a **Cortana** exibe a mesma mensagem gen�
 ## <span id="related_topics"></span>Artigos relacionados
 
 
-* [Interações de fala](speech-interactions.md)
+* [Interações de controle por voz](speech-interactions.md)  
+
 **Desenvolvedores**
 * [Interações da Cortana](https://msdn.microsoft.com/library/windows/apps/mt185598)
 * [Interações de controle por voz](https://msdn.microsoft.com/library/windows/apps/mt185614)
@@ -387,6 +390,6 @@ Quando um dos seguintes erros ocorrem, a **Cortana** exibe a mesma mensagem gen�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

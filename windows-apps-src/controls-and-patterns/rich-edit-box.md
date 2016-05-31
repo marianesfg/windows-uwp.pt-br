@@ -1,12 +1,13 @@
 ---
-Description: Você pode usar um controle RichEditBox para inserir e editar documentos rich text que contenham texto formatado, hiperlinks e imagens. Você pode tornar um RichEditBox somente leitura definindo sua propriedade IsReadOnly como "true".
+author: Jwmsft
+Description: É possível usar um controle RichEditBox para inserir e editar documentos rich text que contenham texto formatado, hiperlinks e imagens. Você pode tornar um RichEditBox somente leitura definindo sua propriedade IsReadOnly como "true".
 title: RichEditBox
 ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
-label: Caixa de edição com formato
+label: Rich edit box
 template: detail.hbs
 ---
 # Caixa de edição com formato
-Você pode usar um controle RichEditBox para inserir e editar documentos rich text que contenham texto formatado, hiperlinks e imagens. Você pode tornar um RichEditBox somente leitura definindo sua propriedade IsReadOnly como **true**.
+É possível usar um controle RichEditBox para inserir e editar documentos rich text que contenham texto formatado, hiperlinks e imagens. Você pode tornar um RichEditBox somente leitura definindo sua propriedade IsReadOnly como **true**.
 
 <span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
 
@@ -178,7 +179,7 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 
 ## Escolher o teclado correto para seu controle de texto
 
-Para ajudar os usuários a inserir dados usando o teclado virtual ou o Soft Input Panel (SIP), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira. O layout do teclado padrão é geralmente apropriado para trabalhar com documentos rich text.
+Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira. O layout do teclado padrão é geralmente apropriado para trabalhar com documentos rich text.
 
 Para saber mais sobre como usar escopos de entrada, consulte [Usar o escopo de entrada para alterar o teclado virtual]().
 
@@ -193,7 +194,7 @@ Para saber mais sobre como usar escopos de entrada, consulte [Usar o escopo de e
 
 
 
-\[Este artigo contém informações que são específicas aos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Artigos relacionados
 
@@ -209,10 +210,7 @@ Para saber mais sobre como usar escopos de entrada, consulte [Usar o escopo de e
 - [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 
 
-**Para desenvolvedores (outros)**
-- [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

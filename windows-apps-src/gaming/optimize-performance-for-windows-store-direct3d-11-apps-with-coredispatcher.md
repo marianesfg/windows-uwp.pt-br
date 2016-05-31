@@ -1,13 +1,14 @@
 ---
-title: Otimize a latência de entrada para jogos em DirectX da Plataforma Universal do Windows (UWP)
-description: A latência de entrada pode ter impacto significativo na experiência de um jogo, sendo que sua otimização pode deixar o jogo com aspecto mais aperfeiçoado.
+author: mtoepke
+title: Otimizar a latência de entrada para jogos em DirectX da Plataforma Universal do Windows (UWP)
+description: A latência de entrada pode afetar significativamente a experiência de um jogo, e a sua otimização pode tornar um jogo mais bem acabado.
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
 ---
 
-#  Otimize a latência de entrada para jogos em DirectX da Plataforma Universal do Windows (UWP)
+#  Otimizar a latência de entrada para jogos em DirectX da Plataforma Universal do Windows (UWP)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A latência de entrada pode ter impacto significativo na experiência de um jogo, sendo que sua otimização pode deixar o jogo com aspecto mais aperfeiçoado. Além disso, a otimização adequada dos eventos de entrada pode aumentar a vida útil da bateria. Aprenda como escolher as opções de processamento de evento de entrada CoreDispatcher certas para garantir que seu jogo manipule a entrada o mais fluidamente possível.
 
@@ -255,6 +256,6 @@ O que vemos nesses diagramas é que os jogos têm o potencial de reduzir a latê
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

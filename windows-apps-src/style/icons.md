@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Ícones bons se harmonizam com a tipografia e com o restante da linguagem do design. Eles não misturam metáforas e comunicam apenas o que é necessário, com a máxima rapidez e simplicidade possível. 
 title: Ícones
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
@@ -82,7 +83,7 @@ Essas linhas podem ser combinadas, unidas, giradas e refletidas para criar ícon
     </tr>  
 </table>
 
-### Exemplos
+<p>Veja alguns exemplos:</p>
 
 <table>
     <tr>
@@ -152,9 +153,7 @@ Os selos coloridos devem ser usados apenas para transmitir o estado de um ícone
 
 <table>
 <tr><td>Verde - #128B44</td><td>Azul - #2C71B9</td><td>Amarelo - #FDC214</td></tr>
-<tr><td>Positivo: feito, 
-concluído </td><td>Neutro: ajuda, 
-notificação </td><td>Advertência: alerta, aviso </td></tr>
+<tr><td>Positivo: feito, concluído </td><td>Neutro: ajuda, notificação </td><td>Advertência: alerta, aviso </td></tr>
 <tr><td>![Green status](images/icons-color-inbadging-1.png)</td><td>![Blue status](images/icons-color-inbadging-2.png)</td>
 <td>![Yellow status](images/icons-color-inbadging-3.png)</td></tr>
 </table>
@@ -172,6 +171,7 @@ Os selos devem ser dimensionados com 10 a 18 px em uma grade de 32px x 32px.
 
 * [Diretrizes de ativos de bloco e ícone](../controls-and-patterns/tiles-and-notifications-app-assets.md)
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
 description: O suporte do .NET framework para componentes do Tempo de Execução do Windows facilitar declarar componentes de eventos ocultando as diferenças entre o padrão do evento da Plataforma Universal do Windows (UWP) e o padrão de evento do .NET Framework.
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
@@ -7,10 +8,10 @@ ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
 # Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não faz nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
+\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
 O suporte do .NET framework para componentes do Tempo de Execução do Windows facilitar declarar componentes de eventos ocultando as diferenças entre o padrão do evento da Plataforma Universal do Windows (UWP) e o padrão de evento do .NET Framework. No entanto, ao declarar acessadores de eventos personalizado em um componente do Tempo de Execução do Windows, você deve seguir o padrão usado na UWP.
 
@@ -125,6 +126,6 @@ Usuários do Visual Basic: no .NET Framework, um evento é apenas um representan
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

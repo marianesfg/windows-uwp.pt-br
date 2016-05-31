@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Introdução a animações
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: Neste projeto, vamos mover um retângulo, aplicar um efeito de esmaecimento e trazê-lo de volta à visualização.
@@ -6,7 +7,7 @@ description: Neste projeto, vamos mover um retângulo, aplicar um efeito de esma
 
 # Introdução: Animação
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Adicionando animações
 
@@ -62,7 +63,7 @@ Execute o projeto novamente e observe a animação do retângulo. Viva!
 
 Se você abrir o arquivo MainPage.xaml, no modo de exibição **XAML**, verá que código XAML adicionado pelo Blend funcionou no designer. Em particular, analise o código nos elementos `<Storyboard>` e `<Rectangle>`. O código a seguir mostra um exemplo. As reticências indicam código não relacionado omitido por questões de brevidade; as quebras de linha foram adicionadas para melhorar a legibilidade do código.
 
-```xaml
+```xml
 ...
 <Storyboard 
         x:Name="Storyboard1" 
@@ -122,9 +123,9 @@ Você pode editar esse XAML manualmente ou retornar ao Blend para continuar a tr
 
 ### Próxima etapa
 
-[Introdução: O que vem depois?](getting-started-what-next.md)
+[Introdução: o que vem depois?](getting-started-what-next.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

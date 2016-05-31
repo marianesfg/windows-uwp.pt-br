@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Siga estas diretrizes ao selecionar fontes e especificar seus tamanhos e cores.
 title: Fontes
 ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
@@ -7,10 +8,6 @@ template: detail.hbs
 ---
 
 # Diretrizes de fontes
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 **APIs importantes**
 
@@ -271,11 +268,12 @@ Esta é a lista de fontes que certamente estão disponíveis em todas as ediçõ
 
 ## <span id="related_topics"></span>Tópicos relacionados
 
-
 **Para designers**
 * [Rótulo (ou bloco de texto)](labels.md)
 * [Ícones Segoe UI Symbol](segoe-ui-symbol-font.md)
-**Para desenvolvedores (XAML)**
+            
+          
+            **para desenvolvedores (XAML)**
 * [Recursos de temas XAML](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [Definindo o layout de uma página de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh872191)
 * [Ícones Segoe UI Symbol](segoe-ui-symbol-font.md)
@@ -294,6 +292,6 @@ Esta é a lista de fontes que certamente estão disponíveis em todas as ediçõ
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

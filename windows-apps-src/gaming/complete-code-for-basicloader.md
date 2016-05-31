@@ -1,13 +1,14 @@
 ---
-title: concluir código para BasicLoader
-description: conclua código para classe e métodos que convertam e carreguem recursos gráficos comuns; por exemplo, malhas, texturas e vários objetos sombreadores.
+author: mtoepke
+title: Concluir código para BasicLoader
+description: Conclua código para classe e métodos que convertam e carreguem recursos gráficos comuns; por exemplo, malhas, texturas e vários objetos sombreadores.
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
 ---
 
 # Concluir código para BasicLoader
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Conclua código para classe e métodos que convertam e carreguem recursos gráficos comuns; por exemplo, malhas, texturas e vários objetos sombreadores.
 
@@ -25,17 +26,14 @@ Este exemplo não está disponível para download.
 
 ## Tecnologias
 
-|                       |                 |
-|-----------------------|-----------------|
-| Linguagens de programação | C++             |
-| Modelos de programação    | Windows Runtime |
+**Linguagens de programação** - C++  
+**Modelos de programação** -Windows Runtime
 
 ## Requisitos
 
-| Cliente mínimo com suporte | Windows 10                            |
-|--------------------------|---------------------------------------|
-| Servidor mínimo com suporte | Windows Server 2016 Technical Preview |
-| SDK necessário mínimo     |                                       |
+**Cliente mínimo com suporte** - Windows 10                              
+**Servidor mínimo com suporte** - Windows Server 2016 Technical Preview 
+
 
 ## Exibir o código (C++)
 
@@ -1108,6 +1106,6 @@ task<void> BasicLoader::LoadMeshAsync(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

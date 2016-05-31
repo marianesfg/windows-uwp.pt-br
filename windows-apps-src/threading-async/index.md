@@ -1,11 +1,12 @@
 ---
+author: TylerMSFT
 ms.assetid: beac6333-655a-4bcf-9caf-bba15f715ea5
 title: Programação threading e assíncrona
 description: A programação threading e assíncrona permite que seu aplicativo realize o trabalho de forma assíncrona em threads paralelos.
 ---
 # Programação threading e assíncrona
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A programação threading e assíncrona permite que seu aplicativo realize o trabalho de forma assíncrona em threads paralelos.
 
@@ -24,7 +25,7 @@ O pool de threads é mais eficiente no gerenciamento de threads porque reduz a s
 | Tópico                                                                                                          | Descrição                         |
 |----------------------------------------------------------------------------------------------------------------|-------------------------------------|
 | [Programação assíncrona (aplicativos UWP)](asynchronous-programming-universal-windows-platform-apps.md)              | Este tópico descreve a programação assíncrona na Plataforma Universal do Windows (UWP) e sua representação em C#, Microsoft Visual Basic .NET e extensões de componentes Visual C++ (C++/CX) e JavaScript. |
-| [Programação assíncrona em C++ (aplicativos UWP)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| Este artigo descreve a maneira recomendada de consumir métodos assíncronos em C++/CX usando a classe <code>task</code> que é definida no namespace <code>concurrency</code> em ppltasks.h. |
+| [Programação assíncrona em C++ (aplicativos UWP)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| Este artigo descreve a maneira recomendada de consumir métodos assíncronos em C++/CX usando a classe <code>task</code><code>concurrency</code> que é definida no namespace  em ppltasks.h. |
 | [Práticas recomendadas para usar o pool de threads](best-practices-for-using-the-thread-pool.md)                         | Este tópico descreve as práticas recomendadas para trabalhar com o pool de threads. |
 | [Chamar APIs assíncronas no Visual Basic ou C#](call-asynchronous-apis-in-csharp-or-visual-basic.md)             | A Plataforma Universal do Windows (UWP) inclui muitas APIs assíncronas para garantir que o seu aplicativo permaneça responsivo ao executar trabalhos demorados. Este tópico descreve como usar métodos assíncronos da UWP em C# ou Microsoft Visual Basic. |
 | [Criar um item de trabalho periódico](create-a-periodic-work-item.md)                                                   | Saiba como criar um item de trabalho periódico que se repete periodicamente. |
@@ -36,6 +37,6 @@ O pool de threads é mais eficiente no gerenciamento de threads porque reduz a s
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

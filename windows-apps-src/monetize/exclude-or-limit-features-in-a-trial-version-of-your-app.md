@@ -1,17 +1,12 @@
 ---
-Description: Se você permitir que os clientes usem seu aplicativo gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do aplicativo excluindo ou limitando alguns recursos durante o período de avaliação.
-title: Excluir ou limitar recursos em uma versão de avaliação
-ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: avaliação gratuita
-keywords: período de avaliação gratuita
-keywords: código de exemplo de avaliação gratuita
-keywords: código de exemplo de avaliação gratuita
+author: mcleanbyron Description: Se você permitir que os clientes usem seu aplicativo gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do aplicativo excluindo ou limitando alguns recursos durante o período de avaliação.
+title: Excluir ou limitar recursos em uma versão de avaliação ms.assetid: palavras-chave 1B62318F-9EF5-432A-8593-F3E095CA7056: palavras-chave de avaliação gratuita: palavras-chave de período de avaliação gratuita: palavras-chave de exemplo de código de avaliação gratuita: exemplo de código de avaliação gratuita
 ---
 
 # Excluir ou limitar recursos em uma versão de avaliação
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Se você permitir que os clientes usem seu aplicativo gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do aplicativo excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
@@ -166,7 +161,9 @@ void DisplayTrialVersionExpirationTime()
 
 Agora, teste o aplicativo usando chamadas simuladas para o servidor de licenças No JavaScript, no C#, no Visual Basic ou no Visual C++, substitua as referências ao [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) por [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) no código de inicialização do aplicativo.
 
-[**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) obtém informações específicas do teste de um arquivo XML denominado "WindowsStoreProxy.xml", localizado em %userprofile%\\AppData\\local\\packages\\&lt;nome do pacote&gt;\LocalState\\Microsoft\\Windows Store\\ApiData. Se esse caminho e esse arquivo não existirem, você deverá criá-los ou fornecê-los durante a instalação ou no tempo de execução. Se você tentar acessar a propriedade [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768) sem o WindowsStoreProxy.xml presente nesse local específico, será apresentado um erro.
+[
+              **CurrentAppSimulator**
+            ](https://msdn.microsoft.com/library/windows/apps/hh779766) obtém informações específicas do teste de um arquivo XML denominado "WindowsStoreProxy.xml", localizado em %userprofile%\\AppData\\local\\packages\\&lt;nome do pacote&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Se esse caminho e esse arquivo não existirem, você deverá criá-los ou fornecê-los durante a instalação ou no tempo de execução. Se você tentar acessar a propriedade [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768) sem o WindowsStoreProxy.xml presente nesse local específico, será apresentado um erro.
 
 Este exemplo ilustra como você pode adicionar código ao aplicativo para testá-lo sob os estados diferentes de licença.
 
@@ -233,6 +230,6 @@ Para saber mais sobre a descrição de seu aplicativo, consulte [Criar descriç�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

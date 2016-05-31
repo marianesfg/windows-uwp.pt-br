@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Saiba o que você poderá fazer se achar que outro aplicativo está violando seus direitos de propriedade intelectual.
 title: Proteção de marcas comerciais e direitos autorais
 ms.assetid: 61C4EEC0-AD4D-4828-ADEC-F18E99DD4FFC
@@ -63,6 +64,6 @@ Leia o aviso da Microsoft com cuidado e siga as instruções. O aviso da Microso
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

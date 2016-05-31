@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Iniciar o aplicativo Pessoas
 description: Este tópico descreve o esquema de URI ms-people. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo Pessoas para ações específicas.
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
@@ -7,7 +8,7 @@ ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
 # Iniciar o aplicativo Pessoas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo Pessoas para ações específicas.
@@ -38,8 +39,8 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar 
 <tr class="odd">
 <td align="left">Permite que os outros aplicativos forneçam uma cadeia de caracteres de pesquisa que iniciará o aplicativo Pessoas com a página de resultados da pesquisa.
 <div class="alert">
-**Observação**
-          <p>Os parâmetros diferenciam maiúsculas de minúsculas.</p>
+**Observação**  
+<p>Os parâmetros diferenciam maiúsculas de minúsculas.</p>
 <p>Caso você não insira a sintaxe corretamente ou o valor da cadeia de caracteres de pesquisa não seja encontrado, o comportamento padrão é retornar uma lista completa de contatos sem nenhuma filtragem.</p>
 </div>
 <div>
@@ -50,8 +51,8 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar 
 <tr class="even">
 <td align="left">Inicia um cartão de visita existente, caso o contato seja encontrado. Ou inicia um cartão de visita temporário, caso nenhum contato seja encontrado. Se nenhum parâmetro de entrada for fornecido, iniciaremos o aplicativo Pessoas usando uma lista de contatos.
 <div class="alert">
-**Observação**
-          <p>Os parâmetros diferenciam maiúsculas de minúsculas.</p>
+**Observação**  
+<p>Os parâmetros diferenciam maiúsculas de minúsculas.</p>
 <p>A ordem dos parâmetros não importa.</p>
 <p>Se houver mais de uma correspondência, retornaremos a primeira correspondência do contato.</p>
 </div>
@@ -63,8 +64,8 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar 
 <tr class="odd">
 <td align="left">Inicia uma página para salvar contato no aplicativo Pessoas a fim de salvar o contato indicado com o número de telefone ou o endereço de email fornecido.
 <div class="alert">
-**Observação**
-          <p>Os parâmetros diferenciam maiúsculas de minúsculas.</p>
+**Observação**  
+<p>Os parâmetros diferenciam maiúsculas de minúsculas.</p>
 <p>A ordem dos parâmetros não importa.</p>
 </div>
 <div>
@@ -206,6 +207,6 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

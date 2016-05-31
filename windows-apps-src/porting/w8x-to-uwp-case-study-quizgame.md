@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
 description: Este tópico apresenta um estudo de caso de portabilidade de uma amostra de aplicativo do WinRT 8.1 de um jogo de teste ponto a ponto em funcionamento para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10.
 title: Estudo de caso do Windows Runtime 8.x para UWP: amostra de aplicativo QuizGame ponto a ponto
@@ -18,11 +19,11 @@ Faz sentido personalizar as duas metades ao PC e ao telefone, respectivamente. M
 
 O aplicativo utiliza padrões que usam modos e modelos de exibição. Como resultado dessa separação clara, o processo de portabilidade para esse aplicativo é muito simples, como você verá.
 
-**Observação** esta amostra pressupõe que a rede esteja configurada para enviar e receber pacotes UDP multicast em grupo personalizados (a maioria das redes domésticas estão, embora sua rede de trabalho possa não estar). A amostra também envia e recebe pacotes TCP.
+**Observação**   Esta amostra pressupõe que a rede esteja configurada para enviar e receber pacotes UDP multicast em grupo personalizados (a maioria das redes domésticas está, embora sua rede de trabalho possa não estar). A amostra também envia e recebe pacotes TCP.
 
  
 
-**Observação** ao abrir QuizGame10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Observação**   Ao abrir QuizGame10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
 
  
 
@@ -82,11 +83,11 @@ Com base nessas opções, portaremos QuizGame.Windows para um novo projeto do Wi
 
 **A solução QuizGame10**
 
--   Crie uma nova solução (**Novo Projeto** &gt; **Outros Tipos de Projetos** &gt; **Soluções Visual Studio**) e chame-a de QuizGame10.
+-   Crie uma nova solução (**Novo Projeto**&gt;**Outros Tipos de Projetos**&gt;**Soluções Visual Studio**) e chame-a de QuizGame10.
 
 **P2PHelper**
 
--   Na solução, crie um novo projeto de biblioteca de classes do Windows 10 (**New Project** &gt; **Windows Universal** &gt; **Class Library (Windows Universal)**) e chame-o de P2PHelper.
+-   Na solução, crie um novo projeto de biblioteca de classes do Windows 10 (**Novo Projeto**&gt;**Universal do Windows**&gt;**Biblioteca de Classes (Universal do Windows)**) e chame-o de P2PHelper.
 -   Exclua Class1.cs do novo projeto.
 -   Copie P2PSession.cs, P2PSessionClient.cs e P2PSessionHost.cs para a pasta do novo projeto e inclua os arquivos copiados no novo projeto.
 -   O projeto será compilado sem precisar de outras alterações.
@@ -98,9 +99,9 @@ Com base nessas opções, portaremos QuizGame.Windows para um novo projeto do Wi
 
 **QuizGameHost**
 
--   Crie um novo projeto de aplicativo do Windows 10 (**Add** &gt; **New Project** &gt; **Windows Universal** &gt; **Blank Application (Windows Universal)**) e chame-o de QuizGameHost.
--   Adicione uma referência ao P2PHelper (**Adicionar Referência** &gt; **Projetos** &gt; **Solução** &gt; **P2PHelper**).
--   No **Gerenciador de Soluções**, crie uma nova pasta para cada uma das pastas compartilhadas no disco. Em seguida, clique com o botão direito do mouse em cada pasta recém-criada e clique em **Adicionar** &gt; **Item Existente** e navegue até uma pasta. Abra a pasta compartilhada apropriada, selecione todos os arquivos e clique em **Add As Link**.
+-   Crie um novo projeto de aplicativo do Windows 10 (**Adicionar**&gt;**Novo Projeto**&gt;**Universal do Windows**&gt;**Aplicativo em Branco (Universal do Windows)**) e chame-o de QuizGameHost.
+-   Adicione uma referência ao P2PHelper (**Adicionar Referência**&gt;**Projetos**&gt;**Solução**&gt;**P2PHelper**).
+-   No **Gerenciador de Soluções**, crie uma nova pasta para cada uma das pastas compartilhadas no disco. Em seguida, clique com o botão direito do mouse em cada pasta recém-criada e clique em **Adicionar**&gt;**Item Existente** e navegue até uma pasta. Abra a pasta compartilhada apropriada, selecione todos os arquivos e clique em **Adicionar como Link**.
 -   Copie MainPage.xaml de \\QuizGame.Windows\\ para \\QuizGameHost\\ e altere o namespace para QuizGameHost.
 -   Copie App.xaml de \\QuizGame.Shared\\ para \\QuizGameHost\\ e altere o namespace para QuizGameHost.
 -   Em vez de substituir app.xaml.cs, vamos manter a versão no novo projeto e fazer apenas uma alteração direcionada a ela para permitir o modo de teste local. Em app.xaml.cs, substitua esta linha de código:
@@ -119,15 +120,15 @@ por:
 #endif
 ```
 
--   Em **Propriedades** &gt; **Compilar** &gt; **símbolos de compilação condicional**, adicione LOCALTESTMODEON.
+-   Em **Propriedades**&gt;**Compilar**&gt;**símbolos de compilação condicional**, adicione LOCALTESTMODEON.
 -   Agora você poderá voltar ao código adicionado a app.xaml.cs e resolver o tipo de TestView.
 -   Em package.appxmanifest, altere o nome do recurso de internetClient para internetClientServer.
 
 **QuizGameClient**
 
--   Crie um novo projeto de aplicativo do Windows 10 (**Add** &gt; **New Project** &gt; **Windows Universal** &gt; **Blank Application (Windows Universal)**) e chame-o de QuizGameClient.
--   Adicione uma referência ao P2PHelper (**Adicionar Referência** &gt; **Projetos** &gt; **Solução** &gt; **P2PHelper**).
--   No **Gerenciador de Soluções**, crie uma nova pasta para cada uma das pastas compartilhadas no disco. Em seguida, clique com o botão direito do mouse em cada pasta recém-criada e clique em **Adicionar** &gt; **Item Existente** e navegue até uma pasta. Abra a pasta compartilhada apropriada, selecione todos os arquivos e clique em **Add As Link**.
+-   Crie um novo projeto de aplicativo do Windows 10 (**Adicionar**&gt;**Novo Projeto**&gt;**Universal do Windows**&gt;**Aplicativo em Branco (Universal do Windows)**) e chame-o de QuizGameClient.
+-   Adicione uma referência ao P2PHelper (**Adicionar Referência**&gt;**Projetos**&gt;**Solução**&gt;**P2PHelper**).
+-   No **Gerenciador de Soluções**, crie uma nova pasta para cada uma das pastas compartilhadas no disco. Em seguida, clique com o botão direito do mouse em cada pasta recém-criada e clique em **Adicionar**&gt;**Item Existente** e navegue até uma pasta. Abra a pasta compartilhada apropriada, selecione todos os arquivos e clique em **Adicionar como Link**.
 -   Copie MainPage.xaml de \\QuizGame.WindowsPhone\\ para \\QuizGameClient\\ e altere o namespace para QuizGameClient.
 -   Copie App.xaml de \\QuizGame.Shared\\ para \\QuizGameClient\\ e altere o namespace para QuizGameClient.
 -   Em package.appxmanifest, altere o nome do recurso de internetClient para internetClientServer.
@@ -149,7 +150,7 @@ Podemos usar o recurso adaptável do Gerenciador de Estado Visual para corrigir 
 -   Em `OptionContentControlStyle`, altere o valor do setter **FontSize** para "20". Essa etapa e a anterior fornecerão uma boa rampa de tipos, que funcionará bem em todos os dispositivos. Eles são tamanhos muito mais flexíveis que "30", que estávamos usando para o aplicativo do Windows 8.1.
 -   Por fim, adicione a marcação apropriada do Gerenciador de Estado Visual à raiz **Grid**.
 
-```xaml
+```xml
 <VisualStateManager.VisualStateGroups>
     <VisualStateGroup>
         <VisualState x:Name="WideState">
@@ -171,7 +172,7 @@ Podemos usar o recurso adaptável do Gerenciador de Estado Visual para corrigir 
 
 Você notará que, no Windows 10, os botões não têm o mesmo preenchimento da área de toque nos modelos. Duas pequenas alterações corrigirão isso. Primeiro, adicione esta marcação a app.xaml em QuizGameHost e QuizGameClient.
 
-```xaml
+```xml
 <Style TargetType="Button">
     <Setter Property="Margin" Value="12"/>
 </Style>
@@ -179,7 +180,7 @@ Você notará que, no Windows 10, os botões não têm o mesmo preenchimento da 
 
 Depois, adicione este setter a `OptionButtonStyle` em \\View\\ClientView.xaml.
 
-```xaml
+```xml
 <Setter Property="Margin" Value="6"/>
 ```
 
@@ -190,6 +191,6 @@ Com esse último ajuste, o aplicativo se comportará e parecerá como antes da p
 O aplicativo que portamos este estudo de caso era relativamente complexo, envolvendo vários projetos, uma biblioteca de classes e um volume relativamente grande de código e interface do usuário. Mesmo assim, a portabilidade foi simples. Parte da facilidade de portabilidade está diretamente relacionada à semelhança entre a plataforma de desenvolvimento do Windows 10 e as plataformas do Windows 8.1 e do Windows Phone 8.1. Além disso, também à forma como o aplicativo original foi projetado para manter os modelos, os modelos de exibição e os modos de exibição separados.
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

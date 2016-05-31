@@ -1,5 +1,6 @@
 ---
-title: Criar e registrar uma tarefa em tela de fundo
+author: mcleblanc
+title: Criar e registrar uma tarefa em segundo plano
 description: Crie uma classe de tarefa em segundo plano e a registre para ser executada quando seu aplicativo não estiver em primeiro plano.
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
 ---
@@ -7,7 +8,7 @@ ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
 # Criar e registrar uma tarefa em segundo plano
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -25,7 +26,7 @@ Você pode executar código em segundo plano criando classes que implementam a i
 
 As seguintes etapas mostram como escrever uma nova classe que implementa a interface [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). Antes de iniciar, crie um novo projeto na sua solução para tarefas em segundo plano. Adicione uma nova classe vazia para a sua tarefa em segundo plano e importe o namespace [Windows.ApplicationModel.Background](https://msdn.microsoft.com/library/windows/apps/br224847).
 
-1.  Crie um novo projeto para tarefas em segundo plano e adicione-o à sua solução. Para isso, clique com botão direito do mouse no nó da solução no **Gerenciador de Soluções** e selecione Adicionar-&gt;Novo Projeto. Em seguida, selecione o tipo de projeto **Componente do Windows Runtime (Universal do Windows)**, dê um nome ao projeto e clique em OK.
+1.  Crie um novo projeto para tarefas em segundo plano e adicione-o à sua solução. Para isso, clique com botão direito do mouse no nó da solução no **Gerenciador de Soluções** e selecione Adicionar-&gt;Novo Projeto. Em seguida, selecione o tipo de projeto **Componente do Tempo de Execução do Windows (Universal do Windows)**, dê um nome ao projeto e clique em OK.
 2.  Referencie o projeto das tarefa em segundo plano no projeto de aplicativo da Plataforma Universal do Windows (UWP).
 
     Para aplicativo em C++, clique com o botão direito do mouse no seu aplicativo de projeto e selecione **Propriedades**. Então, vá para **Propriedades comuns** e clique em **Adicionar nova referência**, marque a caixa de marcação próxima ao projeto de tarefa em segundo plano e clique em **OK** nas duas caixas de diálogo.
@@ -226,8 +227,7 @@ O procedimento abaixo é concluído em uma de suas classes de aplicativo (por ex
 
     O código a seguir registra a tarefa em segundo plano e armazena o resultado:
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     BackgroundTaskRegistration task = builder.Register();
 >     ```
 >     ```cpp
@@ -247,8 +247,7 @@ Registre um método com o [**BackgroundTaskCompletedEventHandler**](https://msdn
 
     O seguinte código de exemplo reconhece a conclusão da tarefa em segundo plano e chama um método de atualização de interface de usuário de exemplo que leva a cadeia de caracteres da mensagem.
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
 >     {
 >         var settings = Windows.Storage.ApplicationData.Current.LocalSettings;
@@ -275,12 +274,11 @@ Registre um método com o [**BackgroundTaskCompletedEventHandler**](https://msdn
 
     O seguinte código de exemplo adiciona um [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781) o [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786):
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     task.Completed += new BackgroundTaskCompletedEventHandler(OnCompleted);
 >     ```
 >     ```cpp
->     task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &amp;ExampleBackgroundTask::OnCompleted);
+>     task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &ExampleBackgroundTask::OnCompleted);
 >     ```
 
 ## Declarar que o seu aplicativo usa tarefas em segundo plano no manifesto do aplicativo
@@ -297,7 +295,7 @@ Antes de o seu aplicativo conseguir executar tarefas em segundo plano, você dev
 
     O seguinte elemento Extensions é adicionado ao arquivo Package.appxmanifest para registrar a tarefa em segundo plano:
 
-    ```xaml
+    ```xml
     <Extensions>
       <Extension Category="windows.backgroundTasks" EntryPoint="RuntimeComponent1.ExampleBackgroundTask">
         <BackgroundTasks>
@@ -318,7 +316,7 @@ Agora você deve compreender os fundamentos de como escrever uma classe de taref
 
 Veja os seguintes tópicos relacionados para obter referência de API, diretriz conceitual de tarefa em segundo plano e instruções mais detalhadas para escrever aplicativos que usam tarefas em segundo plano.
 
-> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -353,6 +351,6 @@ Veja os seguintes tópicos relacionados para obter referência de API, diretriz 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

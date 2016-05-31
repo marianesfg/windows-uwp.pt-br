@@ -1,13 +1,14 @@
 ---
-title: planejar a portabilidade do OpenGL ES 2.0 para o Direct3D
-description: caso esteja fazendo a portabilidade de um jogo das plataformas iOS ou Android, você provavelmente investiu bastante no OpenGL ES 2.0.
+author: mtoepke
+title: Planejar a portabilidade do OpenGL ES 2.0 para o Direct3D
+description: Caso esteja fazendo a portabilidade de um jogo das plataformas iOS ou Android, você provavelmente investiu bastante no OpenGL ES 2.0.
 ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
 ---
 
 # Planejar a portabilidade do OpenGL ES 2.0 para o Direct3D
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -114,6 +115,6 @@ Mas o Direct3D é compatível com um sistema de coordenadas de mão direita. O D
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

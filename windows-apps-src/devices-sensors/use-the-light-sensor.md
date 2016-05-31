@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 15BAB25C-DA8C-4F13-9B8F-EA9E4270BCE9
 title: Usar o sensor de luz
 description: Aprenda a usar o sensor de luz ambiente para detectar alterações na iluminação.
 ---
 # Usar o sensor de luz
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -120,11 +121,11 @@ Você precisará substituir o nome do namespace no trecho anterior pelo nome que
     </Page>
 ```
 
-Você precisará substituir a primeira parte do nome da classe no trecho anterior pelo namespace de seu aplicativo. Por exemplo, se você criou um projeto denominado **LightingCS**, pode substituir `x:Class="App1.MainPage"` por `x:Class="LightingCS.MainPage"`. Você também deve substituir `xmlns:local="using:App1"` por `xmlns:local="using:LightingCS"`.
+Você precisará substituir a primeira parte do nome da classe no trecho anterior pelo namespace de seu aplicativo. Por exemplo, se você criou um projeto denominado **LightingCS**, poderá substituir `x:Class="App1.MainPage"` por `x:Class="LightingCS.MainPage"`. Você também deve substituir `xmlns:local="using:App1"` por `xmlns:local="using:LightingCS"`.
 
 -   Pressione F5 ou selecione **Depurar** > **Iniciar Depuração** para criar, implantar e executar o aplicativo.
 
-Quando o aplicativo estiver em execução, você pode alterar os valores do sensor de luz. Altere a luz disponível para o sensor ou use as ferramentas do emulador.
+Quando o aplicativo estiver em execução, você poderá alterar os valores do sensor de luz. Altere a luz disponível para o sensor ou use as ferramentas do emulador.
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** > **Parar Depuração** para parar o aplicativo.
 
@@ -166,6 +167,6 @@ Os novos valores são gravados em um TextBlock encontrado no XAML do projeto.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,11 +1,12 @@
 ---
+author: mcleblanc
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: Testar com o Emulador Microsoft para Windows 10 Mobile
 description: Simule a interação do mundo real com um dispositivo e teste os recursos de seu aplicativo usando as ferramentas incluídas no Emulador Microsoft para Windows 10 Mobile.
 ---
 # Testar com o Emulador Microsoft para Windows 10 Mobile
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Simule a interação do mundo real com um dispositivo e teste os recursos de seu aplicativo usando as ferramentas incluídas no Emulador Microsoft para Windows 10 Mobile. O emulador é um aplicativo da área de trabalho que emula um dispositivo móvel que executa o Windows 10. Ele oferece um ambiente virtualizado no qual você pode depurar e testar aplicativos do Windows sem um dispositivo físico. Além disso, ele oferece um ambiente isolado para seus protótipos de aplicativos.
 
@@ -33,7 +34,7 @@ Sistema operacional
 -   64 bits
 -   Edição Pro ou superior
 
-Para verificar os requisitos de BIOS, confira [Como habilitar Hyper-V para o emulador para Windows Phone 8](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj863509.aspx).
+Para verificar os requisitos de BIOS, confira [Como habilitar Hyper-V para o emulador para Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/jj863509.aspx).
 
 Para verificar os requisitos de RAM e do sistema operacional, no Painel de Controle, clique em **Sistema e Segurança**e, em seguida, clique em **Sistema**.
 
@@ -63,15 +64,11 @@ Além de oferecer suporte à Plataforma Universal do Windows (UWP), o emulador a
 -   Suporte à NFC (comunicação a curta distância) O emulador permite simular a NFC e possibilita testar e desenvolver aplicativos universais habilitados para NFC/proximidade.
 -   A aceleração de hardware nativo melhora o desempenho gráfico no emulador usando a placa gráfica local. Você deve ter uma placa gráfica compatível instalada e habilitar a aceleração na guia **Sensores** da interface do usuário de configurações **Ferramentas Adicionais** do emulador para usar a aceleração.
 
-> **Observação**  Houve uma alteração importante na interface do usuário. Nesta versão do emulador, o atalho de teclado para mostrar ou ocultar o teclado de hardware agora é F4, atuando como uma alternância, em vez do par de teclas Page Up/Page Down usado nos emuladores anteriores.
-
- 
-
 ## Recursos que você pode testar no emulador
 
 Além dos novos recursos mencionados na seção anterior, você pode testar os recursos normalmente usados a seguir no Emulador Microsoft para Windows 10 Mobile.
 
--   .**Resolução de tela, tamanho da tela e memória** Obtenha um mercado amplo para o seu aplicativo, o testando em diversas imagens do emulador para simular várias resoluções de tela, tamanhos físicos e restrições de memória.
+-   **Resolução de tela, tamanho da tela e memória** Obtenha um mercado amplo para o seu aplicativo, o testando em diversas imagens do emulador para simular várias resoluções de tela, tamanhos físicos e restrições de memória.
 
     ![Emuladores disponíveis com resolução, tamanho e memória](images/em-list.png)
 
@@ -90,6 +87,8 @@ Além dos novos recursos mencionados na seção anterior, você pode testar os r
 -   **Pasta de armazenamento local (anteriormente conhecida como um armazenamento isolado)**. Os dados no armazenamento isolado persistem enquanto o emulador está sendo executado, mas são perdidos logo que o emulador se fecha.
 
 -   **Microfone**. Requer e utiliza o microfone no computador host.
+
+-   **Teclado do telefone**. O emulador dá suporte a mapeamento do teclado de hardware no computador de desenvolvimento para o teclado em um Windows Phone. O comportamento das chaves é o mesmo que em um dispositivo Windows Phone
 
 -   **Tela de bloqueio**. Com o emulador aberto, pressione F12 duas vezes no teclado de seu computador. A tecla F12 emula o botão de energia no telefone. A primeira tecla pressionada desliga a tela. A segunda liga novamente a tela com a tela de bloqueio habilitada. Desbloqueie a tela usando o mouse para deslizar a tela de bloqueio para cima.
 
@@ -116,6 +115,37 @@ A tela do emulador com a entrada por mouse habilitada.
 ![O botão de entrada por mouse na barra de ferramentas do emulador](images/emulator-showing-mouse-input-button-bar.png)
 
 O botão de entrada por mouse na barra de ferramentas do emulador.
+
+## Entrada por teclado
+
+O emulador dá suporte a mapeamento do teclado de hardware no computador de desenvolvimento para o teclado em um Windows Phone. O comportamento das chaves é o mesmo que em um dispositivo Windows Phone. 
+
+Por padrão, o teclado de hardware não está habilitado. Essa implementação é equivalente a um teclado deslizante que deve ser implantado para ser possível usá-lo. Antes de ativar o teclado de hardware, o emulador aceita a entrada de tecla somente das chaves de controle.
+
+Caracteres especiais no teclado de uma versão localizada de um computador de desenvolvimento do Windows não são compatíveis com o emulador. Para inserir caracteres especiais que estão presentes em um teclado localizado, use o Painel de Entrada Virtual (SIP). 
+
+Para usar o teclado de seu computador no emulador, pressione F4.
+
+Para parar de usar o teclado de seu computador no emulador, pressione F4.
+
+A tabela a seguir lista as teclas em um teclado de hardware que você pode usar para emular os botões e outros controles em um Windows Phone.
+
+Observe que, no Emulador Compilação 10.0.14332, o mapeamento de teclas de hardware do computador foi alterado. Os valores na segunda coluna da tabela a seguir representam essas novas teclas. 
+
+Teclas de hardware do computador (Emulador Compilação 10.0.14295 e versões anteriores) | Teclas de hardware do computador (Emulador Compilação 10.0.14332 e mais recente) | Botão de hardware do Windows Phone | Observações
+--------------------- | ------------------------- | ----------------------------- | -----
+F1 | WIN + ESC | BACK | Os pressionamentos longos funcionam conforme o esperado.
+F2 | WIN + F2 | INICIAR | Os pressionamentos longos funcionam conforme o esperado.
+F3 | WIN + F3 | PESQUISAR |  
+F4 | F4 (nenhuma alteração) | Alterna entre usar e não usar o teclado do computador local. | 
+F6 | WIN + F6 | CAMERA HALF | Botão de câmera dedicado que é pressionado até a metade.
+F7 | WIN + F7 | CAMERA FULL | Botão de câmera dedicado.
+F9 | WIN + F9 | AUMENTAR VOLUME | 
+F10 | WIN + F10 | DIMINUIR VOLUME | 
+F12 | WIN + F12 | ENERGIA | Pressione a tecla F12 duas vezes para habilitar a tela de bloqueio. Os pressionamentos longos funcionam conforme o esperado.
+ESC | WIN + ESC | BACK | Os pressionamentos longos funcionam conforme o esperado.
+ 
+
 
 ## Comunicação a Curta Distância (NFC)
 
@@ -387,7 +417,7 @@ A aba **cartão SD** utiliza uma pasta no computador de desenvolvimento para sim
 
     Clique em **Navegador** para selecionar uma pasta no computador de desenvolvimento para assegurar o conteúdo do cartão SD simulado.
 
-2.  **Inserir o cartão SD**.
+2.  **Insira o cartão SD**.
 
     Após selecionar uma pasta, clique em **Inserir cartão SD**. Quando você inserir o cartão SD, as seguintes coisas acontecem:
 
@@ -400,7 +430,7 @@ A aba **cartão SD** utiliza uma pasta no computador de desenvolvimento para sim
 
     A opção está habilitada por padrão. Quando esta opção está habilitada, os arquivos são sincronizados do emulador para a pasta no computador de desenvolvimento quando você ejeta o cartão SD.
 
-4.  **Ejetar o cartão SD**.
+4.  **Ejete o cartão SD**.
 
     Clique em **Ejetar o cartão SD**. Quando você ejetar o cartão SD, as seguintes coisas acontecem:
 
@@ -589,7 +619,7 @@ Para recuperar o sistema dessa situação, execute "netcfg -d" em um prompt de c
 
 O Emulador Microsoft inclui o arquivo XDECleanup.exe, uma ferramenta que exclui todas as VMs, discos diff e comutadores de rede específicos ao emulador, e já inclui os binários do emulador (XDE). Você deve usar essa ferramenta para limpar VMs do emulador caso elas entrem em um estado inválido. Execute a ferramenta em um prompt de comando de administrador:`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **Observação**  XDECleanup.exe exclui todas as VMs do Hyper-V específicas ao emulador, e também exclui quaisquer pontos de verificação de VM ou estados salvos.
+> **Observação**  XDECleanup.exe exclui todas as VMs do Hyper-V específicas ao emulador e também exclui todos os pontos de verificação de VM ou estados salvos.
 
 ### Desinstalar a imagem do Windows 10 para dispositivos móveis
 
@@ -604,8 +634,7 @@ Por padrão, o Windows 10 Mobile Emulator usa elementos gráficos acelerados de 
 Para desativar a aceleração de hardware:
 
 1. Inicie o Editor do registro.
-2. Se não existir, crie a subchave de Registro a seguir:
-   HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
+2. Crie a subchave de Registro se ela não existir: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
 3. Clique com o botão direito na pasta 10.0, aponte para **Novo** e clique em **Valor DWORD**.
 4. Clique em **DisableRemoteFx** e pressione Enter.
 5. Clique duas vezes em **DisableRemoteFx**, digite 1 na caixa de dados **Valor**, selecione a opção **Decimal** e, em seguida, clique em **OK**.
@@ -619,12 +648,12 @@ Para encontrar respostas e resolver problemas ao começar a trabalhar com as fer
 
 ## Tópicos relacionados
 
-* [Executar aplicativos do Windows Phone no emulador](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn632391.aspx)
+* [Executar aplicativos do Windows Phone no emulador](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Arquivo morto do SDK do Windows e do Windows Phone](https://dev.windows.com/downloads/sdk-archive)
  
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

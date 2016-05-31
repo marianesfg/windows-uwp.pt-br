@@ -1,15 +1,16 @@
 ---
+author: mtoepke
 title: Oferecendo suporte à orientação de tela (DirectX e C++)
-description: Discutiremos neste documento as práticas recomendadas para controlar a rotação da tela no aplicativo UWP DirectX, para que o hardware gráfico do dispositivo Windows 10 seja usado de forma eficiente e eficaz.
+description: Abordaremos neste documento as práticas recomendadas para controlar a rotação da tela no aplicativo UWP DirectX, para que o hardware gráfico do dispositivo Windows 10 seja usado de forma eficiente e eficaz.
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
 ---
 
 # Oferecendo suporte à orientação de tela (DirectX e C++)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Seu aplicativo UWP (Plataforma Universal do Windows) pode dar suporte a várias orientações de tela quando você manipula o evento [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268). Discutiremos neste documento as práticas recomendadas para controlar a rotação da tela no aplicativo UWP DirectX, para que o hardware gráfico do dispositivo Windows 10 seja usado de forma eficiente e eficaz.
+Seu aplicativo UWP (Plataforma Universal do Windows) pode dar suporte a várias orientações de tela quando você manipula o evento [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268). Abordaremos neste documento as práticas recomendadas para controlar a rotação da tela no aplicativo UWP DirectX, para que o hardware gráfico do dispositivo Windows 10 seja usado de forma eficiente e eficaz.
 
 Antes de começar, lembre-se de que o hardware gráfico sempre emite dados em pixel da mesma maneira, independentemente da orientação do dispositivo. Os dispositivos Windows 10 podem determinar sua orientação de exibição atual (com algum tipo de sensor ou com uma alternância de software) e permite que os usuários mudem as configurações de exibição. Devido a isso, o próprio Windows 10 controla a rotação das imagens para assegurar que elas fiquem "verticais" de acordo com a orientação do dispositivo. Por padrão, seu aplicativo recebe a notificação de que algo mudou na orientação, por exemplo, o tamanho de uma janela. Quando isso acontece, o Windows 10 gira imediatamente a imagem para a exibição final. Para três das quatro orientações de tela específicas (discutidas mais adiante), o Windows 10 usa computação e recursos gráficos adicionais para exibir a imagem final.
 
@@ -552,6 +553,6 @@ Agora, quando você chamar seu método de renderização, ela multiplicará a ma
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

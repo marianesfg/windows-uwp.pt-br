@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Além de criar uma campanha publicitária para seu aplicativo que será executada em aplicativos do Windows, você também pode promover seu aplicativo usando outros canais.
 title: Criar uma campanha de promoção de aplicativos personalizada
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
@@ -82,7 +83,7 @@ O exemplo a seguir demonstra como usar o método [**GetAppPurchaseCampaignIdAsyn
 string campaignId = await CurrentApp.GetAppPurchaseCampaignIdAsync();
 ```
 
-``` ManagedCPlusPlus
+``` cpp
 HString campaignId;
 HRESULT hr = CurrentApp::GetAppPurchaseCampaignIdAsync(campaignId.GetAddressOf());
 ```
@@ -129,6 +130,6 @@ Antes de promover uma URL de campanha personalizada, recomendamos que você test
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

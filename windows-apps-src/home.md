@@ -8,7 +8,7 @@ redirect_url: https://developer.microsoft.com/en-us/windows/develop
 
 # Guias de instruções para aplicativos do Windows 10
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aqui estão as informações de que você precisa para criar um aplicativo Universal do Windows que possa ser executado em qualquer dispositivo baseado no Windows 10, inclusive telefones, tablets e computadores. Esta seção oferece instruções e exemplos de código organizados pelo tipo de tarefa que você deseja realizar.
 
@@ -39,10 +39,10 @@ Se você quiser uma introdução à Plataforma Universal do Windows (UWP) e como
 | [Portando aplicativos para o Windows 10](porting\index.md) | Traga um aplicativo existente para a UWP. Nessa plataforma, você pode criar um único pacote de aplicativo que não só direcione os dispositivos baseados em Windows de sua preferência, mas também explore recursos e experiências de usuário exclusivos para cada tipo de dispositivo. |
 | [Segurança](security/index.md) | Gerencie informações confidenciais do usuário e ajude a proteger dados de aplicativo e recursos, mantendo a experiência do usuário intacta. Todos os recursos, como proteção por senha básica, credenciais de roaming, logon único, autenticação de conta da Microsoft e criptografia estão à sua disposição. |
 | [Programação threading e assíncrona](threading-async/index.md) | Use a programação assíncrona para ajudar seu aplicativo a permanecer responsivo, permitindo que ele continue executando e respondendo à interface do usuário durante a conclusão de outros trabalhos que podem levar muito tempo. |
-| [Componentes do Windows Runtime](winrt-components/index.md) | Saiba mais sobre esses objetos independentes que você pode inicializar e usar em qualquer linguagem, incluindo C#, Visual Basic, JavaScript e C++. Por exemplo, você poderia criar um componente do Windows Runtime do Windows em C++ que use uma biblioteca de terceiros para executar uma operação dispendiosa em termos computacionais ou simplesmente reutilizar o código Visual Basic ou C# no seu aplicativo Universal do Windows. 
+| [Componentes do Tempo de Execução do Windows](winrt-components/index.md) | Saiba mais sobre esses objetos independentes que você pode inicializar e usar em qualquer linguagem, incluindo C#, Visual Basic, JavaScript e C++. Por exemplo, você poderia criar um componente do Windows Runtime do Windows em C++ que use uma biblioteca de terceiros para executar uma operação dispendiosa em termos computacionais ou simplesmente reutilizar o código Visual Basic ou C# no seu aplicativo Universal do Windows. 
 | [Plataforma XAML](xaml-platform/index.md) | Introdução aos conceitos básicos da linguagem de programação XAML. Ou, se você já está familiarizado com XAML, pule e saiba como implementar recursos do Windows Runtime em XAML usando o Visual Studio para criar um ótimo Aplicativo Universal do Windows. |
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

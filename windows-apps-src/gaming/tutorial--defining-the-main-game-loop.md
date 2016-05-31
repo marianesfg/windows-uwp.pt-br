@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Definir o objeto principal do jogo
 description: Agora, observaremos os detalhes do objeto principal do exemplo de jogo e como as regras implementadas são convertidas em interações com o ambiente do jogo.
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
@@ -7,9 +8,9 @@ ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
 # Definir o objeto principal do jogo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Até agora, desenvolvemos a estrutura básica de um jogo de exemplo e implementamos uma máquina de estado que manipula os comportamentos de alto nível de usuário e de sistema. Mas não examinamos a parte que transforma o exemplo em um jogo real: as regras e a mecânica, e como elas são implementadas. Agora, observaremos os detalhes do objeto principal do exemplo de jogo e como as regras implementadas são convertidas em manipulações com o ambiente do jogo.
+Até agora, desenvolvemos a estrutura básica de um jogo de exemplo e implementamos uma máquina de estado que manipula os comportamentos de alto nível de usuário e de sistema. Mas não examinamos a parte que transforma o exemplo em um jogo real: as regras e a mecânica, e como elas são implementadas. Agora, observaremos os detalhes do objeto principal do exemplo de jogo e como as regras implementadas são convertidas em interações com o ambiente do jogo.
 
 ## Objetivo
 
@@ -144,7 +145,7 @@ private:
 Na parte superior do exemplo do código, há quatro objetos cujas instâncias são atualizadas à medida que o loop do jogo é executado.
 
 -   O objeto **MoveLookController**. Esse objeto representa a entrada do jogador. (Para saber mais sobre o objeto **MoveLookController**, veja [Adicionando controles](tutorial--adding-controls.md).)
--   O objeto **GameRenderer**. Esse objeto representa o renderizador Direct3D 11 derivado da classe **DirectXBase** que manipula todos os objetos específicos ao dispositivo e suas renderizações. (Para saber mais, veja [Montando o pipeline de renderização](tutorial--assembling-the-rendering-pipeline.md)).
+-   O objeto **GameRenderer**. Esse objeto representa o renderizador Direct3D 11 derivado da classe **DirectXBase** que manipula todos os objetos específicos ao dispositivo e suas renderizações. (Para saber mais, consulte [Montando o pipeline de renderização](tutorial--assembling-the-rendering-pipeline.md)).
 -   O objeto **Camera**. Esse objeto representa a exibição da primeira pessoa do jogador no ambiente do jogo. (Para saber mais sobre o objeto **Camera**, veja [Montando o pipeline de renderização](tutorial--assembling-the-rendering-pipeline.md).)
 -   O objeto **Audio**. Esse objeto controla a reprodução de áudio do jogo. (Para saber mais sobre o objeto **Audio**, veja [Adicionando som](tutorial--adding-sound.md).)
 
@@ -3619,6 +3620,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

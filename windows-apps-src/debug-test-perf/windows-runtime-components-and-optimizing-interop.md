@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
 title: Componentes da Plataforma Universal do Windows e otimização de interoperabilidade
 description: Crie aplicativos da Plataforma Universal do Windows (UWP) que usam componentes UWP e interoperam entre tipos nativos e gerenciados, evitando problemas de desempenho de interoperabilidade.
@@ -38,7 +39,7 @@ O impacto sobre o desempenho só se torna perceptível após um número signific
 
 ### Considerar o uso de .NET para aplicativos UWP
 
-Há certos casos em que você pode realizar uma tarefa usando UWP ou .NET para aplicativos UWP. É recomendável tentar não misturar tipos .NET e UWP. Tente permanecer em um ou outro. Por exemplo, você pode analisar um fluxo de xml usando o tipo [**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/BR206173) (um tipo UWP) ou o tipo [**System.Xml.XmlReader**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.xml.xmlreader.aspx) (um tipo .NET). Use a API proveniente da mesma tecnologia que o fluxo. Por exemplo, se você ler xml de um [**MemoryStream**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.io.memorystream.aspx), use o tipo **System.Xml.XmlReader**, pois ambos são tipos .NET. Se você ler de um arquivo, use o tipo **Windows.Data.Xml.Dom.XmlDocument**, pois as APIs do arquivo e o **XmlDocument** são componentes UWP.
+Há certos casos em que você pode realizar uma tarefa usando UWP ou .NET para aplicativos UWP. É recomendável tentar não misturar tipos .NET e UWP. Tente permanecer em um ou outro. Por exemplo, você pode analisar um fluxo de xml usando o tipo [**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/BR206173) (um tipo UWP) ou o tipo [**System.Xml.XmlReader**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.xmlreader.aspx) (um tipo .NET). Use a API proveniente da mesma tecnologia que o fluxo. Por exemplo, se você ler xml de um [**MemoryStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.memorystream.aspx), use o tipo **System.Xml.XmlReader**, pois ambos são tipos .NET. Se você ler de um arquivo, use o tipo **Windows.Data.Xml.Dom.XmlDocument**, pois as APIs do arquivo e o **XmlDocument** são componentes UWP.
 
 ### Copiar objetos do Windows Runtime para tipos .NET
 
@@ -68,11 +69,11 @@ A UWP permite que os desenvolvedores criem aplicativos em XAML usando o idioma d
 
 ![As transições de interoperabilidade não podem dominar o tempo de execução do programa.](images/interop-transitions.png)
 
-Os tipos listados em [**.NET for Windows apps**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230232.aspx) não têm esse custo de interoperabilidade quando usados a partir do C# ou do Visual Basic. Como regra geral, você pode intuir que os tipos em namespaces que começam com “Windows.” são parte da UWP, e aqueles que começam com “System.” são tipos .NET. Até mesmo a utilização simples de tipos UWP, como o acesso à propriedade ou alocação acarreta custos de interoperabilidade.
+Os tipos listados em [**.NET for Windows apps**](https://msdn.microsoft.com/library/windows/apps/xaml/br230232.aspx) não têm esse custo de interoperabilidade quando usados a partir do C# ou do Visual Basic. Como regra geral, você pode intuir que os tipos em namespaces que começam com “Windows.” são parte da UWP, e aqueles que começam com “System.” são tipos .NET. Até mesmo a utilização simples de tipos UWP, como o acesso à propriedade ou alocação acarreta custos de interoperabilidade.
 
 Meça seu aplicativo e determine se a interoperabilidade está ocupando uma parte considerável do tempo de execução dos seus aplicativos, antes de otimizar seus custos de interoperabilidade. Ao analisar o desempenho do seu aplicativo com o Visual Studio, você pode obter uma estimativa dos custos de interoperabilidade usando o modo de exibição **Funções** e consultando o tempo inclusivo gasto em métodos que chamam a UWP.
 
-Se seu aplicativo está lento devido à sobrecarga de interoperabilidade, você pode melhorar seu desempenho reduzindo as chamadas a APIs UWP em caminhos de código executados intensivamente. Por exemplo, um mecanismo de jogo que esteja executando uma grande quantidade de cálculos de física consultando constantemente a posição e as dimensões de [**UIElements**](https://msdn.microsoft.com/library/windows/apps/BR208911) pode poupar muito tempo armazenando as informações necessárias de **UIElements** em variáveis locais, fazendo cálculos nesses valores armazenados em cache e atribuindo o resultado final novamente a **UIElements** após a conclusão dos cálculos. Outro exemplo: se uma coleção é intensamente acessada por código em C# ou Visual Basic, é mais eficiente usar uma coleção do namespace [**System.Collections**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.collections.aspx), em vez de uma coleção do namespace [**Windows.Foundation.Collections**](https://msdn.microsoft.com/library/windows/apps/BR206657). Você também pode considerar o uso de chamadas combinadas a componentes UWP, por exemplo, com o uso de APIs [**Windows.Storage.BulkAccess**](https://msdn.microsoft.com/library/windows/apps/BR207676).
+Se seu aplicativo está lento devido à sobrecarga de interoperabilidade, você pode melhorar seu desempenho reduzindo as chamadas a APIs UWP em caminhos de código executados intensivamente. Por exemplo, um mecanismo de jogo que esteja executando uma grande quantidade de cálculos de física consultando constantemente a posição e as dimensões de [**UIElements**](https://msdn.microsoft.com/library/windows/apps/BR208911) pode poupar muito tempo armazenando as informações necessárias de **UIElements** em variáveis locais, fazendo cálculos nesses valores armazenados em cache e atribuindo o resultado final novamente a **UIElements** após a conclusão dos cálculos. Outro exemplo: se uma coleção é intensamente acessada por código em C# ou Visual Basic, é mais eficiente usar uma coleção do namespace [**System.Collections**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.aspx), em vez de uma coleção do namespace [**Windows.Foundation.Collections**](https://msdn.microsoft.com/library/windows/apps/BR206657). Você também pode considerar o uso de chamadas combinadas a componentes UWP, por exemplo, com o uso de APIs [**Windows.Storage.BulkAccess**](https://msdn.microsoft.com/library/windows/apps/BR207676).
 
 ### Criando um componente UWP
 
@@ -84,6 +85,6 @@ Todas as sugestões com vistas ao bom desempenho nos aplicativos são extensivas
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

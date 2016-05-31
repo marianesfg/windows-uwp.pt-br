@@ -1,15 +1,16 @@
 ---
-title: Dimensionamento e sobreposições de cadeias de troca
-description: Saiba como criar cadeias de troca dimensionadas para renderização mais rápida em dispositivos móveis, e a usar cadeias de troca com sobreposições (quando disponíveis) para melhorar a qualidade visual.
+author: mtoepke
+title: Dimensionamento e sobreposições de cadeia de troca
+description: Saiba como criar cadeias de troca dimensionadas para permitir renderização mais rápida em dispositivos móveis e usar cadeias de troca sobrepostas (quando disponíveis) para aumentar a qualidade visual.
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
 ---
 
-# Dimensionamento e sobreposições de cadeias de troca
+# Dimensionamento e sobreposições de cadeia de troca
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Saiba como criar cadeias de troca dimensionadas para renderização mais rápida em dispositivos móveis, e a usar cadeias de troca com sobreposições (quando disponíveis) para melhorar a qualidade visual.
+Saiba como criar cadeias de troca dimensionadas para permitir renderização mais rápida em dispositivos móveis e usar cadeias de troca sobrepostas (quando disponíveis) para aumentar a qualidade visual.
 
 ## Cadeias de troca no DirectX 11.2
 
@@ -158,7 +159,7 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
 
     > **Observação**   Defina o [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) novamente sempre que a cadeia de troca for redimensionada.
 
-     ```cpp
+    ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(
         2, // Double-buffered swap chain.
         static_cast<UINT>(m_d3dRenderTargetSize.Width),
@@ -323,6 +324,6 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

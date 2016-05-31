@@ -1,12 +1,13 @@
 ---
+author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
-description: Introdução a controles comuns
-title: Introdução a controles comuns
+description: Introdução aos controles comuns
+title: Introdução aos controles comuns
 ---
 
 # Introdução: controles comuns
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Lista de controles comuns
 
@@ -18,9 +19,9 @@ O que há de mais inteligente com relação aos controles UWP é que eles podem 
 |------------------------------|--------------------------------------|
 | Indicador de atividade (**UIActivityIndicatorView**) | [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> Consulte também [Guia de início rápido: adicionando controles de progresso](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) |
 | Visualização da barra de notificação de anúncio (**ADBannerView**) e representante de visualização da barra de notificação de anúncio (**ADBannerViewDelegate**) | Consulte [Microsoft Advertising SDK](http://go.microsoft.com/fwlink/p/?LinkId=263494) |
-| Botão (UIButton) | [Button](https://msdn.microsoft.com/library/windows/apps/br209265) <br/> Consulte também [Guia de início rápido: adicionando controles de botão](https://msdn.microsoft.com/library/windows/apps/xaml/jj153346) |
+| Botão (UIButton) | [Botão](https://msdn.microsoft.com/library/windows/apps/br209265) <br/> Consulte também [Guia de início rápido: adicionando controles de botão](https://msdn.microsoft.com/library/windows/apps/xaml/jj153346) |
 | Seletor de data (UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
-| Visualização de imagem (UIImageView) | [Image](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Consulte também [Image and ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
+| Visualização de imagem (UIImageView) | [Imagem](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Consulte também [Image and ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
 | Rótulo (UILabel) | [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) <br/> Consulte também [Guia de início rápido: exibindo texto](https://msdn.microsoft.com/library/windows/apps/xaml/hh700392) |
 | Visualização de mapa (MKMapView) e representante de visualização de mapa (MKMapViewDelegate) | Consulte [Bing Mapas para aplicativos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkId=263496) |
 | Controlador de navegação (UINavigationController) e representante de controlador de navegação (UINavigationControllerDelegate) | [Frame](https://msdn.microsoft.com/library/windows/apps/br242682) <br/> Consulte também [Navegação](https://msdn.microsoft.com/library/windows/apps/mt187344) |
@@ -30,7 +31,7 @@ O que há de mais inteligente com relação aos controles UWP é que eles podem 
 | Visualização de rolagem (UIScrollView) e representante de visualização de rolagem (UIScrollViewDelegate) | [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/br209527) <br/>  Consulte também [Extensible Application Markup Language (XAML) scrolling, panning, and zooming sample](http://go.microsoft.com/fwlink/p/?LinkId=238577) |
 | Barra de pesquisa (UISearchBar) e representante da barra de pesquisa (UISearchBarDelegate) | Consulte [Adicionando pesquisa a um aplicativo](https://msdn.microsoft.com/library/windows/apps/xaml/jj130767) <br/>  Consulte também [Guia de início rápido: adicionando pesquisa a um aplicativo](https://msdn.microsoft.com/library/windows/apps/xaml/hh868180) |
 | Controle segmentado (UISegmentedControl) | Nenhum |
-| Controle deslizante (UISlider) | [Slider](https://msdn.microsoft.com/library/windows/apps/br209614) <br/>  Consulte também [Como adicionar um controle deslizante](https://msdn.microsoft.com/library/windows/apps/xaml/hh868197) |
+| Controle deslizante (UISlider) | [Controle deslizante](https://msdn.microsoft.com/library/windows/apps/br209614) <br/>  Consulte também [Como adicionar um controle deslizante](https://msdn.microsoft.com/library/windows/apps/xaml/hh868197) |
 | Controlador de modo divisão (UISplitViewController) e representante do controlador de modo divisão (UISplitViewControllerDelegate) | Nenhum |
 | Botão de alternância (UISwitch) | [ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/br209712) <br/>  Consulte também [Como adicionar um botão de alternância](https://msdn.microsoft.com/library/windows/apps/xaml/hh868198) |
 | Controlador de barra de guia (UITabBarController) e representante do controlador de barra de guia (UITabBarControllerDelegate) | Nenhum |
@@ -56,6 +57,6 @@ Para ainda mais controles, consulte [Lista de controles](https://msdn.microsoft.
 * [build 2014: usando o Visual Studio para compilar aplicativos convergidos para XAML](http://go.microsoft.com/fwlink/p/?LinkID=397876)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

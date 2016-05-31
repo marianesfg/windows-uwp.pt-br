@@ -1,16 +1,13 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Assim como as pessoas usam uma combinação de voz e gestos ao se comunicar uns com os outros, vários tipos e modos de entrada também podem ser úteis ao interagir com um aplicativo.
-title: diretrizes para design de várias entradas
+title: Diretrizes para design de várias entradas
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
-label: Várias entradas
+label: Multiple inputs
 template: detail.hbs
 ---
 
 # Várias entradas
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Assim como as pessoas usam uma combinação de voz e gestos ao se comunicar uns com os outros, vários tipos e modos de entrada também podem ser úteis ao interagir com um aplicativo.
 
@@ -33,16 +30,16 @@ Com interações de modo único, há suporte para vários tipos de entrada, mas 
 
 Com interações multimodais, vários métodos de entrada em sequência são usados para concluir uma única ação.
 
-<span id="Speech___gesture"></span><span id="speech___gesture"></span><span id="SPEECH___GESTURE"></span>Controle por voz + gestos  
+<span id="Speech___gesture"></span><span id="speech___gesture"></span><span id="SPEECH___GESTURE"></span>Fala + gesto  
 O usuário aponta para um produto e diz "Adicionar ao carrinho".
 
-<span id="Speech___touch"></span><span id="speech___touch"></span><span id="SPEECH___TOUCH"></span>Controle por voz + toque  
+<span id="Speech___touch"></span><span id="speech___touch"></span><span id="SPEECH___TOUCH"></span>Fala + toque  
 O usuário seleciona uma foto usando pressionar e segurar e, em seguida, diz "Enviar foto".
 
 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

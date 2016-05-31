@@ -1,12 +1,13 @@
 ---
-description: Introdução à UWP para desenvolvedores iOS
-title: Introdução à UWP para desenvolvedores iOS
+author: mcleblanc
+description: Introdução à UWP para desenvolvedores de iOS
+title: Introdução à UWP para desenvolvedores de iOS
 ms.assetid: 9F67068B-E578-4C70-B3E0-DFF150FA9BDD
 ---
 
-# Introdução à UWP para desenvolvedores iOS
+# Introdução à UWP para desenvolvedores de iOS
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Se você for um desenvolvedor do iOS e estiver cogitando desenvolver para o Windows 10, esses documentos são um excelente ponto de partida. Eles apresentam alguns dos conceitos que você precisará conhecer ao começar a escrever aplicativos e abordam a maneira como é possível publicar seu trabalho na Windows Store.
 
@@ -26,7 +27,8 @@ Para começar com estes tutoriais, você precisa ter um computador com o Windows
 | [Introdução: controles comuns](getting-started-common-controls.md) | Aqui estão alguns controles comuns que você usará em seus aplicativos e seus equivalentes do iOS. |
 | [Introdução: navegação](getting-started-navigation.md) | Uma das maneiras de gerenciar essa navegação em um aplicativo do Windows 10 é usar a classe [Frame](https://msdn.microsoft.com/library/windows/apps/br242682). O guia passo a passo a seguir mostra como você pode tentar fazer isso. |
 | [Introdução: animação](getting-started-animation.md) | As animações em aplicativos do Windows podem ser criadas via programação, mas também podem ser definidas declarativamente com a linguagem XAML. |
-| [Introdução: o que vem a seguir?](getting-started-what-next.md) | Com essas informações básicas, você agora pode começar a escrever aplicativos UWP (Plataforma Universal do Windows) mais interessantes. Para as próximas etapas, leia os tópicos a seguir e, em seguida, inicie o Visual Studio e comece a escrever código! |
+| [Introdução: o que vem depois?](getting-started-what-next.md) | Com essas informações básicas, você agora pode começar a escrever aplicativos UWP (Plataforma Universal do Windows) mais interessantes. Para as próximas etapas, leia os tópicos a seguir e, em seguida, inicie o Visual Studio e comece a escrever código! |
+| [Mapeamento de conceito de aplicativo do Windows](https://msdn.microsoft.com//windows/uwp/porting/android-ios-uwp-map) | Como pensar em conceitos de iOS em termos de Windows (e Android) |
 
  
 
@@ -35,10 +37,6 @@ Para começar com estes tutoriais, você precisa ter um computador com o Windows
  
 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

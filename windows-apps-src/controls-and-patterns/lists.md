@@ -1,8 +1,9 @@
 ---
-Description: Listas são exibidas e permitem a interação com o conteúdo baseado em coleção.
+author: Jwmsft
+Description: Listas são exibidas e permitem a interação com conteúdo baseado em coleção.
 title: Listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
-label: Listas
+label: Lists
 template: detail.hbs
 ---
 # Listas
@@ -27,7 +28,7 @@ Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de l
 
 Modos de exibição de lista permitem que você classifique itens e atribua cabeçalhos de grupo, arraste e solte itens, corrija conteúdo e reordene os itens.
 
-### Este é o controle correto?
+### Esse é o controle correto?
 
 Use um modo de exibição de lista para:
 
@@ -56,7 +57,7 @@ O exemplo de um layout de lista possui cabeçalhos de grupo e é exibido como um
 
 Modos de exibição de grade são adequados para organizar e navegar em coleções de conteúdos baseadas em imagens. Um layout de modo de exibição de grade rola verticalmente e faz movimento panorâmico na horizontal. Os itens são dispostos na ordem de leitura da esquerda para a direita, depois de cima para baixo.
 
-### Este é o controle correto?
+### Esse é o controle correto?
 
 Use um modo de exibição de lista para:
 
@@ -83,7 +84,7 @@ Um modo de exibição de grade é a solução ideal para uma biblioteca de conte
 
 Listas suspensas, também conhecidas como caixas de combinação, começam em um estado compacto e se expandem para mostrar uma lista de itens selecionáveis. Uma lista suspensa aceita seleção única ou seleção múltipla. O item selecionado fica sempre visível, e os itens não visíveis podem ser exibidos quando o usuário tocar no item selecionado.
 
-### Este é o controle correto?
+### Esse é o controle correto?
 
 -   Use um controle de lista suspensa para permitir aos usuários selecionar um ou mais valores de um conjunto de itens que podem ser representados adequadamente com linhas de texto únicas.
 -   Use um modo de exibição de lista ou de grade em vez de uma lista suspensa para exibir itens que contenham várias linhas de texto ou imagens.
@@ -113,7 +114,7 @@ Se a coleção em uma lista suspensa for grande o suficiente, será exibida uma 
 
 Uma caixa de listagem permite que o usuário escolha um único item ou vários itens de uma coleção. Caixas de listagem são semelhantes a listas suspensas, exceto que as caixas de listagem ficam sempre abertas: não há estado compacto (não expandido) para uma caixa de listagem. Pode-se fazer a rolagem pelos itens em uma lista se não houver espaço para mostrar tudo.
 
-### Este é o controle correto?
+### Esse é o controle correto?
 
 -   Uma caixa de listagem pode ser útil quando itens da lista são importantes o suficiente para serem exibidos em destaque e quando há espaço suficiente na tela para mostrar a lista completa.
 -   Uma caixa de listagem deve chamar a atenção do usuário para todo o conjunto de alternativas em uma escolha importante. Por outro lado, uma lista suspensa inicialmente atrai a atenção do usuário para o item selecionado.
@@ -174,7 +175,6 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 
 ## Artigos relacionados
 
-**Para designers**
 - [Hub](hub.md)
 - [Mestre/detalhes](master-details.md)
 - [Painel de navegação](nav-pane.md)
@@ -189,6 +189,6 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

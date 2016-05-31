@@ -1,14 +1,15 @@
 ---
-description: Se você tiver um projeto do Windows 10 criado com o Microsoft Visual Studio 2015 RC, você tem duas opções de atualização dos arquivos de projeto para o formato adequado para Visual Studio 2015 RTM.
+author: mcleblanc
+description: Se você tiver um projeto do Windows 10 criado com o Microsoft Visual Studio 2015 RC, terá duas opções de atualização dos arquivos de projeto para o formato adequado para Visual Studio 2015 RTM.
 title: Atualizar seu projeto do Microsoft Visual Studio 2015 RC para RTM na UWP
 ms.assetid: 104E36CE-36DE-4E9C-A944-711C200B44EF
 ---
 
 # Atualizar seu projeto do Microsoft Visual Studio 2015 RC para RTM na UWP
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Se você tiver um projeto do Windows 10 criado com o Microsoft Visual Studio 2015 RC, você tem duas opções de atualização dos arquivos de projeto para o formato adequado para Visual Studio 2015 RTM. O método recomendado é criar um novo projeto do Windows 10 no Visual Studio 2015 RTM e copiar seus arquivos para ele. Como alternativa, você pode seguir a documentação avançada para editar seus arquivos de projeto existentes e transferi-los para o novo formato.
+Se você tiver um projeto do Windows 10 criado com o Microsoft Visual Studio 2015 RC, terá duas opções de atualização dos arquivos de projeto para o formato adequado para Visual Studio 2015 RTM. O método recomendado é criar um novo projeto do Windows 10 no Visual Studio 2015 RTM e copiar seus arquivos para ele. Como alternativa, você pode seguir a documentação avançada para editar seus arquivos de projeto existentes e transferi-los para o novo formato.
 
 ## O que você vê quando abre um projeto do Windows 10Visual Studio 2015 RC no Visual Studio 2015 RTM
 
@@ -36,6 +37,6 @@ Se você deseja atualizar manualmente seu projeto, ou se você estiver interessa
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

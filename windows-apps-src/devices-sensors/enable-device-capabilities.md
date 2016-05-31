@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
 title: Habilitar os recursos do dispositivo
 description: Este tutorial descreve como declarar recursos do dispositivo no Microsoft Visual Studio. Isso permite que o aplicativo use câmeras, microfones, sensores de localização e outros dispositivos.
 ---
 # Habilitar os recursos do dispositivo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tutorial descreve como declarar recursos do dispositivo no Microsoft Visual Studio. Isso permite que o aplicativo use câmeras, microfones, sensores de localização e outros dispositivos.
@@ -24,7 +25,7 @@ Alguns tipos de dispositivos, como impressoras, scanners e sensores, não precis
 
 | Funcionalidade do Dispositivo | Designer de Manifesto | Descrição |
 |-------------------|-------------------|-------------|    
-| Todos os Joyn | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Permite a descoberta e a interação entre aplicativos e dispositivos habilitados para AllJoyn em uma rede. Os aplicativos que acessam APIs no namespace [**Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) devem usar essa funcionalidade. |
+| AllJoyn | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Permite a descoberta e a interação entre aplicativos e dispositivos habilitados para AllJoyn em uma rede. Os aplicativos que acessam APIs no namespace [**Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) devem usar essa funcionalidade. |
 | Mensagens de Chat Bloqueadas | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Permite que os aplicativos leiam mensagens SMS e MMS que foram bloqueadas pelo aplicativo Filtro de Spam. |
 | Acesso a Mensagens de Chat | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Permite que os aplicativos leiam e excluam mensagens de texto. Permite que os aplicativos armazenem mensagens de chat no armazenamento de dados do sistema. |
 | Geração de Código | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Permite que aplicativos gerem códigos dinamicamente. |
@@ -57,7 +58,7 @@ A tabela a seguir conecta alguns dos recursos a APIs do Windows Runtime.
 
 | Funcionalidade do Dispositivo        | API             | 
 |--------------------------|-----------------|
-| Todos os Joyn                 | [**Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) | 
+| AllJoyn                  | [**Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) | 
 | Mensagens de Chat Bloqueadas    | [**Windows.ApplicationModel.CommunicationBlocking**](https://msdn.microsoft.com/library/windows/apps/Dn974207) | 
 | Localização                 | Veja [Visão geral de localização e mapas](https://msdn.microsoft.com/library/windows/apps/Mt219699) para saber mais. | 
 | Telefonema               | [**Windows.ApplicationModel.Calls**](https://msdn.microsoft.com/library/windows/apps/Dn297266) | 
@@ -71,6 +72,6 @@ A tabela a seguir conecta alguns dos recursos a APIs do Windows Runtime.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,12 +1,13 @@
 ---
+author: drewbatgit
 ms.assetid: AE98C22B-A071-4206-ABBB-C0F0FB7EF33C
-description: Este artigo descreve como adicionar reprodução de conteúdo adaptativo de multimídia de streaming a aplicativos da Plataforma Universal do Windows (UWP). Esse recurso atualmente oferece suporte para reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP).
+description: Este artigo descreve como adicionar a reprodução de conteúdo multimídia de streaming adaptável a aplicativos da Plataforma Universal do Windows (UWP). Esse recurso atualmente oferece suporte para reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP).
 title: Streaming adaptável
 ---
 
 # Streaming adaptável
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artigo descreve como adicionar reprodução de conteúdo adaptativo de multimídia de streaming a aplicativos da Plataforma Universal do Windows (UWP). Esse recurso atualmente oferece suporte para reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP).
 
@@ -57,6 +58,6 @@ O objeto **AdaptiveMediaSource** fornece eventos que permitem que você reaja qu
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

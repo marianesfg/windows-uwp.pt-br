@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: O seletor de data do calendário é um controle suspenso otimizado para escolher uma única data em uma exibição de calendário onde informações contextuais como dia da semana ou integridade do calendário são importantes.
 title: Seletor de data do calendário
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
@@ -10,7 +11,7 @@ template: detail.hbs
 
 O seletor de data do calendário é um controle suspenso otimizado para escolher uma única data em uma exibição de calendário onde informações contextuais como dia da semana ou integridade do calendário são importantes. Você pode modificar o calendário para fornecer contexto adicional ou limitar as datas disponíveis.
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs Importantes</span>
+<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
 
 -   [**Classe TimePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)
 -   [**Propriedade Time**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.time.aspx)
@@ -63,7 +64,8 @@ Quando você define a data em código, o valor é restringido pelas propriedades
 
 Você pode manipular o evento [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) para ser notificado quando o valor Date for alterado.
 
-> **Observação**&nbsp;&nbsp;Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendário](date-and-time.md#datetime-and-calendar-values) no artigo de controles de data e hora.
+> **Observação**
+            &nbsp;&nbsp;Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os controles de Data e Hora.
 
 ### Definindo um texto de cabeçalho e o espaço reservado
 
@@ -84,6 +86,6 @@ O texto de espaço reservado padrão é "selecionar uma data". Você pode remove
 - [Seletor de hora](time-picker.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

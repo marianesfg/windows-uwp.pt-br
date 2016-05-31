@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 title: Atributo xPhase
 description: Use xPhase com a extensão de marcação xBind para renderizar os itens ListView e GridView de maneira incremental e melhorar a experiência de movimento panorâmico.
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
@@ -6,7 +7,7 @@ ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
 
 # atributo x:Phase
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use **x:Phase** com a [extensão de marcação {x:Bind}](x-bind-markup-extension.md) para renderizar os itens [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) de maneira incremental e melhorar a experiência de movimento panorâmico. **x:Phase** oferece uma maneira declarativa de conseguir o mesmo efeito que o uso do evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) para controlar manualmente a renderização de itens de lista. Consulte também [Atualizar os itens GridView e ListView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
@@ -32,7 +33,7 @@ O atributo Phase permite renderização incremental do modelo de dados, de modo 
 
 ## Exemplo
 
-```xaml
+```xml
 <DataTemplate x:Key="PhasedFileTemplate" x:DataType="model:FileItem">
     <Grid Width="200" Height="80">
         <Grid.ColumnDefinitions>
@@ -75,6 +76,6 @@ O atributo Phase será aplicado somente quando o modelo de item for renderizado,
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

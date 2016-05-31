@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: A Windows Store oferece a Cobrança da Operadora Móvel como um método de pagamento para operadoras de celular que dão suporte a esse recurso.
 title: Cobrança da operadora móvel
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
@@ -9,7 +10,7 @@ ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 
 A Windows Store oferece a Cobrança da Operadora Móvel como um método de pagamento para operadoras de celular que dão suporte a esse recurso. Se a operadora móvel de um cliente oferecer suporte a essa capacidade, o cliente pode fazer mais compras da Loja utilizando suas contas móveis.
 
-> **Observação** se a operadora móvel do cliente oferece a Cobrança da Operadora Móvel, mas o cliente não tem essa opção em seu dispositivo, consulte estas [etapas de solução de problemas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
+> **Observação** Se a operadora móvel do cliente oferecer a Cobrança da Operadora Móvel, mas o cliente não tiver essa opção em seu dispositivo, consulte estas [etapas de solução de problemas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
 
  
 
@@ -43,7 +44,7 @@ A implementação herdada da Cobrança da Operadora Móvel tem o suporte dessas 
 | Austrália            | Telstra                                                            |
 | Áustria              | A1 Telekom, T-Mobile                                               |
 | Bahrein              | Zain, VIVA                                                         |
-| Bélgica              | BASE, Mobistar                                                     |
+| Bélgica              | BASE, Mobistar, Proximus                                                     |
 | Brasil               | Claro                                                              |
 | Bulgária             | Telenor                                                            |
 | Canadá               | Fido, Rogers, Telus                                                |
@@ -64,7 +65,7 @@ A implementação herdada da Cobrança da Operadora Móvel tem o suporte dessas 
 | Hungria              | Telenor, T-Mobile                                                  |
 | Índia                | Idea                                                               |
 | Indonésia            | Indosat, Telkomsel, XL Axiata, AXIS                                |
-| Irlanda              | O2, Vodafone                                                       |
+| Irlanda              | O2, Vodafone, Three                                                      |
 | Itália                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
 | Jordânia               | Zain, Umniah                                                       |
 | Quênia                | Safaricom                                                          |
@@ -82,7 +83,7 @@ A implementação herdada da Cobrança da Operadora Móvel tem o suporte dessas 
 | Polônia               | T-Mobile, Orange, Polkomtel (Plus)                                 |
 | Porto Rico          | Claro                                                              |
 | Romênia              | Orange, Vodafone                                                   |
-| Rússia               | Beeline                                                            |
+| Rússia               | Beeline, MTS                                                          |
 | Arábia Saudita         | Zain                                                               |
 | Cingapura            | M1, SingTel, StarHub                                               |
 | Eslováquia             | T-Mobile                                                           |
@@ -110,6 +111,6 @@ Essa lista será atualizada regularmente conforme expandimos o suporte para a Co
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

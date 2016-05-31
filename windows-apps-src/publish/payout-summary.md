@@ -1,15 +1,16 @@
 ---
-Description: O resumo de Pagamento mostra detalhes do dinheiro que você ganhou com os seus aplicativos e produtos no aplicativo. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
-title: Resumo de pagamento
+author: jnHs
+Description: O Resumo de pagamento mostra detalhes do dinheiro que você ganhou com os seus aplicativos e produtos no aplicativo. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
+title: Resumo de pagamentos
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ---
 
-# Resumo de pagamento
+# Resumo de pagamentos
 
 
 O **Resumo de pagamento** mostra detalhes do dinheiro que você ganhou com os seus aplicativos e produtos no aplicativo. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
 
-Se você usa o Microsoft Advertising para ganhar dinheiro desde 1º de abril de 2016, também verá informações de pagamento sobre receita de publicidade no **Resumo de pagamento**. Para obter mais detalhes sobre políticas de pagamento de publicidade, consulte as [Políticas de pagamento do pubCenter](http://go.microsoft.com/fwlink/p/?LinkID=624469).
+Se você usa o Microsoft Advertising para ganhar dinheiro desde 1º de abril de 2016, também verá informações de pagamento sobre receita de publicidade no **Resumo de pagamento**. Mostraremos o aplicativo no qual essas receitas foram ganhas ou "não mapeado" para unidades utilizadas em vários aplicativos ou que não podem ser mapeadas para um aplicativo específico. Para obter mais detalhes sobre políticas de pagamento de publicidade, consulte as [Políticas de pagamento do pubCenter](http://go.microsoft.com/fwlink/p/?LinkID=624469).
 
 Se você vender produtos no Azure Marketplace, também verá informações sobre pagamentos bem-sucedidos a partir 1º de novembro de 2015 e em **Resumo de pagamento**. Para saber mais sobre o pagamento do Azure Marketplace, consulte [Políticas de Participação do Microsoft Azure Marketplace](http://go.microsoft.com/fwlink/p/?LinkId=722436) e [Microsoft Azure Marketplace Publisher Agreement](http://go.microsoft.com/fwlink/p/?LinkID=699560 ). Mais informações sobre como visualizar informações de pagamento anteriores do Azure Marketplace podem ser encontradas [aqui](http://go.microsoft.com/fwlink/p/?LinkID=722439).
 
@@ -68,7 +69,7 @@ A tabela a seguir descreve os campos que aparecem no arquivo .csv. Observe que o
 
 | Nome do campo              | Descrição                                                                                                                              |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Fonte de Receita          | A fonte de sua receita, com base em onde ocorreu a transação (por exemplo, Loja do Windows Phone, Loja do Windows 8, Windows Store, etc.)  |
+| Fonte de Receita          | A fonte de sua receita, com base no local onde ocorreu a transação (por exemplo, Windows Store, Loja do Windows Phone, Loja do Windows 8, Microsoft Advertising, etc.) |
 | ID da transação          | Identificador exclusivo da transação                                                                                                            |
 | Data/hora da transação   | A data e a hora em que a transação ocorreu (UTC)                                                                                         |
 | ID do produto pai       | Identificador exclusivo do produto pai. Observação: se não houver um produto pai para a transação, então ID do produto pai = ID do produto. |
@@ -76,8 +77,9 @@ A tabela a seguir descreve os campos que aparecem no arquivo .csv. Observe que o
 | Nome do produto pai     | Nome do produto pai. Observação: se não houver um produto pai para a transação, então Nome do produto pai = Nome do produto.   |
 | Nome do produto            | Nome do produto                                                                                                                      |
 | Tipo de produto            | Tipo de produto (por exemplo, aplicativo, no aplicativo, jogo, etc.)                                                                                        |
+| Quantidade                | Quando a origem da receita é a Windows Store para Empresas, a quantidade representa o número de licenças adquiridas. Para todas as outras fontes de receita, a quantidade sempre será 1. Observação: mesmo quando uma única transação é dividida em dois itens de linha porque foram usados dois métodos de pagamento diferentes, cada item de linha mostrará uma quantidade de 1.                                                                     |
 | Tipo de transação        | Tipo de transação (por exemplo, compra, reembolso, estorno, etc.)                                                               |
-| Forma de pagamento          | A forma de pagamento do cliente usada na transação (por exemplo, cartão de crédito, conta de celular, etc)                                        |
+| Forma de pagamento          | A forma de pagamento do cliente usada na transação (por exemplo, cartão de crédito, conta de celular, PayPal, etc)                                        |
 | País/região        | País/região onde ocorreu a transação                                                                                            |
 | Vendedor ou provedor local | Vendedor ou provedor local do registro                                                                                                          |
 | Moeda da transação    | Moeda da transação                                                                                                              |
@@ -105,6 +107,6 @@ A tabela a seguir descreve os campos que aparecem no arquivo .csv. Observe que o
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

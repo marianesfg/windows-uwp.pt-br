@@ -1,16 +1,13 @@
 ---
+author: mijacobs
 Description: A navegação em aplicativos da Plataforma Universal do Windows (UWP) é baseada em um modelo flexível de estruturas de navegação, elementos de navegação e recursos no nível do sistema.
-title: Noções básicas de design de navegação para aplicativos da Plataforma Universal do Windows (UWP)
+title: Noções básicas de design de navegação de aplicativos da Plataforma Universal do Windows (UWP)
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
-label: Noções básicas de design de navegação
+label: Navigation design basics
 template: detail.hbs
 ---
 
 #  Noções básicas de design de navegação para aplicativos UWP
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 A navegação em aplicativos da Plataforma Universal do Windows (UWP) é baseada em um modelo flexível de estruturas de navegação, elementos de navegação e recursos no nível do sistema. Juntos, eles permitem diversas experiências de usuário ao se mover entre aplicativos, páginas e conteúdos.
 
@@ -30,7 +27,7 @@ Para serem bem-sucedidas e fazerem sentido para os usuários, as experiências d
 
     Para oferecer uma experiência consistente que pareça intuitiva, responda a recursos de navegação no nível do sistema de maneiras previsíveis.
 
-## <span id="Build_the_right_navigation_structure"></span><span id="build_the_right_navigation_structure"></span><span id="BUILD_THE_RIGHT_NAVIGATION_STRUCTURE"></span>Crie a estrutura de navegação correta
+## <span id="Build_the_right_navigation_structure"></span><span id="build_the_right_navigation_structure"></span><span id="BUILD_THE_RIGHT_NAVIGATION_STRUCTURE"></span>Criar a estrutura de navegação correta
 
 
 Vamos olhar para um aplicativo como uma coleção de grupos de páginas, na qual cada página contém um conjunto exclusivo de conteúdos ou funcionalidades. Por exemplo, um aplicativo de fotos pode ter uma página para tirar fotos, uma página para edição de imagens e outra página para o gerenciamento de sua biblioteca de imagens. A maneira em que você organiza essas páginas em grupos define a estrutura de navegação do aplicativo. Há duas maneiras comuns de organizar um grupo de páginas:
@@ -93,7 +90,7 @@ Então, quando você deve organizar as páginas em hierarquias e quando deve org
 
  
 
-## <span id="Use_the_right_navigation_elements"></span><span id="use_the_right_navigation_elements"></span><span id="USE_THE_RIGHT_NAVIGATION_ELEMENTS"></span>Use os elementos de navegação corretos
+## <span id="Use_the_right_navigation_elements"></span><span id="use_the_right_navigation_elements"></span><span id="USE_THE_RIGHT_NAVIGATION_ELEMENTS"></span>Use os elementos de navegação para a direita
 
 
 Elementos de navegação podem fornecer dois serviços: eles ajudam o usuário a acessar o conteúdo desejado e alguns elementos também permitem que os usuários saibam onde eles estão dentro do aplicativo. No entanto, eles também ocupam espaço que o aplicativo poderia usar para elementos de conteúdo ou comandos, portanto, é importante usar os elementos de navegação que sejam ideais para a estrutura do seu aplicativo.
@@ -119,7 +116,7 @@ Para a navegação ponto a ponto, recomendamos o uso de guias ou de um painel de
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Tabs and pivot](../controls-and-patterns/tabs-pivot.md)</p>
+<td align="left"><p>[Guias e pivôs](../controls-and-patterns/tabs-pivot.md)</p>
 <p><img src="images/nav/nav-tabs-sm-300.png" alt="Tab-based navigation" /></p></td>
 <td align="left">Exibe uma lista persistente de links para páginas no mesmo nível.
 <p>Use guias/pivôs quando:</p>
@@ -132,7 +129,7 @@ Para a navegação ponto a ponto, recomendamos o uso de guias ou de um painel de
 <p><img src="images/food-truck-finder/uap-foodtruck-tabletphone-sbs-sm-400.png" alt="Example of an app using tabs/pivots pattern" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Nav pane](../controls-and-patterns/nav-pane.md)</p>
+<td align="left"><p>[Painel de navegação](../controls-and-patterns/nav-pane.md)</p>
 <p><img src="images/nav/nav-navpane-4page-thumb.png" alt="A navigation pane" /></p></td>
 <td align="left">Exibe uma lista de links para páginas de nível superior.
 <p>Use um painel de navegação quando:</p>
@@ -179,7 +176,7 @@ Os elementos de navegação hierárquica fornecem navegação entre uma página 
 <tr class="odd">
 <td align="left"><p>[Hub](../controls-and-patterns/hub.md)</p>
 <p><img src="images/higsecone-hub-thumb.png" alt="Hub" /></p></td>
-<td align="left">Um hub é um tipo especial de controle de navegação que fornece visualizações/resumos de suas páginas filho. Ao contrário do painel de navegação ou guias, ele fornece navegação para essas páginas filho por meio de links e cabeçalhos de seção inseridos na própria página.
+<td align="left">Hub é um tipo especial de controle de navegação que fornece visualizações/resumos de suas páginas filho. Ao contrário do painel de navegação ou guias, ele fornece navegação para essas páginas filho por meio de links e cabeçalhos de seção inseridos na própria página.
 <p>Use um hub quando:</p>
 <ul>
 <li>Você espera que os usuários desejem visualizar parte do conteúdo das páginas filho sem ter que navegar até cada uma delas.</li>
@@ -188,9 +185,9 @@ Os elementos de navegação hierárquica fornecem navegação entre uma página 
 <p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Master/details](../controls-and-patterns/master-details.md)</p>
+<td align="left"><p>[Mestre/detalhes](../controls-and-patterns/master-details.md)</p>
 <p><img src="images/higsecone-masterdetail-thumb.png" alt="Master/details" /></p></td>
-<td align="left">Exibe uma lista (exibição mestre) de resumos de item. A seleção de um item exibe a página de itens correspondente na seção detalhes.
+<td align="left">Exibe uma lista (exibição mestre) de resumos de item. Selecionar um item exibe a página de itens correspondente na seção de detalhes.
 <p>Use o elemento mestre/detalhes quando:</p>
 <ul>
 <li>Você espera que os usuários alternem entre os itens filho com frequência.</li>
@@ -221,14 +218,14 @@ Os elementos de navegação hierárquica fornecem navegação entre uma página 
 <tbody>
 <tr class="odd">
 <td align="left">Voltar</td>
-<td align="left"><p>Permite que o usuário atravesse o histórico de navegação dentro de um aplicativo e, dependendo do dispositivo, de um aplicativo para outro. Para obter mais informações, consulte a seção [Make your app work well with system-level navigation features](#backnavigation) posteriormente neste artigo.</p></td>
+<td align="left"><p>Façamos o usuário percorrer o histórico de navegação dentro de um aplicativo e, dependendo do dispositivo, de aplicativo para aplicativo. Para obter mais informações, consulte a seção [Faça seu aplicativo funcionar bem com recursos de navegação de nível do sistema](#backnavigation) a ser exibido posteriormente neste artigo.</p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-### <span id="Content-embedded_navigation_elements"></span><span id="content-embedded_navigation_elements"></span><span id="CONTENT-EMBEDDED_NAVIGATION_ELEMENTS"></span>Elementos de navegação com conteúdo inserido
+### <span id="Content-embedded_navigation_elements"></span><span id="content-embedded_navigation_elements"></span><span id="CONTENT-EMBEDDED_NAVIGATION_ELEMENTS"></span>Elementos de navegação de conteúdo inseridos
 
 <table>
 <colgroup>
@@ -251,12 +248,12 @@ Os elementos de navegação hierárquica fornecem navegação entre uma página 
 
  
 
-### <span id="Combining_navigation_elements"></span><span id="combining_navigation_elements"></span><span id="COMBINING_NAVIGATION_ELEMENTS"></span>Elementos de navegação combinados
+### <span id="Combining_navigation_elements"></span><span id="combining_navigation_elements"></span><span id="COMBINING_NAVIGATION_ELEMENTS"></span>Combinando elementos de navegação
 
 Você pode combinar elementos de navegação para criar uma experiência de navegação que seja ideal para seu aplicativo. Por exemplo, seu aplicativo pode usar um painel de navegação para fornecer acesso a páginas de nível superior e guias para fornecer acesso às páginas de segundo nível.
 
 
-\[Este artigo contém informações que são específicas a aplicativos UWP e ao Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 
 
@@ -267,6 +264,6 @@ Você pode combinar elementos de navegação para criar uma experiência de nave
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

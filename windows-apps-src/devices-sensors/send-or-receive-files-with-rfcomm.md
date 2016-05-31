@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 5B3A6326-15EE-4618-AA8C-F1C7FB5232FB
 title: Bluetooth RFCOMM
-description: Este artigo apresenta uma visão geral do Bluetooth RFCOMM em aplicativos UWP (Plataforma Universal do Windows), além do código de exemplo sobre como enviar ou receber um arquivo.
+description: Este artigo apresenta uma visão geral do Bluetooth RFCOMM em aplicativos da Plataforma Universal do Windows (UWP), além do código de exemplo sobre como enviar ou receber um arquivo.
 ---
 # Bluetooth RFCOMM
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -16,15 +17,16 @@ Este artigo apresenta uma visão geral do Bluetooth RFCOMM em aplicativos da Pla
 
 ## Visão geral
 
-As APIs no namespace [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) são compiladas nos padrões existentes para Dispositivos Windows, incluindo [**enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) e [**instantiation**](https://msdn.microsoft.com/library/windows/apps/BR225654). A leitura e gravação de dados é projetada para tirar vantagens de [**established data stream patterns**](https://msdn.microsoft.com/library/windows/apps/BR208119) e objetos em [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/BR241791). Os atributos do protocolo SDP possuem um valor e um tipo esperado. Entretanto, alguns dispositivos comuns possuem implementações inválidas de atributos SDP em que o valor não é do tipo esperado. Além disso, muitos usos de RFCOMM não requerem atributos SDP adicionais. Por esses motivos, essa API oferece acesso aos dados SDP não analisados, dos quais os desenvolvedores podem obter as informações que precisam.
+As APIs no namespace [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) são compiladas nos padrões existentes para Dispositivos Windows, incluindo [**enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) e [**instantiation**](https://msdn.microsoft.com/library/windows/apps/BR225654). A leitura e a gravação de dados é projetada para tirar vantagens de [**padrões de fluxo de dados estabelecidos**](https://msdn.microsoft.com/library/windows/apps/BR208119) e objetos em [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/BR241791). Os atributos do Service Discovery Protocol (SDP) têm um valor e um tipo esperado. Entretanto, alguns dispositivos comuns possuem implementações inválidas de atributos SDP em que o valor não é do tipo esperado. Além disso, muitos usos de RFCOMM não requerem atributos SDP adicionais. Por esses motivos, essa API oferece acesso aos dados SDP não analisados, dos quais os desenvolvedores podem obter as informações que precisam.
 
 As APIs de RFCOMM utilizam o conceito de identificadores de serviço. Embora um identificador de serviço seja simplesmente um GUID de 128 bits, ele também é comumente especificado como número inteiro de 16 ou 32 bits. A API de RFCOMM oferece um wrapper para identificadores de serviços que permitem que eles sejam especificados e consumidos como GUIDs de 128 bits, bem como número inteiro de 32 bits, mas não oferecem inteiros de 16 bits. Isso não é um problema para a API, pois a linguagem será automaticamente redimensionada para inteiro de 32 bits e o identificador ainda poderá ser gerado corretamente.
 
-Os aplicativos de um dispositivo podem executar operações de dispositivos de multietapas em uma tarefa em segundo plano, portanto eles podem executar até concluírem, mesmo se o aplicativo for movido para segundo plano e suspenso. Isso permite um serviço do dispositivo confiável, como alterações em configurações persistentes ou firmware, e sincronização de conteúdo, sem precisar que o usuário sente-se e observe a barra de progresso. Use o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297315) para serviço de dispositivo e o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297337) para sincronização de conteúdo. Observe que essas tarefas em segundo plano limitam a quantidade de tempo que o aplicativo pode executar em segundo plano, e não têm a intenção de permitirem operação indefinida ou sincronização infinita.
+Os aplicativos de um dispositivo podem executar operações de dispositivos de multietapas em uma tarefa em segundo plano, portanto eles podem executar até concluírem, mesmo se o aplicativo for movido para segundo plano e suspenso. Isso permite um serviço do dispositivo confiável, como alterações em configurações persistentes ou firmware, e sincronização de conteúdo, sem precisar que o usuário sente-se e observe a barra de progresso. Use o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297315) para serviço de dispositivo e o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297337) para sincronização de conteúdo. Observe que essas tarefas em segundo plano limitam a quantidade de tempo que o aplicativo pode ser executado em segundo plano e não têm a intenção de permitir operação indefinida nem sincronização infinita.
 
+Para ver um exemplo de código completo que fornece detalhes sobre a operação de RFCOMM, consulte o [ **Exemplo do Bluetooth Rfcomm Chat** ](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat) no Github.  
 ## Enviar um arquivo como cliente
 
-Ao enviar um arquivo, o cenário mais básico é conectar a um dispositivo emparelhado com base em um serviço desejado. Isso envolve as seguintes etapas:
+Ao enviar um arquivo, o cenário mais básico é estabelecer conexão com um dispositivo emparelhado com base em um serviço desejado. Isso envolve as seguintes etapas:
 
 -   Use as funções **RfcommDeviceService.GetDeviceSelector\*** para ajudar a gerar uma consulta AQS que possa ser usada para instâncias de dispositivos emparelhados enumerados do serviço desejado.
 -   Escolha um dispositivo enumerado, crie um [**RfcommDeviceService**](https://msdn.microsoft.com/library/windows/apps/Dn263463) e leia os atributos SDP conforme necessário (usando [**established data helpers**](https://msdn.microsoft.com/library/windows/apps/BR208119) para analisar os dados do atributo).
@@ -48,8 +50,8 @@ async void Initialize()
         // Initialize the target Bluetooth BR device
         auto service = await RfcommDeviceService.FromIdAsync(services[0].Id);
 
-        // Check that the service meets this App’s minimum requirement
-        if (SupportsProtection(service) &amp;&amp; IsCompatibleVersion(service))
+        // Check that the service meets this App's minimum requirement
+        if (SupportsProtection(service) && IsCompatibleVersion(service))
         {
             _service = service;
 
@@ -91,7 +93,7 @@ bool SupportsProtection(RfcommDeviceService service)
         else
         {
             // The connection cannot be upgraded so an App may offer UI here
-            // to explain why a connection won’t be made.
+            // to explain why a connection won't be made.
             return false;
         }
     case SocketProtectionLevel.BluetoothEncryptionWithAuthentication:
@@ -143,10 +145,10 @@ void Initialize()
             create_task(RfcommDeviceService::FromIdAsync(services[0]->Id))
             .then([](RfcommDeviceService^ service)
             {
-                // Check that the service meets this App’s minimum
+                // Check that the service meets this App's minimum
                 // requirement
                 if (SupportsProtection(service)
-                    &amp;&amp; IsCompatibleVersion(service))
+                    && IsCompatibleVersion(service))
                 {
                     _service = service;
 
@@ -193,7 +195,7 @@ bool SupportsProtection(RfcommDeviceService^ service)
         else
         {
             // The connection cannot be upgraded so an App may offer UI here
-            // to explain why a connection won’t be made.
+            // to explain why a connection won't be made.
             return false;
         }
     case SocketProtectionLevel::BluetoothEncryptionWithAuthentication:
@@ -235,6 +237,8 @@ Outro cenário de aplicativo comum RFCOMM é hospedar um serviço no computador 
 -   Para conectar a um dispositivo cliente, crie um ouvinte de soquete para começar a escutar as solicitações de conexão de entrada.
 -   Quando uma conexão é recebida, armazene o soquete conectado para processamento posterior.
 -   Siga os padrões de fluxo de dados estabelecidos para ler dados do InputStream do soquete e salvá-los em um arquivo.
+
+Para manter um serviço RFCOMM em segundo plano, use o [ **RfcommConnectionTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.rfcommconnectiontrigger.aspx). A tarefa em segundo plano é disparada em conexão com o serviço. O desenvolvedor recebe um identificador para o soquete na tarefa em segundo plano. A tarefa em segundo plano é de longa duração e persiste enquanto o soquete está em uso.    
 
 ```csharp
 Windows.Devices.Bluetooth.RfcommServiceProvider _provider;
@@ -278,7 +282,7 @@ void OnConnectionReceived(
     StreamSocketListener listener,
     StreamSocketListenerConnectionReceivedEventArgs args)
 {
-    // Stop advertising/listening so that we’re only serving one client
+    // Stop advertising/listening so that we're only serving one client
     _provider.StopAdvertising();
     await listener.Close();
     _socket = args.Socket;
@@ -309,7 +313,7 @@ void Initialize()
         listener->ConnectionReceived += ref new TypedEventHandler<
                 StreamSocketListener^,
                 StreamSocketListenerConnectionReceivedEventArgs^>
-           (&amp;OnConnectionReceived);
+           (&OnConnectionReceived);
         return create_task(listener->BindServiceNameAsync(
             _provider->ServiceId->AsString(),
             SocketProtectionLevel
@@ -341,7 +345,7 @@ void OnConnectionReceived(
     StreamSocketListener^ listener,
     StreamSocketListenerConnectionReceivedEventArgs^ args)
 {
-    // Stop advertising/listening so that we’re only serving one client
+    // Stop advertising/listening so that we're only serving one client
     _provider->StopAdvertising();
     create_task(listener->Close())
     .then([args](void) {
@@ -359,6 +363,6 @@ void OnConnectionReceived(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

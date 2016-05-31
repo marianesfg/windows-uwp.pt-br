@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: O Windows 10 e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da nova UWP (Plataforma Universal do Windows).
 title: Novidades para desenvolvedores no Windows 10, RTM - julho de 2015
 ---
@@ -95,7 +96,7 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <li>Namespace [<strong>Windows.UI.Xaml.Controls.Maps</strong>](https://msdn.microsoft.com/library/windows/apps/dn610751) - Exiba mapas.</li>
 <li>Namespace [<strong>Windows.Services.Maps</strong>](https://msdn.microsoft.com/library/windows/apps/dn636979) Encontre locais e rotas.</li>
 </ul>
-<p>Para começar a usar essas APIs em um aplicativo Universal do Windows hoje, solicite uma chave do [Bing Maps Developer Center](https://www.bingmapsportal.com/) Centro de Desenvolvimento do Bing Mapas. Para obter mais informações, consulte [How to authenticate a Maps app](https://msdn.microsoft.com/library/windows/apps/xaml/dn741528). Outra novidade no Windows 10 é que os usuários de computador e telefone podem baixar mapas offline do aplicativo Configurações. Quando disponíveis, os mapas offline são usados pelo [<strong>MapControl</strong>] (https://msdn.microsoft.com/library/windows/apps/dn637004) para exibir mapas quando não for possível acessar a Internet.</p></td>
+<p>Para começar a usar essas APIs em um aplicativo Universal do Windows hoje, solicite uma chave do [Centro de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/). Para saber mais, consulte [Como autenticar um aplicativo Mapas](https://msdn.microsoft.com/library/windows/apps/xaml/dn741528). Outra novidade no Windows 10 é que os usuários de computador e telefone podem baixar mapas offline do aplicativo Configurações. Quando disponíveis, os mapas offline são usados pelo [<strong>MapControl</strong>] (https://msdn.microsoft.com/library/windows/apps/dn637004) para exibir mapas quando não for possível acessar a Internet.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Mapeamento de botões de entrada</td>
@@ -107,7 +108,7 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <p>O controle [<strong>InkCanvas</strong>](https://msdn.microsoft.com/library/windows/apps/dn858535) define uma área de sobreposição para desenhar e renderizar traços de tinta. A funcionalidade desse controle (entrada, processamento e renderização) é proveniente das classes [<strong>InkPresenter</strong>] (https://msdn.microsoft.com/library/windows/apps/dn922011), [<strong>InkStroke</strong>] (https://msdn.microsoft.com/library/windows/apps/br208485), [<strong>InkRecognizer</strong>] (https://msdn.microsoft.com/library/windows/apps/br208478) e [<strong>InkSynchronizer</strong>](https://msdn.microsoft.com/library/windows/apps/dn903979).</p>
 <p></p>
 <div class="alert">
-<strong>Importante</strong>  Essas classes não são compatíveis com aplicativos do Windows que usam JavaScript.
+<strong>Importante</strong> Essas classes não são compatíveis com aplicativos do Windows que usam JavaScript.
 </div>
 <div>
  
@@ -131,7 +132,7 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <td align="left">Atualizações de CommandBar e AppBar</td>
 <td align="left"><p>Os controles [<strong>CommandBar</strong>] (https://msdn.microsoft.com/library/windows/apps/dn279427) e [<strong>AppBar</strong>](https://msdn.microsoft.com/library/windows/apps/hh701927) foram atualizados para ter API, comportamento e experiência do usuário consistentes para aplicativos UWP entre famílias de dispositivos.</p>
 <p>O controle [<strong>CommandBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn279427) para aplicativos Universais do Windows foi aprimorado para fornecer um superconjunto da funcionalidade [<strong>AppBar</strong>](https://msdn.microsoft.com/library/windows/apps/hh701927) e maior flexibilidade em como você pode usá-lo em seu aplicativo. Você deve usar <strong>CommandBar</strong> para todos os novos aplicativos universais do Windows no Windows 10. Em um <strong>CommandBar</strong> no Windows 8.1, você pode usar apenas os controles que implementaram [<strong>ICommandBarElement</strong>](https://msdn.microsoft.com/library/windows/apps/dn251969), como [<strong>AppBarButton</strong>](https://msdn.microsoft.com/library/windows/apps/dn279244). Em aplicativos universais do Windows, agora você pode colocar conteúdo personalizado no <strong>CommandBar</strong> além de <strong>AppBarButtons</strong>.</p>
-<p>O controle [<strong>AppBar</strong>](https://msdn.microsoft.com/library/windows/apps/hh701927) foi atualizado para permitir que você mova mais facilmente seus aplicativos do Windows 8.1 que usam <strong>AppBar</strong> para a Plataforma Universal do Windows. O <strong>AppBar</strong> foi projetado para ser usado com aplicativos de tela inteira e ser invocado usando gestos de borda. As atualizações do controle referem-se a problemas como aplicativos de janela e a ausência de gestos de borda no Windows 10.</p>
+<p>O controle [<strong>AppBar</strong>](https://msdn.microsoft.com/library/windows/apps/hh701927) foi atualizado para permitir que você mova mais facilmente seus aplicativos do Windows 8.1 que usam <strong>AppBar</strong> para a Plataforma Universal do Windows. <strong>O AppBar</strong> foi projetado para ser usado com aplicativos de tela inteira e ser invocado usando gestos de borda. As atualizações do controle referem-se a problemas como aplicativos de janela e a ausência de gestos de borda no Windows 10.</p>
 <p>O [<strong>AppBar.ClosedDisplayMode</strong>](https://msdn.microsoft.com/library/windows/apps/dn633872) oculto, anteriormente somente no Windows Phone, agora é compatível com todas as famílias de dispositivos, permitindo que você escolha entre diferentes níveis de dicas para comandos. O [<strong>AppBar</strong>](https://msdn.microsoft.com/library/windows/apps/hh701927) mostra uma dica mínima por padrão para fornecer consistência ao atualizar seus aplicativos do Windows 8.1 para aplicativos universais do Windows, onde você não pode mais contar com o suporte para gesto de borda na plataforma.</p>
 <p><strong>Nova API</strong> [<strong>AppBar</strong>](https://msdn.microsoft.com/library/windows/apps/hh701927) <strong></strong>[<strong>Closing</strong>](https://msdn.microsoft.com/library/windows/apps/dn996483), [<strong>OnClosing</strong>](https://msdn.microsoft.com/library/windows/apps/dn996484), [<strong>Opening</strong>](https://msdn.microsoft.com/library/windows/apps/dn996486), [<strong>OnOpening</strong>](https://msdn.microsoft.com/library/windows/apps/dn996485), [<strong>TemplateSettings</strong>](https://msdn.microsoft.com/library/windows/apps/dn996487).</p>
 <p><strong>Nova API</strong> [<strong>CommandBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn279427) <strong></strong>[<strong>CommandBarOverflowPresenterStyle</strong>](https://msdn.microsoft.com/library/windows/apps/dn975227) e [<strong>CommandBarOverflowPresenter</strong>](https://msdn.microsoft.com/library/windows/apps/dn975225).</p></td>
@@ -172,7 +173,7 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <tr class="even">
 <td align="left">Atualizações de SemanticZoom</td>
 <td align="left"><p>Agora o controle [<strong>SemanticZoom</strong>](https://msdn.microsoft.com/library/windows/apps/hh702601) tem um comportamento consistente para aplicativos UWP em todas as famílias de dispositivos.</p>
-<p>A ação padrão para alternar entre a exibição ampliada e a exibição reduzida é tocar em um cabeçalho de grupo na exibição ampliada. Esse comportamento é o mesmo no Windows Phone 8.1, mas é uma alteração do Windows 8.1, que usava o gesto de pinça para aplicar zoom. Para alterar os modos de exibição usando pinçar para aplicar zoom, defina [<strong>ScrollViewer.ZoomMode</strong>](https://msdn.microsoft.com/library/windows/apps/br209601)=&quot;Enabled&quot; do[<strong>SemanticZoom</strong>](https://msdn.microsoft.com/library/windows/apps/hh702601) no [<strong>ScrollViewer</strong>] interno (https://msdn.microsoft.com/library/windows/apps/br209527).</p>
+<p>A ação padrão para alternar entre a exibição ampliada e a exibição reduzida é tocar em um cabeçalho de grupo na exibição ampliada. Esse comportamento é o mesmo no Windows Phone 8.1, mas é uma alteração do Windows 8.1, que usava o gesto de pinça para aplicar zoom. Para alterar os modos de exibição usando pinçar para aplicar zoom, defina [<strong>ScrollViewer.ZoomMode</strong>](https://msdn.microsoft.com/library/windows/apps/br209601)=&quot;Enabled&quot; do [<strong>SemanticZoom</strong>](https://msdn.microsoft.com/library/windows/apps/hh702601) no [<strong>ScrollViewer</strong>](https://msdn.microsoft.com/library/windows/apps/br209527).</p>
 <p>Para aplicativos Universais do Windows, a exibição reduzida substitui a exibição ampliada e tem o mesmo tamanho da exibição que foi substituída. Esse comportamento é o mesmo no Windows 8.1, mas é uma alteração do Windows Phone 8.1, onde a exibição reduzida ocupava o tamanho total da tela e era renderizada sobre todos os outros tipos de conteúdo.</p></td>
 </tr>
 <tr class="odd">
@@ -204,7 +205,7 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <td align="left"><p>Em aplicativos Uuniversais do Windows, a propriedade [<strong>PasswordRevealMode</strong>](https://msdn.microsoft.com/library/windows/apps/dn890867) substitui a propriedade [<strong>IsPasswordRevealButtonEnabled</strong>](https://msdn.microsoft.com/library/windows/apps/hh702579) para fornecer um comportamento consistente entre famílias de dispositivos.</p>
 <p></p>
 <div class="alert">
-<strong>Cuidado</strong>  Antes do Windows 10, o botão para revelar a senha não era mostrado por padrão; nos aplicativos Universais do Windows, ele é mostrado por padrão. Se a segurança de seu aplicativo exigir que a senha esteja sempre oculta, defina [<strong>PasswordRevealMode</strong>](https://msdn.microsoft.com/library/windows/apps/dn890867) como Hidden.
+<strong>Cuidado</strong> Antes do Windows 10, o botão para revelar a senha não era mostrado por padrão; nos aplicativos Universais do Windows, ele é mostrado por padrão. Se a segurança de seu aplicativo exigir que a senha esteja sempre oculta, defina [<strong>PasswordRevealMode</strong>](https://msdn.microsoft.com/library/windows/apps/dn890867) como Hidden.
 </div>
 <div>
  
@@ -284,12 +285,12 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <tr class="odd">
 <td align="left">Cortana</td>
 <td align="left"><p>Estenda a funcionalidade básica da <strong>Cortana</strong> com comandos de voz que iniciam e executam uma única ação em um aplicativo externo.</p>
-<p>Ao integrar a funcionalidade básica do seu aplicativo e fornecer um ponto de entrada central para o usuário realizar a maioria das tarefas sem abrir o aplicativo diretamente, a <strong>Cortana</strong> pode atuar como uma ligação entre seu aplicativo e o usuário. Em muitos casos, isso pode economizar muito tempo e esforço do usuário.</p>
-<p>Saiba como [integrate your app into the Cortana canvas](https://msdn.microsoft.com/library/windows/apps/xaml/dn974230). Se você precisar de ideias, consulte as recomendações de design e as diretrizes de experiência do usuário específicas à <strong>Cortana</strong> em [Design basics for Universal Windows apps](https://dev.windows.com/design/design-basics).</p></td>
+<p>Ao integrar a funcionalidade básica do seu aplicativo e fornecer um ponto de entrada central para o usuário realizar a maioria das tarefas sem abrir o aplicativo diretamente, a <strong>Cortana</strong> pode atuar como uma ligação entre seu aplicativo e o usuário. Em muitos casos, isso pode economizar tempo e esforço significativo do usuário.</p>
+<p>Saiba como [integrar seu aplicativo à tela da Cortana](https://msdn.microsoft.com/library/windows/apps/xaml/dn974230). Se você precisar de ideias, consulte as recomendações de design e as diretrizes de experiência do usuário específicas à <strong>Cortana</strong> em [Noções básicas de design para aplicativos Universais do Windows](https://dev.windows.com/design/design-basics).</p></td>
 </tr>
 <tr class="even">
 <td align="left">Explorador de Arquivos</td>
-<td align="left">Os novos métodos [<strong>Windows.System.Launcher.LaunchFolderAsync</strong>](https://msdn.microsoft.com/library/windows/apps/dn889616) permitem que você inicie o Explorador de Arquivos e veja o conteúdo da pasta que você especificar.</td>
+<td align="left">Os novos métodos [<strong>Windows.System.Launcher.LaunchFolderAsync</strong>](https://msdn.microsoft.com/library/windows/apps/dn889616) permitem que você inicie o Explorador de Arquivos e consulte o conteúdo da pasta que você especificar.</td>
 </tr>
 <tr class="odd">
 <td align="left">Armazenamento compartilhado</td>
@@ -299,11 +300,11 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <td align="left">Configurações</td>
 <td align="left"><p>Exiba páginas de configurações integradas usando o protocolo ms-settings com o método [<strong>LaunchUriAsync</strong>](https://msdn.microsoft.com/library/windows/apps/hh701476). Por exemplo, o seguinte código exibe a página de configurações de Wi-Fi.</p>
 <p><code>bool result = await Launcher.LaunchUriAsync(new Uri(&quot;ms-settings://network/wifi&quot;));</code></p>
-<p>Para obter uma lista das páginas de configurações que você pode exibir, consulte [How to display built-in settings pages by using the ms-settings protocol](https://msdn.microsoft.com/library/windows/apps/jj207014.aspx).</p></td>
+<p>Para obter uma lista das páginas de configurações que você pode exibir, consulte [Como exibir páginas de configurações internas usando o protocolo ms-settings](https://msdn.microsoft.com/library/windows/apps/jj207014.aspx).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Comunicação de aplicativo a aplicativo</td>
-<td align="left"><p>As novas APIs de [app-to-app communication](https://msdn.microsoft.com/library/windows/apps/xaml/dn997827) do Windows 10 permitem que aplicativos do Windows (bem como Windows Web apps) iniciem uns aos outros e troquem dados e arquivos.</p>
+<td align="left"><p>As novas APIs de [comunicação de aplicativo a aplicativo](https://msdn.microsoft.com/library/windows/apps/xaml/dn997827) do Windows 10 permitem que aplicativos do Windows (bem como Windows Web apps) iniciem uns aos outros e troquem dados e arquivos.</p>
 <p>Usando essas novas APIs, tarefas complexas que exigiriam que o usuário usasse vários aplicativos podem agora ser executadas perfeitamente. Por exemplo, seu aplicativo pode iniciar um aplicativo de rede social para selecionar um contato ou iniciar um aplicativo de check-out para concluir um processo de pagamento.</p></td>
 </tr>
 <tr class="even">
@@ -312,8 +313,8 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 </tr>
 <tr class="odd">
 <td align="left">Manifesto do pacote do aplicativo</td>
-<td align="left"><p>As atualizações para a referência de [package manifest schema](https://msdn.microsoft.com/library/windows/apps/br211474) (esquema do manifesto do pacote) para o Windows 10 incluem elementos que foram adicionados, removidos e alterados.</p>
-<p>Consulte [Element Hierarchy](https://msdn.microsoft.com/library/windows/apps/dn934819) (hierarquia de elementos) para obter informações sobre todos os elementos, atributos e tipos no esquema.</p></td>
+<td align="left"><p>As atualizações para a referência de [esquemas de manifesto de pacote](https://msdn.microsoft.com/library/windows/apps/br211474) para o Windows 10 incluem elementos que foram adicionados, removidos e alterados.</p>
+<p>Consulte [Hierarquia de elementos](https://msdn.microsoft.com/library/windows/apps/dn934819) para obter informações sobre todos os elementos, atributos e tipos no esquema.</p></td>
 </tr>
 </tbody>
 </table>
@@ -333,10 +334,10 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <td align="left">Microsoft Surface Hub</td>
 <td align="left"><p>O Microsoft Surface Hub é um dispositivo de colaboração em equipe eficiente e uma plataforma de tela grande para aplicativos Universais do Windows que são executados nativamente a partir do Surface Hub ou de seu dispositivo conectado.</p>
 <p>Crie seus próprios aplicativos, projetados especificamente para sua empresa, que aproveitam as vantagens de tela grande, entrada por toque e à tinta e hardware onboard extensivo, como câmeras e sensores.</p>
-<p>Veja as recomendações de design e diretrizes de experiência do usuário específicas ao Surface Hub nas [Design basics for Universal Windows apps](https://dev.windows.com/design/design-basics) (Noções básicas de design para Aplicativos Universais do Windows). Esses documentos explicam técnicas de design responsivo para aplicativos Universais do Windows.</p>
+<p>Veja as recomendações de design e diretrizes de experiência do usuário específicas ao Surface Hub nas [Noções básicas de design para Aplicativos Universais do Windows](https://dev.windows.com/design/design-basics). Esses documentos explicam técnicas de design responsivo para aplicativos Universais do Windows.</p>
 <p>Para obter detalhes sobre suporte a aplicativos públicos, consulte [<strong>SharedModeSettings</strong>](https://msdn.microsoft.com/library/windows/apps/dn949019).</p>
 <p>Para saber mais sobre entrada à tinta e obter detalhes sobre suporte para escrita à tinta multiponto no novo controle [<strong>InkCanvas</strong>](https://msdn.microsoft.com/library/windows/apps/dn858535) consulte [<strong>Windows.UI.Input.Inking</strong>](https://msdn.microsoft.com/library/windows/apps/br208524) e [<strong>Windows.UI.Input.Inking.Core</strong>](https://msdn.microsoft.com/library/windows/apps/dn958452).</p>
-<p>Para manipular a entrada do sensor, consulte [Integrating devices, printers, and sensors](https://msdn.microsoft.com/library/windows/apps/br229563) (Integrando dispositivos, impressoras e sensores).</p></td>
+<p>Para manipular a entrada do sensor, confira [Integrando dispositivos, impressoras e sensores](https://msdn.microsoft.com/library/windows/apps/br229563).</p></td>
 </tr>
 <tr class="even">
 <td align="left">Localização</td>
@@ -352,9 +353,9 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <tr class="odd">
 <td align="left">AllJoyn</td>
 <td align="left"><p>O namespace [<strong>Windows.Devices.AllJoyn</strong>](https://msdn.microsoft.com/library/windows/apps/dn894971) do Windows Runtime apresenta a implementação da estrutura e serviços de software de código aberto AllJoyn da Microsoft. Essas APIs permitem que seu aplicativo de dispositivo Windows universal participe em cenários da Internet das Coisas (IoT) relacionados ao AllJoyn com outros dispositivos. Para obter mais detalhes sobre as APIs AllJoyn C, baixe a documentação da [The AllSeen Alliance](https://allseenalliance.org/).</p>
-<p>Use a ferramenta [AllJoynCodeGen tool](https://msdn.microsoft.com/library/windows/apps/dn913809) fornecida nesta versão para gerar um componente do Windows que você possa usar para permitir cenários com AllJoyn em seu aplicativo de dispositivo.</p>
+<p>Use a [ferramenta AllJoynCodeGen](https://msdn.microsoft.com/library/windows/apps/dn913809) fornecida nesta versão para gerar um componente do Windows que você possa usar para permitir cenários com AllJoyn em seu aplicativo de dispositivo.</p>
 <div class="alert">
-<strong>Observação</strong>  agora o Windows 10 IoT Core está disponível para uma nova classe de dispositivos pequenos, permitindo que você crie dispositivos para a "Internet das Coisas" (IoT) usando o Windows e o Visual Studio. Saiba mais sobre a Windows IoT em [WindowsOnDevices.com](http://www.windowsondevices.com/).
+<strong>Observação</strong> agora o Windows 10 IoT Core está disponível para uma nova classe de dispositivos pequenos, permitindo que você crie dispositivos para a "Internet das Coisas" (IoT) usando o Windows e o Visual Studio. Saiba mais sobre o Windows IoT em [WindowsOnDevices.com](http://www.windowsondevices.com/).
 </div>
 <div>
  
@@ -490,7 +491,7 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <td align="left">Atualização da API do Wi-Fi Direct</td>
 <td align="left"><p>O agente de dispositivo está atualizado para habilitar o emparelhamento com dispositivos sem sair do aplicativo. As inclusões ao namespace [<strong>Windows.Devices.WiFiDirect</strong>](https://msdn.microsoft.com/library/windows/apps/dn297687) também permitem que um dispositivo torne-se detectável para outros dispositivos e que ele escute as notificações de conexão de entrada.</p>
 <div class="alert">
-<strong>Observação</strong>  Nesta versão, as melhorias do recurso Wi-Fi Direct não são incorporadas à experiência do usuário e oferecem suporte apenas para o emparelhamento com o pressionar de um botão. Além disso, essa versão oferece suporte apenas a uma conexão ativa.
+<strong>Observação</strong> Nesta versão, as melhorias do recurso Wi-Fi Direct não são incorporadas à experiência do usuário e oferecem suporte apenas para o emparelhamento com o pressionar de um botão. Além disso, essa versão oferece suporte apenas a uma conexão ativa.
 </div>
 <div>
  
@@ -534,9 +535,9 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 </tr>
 <tr class="even">
 <td align="left">Versão</td>
-<td align="left"><p>Você pode usar as [Version Helper functions](https://msdn.microsoft.com/library/windows/desktop/dn424972) (funções auxiliares de versão) para determinar a versão do sistema operacional. Para o Windows 10, essas funções auxiliares incluem uma nova função, [<strong>IsWindows10OrGreater</strong>](https://msdn.microsoft.com/library/windows/desktop/dn905474). Você deve usar as funções auxiliares em vez das funções preteridas [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) e [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) quando quiser determinar a versão do sistema. Para mais informações sobre como obter a versão do sistema, consulte [Getting the System Version](https://msdn.microsoft.com/library/windows/desktop/ms724429).</p>
-<p>Se você usar a função preterida [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) ou a função [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) para obter informações sobre a versão em uma estrutura [<strong>OSVERSIONINFOEX</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724833) ou [<strong>OSVERSIONINFO</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724834), lembre-se de que o número da versão que essas estruturas contêm aumenta de 6.3, para o Windows 8.1 e o Windows Server 2012 R2, para 10.0, para o Windows 10. Para obter mais informações sobre números de versão para o sistema operacional, consulte [Operating System Version](https://msdn.microsoft.com/library/windows/desktop/ms724832).</p>
-<p>Você também precisa direcionar seu aplicativo especificamente para o Windows 8.1 ou Windows 10 para obter as informações de versão corretas para essas versões com a função [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) ou [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439). Para obter informações sobre como direcionar seu aplicativo para essas versões do Windows, consulte [Targeting your application for Windows](https://msdn.microsoft.com/library/windows/desktop/dn481241) (Direcionando seu aplicativo para o Windows).</p></td>
+<td align="left"><p>Você pode usar as [funções auxiliares de versão](https://msdn.microsoft.com/library/windows/desktop/dn424972) para determinar a versão do sistema operacional. Para o Windows 10, essas funções auxiliares incluem uma nova função, [<strong>IsWindows10OrGreater</strong>](https://msdn.microsoft.com/library/windows/desktop/dn905474). Você deve usar as funções auxiliares em vez das funções preteridas [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) e [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) quando quiser determinar a versão do sistema. Para obter mais informações sobre como obter a versão do sistema, consulte [Obtendo a versão do sistema](https://msdn.microsoft.com/library/windows/desktop/ms724429).</p>
+<p>Se você usar a função preterida [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) ou a função [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) para obter informações sobre a versão em uma estrutura [<strong>OSVERSIONINFOEX</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724833) ou [<strong>OSVERSIONINFO</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724834), lembre-se de que o número da versão que essas estruturas contêm aumenta de 6.3, para o Windows 8.1 e o Windows Server 2012 R2, para 10.0, para o Windows 10. Para obter mais informações sobre números de versão do sistema operacional, consulte [Versão do sistema operacional](https://msdn.microsoft.com/library/windows/desktop/ms724832).</p>
+<p>Você também precisa direcionar seu aplicativo especificamente para o Windows 8.1 ou Windows 10 para obter as informações de versão corretas para essas versões com a função [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) ou [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439). Para obter informações sobre como direcionar seu aplicativo para essas versões do Windows, consulte [Direcionando seu aplicativo para o Windows](https://msdn.microsoft.com/library/windows/desktop/dn481241).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Informações do usuário</td>
@@ -585,7 +586,7 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 </tr>
 <tr class="even">
 <td align="left">Log de rastreamento</td>
-<td align="left"><p>[TraceLogging](https://msdn.microsoft.com/library/windows/desktop/dn904636) é uma nova API de rastreamento de eventos para aplicativos de modo de usuário e drivers de modo kernel; ela é baseada no ETW [Event Tracing for Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803) (Rastreamento de Eventos para Windows). Essa API oferece uma maneira simplificada de instrumentar código e incluir dados estruturados com eventos sem a necessidade de um arquivo XML de manifesto de instrumentação separado.</p>
+<td align="left"><p>[TraceLogging](https://msdn.microsoft.com/library/windows/desktop/dn904636) é uma nova API de rastreamento de eventos para aplicativos de modo de usuário e drivers de modo kernel; ela é baseada no ETW ([Rastreamento de Eventos para Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803)). Essa API oferece uma maneira simplificada de instrumentar código e incluir dados estruturados com eventos sem a necessidade de um arquivo XML de manifesto de instrumentação separado.</p>
 <p>As APIs WinRT, .NET e C/C++ TraceLogging estão disponíveis para atender a diferentes públicos de desenvolvedores.</p></td>
 </tr>
 </tbody>
@@ -640,8 +641,8 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <td align="left">Internet Explorer</td>
 <td align="left"><p>O Internet Explorer apresenta o modo de borda: um novo modo de documento &quot;residente&quot; projetado para oferecer máxima interoperabilidade com outros navegadores modernos e conteúdo contemporâneo da Web. Esse modo experimental está sendo distribuído progressivamente para um conjunto de usuários do Windows 10 escolhido aleatoriamente. Você pode habilitar ou desabilitar o modo Edge manualmente usando o novo mecanismo <strong>about:flags</strong> do IE. Para saber mais, veja:</p>
 <ul>
-<li>[Living on the Edge – our next step in helping the web just work](http://blogs.msdn.com/b/ie/archive/2014/11/11/living-on-the-edge-our-next-step-in-interoperability.aspx) (Na borda — uma nova etapa em fazer com que a Web funcione).</li>
-<li>[The Internet Explorer for Windows 10 Developer Guide](https://dev.windows.com/microsoft-edge/) (Guia do Desenvolvedor do Internet Explorer para Windows 10).</li>
+<li>[Na borda — uma nova etapa em fazer com que a Web funcione](http://blogs.msdn.com/b/ie/archive/2014/11/11/living-on-the-edge-our-next-step-in-interoperability.aspx).</li>
+<li>[Guia do Desenvolvedor do Internet Explorer para Windows 10](https://dev.windows.com/microsoft-edge/).</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -655,27 +656,27 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 <tr class="even">
 <td align="left">Evento WebView.UnsupportedUriSchemeIdentified</td>
 <td align="left"><p>O novo evento [<strong>WebView.UnsupportedUriSchemeIdentified</strong>](https://msdn.microsoft.com/library/windows/apps/dn974400) permite que você decida como seu aplicativo deve lidar com um esquema de URI sem suporte. Você pode manipular esse evento para permitir que seu aplicativo forneça tratamento personalizado a esquemas de URI sem suporte.</p>
-<p>Para o controle HTML WebView, veja o evento [<strong>MSWebViewUnsupportedUriSchemeIdentified</strong>](https://msdn.microsoft.com/library/windows/apps/dn803906.aspx).</p></td>
+<p>Para o controle HTML WebView, consulte o evento [<strong>MSWebViewUnsupportedUriSchemeIdentified</strong>](https://msdn.microsoft.com/library/windows/apps/dn803906.aspx).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Evento WebView.NewWindowRequested</td>
 <td align="left"><p>O novo evento [<strong>WebView.NewWindowRequested</strong>](https://msdn.microsoft.com/library/windows/apps/dn974397) permite que você responda quando um script em um WebView solicita uma nova janela do navegador.</p>
-<p>Para o controle HTML WebView, veja o evento [<strong>MSWebViewNewWindowRequested</strong>](https://msdn.microsoft.com/library/windows/apps/dn806030).</p></td>
+<p>Para o controle HTML WebView, consulte o evento [<strong>MSWebViewNewWindowRequested</strong>](https://msdn.microsoft.com/library/windows/apps/dn806030).</p></td>
 </tr>
 <tr class="even">
 <td align="left">Evento WebView.PermissionRequested</td>
 <td align="left"><p>O novo evento [<strong>WebView.PermissionRequested</strong>](https://msdn.microsoft.com/library/windows/apps/dn974398) permite que o conteúdo do WebView use as novas APIs HTML5 avançadas que exigem permissão especial do usuário, como localização geográfica.</p>
-<p>Para o controle HTML WebView, veja o evento [<strong>MSWebViewPermissionRequested</strong>](https://msdn.microsoft.com/library/windows/apps/dn806030.aspx).</p></td>
+<p>Para o controle HTML WebView, consulte o evento [<strong>MSWebViewPermissionRequested</strong>](https://msdn.microsoft.com/library/windows/apps/dn806030.aspx).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Evento WebView.UnviewableContentIdentified</td>
 <td align="left"><p>O novo evento [<strong>WebView.UnviewableContentIdentified</strong>](https://msdn.microsoft.com/library/windows/apps/dn299351) permite que você responda quando o [<strong>WebView</strong>](https://msdn.microsoft.com/library/windows/apps/br227702) é navegado para conteúdo não Web, como um arquivo PDF ou documento do Office.</p>
-<p>Para controles HTML WebView, veja o evento [<strong>MSWebViewUnviewableContentIdentified</strong>](https://msdn.microsoft.com/library/windows/apps/dn609716).</p></td>
+<p>Para controles HTML WebView, consulte o evento [<strong>MSWebViewUnviewableContentIdentified</strong>](https://msdn.microsoft.com/library/windows/apps/dn609716).</p></td>
 </tr>
 <tr class="even">
 <td align="left">Método WebView.AddWebAllowedObject</td>
 <td align="left"><p>Você pode chamar o novo método [<strong>WebView.AddWebAllowedObject</strong>](https://msdn.microsoft.com/library/windows/apps/dn903993) para injetar um objeto WinRT em um [<strong>WebView</strong>](https://msdn.microsoft.com/library/windows/apps/br227702) XAML e, em seguida, chamar suas funções a partir de um JavaScript hospedado nesse <strong>WebView</strong>. Por exemplo, o conteúdo da Web pode mostrar notificações do sistema solicitando que seu aplicativo pai chame a API WinRT [<strong>ToastNotificationManager</strong>](https://msdn.microsoft.com/library/windows/apps/br208642).</p>
-<p>Para o controle HTML [<strong>WebView</strong>](https://msdn.microsoft.com/library/windows/apps/br227702), veja o método [<strong>addWebAllowedObject</strong>](https://msdn.microsoft.com/library/windows/apps/dn926632).</p></td>
+<p>Para o controle HTML [<strong>WebView</strong>](https://msdn.microsoft.com/library/windows/apps/br227702), consulte o método [<strong>addWebAllowedObject</strong>](https://msdn.microsoft.com/library/windows/apps/dn926632).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Método WebView.ClearTemporaryWebDataAync</td>
@@ -686,6 +687,6 @@ Aqui está uma visão recurso por recurso do que há de novo para você no Windo
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

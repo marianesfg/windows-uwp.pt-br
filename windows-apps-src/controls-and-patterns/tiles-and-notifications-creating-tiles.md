@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo da Plataforma Universal do Windows (UWP) no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo.
 title: Blocos
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
-label: Blocos
+label: Tiles
 template: detail.hbs
 ---
 
 # Blocos de aplicativos UWP
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 *Bloco* é a representação de um aplicativo no menu Iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo da Plataforma Universal do Windows (UWP) no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo. O Windows exibe esse bloco quando seu aplicativo é instalado pela primeira vez. Depois que seu aplicativo é instalado, você pode alterar o conteúdo do bloco por meio de notificações. Por exemplo, você pode alterar o bloco para comunicar novas informações ao usuário, como manchetes de jornais, ou o assunto da mensagem não lida mais recente.
@@ -46,14 +47,15 @@ Há alguns itens que você deve atualizar:
 
     As imagens dimensionadas seguem esta convenção de nomenclatura:
     
-    *&lt;image name&gt;*.scale-*&lt;scale factor&gt;*.*&lt;image file extension&gt;* 
+    *
+              &lt;nome da imagem&gt;*.scale -*&lt;fator de escala&gt;*. *&lt;extensão de arquivo de imagem&gt;* 
 
 
      
 
-    For example: SmallLogo.scale-100.png
+    Por exemplo: SmallLogo.scale-100.png
 
-    When you refer to the image, you refer to it as *&lt;image name&gt;*.*&lt;image file extension&gt;* ("SmallLogo.png" in this example). The system will automatically select the appropriate scaled image for the device from the images you've provided.
+    Quando você se referir à imagem, faça referência e ela como *&lt;nome da imagem&gt;*.*&lt;extensão de arquivo de imagem&gt;* ("SmallLogo.png" neste exemplo). O sistema selecionará automaticamente a imagem dimensionada apropriada para o dispositivo nas imagens fornecidas por você.
 
 -   Você não precisa, mas é altamente recomendável fornecer logotipos para tamanhos de bloco amplo e grande para que o usuário possa redimensionar o bloco do seu aplicativo para esses tamanhos. Para fornecer essas imagens adicionais, você cria um elemento `DefaultTile` e usa os atributos `Wide310x150Logo` e `Square310x310Logo` para especificar as imagens adicionais:
 ```    XML
@@ -104,6 +106,6 @@ Depois que seu aplicativo for instalado, você pode usar notificações para per
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Quando você terminar de criar o envio do seu aplicativo, clique em Enviar à Loja. Ele entrará na etapa de certificação.
 title: O processo de certificação de aplicativos
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
@@ -17,9 +18,9 @@ Depois que você carrega os pacotes do aplicativo com êxito e envia o aplicativ
 
 Durante essa fase, vários testes são realizados:
 
--   **Testes de segurança:** O primeiro teste verifica se há vírus e malware nos pacotes do aplicativo. Se o aplicativo falhar no teste, você precisará conferir o sistema de desenvolvimento executando o software antivírus mais recente e, em seguida, recompilar o pacote do aplicativo em um sistema limpo.
--   **Testes de conformidade técnica:** A conformidade técnica é testada pelo Kit de Certificação de Aplicativos Windows (Você deve sempre garantir o [teste do aplicativo com o Kit de Certificação de Aplicativos Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviá-lo à loja).
--   **Conformidade de conteúdo:** O tempo necessário varia dependendo da complexidade do aplicativo, da quantidade de conteúdo visual e de quantos aplicativos foram enviados recentemente. Não se esqueça de fornecer todas as informações importantes aos testadores na página [Notas para certificação](notes-for-certification.md).
+-   **Testes de segurança:** o primeiro teste verifica se há vírus e malware nos pacotes do aplicativo. Se o aplicativo falhar no teste, você precisará conferir o sistema de desenvolvimento executando o software antivírus mais recente e, em seguida, recompilar o pacote do aplicativo em um sistema limpo.
+-   **Testes de conformidade técnica:** a conformidade técnica é testada pelo Kit de Certificação de Aplicativos Windows. (Você deve sempre garantir o [teste do aplicativo com o Kit de Certificação de Aplicativos Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviá-lo à loja).
+-   **Conformidade de conteúdo:** o tempo necessário varia dependendo da complexidade do aplicativo, da quantidade de conteúdo visual e de quantos aplicativos foram enviados recentemente. Não se esqueça de fornecer todas as informações importantes aos testadores na página [Notas para certificação](notes-for-certification.md).
 
 Após a conclusão do processo de certificação, você receberá um relatório de certificação informando se o aplicativo passou ou não na certificação. Se ele não for aprovado, o relatório indicará em qual teste ele falhou ou qual [política](https://msdn.microsoft.com/library/windows/apps/dn764944) não foi atendida. Depois de corrigir o problema, você pode criar um novo envio para o seu aplicativo para iniciar o processo de certificação novamente.
 
@@ -50,6 +51,6 @@ Depois de passar pelas etapas acima com êxito, seu envio estarão disponível n
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

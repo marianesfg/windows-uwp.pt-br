@@ -1,15 +1,16 @@
 ---
+author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
-description: Use esse método na API da coleção da Windows Store API para declarar um produto consumível como providenciado para um determinado cliente. Antes que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para aquele usuário.
+description: Use esse método na API da coleção da Windows Store API para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário.
 title: Declarar produtos consumíveis como providenciados
 ---
 
 # Declarar produtos consumíveis como providenciados
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Use esse método na API da coleção da Windows Store API para declarar um produto consumível como providenciado para um determinado cliente. Antes que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para aquele usuário.
+Use esse método na API da coleção da Windows Store API para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário.
 
 Há duas maneiras de usar esse método para declarar um produto consumível como providenciado:
 
@@ -41,10 +42,10 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;.                           |
-| Host           | cadeia de caracteres | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
+| Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;.                           |
+| Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
-| Content-Type   | cadeia de caracteres | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
+| Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
  
 
@@ -67,8 +68,8 @@ O objeto UserIdentity contém os parâmetros a seguir.
 
 | Parâmetro            | Tipo   | Descrição                                                                                                                                 | Obrigatório |
 |----------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| identityType         | cadeia de caracteres | Especifique o valor de cadeia de caracteres **b2b**.                                                                                                           | Sim      |
-| identityValue        | cadeia de caracteres | Valor cadeia de caracteres da chave ID da Windows Store ID.                                                                                                   | Sim      |
+| identityType         | string | Especifique o valor de cadeia de caracteres **b2b**.                                                                                                           | Sim      |
+| identityValue        | string | Valor cadeia de caracteres da chave ID da Windows Store ID.                                                                                                   | Sim      |
 | localTicketReference | string | Identificador solicitado para resposta retornada. Recomendamos que você use o mesmo valor que a declaração *userId* na chave ID da Windows Store. | Sim      |
 
  
@@ -77,7 +78,7 @@ O objeto UserIdentity contém os parâmetros a seguir.
 
 O exemplo a seguir usa *itemId* e *trackingId*.
 
-```
+```syntax
 POST https://collections.mp.microsoft.com/v6.0/collections/consume HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1…..
 Host: collections.mp.microsoft.com
@@ -97,7 +98,7 @@ Content-Type: application/json
 
 O exemplo a seguir usa *productId* e *transactionId*.
 
-```
+```syntax
 POST https://collections.mp.microsoft.com/v6.0/collections/consume HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1……
 Content-Length: 1880
@@ -122,7 +123,7 @@ Nenhum conteúdo será retornado se o consumo for executado com êxito.
 
 ### Exemplo de resposta
 
-```
+```syntax
 HTTP/1.1 204 No Content
 Content-Length: 0
 MS-CorrelationId: 386f733d-bc66-4bf9-9b6f-a1ad417f97f0
@@ -157,6 +158,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

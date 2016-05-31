@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: Ao usar um assistente no Visual Studio, você pode gerar notificações por push a partir de um serviço móvel que foi criado com os Serviços Móveis do Azure.
 title: Código gerado pelo assistente de notificação por push
 ms.assetid: 340F55C1-0DDF-4233-A8E4-C15EF9030785
-label: a ser definido
+label: TBD
 template: detail.hbs
 ---
 
 # Código gerado pelo assistente de notificação por push
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Ao usar um assistente no Visual Studio, você pode gerar notificações por push a partir de um serviço móvel que foi criado com os Serviços Móveis do Azure. O assistente do Visual Studio gera código para ajudá-lo a começar. Este tópico explica como o assistente modifica seu projeto, o que o código gerado faz, como usá-lo e o que pode ser feito em seguida para aproveitar ao máximo as notificações por push. Veja [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md).
 
@@ -201,7 +202,7 @@ function sendNotifications(request) {
 
 A função sendNotifications envia uma única notificação como notificação do sistema. Você também pode usar outros tipos de notificações por push.
 
-**Dica**  Para obter informações sobre como obter ajuda ao editar scripts, consulte [Habilitando o IntelliSense para JavaScript do lado do servidor](http://go.microsoft.com/fwlink/p/?LinkId=309275).
+**Dica**  Para saber como obter ajuda ao editar scripts, consulte [Habilitando o IntelliSense para JavaScript do lado do servidor](http://go.microsoft.com/fwlink/p/?LinkId=309275).
 
  
 
@@ -248,6 +249,6 @@ Você também pode enviar notificações por push executando uma tarefa agendada
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

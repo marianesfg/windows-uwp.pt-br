@@ -1,14 +1,15 @@
 ---
-description: Este tópico explica o sistema de propriedade de dependência que está disponível quando você escreve um aplicativo do Tempo de Execução do Windows em C++, C# ou Visual Basic com definições de XAML para a interface do usuário.
+author: jwmsft
+description: Este tópico explica o sistema de propriedades de dependência que está disponível quando você escreve um aplicativo do Windows Runtime em C++, C# ou Visual Basic com definições de XAML para a interface do usuário.
 title: Visão geral das propriedades de dependência
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
 ---
 
 # Visão geral das propriedades de dependência
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este tópico explica o sistema de propriedade de dependência que está disponível quando você escreve um aplicativo do Tempo de Execução do Windows em C++, C# ou Visual Basic com definições de XAML para a interface do usuário.
+Este tópico explica o sistema de propriedades de dependência que está disponível quando você escreve um aplicativo do Windows Runtime em C++, C# ou Visual Basic com definições de XAML para a interface do usuário.
 
 ## O que é uma propriedade de dependência?
 
@@ -132,7 +133,7 @@ Uma propriedade de dependência pode ter seu valor definido por meio de uma vinc
 
 O exemplo a seguir define o valor [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) para um elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652), usando uma associação no XAML. A associação usa um contexto de dados herdado e um objeto da fonte de dados. (Nenhum destes é exibido no exemplo curto; para obter uma amostra mais completa que mostre o contexto e a fonte, consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).)
 
-```XAML
+```XML
 <Canvas>
   <TextBlock Text="{Binding Team.TeamName}"/>
 </Canvas>
@@ -194,13 +195,15 @@ Os aspectos de threading de [**DependencyObject**](https://msdn.microsoft.com/li
 * [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/mt187354)
 * [Criando componentes do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-* [Usuário XAML e exemplo de controles personalizados](http://go.microsoft.com/fwlink/p/?linkid=238581)
-**APIs relacionadas às propriedades de dependência**
+* [Exemplo de controles de usuário XAML e personalizado](http://go.microsoft.com/fwlink/p/?linkid=238581)
+            
+          
+            **APIs relacionadas às propriedades de dependência**
 * [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
 * [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

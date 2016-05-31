@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: Use esse método na API da coleção da Windows Store para obter todos os produtos que pertence a um cliente em relação a aplicativos que estejam associados com sua ID de cliente do Azure AD. Você pode analisar sua consulta para um determinado produto ou usar outros filtros.
 title: Consulta por produtos
@@ -7,7 +8,7 @@ title: Consulta por produtos
 # Consulta por produtos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use esse método na API da coleção da Windows Store para obter todos os produtos que pertence a um cliente em relação a aplicativos que estejam associados com sua ID de cliente do Azure AD. Você pode analisar sua consulta para um determinado produto ou usar outros filtros.
 
@@ -36,10 +37,10 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;.                           |
-| Host           | cadeia de caracteres | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
+| Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;.                           |
+| Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
-| Content-Type   | cadeia de caracteres | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
+| Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
  
 
@@ -54,7 +55,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | parentProductId   | string       | Se especificado, o serviço retorna apenas IAPs que correspondem ao aplicativo especificado.                                                                                                                                                                                    | Não       |
 | productSkuIds     | ProductSkuId | Se especificado, o serviço retornará apenas os produtos aplicáveis aos pares Produto/SKU fornecidos.                                                                                                                                                                        | Não       |
 | productTypes      | string       | Se especificado, o serviço retorna apenas produtos que correspondam aos tipos de produto especificados. Os tipos de produto com suporte são **Application**, **Durable** e **UnmanagedConsumable**.                                                                                       | Não       |
-| validityType      | cadeia de caracteres       | Quando definido como **All**, todos os produtos para um usuário serão retornados, incluindo itens expirados. Quando definido como **Valid**, somente os produtos que são válidos serão retornados nesse momento (ou seja, eles têm um status ativo, data de início &lt; agora e data de término é &gt; agora). | Não       |
+| validityType      | string       | Quando definido como **All**, todos os produtos para um usuário serão retornados, incluindo itens expirados. Quando definido como **Valid**, somente os produtos que são válidos serão retornados nesse momento (ou seja, eles têm um status ativo, data de início &lt; agora e data de término é &gt; agora). | Não       |
 
  
 
@@ -62,8 +63,8 @@ O objeto UserIdentity contém os parâmetros a seguir.
 
 | Parâmetro            | Tipo   | Descrição                                                                                                                                                                                                                  | Obrigatório |
 |----------------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| identityType         | cadeia de caracteres | Especifique o valor de cadeia de caracteres **b2b**.                                                                                                                                                                                            | Sim      |
-| identityValue        | cadeia de caracteres | Valor cadeia de caracteres da chave ID da Windows Store ID.                                                                                                                                                                                    | Sim      |
+| identityType         | string | Especifique o valor de cadeia de caracteres **b2b**.                                                                                                                                                                                            | Sim      |
+| identityValue        | string | Valor cadeia de caracteres da chave ID da Windows Store ID.                                                                                                                                                                                    | Sim      |
 | localTicketReference | string | Identificador solicitado para produtos retornados. Itens retornados no corpo da resposta terão uma correspondência *localTicketReference*. Recomendamos que você use o mesmo valor que a declaração *userId* na chave ID da Windows Store. | Sim      |
 
  
@@ -72,14 +73,14 @@ O objeto ProductSkuId contém os parâmetros a seguir.
 
 | Parâmetro | Tipo   | Descrição                                                                                                                                                                                                                                                                                                            | Obrigatório |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| productId | string | A ID de produto do catálogo da Windows Store. Para obter a ID do produto, navegue até seu aplicativo no painel Centro de Desenvolvimento do Windows, vá até **Gerenciamento de aplicativo** &gt; página **Identidade do aplicativo** e recupere o sufixo da cadeia de caracteres mostrada no campo **URL do Windows 10**. Uma ID de produto do exemplo é "9WZDNCRFJ3Q8". | Sim      |
+| productId | string | A ID de produto do catálogo da Windows Store. Para obter a ID de produto, navegue para o seu aplicativo no painel Centro de Desenvolvimento do Windows, vá até a página **Gerenciamento de aplicativo**&gt;**Identidade do aplicativo** e recupere o sufixo da cadeia de caracteres mostrado no campo **URL para Windows 10**. Uma ID de produto do exemplo é "9WZDNCRFJ3Q8". | Sim      |
 | skuID     | string | A ID da SKU do catálogo da Windows Store. Um ID de SKU de exemplo é “0010”.                                                                                                                                                                                                                                                | Sim      |
 
  
 
 ### Exemplo de solicitação
 
-```
+```syntax
 POST https://collections.mp.microsoft.com/v6.0/collections/query HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1Q…….
 Host: collections.mp.microsoft.com
@@ -138,15 +139,15 @@ O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 | orderLineItemId      | string             | Se presente, o item de linha da ordem específica para a qual o item foi obtido.                                                                | Não       |
 | ownershipType        | string             | A cadeia de caracteres "OwnedByBeneficiary".                                                                                                                   | Sim      |
 | productId            | string             | A ID de produto do catálogo da Windows Store. Uma ID de produto do exemplo é "9WZDNCRFJ3Q8".                                                            | Sim      |
-| productType          | cadeia de caracteres             | Um dos seguintes tipos de produto: **Application**, **Durable** e **UnmanagedConsumable**.                                                     | Sim      |
-| purchasedCountry     | cadeia de caracteres             | N/A.                                                                                                                                               | Não       |
+| productType          | string             | Um dos seguintes tipos de produto: **Application**, **Durable** e **UnmanagedConsumable**.                                                     | Sim      |
+| purchasedCountry     | string             | N/A.                                                                                                                                               | Não       |
 | comprador            | IdentityContractV6 | Se presente, representa a identidade do comprador do item. Veja os detalhes para esse objeto abaixo.                                      | Não       |
 | Quantity             | número             | A quantidade do item. Atualmente, sempre será 1.                                                                                        | Não       |
 | skuId                | string             | A ID da SKU do catálogo da Windows Store. Um ID de SKU de exemplo é “0010”.                                                                            | Sim      |
-| skuType              | cadeia de caracteres             | O tipo de SKU. Os valores possíveis incluem **Trial**, **Full** e **Rental**.                                                                      | Sim      |
+| skuType              | string             | O tipo de SKU. Os valores possíveis incluem **Trial**, **Full** e **Rental**.                                                                      | Sim      |
 | startDate            | datetime           | A data em que a validade do item é iniciada.                                                                                                         | Sim      |
-| Status               | cadeia de caracteres             | O status do item. Os valores possíveis incluem **Active**, **Expired**, **Revoked** e **Banned**.                                              | Sim      |
-| Tags                 | cadeia de caracteres             | N/A                                                                                                                                                | Sim      |
+| Status               | string             | O status do item. Os valores possíveis incluem **Active**, **Expired**, **Revoked** e **Banned**.                                              | Sim      |
+| Tags                 | string             | N/A                                                                                                                                                | Sim      |
 | transactionId        | guid               | A ID de transação como resultado da compra desse item. Pode ser usada para declarar um item como providenciado.                                       | Sim      |
 
  
@@ -155,14 +156,14 @@ O objeto IdentityContractV6 contém os parâmetros a seguir.
 
 | Parâmetro     | Tipo   | Descrição                                                                        | Obrigatório |
 |---------------|--------|------------------------------------------------------------------------------------|----------|
-| identityType  | cadeia de caracteres | Contém o valor **"pub"**.                                                      | Sim      |
-| identityValue | cadeia de caracteres | O valor da cadeia de caracteres de *publisherUserId* da chave de ID da Windows Store especificada. | Sim      |
+| identityType  | string | Contém o valor **"pub"**.                                                      | Sim      |
+| identityValue | string | O valor da cadeia de caracteres de *publisherUserId* da chave de ID da Windows Store especificada. | Sim      |
 
  
 
 ### Exemplo de resposta
 
-```
+```syntax
 HTTP/1.1 200 OK
 Content-Length: 7241
 Content-Type: application/json
@@ -210,6 +211,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 * [Renovar uma chave ID da Windows Store](renew-a-windows-store-id-key.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

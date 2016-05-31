@@ -1,5 +1,6 @@
 ---
-Description: O relatório aquisições de IAP do painel do Centro de Desenvolvimento do Windows permite que você veja quantos IAPs você vendeu, além das informações demográficas e dos detalhes da plataforma.
+author: jnHs
+Description: O relatório Aquisições de IAP do painel do Centro de Desenvolvimento do Windows permite que você veja quantos IAPs você vendeu, além das informações demográficas e dos detalhes da plataforma.
 title: Relatório de aquisições de IAP
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ---
@@ -11,7 +12,7 @@ O relatório **Aquisições de IAP** do painel do Centro de Desenvolvimento do W
 
 Nesse relatório, uma aquisição de IAP significa que um cliente comprou um IAP de você. Várias compras do mesmo IAP consumível pelo mesmo cliente são contadas como aquisições de IAP separadas.
 
-> **Importante**  O relatório **Aquisições de IAP** não inclui dados sobre reembolsos, reversões, estornos etc. Para estimar a receita do seu aplicativo, visite [Resumo de pagamento](payout-summary.md). Na seção **Reservado**, clique no link **Download reserved transactions**.
+> **Importante**  O relatório **Aquisições de IAP** não inclui dados sobre reembolsos, reversões, estornos, etc. Para calcular a receita do seu aplicativo, visite [Resumo de pagamento](payout-summary.md). Na seção **Reservado**, clique no link **Download reserved transactions**.
 
 ## Aplicar filtros
 
@@ -64,6 +65,6 @@ O catálogo em destaque **Versão do sistema operacional** mostra o número tota
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

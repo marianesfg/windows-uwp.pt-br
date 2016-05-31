@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Amostras da UWP no Xbox One
 description: Amostras e bibliotecas para ajudar você a criar excelentes experiências de TV e do Xbox One.
 area: Xbox
@@ -15,6 +16,6 @@ Para saber mais, consulte o projeto [TVHelpers](https://github.com/Microsoft/TVH
 - [UWP no Xbox One](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

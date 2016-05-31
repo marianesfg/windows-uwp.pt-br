@@ -1,12 +1,13 @@
 ---
+author: jwmsft
 description: Fornece um valor para qualquer atributo XAML avaliando uma referência a um recurso, com lógica do sistema adicional que recupera diferentes recursos, dependendo do tema ativo no momento.
 title: Extensão de marcação ThemeResource
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
 ---
 
-# extensão de marcação {ThemeResource}
+# Extensão de marcação {ThemeResource}
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Fornece um valor para qualquer atributo XAML avaliando uma referência a um recurso, com lógica do sistema adicional que recupera diferentes recursos, dependendo do tema ativo no momento. Assim como a [extensão de marcação {StaticResource}](staticresource-markup-extension.md), os recursos são definidos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) e o uso de **ThemeResource** faz referência à chave desse recurso no **ResourceDictionary**.
 
@@ -20,7 +21,7 @@ Fornece um valor para qualquer atributo XAML avaliando uma referência a um recu
 
 | Termo | Descrição |
 |------|-------------|
-| chave | A chave para o recurso solicitado. Essa chave é inicialmente atribuída pelo [**ResourceDictionary**>](https://msdn.microsoft.com/library/windows/apps/br208794). Uma chave de recurso pode ser qualquer cadeia de caracteres definida na gramática de XamlName. |
+| chave | A chave para o recurso solicitado. Essa chave é inicialmente atribuída pelo [ **ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794). Uma chave de recurso pode ser qualquer cadeia de caracteres definida na gramática de XamlName. |
  
 ## Comentários
 
@@ -61,7 +62,7 @@ As definições XAML de estados visuais em um modelo de controle devem usar refe
 
 O uso de **ThemeResource** pode ser visto em uma série de valores dependentes. Por exemplo, um valor [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) usado por um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) que também é um recurso de chave pode usar uma referência **ThemeResource**. Mas quaisquer propriedades de interface do usuário que usem o recurso de chave **SolidColorBrush** também deverão usar uma referência **ThemeResource**, para que cada propriedade de tipo de [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) que esteja ativando um valor dinâmico mude quando o tema mudar.
 
-**Observação**  `{ThemeResource}` e a avaliação de recurso do tempo de execução durante a alteração de tema tem suporte no Windows 8.1 XAML, mas não no XAML para aplicativos do Windows 8.
+**Observação**  `{ThemeResource}` e a avaliação de recurso do tempo de execução durante a alteração de tema têm suporte no Windows 8.1 XAML, mas não no XAML para aplicativos do Windows 8.
 
 ### Recursos do sistema
 
@@ -73,7 +74,7 @@ Os recursos do sistema costumam ser valores subjacentes para um tema em alto con
 
 Veja a seguir alguns exemplos de XAML extraídos dos arquivos padrão generic.xaml e themeresources.xaml para ilustrar como usar **ThemeResource**. Vamos analisar apenas um modelo (o [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) padrão) e como duas propriedades são declaradas ([**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) e [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414)) para serem responsivas às alterações de temas.
 
-```xaml
+```xml
     <!-- Default style for Windows.UI.Xaml.Controls.Button -->
     <Style TargetType="Button">
         <Setter Property="Background" Value="{ThemeResource ButtonBackgroundThemeBrush}" />
@@ -85,7 +86,7 @@ Aqui, as propriedades assumem um valor [**Brush**](https://msdn.microsoft.com/li
 
 Essas mesmas propriedades também são ajustadas por alguns dos estados visuais para um [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265). Notavelmente, a cor da tela de fundo muda quando um botão é clicado. Aqui também, as animações de [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) e [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) no storyboard de estados visuais usam objetos [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) e referências a pincéis com **ThemeResource** como o valor chave.
 
-```xaml
+```xml
 <VisualState x:Name="Pressed">
   <Storyboard>
     <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border"
@@ -102,7 +103,7 @@ Essas mesmas propriedades também são ajustadas por alguns dos estados visuais 
 
 Cada um desses pincéis é definido previamente em generic.xaml: eles precisam ser definidos antes de serem utilizados por qualquer modelo, para evitar referências posteriores de XAML. Aqui estão essas definições, para o dicionário de temas "Padrão".
 
-```xaml
+```xml
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Default">
 ... 
@@ -116,7 +117,7 @@ Cada um desses pincéis é definido previamente em generic.xaml: eles precisam s
 
 Depois, os pincéis de cada um dos outros dicionários de temas também são definidos, por exemplo:
 
-```xaml
+```xml
         <ResourceDictionary x:Key="HighContrast">
             <!-- High Contrast theme resources -->
 ...
@@ -150,6 +151,6 @@ Quando uma chave de recurso existe como parte de qualquer uso **{ThemeResource}*
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

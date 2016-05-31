@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Você pode baixar .files que contêm os dados de análise para que você possa revisar suas estatísticas e informações offline.
 title: Baixar relatórios de análise
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
@@ -22,6 +23,6 @@ Você pode baixar .files que contêm os dados de análise para que você possa r
 4.  Clique no botão **Baixar relatórios** e salve ou abra o arquivo .tsv.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

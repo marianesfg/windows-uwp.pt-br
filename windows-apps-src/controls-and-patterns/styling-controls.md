@@ -1,17 +1,18 @@
 ---
+author: Jwmsft
 Description: Os estilos permitem definir propriedades de controle e reutilizar essas configurações para criar uma aparência consistente em vários controles.
 MS-HAID: 'dev\_ctrl\_layout\_txt.styling\_controls'
 MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh
 title: Aplicando estilos a controles
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
-label: Aplicando estilos a controles
+label: Styling controls
 template: detail.hbs
 ---
 
 # Aplicando estilos a controles
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 É possível personalizar a aparência de seus aplicativos de muitas formas usando a estrutura XAML. Os estilos permitem definir propriedades de controle e reutilizar essas configurações para criar uma aparência consistente em vários controles.
 
@@ -146,10 +147,8 @@ Você deve usar os estilos provenientes dos recursos XAML padrão do Windows Run
 
 Um setter de estilo pode ser usado para a propriedade [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465) de um [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) e, na verdade, isso compõe a maior parte de um estilo XAML típico e dos recursos XAML de um aplicativo. Isso é discutido com mais detalhes no tópico [Modelos de controle](control-templates.md).
 
-**Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

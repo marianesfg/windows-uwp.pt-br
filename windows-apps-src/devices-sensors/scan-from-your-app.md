@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
-title: Digitalização a partir do seu aplicativo
+title: Digitalize a partir de seu aplicativo
 description: Aprenda aqui a digitalizar conteúdos do seu aplicativo usando uma fonte de scanner de mesa, alimentador ou autoconfigurado.
 ---
 # Digitalizar a partir do seu aplicativo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -15,7 +16,7 @@ description: Aprenda aqui a digitalizar conteúdos do seu aplicativo usando uma 
 
 Aprenda aqui a digitalizar conteúdos do seu aplicativo usando uma fonte de scanner de mesa, alimentador ou autoconfigurado.
 
-**Importante**  As APIS [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) fazem parte da [família de dispositivos da área de trabalho](https://msdn.microsoft.com/library/windows/apps/Dn894631). Os aplicativos podem usar essas APIs somente na versão para a área de trabalho do Windows 10.
+**Importante**  As APIS [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) fazem parte da [família de dispositivos](https://msdn.microsoft.com/library/windows/apps/Dn894631) de desktop. Os aplicativos podem usar essas APIs somente na versão para a área de trabalho do Windows 10.
 
 Para digitalizar de seu aplicativo, você deve primeiro listar os scanners disponíveis declarando um novo objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) e obtendo o tipo [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381). Somente scanners instalados localmente com drivers WIA são listados e disponibilizados a seu aplicativo.
 
@@ -54,9 +55,9 @@ O Windows não detecta scanners automaticamente. Você deve executar essa etapa 
        await
        MainPage.Current.Dispatcher.RunAsync(
              Windows.UI.Core.CoreDispatcherPriority.Normal,
-             () =&gt;
+             () =>
              {
-                MainPage.Current.NotifyUser(String.Format(&quot;Scanner with device id {0} has been added&quot;, deviceInfo.Id), NotifyType.StatusMessage);
+                MainPage.Current.NotifyUser(String.Format("Scanner with device id {0} has been added", deviceInfo.Id), NotifyType.StatusMessage);
 
                 // search the device list for a device with a matching device id
                 ScannerDataItem match = FindInList(deviceInfo.Id);
@@ -89,7 +90,7 @@ Para cada tipo de enumeração [**ImageScannerScanSource**](https://msdn.microso
 
 Para digitalizar com as configurações padrão, seu aplicativo conta com o namespace [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) para selecionar um scanner e digitalizar dessa origem. Nenhuma configuração de digitalização é alterada. Os scanners possíveis são configurado automaticamente, plano ou alimentador. Esse tipo de digitalização é o mais provável que produza uma operação de digitalização bem-sucedida, mesmo se digitalizar da fonte errada, como de scanner plano em vez de alimentador.
 
-**Observação**  Se o usuário colocar o documento para digitalizar no alimentador, o scanner digitalizará do scanner plano, no lugar. Se o usuário tentar digitalizar de um alimentador vazio, a tarefa de digitalização não produzirá qualquer arquivo digitalizado.
+**Observação**  Se o usuário colocar o documento para digitalizar no alimentador, o scanner digitalizará a partir do scanner plano. Se o usuário tentar digitalizar de um alimentador vazio, a tarefa de digitalização não produzirá qualquer arquivo digitalizado.
  
 ```csharp
     var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default, 
@@ -100,7 +101,7 @@ Para digitalizar com as configurações padrão, seu aplicativo conta com o name
 
 Seu aplicativo pode usar [Digitalização configurada automaticamente](https://msdn.microsoft.com/library/windows/hardware/Ff539393) do dispositivo, para digitalizar com as melhores configurações de digitalização. Com essa opção, o próprio dispositivo pode determinar as melhores configurações de digitalização, como modo de cor e resolução da digitalização, de acordo com o conteúdo que está sendo digitalizado. O dispositivo seleciona as configurações de digitalização no tempo de execução para cada nova tarefa de digitalização.
 
-**Observação**  Nem todos scanners suportam esse recurso, portanto o aplicativo deve verificar se o scanner tem suporte para esse recurso antes de usar essa configuração.
+**Observação**  Nem todos os scanners dão suporte a esse recurso, portanto o aplicativo deve verificar se o scanner tem suporte para esse recurso antes de usar essa configuração.
 
 Nesse exemplo, o aplicativo primeiro verifica se o scanner é capaz de usar configuração automática e então digitaliza. Para especificar se em plano ou alimentador, simplesmente substitua **AutoConfigured** por **Flatbed** ou **Feeder**.
 
@@ -122,7 +123,7 @@ Você pode adicionar código para visualizar a digitalização antes de digitali
 ```csharp
 if (myScanner.IsPreviewSupported(ImageScannerScanSource.Flatbed))
 {
-    rootPage.NotifyUser(&quot;Scanning&quot;, NotifyType.StatusMessage);
+    rootPage.NotifyUser("Scanning", NotifyType.StatusMessage);
                 // Scan API call to get preview from the flatbed.
                 var result = await myScanner.ScanPreviewToStreamAsync(
                     ImageScannerScanSource.Flatbed, stream);
@@ -159,8 +160,8 @@ cancellationToken = new CancellationTokenSource();
 2.  Configure o manipulador de eventos de progresso e obtenha o progresso da digitalização.
 
 ```csharp
-    rootPage.NotifyUser(&quot;Scanning&quot;, NotifyType.StatusMessage);
-    var progress = new Progress&lt;UInt32&gt;(ScanProgress);
+    rootPage.NotifyUser("Scanning", NotifyType.StatusMessage);
+    var progress = new Progress<UInt32>(ScanProgress);
 ```
 
 ## Digitalizando para a biblioteca de imagens
@@ -169,6 +170,6 @@ Os usuários podem digitalizar para qualquer pasta dinamicamente, usando a class
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

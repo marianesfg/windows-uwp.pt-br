@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Perguntas frequentes
 description: Perguntas frequentes sobre a UWP no Xbox.
 area: Xbox
@@ -43,7 +44,8 @@ Se você estiver no modo de varejo, você verá o conteúdo Gold/Live habitual.
 Sim, você pode alternar do modo de desenvolvedor para o modo de varejo, onde você pode jogar seus jogos. 
 Para saber mais, veja a página [Ativação do modo de desenvolvedor do Xbox One](devkit-activation.md). 
 
-> **CUIDADO**&nbsp;&nbsp;A Atualização do Xbox Developer Preview System inclui software experimental e de pré-lançamento inicial. 
+> **CUIDADO**
+            &nbsp;&nbsp;A Atualização do Xbox Developer Preview System inclui software experimental e de pré-lançamento inicial. 
 Isso significa que alguns aplicativos e jogos populares não funcionarão conforme o esperado, e você poderá experimentar falhas ocasionais e perda de dados.
 
 ### Irei perder meus aplicativos e jogos ou alterações salvas?
@@ -75,8 +77,7 @@ Os aplicativos UWP criados e testados em um Xbox One de varejo irão passar pelo
 
 Você pode usar a UWP e o Xbox One no modo de desenvolvedor para compilar e testar seus jogos no Xbox One. 
 Para publicar jogos UWP você deve se registrar no [ID@XBOX](http://www.xbox.com/en-us/Developers/id). 
-O [ID@XBOX](http://www.xbox.com/en-us/Developers/id) fornece aos desenvolvedores acesso total às APIs do Xbox Live para seus jogos, incluindo pontuação do jogador e conquistas, 
-além da habilidade de tirar proveito de múltiplos jogadores entre dispositivos, salvos na nuvem e todos os recursos do Xbox Live no Xbox One. 
+O [ID@XBOX](http://www.xbox.com/en-us/Developers/id) fornece aos desenvolvedores total acesso às APIs do Xbox Live para seus jogos, incluindo pontuação e conquistas, bem como a funcionalidade de vários jogadores entre dispositivos, salvamentos na nuvem e todos os recursos do Xbox Live no Xbox One. 
 O [ID@Xbox](http://www.xbox.com/en-us/Developers/id) também pode fornecer acesso aos kits de desenvolvimento do Xbox One para jogos que exigem acesso ao potencial máximo do hardware do Xbox One.
 
 ### Os mecanismos de jogo padrão funcionarão?
@@ -119,7 +120,8 @@ Se o Visual Studio puder se conectar, mas houver falha na implantação (por exe
 
 1. Verifique se seu aplicativo não está instalado desinstalando-o no aplicativo Coleções no shell do Xbox One. 
 
-> **Observação**&nbsp;&nbsp;Desinstalar seu aplicativo no Windows Device Portal (WDP) não resolverá o problema.
+> **Observação**
+            &nbsp;&nbsp;Desinstalar seu aplicativo no Windows Device Portal (WDP) não resolverá o problema.
 
 2. Se os problemas persistirem, desinstale seu aplicativo ou jogo no aplicativo Coleções, saia do modo de desenvolvedor, reinicie no modo de varejo e alterne novamente para o modo de desenvolvedor. 
 Isso limpará o armazenamento do dispositivo.
@@ -127,10 +129,12 @@ Isso limpará o armazenamento do dispositivo.
 3. Se os problemas persistirem, siga as etapas acima e use **Redefinir e manter meus aplicativos e jogos** para excluir todos os estados armazenados em seu Xbox One. 
 Vá para Configurações > Sistema > Informações e atualizações do console > Redefinir console e selecione o botão **Redefinir e manter meus aplicativos e jogos**.
 
-> **Cuidado**&nbsp;&nbsp;Fazer isso excluirá todas as configurações salvas em seu Xbox One incluindo configurações sem fio, contas de usuário e qualquer progresso de jogo que não tenha sido salvo no armazenamento em nuvem.
+> **Cuidado**
+            &nbsp;&nbsp;Fazer isso excluirá todas as configurações salvas em seu Xbox One incluindo configurações sem fio, contas de usuário e qualquer progresso de jogo que não tenha sido salvo no armazenamento em nuvem.
 
-> **Cuidado**&nbsp;&nbsp;NÃO selecione o botão **Redefinir e remover tudo**.
-Isso irá excluir todos os jogos, aplicativos, configurações e conteúdo, desativar o modo de desenvolvedor e remover seu console do grupo Developer Preview.
+> **Cuidado**
+            &nbsp;&nbsp;NÃO selecione o botão **Redefinir e remover tudo**.
+Isso excluirá todos os jogos, aplicativos, configurações e conteúdo, desativar o Modo de Desenvolvedor e remover seu console do grupo Developer Preview.
 
 ### Se eu estiver criando um aplicativo usando HTML/JavaScript, como habilito a navegação Gamepad?
 
@@ -145,6 +149,6 @@ Para saber mais, veja o projeto [TVHelpers](https://github.com/Microsoft/TVHelpe
 - [UWP no Xbox One](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

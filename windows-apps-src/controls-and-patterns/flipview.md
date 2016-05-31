@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Exibe imagens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, uma imagem por vez.
 title: Diretrizes para controles de exibição de inversão
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
@@ -101,7 +102,8 @@ Aqui, o ItemsSource está associado a um [**CollectionViewSource**](https://msdn
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**Observação**&nbsp;&nbsp;Você pode popular um recurso exibição de inversão adicionando itens a sua coleção Items ou definindo sua propriedade ItemsSource, mas você não pode usar as duas formas ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item no XAML, o item será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
+>**Observação**
+            &nbsp;&nbsp;Você pode popular um recurso exibição de inversão adicionando itens a sua coleção Items ou definindo sua propriedade ItemsSource, mas você não pode usar as duas formas ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item no XAML, o item será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
 
 ### Especificar a aparência dos itens
 
@@ -201,11 +203,11 @@ Para coleções maiores (10 a 25 itens), considere usar um indicador que ofereç
 
 ## Artigos relacionados
 
-[Diretrizes para listas](https://msdn.microsoft.com/library/windows/apps/mt186889)
+- [Diretrizes para listas](https://msdn.microsoft.com/library/windows/apps/mt186889)
 - [**Classe FlipView (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242678)
 - [**Classe CarouselPanel (XAML)**](https://msdn.microsoft.com/library/windows/apps/hh967950)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

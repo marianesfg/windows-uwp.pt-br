@@ -1,14 +1,15 @@
 ---
+author: DBirtolo
 ms.assetid: F8A741B4-7A6A-4160-8C5D-6B92E267E6EA
 title: Emparelhar dispositivos
 description: Alguns dispositivos precisam ser emparelhados antes de serem usados. O namespace Windows.Devices.Enumeration oferece suporte a três maneiras diferentes de emparelhar dispositivos.
 ---
 # Emparelhar dispositivos
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** APIs Importantes **
+** APIs importantes **
 
 -   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
 
@@ -47,7 +48,7 @@ Para implementar o emparelhamento personalizado, você precisará obter o objeto
 
 Para dar suporte ao emparelhamento personalizado, você precisará criar um manipulador para o evento [**PairingRequested**](https://msdn.microsoft.com/library/windows/apps/BR225393custompairing_pairingrequested). É preciso garantir que esse manipulador será levado em consideração para todos os diferentes [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808) que podem ser usados em uma situação de emparelhamento personalizado. A ação adequada a ser tomada dependerá do **DevicePairingKinds** fornecido como parte dos argumentos de evento.
 
-É importante estar ciente de que o emparelhamento personalizado é sempre uma operação a nível de sistema. Por isso, quando você estiver operando em um desktop ou Windows Phone, um diálogo de sistema sempre será exibido para o usuário quando o emparelhamento for acontecer. Isso ocorre porque ambas as plataformas possuem uma experiência de usuário que requer o consentimento do usuário. Como esse diálogo é gerado automaticamente, você não precisará criar seu próprio diálogo quando for optar por um [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808) de **ConfirmOnly** quando estiver operando nessas plataformas. Para os outros **DevicePairingKinds**, você precisará realizar algumas manipulações especiais, dependendo do valor **DevicePairingKinds** específico. Veja os exemplos de amostra de como manipular o emparelhamento personalizado para valores **DevicePairingKinds**.
+É importante estar ciente de que o emparelhamento personalizado é sempre uma operação a nível de sistema. Por isso, quando você estiver operando em um desktop ou Windows Phone, um diálogo de sistema sempre será exibido para o usuário quando o emparelhamento for acontecer. Isso ocorre porque ambas as plataformas possuem uma experiência de usuário que requer o consentimento do usuário. Como esse diálogo é gerado automaticamente, você não precisará criar seu próprio diálogo quando for optar por um [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808) de **ConfirmOnly** quando estiver operando nessas plataformas. Para os outros **DevicePairingKinds**, você precisará realizar algumas interações especiais, dependendo do valor **DevicePairingKinds** específico. Veja os exemplos de amostra de como manipular o emparelhamento personalizado para valores **DevicePairingKinds**.
 
 ## Desemparelhando
 
@@ -70,6 +71,6 @@ Para baixar uma amostra de como usar as APIs [**Windows.Devices.Enumeration**](h
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

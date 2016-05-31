@@ -1,11 +1,12 @@
 ---
+author: scottmill
 ms.assetid: 16ad97eb-23f1-0264-23a9-a1791b4a5b95
-title: interoperação nativa entre DirectX e Direct2D de composição com BeginDraw e EndDraw
-description: a API Windows.UI.Composition fornece interfaces de interoperação nativa, e, que permitem que o conteúdo seja movido diretamente para o compositor.
+title: Interoperação nativa entre DirectX e Direct2D de composição com BeginDraw e EndDraw
+description: A API Windows.UI.Composition fornece interfaces de interoperação nativa que permitem que o conteúdo seja movido diretamente para o compositor.
 ---
 # Interoperação nativa entre DirectX e Direct2D de composição com BeginDraw e EndDraw
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A API Windows.UI.Composition fornece interfaces de interoperação nativa [**ICompositorInterop**](https://msdn.microsoft.com/library/windows/apps/Mt620068), [**ICompositionDrawingSurfaceInterop**](https://msdn.microsoft.com/library/windows/apps/Mt620058) e [**ICompositionGraphicsDeviceInterop**](https://msdn.microsoft.com/library/windows/apps/Mt620065), que permitem que o conteúdo seja movido diretamente para o compositor.
 
@@ -264,6 +265,6 @@ private:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

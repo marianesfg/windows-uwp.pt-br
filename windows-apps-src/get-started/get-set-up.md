@@ -1,9 +1,10 @@
 ---
+author: martinekuan
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
-title: Preparar-se
-description: Preparar-se é mais fácil do que você pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
+title: Prepare-se para começar
+description: É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
 ---
-# Preparar-se
+# Prepare-se para começar
 
 Preparar-se é mais fácil do que você pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
 
@@ -41,7 +42,7 @@ Você pode começar a desenvolver aplicativos agora, mas antes de enviá-los par
 
 Após instalar as ferramentas e obtido uma licença de desenvolvedor ou uma conta de desenvolvedor, use o nosso tutorial para criar seu primeiro aplicativo:
 
--   Tutoriais para [criar o seu primeiro aplicativo](your-first-app.md)
+-   Tutoriais para [Criar seu primeiro aplicativo](your-first-app.md)
 
 ## Deseja mais ferramentas e downloads?
 
@@ -50,6 +51,6 @@ Para obter a lista completa de ferramentas e downloads, consulte [Downloads](htt
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

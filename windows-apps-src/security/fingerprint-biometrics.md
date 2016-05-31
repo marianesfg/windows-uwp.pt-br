@@ -8,7 +8,7 @@ author: awkoren
 # Biometria por impressão digital
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo explica como adicionar a biometria de impressão digital em seu aplicativo UWP (Plataforma Universal do Windows). Incluir um pedido de autenticação por impressão digital quando o usuário precisar autorizar uma determinada ação aprimora a segurança do seu aplicativo. Por exemplo, você pode exigir autenticação por impressão digital antes de autorizar uma compra realizada em aplicativo ou acessar recursos restritos. A autenticação por impressão digital é gerenciada com o uso da classe [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134) no namespace [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356).
@@ -79,7 +79,7 @@ private async System.Threading.Tasks.Task<string> RequestConsent(string userMess
 
     try
     {
-        // Request the logged on user&#39;s consent via fingerprint swipe.
+        // Request the logged on user's consent via fingerprint swipe.
         var consentResult = await Windows.Security.Credentials.UI.UserConsentVerifier.RequestVerificationAsync(userMessage);
 
         switch (consentResult)
@@ -120,6 +120,6 @@ private async System.Threading.Tasks.Task<string> RequestConsent(string userMess
 }
 ```
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

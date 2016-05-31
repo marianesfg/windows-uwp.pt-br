@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 Description: Siga estas práticas recomendadas para cerca geográfica em seu aplicativo.
 title: Diretrizes de aplicativos com cerca geográfica
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
@@ -7,7 +8,7 @@ ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
 # Diretrizes de aplicativos com cerca geográfica
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -121,7 +122,7 @@ Se seu aplicativo precisar usar cercas geográficas com raios pequenos, sugira a
 * [Configurar uma cerca geográfica](https://msdn.microsoft.com/library/windows/apps/mt219702)
 * [Obter a localização atual](https://msdn.microsoft.com/library/windows/apps/mt219698)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
-* [UWP location sample (geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Amostra de localização UWP (geolocalização)](http://go.microsoft.com/fwlink/p/?linkid=533278)
  
 
  
@@ -131,6 +132,6 @@ Se seu aplicativo precisar usar cercas geográficas com raios pequenos, sugira a
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

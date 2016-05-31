@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Animações de transição de conteúdo permitem que você mude o conteúdo de uma área da tela enquanto mantém constante o contêiner ou o plano de fundo. O novo conteúdo aparece. Se houver conteúdo existente para ser substituído, esse conteúdo desaparecerá.
 title: Diretrizes para animações de transição de conteúdo
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
@@ -7,10 +8,10 @@ ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 # Animações de transição de conteúdo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**APIs Importantes**
+
+**APIs importantes**
 
 -   [**Classe ContentThemeTransition (XAML)**](https://msdn.microsoft.com/library/windows/apps/br243104)
 -   [**Função enterContent (HTML)**](https://msdn.microsoft.com/library/windows/apps/hh701582)
@@ -28,7 +29,7 @@ Animações de transição de conteúdo permitem que você mude o conteúdo de u
 -   Não use animações de transição de conteúdo quando toda a página está mudando. Nesse caso, use as animações de transição de página.
 -   Não use animações de transição de conteúdo se o conteúdo só estiver sendo atualizado. Animações de transição de conteúdo devem mostrar movimento. Para atualizações, use animações de fade.
 
-\[Este artigo contém informações específicas para aplicativos da Plataforma Universal do Windows (UWP) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## <span id="related_topics"></span>Artigos relacionados
 
@@ -47,6 +48,6 @@ Animações de transição de conteúdo permitem que você mude o conteúdo de u
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

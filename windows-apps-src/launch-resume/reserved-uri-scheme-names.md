@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Arquivo reservado e nomes de esquemas de URI
 description: Você pode usar associações de URI para iniciar automaticamente seu aplicativo quando outro aplicativo iniciar um esquema de URI específico.
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
@@ -6,7 +7,7 @@ ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
 # Arquivo reservado e nomes de esquemas de URI
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Você pode usar associações de URI para iniciar automaticamente seu aplicativo quando outro aplicativo iniciar um esquema de URI específico. Mas há algumas associações de URI que você não pode usar, associações que são reservadas. Se seu aplicativo for registrado para uma associação reservada, esse registro será ignorado. Este tópico lista os arquivos reservados e os nomes de esquemas de URI que não estão disponíveis para seu aplicativo.
@@ -125,6 +126,6 @@ Os seguintes tipos de arquivos são reservados para o sistema operacional
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

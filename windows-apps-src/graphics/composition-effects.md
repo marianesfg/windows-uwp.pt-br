@@ -1,11 +1,12 @@
 ---
+author: scottmill
 ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
-title: efeitos de composição
-description: o efeito de APIs permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada.
+title: Efeitos de composição
+description: O efeito de APIs permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada.
 ---
 # Efeitos de composição
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A API do WinRT [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) permite efeitos em tempo real que serão aplicados a imagens e interface do usuário com propriedades de efeitos que podem ser animados. Nesta visão geral, vamos realizar a execução por meio de funcionalidade disponível que permite adicionar efeitos a serem aplicados a uma composição visual.
 
@@ -29,8 +30,8 @@ Atualmente, a composição é compatível com os efeitos a seguir:
 
 | Efeito               | Descrição                                                                                                                                                                                                                |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Transformação afim 2D  | Aplica uma matriz de transformação afim 2D a uma imagem. Usamos esse efeito para animar a máscara alfa em nossos [exemplos](https://github.com/Microsoft/composition/tree/master/SDK10240_WIN10_RTM/BasicCompositonEffects) de efeitos.       |
-| Composição aritmética | Combina duas imagens usando uma equação flexível. Usamos a composição aritmética para criar um efeito de fading cruzado em nossos [exemplos](https://github.com/Microsoft/composition/tree/master/SDK10240_WIN10_RTM/BasicCompositonEffects). |
+| Transformação afim 2D  | Aplica uma matriz de transformação afim 2D a uma imagem. Usamos esse efeito para animar a máscara alfa em nossos [exemplos](http://go.microsoft.com/fwlink/?LinkId=785341) de efeitos.       |
+| Composição aritmética | Combina duas imagens usando uma equação flexível. Usamos a composição aritmética para criar um efeito de fading cruzado em nossos [exemplos](http://go.microsoft.com/fwlink/?LinkId=785341). |
 | Efeito de mesclagem         | Cria um efeito de mesclagem que combina duas imagens. A composição fornece 21 dos 26 [modos de mesclagem](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.md) com suporte no Win2D.        |
 | Fonte de cor         | Gera uma imagem que contém uma cor sólida.                                                                                                                                                                               |
 | Composição            | Combina duas imagens. A composição fornece todos os 13 [modos compostos](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.md) com suporte no Win2D.                                              |
@@ -116,11 +117,11 @@ Inicie a animação na propriedade Saturation do efeito da seguinte forma:
 catEffect.Properties.StartAnimation("saturationEffect.Saturation", effectAnimation);
 ```
 
-Consulte o [exemplo de dessaturação – animação](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/BasicCompositonEffects/Desaturation%20-%20Animation) para propriedades de efeito animadas com quadros chave e o [exemplo AlphaMask](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/BasicCompositonEffects/AlphaMask) para uso de efeitos e expressões.
+Consulte o [exemplo de dessaturação – animação](http://go.microsoft.com/fwlink/?LinkId=785342) para propriedades de efeito animadas com quadros chave e o [exemplo AlphaMask](http://go.microsoft.com/fwlink/?LinkId=785343) para uso de efeitos e expressões.
 
 ### Várias instâncias de efeito com propriedades independentes
 
-Ao especificar que um parâmetro deve ser dinâmico durante a compilação do efeito, o parâmetro pode ser alterado para cada instância do efeito. Isso permite que dois elementos visuais usem o mesmo efeito mas que sejam renderizados com propriedades de outro efeito. Veja o [sample](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/BasicCompositonEffects/ColorSource%20and%20Blend) ColorSource e Blend para obter mais informações.
+Ao especificar que um parâmetro deve ser dinâmico durante a compilação do efeito, o parâmetro pode ser alterado para cada instância do efeito. Isso permite que dois elementos visuais usem o mesmo efeito mas que sejam renderizados com propriedades de outro efeito. Veja o [sample](http://go.microsoft.com/fwlink/?LinkId=785344) ColorSource e Blend para obter mais informações.
 
 ## Introdução aos efeitos de composição
 
@@ -161,7 +162,7 @@ Nas próximas etapas usaremos APIs de composição para aplicar um efeito de sat
 ![Imagem de origem](images/composition-cat-source.png)
 ### Definindo o básico de composição
 
-Consulte o [Exemplo de árvore visual de composição](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/CompositionVisual) em nosso GitHub para obter um exemplo de como configurar o Compositor Windows.UI.Composition e a raiz ContainerVisual, além de criar a associação com um Janela Principal.
+Consulte o [Exemplo de árvore visual de composição](http://go.microsoft.com/fwlink/?LinkId=785345) em nosso GitHub para obter um exemplo de como configurar o Compositor Windows.UI.Composition e a raiz ContainerVisual, além de criar a associação com um Janela Principal.
 
 ```cs
 _compositor = new Compositor();
@@ -242,6 +243,6 @@ brush.Surface = imageSource.Surface;
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

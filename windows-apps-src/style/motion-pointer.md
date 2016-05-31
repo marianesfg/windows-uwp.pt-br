@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Use animações de ponteiro para fornecer aos usuários feedback visual quando o usuário tocar em um item.
 title: Animações para clique de ponteiro em aplicativos UWP
 ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
@@ -10,7 +11,7 @@ template: detail.hbs
 
 Use animações de ponteiro para fornecer aos usuários feedback visual quando o usuário tocar em um item. A animação de ponteiro para baixo encolhe e inclina um pouco o item pressionado e aparece quando um item é tocado pela primeira vez. A animação de ponteiro para cima, que restaura o item à sua posição original, aparece quando o usuário libera o ponteiro.
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **APIs importantes**
@@ -43,6 +44,6 @@ Use animações de ponteiro para fornecer aos usuários feedback visual quando o
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

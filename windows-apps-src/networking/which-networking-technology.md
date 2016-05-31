@@ -1,6 +1,7 @@
 ---
+author: DelfCo
 ms.assetid: 2CC2E526-DACB-4008-9539-DA3D0C190290
-description: Uma rápida visão geral das tecnologias de rede disponíveis para um desenvolvedor UWP, com sugestões sobre como escolher as tecnologias adequadas ao seu aplicativo.
+description: Uma rápida visão geral das tecnologias de rede disponíveis para um desenvolvedor UWP, com sugestões sobre como escolher as tecnologias adequadas aos seu aplicativo.
 title: Qual tecnologia de rede?
 
 ---
@@ -132,6 +133,6 @@ O namespace [**Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

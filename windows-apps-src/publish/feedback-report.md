@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: O relatório de comentários no painel do Centro de Desenvolvimento do Windows permite que você veja os problemas, sugestões e aprovações que os clientes do Windows 10 enviaram através do Hub de Feedback.
 title: Relatório de comentários
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
@@ -8,9 +9,11 @@ ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
 
 Incentivar os clientes a fornecerem comentários sobre seu aplicativo é uma ótima maneira de aprender sobre os problemas e recursos que são mais importantes para eles. Quando seus clientes sabem que podem enviar comentários diretamente, eles têm menos probabilidade de deixar esses comentários como uma análise negativa. 
 
+> **Observação** O relatório de comentários que está descrito neste artigo ainda não está disponível para todas as contas de desenvolvedor.
+
 Você pode usar a API de comentários no [SDK da Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk) para permitir que os clientes [iniciem diretamente o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele usando o aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório, mesmo que não tenha solicitado comentários especificamente dentro de seu aplicativo.
 
-> **Dica** Os comentários se tornam especialmente importantes se você estiver usando o [pacote de liberação de versões de pré-lançamento](package-flights.md), uma vez que o relatório de comentários mostrará o pacote específico que cada cliente tinha instalado em seu dispositivo quando deixou os comentários.
+> **Dica** O relatório de comentários se torna especialmente importante se você estiver usando o [pacote de liberação de versões de pré-lançamento](package-flights.md), uma vez que o relatório de comentários mostrará o pacote específico que cada cliente tinha instalado em seu dispositivo quando deixou os comentários.
 
 O relatório de **comentários** no painel do Centro de Desenvolvimento do Windows permite que você veja os problemas, sugestões e aprovações que os clientes do Windows 10 enviaram através do Hub de Feedback. Você pode exibir esses dados em seu painel ou exportar os dados para exibição offline. 
 
@@ -49,6 +52,6 @@ Observe que os comentários são traduzidos por um sistema de tradução automá
 Como observado acima, recomendamos a incorporação de um link para o Hub de Feedback diretamente em seu aplicativo para incentivar os clientes a fornecer comentários. Para obter mais informações, consulte [Iniciar o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md).
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,83 +1,85 @@
-# Desbloqueio do Windows com dispositivos complementares
+---
+title: Desbloqueio do Windows com dispositivos complementares (IoT)
+description: Um dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a Estrutura de Dispositivo Complementar, um dispositivo complementar pode fornecer uma experiência avançada para o Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo de leitor de impressão digital, por exemplo).
+author: awkoren
+---
+# Desbloqueio do Windows com dispositivos complementares (IoT)
 
 Um dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a Estrutura de Dispositivo Complementar, um dispositivo complementar pode fornecer uma experiência avançada para o Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo de leitor de impressão digital, por exemplo).
 
-> **Observação** A Estrutura de Dispositivo Complementar é um recurso especializado não disponível para todos os desenvolvedores de aplicativos. Para usar essa estrutura, seu aplicativo deve ser especificamente provisionado pela Microsoft e listar a funcionalidade restrita *secondaryAuthenticatorFactor* em seu manifesto. Para obter aprovação, entre em contato com [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com). 
+> **Observação** A Estrutura de Dispositivo Complementar é um recurso especializado não disponível para todos os desenvolvedores de aplicativos. Para usar essa estrutura, seu aplicativo deve ser especificamente provisionado pela Microsoft e listar a funcionalidade restrita *secondaryAuthenticationFactor* em seu manifesto. Para obter aprovação, entre em contato com [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
 
-## Introdução 
+## Introdução
 
-### Casos de uso 
+> Para uma visão geral em vídeo, consulte a sessão [Desbloqueio do Windows com dispositivos complementares IoT](https://channel9.msdn.com/Events/Build/2016/P491) da compilação 2016 no Channel 9.
 
-Há várias maneiras de usar a Estrutura de Dispositivo Complementar para criar uma excelente experiência de desbloqueio do Windows com um dispositivo complementar. Por exemplo, os usuários podem: 
+### Casos de uso
 
-- Anexar seus dispositivos complementares ao computador via USB, tocar no botão do dispositivo complementar e desbloquear automaticamente seus computadores. 
+Há várias maneiras de usar a Estrutura de Dispositivo Complementar para criar uma excelente experiência de desbloqueio do Windows com um dispositivo complementar. Por exemplo, os usuários podem:
+
+- Anexar seus dispositivos complementares ao computador via USB, tocar no botão do dispositivo complementar e desbloquear automaticamente seus computadores.
 - Carregar um telefone no bolso que já esteja emparelhado com o computador via Bluetooth. Ao pressionarem a barra de espaço em seus computadores, seus telefones recebem uma notificação. Basta aprová-la para desbloquear o computador.
-- Tocar seus dispositivos complementares em um leitor de NFC para desbloquear rapidamente seus computadores. 
-- Usar um acessório de fitness que já tenha autenticado o usuário. Ao se aproximarem do computador e realizarem um gesto especial (como bater palmas), o computador será desbloqueado. 
+- Tocar seus dispositivos complementares em um leitor de NFC para desbloquear rapidamente seus computadores.
+- Usar um acessório de fitness que já tenha autenticado o usuário. Ao se aproximarem do computador e realizarem um gesto especial (como bater palmas), o computador será desbloqueado.
 
-### Dispositivos complementares habilitados para biometria 
+### Dispositivos complementares habilitados para biometria
 
-Se o dispositivo complementar tiver suporte para biometria, a estrutura de dispositivo complementar só poderá ser usada se esse dispositivo atender a uma das condições a seguir:
-
-- Tiver uma interface do usuário e um sistema operacional diferente do Windows que possa orientar o usuário pelo processo biométrico de inscrição e gerenciamento (por exemplo, um telefone com biometria). Se um dispositivo complementar for executado no Windows e tiver suporte para biometria (face e impressão digital), ele deverá ser compatível com a [Windows Biometric Framework](https://msdn.microsoft.com/en-us/library/windows/hardware/mt608302(v=vs.85).aspx). 
-- Não tem interface do usuário (como um dongle USB), mas não usa rosto, íris ou impressão digital. 
-
-Se nenhuma dessas condições for aplicável, e o dispositivo complementar tiver suporte para biometria, você deverá seguir as diretrizes para [cenários de aplicativos OEM e IHV do Windows Hello](https://msdn.microsoft.com/en-us/library/windows/hardware/mt608302(v=vs.85).aspx). 
+Se o dispositivo complementar for compatível com biometria, em alguns casos a [Windows Biometric Framework](https://msdn.microsoft.com/library/windows/hardware/mt608302(v=vs.85).aspx) pode ser uma solução melhor do que a Estrutura de Dispositivo Complementar. Entre em contato com [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com) e ajudaremos você a escolher a abordagem correta.
 
 ### Componentes da solução
 
-O diagrama abaixo mostra os componentes da solução e quem é responsável por criá-los. 
+O diagrama abaixo mostra os componentes da solução e quem é responsável por criá-los.
 
 ![visão geral da estrutura](images/companion-device-1.png)
 
-A Estrutura de Dispositivo Complementar é implementada como um serviço em execução no Windows (chamado de Serviço de Autenticação Complementar neste artigo). Esse serviço é responsável por gerar um token de desbloqueio que precisa ser protegido por uma chave HMAC armazenada no dispositivo complementar. Isso garante que o acesso ao token de desbloqueio exija a presença do dispositivo complementar. Por cada tupla (computador, usuário do Windows), haverá um único token de desbloqueio. 
+A Estrutura de Dispositivo Complementar é implementada como um serviço em execução no Windows (chamado de Serviço de Autenticação Complementar neste artigo). Esse serviço é responsável por gerar um token de desbloqueio que precisa ser protegido por uma chave HMAC armazenada no dispositivo complementar. Isso garante que o acesso ao token de desbloqueio exija a presença do dispositivo complementar. Por cada tupla (computador, usuário do Windows), haverá um único token de desbloqueio.
 
 A integração com a Estrutura de Dispositivo Complementar requer:
 
-- Um aplicativo de dispositivo complementar [UPW (Plataforma Universal do Windows)](https://msdn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide) para o dispositivo complementar, baixado na Windows Store. 
-- A capacidade de criar duas chaves HMAC de 256 bits no dispositivo complementar e de gerar a HMAC com ele (usando SHA-256). 
+- Um aplicativo de dispositivo complementar [UPW (Plataforma Universal do Windows)](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) para o dispositivo complementar, baixado na Windows Store. 
+- A capacidade de criar duas chaves HMAC de 256 bits no dispositivo complementar e de gerar a HMAC com ele (usando SHA-256).
 - Configurações de segurança na área de trabalho do Windows 10 corretamente definidas. O Serviço de Autenticação Complementar exigirá que esse PIN seja configurado antes que qualquer dispositivo complementar possa ser conectado a ele. Os usuários devem configurar um PIN via Configurações > Contas > Opções de entrada.
 
 Além dos requisitos acima, o aplicativo de dispositivo complementar é responsável por:
 
 - Experiência do usuário e identidade visual do registro inicial e, mais tarde, o cancelamento do registro do dispositivo complementar.
-- Execução em segundo plano, descoberta do dispositivo complementar, comunicação com esse dispositivo e também com o Serviço de Autenticação Complementar. 
-- Manipulação de erros
+- Execução em segundo plano, descoberta do dispositivo complementar, comunicação com esse dispositivo e também com o Serviço de Autenticação Complementar.
+- Tratamento de erros
 
 Normalmente, dispositivos complementares são fornecidos com um aplicativo para configuração inicial, como configurar um acessório de fitness pela primeira vez. A funcionalidade descrita neste documento pode fazer parte desse aplicativo, e um aplicativo separado não será necessário.  
 
 ### Sinais do usuário
 
-Cada dispositivo complementar deve ser combinado com um aplicativo que dê suporte a três sinais do usuário. Esses sinais podem ser no formato de uma ação ou de um gesto. 
+Cada dispositivo complementar deve ser combinado com um aplicativo que dê suporte a três sinais do usuário. Esses sinais podem ser no formato de uma ação ou de um gesto.
 
 - **Sinal de intenção**: permite que o usuário mostre sua intenção de desbloquear, por exemplo, pressionando um botão no dispositivo complementar. O sinal de intenção deve ser coletado no lado do **dispositivo complementar**.
-- **Sinal de presença do usuário**: prova a presença do usuário. O dispositivo complementar pode, por exemplo, exigir um PIN antes de poder ser usado para desbloquear o computador (isso não deve ser confundido com o PIN do computador) ou pode exigir o pressionamento de um botão. 
-- **Sinal de diferenciação**: remove a ambiguidade de qual área de trabalho do Windows 10 o usuário deseja desbloquear quando várias opções estão disponíveis para o dispositivo complementar. 
+- **Sinal de presença do usuário**: prova a presença do usuário. O dispositivo complementar pode, por exemplo, exigir um PIN antes de poder ser usado para desbloquear o computador (isso não deve ser confundido com o PIN do computador) ou pode exigir o pressionamento de um botão.
+- **Sinal de diferenciação**: remove a ambiguidade de qual área de trabalho do Windows 10 o usuário deseja desbloquear quando várias opções estão disponíveis para o dispositivo complementar.
 
-Qualquer número desses sinais de usuário pode ser combinado em um único sinal. Sinais de presença e intenção do usuário devem ser necessários em cada uso. 
+Qualquer número desses sinais de usuário pode ser combinado em um único sinal. Sinais de presença e intenção do usuário devem ser necessários em cada uso.
 
 ### Registro e comunicação futura entre um computador e dispositivos complementares
 
-Antes que um dispositivo complementar possa ser conectado à Estrutura de Dispositivo Complementar, ele precisa ser registrado nessa estrutura. A experiência de registro fica completamente a cargo do aplicativo de dispositivo complementar. A Estrutura de Dispositivo Complementar não impõe nenhuma limitação sobre essa experiência do usuário. 
+Antes que um dispositivo complementar possa ser conectado à Estrutura de Dispositivo Complementar, ele precisa ser registrado nessa estrutura. A experiência de registro fica completamente a cargo do aplicativo de dispositivo complementar.
 
 O relacionamento registrado entre o dispositivo complementar e o dispositivo de área de trabalho do Windows 10 pode ser de um-para-muitos (ou seja, um dispositivo complementar pode ser usado para vários dispositivos de área de trabalho do Windows 10). No entanto, cada dispositivo complementar só pode ser usado para um usuário em cada dispositivo de área de trabalho do Windows 10.   
 
 Para que um dispositivo complementar possa se comunicar com um computador, é necessário chegar a um acordo acerca do transporte a ser usado. Essa escolha fica a cargo do aplicativo de dispositivo complementar. A Estrutura de Dispositivo Complementar não impõe nenhuma limitação sobre o tipo de transporte (USB, NFC, WiFi, BT, BLE etc) ou protocolo em uso entre o dispositivo complementar e o aplicativo de dispositivo complementar no lado do dispositivo de área de trabalho do Windows 10. No entanto, ela sugere certas considerações de segurança para a camada de transporte, conforme descrito na seção "Requisitos de segurança" deste documento. É responsabilidade do provedor do dispositivo fornecer esses requisitos. A estrutura não os fornece para você.
 
 
-## Modelo de interação do usuário 
+## Modelo de interação do usuário
 
-### Descoberta, instalação e registro inicial do aplicativo de dispositivo complementar 
+### Descoberta, instalação e registro inicial do aplicativo de dispositivo complementar
 
 Um fluxo de trabalho do usuário típico é o seguinte:
 
 - O usuário configura o PIN em cada um dos dispositivos de área de trabalho do Windows 10 de destino que ele deseja desbloquear com esse dispositivo complementar.
-- O usuário executa o aplicativo de dispositivo complementar em seus dispositivos de área de trabalho do Windows 10 para registrar seu dispositivo complementar na área de trabalho do Windows 10. 
+- O usuário executa o aplicativo de dispositivo complementar em seus dispositivos de área de trabalho do Windows 10 para registrar seu dispositivo complementar na área de trabalho do Windows 10.
 
-Observações: 
+Observações:
 
 - Recomendamos que a descoberta, o download e a ativação do aplicativo de dispositivo complementar seja simplificada e, se possível, automatizada (por exemplo, o aplicativo pode ser baixado ao tocar o dispositivo complementar em um leitor de NFC no lado do dispositivo de área de trabalho do Windows 10). No entanto, isso é responsabilidade do dispositivo complementar e do aplicativo de dispositivo complementar.
-- Em um ambiente corporativo, o aplicativo de dispositivo complementar pode ser implantado via MDM. 
+- Em um ambiente corporativo, o aplicativo de dispositivo complementar pode ser implantado via MDM.
 - O aplicativo de dispositivo complementar é responsável por mostrar ao usuário mensagens de erro que ocorrem como parte do registro.
 
 ### Protocolo de registro e cancelamento de registro
@@ -88,47 +90,47 @@ O diagrama a seguir ilustra como o dispositivo complementar interage com o Servi
 
 Há duas chaves usadas em nosso protocolo:
 
-- Chave de dispositivo (**devicekey**): usada para proteger tokens de desbloqueio necessários para o computador desbloquear o Windows. 
-- A chave de autenticação (**authkey**): usada para autenticar mutuamente o dispositivo complementar e o Serviço de Autenticação Complementar. 
+- Chave de dispositivo (**devicekey**): usada para proteger tokens de desbloqueio necessários para o computador desbloquear o Windows.
+- A chave de autenticação (**authkey**): usada para autenticar mutuamente o dispositivo complementar e o Serviço de Autenticação Complementar.
 
-A chave de dispositivo e as chaves de autenticação são trocadas na ocasião do registro entre o aplicativo de dispositivo complementar e o dispositivo complementar. Como resultado, o aplicativo de dispositivo complementar e o dispositivo complementar devem usar um transporte seguro para proteger chaves. 
+A chave de dispositivo e as chaves de autenticação são trocadas na ocasião do registro entre o aplicativo de dispositivo complementar e o dispositivo complementar. Como resultado, o aplicativo de dispositivo complementar e o dispositivo complementar devem usar um transporte seguro para proteger chaves.
 
-Além disso, observe que, embora o diagrama acima mostre duas chaves HMAC geradas no dispositivo complementar, também é possível que o aplicativo as gere e as envie ao dispositivo complementar para armazenamento. 
+Além disso, observe que, embora o diagrama acima mostre duas chaves HMAC geradas no dispositivo complementar, também é possível que o aplicativo as gere e as envie ao dispositivo complementar para armazenamento.
 
 ### Iniciando fluxos de autenticação
 
 Há duas maneiras de o usuário iniciar o fluxo de entrada na área de trabalho do Windows 10 usando a Estrutura de Dispositivo Complementar (isto é, fornecer um sinal de intenção):
 
-- Abra a tampa do notebook ou pressione a tecla de espaço ou passe o dedo para cima no computador. 
-- Execute uma ação ou um gesto no lado do dispositivo complementar. 
+- Abra a tampa do notebook ou pressione a tecla de espaço ou passe o dedo para cima no computador.
+- Execute uma ação ou um gesto no lado do dispositivo complementar.
 
-Cabe ao dispositivo complementar selecionar qual deles é o ponto de partida. A Estrutura de Dispositivo Complementar informará o aplicativo de dispositivo complementar quando a primeira opção ocorrer. Para a segunda opção, o aplicativo de dispositivo complementar deve consultar o dispositivo complementar para ver se esse evento foi capturado. Isso garante que o dispositivo complementar colete o sinal de intenção antes que o desbloqueio seja bem-sucedido. 
+Cabe ao dispositivo complementar selecionar qual deles é o ponto de partida. A Estrutura de Dispositivo Complementar informará o aplicativo de dispositivo complementar quando a primeira opção ocorrer. Para a segunda opção, o aplicativo de dispositivo complementar deve consultar o dispositivo complementar para ver se esse evento foi capturado. Isso garante que o dispositivo complementar colete o sinal de intenção antes que o desbloqueio seja bem-sucedido.
 
 ### Provedor de credenciais de dispositivo complementar
 
-Há um novo provedor de credenciais no Windows 10 que lida com todos os dispositivos complementares. 
+Há um novo provedor de credenciais no Windows 10 que lida com todos os dispositivos complementares.
 
-O provedor de credenciais de dispositivo complementar é responsável por iniciar a tarefa em segundo plano do dispositivo complementar por meio do acionamento de um gatilho. O gatilho é definido pela primeira vez quando o computador desperta e uma tela de bloqueio é exibida. A segunda vez é quando o computador está entrando na interface de usuário de logon e o Provedor de Credenciais de Dispositivo Complementar é o bloco selecionado. 
+O provedor de credenciais de dispositivo complementar é responsável por iniciar a tarefa em segundo plano do dispositivo complementar por meio do acionamento de um gatilho. O gatilho é definido pela primeira vez quando o computador desperta e uma tela de bloqueio é exibida. A segunda vez é quando o computador está entrando na interface de usuário de logon e o Provedor de Credenciais de Dispositivo Complementar é o bloco selecionado.
 
 A biblioteca auxiliar do aplicativo de dispositivo complementar escutará a mudança de status da tela de bloqueio e enviará o evento correspondente à tarefa de segundo plano do dispositivo complementar.
 
-Se houver várias tarefas de segundo plano do dispositivo complementar, a primeira delas que terminar o processo de autenticação desbloqueará o computador. O serviço de autenticação de dispositivo complementar ignorará qualquer chamada de autenticação restante. 
+Se houver várias tarefas de segundo plano do dispositivo complementar, a primeira delas que terminar o processo de autenticação desbloqueará o computador. O serviço de autenticação de dispositivo complementar ignorará qualquer chamada de autenticação restante.
 
-A experiência no lado do dispositivo complementar é mantida e gerenciada pelo aplicativo de dispositivo complementar. A Estrutura de Dispositivo Complementar não tem controle sobre essa parte da experiência do usuário. Mais especificamente, o provedor de autenticação complementar informa o aplicativo de dispositivo complementar (por meio de seu aplicativo em segundo plano) sobre mudanças de estado na interface de usuário de logon (por exemplo, a tela de bloqueio acabou de ser ativada ou o usuário acabou de dispensá-la pressionando a barra de espaço), e é responsabilidade do aplicativo de dispositivo complementar criar uma experiência com base nisso (por exemplo, quando o usuário pressionar a barra de espaço e dispensar a tela de desbloqueio, começar a procurar o dispositivo via USB). 
+A experiência no lado do dispositivo complementar é mantida e gerenciada pelo aplicativo de dispositivo complementar. A Estrutura de Dispositivo Complementar não tem controle sobre essa parte da experiência do usuário. Mais especificamente, o provedor de autenticação complementar informa o aplicativo de dispositivo complementar (por meio de seu aplicativo em segundo plano) sobre mudanças de estado na interface de usuário de logon (por exemplo, a tela de bloqueio acabou de ser ativada ou o usuário acabou de dispensá-la pressionando a barra de espaço), e é responsabilidade do aplicativo de dispositivo complementar criar uma experiência com base nisso (por exemplo, quando o usuário pressionar a barra de espaço e dispensar a tela de desbloqueio, começar a procurar o dispositivo via USB).
 
 A Estrutura de Dispositivo Complementar fornecerá um estoque de texto e mensagens de erro (traduzidos) para escolha pelo aplicativo de dispositivo complementar. Esses elementos serão exibidos na parte superior da tela de bloqueio (ou na interface de usuário de logon). Para saber mais, consulte a seção Lidando com mensagens e erros.
 
 ### Protocolo de autenticação
 
-Depois que a tarefa em segundo plano associada a um aplicativo de dispositivo complementar é iniciada por gatilho, ela é responsável por solicitar que o dispositivo complementar ajude a calcular dois valores HMAC: 
-- O HMAC da chave de dispositivo com um nonce. 
-- O HMAC da chave de autenticação com o primeiro valor HMAC concatenado com um nonce gerado pelo Serviço de Autenticação Complementar. 
+Depois que a tarefa em segundo plano associada a um aplicativo de dispositivo complementar é iniciada por gatilho, ela é responsável por solicitar que o dispositivo complementar ajude a calcular dois valores HMAC:
+- O HMAC da chave de dispositivo com um nonce.
+- O HMAC da chave de autenticação com o primeiro valor HMAC concatenado com um nonce gerado pelo Serviço de Autenticação Complementar.
 
 O segundo valor é usado pelo serviço para autenticar o dispositivo e também para evitar ataques de reprodução no canal de transporte.
 
 ![fluxo de registro](images/companion-device-3.png)
 
-## Gerenciamento do ciclo de vida 
+## Gerenciamento do ciclo de vida
 
 ### Registre uma vez e use em qualquer lugar
 
@@ -138,13 +140,13 @@ Um fornecedor de dispositivo complementar ou OEM pode implementar um serviço We
 
 ### Gerenciamento de PIN
 
-Antes que um dispositivo complementar possa ser usado, um PIN precisa ser configurado no dispositivo de área de trabalho do Windows 10. Isso garante que o usuário tenha um backup no caso de seu dispositivo complementar não funcionar. O PIN é algo que o Windows gerencia e que os aplicativos nunca veem. Para alterá-lo, o usuário navega até Configurações > Contas > Opções de entrada. 
+Antes que um dispositivo complementar possa ser usado, um PIN precisa ser configurado no dispositivo de área de trabalho do Windows 10. Isso garante que o usuário tenha um backup no caso de seu dispositivo complementar não funcionar. O PIN é algo que o Windows gerencia e que os aplicativos nunca veem. Para alterá-lo, o usuário navega até Configurações > Contas > Opções de entrada.
 
 ### Gerenciamento e políticas
 
-Os usuários podem remover um dispositivo complementar de áreas de trabalho do Windows 10 executando o aplicativo de dispositivo complementar nesse dispositivo de área de trabalho. 
+Os usuários podem remover um dispositivo complementar de áreas de trabalho do Windows 10 executando o aplicativo de dispositivo complementar nesse dispositivo de área de trabalho.
 
-As empresas têm duas opções para controlar a Estrutura de Dispositivo Complementar: 
+As empresas têm duas opções para controlar a Estrutura de Dispositivo Complementar:
 
 - Ativar ou desativar o recurso
 - Definir a lista branca de dispositivos complementares permitidos usando o cofre de aplicativo do Windows
@@ -153,7 +155,7 @@ A Estrutura de Dispositivo Complementar não dá suporte a uma maneira centraliz
 
 ### Revogação
 
-A Estrutura de Dispositivo Complementar não dá suporte à remoção de um dispositivo complementar de um dispositivo de área de trabalho do Windows 10 específico remotamente. Em vez disso, os usuários podem remover o dispositivo complementar por meio do aplicativo de dispositivo complementar em execução nessa área de trabalho do Windows 10. 
+A Estrutura de Dispositivo Complementar não dá suporte à remoção de um dispositivo complementar de um dispositivo de área de trabalho do Windows 10 específico remotamente. Em vez disso, os usuários podem remover o dispositivo complementar por meio do aplicativo de dispositivo complementar em execução nessa área de trabalho do Windows 10.
 
 No entanto, fornecedores de dispositivos complementares podem criar um serviço para fornecer a funcionalidade de revogação remota. Para obter mais detalhes, consulte a seção Serviço de roaming, revogação e filtro.
 
@@ -186,7 +188,7 @@ O fluxo geral da API é o seguinte:
 3. Aguarde o evento certo na tarefa em segundo plano
     * WaitingForUserConfirmation: aguarde este evento se a ação ou o gesto do usuário no lado do dispositivo complementar for necessária para iniciar o fluxo de autenticação
     * CollectingCredential: aguarde esse evento se o dispositivo complementar depender da ação ou do gesto do usuário no lado do computador para iniciar o fluxo de autenticação (por exemplo, pressionando a barra de espaço)
-    * Outro gatilho, como um cartão inteligente: certifique-se de consultar o estado atual de autenticação chamar as APIs certas. 
+    * Outro gatilho, como um cartão inteligente: certifique-se de consultar o estado atual de autenticação chamar as APIs certas.
 4. Manter o usuário informado sobre mensagens de erro ou próximas etapas necessárias chamando ShowNotificationMessageAsync. Chame essa API somente depois que um sinal de intenção for coletado
 5. Desbloquear
     * Certifique-se de que os sinais de intenção e presença do usuário tenham sido coletados
@@ -205,7 +207,7 @@ Antes que qualquer uma dessas chamadas seja feita, o aplicativo de dispositivo c
 
 Além disso, como parte da primeira chamada à API (RequestStartRegisteringDeviceAsync), o aplicativo de dispositivo complementar deve decidir sobre as funcionalidades do dispositivo e estar preparado para transmiti-las como parte da chamada à API. Por exemplo, se dispositivo complementar dá suporte ao armazenamento seguro para chaves HMAC. Se o mesmo aplicativo de dispositivo complementar for usado para gerenciar várias versões do mesmo dispositivo complementar e essas funcionalidades forem modificadas (e exigirem uma consulta de dispositivo para chegarem a uma decisão), convém que essa consulta ocorra antes que a primeira chamada de API seja feita.   
 
-A primeira API (RequestStartRegisteringDeviceAsync) retornará um identificador usado pela segunda API (FinishRegisteringDeviceAsync). A primeira chamada para registro iniciará o prompt de PIN para garantir que o usuário esteja presente. Se nenhum PIN estiver configurado, essa chamada falhará. O aplicativo de dispositivo complementar também pode consultar se o PIN está configurado ou não por meio da chamada KeyCredentialManager.IsSupportedAsync. A chamada RequestStartRegisteringDeviceAsync também poderá falhar se a política tiver desabilitado o uso do dispositivo complementar. 
+A primeira API (RequestStartRegisteringDeviceAsync) retornará um identificador usado pela segunda API (FinishRegisteringDeviceAsync). A primeira chamada para registro iniciará o prompt de PIN para garantir que o usuário esteja presente. Se nenhum PIN estiver configurado, essa chamada falhará. O aplicativo de dispositivo complementar também pode consultar se o PIN está configurado ou não por meio da chamada KeyCredentialManager.IsSupportedAsync. A chamada RequestStartRegisteringDeviceAsync também poderá falhar se a política tiver desabilitado o uso do dispositivo complementar.
 
 O resultado da primeira chamada é retornado por meio da enumeração SecondaryAuthenticationFactorRegistrationStatus:
 
@@ -219,13 +221,13 @@ O resultado da primeira chamada é retornado por meio da enumeração SecondaryA
 }
 ```
 
-A segunda chamada (FinishRegisteringDeviceAsync) conclui o registro. Como parte do processo de registro, o aplicativo de dispositivo complementar pode armazenar dados de configuração de dispositivos complementares com o Serviço de Autenticação Complementar. Há um limite de tamanho de 4K para esses dados. Esses dados estarão disponíveis para o aplicativo de dispositivo complementar na ocasião da autenticação. Esses dados podem ser usados, por exemplo, para conexão com o dispositivo complementar, como um endereço MAC, ou se o dispositivo complementar não tiver um armazenamento e quiser usar o computador para armazenamento. Observe que todos os dados confidenciais armazenados como parte dos dados de configuração devem ser criptografados com uma chave conhecida somente pelo dispositivo complementar. Além disso, considerando que os dados de configuração são armazenados por um serviço Windows, eles estão disponíveis ao aplicativo de dispositivo complementar em vários perfis de usuário. 
+A segunda chamada (FinishRegisteringDeviceAsync) conclui o registro. Como parte do processo de registro, o aplicativo de dispositivo complementar pode armazenar dados de configuração de dispositivos complementares com o Serviço de Autenticação Complementar. Há um limite de tamanho de 4K para esses dados. Esses dados estarão disponíveis para o aplicativo de dispositivo complementar na ocasião da autenticação. Esses dados podem ser usados, por exemplo, para conexão com o dispositivo complementar, como um endereço MAC, ou se o dispositivo complementar não tiver um armazenamento e quiser usar o computador para armazenamento. Observe que todos os dados confidenciais armazenados como parte dos dados de configuração devem ser criptografados com uma chave conhecida somente pelo dispositivo complementar. Além disso, considerando que os dados de configuração são armazenados por um serviço Windows, eles estão disponíveis ao aplicativo de dispositivo complementar em vários perfis de usuário.
 
-O aplicativo de dispositivo complementar pode chamar AbortRegisteringDeviceAsync para cancelar o registro e transmitir um código de erro. O Serviço de Autenticação Complementar registrará o erro nos dados de telemetria. Um bom exemplo para essa chamada seria quando algo deu errado com o dispositivo complementar e ele não pôde concluir o registro (por exemplo, não é possível armazenar chaves HMAC ou a conexão BT foi perdida). 
+O aplicativo de dispositivo complementar pode chamar AbortRegisteringDeviceAsync para cancelar o registro e transmitir um código de erro. O Serviço de Autenticação Complementar registrará o erro nos dados de telemetria. Um bom exemplo para essa chamada seria quando algo deu errado com o dispositivo complementar e ele não pôde concluir o registro (por exemplo, não é possível armazenar chaves HMAC ou a conexão BT foi perdida).
 
-O aplicativo de dispositivo complementar deve fornecer uma opção para o usuário cancelar o registra de seu dispositivo complementar na área de trabalho do Windows 10 (por exemplo, se ele tiver perdido seu dispositivo complementar ou comprado uma versão mais recente). Quando o usuário selecionar essa opção, o aplicativo de dispositivo complementar deverá chamar UnregisterDeviceAsync. Essa chamada pelo aplicativo de dispositivo complementar disparará o serviço de autenticação de dispositivo complementar de forma a excluir todos os dados (incluindo chaves HMAC) correspondentes à ID de dispositivo específica e ao AppId do aplicativo de chamada no lado do computador. Essa chamada de API não tenta excluir chaves HMAC no lado do aplicativo de dispositivo complementar ou no lado do dispositivo complementar. Isso é deixado para o aplicativo de dispositivo complementar implementar. 
+O aplicativo de dispositivo complementar deve fornecer uma opção para o usuário cancelar o registra de seu dispositivo complementar na área de trabalho do Windows 10 (por exemplo, se ele tiver perdido seu dispositivo complementar ou comprado uma versão mais recente). Quando o usuário selecionar essa opção, o aplicativo de dispositivo complementar deverá chamar UnregisterDeviceAsync. Essa chamada pelo aplicativo de dispositivo complementar disparará o serviço de autenticação de dispositivo complementar de forma a excluir todos os dados (incluindo chaves HMAC) correspondentes à ID de dispositivo específica e ao AppId do aplicativo de chamada no lado do computador. Essa chamada de API não tenta excluir chaves HMAC no lado do aplicativo de dispositivo complementar ou no lado do dispositivo complementar. Isso é deixado para o aplicativo de dispositivo complementar implementar.
 
-O aplicativo de dispositivo complementar é responsável por mostrar mensagens de erro que ocorrem nas fases de registro e de cancelamento de registro. 
+O aplicativo de dispositivo complementar é responsável por mostrar mensagens de erro que ocorrem nas fases de registro e de cancelamento de registro.
 
 ```C#
 using System;
@@ -249,11 +251,11 @@ namespace SecondaryAuthFactorSample
             IBuffer deviceKey = CryptographicBuffer.GenerateRandom(256/8);
             IBuffer mutualAuthenticationKey = CryptographicBuffer.GenerateRandom(256/8);
 
-            SecondaryAuthenticationFactorRegistration registrationResult = 
+            SecondaryAuthenticationFactorRegistration registrationResult =
                 await SecondaryAuthenticationFactorRegistration.RequestStartRegisteringDeviceAsync(
                     deviceId,  // deviceId: max 40 wide characters. For example, serial number of the device
-                    SecondaryAuthenticaitonFactorDeviceCapabilities.SupportSecureStorage | 
-                        SecondaryAuthenticaitonFactorDeviceCapabilities.SupportSha2 | 
+                    SecondaryAuthenticaitonFactorDeviceCapabilities.SupportSecureStorage |
+                        SecondaryAuthenticaitonFactorDeviceCapabilities.SupportSha2 |
                         SecondaryAuthenticaitonFactorDeviceCapabilities.StoreKeys,
                     "My test device 1", // deviceFriendlyName: max 64 wide characters. For example: John's card
                     "SAMPLE-001", // deviceModelNumber: max 32 wide characters. The app should read the model number from device.
@@ -263,10 +265,10 @@ namespace SecondaryAuthFactorSample
             switch(registerResult.Status)
             {
             case SecondaryAuthenticationFactorRegistrationStatus.Started:
-                // 
+                //
                 // Pseudo function:
                 // The app needs to retrieve the value from device and set into opaqueBlob
-                // 
+                //
                 IBuffer deviceConfigData = ReadConfigurationDataFromDevice();
 
                 if (deviceConfigData != null)
@@ -302,7 +304,7 @@ namespace SecondaryAuthFactorSample
 
         public void async UpdateDeviceList()
         {
-            IReadOnlyList<SecondaryAuthenticationFactorInfo> deviceInfoList = 
+            IReadOnlyList<SecondaryAuthenticationFactorInfo> deviceInfoList =
                 await SecondaryAuthenticationFactorRegistration.FindAllRegisteredDeviceInfoAsync(
                     SecondaryAuthenticaitonFactorDeviceFindScope.User);
 
@@ -331,7 +333,7 @@ namespace SecondaryAuthFactorSample
 
 ### Autenticação
 
-A autenticação exige duas chamadas de API para o Serviço de Autenticação Complementar: StartAuthenticationAsync e FinishAuthencationAsync. 
+A autenticação exige duas chamadas de API para o Serviço de Autenticação Complementar: StartAuthenticationAsync e FinishAuthencationAsync.
 
 A primeira API de inicialização retornará um identificador usado pela segunda API.  A primeira chamada retorna, entre outras coisas, um nonce que, quando concatenado com outros elementos, precisa ser codificado em HMAC com a chave de dispositivo armazenada no dispositivo complementar. A segunda chamada retorna os resultados do HMAC com a chave de dispositivo e pode terminar em uma autenticação bem-sucedida (isto é, o usuário verá sua área de trabalho).
 
@@ -344,11 +346,11 @@ A primeira API de inicialização (StartAuthenticationAsync) poderá falhar se a
     UnknownDevice,                  // Companion device app is not registered with framework
     DisabledByPolicy,               // Policy disabled this device after registration
     InvalidAuthenticationStage,     // Companion device framework is not currently accepting
-                                    // incoming authentication requests 
+                                    // incoming authentication requests
 }
 ```
 
-A segunda chamada de API (FinishAuthencationAsync) poderá falhar se o nonce que foi fornecido na primeira chamada estiver expirado (20 segundos). A enumeração SecondaryAuthenticationFactorFinishAuthenticationStatus captura os possíveis resultados. 
+A segunda chamada de API (FinishAuthencationAsync) poderá falhar se o nonce que foi fornecido na primeira chamada estiver expirado (20 segundos). A enumeração SecondaryAuthenticationFactorFinishAuthenticationStatus captura os possíveis resultados.
 
 ```C#
 {
@@ -360,11 +362,11 @@ A segunda chamada de API (FinishAuthencationAsync) poderá falhar se o nonce que
 
 O cronograma das duas chamadas de API (StartAuthenticationAsync e FinishAuthencationAsync) precisa estar alinhado a como o dispositivo complementar coleta sinais de intenção, presença do usuário e diferenciação (veja Sinais do usuário para obter mais detalhes). Por exemplo, a segunda chamada não deve ser enviada até que o sinal de intenção esteja disponível. Em outras palavras, o computador não deverá ser desbloqueado se um usuário não tiver expressado a intenção de fazer isso. Para explicar melhor o processo, suponha que proximidade do Bluetooth seja usada para o desbloqueio do computador. Nesse caso, um sinal de intenção explícito deve ser coletado para evitar que o computador seja desbloqueado se o usuário se aproximar dele no caminho para a cozinha. Além disso, o nonce retornado pela primeira chamada está associado ao tempo (20 segundos) e expirará depois de um determinado período. Como resultado, a primeira chamada só deverá ser feita quando o aplicativo de dispositivo complementar tiver uma boa indicação da presença do dispositivo complementar, por exemplo, o dispositivo complementar é inserido na porta USB ou toca o leitor de NFC. Com o Bluetooth, é necessário ter cautela para evitar afetar a atividade da bateria no lado do computador ou outras atividades Bluetooth que estejam ocorrendo nesse ponto ao verificar a presença do dispositivo complementar. Além disso, se o sinal de presença do usuário tiver que ser fornecido (por exemplo, digitando um PIN), convém que a primeira chamada de autenticação seja feita somente após a coleta desse sinal.
 
-A Estrutura de Dispositivo Complementar ajuda o aplicativo de dispositivo complementar a tomar decisões bem-informadas no que diz respeito a quando fazer as duas chamadas acima, fornecendo uma imagem completa de onde usuário se encontra no fluxo de autenticação. A Estrutura de Dispositivo Complementar oferece essa funcionalidade notificações de mudança de estado de bloqueio para a tarefa em segundo plano do aplicativo. 
+A Estrutura de Dispositivo Complementar ajuda o aplicativo de dispositivo complementar a tomar decisões bem-informadas no que diz respeito a quando fazer as duas chamadas acima, fornecendo uma imagem completa de onde usuário se encontra no fluxo de autenticação. A Estrutura de Dispositivo Complementar oferece essa funcionalidade notificações de mudança de estado de bloqueio para a tarefa em segundo plano do aplicativo.
 
 ![fluxo do dispositivo complementar](images/companion-device-4.png)
 
-Estes são os detalhes de cada um desses estados: 
+Estes são os detalhes de cada um desses estados:
 
 | Estado                         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |----------------------------   |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    |
@@ -377,16 +379,16 @@ Estes são os detalhes de cada um desses estados:
 
 
 
-Aplicativos de dispositivo complementar só devem chamar as duas APIs de autenticação nos dois primeiros estados.  Aplicativos de dispositivo complementar devem verificar em que cenário esse evento está sendo disparado. Há duas possibilidades: desbloqueio ou pós-desbloqueio. Atualmente, apenas há suporte para desbloqueio. Em versões futuras, é possível que haja suporte para cenários pós-desbloqueio. A enumeração SecondaryAuthenticationFactorAuthenticationScenario captura estas duas opções: 
+Aplicativos de dispositivo complementar só devem chamar as duas APIs de autenticação nos dois primeiros estados.  Aplicativos de dispositivo complementar devem verificar em que cenário esse evento está sendo disparado. Há duas possibilidades: desbloqueio ou pós-desbloqueio. Atualmente, apenas há suporte para desbloqueio. Em versões futuras, é possível que haja suporte para cenários pós-desbloqueio. A enumeração SecondaryAuthenticationFactorAuthenticationScenario captura estas duas opções:
 
 ```C#
 {
-    SignIn = 0,         // Running under lock screen mode 
-    CredentialPrompt,   // Running post unlock 
+    SignIn = 0,         // Running under lock screen mode
+    CredentialPrompt,   // Running post unlock
 }
 ```
 
-Amostra de código completa: 
+Amostra de código completa:
 
 ```C#
 using System;
@@ -415,8 +417,8 @@ namespace SecondaryAuthFactorSample
                 // Pseudo code, the svcAuthNonce should be passed to device or generated from device
                 //
                 IBuffer svcAuthNonce = CryptographicBuffer.GenerateRandom(256/8);
-                
-                SecondaryAuthenticationFactorAuthenticationResult authResult = await 
+
+                SecondaryAuthenticationFactorAuthenticationResult authResult = await
                     SecondaryAuthenticationFactorAuthentication.StartAuthenticationAsync(
                         _deviceId,
                         svcAuthNonce);
@@ -440,10 +442,10 @@ namespace SecondaryAuthFactorSample
                     return;
                 }
 
-                // 
+                //
                 // Pseudo function:
                 // The device calculates and returns sessionHmac and deviceHmac
-                // 
+                //
                 await GetHmacsFromDevice(
                     authResult.Authentication.ServiceAuthenticationHmac,
                     authResult.Authentication.DeviceNonce,
@@ -458,7 +460,7 @@ namespace SecondaryAuthFactorSample
                     return;
                 }
 
-                SecondaryAuthenticationFactorFinishAuthenticationStatus status = 
+                SecondaryAuthenticationFactorFinishAuthenticationStatus status =
                     await authResult.Authentication.FinishAuthencationAsync(deviceHmac, sessionHmac);
                 if (status == SecondaryAuthenticationFactorFinishAuthenticationStatus.NonceExpired)
                 {
@@ -501,7 +503,7 @@ namespace SecondaryAuthFactorSample
                 break;
 
             case SecondaryAuthenticationFactorAuthenticationStage.StoppingAuthentication:
-                // Quit from background task 
+                // Quit from background task
                 _exitTaskEvent.Set();
                 break;
             }
@@ -521,7 +523,7 @@ namespace SecondaryAuthFactorSample
             taskInstance.Canceled += TaskInstanceCanceled;
 
             // Find all device registred by this application
-            IReadOnlyList<SecondaryAuthenticationFactorInfo> deviceInfoList = 
+            IReadOnlyList<SecondaryAuthenticationFactorInfo> deviceInfoList =
                 await SecondaryAuthenticationFactorRegistration.FindAllRegisteredDeviceInfoAsync(
                     SecondaryAuthenticaitonFactorDeviceFindScope.AllUsers);
 
@@ -532,7 +534,7 @@ namespace SecondaryAuthFactorSample
             }
             _deviceId = deviceInfoList[0].DeviceId;
             Debug.WriteLine("Use first device '" + _deviceId + "' in the list to signin");
-     
+
             // Register AuthenticationStageChanged event
             SecondaryAuthenticationFactorRegistration.AuthenticationStageChanged += OnAuthenticationStageChanged;
 
@@ -607,43 +609,42 @@ A Estrutura de Dispositivo Complementar é responsável por fornecer feedback pa
 
 ![erro de dispositivo complementar](images/companion-device-5.png)
 
-Aplicativos de dispositivo complementar podem usar ShowNotificationMessageAsync para mostrar mensagens ao usuário como parte da interface de usuário de logon. Chame essa API quando um sinal de intenção estiver disponível. Observe que esse sinal de intenção sempre deve ser coletado no lado do dispositivo complementar. 
+Aplicativos de dispositivo complementar podem usar ShowNotificationMessageAsync para mostrar mensagens ao usuário como parte da interface de usuário de logon. Chame essa API quando um sinal de intenção estiver disponível. Observe que esse sinal de intenção sempre deve ser coletado no lado do dispositivo complementar.
 
-Existem dois tipos de mensagens: orientações e erros. 
+Existem dois tipos de mensagens: orientações e erros.
 
-Mensagens de orientação foram projetadas para mostrar ao usuário como iniciar o processo de desbloqueio. Essas mensagens são apenas mostradas ao usuário uma vez, após o primeiro registro do dispositivo. 
+Mensagens de orientação foram projetadas para mostrar ao usuário como iniciar o processo de desbloqueio. Essas mensagens são apenas mostradas ao usuário uma vez, após o primeiro registro do dispositivo.
 
 Mensagens de erro sempre são mostradas. Elas serão mostradas ao usuário por 5 segundos, desaparecendo em seguida. Considerando que o sinal de intenção deve ser coletado antes da exibição de mensagens ao usuário e que o usuário fornecerá essa intenção somente usando um desses dispositivos complementares, não deve haver uma situação em que vários dispositivos complementares competem para mostrar mensagens de erro. Como resultado, a Estrutura de Dispositivo Complementar não mantém filas. Quando um chamador solicitar uma mensagem de erro, ela será mostrada por 5 segundos, e todas as outras solicitações para mostrar mensagens de erro nesses 5 segundos serão ignoradas. Após os 5 segundos, surgirá a oportunidade para outro chamador mostrar uma mensagem de erro. Proibimos que qualquer chamador obstrua o canal de erros.
 
 Mensagens de erro e orientações estão estruturadas da seguinte maneira. O nome do dispositivo é um parâmetro transmitido pelo aplicativo de dispositivo complementar como parte de ShowNotificationMessageAsync.
 
-**Orientações**
+**Diretrizes**
 
-- Passe o dedo para cima ou pressione a barra de espaço para entrar com o *nome do dispositivo*
-- Toque *nome do dispositivo* no leitor de NFC para entrar
-- Conecte *nome do dispositivo* a uma porta USB para entrar
-- Procurando *nome do dispositivo*...
+- "Passe o dedo para cima ou pressione a barra de espaço para entrar com o *nome do dispositivo*"
+- "Toque *nome do dispositivo* no leitor de NFC para entrar."
+- "Procurando *nome do dispositivo*..."
+- "Conecte *nome do dispositivo* a uma porta USB para entrar."
 
 **Erros**
 
-- Veja *nome do dispositivo* para obter instruções de entrada
-- Conecte *nome do dispositivo* a uma porta USB para entrar
-- Ative o Bluetooth para usar *nome do dispositivo* para entrar
-- Ative o NFC para usar *nome do dispositivo* para entrar
-- Conecte-se a uma rede Wi-Fi para usar *nome do dispositivo* para entrar
-- Houve um erro. Entre com seu PIN ou sua senha e depois configure *nome do dispositivo* novamente.
-- Toque em *nome do dispositivo* novamente
-- Sua empresa impede entradas com *nome do dispositivo*. Use outra opção de entrada.
-- Toque em *nome do dispositivo* para entrar
-- Coloque o dedo sobre *nome do dispositivo* para entrar
-- Passe o dedo em *nome do dispositivo* para entrar
-- Não foi possível entrar com *nome do dispositivo*. Use outra opção de entrada. 
-- Tente novamente
-- Diga sua senha no *nome do dispositivo*
-- Pronto para entrar com *nome do dispositivo*
+- "Veja *nome do dispositivo* para obter instruções de entrada."
+- "Ative o Bluetooth para usar *nome do dispositivo* para entrar."
+- "Ative o NFC para usar *nome do dispositivo* para entrar."
+- "Conecte-se a uma rede Wi-Fi para usar *nome do dispositivo* para entrar."
+- "Toque em *nome do dispositivo* novamente."
+- "Sua empresa impede entradas com *nome do dispositivo*. Use outra opção de entrada."
+- "Toque em *nome do dispositivo* para entrar."
+- "Coloque o dedo sobre *nome do dispositivo* para entrar."
+- "Passe o dedo em *nome do dispositivo* para entrar."
+- "Não foi possível entrar com *nome do dispositivo*. Use outra opção de entrada."
+- "Houve um erro. Use outra opção de entrada e, em seguida, configure o *nome do dispositivo* novamente."
+- "Tente novamente."
+- "Diga sua senha falada em *nome do dispositivo*."
+- "Pronto para entrar com *nome do dispositivo*."
+- "Use outra opção de entrada pela primeira vez e, em seguida, você pode usar o *nome do dispositivo* para entrar."
 
-
-### Enumerando dispositivos registrados 
+### Enumerando dispositivos registrados
 
 O aplicativo de dispositivo complementar pode enumerar a lista de dispositivos complementares registrados por meio da chamada FindAllRegisteredDeviceInfoAsync. Essa API dá suporte a dois tipos de consulta definidos por meio da enumeração SecondaryAuthenticaitonFactorDeviceFindScope:
 
@@ -654,28 +655,27 @@ O aplicativo de dispositivo complementar pode enumerar a lista de dispositivos c
 }
 ```
 
-O primeiro escopo retorna a lista de dispositivos para o usuário conectado. O segundo retorna a lista de todos os usuários nesse computador. O primeiro escopo deve ser usado na ocasião do cancelamento do registro para evitar o cancelamento do registro do dispositivo complementar de outro usuário. O outro deve ser usado em vez de autenticação ou registro: momento do registro, essa enumeração pode evitar aplicativo tentar registrar o mesmo dispositivo complementar duas vezes. 
+O primeiro escopo retorna a lista de dispositivos para o usuário conectado. O segundo retorna a lista de todos os usuários nesse computador. O primeiro escopo deve ser usado na ocasião do cancelamento do registro para evitar o cancelamento do registro do dispositivo complementar de outro usuário. O outro deve ser usado em vez de autenticação ou registro: momento do registro, essa enumeração pode evitar aplicativo tentar registrar o mesmo dispositivo complementar duas vezes.
 
-Observe que, mesmo que o aplicativo não realize essa verificação, o computador rejeitará o registro do mesmo dispositivo complementar mais de uma vez. No momento da autenticação, usar o escopo AllUsers ajuda a aplicativo de dispositivo complementar a oferecer suporte ao fluxo de troca de usuários: fazer logon do usuário A quando o usuário B está conectado (isso requer que ambos os usuários tenham instalado o aplicativo de dispositivo complementar e que o usuário A tenha registrado seus dispositivos complementares no computador que, por sua vez, deve estar na tela de bloqueio (ou na tela de logon)). 
-    
+Observe que, mesmo que o aplicativo não realize essa verificação, o computador rejeitará o registro do mesmo dispositivo complementar mais de uma vez. No momento da autenticação, usar o escopo AllUsers ajuda a aplicativo de dispositivo complementar a oferecer suporte ao fluxo de troca de usuários: fazer logon do usuário A quando o usuário B está conectado (isso requer que ambos os usuários tenham instalado o aplicativo de dispositivo complementar e que o usuário A tenha registrado seus dispositivos complementares no computador que, por sua vez, deve estar na tela de bloqueio (ou na tela de logon)).
+
 ## Requisitos de segurança
 
 O serviço de autenticação complementar fornece as seguintes proteções de segurança.
 
 - Malwares em um dispositivo da área de trabalho do Windows 10 em execução como um usuário de privilégios médios ou um contêiner de aplicativo não podem usar o dispositivo complementar para acessar chaves de credenciais do usuário (armazenadas como parte do Microsoft Passport) no computador silenciosamente.
 - Um usuário mal-intencionado em um dispositivo de área de trabalho do Windows 10 não pode usar o dispositivo complementar que pertence a outro usuário nesse dispositivo de área de trabalho do Windows 10 para obter acesso silencioso às chaves de credenciais de usuário dele (no mesmo dispositivo de área de trabalho do Windows 10).
-- Malwares no dispositivo complementar não podem obter acesso silencioso a chaves de credenciais de usuário no dispositivo de área de trabalho do Windows 10, incluindo o aproveitamento da funcionalidade ou do código desenvolvido especificamente para a Estrutura de Dispositivo Complementar. 
+- Malwares no dispositivo complementar não podem obter acesso silencioso a chaves de credenciais de usuário no dispositivo de área de trabalho do Windows 10, incluindo o aproveitamento da funcionalidade ou do código desenvolvido especificamente para a Estrutura de Dispositivo Complementar.
 - Um usuário mal-intencionado não pode desbloquear dispositivos de área de trabalho do Windows 10 capturando o tráfego entre o dispositivo complementar e o dispositivo de área de trabalho do Windows 10 e reproduzindo-o posteriormente. O uso de nonce, authkey e HMAC em nosso protocolo garante proteção contra ataques de repetição.
-- Malwares ou usuários mal-intencionados em um computador invasor não podem usar o dispositivo complementar para obter acesso ao computador do usuário honesto. Isso é feito através de uma autenticação mútua entre o Serviço de Autenticação Complementar e o dispositivo complementar por meio do uso de authkey e HMAC em nosso protocolo. 
+- Malwares ou usuários mal-intencionados em um computador invasor não podem usar o dispositivo complementar para obter acesso ao computador do usuário honesto. Isso é feito através de uma autenticação mútua entre o Serviço de Autenticação Complementar e o dispositivo complementar por meio do uso de authkey e HMAC em nosso protocolo.
 
 O segredo para se obter as proteções de segurança enumeradas acima é proteger as chaves HMAC contra acesso não autorizado e também verificar a presença do usuário. Mais especificamente, os seguintes requisitos devem ser atendidos:
 
 - Fornecer proteção contra clonagem do dispositivo complementar
 - Fornecer proteção contra interceptações ao enviar chaves HMAC no momento do registro para o computador
-- Garantir que o sinal de presença do usuário esteja disponível. 
+- Garantir que o sinal de presença do usuário esteja disponível.
 
 
-
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

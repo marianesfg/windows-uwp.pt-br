@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Você pode criar uma campanha publicitária usando o painel do Centro de Desenvolvimento para promover seu aplicativo e ampliar a base de usuários de seu aplicativo.
 title: Criar uma campanha publicitária para seu aplicativo
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
@@ -13,7 +14,7 @@ Você pode criar uma campanha publicitária usando o painel do Centro de Desenvo
 
 Confira aqui como criar uma campanha publicitária para promover seu aplicativo.
 
-1.  No menu de navegação esquerdo na página de seu aplicativo no painel do Centro de Desenvolvimento, clique em **Monetização** &gt; **Promover seu aplicativo**.
+1.  No menu de navegação esquerdo na página de seu aplicativo no painel do Centro de Desenvolvimento, clique em **Monetização**&gt;**Promover seu aplicativo**.
 2.  Realize um dos seguintes procedimentos:
 
     -   Se você ainda não tiver criado uma campanha publicitária para este aplicativo, a página **Promover seu aplicativo** exibe informações sobre os benefícios das campanhas publicitárias. Clique em **Iniciar** ou **Criar uma campanha publicitária**.
@@ -25,7 +26,6 @@ Confira aqui como criar uma campanha publicitária para promover seu aplicativo.
         -   **Anúncios pagos**: os anúncios serão executados em qualquer aplicativo que corresponda ao dispositivo e à categoria do seu aplicativo.
         -   **Anúncios domésticos gratuitos**: os anúncios só serão executados em seus aplicativos (que correspondam ao dispositivo do aplicativo anunciado). Anúncios domésticos são gratuitos. Para saber mais, veja [Sobre anúncios domésticos](about-house-ads.md).
         -   **Anúncios gratuitos da comunidade**: esses anúncios serão veiculados em aplicativos publicados por outros desenvolvedores que também criam campanhas publicitárias da comunidade. Antes de poder selecionar essa opção, você deve marcar a caixa **Mostrar anúncios da comunidade em meu aplicativo** na página **Monetizar com anúncios** do painel. Para saber mais, veja [Sobre anúncios da comunidade](about-community-ads.md).
-    - Em **Data de início da campanha** e **Data de término da campanha**, escolha as datas de início e de término da nova campanha.
 
     > **Observação**  Se seu aplicativo ainda não tiver sido publicado, você receberá uma mensagem de erro na página **Nova campanha**. Você deve aguardar seu aplicativo ser publicado para poder criar uma campanha publicitária para ele.
 
@@ -57,13 +57,13 @@ Confira aqui como criar uma campanha publicitária para promover seu aplicativo.
 6.  Agora, escolha as configurações financeiras de sua campanha publicitária na seção **Orçamento e pagamento**.
    > **Observação**  Se você estiver criando uma campanha doméstica ou da comunidade, a seção **Orçamento e pagamento** não será exibida, já que essas campanhas são gratuitas.
 
-    -   Under **Budget**, use the slider to set the amount of money you want to spend each month to run this ad.
+    -   Em **Orçamento**, use o controle deslizante para definir o valor em dinheiro que você deseja gastar a cada mês para executar esse anúncio.
 
-        The monthly budget is prorated for the month in which the ad campaign is created. In other words, if you create an ad campaign halfway through a calendar month, you will be charged for half of your monthly budget for that month.
+        O orçamento mensal é proporcional ao mês em que a campanha publicitária é criada. Em outras palavras, se você criar uma campanha publicitária na metade de um mês, será cobrado pela metade de seu orçamento mensal nesse mês.
 
-    -   Set a payment instrument for your ad campaign by clicking **Add new payment instrument** and fill in your account details.
-        > **Important**  The country/region of your payment instrument's billing address must match the country/region associated with your Dev Center account.
-    -   If you have received a coupon from a Microsoft representative to pay for an ad campaign, click **Use a coupon**, enter the coupon code, and click **Apply** to apply the coupon to the campaign.
+    -   Defina um método de pagamento para a sua campanha publicitária, clicando em **Adicionar novo método de pagamento** e preencha os detalhes da sua conta.
+        > **Importante**  O país/região do endereço de cobrança do seu método de pagamento deve coincidir com o país/região associado à sua conta do Centro de Desenvolvimento.
+    - Se você recebeu um cupom de um representante da Microsoft para pagar uma campanha publicitária, clique em **Usar um cupom**, insira o código do cupom e clique em **Aplicar** para aplicar o cupom à campanha.
 
 7.  Por fim, clique em **Revisão** para confirmar as configurações de sua campanha publicitária e, se for uma campanha publicitária paga, o orçamento e as informações de pagamento. Clique em **Confirmar** e seus anúncios começarão a aparecer normalmente nos dispositivos Windows ou Windows Phone em algumas horas!
 
@@ -78,6 +78,6 @@ Confira aqui como criar uma campanha publicitária para promover seu aplicativo.
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

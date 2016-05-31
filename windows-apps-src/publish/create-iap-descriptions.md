@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Ao enviar um IAP, as informações que você insere na etapa serão exibidas para os clientes do seu aplicativo.
 title: Criar descrições de IAP
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
@@ -44,6 +45,6 @@ Você também tem a opção de fornecer uma imagem que pode ser exibida quando o
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

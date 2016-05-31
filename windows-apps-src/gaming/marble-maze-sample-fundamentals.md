@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Princípios básicos da amostra do Marble Maze
 description: Este documento descreve as características fundamentais do projeto Marble Maze, por exemplo, como ele usa o Visual C++ no ambiente de Windows Runtime, como ele é criado e estruturado e como ele é compilado.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
@@ -7,12 +8,12 @@ ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
 # Princípios básicos da amostra do Marble Maze
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este documento descreve as características fundamentais do projeto Marble Maze, por exemplo, como ele usa o Visual C++ no ambiente de Windows Runtime, como ele é criado e estruturado e como ele é compilado. O documento também descreve várias das convenções que são usadas no código.
 
-> **Observação**   O código de amostra que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 ## 
@@ -27,13 +28,13 @@ Consulte a seguir alguns dos pontos-chave que este documento discute para quando
 ## Criando o projeto do Visual Studio
 
 
-Se você baixou e extraiu a amostra, pode abrir o arquivo de solução MarbleMaze.sln no Visual Studio e obter o código bem na sua frente. Você também pode ver a origem na página da Galeria de Amostras da MSDN [Amostra do jogo Marble Maze em DirectX](http://go.microsoft.com/fwlink/?LinkId=624011), selecionando a guia **Pesquisar Código**.
+Se você baixou e extraiu a amostra, pode abrir o arquivo de solução MarbleMaze.sln no Visual Studio e obter o código bem na sua frente. Você também pode ver a origem na página da Galeria de Exemplos da MSDN [Amostra do jogo Marble Maze em DirectX](http://go.microsoft.com/fwlink/?LinkId=624011), selecionando a guia **Pesquisar Código**.
 
 Quando criamos o projeto do Visual Studio para o Marble Maze, começamos com um projeto existente. No entanto, se você ainda não tem um projeto existente que forneça a funcionalidade básica necessária para o seu jogo UWP DirectX, convém criar um projeto com base no modelo de **Aplicativo DirectX 11 (Universal do Windows)** do Visual Studio, pois ele fornece um aplicativo 3D de trabalho básico.
 
 Uma definição de projeto importante no modelo de **Aplicativo DirectX 11 (Universal do Windows)** é a opção **/ZW**, que permite que o programa use as extensões de linguagem do Windows Runtime. Essa opção é habilitada por padrão quando você usa o modelo do Visual Studio.
 
-> **Cuidado**   A opção **/ZW** não é compatível com opções como **/clr**. No caso de **/clr**, isso significa que você não pode direcionar o .NET Framework e o Windows Runtime do mesmo projeto Visual C++.
+> **Cuidado**   A opção **/ZW** não é compatível com opções, como **/clr**. No caso de **/clr**, isso significa que você não pode direcionar o .NET Framework e o Windows Runtime do mesmo projeto Visual C++.
 
  
 
@@ -68,7 +69,7 @@ O Windows Runtime é uma interface de programação que pode ser usada para cria
 Para chamar APIs do Windows Runtime do JavaScript e do .NET, essas linguagens exigem projeções que são específicas do ambiente de cada linguagem. Quando você chama uma API do Windows Runtime do JavaScript ou do .NET, invoca a projeção, que, em seguida, chama a função ABI subjacente. Embora você possa chamar as funções ABI diretamente em C++, a Microsoft também oferece projeções para C++, pois elas simplificam muito o consumo das APIs do Tempo de Execução do Windows, ao mesmo tempo mantendo o alto desempenho. A Microsoft também disponibiliza extensões de linguagem para o Visual C++ que oferecem suporte especificamente às projeções do Windows Runtime. Muitas dessas extensões de linguagem lembram a sintaxe da linguagem C++/CLI. No entanto, em vez de se voltarem para o CLR (Common Language Runtime), os aplicativos nativos usam essa sintaxe para se voltarem ao Windows Runtime. O modificador de referência de objeto, ou circunflexo (^), é uma parte importante dessa nova sintaxe, pois permite a exclusão automática de objetos de tempo de execução por meio da contagem de referência. Em vez de chamar métodos, como **AddRef** e **Release** para gerenciar o tempo de vida de um objeto do Windows Runtime, o tempo de execução exclui o objeto quando não há outras referências de componentes, por exemplo, quando ele sai do escopo ou define todas as referências como **nullptr**. Outra parte importante do uso do Visual C++ para criar aplicativos UWP é a palavra-chave **ref new**. Use **ref new** em vez de **new** para criar objetos de contagem de referências do Windows Runtime. Para obter mais informações, consulte o artigo [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822).
 
 > **Importante**  
-Você só precisa usar **^** e **ref new** quando criar objetos ou componentes do Windows Runtime. Você pode usar a sintaxe do C++ padrão ao criar o código básico do aplicativo que não usa o Windows Runtime.
+Você só precisa usar **^** e **ref new** quando criar objetos ou componentes do Tempo de Execução do Windows. Você pode usar a sintaxe do C++ padrão ao criar o código básico do aplicativo que não usa o Windows Runtime.
 
 O Marble Maze usa **^** junto com [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) para gerenciar objetos alocados em pilha e reduzir a perda de memória. Recomendamos o uso de ^ para gerenciar a vida útil das variáveis do Windows Runtime, **ComPtr** para gerenciar a vida útil das variáveis COM (como quando o DirectX é usado) e de std::[**std::shared\_ptr**](https://msdn.microsoft.com/library/windows/apps/bb982026) ou [**std::unique\_ptr**](https://msdn.microsoft.com/library/windows/apps/ee410601) para gerenciar a vida útil de todos os outros objetos C++ alocados em pilha.
 
@@ -141,6 +142,6 @@ Leia [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

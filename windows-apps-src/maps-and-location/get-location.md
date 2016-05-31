@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 title: Obter a localização do usuário
 description: Encontre a localização do usuário e responda a alterações na localização. O acesso à localização do usuário é gerenciado por configurações de privacidade no aplicativo Configurações. Este tópico também mostra como verificar se o aplicativo tem permissão para acessar a localização do usuário.
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
@@ -7,14 +8,14 @@ ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
 # Obter a localização do usuário
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Encontre a localização do usuário e responda a alterações na localização. O acesso à localização do usuário é gerenciado por configurações de privacidade no aplicativo Configurações. Este tópico também mostra como verificar se o aplicativo tem permissão para acessar a localização do usuário.
 
 **Dica** Para saber mais sobre como acessar a localização do usuário em seu aplicativo, baixe a seguinte amostra do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
--   [Exemplo de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Amostra de mapa da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## Habilitar a funcionalidade de localização
 
@@ -36,7 +37,7 @@ Esta seção descreve como detectar a localização geográfica do usuário usan
 
 ### Etapa 1: solicite acesso à localização do usuário
 
-**Importante** Você deve solicitar acesso à localização do usuário usando o método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de tentar acessar a localização do usuário. Você deve chamar o método **RequestAccessAsync** do thread de interface do usuário e seu aplicativo deve estar em segundo plano. Seu aplicativo não poderá acessar as informações de localização do usuário até que o usuário conceda permissão a seu aplicativo.
+**Importante** Você deverá solicitar acesso ao local do usuário usando o método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de tentar acessar o local do usuário. É necessário chamar o método **RequestAccessAsync** no thread da interface do usuário e o aplicativo deve estar em segundo plano. O aplicativo não será capaz de acessar informações de local do usuário até o usuário conceder permissão ao aplicativo.
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -44,7 +45,7 @@ using Windows.Devices.Geolocation;
 var accessStatus = await Geolocator.RequestAccessAsync();
 ```
 
-O método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) solicita que o usuário permita o acesso a sua localização. O usuário é solicitado apenas uma vez (por aplicativo). Após a primeira vez em que a permissão é concedida ou negada, esse método deixa de solicitar a permissão ao usuário. Para ajudar o usuário a alterar a s permissões de localização depois que ela tiver sido solicitada, recomendamos que você forneça um link para as configurações de localização, como demonstrado posteriormente neste tópico.
+O método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) solicita ao usuário permissão para acessar o local. O usuário é solicitado apenas uma vez (por aplicativo). Após a primeira vez em que a permissão é concedida ou negada, esse método deixa de solicitar a permissão ao usuário. Para ajudar o usuário a alterar a s permissões de localização depois que ela tiver sido solicitada, recomendamos que você forneça um link para as configurações de localização, como demonstrado posteriormente neste tópico.
 
 ### Etapa 2: obtenha a localização do usuário e registre as alterações nas permissões de localização
 
@@ -222,9 +223,9 @@ async private void OnPositionChanged(Geolocator sender, PositionChangedEventArgs
 ## Altere configurações de privacidade de localização
 
 
-Se as configurações de privacidade de localização não permitirem que seu aplicativo acesse a localização do usuário, recomendamos que você forneça um link para as **configurações de privacidade de localização** no aplicativo **Configurações**. Neste exemplo, um controle de hiperlink é usado para navegar até o URI `ms-settings:privacy-location`.
+Se as configurações de privacidade de localização não permitirem que seu aplicativo acesse a localização do usuário, recomendamos que você forneça um link para as **configurações de privacidade de localização** no aplicativo **Configurações**. Neste exemplo, um controle Hyperlink é usado navegar até o URI `ms-settings:privacy-location`.
 
-```xaml
+```xml
 <!--Set Visibility to Visible when access to location is denied -->  
 <TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic" 
                  Visibility="Collapsed" Margin="0,15,0,0" TextWrapping="Wrap" >
@@ -255,13 +256,13 @@ Para que o aplicativo possa acessar a localização do usuário, **Localização
 
 ## Tópicos relacionados
 
-* [Amostra de geolocalização do UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Amostra de geolocalização da UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Diretrizes de design para cerca geográfica](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [Diretrizes de design para aplicativos com detecção de localização](https://msdn.microsoft.com/library/windows/apps/hh465148)
 
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

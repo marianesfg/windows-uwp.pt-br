@@ -1,7 +1,8 @@
 ---
+author: martinekuan
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
 title: O que é um aplicativo da Plataforma Universal do Windows (UWP)?
-description: Saiba mais sobre os diferentes tipos de aplicativos que chamamos de Aplicativos Universais do Windows - aplicativos da Windows Store, aplicativos da Loja do Windows Phone e aplicativos do Windows Runtime.
+description: Saiba mais sobre os diferentes tipos de aplicativos que nós chamamos de aplicativos Universais do Windows: aplicativos da Windows Store, aplicativos da Loja do Windows Phone e aplicativos do Windows Runtime.
 ---
 
 # O que é um aplicativo da Plataforma Universal do Windows (UWP)?
@@ -80,7 +81,7 @@ No Windows, é possível rentabilizar o seu aplicativo a sua maneira: em vários
 ## Vamos começar
 
 
-Para obter uma visão mais detalhada da UWP, leia o [Guia para Aplicativos da Plataforma Universal do Windows](universal-application-platform-guide.md). Em seguida, confira [Prepare-se para começar](get-set-up.md) para baixar as ferramentas de que você precisa para iniciar a criação de aplicativos.
+Para obter uma visão mais detalhada da UWP, leia o [Guia para Aplicativos da Plataforma Universal do Windows](universal-application-platform-guide.md). Em seguida, confira [Preparar-se para começar](get-set-up.md) para baixar as ferramentas de que você precisa para iniciar a criação de aplicativos.
 
 ## Tópicos relacionados
 
@@ -89,6 +90,6 @@ Para obter uma visão mais detalhada da UWP, leia o [Guia para Aplicativos da Pl
 * [Preparar-se](get-set-up.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

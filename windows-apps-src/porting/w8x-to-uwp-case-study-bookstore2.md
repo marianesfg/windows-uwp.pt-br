@@ -1,6 +1,7 @@
 ---
+author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: Este estudo de caso, que se baseia nas informações fornecidas no Bookstore1, começa com um aplicativo universal do Windows 8.1 que exibe dados agrupados em um controle SemanticZoom.
+description: Este estudo de caso, que se baseia nas informações fornecidas no Bookstore1, começa com um aplicativo Universal 8.1 que exibe dados agrupados em um controle SemanticZoom.
 title: Estudo de caso do Windows Runtime 8.x para UWP Bookstore2
 ---
 
@@ -10,7 +11,7 @@ title: Estudo de caso do Windows Runtime 8.x para UWP Bookstore2
 
 Este estudo de caso, que se baseia nas informações fornecidas no [Bookstore1](w8x-to-uwp-case-study-bookstore1.md), começa com um aplicativo Universal 8.1 que exibe dados agrupados em um controle [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601). No modelo de exibição, cada instância da classe **Author** representa o grupo dos livros escritos por esse autor e, no **SemanticZoom**, podemos exibir a lista de livros agrupados por autor ou reduzir o zoom para ver uma lista de atalhos de autores. A lista de atalhos proporciona uma navegação mais rápida do que rolar pela lista de livros. Veremos as etapas para a portabilidade do aplicativo para um aplicativo UWP (Plataforma Universal do Windows) do Windows 10.
 
-**Observação** ao abrir Bookstore2Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Observação**   Ao abrir Bookstore2Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
 
 ## Downloads
 
@@ -106,7 +107,7 @@ Neste estudo de caso, optaremos pela primeira alternativa. Porém, se quiser, vo
 -   No projeto Bookstore2\_81.WindowsPhone, abra BookstoreStyles.xaml. Nesse arquivo, copie os mesmos três recursos (mencionados acima) e os dois conversores de itens da lista de atalhos, além da declaração de prefixo de namespace Windows\_UI\_Xaml\_Controls\_Primitives, e cole tudo no BookstoreStyles.xaml de seu novo projeto.
 -   Por fim, em SeZoUC.xaml no novo projeto, adicione a marcação apropriada do Gerenciador de Estado Visual à **Grid** que você adicionou acima.
 
-```xaml
+```xml
     <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -168,6 +169,6 @@ Este estudo de caso envolveu uma interface do usuário mais ambiciosa do que a a
 O próximo estudo de caso é o [QuizGame](w8x-to-uwp-case-study-quizgame.md), no qual analisaremos o acesso e a exibição de dados agrupados.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

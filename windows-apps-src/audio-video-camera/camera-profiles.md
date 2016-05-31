@@ -1,12 +1,13 @@
 ---
+author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo.
-title: perfis de câmera
+description: Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo.
+title: Perfis de câmera
 ---
 
 # Perfis de câmera
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo.
@@ -56,11 +57,11 @@ Depois que você preencher **MediaCaptureInitializationSettings** com o perfil d
 
 ## Selecionar um perfil que ofereça suporte à simultaneidade
 
-Você pode usar perfis de câmera para determinar se um dispositivo oferece suporte à captura de vídeo de várias câmeras simultaneamente. Para esse cenário, será necessário criar dois conjuntos de objetos de captura: um para a câmera frontal e outro para a câmera traseira. Para cada câmera, crie **MediaCapture**, **MediaCaptureInitializationSettings** e uma cadeia de caracteres para manter a ID do dispositivo de captura. Além disso, adicione uma variável booleana que detectará se a simultaneidade tem ou não suporte.
+Você pode usar perfis de câmera para determinar se um dispositivo oferece suporte à captura de vídeo de várias câmeras simultaneamente. Para esse cenário, será necessário criar dois conjuntos de objetos de captura: um para a câmera frontal e outro para a câmera traseira. Para cada câmera, crie **MediaCapture**, **MediaCaptureInitializationSettings** e uma cadeia de caracteres para manter a ID do dispositivo de captura. Além disso, adicione uma variável booliana que detectará se a simultaneidade tem ou não suporte.
 
 [!code-cs[ConcurrencySetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetConcurrencySetup)]
 
-O método estático [**MediaCapture.FindConcurrentProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926709) retorna uma lista dos perfis de câmera compatíveis com o dispositivo de captura especificado que também oferece suporte à simultaneidade. Use uma consulta Linq para encontrar um perfil que ofereça suporte à simultaneidade e seja compatível com as câmeras frontal e traseira. Se um perfil que atenda a esses requisitos for encontrado, defina o perfil em cada um dos objetos **MediaCaptureInitializationSettings** e defina a variável booleana de detecção de simultaneidade como true.
+O método estático [**MediaCapture.FindConcurrentProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926709) retorna uma lista dos perfis de câmera compatíveis com o dispositivo de captura especificado que também oferece suporte à simultaneidade. Use uma consulta Linq para encontrar um perfil que ofereça suporte à simultaneidade e seja compatível com as câmeras frontal e traseira. Se um perfil que atenda a esses requisitos for encontrado, defina o perfil em cada um dos objetos **MediaCaptureInitializationSettings** e defina a variável booliana de detecção de simultaneidade como true.
 
 [!code-cs[FindConcurrencyDevices](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindConcurrencyDevices)]
 
@@ -70,7 +71,7 @@ Chame **MediaCapture.InitializeAsync** para a câmera principal do cenário de s
 
 ## Usar perfis conhecidos para encontrar um perfil com suporte a vídeo HDR
 
-A seleção de um perfil que ofereça suporte a HDR é feita como a de outros cenários. Crie **MediaCaptureInitializationSettings** e uma cadeia de caracteres para conter a ID do dispositivo de captura. Adicione uma variável booleana que detectará se o vídeo HDR tem suporte.
+A seleção de um perfil que ofereça suporte a HDR é feita como a de outros cenários. Crie **MediaCaptureInitializationSettings** e uma cadeia de caracteres para conter a ID do dispositivo de captura. Adicione uma variável booliana que detectará se o vídeo HDR tem suporte.
 
 [!code-cs[GetHdrProfileSetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetHdrProfileSetup)]
 
@@ -104,6 +105,6 @@ Você pode refinar essa consulta para procurar perfis com suporte a resoluções
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

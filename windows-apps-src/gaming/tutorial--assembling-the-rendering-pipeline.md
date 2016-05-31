@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Montar a estrutura de renderização
 description: Agora chegou o momento de examinar como o jogo de exemplo usa essa estrutura e esse estado para exibir seus elementos gráficos.
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
@@ -7,7 +8,7 @@ ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
 # Montar a estrutura de renderização
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Até aqui, você aprendeu a estruturar um jogo da Plataforma Universal do Windows (UWP) para trabalhar com o Windows Runtime e viu como definir uma máquina de estado para lidar com o fluxo do jogo. Agora chegou o momento de examinar como o jogo de exemplo usa essa estrutura e esse estado para exibir seus elementos gráficos. Aqui vemos a implementação de uma estrutura de renderização, desde a inicialização do dispositivo gráfico até a apresentação dos objetos gráficos para exibição.
 
@@ -853,7 +854,7 @@ No código de exemplo do jogo, definimos e implementamos as primitivas em duas c
 
 **MeshObject.h/.cpp** define a classe base para todos os objetos de malha. Os arquivos **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** e **WorldMesh.h/.cpp** contêm o código que preenche os buffers constantes para cada primitiva com o vértice e os dados normais de vértice que define a geometria da primitiva. Esses arquivos de código são um bom lugar para começar se você estiver tentando entender como criar primitivas Direct3D em seu próprio aplicativo de jogo, mas não será discutido aqui porque eles são específicos demais para a implementação deste jogo. Por ora, presumiremos que os buffers de vértice para cada primitiva já foram preenchidos e examinaremos como o exemplo de jogo manipula esses buffers para atualizar o próprio jogo.
 
-A classe base dos objetos que representam as primitivas a partir da perspectiva do jogo é definida **GameObject.h./.cpp.** Esta classe, **GameObject**, define os campos e métodos para os comportamentos comuns entre todas as primitivas. Cada tipo de objeto de primitiva é derivado dele. Agora veremos como isso é definido:
+A classe base para objetos que representam as primitivas da perspectiva do jogo é definida em **GameObject.h./.cpp.** Essa classe, **GameObject**, define os campos e métodos para os comportamentos comuns em todas as primitivas. Cada tipo de objeto de primitiva é derivado dele. Agora veremos como isso é definido:
 
 ```cpp
 ref class GameObject
@@ -948,7 +949,7 @@ protected private:
 
 A maioria dos campos contém dados sobre o estado, as propriedades visuais ou a posição da primitiva no mundo do jogo. Alguns métodos em particular são necessários na maioria dos jogos:
 
--   **Malha**. Obtém a geometria de malha da primitiva, que é armazenada em **m\_mesh**. Essa geometria é definida em **MeshObject.h/.cpp**.
+-   **Mesh**. Obtém a geometria de malha da primitiva, que é armazenada em **m\_mesh**. Essa geometria é definida em **MeshObject.h/.cpp**.
 -   **IsTouching**. Esse método determina se a primitiva está dentro de uma distância específica de um ponto, retornando o ponto em sua superfície mais próximo desse ponto e o normal da superfície do objeto nesse ponto. Como o exemplo só se ocupa de colisões de primitivas de munição, isso é suficiente para a dinâmica do jogo. Não é uma função de interseção primitiva-primitiva de uso geral, embora possa ser usada como base para uma.
 -   **AnimatePosition**. Atualiza o movimento e a animação da primitiva.
 -   **UpdatePosition**. Atualiza a posição do objeto no espaço de coordenadas do mundo.
@@ -6320,6 +6321,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: O som ajuda a completar a experiência do usuário do aplicativo e dá a eles aquele toque extra de áudio para combinar com a personalidade do Windows em todas as plataformas.
 label: Sound
 title: Som
@@ -23,9 +24,11 @@ ElementSoundPlayer.State = ElementSoundPlayerState.On;
 O **ElementSoundPlayer** tem três estados diferentes: **Ativado** **Desativado** e **Auto**.
 
 Se definido como **Desativado**, não importa onde seu aplicativo seja executado, o som nunca será reproduzido. Se definido como **Ativado** os sons de seu aplicativo serão executados em todas as plataformas.
+
 ### Som de TV e Xbox
+
 O som é uma parte essencial da experiência de 3 metros e, por padrão, o estado do **ElementSoundPlayer** é **Auto**, o que significa que você só obterá som quando seu aplicativo estiver em execução no Xbox.
-Para saber mais sobre como os sons funcionam para TV e Xbox, consulte o artigo [Projetando para Xbox e TV](http://go.microsoft.com/fwlink/?LinkId=760736).
+Para saber mais sobre como projetar para Xbox e TV, consulte o artigo [Projetando para Xbox e TV](http://go.microsoft.com/fwlink/?LinkId=760736).
 
 ## Substituição de volume do som
 Todos os sons no aplicativo podem ser reduzidos com o controle **Volume**. No entanto, os sons no aplicativo não podem ficar *mais altos do que o volume do sistema*.
@@ -131,6 +134,6 @@ O objetivo por trás desse recurso de ciclo é evitar que os sons de foco se tor
 * [Projetando para TV e Xbox](http://go.microsoft.com/fwlink/?LinkId=760736)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

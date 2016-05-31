@@ -9,7 +9,7 @@ redirect_url: https://developer.microsoft.com/en-us/windows/develop
 
 # Guias de instruções para aplicativos UWP no Windows 10
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aqui estão as informações de que você precisa para criar um aplicativo Universal do Windows que possa ser executado em qualquer dispositivo baseado no Windows 10, inclusive telefones, tablets e computadores. Esta seção oferece instruções e exemplos de código organizados pelo tipo de tarefa que você deseja realizar.
 
@@ -21,6 +21,6 @@ Se você desejar uma introdução à Plataforma Universal do Windows (UWP) e sab
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

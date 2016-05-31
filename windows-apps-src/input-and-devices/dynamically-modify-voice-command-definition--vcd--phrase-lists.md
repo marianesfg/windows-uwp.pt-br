@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Saiba como acessar e atualizar a lista de frases com suporte (elementos PhraseList) em um arquivo VCD (Definição de Comando de Voz) usando o resultado do reconhecimento de fala em tempo de execução.
 title: Modificar dinamicamente listas de frases VCD
 ms.assetid: 98024EAC-EC0E-44AA-AEC5-A611BA7C5884
@@ -9,7 +10,7 @@ template: detail.hbs
 # Modificar dinamicamente listas de frases VCD
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **APIs importantes**
@@ -21,13 +22,13 @@ Acesse e atualize a lista de frases com suporte (elementos **PhraseList**) em um
 
 Modificar dinamicamente uma lista de frases em tempo de execução é útil se o comando de voz for específico para uma tarefa que envolve algum tipo de dados de aplicativos definidos pelo usuário ou transitórios. 
 
-Por exemplo, digamos que você tenha um aplicativo de viagem em que os usuários podem inserir destinos. Você deseja que os usuários possam iniciar o aplicativo dizendo o nome do aplicativo seguido por "Mostrar viagem para &lt;destino&gt;". No próprio elemento **ListenFor**, você especificaria algo como: `<ListenFor> Show trip to {destination}  </ListenFor>`, em que "destination" é o valor do atributo **Label** do elemento **PhraseList**.
+Por exemplo, digamos que você tenha um aplicativo de viagem onde os usuários podem inserir destinos. Você deseja que os usuários possam iniciar o aplicativo dizendo o nome do aplicativo seguido por "Mostrar viagem para &lt;destino&gt;". No próprio elemento **ListenFor**, você especificaria algo como: `<ListenFor> Show trip to {destination}  </ListenFor>`, em que "destination" é o valor do atributo **Label** do elemento **PhraseList**.
 
 Atualizar a lista de frases em tempo de execução elimina a necessidade de criar um elemento **ListenFor** separado para cada destino possível. Em vez disso, você pode preencher dinamicamente o elemento **PhraseList** com destinos especificados pelo usuário à medida que ele insere seus itinerários. 
 
 Para saber mais sobre **PhraseList** e outros elementos VCD, consulte a referência de [**elementos e atributos VCD v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593).
 
-**Pré-requisitos: **
+**Pré-requisitos:  **
 
 Este tópico complementa [Iniciar um aplicativo em primeiro plano com comando de voz na Cortana](launch-a-foreground-app-with-voice-commands-in-cortana.md). Continuaremos demonstrando recursos com um aplicativo de planejamento e gerenciamento de viagens chamado **Adventure Works**.
 
@@ -38,7 +39,7 @@ Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal
 
 **Diretrizes de experiência do usuário:  **
 
-Consulte as [Diretrizes de design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233), para obter informações sobre como integrar seu aplicativo à **Cortana** e as [Diretrizes de design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121) para obter dicas úteis para criar um aplicativo interessante e prático, habilitado para controle por voz.
+Consulte as [Diretrizes para design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233), para obter informações sobre como integrar seu aplicativo à **Cortana** e as [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121) para obter dicas úteis para criar um aplicativo interessante e prático, habilitado para controle por voz.
 
 ## <span id="Identify_the_command"></span><span id="identify_the_command"></span><span id="IDENTIFY_THE_COMMAND"></span>Identificar o comando e atualizar a lista de frases
 
@@ -150,6 +151,6 @@ No nosso exemplo, temos um elemento **PhraseTopic** com um **Scenario** de "Sear
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

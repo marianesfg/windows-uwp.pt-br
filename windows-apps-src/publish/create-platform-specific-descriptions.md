@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Caso tenha fornecido pacotes direcionados a diferentes sistemas operacionais, você tem a opção de personalizar partes da descrição para os diferentes sistemas operacionais de destino.
 title: Criar descrições específicas de plataforma
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
@@ -44,6 +45,6 @@ Se você criar uma descrição específica de plataforma e depois decidir que qu
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

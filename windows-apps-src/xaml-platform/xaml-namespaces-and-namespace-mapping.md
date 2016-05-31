@@ -1,12 +1,13 @@
 ---
-description: Este tópico explica os mapeamentos de namespace XML/XAML (xmlns), conforme encontrados no elemento raiz da maioria dos arquivos XAML. Descreve também como produzir mapeamentos similares para tipos e assemblies personalizados.
+author: jwmsft
+description: Este tópico explica os mapeamentos de namespace XML/XAML (xmlns) conforme encontrados no elemento raiz da maioria dos arquivos XAML. Descreve também como produzir mapeamentos similares para tipos e assemblies personalizados.
 title: Namespaces XAML e mapeamento de namespace
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
 ---
 
 # Namespaces XAML e mapeamento de namespace
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico explica os mapeamentos de namespace XML/XAML (**xmlns**) conforme encontrados no elemento raiz da maioria dos arquivos XAML. Descreve também como produzir mapeamentos similares para tipos e assemblies personalizados.
 
@@ -45,19 +46,19 @@ A linguagem XAML especifica determinados elementos de linguagem e cada um deles 
 
 Além do namespace padrão e do namespace XAML da linguagem XAML "x:", você também pode ver outros namespaces XAML mapeados no XAML padrão inicial para aplicativos, conforme gerados pelo Microsoft Visual Studio.
 
-### **d: (http://schemas.microsoft.com/expression/blend/2008)**
+### **d: (`http://schemas.microsoft.com/expression/blend/2008`)**
 
 O namespace XAML "d:" foi projetado para auxiliar o designer, especificamente nas áreas de design XAML do Microsoft Visual Studio. O namespace XAML "d:" permite atributos de designer ou de tempo de design em elementos XAML. Esses atributos de designer afetam apenas os aspectos de design referentes ao comportamento do XAML. Os atributos de designer são ignorados quando o mesmo XAML é carregado pelo analisador XAML do Tempo de Execução do Windows, durante a execução de um aplicativo. Os atributos de designer geralmente são válidos em qualquer elemento XAML, mas, na prática, há apenas alguns cenários em que a aplicação do atributo de designer é adequada. Em especial, muitos dos atributos de designer são projetados para fornecer uma experiência melhor de interação com os contextos e as fontes de dados, quando você desenvolve XAML e código que usam a vinculação de dados.
 
--   **Atributos d:DesignHeight e d:DesignWidth:** Esses atributos são, às vezes, aplicados na raiz de um arquivo XAML que o Visual Studio ou outra superfície do designer do XAML e cria para você. Por exemplo, esses atributos são definidos na raiz do [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) do XAML que é criado se você adiciona um novo **UserControl** ao seu projeto de aplicativo. Esses atributos facilitam a criação da composição do conteúdo XAML, por isso você tem alguma previsão das restrições de layout que podem existir depois que o conteúdo XAML é usado para uma instância de controle ou outra parte de uma página de interface do usuário maior.
+-   **Atributos d:DesignHeight e d:DesignWidth:** Esses atributos são, às vezes, aplicados na raiz de um arquivo XAML que o Visual Studio ou outra superfície do designer do XAML cria para você. Por exemplo, esses atributos são definidos na raiz do [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) do XAML que é criado se você adiciona um novo **UserControl** ao seu projeto de aplicativo. Esses atributos facilitam a criação da composição do conteúdo XAML, por isso você tem alguma previsão das restrições de layout que podem existir depois que o conteúdo XAML é usado para uma instância de controle ou outra parte de uma página de interface do usuário maior.
 
-   **Observação** Se você estiver migrando o XAML a partir do Microsoft Silverlight, poderá ter esses atributos nos elementos da raiz que representam uma página de interface do usuário inteira. Talvez você queira remover os atributos nesse caso. Outros recursos dos designers de XAML, como o simulador, provavelmente são mais úteis na criação de layouts de página que manipulem dimensionamento e estados de exibição do que um layout de página de tamanho fixo que usa **d:DesignHeight** e **d:DesignWidth**.
+   **Observação**  Se você estiver migrando o XAML a partir do Microsoft Silverlight, poderá ter esses atributos nos elementos raiz que representam uma página de interface do usuário inteira. Talvez você queira remover os atributos nesse caso. Outros recursos dos designers de XAML, como o simulador, provavelmente são mais úteis na criação de layouts de página que manipulem dimensionamento e estados de exibição do que um layout de página de tamanho fixo que usa **d:DesignHeight** e **d:DesignWidth**.
 
--   **d:DataContext attribute:** Você pode definir este atributo em uma raiz de página ou um controle para substituir qualquer [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) explícita ou herdada que o objeto tenha.
--   O atributo **d:DesignSource:** especifica uma origem de dados de tempo de design para uma [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), substituindo [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835).
--   Extensões de marcação **d:DesignInstance and d:DesignData:** essas extensões de marcação são usadas para fornecer os recursos de dados de tempo de design para **d:DataContext** ou **d:DesignSource**. Não documentamos totalmente aqui a maneira de usar os recursos de dados de tempo de design. Para obter mais informações, consulte [Atributos de tempo de design](http://go.microsoft.com/fwlink/p/?LinkId=272504). Para obter alguns exemplos de uso, consulte [Dados de exemplo na superfície de design e para a criação de protótipo](https://msdn.microsoft.com/library/windows/apps/mt517866).
+-   **Atributo d:DataContext:** Você pode definir esse atributo em uma raiz de página ou um controle para substituir qualquer [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) explícito ou herdado que o objeto tenha.
+-   **Atributo d:DesignSource:** Especifica uma fonte de dados de tempo de design para um [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), substituindo [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835).
+-   **Extensões de marcação d:DesignInstance e d:DesignData:** Essas extensões de marcação são usadas para fornecer os recursos de dados de tempo de design para **d:DataContext** ou **d:DesignSource**. Não documentamos totalmente aqui a maneira de usar os recursos de dados de tempo de design. Para obter mais informações, consulte [Atributos de tempo de design](http://go.microsoft.com/fwlink/p/?LinkId=272504). Para obter alguns exemplos de uso, consulte [Dados de exemplo na área de design e para a criação de protótipo](https://msdn.microsoft.com/library/windows/apps/mt517866).
 
-### **mc: (http://schemas.openxmlformats.org/markup-compatibility/2006) **
+### **mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
 " mc:" indica e dá suporte ao modo de compatibilidade de marcação para leitura de XAML. Normalmente, o prefixo "d:" prefix é associado ao atributo **mc:Ignorable**. Essa técnica permite que os analisadores XAML de tempo de execução ignorem os atributos de design em "d:".
 
@@ -108,6 +109,6 @@ Se você estiver fazendo referência a propriedades anexadas, a parte do tipo de
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

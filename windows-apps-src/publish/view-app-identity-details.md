@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Ao trabalhar com um aplicativo no painel do Centro de Desenvolvimento do Windows, você pode exibir detalhes relacionados à identidade exclusiva atribuída a ele pela Windows Store e obter um link para os detalhes do seu aplicativo na Loja.
 title: Exibir detalhes de identidade do aplicativo
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
@@ -35,22 +36,23 @@ Os valores seguintes são valores adicionais que se referem à família de pacot
 
 ## Link com os detalhes do seu aplicativo
 
+O link para a página do seu aplicativo pode ser compartilhado para ajudar os clientes a encontrar o aplicativo na Loja. Este link está no formato **`https://www.microsoft.com/store/apps/<your app's Store ID>`**.
 
-O link para a página do seu aplicativo pode ser compartilhado para ajudar os clientes a encontrar o aplicativo na Loja. Este link está no formato **`https://www.microsoft.com/store/apps/<your app's Product ID>`**.
-
-> **Observação** dependendo das versões de sistema operacional às quais você se dirige, pode haver mais de um link aqui. Todos os aplicativos mostrarão a URL para Windows 10 usando o formato indicado acima, que funcionará em qualquer sistema operacional. Você pode ver links adicionais para o Windows 8.1 e versões anteriores e/ou Windows Phone 8.1 e versões anteriores, que funcionarão somente nas versões de sistema operacional especificadas.
+> **Observação** Esta URL funcionará para qualquer versão do sistema operacional no qual seu aplicativo esteja disponível. Você também pode ver links adicionais para o Windows 8.1 e versões anteriores e/ou Windows Phone 8.1 e versões anteriores, que funcionarão somente nas versões de sistema operacional especificadas.
 
 Quando um cliente clicar nesse link, ele abrirá a página de listagem baseada na web do seu aplicativo. Se o aplicativo estiver disponível para o dispositivo Windows do cliente, o aplicativo da Loja também será iniciado e exibirá a listagem do aplicativo.
 
- 
+O **ID da Loja** de seu aplicativo também é mostrado nesta seção. Esse ID da Loja pode ser usado para [gerar notificações da Loja](http://go.microsoft.com/fwlink/p/?LinkId=534236) ou identificar seu aplicativo de outra forma.
 
  
 
+ 
 
 
 
 
 
-<!--HONumber=Mar16_HO1-->
+
+<!--HONumber=May16_HO2-->
 
 

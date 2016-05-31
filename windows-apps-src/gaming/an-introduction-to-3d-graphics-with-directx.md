@@ -1,13 +1,14 @@
 ---
-title: Elementos gráficos 3D básicos para jogos em DirectX
+author: mtoepke
+title: Elementos gráficos 3D básicos para jogos DirectX
 description: Mostramos como usar programação em DirectX para implementar os conceitos fundamentais de elementos gráficos 3D.
 ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
 ---
 
-# Elementos gráficos 3D básicos para jogos em DirectX
+# Elementos gráficos 3D básicos para jogos DirectX
 
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Mostramos como usar programação em DirectX para implementar os conceitos fundamentais de elementos gráficos 3D.
 
@@ -62,6 +63,6 @@ Em seguida, criamos um dispositivo Direct3D, uma cadeia de troca e um modo de ex
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

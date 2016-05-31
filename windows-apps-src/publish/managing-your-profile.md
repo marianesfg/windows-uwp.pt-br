@@ -1,4 +1,5 @@
 ---
+author: jnHs
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: Gerenciando suas configurações de conta e informações de perfil
 description: Você pode exibir e atualizar as configurações da sua conta de desenvolvedor e as informações de perfil na seção Configurações da conta do painel unificado do Centro de Desenvolvimento do Windows.
@@ -31,6 +32,6 @@ Alguns programas podem fornecer um código para permitir que você expanda os re
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,5 +1,6 @@
 ---
-Description: Para gerenciar as campanhas publlcitárias do seu aplicativo, clique em Monetização &gt; Promover seu aplicativo na página do seu aplicativo no painel do Centro de Desenvolvimento do Windows.
+author: jnHs
+Description: Para gerenciar as campanhas publicitárias do seu aplicativo, clique em Monetização &gt; Promover seu aplicativo na página do seu aplicativo no painel do Centro de Desenvolvimento do Windows.
 title: Gerenciando sua campanha publicitária
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
 ---
@@ -7,7 +8,7 @@ ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
 # Gerenciando sua campanha publicitária
 
 
-Para gerenciar as campanhas publicitárias do seu aplicativo, clique em **Monetização** &gt; **Promover seu aplicativo** na página do seu aplicativo no painel do Centro de Desenvolvimento do Windows. A página **Promover seu aplicativo** lista todas as campanhas publicitárias associadas ao seu aplicativo e exibe as impressões, cliques e instalações para cada campanha publicitária. Para saber mais sobre impressões, cliques e instalações, veja as definições desses termos no [Relatório de anúncios de instalação de aplicativo](app-install-ads-reports.md).
+Para gerenciar as campanhas publicitárias do seu aplicativo, clique em **Monetização**&gt;**Promover seu aplicativo** na página do seu aplicativo no painel do Centro de Desenvolvimento do Windows. A página **Promover seu aplicativo** lista todas as campanhas publicitárias associadas ao seu aplicativo e exibe as impressões, cliques e instalações para cada campanha publicitária. Para saber mais sobre impressões, cliques e instalações, veja as definições desses termos no [Relatório de anúncios de instalação de aplicativo](app-install-ads-reports.md).
 
 Para filtrar a lista de campanhas publicitárias, clique no menu suspenso **Filtros de seção** e escolha os filtros a seguir:
 
@@ -22,7 +23,7 @@ Para filtrar a lista de campanhas publicitárias, clique no menu suspenso **Filt
 ## Relatório
 
 
-Para ver o desempenho de suas campanhas publicitárias, clique em **Análises** &gt **Anúncios de instalação de aplicativo** no painel de navegação do painel. Para saber mais sobre esse relatório, veja [Relatório de anúncios de instalação de aplicativo](app-install-ads-reports.md).
+Para ver o desempenho de suas campanhas publicitárias, clique em **Análises**&gt;**Anúncios de instalação de aplicativo** no painel de navegação do painel. Para saber mais sobre esse relatório, consulte [Relatório de anúncios de instalação de aplicativo](app-install-ads-reports.md).
 
 ## Editar uma campanha publicitária
 
@@ -45,6 +46,6 @@ Para fazer alterações em uma campanha publicitária, clique no nome dela para 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

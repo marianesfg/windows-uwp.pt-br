@@ -1,12 +1,13 @@
 ---
-description: Noções básicas do Visual Studio
-title: Noções básicas do Visual Studio
+author: mcleblanc
+description: Conhecendo o Visual Studio
+title: Conhecendo o Visual Studio
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
 ---
 
 # Introdução: conhecendo o Visual Studio
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Noções básicas do Microsoft Visual Studio
 
@@ -86,7 +87,7 @@ No Visual Studio, você não precisa associar o controle, já que isso é sempre
 1.  Toque na guia de arquivo de MainPage.xaml.
 2.  No painel **Design**, toque no controle **TextBlock**.
 3.  No painel **Propriedades**, toque no botão de chave inglesa para exibir suas propriedades.
-4.  Na caixa **Nome**, altere "&lt;No Name&gt;" para "myLabel".
+4.  Na caixa **Nome**, mude "&lt;Sem Nome&gt;" para "myLabel".
 
 ![janela de propriedades de rótulo no visual studio](images/ios-to-uwp/vs-label-properties.png)
 
@@ -120,6 +121,6 @@ Para encerrar o aplicativo, volte ao Visual Studio, toque no menu **Depurar** e,
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

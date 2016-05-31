@@ -1,13 +1,14 @@
 ---
+author: TylerMSFT
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
-title: Arquivos e pastas nas bibliotecas Música, Imagens e Vídeos
+title: Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos
 description: Adicione pastas existentes de música, fotos ou vídeos às bibliotecas correspondentes. Você também pode remover pastas de bibliotecas, obter a lista de pastas em uma biblioteca e descobrir fotos, músicas e vídeos armazenados.
 ---
 
 # Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Adicione pastas existentes de música, fotos ou vídeos às bibliotecas correspondentes. Você também pode remover pastas de bibliotecas, obter a lista de pastas em uma biblioteca e descobrir fotos, músicas e vídeos armazenados.
@@ -119,13 +120,13 @@ Os locais são:
 
 -   Pasta **Imagens**. Contém imagens.
 
-    -   Pasta **Imagens da Câmera** Contém fotos e vídeo da câmera interna.
+    -   Pasta **Imagens da Câmera**. Contém fotos e vídeo da câmera interna.
 
-    -   Pasta **Imagens Salvas** Contém imagens que o usuário salvou de outros aplicativos.
+    -   Pasta **Imagens Salvas**. Contém imagens que o usuário salvou de outros aplicativos.
 
--   Pasta **Música** Contém músicas, podcasts e áudio livros.
+-   Pasta **Música**. Contém músicas, podcasts e áudio livros.
 
--   Pasta **Vídeo** Contém vídeos.
+-   Pasta **Vídeo**. Contém vídeos.
 
 Usuários e aplicativos também armazenam arquivos de mídia fora das pastas de bibliotecas de mídia no cartão SD. Para localizar um arquivo de mídia confiavelmente no cartão SD, examine o conteúdo do cartão SD ou solicite ao usuário que localize o arquivo usando um seletor de arquivos. Para saber mais, consulte [Acessar o cartão SD](access-the-sd-card.md).
 
@@ -199,7 +200,7 @@ Estes são alguns exemplos de consultas e os resultados que retornam.
 
 Aqui estão os recursos que você pode especificar no arquivo de manifesto de aplicativo para acessar arquivos de mídia em seu aplicativo.
 
--   **Música** Especifique o recurso **Biblioteca de Músicas** no arquivo de manifesto do aplicativo para permitir que seu aplicativo consulte e acesse arquivos dos seguintes tipos:
+-   **Música**. Especifique o recurso **Biblioteca de Músicas** no arquivo de manifesto do aplicativo para permitir que seu aplicativo consulte e acesse arquivos dos seguintes tipos:
 
     -   .qcp
     -   .wav
@@ -220,7 +221,7 @@ Aqui estão os recursos que você pode especificar no arquivo de manifesto de ap
     -   .adt
     -   .adts
     -   .pya
--   **Fotos** Especifique o recurso **Biblioteca de Imagens** no arquivo de manifesto do aplicativo para permitir que seu aplicativo consulte e acesse arquivos dos seguintes tipos:
+-   **Fotos**. Especifique o recurso **Biblioteca de Imagens** no arquivo de manifesto do aplicativo para permitir que seu aplicativo consulte e acesse arquivos dos seguintes tipos:
 
     -   .jpeg
     -   .jpe
@@ -233,7 +234,7 @@ Aqui estão os recursos que você pode especificar no arquivo de manifesto de ap
     -   .wdp
     -   .jxr
     -   .hdp
--   **Vídeos** Especifique o recurso **Biblioteca de Vídeos** no arquivo de manifesto do aplicativo para permitir que seu aplicativo consulte e acesse arquivos dos seguintes tipos:
+-   **Vídeos**. Especifique o recurso **Biblioteca de Vídeos** no arquivo de manifesto do aplicativo para permitir que seu aplicativo consulte e acesse arquivos dos seguintes tipos:
 
     -   .wm
     -   .m4v
@@ -321,6 +322,6 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

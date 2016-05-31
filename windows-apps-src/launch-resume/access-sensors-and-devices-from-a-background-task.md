@@ -1,17 +1,19 @@
 ---
-title: Acessar sensores e dispositivos de uma tarefa em segundo plano
-description: O DeviceUseTrigger permite que o seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando o aplicativo em primeiro plano está suspenso.
+author: mcleblanc
+title: Acessar sensores e dispositivos a partir de uma tarefa em segundo plano
+description: O DeviceUseTrigger permite que seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu aplicativo em primeiro plano estiver suspenso.
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
 ---
 
-# Acessar sensores e dispositivos de uma tarefa em segundo plano
+# Acessar sensores e dispositivos a partir de uma tarefa em segundo plano
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 [
-							O **DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que o seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando o aplicativo em primeiro plano está suspenso. Por exemplo, dependendo de onde o seu aplicativo estiver sendo executado, ele poderá usar uma tarefa em segundo plano para sincronizar dados com dispositivos ou monitorar sensores. Para ajudar a economizar a duração da bateria e assegurar o consentimento do usuário adequado, o uso do [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) está sujeito a políticas descritas neste tópico.
+              **DeviceUseTrigger**
+            ](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu aplicativo em primeiro plano estiver suspenso. Por exemplo, dependendo de onde o seu aplicativo estiver sendo executado, ele poderá usar uma tarefa em segundo plano para sincronizar dados com dispositivos ou monitorar sensores. Para ajudar a economizar a duração da bateria e assegurar o consentimento do usuário adequado, o uso do [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) está sujeito a políticas descritas neste tópico.
 
 Para acessar sensores ou dispositivos periféricos em segundo plano, crie uma tarefa em segundo plano que use o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Para ver um exemplo que mostra como isso é feito em um computador, consulte [Custom USB device sample](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para obter um exemplo em um telefone, consulte o [Exemplo de sensores em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
 
@@ -41,7 +43,7 @@ Tarefas em segundo plano que usam o [**DeviceUseTrigger**](https://msdn.microsof
 | Rede com fio    | ![esse protocolo funciona em.](images/ap-tools.png)                                                                                                                                            |
 | Rede e Wi-Fi    | ![esse protocolo funciona em.](images/ap-tools.png)                                                                                                                                            |
 | IDeviceIOControl | ![deviceservicingtrigger oferece suporte a ideviceiocontrol](images/ap-tools.png)                                                                                                                       |
-| API de sensores      | ![deviceservicingtrigger oferece suporte a apis de sensores universais](images/ap-tools.png) (limitado a sensores na [família de dispositivos universal](https://msdn.microsoft.com/library/windows/apps/dn894631)) |
+| API de sensores      | ![deviceservicingtrigger oferece suporte a apis de sensores universais](images/ap-tools.png) (limitado a sensores na [família de dispositivos universais](https://msdn.microsoft.com/library/windows/apps/dn894631)) |
 
  
 
@@ -90,7 +92,7 @@ Leve esses pontos importantes em consideração ao usar o [**DeviceUseTrigger**]
 
  
 
-**Dica**  Para ver como as tarefas em segundo plano trabalham, baixe uma amostra. Para ver um exemplo que mostra como isso é feito em um computador, consulte [Custom USB device sample](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para obter um exemplo em um telefone, consulte o [Exemplo de sensores em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+**Dica**  Para ver como as tarefas em segundo plano trabalham, baixe um exemplo. Para ver um exemplo que mostra como isso é feito em um computador, consulte [Custom USB device sample](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para obter um exemplo em um telefone, consulte o [Exemplo de sensores em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
 
  
 
@@ -194,6 +196,6 @@ Além de [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br2298
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

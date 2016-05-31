@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Depurar uma tarefa em segundo plano
 description: Aprenda a depurar uma tarefa em segundo plano, incluindo ativação e rastreamento de depuração de tarefas em seguindo plano no log de eventos do Windows.
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
@@ -7,7 +8,7 @@ ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
 # Depurar uma tarefa em segundo plano
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -68,8 +69,8 @@ A ativação de tarefas em segundo plano depende de três itens que devem corres
     Se você seguir este procedimento, e o log de eventos mostrar o gatilho ou ponto de entrada incorreto para a tarefa em segundo plano, é sinal de que o seu aplicativo não está registrando essa tarefa corretamente. Para obter ajuda com essa tarefa, consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md).
 
     1.  Abra o visualizador de eventos acessando a tela inicial e procurando eventvwr.exe.
-    2.  Vá para **Logs de Aplicativos e Serviços** -&gt; **Microsoft** -&gt; **Windows** -&gt; **BackgroundTaskInfrastructure** no visualizador de eventos.
-    3.  No painel de ações, selecione **Exibir** -&gt; **Mostrar Logs Analíticos e de Depuração** para habilitar o log de diagnósticos.
+    2.  Vá para **Logs de Aplicativos e Serviços** -&gt;**Microsoft** -&gt;**Windows** -&gt;**BackgroundTaskInfrastructure** no visualizador de eventos.
+    3.  No painel de ações, selecione **Exibir** -&gt;**Mostrar Logs Analíticos e de Depuração** para habilitar o log de diagnósticos.
     4.  Selecione o **Log de diagnósticos** e clique em **Habilitar Log**.
     5.  Agora, tente usar seu aplicativo para registrar e ativar a tarefa em segundo plano de novo.
     6.  Examine os logs de diagnósticos para obter detalhes dos erros. Essas informações incluirão o ponto de entrada registrada para a tarefa em segundo plano.
@@ -112,6 +113,6 @@ Para obter mais informações sobre como usar o VS para depurar uma tarefa em se
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

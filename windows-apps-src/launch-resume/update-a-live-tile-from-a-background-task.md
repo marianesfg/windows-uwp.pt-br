@@ -1,7 +1,8 @@
 ---
+author: mcleblanc
 title: Atualizar um bloco dinâmico de uma tarefa em segundo plano
 description: Use uma tarefa em segundo plano para atualizar o bloco dinâmico de seu aplicativo com novo conteúdo.
-Search.SourceType: vídeo
+Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
 ---
 
@@ -9,7 +10,7 @@ ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
 # Atualizar um bloco dinâmico de uma tarefa em segundo plano
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -29,7 +30,7 @@ Veja um vídeo que mostra como adicionar blocos dinâmicos aos aplicativos.
 Para habilitar um bloco dinâmico para seu aplicativo, adicione um novo projeto Componente do Tempo de Execução do Windows à sua solução. Trata-se de um assembly separado, que o SO carrega e executa em segundo plano quando um usuário instala o aplicativo.
 
 1.  No Gerenciador de Soluções, clique com o botão direito do mouse na solução, aponte para **Adicionar** e clique ou toque em **Novo Projeto**.
-2.  Na caixa de diálogo **Adicionar Novo Projeto**, selecione o modelo **Componente do Tempo de Execução do Windows** na seção **Visual C# &gt; Windows Store** .
+2.  Na caixa de diálogo **Adicionar Novo Projeto**, selecione o modelo **Componente do Tempo de Execução do Windows** na seção **Visual C# &gt;Windows Store**.
 3.  Chame o projeto de BackgroundTasks e clique ou toque em **OK**. O Microsoft Visual Studio adiciona o novo projeto à solução.
 4.  No projeto principal, adicione uma referência ao projeto BackgroundTasks.
 
@@ -243,7 +244,7 @@ Para depurar a tarefa em segundo plano, defina um ponto de interrupção no mét
 1.  Defina um ponto de interrupção no método Run da tarefa.
 2.  Pressione F5 ou toque em **Depurar &gt; Iniciar Depuração** para implantar e executar o aplicativo.
 3.  Depois que o aplicativo iniciar, volte para o Visual Studio.
-4.  Verifique se a barra de ferramentas **Local do Depurador** está visível. Ela está no menu **Exibir &gt; Barras de Ferramentas** .
+4.  Verifique se a barra de ferramentas **Local do Depurador** está visível. Ela está no menu **Exibir &gt; Barras de Ferramentas**.
 5.  Na barra de ferramentas **Local do Depurador** , clique na lista suspensa **Suspender** e selecione **BlogFeedBackgroundTask**.
 6.  O Visual Studio suspenderá a execução no ponto de interrupção.
 7.  Pressione F5 ou toque em **Depurar &gt; Continuar** para continuar a executar o aplicativo.
@@ -267,6 +268,6 @@ Para depurar a tarefa em segundo plano, defina um ponto de interrupção no mét
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,16 +1,13 @@
 ---
-Description: o objetivo principal de qualquer aplicativo é fornecer acesso ao conteúdo. Em um aplicativo de edição de fotos, a foto é o conteúdo; em um aplicativo de viagens, os mapas e as informações sobre os destinos de viagem são os conteúdos; e assim por diante.
-title: noções básicas de design de conteúdo para aplicativos da Plataforma Universal do Windows (UWP)
+author: mijacobs
+Description: O objetivo principal de qualquer aplicativo é fornecer acesso ao conteúdo. Em um aplicativo de edição de fotos, a foto é o conteúdo; em um aplicativo de viagens, os mapas e as informações sobre os destinos de viagem são os conteúdos; e assim por diante.
+title: Noções básicas de design de conteúdo para aplicativos da Plataforma Universal do Windows (UWP)
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
-label: noções básicas de design do conteúdo
+label: Content design basics
 template: detail.hbs
 ---
 
 #  Noções básicas de design de conteúdo para aplicativos UWP
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 O objetivo principal de qualquer aplicativo é fornecer acesso ao conteúdo: em um aplicativo de edição de fotos, a foto é o conteúdo; em um aplicativo de viagens, mapas e informações sobre destinos de viagem são o conteúdo; e assim por diante. Os elementos de navegação fornecem acesso ao conteúdo; os elementos de comando permitem que o usuário interaja com conteúdo; os elementos de conteúdo exibem o conteúdo em si.
 
@@ -21,9 +18,9 @@ Este artigo fornece recomendações de design do conteúdo para os três cenári
 
 Há três cenários de conteúdo principais:
 
--   **Consumo**: uma experiência principalmente unidirecional na qual conteúdo é consumido. Inclui tarefas como leitura, ouvir música, assistir a vídeos e visualização de fotos e imagens.
+-   **Consumo**: uma experiência principalmente unidirecional na qual o conteúdo é consumido. Inclui tarefas como leitura, ouvir música, assistir a vídeos e visualização de fotos e imagens.
 -   **Criação**: uma experiência principalmente unidirecional em que o foco é criar novo conteúdo. Pode ser dividida em fazer coisas do zero, como tirar uma foto ou fazer um vídeo, criar uma nova imagem em um aplicativo de pintura, ou abrir um documento atualizado.
--   **Interativo**: uma experiência de conteúdo bidirecional que inclui consumir, criar e revisar o conteúdo
+-   **Interativo**: uma experiência de conteúdo bidirecional que inclui consumir, criar e revisar o conteúdo.
 
 ## <span id="Consumption-focused_apps"></span><span id="consumption-focused_apps"></span><span id="CONSUMPTION-FOCUSED_APPS"></span>Aplicativos voltados para consumo
 
@@ -61,7 +58,7 @@ Em um aplicativo com conteúdo interativo, os usuários criam, visualizam e edit
 Esse tipo de aplicativo precisa equilibrar todos os três elementos de interface do usuário:
 
 -   Os elementos de [navegação](navigation-basics.md) ajudam os usuários a encontrar e visualizar o conteúdo. Se a exibição e localização de conteúdo for o cenário mais importante, priorize elementos de navegação, filtrar e classificar, e pesquisa.
--   Os elementos de [Comando](commanding-basics.md) permitem ao usuário criar, editar e manipular o conteúdo.
+-   Os elementos de [comando](commanding-basics.md) permitem ao usuário criar, editar e manipular o conteúdo.
 
 Recomendações gerais para aplicativos com conteúdo interativo:
 
@@ -88,41 +85,39 @@ Veja alguns elementos de interface do usuário comumente usados para exibir o co
 <tbody>
 <tr class="odd">
 <td align="left">Áudio e vídeo</td>
-<td align="left">[Media playback and transport controls](../controls-and-patterns/media-playback.md)</td>
+<td align="left">[Controles de transporte de mídia do sistema](../controls-and-patterns/media-playback.md)</td>
 <td align="left">Reproduz áudio e vídeo.</td>
 </tr>
 <tr class="even">
 <td align="left">Visualizadores de imagem</td>
-<td align="left">[Flip view](../controls-and-patterns/flipview.md), [image](../controls-and-patterns/images-imagebrushes.md)</td>
+<td align="left">[Inverter exibição](../controls-and-patterns/flipview.md), [imagem](../controls-and-patterns/images-imagebrushes.md)</td>
 <td align="left">Exibe imagens. A exibição virando a página mostra as imagens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, uma imagem de uma vez.</td>
 </tr>
 <tr class="odd">
 <td align="left">Listas</td>
-<td align="left">[drop-down list, list box, list view and grid view](../controls-and-patterns/lists.md)</td>
+<td align="left">[lista suspensa, caixa de listagem, modo de exibição de lista e modo de exibição de grade](../controls-and-patterns/lists.md)</td>
 <td align="left">Apresenta itens em uma lista interativa ou em uma grade. Use esses elementos para permitir que os usuários selecionem um filme em uma lista de lançamentos ou gerenciem um estoque.</td>
 </tr>
 <tr class="even">
 <td align="left">Texto e entrada de texto</td>
-<td align="left"><p>[Text block](../controls-and-patterns/text-block.md), [text box](../controls-and-patterns/text-box.md), [rich edit box](../controls-and-patterns/rich-edit-box.md)</p>
+<td align="left"><p>[Bloco de texto](../controls-and-patterns/text-block.md), [caixa de texto](../controls-and-patterns/text-box.md), [caixa de edição com formato](../controls-and-patterns/rich-edit-box.md)</p>
 </td>
-<td align="left">Exibe texto. Alguns elementos permitem que o usuário edite texto. Para saber mais, consulte [Text controls](../controls-and-patterns/text-controls.md)</td>
+<td align="left">Exibe texto. Alguns elementos permitem que o usuário edite texto. Para obter mais informações, consulte [Controles de texto](../controls-and-patterns/text-controls.md)</td>
 </tr>
 </tbody>
 </table>
 
- 
 
-\[Este artigo contém informações específicas para aplicativos da Plataforma Universal do Windows (UWP) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
-
- 
 
  
 
+ 
 
 
 
 
 
-<!--HONumber=Mar16_HO1-->
+
+<!--HONumber=May16_HO2-->
 
 

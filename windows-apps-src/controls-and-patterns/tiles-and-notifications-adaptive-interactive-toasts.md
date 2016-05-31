@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional.
 title: Notificações do sistema interativas e adaptáveis
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
-label: Notificações do sistema interativas e adaptáveis
+label: Adaptive and interactive toast notifications
 template: detail.hbs
 ---
 
 # Notificações do sistema interativas e adaptáveis
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional.
@@ -27,7 +28,7 @@ O modelo de notificações do sistema interativas e adaptáveis tem estas atuali
 ## <span id="toast_structure"></span><span id="TOAST_STRUCTURE"></span>Estrutura de notificação do sistema
 
 
-Notificações do sistema são construídas usando XML, que normalmente contém estes elementos-chave:
+Notificações do sistema são construídas usando XML, que normalmente contêm estes elementos-chave:
 
 -   &lt;visual&gt; abrange o conteúdo disponível para que os usuários vejam visualmente, incluindo texto e imagens
 -   &lt;actions&gt; contém botões/entradas que o desenvolvedor quer adicionar dentro da notificação
@@ -74,9 +75,9 @@ Em aplicativos UWP, você pode adicionar botões e outras entradas às suas noti
 -   &lt;action&gt; Isso aparece como um botão em dispositivos móveis e desktop. É possível especificar até cinco ações do sistema ou personalizadas dentro de uma notificação do sistema.
 -   &lt;input&gt; Isso permite que os usuários forneçam entrada, como responder rapidamente a uma mensagem ou selecionar uma opção em um menu suspenso.
 
-&lt;action&gt; e &lt;input&gt; são adaptáveis na família de dispositivos Windows. Por exemplo, em dispositivos móveis ou desktop, uma &lt;action&gt; para um usuário é um botão no qual tocar/clicar. Uma &lt;input&gt; de texto é uma caixa em que os usuários podem inserir texto usando um teclado físico ou virtual. Esses elementos também se adaptam a cenários de interação futuros, como uma ação anunciada por voz ou uma entrada de texto gerada por ditado.
+&lt;action&gt; e &lt;input&gt; são adaptáveis na família de dispositivos Windows. Por exemplo, em dispositivos móveis ou desktop, uma &lt;action&gt; para um usuário é um botão no qual tocar/clicar. text &lt;input&gt; é uma caixa em que os usuários podem inserir texto usando um teclado físico ou virtual. Esses elementos também se adaptam a cenários de interação futuros, como uma ação anunciada por voz ou uma entrada de texto gerada por ditado.
 
-Quando uma ação é executada pelo usuário, você pode executar um destes procedimentos especificando o atributo [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) dentro do elemento &lt;action&gt;:
+Quando uma ação é executada pelo usuário, você pode executar um destes procedimentos especificando o atributo [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) dentro do elemento &lt;action&gt;.
 
 -   Ativar o aplicativo em primeiro plano, com um argumento de ação específica que pode ser usado para navegar até uma página/um contexto específica(o).
 -   Ativar a tarefa em segundo plano do aplicativo sem afetar o usuário.
@@ -101,13 +102,12 @@ Você pode usar notificações do sistema para alarmes, lembretes e chamadas de 
 
 -   Uma notificação do sistema de lembrete permanecerá na tela até que o usuário a ignore ou execute uma ação. No Windows Mobile, as notificações do sistema de lembrete também aparecerão pré-expandidas.
 -   Além de compartilhar os comportamentos acima com notificações de lembrete, as notificações de alarme também reproduzem automaticamente o áudio em loop.
--   As notificações de chamadas de entrada são exibidas em tela inteira em dispositivos Windows Mobile. Isso é feito especificando o atributo scenario dentro do elemento raiz de uma notificação do sistema – &lt;toast&gt;:
-    &lt;toast scenario=" { default | alarm | reminder | incomingCall } " &gt;
+-   As notificações de chamadas de entrada são exibidas em tela inteira em dispositivos Windows Mobile. Isso é feito especificando o atributo de cenário dentro do elemento raiz de uma notificação do sistema – &lt;toast&gt;: &lt;toast scenario=" { default | alarm | reminder | incomingCall }" &gt;
 
 ## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>Exemplos de XML
 
 
-**Observação**  As capturas de tela de notificação do sistema para estes exemplos foram tiradas de um aplicativo na área de trabalho. Em dispositivos móveis, uma notificação do sistema pode estar recolhida quando aparece, com um elemento na parte inferior da notificação do sistema para expandi-la.
+**Observação**  As capturas de tela de notificação do sistema para estes exemplos foram extraídas de um aplicativo em desktop. Em dispositivos móveis, uma notificação do sistema pode estar recolhida quando aparece, com um elemento na parte inferior da notificação do sistema para expandi-la.
 
  
 
@@ -348,7 +348,7 @@ namespace ToastNotificationTask
 }
 ```
 
-## <span id="Schemas___visual__and__audio_"></span><span id="schemas___visual__and__audio_"></span><span id="SCHEMAS___VISUAL__AND__AUDIO_"></span>Esquemas:  &lt;visual&gt; e &lt;audio&gt;
+## <span id="Schemas___visual__and__audio_"></span><span id="schemas___visual__and__audio_"></span><span id="SCHEMAS___VISUAL__AND__AUDIO_"></span>Esquemas: &lt;visual&gt; e &lt;audio&gt;
 
 
 Nos esquemas a seguir, o sufixo "?" significa que o atributo é opcional.
@@ -423,7 +423,7 @@ addImageQuery?
 
 template?
 
--   \[Importante\] template? = "ToastGeneric"
+-   \[Important\] template? = "ToastGeneric"
 -   Se você estiver usando qualquer um dos novos recursos de notificação interativa e adaptável, comece a usar o modelo "ToastGeneric" em vez do modelo herdado.
 -   Usar os modelos herdados com as novas ações pode funcionar agora, mas esse não é o caso de uso esperado, e não podemos garantir que isso continuará a funcionar.
 
@@ -625,11 +625,11 @@ Para construir ações individuais de adiamento e descarte, faça o seguinte:
     -   Se você quiser que cadeias de caracteres localizadas de "snooze" e "dismiss" sejam exibidas nas ações, especifique o conteúdo para ser uma cadeia de caracteres vazia: &lt;action content = ""/&gt;
     -   Se você quiser uma cadeia de caracteres personalizada, basta fornecer seu valor: &lt;action content="Lembrar-me mais tarde" /&gt;
 -   Especifica a entrada:
-    -   Se você não quiser que o usuário selecione um intervalo de adiamento e, em vez disso, apenas que sua notificação seja adiada apenas uma vez por um intervalo de tempo definido pelo sistema (consistente com o sistema operacional), não construa qualquer &lt;input&gt;.
+    -   Se você não quiser que o usuário selecione um intervalo de adiamento e, em vez disso, apenas que sua notificação seja adiada apenas uma vez por um intervalo de tempo definido pelo sistema (consistente com o sistema operacional), não crie nenhuma &lt;input&gt;.
     -   Se você quiser fornecer seleções de intervalo de adiamento:
         -   Especifique hint-inputId na ação snooze
-        -   Combine a identificação da entrada com a hint-inputId da ação snooze: &lt;input id="snoozeTime"&gt;&lt;/input&gt;&lt;action hint-inputId="snoozeTime"/&gt;
-        -   Especifique a identificação da seleção para ser um nonNegativeInteger que representa o intervalo de adiamento em minutos: &lt;selection id="240" /&gt; significa adiar por 4 horas
+        -   Combine a identificação da entrada com a hint-inputId da ação snooze: &lt;input id="snoozeTime"&gt;&lt;/input&gt;&lt;<action hint-inputId="snoozeTime"/&gt;
+        -   Especifique a identificação da seleção para ser um nonNegativeInteger que represente o intervalo de adiamento em minutos: &lt;selection id="240" /&gt; significa adiar por 4 horas
         -   Certifique-se de que o valor de defaultInput em &lt;input&gt; corresponda a uma das identificações dos elementos &lt;selection&gt; filho
         -   Forneça até (mas não mais que) 5 valores de &lt;selection&gt;
 
@@ -642,6 +642,6 @@ Para construir ações individuais de adiamento e descarte, faça o seguinte:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,11 +1,12 @@
 ---
+author: TylerMSFT
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obter propriedades do arquivo
-description: Obtenha as propriedades &\#8212; nível superior, básicas e estendidas &\#8212; de um arquivo representado pelo objeto StorageFile.
+description: Obtenha as propriedades&\#8212;nível superior, básicas e estendidas&\#8212;de um arquivo representado pelo objeto StorageFile.
 ---
 # Obter propriedades do arquivo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** APIs importantes **
@@ -135,6 +136,6 @@ foreach (Windows.Storage.StorageFile file in files)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: A1A0D99A-DCBF-4A14-80B9-7106BEF045EC
 description: Você pode usar as APIs Windows.Media.Transcoding para transcodificar arquivos de vídeo de um formato para outro.
 title: Transcodificar arquivos de mídia
@@ -6,7 +7,7 @@ title: Transcodificar arquivos de mídia
 
 # Transcodificar arquivos de mídia
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Você pode usar as APIs [**Windows.Media.Transcoding**](https://msdn.microsoft.com/library/windows/apps/br207105) para transcodificar arquivos de vídeo de um formato para outro.
@@ -57,7 +58,7 @@ Para transcodificar o arquivo, crie um novo objeto [**MediaTranscoder**](https:/
 
 ## Responder ao andamento da transcodificação
 
-Você pode registrar eventos para responder quando o andamento da [**TranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700946) assíncrona mudar. Esses eventos fazem parte da estrutura de programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP) e não são específicos à API de transcodificação.
+Você pode registrar eventos para responder quando o andamento da [**TranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700946) assíncrona mudar. Esses eventos fazem parte da estrutura de programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP) e não são específicos da API de transcodificação.
 
 [!code-cs[TranscodeCallbacks](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeCallbacks)]
 
@@ -70,6 +71,6 @@ Você pode registrar eventos para responder quando o andamento da [**TranscodeAs
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

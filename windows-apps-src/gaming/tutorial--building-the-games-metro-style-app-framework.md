@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Definir a estrutura do aplicativo UWP (Plataforma Universal do Windows) do jogo
 description: A primeira parte da codificação de um jogo UWP (Plataforma Universal do Windows) com DirectX é criar a estrutura que permite que o objeto de jogo interaja com o Windows.
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
@@ -7,7 +8,7 @@ ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
 #  Definir a estrutura do aplicativo UWP (Plataforma Universal do Windows) do jogo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A primeira parte da codificação de um jogo UWP (Plataforma Universal do Windows) com DirectX é criar a estrutura que permite que o objeto de jogo interaja com o Windows. Isso inclui propriedades do Windows Runtime, como manipulação de eventos de suspensão/retomada, foco da janela e ajuste, além de eventos, interações e transições da interface do usuário. Vamos examinar como o jogo de exemplo é estruturado e como ele define a máquina de estado de alto nível para a interação entre jogador e sistema.
 
@@ -214,7 +215,9 @@ No exemplo de jogo, iniciamos um while loop que termina quando o jogador fecha a
 
 Quando seu jogo tem foco, você deve lidar com todos os eventos na fila de mensagens conforme eles chegam. Por isso, é preciso chamar [**CoreWindowDispatch.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) com a opção **ProcessAllIfPresent**. Outras opções podem causar atrasos no processamento de eventos de mensagens, que fazem com que o jogo pareça não responder, ou resultar em comportamentos de toque lentos, e não "fluidos".
 
-Quando o aplicativo não estiver visível, suspenso ou encaixado, não queremos que ele consuma ciclos de recursos para enviar mensagens que nunca chegarão. Se o jogo precisar usar o **ProcessOneAndAllPending**, que é bloqueado até receber um evento e processa esse evento e todos os outros que chegam na fila do processo durante o processamento da primeira. [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) retorna, em seguida, imediatamente após o processamento da fila.
+Quando o aplicativo não estiver visível, suspenso ou encaixado, não queremos que ele consuma ciclos de recursos para enviar mensagens que nunca chegarão. Se o jogo precisar usar o **ProcessOneAndAllPending**, que é bloqueado até receber um evento e processa esse evento e todos os outros que chegam na fila do processo durante o processamento da primeira. [
+              **ProcessEvents**
+            ](https://msdn.microsoft.com/library/windows/apps/br208215) retorna, em seguida, imediatamente após o processamento da fila.
 
 O jogo está em execução. Os eventos que ele usa para passar de um estado do jogo para outro estão sendo enviados e processados. Os elementos gráficos são atualizados, assim como os ciclos de loop do jogo. Esperamos que o jogador se divirta. Mas, por fim, a diversão tem que acabar...
 
@@ -1421,6 +1424,6 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

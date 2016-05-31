@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: O Microsoft Advertising no pubCenter foi integrado ao Centro de Desenvolvimento do Windows.
 title: Integração pubCenter - Centro de Desenvolvimento
 ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
@@ -9,7 +10,7 @@ ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
 
 **Importante**
 
--   A partir de 1º de abril de 2016, seus lucros do Microsoft Advertising serão pagos para a conta de pagamento que você configurou no Centro de Desenvolvimento. Agora você deve gerenciar as atualizações ou as alterações em sua conta de pagamento e perfil fiscal somente no Centro de Desenvolvimento. Certifique-se de fazer todas as atualizações necessárias antes de 31 de março de 2016. Para saber mais, veja [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
+-   A partir de 1º de abril de 2016, seus lucros do Microsoft Advertising serão pagos para a conta de pagamento que você configurou no Centro de Desenvolvimento. Agora você deve gerenciar as atualizações ou as alterações em sua conta de pagamento e perfil fiscal somente no Centro de Desenvolvimento. Para saber mais, consulte [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 -   A partir de 1º de dezembro de 2015, [sua conta pubCenter deve estar vinculada à sua conta do Centro de Desenvolvimento](#scenario-3-you-have-dev-center-and-pubcenter-accounts-registered-with-different-microsoft-accounts) para que você receba os pagamentos.
 -   Seu histórico de pagamento não será mais atualizado no pubCenter. Para examinar seu histórico de pagamento no futuro, [vincule a conta do pubCenter à conta do Centro de Desenvolvimento](#scenario-3-you-have-dev-center-and-pubcenter-accounts-registered-with-different-microsoft-accounts) e, em seguida, visite a página [Resumo de pagamentos](payout-summary.md) no painel do Centro de Desenvolvimento.
 
@@ -30,11 +31,11 @@ Você pode ter várias contas no pubCenter e no Centro de Desenvolvimento, e sua
 -   A forma de pagamento e os detalhes de impostos usados no Centro de Desenvolvimento também serão usados para os pagamentos do pubCenter. A forma de pagamento e os detalhes de impostos podem ser editados somente no Centro de Desenvolvimento. Isso significa que:
     -   Se as formas de pagamento no Centro de Desenvolvimento e no pubCenter forem diferentes, talvez você comece a receber os pagamentos do pubCenter em outra conta bancária.
     -   Se você não tiver uma forma de pagamento ou detalhes de impostos configurados no Centro de Desenvolvimento ou no pubCenter, configure-os no Centro de Desenvolvimento, e a mesma forma de pagamento ou os detalhes de impostos serão usados para os pagamentos do pubCenter. Para obter mais informações sobre o gerenciamento das formas de pagamento e dos detalhes de impostos no Centro de Desenvolvimento, consulte [Configurando sua conta de pagamento e formulários de imposto](setting-up-your-payout-account-and-tax-forms.md).
-    -   Os pagamentos do pubCenter serão feitos com a forma de pagamento e os detalhes de impostos configurados no pubCenter até que sejam configurados no Centro de Desenvolvimento. Se já estiverem configurados no Centro de Desenvolvimento, a forma de pagamento e os detalhes de impostos do pubCenter serão substituídos por aqueles configurados no Centro de Desenvolvimento. Para saber mais, veja [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
+    -   Os pagamentos do pubCenter serão feitos com a forma de pagamento e os detalhes de impostos configurados no pubCenter até que sejam configurados no Centro de Desenvolvimento. Se já estiverem configurados no Centro de Desenvolvimento, a forma de pagamento e os detalhes de impostos do pubCenter serão substituídos por aqueles configurados no Centro de Desenvolvimento. Para saber mais, consulte [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 -   Seus relatórios de pagamento agora estão disponíveis em sua conta do Centro de Desenvolvimento. Para obter mais informações sobre relatórios de pagamento no Centro de Desenvolvimento, consulte [Resumo de pagamento](payout-summary.md).
 -   Todas as suas campanhas de promoção de aplicativos agora estão associadas à sua conta do Centro de Desenvolvimento, e você pode gerenciá-las diretamente no Centro de Desenvolvimento.
 
-> **Observação**  Você não conseguirá mais criar unidades de anúncio ou novas campanhas de promoção de aplicativos no pubCenter. Para saber como criar unidades de anúncio no Centro de Desenvolvimento, consulte [Monetizar com anúncios](monetize-with-ads.md). Para saber como criar campanhas de promoção de aplicativos no Centro de Desenvolvimento, consulte [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md).
+> **Observação**  Você não conseguirá mais criar unidades de anúncio nem novas campanhas de promoção de aplicativos no pubCenter. Para saber como criar unidades de anúncio no Centro de Desenvolvimento, consulte [Monetizar com anúncios](monetize-with-ads.md). Para saber como criar campanhas de promoção de aplicativos no Centro de Desenvolvimento, consulte [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md).
 
 ## Cenário \#2: você tem uma conta do Centro de Desenvolvimento e uma do pubCenter com a mesma conta da Microsoft, mas registrada em países/regiões diferentes
 
@@ -52,7 +53,7 @@ Você pode ter várias contas no pubCenter e no Centro de Desenvolvimento, e sua
 -   Seus relatórios de pagamento agora estão disponíveis em sua conta do Centro de Desenvolvimento. Para obter mais informações sobre relatórios de pagamento no Centro de Desenvolvimento, consulte [Resumo de pagamento](payout-summary.md).
 -   Todas as suas campanhas de promoção de aplicativos agora estão associadas à sua conta do Centro de Desenvolvimento, e você pode gerenciá-las diretamente no Centro de Desenvolvimento.
 
-> **Observação**  Você não conseguirá mais criar unidades de anúncio ou novas campanhas de promoção de aplicativos no pubCenter. Para saber como criar unidades de anúncio no Centro de Desenvolvimento, consulte [Monetizar com anúncios](monetize-with-ads.md). Para saber como criar campanhas de promoção de aplicativos no Centro de Desenvolvimento, consulte [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md).
+> **Observação**  Você não conseguirá mais criar unidades de anúncio nem novas campanhas de promoção de aplicativos no pubCenter. Para saber como criar unidades de anúncio no Centro de Desenvolvimento, consulte [Monetizar com anúncios](monetize-with-ads.md). Para saber como criar campanhas de promoção de aplicativos no Centro de Desenvolvimento, consulte [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md).
 
 ## Cenário \#3: você tem contas do Centro de Desenvolvimento e do pubCenter registradas com contas da Microsoft diferentes
 
@@ -79,13 +80,13 @@ Depois que a conta do pubCenter for vinculada à conta do Centro de Desenvolvime
 -   Os dados da conta do pubCenter começarão a aparecer na conta do Centro de Desenvolvimento vinculada dentro de 24 horas.
 -   Se você não encontrar uma unidade de anúncio do pubCenter específica no seu [Relatório de desempenho de anúncios](advertising-performance-report.md), talvez não tenha sido possível vincular essa unidade de anúncio a um aplicativo no Centro de Desenvolvimento. Isso pode acontecer se o seu aplicativo for nomeado de forma inconsistente no Centro de Desenvolvimento e no pubCenter. Para ver as unidades de anúncio que não puderam ser vinculadas aos seus aplicativos no Centro de Desenvolvimento, visite o relatório **Desempenho de anúncios** no nível da conta e selecione o nome do aplicativo do pubCenter. Para acessar o relatório **Desempenho de anúncios** no nível da conta, acesse sua página de visão geral do painel e clique em **Desempenho de anúncios** no painel de navegação.
 -   Caso a conta do pubCenter tenha sido registrada em um país/região diferente da conta do Centro de Desenvolvimento, os dados dos lucros serão convertidos na moeda do Centro de Desenvolvimento nos relatórios.
--   Os lucros da conta do pubCenter não serão mais pagos usando a forma de pagamento e os detalhes de impostos configurados no pubCenter. Se você precisar alterar a forma de pagamento ou os detalhes de impostos, deverá fazê-lo no Centro de Desenvolvimento. Para saber mais, veja [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
--   Para receber pagamentos para lucros acumulados em novas unidades de anúncio criadas no Centro de Desenvolvimento, você deve configurar seus instrumentos de pagamento e fiscais no Centro de Desenvolvimento. Para saber mais, veja [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
+-   Os lucros da conta do pubCenter não serão mais pagos usando a forma de pagamento e os detalhes de impostos configurados no pubCenter. Se você precisar alterar a forma de pagamento ou os detalhes de impostos, deverá fazê-lo no Centro de Desenvolvimento. Para saber mais, consulte [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
+-   Para receber pagamentos para lucros acumulados em novas unidades de anúncio criadas no Centro de Desenvolvimento, você deve configurar seus instrumentos de pagamento e fiscais no Centro de Desenvolvimento. Para saber mais, consulte [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 -   Os lucros das unidades de anúncio novas que você criar no Centro de Desenvolvimento serão pagos usando a forma de pagamento e os detalhes de impostos do Centro de Desenvolvimento. Para obter mais informações sobre o gerenciamento das formas de pagamento e dos detalhes de impostos no Centro de Desenvolvimento, consulte [Configurando sua conta de pagamento e formulários de imposto](setting-up-your-payout-account-and-tax-forms.md).
 -   Os relatórios de pagamento do pubCenter agora estão disponíveis em sua conta do Centro de Desenvolvimento. Para obter mais informações sobre relatórios de pagamento no Centro de Desenvolvimento, consulte [Resumo de pagamento](payout-summary.md).
 -   Todas as campanhas de promoção de aplicativos que você configurar no pubCenter serão pausadas automaticamente. Crie novas campanhas no Centro de Desenvolvimento a partir de agora.
 
-> **Observação**  Você não conseguirá mais criar unidades de anúncio ou novas campanhas de promoção de aplicativos no pubCenter. Para saber como criar unidades de anúncio no Centro de Desenvolvimento, consulte [Monetizar com anúncios](monetize-with-ads.md). Para saber como criar campanhas de promoção de aplicativos no Centro de Desenvolvimento, consulte [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md).
+> **Observação**  Você não conseguirá mais criar unidades de anúncio nem novas campanhas de promoção de aplicativos no pubCenter. Para saber como criar unidades de anúncio no Centro de Desenvolvimento, consulte [Monetizar com anúncios](monetize-with-ads.md). Para saber como criar campanhas de promoção de aplicativos no Centro de Desenvolvimento, consulte [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md).
 
 ## Recomendações e observações adicionais
 
@@ -106,14 +107,14 @@ Geralmente, isso é devido a um ou mais dos seguintes motivos:
 -   Sua [conta de pagamento e detalhes de perfil fiscal](setting-up-your-payout-account-and-tax-forms.md) não foram configurados corretamente no Centro de Desenvolvimento.
 -   Sua conta do pubCenter não foi vinculada à sua conta do Centro de Desenvolvimento.
 
-Para saber mais, veja [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
+Para saber mais, consulte [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 ### Não consigo criar novas unidades de anúncio no pubCenter. O que está acontecendo?
 
 Não há suporte para a criação de novas unidades de anúncio no pubCenter. Se você tiver integrado o controle de mediador Microsoft Ad em seu aplicativo, uma unidade de anúncio será criada automaticamente no back-end quando você carregar seu aplicativo para a Windows Store. Como alternativa, você também pode criar manualmente uma nova unidade de anúncio autônoma no Centro de Desenvolvimento na página **Monetizar com anúncios** de seu aplicativo.
 
 ### Como criar unidades de anúncio no Centro de Desenvolvimento?
 
-Na página do seu aplicativo no Centro de Desenvolvimento, clique em **Monetização** &gt; **Monetizar com anúncios**. Para saber mais sobre como criar unidades de anúncio no Centro de Desenvolvimento, consulte [Monetizar com anúncios](monetize-with-ads.md).
+Na página do seu aplicativo no Centro de Desenvolvimento, clique em **Monetização**&gt;**Monetizar com anúncios**. Para saber mais sobre como criar unidades de anúncio no Centro de Desenvolvimento, consulte [Monetizar com anúncios](monetize-with-ads.md).
 
 ### Instalei a versão mais recente da extensão do mediador de anúncios e adicionei o controle de mediador de anúncios ao meu aplicativo. Também preciso ir para o pubCenter e criar uma nova unidade de anúncio?
 
@@ -121,7 +122,7 @@ Se você estiver usando a versão mais recente da [extensão do mediador de anú
 
 ### Ainda estou usando uma versão mais antiga do controle de mediador de anúncios em meu aplicativo e preciso obter uma nova ID de unidade de anúncio. Como crio unidades de anúncio?
 
-Você pode criar uma nova unidade de anúncio para seu aplicativo no painel do Centro de Desenvolvimento. Na página do seu aplicativo no Centro de Desenvolvimento, clique em **Monetização** &gt; **Monetizar com anúncios**. Para saber mais sobre como criar unidades de anúncio no Centro de Desenvolvimento, consulte [Monetizar com anúncios](monetize-with-ads.md).
+Você pode criar uma nova unidade de anúncio para seu aplicativo no painel do Centro de Desenvolvimento. Na página do seu aplicativo no Centro de Desenvolvimento, clique em **Monetização**&gt;**Monetizar com anúncios**. Para saber mais sobre como criar unidades de anúncio no Centro de Desenvolvimento, consulte [Monetizar com anúncios](monetize-with-ads.md).
 
 ### Minhas unidades de anúncio foram criadas automaticamente porque usei o controle de mediador de anúncios e confirmei que os anúncios estão sendo mantidos. Também criei manualmente várias outras unidades de anúncio do Centro de Desenvolvimento. Preciso fazer algo mais pagar ser pago pelos ganhos dessas unidades de anúncio?
 
@@ -133,11 +134,11 @@ Você só poderá criar campanhas de promoção de aplicativo no Centro de Desen
 
 ### Como faço para criar campanhas de promoção de aplicativo no Centro de Desenvolvimento?
 
-Na página do seu aplicativo no Centro de Desenvolvimento, clique em **Monetização** &gt; **Promover seu aplicativo**. Para saber como criar campanhas publicitárias para seus aplicativos no Centro de Desenvolvimento, consulte [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md).
+Na página do seu aplicativo no Centro de Desenvolvimento, clique em **Monetização**&gt;**Promover seu aplicativo**. Para saber como criar campanhas publicitárias para seus aplicativos no Centro de Desenvolvimento, consulte [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md).
 
 ### Onde posso ver dados de desempenho no Centro de Desenvolvimento?
 
-Na página do seu aplicativo no Centro de Desenvolvimento, clique em **Análises** &gt; **Desempenho do Microsoft Advertising**. Para saber mais, consulte [Relatório de desempenho de anúncios](advertising-performance-report.md).
+Na página do seu aplicativo no Centro de Desenvolvimento, clique em **Análises**&gt;**Desempenho do Microsoft Advertising**. Para saber mais, consulte [Relatório de desempenho de anúncios](advertising-performance-report.md).
 
 ### Como gerencio meu método de pagamento e detalhes fiscais no Centro de Desenvolvimento?
 
@@ -180,6 +181,6 @@ Sim, pode haver uma pequena diferença nos dados mostrados nos relatórios do pu
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

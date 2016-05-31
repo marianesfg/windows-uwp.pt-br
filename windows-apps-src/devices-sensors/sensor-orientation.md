@@ -1,13 +1,14 @@
 ---
+author: DBirtolo
 ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
-title: Orientação de sensores
+title: Orientação do sensor
 description: Os dados do sensor das classes Accelerometer, Gyrometer, Compass, Inclinometer e OrientationSensor são definidos por seus eixos de referência. Esses eixos são definidos pela orientação paisagem do dispositivo e giram com o dispositivo conforme o usuário o vira.
 ---
-# Orientação de sensores
+# Orientação do sensor
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** APIs Importantes **
+** APIs importantes **
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Windows.Devices.Sensors.Custom**](https://msdn.microsoft.com/library/windows/apps/Dn895032)
@@ -152,11 +153,9 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 Os dados de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) devem ser alterados de maneira diferente. Pense nessas diferentes orientações como rotações no sentido anti-horário para o eixo Z, portanto, precisamos inverter a rotação para obter a orientação do usuário de volta. Para dados quatérnion, podemos usar a fórmula de Euler para definir uma rotação com um quatérnion de referência e também podemos usar uma matriz de rotação de referência.
 
-![Fórmula de Euler](images/eulers-formula.png)
-Para obter a orientação relativa desejada, multiplique o objeto de referência pelo objeto absoluto. Observe que esta matemática não é comutativa.
+![Fórmula de Euler](images/eulers-formula.png) Para obter a orientação relativa desejada, multiplique o objeto de referência pelo objeto absoluto. Observe que esta matemática não é comutativa.
 
-![Multiplique o objeto de referência pelo objeto absoluto.](images/orientation-formula.png)
-Na expressão anterior, o objeto absoluto é retornado pelos dados do sensor.
+![Multiplique o objeto de referência pelo objeto absoluto](images/orientation-formula.png) Na expressão anterior, o objeto absoluto é retornado pelos dados do sensor.
 
 | Orientação de exibição  | Rotação no sentido anti-horário em torno de Z | Quatérnion de referência (rotação invertida) | Matriz de rotação de referência (rotação invertida) | 
 |----------------------|------------------------------------|-----------------------------------------|----------------------------------------------|
@@ -167,6 +166,6 @@ Na expressão anterior, o objeto absoluto é retornado pelos dados do sensor.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

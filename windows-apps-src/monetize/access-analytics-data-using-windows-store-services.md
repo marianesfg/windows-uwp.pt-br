@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Use a API de análise da Windows Store para recuperar de forma programática dados analíticos de aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows.
 title: Acesse dados analíticos usando serviços da Windows Store.
@@ -7,7 +8,7 @@ title: Acesse dados analíticos usando serviços da Windows Store.
 # Acesse dados analíticos usando serviços da Windows Store.
 
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Uso da *API de análise da Windows Store* para recuperar, de forma programática, dados analíticos de aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows. Essa API permite que você recupere dados de aplicativo e aquisições IAP, erros e classificações e avaliações de aplicativo. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
@@ -49,13 +50,13 @@ Depois de associar um aplicativo do Azure AD à sua conta no Centro de Desenvolv
 
 Para obter o token de acesso, siga as instruções em [Chamadas de serviço a serviço usando credenciais do cliente](https://msdn.microsoft.com/library/azure/dn645543.aspx) para enviar um HTTP POST para o seguinte ponto de extremidade do Azure AD.
 
-```
+```syntax
 https://login.microsoftonline.com/<tenant id>/oauth2/token
 ```
 
 -   Para obter seu ID de locatário, faça logon no [Portal de gerenciamento do Azure](http://manage.windowsazure.com/), navegue até **Active Directory** e clique no diretório que você vinculou à sua conta do Centro de Desenvolvimento. A ID de locatário para este diretório é incorporada à URL dessa página, conforme mostrado pela cadeia de caracteres *your\_tenant\_ID* no exemplo a seguir.
 
-  ```
+  ```syntax
   https://manage.windowsazure.com/@<your_tenant_name>#Workspaces/ActiveDirectoryExtension/Directory/<your_tenant_ID>/directoryQuickStart
   ```
 
@@ -232,10 +233,10 @@ A API de análise da Windows Store devolve respostas de erro em um objeto JSON q
 * [Obtenha aquisições IAP](get-in-app-acquisitions.md)
 * [Obtenha dados de relatório de erros](get-error-reporting-data.md)
 * [Obtenha classificações de aplicativo](get-app-ratings.md)
-* [Obtenha avaliações de aplicativo](get-app-reviews.md)
+* [Obter avaliações de aplicativo](get-app-reviews.md)
  
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

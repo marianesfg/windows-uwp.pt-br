@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: Sensores
-description: Sensores permitem que seu aplicativo identifique a relação entre um dispositivo e o mundo físico ao redor dele. Os sensores podem informar ao aplicativo a direção, a orientação e o movimento do dispositivo.
+description: Os sensores permitem ao aplicativo identificar a relação entre um dispositivo e o mundo físico ao redor dele. Os sensores podem informar ao aplicativo a direção, a orientação e o movimento do dispositivo.
 ---
 # Sensores
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Sensores permitem que seu aplicativo identifique a relação entre um dispositivo e o mundo físico ao redor dele. Os sensores podem informar ao aplicativo a direção, a orientação e o movimento do dispositivo. Esses sensores podem ajudar a melhorar a utilidade e a interatividade de jogos, aplicativos de realidade aumentada e aplicativos utilitários, fornecendo uma forma exclusiva de entrada – por exemplo, uso do movimento do dispositivo para organizar os caracteres na tela ou para simular que o usuário está em uma cabine e usando o dispositivo como o volante.
@@ -19,11 +20,11 @@ O vídeo a seguir demonstra alguns dos sensores disponíveis para você na cria�
 | Tópico                                                       | Descrição  |
 |-------------------------------------------------------------|--------------|
 | [Calibrar sensores](calibrate-sensors.md)                   | Sensores em um dispositivo baseado no magnetômetro (bússola, inclinômetro e sensor de orientação) podem precisar de calibragem devido a fatores ambientais. A enumeração [<strong>MagnetometerAccuracy</strong>](https://msdn.microsoft.com/library/windows/apps/Dn297552) pode ajudar a determinar um curso de ação quando seu dispositivo precisar de calibração. |
-| [Orientação de sensores](sensor-orientation.md)                 | Os dados do sensor das classes [<strong>OrientationSensor</strong>](https://msdn.microsoft.com/library/windows/apps/BR206371) e são definidos por seus eixos de referência. Esses eixos são definidos pela orientação paisagem do dispositivo e giram com o dispositivo conforme o usuário o vira. |
+| [Orientação do sensor](sensor-orientation.md)                 | Os dados do sensor das classes [<strong>OrientationSensor</strong>](https://msdn.microsoft.com/library/windows/apps/BR206371) e são definidos por seus eixos de referência. Esses eixos são definidos pela orientação paisagem do dispositivo e giram com o dispositivo conforme o usuário o vira. |
 | [Usar o acelerômetro](use-the-accelerometer.md)           | Saiba como usar o acelerômetro para responder ao movimento do usuário. |
 | [Usar a bússola](use-the-compass.md)                       | Saiba como usar a bússola para determinar a direção atual. |
 | [Usar o girômetro](use-the-gyrometer.md)                   | Saiba como usar o girômetro para detectar mudanças no movimento do usuário. | 
-| [Usar o inclinômetro](use-the-inclinometer.md)             | Saiba como usar o inclinômetro para determinar rotação sobre o eixo x, rolagem e rotação sobre o eixo y. |
+| [Usar o inclinômetro](use-the-inclinometer.md)             | Saiba como usar o inclinômetro para determinar a rotação sobre o eixo x, a rolagem e a rotação sobre o eixo y. |
 | [Usar o sensor de luz](use-the-light-sensor.md)             | Aprenda a usar o sensor de luz ambiente para detectar alterações na iluminação. |
 | [Usar sensor de orientação](use-the-orientation-sensor.md) | Saiba como usar os sensores de orientação para determinar a orientação do dispositivo.|
 
@@ -123,6 +124,6 @@ Para obter alguns exemplos que demonstram o uso de alguns dos diferentes sensore
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

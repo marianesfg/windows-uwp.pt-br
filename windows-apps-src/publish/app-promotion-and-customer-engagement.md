@@ -1,10 +1,11 @@
 ---
-Description: assim que seu aplicativo estiver na Windows Store, é hora de aparecer para a maior quantidade possível de clientes.
-title: promoção de aplicativos e engajamento de clientes
+author: jnHs
+Description: Assim que seu aplicativo estiver na Windows Store, é hora de aparecer para a maior quantidade possível de clientes.
+title: Compromisso do cliente e promoção do aplicativo
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
 ---
 
-# Promoção de aplicativos e engajamento de clientes
+# Compromisso do cliente e promoção do aplicativo
 
 
 Assim que seu aplicativo estiver na Windows Store, é hora de aparecer para a maior quantidade possível de clientes. Temos opções para promover o seu aplicativo e ajudar os clientes a ficar comprometido.
@@ -27,6 +28,6 @@ Assim que seu aplicativo estiver na Windows Store, é hora de aparecer para a ma
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

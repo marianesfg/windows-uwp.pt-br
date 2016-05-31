@@ -1,13 +1,14 @@
 ---
+author: mtoepke
 title: Converter a estrutura de renderização
-description: Mostra como converter uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11.
+description: Veja como converter uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11.
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
 ---
 
 # Converter a estrutura de renderização
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
@@ -16,7 +17,7 @@ ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
 -   [Parte 3: fazer a portabilidade do loop do jogo](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
-Veja como converter uma estrutura de renderização simples do Direct3D 9 no Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11. Parte 2 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Veja como converter uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11. Parte 2 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 ## Converter efeitos em sombreadores HLSL
 
@@ -239,7 +240,9 @@ Este é um bom momento para criar o layout de entrada, que corresponde à declar
 
 Os dados de vértice devem ser armazenados em tipos compatíveis na memória do sistema. Os tipos de dados DirectXMath podem ajudar; por exemplo, DXGI\_FORMAT\_R32G32B32\_FLOAT corresponde a [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475).
 
-> **Observação**   Os buffers constantes usam um layout de entrada fixo, alinhado a quatro números de ponto flutuante de uma vez. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) (e suas derivativas) são recomendados para dados de buffer de constantes.
+> **Observação**   Os buffers constantes usam um layout de entrada fixo, alinhado a quatro números de ponto flutuante de uma vez. [
+              **XMFLOAT4**
+            ](https://msdn.microsoft.com/library/windows/desktop/ee419608) (e suas derivativas) são recomendados para dados de buffer de constantes.
 
  
 
@@ -487,6 +490,6 @@ A cadeia de renderização criada será chamada a partir de um loop do jogo impl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,13 +1,14 @@
 ---
-title: Compatibilizar buffers de vértices e dados
+author: mtoepke
+title: Fazer a portabilidade de dados e buffers de vértices
 description: Nesta etapa, você definirá os buffers de vértices que conterão suas malhas e os buffers de índice que permitem que os sombreadores percorram os vértices em uma ordem específica.
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
 ---
 
-# Compatibilizar buffers de vértices e dados
+# Fazer a portabilidade de dados e buffers de vértices
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -285,11 +286,11 @@ m_d3dContext->DrawIndexed(
 ## Etapa anterior
 
 
-[Compatibilizar os objetos de sombreadores](port-the-shader-config.md)
+[Fazer a portabilidade de objetos de sombreador](port-the-shader-config.md)
 
 ## Próxima etapa
 
-[Compatibilizar o GLSL](port-the-glsl.md)
+[Fazer a portabilidade do GLSL](port-the-glsl.md)
 
 ## Comentários
 
@@ -299,8 +300,8 @@ Ao estruturar o seu Direct3D, separe o código que chama métodos em [**ID3D11De
 
 
 * [Como: compatibilizar um renderizador simples do OpenGL ES 2.0 ao Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
-* [Compatibilizar os objetos de sombreadores](port-the-shader-config.md)
-* [Realizar a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
+* [Fazer a portabilidade de objetos de sombreador](port-the-shader-config.md)
+* [Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
 * [Fazer a portabilidade do GLSL](port-the-glsl.md)
 
  
@@ -312,6 +313,6 @@ Ao estruturar o seu Direct3D, separe o código que chama métodos em [**ID3D11De
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

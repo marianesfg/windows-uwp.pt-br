@@ -1,15 +1,16 @@
 ---
-Description: Este artigo aborda as quatro opções de notificação&\#8212;local, agendada, periódica e por push&\#8212;que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema.
+author: mijacobs
+Description: Este artigo aborda as quatro opções de notificação&\#8212;local, agendada, periódica e por push&\#8212que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema.
 title: Escolher um método de entrega de notificação
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
-label: Escolher um método de entrega de notificação
+label: Choose a notification delivery method
 template: detail.hbs
 ---
 
 # Escolher um método de entrega de notificação
 
 
-[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Este artigo aborda as quatro opções de notificação - local, agendada, periódica e por push - que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema. Um bloco ou uma notificação do sistema pode obter informações para o usuário mesmo enquanto o usuário não está diretamente envolvido com o aplicativo. A natureza e o conteúdo do aplicativo e as informações que você deseja fornecer podem ajudá-lo a determinar qual método de notificação é melhor para o seu cenário.
@@ -45,9 +46,9 @@ Esta tabela resume os tipos de entrega de notificação.
 <tr class="odd">
 <td align="left">Local</td>
 <td align="left">Bloco, Emblema, Caixa de Informações</td>
-<td align="left">Um conjunto de chamadas de API que envia notificações enquanto o aplicativo está sendo executado, atualizando diretamente o bloco ou emblema ou enviando uma notificação do sistema.</td>
+<td align="left">Conjunto de chamadas de API que envia notificações enquanto o aplicativo está sendo executado, atualizando diretamente o bloco ou o emblema ou enviando uma notificação do sistema.</td>
 <td align="left"><ul>
-<li>Um aplicativo de música atualiza seu bloco para mostrar o que está &quot;Execução&quot;.</li>
+<li>Um aplicativo de música atualiza seu bloco para mostrar o que está &quot;Em Execução&quot;.</li>
 <li>Um aplicativo de jogos atualiza o seu bloco com o recorde de pontuação do usuário quando o usuário deixa o jogo.</li>
 <li>Um emblema cujo glifo indica que há novas informações no aplicativo é limpo quando o aplicativo é ativado.</li>
 </ul></td>
@@ -146,10 +147,6 @@ Para obter mais informações, consulte:
 -   [Diretrizes para notificações por push](https://msdn.microsoft.com/library/windows/apps/hh761462)
 -   [Exemplos de códigos de notificações da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-**Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
 
 ## <span id="related_topics"></span>Tópicos relacionados
 
@@ -170,6 +167,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

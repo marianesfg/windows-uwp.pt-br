@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis.
 title: Modelos de blocos especiais
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
-label: a ser definido
+label: TBD
 template: detail.hbs
 ---
 
 # Modelos de blocos especiais
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. Cada modelo de bloco especial foi compilado especificamente para o Windows 10, exceto para o modelo de bloco icônico, um modelo especial clássico que foi atualizado para o Windows 10. Este artigo aborda três modelos de blocos especiais: Icônico, Fotos e Pessoas.
@@ -282,6 +283,6 @@ Para enviar a notificação, consulte [Escolher um método de entrega de notific
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

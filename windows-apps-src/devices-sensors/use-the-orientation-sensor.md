@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: Usar sensor de orientação
 description: Saiba como usar os sensores de orientação para determinar a orientação do dispositivo.
@@ -161,11 +162,11 @@ Você precisará substituir o nome do namespace no trecho anterior pelo nome que
     </Page>
 ```
 
-Você precisará substituir a primeira parte do nome da classe no trecho anterior pelo namespace de seu aplicativo. Por exemplo, se você criou um projeto denominado **OrientationSensorCS**, pode substituir `x:Class="App1.MainPage"` por `x:Class="OrientationSensorCS.MainPage"`. Você também deve substituir `xmlns:local="using:App1"` por `xmlns:local="using:OrientationSensorCS"`.
+Você precisará substituir a primeira parte do nome da classe no trecho anterior pelo namespace de seu aplicativo. Por exemplo, se você criou um projeto denominado **OrientationSensorCS**, poderá substituir `x:Class="App1.MainPage"` por `x:Class="OrientationSensorCS.MainPage"`. Você também deve substituir `xmlns:local="using:App1"` por `xmlns:local="using:OrientationSensorCS"`.
 
 -   Pressione F5 ou selecione **Depurar** > **Iniciar Depuração** para criar, implantar e executar o aplicativo.
 
-Quando o aplicativo estiver em execução, você pode alterar a orientação. Basta mover o dispositivo ou usar as ferramentas do emulador.
+Quando o aplicativo estiver em execução, você poderá alterar a orientação. Basta mover o dispositivo ou usar as ferramentas do emulador.
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** > **Parar Depuração** para parar o aplicativo.
 
@@ -307,11 +308,11 @@ Você precisará substituir o nome do namespace no trecho anterior pelo nome que
     </Page>
 ```
 
-Você precisará substituir a primeira parte do nome da classe no trecho anterior pelo namespace de seu aplicativo. Por exemplo, se você criou um projeto denominado **SimpleOrientationCS**, pode substituir `x:Class="App1.MainPage"` por `x:Class="SimpleOrientationCS.MainPage"`. Você também deve substituir `xmlns:local="using:App1"` por `xmlns:local="using:SimpleOrientationCS"`.
+Você precisará substituir a primeira parte do nome da classe no trecho anterior pelo namespace de seu aplicativo. Por exemplo, se você criou um projeto denominado **SimpleOrientationCS**, poderá substituir `x:Class="App1.MainPage"` por `x:Class="SimpleOrientationCS.MainPage"`. Você também deve substituir `xmlns:local="using:App1"` por `xmlns:local="using:SimpleOrientationCS"`.
 
 -   Pressione F5 ou selecione **Depurar** > **Iniciar Depuração** para criar, implantar e executar o aplicativo.
 
-Quando o aplicativo estiver em execução, você pode alterar a orientação. Basta mover o dispositivo ou usar as ferramentas do emulador.
+Quando o aplicativo estiver em execução, você poderá alterar a orientação. Basta mover o dispositivo ou usar as ferramentas do emulador.
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** > **Parar Depuração** para parar o aplicativo.
 
@@ -347,6 +348,6 @@ Os novos valores são gravados em um TextBlock encontrado no XAML do projeto.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

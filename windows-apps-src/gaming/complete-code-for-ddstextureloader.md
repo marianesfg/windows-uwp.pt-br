@@ -1,13 +1,14 @@
 ---
-title: concluir código para DDSTextureLoader
-description: conclua código para a classe e o método que carrega uma textura DDS da memória.
+author: mtoepke
+title: Concluir código para DDSTextureLoader
+description: Conclua código para a classe e o método que carrega uma textura DDS da memória.
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
 ---
 
 # Concluir código para DDSTextureLoader
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Conclua código para a classe e o método que carrega uma textura DDS da memória.
 
@@ -25,17 +26,14 @@ Este exemplo não está disponível para download.
 
 ## Tecnologias
 
-|                       |                 |
-|-----------------------|-----------------|
-| Linguagens de programação | C++             |
-| Modelos de programação    | Windows Runtime |
+**Linguagens de programação** - C++    
+**Modelos de programação** -Windows Runtime
 
 ## Requisitos
 
-| Cliente mínimo com suporte | Windows 10                            |
-|--------------------------|---------------------------------------|
-| Servidor mínimo com suporte | Windows Server 2016 Technical Preview |
-| SDK necessário mínimo     |                                       |
+**Cliente mínimo com suporte** - Windows 10                               
+**Servidor mínimo com suporte** - Windows Server 2016 Technical Preview
+
 
 
 ## Exibir o código (C++)
@@ -1223,6 +1221,6 @@ void CreateDDSTextureFromMemory(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

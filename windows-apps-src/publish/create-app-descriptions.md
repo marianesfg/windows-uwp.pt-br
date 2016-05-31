@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: A seção Descrições do processo de envio de aplicativo é onde você fornece o texto e as imagens que os clientes verão na página de detalhes do seu aplicativo na Loja.
 title: Criar descrições de aplicativos
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
@@ -24,6 +25,8 @@ Para adicionar ou remover idiomas para suas descrições, clique em **Gerenciar 
 Na seção **Idiomas de descrição adicionais**, você pode clicar em **Gerenciar idiomas adicionais** para adicionar ou remover idiomas não incluídos nos seus pacotes. Marque as caixas de seleção dos idiomas que você deseja adicionar e depois clique em **Atualizar**. Os idiomas selecionados serão exibidos na seção **Idiomas de descrição adicionais**. Para remover um ou mais desses idiomas, clique em **Remover** (ou clique em **Gerenciar idiomas adicionais** e desmarque a caixa de idiomas que você deseja remover).
 
 Quando terminar de fazer suas seleções, clique em **Salvar** para retornar à página de visão geral do envio.
+
+> **Observação** Ao criar uma descrição em um idioma que não tenha suporte em seus pacotes, você precisará indicar quais dos seus nomes de aplicativo reservados devem ser exibidos nessa descrição, pois não há um pacote associado nesse idioma no qual obter o nome. O nome que você escolher aqui se aplicará somente aos detalhes da Loja desse idioma e não causará impacto no nome exibido quando um cliente instalar o aplicativo.
 
 Para editar uma descrição, clique em seu nome da visão geral do envio. As seções da página **Descrição** estão descritas abaixo.
 
@@ -77,7 +80,7 @@ Os campos da seção **Campos compartilhados** não podem ser personalizados par
 
 ### Palavras-chave
 
-As palavras-chave são termos isolados ou pequenas frases que não são exibidos aos clientes, mas podem ajudar seu aplicativo a aparecer nos resultados de pesquisa relacionados à palavra-chave. Você pode incluir até 8 palavras-chave com um máximo de 45 caracteres.
+As palavras-chave são termos isolados ou pequenas frases que não são exibidos aos clientes, mas podem ajudar seu aplicativo a aparecer nos resultados de pesquisa relacionados à palavra-chave. Você pode incluir até 7 palavras-chave com um máximo de 30 caracteres.
 
 Se você quiser adicionar palavras-chave, pense nas palavras que os clientes podem usam ao pesquisar aplicativos como o seu, especialmente se elas não fazem parte do nome do seu aplicativo. Não deixe de usar todas as palavras-chave realmente importantes para o aplicativo.
 
@@ -114,6 +117,6 @@ Se você tiver uma política de privacidade para o seu aplicativo, insira sua UR
 **Importante**  A Microsoft não fornece uma política de privacidade padrão para o aplicativo. Da mesma forma, o aplicativo não é coberto por nenhuma política de privacidade da Microsoft. Para determinar se o seu aplicativo requer uma política de privacidade, consulte o [Contrato de Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e as [Políticas da Windows Store](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_5_1).
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

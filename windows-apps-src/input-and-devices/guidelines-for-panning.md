@@ -1,23 +1,22 @@
 ---
-Description: O movimento panorâmico ou a rolagem permite que os usuários naveguem dentro de uma única exibição para exibir o conteúdo da exibição que não se encaixa dentro do visor. Exemplos de exibição incluem a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotos.
+author: Karl-Bridge-Microsoft
+Description: O movimento horizontal ou a rolagem permite aos usuários navegar dentro de uma única exibição, para exibir o conteúdo da exibição que não se encaixa no visor. Exemplos de exibição incluem a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotos.
 title: Movimento panorâmico
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
-label: Movimento panorâmico
+label: Panning
 template: detail.hbs
 ---
 
 # Diretrizes de movimento panorâmico
 
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+O movimento horizontal ou a rolagem permite aos usuários navegar dentro de uma única exibição, para exibir o conteúdo da exibição que não se encaixa no visor. Exemplos de exibição incluem a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotos.
 
 **APIs importantes**
 
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 -   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
-O movimento horizontal ou a rolagem permite aos usuários navegar dentro de em uma única exibição, para exibir o conteúdo da exibição que não se encaixa dentro do visor. Exemplos de exibição incluem a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotos.
+
 
 ## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>O que fazer e o que não fazer
 
@@ -100,8 +99,7 @@ O Windows 8 aceita três tipos de movimento panorâmico:
 
 A experiência de interação do movimento panorâmico é exclusiva no dispositivo de entrada, embora ele ainda forneça funcionalidade similar.
 
-**Regiões que permitem movimento panorâmico**
-Os comportamentos da região que permite movimento panorâmico são expostos no aplicativo da Windows Store usando desenvolvedores JavaScript no tempo de design, por meio de CSS (Folhas de Estilos em Cascata) apenas.
+**Regiões que permitem movimento panorâmico** Os comportamentos da região que permite movimento panorâmico são expostos no aplicativo da Windows Store usando desenvolvedores JavaScript no tempo de design, por meio de CSS (Folhas de Estilos em Cascata) apenas.
 
 Há dois modos de exibição de movimento panorâmico baseados no dispositivo de entrada detectado:
 
@@ -112,16 +110,16 @@ Há dois modos de exibição de movimento panorâmico baseados no dispositivo de
 
  
 
-**Indicadores panorâmicos**
-Indicadores de movimento panorâmico são semelhantes à caixa de rolagem em uma barra de rolagem. Eles indicam a proporção do conteúdo exibido para a área total que permite movimento panorâmico e a posição relativa do conteúdo exibido na área que permite movimento panorâmico.
+**Indicadores de movimento panorâmico** Indicadores de movimento panorâmico são semelhantes à caixa de rolagem em uma barra de rolagem. Eles indicam a proporção do conteúdo exibido para a área total que permite movimento panorâmico e a posição relativa do conteúdo exibido na área que permite movimento panorâmico.
 
 O diagrama a seguir mostra duas áreas que permitem movimento panorâmico de diferentes tamanhos e seus indicadores de movimento panorâmico.
 
 ![imagem mostrando duas áreas que permitem movimento panorâmico de diferentes tamanhos e seus indicadores de movimento panorâmico.](images/scrolling-indicators.png)
 
 **Comportamentos de movimento panorâmico**
-**Pontos de ajuste**
-O movimento panorâmico com o gesto de passar o dedo introduz comportamento inercial na interação quando o contato por toque é retirado. Com inércia, o conteúdo continua a se mover panoramicamente até que um limite de distância seja atingido sem entrada direta do usuário. Use pontos de alinhamento para modificar esse comportamento inercial.
+            
+          
+            **Pontos de alinhamento** O movimento panorâmico com o gesto de passar o dedo introduz comportamento inercial na interação quando o contato por toque é retirado. Com inércia, o conteúdo continua a se mover panoramicamente até que um limite de distância seja atingido sem entrada direta do usuário. Use pontos de alinhamento para modificar esse comportamento inercial.
 
 Pontos de alinhamento especificam paradas lógicas no conteúdo do aplicativo. De forma cognitiva, os pontos de alinhamento atuam como um mecanismo de paginação para o usuário e minimizam o trabalho cansativo de deslizar ou passar o dedo excessivamente em grandes regiões deslocáveis. Com eles, você pode manipular entradas imprecisas do usuário e garantir que um subconjunto específico de conteúdo ou informações importantes sejam exibidas no visor.
 
@@ -141,8 +139,7 @@ Os diagramas a seguir mostram como o movimento panorâmico até um certo ponto e
 
  
 
-**Trilhos**
-O conteúdo pode ser mais largo ou mais longo do que a dimensão e a resolução de um dispositivo de exibição. Por isso, o movimento panorâmico bidimensional (horizontal e vertical) é geralmente necessário. Os trilhos melhoram a experiência do usuário nesses casos enfatizando o movimento panorâmico ao longo do eixo de movimento (vertical ou horizontal).
+**Trilhos** O conteúdo pode ser mais largo ou mais longo do que a dimensão e a resolução de um dispositivo de exibição. Por isso, o movimento panorâmico bidimensional (horizontal e vertical) é geralmente necessário. Os trilhos melhoram a experiência do usuário nesses casos enfatizando o movimento panorâmico ao longo do eixo de movimento (vertical ou horizontal).
 
 O diagrama a seguir demonstra o conceito de trilhos.
 
@@ -170,14 +167,16 @@ Essa diretriz também é útil para aplicativos como, por exemplo, álbuns de fo
 * [Interações personalizadas do usuário](https://msdn.microsoft.com/library/windows/apps/mt185599)
 * [Otimizar ListView e GridView](https://msdn.microsoft.com/library/windows/apps/mt204776)
 * [Acessibilidade do teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
-**Amostras**
+
+**Exemplos**
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Amostras de arquivo-morto**
+* [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
+**Exemplos de arquivo-morto**
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de teste de toque](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: amostra de tinta simplificada](http://go.microsoft.com/fwlink/p/?linkid=246570)
@@ -193,6 +192,6 @@ Essa diretriz também é útil para aplicativos como, por exemplo, álbuns de fo
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

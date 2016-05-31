@@ -1,19 +1,18 @@
 ---
-Description: Recursos de temas no XAML são um conjunto de recursos que aplicam valores diferentes dependendo de qual tema do sistema estiver ativo.
+author: Jwmsft
+Description: Recursos de temas no XAML são um conjunto de recursos que aplicam valores diferentes de acordo com o tema do sistema que estiver ativo.
 MS-HAID: 'dev\_ctrl\_layout\_txt.xaml\_theme\_resources'
 MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh
-title: Recursos de tema XAML
+title: Recursos de temas XAML
 ms.assetid: 41B87DBF-E7A2-44E9-BEBA-AF6EEBABB81B
-label: Recursos de tema XAML
+label: XAML theme resources
 template: detail.hbs
 ---
 
 # Recursos de temas XAML
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-Recursos de temas no XAML são um conjunto de recursos que aplicam valores diferentes dependendo de qual tema do sistema estiver ativo. Há três temas que têm suporte da estrutura XAML: "Light", "Dark" e "HighContrast".
+Recursos de temas no XAML são um conjunto de recursos que aplicam valores diferentes de acordo com o tema do sistema que estiver ativo. Há três temas que têm suporte da estrutura XAML: "Light", "Dark" e "HighContrast".
 
 **Pré-requisitos**
 
@@ -30,9 +29,10 @@ Por outro lado, uma [extensão de marcação {StaticResource}](../xaml-platform/
 ## Recursos de tema e onde elas se encaixam na estrutura de dicionário de recursos
 
 
-Cada recurso de tema é parte do arquivo XAML themeresources.xaml. Para fins de design, themeresources.xaml está disponível no \\(Program Files)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP\\&lt;versão do SDK&gt;\\pasta Generic de uma instalação do Software Development Kit do Windows (SDK do Windows). Os dicionários de recursos em themeresources.xaml também são reproduzidos em generic.xaml no mesmo diretório.
+Cada recurso de tema é parte do arquivo XAML themeresources.xaml. Para fins de design, themeresources.xaml está disponível na pasta \\(Arquivos de Programa)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP\\&lt;versão do SDK&gt;\\Generic de uma instalação do Software Development Kit do Windows (SDK do Windows). Os dicionários de recursos em themeresources.xaml também são reproduzidos em generic.xaml no mesmo diretório.
 
-> **Observação**&nbsp;&nbsp;O Windows Runtime não usa esses arquivos físicos para pesquisa de tempo de execução. É por isso que eles estão especificamente em uma pasta DesignTime, e eles não são copiados para aplicativos por padrão. Em vez disso, esses dicionários de recursos existem na memória como parte do Windows Runtime propriamente dito, e as referências de recurso XAML do aplicativo a recursos de tema (ou recursos do sistema) são resolvidas no tempo de execução.
+> **Observação**
+            &nbsp;&nbsp;O Windows Runtime não usa esses arquivos físicos para pesquisa de tempo de execução. É por isso que eles estão especificamente em uma pasta DesignTime, e eles não são copiados para aplicativos por padrão. Em vez disso, esses dicionários de recursos existem na memória como parte do Windows Runtime propriamente dito, e as referências de recurso XAML do aplicativo a recursos de tema (ou recursos do sistema) são resolvidas no tempo de execução.
 
  ## Diretrizes para usar recursos de temas
 
@@ -98,13 +98,13 @@ Esta tabela lista as cores de todo o sistema que XAML fornece como objetos de re
 
 | Chave                           | Ease of Access name            | Simple HighContrast name | Initial default |
 |-------------------------------|--------------------------------|--------------------------|-----------------|
-| SystemColorButtonFaceColor    | **Texto do Botão** (em segundo plano)   | Em segundo plano               | \#FFF0F0F0      |
+| SystemColorButtonFaceColor    | **Texto do Botão** (em segundo plano)   | Histórico               | \#FFF0F0F0      |
 | SystemColorButtonTextColor    | **Texto do Botão** (em primeiro plano)   | Primeiro plano               | \#FF000000      |
 | SystemColorGrayTextColor      | **Texto desabilitado**              | Desabilitada                 | \#FF6D6D6D      |
 | SystemColorHighlightColor     | **Texto Selecionado** (em segundo plano) | Highlight                | \#FF3399FF      |
 | SystemColorHighlightTextColor | **Texto Selecionado** (em primeiro plano) | HighlightAlt             | \#FFFFFFFF      |
 | SystemColorHotlightColor      | **Hiperlinks**                 | Hyperlink                | \#FF0066CC      |
-| SystemColorWindowColor        | **Em segundo plano**                 | PageBackground           | \#FFFFFFFF      |
+| SystemColorWindowColor        | **Histórico**                 | PageBackground           | \#FFFFFFFF      |
 | SystemColorWindowTextColor    | **Texto**                       | PageText                 | \#FF000000      |
 
 
@@ -118,7 +118,8 @@ Para obter mais informações sobre como dar suporte a temas de alto contraste, 
 
 Além das cores do tema de alto contraste do sistema, a cor de destaque do sistema é fornecida como um recurso de cores especial usando-se a chave `SystemAccentColor`. Em tempo de execução, esse recurso obtém a cor que o usuário especificou como a cor de destaque nas configurações de personalização do Windows.
 
-> **Observação**&nbsp;&nbsp;É possível substituir os recursos de cores do sistema para cores de alto contraste e destaque criando-se recursos com os mesmos nomes, mas é uma melhor prática para respeitar as opções de cores do usuário, especialmente para configurações de alto contraste.
+> **Observação**
+            &nbsp;&nbsp;É possível substituir os recursos de cores do sistema para cores de alto contraste e destaque criando-se recursos com os mesmos nomes, mas é uma prática recomendada é respeitar as opções de cores do usuário, especialmente para configurações de alto contraste.
 
 ### Pincéis dependentes de temas
 
@@ -138,7 +139,7 @@ Quando esse pincel é aplicado a um elemento XAML, a cor é determinada em tempo
 |--------------|-------------------|----------------------------|------------------------------------------------------------|
 | Light        | AltHigh           | SystemAltHighColor         | \#FFFFFFFF                                                 |
 | Dark         | AltHigh           | SystemAltHighColor         | \#FF000000                                                 |
-| HighContrast | Em segundo plano        | SystemColorButtonFaceColor | A cor especificada nas configurações do segundo plano do botão. |
+| HighContrast | Histórico        | SystemColorButtonFaceColor | A cor especificada nas configurações do segundo plano do botão. |
 
 Você pode usar o esquema de nomenclatura `SystemControl[Simple HighContrast name][Simple light/dark name]Brush` para determinar qual pincel aplicar aos próprios elementos XAML. 
 
@@ -146,7 +147,8 @@ Você pode usar o esquema de nomenclatura `SystemControl[Simple HighContrast nam
 For many examples of how the brushes are used in the XAML control templates, see the [Default control styles and templates](default-control-styles-and-templates.md).
 -->
 
-> **Observação**&nbsp;&nbsp;Nem toda combinação de \[*nome simples HighContrast*\]\[*nome claro/escuro simples*\] é fornecido como um recurso de pincel.
+> **Note**
+            &nbsp;&nbsp;;Nem toda combinação de \[*nome simples HighContrast*\]\[*nome claro/escuro simples*\] é fornecida como um recurso de pincel.
 
 ## A rampa de tipos XAML
 
@@ -307,7 +309,8 @@ Fornece as propriedades comuns para todos os outros estilos de contêiner [**Ric
 </Style>
 ```
 
-> **Observação**&nbsp;&nbsp; Os estilos [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565) não têm todos os estilos de rampa de texto de [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652), principalmente porque o modelo de objeto de documento baseado em bloco de **RichTextBlock** facilita a definição de atributos nos elementos de texto individuais. Além disso, definir [**TextBlock.Text**](https://msdn.microsoft.com/library/windows/apps/br209676) com o uso da propriedade de conteúdo XAML provoca uma situação em que não há elementos de texto para os quais definir um estilo e, portanto, você teria que definir um estilo para o contêiner. Isso não é um problema para **RichTextBlock** pois o conteúdo de texto sempre precisa estar em elementos de texto específicos, como [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/br244503), onde você pode aplicar estilos XAML do cabeçalho de página, do subcabeçalho de página e das definições de rampa de texto semelhantes.
+> **Observação**
+            &nbsp;&nbsp; Os estilos [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565) não têm todos os estilos de rampa de texto de [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652), principalmente porque o modelo de objeto de documento baseado em bloco de **RichTextBlock** facilita a definição de atributos nos elementos de texto individuais. Além disso, definir [**TextBlock.Text**](https://msdn.microsoft.com/library/windows/apps/br209676) com o uso da propriedade de conteúdo XAML provoca uma situação em que não há elementos de texto para os quais definir um estilo e, portanto, você teria que definir um estilo para o contêiner. Isso não é um problema para **RichTextBlock** pois o conteúdo de texto sempre precisa estar em elementos de texto específicos, como [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/br244503), onde você pode aplicar estilos XAML do cabeçalho de página, do subcabeçalho de página e das definições de rampa de texto semelhantes.
 
 ## Estilos nomeados diversos
 
@@ -436,10 +439,9 @@ Para corrigir esse problema, use a [extensão de marcação {StaticResource}](..
 
 Observe que a [extensão de marcação {ThemeResource}](../xaml-platform/themeresource-markup-extension.md) ainda é usada no dicionário "HighContrast" no lugar da [extensão de marcação {StaticResource}](../xaml-platform/staticresource-markup-extension.md). Essa situação se enquadra na exceção apresentada anteriormente nas diretrizes. A maioria dos valores de pincéis usados para o tema "HighContrast" está usando opções de cores controladas globalmente pelo sistema, mas expostas a XAML como um recurso especialmente nomeado (os prefixados com "SystemColor" no nome). O sistema permite que o usuário defina as cores específicas que devem ser usadas nas configurações de alto contraste por meio da Central de Facilidade de Acesso. Essas opções de cores são aplicadas aos recursos especialmente nomeados. A estrutura XAML usa o mesmo evento de tema alterado para também atualizar esses pincéis ao detectar que eles foram alterados no nível do sistema. É por isso que a extensão de marcação {ThemeResource} é usada aqui.
 
-> **Observação**&nbsp;&nbsp;  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
-<!--HONumber=Mar16_HO1-->
+
+<!--HONumber=May16_HO2-->
 
 

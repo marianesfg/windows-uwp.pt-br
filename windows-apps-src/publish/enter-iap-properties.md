@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Quando envio um IAP, as opções da página Propriedades ajudam a determinar o comportamento de seu IAP quando oferecido aos clientes.
 title: Inserir propriedades de IAP
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
@@ -60,6 +61,6 @@ Você também tem a opção de inserir até 3000 caracteres no campo **Tag**. Es
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

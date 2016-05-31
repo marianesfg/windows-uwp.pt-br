@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Fornece um valor para qualquer atributo XAML avaliando uma referência a um recurso que vem da implementação personalizada da pesquisa de recursos. A pesquisa de recursos é executada pela implementação da classe CustomXamlResourceLoader.
 title: Extensão de marcação CustomResource
 ms.assetid: 3A59A8DE-E805-4F04-B9D9-A91E053F3642
@@ -6,7 +7,7 @@ ms.assetid: 3A59A8DE-E805-4F04-B9D9-A91E053F3642
 
 # Extensão de marcação {CustomResource}
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Fornece um valor para qualquer atributo XAML avaliando uma referência a um recurso que vem da implementação personalizada da pesquisa de recursos. A pesquisa de recursos é executada pela implementação da classe [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327).
 
@@ -28,7 +29,7 @@ Fornece um valor para qualquer atributo XAML avaliando uma referência a um recu
 
 A forma como um **CustomResource** é resolvido para um dicionário de recursos não é descrita neste tópico, pois isso pode variar muito dependendo de como [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) é implementado.
 
-O método [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340) da implementação de [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) é chamado pelo analisador XAML do Tempo de Execução do Windows sempre que ele encontra um uso de `{CustomResource}` na marcação. O *resourceId* que é passado para **GetResource** vem do argumento *key*, e os outros parâmetros de entrada vêm do contexto, como a propriedade à qual o uso se aplica.
+O método [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340) da implementação de [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) é chamado pelo analisador XAML do Windows Runtime sempre que ele encontra um uso de `{CustomResource}` na marcação. O *resourceId* que é passado para **GetResource** vem do argumento *key*, e os outros parâmetros de entrada vêm do contexto, como a propriedade à qual o uso se aplica.
 
 O uso de um `{CustomResource}` não funciona por padrão (a implementação básica do [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340) está incompleta). Para fazer uma referência de `{CustomResource}` válida, você deve executar estas etapas:
 
@@ -46,6 +47,6 @@ O uso de um `{CustomResource}` não funciona por padrão (a implementação bás
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

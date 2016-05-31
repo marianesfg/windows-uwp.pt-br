@@ -1,16 +1,13 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Receber, processar e gerenciar dados de entrada de dispositivos apontadores, como toque, mouse, caneta e touchpad, em aplicativos UWP (Plataforma Universal do Windows).
-title: Manipular entrada do ponteiro
+title: Identificar entrada do ponteiro
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
 ---
 
-# Manipular entrada do ponteiro
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+# Identificar entrada do ponteiro
 
 Receber, processar e gerenciar dados de entrada de dispositivos apontadores, como toque, mouse, caneta e touchpad, em aplicativos UWP (Plataforma Universal do Windows).
 
@@ -30,7 +27,7 @@ Caso você implemente seu próprio suporte à interação, tenha em mente que os
 
 Muitas experiências de interação envolvem a identificação do objeto pelo usuário com o qual ele deseja interagir apontando para ele usando dispositivos de entrada, como toque, mouse, caneta e touchpad. Como os dados brutos de dispositivos de interface humana (HID) fornecidos por esses dispositivos de entrada incluem muitas propriedades comuns, as informações são promovidas em uma pilha de entrada unificada e exposta como dados de ponteiro independentes de dispositivo e consolidados. Assim, os aplicativos UWP podem consumir esses dados sem se preocupar com o dispositivo de entrada que está sendo usado.
 
-**Observação**  As informações específicas ao dispositivo também são promovidas dos dados brutos de HID, caso o aplicativo exija isso.
+**Observação**  As informações específicas do dispositivo também são promovidas dos dados brutos de HID, caso o aplicativo exija isso.
 
  
 
@@ -249,7 +246,10 @@ Em seguida, usamos comentários da interface do usuário para demonstrar manipul
 
 -   Esse manipulador gerencia um evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). Adicionamos o evento ao log de eventos, adicionamos o ponteiro à matriz de ponteiros usada para acompanhar os ponteiros de interesse e exibimos os detalhes do ponteiro.
 
-    **Observação**  Os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) e [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) nem sempre ocorrem em pares. O aplicativo deve escutar e manipular qualquer evento que possa concluir uma ação de ponteiro para baixo (como [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) e [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).
+    **Observação**
+            [
+              Os eventos **PointerPressed**
+            ](https://msdn.microsoft.com/library/windows/apps/br208971) e [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) nem sempre ocorrem em pares. O aplicativo deve escutar e manipular qualquer evento que possa concluir uma ação de ponteiro para baixo (como [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) e [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).
 
      
 
@@ -519,7 +519,10 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
 
 -   Esse manipulador gerencia um evento [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965). Adicionamos o evento ao log de eventos, removemos o ponteiro da matriz de ponteiros e atualizamos os detalhes do ponteiro.
 
-    **Observação**  [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) pode ocorrer no lugar de [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972). A captura do ponteiro pode ser perdida por vários motivos.
+    **Observação**
+            [
+              **PointerCaptureLost**
+            ](https://msdn.microsoft.com/library/windows/apps/br208965) pode ocorrer no lugar de [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972). A captura do ponteiro pode ser perdida por vários motivos.
 
      
 
@@ -1082,14 +1085,15 @@ namespace PointerInput
 ## <span id="related_topics"></span>Artigos relacionados
 
 
-**Amostras**
+**Exemplos**
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Amostras de arquivo-morto**
+
+**Exemplos de arquivo-morto**
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: amostra de recursos do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de manipulações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Entrada: amostra de teste de hit de toque](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
@@ -1103,6 +1107,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

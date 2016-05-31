@@ -1,11 +1,12 @@
 ---
+author: TylerMSFT
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: Acessar o cartão SD
 description: Você pode armazenar e acessar dados não essenciais em um cartão microSD, principalmente em dispositivos de baixo custo que possuem espaço de armazenamento interno limitado.
 ---
 # Acessar o cartão SD
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Você pode armazenar e acessar dados não essenciais em um cartão microSD, principalmente em dispositivos de baixo custo que possuem espaço de armazenamento interno limitado.
@@ -146,6 +147,6 @@ using Windows.Storage;
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

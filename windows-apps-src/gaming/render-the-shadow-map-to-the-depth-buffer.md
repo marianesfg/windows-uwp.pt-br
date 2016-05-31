@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Renderizar o mapa de sombra para o buffer de profundidade
 description: Faça a renderização do ponto de vista da luz para criar um mapa de profundidade bidimensional que representa o volume de sombra.
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
@@ -7,7 +8,7 @@ ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
 # Renderizar o mapa de sombra para o buffer de profundidade
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Faça a renderização do ponto de vista da luz para criar um mapa de profundidade bidimensional que representa o volume de sombra. O mapa de profundidade mascara o espaço que será renderizado com sombras. Parte 2 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -151,6 +152,6 @@ Na próxima parte deste guia passo a passo, veremos como adicionar sombras pela 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

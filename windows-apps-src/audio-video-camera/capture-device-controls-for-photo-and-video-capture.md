@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
 description: Este artigo mostra controles de vídeo do dispositivo para habilitar cenários de captura de fotos e vídeos avançados, incluindo estabilização de imagem ótica e zoom suave.
 title: Controles de captura do dispositivo para a captura de fotos e vídeos
@@ -6,7 +7,7 @@ title: Controles de captura do dispositivo para a captura de fotos e vídeos
 
 # Controles de captura do dispositivo para a captura de fotos e vídeos
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra controles de vídeo do dispositivo para habilitar cenários de captura de fotos e vídeos avançados, incluindo estabilização de imagem ótica e zoom suave.
@@ -89,7 +90,7 @@ No manipulador da caixa de seleção de redução de olhos vermelhos, defina a p
 
 Por fim, no manipulador da caixa de seleção da lanterna de vídeo, defina a propriedade [**Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) como o valor apropriado.
 
-[!code-cs[Torch](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
+[!code-cs[Lanterna](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
 
 **Observação** Em alguns dispositivos, a lanterna não emitirá luz, mesmo que [**TorchControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) esteja definido como true, a menos que o dispositivo tenha um fluxo de visualização em execução e esteja ativamente capturando vídeo. A ordem recomendada das operações é ativar a visualização de vídeo, ativar a lanterna definindo **Enabled** como true e depois iniciar a captura de vídeo. Em alguns dispositivos, a lanterna acende depois que a visualização é iniciada. Em outros dispositivos, o lanterna não pode acender até que captura de vídeo seja iniciada.
 
@@ -159,9 +160,22 @@ Por fim, chame [**FocusAsync**](https://msdn.microsoft.com/library/windows/apps/
 
 **Importante** Ao implementar o modo de tocar para focalizar, a ordem das operações é importante. Você deve chamar essas APIs na seguinte ordem:
 
-**1.**[**FocusControl.Configure**](https://msdn.microsoft.com/library/windows/apps/dn608067)
-**2.**[**RegionsOfInterestControl.SetRegionsAsync**](https://msdn.microsoft.com/library/windows/apps/dn279070)
-**3.**[**FocusControl.FocusAsync**](https://msdn.microsoft.com/library/windows/apps/dn297794)
+**1.**
+            [
+              **FocusControl.Configure**
+            ](https://msdn.microsoft.com/library/windows/apps/dn608067)
+            
+          
+            **2.**
+            [
+              **RegionsOfInterestControl.SetRegionsAsync**
+            ](https://msdn.microsoft.com/library/windows/apps/dn279070)
+            
+          
+            **3.**
+            [
+              **FocusControl.FocusAsync**
+            ](https://msdn.microsoft.com/library/windows/apps/dn297794)
 
 [!code-cs[TapToFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapToFocus)]
 
@@ -189,7 +203,7 @@ O valor do foco deve estar dentro do intervalo aceito pelo dispositivo e deve se
 
 Defina o valor do controle deslizante como o valor atual de **FocusControl** depois de cancelar o registro do manipulador de eventos [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/br209737) para que o evento não seja disparado quando o valor for definido.
 
-[!code-cs[Focus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocus)]
+[!code-cs[Foco](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocus)]
 
 No manipulador de eventos **Checked** para o botão de opção de foco manual, obtenha o objeto **FocusControl** e chame [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) caso seu aplicativo tenha desbloqueado anteriormente o foco com uma chamada para [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081).
 
@@ -323,6 +337,7 @@ Defina o nível de zoom no dispositivo de captura criando um novo objeto [**Zoom
 
 * [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md)
 
-<!--HONumber=Mar16_HO2-->
+
+<!--HONumber=May16_HO2-->
 
 

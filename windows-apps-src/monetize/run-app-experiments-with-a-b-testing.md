@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 Description: Você pode usar o painel do Centro de Desenvolvimento do Windows para executar experimentos para os seus aplicativos UWP (Plataforma Universal do Windows) com testes A/B.
 title: Executar experimentos de aplicativo com testes A/B
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
@@ -20,8 +21,8 @@ Para criar e executar um teste A/B, siga estas etapas:
   * Um *evento de exibição* que indica quando o usuário começa a exibir uma variação que faz parte do seu experimento.
   * Uma ou mais metas com *eventos de conversão*, que indicam quando um objetivo foi atingido.
   * Uma ou mais *variações*, que definem as configurações usadas pelo seu experimento.
-2. [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md). Use uma API no SDK de Microsoft Store Engagement and Monetization para obter configurações de variação para o experimento. Use esses dados para modificar o comportamento do recurso que você está testando e envie eventos de exibição e de conversão para o Centro de Desenvolvimento.
-3. [Executar e gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md). Use o painel para analisar os resultados do experimento e conclua o experimento.
+2. [Codifique seu aplicativo para experimentação](code-your-experiment-in-your-app.md). Use uma API no SDK de Microsoft Store Engagement and Monetization para obter configurações de variação para o experimento. Use esses dados para modificar o comportamento do recurso que você está testando e envie eventos de exibição e de conversão para o Centro de Desenvolvimento.
+3. [Execute e gerencie seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md). Use o painel para analisar os resultados do experimento e conclua o experimento.
 
 Para obter um guia passo a passo que demonstra o processo de ponta a ponta, consulte [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
@@ -49,6 +50,6 @@ Para obter os resultados mais úteis, convém seguir estas recomendações ao ex
 * [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

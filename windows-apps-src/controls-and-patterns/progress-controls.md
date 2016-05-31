@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Um controle de progresso oferece feedback ao usuário que uma operação de execução longa está em andamento.
-title: Diretrizes para controles de progresso
+title: Diretrizes de controles de progresso
 ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
-label: Controles de progresso
+label: Progress controls
 template: detail.hbs
 ---
 # Controles de progresso
@@ -11,7 +12,7 @@ Um controle de progresso oferece feedback ao usuário que uma operação de exec
 
 Um controle de progresso é apenas lido; não é interativo.
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs Importantes</span>
+<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
 
 -   [**Classe ProgressBar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx)
 -   [**Propriedade IsIndeterminate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx)
@@ -36,7 +37,7 @@ Uma barra de progresso também é um bom indicador de estado ou posição. Uma b
 
 ![O aplicativo Xbox Music exibe uma barra de progresso ao reproduzir uma música](images/ProgressBar_MusicTimeline.png)
 
-## Este é o controle correto?
+## Esse é o controle correto?
 
 Nem sempre é necessário mostrar um controle de progresso. Às vezes, o progresso de uma tarefa é suficientemente óbvio por si só, ou a tarefa é concluída tão rapidamente que a exibição de um controle de progresso seria distrativa. Veja a seguir alguns pontos a serem considerados ao determinar se você deve mostrar um controle de progresso.
 
@@ -73,10 +74,18 @@ Nem sempre é necessário mostrar um controle de progresso. Às vezes, o progres
 Uma barra de progresso determinado mostra quanto progresso o aplicativo já fez. Conforme o trabalho progride, a barra enche. Se você puder estimar o trabalho restante em tempo, bytes, arquivos ou alguma outra unidade de medida quantificável, use uma barra de progresso determinado.
 
 A barra de progresso determinado oferece várias propriedades para definir e determinar o progresso:
-- [**IsIndeterminate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx): especifica se a barra de progresso é indeterminada. Defina para **false** para criar uma barra de progresso determinado.
-- [**Minimum**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.minimum.aspx): o início do intervalo de valores. O padrão 0.0.
-- [**Maximum**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.maximum.aspx): o final do intervalo de valores. O padrão é 1.0. 
-- [**Value**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.value.aspx): um número que especifica o progresso atual. Se você estiver mostrando o progresso do download de um arquivo, tal valor pode ser o número de bytes baixados (e, assim, defina Maximum para o número total de bytes a serem baixados).
+- [
+              **IsIndeterminate**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx): especifica se a barra de progresso é indeterminada. Defina para **false** para criar uma barra de progresso determinado.
+- [
+              **Minimum**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.minimum.aspx): o início do intervalo de valores. O padrão 0.0.
+- [
+              **Maximum**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.maximum.aspx): o final do intervalo de valores. O padrão é 1.0. 
+- [
+              **Value**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.value.aspx): um número que especifica o progresso atual. Se você estiver mostrando o progresso do download de um arquivo, tal valor pode ser o número de bytes baixados (e, assim, defina Maximum para o número total de bytes a serem baixados).
  
 O exemplo a seguir mostra uma barra de progresso determinado baseada em valor. 
 
@@ -266,20 +275,25 @@ stackPanel1.Children.Add(progressRing1);
     Se a resposta for não, não mostre um controle de progresso.
 
 -   **A informação sobre o tempo necessário para concluir a tarefa está disponível?**
-    -   **Sim:** **a tarefa leva mais de dois segundos para ser concluída?**
+    -   **Sim:**
+             **a tarefa leva mais de dois segundos para ser concluída?**
         -   **Sim:** use uma barra de progresso determinado. Para tarefas que levam mais de 10 segundos, ofereça uma maneira de cancelar a tarefa.
         -   **Não:** não mostre um controle de progresso.
 
-    -   **Não:** **os usuários são bloqueados de interagir com a IU até que a tarefa seja concluída?**
+    -   **Não:**
+             **os usuários são impedidos de interagir com a IU até que a tarefa seja concluída?**
         -   **Sim:** **essa tarefa é parte de um processo de várias etapas em que o usuário precisa saber detalhes específicos sobre a operação?**
             -   **Sim:** use um anel de progresso indeterminado com texto de status centralizado horizontalmente na tela.
             -   **Não:** use um anel de progresso indeterminado sem texto no centro da tela.
-        -   **Não:** **é uma atividade primária?**
-            -   **Sim:** **o progresso está relacionado a apenas um elemento específico da IU?**
+        -   **Não:**
+             **é uma atividade primária?**
+            -   **Sim:**
+             **o progresso está relacionado a apenas um elemento específico da IU?**
                 -   **Sim:** use um anel de progresso indeterminado embutido com texto de status próximo ao elemento de IU a que se refere.
-                -   **Não:** **há uma quantidade grande de dados sendo carregados em uma lista?**
+                -   **Não:**
+            **há uma quantidade grande de dados sendo carregados em uma lista?**
                     -   **Sim:** use a barra de progresso indeterminado no topo com espaços reservados para representar conteúdo recebido.
-                    -   **Não:** use a barra de progresso indeterminado mo topo da tela ou superfície.
+                    -   **Não:** use a barra de progresso indeterminado no topo da tela ou superfície.
             -   **Não:** use texto de status no canto superior da tela.
 
 ## Artigos relacionados
@@ -293,6 +307,6 @@ stackPanel1.Children.Add(progressRing1);
 - [Como criar uma barra de progresso indeterminado personalizada para Windows Phone](http://go.microsoft.com/fwlink/p/?LinkID=392426)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

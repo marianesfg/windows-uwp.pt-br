@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Os hiperlinks levam o usuário para outra parte do aplicativo, para outro aplicativo ou para iniciar um URI (Uniform Resource Identifier) específico usando um aplicativo de navegador separado.
 title: Hiperlinks
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
-label: Hiperlinks
+label: Hyperlinks
 template: detail.hbs
 ---
 # Hiperlinks
@@ -49,7 +50,8 @@ O hiperlink aparece embutido e flui com o texto ao redor:
 
 ![Exemplo de um hiperlink como um elemento de texto](images/controls_hyperlink-element.png) 
 
-> **Dica**&nbsp;&nbsp;Quando você usa um hiperlink em um controle de texto com outros elementos de texto no XAML, coloque o conteúdo em um contêiner [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) e aplique o atributo `xml:space="preserve"` ao Span para manter o espaço em branco entre o hiperlink e os outros elementos.
+> **Dica**
+            &nbsp;&nbsp;Quando você usa um hiperlink em um controle de texto com outros elementos de texto no XAML, coloque o conteúdo em um contêiner [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) e aplique o atributo `xml:space="preserve"` ao Span para manter o espaço em branco entre o hiperlink e os outros elementos.
 
 ## Criar um HyperlinkButton
 
@@ -80,7 +82,8 @@ Para os dois tipos de hiperlinks, você manipula a navegação da mesma maneira.
 
 Para usar o hiperlink para navegar para um URI, defina a propriedade NavigateUri. Quando um usuário clica ou toca no hiperlink, o URI especificado é aberto no navegador padrão. O navegador padrão é executado em um processo separado de+ seu aplicativo.
 
-> **Observação**&nbsp;&nbsp;Você não precisa usar esquemas http: ou https:. Você pode usar esquemas como ms-appx:, ms-appdata: ou ms-resources:, se houver conteúdo do recurso nesses locais que é adequado carregar em um navegador. No entanto, o arquivo: o esquema é especificamente bloqueado. Para obter mais informações, consulte [Esquemas de URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
+> **Observação**
+            &nbsp;&nbsp;Você não precisa usar esquemas http: nem https:. Você pode usar esquemas como ms-appx:, ms-appdata: ou ms-resources:, se houver conteúdo do recurso nesses locais que seja adequado carregar em um navegador. No entanto, o arquivo: o esquema é especificamente bloqueado. Para obter mais informações, consulte [Esquemas de URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
 
 > Quando um usuário clica no hiperlink, o valor da propriedade NavigateUri é passado para um manipulador do sistema para esquemas e tipos de URI. Em seguida, o sistema inicia o aplicativo que está registrado para o esquema do URI fornecido para NavigateUri.
 
@@ -135,15 +138,13 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 -   Só use hiperlinks para navegação; não os utilize para outras ações.
 -   Use o estilo Body da rampa de tipos para hiperlinks baseados em texto. Leia mais sobre [**fontes a rampa de tipos do Windows 10**](text-controls.md).
 -   Mantenha hiperlinks diferentes distantes o suficiente para que o usuário possa diferenciar entre eles e tenha facilidade ao selecionar cada uma deles.
--   Adicione dicas de ferramentas aos hiperlinks que indicam para onde o usuário será direcionado. Se o usuário será direcionado para um site externo, inclua o nome do domínio de nível superior dentro da dica de ferramenta e defina o estilo do texto com uma cor de fonte secundária.
+-   Adicione dicas de ferramentas aos hiperlinks que indicam para onde o usuário será direcionado. Se o usuário for direcionado para um site externo, inclua o nome do domínio de nível superior na dica de ferramenta e defina o estilo do texto com uma cor de fonte secundária.
 
-\[Este artigo contém informações que são específicas aos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Artigos relacionados
 
-[Controles de texto](text-controls.md)
-
-**Para designers**
+- [Controles de texto](text-controls.md)
 - [Diretrizes de dicas de ferramenta](tooltips.md)
 
 **Para desenvolvedores (XAML)**
@@ -151,6 +152,6 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 - [**Classe Windows.UI.Xaml.Controls HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

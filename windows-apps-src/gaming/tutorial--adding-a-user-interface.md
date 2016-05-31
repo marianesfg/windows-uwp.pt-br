@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Adicionar uma interface do usuário
 description: Você viu no exemplo como é implementado o objeto principal do jogo, bem como a estrutura básica de renderização.
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
@@ -7,7 +8,7 @@ ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
 # Adicionar uma interface do usuário
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Você viu no exemplo como é implementado o objeto principal do jogo, bem como a estrutura básica de renderização. Agora examinaremos como o exemplo fornece feedback sobre o estado do jogo ao jogador. Aqui você aprenderá como adicionar opções de menu simples e componentes do visor frontal HUD (Heads-Up Display) sobre a saída do pipeline gráfico 3D.
 
@@ -1487,6 +1488,6 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

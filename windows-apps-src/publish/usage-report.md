@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: O relatório Uso no painel do Centro de Desenvolvimento do Windows permite que você veja como os clientes estão usando seu aplicativo.
 title: Relatório de uso
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
@@ -65,6 +66,6 @@ O gráfico **Page views over last 30 days** mostra o número total de visualiza�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

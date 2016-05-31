@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: Tecnologias para acessar os serviços de rede e Web.
 title: Serviços de rede e Web
@@ -6,7 +7,7 @@ title: Serviços de rede e Web
 
 # Serviços de rede e Web
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 As seguintes tecnologias de serviços de rede e Web estão disponíveis para desenvolvedores da UWP (Plataforma Universal do Windows).
 
@@ -22,6 +23,7 @@ As seguintes tecnologias de serviços de rede e Web estão disponíveis para des
 | [Transferências em segundo plano](background-transfers.md)                                         | Use a API de transferência em segundo plano para copiar arquivos de forma confiável pela rede.           |
 | [Marcando conexões de rede com a identidade EDP](tagging_network_connections_with_edp_identity.md) | Este tópico mostra como criar um contexto de thread protegido antes de criar conexões de rede em um cenário de EDP (proteção de dados empresariais). |
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
 
 

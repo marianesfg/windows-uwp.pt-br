@@ -1,16 +1,17 @@
 ---
+author: mtoepke
 title: Perguntas frequentes de portabilidade do DirectX 11
-description: Respostas a perguntas frequentes sobre a potabilidade de jogos para a Plataforma Universal do Windows (UWP).
+description: Respostas a perguntas frequentes sobre a portabilidade de jogos para a Plataforma Universal do Windows (UWP).
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
 ---
 
 # Perguntas frequentes de portabilidade do DirectX 11
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Respostas a perguntas frequentes sobre a potabilidade de jogos para a Plataforma Universal do Windows (UWP).
+Respostas a perguntas frequentes sobre a portabilidade de jogos para a Plataforma Universal do Windows (UWP).
 
 ## A portabilidade de meu jogo será um conjunto de operações de localização e substituição em métodos de API? Ou é necessário planejar um processo de portabilidade mais cuidadoso?
 
@@ -25,7 +26,9 @@ Agora o dispositivo Direct3D é usado para criar recursos na memória de vídeo,
 ##  Preciso atualizar o cronômetro do jogo para a UWP?
 
 
-[**QueryPerformanceCounter**](https://msdn.microsoft.com/library/windows/desktop/ms644904), junto com [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905), ainda são a melhor maneira de implementar um timer de jogo para aplicativos UWP.
+[
+              **QueryPerformanceCounter**
+            ](https://msdn.microsoft.com/library/windows/desktop/ms644904), junto com [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905), ainda são a melhor maneira de implementar um timer de jogo para aplicativos UWP.
 
 Você deve prestar atenção a um aspecto de temporizador e do ciclo de vida de aplicativos UWP. A suspensão/retomada é diferente da reexecução de um jogo de área de trabalho, pois seu jogo retomará um instantâneo do momento em que foi executado pela última vez. Caso tenha se passado muito tempo (por exemplo, algumas semanas), algumas implementações de cronômetro podem ter comportamento inadequado. Você pode usar eventos de ciclo de vida de aplicativo para redefinir o temporizador quando o jogo é retomado.
 
@@ -134,6 +137,6 @@ Veja o [mapeamento de formatos de superfície](feature-mapping.md#surface-format
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

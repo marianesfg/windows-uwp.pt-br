@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
 description: Este artigo mostra como usar a interface IMediaEncodingProperties para definir a resolução e a taxa de quadro do fluxo de visualização da câmera e de fotos e vídeo capturados.
 title: Definir propriedades de codificação de mídia
@@ -6,7 +7,7 @@ title: Definir propriedades de codificação de mídia
 
 # Definir propriedades de codificação de mídia
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar a interface [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) para definir a resolução e a taxa de quadro do fluxo de visualização da câmera e de fotos e vídeo capturados. Ele também mostra como garantir que a taxa de proporção do fluxo de visualização corresponda ao da mídia capturada.
@@ -41,7 +42,7 @@ Em alguns dispositivos, o mesmo pin de hardware é usado para fluxos de visualiz
 
 ## Obter uma lista de propriedades de fluxo disponíveis
 
-Obtenha uma lista das propriedades de fluxo disponíveis para um dispositivo de captura obtendo [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) para o objeto [MediaCapture](capture-photos-and-video-with-mediacapture.md) do seu aplicativo e depois chamando  [**GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) e transmitindo um dos valores de [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640): **VideoPreview**, **VideoRecord** ou **Photo**. Neste exemplo, a sintaxe Linq é usada para criar uma lista de objetos **StreamPropertiesHelper**, definidos anteriormente neste artigo, para cada um dos valores [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) retornados de **GetAvailableMediaStreamProperties**. Este exemplo usa primeiro os métodos de extensão Linq para ordenar as propriedades retornadas com base, em primeiro lugar, na resolução e, depois, na taxa de quadros.
+Obtenha uma lista das propriedades de fluxo disponíveis para um dispositivo de captura obtendo [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) para o objeto [MediaCapture](capture-photos-and-video-with-mediacapture.md) do seu aplicativo e depois chamando [**GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) e transmitindo um dos valores de [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640): **VideoPreview**, **VideoRecord** ou **Photo**. Neste exemplo, a sintaxe Linq é usada para criar uma lista de objetos **StreamPropertiesHelper**, definidos anteriormente neste artigo, para cada um dos valores [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) retornados de **GetAvailableMediaStreamProperties**. Este exemplo usa primeiro os métodos de extensão Linq para ordenar as propriedades retornadas com base, em primeiro lugar, na resolução e, depois, na taxa de quadros.
 
 Se seu aplicativo tiver requisitos de resolução ou de taxa de quadros específicos, você poderá selecionar um conjunto de propriedades de codificação de mídia de forma programática. Um aplicativo de câmera comum expõe a lista de propriedades disponíveis na interface do usuário e permite que o usuário selecione as configurações desejadas. Um **ComboBoxItem** é criado para cada item na lista de objetos **StreamPropertiesHelper** na lista. O conteúdo é definido como o nome amigável retornado pela classe auxiliar, e a marca é definida como a própria classe auxiliar para que ela possa ser usada posteriormente para recuperar as propriedades de codificação associadas. Cada **ComboBoxItem** é adicionado à **ComboBox** transmitida ao método.
 
@@ -84,6 +85,6 @@ Para garantir que os fluxos de captura de foto ou de vídeo correspondam à taxa
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

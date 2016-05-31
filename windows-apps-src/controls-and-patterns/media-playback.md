@@ -1,11 +1,11 @@
 ---
+author: Jwmsft
 Description: O media player é usado para exibir e ouvir vídeo, áudio e imagens.
 title: Media player
 ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
 label: Media player
 template: detail.hbs
-author: mijacobs
 ---
 # Media player
 
@@ -18,7 +18,7 @@ O media player é usado para exibir e ouvir vídeo, áudio e imagens. A reprodu�
 -   [**Classe MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)
 -   [**Classe MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediatransportcontrols)
 
-## Este é o controle correto?
+## Esse é o controle correto?
 
 Use um media player quando você quiser reproduzir áudio ou vídeo em seu aplicativo. Para exibir uma coleção de imagens, use um [Modo de exibição de inversão](flipview.md).
 
@@ -264,7 +264,9 @@ private void MediaElement_CurrentStateChanged(object sender, RoutedEventArgs e)
     ```
 
 ### Controlar o media player de forma programática
-[**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) oferece inúmeras propriedades, métodos e eventos para controlar a reprodução de áudio e vídeo. Para uma listagem completa de propriedades, métodos e eventos, consulte página de referência do [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926).
+[
+              **MediaElement**
+            ](https://msdn.microsoft.com/library/windows/apps/br242926) oferece inúmeras propriedades, métodos e eventos para controlar a reprodução de áudio e vídeo. Para uma listagem completa de propriedades, métodos e eventos, consulte página de referência do [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926).
     
 
 ### Selecionar faixas de áudio em idiomas diferentes
@@ -312,7 +314,7 @@ private bool SetAudioLanguage(string lcid, MediaElement media)
 
 ### Habilitar a renderização de vídeo da janela inteira
 
-Defina a propriedade [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/dn298980) para habilitar ou desabilitar a renderização de janela inteira. Ao definir de forma programática a renderização de janela inteira em seu aplicativo, você sempre deve usar **IsFullWindow** em vez de fazer isso manualmente. **IsFullWindow** garante que as otimizações em nível de sistema sejam executadas, o que melhora o desempenho e a vida útil da bateria. Se a renderização de janela inteira não estiver configurada corretamente, essas otimizações não poderão ser habilitadas.
+Defina a propriedade [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/dn298980) para habilitar ou desabilitar a renderização de janela inteira. Ao definir de forma programática a renderização de janela inteira em seu aplicativo, você sempre deve usar **IsFullWindow** em vez de fazer isso manualmente. **IsFullWindow** garante que as otimizações em nível de sistema sejam executadas, o que melhora o desempenho e a duração da bateria. Se a renderização de janela inteira não estiver configurada corretamente, essas otimizações não poderão ser habilitadas.
 
 Este código cria um [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) que alterna a renderização da janela inteira.
 
@@ -333,13 +335,20 @@ private void FullWindow_Click(object sender, object e)
 
 Use a propriedade [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) para mudar a forma como o conteúdo de vídeo preenche seu contêiner. Isso redimensiona e amplia o vídeo de acordo com o valor de [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Os estados de **Stretch** são parecidos com as configurações de tamanho de imagem em aparelhos de TV. Você pode enganchá-la em um botão para que o usuário possa escolher a configuração de sua preferência.
 
--   [**None**](https://msdn.microsoft.com/library/windows/apps/br242968) mostra a resolução nativa do conteúdo em seu tamanho original.
--   [**Uniform**](https://msdn.microsoft.com/library/windows/apps/br242968) preenche o máximo do espaço possível, mantendo a taxa de proporção e o conteúdo da imagem. Isso pode produzir barras pretas horizontais ou verticais nas bordas do vídeo. Isso é semelhante aos modos widescreen.
--   [**UniformToFill**](https://msdn.microsoft.com/library/windows/apps/br242968) preenche todo o espaço, mantendo a taxa de proporção. Isso pode fazer parte da imagem ser cortada. Isso é semelhante aos modos de tela inteira.
--   [**Fill**](https://msdn.microsoft.com/library/windows/apps/br242968) preenche todo o espaço, mas não mantém a taxa de proporção. A imagem não é cortada, mas pode ocorrer um alongamento. Isso é semelhante aos modos de alongamento.
+-   [
+              **None**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) mostra a resolução nativa do conteúdo em seu tamanho original.
+-   [
+              **Uniform**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) preenche o máximo do espaço possível, mantendo a taxa de proporção e o conteúdo da imagem. Isso pode produzir barras pretas horizontais ou verticais nas bordas do vídeo. Isso é semelhante aos modos widescreen.
+-   [
+              **UniformToFill**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) preenche todo o espaço, mantendo a taxa de proporção. Isso pode fazer parte da imagem ser cortada. Isso é semelhante aos modos de tela inteira.
+-   [
+              **Fill**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) preenche todo o espaço, mas não mantém a taxa de proporção. A imagem não é cortada, mas pode ocorrer um alongamento. Isso é semelhante aos modos de alongamento.
 
-![Valores de enumeração de alongamento](images/Image_Stretch.jpg)
-Aqui, um [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) é usado para percorrer as opções de [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Uma declaração **switch** verifica o estado atual da propriedade [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) e o define para o próximo valor na enumeração de **Stretch**. Isso permite ao usuário circular pelos vários estados de ampliação.
+![Valores de enumeração de alongamento](images/Image_Stretch.jpg) Aqui, um [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) é usado para percorrer as opções de [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Uma declaração **switch** verifica o estado atual da propriedade [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) e o define para o próximo valor na enumeração de **Stretch**. Isso permite ao usuário circular pelos vários estados de ampliação.
 
 ```xaml
 <AppBarButton Icon="Switch" 
@@ -400,14 +409,12 @@ Adicione qualquer opção personalizada necessária ao media player para oferece
 -   Tente não sobrecarregar a barra de controle com muitas opções.
 -   Não reduza a linha do tempo de mídia abaixo de seu tamanho mínimo padrão, o que limitará severamente sua eficácia.
 
-\[Este artigo contém informações que são específicas aos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
-
 ## Artigos relacionados
 
 - [Noções básicas de design de comandos para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958433)
 - [Noções básicas de design de conteúdo para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958434)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

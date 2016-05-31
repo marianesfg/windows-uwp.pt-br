@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Uma ótima descrição pode fazer o seu aplicativo se destacar na Windows Store e ajudar a incentivar os clientes a baixá-lo.
 title: Escreva uma ótima descrição do aplicativo
 ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
@@ -7,15 +8,15 @@ ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
 # Escreva uma ótima descrição do aplicativo
 
 
-Uma ótima descrição pode fazer o seu aplicativo se destacar na Windows Store e ajudar a incentivar os clientes a baixá-lo. [A descrição que você digita quando enviar o seu aplicativo](create-app-descriptions.md) é exibida nos detalhes de seu aplicativo na Loja. As primeiras linhas também poderão ser exibidas nos resultados da pesquisa e em listas de algoritmos na Loja.
+Uma ótima descrição pode fazer o seu aplicativo se destacar na Windows Store e ajudar a incentivar os clientes a baixá-lo. [A descrição que você insere quando envia o seu aplicativo](create-app-descriptions.md) é exibida nos listagem da Loja do aplicativo. As primeiras linhas também poderão ser exibidas nos resultados da pesquisa e em listas de algoritmos na Loja.
 
 
 Aqui estão algumas dicas para tornar a descrição do seu aplicativo a melhor que ela pode ser.
 
--   **Prenda a atenção nas primeiras frases.** O início da descrição é o mais importante, portanto, verifique se ela chama e mantém atenção. Pense no que você pode dizer em uma ou duas frases para explicar o apelo exclusivo do aplicativo e convencer alguém a comprá-lo.
+-   **Prenda a atenção nas primeiras frases.** O início da descrição é o mais importante, portanto, verifique se ele chama e prende a atenção. Comece com a proposição de valor: por que possíveis clientes devem dispor de tempo e dinheiro para baixar seu aplicativo? Qual é a vantagem de escolher seu aplicativo em vez de outro? Em uma ou duas frases, usando linguagem simples e clara, explique o apelo exclusivo do seu aplicativo e por que alguém gostaria de tê-lo.
 -   **Facilite para as pessoas conhecerem seu aplicativo.** Após sua chamada inicial, descreva benefícios adicionais, oportunidades de compras no aplicativo e outros detalhes que os clientes querem saber. Não deixe de incluir todas as divulgações ou informações que você deve fornecer de acordo com a legislação dos mercados em que está distribuindo seu aplicativo.
 -   **Use listas e parágrafos curtos.** Clientes potenciais podem dar apenas uma rápida olhada na descrição do seu aplicativo. Se o conteúdo for dividido usando parágrafos curtos e listas, a avaliação fica mais fácil.
-    > **Observação** Adicionar uma lista de [recursos do aplicativo](create-app-descriptions.md#app-features) também pode ajudar a mostrar rapidamente o que ele faz. A lista aparece logo abaixo da descrição do aplicativo.
+    > **Observação**  Adicionar uma lista de [recursos do aplicativo](create-app-descriptions.md#app-features) também pode ajudar a mostrar rapidamente o que ele faz. A lista aparece logo abaixo da descrição do aplicativo.
 -   **Evite linguagem seca.** Escreva sua descrição com linguagem envolvente. Faça com que o texto descreva claramente a função do aplicativo, mas diga isso de um modo que não pareça tedioso. Para muitos aplicativos, um tom casual e amigável funciona bem.
 -   **Use um tamanho adequado.** Uma boa descrição pode ser lida rapidamente, mas também inclui informações suficientes para manter o usuário interessado e explicar o que o aplicativo faz. A descrição de um aplicativo complexo precisa de mais sentenças; já um aplicativo simples precisa de apenas algumas. Na maioria dos casos, o tamanho ideal é algo em torno de 200 palavras, mas bem abaixo de 3000.
 -   **Seja claro a respeito de avaliações gratuitas e produtos no aplicativo.** Caso você ofereça um teste gratuito do aplicativo, explique como ele funciona para que os clientes compreendam por quanto tempo podem usar o aplicativo e/ou quais recursos são limitados. Também é interessante mencionar quais tipos de produtos no aplicativo estão disponíveis, principalmente caso eles sejam muito importantes para a funcionalidade do aplicativo
@@ -34,6 +35,6 @@ Aqui estão algumas dicas para tornar a descrição do seu aplicativo a melhor q
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

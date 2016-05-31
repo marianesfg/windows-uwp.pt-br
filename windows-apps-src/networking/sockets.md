@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 description: Você pode usar Windows.Networking.Sockets e Winsock para se comunicar com outros dispositivos como um desenvolvedor de aplicativo da Plataforma Universal do Windows (UWP).
 title: Soquetes
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
@@ -6,7 +7,7 @@ ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
 
 # Soquetes
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs importantes**
 
@@ -14,6 +15,8 @@ ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
 -   [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673)
 
 Você pode usar [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) e [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523) para se comunicar com outros dispositivos como um desenvolvedor de aplicativo da Plataforma Universal do Windows (UWP). Este tópico fornece orientações detalhadas sobre como usar o namespace **Windows.Networking.Sockets** para executar operações de rede.
+
+>**Observação** Como parte do [isolamento de rede](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx), o sistema proíbe estabelecer conexões de soquete (soquetes ou WinSock) entre dois aplicativos UWP em execução no mesmo computador por um endereço de loopback local (127.0.0.0) ou especificando explicitamente o endereço IP local. Isso significa que você não pode usar soquetes para se comunicar entre dois aplicativos UWP. A UWP fornece outros mecanismos de comunicação entre aplicativos. Consulte [Comunicações entre aplicativos](https://msdn.microsoft.com/windows/uwp/app-to-app/index) para obter detalhes.
 
 ## Operações de soquete TCP básicas
 
@@ -248,7 +251,7 @@ foreach (IBuffer packet in packetsToSend)
 await outputStream.FlushAsync();
 ```
 
-Em versões anteriores do Windows, **FlushAsync** é retornado imediatamente e não garante que todas as operações no fluxo tinham sido concluídas ainda. No Windows 10, o comportamento mudou. O **FlushAsync** agora é garantido para retornar depois que todas as operações no fluxo de saída forem concluídas.
+Em versões anteriores do Windows, **FlushAsync** é retornado imediatamente e não garante que todas as operações no fluxo tinham sido concluídas ainda. No Windows 10, o comportamento mudou. Agora é garantido que o**FlushAsync** retorne depois que todas as operações no fluxo de saída são concluídas.
 
 Existem algumas limitações importantes impostas por usar gravações em lote no seu código.
 
@@ -284,7 +287,7 @@ Um erro encontrado em uma operação [**DatagramSocket**](https://msdn.microsoft
 
 Um erro encontrado em uma operação [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) ou [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) é retornado como um valor **HRESULT**. O método [**WebSocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701529) é usado para converter um erro de rede de uma operação WebSocket em um valor de enumeração [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818). A maioria dos valores de enumeração **WebErrorStatus** corresponde a um erro retornado pela operação nativa de cliente HTTP. Um aplicativo pode filtrar por um valor específico de enumeração **WebErrorStatus** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 
-Para erros de validação de parâmetro, um aplicativo também pode usar o **HRESULT** baseado na exceção para obter informações mais detalhadas sobre o erro causador da exceção. Valores **HRESULT** possíveis estão listados no arquivo de cabeçalho *Winerror. h*. Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E\_INVALIDARG**.
+Para erros de validação de parâmetro, um aplicativo também pode usar o **HRESULT** baseado na exceção para obter informações mais detalhadas sobre o erro causador da exceção. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror. h*. Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E\_INVALIDARG**.
 
 ## A API de Winsock
 
@@ -293,6 +296,6 @@ Você também pode usar o [Winsock](https://msdn.microsoft.com/library/windows/d
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

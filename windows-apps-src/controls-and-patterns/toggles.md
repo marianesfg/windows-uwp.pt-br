@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: O switch de alternância representa um comutador físico que permite aos usuários ativar ou desativar itens.
-title: Diretrizes para controles de switches de alternância
+title: Diretrizes para controles de botões de alternância
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
-label: Switches de alternância
+label: Toggle switches
 template: detail.hbs
 ---
 # Switches de alternância
@@ -15,7 +16,7 @@ O switch de alternância representa um comutador físico que permite aos usuári
 -   [**Propriedade IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx)
 -   [**Evento Toggled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)
 
-## Este é o controle correto?
+## Esse é o controle correto?
 
 Use um switch de alternância para operações binárias que entram em vigor logo depois que o usuário gira o switch. Por exemplo, use um botão de alternância para ativar ou desativar serviços ou componentes de hardware, como o Wi-Fi:
 
@@ -156,6 +157,6 @@ Você também pode usar conteúdo mais complexo, definindo as propriedades [**On
 - [**Classe ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/br209712)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,19 +1,20 @@
 ---
-Description: Este artigo descreve as práticas recomendadas para criar e exibir as configurações do aplicativo.
-title: Diretrizes de configurações de aplicativos
+author: mijacobs
+Description: Este artigo descreve as práticas recomendadas para criar e exibir configurações do aplicativo.
+title: Diretrizes para configurações de aplicativos
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
 ---
 
 
-# Diretrizes de configurações de aplicativos
+# Diretrizes para configurações de aplicativos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-A configurações do aplicativo são as partes de seu aplicativo que podem ser personalizadas pelo usuário e que residem na página de configurações do aplicativo. Por exemplo, as configurações do aplicativo em um aplicativo leitor de notícias podem permitir que o usuário especifique quais fontes de notícias exibir ou a quantidade de colunas a serem exibidas na tela, enquanto as configurações de um aplicativo de previsão do tempo podem permitir que o usuário escolha entre Celsius e Fahrenheit como a unidade padrão de medida. Este artigo descreve as práticas recomendadas para criar e exibir as configurações do aplicativo.
+
+Configurações do aplicativo são as partes de seu aplicativo personalizáveis pelo usuário e as partes dinâmicas na página de configurações do aplicativo. Por exemplo, as configurações do aplicativo em um aplicativo leitor de notícias podem permitir que o usuário especifique quais fontes de notícias exibir ou a quantidade de colunas a serem exibidas na tela, enquanto as configurações de um aplicativo de previsão do tempo podem permitir que o usuário escolha entre Celsius e Fahrenheit como a unidade padrão de medida. Este artigo descreve as práticas recomendadas para criar e exibir as configurações do aplicativo.
 
 ![exemplo de um painel de configurações](images/app-settings.png)
 
@@ -62,7 +63,7 @@ Se você estiver usando um layout de Hub, o ponto de entrada de configurações 
 
 Para um layout de guias ou pivôs, não recomendamos colocar o ponto de entrada das configurações do aplicativo como um dos primeiros itens da navegação. Em vez disso, o ponto de entrada das configurações do aplicativo deve ser colocado no menu do submenu "Mais" de uma barra de aplicativos.
 
-**Detalhes mestres**
+**Mestre/detalhes**
 
 Em vez de esconder totalmente o ponto de entrada das configurações do aplicativo em um painel de detalhes mestres, faça com que ele seja o último item fixado no nível superior do painel mestre.
 
@@ -104,7 +105,7 @@ Assim que você tiver uma lista de itens que deseja incluir na página de config
 -   Combine configurações menos utilizadas em uma única entrada para que as configurações mais comuns possam ter sua própria entrada. Coloque conteúdo ou links que incluam somente informações em uma configuração "Sobre".
 -   Não duplique a funcionalidade no painel "Permissões". O Windows fornece esse painel por padrão e não é possível modificá-lo.
 
-## <span id="add_settings_to_flyouts"></span><span id="ADD_SETTINGS_TO_FLYOUTS"></span> Adicione conteúdo de configurações a submenus Configurações
+## <span id="add_settings_to_flyouts"></span><span id="ADD_SETTINGS_TO_FLYOUTS"></span> Adicionar conteúdo de configurações a submenus Configurações
 
 
 -   Apresente o conteúdo de cima para baixo em uma única coluna, com rolagem, se necessário. Limite a rolagem para no máximo de duas vezes a altura da tela.
@@ -127,15 +128,18 @@ Assim que você tiver uma lista de itens que deseja incluir na página de config
 ## <span id="related_topics"></span>Tópicos relacionados
 
 * [Noções básicas de design de comandos](https://msdn.microsoft.com/library/windows/apps/dn958433)
-* [Diretrizes de controles de progresso](https://msdn.microsoft.com/library/windows/apps/hh465469)
-**Para desenvolvedores (XAML)**
+* [Diretrizes para controles de progresso](https://msdn.microsoft.com/library/windows/apps/hh465469)
+            
+          
+            **para desenvolvedores (XAML)**
 * [Armazenar e recuperar dados de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt299098)
-* [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
-�
+* [
+              **EntranceThemeTransition**
+            ](https://msdn.microsoft.com/library/windows/apps/br210288) �
 
 �
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

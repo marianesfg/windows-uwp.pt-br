@@ -1,20 +1,21 @@
 ---
-Description: Ao criar um novo aplicativo em seu painel do Centro de Desenvolvimento do Windows, o nome do aplicativo deve ser exclusivo em toda a loja. Este tópico explica como reservar nomes e inclui algumas sugestões para escolher um nome de aplicativo excelente.
-title: Crie seu aplicativo reservando um novo nome
+author: jnHs
+Description: A primeira etapa na criação de um novo aplicativo no painel do Centro de Desenvolvimento do Windows é reservar um nome de aplicativo. Veja como reservar nomes e encontrar sugestões para escolher um nome excelente para o seu aplicativo.
+title: Crie seu aplicativo reservando um nome
+keywords:
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
 ---
 
 # Crie seu aplicativo reservando um nome
 
 
-Ao criar um novo aplicativo em seu painel do Centro de Desenvolvimento do Windows, o nome do aplicativo deve ser exclusivo em toda a loja. Este tópico explica como reservar nomes e inclui algumas sugestões para [escolher um nome de aplicativo excelente](#choosing-your-app-s-name).
+A primeira etapa na criação de um novo aplicativo no painel do Centro de Desenvolvimento do Windows é reservar um nome de aplicativo. Veja como reservar nomes e encontrar sugestões para [escolher um nome excelente para o seu aplicativo](#choosing-your-app-s-name). Cada nome reservado deve ser exclusivo em toda a Loja.
 
 > **Observação**  Se você tiver um aplicativo do Windows Phone criado anteriormente e nunca reservou um nome para ele, ainda será possível gerenciar e enviar o aplicativo. No entanto, para carregar pacotes .appx pacotes para ele, ou [exibir detalhes de identidade de aplicativo](view-app-identity-details.md) específicos à criação de pacotes .appx, você precisará reservar um nome exclusivo seguindo as etapas abaixo. Isso também impede que outra pessoa reserve o nome para si.
 
 Quando você [carrega seus pacotes de aplicativo](upload-app-packages.md), o [**Package/Properties/DisplayName**](https://msdn.microsoft.com/library/windows/apps/dn423240) valor deve corresponder ao nome que você reservou para seu aplicativo no **Painel**. Se você usar o Microsoft Visual Studio para criar o pacote de seu aplicativo, esse atributo será preenchido para você.
 
 ## Crie seu aplicativo reservando um novo nome
-
 
 Reservar um nome é a primeira etapa na criação de um aplicativo no painel. Você pode fazer isso mesmo se não tiver começado a criar seu aplicativo ainda. Recomendamos que você faça isso assim que possível para que ninguém mais possa usar o nome.
 
@@ -30,7 +31,6 @@ Depois de reservar um nome, você terá um ano para enviar o aplicativo. Se voc�
 
 ## Escolhendo o nome do aplicativo
 
-
 Escolher o melhor nome para o aplicativo é uma tarefa importante. Escolha um nome que chamará a atenção dos seus clientes e fazer com que eles queiram saber mais sobre seu aplicativo. Veja algumas dicas para escolher o melhor nome para seu aplicativo.
 
 -   **Mantenha-o curto.** O espaço para exibir o nome do seu aplicativo é limitado em muitos lugares; por isso, sugerimos usar o nome mais curto possível. Embora o nome do aplicativo possa ter até 256 caracteres, nem sempre o final de um nome muito longo pode ficar visível aos clientes.
@@ -42,7 +42,6 @@ Escolher o melhor nome para o aplicativo é uma tarefa importante. Escolha um no
 -   **Não use nomes com marca comercial de outros.** Certifique-se de ter os direitos de uso do nome reservado. Caso alguém tenha registrado o nome, ele poderá relatar uma infração, e você não poderá continuar usando o nome. Se isso ocorrer após a publicação do aplicativo, ele será removido da Loja. Desse modo, você precisará alterar o nome do seu aplicativo e todas as instâncias do nome em todo o aplicativo e seu conteúdo antes de [enviar o aplicativo](app-submissions.md) para certificação novamente.
 
 ## Gerenciar nomes de aplicativos adicionais
-
 
 Você pode gerenciar nomes para seus aplicativos na página **Gerenciar nomes de aplicativo** na seção **Gerenciamento de aplicativos** para cada um dos seus aplicativos no painel do Centro de Desenvolvimento do Windows.
 
@@ -61,6 +60,6 @@ Para saber mais, consulte [Gerenciar nomes de aplicativo](manage-app-names.md).
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

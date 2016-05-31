@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: Os Serviços de Notificação por Push do Windows (WNS) permitem que desenvolvedores terceirizados enviem atualizações de notificações do sistema, de blocos, de selos e brutas pelo próprio serviço de nuvem. Isso proporciona um mecanismo para entregar novas atualizações aos usuários de forma eficaz e confiável.
 title: Visão geral dos Serviços de Notificação por Push do Windows (WNS)
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
-label: a ser definido
+label: TBD
 template: detail.hbs
 ---
 
 # Visão geral dos Serviços de Notificação por Push do Windows (WNS)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Os Serviços de Notificação por Push do Windows (WNS) permitem que desenvolvedores terceirizados enviem atualizações de notificações do sistema, de blocos, de selos e brutas pelo próprio serviço de nuvem. Isso proporciona um mecanismo para entregar novas atualizações aos usuários de forma eficaz e confiável.
@@ -35,7 +36,7 @@ Antes de enviar notificações usando o WNS, o aplicativo deve ser registrado co
 
 Cada aplicativo tem seu próprio conjunto de credenciais para seu serviço na nuvem. Essas credenciais não podem ser usadas para enviar notificações para qualquer outro aplicativo.
 
-Para obter mais detalhes sobre como registrar seu aplicativo, veja o tópico sobre [como autenticar no WNS (Serviço de Notificação do Windows)](https://msdn.microsoft.com/library/windows/apps/hh465407).
+Para obter mais detalhes sobre como registrar seu aplicativo, consulte o tópico sobre [como autenticar no WNS (Serviço de Notificação do Windows)](https://msdn.microsoft.com/library/windows/apps/hh465407).
 
 ## <span id="Requesting_a_notification_channel"></span><span id="requesting_a_notification_channel"></span><span id="REQUESTING_A_NOTIFICATION_CHANNEL"></span>Solicitando um canal de notificação
 
@@ -108,11 +109,11 @@ O exemplo a seguir mostra uma resposta de autenticação bem-sucedida, incluindo
 
 Usando o URI do canal, o serviço na nuvem pode enviar uma notificação sempre que tiver uma atualização para o usuário.
 
-O token de acesso descrito acima pode ser reutilizado em várias solicitações de notificação; o servidor na nuvem não é necessário para solicitar um novo token de acesso para cada notificação. Se o token de acesso tiver expirado, a solicitação de notificação retornará um erro. Recomendamos que você não tente reenviar a notificação mais de uma vez se o token de acesso for rejeitado. Se você encontrar esse erro, precisará solicitar um novo token de acesso e reenviar a notificação. Para obter o código de erro exato, veja os [códigos de resposta da notificação por push](https://msdn.microsoft.com/library/windows/apps/hh465435).
+O token de acesso descrito acima pode ser reutilizado em várias solicitações de notificação; o servidor na nuvem não é necessário para solicitar um novo token de acesso para cada notificação. Se o token de acesso tiver expirado, a solicitação de notificação retornará um erro. Recomendamos que você não tente reenviar a notificação mais de uma vez se o token de acesso for rejeitado. Se você encontrar esse erro, precisará solicitar um novo token de acesso e reenviar a notificação. Para obter o código de erro exato, consulte os [códigos de resposta da notificação por push](https://msdn.microsoft.com/library/windows/apps/hh465435).
 
 1.  O serviço na nuvem cria um HTTP POST para o URI do canal. Esta solicitação deve ser feita sobre SSL e contém os cabeçalhos e a carga de notificação necessárias. O cabeçalho de autorização deve incluir o símbolo de acesso obtido para a autorização.
 
-    Um exemplo da solicitação é mostrado aqui: Para obter os detalhes da sintaxe, veja os [códigos de resposta da notificação por push](https://msdn.microsoft.com/library/windows/apps/hh465435).
+    Um exemplo da solicitação é mostrado aqui: Para obter os detalhes da sintaxe, consulte os [códigos de resposta da notificação por push](https://msdn.microsoft.com/library/windows/apps/hh465435).
 
     Os detalhes sobre como compor a carga da notificação estão em [Guia de início rápido: enviando uma notificação por push](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252). A carga de uma notificação por push de bloco, do sistema ou de selo é fornecida como conteúdo XML que segue seus respectivos [esquemas de blocos adaptáveis](tiles-and-notifications-adaptive-tiles-schema.md) ou [esquemas de blocos herdados](https://msdn.microsoft.com/library/windows/apps/br212853) definidos. A carga de uma notificação bruta não tem uma estrutura especificada. Ela é estritamente definida pelo aplicativo.
 
@@ -143,12 +144,12 @@ Este diagrama ilustra o fluxo de dados:
 -   Quando o dispositivo está offline, o WNS armazena até cinco notificações de bloco (se a fila está habilitada; caso contrário, uma notificação de bloco) e uma notificação de selo para cada URI de canal e nenhuma notificação bruta. Esse comportamento padrão de armazenamento em cache pode ser alterado pelo [cabeçalho X-WNS-Cache-Policy](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_cache). Observe que as notificações do sistema nunca são armazenadas quando o dispositivo está offline.
 -   Nos cenários onde o conteúdo da notificação é personalizado para o usuário, o WNS recomenda que o serviço na nuvem envie essas atualizações imediatamente quando elas forem recebidas. Os exemplos desse cenário incluem atualizações de feeds de mídias sociais, convites de comunicação instantânea, notificações de novas mensagens ou alertas. Como alternativa, você pode ter cenários em que a mesma atualização genérica frequentemente é fornecida a um grande subconjunto dos seus usuários. Por exemplo, atualizações de clima, cotações e notícias. As diretrizes do WNS especificam que a frequência dessas atualizações deve ser no máximo uma a cada 30 minutos. O usuário final ou o WNS pode determinar que as atualizações de rotina mais frequentes são abusivas.
 
-## <span id="expiry"></span><span id="EXPIRY"></span>Expiração de notificações de blocos e selos
+## <span id="expiry"></span><span id="EXPIRY"></span>Expiração de notificações de selo e bloco
 
 
 Por padrão, as notificações de bloco e de selo expiram três dias depois que são baixadas. Quando uma notificação expira, o conteúdo é removido do bloco ou da fila e não é mais mostrado para o usuário. É recomendável definir uma expiração (usando um tempo que faça sentido para o aplicativo) em todas as notificações de bloco e de selo. Assim, você garante que o conteúdo do bloco não continue além do tempo relevante. Um tempo de expiração explícito é essencial para conteúdo com tempo de vida definido. Isso também garante a remoção de conteúdo obsoleto se seu serviço de nuvem parar de enviar notificações ou se o usuário se desconectar da rede por um período de tempo prolongado.
 
-Seu serviço de nuvem pode definir uma expiração para cada notificação com a definição do cabeçalho HTTP X-WNS-Expires para especificar o tempo (em segundos) que sua notificação permanecerá válida após o envio. Para saber mais, veja [Cabeçalhos de solicitação e resposta do serviço de notificação por push](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_ttl).
+Seu serviço de nuvem pode definir uma expiração para cada notificação com a definição do cabeçalho HTTP X-WNS-Expires para especificar o tempo (em segundos) que sua notificação permanecerá válida após o envio. Para saber mais, consulte [Cabeçalhos de solicitação e resposta do serviço de notificação por push](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_ttl).
 
 Por exemplo, durante um dia de negociação ativo do mercado de ações, você pode definir a expiração para uma atualização de preços de ações para duas vezes mais do que seu intervalo de envio (por exemplo, uma hora após o recebimento, se estiver enviando notificações a cada meia hora). Outro exemplo é um aplicativo de notícias que pode determinar que um dia é um período de expiração adequado para a atualização de blocos de notícias diárias.
 
@@ -164,7 +165,7 @@ Não há nenhuma maneira de se verificar o estado dessas duas configurações, m
 
 Se o aplicativo depende muito de notificações por push, recomendamos notificar os usuários de que eles podem não receber notificações enquanto a economia de bateria estiver ativada e facilitar para que eles possam ajustar as **configurações de economia de bateria**. Ao usar o esquema de URI de configurações de economia de bateria no Windows 10, `ms-settings:batterysaver-settings`, você pode fornecer um link conveniente para o aplicativo Configurações.
 
-**Dica**   Quando notificar o usuário sobre as configurações de economia de bateria, é recomendável fornecer uma maneira para suprimir a mensagem no futuro. Por exemplo, a caixa de seleção `dontAskMeAgainBox` no exemplo a seguir persiste a preferência do usuário em [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622).
+**Dica**   Quando notificar o usuário sobre as configurações de economia de bateria, é recomendável fornecer uma maneira de suprimir a mensagem no futuro. Por exemplo, a caixa de seleção `dontAskMeAgainBox` no exemplo a seguir persiste a preferência do usuário em [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622).
 
  
 
@@ -261,6 +262,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

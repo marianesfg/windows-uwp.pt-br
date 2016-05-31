@@ -1,6 +1,7 @@
 ---
+author: jnHs
 Description: O relatório Classificações no painel do Centro de Desenvolvimento do Windows permite que você consulte a distribuição de como os clientes classificam seu aplicativo na Windows Store.
-title: Relatório Classificações
+title: Relatório de classificações
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
 ---
 
@@ -37,7 +38,7 @@ O gráfico **Número de classificações** mostra o número total de classifica�
 
 O gráfico **Classificações novas e revisadas** mostra o número de classificações de cada tipo de classificação (nova ou revisada) durante o período de tempo selecionado.
 
--   **Novas classificações** são classificações que os clientes enviaram, mas que não foram alteradas.
+-   **Classificações de novas** são classificações que os clientes enviaram, mas que não foram alteradas.
 -   **Classificações revisadas** são classificações que foram alteradas pelo cliente.
 
 >**Observação**  Uma classificação aparecerá aqui como revisada mesmo se o cliente tiver apenas alterado ou adicionado o texto ou o título de sua análise e deixado a classificação em si inalterada.
@@ -60,13 +61,13 @@ O gráfico **Mercados** mostra a classificação média e o número de classific
 
 Por padrão, podemos mostrar o mercado que tinha mais críticas e continuar para baixo, mas você pode reverter essa ordem, alternando a seta na coluna **Número de classificações** deste gráfico. Você também pode classificar os dados por **Média de classificação** ou **Mercado**, clicando nessas colunas.
 
-> **Observação**  É provável que você consulte um número diferente de classificações ao comparar o relatório de **Classificações** no Centro de Desenvolvimento do Windows com o relatório de Avaliações no aplicativo móvel mais antigo do Centro de Desenvolvimento. Isso ocorre porque o aplicativo mostra apenas os dados de avaliações de clientes no Windows Phone 8.1 e versões anteriores. Isso também pode ser resultado do trabalho da Microsoft de remover avaliações da Windows Store que foram identificadas como spam, inadequadas, ofensivas ou que violam a política de outra forma. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
+> **Observação** É provável que você consulte um número diferente de classificações ao comparar o relatório **Classificações** no Centro de Desenvolvimento do Windows com o relatório Críticas no aplicativo móvel mais antigo do Centro de Desenvolvimento. Isso ocorre porque o aplicativo mostra apenas os dados de avaliações de clientes no Windows Phone 8.1 e versões anteriores. Isso também pode ser resultado do trabalho da Microsoft de remover avaliações da Windows Store que foram identificadas como spam, inadequadas, ofensivas ou que violam a política de outra forma. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
 
  
 
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,5 +1,6 @@
 ---
-Description: É possível gerar códigos promocionais para um aplicativo ou um IAP (produto no aplicativo) que você tiver publicado na Windows Store.
+author: jnHs
+Description: É possível pode gerar códigos promocionais para um aplicativo ou um IAP (produto no aplicativo) que você tiver publicado na Windows Store.
 title: Gerar códigos promocionais
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ---
@@ -19,7 +20,7 @@ No painel do Centro de Desenvolvimento do Windows, você pode:
     -   Resumos de pedidos de código promocional para todos os seus aplicativos (na página **Visão geral do painel**) e para cada aplicativo individualmente (na página **Visão geral do aplicativo** para cada aplicativo).
     -   Um resumo detalhado dos pedidos de código promocional para cada aplicativo (na página **Códigos promocionais** para cada aplicativo).
 
-> **Observação** Você pode gerar códigos promocionais mesmo se tiver selecionado a opção **Ocultar este aplicativo e evitar a aquisição. Os clientes com um código promocional ainda poderão baixá-lo em dispositivos Windows 10**na página do painel [Preço e disponibilidade](set-app-pricing-and-availability.md) de seu aplicativo. Seu aplicativo deve passar a fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md) antes que os usuários possam resgatar um código promocional para instalá-lo.
+> **Observação**  Você pode gerar códigos promocionais mesmo se tiver selecionado a opção **Ocultar este aplicativo e evitar a aquisição. Os clientes com um código promocional ainda poderão baixá-lo em dispositivos Windows 10** na página do painel [Preço e disponibilidade](set-app-pricing-and-availability.md) de seu aplicativo. Seu aplicativo deve passar a fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md) antes que os usuários possam resgatar um código promocional para instalá-lo.
 
 ## Políticas para códigos promocionais
 
@@ -88,21 +89,21 @@ Depois que você distribui uma URL resgatável a um usuário, as etapas a seguir
 
 1.  O usuário clica na URL resgatável.
 
-    O navegador é aberto na página autenticada **Resgatar seu código** em <https://account.microsoft.com/billing/redeem>. Essa página inclui uma descrição do aplicativo que o usuário está prestes a resgatar.
+    O navegador é aberto na página autenticada **Resgatar seu código** em <https://account.microsoft.com/billing/redeem>. Esta página inclui uma descrição do aplicativo que o usuário está prestes a resgatar.
 
 2.  O usuário clica em **Resgatar.**
 
-    O navegador vai até uma página **Obrigado** com um link **Obter** ***&lt;o nome do aplicativo&gt; ***.
+    O navegador vai até uma página **Obrigado** com um link **Obter*****&lt;o nome do aplicativo&gt;***.
 
-    > **Observação** Os usuários receberão um erro nessa etapa se seu aplicativo ainda não tiver sido publicado.
+    > **Observação**  Os usuários receberão um erro nessa etapa se seu aplicativo ainda não tiver sido publicado.
 
-3.  A usuário clica em **Obter** ***&lt;o nome do aplicativo&gt;***.
+3.  A usuário clica em **Obter*****&lt;o nome do aplicativo&gt;***.
 
 4.  Se o usuário estiver em um computador com a Windows Store para Windows 10 ou Windows 8.1 instalada, a Windows Store será aberta na página de visão geral do aplicativo. O usuário pode clicar em **Instalar** para instalar o aplicativo sem custos.
 
     Se o usuário estiver em um computador ou dispositivo que não tenha a Windows Store instalada, o navegador abrirá a página da Web da Windows Store do aplicativo. O usuário pode clicar em **Instalar** para instalar o aplicativo sem custos.
 
-    > **Observação** Em alguns casos, a página do aplicativo pode exibir um botão **Comprar** em vez de **Instalar**, mesmo que o aplicativo tenha sido resgatado com êxito pelo código promocional. O usuário pode clicar em **Comprar** para instalar o aplicativo sem custos.
+    > **Observação**  Em alguns casos, a página do aplicativo pode exibir um botão **Comprar** em vez de **Instalar**, mesmo que o aplicativo tenha sido resgatado com êxito pelo código promocional. O usuário pode clicar em **Comprar** para instalar o aplicativo sem custos.
 
 ## Analisar seus códigos promocionais
 
@@ -129,6 +130,6 @@ Você também pode baixar um pedido ativo dessa tabela.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

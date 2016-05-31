@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Usadas para selecionar ou desmarcar itens de ação. Podem ser usadas para um item de lista único ou vários itens de lista.
 title: Caixas de seleção
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
@@ -11,7 +12,7 @@ Uma caixa de seleção é usada para marcar ou desmarcar itens de ação. Ela po
 
 ![Exemplo de estados de caixa de seleção](images/templates-checkbox-states-default.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs Importantes</span>
+<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
 -   [**Classe CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)
 -   [**Evento Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)
 -   [**Propriedade IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 
@@ -287,6 +288,6 @@ private void SetCheckedState()
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

@@ -8,7 +8,7 @@ author: awkoren
 # Restrições de exportação na criptografia
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use estas informações para determinar se seu aplicativo usa criptografia de forma que possa impedir que ele seja listado na Windows Store.
 
@@ -55,6 +55,6 @@ Se seu aplicativo chamar, der suporte, contiver ou usar criptografia para qualqu
 Se você não tiver um ECCN, consulte [Perguntas e respostas sobre ECCN](http://go.microsoft.com/fwlink/p/?LinkID=245646).
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

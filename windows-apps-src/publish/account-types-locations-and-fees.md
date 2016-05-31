@@ -1,4 +1,5 @@
 ---
+author: jnHs
 ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: Tipos de conta, localizações e taxas
 description: Oferecemos contas de desenvolvedor individuais e empresariais em muitos países e regiões.
@@ -8,9 +9,9 @@ description: Oferecemos contas de desenvolvedor individuais e empresariais em mu
 
 Oferecemos dois tipos de contas de desenvolvedor: contas individuais e contas empresariais. As contas de desenvolvedor são oferecidas em muitos [países e regiões](#developer-account-and-app-submission-markets). Os dois fornecem acesso para publicar aplicativos na loja e participar de programas adicionais de desenvolvedor da Microsoft.
 
-> **Observação**  Criando uma conta individual ou empresarial, você pode associar apenas um conta da Microsoft à conta de desenvolvedor. Ao se inscrever em uma conta, certifique-se de entrar com a conta da Microsoft que deseja usar para sua conta de desenvolvedor.
+> **Observação**  Criando uma conta individual ou empresarial, você pode associar apenas uma conta da Microsoft à conta de desenvolvedor. Ao se inscrever em uma conta, certifique-se de entrar com a conta da Microsoft que deseja usar para sua conta de desenvolvedor.
 
-Quando você [começar o processo de inscrição](http://go.microsoft.com/fwlink/p/?LinkId=615100), precisará escolher entre criar uma conta individual ou uma conta empresarial.
+Quando você [começar o processo de inscrição](http://go.microsoft.com/fwlink/p/?LinkId=615100), precisará escolher entre criar uma conta individual ou uma conta empresarial. As contas individuais são projetadas para desenvolvedores autônomos que trabalham por conta própria. Contas de empresa são projetadas para organizações e empresas. As contas de empresa fornecem acesso a alguns recursos adicionais de aplicativos. Também exigimos uma verificação maior para contas de empresa depois do seu registro para confirmar se você está autorizado a configurar a conta para sua empresa. Essa verificação pode levar desde alguns dias a até várias semanas e normalmente inclui um telefonema para sua empresa. Os dois tipos de conta permitirão que você envie aplicativos, suplementos e serviços.
 
 > **Importante**  Você não pode alterar o tipo de conta quando fizer a seleção, então tenha certeza de escolher o tipo certo.
 
@@ -20,7 +21,7 @@ Aqui estão as principais diferenças entre os dois tipos de conta.
 |--------------------|-----------------|
 | <ul><li>Não pode usar funcionalidades específicas do aplicativo</li><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li></ul> | <ul><li>Requer verificação via Symantec ou Dun & Bradstreet</li><li>Mais acesso a todas as funcionalidades do aplicativo</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Custa aproximadamente US$ 99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li></ul> |
 
-> **Importante**   Se você decidir criar uma conta empresaria, tenha certeza de analisar nossas [diretrizes para contas empresariais](opening-a-developer-account.md#additional-guidelines-for-company-accounts).
+> **Importante**  Se você decidir criar uma conta empresarial, tenha certeza de analisar nossas [diretrizes para contas empresariais](opening-a-developer-account.md#additional-guidelines-for-company-accounts).
 
 As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Um dos principais benefícios de ter uma conta empresarial é a capacidade de enviar aplicativos que incluem [Declarações de funcionalidades do aplicativo](https://msdn.microsoft.com/library/windows/apps/Mt270968) adicionais.
 
@@ -42,7 +43,7 @@ Você pode se registrar para obter uma conta de desenvolvedor e enviar aplicativ
 
 Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua conta de desenvolvedor. Os preços estão sujeito a mudanças.
 
-> **Observação**  Adicionaremos os impostos e taxas aplicáveis à taxa de registro quando você se inscrever. Além disso, quando pagarmos a você, o seu banco pode cobrar uma taxa para receber o pagamento.
+> **Observação**  Adicionaremos os impostos e as taxas aplicáveis à taxa de registro quando você se inscrever. Além disso, quando pagarmos a você, o seu banco pode cobrar uma taxa para receber o pagamento.
 
 A coluna **Pagamento** descreve como pagaremos a você o dinheiro que você ganha nos seus aplicativos. Você poderá escolher a [conta de pagamento](setting-up-your-payout-account-and-tax-forms.md) em que depositaremos o dinheiro.
 
@@ -120,7 +121,7 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 |  Grécia | 14 EUR | 75 EUR | EUR pago ao banco | Sim | 
 |  Groenlândia | 19 USD | 99 USD | Sem pagamento | Não | 
 |  Granada | 19 USD | 99 USD | Sem pagamento | Não | 
-|  Guatemala | 19 USD | 99 USD | GTQ pago ao banco | Não | 
+|  Guatemala | GTQ 145 | GTQ 750 | GTQ pago ao banco | Não | 
 |  Guiné | 19 USD | 99 USD | USD pago ao banco | Não | 
 |  Guiné-Bissau | 19 USD | 99 USD | Sem pagamento | Não | 
 |  Guiana | 19 USD | 99 USD | Sem pagamento | Não | 
@@ -139,9 +140,9 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 |  Japão | 1847 JPY | 9800 JPY | JPY pago ao banco | Sim | 
 |  Jordânia | 13 JOD | 70 JOD | JOD pago ao banco | Não | 
 |  Cazaquistão | 2897 KZT | 15038 KZT | KZT pago ao banco | Não | 
-|  Quênia | 19 USD | 99 USD | KES pago ao banco | Não | 
+|  Quênia | KES 1900 | KES 9999 | KES pago ao banco | Não | 
 |  Kiribati | 19 USD | 99 USD | Sem pagamento | Não | 
-|  Coréia | 21216 KRW | 108000 KRW | USD pago ao banco | Não | 
+|  Coreia | 21216 KRW | 108000 KRW | USD pago ao banco | Não | 
 |  Kuwait | 5 KWD | 28 KWD | KWD pago ao banco | Não | 
 |  Quirguistão | 19 USD | 99 USD | Sem pagamento | Não | 
 |  Laos | 19 USD | 99 USD | USD pago ao banco | Não | 
@@ -179,7 +180,7 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 |  Nova Zelândia | 24 NZD | 140 NZD | NZD pago ao banco | Sim | 
 |  Nicarágua | 19 USD | 99 USD | USD pago ao banco | Não | 
 |  Níger | 19 USD | 99 USD | XOF pago ao banco | Não | 
-|  Nigéria | 19 USD | 99 USD | NGN pago ao banco | Não | 
+|  Nigéria | NGN 3700 | NGN 19500 | NGN pago ao banco | Não | 
 |  Noruega | 113 NOK | 580 NOK | NOK pago ao banco | Sim | 
 |  Omã | 7 OMR | 40 OMR | OMR pago ao banco | Não | 
 |  Paquistão | 1959 PKR | 9000 PKR | PKR pago ao banco | Não | 
@@ -192,8 +193,8 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 |  Polônia | 59 PLN | 280 PLN | PLN pago ao banco | Sim | 
 |  Portugal | 14 EUR | 75 EUR | EUR pago ao banco | Sim | 
 |  Catar | 69 QAR | 360 QAR | QAR pago ao banco | Não | 
-|  Romênia | 63 RON | 360 RON | USD pago ao banco | Não | 
-|  Rússia | 626 RUB | 3.000 RUB | RUB pago ao banco | Sim* | 
+|  Romênia | 14 EUR | 75 EUR | USD pago ao banco | Não | 
+|  Rússia | 626 RUB | RUB 3000 | RUB pago ao banco | Sim* | 
 |  Ruanda | 19 USD | 99 USD | RWF pago ao banco | Não | 
 |  São Cristóvão e Névis | 19 USD | 99 USD | Sem pagamento | Não | 
 |  Santa Lúcia | 19 USD | 99 USD | Sem pagamento | Não | 
@@ -254,6 +255,6 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

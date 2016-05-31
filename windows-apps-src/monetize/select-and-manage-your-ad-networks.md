@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 86D9D3CF-8FDC-4B67-881B-DF33A1BEE8BF
 description: Antes de usar o controle de anúncios, você precisará configurar as contas com cada rede de publicidade que você gostaria de usar em seus aplicativos.
 title: Selecionar e gerenciar suas redes de publicidade
@@ -7,7 +8,7 @@ title: Selecionar e gerenciar suas redes de publicidade
 # Selecionar e gerenciar suas redes de publicidade
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Antes de usar o controle de anúncios, você precisará configurar as contas com cada rede de publicidade que você gostaria de usar em seus aplicativos. É recomendável fazer isso antes de adicionar o controle de anúncios ao seu projeto do Microsoft Visual Studio. Também recomendamos que você configure tantas contas com redes de publicidade quanto possível, para que você tenha o máximo de flexibilidade a fim de otimizar o desempenho do controle de anúncios.
 
@@ -101,7 +102,7 @@ Observe que, quando você [adiciona o controle de mediador de anúncios](add-and
 
 Além dos parâmetros necessários, cada rede de publicidade também tem parâmetros opcionais que você pode definir através do código em seu aplicativo. Para obter a lista completa dos parâmetros opcionais, consulte a documentação fornecida por cada rede de publicidade. Para definir esses parâmetros opcionais em seu código, use a propriedade **AdSdkOptionalParameters** do seu objeto **AdMediatorControl**.
 
-O exemplo a seguir demonstra como configurar o parâmetro **CountryOrRegion** para o Microsoft Advertising.
+O exemplo a seguir demonstra como configurar a propriedade [CountryOrRegion](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.countryorregion.aspx) do Microsoft Advertising para código de país ou região de duas letras do usuário.
 
 ```CSharp
 myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.MicrosoftAdvertising]["CountryOrRegion"] = "IN";
@@ -125,6 +126,6 @@ myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.Smaato]["Height"] = 250;
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

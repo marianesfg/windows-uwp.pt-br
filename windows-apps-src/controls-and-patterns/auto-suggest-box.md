@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Uma caixa de entrada de texto que fornece sugestões à medida que o usuário digita.
 title: Diretrizes para caixas de sugestão automática
 ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
@@ -11,7 +12,7 @@ Use uma AutoSuggestBox para fornecer uma lista de sugestões para um usuário se
 
 ![Uma caixa de sugestão automática](images/controls/auto-suggest-box-open.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs Importantes</span>
+<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
 
 -   [**Classe AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
 -   [**Evento TextChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)
@@ -88,7 +89,7 @@ Aqui está uma AutoSuggestBox com um ícone de 'pesquisar'.
 
 ![Exemplo do ponto de entrada para o controle de sugestão automática](images/controls_autosuggest_entrypoint.png)
 
-## Amostras
+## Exemplos
 
 Para ver exemplos práticos completos de AutoSuggestBox, consulte [AutoSuggestBox migration sample](http://go.microsoft.com/fwlink/p/?LinkId=619996) e [XAML UI Basics sample](http://go.microsoft.com/fwlink/p/?LinkId=619992).
 
@@ -151,6 +152,6 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

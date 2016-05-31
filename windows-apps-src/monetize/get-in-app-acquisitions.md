@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
 description: Use este método na API de análise da Windows Store para obter dados agregados de aquisição de um produto no aplicativo (IAP) durante um determinado intervalo de datas e outros filtros opcionais.
 title: Obter aquisições IAP
@@ -7,7 +8,7 @@ title: Obter aquisições IAP
 # Obter aquisições IAP
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use este método na API de análise da Windows Store para obter dados agregados de aquisição de um produto no aplicativo (IAP) durante um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
@@ -37,7 +38,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obrigatório. O token de acesso do Azure AD no formato **Bearer** &lt;*token*&gt;. |
+| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
 
  
 
@@ -100,7 +101,7 @@ O parâmetro *applicationId* ou *inAppProductId* é obrigatório. Para recuperar
 <tr class="odd">
 <td align="left">filter</td>
 <td align="left">string</td>
-<td align="left">Uma ou mais instruções que filtram as linhas na resposta. Para saber mais, consulte a seção [filter fields](#filter-fields) a seguir.</td>
+<td align="left">Uma ou mais instruções que filtram as linhas na resposta. Para saber mais, consulte a seção [campos de filtro](#filter-fields) a seguir.</td>
 <td align="left">Não</td>
 </tr>
 <tr class="even">
@@ -244,7 +245,7 @@ Para obter uma lista dos campos com suporte, consulte a tabela a seguir. Valores
 
 Os exemplos a seguir demonstram várias solicitações de obtenção de dados de aquisição de IAP. Substitua os valores de *inAppProductId* ou *applicationId* com as IDs de produto apropriadas para seu aplicativo ou IAP.
 
-```
+```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?inAppProductId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
 Authorization: Bearer <your access token>
 
@@ -332,6 +333,6 @@ O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
  
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

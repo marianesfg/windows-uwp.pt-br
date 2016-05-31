@@ -1,12 +1,13 @@
 ---
+author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
-description: Este artigo mostra como converter mídia em dispositivos remotos de um Aplicativo Universal do Windows.
+description: Este artigo mostra como converter mídia em dispositivos remotos de um aplicativo Universal do Windows.
 title: Transmissão de mídia
 ---
 
 # Transmissão de mídia
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como converter mídia em dispositivos remotos de um aplicativo Universal do Windows.
@@ -27,7 +28,7 @@ Adicione um botão para permitir que o usuário inicie selecionando um arquivo.
 
 [!code-xml[OpenButton](./code/MediaCastingWin10/cs/MainPage.xaml#SnippetOpenButton)]
 
-No manipulador de eventos [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) para o botão, crie uma nova instância do [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847), adicione tipos de arquivo de vídeo para a coleção do [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850) e defina o local inicial para a biblioteca de vídeos do usuário.
+No manipulador de eventos [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) para o botão, crie uma nova instância do [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847), adicione tipos de arquivo de vídeo à coleção do [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850) e defina o local inicial para a biblioteca de vídeos do usuário.
 
 Chame [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275) para iniciar a caixa de diálogo do seletor de arquivos. Quando esse método retorna, o resultado é um objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo de vídeo. Verifique se o arquivo não é nulo, o que acontecerá se o usuário cancelar a operação de seleção. Chame o método [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227221.aspx) do arquivo para obter um [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) para o arquivo. Por fim, chame o método **MediaElement** do objeto [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) para tornar o arquivo de vídeo a fonte de vídeo para o controle.
 
@@ -65,7 +66,7 @@ No manipulador de eventos do **CastingDeviceSelected**, chame o método [**Creat
 
 [!code-cs[CastingDeviceSelected](./code/MediaCastingWin10/cs/MainPage.xaml.cs#SnippetCastingDeviceSelected)]
 
-Nos manipuladores de eventos **ErrorOccurred** e **StateChanged**, você deve atualizar sua interface do usuário para informar o usuário sobre o status atual da transmissão. Esses eventos são discutidos em detalhes na seção a seguir sobre a criação de um seletor de dispositivo personalizado de transmissão.
+Nos manipuladores de eventos **ErrorOccurred** e **StateChanged**, você deve atualizar sua interface do usuário para informar o usuário sobre o status atual da transmissão. Esses eventos são abordados em detalhes na seção a seguir sobre a criação de um seletor de dispositivo personalizado de transmissão.
 
 [!code-cs[EmptyStateHandlers](./code/MediaCastingWin10/cs/MainPage.xaml.cs#SnippetEmptyStateHandlers)]
 
@@ -94,17 +95,17 @@ No manipulador **Click** para o *startWatcherButton*, primeiro atualize a interf
 
 Em seguida, crie um inspetor de dispositivos chamando [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427). Esse método pode ser usado para assistir a muitos tipos diferentes de dispositivos. Especificar que você deseja ver dispositivos que suportam transmissão de vídeo usando a cadeia de caracteres do seletor de dispositivo retornado como [**CastingDevice.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn972551).
 
-Por fim, registrar manipuladores de eventos para os eventos [**Added**](https://msdn.microsoft.com/library/windows/apps/br225450), [**Removed**](https://msdn.microsoft.com/library/windows/apps/br225453), [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451) e [**Stopped**](https://msdn.microsoft.com/library/windows/apps/br225457).
+Por fim, registre manipuladores de eventos para os eventos [**Added**](https://msdn.microsoft.com/library/windows/apps/br225450), [**Removed**](https://msdn.microsoft.com/library/windows/apps/br225453), [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451) e [**Stopped**](https://msdn.microsoft.com/library/windows/apps/br225457).
 
 [!code-cs[StartWatcherButtonClick](./code/MediaCastingWin10/cs/MainPage.xaml.cs#SnippetStartWatcherButtonClick)]
 
 O evento **Added** é acionado quando um novo dispositivo é descoberto pelo inspetor. No manipulador para este evento, crie um novo objeto [**CastingDevice**](https://msdn.microsoft.com/library/windows/apps/dn972524) chamando [**CastingDevice.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn972550) e passando a ID do dispositivo descoberto para transmissão, que está contido no objeto **DeviceInformation** passado para o manipulador.
 
-Adicione o **CastingDevice** para o dispositivo de transmissão **ListBox** para que o usuário possa selecioná-lo. Devido ao [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/br242830) definido em XAML, a propriedade [**FriendlyName**](https://msdn.microsoft.com/library/windows/apps/dn972549) será usada como o texto do item na caixa de listagem. Porque esse manipulador de eventos não é chamado no thread da interface do usuário, você deve atualizar a interface do usuário de dentro de uma chamada para [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317).
+Adicione o **CastingDevice** para o dispositivo de transmissão **ListBox** para que o usuário possa selecioná-lo. Devido ao [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/br242830) definido em XAML, a propriedade [**FriendlyName**](https://msdn.microsoft.com/library/windows/apps/dn972549) será usada como o texto do item na caixa de listagem. Como esse manipulador de eventos não é chamado no thread da interface do usuário, você deve atualizar a interface do usuário de dentro de uma chamada para [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317).
 
 [!code-cs[WatcherAdded](./code/MediaCastingWin10/cs/MainPage.xaml.cs#SnippetWatcherAdded)]
 
-O evento **Removed** é acionado quando o inspetor detecta que um dispositivo de transmissão não está mais presente. Compare a propriedade do ID do objeto **Added** passado para o manipulador para o ID de cada **Added** na coleção da caixa de listagem [**Items**](https://msdn.microsoft.com/library/windows/apps/br242823). Se a ID corresponde, remova esse objeto da coleção. Novamente, porque a interface do usuário está sendo atualizada, essa chamada deve ser feita de dentro do **RunAsync**.
+O evento **Removed** é acionado quando o inspetor detecta que um dispositivo de transmissão não está mais presente. Compare a propriedade do ID do objeto **Added** passado para o manipulador para o ID de cada **Added** na coleção da caixa de listagem [**Items**](https://msdn.microsoft.com/library/windows/apps/br242823). Se a ID corresponde, remova esse objeto da coleção. Novamente, como a interface do usuário está sendo atualizada, essa chamada deve ser feita de dentro do **RunAsync**.
 
 [!code-cs[WatcherRemoved](./code/MediaCastingWin10/cs/MainPage.xaml.cs#SnippetWatcherRemoved)]
 
@@ -150,6 +151,6 @@ Por fim, implemente o manipulador para o botão desconectar. Pare a transmissão
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

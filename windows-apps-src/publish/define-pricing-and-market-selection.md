@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: A Windows Store abrange clientes em mais de 200 países e regiões em todo o mundo.
 title: Definir preço e seleção de mercado
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
@@ -166,7 +167,7 @@ Você pode optar por listar seu aplicativo (ou IAP) em um ou mais dos mercados a
 -   Cazaquistão
 -   Quênia
 -   Kiribati
--   Coréia
+-   Coreia
 -   Quirguistão
 -   Kuwait
 -   Laos
@@ -282,7 +283,7 @@ Você pode optar por listar seu aplicativo (ou IAP) em um ou mais dos mercados a
 -   Reino Unido
 -   Estados Unidos
 -   Uruguai
--   Territórios Insulares dos Estados Unidos
+-   Territórios Insulares dos EUA
 -   Ilhas Virgens Americanas
 -   Uzbequistão
 -   Venezuela
@@ -535,7 +536,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
 -   Ilhas Turks e Caicos
 -   Tuvalu
 -   Uganda
--   Territórios Insulares dos Estados Unidos
+-   Territórios Insulares dos EUA
 -   Ilhas Virgens Americanas
 -   Uzbequistão
 -   Venezuela
@@ -546,9 +547,9 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
 -   Zâmbia
 -   Zimbábue
 
-> **Observação**  Para uma lista de países e regiões em que você pode registrar uma conta de desenvolvedor, veja [Tipos de conta, locais e tarifas](https://msdn.microsoft.com/library/windows/apps/jj863494).
+> **Observação**  Para uma lista de países e regiões em que você pode registrar uma conta de desenvolvedor, consulte [Tipos de conta, locais e tarifas](https://msdn.microsoft.com/library/windows/apps/jj863494).
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

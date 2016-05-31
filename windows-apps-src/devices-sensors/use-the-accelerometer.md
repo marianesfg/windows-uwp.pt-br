@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
 title: Usar o acelerômetro
 description: Saiba como usar o acelerômetro para responder ao movimento do usuário.
 ---
 # Usar o acelerômetro
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -125,11 +126,11 @@ Você precisará substituir o nome do namespace no trecho anterior pelo nome que
 
 Você precisará substituir a primeira parte do nome da classe no trecho anterior pelo namespace de seu aplicativo. Por exemplo, se você criou um projeto denominado **AccelerometerCS**, pode substituir `x:Class="App1.MainPage"` por `x:Class="AccelerometerCS.MainPage"`. Você também deve substituir `xmlns:local="using:App1"` por `xmlns:local="using:AccelerometerCS"`.
 
--   Pressione F5 ou selecione **Depurar** &gt; **Iniciar Depuração** para criar, implantar e executar o aplicativo.
+-   Pressione F5 ou selecione **Depurar**&gt;**Iniciar Depuração** para criar, implantar e executar o aplicativo.
 
 Quando o aplicativo estiver em execução, você poderá alterar os valores do acelerômetro. Basta mover o dispositivo ou usar as ferramentas do emulador.
 
--   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift+F5 ou selecionar **Depurar** &gt; **Parar Depuração** para parar o aplicativo.
+-   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar**&gt;**Parar Depuração** para parar o aplicativo.
 
 ### Explicação
 
@@ -169,6 +170,6 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

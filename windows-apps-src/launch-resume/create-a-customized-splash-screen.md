@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Exibir uma tela inicial por mais tempo
 description: Exiba uma tela inicial por mais tempo criando uma tela inicial estendida para o seu aplicativo. Essa tela estendida imita a tela inicial exibida quando o aplicativo é iniciado, mas pode ser personalizada.
 ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
@@ -7,7 +8,7 @@ ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
 # Exibir uma tela inicial por mais tempo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -56,7 +57,7 @@ No arquivo ExtendedSplash.xaml:
 
 Adicione o seguinte código para definir elementos [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) e [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752), bem como um controle [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538), em ExtendedSplash.xaml:
 
-```xaml
+```xml
     <Grid Background="#464646">
         <Canvas>
             <Image x:Name="extendedSplashImage" Source="Assets/SplashScreen.png"/>
@@ -120,7 +121,7 @@ Use estas etapas de forma a definir os métodos para a exibição correta da sua
         if (splash != null)
         {
             // Register an event handler to be executed when the splash screen has been dismissed.
-            splash.Dismissed += new TypedEventHandler&lt;SplashScreen, Object&gt;(DismissedEventHandler);
+            splash.Dismissed += new TypedEventHandler<SplashScreen, Object>(DismissedEventHandler);
 
             // Retrieve the window coordinates of the splash screen image.
             splashImageRect = splash.ImageLocation;
@@ -168,7 +169,7 @@ Use estas etapas de forma a definir os métodos para a exibição correta da sua
     Em ExtendedSplash.xaml.cs, responda quando o evento [**SplashScreen.Dismissed**](https://msdn.microsoft.com/library/windows/apps/br224764) ocorrer, definindo a variável de classe `dismissed` como true. Se o aplicativo tiver operações de instalação, adicione-as a esse manipulador de eventos.
 
     ```cs
-    // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application&#39;s first view).
+    // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application's first view).
     void DismissedEventHandler(SplashScreen sender, object e)
     {
         dismissed = true;
@@ -222,7 +223,7 @@ Use estas etapas de forma a definir os métodos para a exibição correta da sua
     {
         if (loadState)
         {
-             // code to load your app&#39;s state here 
+             // code to load your app's state here 
         }
     }
     ```
@@ -261,7 +262,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 
 ExtendedSplash.xaml: esse exemplo inclui um botão `DismissSplash` porque ele não tem recursos de aplicativo a serem carregados. Em seu aplicativo, ignore a tela inicial estendida automaticamente quando o aplicativo tiver concluído o carregamento de recursos ou a preparação de sua interface do usuário inicial.
 
-```xaml
+```xml
 <Page
     x:Class="SplashScreenExample.ExtendedSplash"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -385,7 +386,7 @@ namespace SplashScreenExample
             }
         }
 
-        // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application&#39;s first view).
+        // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application's first view).
         void DismissedEventHandler(SplashScreen sender, object e)
         {
             dismissed = true;
@@ -492,7 +493,7 @@ namespace SplashScreenExample
 
             if (rootFrame.Content == null)
             {
-                // When the navigation stack isn&#39;t restored navigate to the first page,
+                // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
@@ -548,6 +549,6 @@ namespace SplashScreenExample
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

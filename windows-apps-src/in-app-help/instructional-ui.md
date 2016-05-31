@@ -1,13 +1,14 @@
 ---
+author: QuinnRadich
 Description: Crie uma interface do usuário instrucional que ensine os usuários a trabalhar com seu aplicativo da Windows Store.
-title: Diretrizes de criar uma interface do usuário instrucional
+title: Diretrizes para criar uma interface do usuário instrucional
 label: Instructional UI
 template: detail.hbs
 ---
 
 # Diretrizes da interface do usuário instrucional
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Em algumas circunstâncias, pode ser útil ensinar o usuário sobre funções em seu aplicativo que podem não ser óbvias, como interações de toque específicas. Nesses casos, você precisa apresentar instruções para o usuário por meio da interface do usuário, para que ele possa usar esses recursos que talvez tenha ignorado.
 
@@ -24,8 +25,8 @@ A menos que seu aplicativo dependa de gestos de toque, interface do usuário ins
 Uma boa interface do usuário instrucional é relevante e educativa para o usuário e melhora a experiência do usuário. Ela deve ser:
 
 -   **Simples:** os usuários não querem que sua experiência seja interrompida com informações complicadas
--   **Memorável:** os usuários não querem ver as mesmas instruções toda vez que tentarem uma tarefa, portanto, as instruções precisam ser algo de que se lembrarão.
--   **Imediatamente relevantes:** se a interface do usuário instrucional não ensinar um usuário sobre algo que ele deseja fazer imediatamente, ele não terá um motivo para prestar atenção a ela.
+-   **Memorável:** os usuários não querem ver as mesmas instruções toda vez que tentarem executar uma tarefa, portanto, as instruções precisam ser algo de que se lembrarão.
+-   **Imediatamente relevantes:** se a interface do usuário instrucional não ensinar um usuário sobre algo que ele deseja fazer imediatamente, ele não terá motivo para prestar atenção a ela.
 
 Evite o uso excessivo de interface do usuário instrucional e certifique-se de escolher os tópicos certos. Não ensine:
 
@@ -66,6 +67,6 @@ Estas são algumas situações nas quais a interface do usuário instrucional po
 * [Diretrizes da ajuda do aplicativo](guidelines-for-app-help.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

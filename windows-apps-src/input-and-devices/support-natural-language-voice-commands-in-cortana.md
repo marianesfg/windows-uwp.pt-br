@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Saiba como estender a Cortana com comandos de voz mais flexíveis e naturais, para que um usuário possa dizer o nome do seu aplicativo em qualquer lugar do comando.
 title: Suporte a comandos de voz em linguagem natural na Cortana
 ms.assetid: 281E068A-336A-4A8D-879A-D8715C817911
@@ -7,9 +8,6 @@ template: detail.hbs
 ---
 
 # Suporte a comandos de voz em linguagem natural na Cortana
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Estenda a **Cortana** com comandos de voz mais flexíveis e naturais, para que um usuário possa dizer o nome do seu aplicativo em qualquer lugar do comando.
 
@@ -31,7 +29,7 @@ Você pode configurar os comandos de voz para dar suporte ao nome do aplicativo 
 
 **Pré-requisitos:  **
 
-Este tópico complementa [Iniciar um aplicativo em segundo plano com comando de voz na Cortana](launch-a-background-app-with-voice-commands-in-cortana.md). Continuaremos demonstrando recursos com um aplicativo de planejamento e gerenciamento de viagens chamado **Adventure Works**.
+Este tópico complementa [Iniciar um aplicativo em segundo plano com comandos de voz na Cortana](launch-a-background-app-with-voice-commands-in-cortana.md). Continuaremos demonstrando recursos com um aplicativo de planejamento e gerenciamento de viagens chamado **Adventure Works**.
 
 Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal do Windows (UWP), consulte estes tópicos para familiarizar-se com as tecnologias discutidas aqui.
 
@@ -40,13 +38,12 @@ Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal
 
 **Diretrizes de experiência do usuário:  **
 
-Consulte as [Diretrizes de design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233), para saber como integrar seu aplicativo à **Cortana** e as [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121) para obter dicas úteis para criar um aplicativo interessante e prático, habilitado para controle por voz.
+Consulte as [Diretrizes de design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233), para obter informações sobre como integrar seu aplicativo à **Cortana** e as [Diretrizes de design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121) para obter dicas úteis para criar um aplicativo interessante e prático, habilitado para controle por voz.
 
 ## <span id="Specify_an_AppName_element_in_the_VCD"></span><span id="specify_an_appname_element_in_the_vcd"></span><span id="SPECIFY_AN_APPNAME_ELEMENT_IN_THE_VCD"></span>Especifique um elemento **AppName** no VCD
 
 
 O elemento **AppName** é usado para especificar um nome amigável para um aplicativo em um comando de voz.
-
 ```XML
 <AppName>Adventure Works</AppName>
 ```
@@ -63,7 +60,6 @@ O elemento **ListenFor** tem um atributo **RequireAppName** que especifica onde 
     Indica que os usuários devem dizer o nome do aplicativo antes da frase de comando.
 
     Assim, a Cortana ouve "Adventure Works quando é minha viagem para Las Vegas".
-
 ```xml
 <ListenFor RequireAppName="BeforePhrase"> show [my] trip to {destination} </ListenFor>
 ```
@@ -75,7 +71,6 @@ O elemento **ListenFor** tem um atributo **RequireAppName** que especifica onde 
     Uma lista de frases localizadas de conjunções preposicionais é fornecida pelo sistema. Ela inclui frases como "usando", "com" e "em".
 
     Assim, a Cortana ouve comandos como "Mostre minha próxima viagem para Las Vegas no Adventure Works" e "Mostre minha próxima viagem para Las Vegas usando o Adventure Works".
-
 ```xml
 <ListenFor RequireAppName="AfterPhrase">show [my] next trip to {destination} </ListenFor>
 ```
@@ -87,7 +82,6 @@ O elemento **ListenFor** tem um atributo **RequireAppName** que especifica onde 
     Para a versão de sufixo, uma lista de frases localizadas de conjunções preposicionais é fornecida pelo sistema. Ela inclui frases como "usando", "com" e "em".
 
     Assim, a Cortana ouve comandos como "Adventure Works, mostre minha próxima viagem para Las Vegas" ou "Mostre minha próxima viagem para Las Vegas no Adventure Works".
-
 ``` xml
 <ListenFor RequireAppName="BeforeOrAfterPhrase">show [my] next trip to {destination}</ListenFor>
 ```
@@ -99,7 +93,6 @@ O elemento **ListenFor** tem um atributo **RequireAppName** que especifica onde 
     É necessário fazer referência explicitamente ao nome do aplicativo usando a marca **{builtin:AppName}**.
 
     Assim, a Cortana ouve comandos como "Adventure Works, mostre minha próxima viagem para Las Vegas" ou "Mostre minha próxima viagem do Adventure Works para Las Vegas".
-
 ```xml
 <ListenFor RequireAppName="ExplicitlySpecified">show [my] next {builtin:AppName} trip to {destination} </ListenFor>
 ```
@@ -117,7 +110,6 @@ Ao declarar um elemento **ListenFor**, em que **RequireAppName** é "AfterPhrase
     Isso ajuda a minimizar a chance de a **Cortana** iniciar seu aplicativo caso um comando contenha o nome do aplicativo ou parte dele em qualquer lugar da expressão.
 
     Esta é uma declaração inválida que poderia fazer a **Cortana** iniciar o aplicativo **Adventure Works** se o usuário dissesse algo como "Mostre-me críticas do Kinect Adventure works".
-
 ```xml
 <ListenFor RequireAppName="ExplicitlySpecified">{searchPhrase} {builtin:AppName}</ListenFor>
 ```
@@ -129,7 +121,6 @@ Ao declarar um elemento **ListenFor**, em que **RequireAppName** é "AfterPhrase
     Isso ajuda a configurar o aplicativo para o maior sucesso possível, de forma que ele não seja iniciado incorretamente quando o usuário disser, por exemplo, "Localizar Kinect Adventure works".
 
     Estas são declarações inválidas que poderiam fazer a **Cortana** iniciar o aplicativo **Adventure Works** quando o usuário dissesse algo como "Ei, adventure works" ou "Localizar Kinect adventure works".
-
 ```xml
 <ListenFor RequireAppName="ExplicitlySpecified">Hey {builtin:AppName}</ListenFor>
 <ListenFor RequireAppName="ExplicitlySpecified">Find {searchPhrase} {builtin:AppName}</ListenFor>
@@ -150,9 +141,7 @@ Considere usar o nome do aplicativo como prefixo quando o comando de voz estiver
 
 Este é um arquivo VCD que demonstra várias formas de fornecer comandos de voz em linguagem mais natural.
 
-**Observação**  Isso é válido para ter vários elementos **ListenFor**, cada um com um valor de atributo **RequireAppName** diferente.
-
- 
+**Observação**  Isso é válido para ter vários elementos **ListenFor**, cada um com um valor de atributo **RequireAppName** diferente. 
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -220,6 +209,6 @@ Este é um arquivo VCD que demonstra várias formas de fornecer comandos de voz 
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

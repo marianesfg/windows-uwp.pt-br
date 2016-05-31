@@ -8,7 +8,7 @@ author: awkoren
 # Criptografia
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 O artigo fornece uma visão geral dos recursos de criptografia disponíveis para aplicativos UWP (Plataforma Universal do Windows). Para obter informações detalhadas sobre tarefas específicas, consulte a tabela no final deste artigo.
@@ -143,6 +143,6 @@ Os artigos a seguir fornecem mais detalhes sobre cenários de segurança:
 
  
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

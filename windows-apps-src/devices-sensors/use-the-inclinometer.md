@@ -1,18 +1,19 @@
 ---
+author: DBirtolo
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: Usar o inclinômetro
-description: Saiba como usar o inclinômetro para determinar rotação sobre o eixo x, rolagem e rotação sobre o eixo y.
+description: Saiba como usar o inclinômetro para determinar a rotação sobre o eixo x, a rolagem e a rotação sobre o eixo y.
 ---
 # Usar o inclinômetro
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Inclinômetro**](https://msdn.microsoft.com/library/windows/apps/BR225766)
 
-Saiba como usar o inclinômetro para determinar rotação sobre o eixo x, rolagem e rotação sobre o eixo y.
+Saiba como usar o inclinômetro para determinar a rotação sobre o eixo x, a rolagem e a rotação sobre o eixo y.
 
 Alguns jogos 3-D requerem um inclinômetro como dispositivo de entrada. Um exemplo comum é o simulador de voo, que mapeia os eixos do inclinômetro (X, Y e Z) para as entradas de elevador, aileron e leme da aeronave.
 
@@ -121,11 +122,11 @@ Você precisará substituir o nome do namespace no trecho anterior pelo nome que
     </Page>
 ```
 
-Você precisará substituir a primeira parte do nome da classe no trecho anterior pelo namespace de seu aplicativo. Por exemplo, se você criou um projeto denominado **InclinometerCS**, pode substituir `x:Class="App1.MainPage"` por `x:Class="InclinometerCS.MainPage"`. Você também deve substituir `xmlns:local="using:App1"` por `xmlns:local="using:InclinometerCS"`.
+Você precisará substituir a primeira parte do nome da classe no trecho anterior pelo namespace de seu aplicativo. Por exemplo, se você criou um projeto denominado **InclinometerCS**, poderá substituir `x:Class="App1.MainPage"` por `x:Class="InclinometerCS.MainPage"`. Você também deve substituir `xmlns:local="using:App1"` por `xmlns:local="using:InclinometerCS"`.
 
 -   Pressione F5 ou selecione **Depurar** > **Iniciar Depuração** para criar, implantar e executar o aplicativo.
 
-Quando o aplicativo estiver em execução, você pode alterar os valores do inclinômetro. Basta mover o dispositivo ou usar as ferramentas do emulador.
+Quando o aplicativo estiver em execução, você poderá alterar os valores do inclinômetro. Basta mover o dispositivo ou usar as ferramentas do emulador.
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** > **Parar Depuração** para parar o aplicativo.
 
@@ -149,7 +150,7 @@ _inclinometer.ReportInterval = reportInterval;
 
 Os novos dados do inclinômetro são capturados no método **ReadingChanged**. Toda vez que o driver do sensor recebe novos dados do sensor, ele transmite o valor para seu aplicativo usando este manipulador de eventos. O aplicativo registra este manipulador de eventos na seguinte linha.
 
-```
+```csharp
 _inclinometer.ReadingChanged += new TypedEventHandler<Inclinometer, 
 InclinometerReadingChangedEventArgs>(ReadingChanged);
 ```
@@ -171,6 +172,6 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

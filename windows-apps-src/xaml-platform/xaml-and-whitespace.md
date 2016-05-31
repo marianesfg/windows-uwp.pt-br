@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Conheça as regras de processamento de espaços em branco usadas por XAML.
 title: XAML e espaço em branco
 ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
@@ -6,7 +7,7 @@ ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
 
 # XAML e espaço em branco
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Conheça as regras de processamento de espaços em branco usadas por XAML.
 
@@ -48,6 +49,6 @@ Entidades e espaços sem quebra: o XAML dá suporte à inserção de qualquer en
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

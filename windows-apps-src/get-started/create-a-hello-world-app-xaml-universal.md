@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Criar um aplicativo Hello, world (XAML)
 description: Este tutorial ensina a usar XAML (Extensible Application Markup Language) com C# para criar um aplicativo Hello, world simples destinado à UWP (Plataforma Universal do Windows) no Windows 10.
@@ -35,7 +36,7 @@ Aqui, você aprenderá a:
 
 2.  No menu **Arquivo**, selecione **Novo** > **Projeto**.
 
-   A caixa de diálogo **Novo Projeto** é exibida. O painel esquerdo da caixa de diálogo permite que você selecione o tipo de modelos para exibição.
+   A caixa de diálogo **Novo Projeto** será exibida. O painel esquerdo da caixa de diálogo permite que você selecione o tipo de modelos a exibir.
 
 3.  No painel esquerdo, expanda **Instalado > Modelos > Visual C# > Windows** e escolha o grupo de modelos **Universal**. O painel central da caixa de diálogo exibe uma lista de modelos de projeto para aplicativos UWP (Plataforma Universal do Windows).
 
@@ -138,7 +139,7 @@ Agora, vamos adicionar algum conteúdo para o aplicativo.
         <TextBlock Text="What' s your name?"/>
         <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
             <TextBox x:Name="nameInput" Width="280" HorizontalAlignment="Left"/>
-            <Button x:Name="inputButton" Content="Say &amp;quot;Hello&amp;quot;"/>
+            <Button x:Name="inputButton" Content="Say &quot;Hello&quot;"/>
         </StackPanel>
         <TextBlock x:Name="greetingOutput"/>
     </StackPanel>
@@ -234,7 +235,7 @@ Você também perceberá que é possível digitar na [**TextBox**](https://msdn.
 
 Elementos XAML podem enviar mensagens quando determinados eventos ocorrem. Essas mensagens de evento permitem executar uma ação em resposta ao evento. Você coloca seu código para responder ao evento em um método do manipulador de eventos. Um dos eventos mais comuns em vários aplicativos é o usuário clicar em um [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265).
 
-Agora, criaremos um manipulador de eventos para o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) do botão. O manipulador de eventos obterá o nome do usuário por meio do controle `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e o usará para gerar uma saudação no `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652).
+Agora, criaremos um manipulador de eventos para o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) do botão. O manipulador de eventos obterá o nome do usuário por meio do controle `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e o usará para gerar uma saudação no `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652).
 
 ### Usando eventos que funcionam com a entrada de toque, mouse e caneta
 
@@ -253,10 +254,10 @@ Quais eventos devem ser manipulados? Como seu aplicativo da Windows Store poder�
     No editor XAML, o XAML do [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) é atualizado para declarar o manipulador de eventos [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737), deste modo.
 
 ```xml   
-   <Button x:Name="inputButton" Content="Say &amp;quot;Hello&amp;quot;" Click="Button_Click"/>
+   <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
 ```    
 
-5.  Adicione código ao manipulador de eventos criado na página code-behind. No manipulador de eventos, recupere o nome do usuário por meio do controle `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e use-o para criar uma saudação. Use o `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) para exibir o resultado.
+5.  Adicione código ao manipulador de eventos criado na página code-behind. No manipulador de eventos, recupere o nome do usuário por meio do controle `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e use-o para criar uma saudação. Use o `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) para exibir o resultado.
     
 ```csharp    
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -317,6 +318,6 @@ O segundo [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR20
 Parabéns, você criou seu primeiro aplicativo para o Windows 10 e a UWP!
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

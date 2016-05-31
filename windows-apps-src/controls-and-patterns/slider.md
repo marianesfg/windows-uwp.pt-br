@@ -1,13 +1,14 @@
 ---
+author: Jwmsft
 Description: Permite que o usuário defina um valor em um determinado intervalo.
 title: Controles deslizantes
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
-label: Controles deslizantes
+label: Sliders
 template: detail.hbs
 ---
 # Controles deslizantes
 
-Controle deslizante é um controle que permite que o usuário selecione de uma lista de valores movendo um controle de posição paralelo a uma faixa.
+Controle deslizante é um controle que permite que o usuário selecione em uma lista de valores movendo um controle de posição paralelo a uma faixa.
 
 ![Um controle deslizante](images/controls/slider.png)
 
@@ -17,7 +18,7 @@ Controle deslizante é um controle que permite que o usuário selecione de uma l
 -   [**Propriedade Value**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx)
 -   [**Evento ValueChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)
 
-## Este é o controle correto?
+## Esse é o controle correto?
 
 Use um controle deslizante quando quiser que os usuários tenham condições de estabelecer valores contíguos definidos (como volume ou brilho) ou um intervalo de valores distintos (como configurações de resolução de tela).
 
@@ -27,11 +28,11 @@ Não use um controle deslizante para configurações binárias. Use um [botão d
 
 Veja a seguir alguns fatores adicionais que você deve considerar ao decidir se irá usar um controle deslizante:
 
--   **A configuração parece uma quantidade relativa?** Se não parecer, use os [botões de opção](radio-button.md) ou uma [caixa de lista](lists.md).
--   **A configuração é um valor numérico exato conhecido?** Se sim, use uma [caixa de texto](text-box.md) numérico.
+-   **A configuração parece uma quantidade relativa?** Se não parecer, use os [botões de opção](radio-button.md) ou uma [caixa de listagem](lists.md).
+-   **A configuração é um valor numérico exato conhecido?** Se sim, use uma [caixa de texto](text-box.md).
 -   **O usuário se beneficiaria com um feedback instantâneo sobre o efeito das alterações de configuração?** Se sim, use um controle deslizante. Por exemplo, os usuários podem escolher uma cor com mais facilidade vendo imediatamente o efeito das alterações nos valores de matiz, saturação ou luminosidade.
--   **A configuração tem um intervalo de quatro ou mais valores?** Se não tiver, use [botões de opção](radio-button.md).
--   **O usuário pode alterar o valor? ** Controles deslizantes são para interação do usuário. Se um usuário não puder alterar o valor, use texto somente leitura.
+-   **A configuração tem um intervalo de quatro ou mais valores?** Se não parecer, use os [botões de opção](radio-button.md).
+-   **O usuário pode alterar o valor?** Controles deslizantes são destinados para interação do usuário. Se um usuário não puder alterar o valor, use texto somente leitura.
 
 Se você estiver decidindo entre um controle deslizante e uma caixa de texto numérico, use uma caixa de texto numérico se:
 
@@ -97,7 +98,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 -   Não altere o tamanho padrão da miniatura de controle deslizante.
 -   Não crie um controle deslizante contínuo se o intervalo de valores for grande e os usuários provavelmente selecionarão um entre diversos valores representativos de dentro do intervalo. Em vez disso, utilize os valores como as únicas etapas permitidas. Por exemplo, se o valor para tempo pode ficar acima de um mês mas os usuários só precisam escolher entre 1 minuto, 1 hora, 1 dia ou 1 mês, crie um controle deslizante com quatro pontos de etapa.
 
-## Diretrizes de uso adicional
+## Diretriz de uso adicional
 
 ### Escolhendo o layout correto: horizontal ou vertical
 
@@ -162,11 +163,13 @@ Quando você está projetando um controle deslizante personalizado, considere me
 ## Tópicos relacionados
 
 **Para designers**
-- [Diretrizes de botões de alternância](toggles.md)
-**Para desenvolvedores (XAML)**
+- [Diretrizes para botões de alternância](toggles.md)
+            
+          
+            **para desenvolvedores (XAML)**
 - [**Classe Slider**](https://msdn.microsoft.com/library/windows/apps/br209614)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

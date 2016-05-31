@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 5B30E32F-27E0-4656-A834-391A559AC8BC
 title: Usar a bússola
 description: Saiba como usar a bússola para determinar a direção atual.
 ---
 # Usar a bússola
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -125,7 +126,7 @@ Você precisará substituir a primeira parte do nome da classe no trecho anterio
 
 -   Pressione F5 ou selecione **Depurar** > **Iniciar Depuração** para criar, implantar e executar o aplicativo.
 
-Quando o aplicativo estiver em execução, você pode alterar os valores da bússola. Basta mover o dispositivo ou usar as ferramentas do emulador.
+Quando o aplicativo estiver em execução, você poderá alterar os valores da bússola. Basta mover o dispositivo ou usar as ferramentas do emulador.
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** > **Parar Depuração** para parar o aplicativo.
 
@@ -175,6 +176,6 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

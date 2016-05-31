@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Testes do Kit de Certificação de Aplicativos Windows
 description: O Kit de Certificação de Aplicativos Windows contém diversos testes que podem ajudar a garantir que seu aplicativo esteja pronto para ser publicado na Windows Store.
@@ -306,9 +307,9 @@ Para serem certificados na Windows Store, os aplicativos devem usar as APIs para
 
 Verifique se o aplicativo foi compilado como uma compilação de versão e não como uma compilação de depuração.
 
-> **Observação**  A compilação de depuração de um aplicativo não passará neste teste mesmo se o aplicativo usar somente [APIs para aplicativos da Windows Store](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bg124285.aspx).
+> **Observação**  A compilação de depuração de um aplicativo não passará neste teste mesmo se o aplicativo usar somente [APIs para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-Consulte as mensagens de erro para identificar a API usada pelo aplicativo que não é uma [API para aplicativos da Windows Store](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bg124285.aspx).
+Consulte as mensagens de erro para identificar a API usada pelo aplicativo que não é uma [API para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
 > **Observação**  Os aplicativos C++ integrados em uma configuração de depuração falham no teste se a configuração usar somente APIs do SDK do Windows para aplicativos da Windows Store. Para saber mais, veja [Alternativas às APIs do Windows em aplicativos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=244022) para saber mais.
 
@@ -403,7 +404,7 @@ Use a tabela a seguir como guia.
 <tr><td>
 <p>A imagem deve definir pelo menos uma variante, sem um qualificador TargetSize. Ela deve definir um qualificador Scale ou deixar Scale e TargetSize não especificados, que tem o padrão Scale-100.</p>
 </td><td>
-<p>Para obter mais informações, consulte <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn958435.aspx">Design responsivo 101 para aplicativos UWP</a> e <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh465241.aspx">Diretrizes para recursos de aplicativos</a>.</p>
+<p>Para obter mais informações, consulte <a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx">Design responsivo 101 para aplicativos UWP</a> e <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">Diretrizes para recursos de aplicativos</a>.</p>
 </td></tr>
 <tr><td>
 <p>O pacote tem um arquivo "resources.pri" ausente.</p>
@@ -425,7 +426,7 @@ Use a tabela a seguir como guia.
 <tr><td>
 <p>A cadeia de caracteres {string} falhou na restrição de comprimento máximo de {number} caracteres.</p>
 </td><td>
-<p>Consulte os <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt148525.aspx">Requisitos do pacote do aplicativo</a>.</p>
+<p>Consulte os <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">Requisitos do pacote do aplicativo</a>.</p>
 <p>Na mensagem real, {string} é substituído pela cadeia de caracteres com o erro e {number} contém o comprimento máximo.</p>
 </td></tr>
 <tr><td>
@@ -438,12 +439,12 @@ Use a tabela a seguir como guia.
 <tr><td>
 <p>A cadeia de caracteres não pode estar vazia (o comprimento deve ser maior que zero)</p>
 </td><td>
-<p>Para obter mais informações, consulte <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt148525.aspx">Requisitos do pacote do aplicativo</a>.</p>
+<p>Para obter mais informações, consulte <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">Requisitos do pacote do aplicativo</a>.</p>
 </td></tr>
 <tr><td>
 <p>Não há recurso padrão especificado no arquivo "resources.pri".</p>
 </td><td>
-<p>Para obter mais informações, consulte <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh465241.aspx">Diretrizes de recursos de aplicativos</a>.</p>
+<p>Para obter mais informações, consulte <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">Diretrizes de recursos de aplicativos</a>.</p>
 <p>Na configuração de compilação padrão, o Visual Studio inclui apenas os recursos de imagem de escala 200 no pacote do aplicativo quando gera pacotes, colocando outros recursos no pacote de recursos. Inclua recursos de imagem de escala 200 ou configure seu projeto para incluir os recursos que você tem.</p>
 </td></tr>
 <tr><td>
@@ -575,11 +576,11 @@ Se qualquer uma dessas capacidades for declarada, o teste exibirá um aviso para
 Considere a remoção da funcionalidade de uso especial caso ela não seja necessária ao seu aplicativo. Além disso, o uso dessas funcionalidades está sujeito à análise da política do serviço.
 <!--TODO: after migrating dev-packaging, link to [if your app doesn't require it](dev-packaging.app-capability-declarations#special-and-restricted-capabilities)-->
 
-## Validação de metadados do Windows Runtime
+## Validação dos metadados do Windows Runtime
 
-### Em segundo plano
+### Histórico
 
-Verifica se os componentes que vêm com o aplicativo são compatíveis com o sistema de tipo de UWP.
+Verifica se os componentes que vêm com o aplicativo são compatíveis com o sistema de tipo UWP.
 
 ### Detalhes do teste
 
@@ -596,7 +597,7 @@ Verifica se os arquivos **.winmd** no pacote estão em conformidade com as regra
 
 ## Testes de integridade do pacote
 
-### Teste de arquivos apropriados da plataforma
+### Teste de arquivos apropriados para a plataforma
 
 Os aplicativos que instalam binários mistos podem falhar ou não funcionar corretamente dependendo da arquitetura do processador do usuário.
 
@@ -606,43 +607,43 @@ Este teste valida os binários em um pacote de aplicativo para conflitos de arqu
 
 ### Detalhes do teste
 
-Valida se o "número de bit" de cada arquivo no cabeçalho PE é apropriado quando há referência cruzada com a declaração de arquitetura de processador de pacote do aplicativo
+Valida se o "número de bit" de cada arquivo no cabeçalho PE é apropriado em caso de referência cruzada com a declaração de arquitetura do processador do pacote do aplicativo
 
 ### Ação corretiva
 
-Siga estas diretrizes para garantir que o pacote do aplicativo contenha apenas arquivos suportados pela arquitetura especificada no manifesto do aplicativo:
+Siga estas diretrizes para garantir que seu pacote de aplicativos contenha apenas arquivos suportados pela arquitetura especificada no manifesto do aplicativo:
 
-- Se a arquitetura do processador de destino para o seu aplicativo for tipo de processador neutro, o pacote do aplicativo não poderá conter arquivos de imagem ou binários x86, x64 ou ARM.
+-   Se a Arquitetura do processador alvo para o aplicativo for Tipo de processador neutro, o pacote de aplicativo não pode conter binário x86, x64 ou ARM ou arquivos do tipo imagem.
 
-- Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x86, o pacote de aplicativo deve conter apenas binário x86 ou arquivos do tipo imagem. Se o pacote contiver binário x64 ou ARM ou tipos de imagem, ele irá falhar no teste.
+-   Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x86, o pacote de aplicativo deve conter apenas binário x86 ou arquivos do tipo imagem. Se o pacote contiver binário x64 ou ARM ou tipos de imagem, ele irá falhar no teste.
 
-- Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x64, o pacote de aplicativo deve conter binário x64 ou arquivos do tipo imagem. Observe que, neste caso, o pacote pode também incluir arquivos x86, mas a experiência aplicativo primário deve utilizar o binário x64.
+-   Se a Arquitetura do processador alvo para o aplicativo for tipo de processador x64, o pacote de aplicativo deve conter binário x64 ou arquivos do tipo imagem. Observe que, neste caso, o pacote pode também incluir arquivos x86, mas a experiência aplicativo primário deve utilizar o binário x64.
 
     No entanto, se a embalagem contiver binário ARM ou arquivos do tipo imagem, ou se contiver apenas binários x86 ou arquivos de tipo de imagem, ele irá falhar no teste.
 
-- Se a Arquitetura do processador alvo para o aplicativo for tipo de processador ARM, o pacote de aplicativo deve conter apenas binário ARM ou arquivos do tipo imagem. Se o pacote contiver binário x64 ou x86 ou arquivos de tipos de imagem, ele falhará no teste.
+-   Se a Arquitetura do processador alvo para o aplicativo for tipo de processador ARM, o pacote de aplicativo deve conter apenas binário ARM ou arquivos do tipo imagem. Se o pacote contiver binário x64 ou x86 ou arquivos de tipos de imagem, ele falhará no teste.
 
-### Teste de estrutura de diretório suportada
+### Teste de estrutura de diretório compatível
 
-Valida que os aplicativos não estão criando subdiretórios como parte da instalação e que são maiores do que MAX\_PATH.
+Valida que os aplicativos não estão criando subdiretórios como parte da instalação e que são maiores do que MAX\-PATH.
 
 ### Histórico
 
-Os componentes do sistema operacional (incluindo Trident, WWAHost etc.) são limitados internamente a MAX\_PATH para caminhos do sistema de arquivos e não funcionarão corretamente em caminhos maiores.
+Os componentes do sistema operacional (incluindo Trident, WWAHost etc.) são limitados internamente a MAX\-PATH para caminhos do sistema de arquivos e não funcionarão corretamente em caminhos maiores.
 
 ### Detalhes do teste
 
-Verifica se nenhum caminho no diretório de instalação do aplicativo excede MAX\_PATH.
+Verifica se nenhum caminho no diretório de instalação do aplicativo excede MAX\-PATH.
 
 ### Ação corretiva
 
 Use uma estrutura de diretório ou um nome de arquivo menor.
 
-## Teste de uso de recursos
+## Teste do uso de recursos
 
 ### Teste de tarefa em segundo plano de WinJS
 
-O teste de tarefa em segundo plano de WinJS garante que aplicativos JavaScript tenham as declarações de fechamento apropriadas para que os aplicativos não consumam a bateria.
+O teste de tarefa em segundo plano WinJS verifica se os aplicativos JavaScript têm as declarações de fechamento apropriadas para que os aplicativos não consumam bateria.
 
 ### Histórico
 
@@ -656,7 +657,7 @@ Se o aplicativo não tiver um arquivo de tarefa em segundo plano especificado no
 
 Atualize o código JavaScript em segundo plano para chamar Close() corretamente.
 
-> **Observação**  Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos UWP. Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Observação** Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos UWP. Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -665,10 +666,6 @@ Atualize o código JavaScript em segundo plano para chamar Close() corretamente.
  
 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

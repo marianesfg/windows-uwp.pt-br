@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: Ativos de ícone de aplicativo, exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada do seu aplicativo de Plataforma Universal do Windows (UWP).
 title: Ativos de bloco e ícone
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
-label: Ativos de bloco e ícone
+label: Tile and icon assets
 template: detail.hbs
 ---
 
 # Diretrizes para ativos de bloco e ícone
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Ativos de ícone de aplicativo, exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada do seu aplicativo de Plataforma Universal do Windows (UWP). Estas diretrizes detalham onde os ativos de ícone de aplicativo são exibidos no sistema e fornecem dicas de design aprofundadas sobre como criar os ícones mais elaborados.
@@ -367,7 +368,7 @@ Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo reco
 -   Usos:
     -   Bloco icônico
 
-\[Este artigo contém informações que são específicas dos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## <span id="related_topics"></span>Tópicos relacionados
 
@@ -383,6 +384,6 @@ Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo reco
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

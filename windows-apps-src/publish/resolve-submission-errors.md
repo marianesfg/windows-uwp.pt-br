@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Se você encontrar erros depois de enviar seu aplicativo para a Loja, deverá resolvê-los para continuar o processo de certificação.
 title: Resolver erros de envio
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
@@ -40,6 +41,6 @@ Outro erro que você poderá ver depois de enviar seu aplicativo é **erro 1300*
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

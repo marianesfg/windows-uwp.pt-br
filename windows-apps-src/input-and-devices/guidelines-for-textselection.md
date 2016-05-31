@@ -1,8 +1,9 @@
 ---
-Description: Este tópico descreve a nova IU do Windows para seleção e manipulação de texto, imagens e controles. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esses novos mecanismos de seleção e manipulação em seu aplicativo da Windows Store.
+author: Karl-Bridge-Microsoft
+Description: Este tópico descreve a nova IU do Windows para a seleção e manipulação de texto, imagens e controles. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esses novos mecanismos de seleção e manipulação no seu aplicativo da Windows Store.
 title: Selecionando texto e imagens
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
-label: Selecionando texto e imagens
+label: Selecting text and images
 template: detail.hbs
 ---
 
@@ -10,7 +11,7 @@ template: detail.hbs
 
 Este artigo descreve a seleção e a manipulação de texto, imagens e controles e fornece diretrizes da experiência do usuário que devem ser consideradas ao usar esses mecanismos em seus aplicativos.
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **APIs importantes**
@@ -105,14 +106,16 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 
 **Para desenvolvedores**
 * [Interações personalizadas do usuário](https://msdn.microsoft.com/library/windows/apps/mt185599)
-**Amostras**
+
+**Exemplos**
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Amostras de arquivo-morto**
+* [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
+**Exemplos de arquivo-morto**
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de teste de toque](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: amostra de tinta simplificada](http://go.microsoft.com/fwlink/p/?linkid=246570)
@@ -128,6 +131,6 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

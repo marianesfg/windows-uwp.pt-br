@@ -8,7 +8,7 @@ author: awkoren
 # MACs, hashes e assinaturas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Esse artigo discute como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em aplicativos da Plataforma Universal do Windows (UWP) para detectar violação de mensagem.
@@ -186,6 +186,6 @@ A assinatura garante somente que a mensagem original não foi alterada e, ao usa
 
 Você pode usar um objeto [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para enumerar os algoritmos de assinaturas disponíveis e gerar ou importar um par de chaves. É possível usar métodos estáticos na classe [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) para assinar uma mensagem ou verificar uma assinatura.
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado.
 title: Solucionando problemas de portabilidade do Windows Runtime 8.x para UWP
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
@@ -27,7 +28,7 @@ Esta seção explica o que fazer se, ao abrir um projeto do Windows 10 no Visual
 -   Primeiro, determine o número da versão do SDK do Windows 10 que você instalou. Navegue até **C:\\Program Files (x86)\\Windows Kits\\10\\Include\\<versionfoldername>** e anote *<versionfoldername>*, que estará em notação quádrupla, "(Principal.Secundária.Compilação.Revisão".
 -   Abra o arquivo do projeto para editar e encontre os elementos `TargetPlatformVersion` e `TargetPlatformMinVersion`. Edite-os como a seguir, substituindo *<versionfoldername>* pelo número da versão em notação quádrupla encontrado no disco:
 
-```xaml
+```xml
    <TargetPlatformVersion><versionfoldername></TargetPlatformVersion>
     <TargetPlatformMinVersion><versionfoldername></TargetPlatformMinVersion>
 ```
@@ -48,6 +49,6 @@ O próximo tópico é [Portando XAML e a interface do usuário](w8x-to-uwp-porti
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

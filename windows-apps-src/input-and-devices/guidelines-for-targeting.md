@@ -1,15 +1,13 @@
 ---
-Description: Este tópico descreve o uso da geometria de contato para seleção por área de toque e fornece as melhores práticas de direcionamento em aplicativos do Windows Runtime.
+author: Karl-Bridge-Microsoft
+Description: Este tópico descreve o uso da geometria de contato por área de toque e fornece as práticas recomendadas de direcionamento em aplicativos do Windows Runtime.
 title: Direcionamento
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
-label: Direcionamento
+label: Targeting
 template: detail.hbs
 ---
 
 # Diretrizes de direcionamento
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A seleção por área de toque no Windows usa a área de contato total de cada dedo detectado por um digitalizador de toque. O conjunto maior e mais complexo de dados de entrada relatados pelo digitalizador é usado para aumentar a precisão ao determinar o destino desejado (ou mais provável) pelo usuário.
 
@@ -49,7 +47,7 @@ Os limites de distância e tempo podem ser usados para determinar o resultado de
 
 Por exemplo, quando um toque é detectado, ele é registrado se o objeto for arrastado em menos de 2,7 mm do ponto de toque e o dedo for levantado em 0,1 segundo ou menos depois do toque. Mover o dedo além desse limite de 2,7 mm faz com que o objeto seja arrastado e selecionado ou movido (para saber mais, veja [Diretrizes de deslizamento transversal](guidelines-for-cross-slide.md)). Dependendo do seu aplicativo, segurar o dedo por mais de 0,1 segundo pode fazer com que o sistema faça uma interação de autorrevelação (para saber mais, veja [Diretrizes de comentários visuais](guidelines-for-visualfeedback.md#selfreveal)).
 
-## <span id="Target_sizes"></span><span id="target_sizes"></span><span id="TARGET_SIZES"></span>Tamanhos do destino
+## <span id="Target_sizes"></span><span id="target_sizes"></span><span id="TARGET_SIZES"></span>Tamanhos do alvo
 
 
 Em geral, defina o tamanho do alvo de toque como 9 mm ou maior (48x48 pixels em uma tela de 135 PPI em um nível de ajuste predefinido de 1,0x). Evite usar alvos de toque que tenham menos de 7 mm.
@@ -120,7 +118,7 @@ Essas melhorias na plataforma de direcionamento e os comportamentos da interface
 
 Se um elemento tocável deve ser menor que o tamanho mínimo de alvo recomendado, as seguintes técnicas podem ser usadas para minimizar os problemas de direcionamento resultantes.
 
-## <span id="Tethering"></span><span id="tethering"></span><span id="TETHERING"></span>Compartilhamento
+## <span id="Tethering"></span><span id="tethering"></span><span id="TETHERING"></span>Conector
 
 
 O compartilhamento é uma indicação visual (um conector de um ponto de contato até o retângulo delimitador de um objeto) usada para indicar ao usuário que ele está conectado e interagindo com um objeto, mesmo que o contato de entrada não esteja diretamente em contato com o objeto. Isso pode ocorrer quando:
@@ -148,14 +146,15 @@ Siga estas diretrizes para criar interações de esfregar:
 ## <span id="related_topics"></span>Artigos relacionados
 
 
-**Amostras**
+**Exemplos**
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Amostra de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Amostras de arquivo-morto**
+* [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
+**Exemplos de arquivo-morto**
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de teste de toque](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: amostra de tinta simplificada](http://go.microsoft.com/fwlink/p/?linkid=246570)
@@ -171,6 +170,6 @@ Siga estas diretrizes para criar interações de esfregar:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

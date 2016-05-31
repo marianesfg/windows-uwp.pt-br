@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Você pode enviar aplicativos para a Windows Store em mais de 100 idiomas.
 title: Idiomas compatíveis
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
@@ -133,6 +134,6 @@ Estes são os idiomas aceitos pela Windows Store. Seu aplicativo deve dar suport
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

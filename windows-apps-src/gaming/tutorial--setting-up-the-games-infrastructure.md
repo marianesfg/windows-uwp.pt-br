@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Configurar o projeto de jogo
 description: O primeiro passo na montagem do jogo é configurar um projeto no Microsoft Visual Studio de modo a minimizar a quantidade de trabalho de infraestrutura de código necessária.
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
@@ -7,7 +8,7 @@ ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
 # Configurar o projeto de jogo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O primeiro passo na montagem do jogo é configurar um projeto no Microsoft Visual Studio de modo a minimizar a quantidade de trabalho de infraestrutura de código necessária. Você pode poupar muito tempo e problemas usando os modelos certos e configurando o projeto especificamente para o desenvolvimento de jogos. Guiaremos você em meio à instalação e à configuração de um projeto de jogo simples.
 
@@ -26,7 +27,7 @@ Você pode criar um jogo do zero, com apenas um editor de texto, alguns exemplos
 
 Um modelo do Visual Studio é uma coleção de configurações e arquivos de código voltados para um tipo específico de aplicativo com base na linguagem e na tecnologia de preferência. No Microsoft Visual Studio 2015, você encontrará vários modelos que podem facilitar consideravelmente o desenvolvimento de aplicativos gráficos e jogos. Se você não usar um modelo, será necessário desenvolver grande parte da estrutura básica de exibição e renderização de elementos gráficos por conta própria. Isso pode ser um pouco complexo para um novo desenvolvedor de jogos.
 
-O modelo certo para este tutorial é o chamado Aplicativo DirectX 11 (Universal Windows). No Visual Studio 2015, clique em **Arquivo** &gt; **Novo Projeto**e então:
+O modelo certo para este tutorial é o chamado Aplicativo DirectX 11 (Universal Windows). No Visual Studio 2015, clique em **Arquivo**&gt;**Novo Projeto** e então:
 
 1.  Em **Modelos**, selecione **Visual C++**, **Windows**, **Universal**.
 2.  No painel central, selecione **Aplicativo DirectX 11 (Universal Windows)**.
@@ -163,6 +164,6 @@ No próximo tutorial, [Definindo a estrutura UWP do jogo](tutorial--building-the
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

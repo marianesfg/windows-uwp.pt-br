@@ -1,12 +1,13 @@
 ---
-description: Classes de configurações de modelo
-title: Classes de configurações de modelo
+author: jwmsft
+description: Classes TemplateSettings
+title: Classes TemplateSettings
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 ---
 
-# Classes de configurações de modelo
+# Classes TemplateSettings
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Pré-requisitos
 
@@ -18,14 +19,30 @@ As classes **TemplateSettings** fornecem um conjunto de propriedades que são us
 
 Há várias classes **TemplateSettings**. Todas elas estão no namespace [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818). Aqui está uma lista das classes e um link para a propriedade **TemplateSettings** do controle relevante. Essa propriedade **TemplateSettings** é como você acessa os valores **TemplateSettings** para o controle e pode estabelecer associações de modelo às suas propriedades:
 
--   [**ComboBoxTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227752): valor de [**ComboBox.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209364)
--   [**GridViewItemTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh738499): valor de [**GridViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh738503)
--   [**ListViewItemTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh701948): valor de [**ListViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br242923)
--   [**ProgressBarTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227856): valor de [**ProgressBar.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227537)
--   [**ProgressRingTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh702248): valor de [**ProgressRing.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh702581)
--   [**SettingsFlyoutTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/dn298721): valor de [**SettingsFlyout.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/dn252826)
--   [**ToggleSwitchTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209804): valor de [**ToggleSwitch.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209731)
--   [**ToolTipTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209813): valor de [**ToolTip.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227629)
+-   [
+              **ComboBoxTemplateSettings**
+            ](https://msdn.microsoft.com/library/windows/apps/br227752): valor de [**ComboBox.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209364)
+-   [
+              **GridViewItemTemplateSettings**
+            ](https://msdn.microsoft.com/library/windows/apps/hh738499): valor de [**GridViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh738503)
+-   [
+              **ListViewItemTemplateSettings**
+            ](https://msdn.microsoft.com/library/windows/apps/hh701948): valor de [**ListViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br242923)
+-   [
+              **ProgressBarTemplateSettings**
+            ](https://msdn.microsoft.com/library/windows/apps/br227856): valor de [**ProgressBar.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227537)
+-   [
+              **ProgressRingTemplateSettings**
+            ](https://msdn.microsoft.com/library/windows/apps/hh702248): valor de [**ProgressRing.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh702581)
+-   [
+              **SettingsFlyoutTemplateSettings**
+            ](https://msdn.microsoft.com/library/windows/apps/dn298721): value of [**SettingsFlyout.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/dn252826)
+-   [
+              **ToggleSwitchTemplateSettings**
+            ](https://msdn.microsoft.com/library/windows/apps/br209804): value of [**ToggleSwitch.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209731)
+-   [
+              **ToolTipTemplateSettings**
+            ](https://msdn.microsoft.com/library/windows/apps/br209813): value of [**ToolTip.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227629)
 
 As propriedades **TemplateSettings** sempre devem ser usadas em XAML, não o código. Elas são subpropriedades somente leitura de uma propriedade **TemplateSettings** somente leitura de um controle pai. Em um cenário de controle personalizado avançado, no qual você está criando uma nova classe baseada em [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) e portanto pode influenciar a lógica do controle, considere a definição de uma propriedade **TemplateSettings** personalizada no controle para comunicar informações que podem ser úteis para qualquer um que esteja remodelando o controle. Assim como esse valor somente leitura da propriedade, defina uma nova classe **TemplateSettings** para o seu controle, que tenha propriedades somente leitura para cada um dos itens de informação, seja relevante para as medidas do modelo, posicionamento da animação, e assim por diante, e forneça aos chamados a instância do tempo de execução dessa classe que é inicializada através da lógica do controle. As classes **TemplateSettings** são derivadas de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356), de forma que as propriedades possam usar o sistema de propriedade de relevância dos retornos de chamada com propriedade alterada. Mas os identificadores de propriedade de dependência da propriedades não são expostos como API pública, pois as propriedades **TemplateSettings** não se destinam a ser somente leitura para os chamadores.
 
@@ -33,7 +50,7 @@ As propriedades **TemplateSettings** sempre devem ser usadas em XAML, não o có
 
 Aqui está um exemplo que vêm dos modelos de controle XAML padrão iniciais. Este em especial é do modelo padrão de [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538):
 
-```xaml
+```xml
 <Ellipse
     x:Name="E1"
     Style="{StaticResource ProgressRingEllipseStyle}"
@@ -48,7 +65,7 @@ Aqui está um exemplo que vêm dos modelos de controle XAML padrão iniciais. Es
 
 O XAML completo do modelo [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) tem centenas de linhas, portanto, este é apenas um trecho minúsculo. Este XAML define a parte de um controle que é um dos 6 elementos [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/br243343) que representam a animação de rotação de progresso indeterminado. Como desenvolvedor, talvez você não goste de círculos e talvez use um primitivo de elemento gráfico diferente ou uma forma básica distinta para a progressão da animação. Por exemplo, você pode criar um **ProgressRing** que use um conjunto de elementos [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371) organizados em um quadrado. Se for o caso, cada componente **Rectangle** individual de seu novo modelo pode se parecer com o seguinte:
 
-```xaml
+```xml
 <Rectangle
     x:Name="R1"
     Width="{Binding RelativeSource={RelativeSource TemplatedParent}, 
@@ -64,7 +81,7 @@ O motivo pelo qual as propriedades **TemplateSettings** são úteis aqui é porq
 
 Este é outro exemplo de uso dos modelos de controle do padrão XAML, desta vez mostrando um dos conjuntos de propriedades que são **From** e **To** de uma animação. Isso provém do modelo padrão [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348):
 
-```xaml
+```xml
 <VisualStateGroup x:Name="DropDownStates">
     <VisualState x:Name="Opened">
         <Storyboard>
@@ -96,6 +113,6 @@ Quando você usar valores **TemplateSettings** como parte de seu modelo de contr
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

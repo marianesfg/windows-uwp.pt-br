@@ -1,11 +1,12 @@
 ---
+author: TylerMSFT
 ms.assetid: 95CF7F3D-9E3A-40AC-A083-D8A375272181
-title: práticas recomendadas para usar o pool de threads
-description: este tópico descreve práticas recomendadas para trabalhar com o pool de threads.
+title: Práticas recomendadas para usar o pool de threads
+description: Este tópico descreve práticas recomendadas para trabalhar com o pool de threads.
 ---
 # Práticas recomendadas para usar o pool de threads
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tópico descreve práticas recomendadas para trabalhar com o pool de threads.
@@ -32,7 +33,7 @@ Este tópico descreve práticas recomendadas para trabalhar com o pool de thread
 ## Não faça
 
 
--   Não crie temporizadores periódicos com um valor de *período* <1 milissegundo (incluindo 0). Isso fará com que o item de trabalho se comporte como um temporizador de disparo único.
+-   Não crie temporizadores periódicos com um valor de *período* de &lt;1 milissegundo (incluindo 0). Isso fará com que o item de trabalho se comporte como um temporizador de disparo único.
 
 -   Não envie itens de trabalho periódicos que levem mais tempo para concluir do que a quantidade de tempo que você especificou no parâmetro *período*.
 
@@ -51,6 +52,6 @@ Este tópico descreve práticas recomendadas para trabalhar com o pool de thread
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

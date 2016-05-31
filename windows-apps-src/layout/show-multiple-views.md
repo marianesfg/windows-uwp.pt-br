@@ -1,16 +1,13 @@
 ---
-Description: É possível ajudar os usuários a ser mais produtivos permitindo que eles exibam várias partes independentes do aplicativo em janelas separadas.
+author: Jwmsft
+Description: Ajude os usuários a serem mais produtivos permitindo que eles exibam várias partes independentes do aplicativo em janelas separadas.
 title: Mostrar vários modos de exibição para um aplicativo
 ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
-label: Mostrar vários modos de exibição para um aplicativo
+label: Show multiple views for an app
 template: detail.hbs
 ---
 
 # Mostrar vários modos de exibição para um aplicativo
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 É possível ajudar os usuários a ser mais produtivos permitindo que eles exibam várias partes independentes do aplicativo em janelas separadas. Um exemplo típico é um aplicativo de email em que a interface do usuário principal mostra a lista de emails e uma visualização do email selecionado. Porém, os usuários também podem abrir mensagens em janelas separadas e exibi-las lado a lado.
 
@@ -184,6 +181,6 @@ Ao usar [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn2810
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

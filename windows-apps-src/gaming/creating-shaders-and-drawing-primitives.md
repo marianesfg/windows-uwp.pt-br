@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Criar sombreadores e desenhando primitivas
 description: Aqui, mostramos a você como usar arquivos de origem HLSL para compilar e criar sombreadores que você pode usar para desenhar primitivas no monitor.
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
@@ -7,7 +8,7 @@ ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
 # Criar sombreadores e desenhando primitivas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aqui, mostramos a você como usar arquivos de origem HLSL para compilar e criar sombreadores que você pode usar para desenhar primitivas no monitor.
 
@@ -290,6 +291,6 @@ Em seguida, criamos um cubo 3D em órbita e aplicamos os efeitos de iluminação
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

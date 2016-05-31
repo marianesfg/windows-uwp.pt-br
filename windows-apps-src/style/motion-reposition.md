@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Use a animação de reposicionamento para mover um elemento ou vários para uma nova posição.
 title: Animações de reposicionamento em aplicativos UWP
 ms.assetid: 25D1EE31-5C25-4F21-B34C-FBD8FB1C8FFF
@@ -9,7 +10,7 @@ template: detail.hbs
 # Animações de reposicionamento
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Use a animação de reposicionamento para mover um elemento ou vários para uma nova posição.
 
@@ -43,6 +44,6 @@ Use a animação de reposicionamento para mover um elemento ou vários para uma 
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

@@ -8,7 +8,7 @@ author: awkoren
 # Criar um aplicativo de logon do Microsoft Passport
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não faz nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
@@ -53,7 +53,7 @@ Neste exercício, você aprenderá como verificar se o Microsoft Passport está 
     -   TextBlock para conter o status do Microsoft Passport.
     -   TextBlock para explicar a página de logon, já que não há back-end ou usuários configurados.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock Text="Login" FontSize="36" Margin="4" TextAlignment="Center"/>
@@ -64,7 +64,7 @@ Neste exercício, você aprenderá como verificar se o Microsoft Passport está 
         <TextBox x:Name="UsernameTextBox" Margin="4" Width="250"/>
         <Button x:Name="PassportSignInButton" Content="Login" Background="DodgerBlue" Foreground="White"
             Click="PassportSignInButton_Click" Width="80" HorizontalAlignment="Center" Margin="0,20"/>
-        <TextBlock Text="Don&#39;t have an account?"
+        <TextBlock Text="Don't have an account?"
                     TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
         <TextBlock x:Name="RegisterButtonTextBlock" Text="Register now"
                    PointerPressed="RegisterButtonTextBlock_OnPointerPressed"
@@ -76,7 +76,7 @@ Neste exercício, você aprenderá como verificar se o Microsoft Passport está 
                  Margin="4" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
         </Border>
         <TextBlock x:Name="LoginExplaination" FontSize="24" TextAlignment="Center" TextWrapping="Wrap" 
-            Text="Please Note: To demonstrate a login, validation will only occur using the default username &#39;sampleUsername&#39;"/>
+            Text="Please Note: To demonstrate a login, validation will only occur using the default username 'sampleUsername'"/>
       </StackPanel>
     </Grid>
     ```
@@ -489,9 +489,9 @@ Neste exercício, você aprenderá como verificar se o Microsoft Passport está 
 
 Neste exercício, você continuará do exercício anterior. Quando um usuário faz logon com êxito, ele é levado para uma página de boas-vindas, onde ele pode se desconectar ou excluir a conta. Como o Passport cria uma chave para cada computador, uma tela de seleção do usuário pode ser criada, o que exibe todos os usuários que entraram nesse computador. Um usuário pode, em seguida, selecionar uma dessas contas e ir diretamente para a tela de boas-vindas sem precisar inserir uma senha novamente, já que ele já foi autenticado para acessar o computador.
 
--   1. Na pasta Views, adicione uma nova página em branco chamada "Welcome.xaml". Adicione o XAML seguinte para concluir a interface do usuário. Isso exibirá um título, o nome do usuário conectado e dois botões. Um dos botões navegará de volta para uma lista de usuários (que você criará mais tarde) e o outro botão tratará de esquecer esse usuário.
+-   Na pasta Views, adicione uma nova página em branco chamada "Welcome.xaml". Adicione o XAML seguinte para concluir a interface do usuário. Isso exibirá um título, o nome do usuário conectado e dois botões. Um dos botões navegará de volta para uma lista de usuários (que você criará mais tarde) e o outro botão tratará de esquecer esse usuário.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock x:Name="Title" Text="Welcome" FontSize="40" TextAlignment="Center"/>
@@ -624,7 +624,7 @@ Neste exercício, você continuará do exercício anterior. Quando um usuário f
 
 -   Na pasta Views, crie uma nova página em branco chamada "UserSelection.xaml" e adicione o seguinte XAML para definir a interface do usuário. Esta página conterá uma [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) que exibe todos os usuários na lista de contas locais e um botão que navegará para a página de logon para permitir que o usuário adicione outra conta.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock x:Name="Title" Text="Select a User" FontSize="36" Margin="4" TextAlignment="Center" HorizontalAlignment="Center"/>
@@ -830,7 +830,7 @@ Neste exercício, você continuará do exercício anterior. Quando um usuário f
             }
         }
 
-        // Can&#39;t use Passport right now, try again later
+        // Can't use Passport right now, try again later
         return false;
     }
     ```
@@ -877,7 +877,7 @@ Neste exercício, você criará uma nova página que criará uma nova conta com 
 
 -   Na pasta Views, crie uma nova página em branco chamada "PassportRegister.xaml". No XAML, adicione o seguinte para configurar a interface do usuário. A interface aqui é semelhante à página de logon.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock x:Name="Title" Text="Register New Passport User" FontSize="24" Margin="4" TextAlignment="Center"/>
@@ -968,6 +968,6 @@ Você como desenvolvedor não precisa fazer nenhum trabalho extra para dar supor
 * [Microsoft Passport e Windows Hello](microsoft-passport.md)
 * [Serviço de logon do Microsoft Passport](microsoft-passport-login-auth-service.md)
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

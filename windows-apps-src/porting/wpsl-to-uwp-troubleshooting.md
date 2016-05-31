@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado.
 title: Soluções de problemas de portabilidade do Windows Phone Silverlight para a UWP
 ms.assetid: d9a9a2a7-9401-4990-a992-4b13887f2661
@@ -6,7 +7,7 @@ ms.assetid: d9a9a2a7-9401-4990-a992-4b13887f2661
 
 #  Soluções de problemas de portabilidade do Windows Phone Silverlight para a UWP
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O tópico anterior era [Portando o projeto](wpsl-to-uwp-porting-to-a-uwp-project.md).
 
@@ -27,7 +28,7 @@ Esta seção explica o que fazer se, ao abrir um projeto do Windows 10 no Visual
 -   Primeiro, determine o número da versão do SDK do Windows 10 que você instalou. Navegue para **C:\\Program Files (x86)\\Windows Kits\\10\\Include\\&lt;nomedapastadaversão&gt;** e faça uma anotação de *&lt;nomedapastadaversão&gt;*, que será em notação quad, "Major.Minor.Build.Revision".
 -   Abra o arquivo do projeto para editar e encontre os elementos `TargetPlatformVersion` e `TargetPlatformMinVersion`. Edite-os como a seguir, substituindo *&lt;nomedapastadaversão&gt;* pelo número da versão em notação quádrupla encontrado no disco:
 
-```xaml
+```xml
    <TargetPlatformVersion><versionfoldername></TargetPlatformVersion>
    <TargetPlatformMinVersion><versionfoldername></TargetPlatformMinVersion>
 ```
@@ -39,9 +40,9 @@ As informações de solução da tabela destinam-se a dar instruções suficient
 | Sintoma | Solução |
 |---------|--------|
 | O analisador ou o compilador de XAML mostra o erro "_O nome "&lt;nome do tipo&gt;" não existe no namespace […]._" | Se &lt;nome do tipo&gt; for um tipo personalizado, então, em suas declarações de prefixo de namespace na marcação XAML, altere "clr-namespace" para "using", e remova quaisquer tokens de assembly. Para tipos de plataforma, isso significa que o tipo não se aplica à UWP (Plataforma Universal do Windows), portanto, encontre o equivalente e atualize sua marcação. Exemplos que você pode encontrar imediatamente são `phone:PhoneApplicationPage` e `shell:SystemTray.IsVisible`. | 
-| O analisador ou o compilador de XAML mostra o erro "_O membro "&lt;nome do membro&gt;"não é reconhecido ou não está acessível._" ou "_A propriedade "&lt;nome da propriedade&gt;" não foi encontrada no tipo [...]._". | Esses erros começarão a aparecer depois que você tiver portado alguns nomes de tipo, como a raiz **Page**. O membro ou a propriedade não se aplica à UWP, portanto, encontre o equivalente e atualize sua marcação. Exemplos que você pode encontrar imediatamente são `SupportedOrientations` e `Orientation`. |
-| O analisador ou o compilador de XAML mostra o erro "_A propriedade anexável [...] não foi encontrada [...]._"ou"_Membro anexável desconhecido [...]._". | Isso provavelmente é causado pelo tipo em vez da propriedade anexada; nesse caso, você já terá um erro para o tipo e esse erro desaparecerá depois que corrigir isso. Exemplos que você pode encontrar imediatamente são `phone:PhoneApplicationPage.Resources` e `phone:PhoneApplicationPage.DataContext`. | 
-|O analisador ou o compilador de XAML, ou uma exceção de tempo de execução, mostra o erro "_O recurso "&lt;resourcekey&gt;" não pôde ser resolvido_". | A chave do recurso não se aplica a aplicativos UWP (Plataforma Universal do Windows). Encontre o recurso equivalente correto e atualize sua marcação. Exemplos que você pode encontrar imediatamente são chaves de estilo de sistema **TextBlock** como `PhoneTextNormalStyle`. |
+| O analisador ou compilador de XAML mostra o erro "_O membro"&lt;nomedomembro&gt;" não é reconhecido ou não está acessível._" ou "_A propriedade"&lt;nomedapropriedade&gt;" não foi encontrada no tipo [...]._". | Esses erros começarão a aparecer depois que você tiver portado alguns nomes de tipo, como a raiz **Page**. O membro ou a propriedade não se aplica à UWP, portanto, encontre o equivalente e atualize sua marcação. Exemplos que você pode encontrar imediatamente são `SupportedOrientations` e `Orientation`. |
+| O analisador ou o compilador de XAML mostra o erro "_A propriedade anexável [...] não foi encontrada [...]._" ou "_Membro anexável desconhecido [...]._". | Isso provavelmente é causado pelo tipo em vez da propriedade anexada; nesse caso, você já terá um erro para o tipo e esse erro desaparecerá depois que corrigir isso. Exemplos que você pode encontrar imediatamente são `phone:PhoneApplicationPage.Resources` e `phone:PhoneApplicationPage.DataContext`. | 
+|O analisador ou o compilador de XAML, ou uma exceção de tempo de execução, mostra o erro "_O recurso "&lt;resourcekey&gt;" não pôde ser resolvido._". | A chave do recurso não se aplica a aplicativos UWP (Plataforma Universal do Windows). Encontre o recurso equivalente correto e atualize sua marcação. Exemplos que você pode encontrar imediatamente são chaves de estilo de sistema **TextBlock** como `PhoneTextNormalStyle`. |
 | O compilador C# mostra o erro "_O nome do tipo ou do namespace '&lt;nome&gt;' não foi encontrado [...]_" ou "_O nome do tipo ou do namespace '&lt;nome&gt;' não existe no namespace [...]_" ou "_O nome do tipo ou do namespace '&lt;nome&gt;' não existe no contexto atual_". | Isso provavelmente significa que o compilador ainda não sabe o namespace correto da UWP para um tipo. Você pode usar o comando **Resolver** do Visual Studio para corrigir isso. <br/>Se a API não está no conjunto de APIs, conhecido como a família de dispositivos universal (em outras palavras, a API é implementada em um SDK de extensão), então, use os [SDKs de extensão](wpsl-to-uwp-porting-to-a-uwp-project.md#extension-sdks).<br/>Pode haver outros casos em que a portabilidade será menos direta. Exemplos que você pode encontrar imediatamente são `DesignerProperties` e `BitmapImage`. | 
 |Quando executado no dispositivo, o aplicativo é encerrado, ou quando iniciado no Visual Studio, você vê o erro "Não é possível ativar o aplicativo da Windows Store [...]. A solicitação de ativação falhou com o erro "O Windows não pôde se comunicar com o aplicativo de destino". Isso geralmente indica que o processo do aplicativo de destino foi anulado. […]”. | O problema poderia ser o código imperativo sendo executado em suas próprias páginas ou em propriedades vinculadas (ou outros tipos) durante a inicialização. Ou, isso pode acontecer durante a análise do arquivo XAML prestes a ser exibido quando o aplicativo foi encerrado (se inicializado no Visual Studio, essa será a página de inicialização). Procure chaves de recurso inválidas e/ou tente algumas das diretrizes da seção [Rastreando problemas](#tracking-down-issues) neste tópico.|
 | _Erro de XamlCompiler WMC0055: não é possível atribuir o valor de texto '&lt;sua geometria de fluxo&gt;' na propriedade 'Clip' do tipo 'RectangleGeometry'_ | Na UWP, o tipo do aplicativo [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) e XAML C++ UWP. |
@@ -56,6 +57,6 @@ O próximo tópico é [Portando XAML e a interface do usuário](wpsl-to-uwp-port
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

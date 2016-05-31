@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
 description: Este artigo fornece informações adicionais sobre restrições em componentes do Tempo de Execução do Windows escritos com código gerenciado.
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
@@ -7,7 +8,7 @@ ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
 # Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 \[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
@@ -18,7 +19,7 @@ Este artigo não aborda todos os erros. Os erros debatidos aqui são agrupados p
 ## A mensagem de erro de implementação da interface assíncrona apresenta um tipo incorreto
 
 
-Os componentes do Tempo de Execução do Windows gerenciados não podem implementar as interfaces da Plataforma Universal do Windows (UWP) que representam ações ou operações assíncronas ([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx) ou [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). Em vez disso, o .NET Framework fornece a classe [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para gerar operações assíncronas em componentes do Tempo de Execução do Windows. A mensagem de erro que Winmdexp.exe exibe quando você tenta implementar uma interface async se refere incorretamente a essa classe pelo nome anterior, AsyncInfoFactory. O .NET Framework não inclui mais a classe AsyncInfoFactory.
+Os componentes do Tempo de Execução do Windows gerenciados não podem implementar as interfaces da UWP (Plataforma Universal do Windows) que representam ações ou operações assíncronas ([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx) ou [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). Em vez disso, o .NET Framework fornece a classe [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para gerar operações assíncronas em componentes do Tempo de Execução do Windows. A mensagem de erro que Winmdexp.exe exibe quando você tenta implementar uma interface async se refere incorretamente a essa classe pelo nome anterior, AsyncInfoFactory. O .NET Framework não inclui mais a classe AsyncInfoFactory.
 
 | Número do erro | Texto da mensagem                                                                                                                                                                                                                                                          |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,14 +27,14 @@ Os componentes do Tempo de Execução do Windows gerenciados não podem implemen
 
  
 
-> **Observação** As mensagens de erro que se referem ao Tempo de Execução do Windows usam uma terminologia anterior. Ele agora é conhecido como a Plataforma Universal do Windows (UWP). Por exemplo, agora os tipos de Tempo de Execução do Windows são chamados de tipos UWP.
+> **Observação** As mensagens de erro que se referem ao Windows Runtime usam uma terminologia anterior. Ele agora é conhecido como a Plataforma Universal do Windows (UWP). Por exemplo, agora os tipos de Tempo de Execução do Windows são chamados de tipos UWP.
 
  
 
 ## Referências não encontradas a mscorlib. dll ou System.Runtime.dll
 
 
-Esse problema só ocorre quando você usa Winmdexp.exe na linha de comando. Recomendamos usar a opção /reference para incluir referências a mscorlib. dll e System.Runtime.dll nos assemblies de referência básicos do .NET Framework, que estão em "%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETCore\\v4.5" ("%ProgramFiles%\\..." em um computador de 32 bits).
+Esse problema só ocorre quando você usa Winmdexp.exe na linha de comando. Recomendamos usar a opção /reference para incluir referências a mscorlib. dll e System.Runtime.dll nos assemblies de referência básicos do .NET Framework, que estão em "%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETCore\\v4.5" ("%ProgramFiles%\\..." em um computador 32 bits).
 
 | Número do erro | Texto da mensagem                                                                                                                                     |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -117,13 +118,13 @@ Um tipo em um componente do Tempo de Execução do Windows não pode ter um nome
 ## Exportação de tipos que não sejam tipos da Plataforma Universal do Windows válidos
 
 
-A interface pública do componente deve expor somente tipos UWP. No entanto, o .NET Framework fornece mapeamentos para vários tipos mais usados que sejam um pouco diferentes no .NET Framework e na UWP. Isso permite que o desenvolvedor do .NET Framework trabalhe com tipos familiares, em vez de aprender novos. É possível usar esses tipos do .NET Framework mapeados na interface pública do componente. Veja "Declaração de tipos em componentes do Tempo de Execução do Windows" e "Passagem de tipos de Plataforma Universal do Windows para código gerenciado" em [Criação de componentes de Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Mapeamentos do .NET Framework dos tipos de Tempo de Execução do Windows](net-framework-mappings-of-windows-runtime-types.md).
+A interface pública do componente deve expor somente tipos UWP. No entanto, o .NET Framework fornece mapeamentos para vários tipos mais usados que sejam um pouco diferentes no .NET Framework e na UWP. Isso permite que o desenvolvedor do .NET Framework trabalhe com tipos familiares, em vez de aprender novos. É possível usar esses tipos do .NET Framework mapeados na interface pública do componente. Veja "Declaração de tipos em componentes do Tempo de Execução do Windows" e "Passagem de tipos de Plataforma Universal do Windows para código gerenciado" em [Criação de componentes do Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Mapeamentos do .NET Framework dos tipos de Windows Runtime](net-framework-mappings-of-windows-runtime-types.md).
 
-Muitos desses mapeamentos são interfaces. Por exemplo, [IList&lt;T&gt;](https://msdn.microsoft.com/library/5y536ey6.aspx) é mapeado para a interface UWP [IVector&lt;T&gt;](https://msdn.microsoft.com/library/windows/apps/br206631.aspx). Caso você use List&lt;string&gt; (`List(Of String)` em Visual Basic), em vez de IList&lt;string&gt; como tipo de parâmetro, Winmdexp.exe oferece uma lista de alternativas que inclui todas as interfaces mapeadas implementadas por List&lt;T&gt;. Caso você use tipos genéricos aninhados, como List&lt;Dictionary&lt;int, string&gt;&gt; (List(Of Dictionary(Of Integer, String)) em Visual Basic), Winmdexp.exe oferece opções para cada nível de aninhamento. Essas listas podem ficar muito longas.
+Muitos desses mapeamentos são interfaces. Por exemplo, [IList&lt;T&gt;](https://msdn.microsoft.com/library/5y536ey6.aspx) é mapeado para a interface UWP [IVector&lt;T&gt;](https://msdn.microsoft.com/library/windows/apps/br206631.aspx). Caso você use List&lt;string&gt; (`List(Of String)` em Visual Basic) em vez de IList&lt;string&gt; como tipo de parâmetro, Winmdexp.exe oferece uma lista de alternativas que inclui todas as interfaces mapeadas implementadas por List&lt;T&gt;. Caso você use tipos genéricos aninhados, como List&lt;Dictionary&lt;int, string&gt;&gt; (List(Of Dictionary(Of Integer, String)) em Visual Basic), Winmdexp.exe oferece opções para cada nível de aninhamento. Essas listas podem ficar muito longas.
 
 Em geral, a melhor opção é a interface mais próxima do tipo. Por exemplo, para Dictionary&lt;int, string&gt;, a melhor opção é mais provavelmente IDictionary&lt;int, string&gt;.
 
-> **Importante**  O JavaScript usa a primeira interface exibida na lista de interfaces implementadas por um tipo gerenciado. Por exemplo, caso você retorne Dictionary&lt;int, string&gt; ao código JavaScript, ele é exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especifica como o tipo de retorno. Isso significa que, caso a primeira interface não inclua um membro exibido em interfaces posteriores, esse membro não permanece visível para JavaScript.
+> **Importante**  O JavaScript usa a primeira interface exibida na lista de interfaces implementadas por um tipo gerenciado. Por exemplo, se você retornar Dictionary&lt;int, string&gt; ao código JavaScript, ele será exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especificar como o tipo de retorno. Isso significa que, caso a primeira interface não inclua um membro exibido em interfaces posteriores, esse membro não permanece visível para JavaScript.
 
 > **Cuidado**  Evite usar as interfaces [IList](https://msdn.microsoft.com/library/system.collections.ilist.aspx) e [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx) não genéricas se o componente for usado pelo JavaScript. Essas interfaces são mapeadas para [IBindableVector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindablevector.aspx) e [IBindableIterator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindableiterator.aspx), respectivamente. Elas dão suporte à associação de controles XAML e permanecem invisíveis para JavaScript. O JavaScript emite o erro de tempo de execução "A função 'X' tem uma assinatura inválida e não pode ser chamada".
 
@@ -247,6 +248,6 @@ O código JavaScript pode acessar os parâmetros de saída de um método por nom
 * [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

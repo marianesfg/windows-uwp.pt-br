@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: O Relatório de aquisições no painel do Centro de Desenvolvimento do Windows permite que você veja quem adquiriu o seu aplicativo, juntamente com detalhes demográficos e de plataforma.
 title: Relatório de aquisições
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
@@ -11,7 +12,7 @@ O Relatório de **aquisições** no painel do Centro de Desenvolvimento do Windo
 
 Neste relatório, uma aquisição significa que um novo cliente obteve uma licença para o seu aplicativo (tendo você cobrado dinheiro ou oferecido gratuitamente).
 
-> **Importante**  O Relatório de **Aquisições** não inclui dados sobre reembolsos, reversões, estornos, etc. Para estimar a receita do seu aplicativo, visite [Resumo de pagamento](payout-summary.md). Na seção **Reservado**, clique no link **Download reserved transactions**.
+> **Importante**  O relatório **Aquisições** não inclui dados sobre reembolsos, reversões, estornos etc. Para estimar a receita do seu aplicativo, visite [Resumo de pagamento](payout-summary.md). Na seção **Reservado**, clique no link **Download reserved transactions**.
 
 
 
@@ -20,8 +21,8 @@ Neste relatório, uma aquisição significa que um novo cliente obteve uma licen
 
 Na parte superior da página, você pode expandir **Aplicar filtros** para filtrar todos os dados dessa página por intervalo de datas e/ou por tipo de dispositivo.
 
--   **Data**: o filtro padrão é **Últimos 30 dias**, mas você pode estender para até **Últimos 12 meses**.
--   **Tipo de dispositivo**: a configuração padrão é **Todas os dispositivos**. Se desejar mostrar dados para aquisições de um determinado tipo de dispositivo apenas, você pode escolher um específico aqui.
+-   **Data**: o filtro padrão é **Últimos 30 dias**, mas você pode expandi-lo até **Últimos 12 meses**.
+-   **Tipo de dispositivo**: a configuração padrão é **Todos os dispositivos**. Se desejar mostrar dados para aquisições de um determinado tipo de dispositivo apenas, você pode escolher um específico aqui.
 
 As informações dos gráficos listados abaixo refletirão o período de tempo selecionado na seção **Aplicar filtros**.
 
@@ -62,6 +63,6 @@ O catálogo em destaque **OS version** mostra o número total de aquisições co
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

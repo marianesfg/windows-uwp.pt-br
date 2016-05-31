@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: Você começa o processo de portabilidade ao criar um novo projeto do Windows 10 no Visual Studio e ao copiar seus arquivos nele.
 title: Portando um projeto Windows Phone Silverlight para um projeto UWP
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
@@ -6,7 +7,7 @@ ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
 
 # Portando um projeto Windows Phone Silverlight para um projeto UWP
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O tópico anterior era [Mapeamentos de namespace e de classe](wpsl-to-uwp-namespace-and-class-mappings.md).
 
@@ -26,7 +27,7 @@ A maioria das APIs da Plataforma Universal do Windows (UWP) que o aplicativo por
 
 Em caso de erros de compilação sobre namespaces ou tipos ou membros que não foram encontrados, essa deve ser a provável causa. Abra o tópico da API na documentação de referência da API e navegue até a seção Requisitos; ele informará qual é a implementação da família de dispositivos. Se essa não for a família de dispositivos de destino, para disponibilizar a API para o projeto, você precisará de uma referência para o SDK de extensão dessa família de dispositivos.
 
-Clique em **Projeto** &gt; **Adicionar referência** &gt; **Windows Universal** &gt; **Extensões** e selecione o SDK de extensão apropriado. Por exemplo, se as APIs que você deseja chamar estão disponíveis somente na família de dispositivos móveis e elas foram introduzidas na versão 10.0.x.y, selecione **Extensões do Windows Mobile para UWP**.
+Clique em **Projeto**&gt;**Adicionar referência**&gt;**Windows Universal**&gt;**Extensões** e selecione o SDK de extensão apropriado. Por exemplo, se as APIs que você deseja chamar estão disponíveis somente na família de dispositivos móveis e elas foram introduzidas na versão 10.0.x.y, selecione **Extensões do Windows Mobile para UWP**.
 
 Isso adicionará a seguinte referência ao seu arquivo de projeto:
 
@@ -135,7 +136,7 @@ Consulte também [Detectando a plataforma em que seu aplicativo está sendo exec
 
 As configurações no projeto (inclusive todas as referências de SDKs de extensão) determinam a área da superfície da API que o aplicativo pode chamar. Porém, o manifesto do pacote do aplicativo é o que determina o conjunto real de dispositivos em que os clientes podem instalar o aplicativo da Loja. Para saber mais, veja Exemplos em [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903).
 
-Vale a pena saber como editar o manifesto do pacote do aplicativo, pois os tópicos a seguir tratam sobre como usá-lo para diversas declarações, funcionalidades e outras configurações de que alguns recursos precisam. Você pode usar o editor de manifesto de pacote de aplicativo do Visual Studio para editá-lo. Se o **Gerenciador de Soluções** não for mostrado, escolha-o no menu **Exibir**. Clique duas vezes em **Package.appxmanifest**. Isso abre a janela do editor de manifesto. Selecione a guia apropriada para fazer alterações e salve as alterações. Certifique-se de que o elemento **pm:PhoneIdentity** no manifesto do aplicativo portado corresponda ao que está no manifesto do aplicativo que você está portando (para obter detalhes, veja o tópico [**pm:PhoneIdentity**](https://msdn.microsoft.com/library/windows/apps/dn934763)).
+Vale a pena saber como editar o manifesto do pacote do aplicativo, pois os tópicos a seguir tratam sobre como usá-lo para diversas declarações, funcionalidades e outras configurações de que alguns recursos precisam. Você pode usar o editor de manifesto de pacote de aplicativo do Visual Studio para editá-lo. Se o **Gerenciador de Soluções** não for mostrado, escolha-o no menu **Exibir**. Clique duas vezes em **Package.appxmanifest**. Isso abre a janela do editor de manifesto. Selecione a guia apropriada para fazer alterações e salve as alterações. Certifique-se de que o elemento **pm:PhoneIdentity** no manifesto do aplicativo portado corresponda ao que está no manifesto do aplicativo que você está portando (para obter detalhes, consulte o tópico [**pm:PhoneIdentity**](https://msdn.microsoft.com/library/windows/apps/dn934763)).
 
 Consulte [Referência do esquema do manifesto do pacote do Windows 10](https://msdn.microsoft.com/library/windows/apps/dn934820).
 
@@ -143,6 +144,6 @@ O próximo tópico é [Solução de problemas](wpsl-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: O painel do Centro de Desenvolvimento do Windows oferece a opção de tornar seu aplicativo disponível apenas para pessoas específicas para que você possa fazer com que testadores o testem antes de oferecê-lo ao público.
 title: Teste da versão beta e distribuição específica
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
@@ -64,7 +65,7 @@ Para testar no Windows Phone 8.1 e em versões anteriores, essa opção oferece 
  
 Você pode encontrar o link direto de seu aplicativo na página [Identidade do aplicativo](view-app-identity-details.md) no painel (use a **URL para o Windows Phone**). Nenhum cliente poderá encontrar o aplicativo pesquisando ou navegando na Loja e, mesmo que tenham o link para a listagem de seu aplicativo, não poderão baixá-lo a menos que estejam usando uma conta da Microsoft associada a um email que você forneceu quando enviou esse aplicativo.
 
-> **Nota**  Se você usar essa opção, ainda poderá tornar o aplicativo disponível para testadores em dispositivos Windows 10, [gerando códigos promocionais](generate-promotional-codes.md) como descrito acima. Qualquer pessoa com um dos códigos promocionais de seu aplicativo pode baixá-lo em um dispositivo Windows 10, mesmo que você não tenha inserido o email.
+> **Observação**  Se você usar essa opção, ainda poderá tornar o aplicativo disponível para testadores em dispositivos Windows 10, [gerando códigos promocionais](generate-promotional-codes.md) como descrito acima. Qualquer pessoa com um dos códigos promocionais de seu aplicativo pode baixá-lo em um dispositivo Windows 10, mesmo que você não tenha inserido o email.
 
 Para usar essa opção, selecione **Ocultar esse aplicativo e torná-lo disponível apenas para pessoas especificadas abaixo, que podem baixá-lo em dispositivos Windows Phone 8.x. Um código promocional pode ser usado para baixar esse aplicativo em dispositivos Windows 10** na seção [Distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility) da página **Preço e visibilidade** quando for enviar o aplicativo.
 
@@ -80,6 +81,6 @@ Se você escolher essa opção, tenha o seguinte em mente:
 -   Você não pode revogar o acesso ao aplicativo que os testadores baixá-lo. Depois que eles baixarem o aplicativo, os testadores poderão continuar a usá-lo e receberão as atualizações que você enviar.
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

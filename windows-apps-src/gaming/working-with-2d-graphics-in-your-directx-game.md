@@ -1,5 +1,6 @@
 ---
-title: Elementos gráficos 2D para jogos em DirectX
+author: mtoepke
+title: Elementos gráficos 2D para jogos DirectX
 description: Falaremos sobre o uso de elementos gráficos e efeitos de bitmap 2D e como usá-los em seu jogo.
 ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
 ---
@@ -66,6 +67,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

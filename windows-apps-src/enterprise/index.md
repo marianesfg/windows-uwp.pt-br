@@ -8,7 +8,7 @@ author: awkoren
 # Empresa
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este mapa fornece uma visão geral dos recursos empresariais principais para aplicativos do Windows 10 e da Plataforma Universal do Windows (UWP). O Windows 10 permite gravar uma vez e fazer a implantação em todos os dispositivos, criando um aplicativo personalizado para cada dispositivo. Isso permite criar as ótimas experiências que os seus usuários esperam e, ao mesmo tempo, fornecer controle sobre a segurança, o gerenciamento e a configuração exigidos pela sua organização.
 
@@ -111,6 +111,6 @@ Para obter mais informações sobre o Prism, consulte [GitHub repo](https://gith
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

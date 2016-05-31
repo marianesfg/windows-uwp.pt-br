@@ -1,22 +1,23 @@
 ---
+author: mijacobs
 Description: Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes.
 title: Criar blocos adaptáveis
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
-label: Criar blocos adaptáveis
+label: Create adaptive tiles
 template: detail.hbs
 ---
 
 # Criar blocos adaptáveis
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP). Para obter a lista completa de elementos e atributos adaptáveis, consulte o [Esquema de blocos adaptáveis](tiles-and-notifications-adaptive-tiles-schema.md).
 
 (Se quiser, ainda pode usar os modelos predefinidos do [Catálogo de modelos de blocos do Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) durante a criação de notificações para o Windows 10.)
 
-## <span id="Getting_started"></span><span id="getting_started"></span><span id="GETTING_STARTED"></span>Introdução
+## <span id="Getting_started"></span><span id="getting_started"></span><span id="GETTING_STARTED"></span>Noções básicas
 
 
 **Instale NotificationsExtensions.** Se quiser usar C# em vez de XML para gerar notificações, instale o pacote NuGet denominado [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki). Os exemplos em C# fornecidos neste artigo usam NotificationsExtensions.
@@ -228,8 +229,7 @@ new TileVisual()
 A identidade visual pode ser aplicada para tamanhos de bloco específicos de uma destas maneiras:
 
 1. Aplicando o atributo no elemento [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)
-2. Aplicando o atributo no elemento [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afeta todo o conteúdo da notificação
-Se você não especificar a identidade visual para uma associação, ela usará a identidade visual fornecida no elemento visual.
+2. Na aplicação do atributo ao elemento [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afeta a carga de notificação inteira Se você não especificar a identidade visual para uma associação, ele usará a identidade visual fornecida no elemento visual.
 
 ```XML
 <tile>
@@ -276,7 +276,7 @@ TileContent content = new TileContent()
 
 Se você não especificar a identidade visual no conteúdo da notificação, as propriedades do bloco base determinarão a identidade visual. Se o bloco base mostrar o nome de exibição, a identidade visual padrão será "name". Caso contrário, a identidade visual padrão será "none" se o nome de exibição não for mostrado.
 
-**Observação**   Isso é uma mudança do Windows 8.x, em que a identidade visual padrão era "logo".
+**Observação**   Isso é uma mudança do Windows 8.x, no qual a identidade visual padrão era "logo".
 
  
 
@@ -329,7 +329,7 @@ TileContent content = new TileContent()
 
 ![nome de exibição de blocos adaptáveis](images/adaptive-tiles-displayname.png)
 
-## <span id="Text"></span><span id="text"></span><span id="TEXT"></span>Texto
+## <span id="Text"></span><span id="text"></span><span id="TEXT"></span>Text
 
 
 O elemento [&lt;text&gt;](tiles-and-notifications-adaptive-tiles-schema.md) é usado para exibir texto. Você pode usar dicas para modificar a aparência do texto.
@@ -1141,7 +1141,7 @@ TileLarge = new TileBinding()
 
 ### <span id="Background_image"></span><span id="background_image"></span><span id="BACKGROUND_IMAGE"></span>Imagem de plano de fundo
 
-Para definir uma imagem de plano de fundo, coloque um elemento de imagem na raiz de &lt;binding&gt; e defina o atributo de posicionamento para "background".
+Para definir uma imagem de plano de fundo, coloque um elemento de imagem na raiz de &lt;binding&gt; e defina o atributo de posicionamento como "background".
 
 ```XML
 ...
@@ -1265,7 +1265,7 @@ TileWide = new TileBinding()
 
 ### <span id="Peek_image"></span><span id="peek_image"></span><span id="PEEK_IMAGE"></span>Imagem de "espiar"
 
-Você pode especificar uma imagem que "espie" a parte superior do bloco. A imagem de "espiar" usa uma animação para deslizar para baixo/para cima a partir da parte superior do bloco, espiando a visualização, e depois deslizar de volta para revelar o conteúdo principal no bloco. Para definir uma imagem de "espiar", coloque um elemento de imagem na raiz de &lt;binding&gt;, e defina o atributo de posicionamento para "peek".
+Você pode especificar uma imagem que "espie" a parte superior do bloco. A imagem de "espiar" usa uma animação para deslizar para baixo/para cima a partir da parte superior do bloco, espiando a visualização, e depois deslizar de volta para revelar o conteúdo principal no bloco. Para definir uma imagem de "espiar", coloque um elemento de imagem na raiz de &lt;binding&gt; e defina o atributo de posicionamento como "peek".
 
 ```XML
 ...
@@ -1344,11 +1344,11 @@ Este exemplo mostra uma imagem de plano de fundo com opacidade de 20% (esquerda)
 ## <span id="Vertical_alignment__text_stacking_"></span><span id="vertical_alignment__text_stacking_"></span><span id="VERTICAL_ALIGNMENT__TEXT_STACKING_"></span>Alinhamento vertical (empilhamento de texto)
 
 
-Você pode controlar o alinhamento vertical do conteúdo em seu bloco usando o atributo **hint-textStacking** nos elementos [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) e [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md) Por padrão, tudo é alinhado verticalmente à parte superior, mas você também pode alinhar o conteúdo à parte inferior ou ao centro.
+Você pode controlar o alinhamento vertical do conteúdo em seu bloco usando o atributo **hint-textStacking** nos elementos  [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) e [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md). Por padrão, tudo é alinhado verticalmente à parte superior, mas você também pode alinhar o conteúdo à parte inferior ou ao centro.
 
 ### <span id="Text_stacking_on_binding_element"></span><span id="text_stacking_on_binding_element"></span><span id="TEXT_STACKING_ON_BINDING_ELEMENT"></span>Empilhamento de texto no elemento binding
 
-Quando aplicado no nível [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md), o empilhamento de texto define o alinhamento vertical do conteúdo da notificação como um todo, alinhando no espaço vertical disponível acima da área de identidade visual/notificação.
+Quando aplicado no nível [&lt;enviar&gt;](tiles-and-notifications-adaptive-tiles-schema.md), o empilhamento de texto define o alinhamento vertical do conteúdo da notificação como um todo, alinhando no espaço vertical disponível acima da área de identidade visual/notificação.
 
 ```XML
 ...
@@ -1488,6 +1488,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

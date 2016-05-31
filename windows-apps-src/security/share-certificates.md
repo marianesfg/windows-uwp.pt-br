@@ -8,7 +8,7 @@ author: awkoren
 # Compartilhar certificados entre aplicativos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Os aplicativos da Plataforma Universal do Windows (UWP) que exigem autenticação segura além de uma combinação de ID de usuário e senha podem usar certificados na autenticação. A autenticação de certificado oferece um elevado nível de confiança ao autenticar um usuário. Em alguns casos, um grupo de serviços desejará autenticar um usuário para vários aplicativos. Este artigo mostra como você pode autenticar vários aplicativos usando o mesmo certificado e fornecer código prático para que um usuário importe um certificado que foi fornecido para acessar serviços Web seguros.
@@ -28,7 +28,7 @@ Este artigo usa o Microsoft Internet Information Services (IIS) para fins de exe
 ## Crie e publique um serviço Web seguro
 
 
-1.  Execute o Microsoft Visual Studio como administrador e selecione **Novo Projeto** na página inicial. O acesso do administrador é obrigatório para publicar um serviço Web em um servidor IIS. Na caixa de diálogo Novo Projeto, altere a estrutura para **.NET Framework 3.5**. Selecione **Visual C#** -&gt; **Web** -&gt; **Visual Studio** - &gt; **Aplicativo de Serviço Web do ASP.NET**. Nomeie o aplicativo como "FirstContosoBank". Clique em **OK** para criar o projeto.
+1.  Execute o Microsoft Visual Studio como administrador e selecione **Novo Projeto** na página inicial. O acesso do administrador é obrigatório para publicar um serviço Web em um servidor IIS. Na caixa de diálogo Novo Projeto, altere a estrutura para **.NET Framework 3.5**. Selecione **Visual C#** -&gt;**Web** -&gt;**Visual Studio** -&gt;**Aplicativo de Serviço Web do ASP.NET**. Nomeie o aplicativo como "FirstContosoBank". Clique em **OK** para criar o projeto.
 2.  No arquivo **Service1.asmx.cs**, substitua o método padrão da Web **HelloWorld** pelo seguinte método "Logon".
     ```cs
             [WebMethod]
@@ -54,9 +54,9 @@ Este artigo usa o Microsoft Internet Information Services (IIS) para fins de exe
 2.  Expanda os sites do seu servidor IIS. No **Site padrão**, selecione o novo serviço Web "FirstContosoBank". Na seção **Ações**, selecione **Configurações Avançadas...**.
 3.  Defina o **Pool de aplicativos** como **.NET v2.0** e clique em **OK**.
 4.  No **Gerenciador do Serviços de Informações da Internet (IIS)**, selecione o servidor IIS e, em seguida, clique duas vezes em **Certificados do servidor**. Na seção **Ações**, selecione **Criar Certificado Autoassinado...**. Insira "ContosoBank" como o nome amigável para o certificado e clique em **OK**. Isso criará um novo certificado para uso pelo servidor IIS no formato de "&lt;nome-do-servidor&gt;.&lt;nome-do-domínio&gt;".
-5.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, selecione o site padrão. Na seção **Ações**, selecione **Associação** e, em seguida, clique em **Adicionar...**. Selecione "https" como o tipo, defina a porta como "443" e insira o nome completo do host para o seu servidor IIS ("&lt;nome-do-servidor&gt;.&lt;nome-do-domínio&gt;"). Defina o certificado SSL como "ContosoBank". Clique em **OK**. Clique em **Fechar** na janela **Ligações do Site** .
+5.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, selecione o site padrão. Na seção **Ações**, selecione **Associação** e, em seguida, clique em **Adicionar...**. Selecione "https" como o tipo, defina a porta como"443" e insira o nome completo do host para o seu servidor IIS ("&lt;nome-do-servidor&gt;.&lt;nome-do-domínio&gt;"). Defina o certificado SSL como "ContosoBank". Clique em **OK**. Clique em **Fechar** na janela **Associações do Site** .
 6.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, selecione o serviço Web "FirstContosoBank". Clique duas vezes em **Configurações do SSL**. Marque **Requer SSL**. Em **Certificados clientes**, selecione **Requer**. Na seção **Ações**, clique em **Aplicar**.
-7.  Você pode verificar se o serviço Web está configurado corretamente abrindo o seu navegador da Web e inserindo o seguinte endereço da Web: "https://&lt;server-name&gt;.&lt;domain-name&gt;/FirstContosoBank/Service1.asmx". Por exemplo, "https://myserver.example.com/FirstContosoBank/Service1.asmx". Se o seu serviço Web estiver configurado corretamente, você será solicitado a selecionar um certificado cliente, a fim de acessar o serviço Web.
+7.  Você pode verificar se o serviço Web está configurado corretamente abrindo o seu navegador da Web e inserindo o seguinte endereço da Web: "https://&lt;nome-do-servidor&gt;.&lt;nome -do-domínio&gt;/FirstContosoBank/Service1.asmx". Por exemplo, "https://myserver.example.com/FirstContosoBank/Service1.asmx". Se o seu serviço Web estiver configurado corretamente, você será solicitado a selecionar um certificado cliente, a fim de acessar o serviço Web.
 
 Você pode repetir as etapas anteriores para criar vários serviços Web que podem ser acessados usando o mesmo certificado cliente.
 
@@ -73,7 +73,7 @@ Se não houver certificados cliente disponíveis, então o usuário precisará a
 
 1.  Abra o Visual Studio e crie um novo projeto na página inicial. Nomeie o novo projeto "FirstContosoBankApp". Clique em **OK** para criar o novo projeto.
 2.  No arquivo MainPage.xaml, adicione o seguinte XAML ao elemento padrão **Grid**. Esse XAML inclui um botão para navegar para um arquivo PFX a ser importado, uma caixa de texto para inserir uma senha para um arquivo PFX protegido por senha, um botão para importar um arquivo PFX selecionado, um botão para fazer logon no serviço Web seguro e um bloco de texto para exibir o status da ação atual.
-    ```xaml
+    ```xml
     <Button x:Name="Import" Content="Import Certificate (PFX file)" HorizontalAlignment="Left" Margin="352,305,0,0" VerticalAlignment="Top" Height="77" Width="260" Click="Import_Click" FontSize="16"/>
     <Button x:Name="Login" Content="Login" HorizontalAlignment="Left" Margin="611,305,0,0" VerticalAlignment="Top" Height="75" Width="240" Click="Login_Click" FontSize="16"/>
     <TextBlock x:Name="Result" HorizontalAlignment="Left" Margin="355,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="153" Width="560"/>
@@ -96,7 +96,7 @@ Se não houver certificados cliente disponíveis, então o usuário precisará a
 
 5.  No arquivo MainPage.xaml.cs, adicione as seguintes variáveis à classe **MainPage** . Elas especificam o endereço para o método "Logon" seguro do seu serviço Web "FirstContosoBank" e uma variável global que mantém um certificado PFX a ser importado para o repositório de certificados. Atualize o &lt;nome-do-servidor&gt; para o nome do servidor completo do seu servidor Microsoft Internet Information Server (IIS).
     ```cs
-    private Uri requestUri = new Uri("https://&lt;server-name&gt;/FirstContosoBank/Service1.asmx?op=Login");
+    private Uri requestUri = new Uri("https://<server-name>/FirstContosoBank/Service1.asmx?op=Login");
     private string pfxCert = null;
     ```
 
@@ -200,6 +200,6 @@ Se não houver certificados cliente disponíveis, então o usuário precisará a
 
 É possível usar essas etapas para criar vários aplicativos que usam o mesmo certificado de usuário para acessar os mesmos ou diferentes serviços Web seguros.
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

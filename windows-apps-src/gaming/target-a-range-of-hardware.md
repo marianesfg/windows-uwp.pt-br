@@ -1,13 +1,14 @@
 ---
+author: mtoepke
 title: Suporte a mapas de sombra em diversos hardwares
-description: Renderizar sombras de alta fidelidade em dispositivos mais rápidos e sombras mais velozes em dispositivos com menor desempenho.
+description: Renderize sombras de alta fidelidade em dispositivos mais rápidos e sombras mais velozes em dispositivos com menor desempenho.
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
 ---
 
 # Suporte a mapas de sombra em diversos hardwares
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Renderize sombras de alta fidelidade em dispositivos mais rápidos e sombras mais velozes em dispositivos com menor desempenho. Parte 4 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -114,7 +115,7 @@ Os aplicativos da Plataforma Universal do Windows (UWP) podem usar a compilaçã
 
 A entrada do arquivo de projeto para a versão com filtragem linear do sombreador define LINEAR:
 
-```
+```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
@@ -143,7 +144,7 @@ A entrada do arquivo de projeto para a versão com filtragem linear do sombreado
 
 A entrada do arquivo de projeto para a versão com filtragem linear do sombreador não inclui definições de pré-processador:
 
-```
+```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
@@ -173,6 +174,6 @@ A entrada do arquivo de projeto para a versão com filtragem linear do sombreado
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

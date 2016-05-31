@@ -1,13 +1,14 @@
 ---
-title: Multisampling em aplicativos da UWP (Plataforma Universal do Windows)
+author: mtoepke
+title: Multisampling nos aplicativos UWP (Plataforma Universal do Windows)
 description: Saiba como utilizar o multisampling em aplicativos da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 ---
 
-# <span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Multisampling em aplicativos da UWP (Plataforma Universal do Windows)
+# <span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Multisampling nos aplicativos UWP (Plataforma Universal do Windows)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Saiba como utilizar o multisampling em aplicativos da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D. O multisampling, também conhecido como suavização de múltipla amostra, é uma técnica de elementos gráficos usada para reduzir a aparição de bordas suavizadas. Essa técnica desenha mais pixels do que o que realmente existe no destino de renderização e, depois, faz uma média dos valores para manter a aparência de uma borda "parcial" em determinados pixels. Para uma descrição detalhada sobre como o multisampling funciona no Direct3D, consulte [Regras de rasterização para suavização de várias amostras](https://msdn.microsoft.com/library/windows/desktop/cc627092#Multisample).
 
@@ -22,7 +23,7 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
 
 1.  Chame [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para descobrir quais formatos DXGI podem ser usados com o multisampling. Forneça os formatos de destino de renderização que seu jogo pode usar. O destino de renderização e o destino de resolução devem usar o mesmo formato. Portanto, verifique [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134) e **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**.
 
-    **Nível de recurso 9:  ** Apesar dos dispositivos de nível de recurso 9 [garantirem suporte a formatos de destino de renderização de multisampling](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), o suporte não é garantido para destinos de resolução de multisampling. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
+    **Nível de recurso 9: ** Apesar dos dispositivos de nível de recurso 9 [garantirem suporte a formatos de destino de renderização multisample](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), o suporte não é garantido para destinos de resolução multisample. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
 
     O código a seguir verifica o suporte a multisampling para todos os valores de DXGI\_FORMAT:
 
@@ -74,7 +75,7 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
     }
     ```
 
-    > **Observação**   Use [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) se você precisar verificar o suporte a multisampling para buffers de recursos com alocação dinâmica.
+    > **Observação**   Use [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) se você precisar verificar o suporte a multisample para buffers de recursos com alocação dinâmica.
 
      
 
@@ -204,6 +205,6 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

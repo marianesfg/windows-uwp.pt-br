@@ -1,6 +1,7 @@
 ---
+author: jnHs
 Description: Para receber dinheiro pela venda de aplicativos na Windows Store, você deve configurar sua conta de pagamento e preencher os formulários de imposto necessários.
-title: Configurando sua conta de pagamento e formulários de imposto
+title: Configurando sua conta de pagamento e formulários fiscais
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
 ---
 
@@ -9,11 +10,11 @@ ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
 
 Para receber dinheiro pela venda de aplicativos na Windows Store, você deve configurar sua conta de pagamento e preencher os formulários de imposto necessários.
 
-> **Observação**  A partir de 1º de abril de 2016, seus lucros do Microsoft Advertising serão pagos para a mesma conta de pagamento que você configurou no Centro de Desenvolvimento. Para saber mais, veja [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
+> **Observação**  A partir de 1º de abril de 2016, seus lucros do Microsoft Advertising serão pagos na mesma conta de pagamento que você configurou no Centro de Desenvolvimento. Para saber mais, consulte [Consolidação de conta de pagamento e perfil fiscal pubCenter-DevCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 
 Se você pretende listar apenas os aplicativos gratuitos (e não planeja oferecer compras no aplicativo ou use o Microsoft Advertising), não precisa configurar uma conta de pagamento nem preencher formulários tributários. Se você mudar de ideia mais tarde e decidir que quer vender aplicativos (ou produtos no aplicativo), poderá configurar sua conta de pagamento e preencher os formulários tributários nessa ocasião. Você não poderá enviar aplicativos pagos ou IAPs até que sua conta de pagamento e perfil fiscal tenham sido concluídos.
 
-> **Observação**  [Certos mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) só permitem que você liste aplicativos gratuitos. Sua conta precisa estar registrada em um desses mercados para que você tenha a opção de configurar uma conta de pagamento.
+> **Observação**  [Determinados mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) só permitem que você liste aplicativos gratuitos. Sua conta precisa estar registrada em um desses mercados para que você tenha a opção de configurar uma conta de pagamento.
 
 
 Após [configurar sua conta de desenvolvedor](opening-a-developer-account.md), você deve fazer duas coisas antes de vender aplicativos (ou IAPs) na Windows Store:
@@ -21,7 +22,7 @@ Após [configurar sua conta de desenvolvedor](opening-a-developer-account.md), v
 -   [Configurar sua conta de pagamento](#setting_up_your_payout_account)
 -   [Preencher os formulários de imposto](#paying_taxes)
 
-> **Observação**  Para saber detalhes de como e quando você receberá o dinheiro obtido com os aplicativos, veja [Recebendo pagamentos](getting-paid-apps.md).
+> **Observação**  Para saber detalhes de como e quando você receberá o dinheiro obtido com os aplicativos, consulte [Recebendo pagamentos](getting-paid-apps.md).
 
  
 
@@ -61,9 +62,9 @@ Em alguns países e regiões, você pode criar uma conta de pagamento inserindo 
 
 Perguntas comuns sobre como usar o PayPal como forma de pagamento:
 
--   **Que configurações do PayPal preciso ter para receber pagamentos?** Você deve garantir que sua conta do PayPal não bloqueie pagamentos via cheque eletrônico. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal. Consulte a [página de configuração da conta do PayPal](http://go.microsoft.com/fwlink/p/?linkid=513139) para saber mais.
--   **Meu país/região é aceito?** Consulte [Tipos de conta, locais e taxas](account-types-locations-and-fees.md) para saber onde o PayPal é aceito como forma de pagamento.
--   **Há uma restrição de tamanho de pagamentos que posso receber usando o PayPal?** Sim. O PayPal limita o valor em dinheiro que os usuários podem receber em uma única transação. Os limites variam de moeda para moeda; consulte a [página de limite de transações do PayPal](http://go.microsoft.com/fwlink/p/?linkid=513108) para saber o limite para cada moeda. Se você acha que receberá um pagamento maior que seu limite de transação do PayPal, altere sua forma de pagamento para uma conta bancária.
+-   **Que configurações do PayPal preciso ter para receber pagamentos?** Você deve garantir que sua conta do PayPal não bloqueie pagamentos via eCheck. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal. Consulte a [página de configuração da conta do PayPal](http://go.microsoft.com/fwlink/p/?linkid=513139) para saber mais.
+-   **Meu país/região tem suporte?** Consulte [Tipos de conta, locais e taxas](account-types-locations-and-fees.md) para saber onde o PayPal é aceito como forma de pagamento.
+-   **Há alguma restrição do volume de pagamentos que posso receber usando o PayPal?** Sim. O PayPal limita o valor em dinheiro que os usuários podem receber em uma única transação. Os limites variam de moeda para moeda; consulte a [página de limite de transações do PayPal](http://go.microsoft.com/fwlink/p/?linkid=513108) para saber o limite para cada moeda. Se você acha que receberá um pagamento maior que seu limite de transação do PayPal, altere sua forma de pagamento para uma conta bancária.
 -   **Minha conta do PayPal deve ser registrada no mesmo país/região da minha conta do Centro de Desenvolvimento?** Não. Quando você configura uma conta do PayPal, é possível aceitar a configuração padrão. Você não deve ter problemas com outros países/regiões e moedas, a menos que tenha pagamento bloqueado em algumas moedas. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal.
 -   **Preciso aceitar os pagamentos do PayPal manualmente?** Não. As contas do PayPal são configuradas por padrão para exigir que os usuários aceitem pagamentos manualmente, o que significa que se você não aceitar o pagamento dentro de 30 dias, ele é devolvido. Você pode alterar essa configuração desativando “Perguntar-me” na página Mais Configurações do PayPal.
 
@@ -154,6 +155,6 @@ Se você está fora dos Estados Unidos, talvez possa tirar proveito de benefíci
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,28 +1,20 @@
 ---
-Description: Ofereça produtos consumíveis no aplicativo&\#8212;itens que podem ser comprados, usados e comprados novamente&\#8212;por meio da plataforma de comércio da Loja para proporcionar aos seus clientes uma experiência de compra robusta e confiável.
-title: Habilitar compras de produtos consumíveis no aplicativo
-ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
-keywords: oferta no aplicativo
-keywords: consumíveis
-keywords: compra no aplicativo
-keywords: produto no aplicativo
-keywords: como oferecer suporte no aplicativo
-keywords: amostra de código de compra no aplicativo
-keywords: amostra de código de oferta no aplicativo
+author: mcleanbyron Description: Ofereça produtos consumíveis no aplicativo&\#8212;itens que podem ser comprados, usados e comprados novamente&\#8212;por meio da plataforma de comércio da Loja para proporcionar aos seus clientes uma experiência de compra robusta e confiável.
+title: Habilitar compras de produtos consumíveis no aplicativo ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4 keywords: palavras-chave de oferta no aplicativo: palavras-chave consumíveis: palavras-chave de compra no aplicativo: palavras chave de produto no aplicativo: como dar suporte a palavras-chave no aplicativo: palavras-chave de exemplo de código de compra no aplicativo: exemplo de código de oferta no aplicativo
 ---
 
 # Habilitar compras de produtos consumíveis no aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Ofereça produtos consumíveis no aplicativo — itens que podem ser comprados, usados e comprados novamente — por meio da plataforma de comércio da Loja para proporcionar aos seus clientes uma experiência de compra robusta e confiável. Isso é especialmente útil para coisas como moedas em jogos (ouro, moedas etc.) que podem ser compradas e então usadas para comprar power-ups específicos.
 
 ## Pré-requisitos
 
 -   Este tópico trata dos relatórios de compra e atendimento de produtos no aplicativo consumíveis. Se você não tiver familiaridade com produtos no aplicativo, examine [Habilitar compras de produto no aplicativo](enable-in-app-product-purchases.md) para saber mais sobre informações de licença e como listar adequadamente produto nos aplicativo na Loja.
--   Ao codificar e testar novos produtos no aplicativo pela primeira vez, você deve usar o objeto [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) em vez do objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765). Dessa forma, é possível verificar a lógica do licenciamento usando chamadas simuladas ao servidor de licenças em vez de chamar o servidor ativo. Para fazer isso, você precisa personalizar o arquivo chamado "WindowsStoreProxy.xml" em %userprofile%\\AppData\\local\\packages\\&lt;nome do pacote&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. O simulador do Microsoft Visual Studio cria esse arquivo quando você executa seu aplicativo pela primeira vez, mas também é possível carregar um arquivo personalizado em tempo de execução. Para saber mais, consulte **CurrentAppSimulator**.
--   Este tópico também faz referência a exemplos de código fornecidos na [Amostra da Loja](http://go.microsoft.com/fwlink/p/?LinkID=627610). Essa amostra é uma ótima maneira de obter experiência prática com as diferentes opções de monetização fornecidas para os aplicativos UWP (Plataforma Universal do Windows).
+-   Ao codificar e testar novos produtos no aplicativo pela primeira vez, você deve usar o objeto [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) em vez do objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765). Dessa forma, é possível verificar a lógica do licenciamento usando chamadas simuladas ao servidor de licenças em vez de chamar o servidor ativo. Para fazer isso, você precisa personalizar o arquivo chamado "WindowsStoreProxy.xml" em %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. O simulador do Microsoft Visual Studio cria esse arquivo quando você executa seu aplicativo pela primeira vez, mas também é possível carregar um arquivo personalizado no tempo de execução. Para saber mais, veja **CurrentAppSimulator**.
+-   Este tópico também faz referência a exemplos de código fornecidos no [Exemplo da Loja](http://go.microsoft.com/fwlink/p/?LinkID=627610). Essa amostra é uma ótima maneira de obter experiência prática com as diferentes opções de monetização fornecidas para os aplicativos UWP (Plataforma Universal do Windows).
 
 ## Etapa 1: Fazendo a solicitação de compra
 
@@ -79,7 +71,7 @@ Este próximo exemplo mostra como usar a matriz do exemplo anterior para acessar
 ```CSharp
 private Boolean IsLocallyFulfilled(string productId, Guid transactionId)
 {
-    return grantedConsumableTransactionIds.ContainsKey(productId) &amp;&amp; grantedConsumableTransactionIds[productId].Contains(transactionId);
+    return grantedConsumableTransactionIds.ContainsKey(productId) && grantedConsumableTransactionIds[productId].Contains(transactionId);
 }
 ```
 
@@ -127,6 +119,6 @@ private async void GetUnfulfilledConsumables()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

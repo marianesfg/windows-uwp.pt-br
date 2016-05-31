@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Introdução ao desenvolvimento de aplicativos UWP no Xbox One
 description: Como configurar o seu computador e Xbox One para o desenvolvimento UWP.
 area: Xbox
@@ -21,7 +22,8 @@ Antes de começar, você precisará fazer o seguinte:
 
 2.  Instale a versão prévia 14295 do SDK do Windows 10. Você pode obtê-la no [Programa Windows Insider](http://go.microsoft.com/fwlink/p/?LinkId=780552).
   
-  > **Importante**&nbsp;&nbsp;A instalação dessa visualização do SDK em seu computador impedirá que você envie aplicativos para a loja criada nesse computador. Por isso, não instale em seu computador de desenvolvimento de produção. 
+  > **Importante**
+            &nbsp;&nbsp;A instalação dessa visualização do SDK em seu computador impedirá que você envie aplicativos para a loja criada nesse computador. Por isso, não instale em seu computador de desenvolvimento de produção. 
 
 ## Configurando seu console Xbox One
 1.  Ative o Modo de Desenvolvedor no seu Xbox One. Baixe o aplicativo, obtenha o código de ativação e insira-o na página xboxactivate em sua conta do Centro de Desenvolvimento. Consulte [Enabling developer mode on Xbox One](devkit-activation.md) para obter mais informações. 
@@ -30,7 +32,8 @@ Antes de começar, você precisará fazer o seguinte:
 
 3.  Vá para o aplicativo de Ativação do Modo de Desenvolvedor e selecione **Alternar e reiniciar**. Parabéns! Agora você tem um Xbox One no Modo de Desenvolvedor!
   
-  > **Observação**&nbsp;&nbsp;Seus aplicativos e jogos de varejo não serão executados no Modo de Desenvolvedor, apenas os aplicativos ou jogos que você criar. Volte para o Modo de Varejo para executar seus jogos e aplicativos favoritos.
+  > **Observação**
+            &nbsp;&nbsp;Seus aplicativos e jogos de varejo não serão executados no Modo de Desenvolvedor, apenas os aplicativos ou jogos que você criar. Volte para o Modo de Varejo para executar seus jogos e aplicativos favoritos.
 
 ## Criando seu primeiro projeto no Visual Studio 2015
 
@@ -58,6 +61,6 @@ Consulte [Development environment setup](development-environment-setup.md) para 
 - [UWP no Xbox One](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

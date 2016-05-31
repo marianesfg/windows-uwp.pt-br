@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Estender o exemplo de jogo
 description: Parabéns! A esta altura, você já entende os componentes principais de um jogo UWP (Plataforma Universal do Windows) DirectX 3D básico.
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
@@ -8,7 +9,7 @@ keywords: ["DirectX, XAML"]
 # Estender o exemplo de jogo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Parabéns! A esta altura, você já entende os componentes principais de um jogo UWP (Plataforma Universal do Windows) DirectX 3D básico. Você pode configurar a estrutura de um jogo, inclusive o provedor de exibição e o pipeline de renderização, e implementar um loop básico de jogo. Você também pode criar uma sobreposição de interface do usuário básica, além de incorporar sons e controles. Você está a caminho de criar um jogo por conta própria. Aqui estão alguns recursos para aprofundar seus conhecimentos sobre o desenvolvimento de jogos em DirectX.
 
@@ -30,7 +31,7 @@ Então, qual é a diferença entre a implementação de uma interface do usuári
 
 Declare o XAML para o **SwapChainBackgroundPanel** da seguinte maneira no arquivo **Main.app.xaml**:
 
-```xaml
+```xml
 <Page
     x:Name="DXMainPage"
     x:Class="Simple3DGameXaml.MainPage"
@@ -863,7 +864,7 @@ void App::ResetGame()
 
 MainPage.xaml
 
-```xaml
+```xml
 <SwapChainBackgroundPanel
     x:Name="DXSwapChainPanel"
     x:Class="Simple3DGameXaml.MainPage"
@@ -1514,6 +1515,6 @@ Para baixar uma versão do jogo de exemplo que usa XAML para sobreposição, vá
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

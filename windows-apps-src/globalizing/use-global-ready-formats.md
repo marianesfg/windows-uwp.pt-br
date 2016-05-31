@@ -1,18 +1,19 @@
 ---
-Description: Desenvolva um aplicativo preparado para ser usado globalmente. Formate adequadamente datas, horas, números e moedas.
+author: DelfCo
+Description: Desenvolva um aplicativo preparado para uso global formatando adequadamente datas, horas, números e moedas.
 title: Usar formatos prontos para o mundo
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
-label: Usar formatos prontos para o mundo
+label: Use global-ready formats
 template: detail.hbs
 ---
 
 # <span id="dev_globalizing.use_global-ready_formats"></span>Usar formatos prontos para o mundo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**APIs Importantes**
+
+**APIs importantes**
 
 -   [**Windows.Globalization.Calendar**](https://msdn.microsoft.com/library/windows/apps/br206724)
 -   [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)
@@ -117,7 +118,7 @@ Para simplificar o processo de adaptação a novos mercados, basta considerar al
 
     // Results for display.
     var results = "Fixed number (" + fractionalNumber + ")\n" +
-                  "With user&#39;s default currency: " + currencyDefault + "\n" +
+                  "With user's default currency: " + currencyDefault + "\n" +
                   "Formatted US Dollar: " + currencyUSD + "\n" +
                   "Formatted Euro (fr-FR defaults): " + currencyEuroFR;
     ```
@@ -149,7 +150,7 @@ Para simplificar o processo de adaptação a novos mercados, basta considerar al
 
     // Results for display.
     var results = "Fixed number (" + fractionalNumber + ")\n" +
-                  "With user&#39;s default currency: " + currencyDefault + "\n" +
+                  "With user's default currency: " + currencyDefault + "\n" +
                   "Formatted US Dollar: " + currencyUSD + "\n" +
                   "Formatted Euro (fr-FR defaults): " + currencyEuroFR;
     ```
@@ -189,6 +190,6 @@ Para simplificar o processo de adaptação a novos mercados, basta considerar al
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

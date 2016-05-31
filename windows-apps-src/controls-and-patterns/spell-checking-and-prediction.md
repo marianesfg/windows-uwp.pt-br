@@ -1,14 +1,13 @@
 ---
+author: Jwmsft
 Description: Durante a edição e a entrada de texto, a verificação ortográfica informa o usuário que uma palavra está com grafia incorreta realçando-a com uma linha ondulada vermelha e fornecendo uma maneira de o usuário corrigir o erro de ortografia.
-title: Previsão de texto e verificação ortográfica
+title: Verificação ortográfica e previsão de texto
 ms.assetid: B867C956-5AB2-4207-A8DE-179CE7871180
-label: Previsão de texto e verificação ortográfica
+label: Spell checking and text prediction
 template: detail.hbs
 ---
 
 # Diretrizes para verificação ortográfica
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Durante a edição e a entrada de texto, a verificação ortográfica informa o usuário que uma palavra está com grafia incorreta realçando-a com uma linha ondulada vermelha e fornece uma maneira de o usuário corrigir o erro de ortografia.
 
@@ -47,14 +46,16 @@ Para controles JavaScript, a verificação ortográfica está habilitada por pad
 
 Para controles TextBox XAML, a verificação ortográfica está desabilitada por padrão. Você pode habilitá-la definindo a propriedade **IsSpellCheckEnabled** como **true**.
 
-\[Este artigo contém informações que são específicas dos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## <span id="related_topics"></span>Artigos relacionados
 
 * [Texto e controles de texto](text-controls.md)
 * [Diretrizes para entrada de texto](https://msdn.microsoft.com/library/windows/apps/hh750315)
-* [Diretrizes de texto e tipografia](https://msdn.microsoft.com/library/windows/apps/hh700394)
-**Para desenvolvedores (XAML)**
+* [Diretrizes para texto e tipografia](https://msdn.microsoft.com/library/windows/apps/hh700394)
+            
+          
+            **Para desenvolvedores (XAML)**
 * [**Propriedade TextBox.IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/br209688)
 * [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 
@@ -65,6 +66,6 @@ Para controles TextBox XAML, a verificação ortográfica está desabilitada por
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,11 +1,12 @@
 ---
+author: scottmill
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
-title: animações de composição
-description: muitas propriedades de objeto e efeito de composição podem ser animadas usando animações de quadro chave e expressão permitindo que as propriedades de um elemento de interface do usuário mudem ao longo do tempo ou com base em um cálculo.
+title: Animações de composição
+description: Muitas propriedades de objeto e efeito de composição podem ser animadas usando animações de quadro chave e expressão permitindo que as propriedades de um elemento de interface do usuário mudem ao longo do tempo ou com base em um cálculo.
 ---
 # Animações de composição
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Muitas propriedades de objeto e efeito de composição podem ser animadas usando animações de quadro chave e expressão permitindo que as propriedades de um elemento de interface do usuário mudem ao longo do tempo ou com base em um cálculo. Existem dois tipos de animações: animações de quadro chave, representadas pela classe [**KeyFrameAnimation**](https://msdn.microsoft.com/library/windows/apps/Dn706830), e animações de expressão, representadas pela classe [**ExpressionAnimation**](https://msdn.microsoft.com/library/windows/apps/Dn706817).
 
@@ -122,7 +123,7 @@ Depois de definir sua animação, os quadros chave e as propriedades, você est�
 A sintaxe geral e um exemplo são:
 
 ```cs
-targetVisual.StartAnimation(“Offset”, animation);
+targetVisual.StartAnimation("Offset", animation);
 ```
 
 Depois de iniciar a animação, você também pode interrompê-la e desconectá-la. Isso é feito usando o método [**StopAnimation**](https://msdn.microsoft.com/library/windows/apps/Mt590841) e especificando a propriedade que você deseja parar de animar.
@@ -130,7 +131,7 @@ Depois de iniciar a animação, você também pode interrompê-la e desconectá-
 Por exemplo:
 
 ```cs
-targetVisual.StopAnimation(“Offset”);
+targetVisual.StopAnimation("Offset");
 ```
 
 ### Eventos de conclusão de animação
@@ -167,7 +168,7 @@ Por exemplo:
 
 ```cs
 myScopedBatch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
-Visual.StartAnimation(“Opacity”, myAnimation);
+Visual.StartAnimation("Opacity", myAnimation);
 myScopedBatch.End();
 ```
 
@@ -192,7 +193,7 @@ Animações de expressão são animações que usam uma expressão matemática p
 Para criar sua expressão, chame [**CreateExpressionAnimation**](https://msdn.microsoft.com/library/windows/apps/Mt187002) em seu objeto Compositor e especifique a expressão que você deseja usar:
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“INSERT_EXPRESSION_STRING”)
+var expression = _compositor.CreateExpressionAnimation("INSERT_EXPRESSION_STRING")
 ```
 
 ### Operadores, precedência e capacidade de associação
@@ -229,8 +230,8 @@ Neste exemplo, ChildOffset e ParentOffset são parâmetros que representam a pro
 Na cadeia de caracteres da expressão acima, precisamos criar dois parâmetros para definir os dois elementos visuais:
 
 ```cs
-Expression.SetReferenceParameter(“ChildVisual”, childVisual);
-Expression.SetReferenceParameter(“ParentVisual”, parentVisual);
+Expression.SetReferenceParameter("ChildVisual", childVisual);
+Expression.SetReferenceParameter("ParentVisual", parentVisual);
 ```
 
 ### Funções auxiliares de expressão
@@ -244,7 +245,7 @@ Além de ter acesso a operadores e parâmetros de propriedade, você também tem
 Este é um exemplo mais complexo de cadeia de caracteres de expressão que usa a função auxiliar Clamp:
 
 ```cs
-Clamp((scroller.Offset.y * -1.0) – container.Offset.y, 0, container.Size.y – header.Size.y)
+Clamp((scroller.Offset.y * -1.0) - container.Offset.y, 0, container.Size.y - header.Size.y)
 ```
 
 ### Iniciando e interrompendo sua animação de expressão
@@ -264,14 +265,14 @@ _sharedProperties = _compositor.CreatePropertySet();
 Depois de criar seu conjunto de propriedades, você pode adicionar uma propriedade e um valor a ele usando um dos métodos **Insert\*** do [**CompositionPropertySet**](https://msdn.microsoft.com/library/windows/apps/Dn706772). Por exemplo:
 
 ```cs
-_sharedProperties.InsertVector3(“NewOffset”, offset);
+_sharedProperties.InsertVector3("NewOffset", offset);
 ```
 
 Depois de criar sua animação de expressão, você pode referenciar propriedades do conjunto de propriedades na cadeia de caracteres de expressão com o uso de um parâmetro de referência. Por exemplo:
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“sharedProperties.NewOffset”);
-expression.SetReferenceParameter(“sharedProperties”, _sharedProperties);
+var expression = _compositor.CreateExpressionAnimation("sharedProperties.NewOffset");
+expression.SetReferenceParameter("sharedProperties", _sharedProperties);
 ```
 
 ### Quadros chave de expressão
@@ -291,7 +292,7 @@ Por exemplo, o trecho a seguir usa uma combinação de quadros chave regulares e
 
 ```cs
 var animation = _compositor.CreateScalarKeyFrameAnimation();
-animation.InsertExpressionKeyFrame(0.25, “VisualBOffset.X / VisualAOffset.Y”);
+animation.InsertExpressionKeyFrame(0.25, "VisualBOffset.X / VisualAOffset.Y");
 animation.InsertKeyFrame(1.00f, 0.8f);
 ```
 
@@ -305,7 +306,7 @@ A linguagem de expressão, é possível fazer referência ao valor atual e inici
 Um exemplo de uso desses valos em um quadro chave de expressão:
 
 ```cs
-animation.InsertExpressionKeyFrame(0.0f, “this.CurrentValue + delta”);
+animation.InsertExpressionKeyFrame(0.0f, "this.CurrentValue + delta");
 ```
 
 ### Expressões condicionais
@@ -334,7 +335,7 @@ Por fim, as seguintes conjunções são aceitas como operadores ou funções na 
 O trecho a seguir mostra um exemplo do uso de condicionais em uma expressão:
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“target.Offset.x > 50 ? 0.0f +   (target.Offset.x / parent.Offset.x) : 1.0f”);
+var expression = _compositor.CreateExpressionAnimation("target.Offset.x > 50 ? 0.0f +   (target.Offset.x / parent.Offset.x) : 1.0f");
 ```
 
  
@@ -346,6 +347,6 @@ var expression = _compositor.CreateExpressionAnimation(“target.Offset.x > 50 ?
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

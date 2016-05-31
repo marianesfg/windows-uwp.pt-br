@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um comando e realizar tarefas.
 title: Reconhecimento de fala
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
@@ -8,8 +9,6 @@ template: detail.hbs
 
 # Reconhecimento de fala
 
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um comando e realizar tarefas.
 
@@ -46,17 +45,17 @@ Você pode usar vários tipos de restrições quando executar reconhecimento de 
 
     A gramática de pesquisa na Web, assim como uma gramática de ditado, contém um grande número de palavras e frases que um usuário pode dizer. No entanto, ela é otimizada para reconhecer termos que as pessoas normalmente usam ao pesquisar na Web.
 
-    **Observação**  Uma vez que as gramáticas de pesquisa na Web e de ditado predefinidas podem ser grandes e online (não no dispositivo), o desempenho pode não ser tão rápido quanto o das gramáticas personalizadas instaladas no dispositivo.
+    **Observação**  Como as gramáticas de pesquisa na Web e de ditado predefinidas podem ser grandes e online (não no dispositivo), o desempenho pode não ser tão rápido quanto o das gramáticas personalizadas instaladas no dispositivo.
 
      
 
-    These predefined grammars can be used to recognize up to 10 seconds of speech input and require no authoring effort on your part. However, they do require a connection to a network.
+    Essas gramáticas predefinidas podem ser usadas para reconhecer até 10 segundos de entrada de fala e não exigem nenhum esforço de criação de sua parte. No entanto, elas exigem uma conexão com uma rede.
 
-    To use web-service constraints, speech input and dictation support must be enabled in **Settings** by turning on the "Get to know me" option in the Settings -&gt; Privacy -&gt; Speech, inking, and typing page.
+    Para usar restrições de serviço Web, você deve habilitar o suporte à entrada de fala e ao ditado em **Configurações** ativando a opção "Acessar meus dados" na página Configurações -&gt; Privacidade -&gt; Controle por voz, escrita a tinta e digitação.
 
-    Here, we show how to test whether speech input is enabled and open the Settings -&gt; Privacy -&gt; Speech, inking, and typing page, if not.
+    Aqui, nós mostramos como testar se a entrada de fala está habilitada. Caso não esteja, abra página Configurações -&gt; Privacidade -&gt; Controle por voz, escrita a tinta e digitação.
 
-    First, we initialize a global variable (HResultPrivacyStatementDeclined) to the HResult value of 0x80045509. See [Exception handling for in C\# or Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
+    Primeiro, inicializamos uma variável global (HResultPrivacyStatementDeclined) para o valor HResult de 0x80045509. Consulte [Tratamento de exceções para em C\# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
 
 ```    CSharp
 private static uint HResultPrivacyStatementDeclined = 0x80045509;</code></pre></td>
@@ -205,10 +204,14 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 **Desenvolvedores**
-* [Interações de controle por voz](speech-interactions.md)
-**Designers**
+* [Interações de fala](speech-interactions.md)
+            
+          
+            **Designers**
 * [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
-**Exemplos**
+            
+          
+            **Exemplos**
 * [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -219,6 +222,6 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

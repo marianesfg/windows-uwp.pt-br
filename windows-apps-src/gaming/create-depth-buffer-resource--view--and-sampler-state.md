@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Criar recursos de dispositivo de buffer de profundidade
 description: Aprenda a criar recursos de dispositivos Direct3D necessários ao suporte de testes e profundidade para volumes de sombra.
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
@@ -7,7 +8,7 @@ ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
 # Criar recursos de dispositivo de buffer de profundidade
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Aprenda a criar recursos de dispositivos Direct3D necessários ao suporte de testes e profundidade para volumes de sombra. Parte 1 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -259,6 +260,6 @@ Na próxima parte deste guia passo a passo, veremos como criar o mapa de sombra 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

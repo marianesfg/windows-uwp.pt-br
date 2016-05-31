@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Você pode criar um anúncio para promover um dos seus aplicativos em outros aplicativos seus gratuitamente. Chamamos isso de anúncios domésticos.
 title: Sobre anúncios domésticos
 ms.assetid: C6507C8B-351B-49E7-A194-35AB05BC3358
@@ -25,12 +26,12 @@ Quando um anúncio doméstico do Aplicativo A aparecer no Aplicativo B, você n�
 
 * [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md)
 * [Gerenciando sua campanha publicitária](managing-your-ad-campaign.md)
-* [Relatório de anúncios de instalação de aplicativo](app-install-ads-reports.md)
+* [Relatório de anúncios de instalação de aplicativos](app-install-ads-reports.md)
 * [Perguntas comuns](common-questions.md)
 
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

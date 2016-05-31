@@ -1,4 +1,5 @@
 ---
+author: awkoren
 Description: 'Este tópico mostra exemplos das tarefas de codificação necessárias para obter alguns dos cenários mais comuns de EDP (proteção de dados empresariais) relacionados à transferência de arquivos.'
 MS-HAID: 'dev\_app\_to\_app.use\_edp\_to\_protect\_enterprise\_data\_transferred\_between\_apps'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -51,7 +52,7 @@ private void OnFileLoaded(FileProtectionInfo fileProtectionInfo, string contents
         }
         else
         {
-            // Enterprise policy is not in effect, because the file&#39;s identity
+            // Enterprise policy is not in effect, because the file's identity
             // is not managed. In this case, we have a file protected to an
             // unmanaged identity, which is not a valid situation.
             // We still have to call ClearProcessUIPolicy if we want to clear the policy.
@@ -123,7 +124,7 @@ private async void OnPasteWithApplyPolicy()
         {
             ProtectionPolicyEvaluationResult policyResult =
                 await dataPackageView.RequestAccessAsync(dataPackageView.Properties.EnterpriseId);
-            if (this.isNewEmptyDocument &amp;&amp;
+            if (this.isNewEmptyDocument &&
                 policyResult == ProtectionPolicyEvaluationResult.Allowed)
             {
                 // If this is a new and empty document, and we're allowed to access
@@ -195,19 +196,19 @@ private void TagCurrentViewWithEnterpriseId(string identity)
 ## Marcar objeto de arraste de saída com a identidade empresarial
 
 
-Seu aplicativo tem uma janela pessoal aberta com algum conteúdo empresarial arrastável. O usuário começa a arrastar uma parte desse conteúdo, e seu aplicativo precisa garantir que o conteúdo seja marcado como empresarial. Este cenário não envolve nenhuma API nova. Para este cenário, seu aplicativo definirá a propriedade [**DataPackagePropertySet.EnterpriseId**](https://msdn.microsoft.com/library/windows/apps/dn913861) (veja o cenário [Origem da área de transferência com identidade empresarial explícita](#clipboard_source_explicit_id) acima).
+Seu aplicativo tem uma janela pessoal aberta com algum conteúdo empresarial arrastável. O usuário começa a arrastar uma parte desse conteúdo, e seu aplicativo precisa garantir que o conteúdo seja marcado como empresarial. Este cenário não envolve nenhuma API nova. Para este cenário, seu aplicativo definirá a propriedade [**DataPackagePropertySet.EnterpriseId**](https://msdn.microsoft.com/library/windows/apps/dn913861) (consulte o cenário [Origem da área de transferência com identidade empresarial explícita](#clipboard_source_explicit_id) acima).
 
 ## Consulta da identidade empresarial do objeto de arraste recebido
 
 
-Seu aplicativo tem um documento novo e vazio aberto, que é considerado neutro desde que esteja vazio, e o usuário arrasta e solta algum conteúdo no documento. O aplicativo deve agora determinar a identidade empresarial do objeto para alterar o estado do documento de acordo com essa informação. Para este cenário, seu aplicativo receberá a propriedade **EnterpriseId** do pacote de dados lendo [**DataPackagePropertySet.EnterpriseId**](https://msdn.microsoft.com/library/windows/apps/dn913861) (veja o cenário [Origem da área de transferência com identidade empresarial explícita](#clipboard_source_explicit_id) acima).
+Seu aplicativo tem um documento novo e vazio aberto, que é considerado neutro desde que esteja vazio, e o usuário arrasta e solta algum conteúdo no documento. O aplicativo deve agora determinar a identidade empresarial do objeto para alterar o estado do documento de acordo com essa informação. Para este cenário, seu aplicativo receberá a propriedade **EnterpriseId** do pacote de dados lendo [**DataPackagePropertySet.EnterpriseId**](https://msdn.microsoft.com/library/windows/apps/dn913861) (consulte o cenário [Origem da área de transferência com identidade empresarial explícita](#clipboard_source_explicit_id) acima).
 
 ## Seu aplicativo como uma origem do contrato de Compartilhamento
 
 
 Quando você dá suporte ao contrato de Compartilhamento em seu aplicativo, para configurar uma origem de compartilhamento, defina o contexto de identidade empresarial no [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/br205873) conforme mostra este exemplo de código.
 
-**Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção para seu modo de exibição atual (veja [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
+**Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção como seu modo de exibição atual (consulte [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
 
 
 
@@ -264,7 +265,7 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
             if (this.isNewEmptyDocument && protectionPolicyEvaluationResult ==
                 ProtectionPolicyEvaluationResult.Allowed)
             {
-                // If this is a new and empty document, and we&#39;re allowed to access
+                // If this is a new and empty document, and we're allowed to access
                 // the data, then we can avoid popping the consent dialog.
                 bool isIdentityManaged = ProtectionPolicyManager.TryApplyProcessUIPolicy
                     (shareOperation.Data.Properties.EnterpriseId);
@@ -300,7 +301,7 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 
 Neste cenário, seu aplicativo habilita a interface do usuário de colar somente quando há dados na área de transferência. Para esse recurso, você pode usar o método [**ProtectionPolicyManager.CheckAccess**](https://msdn.microsoft.com/library/windows/apps/dn705783), que permite uma verificação passiva da política.
 
-**Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção para seu modo de exibição atual (veja [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
+**Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção como seu modo de exibição atual (consulte [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
 
 
 
@@ -333,7 +334,7 @@ private bool IsClipboardPeekAllowedAsync()
 
 Este cenário mostra como verificar o acesso para uma operação de colar.
 
-**Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção para seu modo de exibição atual (veja [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
+**Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção como seu modo de exibição atual (consulte [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
 
 
 
@@ -377,7 +378,7 @@ private async void OnPasteWithRequestAccess()
 }
 ```
 
-**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
 
@@ -394,6 +395,6 @@ private async void OnPasteWithRequestAccess()
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

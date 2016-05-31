@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
 title: Dispositivos, sensores e consumo de energia
 description: Para proporcionar uma experiência de qualidade para seus usuários, talvez seja necessário integrar dispositivos externos ou sensores ao seu aplicativo.
 ---
 # Dispositivos, sensores e consumo de energia
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Para proporcionar uma experiência de qualidade para seus usuários, talvez seja necessário integrar dispositivos externos ou sensores ao seu aplicativo. Aqui estão alguns exemplos de recursos que você pode adicionar ao seu aplicativo usando a tecnologia descrita nesta seção.
 
@@ -16,6 +17,7 @@ Para proporcionar uma experiência de qualidade para seus usuários, talvez seja
 | Tópico | Descrição |
 |-------|-------------|
 | [Habilitar os recursos do dispositivo](enable-device-capabilities.md) | Este tutorial descreve como declarar recursos do dispositivo no Microsoft Visual Studio. Isso permite que o aplicativo use câmeras, microfones, sensores de localização e outros dispositivos. | 
+| [Habilitar o acesso de modo do usuário para Windows IoT](enable-usermode-access.md) | Este tutorial descreve como habilitar o acesso de modo do usuário para GPIO, I2C, SPI e UART no Windows 10 IoT Core. |
 | [Enumerar dispositivos](enumerate-devices.md) | O namespace de enumeração permite localizar dispositivos que estejam conectados internamente ao sistema, externamente ou que possam ser detectados por protocolos de rede ou sem fio. |
 | [Emparelhar dispositivos](pair-devices.md) | Alguns dispositivos precisam ser emparelhados para que possam ser usados. O namespace [<strong>Windows.Devices.Enumeration</strong>](https://msdn.microsoft.com/library/windows/apps/BR225459) dá suporte a três maneiras diferentes de emparelhar dispositivos. |
 | [Emparelhamento fora de banda](out-of-band-pairing.md) | Esta seção descreve como o emparelhamento fora de banda permite que os aplicativos se conectem a certos dispositivos sem necessidade de descoberta. | 
@@ -28,6 +30,6 @@ Para proporcionar uma experiência de qualidade para seus usuários, talvez seja
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

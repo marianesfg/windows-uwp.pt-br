@@ -1,13 +1,14 @@
 ---
-Description: O relatório Críticas do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes inseriram na classificação do seu aplicativo na Loja.
-title: Relatório Críticas
+author: jnHs
+Description: O relatório Críticas do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja.
+title: Relatório de avaliações
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 ---
 
-# Relatório Críticas
+# Relatório de avaliações
 
 
-O relatório **Críticas** do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes inseriram na classificação do seu aplicativo na Loja. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar esses dados de forma programática usando a [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
+O relatório **Críticas** do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar esses dados de forma programática usando a [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 > **Observação** Você também pode [responder às críticas dos clientes](respond-to-customer-reviews.md) nessa página.
 
@@ -33,7 +34,7 @@ Perto da parte superior da página, você pode expandir **Aplicar filtros** para
 
 >**Dica** Se você não visualizar críticas na página, verifique se os seus filtros não excluíram todas as críticas. Por exemplo, se você filtrar por um sistema operacional de destino que não dá suporte ao seu aplicativo, você não verá quaisquer críticas
 
--   **Classificação**: por padrão, todas as classificações por estrelas estão marcadas, mas você pode marcar e desmarcar as classificações (de 1 a 5 estrelas) se quiser ver apenas as críticas associadas a uma classificação por estrelas específica.
+-   **Classificação**: por padrão, todas as classificações por estrelas estão marcadas, mas você pode marcar e desmarcar as classificações (de 1 a 5 estrelas) se quiser ver apenas as análises associadas a uma classificação por estrelas específica.
 -   **Data**: o filtro padrão é **Últimos 30 dias**, mas você pode expandi-lo até **Últimos 12 meses**.
 -   **Conteúdo da crítica**: a configuração padrão é **Todos**, o que inclui classificações sem texto de crítica adicionado. Você pode selecionar **Classificações com conteúdo de crítica** para mostrar apenas as classificações que incluem conteúdo de crítica escrito.
 -   **Sistema operacional de destino**: a configuração padrão é **Todos**. Você pode escolher um sistema operacional de destino específico, se quiser que essa página mostre apenas as classificações dos clientes que usando pacotes destinados a esse sistema operacional.
@@ -78,6 +79,6 @@ Veja algumas ações adicionais que você pode realizar com base nas classifica�
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 7DBEE5E2-C3EC-4305-823D-9095C761A1CD
 description: Este artigo mostra como capturar uma sequência de fotos variável que permite que você capture vários quadros de imagem em sucessão rápida e configure cada quadro para usar diferentes configurações de foco, flash, ISO, exposição e compensação de exposição.
 title: Sequência de fotos variável
@@ -28,7 +29,7 @@ Declare uma variável de membro para armazenar o objeto [**VariablePhotoSequence
 
 ## Preparar a captura de sequência de fotos variável
 
-Depois que você tiver inicializado seu [MediaCapture](capture-photos-and-video-with-mediacapture.md), confira se as sequências de fotos variáveis são suportadas no dispositivo atual por meio da obtenção de uma instância do [**VariablePhotoSequenceController**](https://msdn.microsoft.com/library/windows/apps/dn640573) a partir do [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) da captura de mídia e da verificação da propriedade [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn640580).
+Depois de iniciar seu [MediaCapture](capture-photos-and-video-with-mediacapture.md), confira se as sequências de fotos variáveis têm suporte no dispositivo atual por meio da obtenção de uma instância do [**VariablePhotoSequenceController**](https://msdn.microsoft.com/library/windows/apps/dn640573) a partir do [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) da captura de mídia e da verificação da propriedade [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn640580).
 
 [!code-cs[IsVPSSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetIsVPSSupported)]
 
@@ -41,7 +42,7 @@ Obtenha um objeto [**FrameControlCapabilities**](https://msdn.microsoft.com/libr
 -   [**IsoSpeed**](https://msdn.microsoft.com/library/windows/apps/dn652574)
 -   [**PhotoConfirmation**](https://msdn.microsoft.com/library/windows/apps/dn652578)
 
-Este exemplo definirá um valor de compensação de exposição diferente para cada quadro. Para verificar se a compensação de exposição é suportada para sequências de fotos no dispositivo atual, verifique a propriedade [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn278905) do objeto [**FrameExposureCompensationCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652628) acessado por meio da propriedade **ExposureCompensation**.
+Este exemplo definirá um valor de compensação de exposição diferente para cada quadro. Para verificar se a compensação de exposição tem suporte para sequências de fotos no dispositivo atual, verifique a propriedade [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn278905) do objeto [**FrameExposureCompensationCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652628) acessado por meio da propriedade **ExposureCompensation**.
 
 [!code-cs[IsExposureCompensationSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetIsExposureCompensationSupported)]
 
@@ -95,6 +96,6 @@ Quando você terminar de capturar as sequências de fotos variáveis ou seu apli
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

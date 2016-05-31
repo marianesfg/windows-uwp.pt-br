@@ -1,20 +1,21 @@
 ---
-title: Inserindo áudio na amostra do Marble Maze
+author: mtoepke
+title: Adicionando áudio ao exemplo do Marble Maze
 description: Este documento descreve as principais práticas a serem consideradas quando se trabalha com áudio e mostra como o Marble Maze as aplica.
 ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
 ---
 
-# Inserindo áudio na amostra do Marble Maze
+# Adicionando áudio ao exemplo do Marble Maze
 
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este documento descreve as principais práticas a serem consideradas quando se trabalha com áudio e mostra como o Marble Maze as aplica. O Marble Maze usa o Microsoft Media Foundation para carregar recursos do arquivo e o XAudio2 para mixar, reproduzir áudio e aplicar efeitos ao áudio.
 
 O Marble Maze executa música em segundo plano e usa sons do jogo para indicar eventos do jogo, por exemplo, quando a bolinha bate em uma parede. Uma parte importante da implementação é que o Marble Maze usa um efeito de reverberação (ou eco) para simular o som de uma bolinha quando ela quica. A implementação do efeito de reverberação faz com que ecos cheguem a você mais rapidamente e mais altos em ambientes pequenos; os ecos chegam até você mais lentamente e mais baixos em ambientes maiores.
 
-> **Observação**   O código de amostra que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
 
 Seguem alguns dos pontos principais discutidos neste documento para quando você trabalhar com o áudio do seu jogo:
 
@@ -100,7 +101,7 @@ O método **Audio::CreateResources** executa uma etapa semelhante para criar a v
 
 ###  Criando o efeito de reverberação
 
-Para cada voz, você pode usar o XAudio2 para criar sequências de efeitos que processam áudio. Essa sequência é conhecida como uma cadeia de efeitos. Use cadeias de efeitos quando quiser aplicar um ou vários efeitos a uma voz. As cadeias de efeitos podem ser destrutivas, ou seja, cada efeito na cadeia pode substituir o buffer de áudio. Essa propriedade é importante porque o XAudio2 não dá nenhuma garantia de que os buffers de saída sejam inicializados com silêncio. Os objetos do efeito são representados no XAudio2 por objetos XAPO (objetos de processamento de áudio entre plataformas). Para saber mais sobre XAPO, consulte [Visão geral de XAPO](o:microsoft.directx_sdk.xapo.audio_overview_xapo).
+Para cada voz, você pode usar o XAudio2 para criar sequências de efeitos que processam áudio. Essa sequência é conhecida como uma cadeia de efeitos. Use cadeias de efeitos quando quiser aplicar um ou vários efeitos a uma voz. As cadeias de efeitos podem ser destrutivas, ou seja, cada efeito na cadeia pode substituir o buffer de áudio. Essa propriedade é importante porque o XAudio2 não dá nenhuma garantia de que os buffers de saída sejam inicializados com silêncio. Os objetos do efeito são representados no XAudio2 por objetos XAPO (objetos de processamento de áudio entre plataformas). Para saber mais sobre XAPO, consulte [Visão geral de XAPO](https://msdn.microsoft.com/library/windows/desktop/ee415735).
 
 Quando criar uma cadeia de efeitos, siga as etapas abaixo:
 
@@ -767,7 +768,7 @@ O Marble Maze também usa o sinalizador **m\_engineExperiencedCriticalError** pa
 ## Tópicos relacionados
 
 
-* [Inserindo entradas e interatividade na amostra do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md)
+* [Adicionando entrada e interatividade ao exemplo do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md)
 * [Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
@@ -779,6 +780,6 @@ O Marble Maze também usa o sinalizador **m\_engineExperiencedCriticalError** pa
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

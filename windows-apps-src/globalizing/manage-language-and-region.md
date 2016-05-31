@@ -1,15 +1,16 @@
 ---
+author: DelfCo
 Description: Controle como o Windows seleciona os recursos da interface do usuário e formata os elementos da interface do usuário do aplicativo, usando as várias configurações de idioma e região fornecidas pelo Windows.
 title: Gerenciar idioma e região
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
-label: Gerenciar idioma e região
+label: Manage language and region
 template: detail.hbs
 ---
 
 # Gerenciar idioma e região
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **APIs importantes**
@@ -42,7 +43,7 @@ Consulte [Idiomas com suporte](https://msdn.microsoft.com/library/windows/apps/j
 
 A lista de preferências de idioma do usuário é uma lista ordenada de idiomas que descreve os idiomas do usuário na ordem de sua preferência.
 
-O usuário define a lista em **Configurações** &gt; **Hora e idioma** &gt; **Região e idioma**. Como alternativa, ele pode usar **Painel de Controle** &gt; **Relógio, Idioma e Região**.
+O usuário define a lista em **Configurações**&gt;**Hora e idioma**&gt;**Região e idioma**. Como alternativa, ele pode usar **Painel de Controle**&gt;**Relógio, Idioma e Região**.
 
 A lista de preferências de idioma do usuário pode conter vários idiomas e variantes regionais ou outras específicas. Por exemplo, o usuário pode preferir fr-CA, mas também pode compreender en-GB.
 
@@ -82,9 +83,11 @@ Há situações em que nem todos os recursos precisam ser localizados.
 -   Para recursos que têm exceções específicas em alguns idiomas e que todos os outros idiomas mapeiam para um recurso comum, o recurso que deve ser usado para todos os idiomas deve ser marcado com a marca de idioma indeterminada 'und'. O Windows interpreta a marca de idioma 'und' de maneira semelhante a um '\*', no sentido de que ele faz correspondência com o principal idioma do aplicativo após qualquer outra correspondência específica. Por exemplo, se alguns recursos (como a largura de um elemento) forem diferentes para finlandês, mas o restante dos recursos for o mesmo para todos os idiomas, o recurso do finlandês deverá ser marcado com a marca do idioma finlandês, e o restante deverá ser marcado com 'und'.
 -   Para recursos que se baseiam no script de um idioma, em vez do idioma em si, como a fonte ou altura de um texto, use a marca de idioma indeterminado com um script especificado: 'und-&lt;script&gt;'. Por exemplo, para fontes latinas, use und-Latn\\fonts.css e para fontes cirílicas use und-Cryl\\fonts.css.
 
-### <span id="Create_the_application_language_list."></span><span id="create_the_application_language_list."></span><span id="CREATE_THE_APPLICATION_LANGUAGE_LIST."></span>Criar a lista de idiomas de aplicativo.
+### <span id="Create_the_application_language_list."></span><span id="create_the_application_language_list."></span><span id="CREATE_THE_APPLICATION_LANGUAGE_LIST."></span>Crie a lista de idiomas de aplicativo.
 
-Em tempo de execução, o sistema determina as preferências de idioma do usuário para as quais o aplicativo declara suporte em seu manifesto, além de criar *uma lista de idiomas do aplicativo*. Ele usa essa lista para determinar o(s) idioma(s) em que o aplicativo deve estar. A lista determina o(s) idioma(s) usado(s) para o aplicativo e os recursos do sistema, as datas, as horas e os números, além de outros componentes. Por exemplo, o Sistema de Gerenciamento de Recursos ([**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) e [**namespace WinJS.Resources**](https://msdn.microsoft.com/library/windows/apps/br229779)) carrega os recursos da interface do usuário de acordo com o idioma do aplicativo. [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) também escolhe formatos com base na lista de idiomas do aplicativo. A lista de idiomas do aplicativo está disponível usando [**Windows.Globalization.ApplicationLanguages.Languages**](https://msdn.microsoft.com/library/windows/apps/hh972396).
+Em tempo de execução, o sistema determina as preferências de idioma do usuário para as quais o aplicativo declara suporte em seu manifesto, além de criar *uma lista de idiomas do aplicativo*. Ele usa essa lista para determinar o(s) idioma(s) em que o aplicativo deve estar. A lista determina o(s) idioma(s) usado(s) para o aplicativo e os recursos do sistema, as datas, as horas e os números, além de outros componentes. Por exemplo, o Sistema de Gerenciamento de Recursos ([**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) e [**namespace WinJS.Resources**](https://msdn.microsoft.com/library/windows/apps/br229779)) carrega os recursos da interface do usuário de acordo com o idioma do aplicativo. [
+              **Windows.Globalization**
+            ](https://msdn.microsoft.com/library/windows/apps/br206813) também escolhe formatos com base na lista de idiomas do aplicativo. A lista de idiomas do aplicativo está disponível usando [**Windows.Globalization.ApplicationLanguages.Languages**](https://msdn.microsoft.com/library/windows/apps/hh972396).
 
 A correspondência dos idiomas com os recursos é difícil. É recomendável delegar ao Windows a manipulação da correspondência porque há muitos componentes opcionais de uma marca de idioma que influenciam a prioridade de correspondência, e eles podem ser encontrados na prática.
 
@@ -119,19 +122,23 @@ Veja a seção Comentários abaixo para obter exemplos.
 
 ### <span id="Set_the_HTTP_Accept_Language_header."></span><span id="set_the_http_accept_language_header."></span><span id="SET_THE_HTTP_ACCEPT_LANGUAGE_HEADER."></span>Defina o cabeçalho idioma aceito pelo HTTP.
 
-As solicitações de HTTP feitas a partir dos aplicativos da Windows Store e aplicativos de área de trabalho em solicitações de Web típicas e XMLHttpRequest (XHR), use o cabeçalho HTTP Accept-Language padrão. Por padrão, o cabeçalho HTTP é definido nas preferências de idioma do usuário, na ordem preferida pelo usuário, conforme especificada em **Configurações** &gt; **Hora e idioma** &gt; **Região e idioma**. Cada idioma da lista é expandido ainda mais para incluir neutralidades de idioma e pesos (q). Por exemplo, a lista de idiomas de um usuário consistindo em fr-FR e en-US resulta em um cabeçalho HTTP Accept-Language de fr-FR, fr, en-US, en ("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3").
+As solicitações de HTTP feitas a partir dos aplicativos da Windows Store e aplicativos de área de trabalho em solicitações de Web típicas e XMLHttpRequest (XHR), use o cabeçalho HTTP Accept-Language padrão. Por padrão, o cabeçalho HTTP é definido nas preferências de idioma do usuário, na ordem preferida pelo usuário, conforme especificada em **Configurações**&gt;**Hora e idioma**&gt;**Região e idioma**. Cada idioma da lista é expandido ainda mais para incluir neutralidades de idioma e pesos (q). Por exemplo, a lista de idiomas de um usuário consistindo em fr-FR e en-US resulta em um cabeçalho HTTP Accept-Language de fr-FR, fr, en-US, en ("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3").
 
-### <span id="Use_the_APIs_in_the_Windows.Globalization_namespace."></span><span id="use_the_apis_in_the_windows.globalization_namespace."></span><span id="USE_THE_APIS_IN_THE_WINDOWS.GLOBALIZATION_NAMESPACE."></span>Usar as APIs no namespace Windows.Globalization.
+### <span id="Use_the_APIs_in_the_Windows.Globalization_namespace."></span><span id="use_the_apis_in_the_windows.globalization_namespace."></span><span id="USE_THE_APIS_IN_THE_WINDOWS.GLOBALIZATION_NAMESPACE."></span>Use as APIs no namespace Windows.Globalization.
 
-Normalmente, os elementos da API no namespace [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) usam a lista de idiomas do aplicativo para determinar o idioma. Se nenhum dos idiomas tiver um formato de correspondência, a localidade do usuário será usada. Esta é a mesma localidade usada no relógio do sistema. A localidade do usuário está disponível em **Configurações** &gt; **Hora e idioma** &gt; **Região e idioma** &gt; **Configurações adicionais de data, hora e regionais** &gt; **Região: Alterar formatos de data, hora ou número**. As APIs **Windows.Globalization** também aceitam uma substituição para especificar uma lista de idiomas a ser usada em vez da lista de idiomas do aplicativo.
+Normalmente, os elementos da API no namespace [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) usam a lista de idiomas do aplicativo para determinar o idioma. Se nenhum dos idiomas tiver um formato de correspondência, a localidade do usuário será usada. Esta é a mesma localidade usada no relógio do sistema. A localidade do usuário está disponível em **Configurações**&gt;**Hora e idioma**&gt;**Região e idioma**&gt;**Configurações adicionais de data, hora e regionais**&gt;**Região: Alterar formatos de data, hora ou número**. As APIs **Windows.Globalization** também aceitam uma substituição para especificar uma lista de idiomas a ser usada em vez da lista de idiomas do aplicativo.
 
-[**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) também tem um objeto [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) que é fornecido como um objeto auxiliar. Ele permite que os aplicativos inspecionem os detalhes sobre o idioma, como o script do idioma, o nome para exibição e o nome nativo.
+[
+              **Windows.Globalization**
+            ](https://msdn.microsoft.com/library/windows/apps/br206813) também tem um objeto [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) que é fornecido como um objeto auxiliar. Ele permite que os aplicativos inspecionem os detalhes sobre o idioma, como o script do idioma, o nome para exibição e o nome nativo.
 
 ### <span id="Use_geographic_region_when_appropriate."></span><span id="use_geographic_region_when_appropriate."></span><span id="USE_GEOGRAPHIC_REGION_WHEN_APPROPRIATE."></span>Use a região geográfica quando adequado.
 
 Em vez do idioma, você pode usar a configuração local de região geográfica do usuário para escolher o conteúdo a ser exibido para o usuário. Por exemplo, um aplicativo de notícias pode exibir, por padrão, o conteúdo do local de residência do usuário, que é definido quando o Windows está instalado e disponível na interface do usuário do Windows em **Região: Alterar formatos de data, hora ou número** conforme descrito na tarefa anterior. Você pode recuperar a configuração da região de residência do usuário atual usando [**Windows.System.UserProfile.GlobalizationPreferences.HomeGeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br241829).
 
-[**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) também tem um objeto [**GeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br206795) que é fornecido como um objeto auxiliar. Ele permite que os aplicativos inspecionem os detalhes sobre uma região específica, como o nome para exibição, o nome nativo e as moedas em uso.
+[
+              **Windows.Globalization**
+            ](https://msdn.microsoft.com/library/windows/apps/br206813) também tem um objeto [**GeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br206795) que é fornecido como um objeto auxiliar. Ele permite que os aplicativos inspecionem os detalhes sobre uma região específica, como o nome para exibição, o nome nativo e as moedas em uso.
 
 ## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Comentários
 
@@ -166,7 +173,7 @@ A seguinte tabela contém exemplos do que o usuário veria na interface do usuá
 <tr>
 <td align="left">Alemão (Alemanha) (padrão); Francês (França); Italiano (Itália)</td>
 <td align="left">Francês (Áustria)</td>
-<td align="left">nenhum</td>
+<td align="left">nenhuma</td>
 <td align="left">Francês (Áustria)</td>
 <td align="left">Interface do usuário: Francês (França) (fallback do francês (Áustria))<br>Datas/horas/números: Francês (Áustria)</td>
 </tr>
@@ -218,6 +225,6 @@ A seguinte tabela contém exemplos do que o usuário veria na interface do usuá
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

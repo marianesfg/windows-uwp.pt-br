@@ -1,9 +1,6 @@
 ---
-ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676
-title: O que vem em seguida?
-description: Agora que você já criou seu primeiro aplicativo, confira o restante do Centro de Desenvolvimento. Veja a seguir uma introdução às diversas seções disponíveis.
-keywords: Centro de Desenvolvimento, tour
-keywords: Centro de Desenvolvimento, introdução
+author: martinekuan ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676 title: What's next? description: Agora que você criou seu primeiro aplicativo, confira o restante do Centro de Desenvolvimento. Veja a seguir uma introdução às diversas seções disponíveis.
+palavras-chave: Centro de Desenvolvimento, palavras-chave do tour: Centro de Desenvolvimento, Introdução
 ---
 # E agora?
 
@@ -67,6 +64,6 @@ Vá para [Desenvolver aplicativos IoT](http://go.microsoft.com/fwlink/p/?LinkId=
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para celulares
 description: Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo móvel remotamente.
@@ -71,6 +72,6 @@ O Device Portal em dispositivos móveis fornece o conjunto padrão de páginas. 
 - Rede
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

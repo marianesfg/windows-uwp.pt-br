@@ -1,14 +1,15 @@
 ---
-title: Distribuindo um componente do Tempo de Execução do Windows gerenciado
+author: martinekuan
+title: Distribuição de um componente do Tempo de Execução do Windows gerenciado
 description: É possível distribuir o componente do Tempo de Execução do Windows por cópia de arquivo.
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
 ---
 
 
-# Distribuindo um componente do Tempo de Execução do Windows gerenciado
+# Distribuição de um componente do Tempo de Execução do Windows gerenciado
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
@@ -51,7 +52,7 @@ Um componente complexo normalmente inclui recursos do Windows, mas consulte a ob
 
 1.  Assegure-se de que você tenha o SDK do Visual Studio instalado. É possível baixar o SDK do Visual Studio na página [Downloads do Visual Studio](https://www.visualstudio.com/downloads/download-visual-studio-vs).
 2.  Crie um novo projeto usando o modelo de projeto VSIX. É possível encontrar o modelo em Visual C# ou Visual Basic, na categoria de extensibilidade. Esse modelo é instalado como parte do SDK do Visual Studio. ([Procedimento passo a passo: criação de um SDK em C# ou Visual Basic](https://msdn.microsoft.com/library/jj127119.aspx) ou [Procedimento passo a passo: criação de um SDK usando C++](https://msdn.microsoft.com/library/jj127117.aspx) demonstra o uso desse modelo em um cenário muito simples. )
-3.  Determine a estrutura de pastas do SDK. A estrutura de pastas começa no nível raiz do projeto VSIX, com as pastas **References**, **Redist**e **DesignTime**.
+3.  Determine a estrutura de pastas do SDK. A estrutura de pastas começa no nível raiz do projeto VSIX, com as pastas **References**, **Redist** e **DesignTime**.
 
     -   **References** é o local para arquivos binários que os usuários podem programar. O SDK de extensão cria referências para esses arquivos em projetos do Visual Studio dos usuários.
     -   **Redist** é o local para outros arquivos que devem ser distribuídos com os arquivos binários, em aplicativos criados usando o componente.
@@ -74,6 +75,6 @@ Um componente complexo normalmente inclui recursos do Windows, mas consulte a ob
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,13 +1,14 @@
 ---
-Description: Incorpore fala em seus aplicativos usando comandos de voz da Cortana, reconhecimento de fala e sintetização de voz.
+author: Karl-Bridge-Microsoft
+description: Incorpore fala em seus aplicativos usando comandos de voz da Cortana, reconhecimento de fala e sintetização de voz.
 title: Interações de controle por voz
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
-label: Interações de controle por voz
+label: Speech interactions
 template: detail.hbs
 ---
 
 # Interações de controle por voz
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Integre reconhecimento de fala e conversão de texto em fala (também conhecida como TTS ou sintetização de voz) diretamente à experiência do usuário do seu aplicativo.
 
@@ -21,10 +22,9 @@ Integre reconhecimento de fala e conversão de texto em fala (também conhecida 
 
 **TTS:  **usa um mecanismo de sintetização de voz (voz) para converter uma cadeia de caracteres de texto em palavras faladas. A cadeia de caracteres de entrada pode ser texto básico e simples ou SSML (Linguagem de Marcação de Sintetização de Voz) mais complexa. A SSML fornece uma forma padrão de controlar as características da saída de fala, como pronúncia, volume, tom, taxa ou velocidade e ênfase.
 
-**Observação**  Usando a **Cortana** e comandos de voz personalizados, seu aplicativo pode ser iniciado em primeiro plano (o aplicativo recebe o foco, como se ele tivesse sido inicializado no menu Iniciar) ou ativado como um serviço em segundo plano (a **Cortana** retém o foco, mas fornece resultados do aplicativo). Comandos que exigem contexto adicional ou entrada do usuário (como enviar uma mensagem para um contato específico) são realizados com mais facilidade em um aplicativo em primeiro plano, enquanto comandos básicos podem ser realizados na **Cortana** por meio de um aplicativo em segundo plano.
-Se você estiver expondo a funcionalidade como um serviço em segundo plano por meio de comandos de voz na interface do usuário da **Cortana**, consulte [Diretrizes para design da Cortana](cortana-design-guidelines.md).
-
- 
+> [!NOTE] Usando a **Cortana** e comandos de voz personalizados, seu aplicativo pode ser iniciado em primeiro plano (o aplicativo recebe o foco, como se ele tivesse sido inicializado no menu Iniciar) ou ativado como um serviço em segundo plano (a **Cortana** retém o foco, mas fornece resultados do aplicativo). 
+> Comandos que exigem contexto adicional ou entrada do usuário (como enviar uma mensagem para um contato específico) são realizados com mais facilidade em um aplicativo em primeiro plano, enquanto comandos básicos podem ser realizados na **Cortana** por meio de um aplicativo em segundo plano.
+> Se você estiver expondo a funcionalidade como um serviço em segundo plano por meio de comandos de voz na interface do usuário da **Cortana**, consulte [Diretrizes para design da Cortana](cortana-design-guidelines.md).
 
 Cuidadosamente projetado e implementado, o controle por voz pode ser um modo robusto e interessante para as pessoas interagirem com seu aplicativo, complementando ou até mesmo substituindo o teclado, o mouse, o toque e os gestos.
 
@@ -154,9 +154,7 @@ Ditado predefinido e gramáticas de pesquisa na Web fornecem o reconhecimento de
 -   A gramática de ditado de texto livre padrão pode reconhecer a maioria das palavras e frases que um usuário pode dizer em um determinado idioma e é otimizada para reconhecer frases curtas. O ditado de texto livre é útil quando você não deseja limitar os tipos de coisas que um usuário pode dizer. Os usos típicos incluem criação de notas ou ditado de conteúdo para uma mensagem.
 -   A gramática de pesquisa na Web, assim como uma gramática de ditado, contém um grande número de palavras e frases que um usuário pode dizer. No entanto, ela é otimizada para reconhecer termos que as pessoas normalmente usam ao pesquisar na Web.
 
-**Observação**  Uma vez que as gramáticas de pesquisa na Web e de ditado predefinidas podem ser grandes e online (não no dispositivo), o desempenho pode não ser tão rápido quanto o das gramáticas personalizadas instaladas no dispositivo.
-
- 
+> [!NOTE] Como as gramáticas de pesquisa na Web e de ditado predefinidas podem ser grandes e online (não no dispositivo), o desempenho pode não ser tão rápido quanto o das gramáticas personalizadas instaladas no dispositivo.
 
 Essas gramáticas predefinidas podem ser usadas para reconhecer até 10 segundos de entrada de fala e não exigem nenhum esforço de criação de sua parte. No entanto, elas exigem conexão com uma rede.
 
@@ -176,9 +174,8 @@ Uma gramática personalizada é projetada e criada por você e instalada com o s
     -   Evite definir frases que contenham apenas uma sílaba na sua gramática. O reconhecimento tende a ser mais preciso em frases com duas ou mais sílabas.
     -   Evite frases que pareçam iguais. Por exemplo, palavras como "cumprimento" e "comprimento" podem confundir o mecanismo de reconhecimento e resultar em reconhecimento pouco preciso.
 
-**Observação**  O tipo de restrição que você usa depende da complexidade da experiência de reconhecimento que você deseja criar. Qualquer tipo pode ser a melhor escolha para uma tarefa específica de reconhecimento, e você pode encontrar usos para todos os tipos de restrição em seu aplicativo.
-
- 
+> [!NOTE]
+> O tipo de restrição que você usa depende da complexidade da experiência de reconhecimento que você deseja criar. Qualquer tipo pode ser a melhor escolha para uma tarefa específica de reconhecimento, e você pode encontrar usos para todos os tipos de restrição em seu aplicativo.
 
 ### <span id="Custom_pronunciations"></span><span id="custom_pronunciations"></span><span id="CUSTOM_PRONUNCIATIONS"></span>Pronúncias personalizadas
 
@@ -213,55 +210,23 @@ Você deve ouvir todas as cadeias de caracteres da TTS para garantir que sejam i
 
 Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação como entrada para o sintetizador de voz. Para obter mais informações sobre SSML, consulte [Usar SSML para controlar a fala sintetizada](http://msdn.microsoft.com/library/windowsphone/design/hh378454.aspx) e [Referência da linguagem de marcação da sintetização de voz](http://msdn.microsoft.com/library/windowsphone/design/hh378377.aspx).
 
-## Outros artigos nesta seção 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Tópico</th>
-<th align="left">Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>[Speech recognition](speech-recognition.md)</p></td>
-<td align="left"><p>Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um comando e realizar tarefas.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Specify the speech recognizer language](specify-the-speech-recognizer-language.md)</p></td>
-<td align="left"><p>Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Define custom recognition constraints](define-custom-recognition-constraints.md)</p></td>
-<td align="left"><p>Saiba como definir e usar restrições personalizadas para reconhecimento de fala.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Enable continuous dictation](enable-continuous-dictation.md)</p></td>
-<td align="left"><p>Saiba como capturar e reconhecer entrada de fala de ditado contínuo de formato longo.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Manage issues with audio input](manage-issues-with-audio-input.md)</p></td>
-<td align="left"><p>Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Set speech recognition timeouts](set-speech-recognition-timeouts.md)</p></td>
-<td align="left"><p>Defina quanto tempo um reconhecedor de fala ignora o silêncio ou sons não reconhecíveis (murmúrios) e continua escutando a entrada de fala.</p></td>
-</tr>
-</tbody>
-</table>
-
- 
-
+## <span id="Other_articles"></span><span id="other_articles"></span><span id="OTHER_ARTICLES"></span>Outros artigos nesta seção 
+| Tópico | Descrição |
+| --- | --- |
+| [Reconhecimento de fala](speech-recognition.md) | Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um comando e realizar tarefas. |
+| [Especificar o idioma do reconhecedor de fala](specify-the-speech-recognizer-language.md) | Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala. |
+| [Definir restrições de reconhecimento personalizadas](define-custom-recognition-constraints.md) | Saiba como definir e usar restrições personalizadas para reconhecimento de fala. |
+| [Habilitar o ditado contínuo](enable-continuous-dictation.md) |Saiba como capturar e reconhecer entrada de fala de ditado contínuo de formato longo. |
+| [Gerenciar problemas com entrada de áudio](manage-issues-with-audio-input.md) | Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio. |
+| [Definir tempos limite de reconhecimento de fala](set-speech-recognition-timeouts.md) | Defina quanto tempo um reconhecedor de fala ignora o silêncio ou sons não reconhecíveis (murmúrios) e continua escutando a entrada de fala. |
 
 ## <span id="related_topics"></span>Artigos relacionados
 
-
 * [Interações de controle por voz](https://msdn.microsoft.com/library/windows/apps/mt185614)
-* [Interações da Cortana](https://msdn.microsoft.com/library/windows/apps/mt185598)
- **Amostras**
+* [Interações de Cortana](https://msdn.microsoft.com/library/windows/apps/mt185598)
+             
+          
+            **Amostras**
 * [Exemplo de reconhecimento de fala e sintetização de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -271,6 +236,6 @@ Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,5 +1,6 @@
 ---
-Description: Desenvolver seu aplicativo para dar suporte a layouts e fontes em vários idiomas, incluindo direção de fluxo RTL (direta para esquerda).
+author: DelfCo
+Description: Desenvolva seu aplicativo para dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda).
 title: Ajustar layout e fontes e fornecer suporte para RTL
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
@@ -9,10 +10,10 @@ template: detail.hbs
 # Ajustar layout e fontes e fornecer suporte para RTL
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Desenvolver seu aplicativo para dar suporte a layouts e fontes em vários idiomas, incluindo direção de fluxo RTL (direta para esquerda).
+
+Desenvolva seu aplicativo para dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda).
 
 ## <span id="Layout_guidelines"></span><span id="layout_guidelines"></span><span id="LAYOUT_GUIDELINES"></span>Diretrizes de layout
 
@@ -25,7 +26,7 @@ Use mecanismos de layout flexíveis em vez de posicionamento absoluto, larguras 
 
 Especifique um **Uid** para um elemento:
 
-```XAML
+```XML
 <TextBlock x:Uid="Block1">
 ```
 
@@ -37,7 +38,7 @@ Controles de layout XAML como [**Grid**](https://msdn.microsoft.com/library/wind
 
 Especifique um **Uid** para a página principal do seu aplicativo:
 
-```XAML
+```XML
 <Page x:Uid="MainPage">
 ```
 
@@ -76,7 +77,7 @@ Use a propriedade [**writing-mode**](https://msdn.microsoft.com/library/ms531187
 
 Se o seu aplicativo tiver imagens que devem ser espelhadas (ou seja, a mesma imagem pode ser invertida) para RTL, você pode aplicar a propriedade [**FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716).
 
-```XAML
+```XML
 <!-- en-US\localized.xaml -->
 <Image ... FlowDirection="LeftToRight" />
 
@@ -113,6 +114,6 @@ Os aplicativos que exibem vários idiomas em uma única página devem definir o 
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

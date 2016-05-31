@@ -1,12 +1,13 @@
 ---
-description: Explica o conceito de propriedade anexada em XAML e dá alguns exemplos.
-title: Visão geral de propriedades anexadas
+author: jwmsft
+description: Explica o conceito de uma propriedade anexada no XAML e fornece alguns exemplos.
+title: Visão geral das propriedades anexadas
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
 ---
 
-# Visão geral de propriedades anexadas
+# Visão geral das propriedades anexadas
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Uma *propriedade anexada* é um conceito XAML. É conceitualmente semelhante a um propriedade global que pode ser definida em qualquer elemento objeto em XAML. Tipicamente, as propriedades anexadas são definidas como uma forma especializada de propriedade de dependência que não tem um wrapper de propriedade convencional no modelo de objeto do tipo de proprietário.
 
@@ -18,7 +19,7 @@ Consideramos que você entende o conceito básico das propriedades de dependênc
 
 As propriedades anexadas existem principalmente porque elas habilitam uma sintaxe XAML. Em XAML, você define propriedades anexadas usando a sintaxe _AttachedPropertyProvider.PropertyName_. Veja um exemplo de como é possível definir [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) em XAML.
 
-```XAML
+```XML
 <Canvas>
   <Button Canvas.Left="50">Hello</Button>
 </Canvas>
@@ -117,6 +118,6 @@ O ponto no nome de uma propriedade anexada é uma parte essencial do padrão de 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

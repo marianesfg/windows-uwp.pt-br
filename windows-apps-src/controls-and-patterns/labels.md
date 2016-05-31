@@ -1,17 +1,15 @@
 ---
+author: Jwmsft
 Description: Utilize um rótulo para indicar ao usuário o que ele deve inserir em um controle adjacente. Você também pode rotular um grupo de controles relacionados ou exibir texto de instrução próximo a um grupo de controles relacionados.
 title: Rótulos
 ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
-label: Rótulos
+label: Labels
 template: detail.hbs
 ---
 
 # Rótulos
 
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-Um rótulo é o nome ou o título de um controle ou de um grupo de controles relacionados.
+Rótulo é o nome ou o título de um controle ou de um grupo de controles relacionados.
 
 **APIs importantes**
 
@@ -35,8 +33,6 @@ No XAML, muitos controles têm uma propriedade Header interna que é usada para 
 -   Quando tiver texto de instrução em um rótulo, você poderá ser mais generoso com o comprimento da cadeia de texto e também usar sinais de pontuação.
 
 ## <span id="related_topics"></span>Tópicos relacionados
-
-
 * [Controles de texto](text-controls.md)
 
 **Para desenvolvedores**
@@ -59,6 +55,6 @@ No XAML, muitos controles têm uma propriedade Header interna que é usada para 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

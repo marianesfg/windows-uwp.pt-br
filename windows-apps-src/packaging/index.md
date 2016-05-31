@@ -1,15 +1,16 @@
 ---
+author: msatranjr
 ms.assetid: 1abcbb13-80f0-4bf1-a812-649ee8bd1915
 title: Empacotando aplicativos
-description: Esta seção contém ou possui links para artigos sobre empacotamento de aplicativos da Plataforma Universal do Windows (UWP).
+description: Esta seção contém links ou se vincula a artigos sobre empacotamento de aplicativos da Plataforma Universal do Windows (UWP).
 ---
 # Empacotando aplicativos
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Finalidade
 
-Esta seção contém ou possui links para artigos sobre empacotamento de aplicativos da Plataforma Universal do Windows (UWP).
+Esta seção contém links ou se vincula a artigos sobre empacotamento de aplicativos da Plataforma Universal do Windows (UWP).
 
 | Tópico | Descrição |
 |-------|-------------|
@@ -20,6 +21,6 @@ Esta seção contém ou possui links para artigos sobre empacotamento de aplicat
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

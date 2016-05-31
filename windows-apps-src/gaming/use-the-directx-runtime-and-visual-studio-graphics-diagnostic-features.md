@@ -1,13 +1,14 @@
 ---
-title: Ferramentas de diagnóstico de gráficos
-description: Saiba como obter e usar os recursos de diagnóstico de gráficos, incluindo Depuração de Gráficos, Análise de Quadros de Gráficos e Uso da GPU no Visual Studio.
+author: mtoepke
+title: Ferramentas de diagnóstico de elementos gráficos
+description: Saiba como obter e usar os recursos de diagnóstico de elementos gráficos, incluindo depuração de elementos gráficos, análise do quadro de elementos gráficos e uso da GPU no Visual Studio.
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
 ---
 
-# Ferramentas de diagnóstico de gráficos
+# Ferramentas de diagnóstico de elementos gráficos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, veja o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Com o Windows 10, as ferramentas de diagnóstico de gráficos agora estão disponíveis dentro do Windows como recurso opcional. Para usar os recursos de diagnóstico de gráficos fornecidos em tempo de execução e no Visual Studio para desenvolver jogos ou aplicativos DirectX, instale o recurso opcional Ferramentas Gráficas:
 
@@ -34,6 +35,6 @@ Recursos de diagnóstico de elementos gráficos incluem a capacidade de criar di
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

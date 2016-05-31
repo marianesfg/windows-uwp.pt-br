@@ -1,22 +1,23 @@
 ---
+author: jnHs
 Description: Você pode publicar aplicativos de linha de negócios (LOB) diretamente para empresas, para aquisição de volume, usando a Windows Store para Empresas sem tornar os aplicativos amplamente disponíveis na Loja.
-title: Distribuir aplicativos LOB para empresas
+title: Distribuir aplicativos LOB às empresas
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ---
 
-# Distribuir aplicativos LOB para empresas
+# Distribuir aplicativos LOB às empresas
 
 
 Você pode publicar aplicativos de linha de negócios (LOB) diretamente para empresas, para aquisição de volume, usando a Windows Store para Empresas sem tornar os aplicativos amplamente disponíveis na Loja.
 
-> **Importante**  No momento, somente aplicativos gratuitos podem ser distribuídos exclusivamente a empresas por meio da Loja para Empresas. Se você enviar um aplicativo pago como LOB, ele ficará disponível para a empresa em uma data posterior, uma vez que seja adicionado suporte para a aquisição de aplicativos pagos em volume. 
+> **Importante**  No momento, somente aplicativos gratuitos podem ser distribuídos exclusivamente a empresas por meio da Windows Store para Empresas. Se você enviar um aplicativo pago como LOB, ele não estará disponível para a empresa no momento. 
 
 ## Configurando a associação empresarial
 
 
 A primeira etapa na publicação de aplicativos LOB exclusivamente para uma empresa é estabelecer a associação entre sua conta e o repositório particular da empresa.
 
-> **Importante**  Esse processo de associação deve ser iniciado pela empresa. Para saber mais, consulte [Trabalhando com aplicativos de linha de negócios](http://go.microsoft.com/fwlink/p/?LinkId=698846).
+> **Importante**  Esse processo de associação deve ser iniciado pela empresa, e deve ser enviado para o endereço de email que consta das **Informações de contato** da sua conta. Para saber mais, consulte [Trabalhando com aplicativos de linha de negócios](http://go.microsoft.com/fwlink/p/?LinkId=698846).
 
 Quando uma empresa optar por convidá-lo a publicar aplicativos para seu uso exclusivo, você receberá um email que inclui um link para confirmar a associação. Você também pode confirmar essas associações acessando a seção **Associações empresariais** de suas **Configurações de conta**.
 
@@ -74,6 +75,6 @@ Para saber mais, veja [Sideload de aplicativos LOB no Windows 10](http://go.micr
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

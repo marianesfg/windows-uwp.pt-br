@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Iniciar o aplicativo da Windows Store
 description: Este tópico descreve o esquema de URI ms-windows-store. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo da Windows Store para páginas específicas na Loja.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
@@ -7,7 +8,7 @@ ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 # Iniciar o aplicativo da Windows Store
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico descreve o esquema de URI **ms-windows-store:**. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo da Windows Store para páginas específicas na Loja.
 
@@ -26,11 +27,11 @@ Este tópico descreve o esquema de URI **ms-windows-store:**. Seu aplicativo pod
 </td>
 </tr>
 <tr>
-<td rowspan="4">Inicia a página de detalhes (PDP) de um produto. <p>A ID do produto é recomendada para clientes no Windows 10, mas maneiras anteriores de fazer isso (por exemplo, PFN) continuam funcionam.</p>
+<td rowspan="4">Inicia a página de detalhes (PDP) de um produto. <p>O ID da Loja é recomendado para clientes no Windows 10 e funcionará em todas as versões de sistema operacional, mas as maneiras anteriores de fazer isso (ex: PFN) ainda têm suporte.</p>
 <p>Esses valores podem ser encontrados no painel Centro de Desenvolvimento do Windows na página <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">Identidade do aplicativo</a> da seção Gerenciamento do aplicativo de cada aplicativo.</p>
 </td>
 <td>
-ID do produto <p>(Recomendado)</p>
+ID da Loja <p>(Recomendado)</p>
 </td>
 <td>
 <p>ms-windows-store://pdp/?ProductId=9WZDNCRFHVJL</p>
@@ -38,7 +39,7 @@ ID do produto <p>(Recomendado)</p>
 </tr>
 <tr>
 <td>Nome da Família de Pacotes (PFN)</td>
-<td>ms-windows-store://pdp/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe 
+<td>ms-windows-store://pdp/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe
 </td>
 </tr>
 <tr>
@@ -47,17 +48,17 @@ ID do produto <p>(Recomendado)</p>
 </tr>
 <tr>
 <td>ID do Produto (Windows 8.x)</td>
-<td>ms-windows-store://pdp/?AppId=f022389f-f3a6-417e-ad23-704fbdf57117 
+<td>ms-windows-store://pdp/?AppId=f022389f-f3a6-417e-ad23-704fbdf57117
 </td>
 </tr>
 <tr>
 <td rowspan="4">Inicia a gravação de uma experiência de revisão para um produto.</td>
-<td>ID do produto <p>(Recomendado)</p></td>
+<td>ID da Loja <p>(Recomendado)</p></td>
 <td>ms-windows-store://review/?ProductId=9WZDNCRFHVJL </td>
 </tr>
 <tr>
 <td>Nome da Família de Pacotes (PFN)</td>
-<td>ms-windows-store://review/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe 
+<td>ms-windows-store://review/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe
 </td>
 </tr>
 <tr>
@@ -71,7 +72,7 @@ ID do produto <p>(Recomendado)</p>
 <tr>
 <td>Inicia uma pesquisa de produtos associados a uma extensão de arquivo. </td>
 <td />
-<td>ms-windows-store://assoc/?FileExt=pdf 
+<td>ms-windows-store://assoc/?FileExt=pdf
 </td>
 </tr>
 <tr>
@@ -107,7 +108,7 @@ Inicia uma pesquisa para a consulta especificada. São permitidos espaços na co
 <td>Inicia uma pesquisa de produtos do fornecedor especificado. Espaços no nome são permitidos. 
 </td>
 <td />
-<td>ms-windows-store://publisher/?name=Microsoft Corporation 
+<td>ms-windows-store://publisher/?name=Microsoft Corporation
 </td>
 </tr>
 <tr><td>Abre a página de downloads e atualizações.</td>
@@ -129,6 +130,6 @@ Inicia uma pesquisa para a consulta especificada. São permitidos espaços na co
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

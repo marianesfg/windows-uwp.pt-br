@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Vincula o valor de uma propriedade em um modelo de controle ao valor de outra propriedade exposta no controle modelo. TemplateBinding só pode ser usado dentro de uma definição ControlTemplate em XAML.
 title: Extensão de marcação TemplateBinding
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
@@ -6,7 +7,7 @@ ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
 
 # Extensão de marcação {TemplateBinding}
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Vincula o valor de uma propriedade em um modelo de controle ao valor de outra propriedade exposta no controle modelo. **TemplateBinding** só pode ser usado dentro de uma definição [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) em XAML.
 
@@ -33,7 +34,7 @@ Vincula o valor de uma propriedade em um modelo de controle ao valor de outra pr
 
 O uso de **TemplateBinding** é uma parte fundamental de como definir um modelo de controle, seja você um autor de controle personalizado ou esteja substituindo um modelo de controle para controles existentes. Para obter mais informações, consulte [Guia de início rápido: modelos de controle](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374).
 
-É muito comum que *propertyName* e *targetProperty* usem o mesmo nome de propriedade. Nesse caso, um controle pode definir uma propriedade em si próprio e encaminhá-la para uma propriedade existente, com nome intuitivo, de uma de suas partes componentes. Por exemplo, um controle que incorpore um [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) em sua composição, usando-o para exibir a propriedade **Text** do próprio controle, pode incluir esse XAML como uma parte do modelo de controle:`<TextBlock Text="{TemplateBinding Text}" .... />`
+É muito comum que *propertyName* e *targetProperty* usem o mesmo nome de propriedade. Nesse caso, um controle pode definir uma propriedade em si próprio e encaminhá-la para uma propriedade existente, com nome intuitivo, de uma de suas partes componentes. Por exemplo, um controle que incorpore um [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) em sua composição, usando-o para exibir a propriedade **Text** do próprio controle, pode incluir esse XAML como uma parte do template de controle: `<TextBlock Text="{TemplateBinding Text}" .... />`
 
 Os tipos usados como o valor para propriedade de origem e a propriedade de destino devem corresponder. Não há oportunidade de introduzir um conversor quando estiver usando **TemplateBinding**. Caso os valores não correspondam, isso resulta em um erro ao analisar o XAML. Se um conversor for necessário você pode usar a sintaxe detalhada para uma associação de modelo, como: `{Binding RelativeSource={RelativeSource TemplatedParent}, Converter="..." ...}`
 
@@ -58,6 +59,6 @@ Um **TemplateBinding** é sempre uma associação de uma via. Ambas as proprieda
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

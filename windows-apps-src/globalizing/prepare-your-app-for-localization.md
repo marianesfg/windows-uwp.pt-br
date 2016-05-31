@@ -1,25 +1,26 @@
 ---
+author: DelfCo
 Description: Prepare o seu aplicativo para localização para outros mercados, idiomas ou regiões.
-title: Preparar o seu aplicativo para a localização
+title: Preparar um aplicativo para tradução
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 label: Prepare your app for localization
 template: detail.hbs
 ---
 
-# Preparar o seu aplicativo para a localização
+# Preparar um aplicativo para tradução
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Prepare o seu aplicativo para localização para outros mercados, idiomas ou regiões. Antes de começar, certifique-se de ler [o que fazer e o que não fazer](guidelines-and-checklist-for-globalizing-your-app.md).
 
-## <span id="use_resource_files_and_qualifiers."></span><span id="USE_RESOURCE_FILES_AND_QUALIFIERS."></span>Use arquivos de recurso e qualificadores.
+## <span id="use_resource_files_and_qualifiers."></span><span id="USE_RESOURCE_FILES_AND_QUALIFIERS."></span>Use qualificadores e arquivos de recurso.
 
 
 Certifique-se de especificar as cadeias de caracteres de interface do usuário do seu aplicativo nos arquivos de recurso, em vez de colocá-las no seu código. Para obter mais detalhes, consulte [Colocar cadeias de caracteres da interface do usuário em recursos](put-ui-strings-into-resources.md).
 
-Especifique imagens ou outros recursos de arquivo com a marca do idioma adequado em seu arquivo ou pasta. Saiba que localizar imagens, áudio e vídeo consome uma grande quantidade de recursos do sistema, portanto é melhor usar ativos de mídia neutros sempre que possível. Para saber mais, veja [Como nomear recursos usando qualificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
+Especifique imagens ou outros recursos de arquivo com a marca do idioma adequado em seu arquivo ou pasta. Saiba que localizar imagens, áudio e vídeo consome uma grande quantidade de recursos do sistema, portanto é melhor usar ativos de mídia neutros sempre que possível. Para saber mais, consulte [Como nomear recursos usando qualificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
 
 ## <span id="add_contextual_comments."></span><span id="ADD_CONTEXTUAL_COMMENTS."></span>Adicione comentários contextuais.
 
@@ -28,7 +29,7 @@ Adicione comentários de localização aos arquivos de recurso do aplicativo. Os
 
 **XAML:** arquivos Resw (recursos criados no Visual Studio para aplicativos usando XAML) têm um elemento de comentário. Por exemplo:
 
-```XAML
+```XML
 <data name="String1">
     <value>Hello World</value>
     <comment>A greeting (This is a comment to the localizer)</comment>
@@ -67,14 +68,14 @@ Para resolver este problema, localize a frase inteira em vez de apenas uma palav
 -   Seu tradutor não precisará perguntar pelo o que as cadeias de caracteres serão substituídas.
 -   Você não precisará implementar uma correção de código custosa quando um problema assim aparecer depois de o seu aplicativo estar concluído.
 
-## <span id="ensure_the_correct_parameter_order."></span><span id="ENSURE_THE_CORRECT_PARAMETER_ORDER."></span>Garanta a ordem de parâmetro correta.
+## <span id="ensure_the_correct_parameter_order."></span><span id="ENSURE_THE_CORRECT_PARAMETER_ORDER."></span>Assegure a ordem correta do parâmetros.
 
 
 Não suponha que todos os idiomas usam parâmetros na mesma ordem. Por exemplo, considere a cadeia de caracteres "Every %s %s", em que o primeiro %s seja substituído pelo nome de um mês e o segundo %s seja substituído pela data de um mês. Esse exemplo funciona em inglês, mas falhará quando o aplicativo for localizado para o português, em que a data e o mês são exibidos na ordem contrária.
 
 Para resolver esse problema, mude a cadeia de caracteres para "Every %1 %2", para que a ordem seja intercambiável de acordo com o idioma.
 
-## <span id="don_t_over_localize."></span><span id="DON_T_OVER_LOCALIZE."></span>Não localize desnecessariamente.
+## <span id="don_t_over_localize."></span><span id="DON_T_OVER_LOCALIZE."></span>Não faça traduções em excesso.
 
 
 Traduza cadeias de caracteres específicas, não marcas. Considere os exemplos a seguir:
@@ -86,9 +87,9 @@ Traduza cadeias de caracteres específicas, não marcas. Considere os exemplos a
 
  
 
-Incluir a marcação &lt;link&gt; acima nos recursos, significa que ela também será localizada. Isso renderiza a marcação como inválida. Só as cadeias de caracteres devem ser traduzidas. De um modo geral, você deve considerar as marcas como um código, que devem ser mantidas separadas do conteúdo localizável. Entretanto, algumas cadeias de caracteres longas devem incluir marcação para manter o contexto e a assegurar a ordem.
+A inclusão da marca acima &lt;link&gt; nos recursos significa que ela também será localizada. Isso renderiza a marcação como inválida. Só as cadeias de caracteres devem ser traduzidas. De um modo geral, você deve considerar as marcas como um código, que devem ser mantidas separadas do conteúdo localizável. Entretanto, algumas cadeias de caracteres longas devem incluir marcação para manter o contexto e a assegurar a ordem.
 
-## <span id="do_not_use_the_same_strings_in_dissimilar_contexts."></span><span id="DO_NOT_USE_THE_SAME_STRINGS_IN_DISSIMILAR_CONTEXTS."></span>Não use as mesmas cadeias de caracteres em contextos diferentes.
+## <span id="do_not_use_the_same_strings_in_dissimilar_contexts."></span><span id="DO_NOT_USE_THE_SAME_STRINGS_IN_DISSIMILAR_CONTEXTS."></span>Não use as mesmas cadeias de caracteres em contextos diferentes,
 
 
 Reutilizar uma cadeia de caracteres pode parecer a melhor solução, mas isso poderá causar problemas de localização se a mesma palavra ou frase tiver diferentes significados ou contextos.
@@ -99,7 +100,7 @@ Outro exemplo é o uso das cadeias de caracteres "on" e "off". Em inglês, "on" 
 
 Além disso, uma cadeia de caracteres como "text" ou "faz" podem ser usadas tanto como verbo quanto como substantivo em inglês, o que pode confundir o processo de tradução. Em vez disso, crie uma cadeia de caracteres separada para o formato de verbo e substantivo. Quando você não tiver certeza se os contextos são os mesmos, por precaução, use uma cadeia de caracteres distinta.
 
-## <span id="identify_resources_with_unique_attributes."></span><span id="IDENTIFY_RESOURCES_WITH_UNIQUE_ATTRIBUTES."></span>Identifique recursos com atributos únicos.
+## <span id="identify_resources_with_unique_attributes."></span><span id="IDENTIFY_RESOURCES_WITH_UNIQUE_ATTRIBUTES."></span>Identifique recursos com atributos exclusivos.
 
 
 Os identificadores de recurso não diferenciam maiúsculas e minúsculas e devem ser exclusivos por arquivo de recurso. Ao acessar um recurso, use o identificador de recursos, não o valor real do recurso. Os identificadores de recurso não mudam, mas os valores reais dos recursos mudam dependendo do idioma.
@@ -126,7 +127,7 @@ Além disso, considere as seguintes sugestões:
 -   **Use um fornecedor de localização.** Considere o uso de um fornecedor de localização se o seu projeto tiver um grande volume de cadeias de caracteres que precisam ser traduzidas para muitos idiomas. Um fornecedor de localização pode recomendar ferramentas e processos, bem como traduzir seus arquivos de recurso. Essa é a solução ideal, mas também é a opção mais dispendiosa, e pode aumentar o tempo de retorno do conteúdo traduzido.
 -   **Mantenha os tradutores informados.** Informe os tradutores sobre cadeias de caracteres que podem ser consideradas um substantivo ou um verbo. Explique as palavras fabricadas para seus tradutores usando as ferramentas de terminologia. Mantenha as cadeias de caracteres gramaticalmente corretas, sem ambiguidade e o menos técnicas possível para evitar confusão.
 
-## <span id="keep_access_keys_and_labels_consistent."></span><span id="KEEP_ACCESS_KEYS_AND_LABELS_CONSISTENT."></span>Mantenha chaves de acesso e rótulos consistentes.
+## <span id="keep_access_keys_and_labels_consistent."></span><span id="KEEP_ACCESS_KEYS_AND_LABELS_CONSISTENT."></span>Mantenha teclas de acesso e rótulos consistentes.
 
 
 É um desafio "sincronizar" as chaves de acesso usadas em acessibilidade com a exibição de chaves de acesso localizadas, porque os recursos com duas cadeias de caracteres são categorizados em duas seções separadas. Certifique-se de fornecer comentários para a cadeia de caracteres de rótulo como: `Make sure that the emphasized shortcut key  is synchronized with the access key.`
@@ -140,7 +141,7 @@ Você pode seguir a implementação mostrada abaixo. Lembre-se, comente adequada
 <input type="checkbox" value="OFF" id="xPrinterRedirection" name="xPrinterRedirection" />
 ```
 
-## <span id="support_furigana_for_japanese_strings_that_can_be_sorted."></span><span id="SUPPORT_FURIGANA_FOR_JAPANESE_STRINGS_THAT_CAN_BE_SORTED."></span>Forneça suporte a Furigana para cadeias de caracteres em japonês que podem ser classificadas.
+## <span id="support_furigana_for_japanese_strings_that_can_be_sorted."></span><span id="SUPPORT_FURIGANA_FOR_JAPANESE_STRINGS_THAT_CAN_BE_SORTED."></span>Forneça suporte para Furigana para cadeias de caracteres japoneses que possam ser classificadas.
 
 
 Os caracteres Kanji japoneses apresentam a propriedade exclusiva de ter mais de uma pronúncia, dependendo da palavra e/ou do contexto em que são usados. Isso é um problema quanto tentamos classificar os objetos nomeados em japonês, como nomes de aplicativos, arquivos, músicas etc. No passado, o Kanji japonês era classificado em uma ordem chamada XJIS, que podia ser compreendida pelo computador. Infelizmente, por essa ordem de classificação não ser fonética, ela não é muito útil para humanos.
@@ -186,6 +187,6 @@ A classificação segue o formato do **Painel de Controle Regional**.
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

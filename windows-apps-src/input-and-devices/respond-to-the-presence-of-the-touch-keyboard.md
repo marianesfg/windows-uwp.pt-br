@@ -1,15 +1,15 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Saiba como adaptar a interface do usuário do seu aplicativo ao mostrar ou ocultar o teclado virtual.
 title: Responder à presença do teclado virtual
 ms.assetid: 70C6130E-23A2-4F9D-88E7-7060062DA988
-label: Responder à presença do teclado virtual
+label: Respond to the presence of the touch keyboard
 template: detail.hbs
 ---
 
 # Responder à presença do teclado virtual
 
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+Saiba como adaptar a interface do usuário do seu aplicativo ao mostrar ou ocultar o teclado virtual.
 
 
 **APIs importantes**
@@ -17,11 +17,11 @@ template: detail.hbs
 -   [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/br209185)
 -   [**InputPane**](https://msdn.microsoft.com/library/windows/apps/br242255)
 
-Saiba como adaptar a interface do usuário do seu aplicativo ao mostrar ou ocultar o teclado virtual.
+
 
 ![o teclado virtual no modo de layout padrão](images/touchkeyboard-standard.png)
 
-<sup>O\\ teclado\\ virtual\\ no\\ modo\\ de layout\\ padrão:</sup>
+<sup>o teclado \\virtual\\ \\no\\ modo de \\layout\\ padrão</sup>
 
 O teclado virtual permite a entrada de texto para dispositivos que dão suporte para toque. Controles de entrada de texto da Plataforma Universal do Windows (UWP) invocam o teclado virtual por padrão quando um usuário toca em um campo de entrada editável. O teclado virtual normalmente fica visível enquanto o usuário navega entre controles em um formulário, mas esse comportamento pode variar com base nos outros tipos de controle dentro do formulário.
 
@@ -29,7 +29,7 @@ Para dar suporte ao comportamento do teclado virtual correspondente em um contro
 
 Depois que esse suporte for adicionado ao seu controle personalizado, você poderá responder adequadamente à presença do teclado virtual.
 
-**Pré-requisitos: **
+**Pré-requisitos:  **
 
 Este tópico complementa [Interações por teclado](keyboard-interactions.md).
 
@@ -122,8 +122,6 @@ public class MyApplication
 
 ## <span id="related_topics"></span>Artigos relacionados
 
-
-
 * [Interações por teclado](keyboard-interactions.md)
 * [Acessibilidade do teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
 * [Pares de automação personalizados](https://msdn.microsoft.com/library/windows/apps/mt297667)
@@ -143,6 +141,6 @@ public class MyApplication
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -7,7 +7,7 @@ author: awkoren
 
 # Compartilhar dados
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artigo explica como dar suporte ao contrato de Compartilhamento em um aplicativo da Plataforma Universal do Windows (UWP). O contrato de Compartilhamento é uma maneira fácil de compartilhar dados como texto, links, fotos e vídeos entre aplicativos rapidamente. Por exemplo, um usuário pode querer compartilhar uma página da Web com seus amigos usando um aplicativo de rede social ou salvar um link em um aplicativo de anotações para consultar mais tarde.
 
@@ -15,11 +15,11 @@ Este artigo explica como dar suporte ao contrato de Compartilhamento em um aplic
 
 Adicione um manipulador de eventos [**DataRequested**][DataRequested] para ser chamado sempre que um usuário invocar o compartilhamento. Isso pode ocorrer quando o usuário toca em um controle no aplicativo (por exemplo, um botão ou um comando da barra de aplicativos) ou automaticamente em um cenário específico (se o usuário terminar um nível e obtiver uma pontuação alta, por exemplo).
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
 
-Quando ocorre um evento [**DataRequested**][DataRequested], seu aplicativo recebe um objeto [**DataRequest**][DataRequest]. Este contém um [**DataPackage**][DataPackage] que você pode usar para fornecer o conteúdo que o usuário quer compartilhar. Você deve fornecer um título e os dados a serem compartilhados. Uma descrição é opcional, mas recomendada.
+Quando ocorre um evento [**DataRequested**][DataRequested], seu aplicativo recebe um objeto [**DataRequest**][DataRequest]. Esse contém um [**DataPackage**][DataPackage] que você pode usar para fornecer o conteúdo que o usuário quer compartilhar. Você deve fornecer um título e os dados a serem compartilhados. Uma descrição é opcional, mas recomendada.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
 ## Escolher dados
 
@@ -30,13 +30,13 @@ Você pode compartilhar vários tipos de dados, incluindo:
 -   HTML
 -   Texto formatado
 -   Bitmaps
--   Texto sem formatação
+-   Texto simples
 -   Arquivos
 -   Dados personalizados definidos pelo desenvolvedor
 
 O objeto [**DataPackage**][DataPackage] pode conter um ou mais desses formatos, em qualquer combinação. O exemplo a seguir demonstra o compartilhamento de texto.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 
 ## Definir propriedades
 
@@ -44,23 +44,23 @@ Ao empacotar dados para compartilhamento, você pode fornecer uma variedade de p
 
 Todas as propriedades, exceto o título, são opcionais. A propriedade de título é obrigatória e deve ser definida.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
 
 ## Iniciar a interface do usuário de compartilhamento
 
 Uma interface do usuário para compartilhamento é fornecida pelo sistema. Para iniciá-la, chame o método [**ShowShareUI**][ShowShareUi].
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
 ## Manipular erros
 
-Na maioria dos casos, o compartilhamento de conteúdo é um processo simples e direto. Contudo, há sempre a chance de algo inesperado acontecer. Por exemplo, o aplicativo pode exigir que o usuário selecione conteúdo para compartilhamento, mas o usuário não faz essa seleção. Para lidar com essas situações, use o método [**FailWithDisplayText**][FailWithDisplayText], que exibirá uma mensagem ao usuário se algo der errado.
+Na maioria dos casos, o compartilhamento de conteúdo é um processo simples e direto. Contudo, há sempre a chance de algo inesperado acontecer. Por exemplo, o aplicativo pode exigir que o usuário selecione conteúdo para compartilhamento, mas ele não faz essa seleção. Para lidar com essas situações, use o método [**FailWithDisplayText**][FailWithDisplayText], que exibirá uma mensagem ao usuário se algo der errado.
 
 ## Atrasar o compartilhamento com delegados
 
 Às vezes, pode não fazer sentido preparar imediatamente os dados que o usuário deseja compartilhar. Por exemplo, se o seu aplicativo oferece suporte ao envio de um arquivo de imagem grande em diversos formatos possíveis, é ineficiente criar todas essas imagens antes de o usuário fazer sua seleção.
 
-Para resolver o problema, um [**DataPackage**][DataPackage] pode conter um delegado - uma função que é chamada quando o aplicativo de recebimento solicita dados. Recomendamos o uso de um delegado sempre que os dados que um usuário deseja compartilhar utilizarem muitos recursos.
+Para resolver o problema, um [**DataPackage**][DataPackage] pode conter um delegado - uma função que é chamada quando o aplicativo de recebimento solicita dados. Recomendamos o uso de um delegado sempre que os dados que um usuário deseja compartilhar usarem muitos recursos.
 
 <!-- For some reason, this snippet was inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -102,6 +102,6 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

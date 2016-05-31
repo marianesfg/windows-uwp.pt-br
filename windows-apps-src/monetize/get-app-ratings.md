@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: Use este método na API de análise da Windows Store para obter dados de classificações agregadas para um determinado intervalo de datas e outros filtros opcionais.
 title: Obter classificações de aplicativo
@@ -7,7 +8,7 @@ title: Obter classificações de aplicativo
 # Obter classificações de aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use este método na API de análise da Windows Store para obter dados de classificações agregadas para um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
@@ -37,7 +38,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
 
  
 
@@ -92,7 +93,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 <tr class="even">
 <td align="left">filter</td>
 <td align="left">string</td>
-<td align="left">Uma ou mais instruções que filtram as linhas na resposta. Para saber mais, consulte a seção [filter fields](#filter-fields) a seguir.</td>
+<td align="left">Uma ou mais instruções que filtram as linhas na resposta. Para saber mais, consulte a seção [campos de filtro](#filter-fields) a seguir.</td>
 <td align="left">Não</td>
 </tr>
 <tr class="odd">
@@ -122,7 +123,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
  
 ### Campos de filtro
 
-O parâmetro *filter* do corpo da solicitação contém uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um campo e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**.
+O parâmetro *filter* do corpo da solicitação contém uma ou mais instruções que filtram as linhas da resposta. Cada instrução contém um campo e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**.
 
 Este é um exemplo de cadeia de caracteres *filter*: *filter=market eq 'US' and deviceType eq 'phone' and isRevised eq true*
 
@@ -185,7 +186,7 @@ Para obter uma lista dos campos com suporte, consulte a tabela a seguir. Valores
 
 Os exemplos a seguir demonstram várias solicitações para a obtenção de dados de classificações. Substitua o valor de *applicationId* pela ID do produto de seu aplicativo.
 
-```
+```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
 Authorization: Bearer <your access token>
 
@@ -265,6 +266,6 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

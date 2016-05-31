@@ -1,10 +1,11 @@
 ---
-title: Planejar seu primeiro aplicativo da Plataforma Universal do Windows (UWP)
-description: Nas equipes de design da Microsoft, nosso processo de criação de aplicativo consiste em cinco estágios distintos--conceito, estrutura, dinâmica, visual e protótipo. Recomendamos que você adote um processo semelhante e se divirta criando novas experiências para o mundo aproveitar.
+author: martinekuan
+title: Planejar seu aplicativo da Plataforma Universal do Windows (UWP)
+description: Nas equipes de design da Microsoft, nosso processo de criação de aplicativo consiste em cinco estágios distintos: conceito, estrutura, dinâmica, visual e protótipo. Recomendamos que você adote um processo semelhante e se divirta criando novas experiências para o mundo aproveitar.
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
 ---
 
-#  Planejar seu primeiro aplicativo da Plataforma Universal do Windows (UWP)
+#  Planejar seu aplicativo da Plataforma Universal do Windows (UWP)
 
 Nas equipes de design da Microsoft, nosso processo de criação de aplicativo consiste em cinco estágios distintos: conceito, estrutura, dinâmica, visual e protótipo. Recomendamos que você adote um processo semelhante e se divirta criando novas experiências para o mundo aproveitar.
 
@@ -16,7 +17,7 @@ Ao planejar o seu aplicativo Plataforma Universal do Windows (UWP), você deve d
 
 Por exemplo, você quer criar um aplicativo de fotos. Pensando nas razões que levam os usuários a trabalhar, salvar e compartilhar suas fotos, você percebe que eles querem reviver lembranças, interagir com outras pessoas por meio das fotos e manter as fotos protegidas. E o seu aplicativo precisa fazer tudo isso da melhor maneira possível, então você usa essas metas de experiência como um guia para o restante do processo de design.
 
-**Sobre o que é o seu aplicativo?** Comece um conceito amplo e liste todas as coisas que você quer ajudar os usuários a fazerem com o seu aplicativo.
+**De que trata o seu aplicativo?** Comece com um conceito amplo e relacione tudo o que o seu aplicativo pode fazer pelos usuários.
 
 Por exemplo, digamos que você queira criar um aplicativo que ajude as pessoas a planejar suas viagens. Aqui estão algumas ideias que você pode esboçar na parte de trás de um guardanapo:
 
@@ -29,7 +30,7 @@ Por exemplo, digamos que você queira criar um aplicativo que ajude as pessoas a
 
 ![um design para um aplicativo de viagens](images/ux-triptracker-tab-phone-700.png)
 
-**O que há de bom no seu aplicativo?** Pare e dê uma olhada na sua lista de ideias para ver se uma situação em particular chama sua atenção. Experimente reduzir a lista a apenas uma situação na qual queira se concentrar. No processo, você pode eliminar muitas ideias boas, mas dizer "não" a elas é crucial para melhorar determinada situação.
+**Qual é o destaque do aplicativo?** Volte uma etapa e veja a sua lista de ideias para saber se algo em especial chama a sua atenção. Experimente reduzir a lista a apenas uma situação na qual queira se concentrar. No processo, você pode eliminar muitas ideias boas, mas dizer "não" a elas é crucial para melhorar determinada situação.
 
 Depois de escolher uma situação individual, decida como você explicaria a uma pessoa comum, descrevendo em uma frase, o que seu aplicativo faz de melhor. Por exemplo:
 
@@ -60,7 +61,7 @@ Uma boa IA não só facilita cenários de usuários, mas ajuda você a imaginar 
 
 Para obter diretrizes relacionadas, veja [Noções básicas de design de navegação](../layout/navigation-basics.md).
 
-## Dinâmica
+## Dynamics
 
 **Executar seu conceito**
 
@@ -74,7 +75,7 @@ Técnicas comuns que ajudam a concluir esta etapa:
 -   Crie um rascunho sequencial do fluxo: como os usuários devem navegar pela interface para concluir o fluxo?
 -   Faça o protótipo: experimente o fluxo com um protótipo rápido.
 
-**O que os usuários devem poder fazer?** Por exemplo, o aplicativo de viagens é "ótimo para ajudar amigos a criar itinerários para viagens em grupo de forma colaborativa". Vamos listar os fluxos que queremos habilitar:
+**O que os usuários devem conseguir fazer?** Por exemplo, o aplicativo de viagens é "ótimo para ajudar amigos a criar itinerários colaborativos para viagens em grupo". Vamos listar os fluxos que queremos habilitar:
 
 -   Criar uma viagem com informações gerais.
 -   Convide amigos para participar de uma viagem.
@@ -109,45 +110,45 @@ Quando se sabe o que os usuários querem e como ajudá-los a conseguir o que que
 
 Técnicas comuns:
 
--   Pesquisa de plataforma: descubra quais recursos a plataforma oferece e como você pode usá-los.
--   Diagramas de associação: conecta seus fluxos a recursos.
--   Protótipo: exercite os recursos para garantir que eles fazem o que você precisa.
+-   Pesquisa de plataforma: descubra os recursos que a plataforma oferece e como usá-los.
+-   Diagramas de associação: conecte seus fluxos aos recursos.
+-   Protótipo: teste os recursos para garantir que eles fazem o que você precisa.
 
 **Contratos do aplicativo**  O seu aplicativo pode participar de contratos do aplicativo que permitem fluxos de usuário amplos, entre aplicativos e entre recursos.
 
--   **Compartilhe**  Permite que seus usuários compartilhem conteúdo do seu aplicativo com outras pessoas através de outros aplicativos e também recebam conteúdo compartilhável de outras pessoas e aplicativos.
--   **Reproduzir em**  Permite que seus usuários aproveitem áudio, vídeo e imagens transmitidos do seu aplicativo para outros dispositivos pela rede local.
--   **Extensões de seletor de arquivos**   Permite que seus usuários carreguem e salvem os arquivos do sistema de arquivo local, conectado a dispositivos de armazenamento, Grupo Doméstico ou de outros aplicativos. Você também pode oferecer uma extensão de seletor de arquivos para que outros aplicativos possam rodar o conteúdo do seu aplicativo.
+-   **Compartilhamento**  Permita que os usuários compartilhem o conteúdo do seu aplicativo com outras pessoas por meio de outros aplicativos e também recebam conteúdo compartilhável de outras pessoas e aplicativos.
+-   **Reproduzir em**  Permita que os usuários aproveitem o stream de áudio, vídeo ou imagens do seu aplicativo para outros dispositivos em sua rede doméstica.
+-   **Seletor de arquivos e extensões de seletor de arquivos**   Permita que os usuários carreguem e salvem seus arquivos do sistema de arquivos local, de dispositivos de armazenamento conectados, de grupos domésticos ou até mesmo de outros aplicativos. Você também pode oferecer uma extensão de seletor de arquivos para que outros aplicativos possam rodar o conteúdo do seu aplicativo.
 
-Para saber mais, consulte [App contracts and extensions](https://msdn.microsoft.com/library/windows/apps/hh464906).
+Para saber mais, consulte as [extensões e contratos de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh464906).
 <!-- Win 8 page. Should have replacement. -->
 
 **Diferentes exibições, fatores forma e configurações de hardware**  O Windows coloca os usuários no comando e o seu aplicativo na linha de frente. Você provavelmente deseja que a interface do usuário do seu aplicativo chame a atenção independentemente do tipo de dispositivo, do modo de entrada, da orientação de exibição, da configuração de hardware e das circunstâncias que o usuário decida usá-lo.
 
-**Tocar primeiro**  O Windows oferece uma experiência touch única que faz mais do que apenas emular a funcionalidade do mouse.
+**Tocar primeiro**  O Windows oferece uma experiência de toque única que faz mais do que apenas emular a funcionalidade do mouse.
 
 Por exemplo, zoom semântico é uma forma de toque otimizado para navegar por uma grande quantidade de conteúdo. Os usuários podem fazer movimentos panorâmicos ou rolar por categorias de conteúdo e depois ampliar essas categorias para ver informações cada vez mais detalhadas. Você pode usar isso para apresentar o seu conteúdo de forma mais prática, visual e informativa do que com a navegação tradicional e os padrões de layout, como guias.
 
 Claro, você pode se beneficiar de inúmeras vantagens de interações de toque, como girar, aplicar panorâmica, passar o dedo, dentre outras. Saiba mais sobre [Toque e outras interações do usuário](../input-and-devices/input-primer.md).
 
-**Interessante e novo**  Certifique-se de que seu aplicativo pareça novo e interesse aos usuárias com estas experiências padrão:
+**Interessante e novo**  Certifique-se de que seu aplicativo pareça novo e interesse aos usuários com estas experiências padrão:
 
 -   **Animações**  Use sua biblioteca de animações para deixar o aplicativo rápido e fluido para os seus usuários. Ajude os usuários a compreender as alterações de contexto e a unir experiências com transições visuais. Saiba mais sobre [animações na interface do usuário](../graphics/animations-overview.md).
--   **Notificações do sistema**  Permite que seus usuários saibam sobre conteúdos sensíveis ao tempo ou pessoalmente relevantes através de notificações do sistema e convida-os a voltar para o seu aplicativo mesmo quando ele está fechado. Saiba mais sobre [blocos, selos e notificações do sistema](../controls-and-patterns/tiles-badges-notifications.md).
+-   **Notificações do sistema**  Permite que seus usuários saibam sobre conteúdos sensíveis ao tempo ou pessoalmente relevantes por meio de notificações do sistema e convide-os a voltar para o seu aplicativo mesmo quando ele está fechado. Saiba mais sobre [blocos, selos e notificações do sistema](../controls-and-patterns/tiles-badges-notifications.md).
 -   **Blocos de aplicativo**  Fornece atualizações recentes e relevantes para atrair os usuários de volta para o seu aplicativo. Há mais sobre isso na próxima seção. Saiba mais sobre [blocos de aplicativos](../controls-and-patterns/tiles-and-notifications-creating-tiles.md).
 
 **Personalização**
 
 -   **Configurações**  Permite que seus usuários criem a experiência que quiserem ao salvar configurações no aplicativo. Consolide todas as suas configurações em uma tela, e então permita que os usuários configurem o seu aplicativo usando um mecanismo comum com o qual já estejam familiarizados. Saiba mais sobre [adicionar configurações de aplicativos](../app-settings/app-settings-and-data.md).
--   **Roaming**  Cria uma experiência contínua através de dispositivos fazendo roaming de dados que permite que os usuários escolham uma tarefa exatamente onde a deixaram e preserva a experiência do usuário com que eles mais se importam, independentemente do dispositivo que estejam usando. Facilite o uso do seu aplicativo em qualquer lugar—na cozinha, no computador da família ou de trabalho, no tablet pessoal, e outros fatores forma—mantendo configurações e estados com roaming. Saiba mais sobre [gerenciamento de dados de aplicativos](../app-settings/store-and-retrieve-app-data.md) e consulte [Diretrizes de dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094).
--   **Blocos de usuário**   Deixam seu aplicativo mais pessoal para os usuários carregando a imagem de bloco de usuário deles ou permite que eles definam conteúdos do seu aplicativo como bloco pessoal no Windows.
+-   **Roaming**  Crie uma experiência contínua por meio de dispositivos fazendo roaming de dados que permite que os usuários retomem uma tarefa exatamente onde a deixaram e preserva a experiência do usuário com que eles mais se importam, independentemente do dispositivo que estejam usando. Facilite o uso do seu aplicativo em qualquer lugar—na cozinha, no computador da família ou de trabalho, no tablet pessoal, e outros fatores forma—mantendo configurações e estados com roaming. Saiba mais sobre [gerenciamento de dados de aplicativos](../app-settings/store-and-retrieve-app-data.md) e consulte [Diretrizes de dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094).
+-   **Blocos de usuário**   Deixe seu aplicativo mais pessoal para os usuários carregando a imagem de bloco de usuário deles ou permita que eles definam conteúdos do seu aplicativo como bloco pessoal no Windows.
 
-**Capacidades de dispositivo**  Certifique-se de que o seu aplicativo se beneficia ao máximo das capacidades dos dispositivos de hoje.
+**Capacidades de dispositivo**  Certifique-se de que o seu aplicativo se beneficie ao máximo das capacidades dos dispositivos de hoje.
 
--   **Gestos de proximidade**  Permite que seus usuários conectem dispositivos com outros usuários que estão fisicamente próximos, basicamente, aproximando os dois dispositivos (jogos para vários jogadores). Saiba mais sobre [proximidade e toques](https://msdn.microsoft.com/library/windows/apps/hh465229).
+-   **Gestos de proximidade**  Permita que seus usuários conectem dispositivos com outros usuários que estão fisicamente próximos, basicamente, encostando os dois dispositivos (jogos para vários jogadores). Saiba mais sobre [proximidade e toques](https://msdn.microsoft.com/library/windows/apps/hh465229).
 -   **Câmeras e dispositivos de armazenamento externos**  Conecte seus usuários a suas câmeras internas ou conectadas para conversas ou conferências, gravar vlogs, tirar fotos de perfil, documentar o mundo à volta deles ou qualquer atividade em que seu aplicativo seja bom. Saiba mais sobre o [acesso a conteúdo em armazenamento removível](https://msdn.microsoft.com/library/windows/apps/hh465189).
 -   **Acelerômetros e outros sensores**     Os dispositivos vêm com vários sensores atualmente. O seu aplicativo pode esmaecer ou clarear o seu visor com base na luz ambiente, redirecionar o fluxo da IU caso o usuário girar o visor, ou reagir a qualquer movimento físico. Saiba mais sobre [sensores](../devices-sensors/sensors.md).
--   **Geolocalização**  Use informações de geolocalização de dados de Web padrão ou de sensores de geolocalização para ajudar os seus usuários a circular, encontrar a posição deles no mapa ou receber notificações sobre pessoas e atividades próximas e destinos. Saiba mais sobre [localização geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
+-   **Geolocalização**  Use informações de geolocalização de dados da Web padrão ou de sensores de geolocalização para ajudar os seus usuários a circular, encontrar a posição deles no mapa ou receber notificações sobre pessoas e atividades próximas e destinos. Saiba mais sobre [localização geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
 
 Vamos considerar o aplicativo de viagens novamente. Para ser ótimo em ajudar amigos a criar de forma colaborativa itinerários de viagens em grupo, você pode usar alguns destes recursos:
 
@@ -166,13 +167,13 @@ Você tem várias opções para ganhar dinheiro com o seu aplicativo. Se você d
 
 Isso diz respeito aos conceitos básicos corretos. Agora que você sabe o que o seu aplicativo faz de melhor e descobriu os fluxos para os quais deseja dar suporte, pode começar a pensar nos conceitos básicos do design da experiência do usuário.
 
-**Como você deve organizar conteúdo de IU?**   A maioria dos conteúdos de aplicativo pode ser organizada em grupos ou hierarquias. O que você escolhe como o agrupamento de nível superior do seu conteúdo deve corresponder ao foco da sua declaração de excelência.
+**Como você deve organizar o conteúdo da interface do usuário?**   A maior parte do conteúdo do aplicativo pode ser organizada por meio de agrupamentos ou hierarquias. O que você escolhe como o agrupamento de nível superior do seu conteúdo deve corresponder ao foco da sua declaração de excelência.
 
 Usando o aplicativo de viagens como exemplo, há várias maneiras de agrupar itinerários. Se o foco do aplicativo for descobrir destinos interessantes, você pode agrupá-los com base em interesses, como aventura, diversão sob o sol ou refúgios românticos. Entretanto, como o foco do aplicativo é planejar viagens com amigos, faz mais sentido organizar itinerários baseados em círculos sociais, como familiares, amigos ou colegas de trabalho.
 
 Escolher como você quer agrupar o conteúdo ajuda a decidir que páginas ou visualizações são necessárias no seu aplicativo. Consulte Noções básicas da interface do usuário para obter mais informações.
 
-**Como você deve apresentar conteúdo de IU?** Depois de decidir como organizar sua IU, você pode definir objetivos de experiência do usuário que especifiquem como sua IU será criada e apresentada ao seu usuário. Em qualquer situação, você deve garantir que o seu usuário possa continuar usando e aproveitando o seu aplicativo o mais rápido possível. Para fazer isso, decida quais partes da interface do usuário precisam ser apresentadas primeiro e verifique se essas partes estão completas antes de perder tempo construindo as partes não críticas.
+**Como apresentar o conteúdo da interface do usuário?** Depois de decidir como organizar a interface do usuário, você pode definir metas de experiência do usuário que especifiquem como a interface do usuário é construída e apresentada ao usuário. Em qualquer situação, você deve garantir que o seu usuário possa continuar usando e aproveitando o seu aplicativo o mais rápido possível. Para fazer isso, decida quais partes da interface do usuário precisam ser apresentadas primeiro e verifique se essas partes estão completas antes de perder tempo construindo as partes não críticas.
 
 No aplicativo de viagens, provavelmente, a primeira coisa que o usuário irá querer fazer no aplicativo é encontrar um itinerário de viagem específico. Para apresentar essa informação o mais rápido possível, você deve mostrar a lista de viagens primeiro, usando um controle **ListView**.
 
@@ -180,7 +181,7 @@ No aplicativo de viagens, provavelmente, a primeira coisa que o usuário irá qu
 
 Depois de mostrar a lista de viagens, você pode começar a carregar outros recursos, como um feed de notícias sobre viagens de amigos.
 
-**De que superfícies e comandos de IU você precisa?**   Analise os fluxos que você identificou antes. Para cada fluxo, crie um esboço das etapas que os usuários devem seguir.
+**De quais comandos e superfícies de IU você precisa?**   Analise os fluxos que você identificou. Para cada fluxo, crie um esboço das etapas que os usuários devem seguir.
 
 Vamos dar uma olhada no fluxo "Compartilhar itinerários para que amigos e familiares sigam". Vamos supor que o usuário já criou uma viagem. O compartilhamento do itinerário de uma viagem pode precisar destas etapas:
 
@@ -196,9 +197,9 @@ Durante esse processo, você começa a ver que IU você precisa criar e os detal
 
 Para obter mais detalhes sobre como usar superfícies diferentes, dê uma olhada em <!--[Command design basics](../layout/commanding-basics.md)-->.
 
-**Como o fluxo deve ser?** Quando você tiver definido as etapas a serem seguidas pelo seu usuário, poderá transformar o fluxo em metas de desempenho. Para saber mais, veja [Planejar o desempenho](../debug-test-perf/planning-and-measuring-performance.md).
+**Qual deve ser a aparência do fluxo?** Quando definir as etapas que o usuário realizará, você pode transformar esse fluxo em metas de desempenho. Para saber mais, consulte [Planejar o desempenho](../debug-test-perf/planning-and-measuring-performance.md).
 
-**Como você deve organizar comandos?**  Use a linha das etapas de fluxo para identificar comandos em potencial que você precisará projetar. Depois, pense nos locais onde usar estes comandos em seu aplicativo.
+**Como você deve organizar comandos?**  Use o seu esboço das etapas do fluxo para identificar os comandos que você precisa criar. Depois, pense nos locais onde usar estes comandos em seu aplicativo.
 
 -   **Sempre tente usar o conteúdo.**  Sempre que possível, permita que os usuários manipulem diretamente o conteúdo na tela do aplicativo, em vez de adicionar comandos que atuam no conteúdo. Por exemplo, no aplicativo de viagens, permita que os usuários reorganizem seu itinerário, arrastando e soltando as atividades em uma lista na tela, em vez de selecionar a atividade e usar botões de comando Para cima ou Para baixo.
 -   **Se não puder, use o conteúdo.** Coloque comandos em uma destas superfícies de IU se você não puder usar o conteúdo:
@@ -221,7 +222,7 @@ Pense naquilo que você quer que os usuários pensem, sintam ou façam assim que
 
 **Tela inicial**  A tela inicial deve carregar o mais rápido possível e ficar na tela o tempo necessário para inicializar o estado do seu aplicativo. O que você mostra na tela inicial deve expressar a personalidade do seu aplicativo.
 
-**Primeira inicialização**  Antes de os usuários inscreverem-se no seu serviço, fizerem logon na conta ou adicionarem seu próprio conteúdo, o que eles verão? Tente demonstrar o valor do seu aplicativo antes de solicitar informações dos usuários. Considere mostrar amostra de conteúdos para que as pessoas possam dar uma olha e entender o que o seu aplicativo faz antes de você pedir a eles que confirmem.
+**Primeira inicialização**  Antes de os usuários inscreverem-se no seu serviço, fazerem login na conta ou adicionarem seu próprio conteúdo, o que eles verão? Tente demonstrar o valor do seu aplicativo antes de solicitar informações dos usuários. Considere mostrar amostra de conteúdos para que as pessoas possam dar uma olha e entender o que o seu aplicativo faz antes de você pedir a eles que confirmem.
 
 **Home page**  A home page é para onde você traz usuários cada vez que eles iniciam o seu aplicativo. O conteúdo aqui deve ter um foco claro e, imediatamente, apresentar para que o seu aplicativo foi feito. Dê um objetivo maior a essa página e confie que as pessoas explorem o restante do seu aplicativo. Concentre-se em eliminar as distrações na página de destino, e não na descoberta.
 
@@ -232,6 +233,6 @@ Antes de você se aprofundar muito no desenvolvimento do seu aplicativo, deve va
 Use as [Diretrizes detalhadas de experiência do usuário para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/hh465424) para manter o foco em recursos importantes. Use as [ferramentas de desempenho do Visual Studio](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx) para analisar o desempenho de cada uma das situações do seu aplicativo.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

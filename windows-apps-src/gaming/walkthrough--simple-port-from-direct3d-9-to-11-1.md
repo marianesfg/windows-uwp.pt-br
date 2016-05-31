@@ -1,10 +1,11 @@
 ---
-title: Passo a passo da portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)
+author: mtoepke
+title: Passo a passo -- Portabilidade de um aplicativo simples em Direct3D 9 para DirectX 11 e a Plataforma Universal do Windows (UWP)
 description: Este exercício de portabilidade mostra como levar uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11 e a Plataforma Universal do Windows (UWP).
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ---
 
-# Passo a passo: portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)
+# Passo a passo: portabilidade de um aplicativo simples em Direct3D 9 para DirectX 11 e a Plataforma Universal do Windows (UWP)
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -24,16 +25,16 @@ Este exercício de portabilidade mostra como levar uma estrutura de renderizaç�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Initialize Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)</p></td>
-<td align="left"><p>Consulte como converter o código de inicialização do Direct3D 9 para utilizá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca.</p></td>
+<td align="left"><p>[Inicializar o Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)</p></td>
+<td align="left"><p>Mostra como converter o código de inicialização do Direct3D 9 para o Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Convert the rendering framework](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)</p></td>
-<td align="left"><p>Veja como converter uma estrutura de renderização simples do Direct3D 9 para Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11.</p></td>
+<td align="left"><p>[Converter a estrutura de renderização](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)</p></td>
+<td align="left"><p>Mostra como converter uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Port the game loop](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)</p></td>
-<td align="left"><p>Mostra como implementar uma janela para um jogo UWP e como ativar o loop do jogo, inclusive como criar um [<strong>IFrameworkView</strong>](https://msdn.microsoft.com/library/windows/apps/hh700478) para controlar uma tela inteira [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/apps/br208225).</p></td>
+<td align="left"><p>[Fazer a portabilidade do loop do jogo](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)</p></td>
+<td align="left"><p>Mostra como implementar uma janela para um jogo UWP e como ativar o loop do jogo, inclusive como criar um [<strong>IFrameworkView</strong>](https://msdn.microsoft.com/library/windows/apps/hh700478) para controlar um [<strong>CoreWindow</strong>] de tela inteira (https://msdn.microsoft.com/library/windows/apps/br208225).</p></td>
 </tr>
 </tbody>
 </table>
@@ -68,12 +69,18 @@ Visite o tópico sobre [conceitos e considerações sobre portabilidade](porting
 
 
 **Direct3D**
-[Escrevendo sombreadores HLSL no Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+            
+          
+            [Escrevendo sombreadores HLSL no Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
 
 [Criar um novo projeto do DirectX 11 para a UWP](user-interface.md)
 
 **Windows Store**
-[**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
+            
+          
+            [
+              **Microsoft::WRL::ComPtr**
+            ](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
 
 [**Manipular o operador de objeto (^)**] https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
@@ -86,6 +93,6 @@ Visite o tópico sobre [conceitos e considerações sobre portabilidade](porting
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

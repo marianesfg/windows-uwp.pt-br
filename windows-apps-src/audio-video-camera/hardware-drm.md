@@ -1,12 +1,13 @@
 ---
+author: eliotcowley
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: Este tópico fornece uma visão geral de como adicionar DRM (gerenciamento de direitos digitais) baseado em hardware PlayReady ao seu aplicativo UWP (Plataforma Universal do Windows).
-title: DRM de Hardware
+title: DRM de hardware
 ---
 
 # DRM de hardware
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tópico fornece uma visão geral de como adicionar DRM (gerenciamento de direitos digitais) baseado em hardware PlayReady ao seu aplicativo UWP (Plataforma Universal do Windows).
@@ -19,7 +20,7 @@ Cada vez mais, os provedores de conteúdo estão migrando para proteções basea
 
 Este tópico fornece uma breve visão geral de como o Windows 10 implementa o ambiente de execução confiável.
 
-Os detalhes da implementação do ambiente de execução confiável do Windows está fora do escopo deste documento. No entanto, uma breve discussão sobre a diferença entre o kit de porta padrão do ambiente de execução confiável e da porta do Windows será benéfica. O Windows implementa a camada de proxy do OEM e transfere as chamadas de funções PRITEE serializadas para um driver de modo de usuário no subsistema do Windows Media Foundation. Isso eventualmente é roteado para o driver do ambiente de execução confiável (Trusted Execution Environment) do Windows ou para o driver de gráficos do OEM. Os detalhes de qualquer uma dessas abordagens está fora do escopo deste documento. O diagrama a seguir mostra a interação de componentes geral para a porta do Windows. Se você quiser desenvolver uma implementação de TEE do PlayReady do Windows, contate <WMLA@Microsoft.com>.
+Os detalhes da implementação do ambiente de execução confiável do Windows está fora do escopo deste documento. No entanto, uma breve discussão sobre a diferença entre o kit de porta padrão do ambiente de execução confiável e da porta do Windows será benéfica. O Windows implementa a camada de proxy do OEM e transfere as chamadas de funções PRITEE serializadas para um driver de modo de usuário no subsistema do Windows Media Foundation. Isso eventualmente é roteado para o driver do ambiente de execução confiável (Trusted Execution Environment) do Windows ou para o driver de gráficos do OEM. Os detalhes de qualquer uma dessas abordagens está fora do escopo deste documento. O diagrama a seguir mostra a interação de componentes geral para a porta do Windows. Se você quiser desenvolver uma implementação de ambiente de execução confiável do PlayReady do Windows, contate <WMLA@Microsoft.com>.
 
 ![diagrama de componente de tee do Windows](images/windowsteecomponentdiagram720.jpg)
 
@@ -53,21 +54,21 @@ Por padrão, o DRM de hardware é usado se o sistema oferecer suporte a ele. No 
 
 O exemplo a seguir mostra como recusar o DRM de hardware. Você só precisa fazer isso para alternar. Além disso, verifique se não há nenhum objeto PlayReady na memória; caso contrário, o comportamento será indefinido.
 
-``` syntax
+```js
 var applicationData = Windows.Storage.ApplicationData.current;
-var localSettings = applicationData.localSettings.createContainer(“PlayReady”, Windows.Storage.ApplicationDataCreateDisposition.always);
-localSettings.values[“SoftwareOverride”] = 1;
+var localSettings = applicationData.localSettings.createContainer("PlayReady", Windows.Storage.ApplicationDataCreateDisposition.always);
+localSettings.values["SoftwareOverride"] = 1;
 ```
 
 Para voltar para o DRM de hardware, defina o valor de **SoftwareOverride** como **0**.
 
 Para cada reprodução de mídia, você precisa definir o **MediaProtectionManager** como:
 
-``` syntax
-mediaProtectionManager.properties[“Windows.Media.Protection.UseSoftwareProtectionLayer”] = true;
+```js
+mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectionLayer"] = true;
 ```
 
-A melhor maneira de saber se você está em DRM de hardware ou de software é examinar C:\\Users\\&lt;username&gt;\\AppData\\Local\\Packages\\&lt;nome do aplicativo&gt;\\LocalState\\PlayReady\\\*
+A melhor maneira de saber se você está em DRM de hardware ou software é verificar em C:\\Users\\&lt;nome do usuário&gt;\\AppData\\Local\\Packages\\&lt;nome do aplicativo&gt;\\LocalState\\PlayReady\\\*
 
 -   Se houver um arquivo mspr.hds, você estará em DRM de software.
 -   Se houver outro arquivo \*.hds, você estará em DRM de hardware.
@@ -79,7 +80,7 @@ Esta seção descreve como detectar qual tipo de DRM de hardware tem suporte no 
 
 Você pode usar o método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) para determinar se o sistema oferece suporte a um recurso DRM (Gerenciamento de Direitos Digitais) de hardware específico. Por exemplo:
 
-``` syntax
+```cpp
 boolean PlayReadyStatics->CheckSupportedHardware(PlayReadyHardwareDRMFeatures enum);
 ```
 
@@ -89,6 +90,6 @@ Você também pode usar a propriedade [**PlayReadyStatics.PlayReadyCertificateSe
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

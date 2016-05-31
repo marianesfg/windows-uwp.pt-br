@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 88132B6F-FB50-4B03-BC21-233988746230
 title: Personalizar a interface do usuário para visualização de impressão
 description: Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão.
 ---
 # Personalizar a interface do usuário para visualização de impressão
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** APIs importantes **
@@ -53,9 +54,9 @@ Modifique o manipulador de eventos [**PrintTaskRequested**](https://msdn.microso
 protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs e)
 {
    PrintTask printTask = null;
-   printTask = e.Request.CreatePrintTask(&quot;C# Printing SDK Sample&quot;, sourceRequestedArgs =&gt;
+   printTask = e.Request.CreatePrintTask("C# Printing SDK Sample", sourceRequestedArgs =>
    {
-         IList&lt;string&gt; displayedOptions = printTask.Options.DisplayedOptions;
+         IList<string> displayedOptions = printTask.Options.DisplayedOptions;
 
          // Choose the printer options to be shown.
          // The order in which the options are appended determines the order in which they appear in the UI
@@ -70,14 +71,14 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
          printTask.Options.MediaSize = PrintMediaSize.NorthAmericaLegal;
 
          // Print Task event handler is invoked when the print job is completed.
-         printTask.Completed += async (s, args) =&gt;
+         printTask.Completed += async (s, args) =>
          {
             // Notify the user when the print operation fails.
             if (args.Completion == PrintTaskCompletion.Failed)
             {
-               await scenarioPage.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =&gt;
+               await scenarioPage.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                {
-                     MainPage.Current.NotifyUser(&quot;Failed to print.&quot;, NotifyType.ErrorMessage);
+                     MainPage.Current.NotifyUser("Failed to print.", NotifyType.ErrorMessage);
                });
             }
          };
@@ -108,10 +109,10 @@ Primeiro, obtenha um objeto [**PrintTaskOptionDetails**](https://msdn.microsoft.
 protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs e)
 {
    PrintTask printTask = null;
-   printTask = e.Request.CreatePrintTask(&quot;C# Printing SDK Sample&quot;, sourceRequestedArgs =&gt;
+   printTask = e.Request.CreatePrintTask("C# Printing SDK Sample", sourceRequestedArgs =>
    {
          PrintTaskOptionDetails printDetailedOptions = PrintTaskOptionDetails.GetFromPrintTaskOptions(printTask.Options);
-         IList&lt;string&gt; displayedOptions = printDetailedOptions.DisplayedOptions;
+         IList<string> displayedOptions = printDetailedOptions.DisplayedOptions;
 
          // Choose the printer options to be shown.
          // The order in which the options are appended determines the order in which they appear in the UI
@@ -122,25 +123,25 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
          displayedOptions.Add(Windows.Graphics.Printing.StandardPrintTaskOptions.ColorMode);
 
          // Create a new list option
-         PrintCustomItemListOptionDetails pageFormat = printDetailedOptions.CreateItemListOption(&quot;PageContent&quot;, &quot;Pictures&quot;);
-         pageFormat.AddItem(&quot;PicturesText&quot;, &quot;Pictures and text&quot;);
-         pageFormat.AddItem(&quot;PicturesOnly&quot;, &quot;Pictures only&quot;);
-         pageFormat.AddItem(&quot;TextOnly&quot;, &quot;Text only&quot;);
+         PrintCustomItemListOptionDetails pageFormat = printDetailedOptions.CreateItemListOption("PageContent", "Pictures");
+         pageFormat.AddItem("PicturesText", "Pictures and text");
+         pageFormat.AddItem("PicturesOnly", "Pictures only");
+         pageFormat.AddItem("TextOnly", "Text only");
 
          // Add the custom option to the option list
-         displayedOptions.Add(&quot;PageContent&quot;);
+         displayedOptions.Add("PageContent");
 
          printDetailedOptions.OptionChanged += printDetailedOptions_OptionChanged;
 
          // Print Task event handler is invoked when the print job is completed.
-         printTask.Completed += async (s, args) =&gt;
+         printTask.Completed += async (s, args) =>
          {
             // Notify the user when the print operation fails.
             if (args.Completion == PrintTaskCompletion.Failed)
             {
-               await scenarioPage.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =&gt;
+               await scenarioPage.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                {
-                     MainPage.Current.NotifyUser(&quot;Failed to print.&quot;, NotifyType.ErrorMessage);
+                     MainPage.Current.NotifyUser("Failed to print.", NotifyType.ErrorMessage);
                });
             }
          };
@@ -164,9 +165,9 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
          return;
    }
 
-   if (optionId == &quot;PageContent&quot;)
+   if (optionId == "PageContent")
    {
-         await scenarioPage.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =&gt;
+         await scenarioPage.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
          {
             printDocument.InvalidatePreview();
          });
@@ -182,6 +183,6 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

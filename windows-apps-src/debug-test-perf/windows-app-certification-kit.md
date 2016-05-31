@@ -1,7 +1,8 @@
 ---
+author: mcleblanc
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: Kit de Certificação de Aplicativos Windows
-description: Para aumentar as chances de seu aplicativo ser publicado na Windows Store ou obter a certificação do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows.
+description: Para aumentar as chances de seu aplicativo ser publicado na Windows Store ou obter certificação do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows.
 ---
 # Kit de Certificação de Aplicativos Windows
 
@@ -94,6 +95,6 @@ As características de desempenho podem mudar ao longo do tempo para acompanhar 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

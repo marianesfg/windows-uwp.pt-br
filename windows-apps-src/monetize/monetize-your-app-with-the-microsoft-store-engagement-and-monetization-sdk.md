@@ -1,10 +1,11 @@
 ---
+author: mcleanbyron
 Description: O SDK de Microsoft Store Engagement and Monetization fornece bibliotecas e ferramentas que você pode usar para adicionar recursos aos seus aplicativos que ajudam você a ganhar mais dinheiro e clientes.
-title: Monetizar seu aplicativo e envolver os clientes com o SDK da Microsoft Store Engagement and Monetization
+title: SDK de Microsoft Store Engagement and Monetization
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
 ---
 
-# Monetizar seu aplicativo e envolver os clientes com o SDK da Microsoft Store Engagement and Monetization
+# SDK de Microsoft Store Engagement and Monetization
 
 O SDK de Microsoft Store Engagement and Monetization fornece bibliotecas e ferramentas que ajudarão você a ganhar mais dinheiro e clientes, como exibir anúncios em seus aplicativos e executar experimentos com testes A/B. Este SDK substitui o SDK do Microsoft Universal Ad Cliente ele evoluirá ao longo do tempo para incluir novos recursos de monetização e envolvimento.
 
@@ -15,7 +16,7 @@ O SDK de Microsoft Store Engagement and Monetization fornece bibliotecas e ferra
 
 ### Executar experimentos com testes A/B para aplicativos UWP
 
-Executar testes A/B em seus aplicativos UWP (Plataforma Universal do Windows) para medir a eficácia de recursos em alguns clientes antes de liberar os recursos para todos. Depois de definir uma experiência em seu painel do Centro de desenvolvimento, use a classe [ExperimentClient](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.engagementclient.aspx) para obter variações de sua experiência em seu aplicativo, use esses dados para modificar o comportamento do recurso que você está testando e, em seguida, use o método [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx) para enviar eventos de exibição e de conversão ao Centro de Desenvolvimento. Por fim, use o painel para exibir os resultados e gerenciar a experiência.
+Execute testes A/B em seus aplicativos UWP (Plataforma Universal do Windows) para medir a eficácia de recursos em alguns clientes antes de liberar os recursos para todos. Depois de definir uma experiência em seu painel do Centro de desenvolvimento, use a classe [ExperimentClient](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentclient.aspx) para obter variações de sua experiência em seu aplicativo, use esses dados para modificar o comportamento do recurso que você está testando e, em seguida, use o método [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx) para enviar eventos de exibição e de conversão ao Centro de Desenvolvimento. Por fim, use o painel para exibir os resultados e gerenciar a experiência.
 
 Para saber mais, consulte [Executar experimentos com testes A/B](run-app-experiments-with-a-b-testing.md).
 
@@ -23,15 +24,17 @@ Para saber mais, consulte [Executar experimentos com testes A/B](run-app-experim
 
 Use a classe [Feedback](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.feedback.aspx) em seus aplicativos UWP para direcionar os clientes do Windows 10 ao Hub de comentários, onde eles podem enviar problemas, sugestões e aprovações. Em seguida, gerencie esses comentários no [Relatório de comentários](../publish/feedback-report.md) no painel do Centro de Desenvolvimento.
 
-Para obter mais informações, consulte [Iniciar o Hub de comentários do seu aplicativo](launch-feedback-hub-from-your-app.md).
+Para obter mais informações, consulte [Iniciar o Hub de Feedback do seu aplicativo](launch-feedback-hub-from-your-app.md).
 
-### Apresente anúncios em seus aplicativos
+>**Observação** O relatório de **Feedback** está disponível somente para contas de desenvolvedor que tenham ingressado no [Programa Insider do Centro de Desenvolvimento](../publish/dev-center-insider-program.md).
+
+### Apresentar anúncios em seus aplicativos
 
 Aumente sua receita exibindo anúncios em forma de banner ou anúncios intersticiais em vídeos da Microsoft em aplicativos UWP, bem como os aplicativos Windows 8.1 e Windows Phone 8.x. Você também pode maximizar suas taxas de preenchimento de anúncios usando a mediação de anúncios para exibi-los de vários provedores de rede de anúncios.
 
 Para obter mais informações, consulte [Exibir anúncios no seu aplicativo](display-ads-in-your-app.md).
 
->**Observação** os recursos de publicidade das versões anteriores do SDK Universal Ad Client, extensão Ad Mediator e do Microsoft Advertising SDK agora estão incluídos no SDK de Microsoft Store Monetization and Engagement SDK.
+>**Observação** Os recursos de publicidade das versões anteriores do SDK Universal Ad Client, da extensão Ad Mediator e do Microsoft Advertising SDK agora estão incluídos no SDK de Microsoft Store Monetization and Engagement.
 
 ### Referência de API
 
@@ -49,7 +52,7 @@ A Microsoft lança periodicamente novas versões do SDK de Microsoft Store Monet
 
 Os recursos de publicidade das versões anteriores do SDK Universal Ad Client, extensão Ad Mediator e do Microsoft Advertising SDK agora estão incluídos no SDK de Microsoft Store Monetization and Engagement SDK. Se você tiver projetos do Visual Studio 2015 ou do Visual Studio 2013 que usam recursos de anúncio de uma dessas versões anteriores, você pode continuar trabalhando com seus projetos sem alterações depois que você instalar o SDK de Microsoft Store Monetization and Engagement.
 
->**Observação** para instalar o SDK de Microsoft Store Engagement and Monetization com o Visual Studio 2015, você deve ter a versão 1.1 ou posterior das Ferramentas do Visual Studio para Aplicativos Universais do Windows instalada. Para obter mais informações sobre essa atualização das Ferramentas do Visual Studio para Aplicativos Universais do Windows, consulte as [notas de versão](http://go.microsoft.com/fwlink/?LinkID=624516).
+>**Observação** Para instalar o SDK de Microsoft Store Engagement and Monetization com o Visual Studio 2015, você deve ter a versão 1.1 ou posterior das Ferramentas do Visual Studio para Aplicativos Universais do Windows instalada. Para obter mais informações sobre essa atualização das Ferramentas do Visual Studio para Aplicativos Universais do Windows, consulte as [notas de versão](http://go.microsoft.com/fwlink/?LinkID=624516).
 
 ## Pacotes de estrutura no SDK
 
@@ -67,11 +70,11 @@ Outras bibliotecas no SDK, incluindo Microsoft.Advertising.dll para outras plata
 
 ## Tópicos relacionados
 
-* [Execute experimentos com testes A/B](run-app-experiments-with-a-b-testing.md)
+* [Executar experimentos com testes A/B](run-app-experiments-with-a-b-testing.md)
 * [API de referência do SDK de Microsoft Store Engagement and Monetization](https://msdn.microsoft.com/library/windows/apps/mt691886.aspx)
 * [Iniciar o Hub de Feedback do seu aplicativo](launch-feedback-hub-from-your-app.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

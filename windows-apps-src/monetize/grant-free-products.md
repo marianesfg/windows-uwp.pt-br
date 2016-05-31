@@ -1,12 +1,13 @@
 ---
+author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
-description: Use este método na API de compra da Windows Store para conceder um aplicativo ou IAP (produto no aplicativo) gratuito a um determinado usuário.
+description: Use esse método na API de compra da Windows Store para conceder um aplicativo ou IAP (produto no aplicativo) gratuito a um determinado usuário.
 title: Conceder produtos gratuitos
 ---
 
 # Conceder produtos gratuitos
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos do Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use esse método na API de compra da Windows Store para conceder um aplicativo ou IAP (produto no aplicativo) gratuito a um determinado usuário.
 
@@ -36,10 +37,10 @@ Para obter mais informações, consulte [Exibir e conceder produtos de um servi�
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;.                           |
+| Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;.                           |
 | Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
-| Comprimento do conteúdo | number | O comprimento do corpo da solicitação.                                                                       |
-| Tipo de conteúdo   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
+| Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
+| Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
  
 
@@ -53,7 +54,7 @@ Para obter mais informações, consulte [Exibir e conceder produtos de um servi�
 | language       | string | O idioma do usuário.                                                                                                                                                                                                                                                                                              | Sim      |
 | market         | string | O mercado do usuário.                                                                                                                                                                                                                                                                                                | Sim      |
 | orderId        | guid   | Uma GUID gerada para o pedido. Esse valor é exclusivo para o usuário, mas não é necessário que seja exclusivo em todos os pedidos.                                                                                                                                                                                              | Sim      |
-| productId      | string | A ID de produto do catálogo da Windows Store. Para obter a ID do produto, navegue até seu aplicativo no painel Centro de Desenvolvimento do Windows, vá até **Gerenciamento de aplicativo** &gt; página **Identidade do aplicativo** e recupere o sufixo da cadeia de caracteres mostrada no campo **URL do Windows 10**. Uma ID de produto do exemplo é "9WZDNCRFJ3Q8". | Sim      |
+| productId      | string | A ID de produto do catálogo da Windows Store. Para obter a ID de produto, navegue para o seu aplicativo no painel Centro de Desenvolvimento do Windows, vá até a página **Gerenciamento de aplicativo**&gt;**Identidade do aplicativo** e recupere o sufixo da cadeia de caracteres mostrado no campo **URL para Windows 10**. Uma ID de produto do exemplo é "9WZDNCRFJ3Q8". | Sim      |
 | quantity       | int    | A quantidade a ser comprada. Atualmente, o único valor com suporte é 1. Se não for especificado, o padrão é 1.                                                                                                                                                                                                                | Não       |
 | skuId          | string | A ID da SKU do catálogo da Windows Store. Um ID de SKU de exemplo é “0010”.                                                                                                                                                                                                                                                | Sim      |
 
@@ -61,7 +62,7 @@ Para obter mais informações, consulte [Exibir e conceder produtos de um servi�
 
 ### Exemplo de solicitação
 
-```
+```syntax
 POST https://purchase.mp.microsoft.com/v6.0/purchases/grant HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJK……
 Content-Length: 1863
@@ -92,7 +93,7 @@ Content-Type: application/json
 | isPIRequired              | boolean                     | Indica se um PI (meio de pagamento) é necessário como parte da ordem de compra.                                                                   | Sim      |
 | language                  | string                      | A ID de idioma para a ordem (por exemplo, "en").                                                                                                       | Sim      |
 | market                    | string                      | A ID de mercado para a ordem (por exemplo, "US").                                                                                                         | Sim      |
-| orderId                   | string                      | Uma ID que identifica o pedido de um usuário específico.                                                                                                   | Sim      |
+| orderId                   | string                      | ID que identifica o pedido de um usuário específico.                                                                                                   | Sim      |
 | orderLineItems            | list&lt;OrderLineItemV6&gt; | A lista de itens de linha do pedido. Normalmente, há um item de linha por pedido.                                                                          | Sim      |
 | orderState                | string                      | O estado do pedido. Os estados válidos são: **Editing**, **CheckingOut**, **Pending**, **Purchased**, **Refunded**, **ChargedBack** e **Cancelled**. | Sim      |
 | orderValidityEndTime      | string                      | A última vez em que o preço do pedido era válido antes de ser enviado. N/A para aplicativos gratuitos.                                                                      | Sim      |
@@ -156,7 +157,7 @@ O objeto IdentityV6 contém os parâmetros a seguir.
 
 ### Exemplo de resposta
 
-```
+```syntax
 Content-Length: 1203
 Content-Type: application/json
 MS-CorrelationId: fb2e69bc-f26a-4aab-a823-7586c19f5762
@@ -242,6 +243,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

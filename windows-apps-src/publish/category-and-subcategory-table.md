@@ -1,6 +1,7 @@
 ---
-Description: a listagem do aplicativo na categoria e subcategoria corretas ajuda os clientes a encontrarem o aplicativo e a saber mais sobre ele.
-title: tabela de categoria e subcategoria
+author: jnHs
+Description: A listagem do aplicativo na categoria e subcategoria corretas ajuda os clientes a encontrarem o aplicativo e a saber mais sobre ele.
+title: Tabela de categoria e subcategoria
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ---
 
@@ -58,6 +59,6 @@ Apenas algumas categorias possuem subcategorias. Lembre-se que só é possível 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
