@@ -475,7 +475,7 @@
 ###### [Eventos de AdControl em C#](monetize/adcontrol-events-in-c.md)
 ###### [Tratamento de erros de AdControl](monetize/adcontrol-error-handling.md)
 ####### [Passo a passo do tratamento de erros em XAML/C#](monetize/error-handling-in-xamlc-walkthrough.md)
-#######    [Passo a passo do tratamento de erros em JavaScript](monetize/error-handling-in-javascript-walkthrough.md)
+####### [Passo a passo do tratamento de erros em JavaScript](monetize/error-handling-in-javascript-walkthrough.md)
 ###### [Código de exemplo de anúncio intersticial em C#](monetize/interstitial-ad-sample-code-in-c.md)
 ###### [Código de exemplo de anúncio intersticial em JavaScript](monetize/interstitial-ad-sample-code-in-javascript.md)
 ##### [Guia de solução de problemas](monetize/troubleshooting-guides.md)
@@ -730,8 +730,3 @@
 #### [Histórico de alterações](https://msdn.microsoft.com/en-us/library/windows/apps/dn764945.aspx)
 ### [Critérios de Detecção de Aplicativos](https://msdn.microsoft.com/en-us/library/windows/apps/mt652261.aspx)
 ### [Código de Conduta do desenvolvedor](https://msdn.microsoft.com/en-us/library/windows/apps/dn764941.aspx)
-
-
-<!--HONumber=May16_HO2-->
-
-
