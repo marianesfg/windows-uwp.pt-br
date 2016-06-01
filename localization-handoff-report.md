@@ -1,42 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/a0a111a7a210ed7dac41deb494626ca6100c4880/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md) | OutofSyncHandedBackSuccess | [Details](#8ab8f1dd641741c149a1ea8605d39bb0d8d4c3533373)
- [windows-apps-src\security\index.md](https://github.com/Microsoft/windows-apps/blob/4fba6a4e5fe05e78b9f181c57f890e2f4deb2eb9/windows-apps-src/security/index.md) | OutofSyncHandedBackSuccess | [Details](#cc81ca4f88b237f144c995b85639eeaed9045f323627)
+ [windows-apps-src\audio-video-camera\hardware-drm.md](https://github.com/Microsoft/windows-apps/blob/b782d1e3d4f5c90e4cac9fbad3877c5457a27c45/windows-apps-src/audio-video-camera/hardware-drm.md) | OutofSyncHandedBackSuccess | [Details](#ec443d26652ba6c1ff5de2b96749825890d0228a472)
 
 ## Item Details
-##### <a name='8ab8f1dd641741c149a1ea8605d39bb0d8d4c3533373'></a> Source: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/a0a111a7a210ed7dac41deb494626ca6100c4880/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
+##### <a name='ec443d26652ba6c1ff5de2b96749825890d0228a472'></a> Source: [windows-apps-src\audio-video-camera\hardware-drm.md](https://github.com/Microsoft/windows-apps/blob/b782d1e3d4f5c90e4cac9fbad3877c5457a27c45/windows-apps-src/audio-video-camera/hardware-drm.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/95a32c640da03949500724185eff1869d9409e6c/ol-handoff/Microsoft/windows-apps.pt-br/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.pt-br.xlf)
-* Handoff Datetime: 2016-05-31 22:42:57
+* Handoff File: [hardware-drm.5fb8fda243b613ca726a5d1db43f5767da669e0e.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/04ad045dde2602fdef49550a86e24617cfc3d506/ol-handoff/Microsoft/windows-apps.pt-br/master/hardware-drm.5fb8fda243b613ca726a5d1db43f5767da669e0e.pt-br.xlf)
+* Handoff Datetime: 2016-06-01 16:48:58
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps.pt-br/blob/ada805836c3479ab8aa6b2f72b4db9010e208812/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
-* Current Handback File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/54ba89e7241c18d09319524e8f814154f78b5af6/ol-handback/Microsoft/windows-apps.pt-br/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.pt-br.xlf)
-* Current Handback Datetime: 2016-05-31 12:34:56
-* [Back to Top](#report-top)
-
-##### <a name='cc81ca4f88b237f144c995b85639eeaed9045f323627'></a> Source: [windows-apps-src\security\index.md](https://github.com/Microsoft/windows-apps/blob/4fba6a4e5fe05e78b9f181c57f890e2f4deb2eb9/windows-apps-src/security/index.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [index.36c19658e673067b86aba619b12635d8359c4091.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/95a32c640da03949500724185eff1869d9409e6c/ol-handoff/Microsoft/windows-apps.pt-br/master/index.36c19658e673067b86aba619b12635d8359c4091.pt-br.xlf)
-* Handoff Datetime: 2016-05-31 22:42:57
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\security\index.md](https://github.com/Microsoft/windows-apps.pt-br/blob/ada805836c3479ab8aa6b2f72b4db9010e208812/windows-apps-src/security/index.md)
-* Current Handback File: [index.36c19658e673067b86aba619b12635d8359c4091.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/54ba89e7241c18d09319524e8f814154f78b5af6/ol-handback/Microsoft/windows-apps.pt-br/master/index.36c19658e673067b86aba619b12635d8359c4091.pt-br.xlf)
+* Current Target File: [windows-apps-src\audio-video-camera\hardware-drm.md](https://github.com/Microsoft/windows-apps.pt-br/blob/ada805836c3479ab8aa6b2f72b4db9010e208812/windows-apps-src/audio-video-camera/hardware-drm.md)
+* Current Handback File: [hardware-drm.5fb8fda243b613ca726a5d1db43f5767da669e0e.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/54ba89e7241c18d09319524e8f814154f78b5af6/ol-handback/Microsoft/windows-apps.pt-br/master/hardware-drm.5fb8fda243b613ca726a5d1db43f5767da669e0e.pt-br.xlf)
 * Current Handback Datetime: 2016-05-31 12:34:56
 * [Back to Top](#report-top)
 
