@@ -2,10 +2,10 @@
 author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
 description: Este tópico apresenta um estudo de caso de portabilidade de uma amostra de aplicativo do WinRT 8.1 de um jogo de teste ponto a ponto em funcionamento para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10.
-title: Estudo de caso do Windows Runtime 8.x para UWP: amostra de aplicativo QuizGame ponto a ponto
+title: Estudo de caso do Windows Runtime 8.x para UWP, amostra de aplicativo QuizGame ponto a ponto
 ---
 
-# Estudo de caso do Windows Runtime 8.x para UWP: amostra de aplicativo QuizGame ponto a ponto
+# Estudo de caso do Windows Runtime 8.x para UWP, amostra de aplicativo QuizGame ponto a ponto
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
