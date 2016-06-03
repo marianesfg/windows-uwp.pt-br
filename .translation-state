@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "814f056eaff5419b9c28ba63cf32012bd82cc554",
-  "LastTranslatedCommit": "ada805836c3479ab8aa6b2f72b4db9010e208812",
+  "LastTranslatedCommit": "4d117b19cac534dd4206bcfd4fd7357a6c07f04e",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
       "FileHash": "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3",
@@ -53028,14 +53028,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "ada805836c3479ab8aa6b2f72b4db9010e208812",
+      "TargetFileCommit": "4d117b19cac534dd4206bcfd4fd7357a6c07f04e",
       "TargetFilePath": "windows-apps-src\\porting\\w8x-to-uwp-case-study-quizgame.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\windows-apps.pt-br\\master\\w8x-to-uwp-case-study-quizgame.ee7bf79e60457837f1f1ef8bbdc006cd97a0f8fd.pt-br.xlf",
-      "HandbackFileCommit": "54ba89e7241c18d09319524e8f814154f78b5af6",
-      "HandbackDateTime": "2016-05-31T12:34:56.9390204Z",
+      "HandbackFileCommit": "75218d589bb65cbdb34a15bef06690c6d274c1ce",
+      "HandbackDateTime": "2016-06-03T13:41:57.3260292Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-05-31T12:34:56.9390204Z",
+      "UpdatedDateTime": "2016-06-03T13:41:57.3260292Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
