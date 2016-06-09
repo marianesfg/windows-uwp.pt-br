@@ -7,7 +7,7 @@ title: Composições e edição de mídia
 
 # Composições e edição de mídia
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \] \]
 
 
 Este artigo mostra como usar as APIs no namespace [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) para desenvolver rapidamente aplicativos que permitem que os usuários criem composições de mídia de arquivos de origem de áudio e vídeo. Recursos da estrutura incluem a capacidade acrescentar vários videoclipes juntos, adicionar sobreposições de vídeo e imagem, adicionar áudio em segundo plano e aplicar efeitos de áudio e vídeos de forma programática. Uma vez criadas, composições de mídia podem ser renderizadas em um arquivo de mídia simples para reprodução ou compartilhamento, mas composições também podem ser serializadas para o disco e desserializadas do mesmo, permitindo que o usuário carregue e modifique composições que eles criaram anteriormente. Toda essa funcionalidade é fornecida em uma interface de Windows Runtime fácil de usar que reduz significativamente a quantidade e a complexidade do código necessário para executar essas tarefas quando comparado com a API de nível inferior da [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) .
@@ -78,7 +78,7 @@ Para renderizar uma composição de mídia para um arquivo de vídeo simples par
 
 [!code-cs[Namespace2](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace2)]
 
-Depois de permitir que o usuário selecione um arquivo de saída com um [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871), renderize a composição para o arquivo selecionado chamando o objeto **MediaComposition** [**RenderToFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652690). O restante do código no exemplo a seguir simplesmente segue o padrão de manipulação de um [**AsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/desktop/br205807)
+Depois de permitir que o usuário selecione um arquivo de saída com um [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871), renderize a composição para o arquivo selecionado chamando o objeto **MediaComposition **[**RenderToFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652690). O restante do código no exemplo a seguir simplesmente segue o padrão de manipulação de um [**AsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/desktop/br205807)
 
 [!code-cs[RenderCompositionToFile](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetRenderCompositionToFile)]
 
@@ -150,6 +150,6 @@ Composições de mídia podem ser desserializadas de um arquivo para permitir qu
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 
