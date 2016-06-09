@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\audio-video-camera\media-compositions-and-editing.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/audio-video-camera/media-compositions-and-editing.md) | InSyncHandedBackSuccess | [Details](#226ee9212f6688c48c4d4d7b3195ec5c27a3afdd481)
 
 ## Item Details
+##### <a name='226ee9212f6688c48c4d4d7b3195ec5c27a3afdd481'></a> Source: [windows-apps-src\audio-video-camera\media-compositions-and-editing.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/audio-video-camera/media-compositions-and-editing.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\audio-video-camera\media-compositions-and-editing.md](https://github.com/Microsoft/windows-apps.pt-br/blob/1a56ebc327c0db44e6ab06bd7212ada4f889c54a/windows-apps-src/audio-video-camera/media-compositions-and-editing.md)
+* Handoff File: [media-compositions-and-editing.634d3a683419176c6b6873fdbf7db29031c50d15.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/d93f0b7834ab1e1f206e3a9a4e094ac6ddbd7cfa/ol-handoff/Microsoft/windows-apps.pt-br/master/media-compositions-and-editing.634d3a683419176c6b6873fdbf7db29031c50d15.pt-br.xlf)
+* Handoff Datetime: 2016-06-07 05:14:07
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [media-compositions-and-editing.634d3a683419176c6b6873fdbf7db29031c50d15.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/4c181e1bce8d19bdda2f88e2bd206beb94af5a1b/ol-handback/Microsoft/windows-apps.pt-br/master/media-compositions-and-editing.634d3a683419176c6b6873fdbf7db29031c50d15.pt-br.xlf)
+* Handback Datetime: 2016-06-09 14:02:34
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
