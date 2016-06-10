@@ -1,29 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\audio-video-camera\playready-client-sdk.md](https://github.com/Microsoft/windows-apps/blob/885b017fd853c596d44818391c00b026b9dfd0c9/windows-apps-src/audio-video-camera/playready-client-sdk.md) | OutofSyncHandedBackSuccess | [Details](#d0bb8dac611b8a641ed07f2b7c8363d587616950484)
 
 ## Item Details
-##### <a name='d0bb8dac611b8a641ed07f2b7c8363d587616950484'></a> Source: [windows-apps-src\audio-video-camera\playready-client-sdk.md](https://github.com/Microsoft/windows-apps/blob/885b017fd853c596d44818391c00b026b9dfd0c9/windows-apps-src/audio-video-camera/playready-client-sdk.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [playready-client-sdk.02c7a03e7a4fdbef5841fe4bca523065a993408e.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/d93f0b7834ab1e1f206e3a9a4e094ac6ddbd7cfa/ol-handoff/Microsoft/windows-apps.pt-br/master/playready-client-sdk.02c7a03e7a4fdbef5841fe4bca523065a993408e.pt-br.xlf)
-* Handoff Datetime: 2016-06-07 05:14:07
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\audio-video-camera\playready-client-sdk.md](https://github.com/Microsoft/windows-apps.pt-br/blob/2c5a9ee3c51f1c3d7fff8a75f1ca9d955c4ee3df/windows-apps-src/audio-video-camera/playready-client-sdk.md)
-* Current Handback File: [playready-client-sdk.02c7a03e7a4fdbef5841fe4bca523065a993408e.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/a457055a279842a6818ebdb4a4d8f621f0cb2212/ol-handback/Microsoft/windows-apps.pt-br/master/playready-client-sdk.02c7a03e7a4fdbef5841fe4bca523065a993408e.pt-br.xlf)
-* Current Handback Datetime: 2016-06-10 15:03:22
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
