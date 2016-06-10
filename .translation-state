@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "107a7191230436eef5e9e17fe9ab541712b751ec",
-  "LastTranslatedCommit": "235b0624745b064f4bdca209e702cd66dd25ce6d",
+  "LastTranslatedCommit": "2c5a9ee3c51f1c3d7fff8a75f1ca9d955c4ee3df",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
       "FileHash": "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3",
@@ -2338,14 +2338,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "36cf8771435bcb09afc717d0596d6bcdcf33f42c",
+      "TargetFileCommit": "2c5a9ee3c51f1c3d7fff8a75f1ca9d955c4ee3df",
       "TargetFilePath": "windows-apps-src\\audio-video-camera\\playready-client-sdk.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\windows-apps.pt-br\\master\\playready-client-sdk.02c7a03e7a4fdbef5841fe4bca523065a993408e.pt-br.xlf",
-      "HandbackFileCommit": "984857ef45f7eab39ab9d0937ffe6df712cd3312",
-      "HandbackDateTime": "2016-05-17T13:12:18.5740967Z",
+      "HandbackFileCommit": "a457055a279842a6818ebdb4a4d8f621f0cb2212",
+      "HandbackDateTime": "2016-06-10T15:03:22.9284347Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-05-17T13:12:18.5740967Z",
+      "UpdatedDateTime": "2016-06-10T15:03:22.9284347Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
