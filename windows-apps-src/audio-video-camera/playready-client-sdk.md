@@ -62,26 +62,26 @@ A lista a seguir descreve os novos recursos e alterações feitas ao DRM do Play
 
 As novas interfaces, classes e enumerações a seguir foram adicionadas ao DRM do PlayReady:
 
--   [
-              Interface **IPlayReadyLicenseAcquisitionServiceRequest**
+-   Interface [
+              **IPlayReadyLicenseAcquisitionServiceRequest**
             ](https://msdn.microsoft.com/library/windows/apps/dn986077)
--   [
-              Interface **IPlayReadyLicenseSession**
+-   Interface [
+              **IPlayReadyLicenseSession**
             ](https://msdn.microsoft.com/library/windows/apps/dn986080)
--   [
-              Interface **IPlayReadySecureStopServiceRequest**
+-   Interface [
+              **IPlayReadySecureStopServiceRequest**
             ](https://msdn.microsoft.com/library/windows/apps/dn986090)
--   [
-              Classe **PlayReadyLicenseSession**
+-   Classe [
+              **PlayReadyLicenseSession**
             ](https://msdn.microsoft.com/library/windows/apps/dn986309)
--   [
-              Classe **PlayReadySecureStopIterable**
+-   Classe [
+              **PlayReadySecureStopIterable**
             ](https://msdn.microsoft.com/library/windows/apps/dn986371)
--   [
-              Classe **PlayReadySecureStopIterator**
+-   Classe [
+              **PlayReadySecureStopIterator**
             ](https://msdn.microsoft.com/library/windows/apps/dn986375)
--   [
-              Enumerador **PlayReadyHardwareDRMFeatures**
+-   Enumerador [
+              **PlayReadyHardwareDRMFeatures**
             ](https://msdn.microsoft.com/library/windows/apps/dn986265)
 
 Uma nova amostra foi criada para demonstrar como usar os novos recursos DRM do PlayReady. A amostra pode ser baixada em [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](http://go.microsoft.com/fwlink/p/?linkid=331670)
