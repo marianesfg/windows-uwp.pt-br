@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "107a7191230436eef5e9e17fe9ab541712b751ec",
-  "LastTranslatedCommit": "1a56ebc327c0db44e6ab06bd7212ada4f889c54a",
+  "LastTranslatedCommit": "235b0624745b064f4bdca209e702cd66dd25ce6d",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
       "FileHash": "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3",
@@ -38238,14 +38238,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "ada805836c3479ab8aa6b2f72b4db9010e208812",
+      "TargetFileCommit": "235b0624745b064f4bdca209e702cd66dd25ce6d",
       "TargetFilePath": "windows-apps-src\\get-started\\whats-a-uwp.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\windows-apps.pt-br\\master\\whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.pt-br.xlf",
-      "HandbackFileCommit": "54ba89e7241c18d09319524e8f814154f78b5af6",
-      "HandbackDateTime": "2016-05-31T12:34:56.9390204Z",
+      "HandbackFileCommit": "4a9d19a7020f5550cf591ddf78dcc312a2c1e848",
+      "HandbackDateTime": "2016-06-10T12:34:35.6049451Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-05-31T12:34:56.9390204Z",
+      "UpdatedDateTime": "2016-06-10T12:34:35.6049451Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
