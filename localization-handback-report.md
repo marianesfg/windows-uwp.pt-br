@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/get-started/whats-a-uwp.md) | InSyncHandedBackSuccess | [Details](#f02851d848a82af7104a6038c5d8850d5362c8322569)
 
 ## Item Details
-##### <a name='f02851d848a82af7104a6038c5d8850d5362c8322569'></a> Source: [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/get-started/whats-a-uwp.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps.pt-br/blob/235b0624745b064f4bdca209e702cd66dd25ce6d/windows-apps-src/get-started/whats-a-uwp.md)
-* Handoff File: [whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/d93f0b7834ab1e1f206e3a9a4e094ac6ddbd7cfa/ol-handoff/Microsoft/windows-apps.pt-br/master/whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.pt-br.xlf)
-* Handoff Datetime: 2016-06-07 05:14:07
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/4a9d19a7020f5550cf591ddf78dcc312a2c1e848/ol-handback/Microsoft/windows-apps.pt-br/master/whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.pt-br.xlf)
-* Handback Datetime: 2016-06-10 12:34:35
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
