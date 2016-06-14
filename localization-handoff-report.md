@@ -6,22 +6,19 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\controls-and-patterns\spell-checking-and-prediction.md](https://github.com/Microsoft/windows-apps/blob/08f982f5c54d596a7624fe63528f91375e7761ca/windows-apps-src/controls-and-patterns/spell-checking-and-prediction.md) | OutofSyncHandedBackSuccess | [Details](#8954b14a84241686a7c784c3d250f197bed7c8b61863)
+ [windows-apps-src\debug-test-perf\version-adaptive-code.md](https://github.com/Microsoft/windows-apps/blob/f1ec8f172945afe99b57eb8e60406d643b098ae4/windows-apps-src/debug-test-perf/version-adaptive-code.md) | HandedOffSuccess | [Details](#4f6ed019df2aaacf4f796e04143692a3f93b05971987)
 
 ## Item Details
-##### <a name='8954b14a84241686a7c784c3d250f197bed7c8b61863'></a> Source: [windows-apps-src\controls-and-patterns\spell-checking-and-prediction.md](https://github.com/Microsoft/windows-apps/blob/08f982f5c54d596a7624fe63528f91375e7761ca/windows-apps-src/controls-and-patterns/spell-checking-and-prediction.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='4f6ed019df2aaacf4f796e04143692a3f93b05971987'></a> Source: [windows-apps-src\debug-test-perf\version-adaptive-code.md](https://github.com/Microsoft/windows-apps/blob/f1ec8f172945afe99b57eb8e60406d643b098ae4/windows-apps-src/debug-test-perf/version-adaptive-code.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [spell-checking-and-prediction.df6604d7e21d00d0cb5dc8e2f299d71e0cd895ef.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/72a4764f0c96ebd46a44b30afd22e1802390cb64/ol-handoff/Microsoft/windows-apps.pt-br/master/spell-checking-and-prediction.df6604d7e21d00d0cb5dc8e2f299d71e0cd895ef.pt-br.xlf)
-* Handoff Datetime: 2016-06-14 18:45:02
+* Handoff File: [version-adaptive-code.7aa9b4fd571dd33449d6b84315fa7a6b22580d76.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/8d650136381df1016b8e0e7f5c0ebfbaa3323501/ol-handoff/Microsoft/windows-apps.pt-br/master/version-adaptive-code.7aa9b4fd571dd33449d6b84315fa7a6b22580d76.pt-br.xlf)
+* Handoff Datetime: 2016-06-14 21:15:03
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\controls-and-patterns\spell-checking-and-prediction.md](https://github.com/Microsoft/windows-apps.pt-br/blob/ada805836c3479ab8aa6b2f72b4db9010e208812/windows-apps-src/controls-and-patterns/spell-checking-and-prediction.md)
-* Current Handback File: [spell-checking-and-prediction.df6604d7e21d00d0cb5dc8e2f299d71e0cd895ef.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/54ba89e7241c18d09319524e8f814154f78b5af6/ol-handback/Microsoft/windows-apps.pt-br/master/spell-checking-and-prediction.df6604d7e21d00d0cb5dc8e2f299d71e0cd895ef.pt-br.xlf)
-* Current Handback Datetime: 2016-05-31 12:34:56
 * [Back to Top](#report-top)
 
 
