@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "0a315e81a622dbdc8e50707e2eadc6d3e7bac47d",
+  "LastProcessedCommit": "39115f97ac491ea32d61719aeb74263d64858491",
   "LastTranslatedCommit": "ee2fade04099b7397d37da27006243b9b15b6320",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
@@ -84798,6 +84798,40 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.pt-br\\master\\TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf",
       "HandoffFileCommit": "f6b4ce6c22aa07f4a68f5f19d9d77e29b0b5bf2f",
       "HandoffDateTime": "2016-06-22T14:15:20.0382939Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
+    },
+    "7c650f60b41756292cd6be64819af9e61a2829c8": {
+      "FileHash": "7c650f60b41756292cd6be64819af9e61a2829c8",
+      "SourceFileCommit": "39115f97ac491ea32d61719aeb74263d64858491",
+      "SourceFilePath": "windows-apps-src\\publish\\manage-iaps-in-bulk.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\publish\\manage-iaps-in-bulk.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.pt-br\\master\\manage-iaps-in-bulk.07639d5ddc04eb3def8be5984def3a4ebb9bc3db.pt-br.xlf",
+      "HandoffFileCommit": "705e278541370c1dc1dff2d711d404ccb299fcab",
+      "HandoffDateTime": "2016-06-22T14:28:14.1232056Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
