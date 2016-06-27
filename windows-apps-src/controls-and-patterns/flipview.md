@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: Exibe imagens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, uma imagem por vez.
-title: Diretrizes para controles de exibição de inversão
+Description: "Exibe imagens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, uma imagem por vez."
+title: "Diretrizes para controles de exibição de inversão"
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 7da18bd897248ecef7e1caaebff5b8bbab02e3fe
+
 ---
 # Exibição de inversão
 
@@ -208,6 +211,7 @@ Para coleções maiores (10 a 25 itens), considere usar um indicador que ofereç
 - [**Classe CarouselPanel (XAML)**](https://msdn.microsoft.com/library/windows/apps/hh967950)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

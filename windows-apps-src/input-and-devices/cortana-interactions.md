@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Estenda a funcionalidade básica da Cortana com comandos de voz que iniciam e executam uma única ação em um aplicativo externo.
-title: Interações da Cortana
+Description: "Estenda a funcionalidade básica da Cortana com comandos de voz que iniciam e executam uma única ação em um aplicativo externo."
+title: "Interações da Cortana"
 ms.assetid: 4C11A7CF-DA26-4CA1-A9B9-FE52670101F5
 label: Cortana
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: d55ece0112e5360c1de4e194c6dd326c15404f9e
+
 ---
 
 # Interações da Cortana em aplicativos UWP
@@ -99,6 +102,7 @@ A integração da funcionalidade básica do seu aplicativo e o fornecimento de u
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

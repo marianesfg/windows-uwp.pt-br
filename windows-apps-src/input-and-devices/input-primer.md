@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, Cortana, controlador, gesto, olhar, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano).
-title: Cartilha de interação
+Description: "As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, Cortana, controlador, gesto, olhar, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano)."
+title: "Cartilha de interação"
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
+ms.sourcegitcommit: 1221928ebea4a2a926154ed1148e49bdb1e0834c
+ms.openlocfilehash: 7c2d3bd1ab2d2f4923cf84834a73fd1c58113212
+
 ---
 
 # Cartilha de interação
@@ -12,7 +15,7 @@ template: detail.hbs
 
 ![tipos de entrada do windows](images/input-interactions/icons-inputdevices03.png)
 
-As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, **Cortana**, controlador, gesto, olhar, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano).
+As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, **Cortana**, controlador, gesto, olhar, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano). 
 
 A UWP usa um sistema de interação contextual "inteligente" que, na maioria dos casos, elimina a necessidade de manipular individualmente os tipos de entrada exclusivos recebidos pelo seu aplicativo. Isso inclui manipular a entrada por touch, touchpad, mouse e caneta como um tipo de ponteiro genérico para dar suporte a gestos estáticos, como tocar ou pressionar e segurar, para gestos de manipulação como deslizar para movimento panorâmico ou para renderizar tinta digital.
 
@@ -300,6 +303,7 @@ Uso típico Assim como as pessoas usam uma combinação de voz e gestos ao se co
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

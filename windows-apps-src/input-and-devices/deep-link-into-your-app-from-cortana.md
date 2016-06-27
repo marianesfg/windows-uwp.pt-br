@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Forneça links profundos do serviço de aplicativo em segundo plano na Cortana para iniciar o aplicativo em primeiro plano em um estado ou contexto específico.
+Description: "Forneça links profundos do serviço de aplicativo em segundo plano na Cortana para iniciar o aplicativo em primeiro plano em um estado ou contexto específico."
 title: Link profundo da Cortana para um aplicativo em segundo plano
 ms.assetid: BE811A87-8821-476A-90E4-2E20D37E4043
 label: Deep link to a background app
 template: detail.hbs
+ms.sourcegitcommit: 7d9f5eff0f6561b18024658fe99d1e11bbe3309f
+ms.openlocfilehash: b89aa43dffa69d092615e1b408feac77d0caa87c
+
 ---
 
 # Link profundo da Cortana para um aplicativo em segundo plano
@@ -65,11 +68,11 @@ Existem três maneiras de fornecer links profundos:
 
 Você pode fornecer um argumento de inicialização para esse link que abre seu aplicativo no contexto semelhante ao do serviço de aplicativo. Caso você não forneça um argumento de inicialização, o aplicativo será iniciado na tela principal.
 
-Neste exemplo de AdventureWorksVoiceCommandService.cs do exemplo **AdventureWorks**, passamos o destino especificado para o método SendCompletionMessageForDestination, que recupera todas as viagens correspondentes e fornece um link profundo para o aplicativo.
+Neste exemplo de AdventureWorksVoiceCommandService.cs do exemplo **AdventureWorks**, passamos a cadeia de caracteres de destino (`destination`) especificada para o método SendCompletionMessageForDestination, que recupera todas as viagens correspondentes e fornece um link profundo para o aplicativo.
 
 Primeiro, criamos um [**VoiceCommandUserMessage**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandusermessage.aspx) (```userMessage```) que é falado pela **Cortana** e mostrado na tela da **Cortana**. Em seguida, é criado um objeto de lista [**VoiceCommandContentTile**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandcontenttile.aspx) para exibir a coleção de cartões de resultado na tela. 
 
-Esses dois objetos são passados para o método [CreateResponse](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandresponse.createresponse.aspx) do objeto [**VoiceCommandResponse**](https://msdn.microsoft.com/library/windows/apps/dn974182) (```response```). Em seguida, definimos o valor da propriedade [**AppLaunchArgument**](https://msdn.microsoft.com/library/windows/apps/dn974183) para o valor de destino no comando de voz.
+Esses dois objetos são passados para o método [CreateResponse](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandresponse.createresponse.aspx) do objeto [**VoiceCommandResponse**](https://msdn.microsoft.com/library/windows/apps/dn974182) (`response`). Em seguida, definimos o valor da propriedade [**AppLaunchArgument**](https://msdn.microsoft.com/library/windows/apps/dn974183) do objeto de resposta como o valor de `destination` passado para essa função. Quando um usuário toca em um bloco de conteúdo na tela da Cortana, os valores dos parâmetros são passados para o aplicativo por meio do objeto de resposta.
 
 Finalmente, chamamos o método [**ReportSuccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn706580) do [**VoiceCommandServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn974204).
 
@@ -274,7 +277,7 @@ if (args.Kind == ActivationKind.Protocol)
 * [**VCD elements and attributes v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
 
 **Designers**
-* [Diretrizes para design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
+* [Diretrizes de design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
 * [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
 
 **Exemplos**
@@ -288,6 +291,7 @@ if (args.Kind == ActivationKind.Protocol)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

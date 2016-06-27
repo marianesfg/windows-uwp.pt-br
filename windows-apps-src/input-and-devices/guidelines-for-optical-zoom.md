@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Este tópico descreve o zoom e o redimensionamento de elementos do Windows e fornece as diretrizes da experiência do usuário para o uso desses mecanismos de interação em seus aplicativos.
-title: Diretrizes de zoom óptico e redimensionamento
+Description: "Este tópico descreve o zoom e o redimensionamento de elementos do Windows e fornece as diretrizes da experiência do usuário para o uso desses mecanismos de interação em seus aplicativos."
+title: "Diretrizes de zoom óptico e redimensionamento"
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 07f9f2979a7a2c712b39bd4dc962e5991e1824ac
+
 ---
 
 # Zoom óptico e redimensionamento
@@ -92,6 +95,7 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

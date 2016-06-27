@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala.
+Description: "Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala."
 title: Especificar o idioma do reconhecedor de fala
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 24393ef52d72aa08f9aab2d541e65ccb5f2aceed
+
 ---
 
 # Especificar o idioma do reconhecedor de fala
@@ -26,7 +29,7 @@ Aqui, enumeramos os idiomas instalados em um sistema, identificamos qual é o id
 
 **Pré-requisitos:  **
 
-Este tópico complementa [Reconhecimento de fala](speech-recognition.md)
+Este tópico complementa [Reconhecimento de fala](speech-recognition.md).
 
 Você deve ter uma noção básica de reconhecimento de fala e restrições de reconhecimento.
 
@@ -37,9 +40,9 @@ Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal
 
 **Diretrizes de experiência do usuário:  **
 
-Para obter dicas úteis sobre o design de um aplicativo habilitado para controle por voz interessante e prático, consulte [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+Para obter dicas úteis sobre o design de um aplicativo habilitado para controle por voz interessante e prático, consulte [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121).
 
-## <span id="Identify_the_default_language"></span><span id="identify_the_default_language"></span><span id="IDENTIFY_THE_DEFAULT_LANGUAGE"></span>Identificar o idioma padrão
+## <span id="Identify_the_default_language"></span><span id="identify_the_default_language"></span><span id="IDENTIFY_THE_DEFAULT_LANGUAGE"></span>Identifique o idioma padrão
 
 
 Um reconhecedor de fala usa o idioma do controle por voz do sistema como seu idioma de reconhecimento padrão. Esse idioma é definido pelo usuário na tela Settings &gt; System &gt; Speech &gt; Speech Language do dispositivo.
@@ -109,9 +112,15 @@ Uma gramática SRGS é um formato XML de padrão aberto representado pela classe
 
 
 **Desenvolvedores**
-* Interações de controle por voz
-* Designers
-* [Diretrizes para design de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Interações de fala](speech-interactions.md)
+            
+          
+            **Designers**
+* [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+            
+          
+            **Exemplos**
+* [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  
@@ -121,6 +130,7 @@ Uma gramática SRGS é um formato XML de padrão aberto representado pela classe
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

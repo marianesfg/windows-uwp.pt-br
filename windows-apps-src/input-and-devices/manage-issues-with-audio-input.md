@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.
-title: Gerenciar problemas com entrada de áudio
+Description: "Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio."
+title: "Gerenciar problemas com entrada de áudio"
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 6dcab14a290367250e152fb8a1944a924d5aaf46
+
 ---
 
 # Gerenciar problemas com entrada de áudio
@@ -115,6 +118,7 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

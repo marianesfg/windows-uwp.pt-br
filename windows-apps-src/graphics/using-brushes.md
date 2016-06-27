@@ -1,8 +1,11 @@
 ---
 author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
-title: Usar pincéis
-description: Os objetos Brush são usados para pintar os interiores ou os contornos das formas, texto e partes de controles, de maneira que o objeto pintado fique visível em uma interface do usuário.
+title: "Usar pincéis"
+description: "Os objetos Brush são usados para pintar os interiores ou os contornos das formas, texto e partes de controles, de maneira que o objeto pintado fique visível em uma interface do usuário."
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a4063ee2372d69289fca74c81a4c7645909c7f37
+
 ---
 # Usar pincéis
 
@@ -180,6 +183,7 @@ Para exemplos de código, consulte as páginas de referência para [**WebViewBru
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

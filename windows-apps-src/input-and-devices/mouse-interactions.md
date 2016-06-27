@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Responda à entrada do mouse em seus aplicativos manipulando os mesmos eventos de ponteiro básicos que você usa para entrada touch e por caneta.
-title: Interações por mouse
+Description: "Responda à entrada do mouse em seus aplicativos manipulando os mesmos eventos de ponteiro básicos que você usa para entrada touch e por caneta."
+title: "Interações por mouse"
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: b381cdba2a20480bb8b4d7802d2ff490744e5f03
+
 ---
 
 # Interações por mouse
@@ -133,14 +136,14 @@ Se você precisa personalizar o cursor do mouse:
 **Exemplos**
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Exemplos de arquivo-morto**
-* [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+**Exemplos de arquivo morto**
+* [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos e manipulações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: gestos e interações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
  
  
 
@@ -151,6 +154,7 @@ Se você precisa personalizar o cursor do mouse:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

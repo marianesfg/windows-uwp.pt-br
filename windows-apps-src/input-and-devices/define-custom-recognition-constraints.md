@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Saiba como definir e usar restrições personalizadas para reconhecimento de fala.
-title: Definir restrições de reconhecimento personalizadas
+Description: "Saiba como definir e usar restrições personalizadas para reconhecimento de fala."
+title: "Definir restrições de reconhecimento personalizadas"
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 7d91cef0955dbf8544f658369ee488c47aaef787
+
 ---
 
 # Definir restrições de reconhecimento personalizadas
@@ -18,7 +21,7 @@ Saiba como definir e usar restrições personalizadas para reconhecimento de fal
 -   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
 
 
-O reconhecimento de fala requer pelo menos uma restrição para definir um vocabulário reconhecível. Se nenhuma restrição for especificada, será usada a gramática de ditado predefinida de Aplicativos Universais do Windows. Consulte [Reconhecimento de fala](speech-recognition.md)
+O reconhecimento de fala requer pelo menos uma restrição para definir um vocabulário reconhecível. Se nenhuma restrição for especificada, será usada a gramática de ditado predefinida de Aplicativos Universais do Windows. Consulte [Reconhecimento de fala](speech-recognition.md).
 
 
 ## <span id="Add_constraints"></span><span id="add_constraints"></span><span id="ADD_CONSTRAINTS"></span>Adicionar restrições
@@ -26,7 +29,7 @@ O reconhecimento de fala requer pelo menos uma restrição para definir um vocab
 
 Use a propriedade [**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) para adicionar restrições a um reconhecedor de fala.
 
-Aqui, abordamos os três tipos de restrições de reconhecimento de fala usados de dentro de um aplicativo. Para restrições de comando de voz, consulte [Iniciar um aplicativo em primeiro plano com comandos de voz na Cortana](launch-a-foreground-app-with-voice-commands-in-cortana.md)
+Aqui, abordamos os três tipos de restrições de reconhecimento de fala usados de dentro de um aplicativo. Para restrições de comando de voz, consulte [Iniciar um aplicativo em primeiro plano com comandos de voz na Cortana](launch-a-foreground-app-with-voice-commands-in-cortana.md).
 
 -   [
               **SpeechRecognitionTopicConstraint**
@@ -140,7 +143,7 @@ As gramáticas da SRGS fornecem um conjunto completo de recursos para ajudar voc
 -   Use a semântica para definir o reconhecimento de fala por meio de seu aplicativo.
 -   Especifique as pronúncias, quer em linha com uma gramática ou por meio de um link de um léxico.
 
-Para saber mais sobre elementos e atributos da SRGS, consulte a [Referência XML para gramáticas da SRGS](http://go.microsoft.com/fwlink/p/?LinkID=269886). Para começar a criar uma gramática SRGS, consulte [Como criar uma gramática XML básica](http://go.microsoft.com/fwlink/p/?LinkID=269887)
+Para saber mais sobre elementos e atributos da SRGS, consulte a [Referência XML para gramáticas da SRGS](http://go.microsoft.com/fwlink/p/?LinkID=269886). Para começar a criar uma gramática SRGS, consulte [Como criar uma gramática XML básica](http://go.microsoft.com/fwlink/p/?LinkID=269887).
 
 Lembre-se bem do seguinte:
 
@@ -216,7 +219,7 @@ Aqui, escutamos as variantes de "sim" e "não".
 ## <span id="Manage_constraints"></span><span id="manage_constraints"></span><span id="MANAGE_CONSTRAINTS"></span>Gerenciar restrições
 
 
-Depois que uma coleção de restrições for carregada para reconhecimento, seu aplicativo poderá gerenciar quais restrições são permitidas para operações de reconhecimento definindo a propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402) de uma restrição como **true** ou **false**. A configuração padrão é **true**
+Depois que uma coleção de restrições for carregada para reconhecimento, seu aplicativo poderá gerenciar quais restrições são permitidas para operações de reconhecimento definindo a propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402) de uma restrição como **true** ou **false**. A configuração padrão é **true**.
 
 Geralmente, é mais eficaz carregar restrições uma vez e, em seguida, habilitá-las ou desabilitá-las conforme necessário, em vez de carregar, descarregar e compilar restrições para cada operação de reconhecimento. Use a propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402), conforme necessário.
 
@@ -242,6 +245,7 @@ Para avisar o usuário sobre o que pode ser falado, use as propriedades [**Speec
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

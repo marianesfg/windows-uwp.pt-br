@@ -1,33 +1,38 @@
 ---
-description: This article explains how to support copy and paste in Universal Windows Platform (UWP) apps using the clipboard.
-title: Copy and paste
+description: "Este artigo explica como dar suporte a copiar e colar em aplicativos da Plataforma Universal do Windows (UWP) usando a área de transferência."
+title: Copiar e colar
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: awkoren
+ms.sourcegitcommit: bf081c07f8235790b99b3c1037751f24a86bbc1f
+ms.openlocfilehash: ed1dc1ca0f34f0efafd14aa1cfd1e4b75351882c
+
 ---
-#Copy and paste
+#Copiar e colar
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-This article explains how to support copy and paste in Universal Windows Platform (UWP) apps using the clipboard. Copy and paste is the classic way to exchange data either between apps, or within an app, and almost every app can support clipboard operations to some degree.
-
-## Check for built-in clipboard support
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-In many cases, you do not need to write code to support clipboard operations. Many of the default XAML controls you can use to create apps already support clipboard operations. For more information about which controls are available, see the [controls list][ControlsList].
+Este artigo explica como dar suporte a copiar e colar em aplicativos da Plataforma Universal do Windows (UWP) usando a área de transferência. Copiar e colar é a maneira clássica de trocar dados entre aplicativos ou dentro de um aplicativo, e quase todos os aplicativos podem suportar operações da área de transferência em algum grau.
 
-## Get set up
+## Verifique Suporte interno da área de transferência
 
-First, include the [**Windows.ApplicationModel.DataTransfer**][DataTransfer] namespace in your app. Then, add an instance of the [**DataPackage**][DataPackage] object. This object contains both the data the user wants to copy and any properties (such as a description) that you want to include.
+
+Em muitos casos, você não precisa gravar código para suportar operações da área da transferência. Muitos dos controles XAML padrão que você pode usar para criar aplicativos já permitem operações na área da transferência. 
+
+## Prepare-se para começar
+
+Primeiro, inclua o namespace [**Windows.ApplicationModel.DataTransfer**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer) no seu aplicativo. Em seguida, adicione uma instância do objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage). Esse objeto contém os dados que o usuário quer copiar e quaisquer propriedades (como uma descrição) que você quer incluir.
 
 <!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
 DataPackage dataPackage = new DataPackage();
 ```
 
-## Copy and cut
+AuthenticateAsync
 
-Copy and cut (also referred to as move) work almost exactly the same. Choose which operation you want using the [**DataPackage.RequestedOperation**][RequestedOperation] property.
+## Copiar e cortar
+
+Copiar e cortar (também chamado de mover) funcionam quase exatamente da mesma maneira. Escolha qual operação deseja usando a propriedade [**RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation).
 
 ```cs
 // copy 
@@ -35,21 +40,20 @@ dataPackage.RequestedOperation = DataPackageOperation.Copy;
 // or cut
 dataPackage.RequestedOperation = DataPackageOperation.Move;
 ```
-
-Next, you can add the data that a user has selected to the [**DataPackage**][DataPackage] object. If this data is supported by the **DataPackage** class, you can use one of the corresponding methods in the **DataPackage** object. Here's how to add text:
+Arrastar e soltar Em seguida, você pode adicionar os dados que um usuário selecionou para o objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage). Se esses dados tiverem suporte pela classe **DataPackage**, você poderá usar um dos métodos correspondentes no objeto **DataPackage**. Veja a seguir como adicionar texto:
 
 ```cs
 dataPackage.SetText("Hello World!");
 ```
 
-The last step is to add the [**DataPackage**][DataPackage] to the clipboard by calling the static [**Clipboard.SetContent**][SetContent] method.
+A última etapa é adicionar o [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) à área de transferência chamando o método estático [**SetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.SetContent(Windows.ApplicationModel.DataTransfer.DataPackage)).
 
 ```cs
 Clipboard.SetContent(dataPackage);
 ```
-## Paste
+## Colar
 
-To get the contents of the clipboard, call the static [**Clipboard.GetContent**[GetContent] method. This method returns a [**DataPackageView**][DataPackageView] that contains the content. This object is almost identical to a [**DataPackage**][DataPackage] object, except that its contents are read-only. With that object, you can use either the [**AvailableFormats**][AvailableFormats] or the [**Contains**][Contains] method to identify what formats are available. Then, you can call the corresponding **DataPackageView** method to get the data.
+Para obter o conteúdo da área de transferência, chame o método estático [**GetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.GetContent). Este método retorna um [**DataPackageView**][DataPackageView] que contém o conteúdo. Este objeto é quase idêntico a um objeto [**DataPackage**][DataPackage], exceto que o seu conteúdo é somente leitura. Com esse objeto, você pode usar o método [**AvailableFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.AvailableFormats) ou [**Contains**][Contains] para identificar quais formatos estão disponíveis. Em seguida, você pode chamar o método correspondente **DataPackageView** para obter os dados.
 
 ```cs
 DataPackageView dataPackageView = Clipboard.GetContent();
@@ -61,9 +65,9 @@ if (dataPackageView.Contains(StandardDataFormats.Text))
 }
 ```
 
-## Track changes to the clipboard
+## Acompanhar mudanças na área de transferência
 
-In addition to copy and paste commands, you may also want to track clipboard changes. Do this by handling the clipboard's [**Clipboard.ContentChanged**][ContentChanged] event.
+Além dos comandos de copiar e colar, você também pode controlar alterações de área de transferência. Faça isso manipulando o evento [**ContentChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.ContentChanged) da área da transferência.
 
 ```cs
 Clipboard.ContentChanged += (s, e) => 
@@ -78,25 +82,27 @@ Clipboard.ContentChanged += (s, e) =>
 }
 ```
 
-<!-- LINKS --> 
-[DataTransfer]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.aspx 
-[DataPackage]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.aspx 
-[DataPackageView]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.aspx
-[DataPackagePropertySet]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datapackagepropertyset.aspx 
-[DataRequest]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.aspx 
-[DataRequested]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.datarequested.aspx 
-[FailWithDisplayText]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext.aspx
-[ShowShareUi]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.showshareui.aspx
-[RequestedOperation]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.requestedoperation.aspx 
-[ControlsList]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt185406.aspx 
-[SetContent]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.applicationmodel.datatransfer.clipboard.setcontent.aspx 
-[GetContent]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.applicationmodel.datatransfer.clipboard.getcontent.aspx
-[AvailableFormats]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.availableformats.aspx 
-[Contains]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.contains.aspx
-[ContentChanged]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.applicationmodel.datatransfer.clipboard.contentchanged.aspx 
+## Consulte também
+
+* [DataTransfer](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.aspx)
+* [DataPackage](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.aspx)
+* [DataPackageView](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.aspx)
+* [DataPackagePropertySet]( https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackagepropertyset.aspx)
+* [DataRequest](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.aspx) 
+* [DataRequested]( https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.datarequested.aspx)
+* [FailWithDisplayText](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext.aspx)
+* [ShowShareUi](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.showshareui.aspx)
+* [RequestedOperation](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.requestedoperation.aspx) 
+* [ControlsList](https://msdn.microsoft.com/library/windows/apps/xaml/mt185406.aspx)
+* [SetContent](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.datatransfer.clipboard.setcontent.aspx)
+* [GetContent](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.datatransfer.clipboard.getcontent.aspx)
+* [AvailableFormats](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.availableformats.aspx)
+* [Contém](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.contains.aspx)
+* [ContentChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.datatransfer.clipboard.contentchanged.aspx)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

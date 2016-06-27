@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: As APIs de texto básicas no namespace Windows.UI.Text.Core permitem que um aplicativo UWP (Plataforma Universal do Windows) receba a entrada de texto de qualquer serviço de texto compatível em dispositivos Windows.
-title: Visão geral da entrada de texto personalizada
+Description: "As APIs de texto básicas no namespace Windows.UI.Text.Core permitem que um aplicativo UWP (Plataforma Universal do Windows) receba a entrada de texto de qualquer serviço de texto compatível em dispositivos Windows."
+title: "Visão geral da entrada de texto personalizada"
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: fc2dadfbca30fc74362d7665022b1f41f23c3304
+
 ---
 
 # Entrada de texto personalizado
@@ -60,7 +63,7 @@ Por exemplo, no intervalo de texto mostrado anteriormente, o intervalo \[0, 5\] 
 
 ### <span id="Insertion_point"></span><span id="insertion_point"></span><span id="INSERTION_POINT"></span>Ponto de inserção
 
-A posição do sinal de interpolação atual, normalmente conhecida como o ponto de inserção, é representada definindo-se **StartCaretPosition** para ser igual a **EndCaretPosition**
+A posição do sinal de interpolação atual, normalmente conhecida como o ponto de inserção, é representada definindo-se **StartCaretPosition** para ser igual a **EndCaretPosition**.
 
 ### <span id="Noncontiguous_selection"></span><span id="noncontiguous_selection"></span><span id="NONCONTIGUOUS_SELECTION"></span>Seleção não contígua
 
@@ -68,95 +71,95 @@ Alguns controles de edição dão suporte a seleções não contíguas. Por exem
 
 Por exemplo, considere este fluxo de texto:
 
-![diagrama do fluxo de texto de exemplo Há duas seleções: \[0, 1\] e \[6, 11\].
+![exemplo de diagrama de fluxo de texto](images/coretext/stream-2.png) Há duas seleções: \[0, 1 \] e \[6, 11\]. O controle de edição deve informar somente uma delas; \[0, 1\] ou \[6, 11\].
 
-## <span id="Working_with_text"></span><span id="working_with_text"></span><span id="WORKING_WITH_TEXT"></span>O controle de edição deve informar somente uma delas; \[0, 1\] ou \[6, 11\].
+## <span id="Working_with_text"></span><span id="working_with_text"></span><span id="WORKING_WITH_TEXT"></span>Trabalhando com texto
 
-
-Trabalhando com texto
 
 A classe [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158) permite o fluxo de texto entre o Windows e os controles de edição por meio do evento [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176), do evento [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) e do método [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172).
 
 O controle de edição recebe texto por meio de eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) gerados quando os usuários interagem com métodos de entrada de texto como teclados, fala ou IMEs.
 
-Ao alterar o texto no seu controle de edição, por exemplo, colando o texto no controle, você precisa notificar o Windows chamando [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) Se o serviço de texto exigir o novo texto, um evento [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) será acionado.
+Ao alterar o texto no seu controle de edição, por exemplo, colando o texto no controle, você precisa notificar o Windows chamando [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172).
 
-### <span id="Accepting_text_updates"></span><span id="accepting_text_updates"></span><span id="ACCEPTING_TEXT_UPDATES"></span>Você deve fornecer o novo texto no manipulador de eventos **TextRequested**.
+Se o serviço de texto exigir o novo texto, um evento [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) será acionado. Você deve fornecer o novo texto no manipulador de eventos **TextRequested**.
 
-Aceitando atualizações de texto O controle de edição normalmente deve aceitar solicitações de atualização de texto, porque elas representam o texto que o usuário deseja inserir.
+### <span id="Accepting_text_updates"></span><span id="accepting_text_updates"></span><span id="ACCEPTING_TEXT_UPDATES"></span>Aceitando atualizações de texto
 
-1.  No manipulador de eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176), essas ações são esperadas de seu controle de edição:
-2.  Insira o texto especificado em [**CoreTextTextUpdatingEventArgs.Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) na posição especificada em [**CoreTextTextUpdatingEventArgs.Range**](https://msdn.microsoft.com/library/windows/apps/dn958234)
-3.  Coloque a seleção na posição especificada em [**CoreTextTextUpdatingEventArgs.NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233)
+O controle de edição normalmente deve aceitar solicitações de atualização de texto, porque elas representam o texto que o usuário deseja inserir. No manipulador de eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176), essas ações são esperadas de seu controle de edição:
 
-Notifique o sistema de que a atualização foi bem-sucedida definindo [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) como [**CoreTextTextUpdatingResult.Succeeded**](https://msdn.microsoft.com/library/windows/apps/dn958237) Por exemplo, esse é o estado de um controle de edição antes de o usuário digitar "d".
+1.  Insira o texto especificado em [**CoreTextTextUpdatingEventArgs.Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) na posição especificada em [**CoreTextTextUpdatingEventArgs.Range**](https://msdn.microsoft.com/library/windows/apps/dn958234).
+2.  Coloque a seleção na posição especificada em [**CoreTextTextUpdatingEventArgs.NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233).
+3.  Notifique o sistema de que a atualização foi bem-sucedida definindo [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) como [**CoreTextTextUpdatingResult.Succeeded**](https://msdn.microsoft.com/library/windows/apps/dn958237).
 
-![O ponto de inserção está em \[10, 10\].
+Por exemplo, esse é o estado de um controle de edição antes de o usuário digitar "d". O ponto de inserção está em \[10, 10\].
 
--   diagrama do fluxo de texto de exemplo
--   Quando o usuário digita "d", um evento [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) é acionado com os seguintes dados [**CoreTextTextUpdatingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn958229):
+![exemplo de diagrama de fluxo de texto](images/coretext/stream-3.png) Quando o usuário digita "d", um evento [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) é acionado com os seguintes dados [**CoreTextTextUpdatingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn958229):
+
 -   [
               **Range**
             ](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
-
-[
+-   [
               **Text**
-            ](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d" [
+            ](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
+-   [
               **NewSelection**
             ](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
 
-![Em seu controle de edição, aplique as alterações especificadas e defina [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) como **Succeeded**.](images/coretext/stream-4.png)
-### <span id="Rejecting_text_updates"></span><span id="rejecting_text_updates"></span><span id="REJECTING_TEXT_UPDATES"></span>Aqui está o estado do controle após as alterações serem aplicadas.
+Em seu controle de edição, aplique as alterações especificadas e defina [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) como **Succeeded**. Aqui está o estado do controle após as alterações serem aplicadas.
 
-diagrama do fluxo de texto de exemplo Rejeitando atualizações de texto Às vezes, você não consegue aplicar atualizações de texto porque o intervalo solicitado está em uma área do controle de edição que não deve ser alterada.
+![diagrama do fluxo de texto de exemplo](images/coretext/stream-4.png)
+### <span id="Rejecting_text_updates"></span><span id="rejecting_text_updates"></span><span id="REJECTING_TEXT_UPDATES"></span>Rejeitando atualizações de texto
 
-Nesse caso, você não deve aplicar alterações. Em vez disso, notifique o sistema de que a atualização falhou definindo [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) como [**CoreTextTextUpdatingResult.Failed**](https://msdn.microsoft.com/library/windows/apps/dn958237)
+Às vezes, você não consegue aplicar atualizações de texto porque o intervalo solicitado está em uma área do controle de edição que não deve ser alterada. Nesse caso, você não deve aplicar alterações. Em vez disso, notifique o sistema de que a atualização falhou definindo [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) como [**CoreTextTextUpdatingResult.Failed**](https://msdn.microsoft.com/library/windows/apps/dn958237).
 
-### <span id="Notifying_text_changes"></span><span id="notifying_text_changes"></span><span id="NOTIFYING_TEXT_CHANGES"></span>Por exemplo, considere um controle de edição que aceita apenas um endereço de email.
+Por exemplo, considere um controle de edição que aceita apenas um endereço de email. Os espaços devem ser rejeitados porque endereços de email não podem conter espaços. Assim, quando eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) forem acionados para a tecla de espaço, você deverá simplesmente definir [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) como **Failed** no seu controle de edição.
 
-Os espaços devem ser rejeitados porque endereços de email não podem conter espaços. Assim, quando eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) forem acionados para a tecla de espaço, você deverá simplesmente definir [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) como **Failed** no seu controle de edição. Notificando alterações de texto
+### <span id="Notifying_text_changes"></span><span id="notifying_text_changes"></span><span id="NOTIFYING_TEXT_CHANGES"></span>Notificando alterações de texto
 
 Às vezes, o controle de edição faz alterações no texto, como quando o texto é colado ou corrigido automaticamente. Nesses casos, você deve notificar os serviços de texto dessas alterações chamando o método [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172).
 
-![Por exemplo, esse é o estado de um controle de edição antes de o usuário colar "World".
+Por exemplo, esse é o estado de um controle de edição antes de o usuário colar "World". O ponto de inserção está em \[6, 6\].
 
-![O ponto de inserção está em \[6, 6\].
+![exemplo de diagrama de fluxo de texto](images/coretext/stream-5.png) O usuário executa a ação de colar e o controle de edição acaba com o seguinte texto:
 
--   diagrama do fluxo de texto de exemplo
--   O usuário executa a ação de colar e o controle de edição acaba com o seguinte texto:
--   diagrama do fluxo de texto de exemplo
+![exemplo de diagrama de fluxo de texto](images/coretext/stream-4.png) Quando isso acontecer, você deverá chamar [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) com estes argumentos:
 
-Quando isso acontecer, você deverá chamar [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) usando estes argumentos:
+-   *modifiedRange* = \[6, 6\]
+-   *newLength* = 5
+-   *newSelection* = \[11, 11\]
 
-### <span id="Overriding_text_updates"></span><span id="overriding_text_updates"></span><span id="OVERRIDING_TEXT_UPDATES"></span>*modifiedRange* = \[6, 6\]
+Um ou mais [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) eventos virão depois, manipulados para atualizar o texto com que os serviços de texto estão trabalhando.
 
-*newLength* = 5
+### <span id="Overriding_text_updates"></span><span id="overriding_text_updates"></span><span id="OVERRIDING_TEXT_UPDATES"></span>Substituindo atualizações de texto
 
-*newSelection* = \[11, 11\] Um ou mais [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) eventos virão depois, manipulados para atualizar o texto com que os serviços de texto estão trabalhando. Substituindo atualizações de texto
+No controle de edição, convém substituir uma atualização de texto para fornecer recursos de correção automática.
 
-![No controle de edição, convém substituir uma atualização de texto para fornecer recursos de correção automática. Por exemplo, considere um controle de edição que forneça um recurso de correção que formaliza contrações. Esse é o estado do controle de edição antes de o usuário digitar a tecla de espaço para acionar a correção. O ponto de inserção está em \[3, 3\].
+Por exemplo, considere um controle de edição que forneça um recurso de correção que formaliza contrações. Esse é o estado do controle de edição antes de o usuário digitar a tecla de espaço para acionar a correção. O ponto de inserção está em \[3, 3\].
 
-![diagrama do fluxo de texto de exemplo O usuário pressiona a tecla de espaço, e um evento [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) correspondente é acionado. O controle de edição aceita a atualização de texto.
+![exemplo de diagrama de fluxo de texto](images/coretext/stream-6.png) O usuário pressiona a tecla de espaço, e um evento [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) correspondente é acionado. O controle de edição aceita a atualização de texto. Esse é o estado do controle de edição para um breve momento antes de a correção ser concluída. O ponto de inserção está em \[4, 4\].
 
-![Esse é o estado do controle de edição para um breve momento antes de a correção ser concluída.
+![exemplo de diagrama de fluxo de texto](images/coretext/stream-7.png) Fora do manipulador de eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176), o controle de edição faz a seguinte correção. Este é o estado do controle de edição após a correção estar concluída. O ponto de inserção está em \[5, 5\].
 
--   O ponto de inserção está em \[4, 4\].
--   diagrama do fluxo de texto de exemplo
--   Fora do manipulador de eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176), o controle de edição faz a correção a seguir.
+![exemplo de diagrama de fluxo de texto](images/coretext/stream-8.png) Quando isso acontecer, você deverá chamar [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) com estes argumentos:
 
-Este é o estado do controle de edição após a correção estar concluída.
+-   *modifiedRange* = \[1, 2\]
+-   *newLength* = 2
+-   *newSelection* = \[5, 5\]
 
-### <span id="Providing_requested_text"></span><span id="providing_requested_text"></span><span id="PROVIDING_REQUESTED_TEXT"></span>O ponto de inserção está em \[5, 5\].
+Um ou mais [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) eventos virão depois, manipulados para atualizar o texto com que os serviços de texto estão trabalhando.
 
-diagrama do fluxo de texto de exemplo Quando isso acontecer, você deverá chamar [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) usando estes argumentos:
+### <span id="Providing_requested_text"></span><span id="providing_requested_text"></span><span id="PROVIDING_REQUESTED_TEXT"></span>Fornecendo texto solicitado
 
-*modifiedRange* = \[1, 2\] *newLength* = 2 *newSelection* = \[5, 5\]
+É importante que os serviços de texto tenham o texto correto para fornecer recursos como a correção automática ou a previsão, especialmente para o texto que já existia no controle de edição, carregando um documento, por exemplo, ou texto inserido pelo controle de edição, conforme explicado nas seções anteriores. Portanto, sempre que um evento [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) é acionado, você deve fornecer o texto atualmente no seu controle de edição para o intervalo especificado.
 
-## <span id="related_topics"></span>Um ou mais [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) eventos virão depois, manipulados para atualizar o texto com que os serviços de texto estão trabalhando.
+Haverá vezes em que o [**Range**](https://msdn.microsoft.com/library/windows/apps/dn958227) em [**CoreTextTextRequest**](https://msdn.microsoft.com/library/windows/apps/dn958221) especificará um intervalo que o controle de edição não poderá acomodar como está. Por exemplo, o **Range** é maior do que o tamanho do controle de edição no momento do evento [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) ou o final do **Range** está fora dos limites. Nesses casos, você deve retornar o intervalo que fizer sentido, que normalmente é um subconjunto do intervalo solicitado.
+
+## <span id="related_topics"></span>Artigos relacionados
 
 
-**Fornecendo texto solicitado**
-* [É importante que os serviços de texto tenham o texto correto para fornecer recursos como a correção automática ou a previsão, especialmente para o texto que já existia no controle de edição, carregando um documento, por exemplo, ou texto inserido pelo controle de edição, conforme explicado nas seções anteriores.](http://go.microsoft.com/fwlink/p/?LinkID=251417)
+**Exemplos de arquivo**
+* [Amostra de edição de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
  
 
  
@@ -166,6 +169,7 @@ diagrama do fluxo de texto de exemplo Quando isso acontecer, você deverá chama
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Crie aplicativos UWP (Plataforma Universal do Windows) com experiências de interação do usuário intuitivas e exclusivas otimizadas para touchpad, mas que sejam funcionalmente consistentes em diferentes dispositivos de entrada.
-title: Interações por touchpad
+Description: "Crie aplicativos UWP (Plataforma Universal do Windows) com experiências de interação do usuário intuitivas e exclusivas otimizadas para touchpad, mas que sejam funcionalmente consistentes em diferentes dispositivos de entrada."
+title: "Interações por touchpad"
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
+
 ---
 
 # Diretrizes de design do touchpad
@@ -166,6 +169,7 @@ Se você precisa personalizar o cursor do mouse:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

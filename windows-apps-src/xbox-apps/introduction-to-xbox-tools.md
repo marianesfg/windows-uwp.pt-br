@@ -1,8 +1,11 @@
 ---
 author: Mtoepke
-title: Introdução às ferramentas do Xbox One
-description: Ferramenta Dev Home específica ao Xbox usando o Windows Device Portal.
+title: "Introdução às ferramentas do Xbox One"
+description: "Ferramenta Dev Home específica ao Xbox usando o Windows Device Portal."
 area: Xbox
+ms.sourcegitcommit: 4872ac9587b3e2e14860cb152bf33536faccc48d
+ms.openlocfilehash: c975cb07aa9b7f0d30a9905cbceba11e89c8f7df
+
 ---
 
 # Introdução às ferramentas do Xbox One
@@ -87,11 +90,6 @@ Para definir um nome de host para um kit de desenvolvimento, vá para a ferramen
 ## Windows Device Portal
 O Windows Device Portal (WDP) é uma ferramenta de gerenciamento de dispositivos do OneCore que permite uma experiência de gerenciamento de dispositivos baseada em navegador.
 
-> **Observação**
-            &nbsp;&nbsp;Na visualização do desenvolvedor, quando você iniciar o WDP na Dev Home, ela fará com que a Dev Home falhe depois que você tiver fornecido seu nome de usuário e senha e clicado em **Salvar**.
-As credenciais são salvas mas o WDP não é iniciado.
-Você pode iniciar o WDP reiniciando o Xbox One.
-
 Para habilitar o WDP no console do Xbox One:
 
 1. Selecione o bloco Dev Home na tela inicial.
@@ -111,7 +109,7 @@ Para habilitar o WDP no console do Xbox One:
 
   ![Aviso de certificado segurança](images/security_cert_warning.jpg)
 
-## Consulte também
+## Veja também
 - [Tecnologias Microsoft Developer: Windows Device Portal](https://ms-iot.github.io/content/en-US/win10/tools/DevicePortal.htm)
 - [UWP no Xbox One](index.md)
 
@@ -120,6 +118,7 @@ Para habilitar o WDP no console do Xbox One:
 ----
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

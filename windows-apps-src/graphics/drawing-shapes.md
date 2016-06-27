@@ -2,11 +2,14 @@
 author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: Desenhar formas
-description: Aprenda a desenhar formas, como elipses, retângulos, polígonos e caminhos. A classe Path é uma maneira de visualizar uma linguagem de desenho baseada em vetor bastante complexa em uma interface do usuário XAML; por exemplo, você pode desenhar curvas de Bézier.
+description: "Aprenda a desenhar formas, como elipses, retângulos, polígonos e caminhos. A classe Path é uma maneira de visualizar uma linguagem de desenho baseada em vetor bastante complexa em uma interface do usuário XAML; por exemplo, você pode desenhar curvas de Bézier."
+ms.sourcegitcommit: 04a3c2dabc4b115faf4b06aa3d3a59c5c38ab95f
+ms.openlocfilehash: 42514e5119b646d196e0a1c7d3099ebed2225c69
+
 ---
 # Desenhar formas
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** APIs importantes **
@@ -184,7 +187,7 @@ The next example shows a usage of the other technique we discussed: a [**Geometr
           </Path>
 ```
 
-Um motivo para usar [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168) com as várias partes é que cada uma das partes tem as propriedades **Double** e **Point** que você provavelmente direcionaria para uma animação da interface do usuário. Você não pode fazer isso com o formato de serialização de [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data). Para saber mais, consulte [Animações com storyboard](storyboarded-animations.md).
+Usar [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168) pode ser mais legível do que preencher uma cadeia de caracteres de [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data). Por outro lado, [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) usa uma sintaxe compatível com definições de caminho de imagem SVG (Elementos Gráficos Vetoriais Escaláveis). Então, isso pode ser útil para a portabilidade de gráficos SVG ou como resultado de uma ferramenta, como o Blend.
 
  
 
@@ -195,6 +198,7 @@ Um motivo para usar [**PathGeometry**](https://msdn.microsoft.com/library/window
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

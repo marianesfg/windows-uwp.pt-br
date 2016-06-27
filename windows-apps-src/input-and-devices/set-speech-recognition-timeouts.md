@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Defina quanto tempo um reconhecedor de fala ignora o silêncio ou sons não reconhecíveis (murmúrios) e continua escutando a entrada de fala.
+Description: "Defina quanto tempo um reconhecedor de fala ignora o silêncio ou sons não reconhecíveis (murmúrios) e continua escutando a entrada de fala."
 title: Definir tempos limite de reconhecimento de fala
 ms.assetid: 58F446AC-4A56-454D-8125-62A2C4DBFCC8
 label: Speech recognition timeouts
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: e0dbc43cba4556674a4d96013b65837d95044622
+
 ---
 
 # Definir tempos limite de reconhecimento de fala
@@ -52,6 +55,7 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

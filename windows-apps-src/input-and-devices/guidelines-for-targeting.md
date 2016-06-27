@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Este tópico descreve o uso da geometria de contato por área de toque e fornece as práticas recomendadas de direcionamento em aplicativos do Windows Runtime.
+Description: "Este tópico descreve o uso da geometria de contato por área de toque e fornece as práticas recomendadas de direcionamento em aplicativos do Windows Runtime."
 title: Direcionamento
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: c8244e1a103a1c57df92e54ceeaa02e9c363faa9
+
 ---
 
 # Diretrizes de direcionamento
@@ -170,6 +173,7 @@ Siga estas diretrizes para criar interações de esfregar:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

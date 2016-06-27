@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-description: Incorpore fala em seus aplicativos usando comandos de voz da Cortana, reconhecimento de fala e sintetização de voz.
-title: Interações de controle por voz
+description: "Incorpore fala em seus aplicativos usando comandos de voz da Cortana, reconhecimento de fala e sintetização de voz."
+title: "Interações de controle por voz"
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
 template: detail.hbs
+ms.sourcegitcommit: bcc401c515cdba899fb2202ddddf5bd98b64aecd
+ms.openlocfilehash: bdcced680b69ce6ff9caf3ac860cb139fdfdaeff
+
 ---
 
 # Interações de controle por voz
@@ -236,6 +239,7 @@ Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

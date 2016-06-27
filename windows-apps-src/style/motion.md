@@ -1,10 +1,13 @@
 ---
 author: mijacobs
-Description: Animações significativas e bem desenvolvidas dão vida aos aplicativos e tornam a experiência avançada e refinada. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais.
-title: Movimento e animação em aplicativos UWP
+Description: "Animações significativas e bem desenvolvidas dão vida aos aplicativos e tornam a experiência avançada e refinada. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais."
+title: "Movimento e animação em aplicativos UWP"
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: aa1283ed9dbb895854b8d7b2bb16eb485b377fce
+
 ---
 
 # Movimento para aplicativos UWP
@@ -110,6 +113,7 @@ Conforme um usuário passa mais tempo dentro de seu aplicativo, ou conforme as t
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

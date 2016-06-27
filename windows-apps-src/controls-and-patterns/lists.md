@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: Listas são exibidas e permitem a interação com conteúdo baseado em coleção.
+Description: "Listas são exibidas e permitem a interação com conteúdo baseado em coleção."
 title: Listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 96fd7c2af74ec609a6cfbb41a14b6f4086747813
+
 ---
 # Listas
 
@@ -189,6 +192,7 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -5,6 +5,9 @@ title: Diretrizes para design da Cortana
 ms.assetid: A92C084B-9913-4718-9A04-569D51ACE55D
 label: Guidelines
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: 31442ed17b9b463cbf10cecb564278b86086bbf2
+
 ---
 
 # Diretrizes para design da Cortana
@@ -390,6 +393,7 @@ Quando um dos seguintes erros ocorrem, a **Cortana** exibe a mesma mensagem gen√
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

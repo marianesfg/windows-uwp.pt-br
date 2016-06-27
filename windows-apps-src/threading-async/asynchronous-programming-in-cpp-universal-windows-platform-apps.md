@@ -1,8 +1,11 @@
 ---
 author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: Este artigo descreve a maneira recomendada para consumir métodos assíncronos em extensões de componente do Visual C++ (C++/CX) usando a classe task definida no namespace concurrency em ppltasks.h.
-title: Programação assíncrona em C++
+description: "Este artigo descreve a maneira recomendada para consumir métodos assíncronos em extensões de componente do Visual C++ (C++/CX) usando a classe task definida no namespace concurrency em ppltasks.h."
+title: "Programação assíncrona em C++"
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 560b51d5bb67f5f2611311cb78f59d189d4ea440
+
 ---
 
 # Programação assíncrona em C++
@@ -15,7 +18,7 @@ Este artigo descreve a maneira recomendada para consumir métodos assíncronos e
 
 A Plataforma Universal do Windows (UWP) apresenta um modelo bem definido para chamar métodos assíncronos e fornece os tipos necessários para consumir esses métodos. Se você não estiver familiarizado com o modelo assíncrono UWP, leia [Asynchronous Programming][AsyncProgramming] antes de continuar a ler este artigo.
 
-Embora seja possível consumir as APIS UWP assíncronas diretamente em C++, a abordagem preferida é usar a [**classe task **][task-class] e suas funções e tipos relacionados, que estão contidos no namespace [**concurrency**][concurrencyNamespace] namespace e definidos em `<ppltasks.h>`. A **concurrency::task** é um tipo de finalidade geral, mas quando é usado o switch do compilador **/ZW**, que é obrigatório para aplicativos e componentes Plataforma Universal do Windows (UWP), a classe task encapsula os tipos assíncronos UWP para que seja mais fácil:
+Embora seja possível consumir as APIS UWP assíncronas diretamente em C++, a abordagem preferida é usar a [**task class**][task-class] e suas funções e tipos relacionados, que estão contidos no namespace [**concurrency**][concurrencyNamespace] namespace e definidos em `<ppltasks.h>`. A **concurrency::task** é um tipo de finalidade geral, mas quando é usado o switch do compilador **/ZW**, que é obrigatório para aplicativos e componentes Plataforma Universal do Windows (UWP), a classe task encapsula os tipos assíncronos UWP para que seja mais fácil:
 
 -   encadear diversas operações assíncronas e síncronas
 
@@ -100,7 +103,7 @@ void App::DeleteWithTasks(String^ fileName)
 
 O exemplo anterior ilustra quatro pontos importantes:
 
--   A primeira continuação converte o objeto [**IAsyncAction^**][IAsyncAction] em uma **tarefa<void>** e retorna a **tarefa**.
+-   A primeira continuação converte o objeto [**IAsyncAction^**][IAsyncAction] em uma **task<void>** e retorna a **tarefa**.
 
 -   A segunda continuação não trata erros e, portanto, aceita **void** e não **task<void>** como entrada. Ela é uma continuação baseada em valores.
 
@@ -219,7 +222,7 @@ void App::SetFeedText()
 
 Se uma tarefa não retorna uma [**IAsyncAction**][IAsyncAction] ou [**IAsyncOperation**][IAsyncOperation], ela não reconhece o apartment e, por padrão, suas continuações são executadas no primeiro thread em segundo plano disponível.
 
-Você pode substituir o contexto do thread padrão dos dois tipos de tarefa usando a sobrecarga de [**task::then**][taskThen] que aceita um [**task\_continuation\_context**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749968.aspx). Por exemplo, em alguns casos, pode ser desejável agendar a continuação de uma tarefa que reconhece o apartment em um thread de segundo plano. Nesse caso, você pode passar [**task\_continuation\_context::use\_arbitrary**][useArbitrary] para agendar o trabalho da tarefa no próximo thread disponível em um apartment de vários threads. Isso pode melhorar o desempenho da continuação, pois a sua execução não precisa ser sincronizada com as demais execuções realizadas no thread da interface do usuário.
+Você pode substituir o contexto do thread padrão dos dois tipos de tarefa usando a sobrecarga de [**task::then**]taskThen[ que aceita um ]task\_continuation\_context****. Por exemplo, em alguns casos, pode ser desejável agendar a continuação de uma tarefa que reconhece o apartment em um thread de segundo plano. Nesse caso, você pode passar [**task\_continuation\_context::use\_arbitrary**][useArbitrary] para agendar o trabalho da tarefa no próximo thread disponível em um apartment de vários threads. Isso pode melhorar o desempenho da continuação, pois a sua execução não precisa ser sincronizada com as demais execuções realizadas no thread da interface do usuário.
 
 O exemplo a seguir demonstra quando é útil especificar a opção [**task\_continuation\_context::use\_arbitrary**][useArbitrary] e também mostra como o contexto de continuação padrão é útil para sincronizar operações simultâneas em coleções não seguras de thread. Nesse código, executamos um loop por uma lista de URLs para RSS Feeds e, para cada URL, iniciamos uma operação assíncrona para recuperar os dados de feed. Não é possível controlar a ordem na qual os feeds são recuperados, mas isso não é relevante. Quando cada operação [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR210642) é concluída, a primeira continuação aceita o objeto [**SyndicationFeed^**](https://msdn.microsoft.com/library/windows/apps/BR243485) e o usa para inicializar um objeto `FeedData^` definido pelo aplicativo. Como cada uma dessas operações é independente das demais, é possível agilizar o processo especificando o contexto de continuação **task\_continuation\_context::use\_arbitrary**. No entanto, depois que cada objeto `FeedData` é inicializado, é necessário adicioná-lo a um [**Vector**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh441570.aspx), que não é uma coleção não segura de threads. Por isso, deve-se criar uma continuação e especificar [**task\_continuation\_context::use\_current**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750085.aspx) para garantir que todas as chamadas a [**Append**](https://msdn.microsoft.com/library/windows/apps/BR206632) ocorram no mesmo contexto single-threaded apartment de aplicativo (ASTA). Como [**task\_continuation\_context::use\_default**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750085.aspx) é o contexto padrão, não é necessário especificá-lo explicitamente, mas isso é feito aqui para fins de esclarecimento.
 
@@ -290,30 +293,50 @@ Os métodos que dão suporte a [**IAsyncOperationWithProgress**](https://msdn.mi
 
 ## Tópicos relacionados
 
-* [Criando operações assíncronas em C++ para aplicativos da Windows Store][createAsyncCpp]
+* [Criando operações assíncronas em C++ para aplicativos da Windows Store]
+            [createAsyncCpp]
 * [Referência da linguagem Visual C++](http://msdn.microsoft.com/library/windows/apps/hh699871.aspx)
-* [Programação assíncrona][AsyncProgramming]
-* [Paralelismo de tarefas (Tempo de Execução de Simultaneidade)][taskParallelism]
-* [classe de tarefa][task-class]
+* [Programação assíncrona]
+            [AsyncProgramming]
+* [Paralelismo de tarefas (Tempo de Execução de Simultaneidade)]
+            [taskParallelism]
+* [classe de tarefa]
+            [task-class]
  
 <!-- LINKS -->
-[AsyncProgramming]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464924.aspx> "AsyncProgramming"
-[concurrencyNamespace]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492819.aspx> "Namespace de simultaneidade"
-[createTask]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh913025.aspx> "CreateTask"
-[createAsyncCpp]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx> "CreateAsync"
-[deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199> "DeleteAsync"
-[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580> "IAsyncAction"
-[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598> "IAsyncOperation"
-[IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587> "IAsyncInfo"
-[IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel> "IAsyncInfoCancel"
-[taskCanceled]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750106.aspx> "TaskCancelled"
-[task-class]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx> "Classe de tarefa"
-[taskGet]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750017.aspx> "TaskGet"
-[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx> "Paralelismo de tarefas"
-[taskThen]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
-[useArbitrary]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
+[AsyncProgramming]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464924.aspx>
+             "AsyncProgramming"
+[concurrencyNamespace]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492819.aspx>
+             "Namespace de Simultaneidade"
+[createTask]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh913025.aspx>
+             "CreateTask"
+[createAsyncCpp]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx>
+             "CreateAsync"
+[deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199>
+             "DeleteAsync"
+[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580>
+             "IAsyncAction"
+[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598>
+             "IAsyncOperation"
+[IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587>
+             "IAsyncInfo"
+[IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel>
+             "IAsyncInfoCancel"
+[taskCanceled]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750106.aspx>
+             "TaskCancelled"
+[task-class]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx>
+             "Classe de Tarefa"
+[taskGet]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750017.aspx>
+             "TaskGet"
+[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx>
+             "Paralelismo de Tarefas"
+[taskThen]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx>
+             "TaskThen"
+[useArbitrary]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750036.aspx>
+             "UseArbitrary"
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

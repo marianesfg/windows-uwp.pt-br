@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: O seletor de data do calendário é um controle suspenso otimizado para escolher uma única data em uma exibição de calendário onde informações contextuais como dia da semana ou integridade do calendário são importantes.
-title: Seletor de data do calendário
+Description: "O seletor de data do calendário é um controle suspenso otimizado para escolher uma única data em uma exibição de calendário onde informações contextuais como dia da semana ou integridade do calendário são importantes."
+title: "Seletor de data do calendário"
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
 label: Calendar date picker
 template: detail.hbs
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 75f6bb925db63838e4985df15b50977b93805ffe
+
 ---
 
 # Seletor de data do calendário
@@ -86,6 +89,7 @@ O texto de espaço reservado padrão é "selecionar uma data". Você pode remove
 - [Seletor de hora](time-picker.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

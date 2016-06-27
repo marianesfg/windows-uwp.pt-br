@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: O movimento horizontal ou a rolagem permite aos usuários navegar dentro de uma única exibição, para exibir o conteúdo da exibição que não se encaixa no visor. Exemplos de exibição incluem a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotos.
-title: Movimento panorâmico
+Description: "O movimento horizontal ou a rolagem permite aos usuários navegar dentro de uma única exibição, para exibir o conteúdo da exibição que não se encaixa no visor. Exemplos de exibição incluem a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotos."
+title: "Movimento panorâmico"
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 7aafb0bbef2a33f926f76e41c26dd0f6920de274
+
 ---
 
 # Diretrizes de movimento panorâmico
@@ -192,6 +195,7 @@ Essa diretriz também é útil para aplicativos como, por exemplo, álbuns de fo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

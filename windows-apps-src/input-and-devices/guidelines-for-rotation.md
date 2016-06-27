@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Este tópico descreve a nova IU do Windows para rotação. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esse novo mecanismo de interação no seu aplicativo da Windows Store.
-title: Rotação
+Description: "Este tópico descreve a nova IU do Windows para rotação. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esse novo mecanismo de interação no seu aplicativo da Windows Store."
+title: "Rotação"
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: d91a3cf5dc5ae2e1a68e32fc64848b869f229391
+
 ---
 
 # Rotação
@@ -123,6 +126,7 @@ O Windows 8 suporta três tipos de rotação: livre, restringida e combinada.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

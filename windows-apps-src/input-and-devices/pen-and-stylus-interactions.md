@@ -1,11 +1,14 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Crie aplicativos da Plataforma Universal do Windows (UWP) compatíveis com interações personalizadas de dispositivos de caneta, incluindo tinta digital para experiências naturais de escrita e de desenho
-title: Interações com caneta em aplicativos UWP
+Description: "Crie aplicativos da Plataforma Universal do Windows (UWP) compatíveis com interações personalizadas de dispositivos de caneta, incluindo tinta digital para experiências naturais de escrita e de desenho"
+title: "Interações com caneta em aplicativos UWP"
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen and stylus interactions in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: 218fae32f8b63c8fe5499af7d3fe6c1f0404334c
+
 ---
 
 # Interações com caneta em aplicativos UWP
@@ -80,7 +83,7 @@ Essa série de imagens mostra como entrada de caneta é renderizada por este con
             **InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) em branco com uma imagem de plano de fundo. | [
             **InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) com traços de tinta. | O [ **InkCanvas** ](https://msdn.microsoft.com/library/windows/apps/dn858535) com um traço apagado (observe como apagar funciona em um traço inteiro, não uma parte). |
 
-A funcionalidade de escrita à tinta com suporte do controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) é fornecida por um objeto de código-behind chamado [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)
+A funcionalidade de escrita à tinta com suporte do controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) é fornecida por um objeto de código-behind chamado [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
 
 Para escrita à tinta básica, você não precisa se preocupar com o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011). Entretanto, para personalizar e configurar o comportamento de escrita à mão no [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), você deve acessar o seu objeto correspondente **InkPresenter**.
 
@@ -92,11 +95,11 @@ Um objeto [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn9
 Além de fornecer todos os comportamentos padrão de escrita à tinta do seu controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) correspondente, o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) fornece um conjunto que compreende APIs para personalização adicional de traços. Isso inclui propriedades de traços, tipos de dispositivos de entrada com suporte e se a entrada é processada pelo objeto ou passada para o aplicativo.
 
 **Observação**  
-O [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) não pode ser instanciado diretamente. Em vez disso, ele é acessado pela propriedade [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) do [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)
+O [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) não pode ser instanciado diretamente. Em vez disso, ele é acessado pela propriedade [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) do [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
  
 
-Aqui, configuramos o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para interpretar dados de entrada da caneta e do mouse como traços de tinta. Também definimos alguns atributos iniciais de traço de tinta usados para renderizar traços para o [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)
+Aqui, configuramos o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para interpretar dados de entrada da caneta e do mouse como traços de tinta. Também definimos alguns atributos iniciais de traço de tinta usados para renderizar traços para o [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
 ```CSharp
 public MainPage()
@@ -183,7 +186,7 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 }
 ```
 
-Estas imagens mostram como a entrada de caneta é processada e personalizada pelo [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)
+Estas imagens mostram como a entrada de caneta é processada e personalizada pelo [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081).
 
 | ![o inkcanvas com traços de tinta preta padrão](images/ink-basic-custom-1-small.png) | ![o inkcanvas com traços de tinta vermelha selecionados pelo usuário](images/ink-basic-custom-2-small.png) |
 | --- | -- |
@@ -243,9 +246,9 @@ Para este exemplo, usamos os arquivos MainPage.xaml e MainPage.xaml.cs para hosp
     private Rect boundingRect;
 ```
 
-3.  Em seguida, configuramos o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para interpretar dados de entrada tanto da caneta quanto do mouse como traços de tinta, e definimos alguns atributos iniciais de traço de tinta usados para renderizar traços para o [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)
+3.  Em seguida, configuramos o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para interpretar dados de entrada tanto da caneta quanto do mouse como traços de tinta, e definimos alguns atributos iniciais de traço de tinta usados para renderizar traços para o [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
-    E, o mais importante, usamos a propriedade [**InputProcessingConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn948764) do [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para indicar que qualquer entrada modificada deve ser processada pelo aplicativo. A entrada modificada é especificada atribuindo a **InputProcessingConfiguration.RightDragAction** um valor de [**InkInputRightDragAction.LeaveUnprocessed**](https://msdn.microsoft.com/library/windows/apps/dn948760)
+    E, o mais importante, usamos a propriedade [**InputProcessingConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn948764) do [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para indicar que qualquer entrada modificada deve ser processada pelo aplicativo. A entrada modificada é especificada atribuindo a **InputProcessingConfiguration.RightDragAction** um valor de [**InkInputRightDragAction.LeaveUnprocessed**](https://msdn.microsoft.com/library/windows/apps/dn948760).
 
     Então, atribuímos ouvintes para os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) e [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) não processados passados pelo [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081). Todas as funcionalidades de seleção são implementadas nos manipuladores para esses eventos.
 
@@ -295,7 +298,7 @@ public MainPage()
     }
 ```
 
-4.  Então, definimos manipuladores para os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) e [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) não processados passados pelo [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)
+4.  Então, definimos manipuladores para os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) e [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) não processados passados pelo [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081).
 
     Todas as funcionalidades de seleção são implementadas nesses manipuladores, incluindo o traço de Laço e o retângulo delimitador.
 
@@ -430,7 +433,7 @@ Secar de forma personalizada exige que um objeto [**IInkD2DRenderer**](https://m
 
 Chamar [**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012) (antes de o [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) ser carregado) faz com que um aplicativo crie um objeto [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) para personalizar como um traço de tinta é renderizado como seco para um [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) ou [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Por exemplo, um traço de tinta poderia ser rasterizado e integrado no conteúdo de um aplicativo em vez de uma camada **InkCanvas** separada.
 
-Para obter um exemplo completo dessa funcionalidade, consulte o [Amostra de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314).
 
 
 ## Outros artigos nesta seção 
@@ -479,7 +482,7 @@ Para obter um exemplo completo dessa funcionalidade, consulte o [Amostra de tint
 * [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: gestos e manipulações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: gestos e interações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
  
@@ -489,6 +492,7 @@ Para obter um exemplo completo dessa funcionalidade, consulte o [Amostra de tint
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

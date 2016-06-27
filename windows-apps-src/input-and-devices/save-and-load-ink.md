@@ -1,11 +1,14 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Os aplicativos UWP que dão suporte ao Windows Ink podem serializar e desserializar traços de tinta para um arquivo Ink Serialized Format (ISF). O arquivo ISF é uma imagem GIF com metadados adicionais para todos os comportamentos e propriedades de traço de tinta. Aplicativos que não são habilitados para tinta podem exibir a imagem GIF estática, incluindo transparência de plano de fundo de canal alfa.
-title: Armazenar e recuperar dados de traço do Windows Ink
+Description: "Os aplicativos UWP que dão suporte ao Windows Ink podem serializar e desserializar traços de tinta para um arquivo Ink Serialized Format (ISF). O arquivo ISF é uma imagem GIF com metadados adicionais para todos os comportamentos e propriedades de traço de tinta. Aplicativos que não são habilitados para tinta podem exibir a imagem GIF estática, incluindo transparência de plano de fundo de canal alfa."
+title: "Armazenar e recuperar dados de traço do Windows Ink"
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: 0f2e95146281fb992af1201c408ed62705c77741
+
 ---
 
 # Armazenar e recuperar dados de traço do Windows Ink
@@ -444,6 +447,7 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

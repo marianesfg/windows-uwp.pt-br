@@ -1,8 +1,11 @@
 ---
 author: mcleblanc
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
-title: Visão geral da associação de dados
-description: Este tópico mostra como associar um controle (ou outro elemento da interface do usuário) a um único item ou um controle de itens a uma coleção de itens em um aplicativo da Plataforma Universal do Windows (UWP).
+title: "Visão geral da associação de dados"
+description: "Este tópico mostra como associar um controle (ou outro elemento da interface do usuário) a um único item ou um controle de itens a uma coleção de itens em um aplicativo da Plataforma Universal do Windows (UWP)."
+ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
+ms.openlocfilehash: c30e048f450c062c6e0148e5040a58bfa47193bb
+
 ---
 Visão geral da vinculação de dados
 =====================
@@ -451,6 +454,7 @@ Consulte o resultado.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

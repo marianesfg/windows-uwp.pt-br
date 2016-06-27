@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Saiba como capturar e reconhecer entrada de fala de ditado contínuo de formato longo.
-title: Habilitar o ditado contínuo
+Description: "Saiba como capturar e reconhecer entrada de fala de ditado contínuo de formato longo."
+title: "Habilitar o ditado contínuo"
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 label: Continuous dictation
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: a142592f878fa539d6c40ea2abfcbf834b2de34d
+
 ---
 
 # Ditado contínuo
@@ -68,7 +71,7 @@ Durante a inicialização do reconhecimento de fala contínua, você deve:
 -   Buscar o dispatcher do thread de interface do usuário se você atualizar a interface do usuário do aplicativo nos manipuladores de eventos de reconhecimento contínuo.
 -   Inicializar o reconhecedor de fala.
 -   Compilar a gramática de ditado interna.
-    **Observação**   O reconhecimento de fala requer pelo menos uma restrição para definir um vocabulário reconhecível. Se nenhuma restrição for especificada, uma gramática de ditado predefinida será usada. Consulte [Reconhecimento de fala](speech-recognition.md)
+    **Observação**   O reconhecimento de fala requer pelo menos uma restrição para definir um vocabulário reconhecível. Se nenhuma restrição for especificada, uma gramática de ditado predefinida será usada. Consulte [Reconhecimento de fala](speech-recognition.md).
 -   Configure os ouvintes de eventos para eventos de reconhecimento.
 
 Nesse exemplo, inicializamos o reconhecimento de fala no evento de página [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508).
@@ -85,7 +88,7 @@ this.dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
 this.speechRecognizer = new SpeechRecognizer();
 ```
 
-3.  Depois, adicionamos e compilamos a gramática que define todas as palavras e frases que podem ser reconhecidas pelo [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)
+3.  Depois, adicionamos e compilamos a gramática que define todas as palavras e frases que podem ser reconhecidas pelo [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226).
 
     Se você não especificar explicitamente uma gramática, uma gramática de ditado predefinida será usada por padrão. Normalmente, a gramática padrão é melhor para ditado geral.
 
@@ -100,7 +103,7 @@ SpeechRecognitionCompilationResult result =
 ## <span id="Handle_recognition_events"></span><span id="handle_recognition_events"></span><span id="HANDLE_RECOGNITION_EVENTS"></span>Manipular eventos de reconhecimento
 
 
-Você pode capturar uma única expressão ou frase curta chamando [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) ou [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245) 
+Você pode capturar uma única expressão ou frase curta chamando [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) ou [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245). 
 
 No entanto, para capturar uma sessão de reconhecimento contínua mais longa, especificamos ouvintes de eventos a serem executados em segundo plano conforme o usuário fala e definimos manipuladores para criar a cadeia de caracteres de ditado.
 
@@ -165,7 +168,7 @@ private async void ContinuousRecognitionSession_ResultGenerated(
 
 3.  Em seguida, manipulamos o evento [**Completed**](https://msdn.microsoft.com/library/windows/apps/dn913899), que indica o final do ditado contínuo.
 
-    A sessão termina quando você chama os métodos [**StopAsync**](https://msdn.microsoft.com/library/windows/apps/dn913908) ou [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898) (descritos na próxima seção). A sessão também pode terminar quando ocorre um erro, ou quando o usuário para de falar. Verifique a propriedade [**Status**](https://msdn.microsoft.com/library/windows/apps/dn631440) do argumento do evento para determinar por que a sessão terminou ([**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433)
+    A sessão termina quando você chama os métodos [**StopAsync**](https://msdn.microsoft.com/library/windows/apps/dn913908) ou [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898) (descritos na próxima seção). A sessão também pode terminar quando ocorre um erro, ou quando o usuário para de falar. Verifique a propriedade [**Status**](https://msdn.microsoft.com/library/windows/apps/dn631440) do argumento do evento para determinar por que a sessão terminou ([**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433)).
 
     Aqui, registramos o manipulador do evento de reconhecimento contínuo [**Completed**](https://msdn.microsoft.com/library/windows/apps/dn913899) no evento de página [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508).
 ```    CSharp
@@ -271,7 +274,7 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 ```
 
 [!NOTE]  
-Um evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) pode ocorrer após uma chamada para [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898)  
+Um evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) pode ocorrer após uma chamada para [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898).  
 Por causa do multithreading, um evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) ainda pode permanecer na pilha quando [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898) é chamado. Nesse caso, o evento **ResultGenerated** ainda é acionado.  
 Se você definir qualquer campo particular ao cancelar a sessão de reconhecimento, sempre confirme seus valores no manipulador [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900). Por exemplo, não suponha que um campo será inicializado em seu manipulador se você defini-lo como nulo ao cancelar a sessão.
 
@@ -293,6 +296,7 @@ Se você definir qualquer campo particular ao cancelar a sessão de reconhecimen
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: TylerMSFT
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
-title: Chamar APIs assíncronas no Visual Basic ou C#
-description: A Plataforma Universal do Windows (UWP) inclui muitas APIs assíncronas para garantir que o seu aplicativo permaneça responsivo ao executar trabalhos demorados.
+title: "Chamar APIs assíncronas no Visual Basic ou C#"
+description: "A Plataforma Universal do Windows (UWP) inclui muitas APIs assíncronas para garantir que o seu aplicativo permaneça responsivo ao executar trabalhos demorados."
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b8ff3965503aa96d4ff595d140562c65e0a638c3
+
 ---
 # Chamar APIs assíncronas no Visual Basic ou C#
 
@@ -109,6 +112,7 @@ Windows 7 themes: the distinctive artwork of Cheng Ling, 7/20/2011 9:53:07 AM -0
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

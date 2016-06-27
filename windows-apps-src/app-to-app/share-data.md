@@ -1,66 +1,69 @@
 ---
-description: This article explains how to support the Share contract in a Universal Windows Platform (UWP) app.
-title: Share data
+description: Este artigo explica como dar suporte ao contrato de Compartilhamento em um aplicativo da Plataforma Universal do Windows (UWP).
+title: Compartilhar dados
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
 author: awkoren
+ms.sourcegitcommit: 03b9943d9bf76343bfbbe714f681a2b398d1a9ad
+ms.openlocfilehash: de9d4e88cfc00d5e428b8ddb8a27cc4ffd619e85
+
 ---
 
-# Share data
+# Compartilhar dados
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-This article explains how to support the Share contract in a Universal Windows Platform (UWP) app. The Share contract is an easy way to quickly share data, such as text, links, photos, and videos, between apps. For example, a user might want to share a webpage with their friends using a social networking app, or save a link in a notes app to refer to later.
+Este artigo explica como dar suporte ao contrato de Compartilhamento em um aplicativo da Plataforma Universal do Windows (UWP). O contrato de Compartilhamento é uma maneira fácil de compartilhar dados como texto, links, fotos e vídeos entre aplicativos rapidamente. Por exemplo, um usuário pode querer compartilhar uma página da Web com seus amigos usando um aplicativo de rede social ou salvar um link em um aplicativo de anotações para consultar mais tarde.
 
-## Set up an event handler
+## Configurar um manipulador de eventos
 
-Add a [**DataRequested**][DataRequested] event handler to be called whenever a user invokes share. This can occur either when the user taps a control in your app (such as a button or app bar command) or automatically in a specific scenario (if the user finishes a level and gets a high score, for example).
+Adicione um manipulador de eventos [**DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested) para ser chamado sempre que um usuário invocar o compartilhamento. Isso pode ocorrer quando o usuário toca em um controle no aplicativo (por exemplo, um botão ou um comando da barra de aplicativos) ou automaticamente em um cenário específico (se o usuário terminar um nível e obtiver uma pontuação alta, por exemplo).
 
-[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
 
-When a [**DataRequested**][DataRequested] event occurs, your app receives a [**DataRequest**][DataRequest] object. This contains a [**DataPackage**][DataPackage] that you can use to provide the content that the user wants to share. You must provide a title and data to share. A description is optional, but recommended.
+Quando ocorre um evento [**DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested), seu aplicativo recebe um objeto [**DataRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest). Este contém um [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) que você pode usar para fornecer o conteúdo que o usuário quer compartilhar. Você deve fornecer um título e os dados a serem compartilhados. Uma descrição é opcional, mas recomendada.
 
-[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
-## Choose data
+## Escolher dados
 
-You can share various types of data, including:
+Você pode compartilhar vários tipos de dados, incluindo:
 
--   Plain text
--   Uniform Resource Identifiers (URIs)
+-   Texto simples
+-   URIs (Uniform Resource Identifiers)
 -   HTML
--   Formatted text
+-   Texto formatado
 -   Bitmaps
--   Plain text
--   Files
--   Custom developer-defined data
+-   Texto sem formatação
+-   Arquivos
+-   Dados personalizados definidos pelo desenvolvedor
 
-The [**DataPackage**][DataPackage] object can contain one or more of these formats, in any combination. The following example demonstrates sharing text.
+O objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) pode conter um ou mais desses formatos, em qualquer combinação. O exemplo a seguir demonstra o compartilhamento de texto.
 
-[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 
-## Set properties
+## Definir propriedades
 
-When you package data for sharing, you can supply a variety of properties that provide additional information about the content being shared. These properties help target apps improve the user experience. For example, a description helps when the user is sharing content with more than one app. Adding a thumbnail when sharing an image or a link to a web page provides a visual reference to the user. For more information, see [**DataPackage.DataPackagePropertySet**][DataPackagePropertySet].
+Ao empacotar dados para compartilhamento, você pode fornecer uma variedade de propriedades que dão informações adicionais sobre o conteúdo compartilhado. Essas propriedades podem ajudar os aplicativos de destino a melhorar a experiência do usuário. Por exemplo, uma descrição ajuda quando o usuário está compartilhando conteúdo com mais de um aplicativo. A adição de uma miniatura ao compartilhar uma imagem ou um link para uma página da Web fornece uma referência visual ao usuário. Para obter mais informações, consulte [**DataPackagePropertySet**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackagePropertySet).
 
-All properties except the title are optional. The title property is mandatory and must be set.
+Todas as propriedades, exceto o título, são opcionais. A propriedade de título é obrigatória e deve ser definida.
 
-[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
 
-## Launch the share UI
+## Iniciar a interface do usuário de compartilhamento
 
-A UI for sharing is provided by the system. To launch it, call the [**ShowShareUI**][ShowShareUi] method.
+Uma interface do usuário para compartilhamento é fornecida pelo sistema. Para iniciá-la, chame o método [**ShowShareUI**][ShowShareUi].
 
-[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
-## Handle errors
+## Manipular erros
 
-In most cases, sharing content is a straightforward process. However, there's always a chance that something unexpected could happen. For example, the app might require the user to select content for sharing but the user didn't select any. To handle these situations, use the [**FailWithDisplayText**][FailWithDisplayText] method, which will display a message to the user if something goes wrong.
+Na maioria dos casos, o compartilhamento de conteúdo é um processo simples e direto. Contudo, há sempre a chance de algo inesperado acontecer. Por exemplo, o aplicativo pode exigir que o usuário selecione conteúdo para compartilhamento, mas ele não faz essa seleção. Para lidar com essas situações, use o método [**FailWithDisplayText**] (https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String), que exibirá uma mensagem para o usuário se algo der errado.
 
-## Delay share with delegates
+## Atrasar o compartilhamento com delegados
 
-Sometimes, it might not make sense to prepare the data that the user wants to share right away. For example, if your app supports sending a large image file in several different possible formats, it's inefficient to create all those images before the user makes their selection.
+Às vezes, pode não fazer sentido preparar imediatamente os dados que o usuário deseja compartilhar. Por exemplo, se o seu aplicativo oferece suporte ao envio de um arquivo de imagem grande em diversos formatos possíveis, é ineficiente criar todas essas imagens antes de o usuário fazer sua seleção.
 
-To solve this problem, a [**DataPackage**][DataPackage] can contain a delegate — a function that is called when the receiving app requests data. We recommend using a delegate any time that the data a user wants to share is resource-intensive.
+Para resolver o problema, um [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) pode conter um delegado - uma função que é chamada quando o aplicativo de recebimento solicita dados. Recomendamos o uso de um delegado sempre que os dados que um usuário deseja compartilhar usarem muitos recursos.
 
 <!-- For some reason, this snippet was inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -87,21 +90,20 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 }
 ```
 
-## Related topics
-* [Receive data](receive-data.md)
+## Consulte também 
 
-
-<!-- LINKS -->
-* [DataPackage]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.aspx 
-* [DataPackagePropertySet]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datapackagepropertyset.aspx 
-* [DataRequest]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.aspx 
-* [DataRequested]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.datarequested.aspx 
-* [FailWithDisplayText]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext.aspx
-* [ShowShareUi]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.showshareui.aspx
+* [Receber dados](receive-data.md)
+* [DataPackage](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.aspx)
+* [DataPackagePropertySet](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackagepropertyset.aspx)
+* [DataRequest](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.aspx)
+* [DataRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.datarequested.aspx)
+* [FailWithDisplayText](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext.aspx)
+* [ShowShareUi](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.showshareui.aspx)
  
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

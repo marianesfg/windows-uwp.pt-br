@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Saiba como acessar e atualizar a lista de frases com suporte (elementos PhraseList) em um arquivo VCD (Definição de Comando de Voz) usando o resultado do reconhecimento de fala em tempo de execução.
+Description: "Saiba como acessar e atualizar a lista de frases com suporte (elementos PhraseList) em um arquivo VCD (Definição de Comando de Voz) usando o resultado do reconhecimento de fala em tempo de execução."
 title: Modificar dinamicamente listas de frases VCD
 ms.assetid: 98024EAC-EC0E-44AA-AEC5-A611BA7C5884
 label: Modify VCD phrase lists
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 623243b94cf8ef6b276f8f2971af7bbdbdece81c
+
 ---
 
 # Modificar dinamicamente listas de frases VCD
@@ -151,6 +154,7 @@ No nosso exemplo, temos um elemento **PhraseTopic** com um **Scenario** de "Sear
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

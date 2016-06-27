@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Este tópico descreve a nova IU do Windows para a seleção e manipulação de texto, imagens e controles. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esses novos mecanismos de seleção e manipulação no seu aplicativo da Windows Store.
+Description: "Este tópico descreve a nova IU do Windows para a seleção e manipulação de texto, imagens e controles. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esses novos mecanismos de seleção e manipulação no seu aplicativo da Windows Store."
 title: Selecionando texto e imagens
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: a47b48f9315c51505b2c487c140011e053105556
+
 ---
 
 # Selecionando texto e imagens
@@ -131,6 +134,7 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

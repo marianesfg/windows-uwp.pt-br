@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Iniciar o aplicativo padrão para um URI
-description: Saiba como iniciar o aplicativo padrão para um Uniform Resource Identifier (URI). Os URIs permitem iniciar outro aplicativo para realizar uma tarefa específica. Este tópico também apresenta uma visão geral dos muitos esquemas de URI compilados no Windows.
+author: TylerMSFT
+title: "Iniciar o aplicativo padrão para um URI"
+description: "Saiba como iniciar o aplicativo padrão para um Uniform Resource Identifier (URI). Os URIs permitem iniciar outro aplicativo para realizar uma tarefa específica. Este tópico também apresenta uma visão geral dos muitos esquemas de URI compilados no Windows."
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: b593a43bc5b95dd0880af972ca1514e657bbd9e3
+
 ---
 
 # Iniciar o aplicativo padrão para um URI
@@ -96,7 +99,7 @@ var options = new Windows.System.LauncherOptions();
 options.PreferredApplicationPackageFamilyName = "Contoso.URIApp_8wknc82po1e";
 options.PreferredApplicationDisplayName = "Contoso URI Ap";
 
-// Launch the URI and pass in the recommended app 
+// Launch the URI and pass in the recommended app
 // in case the user has no apps installed to handle the URI
 var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 ```
@@ -114,7 +117,7 @@ Os aplicativos de origem que chamam [**LaunchUriAsync**](https://msdn.microsoft.
 var options = new Windows.System.LauncherOptions();
 options.DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseLess;
 
-// Launch the URI 
+// Launch the URI
 var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 ```
 
@@ -222,8 +225,6 @@ Para obter mais informações, consulte [Iniciar o aplicativo Pessoas](launch-pe
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: mcleblanc
 ms.assetid: 16976d00-1564-49fe-81ad-2568e25e9e41
-title: Depuração, teste e desempenho
-description: Use o Microsoft Visual Studio para depurar e testar seu aplicativo. Para preparar seu aplicativo para o processo de certificação da Windows Store, use o Kit de Certificação de Aplicativos Windows.
+title: "Depuração, teste e desempenho"
+description: "Use o Microsoft Visual Studio para depurar e testar seu aplicativo. Para preparar seu aplicativo para o processo de certificação da Windows Store, use o Kit de Certificação de Aplicativos Windows."
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 1d6187470e8e1578af833221089a76261ebad1e4
+
 ---
 # Depuração, teste e desempenho
 
@@ -22,6 +25,7 @@ Use o Microsoft Visual Studio para depurar e testar seu aplicativo. Para prepara
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

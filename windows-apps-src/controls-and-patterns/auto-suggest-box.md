@@ -1,11 +1,14 @@
 ---
 author: Jwmsft
-Description: Uma caixa de entrada de texto que fornece sugestões à medida que o usuário digita.
-title: Diretrizes para caixas de sugestão automática
+Description: "Uma caixa de entrada de texto que fornece sugestões à medida que o usuário digita."
+title: "Diretrizes para caixas de sugestão automática"
 ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 2900aa542a7986cac408051159f013e10dd3a5aa
+
 ---
 # Caixa de sugestão automática
 Use uma AutoSuggestBox para fornecer uma lista de sugestões para um usuário selecionar conforme digita.
@@ -152,6 +155,7 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

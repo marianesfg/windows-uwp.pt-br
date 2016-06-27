@@ -1,9 +1,12 @@
 ---
 author: Xansky
-description: Mostra como iniciar a caixa de diálogo de email para permitir que o usuário envie uma mensagem de email. Você pode previamente preencher os campos de email com dados antes de mostrar a caixa. A mensagem não será enviada até que o usuário toque no botão enviar.
+description: "Mostra como iniciar a caixa de diálogo de email para permitir que o usuário envie uma mensagem de email. Você pode previamente preencher os campos de email com dados antes de mostrar a caixa. A mensagem não será enviada até que o usuário toque no botão enviar."
 title: Enviar email
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
 keywords: contacts, email, send
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: b4b5b029c321256028993e283395a91bd0ed3d7c
+
 ---
 
 # Enviar email
@@ -71,6 +74,7 @@ Este tópico mostrou como iniciar a caixa de redação de email. Para saber mais
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

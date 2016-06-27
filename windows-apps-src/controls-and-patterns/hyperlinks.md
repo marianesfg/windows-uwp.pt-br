@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: Os hiperlinks levam o usuário para outra parte do aplicativo, para outro aplicativo ou para iniciar um URI (Uniform Resource Identifier) específico usando um aplicativo de navegador separado.
+Description: "Os hiperlinks levam o usuário para outra parte do aplicativo, para outro aplicativo ou para iniciar um URI (Uniform Resource Identifier) específico usando um aplicativo de navegador separado."
 title: Hiperlinks
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 81cb45dd1f7887fef2d8851c839905117c048460
+
 ---
 # Hiperlinks
 
@@ -152,6 +155,7 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 - [**Classe Windows.UI.Xaml.Controls HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

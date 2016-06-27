@@ -1,24 +1,52 @@
 ---
 author: awkoren
-Description: Execute o conversor de aplicativos da área de trabalho para converter um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms) em um aplicativo UWP (Plataforma Universal do Windows).
+Description: "Execute o conversor de aplicativos da área de trabalho para converter um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms) em um aplicativo UWP (Plataforma Universal do Windows)."
 Search.Product: eADQiWindows 10XVcnh
-title: Visualização Conversor de Aplicativos da Área de Trabalho (Projeto Centennial)
+title: "Visualização Conversor de Aplicativos da Área de Trabalho (Projeto Centennial)"
+ms.sourcegitcommit: 6d1c6e836d666972641320c73896459490f45924
+ms.openlocfilehash: 874b6452386526d66062a27a5b520cb1a232ae64
+
 ---
 
 # Visualização Conversor de Aplicativos da Área de Trabalho (Projeto Centennial)
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
+\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
 [Baixe o conversor de aplicativos da área de trabalho.](http://go.microsoft.com/fwlink/?LinkId=785437)
 
 O conversor de aplicativos da área de trabalho é uma ferramenta de pré-lançamento que permite converter seus aplicativos de área de trabalho existentes escritos para .NET 4.6.1 ou Win32 em UWP (Plataforma Universal do Windows). Você pode executar seus instaladores da área de trabalho por meio do conversor em um modo autônomo (silencioso) e obter um pacote de AppX que pode instalar usando o cmdlet do PowerShell Add-AppxPackage no computador de desenvolvimento.
 
-O conversor executa o instalador da área de trabalho em um ambiente isolado do Windows usando uma imagem de base limpa fornecida como parte do download do conversor. Ele captura qualquer E/S do registro e do sistema de arquivos feita pelo instalador da área de trabalho e a empacota como parte da saída. O conversor gera um AppX com indentificador de pacote e a capacidade para chamar uma variedade maior de APIs do WinRT.
+O conversor executa o instalador da área de trabalho em um ambiente isolado do Windows usando uma imagem de base limpa fornecida como parte do download do conversor. Ele captura qualquer E/S do registro e do sistema de arquivos feita pelo instalador da área de trabalho e a empacota como parte da saída. O conversor gera um AppX com identificador de pacote e a capacidade para chamar uma variedade maior de APIs do WinRT.
+
+## Novidades
+
+Esta seção descreve as mudanças entre versões do conversor de aplicativos da área de trabalho. 
+
+### 8/6/2016
+
+* Adicionado o suporte para a geração de pacotes appx x86 em máquinas host AMD64 que executam o conversor.
+* Uso de espaço em disco reduzido pela remoção de todas as imagens base expandidas anteriormente.
+* Adicionado o suporte para a limpeza dos arquivos temporários e as imagens de base desnecessárias.
+* Suporte aprimorado para a detecção de associações de protocolo e tipo de arquivo.
+* Lógica aprimorada para detectar a propriedade AppExecutable para um conjunto grande de aplicativos.
+* Adicionado o suporte para fornecer – InstallerArguments adicionais para instaladores com base em MSI.
+* Correções de erros PathTooLongException durante o processo de conversão.
+
+### 12/5/2016
+
+- Restaurado o suporte para a edição Pro do Windows. 
+- O sinalizador ```-Setup``` do conversor agora habilita o recurso Contêineres do Windows e lida com a expansão de imagem de base. Execute o seguinte em um prompt do PowerShell com privilégios elevados para fazer uma instalação única: ```PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage BaseImage-12345.wim -Verbose```
+- Adicionada a detecção automática do caminho de instalação do aplicativo e movida a raiz do aplicativo para fora do VFS para reduzir redirecionamentos de sistema de arquivos desnecessários no tempo de execução.
+- Adicionada a detecção automática da imagem de base expandida como parte do processo de conversão.
+- Adicionada a detecção automática de associações de tipos de arquivos e protocolos.
+- Lógica aprimorada para detectar o atalho do Menu Iniciar.
+- Filtragem de sistema de arquivo aprimorada para reter os arquivos MUI instalados do aplicativo.
+- Atualizada a versão de área de trabalho com suporte mínimo (10.0.14342.0) para o projeto Centennial no manifesto.
 
 ## Requisitos do sistema
 
 ### Sistema operacional com suporte
-+ Visualização da edição Enterprise da Atualização de Aniversário do Windows 10 (compilação 10.0.14316.0 e posterior)
++ Visualização da edição Enterprise da Atualização de Aniversário do Windows 10 (compilação 10.0.14342.0 e posterior)
 
 ### Configuração de hardware necessária
 
@@ -33,8 +61,8 @@ Seu computador deve ter as seguintes funcionalidades mínimas:
 ## Configurar o conversor de aplicativos da área de trabalho   
 O conversor de aplicativos da área de trabalho depende de recursos do Windows 10 que são liberados como parte das compilações do Windows Insider Preview. Certifique-se de que você tem a compilação mais recente para utilizar o conversor.
 
-1. Certifique-se de que você tenha o sistema operacional do Windows 10 Insider Preview mais recente - Enterprise edition (compilação 10.0.14316.0 e superior).
-2. Baixe o DesktopAppConverter.zip e o BaseImage-14316.wim.
+1. Certifique-se de que você tenha o sistema operacional Windows 10 Insider Preview mais recente – Enterprise ou Pro edition (http://insider.windows.com). 
+2. Baixe o DesktopAppConverter.zip e o arquivo. wim de imagem de base que corresponde à compilação do Insider Preview (http://aka.ms/converter). 
 3. Extraia o DesktopAppConverter.zip para uma pasta local.
 4. Em uma janela do administrador do PowerShell:  
 ```CMD
@@ -42,7 +70,7 @@ PS C:\> Set-ExecutionPolicy bypass
 ```
 5. Execute o comando a seguir em uma janela do administrador do PowerShell para configurar o conversor:
 ```CMD
-PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-14316.wim
+PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose
 ```
 6. Se executar o comando anterior exigir uma reinicialização, reinicie o computador e execute o comando novamente.
 
@@ -52,12 +80,12 @@ O conversor de aplicativos da área de trabalho tem dois pontos de entrada: Powe
 ### Utilização
 ```CMD
 DesktopAppConverter.ps1
--ExpandedBaseImage <String>
 -Installer <String> [-InstallerArguments <String>] [-InstallerValidExitCodes <Int32>]
 -Destination <String>
 -PackageName <String>
 -Publisher <String>
 -Version <Version>
+[-ExpandedBaseImage <String>]
 [-AppExecutable <String>]
 [-AppFileTypes <String>]
 [-AppId <String>]
@@ -66,7 +94,6 @@ DesktopAppConverter.ps1
 [-PackageDisplayName <String>]
 [-PackagePublisherDisplayName <String>]
 [-MakeAppx]
-[-NatSubnetPrefix <String>]
 [-LogFile <String>]
 [<CommonParameters>]  
 ```
@@ -76,9 +103,9 @@ O exemplo a seguir mostra como converter um aplicativo da área de trabalho deno
 
 + Em uma janela do administrador do PowerShell, execute o seguinte comando:
 ```CMD
-PS C:\>.\DesktopAppConverter.ps1 -ExpandedBaseImage C:\ProgramData\Microsoft\Windows\Images\BaseImage-14316
--Installer C:\Installer\MyApp.exe -InstallerArguments "/S" -Destination C:\Output\MyApp
--PackageName "MyApp" -Publisher "CN=<publisher_name>" -Version 0.0.0.1 -MakeAppx -Verbose
+PS C:\>.\DesktopAppConverter.ps1 -Installer C:\Installer\MyApp.exe 
+-InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" 
+-Publisher "CN=<publisher_name>" -Version 0.0.0.1 -MakeAppx -Verbose
 ```
 
 ## Implantar seu AppX convertido
@@ -111,6 +138,11 @@ Para obter mais informações sobre assinatura e certificados, consulte:
   + Registro: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners`
   + Sistema de arquivos: %windir%\\SideBySide
 
+## Problemas conhecidos
+
++ Se você receber uma versão de pré-lançamento do Windows Insider em uma máquina de desenvolvedor que anteriormente tinha a visualização de conversor de aplicativo de área de trabalho instalada, você poderá receber o erro `New-ContainerNetwork: The object already exists` ao configurar a nova imagem de base. Como alternativa, execute o comando `Netsh int ipv4 reset` em um prompt de comando com privilégios elevados e reinicie sua máquina. 
++ Ocorrerá uma falha na instalação de um aplicativo .NET compilado com a opção de compilação "AnyCPU" se o executável principal ou qualquer uma das dependências forem colocados em "Arquivos de Programas" ou "Windows\System32". Como alternativa, use o instalador de área de trabalho específico da sua arquitetura (32 bits ou 64 bits) para gerar com êxito um pacote AppX.
+
 ## Telemetria do conversor de aplicativos da área de trabalho  
 O conversor de aplicativos da área de trabalho pode coletar informações sobre você e o seu uso do software e enviar essas informações para a Microsoft. Você pode saber mais sobre a coleta e o uso de dados da Microsoft na documentação do produto e na [Política de Privacidade da Microsoft](http://go.microsoft.com/fwlink/?LinkId=521839). Você concorda em cumprir todas as provisões aplicáveis da Política de Privacidade da Microsoft.
 
@@ -130,14 +162,15 @@ get-help .\DesktopAppConverter.ps1 -detailed
 ### Parâmetros de configuração  
 |Parâmetro|Descrição|
 |---------|-----------|
-|```-Setup [<SwitchParameter>]``` | Use este sinalizador para executar o DesktopAppConverter no modo de instalação. O modo de instalação aceita a expansão de uma imagem de base fornecida.|
+|```-Setup [<SwitchParameter>]``` | Executa DesktopAppConverter no modo de instalação. O modo de instalação aceita a expansão de uma imagem de base fornecida.|
 |```-BaseImage <String>``` | Caminho completo para uma imagem de base não expandida. Este parâmetro será necessário se -Setup for especificado.|
 |```-LogFile <String>``` [opcional] | Especifica um arquivo de log. Se omitido, um local temporário de arquivo de log será criado.|
+|```-NatSubnetPrefix <String>``` [opcional] | Valor de prefixo a ser usado para a instância do Nat. Normalmente, você desejaria alterar isso somente se seu computador host fosse anexado à mesma faixa de sub-rede do NetNat do conversor. Você pode consultar a configuração atual do NetNat do conversor usando o cmdlet **Get-NetNat**. |
+|```-NoRestart [<SwitchParameter>]``` | Não solicite a reinicialização ao executar a instalação (é necessário reiniciar para habilitar o recurso de contêiner). |
 
 ### Parâmetros de conversão  
 |Parâmetro|Descrição|
 |---------|-----------|
-|```-ExpandedBaseImage <String>``` | Caminho completo para uma imagem de base já expandida.|
 |```-Installer <String>``` | O caminho para o instalador do seu aplicativo - deve ser capaz de ser executado de forma autônoma/silenciosa|
 |```-InstallerArguments <String>``` [opcional] | Uma lista separada por vírgulas ou cadeia de caracteres de argumentos para forçar o instalador a ser executado de forma autônoma/silenciosa. Este parâmetro é opcional se o instalador for um msi. Para obter um log do seu instalador, forneça o argumento de registro em log do instalador aqui e use o caminho ```<log_folder>```, que é um token que o conversor substitui pelo caminho correto. <br><br>**OBSERVAÇÃO: os argumentos de log e os sinalizadores autônomo/silencioso variam entre as tecnologias de instalador.** <br><br>Um exemplo de uso deste parâmetro: ```-InstallerArguments "/silent /log <log_folder>\install.log"``` Outro exemplo que não produz um arquivo de log pode ter esta aparência: ```-InstallerArguments "/quiet", "/norestart"``` Novamente, você deve direcionar literalmente todos os logs para o caminho do token ```<log_folder>``` se quiser que o conversor os detecte e os coloque na pasta de log final.|
 |```-InstallerValidExitCodes <Int32>``` [opcional] | Uma lista separada por vírgulas de códigos de saída que indicam que o instalador foi executado com êxito (por exemplo: 0, 1234, 5678).  Por padrão, o valor é 0 para não msi e 0, 1641, 3010 para msi.|
@@ -164,19 +197,36 @@ get-help .\DesktopAppConverter.ps1 -detailed
 ### Outros parâmetros de conversão  
 |Parâmetro|Descrição|
 |---------|-----------|
+|```-ExpandedBaseImage <String>``` [opcional] | Caminho completo para uma imagem de base já expandida.|
 |```-MakeAppx [<SwitchParameter>]``` [opcional] | Um botão que, quando presente, informa a este script para chamar MakeAppx na saída. |
-|```-NatSubnetPrefix <String>``` [opcional] | Valor de prefixo a ser usado para a instância do Nat. Normalmente, você desejaria alterar isso somente se seu computador host fosse anexado à mesma faixa de sub-rede do NetNat do conversor. Você pode consultar a configuração atual do NetNat do conversor usando o cmdlet **Get-NetNat**. |
 |```-LogFile <String>``` [opcional] | Especifica um arquivo de log. Se omitido, um local temporário de arquivo de log será criado. |
 |```<Common parameters>``` | Esse cmdlet oferece suporte aos parâmetros comuns: *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable* e *OutVariable*. Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216). |
 
-## Veja também
+### Parâmetros de limpeza
+|Parâmetro|Descrição|
+|---------|-----------|
+|```Cleanup [<Option>]``` | Executa a limpeza de artefatos DesktopAppConverter. Há 3 opções válidas para o modo de limpeza. |
+|```Cleanup All``` | Exclui todas as imagens de base expandidas, remove todos os arquivos temporários do conversor, remove a rede de contêiner e desabilita o recurso Windows opcional, Contêineres. |
+|```Cleanup WorkDirectory``` | Remove todos os arquivos temporários do conversor. |
+|```Cleanup ExpandedImages``` | Exclui todas as imagens de base expandidas instaladas no computador host. |
+
+### Parâmetros do pacote x86
+A visualização de conversor de aplicativo de área de trabalho agora dá suporte à criação de pacotes de aplicativo x86 que você pode instalar e executar em máquinas x86 e amd64. Observe que o conversor de aplicativo da área de trabalho ainda precisa ser executado em uma máquina AMD64 para realizar uma conversão bem-sucedida.
+
+|Parâmetro|Descrição|
+|---------|-----------|
+|```-CreateX86Package[<SwitchParameter>]``` | Gera um pacote de 32 bits que pode ser instalado e executado em um sistema operacional host de 32 bits e 64 bits. Por padrão, o conversor tenta detectar a arquitetura de pacote do executável principal do aplicativo ou assumirá como padrão 64 bits se nenhum exe for encontrado. |
+
+## Consulte também
 + [Baixar o conversor de aplicativos da área de trabalho](http://go.microsoft.com/fwlink/?LinkId=785437)
 + [Traga seu aplicativo da área de trabalho para a Plataforma Universal do Windows](https://developer.microsoft.com/en-us/windows/bridges/desktop)
 + [Transformando aplicativos da área de trabalho em UWP usando o conversor de aplicativos da área de trabalho](https://channel9.msdn.com/events/Build/2016/P504)
-+ [Project Centennial: Transformando aplicativos da área de trabalho em UWP usando o conversor de aplicativos da área de trabalho](https://channel9.msdn.com/events/Build/2016/B829)  
++ [Project Centennial: Trazendo aplicativos da área de trabalho existentes para a Plataforma Universal do Windows](https://channel9.msdn.com/events/Build/2016/B829)  
 + [Ponte UserVoice para área de trabalho (Project Centennial)](http://aka.ms/UserVoiceDesktopToUwp)
++ [Exemplos de código de ponte de aplicativos da área de trabalho para UWP no GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

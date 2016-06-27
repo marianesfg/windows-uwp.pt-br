@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Assim como as pessoas usam uma combinação de voz e gestos ao se comunicar uns com os outros, vários tipos e modos de entrada também podem ser úteis ao interagir com um aplicativo.
-title: Diretrizes para design de várias entradas
+Description: "Assim como as pessoas usam uma combinação de voz e gestos ao se comunicar uns com os outros, vários tipos e modos de entrada também podem ser úteis ao interagir com um aplicativo."
+title: "Diretrizes para design de várias entradas"
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 20af1cbfd4d390a1128b96b24c687fd481db1f5c
+
 ---
 
 # Várias entradas
@@ -40,6 +43,7 @@ O usuário seleciona uma foto usando pressionar e segurar e, em seguida, diz "En
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

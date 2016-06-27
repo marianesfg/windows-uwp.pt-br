@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Saiba como um usuário pode interagir com um aplicativo em segundo plano usando a voz e a tela da Cortana durante a execução de um comando de voz.
+Description: "Saiba como um usuário pode interagir com um aplicativo em segundo plano usando a voz e a tela da Cortana durante a execução de um comando de voz."
 title: Interagir com um aplicativo em segundo plano
 ms.assetid: 6C60F03C-A242-435D-96BB-736892CC1CA6
 label: Interact with a background app
 template: detail.hbs
+ms.sourcegitcommit: 7d9f5eff0f6561b18024658fe99d1e11bbe3309f
+ms.openlocfilehash: 675553f5c3954597982360900e965b2a756d7f63
+
 ---
 
 # Interagir com um aplicativo em segundo plano na Cortana
@@ -32,7 +35,7 @@ A Cortana dá suporte a um fluxo de trabalho completo de curva a curva com seu a
 
 Este tópico complementa [Iniciar um aplicativo em segundo plano com comandos de voz na Cortana](launch-a-background-app-with-voice-commands-in-cortana.md). Continuaremos demonstrando recursos com um aplicativo de planejamento e gerenciamento de viagens chamado **Adventure Works**.
 
-Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal do Windows (UWP), consulte estes tópicos para familiarizar-se com as tecnologias abordadas aqui.
+Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal do Windows (UWP), consulte estes tópicos para familiarizar-se com as tecnologias discutidas aqui.
 
 -   [Criar seu primeiro aplicativo](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   Saiba mais sobre eventos com [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/mt185584)
@@ -180,7 +183,9 @@ Depois que um comando de voz é reconhecido, a **Cortana** deve chamar ReportSuc
 
 Se o serviço de aplicativo não chamar ReportSuccessAsync, ou qualquer outro método VoiceCommandServiceConnection, o usuário receberá uma mensagem de erro, e o serviço de aplicativo será cancelado.
 
-Este é um exemplo de uma tela de entrega do aplicativo **Adventure Works**. Neste exemplo, um usuário consultou a **Cortana** em relação a viagens futuras. A tela de transição inclui uma mensagem personalizada com o nome do serviço de aplicativo, um ícone e a cadeia de **Comentários** declarada no arquivo VCD.
+Este é um exemplo de uma tela de entrega do aplicativo **Adventure Works**. Neste exemplo, um usuário consultou a **Cortana** em relação a viagens futuras. A tela de entrega inclui uma mensagem personalizada com o nome do serviço de aplicativo, um ícone e uma cadeia de caracteres de **Comentários**. 
+
+[!NOTE] Você pode declarar uma cadeia de caracteres de **Comentários** no arquivo VCD. Essa cadeia de caracteres não afeta o texto da interface do usuário exibido na tela da Cortana, afeta somente o texto falado pela **Cortana**.
 
 ![tela de entrega do aplicativo em segundo plano da cortana](images/cortana-backgroundapp-progress-result.png)
 
@@ -472,6 +477,7 @@ var userMessage = new VoiceCommandUserMessage();
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Crie aplicativos UWP (Plataforma Universal do Windows) com experiências de interação do usuário intuitivas e exclusivas otimizadas para touch, mas que sejam funcionalmente consistentes em diferentes dispositivos de entrada.
-title: Interações por toque
+Description: "Crie aplicativos UWP (Plataforma Universal do Windows) com experiências de interação do usuário intuitivas e exclusivas otimizadas para touch, mas que sejam funcionalmente consistentes em diferentes dispositivos de entrada."
+title: "Interações por toque"
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 23eac55de26563c68b401d8912264aebb86d0380
+
 ---
 
 # Interações por toque
@@ -108,7 +111,7 @@ O direcionamento é otimizado por meio de:
 Crie interações soltas usando:
 
 -   Pontos de alinhamento que facilitam a parada nos locais desejados quando os usuários interagem com o conteúdo.
--   "Trilhos" direcionais que ajudam no movimento panorâmico vertical ou horizontal, mesmo quando a mão se desloca em um leve arco. Para saber mais, consulte [Diretrizes para movimento panorâmico](guidelines-for-panning.md)
+-   "Trilhos" direcionais que ajudam no movimento panorâmico vertical ou horizontal, mesmo quando a mão se desloca em um leve arco. Para saber mais, veja [Diretrizes para movimento panorâmico](guidelines-for-panning.md).
 
 ## Oclusão
 
@@ -128,7 +131,7 @@ Para evitar a oclusão de dedo e mão:
 
 -   Alças para precisão
 
-    Quando a precisão é necessária (por exemplo, seleção de texto), inclua alças de seleção que sejam deslocadas para aumentar a precisão. Para saber mais, consulte [Diretrizes para seleção de texto e imagens (aplicativos do Windows Runtime)](guidelines-for-textselection.md)
+    Quando a precisão é necessária (por exemplo, seleção de texto), inclua alças de seleção que sejam deslocadas para aumentar a precisão. Para saber mais, veja [Diretrizes para seleção de texto e imagens (aplicativos do Tempo de Execução do Windows)](guidelines-for-textselection.md).
 
 ## Tempo
 
@@ -167,7 +170,7 @@ As configurações de zoom aplicam-se ao zoom óptico (permitido pelo controle [
 
 Use modos de exibição do aplicativo e eventos para modificar os comportamentos de movimento panorâmico/rolagem e zoom. Isso pode oferecer uma experiência de interação mais tranquila do que seria possível por meio da manipulação de eventos de ponteiro e gestos.
 
-Para saber mais sobre modos de exibição do aplicativo, consulte [Controles, layouts e texto](https://msdn.microsoft.com/library/windows/apps/mt228348)
+Para saber mais sobre modos de exibição do aplicativo, consulte [Controles, layouts e texto](https://msdn.microsoft.com/library/windows/apps/mt228348).
 
 ## <span id="intro_to_touch_input"></span><span id="INTRO_TO_TOUCH_INPUT"></span>Interações por toque personalizadas
 
@@ -176,9 +179,9 @@ Caso você implemente o próprio suporte à interação, tenha em mente que os u
 
 Para oferecer suporte a toque personalizado, você pode manipular vários eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). Esses eventos são agrupados em três níveis de abstração.
 
--   Os eventos de gesto estático são disparados depois que uma interação é concluída. Os eventos de gesto incluem [**Tapped**](https://msdn.microsoft.com/library/windows/apps/br208985), [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/br208922), [**RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984) e [**Holding**](https://msdn.microsoft.com/library/windows/apps/br208928)
+-   Os eventos de gesto estático são disparados depois que uma interação é concluída. Os eventos de gesto incluem [**Tapped**](https://msdn.microsoft.com/library/windows/apps/br208985), [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/br208922), [**RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984) e [**Holding**](https://msdn.microsoft.com/library/windows/apps/br208928).
 
-    Você pode desabilitar os eventos de gesto em elementos específicos definindo [**IsTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208939), [**IsDoubleTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208931), [**IsRightTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208937) e [**IsHoldingEnabled**](https://msdn.microsoft.com/library/windows/apps/br208935) como **false**
+    Você pode desabilitar os eventos de gesto em elementos específicos definindo [**IsTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208939), [**IsDoubleTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208931), [**IsRightTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208937) e [**IsHoldingEnabled**](https://msdn.microsoft.com/library/windows/apps/br208935) como **false**.
 
 -   Os eventos de ponteiro, como [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) e [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970), fornecem detalhes de baixo nível para cada contato por toque, incluindo o movimento do ponteiro e a capacidade de diferenciar eventos de pressionamento e liberação.
 
@@ -209,9 +212,9 @@ For more info about gestures, manipulations, and interactions, see [Custom user 
 ## <span id="gestures"></span><span id="GESTURES"></span>Eventos de gesto
 
 
-Para obter detalhes sobre controles individuais, consulte [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406)
+Para obter detalhes sobre controles individuais, consulte [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406).
 
-## <span id="using_pointer_events"></span><span id="USING_POINTER_EVENTS"></span>Eventos de ponteiros
+## <span id="using_pointer_events"></span><span id="USING_POINTER_EVENTS"></span>Eventos de ponteiro
 
 
 Os eventos de ponteiro são gerados por uma variedade de fontes de entrada ativa, incluindo touch, touchpad, caneta e mouse (eles substituem os eventos de mouse tradicionais).
@@ -432,7 +435,7 @@ Veja a seguir uma lista de eventos de manipulação e argumentos de eventos rela
 | Evento ou classe                                                                                               | Descrição                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Evento ManipulationStarting**](https://msdn.microsoft.com/library/windows/apps/br208951)                                   | Ocorre quando o processador de manipulação é criado.                                                                                  |
-| [**Evento ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950)                                     | Ocorre quando um dispositivo de entrada inicia uma manipulação no [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)                                            |
+| [**Evento ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950)                                     | Ocorre quando um dispositivo de entrada inicia uma manipulação no [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911).                                            |
 | [**Evento ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946)                                         | Ocorre quando o dispositivo de entrada muda de posição durante a manipulação.                                                                      |
 | [**Evento ManipulationInertiaStarting**](https://msdn.microsoft.com/library/windows/apps/hh702425)                | Ocorre quando o dispositivo de entrada perde contato com o objeto [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) durante a manipulação e a inércia começa. |
 | [**Evento ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945)                                 | Ocorre quando uma manipulação e inércia no [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) são concluídas.                                          |
@@ -481,7 +484,7 @@ Primeiro, um [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br2
 </Grid>
 ```
 
-Em seguida, uma [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/br243027) global denominada `dragTranslation` é criada para converter o [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371). Um ouvinte de evento [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) é especificado no **Rectangle** e `dragTranslation` é adicionado à [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/br208980) do **Rectangle**
+Em seguida, uma [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/br243027) global denominada `dragTranslation` é criada para converter o [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371). Um ouvinte de evento [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) é especificado no **Rectangle** e `dragTranslation` é adicionado à [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/br208980) do **Rectangle**.
 
 ```ManagedCPlusPlus
 // Global translation transform used for changing the position of 
@@ -599,7 +602,7 @@ End Sub
 ## <span id="Routed_events"></span><span id="routed_events"></span><span id="ROUTED_EVENTS"></span>Eventos roteados
 
 
-Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implementados como *eventos roteados*. Isso significa que o evento provavelmente pode ser manipulado por objetos que não sejam o que originalmente disparou o evento. Os pais sucessivos em uma árvore de objetos, como os contêineres pai de um [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) ou a [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) raiz do seu aplicativo, podem optar por manipular esses eventos mesmo que o elemento original não faça isso. Reciprocamente, qualquer objeto que manipule o evento pode marcar o evento como manipulado para que ele não atinja mais nenhum elemento pai. Para saber mais sobre o conceito de evento roteado e como ele influencia na forma como você grava manipuladores para eventos roteados, consulte [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/hh758286)
+Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implementados como *eventos roteados*. Isso significa que o evento provavelmente pode ser manipulado por objetos que não sejam o que originalmente disparou o evento. Os pais sucessivos em uma árvore de objetos, como os contêineres pai de um [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) ou a [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) raiz do seu aplicativo, podem optar por manipular esses eventos mesmo que o elemento original não faça isso. Reciprocamente, qualquer objeto que manipule o evento pode marcar o evento como manipulado para que ele não atinja mais nenhum elemento pai. Para saber mais sobre o conceito de evento roteado e como ele influencia na forma como você grava manipuladores para eventos roteados, consulte [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/hh758286).
 
 ## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>O que fazer e o que não fazer
 
@@ -616,15 +619,21 @@ Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implem
 ## <span id="related_topics"></span>Artigos relacionados
 
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
-* Identificar dispositivos de entrada
-* [Exemplos](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* Amostra do modo de interação do usuário
-* [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Exemplos de arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Identificar dispositivos de entrada](identify-input-devices.md)
+            
+          
+            **Exemplos**
+* [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Exemplo de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+            
+          
+            **Exemplos do arquivo**
+* [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: gestos e interações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
  
@@ -634,6 +643,7 @@ Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implem
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: mijacobs
-Description: Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo da Plataforma Universal do Windows (UWP) no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo.
+Description: "Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo da Plataforma Universal do Windows (UWP) no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo."
 title: Blocos
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: a440a9abaf150dac6ed95d881261b80521a734c0
+
 ---
 
 # Blocos de aplicativos UWP
@@ -106,6 +109,7 @@ Depois que seu aplicativo for instalado, você pode usar notificações para per
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 
