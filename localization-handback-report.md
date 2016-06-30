@@ -19,7 +19,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/54ba89e7241c18d09319524e8f814154f78b5af6/ol-handback/Microsoft/windows-apps.pt-br/master/plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf)
-* Handback Datetime: 2016-06-30 18:14:10
+* Handback Datetime: 2016-06-30 18:56:03
 * Handback Error: [handback_transform_failed](#929ad82ce057754ee04f1f27537e03520e95157a2238handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -32,7 +32,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/54ba89e7241c18d09319524e8f814154f78b5af6/ol-handback/Microsoft/windows-apps.pt-br/master/plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.pt-br.xlf)
-* Handback Datetime: 2016-06-30 18:14:10
+* Handback Datetime: 2016-06-30 18:56:03
 * Handback Error: [handback_transform_failed](#9a3058aabdc6f710149a14d8f125b66efd0760072639handback_transform_failed)
 * [Back to Top](#report-top)
 
