@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Dimensionamento e sobreposições de cadeia de troca
-description: Saiba como criar cadeias de troca dimensionadas para permitir renderização mais rápida em dispositivos móveis e usar cadeias de troca sobrepostas (quando disponíveis) para aumentar a qualidade visual.
+title: "Dimensionamento e sobreposições de cadeia de troca"
+description: "Saiba como criar cadeias de troca dimensionadas para permitir renderização mais rápida em dispositivos móveis e usar cadeias de troca sobrepostas (quando disponíveis) para aumentar a qualidade visual."
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
+translationtype: Human Translation
+ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
+ms.openlocfilehash: 3380c5156072a9853261ec6b706a612b42e7ba10
+
 ---
 
 # Dimensionamento e sobreposições de cadeia de troca
@@ -324,6 +328,7 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

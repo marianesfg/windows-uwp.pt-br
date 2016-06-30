@@ -1,13 +1,17 @@
 ---
 author: mcleblanc
-description: Este tópico fornece um mapeamento abrangente das APIs do Windows Phone Silverlight para seus equivalentes da UWP (Plataforma Universal do Windows).
+description: "Este tópico fornece um mapeamento abrangente das APIs do Windows Phone Silverlight para seus equivalentes da UWP (Plataforma Universal do Windows)."
 title: Mapeamentos de namespace e de classe do Windows Phone Silverlight para a UWP
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 164e5303c48b6c65807984e4afcaf81ac12f6431
+
 ---
 
 # Mapeamentos de namespace e de classe do Windows Phone Silverlight para a UWP
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico fornece um mapeamento abrangente das APIs do Windows Phone Silverlight para seus equivalentes da UWP (Plataforma Universal do Windows). Geralmente não há um mapeamento de funcionalidade um para um: qualquer plataforma pode ter mais ou menos funcionalidades que suas equivalentes em um namespace ou classe.
 
@@ -94,7 +98,7 @@ Além disso, em um aplicativo do Windows 10, você aproveitará o .NET Native, u
               Classe **ContactStore**
             ](https://msdn.microsoft.com/library/windows/apps/dn624859) |
 | Controles e infraestrutura de interface do usuário | |
-| Classe **ControlTiltEffect.TiltEffect** | As animações da biblioteca de animação do Windows Runtime são incorporadas os estilos padrão dos controles comuns. Consulte [Animação](wpsl-to-uwp-porting-xaml-and-ui.md#animation) |
+| Classe **ControlTiltEffect.TiltEffect** | As animações da biblioteca de animação do Windows Runtime são incorporadas os estilos padrão dos controles comuns. Consulte [Animação](wpsl-to-uwp-porting-xaml-and-ui.md#animation). |
 | Namespace **Microsoft.Phone.Controls** | [
               Namespace **Windows.UI.Xaml.Controls**
             ](https://msdn.microsoft.com/library/windows/apps/br227716) |
@@ -140,7 +144,7 @@ Além disso, em um aplicativo do Windows 10, você aproveitará o .NET Native, u
 | Namespace **Microsoft.Phone.Globalization** | Nenhuma equivalência direta | 
 | (MPI = **Microsoft.Phone.Info**) <br/>Classes **MPI.DeviceExtendedProperties**, **DeviceStatus** | [
               Classes **EasClientDeviceInformation**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701390), [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831). Para obter mais detalhes, consulte [Status do dispositivo](wpsl-to-uwp-input-and-sensors.md#device-status) | 
+            ](https://msdn.microsoft.com/library/windows/apps/hh701390), [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831). Para obter mais detalhes, consulte [Status do dispositivo](wpsl-to-uwp-input-and-sensors.md#device-status). | 
 | (MPI = **Microsoft.Phone.Info**) <br/>Classe **MPI.MediaCapabilities** | Nenhuma equivalência direta | 
 | (MPI = **Microsoft.Phone.Info**) <br/>Classe **MPI.UserExtendedProperties** | [
               Classe **AdvertisingManager**
@@ -222,7 +226,7 @@ Além disso, em um aplicativo do Windows 10, você aproveitará o .NET Native, u
 | (ST = **System.Threading**) <br/> Propriedade **ST.Thread.CurrentCulture** | (SG = **System.Globalization**) <br/> Propriedade **S.CultureInfo.CurrentCulture** |
 | (ST = **System.Threading**) <br/> Propriedade **ST.Thread.CurrentUICulture** | (SG = **System.Globalization**) <br/> Propriedade **S.CultureInfo.CurrentUICulture** |
 | Elementos gráficos e animação | |
-| **Namespaces Microsoft.Xna.Framework.\***, [Biblioteca de Classes do XNA Framework](http://go.microsoft.com/fwlink/p/?LinkId=263769), [Biblioteca de Classes de Pipeline de Conteúdo](http://go.microsoft.com/fwlink/p/?LinkId=263770) | Nenhuma equivalência direta. Em geral, use [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) com C++. Consulte [Desenvolvendo jogos](https://msdn.microsoft.com/library/windows/apps/hh452744) e [Interoperabilidade entre DirectX e XAML](https://msdn.microsoft.com/library/windows/apps/hh825871) |
+| **Namespaces Microsoft.Xna.Framework.\***, [Biblioteca de Classes do XNA Framework](http://go.microsoft.com/fwlink/p/?LinkId=263769), [Biblioteca de Classes de Pipeline de Conteúdo](http://go.microsoft.com/fwlink/p/?LinkId=263770) | Nenhuma equivalência direta. Em geral, use [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) com C++. Consulte [Desenvolvendo jogos](https://msdn.microsoft.com/library/windows/apps/hh452744) e [Interoperabilidade entre DirectX e XAML](https://msdn.microsoft.com/library/windows/apps/hh825871). |
 | Classe **Microsoft.Xna.Framework.Audio.Microphone** | [
               Classe **MediaCapture**
             ](https://msdn.microsoft.com/library/windows/apps/br241124) |
@@ -251,7 +255,7 @@ Além disso, em um aplicativo do Windows 10, você aproveitará o .NET Native, u
 | Namespace **System.Windows.Media** | [
               Namespace **Windows.UI.Xaml.Media**
             ](https://msdn.microsoft.com/library/windows/apps/br243045) |
-| Classe **System.Windows.Media.RadialGradientBrush** | Nenhuma equivalência direta. Consulte [Mídia e elementos gráficos](wpsl-to-uwp-porting-xaml-and-ui.md#media) |
+| Classe **System.Windows.Media.RadialGradientBrush** | Nenhuma equivalência direta. Consulte [Mídia e elementos gráficos](wpsl-to-uwp-porting-xaml-and-ui.md#media). |
 | Namespace **System.Windows.Media.Animation** | [
               Namespace **Windows.UI.Xaml.Media.Animation**
             ](https://msdn.microsoft.com/library/windows/apps/br243232) |
@@ -371,27 +375,27 @@ Além disso, em um aplicativo do Windows 10, você aproveitará o .NET Native, u
 | Classe **System.Net.HttpWebResponse** | Ainda compatível, mas use Dispose() em vez de Close(). Porém, a alternativa futura, recomendada, é a classe [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)). Essas APIs usam [System.Net.Http.HttpResponseMessage](https://msdn.microsoft.com/library/system.net.http.httpresponsemessage.aspx) para representar uma resposta HTTP. |
 | (SNN = **System.Net.NetworkInformation**) <br/> Classe **SNN.NetworkChange** | Ainda há suporte, exceto para o construtor. |
 | Classe **System.Net.OpenReadCompletedEventArgs** e classes semelhantes relacionadas a **System.Net.WebClient** | [
-              Classe **HttpClient**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx) |
+              Class **HttpClient**
+            ](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx)) |
 | Classe **System.Net.Sockets.Socket** | Ainda compatível, mas use Dispose() em vez de Close(). Como alternativa, porte para a classe [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882). |
 | Classe **System.Net.Sockets.SocketException** | Ainda há suporte, mas use a propriedade SocketErrorCode em vez de ErrorCode.
 | Classes **System.Net.Sockets.UdpAnySourceMulticastClient**, **UdpSingleSourceMulticastClient** | [
               Classe **DatagramSocket**
             ](https://msdn.microsoft.com/library/windows/apps/br241319) | 
 | Classe **System.Net.UploadProgressChangedEventArgs** e classes semelhantes relacionadas a **System.Net.WebClient** | [
-              Classe **HttpClient**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx)
+              Class **HttpClient**
+            ](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
 | Classe **System.Net.WebClient** | [
-              Classe **HttpClient**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx)
+              Class **HttpClient**
+            ](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
 | Classe **System.Net.WebRequest** | Suporte parcial (um conjunto de propriedades diferente), mas a alternativa recomendada e prospectiva é a classe [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)). Essas APIs usam [System.Net.Http.HttpRequestMessage](https://msdn.microsoft.com/library/system.net.http.httprequestmessage.aspx) para representar uma solicitação HTTP.
 | Classe **System.Net.WebResponse** | Ainda compatível, mas use Dispose() em vez de Close(). Porém, a alternativa futura, recomendada, é a classe [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)). Essas APIs usam [System.Net.Http.HttpResponseMessage](https://msdn.microsoft.com/library/system.net.http.httpresponsemessage.aspx) para representar uma resposta HTTP.
 | (SN = **System.Net**) <br/> Classe **SN.WriteStreamClosedEventArgs** | [
-              Classe **HttpClient**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx)
+              Class **HttpClient**
+            ](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
 | (SN = **System.Net**) <br/> Classe **SN.WriteStreamClosedEventHandler** | [
-              Classe **HttpClient**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx)
+              Class **HttpClient**
+            ](https://msdn.microsoft.com/library/windows/apps/dn298639) (ou [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
 | Classe **System.UriFormatException** | Classe **System.FormatException** |
 | Notificações | |
 | Namespace MPN = **Microsoft.Phone.Notification** | [
@@ -416,11 +420,11 @@ Além disso, em um aplicativo do Windows 10, você aproveitará o .NET Native, u
 | Extensões reativas | |
 | Namespace **Microsoft.Phone.Reactive** | Nenhuma equivalência direta | 
 | Reflexão | |
-| Classe **System.Type** | Classe **System.Reflection.TypeInfo**. Consulte [Reflexão no .NET Framework para aplicativos da Windows Store](https://msdn.microsoft.com/library/hh535795.aspx) |
+| Classe **System.Type** | Classe **System.Reflection.TypeInfo**. Consulte [Reflexão no .NET Framework para aplicativos da Windows Store](https://msdn.microsoft.com/library/hh535795.aspx). |
 | Recursos | |
 | Classe **System.Resources.ResourceManager** | (WA = **Windows.ApplicationModel**)<br/>[
               Namespaces **WA.Resources.Core**
-            ](https://msdn.microsoft.com/library/windows/apps/br225039) e [**WA.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), classe [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/br206078). Consulte [Criando e recuperando recursos em aplicativos do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh694557.aspx) |
+            ](https://msdn.microsoft.com/library/windows/apps/br225039) e [**WA.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), classe [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/br206078). Consulte [Criando e recuperando recursos em aplicativos do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh694557.aspx). |
 | Elemento seguro | |
 | (MPS = **Microsoft.Phone.SecureElement**) <br/> Classes **MPS.SecureElementChannel**, **MPS.SecureElementSession** | [
               Classe **SmartCardConnection**
@@ -504,10 +508,11 @@ Além disso, em um aplicativo do Windows 10, você aproveitará o .NET Native, u
 | (SX = **System.Xml**) | Método **SX.XmlConvert.ToDateTimeOffset** |
  
 
-O próximo tópico é [Fazendo a portabilidade do projeto](wpsl-to-uwp-porting-to-a-uwp-project.md)
+O próximo tópico é [Portando o projeto](wpsl-to-uwp-porting-to-a-uwp-project.md).
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

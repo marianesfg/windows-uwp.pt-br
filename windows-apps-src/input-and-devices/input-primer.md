@@ -5,8 +5,8 @@ title: "Cartilha de interação"
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
-ms.sourcegitcommit: 1221928ebea4a2a926154ed1148e49bdb1e0834c
-ms.openlocfilehash: 7c2d3bd1ab2d2f4923cf84834a73fd1c58113212
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 068bb7d0c7af4b55ab10a955c563988f5123e5eb
 
 ---
 
@@ -15,13 +15,13 @@ ms.openlocfilehash: 7c2d3bd1ab2d2f4923cf84834a73fd1c58113212
 
 ![tipos de entrada do windows](images/input-interactions/icons-inputdevices03.png)
 
-As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, **Cortana**, controlador, gesto, olhar, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano). 
+As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, **Cortana**, controlador, gesto, olhar, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano).
 
 A UWP usa um sistema de interação contextual "inteligente" que, na maioria dos casos, elimina a necessidade de manipular individualmente os tipos de entrada exclusivos recebidos pelo seu aplicativo. Isso inclui manipular a entrada por touch, touchpad, mouse e caneta como um tipo de ponteiro genérico para dar suporte a gestos estáticos, como tocar ou pressionar e segurar, para gestos de manipulação como deslizar para movimento panorâmico ou para renderizar tinta digital.
 
 Familiarize-se com cada tipo de dispositivo de entrada e seus comportamentos, recursos e limitações quando combinados com determinados fatores forma. Isso pode ajudar você a decidir se os controles e as funcionalidades da plataforma são suficientes para seu aplicativo, ou exigem que você forneça experiências de interação personalizadas.
 
-## <span id="Cortana"></span><span id="cortana"></span><span id="CORTANA"></span>Cortana
+## Cortana
 
 
 No Windows 10, a extensibilidade da **Cortana** permite lidar com comandos de voz de um usuário e iniciar um aplicativo para executar uma única ação.
@@ -44,7 +44,7 @@ A integração da funcionalidade básica do seu aplicativo e o fornecimento de u
 Mais informações [Diretrizes de design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233).
  
 
-## <span id="Speech"></span><span id="speech"></span><span id="SPEECH"></span>Controle por voz
+## Controle por voz
 
 
 O controle por voz é uma forma eficiente e natural para as pessoas interagirem com aplicativos. É uma maneira fácil e precisa de se comunicar com aplicativos, e permite que as pessoas sejam produtivas e se mantenham informadas em diversas situações.
@@ -68,19 +68,19 @@ Uso típico
 
 Há três modos de interação de fala:
 
-<span id="Natural_language"></span><span id="natural_language"></span><span id="NATURAL_LANGUAGE"></span>Linguagem natural  
+Linguagem natural  
 A linguagem natural é como interagimos verbalmente com as pessoas em geral. Nossa fala varia de acordo com a pessoa e a situação, e é geralmente entendida. Quando não é, geralmente usamos palavras e uma ordem de palavras diferentes para comunicar a mesma ideia.
 
 As interações em linguagem natural com um aplicativo são semelhantes: falamos com o aplicativo através de nosso dispositivo como se ele fosse uma pessoa e esperamos que ele entenda e reaja adequadamente.
 
 A linguagem natural é o modo mais avançado de interação de fala, e pode ser implementada e exposta pela **Cortana**.
 
-<span id="Command_and_control"></span><span id="command_and_control"></span><span id="COMMAND_AND_CONTROL"></span>Comando e controle  
+Comando e controle  
 Comando e controle é o uso de comandos verbais para ativar controles e funcionalidades, como clicar em um botão ou selecionar um item de menu.
 
 Como o comando e controle é essencial para uma experiência de usuário bem-sucedida, um único tipo de entrada geralmente não é recomendado. O controle por voz geralmente é uma das várias opções de entrada para um usuário com base em suas preferências ou recursos de hardware.
 
-<span id="Dictation"></span><span id="dictation"></span><span id="DICTATION"></span>Ditado  
+Ditado  
 O método de entrada de fala mais básico. Cada expressão é convertida em texto.
 
 O ditado normalmente é usado quando um aplicativo não precisa compreender o significado ou a intenção.
@@ -88,7 +88,7 @@ O ditado normalmente é usado quando um aplicativo não precisa compreender o si
 Mais informações [Diretrizes de design do Controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
  
 
-## <span id="Pen"></span><span id="pen"></span><span id="PEN"></span>Caneta
+## Caneta
 
 
 Uma caneta pode servir como um dispositivo apontador com precisão de pixel, como um mouse, e é o dispositivo ideal para entrada de tinta digital.
@@ -119,7 +119,7 @@ Você deve fornecer comandos de interface do usuário específicos à caneta, ou
 Mais informações [Diretrizes de design de caneta](https://msdn.microsoft.com/library/windows/apps/dn456352)
  
 
-## <span id="Touch"></span><span id="touch"></span><span id="TOUCH"></span>Touch
+## Touch
 
 
 Com o touch, os gestos físicos de um ou mais dedos podem ser usados para emular a manipulação direta de elementos da interface do usuário (por exemplo, movimento panorâmico, girar, redimensionar ou mover), como um método alternativo de entrada (semelhante ao mouse ou à caneta), ou como um método de entrada complementar (para modificar aspectos da outra entrada, como borrar um traço de tinta desenhado com uma caneta). Experiências táteis como essa podem proporcionar sensações mais naturais do mundo real aos usuários conforme eles interagem com elementos em uma tela.
@@ -150,7 +150,7 @@ Em geral, o touch é:
 Mais informações [Diretrizes de design de toque](https://msdn.microsoft.com/library/windows/apps/hh465370)
  
 
-## <span id="Touchpad"></span><span id="touchpad"></span><span id="TOUCHPAD"></span>Touchpad
+## Touchpad
 
 
 Um touchpad combina a entrada multi-touch indireta com a entrada de precisão de um dispositivo apontador, como um mouse. Essa combinação torna o touchpad adequado para uma interface do usuário otimizada para touch e destinos menores de aplicativos de produtividade.
@@ -170,7 +170,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 Mais informações [Diretrizes de design de touchpad](https://msdn.microsoft.com/library/windows/apps/dn456353)
  
 
-## <span id="Keyboard"></span><span id="keyboard"></span><span id="KEYBOARD"></span>Teclado
+## Teclado
 
 
 Um teclado é o dispositivo principal de inserção de texto, e geralmente é indispensável para pessoas portadoras de determinadas deficiências ou usuários que o consideram um método mais rápido e mais eficiente de interagir com um aplicativo.
@@ -208,7 +208,7 @@ Em geral, um teclado é:
 Mais informações [Diretrizes de design de teclado](https://msdn.microsoft.com/library/windows/apps/hh972345)
  
 
-## <span id="Mouse"></span><span id="mouse"></span><span id="MOUSE"></span>Mouse
+## Mouse
 
 
 Um mouse é mais adequado para aplicativos de produtividade e interfaces do usuário de alta densidade, em que as interações dos usuários exigem precisão de pixel para direcionamentos e comandos.
@@ -231,7 +231,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 Mais informações [Diretrizes de design do mouse](https://msdn.microsoft.com/library/windows/apps/dn456351)
  
 
-## <span id="Gesture"></span><span id="gesture"></span><span id="GESTURE"></span>Gesto
+## Gesto
 
 
 Um gesto é qualquer forma de movimento do usuário que é reconhecida como entrada para controlar ou interagir com um aplicativo. Os gestos assumem várias formas, de simplesmente usar uma mão para indicar algo na tela a padrões específicos aprendidos de movimento e longas extensões de movimento contínuo em todo o corpo. Tome cuidado ao projetar gestos personalizados porque seu significado pode variar dependendo da cultura e da localidade.
@@ -252,7 +252,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 
  
 
-## <span id="Gamepad_Controller"></span><span id="gamepad_controller"></span><span id="GAMEPAD_CONTROLLER"></span>Gamepad/controlador
+## Gamepad/controlador
 
 
 O gamepad/controlador é um dispositivo altamente especializado geralmente exclusivo para jogar. No entanto, ele também é usado para emular a entrada do teclado básico e fornece uma experiência de navegação da interface do usuário muito parecida com o teclado.
@@ -272,7 +272,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 
  
 
-## <span id="Multiple_inputs"></span><span id="multiple_inputs"></span><span id="MULTIPLE_INPUTS"></span>Várias entradas
+## Várias entradas
 
 
 Acomodar o máximo possível de usuários e dispositivos e projetar seus aplicativos para funcionar com o máximo possível de tipos de entrada (gesto, controle por voz, touch, touchpad, mouse e teclado) maximiza a flexibilidade, a usabilidade e a acessibilidade.
@@ -304,6 +304,6 @@ Uso típico Assim como as pessoas usam uma combinação de voz e gestos ao se co
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

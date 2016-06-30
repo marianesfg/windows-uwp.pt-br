@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Use animações de arrastar e soltar quando os usuários moverem objetos, como ao mover um item dentro de uma lista ou ao soltar um item em cima de outro.
-title: Animações de arrastar em aplicativos UWP
+Description: "Use animações de arrastar e soltar quando os usuários moverem objetos, como ao mover um item dentro de uma lista ou ao soltar um item em cima de outro."
+title: "Animações de arrastar em aplicativos UWP"
 ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
 label: Motion--Drag and drop
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: c975ba3d03c06009710f4f57edf8a4cc517ad90c
+
 ---
 
 # Animações da operação arrastar
@@ -66,6 +70,7 @@ Use animações de arrastar e soltar quando os usuários moverem objetos, como a
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

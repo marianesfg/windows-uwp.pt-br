@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Conheça as regras de processamento de espaços em branco usadas por XAML.
-title: XAML e espaço em branco
+description: "Conheça as regras de processamento de espaços em branco usadas por XAML."
+title: "XAML e espaço em branco"
 ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 408c9c7f79f5db81bdf7810a6c71cf25c1c8ec51
+
 ---
 
 # XAML e espaço em branco
@@ -49,6 +53,7 @@ Entidades e espaços sem quebra: o XAML dá suporte à inserção de qualquer en
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

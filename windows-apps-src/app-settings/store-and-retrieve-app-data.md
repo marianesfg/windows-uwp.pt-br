@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Saiba como armazenar e recuperar dados de aplicativo local, em roaming e temporário.
-title: Armazenar e recuperar configurações e outros dados de aplicativo
+Description: "Saiba como armazenar e recuperar dados de aplicativo local, em roaming e temporário."
+title: "Armazenar e recuperar configurações e outros dados de aplicativo"
 ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 433cda6432d1e695bacb338e68012bcc9c837eb6
+
 ---
 
 # Armazenar e recuperar configurações e outros dados de aplicativo
@@ -67,7 +71,7 @@ Windows.Storage.StorageFolder localFolder =
 
 ### <span id="Create_and_retrieve_a_simple_local_setting"></span><span id="create_and_retrieve_a_simple_local_setting"></span><span id="CREATE_AND_RETRIEVE_A_SIMPLE_LOCAL_SETTING"></span>Criar e recuperar uma configuração de local simples
 
-Para criar ou gravar uma configuração, use a propriedade [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) para acessar as configurações no contêiner `localSettings` que obtivemos na etapa anterior. Este exemplo cria uma configuração chamada
+Para criar ou gravar uma configuração, use a propriedade [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) para acessar as configurações no contêiner `localSettings` que obtivemos na etapa anterior. Este exemplo cria uma configuração chamada `exampleSetting`.
 
 ```CSharp
 // Simple setting
@@ -131,7 +135,7 @@ async void WriteTimestamp()
 }
 ```
 
-Para abrir e ler um arquivo no repositório local de dados de aplicativo, use as APIs de arquivo, como [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) e [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). Este exemplo abre o arquivo `dataFile.txt` criado na etapa anterior e lê a data do arquivo. Para saber detalhes de como carregar recursos de arquivos de vários locais, consulte [Como carregar recursos de arquivos](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322)
+Para abrir e ler um arquivo no repositório local de dados de aplicativo, use as APIs de arquivo, como [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) e [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). Este exemplo abre o arquivo `dataFile.txt` criado na etapa anterior e lê a data do arquivo. Para saber detalhes de como carregar recursos de arquivos de vários locais, veja [Como carregar recursos de arquivos](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322).
 
 ```CSharp
 async void ReadTimestamp()
@@ -164,7 +168,7 @@ Os dados de roaming de um aplicativo estarão disponíveis na nuvem desde que se
 -   Use o roaming para permitir que os usuários continuem uma tarefa entre dispositivos. Por exemplo, use roaming de dados do aplicativo como o conteúdo de um rascunho de email ou a página mais recentemente exibida em um aplicativo de leitura.
 -   Manipule o evento [**DataChanged**](https://msdn.microsoft.com/library/windows/apps/br241620) atualizando os dados do aplicativo. Esse evento ocorrerá quando os dados de aplicativos tiverem terminado de ser sincronizados da nuvem.
 -   Use um perfil móvel para o conteúdo em vez de dados brutos. Por exemplo, faça roaming de uma URL em vez do conteúdo de um artigo online.
--   Para configurações importantes e urgentes, use a configuração *HighPriority* associada a [**RoamingSettings**](https://msdn.microsoft.com/library/windows/apps/br241624)
+-   Para configurações importantes e urgentes, use a configuração *HighPriority* associada a [**RoamingSettings**](https://msdn.microsoft.com/library/windows/apps/br241624).
 -   Não use roaming em dados de aplicativo específicos de um dispositivo. Algumas informações são pertinentes apenas localmente, como um nome de caminho para um recurso de arquivo local. Se você decidir usar um perfil móvel nas informações locais, certifique-se de que o aplicativo possa se recuperar se as informações não forem válidas no dispositivo secundário.
 -   Não use perfis móveis em grandes conjuntos de dados de aplicativos. Há um limite na quantidade de dados à qual um aplicativo pode aplicar roaming; use a propriedade [**RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625) para atingir essa quantidade máxima. Se um aplicativo atingir esse limite, o roaming não poderá ser usado em nenhum dado até que o tamanho do armazenamento de dados do aplicativo deixe de exceder o limite. Ao projetar seu aplicativo, considere como definir um limite para dados maiores, para que eles não ultrapassem o limite. Por exemplo, se para salvar o estado de um jogo for preciso 10 KB, o aplicativo deverá apenas permitir o armazenamento de até 10 jogos.
 -   Não use o perfil móvel para dados que dependerem da sincronização instantânea. O Windows não garante uma sincronização instantânea; o uso de roaming poderá sofrer um atraso significativo se um usuário estiver offline em uma rede de alta latência. Assegure-se de que sua interface do usuário não dependa da sincronização instantânea.
@@ -237,7 +241,7 @@ Windows.Storage.ApplicationDataContainer roamingSettings =
 
 ### <span id="Create_and_retrieve_roaming_settings"></span><span id="create_and_retrieve_roaming_settings"></span><span id="CREATE_AND_RETRIEVE_ROAMING_SETTINGS"></span>Criar e recuperar configurações em roaming
 
-Use a propriedade [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) para acessar as configurações no contêiner `roamingSettings` que obtivemos na seção anterior. Este exemplo cria uma configuração simples denominada `exampleSetting` e um valor composto denominado
+Use a propriedade [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) para acessar as configurações no contêiner `roamingSettings` que obtivemos na seção anterior. Este exemplo cria uma configuração simples nomeada `exampleSetting` e um valor composto nomeado `composite`.
 
 ```CSharp
 // Simple setting
@@ -295,7 +299,7 @@ async void WriteTimestamp()
 }
 ```
 
-Para abrir e ler um arquivo no repositório de dados de aplicativo em roaming, use as APIs de arquivo, como [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) e [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). Este exemplo abre o arquivo `dataFile.txt` criado na etapa anterior e lê a data do arquivo. Para saber detalhes de como carregar recursos de arquivos de vários locais, consulte [Como carregar recursos de arquivos](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322)
+Para abrir e ler um arquivo no repositório de dados de aplicativo em roaming, use as APIs de arquivo, como [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) e [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). Este exemplo abre o arquivo `dataFile.txt` criado na etapa anterior e lê a data do arquivo. Para saber detalhes de como carregar recursos de arquivos de vários locais, veja [Como carregar recursos de arquivos](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322).
 
 ```CSharp
 async void ReadTimestamp()
@@ -317,7 +321,7 @@ async void ReadTimestamp()
 ## <span id="Temporary_app_data"></span><span id="temporary_app_data"></span><span id="TEMPORARY_APP_DATA"></span>Dados temporários de aplicativo
 
 
-O armazenamento de dados temporários de aplicativo funciona como um cache. Os arquivos não se movimentam e podem ser removidos a qualquer momento. A tarefa Manutenção do Sistema pode excluir automaticamente dados armazenados neste local a qualquer momento. O usuário também pode limpar arquivos do repositório de dados temporários usando a Limpeza de Disco. Dados temporários de aplicativo podem ser usados para armazenar informações temporárias durante uma sessão de aplicativo. Não há garantia de que esses dados persistirão além do fim da sessão do aplicativo, pois o sistema pode recuperar o espaço usado, se necessário. O local está disponível por meio da propriedade [**temporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629).
+O repositório de dados temporários de aplicativo funciona como um cache. Os arquivos não se movimentam e podem ser removidos a qualquer momento. A tarefa Manutenção do Sistema pode excluir automaticamente dados armazenados neste local a qualquer momento. O usuário também pode limpar arquivos do repositório de dados temporários usando a Limpeza de Disco. Dados temporários de aplicativo podem ser usados para armazenar informações temporárias durante uma sessão de aplicativo. Não há garantia de que esses dados persistirão além do fim da sessão do aplicativo, pois o sistema pode recuperar o espaço usado, se necessário. O local está disponível por meio da propriedade [**temporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629).
 
 ### <span id="Retrieve_the_temporary_data_container"></span><span id="retrieve_the_temporary_data_container"></span><span id="RETRIEVE_THE_TEMPORARY_DATA_CONTAINER"></span>Recuperar o contêiner de dados temporários
 
@@ -357,7 +361,7 @@ async void WriteTimestamp()
 }
 ```
 
-Para abrir e ler um arquivo no repositório temporário de dados de aplicativo, use as APIs de arquivo, como [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) e [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). Este exemplo abre o arquivo `dataFile.txt` criado na etapa anterior e lê a data do arquivo. Para saber detalhes de como carregar recursos de arquivos de vários locais, consulte [Como carregar recursos de arquivos](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322)
+Para abrir e ler um arquivo no repositório temporário de dados de aplicativo, use as APIs de arquivo, como [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) e [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). Este exemplo abre o arquivo `dataFile.txt` criado na etapa anterior e lê a data do arquivo. Para saber detalhes de como carregar recursos de arquivos de vários locais, veja [Como carregar recursos de arquivos](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322).
 
 ```CSharp
 async void ReadTimestamp()
@@ -456,6 +460,7 @@ Como opção, você pode converter os dados do aplicativo para seu aplicativo. I
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

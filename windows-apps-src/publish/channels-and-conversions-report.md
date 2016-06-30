@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: O relatório de Canais e conversões no painel Centro de Desenvolvimento do Windows permite saber como os clientes no Windows 10 chegaram à listagem de seu aplicativo.
-title: Relatório de canais e conversões
+Description: "O relatório de Canais e conversões no painel Centro de Desenvolvimento do Windows permite saber como os clientes no Windows 10 chegaram à listagem de seu aplicativo."
+title: "Relatório de canais e conversões"
 ms.assetid: C359B9FB-A17B-4A8E-B8EE-19F2F98AA4FF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e82299f156a7e4f82e9219dc9b0ef6171e72c74e
+
 ---
 
 # Relatório de canais e conversões
@@ -93,6 +97,7 @@ Para campanhas personalizadas, você também pode ver o número de conversões d
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

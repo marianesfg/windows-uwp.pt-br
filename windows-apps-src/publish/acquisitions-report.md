@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: O Relatório de aquisições no painel do Centro de Desenvolvimento do Windows permite que você veja quem adquiriu o seu aplicativo, juntamente com detalhes demográficos e de plataforma.
-title: Relatório de aquisições
+Description: "O Relatório de aquisições no painel do Centro de Desenvolvimento do Windows permite que você veja quem adquiriu o seu aplicativo, juntamente com detalhes demográficos e de plataforma."
+title: "Relatório de aquisições"
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: bfdf4f9f2d94a31a1c159e947615c10abf556aad
+
 ---
 
 # Relatório de aquisições
@@ -63,6 +67,7 @@ O catálogo em destaque **OS version** mostra o número total de aquisições co
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Explicamos as regras de sintaxe XAML e a terminologia que descreve as restrições ou as opções disponíveis para a sintaxe XAML.
+description: "Explicamos as regras de sintaxe XAML e a terminologia que descreve as restrições ou as opções disponíveis para a sintaxe XAML."
 title: Guia de sintaxe do XAML
 ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
+translationtype: Human Translation
+ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
+ms.openlocfilehash: 8e7819b02d7a22a16cf16091d08bef0aabc8d36e
+
 ---
 
 # Guia de sintaxe do XAML
@@ -17,7 +21,7 @@ A Extensible Application Markup Language (XAML) tem uma sintaxe básica compilad
 
 ## Vocabulários XAML
 
-Uma área em que o XAML difere da maioria dos usos de XML é que o XAML normalmente não é reforçado com um esquema, tal como um arquivo XSD. É por isso que o XAML pretende ser extensível, é isso o que o "X" no acrônimo XAML significa. Quando o XAML é analisado, os elementos e os atributos que você referencia no XAML devem existir em alguma representação de código de suporte, seja nos tipos básicos definidos pelo Tempo de Execução do Windows ou nos tipos que estendem ou são baseados no Tempo de Execução do Windows. A documentação do SDK às vezes se refere aos tipos que já estão inseridos no Tempo de Execução do Windows e podem ser usados no XAML como se fosse o *vocabulário XAML* para o Tempo de Execução do Windows. O Microsoft Visual Studio ajuda você a produzir marcação que seja válida nesse vocabulário XAML. O Visual Studio também pode incluir seus tipos personalizados para uso de XAML, desde que a origem desses tipos seja referenciada corretamente no projeto. Para saber mais sobre XAML e tipos personalizados, consulte [Namespaces XAML e mapeamento de namespace](xaml-namespaces-and-namespace-mapping.md).
+Uma área em que o XAML difere da maioria dos usos de XML é que o XAML normalmente não é reforçado com um esquema, tal como um arquivo XSD. É por isso que o XAML pretende ser extensível, é isso o que o "X" no acrônimo XAML significa. Quando o XAML é analisado, os elementos e os atributos que você referencia no XAML devem existir em alguma representação de código de suporte, seja nos tipos básicos definidos pelo Windows Runtime ou nos tipos que estendem ou são baseados no Tempo de Execução do Windows. A documentação do SDK às vezes se refere aos tipos que já estão inseridos no Tempo de Execução do Windows e podem ser usados no XAML como se fosse o *vocabulário XAML* para o Tempo de Execução do Windows. O Microsoft Visual Studio ajuda você a produzir marcação que seja válida nesse vocabulário XAML. O Visual Studio também pode incluir seus tipos personalizados para uso de XAML, desde que a origem desses tipos seja referenciada corretamente no projeto. Para saber mais sobre XAML e tipos personalizados, consulte [Namespaces XAML e mapeamento de namespace](xaml-namespaces-and-namespace-mapping.md).
 
 ##  Declaração de objetos
 
@@ -318,6 +322,7 @@ As seções de uso XAML também empregam diversos espaços reservados generaliza
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

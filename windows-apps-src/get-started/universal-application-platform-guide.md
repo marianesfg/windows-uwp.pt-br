@@ -1,14 +1,17 @@
 ---
-author: martinekuan
+author: TylerMSFT
 title: Guia para aplicativos UWP (Plataforma Universal do Windows)
 description: Neste guia, saiba mais sobre os aplicativos UWP (Plataforma Universal do Windows) que podem ser executados em uma ampla variedade de dispositivos.
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
+ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
+ms.openlocfilehash: 191a7aef1a027747379c991e17afc1580a9ec549
+
 ---
 
 # Guia para aplicativos UWP (Plataforma Universal do Windows)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Neste guia, você aprenderá sobre:
 
@@ -217,7 +220,7 @@ Haverá casos em que você desejará chamar uma API, mas sua família de disposi
 
 **Escrevendo código adaptável com a classe ApiInformation**
 
-Há duas etapas para escrever código adaptável. A primeira etapa é tornar disponíveis ao seu projeto as APIs que você deseja acessar. Para fazer isso, adicione uma referência ao SDK de extensão que representa a família de dispositivos que possui as APIs que você deseja chamar condicionalmente. Consulte [SDKs de extensão](../porting/w8x-to-uwp-porting-to-a-uwp-project.md#extension-sdks)
+Há duas etapas para escrever código adaptável. A primeira etapa é tornar disponíveis ao seu projeto as APIs que você deseja acessar. Para fazer isso, adicione uma referência ao SDK de extensão que representa a família de dispositivos que possui as APIs que você deseja chamar condicionalmente. Consulte [SDKs de extensão](../porting/w8x-to-uwp-porting-to-a-uwp-project.md#extension-sdks).
 
 A segunda etapa é usar a classe [**Windows.Foundation.Metadata.ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) em uma condição em seu código para testar a presença da API que você deseja chamar. Essa condição será avaliada onde quer que seu aplicativo seja executado, mas só será avaliada como "true" em dispositivos em que a API esteja presente e, portanto, disponível para ser chamada.
 
@@ -255,12 +258,12 @@ O conjunto de APIs dentro de uma família de dispositivos é subdividido em subd
 
 Um aplicativo UWP ou um componente do Tempo de Execução do Windows escrito em C++/CX tem acesso às APIs do Win32 que fazem parte da UWP. Essas APIs do Win32 são implementadas por todas as famílias de dispositivos do Windows 10. Vincule seu aplicativo com a Windowsapp.lib. Windowsapp.lib é uma biblioteca "umbrella" que fornece as exportações para as APIs da UWP. Vincular à Windowsapp.lib adicionará ao seu aplicativo dependências nas dlls que estão presentes em todas as famílias de dispositivos do Windows 10.
 
-Para obter a lista completa de APIs do Win32 disponíveis para aplicativos UWP, consulte [Conjuntos de APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/desktop/mt186421) e [Dlls para aplicativos UWP](https://msdn.microsoft.com/library/windows/desktop/mt186422)
+Para obter a lista completa de APIs do Win32 disponíveis para aplicativos UWP, consulte [Conjuntos de APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/desktop/mt186421) e [Dlls para aplicativos UWP](https://msdn.microsoft.com/library/windows/desktop/mt186422).
 
 ## Experiência do usuário
 
 
-Um Aplicativo Universal do Windows permite que você aproveite os recursos exclusivos do dispositivo no qual ele é executado. Seu aplicativo pode fazer uso de todo o poder de um dispositivo desktop, da interação natural de manipulação direta de um tablet (incluindo entrada por toque e caneta), da portabilidade e conveniência de dispositivos móveis e da capacidade de colaboração do [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365)
+Um Aplicativo Universal do Windows permite que você aproveite os recursos exclusivos do dispositivo no qual ele é executado. Seu aplicativo pode fazer uso de todo o poder de um dispositivo desktop, da interação natural de manipulação direta de um tablet (incluindo entrada por toque e caneta), da portabilidade e conveniência de dispositivos móveis, e da capacidade de colaboração do [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365).
 
 Um bom [projeto](http://go.microsoft.com/fwlink/?LinkId=258848) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, bem como será sua aparência e como vai funcionar. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. [Noções básicas de design](https://dev.windows.com/en-us/design) apresenta você ao design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://msdn.microsoft.com/library/windows/apps/dn958439) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../input-and-devices/device-primer.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
 
@@ -292,6 +295,7 @@ Veja [Usando o painel do Centro de Desenvolvimento do Windows unificado](../publ
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

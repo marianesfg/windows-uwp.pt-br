@@ -1,13 +1,16 @@
 ---
 author: awkoren
-Description: Implante e depure um aplicativo UWP (Plataforma Universal do Windows) convertido de um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms), usando as extensões de conversão da área de trabalho.
+Description: "Implante e depure um aplicativo UWP (Plataforma Universal do Windows) convertido de um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms), usando as extensões de conversão da área de trabalho."
 Search.Product: eADQiWindows 10XVcnh
-title: Implantar e depurar um aplicativo UWP (Plataforma Universal do Windows) convertido de um aplicativo de área de trabalho do Windows
+title: "Implantar e depurar um aplicativo UWP (Plataforma Universal do Windows) convertido de um aplicativo de área de trabalho do Windows"
+ms.sourcegitcommit: 606d5237cb67cb4439704f81b180c3c48cc1556f
+ms.openlocfilehash: 14634c12435cd8d6d4471a65c0f8deb36e3b1c80
+
 ---
 
 # Implantar e depurar seu aplicativo UWP convertido (Project Centennial)
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
+\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
 Este tópico contém informações para ajudá-lo a implantar e depurar seu aplicativo com êxito após convertê-lo. Além disso, se você estiver curioso sobre alguns dos elementos internos das extensões de conversão de área de trabalho, este tópico é para você.
 
@@ -176,7 +179,9 @@ Um aplicativo convertido sempre é executado como o usuário interativo. Isso te
 
 Se você tentar executar o cmdlet Add-AppxPackage em um computador para o qual ainda não tiver importado o certificado criado, você receberá um erro.
 
-Eis aqui como importar um certificado que você criou anteriormente. Você pode instalá-lo diretamente, ou pode instalá-lo de um appx que você assinou, como o cliente fará.
+Antes de implantar seu aplicativo, você precisará assiná-lo com um certificado. Para obter informações sobre a criação de um certificado, consulte [Assinar seu pacote .AppX](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter#deploy-your-converted-appx). 
+
+Veja a seguir como importar um certificado que você criou anteriormente. Você pode instalá-lo diretamente, ou pode instalá-lo de um appx que você assinou, como o cliente fará.
 1.  No Explorador de Arquivos, clique com botão direito do mouse em um appx que você assinou com um certificado de teste e escolha **Propriedades** no menu de contexto.
 2.  Clique ou toque na guia **Assinaturas Digitais**.
 3.  Clique ou toque no certificado e escolha **Detalhes**.
@@ -188,8 +193,6 @@ Eis aqui como importar um certificado que você criou anteriormente. Você pode 
 9.  Clique ou toque em **Procurar**. Na janela Selecionar Repositório de Certificados, role para baixo e selecione **Pessoas Confiáveis** e clique ou toque em **OK**.
 10. Clique ou toque em **Avançar**. Uma nova tela aparece. Clique ou toque em **Concluir**.
 11. Uma caixa de diálogo de confirmação deve aparecer. Em caso afirmativo, clique em **OK**. Caso apareça uma caixa diferente, isso significa que há um problema com o certificado. Talvez seja preciso solucionar esses problemas.
-
-### Informações adicionais
 
 Para o Windows confiar no certificado, o certificado deve estar no nó **Certificados (Computador Local) > Autoridades de Certificação Confiáveis > Certificados** ou no nó **Certificados (Computador Local) > Pessoas Confiáveis > Certificados**. Somente certificados nessas duas localizações podem validar a relação de confiança de certificado no contexto da máquina local. Caso contrário, aparece uma mensagem de erro que se parece com a seguinte cadeia de caracteres:
 ```CMD
@@ -207,7 +210,16 @@ Mas o aplicativo é executado em um ambiente especial onde quaisquer acessos que
 
 Em uma pasta chamada VFS, você verá pastas que contêm as DLLs das quais o seu aplicativo depende. Essas DLLs são instaladas em pastas de sistema para a versão de área de trabalho clássica do seu aplicativo. Mas, como se trata de um aplicativo UWP, as DLLs são locais em seu aplicativo. Dessa forma, não há problemas de controle de versão quando aplicativos UWP são instalados e desinstalados.
 
+## Consulte também
+[Converter o seu aplicativo da área de trabalho em um aplicativo UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)
 
-<!--HONumber=May16_HO2-->
+[Visualização Conversor de Aplicativos da Área de Trabalho (Projeto Centennial)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter)
+
+[Converter manualmente o seu aplicativo da área de trabalho do Windows em um aplicativo UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-manual-conversion)
+
+[Exemplos de código de ponte de aplicativos da área de trabalho para UWP no GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
+
+
+<!--HONumber=Jun16_HO4-->
 
 

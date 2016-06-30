@@ -3,6 +3,10 @@ author: mtoepke
 title: Multisampling nos aplicativos UWP (Plataforma Universal do Windows)
 description: Saiba como utilizar o multisampling em aplicativos da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7b240de9ab3c7b53877d38eb9097dde25b2a40be
+
 ---
 
 # <span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Multisampling nos aplicativos UWP (Plataforma Universal do Windows)
@@ -205,6 +209,7 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,13 +1,17 @@
 ---
 author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
-description: Este artigo descreve como usar SceneAnalysisEffect e FaceDetectionEffect para analisar o conteúdo do fluxo de visualização de captura de mídia.
-title: Análise de cena para captura de mídia
+description: "Este artigo descreve como usar SceneAnalysisEffect e FaceDetectionEffect para analisar o conteúdo do fluxo de visualização de captura de mídia."
+title: "Análise de cena para captura de mídia"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 891c0d274c2d3fb82f855011158ecd3ccdcd87b3
+
 ---
 
 # Análise de cena para captura de mídia
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo descreve como usar [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) e [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) para analisar o conteúdo do fluxo de visualização de captura de mídia.
@@ -19,11 +23,11 @@ Este artigo descreve como usar [**SceneAnalysisEffect**](https://msdn.microsoft.
 
 Se o efeito recomendar o uso de HDR, você pode fazer isso das seguintes maneiras:
 
--   Use a classe [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) para capturar fotos usando o algoritmo de processamento em HDR interno do Windows. Para obter mais informações, consulte [Captura de fotos em HDR (High Dynamic Range)](high-dynamic-range-hdr-photo-capture.md)
+-   Use a classe [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) para capturar fotos usando o algoritmo de processamento em HDR interno do Windows. Para obter mais informações, consulte [Captura de fotos em HDR (High Dynamic Range)](high-dynamic-range-hdr-photo-capture.md).
 
--   Use [**HdrVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926680) para capturar vídeos usando o algoritmo de processamento HDR interno do Windows. Para obter mais informações, consulte [Controles de captura do dispositivo para a captura de vídeo](capture-device-controls-for-video-capture.md)
+-   Use [**HdrVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926680) para capturar vídeos usando o algoritmo de processamento HDR interno do Windows. Para obter mais informações, consulte [Controles de captura do dispositivo para a captura de vídeo](capture-device-controls-for-video-capture.md).
 
--   Use [**VariablePhotoSequenceControl**](https://msdn.microsoft.com/library/windows/apps/dn640573) para capturar uma sequência de quadros com os quais você pode fazer uma composição usando uma implementação personalizada em HDR. Para obter mais informações, consulte [Sequência de fotos variável](variable-photo-sequence.md)
+-   Use [**VariablePhotoSequenceControl**](https://msdn.microsoft.com/library/windows/apps/dn640573) para capturar uma sequência de quadros com os quais você pode fazer uma composição usando uma implementação personalizada em HDR. Para obter mais informações, consulte [Sequência de fotos variável](variable-photo-sequence.md).
 
 ### Namespaces de análise de cena
 
@@ -37,7 +41,7 @@ Os efeitos de vídeo são implementados usando-se duas APIs, uma definição de 
 
 [!code-cs[DeclareSceneAnalysisEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareSceneAnalysisEffect)]
 
-No seu aplicativo, depois de você ter inicializado o objeto **MediaCapture**, crie uma nova instância de [**SceneAnalysisEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn948903)
+No seu aplicativo, depois de você ter inicializado o objeto **MediaCapture**, crie uma nova instância de [**SceneAnalysisEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn948903).
 
 Registre o efeito com o dispositivo de captura chamando [**AddVideoEffectAsync**](https://msdn.microsoft.com/library/windows/apps/dn878035) no seu objeto **MediaCapture**, fornecendo **SceneAnalysisEffectDefinition** e especificando [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640) para indicar que o efeito deve ser aplicado ao fluxo de visualização de vídeo, em vez do fluxo de captura. **AddVideoEffectAsync** retorna uma instância do efeito adicionado. Como esse método pode ser usado com vários tipos de efeito, você deve converter a instância retornada em um objeto [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902).
 
@@ -53,7 +57,7 @@ Os resultados da análise de cena são retornados no manipulador de eventos **Sc
 
 [!code-cs[SceneAnalyzed](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSceneAnalyzed)]
 
-O objeto [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830) passado para o manipulador também tem uma propriedade [**FrameControllers**](https://msdn.microsoft.com/library/windows/apps/dn948834), que contém controladores de quadro sugeridos para capturar uma sequência de fotos variável para processamento em HDR. Para obter mais informações, consulte [Sequência de fotos variável](variable-photo-sequence.md)
+O objeto [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830) passado para o manipulador também tem uma propriedade [**FrameControllers**](https://msdn.microsoft.com/library/windows/apps/dn948834), que contém controladores de quadro sugeridos para capturar uma sequência de fotos variável para processamento em HDR. Para obter mais informações, consulte [Sequência de fotos variável](variable-photo-sequence.md).
 
 ### Limpar o efeito da análise de cena
 
@@ -91,7 +95,7 @@ Se você deseja executar algumas ações quando rostos forem detectados, como de
 
 [!code-cs[RegisterFaceDetectionHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterFaceDetectionHandler)]
 
-No manipulador do evento, você pode obter uma lista de todos os rostos detectados em um quadro acessando a propriedade [**FaceDetectionEffectFrame.DetectedFaces**](https://msdn.microsoft.com/library/windows/apps/dn948792) do [**FaceDetectedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948774). A propriedade [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126) é uma estrutura [**BitmapBounds**](https://msdn.microsoft.com/library/windows/apps/br226169) que descreve o retângulo contendo o rosto detectado em unidades relativas às dimensões do fluxo de visualização. Para ver o código de amostra que transforma as coordenadas do fluxo de visualização em coordenadas de tela, consulte [Amostra UWP de detecção de rosto](http://go.microsoft.com/fwlink/?LinkId=619486)
+No manipulador do evento, você pode obter uma lista de todos os rostos detectados em um quadro acessando a propriedade [**FaceDetectionEffectFrame.DetectedFaces**](https://msdn.microsoft.com/library/windows/apps/dn948792) do [**FaceDetectedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948774). A propriedade [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126) é uma estrutura [**BitmapBounds**](https://msdn.microsoft.com/library/windows/apps/br226169) que descreve o retângulo contendo o rosto detectado em unidades relativas às dimensões do fluxo de visualização. Para ver o código de amostra que transforma as coordenadas do fluxo de visualização em coordenadas de tela, consulte o [amostra UWP de detecção de rosto](http://go.microsoft.com/fwlink/?LinkId=619486).
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 
@@ -119,6 +123,7 @@ Nem todos os dispositivos têm um mecanismo de captura que possa ajustar o foco 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

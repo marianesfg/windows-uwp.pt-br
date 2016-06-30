@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
-description: Este artigo mostra como usar a interface IMediaEncodingProperties para definir a resolução e a taxa de quadro do fluxo de visualização da câmera e de fotos e vídeo capturados.
-title: Definir propriedades de codificação de mídia
+description: "Este artigo mostra como usar a interface IMediaEncodingProperties para definir a resolução e a taxa de quadro do fluxo de visualização da câmera e de fotos e vídeo capturados."
+title: "Definir propriedades de codificação de mídia"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d7b44ce9db2e3d540036525c4b43e155a9500010
+
 ---
 
 # Definir propriedades de codificação de mídia
@@ -85,6 +89,7 @@ Para garantir que os fluxos de captura de foto ou de vídeo correspondam à taxa
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

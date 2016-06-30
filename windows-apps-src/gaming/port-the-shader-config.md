@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Fazer a portabilidade de objetos de sombreador
-description: Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar-se de que o programa principal consiga se comunicar com os objetos de sombreador depois de eles serem compilados.
+description: "Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar-se de que o programa principal consiga se comunicar com os objetos de sombreador depois de eles serem compilados."
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 17d66e217e40eca0653078820746746eb23185e1
+
 ---
 
 # Fazer a portabilidade de objetos de sombreador
@@ -318,6 +322,7 @@ Próxima etapa
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

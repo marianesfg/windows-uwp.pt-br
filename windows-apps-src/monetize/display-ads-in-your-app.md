@@ -1,14 +1,18 @@
 ---
 author: mcleanbyron
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
-description: O SDK de Microsoft Store Engagement and Monetization oferece várias maneiras de monetizar seu aplicativo com anúncios.
-title: Apresentar anúncios em seus aplicativos
+description: "O SDK de Microsoft Store Engagement and Monetization oferece várias maneiras de monetizar seu aplicativo com anúncios."
+title: "Apresentar anúncios em seus aplicativos"
+translationtype: Human Translation
+ms.sourcegitcommit: 8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707
+ms.openlocfilehash: c79ba96908cc7b52afefbe44c3f56ce009c87f16
+
 ---
 
 # Apresentar anúncios em seus aplicativos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O [SDK de Microsoft Store Engagement and Monetization](monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md) oferece várias maneiras de monetizar seus aplicativos com anúncios.
 
@@ -39,6 +43,7 @@ Para obter mais informações, consulte [Qual é a diferença: AdMediatorControl
 * [Monetize seus aplicativo com anúncios]( http://go.microsoft.com/fwlink/p/?LinkId=699559)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

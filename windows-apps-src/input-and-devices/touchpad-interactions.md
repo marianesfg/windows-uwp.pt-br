@@ -5,8 +5,8 @@ title: "Interações por touchpad"
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 361df3a06faa771a81a6d63c2fe873a1aace1125
 
 ---
 
@@ -41,7 +41,7 @@ Devido à convergência de experiências de interação compatíveis com touchpa
 
 Os gestos e as diretrizes discutidos neste tópico podem ajudar a garantir que seu aplicativo dê suporte à entrada por touchpad de forma integrada e com um mínimo de código.
 
-## <span id="The_touchpad_language"></span><span id="the_touchpad_language"></span><span id="THE_TOUCHPAD_LANGUAGE"></span>A linguagem do touchpad
+## A linguagem do touchpad
 
 
 Um conjunto conciso de interações por touchpad é usado de forma consistente em todo o sistema. Otimize seu aplicativo para a entrada por toque e mouse. Essa linguagem permite que o aplicativo se comporte de modo familiar aos seus usuários, aumentando o nível de confiança deles e tornando o aplicativo mais fácil de aprender e usar.
@@ -71,39 +71,39 @@ Aqui estão alguns exemplos de gestos otimizados de touchpad para realizar taref
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span id="Three-finger_tap"></span><span id="three-finger_tap"></span><span id="THREE-FINGER_TAP"></span>Toque com três dedos</p></td>
+<td align="left"><p>Toque com três dedos</p></td>
 <td align="left"><p>Preferência do usuário para pesquisar com a <strong>Cortana</strong> ou mostrar <strong>Central de Ações</strong>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Three_finger_slide"></span><span id="three_finger_slide"></span><span id="THREE_FINGER_SLIDE"></span>Deslizar usando três dedos</p></td>
+<td align="left"><p>Deslizar usando três dedos</p></td>
 <td align="left"><p>Preferência de usuário para abrir a Vista de Tarefa da área de trabalho virtual, mostrar área de trabalho ou alternar aplicativos abertos.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Single_finger_tap_for_primary_action"></span><span id="single_finger_tap_for_primary_action"></span><span id="SINGLE_FINGER_TAP_FOR_PRIMARY_ACTION"></span>Toque único para ação primária</p></td>
+<td align="left"><p>Toque único para ação primária</p></td>
 <td align="left"><p>Com um único dedo, toque em um elemento e invoque sua ação primária (por exemplo, iniciar um aplicativo ou executar um comando).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Two_finger_tap_to_right-click"></span><span id="two_finger_tap_to_right-click"></span><span id="TWO_FINGER_TAP_TO_RIGHT-CLICK"></span>Toque com dois dedos para clique com o botão direito do mouse</p></td>
+<td align="left"><p>Toque com dois dedos para clique com o botão direito do mouse</p></td>
 <td align="left"><p>Toque com dois dedos simultaneamente em um elemento para selecioná-lo e exibir os comandos contextuais.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Two_finger_slide_to_pan"></span><span id="two_finger_slide_to_pan"></span><span id="TWO_FINGER_SLIDE_TO_PAN"></span>Toque com dois dedos para movimento panorâmico</p></td>
+<td align="left"><p>Toque com dois dedos para movimento panorâmico</p></td>
 <td align="left"><p>O deslizamento é usado principalmente para interações de movimento panorâmico, mas também pode ser usado para movimentação, desenho ou escrita.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Pinch_and_stretch_to_zoom"></span><span id="pinch_and_stretch_to_zoom"></span><span id="PINCH_AND_STRETCH_TO_ZOOM"></span>Pinçar e ampliar para zoom</p></td>
+<td align="left"><p>Pinçar e ampliar para zoom</p></td>
 <td align="left"><p>Os gestos de pinçar e ampliar são geralmente usados para redimensionamento e zoom semântico.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Single_finger_press_and_slide_to_rearrange"></span><span id="single_finger_press_and_slide_to_rearrange"></span><span id="SINGLE_FINGER_PRESS_AND_SLIDE_TO_REARRANGE"></span>Pressionar com toque único e deslizar para reorganizar</p></td>
+<td align="left"><p>Pressionar com toque único e deslizar para reorganizar</p></td>
 <td align="left"><p>Arraste um elemento.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Single_finger_press_and_slide_to_select_text"></span><span id="single_finger_press_and_slide_to_select_text"></span><span id="SINGLE_FINGER_PRESS_AND_SLIDE_TO_SELECT_TEXT"></span>Pressionar com toque único e deslizar para selecionar texto</p></td>
+<td align="left"><p>Pressionar com toque único e deslizar para selecionar texto</p></td>
 <td align="left"><p>Pressione dentro do texto selecionável e deslize para selecioná-lo. Toque duas vezes para selecionar uma palavra.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Left_and_right_click_zone"></span><span id="left_and_right_click_zone"></span><span id="LEFT_AND_RIGHT_CLICK_ZONE"></span>Zona de clique com o botão esquerdo e direito do mouse</p></td>
+<td align="left"><p>Zona de clique com o botão esquerdo e direito do mouse</p></td>
 <td align="left"><p>Emule a funcionalidade do botão esquerdo e direito de um dispositivo de mouse.</p></td>
 </tr>
 </tbody>
@@ -111,14 +111,14 @@ Aqui estão alguns exemplos de gestos otimizados de touchpad para realizar taref
 
  
 
-## <span id="Hardware"></span><span id="hardware"></span><span id="HARDWARE"></span>Hardware
+## Hardware
 
 
 Consulte os recursos de dispositivo do mouse ([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)) para identificar os aspectos da interface do usuário do seu aplicativo que o hardware de touchpad pode acessar diretamente. Recomendamos que você forneça uma interface do usuário para entrada por toque e mouse.
 
 Para saber mais sobre como consultar os recursos do dispositivo, veja [Identificar dispositivos de entrada](identify-input-devices.md).
 
-## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>Comentários visuais
+## Comentários visuais
 
 
 -   Quando o cursor do touchpad for detectado (por eventos de movimentação ou focalização), mostre a interface do usuário específica do mouse para indicar a funcionalidade exposta pelo elemento. Se o cursor do touchpad não for movimentado por algum tempo ou se o usuário começar uma interação por toque, faça com que a interface do usuário do touchpad desapareça gradualmente. Dessa forma, a interface do usuário fica mais organizada.
@@ -129,7 +129,7 @@ Para saber mais sobre como consultar os recursos do dispositivo, veja [Identific
 
 Para obter diretrizes gerais sobre comentários visuais, veja [Diretrizes de comentários visuais](https://msdn.microsoft.com/library/windows/apps/hh465342).
 
-## <span id="Cursors"></span><span id="cursors"></span><span id="CURSORS"></span>Cursores
+## Cursores
 
 
 Um conjunto de cursores padrão está disponível para ponteiros de touchpad. São usados para indicar a ação primária de um elemento.
@@ -144,7 +144,7 @@ Se você precisa personalizar o cursor do mouse:
 -   Use os cursores de redimensionamento horizontal, vertical e diagonal (![cursor de redimensionamento vertical](images/cursor-vertical.png), ![cursor de redimensionamento horizontal](images/cursor-horizontal.png), ![cursor de redimensionamento diagonal (inferior esquerdo, superior direito)](images/cursor-diagonal2.png), ![cursor de redimensionamento diagonal (superior esquerdo, inferior direito)](images/cursor-diagonal1.png)), quando um objeto for redimensionável.
 -   Use os cursores de mão agarrando (![cursor de mão agarrando (aberto)](images/cursor-pan1.png), ![cursor de mão agarrando (fechado)](images/cursor-pan2.png)) durante o movimento panorâmico do conteúdo dentro de uma tela fixa (como um mapa).
 
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
@@ -170,6 +170,6 @@ Se você precisa personalizar o cursor do mouse:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

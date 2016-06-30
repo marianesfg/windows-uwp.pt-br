@@ -1,6 +1,8 @@
-author: exemplos de Mtoepke #XAML para aplicativos de mídia Este tópico lista exemplos de XAML para aplicativos de mídia no Xbox One.
+autor: Mtoepke
+#Amostras de XAML para aplicativos de mídia
+Este tópico lista amostras de XAML para aplicativos de mídia no Xbox One.
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

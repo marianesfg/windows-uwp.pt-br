@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Manipular Cenários removidos de dispositivos no Direct3D 11
-description: Este tópico explica como recriar a cadeia de interface do dispositivo Direct3D e DXGI quando o adaptador gráfico é removido ou reinicializado.
+title: "Manipular Cenários removidos de dispositivos no Direct3D 11"
+description: "Este tópico explica como recriar a cadeia de interface do dispositivo Direct3D e DXGI quando o adaptador gráfico é removido ou reinicializado."
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8d522a309386b06f97bc63b9eead1ca4cecf165c
+
 ---
 
 # <span id="dev_gaming.handling_device-lost_scenarios"></span>Manipular cenários removidos de dispositivos no Direct3D 11
@@ -25,7 +29,7 @@ Mediante essas circunstâncias, o DXGI retorna um código de erro indicando que 
 
 ### <span></span>Etapa 1:
 
-Inclua uma verificação do erro de dispositivo removido no loop de renderização. Apresente o quadro chamando [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) (ou [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) e assim por diante). Em seguida, verifique se [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) ou **DXGI\_ERROR\_DEVICE\_RESET** é retornado
+Inclua uma verificação do erro de dispositivo removido no loop de renderização. Apresente o quadro chamando [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) (ou [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) e assim por diante). Em seguida, verifique se [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) ou **DXGI\_ERROR\_DEVICE\_RESET** é retornado.
 
 Primeiro, o modelo armazena o HRESULT retornado pela cadeia de troca DXGI:
 
@@ -153,7 +157,7 @@ O código a seguir recuperará o código de erro [**DXGI\_ERROR\_DEVICE\_REMOVED
 #endif
 ```
 
-Para obter mais detalhes, consulte [**GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) e [**DXGI\_ERROR**](https://msdn.microsoft.com/library/windows/desktop/bb509553)
+Para obter mais detalhes, consulte [**GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) e [**DXGI\_ERROR**](https://msdn.microsoft.com/library/windows/desktop/bb509553).
 
 ### Testando a manipulação de dispositivo removido
 
@@ -172,6 +176,7 @@ O Prompt de Comando do Desenvolvedor do Visual Studio dá suporte a uma ferramen
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

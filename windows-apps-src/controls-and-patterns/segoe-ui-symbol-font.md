@@ -1,11 +1,15 @@
 ---
 author: Jwmsft
-Description: Este artigo lista e fornece diretrizes de uso dos glifos que vêm com a fonte Segoe MDL2 Assets.
+Description: "Este artigo lista e fornece diretrizes de uso dos glifos que vêm com a fonte Segoe MDL2 Assets."
 Search.Refinement.TopicID: 184
-title: Diretrizes para ícones Segoe MDL2
+title: "Diretrizes para ícones Segoe MDL2"
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
 label: Segoe MDL2 icons
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 9071c7dfddba15738d7bad482fd14f7cbffaa1f7
+
 ---
 
 # Diretrizes para ícones Segoe MDL2
@@ -1611,6 +1615,7 @@ Use os glifos da lista seguinte para [**AppBar**](https://msdn.microsoft.com/lib
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

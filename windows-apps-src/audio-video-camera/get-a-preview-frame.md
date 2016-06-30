@@ -1,13 +1,17 @@
 ---
 author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
-description: Este tópico mostra como obter um quadro de visualização do fluxo de visualização de captura de mídia.
-title: Obter um quadro de visualização
+description: "Este tópico mostra como obter um quadro de visualização do fluxo de visualização de captura de mídia."
+title: "Obter um quadro de visualização"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c512ec92272ab03cfd8e91602018f09ef8225652
+
 ---
 
 # Obter um quadro de visualização
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico mostra como obter um quadro de visualização do fluxo de visualização de captura de mídia.
 
@@ -59,6 +63,7 @@ Quando terminar de usar o quadro de visualização, certifique-se de chamar seu 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

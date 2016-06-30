@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Ferramentas de diagnóstico de elementos gráficos
-description: Saiba como obter e usar os recursos de diagnóstico de elementos gráficos, incluindo depuração de elementos gráficos, análise do quadro de elementos gráficos e uso da GPU no Visual Studio.
+title: "Ferramentas de diagnóstico de elementos gráficos"
+description: "Saiba como obter e usar os recursos de diagnóstico de elementos gráficos, incluindo depuração de elementos gráficos, análise do quadro de elementos gráficos e uso da GPU no Visual Studio."
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f266cb50893fd37162f21be169d6daf6e37c6bb9
+
 ---
 
 # Ferramentas de diagnóstico de elementos gráficos
@@ -35,6 +39,7 @@ Recursos de diagnóstico de elementos gráficos incluem a capacidade de criar di
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

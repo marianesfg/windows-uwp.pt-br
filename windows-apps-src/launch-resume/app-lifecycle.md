@@ -1,14 +1,17 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Ciclo de vida do aplicativo
-description: Este tópico descreve o ciclo de vida de um aplicativo da Plataforma Universal do Windows (UWP), desde o momento em que ele for ativado até que ele seja fechado.
+description: "Este tópico descreve o ciclo de vida de um aplicativo da Plataforma Universal do Windows (UWP), desde o momento em que ele for ativado até que ele seja fechado."
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
+ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
+ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
+
 ---
 
 # Ciclo de vida do aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -28,7 +31,7 @@ Esta ilustração representa as transições entre os estados de execução do a
 ## Implantação
 
 
-Para que um aplicativo seja ativado, ele deve primeiro ser implantado. Seu aplicativo é implantado quando um usuário instala seu aplicativo ou quando você usa o Visual Studio para compilar e executar seu aplicativo durante o desenvolvimento e o teste. Para saber mais sobre este e outros cenários de implantação avançada, consulte [Pacotes de aplicativos e implantação](https://msdn.microsoft.com/library/windows/apps/hh464929)
+Para que um aplicativo seja ativado, ele deve primeiro ser implantado. Seu aplicativo é implantado quando um usuário instala seu aplicativo ou quando você usa o Visual Studio para compilar e executar seu aplicativo durante o desenvolvimento e o teste. Para saber mais sobre isso e sobre cenários de implantação avançada, consulte [Pacotes de aplicativos e implantação](https://msdn.microsoft.com/library/windows/apps/hh464929).
 
 ## Inicialização do aplicativo
 
@@ -41,14 +44,14 @@ Quando o usuário muda para o aplicativo terminado, o sistema envia os argumento
 
 Se o valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) for **NotRunning**, o aplicativo deverá reiniciar como se estivesse sendo iniciado pela primeira vez.
 
-Quando um aplicativo é iniciado, o Windows exibe a tela inicial do aplicativo. Para configurar a tela inicial, consulte [Adicionando uma tela inicial](https://msdn.microsoft.com/library/windows/apps/xaml/hh465331)
+Quando um aplicativo é iniciado, o Windows exibe a tela inicial do aplicativo. Para configurar a tela inicial, consulte [Adicionando uma tela inicial](https://msdn.microsoft.com/library/windows/apps/xaml/hh465331).
 
 Enquanto a tela inicial é exibida, seu aplicativo deve preparar sua interface do usuário. As principais tarefas do aplicativo são registrar manipuladores de eventos e configurar qualquer interface do usuário personalizada necessária para carregar a página inicial. Essas tarefas só devem levar alguns segundos. Se um aplicativo precisar solicitar dados da rede ou recuperar grandes quantidades de dados do disco, essas atividades deverão ser concluídas fora da ativação. Um aplicativo pode usar sua própria interface do usuário de carregamento personalizada ou uma tela inicial estendida enquanto aguarda a conclusão dessas operações de longa duração. Consulte [Exibir uma tela inicial por mais tempo](create-a-customized-splash-screen.md) e [Exemplo de tela inicial](http://go.microsoft.com/fwlink/p/?linkid=234889) para obter mais informações. Depois que o aplicativo conclui a ativação, ele entra no estado **Running** e a tela inicial desaparece (e todos os recursos e objetos são limpos).
 
 ## Ativação do aplicativo
 
 
-Um aplicativo pode ser ativado pelo usuário por meio de diversas extensões e contratos, como o contrato de Compartilhamento. Para obter uma lista das maneiras de ativar o aplicativo, consulte [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693)
+Um aplicativo pode ser ativado pelo usuário por meio de diversas extensões e contratos, como o contrato de Compartilhamento. Para obter uma lista das maneiras de ativar o aplicativo, consulte [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693).
 
 A classe [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) define métodos que você pode substituir para manipular os vários tipos de ativação. Vários tipos de ativação têm um método específico que você pode substituir, como [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336) etc. Para os demais tipos de ativação, substitua o método [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330).
 
@@ -67,8 +70,6 @@ Os dados do evento [**OnActivated**](https://msdn.microsoft.com/library/windows/
  
 
 **Observação**
-            
-          
             *A sessão de usuário atual* se baseia no logon no Windows. Desde que o usuário atual não tenha explicitamente desconectado, desligado, ou o Windows não tenha sido reiniciado por outros motivos, a sessão de usuário atual persiste em eventos, como autenticação de tela de bloqueio, troca de usuário etc.
 
  
@@ -81,11 +82,11 @@ Os dados do evento [**OnActivated**](https://msdn.microsoft.com/library/windows/
 
 Se você fizer logon usando a conta do administrador do computador, não poderá ativar nenhum aplicativo UWP.
 
-Para obter mais informações, consulte [Extensões de aplicativos](https://msdn.microsoft.com/library/windows/apps/hh464906)
+Para saber mais, consulte [Extensões de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh464906).
 
 ### **OnActivated** versus ativações específicas
 
-O método [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) é o meio pelo qual devem ser tratados todos os tipos de ativação possíveis. No entanto, é mais comum usar métodos diferentes para tratar a maioria dos tipos de ativação e usar **OnActivated** somente como o método de contingência para os tipos de ativação menos comuns. Por exemplo, [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) tem um método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) que é chamado como um retorno de chamada sempre que [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) é **Launch**, e essa é a ativação típica para a maioria dos aplicativos. Há mais 6 métodos **On\*** para ativações específicas: [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806). Os modelos iniciais para um aplicativo XAML têm uma implementação para **OnLaunched** e um manipulador para [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341)
+O método [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) é o meio pelo qual devem ser tratados todos os tipos de ativação possíveis. No entanto, é mais comum usar métodos diferentes para tratar a maioria dos tipos de ativação e usar **OnActivated** somente como o método de contingência para os tipos de ativação menos comuns. Por exemplo, [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) tem um método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) que é chamado como um retorno de chamada sempre que [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) é **Launch**, e essa é a ativação típica para a maioria dos aplicativos. Há mais 6 métodos **On\*** para ativações específicas: [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806). Os modelos iniciais para um aplicativo XAML têm uma implementação para **OnLaunched** e um manipulador para [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341).
 
 ## Suspensão de aplicativo
 
@@ -98,15 +99,15 @@ Se for necessário realizar trabalho assíncrono quando o aplicativo estiver sus
 
 O sistema tenta manter o aplicativo e seus dados na memória enquanto ele está suspenso. Entretanto, caso não tenha recursos suficientes para manter o aplicativo na memória, o sistema encerra o aplicativo. Os aplicativos não recebem notificações de que estão sendo encerrados. Sendo assim, a única oportunidade que você tem para salvar os dados do aplicativo é durante a suspensão. Quando um aplicativo determina que foi ativado depois de ter sido encerrado, ele deve carregar os dados salvos durante a suspensão, para que o aplicativo fique no mesmo estado que antes da suspensão. Quando o usuário retorna a um aplicativo suspenso que tenha sido terminado, o aplicativo deve restaurar seus dados de aplicativo no método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). O sistema não notifica um aplicativo quando é terminado, por isso seu aplicativo deve salvar seus dados de aplicativo e liberar recursos exclusivos e identificadores de arquivo quando suspenso, e restaurá-los quando ativado após o término.
 
-Se um aplicativo tiver registrado um manipulador de evento para o evento [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341), esse código será chamado imediatamente antes da suspensão do aplicativo. Você pode usar o manipulador de eventos para salvar o aplicativo e os dados do usuário. Recomenda-se que você use as APIs de dados de aplicativo com essa finalidade porque há garantia de que elas serão concluídas antes que o aplicativo entre no estado **Suspended**. Para obter mais informações, consulte [Armazenar e recuperar configurações e outros dados de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt299098)
+Se um aplicativo tiver registrado um manipulador de evento para o evento [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341), esse código será chamado imediatamente antes da suspensão do aplicativo. Você pode usar o manipulador de eventos para salvar o aplicativo e os dados do usuário. Recomenda-se que você use as APIs de dados de aplicativo com essa finalidade porque há garantia de que elas serão concluídas antes que o aplicativo entre no estado **Suspended**. Para obter mais informações, consulte [Armazene e recupere configurações e outros dados de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt299098).
 
 Você também deve liberar recursos e identificadores de arquivo exclusivos para que outros aplicativos tenham acesso a eles quando o seu aplicativo não os estiver usando. Exemplos de recursos exclusivos incluem câmeras, dispositivos de E/S, dispositivos externos e recursos de rede. Liberar explicitamente os indicadores de arquivos e recursos exclusivos ajuda a garantir que outros aplicativos possam acessá-los quando não estiverem sendo usados pelo seu aplicativo. Quando o aplicativo for ativado após o encerramento, ele deverá reabrir seus indicadores de arquivos e recursos exclusivos.
 
 Normalmente, seu aplicativo deve salvar seu estado e liberar recursos e identificadores de arquivo imediatamente ao manipular o evento de suspensão, e o código não deve levar mais de um segundo para ser concluído. Se um aplicativo não retornar do evento de suspensão dentro de alguns segundos, o Windows entenderá que o aplicativo parou de responder e o terminará.
 
-Existem alguns cenários em que o aplicativo deve continuar a ser executado para concluir tarefas em segundo plano. Por exemplo, seu aplicativo pode continuar a reproduzir o áudio em segundo plano; para saber mais, consulte [Áudio em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140). Além disso, as operações de transferência em segundo plano continuam mesmo se o seu aplicativo estiver suspenso ou for encerrado. Para obter mais informações, consulte [Como baixar um arquivo](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer)
+Existem alguns cenários em que o aplicativo deve continuar a ser executado para concluir tarefas em segundo plano. Por exemplo, seu aplicativo pode continuar a reproduzir o áudio em segundo plano; para saber mais, consulte [Áudio em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140). Além disso, as operações de transferência em segundo plano continuam mesmo se o seu aplicativo estiver suspenso ou for encerrado. Para obter mais informações, consulte [Como baixar um arquivo](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer).
 
-Para obter diretrizes, consulte [Diretrizes de suspensão e retomada de aplicativos](https://msdn.microsoft.com/library/windows/apps/hh465088)
+Para obter diretrizes, consulte [Início, retomada e tarefas em segundo plano](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
 **Observação sobre a depuração com Visual Studio:  **o Visual Studio impede que o Windows suspenda um aplicativo que esteja anexado ao depurador. Isso ocorre para permitir que o usuário exiba a interface de usuário de depuração do Visual Studio enquanto o aplicativo está em execução. Quando você está depurando um aplicativo, é possível enviar a ele um evento de suspensão usando o Visual Studio. Verifique se a barra de ferramentas **Local de Depuração** está sendo mostrada e clique no ícone de **Suspender**.
 
@@ -134,7 +135,7 @@ Enquanto um aplicativo estiver suspenso, ele não receberá nenhum evento da red
 
  
 
-Para obter diretrizes, consulte [Diretrizes de suspensão e retomada de aplicativos](https://msdn.microsoft.com/library/windows/apps/hh465088)
+Para obter diretrizes, consulte [Início, retomada e tarefas em segundo plano](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
 ## Fechamento do aplicativo
 
@@ -160,7 +161,7 @@ A experiência de falha do sistema é projetada para que os usuários voltem ao 
 
 Se o aplicativo falhar, parar de responder ou gerar uma exceção, um relatório do problema será enviado para a Microsoft segundo as [configurações de comentários e diagnóstico](http://go.microsoft.com/fwlink/p/?LinkID=614828). A Microsoft fornece um subconjunto dos dados de erro no relatório de problema para você para que você possa usá-lo para melhorar o aplicativo. Você pode ver esses dados na página Qualidade do aplicativo no Painel.
 
-Quando o usuário ativa um aplicativo após um travamento, o manipulador de evento de ativação recebe em [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) o valor **NotRunning**, e deve exibir os dados e a interface do usuário iniciais. Após um travamento, não use sistematicamente os dados do aplicativo que usaria para **Resuming** com **Suspended** porque esses dados podem estar corrompidos; consulte [Diretrizes para suspensão e retomada de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465088)
+Quando o usuário ativa um aplicativo após um travamento, o manipulador de evento de ativação recebe em [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) o valor **NotRunning**, e deve exibir os dados e a interface do usuário iniciais. Após um travamento, não use sistematicamente os dados do aplicativo que usaria para **Resuming** com **Suspended** porque esses dados podem estar corrompidos; consulte [Guidelines for app suspend and resume](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
 ## Remoção do aplicativo
 
@@ -170,9 +171,9 @@ Quando um usuário exclui seu aplicativo, ele é removido, juntamente com os dad
 ## Ciclo de vida do aplicativo e os modelos de projeto do Visual Studio
 
 
-O código básico que é relevante para o ciclo de vida do aplicativo é fornecido nos modelos de projeto iniciais do Visual Studio. O aplicativo básico manipula a ativação de inicialização, oferece um local para restaurar os dados do aplicativo e exibe a interface do usuário principal, mesmo antes que você adicione seu próprio código. Para obter mais informações, veja [Modelos de projeto em C#, VB e C++ para aplicativos](https://msdn.microsoft.com/library/windows/apps/hh768232)
+O código básico que é relevante para o ciclo de vida do aplicativo é fornecido nos modelos de projeto iniciais do Visual Studio. O aplicativo básico manipula a ativação de inicialização, oferece um local para restaurar os dados do aplicativo e exibe a interface do usuário principal, mesmo antes que você adicione seu próprio código. Para obter mais informações, veja [Modelos de projeto em C#, VB e C++ para aplicativos](https://msdn.microsoft.com/library/windows/apps/hh768232).
 
-## APIs de chave do ciclo de vida do aplicativo
+## APIS chave do ciclo de vida do aplicativo
 
 
 -   [
@@ -192,7 +193,7 @@ O código básico que é relevante para o ciclo de vida do aplicativo é forneci
             ](https://msdn.microsoft.com/library/windows/apps/br209041) (XAML)
 
 **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132)
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -200,7 +201,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 * [Diretrizes para suspensão e retomada de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Manipular a pré-inicialização de aplicativos](handle-app-prelaunch.md)
+* [Manipular pré-inicialização do aplicativo](handle-app-prelaunch.md)
 * [Manipular a ativação do aplicativo](activate-an-app.md)
 * [Manipular a suspensão do aplicativo](suspend-an-app.md)
 * [Manipular a retomada do aplicativo](resume-an-app.md)
@@ -211,8 +212,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

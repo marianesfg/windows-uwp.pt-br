@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Um padrão com uma área de conteúdo e uma área de comando para aplicativos com exibição única ou experiências modais, como visualizadores/editores de fotos, visualizadores de documentos, mapas, aplicativos de pintura ou outros aplicativos que usam uma exibição com rolagem livre.
-title: Diretrizes para o padrão de tela ativa
+Description: "Um padrão com uma área de conteúdo e uma área de comando para aplicativos com exibição única ou experiências modais, como visualizadores/editores de fotos, visualizadores de documentos, mapas, aplicativos de pintura ou outros aplicativos que usam uma exibição com rolagem livre."
+title: "Diretrizes para o padrão de tela ativa"
 ms.assetid: 4D768472-64D6-406C-9E87-F750F6B981A0
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 490c45fb8dc565e4ae0b890d26f28d698b58f255
+
 ---
 #Padrão de tela ativa
 
@@ -36,6 +40,7 @@ O padrão de tela ativa consiste em uma área de conteúdo e uma área de comand
 -   [**Barra de aplicativos e barra de comandos**](app-bars.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

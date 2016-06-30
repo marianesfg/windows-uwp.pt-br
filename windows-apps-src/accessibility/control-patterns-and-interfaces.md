@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: Lista os padrões de controle de Automação da Interface do Usuário da Microsoft, as classes que os clientes usam para acessá-los e as interfaces que os provedores usam para implementá-los.
+Description: "Lista os padrões de controle de Automação da Interface do Usuário da Microsoft, as classes que os clientes usam para acessá-los e as interfaces que os provedores usam para implementá-los."
 ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
-title: Padrões e interfaces de controle
+title: "Padrões e interfaces de controle"
 label: Control patterns and interfaces
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 9f38c3bd26ef7b409d4c743abf25a5b0a6455f20
+
 ---
 
 # Padrões e interfaces de controle  
@@ -43,10 +46,10 @@ Ao implementar um padrão de controle, você também deverá consultar a documen
 | **SynchronizedInput** | [**ISynchronizedInputProvider**](https://msdn.microsoft.com/library/windows/apps/Dn279198) | Permite que os aplicativos de cliente da Automação da Interface do Usuário redirecionem a entrada do mouse ou do teclado para um elemento da interface do usuário específico. |
 | **Tabela** | [**ITableProvider**](https://msdn.microsoft.com/library/windows/apps/BR242623) | Usado para controles que possuem uma grade e informações de cabeçalho. Por exemplo, um controle de calendário tabular. |
 | **TableItem** | [**ITableItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242620) | Usado para itens em uma tabela. |
-| **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | Usado para editar controles e documentos que exponham informações textuais. Consulte também [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242634) e [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/BR2426272). |
-| **TextChild** | [**ITextChildProvider**](https://msdn.microsoft.com/library/windows/apps/Hh701839) | Usado para acessar o antecessor mais próximo de um elemento que suporta o padrão de controle **Text**. |
+| **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | Usado para editar controles e documentos que exponham informações textuais. Consulte também [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) e [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider2). |
+| **TextChild** | [**ITextChildProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextchildprovider) | Usado para acessar o antecessor mais próximo de um elemento que suporta o padrão de controle **Text**. |
 | **TextEdit** | Não há classe gerenciada disponível | Fornece acesso a um controle que modifica o texto, por exemplo, um controle que executa correção automática ou permite a composição de entrada através de um IME (Editor de Método de Entrada). |
-| **TextRange** | [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242634) | Fornece acesso a um conjunto de texto contínuo em um contêiner de texto que implementa [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627). Consulte também [**ITextRangeProvider2**](https://msdn.microsoft.com/library/windows/apps/BR2426342). |
+| **TextRange** | [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) | Fornece acesso a um conjunto de texto contínuo em um contêiner de texto que implementa [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider). Consulte também [**ITextRangeProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider2). |
 | **Toggle** | [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) | Usado para controles onde é possível alternar o estado. Por exemplo, [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/BR209316) e itens de menu que podem ser marcados. |
 | **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Usado para controles que podem ser redimensionados, transferidos e girados. O padrão de controle de transformação costuma ser usado em aplicativos de desenho, design, formulários e editores gráficos. |
 | **Value** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Possibilita que os clientes obtenham ou definam um valor nos controles que não dão suporte a um intervalo de valores. |
@@ -65,6 +68,7 @@ Ao implementar um padrão de controle, você também deverá consultar a documen
 * [Acessibilidade](accessibility.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

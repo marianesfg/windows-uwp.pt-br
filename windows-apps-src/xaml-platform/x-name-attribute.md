@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Identifica de forma exclusiva os elementos de objetos para obter acesso ao objeto instanciado de code-behind ou código geral.
+description: "Identifica de forma exclusiva os elementos de objetos para obter acesso ao objeto instanciado de code-behind ou código geral."
 title: Atributo xName
 ms.assetid: 4FF1F3ED-903A-4305-B2BD-DCD29E0C9E6D
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 442c2fa103e1e968ef47ea990bfe8e166daec88b
+
 ---
 
 # Atributo x:Name
@@ -69,6 +73,7 @@ Se **Name** estiver disponível como uma propriedade definível em um elemento, 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

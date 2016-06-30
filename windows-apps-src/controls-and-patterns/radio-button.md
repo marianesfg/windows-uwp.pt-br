@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Botões de opção permitem que os usuários selecionem uma opção entre duas ou mais escolhas.
-title: Diretrizes de botões de opção
+Description: "Botões de opção permitem que os usuários selecionem uma opção entre duas ou mais escolhas."
+title: "Diretrizes de botões de opção"
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 317df548e72f9aff475ba0959668b6441ac29d3d
+
 ---
 # Botões de opção
 Botões de opção permitem que os usuários selecionem uma opção entre duas ou mais escolhas. Cada opção é representada por um botão de opção; um usuário pode selecionar apenas um botão de opção em um grupo de botões de opção.
@@ -181,6 +185,7 @@ Esta ilustração mostra a maneira correta de posicionar e espaçar os botões d
 - [**Classe Windows.UI.Xaml.Controls RadioButton**](https://msdn.microsoft.com/library/windows/apps/br227544)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

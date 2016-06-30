@@ -1,9 +1,14 @@
 ---
 author: mtoepke
 title: Estender o exemplo de jogo
-description: Parabéns! A esta altura, você já entende os componentes principais de um jogo UWP (Plataforma Universal do Windows) DirectX 3D básico.
+description: "Parabéns! A esta altura, você já entende os componentes principais de um jogo UWP (Plataforma Universal do Windows) DirectX 3D básico."
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
-keywords: ["DirectX, XAML"]
+keywords:
+- DirectX, XAML
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 02b8681c45c84e1cdd5b97dfc717a68015df1252
+
 ---
 
 # Estender o exemplo de jogo
@@ -1515,6 +1520,7 @@ Para baixar uma versão do jogo de exemplo que usa XAML para sobreposição, vá
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Em um aplicativo da Plataforma Universal do Windows (UWP), elementos de comando são os elementos interativos da interface do usuário que permitem ao usuário executar ações, como enviar um email, excluir um item ou enviar um formulário.
-title: Noções básicas de design de comando para aplicativos da Plataforma Universal do Windows (UWP)
+Description: "Em um aplicativo da Plataforma Universal do Windows (UWP), elementos de comando são os elementos interativos da interface do usuário que permitem ao usuário executar ações, como enviar um email, excluir um item ou enviar um formulário."
+title: "Noções básicas de design de comando para aplicativos da Plataforma Universal do Windows (UWP)"
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: be7ff187df9800a8c2c47c4315f3f9b021e265f8
+
 ---
 
 #  Noções básicas de design de comandos para aplicativos UWP
@@ -152,6 +156,7 @@ Consulte a [Cartilha de interação](../input-and-devices/input-primer.md) para 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

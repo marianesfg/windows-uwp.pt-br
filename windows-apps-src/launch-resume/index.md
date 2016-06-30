@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Início, retomada e tarefas em segundo plano
-description: Esta seção descreve o que acontece quando um aplicativo UWP (Plataforma Universal do Windows) é iniciado, suspenso, retomado e encerrado.
+author: TylerMSFT
+title: "Início, retomada e tarefas em segundo plano"
+description: "Esta seção descreve o que acontece quando um aplicativo UWP (Plataforma Universal do Windows) é iniciado, suspenso, retomado e encerrado."
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
+ms.sourcegitcommit: a8e6145f7a5c75d3b37277b80b07b0b3ad739d5c
+ms.openlocfilehash: ab20c4af5b9a87dc73775d304c314c9861d989d4
+
 ---
 
 # Início, retomada e tarefas em segundo plano
@@ -37,7 +40,6 @@ Esta seção descreve o que acontece quando um aplicativo UWP (Plataforma Univer
 | [Manipular a ativação de arquivos](handle-file-activation.md)                                            | Saiba como registrar seu aplicativo para ser o manipulador padrão de um tipo de arquivo.                                                                                                  |
 | [Diretrizes de tipos de arquivos e URIs](https://msdn.microsoft.com/library/windows/apps/hh700321) | Entendendo a relação entre os aplicativos UWP e os tipos de arquivo e protocolos compatíveis, você pode oferecer uma experiência mais consistente e refinada a seus usuários. |
 | [Arquivo reservado e nomes de esquemas de URI](reserved-uri-scheme-names.md)                             | Este tópico lista os arquivos reservados e os nomes de esquemas de URI que não estão disponíveis para seu aplicativo.                                                                                |
-| Ativar aplicativos nativos                                                                          | Descrição                                                                                                                                                                |
 | [Iniciar o aplicativo Configurações do Windows](launch-settings-app.md)                                      | Saiba como iniciar o aplicativo Configurações do Windows.                                                                                                                              |
 | [Iniciar o aplicativo da Windows Store](launch-store-app.md)                                            | Saiba como iniciar o aplicativo da Windows Store.                                                                                                                                 |
 | [Iniciar o aplicativo Mapas do Windows](launch-maps-app.md)                                              | Saiba como iniciar o aplicativo Mapas do Windows.                                                                                                                                  |
@@ -101,8 +103,6 @@ Além disso, você pode usar a classe [**SplashScreen**](https://msdn.microsoft.
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,24 +1,28 @@
 ---
 author: mtoepke
 title: Modelos de projeto e ferramentas para jogos
-description: Mostra o que é necessário para começar a programar jogos DirectX para a Plataforma Universal do Windows (UWP).
+description: "Mostra o que é necessário para começar a programar jogos DirectX para a Plataforma Universal do Windows (UWP)."
 ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b7b4cba0c88a914c3d0da4cf79adb51bcad2307f
+
 ---
 
 # Modelos de projeto e ferramentas para jogos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tópico mostra o que você precisa para iniciar a programação de jogos em DirectX para a Plataforma Universal do Windows (UWP).
 
 Primeiro, você precisa do Visual Studio.
 
-## Obter o Visual Studio
+## Obter Visual Studio
 
 
-Baixar e instalar o Microsoft Visual Studio 2015
+[Baixe e instale o Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
 
 <table>
 <colgroup>
@@ -63,7 +67,7 @@ Caso esteja criando um novo jogo em DirectX, consulte os tópicos a seguir.
 -   [Desenvolvendo o Marble Maze, um jogo da Plataforma Universal do Windows em C++ e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
 > **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132)
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -76,6 +80,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

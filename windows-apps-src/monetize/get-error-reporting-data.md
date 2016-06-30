@@ -1,14 +1,17 @@
 ---
 author: mcleanbyron
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
-description: Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados para um determinado intervalo de datas e outros filtros opcionais.
-title: Obter dados de relatório de erros
+description: "Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados para um determinado intervalo de datas e outros filtros opcionais."
+title: "Obter dados de relatório de erros"
+ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
+ms.openlocfilehash: 5b2421daf9df4ca417d5089166c0927e2b2f7436
+
 ---
 
 # Obter dados de relatório de erros
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados para um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
@@ -63,7 +66,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">string</td>
-<td align="left">A ID de produto do aplicativo para o qual você deseja recuperar dados de relatório de erros. A ID do produto é inserida no link de listagem do aplicativo que está disponível na [App identity page](https://msdn.microsoft.com/library/windows/apps/mt148561) do painel do Centro de Desenvolvimento. Um exemplo de ID de produto é 9WZDNCRFJ3Q8.</td>
+<td align="left">A ID da Loja do aplicativo para o qual você deseja recuperar dados de relatório de erros. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.</td>
 <td align="left">Sim</td>
 </tr>
 <tr class="even">
@@ -242,7 +245,7 @@ Para obter uma lista dos campos com suporte, consulte a tabela a seguir. Valores
 
 ### Exemplo de solicitação
 
-Os exemplos a seguir demonstram várias solicitações para a obtenção de dados de relatório de erros. Substitua o valor de *applicationId* pela ID do produto de seu aplicativo.
+Os exemplos a seguir demonstram várias solicitações para a obtenção de dados de relatório de erros. Substitua o valor de *applicationId* pela ID da Loja de seu aplicativo.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/failurehits?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -271,7 +274,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 | Valor           | Tipo    | Descrição                                                                                                                                                                                                                              |
 |-----------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date            | string  | A primeira data no intervalo de datas dos dados de aquisição. Se a solicitação especificou um único dia, esse valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, esse valor será a primeira data nesse intervalo de datas. |
-| applicationId   | string  | A ID de produto do aplicativo para o qual você deseja recuperar dados de aquisição IAP.                                                                                                                                                           |
+| applicationId   | string  | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição de IAP.                                                                                                                                                           |
 | applicationName | string  | O nome de exibição do aplicativo.                                                                                                                                                                                                             |
 | failureName     | string  | O nome do erro.                                                                                                                                                                                                                 |
 | failureHash     | string  | O identificador exclusivo para o erro.                                                                                                                                                                                                   |
@@ -326,6 +329,7 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 * [Obter avaliações de aplicativo](get-app-reviews.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

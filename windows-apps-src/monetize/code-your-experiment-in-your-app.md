@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Depois de definir seu experimento no painel do Centro de Desenvolvimento, você está pronto para codificá-lo no seu aplicativo.
-title: Codificar seu aplicativo para experimentação
+Description: "Depois de definir seu experimento no painel do Centro de Desenvolvimento, você está pronto para codificá-lo no seu aplicativo."
+title: "Codificar seu aplicativo para experimentação"
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
+translationtype: Human Translation
+ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
+ms.openlocfilehash: 4e6706624e71c6d448a3d457c27d11c9f6ecc156
+
 ---
 
 # Codificar seu aplicativo para experimentação
@@ -97,6 +101,7 @@ Depois de definir seu experimento no painel do Centro de Desenvolvimento e codif
   * [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

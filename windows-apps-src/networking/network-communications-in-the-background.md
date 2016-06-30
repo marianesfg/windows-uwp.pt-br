@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: Aplicativos usam tarefas em segundo plano e dois mecanismos principais para manter as comunicações quando não estão em primeiro plano.
-title: Comunicações de rede em segundo plano
+description: "Aplicativos usam tarefas em segundo plano e dois mecanismos principais para manter as comunicações quando não estão em primeiro plano."
+title: "Comunicações de rede em segundo plano"
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 4ab9ca2a1cd337bd0af8fbbfcf44d8fc6e6dda3e
+
 ---
 
 # Comunicações de rede em segundo plano
@@ -56,9 +60,9 @@ Para que seu aplicativo receba e processe os dados recebidos em um soquete quand
 
     Um aplicativo transfere a propriedade de um soquete para um agente de soquete e passa a ID da tarefa em segundo plano usando um dos métodos apropriados a seguir:
 
-    -   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256) em um [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)
-    -   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433) em um [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)
-    -   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407) em um [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)
+    -   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256) em um [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319).
+    -   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433) em um [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882).
+    -   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407) em um [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906).
 
 ```csharp
     private void TransferOwnership(StreamSocketListener tcpListener) 
@@ -152,13 +156,13 @@ case SocketActivityTriggerReason.SocketClosed:
 
 Para obter uma amostra completa demonstrando o uso de [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) e do agente de soquete, consulte [SocketActivityStreamSocket sample](http://go.microsoft.com/fwlink/p/?LinkId=620606). A inicialização do soquete é realizada em Scenario1\_Connect.xaml.cs, e a implementação da tarefa em segundo plano está em SocketActivityTask.cs.
 
-Você provavelmente perceberá que a amostra chama **TransferOwnership** assim que cria um novo soquete ou adquire um soquete existente, em vez de usar o manipulador de evento **OnSuspending** para fazer isso, como descrito neste tópico. Isso ocorre porque a amostra se concentra em demonstrar [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) e não usa o soquete para outra atividade enquanto está em execução. Seu aplicativo provavelmente será mais complexo e deverá usar **OnSuspending** para determinar quando chamar **TransferOwnership**
+Você provavelmente perceberá que a amostra chama **TransferOwnership** assim que cria um novo soquete ou adquire um soquete existente, em vez de usar o manipulador de evento **OnSuspending** para fazer isso, como descrito neste tópico. Isso ocorre porque a amostra se concentra em demonstrar [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) e não usa o soquete para outra atividade enquanto está em execução. Seu aplicativo provavelmente será mais complexo e deverá usar **OnSuspending** para determinar quando chamar **TransferOwnership**.
 
 ## Gatilhos de canal de controle
 
 Em primeiro lugar, verifique se você está usando gatilhos de canal de controle (CCTs) adequadamente. Se estiver usando conexões [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) ou [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), recomendamos que você use [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). É possível usar CCTs para **StreamSocket**, mas eles usam mais recursos e podem não funcionar no modo de espera conectado.
 
-Se estiver usando WebSockets, [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) ou **Windows.Web.Http.HttpClient**, você deverá usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)
+Se estiver usando WebSockets, [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) ou **Windows.Web.Http.HttpClient**, você deverá usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 
 ## ControlChannelTrigger com WebSockets
 
@@ -175,7 +179,7 @@ O uso do padrão assíncrono bruto permite que o Windows sincronize o método [*
 
 É importante observar que o aplicativo precisa postar outra leitura antes de retornar o controle do retorno de chamada de conclusão. Também é importante observar que [**DataReader**](https://msdn.microsoft.com/library/windows/apps/br208119) não pode ser usado diretamente com o transporte [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) ou [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) pois isso interrompe a sincronização descrita acima. Não há suporte para o uso do método [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/br208135) diretamente sobre o transporte. Em vez disso, o [**IBuffer**](https://msdn.microsoft.com/library/windows/apps/br241656) retornado pelo método [**IInputStream.ReadAsync**](https://msdn.microsoft.com/library/windows/apps/br241719) na propriedade [**StreamWebSocket.InputStream**](https://msdn.microsoft.com/library/windows/apps/br226936) pode ser passado posteriormente para o método [**DataReader.FromBuffer**](https://msdn.microsoft.com/library/windows/apps/br208133) para processamento adicional.
 
-A amostra a seguir mostra como usar um padrão assíncrono bruto para manipular solicitações em [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)
+A amostra a seguir mostra como usar um padrão assíncrono bruto para manipular solicitações em [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923).
 
 ```csharp
 void PostSocketRead(int length) 
@@ -220,7 +224,7 @@ void PostSocketRead(int length)
 
 O manipulador de conclusão de leitura com certeza vai disparar antes do método [**IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) na tarefa em segundo plano para que [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) seja invocado. O Windows tem sincronização interna para aguardar que um aplicativo retorne do retorno de chamada de conclusão de leitura. O aplicativo geralmente processa com rapidez os dados ou o erro de [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) ou [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) no retorno de chamada de conclusão de leitura. A mensagem propriamente dita é processada dentro do contexto do método **IBackgroundTask.Run**. Na amostra abaixo, esse ponto é ilustrado pelo uso de uma fila de mensagens na qual o manipulador de conclusão de leitura insere a mensagem e a qual a tarefa em segundo plano processa depois.
 
-A amostra a seguir mostra o manipulador de conclusão de leitura para uso com um padrão assíncrono bruto para manipular solicitações em [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)
+A amostra a seguir mostra o manipulador de conclusão de leitura para uso com um padrão assíncrono bruto para manipular solicitações em [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923).
 
 ```csharp
 public void OnDataReadCompletion(uint bytesRead, DataReader readPacket)
@@ -291,7 +295,7 @@ A amostra a seguir adiciona uma notificação de gatilho de rede e um gatilho ke
 
 Um aplicativo deve usar com muito cuidado uma instrução **await** no contexto de um [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) e uma operação assíncrona em um [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923), [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) ou [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882). Um objeto **Task&lt;bool&gt;** pode ser usado para registrar um **ControlChannelTrigger** para notificação por push e keep alives WebSocket no **StreamWebSocket** e para conectar o transporte. Como parte do registro, o transporte **StreamWebSocket** é definido como o transporte do **ControlChannelTrigger** e é postada uma leitura. O **Task.Result** bloqueará o thread atual até que todas as etapas da tarefa sejam executadas e retornem instruções no corpo da mensagem. A tarefa não é resolvida até que o método retorne true ou false. Isso garante que todo o método seja executado. A **Task** pode conter várias instruções **await** que são protegidas pela **Task**. Esse padrão deve ser usado com o objeto **ControlChannelTrigger** quando um **StreamWebSocket** ou um **MessageWebSocket** é usado como transporte. Para operações que possam demorar muito para serem concluídas (por exemplo, uma operação de leitura assíncrona típica), o aplicativo deve usar o padrão assíncrono bruto discutido anteriormente.
 
-O exemplo a seguir registra [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) para notificações por push e keep alives WebSocket no [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)
+O exemplo a seguir registra [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) para notificações por push e keep alives WebSocket no [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923).
 
 ```csharp
 private bool RegisterWithControlChannelTrigger(string serverUri)
@@ -427,16 +431,14 @@ async Task<bool> RegisterWithCCTHelper(string serverUri)
 }
 ```
 
-Para obter mais informações sobre o uso de [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) ou [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), consulte [ControlChannelTrigger StreamWebSocket sample](http://go.microsoft.com/fwlink/p/?linkid=251232)
+Para obter mais informações sobre o uso de [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) ou [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), consulte [ControlChannelTrigger StreamWebSocket sample](http://go.microsoft.com/fwlink/p/?linkid=251232).
 
 ## ControlChannelTrigger com HttpClient
 
 Algumas considerações especiais se aplicam quando usamos [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Há alguns padrões de uso específicos de transporte e práticas recomendadas que devem ser seguidos ao usar um [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com **ControlChannelTrigger**. Além disso, essas considerações afetam o modo como são manipuladas as solicitações para receber pacotes em [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637).
 
 **Observação**
-            
-          
-            [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com SSL não tem suporte com o recurso de gatilho de rede e [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)
+            No momento, não há suporte a [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com SSL usando o recurso de gatilho de rede e [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 
  
 Os seguintes padrões de uso e práticas recomendadas devem ser seguidos ao usar [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032):
@@ -446,7 +448,7 @@ Os seguintes padrões de uso e práticas recomendadas devem ser seguidos ao usar
 
 Diferentemente de outros transportes de rede, o objeto [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) não pode ser passado diretamente no método [**UsingTransport**](https://msdn.microsoft.com/library/windows/apps/hh701175) do objeto [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Em vez disso, um objeto [HttpRequestMessage](http://go.microsoft.com/fwlink/p/?linkid=259153) deve ser construído especialmente para uso com o objeto [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) e o **ControlChannelTrigger**. O objeto [HttpRequestMessage](http://go.microsoft.com/fwlink/p/?linkid=259153) é criado usando o método [RtcRequestFactory.Create](http://go.microsoft.com/fwlink/p/?linkid=259154). Em seguida, o objeto [HttpRequestMessage](http://go.microsoft.com/fwlink/p/?linkid=259153) criado é passado para o método **UsingTransport**.
 
-A amostra a seguir ilustra como construir um objeto [HttpRequestMessage](http://go.microsoft.com/fwlink/p/?linkid=259153) para uso com o objeto [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) e o [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)
+A amostra a seguir ilustra como construir um objeto [HttpRequestMessage](http://go.microsoft.com/fwlink/p/?linkid=259153) para uso com o objeto [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) e o [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 
 ```csharp
 using System;
@@ -494,7 +496,7 @@ Usando [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637), não há s
 
 O uso de [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) é nitidamente diferente do transporte [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882), [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) ou [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923). O retorno de chamada de recebimento de [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) é entregue ao aplicativo por meio de uma tarefa desde o código [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637). Isso significa que a tarefa de notificação por push **ControlChannelTrigger** será disparada assim que os dados ou o erro for despachado para o aplicativo. Na amostra abaixo, o código armazena a responseTask retornada pelo método [HttpClient.SendAsync](http://go.microsoft.com/fwlink/p/?linkid=241637) no armazenamento global que a tarefa de notificação por push selecionará e processará em linha.
 
-A amostra a seguir ilustra como manipular solicitações de envio no [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) quando usado com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)
+A amostra a seguir ilustra como manipular solicitações de envio no [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) quando usado com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 
 ```csharp
 using System;
@@ -539,7 +541,7 @@ private void SendHttpRequest()
 }
 ```
 
-A amostra a seguir ilustra como ler respostas recebidas no [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) quando usado com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)
+A amostra a seguir ilustra como ler respostas recebidas no [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) quando usado com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 
 ```csharp
 using System.Net;
@@ -580,7 +582,7 @@ public string ReadResponse(Task<HttpResponseMessage> httpResponseTask)
 }
 ```
 
-Para obter mais informações sobre o uso de [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), consulte [ControlChannelTrigger HttpClient sample](http://go.microsoft.com/fwlink/p/?linkid=258323)
+Para obter mais informações sobre o uso de [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), consulte [ControlChannelTrigger HttpClient sample](http://go.microsoft.com/fwlink/p/?linkid=258323).
 
 ## ControlChannelTrigger com IXMLHttpRequest2
 
@@ -592,10 +594,11 @@ Padrões de uso e práticas recomendadas ao usar [**IXMLHTTPRequest2**](https://
 -   O aplicativo pode precisar chamar os métodos [**SetProperty**](https://msdn.microsoft.com/library/windows/desktop/hh831167) e [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/desktop/hh831168) para configurar o transporte HTTP antes de chamar o método [**Send**](https://msdn.microsoft.com/library/windows/desktop/hh831164).
 -   Um aplicativo talvez precise fazer uma solicitação inicial para testar e configurar o transporte adequadamente antes de criar o transporte [**Send**](https://msdn.microsoft.com/library/windows/desktop/hh831164) para uso com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Depois que o aplicativo determina que o transporte está configurado adequadamente, o objeto [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) pode ser configurado como o objeto de transporte usado com o objeto **ControlChannelTrigger**. Esse processo foi desenvolvido para impedir que alguns cenários interrompam a conexão estabelecida por meio do transporte. Usando SSL com um certificado, um aplicativo pode exigir a exibição de uma caixa de diálogo para entrada do PIN ou caso haja vários certificados disponíveis para escolha. A autenticação de proxy e a autenticação de servidor podem ser necessárias. Se a autenticação de proxy ou de servidor expirar, a conexão poderá ser fechada. Uma maneira pela qual um aplicativo pode lidar com esses problemas de expiração da autenticação é definindo um temporizador. Quando um redirecionamento HTTP é necessário, não é garantido que a segunda conexão possa ser estabelecida de maneira confiável. Uma solicitação de teste inicial garante que o aplicativo pode usar a URL redirecionada mais recente antes de usar o objeto **IXMLHTTPRequest2** como transporte com o objeto **ControlChannelTrigger**.
 
-Para obter mais informações sobre o uso de [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), consulte [ControlChannelTrigger with IXMLHTTPRequest2 sample](http://go.microsoft.com/fwlink/p/?linkid=258538)
+Para obter mais informações sobre o uso de [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), consulte [ControlChannelTrigger with IXMLHTTPRequest2 sample](http://go.microsoft.com/fwlink/p/?linkid=258538).
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

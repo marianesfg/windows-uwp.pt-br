@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-title: Impressão 3D do seu aplicativo
-description: Saiba como adicionar a funcionalidade de impressão 3D ao seu aplicativo Universal do Windows. Esse tópico aborda como iniciar a caixa de diálogo de impressão 3D após verificar se o seu modelo 3D é imprimível e está no formato correto.
+title: "Impressão 3D do seu aplicativo"
+description: "Saiba como adicionar a funcionalidade de impressão 3D ao seu aplicativo Universal do Windows. Esse tópico aborda como iniciar a caixa de diálogo de impressão 3D após verificar se o seu modelo 3D é imprimível e está no formato correto."
 ms.assetid: D78C4867-4B44-4B58-A82F-EDA59822119C
+translationtype: Human Translation
+ms.sourcegitcommit: 61d9f5c1fca1ad2e26f052b901361813975ae357
+ms.openlocfilehash: e68a9c681974152bc0d4dfa58e824f80e77dc51f
+
 ---
 
 # Impressão 3D do seu aplicativo
@@ -130,6 +134,7 @@ Por fim, é uma boa prática registrar os manipuladores de eventos quando seu ap
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

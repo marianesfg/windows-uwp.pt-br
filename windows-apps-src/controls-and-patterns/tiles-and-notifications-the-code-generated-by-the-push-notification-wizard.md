@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Ao usar um assistente no Visual Studio, você pode gerar notificações por push a partir de um serviço móvel que foi criado com os Serviços Móveis do Azure.
-title: Código gerado pelo assistente de notificação por push
+Description: "Ao usar um assistente no Visual Studio, você pode gerar notificações por push a partir de um serviço móvel que foi criado com os Serviços Móveis do Azure."
+title: "Código gerado pelo assistente de notificação por push"
 ms.assetid: 340F55C1-0DDF-4233-A8E4-C15EF9030785
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 6b7bf3c8019e6c3e92fd07b114cdc688fe7ad8de
+
 ---
 
 # Código gerado pelo assistente de notificação por push
@@ -249,6 +253,7 @@ Você também pode enviar notificações por push executando uma tarefa agendada
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Fornece navegação de nível superior ao mesmo tempo que economiza o espaço da tela.
-title: Diretrizes para painéis de navegação
+Description: "Fornece navegação de nível superior ao mesmo tempo que economiza o espaço da tela."
+title: "Diretrizes para painéis de navegação"
 ms.assetid: 8FB52F5E-8E72-4604-9222-0B0EC6A97541
 label: Nav pane
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: eb5600a78d7e8cfcad98509afc4de2d117066f7e
+
 ---
 
 Painéis de navegação
@@ -111,6 +115,7 @@ Para otimizar a [experiência de 3 metros](http://go.microsoft.com/fwlink/?LinkI
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

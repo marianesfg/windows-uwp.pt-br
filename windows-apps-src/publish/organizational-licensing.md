@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Você pode indicar se e como seu aplicativo pode ser oferecido para compras em grande volume por meio da Windows Store para Empresas na seção Licenciamento organizacional da página Preço e disponibilidade de um envio de aplicativo.
-title: Opções de licenciamento organizacional
+Description: "Você pode indicar se e como seu aplicativo pode ser oferecido para compras em grande volume por meio da Windows Store para Empresas na seção Licenciamento organizacional da página Preço e disponibilidade de um envio de aplicativo."
+title: "Opções de licenciamento organizacional"
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
+ms.sourcegitcommit: 13603b66bd6168073b855bbe37ea92763e14a5a0
+ms.openlocfilehash: e4adbc66b4b4a88ca3787737e9bbddf0d937b604
+
 ---
 
 # Opções de licenciamento organizacional
@@ -29,12 +32,12 @@ Se você preferir não nos permitem oferecer seu aplicativo para organizações 
 
 Muitas organizações precisam de aplicativos habilitados para licenciamento offline. Por exemplo, algumas organizações precisam implantar aplicativos em dispositivos que raramente ou nunca se conectam à internet. Se quiser permitir que seu aplicativo seja disponibilizado para esses clientes, marque a caixa rotulada **Permitir licenciamento desconectado (offline) para organizações**.
 
-> **Observação**  Essa caixa é desmarcada por padrão. Você precisa marcá-la para permitir que tornemos seu aplicativo disponível para organizações verificadas que o instalarão usando licenciamento desconectado.
+> **Observação**  Essa caixa é desmarcada por padrão. Você precisa marcá-la para permitir que tornemos seu aplicativo disponível para organizações verificadas que o instalarão usando licenciamento desconectado. As organizações devem passar por validação adicional para instalar aplicativos pagos para seus usuários finais dessa maneira.
 
-O licenciamento offline permite que as organizações adquiram seu aplicativo por volume e depois instalem o aplicativo sem precisar que cada dispositivo contate com o sistema de licenciamento da Loja.
-A organização é capaz de baixar o pacote do aplicativo com uma licença que lhes permite instalá-lo para dispositivos (por meio de suas próprias ferramentas de gerenciamento ou da pré-carregamento de aplicativos em imagens do sistema operacional) sem notificar à Loja quando uma licença específica foi usada. Habilitar esse cenário aumenta bastante a flexibilidade de implantação e pode aumentar significativamente a atratividade de seu aplicativo para esses clientes.
+O licenciamento offline permite que as organizações adquiram seu aplicativo por volume e depois instalem o aplicativo sem precisar que cada dispositivo contate com o sistema de licenciamento da Loja. A organização é capaz de baixar o pacote do aplicativo com uma licença que lhes permite instalá-lo para dispositivos (por meio de suas próprias ferramentas de gerenciamento ou da pré-carregamento de aplicativos em imagens do sistema operacional) sem notificar à Loja quando uma licença específica foi usada. Habilitar esse cenário aumenta bastante a flexibilidade de implantação e pode aumentar significativamente a atratividade de seu aplicativo para esses clientes.
 
->**Observação**  As organizações precisam passar por uma validação adicional para instalarem aplicativos pagos para os usuários finais delas dessa maneira.
+> **Importante** Não há suporte para o licenciamento offline de pacotes .xap.  
+
  
 ## Suporte a aplicativo pago
 
@@ -83,6 +86,7 @@ Neste momento, os desenvolvedores nos seguintes países e regiões podem distrib
 - Estados Unidos
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

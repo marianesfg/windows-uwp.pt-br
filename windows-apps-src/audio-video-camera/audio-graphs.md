@@ -1,13 +1,17 @@
 ---
 author: drewbatgit
 ms.assetid: CB924E17-C726-48E7-A445-364781F4CCA1
-description: Este artigo mostra como usar as APIs no namespace Windows.Media.Audio para criar gráficos de áudio para cenários de roteamento, mixagem e processamento de áudio.
-title: Gráficos de áudio
+description: "Este artigo mostra como usar as APIs no namespace Windows.Media.Audio para criar gráficos de áudio para cenários de roteamento, mixagem e processamento de áudio."
+title: "Gráficos de áudio"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7e8df66a1fc4c95cb8b0b4be9eded8ef58b6803a
+
 ---
 
 # Gráficos de áudio
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar as APIs no namespace [**Windows.Media.Audio**](https://msdn.microsoft.com/library/windows/apps/dn914341) para criar gráficos de áudio para cenários de roteamento, mixagem e processamento de áudio.
@@ -47,7 +51,7 @@ A classe [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/dn9141
 -   O tamanho de quantum do gráfico de áudio determina o número de amostras que são processadas de uma só vez. Por padrão, o tamanho do quantum é de 10 ms com base na taxa de amostra padrão. Se você especificar um tamanho de quantum definido a propriedade [**DesiredSamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914205), também deve definir a propriedade [**QuantumSizeSelectionMode**](https://msdn.microsoft.com/library/windows/apps/dn914208) como **ClosestToDesired**; caso contrário, o valor fornecido será ignorado. Se esse valor for usado, o sistema escolherá o tamanho de quantum mais próximo possível daquele que você especificou. Para determinar o tamanho real quantum, verifique o [**SamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914243) de **AudioGraph** depois que ele for criado.
 -   Se você pretende usar o gráfico de áudio com arquivos apenas e não pretende enviar saída para um dispositivo de áudio, é recomendável que você use o tamanho de quantum padrão não definindo a propriedade [**DesiredSamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914205).
 -   A propriedade [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522) determina a quantidade de processamento que o dispositivo de renderização principal realiza na saída do gráfico de áudio. A configuração **Default** permite que o sistema use o processamento de áudio padrão na categoria de renderização de áudio especificada. Esse processamento pode melhorar significativamente o som do áudio em alguns dispositivos, especialmente dispositivos móveis com alto-falantes pequenos. A configuração **Raw** pode melhorar o desempenho, minimizando a quantidade de processamento de sinal realizada, mas pode resultar em som de qualidade inferior em alguns dispositivos.
--   Se o [**QuantumSizeSelectionMode**](https://msdn.microsoft.com/library/windows/apps/dn914208) é definido como **LowestLatency**, o gráfico de áudio usará automaticamente **Raw** para [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522)
+-   Se o [**QuantumSizeSelectionMode**](https://msdn.microsoft.com/library/windows/apps/dn914208) é definido como **LowestLatency**, o gráfico de áudio usará automaticamente **Raw** para [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522).
 -   [
             **EncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn958523) determina o formato de áudio usado pelo gráfico. Há suporte para formatos float de 32 bits somente.
 -   O [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524) define o dispositivo de renderização principal para o gráfico de áudio. Se você não definir isso, o dispositivo padrão do sistema será usado. O dispositivo de renderização principal é usado para calcular os tamanhos de quantum para outros nós do gráfico. Se não houver dispositivos de renderização de áudio presentes no sistema, a criação de gráfico de áudio falhará.
@@ -65,7 +69,7 @@ Um nó de entrada de dispositivo passa áudio para o gráfico a partir de um dis
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-Se você quiser especificar um dispositivo de captura de áudio específico para o nó de entrada do dispositivo, pode usar a classe [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) para obter uma lista dos dispositivos de captura de áudio disponíveis no sistema chamando [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) e passando o seletor de dispositivo de renderização de áudio retornado por [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817). É possível escolher um dos objetos **DeviceInformation** retornados programaticamente ou mostrar a interface do usuário para permitir que o usuário selecione um dispositivo e, em seguida, passá-lo para [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)
+Se você quiser especificar um dispositivo de captura de áudio específico para o nó de entrada do dispositivo, pode usar a classe [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) para obter uma lista dos dispositivos de captura de áudio disponíveis no sistema chamando [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) e passando o seletor de dispositivo de renderização de áudio retornado por [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817). É possível escolher um dos objetos **DeviceInformation** retornados programaticamente ou mostrar a interface do usuário para permitir que o usuário selecione um dispositivo e, em seguida, passá-lo para [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218).
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
@@ -79,7 +83,7 @@ Um nó de saída do dispositivo empurra áudio do gráfico para um dispositivo d
 
 ##  Nó de entrada do arquivo
 
-Um nó de entrada de arquivo permite que você alimente dados de um arquivo de áudio no gráfico. Crie um [**AudioFileInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914108) chamando [**CreateFileInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914226)
+Um nó de entrada de arquivo permite que você alimente dados de um arquivo de áudio no gráfico. Crie um [**AudioFileInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914108) chamando [**CreateFileInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914226).
 
 [!code-cs[DeclareFileInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFileInputNode)]
 
@@ -94,7 +98,7 @@ Um nó de entrada de arquivo permite que você alimente dados de um arquivo de �
 
 ##  Nó de saída de arquivo
 
-Um nó de saída de arquivo permite que você direcione dados de áudio do gráfico para um arquivo de áudio. Crie um [**AudioFileOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914133) chamando [**CreateFileOutputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914227)
+Um nó de saída de arquivo permite que você direcione dados de áudio do gráfico para um arquivo de áudio. Crie um [**AudioFileOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914133) chamando [**CreateFileOutputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914227).
 
 [!code-cs[DeclareFileOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFileOutputNode)]
 
@@ -106,7 +110,7 @@ Um nó de saída de arquivo permite que você direcione dados de áudio do gráf
 
 ##  Nó de entrada de quadro de áudio
 
-Um nó de entrada de quadro de áudio permite que você envie dados de áudio que você gera em seu próprio código para o gráfico de áudio. Isso habilita cenários como a criação de um sintetizador de software personalizado. Crie um [**AudioFrameInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914147) chamando [**CreateFrameInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914230)
+Um nó de entrada de quadro de áudio permite que você envie dados de áudio que você gera em seu próprio código para o gráfico de áudio. Isso habilita cenários como a criação de um sintetizador de software personalizado. Crie um [**AudioFrameInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914147) chamando [**CreateFrameInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914230).
 
 [!code-cs[DeclareFrameInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFrameInputNode)]
 
@@ -131,14 +135,14 @@ O código a seguir mostra um exemplo de implementação de um método auxiliar *
 
 -   Como esse método acessa o buffer bruto subjacente aos tipos do Windows Runtime, ele deve ser declarado usando a palavra-chave **unsafe**. Você também deve configurar seu projeto no Microsoft Visual Studio para permitir a compilação de código não seguro. Para fazer isso, abra a página **Propriedades** do projeto, clique na página de propriedade **Build** e selecione a caixa de seleção **Permitir Código Não Seguro**.
 -   Inicialize uma nova instância de [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/dn930871), no namespace **Windows.Media**, passando o tamanho de buffer desejado para o construtor. O tamanho do buffer é o número de amostras multiplicado pelo tamanho de cada exemplo.
--   Obtenha o [**AudioBuffer**](https://msdn.microsoft.com/library/windows/apps/dn958454) do quadro de áudio chamando [**LockBuffer**](https://msdn.microsoft.com/library/windows/apps/dn930878)
--   Obtenha uma instância da interface COM [**IMemoryBufferByteAccess**](https://msdn.microsoft.com/library/windows/desktop/mt297505) do buffer de áudio chamando [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn958457)
+-   Obtenha o [**AudioBuffer**](https://msdn.microsoft.com/library/windows/apps/dn958454) do quadro de áudio chamando [**LockBuffer**](https://msdn.microsoft.com/library/windows/apps/dn930878).
+-   Obtenha uma instância da interface COM [**IMemoryBufferByteAccess**](https://msdn.microsoft.com/library/windows/desktop/mt297505) do buffer de áudio chamando [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn958457).
 -   Obtenha um ponteiro para dados de buffer de áudio bruto chamando [**IMemoryBufferByteAccess.GetBuffer**](https://msdn.microsoft.com/library/windows/desktop/mt297506) e transmita-o para o tipo de dados de amostra dos dados de áudio.
 -   Preencha o buffer com dados e retorne o [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/dn930871) para envio para o gráfico de áudio.
 
 ##  Nó de saída de quadro de áudio
 
-Um nó de saída de quadro de áudio permite receber e processar a saída de dados de áudio do gráfico de áudio com o código personalizado que você criar. Um cenário de exemplo para isso é a análise do sinal na saída de áudio. Crie um [**AudioFrameOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914166) chamando [**CreateFrameOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914233)
+Um nó de saída de quadro de áudio permite receber e processar a saída de dados de áudio do gráfico de áudio com o código personalizado que você criar. Um cenário de exemplo para isso é a análise do sinal na saída de áudio. Crie um [**AudioFrameOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914166) chamando [**CreateFrameOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914233).
 
 [!code-cs[DeclareFrameOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFrameOutputNode)]
 
@@ -154,8 +158,8 @@ O evento [**AudioGraph.QuantumProcessed**](https://msdn.microsoft.com/library/wi
 [!code-cs[ProcessFrameOutput](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetProcessFrameOutput)]
 
 -   Como o exemplo de nó de entrada de quadro de áudio acima, você precisa declarar a interface COM **IMemoryBufferByteAccess** e configurar seu projeto para permitir código não seguro a fim de acessar o buffer de áudio subjacente.
--   Obtenha o [**AudioBuffer**](https://msdn.microsoft.com/library/windows/apps/dn958454) do quadro de áudio chamando [**LockBuffer**](https://msdn.microsoft.com/library/windows/apps/dn930878)
--   Obtenha uma instância da interface COM **IMemoryBufferByteAccess** do buffer de áudio chamando [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn958457)
+-   Obtenha o [**AudioBuffer**](https://msdn.microsoft.com/library/windows/apps/dn958454) do quadro de áudio chamando [**LockBuffer**](https://msdn.microsoft.com/library/windows/apps/dn930878).
+-   Obtenha uma instância da interface COM **IMemoryBufferByteAccess** do buffer de áudio chamando [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn958457).
 -   Obtenha um ponteiro para dados de buffer de áudio bruto chamando **IMemoryBufferByteAccess.GetBuffer** e transmita-o para o tipo de dados de amostra dos dados de áudio.
 
 ## Conexões de nós e nós de submixagem
@@ -208,6 +212,7 @@ A API do gráfico de áudio permite que você adicione efeitos de áudio a cada 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

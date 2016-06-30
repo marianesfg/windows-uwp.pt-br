@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
-title: Otimizar suspensão/retomada
-description: Crie aplicativos da Plataforma Universal do Windows (UWP) que agilizem o uso do sistema de tempo de vida de processo para continuar de modo eficiente após suspensão ou término.
+title: "Otimizar suspensão/retomada"
+description: "Crie aplicativos da Plataforma Universal do Windows (UWP) que agilizem o uso do sistema de tempo de vida de processo para continuar de modo eficiente após suspensão ou término."
+translationtype: Human Translation
+ms.sourcegitcommit: e0f04c4242891b25db460d4852ab8cc070d82260
+ms.openlocfilehash: 9fee4ab9c55c1243c04c2ed5f007412751528037
+
 ---
 # Otimizar suspensão/retomada
 
@@ -89,6 +93,7 @@ A maioria dos aplicativos precisa manipular o evento [**Resuming**](https://msdn
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

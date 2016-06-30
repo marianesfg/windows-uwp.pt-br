@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Iniciar o aplicativo padrão para um arquivo
-description: Aprenda como iniciar o aplicativo padrão para um arquivo.
+author: TylerMSFT
+title: "Iniciar o aplicativo padrão para um arquivo"
+description: "Aprenda como iniciar o aplicativo padrão para um arquivo."
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: b9b2d8ba6aeedea7d9db12565de191b1b6307fa6
+
 ---
 
 # Iniciar o aplicativo padrão para um arquivo
@@ -61,7 +64,7 @@ Chame o método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](http
 >    If file IsNot Nothing Then
 >       ' Launch the retrieved file
 >       Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
-> 
+>
 >       If success Then
 >          ' File launched
 >       Else
@@ -76,7 +79,7 @@ Chame o método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](http
 > void MainPage::DefaultLaunch()
 > {
 >    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
-> 
+>
 >    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.png"));
 >    getFileOperation.then([](Windows::Storage::StorageFile^ file)
 >    {
@@ -115,7 +118,7 @@ Chame o método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](http
 >    {
 >       // Launch the retrieved file
 >       var success = await Windows.System.Launcher.LaunchFileAsync(file);
-> 
+>
 >       if (success)
 >       {
 >          // File launched
@@ -143,20 +146,20 @@ Recomendamos que use a caixa de diálogo **Abrir com** quando o usuário quiser 
 > [!div class="tabbedCodeSnippets"]
 > ```vb
 > async Sub DefaultLaunch()
-> 
+>
 >    ' Path to the file in the app package to launch
 >    Dim imageFile = "images\test.png"
-> 
+>
 >    Dim file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile)
-> 
+>
 >    If file IsNot Nothing Then
 >       ' Set the option to show the picker
 >       Dim options = Windows.System.LauncherOptions()
 >       options.DisplayApplicationPicker = True
-> 
+>
 >       ' Launch the retrieved file
 >       Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
-> 
+>
 >       If success Then
 >          ' File launched
 >       Else
@@ -171,7 +174,7 @@ Recomendamos que use a caixa de diálogo **Abrir com** quando o usuário quiser 
 > void MainPage::DefaultLaunch()
 > {
 >    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
-> 
+>
 >    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.png"));
 >    getFileOperation.then([](Windows::Storage::StorageFile^ file)
 >    {
@@ -180,7 +183,7 @@ Recomendamos que use a caixa de diálogo **Abrir com** quando o usuário quiser 
 >          // Set the option to show the picker
 >          auto launchOptions = ref new Windows::System::LauncherOptions();
 >          launchOptions->DisplayApplicationPicker = true;
-> 
+>
 >          // Launch the retrieved file
 >          concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
 >          launchFileOperation.then([](bool success)
@@ -209,13 +212,13 @@ Recomendamos que use a caixa de diálogo **Abrir com** quando o usuário quiser 
 >       string imageFile = @"images\test.png";
 >       
 >    var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
-> 
+>
 >    if (file != null)
 >    {
 >       // Set the option to show the picker
 >       var options = new Windows.System.LauncherOptions();
 >       options.DisplayApplicationPicker = true;
-> 
+>
 >       // Launch the retrieved file
 >       bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
 >       if (success)
@@ -246,23 +249,23 @@ Em alguns casos, pode ser que o usuário não tenha um aplicativo instalado para
 > [!div class="tabbedCodeSnippets"]
 > ```vb
 > async Sub DefaultLaunch()
-> 
+>
 >    ' Path to the file in the app package to launch
 >    Dim imageFile = "images\test.contoso"
-> 
+>
 >    ' Get the image file from the package's image directory
 >    Dim file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile)
-> 
+>
 >    If file IsNot Nothing Then
 >       ' Set the recommended app
 >       Dim options = Windows.System.LauncherOptions()
 >       options.PreferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
 >       options.PreferredApplicationDisplayName = "Contoso File App";
-> 
->       ' Launch the retrieved file pass in the recommended app 
+>
+>       ' Launch the retrieved file pass in the recommended app
 >       ' in case the user has no apps installed to handle the file
 >       Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
-> 
+>
 >       If success Then
 >          ' File launched
 >       Else
@@ -277,7 +280,7 @@ Em alguns casos, pode ser que o usuário não tenha um aplicativo instalado para
 > void MainPage::DefaultLaunch()
 > {
 >    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
-> 
+>
 >    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.contoso"));
 >    getFileOperation.then([](Windows::Storage::StorageFile^ file)
 >    {
@@ -288,7 +291,7 @@ Em alguns casos, pode ser que o usuário não tenha um aplicativo instalado para
 >          launchOptions-> preferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
 >          launchOptions-> preferredApplicationDisplayName = "Contoso File App";
 >          
->          // Launch the retrieved file pass in the recommended app 
+>          // Launch the retrieved file pass in the recommended app
 >          // in case the user has no apps installed to handle the file
 >          concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
 >          launchFileOperation.then([](bool success)
@@ -315,19 +318,19 @@ Em alguns casos, pode ser que o usuário não tenha um aplicativo instalado para
 > {
 >    // Path to the file in the app package to launch
 >    string imageFile = @"images\test.contoso";
-> 
+>
 >    // Get the image file from the package's image directory
 >    var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
-> 
+>
 >    if (file != null)
 >    {
 >       // Set the recommended app
 >       var options = new Windows.System.LauncherOptions();
 >       options.PreferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
 >       options.PreferredApplicationDisplayName = "Contoso File App";
-> 
-> 
->       // Launch the retrieved file pass in the recommended app 
+>
+>
+>       // Launch the retrieved file pass in the recommended app
 >       // in case the user has no apps installed to handle the file
 >       bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
 >       if (success)
@@ -362,7 +365,7 @@ Aplicativos de origem que chamam [**LaunchFileAsync**](https://msdn.microsoft.co
 > void MainPage::DefaultLaunch()
 > {
 >    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
-> 
+>
 >    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.png"));
 >    getFileOperation.then([](Windows::Storage::StorageFile^ file)
 >    {
@@ -371,7 +374,7 @@ Aplicativos de origem que chamam [**LaunchFileAsync**](https://msdn.microsoft.co
 >          // Set the desired remaining view
 >          auto launchOptions = ref new Windows::System::LauncherOptions();
 >          launchOptions->DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseLess;
-> 
+>
 >          // Launch the retrieved file
 >          concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
 >          launchFileOperation.then([](bool success)
@@ -400,13 +403,13 @@ Aplicativos de origem que chamam [**LaunchFileAsync**](https://msdn.microsoft.co
 >    string imageFile = @"images\test.png";
 >    
 >    var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
-> 
+>
 >    if (file != null)
 >    {
 >       // Set the desired remaining view
 >       var options = new Windows.System.LauncherOptions();
 >       options.DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseLess;
-> 
+>
 >       // Launch the retrieved file
 >       bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
 >       if (success)
@@ -435,7 +438,7 @@ Você não pode iniciar tipos de arquivos com código ou script que são executa
 
 Quando você tenta iniciar um tipo de arquivo restrito, há falha na inicialização e o retorno de chamada de erro é invocado. Quando o seu aplicativo manipula vários tipos de arquivos diferentes e você espera obter esse erro, nós recomendamos que você ofereça uma experiência de fallback ao usuário. Por exemplo, você pode dar ao usuário a opção de salvar o arquivo na área de trabalho para abri-lo de lá.
 
-> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132)
+> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 ## Tópicos relacionados
@@ -444,7 +447,7 @@ Quando você tenta iniciar um tipo de arquivo restrito, há falha na inicializa�
 **Tarefas**
 
 * [Iniciar o aplicativo padrão para um URI](launch-default-app.md)
-* [Manipular a ativação de arquivos](handle-file-activation.md)
+* [Manipular a ativação do arquivo](handle-file-activation.md)
 
 **Diretrizes**
 
@@ -461,8 +464,6 @@ Quando você tenta iniciar um tipo de arquivo restrito, há falha na inicializa�
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

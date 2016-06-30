@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Princípios básicos da amostra do Marble Maze
-description: Este documento descreve as características fundamentais do projeto Marble Maze, por exemplo, como ele usa o Visual C++ no ambiente de Windows Runtime, como ele é criado e estruturado e como ele é compilado.
+title: "Princípios básicos da amostra do Marble Maze"
+description: "Este documento descreve as características fundamentais do projeto Marble Maze, por exemplo, como ele usa o Visual C++ no ambiente de Windows Runtime, como ele é criado e estruturado e como ele é compilado."
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5a9df995078763df73542a4101e73e147517b1eb
+
 ---
 
 # Princípios básicos da amostra do Marble Maze
@@ -142,6 +146,7 @@ Leia [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

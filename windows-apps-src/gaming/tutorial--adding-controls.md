@@ -1,14 +1,18 @@
 ---
 author: mtoepke
 title: Adicionar controles
-description: Agora veremos como o jogo de exemplo implementa controles move-look em um jogo 3D e como desenvolver controles básicos de toque, mouse e controlador de jogo.
+description: "Agora veremos como o jogo de exemplo implementa controles move-look em um jogo 3D e como desenvolver controles básicos de toque, mouse e controlador de jogo."
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b3297ffd92d9a61d73c574def7e8101dc9196a69
+
 ---
 
 # Adicionar controles
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Agora veremos como o jogo de exemplo implementa controles move-look em um jogo 3D e como desenvolver controles básicos de toque, mouse e controlador de jogo.
 
@@ -24,7 +28,7 @@ Um bom jogo UWP dá suporte a uma grande variedade de interfaces. Um jogador em 
 
 Este exemplo dá suporte a todos os três. Trata-se de um jogo simples de tiro em primeira pessoa; os controles move-look tradicionais para esse gênero são implementados facilmente em todos os três tipos de entrada.
 
-Para saber mais sobre controles especificamente sobre os controles move-look, consulte [Controles move-look para jogos](tutorial--adding-move-look-controls-to-your-directx-game.md) e [Controles de toque para jogos](tutorial--adding-touch-controls-to-your-directx-game.md)
+Para saber mais sobre controles e especificamente sobre os controles move-look, veja [Controles move-look para jogos](tutorial--adding-move-look-controls-to-your-directx-game.md) e [Controles de toque para jogos](tutorial--adding-touch-controls-to-your-directx-game.md).
 
 ## Comportamentos comuns de controle
 
@@ -203,7 +207,7 @@ bool MoveLookController::IsFiring()
 
 Se o jogador mover o ponteiro para fora da janela principal do jogo ou pressionar o botão de pausa (a tecla P ou o botão Iniciar do controlador Xbox), o jogo deverá ser colocado em pausa. O **MoveLookController** registra o pressionamento desse botão e informa o loop do jogo quando chama o método **IsPauseRequested**. Nesse ponto, se **IsPauseRequested** retorna **true**, o loop do jogo chama **WaitForPress** em **MoveLookController** para mover o controlador para o estado **WaitForInput**. Em seguida, **MoveLookController** espera que o jogador selecione um dos itens de menu para carregar, continuar ou sair do jogo e para de processar os eventos de entrada do jogo até que ele retorne ao estado **Ativo**.
 
-Veja o [código de exemplo completo desta seção](#code_sample)
+Veja o [código de exemplo completo desta seção](#code_sample).
 
 Agora examinaremos a implementação de cada um dos três tipos de controle com um pouco mais de detalhe.
 
@@ -814,7 +818,7 @@ E é assim que nosso exemplo implementa um conjunto completo de opções de cont
 ## Próximas etapas
 
 
-Examinamos todos os principais componentes de um jogo DirectX UWP, exceto um: o áudio! A música e os efeitos sonoros são importantes em qualquer jogo. Portanto, discutiremos agora [como adicionar som](tutorial--adding-sound.md)
+Examinamos todos os principais componentes de um jogo DirectX UWP, exceto um: o áudio! A música e os efeitos sonoros são importantes em qualquer jogo. Portanto, discutiremos agora [como adicionar som](tutorial--adding-sound.md).
 
 ## Código de exemplo completo desta seção
 
@@ -1907,7 +1911,7 @@ void MoveLookController::UpdateGameController()
 ```
 
 > **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132)
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -1925,6 +1929,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Use os painéis de layout para organizar e agrupar elementos de interface do usuário em seu aplicativo.
-title: Painéis de layout para aplicativos UWP (Plataforma Universal do Windows)
+Description: "Use os painéis de layout para organizar e agrupar elementos de interface do usuário em seu aplicativo."
+title: "Painéis de layout para aplicativos UWP (Plataforma Universal do Windows)"
 ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
 label: Layout panels
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 70bb6e1f01fa89c7a504e0299e89153efc30de1e
+
 ---
 # Painéis de layout
 
@@ -227,6 +231,7 @@ Use o painel Canvas com cautela. Apesar de ser conveniente poder controlar com p
 Existem vários painéis de finalidade especial que podem ser usados apenas como um [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) para exibir itens em um [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx). Eles são [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) e [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx). Você não pode usar esses painéis no layout de interface do usuário geral.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

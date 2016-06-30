@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Comparar o pipeline do sombreador do OpenGL ES 2.0 com Direct3D
-description: Conceitualmente, o pipeline de sombreador do Direct3D 11 é bem parecido com o do OpenGL ES 2.0.
+description: "Conceitualmente, o pipeline de sombreador do Direct3D 11 é bem parecido com o do OpenGL ES 2.0."
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: bc13df5e7f2648897be31b5cda634d23ffae8b6b
+
 ---
 
 # Comparar o pipeline do sombreador do OpenGL ES 2.0 com Direct3D
@@ -263,6 +267,7 @@ Para saber mais sobre o uso de semântica com Direct3D, leia [Semântica HLSL](h
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

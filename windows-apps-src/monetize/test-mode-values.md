@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 2ed21281-f996-402d-a968-d1320a4691df
-description: Use os valores de ID da unidade de anúncios e a ID do aplicativo de teste deste artigo para ver como seu aplicativo renderiza anúncios durante o teste.
+description: "Use os valores de ID da unidade de anúncios e a ID do aplicativo de teste deste artigo para ver como seu aplicativo renderiza anúncios durante o teste."
 title: Valores de modo de teste
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 93b20954ba82b613bde96db30a000902dec3b844
+
 ---
 
 # Valores de modo de teste
@@ -72,6 +76,7 @@ Veja a seguir os valores de teste a serem usados para anúncios intersticiais em
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

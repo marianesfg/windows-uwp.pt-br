@@ -1,7 +1,11 @@
 ---
 author: QuinnRadich
-Description: O Windows 10 RTM e as atualizações das ferramentas de desenvolvedor continuarão a fornecer as ferramentas, os recursos e as experiências da Plataforma Universal do Windows.
-title: Novidades no Windows 10 RTM – julho de 2015
+Description: "O Windows 10 RTM e as atualizações das ferramentas de desenvolvedor continuarão a fornecer as ferramentas, os recursos e as experiências da Plataforma Universal do Windows."
+title: "Novidades no Windows 10 RTM – julho de 2015"
+translationtype: Human Translation
+ms.sourcegitcommit: 1029eff0f21c62f8235f37516971996791051d4c
+ms.openlocfilehash: 67e5be130647e5ebeeef6e4c0dcbd822e8b84184
+
 ---
 
 # Novidades no Windows 10 RTM – julho de 2015
@@ -195,6 +199,7 @@ Método WebView.ClearTemporaryWebDataAsync | Quando um usuário interage com o c
 ---
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

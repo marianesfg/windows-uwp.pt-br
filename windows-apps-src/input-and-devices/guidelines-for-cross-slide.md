@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Use o deslizamento transversal para dar suporte à seleção com o gesto de deslizar e a interações de arrastar (mover) com o gesto de deslizar.
+Description: "Use o deslizamento transversal para dar suporte à seleção com o gesto de deslizar e a interações de arrastar (mover) com o gesto de deslizar."
 title: Diretrizes de deslizamento transversal
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 label: Cross-slide
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 47a16acc4025541b1cc19582c2c7d59755fd2594
+
 ---
 
 # Diretrizes de deslizamento transversal
@@ -152,6 +156,7 @@ Se for necessário mover mais de um objeto, permita que os usuários selecionem 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

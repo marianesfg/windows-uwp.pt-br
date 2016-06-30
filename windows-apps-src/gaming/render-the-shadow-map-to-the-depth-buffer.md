@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Renderizar o mapa de sombra para o buffer de profundidade
-description: Faça a renderização do ponto de vista da luz para criar um mapa de profundidade bidimensional que representa o volume de sombra.
+description: "Faça a renderização do ponto de vista da luz para criar um mapa de profundidade bidimensional que representa o volume de sombra."
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 644e2084baa750965a5283208fde1cea24ecfdea
+
 ---
 
 # Renderizar o mapa de sombra para o buffer de profundidade
@@ -152,6 +156,7 @@ Na próxima parte deste guia passo a passo, veremos como adicionar sombras pela 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Iniciar o aplicativo da Windows Store
-description: Este tópico descreve o esquema de URI ms-windows-store. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo da Windows Store para páginas específicas na Loja.
+description: "Este tópico descreve o esquema de URI ms-windows-store. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo da Windows Store para páginas específicas na Loja."
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 9b48aeddb5ddc912fccd07149980655a06535470
+
 ---
 
 # Iniciar o aplicativo da Windows Store
@@ -81,7 +84,7 @@ ID da Loja <p>(Recomendado)</p>
 <td>ms-windows-store://assoc/?Protocol=ms-word </td>
 </tr>
 <tr>
-<td>Inicia uma pesquisa de produtos associados a uma ou mais marcas. As marcas devem ser separadas por vírgulas. 
+<td>Inicia uma pesquisa de produtos associados a uma ou mais marcas. As marcas devem ser separadas por vírgulas.
 </td>
 <td />
 <td>
@@ -91,7 +94,7 @@ ID da Loja <p>(Recomendado)</p>
 </tr>
 <tr>
 <td>
-Inicia uma pesquisa para a consulta especificada. São permitidos espaços na consulta. 
+Inicia uma pesquisa para a consulta especificada. São permitidos espaços na consulta.
 </td>
 <td />
 <td>ms-windows-store://search/?query=OneNote </td>
@@ -105,7 +108,7 @@ Inicia uma pesquisa para a consulta especificada. São permitidos espaços na co
 </td>
 </tr>
 <tr>
-<td>Inicia uma pesquisa de produtos do fornecedor especificado. Espaços no nome são permitidos. 
+<td>Inicia uma pesquisa de produtos do fornecedor especificado. Espaços no nome são permitidos.
 </td>
 <td />
 <td>ms-windows-store://publisher/?name=Microsoft Corporation
@@ -128,8 +131,6 @@ Inicia uma pesquisa para a consulta especificada. São permitidos espaços na co
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

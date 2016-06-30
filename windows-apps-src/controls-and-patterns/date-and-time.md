@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Os controles de data e hora permitem que você visualize e defina a data e hora. Este artigo fornece diretrizes de design e ajuda você a escolher o controle correto.
+Description: "Os controles de data e hora permitem que você visualize e defina a data e hora. Este artigo fornece diretrizes de design e ajuda você a escolher o controle correto."
 title: Diretrizes para os controles de data e hora
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
 label: Calendar, date, and time controls
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e9d8d73c35e2e600e89330fbd54aea57a815aebf
+
 ---
 
 # Controles de calendário, data e hora
@@ -111,6 +115,7 @@ O .NET também dá suporte a um tipo chamado [**DateTime**](https://msdn.microso
 - [**Classe TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

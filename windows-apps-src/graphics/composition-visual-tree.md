@@ -3,8 +3,8 @@ author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
 title: "Árvore visual de composição"
 description: "Elementos visuais de composição compõem a estrutura da árvore visual que todos os outros recursos da API de composição usam e têm como referência. A API permite que os desenvolvedores definam e criem um ou vários objetos visuais, cada um representando um único nó em uma árvore visual."
-ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
-ms.openlocfilehash: e31d3b23871bd37cde26fb3e9414e8cfae340d3d
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 61adc6a894c56c6cfd292d89d4cd5c4ba6b0d017
 
 ---
 # Árvore visual de composição
@@ -113,7 +113,7 @@ Assim como a rotação, a propriedade [**Opacity**](https://msdn.microsoft.com/l
 
 ## Alterar a posição do elemento visual na coleção
 
-A API de composição permite que a posição de um elemento visual em um [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection) seja alterada de várias formas. Ele pode ser colocado acima de outro elemento visual com [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertabove), colocado abaixo com [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertbelow), ser movido para o início com [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertattop) ou para o final com [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertatbottom).
+A API de composição permite que a posição de um elemento visual em um [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection) seja alterada de várias formas. Ele pode ser colocado acima de outro elemento visual com [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertabove), colocado abaixo com [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertbelow), ser movido para o início com [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertattop) ou para o final com [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertatbottom).
 
 Na amostra, um [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) que foi clicado é classificado para ficar no início:
 
@@ -521,6 +521,6 @@ namespace compositionvisual
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

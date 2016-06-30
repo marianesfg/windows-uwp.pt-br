@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Manipular a ativação de arquivos
-description: Um aplicativo pode se registrar para ser o manipulador padrão de um determinado tipo de arquivo.
+author: TylerMSFT
+title: "Manipular a ativação de arquivos"
+description: "Um aplicativo pode se registrar para ser o manipulador padrão de um determinado tipo de arquivo."
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 9c6358bccdea55a7c3749388c35aa770f4325960
+
 ---
 
 # Manipular a ativação de arquivos
@@ -150,8 +153,6 @@ Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que v
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

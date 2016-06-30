@@ -1,8 +1,11 @@
 ---
 author: mcleblanc
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
-title: Visão geral do Windows Device Portal
-description: Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo remotamente por uma rede ou conexão USB.
+title: "Visão geral do Windows Device Portal"
+description: "Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo remotamente por uma rede ou conexão USB."
+ms.sourcegitcommit: c6f00006e656970e4a5bb11e3368faa92cbb8eca
+ms.openlocfilehash: fe4945bf3048a0c38e844a74fa6fc46706085d6d
+
 ---
 # Visão geral do Windows Device Portal
 
@@ -124,6 +127,8 @@ Clique ou toque em **Habilitar** para iniciar o rastreamento. O provedor é adic
 - **Histórico de provedores**: mostra os provedores ETW que foram habilitados durante a sessão atual. Clique ou toque em **Habilitar** para ativar um provedor que foi desabilitado. Clique ou toque em **Limpar** para limpar o histórico.
 - **Eventos**: lista os eventos ETW dos provedores selecionados no formato de tabela. Essa tabela é atualizada em tempo real. Abaixo da tabela, clique no botão **Limpar** para excluir todos os eventos ETW da tabela. Isso não desabilita os provedores. Você pode clicar em **Salvar no arquivo** para exportar os atuais eventos ETW coletados para um arquivo CSV localmente.
 
+Para obter mais detalhes sobre como usar o rastreamento ETW, consulte o [blogpost](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) sobre uso para coletar logs em tempo real do seu aplicativo. 
+
 ### Rastreamento de desempenho
 
 Capture rastreamentos do [Windows Performance Recorder](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) (WPR) no seu dispositivo.
@@ -151,7 +156,37 @@ Gerencia conexões de rede no dispositivo.  A menos que esteja conectado ao Devi
 
 ![Device Portal para celulares](images/device-portal/mob-device-portal-network.png)
 
+## Notas e recursos de serviço
 
-<!--HONumber=May16_HO2-->
+### DNS-SD
+
+O Device Portal anuncia sua presença na rede local usando DNS-SD.  Todas as instâncias do Device Portal, independentemente do tipo de dispositivo, anunciam em "WDP._wdp._tcp.local". Os registros TXT para a instância do serviço fornecem o seguinte:
+
+Chave | Tipo | Descrição 
+----|------|-------------
+S | int | Porta segura para o Device Portal.  Se 0 (zero), o Device Portal não está escutando conexões HTTPS. 
+D | cadeia de caracteres | Tipo de dispositivo.  Isso estará no formato "Windows.*", por exemplo, Windows.Xbox ou Windows.Desktop
+A | cadeia de caracteres | Arquitetura do dispositivo.  Isso será ARM, x86 ou AMD64.  
+T | lista de cadeias de caracteres delineadas de caracteres nulos | Marcas aplicadas pelo usuário para o dispositivo. Consulte as Marcas API de REST para saber como usá-las. A lista é encerrada com duplo nulo.  
+
+É recomendável estabelecer conexão na porta HTTPS, pois nem todos os dispositivos estão ouvindo na porta HTTP anunciada pelo registro DNS SD. 
+
+### Proteção contra CSRF e scripts
+
+Para proteger-se contra [ataques CSRF](https://wikipedia.org/wiki/Cross-site_request_forgery), um token exclusivo é necessário em todas as solicitações não GET. Esse token, o cabeçalho de solicitação X-CSRF-Token, é derivado de um cookie de sessão, o CSRF-Token. Na interface do usuário Web do Device Portal, o cookie CSRF-Token é copiado no cabeçalho X-CSRF-Token em cada solicitação.
+
+**Importante** essa proteção impede o uso das APIs REST a partir de um cliente autônomo (por exemplo, utilitários de linha de comando). Isso pode ser resolvido de três modos: 
+
+1. Uso do nome de usuário "auto-". Os clientes que têm o prefixo "auto-" no nome de usuário serão ignorados pela proteção contra CSRF. É importante que esse nome de usuário não seja usado para fazer logon no Device Portal por meio do navegador, pois ele abrirá o serviço para ataques CSRF. Exemplo: se o nome de usuário do Device Portal for "admin", ```curl -u auto-admin:password <args>``` deverá ser usado para ignorar a proteção contra CSRF. 
+
+2. Implemente o esquema cookie-para-cabeçalho no cliente. Isso exige uma solicitação GET para estabelecer o cookie de sessão e, em seguida, a inclusão do cabeçalho e o cookie em todas as solicitações subsequentes. 
+ 
+3. Desabilite a autenticação e use HTTP. A proteção contra CSRF só se aplica a pontos de extremidade HTTPS, portanto, as conexões em pontos de extremidade HTTP não precisam fazer nada do que é mencionado acima. 
+
+**Observação**: um nome de usuário que começar com "auto-" não será capaz de fazer logon no Device Portal por meio do navegador.  
+
+
+
+<!--HONumber=Jun16_HO4-->
 
 

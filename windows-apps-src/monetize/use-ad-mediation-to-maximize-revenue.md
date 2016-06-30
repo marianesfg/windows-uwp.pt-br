@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 772DEBF2-1578-4330-9C14-70BCC6F55005
-description: A Microsoft dá suporte ao controle de anúncios, o que permite otimizar a receita de publicidade no aplicativo com o controle de solicitações de anúncios em faixa de várias redes de publicidade.
-title: Usar controle de anúncios para maximizar a receita
+description: "A Microsoft dá suporte ao controle de anúncios, o que permite otimizar a receita de publicidade no aplicativo com o controle de solicitações de anúncios em faixa de várias redes de publicidade."
+title: "Usar controle de anúncios para maximizar a receita"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c0669e35b285ee7dfeda0c039d8455a4237960f5
+
 ---
 
 #  Usar controle de anúncios para maximizar a receita
@@ -50,6 +54,7 @@ Se você não quiser usar o controle de anúncios ou se o tipo de projeto atualm
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

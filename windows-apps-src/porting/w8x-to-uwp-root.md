@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Se você tem um aplicativo Universal 8.1&\#8212;voltado para o Windows 8.1, Windows Phone 8.1 ou ambos&\#8212;, saiba que seu código-fonte e suas habilidades serão portados perfeitamente para o Windows 10.
+description: "Se você tem um aplicativo Universal 8.1&\\#8212;voltado para o Windows 8.1, Windows Phone 8.1 ou ambos&\\#8212;, saiba que seu código-fonte e suas habilidades serão portados perfeitamente para o Windows 10."
 title: Mudar do Windows Runtime 8.x para a UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3aa24e61482054dadd9b798063d46abf36623e9b
+
 ---
 
 # Mudar do Windows Runtime 8.x para a UWP
@@ -75,6 +79,7 @@ Se você tiver um projeto do Windows 10 que você criou com o Microsoft Visual S
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

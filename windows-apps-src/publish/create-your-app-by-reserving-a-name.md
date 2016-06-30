@@ -1,9 +1,13 @@
 ---
 author: jnHs
-Description: A primeira etapa na criação de um novo aplicativo no painel do Centro de Desenvolvimento do Windows é reservar um nome de aplicativo. Veja como reservar nomes e encontrar sugestões para escolher um nome excelente para o seu aplicativo.
+Description: "A primeira etapa na criação de um novo aplicativo no painel do Centro de Desenvolvimento do Windows é reservar um nome de aplicativo. Veja como reservar nomes e encontrar sugestões para escolher um nome excelente para o seu aplicativo."
 title: Crie seu aplicativo reservando um nome
-keywords:
+keywords: 
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
+translationtype: Human Translation
+ms.sourcegitcommit: 3b65bbaf2498dde7484c055ff86ed09e89bf3405
+ms.openlocfilehash: 5e4933be456bc76eb5923f5c081e8376c43c118b
+
 ---
 
 # Crie seu aplicativo reservando um nome
@@ -60,6 +64,7 @@ Para saber mais, consulte [Gerenciar nomes de aplicativo](manage-app-names.md).
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

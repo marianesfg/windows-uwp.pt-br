@@ -1,13 +1,17 @@
 ---
 author: DelfCo
-description: Use a API de transferência em segundo plano para copiar arquivos de maneira confiável na rede.
-title: Transferências em segundo plano
+description: "Use a API de transferência em segundo plano para copiar arquivos de maneira confiável na rede."
+title: "Transferências em segundo plano"
 ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 02e01be9cf726731697eb5934cb86b398431b532
+
 ---
 
 # Transferências em segundo plano
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -35,9 +39,9 @@ A transferência em segundo plano proporciona métodos que oferecem suporte para
 
 ### Como esse recurso se adapta a alterações no status de rede ou desligamentos inesperados?
 
-O recurso de transferência em segundo plano mantém uma experiência consistente para cada operação de transferência quando ocorrem alterações no status de rede, impulsionando de modo inteligente a conectividade e as informações do status do plano de dados da operadora fornecidas pelo recurso de [Conectividade](https://msdn.microsoft.com/library/windows/apps/hh452990). Para definir comportamentos para diferentes situações de rede, um aplicativo configura uma política de custo para cada operação usando valores definidos pela [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)
+O recurso de transferência em segundo plano mantém uma experiência consistente para cada operação de transferência quando ocorrem alterações no status de rede, impulsionando de modo inteligente a conectividade e as informações do status do plano de dados da operadora fornecidas pelo recurso de [Conectividade](https://msdn.microsoft.com/library/windows/apps/hh452990). Para definir comportamentos para diferentes situações de rede, um aplicativo configura uma política de custo para cada operação usando valores definidos pela [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138).
 
-Por exemplo, a política de custo definida para uma operação pode indicar que a operação deve ser pausada automaticamente quando o dispositivo estiver usando uma rede limitada. A transferência é, então, retomada (ou reiniciada) automaticamente quando uma conexão a uma rede "não restrita" é estabelecida. Para obter mais informações sobre como as redes são definidas por custo, consulte [**NetworkCostType**](https://msdn.microsoft.com/library/windows/apps/br207292)
+Por exemplo, a política de custo definida para uma operação pode indicar que a operação deve ser pausada automaticamente quando o dispositivo estiver usando uma rede limitada. A transferência é, então, retomada (ou reiniciada) automaticamente quando uma conexão a uma rede "não restrita" é estabelecida. Para obter mais informações sobre como as redes são definidas por custo, consulte [**NetworkCostType**](https://msdn.microsoft.com/library/windows/apps/br207292).
 
 Embora o recurso de transferência em segundo plano tenha seus próprios mecanismos para manipular alterações no status de rede, existem outras considerações gerais de conectividade para aplicativos conectados a rede. Leia sobre o [aproveitamento de informações de conexão de rede disponíveis](https://msdn.microsoft.com/library/windows/apps/hh452983) para saber mais.
 
@@ -79,7 +83,7 @@ Na etapa anterior, os valores *uriString* e *file* são passados para uma instâ
 
 Em seguida, as propriedades do [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (*file*) fornecido são usadas por [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) para popular o cabeçalho de solicitação e configurar a propriedade *SourceFile* com o objeto **StorageFile**. O método [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146) é, então, chamado para inserir o nome do arquivo, fornecido como uma cadeia de caracteres, e a propriedade [**StorageFile.Name**](https://msdn.microsoft.com/library/windows/apps/br227220).
 
-Por fim, [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) cria a [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) (*upload*
+Por fim, [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) cria a [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) (*carregar*).
 
 [!code-js[uploadFile]
             (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_A "Criar e inicializar a operação de upload em várias partes")]
@@ -192,7 +196,7 @@ Observe as chamadas de método assíncrono definidas usando promessas do JavaScr
 promise = download.startAsync().then(complete, error, progress);
 ```
 
-A chamada de método assíncrono é seguida por uma instrução then que indica métodos, definidos pelo aplicativo, que são chamados quando é retornado um resultado da chamada de método assíncrono. Para obter mais informações sobre esse padrão de programação, consulte [Programação assíncrona em JavaScript usando promessas](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx)
+A chamada de método assíncrono é seguida por uma instrução then que indica métodos, definidos pelo aplicativo, que são chamados quando é retornado um resultado da chamada de método assíncrono. Para obter mais informações sobre esse padrão de programação, consulte [Programação assíncrona em JavaScript usando promessas](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
 ### Adicionando outros métodos de controle de operação
 
@@ -312,10 +316,11 @@ O namespace [**Windows.Networking.backgroundTransfer**](https://msdn.microsoft.c
 
 Um erro encontrado em um método assíncrono do namespace [**Windows.Networking.backgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) é retornado como um valor **HRESULT**. O método [**BackgroundTransferError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701093) é usado para converter um erro de rede de uma operação de transferência em segundo plano em um valor de enumeração [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818). A maioria dos valores de enumeração **WebErrorStatus** corresponde a um erro retornado pela operação nativa de cliente HTTP ou FTP. Um aplicativo pode filtrar por um valor específico de enumeração **WebErrorStatus** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 
-Para erros de validação de parâmetro, um aplicativo também pode usar o **HRESULT** baseado na exceção para obter informações mais detalhadas sobre o erro causador da exceção. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror. h*. Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E\_INVALIDARG**
+Para erros de validação de parâmetro, um aplicativo também pode usar o **HRESULT** baseado na exceção para obter informações mais detalhadas sobre o erro causador da exceção. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror. h*. Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado é **E\_INVALIDARG**.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

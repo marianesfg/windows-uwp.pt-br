@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: Sensores
-description: Os sensores permitem ao aplicativo identificar a relação entre um dispositivo e o mundo físico ao redor dele. Os sensores podem informar ao aplicativo a direção, a orientação e o movimento do dispositivo.
+description: "Os sensores permitem ao aplicativo identificar a relação entre um dispositivo e o mundo físico ao redor dele. Os sensores podem informar ao aplicativo a direção, a orientação e o movimento do dispositivo."
+translationtype: Human Translation
+ms.sourcegitcommit: e5f61e562f7ec464fc07815b0bdd0ac938fc2fb2
+ms.openlocfilehash: dff6228524396c5d6662313ecc808b33e9dd1998
+
 ---
 # Sensores
 
@@ -70,7 +74,7 @@ O sensor [**Barometer**](https://msdn.microsoft.com/library/windows/apps/Dn87240
 
 ## Bússola
 
-O sensor [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705) retorna uma direção 2D em relação ao Norte magnético, baseado no plano horizontal da terra. O sensor da bússola não deve ser usado para determinar a orientação específica do dispositivo ou para fazer representações no espaço 3D. Os recursos geográficos podem causar declinação na direção, então alguns sistemas dão suporte para ambos [**HeadingMagneticNorth**](https://msdn.microsoft.com/library/windows/apps/BR225705reading_headingmagneticnorth) e [**HeadingTrueNorth**](https://msdn.microsoft.com/library/windows/apps/BR225705reading_headingtruenorth) . Pense em qual é a preferencial para o seu aplicativo, mas lembre-se de que nem todos os sistemas irão reportar o valor de Norte verdadeiro. Os sensores do girômetro e o magnetômetro (um dispositivo que mede a amplitude da força magnética) combina seus dados para produzir a direção da bússola, que tem um efeito líquido de estabilização dos dados (a força do campo magnético é muito instável, devido aos componentes do sistema elétrico).
+O sensor [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705) retorna uma direção 2D em relação ao Norte magnético, baseado no plano horizontal da terra. O sensor da bússola não deve ser usado para determinar a orientação específica do dispositivo ou para fazer representações no espaço 3D. Os recursos geográficos podem causar declinação na direção, então alguns sistemas dão suporte para ambos [**HeadingMagneticNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingmagneticnorth.aspx) e [**HeadingTrueNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingtruenorth.aspx) . Pense em qual é a preferencial para o seu aplicativo, mas lembre-se de que nem todos os sistemas irão reportar o valor de Norte verdadeiro. Os sensores do girômetro e o magnetômetro (um dispositivo que mede a amplitude da força magnética) combina seus dados para produzir a direção da bússola, que tem um efeito líquido de estabilização dos dados (a força do campo magnético é muito instável, devido aos componentes do sistema elétrico).
 
 ![As leituras da bússola com relação ao Polo Norte magnético](images/compass.png)
 
@@ -114,7 +118,7 @@ O sensor [**Proximity**](https://msdn.microsoft.com/library/windows/apps/Dn87242
 
 ## Orientação simples
 
-O [**SimpleOrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206399sensor) detecta a orientação quadrante atual do dispositivo especificado ou seu enquadramento de frente ou enquadramento para baixo. Ele tem seis estados possíveis [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) (**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp** e **FaceDown**).
+O [**SimpleOrientationSensor**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.simpleorientationsensor.aspx) detecta a orientação quadrante atual do dispositivo especificado ou seu enquadramento de frente ou enquadramento para baixo. Ele tem seis estados possíveis [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) (**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp** e **FaceDown**).
 
 Um aplicativo de leitura que altera sua exibição com base no dispositivo sendo segurado em paralelo ou perpendicular ao chão usará os valores de SimpleOrientationSensor para determinar como o dispositivo está sendo segurado.
 
@@ -124,6 +128,7 @@ Para obter alguns exemplos que demonstram o uso de alguns dos diferentes sensore
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

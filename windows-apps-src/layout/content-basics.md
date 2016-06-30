@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: O objetivo principal de qualquer aplicativo é fornecer acesso ao conteúdo. Em um aplicativo de edição de fotos, a foto é o conteúdo; em um aplicativo de viagens, os mapas e as informações sobre os destinos de viagem são os conteúdos; e assim por diante.
-title: Noções básicas de design de conteúdo para aplicativos da Plataforma Universal do Windows (UWP)
+Description: "O objetivo principal de qualquer aplicativo é fornecer acesso ao conteúdo. Em um aplicativo de edição de fotos, a foto é o conteúdo; em um aplicativo de viagens, os mapas e as informações sobre os destinos de viagem são os conteúdos; e assim por diante."
+title: "Noções básicas de design de conteúdo para aplicativos da Plataforma Universal do Windows (UWP)"
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: c8328150601bf132c28e569c4db21095cb77f88c
+
 ---
 
 #  Noções básicas de design de conteúdo para aplicativos UWP
@@ -118,6 +122,7 @@ Veja alguns elementos de interface do usuário comumente usados para exibir o co
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

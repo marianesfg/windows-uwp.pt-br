@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Reduzir a latência com cadeias de troca DXGI 1.3
-description: Use o DXGI 1.3 para reduzir a latência de quadros eficaz aguardando a cadeia de troca sinalizar o horário apropriado para começar a renderizar um novo quadro.
+title: "Reduzir a latência com cadeias de troca DXGI 1.3"
+description: "Use o DXGI 1.3 para reduzir a latência de quadros eficaz aguardando a cadeia de troca sinalizar o horário apropriado para começar a renderizar um novo quadro."
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 174e2918d54a2b03124752d009f43f0cb0c800ca
+
 ---
 
 # Reduzir a latência com cadeias de troca DXGI 1.3
@@ -158,6 +162,7 @@ Para saber mais sobre programação multithreaded no Windows, consulte os seguin
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

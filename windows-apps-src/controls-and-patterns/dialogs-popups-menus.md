@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Um submenu é um pop-up leve que é usado para mostrar temporariamente a interface do usuário relacionada ao que o usuário está fazendo no momento.
-title: Menus de contexto e caixas de diálogo
+Description: "Um submenu é um pop-up leve que é usado para mostrar temporariamente a interface do usuário relacionada ao que o usuário está fazendo no momento."
+title: "Menus de contexto e caixas de diálogo"
 ms.assetid: 7CA2600C-A1DB-46AE-8F72-24C25E224417
 label: Menus, dialogs, and popups
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
+
 ---
 # Menus, caixas de diálogo, submenus e pop-ups
 
@@ -179,6 +183,7 @@ Para abrir facilmente um menu de contexto ou submenu em resposta a qualquer uma 
 - [**Classe ContentDialog**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

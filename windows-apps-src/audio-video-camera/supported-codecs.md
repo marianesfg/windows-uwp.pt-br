@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
-description: Este artigo lista os codecs de áudio e de vídeo e os formatos compatíveis com os aplicativos UWP.
-title: Codecs compatíveis
+description: "Este artigo lista os codecs de áudio e de vídeo e os formatos compatíveis com os aplicativos UWP."
+title: "Codecs compatíveis"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 1481f8bbb2c53f667d253e23af1422297e19c63d
+
 ---
 
 # Codecs compatíveis
@@ -2692,6 +2696,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

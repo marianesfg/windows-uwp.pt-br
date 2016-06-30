@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Se seu aplicativo usa o controle de anúncios ou exibe anúncios em banners ou vídeos intersticiais do Microsoft Advertising, use a página Monetização &gt; Monetizar com anúncios para gerenciar o uso de anúncios.
-title: Monetizar com anúncios
+Description: "Se seu aplicativo usa o controle de anúncios ou exibe anúncios em banners ou vídeos intersticiais do Microsoft Advertising, use a página Monetização &gt; Monetizar com anúncios para gerenciar o uso de anúncios."
+title: "Monetizar com anúncios"
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 97eeeedb9e73b6c67abe6e2ff8cadbc744a6a7c4
+
 ---
 
 # Monetizar com anúncios
@@ -65,6 +69,7 @@ Suas unidades de anúncio aparecem em uma tabela na parte inferior desta seção
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

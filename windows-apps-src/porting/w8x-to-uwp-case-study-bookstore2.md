@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: Este estudo de caso, que se baseia nas informações fornecidas no Bookstore1, começa com um aplicativo Universal 8.1 que exibe dados agrupados em um controle SemanticZoom.
+description: "Este estudo de caso, que se baseia nas informações fornecidas no Bookstore1, começa com um aplicativo Universal 8.1 que exibe dados agrupados em um controle SemanticZoom."
 title: Estudo de caso do Windows Runtime 8.x para UWP Bookstore2
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 97682b2b914707874dcac998f7db5f2029ad433e
+
 ---
 
 # Estudo de caso do Windows Runtime 8.x para UWP: Bookstore2
@@ -169,6 +173,7 @@ Este estudo de caso envolveu uma interface do usuário mais ambiciosa do que a a
 O próximo estudo de caso é o [QuizGame](w8x-to-uwp-case-study-quizgame.md), no qual analisaremos o acesso e a exibição de dados agrupados.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

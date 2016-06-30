@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Na marcação XAML, especifica um valor null para uma propriedade.
-title: Extensão de marcação xNull
+description: "Na marcação XAML, especifica um valor null para uma propriedade."
+title: "Extensão de marcação xNull"
 ms.assetid: E6A4038E-4ADA-4E82-9824-582FC16AB037
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 96ec27fa36d5a30d6bcf3b3c4ad4a330bf799a09
+
 ---
 
 # Extensão de marcação {x:Null}
@@ -33,6 +37,7 @@ Alguns tipos do Windows Runtime são anuláveis. Quando um tipo que permite valo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

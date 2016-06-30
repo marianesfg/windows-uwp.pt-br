@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Você pode gerenciar e visualizar detalhes relacionados a cada um de seus aplicativos no painel do Centro de Desenvolvimento do Windows e configurar serviços como notificações por push e mapas.
-title: Gerenciamento de aplicativos e serviços
+Description: "Você pode gerenciar e visualizar detalhes relacionados a cada um de seus aplicativos no painel do Centro de Desenvolvimento do Windows e configurar serviços como notificações por push e mapas."
+title: "Gerenciamento de aplicativos e serviços"
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 71077ac3f64e10734021e5fb655168f7273e3cb6
+
 ---
 
 # Gerenciamento de aplicativos e serviços
@@ -78,6 +82,7 @@ Os desenvolvedores com permissões de OEM também podem [gerar pacotes de pré-i
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

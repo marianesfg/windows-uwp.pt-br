@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: ECE848C2-33DE-46B0-BAE7-647DB62779BB
 title: Calibrar sensores
-description: Sensores em um dispositivo baseado no magnetômetro (bússola, inclinômetro e sensor de orientação) podem precisar de calibragem devido a fatores ambientais.
+description: "Sensores em um dispositivo baseado no magnetômetro (bússola, inclinômetro e sensor de orientação) podem precisar de calibragem devido a fatores ambientais."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4652d20b8dd0d04932dcbda330efa8e9367f53d1
+
 ---
 # Calibrar sensores
 
@@ -29,6 +33,7 @@ Este breve vídeo apresenta uma visão geral de como calibrar o magnetômetro.<i
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

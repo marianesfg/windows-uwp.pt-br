@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: Planejando para o desempenho
-description: Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria.
+description: "Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria."
+translationtype: Human Translation
+ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
+ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
+
 ---
 # Planejando para o desempenho
 
@@ -189,6 +193,7 @@ Otimize somente os caminhos de código críticos de desempenho em seu aplicativo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

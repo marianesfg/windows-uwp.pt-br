@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: O relatório Aquisições de IAP do painel do Centro de Desenvolvimento do Windows permite que você veja quantos IAPs você vendeu, além das informações demográficas e dos detalhes da plataforma.
-title: Relatório de aquisições de IAP
+Description: "O relatório Aquisições de IAP do painel do Centro de Desenvolvimento do Windows permite que você veja quantos IAPs você vendeu, além das informações demográficas e dos detalhes da plataforma."
+title: "Relatório de aquisições de IAP"
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3191df12ca5b59f545cf250c3e669b30192af6bc
+
 ---
 
 # Relatório de aquisições de IAP
@@ -65,6 +69,7 @@ O catálogo em destaque **Versão do sistema operacional** mostra o número tota
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

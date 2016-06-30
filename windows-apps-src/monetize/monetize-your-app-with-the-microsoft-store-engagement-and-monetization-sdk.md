@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: O SDK de Microsoft Store Engagement and Monetization fornece bibliotecas e ferramentas que você pode usar para adicionar recursos aos seus aplicativos que ajudam você a ganhar mais dinheiro e clientes.
+Description: "O SDK de Microsoft Store Engagement and Monetization fornece bibliotecas e ferramentas que você pode usar para adicionar recursos aos seus aplicativos que ajudam você a ganhar mais dinheiro e clientes."
 title: SDK de Microsoft Store Engagement and Monetization
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
+translationtype: Human Translation
+ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
+ms.openlocfilehash: 481cf2aab806a1f9ce368256a9df8930cbc756c1
+
 ---
 
 # SDK de Microsoft Store Engagement and Monetization
@@ -75,6 +79,7 @@ Outras bibliotecas no SDK, incluindo Microsoft.Advertising.dll para outras plata
 * [Iniciar o Hub de Feedback do seu aplicativo](launch-feedback-hub-from-your-app.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

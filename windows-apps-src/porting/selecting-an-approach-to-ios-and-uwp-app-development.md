@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Quais são as opções ao desenvolver aplicativos de plataforma cruzada?
+description: "Quais são as opções ao desenvolver aplicativos de plataforma cruzada?"
 title: Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP
 ms.assetid: 5CDAB313-07B7-4A32-A49B-026361DCC853
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2703a0c919b08331cc7ab55fe78b868555312ac0
+
 ---
 
 # Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP
@@ -91,6 +95,7 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

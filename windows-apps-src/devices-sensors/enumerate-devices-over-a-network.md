@@ -2,11 +2,15 @@
 author: DBirtolo
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
 title: Enumerar dispositivos em uma rede
-description: Além da descoberta de dispositivos conectados localmente, você pode usar as APIs Windows.Devices.Enumeration para enumerar dispositivos por meio de protocolos de rede e sem fio.
+description: "Além da descoberta de dispositivos conectados localmente, você pode usar as APIs Windows.Devices.Enumeration para enumerar dispositivos por meio de protocolos de rede e sem fio."
+translationtype: Human Translation
+ms.sourcegitcommit: 6eca7156c8f81a9a89e006c09a232a255f3a8725
+ms.openlocfilehash: 9d2d58f2423688f895da1de56eef6448bb42692d
+
 ---
 # Enumerar dispositivos em uma rede
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** APIs importantes **
@@ -79,6 +83,7 @@ System.Devices.AepContainer.ProtocolIds:~~"{0e261de4-12f0-46e6-91ba-428607ccef64
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

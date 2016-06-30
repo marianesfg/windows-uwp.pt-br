@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: A página Preço e disponibilidade do processo de envio de aplicativo permite que você determine quanto seu aplicativo vai custar, se você oferecerá uma avaliação gratuita e como, quando e onde ele estará disponível para os clientes.
-title: Definir a disponibilidade e o preço do aplicativo
+Description: "A página Preço e disponibilidade do processo de envio de aplicativo permite que você determine quanto seu aplicativo vai custar, se você oferecerá uma avaliação gratuita e como, quando e onde ele estará disponível para os clientes."
+title: "Definir a disponibilidade e o preço do aplicativo"
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 509ef3b8b9ec06907fccc2dbbe29fa3c72cb8e5d
+
 ---
 
 # Definir a disponibilidade e o preço do aplicativo
@@ -98,6 +102,7 @@ Você também pode mudar a data de lançamento após enviar o aplicativo, desde 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

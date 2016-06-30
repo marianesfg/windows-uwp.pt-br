@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Desenhar na tela
-description: Por fim, compatibilizamos o código que desenha o cubo giratório na tela.
+description: "Por fim, compatibilizamos o código que desenha o cubo giratório na tela."
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 1b7431c20e25173a0aa3f8d6ee0d407be869d60a
+
 ---
 
 # Desenhar na tela
@@ -68,7 +72,7 @@ O tempo de execução do Direct3D cria implicitamente uma [**IDXGISurface1**](ht
 
 A inicialização e a configuração do dispositivo Direct3D e de seu respectivo contexto, bem como dos destinos de renderização, podem ser encontradas nos métodos personalizados **CreateDeviceResources** e **CreateWindowSizeDependentResources** no modelo do Direct3D.
 
-Para saber mais sobre o contexto de dispositivo Direct3D relacionado a EGL e ao tipo EGLContext, leia o tópico sobre [portabilidade do código EGL para DXGI e Direct3D](moving-from-egl-to-dxgi.md)
+Para saber mais sobre o contexto de dispositivo Direct3D relacionado a EGL e ao tipo EGLContext, leia o tópico sobre [portabilidade do código EGL para DXGI e Direct3D](moving-from-egl-to-dxgi.md).
 
 ## Instruções
 
@@ -124,15 +128,15 @@ void Render(GraphicsContext *drawContext)
 
 No Direct3D 11, o processo é muito parecido (supomos que você esteja usando a configuração de destino de renderização e visor do modelo Direct3D).
 
--   Atualize os buffers constantes (a matriz modelo-exibição-projeção, neste caso) com chamadas para [**ID3D11DeviceContext1::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/hh446790)
--   Defina o buffer de vértice com [**ID3D11DeviceContext1::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456)
--   Defina o buffer de índice com [**ID3D11DeviceContext1::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453)
--   Defina a topologia de triângulos específica (uma lista de triângulos) com [**ID3D11DeviceContext1::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455)
--   Defina o layout de entrada do buffer de vértice com [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)
--   Vincule o sombreador de vértice com [**ID3D11DeviceContext1::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493)
--   Vincule o sombreador de fragmento com [**ID3D11DeviceContext1::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472)
--   Envie os vértices indexados pelos sombreadores e gere os resultados de cores no buffer de destino de renderização com [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409)
--   Exiba o buffer de destino de renderização com [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)
+-   Atualize os buffers constantes (a matriz modelo-exibição-projeção, neste caso) com chamadas para [**ID3D11DeviceContext1::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/hh446790).
+-   Defina o buffer de vértice com [**ID3D11DeviceContext1::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456).
+-   Defina o buffer de índice com [**ID3D11DeviceContext1::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453).
+-   Defina a topologia de triângulos específica (uma lista de triângulos) com [**ID3D11DeviceContext1::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455).
+-   Defina o layout de entrada do buffer de vértice com [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454).
+-   Vincule o sombreador de vértice com [**ID3D11DeviceContext1::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493).
+-   Vincule o sombreador de fragmento com [**ID3D11DeviceContext1::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472).
+-   Envie os vértices indexados pelos sombreadores e gere os resultados de cores no buffer de destino de renderização com [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409).
+-   Exiba o buffer de destino de renderização com [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797).
 
 Direct3D 11: renderizando um quadro para exibição
 
@@ -225,6 +229,7 @@ Este exemplo fala muito da complexidade de configurar recursos de dispositivo, p
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

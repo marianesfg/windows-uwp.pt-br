@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Ícones bons se harmonizam com a tipografia e com o restante da linguagem do design. Eles não misturam metáforas e comunicam apenas o que é necessário, com a máxima rapidez e simplicidade possível. 
-title: Ícones
+Description: "Ícones bons se harmonizam com a tipografia e com o restante da linguagem do design. Eles não misturam metáforas e comunicam apenas o que é necessário, com a máxima rapidez e simplicidade possível."
+title: "Ícones"
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e5e601bf3ff9d0b1518c86130a5b0fefbb86a773
+
 ---
 
 # Ícones para aplicativos UWP
@@ -172,6 +176,7 @@ Os selos devem ser dimensionados com 10 a 18 px em uma grade de 32px x 32px.
 * [Diretrizes de ativos de bloco e ícone](../controls-and-patterns/tiles-and-notifications-app-assets.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

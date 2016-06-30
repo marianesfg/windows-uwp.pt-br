@@ -1,8 +1,12 @@
 ---
 author: scottmill
 ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
-title: Efeitos de composição
-description: O efeito de APIs permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada.
+title: "Efeitos de composição"
+description: "O efeito de APIs permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada."
+translationtype: Human Translation
+ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
+ms.openlocfilehash: 10c3b6d0f56d0e8670cc202ac8d8a3f7538eb5a7
+
 ---
 # Efeitos de composição
 
@@ -79,7 +83,7 @@ As propriedades de efeito fornecem suporte à animação. Durante a compilação
 
 ### Propriedades de efeitos — constante versus animado
 
-Durante a compilação de efeitos, você pode especificar as propriedades do efeito como dinâmicas ou como propriedades que são "incorporadas" como constantes. As propriedades dinâmicas são especificadas por meio de cadeias de caracteres de forma "<effect name>.<property name>”. As propriedades dinâmicas pode ser definidas com um valor específico ou podem ser animadas usando o sistema de animação de composição.
+Durante a compilação de efeitos, você pode especificar as propriedades do efeito como dinâmicas ou como propriedades que são "incorporadas" como constantes. As propriedades dinâmicas são especificadas por meio de cadeias de caracteres de forma "<effect name>.<property name>". As propriedades dinâmicas pode ser definidas com um valor específico ou podem ser animadas usando o sistema de animação de composição.
 
 Ao compilar a descrição de efeito acima, você tem a flexibilidade de incorporar a saturação para que seja igual a 0,5 ou torná-la dinâmica e defini-la dinamicamente ou animá-la.
 
@@ -243,6 +247,7 @@ brush.Surface = imageSource.Surface;
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

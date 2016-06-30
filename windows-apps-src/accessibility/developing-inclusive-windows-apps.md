@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: Aprenda a desenvolver aplicativos UWP para Windows 10 acessíveis que incluem navegação de teclado, configurações de cor e contraste, além de suporte para as tecnologias assistenciais.
+Description: "Aprenda a desenvolver aplicativos UWP para Windows 10 acessíveis que incluem navegação de teclado, configurações de cor e contraste, além de suporte para as tecnologias assistenciais."
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: Desenvolvendo aplicativos inclusivos do Windows 10
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 77c401fd9686cb260e7b2d9e4bdf47a91d76802e
+
 ---
 
 # Desenvolvendo aplicativos inclusivos do Windows  
@@ -80,6 +84,7 @@ Para obter mais detalhes, veja o tópico [Lista de verificação de acessibilida
 * [Hub de desenvolvedor de acessibilidade da Microsoft](https://msdn.microsoft.com/enable)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

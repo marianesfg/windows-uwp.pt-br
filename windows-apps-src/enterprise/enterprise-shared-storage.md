@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: B48E21AB-0EA5-444B-8333-393DD8D1B76D
 title: Armazenamento compartilhado corporativo
-description: O armazenamento compartilhado corporativo define localizações de dados locais para aplicativos de linha de negócios para compartilhar dados.
+description: "O armazenamento compartilhado corporativo define localizações de dados locais para aplicativos de linha de negócios para compartilhar dados."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 6f0e479081c361d69ab0c9e8cf4c531627304d32
+
 ---
 # Armazenamento compartilhado corporativo
 
@@ -69,6 +73,7 @@ foreach (StorageFile file in sortedItems)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

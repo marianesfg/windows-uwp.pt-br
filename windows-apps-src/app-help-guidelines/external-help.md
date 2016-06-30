@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
-Description: Crie páginas de ajuda externa para fornecer instruções detalhadas e conselhos sobre seu aplicativo.
-title: Diretrizes para criar páginas de ajuda externa
+Description: "Crie páginas de ajuda externa para fornecer instruções detalhadas e conselhos sobre seu aplicativo."
+title: "Diretrizes para criar páginas de ajuda externa"
 label: External help
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 03ef3fc34d2018c0ec712977065377a9c52cd8b2
+
 ---
 
 # Páginas de ajuda externa
@@ -21,7 +25,7 @@ Se o conteúdo da ajuda for breve ou suficientemente específico, você deve exi
 ## <span id="navigating_external_help_pages"></span><span id="NAVIGATING_EXTERNAL_HELP_PAGES"></span>Navegando por páginas de ajuda externa
 
 Quando um usuário é direcionado para uma página de ajuda externa, siga um destes dois cenários:
--   Eles são vinculados diretamente para a página que corresponde a um problema conhecido. Isso é ajuda contextual e deve ser usada quando possível.
+-   Eles são vinculados diretamente à página que corresponde a um problema conhecido. Isso é ajuda contextual e deve ser usada quando possível.
 -   Eles são vinculados para uma página de ajuda geral, com uma exibição clara de categorias e subcategorias a serem escolhidas.
 
 Fornecer aos usuários uma maneira de pesquisar sua ajuda pode ser útil, mas não torne essa pesquisa a única maneira de navegar por sua ajuda. Algumas vezes, pode ser difícil para os usuários descreverem seus problemas, o que pode dificultar a pesquisa. Os usuários devem ser capazes de encontrar rapidamente as páginas relevantes para seus problemas sem necessidade de pesquisar.
@@ -38,6 +42,7 @@ As páginas de ajuda externa são o local ideal para fornecer aos usuários tuto
 * [Diretrizes da ajuda do aplicativo](guidelines-for-app-help.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

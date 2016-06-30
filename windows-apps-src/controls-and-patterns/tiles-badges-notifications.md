@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Saiba como usar blocos, selos, notificações do sistema e notificações para fornecer pontos de entrada em seu aplicativo e manter os usuários atualizados.
-title: Blocos, selos e notificações
+Description: "Saiba como usar blocos, selos, notificações do sistema e notificações para fornecer pontos de entrada em seu aplicativo e manter os usuários atualizados."
+title: "Blocos, selos e notificações"
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 32b1c3ec674a84ca4ed08d98119fe21f77e15554
+
 ---
 
 # Blocos, selos e notificações para aplicativos UWP
@@ -127,6 +131,7 @@ Saiba como usar blocos, selos, notificações do sistema e notificações para f
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

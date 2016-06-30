@@ -1,26 +1,31 @@
 ---
-Description: Here’s the info you need to create a Universal Windows app that can run on any Windows 10-based device, including phones, tablets, and PCs.
-title: How-to guides for Windows 10 apps - Windows app development
+Description: "Aqui estão as informações de que você precisa para criar um aplicativo Universal do Windows que possa ser executado em qualquer dispositivo baseado no Windows 10, inclusive telefones, tablets e computadores."
+title: "Guias de instruções para aplicativos do Windows 10 - desenvolvimento de aplicativos do Windows"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
 author: martinekuan
 redirect_url: https://developer.microsoft.com/en-us/windows/develop
+translationtype: Human Translation
+ms.sourcegitcommit: 753a917c0ecbf445560203dbc1406acae52e5265
+ms.openlocfilehash: 97e016047c864026fe0c72e4b7cb819f0fc80748
+
 ---
 
 
-# How-to guides for UWP apps on Windows 10
+# Guias de instruções para aplicativos UWP no Windows 10
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Here’s the info you need to create a Universal Windows app that can run on any Windows 10-based device, including phones, tablets, and PCs. This section offers both instructions and code examples organized by the kind of task you want to accomplish.
+Aqui estão as informações de que você precisa para criar um aplicativo Universal do Windows que possa ser executado em qualquer dispositivo baseado no Windows 10, inclusive telefones, tablets e computadores. Esta seção oferece instruções e exemplos de código organizados pelo tipo de tarefa que você deseja realizar.
 
-If you'd like an introduction to the Universal Windows Platform (UWP) and how it lets you use the same code to deliver appropriately tailored experiences to multiple Windows device types, see these articles:
+Se você desejar uma introdução à Plataforma Universal do Windows (UWP) e saber como ela permite que você use o mesmo código para fornecer experiências adequadamente personalizadas para vários tipos de dispositivos Windows, consulte estes artigos:
 
--   [Create your first Universal Windows Platform app](get-started/create-a-hello-world-app-xaml-universal.md)
--   [Guide to Universal Windows Platform (UWP) apps](get-started/universal-application-platform-guide.md)
--   [What's a Universal Windows Platform app?](get-started/whats-a-uwp.md)
+-   [Criar seu primeiro aplicativo da Plataforma Universal do Windows](get-started/create-a-hello-world-app-xaml-universal.md)
+-   [Guia para aplicativos UWP (Plataforma Universal do Windows)](get-started/universal-application-platform-guide.md)
+-   [O que é um aplicativo da Plataforma Universal do Windows?](get-started/whats-a-uwp.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

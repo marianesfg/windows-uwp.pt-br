@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Antes de executar um experimento em seu aplicativo UWP (Plataforma Universal do Windows) com os testes A/B, você deve definir seu experimento no painel do Centro de Desenvolvimento.
+Description: "Antes de executar um experimento em seu aplicativo UWP (Plataforma Universal do Windows) com os testes A/B, você deve definir seu experimento no painel do Centro de Desenvolvimento."
 title: Definir seu experimento no painel do Centro de Desenvolvimento
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7462c23de58b44f897a1737d0d54913144b14f75
+
 ---
 
 # Definir seu experimento no painel do Centro de Desenvolvimento
@@ -70,7 +74,7 @@ Se você estiver satisfeito com os parâmetros de seu experimento e estiver pron
 
 Depois de definir seu experimento no painel do Centro de Desenvolvimento, você está pronto para as seguintes etapas:
 1. [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md). Use uma API no SDK de Microsoft Store Engagement and Monetization para obter configurações de variação para o experimento. Use esses dados para modificar o comportamento do recurso que você está testando e envie eventos de exibição e de conversão para o Centro de Desenvolvimento.
-2. [Executar e gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md). Use o painel para analisar os resultados do experimento e conclua o experimento.
+2. [Execute e gerencie seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md). Use o painel para analisar os resultados do experimento e conclua o experimento.
 
 ## Tópicos relacionados
 
@@ -80,6 +84,7 @@ Depois de definir seu experimento no painel do Centro de Desenvolvimento, você 
   * [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

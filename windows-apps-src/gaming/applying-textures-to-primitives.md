@@ -3,12 +3,16 @@ author: mtoepke
 title: Aplicar texturas a primitivas
 description: Aqui, carregamos dados de textura bruta e os aplicamos em um primitivo 3D usando o cubo que criamos em Usando efeitos e profundidade em primitivas.
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 56e8bf524537526d639f4d732ab228f3c0ea75da
+
 ---
 
 # Aplicar texturas a primitivas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aqui, carregamos dados de textura bruta e os aplicamos em um primitivo 3D usando o cubo que criamos em [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md). Também introduzimos um modelo de iluminação de produto escalar simples, em que as superfícies do cubo são mais claras ou escuras de acordo com a distância e o ângulo relativo delas para uma fonte de luz.
 
@@ -19,7 +23,7 @@ Aqui, carregamos dados de textura bruta e os aplicamos em um primitivo 3D usando
 
 Partimos do princípio de que você conhece C++. Você também precisa ter experiência básica com conceitos de programação de elementos gráficos.
 
-Também partimos do princípio de que você passou pelos artigos [Início rápido: configurando recursos de DirectX e exibindo uma imagem](setting-up-directx-resources.md), [Criando sombreadores e desenhando primitivas](creating-shaders-and-drawing-primitives.md) e [Usando efeitos e profundidade em primitivas](using-depth-and-effects-on-primitives.md).
+Também partimos do princípio de que você passou pelos artigos [Quickstart: setting up DirectX resources and displaying an image](setting-up-directx-resources.md), [Creating shaders and drawing primitives](creating-shaders-and-drawing-primitives.md) e [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md).
 
 **Tempo para concluir:** 20 minutos.
 
@@ -28,7 +32,7 @@ Instruções
 
 ### 1. Definindo variáveis para um cubo texturizado
 
-Primeiro, precisamos definir as estruturas **BasicVertex** e **ConstantBuffer** para o cubo texturizado. Essas estruturas especificam as posições, as orientações e as texturas de vértice para o cubo e como ele será exibido. Caso contrário, declaramos as variáveis similarmente ao tutorial anterior, [Usando efeitos e profundidade em primitivas](using-depth-and-effects-on-primitives.md)
+Primeiro, precisamos definir as estruturas **BasicVertex** e **ConstantBuffer** para o cubo texturizado. Essas estruturas especificam as posições, as orientações e as texturas de vértice para o cubo e como ele será exibido. Caso contrário, declaramos as variáveis similarmente ao tutorial anterior, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md).
 
 ```cpp
 struct BasicVertex
@@ -265,7 +269,7 @@ Criamos índice de vértice e buffers constantes que definem um cubo texturizado
 
 ### 3. Criando texturas e amostras
 
-Aqui, podemos aplicar os dados de textura a um cubo em vez de aplicar cores como no tutorial anterior, [Usando efeitos e profundidade em primitivas](using-depth-and-effects-on-primitives.md)
+Aqui, aplicamos dados de textura a um cubo, em vez de aplicar cores como no tutorial anterior, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md).
 
 Usamos dados de textura brutos para criar texturas.
 
@@ -522,6 +526,7 @@ Carregamos dados de textura bruta e os aplicamos a um primitivo 3D.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

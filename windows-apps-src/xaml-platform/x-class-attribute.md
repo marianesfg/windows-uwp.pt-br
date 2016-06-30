@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Configura a compilação XAML para associar classes parciais entre marcação e code-behind. A classe parcial de código é definida em um arquivo de código separado. Já a classe parcial de marcação é criada pela geração do código durante a compilação XAML.
+description: "Configura a compilação XAML para associar classes parciais entre marcação e code-behind. A classe parcial de código é definida em um arquivo de código separado. Já a classe parcial de marcação é criada pela geração do código durante a compilação XAML."
 title: Atributo xClass
 ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 83267df025baeb802bfdd0ec03ecd3bf7b01db76
+
 ---
 
 # Atributo x:Class
@@ -41,6 +45,7 @@ Embora seu arquivo code-behind possa ser um arquivo em C++, há certas convenç�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

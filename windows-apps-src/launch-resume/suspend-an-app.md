@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Manipular a suspensão do aplicativo
+author: TylerMSFT
+title: "Manipular a suspensão do aplicativo"
 description: Saiba como salvar dados importantes quando o sistema suspende o seu aplicativo.
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
+ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
+ms.openlocfilehash: 3ad58dc20a660d89622d215c46d263adf27a0542
+
 ---
 
 # Manipular a suspensão do aplicativo
@@ -23,45 +26,45 @@ Saiba como salvar dados importantes quando o sistema suspende o seu aplicativo. 
 Registre-se para manipular o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341), que indica que o aplicativo deve salvar seus dados antes de ser suspenso pelo sistema.
 
 > [!div class="tabbedCodeSnippets"]
-```cs
-using System;
-using Windows.ApplicationModel;
-using Windows.ApplicationModel.Activation;
-using Windows.UI.Xaml;
-
-partial class MainPage
-{
-   public MainPage()
-   {
-      InitializeComponent();
-      Application.Current.Suspending += new SuspendingEventHandler(App_Suspending);
-   }
-}
-```
-```vb
-Public NotInheritable Class MainPage
-
-   Public Sub New()
-      InitializeComponent() 
-      AddHandler Application.Current.Suspending, AddressOf App_Suspending
-   End Sub
-   
-End Class
-```
-```cpp
-using namespace Windows::ApplicationModel;
-using namespace Windows::ApplicationModel::Activation;
-using namespace Windows::Foundation;
-using namespace Windows::UI::Xaml;
-using namespace AppName;
-
-MainPage::MainPage()
-{
-   InitializeComponent();
-   Application::Current->Suspending += 
-       ref new SuspendingEventHandler(this, &MainPage::App_Suspending);
-}
-```
+> ```cs
+> using System;
+> using Windows.ApplicationModel;
+> using Windows.ApplicationModel.Activation;
+> using Windows.UI.Xaml;
+>
+> partial class MainPage
+> {
+>    public MainPage()
+>    {
+>       InitializeComponent();
+>       Application.Current.Suspending += new SuspendingEventHandler(App_Suspending);
+>    }
+> }
+> ```
+> ```vb
+> Public NotInheritable Class MainPage
+>
+>    Public Sub New()
+>       InitializeComponent()
+>       AddHandler Application.Current.Suspending, AddressOf App_Suspending
+>    End Sub
+>    
+> End Class
+> ```
+> ```cpp
+> using namespace Windows::ApplicationModel;
+> using namespace Windows::ApplicationModel::Activation;
+> using namespace Windows::Foundation;
+> using namespace Windows::UI::Xaml;
+> using namespace AppName;
+>
+> MainPage::MainPage()
+> {
+>    InitializeComponent();
+>    Application::Current->Suspending +=
+>        ref new SuspendingEventHandler(this, &MainPage::App_Suspending);
+> }
+> ```
 
 ## Salvar os dados do aplicativo antes da suspensão
 
@@ -69,35 +72,35 @@ MainPage::MainPage()
 Quando manipula o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341), o aplicativo tem uma oportunidade de salvar seus dados importantes na função do manipulador. O aplicativo deve usar a API de armazenamento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para salvar dados simples do aplicativo de maneira síncrona.
 
 > [!div class="tabbedCodeSnippets"]
-```cs
-partial class MainPage
-{
-    async void App_Suspending(
-        Object sender, 
-        Windows.ApplicationModel.SuspendingEventArgs e)
-    {
-        // TODO: This is the time to save app data in case the process is terminated
-    }
-}
-```
-```vb
-Public NonInheritable Class MainPage
-
-    Private Sub App_Suspending(
-        sender As Object, 
-        e As Windows.ApplicationModel.SuspendingEventArgs) Handles OnSuspendEvent.Suspending
-
-        ' TODO: This is the time to save app data in case the process is terminated
-    End Sub
-
-End Class
-```
-```cpp
-void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
-{
-    // TODO: This is the time to save app data in case the process is terminated
-}
-```
+> ```cs
+> partial class MainPage
+> {
+>     async void App_Suspending(
+>         Object sender,
+>         Windows.ApplicationModel.SuspendingEventArgs e)
+>     {
+>         // TODO: This is the time to save app data in case the process is terminated
+>     }
+> }
+> ```
+> ```vb
+> Public NonInheritable Class MainPage
+>
+>     Private Sub App_Suspending(
+>         sender As Object,
+>         e As Windows.ApplicationModel.SuspendingEventArgs) Handles OnSuspendEvent.Suspending
+>
+>         ' TODO: This is the time to save app data in case the process is terminated
+>     End Sub
+>
+> End Class
+> ```
+> ```cpp
+> void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
+> {
+>     // TODO: This is the time to save app data in case the process is terminated
+> }
+> ```
 
 ## Comentários
 
@@ -128,8 +131,6 @@ O sistema não notifica um aplicativo quando é terminado, por isso seu aplicati
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

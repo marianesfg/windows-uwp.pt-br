@@ -1,14 +1,18 @@
 ---
 author: mcleanbyron
 ms.assetid: 5cde1c22-91fd-4f5c-ac82-32efaa0d9fee
-description: Use as bibliotecas do Microsoft Advertising no SDK de Microsoft Store Engagement and Monetization para mostrar anúncios em faixa e anúncios intersticiais em vídeo em seus aplicativos XAML ou JavaScript/HTML.
-title: Apresentar anúncios usando as bibliotecas do Microsoft Advertising
+description: "Use as bibliotecas do Microsoft Advertising no SDK de Microsoft Store Engagement and Monetization para mostrar anúncios em faixa e anúncios intersticiais em vídeo em seus aplicativos XAML ou JavaScript/HTML."
+title: "Apresentar anúncios usando as bibliotecas do Microsoft Advertising"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: ab96dac3af382d334c767ad42a563c0dbc67a8f5
+
 ---
 
 # Apresentar anúncios usando as bibliotecas do Microsoft Advertising
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use as bibliotecas do Microsoft Advertising no [SDK de Microsoft Store Engagement and Monetization](monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md) para mostrar anúncios em faixa e intersticiais em vídeo em seus aplicativos XAML ou JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 e Windows Phone 8.
 
@@ -47,6 +51,7 @@ Os tópicos a seguir fornecem informações sobre tarefas comuns envolvendo as b
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

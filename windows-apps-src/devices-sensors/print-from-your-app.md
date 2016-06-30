@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: 9A0F1852-A76B-4F43-ACFC-2CC56AAD1C03
 title: Imprima a partir de seu aplicativo
-description: Aprenda a imprimir documentos a partir de um aplicativo Universal do Windows. Este tópico também mostra como imprimir páginas específicas.
+description: "Aprenda a imprimir documentos a partir de um aplicativo Universal do Windows. Este tópico também mostra como imprimir páginas específicas."
+translationtype: Human Translation
+ms.sourcegitcommit: e5f61e562f7ec464fc07815b0bdd0ac938fc2fb2
+ms.openlocfilehash: 363c19cfc15a883c4b6d951c59c63187f4239dec
+
 ---
 # Impressão a partir do seu aplicativo
 
@@ -114,7 +118,7 @@ Neste exemplo, uma janela de impressão é exibida no manipulador de eventos par
 
 ## Formatar o conteúdo do seu aplicativo
 
-Quando **ShowPrintUIAsync** é chamado, o evento [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) é acionado. O manipulador de evento **PrintTaskRequested** mostrado nesta etapa cria um [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436) chamando o método [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436request_createprinttask) e passa o título para a página de impressão e o nome de uma delegação [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source). Observe que, neste exemplo, o **PrintTaskSourceRequestedHandler** é definido de forma embutida. O **PrintTaskSourceRequestedHandler** fornece o conteúdo formatado para impressão e é descrito depois.
+Quando **ShowPrintUIAsync** é chamado, o evento [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) é acionado. O manipulador de evento **PrintTaskRequested** mostrado nesta etapa cria um [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436) chamando o método [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.printing.printtaskrequest.createprinttask.aspx) e passa o título para a página de impressão e o nome de uma delegação [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source). Observe que, neste exemplo, o **PrintTaskSourceRequestedHandler** é definido de forma embutida. O **PrintTaskSourceRequestedHandler** fornece o conteúdo formatado para impressão e é descrito depois.
 
 Neste exemplo, um manipulador de conclusão também é definido para capturar erros. É uma boa ideia lidar com eventos de conclusão, pois o seu aplicativo pode informar o usuário se um erro tiver ocorrido e fornecer as possíveis soluções. Da mesma forma, o seu aplicativo poderia usar um evento de conclusão que indica etapas subsequentes para o usuário seguir após o trabalho de impressão ser bem-sucedido.
 
@@ -378,6 +382,7 @@ Ao imprimir um subconjunto de páginas, há várias formas de mostrar o conteúd
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

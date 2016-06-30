@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: A página Pacotes é onde você carrega todos os arquivos de pacote (.xap, .appx, .appxupload e/ou .appxbundle) para o aplicativo que você está enviando. Você pode carregar pacotes para qualquer sistema operacional visado por seu aplicativo nesta etapa.
+Description: "A página Pacotes é onde você carrega todos os arquivos de pacote (.xap, .appx, .appxupload e/ou .appxbundle) para o aplicativo que você está enviando. Você pode carregar pacotes para qualquer sistema operacional visado por seu aplicativo nesta etapa."
 title: Carregue os pacotes do aplicativo
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: bb89968c261cc0c14f82375d0d708bbce5da9869
+
 ---
 
 # Carregue os pacotes do aplicativo
@@ -55,6 +59,7 @@ Quando detectarmos que você tem pacotes redundantes, forneceremos uma opção p
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

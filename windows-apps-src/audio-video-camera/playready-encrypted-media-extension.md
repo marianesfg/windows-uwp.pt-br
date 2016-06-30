@@ -1,8 +1,11 @@
 ---
 author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: Esta seção descreve como modificar seu aplicativo Web PlayReady para oferecer suporte às alterações feitas na versão do Windows 8.1 anterior para a versão do Windows 10.
-title: Extensão de mídia criptografada do PlayReady
+description: "Esta seção descreve como modificar seu aplicativo Web PlayReady para oferecer suporte às alterações feitas na versão do Windows 8.1 anterior para a versão do Windows 10."
+title: "Extensão de mídia criptografada do PlayReady"
+ms.sourcegitcommit: 965443672e52938d39069f14fe23b0c5dbd0ffa8
+ms.openlocfilehash: c575125f1d35f44b873fd3db46d62f89bb726b0b
+
 ---
 
 # Extensão de mídia criptografada do PlayReady
@@ -22,7 +25,7 @@ A lista a seguir descreve os novos recursos e alterações feitas à Extensão d
 
 -   Inclusão do gerenciamento de direitos digitais (DRM) de hardware
 
-    Suporte de proteção de conteúdo baseado em hardware permite a reprodução segura de conteúdo em alta definição (HD) ultra-alta definição (UHD) em vários dispositivos. O material de chave (incluindo chaves privadas, chaves de conteúdo e qualquer outro material de chave usado para derivar ou desbloquear essas chaves) e amostras de vídeo compactadas e não compactadas descriptografadas são protegidos ao aproveitar a segurança do hardware.
+    Suporte de proteção de conteúdo baseado em hardware permite a reprodução segura de conteúdo em alta definição (HD) e ultra-alta definição (UHD) em vários dispositivos. O material de chave (incluindo chaves privadas, chaves de conteúdo e qualquer outro material de chave usado para derivar ou desbloquear essas chaves) e amostras de vídeo compactadas e não compactadas descriptografadas são protegidos ao aproveitar a segurança do hardware.
 
 -   Fornece aquisição proativa de licenças não persistentes.
 -   Fornece a aquisição de várias licenças em uma mensagem.
@@ -130,6 +133,7 @@ function main()
         // to set the stop state.
         //
         videoElement.removeAttribute("src");
+        videoElement.load();
 
         onEndOfStream();
     };
@@ -300,6 +304,7 @@ Consulte as [aplicativos de exemplo](https://code.msdn.microsoft.com/windowsapps
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

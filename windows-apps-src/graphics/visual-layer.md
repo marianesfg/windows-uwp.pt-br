@@ -2,11 +2,15 @@
 author: scottmill
 ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Camada visual
-description: A API Windows.UI.Composition concede acesso a uma camada de composição entre a camada de estrutura (XAML) e a camada de elementos gráficos (DirectX).
+description: "A API Windows.UI.Composition concede acesso a uma camada de composição entre a camada de estrutura (XAML) e a camada de elementos gráficos (DirectX)."
+translationtype: Human Translation
+ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
+ms.openlocfilehash: 164c01737d27451adcb685f9cda544cc00634af4
+
 ---
 # Camada visual
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 No Windows 10, foi realizado um trabalho significativo para criar um novo mecanismo unificado de composição e renderização para todos os aplicativos Windows, sejam eles para área de trabalho ou dispositivos móveis. Um resultado desse trabalho foi a API de composição unificada do WinRT, chamada Windows.UI.Composition, que oferece acesso a novos objetos de composição leves juntamente com novas animações e efeitos controlados pelo Compositor.
 
@@ -52,20 +56,22 @@ Para obter mais informações, consulte a visão geral de [Animações de compos
 
 ## <span id="XAML_Interoperation"></span><span id="xaml_interoperation"></span><span id="XAML_INTEROPERATION"></span>Interoperação com XAML
 
-Além de criar uma árvore visual do zero, a API de composição pode interoperar com uma interface do usuário XAML existente usando a classe [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976) em [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908)
+Além de criar uma árvore visual do zero, a API de composição pode interoperar com uma interface do usuário XAML existente usando a classe [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976) em [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908).
 
 
 **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132)
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
 ## <span id="Additional_Resources_"></span><span id="additional_resources_"></span><span id="ADDITIONAL_RESOURCES_"></span>Recursos adicionais:
 
--   Leia o artigo de Kenny Kerr no MSDN sobre essa API: [Elementos Gráficos e Animação - Opções de Composição do Windows 10](https://msdn.microsoft.com/magazine/mt590968)
--   Exemplos de composição no [GitHub de composição](https://github.com/Microsoft/composition)
--   Documentação de referência completa da API
--   Problemas conhecidos: [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues)
+-   Leia o artigo de Kenny Kerr no MSDN sobre essa API: [Gráficos e Animação - Opções de Composição do Windows 10](https://msdn.microsoft.com/magazine/mt590968)
+-   Exemplos de composição no [GitHub de composição](https://github.com/Microsoft/composition).
+-   [
+              **Documentação de referência completa da API**
+            ](https://msdn.microsoft.com/library/windows/apps/Dn706878).
+-   Problemas conhecidos: [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues).
 
  
 
@@ -76,6 +82,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

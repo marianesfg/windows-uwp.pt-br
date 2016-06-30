@@ -1,27 +1,31 @@
 ---
-title: Smart cards
-description: This topic explains how Universal Windows Platform (UWP) apps can use smart cards to connect users to secure network services, including how to access physical smart card readers, create virtual smart cards, communicate with smart cards, authenticate users, reset user PINs, and remove or disconnect smart cards.
+title: "Cartões inteligentes"
+description: "Este tópico explica como os aplicativos da Plataforma Universal do Windows (UWP) podem usar cartões inteligentes para conectar os usuários à serviços de rede seguros, incluindo como acessar os leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, se comunicar com cartões inteligentes, autenticar usuários, redefinir PINs de usuário e como remover ou desconectar cartões inteligentes."
 ms.assetid: 86524267-50A0-4567-AE17-35C4B6D24745
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: 6e673ce75ee7f178332da6fc9ae68dbf01a9d7ce
+
 ---
 
-# Smart cards
+# Cartões inteligentes
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-This topic explains how Universal Windows Platform (UWP) apps can use smart cards to connect users to secure network services, including how to access physical smart card readers, create virtual smart cards, communicate with smart cards, authenticate users, reset user PINs, and remove or disconnect smart cards.
+Este tópico explica como os aplicativos da Plataforma Universal do Windows (UWP) podem usar cartões inteligentes para conectar os usuários à serviços de rede seguros, incluindo como acessar os leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, se comunicar com cartões inteligentes, autenticar usuários, redefinir PINs de usuário e como remover ou desconectar cartões inteligentes.
 
-## Configure the app manifest
-
-
-Before your app can authenticate users using smart cards or virtual smart cards, you must set the **Shared User Certificates** capability in the project Package.appxmanifest file.
-
-## Access connected card readers and smart cards
+## Configure o manifesto do aplicativo
 
 
-You can query for readers and attached smart cards by passing the device ID (specified in [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)) to the [**SmartCardReader.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn263890) method. To access the smart cards currently attached to the returned reader device, call [**SmartCardReader.FindAllCardsAsync**](https://msdn.microsoft.com/library/windows/apps/dn263887).
+Para que o seu aplicativo possa autenticar usuários usando cartões inteligentes ou cartões inteligentes virtuais, você deve configurar o recurso **Certificados de Usuário Compartilhado** no arquivo do projeto Package.appxmanifest.
+
+## Acesse leitores de cartões conectados e cartões inteligentes
+
+
+Você pode consultar leitores e cartões inteligentes conectados passando a ID de dispositivo (especificada em [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)) para o método [**SmartCardReader.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn263890). Para acessar os cartões inteligentes atualmente conectados a um dispositivo leitor retornado, chame [**SmartCardReader.FindAllCardsAsync**](https://msdn.microsoft.com/library/windows/apps/dn263887).
 
 ```cs
 string selector = SmartCardReader.GetDeviceSelector();
@@ -41,7 +45,7 @@ foreach (DeviceInformation device in devices)
 }
 ```
 
-You should also enable your app to observe for [**CardAdded**](https://msdn.microsoft.com/library/windows/apps/dn263866) events by implementing a method to handle app behavior on card insertion.
+Você deve também habilitar seu aplicativo para observar eventos [**CardAdded**](https://msdn.microsoft.com/library/windows/apps/dn263866) e implementar uma função para determinar o comportamento do aplicativo na inserção do cartão.
 
 ```cs
 private void reader_CardAdded(SmartCardReader sender, CardAddedEventArgs args)
@@ -50,16 +54,16 @@ private void reader_CardAdded(SmartCardReader sender, CardAddedEventArgs args)
 }
 ```
 
-You can then pass each returned [**SmartCard**](https://msdn.microsoft.com/library/windows/apps/dn297565) object to [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) to access the methods that allow your app to access and customize its configuration.
+Em seguida, você pode passar cada objeto [**SmartCard**](https://msdn.microsoft.com/library/windows/apps/dn297565) retornado para [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) acessar os métodos que permitem ao seu aplicativo acessar e personalizar sua configuração.
 
-## Create a virtual smart card
+## Crie um cartão inteligente virtual
 
 
-To create a virtual smart card using [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801), your app will first need to provide a friendly name, an admin key, and a [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642). The friendly name is generally something provided to the app, but your app will still need to provide an admin key and generate an instance of the current **SmartCardPinPolicy** before passing all three values to [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830).
+Para criar um cartão inteligente virtual usando [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801), seu aplicativo precisará primeiro fornecer um nome amigável, uma chave de administração e um [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642). O nome amigável é geralmente algo fornecido para o aplicativo, mas o seu aplicativo ainda precisará fornecer uma chave de administração e gerar uma instância do **SmartCardPinPolicy** atual antes de passar os três valores para [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830).
 
-1.  Create a new instance of a [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642)
-2.  Generate the admin key value by calling [**CryptographicBuffer.GenerateRandom**](https://msdn.microsoft.com/library/windows/apps/br241392) on the admin key value provided by the service or management tool.
-3.  Pass these values along with the *FriendlyNameText* string to [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830).
+1.  Crie uma nova instância de um [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642)
+2.  Gere o valor da chave de administração chamando [**CryptographicBuffer.GenerateRandom**](https://msdn.microsoft.com/library/windows/apps/br241392) no valor da chave de administração fornecido pelo serviço ou pela ferramenta de gerenciamento.
+3.  Passe esses valores junto com a cadeia *FriendlyNameText* para [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830).
 
 ```cs
 SmartCardPinPolicy pinPolicy = new SmartCardPinPolicy();
@@ -74,14 +78,14 @@ SmartCardProvisioning provisioning = await
           pinPolicy);
 ```
 
-Once [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830) has returned the associated [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) object, the virtual smart card is provisioned and ready for use.
+Depois que [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830) tiver retornado o objeto [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) associado, o cartão inteligente virtual será provisionado e estará pronto para o uso.
 
-## Handle authentication challenges
+## Trate os desafios da autenticação
 
 
-To authenticate with smart cards or virtual smart cards, your app must provide the behavior to complete challenges between the admin key data stored on the card, and the admin key data maintained by the authentication server or management tool.
+Para autenticar com cartões inteligentes ou cartões inteligentes virtuais, o seu aplicativo deve fornecer o comportamento para concluir os desafios entre os dados da chave de administração armazenados no cartão e os dados da chave de administração mantidos pelo servidor de autenticação ou pela ferramenta de gerenciamento.
 
-The following code shows how to support smart card authentication for services or modification of physical or virtual card details. If the data generated using the admin key on the card ("challenge") is the same as the admin key data provided by the server or management tool ("adminkey"), authentication is successful.
+O código a seguir mostra como dar suporte à autenticação de cartão inteligente para serviços ou modificação de detalhes do cartão físico ou virtual. Se os dados gerados usando a chave de administração no cartão ("desafio") forem iguais aos dados da chave de administração fornecidos pelo servidor ou pela ferramenta de gerenciamento ("adminkey"), a autenticação será bem-sucedida.
 
 ```cs
 static class ChallengeResponseAlgorithm
@@ -101,18 +105,20 @@ static class ChallengeResponseAlgorithm
 }
 ```
 
-You will see this code referenced throughout the remainder of this topic was we review how to complete an authentication action, and how to apply changes to smart card and virtual smart card information.
+Você verá esse código referenciado em todo o restante deste tópico enquanto revisamos como concluir a ação de autenticação e como aplicar mudanças nas informações do cartão inteligente e do cartão inteligente virtual.
 
-## Verify smart card or virtual smart card authentication response
+## Verifique a resposta de autenticação do cartão inteligente ou do cartão inteligente virtual
 
 
-Now that we have the logic for authentication challenges defined, we can communicate with the reader to access the smart card, or alternatively, access a virtual smart card for authentication.
+Agora que temos a lógica definida para os desafios de autenticação, podemos nos comunicar com o leitor para acessar o cartão inteligente, ou então, acessar um cartão inteligente virtual para autenticação.
 
-1.  To begin the challenge, call [**GetChallengeContextAsync**](https://msdn.microsoft.com/library/windows/apps/dn263811) from the [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) object associated with the smart card. This will generate an instance of [**SmartCardChallengeContext**](https://msdn.microsoft.com/library/windows/apps/dn297570), which contains the card's [**Challenge**](https://msdn.microsoft.com/library/windows/apps/dn297578) value.
+1.  Para começar o desafio, chame [**GetChallengeContextAsync**](https://msdn.microsoft.com/library/windows/apps/dn263811) do objeto [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) associado ao cartão inteligente. Isso irá gerar uma instância do [**SmartCardChallengeContext**](https://msdn.microsoft.com/library/windows/apps/dn297570), que contém o valor [**Challenge**](https://msdn.microsoft.com/library/windows/apps/dn297578) do cartão.
 
-2.  Next, pass the card's challenge value and the admin key provided by the service or management tool to the **ChallengeResponseAlgorithm** that we defined in the previous example.
+2.  Em seguida, passe o valor do desafio do cartão e a chave de administração fornecidos pelo serviço ou pela ferramenta de gerenciamento ao **ChallengeResponseAlgorithm** que definimos no exemplo anterior.
 
-3.  [**VerifyResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn297627) will return **true** if authentication is successful.
+3.  [
+              **VerifyResponseAsync**
+            ](https://msdn.microsoft.com/library/windows/apps/dn297627) retornará **true** se a autenticação for bem-sucedida.
 
 ```cs
 bool verifyResult = false;
@@ -131,14 +137,14 @@ using (SmartCardChallengeContext context =
 }
 ```
 
-## Change or reset a user PIN
+## Altere ou redefina um PIN do usuário
 
 
-To change the PIN associated with a smart card:
+Para alterar o PIN associado a um cartão inteligente:
 
-1.  Access the card and generate the associated [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) object.
-2.  Call [**RequestPinChangeAsync**](https://msdn.microsoft.com/library/windows/apps/dn263823) to display a UI to the user to complete this operation.
-3.  If the PIN was successfully changed the call will return **true**.
+1.  Acesse o cartão e gere o objeto [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) associado.
+2.  Chame [**RequestPinChangeAsync**](https://msdn.microsoft.com/library/windows/apps/dn263823) para exibir uma interface do usuário para que o usuário conclua essa operação.
+3.  Se o PIN foi alterado com êxito, a chamada retornará **true**.
 
 ```cs
 SmartCardProvisioning provisioning =
@@ -147,12 +153,14 @@ SmartCardProvisioning provisioning =
 bool result = await provisioning.RequestPinChangeAsync();
 ```
 
-To request a PIN reset:
+Para solicitar uma redefinição de PIN:
 
-1.  Call [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) to initiate the operation. This call includes a [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) method that represents the smart card and the pin reset request.
-2.  [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) provides information that our **ChallengeResponseAlgorithm**, wrapped in a [**SmartCardPinResetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn297693) call, uses to compare the card's challenge value and the admin key provided by the service or management tool to authenticate the request.
+1.  Chame [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) para iniciar a operação. Essa chamada inclui um método [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) que representa o cartão inteligente e a solicitação de redefinição de PIN.
+2.  [
+              **SmartCardPinResetHandler**
+            ](https://msdn.microsoft.com/library/windows/apps/dn297701) fornece informações de que nosso **ChallengeResponseAlgorithm**, encapsulado em uma chamada [**SmartCardPinResetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn297693), usa para comparar o valor do desafio do cartão e a chave de administração fornecida pelo serviço ou pela ferramenta de gerenciamento para autenticar a solicitação.
 
-3.  If the challenge is successful, the [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) call is completed; returning **true** if the PIN was successfully reset.
+3.  Se o desafio for bem-sucedido, a chamada [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) estará concluída; retornando **true** se o PIN teve uma redefinição bem-sucedida.
 
 ```cs
 SmartCardProvisioning provisioning =
@@ -180,25 +188,26 @@ bool result = await provisioning.RequestPinResetAsync(
 }
 ```
 
-## Remove a smart card or virtual smart card
+## Remova um cartão inteligente ou um cartão inteligente virtual
 
 
-When a physical smart card is removed a [**CardRemoved**](https://msdn.microsoft.com/library/windows/apps/dn263875) event will fire when the card is deleted.
+Quando um cartão inteligente físico é removido, um evento [**CardRemoved**](https://msdn.microsoft.com/library/windows/apps/dn263875) é disparado quando o cartão é excluído.
 
-Associate the firing of this event with the card reader with the method that defines your app's behavior on card or reader removal as an event handler. This behavior can be something as simply as providing notification to the user that the card was removed.
+Associe o disparo desse evento ao leitor de cartão ao método que define o comportamento do seu aplicativo na remoção do cartão ou do leitor como um manipulador de eventos. Esse comportamento pode ser algo tão simples quanto fornecer notificação ao usuário de que o cartão foi removido.
 
 ```cs
 reader = card.Reader;
 reader.CardRemoved += HandleCardRemoved;
 ```
 
-The removal of a virtual smart card is handled programmatically by first retrieving the card and then calling [**RequestVirtualSmartCardDeletionAsync**](https://msdn.microsoft.com/library/windows/apps/dn263850) from the [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) returned object.
+A remoção de um cartão inteligente virtual é tratada de forma programática, primeiro recuperando o cartão e, em seguida, chamando [**RequestVirtualSmartCardDeletionAsync**](https://msdn.microsoft.com/library/windows/apps/dn263850) a partir do objeto retornado [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801).
 
 ```cs
 bool result = await SmartCardProvisioning
     .RequestVirtualSmartCardDeletionAsync(card);
 ```
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

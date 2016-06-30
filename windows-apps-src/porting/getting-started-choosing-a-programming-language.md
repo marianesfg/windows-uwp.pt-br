@@ -1,13 +1,17 @@
 ---
 author: mcleblanc
-title: Escolhendo uma linguagem de programação
+title: "Escolhendo uma linguagem de programação"
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
-description: Escolhendo uma linguagem de programação
+description: "Escolhendo uma linguagem de programação"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 10fa4a349621c8e7b248c7daf4d7cdf967e25255
+
 ---
 
 # Introdução: escolhendo uma linguagem de programação
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Escolhendo uma linguagem de programação
 
@@ -140,6 +144,7 @@ C# é uma linguagem fácil de usar e vem com as muitas classes de suporte e estr
 [Introdução: conhecendo o Visual Studio](getting-started-getting-around-in-visual-studio.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: O seletor de hora oferece uma maneira padronizada de permitir que os usuários escolham um valor usando entrada por toque, mouse ou teclado.
+Description: "O seletor de hora oferece uma maneira padronizada de permitir que os usuários escolham um valor usando entrada por toque, mouse ou teclado."
 title: Seletor de hora
 ms.assetid: 5124ecda-09e6-449e-9d4a-d969dca46aa3
 label: Time picker
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 5056a9f304ca21c977b9cc65b8ead007eccd4288
+
 ---
 
 # Seletor de hora
@@ -57,6 +61,7 @@ O seletor de hora resultante tem esta aparência:
 - [Seletor de data](date-picker.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

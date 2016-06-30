@@ -1,37 +1,41 @@
 ---
-title: Intro to certificates
-description: This article discusses the use of certificates in Universal Windows Platform (UWP) apps.
+title: "Introdução a certificados"
+description: Este artigo discute o uso de certificados em aplicativos da Plataforma Universal do Windows (UWP).
 ms.assetid: 4EA2A9DF-BA6B-45FC-AC46-2C8FC085F90D
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: 84596f70a5deee6cebb5f4bac442a6aaca8210cd
+
 ---
 
-# Intro to certificates
+# Introdução a certificados
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-This article discusses the use of certificates in Universal Windows Platform (UWP) apps. Digital certificates are used in public key cryptography to bind a public key to a person, computer, or organization. The bound identities are most often used to authenticate one entity to another. For example, certificates are often used to authenticate a web server to a user and a user to a web server. You can create certificate requests and install or import issued certificates. You can also enroll a certificate in a certificate hierarchy.
+Este artigo discute o uso de certificados em aplicativos da Plataforma Universal do Windows (UWP). Os certificados digitais são usados na criptografia de chave pública para associar uma chave pública a uma pessoa, um computador ou uma organização. As identidades associadas são usadas com mais frequência para autenticar uma entidade em outra. Por exemplo, os certificados são geralmente usados para autenticar um servidor Web em um usuário e um usuário em um servidor Web. É possível criar solicitações de certificados e instalar ou importar os certificados emitidos. Também é possível inscrever um certificado em uma hierarquia de certificados.
 
-### Shared certificate stores
+### Repositórios de certificados compartilhados
 
-UWP apps use the new isolationist application model introduced in Windows 8. In this model, apps run in low-level operating system construct, called an app container, that prohibits the app from accessing resources or files outside of itself unless explicitly permitted to do so. The following sections describe the implications this has on public key infrastructure (PKI).
+Os aplicativos UWP usam o novo modelo de aplicativo isolationist introduzido no Windows 8. Nesse modelo, os aplicativos são executados em uma construção do sistema operacional de baixo nível, chamada de contêiner de aplicativo, que proíbe o aplicativo de acessar recursos ou arquivos fora de si mesmo, a menos que haja permissão explícita para fazer isso. As seções a seguir descrevem as implicações que isso tem na infraestrutura de chave pública (PKI).
 
-### Certificate storage per app container
+### Repositório de certificados por contêiner de aplicativo
 
-Certificates that are intended for use in a specific app container are stored in per user, per app container locations. An app running in an app container has write access to only its own certificate storage. If the application adds certificates to any of its stores, these certificates cannot be read by other apps. If an app is uninstalled, any certificates specific to it are also removed. An app also has read access to local machine certificate stores other than the MY and REQUEST store.
+Certificados para uso em um contêiner de aplicativo específico são armazenados com base no usuário e nos locais dos contêineres de aplicativo. Um aplicativo executado em um contêiner de aplicativo tem acesso de gravação apenas a seu próprio armazenamento de certificado. Se o aplicativo adiciona certificados a qualquer um dos seus repositórios, esses certificados não podem ser lidos por outros aplicativos. Quando um aplicativo é desinstalado, todos os seus certificados específicos também são removidos. Um aplicativo também tem acesso de leitura a repositórios de certificados do computador local, diferentes do MY e do REQUEST.
 
 ### Cache
 
-Each app container has an isolated cache in which it can store issuer certificates needed for validation, certificate revocation lists (CRL), and online certificate status protocol (OCSP) responses.
+Cada contêiner de aplicativo possui um cache isolado no qual ele pode armazenar certificados de emissor necessários para validação, listas de revogação de certificados (CRL) e respostas do protocolo de status de certificado on-line (OCSP).
 
-### Shared certificates and keys
+### Certificados e chaves compartilhados
 
-When a smart card is inserted into a reader, the certificates and keys contained on the card are propagated to the user MY store where they can be shared by any full-trust application the user is running. By default, however, app containers do not have access to the per user MY store.
+Quando um cartão inteligente é inserido no leitor, os certificados e as chaves contidos no cartão são propagados para o MEU repositório do usuário, onde podem ser compartilhados por qualquer aplicativo de confiança total que o usuário esteja executando. Por padrão, contudo, contêineres de aplicativo não têm acesso ao MEU repositório por usuário.
 
-To address this issue and enable groups of principals to access groups of resources, the app container isolation model supports the capabilities concept. A capability allows an app container process to access a specific resource. The sharedUserCertificates capability grants an app container read access to the certificates and keys contained in the user MY store and the Smart Card Trusted Roots store. The capability does not grant read access to the user REQUEST store.
+Para corrigir esse problema e permitir que grupos de entidades acessem grupos de recursos, o modelo de isolamento do contêiner de aplicativo dá suporte ao conceito de funcionalidades. Uma funcionalidade permite que um processo de contêiner de aplicativo acesse um recurso específico. A funcionalidade sharedUserCertificates concede, ao contêiner do aplicativo, acesso aos certificados e chaves contidos no repositório MY e no repositório Raízes Confiáveis do Cartão Inteligente do usuário. A funcionalidade não concede acesso de leitura ao repositório de SOLICITAÇÃO do usuário.
 
-You specify the sharedUserCertificates capability in the manifest as shown in the following example.
+Você especifica a funcionalidade sharedUserCertificates no manifesto conforme demonstrado no exemplo a seguir.
 
 ```xml
 <Capabilities>
@@ -39,62 +43,63 @@ You specify the sharedUserCertificates capability in the manifest as shown in th
 </Capabilities>
 ```
 
-## Certificate fields
+## Campos do certificado
 
 
-The X.509 public key certificate standard has been revised over time. Each successive version of the data structure has retained the fields that existed in the previous versions and added more, as shown in the following illustration.
+O padrão de certificado de chave pública X.509 foi revisado ao longo do tempo. Todas as versões sucessivas da estrutura de dados mantiveram os campos que existiam nas versões anteriores e adicionaram mais, conforme mostrado na ilustração a seguir.
 
-![x.509 certificate versions 1, 2, and 3](images/x509certificateversions.png)
+![Versões 1, 2 e 3 do certificado x.509](images/x509certificateversions.png)
 
-Some of these fields and extensions can be specified directly when you use the [**CertificateRequestProperties**](https://msdn.microsoft.com/library/windows/apps/br212079) class to create a certificate request. Most cannot. These fields can be filled by the issuing authority or they can be left blank. For more information about the fields, see the following sections:
+Alguns destes campos e extensões podem ser especificados diretamente quando você usa a classe [**CertificateRequestProperties**](https://msdn.microsoft.com/library/windows/apps/br212079) para criar uma solicitação de certificado. A maioria não pode. Esses campos podem ser preenchidos pela autoridade de emissão ou podem ser deixados em branco. Para saber mais sobre os campos, consulte as seguintes seções:
 
-### Version 1 fields
+### Campos da versão 1
 
-| Field               | Description                                                                                                                                                                                                                                                                 |
+| Campo               | Descrição                                                                                                                                                                                                                                                                 |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version             | Specifies the version number of the encoded certificate. Currently, the possible values of this field are 0, 1, or 2.                                                                                                                                                       |
-| Serial Number       | Contains a positive, unique integer assigned by the certification authority (CA) to the certificate.                                                                                                                                                                        |
-| Signature Algorithm | Contains an object identifier (OID) that specifies the algorithm used by the CA to sign the certificate. For example, 1.2.840.113549.1.1.5 specifies a SHA-1 hashing algorithm combined with the RSA encryption algorithm from RSA Laboratories.                            |
-| Issuer              | Contains the X.500 distinguished name (DN) of the CA that created and signed the certificate.                                                                                                                                                                               |
-| Validity            | Specifies the time interval during which the certificate is valid. Dates through the end of 2049 use the Coordinated Universal Time (Greenwich Mean Time) format (yymmddhhmmssz). Dates beginning with January 1st, 2050 use the generalized time format (yyyymmddhhmmssz). |
-| Subject             | Contains an X.500 distinguished name of the entity associated with the public key contained in the certificate.                                                                                                                                                             |
-| Public Key          | Contains the public key and associated algorithm information.                                                                                                                                                                                                               |
+| Versão             | Especifica o número de versão do certificado codificado. Atualmente, os possíveis valores desse campo são 0, 1 ou 2.                                                                                                                                                       |
+| Número de Série       | Contém um inteiro positivo único atribuído pela AC (autoridade de certificação) para o certificado.                                                                                                                                                                        |
+| Algoritmo de Assinatura | Contém um OID (identificador de objeto) que especifica o algoritmo usado pela AC para assinar o certificado. Por exemplo, 1.2.840.113549.1.1.5 especifica um algoritmo de hash SHA-1 combinado com o algoritmo de criptografia RSA da RSA Laboratories.                            |
+| Emissor              | Contém o DN (nome diferenciado) X.500 da CA que criou e assinou o certificado.                                                                                                                                                                               |
+| Validade            | Especifica o intervalo de tempo durante o qual o certificado é válido. As datas até o final de 2049 usam o formato de Tempo Universal Coordenado (Hora de Greenwich) (yymmddhhmmssz). As datas a partir de 1º de janeiro de 2050 usam o formato de tempo genérico (yyyymmddhhmmssz). |
+| Requerente             | Contém um nome diferenciado X.500 da entidade associada à chave pública contida no certificado.                                                                                                                                                             |
+| Chave Pública          | Contém a chave pública e as informações de algoritmo associadas.                                                                                                                                                                                                               |
 
  
 
-### Version 2 fields
+### Campos da versão 2
 
-An X.509 version 2 certificate contains the basic fields defined in version 1 and adds the following fields.
+Um certificado X.509 versão 2 contém os campos básicos definidos na versão 1 e adiciona os campos a seguir.
 
-| Field                     | Description                                                                                                                                         |
+| Campo                     | Descrição                                                                                                                                         |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Issuer Unique Identifier  | Contains a unique value that can be used to make the X.500 name of the CA unambiguous when reused by different entities over time.                  |
-| Subject Unique Identifier | Contains a unique value that can be used to make the X.500 name of the certificate subject unambiguous when reused by different entities over time. |
+| Identificador Exclusivo de Emissor  | Contém um valor exclusivo que pode ser usado para tornar o nome X.500 da AC não ambíguo quando reutilizado por entidades diferentes com o tempo.                  |
+| Identificador Exclusivo de Entidade | Contém um valor exclusivo que pode ser usado para tornar o nome X.500 da entidade do certificado não ambíguo quando reutilizado por entidades diferentes com o tempo. |
  
 
-### Version 3 extensions
+### Extensões da versão 3
 
-An X.509 version 3 certificate contains the fields defined in version 1 and version 2 and adds certificate extensions.
+Um certificado X.509 versão 3 contém os campos definidos na versão 1 e 2, e adiciona extensões de certificado.
 
-| Field                        | Description                                                                                                                                                                                              |
+| Campo                        | Descrição                                                                                                                                                                                              |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Authority Key Identifier     | Identifies the certification authority (CA) public key that corresponds to the CA private key used to sign the certificate.                                                                              |
-| Basic Constraints            | Specifies whether the entity can be used as a CA and, if so, the number of subordinate CAs that can exist beneath it in the certificate chain.                                                           |
-| Certificate Policies         | Specifies the policies under which the certificate has been issued and the purposes for which it can be used.                                                                                            |
-| CRL Distribution Points      | Contains the URI of the base certificate revocation list (CRL).                                                                                                                                          |
-| Enhanced Key Usage           | Specifies the manner in which the public key contained in the certificate can be used.                                                                                                                   |
-| Issuer Alternative Name      | Specifies one or more alternative name forms for the issuer of the certificate request.                                                                                                                  |
-| Key Usage                    | Specifies restrictions on the operations that can be performed by the public key contained in the certificate.                                                                                           |
-| Name Constraints             | Specifies the namespace within which all subject names in a certificate hierarchy must be located. The extension is used only in a CA certificate.                                                       |
-| Policy Constraints           | Constrains path validation by prohibiting policy mapping or by requiring that each certificate in the hierarchy contain an acceptable policy identifier. The extension is used only in a CA certificate. |
-| Policy Mappings              | Specifies the policies in a subordinate CA that correspond to policies in the issuing CA.                                                                                                                |
-| Private Key Usage Period     | Specifies a different validity period for the private key than for the certificate with which the private key is associated.                                                                             |
-| Subject Alternative Name     | Specifies one or more alternative name forms for the subject of the certificate request. Example alternative forms include email addresses, DNS names, IP addresses, and URIs.                           |
-| Subject Directory Attributes | Conveys identification attributes such as the nationality of the certificate subject. The extension value is a sequence of OID-value pairs.                                                              |
-| Subject Key Identifier       | Differentiates between multiple public keys held by the certificate subject. The extension value is typically a SHA-1 hash of the key.                                                                   |
+| Identificador da Chave da Autoridade     | Identifica a chave pública da autoridade de certificação (AC) que corresponde à chave privada da AC usada para assinar o certificado.                                                                              |
+| Restrições Básicas            | Especifica se a entidade pode ser usada como AC e, em caso afirmativo, o número de ACs subordinadas que podem existir abaixo dela na cadeia de certificados.                                                           |
+| Políticas de Certificado         | Especifica as políticas sob as quais o certificado foi emitido e as finalidades para as quais ele pode ser usado.                                                                                            |
+| Pontos de Distribuição de CRL      | Contém o URI da lista de certificados revogados (CRL) de base.                                                                                                                                          |
+| Uso Avançado de Chave           | Especifica a maneira na qual a chave pública contida no certificado pode ser usada.                                                                                                                   |
+| Nome Alternativo para o Emissor      | Especifica uma ou mais formas de nome alternativas para o emissor da solicitação de certificado.                                                                                                                  |
+| Uso de Chave                    | Especifica restrições nas operações que podem ser executadas pela chave pública contida no certificado.                                                                                           |
+| Restrições de Nome             | Especifica o namespace dentro do qual todos os nomes de entidades em uma hierarquia de certificados devem estar localizados. A extensão é usada somente em um certificado de AC.                                                       |
+| Restrições de Política           | Restringe a validação do caminho, proibindo o mapeamento de política ou exigindo que cada certificado na hierarquia contenha um identificador de política aceitável. A extensão é usada somente em um certificado de AC. |
+| Mapeamentos de Política              | Especifica as políticas em uma AC subordinada que correspondem às políticas na AC emissora.                                                                                                                |
+| Período de Uso da Chave Privada     | Especifica um período de validade para a chave privada diferente do período para o certificado com o qual a chave privada está associada.                                                                             |
+| Nome Alternativo para a Entidade     | Especifica uma ou mais formas de nome alternativas para a entidade da solicitação de certificado. Dentre os exemplos de formas alternativas incluem-se endereços de email, nomes DNS, endereços IP e URIs.                           |
+| Atributos do Diretório de Entidade | Expressa atributos de identificação, como a nacionalidade da entidade do certificado. O valor da extensão é uma sequência de pares de valores OID.                                                              |
+| Identificador da Chave da Entidade       | Diferencia entre várias chaves públicas mantidas pela entidade do certificado. O valor da extensão é geralmente um hash SHA-1 da chave.                                                                   |
 
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

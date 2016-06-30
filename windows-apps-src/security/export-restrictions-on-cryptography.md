@@ -1,60 +1,65 @@
 ---
-title: Export restrictions on cryptography
-description: Use this info to determine if your app uses cryptography in a way that might prevent it from being listed in the Windows Store.
+title: "Restrições de exportação na criptografia"
+description: "Use estas informações para determinar se seu aplicativo usa criptografia de forma que possa impedir que ele seja listado na Windows Store."
 ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: 37d6131891e93d73021c860df45d1b5fdd7cfa53
+
 ---
 
-# Export restrictions on cryptography
+# Restrições de exportação na criptografia
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Use this info to determine if your app uses cryptography in a way that might prevent it from being listed in the Windows Store.
+Use estas informações para determinar se seu aplicativo usa criptografia de forma que possa impedir que ele seja listado na Windows Store.
 
-The Bureau of Industry and Security in the United States Department of Commerce regulates the export of technology that uses certain types of encryption. All apps listed in the Windows Store must comply with these laws and regulations because the app files can be stored in the United States. Even apps that are uploaded by app developers from other countries for distribution outside of the United States must comply with these regulations. Consequently, when submitting an app to the Windows Store, all app developers must make sure that their apps don't contain any technology that is restricted by these regulations.
+O Bureau of Industry and Security do Departamento de Comércio dos Estados Unidos regula a exportação de tecnologia que usa determinados tipos de criptografia. Todos os aplicativos listados na Windows Store devem estar em conformidade com estas leis e regulamentações porque os arquivos do aplicativo podem ser armazenados nos Estados Unidos. Mesmo os aplicativos carregados por desenvolvedores de aplicativos de outros países/regiões para distribuição fora dos Estados Unidos devem estar em conformidade com essas regulamentações. Sendo assim, ao enviar um aplicativo para a Windows Store, todos os desenvolvedores devem garantir que seus aplicativos não contenham tecnologia proibida por essas regulamentações.
 
-> **Note**  The information provided here provides some guidance, but it is your responsibility as the app developer who is publishing apps in the Windows Store to make sure that your app complies with all applicable laws and regulations.
+> **Observação**  As informações descritas aqui fornecem algumas orientações, mas é sua responsabilidade, como desenvolvedor que publica aplicativos na Windows Store, garantir que seu aplicativo esteja em conformidade com todas as leis e regulamentos aplicáveis.
 
  
 
-For more info about the U.S.
+Para saber mais sobre o Departamento de Comércio dos EUA e o Bureau of Industry and Security, consulte [Bureau of Industry and Security](http://go.microsoft.com/fwlink/p/?LinkID=245644).
 
-Department of Commerce and the Bureau of Industry and Security, see [About the Bureau of Industry and Security](http://go.microsoft.com/fwlink/p/?LinkID=245644).
+Para saber mais sobre os regulamentos EAR (Controle de exportações dos EUA) que regem a exportação de tecnologia que inclui criptografia, consulte [Controles de EAR para itens que usam criptografia](http://go.microsoft.com/fwlink/p/?LinkID=245645).
 
-## For info about the Export Administration Regulations (EAR) that govern the export of technology that includes encryption, see [EAR Controls for Items That Use Encryption](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+## Usos controlados
 
-Governed uses First, determine if your app uses a type of cryptography that is governed by the Export Administration Regulations.
+Primeiro, determine se seu aplicativo usa um tipo de criptografia controlado pelos regulamentos do Controle de exportação dos EUA. A questão inclui os exemplos mostrados nesta lista; mas lembre-se de que esta lista não inclui todos os aplicativos possíveis de criptografia.
 
-> The question includes the examples shown in the list here; but remember that this list doesn't include every possible application of cryptography.
+> **Importante**  Considere não apenas o código que você escreveu para seu aplicativo, mas também todas as bibliotecas de software, utilitários e componentes do sistema operacional que seu aplicativo inclui ou tem links relacionados.
 
--   **Important**  Consider not only the code you wrote for your app, but also all the software libraries, utilities and operating system components that your app includes or links to.
--   Any use of a digital signature, such as authentication or integrity checking
--   Encryption of any data or files that your app uses or accesses
--   Key management, certificate management, or anything that interacts with a public key infrastructure
--   Using a secure communication channel such as NTLM, Kerberos, Secure Sockets Layer (SSL), or Transport Layer Security (TLS)
--   Encrypting passwords or other forms of information security
--   Copy protection or digital rights management (DRM)
+-   Qualquer uso de uma assinatura digital, como autenticação ou verificação de integridade
+-   Criptografia de dados ou arquivos que seu aplicativo usa ou acessa
+-   Gerenciamento de chaves, gerenciamento de certificados ou qualquer coisa que interage com uma infraestrutura de chave pública
+-   Usando um canal de comunicação seguro como NTLM, Kerberos, SSL ou TLS
+-   Criptografando senhas ou outras formas de segurança da informação
+-   Proteção contra cópia ou DRM (gerenciamento de direitos digitais)
+-   Proteção antivírus
 
-Antivirus protection
+Para obter a lista completa e atualizada de aplicativos de criptografia, consulte [Controles de EAR para itens que usam criptografia](http://go.microsoft.com/fwlink/p/?LinkID=245645).
 
-## For the complete and current list of cryptographic applications, see [EAR Controls for Items That Use Encryption](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+## Usos não restritos
 
-Non-restricted uses Note that some of the applications of cryptography are not restricted.
+Observe que alguns dos aplicativos de criptografia não são restritos. Estas são as tarefas sem restrições:
 
--   Here are the unrestricted tasks:
--   Password encryption
--   Copy protection
--   Authentication
--   Digital rights management
+-   Criptografia de senha
+-   Proteção contra cópia
+-   Autenticação
+-   Gerenciamento de direitos digitais
+-   Usando assinaturas digitais
 
-Using digital signatures
+Para obter a lista completa e atualizada de aplicativos de criptografia, consulte [Controles de EAR para itens que usam criptografia](http://go.microsoft.com/fwlink/p/?LinkID=245645).
 
-For the complete and current list of cryptographic applications, see [EAR Controls for Items That Use Encryption](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+Se seu aplicativo chamar, der suporte, contiver ou usar criptografia para qualquer tarefa que não esteja nessa lista, ele precisará de um ECCN (Número de classificação de mercadoria de exportação).
 
-If your app calls, supports, contains, or uses cryptography or encryption for any task that is not in this list, it needs an Export Commodity Classification Number (ECCN).
+Se você não tiver um ECCN, consulte [Perguntas e respostas sobre ECCN](http://go.microsoft.com/fwlink/p/?LinkID=245646).
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

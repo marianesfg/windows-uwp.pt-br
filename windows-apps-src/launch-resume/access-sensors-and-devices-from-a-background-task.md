@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: dbirtolo
 title: Acessar sensores e dispositivos a partir de uma tarefa em segundo plano
-description: O DeviceUseTrigger permite que seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu aplicativo em primeiro plano estiver suspenso.
+description: "O DeviceUseTrigger permite que seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu aplicativo em primeiro plano estiver suspenso."
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 65471f26596f94fe550c92a10e01ca7f5cef64a1
+
 ---
 
 # Acessar sensores e dispositivos a partir de uma tarefa em segundo plano
@@ -196,6 +199,7 @@ Além de [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br2298
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

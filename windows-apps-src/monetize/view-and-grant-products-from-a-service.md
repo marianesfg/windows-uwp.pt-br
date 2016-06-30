@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: B071F6BC-49D3-4E74-98EA-0461A1A55EFB
-description: Se você tiver um catálogo de aplicativos e produtos no aplicativo (IAPs), poderá usar a API de coleção da Windows Store e a API de compra da Windows Store para acessar informações de propriedade para esses produtos de seus serviços.
-title: Exibir e conceder produtos de um serviço
+description: "Se você tiver um catálogo de aplicativos e produtos no aplicativo (IAPs), poderá usar a API de coleção da Windows Store e a API de compra da Windows Store para acessar informações de propriedade para esses produtos de seus serviços."
+title: "Exibir e conceder produtos de um serviço"
+ms.sourcegitcommit: 204bace243fb082d3ca3b4259982d457f9c533da
+ms.openlocfilehash: 1e17703442ce539de941890a0616fc5e08391d70
+
 ---
 
 # Exibir e conceder produtos de um serviço
@@ -34,7 +37,9 @@ As seções a seguir fornecem mais detalhes sobre cada uma dessas etapas.
 ### Etapa 1: configure um aplicativo Web no Azure AD
 
 1.  Siga as instruções em [Integrando aplicativos com o Active Directory do Azure](http://go.microsoft.com/fwlink/?LinkId=722502) para adicionar um aplicativo Web ao Azure AD.
-    **Observação**  Na página **Conte-nos sobre o seu aplicativo**, certifique-se de escolher **Aplicativo Web e/ou API da Web**. Isso é necessário para que você possa obter uma chave (também chamada de *segredo do cliente*) para seu aplicativo. Para chamar a API de coleção ou a API de compra da Windows Store, você deverá fornecer o segredo do cliente quando solicitar um token de acesso do Azure AD em uma etapa posterior.
+
+    > **Observação**  Na página **Conte-nos sobre o seu aplicativo**, certifique-se de escolher **Aplicativo Web e/ou API da Web**. Isso é necessário para que você possa obter uma chave (também chamada de *segredo do cliente*) para seu aplicativo. Para chamar a API de coleção ou a API de compra da Windows Store, você deverá fornecer o segredo do cliente quando solicitar um token de acesso do Azure AD em uma etapa posterior.
+
 2.  No [Portal de Gerenciamento do Azure](http://manage.windowsazure.com/), navegue até **Active Directory**. Selecione seu diretório, clique na guia **Aplicativos** na parte superior e selecione seu aplicativo.
 3.  Clique na guia **Configurar**. Nessa guia, obtenha a ID do cliente para seu aplicativo e solicite uma chave (chamada de *segredo do cliente* nas etapas posteriores).
 4.  Na parte inferior da tela, clique em **Gerenciar manifesto**. Baixe o manifesto do aplicativo do Azure AD e substitua a seção `"identifierUris"` pelo texto a seguir.
@@ -66,17 +71,15 @@ Para criar os tokens de acesso, use a API do OAuth 2.0 em seu serviço, seguindo
 
 -   Para os parâmetros *client\_id* e *client\_secret*, especifique a ID e o segredo do cliente para seu aplicativo como obtidos do [Portal de Gerenciamento do Azure](http://manage.windowsazure.com/). Esses dois parâmetros são necessários para gerar um token de acesso com o nível de autenticação exigido pela API de compra ou API de coleção da Windows Store.
 -   Para o parâmetro *resource*, especifique um dos URIs de ID de aplicativo a seguir (esses são os mesmos URIs que você adicionou anteriormente à seção `"identifierUris"` do manifesto do aplicativo). No final deste processo, você deverá ter três tokens de acesso associados a cada um desses URIs de ID do aplicativo:
-    -   **https://onestore.microsoft.com/b2b/keys/create/collections**: em uma etapa posterior, você usará o token de acesso que criar com esse URI para solicitar uma chave ID da Windows Store que pode ser usada com a API de coleção da Windows Store.
-    -   **https://onestore.microsoft.com/b2b/keys/create/purchase**: em uma etapa posterior, você usará o token de acesso que criar com esse URI para solicitar uma chave ID da Windows Store que pode ser usada com a API de compra da Windows Store.
-    -   **https://onestore.microsoft.com**: em uma etapa posterior, você usará o token de acesso que criar com esse URI em chamadas diretas para a API de compra ou a API de coleção da Windows Store.
+    -   `https://onestore.microsoft.com/b2b/keys/create/collections`: em uma etapa posterior, você usará o token de acesso que criar com esse URI para solicitar uma chave ID da Windows Store que você pode usar com a API de coleção da Windows Store.
+    -   `https://onestore.microsoft.com/b2b/keys/create/purchase`: em uma etapa posterior, você usará o token de acesso que criar com esse URI para solicitar uma chave ID da Windows Store que você pode usar com a API de compra da Windows Store.
+    -   `https://onestore.microsoft.com`: em uma etapa posterior, você usará o token de acesso que criar com esse URI em chamadas diretas para a API de compra ou a API de coleção da Windows Store.
 
-    **Importante** Use o público **https://onestore.microsoft.com** apenas com tokens de acesso que são armazenados com segurança no seu serviço. Expor tokens de acesso com esse público fora de seu serviço poderia tornar seu serviço vulnerável a ataques de repetição.
+    > **Importante**  Use o `https://onestore.microsoft.com` público apenas com tokens de acesso que sejam armazenados com segurança dentro de seu serviço. Expor tokens de acesso com esse público fora de seu serviço poderia tornar seu serviço vulnerável a ataques de repetição.
 
 Para obter mais detalhes sobre a estrutura de um token de acesso, consulte [Tipos de declaração e token com suporte](http://go.microsoft.com/fwlink/?LinkId=722501).
 
-**Importante**  Você deve criar tokens de acesso do Azure AD somente no contexto de seu serviço, e não em seu aplicativo. O segredo do cliente pode ser comprometido se ele for enviado para seu aplicativo.
-
- 
+> **Importante**  Você deve criar tokens de acesso do Azure AD somente no contexto de seu serviço, e não em seu aplicativo. O segredo do cliente pode ser comprometido se ele for enviado para seu aplicativo.
 
 ### Etapa 4: Gerar uma chave ID da Windows Store de um código do lado do cliente em seu aplicativo
 
@@ -85,8 +88,8 @@ Antes de chamar a API de coleção ou a API de compra da Windows Store, seu serv
 Atualmente, a única maneira de obter uma chave ID da Windows Store é chamando uma API da Plataforma Universal do Windows (UWP) do código do lado do cliente em seu aplicativo para recuperar a identidade do usuário que está conectado no momento com o Windows Store. Para gerar uma chave ID da Windows Store:
 
 1.  Passe um dos seguintes tokens de acesso do seu serviço para seu aplicativo cliente:
-    -   Para obter uma chave ID da Windows Store que você possa usar com a API de coleção da Windows Store, passe o token de acesso do Azure AD criado com o URI público **https://onestore.microsoft.com/b2b/keys/create/collections**.
-    -   Para obter uma chave ID da Windows Store que você possa usar com a API de compra da Windows Store, passe o token de acesso do Azure AD criado com o URI público **https://onestore.microsoft.com/b2b/keys/create/purchase**.
+    -   Para obter uma chave ID da Windows Store que você possa usar com a API de coleção da Windows Store, passe o token de acesso do Azure AD criado com o `https://onestore.microsoft.com/b2b/keys/create/collections` URI público.
+    -   Para obter uma chave ID da Windows Store que você possa usar com a API de compra da Windows Store, passe o token de acesso do Azure AD criado com o `https://onestore.microsoft.com/b2b/keys/create/purchase` URI público.
 
 2.  No código do aplicativo, chame um dos seguintes métodos da classe [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) para recuperar uma chave ID da Windows Store.
 
@@ -101,9 +104,7 @@ Atualmente, a única maneira de obter uma chave ID da Windows Store é chamando 
 
 3.  Depois que seu aplicativo recuperar com êxito uma chave ID da Windows Store, repasse a chave para seu serviço.
 
-**Observação**  Cada chave ID da Windows Store é válida por 90 dias. Depois que uma chave expira, você pode [renovar a chave](renew-a-windows-store-id-key.md). Nós recomendamos que você renove as chaves ID da Windows Store em vez de criar novas.
-
- 
+> **Observação**  Cada chave ID da Windows Store é válida por 90 dias. Depois que uma chave expira, você pode [renovar a chave](renew-a-windows-store-id-key.md). Nós recomendamos que você renove as chaves ID da Windows Store em vez de criar novas.
 
 ### Etapa 5: Chamar a API de coleção ou a API de compra da Windows Store de seu serviço
 
@@ -115,7 +116,7 @@ Depois que o serviço tiver uma chave ID da Windows Store que o permita acessar 
 
 Para cada cenário, passe as seguintes informações para a API:
 
--   O token de acesso do Azure AD criado antes com o URI de público **https://onestore.microsoft.com**. Esse token representa sua identidade de fornecedor. Passe esse token ao cabeçalho da solicitação.
+-   O token de acesso do Azure AD criado anteriormente com o URI de público `https://onestore.microsoft.com`. Esse token representa sua identidade de fornecedor. Passe esse token ao cabeçalho da solicitação.
 -   A chave ID da Windows Store recuperada de [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) ou [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) em seu aplicativo. Essa chave representa a identidade do usuário cujas informações de propriedade de produto você deseja acessar.
 
 ## Declarações em uma chave ID da Windows Store
@@ -127,40 +128,40 @@ Uma chave ID da Windows Store é um JSON Web Token JWT () que representa a ident
 |------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | iat                                                                    | Identifica o momento em que a chave foi emitida. Essa declaração pode ser usada para determinar a idade do token. Esse valor é expresso como época.                                                                                                                                                                                                                                       |
 | iss                                                                    | Identifica o emissor. Tem o mesmo valor que a declaração *aud*.                                                                                                                                                                                                                                                                                                                      |
-| aud                                                                    | Identifica o público. Deve ser um dos seguintes valores: **https://collections.mp.microsoft.com/v6.0/keys** ou **https://purchase.mp.microsoft.com/v6.0/keys**.                                                                                                                                                                                                                    |
+| aud                                                                    | Identifica o público. Deve se um dos seguintes valores: `https://collections.mp.microsoft.com/v6.0/keys` ou `https://purchase.mp.microsoft.com/v6.0/keys`.                                                                                                                                                                                                                    |
 | exp                                                                    | Identifica o período durante ou após o tempo de expiração em que a chave não será mais aceita para processamento de qualquer coisa, salvo a renovação de chaves. O valor dessa declaração é expresso como época.                                                                                                                                                                                               |
 | nbf                                                                    | Identifica o momento em que o token será aceito para processamento. O valor dessa declaração é expresso como época.                                                                                                                                                                                                                                                             |
-| http://schemas.microsoft.com/marketplace/2015/08/claims/key/clientId   | A ID do cliente que identifica o desenvolvedor.                                                                                                                                                                                                                                                                                                                                            |
-| http://schemas.microsoft.com/marketplace/2015/08/claims/key/payload    | Uma carga opaca (criptografada e codificada em Base64) que contém informações que destinam-se apenas para uso pelos serviços da Windows Store.                                                                                                                                                                                                                                                     |
-| http://schemas.microsoft.com/marketplace/2015/08/claims/key/userId     | Uma ID de usuário que identifica o usuário atual no contexto de seus serviços. É o mesmo valor que você passa para o parâmetro *publisherUserId* opcional do método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) ou do método [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) quando você cria a chave. |
-| http://schemas.microsoft.com/marketplace/2015/08/claims/key/refreshUri | O URI que você pode usar para renovar a chave.                                                                                                                                                                                                                                                                                                                                              |
+| `http://schemas.microsoft.com/marketplace/2015/08/claims/key/clientId`   | A ID do cliente que identifica o desenvolvedor.                                                                                                                                                                                                                                                                                                                                            |
+| `http://schemas.microsoft.com/marketplace/2015/08/claims/key/payload`    | Uma carga opaca (criptografada e codificada em Base64) que contém informações que destinam-se apenas para uso pelos serviços da Windows Store.                                                                                                                                                                                                                                                     |
+| `http://schemas.microsoft.com/marketplace/2015/08/claims/key/userId`     | Uma ID de usuário que identifica o usuário atual no contexto de seus serviços. É o mesmo valor que você passa para o parâmetro *publisherUserId* opcional do método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) ou do método [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) quando você cria a chave. |
+| `http://schemas.microsoft.com/marketplace/2015/08/claims/key/refreshUri` | O URI que você pode usar para renovar a chave.                                                                                                                                                                                                                                                                                                                                              |
 
  
 
 Aqui está um exemplo de um cabeçalho de chave ID da Windows Store decodificado.
 
 ```json
-{ 
-    "typ":"JWT", 
-    "alg":"RS256", 
-    "x5t":"agA_pgJ7Twx_Ex2_rEeQ2o5fZ5g" 
-} 
+{
+    "typ":"JWT",
+    "alg":"RS256",
+    "x5t":"agA_pgJ7Twx_Ex2_rEeQ2o5fZ5g"
+}
 ```
 
 Aqui está um exemplo de uma declaração de chave ID da Windows Store decodificada.
 
 ```json
-{ 
-    "http://schemas.microsoft.com/marketplace/2015/08/claims/key/clientId": "1d5773695a3b44928227393bfef1e13d", 
-    "http://schemas.microsoft.com/marketplace/2015/08/claims/key/payload": "ZdcOq0/N2rjytCRzCHSqnfczv3f0343wfSydx7hghfu0snWzMqyoAGy5DSJ5rMSsKoQFAccs1iNlwlGrX+/eIwh/VlUhLrncyP8c18mNAzAGK+lTAd2oiMQWRRAZxPwGrJrwiq2fTq5NOVDnQS9Za6/GdRjeiQrv6c0x+WNKxSQ7LV/uH1x+IEhYVtDu53GiXIwekltwaV6EkQGphYy7tbNsW2GqxgcoLLMUVOsQjI+FYBA3MdQpalV/aFN4UrJDkMWJBnmz3vrxBNGEApLWTS4Bd3cMswXsV9m+VhOEfnv+6PrL2jq8OZFoF3FUUpY8Fet2DfFr6xjZs3CBS1095J2yyNFWKBZxAXXNjn+zkvqqiVRjjkjNajhuaNKJk4MGHfk2rZiMy/aosyaEpCyncdisHVSx/S4JwIuxTnfnlY24vS0OXy7mFiZjjB8qL03cLsBXM4utCyXSIggb90GAx0+EFlVoJD7+ZKlm1M90xO/QSMDlrzFyuqcXXDBOnt7rPynPTrOZLVF+ODI5HhWEqArkVnc5MYnrZD06YEwClmTDkHQcxCvU+XUEvTbEk69qR2sfnuXV4cJRRWseUTfYoGyuxkQ2eWAAI1BXGxYECIaAnWF0W6ThweL5ZZDdadW9Ug5U3fZd4WxiDlB/EZ3aTy8kYXTW4Uo0adTkCmdLibw=", 
-    "http://schemas.microsoft.com/marketplace/2015/08/claims/key/userId": "infusQMLaYCrgtC0d/SZWoPB4FqLEwHXgZFuMJ6TuTY=", 
-    "http://schemas.microsoft.com/marketplace/2015/08/claims/key/refreshUri": "https://collections.mp.microsoft.com/v6.0/b2b/keys/renew", 
-    "iat": 1442395542, 
-    "iss": "https://collections.mp.microsoft.com/v6.0/keys", 
-    "aud": "https://collections.mp.microsoft.com/v6.0/keys", 
-    "exp": 1450171541, 
-    "nbf": 1442391941 
-} 
+{
+    "http://schemas.microsoft.com/marketplace/2015/08/claims/key/clientId": "1d5773695a3b44928227393bfef1e13d",
+    "http://schemas.microsoft.com/marketplace/2015/08/claims/key/payload": "ZdcOq0/N2rjytCRzCHSqnfczv3f0343wfSydx7hghfu0snWzMqyoAGy5DSJ5rMSsKoQFAccs1iNlwlGrX+/eIwh/VlUhLrncyP8c18mNAzAGK+lTAd2oiMQWRRAZxPwGrJrwiq2fTq5NOVDnQS9Za6/GdRjeiQrv6c0x+WNKxSQ7LV/uH1x+IEhYVtDu53GiXIwekltwaV6EkQGphYy7tbNsW2GqxgcoLLMUVOsQjI+FYBA3MdQpalV/aFN4UrJDkMWJBnmz3vrxBNGEApLWTS4Bd3cMswXsV9m+VhOEfnv+6PrL2jq8OZFoF3FUUpY8Fet2DfFr6xjZs3CBS1095J2yyNFWKBZxAXXNjn+zkvqqiVRjjkjNajhuaNKJk4MGHfk2rZiMy/aosyaEpCyncdisHVSx/S4JwIuxTnfnlY24vS0OXy7mFiZjjB8qL03cLsBXM4utCyXSIggb90GAx0+EFlVoJD7+ZKlm1M90xO/QSMDlrzFyuqcXXDBOnt7rPynPTrOZLVF+ODI5HhWEqArkVnc5MYnrZD06YEwClmTDkHQcxCvU+XUEvTbEk69qR2sfnuXV4cJRRWseUTfYoGyuxkQ2eWAAI1BXGxYECIaAnWF0W6ThweL5ZZDdadW9Ug5U3fZd4WxiDlB/EZ3aTy8kYXTW4Uo0adTkCmdLibw=",
+    "http://schemas.microsoft.com/marketplace/2015/08/claims/key/userId": "infusQMLaYCrgtC0d/SZWoPB4FqLEwHXgZFuMJ6TuTY=",
+    "http://schemas.microsoft.com/marketplace/2015/08/claims/key/refreshUri": "https://collections.mp.microsoft.com/v6.0/b2b/keys/renew",
+    "iat": 1442395542,
+    "iss": "https://collections.mp.microsoft.com/v6.0/keys",
+    "aud": "https://collections.mp.microsoft.com/v6.0/keys",
+    "exp": 1450171541,
+    "nbf": 1442391941
+}
 ```
 
 ## Tópicos relacionados
@@ -178,8 +179,6 @@ Aqui está um exemplo de uma declaração de chave ID da Windows Store decodific
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

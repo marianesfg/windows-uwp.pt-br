@@ -1,12 +1,15 @@
 ---
 author: mijacobs
-Description: As cores tornam a orientação intuitiva por meio de vários níveis de informações de um aplicativo e são uma ferramenta essencial para reforçar o modelo de interação.
+Description: "As cores tornam a orientação intuitiva por meio de vários níveis de informações de um aplicativo e são uma ferramenta essencial para reforçar o modelo de interação."
 title: Cor
 ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
-
 label: Color
 template: detail.hbs
 extraBodyClass: style-color
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 878470a7cbf44862c47a1428a1d25d332db32fdc
+
 ---
 
 # Cor
@@ -50,7 +53,7 @@ Por padrão, os hiperlinks usarão a cor de destaque do usuário. Se o plano de 
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            Em XAML, a cor de destaque principal é exposta como um [recurso de tema](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx) denominado `SystemAccentColor`. Os tons estão disponíveis como `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2` e `SystemAccentColorDark3`. Também disponível por meio de programação via [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) e a enumeração [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx).
+Em XAML, a cor de destaque principal é exposta como um [recurso de tema](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx) denominado `SystemAccentColor`. Os tons estão disponíveis como `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2` e `SystemAccentColorDark3`. Também disponível por meio de programação via [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) e a enumeração [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx).
     </div>
 </aside>
 
@@ -90,7 +93,7 @@ Para facilitar o design de temas, o Windows fornece uma paleta de cores adiciona
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            Cada cor está disponível como um XAML [recurso de tema](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes) que segue a convenção de nomenclatura `System*Color` (exemplo: `SystemChromeHighColor`). Você pode controlar o tema do seu aplicativo por meio de um [Application.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) ou [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx).
+Cada cor está disponível como um XAML [recurso de tema](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes) que segue a convenção de nomenclatura `System*Color` (exemplo: `SystemChromeHighColor`). Você pode controlar o tema do seu aplicativo por meio de um [Application.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) ou [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx).
     </div>
 </aside>
 
@@ -99,6 +102,7 @@ Para facilitar o design de temas, o Windows fornece uma paleta de cores adiciona
 Nossa paleta é otimizada para uso na tela. Convém manter uma proporção de contraste para o texto de 4.5: 1 contra o plano de fundo para permitir uma leitura ideal. Existem muitas ferramentas gratuitas disponíveis para testar se as suas cores são aprovadas ou não, tais como [Índice de Contraste](http://leaverou.github.io/contrast-ratio/).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

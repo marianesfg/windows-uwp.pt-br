@@ -1,7 +1,11 @@
 ---
 title: Conectar a provedores de identidade com o Gerenciador de Contas da Web
-description: Este artigo descreve como usar o AccountsSettingsPane para conectar seu aplicativo da Plataforma Universal do Windows (UWP) a provedores de identidade externos, como a Microsoft ou o Facebook, usando as novas APIs do Gerenciador de Contas da Web do Windows 10. 
+description: Este artigo descreve como usar o AccountsSettingsPane para conectar seu aplicativo da Plataforma Universal do Windows (UWP) a provedores de identidade externos, como a Microsoft ou o Facebook, usando as novas APIs do Gerenciador de Contas da Web do Windows 10.
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: c9f6a0183edc3c01566311360417c256329ef904
+ms.openlocfilehash: 6ab12d6da9c4858cf6ab16d4143cf073bb0cb275
+
 ---
 # Conectar a provedores de identidade com o Gerenciador de Contas da Web
 
@@ -383,6 +387,7 @@ Teoricamente, você pode usar comandos de configurações para tudo. No entanto,
 [Exemplo WebAccountManagement](http://go.microsoft.com/fwlink/p/?LinkId=620621)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

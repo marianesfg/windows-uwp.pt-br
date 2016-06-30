@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
-title: Orientação do sensor
-description: Os dados do sensor das classes Accelerometer, Gyrometer, Compass, Inclinometer e OrientationSensor são definidos por seus eixos de referência. Esses eixos são definidos pela orientação paisagem do dispositivo e giram com o dispositivo conforme o usuário o vira.
+title: "Orientação do sensor"
+description: "Os dados do sensor das classes Accelerometer, Gyrometer, Compass, Inclinometer e OrientationSensor são definidos por seus eixos de referência. Esses eixos são definidos pela orientação paisagem do dispositivo e giram com o dispositivo conforme o usuário o vira."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3da7957bf9b162f1ac1533ccff90c8764f34890a
+
 ---
 # Orientação do sensor
 
@@ -166,6 +170,7 @@ Os dados de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/a
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

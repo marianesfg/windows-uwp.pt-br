@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 386c1ee4-a31c-4561-b193-36268bc90446
-description: Saiba como manipular erros relacionados à classe AdControl em seu aplicativo.
+description: "Saiba como manipular erros relacionados à classe AdControl em seu aplicativo."
 title: Tratamento de erros de AdControl
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: a335b4b6548e910076b5a984cc6078aa6c18dc32
+
 ---
 
 # Tratamento de erros de AdControl
@@ -23,6 +27,7 @@ Esta seção fornece instruções passo a passo que mostram como manipular erros
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

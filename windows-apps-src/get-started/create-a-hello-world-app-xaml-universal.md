@@ -2,7 +2,11 @@
 author: martinekuan
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Criar um aplicativo Hello, world (XAML)
-description: Este tutorial ensina a usar XAML (Extensible Application Markup Language) com C# para criar um aplicativo Hello, world simples destinado à UWP (Plataforma Universal do Windows) no Windows 10.
+description: "Este tutorial ensina a usar XAML (Extensible Application Markup Language) com C# para criar um aplicativo Hello, world simples destinado à UWP (Plataforma Universal do Windows) no Windows 10."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 0d6b6421b4f5ebc01c865e80db96d1158b9bd825
+
 ---
 
 # Criar um aplicativo "Hello, world" (XAML)
@@ -318,6 +322,7 @@ O segundo [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR20
 Parabéns, você criou seu primeiro aplicativo para o Windows 10 e a UWP!
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

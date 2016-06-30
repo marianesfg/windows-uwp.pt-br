@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: A Windows Store impõe certas regras relacionadas a números de versão, que funcionam de maneira um pouco diversa em diferentes versões do sistema operacional.
-title: Numeração de versão do pacote
+Description: "A Windows Store impõe certas regras relacionadas a números de versão, que funcionam de maneira um pouco diversa em diferentes versões do sistema operacional."
+title: "Numeração de versão do pacote"
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9910ca5b5a3fd5d24643a1dfc6da3644d561c617
+
 ---
 
 # Numeração de versão do pacote
@@ -77,6 +81,7 @@ Aqui estão alguns exemplos do que acontece em diferentes situações de atualiz
 > **Observação**  Diferentemente dos pacotes. appx, os números de versão em todos os pacotes .xap não são considerados ao determinar qual pacote fornecer a um determinado cliente. Para atualizar um cliente de um pacote .xap para um mais recente, certifique-se de remover o .xap mais antigo no novo envio.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

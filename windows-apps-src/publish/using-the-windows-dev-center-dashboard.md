@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: O painel do Centro de Desenvolvimento do Windows permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um único local.
+Description: "O painel do Centro de Desenvolvimento do Windows permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um único local."
 title: Usando o painel do Centro de Desenvolvimento do Windows
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7478a832cea6114c7a6e7f6be5cc3e908981a64c
+
 ---
 
 # Usando o painel do Centro de Desenvolvimento do Windows
@@ -33,6 +37,7 @@ Os aplicativos que foram vinculados para compartilhar a identidade no Centro de 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

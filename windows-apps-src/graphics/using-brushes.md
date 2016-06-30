@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: "Usar pincéis"
 description: "Os objetos Brush são usados para pintar os interiores ou os contornos das formas, texto e partes de controles, de maneira que o objeto pintado fique visível em uma interface do usuário."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a4063ee2372d69289fca74c81a4c7645909c7f37
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 4846630eb72c5fc81e01cc46f5ad362b0851292e
 
 ---
 # Usar pincéis
@@ -42,7 +42,7 @@ Esta imagem mostra o [**SolidColorBrush**](https://msdn.microsoft.com/library/wi
 
 ![Um SolidColorBrush renderizado.](images/brushes-solidcolorbrush.jpg)
 
-Se você estiver definindo um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) usando código em vez de XAML, cada cor de nome está disponível como um valor estático de propriedade da classe [**Colors**](https://msdn.microsoft.com/library/windows/apps/Hh673723s). Por exemplo, para declarar um valor [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.solidcolorbrush.color.aspx) de um **SolidColorBrush** para representar o nome de cor "Orquídea", defina o valor **Color** como o valor estático [**Colors.Orchid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.orchid.aspx).
+Se você estiver definindo um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) usando código em vez de XAML, cada cor de nome está disponível como um valor estático de propriedade da classe [**Colors**](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors). Por exemplo, para declarar um valor [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.solidcolorbrush.color.aspx) de um **SolidColorBrush** para representar o nome de cor "Orquídea", defina o valor **Color** como o valor estático [**Colors.Orchid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.orchid.aspx).
 
 ### Valores de cores em hexadecimal
 
@@ -152,7 +152,7 @@ Você pode declarar qualquer pincel para ser um recurso XAML com chave em um dic
 
 É muito mais comum especificar os pincéis usando XAML do que usando código. Isso acontece porque os pincéis costumam ser definidos como recursos XAML e porque os valores de pincel geralmente são a saída das ferramentas de design ou fazem parte de uma definição da IU XAML. Além disso, se você por acaso quiser definir um pincel usando código, todos os tipos de [**Pincel**](https://msdn.microsoft.com/library/windows/apps/BR228076) estarão disponíveis para instanciação de códigos.
 
-Para criar um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) em código, use o construtor que leva um parâmetro [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). Informe um valor que seja uma propriedade estática da classe [**Colors**](https://msdn.microsoft.com/library/windows/apps/Hh673723s), como este:
+Para criar um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) em código, use o construtor que leva um parâmetro [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). Informe um valor que seja uma propriedade estática da classe [**Colors**](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors), como este:
 
 ```cs
 SolidColorBrush blueBrush = new SolidColorBrush(Windows.UI.Colors.Blue);
@@ -184,6 +184,6 @@ Para exemplos de código, consulte as páginas de referência para [**WebViewBru
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

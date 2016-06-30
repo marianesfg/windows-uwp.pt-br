@@ -1,14 +1,18 @@
 ---
 author: mtoepke
-title: Referência de GLSL para HLSL
-description: Porte seu código GLSL (OpenGL Shader Language) para código Microsoft HLSL (High Level Shader Language) ao portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11 para criar um jogo para a UWP (Plataforma Universal do Windows).
+title: "Referência de GLSL para HLSL"
+description: "Porte seu código GLSL (OpenGL Shader Language) para código Microsoft HLSL (High Level Shader Language) ao portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11 para criar um jogo para a UWP (Plataforma Universal do Windows)."
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 02a3ba1768b6fa7b09b6c9f637a72d88c0cef604
+
 ---
 
 # Referência de GLSL para HLSL
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Porte seu código GLSL (OpenGL Shader Language) para código Microsoft HLSL (High Level Shader Language) ao [portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md) para criar um jogo para a UWP (Plataforma Universal do Windows). O GLSL citado neste documento é compatível com OpenGL ES 2.0; o HLSL é compatível com Direct3D 11. Para saber mais sobre as diferenças entre o Direct3D 11 e versões anteriores do Direct3D, consulte [Mapeamento de recursos](feature-mapping.md).
 
@@ -566,6 +570,7 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

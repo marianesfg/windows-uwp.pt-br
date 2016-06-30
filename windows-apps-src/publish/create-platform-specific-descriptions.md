@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Caso tenha fornecido pacotes direcionados a diferentes sistemas operacionais, você tem a opção de personalizar partes da descrição para os diferentes sistemas operacionais de destino.
-title: Criar descrições específicas de plataforma
+Description: "Caso tenha fornecido pacotes direcionados a diferentes sistemas operacionais, você tem a opção de personalizar partes da descrição para os diferentes sistemas operacionais de destino."
+title: "Criar descrições específicas de plataforma"
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 00be0238af7969a84abe79f9aee3bec485fbb3e3
+
 ---
 
 # Criar descrições específicas de plataforma
@@ -45,6 +49,7 @@ Se você criar uma descrição específica de plataforma e depois decidir que qu
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

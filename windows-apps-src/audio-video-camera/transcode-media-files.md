@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: A1A0D99A-DCBF-4A14-80B9-7106BEF045EC
-description: Você pode usar as APIs Windows.Media.Transcoding para transcodificar arquivos de vídeo de um formato para outro.
-title: Transcodificar arquivos de mídia
+description: "Você pode usar as APIs Windows.Media.Transcoding para transcodificar arquivos de vídeo de um formato para outro."
+title: "Transcodificar arquivos de mídia"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 06c452291f10acd35dde9659c08a386ea38fa90a
+
 ---
 
 # Transcodificar arquivos de mídia
@@ -71,6 +75,7 @@ Você pode registrar eventos para responder quando o andamento da [**TranscodeAs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

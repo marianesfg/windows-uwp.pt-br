@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: O Resumo de pagamento mostra detalhes do dinheiro que você ganhou com os seus aplicativos e produtos no aplicativo. Ele também permite saber quando você receberá os pagamentos e quanto você será pago.
+Description: "O Resumo de pagamento mostra detalhes do dinheiro que você ganhou com os seus aplicativos e produtos no aplicativo. Ele também permite saber quando você receberá os pagamentos e quanto você será pago."
 title: Resumo de pagamentos
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
+ms.sourcegitcommit: c626a828f9cee6b23ec26fc2eaa60a6477870baf
+ms.openlocfilehash: 773a072f5656068eb6e0b2d792cf73a7ff1d16f0
+
 ---
 
 # Resumo de pagamentos
@@ -70,7 +73,8 @@ A tabela a seguir descreve os campos que aparecem no arquivo .csv. Observe que o
 | Nome do campo              | Descrição                                                                                                                              |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Fonte de Receita          | A fonte de sua receita, com base no local onde ocorreu a transação (por exemplo, Windows Store, Loja do Windows Phone, Loja do Windows 8, Microsoft Advertising, etc.) |
-| ID da transação          | Identificador exclusivo da transação                                                                                                            |
+| ID do Pedido          |  Identificador exclusivo do pedido. Essa ID permite identificar as transações de compra com suas respectivas transações de não compra (como reembolsos, estornos, etc.). Ambas terão a mesma ID de Pedido. Além disso, no caso de uma cobrança dividida, onde várias formas de pagamento são usadas em uma compra única, isso permitirá que você vincule as transações de compra.                                                                                                          |
+| ID da transação          |       Identificador exclusivo da transação  |
 | Data/hora da transação   | A data e a hora em que a transação ocorreu (UTC)                                                                                         |
 | ID do produto pai       | Identificador exclusivo do produto pai. Observação: se não houver um produto pai para a transação, então ID do produto pai = ID do produto. |
 | ID do produto              | Identificador exclusivo do produto                                                                                                                |
@@ -107,6 +111,7 @@ A tabela a seguir descreve os campos que aparecem no arquivo .csv. Observe que o
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

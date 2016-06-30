@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: O relatório de controle de anúncios permite que você veja sua taxa de preenchimento efetiva e as taxas de preenchimento respectivas para as redes de publicidade que está usando.
-title: Relatório de controle de anúncios
+Description: "O relatório de controle de anúncios permite que você veja sua taxa de preenchimento efetiva e as taxas de preenchimento respectivas para as redes de publicidade que está usando."
+title: "Relatório de controle de anúncios"
 ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 1597e21414dbb5d1b540a2dd67478fbcc83d574e
+
 ---
 
 # Relatório de controle de anúncios
@@ -63,6 +67,7 @@ O gráfico **Erros por tipo** mostra os erros específicos ocorridos em cada red
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

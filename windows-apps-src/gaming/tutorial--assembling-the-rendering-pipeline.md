@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Montar a estrutura de renderização
-description: Agora chegou o momento de examinar como o jogo de exemplo usa essa estrutura e esse estado para exibir seus elementos gráficos.
+title: "Montar a estrutura de renderização"
+description: "Agora chegou o momento de examinar como o jogo de exemplo usa essa estrutura e esse estado para exibir seus elementos gráficos."
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5eb6ea7ad1a30f020c155007396383b88d10c0a8
+
 ---
 
 # Montar a estrutura de renderização
@@ -6321,6 +6325,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

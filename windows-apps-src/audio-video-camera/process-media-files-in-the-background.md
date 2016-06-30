@@ -1,13 +1,17 @@
 ---
 author: drewbatgit
 ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
-description: Este artigo mostra como usar o MediaProcessingTrigger e uma tarefa em segundo plano para processar arquivos de mídia em segundo plano.
-title: Processar arquivos de mídia em segundo plano
+description: "Este artigo mostra como usar o MediaProcessingTrigger e uma tarefa em segundo plano para processar arquivos de mídia em segundo plano."
+title: "Processar arquivos de mídia em segundo plano"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dcf655ff80c4463a567ade0b6d1cc784b60c18be
+
 ---
 
 # Processar arquivos de mídia em segundo plano
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar o [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) e uma tarefa em segundo plano para processar arquivo de mídia em segundo plano.
@@ -24,18 +28,18 @@ Para mais detalhes sobre os diferentes recursos do aplicativo Universal do Windo
 
 Para adicionar uma tarefa em segundo plano à sua solução existente no Microsoft Visual Studio, insira um nome para seu computador
 
-1.  No menu **Arquivo**, selecione **Adicionar** e, em seguida, **Novo Projeto...**
-2.  Selecione o tipo de projeto **Componente do Windows Runtime (Windows Universal)**
-3.  Insira um nome para o seu projeto de componente novo. Este exemplo usa o nome de projeto **MediaProcessingBackgroundTask**
+1.  No menu **Arquivo**, selecione **Adicionar** e, em seguida, **Novo Projeto...**.
+2.  Selecione o tipo de projeto **Componente do Tempo de Execução do Windows (Windows Universal)**.
+3.  Insira um nome para o seu projeto de componente novo. Este exemplo usa o nome de projeto **MediaProcessingBackgroundTask**.
 4.  Clique em OK.
 
-Em **Gerenciador de Soluções**, clique com o botão direito no ícone do arquivo "Class1.cs" que é criado por padrão e selecione **Renomear**. Renomeie o arquivo para "MediaProcessingTask.cs". Quando o Visual Studio perguntar se você deseja renomear todas as referências a essa classe, clique em **Sim**
+Em **Gerenciador de Soluções**, clique com o botão direito no ícone do arquivo "Class1.cs" que é criado por padrão e selecione **Renomear**. Renomeie o arquivo para "MediaProcessingTask.cs". Quando o Visual Studio perguntar se você deseja renomear todas as referências a essa classe, clique em **Sim**.
 
 No arquivo de classe renomeado, adicione a seguinte diretiva **using** para incluir esses namespaces no seu projeto.
                                   
 [!code-cs[BackgroundUsing](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundUsing)]
 
-Atualize sua declaração de classe para fazer a sua classe herdar de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
+Atualize sua declaração de classe para fazer a sua classe herdar de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794).
 
 [!code-cs[BackgroundClass](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundClass)]
 
@@ -70,7 +74,7 @@ No método que você usou para criar o objeto de Progresso na etapa anterior, **
 
 [!code-cs[Progresso](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetProgress)]
 
-O método auxiliar **SendToastNotification** cria uma nova notificação do sistema obtendo um documento XML de modelo para uma notificação que tenha apenas conteúdo de texto. O elemento de texto da notificação do sistema é definido e, em seguida, um novo objeto [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) é criado a partir do documento XML. Por fim, a notificação do sistema é exibida para o usuário chamando [**ToastNotifier.Show**](https://msdn.microsoft.com/library/windows/apps/br208659)
+O método auxiliar **SendToastNotification** cria uma nova notificação do sistema obtendo um documento XML de modelo para uma notificação que tenha apenas conteúdo de texto. O elemento de texto da notificação do sistema é definido e, em seguida, um novo objeto [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) é criado a partir do documento XML. Por fim, a notificação é exibida para o usuário chamando [**ToastNotifier.Show**](https://msdn.microsoft.com/library/windows/apps/br208659).
 
 [!code-cs[SendToastNotification](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetSendToastNotification)]
 
@@ -80,16 +84,16 @@ Antes de poder iniciar a tarefa em segundo plano do seu aplicativo em primeiro p
 
 1.  No **Gerenciador de Soluções**, clique duas vezes no ícone do arquivo Package.appmanifest para abrir o editor de manifesto.
 2.  Selecione a guia **Declarações**.
-3.  Em **Declarações Disponíveis**, selecione **Tarefas em Segundo Plano** e clique em **Adicionar**
-4.  Em **Declarações Compatíveis** verifique se o item **Tarefas em Segundo Plano** está selecionado. Em **Propriedades**, marque a caixa de seleção **Processamento de mídia**
+3.  Em **Declarações Disponíveis**, selecione **Tarefas em Segundo Plano** e clique em **Adicionar**.
+4.  Em **Declarações Duportadas** verifique se o item **Tarefas em Segundo Plano** está selecionado. Em **Propriedades**, marque a caixa de seleção **Processamento de mídia**.
 5.  Na caixa de texto **Ponto de Entrada**, especifique o namespace e nome da classe para seu teste de em segundo plano, separado por um ponto. Para este exemplo, a entrada é:
    ```csharp
    MediaProcessingBackgroundTask.MediaProcessingTask
    ```
 Em seguida, você precisa adicionar uma referência à sua tarefa em segundo plano para seu aplicativo em primeiro plano.
-1.  No **Gerenciador de Soluções**, no seu projeto do aplicativo em primeiro plano, clique com botão direito na pasta **Referências** e selecione **Adicionar Referência...**
-2.  Expanda o nó **Projetos** e selecione **Solução**
-3.  Marque a caixa ao lado do seu projeto de tarefa em segundo plano e clique em **OK**
+1.  No **Gerenciador de Soluções**, no seu projeto do aplicativo em primeiro plano, clique com botão direito na pasta **Referências** e selecione **Adicionar Referência...**.
+2.  Expanda o nó **Projetos** e selecione **Solução**.
+3.  Marque a caixa ao lado do seu projeto de tarefa em segundo plano e clique em **OK**.
 
 O restante do código neste exemplo deve ser adicionado ao seu aplicativo em primeiro plano. Primeiro, você precisará adicionar os namespaces a seguir ao seu projeto.
 
@@ -135,6 +139,7 @@ O manipulador de evento **OnCompleted** é chamado quando a tarefa em segundo pl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

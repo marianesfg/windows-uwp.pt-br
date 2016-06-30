@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Criar e exibir uma malha básica
-description: Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos para representar objetos e superfícies do jogo.
+title: "Criar e exibir uma malha básica"
+description: "Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos para representar objetos e superfícies do jogo."
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada2
+
 ---
 
 # Criar e exibir uma malha básica
@@ -445,6 +449,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

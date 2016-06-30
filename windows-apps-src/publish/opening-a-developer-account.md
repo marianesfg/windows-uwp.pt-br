@@ -2,7 +2,10 @@
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrindo uma conta de desenvolvedor
-description: Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Windows Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta.
+description: "Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Windows Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta."
+ms.sourcegitcommit: c4a753b7642354c4fe42cff721fb21337b14528f
+ms.openlocfilehash: 979df6390fef01a32fb1728956622fbfe38bafa9
+
 ---
 # Abrindo uma conta de desenvolvedor
 
@@ -37,10 +40,12 @@ Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a
 
 ## Diretrizes adicionais para contas da empresa
 
-Ao criar uma conta de empresa, siga estas diretrizes, principalmente se mais de uma pessoa precisar acessar a conta.
+Ao criar uma conta da empresa, siga estas diretrizes se mais de uma pessoa precisar acessar a conta fazendo logon com a conta da Microsoft usada para abri-la. 
+
+> **Importante** Para permitir que vários usuários acessem sua conta do Centro de Desenvolvimento, recomendamos usar o Azure Active Directory para atribuir funções a usuários individuais, que podem acessar a conta ao entrar com suas credenciais individuais do Azure AD. Para obter mais informações, consulte [Gerenciar usuários de contas](manage-account-users.md).
 
 -   Crie sua conta da Microsoft usando um endereço de email que pertença ao domínio de sua empresa, mas não a uma pessoa especificamente, por exemplo, windowsapps@fabrikam.com.
--   Limite o acesso à conta da empresa ao menor número possível de desenvolvedores.
+-   Limite o acesso a essa conta da Microsoft ao menor número possível de desenvolvedores.
 -   Configure uma lista de distribuição de emails corporativos que inclua todos aqueles que precisam acessar a conta de desenvolvedor, e adicione este endereço de email às suas informações de segurança. Isso permite que todos os funcionários da lista recebam os códigos de segurança quando necessário e gerenciem as informações de segurança de sua conta da Microsoft. Se não for possível criar uma lista de distribuição, o proprietário da conta de email individual terá de estar disponível para acessar e compartilhar o código de segurança quando solicitado (como quando novas informações de segurança são adicionadas à conta ou quando ele deve ser acessado em um novo dispositivo).
 -   Adicione um número de telefone comercial sem ramal e que seja acessível para os principais membros da equipe.
 -   Em geral, solicite que os desenvolvedores usem dispositivos confiáveis para fazer logon na conta de desenvolvedor da sua empresa. Todos os membros principais da equipe devem ter acesso a esses dispositivos confiáveis. Isso reduzirá a necessidade do envio de códigos de segurança durante o acesso à conta.
@@ -75,6 +80,7 @@ Quando você fechar sua conta, é importante entender o que acontece com qualque
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
-title: Otimização da interface do usuário em ListView e GridView
-description: Melhore o desempenho e o tempo de inicialização em ListView e GridView por meio de virtualização da interface do usuário, redução de elementos e atualização progressiva de itens.
+title: "Otimização da interface do usuário em ListView e GridView"
+description: "Melhore o desempenho e o tempo de inicialização em ListView e GridView por meio de virtualização da interface do usuário, redução de elementos e atualização progressiva de itens."
+translationtype: Human Translation
+ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
+ms.openlocfilehash: 362fbb6b733e855a2126196f12c650bdf2a7665d
+
 ---
 # Otimização da interface do usuário em ListView e GridView
 
@@ -321,6 +325,7 @@ Quando há uma distribuição desigual de itens que usam modelos de item diferen
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

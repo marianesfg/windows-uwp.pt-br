@@ -1,14 +1,18 @@
 ---
 author: PatrickFarley
-title: Configurar uma cerca geográfica
-description: Configure uma cerca geográfica no aplicativo e saiba como manipular notificações em primeiro e segundo planos.
+title: "Configurar uma cerca geográfica"
+description: "Configure uma cerca geográfica no aplicativo e saiba como manipular notificações em primeiro e segundo planos."
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: e161e478b1b306f5d8d77b7649aeecd80e21b5be
+
 ---
 
 # Configurar uma cerca geográfica
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Configure uma [**cerca geográfica**](https://msdn.microsoft.com/library/windows/apps/dn263587) no aplicativo e saiba como manipular notificações em primeiro e segundo planos.
@@ -305,13 +309,13 @@ Para escutar um evento de cerca geográfica em segundo plano
 
 No manifesto do aplicativo, na guia **Declarações**, adicione uma declaração para uma tarefa em segundo plano de localização. Para isso:
 
--   Adicione uma declaração do tipo **Tarefas em Segundo Plano**
--   Defina um tipo de tarefa de propriedade de **Localização**
+-   Adicione uma declaração do tipo **Tarefas em Segundo Plano**.
+-   Defina um tipo de tarefa de propriedade de **Localização**.
 -   Defina um ponto de entrada em seu aplicativo para chamar quando um evento for disparado.
 
 ### Etapa 2: Registrar a tarefa em segundo plano
 
-O código nesta etapa registra a tarefa em segundo plano de cerca geográfica. Lembre-se de que, quando a cerca geográfica foi criada, nós verificamos as permissões de localização. Para obter mais informações, consulte [Configurar uma cerca geográfica](#setup)
+O código nesta etapa registra a tarefa em segundo plano de cerca geográfica. Lembre-se de que, quando a cerca geográfica foi criada, nós verificamos as permissões de localização. Para obter mais informações, consulte [Configurar uma cerca geográfica](#setup).
 
 ```csharp
 async private void RegisterBackgroundTask(object sender, RoutedEventArgs e)
@@ -421,7 +425,7 @@ Se as configurações de privacidade da localização não permitirem que seu ap
 </TextBlock>
 ```
 
-Como alternativa, seu aplicativo pode chamar o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar o aplicativo **Configurações** do código. Para obter mais informações, consulte [Iniciar o aplicativo Configurações do Windows](https://msdn.microsoft.com/library/windows/apps/mt228342)
+Como alternativa, seu aplicativo pode chamar o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar o aplicativo **Configurações** do código. Para obter mais informações, consulte [Iniciar o aplicativo Configurações do Windows](https://msdn.microsoft.com/library/windows/apps/mt228342).
 
 ```csharp
 using Windows.System;
@@ -446,7 +450,7 @@ O teste e a depuração de aplicativos com localização geográfica podem ser u
 
 1.  Compile seu aplicativo no Visual Studio.
 2.  Inicie o aplicativo no emulador do Visual Studio.
-3.  Use estas ferramentas para simular várias localizações dentro e fora da sua região de cerca geográfica. Espere o tempo suficiente após o período especificado pela propriedade [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para disparar o evento. Observe que você deve aceitar o prompt para habilitar permissões de localização para o aplicativo. Para saber mais sobre como simular localizações, consulte [Definir a localização geográfica simulada do dispositivo](http://go.microsoft.com/fwlink/p/?LinkID=325245)
+3.  Use estas ferramentas para simular várias localizações dentro e fora da sua região de cerca geográfica. Espere o tempo suficiente após o período especificado pela propriedade [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para disparar o evento. Observe que você deve aceitar o prompt para habilitar permissões de localização para o aplicativo. Para saber mais sobre como simular localizações, consulte [Definir a localização geográfica simulada do dispositivo](http://go.microsoft.com/fwlink/p/?LinkID=325245).
 4.  Você também pode usar o emulador para estimar se o tamanho das cercas e duração dos testes aproximadamente necessitam ser detectados em diferentes velocidades.
 
 ### Testar e depurar um aplicativo com cerca geográfica em execução em segundo plano
@@ -458,7 +462,7 @@ O teste e a depuração de aplicativos com localização geográfica podem ser u
 3.  Feche seu aplicativo que está em execução localmente.
 4.  Inicie o aplicativo no emulador do Visual Studio. Observe que a simulação de cerca geográfica em segundo plano tem suporte apenas em um aplicativo de cada vez dentro do emulador. Não inicie vários aplicativos com cerca geográfica dentro do emulador.
 5.  No emulador, simule várias localizações dentro e fora da sua região de cerca geográfica. Espere o tempo suficiente após o [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para disparar o evento. Observe que você deve aceitar o prompt para habilitar permissões de localização para o aplicativo.
-6.  Use o Visual Studio para disparar a tarefa de segundo plano de localização. Para obter mais informações sobre como disparar tarefas em segundo plano no Visual Studio, consulte [Como disparar tarefas em segundo plano](http://go.microsoft.com/fwlink/p/?LinkID=325378)
+6.  Use o Visual Studio para disparar a tarefa de segundo plano de localização. Para obter mais informações sobre como disparar tarefas em segundo plano no Visual Studio, consulte [Como disparar tarefas em segundo plano](http://go.microsoft.com/fwlink/p/?LinkID=325378).
 
 ## Solucionar problemas do aplicativo
 
@@ -478,6 +482,7 @@ Para que o aplicativo possa acessar a localização, é necessário habilitar **
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

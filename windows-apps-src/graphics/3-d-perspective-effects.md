@@ -1,12 +1,16 @@
 ---
 author: Jwmsft
 ms.assetid: 90F07341-01F4-4205-8161-92DD2EB49860
-title: Efeitos da perspectiva 3D na interface do usuário XAML
-description: Você pode aplicar efeitos 3D ao conteúdo em seus aplicativos do Windows Runtime usando transformações de perspectiva. Por exemplo, você pode criar a ilusão de que um objeto está sendo girado em sua direção ou para longe de você, como mostrado abaixo.
+title: "Efeitos da perspectiva 3D na interface do usuário XAML"
+description: "Você pode aplicar efeitos 3D ao conteúdo em seus aplicativos do Windows Runtime usando transformações de perspectiva. Por exemplo, você pode criar a ilusão de que um objeto está sendo girado em sua direção ou para longe de você, como mostrado abaixo."
+translationtype: Human Translation
+ms.sourcegitcommit: 54bcd19419f31563f910b705fce8128bca33825b
+ms.openlocfilehash: 4141d23c5102df4970ef7c4fb3659bf3ba561ccf
+
 ---
 # Efeitos em perspectiva 3D para interface do usuário XAML
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Você pode aplicar efeitos 3D ao conteúdo em seus aplicativos do Windows Runtime usando transformações de perspectiva. Por exemplo, você pode criar a ilusão de que um objeto está sendo girado em sua direção ou para longe de você, como mostrado abaixo.
 
@@ -85,7 +89,7 @@ Você pode mover o centro de rotação usando as propriedades [**CenterOfRotatio
 
 [
               **CenterOfRotationX**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.centerofrotationx) move o centro de rotação ao longo do eixo x, paralelo ao objeto, enquanto [**CenterOfRotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.centerofrotationy) move o centro de rotação ao longo do eixo y do objeto. As próximas ilustrações demonstram o uso de valores diferentes para **CenterOfRotationY**
+            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.centerofrotationx) move o centro de rotação ao longo do eixo x, paralelo ao objeto, enquanto [**CenterOfRotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.centerofrotationy) move o centro de rotação ao longo do eixo y do objeto. As próximas ilustrações demonstram o uso de valores diferentes para **CenterOfRotationY**.
 
 ```xml
 <Image Source="kid.png">
@@ -196,9 +200,10 @@ Perceba que, nesta amostra, o objeto não muda de direção conforme gira. Isso 
 
 ## Posicionando um objeto
 
-Você pode usar os tipos [**Matrix3DProjection**](https://msdn.microsoft.com/library/windows/apps/BR210128) e [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/BR243266) para cenários semi-3D mais complexos que são possíveis com o [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192). **Matrix3DProjection** fornece uma matriz de transformação 3D completa para ser aplicada a qualquer [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911), para que você possa aplicar um modelo arbitrário de matrizes de transformação e de perspectiva a elementos. Não se esqueça de que essas APIs são mínimas e, logo, se você usá-las, precisará escrever o código que cria corretamente as matrizes de transformação 3D. Por causa disso, é mais fácil usar o **PlaneProjection** para cenários 3D simples. Because of this, it is easier to use <bpt id="p1">**</bpt>PlaneProjection<ept id="p1">**</ept> for simple 3D scenarios.
+Você pode usar os tipos [**Matrix3DProjection**](https://msdn.microsoft.com/library/windows/apps/BR210128) e [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/BR243266) para cenários semi-3D mais complexos que são possíveis com o [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192). O **Matrix3DProjection** fornece uma matriz de transformação 3D completa para ser aplicada a qualquer [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911), para que você possa aplicar um modelo arbitrário de matrizes de transformação e de perspectiva a elementos. Não se esqueça de que essas APIs são mínimas e, logo, se você usá-las, precisará escrever o código que cria corretamente as matrizes de transformação 3D. Por causa disso, é mais fácil usar o **PlaneProjection** para cenários 3D simples.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

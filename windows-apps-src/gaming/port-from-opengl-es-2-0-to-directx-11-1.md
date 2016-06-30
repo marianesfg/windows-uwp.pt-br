@@ -1,8 +1,11 @@
 ---
 author: mtoepke
 title: Fazer a portabilidade do OpenGL ES 2.0 para o Direct3D 11
-description: Inclui artigos, visões gerais e guias passo a passo para a portabilidade de uma pipeline de elementos gráficos em OpenGL ES 2.0 para um Direct3D 11 e o Windows Runtime.
+description: "Inclui artigos, visões gerais e guias passo a passo para a portabilidade de uma pipeline de elementos gráficos em OpenGL ES 2.0 para um Direct3D 11 e o Windows Runtime."
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
+ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
+ms.openlocfilehash: 40380582a9210cb705a5e7e591d4a8f37c42f8dd
+
 ---
 
 # Fazer a portabilidade do OpenGL ES 2.0 para o Direct3D 11
@@ -30,11 +33,11 @@ Inclui artigos, visões gerais e guias passo a passo para a portabilidade de uma
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Correlacionar o OpenGL ES 2.0 com o Direct3D 11.1](map-concepts-and-infrastructure.md)</p></td>
-<td align="left"><p>Ao iniciar o processo de portabilidade da sua arquitetura de elementos gráficos do OpenGL ES 2.0 para o Direct3D pela primeira vez, familiarize-se com as diferenças principais entre as APIs. Os tópicos desta seção ajudam você a planejar sua estratégia de compatibilização e as alterações de API que você deve fazer ao mover o processamento de elementos gráficos para Direct3D.</p></td>
+<td align="left"><p>Ao iniciar o processo de portabilidade da sua arquitetura de elementos gráficos do OpenGL ES 2.0 para o Direct3D pela primeira vez, familiarize-se com as diferenças principais entre as APIs. Os tópicos desta seção ajudam você a planejar sua estratégia de portabilidade e as alterações de API que você deve fazer ao mover o processamento de elementos gráficos para Direct3D.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Passo a passo: exemplos de portabilidade do OpenGL ES 2.0](walkthrough-sample-ports-from-opengl-es-2-0.md)</p></td>
-<td align="left"><p>Este conjunto de tópicos mostra várias situações de portabilidade de elementos gráficos em OpenGL ES 2.0 de diferentes graus de dificuldade.</p></td>
+<td align="left"><p>[Como fazer a portabilidade de um renderizador OpenGL ES 2.0 simples para Direct3D 11.1](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)</p></td>
+<td align="left"><p>Para este exercício de portabilidade, vamos começar com noções básicas: trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de aplicativo do DirectX 11 (Windows Universal) do Visual Studio 2015.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Referência do OpenGL ES 2.0 para Direct3D 11.1](opengl-es-2-0-to-directx-11-1-reference.md)</p></td>
@@ -59,6 +62,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

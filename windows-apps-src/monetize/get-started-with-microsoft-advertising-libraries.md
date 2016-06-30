@@ -1,15 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: ae45490f-3eb1-4b7f-8e18-bf82f0ca5d6d
-description: Obtenha as informações de que você precisa para começar a usar as bibliotecas do Microsoft Advertising para adicionar anúncios em faixa e anúncios intersticiais em vídeo aos seus aplicativos.
-title: Introdução às bibliotecas do Microsoft Advertising
+description: "Obtenha as informações de que você precisa para começar a usar as bibliotecas do Microsoft Advertising para adicionar anúncios em faixa e anúncios intersticiais em vídeo aos seus aplicativos."
+title: "Introdução às bibliotecas do Microsoft Advertising"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 08168dc15b33d99a044eedd7864848ed7a858991
+
 
 ---
 
 # Introdução às bibliotecas do Microsoft Advertising
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico fornece as informações de que você precisa para começar a usar as bibliotecas do Microsoft Advertising para adicionar anúncios em faixa e anúncios intersticiais em vídeo aos seus aplicativos. Depois que você leu os tópicos desta seção, vá para o [guia passo a passo do desenvolvedor](developer-walkthroughs.md) para ver exemplos sobre como escrever o código que mostrará anúncios em seus aplicativos.
 
@@ -37,6 +41,7 @@ Para obter projetos de exemplo completos que demonstram como adicionar anúncios
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

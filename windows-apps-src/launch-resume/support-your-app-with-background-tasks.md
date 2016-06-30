@@ -1,30 +1,33 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Dar suporte a seu aplicativo com tarefas em segundo plano
-description: Os tópicos nesta seção mostram como executar seu próprio código leve em segundo plano ao responder a gatilhos com tarefas em segundo plano.
+description: "Os tópicos nesta seção mostram como executar seu próprio código leve em segundo plano ao responder a gatilhos com tarefas em segundo plano."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 38942aa2a274828cc36677a93d0923beb03060dc
+
 ---
 
 # Dar suporte a seu aplicativo com tarefas em segundo plano
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Os tópicos nesta seção mostram como executar seu próprio código leve em segundo plano ao responder a gatilhos com tarefas em segundo plano. As tarefas em segundo plano são classes leves que o SO executa em segundo plano. Você pode usar tarefas em segundo plano para fornecer funcionalidade quando o seu aplicativo é suspenso ou não está em execução. Também é possível usar tarefas em segundo plano para aplicativos de comunicação em tempo real como VOIP, mail e IM.
 
 As tarefas em segundo plano são classes separadas que implementam a interface de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). Você registra uma tarefa em segundo plano usando a classe [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). O nome de classe é usado para especificar o ponto de entrada quando você registra a tarefa em segundo plano.
 
-Para começar rapidamente com uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano](create-and-register-a-background-task.md)
+Para começar rapidamente com uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano](create-and-register-a-background-task.md).
 
-**Dica** A partir do Windows 10, você não precisa mais colocar um aplicativo na tela de bloqueio para registrar tarefas em segundo plano.
+**Dica**  A partir do Windows 10, você não precisa mais colocar um aplicativo na tela de bloqueio para registrar tarefas em segundo plano.
 
  
 
 ## Tarefas em segundo plano de eventos do sistema
 
 
-O aplicativo pode responder a eventos gerados pelo sistema registrando uma tarefa em segundo plano com a classe [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838). Um aplicativo pode usar qualquer um dos gatilhos de eventos do sistema a seguir (definidos em [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839)
+O aplicativo pode responder a eventos gerados pelo sistema registrando uma tarefa em segundo plano com a classe [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838). Um aplicativo pode usar qualquer um dos gatilhos de eventos do sistema a seguir (definidos em [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839))
 
 | Nome do gatilho                     | Descrição                                                                                                    |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -36,7 +39,7 @@ O aplicativo pode responder a eventos gerados pelo sistema registrando uma taref
 
  
 
-Para obter mais informações, consulte o tópico [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
+Para obter mais informações, consulte o tópico sobre [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md).
 
 ## Condições para tarefas em segundo plano
 
@@ -54,12 +57,12 @@ Você pode controlar quando a tarefa em segundo plano é executada, mesmo depois
 
  
 
-Para obter mais informações, consulte o tópico sobre [Definir condições para a execução de uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
+Para obter mais informações, consulte o tópico sobre [Definir condições para a execução de uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md).
 
 ## Requisitos do manifesto do aplicativo
 
 
-Antes que o aplicativo possa registrar com êxito uma tarefa em segundo plano, ela deve ser declarada no manifesto do aplicativo. Para obter mais informações, consulte [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+Antes que o aplicativo possa registrar com êxito uma tarefa em segundo plano, ela deve ser declarada no manifesto do aplicativo. Para obter mais informações, consulte [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md).
 
 ## Tarefas em segundo plano
 
@@ -68,7 +71,7 @@ Os gatilhos em tempo real a seguir podem ser usados para executar código person
 
 **Canal de Controle:  **As tarefas em segundo plano podem manter a conexão ativada e receber mensagens no canal de controle usando o [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Se seu aplicativo estiver ouvindo um soquete, você poderá usar o Agente de Soquete em vez do **ControlChannelTrigger**. Para obter mais detalhes sobre como usar o Agente de Soquete, consulte [SocketActivityTrigger](https://msdn.microsoft.com/library/windows/apps/dn806009). O **ControlChannelTrigger** não é compatível com o Windows Phone.
 
-**Temporizador:  **É possível executar tarefas em segundo plano a cada 15 minutos, e elas podem ser configuradas para execução em um horário específico com [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para obter mais informações, consulte [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
+**Temporizador:  **É possível executar tarefas em segundo plano a cada 15 minutos, e elas podem ser configuradas para execução em um horário específico com [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para obter mais informações, consulte [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md).
 
 **Notificação por Push:  **As tarefas em segundo plano respondem ao [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) para receber notificações por push brutas.
 
@@ -76,7 +79,7 @@ Os gatilhos em tempo real a seguir podem ser usados para executar código person
 
 Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
 
-Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
+Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
 ## Gatilhos de eventos do sistema
 
@@ -132,7 +135,7 @@ O aplicativo não precisa fazer nada além de obter as cotas de recursos garanti
 ## Gatilho de manutenção
 
 
-As tarefas de manutenção são executadas apenas quando o dispositivo está conectado à alimentação AC. Para obter mais informações, consulte [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
+As tarefas de manutenção são executadas apenas quando o dispositivo está conectado à alimentação AC. Para obter mais informações, consulte [Usar um gatilho de manutenção](use-a-maintenance-trigger.md).
 
 ## Tarefa em segundo plano para sensores e dispositivos
 
@@ -151,7 +154,7 @@ Tarefas em segundo plano podem indicar o progresso, a conclusão e o cancelament
 [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 
 **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132)
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -186,8 +189,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

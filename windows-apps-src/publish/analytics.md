@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Você pode visualizar análises detalhadas de seus aplicativos no painel do Centro de Desenvolvimento do Windows.
-title: Análises
+Description: "Você pode visualizar análises detalhadas de seus aplicativos no painel do Centro de Desenvolvimento do Windows."
+title: "Análises"
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
+translationtype: Human Translation
+ms.sourcegitcommit: dfaf348956b19746aa5332aeb7ad5cbc4b224e8c
+ms.openlocfilehash: 8922a53da8b1bc97bef7faf49d0e412a26127188
+
 ---
 
 # Análises
@@ -74,6 +78,7 @@ Use os recursos a seguir para começar a usar o Power BI para acessar seus dados
 Instale o aplicativo [Centro de Desenvolvimento](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para exibir rapidamente os detalhes sobre a integridade e o desempenho de seus aplicativos em qualquer dispositivo Windows 10. 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

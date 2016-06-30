@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
-description: Este artigo descreve como usar a classe CameraCaptureUI para capturar fotos ou vídeos usando a interface do usuário da câmera integrada ao Windows
-title: Capturar fotos e vídeos com CameraCaptureUI
+description: "Este artigo descreve como usar a classe CameraCaptureUI para capturar fotos ou vídeos usando a interface do usuário da câmera integrada ao Windows"
+title: "Capturar fotos e vídeos com CameraCaptureUI"
+translationtype: Human Translation
+ms.sourcegitcommit: 72abc006de1925c3c06ecd1b78665e72e2ffb816
+ms.openlocfilehash: a98edd0b4c52271fad4255af5ab0a005b0c66d68
+
 ---
 
 # Capturar fotos e vídeos com CameraCaptureUI
@@ -107,6 +111,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

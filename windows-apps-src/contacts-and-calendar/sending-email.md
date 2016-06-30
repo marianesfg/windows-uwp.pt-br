@@ -4,8 +4,8 @@ description: "Mostra como iniciar a caixa de diálogo de email para permitir que
 title: Enviar email
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
 keywords: contacts, email, send
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: b4b5b029c321256028993e283395a91bd0ed3d7c
+ms.sourcegitcommit: 252e144b2436f047f7b0849bb6e5aee87b2e3464
+ms.openlocfilehash: ff0d2cd86f8ba422db7a26565c52293a3e21a018
 
 ---
 
@@ -27,7 +27,7 @@ Mostra como iniciar a caixa de diálogo de email para permitir que o usuário en
 Crie um novo objeto [**EmailMessage**](https://msdn.microsoft.com/library/windows/apps/Dn631270) e defina os dados que você quer que sejam previamente populados na caixa de redação de email. Chame [**ShowComposeNewEmailAsync**](https://msdn.microsoft.com/library/windows/apps/Dn631269) para mostrar a caixa de diálogo.
 
 ``` cs
-private async void ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient, 
+private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient, 
     string messageBody, 
     StorageFile attachmentFile)
 {
@@ -75,6 +75,6 @@ Este tópico mostrou como iniciar a caixa de redação de email. Para saber mais
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

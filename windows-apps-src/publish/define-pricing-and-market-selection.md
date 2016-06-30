@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: A Windows Store abrange clientes em mais de 200 países e regiões em todo o mundo.
-title: Definir preço e seleção de mercado
+Description: "A Windows Store abrange clientes em mais de 200 países e regiões em todo o mundo."
+title: "Definir preço e seleção de mercado"
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
+
 ---
 
 # Definir preço e seleção de mercado
@@ -25,7 +29,7 @@ Você pode definir o **Preço base** como **Grátis**, ou pode escolher uma faix
 
 Cada faixa de preço tem um valor correspondente em cada uma das mais de 60 moedas oferecidas pela Loja. Nós usamos esses valores para ajudar você a vender seus aplicativos com um preço proporcional em todo o mundo. Porém, devido a alterações cambiais, o valor exato das vendas pode sofrer uma pequena variação de uma moeda para a outra.
 
-Lembre-se de que a faixa de preço que você seleciona pode incluir impostos sobre vendas ou valor agregado que os seus clientes devem pagar. Para saber mais sobre as implicações fiscais do seu aplicativo nos mercados selecionados, consulte [Detalhes fiscais para aplicativos pagos](tax-details-for-paid-apps.md). Veja também as [considerações de preço para mercados específicos](#price-considerations-for-specific-markets) abaixo.
+Lembre-se de que a faixa de preço que você seleciona pode incluir impostos sobre vendas ou valor agregado que os seus clientes devem pagar. Para saber mais sobre as implicações fiscais do seu aplicativo nos mercados selecionados, consulte [Detalhes fiscais para aplicativos pagos](tax-details-for-paid-apps.md). Consulte também as [considerações de preço para mercados específicos](#price-considerations-for-specific-markets) abaixo.
 
 ## Mercados e preços personalizados
 
@@ -550,6 +554,7 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
 > **Observação**  Para uma lista de países e regiões em que você pode registrar uma conta de desenvolvedor, consulte [Tipos de conta, locais e tarifas](https://msdn.microsoft.com/library/windows/apps/jj863494).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

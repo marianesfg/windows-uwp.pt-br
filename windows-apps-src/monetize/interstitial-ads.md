@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
-description: Aprenda a incluir anúncios intersticiais em um aplicativo do Windows 10, Windows 8.1 ou Windows Phone 8.1 usando as bibliotecas do Microsoft Advertising no SDK do Microsoft Store Engagement and Monetization.
-title: Anúncios intersticiais
+description: "Aprenda a incluir anúncios intersticiais em um aplicativo do Windows 10, Windows 8.1 ou Windows Phone 8.1 usando as bibliotecas do Microsoft Advertising no SDK do Microsoft Store Engagement and Monetization."
+title: "Anúncios intersticiais"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 0f159409bb584aacaf66550efe8d147cd8fddd50
+
 ---
 
 # Anúncios intersticiais
@@ -368,7 +372,7 @@ Para obter mais informações sobre como usar anúncios intersticiais com eficá
 ## Remover erros de referência: direcionar uma plataforma específica da CPU (XAML e HTML)
 
 
-Ao usar as bibliotecas do Microsoft Advertising, você não pode direcionar para **Any CPU** em seu projeto. Se o seu projeto for direcionado para a plataforma **Any CPU**, você poderá ver um aviso em seu projeto depois de adicionar uma referência às bibliotecas do Microsoft Advertising. Para remover esse aviso, atualize seu projeto para usar uma saída de compilação específica da arquitetura (por exemplo, **x86**). Para saber mais, consulte [Problemas conhecidos](known-issues-for-the-advertising-libraries.md).
+Ao usar as bibliotecas do Microsoft Advertising, você não pode direcionar para **Any CPU** em seu projeto. Se o seu projeto for direcionado para **qualquer plataforma de CPU**, você poderá ver um aviso em seu projeto depois de adicionar uma referência às bibliotecas do Microsoft Advertising. Para remover esse aviso, atualize seu projeto para usar uma saída de compilação específica da arquitetura (por exemplo, **x86**). Para saber mais, consulte [Problemas conhecidos](known-issues-for-the-advertising-libraries.md).
 
 ## Tópicos relacionados
 
@@ -382,6 +386,7 @@ Ao usar as bibliotecas do Microsoft Advertising, você não pode direcionar para
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

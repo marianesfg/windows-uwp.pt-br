@@ -3,8 +3,8 @@ author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
 description: "Este artigo descreve a maneira recomendada para consumir métodos assíncronos em extensões de componente do Visual C++ (C++/CX) usando a classe task definida no namespace concurrency em ppltasks.h."
 title: "Programação assíncrona em C++"
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 560b51d5bb67f5f2611311cb78f59d189d4ea440
+ms.sourcegitcommit: c440d0dc2719a982a6b566c788d76111c40e263e
+ms.openlocfilehash: c33c05c6ec7f36b8ba7db840613fbfb7eb394c3f
 
 ---
 
@@ -59,7 +59,7 @@ void App::TestAsync()
 
     // Call the task's .then member function, and provide
     // the lambda to be invoked when the async operation completes.
-    deviceEnumTask.then( [this] (DeviceInformationCollection^ devices ) 
+    deviceEnumTask.then( [this] (DeviceInformationCollection^ devices )
     {       
         for(int i = 0; i < devices->Size; i++)
         {
@@ -142,7 +142,7 @@ cancellation_token_source m_fileTaskTokenSource;
 m_fileTaskTokenSource.cancel();
 
 // task chain
-auto getFileTask2 = create_task(documentsFolder->GetFileAsync(fileName), 
+auto getFileTask2 = create_task(documentsFolder->GetFileAsync(fileName),
                                 m_fileTaskTokenSource.get_token());
 //getFileTask2.then ...
 ```
@@ -174,7 +174,7 @@ void App::DeleteWithTasksHandleErrors(String^ fileName)
         return storageFileSample->DeleteAsync();
     })
 
-    .then([](task<void> t) 
+    .then([](task<void> t)
     {
 
         try
@@ -213,7 +213,7 @@ void App::SetFeedText()
     SyndicationClient^ client = ref new SyndicationClient();
     auto feedOp = client->RetrieveFeedAsync(ref new Uri(url));
 
-    create_task(feedOp).then([this]  (SyndicationFeed^ feed) 
+    create_task(feedOp).then([this]  (SyndicationFeed^ feed)
     {
         m_TextBlock1->Text = feed->Title->Text;
     });
@@ -222,7 +222,7 @@ void App::SetFeedText()
 
 Se uma tarefa não retorna uma [**IAsyncAction**][IAsyncAction] ou [**IAsyncOperation**][IAsyncOperation], ela não reconhece o apartment e, por padrão, suas continuações são executadas no primeiro thread em segundo plano disponível.
 
-Você pode substituir o contexto do thread padrão dos dois tipos de tarefa usando a sobrecarga de [**task::then**]taskThen[ que aceita um ]task\_continuation\_context****. Por exemplo, em alguns casos, pode ser desejável agendar a continuação de uma tarefa que reconhece o apartment em um thread de segundo plano. Nesse caso, você pode passar [**task\_continuation\_context::use\_arbitrary**][useArbitrary] para agendar o trabalho da tarefa no próximo thread disponível em um apartment de vários threads. Isso pode melhorar o desempenho da continuação, pois a sua execução não precisa ser sincronizada com as demais execuções realizadas no thread da interface do usuário.
+Você pode substituir o contexto do thread padrão dos dois tipos de tarefa usando a sobrecarga de [**task::then**][taskThen] que aceita um [**task\_continuation\_context**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749968.aspx). Por exemplo, em alguns casos, pode ser desejável agendar a continuação de uma tarefa que reconhece o apartment em um thread de segundo plano. Nesse caso, você pode passar [**task\_continuation\_context::use\_arbitrary**][useArbitrary] para agendar o trabalho da tarefa no próximo thread disponível em um apartment de vários threads. Isso pode melhorar o desempenho da continuação, pois a sua execução não precisa ser sincronizada com as demais execuções realizadas no thread da interface do usuário.
 
 O exemplo a seguir demonstra quando é útil especificar a opção [**task\_continuation\_context::use\_arbitrary**][useArbitrary] e também mostra como o contexto de continuação padrão é útil para sincronizar operações simultâneas em coleções não seguras de thread. Nesse código, executamos um loop por uma lista de URLs para RSS Feeds e, para cada URL, iniciamos uma operação assíncrona para recuperar os dados de feed. Não é possível controlar a ordem na qual os feeds são recuperados, mas isso não é relevante. Quando cada operação [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR210642) é concluída, a primeira continuação aceita o objeto [**SyndicationFeed^**](https://msdn.microsoft.com/library/windows/apps/BR243485) e o usa para inicializar um objeto `FeedData^` definido pelo aplicativo. Como cada uma dessas operações é independente das demais, é possível agilizar o processo especificando o contexto de continuação **task\_continuation\_context::use\_arbitrary**. No entanto, depois que cada objeto `FeedData` é inicializado, é necessário adicioná-lo a um [**Vector**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh441570.aspx), que não é uma coleção não segura de threads. Por isso, deve-se criar uma continuação e especificar [**task\_continuation\_context::use\_current**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750085.aspx) para garantir que todas as chamadas a [**Append**](https://msdn.microsoft.com/library/windows/apps/BR206632) ocorram no mesmo contexto single-threaded apartment de aplicativo (ASTA). Como [**task\_continuation\_context::use\_default**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750085.aspx) é o contexto padrão, não é necessário especificá-lo explicitamente, mas isso é feito aqui para fins de esclarecimento.
 
@@ -235,7 +235,7 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
 
     std::for_each(std::begin(urls), std::end(urls), [=,this] (std::wstring url)
     {
-        // Create the async operation. feedOp is an 
+        // Create the async operation. feedOp is an
         // IAsyncOperationWithProgress<SyndicationFeed^, RetrievalProgress>^
         // but we don't handle progress in this example.
 
@@ -257,7 +257,7 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
         // Append the initialized FeedData object to the list
         // that is the data source for the items collection.
         // This all has to happen on the same thread.
-        // By using the use_default context, we can append 
+        // By using the use_default context, we can append
         // safely to the Vector without taking an explicit lock.
         .then([feedList] (FeedData^ fd)
         {
@@ -289,7 +289,7 @@ Tarefas aninhadas, que são novas tarefas criadas dentro de uma continuação, n
 
 ## Manipulando atualizações de progresso
 
-Os métodos que dão suporte a [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/apps/BR206594) ou [**IAsyncActionWithProgress**](https://msdn.microsoft.com/library/windows/apps/BR206580withprogress_1) fornecem atualizações de progresso periodicamente enquanto a operação está em andamento, antes de ser concluída. O relatório do progresso é independente da noção de tarefas e continuações. Basta fornecer o delegado da propriedade [**Progress**](https://msdn.microsoft.com/library/windows/apps/br206594) do objeto. Um uso comum do delegado é para atualizar uma barra de progresso na interface do usuário.
+Os métodos que dão suporte a [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/apps/br206594.aspx) ou [**IAsyncActionWithProgress**](https://msdn.microsoft.com/en-us/library/windows/apps/br206581.aspx) fornecem atualizações de progresso periodicamente enquanto a operação está em andamento, antes de ser concluída. O relatório do progresso é independente da noção de tarefas e continuações. Basta fornecer o delegado da propriedade [**Progress**](https://msdn.microsoft.com/library/windows/apps/br206594) do objeto. Um uso comum do delegado é para atualizar uma barra de progresso na interface do usuário.
 
 ## Tópicos relacionados
 
@@ -314,7 +314,7 @@ Os métodos que dão suporte a [**IAsyncOperationWithProgress**](https://msdn.mi
              "CreateAsync"
 [deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199>
              "DeleteAsync"
-[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580>
+[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx>
              "IAsyncAction"
 [IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598>
              "IAsyncOperation"
@@ -337,6 +337,6 @@ Os métodos que dão suporte a [**IAsyncOperationWithProgress**](https://msdn.mi
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

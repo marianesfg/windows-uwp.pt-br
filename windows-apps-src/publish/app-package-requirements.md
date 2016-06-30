@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Siga estas diretrizes para preparar os pacotes de seu aplicativo para envio à Windows Store.
+Description: "Siga estas diretrizes para preparar os pacotes de seu aplicativo para envio à Windows Store."
 title: Requisitos do pacote do aplicativo
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 951c00f9fd2c945ac44d47bfae701049e937b98f
+
 ---
 
 # Requisitos do pacote do aplicativo
@@ -80,6 +84,7 @@ StoreManifest.xml é um arquivo de configuração opcional que pode ser incluíd
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

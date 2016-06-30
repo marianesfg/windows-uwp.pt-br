@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Uma ótima descrição pode fazer o seu aplicativo se destacar na Windows Store e ajudar a incentivar os clientes a baixá-lo.
-title: Escreva uma ótima descrição do aplicativo
+Description: "Uma ótima descrição pode fazer o seu aplicativo se destacar na Windows Store e ajudar a incentivar os clientes a baixá-lo."
+title: "Escreva uma ótima descrição do aplicativo"
 ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
+translationtype: Human Translation
+ms.sourcegitcommit: 17e7724eaa8a33f17360eb6e24fcc22068c5d477
+ms.openlocfilehash: 56b8492fea59c9a744c948d27e728e2305388cf8
+
 ---
 
 # Escreva uma ótima descrição do aplicativo
@@ -35,6 +39,7 @@ Aqui estão algumas dicas para tornar a descrição do seu aplicativo a melhor q
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

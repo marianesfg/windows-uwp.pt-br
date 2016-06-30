@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Se você tiver publicado aplicativos anteriormente na Loja para Windows ou para Windows Phone, esses aplicativos também estarão disponíveis para clientes em dispositivos Windows 10.
+Description: "Se você tiver publicado aplicativos anteriormente na Loja para Windows ou para Windows Phone, esses aplicativos também estarão disponíveis para clientes em dispositivos Windows 10."
 title: Como seu aplicativo aparece na Loja para clientes do Windows 10
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5e8d25264a17307c61f4e8b1295ded3f920ee2cf
+
 ---
 
 # Como seu aplicativo aparece na Loja para clientes do Windows 10
@@ -117,6 +121,7 @@ Em muitos casos, as novas [categorias e subcategorias](category-and-subcategory-
 | Jogos &gt; Corrida           | Jogos &gt; Corrida + voo           |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

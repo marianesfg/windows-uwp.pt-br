@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Este artigo descreve as práticas recomendadas para criar e exibir configurações do aplicativo.
-title: Diretrizes para configurações de aplicativos
+Description: "Este artigo descreve as práticas recomendadas para criar e exibir configurações do aplicativo."
+title: "Diretrizes para configurações de aplicativos"
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: aeccd755c5fe5df8f2ff5549950ce2d6cb74e8e4
+
 ---
 
 
@@ -140,6 +144,7 @@ Assim que você tiver uma lista de itens que deseja incluir na página de config
 �
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

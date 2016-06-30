@@ -5,8 +5,8 @@ title: Reconhecimento de fala
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 6d1449ede6912add8b8f7e60760d4547c035ed60
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 66bab97e7108a1728e9659a04ea2f1ecf15f68b7
 
 ---
 
@@ -24,7 +24,7 @@ Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um
 O reconhecimento de fala é realizado em um tempo de execução de fala, APIs de reconhecimento para programação do tempo de execução, gramáticas prontas para usar ditado e pesquisa na Web e uma interface do usuário do sistema padrão que auxilia os usuários a descobrir e usar recursos de reconhecimento de fala.
 
 
-## <span id="Set_up_the_audio_feed"></span><span id="set_up_the_audio_feed"></span><span id="SET_UP_THE_AUDIO_FEED"></span>Configurar o feed de áudio
+## Configurar o feed de áudio
 
 
 Certifique-se de que o dispositivo possui microfone ou equivalente.
@@ -33,7 +33,7 @@ Configure a capacidade do dispositivo **Microfone** ([**DeviceCapability**](http
 
 Consulte [Declarações de funcionalidades do aplicativo](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
-## <span id="Recognize_speech_input"></span><span id="recognize_speech_input"></span><span id="RECOGNIZE_SPEECH_INPUT"></span>Reconhecer a entrada da fala
+## Reconhecer a entrada da fala
 
 
 Uma *restrição* define as palavras e frases (vocabulário) que um aplicativo reconhece na entrada de fala. As restrições estão no núcleo do reconhecimento de fala e proporcionam a seu aplicativo mais exatidão no reconhecimento de fala.
@@ -69,7 +69,7 @@ private static uint HResultPrivacyStatementDeclined = 0x80045509;</code></pre></
 
     We then catch any standard exceptions during recogntion and test if the [**HResult**](https://msdn.microsoft.com/library/windows/apps/br206579) value is equal to the value of the HResultPrivacyStatementDeclined variable. If so, we display a warning and call `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` to open the Settings page.
 
-    <span codelanguage="CSharp"></span>
+    
 ```    CSharp
     <colgroup>
     <col width="100%" />
@@ -146,7 +146,7 @@ private async void StartRecognizing_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <span id="Customize_the_recognition_UI"></span><span id="customize_the_recognition_ui"></span><span id="CUSTOMIZE_THE_RECOGNITION_UI"></span>Personalizar o reconhecimento da interface do usuário
+## Personalizar o reconhecimento da interface do usuário
 
 
 Quando seu aplicativo tenta o reconhecimento de fala chamando [**SpeechRecognizer.RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245), várias telas são mostradas na ordem a seguir.
@@ -203,7 +203,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 
 **Desenvolvedores**
@@ -226,6 +226,6 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

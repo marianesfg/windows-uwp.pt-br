@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Você pode incentivar os clientes a deixar comentários iniciando o Hub de Feedback do seu aplicativo.
+Description: "Você pode incentivar os clientes a deixar comentários iniciando o Hub de Feedback do seu aplicativo."
 title: Iniciar o Hub de Feedback do seu aplicativo
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
+translationtype: Human Translation
+ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
+ms.openlocfilehash: ccda01d9bfa4ffdff2bbce5d6c60c78e026270e5
+
 ---
 
 # Iniciar o Hub de Feedback do seu aplicativo
@@ -73,6 +77,7 @@ Também recomendamos que você use uma ou mais das seguintes opções de posicio
 * [Relatório de feedback](../publish/feedback-report.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

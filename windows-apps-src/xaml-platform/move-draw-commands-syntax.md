@@ -3,8 +3,8 @@ author: jwmsft
 description: "Saiba mais sobre os comandos de movimentação e desenho (uma minilinguagem) que você pode usar para especificar geometrias de caminho como um valor de atributo XAML."
 title: "Sintaxe de comandos de movimentação e desenho"
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
-ms.sourcegitcommit: e1399a25b0455c9a79dcb217c5df1a397420d1f3
-ms.openlocfilehash: 54c080183104335f4b3920cda8bc396a34298a69
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 49c3a061c51c07677ffb43a230e0900220ba0299
 
 ---
 
@@ -119,7 +119,7 @@ Cria uma linha horizontal entre o ponto atual e a coordenada x especificada. `H 
 
 | Termo | Descrição |
 |------|-------------|
-| x | [**Double**](T:System.Double) <br/> A coordenada x do ponto final da linha. |
+| x | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> A coordenada x do ponto final da linha. |
 
 **Comando de linha vertical**
 
@@ -131,7 +131,7 @@ Cria uma linha vertical entre o ponto atual e a coordenada y especificada. `v 90
 
 | Termo | Descrição |
 |------|-------------|
-| *y* | [**Double**](T:System.Double) <br/> A coordenada y do ponto final da linha. |
+| *y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> A coordenada y do ponto final da linha. |
 
 **Comando de curva de Bézier cúbica**
 
@@ -208,7 +208,7 @@ Cria um arco elíptico entre o ponto atual e a ponto final especificado. Define 
 | Termo | Descrição |
 |------|-------------|
 | *size* | [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)<br/>O raio de x e o raio de y do arco. |
-| *rotationAngle* | [**Double**](T:System.Double) <br/> A rotação da elipse, em graus. |
+| *rotationAngle* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> A rotação da elipse, em graus. |
 | *isLargeArcFlag* | Defina como 1 se o ângulo do arco deve ser maior ou igual a 180; caso contrário, defina como 0. |
 | *sweepDirectionFlag* | Defina como 1 se o arco estiver desenhado em uma direção de ângulo positivo; caso contrário, defina como 0. |
 | *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O ponto no qual o arco é desenhado.|
@@ -232,8 +232,8 @@ Descreve as coordenadas x e y de um ponto. Consulte também [**Point**](https://
 
 | Termo | Descrição |
 |------|-------------|
-| *x* | [**Double**](T:System.Double) <br/> A coordenada x do ponto. |
-| *y* | [**Double**](T:System.Double) <br/> A coordenada y do ponto. |
+| *x* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> A coordenada x do ponto. |
+| *y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> A coordenada y do ponto. |
 
 **Observações adicionais**
 
@@ -263,6 +263,6 @@ Há exportadores ou plug-ins disponíveis para outras ferramentas de desenho gr�
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

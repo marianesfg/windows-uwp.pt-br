@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-title: 'Tamanhos de tela e pontos de interrupção para um design responsivo'
+title: "Tamanhos de tela e pontos de interrupção para um design responsivo"
 description: .
 ms.assetid: BF42E810-CDC8-47D2-9C30-BAA19DCBE2DA
 label: Screen sizes and break points
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 153652c9fcc9745bdee087033d65eec2bc860e53
+
 ---
 
 #  Tamanhos de tela e pontos de interrupção para um design responsivo
@@ -94,6 +98,7 @@ Com o [**Continuum para Telefones**](http://go.microsoft.com/fwlink/p/?LinkID=69
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Coloque recursos de cadeia de caracteres da interface do usuário em arquivos de recurso. Você poderá então referenciar essas cadeias de caracteres no código ou na marcação.
-title: Colocar cadeias de caracteres da interface do usuário em recursos
+Description: "Coloque recursos de cadeia de caracteres da interface do usuário em arquivos de recurso. Você poderá então referenciar essas cadeias de caracteres no código ou na marcação."
+title: "Colocar cadeias de caracteres da interface do usuário em recursos"
 ms.assetid: E420B9BB-C0F6-4EC0-BA3A-BA2875B69722
 label: Put UI strings into resources
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: b44d9235e34b8d4c75f663029d1dde3f87bd0eb7
+
 ---
 
 # Colocar cadeias de caracteres da interface do usuário em recursos
@@ -244,6 +248,7 @@ Teste o aplicativo nos outros idiomas.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

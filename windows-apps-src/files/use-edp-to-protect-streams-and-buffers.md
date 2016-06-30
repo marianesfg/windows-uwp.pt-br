@@ -1,10 +1,14 @@
 ---
 author: TylerMSFT
-Description: 'Este tópico mostra exemplos das tarefas de codificação necessárias para obter alguns dos cenários mais comuns de EDP (proteção de dados empresariais) relacionados a fluxos e buffers.'
-MS-HAID: 'dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Este tópico mostra exemplos das tarefas de codificação necessárias para obter alguns dos cenários mais comuns de EDP (proteção de dados empresariais) relacionados a fluxos e buffers."
+MS-HAID: dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'Usar EDP (proteção de dados empresariais) para proteger fluxos e buffers'
+title: "Usar EDP (proteção de dados empresariais) para proteger fluxos e buffers"
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: fdde4f7d2ab46b6349273f7c1c9d91cf27aa341a
+
 ---
 
 # Usar EDP (proteção de dados empresariais) para proteger fluxos e buffers
@@ -308,6 +312,7 @@ private async void EnableUIPolicyFromProtectedBuffer(IBuffer buffer)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

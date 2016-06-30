@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional.
-title: Notificações do sistema interativas e adaptáveis
+Description: "As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional."
+title: "Notificações do sistema interativas e adaptáveis"
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
+
 ---
 
 # Notificações do sistema interativas e adaptáveis
@@ -642,6 +646,7 @@ Para construir ações individuais de adiamento e descarte, faça o seguinte:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

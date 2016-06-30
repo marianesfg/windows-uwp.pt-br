@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Analise esta lista para ajudar a evitar problemas que, frequentemente, impedem aplicativos de serem certificados ou que podem ser identificados durante uma verificação pontual após o aplicativo ser publicado.
-title: Evitar erros comuns de certificação
+Description: "Analise esta lista para ajudar a evitar problemas que, frequentemente, impedem aplicativos de serem certificados ou que podem ser identificados durante uma verificação pontual após o aplicativo ser publicado."
+title: "Evitar erros comuns de certificação"
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 6af2842eeb5eeebfc9ffc5a7a3ec98fdcebddb74
+
 ---
 
 # Evitar erros comuns de certificação
@@ -40,6 +44,7 @@ Analise esta lista para ajudar a evitar problemas que, frequentemente, impedem a
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

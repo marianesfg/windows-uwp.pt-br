@@ -1,14 +1,17 @@
 ---
 author: jnHs
-Description: Quando você terminar de criar o envio do seu aplicativo, clique em Enviar à Loja. Ele entrará na etapa de certificação.
-title: O processo de certificação de aplicativos
+Description: "Quando você terminar de criar o envio do seu aplicativo, clique em Enviar à Loja. Ele entrará na etapa de certificação."
+title: "O processo de certificação de aplicativos"
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
+ms.sourcegitcommit: 4ea19e85d1e151dd1e03d5acf085c186613be35f
+ms.openlocfilehash: 579d1ef306123f765e19fc9ab3b02c064b690aee
+
 ---
 
 # O processo de certificação de aplicativos
 
 
-Quando você terminar de criar o envio do seu aplicativo, clique em **Enviar à Loja**. Ele entrará na etapa de certificação. Esse processo geralmente é concluído dentro de algumas horas, mas em alguns casos pode demorar mais. Vamos observar o que acontece durante a etapa de certificação.
+Quando você terminar de criar o envio do seu aplicativo, clique em **Enviar à Loja**. Ele entrará na etapa de certificação. Esse processo geralmente é concluído dentro de algumas horas, mas em alguns casos pode demorar até um dia útil. Depois que seu envio é aprovado na certificação, pode levar até 16 horas para que os clientes vejam os detalhes do aplicativo (ou suas atualizações para um aplicativo publicado anteriormente) na loja. Você verá uma notificação quando seu envio for publicado e estiver disponível para os clientes, e o status do aplicativo no painel será **Na Loja**.
 
 ## Pré-processamento
 
@@ -32,11 +35,11 @@ Quando seu aplicativo for aprovado na certificação, ele estará pronto para se
 
 Os pacotes do aplicativo são assinados digitalmente para ficarem protegidos contra falsificação após serem lançados. Após o início dessa fase, você não pode mais cancelar o envio nem alterar a data de lançamento do aplicativo.
 
-Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes** na coluna Status de envio do seu aplicativo o avisará quando seus novos pacotes e detalhes de listagem da Loja forem disponibilizados para clientes em cada uma das versões de seu sistema operacional com suporte. Seu aplicativo permanecerá na fase de publicação até os novos pacotes e detalhes estarem disponíveis para todos os clientes em potencial do seu aplicativo. Quando isso acontece, o status é alterado de **Publicação** para **Na Loja**. 
+Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes** na coluna Status de envio do seu aplicativo o avisará quando seus novos pacotes e detalhes de listagem da Loja forem disponibilizados para clientes em cada uma das versões de seu sistema operacional com suporte. Seu aplicativo permanecerá na fase de publicação até os novos pacotes e detalhes estarem disponíveis para todos os clientes em potencial do seu aplicativo, o que pode levar até 16 horas. 
 
 ## Na Loja 
 
-Depois de passar pelas etapas acima com êxito, seu envio estarão disponível na Windows Store para download (a menos que você tenha escolhido outra opção de [distribuição e a visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility)).
+Depois de passar pelas etapas acima com êxito, o status do envio será alterado de **Publicação** para **Na Loja**. Seu envio estarão disponível na Windows Store para download (a menos que você tenha escolhido outra opção de [distribuição e a visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility)). 
 
 **Observação**  Também fazemos verificações específicas nos aplicativos após eles serem publicados, para que possamos identificar problemas potenciais e garantir que seu aplicativo esteja em conformidade com todas as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944). Se encontrarmos quaisquer problemas, você será notificado sobre o erro e como corrigi-lo, se aplicável, ou se ele foi removido da loja.
 
@@ -51,6 +54,7 @@ Depois de passar pelas etapas acima com êxito, seu envio estarão disponível n
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

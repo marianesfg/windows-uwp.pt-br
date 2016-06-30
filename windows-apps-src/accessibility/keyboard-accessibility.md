@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: Se seu aplicativo não oferecer um bom acesso ao teclado, usuários cegos ou com problemas de mobilidade terão dificuldade para usá-lo ou não poderão usá-lo.
+Description: "Se seu aplicativo não oferecer um bom acesso ao teclado, usuários cegos ou com problemas de mobilidade terão dificuldade para usá-lo ou não poderão usá-lo."
 ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: Acessibilidade do teclado
 label: Keyboard accessibility
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: c5b5ca247e3999850d7bf9b81347c201204db7e8
+
 ---
 
 # Acessibilidade do teclado  
@@ -43,7 +46,7 @@ XAML
 </Grid>
 ```
 
-Você pode desejar excluir um controle da ordem de tabulação. Você normalmente faz isso apenas tornando o controle não interativo, por exemplo, definindo sua propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209419) como **false**. Um controle desabilitado é automaticamente excluído da ordem de tabulação. Às vezes, você pode precisar excluir um controle da ordem de tabulação, mesmo que ele não esteja desabilitado. Nesse caso, você pode definir a propriedade [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) como **false**
+Você pode desejar excluir um controle da ordem de tabulação. Você normalmente faz isso apenas tornando o controle não interativo, por exemplo, definindo sua propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209419) como **false**. Um controle desabilitado é automaticamente excluído da ordem de tabulação. Às vezes, você pode precisar excluir um controle da ordem de tabulação, mesmo que ele não esteja desabilitado. Nesse caso, você pode definir a propriedade [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) como **false**.
 
 Todos os elementos que podem ter o foco estão geralmente na ordem de tabulação por padrão. A exceção é que determinados tipos de exibição de texto, como [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), podem ter foco para serem acessados pela área de transferência para seleção de texto; no entanto, eles não estão na ordem de tabulação porque elementos de texto estáticos não costumam estar na ordem de tabulação. Normalmente, eles não são interativos (não podem ser invocados nem requerem entrada de texto, mas dão suporte ao [Padrão de controle de texto](https://msdn.microsoft.com/library/windows/desktop/Ee671194) que aceita a localização e o ajuste de pontos de seleção no texto). O texto não deve ter a conotação de que a definição de um foco para ele ativará alguma ação que seja possível. Os elementos de texto ainda serão detectados por tecnologias adaptativas, e lerão em voz alta em leitores de tela, mas isso depende de técnicas diferentes da busca desses elementos na ordem de tabulação prática.
 
@@ -57,7 +60,7 @@ Independentemente de você ajustar os valores de [**TabIndex**](https://msdn.mic
 <span id="keyboard_navigation_within_a_ui_element"/>
 <span id="KEYBOARD_NAVIGATION_WITHIN_A_UI_ELEMENT"/>
 ## Navegação de teclado entre elementos de interface do usuário  
-Para os elementos compostos, é importante garantir uma navegação interior adequada entre os elementos contidos. Um elemento composto pode gerenciar seu filho ativo atual para reduzir a sobrecarga de ter todas os elementos filhos com capacidade de foco. Esse elemento composto é incluído na ordem de guias e trata os eventos de navegação de teclado sozinho. Muitos dos controles compostos já têm alguma lógica de navegação interna incorporada à manipulação de eventos do controle. Por exemplo, a passagem por seta-chave de itens é habilitada por padrão nos controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242704view), [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) e [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678).
+Para os elementos compostos, é importante garantir uma navegação interior adequada entre os elementos contidos. Um elemento composto pode gerenciar seu filho ativo atual para reduzir a sobrecarga de ter todas os elementos filhos com capacidade de foco. Esse elemento composto é incluído na ordem de guias e trata os eventos de navegação de teclado sozinho. Muitos dos controles compostos já têm alguma lógica de navegação interna incorporada à manipulação de eventos do controle. Por exemplo, a passagem por seta-chave de itens é habilitada por padrão nos controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview), [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) e [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678).
 
 <span id="keyboard_activation"/>
 <span id="KEYBOARD_ACTIVATION"/>
@@ -144,7 +147,7 @@ Para saber mais sobre as diretrizes de implementação de teclas de atalho, cons
 ### Implementando um manipulador de eventos de chave  
 Os eventos de entrada, como eventos de chave, usam um conceito de evento denominado *eventos roteados*. Um evento roteado pode emergir por meio de elementos filho de um controle composto, de tal forma que um pai de controle comum possa manipular eventos para vários elementos filhos. Esse modelo de evento é conveniente para definir ações de teclas de atalho para um controle que contém várias partes compostas que não podem ter foco ou fazer parte da ordem de tabulação.
 
-Para obter um código de exemplo que mostra como escrever um manipulador de eventos de tecla que inclui a verificação de modificadores como a tecla Ctrl, consulte [Interações por teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607)
+Para obter um código de exemplo que mostra como escrever um manipulador de eventos de tecla que inclui a verificação de modificadores como a tecla Ctrl, consulte [Interações por teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607).
 
 <span id="Keyboard_navigation_for_custom_controls"/>
 <span id="keyboard_navigation_for_custom_controls"/>
@@ -152,17 +155,17 @@ Para obter um código de exemplo que mostra como escrever um manipulador de even
 ## Navegação de teclado para controles personalizados  
 Recomendamos o uso de teclas de direção como atalhos de teclado para navegar entre os elementos filho, nos casos onde os elementos filho têm uma relação espacial entre si. Se os nós de exibição de árvore tiverem subelementos separados para lidar com expansão e recolhimento e ativação de nós, use as teclas de seta para esquerda e direita para obter a funcionalidade de expansão e recolhimento. Se você tem um controle orientado que oferece suporte à passagem direcional dentro do conteúdo de controle, use as teclas de direção adequadas.
 
-Geralmente, você implementa a manipulação de chave personalizada para controles personalizados incluindo uma substituição dos métodos [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeydown) e [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeyup) como parte da lógica da classe.
+Geralmente, você implementa a manipulação de chave personalizada para controles personalizados incluindo uma substituição dos métodos [**OnKeyDown**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967982.aspx) e [**OnKeyUp**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967983.aspx) como parte da lógica da classe.
 
 <span id="An_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="an_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="AN_EXAMPLE_OF_A_VISUAL_STATE_FOR_A_FOCUS_INDICATOR"/>
 ## Um exemplo do estado visual de um indicador de foco  
-Mencionamos anteriormente que qualquer controle personalizado que habilita o usuário a focá-lo deve ter um indicador de foco visual. Normalmente esse indicador de foco é tão simples quanto desenhar uma forma de retângulo imediatamente ao redor do retângulo delimitador normal do controle. O [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) de foco visual é um elemento de par no restante da composição do controle em um modelo de controle, mas é definido inicialmente com um [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) valor de **Collapsed** porque o controle não tem foco ainda. Depois, quando o controle obtém o foco, é invocado um estado visual que define especificamente a **Visibility** do foco visual como **Visible**. Depois que o foco é movido para outro lugar, outro estado visual é chamado, e a **Visibility** se torna **Collapsed**
+Mencionamos anteriormente que qualquer controle personalizado que habilita o usuário a focá-lo deve ter um indicador de foco visual. Normalmente esse indicador de foco é tão simples quanto desenhar uma forma de retângulo imediatamente ao redor do retângulo delimitador normal do controle. O [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) de foco visual é um elemento de par no restante da composição do controle em um modelo de controle, mas é definido inicialmente com um [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) valor de **Collapsed** porque o controle não tem foco ainda. Depois, quando o controle obtém o foco, é invocado um estado visual que define especificamente a **Visibility** do foco visual como **Visible**. Depois que o foco é movido para outro lugar, outro estado visual é chamado, e a **Visibility** se torna **Collapsed**.
 
 Todos os controles XAML padrão exibem um indicador de foco visual adequado quando estão em foco (se puderem ser focalizados). Há também aparências potencialmente diferentes dependendo do tema escolhido do usuário (principalmente se o usuário estiver usando um modo de alto contraste.) Se estiver usando os controles XAML em sua interface do usuário e não substituir os modelos de controle, você não precisa fazer nada mais para obter os indicadores de foco visual nos controles que se comportam e exibem corretamente. Mas se você pretende criar um novo modelo para um controle ou se tiver curiosidade para saber como os controles XAML fornecem os indicadores de foco visual, o restante desta seção explica como isso é feito no XAML e na lógica de controle.
 
-Aqui estão alguns exemplos de XAML provenientes do modelo XAML padrão para um [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)
+Aqui estão alguns exemplos de XAML provenientes do modelo XAML padrão para um [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265).
 
 XAML
 ```xml
@@ -237,6 +240,7 @@ Os atalhos do teclado não são normalmente relevantes para os aplicativos no Wi
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

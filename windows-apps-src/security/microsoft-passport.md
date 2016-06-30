@@ -1,8 +1,12 @@
 ---
 title: Microsoft Passport e Windows Hello
-description: Este artigo descreve a nova tecnologia Microsoft Passport que faz parte do sistema operacional Windows 10 e aborda como os desenvolvedores podem implementar essa tecnologia para proteger os aplicativos da Plataforma Universal do Windows (UWP) e os serviços back-end. Ele destaca os recursos específicos dessas tecnologias que ajudam a mitigar os riscos decorrentes das credenciais convencionais e orienta sobre como projetar e implantar essas tecnologias como parte de sua distribuição do Windows 10.
+description: "Este artigo descreve a nova tecnologia Microsoft Passport que faz parte do sistema operacional Windows 10 e aborda como os desenvolvedores podem implementar essa tecnologia para proteger os aplicativos da Plataforma Universal do Windows (UWP) e os serviços back-end. Ele destaca os recursos específicos dessas tecnologias que ajudam a mitigar os riscos decorrentes das credenciais convencionais e orienta sobre como projetar e implantar essas tecnologias como parte de sua distribuição do Windows 10."
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 781866bbbef755815422d1aa5bf71010bb08630d
+
 ---
 
 # Microsoft Passport e Windows Hello
@@ -449,6 +453,7 @@ Missão cumprida! Você acabou de tornar a Internet um lugar seguro!
 * [Aplicativo de logon do Microsoft Passport](microsoft-passport-login.md)
 * [Serviço de logon do Microsoft Passport](microsoft-passport-login-auth-service.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

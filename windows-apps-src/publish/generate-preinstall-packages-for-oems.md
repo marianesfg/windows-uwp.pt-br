@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Se sua conta de desenvolvedor tiver recebido as permissões adequadas, você poderá gerar e baixar pacotes de pré-instalação que um OEM pode usar para incluir seu aplicativo na imagem dele.
-title: Gerar pacotes de pré-instalação para OEMs
+Description: "Se sua conta de desenvolvedor tiver recebido as permissões adequadas, você poderá gerar e baixar pacotes de pré-instalação que um OEM pode usar para incluir seu aplicativo na imagem dele."
+title: "Gerar pacotes de pré-instalação para OEMs"
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dba1c1f754b4200bd00395e0b71d18bee30e3a2d
+
 ---
 
 # Gerar pacotes de pré-instalação para OEMs
@@ -46,6 +50,7 @@ Se você ainda tiver dúvidas sobre a geração de pacotes de pré-instalação,
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

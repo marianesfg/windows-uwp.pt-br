@@ -1,15 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
-description: Leia sobre soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos JavaScript/HTML.
-title: Guia de solução de problemas em HTML e JavaScript
+description: "Leia sobre soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos JavaScript/HTML."
+title: "Guia de solução de problemas em HTML e JavaScript"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: af4ea6f3360ea85d1c70ec9b757db65ec23c88af
+
 
 ---
 
 # Guia de solução de problemas em HTML e JavaScript
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico contém soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos JavaScript/HTML.
 
@@ -141,7 +145,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 11. Certifique-se de que o **AdControl** não esteja oculto no visor. O **AdControl** deve estar visível para que os anúncios sejam exibidos corretamente.
 
-12. Valores dinâmicos para [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) e [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) não devem ser testados no emulador. Para garantir que o **AdControl** esteja funcionando conforme o esperado, use os IDs de teste para **ApplicationId** e **AdUnitId** encontrados em [Valores de modo de teste](test-mode-values.md).
+12. Valores dinâmicos para [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) e [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) não devem ser testados no emulador. Para garantir que o **AdControl** esteja funcionando conforme o esperado, use as IDs de teste para **ApplicationId** e **AdUnitId** encontradas em [Valores de modo de teste](test-mode-values.md).
 
 <span id="html-blackboxblinksdisappears"/>
 ### Caixa preta pisca e desaparece
@@ -277,7 +281,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 5.  Verifique o elemento pai do **AdControl**. O pai deve estar ativo e visível.
 
-6.  Valores dinâmicos para **ApplicationId** e **AdUnitId** não devem ser testados no emulador. Para garantir que o **AdControl** esteja funcionando conforme o esperado, use os IDs de teste para **ApplicationId** e **AdUnitId** encontrados em [Valores de modo de teste](test-mode-values.md).
+6.  Valores dinâmicos para **ApplicationId** e **AdUnitId** não devem ser testados no emulador. Para garantir que o **AdControl** esteja funcionando conforme o esperado, use as IDs de teste para **ApplicationId** e **AdUnitId** encontradas em [Valores de modo de teste](test-mode-values.md).
 
 <span id="js-blackboxblinksdisappears"/>
 ### Caixa preta pisca e desaparece
@@ -378,6 +382,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

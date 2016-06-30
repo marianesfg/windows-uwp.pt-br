@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Programação assíncrona (DirectX e C++)
-description: Este tópico cobre vários pontos a serem considerados ao utilizar a programação assíncrona e threading com o DirectX.
+title: "Programação assíncrona (DirectX e C++)"
+description: "Este tópico cobre vários pontos a serem considerados ao utilizar a programação assíncrona e threading com o DirectX."
 ms.assetid: 17613cd3-1d9d-8d2f-1b8d-9f8d31faaa6b
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 67a75e9d1324e7ac50e0575bfd7bda870a87efb2
+
 ---
 
 # Programação assíncrona (DirectX e C++)
@@ -63,6 +67,7 @@ Crie um contexto adiado usando [**ID3D11Device::CreateDeferredContext**](https:/
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

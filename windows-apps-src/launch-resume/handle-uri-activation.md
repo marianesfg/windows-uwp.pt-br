@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Manipular a ativação do URI
-description: Saiba como registrar um aplicativo para ser o manipulador padrão de um nome de esquema de URI (Uniform Resource Identifier).
+author: TylerMSFT
+title: "Manipular a ativação do URI"
+description: "Saiba como registrar um aplicativo para ser o manipulador padrão de um nome de esquema de URI (Uniform Resource Identifier)."
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
+ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
+ms.openlocfilehash: ac65b46ea06e64b3b431326db365ce23505c1096
+
 ---
 
 # Manipular a ativação do URI
@@ -32,7 +35,7 @@ O aplicativo recebe os eventos de ativação somente para os nomes de esquema de
 1.  No **Gerenciador de Soluções**, clique duas vezes em package.appxmanifest para abrir o designer de manifesto. Selecione a guia **Declarações** no menu suspenso **Declarações disponíveis**, selecione **Protocolo** e clique em **Adicionar**.
 
     Esta é uma breve descrição de cada um dos campos que você pode preencher no designer de manifesto do protocolo (consulte [**Manifesto de pacote AppX**](https://msdn.microsoft.com/library/windows/apps/dn934791) para obter detalhes):
-    
+
 | Campo | Descrição |
 |-------|-------------|
 | **Logotipo** | Especifique o logotipo usado para identificar o nome do esquema de URI em [Definir programas padrão](https://msdn.microsoft.com/library/windows/desktop/cc144154) no **Painel de Controle**. Se nenhum logotipo for especificado, o logotipo pequeno do aplicativo será usado. |
@@ -41,9 +44,6 @@ O aplicativo recebe os eventos de ativação somente para os nomes de esquema de
 |  | **Observação**  O nome precisa estar completamente em letras minúsculas. |
 |  | **Tipos de arquivos reservados e proibidos** Consulte [Nomes e tipos de arquivos de esquema de URI reservados](reserved-uri-scheme-names.md) para obter uma lista em ordem alfabética de esquemas de Uri que você não pode registrar para seus aplicativos UWP porque são reservados ou proibidos. |
 | **Executável** | Especifica a executável de inicialização padrão para o protocolo. Se não for especificado, o executável do aplicativo será usado. Se especificado, a cadeia de caracteres deverá ter entre 1 e 256 caracteres, terminar com ".exe" e não conter os seguintes caracteres: &gt;, &lt;, :, ", &#124;, ? ou \*. Se especificado, o **Ponto de entrada** também será usado. Se o **Ponto de entrada** não for especificado, o ponto de entrada definido para o aplicativo será usado. |
-       
-| Termo | Descrição |
-|------|-------------|
 | **Ponto de entrada** | Especifica a tarefa que manipula a extensão de protocolo. Normalmente é o nome totalmente qualificado do namespace de um tipo do Windows Runtime. Se não for especificado, o ponto de entrada do aplicativo será usado. |
 | **Página inicial** | A página da Web que manipula o ponto de extensibilidade. |
 | **Grupo de recursos** | Uma marca que você pode usar para ativações de extensão de grupo em conjunto para fins de gerenciamento de recursos. |
@@ -81,43 +81,43 @@ Recomendamos que você inclua no seu projeto os ícones apropriados para que seu
 O manipulador de eventos [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) recebe todos os eventos de ativação. A propriedade **Kind** indica o tipo de evento de ativação. Este exemplo é configurado para manipular os eventos de ativação [**Protocolo**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.activation.activationkind.aspx#Protocol).
 
 > [!div class="tabbedCodeSnippets"]
-```cs
-public partial class App
-{
-   protected override void OnActivated(IActivatedEventArgs args)
-   {
-      if (args.Kind == ActivationKind.Protocol)
-      {
-         ProtocolActivatedEventArgs eventArgs = args as ProtocolActivatedEventArgs;
-         // TODO: Handle URI activation
-         // The received URI is eventArgs.Uri.AbsoluteUri
-      }
-   }
-}
-```
-```vb
-Protected Overrides Sub OnActivated(ByVal args As Windows.ApplicationModel.Activation.IActivatedEventArgs)
-   If args.Kind = ActivationKind.Protocol Then
-      ProtocolActivatedEventArgs eventArgs = args As ProtocolActivatedEventArgs
-      
-      ' TODO: Handle URI activation
-      ' The received URI is eventArgs.Uri.AbsoluteUri
-   End If
-End Sub
-```
-```cpp
-void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs^ args)
-{
-   if (args->Kind == Windows::ApplicationModel::Activation::ActivationKind::Protocol)
-   {
-      Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^ eventArgs = 
-          dynamic_cast<Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^>(args);
-      
-      // TODO: Handle URI activation  
-      // The received URI is eventArgs->Uri->RawUri
-   } 
-}
-```
+> ```cs
+> public partial class App
+> {
+>    protected override void OnActivated(IActivatedEventArgs args)
+>   {
+>       if (args.Kind == ActivationKind.Protocol)
+>       {
+>          ProtocolActivatedEventArgs eventArgs = args as ProtocolActivatedEventArgs;
+>          // TODO: Handle URI activation
+>          // The received URI is eventArgs.Uri.AbsoluteUri
+>       }
+>    }
+> }
+> ```
+> ```vb
+> Protected Overrides Sub OnActivated(ByVal args As Windows.ApplicationModel.Activation.IActivatedEventArgs)
+>    If args.Kind = ActivationKind.Protocol Then
+>       ProtocolActivatedEventArgs eventArgs = args As ProtocolActivatedEventArgs
+>       
+>       ' TODO: Handle URI activation
+>       ' The received URI is eventArgs.Uri.AbsoluteUri
+>  End If
+> End Sub
+> ```
+> ```cpp
+> void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs^ args)
+> {
+>    if (args->Kind == Windows::ApplicationModel::Activation::ActivationKind::Protocol)
+>    {
+>       Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^ eventArgs =
+>           dynamic_cast<Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^>(args);
+>       
+>       // TODO: Handle URI activation  
+>       // The received URI is eventArgs->Uri->RawUri
+>    }
+> }
+> ```
 
 > **Observação**  Quando iniciado por Contrato de Protocolo, verifique se o botão Voltar leva o usuário de volta para a tela que iniciou o aplicativo e não para o conteúdo anterior do aplicativo.
 
@@ -175,8 +175,6 @@ Se decidir que deseja que seus aplicativos usem um único [**Quadro**](https://m
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

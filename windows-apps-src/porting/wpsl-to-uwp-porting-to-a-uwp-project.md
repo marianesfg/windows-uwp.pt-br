@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Você começa o processo de portabilidade ao criar um novo projeto do Windows 10 no Visual Studio e ao copiar seus arquivos nele.
+description: "Você começa o processo de portabilidade ao criar um novo projeto do Windows 10 no Visual Studio e ao copiar seus arquivos nele."
 title: Portando um projeto Windows Phone Silverlight para um projeto UWP
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 74cbd9789636383e6d04798435780dcda6b897d0
+
 ---
 
 # Portando um projeto Windows Phone Silverlight para um projeto UWP
@@ -144,6 +148,7 @@ O próximo tópico é [Solução de problemas](wpsl-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

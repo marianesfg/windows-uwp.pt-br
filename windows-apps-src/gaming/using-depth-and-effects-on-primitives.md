@@ -1,14 +1,18 @@
 ---
 author: mtoepke
 title: Usar efeitos e profundidade em primitivas
-description: Aqui mostramos a você como usar profundidade, perspectiva, cor e outros efeitos em primitivas.
+description: "Aqui mostramos a você como usar profundidade, perspectiva, cor e outros efeitos em primitivas."
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 47547a226a69b2631313972ed67b39b1f29de402
+
 ---
 
 # Usar efeitos e profundidade em primitivas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aqui mostramos a você como usar profundidade, perspectiva, cor e outros efeitos em primitivas.
 
@@ -19,7 +23,7 @@ Aqui mostramos a você como usar profundidade, perspectiva, cor e outros efeitos
 
 Partimos do princípio de que você conhece C++. Você também precisa ter experiência básica com conceitos de programação de elementos gráficos.
 
-Também supomos que você leu [Guia de início rápido: configurando recursos DirectX e exibindo uma imagem](setting-up-directx-resources.md) e [Criando sombreadores e desenhando primitivas](creating-shaders-and-drawing-primitives.md)
+Também supomos que você leu [Guia de início rápido: configurando recursos DirectX e exibindo uma imagem](setting-up-directx-resources.md) e [Criando sombreadores e desenhando primitivas](creating-shaders-and-drawing-primitives.md).
 
 **Tempo para concluir:** 20 minutos.
 
@@ -28,7 +32,7 @@ Instruções
 
 ### 1. Definindo variáveis de cubo
 
-Primeiro, precisamos definir as estruturas **SimpleCubeVertex** e **ConstantBuffer** para o cubo. Essas estruturas especificam a posição de vértice e as cores do cubo e como o cubo será exibido. Declaramos [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) e [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) com [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) e declaramos uma instância do **ConstantBuffer**
+Primeiro, precisamos definir as estruturas **SimpleCubeVertex** e **ConstantBuffer** para o cubo. Essas estruturas especificam a posição de vértice e as cores do cubo e como o cubo será exibido. Declaramos [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) e [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) com [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) e declaramos uma instância do **ConstantBuffer**.
 
 ```cpp
 struct SimpleCubeVertex
@@ -60,7 +64,7 @@ private:
 
 ### 2. Criando um modo de exibição de estêncil de profundidade
 
-Além de criar o modo de exibição de destino de renderização, também criamos um modo de exibição de estêncil de profundidade. O modo de exibição de estêncil de profundidade permite que o Direct3D renderiza de forma eficiente os objetos mais próximos à câmera na frente dos objetos mais longe da câmera. Antes de podemos criar um modo de exibição para um buffer de estêncil de profundidade, devemos criar o buffer de estêncil de profundidade. Populamos um [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) para descrever o buffer de estêncil de profundidade e chamamos [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521) para criar o buffer de estêncil de profundidade. Para criar o modo de exibição de estêncil de profundidade, preenchemos uma [**D3D11\_DEPTH\_STENCIL\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476112) para descrever o modo de exibição de estêncil de profundidade e passar a descrição do modo de exibição de estêncil de profundidade e a textura para o [**ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507)
+Além de criar o modo de exibição de destino de renderização, também criamos um modo de exibição de estêncil de profundidade. O modo de exibição de estêncil de profundidade permite que o Direct3D renderiza de forma eficiente os objetos mais próximos à câmera na frente dos objetos mais longe da câmera. Antes de podemos criar um modo de exibição para um buffer de estêncil de profundidade, devemos criar o buffer de estêncil de profundidade. Populamos um [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) para descrever o buffer de estêncil de profundidade e chamamos [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521) para criar o buffer de estêncil de profundidade. Para criar o modo de exibição de estêncil de profundidade, populamos uma [**D3D11\_DEPTH\_STENCIL\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476112) para descrever o modo de exibição de estêncil de profundidade e passar a descrição do modo de exibição de estêncil de profundidade e a textura para o [**ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507).
 
 ```cpp
         // Once the render target view is created, create a depth stencil view.  This
@@ -453,6 +457,7 @@ Em seguida, aplicamos texturas a primitivas.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

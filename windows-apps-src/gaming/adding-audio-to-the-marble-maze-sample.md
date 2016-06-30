@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Adicionando áudio ao exemplo do Marble Maze
-description: Este documento descreve as principais práticas a serem consideradas quando se trabalha com áudio e mostra como o Marble Maze as aplica.
+title: "Adicionando áudio ao exemplo do Marble Maze"
+description: "Este documento descreve as principais práticas a serem consideradas quando se trabalha com áudio e mostra como o Marble Maze as aplica."
 ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
+translationtype: Human Translation
+ms.sourcegitcommit: c663692e31a62fdf40df9d706070d0d2ce0e1cdd
+ms.openlocfilehash: 0b2a0cb240431a49ef2bdb82a188f3dcb0294fc5
+
 ---
 
 # Adicionando áudio ao exemplo do Marble Maze
@@ -780,6 +784,7 @@ O Marble Maze também usa o sinalizador **m\_engineExperiencedCriticalError** pa
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

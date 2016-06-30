@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: A página Classificações etárias do Processo de envio de aplicativo permite que você forneça informações sobre seu aplicativo, para que ele possa receber as classificações etárias adequadas da International Age Ratings Coalition (IARC).
-title: Classificações etárias
+Description: "A página Classificações etárias do Processo de envio de aplicativo permite que você forneça informações sobre seu aplicativo, para que ele possa receber as classificações etárias adequadas da International Age Ratings Coalition (IARC)."
+title: "Classificações etárias"
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 559842fb6740236780756018d01036b835660309
+
 ---
 
 # Classificações etárias
@@ -45,6 +49,7 @@ Antes, os desenvolvedores especificavam a classificação etária para seu aplic
 | 18+ (Adequado a adultos)            | Os jogos com essa classificação etária podem conter violência intensa, bruta ou específica, sangue ou mutilação, o que só é adequado para um público adulto. Todo o conteúdo deve atender aos critérios das [políticas de conteúdo](https://msdn.microsoft.com/library/windows/apps/dn764944).                                                                                                                                                            |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

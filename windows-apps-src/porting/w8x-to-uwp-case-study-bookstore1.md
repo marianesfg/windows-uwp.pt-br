@@ -2,7 +2,11 @@
 author: mcleblanc
 title: Estudo de caso do Windows Runtime 8.x para UWP, Bookstore1
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
-description: Este tópico apresenta um estudo de caso de portabilidade de um aplicativo universal 8.1 muito simples para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10.
+description: "Este tópico apresenta um estudo de caso de portabilidade de um aplicativo universal 8.1 muito simples para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 43536aacb37a79b3e8507896474be67423a0b9fe
+
 ---
 
 # Estudo de caso do Windows Runtime 8.x para UWP: Bookstore1
@@ -124,6 +128,7 @@ Também observamos que a portabilidade de modelos de exibição é, em geral, um
 O próximo estudo de caso é o [Bookstore2](w8x-to-uwp-case-study-bookstore2.md), no qual analisaremos o acesso e a exibição de dados agrupados.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

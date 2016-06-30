@@ -1,8 +1,11 @@
 ---
 author: drewbatgit
 ms.assetid: 923D8156-81D3-4A1E-9D02-DB219F600FDB
-description: Este artigo descreve como criar aplicativos da Plataforma Universal do Windows (UWP) que toquem áudio em segundo plano.
-title: Áudio em segundo plano
+description: "Este artigo descreve como criar aplicativos da Plataforma Universal do Windows (UWP) que toquem áudio em segundo plano."
+title: "Áudio em segundo plano"
+ms.sourcegitcommit: 99d1ffa637fd8beca5d1e829cc7cacc18a9c21e9
+ms.openlocfilehash: 9275a194017f08692adee6de1c4d1f6deb680613
+
 ---
 
 # Áudio em segundo plano
@@ -63,6 +66,9 @@ Há ocasiões em que você deseja a comunicação entre os dois processos de um 
 Um mecanismo de comunicação simples suscita eventos nos processos em primeiro e segundo plano. Os métodos [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) e [**SendMessageToBackground**](https://msdn.microsoft.com/library/windows/apps/dn652532) invocam eventos nos processos correspondentes. Mensagens podem ser recebidas assinando os eventos [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) e [**MessageReceivedFromForeground**](https://msdn.microsoft.com/library/windows/apps/dn652531).
 
 Os dados podem ser passados como um argumento para os métodos de mensagem de envio que são, então, passados para os manipuladores de eventos de mensagem recebida. Passe dados usando a classe [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131). Essa classe é um dicionário que contém uma cadeia de caracteres como uma chave e outros tipos de valor como valores. Você pode passar tipos de valores simples, como inteiros, cadeias de caracteres e boolianos.
+
+**Observação**  
+Os aplicativos só deverão chamar [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) enquanto o aplicativo em primeiro plano estiver em execução. A tentativa de chamar esse método enquanto o aplicativo em primeiro plano não estiver em execução gerará uma exceção. Um aplicativo é responsável por comunicar o estado do aplicativo em primeiro plano ao processo em segundo plano. Isso pode ser feito usando eventos de ciclo de vida do aplicativo, valores de estado mantidos no armazenamento local e mensagens entre processos. 
 
 ## Ciclo de vida de tarefas em segundo plano
 
@@ -135,6 +141,7 @@ A tabela a seguir lista as políticas que são aplicadas em quais tipos de dispo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

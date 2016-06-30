@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 4804e371-065e-4d5a-ab1a-9c5732f52a9e
-description: Saiba mais sobre os países e regiões com suporte para anúncios intersticiais e em banner.
+description: "Saiba mais sobre os países e regiões com suporte para anúncios intersticiais e em banner."
 title: Mercados aceitos no Microsoft Advertising
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 2d17a3936a4932b0aa30c80a38bb492f3f21fb37
+
 ---
 
 # Mercados aceitos no Microsoft Advertising
@@ -310,6 +314,7 @@ Anúncios intersticiais e em banner têm suporte nos seguintes países e regiõe
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -3,6 +3,10 @@ author: Jwmsft
 ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
 label: Text box
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 873ca8f869f4303f8fc4a9a7ff08f81df29d367d
+
 ---
 # Caixa de texto
 O controle TextBox permite que um usuário digite texto em um aplicativo. Em geral, ele é usado para capturar uma única linha de texto, mas pode ser configurado para capturar várias linhas de texto. O texto é exibido na tela em um formato simples, uniforme e sem formatação.
@@ -79,8 +83,7 @@ Você pode tornar uma caixa de texto somente leitura definindo a propriedade [Is
 
 Você pode tornar um TextBox somente leitura definindo a propriedade IsReadOnly como true. Por exemplo, você pode ter um TextBox para o usuário inserir comentários que seja habilitada apenas em determinadas condições. É possível tornar o TextBox somente leitura até que as condições sejam atendidas. Se você só precisar exibir texto, considere usar TextBlock ou RichTextBlock.
 
-Uma caixa de texto somente leitura tem a mesma aparência que uma caixa de texto de leitura/gravação, portanto, pode ser confuso para o usuário. 
-Um usuário pode selecionar e copiar texto.
+Uma caixa de texto somente leitura tem a mesma aparência que uma caixa de texto de leitura/gravação, portanto, pode ser confuso para o usuário. Um usuário pode selecionar e copiar texto.
 IsEnabled
 
 
@@ -279,6 +282,7 @@ Para obter mais informações e exemplos, consulte [Usar o escopo de entrada par
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,17 +1,17 @@
 ---
-author: martinekuan
-title: Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
-description: O suporte do .NET framework para componentes do Tempo de Execução do Windows facilitar declarar componentes de eventos ocultando as diferenças entre o padrão do evento da Plataforma Universal do Windows (UWP) e o padrão de evento do .NET Framework.
+author: msatranjr
+title: "Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows"
+description: "O suporte do .NET framework para componentes do Tempo de Execução do Windows facilitar declarar componentes de eventos ocultando as diferenças entre o padrão do evento da Plataforma Universal do Windows (UWP) e o padrão de evento do .NET Framework."
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 1308989c8d1c6959560458dd4d87119b4bfa74b0
+
 ---
 
 # Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
 O suporte do .NET framework para componentes do Tempo de Execução do Windows facilitar declarar componentes de eventos ocultando as diferenças entre o padrão do evento da Plataforma Universal do Windows (UWP) e o padrão de evento do .NET Framework. No entanto, ao declarar acessadores de eventos personalizado em um componente do Tempo de Execução do Windows, você deve seguir o padrão usado na UWP.
 
@@ -32,9 +32,9 @@ O código a seguir do evento NumberChanged mostra o padrão básico de eventos U
  
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
-> private EventRegistrationTokenTable<EventHandler<NumberChangedEventArgs>> 
+> private EventRegistrationTokenTable<EventHandler<NumberChangedEventArgs>>
 >     m_NumberChangedTokenTable = null;
-> 
+>
 > public event EventHandler<NumberChangedEventArgs> NumberChanged
 > {
 >     add
@@ -50,10 +50,10 @@ O código a seguir do evento NumberChanged mostra o padrão básico de eventos U
 >             .RemoveEventHandler(value);
 >     }
 > }
-> 
+>
 > internal void OnNumberChanged(int newValue)
 > {
->     EventHandler<NumberChangedEventArgs> temp = 
+>     EventHandler<NumberChangedEventArgs> temp =
 >         EventRegistrationTokenTable<EventHandler<NumberChangedEventArgs>>
 >         .GetOrCreateEventRegistrationTokenTable(ref m_NumberChangedTokenTable)
 >         .InvocationList;
@@ -66,21 +66,21 @@ O código a seguir do evento NumberChanged mostra o padrão básico de eventos U
 > ```vb
 > Private m_NumberChangedTokenTable As  _
 >     EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs))
-> 
+>
 > Public Custom Event NumberChanged As EventHandler(Of NumberChangedEventArgs)
-> 
+>
 >     AddHandler(ByVal handler As EventHandler(Of NumberChangedEventArgs))
 >         Return EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs)).
 >             GetOrCreateEventRegistrationTokenTable(m_NumberChangedTokenTable).
 >             AddEventHandler(handler)
 >     End AddHandler
-> 
+>
 >     RemoveHandler(ByVal token As EventRegistrationToken)
 >         EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs)).
 >             GetOrCreateEventRegistrationTokenTable(m_NumberChangedTokenTable).
 >             RemoveEventHandler(token)
 >     End RemoveHandler
-> 
+>
 >     RaiseEvent(ByVal sender As Class1, ByVal args As NumberChangedEventArgs)
 >         Dim temp As EventHandler(Of NumberChangedEventArgs) = _
 >             EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs)).
@@ -126,6 +126,6 @@ Usuários do Visual Basic: no .NET Framework, um evento é apenas um representan
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

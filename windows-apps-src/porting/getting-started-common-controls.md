@@ -1,13 +1,17 @@
 ---
 author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
-description: Introdução aos controles comuns
-title: Introdução aos controles comuns
+description: "Introdução aos controles comuns"
+title: "Introdução aos controles comuns"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9d67cf02f80b5aa9d49fe3a0c5eb47a89419991a
+
 ---
 
 # Introdução: controles comuns
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Lista de controles comuns
 
@@ -57,6 +61,7 @@ Para ainda mais controles, consulte [Lista de controles](https://msdn.microsoft.
 * [build 2014: usando o Visual Studio para compilar aplicativos convergidos para XAML](http://go.microsoft.com/fwlink/p/?LinkID=397876)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

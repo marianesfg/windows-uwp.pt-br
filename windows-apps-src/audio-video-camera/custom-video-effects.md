@@ -1,10 +1,14 @@
 ---
 author: drewbatgit
-Description: 'Este artigo descreve como criar um componente do Tempo de Execução do Windows que implemente a interface IBasicVideoEffect para permitir que você crie efeitos personalizados para fluxos de vídeo.'
-MS-HAID: 'dev\_audio\_vid\_camera.custom\_video\_effects'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Este artigo descreve como criar um componente do Tempo de Execução do Windows que implemente a interface IBasicVideoEffect para permitir que você crie efeitos personalizados para fluxos de vídeo."
+MS-HAID: dev\_audio\_vid\_camera.custom\_video\_effects
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: Efeitos de vídeo personalizados
+title: "Efeitos de vídeo personalizados"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
+
 ---
 
 # Efeitos de vídeo personalizados
@@ -13,7 +17,7 @@ title: Efeitos de vídeo personalizados
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
+\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
 Este artigo descreve como criar um Compontente do Windows Runtime que implemente a interface [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) para permitir que você crie efeitos personalizados para fluxos de vídeo. Efeitos personalizados podem ser usados com várias APIs do Windows Runtime diferentes, incluindo [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124), que fornece acesso à câmera do dispositivo, e [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646), que permite que você crie composições complexas de clipes de mídia.
 
@@ -246,6 +250,7 @@ Para obter orientações gerais sobre como criar composições de mídia a parti
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

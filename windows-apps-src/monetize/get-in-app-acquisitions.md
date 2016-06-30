@@ -1,14 +1,17 @@
 ---
 author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
-description: Use este método na API de análise da Windows Store para obter dados agregados de aquisição de um produto no aplicativo (IAP) durante um determinado intervalo de datas e outros filtros opcionais.
-title: Obter aquisições IAP
+description: "Use este método na API de análise da Windows Store para obter dados agregados de aquisição de um produto no aplicativo (IAP) durante um determinado intervalo de datas e outros filtros opcionais."
+title: "Obter aquisições IAP"
+ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
+ms.openlocfilehash: 21e634b1d5ab6c3ba7762c1b83c94d076d094af5
+
 ---
 
 # Obter aquisições IAP
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use este método na API de análise da Windows Store para obter dados agregados de aquisição de um produto no aplicativo (IAP) durante um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
@@ -65,7 +68,7 @@ O parâmetro *applicationId* ou *inAppProductId* é obrigatório. Para recuperar
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">string</td>
-<td align="left">A ID de produto do aplicativo para o qual você deseja recuperar dados de aquisição de IAP. A ID do produto é inserida no link de listagem do aplicativo que está disponível na [App identity page](https://msdn.microsoft.com/library/windows/apps/mt148561) do painel do Centro de Desenvolvimento. Um exemplo de ID de produto é 9WZDNCRFJ3Q8.</td>
+<td align="left">A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição de IAP. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.</td>
 <td align="left">Sim</td>
 </tr>
 <tr class="even">
@@ -243,7 +246,7 @@ Para obter uma lista dos campos com suporte, consulte a tabela a seguir. Valores
 
 ### Exemplo de solicitação
 
-Os exemplos a seguir demonstram várias solicitações de obtenção de dados de aquisição de IAP. Substitua os valores de *inAppProductId* ou *applicationId* com as IDs de produto apropriadas para seu aplicativo ou IAP.
+Os exemplos a seguir demonstram várias solicitações de obtenção de dados de aquisição de IAP. Substitua os valores de *inAppProductId* e *applicationId* com a ID de produto apropriada para seu IAP e a ID da Loja para seu aplicativo.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?inAppProductId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -277,7 +280,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 | date                | string  | A primeira data no intervalo de datas dos dados de aquisição. Se a solicitação especificou um único dia, esse valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, esse valor será a primeira data nesse intervalo de datas. |
 | inAppProductId      | string  | A ID de produto do IAP para o qual você está recuperando os dados de aquisição.                                                                                                                                                                 |
 | inAppProductName    | string  | O nome de exibição do IAP.                                                                                                                                                                                                             |
-| applicationId       | string  | A ID de produto do aplicativo para o qual você deseja recuperar dados de aquisição de IAP.                                                                                                                                                           |
+| applicationId       | string  | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição de IAP.                                                                                                                                                           |
 | applicationName     | string  | O nome de exibição do aplicativo.                                                                                                                                                                                                             |
 | deviceType          | string  | O tipo de dispositivo que concluiu a aquisição. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                                  |
 | orderName           | string  | O nome do pedido.                                                                                                                                                                                                                   |
@@ -333,6 +336,7 @@ O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Para receber dinheiro pela venda de aplicativos na Windows Store, você deve configurar sua conta de pagamento e preencher os formulários de imposto necessários.
-title: Configurando sua conta de pagamento e formulários fiscais
+Description: "Para receber dinheiro pela venda de aplicativos na Windows Store, você deve configurar sua conta de pagamento e preencher os formulários de imposto necessários."
+title: "Configurando sua conta de pagamento e formulários fiscais"
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
+ms.sourcegitcommit: f17132514a42c50d6bfe716f6be706748c287043
+ms.openlocfilehash: 45cb4e8b65f1aeb75c049a88c143a23350d47b64
+
 ---
 
 # Configurando sua conta de pagamento e formulários fiscais
@@ -14,7 +17,7 @@ Para receber dinheiro pela venda de aplicativos na Windows Store, você deve con
 
 Se você pretende listar apenas os aplicativos gratuitos (e não planeja oferecer compras no aplicativo ou use o Microsoft Advertising), não precisa configurar uma conta de pagamento nem preencher formulários tributários. Se você mudar de ideia mais tarde e decidir que quer vender aplicativos (ou produtos no aplicativo), poderá configurar sua conta de pagamento e preencher os formulários tributários nessa ocasião. Você não poderá enviar aplicativos pagos ou IAPs até que sua conta de pagamento e perfil fiscal tenham sido concluídos.
 
-> **Observação**  [Determinados mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) só permitem que você liste aplicativos gratuitos. Sua conta precisa estar registrada em um desses mercados para que você tenha a opção de configurar uma conta de pagamento.
+> **Observação**  Em [determinados mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets), os desenvolvedores só podem enviar aplicativos gratuitos. Sua conta precisa estar registrada em um desses mercados para que você tenha a opção de configurar uma conta de pagamento.
 
 
 Após [configurar sua conta de desenvolvedor](opening-a-developer-account.md), você deve fazer duas coisas antes de vender aplicativos (ou IAPs) na Windows Store:
@@ -155,6 +158,7 @@ Se você está fora dos Estados Unidos, talvez possa tirar proveito de benefíci
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

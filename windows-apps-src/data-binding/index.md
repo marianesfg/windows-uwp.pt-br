@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 83b4be37-6613-4d00-a48a-0451a24a30fb
-title: Vinculação de dados
-description: A vinculação de dados é uma maneira de a interface do usuário do seu aplicativo exibir dados e, opcionalmente, ficar em sincronia com esses dados.
+title: "Vinculação de dados"
+description: "A vinculação de dados é uma maneira de a interface do usuário do seu aplicativo exibir dados e, opcionalmente, ficar em sincronia com esses dados."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d1fbc7376b3505d39e757a1b65ae0f0890948078
+
 ---
 
 # Associação de dados
@@ -20,6 +24,7 @@ A vinculação de dados é uma maneira de a interface do usuário do seu aplicat
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

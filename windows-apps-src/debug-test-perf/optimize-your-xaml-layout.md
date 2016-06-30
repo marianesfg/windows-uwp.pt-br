@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 79CF3927-25DE-43DD-B41A-87E6768D5C35
 title: Otimizar seu layout XAML
-description: O layout pode ser uma parte cara de um aplicativo XAML&\#8212;, tanto no uso de CPU quanto na sobrecarga de memória. Aqui estão algumas etapas simples que você pode seguir para melhorar o desempenho de layout do seu aplicativo XAML.
+description: "O layout pode ser uma parte cara de um aplicativo XAML&\\#8212;, tanto no uso de CPU quanto na sobrecarga de memória. Aqui estão algumas etapas simples que você pode seguir para melhorar o desempenho de layout do seu aplicativo XAML."
+translationtype: Human Translation
+ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
+ms.openlocfilehash: dbec176310896164ebc99c20aefca4c5b2b29ee9
+
 ---
 # Otimizar seu layout XAML
 
@@ -185,6 +189,7 @@ Todo painel XAML é otimizado para obter bom desempenho, e todos os painéis ofe
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

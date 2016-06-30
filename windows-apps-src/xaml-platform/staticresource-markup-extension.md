@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Fornece um valor para qualquer atributo XAML analisando uma referência a um recurso já definido. Recursos são definidos em um ResourceDictionary, e o uso de StaticResource faz referência à chave desse recurso no ResourceDictionary.
-title: Extensão de marcação StaticResource
+description: "Fornece um valor para qualquer atributo XAML analisando uma referência a um recurso já definido. Recursos são definidos em um ResourceDictionary, e o uso de StaticResource faz referência à chave desse recurso no ResourceDictionary."
+title: "Extensão de marcação StaticResource"
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 3f486a8ac56e37a7401b9a87a4d560cac6b68f6f
+
 ---
 
 # Extensão de marcação {StaticResource}
@@ -76,12 +80,13 @@ Como uma chave de recurso existe como parte de qualquer uso de **{StaticResource
 ## Tópicos relacionados
 
 * [Referências de recursos de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
-* [**Dicionário de Recursos**](https://msdn.microsoft.com/library/windows/apps/br208794)
+* [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
 * [atributo x:Key](x-key-attribute.md)
 * [extensão de marcação {ThemeResource}](themeresource-markup-extension.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

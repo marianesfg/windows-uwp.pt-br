@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Converter a estrutura de renderização
-description: Veja como converter uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11.
+title: "Converter a estrutura de renderização"
+description: "Veja como converter uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11."
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5cfdce2a62f6b5761ebf820418762a307dd051bb
+
 ---
 
 # Converter a estrutura de renderização
@@ -490,6 +494,7 @@ A cadeia de renderização criada será chamada a partir de um loop do jogo impl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

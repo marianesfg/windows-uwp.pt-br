@@ -1,8 +1,12 @@
 ---
 author: jnHs
 ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
-title: Tipos de conta, localizações e taxas
-description: Oferecemos contas de desenvolvedor individuais e empresariais em muitos países e regiões.
+title: "Tipos de conta, localizações e taxas"
+description: "Oferecemos contas de desenvolvedor individuais e empresariais em muitos países e regiões."
+translationtype: Human Translation
+ms.sourcegitcommit: 93b6d952e42949917a0fff5b39f3f194f49531d5
+ms.openlocfilehash: b4707f53aa1a1bd7bd7c03c74f2d18a0f9f55b10
+
 ---
 
 # Tipos de conta, localizações e taxas
@@ -255,6 +259,7 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

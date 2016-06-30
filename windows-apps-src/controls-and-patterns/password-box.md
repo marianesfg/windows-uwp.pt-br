@@ -1,11 +1,15 @@
 ---
 author: Jwmsft
-Description: Caixa de senha é uma caixa de entrada de texto que oculta os caracteres digitados nela, para fins de privacidade.
+Description: "Caixa de senha é uma caixa de entrada de texto que oculta os caracteres digitados nela, para fins de privacidade."
 title: Diretrizes para caixas de senha
 ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
 label: Password box
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 1a2d5efbeacd5ce8a71f5261aa52f09400c75c97
+
 ---
 # Caixa de senha
 Caixa de senha é uma caixa de entrada de texto que oculta os caracteres digitados nela, para fins de privacidade. Uma caixa de senha se parece com uma caixa de texto, exceto que ela renderiza caracteres de espaço reservado no lugar do texto que foi inserido. Você pode configurar o caractere de espaço reservado.
@@ -188,6 +192,7 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

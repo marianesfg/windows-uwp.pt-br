@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Prepare o seu aplicativo para localização para outros mercados, idiomas ou regiões.
-title: Preparar um aplicativo para tradução
+Description: "Prepare o seu aplicativo para localização para outros mercados, idiomas ou regiões."
+title: "Preparar um aplicativo para tradução"
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 label: Prepare your app for localization
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: e52a5322767677859e32ccbecf4951745c49f36f
+
 ---
 
 # Preparar um aplicativo para tradução
@@ -187,6 +191,7 @@ A classificação segue o formato do **Painel de Controle Regional**.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

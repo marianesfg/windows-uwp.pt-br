@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-title: Executar geocódigo e geocódigo reverso
-description: Converta endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe MapLocationFinder no namespace Windows.Services.Maps.
+title: "Executar geocódigo e geocódigo reverso"
+description: "Converta endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe MapLocationFinder no namespace Windows.Services.Maps."
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: caf3ad6fecd6ed90c65f85477643fb42ab4787d3
+
 ---
 
 # Executar geocódigo e geocódigo reverso
@@ -19,13 +23,13 @@ Converta endereços em localizações geográficas (geocódigo) e converta local
 
 Veja como as classes de geocódigo e geocódigo reverso estão relacionadas:
 
--   A classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) possui métodos que fazem o geocódigo ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) e o geocódigo reverso ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)
--   Esses métodos retornam um [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551)
+-   A classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) possui métodos que fazem o geocódigo ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) e o geocódigo reverso ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928))
+-   Esses métodos retornam um [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
 -   [
-            **MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) contém uma coleção de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549). Acesse essa coleção por meio da propriedade [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) do **MapLocationFinderResult**
--   Cada objeto [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) contém um objeto [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533). Acesse esse objeto por meio da propriedade [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) de cada **MapLocation**
+            **MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) contém uma coleção de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549). Acesse essa coleção por meio da propriedade [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) do **MapLocationFinderResult**.
+-   Cada objeto [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) contém um objeto [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533). Acesse esse objeto por meio da propriedade [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) de cada **MapLocation**.
 
-**Importante**  Você deve especificar uma chave de autenticação de mapas antes que possa usar os serviços de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md)
+**Importante**  Você deve especificar uma chave de autenticação de mapas antes que possa usar os serviços de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).
 
  
 
@@ -36,7 +40,7 @@ Converta um endereço ou dê um nome para uma localização geográfica (geocód
 
 1.  Chame uma das sobrecargas do método [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) da classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550).
 2.  O método [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) retorna um objeto [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) que contém uma coleção de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) correspondentes.
-3.  Acesse essa coleção por meio da propriedade [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) do [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551)
+3.  Acesse essa coleção por meio da propriedade [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) do [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
 
 ```csharp
 using Windows.Services.Maps;
@@ -72,7 +76,7 @@ private async void geocodeButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Esse código exibe os seguintes resultados na caixa de texto `tbOutputText`.
+Esse código exibe os seguintes resultados na caixa de texto `tbOutputText` .
 
 ``` syntax
 result = (47.6406099647284,-122.129339994863)
@@ -85,8 +89,8 @@ Converta uma localização geográfica em um endereço (geocódigo reverso) real
 
 1.  Chame o método [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) da classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550).
 2.  O método [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) retorna um objeto [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) que contém uma coleção de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) correspondentes.
-3.  Acesse essa coleção por meio da propriedade [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) do [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551)
-4.  Acesse o objeto [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) por meio da propriedade [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) de cada [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549)
+3.  Acesse essa coleção por meio da propriedade [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) do [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
+4.  Acesse o objeto [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) por meio da propriedade [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) de cada [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549).
 
 ```csharp
 using Windows.Services.Maps;
@@ -134,6 +138,7 @@ town = Redmond
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

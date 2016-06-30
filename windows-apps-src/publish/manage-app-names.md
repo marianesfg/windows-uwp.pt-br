@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Exiba os nomes que você já reservou para seu aplicativo, reserve nomes adicionais (para outros idiomas ou para alterar o nome do aplicativo) e exclua nomes reservados de que você não precisa mais.
+Description: "Exiba os nomes que você já reservou para seu aplicativo, reserve nomes adicionais (para outros idiomas ou para alterar o nome do aplicativo) e exclua nomes reservados de que você não precisa mais."
 title: Gerenciar nomes de aplicativo
 ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
+translationtype: Human Translation
+ms.sourcegitcommit: 48952b5d4f2565d06ec79475f88fbabf93fd0f70
+ms.openlocfilehash: e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e5
+
 ---
 
 # Gerenciar nomes de aplicativo
@@ -43,6 +47,7 @@ Quando o aplicativo tiver sido publicado com o novo nome, você poderá excluir 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

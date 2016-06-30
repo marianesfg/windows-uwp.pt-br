@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 23001DA5-C099-4C02-ACE9-3597F06ECBF4
-title: IDs de classe de serviço AEP
-description: Os serviços do Ponto de Extremidade de Associação (AEP) oferecem um contrato de programação para serviços compatível com um dispositivo via um determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles.
+title: "IDs de classe de serviço AEP"
+description: "Os serviços do Ponto de Extremidade de Associação (AEP) oferecem um contrato de programação para serviços compatível com um dispositivo via um determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f201293d1288c8a065723ee2c05a7da45e5e95ab
+
 ---
 # IDs de classe de serviço AEP
 
@@ -126,6 +130,7 @@ System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D716D8EC26B29B}
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

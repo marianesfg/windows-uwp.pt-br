@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
-title: Dados de amostra na superfície de design e para a criação de protótipo
-description: Pode ser impossível ou indesejado (talvez por motivos de privacidade ou desempenho) que seu aplicativo exiba dados dinâmicos na superfície de design no Microsoft Visual Studio ou no Blend for Visual Studio.
+title: "Dados de amostra na superfície de design e para a criação de protótipo"
+description: "Pode ser impossível ou indesejado (talvez por motivos de privacidade ou desempenho) que seu aplicativo exiba dados dinâmicos na superfície de design no Microsoft Visual Studio ou no Blend for Visual Studio."
+translationtype: Human Translation
+ms.sourcegitcommit: 53e807c0d9de8faf2d0b5dc0e1c8e9c380e42d86
+ms.openlocfilehash: 2f7ac4b269a167c3b521fa94d77e27091fa490a8
+
 ---
 Dados de amostra na superfície de design e para a criação de protótipo
 =============================================================================================
@@ -31,7 +35,7 @@ Porém, se você fizer isso, sua página não será tão "projetável" quanto po
 
 ![Interface de usuário com design escasso.](images/displaying-data-in-the-designer-01.png)
 
-A primeira solução que pode ser tentada é assinalar como comentário essa atribuição de **DataContext** e, em vez disso, definir o **DataContext** na marcação da sua página. Dessa maneira, seus dados dinâmicos aparecerão em tempo de design e também em tempo de execução. Para isso, primeiro abra sua página XAML. Em seguida, na janela **Estrutura de Tópicos do Documento**, clique no elemento raiz designável (em geral, com o rótulo **\[Page\]**) para selecioná-lo. Na janela **Propriedades**, localize a propriedade **DataContext** (dentro da categoria Comum) e depois clique em **Novo**. Clique no seu tipo de modelo de exibição na caixa de diálogo **Selecionar Objeto** e depois em **OK**
+A primeira solução que pode ser tentada é assinalar como comentário essa atribuição de **DataContext** e, em vez disso, definir o **DataContext** na marcação da sua página. Dessa maneira, seus dados dinâmicos aparecerão em tempo de design e também em tempo de execução. Para isso, primeiro abra sua página XAML. Em seguida, na janela **Estrutura de Tópicos do Documento**, clique no elemento raiz designável (em geral, com o rótulo **\[Page\]**) para selecioná-lo. Na janela **Propriedades**, localize a propriedade **DataContext** (dentro da categoria Comum) e depois clique em **Novo**. Clique no seu tipo de modelo de exibição na caixa de diálogo **Selecionar Objeto** e depois em **OK**.
 
 ![Interface do usuário para definir DataContext.](images/displaying-data-in-the-designer-02.png)
 
@@ -88,7 +92,7 @@ O atributo **d:DataContext** e todos os outros atributos em tempo de design est�
 
 [
               **CollectionViewSource**
-            ](https://msdn.microsoft.com/library/windows/apps/BR209833) não tem uma propriedade **DataContext**, mas tem uma propriedade **Source**. Consequentemente, há uma propriedade **d:Source** que você pode usar para definir dados de amostra somente em tempo de design em um **CollectionViewSource**
+            ](https://msdn.microsoft.com/library/windows/apps/BR209833) não tem uma propriedade **DataContext**, mas tem uma propriedade **Source**. Consequentemente, há uma propriedade **d:Source** que você pode usar para definir dados de amostra somente em tempo de design em um **CollectionViewSource**.
 
 ``` xaml
     <Page.Resources>
@@ -142,6 +146,7 @@ O recurso **Novos Dados de Exemplo** usa [**DataContext**](https://msdn.microsof
 ![Dados de exemplo para criação de protótipo.](images/displaying-data-in-the-designer-04.png)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

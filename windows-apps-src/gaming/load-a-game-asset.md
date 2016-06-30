@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Carregar recursos no jogo em DirectX
-description: A maioria dos jogos, em algum momento, carrega recursos e ativos (por exemplo, sombreadores, texturas, malhas predefinidas ou outros dados gráficos) do armazenamento local ou de algum outro fluxo de dados.
+description: "A maioria dos jogos, em algum momento, carrega recursos e ativos (por exemplo, sombreadores, texturas, malhas predefinidas ou outros dados gráficos) do armazenamento local ou de algum outro fluxo de dados."
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: fd4d2162e9a0007df34b465f570820843b326d72
+
 ---
 
 # Carregar recursos no jogo em DirectX
@@ -705,6 +709,7 @@ Nesse ponto, você deverá estar apto a entender e criar ou modificar métodos d
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Usar alinhamento, margem e preenchimento para influenciar o layout dos elementos em uma página.
+Description: "Usar alinhamento, margem e preenchimento para influenciar o layout dos elementos em uma página."
 title: Alinhamento, margem e preenchimento para aplicativos da Plataforma Universal do Windows (UWP)
 ms.assetid: 9412ABD4-3674-4865-B07D-64C7C26E4842
 label: Alignment, margin, and padding
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 86635255fbdae83fb2749e2aea7011a8b989e83f
+
 ---
 # Alinhamento, margem e preenchimento
 
@@ -18,13 +22,13 @@ As propriedades [**HorizontalAlignment**](https://msdn.microsoft.com/library/win
             &nbsp;&nbsp;Como um princípio geral do layout, é melhor apenas aplicar medições a determinados elementos-chave e usar o comportamento do layout adaptável para os outros elementos. Isso oferece comportamento de layout flexível para quando o usuário dimensiona a janela superior do aplicativo, o que geralmente é possível de ser feito a qualquer momento.
 
  
-Se houver valores de [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) ou recortes dentro de um contêiner adaptável, mesmo que **Stretch** seja definido como um valor de alinhamento, o layout será controlado pelo comportamento de seu contêiner. Em painéis, um valor **Stretch** que tenha sido tornado óbvio por **Height** e **Width** age como se o valor fosse **Center**
+Se houver valores de [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) ou recortes dentro de um contêiner adaptável, mesmo que **Stretch** seja definido como um valor de alinhamento, o layout será controlado pelo comportamento de seu contêiner. Em painéis, um valor **Stretch** que tenha sido tornado óbvio por **Height** e **Width** age como se o valor fosse **Center**.
 
 Se não houver valores de altura e largura naturais ou calculados, esses valores de dimensão serão matematicamente **NaN** (Não É um Número). Os elementos estão aguardando que seu contêiner de layout dê-lhes dimensões. Após a execução do layout, haverá valores para as propriedades [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) e [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) para elementos nos quais foi usado um alinhamento **Stretch**. Os valores **NaN** permanecem em [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) para os elementos filho, para que o comportamento adaptável possa ser executado novamente, por exemplo, se as alterações relacionadas ao layout, como o dimensionamento da janela do aplicativo, causarem outro ciclo de layout.
 
 Elementos de texto, como [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652), geralmente não tem uma largura declarada explicitamente, mas têm uma largura calculada que você pode consultar com [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709), e essa largura também cancela um alinhamento **Stretch**. (A propriedade [**FontSize**](https://msdn.microsoft.com/library/windows/apps/br209657) e outras propriedades de texto, bem como o texto propriamente dito, já indicam o tamanho pretendido do layout. Em geral, não é desejável que o texto seja esticado.) O texto usado como conteúdo dentro de um controle tem o mesmo efeito; a presença de texto que precisa ser apresentado faz com que um **ActualWidth** seja calculado e isso comuta a largura e o tamanho desejados para o controle que o contém. Os elementos de texto também têm um [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) baseado no tamanho da fonte por linha, em quebras de linha e em outras propriedades de texto.
 
-Um painel como [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) já tem outra lógica para layout (definições de linha e coluna, e propriedades anexadas como [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) definida nos elementos para indicar em qual célula deve se desenhar). Nesse caso, as propriedades de alinhamento influenciam como o conteúdo é alinhado dentro da área da célula, mas a estrutura e o tamanho da célula são controlados pelas configurações em **Grid**
+Um painel como [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) já tem outra lógica para layout (definições de linha e coluna, e propriedades anexadas como [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) definida nos elementos para indicar em qual célula deve se desenhar). Nesse caso, as propriedades de alinhamento influenciam como o conteúdo é alinhado dentro da área da célula, mas a estrutura e o tamanho da célula são controlados pelas configurações em **Grid**.
 
 Os controles de item ocasionalmente exibem itens nos quais os tipos de base dos itens são dados. Isso envolve um [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/br242843). Embora os dados propriamente ditos não sejam um tipo derivado de [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), **ItemsPresenter** é, por isso você pode definir [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720) e [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749) para o apresentador e esse alinhamento se aplicará aos itens de dados quando apresentados no controle dos itens.
 
@@ -67,7 +71,7 @@ Em cada um desses casos, o mesmo elemento também tem uma propriedade **Margin**
 
 ## Dimensões (altura, largura)
 
-As propriedades [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) de um [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) costumam influenciar o comportamento das propriedades alignment, margin e padding quando ocorre um cálculo de layout. Em particular, **Height** e **Width** com valores de números reais cancelam os alinhamentos **Stretch**, e também são promovidos como um componente possível do valor de [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) que é estabelecido durante o cálculo de medida do layout. **Height** e **Width** têm propriedades de restrição: o valor de **Height** pode ser restringido com [**MinHeight**](https://msdn.microsoft.com/library/windows/apps/br208731) e [**MaxHeight**](https://msdn.microsoft.com/library/windows/apps/br208726), o valor de **Width** pode ser restringido com [**MinWidth**](https://msdn.microsoft.com/library/windows/apps/br208733) e [**MaxWidth**](https://msdn.microsoft.com/library/windows/apps/br208728). Além disso, [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) e [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) são propriedades somente leitura calculadas que contêm apenas valores válidos após a conclusão do cálculo de layout. Para obter mais informações sobre como as dimensões e as restrições ou as propriedades calculadas estão relacionadas, consulte Comentários em [**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
+As propriedades [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) de um [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) costumam influenciar o comportamento das propriedades alignment, margin e padding quando ocorre um cálculo de layout. Em particular, **Height** e **Width** com valores de números reais cancelam os alinhamentos **Stretch**, e também são promovidos como um componente possível do valor de [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) que é estabelecido durante o cálculo de medida do layout. **Height** e **Width** têm propriedades de restrição: o valor de **Height** pode ser restringido com [**MinHeight**](https://msdn.microsoft.com/library/windows/apps/br208731) e [**MaxHeight**](https://msdn.microsoft.com/library/windows/apps/br208726), o valor de **Width** pode ser restringido com [**MinWidth**](https://msdn.microsoft.com/library/windows/apps/br208733) e [**MaxWidth**](https://msdn.microsoft.com/library/windows/apps/br208728). Além disso, [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) e [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) são propriedades somente leitura calculadas que contêm apenas valores válidos após a conclusão do cálculo de layout. Para obter mais informações sobre como as dimensões e as restrições ou as propriedades calculadas estão relacionadas, consulte Comentários em [**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751).
 
 ## Tópicos relacionados
 
@@ -86,6 +90,7 @@ As propriedades [**Height**](https://msdn.microsoft.com/library/windows/apps/br2
 [**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

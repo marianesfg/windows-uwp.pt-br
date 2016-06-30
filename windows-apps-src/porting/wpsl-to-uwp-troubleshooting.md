@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado.
-title: Soluções de problemas de portabilidade do Windows Phone Silverlight para a UWP
+description: "É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado."
+title: "Soluções de problemas de portabilidade do Windows Phone Silverlight para a UWP"
 ms.assetid: d9a9a2a7-9401-4990-a992-4b13887f2661
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 0e7c4ba00ab513c1ea9da94f1a3f69b5921c2dc1
+
 ---
 
 #  Soluções de problemas de portabilidade do Windows Phone Silverlight para a UWP
@@ -57,6 +61,7 @@ O próximo tópico é [Portando XAML e a interface do usuário](wpsl-to-uwp-port
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

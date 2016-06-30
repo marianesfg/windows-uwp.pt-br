@@ -1,7 +1,11 @@
 ---
 title: Desbloqueio do Windows com dispositivos complementares (IoT)
-description: Um dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a Estrutura de Dispositivo Complementar, um dispositivo complementar pode fornecer uma experiência avançada para o Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo de leitor de impressão digital, por exemplo).
+description: "Um dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a Estrutura de Dispositivo Complementar, um dispositivo complementar pode fornecer uma experiência avançada para o Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo de leitor de impressão digital, por exemplo)."
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: a6265ca66a1a9d729465845da1014d1aff0e7d4d
+ms.openlocfilehash: 18102d6277ff1c66ebd147b5c1fd2f2d6c91edd1
+
 ---
 # Desbloqueio do Windows com dispositivos complementares (IoT)
 
@@ -676,6 +680,7 @@ O segredo para se obter as proteções de segurança enumeradas acima é protege
 - Garantir que o sinal de presença do usuário esteja disponível.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

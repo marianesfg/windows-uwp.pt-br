@@ -2,11 +2,14 @@
 author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para desktop
-description: Saiba como o Windows Device Portal abre diagnósticos e automação em sua área de trabalho do Windows.
+description: "Saiba como o Windows Device Portal abre diagnósticos e automação em sua área de trabalho do Windows."
+ms.sourcegitcommit: f09f0233ec11b41989cf52da3c5e8cb37a97b607
+ms.openlocfilehash: 7be27f5fb15676c5330f22995dd044899eddfd3d
+
 ---
 # Device Portal para desktop
 
-A partir do Windows 10, versão 1604, outros recursos de desenvolvedor estão disponíveis para desktop. Esses recursos estão disponíveis apenas quando o Modo de Desenvolvedor está habilitado.
+A partir do Windows 10, versão 1607, outros recursos de desenvolvedor estão disponíveis para desktop. Esses recursos estão disponíveis apenas quando o Modo de Desenvolvedor está habilitado.
 
 Para saber mais sobre como habilitar o Modo de Desenvolvedor, consulte [Habilitar seu dispositivo para desenvolvimento](../get-started/enable-your-device-for-development.md).
 
@@ -101,6 +104,7 @@ Para resolver este problema:
 2. Reinicialize o computador para garantir que todas as atualizações sejam aplicadas.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

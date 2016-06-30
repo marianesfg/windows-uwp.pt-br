@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: O padrão mestre/detalhes exibe uma lista mestra e os detalhes do item atualmente selecionado. Esse padrão é usado com frequência para email e listas de contatos/catálogos de endereços.
+Description: "O padrão mestre/detalhes exibe uma lista mestra e os detalhes do item atualmente selecionado. Esse padrão é usado com frequência para email e listas de contatos/catálogos de endereços."
 title: Mestre/detalhes
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 5845aaf69bbcf561164c519f76f93578bf0da6db
+
 ---
 # Padrão mestre/detalhes
 
@@ -82,6 +86,7 @@ Este design de aplicativo que rastreia o mercado de ações usa um padrão mestr
 - [**Classe ListView (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

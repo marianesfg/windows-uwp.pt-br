@@ -1,18 +1,18 @@
 ---
-author: martinekuan
-title: Distribuição de um componente do Tempo de Execução do Windows gerenciado
-description: É possível distribuir o componente do Tempo de Execução do Windows por cópia de arquivo.
+author: msatranjr
+title: "Distribuição de um componente do Tempo de Execução do Windows gerenciado"
+description: "É possível distribuir o componente do Tempo de Execução do Windows por cópia de arquivo."
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 3d7a51ed13f63ca9d6070fbbe860c653c4deaf07
+
 ---
 
 
 # Distribuição de um componente do Tempo de Execução do Windows gerenciado
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 É possível distribuir o componente do Tempo de Execução do Windows por cópia de arquivo. No entanto, caso o componente consista em muitos arquivos, a instalação pode ser entediante para os usuários. Além disso, erros na colocação de arquivos ou falha na definição de referências podem causar problemas para eles. É possível empacotar um componente complexo como um SDK de extensão do Visual Studio para facilitar a instalação e o uso. Os usuários só precisam definir uma referência para todo o pacote. Eles podem localizar e instalar facilmente o componente usando a caixa de diálogo **Extensões e Atualizações**, conforme descrito em [Como encontrar e usar extensões do Visual Studio](https://msdn.microsoft.com/library/vstudio/dd293638.aspx) na Biblioteca MSDN.
 
@@ -75,6 +75,6 @@ Um componente complexo normalmente inclui recursos do Windows, mas consulte a ob
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

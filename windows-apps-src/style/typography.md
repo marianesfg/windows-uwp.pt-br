@@ -1,12 +1,16 @@
 ---
 author: mijacobs
-Description: Como a representação visual da linguagem, a tarefa principal da tipografia é ser clara. Seu estilo nunca deve atrapalhar essa meta. Porém, a tipografia também tem um papel importante como componente de layout, pois afeta consideravelmente a densidade e a complexidade do design, além de exercer forte influência na experiência do usuário desse design.
+Description: "Como a representação visual da linguagem, a tarefa principal da tipografia é ser clara. Seu estilo nunca deve atrapalhar essa meta. Porém, a tipografia também tem um papel importante como componente de layout, pois afeta consideravelmente a densidade e a complexidade do design, além de exercer forte influência na experiência do usuário desse design."
 title: Tipografia
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 label: Typography
 template: detail.hbs
 extraBodyClass: style-typography
-brief: As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design.
+brief: "As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design."
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 02d5149f945bb631e385e45a295fdfe08bd98fb0
+
 ---
 
 # Tipografia para aplicativos UWP
@@ -79,7 +83,7 @@ O espaçamento entre palavras por padrão sempre é 100% e o espaçamento entre 
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            Em um controle de texto XAML use [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) para controlar kerning e [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar o rastreamento. Por padrão Typography.Kerning é definido como "true" e FontStretch é definido como "Normal", que são os valores recomendados.
+Em um controle de texto XAML use [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) para controlar kerning e [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar o rastreamento. Por padrão Typography.Kerning é definido como "true" e FontStretch é definido como "Normal", que são os valores recomendados.
     </div>
 </aside>
 
@@ -125,7 +129,7 @@ Depois que a altura do texto se estende além da altura do ícone, a primeira li
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            A propriedade [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) de XAML fornece acesso às medidas de fonte iniciais e de limite de altura. Ela pode ser usada para o tipo de alinhamento superior, central ou vertical.
+A propriedade [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) de XAML fornece acesso às medidas de fonte iniciais e de limite de altura. Ela pode ser usada para o tipo de alinhamento superior, central ou vertical.
     </div>
 </aside>
 
@@ -150,7 +154,7 @@ Tamanhos diferentes de Segoe UI devem ser usados para criar hierarquia em uma ra
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            A maioria dos níveis de rampa está disponível como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) XAML que seguem a convenção de nomenclatura `*TextBlockStyle` (por ex.: 
+A maioria dos níveis de rampa está disponível como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) XAML que seguem a convenção de nomenclatura `*TextBlockStyle` (por ex.: `HeaderTextBlockStyle`). 
     </div>
 </aside>
 
@@ -180,6 +184,7 @@ No entanto, nomes próprios mudam seu significado quando estão em maiúsculas e
 * [Controles de texto](../controls-and-patterns/text-controls.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

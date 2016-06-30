@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Um controle de zoom semântico permite que o usuário aplique zoom entre duas diferentes exibições do mesmo conjunto de dados.
-title: Zoom semântico
+Description: "Um controle de zoom semântico permite que o usuário aplique zoom entre duas diferentes exibições do mesmo conjunto de dados."
+title: "Zoom semântico"
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 47e39290a63408fc66783617ad2f12345eab2fa3
+
 ---
 
 # Zoom semântico
@@ -65,6 +69,7 @@ Um catálogo de endereços é um exemplo de conjunto de dados que pode ser muito
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

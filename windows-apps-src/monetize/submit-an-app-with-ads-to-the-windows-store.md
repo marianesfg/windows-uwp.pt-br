@@ -2,7 +2,11 @@
 author: mcleanbyron
 ms.assetid: b307fc7d-0424-459d-8c20-e37e5cfec0d0
 description: Saiba sobre os requisitos que devem ser atendidos por aplicativos que usam as bibliotecas do Microsoft Advertising antes de serem publicados na Loja.
-title: Enviar um aplicativo com anúncios para a Windows Store
+title: "Enviar um aplicativo com anúncios para a Windows Store"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: d2e6f9873b2539f9c0558abdc9ee936b938a03b1
+
 
 ---
 
@@ -25,6 +29,7 @@ Todos os aplicativos enviados para a Windows Store devem seguir as [Políticas d
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

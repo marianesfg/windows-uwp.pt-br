@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 98BD79B3-F420-43C5-98D3-52EBDDB479A0
-description: Este artigo lista as opções de codificação que podem ser usadas com BitmapEncoder.
-title: Referência de opções de BitmapEncoder
+description: "Este artigo lista as opções de codificação que podem ser usadas com BitmapEncoder."
+title: "Referência de opções de BitmapEncoder"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 510cb363b258d20688ea212856af4b7ac0311e61
+
 ---
 
 # Referência de opções de BitmapEncoder
@@ -39,6 +43,7 @@ Esse artigo lista as opções de codificação que podem ser usadas com [**Bitma
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

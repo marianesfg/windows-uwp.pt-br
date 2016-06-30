@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Perguntas comuns sobre campanhas publicitárias
-title: Perguntas comuns sobre campanhas publicitárias
+Description: "Perguntas comuns sobre campanhas publicitárias"
+title: "Perguntas comuns sobre campanhas publicitárias"
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
+ms.sourcegitcommit: 3f0664e0387e206c432ce92aa221bb5c604bb675
+ms.openlocfilehash: c61866aa6fb71d41d4c6150cfe6af449da21a1da
+
 ---
 
 # Perguntas comuns sobre campanhas publicitárias
@@ -39,7 +42,9 @@ Você pode criar campanhas publicitárias nos seguintes idiomas:
 
 ## Quando vou ser cobrado?
 
-Você será cobrado por um determinado mês no início do mês seguinte.
+Você será cobrado sempre que sua conta acumular US$ 50 de encargos (ou o valor equivalente na moeda local de seu mercado ou região) para todas as campanhas pagas para a sua conta.
+
+Se sua conta acumular menos de US$ 50 de encargos no período de 30 dias após sua última data de cobrança, você será cobrado por esses encargos no início no mês seguinte. Isso ajuda a garantir que sua conta não mantenha um saldo em execução de encargos de campanha publicitária por mais de um mês.
 
 ## Como excluir um cartão de crédito ou editar os detalhes de um cartão de crédito?
 
@@ -54,6 +59,7 @@ Vá para <http://commerce.microsoft.com>, faça logon com suas credenciais de co
 * [Relatório de anúncios de instalação de aplicativos](app-install-ads-reports.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

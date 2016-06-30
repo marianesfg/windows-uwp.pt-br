@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: O switch de alternância representa um comutador físico que permite aos usuários ativar ou desativar itens.
-title: Diretrizes para controles de botões de alternância
+Description: "O switch de alternância representa um comutador físico que permite aos usuários ativar ou desativar itens."
+title: "Diretrizes para controles de botões de alternância"
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e90760c6894ee5d32ba1063993a703023d23c152
+
 ---
 # Switches de alternância
 
@@ -157,6 +161,7 @@ Você também pode usar conteúdo mais complexo, definindo as propriedades [**On
 - [**Classe ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/br209712)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

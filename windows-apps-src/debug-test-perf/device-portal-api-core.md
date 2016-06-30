@@ -1,8 +1,11 @@
 ---
 author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
-title: Referência de API central do Device Portal
-description: Saiba mais sobre as APIs REST centrais do Windows Device Portal que você pode usar para acessar os dados e controlar seu dispositivo de forma programática.
+title: "Referência de API central do Device Portal"
+description: "Saiba mais sobre as APIs REST centrais do Windows Device Portal que você pode usar para acessar os dados e controlar seu dispositivo de forma programática."
+ms.sourcegitcommit: 0e36b2adbd0805d9c738de00959581417d2c1ee8
+ms.openlocfilehash: 364e19c723c6cf48a25104b5719735a533ae54a7
+
 ---
 
 # Referência de API central do Device Portal
@@ -2730,7 +2733,456 @@ Código de status HTTP      | Descrição
 * HoloLens
 * IoT
 
+---
+## Marcas de DNS-SD 
+---
+### Exibir Marcas
 
-<!--HONumber=May16_HO2-->
+**Solicitação**
+
+Veja as marcas atualmente aplicadas para o dispositivo.  Elas são anunciadas por meio de registros DNS-SD TXT na chave T.  
+ 
+Método      | URI da Solicitação
+:------     | :-----
+GET | /api/dns-sd/tags
+<br />
+
+**Parâmetros do URI**
+
+- Nenhuma
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta** as marcas atualmente aplicadas no formato a seguir. 
+```
+ {
+    "tags": [
+        "tag1", 
+        "tag2", 
+        ...
+     ]
+}
+```
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK
+5XX | Erro do Servidor 
+
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* Xbox
+* HoloLens
+* IoT
+
+---
+### Excluir Marcas
+
+**Solicitação**
+
+Exclua todas as marcas atualmente anunciadas pelo DNS-SD.   
+ 
+Método      | URI da Solicitação
+:------     | :-----
+DELETE | /api/dns-sd/tags
+<br />
+
+**Parâmetros do URI**
+
+- Nenhum
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta**
+ - Nenhum
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK
+5XX | Erro do Servidor 
+
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* Xbox
+* HoloLens
+* IoT
+
+---
+### Excluir Marca
+
+**Solicitação**
+
+Exclua uma marca atualmente anunciada pelo DNS-SD.   
+ 
+Método      | URI da Solicitação
+:------     | :-----
+DELETE | /api/dns-sd/tag
+<br />
+
+**Parâmetros do URI**
+
+Parâmetro do URI | Descrição
+:------     | :-----
+tagValue | (**obrigatório**) A marca a ser removida.
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta**
+ - Nenhum
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK
+
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* Xbox
+* HoloLens
+* IoT
+ 
+---
+### Adicionar uma Marca
+
+**Solicitação**
+
+Adicione uma marca do anúncio DNS-SD.   
+ 
+Método      | URI da Solicitação
+:------     | :-----
+POST | /api/dns-sd/tag
+<br />
+
+**Parâmetros do URI**
+
+Parâmetro do URI | Descrição
+:------     | :-----
+tagValue | (**obrigatório**) A marca a ser adicionada.
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta**
+ - Nenhum
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK
+401 | Espaço de marca excedente.  Resultado de quando a marca proposta é muito longa para o registro de serviço DNS-SD resultante.  
+
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* Xbox
+* HoloLens
+* IoT
+
+## Aplicativo Explorador de Arquivos
+
+---
+### Obter pastas conhecidas
+
+**Solicitação**
+
+Obtenha uma lista de pastas de nível superior acessíveis.
+
+Método      | URI da Solicitação
+:------     | :-----
+GET | /api/filesystem/apps/knownfolders
+<br />
+
+**Parâmetros do URI**
+
+- Nenhum
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta** As pastas disponíveis no formato a seguir. 
+```
+ {"KnownFolders": [
+    "folder0",
+    "folder1",...
+]}
+```
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | Implantar solicitação aceita e em processamento
+4XX | Códigos de erro
+5XX | Códigos de erro
+<br />
+
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Obter arquivos
+
+**Solicitação**
+
+Obtenha uma lista de arquivos em uma pasta.
+
+Método      | URI da Solicitação
+:------     | :-----
+GET | /api/filesystem/apps/files
+<br />
+
+**Parâmetros do URI**
+
+Parâmetro do URI | Descrição
+:------     | :-----
+knownfolderid | (**obrigatório**) O diretório de nível superior onde você deseja a lista de arquivos. Use **LocalAppData** para acessar aplicativos de sideload. 
+packagefullname | (**obrigatório se *knownfolderid* == LocalAppData**) O nome completo do pacote do aplicativo em que você está interessado. 
+path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados acima. 
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta** As pastas disponíveis no formato a seguir. 
+```
+{"Items": [
+    {
+        "CurrentDir": string (folder under the requested known folder),
+        "DateCreated": int,
+        "FileSize": int (bytes),
+        "Id": string,
+        "Name": string,
+        "SubPath": string (present if this item is a folder, this is the name of the folder),
+        "Type": int
+    },...
+]}
+```
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK
+4XX | Códigos de erro
+5XX | Códigos de erro
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Obter arquivos
+
+**Solicitação**
+
+Obtenha uma lista de arquivos em uma pasta.
+
+Método      | URI da Solicitação
+:------     | :-----
+GET | /api/filesystem/apps/file
+
+**Parâmetros do URI**
+
+Parâmetro do URI | Descrição
+:------     | :-----
+knownfolderid | (**obrigatório**) O diretório de nível superior onde você deseja baixar arquivos. Use **LocalAppData** para acessar aplicativos de sideload. 
+filename | (**necessário**) O nome do arquivo que está sendo baixado. 
+packagefullname | (**obrigatório se *knownfolderid* == LocalAppData**) O nome completo do pacote em que você está interessado. 
+path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados acima.
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- O arquivo solicitado, se presente
+
+**Resposta**
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | O arquivo solicitado
+404 | Arquivo não encontrado
+5XX | Códigos de erro
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Excluir um arquivo
+
+**Solicitação**
+
+Exclua um arquivo em uma pasta.
+
+Método      | URI da Solicitação
+:------     | :-----
+DELETE | /api/filesystem/apps/file
+<br />
+**Parâmetros do URI**
+
+Parâmetro do URI | Descrição
+:------     | :-----
+knownfolderid | (**obrigatório**) O diretório de nível superior onde você deseja excluir arquivos. Use **LocalAppData** para acessar aplicativos de sideload. 
+filename | (**necessário**) O nome do arquivo que está sendo excluído. 
+packagefullname | (**obrigatório se *knownfolderid* == LocalAppData**) O nome completo do pacote do aplicativo em que você está interessado. 
+path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados acima.
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta**
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK. O arquivo será excluído
+404 | Arquivo não encontrado
+5XX | Códigos de erro
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Carregar um arquivo
+
+**Solicitação**
+
+Carregue um arquivo em uma pasta.  Isso sobrescreverá um arquivo existente com o mesmo nome, mas não criará novas pastas. 
+
+Método      | URI da Solicitação
+:------     | :-----
+POST | /api/filesystem/apps/file
+<br />
+**Parâmetros do URI**
+
+Parâmetro do URI | Descrição
+:------     | :-----
+knownfolderid | (**obrigatório**) O diretório de nível superior onde você deseja carregar arquivos. Use **LocalAppData** para acessar aplicativos de sideload.
+packagefullname | (**obrigatório se *knownfolderid* == LocalAppData**) O nome completo do pacote do aplicativo em que você está interessado. 
+path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados acima.
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta**
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK. O arquivo é carregado
+4XX | Códigos de erro
+5XX | Códigos de erro
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* HoloLens
+* Xbox
+* IoT
+
+
+
+<!--HONumber=Jun16_HO4-->
 
 

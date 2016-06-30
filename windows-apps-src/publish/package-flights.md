@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Se seu aplicativo usa um AdMediatorControl ou AdControl para exibir anúncios na barra de notificação, você pode aumentar sua taxa de preenchimento de anúncio e receita mostrando anúncios afiliados da Microsoft em seu aplicativo.
-title: Pacotes de pré-lançamento
+Description: "Se seu aplicativo usa um AdMediatorControl ou AdControl para exibir anúncios na barra de notificação, você pode aumentar sua taxa de preenchimento de anúncio e receita mostrando anúncios afiliados da Microsoft em seu aplicativo."
+title: "Pacotes de pré-lançamento"
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
+ms.sourcegitcommit: 9e62a7aa18950f7e1cc26b42762e3bb937c389ac
+ms.openlocfilehash: c538da2a58f38925938b9e28ec7ca65cdb9858a3
+
 ---
 
 # Pacotes de pré-lançamento
@@ -28,7 +31,7 @@ Clique em **Criar grupo** para salvar o grupo e continuar configurando o pacote 
 > **Importante** Certifique-se de que você obteve o consentimento que for necessário das pessoas que acrescentar ao grupo de envio de versão de pré-lançamento e que elas entenderam que receberão pacotes diferentes do seu envio de versão completa. 
 > Também seria bom levar em consideração como as pessoas em seu pacote de pré-lançamento podem lhe dar a opinião delas sobre o aplicativo. Sugerimos [adicionar um controle ao seu aplicativo para iniciar o Hub de Feedback](../monetize/launch-feedback-hub-from-your-app.md), para que os clientes possam dar sua opinião diretamente. Assim, você pode analisar os comentários no [relatório de feedback](feedback-report.md)) do aplicativo.
 
-Para editar o grupo de versão de pré-lançamento mais tarde, você pode clicar em **Exportar .csv** para salvar suas informações de grupo em um arquivo .csv. Faça suas alterações nesse arquivo, clique em **Importar .csv** para usar a nova versão para atualizar a associação do grupo. Observe que pode levar até 30 minutos para que as alterações na associação do grupo de versão de pré-lançamento sejam implementadas.
+Para editar o grupo de versão de pré-lançamento mais tarde, você pode clicar em **Exportar .csv** para salvar suas informações de grupo em um arquivo .csv. Faça suas alterações nesse arquivo, clique em **Importar .csv** para usar a nova versão para atualizar a associação do grupo. Observe que pode levar até 30 minutos para que as alterações na associação do grupo de versão de pré-lançamento sejam implementadas. Se você adicionar pessoas a um grupo de versão de pré-lançamento depois de publicar um pacote de pré-lançamento associado, os pacotes serão enviados para o novo pessoal automaticamente; você não precisa criar e publicar um novo envio para esse pacote de pré-lançamento. 
 
 ## Criar um novo pacote de pré-lançamento
 
@@ -103,6 +106,7 @@ Para excluir um pacote de pré-lançamento ao qual você não quer mais dar supo
 Quando você exclui um pacote de pré-lançamento, todos os clientes que tiverem pacotes distribuídos nesse pacote de pré-lançamento receberão uma atualização de aplicativo, caso haja um pacote com um número de versão maior (ou assim que esse pacote ficar disponível). Caso eles desinstalem o aplicativo e o instalem novamente, isso será tratado como uma nova aquisição e eles receberão a versão superior disponível no momento. 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

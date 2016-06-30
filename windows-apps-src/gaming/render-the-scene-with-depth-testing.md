@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Renderizar a cena com teste de profundidade
-description: Crie um efeito de sombra adicionando testes de profundidade ao sombreador de vértice (ou geometria) e ao sombreador de pixel.
+description: "Crie um efeito de sombra adicionando testes de profundidade ao sombreador de vértice (ou geometria) e ao sombreador de pixel."
 ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2bac8e8337a10a8411b02eeed53d772dbb5abad6
+
 ---
 
 # Renderizar a cena com teste de profundidade
@@ -160,6 +164,7 @@ Na próxima parte deste guia passo a passo, veremos como dar [Suporte a mapas de
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

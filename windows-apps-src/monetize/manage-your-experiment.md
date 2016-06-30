@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Depois de definir seu experimento no painel do Centro de Desenvolvimento e codificar seu experimento em seu aplicativo, você estará pronto para ativar seu experimento e usar o painel do Centro de Desenvolvimento para analisar os resultados de seu experimento.
+Description: "Depois de definir seu experimento no painel do Centro de Desenvolvimento e codificar seu experimento em seu aplicativo, você estará pronto para ativar seu experimento e usar o painel do Centro de Desenvolvimento para analisar os resultados de seu experimento."
 title: Gerenciar seu experimento no painel do Centro de Desenvolvimento
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 24ca106cc83c4495657972f463c556585cdfcb45
+
 ---
 
 # Gerenciar seu experimento no painel do Centro de Desenvolvimento
@@ -53,6 +57,7 @@ Quando estiver satisfeito com os parâmetros de seu experimento no painel e tive
   * [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

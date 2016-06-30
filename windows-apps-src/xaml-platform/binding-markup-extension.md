@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: A extensão de marcação Binding é convertida, em um tempo de carregamento XAML, para uma instância da classe Binding.
-title: Extensão de marcação Binding
+description: "A extensão de marcação Binding é convertida, em um tempo de carregamento XAML, para uma instância da classe Binding."
+title: "Extensão de marcação Binding"
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 740110809845220d919c6ba3c90b1393dbc8ae94
+
 ---
 
 # Extensão de marcação {Binding}
@@ -130,6 +134,7 @@ O Microsoft IntelliSense no Microsoft Visual Studio exibe as propriedades de con
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

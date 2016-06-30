@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Iniciar o aplicativo Mapas do Windows
 description: Saiba como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo.
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 0dcd15c7d04ed452f69208ad1e68a8949baf40dd
+
 ---
 
 # Iniciar o aplicativo Mapas do Windows
@@ -16,7 +19,6 @@ Saiba como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo. Est
 **Dica** Para saber mais sobre como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo, baixe a [amostra de mapas da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) do [repositório de amostras universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
 ## Apresentando URIs
-
 
 Os esquemas de URI permitem que você abra aplicativos clicando em hiperlinks (ou programaticamente, em seu aplicativo). Assim como você pode iniciar um novo email usando **mailto:** ou abrir um navegador da Web usando **http:**, é possível abrir o aplicativo Mapas do Windows usando **bingmaps:**, **ms-drive-to:** e **ms-walk-to:**.
 
@@ -66,9 +68,9 @@ Há várias maneiras de controlar o ponto central do mapa e o nível de zoom. Us
 
 Para controlar o tipo de exibição, use os parâmetros *ss* (Streetside) e *sty* (estilo). O parâmetro *ss* coloca o mapa em um modo de exibição Streetside. O parâmetro *sty* permite que você alterne entre os modos de exibição de estrada, vista aérea e 3D. Ao usar o estilo 3D, os parâmetros *hdg*, *pit* e *rad* podem ser usados para especificar o modo de exibição 3D. *hdg* especifica o título do modo de exibição, *pit* especifica a rotação sobre o eixo x do modo de exibição, e *rad* especifica a distância entre o ponto central para mostrar na exibição. Para obter mais informações sobre esses e outros parâmetros, consulte a [referência de parâmetro bingmaps:](#bingmaps).
 
-| URI de amostra                                                                 | Resultados                                                                                                                                                                                                   |
+| URI de Exemplo                                                                 | Resultados                                                                                                                                                                                                   |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:                                                                  | Abre o aplicativo Mapas.                                                                                                                                                                                       |
+| bingmaps:?                                                                 | Abre o aplicativo Mapas.                                                                                                                                                                                       |
 | bingmaps:?cp=40.726966~-74.006076                                          | Exibe um mapa centralizado na cidade de Nova York.                                                                                                                                                               |
 | bingmaps:?cp=40.726966~-74.006076&lvl=10                                   | Exibe um mapa centralizado na cidade de Nova York com um nível de zoom 10.                                                                                                                                       |
 | bingmaps:?bb=39.719\_-74.52~41.71\_-73.5                                   | Exibe um mapa da cidade de Nova York com o tamanho da tela como a caixa delimitadora.                                                                                                                          |
@@ -88,7 +90,7 @@ Para controlar o tipo de exibição, use os parâmetros *ss* (Streetside) e *sty
 
 Ao realizar uma pesquisa de empresa usando o parâmetro *q*, recomendamos que especifique os termos o máximo possível e use-os em conjunto com o parâmetro *cp* ou *where* para especificar um local. Se o usuário não der permissão ao aplicativo Mapas para usar sua localização e você não especificar um local para uma pesquisa de empresa, a pesquisa poderá ser realizada no âmbito do país/região e não retornar resultados significativos. Os resultados da pesquisa são exibidos no modo de exibição de mapa mais apropriado; portanto, a menos que haja uma necessidade de definir o *lvl* (nível de zoom), é recomendável permitir que o aplicativo Mapas decida. Para obter mais informações sobre esses e outros parâmetros, consulte a [referência de parâmetro bingmaps:](#bingmaps).
 
-| URI de amostra                                                    | Resultados                                                                                                                                         |
+| URI de Exemplo                                                    | Resultados                                                                                                                                         |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | bingmaps:?where=1600%20Pennsylvania%20Ave,%20Washington,%20DC | Exibe um mapa e pesquisa o endereço da Casa Branca em Washington, D.C.                                                              |
 | bingmaps:?cp=40.726966~-74.006076&lvl=10&where=New%20York     | Pesquisa por Nova York perto do ponto central especificado, exibe os resultados em um mapa, e define o zoom nível 10.                            |
@@ -103,7 +105,7 @@ Ao realizar uma pesquisa de empresa usando o parâmetro *q*, recomendamos que es
 
 Use o parâmetro *collection* para mostrar um conjunto personalizado de pontos no mapa. Se houver mais de um ponto, será exibida uma lista de pontos. Pode haver até 25 pontos em uma coleção, e eles são listados na ordem fornecida. A coleção tem precedência sobre solicitações de pesquisa e trajetos. Para obter mais informações sobre esse e outros parâmetros, consulte a [referência de parâmetro bingmaps:](#bingmaps).
 
-| URI de amostra                                                                                                                                                         | Resultados                                                                                                                   |
+| URI de Exemplo                                                                                                                                                         | Resultados                                                                                                                   |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace                                                                                                | Pesquisa por Caesar's Palace em Las Vegas e exibe os resultados em um mapa na melhor exibição de mapa.                         |
 | bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16                                                                                         | Exibe um pino denominado Caesars Palace em Las Vegas e define o zoom para nível 16.                                               |
@@ -120,7 +122,7 @@ Você pode exibir o trajeto entre dois pontos usando o parâmetro *rtp*; esses p
 
 ![exemplo de trajeto](images/windowsmapgcdirections.png)
 
-| URI de amostra                                                                                                              | Resultados                                                                                                                                                         |
+| URI de Exemplo                                                                                                              | Resultados                                                                                                                                                         |
 |-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | bingmaps:?rtp=pos.44.9160\_-110.4158~pos.45.0475\_-109.4187                                                             | Exibe um mapa com trajeto ponto a ponto. Como *mode* não é especificado, o trajeto será fornecido usando o modo de preferência de transporte do usuário. |
 | bingmaps:?cp=43.0332~-87.9167&trfc=1                                                                                    | Exibe um mapa centralizado na cidade de Milwaukee, WI, com tráfego.                                                                                                        |
@@ -144,7 +146,7 @@ Os esquemas de URI **ms-drive-to:** e **ms-walk-to:** permitem que você inicie 
 
 ![um exemplo de trajeto curva a curva](images/windowsmapsappdirections.png)
 
-| URI de amostra                                                                                                | Resultados                                                                                       |
+| URI de Exemplo                                                                                                | Resultados                                                                                       |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | ms-drive-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake | Exibe um mapa com um trajeto de carro curva a curva para o Green Lake a partir de sua localização atual. |
 | ms-walk-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake  | Exibe um mapa com um trajeto a pé curva a curva para o Green Lake a partir de sua localização atual. |
@@ -155,7 +157,7 @@ Os esquemas de URI **ms-drive-to:** e **ms-walk-to:** permitem que você inicie 
 
 O esquema de URI **ms-settings:** permite que você inicie diretamente em uma página específica no aplicativo Configurações. Embora o esquema de URI **ms-settings:** não inicie o aplicativo Mapas, ele permite que você acesse diretamente a página Mapas Offline no aplicativo Configurações e exibe uma caixa de diálogo de confirmação para baixar os mapas offline usados pelo aplicativo Mapas. O esquema de URI aceita um ponto especificado por uma latitude e longitude e determina automaticamente se há mapas offline disponíveis para uma região que contém esse ponto.  Se a latitude e longitude informadas estiverem em várias regiões de download, a caixa de diálogo de confirmação permitirá que o usuário escolha qual essas regiões baixar. Se mapas offline não estiverem disponíveis para uma região que contém esse ponto, a página Mapas offline no aplicativo Configurações será exibida com uma caixa de diálogo de erro.
 
-| URI de amostra                                                                                                | Resultados                                                                                       |
+| URI de Exemplo                                                                                                | Resultados                                                                                       |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | ms-settings:maps-downloadmaps?latlong=47.6,-122.3 | Abre o aplicativo Configurações na página Mapas Offline com uma caixa de diálogo de confirmação exibida para baixar mapas para a região que contém o ponto de latitude e longitude especificado. |
  
@@ -327,7 +329,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <td align="left"><p>Define o início e o fim de uma rota a ser desenhada no mapa, separados por um til (**~**). Cada um dos pontos intermediários é definido por uma posição usando-se a latitude, a longitude e um título opcional ou um identificador de endereço.</p>
 <p>Uma rota completa contém exatamente dois pontos intermediários. Por exemplo, uma rota com dois pontos intermediários é definida por <code>rtp="A"~"B"</code>.</p>
 <p>Também é aceitável especificar uma rota incompleta. Por exemplo, você pode definir apenas o início de uma rota com <code>rtp="A"~</code>. Nesse caso, a entrada de trajeto é exibida com o ponto intermediário fornecido no campo **De** e o campo **Para** tem foco.</p>
-<p>Se apenas o final de uma rota for especificado, como com <code>rtp=~"B"</code>, o painel de trajeto é exibido com o ponto intermediário fornecido no campo **Para**. Se uma localização atual precisa estiver disponível, a localização atual será previamente preenchida no campo **De** com foco.</p>
+<p>Se apenas o final de uma rota for especificado, como com <code>rtp=~"B"</code>, o painel do trajeto é exibido com o ponto intermediário fornecido no campo **Para**. Se uma localização atual precisa estiver disponível, a localização atual será previamente preenchida no campo **De** com foco.</p>
 <p>Nenhuma linha de rota é desenhada quando uma rota incompleta é determinada.</p>
 <p>Use em conjunto com o parâmetro **mode** para especificar o modo de transporte (de carro, transporte público ou a pé). Se **mode** não for especificado, o trajeto será fornecido usando o modo de preferência de transporte do usuário.</p>
 <div class="alert">
@@ -428,6 +430,7 @@ A sintaxe para parâmetros específicos do aplicativo Mapas para o esquema de UR
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

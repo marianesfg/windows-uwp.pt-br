@@ -1,8 +1,11 @@
 ---
 author: Xansky
-description: Pelo namespace Windows.ApplicationModel.Appointments, você pode criar e gerenciar compromissos no aplicativo de calendário de um usuário.
+description: "Pelo namespace Windows.ApplicationModel.Appointments, você pode criar e gerenciar compromissos no aplicativo de calendário de um usuário."
 title: Gerenciar compromissos
 ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 020b020d90a52d45fa989e0f630320b4630b955e
+
 ---
 
 # Gerenciar compromissos
@@ -248,7 +251,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
 
 ## Adicionar um compromisso ao calendário do usuário
 
-Crie um objeto [**Windows.ApplicationModel.Appointments.Appointment**](https://msdn.microsoft.com/library/windows/apps/Dn297221) e o atribua a uma variável. Em seguida, chame o método [**AppointmentManager.ShowAddAppointmentAsync(Appointment, Rect, Placement)**](https://msdn.microsoft.com/library/windows/apps/Dn297221manager-showaddappointmentasync-253292089) para mostrar a interface do usuário de adição de compromissos do provedor de compromissos padrão, para permitir que o usuário adicione um compromisso. Se o usuário tiver clicado em **Adicionar**, a amostra registrará o identificador de compromisso retornado por **ShowAddAppointmentAsync**.
+Crie um objeto [**Windows.ApplicationModel.Appointments.Appointment**](https://msdn.microsoft.com/library/windows/apps/Dn297221) e o atribua a uma variável. Em seguida, chame o método [**AppointmentManager.ShowAddAppointmentAsync(Appointment, Rect, Placement)**](https://msdn.microsoft.com/library/windows/apps/dn297261) para mostrar a interface do usuário de adição de compromissos do provedor de compromissos padrão, para permitir que o usuário adicione um compromisso. Se o usuário tiver clicado em **Adicionar**, a amostra registrará o identificador de compromisso retornado por **ShowAddAppointmentAsync**.
 
 ```cs
 private async void Add-Click(object sender, RoutedEventArgs e)
@@ -275,11 +278,11 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Observação**  Para os aplicativos da Loja do Windows Phone, [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/Dn297221manager-showaddappointmentasync) funciona como [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/Dn297221manager-showeditnewappointmentasync) pelo fato de que a caixa de diálogo exibida para adicionar o compromisso é editável.
+**Observação**  Para os aplicativos da Loja do Windows Phone, [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona como [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) pelo fato de que a caixa de diálogo exibida para adicionar o compromisso é editável.
 
 ## Substituir um compromisso no calendário do usuário
 
-Crie um objeto [**Windows.ApplicationModel.Appointments.Appointment**](https://msdn.microsoft.com/library/windows/apps/Dn297221) e o atribua a uma variável. Em seguida, chame o método [**AppointmentManager.ShowReplaceAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/Dn297221manager-showreplaceappointmentasync) apropriado para mostrar a interface do usuário de substituição de compromissos do provedor de compromissos padrão, para permitir que o usuário substitua um compromisso. O usuário também fornece o identificador de compromisso que ele quer substituir. Esse identificador foi retornado de [**AppointmentManager.ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/Dn297221manager-showaddappointmentasync). Se o usuário tiver clicado em **Substituir**, a amostra registrará que esse identificador de compromisso foi atualizado.
+Crie um objeto [**Windows.ApplicationModel.Appointments.Appointment**](https://msdn.microsoft.com/library/windows/apps/Dn297221) e o atribua a uma variável. Em seguida, chame o método [**AppointmentManager.ShowReplaceAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showreplaceappointmentasync) apropriado para mostrar a interface do usuário de substituição de compromissos do provedor de compromissos padrão, para permitir que o usuário substitua um compromisso. O usuário também fornece o identificador de compromisso que ele quer substituir. Esse identificador foi retornado de [**AppointmentManager.ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync). Se o usuário tiver clicado em **Substituir**, a amostra registrará que esse identificador de compromisso foi atualizado.
 
 ```cs
 private async void Replace-Click(object sender, RoutedEventArgs e)
@@ -333,7 +336,7 @@ private async void Replace-Click(object sender, RoutedEventArgs e)
 
 ## Remover um compromisso do calendário do usuário
 
-Chame o método [**AppointmentManager.ShowRemoveAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/Dn297221manager-showremoveappointmentasync) apropriado para mostrar a interface do usuário de remoção de compromissos do provedor de compromissos padrão, para permitir que o usuário remova um compromisso. O usuário também fornece o identificador de compromisso que ele quer remover. Esse identificador foi retornado de [**AppointmentManager.ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/Dn297221manager-showaddappointmentasync). Se o usuário tiver clicado em **Excluir**, a amostra registrará que removeu o compromisso especificado por esse identificador de compromisso.
+Chame o método [**AppointmentManager.ShowRemoveAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showremoveappointmentasync) apropriado para mostrar a interface do usuário de remoção de compromissos do provedor de compromissos padrão, para permitir que o usuário remova um compromisso. O usuário também fornece o identificador de compromisso que ele quer remover. Esse identificador foi retornado de [**AppointmentManager.ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync). Se o usuário tiver clicado em **Excluir**, a amostra registrará que removeu o compromisso especificado por esse identificador de compromisso.
 
 ```cs
 private async void Remove-Click(object sender, RoutedEventArgs e)
@@ -383,9 +386,9 @@ private async void Remove-Click(object sender, RoutedEventArgs e)
 
 ## Mostrar um intervalo de tempo para o provedor de compromissos
 
-Chame o método [**AppointmentManager.ShowTimeFrameAsync**](https://msdn.microsoft.com/library/windows/apps/Dn297221manager-showtimeframeasync) para mostrar um determinado intervalo de tempo para a interface do usuário principal do provedor de compromissos padrão se o usuário tiver clicado em **Mostrar**. A amostra registra que o provedor de compromissos padrão apareceu na tela.
+Chame o método [**AppointmentManager.ShowTimeFrameAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showtimeframeasync) para mostrar um determinado intervalo de tempo para a interface do usuário principal do provedor de compromissos padrão se o usuário tiver clicado em **Mostrar**. A amostra registra que o provedor de compromissos padrão apareceu na tela.
 
-```cs 
+```cs
 private async void Show-Click(object sender, RoutedEventArgs e)
 {
     var dateToShow = new DateTimeOffset(2015, 6, 12, 18, 32, 0, 0, TimeSpan.FromHours(-8));
@@ -397,7 +400,7 @@ private async void Show-Click(object sender, RoutedEventArgs e)
 
 ## Criar um objeto de recorrência de compromisso e aplicar dados a ele
 
-Crie um objeto [**Windows.ApplicationModel.Appointments.AppointmentRecurrence**](https://msdn.microsoft.com/library/windows/apps/Dn297221recurrence) e o atribua a uma variável. Em seguida, aplique a **AppointmentRecurrence** as propriedades de recorrência que foram fornecidas na interface do usuário por um usuário.
+Crie um objeto [**Windows.ApplicationModel.Appointments.AppointmentRecurrence**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentrecurrence) e o atribua a uma variável. Em seguida, aplique a **AppointmentRecurrence** as propriedades de recorrência que foram fornecidas na interface do usuário por um usuário.
 
 ```cs
 private void Create-Click(object sender, RoutedEventArgs e)
@@ -502,7 +505,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
 
 [
               **ShowEditNewAppointmentAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn297221manager-showeditnewappointmentasync) funciona como [**ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/Dn297221manager-showaddappointmentasync) só que o diálogo de adição do compromisso é editável tornando possível que o usuário altere a data antes de salvá-lo.
+            ](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) funciona como [**ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) só que o diálogo de adição do compromisso é editável tornando possível que o usuário altere a data antes de salvá-lo.
 
 ``` cs
 private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
@@ -523,7 +526,7 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
     // An empty string return value indicates that the user canceled the operation before the appointment was added.
     String appointmentId =
         await Windows.ApplicationModel.Appointments.AppointmentManager.ShowEditNewAppointmentAsync(appointment);
-    
+
     if (appointmentId != String.Empty)
     {
         ResultTextBlock.Text = "Appointment Id: " + appointmentId;
@@ -539,7 +542,7 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
 
 [
               **ShowAppointmentDetailsAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn297221manager-showappointmentdetailsasync) faz com que o sistema mostre detalhes do compromisso específico. Você pode escolher ativar um aplicativo de calendário para mostrar detalhes do compromisso no próprio calendário. Ou o sistema irá exibir os detalhes do compromisso. Uma sobrecarga no método que aceita o argumento da data inicial é fornecida para mostrar detalhes, por exemplo, de um compromisso recorrente.
+            ](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) faz com que o sistema mostre detalhes do compromisso específico. Você pode escolher ativar um aplicativo de calendário para mostrar detalhes do compromisso no próprio calendário. Ou o sistema irá exibir os detalhes do compromisso. Uma sobrecarga no método que aceita o argumento da data inicial é fornecida para mostrar detalhes, por exemplo, de um compromisso recorrente.
 
 ```cs
 private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e)
@@ -573,9 +576,6 @@ Agora, você já conhece as noções básicas de como gerenciar compromissos. Ba
 
 
 
-
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Definir o objeto principal do jogo
-description: Agora, observaremos os detalhes do objeto principal do exemplo de jogo e como as regras implementadas são convertidas em interações com o ambiente do jogo.
+description: "Agora, observaremos os detalhes do objeto principal do exemplo de jogo e como as regras implementadas são convertidas em interações com o ambiente do jogo."
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 66e40c150b5eb4f57c9cddfaf472c56601b3fa0b
+
 ---
 
 # Definir o objeto principal do jogo
@@ -3620,6 +3624,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

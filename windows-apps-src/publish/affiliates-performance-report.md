@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Use os relatórios de desempenho de afiliadas em nível de aplicativos e de contas no painel do Centro de Desenvolvimento do Windows para visualizar os dados de desempenho para anúncios das afiliadas em seus aplicativos.
-title: Relatório de desempenho de afiliadas
+Description: "Use os relatórios de desempenho de afiliadas em nível de aplicativos e de contas no painel do Centro de Desenvolvimento do Windows para visualizar os dados de desempenho para anúncios das afiliadas em seus aplicativos."
+title: "Relatório de desempenho de afiliadas"
 ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
+translationtype: Human Translation
+ms.sourcegitcommit: 577b238875b2d0edd47d9ad0e5e73ca79a6acf75
+ms.openlocfilehash: 8c200c4f4b743aeaae71d6a6179fc15db0e7ec5e
+
 ---
 
 # Relatório de desempenho de afiliadas
@@ -45,6 +49,7 @@ A seção **Desempenho de afiliadas** em sua página **Visão geral do painel** 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

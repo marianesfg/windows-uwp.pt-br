@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Se for solicitado que você forneça um número de ID de IVA durante o processo de registro do Centro de Desenvolvimento, apresentamos algumas informações para você começar.
-title: Informações sobre IVA
+Description: "Se for solicitado que você forneça um número de ID de IVA durante o processo de registro do Centro de Desenvolvimento, apresentamos algumas informações para você começar."
+title: "Informações sobre IVA"
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4dd91c901ade83e482061bed781e3fdcd9dde141
+
 ---
 
 # Informações sobre IVA
@@ -246,6 +250,7 @@ Observe que a Microsoft não oferece consultoria fiscal, e a tabela a seguir é 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

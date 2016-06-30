@@ -1,8 +1,12 @@
 ---
 author: Mtoepke
-title: Ativação do Modo de Desenvolvedor do Xbox One
-description: Como ativar o Modo de Desenvolvedor para que você possa alternar entre o Modo de Varejo e o Modo de Desenvolvedor.
+title: "Ativação do Modo de Desenvolvedor do Xbox One"
+description: "Como ativar o Modo de Desenvolvedor para que você possa alternar entre o Modo de Varejo e o Modo de Desenvolvedor."
 area: Xbox
+translationtype: Human Translation
+ms.sourcegitcommit: 7d832fee5bcd3a15cee1e7d8f4c66da9b0afa5e1
+ms.openlocfilehash: 9ad9904150acb00982c96eebeaf010f7023d3320
+
 ---
 
 # Ativação do Modo de Desenvolvedor do Xbox One
@@ -83,6 +87,7 @@ Quando o Modo de Desenvolvedor tiver sido habilitado no seu console, use **Dev H
 - [UWP no Xbox One](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: martinekuan
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
-title: Prepare-se para começar
-description: É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
+title: "Prepare-se para começar"
+description: "É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8c5dfb692d647a25eea13036cd320366f3c5a09c
+
 ---
 # Prepare-se para começar
 
@@ -51,6 +55,7 @@ Para obter a lista completa de ferramentas e downloads, consulte [Downloads](htt
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

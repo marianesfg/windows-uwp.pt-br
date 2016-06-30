@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Definir condições para executar uma tarefa em segundo plano
-description: Saiba como definir condições que controlam quando a sua tarefa em segundo plano será executada.
+author: TylerMSFT
+title: "Definir condições para executar uma tarefa em segundo plano"
+description: "Saiba como definir condições que controlam quando a sua tarefa em segundo plano será executada."
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
+
 ---
 
 # Definir condições para executar uma tarefa em segundo plano
@@ -184,6 +187,7 @@ O trecho a seguir mostra várias condições no contexto de criação e registro
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

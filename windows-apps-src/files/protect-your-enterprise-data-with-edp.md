@@ -1,10 +1,14 @@
 ---
 author: TylerMSFT
-Description: 'Este tópico mostra exemplos das tarefas de codificação necessárias para obter algumas das situações de Proteção de dados empresariais (EDP) relacionados a arquivos mais comuns.'
-MS-HAID: 'dev\_files.protect\_your\_enterprise\_data\_with\_edp'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Este tópico mostra exemplos das tarefas de codificação necessárias para obter algumas das situações de Proteção de dados empresariais (EDP) relacionados a arquivos mais comuns."
+MS-HAID: dev\_files.protect\_your\_enterprise\_data\_with\_edp
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'Usar a Proteção de dados empresariais (EDP) para proteger arquivos'
+title: "Usar a Proteção de dados empresariais (EDP) para proteger arquivos"
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 2d9b1ec4e39e5c8a100030184ee9287a0d97ea24
+
 ---
 
 # Usar a Proteção de dados empresariais (EDP) para proteger arquivos
@@ -264,6 +268,7 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

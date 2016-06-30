@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: A navegação em aplicativos da Plataforma Universal do Windows (UWP) é baseada em um modelo flexível de estruturas de navegação, elementos de navegação e recursos no nível do sistema.
-title: Noções básicas de design de navegação de aplicativos da Plataforma Universal do Windows (UWP)
+Description: "A navegação em aplicativos da Plataforma Universal do Windows (UWP) é baseada em um modelo flexível de estruturas de navegação, elementos de navegação e recursos no nível do sistema."
+title: "Noções básicas de design de navegação de aplicativos da Plataforma Universal do Windows (UWP)"
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 6926d70c7140b1545a8b5492981d6d0b61af3784
+
 ---
 
 #  Noções básicas de design de navegação para aplicativos UWP
@@ -264,6 +268,7 @@ Você pode combinar elementos de navegação para criar uma experiência de nave
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

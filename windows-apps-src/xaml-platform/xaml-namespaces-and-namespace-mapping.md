@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Este tópico explica os mapeamentos de namespace XML/XAML (xmlns) conforme encontrados no elemento raiz da maioria dos arquivos XAML. Descreve também como produzir mapeamentos similares para tipos e assemblies personalizados.
+description: "Este tópico explica os mapeamentos de namespace XML/XAML (xmlns) conforme encontrados no elemento raiz da maioria dos arquivos XAML. Descreve também como produzir mapeamentos similares para tipos e assemblies personalizados."
 title: Namespaces XAML e mapeamento de namespace
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
+translationtype: Human Translation
+ms.sourcegitcommit: 3ca9492b334bf4b3d4f0fcab8fca5625f4e23fa5
+ms.openlocfilehash: fe24a66836d85e8d102ebc6b23b42c32a687c593
+
 ---
 
 # Namespaces XAML e mapeamento de namespace
@@ -109,6 +113,7 @@ Se você estiver fazendo referência a propriedades anexadas, a parte do tipo de
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

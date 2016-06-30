@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis.
+Description: "Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis."
 title: Modelos de blocos especiais
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: ab7366b8b3cbf75f1f7e9fe35ca83077ac21d081
+
 ---
 
 # Modelos de blocos especiais
@@ -283,6 +287,7 @@ Para enviar a notificação, consulte [Escolher um método de entrega de notific
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

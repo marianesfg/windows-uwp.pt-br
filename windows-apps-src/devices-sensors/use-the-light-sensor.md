@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: 15BAB25C-DA8C-4F13-9B8F-EA9E4270BCE9
 title: Usar o sensor de luz
-description: Aprenda a usar o sensor de luz ambiente para detectar alterações na iluminação.
+description: "Aprenda a usar o sensor de luz ambiente para detectar alterações na iluminação."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 289d50ff4f45147c46bd66c526cf109d8fdf6d32
+
 ---
 # Usar o sensor de luz
 
@@ -167,6 +171,7 @@ Os novos valores são gravados em um TextBlock encontrado no XAML do projeto.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

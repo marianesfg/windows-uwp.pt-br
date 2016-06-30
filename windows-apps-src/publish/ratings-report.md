@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: O relatório Classificações no painel do Centro de Desenvolvimento do Windows permite que você consulte a distribuição de como os clientes classificam seu aplicativo na Windows Store.
-title: Relatório de classificações
+Description: "O relatório Classificações no painel do Centro de Desenvolvimento do Windows permite que você consulte a distribuição de como os clientes classificam seu aplicativo na Windows Store."
+title: "Relatório de classificações"
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e0258bc9402772d0a036b32563348d11acd0fdb7
+
 ---
 
 # Relatório de classificações
@@ -68,6 +72,7 @@ Por padrão, podemos mostrar o mercado que tinha mais críticas e continuar para
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: Xansky
-description: Como usar informações do calendário e contatos em seu aplicativo UWP.
-title: Contatos e calendário
+description: "Como usar informações do calendário e contatos em seu aplicativo UWP."
+title: "Contatos e calendário"
 ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4e40ac413e021aba26776053871a4c6f1a215b2a
+
 ---
 
 # Contatos e calendário
@@ -33,6 +37,7 @@ Para conhecer alguns métodos diferentes que o seu aplicativo pode usar para ace
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

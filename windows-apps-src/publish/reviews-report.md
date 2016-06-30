@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: O relatório Críticas do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja.
-title: Relatório de avaliações
+Description: "O relatório Críticas do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja."
+title: "Relatório de avaliações"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7d1a768ce558718b43a4d124f7c88868e999fb93
+
 ---
 
 # Relatório de avaliações
@@ -79,6 +83,7 @@ Veja algumas ações adicionais que você pode realizar com base nas classifica�
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

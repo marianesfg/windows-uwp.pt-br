@@ -1,11 +1,15 @@
 ---
 author: Jwmsft
-Description: O seletor de data oferece uma maneira padronizada de permitir que os usuários escolham um valor de data localizado usando entrada por toque, mouse ou teclado. 
+Description: "O seletor de data oferece uma maneira padronizada de permitir que os usuários escolham um valor de data localizado usando entrada por toque, mouse ou teclado."
 title: Seletor de data
 ms.assetid: d4a01425-4dee-4de3-9a05-3e85c3fc03cb
 isNew: true
 label: Date picker
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: c237d4bc013ad0a1d0d16f695f4332a6aac7efdc
+
 ---
 
 # Seletor de data
@@ -58,6 +62,7 @@ O seletor de data resultante tem esta aparência:
 - [Seletor de hora](time-picker.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

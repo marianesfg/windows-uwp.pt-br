@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Interoperabilidade entre DirectX e XAML
-description: Você pode usar a XAML (Extensible Application Markup Language) e o Microsoft DirectX juntos no seu jogo UWP (Plataforma Universal do Windows).
+description: "Você pode usar a XAML (Extensible Application Markup Language) e o Microsoft DirectX juntos no seu jogo UWP (Plataforma Universal do Windows)."
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 97e694ae2fb8af30a35aa9ebdb714db50a506e6c
+
 ---
 
 # Interoperabilidade entre DirectX e XAML
@@ -38,7 +42,7 @@ Depois de determinar como pretende usar o DirectX, você pode usar um destes tip
 
 -   Se a imagem for maior que o estado real fornecido da tela, e puder ser panorâmica ou ampliada pelo usuário, use [**Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Esse tipo manipula uma superfície de desenho dimensionada do DirectX que é maior que a tela. Como [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041), você usa isso ao compor uma imagem ou controle complexo dinamicamente. E, assim como **SurfaceImageSource**, ele não funciona bem para jogos de alto desempenho. Alguns exemplos de elementos XAML que podem usar um **VirtualSurfaceImageSource** são controles de mapa ou um visualizador de documentos para imagens grandes e densas.
 
--   Se você estiver usando o DirectX para apresentar gráficos atualizados em tempo real ou em uma situação na qual as atualizações devem vir em intervalos regulares de baixa latência, use a classe [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) para que você possa atualizar os gráficos sem sincronizar com o timer de atualização da estrutura da XAML. Esse tipo permite acessar diretamente a cadeia de troca do dispositivo gráfico ([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)) e a camada da XAML sobre o destino da renderização. Esse tipo funciona muito bem para jogos e outros aplicativos do DirectX em tela inteira que necessitam de uma interface de usuário baseada em XAML. É necessário conhecer bem o DirectX para usar essa abordagem, incluindo as tecnologias Microsoft DirectX Graphics Infrastructure (DXGI), Direct2D e Direct3D. Para saber mais, consulte [Guia de programação para Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
+-   Se você estiver usando o DirectX para apresentar gráficos atualizados em tempo real ou em uma situação na qual as atualizações devem vir em intervalos regulares de baixa latência, use a classe [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) para que você possa atualizar os gráficos sem sincronizar com o timer de atualização da estrutura da XAML. Esse tipo permite acessar diretamente a cadeia de troca do dispositivo gráfico ([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)) e a camada da XAML sobre o destino da renderização. Esse tipo funciona muito bem para jogos e outros aplicativos do DirectX em tela inteira que necessitam de uma interface de usuário baseada em XAML. É necessário conhecer bem o DirectX para usar essa abordagem, incluindo as tecnologias Microsoft DirectX Graphics Infrastructure (DXGI), Direct2D e Direct3D. Para saber mais, consulte [Guia de programação para Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345).
 
 ## SurfaceImageSource
 
@@ -95,7 +99,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**SurfaceIma
 
      
 
-    Este método retorna o deslocamento do ponto (x,y) do retângulo de destino atualizado no parâmetro *offset*. Você pode usar esse deslocamento para determinar onde desenhar em [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565)
+    Este método retorna o deslocamento do ponto (x,y) do retângulo de destino atualizado no parâmetro *offset*. Você pode usar esse deslocamento para determinar onde desenhar em [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565).
 
     ```cpp
     ComPtr<IDXGISurface> surface;
@@ -111,7 +115,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**SurfaceIma
     }
     ```
 
-5.  Chame [**ISurfaceImageSourceNative::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848324) para completar o bitmap. Transmita esse bitmap para um [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101)
+5.  Chame [**ISurfaceImageSourceNative::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848324) para completar o bitmap. Transmita esse bitmap para um [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101).
 
     ```cpp
     m_sisNative->EndDraw();
@@ -178,7 +182,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**VirtualSur
     m_vsisNative->SetDevice(dxgiDevice.Get());
     ```
 
-4.  Chame [**IVirtualSurfaceImageSourceNative::RegisterForUpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848334), transmitindo uma referência à sua implementação de [**IVirtualSurfaceUpdatesCallbackNative**](https://msdn.microsoft.com/library/windows/desktop/hh848336)
+4.  Chame [**IVirtualSurfaceImageSourceNative::RegisterForUpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848334), transmitindo uma referência à sua implementação de [**IVirtualSurfaceUpdatesCallbackNative**](https://msdn.microsoft.com/library/windows/desktop/hh848336).
 
     ```cpp
     class MyContentImageSource : public IVirtualSurfaceUpdatesCallbackNative
@@ -239,7 +243,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**VirtualSur
 
     1.  Forneça um ponteiro para o objeto [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) para [**IVirtualSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) e desenhe nessa superfície usando o DirectX. Somente a área especificada para atualização no parâmetro *updateRect* será desenhada.
 
-        Como no caso de [**IlSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323), esse método retorna o deslocamento do ponto (x,y) do retângulo-alvo atualizado no parâmetro *offset*. Você pode usar esse deslocamento para determinar onde desenhar em [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565)
+        Como no caso de [**IlSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323), esse método retorna o deslocamento do ponto (x,y) do retângulo-alvo atualizado no parâmetro *offset*. Você pode usar esse deslocamento para determinar onde desenhar em [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565).
 
         > **Observação**   Você pode ter somente uma operação [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) pendente ativa por vez para cada [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527).
 
@@ -275,25 +279,25 @@ Para assegurar um bom desempenho, há algumas limitações para o tipo [**SwapCh
 -   Há no máximo 4 instâncias de [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) por aplicativo.
 -   Não há suporte para as propriedades **Opacity**, **RenderTransform**, **Projection** e **Clip** herdadas por [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834).
 -   Você deve definir a altura e a largura da cadeia de troca do DirectX (em [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)) como as dimensões atuais da janela do aplicativo. Caso contrário, o conteúdo da exibição será ajustado (usando **DXGI\_SCALING\_STRETCH**) para caber.
--   Você deve definir o modo de dimensionamento da cadeia de troca do DirectX (em [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)) como **DXGI\_SCALING\_STRETCH**
--   Não é possível definir o modo alfa da cadeia de troca do DirectX (em [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)) como **DXGI\_ALPHA\_MODE\_PREMULTIPLIED**
--   Você deve criar a cadeia de troca do DirectX chamando [**IDXGIFactory2::CreateSwapChainForComposition**](https://msdn.microsoft.com/library/windows/desktop/hh404558)
+-   Você deve definir o modo de dimensionamento da cadeia de troca do DirectX (em [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)) como **DXGI\_SCALING\_STRETCH**.
+-   Não é possível definir o modo alfa da cadeia de troca do DirectX (em [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)) como **DXGI\_ALPHA\_MODE\_PREMULTIPLIED**.
+-   Você deve criar a cadeia de troca do DirectX chamando [**IDXGIFactory2::CreateSwapChainForComposition**](https://msdn.microsoft.com/library/windows/desktop/hh404558).
 
-Atualize o [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) com base nas necessidades do seu aplicativo, e não as atualizações da estrutura da XAML. Se você precisar sincronizar as atualizações de **SwapChainPanel** com as da estrutura da XAML, registre-se para o evento [**Windows::UI::Xaml::Media::CompositionTarget::Rendering**](https://msdn.microsoft.com/library/windows/apps/br228127). Caso contrário, será necessário levar em consideração todos os problemas entre threads se você tentar atualizar os elementos XAML de um thread diferente daquele que atualiza **SwapChainPanel**
+Atualize o [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) com base nas necessidades do seu aplicativo, e não as atualizações da estrutura da XAML. Se você precisar sincronizar as atualizações de **SwapChainPanel** com as da estrutura da XAML, registre-se para o evento [**Windows::UI::Xaml::Media::CompositionTarget::Rendering**](https://msdn.microsoft.com/library/windows/apps/br228127). Caso contrário, será necessário levar em consideração todos os problemas entre threads se você tentar atualizar os elementos XAML de um thread diferente daquele que atualiza **SwapChainPanel**.
 
-Há também algumas práticas gerais recomendadas a serem seguidas no design para que o seu aplicativo use [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)
+Há também algumas práticas gerais recomendadas a serem seguidas no design para que o seu aplicativo use [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834).
 
 -   [
               **SwapChainPanel**
             ](https://msdn.microsoft.com/library/windows/apps/dn252834) herda de [**Windows::UI::Xaml::Controls::Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) e dá suporte a um comportamento de layout semelhante. Familiarize-se com o tipo **Grid** e suas propriedades.
 
--   Depois de uma cadeia de troca do DirectX ser definida, todos os eventos de entrada que forem acionados para [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) funcionarão do mesmo modo que fazem para qualquer outro elemento XAML. Você não define um pincel de tela de fundo para **SwapChainPanel** e não precisa manipular eventos de entrada do objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do aplicativo diretamente como faz em aplicativos DirectX que não usam **SwapChainPanel**
+-   Depois de uma cadeia de troca do DirectX ser definida, todos os eventos de entrada que forem acionados para [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) funcionarão do mesmo modo que fazem para qualquer outro elemento XAML. Você não define um pincel de tela de fundo para **SwapChainPanel** e não precisa manipular eventos de entrada do objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do aplicativo diretamente como faz em aplicativos DirectX que não usam **SwapChainPanel**.
 
 -   • Todo o conteúdo da árvore visual do elemento XAML em um filho direto de um [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) é cortado para o tamanho do layout do filho imediato do objeto **SwapChainPanel**. Nenhum conteúdo que for transformado fora desses limites do layout será renderizado. Portanto, coloque todo o conteúdo da XAML que você animar com um [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) XAML na árvore visual sob um elemento cujos limites de layout sejam grandes o suficiente para conter toda a gama da animação.
 
 -   Limite o número de elementos visuais imediatos da XAML sob um [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834). Se possível, agrupe os elementos que estão em estreita proximidade com um pai comum. Porém, há uma perda de desempenho entre o número de filhos visuais imediatos e o tamanho dos filhos: o excesso de elementos XAML, ou elementos XAML desnecessariamente grandes, pode afetar o desempenho geral. Da mesma forma, não crie um elemento de tela inteira individual da XAML filho para o **SwapChainPanel** do seu aplicativo, pois isso aumenta o exagero no aplicativo e diminui o desempenho. Como regra geral, não crie mais de 8 filhos visuais imediatos da XAML para o **SwapChainPanel** do seu aplicativo, e cada elemento deve ter um tamanho de layout somente grande o suficiente para conter o conteúdo visual do elemento. No entanto, você pode tornar a árvore visual de elementos em um elemento filho do **SwapChainPanel** suficientemente complexa sem prejudicar demais o desempenho.
 
-> **Observação**   Em geral, seus aplicativos DirectX devem criar cadeias de troca na orientação paisagem e se igualar ao tamanho da janela de exibição (que normalmente é a resolução de tela nativa na maioria dos jogos da Windows Store). Isso garante que seu aplicativo use a implementação de cadeia de troca ideal quando não tiver nenhuma sobreposição XAML visível. Se o aplicativo for girado para o modo retrato, ele deverá chamar [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801) na cadeia de troca existente, aplicar uma transformação ao conteúdo, se necessário, e depois chamar [**SetSwapChain**](https://msdn.microsoft.com/library/windows/desktop/dn302144) novamente na mesma cadeia de troca. Da mesma forma, seu aplicativo deverá chamar **SetSwapChain** novamente na mesma cadeia de troca sempre que esta for redimensionada com uma chamada para [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577)
+> **Observação**   Em geral, seus aplicativos DirectX devem criar cadeias de troca na orientação paisagem e se igualar ao tamanho da janela de exibição (que normalmente é a resolução de tela nativa na maioria dos jogos da Windows Store). Isso garante que seu aplicativo use a implementação de cadeia de troca ideal quando não tiver nenhuma sobreposição XAML visível. Se o aplicativo for girado para o modo retrato, ele deverá chamar [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801) na cadeia de troca existente, aplicar uma transformação ao conteúdo, se necessário, e depois chamar [**SetSwapChain**](https://msdn.microsoft.com/library/windows/desktop/dn302144) novamente na mesma cadeia de troca. Da mesma forma, seu aplicativo deverá chamar **SetSwapChain** novamente na mesma cadeia de troca sempre que esta for redimensionada com uma chamada para [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577).
 
  
 
@@ -323,7 +327,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**SwapChainP
     panelInspectable->QueryInterface(__uuidof(ISwapChainPanelNative), (void **)&m_swapChainNative);
     ```
 
-3.  Crie o dispositivo DXGI e a cadeia de troca e defina esta última como [**ISwapChainPanelNative**](https://msdn.microsoft.com/library/windows/desktop/dn302143) transmitindo-a para [**SetSwapChain**](https://msdn.microsoft.com/library/windows/desktop/dn302144)
+3.  Crie o dispositivo DXGI e a cadeia de troca e defina esta última como [**ISwapChainPanelNative**](https://msdn.microsoft.com/library/windows/desktop/dn302143) transmitindo-a para [**SetSwapChain**](https://msdn.microsoft.com/library/windows/desktop/dn302144).
 
     ```cpp
     Microsoft::WRL::ComPtr<IDXGISwapChain1>               m_swapChain;    
@@ -389,6 +393,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**SwapChainP
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

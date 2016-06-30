@@ -1,8 +1,11 @@
 ---
 author: Mtoepke
-title: Introdução ao desenvolvimento de aplicativos UWP no Xbox One
+title: "Introdução ao desenvolvimento de aplicativos UWP no Xbox One"
 description: Como configurar o seu computador e Xbox One para o desenvolvimento UWP.
 area: Xbox
+ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
+ms.openlocfilehash: b070b6bec350c3c893f934e212b1de743b349861
+
 ---
 
 #Introdução ao desenvolvimento de aplicativos UWP no Xbox One
@@ -14,13 +17,13 @@ Antes de começar, você precisará fazer o seguinte:
 -   Criar uma conta do [Centro de Desenvolvimento do Windows](https://dev.windows.com).
 -   Inscrever-se no [Programa Windows Insider](https://insider.windows.com/). Você precisará disso para obter a visualização do SDK do Windows.
 -   Configurar uma computador com Windows 10 (qualquer versão serve, incluindo a versão de pré-lançamento do Windows 10 do Programa Windows Insider). Para esta visualização, nossas ferramentas de desenvolvimento precisam que você esteja executando o Windows 10. 
--   Conectar seu console Xbox One a uma rede com fio (redes sem fio podem funcionar, mas o desempenho é muito melhor atualmente com uma conexão com fio).
-- Ter pelo menos 30 GB de espaço livre no seu console Xbox One.
+-   Conecte seu console do Xbox One a uma rede. Para obter melhor desempenho, use uma conexão com fio.
+- Ter pelo menos 5 GB de espaço livre no seu console Xbox One.
 
 ## Configurando o seu computador de desenvolvimento
 1.  Instale o Visual Studio 2015 Update 2. Lembre-se de selecionar a instalação **Personalizada** e marcar a caixa de seleção **Ferramentas de Desenvolvimento de Aplicativo Universal do Windows**. Isso não é parte da instalação padrão. Consulte [Development environment setup](development-environment-setup.md) para obter mais informações (além disso, se você for um desenvolvedor de C++, lembre-se de selecionar Instalação personalizada e C++ também).
 
-2.  Instale a versão prévia 14295 do SDK do Windows 10. Você pode obtê-la no [Programa Windows Insider](http://go.microsoft.com/fwlink/p/?LinkId=780552).
+2.  Instale a versão prévia mais recente do SDK do Windows 10. Você pode obtê-la no [Programa Windows Insider](http://go.microsoft.com/fwlink/p/?LinkId=780552).
   
   > **Importante**
             &nbsp;&nbsp;A instalação dessa visualização do SDK em seu computador impedirá que você envie aplicativos para a loja criada nesse computador. Por isso, não instale em seu computador de desenvolvimento de produção. 
@@ -34,6 +37,9 @@ Antes de começar, você precisará fazer o seguinte:
   
   > **Observação**
             &nbsp;&nbsp;Seus aplicativos e jogos de varejo não serão executados no Modo de Desenvolvedor, apenas os aplicativos ou jogos que você criar. Volte para o Modo de Varejo para executar seus jogos e aplicativos favoritos.
+  
+  > **Observação**
+            &nbsp;&nbsp;Para poder implantar um aplicativo ao Xbox One no Modo de Desenvolvedor, você deve ter um usuário conectado no console. Você pode usar sua conta do Xbox Live existente ou criar uma nova conta para seu console em modo de desenvolvimento. 
 
 ## Criando seu primeiro projeto no Visual Studio 2015
 
@@ -61,6 +67,7 @@ Consulte [Development environment setup](development-environment-setup.md) para 
 - [UWP no Xbox One](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

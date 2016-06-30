@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Criar e registrar uma tarefa em segundo plano
-description: Crie uma classe de tarefa em segundo plano e a registre para ser executada quando seu aplicativo não estiver em primeiro plano.
+description: "Crie uma classe de tarefa em segundo plano e a registre para ser executada quando seu aplicativo não estiver em primeiro plano."
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: dd107f55e6dbeda6f48de27b3a84006954a46338
+
 ---
 
 # Criar e registrar uma tarefa em segundo plano
@@ -44,9 +47,9 @@ As seguintes etapas mostram como escrever uma nova classe que implementa a inter
 >     //
 >     // ExampleBackgroundTask.cs
 >     //
-> 
+>
 >     using Windows.ApplicationModel.Background;
-> 
+>
 >     namespace Tasks
 >     {
 >         public sealed class ExampleBackgroundTask : IBackgroundTask
@@ -62,35 +65,35 @@ As seguintes etapas mostram como escrever uma nova classe que implementa a inter
 >     //
 >     // ExampleBackgroundTask.cpp
 >     //
-> 
+>
 >     #include "ExampleBackgroundTask.h"
-> 
+>
 >     using namespace Tasks;
-> 
+>
 >     void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 >     {
-> 
+>
 >     }
 >  ```
 
-    
+
 > ```cpp
 >     //
 >     // ExampleBackgroundTask.h
 >     //
-> 
+>
 >     #pragma once
-> 
+>
 >     using namespace Windows::ApplicationModel::Background;
-> 
+>
 >     namespace RuntimeComponent1
 >     {
 >         public ref class ExampleBackgroundTask sealed : public IBackgroundTask
 >         {
-> 
+>
 >         public:
 >             ExampleBackgroundTask();
-> 
+>
 >             virtual void Run(IBackgroundTaskInstance^ taskInstance);
 >             void OnCompleted(
 >                     BackgroundTaskRegistration^ task,
@@ -158,7 +161,7 @@ O procedimento abaixo é concluído em uma de suas classes de aplicativo (por ex
 > ```cs
 >     var taskRegistered = false;
 >     var exampleTaskName = "ExampleBackgroundTask";
-> 
+>
 >     foreach (var task in BackgroundTaskRegistration.AllTasks)
 >     {
 >         if (task.Value.Name == exampleTaskName)
@@ -171,20 +174,20 @@ O procedimento abaixo é concluído em uma de suas classes de aplicativo (por ex
 > ```cpp
 >     boolean taskRegistered = false;
 >     Platform::String^ exampleTaskName = "ExampleBackgroundTask";
-> 
+>
 >     auto iter = BackgroundTaskRegistration::AllTasks->First();
 >     auto hascur = iter->HasCurrent;
-> 
+>
 >     while (hascur)
 >     {
 >         auto cur = iter->Current->Value;
-> 
+>
 >         if(cur->Name == exampleTaskName)
 >         {
 >             taskRegistered = true;
 >             break;
 >         }
-> 
+>
 >         hascur = iter->MoveNext();
 >     }
 > ```
@@ -198,14 +201,14 @@ O procedimento abaixo é concluído em uma de suas classes de aplicativo (por ex
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 >     var builder = new BackgroundTaskBuilder();
-> 
+>
 >     builder.Name = exampleTaskName;
 >     builder.TaskEntryPoint = "RuntimeComponent1.ExampleBackgroundTask";
 >     builder.SetTrigger(new SystemTrigger(SystemTriggerType.TimeZoneChange, false));
 > ```
 > ```cpp
 >     auto builder = ref new BackgroundTaskBuilder();
-> 
+>
 >     builder->Name = exampleTaskName;
 >     builder->TaskEntryPoint = "RuntimeComponent1.ExampleBackgroundTask";
 >     builder->SetTrigger(ref new SystemTrigger(SystemTriggerType::TimeZoneChange, false));
@@ -349,8 +352,6 @@ Veja os seguintes tópicos relacionados para obter referência de API, diretriz 
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

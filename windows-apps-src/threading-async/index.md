@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: beac6333-655a-4bcf-9caf-bba15f715ea5
-title: Programação threading e assíncrona
-description: A programação threading e assíncrona permite que seu aplicativo realize o trabalho de forma assíncrona em threads paralelos.
+title: "Programação threading e assíncrona"
+description: "A programação threading e assíncrona permite que seu aplicativo realize o trabalho de forma assíncrona em threads paralelos."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d69259d449ffb7d4dfc1824c77c16eb9e1cdb026
+
 ---
 # Programação threading e assíncrona
 
@@ -37,6 +41,7 @@ O pool de threads é mais eficiente no gerenciamento de threads porque reduz a s
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: A Windows Store oferece a Cobrança da Operadora Móvel como um método de pagamento para operadoras de celular que dão suporte a esse recurso.
-title: Cobrança da operadora móvel
+Description: "A Windows Store oferece a Cobrança da Operadora Móvel como um método de pagamento para operadoras de celular que dão suporte a esse recurso."
+title: "Cobrança da operadora móvel"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
+ms.sourcegitcommit: 76ea880f7dd1e737b3b0640d10a138e0eb790802
+ms.openlocfilehash: d22d89523ff3089b3b56d1a85fa2c4b137389887
+
 ---
 
 # Cobrança da operadora móvel
@@ -27,6 +30,7 @@ A implementação do Windows 10 de Cobrança da Operadora Móvel tem suporte des
 |----------------|------------------|
 | Finlândia        | DNA, Elisa       |
 | Alemanha        | O2               |
+| Noruega         | Telenor          |
 | Suíça    | Swisscom         |
 | Estados Unidos  | Sprint           |
 
@@ -111,6 +115,7 @@ Essa lista será atualizada regularmente conforme expandimos o suporte para a Co
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

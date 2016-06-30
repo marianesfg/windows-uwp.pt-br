@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Você pode fornecer informações adicionais sobre seu aplicativo na seção Declarações do aplicativo da página Propriedades do aplicativo durante o processo de envio.
-title: Declarações de aplicativo
+Description: "Você pode fornecer informações adicionais sobre seu aplicativo na seção Declarações do aplicativo da página Propriedades do aplicativo durante o processo de envio."
+title: "Declarações de aplicativo"
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae
+
 ---
 
 # Declarações de aplicativo
@@ -62,6 +66,7 @@ Se você deseja impedir que os dados do aplicativo sejam incluídos em backups a
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

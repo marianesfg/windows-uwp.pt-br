@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Arquivos, pastas e bibliotecas
-description: Aprenda como ler e gravar configurações do aplicativo, seletores de pastas e arquivos e sobre locais especiais de área restrita, como a biblioteca de vídeo/música.
+description: "Aprenda como ler e gravar configurações do aplicativo, seletores de pastas e arquivos e sobre locais especiais de área restrita, como a biblioteca de vídeo/música."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2056a5adee0ce6e65962eeba21fccbfe976c811a
+
 ---
  # Arquivos, pastas e bibliotecas
 
@@ -41,6 +45,7 @@ Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

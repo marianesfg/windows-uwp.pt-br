@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: As notificações brutas são notificações por push curtas com finalidade geral.
-title: Visão geral de notificações brutas
+Description: "As notificações brutas são notificações por push curtas com finalidade geral."
+title: "Visão geral de notificações brutas"
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 4b487e44c7acd882a86c0b24dd9994092d976b06
+
 ---
 
 # Visão geral de notificações brutas
@@ -126,6 +130,7 @@ Você pode saber mais baixando a [Amostra de notificações de dados brutos](htt
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

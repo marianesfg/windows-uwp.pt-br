@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: O painel do Centro de Desenvolvimento do Windows oferece a opção de tornar seu aplicativo disponível apenas para pessoas específicas para que você possa fazer com que testadores o testem antes de oferecê-lo ao público.
-title: Teste da versão beta e distribuição específica
+Description: "O painel do Centro de Desenvolvimento do Windows oferece a opção de tornar seu aplicativo disponível apenas para pessoas específicas para que você possa fazer com que testadores o testem antes de oferecê-lo ao público."
+title: "Teste da versão beta e distribuição específica"
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a544565bf7bb82f2be1ded3e60836d5d191c6e93
+
 ---
 
 # Teste da versão beta e distribuição específica
@@ -81,6 +85,7 @@ Se você escolher essa opção, tenha o seguinte em mente:
 -   Você não pode revogar o acesso ao aplicativo que os testadores baixá-lo. Depois que eles baixarem o aplicativo, os testadores poderão continuar a usá-lo e receberão as atualizações que você enviar.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

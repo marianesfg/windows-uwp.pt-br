@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Adicionar uma tela inicial
 description: Defina a imagem da tela inicial e a cor da tela de fundo usando o Microsoft Visual Studio 2015.
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 261b52d1835e992a784aa5fa356230fdd326b8c5
+
 ---
 
 # Adicionar uma tela inicial
@@ -73,8 +76,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

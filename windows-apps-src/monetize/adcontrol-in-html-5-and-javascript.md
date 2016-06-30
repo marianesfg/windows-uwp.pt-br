@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
-description: Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo JavaScript/HTML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1.
+description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo JavaScript/HTML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1."
 title: AdControl em HTML 5 e Javascript
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 6e96b085132126a2c3e7b0b0b86124aba4cd651e
+
 ---
 
 # AdControl em HTML 5 e Javascript
@@ -128,6 +132,7 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

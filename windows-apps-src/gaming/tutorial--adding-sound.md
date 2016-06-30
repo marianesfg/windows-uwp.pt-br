@@ -1,21 +1,25 @@
 ---
 author: mtoepke
 title: Adicionar som
-description: Nesta etapa, examinaremos como o exemplo de jogo de tiro cria um objeto para reprodução de som usando as APIs XAudio2.
+description: "Nesta etapa, examinaremos como o exemplo de jogo de tiro cria um objeto para reprodução de som usando as APIs XAudio2."
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f9e536e71dd7b5c94d587a8bb66df3b41cc9a4ae
+
 ---
 
 # Adicionar som
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Nesta etapa, examinaremos como o exemplo de jogo de tiro cria um objeto para reprodução de som usando as APIs [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
 
 ## Objetivo
 
 
--   Adicionar saída de som usando [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813)
+-   Adicionar saída de som usando [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
 
 No exemplo de jogo, os objetos de áudio e os comportamentos são definidos em três arquivos:
 
@@ -203,15 +207,15 @@ Platform::Array<byte>^  MediaReader::LoadMedia(_In_ Platform::String^ filename)
 
 Esse método usa as APIs [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) para ler o arquivo de áudio .wav como um buffer de modulação por código de pulso (PCM).
 
-1.  Cria um objeto leitor de origem de mídia ([**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655)) chamando [**MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110)
+1.  Cria um objeto leitor de origem de mídia ([**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655)) chamando [**MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110).
 2.  Cria um tipo de mídia ([**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850)) para decodificar o arquivo de áudio chamando [**MFCreateMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms693861). Esse método especifica que a saída decodificada é áudio PCM, um tipo de áudio que o XAudio2 pode usar.
-3.  Define o tipo de mídia de saída decodificada para o leitor chamando [**IMFSourceReader::SetCurrentMediaType**](https://msdn.microsoft.com/library/windows/desktop/bb970432)
+3.  Define o tipo de mídia de saída decodificada para o leitor chamando [**IMFSourceReader::SetCurrentMediaType**](https://msdn.microsoft.com/library/windows/desktop/bb970432).
 4.  Cria um buffer [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799) e copia os resultados de uma chamada para [**IMFMediaType::MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177) no objeto [**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850). Isso formata o buffer que contém o arquivo de áudio depois que ele é carregado.
 5.  Obtém a duração em segundos do fluxo de áudio chamando [**IMFSourceReader::GetPresentationAttribute**](https://msdn.microsoft.com/library/windows/desktop/dd374662) e converte-a para bytes.
-6.  Lê o arquivo de áudio como um fluxo chamando [**IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665)
+6.  Lê o arquivo de áudio como um fluxo chamando [**IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665).
 7.  Copia o conteúdo do buffer da amostra de áudio para uma matriz retornada pelo método.
 
-O mais importante em **SoundEffect::Initialize** é a criação do objeto de voz de origem, **m\_sourceVoice**, a partir da voz de masterização. A voz de origem é usada para a reprodução efetiva do buffer de dados de som obtido de **MediaReader::LoadMedia**
+O mais importante em **SoundEffect::Initialize** é a criação do objeto de voz de origem, **m\_sourceVoice**, a partir da voz de masterização. A voz de origem é usada para a reprodução efetiva do buffer de dados de som obtido de **MediaReader::LoadMedia**.
 
 O exemplo de jogo chama esse método da seguinte maneira ao inicializar o objeto **SoundEffect**, como aqui:
 
@@ -298,7 +302,7 @@ void SoundEffect::PlaySound(_In_ float volume)
 }
 ```
 
-Para reproduzir o som, esse método usa o objeto de voz de origem **m\_sourceVoice** para iniciar a reprodução do buffer de dados de som **m\_soundData**. Ele cria um [**XAUDIO2\_BUFFER**](https://msdn.microsoft.com/library/windows/desktop/ee419228), ao qual fornece uma referência ao buffer de dados de som e, em seguida, o envia com uma chamada para [**IXAudio2SourceVoice::SubmitSourceBuffer**](https://msdn.microsoft.com/library/windows/desktop/ee418473). Com os dados de som na fila, **SoundEffect::PlaySound** começa a reproduzir chamando [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471)
+Para reproduzir o som, esse método usa o objeto de voz de origem **m\_sourceVoice** para iniciar a reprodução do buffer de dados de som **m\_soundData**. Ele cria um [**XAUDIO2\_BUFFER**](https://msdn.microsoft.com/library/windows/desktop/ee419228), ao qual fornece uma referência ao buffer de dados de som e, em seguida, o envia com uma chamada para [**IXAudio2SourceVoice::SubmitSourceBuffer**](https://msdn.microsoft.com/library/windows/desktop/ee418473). Com os dados de som na fila, **SoundEffect::PlaySound** começa a reproduzir chamando [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471).
 
 Agora, sempre que ocorre uma colisão entre a munição e um alvo, uma chamada para **SoundEffect::PlaySound** provoca a reprodução de um ruído.
 
@@ -307,7 +311,7 @@ Agora, sempre que ocorre uma colisão entre a munição e um alvo, uma chamada p
 
 Esse foi um tour rápido pelo desenvolvimento de jogos DirectX da Plataforma Universal do Windows (UWP). Neste ponto, você já tem uma ideia do que é necessário para transformar seu jogo para Windows 8 em uma ótima experiência. Lembre-se de que o jogo pode ser executado em uma ampla variedade de dispositivos e plataformas Windows 8 e, portanto, seus componentes – elementos gráficos, controles, interface do usuário e áudio devem ser projetados para o conjunto de configurações mais diversificado possível.
 
-Para saber mais sobre maneiras de modificar o exemplo de jogo fornecido nestes documentos, consulte [Estendendo o exemplo de jogo](tutorial-resources.md)
+Para saber mais sobre maneiras de modificar o exemplo de jogo fornecido nestes documentos, consulte [Estendendo o exemplo de jogo](tutorial-resources.md).
 
 ## Código de exemplo completo desta seção
 
@@ -559,6 +563,7 @@ void SoundEffect::PlaySound(_In_ float volume)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

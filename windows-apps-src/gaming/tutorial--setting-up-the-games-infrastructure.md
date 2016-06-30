@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Configurar o projeto de jogo
-description: O primeiro passo na montagem do jogo é configurar um projeto no Microsoft Visual Studio de modo a minimizar a quantidade de trabalho de infraestrutura de código necessária.
+description: "O primeiro passo na montagem do jogo é configurar um projeto no Microsoft Visual Studio de modo a minimizar a quantidade de trabalho de infraestrutura de código necessária."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
+
 ---
 
 # Configurar o projeto de jogo
@@ -164,6 +168,7 @@ No próximo tutorial, [Definindo a estrutura UWP do jogo](tutorial--building-the
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

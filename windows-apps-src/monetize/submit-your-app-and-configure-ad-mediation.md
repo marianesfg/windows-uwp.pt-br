@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 69E05E56-B5F0-4D4C-A1FF-B6EAFF5D0E28
-description: Durante o processo de envio, você pode configurar o comportamento de mediação de anúncio que gostaria de ver. Você poderá ajustá-lo posteriormente sem precisar fazer alterações no código ou enviar novos pacotes.
-title: Enviar seu aplicativo e configurar o controle de anúncios
+description: "Durante o processo de envio, você pode configurar o comportamento de mediação de anúncio que gostaria de ver. Você poderá ajustá-lo posteriormente sem precisar fazer alterações no código ou enviar novos pacotes."
+title: "Enviar seu aplicativo e configurar o controle de anúncios"
+translationtype: Human Translation
+ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
+ms.openlocfilehash: 13dd6a9c38d85ead29a43f470b7c0f63d025d612
+
 ---
 
 # Enviar seu aplicativo e configurar o controle de anúncios
@@ -164,6 +168,7 @@ Você deseja usar a Microsoft Advertising e a Inneractive igualmente, para que h
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

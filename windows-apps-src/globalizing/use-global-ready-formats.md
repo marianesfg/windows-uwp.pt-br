@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Desenvolva um aplicativo preparado para uso global formatando adequadamente datas, horas, números e moedas.
+Description: "Desenvolva um aplicativo preparado para uso global formatando adequadamente datas, horas, números e moedas."
 title: Usar formatos prontos para o mundo
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 label: Use global-ready formats
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 77b5e7bd412936dd5d8c4bc252771631d6b884cf
+
 ---
 
 # <span id="dev_globalizing.use_global-ready_formats"></span>Usar formatos prontos para o mundo
@@ -190,6 +194,7 @@ Para simplificar o processo de adaptação a novos mercados, basta considerar al
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

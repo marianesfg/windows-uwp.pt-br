@@ -1,13 +1,17 @@
 ---
 author: mcleblanc
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
-description: O Microsoft Visual Studio está para o Windows assim como o Xcode está para o iOS e o Mac OS. Neste guia passo a passo, ajudaremos você a se familiarizar com o Visual Studio.
+description: "O Microsoft Visual Studio está para o Windows assim como o Xcode está para o iOS e o Mac OS. Neste guia passo a passo, ajudaremos você a se familiarizar com o Visual Studio."
 title: Criando um projeto no Visual Studio
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 23d9ed066e2909a15b3106fd19bf6ce5ab09e7a9
+
 ---
 
 # Introdução: criando um projeto
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Criando um projeto
 
@@ -51,6 +55,7 @@ No Visual Studio, também há vários modelos de projeto para escolher, como mos
 [Introdução: escolhendo uma linguagem de programação](getting-started-choosing-a-programming-language.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

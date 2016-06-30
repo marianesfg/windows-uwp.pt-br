@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: O relatório Integridade no painel Centro de Desenvolvimento do Windows permite que você obtenha dados relacionados ao desempenho e à qualidade de seu aplicativo, incluindo falhas e eventos sem resposta.
-title: Relatório de integridade
+Description: "O relatório Integridade no painel Centro de Desenvolvimento do Windows permite que você obtenha dados relacionados ao desempenho e à qualidade de seu aplicativo, incluindo falhas e eventos sem resposta."
+title: "Relatório de integridade"
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 78bedc3e0551feef8efe61b3b664145e29281714
+
 ---
 
 # Relatório de integridade
@@ -59,6 +63,7 @@ Essas informações se baseiam em uma porcentagem do total de eventos. Na parte 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

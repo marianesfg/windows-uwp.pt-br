@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-Description: Siga estas práticas recomendadas para cerca geográfica em seu aplicativo.
-title: Diretrizes de aplicativos com cerca geográfica
+Description: "Siga estas práticas recomendadas para cerca geográfica em seu aplicativo."
+title: "Diretrizes de aplicativos com cerca geográfica"
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d631885eced58d360d3e0442cbb49ede7b9b86c3
+
 ---
 
 # Diretrizes de aplicativos com cerca geográfica
@@ -132,6 +136,7 @@ Se seu aplicativo precisar usar cercas geográficas com raios pequenos, sugira a
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

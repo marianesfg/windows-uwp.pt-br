@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Você pode publicar aplicativos de linha de negócios (LOB) diretamente para empresas, para aquisição de volume, usando a Windows Store para Empresas sem tornar os aplicativos amplamente disponíveis na Loja.
-title: Distribuir aplicativos LOB às empresas
+Description: "Você pode publicar aplicativos de linha de negócios (LOB) diretamente para empresas, para aquisição de volume, usando a Windows Store para Empresas sem tornar os aplicativos amplamente disponíveis na Loja."
+title: "Distribuir aplicativos LOB às empresas"
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
+ms.sourcegitcommit: 9ad7589344d2af986e52ae43acc3e48de6374ae6
+ms.openlocfilehash: d7551e0456ce0e59dbbfa92690ddd5ba2ebaf8b4
+
 ---
 
 # Distribuir aplicativos LOB às empresas
@@ -50,6 +53,8 @@ Para saber mais, veja [Opções de licenciamento para organizações](organizati
 
 Depois de clicar em **Enviar à Loja**, o aplicativo passará pelo processo de certificação. Quando estiver pronto, um administrador da empresa deverá adicioná-lo ao seu repositório particular no portal da Windows Store para Empresas. A empresa poderá então implantar o aplicativo para seus usuários.
 
+> **Observação** Para obter seu aplicativo LOB, a organização deve estar localizada em um [mercado com suporte](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets), e você deve não ter excluído esse mercado ao enviar seu aplicativo. 
+
 Para saber mais, veja [Trabalhando com aplicativos de linha de negócios](http://go.microsoft.com/fwlink/p/?LinkId=698846) e [Distribuir aplicativos usando seu repositório particular](http://go.microsoft.com/fwlink/p/?LinkId=698847).
 
 ### Atualizando aplicativos LOB
@@ -75,6 +80,7 @@ Para saber mais, veja [Sideload de aplicativos LOB no Windows 10](http://go.micr
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: A página Propriedades do aplicativo do processo de envio de aplicativo permite definir a categoria do seu aplicativo e indicar as preferências de hardware ou outras declarações.
+Description: "A página Propriedades do aplicativo do processo de envio de aplicativo permite definir a categoria do seu aplicativo e indicar as preferências de hardware ou outras declarações."
 title: Insira as propriedades do aplicativo
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8861c13478adbe2010a164126c56f555375e0472
+
 ---
 
 # Insira as propriedades do aplicativo
@@ -40,6 +44,7 @@ Você pode marcar caixas nesta seção para indicar se qualquer uma das declara�
 Para saber mais, consulte [Declarações de aplicativo](app-declarations.md).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

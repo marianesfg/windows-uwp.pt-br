@@ -1,16 +1,20 @@
 ---
 author: drewbatgit
 ms.assetid: 84729E44-10E9-4D7D-8575-6A9D97467ECD
-description: Este tópico mostra como usar FaceDetector para detectar rostos em uma imagem. FaceTracker é otimizado para acompanhamento facial ao longo do tempo em uma sequência de quadros de vídeo.
-title: Detectar rostos em imagens ou vídeos
+description: "Este tópico mostra como usar FaceDetector para detectar rostos em uma imagem. FaceTracker é otimizado para acompanhamento facial ao longo do tempo em uma sequência de quadros de vídeo."
+title: "Detectar rostos em imagens ou vídeos"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
+
 ---
 
 # Detectar rostos em imagens ou vídeos
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
+\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
 Este tópico mostra como usar [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) para detectar rostos em uma imagem. [
             **FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150) é otimizado para acompanhamento facial ao longo do tempo em uma sequência de quadros de vídeo.
@@ -97,6 +101,7 @@ Chame [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/app
 * [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

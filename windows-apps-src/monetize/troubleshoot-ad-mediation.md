@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Estas são algumas soluções para vários problemas comuns de desenvolvimento relacionados ao controle de anúncios.
-title: Solucionar problemas de controle de anúncios
+Description: "Estas são algumas soluções para vários problemas comuns de desenvolvimento relacionados ao controle de anúncios."
+title: "Solucionar problemas de controle de anúncios"
 ms.assetid: 8728DE4F-E050-4217-93D3-588DD3280A3A
+translationtype: Human Translation
+ms.sourcegitcommit: 10dcf3c2b8ea530b94e9c17ada80aaa98e9418fe
+ms.openlocfilehash: f32dc28c9b199c11a1932639f49ab4c29d3e1e8f
+
 ---
 
 # Solucionar problemas de controle de anúncios
@@ -70,6 +74,7 @@ Se você alterar o valor **RefreshRate** no arquivo AdMediator.config, lembre-se
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -3,8 +3,8 @@ author: TylerMSFT
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
 title: "Chamar APIs assíncronas no Visual Basic ou C#"
 description: "A Plataforma Universal do Windows (UWP) inclui muitas APIs assíncronas para garantir que o seu aplicativo permaneça responsivo ao executar trabalhos demorados."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b8ff3965503aa96d4ff595d140562c65e0a638c3
+ms.sourcegitcommit: c440d0dc2719a982a6b566c788d76111c40e263e
+ms.openlocfilehash: ba633e4d6f6f97f3ea1c78258f36b11b67b32964
 
 ---
 # Chamar APIs assíncronas no Visual Basic ou C#
@@ -47,8 +47,8 @@ Ao usar um método assíncrono, você pode examinar a assinatura para ver o que 
 
 -   [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)
 -   [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206594)
--   [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)
--   [**IAsyncActionWithProgress&lt;TProgress&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206580withprogress_1)
+-   [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)
+-   [**IAsyncActionWithProgress&lt;TProgress&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/br206581.aspx)
 
 O tipo de resultado de um método assíncrono é o mesmo que o parâmetro do tipo `      TResult`. Os tipos sem um `TResult` não têm um resultado. Você pode pensar no resultado como sendo **nulo**. No Visual Basic, um procedimento [Sub](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/831f9wka.aspx) é equivalente a um método com um tipo de retorno **nulo**.
 
@@ -58,15 +58,15 @@ A tabela abaixo dá exemplos de métodos assíncronos e lista o tipo de retorno 
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460)     | [**IAsyncOperationWithProgress&lt;SyndicationFeed, RetrievalProgress&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206594)                                 | [**SyndicationFeed**](https://msdn.microsoft.com/library/windows/apps/BR243485) |
 | [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275) | [**IAsyncOperation&lt;StorageFile&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)                                                                                | [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)          |
-| [**XmlDocument.SaveToFileAsync**](https://msdn.microsoft.com/library/windows/apps/BR206284)                 | [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)                                                                                                           | **nulo**                                          |
-| [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206580withprogress_1)                                                                   | **nulo**                                          |
+| [**XmlDocument.SaveToFileAsync**](https://msdn.microsoft.com/library/windows/apps/BR206284)                 | [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)                                                                                                           | **nulo**                                          |
+| [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/br206581.aspx)                                                                   | **nulo**                                          |
 | [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [
               **DataReaderLoadOperation**
-            ](https://msdn.microsoft.com/library/windows/apps/BR208120), uma classe de resultados personalizada que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](T:System.UInt32)                     |
+            ](https://msdn.microsoft.com/library/windows/apps/BR208120), uma classe de resultados personalizada que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
 
  
 
-Métodos assíncronos que são definidos em [**.NET para aplicativos UWP**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230232.aspx) têm o tipo de retorno [**Tarefa**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.threading.tasks.task.aspx) ou [**Task&lt;TResult&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd321424.aspx). Os métodos que retornam **Tarefa** são semelhantes aos métodos assíncronos na UWP que retornam [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580). Em cada caso, o resultado do método assíncrono é **nulo**. O tipo de retorno **Task&lt;TResult&gt;** é semelhante ao [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598) no sentido de que o resultado do método assíncrono ao executar a tarefa é do mesmo tipo do parâmetro tipo `TResult`. Para saber mais sobre como usar **.NET para aplicativos UWP** e tarefas, veja [Visão geral do .NET para aplicativos do Windows Runtime](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230302.aspx).
+Métodos assíncronos que são definidos em [**.NET para aplicativos UWP**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230232.aspx) têm o tipo de retorno [**Tarefa**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.threading.tasks.task.aspx) ou [**Task&lt;TResult&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd321424.aspx). Os métodos que retornam **Tarefa** são semelhantes aos métodos assíncronos na UWP que retornam [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx). Em cada caso, o resultado do método assíncrono é **nulo**. O tipo de retorno **Task&lt;TResult&gt;** é semelhante ao [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598) no sentido de que o resultado do método assíncrono ao executar a tarefa é do mesmo tipo do parâmetro tipo `TResult`. Para saber mais sobre como usar **.NET para aplicativos UWP** e tarefas, veja [Visão geral do .NET para aplicativos do Windows Runtime](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230302.aspx).
 
 ## Tratando erros
 
@@ -112,7 +112,6 @@ Windows 7 themes: the distinctive artwork of Cheng Ling, 7/20/2011 9:53:07 AM -0
 
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

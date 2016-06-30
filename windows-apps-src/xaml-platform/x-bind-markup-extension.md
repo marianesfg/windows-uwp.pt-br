@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: A extensão de marcação xBind é uma alternativa a Binding. xBind não tem alguns dos recursos de Binding, mas ele é executado em menos tempo e usando menos memória do que Binding e suporta melhor a depuração.
-title: Extensão de marcação xBind
+description: "A extensão de marcação xBind é uma alternativa a Binding. xBind não tem alguns dos recursos de Binding, mas ele é executado em menos tempo e usando menos memória do que Binding e suporta melhor a depuração."
+title: "Extensão de marcação xBind"
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: ceb5562ae08d7cc966f80fdb7e23f12afe040430
+
 ---
 
 # Extensão de marcação {x:Bind}
@@ -112,7 +116,7 @@ As associações compiladas dependem da geração de código. Portanto, se você
               **Converter**
             ](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) e **ConverterLanguage** são todos relacionados à situação de conversão de um valor ou tipo de uma fonte de associação a um tipo ou valor que é compatível com a propriedade do destino da associação. Para saber mais, veja a seção "Conversões de dados" em [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-**{x:Bind}** é apenas uma extensão de marcação, sem nenhuma maneira de criar ou manipular essas associações de forma programática. Para saber mais sobre extensões de marcação, veja [Visão geral de XAML](xaml-overview.md).
+**{x:Bind}** é apenas uma extensão de marcação, sem nenhuma maneira de criar ou manipular essas associações de forma programática. Para saber mais sobre extensões de marcação, veja [Visão geral do XAML](xaml-overview.md).
 
 ## Exemplos
 
@@ -135,6 +139,7 @@ Este exemplo usa XAML **{x: Bind}** com uma propriedade **ListView.ItemTemplate*
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

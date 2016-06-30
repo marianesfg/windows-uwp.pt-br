@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
-title: Testes do Kit de Certificação de Aplicativos Windows
-description: O Kit de Certificação de Aplicativos Windows contém diversos testes que podem ajudar a garantir que seu aplicativo esteja pronto para ser publicado na Windows Store.
+title: "Testes do Kit de Certificação de Aplicativos Windows"
+description: "O Kit de Certificação de Aplicativos Windows contém diversos testes que podem ajudar a garantir que seu aplicativo esteja pronto para ser publicado na Windows Store."
+translationtype: Human Translation
+ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
+ms.openlocfilehash: 816b147c91a340505348aa579c8b1540962a1df5
+
 ---
 ## Testes do Kit de Certificação de Aplicativos Windows
 
@@ -666,6 +670,7 @@ Atualize o código JavaScript em segundo plano para chamar Close() corretamente.
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

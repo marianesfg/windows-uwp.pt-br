@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Definir a estrutura do aplicativo UWP (Plataforma Universal do Windows) do jogo
-description: A primeira parte da codificação de um jogo UWP (Plataforma Universal do Windows) com DirectX é criar a estrutura que permite que o objeto de jogo interaja com o Windows.
+description: "A primeira parte da codificação de um jogo UWP (Plataforma Universal do Windows) com DirectX é criar a estrutura que permite que o objeto de jogo interaja com o Windows."
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2ebc7bca06454f78ab375058e49f012cacb00cc8
+
 ---
 
 #  Definir a estrutura do aplicativo UWP (Plataforma Universal do Windows) do jogo
@@ -1424,6 +1428,7 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

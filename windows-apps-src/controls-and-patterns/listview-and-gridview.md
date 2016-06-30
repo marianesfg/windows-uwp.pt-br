@@ -1,9 +1,13 @@
 ---
 author: Jwmsft
-Description: Use controles de exibição de grade ou de modo de exibição de lista para exibir e manipular conjuntos de dados, como uma galeria de imagens ou um conjunto de mensagens de email.
-title: Exibição de lista e de grade
+Description: "Use controles de exibição de grade ou de modo de exibição de lista para exibir e manipular conjuntos de dados, como uma galeria de imagens ou um conjunto de mensagens de email."
+title: "Exibição de lista e de grade"
 label: List view and grid view
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e878b11bbecd4a1007f8b5f56bde5741da18c1e1
+
 ---
 # ListView e GridView
 
@@ -390,8 +394,7 @@ private void ListView1_SelectionChanged(object sender, SelectionChangedEventArgs
 
 ### Modo de clique
 
-Você pode alterar a exibição de lista para que um usuário clique em itens como botões em vez de selecioná-los. Por exemplo, isso é útil quando o seu aplicativo navega para uma nova página quando o seu usuário clica em um item em uma lista ou grade. 
-Para habilitar esse comportamento:
+Você pode alterar a exibição de lista para que um usuário clique em itens como botões em vez de selecioná-los. Por exemplo, isso é útil quando o seu aplicativo navega para uma nova página quando o seu usuário clica em um item em uma lista ou grade. Para habilitar esse comportamento:
 - Defina **SelectionMode** como **Nenhum**.
 - Defina **IsItemClickEnabled** como **verdadeiro**.
 - Manipule o evento **ItemClick** para fazer algo quando o usuário clicar em um item.
@@ -501,6 +504,7 @@ private void DeselectAllButton_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

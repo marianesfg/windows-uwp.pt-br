@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: Visão geral de mapas e local
-description: Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo.
+author: msatranjr
+title: "Visão geral de mapas e local"
+description: "Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo."
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
+ms.sourcegitcommit: a3240047ec77ada0c5f6b5586eee2404353889f6
+ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
+
 ---
 
 # Visão geral de mapas e local
@@ -27,7 +30,7 @@ Exiba mapas com modos de exibição 2D, 3D ou Streetside no seu aplicativo usand
 | Tópico | Descrição |
 |-------|-------------|
 | [Solicitar uma chave de autenticação de mapas](authentication-key.md) | O aplicativo precisa ser autenticado para poder usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este artigo descreve como solicitar uma chave de autenticação de mapas na [central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo. |
-| [Diretrizes de design para mapas](controls-map.md) | O controle de mapa pode exibir mapas de rodovias e vistas aéreas, trajeto, resultados de pesquisa e informações sobre trânsito. |
+| [Controle de mapa](controls-map.md) | O controle de mapa pode exibir mapas de rodovias e vistas aéreas, trajeto, resultados de pesquisa e informações sobre trânsito. |
 | [Exibir mapas com modos de exibição 2D, 3D e Streetside](display-maps.md) | Exiba mapas personalizáveis no seu aplicativo usando a classe [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). Este tópico também apresenta modos de exibição 3D e Streetside. |
 | [Exibir pontos de interesse (POI) em um mapa](display-poi.md) | Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML. |
 | [Sobrepor imagens lado a lado em um mapa](overlay-tiled-images.md) | Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão. |
@@ -80,6 +83,7 @@ O aplicativo pode iniciar o aplicativo Mapas do Windows conforme mostrado aqui p
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

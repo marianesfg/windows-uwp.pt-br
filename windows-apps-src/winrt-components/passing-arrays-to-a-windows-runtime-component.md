@@ -1,19 +1,20 @@
 ---
-author: martinekuan
-title: Passagem de matrizes para um componente do Tempo de Execução do Windows
-description: Na Plataforma Universal do Windows (UWP), parâmetros são de entrada ou de saída, jamais ambos. Isso significa que o conteúdo de uma matriz passada para um método, bem como a matriz propriamente dita, é de entrada ou de saída.
+author: msatranjr
+title: "Passagem de matrizes para um componente do Tempo de Execução do Windows"
+description: "Na Plataforma Universal do Windows (UWP), os parâmetros são de entrada ou de saída, jamais ambos. Isso significa que o conteúdo de uma matriz passada para um método, bem como a matriz propriamente dita, é de entrada ou de saída."
 ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 21e4b504b4adc6e2cb9b16d377781aaaab6a4aac
+
 ---
 
 # Passagem de matrizes para um componente do Tempo de Execução do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
-
-Na Plataforma Universal do Windows (UWP), os parâmetros servem para entrada ou saída, nunca ambos. Isso significa que o conteúdo de uma matriz passada para um método, bem como a matriz propriamente dita, é de entrada ou de saída. Caso o conteúdo da matriz seja de entrada, o método lê da matriz, mas não grava nela. Caso o conteúdo da matriz seja de saída, o método grava na matriz, mas não lê dela. Isso representa um problema para os parâmetros de matrizes, pois as matrizes na estrutura .NET são tipos de referencia e o conteúdo de uma matriz é mutável, mesmo quando a referência de matriz é passada por valor (**ByVal** no Visual Basic). A [Ferramenta de Exportação de Metadados do Windows Runtime (Winmdexp.exe)](https://msdn.microsoft.com/library/hh925576.aspx) exige que você especifique o uso pretendido da matriz, se não for claro pelo contexto, aplicando o atributo ReadOnlyArrayAttribute ou WriteOnlyArrayAttribute para o parâmetro. O uso da matriz é determinado conforme o seguinte:
+Na Plataforma Universal do Windows (UWP), os parâmetros são de entrada ou de saída, jamais ambos. Isso significa que o conteúdo de uma matriz passada para um método, bem como a matriz propriamente dita, é de entrada ou de saída. Caso o conteúdo da matriz seja de entrada, o método lê da matriz, mas não grava nela. Caso o conteúdo da matriz seja de saída, o método grava na matriz, mas não lê dela. Isso representa um problema para os parâmetros de matrizes, pois as matrizes na estrutura .NET são tipos de referencia e o conteúdo de uma matriz é mutável, mesmo quando a referência de matriz é passada por valor (**ByVal** no Visual Basic). A [Ferramenta de Exportação de Metadados do Windows Runtime (Winmdexp.exe)](https://msdn.microsoft.com/library/hh925576.aspx) exige que você especifique o uso pretendido da matriz, se não for claro pelo contexto, aplicando o atributo ReadOnlyArrayAttribute ou WriteOnlyArrayAttribute para o parâmetro. O uso da matriz é determinado conforme o seguinte:
 
 -   Para o valor de retorno ou para um parâmetro out (um parâmetro **ByRef** com o atributo [OutAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.outattribute.aspx) no Visual Basic), a matriz é sempre apenas de saída. Não aplique o atributo ReadOnlyArrayAttribute. O atributo WriteOnlyArrayAttribute é permitido em parâmetros de saída, mas é redundante.
 
@@ -40,7 +41,7 @@ Caso um método deva aceitar uma matriz de entrada, modifique o conteúdo da mat
 >     ' Manipulate the copy.
 >     '   ...
 >     Return output
-> End Function 
+> End Function
 > ```
 
 É recomendável que você faça uma cópia da matriz de entrada imediatamente e manipule a cópia. Isso ajuda a garantir que o método se comporte da mesma maneira, independentemente do componente ser chamado pelo código do .NET Framework.
@@ -63,6 +64,6 @@ Caso o chamador seja um código gerenciado, a matriz original permanece disponí
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

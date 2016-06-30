@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: Rastrear arquivos e pastas usados recentemente
-description: Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu aplicativo.
+description: "Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu aplicativo."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 83100d1246dd18324104a63c9cd950e2ff1fce0b
+
 ---
 # Acompanhar arquivos e pastas usados recentemente
 
@@ -107,6 +111,7 @@ Quando um usuário seleciona um item, considere adicioná-lo à sua lista de ace
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

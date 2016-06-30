@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: Digitalize a partir de seu aplicativo
-description: Aprenda aqui a digitalizar conteúdos do seu aplicativo usando uma fonte de scanner de mesa, alimentador ou autoconfigurado.
+description: "Aprenda aqui a digitalizar conteúdos do seu aplicativo usando uma fonte de scanner de mesa, alimentador ou autoconfigurado."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: fe01ccf5b0b91ffcca7937842cf0152622d59f9e
+
 ---
 # Digitalizar a partir do seu aplicativo
 
@@ -170,6 +174,7 @@ Os usuários podem digitalizar para qualquer pasta dinamicamente, usando a class
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: Desenhar formas
 description: "Aprenda a desenhar formas, como elipses, retângulos, polígonos e caminhos. A classe Path é uma maneira de visualizar uma linguagem de desenho baseada em vetor bastante complexa em uma interface do usuário XAML; por exemplo, você pode desenhar curvas de Bézier."
-ms.sourcegitcommit: 04a3c2dabc4b115faf4b06aa3d3a59c5c38ab95f
-ms.openlocfilehash: 42514e5119b646d196e0a1c7d3099ebed2225c69
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 20bac4421c2f307932bd5a8a4c462b1ef13fe09b
 
 ---
 # Desenhar formas
@@ -138,7 +138,7 @@ Um [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355) é o obj
 A geometria de um caminho é definida com a propriedade [**Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data). Há duas técnicas para definir **Data**:
 
 -   Você pode definir um valor de cadeia de caracteres para [**Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) em XAML. Neste formato, o valor **Path.Data** está consumindo um formato de serialização para elementos gráficos. Você geralmente não edita o texto desse valor no formato de cadeia de caracteres depois que ele é estabelecido pela primeira vez. Em vez disso, você usa as ferramentas de design que permitem que você trabalhe em uma metáfora de design ou de desenho em uma superfície. Em seguida, você salva ou exporta a saída, e isso gera um arquivo XAML ou fragmento da cadeia de caracteres XAML com as informações de **Path.Data**.
--   Você pode definir a propriedade [**Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) como um único objeto [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041). Isso pode ser feito em código ou em XAML. Essa única **Geometry** é geralmente um [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/BR210041group), que atua como um contêiner que pode compor várias definições de geometria em um único objeto para fins do modelo de objeto. A razão mais comum para fazer isso é porque você quer usar uma ou mais curvas e formas complexas que podem ser definidas como valores [**Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164) de uma [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143), por exemplo [**BezierSegment**](https://msdn.microsoft.com/library/windows/apps/BR228068).
+-   Você pode definir a propriedade [**Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) como um único objeto [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041). Isso pode ser feito em código ou em XAML. Essa única **Geometry** é geralmente um [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.geometrygroup), que atua como um contêiner que pode compor várias definições de geometria em um único objeto para fins do modelo de objeto. A razão mais comum para fazer isso é porque você quer usar uma ou mais curvas e formas complexas que podem ser definidas como valores [**Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164) de uma [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143), por exemplo [**BezierSegment**](https://msdn.microsoft.com/library/windows/apps/BR228068).
 
 Este exemplo mostra um [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355) que pode ter resultado do uso do Blend for Visual Studio para produzir apenas algumas formas vetoriais e do salvamento do resultado como XAML. O **Path** completo consiste em um segmento de curva de Bézier e um segmento de linha. O exemplo tem a principal intenção de fornecer alguns exemplos de quais elementos existem no formato de serialização do [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) e o que os números representam.
 
@@ -158,7 +158,7 @@ Here's the rendered [**Path**](https://msdn.microsoft.com/library/windows/apps/B
 
 ![A rendered Path.](images/shapes-path.jpg)
 
-The next example shows a usage of the other technique we discussed: a [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/BR210041group) with a [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168). This example exercises some of the contributing geometry types that can be used as part of a **PathGeometry**: [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143) and the various elements that can be a segment in [**PathFigure.Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164).
+The next example shows a usage of the other technique we discussed: a [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.geometrygroup) with a [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168). This example exercises some of the contributing geometry types that can be used as part of a **PathGeometry**: [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143) and the various elements that can be a segment in [**PathFigure.Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164).
 
 ```xml
 <Path Stroke="Black" StrokeThickness="1" Fill="#CCCCFF">
@@ -199,6 +199,6 @@ Usar [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: D5D98044-7221-4C2A-9724-56E59F341AB0
-description: Este artigo mostra como ler e gravar propriedades de metadados de imagem e como adicionar marca de localização em arquivos usando a classe de utilitário GeotagHelper.
+description: "Este artigo mostra como ler e gravar propriedades de metadados de imagem e como adicionar marca de localização em arquivos usando a classe de utilitário GeotagHelper."
 title: Metadados de imagem
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 571d71d52931392a36c3c11030749f6ecb3cc961
+
 ---
 
 # Metadados de imagem
@@ -22,9 +26,9 @@ Para acessar um conjunto maior de metadados do arquivo, use o Windows Property S
 
 [!code-cs[GetWindowsProperties](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetWindowsProperties)]
 
--   Para obter uma lista completa das Propriedades do Windows, incluindo os identificadores e o tipo de cada propriedade, consulte [Propriedades do Windows](https://msdn.microsoft.com/library/windows/desktop/dd561977)
+-   Para obter uma lista completa das Propriedades do Windows, incluindo os identificadores e o tipo de cada propriedade, consulte [Propriedades do Windows](https://msdn.microsoft.com/library/windows/desktop/dd561977).
 
--   Algumas propriedades só são suportadas para determinados codecs de imagem e contêineres de arquivos. Para obter uma lista dos metadados de imagem com suporte para cada tipo de imagem, consulte [Políticas de Metadados de Fotos](https://msdn.microsoft.com/library/windows/desktop/ee872003)
+-   Algumas propriedades só são suportadas para determinados codecs de imagem e contêineres de arquivos. Para obter uma lista dos metadados de imagem com suporte para cada tipo de imagem, consulte [Políticas de Metadados de Fotos](https://msdn.microsoft.com/library/windows/desktop/ee872003).
 
 -   Como as propriedades que não são suportadas podem retornar um valor nulo quando recuperado, sempre verifique para null antes de usar um valor de metadados retornados.
 
@@ -32,7 +36,7 @@ Para acessar um conjunto maior de metadados do arquivo, use o Windows Property S
 
 GeotagHelper é uma classe de utilitário que facilita a marcação de imagens com dados geográficos usando as APIs [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603) diretamente, sem precisar analisar ou construir manualmente o formato de metadados.
 
-Se você já tiver um objeto [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675) que representa o local que deseja marcar na imagem, de uma utilização anterior das APIs de geolocalização ou de alguma outra fonte, poderá definir os dados de marca de localização chamando [**GeotagHelper.SetGeotagAsync**](https://msdn.microsoft.com/library/windows/apps/dn903685) e passando [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) e o **Geopoint**
+Se você já tiver um objeto [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675) que representa o local que deseja marcar na imagem, de uma utilização anterior das APIs de geolocalização ou de alguma outra fonte, poderá definir os dados de marca de localização chamando [**GeotagHelper.SetGeotagAsync**](https://msdn.microsoft.com/library/windows/apps/dn903685) e passando [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) e o **Geopoint**.
 
 [!code-cs[SetGeoDataFromPoint](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetSetGeoDataFromPoint)]
 
@@ -44,9 +48,9 @@ Para definir os dados de marca de localização usando a localização atual do 
 
 -   Você deve chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de chamar [**SetGeotagFromGeolocatorAsync**](https://msdn.microsoft.com/library/windows/apps/dn903686) para garantir que o usuário tenha concedido permissão a seu aplicativo para usar sua localização.
 
--   Para obter mais informações sobre as APIs de geolocalização, consulte [Mapas e localização](https://msdn.microsoft.com/library/windows/apps/mt219699)
+-   Para obter mais informações sobre as APIs de geolocalização, consulte [Mapas e localização](https://msdn.microsoft.com/library/windows/apps/mt219699).
 
-Para obter um GeoPoint que represente o local de um arquivo de imagem com marca de localização, chame [**GetGeotagAsync**](https://msdn.microsoft.com/library/windows/apps/dn903684)
+Para obter um GeoPoint que represente o local de um arquivo de imagem com marca de localização, chame [**GetGeotagAsync**](https://msdn.microsoft.com/library/windows/apps/dn903684).
 
 [!code-cs[GetGeoData](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetGeoData)]
 
@@ -54,13 +58,13 @@ Para obter um GeoPoint que represente o local de um arquivo de imagem com marca 
 
 A maneira mais avançada de trabalhar com dados de imagem é ler e gravar as propriedades no nível do fluxo usando um [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) ou um [BitmapEncoder](bitmapencoder-options-reference.md). Para essas operações, você pode usar Propriedades do Windows para especificar os dados que está lendo ou gravando, mas também pode usar a linguagem de consulta de metadados fornecida pelo Windows Imaging Component (WIC) para especificar o caminho para uma propriedade solicitada.
 
-Ler metadados de imagem usando essa técnica exige que você tenha um [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) que foi criado com o fluxo de arquivo de imagem de origem. Para obter informações sobre como fazer isso, consulte [Imagens](imaging.md)
+Ler metadados de imagem usando essa técnica exige que você tenha um [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) que foi criado com o fluxo de arquivo de imagem de origem. Para obter informações sobre como fazer isso, consulte [Imagens](imaging.md).
 
 Assim que você tiver o decodificador, crie uma lista de cadeias de caracteres e adicione uma nova entrada para cada propriedade de metadados que deseja recuperar usando a cadeia de caracteres de identificador da Propriedade do Windows ou uma consulta de metadados do WIC. Chame o método [**BitmapPropertiesView.GetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226250) no membro [**BitmapProperties**](https://msdn.microsoft.com/library/windows/apps/br226248) do decodificador para solicitar as propriedades especificadas. As propriedades são retornadas em um dicionário de pares de chave/valor que contém o nome ou caminho da propriedade e o valor da propriedade.
 
 [!code-cs[ReadImageMetadata](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetReadImageMetadata)]
 
--   Para obter informações sobre a linguagem de consulta de metadados do WIC e as propriedades com suporte, consulte [Consultas de metadados nativos de formato de imagem do WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904)
+-   Para obter informações sobre a linguagem de consulta de metadados do WIC e as propriedades com suporte, consulte [Consultas de metadados nativos de formato de imagem do WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
 -   Muitas propriedades de metadados são suportadas apenas por um subconjunto de tipos de imagem. [
               **GetPropertiesAsync**
@@ -73,7 +77,7 @@ Crie um objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 [!code-cs[WriteImageMetadata](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetWriteImageMetadata)]
 
--   Para obter detalhes sobre quais propriedades são suportadas para quais tipos de arquivo de imagem, consulte [Propriedades do Windows](https://msdn.microsoft.com/library/windows/desktop/dd561977), [Políticas de Metadados de Fotos](https://msdn.microsoft.com/library/windows/desktop/ee872003) e [Consultas de metadados nativos de formato de imagem do WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904)
+-   Para obter detalhes sobre quais propriedades são suportadas para quais tipos de arquivo de imagem, consulte [Propriedades do Windows](https://msdn.microsoft.com/library/windows/desktop/dd561977), [Políticas de Metadados de Fotos](https://msdn.microsoft.com/library/windows/desktop/ee872003) e [Consultas de metadados nativos de formato de imagem do WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
 -   [
               **SetPropertiesAsync**
@@ -91,6 +95,7 @@ Crie um objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

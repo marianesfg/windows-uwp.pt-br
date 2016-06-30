@@ -1,8 +1,12 @@
 ---
-title: Criar um serviço de logon do Microsoft Passport
-description: Esta é a Parte 2 de um guia passo a passo completo sobre como usar o Microsoft Passport como uma alternativa para sistemas tradicionais de autenticação de nome de usuário e senha em aplicativos UWP (Plataforma Universal do Windows) do Windows 10.
+title: "Criar um serviço de logon do Microsoft Passport"
+description: "Esta é a Parte 2 de um guia passo a passo completo sobre como usar o Microsoft Passport como uma alternativa para sistemas tradicionais de autenticação de nome de usuário e senha em aplicativos UWP (Plataforma Universal do Windows) do Windows 10."
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 6fe013a69bad964dafa788efb4e26ba521b3d621
+
 ---
 
 # Criar um serviço de logon do Microsoft Passport
@@ -1176,6 +1180,7 @@ Deixamos para você como um exercício os detalhes de como implementar a autenti
 * [Microsoft Passport e Windows Hello](microsoft-passport.md)
 * [Aplicativo de logon do Microsoft Passport](microsoft-passport-login.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

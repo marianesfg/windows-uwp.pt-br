@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 5E722AFF-539D-456E-8C4A-ADE90CF7674A
-description: Se o seu aplicativo oferecer um catálogo abrangente de produtos no aplicativo, você também poderá seguir o processo descrito neste tópico para ajudar a gerenciar seu catálogo.
-title: Gerenciar um catálogo abrangente de produtos no aplicativo
+description: "Se o seu aplicativo oferecer um catálogo abrangente de produtos no aplicativo, você também poderá seguir o processo descrito neste tópico para ajudar a gerenciar seu catálogo."
+title: "Gerenciar um catálogo abrangente de produtos no aplicativo"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0927df3cd696e5a6fbd3a235d2b87074f1d63929
+
 ---
 
 # Gerenciar um catálogo abrangente de produtos no aplicativo
@@ -113,6 +117,7 @@ switch (result)
 * [**ProductPurchaseDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/dn263384)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

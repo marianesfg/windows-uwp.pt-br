@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-Description: Este tópico descreve as diretrizes de desempenho para aplicativos que exigem acesso ao local de um usuário.
+author: msatranjr
+Description: "Este tópico descreve as diretrizes de desempenho para aplicativos que exigem acesso ao local de um usuário."
 title: Diretrizes de aplicativos com reconhecimento de local
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
+
 ---
 
 # Diretrizes de aplicativos com reconhecimento de local
@@ -34,7 +37,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 -   Exiba uma barra ou toque de progresso enquanto aguarda para obter os dados da localização. <!--For info on the available progress controls and how to use them, see [**Guidelines for progress controls**](guidelines-and-checklist-for-progress-controls.md).-->
 -   Mostre mensagens de erro ou caixas de diálogo adequadas quando os serviços de localização estiverem desabilitados ou não estiverem disponíveis.
 
-    Se as configurações de localização não permitirem que seu aplicativo acesse a localização do usuário, é recomendável fornecer um link conveniente para as **configurações de privacidade de localização** no aplicativo **Configurações**. Por exemplo, você pode usar um controle de hiperlink ou chamar o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar o aplicativo **Configurações** no código usando o URI `ms-settings:privacy-location`. Para obter mais informações, consulte [Iniciar o aplicativo Configurações do Windows](https://msdn.microsoft.com/library/windows/apps/mt228342)
+    Se as configurações de localização não permitirem que seu aplicativo acesse a localização do usuário, é recomendável fornecer um link conveniente para as **configurações de privacidade de localização** no aplicativo **Configurações**. Por exemplo, você pode usar um controle de hiperlink ou chamar o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar o aplicativo **Configurações** no código usando o URI `ms-settings:privacy-location`. Para obter mais informações, consulte [Iniciar o aplicativo Configurações do Windows](https://msdn.microsoft.com/library/windows/apps/mt228342).
 
 -   Limpe os dados de localização armazenados em cache e libere o [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) quando o usuário desabilitar o acesso às informações de localização.
 
@@ -49,7 +52,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 
 **Desempenho**
 
--   Use solicitações de localização única se atualizações de localização não são necessárias. Por exemplo, um aplicativo que adiciona uma marca de localização a uma fotografia não precisa receber eventos de atualização de localização. Em vez disso, ele deve solicitar a localização usando [**getGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536), conforme descrito em [Obter a localização atual](https://msdn.microsoft.com/library/windows/apps/mt219698)
+-   Use solicitações de localização única se atualizações de localização não são necessárias. Por exemplo, um aplicativo que adiciona uma marca de localização a uma fotografia não precisa receber eventos de atualização de localização. Em vez disso, ele deve solicitar a localização usando [**getGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536), conforme descrito em [Obter a localização atual](https://msdn.microsoft.com/library/windows/apps/mt219698).
 
     Ao fazer uma única solicitação de localização, você deve definir os seguintes valores.
 
@@ -58,7 +61,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
     -   Defina o parâmetro de tempo limite de [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536). Esse é o tempo que seu aplicativo pode esperar pelo retorno de uma posição ou de um erro. Você precisará descobrir as compensações entre precisão e capacidade de resposta ao usuário que o seu aplicativo precisa.
 -   Use a sessão de localização contínua quando atualizações de posição frequentes forem necessárias. Use os eventos [**positionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) e [**statusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) para detectar movimento que ultrapassou um limite específico ou para atualizações contínuas de localização assim que elas ocorrerem.
 
-    Ao solicitar atualizações de localização, você pode considerar conveniente especificar a precisão requerida por seu aplicativo definindo o [**DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) ou o [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271). Você também deve definir a frequência com que são necessárias as atualizações de localização, utilizando o [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539) ou o [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541)
+    Ao solicitar atualizações de localização, você pode considerar conveniente especificar a precisão requerida por seu aplicativo definindo o [**DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) ou o [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271). Você também deve definir a frequência com que são necessárias as atualizações de localização, utilizando o [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539) ou o [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541).
 
     -   Especifique o limite de movimento. Alguns aplicativos precisam de atualizações de localização somente quando o usuário se moveu por uma longa distância. Por exemplo, um aplicativo que fornece notícias locais ou atualizações do clima talvez não precise de atualizações de localização, a menos que a localização do usuário tenha sido alterada para uma cidade diferente. Nesse caso, você deve ajustar o movimento mínimo exigido para um evento de atualização de localização configurando a propriedade [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539). Isso tem o efeito de filtrar os eventos [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540). Esses eventos surgem apenas quando a alteração na posição excede o limite de movimento.
 
@@ -85,16 +88,16 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
         -   Se o usuário estiver tentando compartilhar sua posição, o aplicativo deverá solicitar uma precisão de cerca de 10 metros.
     -   Use a propriedade [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) se seu aplicativo tiver requisitos de precisão específicos. Por exemplo, aplicativos de navegação devem utilizar a propriedade **Geocoordinate.accuracy** para determinar se os dados de localização disponíveis atendem aos requisitos do aplicativo.
 
--   Considere o atraso de inicialização. Na primeira vez que um aplicativo solicitar dados de localização, pode haver um pequeno atraso (de 1 a 2 segundos) enquanto o provedor de localização é iniciado. Considere isso no design da interface do usuário do seu aplicativo. Por exemplo, você pode querer evitar o bloqueio de outras tarefas que dependem da conclusão da chamada de [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536)
+-   Considere o atraso de inicialização. Na primeira vez que um aplicativo solicitar dados de localização, pode haver um pequeno atraso (de 1 a 2 segundos) enquanto o provedor de localização é iniciado. Considere isso no design da interface do usuário do seu aplicativo. Por exemplo, você pode querer evitar o bloqueio de outras tarefas que dependem da conclusão da chamada de [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536).
 
 -   Considere o comportamento em segundo plano. Se seu aplicativo não tiver foco, ele não receberá eventos de atualização de localização enquanto estiver suspenso em segundo plano. Se o aplicativo fizer rastreamento de atualizações de localização registrando-as, lembre-se disso. Quando o aplicativo entrar novamente em foco, ele receberá apenas eventos novos. Ele não obterá as atualizações realizadas enquanto estava inativo.
 
--   Use sensores raw e fusion com eficiência. Há dois tipos de sensores: *raw* e *fusion*
+-   Use sensores raw e fusion com eficiência. Há dois tipos de sensores: *raw* e *fusion*.
 
     -   Os sensores raw incluem o acelerômetro, o girômetro e o magnetômetro.
     -   Os sensores fusion incluem o de orientação, o inclinômetro e a bússola. Os sensores fusion obtêm seus dados de combinações dos sensores brutos.
 
-    As APIs do Windows Runtime podem acessar todos esses sensores, com exceção do magnetômetro. Os sensores fusion são mais precisos e estáveis do que os sensores raw, mas usam mais energia. Você deve usar os sensores corretos para cada finalidade. Para obter mais informações, consulte [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358)
+    As APIs do Windows Runtime podem acessar todos esses sensores, com exceção do magnetômetro. Os sensores fusion são mais precisos e estáveis do que os sensores raw, mas usam mais energia. Você deve usar os sensores corretos para cada finalidade. Para obter mais informações, consulte [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
 
 **Connected standby:  **Quando o computador está conectado no modo de espera, sempre é possível criar uma instância para objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534). No entanto, o objeto **Geolocator** não encontrará nenhum sensor a ser agregado e, portanto, as chamadas para [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) atingirão seu tempo limite após sete segundos, os ouvintes do evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) nunca serão chamados, e os ouvintes do evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) serão chamados uma vez com o status **NoData**.
 
@@ -107,7 +110,7 @@ O usuário pode desativar a funcionalidade de localização usando as **configur
 
 -   Para saber quando o usuário desabilita ou reabilita os serviços de localização:
     -   Manipule o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542). A propriedade [**Status**](https://msdn.microsoft.com/library/windows/apps/br225601) do argumento para o evento **StatusChanged** tem o valor **Disabled** quando o usuário desabilita os serviços de localização.
-    -   Verifique os códigos de erro retornados de [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536). Se o usuário tiver desabilitado os serviços de localização, haverá falha nas chamadas para **GetGeopositionAsync** com um erro **ACCESS\_DENIED** e a propriedade [**LocationStatus**](https://msdn.microsoft.com/library/windows/apps/br225538) terá o valor **Disabled**
+    -   Verifique os códigos de erro retornados de [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536). Se o usuário tiver desabilitado os serviços de localização, haverá falha nas chamadas para **GetGeopositionAsync** com um erro **ACCESS\_DENIED** e a propriedade [**LocationStatus**](https://msdn.microsoft.com/library/windows/apps/br225538) terá o valor **Disabled**.
 -   Se você tiver um aplicativo cujos dados de localização são essenciais, por exemplo, um aplicativo de mapa, faça o seguinte:
     -   Manipule o evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) para obter atualizações se houver mudança na localização do usuário.
     -   Manipule o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542), conforme descrito anteriormente, para detectar mudanças nas configurações de localização.
@@ -116,7 +119,7 @@ Observe que o serviço de localização retornará os dados quando estiver dispo
 
 ### Representações gráficas de localização
 
-Faça com que seu aplicativo use [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) para denotar a localização atual do usuário no mapa claramente. Existem três bandas principais de precisão, um raio de erro de aproximadamente 10 metros, outro de aproximadamente 100 metros e um terceiro superior a 1 quilômetro. Usando as informações de precisão você pode assegurar que seu aplicativo exiba a localização com precisão no contexto dos dados disponíveis. Para obter informações gerais sobre como usar o controle de mapa, consulte [Exiba mapas em modos de exibição 2D, 3D e Streetside](https://msdn.microsoft.com/library/windows/apps/mt219695)
+Faça com que seu aplicativo use [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) para denotar a localização atual do usuário no mapa claramente. Existem três bandas principais de precisão, um raio de erro de aproximadamente 10 metros, outro de aproximadamente 100 metros e um terceiro superior a 1 quilômetro. Usando as informações de precisão você pode assegurar que seu aplicativo exiba a localização com precisão no contexto dos dados disponíveis. Para obter informações gerais sobre como usar o controle de mapa, consulte [Exiba mapas em modos de exibição 2D, 3D e Streetside](https://msdn.microsoft.com/library/windows/apps/mt219695).
 
 -   Para uma precisão de aproximadamente 10 metros (resolução do GPS), a localização pode ser indicada por um ponto ou pino no mapa. Com essa precisão, as coordenadas de latitude e longitude e o endereço também podem ser mostrados.
 
@@ -167,6 +170,7 @@ A localização geográfica do usuário faz parte das PII (informações de iden
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

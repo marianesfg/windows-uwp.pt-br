@@ -1,16 +1,20 @@
 ---
 author: PatrickFarley
-Description: 'Descreve a estrutura do tipo de arquivo de Formato de Manufatura 3D e como ele pode ser criado e manipulado com a API Windows.Graphics.Printing3D.'
-MS-HAID: 'dev\_devices\_sensors.generate\_3mf'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: Descreve a estrutura do tipo de arquivo de Formato de Manufatura 3D e como ele pode ser criado e manipulado com a API Windows.Graphics.Printing3D.
+MS-HAID: dev\_devices\_sensors.generate\_3mf
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Gerar um pacote 3MF
+translationtype: Human Translation
+ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
+ms.openlocfilehash: fd85530d27a157bd65a6feec8a20cca8cadfb88f
+
 ---
 
 # Gerar um pacote 3MF
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -140,6 +144,7 @@ O método a seguir pega um **Printing3D3MFPackage** concluído e salva os dados 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

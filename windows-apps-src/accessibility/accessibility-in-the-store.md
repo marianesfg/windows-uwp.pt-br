@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: Descreve os requisitos para declarar o seu aplicativo da Plataforma Universal do Windows (UWP) como acessível na Windows Store.
+Description: "Descreve os requisitos para declarar o seu aplicativo da Plataforma Universal do Windows (UWP) como acessível na Windows Store."
 ms.assetid: 59FA3B87-75A6-4B30-BA7C-A0E769D68050
 title: Acessibilidade na Loja
 label: Accessibility in the Store
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 46dfe4fba383861c704b2ba9070bdd8102b10562
+
 ---
 
 # Acessibilidade na Loja  
@@ -42,6 +46,7 @@ Consulte [Accessibility checklist](accessibility-checklist.md) para ver uma aná
 * [Acessibilidade](accessibility.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

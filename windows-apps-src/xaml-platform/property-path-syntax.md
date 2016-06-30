@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Você pode usar a classe PropertyPath e a sintaxe de cadeia de caracteres para instanciar um valor PropertyPath em XAML ou em código.
+description: "Você pode usar a classe PropertyPath e a sintaxe de cadeia de caracteres para instanciar um valor PropertyPath em XAML ou em código."
 title: Sintaxe de Property-path'
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0b1851bc9d19de5b678f8c6c3a255c0ba3057a85
+
 ---
 
 # Sintaxe de Property-path
@@ -116,6 +120,7 @@ Na maioria das vezes, é possível aplicar um [**PropertyPath**](https://msdn.mi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

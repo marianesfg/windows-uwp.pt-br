@@ -1,16 +1,19 @@
 ---
 author: mcleblanc
-description: A prática de definição da interface do usuário na forma de marcação XAML declarativa é convertida extremamente bem dos aplicativos Windows Phone Silverlight para aplicativos UWP (Plataforma Universal do Windows).
-title: Fazendo a portabilidade de XAML e da interface do usuário do Windows Phone Silverlight para a UWP
+description: "A prática de definição da interface do usuário na forma de marcação XAML declarativa é convertida extremamente bem dos aplicativos Windows Phone Silverlight para aplicativos UWP (Plataforma Universal do Windows)."
+title: "Fazendo a portabilidade de XAML e da interface do usuário do Windows Phone Silverlight para a UWP"
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
+ms.sourcegitcommit: de5420b45832a482d08e5e7ede436407f7dbf2af
+ms.openlocfilehash: a34133b42872ce949644dc951255e6214164adad
+
 ---
 
 #  Fazendo a portabilidade de XAML e da interface do usuário do Windows Phone Silverlight para a UWP
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, veja o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-O tópico anterior foi [Solução de problemas](wpsl-to-uwp-troubleshooting.md)
+O tópico anterior foi [Solução de problemas](wpsl-to-uwp-troubleshooting.md).
 
 A prática de definição da interface do usuário na forma de marcação XAML declarativa é convertida extremamente bem dos aplicativos Windows Phone Silverlight para aplicativos UWP (Plataforma Universal do Windows). Você descobrirá que grandes seções da sua marcação serão compatíveis assim que tiver atualizado as referências de chave de recurso do sistema, alterado alguns nomes de tipo de elemento e alterado "clr-namespace" para "using". Muito do código imperativo na sua camada de apresentação (modelos de exibição e o código que manipula os elementos da interface do usuário) também serão simples de portar.
 
@@ -18,7 +21,7 @@ A prática de definição da interface do usuário na forma de marcação XAML d
 
 O tópico anterior mostrou como copiar os arquivos XAML e code-behind para seu novo projeto do Visual Studio do Windows 10. Um dos primeiros problemas que você pode notar realçado no designer XAML do Visual Studio é que o elemento `PhoneApplicationPage` na raiz do arquivo XAML não é válido para um projeto da Plataforma Universal do Windows (UWP). No tópico anterior, você salvou uma cópia dos arquivos XAML gerados pelo Visual Studio quando ele criou o projeto do Windows 10. Se abrir essa versão de MainPage.xaml, você verá que há na raiz o tipo [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503), que é o namespace [**Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227716). Assim, você pode alterar todos os elementos `<phone:PhoneApplicationPage>` para `<Page>` (não se esqueça da sintaxe de elemento de propriedade) e excluir a declaração `xmlns:phone`.
 
-Para obter uma abordagem mais geral para encontrar o tipo da UWP que corresponda a um tipo do Windows Phone Silverlight, consulte [Mapeamentos de namespace e de classe](wpsl-to-uwp-namespace-and-class-mappings.md)
+Para uma abordagem mais geral para encontrar o tipo da UWP que corresponda a um tipo do Windows Phone Silverlight, consulte [Mapeamentos de namespace e de classe](wpsl-to-uwp-namespace-and-class-mappings.md).
 
 ## Declarações de prefixo de namespace XAML
 
@@ -67,7 +70,7 @@ Em casos simples como este, onde você está mapeando os tipos em um namespace a
 
 Assim que todas as diretivas using antigas forem removidas e as novas adicionadas, você poderá usar o comando **Organizar Usos** do Visual Studio para classificar suas diretivas e remover as não utilizadas.
 
-Às vezes, corrigir o código imperativo será tão secundário quanto alterar um tipo de parâmetro. Em outras ocasiões, você precisará usar APIs UWP em vez de APIs .NET para aplicativos da Windows Store. Para identificar quais APIs têm suporte, use o restante deste guia de portabilidade em combinação com [Visão geral de .NET para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx) e a [referência do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377)
+Às vezes, corrigir o código imperativo será tão secundário quanto alterar um tipo de parâmetro. Em outras ocasiões, você precisará usar APIs UWP em vez de APIs .NET para aplicativos da Windows Store. Para identificar quais APIs têm suporte, use o restante deste guia de portabilidade em combinação com [Visão geral de .NET para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx) e a [referência do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/br211377).
 
 E, se você só quiser chegar ao estágio onde o seu projeto é compilado, poderá comentar ou apagar qualquer código não essencial. Em seguida, itere, um problema por vez, e consulte os seguintes tópicos desta seção (e o tópico anterior: [Solução de problemas](wpsl-to-uwp-troubleshooting.md)), até que todos os problemas de compilação e do tempo de execução sejam corrigidos e a portabilidade seja concluída.
 
@@ -77,11 +80,11 @@ Como seu aplicativo do Windows 10 pode potencialmente ser executado em uma ampla
 
 ## Alarmes e lembretes
 
-O código que usa as classes **Alarm** ou **Reminder** deve ser portado para usar a classe [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) para criar e registrar uma tarefa em segundo plano e exibir uma notificação do sistema no momento relevante. Consulte [Processamento em segundo plano](wpsl-to-uwp-business-and-data.md#background-processing) e [Notificações do sistema](#toasts)
+O código que usa as classes **Alarm** ou **Reminder** deve ser portado para usar a classe [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) para criar e registrar uma tarefa em segundo plano e exibir uma notificação do sistema no momento relevante. Consulte [Processamento em segundo plano](wpsl-to-uwp-business-and-data.md#background-processing) e [Notificações do sistema](#toasts).
 
 ## Animação
 
-Como uma alternativa preferencial para animações de quadro chave e animações de/para, a biblioteca de animação da UWP está disponível para aplicativos UWP. Essas animações foram projetadas e ajustadas para serem executadas sem problemas, para terem uma ótima aparência e para fazer seu aplicativo parecer integrado ao Windows da mesma forma que os aplicativos nativos. Consulte [Guia de início rápido: animando sua interface do usuário usando animações de biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+Como uma alternativa preferencial para animações de quadro chave e animações de/para, a biblioteca de animação da UWP está disponível para aplicativos UWP. Essas animações foram projetadas e ajustadas para serem executadas sem problemas, para terem uma ótima aparência e para fazer seu aplicativo parecer integrado ao Windows da mesma forma que os aplicativos nativos. Consulte [Guia de início rápido: animando sua interface do usuário usando animações de biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703).
 
 Caso use animações de quadro chave ou animações de/para nos aplicativos UWP, talvez você queira compreender a distinção entre animações independentes e dependentes introduzidas pela nova plataforma. Consulte [Otimizar animações e mídia](https://msdn.microsoft.com/library/windows/apps/mt204774). As animações executadas no thread da interface do usuário (as que animam propriedades de layout, por exemplo) são conhecidas como animações dependentes e, quando executadas na nova plataforma, não terão efeito, a menos que você faça uma destas duas coisas. É possível redirecioná-las para animar propriedades diferentes, como [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/br208980), o que as torna independentes. Ou é possível definir `EnableDependentAnimation="True"` no elemento de animação para confirmar a intenção de executar uma animação sem garantia de execução tranquila. Se usar o Blend for Visual Studio para criar novas animações, essa propriedade será definida para você onde for necessário.
 
@@ -145,18 +148,18 @@ O tópico de associação inclui:
 -   Associando um elemento da interface do usuário a outro elemento da interface do usuário
 -   Escrevendo um modelo de exibição observável (ou seja, ele gera notificações quando um valor de propriedade é alterado e quando a disponibilidade de um comando é alterada)
 
-Todos esses aspectos ainda têm amplo suporte, mas há diferenças de namespace. Por exemplo, **System.Windows.Data.Binding** é mapeado para [**Windows.UI.Xaml.Data.Binding**](https://msdn.microsoft.com/library/windows/apps/br209820), **System.ComponentModel.INotifyPropertyChanged** é mapeado para [**Windows.UI.Xaml.Data.INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/br209899) e **System.Collections.Specialized.INotifyPropertyChanged** é mapeado para [**Windows.UI.Xaml.Interop.INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/hh702001)
+Todos esses aspectos ainda têm amplo suporte, mas há diferenças de namespace. Por exemplo, **System.Windows.Data.Binding** é mapeado para [**Windows.UI.Xaml.Data.Binding**](https://msdn.microsoft.com/library/windows/apps/br209820), **System.ComponentModel.INotifyPropertyChanged** é mapeado para [**Windows.UI.Xaml.Data.INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/br209899) e **System.Collections.Specialized.INotifyPropertyChanged** é mapeado para [**Windows.UI.Xaml.Interop.INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/hh702001).
 
-As barras de aplicativos e os botões da barra de aplicativos Windows Phone Silverlight não podem ser associados assim como em um aplicativo UWP. Você pode ter código imperativo que construa sua barra de aplicativos e seus botões, que vincule-os às propriedades e às cadeias de caracteres localizadas e que manipule seus eventos. Nesse caso, agora você tem a opção de portar esse código imperativo substituindo-o pela marcação declarativa associada a propriedades e a comandos, e por referências a recurso estático, tornando seu aplicativo cada vez mais seguir e de manutenção mais fácil. Você pode usar o Visual Studio ou o Blend for Visual Studio para associar botões da barra de aplicativos UWP e criar estilos para eles, assim como qualquer outro elemento XAML. Observe que, em um aplicativo UWP, os nomes de tipo usados são [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/dn279427) e [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244)
+As barras de aplicativos e os botões da barra de aplicativos Windows Phone Silverlight não podem ser associados assim como em um aplicativo UWP. Você pode ter código imperativo que construa sua barra de aplicativos e seus botões, que vincule-os às propriedades e às cadeias de caracteres localizadas e que manipule seus eventos. Nesse caso, agora você tem a opção de portar esse código imperativo substituindo-o pela marcação declarativa associada a propriedades e a comandos, e por referências a recurso estático, tornando seu aplicativo cada vez mais seguir e de manutenção mais fácil. Você pode usar o Visual Studio ou o Blend for Visual Studio para associar botões da barra de aplicativos UWP e criar estilos para eles, assim como qualquer outro elemento XAML. Observe que, em um aplicativo UWP, os nomes de tipo usados são [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/dn279427) e [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244).
 
 Atualmente, os recursos relacionados à associação de aplicativos UWP têm as seguintes limitações:
 
--   Não há suporte interno para validação de entrada de dados e para as interfaces [**IDataErrorInfo**](T:System.ComponentModel.IDataErrorInfo) e [**INotifyDataErrorInfo**](T:System.ComponentModel.INotifyDataErrorInfo).
+-   Não há suporte interno para validação de entrada de dados e para as interfaces [**IDataErrorInfo**](https://msdn.microsoft.com/en-us/library/system.componentmodel.idataerrorinfo.aspx) e [**INotifyDataErrorInfo**](https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifydataerrorinfo.aspx).
 -   A classe [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) não inclui as propriedades de formatação estendidas disponíveis no Windows Phone Silverlight. Entretanto, você ainda pode implementar [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) para oferecer formatação personalizada.
--   Os métodos [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) obtêm as cadeias de caracteres de idiomas como parâmetros em vez de objetos [**CultureInfo**](T:System.Globalization.CultureInfo).
--   A classe [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) não fornece suporte interno para classificação e filtragem, e o agrupamento funciona de modo diferente. Para obter mais informações, consulte [Associação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946) e [Exemplo de vinculação de dados](http://go.microsoft.com/fwlink/p/?linkid=226854)
+-   Os métodos [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) obtêm as cadeias de caracteres de idiomas como parâmetros em vez de objetos [**CultureInfo**](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).
+-   A classe [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) não fornece suporte interno para classificação e filtragem, e o agrupamento funciona de modo diferente. Para obter mais informações, consulte [Associação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946) e [Exemplo de vinculação de dados](http://go.microsoft.com/fwlink/p/?linkid=226854).
 
-Embora os mesmos recursos de associação ainda tenham amplo suporte, o Windows 10 oferece a opção de um mecanismo de associação novo e com melhor desempenho chamado de associações compiladas, que usam a extensão de marcação {x:Bind}. Consulte [Vinculação de dados: impulsione o desempenho de seu aplicativo por meio de novas melhorias na vinculação de dados XAML](http://channel9.msdn.com/Events/Build/2015/3-635) e a [Amostra x:Bind](http://go.microsoft.com/fwlink/p/?linkid=619989)
+Embora os mesmos recursos de associação ainda tenham amplo suporte, o Windows 10 oferece a opção de um mecanismo de associação novo e com melhor desempenho chamado de associações compiladas, que usam a extensão de marcação {x:Bind}. Consulte [Vinculação de dados: impulsione o desempenho de seu aplicativo por meio de novas melhorias na vinculação de dados XAML](http://channel9.msdn.com/Events/Build/2015/3-635) e a [Amostra x:Bind](http://go.microsoft.com/fwlink/p/?linkid=619989).
 
 ## Associando uma imagem a um modelo de exibição
 
@@ -185,16 +188,16 @@ Os aplicativos Windows Phone Silverlight usam controles definidos nos namespaces
 | ApplicationBar | A propriedade [Page.TopAppBar](https://msdn.microsoft.com/library/windows/apps/hh702575). |
 | ApplicationBarIconButton | O equivalente UWP é a propriedade [Glyph](https://msdn.microsoft.com/library/windows/apps/dn279538). PrimaryCommands é a propriedade de conteúdo de CommandBar. O analisador XAML interpreta o xml interno de um elemento como o valor de sua propriedade de conteúdo. |
 | ApplicationBarMenuItem | O equivalente UWP é a propriedade [AppBarButton.Label](https://msdn.microsoft.com/library/windows/apps/dn279261) definida para o texto do item de menu. |
-| ContextMenu (no kit de ferramentas do Windows Phone) | Para um submenu de seleção única, use [Flyout](https://msdn.microsoft.com/library/windows/apps/dn279496) |
-| Classe ControlTiltEffect.TiltEffect | As animações da biblioteca de animações UWP são inseridas nos estilos padrão dos controles comuns. Consulte [Animando ações de ponteiro](https://msdn.microsoft.com/library/windows/apps/xaml/jj649432) |
-| LongListSelector com dados agrupados | O LongListSelector do Windows Phone Silverlight funciona de duas maneiras, que podem ser usadas em conjunto. Primeiro, ele é capaz de exibir dados agrupados por uma chave, por exemplo, uma lista de nomes agrupados pela letra inicial. Segundo, é capaz de aplicar "zoom" entre duas exibições semânticas: a lista agrupada de itens (por exemplo, nomes) e uma lista somente com as próprias chaves de grupo (por exemplo, letras iniciais). Com a UWP, você pode exibir dados agrupados com as [Diretrizes de controles de exibição de grade e de lista](https://msdn.microsoft.com/library/windows/apps/mt186889) |
+| ContextMenu (no kit de ferramentas do Windows Phone) | Para um submenu de seleção única, use [Flyout](https://msdn.microsoft.com/library/windows/apps/dn279496). |
+| Classe ControlTiltEffect.TiltEffect | As animações da biblioteca de animações UWP são inseridas nos estilos padrão dos controles comuns. Veja [Animando ações de ponteiro](https://msdn.microsoft.com/library/windows/apps/xaml/jj649432). |
+| LongListSelector com dados agrupados | O LongListSelector do Windows Phone Silverlight funciona de duas maneiras, que podem ser usadas em conjunto. Primeiro, ele é capaz de exibir dados agrupados por uma chave, por exemplo, uma lista de nomes agrupados pela letra inicial. Segundo, é capaz de aplicar "zoom" entre duas exibições semânticas: a lista agrupada de itens (por exemplo, nomes) e uma lista somente com as próprias chaves de grupo (por exemplo, letras iniciais). Com a UWP, você pode exibir dados agrupados com as [Diretrizes de controles de exibição de grade e de lista](https://msdn.microsoft.com/library/windows/apps/mt186889). |
 | LongListSelector com dados simples | Por motivos de desempenho, no caso de listas muito longas, é recomendável LongListSelector em vez de uma caixa de listagem do Windows Phone Silverlight mesmo para dados simples não agrupados. Em um aplicativo UWP, [GridView](https://msdn.microsoft.com/library/windows/apps/br242705) são preferíveis para listas longas de itens, sejam dados receptivos a agrupamento ou não. |
 | Panorama | O controle de Panorama do Windows Phone Silverlight é mapeado para as [Diretrizes para controles hub nos aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn449149) e Diretrizes para controle hub. <br/> Observe que um controle de Panorama encapsula da última seção à primeira, e sua imagem da tela de fundo se move na paralaxe em relação às seções. As seções [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843) não encapsulam, e a paralaxe não é usada. |
 | Pivô | O equivalente da UWP para o controle de Pivô do Windows Phone Silverlight é [Windows.UI.Xaml.Controls.Pivot](https://msdn.microsoft.com/library/windows/apps/dn608241). Ele está disponível para todas as famílias de dispositivos. |
 
 **Observação** O estado visual PointerOver é relevante em estilos/modelos personalizados em aplicativos do Windows 10, mas não em aplicativos Windows Phone Silverlight. Há outros motivos por que seus estilos/modelos personalizados existentes podem não ser adequados aos aplicativos do Windows 10, incluindo as chaves de recurso do sistema que você está usando, as alterações nos conjuntos de estados visuais usados e as melhorias de desempenho nos estilos/modelos padrão do Windows 10. Recomendamos que você edite uma cópia nova de um modelo padrão do controle para o Windows 10 e reaplique a personalização de estilo e modelo a ela.
 
-Para saber mais sobre controles da UWP, consulte [Controles por função](https://msdn.microsoft.com/library/windows/apps/mt185405), [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406) e [Diretrizes para controles](https://msdn.microsoft.com/library/windows/apps/dn611856)
+Para saber mais sobre controles da UWP, consulte [Controles por função](https://msdn.microsoft.com/library/windows/apps/mt185405), [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406) e [Diretrizes para controles](https://msdn.microsoft.com/library/windows/apps/dn611856).
 
 ##  Linguagem de design no Windows 10
 
@@ -202,9 +205,9 @@ Existem algumas diferenças na linguagem de design entre aplicativos Windows Pho
 
 ## Localização e globalização
 
-Para cadeias de caracteres localizadas, você pode reutilizar o arquivo .resx do projeto do Windows Phone Silverlight no projeto do aplicativo UWP. Copie o arquivo, adicione-o ao projeto e renomeie-o para Resources.resw de forma que o mecanismo de pesquisa o encontre por padrão. Defina **Ação de Compilação** como **PRIResource** e **Copiar para Diretório de Saída** como **Não copiar**. Você pode usar as cadeias de caracteres na marcação especificando o atributo **X:UID** em seus elementos XAML. Consulte [Guia de início rápido: usando recursos de cadeia de caracteres](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329)
+Para cadeias de caracteres localizadas, você pode reutilizar o arquivo .resx do projeto do Windows Phone Silverlight no projeto do aplicativo UWP. Copie o arquivo, adicione-o ao projeto e renomeie-o para Resources.resw de forma que o mecanismo de pesquisa o encontre por padrão. Defina **Ação de Compilação** como **PRIResource** e **Copiar para Diretório de Saída** como **Não copiar**. Você pode usar as cadeias de caracteres na marcação especificando o atributo **X:UID** em seus elementos XAML. Consulte [Guia de início rápido: usando recursos de cadeia de caracteres](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
-Os aplicativos Windows Phone Silverlight usam a classe **CultureInfo** para ajudar a globalizar um aplicativo. Os aplicativos UWP usam MRT (Modern Resource Technology), que permite o carregamento dinâmico de recursos do aplicativo (localização, escala e tema) no tempo de execução e na superfície de design do Visual Studio. Para saber mais, consulte [Diretrizes para arquivos, dados e globalização](https://msdn.microsoft.com/library/windows/apps/dn611859)
+Os aplicativos Windows Phone Silverlight usam a classe **CultureInfo** para ajudar a globalizar um aplicativo. Os aplicativos UWP usam MRT (Modern Resource Technology), que permite o carregamento dinâmico de recursos do aplicativo (localização, escala e tema) no tempo de execução e na superfície de design do Visual Studio. Para saber mais, veja [Diretrizes para arquivos, dados e globalização](https://msdn.microsoft.com/library/windows/apps/dn611859).
 
 O tópico [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/br206071) descreve como carregar recursos específicos à família de dispositivos com base no fator de seleção de recurso de família de dispositivos.
 
@@ -284,9 +287,9 @@ Em um aplicativo UWP, você pode usar código imperativo para definir a página 
     if (!rootFrame.Navigate(typeof(MainPage), e.Arguments))
 ```
 
-O mapeamento de URI e a navegação de fragmento são técnicas de navegação de URI e, portanto, não são aplicáveis à navegação da UWP, que não se baseia em URIs. O mapeamento de URI existe em resposta à natureza fracamente tipada de identificação de uma página de destino com uma cadeia de caracteres de URI, o que leva a problemas de fragilidade e de capacidade de manutenção caso a página seja movida para uma pasta diferente e, consequentemente, para um caminho relativo diferente. Os aplicativos UWP usam navegação baseada em tipo, que é fortemente tipada e verificada por compilador e não tem o problema que é resolvido pelo mapeamento de URI. O caso de uso para a navegação de fragmento é passar algum contexto para a página de destino de forma que a página possa fazer com que um fragmento específico do seu conteúdo seja rolado para exibição ou, caso contrário, exibido. A mesma meta pode ser obtida passando um parâmetro de navegação quando você chama o método [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694).
+O mapeamento de URI e a navegação de fragmento são técnicas de navegação de URI e, portanto, não são aplicáveis à navegação da UWP, que não se baseia em URIs. O mapeamento de URI existe em resposta à natureza fracamente tipada de identificação de uma página de destino com uma cadeia de caracteres de URI, o que leva a problemas de fragilidade e de capacidade de manutenção caso a página seja movida para uma pasta diferente e, consequentemente, para um caminho relativo diferente. Os aplicativos UWP usam navegação baseada em tipo, que é fortemente tipada e verificada por compilador e não tem o problema que é resolvido pelo mapeamento de URI. O caso de uso para a navegação de fragmento é passar algum contexto para a página de destino de forma que a página possa fazer com que um fragmento específico do seu conteúdo seja rolado para exibição ou, caso contrário, exibido. O mesmo objetivo pode ser obtido passando um parâmetro de navegação quando você chama o método [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694).
 
-Para obter mais informações, consulte [Navegação](https://msdn.microsoft.com/library/windows/apps/mt187344)
+Para obter mais informações, consulte [Navegação](https://msdn.microsoft.com/library/windows/apps/mt187344).
 
 ## Referência de chave de recurso
 
@@ -302,17 +305,17 @@ A bandeja do sistema (definida na marcação XAML com `shell:SystemTray.IsVisibl
 
 Texto (ou tipografia) é um aspecto importante de um aplicativo UWP e, durante a portabilidade, convém revisitar os designs visuais dos modos de exibição de maneira que eles fiquem em harmonia com a nova linguagem de design. Use estas ilustrações para encontrar os estilos de sistema **TextBlock** da UWP que estão disponíveis. Encontre aqueles que correspondam aos estilos do Windows Phone Silverlight que você usou. Como alternativa, você pode criar seus próprios estilos universais e copiar as propriedades dos estilos de sistema do Windows Phone Silverlight para eles.
 
-![system textblock styles fou windows 10 apps
+![estilos de textblock do sistema para aplicativos windows 10](images/label-uwp10stylegallery.png) estilos TextBlock do sistema para os aplicativos de Windows 10
 
-Estilos de sistema TextBlock para aplicativos do Windows 10 Em um aplicativo Windows Phone Silverlight, a família de fontes padrão é Segoe WP. Em um aplicativo do Windows 10, a família de fontes padrão é a Segoe UI. Como resultado, as métricas de fonte em seu aplicativo podem parecer diferentes. Se deseja reproduzir a aparência do seu texto do Windows Phone Silverlight, você pode definir suas próprias métricas usando propriedades como [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) e [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362).
+Em um aplicativo Windows Phone Silverlight, a família de fontes padrão é Segoe WP. Em um aplicativo do Windows 10, a família de fontes padrão é a Segoe UI. Como resultado, as métricas de fonte em seu aplicativo podem parecer diferentes. Se deseja reproduzir a aparência do seu texto do Windows Phone Silverlight, você pode definir suas próprias métricas usando propriedades como [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) e [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362). Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](http://dev.windows.com/design).
 
-## Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](http://dev.windows.com/design)
+## Alterações de tema
 
-Alterações de tema Para um aplicativo Windows Phone Silverlight, o tema padrão é escuro. Para dispositivos Windows 10, o tema padrão mudou, mas você pode controlar o tema usado declarando um tema solicitado em App.xaml.
+Para um aplicativo Windows Phone Silverlight, o tema padrão é escuro. Para dispositivos Windows 10, o tema padrão mudou, mas você pode controlar o tema usado declarando um tema solicitado em App.xaml. Por exemplo, para usar um tema escuro em todos os dispositivos, adicione `RequestedTheme="Dark"` ao elemento Application raiz.
 
-## Por exemplo, para usar um tema escuro em todos os dispositivos, adicione `RequestedTheme="Dark"` ao elemento Application raiz.
+## Blocos
 
-Blocos Os blocos dos aplicativos UWP têm comportamentos semelhantes aos Blocos Dinâmicos dos aplicativos Windows Phone Silverlight, embora haja algumas diferenças. Por exemplo, o código que chama o método **Microsoft.Phone.Shell.ShellTile.Create** para criar blocos secundários deve ser portado para chamar [**SecondaryTile.RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/br230606).
+Os blocos dos aplicativos UWP têm comportamentos semelhantes aos Blocos Dinâmicos dos aplicativos Windows Phone Silverlight, embora haja algumas diferenças. Por exemplo, o código que chama o método **Microsoft.Phone.Shell.ShellTile.Create** para criar blocos secundários deve ser portado para chamar [**SecondaryTile.RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/br230606). Aqui está um exemplo de antes e depois, primeiro a versão do Windows Phone Silverlight:
 
 
 ```csharp
@@ -328,7 +331,7 @@ Blocos Os blocos dos aplicativos UWP têm comportamentos semelhantes aos Blocos 
     ShellTile.Create(this.selectedBookSku.NavigationUri, tileData, true);
 ```
 
-Aqui está um exemplo de antes e depois, primeiro a versão do Windows Phone Silverlight:
+E o equivalente da UWP:
 
 ```csharp
     var tile = new SecondaryTile(
@@ -341,55 +344,56 @@ Aqui está um exemplo de antes e depois, primeiro a versão do Windows Phone Sil
     await tile.RequestCreateAsync();
 ```
 
-E o equivalente da UWP:
+O código que atualiza um bloco com o método **Microsoft.Phone.Shell.ShellTile.Update**, ou a classe **Microsoft.Phone.Shell.ShellTileSchedule**, deve ser portado para usar as classes [**TileUpdateManager**](https://msdn.microsoft.com/library/windows/apps/br208622), [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628), [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) e/ou as classes [**ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637).
 
-O código que atualiza um bloco com o método **Microsoft.Phone.Shell.ShellTile.Update**, ou a classe **Microsoft.Phone.Shell.ShellTileSchedule**, deve ser portado para usar as classes [**TileUpdateManager**](https://msdn.microsoft.com/library/windows/apps/br208622), [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628), [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) e/ou as classes [**ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637). Para saber mais sobre blocos, notificações do sistema, selos, faixas e notificações, consulte [Criando blocos](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260) e [Trabalhando com blocos, selos e notificações do sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259).
+Para saber mais sobre blocos, notificações do sistema, selos, faixas e notificações, consulte [Criando blocos](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260) e [Trabalhando com blocos, selos e notificações do sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259). Para obter informações específicas sobre tamanhos de ativos visuais usados para Blocos da UWP, consulte [Ativos visuais de bloco e de notificações do sistema](https://msdn.microsoft.com/library/windows/apps/hh781198).
 
-## Para obter informações específicas sobre tamanhos de ativos visuais usados para Blocos da UWP, consulte [Ativos visuais de bloco e de notificações do sistema](https://msdn.microsoft.com/library/windows/apps/hh781198)
+## Notificações do sistema
 
-Notificações do sistema O código que exibe uma notificação do sistema com a classe **Microsoft.Phone.Shell.ShellToast** deve ser portado para usar as classes [**ToastNotificationManager**](https://msdn.microsoft.com/library/windows/apps/br208642), [**ToastNotifier**](https://msdn.microsoft.com/library/windows/apps/br208653), [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) e/ou as classes [**ScheduledToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208607).
+O código que exibe uma notificação do sistema com a classe **Microsoft.Phone.Shell.ShellToast** deve ser portado para usar as classes [**ToastNotificationManager**](https://msdn.microsoft.com/library/windows/apps/br208642), [**ToastNotifier**](https://msdn.microsoft.com/library/windows/apps/br208653), [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) e/ou as classes [**ScheduledToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208607). Observe que, em dispositivos móveis, o termo voltado para o consumidor para "notificação do sistema" é "faixa".
 
-Observe que, em dispositivos móveis, o termo voltado para o consumidor para "notificação do sistema" é "faixa".
+Consulte [Trabalhando com blocos, selos e notificações do sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259).
 
-## Consulte [Trabalhando com blocos, selos e notificações do sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259)
+## Pixels de exibição/efetivos, distância de exibição e fatores de escala
 
-Pixels de exibição/efetivos, distância de exibição e fatores de escala Aplicativos Windows Phone Silverlight e aplicativos do Windows 10 são diferentes na forma como abstraem o tamanho e o layout de elementos da interface do usuário do tamanho físico e da resolução reais de dispositivos. Um aplicativo Windows Phone Silverlight usa pixels de exibição para fazer isso. Com o Windows 10, o conceito de pixels de exibição foi refinado para o conceito de pixels efetivos.
+Aplicativos Windows Phone Silverlight e aplicativos do Windows 10 são diferentes na forma como abstraem o tamanho e o layout de elementos da interface do usuário do tamanho físico e da resolução reais de dispositivos. Um aplicativo Windows Phone Silverlight usa pixels de exibição para fazer isso. Com o Windows 10, o conceito de pixels de exibição foi refinado para o conceito de pixels efetivos. Aqui está uma explicação sobre esse termo, seu significado, e o valor extra que ele oferece.
 
-Aqui está uma explicação sobre esse termo, seu significado, e o valor extra que ele oferece. O termo "resolução" refere-se a uma medida da densidade de pixels e não, como comumente se pensa, uma contagem de pixels. "Resolução efetiva" é a maneira como os pixels físicos que compõem uma imagem ou um glifo são resolvidos para o olho dadas as diferenças na distância de exibição e no tamanho físico de pixels do dispositivo (a densidade de pixels sendo a recíproca do tamanho físico de pixels). A resolução efetiva é uma boa métrica para criar uma experiência porque é centrada no usuário.
+O termo "resolução" refere-se a uma medida da densidade de pixels e não, como comumente se pensa, uma contagem de pixels. "Resolução efetiva" é a maneira como os pixels físicos que compõem uma imagem ou um glifo são resolvidos para o olho dadas as diferenças na distância de exibição e no tamanho físico de pixels do dispositivo (a densidade de pixels sendo a recíproca do tamanho físico de pixels). A resolução efetiva é uma boa métrica para criar uma experiência porque é centrada no usuário. Ao compreender todos os fatores e controlar o tamanho dos elementos da interface do usuário, você poderá melhorar a experiência do usuário.
 
-Ao compreender todos os fatores e controlar o tamanho dos elementos da interface do usuário, você poderá melhorar a experiência do usuário. Para um aplicativo Windows Phone Silverlight, todas as telas de telefone têm exatamente 480 pixels de exibição de largura, sem exceção, independentemente de quantos pixels físicos a tela tenha ou de qual seja sua densidade de pixels ou seu tamanho físico.
+Para um aplicativo Windows Phone Silverlight, todas as telas de telefone têm exatamente 480 pixels de exibição de largura, sem exceção, independentemente de quantos pixels físicos a tela tenha ou de qual seja sua densidade de pixels ou seu tamanho físico. Isso significa que um elemento **Image** com `Width="48"` será exatamente um décimo da largura da tela de qualquer telefone que possa executar o aplicativo Windows Phone Silverlight.
 
-Isso significa que um elemento **Image** com `Width="48"` será exatamente um décimo da largura da tela de qualquer telefone que possa executar o aplicativo Windows Phone Silverlight. Para um aplicativo do Windows 10, *não* se aplica o caso em que todos os dispositivos têm um número fixo de pixels efetivos de largura. Isso é provavelmente óbvio, devido à ampla variedade de dispositivos em que um aplicativo UWP pode ser executado. Os diferentes dispositivos têm um número diferente de pixels efetivos de largura, desde 320 epx para os dispositivos menores até 1024 epx para um monitor de tamanho moderado, e muito além disso para larguras muito maiores. Você só precisa continuar a usar elementos de dimensionamento automático e painéis de layout dinâmicos como você sempre fez. Também haverá alguns casos em que você definirá as propriedades dos elementos da interface do usuário para um tamanho fixo na marcação XAML. Um fator de escala é aplicado automaticamente ao aplicativo dependendo do dispositivo em que é executado e das configurações de exibição feitas pelo usuário. E esse fator de escala serve para que qualquer elemento da interface do usuário com um tamanho fixo continue apresentando um alvo de toque (e leitura) de tamanho mais ou menos constante para o usuário em diversos tamanhos de tela.
+Para um aplicativo do Windows 10, *não* se aplica o caso em que todos os dispositivos têm um número fixo de pixels efetivos de largura. Isso é provavelmente óbvio, devido à ampla variedade de dispositivos em que um aplicativo UWP pode ser executado. Os diferentes dispositivos têm um número diferente de pixels efetivos de largura, desde 320 epx para os dispositivos menores até 1024 epx para um monitor de tamanho moderado, e muito além disso para larguras muito maiores. Você só precisa continuar a usar elementos de dimensionamento automático e painéis de layout dinâmicos como você sempre fez. Também haverá alguns casos em que você definirá as propriedades dos elementos da interface do usuário para um tamanho fixo na marcação XAML. Um fator de escala é aplicado automaticamente ao aplicativo dependendo do dispositivo em que é executado e das configurações de exibição feitas pelo usuário. E esse fator de escala serve para que qualquer elemento da interface do usuário com um tamanho fixo continue apresentando um alvo de toque (e leitura) de tamanho mais ou menos constante para o usuário em diversos tamanhos de tela. E, com o layout dinâmico, a interface do usuário não será simplesmente dimensionada opticamente em dispositivos diferentes. Em vez disso, ela fará o que for necessário para ajustar a quantidade apropriada de conteúdo ao espaço disponível.
 
-E, com o layout dinâmico, a interface do usuário não será simplesmente dimensionada opticamente em dispositivos diferentes. Em vez disso, ela fará o que for necessário para ajustar a quantidade apropriada de conteúdo ao espaço disponível.
+Uma vez que anteriormente a largura fixa em pixels de exibição de uma tela do tamanho de um telefone era 480, e esse valor agora é normalmente menor em pixels efetivos, uma regra geral é multiplicar qualquer dimensão na marcação do aplicativo Windows Phone Silverlight por um fator de 0,8.
 
-Uma vez que anteriormente a largura fixa em pixels de exibição de uma tela do tamanho de um telefone era 480, e esse valor agora é normalmente menor em pixels efetivos, uma regra geral é multiplicar qualquer dimensão na marcação do aplicativo Windows Phone Silverlight por um fator de 0,8. Para que seu aplicativo tenha a melhor experiência em todas as telas, recomendamos que você crie cada ativo de bitmap em um intervalo de tamanhos, cada um adequado a um fator de escala específico.
+Para que seu aplicativo tenha a melhor experiência em todas as telas, recomendamos que você crie cada ativo de bitmap em um intervalo de tamanhos, cada um adequado a um fator de escala específico. O fornecimento de ativos em escala de 100%, 200% e 400% (nessa ordem de prioridade) trará excelentes resultados na maioria dos casos em todos os fatores de escala intermediários.
 
-O fornecimento de ativos em escala de 100%, 200% e 400% (nessa ordem de prioridade) trará excelentes resultados na maioria dos casos em todos os fatores de escala intermediários. **Observação** Se, por qualquer motivo, você não puder criar ativos em mais de um tamanho, crie ativos na escala de 100%. No Microsoft Visual Studio, o modelo de projeto padrão para aplicativos UWP fornece ativos de identidade visual (logotipos e imagens do bloco) em um único tamanho, mas eles não estão na escala de 100%.
+**Observação** Se, por qualquer motivo, você não puder criar ativos em mais de um tamanho, crie ativos na escala de 100%. No Microsoft Visual Studio, o modelo de projeto padrão para aplicativos UWP fornece ativos de identidade visual (logotipos e imagens do bloco) em um único tamanho, mas eles não estão na escala de 100%. Quando criar ativos para seu próprio aplicativo, siga as diretrizes nesta seção e forneça tamanhos de 100%, 200% e 400%, além de usar pacotes de ativos.
 
-Quando criar ativos para seu próprio aplicativo, siga as diretrizes nesta seção e forneça tamanhos de 100%, 200% e 400%, além de usar pacotes de ativos. Caso você tenha uma arte complexa, convém fornecer os ativos em ainda mais tamanhos.
+Caso você tenha uma arte complexa, convém fornecer os ativos em ainda mais tamanhos. Caso você seja um principiante na arte vetorial, é relativamente fácil gerar ativos de alta qualidade em qualquer fator de escala.
 
-Caso você seja um principiante na arte vetorial, é relativamente fácil gerar ativos de alta qualidade em qualquer fator de escala. Não é recomendável que você tente dar suporte a todos os fatores de escala, mas a lista completa de fatores de escala para aplicativos do Windows 10 é 100%, 125%, 150%, 200%, 250%, 300% e 400%. Se você o fizer, a Loja selecionará os ativos de tamanho correto para cada dispositivo, e somente esses ativos serão baixados.
+Não é recomendável que você tente dar suporte a todos os fatores de escala, mas a lista completa de fatores de escala para aplicativos do Windows 10 é 100%, 125%, 150%, 200%, 250%, 300% e 400%. Se você o fizer, a Loja selecionará os ativos de tamanho correto para cada dispositivo, e somente esses ativos serão baixados. A Loja seleciona os ativos a serem baixados com base no DPI do dispositivo.
 
-A Loja seleciona os ativos a serem baixados com base no DPI do dispositivo.
+Para obter mais informações, consulte [Design responsivo 101 para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958435).
 
-## Para obter mais informações, consulte [Design responsivo 101 para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958435)
+## Tamanho da janela
 
-Tamanho da janela Em seu aplicativo UWP, você pode especificar um tamanho mínimo (largura e altura) com código imperativo. O tamanho mínimo padrão é 500 x 320 epx, que também é o menor tamanho mínimo aceito.
+Em seu aplicativo UWP, você pode especificar um tamanho mínimo (largura e altura) com código imperativo. O tamanho mínimo padrão é 500 x 320 epx, que também é o menor tamanho mínimo aceito. O maior tamanho mínimo aceito é 500 x 500 epx.
 
 ```csharp
    Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize
         (new Size { Width = 500, Height = 500 });
 ```
 
-O maior tamanho mínimo aceito é 500 x 500 epx.
+O próximo tópico é [Portabilidade para E/S, dispositivo e modelo de aplicativo](wpsl-to-uwp-input-and-sensors.md).
 
-## O próximo tópico é [Portabilidade para E/S, dispositivo e modelo de aplicativo](wpsl-to-uwp-input-and-sensors.md)
+## Tópicos relacionados
 
-* [Tópicos relacionados](wpsl-to-uwp-namespace-and-class-mappings.md)
+* [Mapeamentos de namespace e de classe](wpsl-to-uwp-namespace-and-class-mappings.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

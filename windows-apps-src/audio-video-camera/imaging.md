@@ -3,6 +3,10 @@ author: drewbatgit
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: Este artigo explica como carregar e salvar arquivos de imagem usando BitmapDecoder e BitmapEncoder e como usar o objeto SoftwareBitmap para representar imagens de bitmap.
 title: Imagens
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
+
 ---
 
 # Imagens
@@ -131,6 +135,7 @@ Você pode transcodificar um arquivo de imagem diretamente de um [**BitmapDecode
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

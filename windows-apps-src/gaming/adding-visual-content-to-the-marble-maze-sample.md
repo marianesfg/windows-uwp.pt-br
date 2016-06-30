@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Adicionando conteúdo visual ao exemplo do Marble Maze
-description: Este documento descreve como o jogo Marble Maze usa Direct3D e Direct2D no ambiente do aplicativo da Plataforma Universal do Windows (UWP) para que você aprenda e adapte os parâmetros quando trabalhar com o conteúdo do seu próprio jogo.
+title: "Adicionando conteúdo visual ao exemplo do Marble Maze"
+description: "Este documento descreve como o jogo Marble Maze usa Direct3D e Direct2D no ambiente do aplicativo da Plataforma Universal do Windows (UWP) para que você aprenda e adapte os parâmetros quando trabalhar com o conteúdo do seu próprio jogo."
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 16eb493595bbac4f15ed0e755258104693dfba05
+
 ---
 
 # Adicionando conteúdo visual ao exemplo do Marble Maze
@@ -900,6 +904,7 @@ Leia [Adicionando entrada e interatividade ao exemplo do Marble Maze](adding-inp
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

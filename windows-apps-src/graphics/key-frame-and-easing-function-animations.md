@@ -1,8 +1,12 @@
 ---
 author: Jwmsft
-title: Animações de quadro chave e animações com função de easing
+title: "Animações de quadro chave e animações com função de easing"
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
-description: Animações de quadro chave lineares, animações de quadro chave com um valor KeySpline ou funções de easing são três técnicas diferentes para praticamente o mesmo cenário.
+description: "Animações de quadro chave lineares, animações de quadro chave com um valor KeySpline ou funções de easing são três técnicas diferentes para praticamente o mesmo cenário."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f2c6d6c0e1d11fee40440cae06d68907313f62dc
+
 ---
 # Animações de quadro chave e animações com função de easing
 
@@ -21,7 +25,7 @@ As animações de quadro chave permitem mais de um valor de destino, que é atin
 
 Para o comportamento de interpolação, cada quadro chave controla a interpolação até que o tempo de seu **KeyTime** seja atingido. Seu **Value** também é atingido nesse momento. Se houver mais quadros chaves depois, o valor então se torna o valor inicial para o próximo quadro chave em uma sequência.
 
-No início da animação, se nenhum quadro chave com um **KeyTime** de "0:0:0" existir, o valor inicial será o valor não animado da propriedade. Isso é semelhante à maneira como uma animação **From**/**To**/**By** funciona quando não há **From**
+No início da animação, se nenhum quadro chave com um **KeyTime** de "0:0:0" existir, o valor inicial será o valor não animado da propriedade. Isso é semelhante à maneira como uma animação **From**/**To**/**By** funciona quando não há **From**.
 
 A duração de uma animação de quadro chave é implicitamente a duração equivalente ao valor **KeyTime** mais alto definido em qualquer um de seus quadros chave. Você pode definir um [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) explícito se desejar, mas tome cuidado para que ele não seja menor do que um **KeyTime** em seus próprios quadros chave, caso contrário, parte da animação será cortada.
 
@@ -154,9 +158,9 @@ As funções de facilitação permitem aplicar fórmulas matemáticas personaliz
 
 As funções de easing podem ser aplicadas a animações de três maneiras:
 
--   Com o uso de um quadro chave de easing em uma animação de quadro chave, conforme descrito na seção anterior. Use [**EasingColorKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210267), [**EasingDoubleKeyFrame.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.easingdoublekeyframe.easingfunction.aspx) ou [**EasingPointKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210279)
--   Definindo a propriedade **EasingFunction** em um dos tipos de animação **From**/**To**/**By**. Use [**ColorAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR243075), [**DoubleAnimation.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) ou [**PointAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210354)
--   Definindo [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) como parte de um [**VisualTransition**](https://msdn.microsoft.com/library/windows/apps/BR209034). Isso é específico da definição de estados visuais para controles. Para obter mais informações, consulte [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) ou [Storyboards para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
+-   Com o uso de um quadro chave de easing em uma animação de quadro chave, conforme descrito na seção anterior. Use [**EasingColorKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210267), [**EasingDoubleKeyFrame.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.easingdoublekeyframe.easingfunction.aspx) ou [**EasingPointKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210279).
+-   Definindo a propriedade **EasingFunction** em um dos tipos de animação **From**/**To**/**By**. Use [**ColorAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR243075), [**DoubleAnimation.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) ou [**PointAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210354).
+-   Definindo [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) como parte de um [**VisualTransition**](https://msdn.microsoft.com/library/windows/apps/BR209034). Isso é específico da definição de estados visuais para controles. Para obter mais informações, consulte [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) ou [Storyboards para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
 
 Consulte a seguir uma lista das funções de easing:
 
@@ -196,7 +200,7 @@ Consulte a seguir uma lista das funções de easing:
 
 Algumas das funções de easing têm suas próprias propriedades. Por exemplo, [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) tem duas propriedades [**Bounces**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) e [**Bounciness**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx) que modificam o comportamento da função ao longo do tempo desse **BounceEase** específico. Outras funções de easing, como [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126) não têm propriedades adicionais além da propriedade [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275) compartilhada por todas as funções de easeing e sempre produzem o mesmo comportamento de função ao longo do tempo.
 
-Algumas dessas funções de easing têm um pouco de sobreposição, dependendo de como você define as propriedades nas funções de easing que têm propriedades. Por exemplo, [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403) é exatamente o mesmo que um [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399) com [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power) igual a 2. Além disso, [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063) é basicamente um [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294) de valor padrão
+Algumas dessas funções de easing têm um pouco de sobreposição, dependendo de como você define as propriedades nas funções de easing que têm propriedades. Por exemplo, [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403) é exatamente o mesmo que um [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399) com [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power) igual a 2. Além disso, [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063) é basicamente um [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294) de valor padrão.
 
 A função de easing [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049) é exclusiva porque pode alterar o valor fora do intervalo normal definido por **From**/**To** ou valores de quadros chave. Ela começa a animação alterando o valor na direção oposta ao que seria esperado de um comportamento de **From**/**To** normal, volta para **From** ou o valor inicial e depois executa a animação normalmente.
 
@@ -224,9 +228,9 @@ Quando uma função de easing é aplicada a uma animação **From**/**To**/**By*
 
 ## <span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>Animações de valor de objeto separado
 
-Um tipo de animação merece uma menção especial por ser a única maneira de aplicar um valor animado a propriedades que não são do tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) ou [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). Este é o [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) da animação de quadro chave. Animar usando valores [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) é diferente porque não há a possibilidade de interpolar os valores entre os quadros. Quando o [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342) do quadro é atingido, o valor animado é imediatamente definido como o valor especificado no **Value** do quadro chave. Como não há interpolação, há somente um quadro chave que você usa na coleção de quadros chave **ObjectAnimationUsingKeyFrames**: [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132)
+Um tipo de animação merece uma menção especial por ser a única maneira de aplicar um valor animado a propriedades que não são do tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) ou [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). Este é o [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) da animação de quadro chave. Animar usando valores [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) é diferente porque não há a possibilidade de interpolar os valores entre os quadros. Quando o [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342) do quadro é atingido, o valor animado é imediatamente definido como o valor especificado no **Value** do quadro chave. Como não há interpolação, há somente um quadro chave que você usa na coleção de quadros chave **ObjectAnimationUsingKeyFrames**: [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132).
 
-O [**Value**](https://msdn.microsoft.com/library/windows/apps/BR210344) de um [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) geralmente é definido com o uso da sintaxe de elemento de propriedade porque o valor do objeto que você está tentando definir geralmente não pode ser expressado como uma cadeia de caracteres para preencher **Value** na sintaxe de atributo. Você ainda pode usar a sintaxe de atributo se usar uma referência como [StaticResource](https://msdn.microsoft.com/library/windows/apps/Mt185588)
+O [**Value**](https://msdn.microsoft.com/library/windows/apps/BR210344) de um [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) geralmente é definido com o uso da sintaxe de elemento de propriedade porque o valor do objeto que você está tentando definir geralmente não pode ser expressado como uma cadeia de caracteres para preencher **Value** na sintaxe de atributo. Você ainda pode usar a sintaxe de atributo se usar uma referência como [StaticResource](https://msdn.microsoft.com/library/windows/apps/Mt185588).
 
 Um caso em que você verá um [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) usado nos modelos padrão é quando uma propriedade de modelo referencia um recurso [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076). Esses recursos são objetos [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962), não apenas um valor [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723), e usam recursos que são definidos como temas do sistema ([**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/BR208807)). Eles podem ser atribuídos diretamente a um valor do tipo **Brush**, como [**TextBlock.Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665) e não precisam usar o direcionamento indireto. No entanto, como um **SolidColorBrush** não é [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) ou **Color**, você precisa usar um **ObjectAnimationUsingKeyFrames** para usar o recurso.
 
@@ -310,6 +314,7 @@ Você pode usar mais de um [**DiscreteObjectKeyFrame**](https://msdn.microsoft.c
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

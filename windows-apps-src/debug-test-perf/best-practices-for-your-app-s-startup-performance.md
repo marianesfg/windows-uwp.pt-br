@@ -1,8 +1,11 @@
 ---
 author: mcleblanc
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
-title: Práticas recomendadas para o desempenho inicial de seu aplicativo
-description: Crie aplicativos da Plataforma Universal do Windows (UWP) com tempos de inicialização ótimos melhorando a maneira como você manipula a inicialização e a ativação.
+title: "Práticas recomendadas para o desempenho inicial de seu aplicativo"
+description: "Crie aplicativos da Plataforma Universal do Windows (UWP) com tempos de inicialização ótimos melhorando a maneira como você manipula a inicialização e a ativação."
+ms.sourcegitcommit: 5411faa3af685e1a285119ba456a440725845711
+ms.openlocfilehash: 46e78612c0f4391b9448ea9bd7a001722fb08a28
+
 ---
 # Práticas recomendadas para o desempenho inicial de seu aplicativo
 
@@ -117,7 +120,7 @@ Você decide como é a aparência da página de carregamento, que pode ser tão 
 
 O terceiro estágio começa depois que o jogo tem um conjunto mínimo de informações para criar uma interface do usuário interativa, que substitui a página de carregamento. Nesse ponto, as únicas informações disponíveis para o jogo online são o conteúdo que o aplicativo carregou do disco. O jogo pode vir com conteúdo suficiente para criar uma interface do usuário interativa; mas por se tratar de um jogo online, não estará funcional até que se conecte à Internet e baixe informações adicionais. Até que ele tenha todas as informações de que precisa para estar funcional, o usuário poderá interagir com a interface do usuário, mas os recursos que precisarem de dados adicionais da Web deverão dar algum tipo de retorno de que o conteúdo ainda está sendo carregado. Poderá levar algum tempo até que o aplicativo se torne plenamente funcional; então, é importante que a funcionalidade seja disponibilizada assim que possível.
 
-Agora que identificamos os três estágios de ativação em um jogo online, vamos amarrá-los ao código real.
+Agora que identificamos os três estágios de ativação em um jogo online, vamos vinculá-los ao código real.
 
 ### Fase 1
 
@@ -261,7 +264,7 @@ Há inúmeros motivos para um aplicativo ser ativado, sendo que cada um deve ser
 
 Os aplicativos que exibem uma página de carregamento no manipulador de carregamento começam a trabalhar para criar a IU em segundo plano. Após esse elemento ter sido criado, seu evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) ocorre. No manipulador de evento, você substitui o conteúdo da janela, que, no momento, é a tela de carregamento, com a home page recém-criada.
 
-É crucial que um aplicativo com um período de inicialização prolongado mostre uma página de carregamento. Além de fornecer o feedback garantido sobre o processo de ativação, o processo será finalizado se [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) não for chamado dentro de 15 segundos após a inicialização do processo de ativação.
+É crucial que um aplicativo com um período de inicialização prolongado mostre uma página de carregamento. Além de fornecer ao usuário feedback garantido sobre o processo de ativação, o processo será finalizado se [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) não for chamado dentro de 15 segundos após a inicialização do processo de ativação.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -359,6 +362,7 @@ Portanto, recomendamos usar o armazenamento de páginas em cache conforme apropr
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

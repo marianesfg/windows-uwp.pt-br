@@ -1,17 +1,21 @@
 ---
 author: drewbatgit
 ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
-description: Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera dentro de uma página XAML em um aplicativo UWP (Plataforma Universal do Windows).
-title: Acesso de visualização de câmera simples
+description: "Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera dentro de uma página XAML em um aplicativo UWP (Plataforma Universal do Windows)."
+title: "Acesso de visualização de câmera simples"
+translationtype: Human Translation
+ms.sourcegitcommit: 72abc006de1925c3c06ecd1b78665e72e2ffb816
+ms.openlocfilehash: 05e752925c07b0e3720fbdd42d785381aa08b99c
+
 ---
 
 # Acesso de visualização de câmera simples
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera dentro de uma página XAML em um aplicativo UWP (Plataforma Universal do Windows). Criar um aplicativo que captura fotos e vídeos usando a câmera exige que você realize tarefas como manipular a orientação do dispositivo e da câmera ou definir opções de codificação para o arquivo capturado. Em alguns cenários de aplicativo, talvez você queira simplesmente mostrar o fluxo de visualização da câmera sem se preocupar com essas outras considerações. Este artigo mostra como fazer isso com um mínimo de código. Observe que você deve sempre desligar o fluxo de visualização corretamente quando o tiver concluído, seguindo as etapas abaixo.
 
-Para saber mais sobre como escrever um aplicativo de câmera que captura fotos ou vídeos, veja [Capturar fotos e vídeo com MediaCapture](capture-photos-and-video-with-mediacapture.md)
+Para saber mais sobre como escrever um aplicativo de câmera que captura fotos ou vídeos, veja [Capturar fotos e vídeo com MediaCapture](capture-photos-and-video-with-mediacapture.md).
 
 ## Adicionar declarações de funcionalidade ao manifesto do aplicativo
 
@@ -21,8 +25,8 @@ Para que seu aplicativo acesse a câmera do dispositivo, você deve declarar que
 
 1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do aplicativo clicando duas vezes no item **package.appxmanifest**.
 2.  Selecione a guia **Recursos**.
-3.  Marque a caixa da **Webcam** e a caixa do **Microfone**
-4.  Para acessar as bibliotecas Imagens e Vídeos, marque as caixas para **Biblioteca de Imagens** e a caixa para **Biblioteca de Vídeos**
+3.  Marque a caixa da **Webcam** e a caixa do **Microfone**.
+4.  Para acessar as bibliotecas Imagens e Vídeos, marque as caixas para **Biblioteca de Imagens** e a caixa para **Biblioteca de Vídeos**.
 
 ## Adicionar um CaptureElement à sua página
 
@@ -46,7 +50,7 @@ Crie uma nova instância da classe **MediaCapture** e chame [**InitializeAsync**
 
 **Importante** Em algumas famílias de dispositivos, uma solicitação de consentimento do usuário é exibida para o usuário antes de seu aplicativo receber acesso à câmera do dispositivo. Por esse motivo, você só deve chamar [**MediaCapture.InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) do thread de interface do usuário principal. Tentar iniciar a câmera de outro thread pode resultar em falha de inicialização.
 
-Conecte a **MediaCapture** ao **CaptureElement** definindo a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280). Por fim, inicie a visualização chamando [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613)
+Conecte a **MediaCapture** ao **CaptureElement** definindo a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280). Por fim, inicie a visualização chamando [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613).
 
 [!code-cs[StartPreviewAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStartPreviewAsync)]
 
@@ -76,7 +80,7 @@ No manipulador de eventos **Suspending**, verifique primeiro se a página está 
 
 ## Capturar uma imagem estática do fluxo de visualização
 
-É simples obter uma imagem estática do fluxo de visualização de captura de mídia na forma de um [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358). Para saber mais, consulte [Obter um quadro de visualização](get-a-preview-frame.md)
+É simples obter uma imagem estática do fluxo de visualização de captura de mídia na forma de um [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358). Para saber mais, veja [Obter um quadro de visualização](get-a-preview-frame.md).
 
 ## Tópicos relacionados
 
@@ -84,6 +88,7 @@ No manipulador de eventos **Suspending**, verifique primeiro se a página está 
 * [Obter um quadro de visualização](get-a-preview-frame.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

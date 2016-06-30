@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Aprenda a promover seus aplicativos e conteúdo na Windows Store. Estas diretrizes cobrem como usar os ativos que estão disponíveis para você, junto com recomendações para promover seus aplicativos em impressão, TV, mídias sociais e anúncios digitais.
+Description: "Aprenda a promover seus aplicativos e conteúdo na Windows Store. Estas diretrizes cobrem como usar os ativos que estão disponíveis para você, junto com recomendações para promover seus aplicativos em impressão, TV, mídias sociais e anúncios digitais."
 title: Diretrizes de marketing para aplicativos da Windows Store
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 64c6dd45053070096ff7d7e932bac1c560194518
+
 ---
 
 # Diretrizes de marketing para aplicativos da Windows Store
@@ -53,6 +57,7 @@ A Microsoft é a única proprietária das Marcas da Microsoft e da respectiva re
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

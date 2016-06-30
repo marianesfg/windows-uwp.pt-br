@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Chame atenção para seu aplicativo! Além de tornar seu aplicativo o melhor possível, você pode seguir alguns procedimentos para facilitar sua divulgação pela Windows Store e por outros sites e colocá-lo sob os holofotes.
-title: Facilitar a promoção do seu aplicativo
+Description: "Chame atenção para seu aplicativo! Além de tornar seu aplicativo o melhor possível, você pode seguir alguns procedimentos para facilitar sua divulgação pela Windows Store e por outros sites e colocá-lo sob os holofotes."
+title: "Facilitar a promoção do seu aplicativo"
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e0f993d703ccd3a4509de4350f07d50564893763
+
 ---
 
 # Facilitar a promoção do seu aplicativo
@@ -44,6 +48,7 @@ Seguindo essas diretrizes, você também permitirá que outras pessoas promovam 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

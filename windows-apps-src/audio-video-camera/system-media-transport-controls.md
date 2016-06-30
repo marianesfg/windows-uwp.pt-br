@@ -1,13 +1,17 @@
 ---
 author: drewbatgit
 ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
-description: A classe SystemMediaTransportControls permite que seu aplicativo use os controles de transporte de mídia do sistema que estão integrados ao Windows e atualize os metadados que os controles exibem sobre a mídia que seu aplicativo está reproduzindo atualmente.
-title: Controles de transporte de mídia do sistema
+description: "A classe SystemMediaTransportControls permite que seu aplicativo use os controles de transporte de mídia do sistema que estão integrados ao Windows e atualize os metadados que os controles exibem sobre a mídia que seu aplicativo está reproduzindo atualmente."
+title: "Controles de transporte de mídia do sistema"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5a94ce4112f7662d3fe9bf3c8a7d3f60b1569931
+
 ---
 
 # Controles de transporte de mídia do sistema
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 A classe [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) permite que seu aplicativo use os controles de transporte de mídia do sistema que estão integrados ao Windows e atualize os metadados que os controles exibem sobre a mídia que seu aplicativo está reproduzindo atualmente.
@@ -33,11 +37,11 @@ Em sua página code-behind, adicione diretivas de uso aos namespaces a seguir.
 
 [!code-cs[Namespace](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetNamespace)]
 
-Adicione um manipulador de clique de botão que use um [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para permitir que o usuário selecione um arquivo e chame [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) para torná-lo o arquivo ativo para o **MediaElement**
+Adicione um manipulador de clique de botão que use um [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para permitir que o usuário selecione um arquivo e chame [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) para torná-lo o arquivo ativo para o **MediaElement**.
 
 [!code-cs[OpenMediaFile](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetOpenMediaFile)]
 
-Obtenha uma instância dos [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) chamando [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708)
+Obtenha uma instância dos [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) chamando [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708).
 
 Ative os botões que seu aplicativo usará configurando a propriedade "is enabled" correspondente do objeto **SystemMediaTransportControls**, como [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714), [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713), [**IsNextEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278712) e [**IsPreviousEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278715). Veja uma lista completa de controles disponíveis na documentação de referência aos **SystemMediaTransportControls**.
 
@@ -114,7 +118,7 @@ Para usar os controles de transporte de mídia do sistema para áudio em segundo
 
 Para obter uma instância dos [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) a partir da tarefa em segundo plano do aplicativo, você deve usar [**BackgroundMediaPlayer.Current.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635), em vez de [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708), que só pode ser usado em seu aplicativo em primeiro plano.
 
-Para obter informações sobre como reproduzir áudio em segundo plano, consulte [Áudio em segundo plano](background-audio.md)
+Para obter informações sobre como reproduzir áudio em segundo plano, consulte [Áudio em segundo plano](background-audio.md).
 
  
 
@@ -125,6 +129,7 @@ Para obter informações sobre como reproduzir áudio em segundo plano, consulte
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

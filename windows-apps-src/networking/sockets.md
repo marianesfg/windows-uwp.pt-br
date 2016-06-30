@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: Você pode usar Windows.Networking.Sockets e Winsock para se comunicar com outros dispositivos como um desenvolvedor de aplicativo da Plataforma Universal do Windows (UWP).
+description: "Você pode usar Windows.Networking.Sockets e Winsock para se comunicar com outros dispositivos como um desenvolvedor de aplicativo da Plataforma Universal do Windows (UWP)."
 title: Soquetes
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
+translationtype: Human Translation
+ms.sourcegitcommit: 4557fa59d377edc2ae5bf5a9be63516d152949bb
+ms.openlocfilehash: 432d9849335c537836fd23a4cd95c79c51bc881d
+
 ---
 
 # Soquetes
@@ -296,6 +300,7 @@ Você também pode usar o [Winsock](https://msdn.microsoft.com/library/windows/d
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

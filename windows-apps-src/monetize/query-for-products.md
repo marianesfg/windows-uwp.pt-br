@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
-description: Use esse método na API da coleção da Windows Store para obter todos os produtos que pertence a um cliente em relação a aplicativos que estejam associados com sua ID de cliente do Azure AD. Você pode analisar sua consulta para um determinado produto ou usar outros filtros.
+description: "Use esse método na API da coleção da Windows Store para obter todos os produtos que pertence a um cliente em relação a aplicativos que estejam associados com sua ID de cliente do Azure AD. Você pode analisar sua consulta para um determinado produto ou usar outros filtros."
 title: Consulta por produtos
+ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
+ms.openlocfilehash: b8661d73487dde61b207159d11a0583700fa22bc
+
 ---
 
 # Consulta por produtos
@@ -17,9 +20,9 @@ Esse método é projetado para ser chamado pelo seu serviço em resposta a uma m
 ## Pré-requisitos
 
 
-Para usar esse método, você precisará de:
+Para usar esse método, você precisará:
 
--   Um token de acesso do Azure AD criado com a URI de audiência **https://onestore.microsoft.com**.
+-   Ter um token de acesso do Azure AD criado com o URI de público `https://onestore.microsoft.com`.
 -   Uma chave ID da Windows Store que tenha sido gerada chamando-se o método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) no código do lado do cliente em seu aplicativo.
 
 Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-grant-products-from-a-service.md).
@@ -30,19 +33,20 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 
 | Método | URI da solicitação                                                 |
 |--------|-------------------------------------------------------------|
-| POST   | https://collections.mp.microsoft.com/v6.0/collections/query |
+| POST   | `https://collections.mp.microsoft.com/v6.0/collections/query` |
 
+<br/>
  
 ### Cabeçalho da solicitação
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;.                           |
+| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;.                           |
 | Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
- 
+ <br/>
 
 ### Corpo da solicitação
 
@@ -57,7 +61,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | productTypes      | string       | Se especificado, o serviço retorna apenas produtos que correspondam aos tipos de produto especificados. Os tipos de produto com suporte são **Application**, **Durable** e **UnmanagedConsumable**.                                                                                       | Não       |
 | validityType      | string       | Quando definido como **All**, todos os produtos para um usuário serão retornados, incluindo itens expirados. Quando definido como **Valid**, somente os produtos que são válidos serão retornados nesse momento (ou seja, eles têm um status ativo, data de início &lt; agora e data de término é &gt; agora). | Não       |
 
- 
+<br/> 
 
 O objeto UserIdentity contém os parâmetros a seguir.
 
@@ -67,16 +71,16 @@ O objeto UserIdentity contém os parâmetros a seguir.
 | identityValue        | string | Valor cadeia de caracteres da chave ID da Windows Store ID.                                                                                                                                                                                    | Sim      |
 | localTicketReference | string | Identificador solicitado para produtos retornados. Itens retornados no corpo da resposta terão uma correspondência *localTicketReference*. Recomendamos que você use o mesmo valor que a declaração *userId* na chave ID da Windows Store. | Sim      |
 
- 
+<br/> 
 
 O objeto ProductSkuId contém os parâmetros a seguir.
 
 | Parâmetro | Tipo   | Descrição                                                                                                                                                                                                                                                                                                            | Obrigatório |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| productId | string | A ID de produto do catálogo da Windows Store. Para obter a ID de produto, navegue para o seu aplicativo no painel Centro de Desenvolvimento do Windows, vá até a página **Gerenciamento de aplicativo**&gt;**Identidade do aplicativo** e recupere o sufixo da cadeia de caracteres mostrado no campo **URL para Windows 10**. Uma ID de produto do exemplo é "9WZDNCRFJ3Q8". | Sim      |
-| skuID     | string | A ID da SKU do catálogo da Windows Store. Um ID de SKU de exemplo é “0010”.                                                                                                                                                                                                                                                | Sim      |
+| productId | cadeia de caracteres | A ID da Loja do catálogo da Windows Store. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. | Sim      |
+| skuID     | cadeia de caracteres | A ID da SKU do catálogo da Windows Store. Um ID de SKU de exemplo é “0010”.                                                                                                                                                                                                                                                | Sim      |
 
- 
+<br/> 
 
 ### Exemplo de solicitação
 
@@ -120,7 +124,7 @@ Content-Type: application/json
 | continuationToken | string                   | Se houver vários conjuntos de produtos, esse token será retornado quando o limite de página for atingido. Você pode especificar esse token de continuação em chamadas subsequentes para recuperar produtos restantes. | Não       |
 | Itens             | CollectionItemContractV6 | Uma matriz de produtos para o usuário especificado.                                                                                                                                               | Não       |
 
- 
+<br/> 
 
 O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 
@@ -128,9 +132,9 @@ O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 |----------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | acquiredDate         | datetime           | A data em que o usuário adquiriu o item.                                                                                                      | Sim      |
 | campaignId           | string             | A ID da campanha que foi fornecida para este item no momento da compra.                                                                                  | Não       |
-| devOfferId           | string             | A ID de oferta de uma compra realizada em aplicativo.                                                                                                              | Não       |
+| devOfferId           | cadeia de caracteres             | A ID de oferta de uma compra realizada em aplicativo.                                                                                                              | Não       |
 | endDate              | datetime           | A data de término do item.                                                                                                                          | Sim      |
-| fulfillmentData      | string             | N/A                                                                                                                                                | Não       |
+| fulfillmentData      | cadeia de caracteres             | N/A                                                                                                                                                | Não       |
 | inAppOfferToken      | string             | A cadeia de caracteres da ID de produto especificada pelo desenvolvedor que é atribuída ao item no painel do Centro de Desenvolvimento do Windows. Uma ID de produto de exemplo é "product123". | Não       |
 | itemId               | string             | A ID que identifica esse item de coleção em relação a outros itens que o usuário tem. Essa ID é exclusiva por produto.                                          | Sim      |
 | localTicketReference | string             | A ID de `localTicketReference` anteriormente fornecida no corpo da solicitação.                                                                      | Sim      |
@@ -138,8 +142,8 @@ O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 | orderId              | string             | Se presente, a ID do pedido do qual este item foi obtido.                                                                                          | Não       |
 | orderLineItemId      | string             | Se presente, o item de linha da ordem específica para a qual o item foi obtido.                                                                | Não       |
 | ownershipType        | string             | A cadeia de caracteres "OwnedByBeneficiary".                                                                                                                   | Sim      |
-| productId            | string             | A ID de produto do catálogo da Windows Store. Uma ID de produto do exemplo é "9WZDNCRFJ3Q8".                                                            | Sim      |
-| productType          | string             | Um dos seguintes tipos de produto: **Application**, **Durable** e **UnmanagedConsumable**.                                                     | Sim      |
+| productId            | cadeia de caracteres             | A ID da Loja para o aplicativo no catálogo da Windows Store. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.                                                            | Sim      |
+| productType          | cadeia de caracteres             | Um dos seguintes tipos de produto: **Application**, **Durable** e **UnmanagedConsumable**.                                                     | Sim      |
 | purchasedCountry     | string             | N/A.                                                                                                                                               | Não       |
 | comprador            | IdentityContractV6 | Se presente, representa a identidade do comprador do item. Veja os detalhes para esse objeto abaixo.                                      | Não       |
 | Quantity             | número             | A quantidade do item. Atualmente, sempre será 1.                                                                                        | Não       |
@@ -150,7 +154,7 @@ O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 | Tags                 | string             | N/A                                                                                                                                                | Sim      |
 | transactionId        | guid               | A ID de transação como resultado da compra desse item. Pode ser usada para declarar um item como providenciado.                                       | Sim      |
 
- 
+<br/> 
 
 O objeto IdentityContractV6 contém os parâmetros a seguir.
 
@@ -159,7 +163,7 @@ O objeto IdentityContractV6 contém os parâmetros a seguir.
 | identityType  | string | Contém o valor **"pub"**.                                                      | Sim      |
 | identityValue | string | O valor da cadeia de caracteres de *publisherUserId* da chave de ID da Windows Store especificada. | Sim      |
 
- 
+<br/> 
 
 ### Exemplo de resposta
 
@@ -211,6 +215,7 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 * [Renovar uma chave ID da Windows Store](renew-a-windows-store-id-key.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

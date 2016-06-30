@@ -5,8 +5,8 @@ title: "Diretrizes para design de várias entradas"
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 20af1cbfd4d390a1128b96b24c687fd481db1f5c
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 71c5994e1a308993aef6603ba77ab5e695bde293
 
 ---
 
@@ -23,20 +23,20 @@ Para começar, considere os vários cenários em que seu aplicativo manipulará 
 -   Todos os métodos de entrada têm suporte em todos os momentos? Com determinados controles? Em circunstâncias ou momentos específicos?
 -   Algum método de entrada tem prioridade?
 
-## <span id="Single__or_exclusive_-mode_interactions_"></span><span id="single__or_exclusive_-mode_interactions_"></span><span id="SINGLE__OR_EXCLUSIVE_-MODE_INTERACTIONS_"></span>Interações de modo único (ou exclusivo)
+## Interações de modo único (ou exclusivo)
 
 
 Com interações de modo único, há suporte para vários tipos de entrada, mas apenas um pode ser usado por ação. Por exemplo, o reconhecimento de fala para comandos e gestos para navegação; ou, entrada de texto usando touch ou gestos, dependendo da proximidade.
 
-## <span id="Multimodal_interactions"></span><span id="multimodal_interactions"></span><span id="MULTIMODAL_INTERACTIONS"></span>Interações multimodais
+## Interações multimodais
 
 
 Com interações multimodais, vários métodos de entrada em sequência são usados para concluir uma única ação.
 
-<span id="Speech___gesture"></span><span id="speech___gesture"></span><span id="SPEECH___GESTURE"></span>Fala + gesto  
+Fala + gesto  
 O usuário aponta para um produto e diz "Adicionar ao carrinho".
 
-<span id="Speech___touch"></span><span id="speech___touch"></span><span id="SPEECH___TOUCH"></span>Fala + toque  
+Fala + toque  
 O usuário seleciona uma foto usando pressionar e segurar e, em seguida, diz "Enviar foto".
 
 
@@ -44,6 +44,6 @@ O usuário seleciona uma foto usando pressionar e segurar e, em seguida, diz "En
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

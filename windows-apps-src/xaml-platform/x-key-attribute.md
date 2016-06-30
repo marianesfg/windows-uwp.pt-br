@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Identifica de forma exclusiva os elementos que são criados e usados como referência de recursos e que existam em um ResourceDictionary.
+description: "Identifica de forma exclusiva os elementos que são criados e usados como referência de recursos e que existam em um ResourceDictionary."
 title: Atributo xKey
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 00d801dc3ebb8894f8e21ba0c1b9f3aecc981f30
+
 ---
 
 # Atributo x:Key
@@ -65,6 +69,7 @@ Um item no dicionário de recursos pode omitir um valor para **x:Key** quando fo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Iniciar um aplicativo para obter resultados
-description: Saiba como iniciar um aplicativo a partir de outro aplicativo e trocar dados entre os dois. Isso é chamado de "iniciar" um aplicativo para obter resultados.
+description: "Saiba como iniciar um aplicativo a partir de outro aplicativo e trocar dados entre os dois. Isso é chamado de \"iniciar\" um aplicativo para obter resultados."
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
+ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
+ms.openlocfilehash: 5826b370df3dccd1590e3f67c15126b4e78c2c32
+
 ---
 
 # Iniciar um aplicativo para obter resultados
@@ -112,8 +115,8 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 {
     var protocolForResultsArgs = e.Parameter as ProtocolForResultsActivatedEventArgs;
     // Set the ProtocolForResultsOperation field.
-    _operation = protocolForResultsArgs.ProtocolForResultsOperation; 
-    
+    _operation = protocolForResultsArgs.ProtocolForResultsOperation;
+
     if (protocolForResultsArgs.Data.ContainsKey("TestData"))
     {
         string dataFromCaller = protocolForResultsArgs.Data["TestData"] as string;
@@ -200,8 +203,6 @@ Em seguida, passá-lo para o aplicativo iniciado por meio de **LaunchUriForResul
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

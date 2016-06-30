@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Os aplicativos do Windows compartilham uma aparência comum em computadores, dispositivos móveis e muitos outros tipos de dispositivos. Os padrões da interface do usuário, de entrada e de interação são muito semelhantes, e um usuário que alterne entre dispositivos ficará contente com a experiência familiar.
-title: Portabilidade do Windows Phone Silverlight para UWP para fator forma e experiência do usuário
+description: "Os aplicativos do Windows compartilham uma aparência comum em computadores, dispositivos móveis e muitos outros tipos de dispositivos. Os padrões da interface do usuário, de entrada e de interação são muito semelhantes, e um usuário que alterne entre dispositivos ficará contente com a experiência familiar."
+title: "Portabilidade do Windows Phone Silverlight para UWP para fator forma e experiência do usuário"
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7d5f1fa969e4ddf4a695a3ca77072a0f9c21316f
+
 ---
 
 #  Portabilidade do Windows Phone Silverlight para UWP para fator forma e experiência do usuário
@@ -67,6 +71,7 @@ Consulte novamente a lista [maximizando a reutilização de marcação e de cód
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

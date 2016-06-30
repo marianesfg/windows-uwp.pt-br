@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Se você anteriormente tinha configurado uma conta de pagamento pubCenter referente aos lucros do Microsoft Advertising, essa conta não será mais usada para pagamentos a partir de 1º de abril de 2016. Seus pagamentos agora serão feitos por meio de sua conta de pagamento do Centro de Desenvolvimento.
-title: Conta de pagamento DevCenter pubCenter e consolidação de perfil fiscal
+Description: "Se você anteriormente tinha configurado uma conta de pagamento pubCenter referente aos lucros do Microsoft Advertising, essa conta não será mais usada para pagamentos a partir de 1º de abril de 2016. Seus pagamentos agora serão feitos por meio de sua conta de pagamento do Centro de Desenvolvimento."
+title: "Conta de pagamento DevCenter pubCenter e consolidação de perfil fiscal"
 ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8973b1def46c7ada8b73337cb20d01ae1e5b97d8
+
 ---
 
 # Conta de pagamento DevCenter pubCenter e consolidação de perfil fiscal
@@ -80,6 +84,7 @@ Para dúvidas ou consultas, abra um [tíquete de suporte](http://go.microsoft.co
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

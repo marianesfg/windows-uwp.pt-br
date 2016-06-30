@@ -1,13 +1,17 @@
 ---
 author: mcleblanc
-title: Introdução à navegação
-description: Introdução à navegação
+title: "Introdução à navegação"
+description: "Introdução à navegação"
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c542faa6365c8558988162bee12f266d67474461
+
 ---
 
 # Introdução: navegação
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Adicionando navegação
 
@@ -82,6 +86,7 @@ Para saber mais sobre navegação, consulte [Navegação](https://msdn.microsoft
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

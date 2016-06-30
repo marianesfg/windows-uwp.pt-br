@@ -1,7 +1,11 @@
 ---
 author: QuinnRadich
 title: Novidades no Windows 10
-description: A Compilação do Windows 10 Anniversary SDK Preview e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da nova Plataforma Universal do Windows.
+description: "A Compilação do Windows 10 Anniversary SDK Preview e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da nova Plataforma Universal do Windows."
+translationtype: Human Translation
+ms.sourcegitcommit: 46b5ad404811894899810f83efb9970e338e7051
+ms.openlocfilehash: 5cce4a0fbfe85126f15cb013a9b46f058006a5e1
+
 ---
 
 # Novidades no Windows
@@ -24,6 +28,7 @@ APIs de mídia | As novas APIs MediaBreak no namespace Windows.Media.Playback pe
 APIs de mapas | O [MapControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx#_blank) foi aprimorado para permitir que os desenvolvedores obtenham uma região visível que esteja próxima da câmera, excluindo regiões que estão distantes e perto do horizonte em uma exibição profundamente densa. A classe [MapLocationFinder](https://msdn.microsoft.com/library/windows/apps/windows.services.maps.maplocationfinder.aspx#_blank) foi estendida, permitindo que os desenvolvedores otimizem o tráfego de rede na geocodificação reversa por meio de especificação de uma precisão desejada. Agora os desenvolvedores podem aproveitar o download de mapas offline usando o método [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx#_blank) e especificando a latitude e longitude. Para saber mais, consulte [Iniciar o aplicativo Mapas do Windows](https://msdn.microsoft.com/windows/uwp/launch-resume/launch-maps-app#_blank).
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

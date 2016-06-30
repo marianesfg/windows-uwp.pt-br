@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: Teste beta
-description: O teste beta oferece a você a oportunidade de melhorar seu aplicativo com base nos comentários de pessoas de fora da sua equipe de desenvolvimento que experimentam o aplicativo ainda não lançado em seus próprios dispositivos.
+description: "O teste beta oferece a você a oportunidade de melhorar seu aplicativo com base nos comentários de pessoas de fora da sua equipe de desenvolvimento que experimentam o aplicativo ainda não lançado em seus próprios dispositivos."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7404a90fc9efc05d4e2bb83321bb2ba80b8378ce
+
 ---
 # Teste de versão beta
 
@@ -45,6 +49,7 @@ Consulte [Teste beta e distribuição direcionada](https://msdn.microsoft.com/li
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

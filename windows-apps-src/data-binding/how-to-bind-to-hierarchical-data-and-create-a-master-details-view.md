@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
-title: Associar dados hierárquicos e criar um modo de exibição mestre/detalhes
-description: Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias CollectionViewSource que são associadas em uma cadeia.
+title: "Associar dados hierárquicos e criar um modo de exibição mestre/detalhes"
+description: "Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias CollectionViewSource que são associadas em uma cadeia."
+translationtype: Human Translation
+ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
+ms.openlocfilehash: 2ff66a1d6a80bb085f54dec8e35371ba0c9e6b27
+
 ---
 # Associar dados hierárquicos e criar um modo de exibição mestre/detalhes
 
@@ -220,6 +224,7 @@ Observe que ao associar diretamente o [**CollectionViewSource**](https://msdn.mi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

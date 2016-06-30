@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: Fornece uma lista de verificação para ajudar você a garantir que seu aplicativo da Plataforma Universal do Windows (UWP) seja acessível.
+Description: "Fornece uma lista de verificação para ajudar você a garantir que seu aplicativo da Plataforma Universal do Windows (UWP) seja acessível."
 ms.assetid: BB8399E2-7013-4F77-AF2C-C1A0E5412856
-title: Lista de verificação de acessibilidade
+title: "Lista de verificação de acessibilidade"
 label: Accessibility checklist
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 9580ccc0716b7e9f4ee32ce241b0ac3ee9bf319d
+
 ---
 
 # Lista de verificação de acessibilidade
@@ -17,13 +21,13 @@ Aqui nós fornecemos uma lista de verificação que você pode usar para garanti
 
 1.  Defina o nome acessível (obrigatório) e a descrição (opcional) dos elementos de interface de usuário interativa e do conteúdo em seu aplicativo.
 
-    Um nome acessível é uma cadeia de caracteres de texto descritiva e curta que um leitor de usa para anunciar um elemento de interface do usuário. Alguns elementos de interface do usuário como [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) and [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) promovem o conteúdo de texto como o nome acessível padrão; consulte [Informações básicas de acessibilidade](basic-accessibility-information.md#name_from_inner_text)
+    Um nome acessível é uma cadeia de caracteres de texto descritiva e curta que um leitor de usa para anunciar um elemento de interface do usuário. Alguns elementos de interface do usuário como [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) and [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) promovem o conteúdo de texto como o nome acessível padrão; consulte [Basic accessibility information](basic-accessibility-information.md#name_from_inner_text).
 
     Você deve definir o nome acessível de forma explicita para imagens ou outros controles que não promovem o conteúdo do texto interno como um nome acessível implícito. Você deve usar rótulos para elementos de formulário para que o texto do rótulo possa ser usado como um destino [**LabeledBy**](https://msdn.microsoft.com/library/windows/apps/Hh759769) no modelo de Automação da Interface do Usuário da Microsoft para correlacionar rótulos e entradas. Se você deseja fornecer mais diretrizes de interface do usuário para os usuários além das que são geralmente incluídas no nome acessível, dicas e descrições acessíveis ajudam os usuários a entender a interface do usuário.
 
-    Para saber mais, consulte [Nome acessível](basic-accessibility-information.md#accessible_name) e [Descrição acessível](basic-accessibility-information.md)
+    Para saber mais, consulte [Nome acessível](basic-accessibility-information.md#accessible_name) e [Descrição acessível.](basic-accessibility-information.md).
 
-2.  Implementar acessibilidade do teclado:
+2.  Implementar a acessibilidade do teclado:
 
     * Teste a ordem do índice de tabulação padrão para uma interface do usuário. Ajuste a ordem do índice de tabulação, se necessário, que pode exigir a habilitação ou desabilitação de determinados controles ou a alteração dos valores padrão de [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) em alguns dos elementos de interface do usuário.
     * Use controles que ofereçam suporte à navegação por teclas de direção para elementos compostos. Para os controles padrão, a navegação por teclas de direção normalmente já está implementada.
@@ -31,22 +35,22 @@ Aqui nós fornecemos uma lista de verificação que você pode usar para garanti
     * Defina as teclas de acesso ou implemente as teclas de aceleração para partes específicas da interface do usuário que ofereçam suporte à interação.
     * Para todos os controles personalizados que você usa na sua interface do usuário, verifique se que você implementou esses controles com o suporte a [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) correto para ativação e se definiu as substituições para o tratamento de chaves, conforme necessário para oferecer suporte a ativação, passagem e acesso ou chaves do acelerador.
 
-    Para obter mais informações, consulte [Interações por teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607)
+    Para obter mais informações, consulte [Interações por teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607).
 
-3.  Verifique sua interface do usuário para garantir que o contraste do texto esteja adequado, que os elementos renderizem corretamente nos temas em alto contraste e que as cores estejam sendo usadas corretamente.
+3.  Observe a interface do usuário para confirmar se o contraste do texto está adequado, se os elementos são renderizados corretamente nos temas de alto contraste e se as cores são usadas corretamente.
 
-    * Use as opções de exibição do sistema que ajustam o valor de pontos por polegada (dpi) da exibição, e garanta que a interface de usuário de seu aplicativo seja dimensionada corretamente quando o valor de dpi mudar. (Alguns usuários alteram os valores de dpi como uma opção de acessibilidade; isso está disponível em **Facilidade de Acesso**)
+    * Use as opções de exibição do sistema que ajustam o valor de pontos por polegada (dpi) da exibição, e garanta que a interface de usuário de seu aplicativo seja dimensionada corretamente quando o valor de dpi mudar. (Alguns usuários alteram os valores de dpi como uma opção de acessibilidade; isso está disponível em **Facilidade de Acesso**).
     * Use uma ferramenta de análise de cor para verificar se a taxa de contraste visual do texto é pelo menos 4.5:1.
     * Mude para um tema de alto contraste e veja se é possível ler e usar a interface do usuário de seu aplicativo.
     * A interface do usuário não deve usar as cores como única forma de transmitir informações.
 
-    Para obter mais informações, consulte [Temas de alto contraste](high-contrast-themes.md) e [Requisitos de texto acessível](accessible-text-requirements.md)
+    Para obter mais informações, consulte [Temas de alto contraste](high-contrast-themes.md) e [Requisitos de texto acessível](accessible-text-requirements.md).
 
 4.  Execute ferramentas de acessibilidade, resolva problemas relatados e verifique a experiência de leitura da tela.
 
     Use ferramentas como o [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) para verificar o acesso programático, execute ferramentas diagnósticas como o [**AccChecker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985) para descobrir erros comuns e verifique a experiência de leitura da tela com o Narrador.
 
-    Para obter mais informações, consulte [Testes de acessibilidade](accessibility-testing.md)
+    Para obter mais informações, consulte [Testes de acessibilidade](accessibility-testing.md).
 
 5.  Verifique se as configurações do manifesto do aplicativo seguem as diretrizes de acessibilidade.
 
@@ -54,7 +58,7 @@ Aqui nós fornecemos uma lista de verificação que você pode usar para garanti
 
     Se você implementou o suporte de acessibilidade de linha base, declarar o seu aplicativo como acessível na Windows Store pode ajudá-lo a chegar a mais clientes e obter boas classificações adicionais.
 
-    Para obter mais informações, consulte [Acessibilidade na Loja](accessibility-in-the-store.md)
+    Para obter mais informações, consulte [Accessibility in the Store](accessibility-in-the-store.md).
 
 <span id="related_topics"/>
 ## Tópicos relacionados  
@@ -63,6 +67,7 @@ Aqui nós fornecemos uma lista de verificação que você pode usar para garanti
 * [Práticas que devem ser evitadas](practices-to-avoid.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

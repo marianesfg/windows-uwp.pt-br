@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: D20C8E01-4E78-4115-A2E8-07BB3E67DDDC
-description: Este artigo mostra como acessar e usar a lâmpada do dispositivo, se houver uma. A funcionalidade da lâmpada é gerenciada separadamente da câmera e do flash da câmera do dispositivo.
-title: Lanterna independente da câmera
+description: "Este artigo mostra como acessar e usar a lâmpada do dispositivo, se houver uma. A funcionalidade da lâmpada é gerenciada separadamente da câmera e do flash da câmera do dispositivo."
+title: "Lanterna independente da câmera"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 022ca2848c575f545402b13e19c0854a9e3ec74a
+
 ---
 
 # Lanterna independente da câmera
@@ -75,6 +79,7 @@ Quando você não estiver mais usando a lâmpada, deverá desativá-la e chamar 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

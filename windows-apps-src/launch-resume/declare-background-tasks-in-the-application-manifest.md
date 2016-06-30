@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Declarar tarefas em segundo plano no manifesto do aplicativo
-description: Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo.
+description: "Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
+
 ---
 
 # Declarar tarefas em segundo plano no manifesto do aplicativo
@@ -149,6 +152,7 @@ O exemplo a seguir mostra o elemento Application completo da [amostra de tarefa 
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

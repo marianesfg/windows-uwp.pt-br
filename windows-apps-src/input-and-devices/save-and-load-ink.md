@@ -6,8 +6,8 @@ ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: 0f2e95146281fb992af1201c408ed62705c77741
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: cdef00304e1835532eceb8e51fecc8045f2ff300
 
 ---
 
@@ -29,7 +29,7 @@ O ISF é a representação mais compacta e persistente de tinta. Ele pode ser in
 
  
 
-## <span id="Save_ink_strokes_to_a_file"></span><span id="save_ink_strokes_to_a_file"></span><span id="SAVE_INK_STROKES_TO_A_FILE"></span>Salvar traços de tinta em um arquivo
+## Salvar traços de tinta em um arquivo
 
 
 Aqui, demonstramos como salvar traços de tinta desenhados em um controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
@@ -163,7 +163,7 @@ O formato GIF é o único com suporte para salvar dados à tinta. Entretanto, o 
 
  
 
-## <span id="Load_ink_strokes_from_a_file"></span><span id="load_ink_strokes_from_a_file"></span><span id="LOAD_INK_STROKES_FROM_A_FILE"></span>Carregar traços de tinta de um arquivo
+## Carregar traços de tinta de um arquivo
 
 
 Aqui, demonstramos como carregar traços de tinta de um arquivo e renderizá-los em um controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
@@ -272,7 +272,7 @@ O formato GIF é o único com suporte para salvar dados à tinta. Entretanto, o 
 | Gif                       | Especifica dados à tinta persistentes usando um arquivo GIF que contém ISF como metadados inseridos no arquivo. Isso permite que dados a tinta sejam visualizados em aplicativos não habilitados para tinta e mantém toda a fidelidade da tinta quando retorna para um aplicativo habilitado para tinta. Esse formato é ideal para o transporte de conteúdo de tinta dentro de um arquivo HTML e para torná-lo utilizável por aplicativos com e sem tinta. |
 | Base64Gif                 | Especifica dados a tinta persistentes usando um GIF fortificado codificado em base64. Esse formato é oferecido quando dados à tinta devem ser codificados diretamente em um arquivo XML ou HTML para conversão posterior em uma imagem. Um possível uso disso é em um formato XML gerado para conter todas as informações à tinta e usado para gerar HTML por meio de XSLT (Extensible Stylesheet Language Transformations). 
 
-## <span id="Copy_and_paste_ink_strokes_with_the_clipboard"></span><span id="copy_and_paste_ink_strokes_with_the_clipboard"></span><span id="COPY_AND_PASTE_INK_STROKES_WITH_THE_CLIPBOARD"></span>Copiar e colar traços de tinta com a área de transferência
+## Copiar e colar traços de tinta com a área de transferência
 
 
 Aqui, demonstramos como usar a área de transferência para transferir os traços de tinta entre aplicativos.
@@ -430,7 +430,7 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 * [Interações com caneta](pen-and-stylus-interactions.md)
 
@@ -448,6 +448,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

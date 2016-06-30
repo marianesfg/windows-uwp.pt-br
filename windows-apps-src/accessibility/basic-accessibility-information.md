@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: As informações básicas de acessibilidade costumam ser categorizadas por nome, função e valor. Este tópico descreve códigos para ajudar seu aplicativo a expor as informações básicas de que tecnologias adaptativas precisam.
+Description: "As informações básicas de acessibilidade costumam ser categorizadas por nome, função e valor. Este tópico descreve códigos para ajudar seu aplicativo a expor as informações básicas de que tecnologias adaptativas precisam."
 ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
-title: Expor informações básicas de acessibilidade
+title: "Expor informações básicas de acessibilidade"
 label: Expose basic accessibility information
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 1c6bc8567b39357d414a46ef2b92197c78bca971
+
 ---
 
 # Expor informações básicas de acessibilidade  
@@ -22,9 +25,9 @@ Esta tabela descreve como definir ou obter um nome acessível para vários tipos
 
 | Tipo de elemento      | Descrição |
 |-------------------|-------------|
-| Texto estático       | Um nome acessível é determinado automaticamente a partir do texto visível (interno) para elementos [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) e [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565). Todo o texto nesse elemento é usado como o nome. Consulte [Nome a partir do texto interno](#name_from_inner_text) |
-| Imagens            | O elemento [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) XAML não tem um análogo direto ao atributo **alt** HTML de **img** e elementos similares. Use [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) ou a técnica de legendagem para fornecer um nome. Consulte [Nomes acessíveis para imagens](#images) |
-| Elementos de formulário     | O nome acessível para um elemento de formulário deve ser o mesmo que o rótulo exibido para esse elemento. Consulte [Rótulos e LabeledBy](#labels) |
+| Texto estático       | Um nome acessível é determinado automaticamente a partir do texto visível (interno) para elementos [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) e [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565). Todo o texto nesse elemento é usado como o nome. Consulte [Nome a partir do texto interno](#name_from_inner_text). |
+| Imagens            | O elemento [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) XAML não tem um análogo direto ao atributo **alt** HTML de **img** e elementos similares. Use [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) ou a técnica de legendagem para fornecer um nome. Consulte [Nomes acessíveis para imagens](#images). |
+| Elementos de formulário     | O nome acessível para um elemento de formulário deve ser o mesmo que o rótulo exibido para esse elemento. Consulte [Rótulos e LabeledBy](#labels). |
 | Botões e links | Por padrão, o nome acessível de um botão ou link se baseia no texto visível, usando as mesmas regras descritas em [Nome do texto interno](#name_from_inner_text). Nos casos em que um botão contém apenas uma imagem, use [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) para fornecer um equivalente apenas em texto da ação pretendida do botão. |
 
 A maioria dos elementos de contêiner (como painéis) não promove o seu conteúdo como nome acessível. Isso é porque é o conteúdo do item que deve informar um nome e a função correspondente, não seu contêiner. O elemento contêiner pode relatar que é um elemento que tem filhos em uma representação de Automação de Interface do Usuário da Microsoft, de forma que a lógica de tecnologia adaptativa possa atravessá-lo. Mas os usuários de tecnologias adaptativas geralmente não precisam saber sobre os contêineres e, assim, a maioria dos contêineres não é nomeada.
@@ -32,7 +35,7 @@ A maioria dos elementos de contêiner (como painéis) não promove o seu conteú
 <span id="role_value"/>
 <span id="ROLE_VALUE"/>
 ## Função e valor  
-Os controles e outros elementos de interface do usuário que fazem parte do vocabulário XAML implementam o suporte à Automação de Interface do Usuário para relatar a função e o valor como parte de suas definições. Você pode usar ferramentas de Automação da Interface do Usuário para examinar as informações de função e valor para os controles, ou pode ler a documentação para as implementações de [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) para cada controle. As funções disponíveis em uma estrutura de Automação da IU são definidas na enumeração [**AutomationControlType**](https://msdn.microsoft.com/library/windows/apps/BR209182). Os clientes de Automação da Interface do Usuário, como tecnologias adaptativas, podem obter informações de função chamando métodos que a estrutura de Automação da IU expõe usando o **AutomationPeer** do controle
+Os controles e outros elementos de interface do usuário que fazem parte do vocabulário XAML implementam o suporte à Automação de Interface do Usuário para relatar a função e o valor como parte de suas definições. Você pode usar ferramentas de Automação da Interface do Usuário para examinar as informações de função e valor para os controles, ou pode ler a documentação para as implementações de [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) para cada controle. As funções disponíveis em uma estrutura de Automação da IU são definidas na enumeração [**AutomationControlType**](https://msdn.microsoft.com/library/windows/apps/BR209182). Os clientes de Automação da Interface do Usuário, como tecnologias adaptativas, podem obter informações de função chamando métodos que a estrutura de Automação da IU expõe usando o **AutomationPeer** do controle.
 
 Nem todos os controles têm um valor. Os controles que não têm um valor reportam essa informação à Automação da Interface do Usuário por meio de pares e padrões para os quais esse controle oferece suporte. Por exemplo, um elemento de formulário [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) tem um valor. Um tecnologia adaptativa pode ser um cliente de Automação da Interface do Usuário e pode descobrir que um valor existe e qual é esse valor. Nesse caso específico, o **TextBox** tem suporte para o padrão [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) por meio das definições [**TextBoxAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242550).
 
@@ -55,7 +58,7 @@ Para facilitar o uso de cadeias de caracteres que já existem na IU visível par
 * [
               **TextBlock**
             ](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e **RichTextBlock** promovem o valor da propriedade **Text** como o nome acessível padrão.
-* Qualquer subclasse [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365) usa uma técnica "ToString" iterativa para encontrar cadeias de caracteres em seu valor [**Content**](https://msdn.microsoft.com/library/windows/apps/BR209365_content) e promove essas cadeias de caracteres como o nome acessível padrão.
+* Qualquer subclasse [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) usa uma técnica "ToString" iterativa para encontrar cadeias de caracteres em seu valor [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) e promove essas cadeias de caracteres como o nome acessível padrão.
 
 > [!NOTE]
 > Como imposto pela Automação da Interface do Usuário, o tamanho do nome acessível não pode exceder 2048 caracteres. Se uma cadeia de caracteres usada para determinação automática de nome acessível exceder esse limite, o nome acessível será truncado nesse momento.
@@ -111,21 +114,21 @@ Uma descrição acessível oferece informações de acessibilidade adicionais so
 
 O leitor de tela Narrador só lê a descrição acessível do elemento quando o usuário pede mais informações sobre o elemento, pressionando CapsLock + F.
 
-O nome acessível se destina a identificar o controle, em vez de fazê-lo para documentar completamente seu comportamento. Se uma descrição breve não for suficiente para explicar o controle, você pode configurar a propriedade anexada [**AutomationProperties.HelpText**](https://msdn.microsoft.com/library/windows/apps/Hh759765), além de [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)
+O nome acessível se destina a identificar o controle, em vez de fazê-lo para documentar completamente seu comportamento. Se uma descrição breve não for suficiente para explicar o controle, você pode configurar a propriedade anexada [**AutomationProperties.HelpText**](https://msdn.microsoft.com/library/windows/apps/Hh759765), além de [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770).
 
 <span id="Testing_accessibility_early_and_often"/>
 <span id="testing_accessibility_early_and_often"/>
 <span id="TESTING_ACCESSIBILITY_EARLY_AND_OFTEN"/>
 ## Testando a acessibilidade de forma precoce e frequente  
-Definitivamente, a melhor abordagem para suportar leitores de tela é testar o seu aplicativo usando, você mesmo, um leitor de tela. Isso lhe mostrará como se comporta o leitor de tela e as informações básicas de acessibilidade podem estar ausentes do aplicativo. Em seguida, você pode ajustar os valores da interface do usuário ou da propriedade de Automação da Interface do Usuário adequadamente. Para obter mais informações, consulte [Testes de acessibilidade](accessibility-testing.md)
+Definitivamente, a melhor abordagem para suportar leitores de tela é testar o seu aplicativo usando, você mesmo, um leitor de tela. Isso lhe mostrará como se comporta o leitor de tela e as informações básicas de acessibilidade podem estar ausentes do aplicativo. Em seguida, você pode ajustar os valores da interface do usuário ou da propriedade de Automação da Interface do Usuário adequadamente. Para obter mais informações, consulte [Testes de acessibilidade](accessibility-testing.md).
 
-Uma das ferramentas que você pode usar para testar a acessibilidade chama-se **AccScope**. A ferramenta **AccScope** é especialmente útil porque você pode ver representações visuais de sua IU que demostram como as tecnologias assistidas poderiam ver seu aplicativo como uma árvore de automação. Em particular, há um modo Narrador que dá uma visão de como o Narrador obtém o texto de seu aplicativo e como ele organiza os elementos na IU. A AccScope foi criada de modo que possa ser usada e útil ao longo do ciclo de desenvolvimento de um aplicativo, mesmo durante a fase preliminar de design. Para obter mais informações, consulte [AccScope](https://msdn.microsoft.com/library/windows/desktop/Dn433239)
+Uma das ferramentas que você pode usar para testar a acessibilidade chama-se **AccScope**. A ferramenta **AccScope** é especialmente útil porque você pode ver representações visuais de sua IU que demostram como as tecnologias assistidas poderiam ver seu aplicativo como uma árvore de automação. Em particular, há um modo Narrador que dá uma visão de como o Narrador obtém o texto de seu aplicativo e como ele organiza os elementos na IU. A AccScope foi criada de modo que possa ser usada e útil ao longo do ciclo de desenvolvimento de um aplicativo, mesmo durante a fase preliminar de design. Para obter mais informações, consulte [AccScope](https://msdn.microsoft.com/library/windows/desktop/Dn433239).
 
 <span id="Accessible_names_from_dynamic_data"/>
 <span id="accessible_names_from_dynamic_data"/>
 <span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"/>
 ## Nomes acessíveis de dados dinâmicos  
-O Windows oferece suporte a muitos controles que podem ser usados para exibir valores provenientes de uma fonte de dados associada, por meio de um recurso conhecido como *vinculação de dados*. Quando você preenche as listas com itens de dados, talvez precise usar uma técnica que define os nomes acessíveis para itens de lista vinculada a dados depois que a lista inicial é preenchida. Para obter mais informações, consulte o "Cenário 4" na [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
+O Windows oferece suporte a muitos controles que podem ser usados para exibir valores provenientes de uma fonte de dados associada, por meio de um recurso conhecido como *vinculação de dados*. Quando você preenche as listas com itens de dados, talvez precise usar uma técnica que define os nomes acessíveis para itens de lista vinculada a dados depois que a lista inicial é preenchida. Para obter mais informações, consulte o "Cenário 4" na [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570).
 
 <span id="Accessible_names_and_localization"/>
 <span id="accessible_names_and_localization"/>
@@ -133,7 +136,7 @@ O Windows oferece suporte a muitos controles que podem ser usados para exibir va
 ## Nomes acessíveis e localização  
 Para verificar se o nome acessível também é um elemento que é localizado, você deve usar técnicas corretas para armazenar cadeias de caracteres localizáveis como recursos e fazer referência às conexões de recursos com valores da [diretiva x:Uid](https://msdn.microsoft.com/library/windows/apps/Mt204791). Se o nome acessível vier de um uso [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) configurado explicitamente, certifique-se de que a cadeia de caracteres também possa ser localizada.
 
-Observe que as propriedades anexadas, como as propriedades [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081), usam uma sintaxe qualificadora especial para o nome de recurso, para que o recurso faça referência à propriedade anexada conforme se aplica a um elemento específico. Por exemplo, o nome de recurso para [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) conforme se aplica a elementos de interface do usuário chamados `MediumButton` é:
+Observe que as propriedades anexadas, como as propriedades [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081), usam uma sintaxe qualificadora especial para o nome de recurso, para que o recurso faça referência à propriedade anexada conforme se aplica a um elemento específico. Por exemplo, o nome de recurso para [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) conforme se aplica a elementos de IU chamados `MediumButton` é: `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`.
 
 <span id="related_topics"/>
 ## Tópicos relacionados  
@@ -143,6 +146,7 @@ Observe que as propriedades anexadas, como as propriedades [**AutomationProperti
 * [Testes de acessibilidade](accessibility-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

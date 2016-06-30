@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Executar uma tarefa em segundo plano em um temporizador
-description: Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa periódica em segundo plano.
+description: "Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa periódica em segundo plano."
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 3fc1e3efa742ff8ab24f78856872fe322703f152
+
 ---
 
 # Executar uma tarefa em segundo plano em um temporizador
@@ -27,7 +30,7 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 
 -   Crie um novo [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). O segundo parâmetro, *OneShot*, especifica se a tarefa em segundo plano será executada uma única vez ou periodicamente. Se *OneShot* for definido como verdadeiro, o primeiro parâmetro (*FreshnessTime*) especificará o número de minutos aguardados até que a tarefa em segundo plano seja agendada. Se *OneShot* for definido como falso, *FreshnessTime* especificará a frequência com que a tarefa em segundo plano será executada.
 
-    O temporizador interno para aplicativos Plataforma Universal do Windows (UWP) executa tarefas em segundo plano em intervalos de 15 minutos.
+    O temporizador interno para aplicativos da Plataforma Universal do Windows (UWP) destinados à família de dispositivos móveis ou da área de trabalho executa tarefas em segundo plano em intervalos de 15 minutos.
 
     -   Se *FreshnessTime* for definido como 15 minutos e *OneShot* for verdadeiro, a tarefa será executada uma vez começando entre 0 e 15 a partir do momento em que for registrada.
 
@@ -86,19 +89,19 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
     > ```cs
     > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > string taskName   = "Example hourly background task";
-    > 
+    >
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
     > ```cpp
     > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > String ^ taskName   = "Example hourly background task";
-    > 
+    >
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
-    
+
     > **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
 
-   
+
 ## Comentários
 
 > **Observação**  A partir do Windows 10, o usuário não precisa mais adicionar o aplicativo à tela de bloqueio para usar tarefas em segundo plano. Para obter diretrizes sobre os tipos de gatilhos de tarefa em segundo plano, consulte [Dar suporte ao aplicativo com tarefas em segundo plano](support-your-app-with-background-tasks.md).
@@ -129,8 +132,6 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

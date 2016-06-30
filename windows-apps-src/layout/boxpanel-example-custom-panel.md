@@ -1,13 +1,17 @@
 ---
 author: Jwmsft
-Description: 'Aprenda a escrever código para uma classe Panel personalizada, implementando os métodos ArrangeOverride e MeasureOverride e usando a propriedade Children.'
-MS-HAID: 'dev\_ctrl\_layout\_txt.boxpanel\_example\_custom\_panel'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Aprenda a escrever código para uma classe Panel personalizada, implementando os métodos ArrangeOverride e MeasureOverride e usando a propriedade Children."
+MS-HAID: dev\_ctrl\_layout\_txt.boxpanel\_example\_custom\_panel
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'BoxPanel, um exemplo de painel personalizado'
+title: BoxPanel, um exemplo de painel personalizado
 ms.assetid: 981999DB-81B1-4B9C-A786-3025B62B74D6
 label: BoxPanel, an example custom panel
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: e03a4c9d2116d779545cb1fb8e87fa86a632bca8
+
 ---
 
 # BoxPanel, um exemplo de painel personalizado
@@ -228,6 +232,7 @@ Você pode se perguntar por que o painel não escolheria 5x2 para 10 itens, pois
 [Alinhamento, margem e preenchimento](alignment-margin-padding.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

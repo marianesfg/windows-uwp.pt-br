@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
-title: Otimizar sua marcação XAML
-description: Analisar a marcação XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu aplicativo.
+title: "Otimizar sua marcação XAML"
+description: "Analisar a marcação XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu aplicativo."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c2131b084d8bb989f1f7767f54db697e1cdd8dcf
+
 ---
 # Otimizar sua marcação XAML
 
@@ -104,7 +108,7 @@ Embora a plataforma XAML seja capaz de exibir grandes quantidades de elementos, 
 
 ## Consolide vários pinceis com a mesma aparência em um recurso
 
-A plataforma XAML tenta armazenar objetos comumente usados em cache de forma que eles possam ser reutilizados com mais frequência possível. Porém, o XAML não consegue dizer facilmente se um pincel declarado em um pedaço de marcação é o mesmo que um pincel declarado em outro. O exemplo aqui usa [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) para demonstrar, mas o caso é mais provável e mais importante com [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068)
+A plataforma XAML tenta armazenar objetos comumente usados em cache de forma que eles possam ser reutilizados com mais frequência possível. Porém, o XAML não consegue dizer facilmente se um pincel declarado em um pedaço de marcação é o mesmo que um pincel declarado em outro. O exemplo aqui usa [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) para demonstrar, mas o caso é mais provável e mais importante com [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068).
 
 **Ineficiente.**
 
@@ -286,6 +290,7 @@ Para verificar se você tem o XBF2, abra seu aplicativo em um editor binário; o
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

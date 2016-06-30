@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Criar e consumir um serviço de aplicativo
-description: Saiba como escrever um aplicativo UWP (Plataforma Universal do Windows) que pode fornecer serviços a outros aplicativos UWP e também como consumir esses serviços.
+author: TylerMSFT
+title: "Criar e consumir um serviço de aplicativo"
+description: "Saiba como escrever um aplicativo UWP (Plataforma Universal do Windows) que pode fornecer serviços a outros aplicativos UWP e também como consumir esses serviços."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: ade51661fa6628c76b555316f645ec6622dd299a
+
 ---
 
 # Criar e consumir um serviço de aplicativo
@@ -26,7 +29,7 @@ Nestas instruções, criaremos tudo em uma única solução por questão de simp
 No arquivo Package.appxmanifest do projeto AppServiceProvider, adicione a extensão AppService a seguir ao elemento **&lt;Application&gt;**. Este exemplo anuncia o serviço `com.Microsoft.Inventory` e é o que identifica esse aplicativo como um provedor de serviços de aplicativo. O serviço real será implementado como uma tarefa em segundo plano. O aplicativo de serviço de aplicativo expõe o serviço a outros aplicativos. Recomendamos usar um estilo de nome de domínio reverso para o nome do serviço.
 
 ``` syntax
-... 
+...
 <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
@@ -196,7 +199,7 @@ O aplicativo de provedor de serviços de aplicativo deve ser implantado antes de
         {
             this.inventoryService = new AppServiceConnection();
 
-            // Here, we use the app service name defined in the app service provider's Package.appxmanifest file in the <Extension> section. 
+            // Here, we use the app service name defined in the app service provider's Package.appxmanifest file in the <Extension> section.
             this.inventoryService.AppServiceName = "com.microsoft.inventory";
 
             // Use Windows.ApplicationModel.Package.Current.Id.FamilyName within the app service provider to get this value.
@@ -388,8 +391,6 @@ namespace MyAppService
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

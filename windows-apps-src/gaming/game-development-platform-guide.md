@@ -1,14 +1,18 @@
 ---
 author: mtoepke
 title: Tecnologias de jogos para aplicativos UWP (Plataforma Universal do Windows)
-description: Neste guia, você aprenderá sobre as tecnologias disponíveis para o desenvolvimento de jogos UWP (Plataforma Universal do Windows).
+description: "Neste guia, você aprenderá sobre as tecnologias disponíveis para o desenvolvimento de jogos UWP (Plataforma Universal do Windows)."
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3c7807d0b46a32bfe90c79b7eee3111039ca94ab
+
 ---
 
 # Tecnologias de jogos para aplicativos UWP (Plataforma Universal do Windows)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Neste guia, você aprenderá sobre as tecnologias disponíveis para o desenvolvimento de jogos UWP (Plataforma Universal do Windows).
 
@@ -351,6 +355,7 @@ Para obter informações sobre como enviar seu jogo para a Windows Store, veja <
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

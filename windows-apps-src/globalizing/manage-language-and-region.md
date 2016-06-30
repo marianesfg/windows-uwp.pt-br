@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Controle como o Windows seleciona os recursos da interface do usuário e formata os elementos da interface do usuário do aplicativo, usando as várias configurações de idioma e região fornecidas pelo Windows.
-title: Gerenciar idioma e região
+Description: "Controle como o Windows seleciona os recursos da interface do usuário e formata os elementos da interface do usuário do aplicativo, usando as várias configurações de idioma e região fornecidas pelo Windows."
+title: "Gerenciar idioma e região"
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 label: Manage language and region
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 294f087fffeefda67ddacd09636915144bf18ff4
+
 ---
 
 # Gerenciar idioma e região
@@ -225,6 +229,7 @@ A seguinte tabela contém exemplos do que o usuário veria na interface do usuá
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

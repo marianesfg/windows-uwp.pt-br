@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Animações de lista permitem inserir ou remover um ou vários itens de uma coleção, como um álbum de fotos ou uma lista de resultados de pesquisa.
-title: Adicionar e excluir animações em aplicativos UWP
+Description: "Animações de lista permitem inserir ou remover um ou vários itens de uma coleção, como um álbum de fotos ou uma lista de resultados de pesquisa."
+title: "Adicionar e excluir animações em aplicativos UWP"
 ms.assetid: A85006AE-4992-457a-B514-500B8BEF5DC8
 label: Motion--add and delete animations
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: a795cf52c3d062d2131832ac3bc765f45097e849
+
 ---
 
 # Adicionar e excluir animações
@@ -49,6 +53,7 @@ Animações de lista permitem inserir ou remover um ou vários itens de uma cole
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

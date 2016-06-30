@@ -1,16 +1,20 @@
 ---
 author: mcleblanc
 ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
-title: Virtualização de dados de ListView e GridView
-description: Melhore o desempenho e o tempo de inicialização de ListView e GridView por meio da virtualização de dados.
+title: "Virtualização de dados de ListView e GridView"
+description: "Melhore o desempenho e o tempo de inicialização de ListView e GridView por meio da virtualização de dados."
+translationtype: Human Translation
+ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
+ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
+
 ---
 # Virtualização de dados de ListView e GridView
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Observação**  Para obter mais detalhes, consulte a sessão //build/ sobre como [aumentar drasticamente o desempenho quando os usuários interagem com grandes quantidades de dados em GridView e ListView](https://channel9.msdn.com/Events/Build/2013/3-158)
+**Observação**  Para obter mais detalhes, consulte a sessão //build/ sobre como [aumentar drasticamente o desempenho quando os usuários interagem com grandes quantidades de dados em GridView e ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
-Melhore o desempenho e o tempo de inicialização de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) por meio da virtualização de dados. Para a virtualização da interface do usuário, redução de elementos e atualização progressiva de itens, consulte [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md)
+Melhore o desempenho e o tempo de inicialização de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) por meio da virtualização de dados. Para a virtualização da interface do usuário, redução de elementos e atualização progressiva de itens, consulte [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md).
 
 Um método de virtualização de dados é necessário para um conjunto de dados que seja tão grande que não pode ou não deve ser totalmente armazenado na memória de uma vez. Você carrega uma parte inicial na memória (do disco local, rede ou nuvem) e aplica a virtualização de interface do usuário a esse conjunto parcial de dados. Depois, você pode carregar dados incrementalmente ou a partir de pontos arbitrários no conjunto de dados mestre (acesso aleatório) sob demanda. Determinar se a virtualização de dados é adequada para você depende de muitos fatores.
 
@@ -66,7 +70,7 @@ Esta é a estratégia básica para sua fonte de dados de virtualização de dado
     -   Caso você o tenha disponível na memória, retorne-o.
     -   Caso você não o tenha, retorne um item nulo ou de espaço reservado.
     -   Use a solicitação de um item (ou as informações do intervalo de [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)) para saber quais itens são necessários, além de buscar dados dos itens do back-end de maneira assíncrona. Depois de recuperar os dados, emita uma notificação de alteração via [**INotifyCollectionChanged**]((https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) ou [ **IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) para que o controle de itens Saiba mais sobre o novo item.
--   (Opcionalmente) À medida que o visor do controle de itens muda, identifique quais itens da fonte de dados são necessários implementando [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)
+-   (Opcionalmente) À medida que o visor do controle de itens muda, identifique quais itens da fonte de dados são necessários implementando [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070).
 
 Além disso, a estratégia de quando carregar itens de dados, quantos dados carregar e quais itens manter na memória depende de seu aplicativo. Algumas considerações gerais para lembrar:
 
@@ -84,6 +88,7 @@ Além disso, a estratégia de quando carregar itens de dados, quantos dados carr
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

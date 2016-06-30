@@ -5,8 +5,8 @@ title: "Movimento panorâmico"
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 7aafb0bbef2a33f926f76e41c26dd0f6920de274
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 45a2d3cb8cd1db1b138d62b7d6525ed7077207b0
 
 ---
 
@@ -21,7 +21,7 @@ O movimento horizontal ou a rolagem permite aos usuários navegar dentro de uma 
 
 
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>O que fazer e o que não fazer
+## O que fazer e o que não fazer
 
 
 **Indicadores de movimento panorâmico e barras de rolagem**
@@ -72,7 +72,7 @@ O movimento horizontal ou a rolagem permite aos usuários navegar dentro de uma 
 
     ![imagem demonstrando uma área incorporada com capacidade de movimento panorâmico que rola na mesma direção do seu contêiner.](images/scrolling-embedded3.png)
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
+## Diretrizes de uso adicional
 
 
 O movimento horizontal com o uso de toque, com gestos de passar ou deslizar o dedo usando um ou mais dedos, é semelhante à rolagem com o mouse. A interação do deslocamento horizontal é similar ao ato de girar a roda do mouse ou deslizar a barra de rolagem, ao invés de clicar na barra de rolagem. A menos que seja feita uma distinção em uma API ou que haja qualquer exigência em alguma interface do usuário do Windows específica do dispositivo, simplesmente nos referimos às duas interações como movimento panorâmico.
@@ -164,7 +164,7 @@ Sem espaço suficiente, como mostrado no diagrama a seguir, a região que permit
 
 Essa diretriz também é útil para aplicativos como, por exemplo, álbuns de fotografias e aplicativos de mapeamento que dão suporte ao movimento panorâmico irrestrito em cada imagem ou mapa e que, ao mesmo tempo, dão suporte ao movimento panorâmico de eixo único no álbum (para as imagens anteriores ou seguintes) ou na área de detalhes. Em aplicativos que fornecem uma área de detalhes ou opções correspondente a uma imagem ou mapa de forma livre do movimento panorâmico, recomendamos que o layout da página comece com a área de detalhes e opções, pois a área de movimento panorâmico irrestrito da imagem ou do mapa pode interferir com o movimento panorâmico na área de detalhes.
 
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 
 * [Interações personalizadas do usuário](https://msdn.microsoft.com/library/windows/apps/mt185599)
@@ -196,6 +196,6 @@ Essa diretriz também é útil para aplicativos como, por exemplo, álbuns de fo
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

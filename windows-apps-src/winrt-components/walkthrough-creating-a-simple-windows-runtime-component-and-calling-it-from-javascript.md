@@ -1,8 +1,11 @@
 ---
-author: martinekuan
-title: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript
-description: Este passo a passo mostra como é possível usar o .NET Framework com Visual Basic ou C# para criar os próprios tipos de Windows Runtime, empacotados em um componente do Tempo de Execução do Windows, e como chamar o componente no aplicativo Universal do Windows em JavaScript para Windows.
+author: msatranjr
+title: "Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript"
+description: "Este passo a passo mostra como é possível usar o .NET Framework com Visual Basic ou C# para criar os próprios tipos de Windows Runtime, empacotados em um componente do Tempo de Execução do Windows, e como chamar o componente no aplicativo Universal do Windows em JavaScript para Windows."
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: c521061d9fdd3eb2c25e3072182fb1d7823f13ba
+
 ---
 
 # Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript
@@ -11,9 +14,7 @@ ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
-
-Este passo a passo mostra como você pode usar o .NET Framework com Visual Basic ou c# para criar seus próprios tipos de Windows Runtime, empacotados em um componente do Tempo de Execução do Windows e como chamar o componente no aplicativo Universal do Windows compilado para Windows usando JavaScript.
+Este passo a passo mostra como é possível usar o .NET Framework com Visual Basic ou C# para criar os próprios tipos de Windows Runtime, empacotados em um componente do Tempo de Execução do Windows, e como chamar o componente no aplicativo Universal do Windows em JavaScript para Windows.
 
 O Visual Studio facilita adicionar um componente do Tempo de Execução do Windows escrito em C# ou Visual Basic ao aplicativo e criar tipos de Tempo de Execução do Windows que é possível chamar em JavaScript. Internamente, os tipos de Tempo de Execução do Windows podem usar qualquer funcionalidade do .NET Framework permitida em um aplicativo Universal do Windows. (Para obter mais informações, consulte [Criando componentes do tempo de execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Visão geral do .NET dos aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx).) Externamente, os membros do seu tipo podem expor somente tipos de Windows Runtime para os parâmetros e valores de retorno. Quando você compila a solução, o Visual Studio compila o projeto do componente do Tempo de Execução do Windows do .NET Framework e executa uma etapa de compilação que cria um arquivo de metadados do Windows (. winmd). Trata-se do componente do Tempo de Execução do Windows, que inclui o Visual Studio no aplicativo.
 
@@ -735,6 +736,7 @@ Para executar o aplicativo, escolha a tecla F5. Para iniciar a operação assín
 * [Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

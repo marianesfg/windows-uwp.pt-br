@@ -1,15 +1,16 @@
 ---
 author: Xansky
-Description: Os procedimentos de teste a serem seguidos para garantir que o seu aplicativo da Plataforma Universal do Windows (UWP) esteja acessível.
+Description: "Os procedimentos de teste a serem seguidos para garantir que o seu aplicativo da Plataforma Universal do Windows (UWP) esteja acessível."
 ms.assetid: 272D9C9E-B179-4F5A-8493-926D007A0225
 title: Testes de acessibilidade
 label: Accessibility testing
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: ec436f939c672d6e6d852d3dd6713fd6ca20a53b
+
 ---
 
 # Testes de acessibilidade  
-
-
 
 Os procedimentos de teste a serem seguidos para garantir que o seu aplicativo da Plataforma Universal do Windows (UWP) esteja acessível.
 
@@ -33,7 +34,7 @@ A ferramenta [**AccScope**](https://msdn.microsoft.com/library/windows/desktop/D
 
 [
               O **Inspect**
-            ](https://msdn.microsoft.com/library/windows/desktop/Dd318521) permite que você selecione qualquer elemento de interface do usuário e visualize seus dados acessíveis. Você pode visualizar as propriedades e padrões de controle Automação da Interface do Usuário da Microsoft e testar a estrutura navegacional dos elementos de automação na árvore de automação da IU. Use **Inspect** conforme desenvolve a interface do usuário para verificar como os tributos de acessibilidade estão expostos na Automação da Interface do Usuário. Em alguns casos, os atributos vêm do suporte à Automação da Interface do Usuário que já está implementado para os controles XAML padrão. Em outros casos, os atributos vêm de valores específicos que você definiu na sua marcação XAML, como as propriedades anexadas [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081).
+            ](https://msdn.microsoft.com/library/windows/desktop/Dd318521) permite que você selecione qualquer elemento de interface do usuário e visualize seus dados acessíveis. Você pode visualizar as propriedades e padrões de controle Automação da Interface do Usuário da Microsoft e testar a estrutura navegacional dos elementos de automação na árvore de automação da IU. Use **Inspect** conforme desenvolve a interface do usuário para verificar como os tributos de acessibilidade estão expostos na Automação da Interface do Usuário. Em alguns casos, os atributos vêm do suporte à Automação da Interface do Usuário que já está implementado para os controles XAML padrão. Em outros casos, os atributos vêm de valores específicos que você definiu na sua marcação XAML, como as propriedades anexadas [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties).
 
 A imagem a seguir mostra a ferramenta [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) consultando as propriedades de Automação da Interface do Usuário no elemento do menu **Edit** no Bloco de Notas.
 
@@ -134,7 +135,7 @@ Várias das ferramentas de teste de Automação da Interface do Usuário mencion
 
 A ferramenta [**AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239) fornece uma exibição particularmente interessante do seu aplicativo porque é possível ver os elementos de automação da IU como representação visual ou como lista. Se você usar a visualização, será possível analisar as peças de maneira que poderá correlacionar com a aparência visual da interface de usuário do aplicativo. Você mesmo pode testar a acessibilidade de seus primeiros protótipos da interface do usuário antes de atribuir toda a lógica à interface do usuário, certificando-se de que a interação visual e a navegação de acessibilidade do cenário de seu aplicativo está em equilíbrio.
 
-Um aspecto que você pode testar é se há elementos aparecendo na exibição do elemento de Automação da IU que você não quer que apareçam lá. Se você encontrar elementos que queria omitir da exibição, ou, de forma contrária, se houver elementos faltando, você pode usar a propriedade anexada XAML [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/BR209081_accessibilityview) para ajustar a forma como os controles XAML aparecem nas exibições de acessibilidade. Depois de ter verificado as exibições de acessibilidade básicas, é uma boa oportunidade de verificar novamente as sequências de guia ou navegação espacial habilitadas pelas teclas de setas para garantir que os usuários possam chegar a todas as partes que interativas e expostas na exibição de controle.
+Um aspecto que você pode testar é se há elementos aparecendo na exibição do elemento de Automação da IU que você não quer que apareçam lá. Se você encontrar elementos que queria omitir da exibição, ou, de forma contrária, se houver elementos faltando, você pode usar a propriedade anexada XAML [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.accessibilityview) para ajustar a forma como os controles XAML aparecem nas exibições de acessibilidade. Depois de ter verificado as exibições de acessibilidade básicas, é uma boa oportunidade de verificar novamente as sequências de guia ou navegação espacial habilitadas pelas teclas de setas para garantir que os usuários possam chegar a todas as partes que interativas e expostas na exibição de controle.
 
 <span id="related_topics"/>
 ## Tópicos relacionados  
@@ -144,6 +145,7 @@ Um aspecto que você pode testar é se há elementos aparecendo na exibição do
 * [Acessibilidade no Windows](http://go.microsoft.com/fwlink/p/?LinkId=320802)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

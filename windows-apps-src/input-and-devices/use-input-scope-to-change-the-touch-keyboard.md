@@ -1,12 +1,16 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira.
-MS-HAID: 'dev\_ctrl\_layout\_txt.use\_input\_scope\_to\_change\_the\_touch\_keyboard'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira."
+MS-HAID: dev\_ctrl\_layout\_txt.use\_input\_scope\_to\_change\_the\_touch\_keyboard
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Usar o escopo de entrada para alterar o teclado virtual
 ms.assetid: 6E5F55D7-24D6-47CC-B457-B6231EDE2A71
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 02f06ee498b136f811b4b3b8080a9cb043693504
+
 ---
 
 # Usar o escopo de entrada para alterar o teclado virtual
@@ -261,6 +265,7 @@ Inclui a tecla **=**.
 |Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre habilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> | Disponibilidade de recursos:<ul><li>Verificação ortográfica: desativada por padrão, pode ser habilitada</li><li>Correção automática: desativada por padrão, pode ser habilitada</li><li>Capitalização automática: desativada por padrão, pode ser habilitada. A primeira letra de cada palavra é capitalizada.</li><li>Previsão de texto: desativada por padrão, pode ser habilitada</li></ul> |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

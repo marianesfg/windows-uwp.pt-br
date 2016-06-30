@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 159681E4-BF9E-4A57-9FEE-EC7ED0BEFFAD
 title: Dicas de MVVM e desempenho de linguagem
-description: Este tópico aborda algumas considerações de desempenho relacionadas à sua escolha de padrões de design de software e linguagem de programação.
+description: "Este tópico aborda algumas considerações de desempenho relacionadas à sua escolha de padrões de design de software e linguagem de programação."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 77a162076e14b4726e1fb29673b14be65be37a16
+
 ---
 # MVVM e dicas de desempenho de linguagem
 
@@ -40,6 +44,7 @@ Há várias definições concretas do padrão MVVM e das estruturas de terceiros
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
-description: Use esse método na API da coleção da Windows Store API para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário.
-title: Declarar produtos consumíveis como providenciados
+description: "Use esse método na API da coleção da Windows Store API para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário."
+title: "Declarar produtos consumíveis como providenciados"
+ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
+ms.openlocfilehash: b099bdc26565ef218eaf1f73c5bb3ec9c24065c3
+
 ---
 
 # Declarar produtos consumíveis como providenciados
@@ -20,9 +23,9 @@ Há duas maneiras de usar esse método para declarar um produto consumível como
 ## Pré-requisitos
 
 
-Para usar esse método, você precisará de:
+Para usar esse método, você precisará:
 
--   Um token de acesso do Azure AD criado com a URI de audiência **https://onestore.microsoft.com**.
+-   Ter um token de acesso do Azure AD criado com o URI de público `https://onestore.microsoft.com`.
 -   Uma chave ID da Windows Store que tenha sido gerada chamando-se o método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) no código do lado do cliente em seu aplicativo.
 
 Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-grant-products-from-a-service.md).
@@ -34,20 +37,20 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 
 | Método | URI da solicitação                                                   |
 |--------|---------------------------------------------------------------|
-| POST   | https://collections.mp.microsoft.com/v6.0/collections/consume |
+| POST   | `https://collections.mp.microsoft.com/v6.0/collections/consume` |
 
- 
+<br/> 
 
 ### Cabeçalho da solicitação
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;.                           |
+| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;.                           |
 | Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
- 
+<br/> 
 
 ### Corpo da solicitação
 
@@ -57,12 +60,13 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | itemId        | Cadeia de caracteres       | O valor itemID retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com trackingId                                                                                                                                                                                                  | Não       |
 | trackingId    | Guid         | Uma ID de rastreamento exclusiva fornecida pelo desenvolvedor. Use esse parâmetro com itemId.                                                                                                                                                                                                                                     | Não       |
 | productId     | Cadeia de caracteres       | O valor de productId retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com transactionId                                                                                                                                                                                            | Não       |
-| transactionId | Guid         | Um valor de ID de transação que é obtido de uma das seguintes fontes:                                                                                                                                                                                                                                      | Não       | 
-|               |              | * A propriedade [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396) da classe [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).   |        | 
+| transactionId | Guid         | Um valor de ID de transação que é obtido de uma das seguintes fontes:                                                                                                                                                                                                                                      | Não       |
+|               |              | * A propriedade [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396) da classe [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).   |        |
 |               |              | * O recibo do aplicativo ou produto que é retornado por [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) ou [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811).   |        |
 |               |              | *O parâmetro transactionId retornado por uma [consulta por produtos](query-for-products.md).   |        |        
 |               |              | Use esse parâmetro com productId.   |        |
  
+<br/>
 
 O objeto UserIdentity contém os parâmetros a seguir.
 
@@ -72,7 +76,7 @@ O objeto UserIdentity contém os parâmetros a seguir.
 | identityValue        | string | Valor cadeia de caracteres da chave ID da Windows Store ID.                                                                                                   | Sim      |
 | localTicketReference | string | Identificador solicitado para resposta retornada. Recomendamos que você use o mesmo valor que a declaração *userId* na chave ID da Windows Store. | Sim      |
 
- 
+<br/> 
 
 ### Exemplos de solicitação
 
@@ -142,7 +146,7 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 | 401  | Não autorizado | PartnerAadTicketRequired   | Um token de acesso do Azure AD não foi passado para o serviço no cabeçalho de autorização.                                                                                                   |
 | 401  | Não autorizado | InconsistentClientId       | A declaração *clientId* na chave de ID da Windows Store no corpo da solicitação e a declaração *appid* no token de acesso do Azure AD no cabeçalho de autorização não coincidem.                     |
 
- 
+<br/> 
 
 ## Tópicos relacionados
 
@@ -156,8 +160,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

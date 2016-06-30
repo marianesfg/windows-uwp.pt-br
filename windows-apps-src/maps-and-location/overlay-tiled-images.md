@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
+author: msatranjr
 title: Sobrepor imagens lado a lado em um mapa
-description: Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão.
+description: "Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 71d044eb19e71786da39ca71d4f4fbd2d87645be
+
 ---
 
 # Sobrepor imagens lado a lado em um mapa
@@ -364,6 +367,7 @@ Para substituir o mapa padrão inteiramente com blocos de terceiros ou personali
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

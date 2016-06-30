@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Notificações periódicas, que são chamadas também de notificações de sondagem, atualizam blocos e selos em um intervalo fixo, baixando o conteúdo da nuvem.
-title: Visão geral de notificações periódicas
+Description: "Notificações periódicas, que são chamadas também de notificações de sondagem, atualizam blocos e selos em um intervalo fixo, baixando o conteúdo da nuvem."
+title: "Visão geral de notificações periódicas"
 ms.assetid: 1EB79BF6-4B94-451F-9FAB-0A1B45B4D01C
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 55932595e0d5592003456a28d00ffd70c5e05eba
+
 ---
 
 # Visão geral de notificações periódicas
@@ -74,7 +78,7 @@ O URI é sondado somente se o dispositivo estiver online. Se a rede estiver disp
 
 Por padrão, as notificações periódicas de bloco e de selo expiram três dias depois que são baixadas. Quando uma notificação expira, o conteúdo é removido do selo, do bloco ou da fila e não é mais mostrado para o usuário. É recomendável definir um horário de expiração explícito em todas as notificações de bloco e de selo periódicas usando um tempo que faça sentido para o aplicativo ou notificação, para garantir que  o conteúdo do bloco não continue além do tempo relevante. Um tempo de expiração explícito é essencial para conteúdo com tempo de vida definido. Isso também garante a remoção de conteúdo obsoleto se seu serviço de nuvem se tornar inacessível ou se o usuário se desconectar da rede por um período de tempo prolongado.
 
-Seu serviço de nuvem configura uma data de expiração e hora para uma notificação incluindo o cabeçalho HTTP X-WNS-Expire na carga da resposta. O cabeçalho HTTP X-WNS-Expires está em conformidade com o [formato de data HTTP](http://go.microsoft.com/fwlink/p/?linkid=253706). Para saber mais, consulte [**StartPeriodicUpdate**](https://msdn.microsoft.com/library/windows/apps/hh701684) ou [**StartPeriodicUpdateBatch**](https://msdn.microsoft.com/library/windows/apps/hh967945)
+Seu serviço de nuvem configura uma data de expiração e hora para uma notificação incluindo o cabeçalho HTTP X-WNS-Expire na carga da resposta. O cabeçalho HTTP X-WNS-Expires está em conformidade com o [formato de data HTTP](http://go.microsoft.com/fwlink/p/?linkid=253706). Para saber mais, veja [**StartPeriodicUpdate**](https://msdn.microsoft.com/library/windows/apps/hh701684) ou [**StartPeriodicUpdateBatch**](https://msdn.microsoft.com/library/windows/apps/hh967945).
 
 Por exemplo, durante um dia de negociação ativo do mercado de ações, você pode definir a expiração de uma atualização de preços de ações para duas vezes mais do que seu intervalo de sondagem (por exemplo, uma hora após o recebimento, se estiver sondando a cada meia hora). Outro exemplo é um aplicativo de notícias que pode determinar que um dia é um período de expiração adequado para a atualização de blocos de notícias diárias.
 
@@ -87,7 +91,7 @@ Se a fila tiver atingido a capacidade de cinco notificações, a próxima notifi
 
 Você pode usar a marcação e a fila de notificações para implementar diversos cenários avançados de notificação. Por exemplo, um aplicativo de ações pode enviar cinco notificações, cada uma sobre uma ação diferente e marcada com um nome de ação. Isso evita que a fila contenha duas notificações para a mesma ação, uma delas mais antiga e desatualizada.
 
-Para saber mais, consulte [Usando a fila de notificações](https://msdn.microsoft.com/library/windows/apps/hh781199)
+Para saber mais, veja [Usando a fila de notificações](https://msdn.microsoft.com/library/windows/apps/hh781199).
 
 ### <span id="Enabling_the_notification_queue"></span><span id="enabling_the_notification_queue"></span><span id="ENABLING_THE_NOTIFICATION_QUEUE"></span>Habilitando a fila de notificações
 
@@ -112,6 +116,7 @@ Você deve fornecer um URI exclusivo para cada notificação que quiser que o Wi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

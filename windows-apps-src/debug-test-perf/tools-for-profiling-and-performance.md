@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: EAC34672-5C12-402D-920B-6F2835EA5ACE
-title: Ferramentas de criação de perfil e desempenho
-description: A Microsoft oferece várias ferramentas para ajudar a melhorar o desempenho do aplicativo da Plataforma Universal do Windows (UWP).
+title: "Ferramentas de criação de perfil e desempenho"
+description: "A Microsoft oferece várias ferramentas para ajudar a melhorar o desempenho do aplicativo da Plataforma Universal do Windows (UWP)."
+translationtype: Human Translation
+ms.sourcegitcommit: 5bbd14fb53cae67bbb827f94e695b2703e07fc34
+ms.openlocfilehash: f7f9821be7d1423b2f89367bd20c09981eca24eb
+
 ---
 # Ferramentas de criação de perfil e desempenho
 
@@ -25,6 +29,7 @@ Consulte também:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

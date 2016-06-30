@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Use RichTextBlock com elementos RichTextBlockOverflow para criar layouts de texto avançados.
+Description: "Use RichTextBlock com elementos RichTextBlockOverflow para criar layouts de texto avançados."
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 28c78b39bad4c66457ec5aba8cf0b4ce0de4f00a
+
 ---
 # Bloco Rich Text
 Blocos Rich Text fornecem vários recursos para layout de texto avançado que você pode usar quando precisa de suporte para parágrafos, elementos de interface do usuário embutidos ou layouts de texto complexos.
@@ -147,6 +151,7 @@ Consulte Tipografia e Diretrizes para fontes.
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

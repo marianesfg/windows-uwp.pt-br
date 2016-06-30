@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: 'Exibir pontos de interesse (POI) em um mapa'
-description: Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML.
+author: msatranjr
+title: Exibir pontos de interesse (POI) em um mapa
+description: "Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 6f21f9bf9c909d0f89a663cdda05934ad9b4011b
+
 ---
 
 # Exibir pontos de interesse (POI) em um mapa
@@ -28,7 +31,7 @@ Resumindo:
 -   [Adicione um MapPolyline ao mapa](#mappolyline) para exibir linhas no mapa.
 -   [Adicione XAML ao mapa](#mapxaml) para exibir elementos de interface do usuário personalizados.
 
-Caso você tenha um grande número de elementos a serem colocados no mapa, leve em consideração [sobrepor imagens lado a lado no mapa](overlay-tiled-images.md). Para exibir rodovias no mapa, consulte [Exibir rotas e trajetos](routes-and-directions.md)
+Caso você tenha um grande número de elementos a serem colocados no mapa, leve em consideração [sobrepor imagens lado a lado no mapa](overlay-tiled-images.md). Para exibir rodovias no mapa, consulte [Exibir rotas e trajetos](routes-and-directions.md).
 
 ## Adicionar um MapIcon
 
@@ -37,7 +40,7 @@ Exiba uma imagem como um pino, com texto opcional, no mapa usando a classe [**Ma
 
 ![ícone de mapa de amostra com títulos de comprimentos diferentes.](images/mapctrl-mapicons.png)
 
-O exemplo a seguir mostra um mapa da cidade de Seattle e adiciona um [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) com a imagem padrão e um título opcional para indicar a localização da Space Needle. Também centraliza o mapa sobre o ícone e aumenta. Para obter informações gerais sobre como usar o controle de mapa, consulte [Exiba mapas em modos de exibição 2D, 3D e Streetside](display-maps.md)
+O exemplo a seguir mostra um mapa da cidade de Seattle e adiciona um [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) com a imagem padrão e um título opcional para indicar a localização da Space Needle. Também centraliza o mapa sobre o ícone e aumenta. Para obter informações gerais sobre como usar o controle de mapa, consulte [Exiba mapas em modos de exibição 2D, 3D e Streetside](display-maps.md).
 
 ```csharp
       private void displayPOIButton_Click(object sender, RoutedEventArgs e)
@@ -78,8 +81,8 @@ A linha de código a seguir exibe o [**MapIcon**](https://msdn.microsoft.com/lib
 Tenha estas considerações em mente ao trabalhar com a classe [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077):
 
 -   A propriedade [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078) dá suporte à imagem de tamanho máximo 2048×2048 pixels.
--   Por padrão, a exibição da imagem do ícone de mapa não é garantida. Ele pode ficar oculto quando obscurecer outros elementos ou rótulos no mapa. Para manter visível, defina a propriedade [**CollisionBehaviorDesired**](https://msdn.microsoft.com/library/windows/apps/dn974327) do ícone de mapa como [**MapElementCollisionBehavior.RemainVisible**](https://msdn.microsoft.com/library/windows/apps/dn974314)
--   Não há garantia de que o [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088) opcional do [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) seja mostrado. Se você não vir o texto, aplique zoom diminuindo o valor da propriedade [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
+-   Por padrão, a exibição da imagem do ícone de mapa não é garantida. Ele pode ficar oculto quando obscurecer outros elementos ou rótulos no mapa. Para manter visível, defina a propriedade [**CollisionBehaviorDesired**](https://msdn.microsoft.com/library/windows/apps/dn974327) do ícone de mapa como [**MapElementCollisionBehavior.RemainVisible**](https://msdn.microsoft.com/library/windows/apps/dn974314).
+-   Não há garantia de que o [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088) opcional do [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) seja mostrado. Se você não vir o texto, aplique zoom diminuindo o valor da propriedade [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 -   Quando exibir uma imagem [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) que aponta para um local específico no mapa - por exemplo, um botão de pressão ou uma seta - considere configurar o valor da propriedade [**NormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637082) para a localização aproximada do ponteiro na imagem. Caso você deixe o valor de **NormalizedAnchorPoint** no valor padrão (0, 0), o que representa o canto superior esquerdo da imagem, as mudanças em [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) do mapa podem deixar a imagem apontando para uma localização diferente.
 
 ## Adicionar um MapPolygon
@@ -138,10 +141,10 @@ private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEve
 
 Exiba elementos de interface do usuário personalizados no mapa usando XAML. Posicione o XAML no mapa especificando o local e o ponto de ancoragem normalizado do XAML.
 
--   Defina a localização no mapa em que a XAML é colocada chamando [**SetLocation**](https://msdn.microsoft.com/library/windows/desktop/ms704369)
--   Defina a localização relativa no XAML correspondente à localização especificada chamando [**SetNormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637050)
+-   Defina a localização no mapa em que a XAML é colocada chamando [**SetLocation**](https://msdn.microsoft.com/library/windows/desktop/ms704369).
+-   Defina a localização relativa no XAML correspondente à localização especificada chamando [**SetNormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637050).
 
-O exemplo a seguir mostra um mapa da cidade de Seattle e adiciona um controle [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) XAML para indicar o local da Space Needle. Também centraliza o mapa sobre a área e aumenta. Para obter informações gerais sobre como usar o controle de mapa, consulte [Exiba mapas em modos de exibição 2D, 3D e Streetside](display-maps.md)
+O exemplo a seguir mostra um mapa da cidade de Seattle e adiciona um controle [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) XAML para indicar o local da Space Needle. Também centraliza o mapa sobre a área e aumenta. Para obter informações gerais sobre como usar o controle de mapa, consulte [Exiba mapas em modos de exibição 2D, 3D e Streetside](display-maps.md).
 
 ```csharp
 private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
@@ -176,7 +179,7 @@ Este exemplo exibe uma borda azul no mapa.
 
 Os exemplos a seguir mostram como adicionar elementos de interface do usuário XAML diretamente na marcação XAML da página usando vinculação de dados. Assim como acontecem com outros elementos XAML que exibem conteúdo, [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008) é a propriedade de conteúdo padrão do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e não precisa ser especificada explicitamente na marcação XAML.
 
-Este exemplo mostra como exibir dois controles XAML como filhos implícitos do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
+Este exemplo mostra como exibir dois controles XAML como filhos implícitos do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
 ```xml
 <maps:MapControl>
@@ -185,7 +188,7 @@ Este exemplo mostra como exibir dois controles XAML como filhos implícitos do [
 </maps:MapControl>
 ```
 
-Este exemplo mostra como exibir dois controles XAML contidos dentro de um [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094)
+Este exemplo mostra como exibir dois controles XAML contidos dentro de um [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094).
 
 ```xml
 <maps:MapControl>
@@ -196,7 +199,7 @@ Este exemplo mostra como exibir dois controles XAML contidos dentro de um [**Map
 </maps:MapControl>
 ```
 
-Este exemplo exibe uma coleção de elementos XAML vinculados a um [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094)
+Este exemplo exibe uma coleção de elementos XAML vinculados a um [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094).
 
 ```xml
 <maps:MapControl x:Name="MapControl" MapTapped="MapTapped" MapDoubleTapped="MapTapped" MapHolding="MapTapped">
@@ -226,6 +229,7 @@ Este exemplo exibe uma coleção de elementos XAML vinculados a um [**MapItemsCo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

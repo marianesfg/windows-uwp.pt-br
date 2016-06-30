@@ -1,8 +1,12 @@
 ---
 author: mijacobs
-Description: Animações de transição de conteúdo permitem que você mude o conteúdo de uma área da tela enquanto mantém constante o contêiner ou o plano de fundo. O novo conteúdo aparece. Se houver conteúdo existente para ser substituído, esse conteúdo desaparecerá.
-title: Diretrizes para animações de transição de conteúdo
+Description: "Animações de transição de conteúdo permitem que você mude o conteúdo de uma área da tela enquanto mantém constante o contêiner ou o plano de fundo. O novo conteúdo aparece. Se houver conteúdo existente para ser substituído, esse conteúdo desaparecerá."
+title: "Diretrizes para animações de transição de conteúdo"
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
+
 ---
 
 # Animações de transição de conteúdo
@@ -48,6 +52,7 @@ Animações de transição de conteúdo permitem que você mude o conteúdo de u
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

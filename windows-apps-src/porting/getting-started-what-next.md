@@ -1,13 +1,17 @@
 ---
 author: mcleblanc
-title: Introdução, O que vem depois
+title: "Introdução, O que vem depois"
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
-description: Com essas informações básicas, você agora pode começar a escrever aplicativos UWP (Plataforma Universal do Windows) mais interessantes.
+description: "Com essas informações básicas, você agora pode começar a escrever aplicativos UWP (Plataforma Universal do Windows) mais interessantes."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2b11133fda76fb42f3a850848c426cbb33fb8366
+
 ---
 
 # Introdução: o que vem depois?
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Próximas etapas
 
@@ -33,6 +37,7 @@ Achamos que o Windows 10 abrirá novas oportunidades de criação de aplicativos
 * [Blog Criando aplicativos para Windows](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

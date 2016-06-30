@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Você pode baixar .files que contêm os dados de análise para que você possa revisar suas estatísticas e informações offline.
-title: Baixar relatórios de análise
+Description: "Você pode baixar .files que contêm os dados de análise para que você possa revisar suas estatísticas e informações offline."
+title: "Baixar relatórios de análise"
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 959007d6d7c4e4c768f196fe04c2fa4a8ac6fc2e
+
 ---
 
 # Baixar relatórios de análise
@@ -23,6 +27,7 @@ Você pode baixar .files que contêm os dados de análise para que você possa r
 4.  Clique no botão **Baixar relatórios** e salve ou abra o arquivo .tsv.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

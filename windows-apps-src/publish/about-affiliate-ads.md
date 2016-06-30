@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Se o aplicativo usar um AdMediatorControl ou AdControl para exibir anúncios, você poderá aumentar sua taxa de preenchimento de anúncios e receita exibindo nele os anúncios da afiliada Microsoft.
-title: Sobre os anúncios da afiliada
+Description: "Se o aplicativo usar um AdMediatorControl ou AdControl para exibir anúncios, você poderá aumentar sua taxa de preenchimento de anúncios e receita exibindo nele os anúncios da afiliada Microsoft."
+title: "Sobre os anúncios da afiliada"
 ms.assetid: 7B5478FB-7E68-4956-82EF-B43C2873E3EF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0ac051d5774dadde48e2692683a6bcfae8264d1c
+
 ---
 
 # Sobre os anúncios da afiliada
@@ -44,6 +48,7 @@ Depois de marcar ou desmarcar essa caixa, você não precisará republicar seu a
 * [Relatório de desempenho de afiliadas](affiliates-performance-report.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

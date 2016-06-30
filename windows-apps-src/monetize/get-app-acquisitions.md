@@ -1,14 +1,17 @@
 ---
 author: mcleanbyron
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
-description: Use este método na API de análise da Windows Store para obter os dados de aquisição agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais.
-title: Obter aquisições de aplicativo
+description: "Use este método na API de análise da Windows Store para obter os dados de aquisição agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais."
+title: "Obter aquisições de aplicativo"
+ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
+ms.openlocfilehash: 7f87f931c92eca1f64fbd23b4fcba3359293f94a
+
 ---
 
 # Obter aquisições de aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use este método na API de análise da Windows Store para obter os dados de aquisição agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
@@ -63,7 +66,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">string</td>
-<td align="left">A ID de produto do aplicativo para o qual você deseja recuperar dados de aquisição. A ID do produto é inserida no link de listagem do aplicativo que está disponível na [App identity page](https://msdn.microsoft.com/library/windows/apps/mt148561) do painel do Centro de Desenvolvimento. Um exemplo de ID de produto é 9WZDNCRFJ3Q8.</td>
+<td align="left">A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.</td>
 <td align="left">Sim</td>
 </tr>
 <tr class="even">
@@ -234,7 +237,7 @@ Para obter uma lista dos campos com suporte, consulte a tabela a seguir. Valores
 
 ### Exemplo de solicitação
 
-O exemplo a seguir demonstra várias solicitações de obtenção de dados de aquisição do aplicativo. Substitua o valor de *applicationId* pela ID do produto de seu aplicativo.
+O exemplo a seguir demonstra várias solicitações de obtenção de dados de aquisição do aplicativo. Substitua o valor de *applicationId* pela ID da Loja de seu aplicativo.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0  HTTP/1.1
@@ -263,7 +266,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 | Valor               | Tipo   | Descrição                                                                                                                                                                                                                              |
 |---------------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date                | string | A primeira data no intervalo de datas dos dados de aquisição. Se a solicitação especificou um único dia, esse valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, esse valor será a primeira data nesse intervalo de datas. |
-| applicationId       | string | A ID de produto do aplicativo do qual você está recuperando dados de aquisição.                                                                                                                                                                 |
+| applicationId       | string | A ID da Loja do aplicativo do qual você está recuperando dados de aquisição.                                                                                                                                                                 |
 | applicationName     | string | O nome de exibição do aplicativo.                                                                                                                                                                                                             |
 | deviceType          | string | O tipo de dispositivo que concluiu a aquisição. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                                  |
 | orderName           | string | O nome do pedido.                                                                                                                                                                                                                   |
@@ -314,7 +317,6 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

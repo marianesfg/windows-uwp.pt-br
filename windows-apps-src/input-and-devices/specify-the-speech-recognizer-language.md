@@ -5,8 +5,8 @@ title: Especificar o idioma do reconhecedor de fala
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 24393ef52d72aa08f9aab2d541e65ccb5f2aceed
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 8af4fe64e586037d68ab5cd422d7195bd3a64b94
 
 ---
 
@@ -42,7 +42,7 @@ Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal
 
 Para obter dicas úteis sobre o design de um aplicativo habilitado para controle por voz interessante e prático, consulte [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121).
 
-## <span id="Identify_the_default_language"></span><span id="identify_the_default_language"></span><span id="IDENTIFY_THE_DEFAULT_LANGUAGE"></span>Identifique o idioma padrão
+## Identifique o idioma padrão
 
 
 Um reconhecedor de fala usa o idioma do controle por voz do sistema como seu idioma de reconhecimento padrão. Esse idioma é definido pelo usuário na tela Settings &gt; System &gt; Speech &gt; Speech Language do dispositivo.
@@ -56,7 +56,7 @@ var language = SpeechRecognizer.SystemSpeechLanguage; </code></pre></td>
 </table>
 ```
 
-## <span id="Confirm_an_installed_language"></span><span id="confirm_an_installed_language"></span><span id="CONFIRM_AN_INSTALLED_LANGUAGE"></span>Confirmar um idioma instalado
+## Confirmar um idioma instalado
 
 
 Os idiomas instalados podem variar entre dispositivos. Verifique a existência de um idioma se você depender dele para uma determinada restrição.
@@ -75,14 +75,14 @@ Determine os idiomas com suporte em um dispositivo verificando uma das duas prop
               **SupportedGrammarLanguages**
             ](https://msdn.microsoft.com/library/windows/apps/dn653250) - A coleção de objetos [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) usada com uma restrição de lista ou um arquivo SRGS (Especificação de Gramática de Reconhecimento de Fala).
 
-## <span id="Specify_a_language"></span><span id="specify_a_language"></span><span id="SPECIFY_A_LANGUAGE"></span>Especificar um idioma
+## Especificar um idioma
 
 
 Para especificar um idioma, passe um objeto [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) no construtor [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226).
 
 Aqui, especificamos "en-US" como o idioma de reconhecimento.
 
-<span codelanguage="CSharp"></span>
+
 ```CSharp
 <colgroup>
 <col width="100%" />
@@ -98,7 +98,7 @@ var language = new Windows.Globalization.Language(“en-US”);
 var recognizer = new SpeechRecognizer(language); 
 ```
 
-## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Comentários
+## Comentários
 
 
 Uma restrição de tópico pode ser configurada adicionando uma [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446) à coleção [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) do [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) e chamando [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240). Um [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433) de **TopicLanguageNotSupported** é retornado se o reconhecedor não for inicializado com um idioma de tópico com suporte.
@@ -108,7 +108,7 @@ Uma restrição de lista é configurada adicionando uma [**SpeechRecognitionList
 Uma gramática SRGS é um formato XML de padrão aberto representado pela classe [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412). Ao contrário de listas personalizadas, você pode especificar o idioma da gramática na marcação SRGS. [
               Haverá falha de**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) com um [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433) de **TopicLanguageNotSupported** se o reconhecedor não for inicializado com o mesmo idioma que a marcação SRGS.
 
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 
 **Desenvolvedores**
@@ -131,6 +131,6 @@ Uma gramática SRGS é um formato XML de padrão aberto representado pela classe
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

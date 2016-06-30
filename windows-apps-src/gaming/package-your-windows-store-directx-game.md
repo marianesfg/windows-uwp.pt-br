@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Empacotar seu jogo em DirectX da Plataforma Universal do Windows (UWP)
-description: Jogos da Plataforma Universal do Windows (UWP) maiores, principalmente os que dão suporte a vários idiomas com ativos específicos de região ou oferecem ativos de alta definição opcionais, podem inflar para tamanhos maiores.
+description: "Jogos da Plataforma Universal do Windows (UWP) maiores, principalmente os que dão suporte a vários idiomas com ativos específicos de região ou oferecem ativos de alta definição opcionais, podem inflar para tamanhos maiores."
 ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 14043fffc22849ca8d31f85e1035c38c07f1cdd4
+
 ---
 
 #  Empacotar seu jogo em DirectX da Plataforma Universal do Windows (UWP)
@@ -46,7 +50,7 @@ Os recursos para empacotamento de recursos são especificados de uma dessas duas
 
 -   Os arquivos de recurso têm o mesmo nome de arquivo e as versões específicas do pacote de recursos são colocadas em diretórios com nomes específicos. Esses nomes de diretório são reservados pelo sistema. Por exemplo, \\en-us, \\scale-140, \\dxfl-dx11.
 -   Os arquivos de ativos são armazenados em pastas com nomes arbitrários, mas os arquivos são nomeados com um rótulo comum que é anexado com cadeias de caracteres reservadas pelo sistema para denotar idiomas ou outros qualificadores. Especificamente, as cadeias de caracteres de qualificadores são afixadas ao nome de arquivo generalizado após um sublinhado (“\_”). Por exemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds. Você também pode juntar essas cadeias de caracteres. Por exemplo, \\assets\\menu\_option1\_scale-140\_lang-en-us.png.
-    > **Observação**   Quando usado em um nome de arquivo em vez de sozinho em um nome de diretório, um qualificador de idioma deve ter a forma "lang-<tag>", por exemplo,"lang-en-us"conforme descrito em [Como nomear recursos usando qualificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
+    > **Observação**   Quando usado em um nome de arquivo em vez de sozinho em um nome de diretório, o qualificador de idioma deve ter o formato "lang-<tag>" (por exemplo, "lang-en-us"), conforme descrito em [Como nomear recursos usando qualificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
 
      
 
@@ -224,6 +228,7 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

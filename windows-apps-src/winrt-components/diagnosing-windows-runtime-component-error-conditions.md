@@ -1,16 +1,18 @@
 ---
-author: martinekuan
-title: Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
-description: Este artigo fornece informações adicionais sobre restrições em componentes do Tempo de Execução do Windows escritos com código gerenciado.
+author: msatranjr
+title: "Diagnóstico das condições de erro do componente do Tempo de Execução do Windows"
+description: "Este artigo fornece informações adicionais sobre restrições em componentes do Tempo de Execução do Windows escritos com código gerenciado."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 29199b7c94c4fecd173fb96f0d8fb43692d72464
+
 ---
 
 # Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
 Este artigo fornece informações adicionais sobre restrições em componentes do Tempo de Execução do Windows escritos com código gerenciado. Ele expande as informações fornecidas em mensagens de erro da [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](https://msdn.microsoft.com/library/hh925576.aspx) e complementa as informações sobre as restrições fornecidas em [Criação de componentes de Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
@@ -220,17 +222,17 @@ Na UWP, os valores de retorno são considerados parâmetros de saída e os nomes
     > ```cs
     > using System.Runtime.InteropServices;
     > using System.Runtime.InteropServices.WindowsRuntime;
-    > 
+    >
     > [return: ReturnValueName("average")]
     > public int GetAverage(out int lowValue, out int highValue)
     > ```
     > ```vb
     > Imports System.Runtime.InteropServices
     > Imports System.Runtime.InteropServices.WindowsRuntime
-    > 
+    >
     > Public Function GetAverage(<Out> ByRef lowValue As Integer, _
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
-    > ``` 
+    > ```
 
 > **Observação**  Se alterar o nome do valor de retorno e o novo nome colidir com o nome de outro parâmetro, você obterá o erro WME1091.
 
@@ -248,6 +250,7 @@ O código JavaScript pode acessar os parâmetros de saída de um método por nom
 * [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

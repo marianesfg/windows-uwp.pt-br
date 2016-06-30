@@ -1,61 +1,64 @@
 ---
-description: This article explains how to add dragging and dropping in your Universal Windows Platform (UWP) app.
-title: Drag and drop
+description: Este artigo explica como adicionar o recurso de arrastar e soltar em seu aplicativo UWP (Plataforma Universal do Windows).
+title: Arrastar e soltar
 ms.assetid: A15ED2F5-1649-4601-A761-0F6C707A8B7E
 author: awkoren
+ms.sourcegitcommit: 03f3f86ed1310e6e3ac5f53cc5e81ebef708a1a2
+ms.openlocfilehash: ffa2f0f368a61ef4f3003c1fa03e143b26c6859b
+
 ---
-# Drag and drop
+# Arrastar e soltar
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-This article explains how to add dragging and dropping in your Universal Windows Platform (UWP) app. Drag and drop is a classic, natural way of interacting with content such as images and files. Once implemented, drag and drop works seamlessly in all directions, including app-to-app, app-to-desktop, and desktop-to app.
-
-## Set valid areas
-
-Use the [**AllowDrop**][AllowDrop] and [**CanDrag**][CanDrag] properties to designate the areas of your app valid for dragging and dropping.
-
-The markup below shows how to set a specific area of the app as a valid for dropping using the [**AllowDrop**][AllowDrop] in XAML. If a user tries to drop somewhere else, the system won't let them. If you want users to be able to drop items anywhere on your app, set the entire background as a drop target.
-
-[!code-xml[[!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
-
-With dragging, you'll usually want to be specific about what's draggable. Users will want to drag certain items, like pictures, not everything in your app. Here's how to set [**CanDrag**][CanDrag] using XAML.
-
-[!code-xml[[!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]
-
-You don't need to do any other work to allow dragging, unless you want to customize the UI (which is covered later in this article). Dropping requires a few more steps.
-
-## Handle the DragOver event
-
-The [**DragOver**][DragOver] event fires when a user has dragged an item over your app, but not yet dropped it. In this handler, you need to specify what kind of operations your app supports using the [**DragEventArgs.AcceptedOperation**][AcceptedOperation] property. Copy is the most common.
-
-[!code-cs[[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]
-
-## Process the Drop event
-
-The [**Drop**][Drop] event occurs when the user releases items in a valid drop area. Process them using the [**DragEventArgs.DataView**][DataView] property.
-
-For simplicity in the example below, we'll assume the user dropped a single photo and access. In reality, users can drop multiple items of varying formats simultaneously. Your app should handle this possibility by checking what types of files were dropped and processing them accordingly, and notifying the user if they're trying to do something your app don't support.
-
-[!code-cs[[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_Drop)]](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_Drop)]
-
-## Customize the UI
-
-The system provides a default UI for dragging and dropping. However, you can also choose to customize various parts of the UI by setting custom captions and glyphs, or by opting not to show a UI at all. To customize the UI, use the [**DragUIOverride**][DragUiOverride] property in the [**DragOver**][DragOver] event handler.
-
-[!code-cs[[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
-
- <!-- LINKS -->
-[AllowDrop]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.uielement.allowdrop.aspx
-[CanDrag]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.uielement.candrag.aspx
-[DragOver]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.uielement.dragover.aspx
-[AcceptedOperation]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.drageventargs.acceptedoperation.aspx
-[DataView]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.drageventargs.dataview.aspx
-[DragUiOverride]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.drageventargs.draguioverride.aspx
-[Drop]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.uielement.drop.aspx 
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
+Este artigo explica como adicionar o recurso de arrastar e soltar em seu aplicativo UWP (Plataforma Universal do Windows). Arrastar e soltar é uma maneira clássica e natural de interagir com conteúdo, como imagens e arquivos. Uma vez implementada, a função arrastar e soltar funciona diretamente em todas as direções, incluindo de aplicativo para aplicativo, de aplicativo para área de trabalho e de área de trabalho para aplicativo.
 
-<!--HONumber=May16_HO2-->
+## Definir áreas válidas
+
+Use as propriedades [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) e [**CanDrag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag) para designar as áreas de seu aplicativo válidas para arrastar e soltar.
+
+A marcação a seguir mostra como definir uma área específica do aplicativo como válida para soltar usando [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) em XAML. Se um usuário tentar soltar em outro lugar, o sistema não permitirá. Se você quiser que os usuários possam soltar os itens em qualquer lugar no seu aplicativo, defina toda a tela de fundo como reprodução automática.
+
+[!code-xml[Principal](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
+
+Com arrastar, você geralmente deseja ser específico sobre o que pode ser arrastado. Os usuários querem arrastar determinados itens, como imagens, mas nem tudo em seu aplicativo. Veja a seguir como definir [**CanDrag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag) usando XAML.
+
+[!code-xml[Principal](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]
+
+Você não precisa fazer mais nada para permitir arrastar, a menos que queira personalizar a interface do usuário (o que é abordado posteriormente neste artigo). Soltar requer mais algumas etapas.
+
+## Manipular o evento DragOver
+
+O evento [**DragOver**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DragOver) é acionado quando um usuário arrasta um item sobre seu aplicativo, mas ainda não soltou. Neste manipulador, você precisa especificar a que tipo de operações de seu aplicativo dá suporte usando a propriedade [**AcceptedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.DragEventArgs.AcceptedOperation). A cópia é a operação mais comum.
+
+[!code-cs[Principal](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]
+
+## Processar o evento Drop
+
+O evento [**Drop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.Drop) ocorre quando o usuário libera itens em uma área de soltar válida. Processe-os usando a propriedade [**DataView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.DragEventArgs.DataView).
+
+Para simplificar o exemplo a seguir, vamos supor que o usuário soltou uma única foto e acesso. Na realidade, os usuários podem soltar vários itens de diferentes formatos simultaneamente. Seu aplicativo deve lidar com essa possibilidade verificando quais tipos de arquivos foram soltos e processando-os de acordo e notificando o usuário se ele estiver tentando fazer algo sem suporte pelo seu aplicativo.
+
+[!code-cs[Principal](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_Drop)]
+
+## Personalizar a interface do usuário
+
+O sistema fornece uma interface do usuário padrão para arrastar e soltar. No entanto, você também pode optar por personalizar diversas partes da interface do usuário definindo legendas e glifos personalizados ou optando por não mostrar uma interface do usuário. Para personalizar a interface do usuário, use a propriedade [**DragEventArgs.DragUIOverride**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.DragEventArgs.DragUIOverride).
+
+[!code-cs[Principal](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
+
+## Veja também
+
+* [AllowDrop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.allowdrop.aspx)
+* [CanDrag](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.candrag.aspx)
+* [DragOver](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.dragover.aspx)
+* [AcceptedOperation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.acceptedoperation.aspx)
+* [DataView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.dataview.aspx)
+* [DragUiOverride](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.draguioverride.aspx)
+* [Drop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.drop.aspx)
+
+
+<!--HONumber=Jun16_HO4-->
 
 

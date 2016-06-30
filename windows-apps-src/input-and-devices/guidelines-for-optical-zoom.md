@@ -5,8 +5,8 @@ title: "Diretrizes de zoom óptico e redimensionamento"
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 07f9f2979a7a2c712b39bd4dc962e5991e1824ac
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 38feedfe857f8ce2fc638cf55465f1e719108583
 
 ---
 
@@ -39,7 +39,7 @@ O zoom óptico não deve ser confundido com o [Zoom semântico](../controls-and-
 
  
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>O que fazer e o que não fazer
+## O que fazer e o que não fazer
 
 
 Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento ou zoom óptico:
@@ -68,7 +68,7 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
 
      
 
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 
 **Exemplos**
@@ -96,6 +96,6 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

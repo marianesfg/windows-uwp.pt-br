@@ -3,6 +3,10 @@ author: mcleanbyron
 ms.assetid: 48a1ef86-8514-4af8-9c93-81e869d36de7
 description: Saiba como criar programaticamente um **AdControl** em JavaScript.
 title: Criar uma AdControl em JavaScript
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 481f9d785181ca197debdb807bb0b0c7b4168632
+
 
 ---
 
@@ -57,6 +61,7 @@ Se você usa esse código e não vê anúncios, tente inserir um atributo **posi
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

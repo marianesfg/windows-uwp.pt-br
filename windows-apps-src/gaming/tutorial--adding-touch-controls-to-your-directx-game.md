@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Controles de toque para jogos
-description: Aprenda a adicionar controles de toque básicos ao seu jogo C++ da Plataforma Universal do Windows (UWP) com DirectX.
+description: "Aprenda a adicionar controles de toque básicos ao seu jogo C++ da Plataforma Universal do Windows (UWP) com DirectX."
 ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a2460ba2ffcf191fe87132180b2cca7519e87141
+
 ---
 
 # Controles de toque para jogos
@@ -348,6 +352,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

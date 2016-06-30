@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Esta seção contém diretrizes de experiência de usuário para a apresentação das configurações de aplicativo e o armazenamento dessas configurações como dados de aplicativo.
-title: Dados e configurações do aplicativo
+Description: "Esta seção contém diretrizes de experiência de usuário para a apresentação das configurações de aplicativo e o armazenamento dessas configurações como dados de aplicativo."
+title: "Dados e configurações do aplicativo"
 ms.assetid: E7F312F7-54D8-411F-8D92-92FBB95C2463
 label: App settings and data
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 4d6f57dcc9dbfe9c2e031a5fe73f24668f0dc462
+
 ---
 
 # Dados e configurações do aplicativo
@@ -45,6 +49,7 @@ Os dados do aplicativo são os dados que o próprio aplicativo cria e gerencia. 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

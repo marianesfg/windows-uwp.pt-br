@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Modifica o comportamento de compilação XAML de forma que os campos de referência de objetos nomeados sejam definidos com o acesso público em vez do comportamento padrão privado.
+description: "Modifica o comportamento de compilação XAML de forma que os campos de referência de objetos nomeados sejam definidos com o acesso público em vez do comportamento padrão privado."
 title: Atributo xFieldModifier
 ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3f6c759d582d92aa33df5874186aeaa3a7c37b01
+
 ---
 
 # Atributo x:FieldModifier
@@ -33,6 +37,7 @@ Você também pode especificar **NonPublic** (**internal** em C# ou C++/CX, **Fr
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

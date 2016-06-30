@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Inicializar o Direct3D 11.
-description: Consulte como converter o código de inicialização do Direct3D 9 para usá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca.
+description: "Consulte como converter o código de inicialização do Direct3D 9 para usá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca."
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f0e25e43633d895673d640f139af338f6f0713f2
+
 ---
 
 # Inicializar o Direct3D 11.
@@ -226,6 +230,7 @@ Agora que temos um identificador de dispositivo e um destino de renderização e
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Um controle de modo de exibição da Web incorpora um modo de exibição em seu aplicativo que renderiza o conteúdo da web usando o mecanismo de renderização do Microsoft Edge. Hiperlinks também podem aparecer e funcionar em um controle de modo de exibição da Web.
-title: Modo de exibição da Web
+Description: "Um controle de modo de exibição da Web incorpora um modo de exibição em seu aplicativo que renderiza o conteúdo da web usando o mecanismo de renderização do Microsoft Edge. Hiperlinks também podem aparecer e funcionar em um controle de modo de exibição da Web."
+title: "Modo de exibição da Web"
 ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: dd947d0b55dad56fdd6c684ae236f1c31ac8da86
+
 ---
 
 # Modo de exibição da Web
@@ -41,13 +45,13 @@ Você pode obter o título do documento HTML exibido atualmente no modo de exibi
 
 Embora o WebView não seja uma subclasse Control, ele irá receber o foco de entrada do teclado e participar na sequência de tabulação. Ele fornece um método [**Focus**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.focus.aspx), e eventos [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.gotfocus.aspx) e [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.lostfocus.aspx), mas não tem nenhuma propriedade relacionada a guia. Sua posição na sequência de tabulação é a mesma que sua posição na ordem do documento de XAML. A sequência de tabulação inclui todos os elementos no conteúdo de modo de exibição da Web que pode receber o foco de entrada. 
 
-Conforme indicado na Tabela de eventos na página da classe [**WebView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx), o modo de exibição da web não dá suporte a maioria dos eventos de entrada de usuário herdados do [**UIElement**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx), como [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.keydown.aspx), [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.keyup.aspx) e [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.pointerpressed.aspx). Em vez disso, você pode usar o [**InvokeScriptAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.invokescriptasync.aspx) com a função **eval** do JavaScript para usar os manipuladores de eventos HTML e usar o **window.external.notify** do manipulador de eventos HTML para notificar o aplicativo usando [**WebView.ScriptNotify**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.scriptnotify.aspx)
+Conforme indicado na Tabela de eventos na página da classe [**WebView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx), o modo de exibição da web não dá suporte a maioria dos eventos de entrada de usuário herdados do [**UIElement**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx), como [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.keydown.aspx), [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.keyup.aspx) e [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.pointerpressed.aspx). Em vez disso, você pode usar o [**InvokeScriptAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.invokescriptasync.aspx) com a função **eval** do JavaScript para usar os manipuladores de eventos HTML e usar o **window.external.notify** do manipulador de eventos HTML para notificar o aplicativo usando [**WebView.ScriptNotify**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.scriptnotify.aspx).
 
 ### Navegando para conteúdo
 
 O modo de exibição da Web fornece várias APIs para navegação básica: [**GoBack**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goback.aspx), [**GoForward**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goforward.aspx), [**Stop**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.stop.aspx), [**Refresh**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.refresh.aspx), [**CanGoBack**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoback.aspx) e [**CanGoForward**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoforward.aspx). Você pode usá-los para adicionar recursos típicos de navegação na Web a seu aplicativo. 
 
-Para definir o conteúdo inicial do modo de exibição da Web, defina a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.source.aspx) no XAML. O analisador XAML converte automaticamente a cadeia de caracteres em um [**Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.uri.aspx) 
+Para definir o conteúdo inicial do modo de exibição da Web, defina a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.source.aspx) no XAML. O analisador XAML converte automaticamente a cadeia de caracteres para um [**Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.uri.aspx). 
 
 ```xaml
 <!-- Source file is on the web. -->
@@ -70,7 +74,7 @@ webView1.Navigate("http://www.contoso.com");
 
 Para navegar para o URI com uma solicitação POST e cabeçalhos HTTP, use o método [**NavigateWithHttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatewithhttprequestmessage.aspx). Esse método possui suporte apenas ao [**HttpMethod.Post**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.post.aspx) e [**HttpMethod.Get**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpmethod.get.aspx) para o valor da propriedade [**HttpRequestMessage.Method**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httprequestmessage.method.aspx). 
 
-Para carregar o conteúdo descompactado e não criptografado a partir do armazenamento de dados [**LocalFolder**]() ou [**TemporaryFolder**]() do seu aplicativo, use o método **Navigate** com um **Uri** que usa o [ms-appdata scheme](). O suporte a exibição da Web para esse esquema requer que você coloque o conteúdo em uma subpasta sob a pasta local ou temporary. Isso permite a navegação para URIs como ms-appdata:///local/*folder*/*file*.html e ms-appdata:///temp/*folder*/*file*.html. (Para carregar arquivos compactados ou criptografados, consulte [**NavigateToLocalStreamUri**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx)) 
+Para carregar o conteúdo descompactado e não criptografado a partir do armazenamento de dados [**LocalFolder**]() ou [**TemporaryFolder**]() do seu aplicativo, use o método **Navigate** com um **Uri** que usa o [ms-appdata scheme](). O suporte a exibição da Web para esse esquema requer que você coloque o conteúdo em uma subpasta sob a pasta local ou temporary. Isso permite a navegação para URIs como ms-appdata:///local/*folder*/*file*.html e ms-appdata:///temp/*folder*/*file*.html. (Para carregar arquivos compactados ou criptografados, consulte [**NavigateToLocalStreamUri**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx)). 
 
 Cada uma dessas subpastas de primeiro nível é isolada do conteúdo em outras subpastas de primeiro nível. Por exemplo, você pode navegar para ms-appdata:///temp/folder1/file.html, mas você não pode ter um link nesse arquivo para ms-appdata:///temp/folder2/file.html. No entanto, você ainda pode vincular ao conteúdo HTML no pacote do aplicativo usando o **ms-appx-web scheme** e ao conteúdo da Web usando os esquemas de URI **http** e **https**.
 
@@ -78,7 +82,7 @@ Cada uma dessas subpastas de primeiro nível é isolada do conteúdo em outras s
 webView1.Navigate("ms-appdata:///local/intro/welcome.html");
 ```
 
-Para carregar o conteúdo do pacote do aplicativo, use o método **Navigate** com um **Uri** que usa o [**ms-appx-web scheme**](https://msdn.microsoft.com/library/windows/apps/xaml/jj655406.aspx#ms_appx_web) 
+Para carregar o conteúdo do pacote do aplicativo, use o método **Navigate** com um **Uri** que usa o [**ms-appx-web scheme**](https://msdn.microsoft.com/library/windows/apps/xaml/jj655406.aspx#ms_appx_web). 
 
 ```csharp
 webView1.Navigate("ms-appx-web:///help/about.html");
@@ -231,7 +235,7 @@ private void webView_PermissionRequested(WebView sender, WebViewPermissionReques
 }
 ```
 
-Se seu aplicativo requer entrada do usuário ou outras operações assíncronas para responder a uma solicitação de permissão, use o método [**Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx) de [**WebViewPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.aspx) para criar um [**WebViewDeferredPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewdeferredpermissionrequest.aspx) que pode ser tratado em um momento posterior. Consulte [**WebViewPermissionRequest.Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx) 
+Se seu aplicativo requer entrada do usuário ou outras operações assíncronas para responder a uma solicitação de permissão, use o método [**Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx) de [**WebViewPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.aspx) para criar um [**WebViewDeferredPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewdeferredpermissionrequest.aspx) que pode ser tratado em um momento posterior. Consulte [**WebViewPermissionRequest.Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx). 
 
 Se os usuários devem sair com segurança de um site hospedado em um modo de exibição da Web ou em outros casos, quando a segurança é importante, chame o método estático [**ClearTemporaryWebDataAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cleartemporarywebdataasync.aspx) para apagar o todo o conteúdo armazenado em cache localmente em uma sessão de modo de exibição da Web. Isso impede que usuários mal-intencionados acessem dados confidenciais. 
 
@@ -251,7 +255,7 @@ string returnValue = await webView1.InvokeScriptAsync("setDate", args);
 
 Você pode usar o **InvokeScriptAsync** com a função do JavaScript **eval** para inserir conteúdo na página da Web.
 
-Aqui, o texto de uma caixa de texto XAML (`nameTextBox.Text`) é gravado em um div em uma página HTML hospedada em 
+Aqui, o texto de uma caixa de texto XAML (`nameTextBox.Text`) é gravado em um div em uma página HTML hospedada em `webView1`. 
 
 ```csharp
 private async void Button_Click(object sender, RoutedEventArgs e)
@@ -263,13 +267,13 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 Scripts no conteúdo de modo de exibição da Web podem usar **window.external.notify** com um parâmetro de cadeia de caracteres para enviar informações de volta para seu aplicativo. Para receber essas mensagens, manipule o evento [**ScriptNotify**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.scriptnotify.aspx). 
 
-Para que uma página da Web externa possa acionar o evento **ScriptNotify** ao chamar window.external.notify, inclua o URI da página na seção **ApplicationContentUriRules** do manifesto do aplicativo. (Você pode fazer isso no Microsoft Visual Studio na guia URIs de Conteúdo do Package.appxmanifest designer). Os URIs dessa lista devem usar HTTPS e podem conter curingas de subdomínio (por exemplo, `https://*.microsoft.com`), mas não podem conter curingas de domínio (por exemplo, `https://*.com` e `https://*.*`). O requisito de manifesto não se aplica ao conteúdo que se origina no pacote do aplicativo, que usa um URI ms-local-stream:// ou que seja carregado usando o método [**NavigateToString**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetostring.aspx) 
+Para que uma página da Web externa possa acionar o evento **ScriptNotify** ao chamar window.external.notify, inclua o URI da página na seção **ApplicationContentUriRules** do manifesto do aplicativo. (Você pode fazer isso no Microsoft Visual Studio na guia URIs de Conteúdo do Package.appxmanifest designer). Os URIs dessa lista devem usar HTTPS e podem conter curingas de subdomínio (por exemplo, `https://*.microsoft.com`), mas não podem conter curingas de domínio (por exemplo, `https://*.com` e `https://*.*`). O requisito de manifesto não se aplica ao conteúdo que se origina no pacote do aplicativo, que usa um URI ms-local-stream:// ou que seja carregado usando o método [**NavigateToString**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetostring.aspx). 
 
 ### Acessando o Windows Runtime em um modo de exibição da Web
 
-Você pode usar o método [**AddWebAllowedObject**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.addweballowedobject.aspx) para injetar uma instância de uma classe nativa de um componente do Windows Runtime no contexto do JavaScript do modo de exibição da Web. Isso permite acesso completo aos métodos, propriedades e eventos nativos desse objeto no conteúdo JavaScript desse modo de exibição da Web. A classe deve ser decorada com o atributo [**AllowForWeb**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.allowforwebattribute.aspx). 
+Você pode usar o método [**AddWebAllowedObject**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.addweballowedobject.aspx) para injetar uma instância de uma classe nativa de um componente do Tempo de Execução do Windows no contexto do JavaScript do modo de exibição da Web. Isso permite acesso completo aos métodos, propriedades e eventos nativos desse objeto no conteúdo JavaScript desse modo de exibição da Web. A classe deve ser decorada com o atributo [**AllowForWeb**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.allowforwebattribute.aspx). 
 
-Por exemplo, este código insere uma instância do `MyClass` importado de um componente do Windows Runtime em um modo de exibição da Web.
+Por exemplo, este código insere uma instância do `MyClass` importado de um componente do Tempo de Execução do Windows em um modo de exibição da Web.
 
 ```csharp
 private void webView_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args) 
@@ -281,7 +285,7 @@ private void webView_NavigationStarting(WebView sender, WebViewNavigationStartin
 }
 ```
 
-Para obter mais informações, consulte [**WebView.AddWebAllowedObject**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.addweballowedobject.aspx) 
+Para obter mais informações, consulte [**WebView.AddWebAllowedObject**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.addweballowedobject.aspx). 
 
 Além disso, o conteúdo confiável do JavaScript em um modo de exibição da Web pode ter permissão para acessar diretamente as APIs do Windows Runtime. Isso proporciona poderosas capacidades nativas para aplicativos Web hospedados em um modo de exibição da Web. Para habilitar esse recurso, o URI do conteúdo confiável deve estar na lista branca e no ApplicationContentUriRules do aplicativo em Package.appxmanifest, com WindowsRuntimeAccess especificamente definido para "all". 
 
@@ -339,6 +343,7 @@ Um modo de exibição da Web que hospeda o conteúdo fora do thread de interface
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

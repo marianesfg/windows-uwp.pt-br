@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Oferecendo suporte à orientação de tela (DirectX e C++)
-description: Abordaremos neste documento as práticas recomendadas para controlar a rotação da tela no aplicativo UWP DirectX, para que o hardware gráfico do dispositivo Windows 10 seja usado de forma eficiente e eficaz.
+title: "Oferecendo suporte à orientação de tela (DirectX e C++)"
+description: "Abordaremos neste documento as práticas recomendadas para controlar a rotação da tela no aplicativo UWP DirectX, para que o hardware gráfico do dispositivo Windows 10 seja usado de forma eficiente e eficaz."
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8da32494e0bb0bd48d485c946df1c9a5baec7fbe
+
 ---
 
 # Oferecendo suporte à orientação de tela (DirectX e C++)
@@ -553,6 +557,7 @@ Agora, quando você chamar seu método de renderização, ela multiplicará a ma
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

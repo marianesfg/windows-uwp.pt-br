@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Fornece um identificador exclusivo para elementos de marcação. Para o XAML da UWP (Plataforma Universal do Windows), este identificador exclusivo é usado por processos e ferramentas de localização XAML, como o uso de recursos de um arquivo de recursos .resw.
+description: "Fornece um identificador exclusivo para elementos de marcação. Para o XAML da UWP (Plataforma Universal do Windows), este identificador exclusivo é usado por processos e ferramentas de localização XAML, como o uso de recursos de um arquivo de recursos .resw."
 title: Diretiva xUid
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4f8aa553c99b6071cedc4f9d93cf8258b75eca49
+
 ---
 
 # Diretiva x:Uid
@@ -47,6 +51,7 @@ Não coloque **x:Uid** em elementos de propriedade, o que não é permitido no X
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

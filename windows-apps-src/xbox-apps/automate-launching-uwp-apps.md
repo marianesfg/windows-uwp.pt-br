@@ -1,7 +1,11 @@
 ---
-title: Automatizar a inicialização de aplicativos UWP (Plataforma Universal do Windows) para Windows 10
-description: Os desenvolvedores podem usar a ativação de protocolos e a ativação de inicialização para automatizar a inicialização de seus aplicativos UWP ou jogos para testes automatizados.
+title: "Automatizar a inicialização de aplicativos UWP (Plataforma Universal do Windows) para Windows 10"
+description: "Os desenvolvedores podem usar a ativação de protocolos e a ativação de inicialização para automatizar a inicialização de seus aplicativos UWP ou jogos para testes automatizados."
 author: listurm
+translationtype: Human Translation
+ms.sourcegitcommit: adf2d16f9c208631f91fbcad19d1ea8087cd9cb5
+ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
+
 ---
 
 # Automatizar a inicialização de aplicativos UWP do Windows 10
@@ -204,6 +208,7 @@ Platform::String^ argval = launchArgs->Arguments;
 Em resumo, você pode usar vários métodos para iniciar o aplicativo UWP. Dependendo dos requisitos e casos de uso, métodos diferentes podem ser mais adequados que outros. 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

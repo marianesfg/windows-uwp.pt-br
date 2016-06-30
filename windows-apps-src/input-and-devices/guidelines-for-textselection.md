@@ -5,8 +5,8 @@ title: Selecionando texto e imagens
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
 template: detail.hbs
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: a47b48f9315c51505b2c487c140011e053105556
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 6533e76981d815c2d62008c17e2320fc770dfcc9
 
 ---
 
@@ -23,7 +23,7 @@ Este artigo descreve a seleção e a manipulação de texto, imagens e controles
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>O que fazer e o que não fazer
+## O que fazer e o que não fazer
 
 
 -   Use glifos de fonte ao implementar sua interface do usuário de garra. A garra é uma combinação das duas fontes Segoe da interface do usuário disponíveis em todo o sistema. O uso de recursos de fonte simplifica problemas de renderização em diferentes dpis e funciona bem com os vários níveis de escala da interface do usuário. Ao implementar suas próprias garras, elas devem compartilhar as seguintes características da interface do usuário:
@@ -39,7 +39,7 @@ Este artigo descreve a seleção e a manipulação de texto, imagens e controles
 
 -   Não permita a seleção de elementos da interface do usuário como controles, rótulos, imagens, conteúdo proprietário e assim por diante. Normalmente, os aplicativos do Windows permitem a seleção somente dentro de controles específicos. Controles, como botões, rótulos e logotipos não são selecionáveis. Avalie se a seleção é um problema para o seu aplicativo e, se for, identifique as áreas da interface do usuário onde a seleção deve ser proibida. 
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
+## Diretrizes de uso adicional
 
 
 A seleção e a manipulação de texto são particularmente suscetíveis aos desafios da experiência do usuário introduzidos pelas interações por toque. A entrada por mouse, caneta/stylus e teclado são altamente granulares: um clique do mouse ou contato da caneta/stylus é mapeado normalmente para um único pixel e uma tecla é ou não é pressionada. A entrada de toque não é granular; é difícil mapear toda a superfície da ponta de um dedo para especificar a localização x-y na tela para colocar o sinal de interpolação de texto de forma precisa.
@@ -103,7 +103,7 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 
 *Editor de imagens com garras de corte.*
 
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 
 
@@ -135,6 +135,6 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

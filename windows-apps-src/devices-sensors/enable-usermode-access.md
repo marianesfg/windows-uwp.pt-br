@@ -1,11 +1,14 @@
 ---
 author: JordanRh1
-title: Habilitar o acesso de modo do usuário no Windows 10 IoT Core
-description: Este tutorial descreve como habilitar o acesso de modo do usuário para GPIO, I2C, SPI e UART no Windows 10 IoT Core.
+title: "Habilitar o acesso de modo do usuário no Windows 10 IoT Core"
+description: "Este tutorial descreve como habilitar o acesso de modo do usuário para GPIO, I2C, SPI e UART no Windows 10 IoT Core."
+ms.sourcegitcommit: f7d7dac79154b1a19eb646e7d29d70b2f6a15e35
+ms.openlocfilehash: eedabee593400ff0260b6d3468ac922285a034f8
+
 ---
 # Habilitar o acesso de modo do usuário no Windows 10 IoT Core
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 O Windows 10 IoT Core contém novas APIs para acessar GPIO, I2C, SPI e UART diretamente no modo do usuário. Placas de desenvolvimento como Raspberry Pi 2 expõem uma sub-rede dessas conexões, o que permite que os usuários estendam um módulo de computação base com circuitos personalizados para endereçar um aplicativo específico. Esses barramentos de nível inferior geralmente são compartilhados com outras funções onboard críticas, com apenas um subconjunto de pinos e barramentos GPIO expostos em cabeçalhos. Para preservar a estabilidade do sistema, é necessário especificar quais pinos e barramentos são seguros para modificação por aplicativos de modo do usuário. 
@@ -340,13 +343,15 @@ A multiplexação de pino é feito com a cooperação de vários componentes.
 
 * Servidores de multiplexação de pino são os drivers que controlam o bloco de controle de multiplexação de pino. Os servidores de multiplexação de pino recebem as solicitações de multiplexação de pino de clientes via solicitações para reservar recursos de multiplexação (via solicitações *IRP_MJ_CREATE*), e solicitações para alternar a função de um pino (via solicitações *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*). O servidor de multiplexação de pino geralmente é o driver GPIO, já que o bloco de multiplexação às vezes faz parte do bloco GPIO. Mesmo que o bloco de multiplexação seja um periférico separado, o driver GPIO é um lugar lógico para colocar a funcionalidade de multiplexação. 
 * Clientes de multiplexação de pino são drivers que consomem multiplexação de pino. Os clientes de multiplexação de pino recebem recursos de multiplexação de pino do firmware da ACPI. Os recursos de multiplexação de pino são um tipo de recurso de conexão e são gerenciados pelo hub de recursos. Os clientes de multiplexação de pino reservam os recursos de multiplexação abrindo um identificador para o recurso. Para efeito de uma alteração de hardware, os clientes devem confirmar a configuração enviando uma solicitação *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*. Os clientes liberam os recursos de multiplexação de pino fechando o identificador, momento em que a configuração de multiplexação é revertida para seu estado padrão. 
-* O firmware da ACPI especifica a configuração de multiplexação com recursos `FunctionConfig()`. Os recursos FunctionConfig expressam quais pinos, em qual configuração de multiplexação, são exigidos por um cliente. Os recursos FunctionConfig contêm o número de função, a configuração de recepção e a lista de números de pino. Os recursos FunctionConfig são fornecidos para clientes de multiplexação de pino como recursos de hardware, que são recebidos por drivers no retorno de chamada PrepareHardware semelhantemente aos recursos de conexão GPIO e SPB. Os clientes recebem uma ID de hub de recurso que pode ser usada para abrir um identificador para o recurso. 
+* O firmware da ACPI especifica a configuração de multiplexação com recursos `MsftFunctionConfig()`. Os recursos MsftFunctionConfig expressam quais pinos, em qual configuração de multiplexação, são exigidos por um cliente. Os recursos MsftFunctionConfig contêm o número de função, a configuração de recepção e a lista de números de pino. Os recursos MsftFunctionConfig são fornecidos para clientes de multiplexação de pino como recursos de hardware, que são recebidos por drivers no retorno de chamada PrepareHardware semelhantemente aos recursos de conexão GPIO e SPB. Os clientes recebem uma ID de hub de recurso que pode ser usada para abrir um identificador para o recurso. 
+
+> Você deve passar a opção de linha de comando `/MsftInternal` para `asl.exe` para compilar arquivos ASL que contêm descritores `MsftFunctionConfig()`, pois esses descritores estão atualmente sob a análise de trabalho da ACPI. Por exemplo: `asl.exe /MsftInternal dsdt.asl`
 
 A sequência de operações envolvidas na multiplexação de pino é mostrada abaixo. 
 
 ![Interação entre servidor e cliente de multiplexação de pino](images/usermode-access-diagram-1.png)
 
-1.  O cliente recebe recursos FunctionConfig do firmware da ACPI no retorno de chamada [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx).
+1.  O cliente recebe recursos MsftFunctionConfig do firmware da ACPI no retorno de chamada [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx).
 2.  O cliente usa a função auxiliar do hub de recursos `RESOURCE_HUB_CREATE_PATH_FROM_ID()` para criar um caminho a partir da ID do recurso, em seguida, abre um identificador para o caminho (usando [ZwCreateFile()](https://msdn.microsoft.com/library/windows/hardware/ff566424.aspx), [IoGetDeviceObjectPointer()](https://msdn.microsoft.com/library/windows/hardware/ff549198.aspx) ou [WdfIoTargetOpen()](https://msdn.microsoft.com/library/windows/hardware/ff548634.aspx)).
 3.  O servidor extrai a ID do hub de recursos do caminho do arquivo usando as funções auxiliares do hub de recursos `RESOURCE_HUB_ID_FROM_FILE_NAME()`, em seguida, consulta o hub de recursos para obter o descritor do recurso.
 4.  O servidor executa a arbitragem de compartilhamento em cada ponto no descritor e conclui a solicitação IRP_MJ_CREATE.
@@ -362,7 +367,7 @@ Esta seção descreve como um cliente consome a funcionalidade de multiplexaçã
 
 ####    Recursos de análise
 
-Um driver WDF recebe recursos `FunctionConfig()` em sua rotina [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx). Os recursos FunctionConfig podem ser identificados pelos campos a seguir:
+Um driver WDF recebe recursos `MsftFunctionConfig()` em sua rotina [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx). Os recursos MsftFunctionConfig podem ser identificados pelos campos a seguir:
 
 ```cpp
 CM_PARTIAL_RESOURCE_DESCRIPTOR::Type = CmResourceTypeConnection
@@ -370,7 +375,7 @@ CM_PARTIAL_RESOURCE_DESCRIPTOR::u.Connection.Class = CM_RESOURCE_CONNECTION_CLAS
 CM_PARTIAL_RESOURCE_DESCRIPTOR::u.Connection.Type = CM_RESOURCE_CONNECTION_TYPE_FUNCTION_CONFIG
 ```
 
-Uma rotina `EvtDevicePrepareHardware()` pode extrair recursos FunctionConfig da seguinte maneira:
+Uma rotina `EvtDevicePrepareHardware()` pode extrair recursos MsftFunctionConfig da seguinte maneira:
 
 ```cpp
 EVT_WDF_DEVICE_PREPARE_HARDWARE evtDevicePrepareHardware;
@@ -426,7 +431,7 @@ evtDevicePrepareHardware (
 
 ####    Reservando e confirmando recursos
 
-Quando um cliente quer realizar a multiplexação de pinos, ele reserva e confirma o recurso FunctionConfig. O exemplo a seguir mostra como um cliente pode reservar e confirmar recursos FunctionConfig.
+Quando um cliente quer realizar a multiplexação de pinos, ele reserva e confirma o recurso MsftFunctionConfig. O exemplo a seguir mostra como um cliente pode reservar e confirmar recursos MsftFunctionConfig.
 
 ```cpp
 _IRQL_requires_max_(PASSIVE_LEVEL)
@@ -511,7 +516,7 @@ Esta seção descreve como um servidor de multiplexação de pino expõe sua fun
 
 ####    Manipulando solicitações IRP_MJ_CREATE
 
-Os clientes abrem um identificador para um recurso quando eles querem reservar um recurso de multiplexação de pino. Um servidor de multiplexação de pino recebe solicitações *IRP_MJ_CREATE* por meio de uma operação de nova análise do hub de recursos. O componente de caminho à direita da solicitação *IRP_MJ_CREATE* contém a ID do hub de recursos, que é um inteiro de 64 bits em formato hexadecimal. O servidor deve extrair a ID do hub de recursos do nome do arquivo usando `RESOURCE_HUB_ID_FROM_FILE_NAME()` de reshub.h, e enviar *IOCTL_RH_QUERY_CONNECTION_PROPERTIES* para o hub de recursos para obter o descritor `FunctionConfig()`.
+Os clientes abrem um identificador para um recurso quando eles querem reservar um recurso de multiplexação de pino. Um servidor de multiplexação de pino recebe solicitações *IRP_MJ_CREATE* por meio de uma operação de nova análise do hub de recursos. O componente de caminho à direita da solicitação *IRP_MJ_CREATE* contém a ID do hub de recursos, que é um inteiro de 64 bits em formato hexadecimal. O servidor deve extrair a ID do hub de recursos do nome do arquivo usando `RESOURCE_HUB_ID_FROM_FILE_NAME()` de reshub.h, e enviar *IOCTL_RH_QUERY_CONNECTION_PROPERTIES* para o hub de recursos para obter o descritor `MsftFunctionConfig()`.
 
 O servidor deve validar o descritor e extrair o modo de compartilhamento e a lista de pinos do descritor. Ele deve realizar a arbitragem de compartilhamento dos pinos e se, for bem-sucedido, marcar os pinos como reservados antes de concluir a solicitação.
 
@@ -525,18 +530,18 @@ A arbitragem de compartilhamento terá êxito em geral se for bem-sucedida para 
 
 Se a arbitragem de compartilhamento falhar, a solicitação deverá ser concluída com *STATUS_GPIO_INCOMPATIBLE_CONNECT_MODE*. Se a arbitragem de compartilhamento tiver êxito, a solicitação deverá concluída com *STATUS_SUCCESS*.
 
-Observe que o modo de compartilhamento da solicitação de entrada deve ser extraído do descritor FunctionConfig, não de [IrpSp -> Parameters.Create.ShareAccess](https://msdn.microsoft.com/library/windows/hardware/ff548630.aspx).
+Observe que o modo de compartilhamento da solicitação de entrada deve ser extraído do descritor MsftFunctionConfig, não de [IrpSp -> Parameters.Create.ShareAccess](https://msdn.microsoft.com/library/windows/hardware/ff548630.aspx).
 
 ####    Manipulando solicitações IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS
 
-Depois que o cliente tiver reservado um recurso FunctionConfig com êxito abrindo um identificador, ele poderá enviar *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* para solicitar que o servidor realize a operação de multiplexação de hardware em si. Quando o servidor recebe *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*, para cada pino da lista de pino, ele deve: 
+Depois que o cliente tiver reservado um recurso MsftFunctionConfig com êxito abrindo um identificador, ele poderá enviar *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* para solicitar que o servidor realize a operação de multiplexação de hardware em si. Quando o servidor recebe *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*, para cada pino da lista de pino, ele deve: 
 
 *   Definir o modo de recepção especificado no membro PinConfiguration da estrutura PNP_FUNCTION_CONFIG_DESCRIPTOR no hardware.
 *   Multiplexar o pino para a função especificada pelo membro FunctionNumber da estrutura PNP_FUNCTION_CONFIG_DESCRIPTOR.
 
 Em seguida, o servidor deve concluir a solicitação com *STATUS_SUCCESS*.
 
-O significado de FunctionNumber é definido pelo servidor, e é entendido que o descritor FunctionConfig foi criado com o conhecimento de como o servidor interpreta esse campo.
+O significado de FunctionNumber é definido pelo servidor, e é entendido que o descritor MsftFunctionConfig foi criado com o conhecimento de como o servidor interpreta esse campo.
 
 Lembre-se de que, quando o identificador for fechado, o servidor terá que reverter os pinos para a configuração em que estavam quando IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS foi recebida, portanto, talvez o servidor precise salvar o estado dos pinos antes de modificá-los.
 
@@ -546,11 +551,11 @@ Quando um cliente não requer mais um recurso de multiplexação, ela fecha seu 
 
 ### Criando diretrizes para tabelas ACPI
 
-Esta seção descreve como fornecer recursos de multiplexação para drivers de cliente. Observe que você precisará do compilador ASL da Microsoft compilação 14327 ou posterior para compilar tabelas contendo recursos `FunctionConfig()`. `FunctionConfig()` os recursos são fornecidos para os clientes de multiplexação de pino como recursos de hardware. `FunctionConfig()` os recursos devem ser fornecidos para os drivers que requerem alterações de multiplexação de pino, que são geralmente drivers do controlador SPB e seriais, mas não devem ser fornecidos para os drivers periféricos seriais e SPB, já que o driver de controlador manipula a configuração de multiplexação.
-A macro da ACPI `FunctionConfig()` é definida da seguinte maneira:
+Esta seção descreve como fornecer recursos de multiplexação para drivers de cliente. Observe que você precisará do compilador ASL da Microsoft compilação 14327 ou posterior para compilar tabelas contendo recursos `MsftFunctionConfig()`. `MsftFunctionConfig()` os recursos são fornecidos para os clientes de multiplexação de pino como recursos de hardware. `MsftFunctionConfig()` os recursos devem ser fornecidos para os drivers que requerem alterações de multiplexação de pino, que são geralmente drivers do controlador SPB e seriais, mas não devem ser fornecidos para os drivers periféricos seriais e SPB, já que o driver de controlador manipula a configuração de multiplexação.
+A macro da ACPI `MsftFunctionConfig()` é definida da seguinte maneira:
 
 ```cpp
-  FunctionConfig(Shared/Exclusive
+  MsftFunctionConfig(Shared/Exclusive
                 PinPullConfig,
                 FunctionNumber,
                 ResourceSource,
@@ -573,7 +578,7 @@ A macro da ACPI `FunctionConfig()` é definida da seguinte maneira:
 * VendorData – dados binários opcionais cujo significado é definido pelo servidor de multiplexação de pino. Isso geralmente deve ser deixado em branco
 * Lista de pinos – uma lista separada por vírgulas de números de pinos aos quais a configuração se aplica. Quando o servidor de multiplexação de pino é um driver GpioClx, esses são os números de pino GPIO e têm o mesmo significado que os números de pino em um descritor GpioIo. 
 
-O exemplo a seguir mostra como devemos fornecer um recurso FunctionConfig() para um driver do controlador I2C. 
+O exemplo a seguir mostra como devemos fornecer um recurso MsftFunctionConfig() para um driver do controlador I2C. 
 
 ```cpp
 Device(I2C1) 
@@ -591,14 +596,14 @@ Device(I2C1)
         { 
             Memory32Fixed(ReadWrite, 0x3F804000, 0x20) 
             Interrupt(ResourceConsumer, Level, ActiveHigh, Shared) { 0x55 } 
-            FunctionConfig(Exclusive, PullUp, 4, "\\_SB.GPI0", 0, ResourceConsumer, ) { 2, 3 } 
+            MsftFunctionConfig(Exclusive, PullUp, 4, "\\_SB.GPI0", 0, ResourceConsumer, ) { 2, 3 } 
         }) 
         Return(RBUF) 
     } 
 } 
 ```
 
-Além dos recursos de memória e de interrupção geralmente exigidos por um driver de controlador, um recurso `FunctionConfig()` também é especificado. Esse recurso permite que o driver do controlador I2C coloque os pinos 2 e 3 - gerenciados pelo nó do dispositivo em \\_SB.GPIO0 – na função 4 com resistência de conexão habilitada. 
+Além dos recursos de memória e de interrupção geralmente exigidos por um driver de controlador, um recurso `MsftFunctionConfig()` também é especificado. Esse recurso permite que o driver do controlador I2C coloque os pinos 2 e 3 - gerenciados pelo nó do dispositivo em \\_SB.GPIO0 – na função 4 com resistência de conexão habilitada. 
 
 ### Suporte à multiplexação em drivers de cliente GpioClx 
 
@@ -611,7 +616,7 @@ Consulte [Funções de retorno de chamada de evento GpioClx](https://msdn.micros
 
 Além dessas duas novas DDIs, as DDIs existentes devem ser auditadas em relação à compatibilidade de multiplexação de pino: 
 
-* CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins é chamada pelo GpioClx para forçar o driver de miniporta a configurar um conjunto de pinos para entrada ou saída do GPIO. O GPIO e o FunctionConfig são mutuamente exclusivos, ou seja, um pino nunca será ser conectado para GPIO e FunctionConfig ao mesmo tempo. Como a função padrão de um pino não precisa ser GPIO, um pino não necessariamente precisa ser multiplexado para o GPIO quando ConnectIoPins é chamado. ConnectIoPins é obrigatório para a execução de todas as operações necessárias para tornar o pino pronto para E/S de GPIO, incluindo operações de multiplexação. *CLIENT_ConnectInterrupt* deve se comportar de forma semelhante, já que as interrupções podem ser consideradas como um caso especial de entrada de GPIO. 
+* CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins é chamada pelo GpioClx para forçar o driver de miniporta a configurar um conjunto de pinos para entrada ou saída do GPIO. O GPIO e o MsftFunctionConfig são mutuamente exclusivos, ou seja, um pino nunca será ser conectado para GPIO e MsftFunctionConfig ao mesmo tempo. Como a função padrão de um pino não precisa ser GPIO, um pino não necessariamente precisa ser multiplexado para o GPIO quando ConnectIoPins é chamado. ConnectIoPins é obrigatório para a execução de todas as operações necessárias para tornar o pino pronto para E/S de GPIO, incluindo operações de multiplexação. *CLIENT_ConnectInterrupt* deve se comportar de forma semelhante, já que as interrupções podem ser consideradas como um caso especial de entrada de GPIO. 
 * CLIENT_DisconnectIoPins/CLIENT_DisconnectInterrupt – esta rotina deve retornar os pinos para o estado em que estavam quando CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt foi chamada, a menos que o sinalizador PreserveConfiguration seja especificado. Além de reverter a direção dos pinos para seu estado padrão, a miniporta também deve reverter o estado de multiplexação de cada pino para o estado em que estava quando a rotina _Connect foi chamada. 
 
 Por exemplo, presuma que a configuração de multiplexação padrão de um pino seja UART e o pino também pode ser usado como GPIO. Quando CLIENT_ConnectIoPins é chamada para conectar o pin para GPIO, ela deve multiplexar o pino para GPIO e, em CLIENT_DisconnectIoPins, ela deve multiplexar o pino de volta para UART. Em geral, as rotinas _Disconnect devem desfazer operações feitas pelas rotinas _Connect. 
@@ -624,13 +629,13 @@ O diagrama a seguir mostra as dependências entre cada um desses componentes. Co
 
 ![Dependência de multiplexação de pino](images/usermode-access-diagram-2.png)
 
-Durante o tempo de inicialização do dispositivo, as estruturas `SpbCx` e `SerCx` analisam todos os recursos `FunctionConfig()` fornecidos como recursos de hardware para o dispositivo. SpbCx/SerCx, em seguida, adquire e libera os recursos de multiplexação de pino sob demanda.
+Durante o tempo de inicialização do dispositivo, as estruturas `SpbCx` e `SerCx` analisam todos os recursos `MsftFunctionConfig()` fornecidos como recursos de hardware para o dispositivo. SpbCx/SerCx, em seguida, adquire e libera os recursos de multiplexação de pino sob demanda.
 
 `SpbCx` aplica a configuração de multiplexação de pino em seu manipulador *IRP_MJ_CREATE*, antes de chamar o retorno de chamada [EvtSpbTargetConnect()](https://msdn.microsoft.com/library/windows/hardware/hh450818.aspx) do driver do cliente. Se não tiver sido possível aplicar a configuração de multiplexação, o retorno de chamada `EvtSpbTargetConnect()` do driver do controlador não será chamado. Portanto, um driver de controlador SPB pode pressupor que os pinos são multiplexados para a função SPB no momento em que `EvtSpbTargetConnect()` é chamado.
 
 `SpbCx` reverte a configuração de multiplexação de pino em seu manipulador *IRP_MJ_CLOSE*, após invocar o retorno de chamada [EvtSpbTargetDisconnect()](https://msdn.microsoft.com/library/windows/hardware/hh450820.aspx) do driver do controlador. O resultado é que os pinos são multiplexados para a função SPB sempre que um driver periférico abre um identificador para o driver do controlador SPB, e são multiplexados de volta quando o driver periférico fecha seu identificador.
 
-`SerCx` se comporta de forma semelhante. `SerCx` obtém todos os recursos `FunctionConfig()` em seu manipulador *IRP_MJ_CREATE* antes de invocar o retorno de chamada [EvtSerCx2FileOpen()](https://msdn.microsoft.com/library/windows/hardware/dn265209.aspx) do driver do controlador, e libera todos os recursos em seu manipulador IRP_MJ_CLOSE, antes de invocar o retorno de chamada [EvtSerCx2FileClose](https://msdn.microsoft.com/library/windows/hardware/dn265208.aspx) do driver do controlador.
+`SerCx` se comporta de forma semelhante. `SerCx` obtém todos os recursos `MsftFunctionConfig()` em seu manipulador *IRP_MJ_CREATE* antes de invocar o retorno de chamada [EvtSerCx2FileOpen()](https://msdn.microsoft.com/library/windows/hardware/dn265209.aspx) do driver do controlador, e libera todos os recursos em seu manipulador IRP_MJ_CLOSE, antes de invocar o retorno de chamada [EvtSerCx2FileClose](https://msdn.microsoft.com/library/windows/hardware/dn265208.aspx) do driver do controlador.
 
 A implicação da multiplexação de pino dinâmica para drivers de controlador `SerCx` e `SpbCx` é que eles devem ser capazes de tolerar que os pinos sejam multiplexados de volta da função SPB/UART em determinados momentos. Os drivers de controlador presumem que os pinos não serão multiplexados até que `EvtSpbTargetConnect()` ou `EvtSerCx2FileOpen()` seja chamado. Os pinos não precisam ser multiplexados para a função SPB/UART durante os retornos de chamada a seguir. A lista a seguir não está completa, mas representa as rotinas PNP mais comuns implementadas por drivers de controlador.
 
@@ -717,7 +722,6 @@ Ferramentas de linha de comando simples para Gpio, I2c, Spi e Serial estão disp
 | GpioClx   | https://msdn.microsoft.com/library/windows/hardware/hh439508.aspx |
 | SerCx | https://msdn.microsoft.com/library/windows/hardware/ff546939.aspx |
 | Testes MITT I2C | https://msdn.microsoft.com/library/windows/hardware/dn919852.aspx |
-| Signiant | http://windowsreleases/Playbook/Content%20Owners/Requesting%20Access%20to%20Signiant.aspx |
 | GpioTestTool | https://developer.microsoft.com/en-us/windows/iot/win10/samples/GPIOTestTool |
 | I2cTestTool   | https://developer.microsoft.com/en-us/windows/iot/win10/samples/I2cTestTool | 
 | SpiTestTool | https://developer.microsoft.com/en-us/windows/iot/win10/samples/spitesttool |
@@ -1081,26 +1085,6 @@ GpioInt(Edge, ActiveBoth, Shared, $($_.PullConfig), 0, "\\_SB.GPI0",) { $($_.Pin
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

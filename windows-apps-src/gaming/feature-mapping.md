@@ -1,18 +1,22 @@
 ---
 author: mtoepke
 title: Correlacionar recursos do DirectX 9 com APIs do DirectX 11
-description: Compreenda como os recursos utilizados por seu jogo do Direct3D 9 serão convertidos para o Direct3D 11 e a UWP (Plataforma Universal do Windows).
+description: "Compreenda como os recursos utilizados por seu jogo do Direct3D 9 serão convertidos para o Direct3D 11 e a UWP (Plataforma Universal do Windows)."
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3a9e9c32ed2d892674592f32d0f067fed668d9d1
+
 ---
 
 # Correlacionar recursos do DirectX 9 com APIs do DirectX 11
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
--   [Planeje a compatibilização do DirectX](plan-your-directx-port.md)
+-   [Planejar a portabilidade do DirectX](plan-your-directx-port.md)
 -   [Alterações importantes do Direct3D 9 para o Direct3D 11](understand-direct3d-11-1-concepts.md)
 -   Mapeamento de recursos
 
@@ -669,6 +673,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

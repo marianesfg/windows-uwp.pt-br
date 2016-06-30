@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado.
+description: "É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado."
 title: Solucionando problemas de portabilidade do Windows Runtime 8.x para UWP
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: e5758472d303f4baaf80d45d6b23b54f2a21e002
+
 ---
 
 # Solucionando problemas de portabilidade do Windows Runtime 8.x para UWP
@@ -23,7 +27,7 @@ Um último recurso é uma divisão binária. Remova cerca da metade da marcaçã
 
 ## TargetPlatformVersion
 
-Esta seção explica o que fazer se, ao abrir um projeto do Windows 10 no Visual Studio, aparecer a mensagem "Atualização do Visual Studio necessária. Um ou mais projetos exigem um SDK da plataforma <version> que não está instalado ou é incluído como parte de uma atualização futura do Visual Studio."
+Esta seção explica o que fazer se, ao abrir um projeto do Windows 10 no Visual Studio, aparecer a mensagem "Atualização do Visual Studio necessária. Um ou mais projetos exigem um SDK <version> da plataforma que não está instalado ou que faz parte de uma atualização futura do Visual Studio".
 
 -   Primeiro, determine o número da versão do SDK do Windows 10 que você instalou. Navegue até **C:\\Program Files (x86)\\Windows Kits\\10\\Include\\<versionfoldername>** e anote *<versionfoldername>*, que estará em notação quádrupla, "(Principal.Secundária.Compilação.Revisão".
 -   Abra o arquivo do projeto para editar e encontre os elementos `TargetPlatformVersion` e `TargetPlatformMinVersion`. Edite-os como a seguir, substituindo *<versionfoldername>* pelo número da versão em notação quádrupla encontrado no disco:
@@ -49,6 +53,7 @@ O próximo tópico é [Portando XAML e a interface do usuário](w8x-to-uwp-porti
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

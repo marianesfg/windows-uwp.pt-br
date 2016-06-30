@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Ao trabalhar com um aplicativo no painel do Centro de Desenvolvimento do Windows, você pode exibir detalhes relacionados à identidade exclusiva atribuída a ele pela Windows Store e obter um link para os detalhes do seu aplicativo na Loja.
+Description: "Ao trabalhar com um aplicativo no painel do Centro de Desenvolvimento do Windows, você pode exibir detalhes relacionados à identidade exclusiva atribuída a ele pela Windows Store e obter um link para os detalhes do seu aplicativo na Loja."
 title: Exibir detalhes de identidade do aplicativo
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
+translationtype: Human Translation
+ms.sourcegitcommit: a25d87556bb85718f818af5b586f54e6985aaaa4
+ms.openlocfilehash: f00d817616d473ef220ebc1817c2bf9207a7aea0
+
 ---
 
 # Exibir detalhes de identidade do aplicativo
@@ -53,6 +57,7 @@ O **ID da Loja** de seu aplicativo também é mostrado nesta seção. Esse ID da
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -2,7 +2,11 @@
 author: msatranjr
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Empacotando aplicativos UWP
-description: Para vender seu aplicativo da Plataforma Universal do Windows (UWP) ou distribuí-lo para outros usuários, você precisa criar um pacote appxupload para ele.
+description: "Para vender seu aplicativo da Plataforma Universal do Windows (UWP) ou distribuí-lo para outros usuários, você precisa criar um pacote appxupload para ele."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a77e441cbd1b6826e06064dbd4be449813754b25
+
 ---
 # Empacotando aplicativos UWP
 
@@ -136,6 +140,7 @@ A lista a seguir apresenta requisitos para o sideload do aplicativo.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

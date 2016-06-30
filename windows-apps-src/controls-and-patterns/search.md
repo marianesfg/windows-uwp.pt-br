@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: A pesquisa é uma das principais maneiras para os usuários encontrarem conteúdo em seu aplicativo. As diretrizes neste artigo abordam elementos da experiência de pesquisa, escopos da pesquisa, implementação e exemplos de pesquisa em contexto.
-title: Pesquisar e localizar na página
+Description: "A pesquisa é uma das principais maneiras para os usuários encontrarem conteúdo em seu aplicativo. As diretrizes neste artigo abordam elementos da experiência de pesquisa, escopos da pesquisa, implementação e exemplos de pesquisa em contexto."
+title: "Pesquisar e localizar na página"
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: cd746f81e8cca27c5111f3d15342d1def0f874dc
+
 ---
 
 # Pesquisar e localizar na página
@@ -216,6 +220,7 @@ Para saber mais sobre como adicionar comandos à sua barra de comando, veja [Bar
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: martinekuan
+author: msatranjr
 title: Criando componentes do Windows Runtime em C++
-description: Este artigo mostra como usar C++ para criar um componente do Tempo de Execução do Windows, que é uma DLL que pode ser chamada em um aplicativo Universal do Windows compilado com JavaScript – ou C#, Visual Basic ou C++.
+description: "Este artigo mostra como usar C++ para criar um componente do Tempo de Execução do Windows, que é uma DLL que pode ser chamada em um aplicativo Universal do Windows compilado com JavaScript – ou C#, Visual Basic ou C++."
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 1497175723738cc23ec21b280c9639b216a33ddd
+
 ---
 
 
@@ -10,9 +13,6 @@ ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
 Este artigo mostra como usar C++ para criar um componente do Tempo de Execução do Windows, que é uma DLL que pode ser chamada em um aplicativo Universal do Windows compilado com JavaScript – ou C#, Visual Basic ou C++.
 
@@ -57,7 +57,7 @@ public:
     double LogCalc(double input)
     {
         // Use C++ standard library as usual.
-        return std::log(input); 
+        return std::log(input);
     }
 
 };
@@ -97,7 +97,7 @@ public:
     double LogCalc(double input)
     {
         // Use C++ standard library as usual.
-        return std::log(input); 
+        return std::log(input);
     }
 ```
 
@@ -126,7 +126,7 @@ namespace CppComponent
     private:
         PlayerData m_player;
     public:
-        property PlayerData PlayerStats 
+        property PlayerData PlayerStats
         {
             PlayerData get(){ return m_player; }
             void set(PlayerData data) {m_player = data;}
@@ -185,7 +185,7 @@ private void GetAndSetPlayerData()
 Uma classe ref pública C++ pode conter métodos sobrecarregados, mas JavaScript tem capacidade limitada para diferenciar métodos sobrecarregados. Por exemplo, ele pode informar a diferença entre essas assinaturas:
 
 ```cpp
-public ref class NumberClass sealed 
+public ref class NumberClass sealed
 {
 public:
     int GetNumber(int i);
@@ -333,7 +333,7 @@ private void SortListItems()
 //#include <collection.h>
 Windows::Foundation::Collections::IMap<int, Platform::String^> ^GetMap(void)
 {    
-    Windows::Foundation::Collections::IMap<int, Platform::String^> ^ret = 
+    Windows::Foundation::Collections::IMap<int, Platform::String^> ^ret =
         ref new Platform::Collections::Map<int, Platform::String^>;
     ret->Insert(1, "One ");
     ret->Insert(2, "Two ");
@@ -383,7 +383,7 @@ public:
     property int PropertyA
     {
         int get() { return m_propertyAValue; }
-        void set(int propertyAValue) 
+        void set(int propertyAValue)
         {
             if (propertyAValue != m_propertyAValue)
             {
@@ -597,6 +597,6 @@ Caso remova um projeto de componente do Tempo de Execução do Windows C++ de um
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

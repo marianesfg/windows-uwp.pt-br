@@ -2,11 +2,15 @@
 author: DBirtolo
 ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
 title: Habilitar os recursos do dispositivo
-description: Este tutorial descreve como declarar recursos do dispositivo no Microsoft Visual Studio. Isso permite que o aplicativo use câmeras, microfones, sensores de localização e outros dispositivos.
+description: "Este tutorial descreve como declarar recursos do dispositivo no Microsoft Visual Studio. Isso permite que o aplicativo use câmeras, microfones, sensores de localização e outros dispositivos."
+translationtype: Human Translation
+ms.sourcegitcommit: 512b89027f6b707de346fffe104f165074fabcea
+ms.openlocfilehash: 01ccd8dea8b19a52867ce89ba2eb9a1fb2d2a72f
+
 ---
 # Habilitar os recursos do dispositivo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tutorial descreve como declarar recursos do dispositivo no Microsoft Visual Studio. Isso permite que o aplicativo use câmeras, microfones, sensores de localização e outros dispositivos.
@@ -72,6 +76,7 @@ A tabela a seguir conecta alguns dos recursos a APIs do Windows Runtime.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

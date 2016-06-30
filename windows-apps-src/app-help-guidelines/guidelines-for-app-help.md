@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
-Description: Estas diretrizes descrevem como criar conteúdo da ajuda eficaz para seu aplicativo.
+Description: "Estas diretrizes descrevem como criar conteúdo da ajuda eficaz para seu aplicativo."
 title: Diretrizes da ajuda do aplicativo
 label: Guidelines for app help
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 1e1e5e118eb44f6b491669dbd274fae05d92685b
+
 ---
 
 # Diretrizes da ajuda do aplicativo
@@ -61,6 +65,7 @@ Para tutoriais detalhados, funções avançadas ou bibliotecas de tópicos da aj
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

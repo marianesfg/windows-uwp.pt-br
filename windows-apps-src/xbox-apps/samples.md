@@ -1,8 +1,12 @@
 ---
 author: Mtoepke
 title: Amostras da UWP no Xbox One
-description: Amostras e bibliotecas para ajudar você a criar excelentes experiências de TV e do Xbox One.
+description: "Amostras e bibliotecas para ajudar você a criar excelentes experiências de TV e do Xbox One."
 area: Xbox
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 6f38f5aabb6a409fab894bf7127ad4011162f7c6
+
 ---
 
 # Amostras da UWP no Xbox One
@@ -11,11 +15,12 @@ TVHelpers é um conjunto de amostras e bibliotecas de JavaScript e XAML/C# para 
   
 Para saber mais, consulte o projeto [TVHelpers](https://github.com/Microsoft/TVHelpers) e o [wiki](https://github.com/Microsoft/TVHelpers/wiki) do projeto.
 
-## Veja também
+## Consulte também
 
 - [UWP no Xbox One](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

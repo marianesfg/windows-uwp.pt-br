@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: O código que se integra ao dispositivo propriamente dito e aos sensores envolve a entrada do usuário e a saída para ele.
+description: "O código que se integra ao dispositivo propriamente dito e aos sensores envolve a entrada do usuário e a saída para ele."
 title: Portabilidade do Windows Runtime 8.x para UWP para E/S, dispositivo e modelo de aplicativo
 ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e5e560ca4f40496edf9d11c3eef546fdc4c3b079
+
 ---
 
 # Portabilidade do Windows Runtime 8.x para UWP para E/S, dispositivo e modelo de aplicativo
@@ -73,6 +77,7 @@ Quando um aplicativo que declara a funcionalidade Localização no manifesto do 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

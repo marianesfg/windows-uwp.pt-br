@@ -1,14 +1,18 @@
 ---
 author: mtoepke
 title: Objeto de aplicativo e DirectX
-description: A Plataforma Universal do Windows (UWP) com jogos em DirectX não usa muitos elementos e objetos da interface do usuário do Windows.
+description: "A Plataforma Universal do Windows (UWP) com jogos em DirectX não usa muitos elementos e objetos da interface do usuário do Windows."
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a8c8cb8fa8ccec54af4c824d23bc26cb91db7cf7
+
 ---
 
 # Objeto de aplicativo e DirectX
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A Plataforma Universal do Windows (UWP) com jogos em DirectX não usa muitos elementos e objetos da interface do usuário do Windows. Em vez disso, por serem executados em um nível mais baixo na pilha do Windows Runtime, eles devem interoperam com a estrutura da IU de uma maneira mais básica: acessando e interoperando com o objeto do aplicativo diretamente. Saiba como e quando essa interoperação ocorre e como você, como um desenvolvedor de DirectX, pode usar esse modelo no desenvolvimento do seu aplicativo UWP de forma eficaz.
 
@@ -50,7 +54,7 @@ Aí vai o conjunto básico de etapas para obter uma janela usando a estrutura pr
 
     -   Um método chamado [**CreateView**](https://msdn.microsoft.com/library/windows/apps/hh700491) que devolve uma instância da sua implementação [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), como criada na etapa 1.
 
-3.  Passe uma instância do provedor de modo de exibição para [**CoreApplication.Run**](https://msdn.microsoft.com/library/windows/apps/hh700469) de **main**
+3.  Passe uma instância do provedor de modo de exibição para [**CoreApplication.Run**](https://msdn.microsoft.com/library/windows/apps/hh700469) de **main**.
 
 Com essas etapas em mente, vamos ver mais opções existentes para desenvolver essa abordagem.
 
@@ -91,7 +95,7 @@ A janela pai, que é uma instância [**CoreWindow**](https://msdn.microsoft.com/
              O **CoreWindow**
             ](https://msdn.microsoft.com/library/windows/apps/br208225) oferece vários eventos específicos a entradas e comportamentos de janela básicos. Você pode tratar desses eventos registrando seus próprios delegados com eles.
 
-Você também pode obter o despachante do evento de janela para a janela acessando a propriedade [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264), que fornece uma instância do [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)
+Você também pode obter o despachante do evento de janela para a janela acessando a propriedade [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264), que fornece uma instância do [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211).
 
 ## Comportamentos e propriedades do CoreDispatcher
 
@@ -114,7 +118,7 @@ UWP com uso do DirectX deve usar a opção [**CoreProcessEventsOption.ProcessAll
 
 O objeto do aplicativo que define a representação do tempo de execução do seu aplicativo UWP e DirectX usa um modelo de threading single-threaded apartment de aplicativo (ASTA) para hospedar as exibições de interface do usuário do seu aplicativo. Se você está desenvolvendo um aplicativo UWP e DirectX, conhece as propriedades de um ASTA porque qualquer thread que você despacha do seu aplicativo UWP e DirectX deve usar as APIs [**Windows::System::Threading**](https://msdn.microsoft.com/library/windows/apps/br229642) ou o [**CoreWindow::CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211). (Você pode obter o objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para o ASTA chamando o [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) pelo seu aplicativo).
 
-É importante estar ciente de que, como desenvolvedor de um aplicativo UWP DirectX, você deve habilitar o thread do seu aplicativo para despachar threads de MTA definindo **Platform::MTAThread** como **main()**
+É importante estar ciente de que, como desenvolvedor de um aplicativo UWP DirectX, você deve habilitar o thread do seu aplicativo para despachar threads de MTA definindo **Platform::MTAThread** como **main()**.
 
 ```cpp
 [Platform::MTAThread]
@@ -142,7 +146,7 @@ Se você estiver fazendo a portabilidade de um código existente para ser execut
     -   Usando o padrão **async** definido na Biblioteca de padrões paralelos (PPLTasks.h)
     -   Chamando o [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) a partir do ASTA do seu aplicativo (o thread principal do seu aplicativo) o quanto antes para permitir chamadas arbitrárias.
 
-    Ou seja, você não pode depender da entrega imediata de chamadas não relacionadas para o ASTA do seu aplicativo. Para saber mais sobre chamadas assíncronas, leia [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334)
+    Ou seja, você não pode depender da entrega imediata de chamadas não relacionadas para o ASTA do seu aplicativo. Para saber mais sobre chamadas assíncronas, leia [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
 De forma geral, quando for projetar o seu aplicativo UWP, use o [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) para o [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do seu aplicativo e o [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) para manipular todos os threads de interface do usuário em vez de tentar criar e gerenciar os threads do MTA por si só. Quando precisar de um thread separado que não puder manipular como o **CoreDispatcher**, use padrões assíncronos e siga as orientações mencionadas para evitar problemas de reentrância.
 
@@ -155,6 +159,7 @@ De forma geral, quando for projetar o seu aplicativo UWP, use o [**CoreDispatche
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

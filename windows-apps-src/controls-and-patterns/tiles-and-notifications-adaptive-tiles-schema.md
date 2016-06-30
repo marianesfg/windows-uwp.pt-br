@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Veja os elementos e os atributos que você usa para criar blocos adaptáveis.
-title: Esquema e modelos de blocos adaptáveis
+Description: "Veja os elementos e os atributos que você usa para criar blocos adaptáveis."
+title: "Esquema e modelos de blocos adaptáveis"
 ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
 label: Adaptive tile schema and templates
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: a5d061515eee1ab64f17e4f5aab8846adbd1c8f1
+
 ---
 
 # Modelos de blocos adaptáveis: esquema e orientação
@@ -141,6 +145,7 @@ textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

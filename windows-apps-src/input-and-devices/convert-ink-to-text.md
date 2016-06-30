@@ -6,8 +6,8 @@ ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
-ms.sourcegitcommit: 1722fc00de000d07ed30cfb0ae12080708c30b76
-ms.openlocfilehash: c2c43052a1a4a96d7c0a95578b7b3fa3a2fd8a74
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: ac07ca76df874c670e7e38698e89de6620f73cc4
 
 ---
 
@@ -25,7 +25,7 @@ O reconhecimento de manuscrito está integrado à plataforma de tinta do Windows
 
 Para todos os exemplos aqui, adicione as referências de namespace necessárias para a funcionalidade de tinta. Isso inclui "Windows.UI.Input.Inking".
 
-## <span id="Basic_handwriting_recognition"></span><span id="basic_handwriting_recognition"></span><span id="BASIC_HANDWRITING_RECOGNITION"></span>Reconhecimento de manuscrito básico
+## Reconhecimento de manuscrito básico
 
 
 Aqui, demonstramos como usar o mecanismo de reconhecimento de manuscrito, associado ao pacote de idiomas instalado por padrão, para interpretar um conjunto de traços em [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
@@ -202,7 +202,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="International_recognition"></span><span id="international_recognition"></span><span id="INTERNATIONAL_RECOGNITION"></span>Reconhecimento internacional
+## Reconhecimento internacional
 
 
 Um subconjunto abrangente de idiomas com suporte no Windows pode ser usado para reconhecimento de manuscrito.
@@ -447,7 +447,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="Dynamic_handwriting_recognition"></span><span id="dynamic_handwriting_recognition"></span><span id="DYNAMIC_HANDWRITING_RECOGNITION"></span>Reconhecimento de manuscrito dinâmico
+## Reconhecimento de manuscrito dinâmico
 
 
 Os dois exemplos anteriores exigem que o usuário pressione um botão para iniciar o reconhecimento. Seu aplicativo também pode executar reconhecimento dinâmico usando entrada de traço em conjunto com uma função de tempo básica.
@@ -524,13 +524,13 @@ public MainPage()
 
 2.  Aqui estão os manipuladores para os três eventos que adicionamos na primeira etapa.
 
-    <span id="StrokesCollected"></span><span id="strokescollected"></span><span id="STROKESCOLLECTED"></span>[**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
+    [**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
     Inicia o temporizador de reconhecimento quando o usuário parar de escrever à tinta ao levantar a caneta ou o dedo, ou liberar o botão do mouse. Depois de um segundo sem nenhuma entrada à tinta, o reconhecimento é iniciado.
 
-    <span id="StrokeStarted"></span><span id="strokestarted"></span><span id="STROKESTARTED"></span>[**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
+    [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
     Se um novo traço for iniciado antes do próximo evento de tique do temporizador, interrompa o temporizador, pois o novo traço é provavelmente a continuação de uma única entrada de manuscrito.
 
-    <span id="Tick"></span><span id="tick"></span><span id="TICK"></span>[**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)  
+    [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)  
     Chama a função de reconhecimento após um segundo sem nenhuma entrada à tinta.
 ```    CSharp
 // Handler for the timer tick event calls the recognition function.
@@ -659,7 +659,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 * [Interações com caneta](pen-and-stylus-interactions.md)
 
@@ -673,6 +673,6 @@ string str = "Recognition result\n";
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: c0450f7b-5c81-4d8c-92ef-2b1190d18af7
-description: Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo Silverlight para Windows Phone 8.1 ou Windows Phone 8.0.
+description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo Silverlight para Windows Phone 8.1 ou Windows Phone 8.0."
 title: AdControl no Windows Phone Silverlight
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 5a12badfb11cfd43c0833522d996da7df73b3d55
+
 
 ---
 
@@ -122,6 +126,7 @@ Os assemblies do Microsoft Advertising para projetos do Windows Phone Silverligh
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -3,8 +3,8 @@ author: TylerMSFT
 title: "Iniciar o aplicativo padrão para um URI"
 description: "Saiba como iniciar o aplicativo padrão para um Uniform Resource Identifier (URI). Os URIs permitem iniciar outro aplicativo para realizar uma tarefa específica. Este tópico também apresenta uma visão geral dos muitos esquemas de URI compilados no Windows."
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: b593a43bc5b95dd0880af972ca1514e657bbd9e3
+ms.sourcegitcommit: 9011d2e2e1e51edc89851e815d31e13390c24f96
+ms.openlocfilehash: d454317d135e2b2b952c16fb00685e34b489865c
 
 ---
 
@@ -45,7 +45,7 @@ Em geral, seu aplicativo não pode selecionar o aplicativo que foi iniciado. O u
 
 Use o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar um URI. Ao chamar esse método, seu aplicativo precisa estar em primeiro plano, ou seja, visível para o usuário. Essa exigência ajuda a garantir que o usuário permaneça no controle. Para que essa exigência seja atendida, você deve vincular todas as inicializações de URI diretamente à interface do usuário do seu aplicativo. O usuário sempre deve executar alguma ação para iniciar uma inicialização de URI. Se você tentar iniciar um URI e seu aplicativo não estiver em primeiro plano, a inicialização falhará e o retorno de chamada de erro será invocado.
 
-Primeiro, crie um objeto [**System.Uri**](T:System.Uri) para representar o URI e passe-o para o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476). Use o resultado de retorno para ver se a chamada foi bem-sucedida, conforme mostrado no exemplo a seguir.
+Primeiro, crie um objeto [**System.Uri**](https://msdn.microsoft.com/en-us/library/windows/apps/system.uri.aspx) para representar o URI e passe-o para o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476). Use o resultado de retorno para ver se a chamada foi bem-sucedida, conforme mostrado no exemplo a seguir.
 
 ```cs
 private async void launchURI_Click(object sender, RoutedEventArgs e)
@@ -225,6 +225,6 @@ Para obter mais informações, consulte [Iniciar o aplicativo Pessoas](launch-pe
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

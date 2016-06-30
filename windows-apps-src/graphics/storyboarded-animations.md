@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: 0CBCEEA0-2B0E-44A1-A09A-F7A939632F3A
 title: "Animações com storyboard"
 description: "As animações com storyboard não são apenas animações no sentido visual."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 83e361fd736ce46893517c7a5cccc9c5efc9a889
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 6c900ae6e1cfde8ec7261acfc57ea19b49f2ede1
 
 ---
 # Animações com storyboard
@@ -222,7 +222,7 @@ A definição de recursos na raiz do XAML de um arquivo XAML, como page.xaml ou 
 
  
 
-Você também pode colocar suas animações em uma unidade de [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) quando está declarando as animações de estado visual para uma aparência visual do controle. Nesse caso, os elementos **Storyboard** definidos vão para um contêiner de [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) que está aninhado mais profundamente em um [**Style**](https://msdn.microsoft.com/library/windows/apps/BR208849) (é o **Style** que representa o recurso de chave). Você não precisa de uma chave nem nome para seu **Storyboard** nesse caso, porque é o **VisualState** que tem um nome de destino a ser invocado pelo [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager). Os estilos para controles são geralmente divididos em arquivos XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) separados em vez de serem colocados em uma página ou coleção de **Resources** do aplicativo. Para obter mais informações, consulte [Animações de storyboard para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
+Você também pode colocar suas animações em uma unidade de [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) quando está declarando as animações de estado visual para uma aparência visual do controle. Nesse caso, os elementos **Storyboard** definidos vão para um contêiner de [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) que está aninhado mais profundamente em um [**Style**](https://msdn.microsoft.com/library/windows/apps/BR208849) (é o **Style** que representa o recurso de chave). Você não precisa de uma chave nem nome para seu **Storyboard** nesse caso, porque é o **VisualState** que tem um nome de destino a ser invocado pelo [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Os estilos para controles são geralmente divididos em arquivos XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) separados em vez de serem colocados em uma página ou coleção de **Resources** do aplicativo. Para obter mais informações, consulte [Animações de storyboard para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
 
 ## Animações dependentes e independentes
 
@@ -305,11 +305,11 @@ Você pode manipular o evento [**Completed**](https://msdn.microsoft.com/en-us/l
 
 ### Animações para estados visuais
 
-O comportamento de execução de um [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) que é usado para definir o estado visual de um controle é diferente da maneira como um aplicativo pode executar um storyboard diretamente. Quando aplicado a uma definição de estado visual no XAML, o **Storyboard** é um elemento de um [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) contêiner e o estado como um todo é controlado pelo uso da API [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager). Qualquer animação interna será executada de acordo com seus valores de animação e propriedades [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) quando o **VisualState** contêiner for usado por um controle. Para obter mais informações, consulte [Storyboards para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808). Para estados visuais, o [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) aparente é diferente. Se um estado visual for alterado para outro estado, todas as alterações de propriedade aplicadas pelo estado visual anterior e suas animações serão cancelados, mesmo se o novo estado visual não aplicar especificamente uma nova animação a uma propriedade.
+O comportamento de execução de um [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) que é usado para definir o estado visual de um controle é diferente da maneira como um aplicativo pode executar um storyboard diretamente. Quando aplicado a uma definição de estado visual no XAML, o **Storyboard** é um elemento de um [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) contêiner e o estado como um todo é controlado pelo uso da API [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Qualquer animação interna será executada de acordo com seus valores de animação e propriedades [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) quando o **VisualState** contêiner for usado por um controle. Para obter mais informações, consulte [Storyboards para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808). Para estados visuais, o [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) aparente é diferente. Se um estado visual for alterado para outro estado, todas as alterações de propriedade aplicadas pelo estado visual anterior e suas animações serão cancelados, mesmo se o novo estado visual não aplicar especificamente uma nova animação a uma propriedade.
 
 ### **Storyboard** e **EventTrigger**
 
-Só há uma maneira de iniciar uma animação que pode ser declarada completamente no XAML. No entanto, essa técnica já não é mais usada com freqüência. Trata-se de uma sintaxe herdada do WPF e de versões anteriores do Silverlight antes do suporte a [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager). Essa sintaxe [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) ainda funciona no XAML do Windows Runtime para fins de importação/compatibilidade, mas só funciona para um comportamento de gatilho baseado no evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723). Uma tentativa de acionar outros eventos lançará exceções ou causará falha na compilação. Para obter mais informações, consulte [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) ou [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053).
+Só há uma maneira de iniciar uma animação que pode ser declarada completamente no XAML. No entanto, essa técnica já não é mais usada com freqüência. Trata-se de uma sintaxe herdada do WPF e de versões anteriores do Silverlight antes do suporte a [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Essa sintaxe [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) ainda funciona no XAML do Windows Runtime para fins de importação/compatibilidade, mas só funciona para um comportamento de gatilho baseado no evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723). Uma tentativa de acionar outros eventos lançará exceções ou causará falha na compilação. Para obter mais informações, consulte [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) ou [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053).
 
 ## Animando propriedades anexadas XAML
 
@@ -338,6 +338,6 @@ Até agora, mostramos as animações personalizadas que são animadas entre dois
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

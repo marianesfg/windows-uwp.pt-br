@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
-Description: Crie uma interface do usuário instrucional que ensine os usuários a trabalhar com seu aplicativo da Windows Store.
-title: Diretrizes para criar uma interface do usuário instrucional
+Description: "Crie uma interface do usuário instrucional que ensine os usuários a trabalhar com seu aplicativo da Windows Store."
+title: "Diretrizes para criar uma interface do usuário instrucional"
 label: Instructional UI
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 1c8ab97a5625243a50fa3b40ae93f5928dc7d851
+
 ---
 
 # Diretrizes da interface do usuário instrucional
@@ -67,6 +71,7 @@ Estas são algumas situações nas quais a interface do usuário instrucional po
 * [Diretrizes da ajuda do aplicativo](guidelines-for-app-help.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

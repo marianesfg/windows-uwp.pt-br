@@ -1,8 +1,12 @@
 ---
-title: Introdução ao desenvolvimento de aplicativos seguros do Windows
-description: Este artigo introdutório ajuda arquitetos e desenvolvedores de aplicativos a compreender melhor os vários recursos da plataforma Windows 10 que aceleram a criação de aplicativos UWP (Plataforma Universal do Windows) seguros.
+title: "Introdução ao desenvolvimento de aplicativos seguros do Windows"
+description: "Este artigo introdutório ajuda arquitetos e desenvolvedores de aplicativos a compreender melhor os vários recursos da plataforma Windows 10 que aceleram a criação de aplicativos UWP (Plataforma Universal do Windows) seguros."
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: c09170042841dcff6625d1d236cf708c717301c5
+
 ---
 
 # Introdução ao desenvolvimento de aplicativos seguros do Windows
@@ -496,6 +500,7 @@ Quando os dados chegam no dispositivo, o modelo de aplicativo do Windows fornece
 -   [**Windows.Security.ExchangeActiveSyncProvisioning**](https://msdn.microsoft.com/library/windows/apps/hh701506)
 -   [**Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

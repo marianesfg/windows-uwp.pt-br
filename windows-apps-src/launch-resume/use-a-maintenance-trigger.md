@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Usar um gatilho de manutenção
-description: Saiba como usar a classe MaintenanceTrigger para executar um código leve em segundo plano enquanto o dispositivo estiver conectado.
+author: TylerMSFT
+title: "Usar um gatilho de manutenção"
+description: "Saiba como usar a classe MaintenanceTrigger para executar um código leve em segundo plano enquanto o dispositivo estiver conectado."
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 0da08ba5431f4d5c56d06657d3d6123a67ba5079
+
 ---
 
 # Usar um gatilho de manutenção
@@ -35,12 +38,12 @@ Esse código de exemplo cria um gatilho que é executado uma vez a cada hora:
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > uint waitIntervalMinutes = 60;
-> 
+>
 > MaintenanceTrigger taskTrigger = new MaintenanceTrigger(waitIntervalMinutes, false);
 > ```
 > ```cpp
 > unsigned int waitIntervalMinutes = 60;
-> 
+>
 > MaintenanceTrigger ^ taskTrigger = ref new MaintenanceTrigger(waitIntervalMinutes, false);
 > ```
 
@@ -71,16 +74,16 @@ Esse código de exemplo cria um gatilho que é executado uma vez a cada hora:
     > ```cs
     > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > string taskName   = "Maintenance background task example";
-    > 
+    >
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, taskTrigger, exampleCondition);
     > ```
     > ```cpp
     > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > String ^ taskName   = "Maintenance background task example";
-    > 
+    >
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, taskTrigger, exampleCondition);
     > ```
-    
+
     > **Observação**  Para todas as famílias de dispositivos, exceto desktop, se o dispositivo estiver com memória insuficiente, as tarefas em segundo plano poderão ser encerradas. Se uma exceção de falta de memória não surgir ou se o aplicativo não manipulá-la, a tarefa em segundo plano será encerrada sem aviso e sem gerar o evento OnCanceled. Isso ajuda a assegurar a experiência do usuário do aplicativo em primeiro plano. A tarefa em segundo plano deve ser projetada para tratar desse cenário.
 
     > **Observação** Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
@@ -119,8 +122,6 @@ Esse código de exemplo cria um gatilho que é executado uma vez a cada hora:
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

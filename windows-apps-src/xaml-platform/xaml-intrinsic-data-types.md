@@ -1,8 +1,11 @@
 ---
 author: jwmsft
-description: Lista o suporte no nível da linguagem em XAML para o Windows Runtime para determinados tipos de dados em CLR (Common Language Runtime) e em outras linguagens de programação, por exemplo, C++.
-title: Tipos de dados XAML intrínsecos
+description: "Lista o suporte no nível da linguagem em XAML para o Windows Runtime para determinados tipos de dados em CLR (Common Language Runtime) e em outras linguagens de programação, por exemplo, C++."
+title: "Tipos de dados XAML intrínsecos"
 ms.assetid: D50E6127-395D-4E27-BAA2-2FE627F4B711
+ms.sourcegitcommit: 60e328ca8652baeb226e78f5a9d99fbf8c4f5208
+ms.openlocfilehash: 479b900ca14497712f25a7825fde6775a3c1ab60
+
 ---
 
 # Tipos de dados XAML intrínsecos
@@ -15,7 +18,12 @@ O local mais comum em que você verá usos de tipos de dados intrínsecos XAML �
 
 O XAML para o Windows Runtime fornece suporte no nível de linguagem para estes tipos.
 
-| Primitivo XAML | Descrição | | **x:Boolean**  | Para suporte a CLR, corresponde a [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx). O XAML analisa valores para **x:Boolean** sem diferenciar maiúsculas e minúsculas. Observe que "x:Bool" não é uma alternativa aceita. | | **x:String**   | Para suporte a CLR, corresponde a [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx). Codificação dos padrões de cadeias de caracteres para a codificação XML ao redor. | | **x:Double**   | Para suporte a CLR, corresponde a [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Além dos valores numéricos, a sintaxe de texto de **x:Double** permite o token "NaN", que é como o comportamento de layout "Auto" pode ser armazenado como valor de recurso. Os tokens são tratados como elementos que diferenciam maiúsculas e minúsculas. Você pode usar a notação científica, por exemplo "1+E06" para `1,000,000`. | | **x:Int32**    | Para suporte a CLR, corresponde a [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx). **x:Int32** é considerado um elemento com sinal, e você pode incluir o símbolo de subtração ("-") para um inteiro negativo. Em XAML, a ausência de um sinal na sintaxe de texto indica que o valor tem sinal positivo. |
+| Primitivo XAML | Descrição |
+|-------|-------------|
+| **x:Boolean**  | Para suporte a CLR, corresponde a [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx). O XAML analisa valores para **x:Boolean** sem diferenciar maiúsculas e minúsculas. Observe que "x:Bool" não é uma alternativa aceita. |
+| **x:String**   | Para suporte a CLR, corresponde a [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx). Codificação dos padrões de cadeias de caracteres para a codificação XML ao redor. |
+| **x:Double**   | Para suporte a CLR, corresponde a [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Além dos valores numéricos, a sintaxe de texto de **x:Double** permite o token "NaN", que é como o comportamento de layout "Auto" pode ser armazenado como valor de recurso. Os tokens são tratados como elementos que diferenciam maiúsculas e minúsculas. Você pode usar a notação científica, por exemplo "1+E06" para `1,000,000`. |
+| **x:Int32**    | Para suporte a CLR, corresponde a [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx). **x:Int32** é considerado um elemento com sinal, e você pode incluir o símbolo de subtração ("-") para um inteiro negativo. Em XAML, a ausência de um sinal na sintaxe de texto indica que o valor tem sinal positivo. |
 
 Geralmente, esses primitivos da linguagem XAML são os únicos casos em que você define um elemento de objeto que usa o prefixo **x:** em XAML. Todos os outros recursos da linguagem XAML são tipicamente usados na forma de atributos ou como extensão de marcação.
 
@@ -36,6 +44,7 @@ A especificação XAML 2009 destaca outros primitivos no nível da linguagem XAM
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
-title: Autenticação e identidade do usuário
-description: Aplicativos da Plataforma Universal do Windows (UWP) têm várias opções para autenticação do usuário, desde logon único (SSO) usando agente de autenticação da Web até autenticação de dois fatores altamente segura.
+title: "Autenticação e identidade do usuário"
+description: "Aplicativos da Plataforma Universal do Windows (UWP) têm várias opções para autenticação do usuário, desde logon único (SSO) usando agente de autenticação da Web até autenticação de dois fatores altamente segura."
 ms.assetid: 53E36DDC-200A-4850-AAF0-07ECA3662BB9
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 3c890ac8d8363982d9f014c36b6cba59bee39f20
+ms.openlocfilehash: e748b319cdeda82aadaf8516e41883a3e32dc10c
+
 ---
 
 # Autenticação e identidade do usuário
@@ -26,13 +30,14 @@ Recomenda-se enfaticamente que as empresas que usam o Windows 10 considerem usar
 <tr><td>[Criar um serviço de logon do Microsoft Passport](microsoft-passport-login-auth-service.md)</td><td>Parte 2 de um guia passo a passo completo sobre como usar o Microsoft Passport como uma alternativa para sistemas tradicionais de autenticação de nome de usuário e senha em aplicativos Windows 10 UWP (Plataforma Universal do Windows).</td></tr>
 <tr><td>[Cartões inteligentes](smart-cards.md)</td><td>Este tópico explica como os aplicativos podem usar cartões inteligentes para conectar usuários a serviços de rede seguros, inclusive como acessar leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, comunicar-se usando cartões inteligentes, autenticar usuários, redefinir PINs de usuário e remover ou desconectar cartões inteligentes.</td></tr>
 <tr><td>[Compartilhar certificados entre aplicativos](share-certificates.md)</td><td>Os aplicativos UWP que requerem autenticação segura além de uma combinação de ID de usuário e senha podem usar certificados na autenticação. A autenticação de certificado oferece um elevado nível de confiança ao autenticar um usuário. Em alguns casos, um grupo de serviços desejará autenticar um usuário para vários aplicativos. Este artigo mostra como você pode autenticar vários aplicativos usando o mesmo certificado e fornecer código prático para que um usuário importe um certificado que foi fornecido para acessar serviços Web seguros.</td></tr>
-<tr><td>[Desbloqueio do Windows com dispositivos complementares IoT](companion-device-unlock.md)</td><td>Um dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a Estrutura de Dispositivo Complementar, um dispositivo complementar pode fornecer uma experiência avançada para o Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo de leitor de impressão digital, por exemplo).</td></tr>
-<tr><td>[Gerenciador de Contas da Web](web-account-manager.md)</td><td>Este artigo descreve como mostrar o AccountsSettingsPane e conectar seu aplicativo da Plataforma Universal do Windows (UWP) a provedores de identidade externos, como a Microsoft ou o Facebook, usando as novas APIs do Gerenciador de Contas da Web do Windows 10. Você aprenderá como solicitar a permissão de um usuário para usar a conta da Microsoft dele, obter um token de acesso e usá-lo para realizar operações básicas (como obter dados de perfil ou carregar arquivos no OneDrive). </td></tr>
+<tr><td>[Desbloqueio do Windows com dispositivos complementares IoT](companion-device-unlock.md)</td><td>Dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a Estrutura de Dispositivo Complementar, um dispositivo complementar pode fornecer uma experiência avançada para o Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo de leitor de impressão digital, por exemplo).</td></tr>
+<tr><td>[Gerenciador de Contas da Web](web-account-manager.md)</td><td>Este artigo descreve como mostrar o AccountsSettingsPane e conectar seu aplicativo da Plataforma Universal do Windows (UWP) a provedores de identidade externos, como a Microsoft ou o Facebook, usando as novas APIs do Gerenciador de Contas da Web do Windows 10. Você aprenderá a solicitar a permissão de um usuário para usar a conta da Microsoft dele, obter um token de acesso e usá-lo para realizar operações básicas (como obter dados de perfil ou carregar arquivos no OneDrive). </td></tr>
 <tr><td>[Agente de autenticação da Web](web-authentication-broker.md)</td><td>Este artigo explica como conectar o aplicativo a um provedor de identidade online que usa protocolos de autenticação, como OpenID ou OAuth, como Facebook, Twitter, Flickr, Instagram etc. O método [AuthenticateAsync](https://msdn.microsoft.com/library/windows/apps/br212066) envia uma solicitação ao provedor de identidade online e obtém um token de acesso que descreve os recursos do provedor aos quais o aplicativo tem acesso.</td></tr>
 </table>
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
 Description: Crie ajuda eficaz para ser exibida reativamente em seu aplicativo.
-title: Diretrizes da criação de ajuda no aplicativo.
+title: "Diretrizes da criação de ajuda no aplicativo."
 label: In-app help
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 7edad75b1639768023eb8add1e23fe0aafb0b674
+
 ---
 
 # Páginas de ajuda no aplicativo
@@ -52,6 +56,7 @@ Os pop-ups permitem ajuda altamente contextual exibindo instruções e conselhos
 * [Diretrizes da ajuda do aplicativo](guidelines-for-app-help.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

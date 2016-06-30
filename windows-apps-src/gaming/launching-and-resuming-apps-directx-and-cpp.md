@@ -3,6 +3,10 @@ author: mtoepke
 title: Iniciando e retomando aplicativos (DirectX e C++)
 description: Saiba como iniciar, suspender e retomar seu aplicativo UWP (Plataforma Universal do Windows) DirectX.
 ms.assetid: c35025f8-0450-2f61-fe84-070fd7379622
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: cc9468e278d651729740147cb21c70d53b43800f
+
 ---
 
 # Iniciando e retomando aplicativos (DirectX e C++)
@@ -28,6 +32,7 @@ Saiba como iniciar, suspender e retomar seu aplicativo UWP (Plataforma Universal
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

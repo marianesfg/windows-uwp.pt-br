@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Passo a passo -- Portabilidade de um aplicativo simples em Direct3D 9 para DirectX 11 e a Plataforma Universal do Windows (UWP)
-description: Este exercício de portabilidade mostra como levar uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11 e a Plataforma Universal do Windows (UWP).
+description: "Este exercício de portabilidade mostra como levar uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11 e a Plataforma Universal do Windows (UWP)."
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 27c6f82e97e9eb24dedcc5d83a18e6aba6961194
+
 ---
 
 # Passo a passo: portabilidade de um aplicativo simples em Direct3D 9 para DirectX 11 e a Plataforma Universal do Windows (UWP)
@@ -93,6 +97,7 @@ Visite o tópico sobre [conceitos e considerações sobre portabilidade](porting
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

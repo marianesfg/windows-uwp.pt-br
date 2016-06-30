@@ -2,7 +2,11 @@
 author: IvorB
 ms.assetid: E9ADC88F-BD4F-4721-8893-0E19EA94C8BA
 title: Emparelhamento fora de banda
-description: O emparelhamento fora de banda permite que os aplicativos se conectem a um periférico Ponto de Serviço sem a necessidade de descoberta.
+description: "O emparelhamento fora de banda permite que os aplicativos se conectem a um periférico Ponto de Serviço sem a necessidade de descoberta."
+translationtype: Human Translation
+ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
+ms.openlocfilehash: d8d37b779a0f9a4bec36d73fcd2d35272c587b11
+
 ---
 # Emparelhamento fora de banda
 
@@ -85,6 +89,7 @@ printer = await PosPrinter.FromIdAsync(oobBlobBTPrinter);
 ```
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,16 +1,19 @@
 ---
 author: QuinnRadich
-Description: Crie uma interface do usuário instrucional que ensine os usuários a trabalhar com seu aplicativo da Windows Store.
-title: Diretrizes para criar uma interface do usuário instrucional
+Description: "Crie uma interface do usuário instrucional que ensine os usuários a trabalhar com seu aplicativo do Windows."
+title: "Diretrizes para criar uma interface do usuário instrucional"
 label: Instructional UI
 template: detail.hbs
+ms.sourcegitcommit: 08b0b88e8ef17c2a8f264df5db4f971c8c49ab2e
+ms.openlocfilehash: f9f1f34bb02cda89d31caa9453b6e3eb056e7bc9
+
 ---
 
 # Diretrizes da interface do usuário instrucional
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos da Plataforma Universal do Windows (UWP) no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Em algumas circunstâncias, pode ser útil ensinar o usuário sobre funções em seu aplicativo que podem não ser óbvias, como interações de toque específicas. Nesses casos, você precisa apresentar instruções para o usuário por meio da interface do usuário, para que ele possa usar esses recursos que talvez tenha ignorado.
+Às vezes, pode ser útil ensinar o usuário sobre funções em seu aplicativo que podem não ser óbvias, como interações de toque específicas. Nesses casos, você precisa apresentar instruções para o usuário por meio da interface do usuário, para que ele possa descobrir e usar os recursos que talvez tenha ignorado.
 
 ## <span id="when_to_use_instructional_ui"></span><span id="WHEN_TO_USE_INSTRUCTIONAL_UI"></span>Quando usar a interface do usuário instrucional
 
@@ -24,7 +27,7 @@ A menos que seu aplicativo dependa de gestos de toque, interface do usuário ins
 
 Uma boa interface do usuário instrucional é relevante e educativa para o usuário e melhora a experiência do usuário. Ela deve ser:
 
--   **Simples:** os usuários não querem que sua experiência seja interrompida com informações complicadas
+-   **Simples:** os usuários não querem que sua experiência seja interrompida com informações complicadas.
 -   **Memorável:** os usuários não querem ver as mesmas instruções toda vez que tentarem executar uma tarefa, portanto, as instruções precisam ser algo de que se lembrarão.
 -   **Imediatamente relevantes:** se a interface do usuário instrucional não ensinar um usuário sobre algo que ele deseja fazer imediatamente, ele não terá motivo para prestar atenção a ela.
 
@@ -32,7 +35,7 @@ Evite o uso excessivo de interface do usuário instrucional e certifique-se de e
 
 -   **Recursos fundamentais:** se um usuário precisar de instruções para usar seu aplicativo, considere tornar o design do aplicativo mais intuitivo.
 -   **Recursos óbvios:** se um usuário pode descobrir um recurso por conta própria sem instrução, a interface do usuário instrucional simplesmente só atrapalhará.
--   **Recursos complexos:** a interface do usuário instrucional deve ser concisa, e os usuários interessados em recursos complexos geralmente estarão dispostos a buscar instruções e não precisam que elas sejam fornecidas a eles.
+-   **Recursos complexos:** a interface do usuário instrucional deve ser conciso. Os usuários interessados em recursos complexos são geralmente dispostos a buscar instruções.
 
 Evite ser inconveniente para o usuário com sua interface do usuário instrucional. Não:
 
@@ -42,21 +45,21 @@ Evite ser inconveniente para o usuário com sua interface do usuário instrucion
 
 ## <span id="examples_of_instructional_ui"></span><span id="EXAMPLES_OF_INSTRUCTIONAL_UI"></span>Exemplos de interface do usuário instrucional
 
-Estas são algumas situações nas quais a interface do usuário instrucional pode ajudar seus usuários a aprender:
+Aqui estão alguns exemplos de interface do usuário instrucional que pode ajudar seus usuários:
 
--   **Ajudando os usuários a descobrir interações por toque.** A captura de tela a seguir mostra uma interface do usuário instrucional ensinando um jogador a usar gestos de touch no jogo Cut the Rope.
+-   **Ajude os usuários a descobrir interações por toque.** A captura de tela a seguir mostra uma interface do usuário instrucional ensinando um jogador a usar gestos de touch no jogo *Cut the Rope*.
 
     ![captura de tela de jogo mostrando mensagem da interface do usuário instrucional, "deslize para cortar a corda"](images/in-game-controls-3.png)
 
--   **Causando uma ótima primeira impressão.** Quando o Editor de Vídeos é iniciado pela primeira vez, a interface do usuário instrucional solicita que o usuário comece a criar vídeos sem obstruir sua experiência.
+-   **Cause uma ótima primeira impressão.** Quando o Editor de Vídeos é iniciado pela primeira vez, a interface do usuário instrucional solicita que o usuário comece a criar vídeos sem obstruir sua experiência.
 
     ![tela de inicialização do aplicativo Editor de Vídeos](images/instructional-ui-movie.png)
 
--   **Orientando o usuário a realizar a próxima etapa de uma tarefa complicada.** No aplicativo Windows Mail, uma dica na parte inferior da Caixa de Entrada direciona os usuários até as **Configurações** para acessar mensagens mais antigas.
+-   **Oriente o usuário a realizar a próxima etapa de uma tarefa complicada.** No aplicativo Windows Mail, uma dica na parte inferior da Caixa de Entrada direciona os usuários até as **Configurações** para acessar mensagens mais antigas.
 
     ![captura de tela cortada do aplicativo windows mail mostrando uma mensagem da interface do usuário instrucional](images/instructional-ui-mail-inbox.png)
 
-    Quando o usuário clica na mensagem, o submenu **Configurações** do aplicativo aparece no lado direito da tela, permitindo a conclusão da tarefa. Estas capturas de tela mostram o aplicativo Mail antes e depois de um usuário clicar na mensagem da interface do usuário instrucional.
+    Quando o usuário clica na mensagem, o submenu **Configurações** do aplicativo aparece no lado direito da tela, permitindo a conclusão da tarefa. Estas capturas de tela mostram o aplicativo Mail antes e depois de um usuário seleciona a mensagem da interface do usuário instrucional.
 
     | Antes                                                               | Depois                                                                                                        |
     |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
@@ -67,6 +70,7 @@ Estas são algumas situações nas quais a interface do usuário instrucional po
 * [Diretrizes da ajuda do aplicativo](guidelines-for-app-help.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

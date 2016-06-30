@@ -5,6 +5,9 @@ ms.assetid: A6393A57-53F2-4F06-89AF-0D806FD76DB0
 title: Projetando software inclusivo no Windows 10
 label: Designing inclusive software
 template: detail.hbs
+ms.sourcegitcommit: ea4d413e0b2ade1429d255afbc6a1a73ea308051
+ms.openlocfilehash: 6f1c0663034f81bb0ddfe42c04fbe60562b45c1c
+
 ---
 
 # Projetando software inclusivo para Windows 10  
@@ -13,20 +16,18 @@ Saiba mais sobre como evoluir o design inclusivo com aplicativos da Plataforma U
 
 Na Microsoft, estamos desenvolvendo nossos princípios de design e práticas recomendadas. Eles mostram a aparência, a função e o comportamento das nossas experiências. Estamos elevando a nossa perspectiva.
 
-Essa nova filosofia de design foi chamada de design universal ou design inclusivo. A ideia é criar um software com todas as pessoas em mente desde o começo. Isso é o oposto de enxergar a acessibilidade como uma tecnologia você inclui no final do processo de desenvolvimento para satisfazer alguns pequenos grupos de usuários.
+Essa nova filosofia de design é chamada de design inclusivo. A ideia é criar um software com todas as pessoas em mente desde o começo. Isso é o oposto de enxergar a acessibilidade como uma tecnologia você inclui no final do processo de desenvolvimento para satisfazer alguns pequenos grupos de usuários.
 
 "Definimos deficiência como uma incompatibilidade entre as necessidades do indivíduo e o serviço, produto ou ambiente oferecidos. Qualquer pessoa pode sofrer uma deficiência. É uma característica humana comum a ser eliminada".  \- do vídeo [Inclusivo](https://www.microsoft.com/en-us/design/inclusive)  
 
-O design inclusivo cria produtos melhores para todos. Trata-se de considerar a gama completa de diversidade humana.
-
-Por exemplo, considere os recortes de meio-fio que você encontra na maioria das calçadas das esquinas. Eles foram claramente pensados para serem usados por pessoas em cadeiras de rodas. Mas agora quase todo mundo os utiliza, incluindo pessoas com carrinhos de bebê, ciclistas, skatistas, até mesmo os pedestres geralmente usam os recortes de meio-fio porque eles estão lá e são melhores de usar. O controle remoto da televisão pode ser considerado uma tecnologia assistencial (AT) para alguém com limitações físicas. Além disso, hoje é praticamente impossível comprar uma televisão sem um. Antes de as crianças aprenderem a dar laço nos sapatos, elas podem usar sapatos com fechamento de velcro. Esses são apenas alguns exemplos que podem ser considerados design inclusivo.
+O design inclusivo cria produtos melhores para todos. Trata-se de considerar a gama completa de diversidade humana. Considere os recortes de meio-fio que você encontra na maioria das calçadas das esquinas. Eles foram claramente pensados para serem usados por pessoas em cadeiras de rodas. Mas agora quase todo mundo os usa, inclusive pessoas com carrinhos de bebê, ciclistas, esqueitistas. Até mesmo pedestres geralmente os usam porque estão disponíveis e proporcionam uma melhor experiência. O controle remoto da televisão pode ser considerado uma tecnologia assistencial (AT) para alguém com limitações físicas. No entanto hoje é praticamente impossível comprar uma televisão sem um. Antes de as crianças aprenderem a amarrar os sapatos, elas podem usar sapatos com fechamento de velcro. Sapatos que são fáceis de calçar e tirar geralmente são preferenciais em culturas nas quais eles são removidos antes de entrar em uma casa. Eles também são melhores para pessoas com problemas de destreza como artrite ou até mesmo um pulso temporariamente quebrado.
 
 ## Princípios de design inclusivo  
 Os quatro princípios seguintes estão orientando a mudança da Microsoft para o design inclusivo:
 
 **Pense universal**: vamos nos concentrar no que unifica as pessoas — motivações, relações e habilidades humanas. Isso nos ajuda a considerar o impacto social mais amplo do nosso trabalho. O resultado é uma experiência que tem uma diversidade de maneiras para todas as pessoas participarem.
 
-**Personalize**: em seguida, nós nos desafiamos a criar conexão emocional. Interações de humanos com humanos podem inspirar melhor a interação de humanos com a tecnologia. Circunstâncias únicas de uma pessoa podem melhorar um design para todos. O resultado é uma experiência que parece ter sido criada para uma pessoa.
+**Personalize**: em seguida, nós nos desafiamos a criar conexões emocionais. Interações de humanos com humanos podem inspirar melhor a interação de humanos com a tecnologia. Circunstâncias únicas de uma pessoa podem melhorar um design para todos. O resultado é uma experiência que parece ter sido criada para uma pessoa.
 
 **Mantenha a simplicidade**: começamos com a simplicidade como o unificador principal. Quando reduzimos a desordem as pessoas sabem o que fazer em seguida. Eles são inspirados a seguir em frente em espaços que são limpos, luminosos e abertos. O resultado é uma experiência que seja sincera e atemporal.
 
@@ -35,19 +36,19 @@ Os quatro princípios seguintes estão orientando a mudança da Microsoft para o
 ## Usuários de design inclusivo  
 Há essencialmente dois tipos de usuários de tecnologia assistencial (AT):
 
-1. Aqueles que precisam dela por deficiências ou comprometimentos, condições relacionadas à idade ou condições temporárias (como mobilidade limitada por um braço quebrado)  
+1. Aqueles que precisam dela por deficiências ou comprometimentos, condições relacionadas à idade ou condições temporárias (como mobilidade limitada por um membro quebrado)  
 2. Aqueles que a utilizam por preferência, para uma experiência de computação mais confortável ou conveniente
 
 A maioria dos usuários de computador (54%) conhece alguma forma de tecnologia assistencial e 44% dos usuários de computador usa alguma forma dela, mas muitos deles não está usando a AT que poderia beneficiá-los (Forrester 2004).  
 
-Um estudo de 2003-2004 contratado pela Microsoft e realizado pela Forrester Research descobriu que mais da metade&mdash;57%&mdash;dos usuários de computador nos Estados Unidos entre as idades de 18 e 64 anos poderiam se beneficiar da tecnologia assistencial. A maioria desses usuários não se identificou como tendo uma deficiência ou comprometimento, mas expressou determinadas dificuldades relacionadas a comprometimentos ou deficiências ao usar um computador. A Forrester (2003) também descobriu o seguinte número de usuários com estas dificuldades específicas: um em quatro tem uma dificuldade visual. Um em quatro sente dor nos pulsos ou mãos. Uma em cinco tem dificuldade de audição.  
+Um estudo de 2003-2004 contratado pela Microsoft e realizado pela Forrester Research descobriu que mais da metade &mdash;57%&mdash; dos usuários de computador nos Estados Unidos entre as idades de 18 e 64 anos poderiam se beneficiar da tecnologia assistencial. A maioria desses usuários não se identificou como tendo uma deficiência ou comprometimento, mas expressou determinadas dificuldades relacionadas a comprometimentos ou deficiências ao usar um computador. A Forrester (2003) também descobriu o seguinte número de usuários com estas dificuldades específicas: um em quatro tem uma dificuldade visual. Um em quatro sente dor nos pulsos ou mãos. Uma em cinco tem dificuldade de audição.  
 
 Além de deficiências permanentes, a gravidade e os tipos de dificuldades que uma pessoa tem podem variar durante a vida dela. Não existe um ser humano normal. Nossas habilidades estão sempre mudando. Margaret Meade disse, "Somos todos únicos. Sermos todos únicos nos torna iguais".  
 
 A Microsoft se dedica à realização de pesquisas de ciência da computação e de engenharia de software com metas para aperfeiçoar a experiência de computação e inventar novas tecnologias de computação. Veja [Projetos de desenvolvimento e pesquisa atuais da Microsoft Research](https://www.microsoft.com/enable/microsoft/research.aspx) destinados a tornar o computador mais acessível e fácil de ver, ouvir e interagir.  
 
-## Apenas diga-me o que fazer &mdash; etapas de design prático  
-Esta seção descreve as etapas de design prático a serem consideradas ao implementar o design inclusivo em seu aplicativo.  
+## Etapas de design prático  
+Se você estiver disposto, esta seção é para você. Ela descreve as etapas de design prático a serem consideradas ao implementar o design inclusivo para seu aplicativo.  
 
 ### Descreva o público-alvo  
 Defina os usuários em potencial do seu aplicativo. Avalie cuidadosamente todas as suas habilidades e características diferentes. Por exemplo, idade, sexo, idioma, usuários surdos ou com deficiências auditivas, deficiências visuais, habilidades cognitivas, estilo de aprendizagem, restrições de mobilidade e assim por diante. Seu design atende às necessidades individuais deles?  
@@ -79,10 +80,10 @@ Um dos recursos integrados de acessibilidade no Windows é o modo de alto contra
 Para garantir a legibilidade e minimizar quaisquer distorções inesperadas no texto, certifique-se de que seu produto sempre use as fontes padrão do sistema e use as opções de suavização. Se o seu produto usa fontes personalizadas, os usuários podem enfrentar distrações e questões de legibilidade significativas ao personalizarem a apresentação de sua interface do usuário (com o uso de um leitor de tela ou usando diferentes estilos de fonte para exibir sua interface do usuário, por exemplo).  
 
 #### Resoluções de alto DPI  
-Para usuários com deficiência visual, é importante ter uma interface do usuário escalonável. Interfaces de usuário que não sejam dimensionadas corretamente em resoluções de alto dpi podem fazer com que componentes importantes se sobreponham ou ocultem outros componentes, e podem se tornar inacessíveis.  
+Para usuários com deficiência visual, é importante ter uma interface do usuário escalonável. Interfaces de usuário que não sejam dimensionadas corretamente em resoluções de alto DPI podem fazer com que componentes importantes se sobreponham ou ocultem outros componentes, e podem se tornar inacessíveis.  
 
 #### Taxa de contraste de cor  
-A Seção 508 atualizada do Americans with Disability Act, bem como outras leis, exige que o contraste de cor padrão entre o texto e seu plano de fundo deve ser 5:1. Para textos grandes (tamanhos de fonte de 18 pontos ou 14 pontos e em negrito), o contraste padrão necessário é 3:1.  
+A Seção 508 atualizada do Americans with Disability Act (ADA), bem como outras leis, exige que o contraste de cor padrão entre o texto e seu plano de fundo deve ser 5:1. Para textos grandes (tamanhos de fonte de 18 pontos ou 14 pontos e em negrito), o contraste padrão necessário é 3:1.  
 
 #### Combinações de cores  
 Cerca de 7% dos homens (e menos de 1% das mulheres) têm alguma forma de deficiência para identificar cores. Os usuários com daltonismo têm problemas para diferenciar determinadas cores, portanto, é importante que não apenas a cor seja usada para transmitir status ou significado em um aplicativo. Assim como em imagens decorativas (como ícones ou planos de fundo), as combinações de cores devem ser escolhidas de forma que maximize a percepção da imagem por usuários daltônicos. Se o seu design usa essas recomendações de cor desde o início, seu aplicativo já estará dando passos significativos para ser inclusivo.  
@@ -93,17 +94,18 @@ Em resumo, siga essas sete etapas para garantir que o seu software seja inclusiv
 2.  Ao criar soluções para suas necessidades, use controles fornecidos por sua estrutura (controles padrão) tanto quanto possível e evite qualquer esforço desnecessário e os custos de controles personalizados.  
 3.  Crie uma hierarquia lógica para seu produto, observando onde estão os controles padrão, os controles personalizados e o foco do teclado na interface do usuário.  
 4.  Crie configurações úteis do sistema (como navegação de teclado, alto contraste e alto dpi) em seu produto.  
-5.  Implemente seu design, usando o hub de desenvolvedor de acessibilidade Microsoft e a especificação de acessibilidade da estrutura como um ponto de referência.  
+5.  Implemente seu design, usando o [hub de desenvolvedor de acessibilidade Microsoft](https://developer.microsoft.com/en-us/windows/accessible-apps) e a especificação de acessibilidade da estrutura como um ponto de referência.  
 6.  Teste seu produto com os usuários com necessidades especiais para garantir que eles poderão aproveitar as técnicas de design inclusivo implementadas nele.  
 7.  Ofereça seu produto final e documente sua implementação para quem possa trabalhar no projeto depois de você.  
 
 ## Tópicos relacionados  
 * [Design inclusivo](http://design.microsoft.com/inclusive)
 * [Software de engenharia para acessibilidade](https://www.microsoft.com/en-us/download/details.aspx?id=19262)
-* [Hub de desenvolvedor de acessibilidade da Microsoft](https://msdn.microsoft.com/enable)
+* [Hub de desenvolvedor de acessibilidade da Microsoft](https://developer.microsoft.com/en-us/windows/accessible-apps)
 * [Desenvolvendo aplicativos inclusivos do Windows](developing-inclusive-windows-apps.md)  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

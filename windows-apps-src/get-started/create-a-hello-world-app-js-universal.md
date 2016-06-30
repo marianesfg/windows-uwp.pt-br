@@ -3,6 +3,10 @@ author: martinekuan
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
 title: Criar um aplicativo Hello, world (JS)
 description: Este tutorial ensina a usar JavaScript e HTML para criar um aplicativo Hello, world simples segmentado para a Plataforma Universal do Windows (UWP) no Windows 10.
+translationtype: Human Translation
+ms.sourcegitcommit: f3cb50e5b0b0baa73431392a1f6854a62f3655de
+ms.openlocfilehash: 5f534169117da94cb2249c897603f567c007299b
+
 ---
 # Criar um aplicativo "Hello, world" (JS)
 
@@ -37,7 +41,7 @@ Criaremos um novo aplicativo chamado `HelloWorld`. Este é o procedimento:
 
     (De agora em diante, chamaremos o Visual Studio 2015 simplesmente de Visual Studio.)
 
-2.  No menu **Arquivo**, selecione **Novo** > **Projeto**
+2.  No menu **Arquivo**, selecione **Novo** > **Projeto**.
 
     A caixa de diálogo **Novo Projeto** será exibida. O painel esquerdo da caixa de diálogo permite selecionar o tipo dos modelos que serão exibidos.
 
@@ -54,7 +58,7 @@ Criaremos um novo aplicativo chamado `HelloWorld`. Este é o procedimento:
 5.  Na caixa de texto **Nome**, digite "HelloWorld".
 6.  Clique em **OK** para criar o projeto.
 
-    O Visual Studio criará seu projeto e o exibirá no **Gerenciador de Soluções**
+    O Visual Studio criará seu projeto e o exibirá no **Gerenciador de Soluções**.
 
     ![Visual Studio Solution Explorer para o projeto HelloWorld](images/js-tut-helloworld.png)
 
@@ -66,7 +70,7 @@ Apesar de ser um modelo básico, o **Aplicativo em Branco** contém vários arqu
 -   Uma tela inicial (images/SplashScreen.scale-200.png) para ser mostrada quando o aplicativo é iniciado.
 -   Uma página inicial (default.html) e um arquivo JavaScript correspondente (default.js) que são executados quando o aplicativo é iniciado.
 
-Para exibir e editar os arquivos, clique duas vezes no arquivo no **Gerenciador de Soluções**
+Para exibir e editar os arquivos, clique duas vezes no arquivo no **Gerenciador de Soluções**.
 
 Esses arquivos são essenciais para todos os aplicativos UWP em JavaScript. Eles fazem parte de qualquer projeto criado no Visual Studio.
 
@@ -92,7 +96,7 @@ Por padrão, o aplicativo é executado no computador local. O menu do dispositiv
 
    –ou–
 
-   No menu **Depurar**, clique em **Iniciar Depuração**
+   No menu **Depurar**, clique em **Iniciar Depuração**.
 
    –ou–
 
@@ -114,7 +118,7 @@ Ele ainda não faz muita coisa, mas parabéns! Você criou seu primeiro aplicati
 
    –ou–
 
-   No menu **Depurar**, clique em **Parar depuração**
+   No menu **Depurar**, clique em **Parar depuração**.
 
    –ou–
 
@@ -134,12 +138,12 @@ Além das opções para depurar em um dispositivo da área de trabalho, o Visual
 É recomendável testar o aplicativo em um dispositivo com tela pequena e memória limitada, portanto use a opção **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
 **Para iniciar a depuração em um emulador de dispositivo móvel**
 
-1.  No menu do dispositivo de destino (![Menu Iniciar depuração](images/startdebug-full.png)) na barra de ferramentas **Padrão**, escolha **Emulador 10.0.10240.0 WVGA de 4 polegadas e 512 MB**
+1.  No menu do dispositivo de destino (![Menu Iniciar depuração](images/startdebug-full.png)) na barra de ferramentas **Padrão**, escolha **Emulador 10.0.0.0 WVGA de 4 polegadas e 512 MB**.
 2.  Clique no botão **Iniciar depuração** (![botão Iniciar depuração](images/startdebug-sm.png)) na barra de ferramentas.
 
    –ou–
 
-   No menu **Depurar**, clique em **Iniciar Depuração**
+   No menu **Depurar**, clique em **Iniciar Depuração**.
 
    
 O Visual Studio inicia o emulador selecionado e, em seguida, implanta e inicia o aplicativo. No emulador do dispositivo móvel, o aplicativo tem a seguinte aparência.
@@ -172,11 +176,11 @@ Um dos arquivos que o Visual Studio criou é default.html, a página inicial de 
 </html>
 ```
 
-Adicionaremos novo conteúdo ao arquivo default.html. Assim como qualquer outro arquivo HTML, o conteúdo deve ser adicionado no elemento [**body**](https://msdn.microsoft.com/library/windows/apps/Hh453011). Você pode usar elementos HTML5 para criar o aplicativo (com [algumas exceções](https://msdn.microsoft.com/library/windows/apps/Hh465380)). Isso significa que você pode usar elementos HTML5 como [**h1**](https://msdn.microsoft.com/library/windows/apps/Hh441078), [**p**](https://msdn.microsoft.com/library/windows/apps/Hh453431), [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017), [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) e [**img**](https://msdn.microsoft.com/library/windows/apps/Hh466114)
+Adicionaremos novo conteúdo ao arquivo default.html. Assim como qualquer outro arquivo HTML, o conteúdo deve ser adicionado no elemento [**body**](https://msdn.microsoft.com/library/windows/apps/Hh453011). Você pode usar elementos HTML5 para criar o aplicativo (com [algumas exceções](https://msdn.microsoft.com/library/windows/apps/Hh465380)). Isso significa que você pode usar elementos HTML5 como [**h1**](https://msdn.microsoft.com/library/windows/apps/Hh441078), [**p**](https://msdn.microsoft.com/library/windows/apps/Hh453431), [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017), [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) e [**img**](https://msdn.microsoft.com/library/windows/apps/Hh466114).
 
 **Para modificar sua página inicial**
 
-1.  Substitua o conteúdo existente no elemento [**body**](https://msdn.microsoft.com/library/windows/apps/Hh453011) por um cabeçalho de primeiro nível com a mensagem "Hello, world!", um texto perguntando o nome do usuário, um elemento [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) para aceitar o nome do usuário, um [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017) e um elemento [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133). Atribua IDs ao **input**, ao **button** e ao **div**
+1.  Substitua o conteúdo existente no elemento [**body**](https://msdn.microsoft.com/library/windows/apps/Hh453011) por um cabeçalho de primeiro nível com a mensagem "Hello, world!", um texto perguntando o nome do usuário, um elemento [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) para aceitar o nome do usuário, um [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017) e um elemento [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133). Atribua IDs ao **input**, ao **button** e ao **div**.
 
  ```html
     <body class="win-type-body">
@@ -248,26 +252,26 @@ Observe o restante do código em default.js. Ele manipula os eventos [**activate
 })();
 ```
 
-Agora definiremos um manipulador de eventos para o [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017). Nosso novo manipulador de eventos obtém o nome do usuário por meio do controle `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) e o usa para gerar uma saudação no elemento `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) criado na seção anterior.
+Agora definiremos um manipulador de eventos para o [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017). Nosso novo manipulador de eventos obtém o nome do usuário por meio do controle `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) e o usa para gerar uma saudação no elemento `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) criado na seção anterior.
 
 ### Usando eventos que funcionam com a entrada de toque, mouse e caneta
 
 Em um aplicativo UWP, você não precisa se preocupar com as diferenças entre toque, mouse e outras formas de entrada de ponteiro. Você pode simplesmente usar os eventos que já conhece, como [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312), e eles funcionarão com todas as formas de entrada.
 
-**Dica**   O aplicativo também pode usar os novos eventos *MSPointer\** e *MSGesture\**, que funcionam com a entrada por toque, mouse e caneta e podem fornecer informações adicionais sobre o dispositivo que disparou o evento. Para saber mais, veja [Respondendo à interação do usuário](https://msdn.microsoft.com/library/windows/apps/Hh700412) e [Gestos, manipulações e interações](https://msdn.microsoft.com/library/windows/apps/Hh761498)
+**Dica**   O aplicativo também pode usar os novos eventos *MSPointer\** e *MSGesture\**, que funcionam com a entrada por toque, mouse e caneta e podem fornecer informações adicionais sobre o dispositivo que disparou o evento. Para saber mais, veja [Respondendo à interação do usuário](https://msdn.microsoft.com/library/windows/apps/Hh700412) e [Gestos, manipulações e interações](https://msdn.microsoft.com/library/windows/apps/Hh761498).
 
 Agora, prosseguiremos para criar o manipulador de eventos.
 
 **Para criar o manipulador de eventos**
 
-1.  No default.js, depois do manipulador de eventos [**app.oncheckpoint**](https://msdn.microsoft.com/library/windows/apps/BR229839) e antes da chamada de [**app.start**](https://msdn.microsoft.com/library/windows/apps/BR229705), crie uma função de manipulador de eventos [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312) chamada `buttonClickHandler` que receberá um único parâmetro chamado
+1.  No default.js, depois do manipulador de eventos [**app.oncheckpoint**](https://msdn.microsoft.com/library/windows/apps/BR229839) e antes da chamada de [**app.start**](https://msdn.microsoft.com/library/windows/apps/BR229705), crie uma função de manipulador de eventos [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312) chamada `buttonClickHandler` que receberá um único parâmetro chamado `eventInfo`.
 ```javascript
     function buttonClickHandler(eventInfo) {
      
         }
 ```
 
-2.  Dentro do manipulador de eventos, recupere o nome do usuário a partir do controle `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) e use-o para criar uma saudação. Use o `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) para exibir o resultado.
+2.  Dentro do manipulador de eventos, recupere o nome do usuário a partir do controle `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) e use-o para criar uma saudação. Use o `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) para exibir o resultado.
 ```javascript
     function buttonClickHandler(eventInfo) {
             var userName = document.getElementById("nameInput").value;
@@ -300,7 +304,7 @@ Tudo o que precisamos fazer agora é registrar o manipulador de eventos no botã
     };
 ```
 
-Dentro do manipulador [**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679), o código verifica qual tipo de ativação ocorreu. Existem vários tipos de ativação diferentes. Por exemplo, seu aplicativo foi ativado quando o usuário iniciou o aplicativo e quando o usuário deseja abrir um arquivo que está associado ao seu aplicativo. (Para saber mais, veja [Ciclo de vida do aplicativo](https://msdn.microsoft.com/library/windows/apps/Mt243287)
+Dentro do manipulador [**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679), o código verifica qual tipo de ativação ocorreu. Existem vários tipos de ativação diferentes. Por exemplo, seu aplicativo foi ativado quando o usuário iniciou o aplicativo e quando o usuário deseja abrir um arquivo que está associado ao seu aplicativo. (Para saber mais, veja [Ciclo de vida do aplicativo](https://msdn.microsoft.com/library/windows/apps/Mt243287).)
 
 Estamos interessados na ativação de [**launch**](https://msdn.microsoft.com/library/windows/apps/BR224693). Um aplicativo é *iniciado* sempre que não está em execução e um usuário o ativa.
 
@@ -309,7 +313,7 @@ Estamos interessados na ativação de [**launch**](https://msdn.microsoft.com/li
         if (args.detail.kind === activation.ActivationKind.launch) {
 ```
 
-Se a ativação for de inicialização, o código verificará como o aplicativo foi desligado na última vez que foi executado.
+Se a ativação for de inicialização, o código verificará como o aplicativo foi encerrado na última vez que foi executado.
 
 ```javascript
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
@@ -320,7 +324,7 @@ Se a ativação for de inicialização, o código verificará como o aplicativo 
             }
 ```
 
-Em seguida, chama [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)
+Em seguida, chama [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975).
 
 ```javascript
             args.setPromise(WinJS.UI.processAll());
@@ -329,15 +333,15 @@ Em seguida, chama [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/w
 ```    
 
 [
-            **WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) é chamado independentemente de o aplicativo já ter sido desligado anteriormente ou de ser a primeira vez que está sendo iniciado. O **WinJS.UI.processAll** está contido em uma mensagem para o método [**setPromise**](https://msdn.microsoft.com/library/windows/apps/JJ215609), que verifica se a tela não é retirada até que a página do aplicativo esteja pronta.
+            **WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) é chamado independentemente de o aplicativo já ter sido encerrado anteriormente ou de ser a primeira vez que está sendo iniciado. O **WinJS.UI.processAll** está contido em uma mensagem para o método [**setPromise**](https://msdn.microsoft.com/library/windows/apps/JJ215609), que verifica se a tela não é retirada até que a página do aplicativo esteja pronta.
 
 **Dica**   A função [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) verifica o arquivo default.html para localizar controles WinJS e os inicializa. Até agora, ainda não adicionamos esses controles, mas é recomendável manter esse código para o caso de você desejar adicioná-los posteriormente.
 
-Um bom local para registrar os manipuladores de eventos de controles que não sejam WinJS é logo após a chamada de [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)
+Um bom local para registrar os manipuladores de eventos de controles que não sejam WinJS é logo após a chamada de [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975).
 
 **Para registrar o manipulador de eventos**
 
--   No manipulador de eventos [**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679) em default.js, recupere `helloButton` e use [**addEventListener**](https://msdn.microsoft.com/library/windows/apps/Hh441145) para registrar o manipulador de eventos para o evento [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312). Adicione este código após a chamada de [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)
+-   No manipulador de eventos [**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679) em default.js, recupere `helloButton` e use [**addEventListener**](https://msdn.microsoft.com/library/windows/apps/Hh441145) para registrar o manipulador de eventos para o evento [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312). Adicione este código após a chamada de [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975).
 
 ```javascript
    app.onactivated = function (args) {
@@ -415,7 +419,7 @@ Diferentemente dos controles HTML, os controles WinJS não possuem elementos de 
 
 Adicione um controle [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) ao seu aplicativo.
 
-1.  No arquivo default.html, adicione um [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321) e um controle [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) após o `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)
+1.  No arquivo default.html, adicione um [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321) e um controle [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) após o `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133).
 
     ```html
     <body class="win-type-body">
@@ -478,7 +482,7 @@ Adicionando seu código a uma função "concluída" e a passando para o objeto [
     </body>
 ```
 
-2.  Em nosso arquivo default.js, crie um manipulador de eventos para o controle [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) no evento [**change**](https://msdn.microsoft.com/library/windows/apps/BR211891) denominado `ratingChanged`. O parâmetro [**eventInfo**](https://msdn.microsoft.com/library/windows/apps/Hh465776) contém uma propriedade **detail.tentativeRating** que fornece a nova classificação de usuário. Obtenha esse valor e o exiba no [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) de saída
+2.  Em nosso arquivo default.js, crie um manipulador de eventos para o controle [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) no evento [**change**](https://msdn.microsoft.com/library/windows/apps/BR211891) denominado `ratingChanged`. O parâmetro [**eventInfo**](https://msdn.microsoft.com/library/windows/apps/Hh465776) contém uma propriedade **detail.tentativeRating** que fornece a nova classificação de usuário. Obtenha esse valor e o exiba no [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) de saída.
 
 ```javascript
         function ratingChanged(eventInfo) {
@@ -551,6 +555,7 @@ Parabéns, você criou seu primeiro aplicativo para o Windows 10 e a UWP usando 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

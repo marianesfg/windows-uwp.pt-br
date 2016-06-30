@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
-description: Saiba mais sobre diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos.
-title: Diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos
+description: "Saiba mais sobre diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos."
+title: "Diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
+
 
 ---
 
@@ -138,6 +142,7 @@ Aqui, nosso objetivo é ajudar você a atingir a elegância. Como você conhece 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

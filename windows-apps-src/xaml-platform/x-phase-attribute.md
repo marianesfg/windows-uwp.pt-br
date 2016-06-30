@@ -1,8 +1,12 @@
 ---
 author: jwmsft
 title: Atributo xPhase
-description: Use xPhase com a extensão de marcação xBind para renderizar os itens ListView e GridView de maneira incremental e melhorar a experiência de movimento panorâmico.
+description: "Use xPhase com a extensão de marcação xBind para renderizar os itens ListView e GridView de maneira incremental e melhorar a experiência de movimento panorâmico."
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: dfa12909d19a44ed38939c612712c8fe90f3f584
+
 ---
 
 # atributo x:Phase
@@ -76,6 +80,7 @@ O atributo Phase será aplicado somente quando o modelo de item for renderizado,
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

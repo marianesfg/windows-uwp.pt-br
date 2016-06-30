@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Fazer a portabilidade de dados e buffers de vértices
-description: Nesta etapa, você definirá os buffers de vértices que conterão suas malhas e os buffers de índice que permitem que os sombreadores percorram os vértices em uma ordem específica.
+title: "Fazer a portabilidade de dados e buffers de vértices"
+description: "Nesta etapa, você definirá os buffers de vértices que conterão suas malhas e os buffers de índice que permitem que os sombreadores percorram os vértices em uma ordem específica."
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9692b33303099f9d1193b93ab458a19a5d95abe3
+
 ---
 
 # Fazer a portabilidade de dados e buffers de vértices
@@ -313,6 +317,7 @@ Ao estruturar o seu Direct3D, separe o código que chama métodos em [**ID3D11De
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

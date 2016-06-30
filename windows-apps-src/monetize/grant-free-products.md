@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
-description: Use esse método na API de compra da Windows Store para conceder um aplicativo ou IAP (produto no aplicativo) gratuito a um determinado usuário.
+description: "Use esse método na API de compra da Windows Store para conceder um aplicativo ou IAP (produto no aplicativo) gratuito a um determinado usuário."
 title: Conceder produtos gratuitos
+ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
+ms.openlocfilehash: 9bce5649fc1a9400371e1f9bb67809f1c6288ec6
+
 ---
 
 # Conceder produtos gratuitos
@@ -15,12 +18,12 @@ No momento, você pode conceder apenas produtos gratuitos. Se seu serviço tenta
 
 ## Pré-requisitos
 
-Para usar esse método, você precisará de:
+Para usar esse método, você precisará:
 
--   Um token de acesso do Azure AD criado com a URI de audiência **https://onestore.microsoft.com**.
+-   Ter um token de acesso do Azure AD criado com o URI de público `https://onestore.microsoft.com`.
 -   Uma chave de ID da Windows Store que tenha sido gerada com a chamada do método [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) no código do lado do cliente em seu aplicativo.
 
-Para obter mais informações, consulte [Exibir e conceder produtos de um serviço](view-and-grant-products-from-a-service.md).
+Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-grant-products-from-a-service.md).
 
 ## Solicitação
 
@@ -29,20 +32,20 @@ Para obter mais informações, consulte [Exibir e conceder produtos de um servi�
 
 | Método | URI da solicitação                                            |
 |--------|--------------------------------------------------------|
-| POST   | https://purchase.mp.microsoft.com/v6.0/purchases/grant |
+| POST   | `https://purchase.mp.microsoft.com/v6.0/purchases/grant` |
 
- 
+<br/> 
 
 ### Cabeçalho da solicitação
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;.                           |
+| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;.                           |
 | Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
- 
+<br/>
 
 ### Corpo da solicitação
 
@@ -54,11 +57,11 @@ Para obter mais informações, consulte [Exibir e conceder produtos de um servi�
 | language       | string | O idioma do usuário.                                                                                                                                                                                                                                                                                              | Sim      |
 | market         | string | O mercado do usuário.                                                                                                                                                                                                                                                                                                | Sim      |
 | orderId        | guid   | Uma GUID gerada para o pedido. Esse valor é exclusivo para o usuário, mas não é necessário que seja exclusivo em todos os pedidos.                                                                                                                                                                                              | Sim      |
-| productId      | string | A ID de produto do catálogo da Windows Store. Para obter a ID de produto, navegue para o seu aplicativo no painel Centro de Desenvolvimento do Windows, vá até a página **Gerenciamento de aplicativo**&gt;**Identidade do aplicativo** e recupere o sufixo da cadeia de caracteres mostrado no campo **URL para Windows 10**. Uma ID de produto do exemplo é "9WZDNCRFJ3Q8". | Sim      |
+| productId      | string | A ID da Loja do catálogo da Windows Store. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. | Sim      |
 | quantity       | int    | A quantidade a ser comprada. Atualmente, o único valor com suporte é 1. Se não for especificado, o padrão é 1.                                                                                                                                                                                                                | Não       |
 | skuId          | string | A ID da SKU do catálogo da Windows Store. Um ID de SKU de exemplo é “0010”.                                                                                                                                                                                                                                                | Sim      |
 
- 
+<br/> 
 
 ### Exemplo de solicitação
 
@@ -104,7 +107,7 @@ Content-Type: application/json
 | totalChargedToCsvTopOffPI | decimal                     | Se você estiver usando um meio de pagamento e o valor armazenado (CSV) separados, o valor será carregado no CSV.                                                                | Sim      |
 | totalTaxAmount            | decimal                     | O valor total do imposto para todos os itens de linha.                                                                                                              | Sim      |
 
- 
+<br/> 
 
 O objeto ClientContext contém os parâmetros a seguir.
 
@@ -112,7 +115,7 @@ O objeto ClientContext contém os parâmetros a seguir.
 |-----------|--------|---------------------------------------|----------|
 | client    | string | A ID do cliente que criou o pedido. | Não       |
 
- 
+<br/> 
 
 O objeto OrderLineItemV6 contém os parâmetros a seguir.
 
@@ -144,7 +147,7 @@ O objeto OrderLineItemV6 contém os parâmetros a seguir.
 | Title                   | string         | O título traduzido do item de linha.                                                                        | Sim      |
 | totalAmount             | decimal        | O valor total da compra do item de linha com imposto.                                                    | Sim      |
 
- 
+<br/> 
 
 O objeto IdentityV6 contém os parâmetros a seguir.
 
@@ -153,7 +156,7 @@ O objeto IdentityV6 contém os parâmetros a seguir.
 | identityType  | string | Contém o valor **"pub"**.                                                      | Sim      |
 | identityValue | string | O valor da cadeia de caracteres de *publisherUserId* da chave de ID da Windows Store especificada. | Sim      |
 
- 
+<br/> 
 
 ### Exemplo de resposta
 
@@ -226,7 +229,7 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 | 401  | Não autorizado | InconsistentClientId       | A declaração *clientId* na chave de ID da Windows Store no corpo da solicitação e a declaração *appid* no token de acesso do Azure AD no cabeçalho de autorização não coincidem.                     |
 | 400  | BadRequest   | InvalidParameter           | Os detalhes contêm informações relativas ao corpo da solicitação e aos campos que contêm um valor inválido.                                                                                    |
 
- 
+<br/> 
 
 ## Tópicos relacionados
 
@@ -241,8 +244,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

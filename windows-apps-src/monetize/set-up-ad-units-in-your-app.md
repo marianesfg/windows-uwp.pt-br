@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
-description: Saiba como adicionar valores de ID da unidade de anúncios e do aplicativo do painel do Centro de Desenvolvimento do Windows ao seu aplicativo antes de enviá-lo para a Loja.
-title: Configurar unidades de anúncios em seu aplicativo
+description: "Saiba como adicionar valores de ID da unidade de anúncios e do aplicativo do painel do Centro de Desenvolvimento do Windows ao seu aplicativo antes de enviá-lo para a Loja."
+title: "Configurar unidades de anúncios em seu aplicativo"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 96c09de9321f67dc26cc3538f2655bd598f134f9
+
 
 ---
 
@@ -40,6 +44,7 @@ Para configurar as unidades de anúncios e ID do aplicativo para o seu aplicativ
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

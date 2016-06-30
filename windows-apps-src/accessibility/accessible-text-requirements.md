@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: Este tópico descreve as práticas recomendadas para acessibilidade de texto em um aplicativo, garantindo que cores e telas de fundo satisfaçam o índice de contraste necessário.
+Description: "Este tópico descreve as práticas recomendadas para acessibilidade de texto em um aplicativo, garantindo que cores e telas de fundo satisfaçam o índice de contraste necessário."
 ms.assetid: BA689C76-FE68-4B5B-9E8D-1E7697F737E6
-title: Requisitos de texto acessível
+title: "Requisitos de texto acessível"
 label: Accessible text requirements
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 1307b4f70cf7ffed300f4254a7d92b67b5afd085
+
 ---
 
 # Requisitos de texto acessível  
@@ -44,7 +47,7 @@ Um aplicativo UWP pode usar esses elementos padrão (usualmente chamados de *tex
             ](https://msdn.microsoft.com/library/windows/apps/BR209683): a função é [**Editar**](https://msdn.microsoft.com/library/windows/apps/BR209182)
 * [
               **RichTextBlock**
-            ](https://msdn.microsoft.com/library/windows/apps/BR227565) (e classe excedente [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/BR227565overflow)): a função é [**Texto**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+            ](https://msdn.microsoft.com/library/windows/apps/BR227565) (e classe excedente [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): a função é [**Texto**](https://msdn.microsoft.com/library/windows/apps/BR209182)
 * [
               **RichEditBox**
             ](https://msdn.microsoft.com/library/windows/apps/BR227548): a função é [**Editar**](https://msdn.microsoft.com/library/windows/apps/BR209182)
@@ -57,7 +60,7 @@ Nos modelos de texto de XAML, há dois elementos que são principalmente usados 
 <span id="text_in_graphics"/>
 <span id="TEXT_IN_GRAPHICS"/>
 ## Texto em elementos gráficos  
-Sempre que possível, evite incluir texto em um elemento gráfico. Por exemplo, qualquer texto que você inclua no arquivo de origem da imagem exibido no aplicativo como um elemento [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) não é automaticamente acessível e não pode ser lido por tecnologias adaptativas. Se você tiver que usar texto em elementos gráficos, assegure que o valor [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) que você fornecer como equivalente de "alt text" inclua o texto ou um resumo do significado do texto. Aplicam-se considerações semelhantes se você estiver criando caracteres de texto de vetores como parte de um [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355) ou usando [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921)
+Sempre que possível, evite incluir texto em um elemento gráfico. Por exemplo, qualquer texto que você inclua no arquivo de origem da imagem exibido no aplicativo como um elemento [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) não é automaticamente acessível e não pode ser lido por tecnologias adaptativas. Se você tiver que usar texto em elementos gráficos, assegure que o valor [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) que você fornecer como equivalente de "alt text" inclua o texto ou um resumo do significado do texto. Aplicam-se considerações semelhantes se você estiver criando caracteres de testo de vetores como parte de um [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355) ou usando [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921).
 
 <span id="Text_font_size"/>
 <span id="text_font_size"/>
@@ -72,7 +75,7 @@ Muitos leitores têm dificuldades de ler textos em aplicativos quando a fonte é
 <span id="text_scale_factor"/>
 <span id="TEXT_SCALE_FACTOR"/>
 ## Fator de escala de texto  
-Vários elementos e controles de texto têm uma propriedade [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209652_istextscalefactorenabled). Essa propriedade tem o valor **true** por padrão. Quando o valor é **true**, a configuração chamada **Dimensionamento de texto** no telefone (**Configurações &gt; Facilidade de acesso**) faz o tamanho do texto naquele elemento aumentar. O dimensionamento afetará textos com **FontSize** menor em um grau maior do que textos com **FontSize** maior. Mas você pode desabilitar o aumento automático definindo a propriedade **IsTextScaleFactorEnabled** de um elemento como **false**. Tente esta marcação, ajuste a configuração **Text size** no telefone e veja o que acontece com os **TextBlock**:
+Vários elementos e controles de texto têm uma propriedade [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.istextscalefactorenabled). Essa propriedade tem o valor **true** por padrão. Quando o valor é **true**, a configuração chamada **Dimensionamento de texto** no telefone (**Configurações &gt; Facilidade de acesso**) faz o tamanho do texto naquele elemento aumentar. O dimensionamento afetará textos com **FontSize** menor em um grau maior do que textos com **FontSize** maior. Mas você pode desabilitar o aumento automático definindo a propriedade **IsTextScaleFactorEnabled** de um elemento como **false**. Tente esta marcação, ajuste a configuração **Text size** no telefone e veja o que acontece com os **TextBlock**:
 
 XAML
 ```xml
@@ -126,6 +129,7 @@ Esses tipos têm uma propriedade **IsTextScaleFactorEnabled**:
 * [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Exibir uma tela inicial por mais tempo
-description: Exiba uma tela inicial por mais tempo criando uma tela inicial estendida para o seu aplicativo. Essa tela estendida imita a tela inicial exibida quando o aplicativo é iniciado, mas pode ser personalizada.
+description: "Exiba uma tela inicial por mais tempo criando uma tela inicial estendida para o seu aplicativo. Essa tela estendida imita a tela inicial exibida quando o aplicativo é iniciado, mas pode ser personalizada."
 ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 6ad43ec4fc865c5aae439693e0cd5b37a5d2c5dc
+
 ---
 
 # Exibir uma tela inicial por mais tempo
@@ -97,7 +100,7 @@ Use estas etapas de forma a definir os métodos para a exibição correta da sua
         private SplashScreen splash; // Variable to hold the splash screen object.
         internal bool dismissed = false; // Variable to track splash screen dismissal status.
         internal Frame rootFrame;
-     
+
        // Define methods and constructor
     }
     ```
@@ -131,7 +134,7 @@ Use estas etapas de forma a definir os métodos para a exibição correta da sua
             PositionRing();
         }
 
-        // Create a Frame to act as the navigation context 
+        // Create a Frame to act as the navigation context
         rootFrame = new Frame();            
     }
     ```
@@ -223,11 +226,11 @@ Use estas etapas de forma a definir os métodos para a exibição correta da sua
     {
         if (loadState)
         {
-             // code to load your app's state here 
+             // code to load your app's state here
         }
     }
     ```
-    
+
     Ao modificar o manipulador de ativação da inicialização em App.xaml.cs, você também definirá `loadstate` como true se o [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) anterior do aplicativo tiver sido **Terminated**. Nesse caso, o método `RestoreStateAsync` restaura o aplicativo ao estado anterior. Para obter uma visão geral de inicialização, suspensão e encerramento do aplicativo, consulte o [ciclo de vida do aplicativo](app-lifecycle.md).
 
 ## Modificar o manipulador de ativação de inicialização
@@ -547,8 +550,6 @@ namespace SplashScreenExample
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

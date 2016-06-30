@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Fazer a portabilidade do GLSL
-description: Quando você tiver movido o código que cria e configura os seus buffers e objetos de sombreador, será o momento de fazer a portabilidade do código dentro dos sombreadores da linguagem de sombreadores GL do OpenGL ES 2.0 (GLSL) para a linguagem de sombreadores de alto nível do Direct3D 11 (HLSL).
+description: "Quando você tiver movido o código que cria e configura os seus buffers e objetos de sombreador, será o momento de fazer a portabilidade do código dentro dos sombreadores da linguagem de sombreadores GL do OpenGL ES 2.0 (GLSL) para a linguagem de sombreadores de alto nível do Direct3D 11 (HLSL)."
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d1d203fa74bd80fe26401e64d4e15bb11e5c1050
+
 ---
 
 # Fazer a portabilidade do GLSL
@@ -184,6 +188,7 @@ Entender a semântica HLSL e o compactação de buffers constantes pode evitar c
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -5,8 +5,8 @@ title: Blocos
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: a440a9abaf150dac6ed95d881261b80521a734c0
+ms.sourcegitcommit: d3fe62d4de00c42079d62d105acdbb21e296ba5f
+ms.openlocfilehash: a9f5d25dfd359364fa8e16666b03c7c105a867dd
 
 ---
 
@@ -48,14 +48,11 @@ Há alguns itens que você deve atualizar:
 
     Você deve substituir essas imagens por suas próprias. Você pode fornecer imagens para diferentes escalas visuais, mas não é necessário fornecer para todas elas. Para garantir que seu aplicativo tenha uma boa aparência em um vários dispositivos, recomendamos que você ofereça versões de escala em 100%, 200% e 400% de cada imagem.
 
-    As imagens dimensionadas seguem esta convenção de nomenclatura:
+    As imagens dimensionadas seguem esta convenção de nomenclatura: 
     
     *
-              &lt;nome da imagem&gt;*.scale -*&lt;fator de escala&gt;*. *&lt;extensão de arquivo de imagem&gt;* 
-
-
-     
-
+              &lt;nome da imagem&gt;*.scale -*&lt;fator de escala&gt;*. *&lt;extensão de arquivo de imagem&gt;*  
+    
     Por exemplo: SmallLogo.scale-100.png
 
     Quando você se referir à imagem, faça referência e ela como *&lt;nome da imagem&gt;*.*&lt;extensão de arquivo de imagem&gt;* ("SmallLogo.png" neste exemplo). O sistema selecionará automaticamente a imagem dimensionada apropriada para o dispositivo nas imagens fornecidas por você.
@@ -110,6 +107,6 @@ Depois que seu aplicativo for instalado, você pode usar notificações para per
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

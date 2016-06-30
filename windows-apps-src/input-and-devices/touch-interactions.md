@@ -5,8 +5,8 @@ title: "Interações por toque"
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 23eac55de26563c68b401d8912264aebb86d0380
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: a78dd1030e653d1cf0a1d7f191b4768e5a99860a
 
 ---
 
@@ -159,7 +159,7 @@ Além disso, as dicas a seguir são altamente recomendadas:
 -   Descrições e indicações visuais adequadas têm um grande efeito sobre o uso das interações avançadas.
 
 
-## <span id="App_views"></span><span id="app_views"></span><span id="APP_VIEWS"></span>Modos de exibição do aplicativo
+## Modos de exibição do aplicativo
 
 
 Ajuste a experiência de interação do usuário nas configurações de movimento panorâmico/rolagem e zoom dos modos de exibição do aplicativo. O modo de exibição do aplicativo indica como o usuário acessa e manipula o aplicativo e seu conteúdo. Os modos de exibição também oferecem comportamentos, como inércia, salto de limite de conteúdo e pontos de alinhamento.
@@ -172,7 +172,7 @@ Use modos de exibição do aplicativo e eventos para modificar os comportamentos
 
 Para saber mais sobre modos de exibição do aplicativo, consulte [Controles, layouts e texto](https://msdn.microsoft.com/library/windows/apps/mt228348).
 
-## <span id="intro_to_touch_input"></span><span id="INTRO_TO_TOUCH_INPUT"></span>Interações por toque personalizadas
+## Interações por toque personalizadas
 
 
 Caso você implemente o próprio suporte à interação, tenha em mente que os usuários esperam uma experiência intuitiva que envolva a interação direta com os elementos da interface do usuário do aplicativo. Recomendamos que você modele suas interações personalizadas nas bibliotecas de controles da plataforma para manter os elementos consistentes e detectáveis. Os controles nessas bibliotecas oferecem a experiência de interação completa do usuário, incluindo interações padrão, efeitos físicos animados, comentários visuais e acessibilidade. Crie interações personalizadas somente se houver uma exigência clara e bem-definida e se as interações básicas não derem suporte ao seu cenário.
@@ -209,12 +209,12 @@ Aqui está o conjunto básico de gestos de toque aceitos pela UWP.
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
 -->
 
-## <span id="gestures"></span><span id="GESTURES"></span>Eventos de gesto
+## Eventos de gesto
 
 
 Para obter detalhes sobre controles individuais, consulte [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406).
 
-## <span id="using_pointer_events"></span><span id="USING_POINTER_EVENTS"></span>Eventos de ponteiro
+## Eventos de ponteiro
 
 
 Os eventos de ponteiro são gerados por uma variedade de fontes de entrada ativa, incluindo touch, touchpad, caneta e mouse (eles substituem os eventos de mouse tradicionais).
@@ -423,7 +423,7 @@ Private Sub touchRectangle_PointerPressed(sender As Object, e As PointerRoutedEv
 End Sub
 ```
 
-## <span id="using_manipulation_events"></span><span id="USING_MANIPULATION_EVENTS"></span>Eventos de manipulação
+## Eventos de manipulação
 
 
 Use eventos de manipulação se precisar dar suporte a interações com vários dedos no seu aplicativo, ou interações que exijam dados de velocidade.
@@ -599,12 +599,12 @@ Private Sub testRectangle_ManipulationDelta(
 End Sub
 ```
 
-## <span id="Routed_events"></span><span id="routed_events"></span><span id="ROUTED_EVENTS"></span>Eventos roteados
+## Eventos roteados
 
 
 Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implementados como *eventos roteados*. Isso significa que o evento provavelmente pode ser manipulado por objetos que não sejam o que originalmente disparou o evento. Os pais sucessivos em uma árvore de objetos, como os contêineres pai de um [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) ou a [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) raiz do seu aplicativo, podem optar por manipular esses eventos mesmo que o elemento original não faça isso. Reciprocamente, qualquer objeto que manipule o evento pode marcar o evento como manipulado para que ele não atinja mais nenhum elemento pai. Para saber mais sobre o conceito de evento roteado e como ele influencia na forma como você grava manipuladores para eventos roteados, consulte [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/hh758286).
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>O que fazer e o que não fazer
+## O que fazer e o que não fazer
 
 
 -   Aplicativos de design com interação por toque como o método de entrada primário esperado.
@@ -616,7 +616,7 @@ Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implem
 -   Não use o número de dedos usados para distinguir a manipulação sempre que possível.
 
 
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
@@ -644,6 +644,6 @@ Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implem
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

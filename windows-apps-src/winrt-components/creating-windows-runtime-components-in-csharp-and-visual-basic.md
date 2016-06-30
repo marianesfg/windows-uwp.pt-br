@@ -1,8 +1,11 @@
 ---
-author: martinekuan
+author: msatranjr
 title: Criando componentes do Windows Runtime em C# e Visual Basic
-description: Desde o .NET Framework 4.5, é possível usar código gerenciado para criar os próprios tipos de Tempo de Execução do Windows, empacotados em um componente de Tempo de Execução do Windows.
+description: "A partir do .NET Framework 4.5, é possível usar código gerenciado para criar os próprios tipos do Windows Runtime, empacotados em um componente do Tempo de Execução do Windows."
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: e8fd48b99d6a05af57e67e503c7bd3058b07569c
+
 ---
 
 # Criando componentes do Windows Runtime em C# e Visual Basic
@@ -10,10 +13,7 @@ ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
-
-Desde o .NET Framework 4.5, é possível usar código gerenciado para criar os próprios tipos do Windows Runtime, empacotados em um componente do Tempo de Execução do Windows. É possível usar o componente em aplicativos da Plataforma Universal do Windows (UWP) com C++, JavaScript, Visual Basic ou C#. Este artigo descreve as regras para a criação de um componente e descreve alguns aspectos do suporte do .NET Framework para o Windows Runtime. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET Framework. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.
+A partir do .NET Framework 4.5, é possível usar código gerenciado para criar os próprios tipos do Windows Runtime, empacotados em um componente do Tempo de Execução do Windows. É possível usar o componente em aplicativos da Plataforma Universal do Windows (UWP) com C++, JavaScript, Visual Basic ou C#. Este artigo descreve as regras para a criação de um componente e descreve alguns aspectos do suporte do .NET Framework para o Windows Runtime. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET Framework. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.
 
 Caso você esteja criando um componente a ser usado apenas em aplicativos UWP com Visual Basic ou C# e o componente não contenha controles UWP, leve em consideração usar o modelo **Biblioteca de Classes**, em vez do modelo **Componente do Tempo de Execução do Windows**. Existem menos restrições em uma biblioteca de classes simples.
 
@@ -121,11 +121,11 @@ No Windows Runtime, os métodos podem ser sobrecarregados. No entanto, se declar
 > {
 >     return s;
 > }
-> [Windows.Foundation.Metadata.DefaultOverload()] 
+> [Windows.Foundation.Metadata.DefaultOverload()]
 > public int OverloadExample(int x)
 > {
 >     return x;
-> } 
+> }
 > ```
 > ```vb
 > Public Function OverloadExample(ByVal s As String) As String
@@ -137,7 +137,7 @@ No Windows Runtime, os métodos podem ser sobrecarregados. No entanto, se declar
 > End Function
 > ```
 
-> **Cuidado**  O JavaScript permite passar qualquer valor para OverloadExample e força o valor para o tipo exigido pelo parâmetro. É possível chamar OverloadExample com "quarenta e dois", "42" ou 42.3, mas todos esses valores são passados para a sobrecarga padrão. A sobrecarga padrão no exemplo anterior retorna 0, 42 e 42, respectivamente.
+ **Cuidado**  O JavaScript permite passar qualquer valor para OverloadExample e força o valor para o tipo exigido pelo parâmetro. É possível chamar OverloadExample com "quarenta e dois", "42" ou 42.3, mas todos esses valores são passados para a sobrecarga padrão. A sobrecarga padrão no exemplo anterior retorna 0, 42 e 42, respectivamente.
 
 Não é possível aplicar o atributo DefaultOverloadAttribute a construtores. Todos os construtores em uma classe devem ter números de parâmetros diferentes.
 
@@ -202,7 +202,7 @@ Para ações e operações assíncronas que não dão suporte ao cancelamento ou
 > ```vb
 > Public Shared Function DownloadAsStringsAsync(ByVal id As String) _
 >      As IAsyncOperation(Of IList(Of String))
-> 
+>
 >     Return Task.Run(Of IList(Of String))(
 >         Async Function()
 >             Dim data = Await DownloadDataAsync(id)
@@ -241,7 +241,7 @@ Para ações e operações assíncronas que dão suporte ao cancelamento ou aos 
 > ```vb
 > Public Shared Function DownloadAsStringsAsync(ByVal id As String) _
 >     As IAsyncOperation(Of IList(Of String))
-> 
+>
 >     Return AsyncInfo.Run(Of IList(Of String))(
 >         Async Function()
 >             Dim data = Await DownloadDataAsync(id)
@@ -289,11 +289,10 @@ Para saber mais sobre recursos da linguagem Visual Basic e C# e o suporte do .NE
 
 * [Visão geral do .NET para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
-* [Procedimento passo a passo: criação de um componente do Tempo de Execução do Windows básico chamada dele em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
+* [Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
 
 
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

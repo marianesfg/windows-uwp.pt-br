@@ -1,16 +1,19 @@
 ---
 author: mtoepke
 title: Como fazer a portabilidade de um renderizador simples do OpenGL ES 2.0 para o Direct3D 11
-description: Para o primeiro exercício de portabilidade, vamos começar com noções básicas - trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de aplicativo do DirectX 11 (Windows Universal) do Visual Studio 2015.
+description: "Para o primeiro exercício de portabilidade, vamos começar com noções básicas - trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de aplicativo do DirectX 11 (Windows Universal) do Visual Studio 2015."
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
+ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
+ms.openlocfilehash: f70d4ec46743d930f8cb45084e55cce2e60e2460
+
 ---
 
 # Como fazer a portabilidade de um renderizador simples do OpenGL ES 2.0 para o Direct3D 11
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Para o primeiro exercício de portabilidade, vamos começar com noções básicas: trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de aplicativo do DirectX 11 (Windows Universal) do Visual Studio 2015. Conforme seguimos por este processo de compatibilização, você aprenderá o seguinte:
+Para este exercício de portabilidade, vamos começar com noções básicas: trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de aplicativo do DirectX 11 (Windows Universal) do Visual Studio 2015. Conforme seguimos por este processo de compatibilização, você aprenderá o seguinte:
 
 -   Como fazer a portabilidade de um conjunto simples de buffers de vértice para buffers de entrada Direct3D
 -   Como fazer a portabilidade de uniformes e atributos para buffers constantes
@@ -18,7 +21,7 @@ Para o primeiro exercício de portabilidade, vamos começar com noções básica
 -   Como a semântica HLSL básica é usada no desenvolvimento de sombreador Direct3D
 -   Como fazer a portabilidade de um GLSL muito simples para HLSL
 
-Este tópico começa após a criação de um novo projeto do DirectX 11. Para aprender a criar um novo projeto DirectX 11, leia [Criar um novo projeto DirectX 11 para a Plataforma Universal do Windows (UWP)](user-interface.md)
+Este tópico começa após a criação de um novo projeto do DirectX 11. Para aprender a criar um novo projeto DirectX 11, leia [Criar um novo projeto DirectX 11 para a Plataforma Universal do Windows (UWP)](user-interface.md).
 
 O projeto criado de algum desses links tem todos os códigos para a infraestrutura [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476345) preparada e você pode iniciar imediatamente o processo de portabilidade do seu renderizador Open GL ES 2.0 para o Direct3D 11.
 
@@ -141,6 +144,7 @@ Essa estrutura tem uma instância e contém todos os componentes necessários pa
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

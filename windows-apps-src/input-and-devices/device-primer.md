@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Conhecer os dispositivos que dão suporte a aplicativos UWP (Plataforma Universal do Windows) o ajudará a oferecer a melhor experiência de usuário para cada fator forma.
+Description: "Conhecer os dispositivos que dão suporte a aplicativos UWP (Plataforma Universal do Windows) o ajudará a oferecer a melhor experiência de usuário para cada fator forma."
 title: Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Windows)
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b
+
 ---
 
 #  Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Windows)
@@ -194,6 +198,7 @@ Recursos típicos do dispositivo
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

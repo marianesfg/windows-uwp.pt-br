@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Suporte a mapas de sombra em diversos hardwares
-description: Renderize sombras de alta fidelidade em dispositivos mais rápidos e sombras mais velozes em dispositivos com menor desempenho.
+description: "Renderize sombras de alta fidelidade em dispositivos mais rápidos e sombras mais velozes em dispositivos com menor desempenho."
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
+translationtype: Human Translation
+ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
+ms.openlocfilehash: 0cdc31f07560e7f1747806d1436bccbc1e50f8b9
+
 ---
 
 # Suporte a mapas de sombra em diversos hardwares
@@ -174,6 +178,7 @@ A entrada do arquivo de projeto para a versão com filtragem linear do sombreado
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

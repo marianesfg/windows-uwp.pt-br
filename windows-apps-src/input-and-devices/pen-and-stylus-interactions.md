@@ -6,8 +6,8 @@ ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen and stylus interactions in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: 218fae32f8b63c8fe5499af7d3fe6c1f0404334c
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: e642e6ba5319dce2d78c243ab3c57a9ffcc6902f
 
 ---
 
@@ -47,7 +47,7 @@ Há três componentes para a plataforma de tinta:
               **IInkD2DRenderer**
             ](https://msdn.microsoft.com/library/mt147263) - Permite a renderização de traços de tinta para o contexto de dispositivo Direct2D designado de um aplicativo Universal do Windows, em vez do controle padrão [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535). Isso permite a personalização completa da experiência de escrita à tinta.
 
-## <span id="inkcanvas"></span><span id="INKCANVAS"></span>Escrita à tinta básica com InkCanvas
+## Escrita à tinta básica com InkCanvas
 
 
 Para funcionalidade básica de escrita à tinta, posicione um [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) em qualquer lugar da página.
@@ -87,7 +87,7 @@ A funcionalidade de escrita à tinta com suporte do controle [**InkCanvas**](htt
 
 Para escrita à tinta básica, você não precisa se preocupar com o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011). Entretanto, para personalizar e configurar o comportamento de escrita à mão no [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), você deve acessar o seu objeto correspondente **InkPresenter**.
 
-## <span id="inkpresenter"></span><span id="INKPRESENTER"></span>Personalização básica com InkPresenter
+## Personalização básica com InkPresenter
 
 
 Um objeto [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) é instanciado com cada controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
@@ -196,7 +196,7 @@ Estas imagens mostram como a entrada de caneta é processada e personalizada pel
 
 Para oferecer funcionalidades além de escrever à tinta e apagar, como seleção de traço, seu aplicativo deve identificar entrada específica para o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) passar por não processado por manipular pelo seu aplicativo.
 
-## <span id="passthrough"></span><span id="PASSTHROUGH"></span>Entrada de passagem para processamento avançado
+## Entrada de passagem para processamento avançado
 
 
 Por padrão, o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) processa todas as entradas como traço de tinta ou de apagar. Isso inclui entrada modificada por funcionalidade secundária de hardware, como botão de caneta, botão direito do mouse e afins.
@@ -422,7 +422,7 @@ public MainPage()
     }
 ```
 
-## <span id="iinkd2drenderer"></span><span id="IINKD2DRENDERER"></span>Renderização de tinta personalizada
+## Renderização de tinta personalizada
 
 
 Por padrão, a entrada de tinta é processada em um thread em segundo plano e renderizada como "molhada" conforme é desenhada. Quando o traço está concluído (caneta ou dedo param de pressionar ou botão do mouse é liberado), o traço é processado do thread de interface do usuário e renderizado como "seco" na camada [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (acima do conteúdo do aplicativo e substituindo a tinta molhada).
@@ -463,7 +463,7 @@ Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta co
  
 
 
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 
 * [Manipular entrada do ponteiro](handle-pointer-input.md)
@@ -493,6 +493,6 @@ Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta co
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

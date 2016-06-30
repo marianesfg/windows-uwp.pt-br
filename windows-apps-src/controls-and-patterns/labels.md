@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Utilize um rótulo para indicar ao usuário o que ele deve inserir em um controle adjacente. Você também pode rotular um grupo de controles relacionados ou exibir texto de instrução próximo a um grupo de controles relacionados.
-title: Rótulos
+Description: "Utilize um rótulo para indicar ao usuário o que ele deve inserir em um controle adjacente. Você também pode rotular um grupo de controles relacionados ou exibir texto de instrução próximo a um grupo de controles relacionados."
+title: "Rótulos"
 ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: fbb186b6f8b7bfba47fb05155a227224a1bd595e
+
 ---
 
 # Rótulos
@@ -55,6 +59,7 @@ No XAML, muitos controles têm uma propriedade Header interna que é usada para 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

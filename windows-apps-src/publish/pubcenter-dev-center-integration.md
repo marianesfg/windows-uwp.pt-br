@@ -1,8 +1,12 @@
 ---
 author: jnHs
 Description: O Microsoft Advertising no pubCenter foi integrado ao Centro de Desenvolvimento do Windows.
-title: Integração pubCenter - Centro de Desenvolvimento
+title: "Integração pubCenter - Centro de Desenvolvimento"
 ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d6bf60e1dae7ec62e3cdbba8098a24c093d5deb1
+
 ---
 
 # Integração pubCenter - Centro de Desenvolvimento
@@ -181,6 +185,7 @@ Sim, pode haver uma pequena diferença nos dados mostrados nos relatórios do pu
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

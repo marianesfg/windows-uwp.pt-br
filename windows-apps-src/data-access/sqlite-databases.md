@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 5A47301A-2291-4FC8-8BA7-55DB2A5C653F
 title: Bancos de dados SQLite
-description: SQLite é um mecanismo de banco de dados sem servidor inserido. Este artigo explica como usar a biblioteca SQLite incluída no SDK, empacotar a própria biblioteca SQLite em um aplicativo Universal do Windows ou compilá-lo desde a origem.
+description: "SQLite é um mecanismo de banco de dados sem servidor inserido. Este artigo explica como usar a biblioteca SQLite incluída no SDK, empacotar a própria biblioteca SQLite em um aplicativo Universal do Windows ou compilá-lo desde a origem."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dd628d16b3ee230ddc0c56b47fd381a518b8af00
+
 ---
 # Bancos de dados SQLite
 
@@ -90,6 +94,7 @@ Existem seis interfaces para realizar operações de banco de dados nesses objet
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

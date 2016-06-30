@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Durante a edição e a entrada de texto, a verificação ortográfica informa o usuário que uma palavra está com grafia incorreta realçando-a com uma linha ondulada vermelha e fornecendo uma maneira de o usuário corrigir o erro de ortografia.
-title: Verificação ortográfica e previsão de texto
+Description: "Durante a edição e a entrada de texto, a verificação ortográfica informa o usuário que uma palavra está com grafia incorreta realçando-a com uma linha ondulada vermelha e fornecendo uma maneira de o usuário corrigir o erro de ortografia."
+title: "Verificação ortográfica e previsão de texto"
 ms.assetid: B867C956-5AB2-4207-A8DE-179CE7871180
 label: Spell checking and text prediction
 template: detail.hbs
+redirect_url: text-controls
+ms.sourcegitcommit: 08f982f5c54d596a7624fe63528f91375e7761ca
+ms.openlocfilehash: 8954b14a84241686a7c784c3d250f197bed7c8b6
+
 ---
 
 # Diretrizes para verificação ortográfica
@@ -66,6 +70,7 @@ Para controles TextBox XAML, a verificação ortográfica está desabilitada por
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

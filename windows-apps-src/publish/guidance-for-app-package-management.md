@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Saiba como os pacotes do aplicativo são disponibilizados para seus clientes e como gerenciar cenários de pacotes específicos.
-title: Orientação para gerenciamento de pacote de aplicativo
+Description: "Saiba como os pacotes do aplicativo são disponibilizados para seus clientes e como gerenciar cenários de pacotes específicos."
+title: "Orientação para gerenciamento de pacote de aplicativo"
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: ac8d150f426c7d32e8a3b61b7f08cc0b84feedb8
+
 ---
 
 # Orientação para gerenciamento de pacote de aplicativo
@@ -134,6 +138,7 @@ Lembre-se de que mesmo se você remover todos os pacotes que dão suporte a uma 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Use animações de fade para trazer itens para uma exibição ou retirá-los de uma exibição. As duas animações de fade comuns são fade in e fade out.
-title: Animações de fade em aplicativos UWP
+Description: "Use animações de fade para trazer itens para uma exibição ou retirá-los de uma exibição. As duas animações de fade comuns são fade in e fade out."
+title: "Animações de fade em aplicativos UWP"
 ms.assetid: 975E5EE3-EFBE-4159-8D10-3C94143DD07F
 label: Motion--fades
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 028e3462a0bf34af0486864508b1ac049fdf60ed
+
 ---
 
 # Animações de fade
@@ -43,6 +47,7 @@ Use animações de fade para trazer itens para uma exibição ou retirá-los de 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

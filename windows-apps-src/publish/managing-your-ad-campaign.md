@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Para gerenciar as campanhas publicitárias do seu aplicativo, clique em Monetização &gt; Promover seu aplicativo na página do seu aplicativo no painel do Centro de Desenvolvimento do Windows.
-title: Gerenciando sua campanha publicitária
+Description: "Para gerenciar as campanhas publicitárias do seu aplicativo, clique em Monetização &gt; Promover seu aplicativo na página do seu aplicativo no painel do Centro de Desenvolvimento do Windows."
+title: "Gerenciando sua campanha publicitária"
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8e6305f3e6904833245013ef7eb63809c97ec423
+
 ---
 
 # Gerenciando sua campanha publicitária
@@ -46,6 +50,7 @@ Para fazer alterações em uma campanha publicitária, clique no nome dela para 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

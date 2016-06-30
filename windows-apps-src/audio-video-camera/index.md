@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
-description: Esta seção fornece informações sobre como criar um aplicativo Universal do Windows que capture, reproduza ou edite fotos, vídeos ou áudio.
-title: Áudio, vídeo e câmera
+description: "Esta seção fornece informações sobre como criar um aplicativo Universal do Windows que capture, reproduza ou edite fotos, vídeos ou áudio."
+title: "Áudio, vídeo e câmera"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8480eb181b6af26eae5950a1f1bf040d0cb5db99
+
 ---
 
 # Áudio, vídeo e câmera
@@ -45,6 +49,7 @@ Esta seção fornece informações sobre como criar um aplicativo Universal do W
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

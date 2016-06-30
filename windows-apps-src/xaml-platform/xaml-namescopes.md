@@ -1,13 +1,17 @@
 ---
 author: jwmsft
-description: Um namescope XAML armazena relacionamentos entre os nomes de objetos definidos por XAML e suas instâncias equivalentes. Esse conceito é semelhante ao significado mais abrangente do termo namescope em outras linguagens e tecnologias de programação.
+description: "Um namescope XAML armazena relacionamentos entre os nomes de objetos definidos por XAML e suas instâncias equivalentes. Esse conceito é semelhante ao significado mais abrangente do termo namescope em outras linguagens e tecnologias de programação."
 title: Namescopes XAML
 ms.assetid: EB060CBD-A589-475E-B83D-B24068B54C21
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: b8b833f40bc38799acc8813d38ddea63426f05b3
+
 ---
 
 # Namescopes XAML
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Um *namescope XAML* armazena relacionamentos entre os nomes de objetos definidos por XAML e suas instâncias equivalentes. Esse conceito é semelhante ao significado mais abrangente do termo *namescope* em outras linguagens e tecnologias de programação.
 
@@ -23,7 +27,7 @@ Você também pode usar o método utilitário [**FindName**](https://msdn.micros
 
 Tecnicamente, o que ocorre é que a própria linguagem XAML passa por um ciclo do compilador de marcação ao mesmo tempo em que a linguagem XAML e a classe parcial definida para code-behind são compiladas juntas. Cada elemento de objeto com um atributo **Name** ou [atributo x:Name](x-name-attribute.md) definido na marcação gera um campo interno com um nome que corresponde ao nome XAML. Inicialmente, esse campo fica vazio. Então, a classe gera um método **InitializeComponent** chamado apenas após o carregamento de toda a linguagem XAML. Na lógica **InitializeComponent** cada campo interno é preenchido com o valor de retorno [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para a cadeia de nome equivalente. Você pode observar esta infraestrutura olhando os arquivos ".g" (gerados) criados para cada página XAML na subpasta /obj de um projeto de aplicativo do Windows Runtime após a compilação. Você também pode ver os campos e o método **InitializeComponent** como membros dos assemblies resultantes quando refletir sobre eles ou examinar o conteúdo da linguagem de sua interface.
 
-**Observação** Especificamente para extensões de componentes Visual C++ (aplicativos C++/CX), um campo de suporte para uma referência **x:Name** não é criado para o elemento raiz de um arquivo XAML. Se você precisa mencionar o objeto raiz do code-behind C++/CX, use outras APIs ou outro percurso de árvore. Por exemplo, você pode chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para um elemento filho nomeado conhecido e depois chamar [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739)
+**Observação** Especificamente para extensões de componentes Visual C++ (aplicativos C++/CX), um campo de suporte para uma referência **x:Name** não é criado para o elemento raiz de um arquivo XAML. Se você precisa mencionar o objeto raiz do code-behind C++/CX, use outras APIs ou outro percurso de árvore. Por exemplo, você pode chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para um elemento filho nomeado conhecido e depois chamar [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
 
 ## Criando objetos em tempo de execução com XamlReader.Load
 
@@ -41,7 +45,7 @@ O problema do namescope XAML discreto afeta somente a localização de objetos p
 
 Para obter referências a objetos definidos em um namescope XAML diferente, você pode usar várias técnicas:
 
--   Navegue por toda a árvore em etapas discretas com propriedades de coleção e/ou [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) cuja existência é conhecida na estrutura da árvore de objetos (como a coleção retornada por [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514))
+-   Navegue por toda a árvore em etapas discretas com propriedades de coleção e/ou [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) cuja existência é conhecida na estrutura da árvore de objetos (como a coleção retornada por [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514)).
 -   Quando você faz a chamada de um namescope XAML discreto e deseja o namescope XAML raiz, é sempre fácil obter uma referência à janela principal exibida no momento. Você pode obter a raiz visual (o elemento XAML raiz, também conhecido como origem do conteúdo) da janela do aplicativo atual em uma linha de código com a chamada `Window.Current.Content`. Em seguida, você pode converter em [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) e chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) a partir desse escopo.
 -   Quando você faz a chamada do namescope XAML raiz e deseja um objeto em um namescope XAML discreto, a melhor coisa a fazer é planejar antecipadamente o código e manter uma referência ao objeto retornado por [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048) e adicionado em seguida à árvore de objetos principal. Agora, esse objeto é válido para chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) no namescope XAML discreto. Você pode manter esse objeto disponível como uma variável global ou transferi-lo usando parâmetros de método.
 -   Examinando a árvore visual, é possível evitar completamente as considerações a respeito de namescope XAML e nomes. A API [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/br243038) permite percorrer a árvore visual em termos de objetos pais e coleções de filhos. Isso é feito puramente com base em posições e índices.
@@ -73,7 +77,7 @@ Em função dos namescopes XAML separados, localizar elementos nomeados em um mo
 
 ## Tópicos relacionados
 
-* [Visão geral de XAML](xaml-overview.md)
+* [Visão geral do XAML](xaml-overview.md)
 * [Atributo x:Name](x-name-attribute.md)
 * [Início rápido: modelos de controle](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
 * [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)
@@ -82,6 +86,7 @@ Em função dos namescopes XAML separados, localizar elementos nomeados em um mo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

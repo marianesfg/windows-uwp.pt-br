@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Você tem duas opções ao começar o processo de portabilidade.
+description: "Você tem duas opções ao começar o processo de portabilidade."
 title: Portabilidade de um projeto do Windows Runtime 8.x para um projeto UWP
 ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
+translationtype: Human Translation
+ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
+ms.openlocfilehash: 60f59c58aedc56da58350a050acd184a376b8067
+
 ---
 
 # Portabilidade de um projeto do Windows Runtime 8.x para um projeto UWP
@@ -40,7 +44,7 @@ A maioria das APIs do Windows Runtime que o aplicativo universal 8.1 já chama e
 
 Em caso de erros de compilação sobre namespaces ou tipos ou membros que não foram encontrados, essa deve ser a provável causa. Abra o tópico da API na documentação de referência da API e navegue até a seção Requisitos; ele informará qual é a implementação da família de dispositivos. Se essa não for a família de dispositivos de destino, para disponibilizar a API para o projeto, você precisará de uma referência para o SDK de extensão dessa família de dispositivos.
 
-Clique em **Projeto**&gt;**Adicionar Referência**&gt;**Universal do Windows**&gt;**Extensões** e selecione o SDK de extensão apropriado. Por exemplo, se as APIs que você deseja chamar estão disponíveis somente na família de dispositivos móveis e elas foram introduzidas na versão 10.0.x.y, selecione **Extensões do Windows Mobile para UWP**.
+Clique em **Projeto**&gt;**Adicionar referência**&gt;**Windows Universal**&gt;**Extensões** e selecione o SDK de extensão apropriado. Por exemplo, se as APIs que você deseja chamar estão disponíveis somente na família de dispositivos móveis e elas foram introduzidas na versão 10.0.x.y, selecione **Extensões do Windows Mobile para UWP**.
 
 Isso adicionará a seguinte referência ao seu arquivo de projeto:
 
@@ -172,6 +176,7 @@ O próximo tópico é [Solução de problemas](w8x-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
