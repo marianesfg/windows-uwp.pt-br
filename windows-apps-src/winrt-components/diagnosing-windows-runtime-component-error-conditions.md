@@ -234,23 +234,23 @@ Na UWP, os valores de retorno são considerados parâmetros de saída e os nomes
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> **Observação**  Se alterar o nome do valor de retorno e o novo nome colidir com o nome de outro parâmetro, você obterá o erro WME1091.
+> [!div class="tabbedCodeSnippets"]
 
-O código JavaScript pode acessar os parâmetros de saída de um método por nome, inclusive o valor de retorno. Por exemplo, consulte o atributo [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx).
+**Observação**  Se alterar o nome do valor de retorno e o novo nome colidir com o nome de outro parâmetro, você obterá o erro WME1091. O código JavaScript pode acessar os parâmetros de saída de um método por nome, inclusive o valor de retorno.
 
-| Número do erro | Texto da mensagem |
+| Por exemplo, consulte o atributo [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx). | Número do erro |
 |---------------|------------|
-| WME1091 | O método '\{0}' tem o valor de retorno chamado '\{1}', que é o mesmo de um nome de parâmetro. Os parâmetros de método de Tempo de Execução do Windows e o valor de retorno devem ter nomes exclusivos. |
-| WME1092 | O método '\{0}' tem um parâmetro chamado '\{1}', que é o mesmo nome do valor de retorno padrão. Leve em consideração usar outro nome para o parâmetro ou usar o System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explicitamente o nome do valor de retorno.<br/>**Observação**  O nome padrão é "returnValue" para acessadores de propriedade e "value" para todos os outros métodos. |
+| Texto da mensagem | WME1091 O método '\{0}' tem o valor de retorno chamado '\{1}', que é o mesmo de um nome de parâmetro. |
+| Os parâmetros de método de Tempo de Execução do Windows e o valor de retorno devem ter nomes exclusivos. | WME1092 O método '\{0}' tem um parâmetro chamado '\{1}', que é o mesmo nome do valor de retorno padrão.<br/>Leve em consideração usar outro nome para o parâmetro ou usar o System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explicitamente o nome do valor de retorno. |
  
 
-## Tópicos relacionados
+## **Observação**  O nome padrão é "returnValue" para acessadores de propriedade e "value" para todos os outros métodos.
 
-* [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-* [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](https://msdn.microsoft.com/library/hh925576.aspx)
+* [Tópicos relacionados](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -466,7 +466,7 @@ Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta co
 ## Artigos relacionados
 
 
-* [Manipular entrada do ponteiro](handle-pointer-input.md)
+* [Identificar entrada do ponteiro](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
 
 **Exemplos**
@@ -493,6 +493,6 @@ Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta co
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

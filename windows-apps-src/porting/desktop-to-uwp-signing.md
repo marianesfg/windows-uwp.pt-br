@@ -52,6 +52,6 @@ Para corrigir esses binários malformados, certifique-se de que eles estejam em 
 - [SignTool.exe (ferramenta de assinatura)](https://msdn.microsoft.com/library/8s9b9yaz(v=vs.110).aspx)
 - [Como assinar um pacote do aplicativo usando a SignTool](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835835(v=vs.85).aspx)
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

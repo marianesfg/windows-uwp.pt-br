@@ -45,6 +45,6 @@ A especificação XAML 2009 destaca outros primitivos no nível da linguagem XAM
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

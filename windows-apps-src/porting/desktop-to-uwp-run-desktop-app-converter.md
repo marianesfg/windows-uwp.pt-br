@@ -3,8 +3,8 @@ author: awkoren
 Description: "Execute o conversor de aplicativos da área de trabalho para converter um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms) em um aplicativo UWP (Plataforma Universal do Windows)."
 Search.Product: eADQiWindows 10XVcnh
 title: "Visualização Conversor de Aplicativos da Área de Trabalho (Projeto Centennial)"
-ms.sourcegitcommit: 6d1c6e836d666972641320c73896459490f45924
-ms.openlocfilehash: 874b6452386526d66062a27a5b520cb1a232ae64
+ms.sourcegitcommit: 07016fabb8b49e57dd0ae4ef68447451d31aa2dc
+ms.openlocfilehash: bc28197cccc0559f57abc8cb81e23bf241ca3716
 
 ---
 
@@ -22,9 +22,14 @@ O conversor executa o instalador da área de trabalho em um ambiente isolado do 
 
 Esta seção descreve as mudanças entre versões do conversor de aplicativos da área de trabalho. 
 
+### 16/6/2016
+
+* O Desktop App Converter (v0.1.20) corrige qualquer problema que impeça que as conversões sejam bem-sucedidas nas compilações mais recentes do Windows 10 Insider Preview. 
+* Substituído o ```–CreateX86Package``` pelo ```–PackageArch```, o que permite que você especifique a arquitetura para o pacote gerado. 
+
 ### 8/6/2016
 
-* Adicionado o suporte para a geração de pacotes appx x86 em máquinas host AMD64 que executam o conversor.
+* Adicionado o suporte para a geração de pacotes appx x86 em computadores host AMD64 que executam o conversor.
 * Uso de espaço em disco reduzido pela remoção de todas as imagens base expandidas anteriormente.
 * Adicionado o suporte para a limpeza dos arquivos temporários e as imagens de base desnecessárias.
 * Suporte aprimorado para a detecção de associações de protocolo e tipo de arquivo.
@@ -210,12 +215,12 @@ get-help .\DesktopAppConverter.ps1 -detailed
 |```Cleanup WorkDirectory``` | Remove todos os arquivos temporários do conversor. |
 |```Cleanup ExpandedImages``` | Exclui todas as imagens de base expandidas instaladas no computador host. |
 
-### Parâmetros do pacote x86
-A visualização de conversor de aplicativo de área de trabalho agora dá suporte à criação de pacotes de aplicativo x86 que você pode instalar e executar em máquinas x86 e amd64. Observe que o conversor de aplicativo da área de trabalho ainda precisa ser executado em uma máquina AMD64 para realizar uma conversão bem-sucedida.
+### Arquitetura de pacotes
+O Desktop App Converter Preview agora dá suporte à criação de pacotes de aplicativos x86 e x64 que você pode instalar e executar em computadores x86 e amd64. Observe que o Desktop App Converter ainda precisa ser executado em um computador AMD64 para realizar uma conversão bem-sucedida.
 
 |Parâmetro|Descrição|
 |---------|-----------|
-|```-CreateX86Package[<SwitchParameter>]``` | Gera um pacote de 32 bits que pode ser instalado e executado em um sistema operacional host de 32 bits e 64 bits. Por padrão, o conversor tenta detectar a arquitetura de pacote do executável principal do aplicativo ou assumirá como padrão 64 bits se nenhum exe for encontrado. |
+|```-PackageArch <String>``` | Gera um pacote com a arquitetura especificada. As opções válidas são 'x86' ou 'x64'; por exemplo, -PackageArch x86. Este parâmetro é opcional. Se não for especificado, o DesktopAppConverter tentará detectar automaticamente a arquitetura do pacote. Se a detecção automática falhar, o padrão será pacote x64. |
 
 ## Consulte também
 + [Baixar o conversor de aplicativos da área de trabalho](http://go.microsoft.com/fwlink/?LinkId=785437)
@@ -227,6 +232,6 @@ A visualização de conversor de aplicativo de área de trabalho agora dá supor
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

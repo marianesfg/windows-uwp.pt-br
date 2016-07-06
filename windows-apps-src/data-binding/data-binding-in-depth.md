@@ -3,8 +3,8 @@ author: mcleblanc
 ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: "Vinculação de dados em detalhes"
 description: "A vinculação de dados é uma maneira de a interface do usuário do seu aplicativo exibir dados e, opcionalmente, ficar em sincronia com esses dados."
-ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
-ms.openlocfilehash: c371ca1804d76a0ffdf812cfb933b03916654bad
+ms.sourcegitcommit: ca92d44cc8e3fb7eaed5a522435efe9cb4796560
+ms.openlocfilehash: d12f8d6bd44323cf1c19bff1ac080070ba0e8ed2
 
 ---
 # Vinculação de dados em detalhes
@@ -12,15 +12,15 @@ ms.openlocfilehash: c371ca1804d76a0ffdf812cfb933b03916654bad
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** APIs Importantes **
+**APIs Importantes**
 
 -   [**Classe Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820)
 -   [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)
 -   [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)
 
-**Observação**  Este tópico descreve detalhadamente os recursos de vinculação de dados. Para obter uma introdução breve e prática, consulte [Visão geral da vinculação de dados](data-binding-quickstart.md).
+> **Observação**
+            &nbsp;&nbsp;Este tópico descreve detalhadamente os recursos de vinculação de dados. Para obter uma introdução breve e prática, consulte [Visão geral da vinculação de dados](data-binding-quickstart.md).
 
- 
 
 A vinculação de dados é uma maneira de a interface do usuário do seu aplicativo exibir dados e, opcionalmente, ficar em sincronia com esses dados. A vinculação de dados permite separar a preocupação dos dados da preocupação da interface do usuário, e isso resulta em um modelo conceitual mais simples, bem como melhor legibilidade, capacidade de teste e capacidade de manutenção do seu aplicativo.
 
@@ -77,7 +77,7 @@ Uma maneira mais simples de tornar uma classe observável — e uma necessária 
 
 **Observação**  Para C++/CX, você implementa [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899), e a classe de origem de associação deve ter o [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) ou implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878).
 
-``` csharp
+```csharp
 public class HostViewModel : INotifyPropertyChanged
 {
     private string nextButtonText;
@@ -111,7 +111,7 @@ Agora a propriedade **NextButtonText** é observável. Quando você cria uma ass
 
 Assim, você não precisa implementar o padrão mostrado acima várias vezes, você só precisa derivar a classe de base **BindableBase** que encontrará na amostra [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (na pasta "Comum"). Consulte um exemplo de como fica.
 
-``` csharp
+```csharp
 public class HostViewModel : BindableBase
 {
     private string nextButtonText;
@@ -151,11 +151,11 @@ Você pode associar controles de lista a fontes de dados arbitrariamente grandes
 Nos dois exemplos a seguir, a propriedade **Button.Content** é o destino da associação, e seu valor é definido como uma extensão de marcação que declara o objeto de associação. Primeiro [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) é mostrado e depois [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Declarar as associações na marcação é o caso comum (é conveniente, legível e editável). Porém, você pode evitar a marcação e criar obrigatoriamente (programaticamente) uma instância da classe [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820), se precisar.
 
 <!-- XAML lang specifier not yet supported in OP. Using XML for now. -->
-``` xml
+```xml
 <Button Content="{x:Bind ...}" ... />
 ```
 
-``` xml
+```xml
 <Button Content="{Binding ...}" ... />
 ```
 
@@ -163,7 +163,7 @@ Nos dois exemplos a seguir, a propriedade **Button.Content** é o destino da ass
 
 Há uma etapa que precisamos fazer antes de criar nossa marcação [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). Precisamos expor nossa classe de origem de associação da classe que representa nossa página de marcação. Fazemos isso adicionando uma propriedade (do tipo **HostViewModel** neste caso) à classe da página **HostView**.
 
-``` csharp
+```csharp
 namespace QuizGame.View
 {
     public sealed partial class HostView : Page
@@ -181,7 +181,7 @@ namespace QuizGame.View
 
 Quando concluído, podemos dar uma olhada na marcação que declara o objeto de associação. O exemplo a seguir usa o mesmo destino da associação **Button.Content** que usamos na seção "Destino da associação" anteriormente, e mostra a vinculação à propriedade **HostViewModel.NextButtonText**.
 
-``` xml
+```xml
 <Page x:Class="QuizGame.View.HostView" ... >
     <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
 </Page>
@@ -197,7 +197,7 @@ A propriedade [**Path**](https://msdn.microsoft.com/library/windows/apps/windows
 
 Dentro de um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) (se usado como um modelo de item, um modelo de conteúdo ou um modelo de cabeçalho), o valor de **Path** não é interpretado no contexto da página, mas no contexto do objeto de dados que está sendo modelado. Para que suas associações possam ser validadas (e um código eficiente gerado para elas) no momento da compilação, um **DataTemplate** precisa declarar o tipo de seu objeto de dados usando **x:DataType**. A amostra abaixo pode ser usada como o **ItemTemplate** de um controle de itens associado a uma coleção de objetos **SampleDataGroup**.
 
-``` xml
+```xml
 <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{x:Bind Title}"/>
@@ -222,7 +222,7 @@ O código para dar suporte a **{x:Bind}** é gerado no tempo de compilação nas
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) presume que, por padrão, você está associando ao [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) da sua página de marcação. Portanto, definiremos o **DataContext** de nossa página como uma instância de nossa classe de origem de associação (do tipo **HostViewModel**, nesse caso). O exemplo a seguir mostra a marcação que declara o objeto de associação. Usamos o mesmo destino da associação **Button.Content** usado na seção "Destino da associação" anteriormente e associamos à propriedade **HostViewModel.NextButtonText**.
 
-``` xml
+```xml
 <Page xmlns:viewmodel="using:QuizGame.ViewModel" ... >
     <Page.DataContext>
         <viewmodel:HostViewModel/>
@@ -240,7 +240,7 @@ Um objeto de associação tem uma propriedade **Source**, que assume como padrã
 
 Dentro de um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348), o [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) é definido como o objeto de dados que está sendo modelado. O exemplo abaixo pode ser usado como o **ItemTemplate** de um controle de itens associado a uma coleção de qualquer tipo que tem propriedades de string chamadas **Title** e **Description**.
 
-``` xml
+```xml
 <DataTemplate x:Key="SimpleItemTemplate">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{Binding Title}"/>
@@ -259,7 +259,7 @@ Se desejar controlar a visibilidade de um elemento de interface do usuário com 
 
 Consulte um conversor de valor, adequado para uma associação única ou unidirecional, que converte um valor [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx) em um valor de string que contém o mês. A classe implementa [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
 
-``` csharp
+```csharp
 public class DateToStringConverter : IValueConverter
 {
     // Define the Convert method to convert a DateTime value to 
@@ -296,7 +296,7 @@ public class DateToStringConverter : IValueConverter
 }
 ```
 
-``` vbnet
+```vbnet
 Public Class DateToStringConverter
     Implements IValueConverter
 
@@ -338,7 +338,7 @@ End Class
 
 E aqui está como consumir esse conversor de valor em sua marcação de objeto de associação.
 
-``` xml
+```xml
 <UserControl.Resources>
   <local:DateToStringConverter x:Key="Converter1"/>
 </UserControl.Resources>
@@ -368,7 +368,7 @@ A [Extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/
 
 TemplatesResourceDictionary.xaml
 
-``` xml
+```xml
 <ResourceDictionary
     x:Class="ExampleNamespace.TemplatesResourceDictionary"
     .....
@@ -384,7 +384,7 @@ TemplatesResourceDictionary.xaml
 
 TemplatesResourceDictionary.xaml.cs
 
-``` csharp
+```csharp
 using Windows.UI.Xaml.Data;
  
 namespace ExampleNamespace
@@ -401,7 +401,7 @@ namespace ExampleNamespace
 
 MainPage.xaml
 
-``` xml
+```xml
 <Page x:Class="ExampleNamespace.MainPage"
     ....
     xmlns:examplenamespace="using:ExampleNamespace">
@@ -421,7 +421,7 @@ MainPage.xaml
 
 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) dá suporte a um recurso chamado de associação de eventos. Com esse recurso, você pode especificar o manipulador para um evento usando uma associação, que é uma opção adicional sobre a manipulação de eventos com um método no arquivo de código. Digamos que você tenha uma propriedade **RootFrame** em sua classe **MainPage**.
 
-``` csharp
+```csharp
     public sealed partial class MainPage : Page
     {
         ....    
@@ -431,7 +431,7 @@ MainPage.xaml
 
 Em seguida, você pode associar um evento **Click** de um botão a um método no objeto **Frame** retornado pela propriedade **RootFrame** como este. Observe que nós também associamos a propriedade **IsEnabled** do botão a outro membro do mesmo **Frame**.
 
-``` xml
+```xml
     <AppBarButton Icon="Forward" IsCompact="True"
     IsEnabled="{x:Bind RootFrame.CanGoForward, Mode=OneWay}"
     Click="{x:Bind RootFrame.GoForward}"/>
@@ -441,13 +441,14 @@ Métodos sobrecarregados não podem ser usados para manipular um evento com essa
               **Frame.GoBack**
             ](https://msdn.microsoft.com/library/windows/apps/Dn996568) é sobrecarregado, de modo que não podemos usar esse método com essa técnica.
 
-A técnica de associação de eventos é semelhante a implementar e consumir comandos (um comando é uma propriedade que retorna um objeto que implementa a interface [**ICommand**](T:System.Windows.Input.ICommand)). [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) e [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) funcionam com comandos. Para que você não precise implementar o padrão de comando várias vezes, pode usar a classe auxiliar **DelegateCommand** que encontrará na amostra [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (na pasta "Comum").
+A técnica de associação de eventos é semelhante a implementar e consumir comandos (um comando é uma propriedade que retorna um objeto que implementa a interface [**ICommand**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.icommand.aspx)). [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) e [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) funcionam com comandos. Para que você não precise implementar o padrão de comando várias vezes, pode usar a classe auxiliar **DelegateCommand** que encontrará na amostra [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (na pasta "Comum").
+
 
 ## Associando a uma coleção de pastas ou arquivos
 
 Você pode usar as APIs do namespace [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) para recuperar dados de pastas e arquivos. No entanto, os diversos métodos **GetFilesAsync**, **GetFoldersAsync** e **GetItemsAsync** não retornam valores adequados para a associação a controles de lista. Em vez disso, você deve associar os valores de retorno dos métodos [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422), [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428) e [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430) da classe [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501). A amostra de código a seguir, da [amostra de StorageDataSource e GetVirtualizedFilesVector](http://go.microsoft.com/fwlink/p/?linkid=228621), mostra o padrão de uso típico. Lembre-se de declarar a funcionalidade **picturesLibrary** em seu manifesto de pacote do aplicativo e confirmar que há imagens na sua pasta de biblioteca de imagens.
 
-``` csharp
+```csharp
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var library = Windows.Storage.KnownFolders.PicturesLibrary;
@@ -486,7 +487,7 @@ Para ativar o recurso de agrupamento de um [**CollectionViewSource**](https://ms
 
 O exemplo a seguir ilustra o padrão "tem-um-grupo". A classe page tem uma propriedade chamada [**ViewModel**](https://msdn.microsoft.com/library/windows/apps/BR208713), que retorna uma instância de nosso modelo de exibição. O [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) associa à propriedade **Authors** do modelo de exibição (**Authors** é a coleção de objetos de grupo) e também especifica que é a propriedade **Author.BookSkus** que contém os itens agrupados. Por fim, o [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) está associado a **CollectionViewSource**, e tem seu estilo de grupo definido para que possa renderizar os itens em grupos.
 
-``` csharp
+```csharp
     <Page.Resources>
         <CollectionViewSource
         x:Name="AuthorHasACollectionOfBookSku"
@@ -511,7 +512,7 @@ Você pode implementar o padrão "é-um-grupo" de uma de duas maneiras. Uma mane
 
 O exemplo a seguir ilustra o padrão "é-um-grupo" usando [LINQ](http://msdn.microsoft.com/library/bb397926.aspx). Desta vez, agrupamos livros por gênero, exibido com o nome do gênero nos cabeçalhos de grupo. Isso é indicado pelo caminho de propriedade "Key" na referência ao valor [**Key**](https://msdn.microsoft.com/library/windows/apps/bb343251.aspx) do grupo.
 
-``` csharp
+```csharp
     using System.Linq;
 
     ...
@@ -535,7 +536,7 @@ O exemplo a seguir ilustra o padrão "é-um-grupo" usando [LINQ](http://msdn.mic
 
 Lembre-se de que, ao usar [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) com modelos de dados, precisamos indicar o tipo associado definindo um valor **x:DataType**. Se o tipo for genérico, não poderemos expressar isso na marcação e, portanto, precisamos usar [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) no modelo de cabeçalho de estilo de grupo.
 
-``` xml
+```xml
     <Grid.Resources>
         <CollectionViewSource x:Name="GenreIsACollectionOfBookSku"
         Source="{Binding Genres}"
@@ -581,7 +582,7 @@ Você também pode conectar elementos da interface de usuário aos dados usando 
 
 O exemplo a seguir mostra como implementar uma associação em código.
 
-``` xml
+```xml
 <TextBox x:Name="MyTextBox" Text="Text"/>
 ```
 
@@ -601,7 +602,7 @@ Binding binding = new Binding() { Path = new PropertyPath("Brush1") };
 MyTextBox.SetBinding(TextBox.ForegroundProperty, binding);
 ```
 
-``` vbnet
+```vbnet
 ' Create an instance of the MyColors class 
 ' that implements INotifyPropertyChanged. 
 Dim textcolor As New MyColors()
@@ -641,6 +642,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

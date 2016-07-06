@@ -50,7 +50,7 @@ Considerações sobre a interface do usuário
 -   Nas orientações retrato e paisagem, verifique se há espaço na tela suficiente para a barra de aplicativos quando o teclado virtual está ativado.
 
 Entradas
--   Toque
+-   Touch
 -   Voz
 
 Recursos típicos do dispositivo
@@ -82,7 +82,7 @@ Considerações sobre a interface do usuário
 -   O recurso Voltar do sistema está localizado na barra de navegação.
 
 Entradas
--   Toque
+-   Touch
 -   Caneta digitalizadora
 -   Teclado externo (ocasionalmente)
 -   Mouse (ocasionalmente)
@@ -112,7 +112,7 @@ Uso típico
 Considerações sobre a interface do usuário
 -   Os aplicativos podem ter um modo de exibição em janelas. O tamanho delas é determinado pelo usuário. Dependendo do tamanho da janela, pode haver entre um e três quadros. Em monitores maiores, o aplicativo pode ter mais de três quadros.
 
--   Ao usar um aplicativo em um desktop ou notebook, o usuário tem controle sobre arquivos de aplicativo. Como designer de aplicativos, forneça os mecanismos para gerenciar o conteúdo do seu aplicativo. Considere a inclusão de comandos e recursos, como "Salvar como, "Arquivos recentes" e assim por diante.
+-   Ao usar um aplicativo em um desktop ou notebook, o usuário tem controle sobre arquivos de aplicativo. Como designer de aplicativos, forneça os mecanismos para gerenciar o conteúdo do seu aplicativo. Considere a inclusão de comandos e recursos, como "Salvar como", "Arquivos recentes" e assim por diante.
 
 -   A volta ao sistema é opcional. Quando um desenvolvedor de aplicativos opta por exibi-la, ela aparece na barra de título do aplicativo.
 
@@ -149,7 +149,7 @@ Considerações sobre a interface do usuário
 -   A volta ao sistema é opcional. Quando um desenvolvedor de aplicativos optar por exibi-lo, ele aparecerá na barra de título do aplicativo.
 
 Entradas
--   Toque
+-   Touch
 -   Caneta
 -   Voz
 -   Teclado (na tela/remoto)

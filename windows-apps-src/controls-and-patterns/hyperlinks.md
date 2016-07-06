@@ -5,17 +5,17 @@ title: Hiperlinks
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 81cb45dd1f7887fef2d8851c839905117c048460
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: 1d19cfa9c272ee511fbaf89ac0076697ede470b9
 
 ---
 # Hiperlinks
 
-Os hiperlinks levam o usuário para outra parte do aplicativo, para outro aplicativo ou para iniciar um URI (Uniform Resource Identifier) específico usando um aplicativo de navegador separado. Há duas maneiras como um hiperlink pode ser adicionado a um aplicativo XAML: o elemento de texto **Hyperlink** e o controle **HyperlinkButton**.
+Os hiperlinks levam o usuário para outra parte do aplicativo, para outro aplicativo ou para iniciar um URI (Uniform Resource Identifier) específico usando um aplicativo de navegador separado. Há duas formas de se adicionar um hiperlink a um aplicativo XAML: o elemento de texto **Hyperlink** e o controle **HyperlinkButton**.
 
 ![Um botão de hiperlink](images/controls/hyperlink-button.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+
 
 -   [**Elemento de texto de hiperlink**](https://msdn.microsoft.com/library/windows/apps/dn279356)
 -   [**Controle HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)
@@ -139,7 +139,7 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 ## Recomendações
 
 -   Só use hiperlinks para navegação; não os utilize para outras ações.
--   Use o estilo Body da rampa de tipos para hiperlinks baseados em texto. Leia mais sobre [**fontes a rampa de tipos do Windows 10**](text-controls.md).
+-   Use o estilo Body da rampa de tipos para hiperlinks baseados em texto. Leia mais sobre [**fontes a rampa de tipos do Windows 10**](fonts.md).
 -   Mantenha hiperlinks diferentes distantes o suficiente para que o usuário possa diferenciar entre eles e tenha facilidade ao selecionar cada uma deles.
 -   Adicione dicas de ferramentas aos hiperlinks que indicam para onde o usuário será direcionado. Se o usuário for direcionado para um site externo, inclua o nome do domínio de nível superior na dica de ferramenta e defina o estilo do texto com uma cor de fonte secundária.
 
@@ -156,6 +156,6 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

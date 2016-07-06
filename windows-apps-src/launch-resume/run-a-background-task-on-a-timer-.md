@@ -50,12 +50,12 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
     > TimeTrigger ^ hourlyTrigger = ref new TimeTrigger(60, false);
     > ```
 
-## (Opcional) Adicionar uma condição
+## [!div class="tabbedCodeSnippets"]
 
 
--   Se necessário, crie uma condição de tarefa em segundo plano para controlar quando a tarefa será executada. Condições impedem que sua tarefa em segundo plano seja executada até que a condição em questão seja atendida. Para obter mais informações, consulte [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md).
+-   (Opcional) Adicionar uma condição Se necessário, crie uma condição de tarefa em segundo plano para controlar quando a tarefa será executada.
 
-    Neste exemplo, a condição é definida como **UserPresent** de maneira que, quando acionada, a tarefa seja executada somente quando o usuário estiver ativo. Para obter uma lista das possíveis condições, consulte [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
+    Condições impedem que sua tarefa em segundo plano seja executada até que a condição em questão seja atendida. Para obter mais informações, consulte [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md). Neste exemplo, a condição é definida como **UserPresent** de maneira que, quando acionada, a tarefa seja executada somente quando o usuário estiver ativo.
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -65,10 +65,10 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
     > SystemCondition ^ userCondition = ref new SystemCondition(SystemConditionType::UserPresent)
     > ```
 
-##  Chamar RequestAccessAsync()
+##  Para obter uma lista das possíveis condições, consulte [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
 
 
--   Antes de tentar registrar a tarefa em segundo plano [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494).
+-   [!div class="tabbedCodeSnippets"]
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -78,12 +78,12 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
     > BackgroundExecutionManager::RequestAccessAsync();
     > ```
 
-## Registrar a tarefa em segundo plano
+## Chamar RequestAccessAsync()
 
 
--   Registre a tarefa em segundo plano chamando sua função de registro de tarefa em segundo plano. Para saber mais sobre como registrar tarefas em segundo plano, consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md).
+-   Antes de tentar registrar a tarefa em segundo plano [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494). [!div class="tabbedCodeSnippets"]
 
-    O código a seguir registra a tarefa em segundo plano:
+    Registrar a tarefa em segundo plano
 
     > > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -99,39 +99,39 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
 
-    > **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
+    > Registre a tarefa em segundo plano chamando sua função de registro de tarefa em segundo plano. Para saber mais sobre como registrar tarefas em segundo plano, consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md). O código a seguir registra a tarefa em segundo plano:
 
 
-## Comentários
+## [!div class="tabbedCodeSnippets"]
 
-> **Observação**  A partir do Windows 10, o usuário não precisa mais adicionar o aplicativo à tela de bloqueio para usar tarefas em segundo plano. Para obter diretrizes sobre os tipos de gatilhos de tarefa em segundo plano, consulte [Dar suporte ao aplicativo com tarefas em segundo plano](support-your-app-with-background-tasks.md).
+> **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido.
 
-> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
-
-## Tópicos relacionados
+> Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar. Comentários
 
 
-* [Criar e registrar uma tarefa em segundo plano](create-and-register-a-background-task.md)
-* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
-* [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
-* [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
-* [Registrar uma tarefa em segundo plano](register-a-background-task.md)
-* [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
-* [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
-* [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
-* [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
-* [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
+## **Observação**  A partir do Windows 10, o usuário não precisa mais adicionar o aplicativo à tela de bloqueio para usar tarefas em segundo plano.
 
-* [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
- 
+* [Para obter diretrizes sobre os tipos de gatilhos de tarefa em segundo plano, consulte [Dar suporte ao aplicativo com tarefas em segundo plano](support-your-app-with-background-tasks.md).](create-and-register-a-background-task.md)
+* [**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](declare-background-tasks-in-the-application-manifest.md)
+* [Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
+* [Tópicos relacionados](monitor-background-task-progress-and-completion.md)
+* [Criar e registrar uma tarefa em segundo plano](register-a-background-task.md)
+* [Declarar tarefas em segundo plano no manifesto do aplicativo](respond-to-system-events-with-background-tasks.md)
+* [Manipular uma tarefa em segundo plano cancelada](set-conditions-for-running-a-background-task.md)
+* [Monitorar o progresso e a conclusão de tarefas em segundo plano](update-a-live-tile-from-a-background-task.md)
+* [Registrar uma tarefa em segundo plano](use-a-maintenance-trigger.md)
+* [Responder a eventos do sistema com tarefas em segundo plano](guidelines-for-background-tasks.md)
+
+* [Definir condições para executar uma tarefa em segundo plano](debug-a-background-task.md)
+* [Atualizar um bloco dinâmico de uma tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
+ 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

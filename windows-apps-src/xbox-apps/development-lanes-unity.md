@@ -49,6 +49,6 @@ Agora que você tem uma solução do Visual Studio da UWP para seu jogo, [seguir
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -5,8 +5,8 @@ title: "Caixas de seleção"
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: dcf9ca0757fdef78b71ae665772b980b08641d34
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: b1532ef10a284cbb6e28694ab1598c08b8619773
 
 ---
 # Caixas de seleção
@@ -15,7 +15,7 @@ Uma caixa de seleção é usada para marcar ou desmarcar itens de ação. Ela po
 
 ![Exemplo de estados de caixa de seleção](images/templates-checkbox-states-default.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+
 -   [**Classe CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)
 -   [**Evento Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)
 -   [**Propriedade IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 
@@ -26,7 +26,7 @@ Use uma **única caixa de seleção** para uma opção de binário Sim/Não, com
 
 ![Uma única caixa de seleção usada para uma opção individual](images/checkbox1.png)
 
-Para uma opção binária, a principal diferença entre uma **caixa de seleção** e um **botão de alternância** é que a caixa de seleção serve para status, enquanto o botão de alternância serve para ação. Você pode atrasar a confirmação de uma interação de caixa de seleção (como parte do envio de um formulário, por exemplo), mas deve confirmar a interação do botão de alternância imediatamente. Além disso, apenas caixas de seleção permitem várias seleções.
+Para uma opção binária, a principal diferença entre uma **caixa de seleção** e um [**botão de alternância**](toggles.md) é que a caixa de seleção serve para status, enquanto o botão de alternância serve para ação. Você pode atrasar a confirmação de uma interação de caixa de seleção (como parte do envio de um formulário, por exemplo), mas deve confirmar a interação do botão de alternância imediatamente. Além disso, apenas caixas de seleção permitem várias seleções.
 
 Use **várias caixas de seleção** para cenários com seleções múltiplas em que um usuário escolhe um ou mais itens de um grupo de opções que não são mutuamente exclusivos.
 
@@ -281,17 +281,19 @@ private void SetCheckedState()
 
     Em vez disso, use um grupo de botões de opção com três opções: Não temperado, Temperado e Extra temperado.
 
-    ![Grupo de botões de opção com três opções: Não temperado, Temperado e Extra temperado](images/spicyoptions.png)
+    ![Grupo de botões de opção com três opções: Não temperado, Temperado e Extratemperado](images/spicyoptions.png)
 
 
 ## Artigos relacionados
 
 -   [**Classe CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 
+-   [Botões de opção](radio-button.md)
+-   [Switch de alternância](toggles.md)
 
 
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

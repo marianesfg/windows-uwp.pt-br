@@ -17,6 +17,6 @@ Para começar, leia sobre [Jogos e DirectX](https://msdn.microsoft.com/windows/u
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

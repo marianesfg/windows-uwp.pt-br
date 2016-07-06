@@ -6,8 +6,8 @@ ms.assetid: 780209cb-3e8a-4cf7-8f80-8b8f449580bf
 label: Designing for Xbox and TV
 template: detail.hbs
 isNew: true
-ms.sourcegitcommit: 21be5cd53ed124e3b35f5887fb16e7b0405f000b
-ms.openlocfilehash: daa1df78409bd10ee1d5c24e8874e011d4005a82
+ms.sourcegitcommit: 0088ada82b5479cf81f568806a807c304f1d54b7
+ms.openlocfilehash: f64ed435a285d6d0a8a6d9763b7f23d3a120ffa0
 
 ---
 
@@ -61,13 +61,11 @@ Agora que você conhece os princípios de design de aplicativo UWP adequados par
 | [Cores](#colors)  |  A UWP é compatível com temas de cores e um aplicativo que respeita o tema do sistema será padonizado como **escuro** no Xbox One. Se o seu aplicativo tiver um tema de cor específico, você deve considerar que algumas cores não funcionam bem na TV e devem ser evitadas. |
 | [Som](../style/sound.md)    | Sons desempenham um papel fundamental na experiência de 3 metros, ajudando a imergir e enviar seus comentários para o usuário. A UWP fornece funcionalidade que ativa sons para controles comuns automaticamente quando o aplicativo é executado no Xbox One. Saiba mais sobre o suporte a som incorporado à UWP e saiba como tirar proveito dele.    |
 | [Diretrizes de controles da interface do usuário](#guidelines-for-ui-controls)  |  Há vários controles de interface do usuário que funcionam bem em vários dispositivos, mas existem certas considerações quando usados na TV. Leia sobre algumas práticas recomendadas para usar esses controles ao projetar para a experiência de 3 metros. |
-
-<!--[elcowle] We may uncomment this now that the Sound article is live-->
-<!--| [Sound](../style/sound.md)  |  Sounds play a key role in the 10-foot experience, helping to immerse and give feedback to the user. The UWP provides functionality that automatically turns on sounds for common controls when the app is running on Xbox One. Find out more about the sound support built into the UWP and learn how to take advantage of it. |-->
+| [Gatilho de estado visual personalizado para Xbox](#custom-visual-state-trigger-for-xbox) | Para adaptar seu aplicativo UWP para a experiência de 3 metros, recomendamos que você use um *gatilho de estado visual* para fazer alterações de layout quando o aplicativo detectar que foi iniciado em um console do Xbox.
 
 ## Gamepad e controle remoto
 
-Assim como o teclado e o mouse são para o computador, e o toque é para o telefone e o tablet, o gamepad e o controle remoto são os dispositivos de entrada principais para a experiência de 3 metros. Esta seção apresenta os botões de hardware e o que eles fazem. Em [Interação e navegação de foco do plano XY](#xy-focus-navigation-and-interaction) e [Modo de mouse](#mouse-mode), você aprenderá como otimizar seu aplicativo ao usar esses dispositivos de entrada.
+Assim como o teclado e o mouse são para o computador e o toque é para o telefone e o tablet, o gamepad e o controle remoto são os dispositivos de entrada principais para a experiência de 3 metros. Esta seção apresenta os botões de hardware e o que eles fazem. Em [Interação e navegação de foco do plano XY](#xy-focus-navigation-and-interaction) e [Modo de mouse](#mouse-mode), você aprenderá como otimizar seu aplicativo ao usar esses dispositivos de entrada.
 
 A qualidade do comportamento do gamepad e do controle remoto que você obtém de imediato depende do nível de suporte ao teclado em seu aplicativo. Uma boa maneira de garantir que seu aplicativo funcione bem com gamepad/controle remoto é se certificar de que ele funcione bem com o teclado no computador e, seguida, testá-lo com gamepad/controle remoto para encontrar pontos fracos na sua interface do usuário.
 
@@ -110,7 +108,9 @@ A UWP mapeia automaticamente o comportamento existente de entrada do teclado par
 | Tecla Enter                 | Botão A/Selecionar                       |
 | Escape                | Botão B/Voltar*                        |
 
-\*Quando nem os eventos [KeyDown](https://msdn.microsoft.com/library/windows/apps/br208941) nem [KeyUp](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.keyup.aspx) do botão B são manipulados pelo aplicativo, o evento [SystemNavigationManager.BackRequested](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx) será acionado, o que resultará na navegação regressiva no aplicativo.
+\*Quando nem os eventos [KeyDown](https://msdn.microsoft.com/library/windows/apps/br208941) nem [KeyUp](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.keyup.aspx) do botão B forem manipulados pelo aplicativo, o evento [SystemNavigationManager.BackRequested](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx) será acionado, o que resultará na navegação regressiva no aplicativo.
+
+Os aplicativos UWP no Xbox One também oferecem suporte ao pressionamento do botão **Menu** para abrir menus de contexto. Para obter mais informações, consulte [CommandBar e ContextFlyout](#commandbar-and-contextflyout).
 
 ### Suporte a acelerador
 
@@ -120,16 +120,52 @@ A tabela a seguir lista o suporte a acelerador incorporado à UWP, bem como o qu
 
 | Interação   | Teclado   | Gamepad      | Incorporado em:  | Recomendado para: |
 |---------------|------------|--------------|----------------|------------------|
-| Movimento panorâmico       | Nenhuma       | Joystick direito  | Nenhuma           |      [ScrollViewer](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) |
-| Page up/Page down  | Page up/Page down | Gatilhos para esquerda/direita | Nenhuma | `ScrollViewer` e lista/grade
-| Página esquerda/direita | Nenhuma | Complementos para a esquerda/direita | [Pivô](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.pivot.aspx) | `ScrollViewer`
-| Ampliar/reduzir        | Ctrl +/- | Gatilhos para esquerda/direita | `ScrollViewer` | Modos de exibição compatíveis com ampliação e redução
+| Page up/Page down  | Page up/Page down | Gatilhos esquerdo/direito | [CalendarView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.calendarview.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [ComboBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | Exibições que dão suporte à rolagem vertical
+| Página esquerda/direita | Nenhum | Botões superiores esquerdo/direito | [Pivot](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.pivot.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | Exibições que dão suporte à rolagem horizontal
+| Ampliar/reduzir        | Ctrl +/- | Gatilhos esquerdo/direito | Nenhum | `ScrollViewer`, exibições que dão suporte a ampliação e redução |
+| Abrir/fechar painel de navegação | Nenhum | Visão | Nenhum | Painéis de navegação
 
 ## Interação e navegação de foco do plano XY
 
-Se o seu aplicativo dá suporte à navegação de foco adequada para teclado, isso será convertido corretamente para o gamepad e o controle remoto. A navegação com as teclas de direção é mapeada para o **D-pad** (bem como o **joystick esquerdo** no gamepad), e a interação com os elementos de interface do usuário é mapeada para a tecla **Enter/Select** (consulte [Gamepad e controle remoto](#gamepad-and-remote-control)). Para obter as diretrizes de design de teclado, veja [Interações de teclado](keyboard-interactions.md).
+Se o seu aplicativo dá suporte à navegação de foco adequada para teclado, isso será convertido corretamente para o gamepad e o controle remoto. A navegação com as teclas de direção é mapeada para o **D-pad** (bem como o **joystick esquerdo** no gamepad), e a interação com os elementos de interface do usuário é mapeada para a tecla **Enter/Select** (consulte [Gamepad e controle remoto](#gamepad-and-remote-control)). 
 
-Se o suporte ao teclado for implementado corretamente, seu aplicativo funcionará razoavelmente bem; no entanto, pode haver algum trabalho extra necessário para dar suporte a cada cenário. Pense em necessidades específicas do seu aplicativo para fornecer a melhor experiência possível ao usuário.
+Muitos eventos e propriedades são usados pelo teclado e pelo gamepad &mdash; ambos disparam os eventos `KeyDown` e `KeyUp`, e ambos navegarão apenas para controles que tenham as propriedades `IsTabStop="True"` e `Visibility="Visible"`. Para obter diretrizes de design de teclado, consulte [Interações de teclado](keyboard-interactions.md).
+
+Se o suporte ao teclado for implementado corretamente, seu aplicativo funcionará razoavelmente bem; no entanto, pode haver algum trabalho extra necessário para dar suporte a cada cenário. Pense em necessidades específicas do seu aplicativo para oferecer a melhor experiência possível ao usuário.
+
+> [!IMPORTANT]
+> O modo de mouse é habilitado por padrão para aplicativos UWP executados no Xbox One. Para desabilitar o modo de mouse e habilitar a navegação de foco do plano XY, defina `Application.RequiresPointerMode=WhenRequested`.
+
+### Depurando problemas de foco
+
+O método [FocusManager.GetFocusedElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.focusmanager.getfocusedelement.aspx) informará qual elemento tem o foco no momento. Isso é útil para situações em que a localização do foco visual talvez não seja óbvia. Você pode registrar essa informação na janela de saída do Visual Studio da seguinte forma:
+
+```csharp
+page.GotFocus += (object sender, RoutedEventArgs e) =>
+{
+    FrameworkElement focus = FocusManager.GetFocusedElement() as FrameworkElement;
+    if (focus != null)
+    {
+        Debug.WriteLine("got focus: " + focus.Name + " (" + 
+            focus.GetType().ToString() + ")");
+    }
+};
+```
+
+Existem três motivos comuns para a navegação do plano XY não funcionar da maneira esperada:
+
+* A propriedade [IsTabStop](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.istabstop.aspx) ou [Visibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility.aspx) está definida incorretamente.
+* O controle que obtém o foco é na verdade maior que você imagina &mdash; a navegação do plano XY examina o tamanho total do controle ([ActualWidth](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.actualwidth.aspx) e [ActualHeight](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.actualheight.aspx)), não apenas a parte do controle que renderiza algo interessante.
+* Um controle focalizável está por cima de outro &mdash; a navegação do plano XY não dá suporte a controles que estão sobrepostos.
+
+Se a navegação do plano XY ainda não estiver funcionando da maneira esperada após a correção desses problemas, você poderá apontar manualmente para o elemento que deve receber o foco usando o método descrito em [Substituindo a navegação padrão](#overriding-the-default-navigation).
+
+Se a navegação do plano XY estiver funcionando conforme o esperado, mas nenhum foco visual for exibido, a causa poderá ser uma das seguintes:
+
+* Você remodelou o controle e não incluiu um foco visual. Defina `UseSystemFocusVisuals="True"` ou adicione um foco visual manualmente.
+* Você moveu o foco chamando `Focus(FocusState.Pointer)`. O parâmetro [FocusState](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.focusstate.aspx) controla o que acontece com o foco visual. Em geral, isso deve ser definido como `FocusState.Programmatic`, que mantém o foco visual visível se ele estava visível antes, e o oculta se ele estava oculto antes.
+
+O restante desta seção entra em detalhes sobre os desafios de design comuns ao usar a navegação do plano XY e oferece várias maneiras de resolvê-los.
 
 ### Interface do usuário inacessível
 
@@ -139,7 +175,7 @@ Como a navegação de foco do plano XY limita o usuário a se mover para cima, p
 
 Se por algum motivo a reorganização da interface do usuário não for possível, use uma das técnicas discutidas na próxima seção para substituir o comportamento de foco padrão.
 
-### Substituindo a navegação padrão <a name="overriding-the-default-navigation"></a>
+### Substituindo a navegação padrão
 
 Embora a UWP tente garantir que a navegação com D-pad/joystick esquerdo faça sentido para o usuário, ela não pode garantir que o comportamento seja otimizado para a finalidade do seu aplicativo. A melhor maneira de garantir que a navegação seja otimizada para o seu aplicativo é testá-lo com um gamepad e confirmar se cada elemento da interface do usuário pode ser acessado pelo usuário de forma que faça sentido nos cenários do seu aplicativo. Caso os cenários do seu aplicativo necessitem de um comportamento não conseguido através da navegação de foco do plano XY fornecida, considere seguir as recomendações das seções a seguir e/ou substituir o comportamento para colocar o foco em um item lógico.
 
@@ -173,7 +209,7 @@ Para impedir que o foco se mova de um controle em uma determinada direção, use
         XYFocusLeft ="{x:Bind HomeButton}" />
 ```
 
-### Caminho de menos cliques <a name="path-of-least-clicks"></a>
+### Caminho de menos cliques
 
 Tente permitir que o usuário execute as tarefas mais comuns com o menor número de cliques. No exemplo a seguir, o [TextBlock](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) é colocado entre o botão **Reproduzir** (que inicialmente recebe o foco) e um elemento comumente usado, sendo assim, um elemento desnecessário seja colocado entre as tarefas prioritárias.
 
@@ -189,20 +225,62 @@ Ao usar um [CommandBar](https://msdn.microsoft.com/en-us/library/windows/apps/wi
 
 ![CommandBar na parte inferior da lista/grade](images/designing-for-tv/2d-navigation-best-practices-commandbar-and-contextflyout.png)
 
-E se você colocar o elemento `CommandBar`*acima* da lista/grade? Embora o usuário que rolou a lista/grade para baixo tenha que rolar de volta para cima para acessar o `CommandBar`, haverá um pouco menos de navegação do que na configuração anterior. Observe que isso pressupõe que o foco inicial do seu aplicativo seja colocado ao lado ou acima do `CommandBar`; Essa abordagem não funcionará bem se o foco inicial está abaixo da lista/grade. Se esses itens `CommandBar` forem itens de ação global que não tenham que ser acessados com frequência (tal como um botão **Sincronizar**), talvez seja aceitável tê-los acima da lista/grade.
+E se você colocar o elemento `CommandBar`*acima* da lista/grade? Embora o usuário que rolou a lista/grade para baixo tenha que rolar de volta para cima para acessar o `CommandBar`, haverá um pouco menos de navegação do que na configuração anterior. Observe que isso pressupõe que o foco inicial do seu aplicativo seja colocado ao lado ou acima do `CommandBar`; Essa abordagem não funcionará bem se o foco inicial está abaixo da lista/grade. Se esses itens de `CommandBar` forem itens de ação global que não precisem ser acessados com frequência (como um botão **Sincronizar**), talvez seja aceitável tê-los acima da lista/grade.
 
-Se o seu aplicativo tiver um `CommandBar` cujos itens precisam ser prontamente acessados pelos usuários, considere colocar esses itens dentro de um `ContextFlyout` e remova-os do `CommandBar`. 
+Embora você não possa empilhar itens de uma `CommandBar`verticalmente, colocá-los contra a direção de rolagem (por exemplo, para a esquerda ou direita de uma lista de rolagem vertical, ou para cima ou para baixo de uma lista de rolagem horizontal) é outra opção que você poderá considerar se ela funcionar bem no layout de sua interface do usuário.
 
-Embora você não possa empilhar itens de um `CommandBar`verticalmente, colocá-los contra a direção de rolagem (por exemplo, para a esquerda ou direita de uma lista de rolagem vertical, ou para cima ou para baixo de uma lista de rolagem horizontal) é outra opção que você pode considerar se ela funcionar bem no layout de sua interface do usuário.
+Se o seu aplicativo tiver uma `CommandBar` cujos itens precisam ser prontamente acessados pelos usuários, considere colocar esses itens dentro de uma propriedade [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) e remova-os da `CommandBar`. `ContextFlyout` é uma propriedade de [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx) e é o [menu de contexto](../controls-and-patterns/dialogs-popups-menus.md#context-menus-and-flyouts) associado a esse elemento. No computador, quando você clica em um elemento com `ContextFlyout`, esse menu de contexto é aberto. No Xbox One, isso acontecerá quando você pressionar o botão **Menu** enquanto o foco estiver em um elemento.
+
+<!--The following XAML code demonstrates a simple `ContextFlyout`:
+
+```xml
+<Button HorizontalAlignment="Center"
+        Content="Context Flyout">
+    <Button.ContextFlyout>
+        <MenuFlyout>
+            <MenuFlyoutItem Text="Item 1"/>
+        </MenuFlyout>
+    </Button.ContextFlyout>
+</Button>
+```
+
+In the above example, when you press the **Menu** button while the [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) has focus, the context menu appears with the menu item labeled **Item 1**.
+
+`ContextFlyout` takes any element of type [FlyoutBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.aspx); however, most of the time you will likely use [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.aspx) or [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyout.aspx).
+
+Alternatively, you can listen for the [ContextRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextrequested.aspx) event, which occurs when the user has completed a context input gesture (pressing the **Menu** button). In this case you can, in the code-behind, create the context menu, attach it to the **UIElement**, and show the flyout when the event is raised.
+
+The following C# code demonstrates a simple example of this:
+
+```csharp
+MenuFlyout myFlyout = new MenuFlyout();
+MenuFlyoutItem item1 = new MenuFlyoutItem();
+item1.Text = "Item 1";
+myFlyout.Items.Add(item1);
+MyButton.ContextFlyout = myFlyout;
+
+private void MyButton_ContextRequested(UIElement sender, ContextRequestedEventArgs args)
+{
+    Point point = new Point(0, 0);
+    if (args.TryGetPosition(sender, out point)
+    {
+        myFlyout.ShowAt(sender, point);
+    }
+    else
+    {
+        myFlyout.ShowAt(sender as FrameworkElement);
+    }
+}
+```
+> **Note** Don't use both of these options, as `ContextFlyout` already handles the `ContextRequested` event.-->
 
 ### Desafios de layout de interface do usuário
 
 Alguns layouts de interface do usuário são mais desafiadores devido à natureza da navegação de foco do plano XY e devem ser avaliados caso a caso. Embora não haja uma única maneira "correta", e a solução que você escolher depende das necessidades específicas do seu aplicativo, existem algumas técnicas que você pode utilizar para criar uma ótima experiência de TV.
 
-Para entender isso melhor, vamos examinar um aplicativo imaginário que ilustra alguns desses problemas e técnicas para superá-los.
+Para entender isso melhor, vamos examinar um aplicativo imaginário que ilustra alguns desses problemas, e as técnicas para superá-los.
 
-> **Observação**
-            &nbsp;&nbsp;Este aplicativo fictício serve para ilustrar problemas de interface do usuário e as possíveis soluções para eles, e não se destina a mostrar a melhor experiência de usuário para seu aplicativo específico.
+> [!NOTE] Esse aplicativo fictício serve para ilustrar problemas de interface do usuário e as possíveis soluções para eles, e não se destina a mostrar a melhor experiência de usuário para seu aplicativo específico.
 
 A seguir há um aplicativo de imóveis imaginário que mostra uma lista de imóveis disponíveis para venda, um mapa, uma descrição de uma propriedade e outras informações. Esse aplicativo apresenta três desafios que você pode solucionar usando as seguintes técnicas:
 
@@ -220,13 +298,13 @@ O [ListView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xa
 
 #### Soluções
 
-##### Reorganização da interface de usuário <a name="ui-rearrange"></a>
+**Reorganização da interface de usuário <a name="ui-rearrange"></a>**
 
 A menos que o foco inicial seja colocado na parte inferior da página, os elementos de interface do usuário colocados acima de uma lista de rolagem longa são normalmente mais acessíveis que se forem colocados abaixo. Se esse novo layout funciona para outros dispositivos, alterar o layout para todas as famílias de dispositivos em vez de fazer alterações especiais na interface do usuário apenas para o Xbox One pode ser uma abordagem mais barata. Além disso, colocar os elementos de interface do usuário contra a direção de rolagem (ou seja, na horizontal em uma lista de rolagem vertical, ou na vertical em uma lista de rolagem horizontal) tornará a acessibilidade ainda melhor.
 
 ![Aplicativo de imóveis: colocar botões acima da lista de rolagem longa](images/designing-for-tv/2d-focus-navigation-and-interaction-ui-rearrange.png)
 
-##### Envolvimento de foco <a name="engagement"></a>
+**Envolvimento de foco <a name="engagement"></a>**
 
 Quando o envolvimento é *necessário*, todo o `ListView` se torna um destino de foco único. O usuário poderá ignorar o conteúdo da lista para acessar o próximo elemento focalizável. Leia mais sobre quais controles oferecem suporte a envolvimento e como usá-los em [Envolvimento de foco](#focus-engagement).
 
@@ -250,26 +328,45 @@ Conforme descrito em [Interação e navegação de foco do plano XY](#xy-focus-n
 
 Para esses cenários, você deve solicitar um ponteiro (modo de mouse) para a página inteira ou em um controle dentro de uma página. Por exemplo, seu aplicativo pode ter uma página que tem um controle `WebView` que usa o modo de mouse somente enquanto está dentro do controle, e navegação de foco do plano XY em todos os outros locais. Para solicitar um ponteiro, você pode especificar que o deseja **quando uma página ou controle está envolvido** ou **quando uma página tem o foco**.
 
-> **Observação**
-            &nbsp;&nbsp;Não há suporte para a solicitação de um ponteiro quando um controle o recebe foco.
+> [!NOTE] Não há suporte para a solicitação de um ponteiro quando um controle recebe o foco.
 
-O diagrama a seguir mostra os mapeamentos de botão para gamepad/controle remoto no modo de mouse.
+Para aplicativos Web hospedados e XAML executados no Xbox One, o modo de mouse está ativado por padrão para o aplicativo inteiro. É altamente recomendável que você desative essa opção e otimize seu aplicativo para navegação do plano XY. Para fazer isso, defina a propriedade `Application.RequiresPointerMode` como `WhenRequested` para habilitar o modo de mouse somente quando um controle ou uma página o solicitar.
 
-![Mapeamentos de botão para gamepad/controle remoto no modo de mouse](images/designing-for-tv/mouse-mode.png)
+Para fazer isso em um aplicativo XAML, use o código a seguir em sua classe `App`: 
 
-> **Observação**
-            &nbsp;&nbsp;O modo de mouse só tem suporte no Xbox One com gamepad/controle remoto. Em outras famílias de dispositivos e tipos de entrada ele é silenciosamente ignorado.
+```csharp
+public App() 
+{
+    this.InitializeComponent();
+    this.RequiresPointerMode = 
+        Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
+    this.Suspending += OnSuspending;
+}
+```
 
-Use a propriedade `RequiresPointer` em um controle ou página para ativar o modo de mouse nele. `RequiresPointer` tem três valores possíveis: `Never` (o valor padrão), `WhenEngaged` e `WhenFocused`.
+Em um aplicativo HTML e JavaScript, use o seguinte:
 
-> **Observação**
-            &nbsp;&nbsp;`RequiresPointer` é uma nova API e ainda não foi documentada. 
+```javascript
+navigator.gamepadInputEmulation = "keyboard";
+```
+
+O diagrama a seguir mostra os mapeamentos de botões para gamepad/controle remoto no modo de mouse.
+
+![Mapeamentos de botões para gamepad/controle remoto no modo de mouse](images/designing-for-tv/mouse-mode.png)
+
+> [!NOTE]
+> O modo de mouse só tem suporte no Xbox One com gamepad/controle remoto. Em outras famílias de dispositivos e tipos de entrada ele é silenciosamente ignorado.
+
+Use a propriedade `RequiresPointer` em um controle ou uma página para ativar o modo de mouse no item. `RequiresPointer` tem três valores possíveis: `Never` (o valor padrão), `WhenEngaged` e `WhenFocused`.
+
+> [!NOTE]
+> `RequiresPointer` é uma API nova e ainda não foi documentada. 
 
 <!--TODO: Link to doc-->
 
 ### Ativando o modo de mouse em um controle
 
-Quando o usuário vincula um controle a `RequiresPointer="WhenEngaged"`, o modo de mouse é ativado no controle até o usuário desvinculá-lo. O trecho de código a seguir demonstra um `MapControl` simples que ativa o modo de mouse quando vinculado:
+Quando o usuário vincula um controle a `RequiresPointer="WhenEngaged"`, o modo de mouse é ativado no controle até o usuário desvinculá-lo. O trecho de código a seguir demonstra um `MapControl` simples que ativa o modo de mouse quando ativado:
 
 ```xml
 <Page>
@@ -280,8 +377,7 @@ Quando o usuário vincula um controle a `RequiresPointer="WhenEngaged"`, o modo 
 </Page> 
 ```
 
-> **Observação**
-            &nbsp;&nbsp;Se um controle ativa o modo de mouse quando vinculado, ele também deve exigir a interação com `IsEngagementRequired="true"`; caso contrário, o modo de mouse nunca será ativado.
+> [!NOTE] Se um controle ativar o modo de mouse quando ativado, ele também deverá exigir a interação com `IsEngagementRequired="true"`; caso contrário, o modo de mouse nunca será ativado.
 
 Quando um controle está no modo de mouse, seus controles aninhados estarão no modo de mouse também. O modo solicitado de seus filhos será ignorado; é impossível que um pai esteja no modo de mouse, mas um filho não esteja.
 
@@ -289,7 +385,7 @@ Além disso, o modo solicitado de um controle é inspecionado apenas quando ele 
 
 ### Ativando o modo de mouse em uma página
 
-Quando uma página tem a propriedade `RequiresPointer="WhenFocused"`, o modo de mouse será ativado para a página inteira quando ela receber foco. O trecho de código a seguir mostra como dar essa propriedade a uma página:
+Quando uma página tem a propriedade `RequiresPointer="WhenFocused"`, o modo de mouse será ativado para a página inteira quando ela receber foco. O trecho de código a seguir demonstra como fornecer essa propriedade a uma página:
 
 ```xml
 <Page RequiresPointer="WhenFocused">
@@ -297,8 +393,8 @@ Quando uma página tem a propriedade `RequiresPointer="WhenFocused"`, o modo de 
 </Page> 
 ```
 
-> **Observação**
-            &nbsp;&nbsp;O valor `WhenFocused` só é compatível com objetos [Page](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page.aspx). Se você tentar definir esse valor em um controle, uma exceção será lançada.
+> [!NOTE]
+> O valor `WhenFocused` tem suporte apenas em objetos [Page](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page.aspx). Se você tentar definir esse valor em um controle, será gerada uma exceção.
 
 ## Foco visual
 
@@ -320,25 +416,32 @@ Tente colocar o foco inicial na região superior esquerda do seu aplicativo (ou 
 
 Um foco visual sempre deve ficar visível na tela para que o usuário possa recomeçar de onde parou sem procurar o foco. Da mesma forma, deve haver um item focalizável na tela o tempo todo; por exemplo, não use pop-ups apenas com texto e sem elementos focalizáveis.
 
+Uma exceção a essa regra seria para experiências de tela inteira, como assistir a vídeos ou exibir imagens, em cujos casos não seria adequado mostrar o foco visual.
+
+### Personalizando o foco visual
+
+Se você quiser personalizar o foco visual, poderá fazer isso modificando as propriedades relacionadas ao foco visual de cada controle. Há várias propriedades desse tipo que você pode utilizar para personalizar seu aplicativo.
+
+Você pode até recusar os elementos visuais de foco fornecidos pelo sistema desenhando seus próprios estados visuais de uso. Para saber mais, consulte [VisualState](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstate.Aspx).
+
 ### Sobreposição light dismiss
 
-Para chamar a atenção do usuário para os elementos de interface do usuário que ele está manipulando no momento com o controlador de jogo ou o controle remoto, a UWP adiciona automaticamente uma camada de "fumaça" que abrange as áreas externas à interface do usuário pop-up quando o aplicativo é executado no Xbox One. Isso não requer qualquer trabalho extra, mas é algo que você deve ter em mente ao projetar sua interface do usuário.
+Para chamar a atenção do usuário para os elementos de interface do usuário que ele está manipulando no momento com o controle de jogo ou o controle remoto, a UWP adiciona automaticamente uma camada de "fumaça" que abrange as áreas externas à interface do usuário pop-up quando o aplicativo é executado no Xbox One. Isso não exige nenhum trabalho extra, mas é algo que você deve ter em mente ao projetar sua interface do usuário. Você pode definir a propriedade `LightDismissOverlayMode` em qualquer `FlyoutBase` para habilitar ou desabilitar a camada de fumaça; o padrão passa a ser `Auto`, o que significa que ela está habilitada no Xbox e desabilitada em outros lugares. Para obter mais informações, consulte [Modal vs. light dismiss](../controls-and-patterns/dialogs-popups-menus.md#modal-vs-light-dismiss).
 
 ## Envolvimento de foco
 
 O envolvimento de foco destina-se a facilitar o uso de um gamepad ou controle remoto para interagir com um aplicativo. 
 
-> **Observação**
-            &nbsp;&nbsp;Definir o envolvimento do foco não afeta o teclado ou os outros dispositivos de entrada.
+> [!NOTE] Definir o envolvimento do foco não afeta o teclado ou outros dispositivos de entrada.
 
-Quando a propriedade `IsFocusEngagementEnabled` em um objeto [FrameworkElement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) é definida como `True`, ela marca o controle para exigir o envolvimento de foco. Isso significa que o usuário deve pressionar o botão **A/Selecionar** para "envolver" o controle e interagir com ele. Ao terminar, ele poderá pressionar o botão **B/Voltar** para desvincular o controle e navegar por ele.
+Quando a propriedade `IsFocusEngagementEnabled` em um objeto [FrameworkElement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) é definida como `True`, ela marca o controle para exigir o envolvimento de foco. Isso significa que o usuário deve pressionar o botão **A/Selecionar** para "envolver" o controle e interagir com ele. Ao terminar, ele poderá pressionar o botão **B/Voltar** para desvincular o controle e navegar fora dele.
 
-> **Observação**
-            &nbsp;&nbsp;`IsFocusEngagementEnabled` é uma nova API e ainda não foi documentada.
+> [!NOTE]
+> `IsFocusEngagementEnabled` é uma API nova e ainda não foi documentada.
 
-### Ajuste de registro de foco
+### Trapping de foco
 
-O ajuste de registro de foco é o que acontece quando um usuário tenta navegar a interface do usuário de em aplicativo, mas fica "preso" dentro de um controle, dificultando ou tornando impossível se mover para fora do controle.
+O trapping de foco é o que acontece quando um usuário tenta navegar na interface do usuário de em aplicativo mas fica "preso" dentro de um controle, o que torna difícil ou impossível mover-se para fora do controle.
 
 O exemplo a seguir mostra a interface do usuário que cria o ajuste de registro de foco.
 
@@ -496,9 +599,9 @@ Por outro lado, também é importante que o texto e os elementos interativos sem
 - 27 epx da parte superior e inferior
 - 48 epx dos lados esquerdo e direito
 
-Há duas maneiras de fazer com que a interface do usuário se estenda para as bordas da tela: *limites da janela principal* e *margens negativas*.
+As seções a seguir descrevem como fazer sua interface do usuário se estender até as bordas da tela.
 
-### Limites da janela principal
+#### Limites da janela principal
 
 Para aplicativos UWP destinados apenas à experiência de 3 metros, usar os limites da janela principal é uma opção mais simples.
 
@@ -509,45 +612,40 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
     (Windows.UI.ViewManagement.ApplicationViewBoundsMode.UseCoreWindow);
 ```
 
-Com essa linha de código, a janela do aplicativo se estenderá para as bordas da tela, portanto, você precisará mover todos os elementos interativos e essenciais da interface do usuário para a área de segurança para TV descrita anteriormente. A interface de usuário transitória, como menus de contexto e [caixas de combinação abertas](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.combobox.aspx), permanecerá automaticamente dentro da área de segurança para TV.
+Com essa linha de código, a janela do aplicativo se estenderá para as bordas da tela, portanto, você precisará mover todos os elementos interativos e essenciais da interface do usuário para a área de segurança para TV descrita anteriormente. A interface de usuário transitória, como menus de contexto e [ComboBoxes](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.combobox.aspx) abertas, permanecerá automaticamente dentro da área de segurança para TV.
 
 ![Limites da janela principal](images/designing-for-tv/core-window-bounds.png)
 
-### Margens negativas
+#### Telas de fundo do painel 
 
-Para aplicativos UWP destinados a uma variedade de dispositivos como celulares, desktop e Xbox One, as margens negativas podem ser um método mais intuitivo para adequar layouts adaptáveis. Recomendamos que você crie um [gatilho personalizado](#custom-visual-state-trigger-for-xbox-one) e modifique as margens para layouts de TV.
+Os painéis de navegação normalmente são desenhados perto da borda da tela, para que a tela de fundo se estenda na área insegura para TV, de forma a não inserir espaços estranhos. Para fazer isso, basta mudar a cor da tela de fundo do painel de navegação para a cor da tela de fundo do aplicativo.
 
-#### Planos de fundo do painel 
+O uso dos limites da janela principal conforme descrito anteriormente permitirá que você desenhe sua interface de usuário até as bordas da tela, mas, em seguida, você deve usar margens positivas no conteúdo da [SplitView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.splitview.aspx) para mantê-lo dentro da área de segurança para TV.
 
-Painéis de navegação normalmente são desenhados perto da borda da tela, para que o plano de fundo se estenda para a área insegura para TV, de forma a não introduzir lacunas inadequadas. Você pode fazer isso com margens negativas no controle [SplitView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.splitview.aspx), que normalmente é usado como um bloco de construção do painel de navegação, e margens positivas no conteúdo do `SplitView` para mantê-lo dentro da área de segurança para TV.
+![Painel de navegação estendido até as bordas da tela](images/designing-for-tv/tv-safe-areas-2.png)
 
-![Painel de navegação estendido para as bordas da tela](images/designing-for-tv/tv-safe-areas-2.png)
+Aqui, o plano de fundo do painel de navegação foi estendido para as bordas da tela, enquanto os itens de navegação são mantidos na área de segurança para TV. O conteúdo da `SplitView` (neste caso, uma grade de itens) foi estendido até a parte inferior da tela para parecer que ele continua e não é cortado, enquanto a parte superior da grade ainda está dentro da área de segurança para TV. (Saiba mais sobre como fazer isso em [Rolando fins de listas e grades](#scrolling-ends-of-lists-and-grids)).
 
-Aqui, o plano de fundo do painel de navegação foi estendido para as bordas da tela, enquanto os itens de navegação são mantidos na área de segurança para TV. O conteúdo do `SplitView` (neste caso, uma grade de itens) foi estendido para a parte inferior da tela para parecer que ele continua e não é cortado, enquanto a parte superior da grade ainda está dentro da área de segurança para TV. Posteriormente nesta seção, você aprenderá como manter o item focalizado na área de segurança para TV.
-
-O trecho de código seguinte tem este efeito:
+O trecho de código a seguir tem este efeito:
 
 ```xml
 <SplitView x:Name="RootSplitView"
-           Margin="-48, -27">
-            <SplitView.Pane>
-                 <ListView x:Name="NavMenuList"
-                           Margin="0,75,0,27"
-                           ContainerContentChanging=
-                                "NavMenuItemContainerContentChanging"
-                           ItemContainerStyle="{StaticResource 
-                                NavMenuItemContainerStyle}"
-                           ItemTemplate="{StaticResource NavMenuItemTemplate}"
-                           ItemInvoked="NavMenuList_ItemInvoked"/>
-            </SplitView.Pane>
-            <Frame x:Name="frame"
-                   Margin="0,27,48,27"
-                   Navigating="OnNavigatingToPage"
-                   Navigated="OnNavigatedToPage"/>
-    </SplitView>
+           Margin="48,0,48,0">
+    <SplitView.Pane>
+        <ListView x:Name="NavMenuList"
+                  ContainerContentChanging="NavMenuItemContainerContentChanging"
+                  ItemContainerStyle="{StaticResource NavMenuItemContainerStyle}"
+                  ItemTemplate="{StaticResource NavMenuItemTemplate}"
+                  ItemInvoked="NavMenuList_ItemInvoked"
+                  ItemsSource="{Binding NavMenuListItems}"/>
+    </SplitView.Pane>
+    <Frame x:Name="frame"
+           Navigating="OnNavigatingToPage"
+           Navigated="OnNavigatedToPage"/>
+</SplitView>
 ```
 
-[CommandBar](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx) é outro exemplo de um painel que é normalmente posicionado perto de uma ou mais bordas do aplicativo e, como tal, na TV seu plano de fundo deve se estender para as bordas da tela. Ele geralmente contém um botão **Mais**, representado por "..." no lado direito, que deve permanecer na área de segurança para TV. A seguir estão algumas estratégias diferentes para obter as interações e os efeitos visuais desejados.
+[CommandBar](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx) é outro exemplo de um painel que é normalmente posicionado perto de uma ou mais bordas do aplicativo e, assim como na TV, sua tela de fundo deve se estender até as bordas da tela. Ela geralmente contém um botão **Mais**, representado por "..." no lado direito, que deve permanecer na área de segurança para TV. A seguir estão algumas estratégias diferentes para obter as interações e os efeitos visuais desejados.
 
 **Opção 1**: altere a cor do plano de fundo de `CommandBar` para transparente ou a mesma cor do plano de fundo da página:
 
@@ -560,12 +658,11 @@ O trecho de código seguinte tem este efeito:
 
 Fazer isso fará com que o painel `CommandBar` pareça estar sobre o mesmo plano de fundo que o resto da página, portanto, o plano de fundo flui perfeitamente para a borda da tela.
 
-**Opção 2**: adicione um retângulo em segundo plano cujo preenchimento tenha a mesma cor que o `CommandBar` em segundo plano e estenda-o para as bordas da tela com margens negativas:
+**Opção 2**: adicione um retângulo em segundo plano cujo preenchimento tenha a mesma cor que a tela de fundo de `CommandBar`, e ainda fique abaixo da `CommandBar` e ocupe o restante da página:
 
 ```xml
 <Rectangle VerticalAlignment="Top" 
-            HorizontalAlignment="Stretch" 
-            Margin="0,-27,-48,0"      
+            HorizontalAlignment="Stretch"      
             Fill="{ThemeResource SystemControlBackgroundChromeMediumBrush}"/>
 <CommandBar x:Name="topbar" 
             VerticalAlignment="Top" 
@@ -574,24 +671,12 @@ Fazer isso fará com que o painel `CommandBar` pareça estar sobre o mesmo plano
 </CommandBar>
 ```
 
-> **Observação**
-            &nbsp;&nbsp;Se você estiver usando essa abordagem, esteja ciente de que o botão **Mais** altera a altura do `CommandBar` aberto, se necessário, para mostrar os rótulos do `AppBarButton` abaixo de seus ícones. Recomendamos que você mova os rótulos para a *direita* de seus ícones para evitar esse redimensionamento.
+> [!NOTE]
+> Se você estiver usando essa abordagem, esteja ciente de que o botão **Mais** modifica a altura da `CommandBar` aberta, se necessário, para mostrar os rótulos dos `AppBarButton`s abaixo dos respectivos ícones. Recomendamos que você mova os rótulos para a *direita* de seus ícones para evitar esse redimensionamento. Para saber mais, consulte [Rótulos de CommandBar](#commandbar-labels).
 
-#### Elementos de imagens e mídia em segundo plano
+Essas duas abordagens também se aplicam aos outros tipos de controles listados nesta seção.
 
-A maioria das imagens e outros elementos de mídia não contêm informações essenciais nas suas bordas, portanto, é seguro desenhar esses elementos de interface do usuário até as bordas da tela para proporcionar uma experiência imersiva. O trecho de código a seguir mostra um exemplo de desenho de uma imagem até as bordas da tela:
-
-```xml
-<Image Source="\Assets\HeaderBackground.png" 
-       Stretch="Uniform" 
-       Height="227" 
-       VerticalAlignment="Top" 
-       Margin="-48,-27,-48,0"/>
-```
-
-É claro que você pode fazer a mesma coisa para mídias, como vídeos.
-
-#### Rolando fins de lista e grades
+#### Rolando fins de listas e grades
 
 É comum que listas e grades contenham mais itens dos que podem caber na tela ao mesmo tempo. Se esse for o caso, recomendamos que você estenda a lista ou a grade até a borda da tela. As listas e grades de rolagem horizontal devem se estender até a borda direita e as de rolagem vertical devem se estender até a parte inferior.
 
@@ -606,36 +691,34 @@ A UWP tem uma funcionalidade que mantém o foco visual dentro do [VisibleBounds]
 ```xml
 <Style x:Key="TitleSafeListViewStyle" 
        TargetType="ListView">
-    <Setter Property="Margin" 
-            Value="0,0,0,-27"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="ListView">
-                    <Border BorderBrush="{TemplateBinding BorderBrush}" 
-                            Background="{TemplateBinding Background}" 
-                            BorderThickness="{TemplateBinding BorderThickness}">
-                        <ScrollViewer x:Name="ScrollViewer"
-                                      TabNavigation="{TemplateBinding TabNavigation}"
-                                      HorizontalScrollMode="{TemplateBinding ScrollViewer.HorizontalScrollMode}"
-                                      HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
-                                      IsHorizontalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsHorizontalScrollChainingEnabled}"
-                                      VerticalScrollMode="{TemplateBinding ScrollViewer.VerticalScrollMode}"
-                                      VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
-                                      IsVerticalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsVerticalScrollChainingEnabled}"
-                                      IsHorizontalRailEnabled="{TemplateBinding ScrollViewer.IsHorizontalRailEnabled}"
-                                      IsVerticalRailEnabled="{TemplateBinding ScrollViewer.IsVerticalRailEnabled}"
-                                      ZoomMode="{TemplateBinding ScrollViewer.ZoomMode}"
-                                      IsDeferredScrollingEnabled="{TemplateBinding ScrollViewer.IsDeferredScrollingEnabled}"
-                                      BringIntoViewOnFocusChange="{TemplateBinding ScrollViewer.BringIntoViewOnFocusChange}"
-                                      AutomationProperties.AccessibilityView="Raw">
-                            <ItemsPresenter Header="{TemplateBinding Header}"
-                                            HeaderTemplate="{TemplateBinding HeaderTemplate}"
-                                            HeaderTransitions="{TemplateBinding HeaderTransitions}"
-                                            Footer="{TemplateBinding Footer}"
-                                            FooterTemplate="{TemplateBinding FooterTemplate}"
-                                            FooterTransitions="{TemplateBinding FooterTransitions}"
-                                            Padding="{TemplateBinding Padding}" 
-                                            Margin="0,27,0,27"/>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="ListView">
+                <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                        Background="{TemplateBinding Background}" 
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                    <ScrollViewer x:Name="ScrollViewer"
+                                  TabNavigation="{TemplateBinding TabNavigation}"
+                                  HorizontalScrollMode="{TemplateBinding ScrollViewer.HorizontalScrollMode}"
+                                  HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                  IsHorizontalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsHorizontalScrollChainingEnabled}"
+                                  VerticalScrollMode="{TemplateBinding ScrollViewer.VerticalScrollMode}"
+                                  VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
+                                  IsVerticalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsVerticalScrollChainingEnabled}"
+                                  IsHorizontalRailEnabled="{TemplateBinding ScrollViewer.IsHorizontalRailEnabled}"
+                                  IsVerticalRailEnabled="{TemplateBinding ScrollViewer.IsVerticalRailEnabled}"
+                                  ZoomMode="{TemplateBinding ScrollViewer.ZoomMode}"
+                                  IsDeferredScrollingEnabled="{TemplateBinding ScrollViewer.IsDeferredScrollingEnabled}"
+                                  BringIntoViewOnFocusChange="{TemplateBinding ScrollViewer.BringIntoViewOnFocusChange}"
+                                  AutomationProperties.AccessibilityView="Raw">
+                        <ItemsPresenter Header="{TemplateBinding Header}"
+                                        HeaderTemplate="{TemplateBinding HeaderTemplate}"
+                                        HeaderTransitions="{TemplateBinding HeaderTransitions}"
+                                        Footer="{TemplateBinding Footer}"
+                                        FooterTemplate="{TemplateBinding FooterTemplate}"
+                                        FooterTransitions="{TemplateBinding FooterTransitions}"
+                                        Padding="{TemplateBinding Padding}" 
+                                        Margin="0,27,0,27"/>
                     </ScrollViewer>
                 </Border>
             </ControlTemplate>
@@ -644,7 +727,7 @@ A UWP tem uma funcionalidade que mantém o foco visual dentro do [VisibleBounds]
 </Style>
 ```
 
-Você poderia colocar o trecho de código anterior nos recursos da página ou do aplicativo e acessá-lo, em seguida, da seguinte maneira:
+Você poderia colocar o trecho de código anterior nos recursos da página ou do aplicativo e, em seguida, acessá-lo da seguinte maneira:
 
 ```xml
 <Page>
@@ -653,65 +736,7 @@ Você poderia colocar o trecho de código anterior nos recursos da página ou do
                   ... />
 ```
 
-> **Observação**
-            &nbsp;&nbsp;Este trecho de código é especificamente para `ListView`s; para um estilo de `GridView`, defina o atributo [TargetType](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.controltemplate.targettype.aspx) de [ControlTemplate](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) e [Style](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.style.aspx) como `GridView`.
-
-
-### Gatilho de estado visual personalizado para Xbox One <a name="custom-visual-state-trigger-for-xbox-one"></a>
-
-Para adaptar seu aplicativo UWP para a experiência de 3 metros, recomendamos que você faça alterações de layout quando o aplicativo detectar que foi iniciado em um console do Xbox. Isso pode ser feito usando um gatilho de estado visual personalizado, como no seguinte trecho de código:
-
-```xml
-<VisualStateManager.VisualStateGroups>
-    <VisualStateGroup>
-        <VisualState>
-            <VisualState.StateTriggers>
-                <triggers:DeviceFamilyTrigger DeviceFamily="Windows.Xbox"/>
-            </VisualState.StateTriggers>
-            <VisualState.Setters>
-                <Setter Target="RootSplitView.Margin" 
-                        Value="-48,-27"/>
-                <Setter Target="RootSplitView.OpenPaneLength" 
-                        Value="368"/>
-                <Setter Target="RootSplitView.CompactPaneLength" 
-                        Value="96"/>
-                <Setter Target="NavMenuList.Margin" 
-                        Value="0,75,0,27"/>
-                <Setter Target="Frame.Margin" 
-                        Value="0,27,48,27"/>
-                <Setter Target="NavMenuList.ItemContainerStyle" 
-                        Value="{StaticResource NavMenuItemContainerXboxStyle}"/>
-            </VisualState.Setters>
-        </VisualState>
-    </VisualStateGroup>
-</VisualStateManager.VisualStateGroups>
-```
-
-Para criar o gatilho, adicione a classe seguinte ao seu aplicativo. Esta é a classe que é referenciada pelo código XAML anterior:
-
-```csharp
-class DeviceFamilyTrigger : StateTriggerBase
-{
-    private string _currentDeviceFamily, _queriedDeviceFamily;
-
-    public string DeviceFamily
-    {
-        get
-        {
-            return _queriedDeviceFamily;
-        }
-        
-        set
-        {
-            _queriedDeviceFamily = value;
-            _currentDeviceFamily = AnalyticsInfo.VersionInfo.DeviceFamily;
-            SetActive(_queriedDeviceFamily == _currentDeviceFamily);
-        }
-    }
-}
-```
-
-Depois que você tiver adicionando seu gatilho personalizado, seu aplicativo fará automaticamente as modificações de layout especificadas no código XAML sempre que ele detectar que está sendo executado em um console do Xbox One.
+> [!NOTE] Este trecho de código é especificamente para `ListView`s; para um estilo de `GridView`, defina o atributo [TargetType](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.controltemplate.targettype.aspx) como [ControlTemplate](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) e [Style](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.style.aspx) como `GridView`.
 
 ## Cores
 
@@ -835,16 +860,14 @@ O exemplo de código a seguir fornece um tema de cores que foi otimizado para us
 </Application.Resources>
 ```
 
-> **Observação**
-            &nbsp;&nbsp;Os temas claros **SystemChromeMediumLowColor** e **SystemChromeMediumLowColor** têm a mesma cor de propósito e não por causa de uma fixação. 
+> [!NOTE] O tema claro **SystemChromeMediumLowColor** e **SystemChromeMediumLowColor** têm a mesma cor de propósito, e não como resultado de uma fixação. 
 
-> **Observação**
-            &nbsp;&nbsp;As cores hexadecimais são especificadas em **ARGB** (alfa, vermelho, verde, azul).
+> [!NOTE] As cores hexadecimais são especificadas em **ARGB** (alfa, vermelho, verde, azul).
 
 Não recomendamos usar cores seguras para TV em um monitor capaz de exibir a gama completa sem fixação porque as cores ficarão desbotadas. Em vez disso, carregue o dicionário de recursos (exemplo anterior) quando seu aplicativo estiver em execução no Xbox, mas *não* em outras plataformas. No método `OnLaunched` de `App.xaml.cs`, adicione a seguinte verificação:
 
 ```csharp
-if (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xbox")
+if (IsTenFoot)
 { 
     this.Resources.MergedDictionaries.Add(new ResourceDictionary 
     { 
@@ -852,6 +875,8 @@ if (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xb
     }); 
 }
 ```
+
+> [!NOTE] A variável `IsTenFoot` é definida em [Gatilho de estado visual personalizado para Xbox](#custom-visual-state-trigger-for-xbox).
 
 Isso garante que as cores corretas sejam exibidas em qualquer dispositivo em que o aplicativo é executado, fornecendo ao usuário uma experiência melhor, esteticamente mais atraente.
 
@@ -861,23 +886,45 @@ Há vários controles de interface do usuário que funcionam bem em vários disp
 
 ### Controle Pivot
 
-O controle [Pivot](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.pivot.aspx) tem propriedades que você pode definir de forma que os cabeçalhos não fiquem ao redor da tela como fazem no telefone e no tablet. Essa é uma experiência melhor para exibições em tela grande, como a TV, pois o encapsulamento de cabeçalho pode distrair aos usuários. Para saber mais, veja [Guias e pivôs](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tabs-pivot).
+Um [Pivot](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.pivot.aspx) oferece navegação rápida de modos de exibição dentro de um aplicativo com a seleção de diferentes cabeçalhos ou guias. O controle sublinha qualquer cabeçalho que tenha o foco, tornando mais óbvio qual cabeçalho está atualmente selecionado quando é usado um gamepad/controle remoto. 
+
+![Sublinhado dinâmico](images/designing-for-tv/pivot-underline.png)
+
+<!--By default, when you navigate to a `Pivot`, one of the [PivotItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivotitem.aspx)s will get focus. However, you can show focus around all the headers by setting `Pivot.HeaderFocusVisualPlacement="ItemHeaders"`.
+
+![Pivot focus around headers](images/designing-for-tv/pivot-headers-focus.png)-->
+
+É possível definir a propriedade [Pivot.HeaderOverflowMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.headeroverflowmode.aspx) como `PivotHeaderOverflowMode.NoWrap`, para que os cabeçalhos não fiquem ao redor da tela como fazem no telefone e no tablet. Essa é uma experiência melhor para exibições em tela grande, como a TV, pois o encapsulamento de cabeçalho pode distrair aos usuários. Para saber mais, consulte [Guias e pivôs](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tabs-pivot).
+
+<!--If you find it necessary to wrap headers, you can set it so that it doesn't show the selected header in the left-most position, like it does by default. When you set `Pivot.IsHeaderItemsCarouselEnabled="False"`, the selected header will move left by the minimal amount required to become fully visible. This is the recommended approach for 10-foot design.
+
+![Pivot headers carousel disabled](images/designing-for-tv/pivot-headers-carousel.png)-->
 
 ### Painel de navegação
 
-A UWP proporciona uma aparência consistente em todos os dispositivos. Para obter mais informações sobre como os painéis de navegação se comportam em tamanhos de tela diferentes, assim como melhores práticas para a navegação com gamepad/controle remoto, veja [Painéis de navegação](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/nav-pane).
+Um painel de navegação (também conhecido como *menu hambúrguer*) é um controle de navegação frequentemente usado em aplicativos UWP. Normalmente é um painel com várias opções para seleção em um menu de estilo de lista que levará o usuário a páginas diferentes. Em geral, esse painel começa recolhido para economizar espaço, e o usuário pode abri-lo clicando em um botão. 
+
+Embora os painéis de navegação sejam muito acessíveis com mouse e toque, o gamepad/controle remoto os torna menos acessíveis, já que o usuário precisa navegar até um botão para abrir o painel. Portanto, uma boa prática é fazer o botão **Exibir** abrir o painel de navegação, além de permitir que o usuário o abra navegando até o lado esquerdo da página. Isso oferecerá ao usuário acesso muito fácil ao conteúdo do painel. Para obter mais informações sobre como os painéis de navegação se comportam em tamanhos de tela diferentes, assim como práticas recomendadas para a navegação com gamepad/controle remoto, consulte [Painéis de navegação](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/nav-pane).
 
 ### Rótulos de CommandBar
 
-O controle [CommandBar](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx) tem uma propriedade que faz com que os rótulos ao lado de ícones sempre sejam exibidos. Isso funciona bem na experiência de 3 metros porque minimiza o número de cliques para o usuário ver o que os botões fazem. Esse também é um modelo excelente para outros tipos de dispositivos seguirem.
+É uma boa ideia ter os rótulos colocados à direita dos ícones em uma [CommandBar](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx), para que a altura seja minimizada e permaneça consistente. Você pode fazer isso definindo a propriedade [CommandBar.DefaultLabelPosition](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.defaultlabelposition.aspx) como `CommandBarDefaultLabelPosition.Right`.
+
+![CommandBar com rótulos à direita dos ícones](images/designing-for-tv/commandbar.png)
+
+A configuração dessa propriedade também fará com que os rótulos sejam sempre exibidos, o que funciona bem para a experiência de 3 metros porque minimiza o número de cliques do usuário. Esse também é um modelo excelente para outros tipos de dispositivos seguirem.
+
+<!--When there isn't enough space in the window to fit all of the `AppBarButton`s, buttons move into an overflow menu, which is accessed by selecting the "..." button. This happens dynamically as the screen resizes. This generally shouldn't be a problem for TV because the screen size is so large, but if you find that you have overflow buttons, you can specify which appear first using the `AppBarButton.DynamicOverflowOrder` property.
+
+![CommandBar with overflow commands](images/designing-for-tv/commandbar-overflow.png)-->
 
 ### Dica de ferramenta
 
-O controle [Tooltip](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.tooltip.aspx) que foi introduzido como uma maneira de fornecer mais informações na interface do usuário quando o usuário passar o mouse ou tocar e segurar um elemento. Para gamepad e controle remoto, `Tooltip` é exibido após um breve momento quando o elemento recebe o foco, permanece na tela por um período curto de tempo e, em seguida, desaparece. Esse comportamento pode causar distração se muitos `Tooltip`s forem usados. Tente evitar o uso de Tooltip ao projetar para TV.
+O controle [Tooltip](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.tooltip.aspx) que foi introduzido como uma maneira de fornecer mais informações na interface do usuário quando o usuário passar o mouse ou tocar e segurar um elemento. Para gamepad e controle remoto, `Tooltip` é exibido após um breve momento quando o elemento recebe o foco, permanece na tela por um período curto de tempo e, em seguida, desaparece. Esse comportamento pode causar distração se muitos `Tooltip`s forem usados. Tente evitar o uso de `Tooltip` ao projetar para TV.
 
 ### Estilos de botão
 
-Embora os botões padrão da UWP funcionem bem na TV, alguns estilos visuais de botões chamam mais a atenção para a interface do usuário, o que você pode considerar para todas as plataformas, especialmente na experiência de 3 metros, que se beneficia de comunicar claramente onde o foco está localizado. Para ler mais sobre esses estilos, veja [Botões](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/buttons).
+Embora os botões padrão da UWP funcionem bem na TV, alguns estilos visuais de botões chamam mais a atenção para a interface do usuário, o que você pode considerar para todas as plataformas, especialmente na experiência de 3 metros, que se beneficia com a comunicação clara de onde o foco está localizado. Para ler mais sobre esses estilos, veja [Botões](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/buttons).
 
 ### Elementos de interface do usuário aninhados
 
@@ -887,11 +934,74 @@ Um dos principais cenários é quando há interface do usuário que é exibida q
 
 ![Elementos de interface do usuário exibidos quando o mouse passa sobre eles](images/designing-for-tv/2d-navigation-best-practices-ui-elements-display-on-mouse-hover.png)
 
-A maneira recomendada de manipular esse cenário para entrada de gamepad/controle remoto é colocar esses elementos de interface do usuário em um `ContextFlyout`.
+A maneira recomendada de manipular esse cenário para entrada de gamepad/controle remoto é colocar esses elementos de interface do usuário em um `ContextFlyout` (consulte [CommandBar e ContextFlyout](#commandbar-and-contextflyout)).
+
+## Gatilho de estado visual personalizado para Xbox
+
+Para adaptar seu aplicativo UWP para a experiência de 3 metros, recomendamos que você faça alterações de layout quando o aplicativo detectar que foi iniciado em um console do Xbox. Uma maneira de fazer isso é usando um *gatilho de estado visual* personalizado. Os gatilhos de estado visual são mais úteis quando você deseja editar no **Blend for Visual Studio**. O trecho de código a seguir mostra como criar um gatilho de estado visual para Xbox:
+
+```xml
+<VisualStateManager.VisualStateGroups>
+    <VisualStateGroup>
+        <VisualState>
+            <VisualState.StateTriggers>
+                <triggers:DeviceFamilyTrigger DeviceFamily="Windows.Xbox"/>
+            </VisualState.StateTriggers>
+            <VisualState.Setters>
+                <Setter Target="RootSplitView.OpenPaneLength" 
+                        Value="368"/>
+                <Setter Target="RootSplitView.CompactPaneLength" 
+                        Value="96"/>
+                <Setter Target="NavMenuList.Margin" 
+                        Value="0,75,0,27"/>
+                <Setter Target="Frame.Margin" 
+                        Value="0,27,48,27"/>
+                <Setter Target="NavMenuList.ItemContainerStyle" 
+                        Value="{StaticResource NavMenuItemContainerXboxStyle}"/>
+            </VisualState.Setters>
+        </VisualState>
+    </VisualStateGroup>
+</VisualStateManager.VisualStateGroups>
+```
+
+Para criar o gatilho, adicione a classe a seguir ao seu aplicativo. Esta é a classe que é referenciada pelo código XAML acima:
+
+```csharp
+class DeviceFamilyTrigger : StateTriggerBase
+{
+    private string _currentDeviceFamily, _queriedDeviceFamily;
+
+    public string DeviceFamily
+    {
+        get
+        {
+            return _queriedDeviceFamily;
+        }
+        
+        set
+        {
+            _queriedDeviceFamily = value;
+            _currentDeviceFamily = AnalyticsInfo.VersionInfo.DeviceFamily;
+            SetActive(_queriedDeviceFamily == _currentDeviceFamily);
+        }
+    }
+}
+```
+
+Depois que você tiver adicionando seu gatilho personalizado, seu aplicativo fará automaticamente as modificações de layout especificadas no código XAML sempre que ele detectar que está sendo executado em um console do Xbox One.
+
+Uma outra maneira de você verificar se o seu aplicativo está em execução no Xbox e depois fazer os ajustes adequados é por meio de código. Você pode usar a seguinte variável simples para verificar se o seu aplicativo está em execução no Xbox:
+
+```csharp
+bool IsTenFoot = (Windows.System.Profile.AnaylticsInfo.VersionInfo.DeviceFamily == 
+                    "Windows.Xbox");
+```
+
+Em seguida, você pode fazer os ajustes adequados à sua interface de usuário no bloco de código após essa verificação. Um exemplo disso é mostrado em [Amostra de cor UWP](#uwp-color-sample).
 
 ## Resumo
 
-A criação para a experiência de 3 metros tem algumas considerações especiais a serem levadas em conta que a diferenciam da criação para qualquer outra plataforma. Embora você certamente faça uma portabilidade direta de seu aplicativo UWP para o Xbox One e ele funcionará, ele não necessariamente será otimizado para a experiência de 3 metros e isso pode causar frustração no usuário. Seguir as diretrizes deste artigo garantirá que o seu aplicativo seja tão bom quanto possa ser na TV.
+O design para a experiência de 3 metros tem algumas considerações especiais a serem levadas em conta que o diferenciam do design para qualquer outra plataforma. Embora você certamente faça uma portabilidade direta de seu aplicativo UWP para o Xbox One e ele funcionará, ele não necessariamente será otimizado para a experiência de 3 metros e isso pode causar frustração no usuário. Seguir as diretrizes deste artigo garantirá que o seu aplicativo seja tão bom quanto possa ser na TV.
 
 ## Artigos relacionados
 
@@ -901,6 +1011,6 @@ A criação para a experiência de 3 metros tem algumas considerações especiai
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -3,13 +3,16 @@ author: GrantMeStrength
 Description: Compare os recursos entre as plataformas iOS, Android e Windows 10.
 Search.Product: eADQiWindows 10XVcnh
 title: Mapeamento do conceito de aplicativos do Windows para desenvolvedores do Android e iOS
+ms.sourcegitcommit: de5420b45832a482d08e5e7ede436407f7dbf2af
+ms.openlocfilehash: 074a71bf3d037004ca376c11b58d17c906f804a5
+
 ---
 
 #Mapeamento do conceito de aplicativos do Windows para desenvolvedores do Android e iOS
 
 Se você for um desenvolvedor com habilidades de Android ou iOS e/ou de código e quiser mudar para o Windows 10 e a Plataforma Universal do Windows (UWP), este método tem tudo o que você precisa para mapear recursos de plataforma — e seu conhecimento — entre as três plataformas.
 
-Veja também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-uwp-root.md). Este documento também está disponível como um [download](https://www.microsoft.com/en-us/download/details.aspx?id=52041).
+Consulte também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-uwp-root.md). Este documento também está disponível como um [download](https://www.microsoft.com/en-us/download/details.aspx?id=52041).
 
 ## Interface do usuário (IU)
 
@@ -137,7 +140,7 @@ Veja também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-uwp-r
 <td align="left"><strong>Tela inicial.</strong> <br><br>Exibição de uma imagem na inicialização do aplicativo, utilizada principalmente para identidade visual.</td>
 <td align="left">As telas iniciais não são fornecidas por padrão e são implementadas editando a primeira <strong>tela de fundo do tema</strong> das atividades.</td>
 <td align="left">Os aplicativos devem ter uma <strong>imagem de inicialização estática</strong> ou um <strong>arquivo de inicialização XIB/storyboard</strong>.</td>
-<td align="left">Você cria uma tela inicial usando uma <strong>imagem</strong> e uma tela de fundo colorida. <a href="https://msdn.microsoft.com/library/windows/apps/mt187309.aspx">A tela inicial pode ser exibida por mais tempo</a>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187306.aspx">Adicionar uma tela inicial</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/hh465338.aspx">Diretrizes para telas iniciais</a></td>
+<td align="left">Você cria uma tela inicial usando uma <strong>imagem</strong> e uma tela de fundo colorida. <a href="https://msdn.microsoft.com/library/windows/apps/mt187309.aspx">A tela inicial pode ser exibida por mais tempo</a>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187306.aspx">Adicionar uma tela inicial</a></td>
 </tr>
 </tbody>
 </table>
@@ -660,6 +663,7 @@ Veja também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-uwp-r
 </table>
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -224,7 +224,7 @@ Você receberá um aviso sobre o certificado que foi fornecido, semelhante à ca
 Occasionally, selecting the “Manage Windows Device Portal” option in Dev Home will cause Dev Home to silently exit to the Home screen. 
 This is caused by a failure in the WDP infrastructure on the console and can be resolved by restarting the console.-->
 
-## Veja também
+## Consulte também
 - [Perguntas frequentes](frequently-asked-questions.md)
 - [UWP no Xbox One](index.md)
 

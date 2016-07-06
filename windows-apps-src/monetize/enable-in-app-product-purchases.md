@@ -1,15 +1,21 @@
 ---
-author: mcleanbyron Description: Seja seu aplicativo gratuito ou não, você pode vender conteúdo, outros aplicativos ou uma nova funcionalidade do aplicativo (como o desbloqueio do próximo nível de um jogo) no próprio aplicativo. Veja a seguir como habilitar esses produtos no seu aplicativo.
-title: Habilitar compras de produtos no aplicativo ms.assetid: palavras-chave D158E9EB-1907-4173-9889-66507957BD6B: palavras-chave de oferta no aplicativo: palavras-chave de compra no aplicativo: palavras-chave de produto no aplicativo: como dar suporte a palavras-chave no aplicativo: palavras-chave de exemplo de código de compra no aplicativo: exemplo de código de oferta no aplicativo
+author: mcleanbyron
+Description: "Seja seu aplicativo gratuito ou não, você pode vender conteúdo, outros aplicativos ou uma nova funcionalidade do aplicativo (como o desbloqueio do próximo nível de um jogo) no próprio aplicativo. Veja a seguir como habilitar esses produtos no seu aplicativo."
+title: Habilitar compras de produtos no aplicativo
+ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
+keywords: in-app offer code sample
+ms.sourcegitcommit: bb28828463b14130deede9f7cf796c6e32fcb48b
+ms.openlocfilehash: 2e9a011a248e4c7e1d3f06064a7f82e308f07131
+
 ---
 
 # Habilitar compras de produtos no aplicativo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Seja seu aplicativo gratuito ou não, você pode vender conteúdo, outros aplicativos ou uma nova funcionalidade do aplicativo (como o desbloqueio do próximo nível de um jogo) no próprio aplicativo. Veja a seguir como habilitar esses produtos no seu aplicativo.
 
-**Observação**  Produtos no aplicativo não podem ser oferecidos em uma versão de avaliação do aplicativo. Os clientes que usam uma versão de avaliação do aplicativo só poderão comprar um produto no aplicativo se comprarem a versão completa do seu aplicativo.
+> **Observação**  Produtos no aplicativo não podem ser oferecidos em uma versão de avaliação do aplicativo. Os clientes que usam uma versão de avaliação do aplicativo só poderão comprar um produto no aplicativo se comprarem a versão completa do seu aplicativo.
 
 ## Pré-requisitos
 
@@ -41,15 +47,17 @@ void AppInit()
 
 Para cada recurso a ser disponibilizado por meio de uma transação de produto no aplicativo, crie uma oferta e adicione-a ao aplicativo.
 
-**Importante**  Você deve adicionar todos os produtos no aplicativo que deseja apresentar para seus clientes antes de enviá-lo para a Loja. Para adicionar novos produtos no aplicativo depois, você deve atualizar o aplicativo e reenviar uma nova versão.
+> **Importante**  Você deve adicionar todos os produtos no aplicativo que deseja apresentar para seus clientes antes de enviá-lo para a Loja. Para adicionar novos produtos no aplicativo depois, você deve atualizar o aplicativo e reenviar uma nova versão.
 
 1.  **Crie um token de oferta no aplicativo**
 
     Você pode identificar cada produto no seu aplicativo por um token. Esse token é uma cadeia de caracteres que você define e usa no aplicativo e na Loja para identificar um produto no aplicativo específico. Dê (ao aplicativo) um nome exclusivo e significativo, para poder identificar o recurso correto que ele representa durante a codificação. Este são alguns exemplos de nomes:
 
     -   "SpaceMissionLevel4"
+    
     -   "ContosoCloudSave"
-    -   "RainbowThemePack".
+    
+    -   "RainbowThemePack"
 
 2.  **Codifique o recurso em um bloco de condições**
 
@@ -59,13 +67,13 @@ Para cada recurso a ser disponibilizado por meio de uma transação de produto n
 
     ```    CSharp
     if (licenseInformation.ProductLicenses["featureName"].IsActive) 
-        {
-            // the customer can access this feature
-        } 
-        else
-        {
-            // the customer can' t access this feature
-        }
+    {
+        // the customer can access this feature
+    } 
+    else
+    {
+        // the customer can' t access this feature
+    }
     ```
 
 3.  **Adicione a interface do usuário de compra para este recurso**
@@ -75,28 +83,29 @@ Para cada recurso a ser disponibilizado por meio de uma transação de produto n
     Veja aqui como testar se o cliente já possui um produto no aplicativo e, se não tiver, se ele pode visualizar a caixa de diálogo para fazer a compra. Substitua o comentário "mostrar a caixa de diálogo de compra" pelo código personalizado da caixa de diálogo de compra (como uma página com um botão "Compre este aplicativo!" ).
 
     ```    CSharp
-    void BuyFeature1() {
-            if (!licenseInformation.ProductLicenses["featureName"].IsActive)
+    void BuyFeature1() 
+    {
+        if (!licenseInformation.ProductLicenses["featureName"].IsActive)
+        {
+            try
             {
-                try
-                    {
-                    // The customer doesn't own this feature, so 
-                    // show the purchase dialog.
-                                    
-                    await CurrentAppSimulator.RequestProductPurchaseAsync("featureName", false);
-                    //Check the license state to determine if the in-app purchase was successful.
-                }
-                catch (Exception)
-                {
-                    // The in-app purchase was not completed because 
-                    // an error occurred.
-                }
-            } 
-            else
-            {
-                // The customer already owns this feature.
+                // The customer doesn't own this feature, so 
+                // show the purchase dialog.
+                await CurrentAppSimulator.RequestProductPurchaseAsync("featureName", false);
+        
+                //Check the license state to determine if the in-app purchase was successful.
             }
+            catch (Exception)
+            {
+                // The in-app purchase was not completed because 
+                // an error occurred.
+            }
+        } 
+        else
+        {
+            // The customer already owns this feature.
         }
+    }
     ```
 
 ## Etapa 3: Mude o código de teste para as chamadas finais
@@ -120,15 +129,13 @@ Se você precisar usar recibos para verificar se o usuário fez uma compra no ap
 * [Gerenciar um catálogo abrangente de produtos no aplicativo](manage-a-large-catalog-of-in-app-products.md)
 * [Usar recibos para verificar compras de produtos](use-receipts-to-verify-product-purchases.md)
 * [Exemplo da Loja (demonstra avaliações e compras no aplicativo)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
- 
-
- 
 
 
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -44,26 +44,26 @@ Caso um método deva aceitar uma matriz de entrada, modifique o conteúdo da mat
 > End Function
 > ```
 
-É recomendável que você faça uma cópia da matriz de entrada imediatamente e manipule a cópia. Isso ajuda a garantir que o método se comporte da mesma maneira, independentemente do componente ser chamado pelo código do .NET Framework.
+[!div class="tabbedCodeSnippets"] É recomendável que você faça uma cópia da matriz de entrada imediatamente e manipule a cópia.
 
-## Como usar componentes de código gerenciado e não gerenciado
-
-
-Parâmetros que tenham o atributo ReadOnlyArrayAttribute ou o atributo WriteOnlyArrayAttribute se comportam de maneira diferente dependendo do chamador estar gravado em código gerenciado ou nativo. Caso o chamador seja um código nativo (extensões de componente Visual C++ ou JavaScript), o conteúdo da matriz é tratado da seguinte maneira:
-
--   ReadOnlyArrayAttribute: a matriz é copiada quando a chamada atravessa o limite da interface binária do aplicativo (ABI). Os elementos são convertidos caso necessário. Portanto, qualquer alteração acidental feita pelo método em uma matriz somente de entrada não permanece visível para o chamador.
--   WriteOnlyArrayAttribute: o método chamado não pode fazer pressuposições sobre o conteúdo da matriz original. Por exemplo, a matriz que o método recebe não pode ser inicializada, ou pode conter valores padrão. O método é esperado para definir os valores de todos os elementos na matriz.
-
-Caso o chamador seja um código gerenciado, a matriz original permanece disponível para o método chamado, como estaria em qualquer chamada de método no .NET Framework. O conteúdo da matriz é mutável no código do .NET Framework, logo, qualquer alteração que o método faça na matriz permanece visível para o chamador. É importante lembrar isso porque ele afeta testes de unidade escritos para um componente do Tempo de Execução do Windows. Se os testes forem escritos em código gerenciado, o conteúdo de uma matriz parecerá ser mutável durante o teste.
-
-## Tópicos relacionados
-
-* [ReadOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.readonlyarrayattribute.aspx)
-* [WriteOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute.aspx)
-* [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+## Isso ajuda a garantir que o método se comporte da mesma maneira, independentemente do componente ser chamado pelo código do .NET Framework.
 
 
+Como usar componentes de código gerenciado e não gerenciado Parâmetros que tenham o atributo ReadOnlyArrayAttribute ou o atributo WriteOnlyArrayAttribute se comportam de maneira diferente dependendo do chamador estar gravado em código gerenciado ou nativo.
 
-<!--HONumber=Jun16_HO4-->
+-   Caso o chamador seja um código nativo (extensões de componente Visual C++ ou JavaScript), o conteúdo da matriz é tratado da seguinte maneira: ReadOnlyArrayAttribute: a matriz é copiada quando a chamada atravessa o limite da interface binária do aplicativo (ABI). Os elementos são convertidos caso necessário.
+-   Portanto, qualquer alteração acidental feita pelo método em uma matriz somente de entrada não permanece visível para o chamador. WriteOnlyArrayAttribute: o método chamado não pode fazer pressuposições sobre o conteúdo da matriz original. Por exemplo, a matriz que o método recebe não pode ser inicializada, ou pode conter valores padrão.
+
+O método é esperado para definir os valores de todos os elementos na matriz. Caso o chamador seja um código gerenciado, a matriz original permanece disponível para o método chamado, como estaria em qualquer chamada de método no .NET Framework. O conteúdo da matriz é mutável no código do .NET Framework, logo, qualquer alteração que o método faça na matriz permanece visível para o chamador. É importante lembrar isso porque ele afeta testes de unidade escritos para um componente do Tempo de Execução do Windows.
+
+## Se os testes forem escritos em código gerenciado, o conteúdo de uma matriz parecerá ser mutável durante o teste.
+
+* [Tópicos relacionados](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.readonlyarrayattribute.aspx)
+* [ReadOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute.aspx)
+* [WriteOnlyArrayAttribute](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+
+
+
+<!--HONumber=Jun16_HO5-->
 
 

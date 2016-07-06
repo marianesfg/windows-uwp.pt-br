@@ -246,6 +246,6 @@ Para avisar o usuário sobre o que pode ser falado, use as propriedades [**Speec
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

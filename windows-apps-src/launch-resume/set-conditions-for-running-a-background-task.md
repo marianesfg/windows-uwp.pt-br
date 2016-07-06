@@ -47,12 +47,12 @@ O código a seguir cria um objeto [**SystemCondition**](https://msdn.microsoft.c
 > SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionType::InternetAvailable);
 > ```
 
-## Adicionar o objeto SystemCondition à sua tarefa em segundo plano
+## [!div class="tabbedCodeSnippets"]
 
+
+Adicionar o objeto SystemCondition à sua tarefa em segundo plano
 
 Para adicionar a condição, chame o método [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) no objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) e passe a ele o objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834).
-
-O código a seguir registra a condição da tarefa em segundo plano InternetAvailable em TaskBuilder:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -62,12 +62,12 @@ O código a seguir registra a condição da tarefa em segundo plano InternetAvai
 > taskBuilder->AddCondition(internetCondition);
 > ```
 
-## Registrar sua tarefa em segundo plano
+## O código a seguir registra a condição da tarefa em segundo plano InternetAvailable em TaskBuilder:
 
 
-Agora, você pode registrar sua tarefa em segundo plano no método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772), e ela apenas será iniciada quando a condição especificada for atendida.
+[!div class="tabbedCodeSnippets"]
 
-O código a seguir registra a tarefa e armazena o objeto BackgroundTaskRegistration resultante:
+Registrar sua tarefa em segundo plano
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -77,20 +77,20 @@ O código a seguir registra a tarefa e armazena o objeto BackgroundTaskRegistrat
 > BackgroundTaskRegistration ^ task = taskBuilder->Register();
 > ```
 
-> **Observação** Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
+> Agora, você pode registrar sua tarefa em segundo plano no método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772), e ela apenas será iniciada quando a condição especificada for atendida.
 
-Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
+O código a seguir registra a tarefa e armazena o objeto BackgroundTaskRegistration resultante: [!div class="tabbedCodeSnippets"]
 
-> **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
+> **Observação** Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano. Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
-## Inserir várias condições na sua tarefa em segundo plano
+## **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro.
 
-Para adicionar várias condições, seu aplicativo faz várias chamadas ao método [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) . Essas chamadas devem ser feitas antes que o registro da tarefa se torne efetivo.
+Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
 
-> **Observação**  Tome cuidado para não adicionar condições conflitantes a uma tarefa em segundo plano.
+> Inserir várias condições na sua tarefa em segundo plano
  
 
-O trecho a seguir mostra várias condições no contexto de criação e registro de uma tarefa em segundo plano:
+Para adicionar várias condições, seu aplicativo faz várias chamadas ao método [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) .
 
 > [!div class="tabbedCodeSnippets"]
 ```cs
@@ -152,35 +152,35 @@ O trecho a seguir mostra várias condições no contexto de criação e registro
 > BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ```
 
-## Comentários
+## Essas chamadas devem ser feitas antes que o registro da tarefa se torne efetivo.
 
 
-> **Observação**  Escolha as condições certas para a sua tarefa em segundo plano, de forma que ela apenas seja executada quando for necessária, e não em situações nas quais ela não irá funcionar. Confira [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para ver descrições das diferentes condições de tarefas em tela de fundo.
+> **Observação**  Tome cuidado para não adicionar condições conflitantes a uma tarefa em segundo plano. O trecho a seguir mostra várias condições no contexto de criação e registro de uma tarefa em segundo plano:
 
-> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> [!div class="tabbedCodeSnippets"] Comentários
 
  
 
-## Tópicos relacionados
+## **Observação**  Escolha as condições certas para a sua tarefa em segundo plano, de forma que ela apenas seja executada quando for necessária, e não em situações nas quais ela não irá funcionar.
 
 
 ****
 
-* [Criar e registrar uma tarefa em segundo plano](create-and-register-a-background-task.md)
-* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
-* [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
-* [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
-* [Registrar uma tarefa em segundo plano](register-a-background-task.md)
-* [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
-* [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
-* [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
-* [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
-* [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
+* [Confira [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para ver descrições das diferentes condições de tarefas em tela de fundo.](create-and-register-a-background-task.md)
+* [**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](declare-background-tasks-in-the-application-manifest.md)
+* [Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
+* [Tópicos relacionados](monitor-background-task-progress-and-completion.md)
+* [Criar e registrar uma tarefa em segundo plano](register-a-background-task.md)
+* [Declarar tarefas em segundo plano no manifesto do aplicativo](respond-to-system-events-with-background-tasks.md)
+* [Manipular uma tarefa em segundo plano cancelada](update-a-live-tile-from-a-background-task.md)
+* [Monitorar o progresso e a conclusão de tarefas em segundo plano](use-a-maintenance-trigger.md)
+* [Registrar uma tarefa em segundo plano](run-a-background-task-on-a-timer-.md)
+* [Responder a eventos do sistema com tarefas em segundo plano](guidelines-for-background-tasks.md)
 
 ****
 
-* [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Atualizar um bloco dinâmico de uma tarefa em segundo plano](debug-a-background-task.md)
+* [Usar um gatilho de manutenção](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
@@ -188,6 +188,6 @@ O trecho a seguir mostra várias condições no contexto de criação e registro
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

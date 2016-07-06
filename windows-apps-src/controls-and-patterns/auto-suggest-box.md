@@ -6,8 +6,8 @@ ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 2900aa542a7986cac408051159f013e10dd3a5aa
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: bc3337101f0f2e8449d052743f7b3ce8d2dac516
 
 ---
 # Caixa de sugestão automática
@@ -15,7 +15,7 @@ Use uma AutoSuggestBox para fornecer uma lista de sugestões para um usuário se
 
 ![Uma caixa de sugestão automática](images/controls/auto-suggest-box-open.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+
 
 -   [**Classe AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
 -   [**Evento TextChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)
@@ -76,9 +76,9 @@ O evento QuerySubmitted ocorre quando um usuário confirma uma cadeia de caracte
 - Com o foco na caixa de texto, pressione Enter ou clique no ícone de consulta. A propriedade [ChosenSuggestion](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.chosensuggestion.aspx) de argumentos de evento é **null**.
 - Com o foco na lista de sugestões, pressione Enter, clique ou toque em um item. A propriedade ChosenSuggestion de argumentos de evento contém o item que foi selecionado da lista.
 
-Em todos os casos, a propriedade [QueryText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext.aspx) de argumentos de evento contém o texto da caixa de texto. 
+Em todos os casos, a propriedade [QueryText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext.aspx) de argumentos de evento contém o texto da caixa de texto.
 
-### Use a AutoSuggestBox para pesquisa
+## Use a AutoSuggestBox para pesquisa
 
 Use uma AutoSuggestBox para fornecer uma lista de sugestões para um usuário selecionar conforme digita.
 
@@ -108,8 +108,8 @@ Aqui está uma AutoSuggestBox simples com os manipuladores de evento exigidos.
 ```csharp
 private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
 {
-    // Only get results when it was a user typing, 
-    // otherwise assume the value got filled in by TextMemberPath 
+    // Only get results when it was a user typing,
+    // otherwise assume the value got filled in by TextMemberPath
     // or the handler for SuggestionChosen.
     if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
     {
@@ -144,18 +144,30 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
     ![Exemplo de uma caixa de sugestão automática com nenhum resultado de pesquisa](images/controls_autosuggest_noresults.png)
 
+{{> aside-internal content = "
+## Lista de verificação de globalização e localização
+
+<table>
+<tr>
+<th>Espaçamento vertical</th><td>Use caracteres não latinos para espaçamento vertical para garantir que scripts não latinos sejam exibidos corretamente, inclusive números.</td>
+</tr>
+<tr>
+<th>Rolagem</th><td>Quando o texto de sugestão automática for selecionado, o usuário deverá ser capaz de rolar até o final da sequência.</td>
+</tr>
+</table>
+"}}
 
 ## Artigos relacionados
 
 - [Controles de texto](text-controls.md)
 - [Verificação ortográfica](spell-checking-and-prediction.md)
-- [Pesquisa](search.md)
+- [Pesquisar](search.md)
 - [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

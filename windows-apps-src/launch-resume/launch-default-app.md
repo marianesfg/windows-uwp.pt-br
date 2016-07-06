@@ -225,6 +225,6 @@ Para obter mais informações, consulte [Iniciar o aplicativo Pessoas](launch-pe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

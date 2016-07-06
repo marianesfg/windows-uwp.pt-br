@@ -84,6 +84,6 @@ O aplicativo pode iniciar o aplicativo Mapas do Windows conforme mostrado aqui p
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

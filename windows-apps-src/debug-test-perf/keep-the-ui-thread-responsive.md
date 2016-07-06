@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
-title: Mantenha o thread de interface do usuário responsivo
-description: Os usuários esperam que um aplicativo continue respondendo enquanto executa cálculos, independentemente do tipo de computador.
+title: "Mantenha o thread de interface do usuário responsivo"
+description: "Os usuários esperam que um aplicativo continue respondendo enquanto executa cálculos, independentemente do tipo de computador."
+translationtype: Human Translation
+ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
+ms.openlocfilehash: 6144b5b60a0092efd1056dd5de166a64733356ec
+
 ---
 # Mantenha o thread de interface do usuário responsivo
 
@@ -93,7 +97,7 @@ public class AsyncExample
 > End Class
 > ```
 
-Neste exemplo, o manipulador `NextMove-Click` retornará no **await** para manter o thread de interface do usuário responsivo. Mas a execução seleciona esse manipulador novamente depois que `ComputeNextMove` (que é executado em um thread em segundo plano) é concluído. O restante do código no manipulador atualiza a interface do usuário com os resultados.
+Neste exemplo, o manipulador `NextMove-Click` retornará em **await** para manter o thread de interface do usuário responsivo. Mas a execução seleciona esse manipulador novamente depois que `ComputeNextMove` (que é executado em um thread em segundo plano) é concluído. O restante do código no manipulador atualiza a interface do usuário com os resultados.
 
 > **Observação**  Também há uma API [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) e [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para a UWP que pode ser usada em cenários semelhantes. Para obter mais informações, consulte [Programação threading e assíncrona](https://msdn.microsoft.com/library/windows/apps/Mt187340).
 
@@ -103,6 +107,7 @@ Neste exemplo, o manipulador `NextMove-Click` retornará no **await** para mante
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

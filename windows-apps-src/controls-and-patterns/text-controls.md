@@ -5,18 +5,18 @@ title: Controles de texto
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 1fec4bf13567507087eef08feea0a3ebc255b43f
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: b075820275d7b5e592cdae736ed92beef67a7b9a
 
 ---
 # Controles de texto
 Controles de texto consistem em caixas de entrada de texto, caixas de senha, caixas de sugestão automática e blocos de texto. A estrutura do XAML fornece vários controles para renderizar, inserir e editar texto, com um conjunto de propriedades para formatar o texto.
 
 - Os controles para exibir texto somente leitura são [TextBlock](text-block.md) e [RichTextBlock](rich-text-block.md).
-- Os controles de entrada e edição de texto são: [TextBox](text-block.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) e [RichEditBox](rich-edit-box.md). 
+- Os controles de entrada e edição de texto são: [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) e [RichEditBox](rich-edit-box.md).
 
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+**APIs importantes**
 
 -   [**Classe AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
 -   [**Classe PasswordBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
@@ -33,7 +33,7 @@ O controle de texto que você deverá usar dependerá do cenário. Use essas inf
 
 Use um **TextBlock** para exibir mais texto somente leitura em seu aplicativo. Você pode usá-lo para exibir texto de linha única ou de várias linhas, hiperlinks embutidos e texto com formatação, como negrito, itálico ou sublinhado.
 
-TextBlock geralmente é mais fácil de usar e fornece melhor desempenho na renderização de texto do que RichTextBlock, por isso é o preferido para a maioria do texto da interface do usuário de aplicativo. Você pode facilmente acessar e usar o texto de um TextBlock em seu aplicativo, obtendo o valor da propriedade [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx). 
+TextBlock geralmente é mais fácil de usar e fornece melhor desempenho na renderização de texto do que RichTextBlock, por isso é o preferido para a maioria do texto da interface do usuário de aplicativo. Você pode facilmente acessar e usar o texto de um TextBlock em seu aplicativo, obtendo o valor da propriedade [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx).
 
 Também fornece muitas das mesmas opções de formatação para personalizar como o texto será renderizado. Embora você possa colocar quebras de linha no texto, TextBlock é projetado para exibir um único parágrafo e não oferece suporte a recuo de texto.
 
@@ -53,7 +53,7 @@ Use o controle **AutoSuggestBox** para mostrar ao usuário uma lista de sugestõ
 
 Você também deve usar um controle AutoSuggestBox para implementar uma caixa de pesquisa.
 
-Use **RichEditBox** para exibir e editar arquivos Rich Text. Você não usa um RichEditBox para obter a entrada do usuário em seu aplicativo da maneira que você usa outras caixas de entrada de texto padrão. Em vez disso, você o usa para trabalhar com arquivos de texto que são separados de seu aplicativo. Em geral, você salva o texto inserido em um RichEditBox em um arquivo. rtf.
+Use **RichEditBox** para exibir e editar arquivos Rich Text. Você não usa um RichEditBox para obter a entrada do usuário no aplicativo da maneira que você usa outras caixas de entrada de texto padrão. Em vez disso, você o usa para trabalhar com arquivos de texto que são separados de seu aplicativo. Em geral, você salva o texto inserido em um RichEditBox em um arquivo. rtf.
 
 **A entrada de texto é a melhor opção?**
 
@@ -67,7 +67,7 @@ Há muitas maneiras de se obter a entrada do usuário em seu aplicativo. Estas p
     -   **O valor que está sendo inserido é aproximado e/ou relativo a outra quantidade na mesma página?** Se for o caso, utilize um [controle deslizante](slider.md).
     -   **O usuário se beneficiaria com um feedback instantâneo sobre o efeito das alterações de configuração?** Se for caso, utilize um [controle deslizante](slider.md), possivelmente com um controle anexo.
     -   **Há alguma probabilidade de o valor inserido ser ajustado após o resultado ser observado, como volume ou brilho ser ajustado?** Se for o caso, utilize um [controle deslizante](slider.md).
-    
+
 ## Exemplos
 
 Caixa de texto
@@ -115,15 +115,15 @@ Por exemplo, se uma caixa de texto for usada somente para a inserção de um PIN
 >Importante  
 >O escopo de entrada não faz com que qualquer validação de entrada seja executada, e não impede que o usuário forneça qualquer entrada por meio de um teclado de hardware ou de outro dispositivo de entrada. Você ainda é o responsável pela validação da entrada em seu código, conforme necessário.
 
-Para obter mais informações, consulte [Usar o escopo de entrada para alterar o teclado virtual]().
+Para obter mais informações, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
 ## Fontes de cores
 
 **Aplica-se a:** TextBlock, RichTextBlock, TextBox, RichEditBox
 
-No Windows, as fontes podem incluir várias camadas coloridas para cada glifo. Por exemplo, a fonte Segoe UI Emoji define versões de cor do Emoticon e outros personagens Emoji. 
+No Windows, as fontes podem incluir várias camadas coloridas para cada glifo. Por exemplo, a fonte Segoe UI Emoji define versões de cor do Emoticon e outros personagens Emoji.
 
-Os controles padrão e Rich Text dão suporte a fontes de cor de exibição. Por padrão, a propriedade **IsColorFontEnabled** é **true**, e fontes com essas camadas adicionais são renderizadas na cor. A fonte de cor padrão no sistema é Segoe UI Emoji e os controles voltarão para essa fonte para exibir os glifos em cores. 
+Os controles padrão e Rich Text dão suporte a fontes de cor de exibição. Por padrão, a propriedade **IsColorFontEnabled** é **true**, e fontes com essas camadas adicionais são renderizadas na cor. A fonte de cor padrão no sistema é Segoe UI Emoji e os controles voltarão para essa fonte para exibir os glifos em cores.
 
 ```xaml
 <TextBlock FontSize="30">Hello ☺⛄☂♨⛅</TextBlock>
@@ -147,14 +147,37 @@ Seu aplicativo pode usar o separador de linha para indicar um final da linha nã
 
 Seu aplicativo pode inserir um separador de parágrafo entre parágrafos de texto. O uso desse separador permite a criação de arquivos de texto sem formatação que podem ser formatados com larguras de linha diferentes em sistemas operacionais diversos. O sistema de destino pode ignorar todos os separadores de linha e interromper parágrafos apenas nos separadores de parágrafo.
 
+## Diretrizes para verificação ortográfica
 
+**Aplica-se a:** TextBox, RichEditBox
+
+Durante a edição e a entrada de texto, a verificação ortográfica informa o usuário que uma palavra está com grafia incorreta realçando-a com uma linha ondulada vermelha e fornece uma maneira de o usuário corrigir o erro de ortografia.
+
+Veja aqui um exemplo do verificador ortográfico interno:
+
+![o verificador ortográfico interno](images/spellchecking.png)
+
+Use a verificação ortográfica com controles de entrada de texto para estas duas finalidades:
+
+-   **Para corrigir erros ortográficos automaticamente**
+
+    O mecanismo de verificação ortográfico corrige automaticamente palavras incorretas quando tem certeza sobre a correção. Por exemplo, o mecanismo altera automaticamente "teh" para "the".
+
+-   **Para mostrar grafias alternativas**
+
+    Quando o mecanismo de verificação ortográfica não tem certeza sobre as correções, ele adiciona uma linha vermelha abaixo da palavra incorreta e exibe as alternativas em um menu de contexto quando você toca ou clica com o botão direito do mouse na palavra.
+
+-   Use a verificação ortográfica para ajudar os usuários a inserir palavras ou frases em controles de entrada de texto. A verificação ortográfica funciona com entradas por touch, mouse e teclado.
+-   Não use a verificação ortográfica quando uma palavra provavelmente não estará no dicionário ou se os usuários não a valorizarão. Por exemplo, não a ative se a caixa de texto se destinar a capturar um número de telefone ou nome.
+-   Não desabilite a verificação ortográfica só porque o atual mecanismo de correção ortográfica não oferece suporte ao idioma do seu aplicativo. Quando o verificador ortográfico não oferece suporte a um idioma, ele não faz nada, então não há nenhum mal em deixar a opção habilitada. Além disso, alguns usuários podem usar um IME para inserir outro idioma em seu aplicativo, e pode haver suporte para esse idioma. Por exemplo, ao criar um aplicativo em japonês, mesmo que o mecanismo de verificação ortográfica não possa reconhecer no momento esse idioma, não desative a verificação ortográfica. O usuário pode alternar para um IME em inglês e digitar inglês no aplicativo; se a verificação ortográfica estiver habilitada, a ortografia em inglês será verificada.
+
+Para controles TextBox e RichEditBox, a verificação ortográfica permanece ativada por padrão. Você pode desabilitá-la definindo a propriedade **IsSpellCheckEnabled** como **false**.
 
 ## Artigos relacionados
 
 **Para designers**
 - [**Diretrizes de fonte**](fonts.md)
 - [**Diretrizes e lista de ícones Segoe MDL2**](segoe-ui-symbol-font.md)
-- [Diretrizes para verificação ortográfica](spell-checking-and-prediction.md)
 - [Adicionando pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
 
 **Para desenvolvedores (XAML)**
@@ -164,6 +187,6 @@ Seu aplicativo pode inserir um separador de parágrafo entre parágrafos de text
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

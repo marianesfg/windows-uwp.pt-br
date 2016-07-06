@@ -644,6 +644,6 @@ Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implem
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

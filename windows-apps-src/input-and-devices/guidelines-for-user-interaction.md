@@ -30,7 +30,7 @@ Crie aplicativos para a UWP (Plataforma Universal do Windows) com a experiência
 -   Não use interações cronometradas sempre que possível (exemplos de uso apropriado: tocar e segurar).
 -   Não use o número de dedos usados para distinguir a manipulação sempre que possível.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
+## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicionais
 
 
 Primeiro e mais importante, projete o seu aplicativo com a expectativa de que o toque será o método de entrada principal dos usuários. Se você usar os controles da plataforma, o suporte para touchpad, mouse e caneta não exigirá qualquer programação adicional, pois o Windows 8 o fornece gratuitamente.
@@ -90,7 +90,7 @@ A resposta visual é importante quando o usuário recorre à entrada por toque e
 
 As técnicas a seguir aprimoram a experiência imersiva de aplicativos da Windows Store.
 
-**Direcionamento**
+**Seleção por área touch**
 
 O direcionamento é otimizado através de:
 

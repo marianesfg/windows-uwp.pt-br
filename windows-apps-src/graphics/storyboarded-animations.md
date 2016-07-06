@@ -297,47 +297,47 @@ myStoryboard->Begin();
 myStoryBoard.Begin()
 ```
 
-Você pode manipular o evento [**Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.timeline.completed.aspx) se desejar executar outra lógica após a animação terminar a aplicação de valores. Além disso, para solucionar problemas de interações do sistema/animação de propriedade, o método [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/BR242358) pode ser útil.
+[!div class="tabbedCodeSnippets"] Você pode manipular o evento [**Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.timeline.completed.aspx) se desejar executar outra lógica após a animação terminar a aplicação de valores.
 
-**Dica**  Sempre que você criar código para um cenário de aplicativo em que uma animação será iniciada a partir do código do aplicativo, é recomendável verificar novamente se uma animação ou transição já não existe na biblioteca de animações para seu cenário da interface do usuário. As animações da biblioteca permitem uma experiência da interface do usuário mais consistente em todos os aplicativos do Windows Runtime e são mais fáceis de usar.
-
- 
-
-### Animações para estados visuais
-
-O comportamento de execução de um [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) que é usado para definir o estado visual de um controle é diferente da maneira como um aplicativo pode executar um storyboard diretamente. Quando aplicado a uma definição de estado visual no XAML, o **Storyboard** é um elemento de um [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) contêiner e o estado como um todo é controlado pelo uso da API [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Qualquer animação interna será executada de acordo com seus valores de animação e propriedades [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) quando o **VisualState** contêiner for usado por um controle. Para obter mais informações, consulte [Storyboards para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808). Para estados visuais, o [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) aparente é diferente. Se um estado visual for alterado para outro estado, todas as alterações de propriedade aplicadas pelo estado visual anterior e suas animações serão cancelados, mesmo se o novo estado visual não aplicar especificamente uma nova animação a uma propriedade.
-
-### **Storyboard** e **EventTrigger**
-
-Só há uma maneira de iniciar uma animação que pode ser declarada completamente no XAML. No entanto, essa técnica já não é mais usada com freqüência. Trata-se de uma sintaxe herdada do WPF e de versões anteriores do Silverlight antes do suporte a [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Essa sintaxe [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) ainda funciona no XAML do Windows Runtime para fins de importação/compatibilidade, mas só funciona para um comportamento de gatilho baseado no evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723). Uma tentativa de acionar outros eventos lançará exceções ou causará falha na compilação. Para obter mais informações, consulte [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) ou [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053).
-
-## Animando propriedades anexadas XAML
-
-Não é um cenário comum, mas é possível aplicar um valor animado a uma propriedade anexada XAML. Para saber mais sobre o que são as propriedades anexadas e como elas funcionam, consulte [Visão geral das propriedades anexadas](https://msdn.microsoft.com/library/windows/apps/Mt185579). O direcionamento de uma propriedade anexada exige uma [sintaxe de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586) que coloca o nome da propriedade entre parênteses. Você pode animar as propriedades anexadas internas, como [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/Hh759773), usando uma [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) que aplica valores inteiros discretos. Entretanto, uma limitação existente da implementação XAML de Windows Runtime é que não é possível animar uma propriedade anexada personalizada.
-
-## Mais tipos de animação e próximas etapas para saber mais sobre como animar a interface do usuário
-
-Até agora, mostramos as animações personalizadas que são animadas entre dois valores e depois interpolam linearmente os valores conforme necessário durante a execução da animação. Elas são chamadas de animações **From**/**To**/**By** Mas há outro tipo de animação que permite declarar valores intermediários que ficam entre o início e o fim. Elas são chamadas de *animações de quadro chave*. Há também uma maneira de alterar a lógica de interpolação em uma animação **From**/**To**/**By** ou uma animação de quadro chave. Isso envolve a aplicação de uma função de easing. Para saber mais sobre esses conceitos, consulte [Animações de quadro chave e com função de easing](key-frame-and-easing-function-animations.md).
-
-## Tópicos relacionados
-
-* [Sintaxe de Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586)
-* [Visão geral das propriedades de dependência](https://msdn.microsoft.com/library/windows/apps/Mt185583)
-* [Animações de quadro chave e com função de easing](key-frame-and-easing-function-animations.md)
-* [Animações de storyboard para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
-* [Modelos de controle](https://msdn.microsoft.com/library/windows/apps/Mt210948)
-* [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)
-* [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824)
- 
+Além disso, para solucionar problemas de interações do sistema/animação de propriedade, o método [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/BR242358) pode ser útil. **Dica**  Sempre que você criar código para um cenário de aplicativo em que uma animação será iniciada a partir do código do aplicativo, é recomendável verificar novamente se uma animação ou transição já não existe na biblioteca de animações para seu cenário da interface do usuário.
 
  
 
+### As animações da biblioteca permitem uma experiência da interface do usuário mais consistente em todos os aplicativos do Windows Runtime e são mais fáceis de usar.
+
+Animações para estados visuais O comportamento de execução de um [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) que é usado para definir o estado visual de um controle é diferente da maneira como um aplicativo pode executar um storyboard diretamente. Quando aplicado a uma definição de estado visual no XAML, o **Storyboard** é um elemento de um [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) contêiner e o estado como um todo é controlado pelo uso da API [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Qualquer animação interna será executada de acordo com seus valores de animação e propriedades [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) quando o **VisualState** contêiner for usado por um controle. Para obter mais informações, consulte [Storyboards para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808). Para estados visuais, o [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) aparente é diferente.
+
+### Se um estado visual for alterado para outro estado, todas as alterações de propriedade aplicadas pelo estado visual anterior e suas animações serão cancelados, mesmo se o novo estado visual não aplicar especificamente uma nova animação a uma propriedade.
+
+**Storyboard** e **EventTrigger** Só há uma maneira de iniciar uma animação que pode ser declarada completamente no XAML. No entanto, essa técnica já não é mais usada com freqüência. Trata-se de uma sintaxe herdada do WPF e de versões anteriores do Silverlight antes do suporte a [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Essa sintaxe [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) ainda funciona no XAML do Windows Runtime para fins de importação/compatibilidade, mas só funciona para um comportamento de gatilho baseado no evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723). Uma tentativa de acionar outros eventos lançará exceções ou causará falha na compilação.
+
+## Para obter mais informações, consulte [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) ou [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053).
+
+Animando propriedades anexadas XAML Não é um cenário comum, mas é possível aplicar um valor animado a uma propriedade anexada XAML. Para saber mais sobre o que são as propriedades anexadas e como elas funcionam, consulte [Visão geral das propriedades anexadas](https://msdn.microsoft.com/library/windows/apps/Mt185579). O direcionamento de uma propriedade anexada exige uma [sintaxe de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586) que coloca o nome da propriedade entre parênteses. Você pode animar as propriedades anexadas internas, como [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/Hh759773), usando uma [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) que aplica valores inteiros discretos.
+
+## Entretanto, uma limitação existente da implementação XAML de Windows Runtime é que não é possível animar uma propriedade anexada personalizada.
+
+Mais tipos de animação e próximas etapas para saber mais sobre como animar a interface do usuário Até agora, mostramos as animações personalizadas que são animadas entre dois valores e depois interpolam linearmente os valores conforme necessário durante a execução da animação. Elas são chamadas de animações **From**/**To**/**By** Mas há outro tipo de animação que permite declarar valores intermediários que ficam entre o início e o fim. Elas são chamadas de *animações de quadro chave*. Há também uma maneira de alterar a lógica de interpolação em uma animação **From**/**To**/**By** ou uma animação de quadro chave. Isso envolve a aplicação de uma função de easing.
+
+## Para saber mais sobre esses conceitos, consulte [Animações de quadro chave e com função de easing](key-frame-and-easing-function-animations.md).
+
+* [Tópicos relacionados](https://msdn.microsoft.com/library/windows/apps/Mt185586)
+* [Sintaxe de Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185583)
+* [Visão geral das propriedades de dependência](key-frame-and-easing-function-animations.md)
+* [Animações de quadro chave e com função de easing](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
+* [Animações de storyboard para estados visuais](https://msdn.microsoft.com/library/windows/apps/Mt210948)
+* [**Modelos de controle**](https://msdn.microsoft.com/library/windows/apps/BR210490)
+* [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/Hh759824)
+ 
+
+ 
 
 
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

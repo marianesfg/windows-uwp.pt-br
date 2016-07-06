@@ -10,7 +10,7 @@ ms.openlocfilehash: a34133b42872ce949644dc951255e6214164adad
 
 #  Fazendo a portabilidade de XAML e da interface do usuário do Windows Phone Silverlight para a UWP
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, veja o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 O tópico anterior foi [Solução de problemas](wpsl-to-uwp-troubleshooting.md).
@@ -394,6 +394,6 @@ O próximo tópico é [Portabilidade para E/S, dispositivo e modelo de aplicativ
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

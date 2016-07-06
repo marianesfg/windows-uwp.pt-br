@@ -5,8 +5,8 @@ title: Controles Hub
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 70ce2a58b45c8514aca6641ca034caa91fb88d18
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: fdff043aa92842adb6ac2d572794bf02fdd5c6b3
 
 ---
 # Controle/padrão Hub
@@ -16,7 +16,15 @@ Um controle Hub permite organizar o conteúdo do aplicativo em seções ou categ
 
 ![Exemplo de um hub](images/hub_example_tablet.png)
 
-O conteúdo em um hub pode ser mostrado em uma exibição panorâmica robusta em que os usuários têm uma prévia do que é novo, do que está disponível e do que é relevante. Normalmente os hubs têm um cabeçalho de página, e cada uma das várias seções de conteúdo tem um cabeçalho de seção.
+O conteúdo em um hub pode ser mostrado em uma exibição panorâmica em que os usuários têm uma prévia das novidades, do que está disponível e do que é relevante. Normalmente os hubs têm um cabeçalho de página, e cada uma das várias seções de conteúdo tem um cabeçalho de seção.
+
+
+-   [**Classe Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)
+-   [**Classe HubSection**](https://msdn.microsoft.com/library/windows/apps/dn251845)
+
+## Esse é o controle correto?
+
+O controle Hub funciona bem para exibir grandes volumes de conteúdo organizado em uma hierarquia. Os hubs priorizam a navegação e a descoberta de novo conteúdo, tornando-se úteis para exibir itens em uma loja ou uma coleção de mídias.
 
 O controle hub tem vários recursos que o fazem funcionar bem para a criação de um padrão de navegação de conteúdo.
 
@@ -34,24 +42,13 @@ O controle hub tem vários recursos que o fazem funcionar bem para a criação d
 
 -   **Larguras de conteúdo e página variáveis**
 
-    Por ser um modelo panorâmico, o hub permite a variação nas larguras da seção. Isso é ótimo para conteúdo de diferentes profundidades e permite que um número pequeno a alto de itens sejam formatados igualmente bem.
+    Por ser um modelo panorâmico, o hub permite a variação nas larguras da seção. Isso é ótimo para conteúdo de diferentes profundidades ou volumes.
 
 -   **Arquitetura flexível**
 
     Se preferir manter a arquitetura do aplicativo superficial, você poderá ajustar todo o conteúdo de canal em um resumo de seções do Hub.
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
-
--   [**Classe Hub (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn251843)
--   [**Classe HubSection (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn251845)
--   [**Objeto Hub (HTML)**](https://msdn.microsoft.com/library/windows/apps/dn255137)
-
-
-## Esse é o controle correto?
-
-O controle Hub funciona bem para exibir grandes quantidades de conteúdo organizado em uma hierarquia. Os hubs priorizam a navegação e a descoberta de novo conteúdo, tornando-se úteis para exibir itens em uma loja ou uma coleção de mídia.
-
-Um Hub é apenas um dos vários elementos de navegação que você pode usar. Para saber mais sobre padrões de navegação e os outros elementos de navegação, consulte [Noções básicas de design de navegação de aplicativos UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/windows/apps/dn958438).
+Um Hub é apenas um dos vários elementos de navegação que você pode usar. Para saber mais sobre padrões de navegação e os outros elementos de navegação, consulte [Noções básicas de design de navegação de aplicativos UWP (Plataforma Universal do Windows)](../layout/navigation-basics.md).
 
 ## Arquitetura do hub
 
@@ -107,13 +104,13 @@ Em dispositivos móveis, uma seção de hub está visível por vez.
 
 ## Artigos relacionados
 
-- [Noções básicas de navegação](https://msdn.microsoft.com/library/windows/apps/dn958438)
-- [**Classe de Hub Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/dn251843)
-- [Exemplo de controle Hub em XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
+- [Classe Hub](https://msdn.microsoft.com/library/windows/apps/dn251843)
+- [Noções básicas de navegação](../layout/navigation-basics.md)
 - [Usando um Hub](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
+- [Exemplo de controle Hub em XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

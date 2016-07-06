@@ -3,8 +3,8 @@ author: jnHs
 Description: "É possível pode gerar códigos promocionais para um aplicativo ou um IAP (produto no aplicativo) que você tiver publicado na Windows Store."
 title: "Gerar códigos promocionais"
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4001f374a80cd7c62df6230a9429dd5b5a19d2b2
+ms.sourcegitcommit: df994a3bbda9f6d4df0ee2dd6c2cb646d91a0bfc
+ms.openlocfilehash: bfea802fb4a6efcfe34121802ce49f20a9b0305e
 
 ---
 
@@ -32,7 +32,7 @@ Lembre-se das seguintes políticas para códigos promocionais:
 
 -   Você pode gerar códigos promocionais para qualquer aplicativo ou IAP publicado na Windows Store. Os usuários podem resgatar os códigos em qualquer versão do Windows que seja compatível com seu aplicativo ou IAP.
 -   Os códigos promocionais expiram seis meses após a data do pedido.
--   Para cada um dos seus aplicativos ou IAPs, você pode gerar até 250 códigos promocionais a cada seis meses. O período de seis meses começa quando o primeiro pedido de código promocional é enviado.
+-   Para cada um de seus aplicativos ou IAPs, você pode gerar até 500 códigos promocionais a cada seis meses. O período de seis meses começa quando o primeiro pedido de código promocional é enviado.
 -   Você deve seguir os requisitos definidos no [Contrato de Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/hh694058), incluindo a seção **3k. Códigos promocionais**.
 
 ## Solicitar códigos promocionais
@@ -48,6 +48,8 @@ Para solicitar códigos promocionais para um aplicativo ou IAP publicado na Wind
     -   Selecione o aplicativo ou IAP para o qual você deseja gerar códigos.
     -   Especifique um nome para o pedido. Você pode usar esse nome para diferenciar entre diferentes pedidos de códigos quando for analisar os dados de uso dos códigos promocionais.
     -   Especifique a quantidade de códigos para solicitar.
+    -   Especifique quando os códigos promocionais devem se tornar ativos. Para escolher uma determinada data e hora inicial, desmarque a caixa de seleção **Os códigos são ativados imediatamente**.
+    -   Especifique quando os códigos promocionais devem expirar. Para escolher uma data e uma hora de expiração específicas, desmarque a caixa de seleção **Os códigos expiram após 6 meses**.
 
 3.  Clique em **Solicitar códigos**. O pedido é enviado e o painel leva você à página **Códigos promocionais**, onde o novo pedido é listado como **Pendente** na tabela de resumo de pedidos de códigos promocionais.
 
@@ -74,11 +76,13 @@ Para baixar um pedido atendido de códigos promocionais e distribuir os códigos
 
         https://account.microsoft.com/billing/redeem?mstoken=&lt;promotional_code>
 
-    -   **Data do pedido**: a data em que você fez o pedido desse código.
+    -   **Data de início**: a data de início da validade do código.
     -   **Data de validade**: a data de validade desse código.
     -   **ID do Código**: uma ID exclusiva para esse código.
     -   **ID do Pedido**: uma ID exclusiva para o pedido em que esse código foi atendido.
     -   **Fornecido a**: um campo vazio que você pode preencher com um valor que identifique o usuário ao qual forneceu o código.
+    -   **Disponível**: o número de códigos ainda disponíveis para resgatar.
+    -   **Resgatado**: o número de códigos que foram resgatados.
 
 4.  Distribua as URLs resgatáveis aos seus usuários por meio de qualquer formato de comunicação de sua preferência (como email, SMS ou cartões impressos). Recomendamos que sua comunicação inclua o seguinte:
     -   Uma explicação do aplicativo ou IAP ao qual o código promocional se aplica e, opcionalmente, uma descrição do motivo pelo qual o usuário está recebendo o código.
@@ -134,6 +138,6 @@ Você também pode baixar um pedido ativo dessa tabela.
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

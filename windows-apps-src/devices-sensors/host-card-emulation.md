@@ -385,6 +385,6 @@ O suporte à intercepção de SMS binário herdado no Windows Phone 8.1 foi remo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

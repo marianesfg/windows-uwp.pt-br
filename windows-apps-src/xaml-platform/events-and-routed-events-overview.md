@@ -1,13 +1,17 @@
 ---
 author: jwmsft
-description: Descrevemos o conceito de programação de eventos em um aplicativo do Windows Runtime quando você usa as extensões de componente (C++/CX) C#, Visual Basic ou Visual C++ como linguagem de programação e XAML para a definição da interface do usuário.
-title: Visão geral de eventos e eventos roteados
+description: "Descrevemos o conceito de programação de eventos em um aplicativo do Windows Runtime quando você usa as extensões de componente (C++/CX) C#, Visual Basic ou Visual C++ como linguagem de programação e XAML para a definição da interface do usuário."
+title: "Visão geral de eventos e eventos roteados"
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 4e4e21789dd76ad691f3828d23c73adcfc31efdf
+
 ---
 
 # Visão geral de eventos e eventos roteados
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs importantes**
 -   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
@@ -84,7 +88,7 @@ Para alguns eventos, os valores de propriedade específicos dos dados de evento 
 
 Em alguns casos, você desejará usar APIs que usam um padrão **async** em um manipulador de eventos. Por exemplo, talvez você use [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) em [**AppBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) para exibir um seletor de arquivos e interagir com ele. No entanto, muitas das APIs de seletor de arquivos são assíncronas. Elas precisam ser chamadas dentro de um escopo **async**/awaitable, e o compilador fará essa imposição. Portanto, o que você pode fazer é adicionar a palavra-chave **async** ao manipulador de eventos, de forma que ele agora seja **async****void**. Agora, o seu manipulador de eventos pode fazer chamadas **async**/awaitable.
 
-Para conhecer um exemplo de manipulação de eventos de interação do usuário usando o padrão **async**, consulte [Acesso a arquivos e seletores](https://msdn.microsoft.com/library/windows/apps/jj655411) (parte da série [Criar seu primeiro aplicativo do Windows Runtime em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)). Veja também [Chamar APIs assíncronas em C).
+Para conhecer um exemplo de manipulação de eventos de interação do usuário usando o padrão **async**, consulte [Acesso a arquivos e seletores](https://msdn.microsoft.com/library/windows/apps/jj655411) (parte da série [Criar seu primeiro aplicativo do Windows Runtime em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)). Consulte também [Chamar APIs assíncronas em C).
 
 ## Adicionando manipuladores de eventos em código
 
@@ -295,6 +299,7 @@ A definição de um evento personalizado normalmente é feita como parte do exer
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

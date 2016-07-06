@@ -262,9 +262,9 @@ Há inúmeros motivos para um aplicativo ser ativado, sendo que cada um deve ser
 > End Class 
 > ```
 
-Os aplicativos que exibem uma página de carregamento no manipulador de carregamento começam a trabalhar para criar a IU em segundo plano. Após esse elemento ter sido criado, seu evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) ocorre. No manipulador de evento, você substitui o conteúdo da janela, que, no momento, é a tela de carregamento, com a home page recém-criada.
+[!div class="tabbedCodeSnippets"] Os aplicativos que exibem uma página de carregamento no manipulador de carregamento começam a trabalhar para criar a IU em segundo plano. Após esse elemento ter sido criado, seu evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) ocorre.
 
-É crucial que um aplicativo com um período de inicialização prolongado mostre uma página de carregamento. Além de fornecer ao usuário feedback garantido sobre o processo de ativação, o processo será finalizado se [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) não for chamado dentro de 15 segundos após a inicialização do processo de ativação.
+No manipulador de evento, você substitui o conteúdo da janela, que, no momento, é a tela de carregamento, com a home page recém-criada. É crucial que um aplicativo com um período de inicialização prolongado mostre uma página de carregamento.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -318,51 +318,51 @@ Os aplicativos que exibem uma página de carregamento no manipulador de carregam
 > End Class
 > ```
 
-Para um exemplo do uso de telas iniciais estendidas, consulte [Splash screen sample](http://go.microsoft.com/fwlink/p/?linkid=234889).
+Além de fornecer ao usuário feedback garantido sobre o processo de ativação, o processo será finalizado se [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) não for chamado dentro de 15 segundos após a inicialização do processo de ativação.
 
-### Fase 3
+### [!div class="tabbedCodeSnippets"]
 
-O fato de o aplicativo ter exibido a interface do usuário não significa que ele esteja completamente pronto para uso. No caso do nosso jogo, a interface do usuário é exibida com espaços reservados para os recursos que exigem dados da Internet. Nesse ponto, o jogo baixa os dados adicionais necessários para tornar o aplicativo plenamente funcional e progressivamente habilita os recursos à medida que os dados são adquiridos.
+Para um exemplo do uso de telas iniciais estendidas, consulte [Splash screen sample](http://go.microsoft.com/fwlink/p/?linkid=234889). Fase 3 O fato de o aplicativo ter exibido a interface do usuário não significa que ele esteja completamente pronto para uso.
 
-Às vezes, uma boa parte do conteúdo necessário para ativação pode vir junto com o aplicativo. Esse é o caso em um jogo simples, o que torna o processo de ativação bastante fácil. No entanto, muitos programas (como leitores de notícias e visualizadores de fotos) precisam extrair informações da Web para se tornarem funcionais. Esses dados podem ser pesados e levar um tempo considerável para serem baixados. A maneira como o aplicativo obtém esses dados durante o processo de ativação pode ter um enorme impacto sobre a percepção de desempenho do aplicativo.
+No caso do nosso jogo, a interface do usuário é exibida com espaços reservados para os recursos que exigem dados da Internet. Nesse ponto, o jogo baixa os dados adicionais necessários para tornar o aplicativo plenamente funcional e progressivamente habilita os recursos à medida que os dados são adquiridos. Às vezes, uma boa parte do conteúdo necessário para ativação pode vir junto com o aplicativo. Esse é o caso em um jogo simples, o que torna o processo de ativação bastante fácil. No entanto, muitos programas (como leitores de notícias e visualizadores de fotos) precisam extrair informações da Web para se tornarem funcionais.
 
-Uma página de carregamento, ou pior, uma tela inicial, poderia ser exibida por vários minutos se o aplicativo tentasse baixar um conjunto de dados inteiro necessário para a funcionalidade na fase um ou dois da ativação. Isso faria o aplicativo parecer que não está respondendo ou provocaria seu encerramento pelo sistema. Recomendamos que o aplicativo baixe a quantidade mínima necessária de dados para mostrar uma interface do usuário interativa com elementos de espaço reservado na fase 2 e depois progressivamente carregue dados que substituam os elementos de espaço reservado na fase 3. Para obter mais informações sobre como lidar com os dados, consulte [Otimizar ListView e GridView](optimize-gridview-and-listview.md).
+Esses dados podem ser pesados e levar um tempo considerável para serem baixados. A maneira como o aplicativo obtém esses dados durante o processo de ativação pode ter um enorme impacto sobre a percepção de desempenho do aplicativo. Uma página de carregamento, ou pior, uma tela inicial, poderia ser exibida por vários minutos se o aplicativo tentasse baixar um conjunto de dados inteiro necessário para a funcionalidade na fase um ou dois da ativação. Isso faria o aplicativo parecer que não está respondendo ou provocaria seu encerramento pelo sistema.
 
-Como exatamente o aplicativo vai reagir a cada fase da inicialização é você que decide, mas ao fornecer o máximo de retorno possível (tela inicial, tela de carregamento, interface do usuário enquanto os dados são carregados), você faz o usuário ter a impressão de que o aplicativo e o sistema como um todo são rápidos.
+Recomendamos que o aplicativo baixe a quantidade mínima necessária de dados para mostrar uma interface do usuário interativa com elementos de espaço reservado na fase 2 e depois progressivamente carregue dados que substituam os elementos de espaço reservado na fase 3.
 
-### Minimize assemblies gerenciados no caminho de inicialização
+### Para obter mais informações sobre como lidar com os dados, consulte [Otimizar ListView e GridView](optimize-gridview-and-listview.md).
 
-Os códigos reutilizáveis costumam vir na forma da inclusão de módulos (dlls) inclusos em um projeto. O carregamento desses módulos requer acesso ao disco e, como você pode imaginar, o custo de fazê-lo pode aumentar. Isso tem mais impacto na inicialização a frio, mas pode ter impacto na inicialização a quente, também. No caso do C# e do Visual Basic, o CLR tenta adiar esse custo o máximo possível carregando assemblies sob demanda. Ou seja, o CLR não carrega um módulo até que um método executado faça referência a ele. Portanto, faça referência apenas a assemblies necessários para a inicialização do aplicativo no código de inicialização, para que o CLR não carregue módulos desnecessários. Se tiver caminhos de código não utilizados em seu caminho de inicialização com referências desnecessárias, você poderá migrar esses caminhos de código para outros métodos, a fim de evitar as cargas desnecessárias.
+Como exatamente o aplicativo vai reagir a cada fase da inicialização é você que decide, mas ao fornecer o máximo de retorno possível (tela inicial, tela de carregamento, interface do usuário enquanto os dados são carregados), você faz o usuário ter a impressão de que o aplicativo e o sistema como um todo são rápidos. Minimize assemblies gerenciados no caminho de inicialização Os códigos reutilizáveis costumam vir na forma da inclusão de módulos (dlls) inclusos em um projeto. O carregamento desses módulos requer acesso ao disco e, como você pode imaginar, o custo de fazê-lo pode aumentar. Isso tem mais impacto na inicialização a frio, mas pode ter impacto na inicialização a quente, também. No caso do C# e do Visual Basic, o CLR tenta adiar esse custo o máximo possível carregando assemblies sob demanda. Ou seja, o CLR não carrega um módulo até que um método executado faça referência a ele.
 
-Uma outra maneira de reduzir as cargas de módulos é combinar os módulos do seu aplicativo. Carregar um assembly grande geralmente leva menos tempo do que carregar dois pequenos. Isso nem sempre é possível, e você deverá combinar módulos somente se isso não fizer uma diferença relevante para a produtividade do desenvolvedor ou a capacidade de reutilização do código. Você pode usar ferramentas como o [PerfView](http://go.microsoft.com/fwlink/p/?linkid=251609) ou o [Windows Performance Analyzer (WPA)](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) para descobrir quais módulos são carregados na inicialização.
+Portanto, faça referência apenas a assemblies necessários para a inicialização do aplicativo no código de inicialização, para que o CLR não carregue módulos desnecessários. Se tiver caminhos de código não utilizados em seu caminho de inicialização com referências desnecessárias, você poderá migrar esses caminhos de código para outros métodos, a fim de evitar as cargas desnecessárias. Uma outra maneira de reduzir as cargas de módulos é combinar os módulos do seu aplicativo. Carregar um assembly grande geralmente leva menos tempo do que carregar dois pequenos.
 
-### Faça solicitações da Web inteligentes
+### Isso nem sempre é possível, e você deverá combinar módulos somente se isso não fizer uma diferença relevante para a produtividade do desenvolvedor ou a capacidade de reutilização do código.
 
-É possível melhorar drasticamente o tempo de carregamento de um aplicativo compactando seu conteúdo localmente, incluindo XAML, imagens e qualquer outro arquivo importante para o aplicativo. Operações de disco são mais rápidas do que operações de rede. Se um aplicativo precisa de um determinado arquivo na inicialização, você pode reduzir o tempo geral de inicialização carregando-o do disco em vez de recuperá-lo de um servidor remoto.
+Você pode usar ferramentas como o [PerfView](http://go.microsoft.com/fwlink/p/?linkid=251609) ou o [Windows Performance Analyzer (WPA)](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) para descobrir quais módulos são carregados na inicialização. Faça solicitações da Web inteligentes É possível melhorar drasticamente o tempo de carregamento de um aplicativo compactando seu conteúdo localmente, incluindo XAML, imagens e qualquer outro arquivo importante para o aplicativo.
 
-## Registre e armazene as páginas em cache com eficiência
+## Operações de disco são mais rápidas do que operações de rede.
 
-O controle Frame fornece recursos de navegação. Ele oferece navegação para uma página (método Navigate), diário de navegação (propriedades BackStack/ForwardStack, método GoForward/GoBack), armazenamento de páginas em cache (Page.NavigationCacheMode) e suporte para serialização (método GetNavigationState).
+Se um aplicativo precisa de um determinado arquivo na inicialização, você pode reduzir o tempo geral de inicialização carregando-o do disco em vez de recuperá-lo de um servidor remoto. Registre e armazene as páginas em cache com eficiência
 
-O desempenho com o qual devemos ficar atentos com o Frame envolve principalmente o registro no diário e o armazenamento de páginas em cache.
+O controle Frame fornece recursos de navegação.
 
-**Registro de Frame no diário**. Quando você navega até uma página com Frame.Navigate(), uma PageStackEntry para a página atual é adicionada à coleção Frame.BackStack. A PageStackEntry é relativamente pequena, mas não nenhum limite interno para o tamanho da coleção BackStack. Possivelmente, um usuário pode navegar em um loop e ampliar essa coleção indefinidamente.
+Ele oferece navegação para uma página (método Navigate), diário de navegação (propriedades BackStack/ForwardStack, método GoForward/GoBack), armazenamento de páginas em cache (Page.NavigationCacheMode) e suporte para serialização (método GetNavigationState). O desempenho com o qual devemos ficar atentos com o Frame envolve principalmente o registro no diário e o armazenamento de páginas em cache. **Registro de Frame no diário**. Quando você navega até uma página com Frame.Navigate(), uma PageStackEntry para a página atual é adicionada à coleção Frame.BackStack.
 
-A PageStackEntry também inclui o parâmetro que foi passado para o método Frame.Navigate(). É recomendável que esse parâmetro seja um tipo primitivo serializável (como int ou string), para permitir que o método Frame.GetNavigationState() funcione. Mas esse parâmetro pode referenciar um objeto que envolva quantidades de conjuntos de trabalho mais significativas ou outros recursos, tornando cada entrada no BackStack muito mais cara. Por exemplo, você poderia usar um StorageFile como parâmetro e, consequentemente, o BackStack manteria um número indefinido de arquivos abertos.
+A PageStackEntry é relativamente pequena, mas não nenhum limite interno para o tamanho da coleção BackStack. Possivelmente, um usuário pode navegar em um loop e ampliar essa coleção indefinidamente. A PageStackEntry também inclui o parâmetro que foi passado para o método Frame.Navigate(). É recomendável que esse parâmetro seja um tipo primitivo serializável (como int ou string), para permitir que o método Frame.GetNavigationState() funcione.
 
-Portanto, é recomendável manter os parâmetros de navegação ao mínimo e limitar o tamanho do BackStack. O BackStack é um vetor padrão (IList em C#, Platform::Vector em C++/CX) e, portanto, pode ser cortado com a simples remoção de entradas.
+Mas esse parâmetro pode referenciar um objeto que envolva quantidades de conjuntos de trabalho mais significativas ou outros recursos, tornando cada entrada no BackStack muito mais cara. Por exemplo, você poderia usar um StorageFile como parâmetro e, consequentemente, o BackStack manteria um número indefinido de arquivos abertos.
 
-**Armazenamento de páginas em cache**. Por padrão, quando você navega para uma página com o método Frame.Navigate, uma nova instância da página é instanciada. Da mesma forma, se você retornar à página anterior com Frame.GoBack, uma nova instância da página anterior será alocada.
+Portanto, é recomendável manter os parâmetros de navegação ao mínimo e limitar o tamanho do BackStack. O BackStack é um vetor padrão (IList em C#, Platform::Vector em C++/CX) e, portanto, pode ser cortado com a simples remoção de entradas. **Armazenamento de páginas em cache**.
 
-O Frame, porém, oferece um cache de página opcional que pode evitar essas criações de instâncias. Para armazenar uma página em cache, use a propriedade Page.NavigationCacheMode. Definindo esse modo como Required forçará a página a ser armazenada em cache, definindo-a como Enabled permitirá que ela seja armazenada em cache. Por padrão, o tamanho do cache é de 10 páginas, mas isso pode ser alterado com a propriedade Frame.CacheSize. Todas as páginas necessárias serão armazenadas em cache, e se houver menos de páginas CacheSize Required, as páginas Enabled também poderão ser armazenadas em cache.
+Por padrão, quando você navega para uma página com o método Frame.Navigate, uma nova instância da página é instanciada. Da mesma forma, se você retornar à página anterior com Frame.GoBack, uma nova instância da página anterior será alocada. O Frame, porém, oferece um cache de página opcional que pode evitar essas criações de instâncias. Para armazenar uma página em cache, use a propriedade Page.NavigationCacheMode. Definindo esse modo como Required forçará a página a ser armazenada em cache, definindo-a como Enabled permitirá que ela seja armazenada em cache.
 
-O armazenamento de páginas em cache pode ajudar no desempenho evitando a criação de instâncias e, portanto, melhorando o desempenho da navegação. O armazenamento de páginas em cache pode prejudicar o desempenho com o armazenamento em cache excessivo, afetando, assim conjunto de trabalho.
+Por padrão, o tamanho do cache é de 10 páginas, mas isso pode ser alterado com a propriedade Frame.CacheSize. Todas as páginas necessárias serão armazenadas em cache, e se houver menos de páginas CacheSize Required, as páginas Enabled também poderão ser armazenadas em cache.
 
-Portanto, recomendamos usar o armazenamento de páginas em cache conforme apropriado para seu aplicativo. Por exemplo, digamos que você tenha um aplicativo que mostre uma lista de itens em um quadro e, quando você toca em um item, ele move o quadro para uma página de detalhes desse item. A página da lista provavelmente deve ser definida para o cache. Se a página de detalhes for a mesma para todos os itens, provavelmente ela também deverá ser armazenada em cache. Mas se a página de detalhes for mais heterogênea, talvez seja melhor desativar o armazenamento em cache.
-
-
+O armazenamento de páginas em cache pode ajudar no desempenho evitando a criação de instâncias e, portanto, melhorando o desempenho da navegação. O armazenamento de páginas em cache pode prejudicar o desempenho com o armazenamento em cache excessivo, afetando, assim conjunto de trabalho. Portanto, recomendamos usar o armazenamento de páginas em cache conforme apropriado para seu aplicativo. Por exemplo, digamos que você tenha um aplicativo que mostre uma lista de itens em um quadro e, quando você toca em um item, ele move o quadro para uma página de detalhes desse item. A página da lista provavelmente deve ser definida para o cache.
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Jun16_HO5-->
 
 

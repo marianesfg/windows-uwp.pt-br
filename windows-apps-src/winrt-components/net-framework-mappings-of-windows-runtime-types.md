@@ -85,6 +85,6 @@ Tabela 2: Tipos UWP mapeados para tipos do .NET Framework com o mesmo nome e nam
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

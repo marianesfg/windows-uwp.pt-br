@@ -81,6 +81,6 @@ Para saber mais, veja [Sideload de aplicativos LOB no Windows 10](http://go.micr
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -103,6 +103,6 @@ Além disso, você pode usar a classe [**SplashScreen**](https://msdn.microsoft.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

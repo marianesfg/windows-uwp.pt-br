@@ -127,6 +127,6 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

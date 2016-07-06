@@ -1,13 +1,17 @@
 ---
 author: jwmsft
-description: Este tópico explica o sistema de propriedades de dependência que está disponível quando você escreve um aplicativo do Windows Runtime em C++, C# ou Visual Basic com definições de XAML para a interface do usuário.
-title: Visão geral das propriedades de dependência
+description: "Este tópico explica o sistema de propriedades de dependência que está disponível quando você escreve um aplicativo do Windows Runtime em C++, C# ou Visual Basic com definições de XAML para a interface do usuário."
+title: "Visão geral das propriedades de dependência"
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
+translationtype: Human Translation
+ms.sourcegitcommit: 2791b5b80bf1405d3efdce5d81824dbe6d347b4f
+ms.openlocfilehash: 5c61d4ff2f1efc6d4ce0ed292f2f856b23e53c91
+
 ---
 
 # Visão geral das propriedades de dependência
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico explica o sistema de propriedades de dependência que está disponível quando você escreve um aplicativo do Windows Runtime em C++, C# ou Visual Basic com definições de XAML para a interface do usuário.
 
@@ -165,15 +169,15 @@ Os valores que vêm de estilos ou modelos são valores adiados, semelhantes a as
 
 Você pode animar o valor de uma propriedade de dependência usando uma animação com storyboard. As animações com storyboard no Tempo de Execução do Windows não são meramente decorações visuais. É mais útil pensar em animações como sendo uma técnica de máquina de estado que pode definir os valores de propriedades individuais ou de todas as propriedades e visuais de um controle, e alterar esses valores ao longo do tempo.
 
-Para ser animada, a propriedade de destino da animação deve ser uma propriedade de dependência. Além disso, para ser animado, o tipo de valor da propriedade de destino deve ter suporte de um dos tipos existentes de animação derivados de [**Timeline**](https://msdn.microsoft.com/library/windows/apps/br210517). Valores de [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723), [**Double**](T:System.Double) e [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) podem ser animados por meio de técnicas de interpolação ou quadro-chave. A maioria dos outros valores pode ser animada por meio de quadros-chave discretos **Object**.
+Para ser animada, a propriedade de destino da animação deve ser uma propriedade de dependência. Além disso, para ser animado, o tipo de valor da propriedade de destino deve ter suporte de um dos tipos existentes de animação derivados de [**Timeline**](https://msdn.microsoft.com/library/windows/apps/br210517). Valores de [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723), [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) e [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) podem ser animados por meio de técnicas de interpolação ou quadro-chave. A maioria dos outros valores pode ser animada por meio de quadros-chave discretos **Object**.
 
 Quando uma animação é aplicada e está em execução, o valor animado opera em uma precedência maior que qualquer valor (como um valor local) que a propriedade tenha. As animações também têm um comportamento [**HoldEnd**](https://msdn.microsoft.com/library/windows/apps/br210306) opcional que pode fazer com que apliquem valores de propriedade, mesmo que a animação visualmente pareça estar parada.
 
-O princípio de máquina de estado é consagrado pelo uso de animações com storyboard como parte do modelo de estado [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021) para controles. Para saber mais sobre animações com storyboard, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/mt187354). Para saber mais sobre **VisualStateManager** e definir estados visuais para controles, veja [Animações com storyboard para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808) ou [Início rápido: modelos de controle](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374).
+O princípio de máquina de estado é consagrado pelo uso de animações com storyboard como parte do modelo de estado [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021) para controles. Para saber mais sobre animações com storyboard, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/mt187354). Para saber mais sobre **VisualStateManager** e definir estados visuais para controles, consulte [Animações com storyboard para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808) ou [Modelos de controle](../controls-and-patterns/control-templates.md).
 
 ### Comportamento de propriedade alterado
 
-O comportamento de propriedade alterada é a origem da parte "dependência" da terminologia de propriedade de dependência. A manutenção de valores válidos de uma propriedade em que outra propriedade pode influenciar o valor da primeira propriedade é um problema de desenvolvimento difícil em muitas estruturas. No sistema de propriedades do Tempo de Execução do Windows, cada propriedade de dependência pode especificar um retorno de chamada que é invocado quando o respectivo valor de propriedade é alterado. Esse retorno de chamada pode ser usado para notificar ou alterar valores de propriedades relacionados de forma geralmente síncrona. Muitas propriedades de dependência existentes têm um comportamento de propriedade alterado. Você também pode adicionar comportamento semelhante de retorno de chamada para propriedades de dependência personalizadas e implementar os seus próprios retornos de chamada de propriedade alterada. Consulte [Propriedades de dependência personalizadas](custom-dependency-properties.md) para ver um exemplo.
+O comportamento de propriedade alterado é a origem da parte "dependência" da terminologia de propriedade de dependência. A manutenção de valores válidos de uma propriedade em que outra propriedade pode influenciar o valor da primeira propriedade é um problema de desenvolvimento difícil em muitas estruturas. No sistema de propriedades do Tempo de Execução do Windows, cada propriedade de dependência pode especificar um retorno de chamada que é invocado quando o respectivo valor de propriedade é alterado. Esse retorno de chamada pode ser usado para notificar ou alterar valores de propriedades relacionados de forma geralmente síncrona. Muitas propriedades de dependência existentes têm um comportamento de propriedade alterado. Você também pode adicionar comportamento semelhante de retorno de chamada para propriedades de dependência personalizadas e implementar os seus próprios retornos de chamada de propriedade alterada. Consulte [Propriedades de dependência personalizadas](custom-dependency-properties.md) para ver um exemplo.
 
 ### Valor padrão e **ClearValue**
 
@@ -204,6 +208,7 @@ Os aspectos de threading de [**DependencyObject**](https://msdn.microsoft.com/li
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

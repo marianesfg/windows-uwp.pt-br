@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 40122343-1FE3-4160-BABE-6A2DD9AF1E8E
 title: Otimizar o acesso a arquivos
-description: Crie aplicativos da Plataforma Universal do Windows (UWP) que acessem o sistema de arquivos de modo eficiente, evitando problemas de desempenho devido à latência de disco e aos ciclos de memória/CPU.
+description: "Crie aplicativos da Plataforma Universal do Windows (UWP) que acessem o sistema de arquivos de modo eficiente, evitando problemas de desempenho devido à latência de disco e aos ciclos de memória/CPU."
+translationtype: Human Translation
+ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
+ms.openlocfilehash: 354a11fefd7164fd6ba5b21ec871ecbe7916ad25
+
 ---
 # Otimizar o acesso a arquivos
 
@@ -119,7 +123,7 @@ O terceiro exemplo usa [**QueryOptions**](https://msdn.microsoft.com/library/win
 > 
 > Next file
 > ```
-Se você estiver desempenhando várias operações em objetos Windows.Storage, como `Windows.Storage.ApplicationData.Current.LocalFolder`, crie uma variável local para fazer referência a essa fonte de armazenamento, para não recriar objetos intermediários a cada vez que acessá-la.
+Se você estiver realizando várias operações em objetos Windows.Storage, como `Windows.Storage.ApplicationData.Current.LocalFolder`, crie uma variável local para fazer referência a essa fonte de armazenamento, de forma que você não precise recriar objetos intermediários toda vez que a acessar.
 
 ## Desempenho de fluxo em C# e Visual Basic
 
@@ -129,7 +133,7 @@ Há muitos cenários em que você pode converter um fluxo UWP (como um [**Window
 
 Quando você converte um fluxo UWP em um fluxo .NET, você cria efetivamente um adaptador para o fluxo UWP subjacente. Em algumas circunstâncias, há um custo de tempo de execução associado à invocação de métodos em fluxos UWP. Esse fator pode afetar a velocidade do seu aplicativo, especialmente em cenários em que você executa muitas operações pequenas e frequentes de leitura ou gravação.
 
-Para acelerar os aplicativos, os adaptadores de fluxo UWP contêm um buffer de dados. O seguinte exemplo de código demonstra pequenas leituras consecutivas usando um adaptador de fluxo UWP com um tamanho de buffer padrão.
+Para acelerar os aplicativos, os adaptadores de fluxo UWP contêm um buffer de dados. A amostra de código a seguir demonstra pequenas leituras consecutivas com o uso de um adaptador de fluxo UWP com um tamanho de buffer padrão.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -182,7 +186,7 @@ Para acelerar os aplicativos, os adaptadores de fluxo UWP contêm um buffer de d
 > End Using
 > ```
 
-Esse comportamento de buffering padrão é desejável na maioria das situações em que você converte um fluxo UWP em um fluxo .NET. No entanto, em alguns cenários, pode você querer ajustar o comportamento do buffer para melhorar o desempenho.
+Esse comportamento de buffer padrão é desejável na maioria dos cenários em que você converte um fluxo UWP em fluxo .NET. No entanto, em alguns cenários, pode você querer ajustar o comportamento do buffer para melhorar o desempenho.
 
 ### Trabalhando com grandes conjuntos de dados
 
@@ -233,6 +237,7 @@ Em um aplicativo de chat, é possível usar um fluxo por uma interface de rede p
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar e consultar arquivos e pastas
-description: Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta.
+description: "Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 6ecad1bbd3c08dcd7aa1d3b82739931f20fc4ee2
+
 ---
 # Enumerar e consultar arquivos e pastas
 
@@ -12,7 +16,7 @@ description: Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispo
 
 Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta.
 
-**Observação**  Veja também a [Amostra de enumeração de pastas](http://go.microsoft.com/fwlink/p/?linkid=619993).
+**Observação**  Consulte também a [Amostra de enumeração de pastas](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
  
 ## Pré-requisitos
@@ -320,6 +324,7 @@ July ‎2015 (2)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -3,8 +3,8 @@ author: Mtoepke
 title: "Introdução às ferramentas do Xbox One"
 description: "Ferramenta Dev Home específica ao Xbox usando o Windows Device Portal."
 area: Xbox
-ms.sourcegitcommit: 4872ac9587b3e2e14860cb152bf33536faccc48d
-ms.openlocfilehash: c975cb07aa9b7f0d30a9905cbceba11e89c8f7df
+ms.sourcegitcommit: 914a1b76c6b502415bee36865af009a8dfe9bb53
+ms.openlocfilehash: e2f87cdeb8ce3371a34bb989e5fa29ef63d18621
 
 ---
 
@@ -56,6 +56,11 @@ A Dev Home será ajustada à direita. Você pode alternar o contexto tocando dua
 | Visual Studio | Permite que você emparelhe o console com uma instância do Visual Studio para permitir a implantação. Se necessário, desmarque as instâncias emparelhadas existentes do VS para evitar a implantação do aplicativo UWP em um kit. |
 | [Windows Device Portal](#windows-device-portal) | Habilita o WDP (uma ferramenta de gerenciamento de dispositivos baseada em navegador) no kit. |
 | Status do Xbox Live | Fornece o status atual do serviço Xbox Live. |
+
+### Gerenciando o tamanho da alocação de armazenamento do desenvolvedor
+
+Para aumentar ou diminuir a quantidade de espaço de disco que é usado para armazenamento do desenvolvedor, selecione **Manage dev storage** no menu principal. Altere o valor da barra **Dev storage** e selecione **Salvar e reiniciar** para reinicializar seu console.
+  ![Gerenciar a alocação de armazenamento de desenvolvimento](images/devhome_storage.png)
 
 ### Personalizando a Dev Home
 
@@ -109,8 +114,8 @@ Para habilitar o WDP no console do Xbox One:
 
   ![Aviso de certificado segurança](images/security_cert_warning.jpg)
 
-## Veja também
-- [Tecnologias Microsoft Developer: Windows Device Portal](https://ms-iot.github.io/content/en-US/win10/tools/DevicePortal.htm)
+## Consulte também
+- [Tecnologias Microsoft Developer: Windows Device Portal](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-xbox)
 - [UWP no Xbox One](index.md)
 
 
@@ -119,6 +124,6 @@ Para habilitar o WDP no console do Xbox One:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

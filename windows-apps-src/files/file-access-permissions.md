@@ -1,12 +1,16 @@
 ---
 author: TylerMSFT
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
-title: Permissões de acesso a arquivo
-description: Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades.
+title: "Permissões de acesso a arquivo"
+description: "Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
+
 ---
 # Permissões de acesso a arquivo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades.
@@ -108,7 +112,7 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
 
     Por padrão, o aplicativo só pode acessar arquivos e pastas na pasta de Downloads do usuário que seu aplicativo criou. No entanto, você pode ter acesso a arquivos e pastas na pasta Downloads do usuário chamando um seletor de arquivos ([**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) ou [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881)) de modo que os usuários possam navegar e escolher arquivos ou pastas para seu aplicativo acessar.
 
-    -   Você pode criar um arquivo na pasta Downloads do usuário, assim:
+    -   Você pode criar um arquivo na pasta Downloads do usuário desta forma:
         > [!div class="tabbedCodeSnippets"]
         ```csharp
         using Windows.Storage;
@@ -126,7 +130,7 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
               **DownloadsFolder**
             ](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) é sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver um arquivo existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo que foi criado. Esse arquivo é chamado `newFile` no exemplo.
 
-    -   Você pode criar uma subpasta na pasta Downloads do usuário, assim:
+    -   Você pode criar uma subpasta na pasta Downloads do usuário desta forma:
         > [!div class="tabbedCodeSnippets"]
         ```csharp
         using Windows.Storage;
@@ -165,6 +169,7 @@ A tabela a seguir lista locais adicionais que você pode acessar declarando os r
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

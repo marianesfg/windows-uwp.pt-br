@@ -3,8 +3,8 @@ author: mtoepke
 title: Jogos e DirectX
 description: A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, distribuir e monetizar jogos. Saiba como iniciar um novo jogo ou portar um jogo existente.
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b690fa9a97898da49646e39c982465a4a41adb7a
+ms.sourcegitcommit: 41ee0d2a45408b5b1a0dbc0b102f1b59843814b2
+ms.openlocfilehash: e5447f6238ece768513d160579e1c7e89b04e509
 
 ---
 
@@ -20,7 +20,7 @@ A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, 
 | [Guia de desenvolvimento de jogos do Windows 10](e2e.md) | Um guia completo de recursos e informações para desenvolver jogos UWP. |
 | [Tecnologias de jogos para aplicativos da Plataforma Universal do Windows](game-development-platform-guide.md) | Neste guia, você aprenderá sobre as tecnologias disponíveis para o desenvolvimento de jogos UWP. |
 | [Modelos de projetos e ferramentas para jogos](prepare-your-dev-environment-for-windows-store-directx-game-development.md) | Mostra o que é necessário para começar a programar jogos no DirectX para a UWP. |
-| [O objeto do aplicativo e o DirectX](about-the-metro-style-user-interface-and-directx.md) | A UWP com jogos do DirectX não usa muitos elementos e objetos da interface do usuário do Windows. Em vez disso, por serem executados em um nível mais baixo na pilha do Windows Runtime, eles devem interoperam com a estrutura da IU de uma maneira mais básica: acessando e interoperando com o objeto do aplicativo diretamente. Saiba como e quando essa interoperação ocorre e como você, como desenvolvedor do DirectX, pode usar esse modelo no desenvolvimento de seu aplicativo UWP de forma eficaz. |
+| [Objeto de aplicativo e DirectX](about-the-metro-style-user-interface-and-directx.md) | A UWP com jogos do DirectX não usa muitos elementos e objetos da interface do usuário do Windows. Em vez disso, por serem executados em um nível mais baixo na pilha do Windows Runtime, eles devem interoperam com a estrutura da IU de uma maneira mais básica: acessando e interoperando com o objeto do aplicativo diretamente. Saiba como e quando essa interoperação ocorre e como você, como desenvolvedor do DirectX, pode usar esse modelo no desenvolvimento de seu aplicativo UWP de forma eficaz. |
 | [Iniciando e retomando aplicativos](launching-and-resuming-apps-directx-and-cpp.md) | Saiba como iniciar, suspender e retomar seu aplicativo UWP do DirectX. |
 | [Elementos gráficos 2D para jogos DirectX](working-with-2d-graphics-in-your-directx-game.md) | Falaremos sobre o uso de gráficos e efeitos de bitmap 2D e como usá-los em seu jogo. |
 | [Elementos gráficos 3D básicos para jogos em DirectX](an-introduction-to-3d-graphics-with-directx.md) | Mostramos como usar programação do DirectX para implementar os conceitos fundamentais de elementos gráficos 3D. |
@@ -38,7 +38,9 @@ A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, 
 | [Manipular cenários removidos de dispositivos no Direct3D 11](handling-device-lost-scenarios.md) | Este tópico explica como recriar a cadeia de interface do dispositivo Direct3D e DXGI quando o adaptador gráfico é removido ou reinicializado. |
 | [Programação assíncrona para jogos](asynchronous-programming-directx-and-cpp.md) | Este tópico cobre vários pontos a serem considerados ao utilizar a programação assíncrona e threading com o DirectX. |
 | [Rede para jogos](work-with-networking-in-your-directx-game.md) | Saiba como desenvolver e incorporar recursos de rede em seu jogo com o DirectX. |
-| [Interoperabilidade entre o DirectX e o XAML](directx-and-xaml-interop.md) | Você pode usar o XAML (Extensible Application Markup Language) e o Microsoft DirectX juntos em seu jogo UWP. |
+| [Acessibilidade para jogos](accessibility-for-games.md) | Aprenda a tornar os jogos mais acessíveis. |
+| [Nuvem para jogos](cloud-for-games.md) | Aprenda a fazer uso de tecnologias de nuvem para desenvolvimento de jogos. |
+| [Interoperabilidade entre DirectX e XAML](directx-and-xaml-interop.md) | Você pode usar o XAML (Extensible Application Markup Language) e o Microsoft DirectX juntos em seu jogo UWP. |
 | [Empacotar seu jogo](package-your-windows-store-directx-game.md) | Os jogos UWP maiores, especialmente os que dão suporte a vários idiomas com ativos específicos à região ou que possuem ativos opcionais de alta definição podem ser facilmente dimensionados para tamanhos grandes. Neste tópico, você aprenderá a usar pacotes e lotes de aplicativos para personalizar seu aplicativo de forma que os clientes recebam apenas os recursos de que realmente precisam. |
 | [Guias de portabilidade para jogos](porting-guides.md) | Fornece guias para portabilidade de seus jogos existentes para o Direct3D 11, a UWP e o Windows 10. |
 | [Recursos de programação de jogos](additional-directx-game-programming-resources.md) | Para saber mais sobre programação de jogos no Windows, confira os recursos a seguir. |
@@ -67,6 +69,6 @@ Para fazer o melhor uso das visões gerais e dos tutoriais de desenvolvimento de
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

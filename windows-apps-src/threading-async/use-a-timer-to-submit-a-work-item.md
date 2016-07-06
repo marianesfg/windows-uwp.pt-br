@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: AAE467F9-B3C7-4366-99A2-8A880E5692BE
 title: Usar um temporizador para enviar um item de trabalho
-description: Saiba como criar um item de trabalho que seja executado após um temporizador.
+description: "Saiba como criar um item de trabalho que seja executado após um temporizador."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 033669a781aa85cc2c90fa11816e385ffefa997d
+
 ---
 # Usar um temporizador para enviar um item de trabalho
 
@@ -81,7 +85,7 @@ O seguinte exemplo cria um item de trabalho que é executado em três minutos:
 
 Se necessário, manipule o cancelamento e a conclusão do item de trabalho com um [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926). Use a sobrecarga de [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para fornecer um lambda adicional. Isso é executado quando o temporizador é cancelado ou quando o item de trabalho é concluído.
 
-O seguinte exemplo cria um temporizador que envia o item de trabalho e chama um método quando o item de trabalho é concluído ou o temporizador é cancelado:
+O seguinte exemplo cria um timer que envia o item de trabalho e chama um método quando o item de trabalho é concluído ou o timer é cancelado:
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -197,7 +201,7 @@ O seguinte exemplo cria um temporizador que envia o item de trabalho e chama um 
 >         }));
 > ```
 
-## Cancelar o temporizador
+## Cancelar o timer
 
 Se o temporizador ainda estiver em contagem regressiva, mas o item de trabalho não for mais necessário, chame [**Cancelar**](https://msdn.microsoft.com/library/windows/apps/BR230588). O temporizador é cancelado e o item de trabalho não é enviado para o pool de threads.
 
@@ -228,6 +232,7 @@ Para saber mais sobre temporizadores repetidos, veja [Criar um item de trabalho 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

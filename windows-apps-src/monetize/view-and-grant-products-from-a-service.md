@@ -179,6 +179,6 @@ Aqui está um exemplo de uma declaração de chave ID da Windows Store decodific
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

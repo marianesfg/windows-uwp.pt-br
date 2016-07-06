@@ -199,6 +199,6 @@ Usar [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

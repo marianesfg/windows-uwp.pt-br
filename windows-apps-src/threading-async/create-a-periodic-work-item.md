@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
-title: Criar um item de trabalho periódico
-description: Saiba como criar um item de trabalho periódico que se repete periodicamente.
+title: "Criar um item de trabalho periódico"
+description: "Saiba como criar um item de trabalho periódico que se repete periodicamente."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: f5b16c62b591481c52cfa4bb7e1ddb162bf18f42
+
 ---
 # Criar um item de trabalho periódico
 
@@ -83,7 +87,7 @@ O seguinte exemplo cria um item de trabalho que é executado a cada 60 segundos:
 
 Se necessário, você pode manipular o cancelamento do temporizador periódico com um [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926). Use a sobrecarga [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) para fornecer um lambda adicional que manipula o cancelamento do item de trabalho periódico.
 
-O exemplo a seguir cria um item de trabalho periódico que se repete a cada 60 segundos e ele também fornece um manipulador de cancelamento:
+O exemplo a seguir cria um item de trabalho periódico que se repete a cada 60 segundos, e também fornece um manipulador de cancelamento:
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -203,6 +207,7 @@ Para obter mais informações sobre temporizadores de uso único, consulte [Usar
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

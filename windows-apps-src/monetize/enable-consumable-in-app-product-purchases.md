@@ -1,12 +1,19 @@
 ---
-author: mcleanbyron Description: Ofereça produtos consumíveis no aplicativo&\#8212;itens que podem ser comprados, usados e comprados novamente&\#8212;por meio da plataforma de comércio da Loja para proporcionar aos seus clientes uma experiência de compra robusta e confiável.
-title: Habilitar compras de produtos consumíveis no aplicativo ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4 keywords: palavras-chave de oferta no aplicativo: palavras-chave consumíveis: palavras-chave de compra no aplicativo: palavras chave de produto no aplicativo: como dar suporte a palavras-chave no aplicativo: palavras-chave de exemplo de código de compra no aplicativo: exemplo de código de oferta no aplicativo
+author: mcleanbyron
+Description: "Ofereça produtos consumíveis no aplicativo&\\#8212;itens que podem ser comprados, usados e comprados novamente&\\#8212;por meio da plataforma de comércio da Loja e proporcione aos seus clientes uma experiência de compra robusta e confiável."
+title: "Habilitar compras de produtos consumíveis no aplicativo"
+ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
+keywords: in-app offer code sample
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 25f09e043d61f1705f9f0a4fa34114fd06166fa4
+
 ---
 
 # Habilitar compras de produtos consumíveis no aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Ofereça produtos consumíveis no aplicativo — itens que podem ser comprados, usados e comprados novamente — por meio da plataforma de comércio da Loja para proporcionar aos seus clientes uma experiência de compra robusta e confiável. Isso é especialmente útil para coisas como moedas em jogos (ouro, moedas etc.) que podem ser compradas e então usadas para comprar power-ups específicos.
 
@@ -119,6 +126,7 @@ private async void GetUnfulfilledConsumables()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -88,8 +88,8 @@ A integração da funcionalidade básica do seu aplicativo e o fornecimento de u
 * [**VCD elements and attributes v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
 
 **Designers**
-* [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
-* [Diretrizes para design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
+* [Diretrizes de design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+* [Diretrizes de design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
 
 **Exemplos**
 * [Amostra de comando de voz da Cortana](http://go.microsoft.com/fwlink/p/?LinkID=619899)
@@ -103,6 +103,6 @@ A integração da funcionalidade básica do seu aplicativo e o fornecimento de u
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

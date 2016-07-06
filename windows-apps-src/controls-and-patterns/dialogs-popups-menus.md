@@ -27,7 +27,7 @@ Caixas de diálogo são sobreposições de interface do usuário modais que forn
 Um submenu é um pop-up contextual leve que exibe a interface do usuário relacionada ao que o usuário está fazendo. Ele inclui a lógica de colocação e dimensionamento, e pode ser usado para exibir um controle oculto, mostrar mais detalhes de um item ou pedir que o usuário confirme uma ação. Os submenus podem ser ignorados tocando ou clicando em algum lugar fora do popup.
 
 
-## Este é o controle correto?
+## Esse é o controle correto?
 
 Menus de contexto podem ser usados para:
 

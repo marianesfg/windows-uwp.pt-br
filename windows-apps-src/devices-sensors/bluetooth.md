@@ -24,6 +24,6 @@ Esta seção contém artigos sobre como integrar Bluetooth a aplicativos UWP (Pl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

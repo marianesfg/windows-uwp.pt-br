@@ -75,6 +75,6 @@ Geralmente é necessário derivar chaves adicionais de um segredo compartilhado.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: Testar com o Emulador Microsoft para Windows 10 Mobile
-description: Simule a interação do mundo real com um dispositivo e teste os recursos de seu aplicativo usando as ferramentas incluídas no Emulador Microsoft para Windows 10 Mobile.
+description: "Simule a interação do mundo real com um dispositivo e teste os recursos de seu aplicativo usando as ferramentas incluídas no Emulador Microsoft para Windows 10 Mobile."
+translationtype: Human Translation
+ms.sourcegitcommit: 9a33710315486c23a204a528d3d87421c6990b85
+ms.openlocfilehash: c53bda2329cd984e3a03d4a166e7353097e62cef
+
 ---
 # Testar com o Emulador Microsoft para Windows 10 Mobile
 
@@ -654,6 +658,7 @@ Para encontrar respostas e resolver problemas ao começar a trabalhar com as fer
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

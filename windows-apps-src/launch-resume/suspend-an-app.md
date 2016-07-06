@@ -66,10 +66,10 @@ Registre-se para manipular o evento [**Suspending**](https://msdn.microsoft.com/
 > }
 > ```
 
-## Salvar os dados do aplicativo antes da suspensão
+## [!div class="tabbedCodeSnippets"]
 
 
-Quando manipula o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341), o aplicativo tem uma oportunidade de salvar seus dados importantes na função do manipulador. O aplicativo deve usar a API de armazenamento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para salvar dados simples do aplicativo de maneira síncrona.
+Salvar os dados do aplicativo antes da suspensão Quando manipula o evento [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341), o aplicativo tem uma oportunidade de salvar seus dados importantes na função do manipulador.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -102,35 +102,35 @@ Quando manipula o evento [**Suspending**](https://msdn.microsoft.com/library/win
 > }
 > ```
 
-## Comentários
+## O aplicativo deve usar a API de armazenamento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para salvar dados simples do aplicativo de maneira síncrona.
 
 
-O sistema suspende o aplicativo sempre que o usuário alternar para outro aplicativo, para a área de trabalho ou para a tela inicial. O sistema retoma o seu aplicativo sempre que o usuário alterna de volta para ele. Quando o sistema retoma o aplicativo, o conteúdo das variáveis e estruturas de dados é o mesmo de antes da suspensão do aplicativo pelo sistema. O sistema retoma o aplicativo exatamente de onde parou, o que faz parecer ao usuário que ele estava sendo executado em tela de fundo.
+[!div class="tabbedCodeSnippets"] Comentários O sistema suspende o aplicativo sempre que o usuário alternar para outro aplicativo, para a área de trabalho ou para a tela inicial. O sistema retoma o seu aplicativo sempre que o usuário alterna de volta para ele.
 
-O sistema tenta manter o aplicativo e seus dados na memória enquanto ele está suspenso. Entretanto, caso não tenha recursos suficientes para manter o aplicativo na memória, o sistema encerra o aplicativo. Quando o usuário alterna de volta para um aplicativo suspenso que foi encerrado, o sistema envia um evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) e deve restaurar os dados do aplicativo em seu método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
+Quando o sistema retoma o aplicativo, o conteúdo das variáveis e estruturas de dados é o mesmo de antes da suspensão do aplicativo pelo sistema. O sistema retoma o aplicativo exatamente de onde parou, o que faz parecer ao usuário que ele estava sendo executado em tela de fundo. O sistema tenta manter o aplicativo e seus dados na memória enquanto ele está suspenso.
 
-O sistema não notifica um aplicativo quando é terminado, por isso seu aplicativo deve salvar seus dados de aplicativo e liberar recursos exclusivos e identificadores de arquivo quando suspenso, e restaurá-los quando ativado após o término.
+Entretanto, caso não tenha recursos suficientes para manter o aplicativo na memória, o sistema encerra o aplicativo.
 
-> **Observação**   Se for necessário realizar trabalho assíncrono quando o aplicativo estiver suspenso, você precisará adiar a conclusão da suspensão até que o trabalho seja concluído. Você pode usar o método [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690) no objeto [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688) (disponível via argumentos de evento) para atrasar a conclusão da suspensão até que você chame o método [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685) no objeto retornado [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684).
+> Quando o usuário alterna de volta para um aplicativo suspenso que foi encerrado, o sistema envia um evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) e deve restaurar os dados do aplicativo em seu método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). O sistema não notifica um aplicativo quando é terminado, por isso seu aplicativo deve salvar seus dados de aplicativo e liberar recursos exclusivos e identificadores de arquivo quando suspenso, e restaurá-los quando ativado após o término.
 
-> **Observação**  Para melhorar a capacidade de resposta do sistema no Windows 8.1, os aplicativos recebem acesso de prioridade baixa aos recursos durante a suspensão. Para dar suporte a essa nova prioridade, o tempo limite da operação de suspensão é estendido para que o aplicativo tenha o equivalente do tempo limite de 5 segundos para prioridade normal no Windows ou entre 1 e 10 segundos no Windows Phone. Você não pode estender ou alterar esse período de tempo limite.
+> **Observação**   Se for necessário realizar trabalho assíncrono quando o aplicativo estiver suspenso, você precisará adiar a conclusão da suspensão até que o trabalho seja concluído. Você pode usar o método [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690) no objeto [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688) (disponível via argumentos de evento) para atrasar a conclusão da suspensão até que você chame o método [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685) no objeto retornado [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684). **Observação**  Para melhorar a capacidade de resposta do sistema no Windows 8.1, os aplicativos recebem acesso de prioridade baixa aos recursos durante a suspensão.
 
-> **Observação sobre a depuração com Visual Studio: **  o Visual Studio impede que o Windows suspenda um aplicativo que esteja anexado ao depurador. Isso ocorre para permitir que o usuário exiba a interface de usuário de depuração do Visual Studio enquanto o aplicativo está em execução. Quando você está depurando um aplicativo, é possível enviar a ele um evento de suspensão usando o Visual Studio. Verifique se a barra de ferramentas **Local de Depuração** está sendo mostrada e clique no ícone de **Suspender**.
+> Para dar suporte a essa nova prioridade, o tempo limite da operação de suspensão é estendido para que o aplicativo tenha o equivalente do tempo limite de 5 segundos para prioridade normal no Windows ou entre 1 e 10 segundos no Windows Phone. Você não pode estender ou alterar esse período de tempo limite. **Observação sobre a depuração com Visual Studio: **  o Visual Studio impede que o Windows suspenda um aplicativo que esteja anexado ao depurador. Isso ocorre para permitir que o usuário exiba a interface de usuário de depuração do Visual Studio enquanto o aplicativo está em execução.
 
-## Tópicos relacionados
+## Quando você está depurando um aplicativo, é possível enviar a ele um evento de suspensão usando o Visual Studio.
 
 
-* [Manipular a ativação do aplicativo](activate-an-app.md)
-* [Manipular a retomada do aplicativo](resume-an-app.md)
-* [Diretrizes da experiência do usuário para execução, suspensão e reinício](https://msdn.microsoft.com/library/windows/apps/dn611862)
-* [Ciclo de vida do aplicativo](app-lifecycle.md)
-
- 
+* [Verifique se a barra de ferramentas **Local de Depuração** está sendo mostrada e clique no ícone de **Suspender**.](activate-an-app.md)
+* [Tópicos relacionados](resume-an-app.md)
+* [Manipular a ativação do aplicativo](https://msdn.microsoft.com/library/windows/apps/dn611862)
+* [Manipular a retomada do aplicativo](app-lifecycle.md)
 
  
 
+ 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

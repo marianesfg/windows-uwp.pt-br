@@ -241,6 +241,6 @@ A API de análise da Windows Store devolve respostas de erro em um objeto JSON q
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

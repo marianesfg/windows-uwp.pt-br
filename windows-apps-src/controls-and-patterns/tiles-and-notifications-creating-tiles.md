@@ -107,6 +107,6 @@ Depois que seu aplicativo for instalado, você pode usar notificações para per
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -44,6 +44,6 @@ O usuário seleciona uma foto usando pressionar e segurar e, em seguida, diz "En
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

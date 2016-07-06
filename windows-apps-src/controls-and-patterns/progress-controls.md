@@ -270,7 +270,7 @@ stackPanel1.Children.Add(progressRing1);
 
     ![Layout de barra de progresso indeterminado](images/progress_indeterminate_bar_redline.png)
 
-## Diretriz de uso adicional
+## Diretrizes de uso adicionais
 
 ### Árvore de decisões para escolher um estilo de progresso
 

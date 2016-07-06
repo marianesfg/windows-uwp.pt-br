@@ -1,7 +1,7 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "Este tópico descreve o uso da geometria de contato por área de toque e fornece as práticas recomendadas de direcionamento em aplicativos do Windows Runtime."
-title: Direcionamento
+title: "Seleção por área touch"
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
@@ -12,7 +12,7 @@ ms.openlocfilehash: 50a285b484f7e9ed7b349921c3460bd7c9c81603
 
 # Diretrizes de direcionamento
 
-A seleção por área de toque no Windows usa a área de contato total de cada dedo detectado por um digitalizador de toque. O conjunto maior e mais complexo de dados de entrada relatados pelo digitalizador é usado para aumentar a precisão ao determinar o destino desejado (ou mais provável) pelo usuário.
+A seleção por área touch no Windows usa a área de contato total de cada dedo detectado por um digitalizador de toque. O conjunto maior e mais complexo de dados de entrada relatados pelo digitalizador é usado para aumentar a precisão ao determinar o destino desejado (ou mais provável) pelo usuário.
 
 **APIs importantes**
 
@@ -174,6 +174,6 @@ Siga estas diretrizes para criar interações de esfregar:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

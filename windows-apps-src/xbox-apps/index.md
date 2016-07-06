@@ -34,7 +34,7 @@ Esta seção inclui as etapas de instalação, um guia do processo de autentica�
 |[Desativando o modo de desenvolvedor no Xbox One](devkit-deactivation.md)| Explica como desabilitar o modo de desenvolvedor no Xbox One. |
 |[Recursos da UWP que ainda não são suportados no Xbox One](http://go.microsoft.com/fwlink/?LinkId=760755)|  Descreve as áreas de recursos da UWP que não estão totalmente funcionais no Xbox One.|  
 
-## Veja também
+## Consulte também
 - [Visão geral dos aplicativos UWP no Xbox One](http://go.microsoft.com/fwlink/?LinkId=780786) 
 - [Automatizar o lançamento de aplicativos UWP do Windows 10](automate-launching-uwp-apps.md)
 - [CPUSets para desenvolvimento de jogos](cpusets-games.md)
@@ -42,6 +42,6 @@ Esta seção inclui as etapas de instalação, um guia do processo de autentica�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

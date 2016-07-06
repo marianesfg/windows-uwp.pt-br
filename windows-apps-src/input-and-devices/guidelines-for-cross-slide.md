@@ -32,7 +32,7 @@ Use o deslizamento transversal para dar suporte à seleção com o gesto de desl
 -   Utilize o deslizamento transversal para seleção de itens quando a interação de toque for utilizada para outra finalidade.
 -   Não utilize o deslizamento transversal para adicionar itens a uma fila.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
+## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicionais
 
 
 Gestos de selecionar e arrastar só são possíveis em uma área de conteúdo que permite movimento panorâmico unidirecional (vertical ou horizontal). Para qualquer uma dessas interações funcionar, uma direção de movimento panorâmico deve ser bloqueada, e o gesto deve ser realizado na direção perpendicular à direção do momento panorâmico.

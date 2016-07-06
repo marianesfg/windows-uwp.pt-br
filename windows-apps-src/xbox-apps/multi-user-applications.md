@@ -39,11 +39,11 @@ Para aderir ao modelo multiusuário:
 ##Orientação sobre o modelo que deve ser escolhido
 Todos os aplicativos UWP e a maioria dos jogos de usuário único podem ser programados para ser SUA. Recomendamos que apenas jogos cooperativos multijogadores aceitem o modelo multiusuário do Xbox One. Nós forneceremos documentação, orientações e exemplos mais detalhados em uma futura visualização de desenvolvedor.
 
-## Veja também
+## Consulte também
 - [UWP no Xbox One](index.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

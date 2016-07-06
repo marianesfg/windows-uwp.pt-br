@@ -34,6 +34,6 @@ Se você estiver escrevendo um aplicativo em C++/DirectX, não há nada a fazer.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

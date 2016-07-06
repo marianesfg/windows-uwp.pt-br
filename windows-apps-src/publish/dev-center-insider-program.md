@@ -2,8 +2,8 @@
 title: Programa Insider do Centro de Desenvolvimento
 description: "Experimente os novos recursos do Centro de Desenvolvimento antes que eles se tornem disponíveis para todos os desenvolvedores e conte-nos a sua opinião."
 author: JnHs
-ms.sourcegitcommit: 836ffd3f1bc3a9d9be4fa510d5188b565972c130
-ms.openlocfilehash: 64b9327258d6116922d3e4cc097ed3dda08b541b
+ms.sourcegitcommit: b6c86bc1458f177e44058ac36d97d650bae36008
+ms.openlocfilehash: 715d2027114726cf7c9bf0a38d1841f9e83d58e6
 
 ---
 
@@ -17,10 +17,10 @@ Para participar do programa, aceite na página **Configurações da conta** no p
 
 Veja a seguir alguns dos recursos que disponibilizamos exclusivamente para membros do Programa Insider do Centro de Desenvolvimento. Essa lista será alterada ao longo do tempo conforme novos recursos forem adicionados (e recursos introduzidos no programa Insider forem disponibilizados para todos).
 
-| Recurso Programa Insider do Centro de Desenvolvimento   | Como os participantes do Centro de Desenvolvimento podem experimentá-lo | Data da inclusão |
+| Recurso Programa Insider do Centro de Desenvolvimento   | Como os participantes do Programa Insider do Centro de Desenvolvimento podem experimentá-lo | Data da inclusão |
 |--------------------------------------|------------------------------------|------------|
+|**Gerenciar IAPs em massa**: faça alterações para vários IAPs ao mesmo tempo, em vez de enviar cada atualização individualmente. | Clique em **Gerenciar IAPs em massa** na página Visão geral ou IAPs de um aplicativo. |Junho de 2016|
 |**Atualização de relatório de uso**: o relatório aprimorado agora mostra dados de uso de clientes do Windows 10 para todos os aplicativos, sem exigir o uso do Visual Studio Application Insights.|Exiba as informações em um relatório de **Uso** de um aplicativo. |Junho de 2016|
-|**Notificações por push direcionadas**: crie notificações personalizadas para enviar para clientes do seu aplicativo — para todos ou apenas um segmento selecionado com base em critérios específicos que você definir.|Vá para a página Notificações por push (em Serviços) para um aplicativo. Clique em **Nova notificação** para criar e agendar a notificação. Você pode enviá-la para todos os usuários do seu aplicativo, ou clique em **Criar novo grupo de clientes** para definir um segmento específico para os clientes de seu aplicativo. [Saiba mais](http://go.microsoft.com/fwlink/p/?LinkId=718017)|Junho de 2016|
 |**Disponibilidade da família de dispositivos**: gerencie a disponibilidade da família de dispositivos para seu aplicativo e veja quais pacotes serão oferecidos a famílias de dispositivos específicas do Windows 10 (e versões anteriores do sistema operacional, se aplicável) na ordem de classificação.|Exiba essas informações e faça suas seleções na página **Pacotes** de envio de um aplicativo.|Maio de 2016|
 |**Exibir seus comentários enviados**: exiba todos os comentários enviados para o Centro de Desenvolvimento e obtenha notificações quando fizemos alterações com base nos seus comentários.|Em **Configurações da conta**, clique em **Feedback enviado** na navegação esquerda.|Abril de 2016|
 |**Dados de aquisição até a data**: agora você pode ver as aquisições totais cumulativas para seus aplicativos e IAPs.|Exiba essas informações em um relatório **Aquisições** e **Aquisições de IAP** de um aplicativo.|Abril de 2016|
@@ -34,6 +34,6 @@ Veja a seguir alguns dos recursos que disponibilizamos exclusivamente para membr
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -297,6 +297,6 @@ Se você definir qualquer campo particular ao cancelar a sessão de reconhecimen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -208,6 +208,6 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

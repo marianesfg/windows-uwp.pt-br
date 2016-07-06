@@ -3,8 +3,8 @@ author: jwmsft
 description: "Explica como definir e implementar propriedades de dependência personalizadas para um aplicativo do Windows Runtime em C++, C# ou Visual Basic."
 title: "Propriedades de dependência personalizadas"
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 63301870ab53f4061cac9b9ad87a5fb75e8c48da
+ms.sourcegitcommit: d50b73fcf78c28157cff7003dc3e180de9d69f70
+ms.openlocfilehash: 80a42040887818a0c6a66ed32327144bed586dc2
 
 ---
 
@@ -249,7 +249,7 @@ private static void OnLabelChanged(DependencyObject d, DependencyPropertyChanged
     String s = e.NewValue as String; //null checks omitted
     if (s == String.Empty)
     {
-        iwlc.HasLabelValue = false;
+        iwlc.HasLabelValue = false;s
     } else {
         iwlc.HasLabelValue = true;
     }
@@ -274,7 +274,7 @@ static void OnLabelChanged(DependencyObject^ d, DependencyPropertyChangedEventAr
     if (s->IsEmpty()) {
         iwlc->HasLabelValue=false;
     }
-}
+}s
 ```
 
 ### Comportamento alterado da propriedade para estruturas e enumerações
@@ -335,7 +335,7 @@ Propriedades de dependência de tipo de coleção são relativamente raras na AP
 -   Você normalmente não anima uma coleção.
 -   Você geralmente não popula antecipadamente os itens de uma coleção com estilos ou um modelo.
 -   Embora a associação a coleções seja um cenário importante, uma coleção não precisa ser uma propriedade de dependência para então ser uma fonte de associação. Para destinos de associação, é mais comum o uso de subclasses de [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/br242803) ou de [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) para dar suporte aos itens de coleção ou o uso de padrões de modelo de exibição. Para saber mais sobre associação de/para coleções, consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
--   Notificações de alterações de coleção são melhor resolvidas através de interfaces, como **INotifyPropertyChanged** ou **INotifyCollectionChanged**, ou pela derivação do tipo de coleção de [**ObservableCollection**](T:System.Collections.ObjectModel.ObservableCollection%601).
+-   As notificações de alterações de coleção são melhor tratadas por meio de interfaces, como **INotifyPropertyChanged** ou **INotifyCollectionChanged**, ou com a derivação do tipo de coleção de [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx).
 
 Entretanto, cenários de propriedades de dependência de tipo de coleção realmente existem. As próximas três seções fornecerão algumas diretrizes sobre como implementar uma propriedade de dependência de tipo de coleção.
 
@@ -374,6 +374,6 @@ A implementação para registrar uma propriedade em C++/CX é mais complicada qu
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

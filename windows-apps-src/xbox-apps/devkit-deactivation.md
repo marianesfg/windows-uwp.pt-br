@@ -83,7 +83,7 @@ Se você ainda não retornou o console Xbox One para o Modo de Varejo, faça iss
 
 ![Etapa de Ativação 13](images/deactivation-leave-dev-mode.png)
 
-## Veja também
+## Consulte também
 - [Ativação do Modo de Desenvolvedor do Xbox One](devkit-activation.md)
 - [UWP no Xbox One](index.md)
 

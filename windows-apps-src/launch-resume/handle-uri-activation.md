@@ -119,62 +119,62 @@ O manipulador de eventos [**OnActivated**](https://msdn.microsoft.com/library/wi
 > }
 > ```
 
-> **Observação**  Quando iniciado por Contrato de Protocolo, verifique se o botão Voltar leva o usuário de volta para a tela que iniciou o aplicativo e não para o conteúdo anterior do aplicativo.
+> [!div class="tabbedCodeSnippets"]
 
-É recomendável que os aplicativos criem um novo [**Quadro**](https://msdn.microsoft.com/library/windows/apps/br242682) XAML para cada evento de ativação que abre uma nova página. Dessa forma, o backstack de navegação do novo **Quadro** XAML não terá nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso. Os aplicativos que decidem usar um único **Quadro** XAML para Contratos de Inicialização e Arquivo devem limpar as páginas do diário de navegação do **Quadro** antes de navegar para uma nova página.
+**Observação**  Quando iniciado por Contrato de Protocolo, verifique se o botão Voltar leva o usuário de volta para a tela que iniciou o aplicativo e não para o conteúdo anterior do aplicativo. É recomendável que os aplicativos criem um novo [**Quadro**](https://msdn.microsoft.com/library/windows/apps/br242682) XAML para cada evento de ativação que abre uma nova página. Dessa forma, o backstack de navegação do novo **Quadro** XAML não terá nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso.
 
-Quando iniciado por Ativação de protocolo, os aplicativos devem considerar incluir uma interface do usuário que permita ao usuário voltar para o início da página do aplicativo.
+Os aplicativos que decidem usar um único **Quadro** XAML para Contratos de Inicialização e Arquivo devem limpar as páginas do diário de navegação do **Quadro** antes de navegar para uma nova página.
 
-## Comentários
-
-
-Qualquer aplicativo ou site pode usar seu nome de esquema de URI, inclusive os maliciosos. Assim, qualquer dado que você obtenha no URI pode vir de uma fonte não confiável. Recomendamos que você nunca execute uma ação permanente com base nos parâmetros recebidos no URI. Por exemplo, os parâmetros de URI podem ser usados para iniciar o aplicativo em uma página de conta de usuário, mas nunca devem ser usados para modificar diretamente a conta do usuário.
-
-> **Observação**  Se você estiver criando um novo nome de esquema de URI para seu aplicativo, siga as diretrizes em [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550). Isso garante que seu nome atenda aos padrões de esquemas de URI.
-
-> **Observação**  Quando iniciado por Contrato de Protocolo, verifique se o botão Voltar leva o usuário de volta para a tela que iniciou o aplicativo e não para o conteúdo anterior do aplicativo.
-
-É recomendável que os aplicativos criem um novo [**Quadro**](https://msdn.microsoft.com/library/windows/apps/br242682) XAML para cada evento de ativação que abre um novo destino de Uri. Dessa forma, o backstack de navegação do novo **Quadro** XAML não terá nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso.
-
-Se decidir que deseja que seus aplicativos usem um único [**Quadro**](https://msdn.microsoft.com/library/windows/apps/br242682) XAML para Contratos de Inicialização e Protocolo, limpe as páginas do diário de navegação do **Quadro** antes de navegar para uma nova página. Quando iniciado por Contrato de Protocolo, considere incluir uma interface do usuário em seus aplicativos que permita que o usuário volte ao início do aplicativo.
-
-> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
-## Tópicos relacionados
+## Quando iniciado por Ativação de protocolo, os aplicativos devem considerar incluir uma interface do usuário que permita ao usuário voltar para o início da página do aplicativo.
 
 
-**Exemplo completo**
+Comentários Qualquer aplicativo ou site pode usar seu nome de esquema de URI, inclusive os maliciosos. Assim, qualquer dado que você obtenha no URI pode vir de uma fonte não confiável. Recomendamos que você nunca execute uma ação permanente com base nos parâmetros recebidos no URI.
 
-* [Amostra de inicialização de associação](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+> Por exemplo, os parâmetros de URI podem ser usados para iniciar o aplicativo em uma página de conta de usuário, mas nunca devem ser usados para modificar diretamente a conta do usuário. **Observação**  Se você estiver criando um novo nome de esquema de URI para seu aplicativo, siga as diretrizes em [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550).
 
-**Conceitos**
+> Isso garante que seu nome atenda aos padrões de esquemas de URI.
 
-* [Programas padrão](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [Tipo de arquivo e modelo de associações de URIs](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+**Observação**  Quando iniciado por Contrato de Protocolo, verifique se o botão Voltar leva o usuário de volta para a tela que iniciou o aplicativo e não para o conteúdo anterior do aplicativo. É recomendável que os aplicativos criem um novo [**Quadro**](https://msdn.microsoft.com/library/windows/apps/br242682) XAML para cada evento de ativação que abre um novo destino de Uri.
 
-**Tarefas**
+Dessa forma, o backstack de navegação do novo **Quadro** XAML não terá nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso. Se decidir que deseja que seus aplicativos usem um único [**Quadro**](https://msdn.microsoft.com/library/windows/apps/br242682) XAML para Contratos de Inicialização e Protocolo, limpe as páginas do diário de navegação do **Quadro** antes de navegar para uma nova página.
 
-* [Iniciar o aplicativo padrão para um URI](launch-default-app.md)
-* [Manipular a ativação de arquivos](handle-file-activation.md)
-
-**Diretrizes**
-
-* [Diretrizes de tipos de arquivos e URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
-
-**Referência**
-
-* [**Manifesto do pacote AppX**](https://msdn.microsoft.com/library/windows/apps/dn934791)
-* [**Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742)
-* [**Windows.UI.Xaml.Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)
+> Quando iniciado por Contrato de Protocolo, considere incluir uma interface do usuário em seus aplicativos que permita que o usuário volte ao início do aplicativo. **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).
 
  
 
+## Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+
+**Tópicos relacionados**
+
+* [Exemplo completo](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+
+**Amostra de inicialização de associação**
+
+* [Conceitos](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+* [Programas padrão](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+
+**Tipo de arquivo e modelo de associações de URIs**
+
+* [Tarefas](launch-default-app.md)
+* [Iniciar o aplicativo padrão para um URI](handle-file-activation.md)
+
+**Manipular a ativação de arquivos**
+
+* [Diretrizes](https://msdn.microsoft.com/library/windows/apps/hh700321)
+
+**Diretrizes de tipos de arquivos e URIs**
+
+* [**Referência**](https://msdn.microsoft.com/library/windows/apps/dn934791)
+* [**Manifesto do pacote AppX**](https://msdn.microsoft.com/library/windows/apps/br224742)
+* [**Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br242330)
+
+ 
+
  
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

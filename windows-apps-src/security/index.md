@@ -1,8 +1,12 @@
 ---
-title: Segurança
-description: Esta seção contém artigos sobre como compilar aplicativos seguros da Plataforma Universal do Windows (UWP) para o Windows 10.
+title: "Segurança"
+description: "Esta seção contém artigos sobre como compilar aplicativos seguros da Plataforma Universal do Windows (UWP) para o Windows 10."
 ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: a178f992ddd39b5609ce6d15b7e3560e157b9afb
+ms.openlocfilehash: 23897e7e78f3391fbee60a5f7cdf93615401247d
+
 ---
 
 # Segurança
@@ -12,9 +16,13 @@ author: awkoren
 
 Esta seção contém artigos sobre como compilar aplicativos seguros da Plataforma Universal do Windows (UWP) para o Windows 10.
 
+## Introdução 
+
 Se você for iniciante no desenvolvimento em Windows ou UWP, comece com a [Introdução ao desenvolvimento de aplicativos seguros do Windows](web-authentication-broker.md). Este artigo de nível introdutório fornece uma visão geral das considerações de segurança para aplicativos e os vários recursos disponíveis no Windows 10.
 
-A [seção de autenticação](authentication-and-user-identity.md) contém instruções passo a passo para cenários relacionados ao logon do usuário e à identidade. Os aplicativos têm diversas opções para a autenticação do usuário, desde SSO (logon único) usando [agente de autenticação da Web](web-authentication-broker.md) até autenticação de dois fatores altamente segura.
+## Autenticação e identidade do usuário
+
+A [seção de autenticação e identidade do usuário](authentication-and-user-identity.md) contém instruções passo a passo para cenários relacionados ao logon do usuário e à identidade. Os aplicativos têm diversas opções para a autenticação do usuário, desde SSO (logon único) usando [agente de autenticação da Web](web-authentication-broker.md) até autenticação de dois fatores altamente segura.
 
 <table>
 <tr><th>Tópico</th><th>Descrição</th></tr>
@@ -31,8 +39,9 @@ A [seção de autenticação](authentication-and-user-identity.md) contém instr
 <tr><td>[Agente de autenticação da Web](web-authentication-broker.md)</td><td>Este artigo explica como conectar o aplicativo a um provedor de identidade online que usa protocolos de autenticação, como OpenID ou OAuth, como Facebook, Twitter, Flickr, Instagram etc. O método [AuthenticateAsync](https://msdn.microsoft.com/library/windows/apps/br212066) envia uma solicitação ao provedor de identidade online e obtém um token de acesso que descreve os recursos do provedor aos quais o aplicativo tem acesso.</td></tr>
 </table>
 
+## Criptografia 
 
-A seção de criptografia contém informações sobre tópicos relacionados mais complexos, criptográficos.
+A seção de criptografia contém informações sobre tópicos relacionados mais complexos, criptográficos. 
 
 | Tópico                                                                         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,6 +53,7 @@ A seção de criptografia contém informações sobre tópicos relacionados mais
 | [Tarefas comuns de criptografia](common-cryptography-tasks.md)                     | Estes artigos fornecem código de amostra para tarefas de criptografia comuns, como criar números aleatórios, comparar buffers, converter entre cadeias de caracteres e dados binários, copiar de e para matrizes de bytes e codificar e decodificar dados.                                                                                                                                                                                                                                                                                    |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

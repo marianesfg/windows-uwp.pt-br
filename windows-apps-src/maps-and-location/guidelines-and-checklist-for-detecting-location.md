@@ -101,7 +101,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 
 **Connected standby:  **Quando o computador está conectado no modo de espera, sempre é possível criar uma instância para objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534). No entanto, o objeto **Geolocator** não encontrará nenhum sensor a ser agregado e, portanto, as chamadas para [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) atingirão seu tempo limite após sete segundos, os ouvintes do evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) nunca serão chamados, e os ouvintes do evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) serão chamados uma vez com o status **NoData**.
 
-## Diretrizes de uso adicional
+## Diretrizes de uso adicionais
 
 
 ### Detectando alterações nas configurações de localização
@@ -171,6 +171,6 @@ A localização geográfica do usuário faz parte das PII (informações de iden
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

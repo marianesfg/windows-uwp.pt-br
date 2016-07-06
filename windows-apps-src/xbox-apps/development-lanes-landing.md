@@ -1,25 +1,27 @@
 ---
-title: Trazer jogos existentes para o Xbox
+title: Trazendo jogos existentes para o Xbox
 author: JordanEllis6809
-ms.sourcegitcommit: b94df28172a0ffa33e69e7d20c83c715a1bfdb52
-ms.openlocfilehash: 3fa8248662a4ad08d46e89c6c5b14ace56212b62
+ms.sourcegitcommit: e0c273495321689e37df6b36d97870327cff6c5a
+ms.openlocfilehash: 54db2390b5df3b5c6bc7ca6f7d6e36454435c543
 
 ---
 
-# Trazer jogos existentes para o Xbox
+# Trazendo jogos existentes para o Xbox
 
-Com base na tecnologia em que seu jogo for criado, podemos direcioná-lo para instruções passo a passo que podem agilizar o processo de trazer seu jogo para o Xbox usando a UWP.
+
+Dependendo das tecnologias usadas pelo jogo, aqui estão algumas etapas para ajudar a trazer seu jogo para a UWP no Xbox.
+
+=======
+**Observação: nem todos os mecanismos de jogos compatíveis com a UWP (Plataforma Universal do Windows) estão listados. Se uma tecnologia que o jogo usa não estiver listada, consulte o desenvolvedor do produto para obter informações sobre o suporte para UWP.**
 
 | Mecanismo      | Descrição |
 |------------|-------------|
-|[C+ + personalizada](development-lanes-custom-cpp.md)| Informações relacionadas ao desenvolvimento de jogos em C++ no Xbox usando a Plataforma Universal do Windows (UWP). |
-|C personalizada#| Em breve. |
-|Unreal 4| Em breve. |
+|[Custom C++](development-lanes-custom-cpp.md)| Informações relacionadas ao desenvolvimento de jogos em C++ no Xbox usando a UWP (Plataforma Universal do Windows). |
 |[Unity](development-lanes-unity.md)| Tutorial que ajuda a transferir jogos existentes do Unity para o Xbox. |
 |[HTML/JS](development-lanes-html.md)| Informações relacionadas ao desenvolvimento de jogos HTML no Xbox. |
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

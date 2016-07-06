@@ -1,8 +1,12 @@
 ---
 author: jwmsft
 description: Explica o conceito de uma propriedade anexada no XAML e fornece alguns exemplos.
-title: Visão geral das propriedades anexadas
+title: "Visão geral das propriedades anexadas"
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: b676110274bacc8aeacb2527099534cf0e26fa6b
+
 ---
 
 # Visão geral das propriedades anexadas
@@ -65,7 +69,7 @@ Para obter o valor de uma propriedade anexada no código, chame o método [**Get
 
 Um processador XAML deve ser capaz de definir esses valores de propriedade anexada quando o XAML é analisado em uma árvore de objetos. O tipo proprietário da propriedade anexada deve implementar métodos acessadores dedicados denominados segundo a forma **Get***NomeDaPropriedade* e **Set***NomeDaPropriedade*. Esses métodos acessadores dedicados também são uma boa maneira de obter ou definir a propriedade anexada em código. Sob a perspectiva de código, uma propriedade anexada é similar a um campo existente que contém acessadores de método em vez de acessadores de propriedade. Esse campo existente pode existir em qualquer objeto, não sendo necessário defini-lo especificamente.
 
-O próximo exemplo mostra como você pode definir uma propriedade anexada no código usando a API do acessador XAML. Neste exemplo, `myCheckBox` é uma instância da classe [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316). A última linha é o código que efetivamente define o valor; as linhas anteriores apenas estabelecem as instâncias e o relacionamento pai-filho. A última linha não comentada será a sintaxe se você usar o sistema de propriedades. A última linha comentada é a sintaxe se você usa o padrão de acessador XAML.
+O próximo exemplo mostra como você pode definir uma propriedade anexada no código usando a API do acessador XAML. Neste exemplo, `myCheckBox` é uma instância da classe [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316). A última linha é o código que efetivamente define o valor; as linhas anteriores apenas estabelecem as instâncias e o relacionamento pai-filho. A última linha não comentada será a sintaxe se você usar o sistema de propriedades. A última linha comentada será a sintaxe se você usar o padrão do acessador XAML.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -95,7 +99,7 @@ O próximo exemplo mostra como você pode definir uma propriedade anexada no có
 
 ## Propriedades anexadas personalizadas
 
-Para obter exemplos de código sobre como definir propriedades anexadas personalizadas e mais informações sobre os cenários para usar uma propriedade anexada, consulte [Propriedades anexadas personalizadas](custom-attached-properties.md).
+Para obter exemplos de código sobre como definir propriedades anexadas personalizadas e saber mais sobre os cenários que as utilizam, consulte [Propriedades anexadas personalizadas](custom-attached-properties.md).
 
 ## Sintaxe especial para referências de propriedades anexadas
 
@@ -105,7 +109,7 @@ O ponto no nome de uma propriedade anexada é uma parte essencial do padrão de 
 
 **Cuidado**  Uma limitação existente da implementação do XAML no Windows Runtime é que não é possível animar uma propriedade anexada personalizada.
  
-- Para especificar uma propriedade anexada como a propriedade de destino de uma referência a recurso em um arquivo de recurso como **x:Uid**, use uma sintaxe especial que injeta uma declaração **using:** totalmente qualificada em estilo de código dentro de colchetes ("\[\]"), para criar uma interrupção de escopo deliberada. Por exemplo, supondo que haja um elemento '<TextBlock x:Uid="Title" />', a chave de recurso no arquivo de recurso cujo destino é o valor **Canvas.Top** nessa instância será "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top". Para obter mais informações sobre arquivos de recurso e XAML, consulte [Início rápido: Traduzindo recursos da interface do usuário](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
+- Para especificar uma propriedade anexada como a propriedade de destino de uma referência a recurso em um arquivo de recurso como **x:Uid**, use uma sintaxe especial que injeta uma declaração **using:** totalmente qualificada em estilo de código dentro de colchetes ("\[\]"), para criar uma interrupção de escopo deliberada. Por exemplo, pressupondo que haja um elemento '<TextBlock x:Uid="Title" />', a chave do recurso no arquivo de recurso que direciona o valor **Canvas.Top** nessa instância é "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top". Para obter mais informações sobre arquivos de recurso e XAML, consulte [Início rápido: Traduzindo recursos da interface do usuário](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
 ## Tópicos relacionados
 
@@ -118,6 +122,7 @@ O ponto no nome de uma propriedade anexada é uma parte essencial do padrão de 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

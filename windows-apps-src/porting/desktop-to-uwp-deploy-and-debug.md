@@ -220,6 +220,6 @@ Em uma pasta chamada VFS, você verá pastas que contêm as DLLs das quais o seu
 [Exemplos de código de ponte de aplicativos da área de trabalho para UWP no GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

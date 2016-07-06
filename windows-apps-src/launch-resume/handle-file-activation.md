@@ -110,49 +110,49 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
     > **Note**  When launched via File Contract, make sure that Back button takes the user back to the screen that launched the app and not to the app's previous content.
 
-É recomendado que os aplicativos criem um novo Quadro XAML para cada evento de ativação que abre uma nova página. Dessa forma, o backstack de navegação do novo Quadro XAML não terá nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso. Aplicativos que decidem usar um único Quadro XAML para Contrato de inicialização e arquivos devem limpar as páginas do diário de navegação do Quadro antes de navegar para uma nova página.
+[!div class="tabbedCodeSnippets"] É recomendado que os aplicativos criem um novo Quadro XAML para cada evento de ativação que abre uma nova página. Dessa forma, o backstack de navegação do novo Quadro XAML não terá nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso.
 
-Quando iniciado por ativação de Arquivo, os aplicativos devem considerar incluir uma interface do usuário que permita ao usuário voltar para o início da página do aplicativo.
+Aplicativos que decidem usar um único Quadro XAML para Contrato de inicialização e arquivos devem limpar as páginas do diário de navegação do Quadro antes de navegar para uma nova página.
 
-## Comentários
+## Quando iniciado por ativação de Arquivo, os aplicativos devem considerar incluir uma interface do usuário que permita ao usuário voltar para o início da página do aplicativo.
 
 
-Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que você valide o conteúdo de um arquivo antes de processá-lo. Para obter mais informações sobre a validação de entrada, consulte [Escrevendo código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053)
+Comentários Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que você valide o conteúdo de um arquivo antes de processá-lo.
 
-> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
-## Tópicos relacionados
-
-**Exemplo completo**
-
-* [Amostra de inicialização de associação](http://go.microsoft.com/fwlink/p/?LinkID=231484)
-
-**Conceitos**
-
-* [Programas padrão](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [Tipo de Arquivo e Modelo de Associações de Protocolo](https://msdn.microsoft.com/library/windows/desktop/hh848047)
-
-**Tarefas**
-
-* [Iniciar o aplicativo padrão para um arquivo](launch-the-default-app-for-a-file.md)
-* [Manipular a ativação do URI](handle-uri-activation.md)
-
-**Diretrizes**
-
-* [Diretrizes de tipos de arquivos e URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
-
-**Referência**
-* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
-* [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
+> Para obter mais informações sobre a validação de entrada, consulte [Escrevendo código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053) **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).
 
  
 
+## Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+**Tópicos relacionados**
+
+* [Exemplo completo](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+
+**Amostra de inicialização de associação**
+
+* [Conceitos](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+* [Programas padrão](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+
+**Tipo de Arquivo e Modelo de Associações de Protocolo**
+
+* [Tarefas](launch-the-default-app-for-a-file.md)
+* [Iniciar o aplicativo padrão para um arquivo](handle-uri-activation.md)
+
+**Manipular a ativação do URI**
+
+* [Diretrizes](https://msdn.microsoft.com/library/windows/apps/hh700321)
+
+**Diretrizes de tipos de arquivos e URIs**
+* [**Referência**](https://msdn.microsoft.com/library/windows/apps/br224716)
+* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br242331)
+
+ 
+
  
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

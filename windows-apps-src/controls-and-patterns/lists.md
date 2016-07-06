@@ -5,8 +5,8 @@ title: Listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 96fd7c2af74ec609a6cfbb41a14b6f4086747813
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
 
 ---
 # Listas
@@ -22,9 +22,9 @@ Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de l
 
 ## APIs importantes
 
--   [**Classe ListView **](https://msdn.microsoft.com/library/windows/apps/br242878)
--   [**Classe GridView **](https://msdn.microsoft.com/library/windows/apps/br242705)
--   [**Classe ComboBox **](https://msdn.microsoft.com/library/windows/apps/br209348)
+-   [**Classe ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)
+-   [**Classe GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)
+-   [**Classe ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)
 
 
 ## Modos de exibição de lista
@@ -85,33 +85,37 @@ Um modo de exibição de grade é a solução ideal para uma biblioteca de conte
 
 ## Listas suspensas
 
-Listas suspensas, também conhecidas como caixas de combinação, começam em um estado compacto e se expandem para mostrar uma lista de itens selecionáveis. Uma lista suspensa aceita seleção única ou seleção múltipla. O item selecionado fica sempre visível, e os itens não visíveis podem ser exibidos quando o usuário tocar no item selecionado.
+Listas suspensas, também conhecidas como caixas de combinação, começam em um estado compacto e se expandem para mostrar uma lista de itens selecionáveis. O item selecionado fica sempre visível, e os itens não visíveis podem ser exibidos quando o usuário toca na caixa de combinação para expandi-la.
 
 ### Esse é o controle correto?
 
 -   Use um controle de lista suspensa para permitir aos usuários selecionar um ou mais valores de um conjunto de itens que podem ser representados adequadamente com linhas de texto únicas.
--   Use um modo de exibição de lista ou de grade em vez de uma lista suspensa para exibir itens que contenham várias linhas de texto ou imagens.
+-   Use um modo de exibição de lista ou de grade em vez de uma caixa de combinação para exibir itens que contenham várias linhas de texto ou imagens.
 -   Quando houver menos de cinco itens, considere a possibilidade de usar [botões de opção](radio-button.md) (se somente um item puder ser selecionado) [ou caixas de seleção](checkbox.md) (se vários itens puderem ser selecionados).
--   Use uma lista suspensa quando os itens de seleção forem de importância secundária no fluxo do seu aplicativo. Se a opção padrão for recomendada para a maioria dos usuários em grande parte das situações, mostrar todos os itens usando uma caixa de listagem pode chamar mais atenção para as opções do que o necessário. Você pode economizar espaço e minimizar a distração usando uma lista suspensa.
+-   Use a caixa de combinação quando os itens de seleção forem de importância secundária no fluxo do seu aplicativo. Se a opção padrão for recomendada para a maioria dos usuários em grande parte das situações, mostrar todos os itens usando uma exibição de lista pode chamar mais atenção para as opções do que o necessário. Você pode economizar espaço e minimizar a distração usando uma caixa de combinação.
 
 ### Exemplos
 
-Uma lista suspensa no estado compacto pode mostrar um cabeçalho.
+Uma caixa de combinação no estado compacto pode mostrar um cabeçalho.
 
 ![Exemplo de uma lista suspensa no estado compacto](images/combo_box_collapsed.png)
 
-Embora listas suspensas se expandam para dar suporte a tamanhos maiores de cadeia de caracteres, evite cadeias de caracteres excessivamente longas que são difíceis de ler.
+Embora caixas de combinação se expandam para dar suporte a tamanhos maiores de cadeia de caracteres, evite cadeias de caracteres excessivamente longas que são difíceis de ler.
 
 ![Exemplo de uma lista suspensa com a cadeia de caracteres de texto longo](images/combo_box_listitemstate.png)
 
-Se a coleção em uma lista suspensa for grande o suficiente, será exibida uma barra de rolagem para acomodá-la. Agrupe itens logicamente na lista.
+Se a coleção em uma caixa de combinação for grande o suficiente, será exibida uma barra de rolagem para acomodá-la. Agrupe itens logicamente na lista.
 
 ![Exemplo de uma barra de rolagem em uma lista suspensa](images/combo_box_scroll.png)
 
 ### Recomendações
 
--   Limite o conteúdo de texto do item de lista suspensa a uma única linha.
--   Classifique os itens em uma lista suspensa na ordem mais lógica. Agrupe opções relacionadas, coloque as opções mais comuns na parte superior e solicite itens em ordem alfabética. Classifique os nomes em ordem alfabética, os números em ordem numérica e as datas em ordem cronológica.
+-   Limite o conteúdo de texto dos itens da caixa de combinação a uma única linha.
+-   Classifique os itens em uma caixa de combinação na ordem mais lógica. Agrupe opções relacionadas e coloque as opções mais comuns na parte superior. Classifique os nomes em ordem alfabética, os números em ordem numérica e as datas em ordem cronológica.
+
+### Pesquisa de texto
+
+As caixas de combinação suportam automaticamente pesquisas dentro de suas coleções. Como os usuários digitam caracteres em um teclado físico enquanto enfocam uma caixa de combinação aberta ou fechada, os candidatos que correspondem à cadeia do usuário são inseridos na exibição. Essa funcionalidade é especialmente útil quando estiver navegando uma longa lista. Por exemplo, quando interage com uma lista suspensa contendo uma lista de estados, os usuários podem pressionar a tecla "w" para trazer "Washington" até a exibição para que haja uma seleção rápida. 
 
 ## Caixas de listagem
 
@@ -188,11 +192,9 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 - [**Classe GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)
 - [**Classe ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)
 - [**Classe ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868)
-- [Adicionando caixas de combinação e caixas de listagem](https://msdn.microsoft.com/library/windows/apps/xaml/hh780616)
 
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

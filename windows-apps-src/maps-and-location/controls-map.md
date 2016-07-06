@@ -73,6 +73,6 @@ Este exemplo mostra um aplicativo com uma vista aérea 3D e um modo de exibiçã
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

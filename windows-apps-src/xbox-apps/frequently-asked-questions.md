@@ -131,12 +131,12 @@ TVHelpers é um conjunto de amostras e bibliotecas de JavaScript e XAML/C# para 
 
 Para saber mais, veja o projeto [TVHelpers](https://github.com/Microsoft/TVHelpers) e o [wiki](https://github.com/Microsoft/TVHelpers/wiki) do projeto.
 
-## Veja também
+## Consulte também
 - [Problemas conhecidos com a UWP no Xbox One Developer Preview](known-issues.md)
 - [UWP no Xbox One](index.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

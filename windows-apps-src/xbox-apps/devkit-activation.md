@@ -82,7 +82,7 @@ Quando o Modo de Desenvolvedor tiver sido habilitado no seu console, use **Dev H
 
   ![Etapa de Ativação 14](images/activation-step-12.png)  
 
-## Veja também
+## Consulte também
 - [Desativação do Modo de Desenvolvedor do Xbox One](devkit-deactivation.md)
 - [UWP no Xbox One](index.md)
 

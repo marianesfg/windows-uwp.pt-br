@@ -87,6 +87,6 @@ Neste momento, os desenvolvedores nos seguintes países e regiões podem distrib
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

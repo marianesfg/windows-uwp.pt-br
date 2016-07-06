@@ -1,13 +1,17 @@
 ---
 author: eliotcowley
 ms.assetid: DD8FFA8C-DFF0-41E3-8F7A-345C5A248FC2
-description: Este tópico descreve como adicionar conteúdos de mídia protegida do PlayReady ao seu aplicativo da Plataforma Universal do Windows (UWP).
+description: "Este tópico descreve como adicionar conteúdos de mídia protegida do PlayReady ao seu aplicativo da Plataforma Universal do Windows (UWP)."
 title: DRM do PlayReady
+translationtype: Human Translation
+ms.sourcegitcommit: 5cae0870142282eaf2f3db05e0e202db7e74ef26
+ms.openlocfilehash: eef128afc0da6f55a76b8c664f9049dc1ec48da1
+
 ---
 
 # DRM do PlayReady
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tópico descreve como adicionar conteúdos de mídia protegida do PlayReady ao seu aplicativo da Plataforma Universal do Windows (UWP).
@@ -17,21 +21,21 @@ O DRM do PlayReady permite que desenvolvedores criem aplicativos UWP que possam 
 | Tópico                                                                     | Descrição                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [DRM de hardware](hardware-drm.md)                                           | Este tópico fornece uma visão geral de como adicionar hardware do PlayReady com base em gerenciamento de direitos digitais (DRM) ao seu aplicativo UWP.                                                                                                                                                                 |
-| [Streaming adaptável com PlayReady](adaptive-streaming-with-playready.md) | Este artigo descreve como adicionar conteúdo de multimídia de streaming adaptável com a proteção de conteúdo da Microsoft PlayReady a um aplicativo da Plataforma Universal do Windows (UWP). Esse recurso atualmente oferece suporte para reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP). |
+| [Streaming adaptável com PlayReady](adaptive-streaming-with-playready.md) | Este artigo descreve como adicionar conteúdo de multimídia de streaming adaptável com a proteção de conteúdo da Microsoft PlayReady a um aplicativo da Plataforma Universal do Windows (UWP). Atualmente, esse recurso oferece suporte à reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP). |
 
-## Quais são as novidades no DRM do PlayReady
+## Novidades no DRM do PlayReady
 
 A lista a seguir descreve os novos recursos e alterações feitas ao DRM do PlayReady para Windows 10.
 
--   Inclusão do gerenciamento de direitos digitais (DRM) de hardware.
+-   Inclusão do gerenciamento de direitos digitais de hardware (HWDRM).
 
-    Suporte de proteção de conteúdo baseado em hardware permite a reprodução segura de conteúdo em alta definição (HD) ultra-alta definição (UHD) em vários dispositivos. O material de chave (incluindo chaves privadas, chaves de conteúdo e qualquer outro material de chave usado para derivar ou desbloquear essas chaves) e amostras de vídeo compactadas e não compactadas descriptografadas são protegidos ao aproveitar a segurança do hardware. Quando o DRM de Hardware está sendo usado, nenhum ativador desconhecido (reproduzir para desconhecido / reproduzir para desconhecido com downres) tem significado, pois o pipeline HWDRM sempre conhece a saída que está sendo usada. Para obter mais informações, consulte [DRM de hardware](hardware-drm.md)
+    Suporte de proteção de conteúdo baseado em hardware permite a reprodução segura de conteúdo em alta definição (HD) e ultra-alta definição (UHD) em vários dispositivos. O material de chave (incluindo chaves privadas, chaves de conteúdo e qualquer outro material de chave usado para derivar ou desbloquear essas chaves) e amostras de vídeo compactadas e não compactadas descriptografadas são protegidos ao aproveitar a segurança do hardware. Quando o DRM de Hardware está sendo usado, nenhum ativador desconhecido (reproduzir para desconhecido / reproduzir para desconhecido com downres) tem significado, pois o pipeline HWDRM sempre conhece a saída que está sendo usada. Para obter mais informações, consulte [DRM de hardware](hardware-drm.md).
 
--   O PlayReady não é mais um componente de estrutura appX, mas um componente nativo do sistema operacional. O namespace foi alterado de **Microsoft.Media.PlayReadyClient** para [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454)
+-   O PlayReady não é mais um componente de estrutura appX, mas um componente nativo do sistema operacional. O namespace foi alterado de **Microsoft.Media.PlayReadyClient** para [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454).
 -   Os seguintes cabeçalhos definindo os códigos de erro do PlayReady agora fazem parte do Software Development Kit do Windows (SDK do Windows): Windows.Media.Protection.PlayReadyErrors.h e Windows.Media.Protection.PlayReadyResults.h.
 -   Fornece aquisição proativa de licenças não persistentes.
 
-    Versões anteriores ao DRM do PlayReady não davam suporte à aquisição proativa de licenças não persistentes. Esse recurso foi adicionado nesta versão. Isso pode reduzir o tempo para o primeiro quadro. Para obter mais informações, consulte [Adquirir uma licença não persistente de forma proativa antes da reprodução](#proactively_acquire_a_non_persistent_license_before_playback)
+    Versões anteriores ao DRM do PlayReady não davam suporte à aquisição proativa de licenças não persistentes. Esse recurso foi adicionado nesta versão. Isso pode reduzir o tempo para o primeiro quadro. Para obter mais informações, consulte [Adquirir uma licença não persistente de forma proativa antes da reprodução](#proactively_acquire_a_non_persistent_license_before_playback).
 
 -   Fornece a aquisição de várias licenças em uma mensagem.
 
@@ -42,10 +46,10 @@ A lista a seguir descreve os novos recursos e alterações feitas ao DRM do Play
     Fornece a capacidade de definir a expiração em tempo real em licenças e a transição uniforme de uma licença que esteja vencendo para outra licença (válida) no meio de reprodução. Quando combinado com aquisição de várias licenças em uma mensagem, isso permite que um aplicativo adquira várias LDLs de forma assíncrona enquanto o usuário ainda estiver navegando na biblioteca de conteúdo e adquira uma licença de duração mais longa depois que o usuário tiver selecionado conteúdo para a reprodução. A reprodução será iniciada de forma mais rápida (porque uma licença já está disponível) e, desde que o aplicativo tenha adquirido uma licença de duração mais longa no momento em que a LDL expirar, continuará a ser reproduzida uniformemente até o fim do conteúdo sem interrupção.
 
 -   Inclusão de cadeias de licença não persistentes.
--   Inclusão de suporte para restrições baseadas em tempo (incluindo expiração, expiração depois da primeira opção e expiração em tempo real) de licenças não persistentes.
--   Inclusão de suporte à política HDCP Tipo 1 (versão 2.2).
+-   Inclusão de suporte a restrições baseadas em tempo (incluindo expiração, expiração depois da primeira opção e expiração em tempo real) de licenças não persistentes.
+-   Inclusão de suporte à política do HDCP Tipo 1 (versão 2.2 no Windows 10).
 
-    Consulte [Coisas a serem consideradas](#things_to_consider) para obter mais informações.
+    Consulte [O que deve ser considerado](#things_to_consider) para saber mais.
 
 -   O método Miracast agora está implícito como uma saída.
 -   Inclusão de parada segura.
@@ -84,43 +88,310 @@ As novas interfaces, classes e enumerações a seguir foram adicionadas ao DRM d
               **PlayReadyHardwareDRMFeatures**
             ](https://msdn.microsoft.com/library/windows/apps/dn986265)
 
-Uma nova amostra foi criada para demonstrar como usar os novos recursos DRM do PlayReady. A amostra pode ser baixada em [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](http://go.microsoft.com/fwlink/p/?linkid=331670)
+Uma nova amostra foi criada para demonstrar como usar os novos recursos DRM do PlayReady. A amostra pode ser baixada em [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x416](http://go.microsoft.com/fwlink/p/?linkid=331670).
 
-## Coisas a serem consideradas
+## O que deve ser considerado
 
--   O DRM do PlayReady agora dá suporte a HDCP Tipo 1 (a partir da versão 2.2). O PlayReady carrega a política na licença para que o dispositivo aplique. Esse recurso pode ser habilitado na sua licença do servidor v3.0 SDK do PlayReady (o servidor controla essa política na licença usando o ativador play **GUID**). Para obter mais informações, consulte [PlayReady Compliance and Robustness Rules](http://www.microsoft.com/playready/licensing/compliance/)
--   Não há suporte para o Windows Media Video (também conhecido como VC-1) no DRM de hardware (consulte [Substituir DRM de hardware](hardware-drm.md#override-hardware-drm))
--   O DRM do PlayReady agora dá suporte ao padrão de compactação de vídeo de codificação de vídeo de alta eficiência (HEVC /H.265). Para dar suporte ao HEVC, seu aplicativo deve usar conteúdo de versão 2 do esquema de criptografia comum (CENC) que inclui deixar cabeçalhos de fração de conteúdo não criptografados. Para mais informações, consulte ISO/IEC 23001-7 Information technology -- MPEG systems technologies -- Part 7: Common encryption in ISO base media file format files (Versão de especificação ISO/IEC 23001-7:2015 ou superior necessária). A Microsoft também recomenda a utilização do CENC versão 2 para todo o conteúdo HWDRM. Além disso, alguns itens do DRM de hardware darão suporte ao HEVC, e outros não (consulte [Substituir DRM de hardware](hardware-drm.md#override-hardware-drm))
+-   O DRM do PlayReady agora dá suporte à HDCP Tipo 1 (compatível com HDCP versão 2.1 ou posterior). O PlayReady carrega uma política de restrição de tipo HDCP na licença para ser imposta pelo dispositivo. No Windows 10, essa política impõe que a HDCP 2.2 ou posterior seja ativada. Esse recurso pode ser habilitado na sua licença do servidor v3.0 SDK do PlayReady (o servidor controla essa política na licença usando o GUID da Restrição de Tipo HDCP). Para saber mais, consulte [Regras de conformidade e robustez do PlayReady](http://www.microsoft.com/playready/licensing/compliance/) (em inglês).
+-   Não há suporte para o Windows Media Video (também conhecido como VC-1) no DRM de hardware (consulte [Substituir DRM de hardware](hardware-drm.md#override-hardware-drm)).
+-   O DRM do PlayReady agora dá suporte ao padrão de compactação de vídeo de codificação de vídeo de alta eficiência (HEVC /H.265). Para dar suporte ao HEVC, seu aplicativo deve usar conteúdo de versão 2 do esquema de criptografia comum (CENC) que inclui deixar cabeçalhos de fração de conteúdo não criptografados. Para mais informações, consulte ISO/IEC 23001-7 Information technology -- MPEG systems technologies -- Part 7: Common encryption in ISO base media file format files (Versão de especificação ISO/IEC 23001-7:2015 ou superior necessária). A Microsoft também recomenda a utilização do CENC versão 2 para todo o conteúdo HWDRM. Além disso, alguns itens do DRM de hardware darão suporte ao HEVC, e outros não (consulte [Substituir DRM de hardware](hardware-drm.md#override-hardware-drm)).
 -   Para usufruir determinados recursos novos do PlayReady 3.0 (incluindo, mas não se limitando a, SL3000 para clientes baseados em hardware, a aquisição de várias licenças não persistentes em uma mensagem de aquisição de licença e restrições baseadas em tempo em licenças não persistentes), é necessário que o servidor PlayReady seja o Microsoft PlayReady Server Software Development Kit v3.0.2769 ou posterior.
--   Dependendo da política de proteção de saída especificada na licença do conteúdo, pode ocorrer falha na reprodução de mídia para os usuários finais se sua saída conectada não oferecer suporte a esses requisitos. A tabela a seguir lista o conjunto de erros comuns que ocorrem como resultado. Para obter mais informações, consulte [PlayReady Compliance and Robustness Rules](http://www.microsoft.com/playready/licensing/compliance/)
+-   Dependendo da política de proteção de saída especificada na licença do conteúdo, pode ocorrer falha na reprodução de mídia para os usuários finais se sua saída conectada não oferecer suporte a esses requisitos. A tabela a seguir lista o conjunto de erros comuns que ocorrem como resultado. Para saber mais, consulte [Regras de conformidade e robustez do PlayReady](http://www.microsoft.com/playready/licensing/compliance/) (em inglês).
 
 | Erro                                                   | Valor      | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |---------------------------------------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ERROR\_GRAPHICS\_OPM\_OUTPUT\_DOES\_NOT\_SUPPORT\_HDCP  | 0xC0262513 | A Política de proteção de saída da licença exige que o monitor ative HDCP, mas HDCP não pôde ser ativada.                                                                                                                                                                                                                                                                                                                                                                                              |
 | MF\_E\_POLICY\_UNSUPPORTED                              | 0xC00D7159 | A Política de proteção de saída da licença exige que o monitor ative HDCP Tipo 1, mas HDCP Tipo 1 não pôde ser ativada.                                                                                                                                                                                                                                                                                                                                                                                |
-| DRM\_E\_TEE\_OUTPUT\_PROTECTION\_REQUIREMENTS\_NOT\_MET | 0x8004CD22 | Esse código de erro ocorre somente quando executado em DRM de hardware. A política de proteção de saída da licença requer que o monitor envolva a HDCP ou reduza a resolução efetiva do conteúdo, mas a HDCP não pôde ser envolvida e a resolução efetiva do conteúdo não pôde ser reduzida porque o DRM de hardware não dá suporte à redução de resolução do conteúdo. Em DRM de software, o conteúdo é reproduzido. Consulte [Considerações sobre como usar o DRM de hardware](hardware-drm.md#considerations-for-using-hardware-drm) |
-| ERROR\_GRAPHICS\_OPM\_NOT\_SUPPORTED                    | 0xc0262500 | O driver de elemento gráfico não oferece suporte à proteção de saída. Por exemplo, o monitor está conectado por meio de VGA ou um driver de gráficos apropriado para saída digital não está instalado. No último caso, o driver típico instalado é o adaptador de vídeo básico da Microsoft. A instalação de um driver de elementos gráficos apropriado resolverá o problema.                                                                                                                                                  |
+| DRM\_E\_TEE\_OUTPUT\_PROTECTION\_REQUIREMENTS\_NOT\_MET | 0x8004CD22 | Esse código de erro ocorre somente quando executado em DRM de hardware. A política de proteção de saída da licença requer que o monitor envolva a HDCP ou reduza a resolução efetiva do conteúdo, mas a HDCP não pôde ser envolvida e a resolução efetiva do conteúdo não pôde ser reduzida porque o DRM de hardware não dá suporte à redução de resolução do conteúdo. Em DRM de software, o conteúdo é reproduzido. Consulte [Considerações sobre como usar o DRM de hardware](hardware-drm.md#considerations-for-using-hardware-drm). |
+| ERROR\_GRAPHICS\_OPM\_NOT\_SUPPORTED                    | 0xc0262500 | O driver de elemento gráfico não oferece suporte à proteção de saída. Por exemplo, o monitor está conectado por meio de VGA ou um driver de gráficos apropriado para saída digital não está instalado. No último caso, o driver típico instalado é o adaptador de vídeo básico da Microsoft e a instalação de um driver de elementos gráficos apropriado resolverá o problema.                                                                                                                                                  |
+
+## Proteção de saída
+
+A seção a seguir descreve o comportamento ao usar o DRM do PlayReady para Windows 10 com as políticas de proteção de saída em uma licença do PlayReady.
+
+O DRM do PlayReady oferece suporte aos níveis de proteção de saída contidos na **Especificação de direitos de mídia extensível do Microsoft PlayReady**. Este documento pode ser encontrado no pacote de documentação que vem com produtos licenciados PlayReady.
+
+> **Observação**
+            &nbsp;&nbsp;Os valores permitidos para níveis de proteção de saída que podem ser definidos por um servidor de licenciamento são regidos pelas [Regras de conformidade do PlayReady](https://www.microsoft.com/playready/licensing/compliance/) (em inglês).
+
+O DRM do PlayReady permite a reprodução de conteúdo com as políticas de proteção de saída somente em conectores de saída conforme especificado nas Regras de conformidade do PlayReady. Para saber mais sobre os termos do conector de saída especificado nas Regras de conformidade do PlayReady, consulte [Termos definidos para as Regras de conformidade e robustez do PlayReady](https://www.microsoft.com/playready/licensing/compliance/) (em inglês).
+
+Esta seção se concentra em cenários de proteção de saída com o DRM do PlayReady para Windows 10 e o DRM de Hardware do PlayReady para o Windows 10, que também está disponível em alguns clientes do Windows. Com o HWDRM do PlayReady, todas as proteções de saída são impostas de dentro da implementação do TEE (Ambiente de Execução Confiável) do Windows (consulte [DRM de hardware](hardware-drm.md)). Como resultado, alguns comportamentos diferem ao usar o SWDRM do PlayReady (DRM de software):
+
+* Suporte ao OPL (Nível de Proteção de Saída) para vídeo digital descompactado de 270: o HWDRM do PlayReady para Windows 10 não oferece suporte à resolução inferior e impõe que a HDCP (Proteção de Conteúdo Digital de Grande Largura de Banda) seja ativada. Recomenda-se que o conteúdo de alta definição para o HWDRM tenha um OPL superior a 270, embora não seja necessário. Além disso, você deve definir a restrição de tipo HDCP na licença (HDCP versão 2.2 ou posterior).
+* Ao contrário do SWDRM, com o HWDRM, as proteções de saída são impostas em todos os monitores com base no monitor de menor capacidade. Por exemplo, se o usuário tiver dois monitores conectados, em que um dos monitores oferece suporte à uma HDCP e o outro não, haverá falha na reprodução se a licença exigir uma HDCP, mesmo se o conteúdo só estiver sendo renderizado no monitor que oferece suporte à HDCP. No SWDRM, o conteúdo será reproduzido contanto que esteja sendo renderizado somente no monitor que oferece suporte à HDCP.
+* Não há garantia de que o HWDRM seja usado pelo cliente e que seja seguro, a menos que as seguintes condições sejam atendidas pelas licenças e chaves de conteúdo:
+    * A licença usada para a chave de conteúdo de vídeo deve ter um nível mínimo de segurança de 3000.
+    * O áudio deve ser criptografado em uma chave de conteúdo diferente daquela do vídeo, e a licença usada para áudio deve ter um nível mínimo de segurança de 2000. Como alternativa, o áudio pode não ser criptografado.
+* Todos os cenários SWDRM exigem que o nível mínimo de segurança da licença do PlayReady usada para a chave de conteúdo de áudio e/ou vídeo seja menor ou igual a 2000.
+
+### Níveis de proteção de saída
+
+A tabela a seguir descreve os mapeamentos entre vários OPLs na licença do PlayReady e como o DRM do PlayReady para Windows 10 os impõe.
+
+#### Vídeo
+
+<table>
+    <tr>
+        <th rowspan="2">OPL</th>
+        <th>Vídeo digital compactado</th>
+        <th colspan="2">Vídeo digital não compactado</th>
+        <th>TV analógica</th>
+    </tr>
+    <tr>
+        <th>Qualquer</th>
+        <th colspan="2">HDMI, DVI, DisplayPort, MHL</th>
+        <th>Componente, composição</th>
+    </tr>
+    <tr>
+        <th>0-100</th>
+        <td rowspan="7">O Windows 10 nunca passa o conteúdo de vídeo digital compactado para saídas, independentemente do valor do OPL subsequente. Para saber mais sobre o conteúdo de vídeo digital compactado, consulte as [Regras de conformidade para os produtos PlayReady](https://www.microsoft.com/playready/licensing/compliance/) (em inglês)</td>
+        <td rowspan="3" colspan="2">Passa o conteúdo</td>
+        <td>Passa o conteúdo</td>
+    </tr>
+    <tr>
+        <th>101-150</th>
+        <td>Passa o conteúdo quando o CGMS-A CopyNever está ativado ou se o CGMS-A não pode ser ativado</td>
+    </tr>
+    <tr>
+        <th>151-200</th>
+        <td>Passa o conteúdo quando o CGMS-A CopyNever está ativado</td>
+    </tr>
+    <tr>
+        <th>201-250</th>
+        <td colspan="2">Tenta acionar a HDCP, mas passa conteúdo independentemente do resultado</td>
+        <td rowspan="4">NÃO passa conteúdo</td>
+    </tr>
+    <tr>
+        <th>251-270</th>
+        <td>**SWDRM**: tenta acionar a HDCP. Se houver falha de ativação da HDCP, o computador limitará a resolução efetiva a 520.000 pixels por quadro e passará o conteúdo</td>
+        <td>**HWDRM**: passa conteúdo com a HDCP. Se houver falha de ativação da HDCP, a reprodução nas portas HDMI DVI será bloqueada</td>
+    </tr>
+    <tr>
+        <th>271-300</th>
+        <td colspan="2">
+            <p>
+                **Quando a restrição de tipo HDCP NÃO está definida:** passa conteúdo com a HDCP. Se houver falha de ativação da HDCP, a reprodução nas portas HDMI DVI será bloqueada.
+            </p>
+            <p>
+                **Quando a restrição de tipo HDCP ESTÁ definida**: passa conteúdo com a HDCP 2.2 e o tipo de fluxo de conteúdo definido como 1. Se houver falha de ativação da HDCP ou o tipo de fluxo de conteúdo não puder ser definido como 1, a reprodução nas HDMI/DVI será bloqueada.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>\>300</th>
+        <td colspan="2">NÃO passa conteúdo</td>
+    </tr>
+</table>
+
+#### Áudio
+
+<table>
+    <tr>
+        <th rowspan="2">OPL</th>
+        <th>Áudio digital compactado</th>
+        <th>Áudio digital não compactado</th>
+        <th>Áudio analógico ou USB</th>
+    </tr>
+    <tr>
+        <th>HDMI, DisplayPort, MHL</th>
+        <th>HDMI, DisplayPort, MHL</th>
+        <th>Qualquer</th>
+    </tr>
+    <tr>
+        <th>0-100</th>
+        <td rowspan="2">Passa o conteúdo</td>
+        <td>Passa o conteúdo</td>
+        <td rowspan="4">Passa o conteúdo</td>
+    </tr>
+    <tr>
+        <th>101-200</th>
+        <td rowspan="4">NÃO passa conteúdo</td>
+    </tr>
+    <tr>
+        <th>201-250</th>
+        <td>Passa o conteúdo quando a HDCP está ativada nas saídas HDMI, DisplayPort ou MHL, ou quando SCMS está ativada e definida como CopyNever</td>
+    </tr>
+    <tr>
+        <th>251-300</th>
+        <td>Passa o conteúdo quando HDCP está ativada nas saídas HDMI, DisplayPort ou MHL</td>
+    </tr>
+    <tr>
+        <th>\>300</th>
+        <td>NÃO passa conteúdo</td>
+        <td>NÃO passa conteúdo</td>
+    </tr>
+</table>
+
+### Miracast
+
+O DRM do PlayReady permite reproduzir conteúdo pela saída Miracast assim que a HDCP 2.0 ou posterior for ativada. No Windows 10, no entanto, Miracast é considerada uma saída *digital*. Para saber mais sobre cenários de Miracast, consulte as [Regras de conformidade do PlayReady](https://www.microsoft.com/playready/licensing/compliance/) (em inglês). A tabela a seguir descreve os mapeamentos entre vários OPLs na licença do PlayReady e como o DRM do PlayReady os impõe nas saídas de Miracast.
+
+<table>
+    <tr>
+        <th>OPL</th>
+        <th>Áudio digital compactado</th>
+        <th>Áudio digital não compactado</th>
+        <th>Vídeo digital compactado</th>
+        <th>Vídeo digital não compactado</th>
+    </tr>
+    <tr>
+        <th>0-100</th>
+        <td rowspan="3">Passa o conteúdo quando a HDCP 2.0 ou posterior está ativada. Se houver falha de ativação, o conteúdo NÃO será passado</td>
+        <td>Passa o conteúdo quando a HDCP 2.0 ou posterior está ativada. Se houver falha de ativação, o conteúdo NÃO será passado</td>
+        <td rowspan="4">O Windows 10 nunca passa o conteúdo de vídeo digital compactado para saídas, independentemente do valor do OPL subsequente. Para saber mais sobre o conteúdo de vídeo digital compactado, consulte as [Regras de conformidade do PlayReady](https://www.microsoft.com/playready/licensing/compliance/) (em inglês)</td>
+        <td rowspan="2">Passa o conteúdo quando a HDCP 2.0 ou posterior está ativada. Se houver falha de ativação, o conteúdo NÃO será passado</td>
+    </tr>
+    <tr>
+        <th>101-270</th>
+        <td rowspan="3">NÃO passa conteúdo</td>
+    </tr>
+    <tr>
+        <th>271-300</th>
+        <td>
+            <p>
+                **Quando a restrição de tipo HDCP NÃO está definida:** passa conteúdo quando a HDCP 2.0 ou posterior está ativada. Se houver falha de ativação, o conteúdo NÃO será passado.
+            </p>
+            <p>
+                **Quando a restrição de tipo HDCP ESTÁ definida:** passa o conteúdo com a HDCP 2.2 e o tipo de fluxo de conteúdo definido como 1. Se houver falha de ativação da HDCP ou o tipo de fluxo de conteúdo não puder ser definido como 1, o conteúdo NÃO será passado.
+            </p>        
+        </td>
+    </tr>
+    <tr>
+        <th>\>300</th>
+        <td>NÃO passa conteúdo</td>
+        <td>NÃO passa conteúdo</td>
+    </tr>
+</table>
+
+### Restrições adicionais de saída explícita
+
+A tabela a seguir descreve a implementação das restrições de proteção de saída explícita de vídeo digital do DRM do PlayReady para Windows 10.
+
+<table>
+    <tr>
+        <th>Cenário</th>
+        <th>GUID</th>
+        <th>Se...</th>
+        <th>Então...</th>
+    </tr>
+    <tr>
+        <th>Tamanho máximo efetivo de decodificação de resolução</th>
+        <td>9645E831-E01D-4FFF-8342-0A720E3E028F</td>
+        <td>A saída conectada é: saída de vídeo digital, Miracast, HDMI, DVI, etc.</td>
+        <td>
+            <p>
+                Passa o conteúdo quando restrito a:  
+            </p>
+            <ul>
+                <li>(a) a largura do quadro deve ser menor ou igual à largura máxima do quadro em pixels e a altura do quadro menor ou igual à altura máxima do quadro em pixels, ou</li>
+                <li>(b) a altura do quadro deve ser menor ou igual à largura máxima do quadro em pixels e a largura do quadro menor ou igual à altura máxima do quadro em pixels</li>
+            </ul>                   
+        </td>
+    </tr>
+    <tr>
+        <th>Restrição de tipo HDCP</th>
+        <td>ABB2C6F1-E663-4625-A945-972D17B231E7</td>
+        <td>A saída conectada é: saída de vídeo digital, Miracast, HDMI, DVI, etc.</td>
+        <td>Passa conteúdo com a HDCP 2.2 e o tipo de fluxo de conteúdo definido como 1. Se houver falha de ativação da HDCP 2.2 ou o tipo de fluxo de conteúdo não puder ser definido como 1, o conteúdo NÃO será passado. O nível de proteção de saída de vídeo digital não compactado de um valor maior ou igual a 271 também deve ser especificado</td>
+    </tr>
+</table>
+
+A tabela a seguir descreve a implementação das restrições de proteção de saída explícita de vídeo analógico do DRM do PlayReady para Windows 10.
+
+<table>
+    <tr>
+        <th>Cenário</th>
+        <th>GUID</th>
+        <th>Se...</th>
+        <th colspan="2">Então...</th>
+    </tr>
+    <tr>
+        <th>Monitor de computador analógico</th>
+        <td>D783A191-E083-4BAF-B2DA-E69F910B3772</td>
+        <td>A saída conectada é: VGA, DVI&ndash;analógico, etc.</td>
+        <td>**SWDRM:** o computador restringirá a resolução efetiva a 520.000 epx por quadro e passará conteúdo</td>
+        <td>**HWDRM:** NÃO passa conteúdo</td>
+    </tr>
+    <tr>
+        <th>Componente analógico</th>
+        <td>811C5110-46C8-4C6E-8163-C0482A15D47E</td>
+        <td>A saída conectada é: componente</td>
+        <td>**SWDRM:** o computador restringirá a resolução efetiva a 520.000 epx por quadro e passará conteúdo</td>
+        <td>**HWDRM:** NÃO passa conteúdo</td>
+    </tr>
+    <tr>
+        <th rowspan="2">Saídas de TV analógicas</th>
+        <td>2098DE8D-7DDD-4BAB-96C6-32EBB6FABEA3</td>
+        <td>O OPL de TV analógica é menor que 151</td>
+        <td colspan="2">CGMS-A deve estar ativado</td>
+    </tr>
+    <tr>
+        <td>225CD36F-F132-49EF-BA8C-C91EA28E4369</td>
+        <td>O OPL de TV analógica é menor que 101 e a licença não contém 2098DE8D-7DDD-4BAB-96C6-32EBB6FABEA3</td>
+        <td colspan="2">Deve-se tentar a ativação do CGMS-A, mas o conteúdo pode reproduzido independentemente do resultado</td>
+    </tr>
+    <tr>
+        <th>Controle de ganho automático e listra de cores</th>
+        <td>C3FD11C6-F8B7-4D20-B008-1DB17D61F2DA</td>
+        <td>Conteúdo de passagem com resolução menor ou igual a 520.000 px para saída de TV analógica</td>
+        <td colspan="2">Define o AGC (Controle de Ganho Automático) somente para o componente de vídeo e o modo PAL quando a resolução for menor que 520.000 px e define o AGC e as informações de listra de cores para NTSC quando a resolução for menor que 520.000 px, de acordo com a tabela 3.5.7.3. nas Regras de conformidade</td>
+    </tr>
+    <tr>
+        <th>Saída somente digital</th>
+        <td>760AE755-682A-41E0-B1B3-DCDF836A7306</td>
+        <td>A saída conectada é analógica</td>
+        <td colspan="2">Não passa conteúdo</td>
+    </tr>
+</table>
+
+> **Observação** Ao usar um adaptador dongle como o "Mini DisplayPort para VGA" para a reprodução, o Windows 10 vê a saída como saída de vídeo digital e não pode impor políticas de vídeo analógico.
+
+A tabela a seguir descreve a implementação do DRM do PlayReady para Windows 10 que permite a reprodução em outras circunstâncias.
+
+<table>
+    <tr>
+        <th>Cenário</th>
+        <th>GUID</th>
+        <th>Se...</th>
+        <th colspan="2">Então...</th>
+    </tr>
+    <tr>
+        <th>Saída desconhecida</th>
+        <td>786627D8-C2A6-44BE-8F88-08AE255B01A7</td>
+        <td>Se a saída não pode ser determinada de forma razoável ou o OPM não pode ser estabelecido com o driver de elementos gráficos</td>
+        <td>**SWDRM:** passa conteúdo</td>
+        <td>**HWDRM:** NÃO passa conteúdo</td>
+    </tr>
+    <tr>
+        <th>Saída desconhecida com restrição</th>
+        <td>B621D91F-EDCC-4035-8D4B-DC71760D43E9</td>
+        <td>Se a saída não pode ser determinada de forma razoável ou o OPM não pode ser estabelecido com o driver de elementos gráficos</td>
+        <td>**SWDRM:** o computador restringirá a resolução efetiva a 520.000 epx por quadro e passará conteúdo</td>
+        <td>**HWDRM:** NÃO passa conteúdo</td>
+    </tr>
+</table>
 
 ## Pré-requisitos
 
-Antes de começar a criar seu aplicativo UWP protegido por PlayReady, o seguinte software deve ser instalado no sistema:
+Antes de começar a criar seu aplicativo UWP protegido pelo PlayReady, o seguinte software deve ser instalado no sistema:
 
 -   Windows 10.
 -   Se você estiver compilando alguma das amostras para o DRM do PlayReady para aplicativos UWP, você deve usar Microsoft Visual Studio 2015 ou superior para compilar as amostras. Você ainda pode usar o Microsoft Visual Studio 2013 para compilar qualquer uma das amostras do DRM do PlayReady DRM para aplicativos da Loja do Windows 8.1.
 
-Se você pretende reproduzir conteúdo MPEG-2/H.262 em seu aplicativo, também deverá baixar e instalar o [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876)
+Se pretende reproduzir conteúdo MPEG-2/H.262 em seu aplicativo, você também deverá baixar e instalar o [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).
 
 ## Guia de migração de aplicativos PlayReady da Windows Store
 
-Esta seção inclui informações sobre como migrar os seus aplicativos existentes PlayReady da Loja do Windows 8.x para o Windows 10.
+Esta seção inclui informações sobre como migrar seus aplicativos PlayReady existentes da Loja do Windows 8.x para o Windows 10.
 
 O namespace para aplicativos UWP do PlayReady no Windows 10 foi alterado de **Microsoft.Media.PlayReadyClient** para [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454). Isso significa que você precisará pesquisar e substituir o namespace antigo pelo novo em seu código. Você ainda fará referência a um arquivo winmd. Ele é parte do windows.media.winmd nos sistema operacional do Windows 10. Ele está em windows.winmd como parte do SDK do Windows do TH. Para UWP, ele está referenciado em windows.foundation.univeralappcontract.winmd.
 
-Para reproduzir conteúdo HD (alta definição) (1080p) e UHD (ultra-alta definição) protegido por PlayReady, será necessário implementar o DRM de hardware do PlayReady. Para obter mais informações sobre como implementar o DRM de hardware do PlayReady, consulte [DRM de hardware](hardware-drm.md)
+Para reproduzir conteúdo HD (alta definição) (1080p) e UHD (ultra-alta definição) protegido por PlayReady, será necessário implementar o DRM de hardware do PlayReady. Para obter mais informações sobre como implementar o DRM de hardware do PlayReady, consulte [DRM de hardware](hardware-drm.md).
 
-Não há suporte para parte do conteúdo no DRM de hardware. Para informações sobre como desabilitar o DRM de hardware e habilitar o DRM de software, consulte [Substituir DRM de hardware](hardware-drm.md#override-hardware-drm)
+Não há suporte para parte do conteúdo no DRM de hardware. Para informações sobre como desabilitar o DRM de hardware e habilitar o DRM de software, consulte [Substituir DRM de hardware](hardware-drm.md#override-hardware-drm).
 
-Sobre o gerenciador de proteção de mídia, verifique se o seu código tem as seguintes configurações caso ainda não as tenha:
+Com relação ao gerenciador de proteção de mídia, confira se seu código tem as seguintes configurações:
 
 ```cs
 var mediaProtectionManager = new Windows.Media.Protection.MediaProtectionManager();
@@ -169,7 +440,7 @@ Em versões anteriores do PlayReady DRM, as licenças não persistentes eram adq
     ```
 
 4.  Executar a aquisição de licença usando a solicitação de serviço criada na etapa 3. A licença será armazenada na sessão de reprodução.
-5.  Vincule a sessão de reprodução à origem de mídia para reprodução. Por exemplo:
+5.  Vincule a sessão de reprodução à origem de mídia para a reprodução. Por exemplo:
 
     ```cs
     licenseSession.configureMediaProtectionManager( mediaProtectionManager );
@@ -187,7 +458,7 @@ Há dois cenários principais para enviar um desafio de parada segura:
 -   Quando a apresentação de mídia é interrompida porque foi alcançado o fim do conteúdo ou quando o usuário interrompeu a apresentação de mídia em algum ponto intermediário.
 -   Quando a sessão anterior é encerrada inesperadamente (por exemplo, devido a uma falha no sistema ou no aplicativo). O aplicativo precisará consultar, na inicialização ou no desligamento, qualquer sessão de parada segura pendente e enviar desafio(s) separadamente de qualquer outra reprodução de mídia.
 
-Para obter uma implementação de exemplo de parada segura, consulte o arquivo securestop.cs no exemplo de PlayReady localizado em [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](http://go.microsoft.com/fwlink/p/?linkid=331670)
+Para obter uma implementação de exemplo de parada segura, consulte o arquivo securestop.cs no exemplo de PlayReady localizado em [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x416](http://go.microsoft.com/fwlink/p/?linkid=331670).
 
  
 
@@ -198,6 +469,7 @@ Para obter uma implementação de exemplo de parada segura, consulte o arquivo s
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO5-->
 
 

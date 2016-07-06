@@ -62,7 +62,7 @@ Suporte a dispositivos
 -   Xbox
 -   HoloLens
 
-![fala](images/input-interactions/icons-speech01.png)
+![controle por voz](images/input-interactions/icons-speech01.png)
 
 Uso típico
 
@@ -304,6 +304,6 @@ Uso típico Assim como as pessoas usam uma combinação de voz e gestos ao se co
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

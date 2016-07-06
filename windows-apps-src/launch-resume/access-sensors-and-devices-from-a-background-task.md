@@ -200,6 +200,6 @@ Além de [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br2298
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

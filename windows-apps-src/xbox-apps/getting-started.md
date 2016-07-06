@@ -61,13 +61,13 @@ Consulte [Development environment setup](development-environment-setup.md) para 
    ![Hello World](images/getting-started-hello-world.png)
    
 
-## Veja também  
+## Consulte também  
 - [Perguntas frequentes](frequently-asked-questions.md)  
 - [Problemas conhecidos](known-issues.md)
 - [UWP no Xbox One](index.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

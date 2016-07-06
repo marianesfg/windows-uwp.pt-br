@@ -154,6 +154,6 @@ No Windows 10, o XAML introduziu uma nova propriedade, [**UIElement.Transform3D*
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

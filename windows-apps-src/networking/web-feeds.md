@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: Recupere ou crie o conteúdo da Web mais atual e popular usando feeds sindicalizados gerados de acordo com os padrões RSS e Atom, usando os recursos no namespace Windows.Web.Syndication.
+description: "Recupere ou crie o conteúdo da Web mais atual e popular usando feeds sindicalizados gerados de acordo com os padrões RSS e Atom, usando os recursos no namespace Windows.Web.Syndication."
 title: Feeds RSS/Atom
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 625a18203bd2d60acc97a6243d4f3e1e0cf2b297
+
 ---
 
 # Feeds RSS/Atom
@@ -256,6 +260,7 @@ Como sugerido anteriormente, o tipo de conteúdo representado por um objeto [**S
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

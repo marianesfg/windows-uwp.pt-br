@@ -3,6 +3,10 @@ author: TylerMSFT
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: Enviar um item de trabalho ao pool de threads
 description: Aprenda a trabalhar em um thread separado enviando um item de trabalho ao pool de threads.
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: afb6d8b1b1ee5eeb99ba68e8b842436bd58619d0
+
 ---
 # Enviar um item de trabalho ao pool de threads
 
@@ -258,6 +262,7 @@ Você pode saber mais baixando o código deste guia de início rápido em [Crian
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

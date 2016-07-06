@@ -24,6 +24,6 @@ Por padrão, seu aplicativo será dimensionado para 200% se você estiver usando
 Para obter informações sobre as práticas de design, consulte o tópico [Projetando para Xbox e TV](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

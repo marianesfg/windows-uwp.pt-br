@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: Coisas que você deve fazer para qualquer aplicativo habilitado por rede.
-title: Noções básicas de rede
+description: "Coisas que você deve fazer para qualquer aplicativo habilitado por rede."
+title: "Noções básicas de rede"
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 96c6617595b49c48ee77bec87b6aa87ae1634ed9
+
 ---
 
 # Noções básicas de rede
@@ -46,12 +50,12 @@ Se seu aplicativo usa gatilhos de atividade de soquete, você deve especificar a
 
 Existem alguns cenários onde qualquer tipo de gatilho seria adequado. Ao escolher o tipo de gatilho para usar em seu aplicativo, considere o seguinte aviso.
 
--   Se estiver usando [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) ou [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638), você deverá usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)
+-   Se estiver usando [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) ou [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638), você deverá usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 -   Se você está usando **StreamSockets** habilitados por push, pode usar gatilhos de canal de controle, mas prefira [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). Esta última opção permite que o sistema libere memória e reduza os requisitos de energia quando a conexão não está sendo usada ativamente.
 -   Se você deseja minimizar o volume de memória de seu aplicativo quando ele não está atendendo ativamente as solicitações de rede, prefira [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) quando possível.
--   Se você deseja que seu aplicativo seja capaz de receber dados enquanto o sistema estiver no modo de espera conectado, use [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)
+-   Se você deseja que seu aplicativo seja capaz de receber dados enquanto o sistema estiver no modo de espera conectado, use [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009).
 
-Para obter detalhes e exemplos de como usar o agente de soquete, consulte [Comunicações de rede em segundo plano](network-communications-in-the-background.md)
+Para obter detalhes e exemplos de como usar o agente de soquete, consulte [Comunicações de rede em segundo plano](network-communications-in-the-background.md).
 
 ## Conexões seguras
 
@@ -82,17 +86,17 @@ O valor SocketProtectionLevel que você fornece define o nível de proteção m�
 
 -   [
               **ConnectAsync(EndpointPair, SocketProtectionLevel)**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701511) - inicia uma operação assíncrona em um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para conectar a um destino de rede remoto especificado como um objeto [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953) e um [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880)
+            ](https://msdn.microsoft.com/library/windows/apps/hh701511) - inicia uma operação assíncrona em um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para conectar a um destino de rede remoto especificado como um objeto [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953) e um [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
 -   [
               **ConnectAsync(HostName, String, SocketProtectionLevel)**
-            ](https://msdn.microsoft.com/library/windows/apps/br226916) - inicia uma operação assíncrona em um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para conectar a um destino remoto especificado por um nome de host remoto, um nome de serviço remoto e um [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880)
+            ](https://msdn.microsoft.com/library/windows/apps/br226916) - inicia uma operação assíncrona em um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para conectar a um destino remoto especificado por um nome de host remoto, um nome de serviço remoto e um [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
 
 Se o parâmetro *protectionLevel* é definido como **Windows.Networking.Sockets.SocketProtectionLevel.Ssl** ao chamar um dos métodos [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) acima, o [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) será estabelecido para usar SSL/TLS para criptografia. Esse valor exige criptografia e jamais permite o uso de uma criptografia NULL.
 
 A sequência normal a ser usada com um desses métodos [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) é a mesma.
 
--   Crie um [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)
--   Se for necessária uma opção avançada no soquete, use a propriedade [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) para obter a instância [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893) associada a um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882). Definir uma propriedade no **StreamSocketControl**
+-   Crie um [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882).
+-   Se for necessária uma opção avançada no soquete, use a propriedade [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) para obter a instância [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893) associada a um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882). Defina uma propriedade no **StreamSocketControl**.
 -   Chame um dos métodos [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) acima para iniciar uma operação para conectar a um destino remoto e negociar imediatamente o uso de SSL/TLS.
 -   A força da SSL efetivamente negociada usando [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) pode ser determinada obtendo-se a propriedade [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) depois que a operação assíncrona for concluída com êxito.
 
@@ -178,8 +182,8 @@ O método [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/app
 
 A sequência normal a ser usada com o método [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) é a seguinte:
 
--   Crie um [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)
--   Se for necessária uma opção avançada no soquete, use a propriedade [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) para obter a instância [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893) associada a um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882). Definir uma propriedade no **StreamSocketControl**
+-   Crie um [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882).
+-   Se for necessária uma opção avançada no soquete, use a propriedade [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) para obter a instância [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893) associada a um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882). Defina uma propriedade no **StreamSocketControl**.
 -   Se for necessário enviar e receber dados não criptografados, faça isso neste momento.
 -   Chame o método [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) para iniciar uma operação para atualizar a conexão para usar SSL/TLS.
 -   A força da SSL efetivamente negociada usando [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) pode ser determinada obtendo-se a propriedade [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) depois que a operação assíncrona for concluída com êxito.
@@ -359,11 +363,11 @@ using Windows::Storage::Streams;
     });
 ```
 
-### Criando conexões WebSocket seguras
+### Criação de conexões WebSocket protegidas
 
 Da mesma forma que as conexões de soquete tradicionais, as conexões WebSocket também podem ser criptografadas com os protocolos TLS/SSL quando usarem os recursos [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) e [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) do Windows 8 para um aplicativo da Windows Store. Na maioria dos casos, você vai usar uma conexão WebSocket segura. Isso aumentará as chances de sucesso da sua conexão, já que muitos proxies rejeitam conexões WebSocket não criptografadas.
 
-Para obter exemplos de como criar ou atualizar uma conexão de soquete segura a um serviço de rede, consulte [Como proteger conexões WebSocket com TLS/SSL (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh994399)
+Para obter exemplos de como criar ou atualizar uma conexão de soquete segura a um serviço de rede, consulte [Como proteger conexões WebSocket com TLS/SSL (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh994399).
 
 Além da criptografia TLS/SSL, um servidor por exigir um valor de cabeçalho **Sec-WebSocket-Protocol** para concluir o handshake inicial. Esse valor, representado pelas propriedades [**StreamWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701514) e [**MessageWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701358), indica a versão do protocolo da conexão e habilita o servidor a interpretar corretamente o handshake de abertura e os dados trocados posteriormente. Usando essas informações de protocolo, se, a qualquer momento, o servidor não puder interpretar os dados de entrada de maneira segura, a conexão poderá ser fechada.
 
@@ -429,6 +433,7 @@ As APIs de rede dão suporte a métodos diferentes para recuperar essas informa�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

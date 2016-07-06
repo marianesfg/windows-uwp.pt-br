@@ -25,7 +25,7 @@ Este artigo descreve a nova IU do Windows para rotação. Também fornece diretr
 
 -   Use a rotação para ajudar os usuários a girarem os elementos da interface diretamente.
 
-## Diretrizes de uso adicional
+## Diretrizes de uso adicionais
 
 
 **Visão geral da rotação**
@@ -127,6 +127,6 @@ O Windows 8 suporta três tipos de rotação: livre, restringida e combinada.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

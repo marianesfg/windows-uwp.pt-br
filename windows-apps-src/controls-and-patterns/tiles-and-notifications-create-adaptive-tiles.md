@@ -5,8 +5,8 @@ title: "Criar blocos adaptáveis"
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 0bcdc9570365ca0dcacf4f9c0c1b99afaffcf157
+ms.sourcegitcommit: a6632c7b8fdee5320f35e316abd318193a254c51
+ms.openlocfilehash: 6cd4519007d1241cb7c411dade1a092140b598c4
 
 ---
 
@@ -20,21 +20,21 @@ Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que
 
 (Se quiser, ainda pode usar os modelos predefinidos do [Catálogo de modelos de blocos do Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) durante a criação de notificações para o Windows 10.)
 
-## <span id="Getting_started"></span><span id="getting_started"></span><span id="GETTING_STARTED"></span>Noções básicas
+## Noções básicas
 
 
 **Instale NotificationsExtensions.** Se quiser usar C# em vez de XML para gerar notificações, instale o pacote NuGet denominado [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki). Os exemplos em C# fornecidos neste artigo usam NotificationsExtensions.
 
 **Instale o Visualizador de notificações.** Esse aplicativo UWP gratuito ajuda você a criar blocos dinâmicos adaptáveis, fornecendo uma visualização instantânea de seu bloco enquanto você o edita, semelhante ao modo de exibição de editor/design XAML do Visual Studio. Você pode ler [esta postagem no blog](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/09/22/introducing-notifications-visualizer-for-windows-10.aspx) para obter mais informações e pode baixar o Visualizador de Notificações [aqui](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
 
-## <span id="Usage_guidance"></span><span id="usage_guidance"></span><span id="USAGE_GUIDANCE"></span>Diretriz de uso
+## Diretriz de uso
 
 
 Os modelos adaptáveis são projetados para funcionar em diferentes fatores forma e tipos de notificação. Elementos como grupo e subgrupo vinculam conteúdo e não indicam um determinado comportamento visual próprio. A aparência final de uma notificação deve ser baseada no dispositivo específico no qual ela aparecerá, seja um telefone, tablet, desktop ou outro dispositivo.
 
 Dicas são atributos opcionais que podem ser adicionados aos elementos para obter um comportamento visual específico. As dicas podem ser específicas ao dispositivo ou à notificação.
 
-## <span id="A_basic_example"></span><span id="a_basic_example"></span><span id="A_BASIC_EXAMPLE"></span>Um exemplo básico
+## Um exemplo básico
 
 
 Este exemplo demonstra o que os modelos de blocos adaptáveis podem produzir.
@@ -104,7 +104,7 @@ TileContent content = new TileContent()
 
 ![bloco de amostra rápido](images/adaptive-tiles-quicksample.png)
 
-## <span id="Tile_sizes"></span><span id="tile_sizes"></span><span id="TILE_SIZES"></span>Tamanhos de bloco
+## Tamanhos de bloco
 
 
 O conteúdo de cada tamanho de bloco é especificado individualmente em elementos [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) separados no conteúdo XML. Escolha o tamanho de destino definindo o atributo template com um dos seguintes valores:
@@ -196,12 +196,12 @@ TileContent content = new TileContent()
 
 ![tamanhos dos blocos adaptáveis: pequeno, médio, largo e grande](images/adaptive-tiles-sizes.png)
 
-## <span id="Branding"></span><span id="branding"></span><span id="BRANDING"></span>Identidade visual
+## Identidade visual
 
 
 Você pode controlar a identidade visual na parte inferior de um bloco dinâmico (o nome de exibição e o logotipo de canto) usando o atributo branding no conteúdo da notificação. Você pode optar por exibir "none", somente "name", somente "logo", ou ambos, com "nameAndLogo".
 
-**Observação**  O Windows Phone não aceita o logotipo de canto, então "logo" e "nameAndLogo" são definidos como o padrão "name" no telefone.
+**Observação**  O Windows Mobile não aceita o logotipo de canto, então "logo" e "nameAndLogo" são definidos como o padrão "name" no Mobile.
 
  
 
@@ -283,10 +283,12 @@ Se você não especificar a identidade visual no conteúdo da notificação, as 
 
  
 
-## <span id="Display_name"></span><span id="display_name"></span><span id="DISPLAY_NAME"></span>Nome de exibição
+## Nome de exibição
 
 
 Você pode substituir o nome de exibição de uma notificação digitando a cadeia de caracteres de texto de sua escolha com o atributo **displayName**. Assim como na identidade visual, você pode especificar isso no elemento [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afeta todo o conteúdo da notificação, ou no elemento [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afeta somente blocos individuais.
+
+**Problema conhecido**  No Windows Mobile, se você especificar um ShortName para Tile, o nome de exibição fornecido na notificação não será usado (o ShortName sempre será exibido). 
 
 ```XML
 <tile>
@@ -332,7 +334,7 @@ TileContent content = new TileContent()
 
 ![nome de exibição de blocos adaptáveis](images/adaptive-tiles-displayname.png)
 
-## <span id="Text"></span><span id="text"></span><span id="TEXT"></span>Text
+## Texto
 
 
 O elemento [&lt;text&gt;](tiles-and-notifications-adaptive-tiles-schema.md) é usado para exibir texto. Você pode usar dicas para modificar a aparência do texto.
@@ -344,7 +346,7 @@ O elemento [&lt;text&gt;](tiles-and-notifications-adaptive-tiles-schema.md) é u
 </table>
 ```
 
-<span codelanguage="CSharp"></span>
+
 ```CSharp
 <colgroup>
 <col width="100%" />
@@ -366,7 +368,7 @@ new TileText()
 
 ![texto do bloco adaptável](images/adaptive-tiles-text.png)
 
-## <span id="Text_wrapping"></span><span id="text_wrapping"></span><span id="TEXT_WRAPPING"></span>Disposição do texto
+## Disposição do texto
 
 
 Por padrão, o texto não é encapsulado e ultrapassa a borda do bloco. Use o atributo **hint-wrap** para definir a disposição do texto em um elemento de texto. Você também pode controlar o número mínimo e máximo de linhas usando **hint-minLines** e **hint-maxLines**, que aceitam números inteiros positivos.
@@ -378,7 +380,7 @@ Por padrão, o texto não é encapsulado e ultrapassa a borda do bloco. Use o at
 </table>
 ```
 
-<span codelanguage="CSharp"></span>
+
 ```CSharp
 <colgroup>
 <col width="100%" />
@@ -401,7 +403,7 @@ new TileText()
 
 ![bloco adaptável com disposição do texto](images/adaptive-tiles-textwrapping.png)
 
-## <span id="Text_styles"></span><span id="text_styles"></span><span id="TEXT_STYLES"></span>Estilos de texto
+## Estilos de texto
 
 
 Os estilos controlam o tamanho, a cor e a espessura da fonte dos elementos de texto. Há uma série de estilos disponíveis, incluindo uma variação "sutil" de cada estilo que define a opacidade em 60%, que geralmente torna a cor do texto um tom de cinza-claro.
@@ -479,7 +481,7 @@ Cada estilo tem uma variação sutil que oferece ao texto uma opacidade de 60%, 
 
  
 
-## <span id="Text_alignment"></span><span id="text_alignment"></span><span id="TEXT_ALIGNMENT"></span>Alinhamento do texto
+## Alinhamento do texto
 
 
 O texto pode ser alinhamento horizontalmente à esquerda, ao centro ou à direita. Em idiomas da esquerda para a direita como o inglês, o padrão de texto é alinhado à esquerda. Em idiomas da direita para a esquerda como o árabe, o padrão de texto é alinhado à direita. Você pode definir manualmente o alinhamento com o atributo **hint-align** nos elementos.
@@ -491,7 +493,7 @@ O texto pode ser alinhamento horizontalmente à esquerda, ao centro ou à direit
 </table>
 ```
 
-<span codelanguage="CSharp"></span>
+
 ```CSharp
 <colgroup>
 <col width="100%" />
@@ -514,7 +516,7 @@ new TileText()
 
 ![alinhamento de texto de blocos adaptáveis](images/adaptive-tiles-textalignment.png)
 
-## <span id="Groups_and_subgroups"></span><span id="groups_and_subgroups"></span><span id="GROUPS_AND_SUBGROUPS"></span>Grupos e subgrupos
+## Grupos e subgrupos
 
 
 Os grupos permitem declarar semanticamente que o conteúdo dentro do grupo está relacionado e deve ser exibido em sua totalidade para o conteúdo fazer sentido. Por exemplo, você pode ter dois elementos de texto, um cabeçalho e um subcabeçalho, e não faz sentido que apenas o cabeçalho seja mostrado. Agrupando esses elementos dentro de um subgrupo, todos os elementos serão exibidos (se couberem) ou nenhum elemento será exibido (porque não cabem).
@@ -616,7 +618,7 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 
 ![subgrupos e grupos de blocos adaptáveis](images/adaptive-tiles-groups-subgroups.png)
 
-## <span id="Subgroups__columns_"></span><span id="subgroups__columns_"></span><span id="SUBGROUPS__COLUMNS_"></span>Subgrupos (colunas)
+## Subgrupos (colunas)
 
 
 Os subgrupos também permitem que você divida dados em seções semânticas dentro de um grupo. Para blocos dinâmicos, isso se traduz visualmente em colunas.
@@ -841,7 +843,7 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 ![exemplo de um bloco de previsão do tempo](images/adaptive-tiles-weathertile.png)
 
-## <span id="Images"></span><span id="images"></span><span id="IMAGES"></span>Imagens
+## Imagens
 
 
 O elemento &lt;image&gt; é usado para exibir imagens na notificação do bloco. As imagens podem ser embutidas no conteúdo do bloco (padrão), como uma imagem de plano de fundo atrás do conteúdo, ou como uma imagem de "espiar" animada na parte superior da notificação.
@@ -939,7 +941,7 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 As imagens posicionadas na raiz de &lt;binding&gt;, ou no primeiro grupo, também se ampliarão para caber na altura disponível.
 
-### <span id="Image_alignment"></span><span id="image_alignment"></span><span id="IMAGE_ALIGNMENT"></span>Alinhamento das imagens
+### Alinhamento das imagens
 
 As imagens podem ser definidas para alinhamento à esquerda, ao centro ou à direita com o atributo **hint-align**. Isso também fará com que as imagens sejam exibidas em sua resolução nativa, em vez de ampliadas para preencher a largura.
 
@@ -974,7 +976,7 @@ TileLarge = new TileBinding()
 
 ![exemplo de alinhamento de imagem (à esquerda, ao centro, à direita)](images/adaptive-tiles-imagealignment.png)
 
-### <span id="Image_margins"></span><span id="image_margins"></span><span id="IMAGE_MARGINS"></span>Margens de imagem
+### Margens de imagem
 
 Por padrão, as imagens embutidas têm uma margem de 8 pixels entre qualquer conteúdo acima ou abaixo da imagem. Essa margem pode ser removida usando o atributo **hint-removeMargin** na imagem. Entretanto, as imagens sempre retêm a margem de 8 pixels da borda do bloco, e os subgrupos (colunas) sempre retêm o preenchimento de 8 pixels entre colunas.
 
@@ -1064,7 +1066,7 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 ![exemplo de dica de remoção de margem](images/adaptive-tiles-removemargin.png)
 
-### <span id="Image_cropping"></span><span id="image_cropping"></span><span id="IMAGE_CROPPING"></span>Corte de imagem
+### Corte de imagem
 
 As imagens podem ser cortadas em círculo usando o atributo **hint-crop**, que atualmente aceita apenas os valores de "none" (padrão) ou "circle".
 
@@ -1142,7 +1144,7 @@ TileLarge = new TileBinding()
 
 ![exemplo de corte de imagem](images/adaptive-tiles-imagecropping.png)
 
-### <span id="Background_image"></span><span id="background_image"></span><span id="BACKGROUND_IMAGE"></span>Imagem de plano de fundo
+### Imagem de plano de fundo
 
 Para definir uma imagem de plano de fundo, coloque um elemento de imagem na raiz de &lt;binding&gt; e defina o atributo de posicionamento como "background".
 
@@ -1266,7 +1268,7 @@ TileWide = new TileBinding()
 
 ![exemplo de uma sobreposição de dica de imagem](images/adaptive-tiles-image-hintoverlay.png)
 
-### <span id="Peek_image"></span><span id="peek_image"></span><span id="PEEK_IMAGE"></span>Imagem de "espiar"
+### Imagem de "espiar"
 
 Você pode especificar uma imagem que "espie" a parte superior do bloco. A imagem de "espiar" usa uma animação para deslizar para baixo/para cima a partir da parte superior do bloco, espiando a visualização, e depois deslizar de volta para revelar o conteúdo principal no bloco. Para definir uma imagem de "espiar", coloque um elemento de imagem na raiz de &lt;binding&gt; e defina o atributo de posicionamento como "peek".
 
@@ -1344,12 +1346,12 @@ Este exemplo mostra uma imagem de plano de fundo com opacidade de 20% (esquerda)
 
 ![hint-overlay em uma imagem dinâmica](images/hintoverlay.png)
 
-## <span id="Vertical_alignment__text_stacking_"></span><span id="vertical_alignment__text_stacking_"></span><span id="VERTICAL_ALIGNMENT__TEXT_STACKING_"></span>Alinhamento vertical (empilhamento de texto)
+## Alinhamento vertical (empilhamento de texto)
 
 
 Você pode controlar o alinhamento vertical do conteúdo em seu bloco usando o atributo **hint-textStacking** nos elementos  [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) e [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md). Por padrão, tudo é alinhado verticalmente à parte superior, mas você também pode alinhar o conteúdo à parte inferior ou ao centro.
 
-### <span id="Text_stacking_on_binding_element"></span><span id="text_stacking_on_binding_element"></span><span id="TEXT_STACKING_ON_BINDING_ELEMENT"></span>Empilhamento de texto no elemento binding
+### Empilhamento de texto no elemento binding
 
 Quando aplicado no nível [&lt;enviar&gt;](tiles-and-notifications-adaptive-tiles-schema.md), o empilhamento de texto define o alinhamento vertical do conteúdo da notificação como um todo, alinhando no espaço vertical disponível acima da área de identidade visual/notificação.
 
@@ -1397,7 +1399,7 @@ TileMedium = new TileBinding()
 
 ![empilhamento de texto no elemento binding](images/adaptive-tiles-textstack-bindingelement.png)
 
-### <span id="Text_stacking_on_subgroup_element"></span><span id="text_stacking_on_subgroup_element"></span><span id="TEXT_STACKING_ON_SUBGROUP_ELEMENT"></span>Empilhamento de texto no elemento subgroup
+### Empilhamento de texto no elemento subgroup
 
 Quando aplicado no nível [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md), o empilhamento de texto define o alinhamento vertical do conteúdo do subgrupo (coluna), alinhando no espaço vertical disponível dentro do grupo inteiro.
 
@@ -1476,7 +1478,7 @@ TileWide = new TileBinding()
 ...
 ```
 
-## <span id="related_topics"></span>Tópicos relacionados
+## Tópicos relacionados
 
 
 * [Esquema de blocos adaptáveis](tiles-and-notifications-adaptive-tiles-schema.md)
@@ -1492,6 +1494,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

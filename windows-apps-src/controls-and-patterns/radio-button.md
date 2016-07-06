@@ -164,7 +164,7 @@ Um botão de opção tem dois estados: *marcado* ou *desmarcado*. Quando um bot�
 -   Não coloque mais que oito opções em um grupo de botão de opção. Quando for necessário apresentar mais opções, use uma [lista suspensa](lists.md), [caixa de listagem](lists.md)ou um [modo de exibição de lista](lists.md) em vez disso.
 -   Não coloque dois grupos de botão de opção próximos um do outro. Quando dois grupos de botão de opção estão próximos um do outro é difícil determinar quais botões pertencem a qual grupo. Use rótulos de grupos para separá-los.
 
-## Diretriz de uso adicional
+## Diretrizes de uso adicionais
 
 Esta ilustração mostra a maneira correta de posicionar e espaçar os botões de opção.
 

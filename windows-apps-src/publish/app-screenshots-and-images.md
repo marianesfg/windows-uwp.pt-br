@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Seu aplicativo precisa incluir vários logotipos, capturas de tela e imagens.
+Description: "Seu aplicativo precisa incluir vários logotipos, capturas de tela e imagens."
 title: Imagens e capturas de tela do aplicativo
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
+ms.sourcegitcommit: ecb030b7c529f765eded46e4e3e9db99ad0c27e8
+ms.openlocfilehash: 9eac5658e2ac04b2abc1bf06abf5c73b16260bc7
+
 ---
 
 # Imagens e capturas de tela do aplicativo
@@ -12,7 +15,7 @@ Seu aplicativo precisa incluir vários logotipos, capturas de tela e imagens. Al
 
 Durante o [processo de envio do aplicativo](app-submissions.md), você fornece [capturas de tela](#screenshots) e [arte promocional](#promotional-artwork) na etapa [Descrições](create-app-descriptions.md). Essas imagens são usadas para ajudar a exibir seu aplicativo na Loja.
 
-A Loja também usa o bloco do aplicativo e outras imagens que você inclui no pacote do aplicativo. Execute o [Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/mt186449) para determinar se está faltando alguma imagem exigida.
+A Loja também usa o bloco do aplicativo e outras imagens que você inclui no pacote do aplicativo. Execute o [Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/mt186449) para determinar se está faltando alguma imagem exigida. Para diretrizes e recomendações sobre essas imagens, consulte [Ativos de bloco e ícone](../controls-and-patterns/tiles-and-notifications-app-assets.md).
 
 > **Observação**  O modo como as imagens são usadas na Loja, na tela inicial do cliente e dentro do próprio aplicativo pode variar, dependendo do sistema operacional do cliente e de outros fatores.
 
@@ -102,6 +105,7 @@ Na Loja no Windows Phone 8.1 e versões anteriores, dois tamanhos de imagem pode
 Na Loja do Windows 8.1 e de versões anteriores, os layouts promocionais podem usar uma imagem no tamanho 414 x 180 pixel. Se seu aplicativo é executado no Windows 8.1 ou em versões anteriores, é recomendável fornecer uma imagem nesse tamanho para que seja levado em consideração para fins promocionais.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

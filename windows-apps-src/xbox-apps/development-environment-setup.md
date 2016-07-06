@@ -109,6 +109,6 @@ Parabéns! Você criou e implantou com êxito o seu primeiro aplicativo UWP no X
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

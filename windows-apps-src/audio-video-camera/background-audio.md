@@ -142,6 +142,6 @@ A tabela a seguir lista as políticas que são aplicadas em quais tipos de dispo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

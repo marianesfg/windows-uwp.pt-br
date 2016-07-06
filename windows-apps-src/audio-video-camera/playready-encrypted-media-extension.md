@@ -305,6 +305,6 @@ Consulte as [aplicativos de exemplo](https://code.msdn.microsoft.com/windowsapps
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

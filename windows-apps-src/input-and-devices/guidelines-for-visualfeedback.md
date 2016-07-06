@@ -5,8 +5,8 @@ title: "Comentários visuais"
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: 287ec24dbc60be39c0f944c6d4a86205961fb770
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 2bf873f35192c20f15c6cb445b6be6436354c8c2
 
 ---
 
@@ -20,37 +20,24 @@ Use os comentários visuais para mostrar aos usuários quando suas interações 
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 -   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
 
+## Recomendações
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>O que fazer e o que não fazer
+-   Tente permanecer o mais próximo do modelo de controle original quanto possível, para obter controle e desempenho de aplicativo otimizados.
+-   Não use visualizações de toque em situações em que possam interferir com o uso do aplicativo. Para obter mais informações, consulte [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
+-   Não exiba comentários a menos que seja absolutamente necessário. Mantenha a interface do usuário clara e organizada sem mostrar os comentários visuais, a menos que você esteja agregando valor que não esteja disponível em nenhum outro lugar.
+-   Tente não personalizar os comportamentos dos comentários visuais dos gestos internos do Windows em excesso, porque isso pode criar uma experiência inconsistente e confusa para o usuário.
 
--   Fornecer feedback visual mesmo quando o contato é muito breve. Isso ajuda o usuário a:
-    -   Confirmar se a tela sensível ao toque está funcionando.
-    -   Identificar se o destino é habilitado por toque ou responsivo.
-    -   Identificar se o usuário errou o destino pretendido.
--   Exibir comentários imediatamente para todos os eventos de interação.
--   Fornecer comentários que consistem em indicações sutis e intuitivas que não distraiam os usuários.
--   Assegurar que os destinos de toque sejam tocados pela ponta dos dedos durante toda as a manipulações.
--   Habilitar a seleção de itens com o gesto de passar o dedo quando o movimento panorâmico está restrito a uma única direção.
--   Não usar visualizações de toque em situações em que possam interferir com o uso do aplicativo. Para obter mais informações, consulte [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
--   Não exiba comentários a menos que seja absolutamente necessário. Manter a interface do usuário clara e organizada sem mostrar os comentários visuais, a menos que você esteja agregando valor que não esteja disponível em nenhum outro lugar. Nunca exibir as dicas de ferramentas, se elas repetirem o texto que já está visível. As dicas de ferramentas devem ser reservadas para ocasiões específicas, como texto truncado (texto com reticências) que não é exibido quando o item é selecionado ou onde as informações adicionais são necessárias para a compreensão ou use seu próprio aplicativo.
--   Não use o gesto pressionar e segurar, a não ser para a interface do usuário informativa.  
-    **Importante**  Gestos de pressionar e segurar podem ser usados para seleção em casos em que o movimento panorâmico horizontal e vertical está habilitado.    
--   Não personalize os comportamentos do feedback visual dos gestos internos do Windows 8, porque isso pode criar uma experiência inconsistente e confusa para o usuário.
--   Não mostre comentários visuais durante o movimento panorâmico ou de arrastar; o movimento real do objeto na tela é suficiente. Entretanto, se a área de conteúdo não permitir movimento panorâmico ou rolagem, use visualizações para indicar as condições de limite. Para obter mais informações, consulte [Diretrizes de movimento panorâmico](guidelines-for-panning.md).
--   Não exibir comentários para um controle que não seja identificado como o destino. O comentário visual é importante quando recorre à entrada por toque em atividades que exijam exatidão e precisão com base no local. A exibição de comentários sempre que você detectar a entrada por toque ajuda o usuário a entender a heurística de direcionamento personalizada definida pelo seu aplicativo e seus controles.
--   Não use o comportamento de comentário destinado a um tipo de entrada com outro tipo. Por exemplo, um retângulo de foco do teclado deve ser usado somente com o teclado, e não com toque.
-
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
+## Diretrizes de uso adicionais
 
 As visualizações por contato são especialmente críticas para as interações por toque que exigem exatidão e precisão. Por exemplo, seu aplicativo deve indicar claramente o local de um toque para permitir que um usuário saiba se errou o seu destino, o quanto errou e quais ajustes deve fazer.
 
-Use os controles da plataforma apresentados pelas estruturas de linguagem dos aplicativos da Windows Store (aplicativos da Windows Store que usam JavaScript e aplicativos da Windows Store que usam C++, C\# ou Visual Basic) para acessar as visualizações do Windows 8 gratuitamente. Se o seu aplicativo permitir interações personalizadas que exijam feedbacks personalizados, você deverá garantir que o feedback seja adequado, que ele se propague em dispositivos de entrada e que não distraia o usuário da tarefa. Isso pode ser um problema específico em aplicativos de jogos ou de desenho, em que o feedback visual pode entrar em conflito ou até mesmo obscurecer uma interface do usuário essencial.
+Usar os controles da plataforma padrão XAML disponíveis garantirá que o aplicativo funcione corretamente em todos os dispositivos e em situações de entrada. Se o seu aplicativo permitir interações personalizadas que exijam comentários personalizados, você deverá garantir que os comentários sejam adequados, que eles se propaguem em dispositivos de entrada e que não distraiam o usuário da tarefa. Isso pode ser um problema específico em aplicativos de jogos ou de desenho, em que o feedback visual pode entrar em conflito ou até mesmo obscurecer uma interface do usuário essencial.
 
 [!IMPORTANT] Não recomendamos mudar o comportamento da interação dos gestos internos. 
 
-### <span id="Feedback_UI"></span><span id="feedback_ui"></span><span id="FEEDBACK_UI"></span>Interface do usuário de comentários
+**Comentários em todos os dispositivos**
 
-A interface de feedback do usuário geralmente depende do dispositivo de entrada (toque, touchpad, mouse, caneta, teclado, etc.). Por exemplo, o feedback interno de um mouse geralmente envolve movimentar e mudar o cursor, enquanto o toque e a caneta exigem visualizações de contato e entrada de teclado e a navegação usa retângulos de foco e destaque.
+Os comentários visuais geralmente dependem do dispositivo de entrada (toque, touchpad, mouse, caneta, teclado, etc.). Por exemplo, o feedback interno de um mouse geralmente envolve movimentar e mudar o cursor, enquanto o toque e a caneta exigem visualizações de contato e entrada de teclado e a navegação usa retângulos de foco e destaque.
 
 Use [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969) para configurar o comportamento de feedback para gestos da plataforma.
 
@@ -58,102 +45,61 @@ Se você estiver personalizando a interface do usuário de feedback, lembre-se d
 
 Estes são alguns exemplos de visualizações internas de contato do Windows.
 
-| ![Captura de tela mostrando uma visualização de toque](images/feedback-touch-cursor.png) | ![Captura de tela mostrando uma visualização de mouse](images/feedback-mouse-cursor2.png) | ![Captura de tela mostrando uma visualização de caneta](images/feedback-pen-cursor3.png) | ![Captura de tela mostrando uma visualização por teclado](images/feedback-keyboard-cursor.png) | 
+| ![Comentários do toque](images/TouchFeedback.png) | ![Comentários do mouse](images/MouseFeedback.png) | ![Comentários da caneta](images/PenFeedback.png) | ![Comentários do teclado](images/KeyboardFeedback.png) |
 | --- | --- | --- | --- |
 | Visualização por toque | Visualização por mouse/touchpad | Visualização por caneta | Visualização por teclado |
 
-### <span id="Informational_UI"></span><span id="informational_ui"></span><span id="INFORMATIONAL_UI"></span>Interface do usuário informativa (pop-ups)
+## Elementos visuais de foco de alta visibilidade
 
-Um dos principais formulários de feedback visual é a interface do usuário informativa (ou interface do usuário de desambiguação). A interface do usuário informativa identifica e exibe informações sobre um objeto, descreve a funcionalidade e a forma de acessá-la e fornece orientações, quando necessário.
+Todos os aplicativos do Windows ostentam elementos visual de foco mais definido em torno de controles interativos do aplicativo. Esses novos elementos visuais de foco são totalmente personalizáveis, assim como desativáveis quando necessário.
 
-Aqui estão os diferentes tipos de interface do usuário informativa compatíveis com aplicativos da Windows Store.
+## Personalização e identidade visual de cores
 
--   Dicas de ferramentas
--   Dicas de ferramentas avançadas
--   Menus:
--   Caixas de diálogo de mensagem
--   Submenus
+**Propriedades da borda**
 
-A interface do usuário informativa é especialmente útil para superar a oclusão (obstrução) da ponta do dedo e melhorar as interações por toque com o seu aplicativo. Ela ainda tem um gesto interno dedicado a ele: pressionar e segurar.
+Há duas partes nos elementos visuais de foco de alta visibilidade: a borda principal e a borda secundária. A borda principal apresenta espessura de **2px** e é moldada em torno da parte *externa* da borda secundária. A borda secundária apresenta espessura de **1px** e é moldada em torno da parte *interna* da borda secundária.
+![Linhas vermelhas dos elementos visuais de foco de alta visibilidade](images/FocusRectRedlines.png)
 
-Pressionar e segurar é uma interação com tempo limite, que normalmente não é incentivada no Windows 8. Uma interação de tempo limite é aceitável nesse caso, visto que ela é usada como uma ferramenta para aprender e explorar. A duração recomendada depende do tipo de interface do usuário informativa. Veja os limites de tempo recomendados.
+Para alterar a espessura de qualquer tipo de borda (principal ou secundária), use **FocusVisualPrimaryThickness** ou **FocusVisualSecondaryThickness**, respectivamente:
+```XAML
+<Slider Width="200" FocusVisualPrimaryThickness="5" FocusVisualSecondaryThickness="2"/>
+```
+![Espessuras de margem do elemento visual de foco de alta visibilidade](images/FocusMargin.png)
 
-| Tipo IU informacional | Tempo | Ativação | Utilização |
-| --- | --- | --- | --- |
-| Dica de ferramenta de oclusão (para depuração e destinos menores) | 0 ms | Sim | Para rápidos esclarecimentos de ações. Geralmente usado para comandos. |
-| Dica de ferramenta de oclusão (para ações) | 200 ms | Sim | |
-| Dica de ferramenta avançada | ~2000 ms | Não | Para aprendizagem e para explorações lentas e mais decisivas. Geralmente usado com itens de coleção. |
-| Interação por revelação | ~2000 ms | Não | |
-| Menu de contexto | ~2000 ms | Não | Expõe um conjunto limitado de comandos relacionados ao objeto selecionado. |
-| Submenus | ~2000 ms | Não | Expõe um conjunto limitado de comandos relacionados ao objeto selecionado. |
+A margem é uma propriedade do tipo [**Thickness**](https://msdn.microsoft.com/library/system.windows.thickness); portanto, a margem pode ser personalizada para aparecer somente em determinados lados do controle. Veja abaixo: ![Apenas a espessura da margem do elemento visual de foco de alta visibilidade inferior](images/FocusThicknessSide.png)
 
-Para obter mais informações sobre como fornecer a interface do usuário informativa, consulte [Criando o layout da interface do usuário](https://msdn.microsoft.com/library/windows/apps/hh465304) e [Exibindo pop-ups](https://msdn.microsoft.com/library/windows/apps/hh738362).
+A margem é o espaço entre os limites do controle visual e o início da *borda secundária* dos elementos visuais de foco. A margem padrão está **1px** além dos limites de controle. Você pode editar essa margem em uma base por controle. Basta alterar a propriedade **FocusVisualMargin**:
+```XAML
+<Slider Width="200" FocusVisualMargin="-5"/>
+```
+![Diferenças de margem dos elementos visuais de foco de alta visibilidade](images/FocusPlusMinusMargin.png)
 
-### <span id="Tooltips"></span><span id="tooltips"></span><span id="TOOLTIPS"></span>Dicas de ferramentas
+*Uma margem negativa colocará a borda além do centro do controle, e uma margem positiva moverá a borda para mais perto do centro do controle.*
 
-Use as dicas de ferramentas para revelar mais informações sobre um controle antes de pedir ao usuário para executar uma ação.
+Para desativar totalmente os elementos visuais de foco no controle, basta desabilitar **UseSystemFocusVisuals**:
+```XAML
+<Slider Width="200" UseSystemFocusVisuals="False"/>
+```
 
-As dicas de ferramentas ([**Dica de ferramenta**](https://msdn.microsoft.com/library/windows/apps/br229763)) aparecem automaticamente quando o usuário executa um gesto de pressionar e segurar (ou quando um evento de focalização é detectado) em um controle ou objeto. A dica de ferramenta desaparece quando o contato ou o cursor sai do controle ou objeto. Uma dica de ferramenta pode incluir texto e imagens, mas não é interativa.
+A espessura, a margem ou a opção do desenvolvedor do aplicativo de ter ou não os elementos visuais de foco são determinadas com base no controle.
 
-### <span id="Occlusion_tooltips_small"></span><span id="occlusion_tooltips_small"></span><span id="OCCLUSION_TOOLTIPS_SMALL"></span>Dicas de ferramenta de oclusão para destinos menores
+**Propriedades de cor**
 
-As dicas de ferramentas de oclusão descrevem o destino ocluso. Elas são mais úteis para o direcionamento e ativação de itens menores do que o tamanho padrão do destino por toque, como por exemplo, hiperlinks em uma página da Web.
+Há somente duas propriedades de cor para os elementos visuais de foco: a cor da borda principal e a cor da borda secundária. Essas cores de borda dos elementos visuais podem ser alteradas por controle no nível da página e globalmente no nível do aplicativo:
 
-Você pode substituir essas dicas de ferramentas por um pop-up informativo após um determinado limite de tempo. Por exemplo, use uma dica de ferramenta de oclusão para mostrar o texto obstruído do hiperlink e substitua a dica da ferramenta por um pop-up contendo a URL.
+Para usar a identidade visual dos elementos visuais de foco em todo o aplicativo, substitua os pincéis do sistema:
+```XAML
+<SolidColorBrush x:Key="SystemControlFocusVisualPrimaryBrush" Color="DarkRed"/>
+<SolidColorBrush x:Key="SystemControlFocusVisualSecondaryBrush" Color="Pink"/>
+```
+![Alterações de cor dos elementos visuais de foco de alta visibilidade](images/FocusRectColorChanges.png)
 
-### <span id="Occlusion_tooltips_actions"></span><span id="occlusion_tooltips_actions"></span><span id="OCCLUSION_TOOLTIPS_ACTIONS"></span>Dicas de ferramenta para ações e comandos
+Para alterar as cores em uma base por controle, edite as propriedades dos elementos visuais de foco no controle desejado:
+```XAML
+<Slider Width="200" FocusVisualPrimaryBrush="DarkRed" FocusVisualSecondaryBrush="Pink"/>
+```
 
-Essas dicas de ferramentas descrevem a ação ou o comando que ocorre quando um usuário levanta o dedo de um elemento. Elas são úteis ao direcionar e ativar um botão ou controle semelhante.
-
-Uma dica de ferramenta de destino menor pode ser seguida por uma dica de ferramenta de ação após um determinado limite de tempo. Nesse caso, a dica de ferramenta de destino menor deve ser expandida para incluir a informação adicional na dica de ferramenta de ação.
-
-### <span id="Rich_tooltip"></span><span id="rich_tooltip"></span><span id="RICH_TOOLTIP"></span>Dica de ferramenta avançada
-
-Essas dicas de ferramentas revelam informações secundárias sobre um elemento. Por exemplo, uma dica de ferramenta avançada pode ser uma descrição textual de uma imagem, o texto completo de um título truncado ou outra informação relevante ao destino.
-
-As dicas de ferramentas avançadas normalmente contêm informações que não precisam estar disponíveis imediatamente e, em alguns casos, podem causar distração se apresentadas muito rapidamente. Um limite de tempo maior contribui para melhorar a decisão dos usuários sobre a obtenção de informações.
-
-Após a exibição de uma dica de ferramenta avançada, o objeto não é mais ativado quando o usuário levanta o dedo. Isso ocorre porque a informação obtida gradualmente da dica de ferramenta pode influenciar o usuário a não ativar o item.
-
-Recomendamos que o design visual e as informações na dica de ferramenta avançada sejam distintos e mais substanciais do que a dica de ferramenta padrão.
-
-### <span id="Context_menu"></span><span id="context_menu"></span><span id="CONTEXT_MENU"></span>Menu de contexto
-
-O menu de contexto ([**PopupMenu**](https://msdn.microsoft.com/library/windows/apps/br208693)) é um menu leve que permite aos usuários acesso imediato às ações (como, comandos da área de transferência) em texto ou objetos da interface do usuário em aplicativos da Windows Store.
-
-O menu de contexto otimizado para toque consiste em duas partes. Uma indicação visual, a sugestão, é exibida como resultado de uma interação do ato segurar. Em seguida, o menu de contexto é exibido após a sugestão desaparecer e o usuário levantar o dedo.
-
-As imagens a seguir demonstram como invocar o menu de contexto padrão para o texto tocando em uma seleção ou em uma garra (a ação de pressionar e segurar também pode ser usada).
-
-![tocar (ou pressionar e segurar) dentro da seleção ou em uma garra para invocar o menu de contexto.](images/textselection-show-context.png)
-
-Consulte [Adicionando menus de contexto](https://msdn.microsoft.com/library/windows/apps/hh465300).
-
-### <span id="Message_dialog"></span><span id="message_dialog"></span><span id="MESSAGE_DIALOG"></span>Caixa de diálogo de mensagem
-
-Use caixas de diálogo de mensagem ([**MessageDialog**](https://msdn.microsoft.com/library/windows/apps/br208674)) para solicitar uma resposta dos usuários, com base na ação do usuário ou no estado do aplicativo, antes de continuar. A interação explícita do usuário é exigida, e a entrada no aplicativo ficará bloqueada até que o usuário responda.
-
-![caixa de diálogo para mensagem de erro](images/messagedialog.png)
-
-Aqui estão alguns dos motivos típicos da exibição de uma caixa de diálogo de mensagem.
-
--   Apresentar informação urgente
--   Fazer uma pergunta antes de dar continuidade à execução
--   Exibir mensagens de erro
-
-Consulte [Adicionando caixas de diálogo de mensagem](https://msdn.microsoft.com/library/windows/apps/hh738361).
-
-### <span id="Flyout"></span><span id="flyout"></span><span id="FLYOUT"></span>Submenu
-
-Um submenu ([**Submenu**](https://msdn.microsoft.com/library/windows/apps/br211726)) é um painel leve da interface do usuário, que é exibido via ativação por toque, clique ou outra interação, e que é usado para apresentar ao usuário informações, perguntas ou um menu de opções relacionado à atividade atual. Ele pode ser dispensado (desaparece quando o usuário toca ou clica fora do painel de submenu ou pressiona ESC). Ou seja, um submenu pode ser ignorado.
-
-Diferentemente das dicas de ferramentas, os submenus podem aceitar entradas. Diferentemente das caixas de diálogo de mensagem, o aplicativo ainda está ativo e aceitando entradas.
-
-![submenu com confirmação](images/flyout.png)
-
-Consulte [Adicionando submenus e menus](https://msdn.microsoft.com/library/windows/apps/hh465325)
-
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 **Para designers**
 * [Diretrizes de movimento panorâmico](guidelines-for-panning.md)
@@ -182,10 +128,6 @@ Consulte [Adicionando submenus e menus](https://msdn.microsoft.com/library/windo
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 
