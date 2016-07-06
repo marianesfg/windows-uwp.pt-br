@@ -1,42 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\enterprise\edp-hub.md](https://github.com/Microsoft/windows-apps/blob/235a0d96c0cf86fdb16a0a6b933fc0f2bbed99f0/windows-apps-src/enterprise/edp-hub.md) | OutofSyncHandedBackSuccess | [Details](#2cae64ff234a4fb85fd6a3e50ade3b91480b36c82144)
- [windows-apps-src\files\protect-your-enterprise-data-with-edp.md](https://github.com/Microsoft/windows-apps/blob/9b9e9ecb70f3a0bb92038ae94f45ddcee3357dbd/windows-apps-src/files/protect-your-enterprise-data-with-edp.md) | OutofSyncHandedBackSuccess | [Details](#a31fc65599f43be5b302b568774a51ab770653002159)
+ [windows-apps-src\input-and-devices\input-primer.md](https://github.com/Microsoft/windows-apps/blob/fe012189566a20203b2bf8cae72f80655eeadfd1/windows-apps-src/input-and-devices/input-primer.md) | OutofSyncHandedBackSuccess | [Details](#6084a49a8d8d9884c3bd777160ca219059d1654b2983)
 
 ## Item Details
-##### <a name='2cae64ff234a4fb85fd6a3e50ade3b91480b36c82144'></a> Source: [windows-apps-src\enterprise\edp-hub.md](https://github.com/Microsoft/windows-apps/blob/235a0d96c0cf86fdb16a0a6b933fc0f2bbed99f0/windows-apps-src/enterprise/edp-hub.md)
+##### <a name='6084a49a8d8d9884c3bd777160ca219059d1654b2983'></a> Source: [windows-apps-src\input-and-devices\input-primer.md](https://github.com/Microsoft/windows-apps/blob/fe012189566a20203b2bf8cae72f80655eeadfd1/windows-apps-src/input-and-devices/input-primer.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [edp-hub.809f979752a339134e41bb6e576dbcd42ee0762e.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/41a4ada5a8941b5b50e7c1a884600bc674eaed02/ol-handoff/Microsoft/windows-apps.pt-br/master/edp-hub.809f979752a339134e41bb6e576dbcd42ee0762e.pt-br.xlf)
-* Handoff Datetime: 2016-07-06 17:59:38
+* Handoff File: [input-primer.5342c7c3046580ba53971943f93ff8467cc4bd6e.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/22535a405750286813b83eec5b8c53a2c2de5db7/ol-handoff/Microsoft/windows-apps.pt-br/master/input-primer.5342c7c3046580ba53971943f93ff8467cc4bd6e.pt-br.xlf)
+* Handoff Datetime: 2016-07-06 18:47:03
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\enterprise\edp-hub.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/enterprise/edp-hub.md)
-* Current Handback File: [edp-hub.809f979752a339134e41bb6e576dbcd42ee0762e.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/edp-hub.809f979752a339134e41bb6e576dbcd42ee0762e.pt-br.xlf)
-* Current Handback Datetime: 2016-07-06 15:27:44
-* [Back to Top](#report-top)
-
-##### <a name='a31fc65599f43be5b302b568774a51ab770653002159'></a> Source: [windows-apps-src\files\protect-your-enterprise-data-with-edp.md](https://github.com/Microsoft/windows-apps/blob/9b9e9ecb70f3a0bb92038ae94f45ddcee3357dbd/windows-apps-src/files/protect-your-enterprise-data-with-edp.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/41a4ada5a8941b5b50e7c1a884600bc674eaed02/ol-handoff/Microsoft/windows-apps.pt-br/master/protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.pt-br.xlf)
-* Handoff Datetime: 2016-07-06 17:59:38
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\files\protect-your-enterprise-data-with-edp.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/files/protect-your-enterprise-data-with-edp.md)
-* Current Handback File: [protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.pt-br.xlf)
+* Current Target File: [windows-apps-src\input-and-devices\input-primer.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/input-and-devices/input-primer.md)
+* Current Handback File: [input-primer.5342c7c3046580ba53971943f93ff8467cc4bd6e.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/input-primer.5342c7c3046580ba53971943f93ff8467cc4bd6e.pt-br.xlf)
 * Current Handback Datetime: 2016-07-06 15:27:44
 * [Back to Top](#report-top)
 
