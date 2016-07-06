@@ -1,39 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://github.com/Microsoft/windows-apps/blob/aa64c39c452beb2356186789a0d8bc44f79d82d2/windows-apps-src/porting/desktop-to-uwp-extensions.md) | HandedOffSuccess | [Details](#0ad7e8d0fe63ffbfa8668be8955859258887d6f03469)
- [windows-apps-src\xbox-apps\how-to-disable-mouse-mode.md](https://github.com/Microsoft/windows-apps/blob/afb6c206ed7092fbcee29c245cd5471a4d8b6cf8/windows-apps-src/xbox-apps/how-to-disable-mouse-mode.md) | OutofSyncHandedBackSuccess | [Details](#e928b0764ada988f06aa3707a3d91cd0b6b5b9033956)
+ [windows-apps-src\packaging\install-universal-windows-apps-with-the-winappdeploycmd-tool.md](https://github.com/Microsoft/windows-apps/blob/50898b5caf706ebd48513c8e368731ba39f5a267/windows-apps-src/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | OutofSyncHandedBackSuccess | [Details](#18a6b7a5a4b5ef0f6064528e78a235b9fc7b372d3465)
 
 ## Item Details
-##### <a name='0ad7e8d0fe63ffbfa8668be8955859258887d6f03469'></a> Source: [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://github.com/Microsoft/windows-apps/blob/aa64c39c452beb2356186789a0d8bc44f79d82d2/windows-apps-src/porting/desktop-to-uwp-extensions.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/cb2ad984b0e938f702072983d3b671f64872d31f/ol-handoff/Microsoft/windows-apps.pt-br/master/desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.pt-br.xlf)
-* Handoff Datetime: 2016-07-06 19:34:40
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='e928b0764ada988f06aa3707a3d91cd0b6b5b9033956'></a> Source: [windows-apps-src\xbox-apps\how-to-disable-mouse-mode.md](https://github.com/Microsoft/windows-apps/blob/afb6c206ed7092fbcee29c245cd5471a4d8b6cf8/windows-apps-src/xbox-apps/how-to-disable-mouse-mode.md)
+##### <a name='18a6b7a5a4b5ef0f6064528e78a235b9fc7b372d3465'></a> Source: [windows-apps-src\packaging\install-universal-windows-apps-with-the-winappdeploycmd-tool.md](https://github.com/Microsoft/windows-apps/blob/50898b5caf706ebd48513c8e368731ba39f5a267/windows-apps-src/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [how-to-disable-mouse-mode.6c622ccf73f4b0c8c4dacc5395199bcf39c5d9f7.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/cb2ad984b0e938f702072983d3b671f64872d31f/ol-handoff/Microsoft/windows-apps.pt-br/master/how-to-disable-mouse-mode.6c622ccf73f4b0c8c4dacc5395199bcf39c5d9f7.pt-br.xlf)
-* Handoff Datetime: 2016-07-06 19:34:40
+* Handoff File: [install-universal-windows-apps-with-the-winappdeploycmd-tool.35efc75d02349fa7a3de1cc06d8eeca7b5ad10e2.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/8078acc18e73ec846c6a19927c00492e9b6e48b7/ol-handoff/Microsoft/windows-apps.pt-br/master/install-universal-windows-apps-with-the-winappdeploycmd-tool.35efc75d02349fa7a3de1cc06d8eeca7b5ad10e2.pt-br.xlf)
+* Handoff Datetime: 2016-07-06 20:20:06
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\xbox-apps\how-to-disable-mouse-mode.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/xbox-apps/how-to-disable-mouse-mode.md)
-* Current Handback File: [how-to-disable-mouse-mode.6c622ccf73f4b0c8c4dacc5395199bcf39c5d9f7.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/how-to-disable-mouse-mode.6c622ccf73f4b0c8c4dacc5395199bcf39c5d9f7.pt-br.xlf)
+* Current Target File: [windows-apps-src\packaging\install-universal-windows-apps-with-the-winappdeploycmd-tool.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md)
+* Current Handback File: [install-universal-windows-apps-with-the-winappdeploycmd-tool.35efc75d02349fa7a3de1cc06d8eeca7b5ad10e2.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/install-universal-windows-apps-with-the-winappdeploycmd-tool.35efc75d02349fa7a3de1cc06d8eeca7b5ad10e2.pt-br.xlf)
 * Current Handback Datetime: 2016-07-06 15:27:44
 * [Back to Top](#report-top)
 
