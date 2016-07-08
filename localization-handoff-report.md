@@ -1,26 +1,42 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/26ca8018c2214fe4af9c7ae6d9860d7556e96e24/windows-apps-src/input-and-devices/designing-for-tv.md) | OutofSyncHandedBackSuccess | [Details](#1c03d381630b89672bb9ae39497f1f1a2c9a714e2714)
+ [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/54675478319a42fa65a1f28bda7409a4822312c5/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md) | OutofSyncHandedBackSuccess | [Details](#2340059dcc91b4c74c171462c48c9f10494909313475)
+ [windows-apps-src\xbox-apps\wdp-xboxsettings-api.md](https://github.com/Microsoft/windows-apps/blob/a9a2b6e58dfa0d1e77164a59f204deabf8f5c3e0/windows-apps-src/xbox-apps/wdp-xboxsettings-api.md) | OutofSyncHandedBackSuccess | [Details](#e3637f5a8481c0800af42c011fb811b908b946b14037)
 
 ## Item Details
-##### <a name='1c03d381630b89672bb9ae39497f1f1a2c9a714e2714'></a> Source: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/26ca8018c2214fe4af9c7ae6d9860d7556e96e24/windows-apps-src/input-and-devices/designing-for-tv.md)
+##### <a name='2340059dcc91b4c74c171462c48c9f10494909313475'></a> Source: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/54675478319a42fa65a1f28bda7409a4822312c5/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/8c8780d18b0938a6db6fd6e87389598cfdf0c7b1/ol-handoff/Microsoft/windows-apps.pt-br/master/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.pt-br.xlf)
-* Handoff Datetime: 2016-07-08 19:20:49
+* Handoff File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/8ebe196eec34695164a212d6f460424e0a4d3e14/ol-handoff/Microsoft/windows-apps.pt-br/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.pt-br.xlf)
+* Handoff Datetime: 2016-07-08 20:51:53
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/input-and-devices/designing-for-tv.md)
-* Current Handback File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.pt-br.xlf)
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
+* Current Handback File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.pt-br.xlf)
+* Current Handback Datetime: 2016-07-06 15:27:44
+* [Back to Top](#report-top)
+
+##### <a name='e3637f5a8481c0800af42c011fb811b908b946b14037'></a> Source: [windows-apps-src\xbox-apps\wdp-xboxsettings-api.md](https://github.com/Microsoft/windows-apps/blob/a9a2b6e58dfa0d1e77164a59f204deabf8f5c3e0/windows-apps-src/xbox-apps/wdp-xboxsettings-api.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [wdp-xboxsettings-api.d88568c99ac5aeafdc2db670ec70e7aeda4c94a3.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/8ebe196eec34695164a212d6f460424e0a4d3e14/ol-handoff/Microsoft/windows-apps.pt-br/master/wdp-xboxsettings-api.d88568c99ac5aeafdc2db670ec70e7aeda4c94a3.pt-br.xlf)
+* Handoff Datetime: 2016-07-08 20:51:53
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\xbox-apps\wdp-xboxsettings-api.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/xbox-apps/wdp-xboxsettings-api.md)
+* Current Handback File: [wdp-xboxsettings-api.d88568c99ac5aeafdc2db670ec70e7aeda4c94a3.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/wdp-xboxsettings-api.d88568c99ac5aeafdc2db670ec70e7aeda4c94a3.pt-br.xlf)
 * Current Handback Datetime: 2016-07-06 15:27:44
 * [Back to Top](#report-top)
 
