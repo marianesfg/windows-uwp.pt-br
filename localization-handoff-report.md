@@ -6,22 +6,19 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\bluetooth.md](https://github.com/Microsoft/windows-apps/blob/0598b99b86ca1e531746f13681a41fc56bc69acf/windows-apps-src/devices-sensors/bluetooth.md) | OutofSyncHandedBackSuccess | [Details](#ea51856a59374a5b2cee4d75bd17dec3015f21b22062)
+ [windows-apps-src\style\fonts.md](https://github.com/Microsoft/windows-apps/blob/7db364240dd98f59a4a4d1d0c23cee1195682de2/windows-apps-src/style/fonts.md) | HandedOffSuccess | [Details](#52de4d9517c7f3064ad9e589a95e6f96400524cc3794)
 
 ## Item Details
-##### <a name='ea51856a59374a5b2cee4d75bd17dec3015f21b22062'></a> Source: [windows-apps-src\devices-sensors\bluetooth.md](https://github.com/Microsoft/windows-apps/blob/0598b99b86ca1e531746f13681a41fc56bc69acf/windows-apps-src/devices-sensors/bluetooth.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='52de4d9517c7f3064ad9e589a95e6f96400524cc3794'></a> Source: [windows-apps-src\style\fonts.md](https://github.com/Microsoft/windows-apps/blob/7db364240dd98f59a4a4d1d0c23cee1195682de2/windows-apps-src/style/fonts.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/5bdaa2d7e550817bf23d2e443c69300bb1e3cdc5/ol-handoff/Microsoft/windows-apps.pt-br/master/bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.pt-br.xlf)
-* Handoff Datetime: 2016-07-08 21:50:24
+* Handoff File: [fonts.53771b020ff615aa4bd1ae457b02bd1793c26594.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/1dd73e3621f09cf496cc50aac70cdb2f3b3ed281/ol-handoff/Microsoft/windows-apps.pt-br/master/fonts.53771b020ff615aa4bd1ae457b02bd1793c26594.pt-br.xlf)
+* Handoff Datetime: 2016-07-08 22:20:25
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\devices-sensors\bluetooth.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/devices-sensors/bluetooth.md)
-* Current Handback File: [bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.pt-br.xlf)
-* Current Handback Datetime: 2016-07-06 15:27:44
 * [Back to Top](#report-top)
 
 
