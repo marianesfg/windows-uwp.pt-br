@@ -1,26 +1,56 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/5b2e53caa0d779c9a0584bf46207de320beeae29/windows-apps-src/TOC.md) | OutofSyncHandedBackSuccess | [Details](#4208fd52ea84cae4c93f37c14dd97a94d4b85e785279)
+ [windows-apps-src\debug-test-perf\device-portal.md](https://github.com/Microsoft/windows-apps/blob/01e83c14304891ff5eaa895e98bbebac33ee7614/windows-apps-src/debug-test-perf/device-portal.md) | OutofSyncHandedBackSuccess | [Details](#55cbdc077f839166f32605bbada8e0cc707cf5b31978)
+ [windows-apps-src\debug-test-perf\images\device-portal\mob-device-portal-AppFileExplorer.png](https://github.com/Microsoft/windows-apps/blob/e04e221c6c86330832cccc8d339c5cacd9377c05/windows-apps-src/debug-test-perf/images/device-portal/mob-device-portal-AppFileExplorer.png) | HandedOffSuccess | [Details](#f03b706a38df9c3a872317fed72169c9dff6fea01988)
+ [windows-apps-src\networking\background-transfers.md](https://github.com/Microsoft/windows-apps/blob/b15d01ec4fd41a8f03345a4416b4795455928533/windows-apps-src/networking/background-transfers.md) | OutofSyncHandedBackSuccess | [Details](#cbb8308a3390634f0068f72041803989201e23453446)
 
 ## Item Details
-##### <a name='4208fd52ea84cae4c93f37c14dd97a94d4b85e785279'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/5b2e53caa0d779c9a0584bf46207de320beeae29/windows-apps-src/TOC.md)
+##### <a name='55cbdc077f839166f32605bbada8e0cc707cf5b31978'></a> Source: [windows-apps-src\debug-test-perf\device-portal.md](https://github.com/Microsoft/windows-apps/blob/01e83c14304891ff5eaa895e98bbebac33ee7614/windows-apps-src/debug-test-perf/device-portal.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/5e3b72f251c18a8c683df0bb4a6d7d7a7756f935/ol-handoff/Microsoft/windows-apps.pt-br/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf)
-* Handoff Datetime: 2016-07-11 19:22:18
+* Handoff File: [device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/9d3caee8bb099e1680a04f37a44f14fe27810b9c/ol-handoff/Microsoft/windows-apps.pt-br/master/device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.pt-br.xlf)
+* Handoff Datetime: 2016-07-11 21:50:49
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/TOC.md)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf)
+* Current Target File: [windows-apps-src\debug-test-perf\device-portal.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/debug-test-perf/device-portal.md)
+* Current Handback File: [device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.pt-br.xlf)
+* Current Handback Datetime: 2016-07-06 15:27:44
+* [Back to Top](#report-top)
+
+##### <a name='f03b706a38df9c3a872317fed72169c9dff6fea01988'></a> Source: [windows-apps-src\debug-test-perf\images\device-portal\mob-device-portal-AppFileExplorer.png](https://github.com/Microsoft/windows-apps/blob/e04e221c6c86330832cccc8d339c5cacd9377c05/windows-apps-src/debug-test-perf/images/device-portal/mob-device-portal-AppFileExplorer.png)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [f03b706a38df9c3a872317fed72169c9dff6fea0.png](https://github.com/Microsoft/WDG.handoff/blob/9d3caee8bb099e1680a04f37a44f14fe27810b9c/ol-handoff/Microsoft/windows-apps.pt-br/master/f03b706a38df9c3a872317fed72169c9dff6fea0.png)
+* Handoff Datetime: 2016-07-11 21:50:49
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\debug-test-perf\device-portal.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='cbb8308a3390634f0068f72041803989201e23453446'></a> Source: [windows-apps-src\networking\background-transfers.md](https://github.com/Microsoft/windows-apps/blob/b15d01ec4fd41a8f03345a4416b4795455928533/windows-apps-src/networking/background-transfers.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [background-transfers.8f132649565224b7b83365be03e3ebfe42dc6211.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/9d3caee8bb099e1680a04f37a44f14fe27810b9c/ol-handoff/Microsoft/windows-apps.pt-br/master/background-transfers.8f132649565224b7b83365be03e3ebfe42dc6211.pt-br.xlf)
+* Handoff Datetime: 2016-07-11 21:50:49
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\networking\background-transfers.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/networking/background-transfers.md)
+* Current Handback File: [background-transfers.8f132649565224b7b83365be03e3ebfe42dc6211.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/background-transfers.8f132649565224b7b83365be03e3ebfe42dc6211.pt-br.xlf)
 * Current Handback Datetime: 2016-07-06 15:27:44
 * [Back to Top](#report-top)
 
