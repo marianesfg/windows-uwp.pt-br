@@ -481,8 +481,7 @@
 ###### [Eventos AdControl em JavaScript](monetize/adcontrol-events-in-javascript.md)
 ###### [Eventos de AdControl em C#](monetize/adcontrol-events-in-c.md)
 ###### [Tratamento de erros de AdControl](monetize/adcontrol-error-handling.md)
-####### 
-              [Passo a passo do tratamento de erros em XAML/C#](monetize/error-handling-in-xamlc-walkthrough.md)
+####### [Passo a passo do tratamento de erros em XAML/C#](monetize/error-handling-in-xamlc-walkthrough.md)
 ####### [Passo a passo do tratamento de erros em JavaScript](monetize/error-handling-in-javascript-walkthrough.md)
 ###### [Código de exemplo de anúncio intersticial em C#](monetize/interstitial-ad-sample-code-in-c.md)
 ###### [Código de exemplo de anúncio intersticial em JavaScript](monetize/interstitial-ad-sample-code-in-javascript.md)
