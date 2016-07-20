@@ -3,6 +3,7 @@ author: mcleblanc
 ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: "Vinculação de dados em detalhes"
 description: "A vinculação de dados é uma maneira de a interface do usuário do seu aplicativo exibir dados e, opcionalmente, ficar em sincronia com esses dados."
+translationtype: Human Translation
 ms.sourcegitcommit: ca92d44cc8e3fb7eaed5a522435efe9cb4796560
 ms.openlocfilehash: d12f8d6bd44323cf1c19bff1ac080070ba0e8ed2
 
@@ -18,7 +19,8 @@ ms.openlocfilehash: d12f8d6bd44323cf1c19bff1ac080070ba0e8ed2
 -   [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)
 -   [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;Este tópico descreve detalhadamente os recursos de vinculação de dados. Para obter uma introdução breve e prática, consulte [Visão geral da vinculação de dados](data-binding-quickstart.md).
 
 
@@ -34,9 +36,12 @@ Existem dois tipos de associação, e ambos normalmente são declarados na marca
 
 **Aplicativos de amostra que demonstram {x:Bind}**
 
--   [Amostra de {x:Bind}](http://go.microsoft.com/fwlink/p/?linkid=619989).
--   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame).
--   [Amostra de noções básicas de interface do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=619992).
+-   
+            [Amostra de {x:Bind}](http://go.microsoft.com/fwlink/p/?linkid=619989).
+-   
+            [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame).
+-   
+            [Amostra de noções básicas de interface do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=619992).
 
 **Aplicativos de amostra que demonstram {Binding}**
 
@@ -55,7 +60,8 @@ Nas seções a seguir, vamos dar uma olhada na origem da associação, no destin
 
 Consulte uma implementação muito rudimentar de uma classe que poderíamos usar como uma fonte de associação.
 
-**Observação**  Se você estiver usando [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) com extensões de componente do Visual C++ (C ++/CX), então, precisará adicionar o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) à classe de origem da associação. Se você estiver usando [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), então não precisará desse atributo. Consulte [Adicionando um modo de exibição de detalhes](data-binding-quickstart.md#adding-a-details-view) para um trecho de código.
+
+            **Observação**  Se você estiver usando [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) com extensões de componente do Visual C++ (C ++/CX), então, precisará adicionar o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) à classe de origem da associação. Se você estiver usando [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), então não precisará desse atributo. Consulte [Adicionando um modo de exibição de detalhes](data-binding-quickstart.md#adding-a-details-view) para um trecho de código.
 
 ```csharp
 public class HostViewModel
@@ -71,11 +77,13 @@ public class HostViewModel
 
 Essa implementação de **HostViewModel**, e sua propriedade **NextButtonText**, só são apropriados para associação unidirecional. Mas associações unidirecionais e bidirecionais são extremamente comuns, e, nesses tipos de associação, a interface do usuário é atualizada automaticamente em resposta às alterações nos valores de dados de origem da associação. Para que esses tipos de associação funcionem corretamente, você precisa fazer sua fonte de associação "observável" para o objeto de associação. Assim, em nosso exemplo, se quisermos fazer associação unidirecional ou bidirecional à propriedade **NextButtonText**, todas as alterações que acontecem no tempo de execução para o valor da propriedade precisam ser feitas observáveis para o objeto de associação.
 
-Uma maneira de fazer isso é derivar a classe que representa sua fonte de associação de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/BR242356), e expor um valor de dados por meio de um [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362). É assim que um [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) se torna observável. **FrameworkElements** são boas fontes de associação prontas para usar.
+Uma maneira de fazer isso é derivar a classe que representa sua fonte de associação de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/BR242356), e expor um valor de dados por meio de um [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362). É assim que um [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) se torna observável. 
+            **FrameworkElements** são boas fontes de associação prontas para usar.
 
 Uma maneira mais simples de tornar uma classe observável — e uma necessária para as classes que já têm uma classe base — é implementar [**System.ComponentModel.INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx). Isso envolve apenas a implementação de um único evento denominado **PropertyChanged**. Um exemplo usando **HostViewModel** está abaixo.
 
-**Observação**  Para C++/CX, você implementa [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899), e a classe de origem de associação deve ter o [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) ou implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878).
+
+            **Observação**  Para C++/CX, você implementa [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899), e a classe de origem de associação deve ter o [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) ou implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878).
 
 ```csharp
 public class HostViewModel : INotifyPropertyChanged
@@ -191,7 +199,8 @@ Observe o valor que especificamos para **Path**. Esse valor é interpretado no c
 
 A propriedade [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) dá suporte a várias opções de sintaxe para associação a propriedades aninhadas, propriedades anexadas e indexadores de inteiros e cadeias de caracteres. Para obter mais informações, consulte [Sintaxe do Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586). A associação a indexadores de inteiros tem o mesmo efeito da associação a propriedades dinâmicas, mas sem implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). Para outras configurações, consulte [Extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783).
 
-**Observação**  As alterações em [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) são enviadas para uma origem de associação bidirecional quando [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) perde o foco, e não após cada pressionamento de teclas do usuário.
+
+            **Observação**  As alterações em [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) são enviadas para uma origem de associação bidirecional quando [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) perde o foco, e não após cada pressionamento de teclas do usuário.
 
 **DataTemplate e x:DataType**
 
@@ -212,15 +221,19 @@ Por exemplo, considere que você tenha um tipo chamado SampleDataGroup, que impl
 
 **Se seus dados forem carregados de forma assíncrona**
 
-O código para dar suporte a **{x:Bind}** é gerado no tempo de compilação nas classes parciais de suas páginas. Esses arquivos podem ser encontrados em sua pasta `obj`, com nomes como (para C#) `<view name>.g.cs`. O código gerado inclui um manipulador do evento [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706) de sua página e esse manipulador chama o método **Initialize** em uma classe gerada que representa as associações da sua página. **Initialize** chama **Update** para começar a movimentação de dados entre a origem da associação e o destino. **Loading** é disparado antes da primeira medida passar da página ou do controle de usuário. Portanto, se seus dados são carregados de forma assíncrona, talvez não estejam prontos no momento em que **Initialize** for chamado. Sendo assim, depois de carregar dados, você pode forçar a inicialização de associações únicas, chamando `this->Bindings->Update();`. Se você só precisa de associações únicas para dados carregados de forma assíncrona, então é muito mais barato inicializá-las assim do que ter associações unidirecionais e ouvir as alterações. Se os seus dados não sofrerem mudanças detalhadas, e se é provável que sejam atualizados como parte de uma ação específica, então, você pode tornar suas associações únicas e forçar uma atualização manual a qualquer momento com uma chamada para **Update**.
+O código para dar suporte a **{x:Bind}** é gerado no tempo de compilação nas classes parciais de suas páginas. Esses arquivos podem ser encontrados em sua pasta `obj`, com nomes como (para C#) `<view name>.g.cs`. O código gerado inclui um manipulador do evento [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706) de sua página e esse manipulador chama o método **Initialize** em uma classe gerada que representa as associações da sua página. 
+            **Initialize** chama **Update** para começar a movimentação de dados entre a origem da associação e o destino. 
+            **Loading** é disparado antes da primeira medida passar da página ou do controle de usuário. Portanto, se seus dados são carregados de forma assíncrona, talvez não estejam prontos no momento em que **Initialize** for chamado. Sendo assim, depois de carregar dados, você pode forçar a inicialização de associações únicas, chamando `this->Bindings->Update();`. Se você só precisa de associações únicas para dados carregados de forma assíncrona, então é muito mais barato inicializá-las assim do que ter associações unidirecionais e ouvir as alterações. Se os seus dados não sofrerem mudanças detalhadas, e se é provável que sejam atualizados como parte de uma ação específica, então, você pode tornar suas associações únicas e forçar uma atualização manual a qualquer momento com uma chamada para **Update**.
 
 **Limitações**
 
-**{x:Bind}** não é adequado para cenários de associação tardia, como navegar na estrutura de dicionário de um objeto JSON, nem "duck typing" que é uma forma fraca de digitação com base em correspondências lexicais em nomes de propriedade ("se ele anda, nada, grasna como um pato, então é um pato"). Com "duck typing", uma associação à propriedade Age seria atendida igualmente com um objeto Pessoa ou Vinho. Para esses cenários, use **{Binding}**.
+
+            **{x:Bind}** não é adequado para cenários de associação tardia, como navegar na estrutura de dicionário de um objeto JSON, nem "duck typing" que é uma forma fraca de digitação com base em correspondências lexicais em nomes de propriedade ("se ele anda, nada, grasna como um pato, então é um pato"). Com "duck typing", uma associação à propriedade Age seria atendida igualmente com um objeto Pessoa ou Vinho. Para esses cenários, use **{Binding}**.
 
 ### Objeto de associação declarado usando {Binding}
 
-[{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) presume que, por padrão, você está associando ao [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) da sua página de marcação. Portanto, definiremos o **DataContext** de nossa página como uma instância de nossa classe de origem de associação (do tipo **HostViewModel**, nesse caso). O exemplo a seguir mostra a marcação que declara o objeto de associação. Usamos o mesmo destino da associação **Button.Content** usado na seção "Destino da associação" anteriormente e associamos à propriedade **HostViewModel.NextButtonText**.
+
+            [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) presume que, por padrão, você está associando ao [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) da sua página de marcação. Portanto, definiremos o **DataContext** de nossa página como uma instância de nossa classe de origem de associação (do tipo **HostViewModel**, nesse caso). O exemplo a seguir mostra a marcação que declara o objeto de associação. Usamos o mesmo destino da associação **Button.Content** usado na seção "Destino da associação" anteriormente e associamos à propriedade **HostViewModel.NextButtonText**.
 
 ```xml
 <Page xmlns:viewmodel="using:QuizGame.ViewModel" ... >
@@ -249,7 +262,8 @@ Dentro de um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/
   </DataTemplate>
 ```
 
-**Observação**  Por padrão, as alterações em [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) são enviadas para uma origem de associação bidirecional quando [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) perde o foco. Para fazer com que as alterações sejam enviadas após cada pressionamento de teclas do usuário, defina **UpdateSourceTrigger** como **PropertyChanged** na associação na marcação. Você também pode assumir completamente o controle de quando as alterações são enviadas para a origem definindo **UpdateSourceTrigger** como **Explicit**. Você manipula eventos na caixa de texto (geralmente [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), chama [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) no destino para obter um objeto [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) e, finalmente, chama [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) para atualizar de forma programática a fonte de dados.
+
+            **Observação**  Por padrão, as alterações em [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) são enviadas para uma origem de associação bidirecional quando [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) perde o foco. Para fazer com que as alterações sejam enviadas após cada pressionamento de teclas do usuário, defina **UpdateSourceTrigger** como **PropertyChanged** na associação na marcação. Você também pode assumir completamente o controle de quando as alterações são enviadas para a origem definindo **UpdateSourceTrigger** como **Explicit**. Você manipula eventos na caixa de texto (geralmente [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), chama [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) no destino para obter um objeto [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) e, finalmente, chama [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) para atualizar de forma programática a fonte de dados.
 
 A propriedade [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) dá suporte a várias opções de sintaxe para associação a propriedades aninhadas, propriedades anexadas e indexadores de inteiros e cadeias de caracteres. Para obter mais informações, consulte [Sintaxe do Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586). A associação a indexadores de inteiros tem o mesmo efeito da associação a propriedades dinâmicas, mas sem implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). A propriedade [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname) é útil para associação de elementos. A propriedade [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource) tem vários usos, um deles é como uma alternativa mais poderosa à associação de modelo dentro de um [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391). Para outras configurações, consulte [Extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) e a classe [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820).
 
@@ -356,7 +370,8 @@ O mecanismo de associação chamará os métodos [**Convert**](https://msdn.micr
 
 O conversor também tem parâmetros opcionais: [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterlanguage), que permite especificar o idioma que será usado na conversão, e [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterparameter), que permite repassar um parâmetro para a lógica de conversão. Para obter um exemplo de uso de um parâmetro de conversor, consulte [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
 
-**Observação**  Se houver erro na conversão, não emita uma exceção. Em vez disso, retorne [**DependencyProperty.UnsetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.unsetvalue), que interromperá a transferência de dados.
+
+            **Observação**  Se houver erro na conversão, não emita uma exceção. Em vez disso, retorne [**DependencyProperty.UnsetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.unsetvalue), que interromperá a transferência de dados.
 
 Para exibir um valor padrão a ser usado sempre que a origem da associação não puder ser resolvida, defina a propriedade **FallbackValue** no objeto de associação na marcação. Isso é útil para lidar com erros de conversão e formatação. E também para associar propriedades da origem que talvez não existam em todos os objetos em uma coleção associada de tipos heterogêneos.
 
@@ -419,7 +434,8 @@ MainPage.xaml
 
 ## Associação de eventos e ICommand
 
-[{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) dá suporte a um recurso chamado de associação de eventos. Com esse recurso, você pode especificar o manipulador para um evento usando uma associação, que é uma opção adicional sobre a manipulação de eventos com um método no arquivo de código. Digamos que você tenha uma propriedade **RootFrame** em sua classe **MainPage**.
+
+            [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) dá suporte a um recurso chamado de associação de eventos. Com esse recurso, você pode especificar o manipulador para um evento usando uma associação, que é uma opção adicional sobre a manipulação de eventos com um método no arquivo de código. Digamos que você tenha uma propriedade **RootFrame** em sua classe **MainPage**.
 
 ```csharp
     public sealed partial class MainPage : Page
@@ -437,7 +453,8 @@ Em seguida, você pode associar um evento **Click** de um botão a um método no
     Click="{x:Bind RootFrame.GoForward}"/>
 ```
 
-Métodos sobrecarregados não podem ser usados para manipular um evento com essa técnica. Além disso, se o método que manipula o evento tem parâmetros, eles devem ser atribuíveis dos tipos de todos os parâmetros do evento, respectivamente. Nesse caso, [**Frame.GoForward**](https://msdn.microsoft.com/library/windows/apps/BR242693) não é sobrecarregado e não tem parâmetros (mas ainda seria válido mesmo se tivesse dois parâmetros **object**). [
+Métodos sobrecarregados não podem ser usados para manipular um evento com essa técnica. Além disso, se o método que manipula o evento tem parâmetros, eles devem ser atribuíveis dos tipos de todos os parâmetros do evento, respectivamente. Nesse caso, [**Frame.GoForward**](https://msdn.microsoft.com/library/windows/apps/BR242693) não é sobrecarregado e não tem parâmetros (mas ainda seria válido mesmo se tivesse dois parâmetros **object**). 
+            [
               **Frame.GoBack**
             ](https://msdn.microsoft.com/library/windows/apps/Dn996568) é sobrecarregado, de modo que não podemos usar esse método com essa técnica.
 
@@ -572,11 +589,13 @@ Sua marcação de associação contém os nomes de propriedades (e, para C#, às
 
 Os objetos de associação criados por [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) e [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) são em grande parte funcionalmente equivalentes. Mas {x:Bind} tem informações de tipo para a origem da associação, e gera código-fonte no momento da compilação. Com {x:Bind}, você obtém o mesmo tipo de detecção de problemas que obtém com o resto do seu código. Isso inclui validação de tempo de compilação das expressões de associação e depuração definindo pontos de interrupção no código-fonte gerado como a classe parcial para sua página. Essas classes podem ser encontradas nos arquivos na pasta `obj`, com nomes como (para C#) `<view name>.g.cs`). Se você tiver um problema com uma associação, ative **Interromper Exceções sem Tratamento** no depurador do Microsoft Visual Studio. O depurador interromperá a execução nesse ponto e, em seguida, você pode depurar o que deu errado. O código gerado por {x:Bind} segue o mesmo padrão para cada parte do gráfico de nós de origem de associação, e você pode usar as informações da janela **Pilha de Chamadas** para ajudar a determinar a sequência de chamadas que levaram ao problema.
 
-[{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) não tem informações de tipo para a origem da associação. Mas, quando você executa o aplicativo com o depurador anexado, os possíveis erros de associação aparecem na janela **Saída** do Visual Studio.
+
+            [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) não tem informações de tipo para a origem da associação. Mas, quando você executa o aplicativo com o depurador anexado, os possíveis erros de associação aparecem na janela **Saída** do Visual Studio.
 
 ## Criando associações em código
 
-**Observação**  Esta seção só se aplica a [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), pois você não pode criar associações [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) no código. No entanto, alguns dos mesmos benefícios de {x:Bind} podem ser obtidos com [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx), o que permite que você se registre para receber notificações de alteração em qualquer propriedade de dependência.
+
+            **Observação**  Esta seção só se aplica a [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), pois você não pode criar associações [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) no código. No entanto, alguns dos mesmos benefícios de {x:Bind} podem ser obtidos com [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx), o que permite que você se registre para receber notificações de alteração em qualquer propriedade de dependência.
 
 Você também pode conectar elementos da interface de usuário aos dados usando código de procedimentos em vez de XAML. Para fazer isso, crie um novo objeto [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820), defina as propriedades apropriadas, depois chame [**FrameworkElement.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257.aspx) ou [**BindingOperations.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244376.aspx). A criação de associações de forma programática é útil quando você deseja escolher os valores da propriedade de associação no tempo de execução ou compartilhar uma única associação entre vários controles. Observe, porém, que você não pode alterar os valores da propriedade de associação depois que chamar **SetBinding**.
 
@@ -642,6 +661,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

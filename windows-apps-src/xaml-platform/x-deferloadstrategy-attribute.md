@@ -4,8 +4,8 @@ title: Atributo xDeferLoadStrategy
 description: "xDeferLoadStrategy atrasa a criação de um elemento e seus filhos, o que reduz o tempo de inicialização, mas aumenta um pouco o uso da memória. Cada elemento afetado adiciona cerca de 600 bytes para o uso da memória."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: b989a31439444f06dacb86adb186f853d1637f6c
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a5230a92ad919fc52c40c19646ff799453e64fa4
 
 ---
 
@@ -13,7 +13,8 @@ ms.openlocfilehash: b989a31439444f06dacb86adb186f853d1637f6c
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**x:DeferLoadStrategy="Lazy"** atrasa a criação de um elemento e seus filhos, o que reduz o tempo de inicialização, mas aumenta um pouco o uso da memória. Cada elemento afetado adiciona cerca de 600 bytes para o uso da memória. Quanto maior for a árvore de elementos que você adiar, mais tempo de inicialização você vai economizar, mas ao custo de um volume de memória maior. Portanto, é possível usar esse atributo em excesso até o limite de redução do seu desempenho.
+
+              **x:DeferLoadStrategy="Lazy"** atrasa a criação de um elemento e seus filhos, o que reduz o tempo de inicialização, mas aumenta um pouco o uso da memória. Cada elemento afetado adiciona cerca de 600 bytes para o uso da memória. Quanto maior for a árvore de elementos que você adiar, mais tempo de inicialização você vai economizar, mas ao custo de um volume de memória maior. Portanto, é possível usar esse atributo em excesso até o limite de redução do seu desempenho.
 
 ## Uso do atributo XAML
 
@@ -27,7 +28,7 @@ As restrições para usar **x: DeferLoadStrategy** são:
 
 -   Exige um [x:Name](x-name-attribute.md) definido, porque deve existir uma maneira de encontrar o elemento depois.
 -   Apenas um [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) pode ser marcado como adiado, com exceção dos tipos derivados de [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249).
--   Elementos raiz não podem ser adiados em um [**Page**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.usercontrol) ou [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
+-   Elementos raiz não podem ser adiados em um [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) ou [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
 -   Elementos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) não podem ser adiados.
 -   Não funciona com XAML flexível carregado com [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048).
 -   Mover um elemento pai apagará todos os elementos não obtidos.
@@ -88,6 +89,6 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

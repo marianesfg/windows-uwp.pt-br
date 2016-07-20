@@ -3,6 +3,7 @@ author: jnHs
 Description: "É possível pode gerar códigos promocionais para um aplicativo ou um IAP (produto no aplicativo) que você tiver publicado na Windows Store."
 title: "Gerar códigos promocionais"
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
+translationtype: Human Translation
 ms.sourcegitcommit: df994a3bbda9f6d4df0ee2dd6c2cb646d91a0bfc
 ms.openlocfilehash: bfea802fb4a6efcfe34121802ce49f20a9b0305e
 
@@ -23,7 +24,8 @@ No painel do Centro de Desenvolvimento do Windows, você pode:
     -   Resumos de pedidos de código promocional para todos os seus aplicativos (na página **Visão geral do painel**) e para cada aplicativo individualmente (na página **Visão geral do aplicativo** para cada aplicativo).
     -   Um resumo detalhado dos pedidos de código promocional para cada aplicativo (na página **Códigos promocionais** para cada aplicativo).
 
-> **Observação**  Você pode gerar códigos promocionais mesmo se tiver selecionado a opção **Ocultar este aplicativo e evitar a aquisição. Os clientes com um código promocional ainda poderão baixá-lo em dispositivos Windows 10** na página do painel [Preço e disponibilidade](set-app-pricing-and-availability.md) de seu aplicativo. Seu aplicativo deve passar a fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md) antes que os usuários possam resgatar um código promocional para instalá-lo.
+> 
+            **Observação**  Você pode gerar códigos promocionais mesmo se tiver selecionado a opção **Ocultar este aplicativo e evitar a aquisição. Os clientes com um código promocional ainda poderão baixá-lo em dispositivos Windows 10** na página do painel [Preço e disponibilidade](set-app-pricing-and-availability.md) de seu aplicativo. Seu aplicativo deve passar a fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md) antes que os usuários possam resgatar um código promocional para instalá-lo.
 
 ## Políticas para códigos promocionais
 
@@ -66,23 +68,34 @@ Para baixar um pedido atendido de códigos promocionais e distribuir os códigos
 
     O arquivo contém as seguintes colunas de dados para cada código:
 
-    -   **Nome do produto**: o nome do aplicativo ou IAP ao qual o código esteja associado.
-    -   **Nome do pedido**: o nome do pedido no qual esse código foi atendido.
-    -   **Código promocional**: o código em si. Consiste em uma sequência 5x5 de caracteres alfanuméricos separados por hífens. Por exemplo:
+    -   
+            **Nome do produto**: o nome do aplicativo ou IAP ao qual o código esteja associado.
+    -   
+            **Nome do pedido**: o nome do pedido no qual esse código foi atendido.
+    -   
+            **Código promocional**: o código em si. Consiste em uma sequência 5x5 de caracteres alfanuméricos separados por hífens. Por exemplo:
 
         DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
 
-    -   **URL resgatável**: a URL que um usuário possa usar para resgatar o código e instalar seu aplicativo ou IAP. A URL tem o seguinte formato:
+    -   
+            **URL resgatável**: a URL que um usuário possa usar para resgatar o código e instalar seu aplicativo ou IAP. A URL tem o seguinte formato:
 
         https://account.microsoft.com/billing/redeem?mstoken=&lt;promotional_code>
 
-    -   **Data de início**: a data de início da validade do código.
-    -   **Data de validade**: a data de validade desse código.
-    -   **ID do Código**: uma ID exclusiva para esse código.
-    -   **ID do Pedido**: uma ID exclusiva para o pedido em que esse código foi atendido.
-    -   **Fornecido a**: um campo vazio que você pode preencher com um valor que identifique o usuário ao qual forneceu o código.
-    -   **Disponível**: o número de códigos ainda disponíveis para resgatar.
-    -   **Resgatado**: o número de códigos que foram resgatados.
+    -   
+            **Data de início**: a data de início da validade do código.
+    -   
+            **Data de validade**: a data de validade desse código.
+    -   
+            **ID do Código**: uma ID exclusiva para esse código.
+    -   
+            **ID do Pedido**: uma ID exclusiva para o pedido em que esse código foi atendido.
+    -   
+            **Fornecido a**: um campo vazio que você pode preencher com um valor que identifique o usuário ao qual forneceu o código.
+    -   
+            **Disponível**: o número de códigos ainda disponíveis para resgatar.
+    -   
+            **Resgatado**: o número de códigos que foram resgatados.
 
 4.  Distribua as URLs resgatáveis aos seus usuários por meio de qualquer formato de comunicação de sua preferência (como email, SMS ou cartões impressos). Recomendamos que sua comunicação inclua o seguinte:
     -   Uma explicação do aplicativo ou IAP ao qual o código promocional se aplica e, opcionalmente, uma descrição do motivo pelo qual o usuário está recebendo o código.
@@ -102,7 +115,8 @@ Depois que você distribui uma URL resgatável a um usuário, as etapas a seguir
 
     O navegador vai até uma página **Obrigado** com um link **Obter*****&lt;o nome do aplicativo&gt;***.
 
-    > **Observação**  Os usuários receberão um erro nessa etapa se seu aplicativo ainda não tiver sido publicado.
+    > 
+            **Observação**  Os usuários receberão um erro nessa etapa se seu aplicativo ainda não tiver sido publicado.
 
 3.  A usuário clica em **Obter*****&lt;o nome do aplicativo&gt;***.
 
@@ -110,7 +124,8 @@ Depois que você distribui uma URL resgatável a um usuário, as etapas a seguir
 
     Se o usuário estiver em um computador ou dispositivo que não tenha a Windows Store instalada, o navegador abrirá a página da Web da Windows Store do aplicativo. O usuário pode clicar em **Instalar** para instalar o aplicativo sem custos.
 
-    > **Observação**  Em alguns casos, a página do aplicativo pode exibir um botão **Comprar** em vez de **Instalar**, mesmo que o aplicativo tenha sido resgatado com êxito pelo código promocional. O usuário pode clicar em **Comprar** para instalar o aplicativo sem custos.
+    > 
+            **Observação**  Em alguns casos, a página do aplicativo pode exibir um botão **Comprar** em vez de **Instalar**, mesmo que o aplicativo tenha sido resgatado com êxito pelo código promocional. O usuário pode clicar em **Comprar** para instalar o aplicativo sem custos.
 
 ## Analisar seus códigos promocionais
 
@@ -138,6 +153,6 @@ Você também pode baixar um pedido ativo dessa tabela.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

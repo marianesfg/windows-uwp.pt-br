@@ -5,6 +5,7 @@ title: Hiperlinks
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: 1d19cfa9c272ee511fbaf89ac0076697ede470b9
 
@@ -53,7 +54,8 @@ O hiperlink aparece embutido e flui com o texto ao redor:
 
 ![Exemplo de um hiperlink como um elemento de texto](images/controls_hyperlink-element.png) 
 
-> **Dica**
+> 
+            **Dica**
             &nbsp;&nbsp;Quando você usa um hiperlink em um controle de texto com outros elementos de texto no XAML, coloque o conteúdo em um contêiner [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) e aplique o atributo `xml:space="preserve"` ao Span para manter o espaço em branco entre o hiperlink e os outros elementos.
 
 ## Criar um HyperlinkButton
@@ -85,7 +87,8 @@ Para os dois tipos de hiperlinks, você manipula a navegação da mesma maneira.
 
 Para usar o hiperlink para navegar para um URI, defina a propriedade NavigateUri. Quando um usuário clica ou toca no hiperlink, o URI especificado é aberto no navegador padrão. O navegador padrão é executado em um processo separado de+ seu aplicativo.
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;Você não precisa usar esquemas http: nem https:. Você pode usar esquemas como ms-appx:, ms-appdata: ou ms-resources:, se houver conteúdo do recurso nesses locais que seja adequado carregar em um navegador. No entanto, o arquivo: o esquema é especificamente bloqueado. Para obter mais informações, consulte [Esquemas de URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
 
 > Quando um usuário clica no hiperlink, o valor da propriedade NavigateUri é passado para um manipulador do sistema para esquemas e tipos de URI. Em seguida, o sistema inicia o aplicativo que está registrado para o esquema do URI fornecido para NavigateUri.
@@ -128,7 +131,8 @@ Como um hiperlink não é um [UIElement](https://msdn.microsoft.com/library/wind
 
 **Conteúdo**
 
-O hiperlink tem restrições sobre o conteúdo que podem existir na sua coleção [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). Especificamente, um hiperlink só permite [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) e outros tipos de [Span]() que não são outro hiperlink. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) não pode estar na coleção Inlines de um hiperlink. Tentar adicionar conteúdo restrito gera uma exceção de argumento inválido ou uma exceção de análise XAML.
+O hiperlink tem restrições sobre o conteúdo que podem existir na sua coleção [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). Especificamente, um hiperlink só permite [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) e outros tipos de [Span]() que não são outro hiperlink. 
+            [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) não pode estar na coleção Inlines de um hiperlink. Tentar adicionar conteúdo restrito gera uma exceção de argumento inválido ou uma exceção de análise XAML.
 
 **Comportamento de hiperlink e tema/estilo**
 
@@ -156,6 +160,6 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

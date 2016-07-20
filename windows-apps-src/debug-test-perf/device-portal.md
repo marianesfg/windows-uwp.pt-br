@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Visão geral do Windows Device Portal"
 description: "Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo remotamente por uma rede ou conexão USB."
-ms.sourcegitcommit: c6f00006e656970e4a5bb11e3368faa92cbb8eca
-ms.openlocfilehash: fe4945bf3048a0c38e844a74fa6fc46706085d6d
+translationtype: Human Translation
+ms.sourcegitcommit: 01e83c14304891ff5eaa895e98bbebac33ee7614
+ms.openlocfilehash: 55cbdc077f839166f32605bbada8e0cc707cf5b3
 
 ---
 # Visão geral do Windows Device Portal
@@ -44,9 +45,12 @@ Para obter instruções de instalação específicas do dispositivo, consulte:
 ### Barra de ferramentas e navegação
 
 A barra de ferramentas na parte superior da página fornece acesso a recursos e status normalmente usados.
-- **Desligar**: desativa o dispositivo.
-- **Reiniciar**: repete o ciclo de energia no dispositivo.
-- **Ajuda**: abre a página de ajuda.
+- 
+              **Desligar**: desativa o dispositivo.
+- 
+              **Reiniciar**: repete o ciclo de energia no dispositivo.
+- 
+              **Ajuda**: abre a página de ajuda.
 
 Use os links no painel de navegação ao lado esquerdo da página para navegar até as ferramentas de gerenciamento e monitoramento disponíveis para seu dispositivo.
 
@@ -62,11 +66,16 @@ Fornece funcionalidade de gerenciamento e de instalação/desinstalação para p
 
 ![Device Portal para celulares](images/device-portal/mob-device-portal-apps.png)
 
-- **Aplicativos instalados**: remove e inicia aplicativos.
-- **Aplicativos em execução**: lista os aplicativos que estão em execução no momento.
-- **Instalar aplicativo**: seleciona pacotes de aplicativos para a instalação a partir de uma pasta em seu computador ou rede.
-- **Dependência**: adiciona dependências para o aplicativo que você pretende instalar.
-- **Implantar**: implanta o aplicativo selecionado e as dependências em seu dispositivo.
+- 
+              **Aplicativos instalados**: remove e inicia aplicativos.
+- 
+              **Aplicativos em execução**: lista os aplicativos que estão em execução no momento.
+- 
+              **Instalar aplicativo**: seleciona pacotes de aplicativos para a instalação a partir de uma pasta em seu computador ou rede.
+- 
+              **Dependência**: adiciona dependências para o aplicativo que você pretende instalar.
+- 
+              **Implantar**: implanta o aplicativo selecionado e as dependências em seu dispositivo.
 
 **Para instalar um aplicativo**
 
@@ -99,11 +108,16 @@ Semelhante ao Gerenciador de Tarefas em seu computador, essa página permite que
 Mostra gráficos em tempo real de informações de diagnóstico do sistema, como o uso de energia, a taxa de quadros e a carga da CPU.
 
 Estas são as métricas disponíveis:
-- **CPU**: porcentagem do total disponível
-- **Memória**: total, em uso, disponível confirmada, paginada e não paginada
-- **GPU**: utilização do mecanismo GPU, porcentagem do total disponível
-- **E/S**: lê e grava
-- **Rede**: recepção e envio
+- 
+              **CPU**: porcentagem do total disponível
+- 
+              **Memória**: total, em uso, disponível confirmada, paginada e não paginada
+- 
+              **GPU**: utilização do mecanismo GPU, porcentagem do total disponível
+- 
+              **E/S**: lê e grava
+- 
+              **Rede**: recepção e envio
 
 ![Device Portal para celulares](images/device-portal/mob-device-portal-perf.png)
 
@@ -114,7 +128,8 @@ Gerencia o ETW (Rastreamento de Eventos para Windows) em tempo real no dispositi
 ![Device Portal para celulares](images/device-portal/mob-device-portal-etw.png)
 
 Marque **Ocultar provedores** para mostrar apenas a lista de eventos.
-- **Provedores registrados**: seleciona o provedor ETW e o nível de rastreamento. O nível de rastreamento é um destes valores:
+- 
+              **Provedores registrados**: seleciona o provedor ETW e o nível de rastreamento. O nível de rastreamento é um destes valores:
     1. Saída anormal ou encerramento
     2. Erros graves
     3. Avisos
@@ -122,10 +137,14 @@ Marque **Ocultar provedores** para mostrar apenas a lista de eventos.
     5. Rastreamento detalhado (*)
 
 Clique ou toque em **Habilitar** para iniciar o rastreamento. O provedor é adicionado à lista suspensa **Provedores Habilitados**.
-- **Provedores personalizados**: selecione um provedor ETW personalizado e o nível de rastreamento. Identifique o provedor pelo GUID. Não inclua colchetes no GUID.
-- **Provedores habilitados**: lista os provedores habilitados. Selecione um provedor da lista suspensa e clique ou toque em **Desabilitar** para parar o rastreamento. Clique ou toque em **Parar todos** para suspender todo o rastreamento.
-- **Histórico de provedores**: mostra os provedores ETW que foram habilitados durante a sessão atual. Clique ou toque em **Habilitar** para ativar um provedor que foi desabilitado. Clique ou toque em **Limpar** para limpar o histórico.
-- **Eventos**: lista os eventos ETW dos provedores selecionados no formato de tabela. Essa tabela é atualizada em tempo real. Abaixo da tabela, clique no botão **Limpar** para excluir todos os eventos ETW da tabela. Isso não desabilita os provedores. Você pode clicar em **Salvar no arquivo** para exportar os atuais eventos ETW coletados para um arquivo CSV localmente.
+- 
+              **Provedores personalizados**: selecione um provedor ETW personalizado e o nível de rastreamento. Identifique o provedor pelo GUID. Não inclua colchetes no GUID.
+- 
+              **Provedores habilitados**: lista os provedores habilitados. Selecione um provedor da lista suspensa e clique ou toque em **Desabilitar** para parar o rastreamento. Clique ou toque em **Parar todos** para suspender todo o rastreamento.
+- 
+              **Histórico de provedores**: mostra os provedores ETW que foram habilitados durante a sessão atual. Clique ou toque em **Habilitar** para ativar um provedor que foi desabilitado. Clique ou toque em **Limpar** para limpar o histórico.
+- 
+              **Eventos**: lista os eventos ETW dos provedores selecionados no formato de tabela. Essa tabela é atualizada em tempo real. Abaixo da tabela, clique no botão **Limpar** para excluir todos os eventos ETW da tabela. Isso não desabilita os provedores. Você pode clicar em **Salvar no arquivo** para exportar os atuais eventos ETW coletados para um arquivo CSV localmente.
 
 Para obter mais detalhes sobre como usar o rastreamento ETW, consulte o [blogpost](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) sobre uso para coletar logs em tempo real do seu aplicativo. 
 
@@ -135,8 +154,10 @@ Capture rastreamentos do [Windows Performance Recorder](https://msdn.microsoft.c
 
 ![Device Portal para celulares](images/device-portal/mob-device-portal-perf-tracing.png)
 
-- **Perfis disponíveis**: selecione o perfil WPR na lista suspensa e clique ou toque em **Iniciar** para iniciar o rastreamento.
-- **Perfis personalizados**: clique ou toque em **Procurar** para escolher um perfil WPR do seu computador. Clique ou toque em **Carregar e iniciar** para iniciar o rastreamento.
+- 
+              **Perfis disponíveis**: selecione o perfil WPR na lista suspensa e clique ou toque em **Iniciar** para iniciar o rastreamento.
+- 
+              **Perfis personalizados**: clique ou toque em **Procurar** para escolher um perfil WPR do seu computador. Clique ou toque em **Carregar e iniciar** para iniciar o rastreamento.
 
 Para interromper o rastreamento, clique em **Parar**. Fique nesta página até que o download do arquivo de rastreamento (.ETL) seja concluído.
 
@@ -151,10 +172,18 @@ Enumera todos os periféricos conectados ao seu dispositivo.
 ### Rede
 
 Gerencia conexões de rede no dispositivo.  A menos que esteja conectado ao Device Portal via USB, alterar essas configurações provavelmente desconectarão você do Device Portal.
-- **Perfis**: seleciona um perfil diferente de Wi-Fi para ser usado.  
-- **Redes disponíveis**: as redes de Wi-Fi disponíveis para o dispositivo. Clicar ou tocar em uma rede permitirá que você se conecte a ela e forneça uma chave de acesso, se necessário. Observação: o Device Portal ainda não oferece suporte à autenticação empresarial. 
+- 
+              **Perfis**: seleciona um perfil diferente de Wi-Fi para ser usado.  
+- 
+              **Redes disponíveis**: as redes de Wi-Fi disponíveis para o dispositivo. Clicar ou tocar em uma rede permitirá que você se conecte a ela e forneça uma chave de acesso, se necessário. Observação: o Device Portal ainda não oferece suporte à autenticação empresarial. 
 
 ![Device Portal para celulares](images/device-portal/mob-device-portal-network.png)
+
+### Aplicativo Explorador de Arquivos
+
+Permite que você exiba e manipule arquivos armazenados por seus aplicativos de sideload.  É uma nova versão de várias plataformas do [Isolated Storage Explorer](https://msdn.microsoft.com/library/windows/apps/hh286408(v=vs.105).aspx) do Windows Phone 8.1  Veja [esta postagem do blog](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) para saber mais sobre o Aplicativo Explorador de Arquivos e como usá-lo. 
+
+![Device Portal para celulares](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
 ## Notas e recursos de serviço
 
@@ -175,7 +204,8 @@ T | lista de cadeias de caracteres delineadas de caracteres nulos | Marcas aplic
 
 Para proteger-se contra [ataques CSRF](https://wikipedia.org/wiki/Cross-site_request_forgery), um token exclusivo é necessário em todas as solicitações não GET. Esse token, o cabeçalho de solicitação X-CSRF-Token, é derivado de um cookie de sessão, o CSRF-Token. Na interface do usuário Web do Device Portal, o cookie CSRF-Token é copiado no cabeçalho X-CSRF-Token em cada solicitação.
 
-**Importante** essa proteção impede o uso das APIs REST a partir de um cliente autônomo (por exemplo, utilitários de linha de comando). Isso pode ser resolvido de três modos: 
+
+              **Importante** Essa proteção impede o uso das APIs REST a partir de um cliente autônomo (por exemplo, utilitários de linha de comando). Isso pode ser resolvido de três modos: 
 
 1. Uso do nome de usuário "auto-". Os clientes que têm o prefixo "auto-" no nome de usuário serão ignorados pela proteção contra CSRF. É importante que esse nome de usuário não seja usado para fazer logon no Device Portal por meio do navegador, pois ele abrirá o serviço para ataques CSRF. Exemplo: se o nome de usuário do Device Portal for "admin", ```curl -u auto-admin:password <args>``` deverá ser usado para ignorar a proteção contra CSRF. 
 
@@ -183,10 +213,15 @@ Para proteger-se contra [ataques CSRF](https://wikipedia.org/wiki/Cross-site_req
  
 3. Desabilite a autenticação e use HTTP. A proteção contra CSRF só se aplica a pontos de extremidade HTTPS, portanto, as conexões em pontos de extremidade HTTP não precisam fazer nada do que é mencionado acima. 
 
-**Observação**: um nome de usuário que começar com "auto-" não será capaz de fazer logon no Device Portal por meio do navegador.  
+
+              **Observação**: um nome de usuário que começar com "auto-" não será capaz de fazer logon no Device Portal por meio do navegador.  
+
+#### Proteção de Cross-Site WebSocket Hijacking (CSWSH)
+
+Para se proteger contra [ataques CSWSH](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html), todos os clientes que abrem uma conexão WebSocket com o Device Portal também devem fornecer um cabeçalho Origin que corresponda ao cabeçalho Host.  Isso prova para o Device Portal que a solicitação vem da interface do usuário do Device Portal ou um aplicativo cliente válido.  Sem o cabeçalho Origin, sua solicitação será rejeitada. 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

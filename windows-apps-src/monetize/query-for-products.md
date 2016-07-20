@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: "Use esse método na API da coleção da Windows Store para obter todos os produtos que pertence a um cliente em relação a aplicativos que estejam associados com sua ID de cliente do Azure AD. Você pode analisar sua consulta para um determinado produto ou usar outros filtros."
 title: Consulta por produtos
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: b8661d73487dde61b207159d11a0583700fa22bc
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 93ed2b850de22d562b16f3f10f4ca409054910d3
 
 ---
 
@@ -33,9 +34,9 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 
 | Método | URI da solicitação                                                 |
 |--------|-------------------------------------------------------------|
-| POST   | `https://collections.mp.microsoft.com/v6.0/collections/query` |
+| POST   | ```https://collections.mp.microsoft.com/v6.0/collections/query``` |
 
-<br/>
+<span/>
  
 ### Cabeçalho da solicitação
 
@@ -46,7 +47,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
- <br/>
+<span/>
 
 ### Corpo da solicitação
 
@@ -61,7 +62,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | productTypes      | string       | Se especificado, o serviço retorna apenas produtos que correspondam aos tipos de produto especificados. Os tipos de produto com suporte são **Application**, **Durable** e **UnmanagedConsumable**.                                                                                       | Não       |
 | validityType      | string       | Quando definido como **All**, todos os produtos para um usuário serão retornados, incluindo itens expirados. Quando definido como **Valid**, somente os produtos que são válidos serão retornados nesse momento (ou seja, eles têm um status ativo, data de início &lt; agora e data de término é &gt; agora). | Não       |
 
-<br/> 
+<span/>
 
 O objeto UserIdentity contém os parâmetros a seguir.
 
@@ -71,7 +72,7 @@ O objeto UserIdentity contém os parâmetros a seguir.
 | identityValue        | string | Valor cadeia de caracteres da chave ID da Windows Store ID.                                                                                                                                                                                    | Sim      |
 | localTicketReference | string | Identificador solicitado para produtos retornados. Itens retornados no corpo da resposta terão uma correspondência *localTicketReference*. Recomendamos que você use o mesmo valor que a declaração *userId* na chave ID da Windows Store. | Sim      |
 
-<br/> 
+<span/> 
 
 O objeto ProductSkuId contém os parâmetros a seguir.
 
@@ -80,7 +81,7 @@ O objeto ProductSkuId contém os parâmetros a seguir.
 | productId | cadeia de caracteres | A ID da Loja do catálogo da Windows Store. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. | Sim      |
 | skuID     | cadeia de caracteres | A ID da SKU do catálogo da Windows Store. Um ID de SKU de exemplo é “0010”.                                                                                                                                                                                                                                                | Sim      |
 
-<br/> 
+<span/>
 
 ### Exemplo de solicitação
 
@@ -124,7 +125,7 @@ Content-Type: application/json
 | continuationToken | string                   | Se houver vários conjuntos de produtos, esse token será retornado quando o limite de página for atingido. Você pode especificar esse token de continuação em chamadas subsequentes para recuperar produtos restantes. | Não       |
 | Itens             | CollectionItemContractV6 | Uma matriz de produtos para o usuário especificado.                                                                                                                                               | Não       |
 
-<br/> 
+<span/> 
 
 O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 
@@ -154,7 +155,7 @@ O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 | Tags                 | string             | N/A                                                                                                                                                | Sim      |
 | transactionId        | guid               | A ID de transação como resultado da compra desse item. Pode ser usada para declarar um item como providenciado.                                       | Sim      |
 
-<br/> 
+<span/> 
 
 O objeto IdentityContractV6 contém os parâmetros a seguir.
 
@@ -163,7 +164,7 @@ O objeto IdentityContractV6 contém os parâmetros a seguir.
 | identityType  | string | Contém o valor **"pub"**.                                                      | Sim      |
 | identityValue | string | O valor da cadeia de caracteres de *publisherUserId* da chave de ID da Windows Store especificada. | Sim      |
 
-<br/> 
+<span/> 
 
 ### Exemplo de resposta
 
@@ -216,6 +217,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
 description: "Use este método na API de análise da Windows Store para obter dados agregados de aquisição de um produto no aplicativo (IAP) durante um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter aquisições IAP"
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: 21e634b1d5ab6c3ba7762c1b83c94d076d094af5
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: bff5eb8ecf5a11067a590393d443343dc6ed94bc
 
 ---
 
@@ -33,19 +34,19 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 | Método | URI da solicitação                                                                |
 |--------|----------------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions``` |
 
- 
+<span/> 
 
 ### Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
 
- 
+<span/> 
 
-### Corpo da solicitação
+### Parâmetros solicitados
 
 O parâmetro *applicationId* ou *inAppProductId* é obrigatório. Para recuperar dados de aquisição para todos os IAPs registrados no aplicativo, especifique o parâmetro *applicationId*. Para recuperar dados de aquisição de um único IAP, especifique o parâmetro *inAppProductId*. Se você especificar ambos, o parâmetro *inAppProductId* será ignorado.
 
@@ -135,11 +136,11 @@ O parâmetro *applicationId* ou *inAppProductId* é obrigatório. Para recuperar
 </tbody>
 </table>
 
- 
+<span/>
 
 ### Campos de filtro
 
-O parâmetro *filter* do corpo da solicitação contém uma ou mais instruções que filtram as linhas da resposta. Cada instrução contém um campo e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Estes são alguns exemplos dos parâmetros *filter*:
+O parâmetro *filter* da solicitação contém uma ou mais instruções que filtram as linhas da resposta. Cada instrução contém um campo e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Estes são alguns exemplos dos parâmetros *filter*:
 
 -   *filter=market eq 'US' and gender eq 'm'*
 -   *filter=(market ne 'US') and (gender ne 'Unknown') and (gender ne 'm') and (market ne 'NO') and (ageGroup ne 'greater than 55' or ageGroup ne ‘less than 13’)*
@@ -242,7 +243,7 @@ Para obter uma lista dos campos com suporte, consulte a tabela a seguir. Valores
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### Exemplo de solicitação
 
@@ -270,6 +271,7 @@ Authorization: Bearer <your access token>
 | @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você pode usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 10000, mas houver mais de 10000 linhas de dados de aquisição de IAP para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                                                                                                                                                                                                                 |
 
+<span/>
 
 ### Valores de aquisição de IAP
 
@@ -292,7 +294,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 | acquisitionType     | string  | O tipo de aquisição (grátis, pago e assim por diante). Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                                    |
 | acquisitionQuantity | inumber | O número de aquisições que ocorreram.                                                                                                                                                                                                |
 
- 
+<span/> 
 
 ### Exemplo de resposta
 
@@ -337,6 +339,6 @@ O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

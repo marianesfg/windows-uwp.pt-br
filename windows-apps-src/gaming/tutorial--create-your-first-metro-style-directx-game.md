@@ -8,8 +8,8 @@ keywords:
 - game sample, Universal Windows Platform (UWP)
 - Direct3D 11 game
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9f62e2a42dc0a1b70e37194cd5755e51699ddc38
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 7891642d33e7391e05ae0639e36ff90e6697def6
 
 ---
 
@@ -36,7 +36,7 @@ Antes de começar este tutorial, você precisar se familiarizar com estes assunt
 -   Álgebra linear básica com conceitos de física Newtoniana.
 -   Terminologia básica de programação gráfica.
 -   Conceitos básicos de programação no Windows.
--   Familiaridade básica com APIs de [Direct2D](https://msdn.microsoft.com/en-us/library/windows/apps/dd370990.aspx) e [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
+-   Familiaridade básica com APIs de [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) e [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
 
 ##  O jogo de tiro de exemplo da Windows Store em Direct3D
 
@@ -78,6 +78,6 @@ O exemplo demonstra os conceitos do jogo:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

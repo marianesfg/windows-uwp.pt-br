@@ -3,17 +3,18 @@ author: msatranjr
 ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: "Declarações de funcionalidades do aplicativo"
 description: "As funcionalidades devem ser declaradas no manifesto do pacote do aplicativo da Plataforma Universal do Windows (UWP) para acessar determinadas APIs ou recursos, como imagens, música ou dispositivos como a câmera ou o microfone."
-ms.sourcegitcommit: 747cdcecfa04005ee4512007bef95059bd81fb56
-ms.openlocfilehash: c3c70afbeab95fa967d5e7bb4b6dc9a9a66b6a39
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 1ac48bd816cb2702adcb78ab00335d4f3533a1b3
 
 ---
-# Declarações de funcionalidade do aplicativo
+# Declarações de funcionalidades do aplicativo
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 As funcionalidades devem ser declaradas no [manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/BR211474) do aplicativo da Plataforma Universal do Windows (UWP) para acessar determinadas APIs ou recursos, como imagens, música ou dispositivos como a câmera ou o microfone.
 
-O acesso a APIs ou recursos específicos é solicitado por meio da declaração das funcionalidades no [manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/BR211474) no aplicativo. Você pode declarar funcionalidades gerais usando o [Designer de Manifesto](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230259.aspx) no Microsoft Visual Studio, ou você pode adicioná-las manualmente. Para obter mais informações, consulte [Como especificar funcionalidades em um manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/BR211477). É importante saber que, quando os clientes compram seu aplicativo na Loja, eles são notificados sobre todas as funcionalidades declaradas pelo aplicativo. Evite declarar funcionalidades de que seu aplicativo não precisa.
+O acesso a APIs ou recursos específicos é solicitado por meio da declaração das funcionalidades no [manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/BR211474) no aplicativo. Você pode declarar funcionalidades gerais usando o [Designer de Manifesto](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx) no Microsoft Visual Studio, ou você pode adicioná-las manualmente. Para obter mais informações, consulte [Como especificar funcionalidades em um manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/BR211477). É importante saber que, quando os clientes compram seu aplicativo na Loja, eles são notificados sobre todas as funcionalidades declaradas pelo aplicativo. Evite declarar funcionalidades de que seu aplicativo não precisa.
 
 Algumas funcionalidades dão aos aplicativos acesso a um *recurso confidencial*. Esses recursos são considerados confidenciais porque podem acessar dados pessoais do usuário ou acarretar custos para o usuário. Configurações de privacidade, gerenciadas pelo aplicativo Configurações, permitem que o usuário controle dinamicamente o acesso a recursos confidenciais. Assim, é importante que seu aplicativo não suponha que um recurso confidencial sempre está disponível. Para obter mais informações sobre como acessar recursos confidenciais, consulte [Diretrizes para aplicativos com reconhecimento de privacidade](https://msdn.microsoft.com/library/windows/apps/Hh768223). Funcionalidades que oferecem aplicativos com acesso a um *recurso confidencial* são indicadas por um asterisco (\*) ao lado do cenário de recurso.
 
@@ -110,7 +111,8 @@ Você também deve adicionar a declaração do namespace **xmlns:rescap** na par
 | **Desbloqueio de dispositivo** | A funcionalidade restrita **deviceUnlock** permite que os aplicativos desbloqueiem um dispositivo para cenários de sideload corporativo e de desenvolvedor.
 | **Blocos de SIM duplo** | A funcionalidade restrita **dualSimTiles** permite que os aplicativos criem uma entrada adicional na lista de aplicativos em dispositivos com vários SIMs.<br /><br />Essa funcionalidade é necessária para usar algumas APIs no namespace [**Windows.UI.StartScreen**](https://msdn.microsoft.com/library/windows/apps/BR242235).
 | **Armazenamento compartilhado corporativo** | A funcionalidade restrita **enterpriseDeviceLockdown** permite que os aplicativos usem a API de bloqueio do dispositivo e acessem as pastas de armazenamento compartilhado corporativo.
-| **Injeção de entrada do sistema** | A funcionalidade restrita **inputInjection** permite que os aplicativos insiram várias formas de entrada, como HID, toque, caneta, teclado ou mouse, no sistema de forma programática. Geralmente, essa funcionalidade é usada para aplicativos de colaboração que podem assumir o controle do sistema.<br /><br /><div class="alert">**Observação**  Em um computador, a injeção de entrada de um aplicativo que tenha essa funcionalidade será recebida somente por processos no mesmo contêiner de aplicativo.</div>
+| **Injeção de entrada do sistema** | A funcionalidade restrita **inputInjection** permite que os aplicativos insiram várias formas de entrada, como HID, toque, caneta, teclado ou mouse, no sistema de forma programática. Geralmente, essa funcionalidade é usada para aplicativos de colaboração que podem assumir o controle do sistema.<br /><br /><div class="alert">
+              **Observação**  Em um computador, a injeção de entrada de um aplicativo que tenha essa funcionalidade será recebida somente por processos no mesmo contêiner de aplicativo.</div>
 | **Observar entrada**\* | A funcionalidade restrita **inputObservation** permite que os aplicativos observem várias formas de dados brutos, como HID, toque, caneta, teclado ou mouse, recebidas pelo sistema, independentemente de seu destino final.
 | **Suprimir entrada** | A funcionalidade restrita **inputSuppression** permite que os aplicativos impede que várias formas de dados brutos, como HID, toque, caneta, teclado ou mouse, sejam recebidas pelo sistema independentemente de seu destino final.
 | **Aplicativo VPN** | A funcionalidade restrita **networkingVpnProvider** permite que os aplicativos tenham acesso total aos recursos de VPN, inclusive a capacidade de gerenciar conexões e fornecer funcionalidade de plug-in de VPN.<br /><br />Essa funcionalidade é necessária para usar algumas APIs no namespace [**Windows.Networking.Vpn**](https://msdn.microsoft.com/library/windows/apps/Dn434040).
@@ -160,7 +162,7 @@ Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 ## Tópicos relacionados
 
-* [Designer de manifesto](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230259.aspx)
+* [Designer de manifesto](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx)
 * [Diretrizes para aplicativos com reconhecimento da privacidade](https://msdn.microsoft.com/library/windows/apps/Hh768223)
 * [Como especificar funcionalidades em um manifesto de pacote](https://msdn.microsoft.com/library/windows/apps/BR211477)
 * [Como especificar as funcionalidades do dispositivo em um manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/Dn263092)
@@ -168,6 +170,6 @@ Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -1,10 +1,11 @@
 ---
-description: "Obtenha orientação de design e instruções de codificação para adicionar controles e padrões ao seu aplicativo UWP."
-title: "Controles e padrões - Desenvolvimento de aplicativos do Windows"
+description: "Obtenha orientação de design e instruções de codificação para adicionar controles e padrões ao seu aplicativo UWP. Encontre mais de 45 controles poderosos para uso com o seu aplicativo."
+title: "Controles e padrões UWP - Desenvolvimento de aplicativos do Windows"
 author: mijacobs
+keywords: uwp controls, user interface, app controls
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: 0562e3df0c2abbb0808df5f75ff4fe0b96eb6d7e
+ms.sourcegitcommit: 7c45a464be250e210df48d3fdef35f00d77e16d5
+ms.openlocfilehash: 23fdd3513d11a0fa0171e50fe71d49c8e3db7376
 
 ---
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -44,8 +45,6 @@ Informações detalhadas sobre controles e padrões específicos.
 <div class="uwpd-list-of-links">
 <ul>
 
-<li>[Tela ativa](active-canvas.md)</li>
-
 <li>[Caixa de sugestão automática](auto-suggest-box.md)</li>
 
 <li>[Barras](app-bars.md)</li>
@@ -80,11 +79,15 @@ Informações detalhadas sobre controles e padrões específicos.
 
 <li>[Listas](lists.md)</li>
 
+<li>[Controle de mapa](../maps-and-location/controls-map.md)</li>
+
 <li>[Mestre/detalhes](master-details.md)</li>
 
-<li>[Reprodução de mídia](media-playback.md)</li>
-
+<li>[Reprodução de mídia](media-playback.md)
+<ul>
 <li>[Controles personalizados de transporte](custom-transport-controls.md)</li>
+</ul>
+</li>
 
 <li>[Painel de navegação](nav-pane.md)</li>
 
@@ -107,7 +110,6 @@ Informações detalhadas sobre controles e padrões específicos.
 <li>[Controles de texto](text-controls.md)
 <ul>
 
-<li>[Fontes](fonts.md)</li>
 <li>[Rótulos](labels.md)</li>
 
 <li>[Caixas de senha](password-box.md)</li>
@@ -115,8 +117,6 @@ Informações detalhadas sobre controles e padrões específicos.
 <li>[Caixas de edição com formato](rich-edit-box.md)</li>
 
 <li>[Blocos de Rich Text](rich-text-block.md)</li>
-
-<li>[Ícones Segoe MDL2](segoe-ui-symbol-font.md)</li>
 
 <li>[Verificação ortográfica e previsão](spell-checking-and-prediction.md)</li>
 
@@ -167,6 +167,6 @@ Informações detalhadas sobre controles e padrões específicos.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

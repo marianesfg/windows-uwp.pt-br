@@ -6,8 +6,8 @@ ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 989d810724c925a5bcbebf5f7fb301636905fff9
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a1b271360b84e670f0b28557ffc499436487ad5f
 
 ---
 
@@ -50,7 +50,7 @@ Assegure-se de que o arquivo **ResW** do aplicativo tenha um recurso para MainPa
 
 ### <span id="HTML"></span><span id="html"></span>HTML
 
-Para os aplicativos da Windows Store em JavaScript, use mecanismos de layout de [folhas de estilo em cascata (CSS)](https://msdn.microsoft.com/library/ms531209), como [-ms-grid](https://msdn.microsoft.com/en-us/library/windows/apps/hh465453.aspx#g_section) e [–ms-box](https://msdn.microsoft.com/en-us/library/windows/apps/hh465453.aspx#f_section). Use preenchimento e margens simétricos para permitir a localização para várias direções de layout.
+Para os aplicativos da Windows Store em JavaScript, use mecanismos de layout de [folhas de estilo em cascata (CSS)](https://msdn.microsoft.com/library/ms531209), como [-ms-grid](https://msdn.microsoft.com/library/windows/apps/hh465453.aspx#g_section) e [–ms-box](https://msdn.microsoft.com/library/windows/apps/hh465453.aspx#f_section). Use preenchimento e margens simétricos para permitir a localização para várias direções de layout.
 
 Seu aplicativo também pode usar o seletor de pseudoclasse [**:-ms-lang()**](https://msdn.microsoft.com/library/cc848867) para ajustar propriedades CSS, como a largura em determinados elementos com base no idioma do aplicativo. Para ativar esse recurso, o Host de Aplicativo define o atributo **lang** do elemento raiz para o idioma do aplicativo.
 
@@ -97,12 +97,14 @@ Se o seu aplicativo tiver imagens que devem ser espelhadas (ou seja, a mesma ima
 .mirrorable { transform: scaleX(-1); }
 ```
 
-**Para XAML e HTML:** se o seu aplicativo exige uma imagem diferente para invertê-la corretamente, você pode usar o sistema de gerenciamento de recursos com o qualificador [layoutdir qualifier](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324). O sistema escolhe uma imagem chamada file.layoutdir-rtl.png quando o [idioma do aplicativo](manage-language-and-region.md) é definido como um idioma da direita para a esquerda (RTL) Essa abordagem pode ser necessária quando alguma parte da imagem é invertida, mas outra parte não.
+
+              **Para XAML e HTML:** se o seu aplicativo exige uma imagem diferente para invertê-la corretamente, você pode usar o sistema de gerenciamento de recursos com o [qualificador layoutdir](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324). O sistema escolhe uma imagem chamada file.layoutdir-rtl.png quando o [idioma do aplicativo](manage-language-and-region.md) é definido como um idioma da direita para a esquerda (RTL) Essa abordagem pode ser necessária quando alguma parte da imagem é invertida, mas outra parte não.
 
 ## <span id="Fonts"></span><span id="fonts"></span><span id="FONTS"></span>Fontes
 
 
-**Para XAML e HTML:** use as APIs de mapeamento de fonte [**LanguageFont**](https://msdn.microsoft.com/library/windows/apps/br206864) para acessar via programação a família de fontes, tamanho, peso e estilo recomendados para um idioma específico. O objeto **LanguageFont** oferece acesso às informações corretas de fonte para várias categorias de conteúdo, incluindo cabeçalhos de interface do usuário, notificações, texto do corpo e fontes de corpo de documento editáveis pelo usuário.
+
+              **Para XAML e HTML:** use as APIs de mapeamento de fonte [**LanguageFont**](https://msdn.microsoft.com/library/windows/apps/br206864) para acessar via programação a família de fontes, tamanho, peso e estilo recomendados para um idioma específico. O objeto **LanguageFont** oferece acesso às informações corretas de fonte para várias categorias de conteúdo, incluindo cabeçalhos de interface do usuário, notificações, texto do corpo e fontes de corpo de documento editáveis pelo usuário.
 
 ### <span id="HTML"></span><span id="html"></span>HTML
 
@@ -119,6 +121,6 @@ Os aplicativos que exibem vários idiomas em uma única página devem definir o 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

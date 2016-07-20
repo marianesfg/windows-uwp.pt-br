@@ -3,6 +3,7 @@ author: mtoepke
 title: Jogos e DirectX
 description: A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, distribuir e monetizar jogos. Saiba como iniciar um novo jogo ou portar um jogo existente.
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
+translationtype: Human Translation
 ms.sourcegitcommit: 41ee0d2a45408b5b1a0dbc0b102f1b59843814b2
 ms.openlocfilehash: e5447f6238ece768513d160579e1c7e89b04e509
 
@@ -48,7 +49,7 @@ A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, 
  
 
 > **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -69,6 +70,6 @@ Para fazer o melhor uso das visões gerais e dos tutoriais de desenvolvimento de
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

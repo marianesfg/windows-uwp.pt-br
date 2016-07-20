@@ -4,13 +4,13 @@ ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: "Gerenciando suas configurações de conta e informações de perfil"
 description: "Você pode exibir e atualizar as configurações da sua conta de desenvolvedor e as informações de perfil na seção Configurações da conta do painel unificado do Centro de Desenvolvimento do Windows."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3d82caac353eb7cb63692469c5951be1f392ff52
+ms.sourcegitcommit: a9aae8fdc3cb4eaf151934a773a7cc3e6ced177f
+ms.openlocfilehash: 20a995f1a67bfdf0d52340c0964eb05c10935af1
 
 ---
 # Gerenciando suas configurações de conta e informações de perfil
 
-Você pode exibir e atualizar as configurações da sua conta de desenvolvedor e as informações de perfil na seção **Configurações da conta** do [painel unificado do Centro de Desenvolvimento do Windows](https://msdn.microsoft.com/library/windows/apps/Mt169843).
+Você pode exibir e atualizar as configurações da sua conta de desenvolvedor e as informações de perfil na seção **Configurações da conta** do [painel do Centro de Desenvolvimento do Windows](https://msdn.microsoft.com/library/windows/apps/Mt169843).
 
 ## Configurações da conta
 
@@ -18,7 +18,8 @@ A página **Configurações da conta** mostra detalhes sobre sua conta e inclui 
 
 Na seção **Detalhes da conta**, você pode ver o status e o tipo da sua conta. Você também pode encontrar informações sobre sua ID de editor nessa página, incluindo a ID de vendedor, a ID de editor do Windows e a ID de editor do Windows Phone. Esses valores são atribuídos pela Microsoft para identificar exclusivamente sua conta de desenvolvedor, e você não pode editá-los.
 
-**Observação**  Os detalhes de identidade para seus aplicativos individuais podem ser encontrados na página [Identidade do aplicativo](https://msdn.microsoft.com/library/windows/apps/Mt148561) de cada aplicativo.
+
+            **Observação**  Os detalhes de identidade para seus aplicativos individuais podem ser encontrados na página [Identidade do aplicativo](https://msdn.microsoft.com/library/windows/apps/Mt148561) de cada aplicativo.
 
 ## Informações de contato
 
@@ -32,11 +33,11 @@ Se você alterar seu nome para exibição de editor, precisaremos verificar sua 
 
 Esta seção também inclui links para [configurar sua conta de pagamento e formulários de imposto](https://msdn.microsoft.com/library/windows/apps/Bg124529). Você precisará fazer isso antes de cobrar pelos aplicativos ou IAPs (produtos no aplicativo).
 
-Alguns programas podem fornecer um código para permitir que você expanda os recursos de sua conta; eles podem ser inseridos em **Configurações da conta**. Esta página também permite que você exiba os detalhes de qualquer [dispositivo Windows Phone 8 ou Windows Phone 8.1 que você tenha desbloqueado para teste](http://go.microsoft.com/fwlink/p/?LinkId=533897) e habilite ou desabilite a telemetria de uso de aplicativos para utilização com o Visual Studio Application Insights.
+Alguns programas podem fornecer um código para permitir que você expanda os recursos de sua conta; eles podem ser inseridos em **Configurações da conta**. Esta página também permite exibir detalhes para qualquer dispositivo [Windows Phone 8 ou Windows Phone 8.1 que você tenha desbloqueado para testes](http://go.microsoft.com/fwlink/p/?LinkId=533897) e aceitou ou recusou o [Programa Insider do Centro de Desenvolvimento](dev-center-insider-program.md).
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

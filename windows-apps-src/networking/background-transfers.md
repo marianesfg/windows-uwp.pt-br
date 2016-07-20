@@ -4,8 +4,8 @@ description: "Use a API de transferência em segundo plano para copiar arquivos 
 title: "Transferências em segundo plano"
 ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 02e01be9cf726731697eb5934cb86b398431b532
+ms.sourcegitcommit: b15d01ec4fd41a8f03345a4416b4795455928533
+ms.openlocfilehash: cbb8308a3390634f0068f72041803989201e2345
 
 ---
 
@@ -45,7 +45,8 @@ Por exemplo, a política de custo definida para uma operação pode indicar que 
 
 Embora o recurso de transferência em segundo plano tenha seus próprios mecanismos para manipular alterações no status de rede, existem outras considerações gerais de conectividade para aplicativos conectados a rede. Leia sobre o [aproveitamento de informações de conexão de rede disponíveis](https://msdn.microsoft.com/library/windows/apps/hh452983) para saber mais.
 
-> **Nota**  Para aplicativos sendo executados em dispositivos móveis, existem recursos que permitem ao usuário monitorar e restringir a quantidade de dados que é transferida com base no tipo de conexão, no status de roaming e no plano de dados do usuário. Por isso, as transferências em segundo plano podem ser pausadas no telefone mesmo quando a [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) indica que a transferência deve continuar.
+> 
+              **Nota**  Para aplicativos executados em dispositivos móveis, existem recursos que permitem ao usuário monitorar e restringir a quantidade de dados que é transferida com base no tipo de conexão, no status de roaming e no plano de dados do usuário. Por isso, as transferências em segundo plano podem ser pausadas no telefone mesmo quando a [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) indica que a transferência deve continuar.
 
 A tabela a seguir indica quando as transferências em segundo plano são permitidas no telefone para cada valor da [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138), levando em consideração o status atual do telefone. Você pode usar a classe [**ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244) para determinar o status atual do telefone.
 
@@ -74,8 +75,8 @@ A criação de um upload começa com [**BackgroundUploader**](https://msdn.micro
 
 Antes de podermos começar com a criação de uma [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), primeiro precisamos identificar a URI do local para o qual carregar e o arquivo que será carregado. No exemplo a seguir, o valor *uriString* é preenchido usando uma cadeia de caracteres da entrada de interface do usuário e o valor *file* usando o objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) retornado por uma operação [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275).
 
-[!code-js[uploadFile]
-            (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_B "Identificar o arquivo e o destino para o upload")]
+[!code-js
+              [uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_B "Identificar o arquivo e o destino para o upload")]
 
 **Crie e inicialize a operação de upload**
 
@@ -85,22 +86,22 @@ Em seguida, as propriedades do [**StorageFile**](https://msdn.microsoft.com/libr
 
 Por fim, [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) cria a [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) (*carregar*).
 
-[!code-js[uploadFile]
-            (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_A "Criar e inicializar a operação de upload em várias partes")]
+[!code-js
+              [uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_A "Criar e inicializar a operação de upload")]
 
-Observe as chamadas de método assíncrono definidas usando promessas do JavaScript. Olhando para uma linha do último exemplo:
+Observe as chamadas de método assíncrono definidas usando promessas do JavaScript. Observando uma linha do último exemplo:
 
 ```javascript
 promise = upload.startAsync().then(complete, error, progress);
 ```
 
-    The async method call is followed by a then statement which indicates methods, defined by the app, that are called when a result from the async method call is returned. For more information on this programming pattern, see [Asynchronous programming in JavaScript using promises](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
+A chamada de método assíncrono é seguida por uma instrução then que indica métodos, definidos pelo aplicativo, que são chamados quando é retornado um resultado da chamada de método assíncrono. Para obter mais informações sobre esse padrão de programação, consulte [Programação assíncrona em JavaScript usando promessas](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
 ### Carregando vários arquivos
 
-**Identifique os arquivos e o destino para o upload**
+**Identificar os arquivos e o destino para o upload**
 
-    In a scenario involving multiple files transferred with a single [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), the process begins as it usually does by first providing the required destination URI and local file information. Similar to the example in the previous section, the URI is provided as a string by the end-user and [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) can be used to provide the ability to indicate files through the user interface as well. However, in this scenario the app should instead call the [**PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851) method to enable the selection of multiple files through the UI.
+Em um cenário que envolve vários arquivos transferidos com uma só [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), o processo começa da maneira usual, fornecendo primeiro as informações necessárias de URI de destino e de arquivo local. De modo similar ao exemplo da seção anterior, o URI é fornecido como uma cadeia de caracteres pelo usuário final e [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) pode ser usado para fornecer a capacidade de indicar arquivos também pela interface de usuário. Nesse cenário, porém, o aplicativo deve chamar o método [**PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851) para permitir a seleção de vários arquivos pela interface do usuário.
 
 ```javascript
 function uploadFiles() {
@@ -123,14 +124,14 @@ function uploadFiles() {
     }
 ```
 
-**Crie objetos para os parâmetros fornecidos**
+**Criar objetos para os parâmetros fornecidos**
 
-    The next two examples use code contained in a single example method, **startMultipart**, which was called at the end of the last step. For the purpose of instruction the code in the method that creates an array of [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) objects has been split from the code that creates the resultant [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224).
+Os dois próximos exemplos usam o código contido em um método de exemplo único, **startMultipart**, que foi chamado no fim da última etapa. Para fins de instrução, o código no método que cria uma matriz de objetos [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) foi dividido do código que cria o [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) resultante.
 
-    First, the URI string provided by the user is initialized as a [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998). Next, the array of [**IStorageFile**](https://msdn.microsoft.com/library/windows/apps/br227102) objects (**files**) passed to this method is iterated through, each object is used to create a new [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) object which is then placed in the **contentParts** array.
+Primeiro, a cadeia de caracteres do URI fornecida pelo usuário é inicializada como um [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998). Em seguida, a matriz de objetos [**IStorageFile**](https://msdn.microsoft.com/library/windows/apps/br227102) (**arquivos**) passada para esse método é iterada, cada objeto é usado para criar um novo objeto [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) que, em seguida, é colocado na matriz **contentParts**.
 
 ```javascript
-upload.startMultipart = function (uriString, files) {
+    upload.startMultipart = function (uriString, files) {
         try {
             var uri = new Windows.Foundation.Uri(uriString);
             var uploader = new Windows.Networking.BackgroundTransfer.BackgroundUploader();
@@ -145,7 +146,7 @@ upload.startMultipart = function (uriString, files) {
 
 **Crie e inicialize a operação de upload em várias partes**
 
-    With our contentParts array populated with all of the [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) objects representing each [**IStorageFile**](https://msdn.microsoft.com/library/windows/apps/br227102) for upload, we are ready to call [**CreateUploadAsync**](https://msdn.microsoft.com/library/windows/apps/hh923973) using the [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) to indicate where the request will be sent.
+Com nossa matriz contentParts preenchida com todos os objetos [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) que representam cada [**IStorageFile**](https://msdn.microsoft.com/library/windows/apps/br227102) para carregamento, estamos prontos para chamar [**CreateUploadAsync**](https://msdn.microsoft.com/library/windows/apps/hh923973) usando o [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) para indicar onde a solicitação será enviada.
 
 ```javascript
         // Create a new upload operation.
@@ -168,13 +169,13 @@ Quaisquer recursos de sistema associados são liberados na conclusão ou no canc
 
 1.  Antes de definir a função que enumera operações persistidas, precisamos criar uma matriz que contenha os objetos [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) que retornarão:
 
-[!code-js[uploadFile]
-            (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_C "Reiniciar operação de upload interrompida")]
+    [!code-js
+              [uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_C "Reiniciar operação de upload interrompida")]
 
-2.  Em seguida, definimos a função que enumera operações persistidas e as armazena em nossa matriz. Observe que o método **load** chamado para reatribuir revogações à [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), caso persista com a finalização do aplicativo, está na classe UploadOp que definimos mais tarde nesta seção.
+1.  Em seguida, definimos a função que enumera operações persistidas e as armazena em nossa matriz. Observe que o método **load** chamado para reatribuir revogações à [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), caso persista com a finalização do aplicativo, está na classe UploadOp que definimos mais tarde nesta seção.
 
-[!code-js[uploadFile]
-            (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_D "Enumerar operações persistidas")]
+    [!code-js
+              [uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_D "Enumerar operações persistidas")]
 
 ## Baixando arquivos
 
@@ -210,13 +211,13 @@ Quaisquer recursos de sistema associados são liberados na conclusão ou no canc
 
 1.  Antes de definir a função que enumera operações persistidas, precisamos criar uma matriz que contenha os objetos [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) que retornarão:
 
-[!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_D)]
+    [!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_D)]
 
-2.  Em seguida, definimos a função que enumera operações persistidas e as armazena em nossa matriz. Observe que o método **load** chamado para reatribuir revogações para uma [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) persistida está no exemplo de DownloadOp que definimos mais tarde nesta seção.
+1.  Em seguida, definimos a função que enumera operações persistidas e as armazena em nossa matriz. Observe que o método **load** chamado para reatribuir revogações para uma [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) persistida está no exemplo de DownloadOp que definimos mais tarde nesta seção.
 
-[!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_E)]
+    [!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_E)]
 
-3.  Agora você pode usar a lista preenchida para reiniciar operações pendentes.
+1.  Agora você pode usar a lista preenchida para reiniciar operações pendentes.
 
 ## Pós-processamento
 
@@ -282,7 +283,8 @@ Existem dois cenários principais de tempo limite de conexão para levar em cons
 
 -   Depois de uma conexão ser estabelecida, uma mensagem de solicitação de HTTP que não tenha recebido uma resposta em dois minutos será anulada.
 
-> **Observação**  Em qualquer um desses cenários, supondo que haja conectividade com a Internet, a Transferência em Segundo Plano repetirá automaticamente a solicitação no máximo três vezes. Caso a conectividade com a Internet não seja detectada, outras solicitações esperarão até que a conexão seja estabelecida.
+> 
+              **Observação**  Em qualquer um desses cenários, supondo que haja conectividade com a Internet, a Transferência em Segundo Plano repetirá automaticamente a solicitação no máximo três vezes. Caso a conectividade com a Internet não seja detectada, outras solicitações esperarão até que a conexão seja estabelecida.
 
 ## Instrução de depuração
 
@@ -306,7 +308,8 @@ Para contornar esse problema, desinstale completamente todas as versões do apli
 
 Uma exceção é gerada quando uma cadeia de caracteres inválida do URI (Uniform Resource Identifier) é passada para o construtor do objeto [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998).
 
-**.NET:  **O tipo [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) é exibido como [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) no C# e no VB.
+
+              **.NET:  **O tipo [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) é exibido como [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) no C# e no VB.
 
 No C# e no Visual Basic, esse erro pode ser evitado usando a classe [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) no .NET 4.5 e um dos métodos [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx) para testar a cadeia de caracteres recebida do usuário do aplicativo antes de o URI ser construído.
 
@@ -321,6 +324,6 @@ Para erros de validação de parâmetro, um aplicativo também pode usar o **HRE
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

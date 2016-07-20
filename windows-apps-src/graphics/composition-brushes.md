@@ -4,8 +4,8 @@ ms.assetid: 03dd256f-78c0-e1b1-3d9f-7b3afab29b2f
 title: "Pincéis de composição"
 description: "Um pincel pinta a área de um Visual com sua saída. Pincéis diferentes têm diferentes tipos de saída."
 translationtype: Human Translation
-ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
-ms.openlocfilehash: 7f466607e48bb0d553892e09c6616f0dd0539d8e
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a9f30ca041d320798c7ace596bd9be37f9712129
 
 ---
 # Pincéis de composição
@@ -14,15 +14,15 @@ ms.openlocfilehash: 7f466607e48bb0d553892e09c6616f0dd0539d8e
 
 Um pincel pinta a área de um [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) com sua saída. Pincéis diferentes têm diferentes tipos de saída. A API de composição fornece três tipos de pincel:
 
--   [
-              **CompositionColorBrush**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589399) pinta um elemento visual com uma cor sólida
--   [
-              **CompositionSurfaceBrush**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589415) pinta um elemento visual com o conteúdo de uma superfície de composição
--   [
-              **CompositionEffectBrush**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589406) pinta um elemento visual com o conteúdo de um efeito de composição
+-   
+              [
+              **CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) pinta um elemento visual com uma cor sólida
+-   
+              [
+              **CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) pinta um elemento visual com o conteúdo de uma superfície de composição
+-   
+              [
+              **CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406) pinta um elemento visual com o conteúdo de um efeito de composição
 
 Todos os pincéis são herdados de [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398); eles são criados direta ou indiretamente pelo [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) e são recursos independentes do dispositivo. Embora os pincéis sejam independentes do dispositivo, [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) e [**CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406) pintam um [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) com o conteúdo de uma superfície de composição que depende do dispositivo.
 
@@ -47,7 +47,7 @@ Os valores de cor no [**CompositionColorBrush**](https://msdn.microsoft.com/libr
 
 ## Usando o pincel de cor
 
-Para criar um pincel de cor, chame o método Compositor.[**CreateColorBrush**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositor.createcolorbrush.aspx), que retorna um [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399). A cor padrão para **CompositionColorBrush** é \#00000000. A ilustração e o código a seguir mostram uma pequena árvore visual para criar um retângulo tracejado com um pincel de cor preta e pintado com um pincel de cor sólida que tem o valor de cor 0x9ACD32.
+Para criar um pincel de cor, chame o método Compositor.[**CreateColorBrush**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositor.createcolorbrush.aspx), que retorna um [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399). A cor padrão para **CompositionColorBrush** é \#00000000. A ilustração e o código a seguir mostram uma pequena árvore visual para criar um retângulo tracejado com um pincel de cor preta e pintado com um pincel de cor sólida que tem o valor de cor 0x9ACD32.
 
 ![CompositionColorBrush](images/composition-compositioncolorbrush.png)
 ```cs
@@ -85,7 +85,7 @@ LoadImage(Brush,
           "ms-appx:///Assets/liqorice.png");
 ```
 
-Para criar o pincel de superfície, chame o método Compositor.[**CreateSurfaceBrush**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositor.createsurfacebrush.aspx). O método retorna um objeto [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415). O exemplo a seguir ilustra o código que pode ser usado para pintar um elemento visual com o conteúdo de um **CompositionSurfaceBrush**.
+Para criar o pincel de superfície, chame o método Compositor.[**CreateSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositor.createsurfacebrush.aspx). O método retorna um objeto [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415). O exemplo a seguir ilustra o código que pode ser usado para pintar um elemento visual com o conteúdo de um **CompositionSurfaceBrush**.
 
 ```cs
 Compositor _compositor;
@@ -100,16 +100,16 @@ visual.Brush = _surfaceBrush;
 
 ## Configurando a ampliação e o alinhamento
 
-Às vezes, o conteúdo do [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) para um [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) não preenche completamente as áreas do elemento visual que está sendo pintado. Quando isso acontece, a API de composição usa as configurações de modo [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) e [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) do pincel para determinar como preencher a área restante.
+Às vezes, o conteúdo do [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) para um [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) não preenche completamente as áreas do elemento visual que está sendo pintado. Quando isso acontece, a API de composição usa as configurações de modo [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) e [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) do pincel para determinar como preencher a área restante.
 
--   [
-              **HorizontalAlignmentRatio**
-            ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) e [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) são do tipo float e podem ser usados para controlar o posicionamento do pincel dentro dos limites do elemento visual.
+-   
+              [
+              **HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) e [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) são do tipo float e podem ser usados para controlar o posicionamento do pincel dentro dos limites do elemento visual.
     -   O valor 0.0 alinha o canto esquerdo/superior do pincel com o canto esquerdo/superior do elemento visual
     -   O valor de 0,5 alinha o centro do pincel com o centro do elemento visual
     -   O valor de 1.0 alinha o canto direito/inferior do pincel com o canto direito/inferior do elemento visual
 -   A propriedade [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) aceita estes valores, que a enumeração [**CompositionStretch**](https://msdn.microsoft.com/library/windows/apps/Dn706786) define:
-    -   None: o pincel não se amplia para preencher os limites do elemento visual. Tome cuidado com essa configuração de ampliação: se o pincel for maior do que os limites do elemento visual, o conteúdo do pincel será recortado. A parte do pincel usada para pintar os limites do elemento visual pode ser controlada usando as propriedades [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) e [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio).
+    -   None: o pincel não se amplia para preencher os limites do elemento visual. Tome cuidado com essa configuração de ampliação: se o pincel for maior do que os limites do elemento visual, o conteúdo do pincel será recortado. A parte do pincel usada para pintar os limites do elemento visual pode ser controlada usando as propriedades [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) e [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio).
     -   Uniform: o pincel é dimensionado para caber nos limites do elemento visual; a taxa de proporção do pincel é preservada. Esse é o valor padrão.
     -   UniformToFill: o pincel é dimensionado para preencher completamente os limites do elemento visual; a taxa de proporção do pincel é preservada.
     -   Fill: o pincel é dimensionado para caber nos limites do elemento visual. Como a altura e a largura do pincel são escalonadas independentemente, a taxa de proporção original do pincel pode não ser preservada. Isto é, o pincel pode ser distorcida para preencher completamente os limites do elemento visual.
@@ -124,6 +124,6 @@ visual.Brush = _surfaceBrush;
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

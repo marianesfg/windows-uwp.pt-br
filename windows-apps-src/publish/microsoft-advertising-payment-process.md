@@ -3,8 +3,8 @@ author: jnHs
 title: Processo de pagamento do Microsoft Advertising
 description: "Obtenha informações sobre o processo de pagamento, limites e a moeda para ter lucros com o Microsoft Advertising."
 translationtype: Human Translation
-ms.sourcegitcommit: 87b34cd37c7594bb76dbf0f1cd388dbba73ea456
-ms.openlocfilehash: b265fb5c6d01f083fac16c36f4d1c12e023a62b6
+ms.sourcegitcommit: b54ea21d12f68830295f59af219c7fe811edd832
+ms.openlocfilehash: 5805f316ed7bc08268fd6c201d740f3a3222629e
 
 ---
 
@@ -17,7 +17,6 @@ Os pagamentos de lucros de publicidade são feitos mensalmente, sujeitos aos req
 Depois que o limite for atingido e um pagamento se tornar visível na seção **Pagamento futuro** do seu [Resumo de pagamentos](payout-summary.md), a Microsoft irá emitir um pagamento dentro de 15 dias. Se o saldo dos lucros estiver abaixo do limite, os lucros continuarão sendo acumulados até que eles atinjam o limite.
 
 Os pagamentos são feitos em sua moeda local, exceto para países/regiões marcados com um asterisco na tabela a seguir. Os pagamentos nesses mercados são feitos em dólares americanos (US$). As tarifas podem ser aplicadas por seu banco ou pelo PayPal para converter de dólares em sua moeda local. Recomendamos que você entre em contato com seu banco ou com o PayPal para entender o impacto potencial das taxas ou de outros requisitos no recebimento do pagamento.
-
 
 
 |  País/região | Moeda de limite | Valor de limite | 
@@ -51,7 +50,7 @@ Os pagamentos são feitos em sua moeda local, exceto para países/regiões marca
 |  Chade | XAF  | 30.000 XAF | 
 |  Chile* | USD  | 25.000 CLP | 
 |  China | USD  | 50 USD | 
-|  Colômbia* | USD  | 100.000 COP| 
+|  Colômbia* | COP  | 100.000 COP| 
 |  Ilhas Comores | USD  | 50 USD | 
 |  Congo | XAF  | 30.000 XAF| 
 |  Congo (República Democrática) | USD  | 50 USD | 
@@ -60,7 +59,7 @@ Os pagamentos são feitos em sua moeda local, exceto para países/regiões marca
 |  Croácia | HRK  | 350 HRK | 
 |  Chipre | EUR  | 50 EUR | 
 |  República Tcheca| CZK  | 1000 CZK | 
-|  Dinamarca | DKK  | 250 DDK| 
+|  Dinamarca | DDK  | 250 DDK| 
 |  Dominica | XCD  | 135 XCD | 
 |  República Dominicana | DOP  | 2000 DOP | 
 |  Equador | USD  | 50 USD | 
@@ -83,20 +82,21 @@ Os pagamentos são feitos em sua moeda local, exceto para países/regiões marca
 |  RAE de Hong Kong | HKD  | 500 HKD | 
 |  Hungria | HUF  | 10.000 HUF | 
 |  Islândia | USD  | 50 USD | 
-|  Índia | INR  | Não | 
-|  Indonésia | IDR  | 2500 INR | 
+|  Índia | INR  | 2500 INR | 
+|  Indonésia | IDR  | 660.000 IDR | 
 |  Iraque | USD  | 50 USD | 
 |  Irlanda | EUR  | 50 EUR | 
-|  Israel | ILS  | 200 IL | 
+|  Israel | ILS  | 200 ILS | 
 |  Itália | EUR  | 50 EUR | 
 |  Jamaica | JMD  | 5700 JMD | 
 |  Japão | JPY  | 5000 JPY | 
 |  Jordânia | JOD  | 35 JOD | 
 |  Cazaquistão | KZT  | 9200 KZT | 
 |  Quênia | KES  | 5000 KES | 
+|  Coreia* | WON | 50.000 WON |
 |  Kuwait | KWD  | 15 KWD | 
 |  Laos | USD  | 50 USD | 
-|  Letônia | LVL | 30 LVL | 
+|  Letônia | EUR | 50 EUR | 
 |  Líbano | LBP  | 75.000 LBP | 
 |  Libéria | USD  | 50 USD | 
 |  Liechtenstein | CHF  | 50 CHF | 
@@ -104,7 +104,7 @@ Os pagamentos são feitos em sua moeda local, exceto para países/regiões marca
 |  Luxemburgo | EUR  | 50 EUR | 
 |  Macedônia (ARIM) | USD  | 50 USD | 
 |  Madagascar | USD  | 50 USD | 
-|  Malaui | MWK  | 23.000 MWk | 
+|  Maláui | MWK  | 23.000 MWK | 
 |  Malásia | USD  | 50 USD | 
 |  Mali | XOF  | 31.000 XOF | 
 |  Malta | EUR  | 50 EUR | 
@@ -144,7 +144,6 @@ Os pagamentos são feitos em sua moeda local, exceto para países/regiões marca
 |  Eslovênia | EUR  | 50 EUR | 
 |  Somália | USD  | 50 USD | 
 |  África do Sul | ZAR  | 500 ZAR | 
-|  Coreia do Sul* | WON | 50.000 WON |
 |  Espanha | EUR  | 50 EUR | 
 |  Sri Lanka | LKR  | 6600 LKR | 
 |  Suécia | SEK  | 350 SEK | 
@@ -161,7 +160,7 @@ Os pagamentos são feitos em sua moeda local, exceto para países/regiões marca
 |  Turquia | TRY  | 130 TRY | 
 |  Turquemenistão | USD  | 50 USD | 
 |  Uganda | UGX  | 152.000 UGX | 
-|  Ucrânia | USD  | | 
+|  Ucrânia | USD  | 50 USD | 
 |  Emirados Árabes Unidos | EUR  | 50 EUR | 
 |  Reino Unido | GBP  | 35 GBP | 
 |  Estados Unidos | USD  | 50 USD | 
@@ -176,13 +175,12 @@ Os pagamentos são feitos em sua moeda local, exceto para países/regiões marca
 ## Tópicos relacionados
 
 * [Configurando sua conta de pagamento e formulários fiscais](setting-up-your-payout-account-and-tax-forms.md)
-* [Recebendo pagamento](getting-paid-apps.md)
 * [Resumo de pagamentos](payout-summary.md)
 * [Monetizar com anúncios](monetize-with-ads.md)
  
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

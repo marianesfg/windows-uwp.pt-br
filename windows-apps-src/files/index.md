@@ -4,8 +4,8 @@ ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Arquivos, pastas e bibliotecas
 description: "Aprenda como ler e gravar configurações do aplicativo, seletores de pastas e arquivos e sobre locais especiais de área restrita, como a biblioteca de vídeo/música."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2056a5adee0ce6e65962eeba21fccbfe976c811a
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: ea52cafab084f202705282d63f4a37ec0d65bd03
 
 ---
  # Arquivos, pastas e bibliotecas
@@ -24,7 +24,7 @@ Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/
 | [Usar a EDP (proteção de dados empresariais) para proteger arquivos](protect-your-enterprise-data-with-edp.md) | Este tópico mostra exemplos das tarefas de codificação necessárias para obter alguns dos cenários mais comuns de EDP (proteção de dados empresariais) relacionados à transferência de arquivos. |
 | [Usar a EDP (proteção de dados empresariais) para proteger fluxos e buffers](use-edp-to-protect-streams-and-buffers.md) | Este tópico mostra exemplos das tarefas de codificação necessárias para obter alguns dos cenários mais comuns de EDP (proteção de dados empresariais) relacionados a fluxos e buffers. |
 | [Acessando o conteúdo do Grupo Doméstico](quickstart-accessing-homegroup-content.md) | Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo imagens, músicas e vídeos. |
-| [Determinando a disponibilidade de arquivos do Microsoft OneDrive](quickstart-determining-availability-of-microsoft-onedrive-files.md) | Determine se um arquivo do Microsoft OneDrive está disponível usando a propriedade [StorageFile.IsAvailable](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.isavailable.aspx). |
+| [Determinando a disponibilidade de arquivos do Microsoft OneDrive](quickstart-determining-availability-of-microsoft-onedrive-files.md) | Determine se um arquivo do Microsoft OneDrive está disponível usando a propriedade [StorageFile.IsAvailable](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx). |
 | [Arquivos e pastas nas bibliotecas Música, Imagens e Vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | Adicione pastas existentes de música, fotos ou vídeos às bibliotecas correspondentes. Você também pode remover pastas de bibliotecas, obter a lista de pastas em uma biblioteca e descobrir fotos, músicas e vídeos armazenados. |
 | [Acompanhar arquivos e pastas usados recentemente](how-to-track-recently-used-files-and-folders.md) | Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu aplicativo. A plataforma gerencia os itens usados recentemente para você classificando-os com base na data em que foram acessados pela última vez e removendo o item mais antigo quando o limite de 25 itens é atingido. Todos os aplicativos têm seus próprios itens usados recentemente. |
 | [Acessar o cartão SD](access-the-sd-card.md) | Você pode armazenar e acessar dados não essenciais em um cartão microSD opcional, especialmente em dispositivos móveis de baixo custo que têm armazenamento interno limitado. |
@@ -46,6 +46,6 @@ Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -6,8 +6,8 @@ ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b
+ms.sourcegitcommit: 0501d59108c5f01b3cefd3d038f3c7d320c862eb
+ms.openlocfilehash: 3461d5cd399682e0c26a7a6864c916bda21eec43
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b
 
 Conhecer os dispositivos que dão suporte a aplicativos UWP (Plataforma Universal do Windows) o ajudará a oferecer a melhor experiência de usuário para cada fator forma. Ao projetar para um dispositivo específico, as principais considerações incluem como o aplicativo aparecerá no dispositivo, onde, quando e como o aplicativo será usado nesse dispositivo, e como o usuário vai interagir com esse dispositivo.
 
-## <span id="Phones_and_phablets"></span><span id="phones_and_phablets"></span><span id="PHONES_AND_PHABLETS"></span>Telefones e phablets
+## Telefones e phablets
 
 
 O mais usado de todos os dispositivos de computação, o telefone pode fazer muito com o tamanho da tela limitado e entradas básicas. Os telefones estão disponíveis em uma variedade de tamanhos; telefones maiores são chamados de phablets. As experiências de aplicativo nos phablets são semelhantes às dos telefones, mas o espaço maior da tela dos phablets permite algumas mudanças importantes no consumo de conteúdo.
@@ -61,7 +61,7 @@ Recursos típicos do dispositivo
 
  
 
-## <span id="Tablets"></span><span id="tablets"></span><span id="TABLETS"></span>Tablets
+## Tablets
 
 
 Computadores tablet ultraportáteis são equipados com telas sensíveis ao toque, câmeras, microfones e acelerômetros. O tamanho da tela do tablet geralmente varia de 7" a 13,3".
@@ -96,7 +96,7 @@ Recursos típicos do dispositivo
 
  
 
-## <span id="PCs_and_laptops"></span><span id="pcs_and_laptops"></span><span id="PCS_AND_LAPTOPS"></span>Computadores e notebooks
+## Computadores e notebooks
 
 
 Os computadores e notebooks Windows incluem uma ampla gama de dispositivos e tamanhos de tela. Em geral, notebooks e computadores podem exibir mais informações que o telefone ou tablets.
@@ -128,7 +128,7 @@ Recursos típicos do dispositivo
 
  
 
-## <span id="Surface_Hub_devices"></span><span id="surface_hub_devices"></span><span id="SURFACE_HUB_DEVICES"></span>Dispositivos Surface Hub
+## Dispositivos Surface Hub
 
 
 O Microsoft Surface Hub é um dispositivo de colaboração em equipe de tela grande projetado para uso simultâneo por vários usuários.
@@ -161,7 +161,7 @@ Recursos típicos do dispositivo
 
  
 
-## <span id="Windows_IoT_devices"></span><span id="windows_iot_devices"></span><span id="WINDOWS_IOT_DEVICES"></span>Dispositivos Windows IoT
+## Dispositivos Windows IoT
 
 
 Os dispositivos Windows IoT são uma classe emergente de dispositivos voltada para incorporação de eletrônicos pequenos, sensores e conectividade em objetos físicos. Geralmente, esses dispositivos são conectados por meio de uma rede ou da Internet para registrar dados reais detectados e, em alguns casos, agir com base neles. Os dispositivos podem ter nenhuma tela (também conhecidos como dispositivos "sem periféricos") ou são conectados a uma tela pequena (conhecidos como dispositivos "periféricos") com um tamanho de tela geralmente de 3,5" ou menos.
@@ -199,6 +199,6 @@ Recursos típicos do dispositivo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

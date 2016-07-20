@@ -5,6 +5,7 @@ ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: Temas de alto contraste
 label: High-contrast themes
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
 ms.openlocfilehash: 4201f5a0b08f1fc8d691218da0803ee04ab2c86a
 
@@ -43,7 +44,8 @@ Quando você precisar alterar uma cor do padrão do sistema ou precisar adiciona
 </Application.Resources
 ```
 
-* **HighContrast** não é o único nome de chave disponível. Também há **HighContrastBlack**, **HighContrastWhite** e **HighContrastCustom**. Na maioria dos casos, **HighContrast** é tudo que você precisa.
+* 
+            **HighContrast** não é o único nome de chave disponível. Também há **HighContrastBlack**, **HighContrastWhite** e **HighContrastCustom**. Na maioria dos casos, **HighContrast** é tudo que você precisa.
 * Em **Default**, crie o tipo de [**Brush**](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx) de que você precisa, geralmente um **SolidColorBrush**. Dê a ele um nome de **x:Key** específico para o que ele está sendo usado:<br/>
     `<SolidColorBrush x:Key="BrandedPageBackground" />`
 * Atribua a **Color** desejada para ele:<br/>
@@ -161,7 +163,8 @@ Cores sobrepostas ou adjacentes devem ser distinguíveis entre si, mas eles não
 Se as cores da tela de fundo de alto contraste forem usadas para diferenciar os elementos sobrepostos da interface do usuário, o único método garantido para assegurar o contraste entre esses elementos é introduzir bordas.
 
 ## Detectando quando um tema de alto contraste está habilitado  
-Use membros da classe [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) para detectar as configurações atuais de temas de alto contraste. A propriedade [**HighContrast**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrast) determina se um tema de alto contraste está selecionado no momento. Se **HighContrast** estiver definido como **true**, a próxima etapa será verificar o valor da propriedade [**HighContrastScheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrastscheme) para obter o nome do tema de alto contraste que será usado. "Branco em alto contraste" e "Preto em alto contraste" geralmente são valores para **HighContrastScheme** ao qual seu código deve responder. As chaves de [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) definidas por XAML não podem ter espaços, portanto, as chaves desses temas em um dicionário de recursos normalmente são respectivamente "HighContrastWhite" e "HighContrastBlack". Você também deve ter lógica de fallback para um tema de alto contraste padrão caso o valor seja alguma outra cadeia de caracteres. O [Exemplo de alto contraste XAML](http://go.microsoft.com/fwlink/p/?linkid=254993) mostra essa lógica.
+Use membros da classe [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) para detectar as configurações atuais de temas de alto contraste. A propriedade [**HighContrast**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrast) determina se um tema de alto contraste está selecionado no momento. Se **HighContrast** estiver definido como **true**, a próxima etapa será verificar o valor da propriedade [**HighContrastScheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrastscheme) para obter o nome do tema de alto contraste que será usado. "Branco em alto contraste" e "Preto em alto contraste" geralmente são valores para **HighContrastScheme** ao qual seu código deve responder. As chaves de [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) definidas por XAML não podem ter espaços, portanto, as chaves desses temas em um dicionário de recursos normalmente são respectivamente "HighContrastWhite" e "HighContrastBlack". Você também deve ter lógica de fallback para um tema de alto contraste padrão caso o valor seja alguma outra cadeia de caracteres. 
+            O [Exemplo de alto contraste XAML](http://go.microsoft.com/fwlink/p/?linkid=254993) mostra essa lógica.
 
 > [!NOTE]
 > Assegure-se de chamar um construtor [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) de um escopo onde o aplicativo é inicializado e o conteúdo já esteja sendo exibido.
@@ -177,6 +180,6 @@ Os aplicativos podem alternar o uso para valores de recursos de alto contraste d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

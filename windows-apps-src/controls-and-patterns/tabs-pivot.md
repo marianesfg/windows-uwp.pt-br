@@ -5,8 +5,9 @@ title: "Guias e pivôs"
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
 label: Tabs and pivots
 template: detail.hbs
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: 8737ce16d98952f24f9651d30d49ffa85b8d306b
+translationtype: Human Translation
+ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
+ms.openlocfilehash: b6cf34346ad557ce53d3009afe8bc83bc7ed21aa
 
 ---
 # Guias e pivôs
@@ -91,9 +92,6 @@ O controle é fornecido em dois modos:
 -   Pivôs são estáticos quando todos os cabeçalhos cabem dentro do espaço permitido.
 -   Tocar em um rótulo do pivô navega para a página correspondente, embora o próprio pivô não se mova. O pivô ativo é realçado.
 
-{{> aside-internal content = "
--   Recomendamos especialmente evitar que itens girem em um ambiente de 10 pés. Defina a nova propriedade `IsHeaderItemsCarouselEnabled` como Falsa se o aplicativo for executado no Xbox.
-"}}
 
 **Carrossel**
 
@@ -101,16 +99,6 @@ O controle é fornecido em dois modos:
 -   Tocar em um rótulo do pivô navega para a página correspondente, e o rótulo do pivô ativo gira para a primeira posição.
 -   Os itens de pivô em um loop de carrossel da última à primeira seção de pivô.
 
-{{> aside-internal content = "
-### Foco do pivô
-
-Por padrão, o foco do teclado em um cabeçalho de pivô é representado com um sublinhado.
-
-![Foco padrão sublinha cabeçalho selecionado](images/pivot_focus_selectedHeader.png)
-
-Aplicativos que personalizaram Pivot e incorporam o sublinhado em elementos visuais de seleção do cabeçalho podem usar a nova propriedade `HeaderFocusVisualPlacement` para alterar o padrão. Quando `HeaderFocusVisualPlacement=\"ItemHeaders\"`, o foco será desenhado ao redor de todo o painel do cabeçalho.
-
-![Opção ItemsHeader desenha o retângulo de foco em torno de todos os cabeçalhos de pivô](images/pivot_focus_headers.png) "}}
 
 ## Recomendações
 
@@ -129,6 +117,6 @@ Aplicativos que personalizaram Pivot e incorporam o sublinhado em elementos visu
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: DE5B084C-DAC1-430B-A15B-5B3D5FB698F7
 title: "Otimizar animações, mídia e imagens"
 description: "Crie aplicativos da Plataforma Universal do Windows (UWP) com animações suaves, taxa de quadros elevada e captura e reprodução de mídia de alto desempenho."
-ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
-ms.openlocfilehash: d3ddc07b214dcfe767d27bf24a36fe19d3534e6e
+translationtype: Human Translation
+ms.sourcegitcommit: 622df404dbf85740aa0029f53a0b4e0d541608f9
+ms.openlocfilehash: 8fd9ce5f43159ae00414d05ddb757c507aaa370d
 
 ---
 # Otimizar animações, mídia e imagens
@@ -42,11 +43,15 @@ Quase todas as animações na estrutura XAML são independentes por padrão, mas
 -   Fazer atualizações por quadro, que são, efetivamente, animações dependentes. Um exemplo disso é a aplicação de transformações no manipulador do evento [**CompositonTarget.Rendering**](https://msdn.microsoft.com/library/windows/apps/BR228127).
 -   Executando qualquer animação considerada independente em um elemento com a propriedade [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.cachemode) definida para **BitmapCache**. Isso é considerado dependente porque o cache deve ser rasterizado novamente para cada quadro.
 
-### Não anime um WebView ou um MediaElement
+### Não anime um WebView ou um MediaPlayerElement
 
 O conteúdo Web dentro de um controle [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702) não é renderizado diretamente pela estrutura XAML e requer trabalho extra para ser composto com o resto do cenário. Esse trabalho extra aumenta quando se está animando o controle em torno da tela e pode introduzir problemas de sincronização (por exemplo, o conteúdo HTML pode não se mover em sincronia com o resto do conteúdo XAML na página). Quando você precisar animar um controle **WebView**, alterne-o com um [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webviewbrush.aspx) pela duração da animação.
 
-Animar um [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) também é má ideia. Além do detrimento de desempenho, isso pode causar ruptura ou outros artefatos no conteúdo de vídeo sendo reproduzido.
+Animar um [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) também é má ideia. Além do detrimento de desempenho, isso pode causar ruptura ou outros artefatos no conteúdo de vídeo sendo reproduzido.
+
+> 
+            **Observação**   As recomendações neste artigo para **MediaPlayerElement** também se aplicam ao [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). 
+            **MediaPlayerElement** só está disponível no Windows 10, versão 1607, portanto se você está criando um aplicativo para uma versão anterior do Windows, precisará usar o **MediaElement**.
 
 ### Use animações infinitas com moderação
 
@@ -58,7 +63,8 @@ Adicionar um manipulador para [**CompositionTarget.Rendering**](https://msdn.mic
 
 O namespace [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/BR243232) inclui uma biblioteca de animações suaves de alto desempenho que têm aspecto consistente com outras animações do Windows. As classes relevantes têm "Theme" no nome e estão descritas em [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/Mt187350). Esta biblioteca é compatível com vários cenários de animação comuns, como a animação da primeira exibição do aplicativo e a criação de transições de estado e conteúdo. É recomendável usar essa biblioteca de animação sempre que possível, para aumentar o desempenho e a consistência para a interface do usuário do UWP.
 
-> **Observação**   A Biblioteca de Animação não pode animar todas as propriedades possíveis. Para todos os cenários XAML onde a biblioteca de animação não se aplica, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/Mt187354).
+> 
+            **Observação**   A Biblioteca de Animação não pode animar todas as propriedades possíveis. Para todos os cenários XAML onde a biblioteca de animação não se aplica, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/Mt187354).
 
 
 ### Animar propriedades CompositeTransform3D independentemente
@@ -77,11 +83,11 @@ Por exemplo, se seu aplicativo trabalha com um objeto [**RandomAccessStream**](h
 
 ### Exiba reprodução de vídeo em tela cheia quando possível.
 
-Em aplicativos UWP, sempre use a propriedade [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.isfullwindow) no [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) para habilitar e desabilitar a renderização em janela maximizada. Isso garante que otimizações de nível de sistema sejam usadas durante a reprodução de mídia.
+Em aplicativos UWP, sempre use a propriedade [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.isfullwindow.aspx) no [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) para habilitar e desabilitar a renderização em janela maximizada. Isso garante que otimizações de nível de sistema sejam usadas durante a reprodução de mídia.
 
-A estrutura XAML pode otimizar a exibição de conteúdo de vídeo quando é a única coisa sendo renderizada, resultando em uma experiência que usa menos energia e rende taxas de quadros mais elevadas. Para uma reprodução de mídia mais eficiente, configure o tamanho de um [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) para ser a largura e a altura da tela e não exiba outros elementos XAML
+A estrutura XAML pode otimizar a exibição de conteúdo de vídeo quando é a única coisa sendo renderizada, resultando em uma experiência que usa menos energia e rende taxas de quadros mais elevadas. Para uma reprodução de mídia mais eficiente, configure o tamanho de um **MediaPlayerElement** para ser a largura e a altura da tela e não exiba outros elementos XAML
 
-Há razões legítimas para sobrepor elementos XAML em um [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) que assume a largura e a altura totais da tela, por exemplo, legenda oculta ou controles de transporte momentâneos. Garantir que esses elementos sejam ocultados (por exemplo, configurar Visibility=”Collapsed”) quando não são necessários, volta as reproduções de mídia para seu estado mais eficiente.
+Há razões legítimas para sobrepor elementos XAML em um **MediaPlayerElement** que assume a largura e a altura totais da tela, por exemplo, legenda oculta ou controles de transporte momentâneos. Certifique-se de ocultar esses elementos (definir `Visibility="Collapsed"`) quando não são necessários para recolocar reprodução de mídia em seu estado mais eficiente.
 
 ### Desativação da exibição e economia de energia
 
@@ -97,29 +103,29 @@ Consulte algumas situações em que você deve liberar a solicitação de exibi�
 
 ### Colocar outros elementos ao lado de vídeo incorporado
 
-Com frequência, aplicativos oferecem uma exibição incorporada onde o vídeo é exibido em uma página. Agora, você obviamente perdeu a otimização em tela cheia, porque o [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) não tem o tamanho da página e há outros objetos XAML desenhados. Cuidado para não entrar sem querer nesse modo desenhando uma margem em torno de um **MediaElement**.
+Com frequência, aplicativos oferecem uma exibição incorporada onde o vídeo é exibido em uma página. Agora, você obviamente perdeu a otimização em tela cheia, porque o [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) não tem o tamanho da página e há outros objetos XAML desenhados. Cuidado para não entrar sem querer nesse modo desenhando uma margem em torno de um **MediaPlayerElement**.
 
-Não desenhe elementos XAML por cima do vídeo quando estiver em modo incorporado. Se fizer isso, a estrutura será forçada a fazer um trabalho extra para compor a cena.. Posicionar controles de transporte abaixo de um elemento de mídia incorporado em vez de em cima do vídeo é um bom exemplo de otimização para esta situação. Nesta imagem, a barra vermelha indica um conjunto de transportes de controle (reproduzir, pausar, parar etc.)..
+Não desenhe elementos XAML por cima do vídeo quando estiver em modo incorporado. Se fizer isso, a estrutura será forçada a fazer um trabalho extra para compor a cena.. Posicionar controles de transporte abaixo de um elemento de mídia incorporado em vez de em cima do vídeo é um bom exemplo de otimização para esta situação. Nesta imagem, a barra vermelha indica um conjunto de transportes de controle (reproduzir, pausar, parar etc.).
 
-![MediaElement com elementos sobrepostos](images/videowithoverlay.png) Não coloque estes controles em cima de mídia que não esteja em tela cheia. Em vez disso, posicione os controles de transporte em algum lugar fora da área onde a mídia estiver sendo renderizada. Na próxima imagem, os controles são colocados abaixo da mídia.
+![MediaPlayerElement com elementos sobrepostos](images/videowithoverlay.png) Não coloque estes controles em cima de mídia que não esteja em tela cheia. Em vez disso, posicione os controles de transporte em algum lugar fora da área onde a mídia estiver sendo renderizada. Na próxima imagem, os controles são colocados abaixo da mídia.
 
-![MediaElement com elementos vizinhos](images/videowithneighbors.png)
+![MediaPlayerElement com elementos vizinhos](images/videowithneighbors.png)
 
-### Atrasar a definição da fonte de um MediaElement
+### Atrasar a definição da fonte de um MediaPlayerElement
 
-Os mecanismos de mídia são objetos caros e a estrutura XAML atrasa o carregamento de DLLs e a criação de objetos maiores o quanto for possível. O [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) é forçado a fazer esse trabalho após sua origem ser definida através da propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.source) ou do método [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338). Configurá-los quando o usuário estiver realmente pronto para executar mídia atrasa a maioria do custo associado com o **MediaElement** o quanto for possível.
+Os mecanismos de mídia são objetos caros e a estrutura XAML atrasa o carregamento de DLLs e a criação de objetos maiores o quanto for possível. [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) é forçado a fazer esse trabalho depois que sua origem é definida por meio da propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx). Configurá-lo quando o usuário estiver realmente pronto para executar mídia atrasa a maioria do custo associado com o **MediaPlayerElement** o quanto for possível.
 
-### Configurar MediaElement.PosterSource
+### Definir MediaPlayerElement.PosterSource
 
-A configuração do [**MediaElement.PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.postersource) permite que o XAML libere alguns recursos GPU que, caso contrário, teriam sido usados. Essa API permite que um aplicativo use o mínimo de memória possível.
+A configuração do [**MediaPlayerElement.PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.postersource.aspx) permite que o XAML libere alguns recursos GPU que, caso contrário, teriam sido usados. Essa API permite que um aplicativo use o mínimo de memória possível.
 
 ### Aprimorar a depuração de mídia
 
 É sempre difícil fazer com que a limpeza seja uma tarefa com alta capacidade de resposta em plataformas de mídia. Geralmente, as pessoas conseguem fazer isso alterando o valor de um Controle Deslizante. Aqui estão duas dicas sobre como deixar isso o mais eficiente possível:
 
--   Associe o valor de um [**Slider**](https://msdn.microsoft.com/library/windows/apps/BR209614) a [**MediaElement.Position**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.position) ou atualize-o com base em um temporizador. Não faça as duas coisas. Caso escolha a última, certifique-se de usar uma frequência de atualização razoável para seu temporizador. A estrutura XAML atualiza o **MediaElement.Position** somente a cada 250 milissegundos durante a reprodução.
+-   Atualize o valor do [**Controle deslizante**](https://msdn.microsoft.com/library/windows/apps/BR209614) com base em um temporizador que consulta a [**Posição**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx) no [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx). Certifique-se de usar uma frequência de atualização sensata para seu temporizador. A propriedade **Posição** atualiza apenas a cada 250 milissegundos durante a reprodução.
 -   O tamanho da frequência de etapa no Controle Deslizante deve escalar com o comprimento do vídeo.
--   Assine os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointermoved.aspx), [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) no controle deslizante para configurar a propriedade [**MediaElement.PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.playbackrate) para 0 quando o usuário arrastar o elevador do controle deslizante.
+-   Assine os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointermoved.aspx), [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) no controle deslizante para configurar a propriedade [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackrate.aspx) como 0 quando o usuário arrastar o elevador do controle deslizante.
 -   No manipulador de evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx), configure manualmente a posição de mídia para o valor de posição do controle deslizante para alcançar ótima retenção do elevador enquanto arrasta.
 
 ### Corresponder a resolução do vídeo à resolução do dispositivo
@@ -134,9 +140,6 @@ Se você tiver controle total do processo de geração do conteúdo do vídeo, d
 
 Ao incluir efeitos de áudio curtos de baixa latência, por exemplo, em jogos, use arquivos WAV com dados PCM compactados para reduzir a sobrecarga de processamento típica para formatos de áudio compactados.
 
-### Descarregamento de áudio do hardware
-
-Para que o descarregamento de áudio do hardware seja automaticamente aplicado, o [**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.audiocategory) deve ser configurado para **ForegroundOnlyMedia** ou **BackgroundCapableMedia**. O descarregamento de áudio do hardware otimiza a renderização de áudio, o que pode melhorar a funcionalidade e a duração da bateria.
 
 ## Otimizar recursos de imagem
 
@@ -146,14 +149,14 @@ As imagens são capturadas em resoluções muito altas, o que pode resultar em a
 
 Não faça isto:
 
-```xml
+```xaml
 <Image Source="ms-appx:///Assets/highresCar.jpg" 
        Width="300" Height="200"/>    <!-- BAD CODE DO NOT USE.-->
 ```
 
 Em vez disso, faça o seguinte:
 
-```xml
+```xaml
 <Image>
     <Image.Source>
     <BitmapImage UriSource="ms-appx:///Assets/highresCar.jpg" 
@@ -194,19 +197,19 @@ Você sempre deve anexar uma [**BitmapImage**](https://msdn.microsoft.com/librar
 
 Exemplo 1 (bom) - Uniform Resource Identifier (URI) especificado em marcação.
 
-```xml
+```xaml
 <Image x:Name="myImage" UriSource="Assets/cool-image.png"/>
 ```
 
 Exemplo 2 marcação - URI especificado em code-behind.
 
-```xml
+```xaml
 <Image x:Name="myImage"/>
 ```
 
 Exemplo 2 code-behind (bom) - conectando o BitmapImage à arvore antes de definir o UriSource.
 
-```vb
+```csharp
 var bitmapImage = new BitmapImage();
 myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
@@ -214,7 +217,7 @@ bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.Rela
 
 Exemplo 2 code-behind (ruim) - configurando o UriSource do BitmapImage antes de conectá-lo à arvore.
 
-```vb
+```csharp
 var bitmapImage = new BitmapImage();
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 myImage.Source = bitmapImage;
@@ -256,9 +259,10 @@ Seu aplicativo deve usar [**SoftwareBitmap**](https://msdn.microsoft.com/library
 
 ### Use GetThumbnailAsync para miniaturas
 
-Um caso de uso para o dimensionamento de imagens é a criação de miniaturas. Embora você possa usar [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) e [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) para providenciar versões menores de imagens, a UWP fornece APIs ainda mais eficientes para a recuperação de miniaturas. [
+Um caso de uso para o dimensionamento de imagens é a criação de miniaturas. Embora você possa usar [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) e [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) para providenciar versões menores de imagens, a UWP fornece APIs ainda mais eficientes para a recuperação de miniaturas. 
+            [
               **GetThumbnailAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/BR227210) fornece as miniaturas para imagens que já têm o sistema de arquivo em cache. Isso proporciona um desempenho ainda melhor do que as APIs de XAML, pois a imagem não precisa ser aberta ou decodificada.
+            ](https://msdn.microsoft.com/library/windows/apps/BR227210) fornece as miniaturas para imagens que já têm o sistema de arquivo em cache. Isso oferece um desempenho ainda melhor do que as APIs do XAML porque a imagem não precisa ser aberta ou decodificada.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -305,6 +309,6 @@ Para evitar que as imagens sejam decodificadas mais de uma vez, assine a proprie
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

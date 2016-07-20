@@ -5,8 +5,9 @@ ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: Acessibilidade do teclado
 label: Keyboard accessibility
 template: detail.hbs
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: c5b5ca247e3999850d7bf9b81347c201204db7e8
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 6ac488b6db1ed838cc458c6adaa90dcca18d4c7d
 
 ---
 
@@ -155,7 +156,7 @@ Para obter um código de exemplo que mostra como escrever um manipulador de even
 ## Navegação de teclado para controles personalizados  
 Recomendamos o uso de teclas de direção como atalhos de teclado para navegar entre os elementos filho, nos casos onde os elementos filho têm uma relação espacial entre si. Se os nós de exibição de árvore tiverem subelementos separados para lidar com expansão e recolhimento e ativação de nós, use as teclas de seta para esquerda e direita para obter a funcionalidade de expansão e recolhimento. Se você tem um controle orientado que oferece suporte à passagem direcional dentro do conteúdo de controle, use as teclas de direção adequadas.
 
-Geralmente, você implementa a manipulação de chave personalizada para controles personalizados incluindo uma substituição dos métodos [**OnKeyDown**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967982.aspx) e [**OnKeyUp**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967983.aspx) como parte da lógica da classe.
+Geralmente, você implementa a manipulação de chave personalizada para controles personalizados incluindo uma substituição dos métodos [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982.aspx) e [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983.aspx) como parte da lógica da classe.
 
 <span id="An_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="an_example_of_a_visual_state_for_a_focus_indicator"/>
@@ -241,6 +242,6 @@ Os atalhos do teclado não são normalmente relevantes para os aplicativos no Wi
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

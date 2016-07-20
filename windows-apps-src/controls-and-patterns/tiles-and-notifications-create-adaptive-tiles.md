@@ -5,6 +5,7 @@ title: "Criar blocos adaptáveis"
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a6632c7b8fdee5320f35e316abd318193a254c51
 ms.openlocfilehash: 6cd4519007d1241cb7c411dade1a092140b598c4
 
@@ -18,7 +19,7 @@ ms.openlocfilehash: 6cd4519007d1241cb7c411dade1a092140b598c4
 
 Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP). Para obter a lista completa de elementos e atributos adaptáveis, consulte o [Esquema de blocos adaptáveis](tiles-and-notifications-adaptive-tiles-schema.md).
 
-(Se quiser, ainda pode usar os modelos predefinidos do [Catálogo de modelos de blocos do Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) durante a criação de notificações para o Windows 10.)
+(Se quiser, ainda pode usar os modelos predefinidos do [Catálogo de modelos de blocos do Windows8](https://msdn.microsoft.com/library/windows/apps/hh761491) durante a criação de notificações para o Windows10.)
 
 ## Noções básicas
 
@@ -201,7 +202,8 @@ TileContent content = new TileContent()
 
 Você pode controlar a identidade visual na parte inferior de um bloco dinâmico (o nome de exibição e o logotipo de canto) usando o atributo branding no conteúdo da notificação. Você pode optar por exibir "none", somente "name", somente "logo", ou ambos, com "nameAndLogo".
 
-**Observação**  O Windows Mobile não aceita o logotipo de canto, então "logo" e "nameAndLogo" são definidos como o padrão "name" no Mobile.
+
+            **Observação**  O Windows Mobile não aceita o logotipo de canto, então "logo" e "nameAndLogo" são definidos como o padrão "name" no Mobile.
 
  
 
@@ -279,7 +281,8 @@ TileContent content = new TileContent()
 
 Se você não especificar a identidade visual no conteúdo da notificação, as propriedades do bloco base determinarão a identidade visual. Se o bloco base mostrar o nome de exibição, a identidade visual padrão será "name". Caso contrário, a identidade visual padrão será "none" se o nome de exibição não for mostrado.
 
-**Observação**   Isso é uma mudança do Windows 8.x, no qual a identidade visual padrão era "logo".
+
+            **Observação**   Isso é uma mudança do Windows 8.x, no qual a identidade visual padrão era "logo".
 
  
 
@@ -288,7 +291,8 @@ Se você não especificar a identidade visual no conteúdo da notificação, as 
 
 Você pode substituir o nome de exibição de uma notificação digitando a cadeia de caracteres de texto de sua escolha com o atributo **displayName**. Assim como na identidade visual, você pode especificar isso no elemento [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afeta todo o conteúdo da notificação, ou no elemento [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afeta somente blocos individuais.
 
-**Problema conhecido**  No Windows Mobile, se você especificar um ShortName para Tile, o nome de exibição fornecido na notificação não será usado (o ShortName sempre será exibido). 
+
+            **Problema conhecido**  No Windows Mobile, se você especificar um ShortName para Tile, o nome de exibição fornecido na notificação não será usado (o ShortName sempre será exibido). 
 
 ```XML
 <tile>
@@ -431,7 +435,8 @@ new TileText()
 
 ![estilos de texto de blocos adaptáveis](images/adaptive-tiles-textstyles.png)
 
-**Observação**  O estilo padrão é caption quando hint-style é especificado.
+
+            **Observação**  O estilo padrão é caption quando hint-style é especificado.
 
  
 
@@ -523,7 +528,8 @@ Os grupos permitem declarar semanticamente que o conteúdo dentro do grupo está
 
 Para proporcionar a melhor experiência em dispositivos e telas, forneça vários grupos. Ter vários grupos permite que seu bloco se adapte a telas maiores.
 
-**Observação**  O único filho válido de um grupo é somente um subgrupo.
+
+            **Observação**  O único filho válido de um grupo é somente um subgrupo.
 
  
 
@@ -724,7 +730,8 @@ Se quiser que sua primeira coluna ocupe 20% da largura total e sua segunda colun
 
 ![subgrupos, com espessuras totalizando 100](images/adaptive-tiles-subgroups03.png)
 
-**Observação**  Uma margem de 8 pixels é automaticamente adicionada entre as colunas.
+
+            **Observação**  Uma margem de 8 pixels é automaticamente adicionada entre as colunas.
 
  
 
@@ -848,7 +855,8 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 O elemento &lt;image&gt; é usado para exibir imagens na notificação do bloco. As imagens podem ser embutidas no conteúdo do bloco (padrão), como uma imagem de plano de fundo atrás do conteúdo, ou como uma imagem de "espiar" animada na parte superior da notificação.
 
-**Observação**   Há [restrições sobre o tamanho do arquivo e as dimensões das imagens](https://msdn.microsoft.com/library/windows/apps/hh781198).
+
+            **Observação**   Há [restrições sobre o tamanho do arquivo e as dimensões das imagens](https://msdn.microsoft.com/library/windows/apps/hh781198).
 
  
 
@@ -1494,6 +1502,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: Enviar um item de trabalho ao pool de threads
 description: Aprenda a trabalhar em um thread separado enviando um item de trabalho ao pool de threads.
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: afb6d8b1b1ee5eeb99ba68e8b842436bd58619d0
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: d8b0f512d075510fae527e563ef99f24cc201577
 
 ---
 # Enviar um item de trabalho ao pool de threads
@@ -25,7 +25,8 @@ Crie um item de trabalho chamando [**RunAsync**](https://msdn.microsoft.com/libr
 
 Três versões de [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) estão disponíveis para que, opcionalmente, você possa especificar a prioridade do item de trabalho e controlar se ele é executado simultaneamente com outros itens de trabalho.
 
-**Observação**  Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
+
+              **Observação**  Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
 
 O exemplo a seguir cria um item de trabalho e fornece um lambda para fazer o trabalho:
 
@@ -197,7 +198,7 @@ Observe que o item de trabalho verifica a propriedade [**IAsyncInfo.Status**](ht
 
 ## Manipular a conclusão de item de trabalho
 
-Forneça um manipulador de conclusão definindo a propriedade [**IAsyncAction.Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) do item de trabalho. Forneça um representante (você pode usar um lambda ou uma função de representante) para lidar com a conclusão do item de trabalho. Por exemplo, use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o resultado.
+Forneça um manipulador de conclusão definindo a propriedade [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) do item de trabalho. Forneça um representante (você pode usar um lambda ou uma função de representante) para lidar com a conclusão do item de trabalho. Por exemplo, use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o resultado.
 
 O seguinte exemplo atualiza a interface do usuário com o resultado do item de trabalho enviado na etapa 1:
 
@@ -251,7 +252,7 @@ Observe que o manipulador de conclusão verifica se o item de trabalho foi cance
 
 ## Resumo e próximas etapas
 
-Você pode saber mais baixando o código deste guia de início rápido em [Criando uma amostra de item de trabalho ThreadPool](http://go.microsoft.com/fwlink/p/?LinkID=328569) escrito para Windows 8.1 e usando novamente o código-fonte em um aplicativo win\_unap para Windows 10.
+Você pode saber mais baixando o código deste guia de início rápido em [Criando uma amostra de item de trabalho ThreadPool](http://go.microsoft.com/fwlink/p/?LinkID=328569) escrito para Windows8.1 e usando novamente o código-fonte em um aplicativo win\_unap para Windows10.
 
 ## Tópicos relacionados
 
@@ -263,6 +264,6 @@ Você pode saber mais baixando o código deste guia de início rápido em [Crian
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -3,8 +3,9 @@ author: eliotcowley
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: "Este tópico fornece uma visão geral de como adicionar DRM (gerenciamento de direitos digitais) baseado em hardware PlayReady ao seu aplicativo UWP (Plataforma Universal do Windows)."
 title: DRM de hardware
-ms.sourcegitcommit: b782d1e3d4f5c90e4cac9fbad3877c5457a27c45
-ms.openlocfilehash: ec443d26652ba6c1ff5de2b96749825890d0228a
+translationtype: Human Translation
+ms.sourcegitcommit: 22ce05ab6f24c3ee41798732c35314b3dad87ea8
+ms.openlocfilehash: b7867317c37edf44d9edfaaf28d97a3f23b22814
 
 ---
 
@@ -14,7 +15,8 @@ ms.openlocfilehash: ec443d26652ba6c1ff5de2b96749825890d0228a
 
 Este tópico fornece uma visão geral de como adicionar DRM (gerenciamento de direitos digitais) baseado em hardware PlayReady ao seu aplicativo UWP (Plataforma Universal do Windows).
 
-> [!NOTE] O DRM do PlayReady baseado em hardware é compatível com uma grande quantidade de dispositivos, incluindo dispositivos com Windows e sem Windows, como televisores, telefones e tablets. Para um dispositivo Windows dar suporte ao DRM do PlayReady de Hardware, ele deve estar executando o Windows 10 e ter uma configuração de hardware com suporte.
+> [!NOTE] 
+> O DRM do PlayReady baseado em hardware é compatível com uma grande quantidade de dispositivos, incluindo dispositivos com Windows e sem Windows, como televisores, telefones e tablets. Para um dispositivo Windows dar suporte ao DRM do PlayReady de Hardware, ele deve estar executando o Windows 10 e ter uma configuração de hardware com suporte.
 
 Cada vez mais, os provedores de conteúdo estão migrando para proteções baseadas em hardware para conceder permissão para reproduzir conteúdo completo de alto valor em aplicativos. O suporte robusto a uma implementação de hardware do núcleo criptográfico foi adicionado ao PlayReady para atender a essa necessidade. Esse suporte permite a reprodução segura de conteúdo de alta definição (1080p) e ultra-alta definição (UHD) em várias plataformas de dispositivos. O material de chave (incluindo chaves privadas, chaves de conteúdo e qualquer outro material de chave usado para derivar ou desbloquear essas chaves) e amostras de vídeo compactadas e não compactadas descriptografadas são protegidos ao aproveitar a segurança do hardware.
 
@@ -30,7 +32,8 @@ Os detalhes da implementação do ambiente de execução confiável do Windows e
 
 Este tópico fornece uma breve lista de itens que devem ser considerados ao desenvolver aplicativos projetados para usar DRM de hardware. Conforme explicado em [DRM do PlayReady](playready-client-sdk.md#output-protection), com o HWDRM do PlayReady para Windows 10, todas as proteções de saída são impostas dentro da implementação do ambiente de execução confiável do Windows, que tem algumas consequências sobre os comportamentos de proteção de saída:
 
--   **Suporte para o nível de proteção de saída (OPL) para vídeo digital descompactado 270:** o HWDRM do PlayReady para Windows 10 não dá suporte para baixa resolução e irá impor que esse HDCP seja ativado. A Microsoft recomenda que conteúdo de alta definição para HWDRM tenha um OPL superior a 270 (embora não seja necessário). Além disso, a Microsoft recomenda que você defina restrição de tipo HDCP na licença (HDCP versão 2.2 no Windows 10).
+-   
+            **Suporte para o nível de proteção de saída (OPL) para vídeo digital descompactado 270:** o HWDRM do PlayReady para Windows 10 não dá suporte para baixa resolução e irá impor que esse HDCP seja ativado. A Microsoft recomenda que conteúdo de alta definição para HWDRM tenha um OPL superior a 270 (embora não seja necessário). Além disso, a Microsoft recomenda que você defina restrição de tipo HDCP na licença (HDCP versão 2.2 no Windows 10).
 -   Ao contrário do DRM de software, proteções de saída são impostas em todos os monitores com base no monitor de menor capacidade. Por exemplo, se o usuário tiver dois monitores conectados, em que um dos monitores oferece suporte à uma HDCP e o outro não, haverá falha na reprodução se a licença exigir uma HDCP, mesmo se o conteúdo só estiver sendo renderizado no monitor que oferece suporte à HDCP. No DRM de software (SWDRM), o conteúdo é reproduzido contanto que esteja sendo renderizado somente no monitor que oferece suporte à HDCP.
 -   Não há garantia de que o HWDRM seja usado pelo cliente e que seja seguro, a menos que as seguintes condições sejam atendidas pelas licenças e chaves de conteúdo:
     -   A licença usada para a chave de conteúdo de vídeo deve ter uma propriedade de nível mínimo de segurança de 3000.
@@ -97,6 +100,6 @@ Você também pode usar a propriedade [**PlayReadyStatics.PlayReadyCertificateSe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

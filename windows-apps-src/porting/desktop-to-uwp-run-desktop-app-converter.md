@@ -3,8 +3,9 @@ author: awkoren
 Description: "Execute o conversor de aplicativos da área de trabalho para converter um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms) em um aplicativo UWP (Plataforma Universal do Windows)."
 Search.Product: eADQiWindows 10XVcnh
 title: "Visualização Conversor de Aplicativos da Área de Trabalho (Projeto Centennial)"
-ms.sourcegitcommit: 07016fabb8b49e57dd0ae4ef68447451d31aa2dc
-ms.openlocfilehash: bc28197cccc0559f57abc8cb81e23bf241ca3716
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 8a22285467005722ad6ee5bf4f129a7dfdea944c
 
 ---
 
@@ -22,9 +23,14 @@ O conversor executa o instalador da área de trabalho em um ambiente isolado do 
 
 Esta seção descreve as mudanças entre versões do conversor de aplicativos da área de trabalho. 
 
-### 16/6/2016
+### 7/7/2016 (v0.1.22)
 
-* O Desktop App Converter (v0.1.20) corrige qualquer problema que impeça que as conversões sejam bem-sucedidas nas compilações mais recentes do Windows 10 Insider Preview. 
+* Suporte adicionado para detecção automática de extensões do shell do seu aplicativo da área de trabalho e declaração delas no AppXManifest de seu pacote UWP. Para saber mais sobre as extensões de área de trabalho, consulte [**Extensões de aplicativo da área de trabalho convertido**](desktop-to-uwp-extensions.md). 
+* Detecção de AppExecutable aprimorada para um grande conjunto de aplicativos. 
+
+### 16/6/2016 (v0.1.20)
+
+* Corrige problemas de bloqueio de conversões em compilações mais recentes do Windows 10 Insider Preview. 
 * Substituído o ```–CreateX86Package``` pelo ```–PackageArch```, o que permite que você especifique a arquitetura para o pacote gerado. 
 
 ### 8/6/2016
@@ -61,7 +67,7 @@ Seu computador deve ter as seguintes funcionalidades mínimas:
 + Conversão de Endereços de Segundo Nível (SLAT)
 
 ### Recursos recomendados
-+ [Software Development Kit do Windows (SDK do Windows) para Windows 10](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk)
++ [Software Development Kit do Windows (SDK do Windows) para Windows 10](http://go.microsoft.com/fwlink/?LinkId=615097)
 
 ## Configurar o conversor de aplicativos da área de trabalho   
 O conversor de aplicativos da área de trabalho depende de recursos do Windows 10 que são liberados como parte das compilações do Windows Insider Preview. Certifique-se de que você tem a compilação mais recente para utilizar o conversor.
@@ -114,7 +120,7 @@ PS C:\>.\DesktopAppConverter.ps1 -Installer C:\Installer\MyApp.exe
 ```
 
 ## Implantar seu AppX convertido
-Use o cmdlet [Add-AppxPackage](https://technet.microsoft.com/en-us/library/hh856048.aspx) no PowerShell para implantar um pacote de aplicativo assinado (.appx) em uma conta de usuário. Para assinar o pacote .appx, consulte a seção a seguir, "Assinando seu pacote .Appx". Além disso, você também pode incluir o parâmetro *Register* do cmdlet para instalar de uma pasta de arquivos não empacotados durante o processo de desenvolvimento. Para obter mais informações, consulte [Implantar e depurar seu aplicativo UWP convertido](desktop-to-uwp-deploy-and-debug.md).
+Use o cmdlet [Add-AppxPackage](https://technet.microsoft.com/library/hh856048.aspx) no PowerShell para implantar um pacote de aplicativo assinado (.appx) em uma conta de usuário. Para assinar o pacote .appx, consulte a seção a seguir, "Assinando seu pacote .Appx". Além disso, você também pode incluir o parâmetro *Register* do cmdlet para instalar de uma pasta de arquivos não empacotados durante o processo de desenvolvimento. Para obter mais informações, consulte [Implantar e depurar seu aplicativo UWP convertido](desktop-to-uwp-deploy-and-debug.md).
 
 ## Assinar seu pacote .AppX
 
@@ -126,7 +132,8 @@ C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -s
 C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
 C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
 ```
-**Observação:** quando você executar o MakeCert.exe e for solicitado a inserir uma senha, selecione **Nenhuma**.
+
+              **Observação:** quando você executar o MakeCert.exe e for solicitado a inserir uma senha, selecione **Nenhuma**.
 
 Para obter mais informações sobre assinatura e certificados, consulte:
 
@@ -224,7 +231,7 @@ O Desktop App Converter Preview agora dá suporte à criação de pacotes de apl
 
 ## Consulte também
 + [Baixar o conversor de aplicativos da área de trabalho](http://go.microsoft.com/fwlink/?LinkId=785437)
-+ [Traga seu aplicativo da área de trabalho para a Plataforma Universal do Windows](https://developer.microsoft.com/en-us/windows/bridges/desktop)
++ [Traga seu aplicativo da área de trabalho para a Plataforma Universal do Windows](https://developer.microsoft.com/windows/bridges/desktop)
 + [Transformando aplicativos da área de trabalho em UWP usando o conversor de aplicativos da área de trabalho](https://channel9.msdn.com/events/Build/2016/P504)
 + [Project Centennial: Trazendo aplicativos da área de trabalho existentes para a Plataforma Universal do Windows](https://channel9.msdn.com/events/Build/2016/B829)  
 + [Ponte UserVoice para área de trabalho (Project Centennial)](http://aka.ms/UserVoiceDesktopToUwp)
@@ -232,6 +239,6 @@ O Desktop App Converter Preview agora dá suporte à criação de pacotes de apl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -3,8 +3,9 @@ author: joannaleecy
 title: "Usando serviços de nuvem para jogos UWP"
 description: "Saiba mais sobre a implementação de nuvem como um back-end para seus jogos UWP."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
-ms.sourcegitcommit: b25f02dc4ebcf960882e64f66f0306a8e584ebbd
-ms.openlocfilehash: d9b252783213f0c6a82944729f98c84e21d56535
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 8bf42e9c2c2e074240eb8e7b94efdfbca65cc7f9
 
 ---
 #  Usando serviços de nuvem para jogos UWP
@@ -47,14 +48,15 @@ Saiba como outros desenvolvedores implementaram soluções de nuvem em seus jogo
     </tr>
     <tr>
         <td>[343 Industries](https://www.halowaypoint.com/)</td>
-        <td>_Halo 5: Guardians_ implementou [Halo: Spartan Companies](https://www.halowaypoint.com/spartan-companies) como sua plataforma de jogo social usando o Banco de Dados de Documentos do Microsoft Azure, que foi selecionado por sua velocidade e flexibilidade devido às funcionalidades de indexação automática.</td>
+        <td>
+              _Halo 5: Guardians_ implementou [Halo: Spartan Companies](https://www.halowaypoint.com/spartan-companies) como sua plataforma de jogo social usando o Banco de Dados de Documentos do Microsoft Azure, que foi selecionado por sua velocidade e flexibilidade devido às funcionalidades de indexação automática.</td>
         <td>
             <ul>
                 <li>Camada de dados escalonável para lidar com o gerenciamento/criação de grupos para jogos multijogadores <li>Integração de jogo e mídia social <li>Consultas em tempo real de dados por meio de vários atributos <li>Sincronização de conquistas e estatísticas de jogo </ul>
         </td>
         <td>
             <ul>
-                <li>[Jogo social implementado com o Banco de Dados de Documentos do Azure](https://azure.microsoft.com/en-us/blog/how-halo-5-guardians-implemented-social-gameplay-using-azure-documentdb/)</td>
+                <li>[Jogo social implementado com o Banco de Dados de Documentos do Azure](https://azure.microsoft.com/blog/how-halo-5-guardians-implemented-social-gameplay-using-azure-documentdb/)</td>
             </ul>
     </tr>
     <tr>
@@ -87,7 +89,8 @@ Saiba como outros desenvolvedores implementaram soluções de nuvem em seus jogo
     </tr>
     </td>
         <td>[Pixel Squad](http://www.crimecoast.com/)</td>
-        <td>A Pixel Squad desenvolveu _Crime Coast_ usando o mecanismo de jogo Unity e o Azure. _Crime Coast_ é um jogo de estratégia social disponível nas plataformas Android, iOS e Windows. O Armazenamento de Blobs do Azure, o Cache Redis do Azure Gerenciado, uma matriz VMs IIS de carga balanceada e o Hub de Notificação da Microsoft foram usados no jogo. Saiba como eles gerenciaram o escalonamento e lidaram com o inesperado número de 5.000 jogadores simultâneos.
+        <td>A Pixel Squad desenvolveu _Crime Coast_ usando o mecanismo de jogo Unity e o Azure. 
+              _Crime Coast_ é um jogo de estratégia social disponível nas plataformas Android, iOS e Windows. O Armazenamento de Blobs do Azure, o Cache Redis do Azure Gerenciado, uma matriz VMs IIS de carga balanceada e o Hub de Notificação da Microsoft foram usados no jogo. Saiba como eles gerenciaram o escalonamento e lidaram com o inesperado número de 5.000 jogadores simultâneos.
         </td>
         <td>
             <ul>
@@ -115,18 +118,18 @@ Enquanto produtores e designers de jogos discutem quais recursos e funcionalidad
 ### Guias de aprendizagem passo a passo
 
 * [Laboratórios de código do Build 2016: usar o back-end do Serviço de Aplicativo do Microsoft Azure e do Microsoft SQL Azure para salvar a pontuação do jogo](https://github.com/Microsoft-Build-2016/CodeLabs-GameDev-6-Azure)
-* [Projetar a estratégia de interação móvel do seu jogo](https://azure.microsoft.com/en-us/documentation/articles/mobile-engagement-gaming-scenario/)
-* [Usando o Azure Mobile Engagement para implantação Unity iOS](https://azure.microsoft.com/en-us/documentation/articles/mobile-engagement-unity-ios-get-started/)
+* [Projetar a estratégia de interação móvel do seu jogo](https://azure.microsoft.com/documentation/articles/mobile-engagement-gaming-scenario/)
+* [Usando o Azure Mobile Engagement para implantação Unity iOS](https://azure.microsoft.com/documentation/articles/mobile-engagement-unity-ios-get-started/)
 
 ### Noções básicas de IaaS, PaaS ou SaaS
 
 Primeiro, você precisa pensar no nível de serviço que é mais adequado para seu jogo. Saber as diferenças dos três serviços a seguir pode ajudá-lo a determinar a abordagem que você deseja usar na criação do seu back-end.
 
-* [IaaS (infraestrutura como serviço)](https://azure.microsoft.com/en-us/overview/what-is-iaas/)
+* [IaaS (infraestrutura como serviço)](https://azure.microsoft.com/overview/what-is-iaas/)
 
     A IaaS (infraestrutura como serviço) é uma infraestrutura de computação instantânea, provisionada e gerenciada pela Internet. Imagine ter a possibilidade de muitos computadores prontamente disponíveis para a rápida escala horizontal ou vertical, dependendo da demanda. A IaaS ajuda você a evitar o custo e a complexidade de comprar e gerenciar seus próprios servidores físicos e outra infraestrutura de datacenter.
 
-* [PaaS (plataforma como serviço)](https://azure.microsoft.com/en-us/overview/what-is-paas/)
+* [PaaS (plataforma como serviço)](https://azure.microsoft.com/overview/what-is-paas/)
 
     A PaaS (plataforma como serviço) é como a IaaS, mas também inclui o gerenciamento de infraestrutura como servidores, armazenamento e rede. Portanto, além de não comprar servidores físicos e infraestrutura de datacenter, você também não precisa comprar e gerenciar licenças de software, infraestrutura de aplicativos subjacente, middleware, ferramentas de desenvolvimento ou outros recursos.
 
@@ -201,6 +204,6 @@ Estas são algumas empresas que oferecem back-end de nuvem para jogos com base n
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

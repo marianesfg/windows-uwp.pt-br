@@ -1,10 +1,11 @@
 ---
-description: "Personalize seu aplicativo UWP para tipos específicos de entrada e dispositivos."
-title: "Design de entrada e dispositivo – Desenvolvimento de aplicativos do Windows"
+description: "Personalize seu aplicativo UWP para tipos específicos de entrada e dispositivos. Tire proveito dos comandos de voz e toque. Execute seus aplicativos no Xbox, telefone e até mesmo TV."
+title: "Design de entrada do aplicativo UWP e dispositivo – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
+keywords: device primer, app inputs, customize UWP application
 translationtype: Human Translation
-ms.sourcegitcommit: fa1567d3ff80dc9c9376736c7d25c2bb06e79cc9
-ms.openlocfilehash: f2055318fe67a0af2bcc009c6f9782029f9032f1
+ms.sourcegitcommit: 350de23331f7fe951304ba877c40e07feb424adc
+ms.openlocfilehash: 2d3f0588b56b26e125652c12eeca3028bfe6573e
 
 ---
 

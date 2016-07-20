@@ -3,8 +3,9 @@ author: Mtoepke
 title: Problemas conhecidos com a UWP no Xbox One Developer Preview
 description: 
 area: Xbox
-ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
-ms.openlocfilehash: 9a9180f8d6fcd51808310a7f8fbac986ca9c3817
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: e016be20af9a0d7a67fa383cbdc93083d12a1113
 
 ---
 
@@ -21,7 +22,8 @@ Para os desenvolvedores, isso significa que nem todas as ferramentas de desenvol
 
 A lista a seguir destaca alguns problemas conhecidos que podem ocorrer nessa versão, embora essa não seja uma lista completa. 
 
-**Queremos receber seu feedback**, portanto, relate todos os problemas que você encontrar no fórum [Developing Universal Windows apps](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop). 
+
+              **Queremos receber seu feedback**, portanto, relate todos os problemas que você encontrar no fórum [Developing Universal Windows apps](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop). 
 
 Se você ficar preso, leia as informações neste tópico, consulte [Perguntas frequentes](frequently-asked-questions.md)e use os fóruns para pedir ajuda.
 
@@ -44,17 +46,19 @@ public App() {
 }
 ```
 
-Para desativar modo de mouse em um aplicativo HTML/Javascript, siga este exemplo:
+Para desativar modo de mouse em um aplicativo HTML/JavaScript, siga este exemplo:
 
 ```code
 // Turn off mouse mode
 navigator.gamepadInputEmulation = "keyboard";
 ```
 
-> **Observação**
-            &nbsp;&nbsp;Nesta versão prévia para desenvolvedores, quando o modo de mouse é ativado, o movimento panorâmico com o joystick direito no controlador pode causar o desligamento do console. Se você encontrar esse problema, reinicie seu console.
+Para obter mais informações, incluindo como ativar a navegação direcional em um aplicativo HTML/JavaScript, consulte [Como desativar o modo do mouse](how-to-disable-mouse-mode.md#html).
 
-Para obter informações sobre o suporte ao modo de mouse, consulte o tópico [Projetando para TV e Xbox](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode). Este tópico inclui informações sobre como habilitar e desabilitar o modo de mouse, para que você possa escolher o comportamento certo para seu aplicativo.
+> 
+              **Observação**&nbsp;&nbsp;Nesta versão prévia para desenvolvedores, quando o modo de mouse é ativado, o movimento panorâmico com o joystick direito no controlador pode causar o desligamento do console. Se você encontrar esse problema, reinicie seu console.
+
+Para obter informações sobre o suporte ao modo de mouse, consulte o tópico [Projetando para TV e Xbox](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode). Este tópico inclui informações sobre como habilitar e desabilitar o modo de mouse, para que você possa escolher o comportamento certo para seu aplicativo.
 
 ## Você deve ter um usuário conectado para implantar um aplicativo (erro 0x87e10008)
 
@@ -110,7 +114,7 @@ Please use the forum to report any issues you see.-->
 
 ## Suporte ao DirectX 12
 
-A UWP no Xbox One dá suporte ao DirectX 11 Feature Level 10. Não há suporte para o DirectX 12 no momento. O Xbox One, como todos os consoles de jogos tradicionais, é um componente especializado de hardware que requer um SDK específico para acessar todo o seu potencial. Se você estiver trabalhando em um jogo que requeira acesso ao potencial máximo do hardware do Xbox One, pode se registrar no programa [ID@XBOX](http://www.xbox.com/en-us/Developers/id) para obter acesso a esse SDK, que inclui suporte ao DirectX 12.
+A UWP no Xbox One dá suporte ao DirectX 11 Feature Level 10. Não há suporte para o DirectX 12 no momento. O Xbox One, como todos os consoles de jogos tradicionais, é um componente especializado de hardware que requer um SDK específico para acessar todo o seu potencial. Se você estiver trabalhando em um jogo que requeira acesso ao potencial máximo do hardware do Xbox One, pode se registrar no programa [ID@XBOX](http://www.xbox.com/Developers/id) para obter acesso a esse SDK, que inclui suporte ao DirectX 12.
 
 <!-- ### Xbox One Developer Preview disables game streaming to Windows 10
 
@@ -121,8 +125,8 @@ To restore the game streaming feature, you must leave the developer preview. -->
 
 Por padrão, a área de exibição para aplicativos UWP no Xbox deve ser de baixo-relevo na área de segurança da TV. No entanto, o Xbox One Developer Preview contém um bug conhecido que faz com que a área segura de TV comece em [0, 0] e não em [_offset_, _offset_].
 
-> **Observação**
-            &nbsp;&nbsp;Isso se aplica somente a aplicativos UWP em Javascript.
+> 
+              **Observação**&nbsp;&nbsp;Isso se aplica somente a aplicativos UWP em JavaScript.
 
 A maneira mais fácil de contornar esse problema é desabilitar a área segura de TV, conforme mostrado no seguinte exemplo de JavaScript.
 
@@ -138,10 +142,12 @@ UWP apps and games running on Xbox One share resources with the system and other
 If you are running into memory or performance issues, this may be why. 
 For more details, see [System resources for UWP apps and games on Xbox One](system-resource-allocation.md).-->
 
+<!--
+## Networking using traditional sockets
 
-## Rede usando soquetes tradicionais
-
-Nessa Developer Preview, o acesso à rede de entrada e de saída do console que usa soquetes TCP/UDP tradicionais (WinSock, Windows.Networking.Sockets) não está disponível. Os desenvolvedores ainda podem usar HTTP e WebSockets. 
+In this developer preview, inbound and outbound network access from the console that uses traditional TCP/UDP sockets (WinSock, Windows.Networking.Sockets) is not available. 
+Developers can still use HTTP and WebSockets.
+--> 
 
 
 ## Cobertura de API UWP
@@ -230,6 +236,6 @@ This is caused by a failure in the WDP infrastructure on the console and can be 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

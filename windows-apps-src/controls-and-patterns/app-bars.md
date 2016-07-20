@@ -2,8 +2,9 @@
 author: Jwmsft
 label: App bars/command bars
 template: detail.hbs
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: 01cd10c72745ff4bd8204a9adaa8eebf5a892efe
+translationtype: Human Translation
+ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
+ms.openlocfilehash: c7107599529d5af5b118a46cb065106f08afe113
 
 ---
 
@@ -50,7 +51,8 @@ Esta é a mesma barra de comandos em seu estado aberto. Os rótulos identificam 
 ![Uma barra de comandos fechada](images/commandbar_anatomy_open.png)
 
 A barra de comandos é dividida em 4 áreas principais:
-- O botão "veja mais" \[•••\] é mostrado à direita da barra. Pressionar o botão "veja mais" \[•••\] tem 2 efeitos: revela os rótulos dos botões de comandos principais e abre o menu de estouro se quaisquer comandos secundários estiverem presentes. No SDK mais novo, o botão não ficará visível quando não houver comandos secundários nem rótulos ocultos. A propriedade [
+- O botão "veja mais" \[•••\] é mostrado à direita da barra. Pressionar o botão "veja mais" \[•••\] tem 2 efeitos: revela os rótulos dos botões de comandos principais e abre o menu de estouro se quaisquer comandos secundários estiverem presentes. No SDK mais novo, o botão não ficará visível quando não houver comandos secundários nem rótulos ocultos. 
+            A propriedade [
               **OverflowButtonVisibility**
             ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx) permite que os aplicativos alterem esse comportamento de se ocultarem automaticamente por padrão.
 - A área de conteúdo está alinhada à esquerda da barra. Ela será mostrada se a propriedade [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx) estiver preenchida.
@@ -95,7 +97,7 @@ Você pode adicionar comandos à coleção **SecondaryCommands**, mas esses iten
 
 A área de excedentes padrão é estilizada para ser distinta da barra. Você pode ajustar o estilo definindo a propriedade [**CommandBarOverflowPresenterStyle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.commandbaroverflowpresenterstyle.aspx) para um [estilo](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx) cujo destino seja [**CommandBarOverflowPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbaroverflowpresenter.aspx).
 
-Você pode mover programaticamente comandos entre PrimaryCommands e SecondaryCommands conforme necessário. {{> conteúdo interno = "Os comandos também podem entrar ou sair automaticamente do estouro com as alterações de largura da barra de comandos, por exemplo, quando os usuários redimensionam a janela do aplicativo. O estouro dinâmico está ativado por padrão, mas os aplicativos podem desativar esse comportamento alterando o valor da propriedade `IsDynamicOverflowEnabled`."}}
+Você pode mover programaticamente comandos entre PrimaryCommands e SecondaryCommands conforme necessário. 
 
 ### Botões da barra de aplicativos
 
@@ -141,7 +143,7 @@ Quando o rótulo quebra automaticamente no local indicado, ele tem esta aparênc
 
 Você pode adicionar qualquer elemento XAML à área de conteúdo definindo a propriedade **Content**. Se quiser adicionar mais de um elemento, você precisa colocá-los em um contêiner de painel e tornar o painel o único filho da propriedade Content.
 
-Quando há comandos principais e o conteúdo, os comandos principais têm precedência e poderão recortar o conteúdo. {{> conteúdo interno = "O conteúdo não será recortado quando o estouro dinâmico for ativado porque os comandos principais entrariam no menu de estouro liberando espaço para conteúdo."}}
+Quando há comandos principais e o conteúdo, os comandos principais têm precedência e poderão recortar o conteúdo. 
 
 Quando [**ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx) é **Compact**, o conteúdo poderá ser recortado se for maior do que o tamanho compacto da barra de comandos. Você deve tratar os eventos [**Opening**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opening.aspx) e [**Closed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closed.aspx) para mostrar ou ocultar partes da interface do usuário na área de conteúdo para que eles não sejam recortados. Consulte a seção [Estados abertos e fechados](#open-and-closed-states) para obter mais informações.
 
@@ -183,9 +185,12 @@ private void CommandBar_Closing(object sender, object e)
 ### ClosedDisplayMode
 
 Você pode controlar como a barra de comandos é mostrada em seu estado fechado definindo a propriedade [**ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx). Há 3 modos de exibição fechada à sua escolha:
-- **Compact**: o modo padrão. Mostra o conteúdo, os ícones de comando principal sem rótulos e o botão "veja mais" \[•••\].
-- **Minimal**: mostra apenas uma barra fina que age como o botão "veja mais" \[•••\]. O usuário pode pressionar em qualquer lugar na barra para abri-lo.
-- **Hidden**: a barra de comandos não é mostrada quando está fechada. Isso pode ser útil para mostrar os comandos contextuais com uma barra de comandos embutida. Nesse caso, você deve abrir a barra de comandos programaticamente definindo a propriedade **IsOpen** ou alterando ClosedDisplayMode para **Minimal** ou **Compact**.
+- 
+            **Compact**: o modo padrão. Mostra o conteúdo, os ícones de comando principal sem rótulos e o botão "veja mais" \[•••\].
+- 
+            **Minimal**: mostra apenas uma barra fina que age como o botão "veja mais" \[•••\]. O usuário pode pressionar em qualquer lugar na barra para abri-lo.
+- 
+            **Hidden**: a barra de comandos não é mostrada quando está fechada. Isso pode ser útil para mostrar os comandos contextuais com uma barra de comandos embutida. Nesse caso, você deve abrir a barra de comandos programaticamente definindo a propriedade **IsOpen** ou alterando ClosedDisplayMode para **Minimal** ou **Compact**.
 
 Aqui, uma barra de comandos é usada para manter os comandos de formatação simples para um [RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx). Quando a caixa de edição não tiver foco, os comandos de formatação podem distrair o usuário, por isso eles ficam ocultos. Quando a caixa de edição está sendo usada, ClosedDisplayMode da barra de comando é alterado para Compact para que os comandos de formatação fiquem visíveis.
 
@@ -214,7 +219,8 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 }
 ```
 
->**Observação**
+>
+            **Observação**
             &nbsp;&nbsp;A implementação dos comandos de edição fica fora do escopo deste exemplo. Para obter mais informações, consulte o artigo [RichEditBox](rich-edit-box.md).
 
 Embora os modos Minimal e Hidden sejam úteis em algumas situações, tenha em mente que os usuários poderão ficar confusos se todas as ações foram ocultadas.
@@ -241,7 +247,8 @@ As barras de comandos podem ser posicionadas nas seguintes regiões da tela, em 
 
 ![Exemplo 2 de colocação de barra de aplicativos](images/AppbarGuidelines_Placement2.png)
 
->**Dispositivos de toque**: caso seja necessário que a barra de comandos fique visível ao usuário quando o teclado virtual, ou painel de entrada virtual (SIP), for exibido, você poderá atribuir a barra de comandos à propriedade [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx) de uma página e ela será movida para permanecer visível quando o SIP estiver presente. Caso contrário, você deve colocar a barra de comandos embutida e posicionada em relação ao conteúdo do aplicativo.
+>
+            **Dispositivos de toque**: caso seja necessário que a barra de comandos fique visível ao usuário quando o teclado virtual, ou painel de entrada virtual (SIP), for exibido, você poderá atribuir a barra de comandos à propriedade [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx) de uma página e ela será movida para permanecer visível quando o SIP estiver presente. Caso contrário, você deve colocar a barra de comandos embutida e posicionada em relação ao conteúdo do aplicativo.
 
 ### Ações
 
@@ -281,20 +288,24 @@ Considere agrupamentos lógicos dos comandos como, por exemplo, colocar Responde
 
 ## Artigos relacionados
 
-**Para designers**
+
+            **Para designers**
             
           
             [Noções básicas de design de comando para aplicativos UWP](../layout/commanding-basics.md)
+          
 
-**Para desenvolvedores (XAML)**
+
+            **Para desenvolvedores (XAML)**
             
           
             [
               **CommandBar**
             ](https://msdn.microsoft.com/library/windows/apps/dn279427)
+          
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

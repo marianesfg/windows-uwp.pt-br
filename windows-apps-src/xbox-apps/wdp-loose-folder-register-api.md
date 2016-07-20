@@ -2,6 +2,7 @@
 author: WilliamsJason
 title: "Referência de API do registro de pasta flexível do Device Portal"
 description: "Saiba como acessar as APIs do registro de pasta flexível de maneira programática."
+translationtype: Human Translation
 ms.sourcegitcommit: ef0f1339b77a8d1f60a677b2ff19a63b68f0d6cd
 ms.openlocfilehash: 41e4cc67120b9e32fac34404ca918edcf58ba267
 
@@ -61,6 +62,6 @@ A terceira maneira é copiar uma pasta inteira por vez por meio de [/api/app/pac
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

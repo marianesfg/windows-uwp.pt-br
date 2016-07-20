@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: "Use este método na API de análise da Windows Store para obter dados de classificações agregadas para um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter classificações de aplicativo"
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: cf585c8a54f479eb91d7b9a5261dae4a83f0b675
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 6f6a94e030f1733ca4224766526386ef1956ff03
 
 ---
 
@@ -33,7 +34,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings``` |
 
  
 
@@ -41,11 +42,11 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
 
- 
+<span/> 
 
-### Corpo da solicitação
+### Parâmetros solicitados
 
 <table>
 <colgroup>
@@ -65,7 +66,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 <tbody>
 <tr class="odd">
 <td align="left">applicationId</td>
-<td align="left">string</td>
+<td align="left">cadeia de caracteres</td>
 <td align="left">A ID da Loja do aplicativo para o qual você deseja recuperar dados de classificações. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.</td>
 <td align="left">Sim</td>
 </tr>
@@ -123,10 +124,11 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 </tbody>
 </table>
 
+<span/>
  
 ### Campos de filtro
 
-O parâmetro *filter* do corpo da solicitação contém uma ou mais instruções que filtram as linhas da resposta. Cada instrução contém um campo e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**.
+O parâmetro *filter* da solicitação contém uma ou mais instruções que filtram as linhas da resposta. Cada instrução contém um campo e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**.
 
 Este é um exemplo de cadeia de caracteres *filter*: *filter=market eq 'US' and deviceType eq 'phone' and isRevised eq true*
 
@@ -183,7 +185,7 @@ Para obter uma lista dos campos com suporte, consulte a tabela a seguir. Valores
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### Exemplo de solicitação
 
@@ -208,7 +210,8 @@ Authorization: Bearer <your access token>
 | @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você pode usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10.000, mas houver mais de 10.000 linhas de dados de aquisição para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                                                                                                                                                                                                             |
 
- 
+<span/>
+
 ### Valores de classificação
 
 Os elementos na matriz *Value* contêm os seguintes valores.
@@ -227,8 +230,8 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 | threeStars      | number  | O número de classificações de três estrelas.                                                                                                                                                                                                    |
 | fourStars       | number  | O número de classificações de quatro estrelas.                                                                                                                                                                                                     |
 | fiveStars       | number  | O número de classificações de cinco estrelas.                                                                                                                                                                                                     |
-
  
+<span/>
 
 ### Exemplo de resposta
 
@@ -268,6 +271,6 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

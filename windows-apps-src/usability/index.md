@@ -1,10 +1,11 @@
 ---
-description: "As instruções de design e codificação nesta seção ajudam você a personalizar seu aplicativo UWP para tipos específicos de entradas e dispositivos."
+description: "Saiba como tornar seu aplicativo inclusivo e acessível para pessoas ao redor do mundo."
+keywords: uwp app accessibility, globalization, design inclusive apps, accessibility app requirements
 title: "Usabilidade em aplicativos UWP – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: f02713dfee278866af53c6dd529d2faa3e9f625c
+ms.sourcegitcommit: 5370dd078db81de606b7a4bbfcf6dd36b2280a17
+ms.openlocfilehash: 457ddacd80b3f9308b2eb66ce0ac2d448bb59ed2
 
 ---
 
@@ -12,11 +13,10 @@ ms.openlocfilehash: f02713dfee278866af53c6dd529d2faa3e9f625c
 
 # Usabilidade para aplicativos UWP
 
-Os aplicativos UWP processam automaticamente uma ampla variedade de entradas e funcionam em uma variedade de dispositivos — você não precisa de mais nada para habilitar a entrada por toque ou fazer seu aplicativo funcionar em um telefone, por exemplo. 
+São os pequenos toques, uma atenção extra aos detalhes, que podem transformar uma boa experiência do usuário em uma experiência do usuário realmente inclusiva que atenda as necessidades dos usuários em todo o mundo.
 
-Mas há momentos em que você pode querer otimizar seu aplicativo para certos tipos de entrada ou dispositivos. Por exemplo, se você estiver criando um aplicativo de pintura, convém personalizar a maneira como a entrada de caneta é processada. 
+As instruções de design e codificação nesta seção podem tornar seu aplicativo UWP mais inclusivo adicionando recursos de acessibilidade, habilitando a globalização e localização, permitindo que os usuários personalizem sua experiência e fornecendo ajuda quando os usuários precisarem.
 
-As instruções de design e codificação nesta seção ajudam você a personalizar seu aplicativo UWP para tipos específicos de entradas e dispositivos. 
 
 ## Acessibilidade
 
@@ -198,6 +198,6 @@ Não importa quão bem você projetou o aplicativo, alguns usuários precisarão
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

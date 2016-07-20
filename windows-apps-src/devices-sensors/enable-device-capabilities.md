@@ -4,8 +4,8 @@ ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
 title: Habilitar os recursos do dispositivo
 description: "Este tutorial descreve como declarar recursos do dispositivo no Microsoft Visual Studio. Isso permite que o aplicativo use câmeras, microfones, sensores de localização e outros dispositivos."
 translationtype: Human Translation
-ms.sourcegitcommit: 512b89027f6b707de346fffe104f165074fabcea
-ms.openlocfilehash: 01ccd8dea8b19a52867ce89ba2eb9a1fb2d2a72f
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 306e10ee9349f3742ac5a06229d22aad04457d7a
 
 ---
 # Habilitar os recursos do dispositivo
@@ -18,7 +18,7 @@ Este tutorial descreve como declarar recursos do dispositivo no Microsoft Visual
 ## Especificar as funcionalidades do dispositivo que o aplicativo vai usar
 
 
-Os aplicativos do Windows pedem que você especifique no manifesto do pacote do aplicativo quando vai usar determinados tipos de dispositivos. No Visual Studio, você pode declarar a maioria das funcionalidades usando o [Designer de Manifesto](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230259.aspx) ou pode adicioná-las manualmente conforme descrito em [Como especificar funcionalidades do dispositivo no manifesto do pacote (manualmente)](https://msdn.microsoft.com/library/windows/apps/Dn263092). Este tutorial pressupõe que você esteja usando o Designer de Manifesto.
+Os aplicativos do Windows pedem que você especifique no manifesto do pacote do aplicativo quando vai usar determinados tipos de dispositivos. No Visual Studio, você pode declarar a maioria das funcionalidades usando o [Designer de Manifesto](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx) ou pode adicioná-las manualmente conforme descrito em [Como especificar funcionalidades do dispositivo no manifesto do pacote (manualmente)](https://msdn.microsoft.com/library/windows/apps/Dn263092). Este tutorial pressupõe que você esteja usando o Designer de Manifesto.
 
 **Observação**  
 Alguns tipos de dispositivos, como impressoras, scanners e sensores, não precisam ser declarados no manifesto do pacote do aplicativo.
@@ -35,7 +35,8 @@ Alguns tipos de dispositivos, como impressoras, scanners e sensores, não precis
 | Geração de Código | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Permite que aplicativos gerem códigos dinamicamente. |
 | Autenticação de Empresa | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Essa funcionalidade está sujeita à política da Windows Store. Ela oferece a funcionalidade de conexão com recursos da intranet da empresa que exijam credenciais de domínio. Essa funcionalidade não costuma ser necessária para a maioria dos aplicativos. | 
 | Internet (Cliente) | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Oferece acesso de saída à Internet e às redes em locais públicos, como aeroportos e cafeterias. Por exemplo, redes da Intranet em que o usuário designou a rede como pública. A maioria dos aplicativos que exigem acesso à Internet deve usar essa funcionalidade. |
-| Internet (Cliente e Servidor) | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Oferece acesso de entrada e saída para a Internet e as redes em locais públicos, como aeroportos e cafeterias. Essa funcionalidade é um superconjunto de **Internet (Cliente)**. **Internet (Cliente)** não precisa estar habilitado caso essa funcionalidade também esteja habilitada. O acesso de entrada a portas críticas está sempre bloqueado. |
+| Internet (Cliente e Servidor) | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Oferece acesso de entrada e saída para a Internet e as redes em locais públicos, como aeroportos e cafeterias. Essa funcionalidade é um superconjunto de **Internet (Cliente)**. 
+              **Internet (Cliente)** não precisa estar habilitado caso essa funcionalidade também esteja habilitada. O acesso de entrada a portas críticas está sempre bloqueado. |
 | Localização| ![Disponível no Designer de Manifesto](images/ap-tools.png) | Oferece acesso à localização atual. Ela é obtida de um hardware dedicado, como um sensor de GPS no computador, ou de informações disponíveis na rede. | 
 | Microfone | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Oferece acesso a um feed de áudio do microfone. Dessa forma, o aplicativo pode gravar usando microfones conectados. | 
 | Biblioteca de Músicas | ![Disponível no Designer de Manifesto](images/ap-tools.png) | Oferece a funcionalidade para adicionar, alterar ou excluir arquivos na **Biblioteca de Músicas** para o computador local e os computadores do **Grupo Doméstico**. | 
@@ -77,6 +78,6 @@ A tabela a seguir conecta alguns dos recursos a APIs do Windows Runtime.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: 15d8cc6c-80f9-49b7-8036-0abf80ffebba
 description: "Saiba mais sobre outros recursos para desenvolver aplicativos com anúncios."
 title: Ajuda adicional
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 5229cf7ebb4133052c3e960fe1c81d6edeef8e57
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: bacda14bc48d6707a8f717c554fe7aaa22b202e0
 
 ---
 
@@ -19,7 +19,7 @@ Os recursos a seguir fornecem mais informações sobre o desenvolvimento de apli
 |  Tarefa    | Tópico |               
 |----------|-------|
 | Baixe os projetos de exemplo que demonstram como adicionar faixa e anúncios intersticiais a aplicativos.     |Consulte os [Exemplos de publicidade no GitHub](http://aka.ms/githubads).       |
-| Saiba mais sobre as oportunidades de monetização mais recentes para aplicativos do Windows     | Visite [Monetize seus aplicativos](https://developer.microsoft.com/en-us/windows/monetize).        |
+| Saiba mais sobre as oportunidades de monetização mais recentes para aplicativos do Windows     | Visite [Monetize seus aplicativos](https://developer.microsoft.com/windows/monetize).        |
 | Relatar um bug ou obter suporte assistido para publicidade     | Visite a [página de suporte](https://go.microsoft.com/fwlink/p/?LinkId=331508) e escolha **Publicidade no aplicativo**.        |
 | Obter suporte da comunidade     | Visite o [fórum](http://go.microsoft.com/fwlink/p/?LinkId=401266).       |
 | Saiba mais sobre desenvolvimento de aplicativos do Windows.     | Visite [Centro de Desenvolvimento do Windows](http://msdn.microsoft.com/windows/apps).        |
@@ -34,6 +34,6 @@ Os recursos a seguir fornecem mais informações sobre o desenvolvimento de apli
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

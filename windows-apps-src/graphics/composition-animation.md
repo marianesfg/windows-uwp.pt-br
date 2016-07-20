@@ -3,6 +3,7 @@ author: scottmill
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: "Animações de composição"
 description: "Muitas propriedades de objeto e efeito de composição podem ser animadas usando animações de quadro chave e expressão permitindo que as propriedades de um elemento de interface do usuário mudem ao longo do tempo ou com base em um cálculo."
+translationtype: Human Translation
 ms.sourcegitcommit: 62f0ea80940ff862d26feaa063414d95b048f685
 ms.openlocfilehash: e0088692b9de10c188f15b85b1f20b98cc113517
 
@@ -19,9 +20,11 @@ Este documento presume que você esteja familiarizado com as noções básicas s
    
  
 ##Tipos de animações de composição
-**Animações de quadro-chave** proporcionam experiências de animação tradicionais, *quadro por quadro* controladas por tempo. Os desenvolvedores podem definir explicitamente *pontos de controle* descrevendo os valores nos quais uma propriedade de animação precisa estar nos pontos específicos, na linha do tempo de animação. O mais importante é que você consegue usar funções de easing (também chamadas de interpoladores) para descrever como fazer a transição entre esses pontos de controle.  
 
-**Animações de expressão** são um novo tipo de animação introduzido na Camada Visual com a atualização de novembro do Windows 10 (compilação 10586). A ideia por trás das animações de expressão é que um desenvolvedor pode criar relacionamentos matemáticos entre as propriedades visuais e valores distintos que serão avaliados e atualizados a cada quadro. Os desenvolvedores podem fazer referência a propriedades de objetos de Composição ou Conjuntos de propriedades, usar auxiliares de função matemática e até mesmo fazer referência à Entrada para gerar esses relacionamentos matemáticos. As expressões tornam as experiências como cabeçalhos paralaxe e fixos possíveis e fáceis na plataforma Windows.  
+            **Animações de quadro-chave** proporcionam experiências de animação tradicionais, *quadro por quadro* controladas por tempo. Os desenvolvedores podem definir explicitamente *pontos de controle* descrevendo os valores nos quais uma propriedade de animação precisa estar nos pontos específicos, na linha do tempo de animação. O mais importante é que você consegue usar funções de easing (também chamadas de interpoladores) para descrever como fazer a transição entre esses pontos de controle.  
+
+
+            **Animações de expressão** são um novo tipo de animação introduzido na Camada Visual com a atualização de novembro do Windows 10 (compilação 10586). A ideia por trás das animações de expressão é que um desenvolvedor pode criar relacionamentos matemáticos entre as propriedades visuais e valores distintos que serão avaliados e atualizados a cada quadro. Os desenvolvedores podem fazer referência a propriedades de objetos de Composição ou Conjuntos de propriedades, usar auxiliares de função matemática e até mesmo fazer referência à Entrada para gerar esses relacionamentos matemáticos. As expressões tornam as experiências como cabeçalhos paralaxe e fixos possíveis e fáceis na plataforma Windows.  
 
 ##Por que animações de composição?
 **Desempenho**  
@@ -152,7 +155,8 @@ Um exemplo que insere um quadro-chave no ponto intermediário da animação:
 animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f));
 ```
 
-**Observação:** ao animar cor com Animações de quadro-chave, há alguns itens adicionais a serem lembrados:
+
+            **Observação:** ao animar cor com Animações de quadro-chave, há alguns itens adicionais a serem lembrados:
 1.  Você anexa StartAnimation ao Visual.Brush em vez de Visual, com **Cor** como o parâmetro de propriedade que você deseja animar.
 2.  O componente "value" do quadro-chave é definido pelo objeto Cores do namespace Windows. UI.
 3.  Você tem a opção de definir o espaço de cores pelo qual a interpolação passará definindo a propriedade InterpolationColorSpace. Os valores possíveis incluem: a.  CompositionColorSpace.Rgb b.  CompositionColorSpace.Hsl
@@ -193,7 +197,8 @@ animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f), easeIn);
 
 ##Iniciando e interrompendo animações de quadro-chave
 Depois de definir a animação e quadros-chave, você estará pronto para vincular sua animação. Ao iniciar sua animação, você especifica o Visual a ser animado, a propriedade de destino a ser animada e uma referência para a animação. Você pode fazer isso chamando a função StartAnimation(). Lembre-se de que chamar StartAnimation() em uma propriedade desconectará e removerá todas as animações em execução anteriormente.  
-**Observação:** a referência para a propriedade que você escolher para animar estará na forma de uma cadeia de caracteres.  
+
+            **Observação:** a referência para a propriedade que você escolher para animar estará na forma de uma cadeia de caracteres.  
 
 Um exemplo que define e inicia uma animação na propriedade Deslocamento do Visual:  
 ```cs
@@ -290,7 +295,8 @@ Animações de expressão são um novo tipo de animação que a equipe de compos
 
 **Então por que as animações de expressão são úteis?** O consumo de energia real das animações de expressão vem de sua capacidade de criar um relacionamento matemático que inclua referências a parâmetros ou propriedades em outros objetos. Isso significa que você pode ter uma equação que faça referência a valores de propriedades em outros objetos de composição, variáveis locais ou até mesmo valores compartilhados em conjuntos de propriedades de composição. Devido a esse modelo de referência e porque a equação é avaliada a cada quadro, se os valores que definem uma equação mudarem, a saída da equação também será alterada. Isso abre possibilidades maiores além das tradicionais animações de quadro-chave onde os valores devem ser distintos e predefinidos. Por exemplo, experiências como cabeçalhos fixos e paralaxe podem ser facilmente descrita usando as animações de expressão.
 
-**Observação:** usamos os termos "Expressão" ou "Cadeia de caracteres de expressão" como referência à sua equação matemática que define o objeto de animação de expressão.
+
+            **Observação:** usamos os termos "Expressão" ou "Cadeia de caracteres de expressão" como referência à sua equação matemática que define o objeto de animação de expressão.
 
 ##Criando e anexando sua animação de expressão
 Antes de abordarmos a sintaxe de criação de animações de expressão, há alguns princípios fundamentais a serem mencionados:  
@@ -667,6 +673,6 @@ _target.StartAnimation(“Opacity”, exp);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

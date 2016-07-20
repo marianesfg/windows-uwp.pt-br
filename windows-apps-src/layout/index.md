@@ -1,10 +1,11 @@
 ---
-description: "Estes artigos ajudarão você a projetar e codificar um aplicativo UWP que seja fácil de navegar e tenha um visual espetacular em uma variedade de dispositivos e tamanhos de tela."
-title: "Design de layout – Desenvolvimento de aplicativos do Windows"
+description: "Saiba como projetar e codificar um aplicativo UWP que seja fácil de navegar e tenha um visual espetacular em uma variedade de dispositivos e tamanhos de tela."
+title: "Design de layout do aplicativo UWP – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
+keywords: uwp app layout, universal windows platform, app design, interface
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: 35a8f78420256cb2da02d7fd4720939a16676600
+ms.sourcegitcommit: fa1567d3ff80dc9c9376736c7d25c2bb06e79cc9
+ms.openlocfilehash: 7a1233724b9b0fd9af709bbf114669fe102e6f0d
 
 ---
 
@@ -25,7 +26,7 @@ A estrutura, o layout de página e a navegação do aplicativo são a base da ex
 Ao desenvolver um aplicativo UWP, você cria uma interface do usuário adequada a vários dispositivos com tamanhos de tela diferentes. Este artigo fornece uma visão geral dos recursos relacionados à interface do usuário e dos benefícios dos aplicativos UWP e algumas dicas e truques para projetar uma interface do usuário responsiva. </p>
   </div>
   <div class="side-by-side-content-right">
-    ![An app running on multiple devices](images/rspd-reposition-type1-sm.png)
+    ![Um aplicativo executado em vários dispositivos](images/rspd-reposition-type1-sm.png)
   </div>
 </div>
 </div>
@@ -85,6 +86,6 @@ Além das propriedades de dimensão (largura, altura e restrições), os element
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

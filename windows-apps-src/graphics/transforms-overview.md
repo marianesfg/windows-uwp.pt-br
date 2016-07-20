@@ -3,8 +3,9 @@ author: Jwmsft
 ms.assetid: F46D5E18-10A3-4F7B-AD67-76437C77E4BC
 title: "Visão geral das transformações"
 description: "Saiba como usar as transformações na API do Windows Runtime&\\#160; alterando o sistema de coordenadas relativas de elementos na interface do usuário."
-ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: f6212143a83e7423550b6529ea62e25c00728f79
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 9e01a64f02d8a36e72c31263400130d0d808eb1b
 
 ---
 
@@ -21,18 +22,18 @@ Uma *transformação* define como mapear, ou transformar, pontos de um espaço d
 
 Pense em transformações em quatro amplas classificações: conversão, rotação, dimensionamento e distorção. Para a finalidade de usar APIs de elementos gráficos para mudar a aparência dos elementos da interface do usuário, normalmente é mais fácil criar transformações que só definem uma operação por vez. Assim, o Windows Runtime define uma classe discreta para cada uma destas classificações de transformação:
 
--   [
-              **TranslateTransform**
-            ](https://msdn.microsoft.com/library/windows/apps/BR243027): traduz um elemento no espaço x-y definindo valores para [**X**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.translatetransform.x.aspx) e [**Y**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.translatetransform.y).
--   [
-              **ScaleTransform**
-            ](https://msdn.microsoft.com/library/windows/apps/BR242940): dimensiona a transformação com base em um ponto central definindo valores para [**CenterX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.scaletransform.centerx.aspx), [**CenterY**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.scaletransform.centery.aspx), [**ScaleX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.scaletransform.scalex.aspx) e [**ScaleY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.scaleyproperty).
--   [
-              **RotateTransform**
-            ](https://msdn.microsoft.com/library/windows/apps/BR242932): gira no espaço x-y definindo valores para [**Angle**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.rotatetransform.angle.aspx), [**CenterX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.rotatetransform.centerx.aspx) e [**CenterY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.centery).
--   [
-              **SkewTransform**
-            ](https://msdn.microsoft.com/library/windows/apps/BR242950): distorce no espaço x-y definindo valores para [**AngleX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.skewtransform.anglex.aspx), [**AngleY**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.skewtransform.angley.aspx), [**CenterX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.skewtransform.centerx.aspx) e [**CenterY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.centeryproperty).
+-   
+              [
+              **TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027): traduz um elemento no espaço x-y definindo valores para [**X**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.translatetransform.x.aspx) e [**Y**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.translatetransform.y).
+-   
+              [
+              **ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940): dimensiona a transformação com base em um ponto central definindo valores para [**CenterX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.centerx.aspx), [**CenterY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.centery.aspx), [**ScaleX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.scalex.aspx) e [**ScaleY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.scaleyproperty).
+-   
+              [
+              **RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932): gira no espaço x-y definindo valores para [**Angle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.angle.aspx), [**CenterX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.centerx.aspx) e [**CenterY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.centery).
+-   
+              [
+              **SkewTransform**](https://msdn.microsoft.com/library/windows/apps/BR242950): distorce no espaço x-y definindo valores para [**AngleX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.skewtransform.anglex.aspx), [**AngleY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.skewtransform.angley.aspx), [**CenterX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.skewtransform.centerx.aspx) e [**CenterY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.centeryproperty).
 
 Destas, você provavelmente usará [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027) e [**ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940) com mais frequência para cenários da interface do usuário.
 
@@ -42,7 +43,8 @@ Você pode combinar as transformações, e há duas classes de Windows Runtime q
 
 No layout XAML, as transformações são aplicadas depois que o cálculo de layout é concluído, então os cálculos de espaço disponível e outras decisões de layout foram tomadas antes da aplicação das transformações. Como o layout vem primeiro, você às vezes obterá resultados inesperados se transformar elementos que estão em uma célula [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) ou um contêiner de layout semelhante que aloca espaço durante o layout. O elemento transformado poderá parecer truncado ou obscurecido porque está tentando desenhar em uma área que não calculou as dimensões pós-transformação ao dividir espaço em seu contêiner pai. Talvez seja necessário experimentar os resultados da transformação e ajustar algumas configurações. Por exemplo, em vez de usar o layout adaptável e o dimensionamento em estrela, você pode precisar alterar as propriedades **Center** ou declarar medidas de pixel fixo para o espaço do layout, a fim de verificar se o pai aloca espaço suficiente.
 
-**Observação sobre migração:**  O WPF (Windows Presentation Foundation) tinha uma propriedade **LayoutTransform** que aplicava transformações antes do cálculo de layout. Porém, o XAML do Windows Runtime não aceita uma propriedade **LayoutTransform**. (O Microsoft Silverlight não tinha essa propriedade também.)
+
+              **Migration note:** O WPF (Windows Presentation Foundation) tinha uma propriedade **LayoutTransform** que aplicava transformações antes do cálculo de layout. Porém, o XAML do Windows Runtime não aceita uma propriedade **LayoutTransform**. (O Microsoft Silverlight não tinha essa propriedade também.)
 
 ## <span id="Applying_a_transform_to_a_UI_element"></span><span id="applying_a_transform_to_a_ui_element"></span><span id="APPLYING_A_TRANSFORM_TO_A_UI_ELEMENT"></span>Aplicando uma transformação em um elemento de interface do usuário
 
@@ -56,18 +58,18 @@ Para fins de teste por pressionamento, um objeto para o qual uma transformação
 
 ## <span id="Other_transform_properties"></span><span id="other_transform_properties"></span><span id="OTHER_TRANSFORM_PROPERTIES"></span>Outras propriedades de uma transformação
 
--   [
-              **Brush.Transform**
-            ](https://msdn.microsoft.com/library/windows/apps/BR228082), [**Brush.RelativeTransform**](https://msdn.microsoft.com/library/windows/apps/BR228080): elas influenciam a maneira como [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) usa o espaço de coordenadas na área em que **Brush** é aplicado para definir propriedades visuais como primeiros planos e planos de fundo. Essas transformações não são relevantes para os pincéis mais comuns (que geralmente estão definindo cores sólidas com [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)), mas podem ser ocasionalmente úteis ao pintar áreas com [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) ou [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108).
--   [
-              **Geometry.Transform**
-            ](https://msdn.microsoft.com/library/windows/apps/BR210066): pode usar essa propriedade para aplicar uma transformação a uma geometria antes de usar essa geometria para um valor de propriedade [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/BR243356).
+-   
+              [
+              **Brush.Transform**](https://msdn.microsoft.com/library/windows/apps/BR228082), [**Brush.RelativeTransform**](https://msdn.microsoft.com/library/windows/apps/BR228080): elas influenciam a maneira como [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) usa o espaço de coordenadas na área em que **Brush** é aplicado para definir propriedades visuais como primeiros planos e planos de fundo. Essas transformações não são relevantes para os pincéis mais comuns (que geralmente estão definindo cores sólidas com [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)), mas podem ser ocasionalmente úteis ao pintar áreas com [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) ou [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108).
+-   
+              [
+              **Geometry.Transform**](https://msdn.microsoft.com/library/windows/apps/BR210066): pode usar essa propriedade para aplicar uma transformação a uma geometria antes de usar essa geometria para um valor de propriedade [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/BR243356).
 
 ## <span id="Animating_a_transform"></span><span id="animating_a_transform"></span><span id="ANIMATING_A_TRANSFORM"></span>Animando uma transformação
 
-[
-              Os objetos **Transform**
-            ](https://msdn.microsoft.com/library/windows/apps/BR243006) podem ser animados. Para animar uma **Transform**, aplique uma animação de um tipo compatível à propriedade que você quer animar. Isso normalmente significa que você está usando os objetos [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) ou [**DoubleAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimationusingkeyframes) para definir a animação, pois todas as propriedades das transformações são do tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Animações que afetam uma transformação que é usada para um valor [**UIElement.RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980) não são consideradas animações dependentes, mesmo se têm uma duração diferente de zero. Para saber mais sobre animações dependentes, consulte [Animações com storyboard](storyboarded-animations.md).
+
+              [
+              Os objetos **Transform**](https://msdn.microsoft.com/library/windows/apps/BR243006) podem ser animados. Para animar uma **Transform**, aplique uma animação de um tipo compatível à propriedade que você quer animar. Isso normalmente significa que você está usando os objetos [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) ou [**DoubleAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimationusingkeyframes) para definir a animação, pois todas as propriedades das transformações são do tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Animações que afetam uma transformação que é usada para um valor [**UIElement.RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980) não são consideradas animações dependentes, mesmo se têm uma duração diferente de zero. Para saber mais sobre animações dependentes, consulte [Animações com storyboard](storyboarded-animations.md).
 
 Se você animar as propriedades para produzir um efeito semelhante a uma transformação em termos da aparência visual líquida, por exemplo, animando a [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751) e [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718) de um [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) em vez de aplicar um [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)—essas animações são quase sempre tratadas como animações dependentes. Você teria de habilitar as animações e poderia haver problemas de desempenho significativos com a animação, principalmente se você estiver tentando dar suporte à interação do usuário enquanto esse objeto está sendo animado. Por isso, é preferível usar uma transformação e animá-la em vez de animar qualquer outra propriedade em que a animação seria tratada como uma animação dependente.
 
@@ -107,9 +109,9 @@ void StartAnimation (object sender, RoutedEventArgs e) {
 
 ## <span id="Accounting_for_coordinate_frames_of_reference_at_run_time"></span><span id="accounting_for_coordinate_frames_of_reference_at_run_time"></span><span id="ACCOUNTING_FOR_COORDINATE_FRAMES_OF_REFERENCE_AT_RUN_TIME"></span>Justificando quadros de referência de coordenadas em tempo de execução
 
-[
-              **UIElement**
-            ](https://msdn.microsoft.com/library/windows/apps/BR208911) tem um método chamado [**TransformToVisual**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.transformtovisual.aspx), que pode gerar uma [**Transform**](https://msdn.microsoft.com/library/windows/apps/BR243006) que correlaciona os quadros de referência de coordenadas de dois elementos de interface do usuário. Você pode usar esse método para comparar um elemento com o quadro de referência de coordenadas padrão do aplicativo se calcular o visual da raiz como primeiro parâmetro. Isso pode ser útil se você capturou um evento de entrada de um elemento diferente ou se está tentando prever o comportamento do layout sem na verdade solicitar um cálculo de layout.
+
+              [
+              **UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) tem um método chamado [**TransformToVisual**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.transformtovisual.aspx), que pode gerar uma [**Transform**](https://msdn.microsoft.com/library/windows/apps/BR243006) que correlaciona os quadros de referência de coordenadas de dois elementos de interface do usuário. Você pode usar esse método para comparar um elemento com o quadro de referência de coordenadas padrão do aplicativo se calcular o visual da raiz como primeiro parâmetro. Isso pode ser útil se você capturou um evento de entrada de um elemento diferente ou se está tentando prever o comportamento do layout sem na verdade solicitar um cálculo de layout.
 
 Dados de evento obtidos de eventos de ponteiro oferecem acesso a um método [**GetCurrentPoint**](https://msdn.microsoft.com/library/windows/apps/BR212141), em que é possível especificar um parâmetro *relativeTo* para mudar o quadro de referência de coordenadas para um elemento específico em vez do aplicativo padrão. Isso simplesmente aplica uma transformação de conversão internamente e transforma os dados de coordenadas x-y para você ao criar o objeto [**PointerPoint**](https://msdn.microsoft.com/library/windows/apps/BR242038) retornado.
 
@@ -117,7 +119,8 @@ Dados de evento obtidos de eventos de ponteiro oferecem acesso a um método [**G
 
 Uma transformação pode ser descrita em termos de uma matriz de transformação. Uma matriz 3x3 é usada para descrever as transformações em um plano x-y bidimensional. Matrizes de transformação afins podem ser multiplicadas para formar qualquer número de transformações lineares, como rotação e distorção, seguidas de conversão. A coluna final de uma matriz de transformação afim é igual a (0, 0, 1), portanto você precisa especificar apenas os membros das duas primeiras colunas na descrição matemática.
 
-A descrição matemática de uma transformação pode ser útil se você tiver conhecimentos matemáticos ou familiaridade com técnicas de programação de elementos gráficos que também usem matrizes para descrever transformações do espaço de coordenadas. Há uma classe derivada de [**Transform**](https://msdn.microsoft.com/library/windows/apps/BR243006)que permite expressar uma transformação diretamente em termos de sua matriz: [**MatrixTransform**](https://msdn.microsoft.com/library/windows/apps/BR210137). **MatrixTransform** tem uma propriedade [**Matrix**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.matrixtransform.matrix.aspx), que mantém uma estrutura que tem seis propriedades: [**M11**](https://msdn.microsoft.com/library/windows/apps/Hh673847), [**M12**](https://msdn.microsoft.com/library/windows/apps/Hh673853), [**M21**](https://msdn.microsoft.com/library/windows/apps/Hh673851), [**M22**](https://msdn.microsoft.com/library/windows/apps/Hh673849), [**OffsetX**](https://msdn.microsoft.com/library/windows/apps/Hh673810) e [**OffsetY**](https://msdn.microsoft.com/library/windows/apps/Hh673816). Cada propriedade [**Matrix**](https://msdn.microsoft.com/library/windows/apps/BR210127) usa um valor **Double** e corresponde a seis valores relevantes (colunas 1 e 2) de uma matriz de transformação afim.
+A descrição matemática de uma transformação pode ser útil se você tiver conhecimentos matemáticos ou familiaridade com técnicas de programação de elementos gráficos que também usem matrizes para descrever transformações do espaço de coordenadas. Há uma classe derivada de [**Transform**](https://msdn.microsoft.com/library/windows/apps/BR243006)que permite expressar uma transformação diretamente em termos de sua matriz: [**MatrixTransform**](https://msdn.microsoft.com/library/windows/apps/BR210137). 
+              **MatrixTransform** tem uma propriedade [**Matrix**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.matrixtransform.matrix.aspx), que mantém uma estrutura que tem seis propriedades: [**M11**](https://msdn.microsoft.com/library/windows/apps/Hh673847), [**M12**](https://msdn.microsoft.com/library/windows/apps/Hh673853), [**M21**](https://msdn.microsoft.com/library/windows/apps/Hh673851), [**M22**](https://msdn.microsoft.com/library/windows/apps/Hh673849), [**OffsetX**](https://msdn.microsoft.com/library/windows/apps/Hh673810) e [**OffsetY**](https://msdn.microsoft.com/library/windows/apps/Hh673816). Cada propriedade [**Matrix**](https://msdn.microsoft.com/library/windows/apps/BR210127) usa um valor **Double** e corresponde a seis valores relevantes (colunas 1 e 2) de uma matriz de transformação afim.
 
 |                                             |                                             |     |
 |---------------------------------------------|---------------------------------------------|-----|
@@ -133,9 +136,9 @@ Algumas ferramentas de design XAML que permitem aplicar operações de transform
 
 ## <span id="3-D_transforms"></span><span id="3-d_transforms"></span><span id="3-D_TRANSFORMS"></span>Transformações 3D
 
-No Windows 10, o XAML introduziu uma nova propriedade, [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx), que pode ser usada para criar efeitos 3D com interface de usuário. Para fazer isso, use [**PerspectiveTransform3D**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.media3d.perspectivetransform3d.aspx) para adicionar uma perspectiva 3D compartilhada ou "câmera" à sua cena e, em seguida, use [**CompositeTransform3D**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.media3d.compositetransform3d.aspx) para transformar um elemento no espaço 3D, como você usaria [**CompositeTransform**](https://msdn.microsoft.com/library/windows/apps/BR228105). Veja [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx) para transformações de uma discussão sobre como implementar 3D.
+No Windows 10, o XAML introduziu uma nova propriedade, [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx), que pode ser usada para criar efeitos 3D com interface de usuário. Para fazer isso, use [**PerspectiveTransform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.media3d.perspectivetransform3d.aspx) para adicionar uma perspectiva 3D compartilhada ou "câmera" à sua cena e, em seguida, use [**CompositeTransform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.media3d.compositetransform3d.aspx) para transformar um elemento no espaço 3D, como você usaria [**CompositeTransform**](https://msdn.microsoft.com/library/windows/apps/BR228105). Veja [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx) para transformações de uma discussão sobre como implementar 3D.
 
- Para efeitos 3D mais simples que se aplicam somente a um único objeto, a propriedade [**UIElement.Projection**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.projection) pode ser usada. Usar um [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/br210192) como o valor dessa propriedade é equivalente a aplicar uma transformação de perspectiva fixa e uma ou mais transformações 3D ao elemento. Esse tipo de transformação é descrito em mais detalhe em [Efeitos de perspectiva 3D para interface do usuário de XAML](3-d-perspective-effects.md).
+ Para efeitos 3D mais simples que se aplicam somente a um único objeto, a propriedade [**UIElement.Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection) pode ser usada. Usar um [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/br210192) como o valor dessa propriedade é equivalente a aplicar uma transformação de perspectiva fixa e uma ou mais transformações 3D ao elemento. Esse tipo de transformação é descrito em mais detalhe em [Efeitos de perspectiva 3D para interface do usuário de XAML](3-d-perspective-effects.md).
 
 ## <span id="related_topics"></span>Tópicos relacionados
 
@@ -154,6 +157,6 @@ No Windows 10, o XAML introduziu uma nova propriedade, [**UIElement.Transform3D*
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

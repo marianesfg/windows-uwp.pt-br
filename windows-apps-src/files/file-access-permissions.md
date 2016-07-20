@@ -4,8 +4,8 @@ ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: "Permissões de acesso a arquivo"
 description: "Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: abcd6c1747566c7f8464016fadcb5a0441652afb
 
 ---
 # Permissões de acesso a arquivo
@@ -19,7 +19,8 @@ Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. O
 
 Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais do sistema de arquivos:
 
--   **Diretório de instalação do aplicativo** A pasta onde o aplicativo está instalado no sistema do usuário.
+-   
+              **Diretório de instalação do aplicativo**. A pasta onde o aplicativo está instalado no sistema do usuário.
 
     Há duas maneiras principais de acessar arquivos e pastas no diretório de instalação de seu aplicativo:
 
@@ -98,11 +99,12 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
 
     Você não pode acessar as pastas locais, roaming ou temporária com o seletor de arquivos.
 
--   **Dispositivos removíveis.** Além disso, o aplicativo pode acessar alguns dos arquivos em dispositivos conectados por padrão. Esta é uma opção se o seu aplicativo usa a [extensão de Dispositivo AutoPlay](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464906.aspx#autoplay) para ser iniciada automaticamente quando os usuários conectam um dispositivo, como uma câmera ou pen drive USB, ao seu sistema. Os arquivos que seu aplicativo podem acessar são limitados a determinados tipos de arquivos que são especificados através de declarações Associação de Tipo de Arquivos no manifesto do aplicativo.
+-   **Dispositivos removíveis.** Além disso, o aplicativo pode acessar alguns dos arquivos em dispositivos conectados por padrão. Esta é uma opção se o seu aplicativo usa a [extensão de Dispositivo AutoPlay](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay) para ser iniciada automaticamente quando os usuários conectam um dispositivo, como uma câmera ou pen drive USB, ao seu sistema. Os arquivos que seu aplicativo podem acessar são limitados a determinados tipos de arquivos que são especificados através de declarações Associação de Tipo de Arquivos no manifesto do aplicativo.
 
     É claro que você também pode obter acesso a arquivos e pastas em um dispositivo removível chamando o seletor de arquivos (usando o [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) e o [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881)) e permitindo que o usuário escolha os arquivos e pastas para seu aplicativo acessar. Saiba como usar o seletor de arquivos em [Abrir arquivos e pastas com um seletor](quickstart-using-file-and-folder-pickers.md).
 
-    **Observação**  Para obter mais informações sobre como acessar um cartão SD em aplicativos móveis, consulte [Acessar o cartão SD](access-the-sd-card.md).
+    
+              **Observação**  Para obter mais informações sobre como acessar um cartão SD em aplicativos móveis, consulte [Acessar o cartão SD](access-the-sd-card.md).
 
      
 
@@ -126,9 +128,9 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
         );
         ```
  
-        [
-              **DownloadsFolder**
-            ](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) é sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver um arquivo existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo que foi criado. Esse arquivo é chamado `newFile` no exemplo.
+        
+              [
+              **DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) é sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver um arquivo existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo que foi criado. Esse arquivo é chamado `newFile` no exemplo.
 
     -   Você pode criar uma subpasta na pasta Downloads do usuário desta forma:
         > [!div class="tabbedCodeSnippets"]
@@ -144,15 +146,15 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
         );
         ```
  
-        [
-              **DownloadsFolder**
-            ](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver uma subpasta existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa a subpasta que foi criada. Esse arquivo é chamado `newFolder` no exemplo.
+        
+              [
+              **DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver uma subpasta existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa a subpasta que foi criada. Esse arquivo é chamado `newFolder` no exemplo.
 
     Se você criar um arquivo ou uma pasta na pasta Downloads, recomendamos adicionar esse item ao [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) do seu aplicativo, para que ele possa acessar prontamente esse item no futuro.
 
 ## Acessando locais adicionais
 
-Além dos locais padrão, o aplicativo pode acessar arquivos e pastas adicionais declarando as funcionalidades no manifesto do aplicativo (veja [Declarações de funcionalidade do aplicativo](https://msdn.microsoft.com/library/windows/apps/mt270968)), ou chamando um seletor de arquivos para permitir que o usuário escolha os arquivos e as pastas para o aplicativo acessar (veja [Abrir arquivos e pastas com um seletor](quickstart-using-file-and-folder-pickers.md)).
+Além dos locais padrão, o aplicativo pode acessar arquivos e pastas adicionais declarando as funcionalidades no manifesto do aplicativo (veja [Declarações de funcionalidades do aplicativo](https://msdn.microsoft.com/library/windows/apps/mt270968)), ou chamando um seletor de arquivos para permitir que o usuário escolha os arquivos e as pastas para o aplicativo acessar (veja [Abrir arquivos e pastas com um seletor](quickstart-using-file-and-folder-pickers.md)).
 
 A tabela a seguir lista locais adicionais que você pode acessar declarando os recursos e usando a API [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) associada:
 
@@ -170,6 +172,6 @@ A tabela a seguir lista locais adicionais que você pode acessar declarando os r
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

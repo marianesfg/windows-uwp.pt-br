@@ -3,8 +3,9 @@ author: jnHs
 Description: "A Windows Store oferece a Cobrança da Operadora Móvel como um método de pagamento para operadoras de celular que dão suporte a esse recurso."
 title: "Cobrança da operadora móvel"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
-ms.sourcegitcommit: 76ea880f7dd1e737b3b0640d10a138e0eb790802
-ms.openlocfilehash: d22d89523ff3089b3b56d1a85fa2c4b137389887
+translationtype: Human Translation
+ms.sourcegitcommit: 80a20f4f87ce2ef40ce4ff7c6551d74ac375da1c
+ms.openlocfilehash: bd70a3c5990909351f04ca4200f4ea522989d1e9
 
 ---
 
@@ -13,7 +14,8 @@ ms.openlocfilehash: d22d89523ff3089b3b56d1a85fa2c4b137389887
 
 A Windows Store oferece a Cobrança da Operadora Móvel como um método de pagamento para operadoras de celular que dão suporte a esse recurso. Se a operadora móvel de um cliente oferecer suporte a essa capacidade, o cliente pode fazer mais compras da Loja utilizando suas contas móveis.
 
-> **Observação** Se a operadora móvel do cliente oferecer a Cobrança da Operadora Móvel, mas o cliente não tiver essa opção em seu dispositivo, consulte estas [etapas de solução de problemas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
+> 
+            **Observação** Se a operadora móvel do cliente oferecer a Cobrança da Operadora Móvel, mas o cliente não tiver essa opção em seu dispositivo, consulte estas [etapas de solução de problemas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
 
  
 
@@ -30,6 +32,7 @@ A implementação do Windows 10 de Cobrança da Operadora Móvel tem suporte des
 |----------------|------------------|
 | Finlândia        | DNA, Elisa       |
 | Alemanha        | O2               |
+| Itália          | Wind             |
 | Noruega         | Telenor          |
 | Suíça    | Swisscom         |
 | Estados Unidos  | Sprint           |
@@ -116,6 +119,6 @@ Essa lista será atualizada regularmente conforme expandimos o suporte para a Co
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

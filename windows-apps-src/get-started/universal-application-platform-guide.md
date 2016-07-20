@@ -3,8 +3,9 @@ author: TylerMSFT
 title: Guia para aplicativos UWP (Plataforma Universal do Windows)
 description: Neste guia, saiba mais sobre os aplicativos UWP (Plataforma Universal do Windows) que podem ser executados em uma ampla variedade de dispositivos.
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
-ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
-ms.openlocfilehash: 191a7aef1a027747379c991e17afc1580a9ec549
+translationtype: Human Translation
+ms.sourcegitcommit: 4ad8dc5883b7edafa2c2579d3733eafba0b9cc1f
+ms.openlocfilehash: 8f4e906c9f1c685a5f6aeebd5fe0ebcc96ff9a7c
 
 ---
 
@@ -31,18 +32,17 @@ Como seu aplicativo UWP é executado em uma ampla variedade de dispositivos com 
 
 ## Famílias de dispositivo
 
-
 Aplicativos do Windows 8.1 e Windows Phone 8.1 são executados em um SO (sistema operacional): Windows ou Windows Phone. Com o Windows 10 não é mais preciso focar em um sistema operacional; em vez disso, você direciona seu aplicativo para uma ou mais famílias de dispositivos. Uma família de dispositivos identifica as APIs, as características do sistema e os comportamentos esperados entre dispositivos dentro da família de dispositivos. Ela também determina o conjunto de dispositivos nos quais seu aplicativo pode ser instalado na Loja. Aqui está a hierarquia de família de dispositivos.
 
 ![famílias de dispositivos](images/devicefamilytree.png)
 
 Uma família de dispositivos é um conjunto de APIs reunidas que recebe um nome e um número de versão. Uma família de dispositivos é a base de um sistema operacional. Computadores executam a sistema operacional, que é baseado em uma família de dispositivos desktops. Telefones, tablets e etc., executam o sistema operacional móvel, que é baseado na família de dispositivos móveis. E assim em diante.
 
-A família de dispositivos universais é especial. Não é, diretamente, a base de qualquer sistema operacional. Em vez disso, o conjunto de APIs na família de dispositivos universais é herdado por famílias de dispositivos filhos. As APIs da família de dispositivos universais, no entanto, têm garantia de estar presente em todo sistema operacional e consequentemente em todo dispositivo.
+A família de dispositivos universais é especial. Não é, diretamente, a base de qualquer sistema operacional. Em vez disso, o conjunto de APIs na família de dispositivos universais é herdado por famílias de dispositivos filhos. As APIs da família de dispositivos universais, no entanto, têm garantia de estar presente em todo sistema operacional e em todo dispositivo.
 
-Cada família de dispositivos filhos adiciona suas próprias APIs para aqueles que ela herda. A união resultante de APIs de uma família de dispositivos filhos tem a garantia de estar presente no sistema operacional com base naquela família de dispositivos e consequentemente em cada dispositivo executando o que o sistema operacional.
+Cada família de dispositivos filhos adiciona suas próprias APIs para aqueles que ela herda. A união resultante de APIs de uma família de dispositivos filhos tem a garantia de estar presente no sistema operacional com base naquela família de dispositivos e em cada dispositivo executando o que o sistema operacional.
 
-Uma vantagem das famílias de dispositivos é que seu aplicativo pode ser executado em qualquer ou até mesmo todas as variedades de dispositivos, de telefones, tablets e computadores desktop até consoles Surface Hubs e Xbox. Seu aplicativo também pode usar código adaptável para detectar e usar recursos de um dispositivo que estiverem fora da família de dispositivos universais dinamicamente.
+Uma vantagem das famílias de dispositivos é que seu aplicativo pode ser executado em qualquer ou até mesmo todas as variedades de dispositivos, de telefones, tablets, computadores desktop, Surface Hubs, Xbox e HoloLens. Seu aplicativo também pode usar código adaptável para detectar e usar recursos de um dispositivo que estiverem fora da família de dispositivos universais dinamicamente.
 
 A decisão sobre qual família de dispositivos (ou famílias) será destinado seu aplicativo, é você quem deve fazer. E essa decisão afeta seu aplicativo nesses aspectos importantes. Isto determina:
 
@@ -60,20 +60,19 @@ Para atingir a máxima variedade de dispositivos com o seu aplicativo e para que
 
 **Limitar seu aplicativo para um tipo de dispositivo**
 
-Você pode não querer que seu aplicativo seja executado em uma ampla variedade de dispositivos, talvez que seja especializado para, digamos, um computador desktop ou para um console Xbox. Nesse caso, você pode optar por direcionar seu aplicativo a uma das famílias de dispositivo filho. Por exemplo, se você estiver direcionado a família de dispositivos desktops, as APIs que estarão disponíveis para o seu aplicativo incluem as APIs herdadas de família de dispositivos universais e as APIs que são específicas para a família de dispositivos desktops.
+Você pode não querer que seu aplicativo seja executado em uma ampla variedade de dispositivos, talvez que seja especializado para um computador desktop ou para um console Xbox. Nesse caso, você pode optar por direcionar seu aplicativo a uma das famílias de dispositivo filho. Por exemplo, se você estiver direcionado a família de dispositivos desktops, as APIs que estarão disponíveis para o seu aplicativo incluem as APIs herdadas de família de dispositivos universais e as APIs que são específicas para a família de dispositivos desktops.
 
 **Limitar seu aplicativo a um subconjunto de todos os dispositivos possíveis**
 
-Em vez de se destinar à família de dispositivos universais ou visando uma das famílias de dispositivos filhos, você pode direcionar à duas (ou mais) famílias de dispositivos filhos. Direcionar a desktop e dispositivo móvel pode fazer sentido para o seu aplicativo. Ou desktop e Xbox. Ou desktop, Xbox e Surface Hub.
+Em vez de se destinar à família de dispositivos universais ou visando uma das famílias de dispositivos filhos, você pode direcionar à duas (ou mais) famílias de dispositivos filhos. Direcionar a desktop e dispositivo móvel pode fazer sentido para o seu aplicativo. Ou desktop e HoloLens. Ou desktop, Xbox, Surface Hub e assim por diante.
 
 **Excluir suporte para uma determinada versão de uma família de dispositivos**
 
-Em casos raros, você pode querer que seu aplicativo seja executado em todos os dispositivos exceto aqueles que com determinada versão de uma família de dispositivos específica. Por exemplo, digamos que seu aplicativo se destine a versão 10.0.x.0 da família de dispositivos universais. Quando houver alterações da versão do sistema operacional no futuro, digamos que altera para 10.0.x.2, nesse ponto você poderá especificar se seu aplicativo pode ser executado em todos os dispositivos exceto 10.0.x.1 de versão para Xbox, destinando seu aplicativo para 10.0.x.0 da versão universal e 10.0.x.1 do Xbox. Seu aplicativo estará disponível para o conjunto de versões da família de dispositivos no Xbox 10.0.x.1 (inclusive) e versões anteriores.
+Em casos raros, você pode querer que seu aplicativo seja executado em todos os dispositivos exceto aqueles que com determinada versão de uma família de dispositivos específica. Por exemplo, digamos que seu aplicativo se destine a versão 10.0.x.0 da família de dispositivos universais. Quando houver alterações da versão do sistema operacional no futuro, digamos que altera para 10.0.x.2, nesse ponto você poderá especificar se seu aplicativo pode ser executado em todos os dispositivos exceto 10.0.x.1 de versão para Xbox, destinando seu aplicativo para 10.0.x.0 da versão universal e 10.0.x.2 do Xbox. Seu aplicativo estará disponível para o conjunto de versões da família de dispositivos no Xbox 10.0.x.1 (inclusive) e versões anteriores.
 
 Por padrão, o Microsoft Visual Studio especifica **Windows.Universal** como a família de dispositivos de destino no arquivo de manifesto do pacote do aplicativo. Para especificar a família ou as famílias de dispositivos para as quais seu aplicativo é oferecido na Loja, configure manualmente o elemento [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) no arquivo Package.appxmanifest.
 
 ## Interface do usuário e entrada universal
-
 
 Um aplicativo UWP pode ser executado em vários tipos diferentes de dispositivos que possuem diferentes formas de entrada, resoluções de tela, densidade de DPI e outras características exclusivas. O Windows 10 oferece novos controles universais, painéis de layout e ferramentas para ajudá-lo a adaptar a interface do usuário aos dispositivos em que o aplicativo pode ser executado. Por exemplo, você pode adaptar a interface do usuário para tirar proveito da diferença na resolução da tela quando seu aplicativo é executado em um computador desktop contra um dispositivo móvel.
 
@@ -104,9 +103,9 @@ Para ajudá-lo a adaptar o layout da interface do usuário geral com base na qua
 
 ### Projetar a interface do usuário adaptável com os painéis adaptáveis
 
-Os painéis de layout especificam as posições e tamanhos para seus filhos, dependendo do espaço disponível. Por exemplo, o [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) chama seus filhos de forma sequencial (horizontal ou verticalmente). [
-              **Grid**
-            ](https://msdn.microsoft.com/library/windows/apps/br242704) é como uma grade CSS que coloca seus filhos em células.
+Os painéis de layout especificam as posições e tamanhos para seus filhos, dependendo do espaço disponível. Por exemplo, o [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) chama seus filhos de forma sequencial (horizontal ou verticalmente). 
+              [
+              **Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) é como uma grade CSS que coloca seus filhos em células.
 
 O novo [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/dn879546) implementa um estilo de layout que é definido pelas relações entre os elementos filho. Ele deve ser usado na criação de layouts de aplicativo que podem se adaptar a mudanças de resolução de tela. O **RelativePanel** facilita o processo de reorganização de elementos definindo relações entre os elementos, o que permite criar uma interface do usuário mais dinâmica sem o uso de layouts aninhados.
 
@@ -186,21 +185,21 @@ Você pode criar um Aplicativo Universal do Windows usando controles universais 
 
 As seguintes APIs dão acesso à entrada:
 
--   [
-              **CoreIndependentInputSource**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298460) é uma nova API que permite consumir dados brutos no thread principal ou em um thread em segundo plano.
--   [
-              **PointerPoint**
-            ](https://msdn.microsoft.com/library/windows/apps/br242038) unifica dados brutos de toque, mouse e caneta em um conjunto único, consistente, de interfaces e eventos que podem ser consumidos no thread principal ou no thread em segundo plano usando-se **CoreInput.**
--   [
-              **PointerDevice**
-            ](https://msdn.microsoft.com/library/windows/apps/br225633) é uma API de dispositivo que dá suporte a recursos de dispositivo de consulta de maneira que você possa determinar quais modalidades de entrada estão disponíveis no dispositivo.
+-   
+              [
+              **CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) é uma nova API que permite consumir dados brutos no thread principal ou em um thread em segundo plano.
+-   
+              [
+              **PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) unifica dados brutos de toque, mouse e caneta em um conjunto único, consistente, de interfaces e eventos que podem ser consumidos no thread principal ou no thread em segundo plano usando-se **CoreInput.**
+-   
+              [
+              **PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) é uma API de dispositivo que dá suporte a recursos de dispositivo de consulta de maneira que você possa determinar quais modalidades de entrada estão disponíveis no dispositivo.
 -   O novo controle XAML [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) e as APIs do Windows Runtime [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) permitem acessar dados de traço de tinta.
 
 ## Escrevendo código
 
 
-As opções de linguagem de programação para o seu [projeto do Windows 10 no Visual Studio](https://msdn.microsoft.com/en-us/library/windows/apps/dn609832.aspx#target_win10) incluem Visual C++, C#, Visual Basic e JavaScript. Para Visual C++, C# e Visual Basic, você pode usar XAML para uma experiência de interface do usuário nativa de total fidelidade. Para Visual C++, você pode optar por desenhar com DirectX ou também usar o XAML. Para JavaScript, a camada de apresentação será em HTML, e é claro, o HTML é um padrão da plataforma de toda a web. Grande parte do seu código e da interface do usuário será universal e ele será executado da mesma maneira em todos os lugares. No entanto, para código adaptado para famílias de dispositivos específicos e para interface do usuário adaptada para fatores forma específicos, você terá a opção de usar código e interface do usuário adaptáveis. Vamos dar uma olhada nesses casos diferentes.
+As opções de linguagem de programação para o seu [projeto do Windows 10 no Visual Studio](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx#target_win10) incluem Visual C++, C#, Visual Basic e JavaScript. Para Visual C++, C# e Visual Basic, você pode usar XAML para uma experiência de interface do usuário nativa de total fidelidade. Para Visual C++, você pode optar por desenhar com DirectX ou também usar o XAML. Para JavaScript, a camada de apresentação será em HTML, e é claro, o HTML é um padrão da plataforma de toda a web. Grande parte do seu código e da interface do usuário será universal e ele será executado da mesma maneira em todos os lugares. No entanto, para código adaptado para famílias de dispositivos específicos e para interface do usuário adaptada para fatores forma específicos, você terá a opção de usar código e interface do usuário adaptáveis. Vamos dar uma olhada nesses casos diferentes.
 
 **Chamar uma API que é implementada por sua família de dispositivos destinada**
 
@@ -262,10 +261,10 @@ Para obter a lista completa de APIs do Win32 disponíveis para aplicativos UWP, 
 
 ## Experiência do usuário
 
+Um Aplicativo Universal do Windows permite que você aproveite os recursos exclusivos do dispositivo no qual ele é executado. Seu aplicativo pode fazer uso de todo o poder de um dispositivo desktop, da interação natural de manipulação direta de um tablet (incluindo entrada por toque e caneta), da portabilidade e conveniência de dispositivos móveis, da capacidade de colaboração do [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365) e outros dispositivos que suportam aplicativos UWP.
 
-Um Aplicativo Universal do Windows permite que você aproveite os recursos exclusivos do dispositivo no qual ele é executado. Seu aplicativo pode fazer uso de todo o poder de um dispositivo desktop, da interação natural de manipulação direta de um tablet (incluindo entrada por toque e caneta), da portabilidade e conveniência de dispositivos móveis, e da capacidade de colaboração do [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365).
-
-Um bom [projeto](http://go.microsoft.com/fwlink/?LinkId=258848) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, bem como será sua aparência e como vai funcionar. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. [Noções básicas de design](https://dev.windows.com/en-us/design) apresenta você ao design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://msdn.microsoft.com/library/windows/apps/dn958439) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../input-and-devices/device-primer.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
+Um bom [projeto](http://go.microsoft.com/fwlink/?LinkId=258848) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, bem como será sua aparência e como vai funcionar. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. 
+              [Noções básicas de design](https://dev.windows.com/design) apresenta você ao design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://msdn.microsoft.com/library/windows/apps/dn958439) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../input-and-devices/device-primer.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
 
 ![dispositivos da plataforma Windows](images/1894834-hig-device-primer-01-500.png)
 
@@ -275,7 +274,8 @@ Além da interação em diferentes dispositivos, [planeje seu aplicativo](https:
 
 -   Considere como você pode dar suporte aos usuários na migração de um dispositivo para outro, selecionando onde eles pararam. Inclua [notificações](https://msdn.microsoft.com/library/windows/apps/mt187203) e [compras no aplicativo](https://msdn.microsoft.com/library/windows/apps/mt219684) em seu planejamento. Esses recursos devem funcionar em todos os dispositivos.
 
--   Projete o fluxo de trabalho usando [Noções básicas de design de navegação para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958438) para acomodar dispositivos móveis com tela pequena e grande. [Dispor a interface do usuário](https://msdn.microsoft.com/library/windows/apps/dn958435) para responder a diferentes tamanhos de tela e resoluções.
+-   Projete o fluxo de trabalho usando [Noções básicas de design de navegação para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958438) para acomodar dispositivos móveis com tela pequena e grande. 
+              [Dispor a interface do usuário](https://msdn.microsoft.com/library/windows/apps/dn958435) para responder a diferentes tamanhos de tela e resoluções.
 
 -   Considere se há recursos do seu aplicativo que não fazem sentido em uma tela pequena de dispositivo móvel. Também pode haver áreas que não fazem sentido em um computador desktop e exigem um dispositivo móvel para se destacar. Por exemplo, a maioria dos cenários em torno de [local](https://msdn.microsoft.com/library/windows/apps/mt219698) implica em um dispositivo móvel.
 
@@ -296,6 +296,6 @@ Veja [Usando o painel do Centro de Desenvolvimento do Windows unificado](../publ
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "Use esse método para renovar uma chave da Windows Store."
 title: Renovar uma chave ID da Windows Store
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: 6255346c568ed24e17c795834ab182f73707c4de
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: a3cef13e84c5bb06be4f3e3d4b2db4e02650df62
 
 ---
 
@@ -32,10 +33,10 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 
 | Tipo de chave    | Método | URI da solicitação                                              |
 |-------------|--------|----------------------------------------------------------|
-| Coleções | POST   | `https://collections.mp.microsoft.com/v6.0/b2b/keys/renew` |
-| Compra    | POST   | `https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew`    |
+| Coleções | POST   | ```https://collections.mp.microsoft.com/v6.0/b2b/keys/renew``` |
+| Compra    | POST   | ```https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew```    |
 
-<br/> 
+<span/>
 
 ### Cabeçalho da solicitação
 
@@ -45,7 +46,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
-<br/> 
+<span/>
 
 ### Corpo da solicitação
 
@@ -54,7 +55,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | serviceTicket | string | O token de acesso do Azure AD.        | Sim      |
 | chave           | string | A chave ID da Windows Store expirada. | Não       |
 
-<br/> 
+<span/> 
 
 ### Exemplo de solicitação
 
@@ -79,7 +80,7 @@ Host: collections.mp.microsoft.com
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
 | key       | string | A chave da Windows Store atualizada que pode ser usada em futuras chamadas das APIs de coleção ou compra da Windows Store. | Não       |
 
-<br/> 
+<span/>
 
 ### Exemplo de resposta
 
@@ -106,7 +107,7 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 | 401  | Não autorizado | AuthenticationTokenInvalid | O token de acesso do Azure AD é inválido. Em alguns casos, os detalhes de ServiceError irão conter mais informações, como quando o token está expirado ou falta a declaração *appid*. |
 | 401  | Não autorizado | InconsistentClientId       | A declaração *clientId* na chave ID da Windows Store e a declaração *appid* no token de acesso do Azure AD não correspondem.                                                                     |
 
-<br/> 
+<span/>
 
 ## Tópicos relacionados
 
@@ -118,6 +119,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

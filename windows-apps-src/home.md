@@ -2,10 +2,10 @@
 Description: "Aqui estão as informações de que você precisa para criar um aplicativo Universal do Windows que possa ser executado em qualquer dispositivo baseado no Windows 10, inclusive telefones, tablets e computadores."
 title: "Guias de instruções para aplicativos do Windows 10 - desenvolvimento de aplicativos do Windows"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
-redirect_url: https://developer.microsoft.com/en-us/windows/develop
+redirect_url: https://developer.microsoft.com/windows/develop
 translationtype: Human Translation
-ms.sourcegitcommit: 9be74892a98765a8a45482ce3f5cc5151ab772b1
-ms.openlocfilehash: 5d0cca643c26458165c388215d34eec76dfe8cf6
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 654eac5df1bd3309714348dcfc511850234bb0ae
 
 ---
 
@@ -33,7 +33,7 @@ Se você quiser uma introdução à Plataforma Universal do Windows (UWP) e como
 | [Dispositivos, sensores e consumo de energia](devices-sensors\index.md) | Integre diferentes dispositivos, como impressoras, câmeras e sensores em seu Aplicativo Universal do Windows para fornecer uma experiência de dispositivo conectado robusta e flexível para seus usuários. | 
 | [Empresa](enterprise/index.md) | Saiba sobre os principais recursos empresariais para aplicativos da Plataforma Universal (UWP) do Windows 10. |
 | [Arquivos, pastas e bibliotecas](files/index.md) | Saiba como ler e gravar texto e outros formatos de dados em arquivos, e gerenciar arquivos e pastas. Também encontre informações sobre configurações de leitura e gravação do aplicativo, sobre seletores de pasta e arquivos e sobre locais especiais em área restrita, como a biblioteca de vídeo/música. |
-| [Jogos e DirectX](https://msdn.microsoft.com/en-us/library/windows/apps/mt228375.aspx) | Compreenda as noções básicas de criação de jogos na nova UWP (Plataforma Universal do Windows). |
+| [Jogos e DirectX](https://msdn.microsoft.com/library/windows/apps/mt228375.aspx) | Compreenda as noções básicas de criação de jogos na nova UWP (Plataforma Universal do Windows). |
 | [Elementos gráficos e animação](graphics/index.md) | Aprimore o aplicativo Universal do Windows com elementos gráficos animações da interface do usuário que chamem a atenção dos usuários e mantenham o interesse na experiência do usuário. |
 | [Iniciando, retomada e as tarefas em segundo plano](launch-resume/index.md) | Crie tarefas em segundo plano e registre-se em eventos gerados pelo sistema para fornecer funcionalidade mesmo quando o seu aplicativo Universal do Windows for suspenso ou não estiver em execução. |
 | [Mapas e localização](maps-and-location/index.md) | Saiba como seu Aplicativo Universal do Windows pode usar o serviço Bing Maps e produzir elementos visuais de mapa precisos que agora incluem imagens aéreas 3D e modos de exibição no nível de rua. |
@@ -48,6 +48,6 @@ Se você quiser uma introdução à Plataforma Universal do Windows (UWP) e como
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

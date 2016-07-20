@@ -3,8 +3,10 @@ author: TylerMSFT
 title: "Criar e consumir um serviço de aplicativo"
 description: "Saiba como escrever um aplicativo UWP (Plataforma Universal do Windows) que pode fornecer serviços a outros aplicativos UWP e também como consumir esses serviços."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: ade51661fa6628c76b555316f645ec6622dd299a
+keywords: app to app
+translationtype: Human Translation
+ms.sourcegitcommit: d7d7edf8d1ed6ae1c4be504cd4827bb941f14380
+ms.openlocfilehash: 13b9456d1f6ee2b592db0e5e38b9f9e7fe41764c
 
 ---
 
@@ -98,14 +100,17 @@ O atributo **EntryPoint** identifica a classe que implementa o serviço, que imp
 
     Essa classe é onde o serviço de aplicativo fará seu trabalho.
 
-    **Run()** é chamado quando a tarefa em segundo plano é criada. Como as tarefas em segundo plano são encerradas após a conclusão de **Run**, o código é adiado para que a tarefa em segundo plano fique ativa para atender às solicitações.
+    
+            **Run()** é chamado quando a tarefa em segundo plano é criada. Como as tarefas em segundo plano são encerradas após a conclusão de **Run**, o código é adiado para que a tarefa em segundo plano fique ativa para atender às solicitações.
 
-    **OnTaskCanceled()** é chamado quando a tarefa é cancelada. A tarefa é cancelada quando o aplicativo cliente descarta [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704), o aplicativo cliente é suspenso, o sistema operacional é desligado ou suspenso, ou o sistema operacional está sem recursos para executar a tarefa.
+    
+            **OnTaskCanceled()** é chamado quando a tarefa é cancelada. A tarefa é cancelada quando o aplicativo cliente descarta [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704), o aplicativo cliente é suspenso, o sistema operacional é desligado ou suspenso, ou o sistema operacional está sem recursos para executar a tarefa.
 
 ## Escrever o código para o serviço de aplicativo
 
 
-**OnRequestedReceived()** é para onde o código do serviço de aplicativo vai. Substitua o stub **OnRequestedReceived()** em Class1.cs de MyAppService pelo código deste exemplo. Esse código obtém um índice para um item de estoque e passa-o, juntamente com uma sequência de comando, ao serviço para recuperar o nome e o preço do item de estoque especificado. O código de tratamento de erro foi removido por questão de brevidade.
+
+            **OnRequestedReceived()** é para onde o código do serviço de aplicativo vai. Substitua o stub **OnRequestedReceived()** em Class1.cs de MyAppService pelo código deste exemplo. Esse código obtém um índice para um item de estoque e passa-o, juntamente com uma sequência de comando, ao serviço para recuperar o nome e o preço do item de estoque especificado. O código de tratamento de erro foi removido por questão de brevidade.
 
 ```cs
 private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
@@ -159,9 +164,11 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 Observe que **OnRequestedReceived()** é **async** porque fazemos uma chamada de método que pode ser aguardado para [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722) neste exemplo.
 
-Um adiamento é obtido para que o serviço possa usar métodos **async** no manipulador OnRequestReceived. Isso garante que a chamada para OnRequestReceived não seja concluída até que o processamento da mensagem seja concluído. [
+Um adiamento é obtido para que o serviço possa usar métodos **async** no manipulador OnRequestReceived. Isso garante que a chamada para OnRequestReceived não seja concluída até que o processamento da mensagem seja concluído. 
+            [
               **SendResponseAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/dn921722) é usado para enviar um resposta junto com a conclusão. **SendResponseAsync** não sinaliza a conclusão da chamada. É a conclusão do adiamento que sinaliza para [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712) que OnRequestReceived foi concluído.
+            ](https://msdn.microsoft.com/library/windows/apps/dn921722) é usado para enviar um resposta junto com a conclusão. 
+            **SendResponseAsync** não sinaliza a conclusão da chamada. É a conclusão do adiamento que sinaliza para [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712) que OnRequestReceived foi concluído.
 
 Os serviços de aplicativo usam [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) para trocar informações. O tamanho dos dados que você pode passar é limitado apenas pelos recursos do sistema. Não há chaves predefinidas para uso em **ValueSet**. Você deve determinar quais valores de chave serão usados para definir o protocolo do serviço de aplicativo. O chamador deve ser escrito considerando esse protocolo. Neste exemplo, escolhemos uma chave chamada "Command" que contém um valor que indica se desejamos que o serviço de aplicativo forneça o nome do item de estoque ou seu preço. O índice do nome do estoque é armazenado na chave "ID". O valor retornado é armazenado na chave "Result".
 
@@ -391,6 +398,6 @@ namespace MyAppService
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

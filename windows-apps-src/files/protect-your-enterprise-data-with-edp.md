@@ -1,23 +1,25 @@
 ---
 author: TylerMSFT
-Description: "Este tópico mostra exemplos das tarefas de codificação necessárias para obter algumas das situações de Proteção de dados empresariais (EDP) relacionados a arquivos mais comuns."
+Description: "Este tópico mostra exemplos das tarefas de codificação necessárias para obter algumas das situações de EDP (proteção de dados empresariais) relacionados a arquivos mais comuns."
 MS-HAID: dev\_files.protect\_your\_enterprise\_data\_with\_edp
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: "Usar a Proteção de dados empresariais (EDP) para proteger arquivos"
+title: "Usar a EDP (proteção de dados empresariais) para proteger arquivos"
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 2d9b1ec4e39e5c8a100030184ee9287a0d97ea24
+ms.sourcegitcommit: 9b9e9ecb70f3a0bb92038ae94f45ddcee3357dbd
+ms.openlocfilehash: a31fc65599f43be5b302b568774a51ab77065300
 
 ---
 
-# Usar a Proteção de dados empresariais (EDP) para proteger arquivos
+# Usar a EDP (proteção de dados empresariais) para proteger arquivos
 
-__Observação__ A EDP (Proteção de Dados Empresariais) não pode ser aplicada ao Windows 10, Versão 1511 (compilação 10586) ou anterior.
+> [!NOTE]
+> A EDP (proteção de dados empresariais) não pode ser aplicada ao Windows 10, Versão 1511 (compilação 10586) ou anterior.
 
-Este tópico mostra exemplos das tarefas de codificação necessárias para obter algumas das situações de Proteção de dados empresariais (EDP) relacionados a arquivos mais comuns. Para a noção de desenvolvedor completa de como EDP está relacionada a arquivos, streams, área de transferência, rede, tarefas em segundo plano e proteção de dados sob bloqueio, consulte [Proteção de dados empresariais (EDP)](../enterprise/edp-hub.md).
+Este tópico mostra exemplos das tarefas de codificação necessárias para obter algumas das situações de EDP (proteção de dados empresariais) relacionados a arquivos mais comuns. Para obter o panorama completo para desenvolvedores de como a EDP está relacionada a arquivos, fluxos, buffers, área de transferência, redes, tarefas em segundo plano e proteção de dados sob bloqueio, veja [Proteção de dados empresariais](../enterprise/edp-hub.md).
 
-**Observação**  O [exemplo de EDP (proteção de dados empresariais)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) trata de muitas das situações demonstradas neste tópico.
+> [!NOTE]
+> O [exemplo de proteção de dados empresariais (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) abrange muitos dos cenários demonstrados neste tópico.
 
 ## Pré-requisitos
 
@@ -44,7 +46,7 @@ Você pode criar um aplicativo para hospedar os exemplos de código neste tópic
 string localFolderPath = ApplicationData.Current.LocalFolder.Path;
 ```
 
-Quando você tiver o caminho, poderá usar o Explorador de Arquivos para localizar facilmente os arquivos que o seu aplicativo cria. Dessa forma, você poderá confirmar que são protegidos e que são protegidos para a identidade correta.
+Depois que tiver o caminho, você poderá usar o Explorador de Arquivos para localizar facilmente os arquivos que o seu aplicativo cria. Dessa forma, você poderá confirmar que são protegidos e que são protegidos para a identidade correta.
 
 No Explorador de Arquivos, **Alterar opções de pasta e pesquisa** e na guia **Exibir**, marque **Mostrar arquivos criptografados em cor**. Use também o comando **Exibir**&gt;**Adicionar colunas** do Explorador de Arquivos para adicionar a coluna **Criptografados em** para poder ver a identidade da empresa na qual você está protegendo seus arquivos.
 
@@ -53,7 +55,7 @@ No Explorador de Arquivos, **Alterar opções de pasta e pesquisa** e na guia **
 
 Os dados empresariais podem ser inseridos em seu aplicativo de muitas formas, inclusive por meio de determinados pontos de extremidade da rede, de arquivos, da área de transferência ou do contrato de compartilhamento. Seu aplicativo pode criar novos dados empresariais também. Seja qual for o meio pelo qual seu aplicativo habilitado receba dados empresariais, o aplicativo precisa ter cuidado para proteger os dados para a identidade empresarial gerenciada quando mantiver os dados para um novo arquivo.
 
-As etapas básicas são para usar uma API de armazenamento regular para criar o arquivo, usar uma API de EDP para proteger o arquivo à identidade da empresa e depois (novamente, usando APIs de armazenamento regular) para gravar o arquivo. Tenha o cuidado de proteger o arquivo antes de gravá-lo (como mostrado no exemplo abaixo). Use o método [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) para proteger o arquivo. E, como sempre, só faz sentido proteger a uma identidade se tal identidade for gerenciada. Para saber mais sobre o porquê disso e sobre como o seu aplicativo pode determinar a identidade da empresa em que está sendo executado, consulte [Confirmando se uma identidade é gerenciada](../enterprise/edp-hub.md#confirming_an_identity_is_managed).
+As etapas básicas são para usar uma API de armazenamento regular para criar o arquivo, usar uma API de EDP para proteger o arquivo à identidade da empresa e depois (novamente, usando APIs de armazenamento regular) para gravar o arquivo. Tenha o cuidado de proteger o arquivo antes de gravá-lo (como mostrado no exemplo abaixo). Use o método [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) para proteger o arquivo. E, como sempre, só faz sentido proteger a uma identidade se tal identidade for gerenciada. Para saber mais sobre o porquê disso e sobre como o seu aplicativo pode determinar a identidade da empresa em que está sendo executado, consulte [Confirmando se uma identidade é gerenciada](../enterprise/edp-hub.md#confirming-an-identity-is-managed).
 
 ```CSharp
 using Windows.Security.EnterpriseData;
@@ -84,7 +86,8 @@ private async void SaveEnterpriseDataToFile(string enterpriseData, string identi
 ## Proteger dados empresariais em um novo arquivo (para uma tarefa em segundo plano)
 
 
-A API [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) que usamos na seção anterior só é adequada a aplicativos interativos. Para uma tarefa em segundo plano, seu código poderá ser executado enquanto estiver na tela de bloqueio. E a organização pode estar administrando uma política de "proteção de dados sob bloqueio" (DPL) segura, em que as chaves de criptografia necessárias para acessar recursos protegidos são temporariamente removidas da memória do dispositivo quando o dispositivo está bloqueado. Isso impede vazamentos de dados se o dispositivo for perdido. O recurso também remove chaves associadas com arquivos protegidos quando seus identificadores são fechados. No entanto, é possível criar novos arquivos protegidos durante a janela de bloqueio (o tempo entre o dispositivo ser bloqueado e desbloqueado) e acessá-los, mantendo o identificador de arquivo aberto. **StorageFolder.CreateFileAsync** fecha o identificador quando o arquivo é criado para que esse algoritmo não possa ser usado.
+A API [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) que usamos na seção anterior só é adequada a aplicativos interativos. Para uma tarefa em segundo plano, seu código poderá ser executado enquanto estiver na tela de bloqueio. E a organização pode estar administrando uma política de "proteção de dados sob bloqueio" (DPL) segura, em que as chaves de criptografia necessárias para acessar recursos protegidos são temporariamente removidas da memória do dispositivo quando o dispositivo está bloqueado. Isso impede vazamentos de dados se o dispositivo for perdido. O recurso também remove chaves associadas com arquivos protegidos quando seus identificadores são fechados. No entanto, é possível criar novos arquivos protegidos durante a janela de bloqueio (o tempo entre o dispositivo ser bloqueado e desbloqueado) e acessá-los, mantendo o identificador de arquivo aberto. 
+            **StorageFolder.CreateFileAsync** fecha o identificador quando o arquivo é criado para que esse algoritmo não possa ser usado.
 
 1.  Criar um novo arquivo usando **StorageFolder.CreateFileAsync**.
 2.  Criptografar usando **FileProtectionManager.ProtectAsync**.
@@ -249,26 +252,23 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 }
 ```
 
-**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> '!OBSERVAÇÃO] Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
 ## Tópicos relacionados
 
+- [Exemplo de EDP (proteção de dados empresariais)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
 
-[exemplo de EDP (proteção de dados empresariais)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
-
-[**Windows.Security.EnterpriseData namespace**](https://msdn.microsoft.com/library/windows/apps/dn279153)
-
- 
-
- 
+- [**Windows.Security.EnterpriseData namespace**](https://msdn.microsoft.com/library/windows/apps/dn279153)
 
 
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Jul16_HO1-->
 
 

@@ -1,10 +1,11 @@
 ---
-description: "Downloads relacionados ao design e à interface do usuário de aplicativos UWP."
+description: "Obtenha os downloads e ferramentas mais recentes para o layout da interface do usuário e designs de controle de aplicativos UWP."
+keywords: uwp app layout, UI, user interface designs, downloads, uwp tools
 title: "Downloads de design para aplicativos UWP – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: 4101b60c0f640fd54d67a8e57f0a06622c6ec85c
+ms.sourcegitcommit: 1370af75dcd45d52d0d31f57acb958d366f9bee5
+ms.openlocfilehash: 4ac5db9da4cd9ba0edff5b08dfff6ed6473ab4e3
 
 ---
 
@@ -108,6 +109,6 @@ Esta amostra se integra aos recursos do Windows com a automação doméstica int
 <b>Quer mais código?</b> Confira a página de exemplo do Windows para obter uma lista completa de todos as nossas amostras de aplicativos UWP. [Acesse o portal de amostras](https://developer.microsoft.com/samples)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

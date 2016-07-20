@@ -4,8 +4,8 @@ ms.assetid: 9A0F1852-A76B-4F43-ACFC-2CC56AAD1C03
 title: Imprima a partir de seu aplicativo
 description: "Aprenda a imprimir documentos a partir de um aplicativo Universal do Windows. Este tópico também mostra como imprimir páginas específicas."
 translationtype: Human Translation
-ms.sourcegitcommit: e5f61e562f7ec464fc07815b0bdd0ac938fc2fb2
-ms.openlocfilehash: 363c19cfc15a883c4b6d951c59c63187f4239dec
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: effb04f4bd8acdf9dfcc7847341c4a4fcc543bb5
 
 ---
 # Impressão a partir do seu aplicativo
@@ -21,13 +21,15 @@ ms.openlocfilehash: 363c19cfc15a883c4b6d951c59c63187f4239dec
 
 Aprenda a imprimir documentos a partir de um aplicativo Universal do Windows. Este tópico também mostra como imprimir páginas específicas. Para alterações mais avançadas à interface do usuário para visualização de impressão, consulte [Personalizar a interface do usuário para visualização de impressão](customize-the-print-preview-ui.md).
 
-**Dica**  A maioria dos exemplos neste tópico é baseada na amostra de impressão. Para ver o código completo, baixe a [amostra de impressão Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619984) do [repositório de amostras universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+
+              **Dica**  A maioria dos exemplos neste tópico é baseada na amostra de impressão. Para ver o código completo, baixe a [amostra de impressão Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619984) do [repositório de amostras universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
 ## Registrar-se para impressão
 
 A primeira etapa para adicionar impressão ao seu aplicativo é registrar-se para o contrato do botão Imprimir. Seu aplicativo deve fazer isso em cada tela na qual você quer que o seu cliente seja capaz de imprimir. Apenas a tela exibida para o usuário pode ser registrada para impressão. Se uma tela do seu aplicativo registrou-se para impressão, ela deve cancelar o registro para impressão quando ele existir. Se ela for substituída por outra tela, a próxima tela deve registrar-se em um novo contrato do botão Imprimir quando abrir.
 
-**Dica**  Se você precisar dar suporte à impressão em mais de uma página do seu aplicativo, pode colocar esse código de impressão em uma classe auxiliadora comum e fazer com que as páginas do aplicativo o reutilizem. Para um exemplo de como fazer isso, veja a classe `PrintHelper` na [amostra de impressão UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984).
+
+              **Dica**  Se você precisar dar suporte à impressão em mais de uma página do seu aplicativo, pode colocar esse código de impressão em uma classe auxiliadora comum e fazer com que as páginas do aplicativo o reutilizem. Para um exemplo de como fazer isso, veja a classe `PrintHelper` na [amostra de impressão UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984).
 
 Primeiro, declare o [**PrintManager**](https://msdn.microsoft.com/library/windows/apps/BR226426) e [**PrintDocument**](https://msdn.microsoft.com/library/windows/apps/BR243314). O tipo **PrintManager** está no namespace [**Windows.Graphics.Printing**](https://msdn.microsoft.com/library/windows/apps/BR226489) juntamente com tipos que suportam outras funcionalidades de impressão do Windows. O tipo **PrintDocument** está no namespace [**Windows.UI.Xaml.Printing**](https://msdn.microsoft.com/library/windows/apps/BR243325) juntamente com outros tipos que suportam a preparação de conteúdos XAML para impressão. Você pode facilitar a gravação do seu código de impressão adicionando as seguintes declarações **using** ou **Imports** à sua página.
 
@@ -90,7 +92,8 @@ Adicione um botão Imprimir no local da tela do aplicativo onde você quer que e
 <Button x:Name="InvokePrintingButton" Content="Print" Click="OnPrintButtonClick"/>
 ```
 
-Em seguida, adicione um manipulador de eventos ao código do seu aplicativo para manipular o evento de clique. Use o método [**ShowPrintUIAsync**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printmanager.showprintuiasync) para começar a imprimir a partir do seu aplicativo. **ShowPrintUIAsync** é um método assíncrono que exibe a janela de impressão adequada. Se a impressão não puder ser executada no momento, o método lançará uma exceção. Recomendamos capturar essas exceções e permitir que o usuário saiba quando a impressão não pode continuar, conforme mostrado aqui.
+Em seguida, adicione um manipulador de eventos ao código do seu aplicativo para manipular o evento de clique. Use o método [**ShowPrintUIAsync**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printmanager.showprintuiasync) para começar a imprimir a partir do seu aplicativo. 
+              **ShowPrintUIAsync** é um método assíncrono que exibe a janela de impressão adequada. Se a impressão não puder ser executada no momento, o método lançará uma exceção. Recomendamos capturar essas exceções e permitir que o usuário saiba quando a impressão não pode continuar, conforme mostrado aqui.
 
 ```csharp
 async private void OnPrintButtonClick(object sender, RoutedEventArgs e)
@@ -118,7 +121,7 @@ Neste exemplo, uma janela de impressão é exibida no manipulador de eventos par
 
 ## Formatar o conteúdo do seu aplicativo
 
-Quando **ShowPrintUIAsync** é chamado, o evento [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) é acionado. O manipulador de evento **PrintTaskRequested** mostrado nesta etapa cria um [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436) chamando o método [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.printing.printtaskrequest.createprinttask.aspx) e passa o título para a página de impressão e o nome de uma delegação [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source). Observe que, neste exemplo, o **PrintTaskSourceRequestedHandler** é definido de forma embutida. O **PrintTaskSourceRequestedHandler** fornece o conteúdo formatado para impressão e é descrito depois.
+Quando **ShowPrintUIAsync** é chamado, o evento [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) é acionado. O manipulador de evento **PrintTaskRequested** mostrado nesta etapa cria um [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436) chamando o método [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtaskrequest.createprinttask.aspx) e passa o título para a página de impressão e o nome de uma delegação [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source). Observe que, neste exemplo, o **PrintTaskSourceRequestedHandler** é definido de forma embutida. O **PrintTaskSourceRequestedHandler** fornece o conteúdo formatado para impressão e é descrito depois.
 
 Neste exemplo, um manipulador de conclusão também é definido para capturar erros. É uma boa ideia lidar com eventos de conclusão, pois o seu aplicativo pode informar o usuário se um erro tiver ocorrido e fornecer as possíveis soluções. Da mesma forma, o seu aplicativo poderia usar um evento de conclusão que indica etapas subsequentes para o usuário seguir após o trabalho de impressão ser bem-sucedido.
 
@@ -148,7 +151,8 @@ protected virtual void PrintTaskRequested(PrintManager sender, PrintTaskRequeste
 
 Depois que a tarefa de impressão é criada, o [**PrintManager**](https://msdn.microsoft.com/library/windows/apps/BR226426) exige uma coleção de páginas de impressão para mostras na IU de visualização de impressão acionando o evento [**Paginate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.paginate). Isso corresponde ao método **Paginate** da interface **IPrintPreviewPageCollection**. O manipulador de eventos criado durante o registro será chamado dessa vez.
 
-**Importante**  Se o usuário alterar as configurações de impressão, o manipulador de evento de paginação será chamado novamente para permitir que você redirecione o fluxo do conteúdo. Para a melhor experiência de usuário, é recomendável verificar as configurações antes de você redirecionar o fluxo do conteúdo e evitar a reinicialização do conteúdo paginado quando não é necessário.
+
+              **Importante**  Se o usuário alterar as configurações de impressão, o manipulador de evento de paginação será chamado novamente para permitir que você redirecione o fluxo do conteúdo. Para a melhor experiência de usuário, é recomendável verificar as configurações antes de você redirecionar o fluxo do conteúdo e evitar a reinicialização do conteúdo paginado quando não é necessário.
 
 No manipulador de evento [**Paginate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.paginate) (o método `CreatePrintPreviewPages` na [amostra de impressão UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984)), crie as páginas para mostrar na IU de visualização de impressão e mandar para a impressora. O código usado para preparar o conteúdo do seu aplicativo para impressão é específico para o aplicativo e o conteúdo que você imprimir. Consulte o código fonte de [amostra de impressão UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984) para ver como ele formata o conteúdo para impressão.
 
@@ -246,7 +250,8 @@ PrintTaskOptionDetails printDetailedOptions = PrintTaskOptionDetails.GetFromPrin
 
 Limpe a lista de opções apresentadas na IU de visualização de impressão e adicione as opções que você quer exibir quando o usuário quiser imprimir a partir do aplicativo.
 
-**Observação**  As opções aparecem na IU de visualização de impressão na mesma ordem em que foram acrescentadas, com a primeira exibida no topo da janela.
+
+              **Observação**  As opções aparecem na IU de visualização de impressão na mesma ordem em que foram acrescentadas, com a primeira exibida no topo da janela.
 
 ```csharp
 IList<string> displayedOptions = printDetailedOptions.DisplayedOptions;
@@ -362,7 +367,8 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 }
 ```
 
-**Dica**  Consulte o método `GetPagesInRange` na [amostra de impressão UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984) para ver detalhes sobre como analisar o intervalo de página que o usuário insere na caixa de texto Intervalo.
+
+              **Dica**  Consulte o método `GetPagesInRange` na [amostra de impressão UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984) para ver detalhes sobre como analisar o intervalo de página que o usuário insere na caixa de texto Intervalo.
 
 ## Visualizar páginas selecionadas
 
@@ -383,6 +389,6 @@ Ao imprimir um subconjunto de páginas, há várias formas de mostrar o conteúd
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

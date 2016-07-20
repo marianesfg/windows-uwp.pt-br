@@ -4,8 +4,8 @@ ms.assetid: 23FE28F1-89C5-4A17-A732-A722648F9C5E
 title: "Programação assíncrona"
 description: "Este tópico descreve a programação assíncrona na Plataforma Universal do Windows (UWP) e sua representação em C#, Microsoft Visual Basic .NET, extensões de componente do Visual C++ (C++/CX) e JavaScript."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8d9a17beb9c637e0a780020ef1cbb7b0b0bddf38
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 36300453bbffd06c675ff63e6e9cb4cafe3a56f5
 
 ---
 # Programação assíncrona
@@ -45,9 +45,12 @@ Com um padrão assíncrono UWP, você pode evitar explicitamente gerenciar todos
 
 | Linguagem de programação | Representação assíncrona           |
 |----------------------|---------------------------------------|
-| C#                  | Palavra-chave **async**, operador **await** |
-| Visual Basic         | Palavra-chave **Async**, operador **Await** |
-| C++/CX               | classe **task**, método **.then**      |
+| C#                  | 
+              Palavra-chave **async**, operador **await** |
+| Visual Basic         | 
+              Palavra-chave **Async**, operador **Await** |
+| C++/CX               | 
+              classe **task**, método **.then**      |
 | JavaScript           | objeto promise, função **then**     |
 
  
@@ -60,9 +63,9 @@ Um segmento típico de código gravado em C# ou em Visual Basic é executado de 
 ## Padrões assíncronos na UWP com C++
 
 
-Em C++/CX, a programação assíncrona se baseia na [**classe task**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx) e em seu [**método then**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx). A sintaxe é semelhante àquela das promessas JavaScript. A **classe task** e seus tipos relacionados também fornecem a funcionalidade para cancelamento e gerenciamento do contexto do thread. Para obter mais informações, consulte [Programação assíncrona em C++](asynchronous-programming-in-cpp-universal-windows-platform-apps.md).
+Em C++/CX, a programação assíncrona se baseia na [**classe task**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750113.aspx) e em seu [**método then**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx). A sintaxe é semelhante àquela das promessas JavaScript. A **classe task** e seus tipos relacionados também fornecem a funcionalidade para cancelamento e gerenciamento do contexto do thread. Para obter mais informações, consulte [Programação assíncrona em C++](asynchronous-programming-in-cpp-universal-windows-platform-apps.md).
 
-A [**função create\_async**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750102.aspx) dá suporte à produção de APIs assíncronas que podem ser consumidas a partir de JavaScript ou de qualquer outra linguagem que dê suporte à UWP. Para obter mais informações, veja [Criando operações assíncronas em C++](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx).
+A [**função create\_async**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750102.aspx) dá suporte à produção de APIs assíncronas que podem ser consumidas a partir de JavaScript ou de qualquer outra linguagem que dê suporte à UWP. Para obter mais informações, veja [Criando operações assíncronas em C++](https://msdn.microsoft.com/library/windows/apps/xaml/hh750082.aspx).
 
 ## Padrões assíncronos em UWP usando JavaScript
 
@@ -76,11 +79,11 @@ Em muitos casos, chamar uma função assíncrona é quase tão simples quando ch
 
 * [Chamar APIs assíncronas no Visual Basic ou C#](call-asynchronous-apis-in-csharp-or-visual-basic.md)
 * [Programação assíncrona com Async e Await (C# e Visual Basic)](http://msdn.microsoft.com/library/hh191443(vs.110).aspx)
-* [Cenários de recursos de exemplo de Reversi: código assíncrono](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj712233.aspx#async)
+* [Cenários de recursos de exemplo de Reversi: código assíncrono](https://msdn.microsoft.com/library/windows/apps/xaml/jj712233.aspx#async)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

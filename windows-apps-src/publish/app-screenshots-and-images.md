@@ -3,6 +3,7 @@ author: jnHs
 Description: "Seu aplicativo precisa incluir vários logotipos, capturas de tela e imagens."
 title: Imagens e capturas de tela do aplicativo
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
+translationtype: Human Translation
 ms.sourcegitcommit: ecb030b7c529f765eded46e4e3e9db99ad0c27e8
 ms.openlocfilehash: 9eac5658e2ac04b2abc1bf06abf5c73b16260bc7
 
@@ -17,7 +18,8 @@ Durante o [processo de envio do aplicativo](app-submissions.md), você fornece [
 
 A Loja também usa o bloco do aplicativo e outras imagens que você inclui no pacote do aplicativo. Execute o [Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/mt186449) para determinar se está faltando alguma imagem exigida. Para diretrizes e recomendações sobre essas imagens, consulte [Ativos de bloco e ícone](../controls-and-patterns/tiles-and-notifications-app-assets.md).
 
-> **Observação**  O modo como as imagens são usadas na Loja, na tela inicial do cliente e dentro do próprio aplicativo pode variar, dependendo do sistema operacional do cliente e de outros fatores.
+> 
+            **Observação**  O modo como as imagens são usadas na Loja, na tela inicial do cliente e dentro do próprio aplicativo pode variar, dependendo do sistema operacional do cliente e de outros fatores.
 
 
 ## Imagens fornecidas durante o processo de envio
@@ -45,7 +47,8 @@ Você verá vários campos na página **Descrição** onde você tem a opção d
 
 Apenas uma captura de tela é necessária para seu envio (mas você pode fornecer várias; até 9 capturas de tela de desktop e até 8 capturas de tela de dispositivos móveis e holográficos). Você não precisa fornecer capturas de tela separadas para cada família de dispositivos, mas é recomendável fornecer capturas de tela de cada tipo de dispositivo compatível com aplicativo, para que os clientes vejam imagens semelhantes à aparência do aplicativo nos dispositivos deles.
 
-> **Observação**  O Microsoft Visual Studio fornece uma [ferramenta para ajudá-lo a capturar telas](http://go.microsoft.com/fwlink/p/?LinkId=221135).
+> 
+            **Observação**  O Microsoft Visual Studio fornece uma [ferramenta para ajudá-lo a capturar telas](http://go.microsoft.com/fwlink/p/?LinkId=221135).
 
 Cada captura de tela deve ser um arquivo .png em orientação paisagem ou retrato e o tamanho do arquivo não pode ser maior que 2 MB.
 
@@ -56,7 +59,8 @@ Os requisitos de tamanho variam de acordo com a família de dispositivos:
 
 Você pode fornecer uma legenda curta que descreva cada captura de tela em 200 caracteres ou menos.
 
-> **Observação**  Caso crie descrições para [vários idiomas](supported-languages.md), você terá uma página **Descrição** para cada um. Você precisará carregar imagens para cada idioma separadamente (mesmo que esteja usando as mesmas imagens) e fornecer legendas a serem usadas para cada idioma.
+> 
+            **Observação**  Caso crie descrições para [vários idiomas](supported-languages.md), você terá uma página **Descrição** para cada um. Você precisará carregar imagens para cada idioma separadamente (mesmo que esteja usando as mesmas imagens) e fornecer legendas a serem usadas para cada idioma.
 
 
 ## Ícone do bloco do aplicativo
@@ -69,7 +73,8 @@ O ícone do bloco do aplicativo deve ser um arquivo .png medindo 300 x 300 pixel
 
 A equipe editorial da Windows Store usa imagens diferentes para promover aplicativos na Loja. O envio de ilustrações promocionais permite que a equipe da Windows Store leve seu aplicativo em consideração nos layouts promocionais.
 
-> **Importante**  O envio de imagens promocionais para seu aplicativo não garante que ele ficará em destaque, mas não enviá-las significa que ele não poderá ser considerado para nenhuma oportunidade promocional. Veja [Facilite a promoção do seu aplicativo](make-your-app-easier-to-promote.md) para saber mais.
+> 
+            **Importante**  O envio de imagens promocionais para seu aplicativo não garante que ele ficará em destaque, mas não enviá-las significa que ele não poderá ser considerado para nenhuma oportunidade promocional. Veja [Facilite a promoção do seu aplicativo](make-your-app-easier-to-promote.md) para saber mais.
 
 Você pode enviar artes finais promocionais em tamanhos diferentes, dependendo de quais versões de sistema operacional sejam o alvo de seu aplicativo. Para todos os tamanhos, as imagens devem estar no formato .png.
 
@@ -98,7 +103,8 @@ A imagem abaixo mostra as proporções essenciais que devem ser lembradas. A "zo
 
 Na Loja no Windows Phone 8.1 e versões anteriores, dois tamanhos de imagem podem ser usados em layouts promocionais: 1000 x 800 pixels e 358 x 358 pixels. Se seu aplicativo é executado no Windows Phone 8.1 ou em versões anteriores, é recomendável fornecer imagens nesses dois tamanhos para que sejam levadas em consideração para fins promocionais.
 
-> **Dica**   Além disso, certifique-se de fornecer uma [imagem de ícone de bloco do aplicativo](#app-tile-icon) 300 x 300 para garantir que seu aplicativo não apareça na Loja com um ícone em branco.
+> 
+            **Dica**   Além disso, certifique-se de fornecer uma [imagem de ícone de bloco do aplicativo](#app-tile-icon) 300 x 300 para garantir que seu aplicativo não apareça na Loja com um ícone em branco.
 
 ### Para Windows 8.1 e versões anteriores: 414 x 180
 
@@ -106,6 +112,6 @@ Na Loja do Windows 8.1 e de versões anteriores, os layouts promocionais podem u
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

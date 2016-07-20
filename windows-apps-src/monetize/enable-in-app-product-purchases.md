@@ -4,6 +4,7 @@ Description: "Seja seu aplicativo gratuito ou não, você pode vender conteúdo,
 title: Habilitar compras de produtos no aplicativo
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
 keywords: in-app offer code sample
+translationtype: Human Translation
 ms.sourcegitcommit: bb28828463b14130deede9f7cf796c6e32fcb48b
 ms.openlocfilehash: 2e9a011a248e4c7e1d3f06064a7f82e308f07131
 
@@ -15,7 +16,8 @@ ms.openlocfilehash: 2e9a011a248e4c7e1d3f06064a7f82e308f07131
 
 Seja seu aplicativo gratuito ou não, você pode vender conteúdo, outros aplicativos ou uma nova funcionalidade do aplicativo (como o desbloqueio do próximo nível de um jogo) no próprio aplicativo. Veja a seguir como habilitar esses produtos no seu aplicativo.
 
-> **Observação**  Produtos no aplicativo não podem ser oferecidos em uma versão de avaliação do aplicativo. Os clientes que usam uma versão de avaliação do aplicativo só poderão comprar um produto no aplicativo se comprarem a versão completa do seu aplicativo.
+> 
+            **Observação**  Produtos no aplicativo não podem ser oferecidos em uma versão de avaliação do aplicativo. Os clientes que usam uma versão de avaliação do aplicativo só poderão comprar um produto no aplicativo se comprarem a versão completa do seu aplicativo.
 
 ## Pré-requisitos
 
@@ -47,7 +49,8 @@ void AppInit()
 
 Para cada recurso a ser disponibilizado por meio de uma transação de produto no aplicativo, crie uma oferta e adicione-a ao aplicativo.
 
-> **Importante**  Você deve adicionar todos os produtos no aplicativo que deseja apresentar para seus clientes antes de enviá-lo para a Loja. Para adicionar novos produtos no aplicativo depois, você deve atualizar o aplicativo e reenviar uma nova versão.
+> 
+            **Importante**  Você deve adicionar todos os produtos no aplicativo que deseja apresentar para seus clientes antes de enviá-lo para a Loja. Para adicionar novos produtos no aplicativo depois, você deve atualizar o aplicativo e reenviar uma nova versão.
 
 1.  **Crie um token de oferta no aplicativo**
 
@@ -136,6 +139,6 @@ Se você precisar usar recibos para verificar se o usuário fez uma compra no ap
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

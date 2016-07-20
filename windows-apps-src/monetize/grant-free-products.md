@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: "Use esse método na API de compra da Windows Store para conceder um aplicativo ou IAP (produto no aplicativo) gratuito a um determinado usuário."
 title: Conceder produtos gratuitos
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: 9bce5649fc1a9400371e1f9bb67809f1c6288ec6
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 64c600460c1cbcbd6bb486649e2bc98298ca9dbe
 
 ---
 
@@ -32,9 +33,9 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 
 | Método | URI da solicitação                                            |
 |--------|--------------------------------------------------------|
-| POST   | `https://purchase.mp.microsoft.com/v6.0/purchases/grant` |
+| POST   | ```https://purchase.mp.microsoft.com/v6.0/purchases/grant``` |
 
-<br/> 
+<span/> 
 
 ### Cabeçalho da solicitação
 
@@ -45,7 +46,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
-<br/>
+<span/>
 
 ### Corpo da solicitação
 
@@ -61,7 +62,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | quantity       | int    | A quantidade a ser comprada. Atualmente, o único valor com suporte é 1. Se não for especificado, o padrão é 1.                                                                                                                                                                                                                | Não       |
 | skuId          | string | A ID da SKU do catálogo da Windows Store. Um ID de SKU de exemplo é “0010”.                                                                                                                                                                                                                                                | Sim      |
 
-<br/> 
+<span/>
 
 ### Exemplo de solicitação
 
@@ -107,7 +108,7 @@ Content-Type: application/json
 | totalChargedToCsvTopOffPI | decimal                     | Se você estiver usando um meio de pagamento e o valor armazenado (CSV) separados, o valor será carregado no CSV.                                                                | Sim      |
 | totalTaxAmount            | decimal                     | O valor total do imposto para todos os itens de linha.                                                                                                              | Sim      |
 
-<br/> 
+<span/>
 
 O objeto ClientContext contém os parâmetros a seguir.
 
@@ -115,7 +116,7 @@ O objeto ClientContext contém os parâmetros a seguir.
 |-----------|--------|---------------------------------------|----------|
 | client    | string | A ID do cliente que criou o pedido. | Não       |
 
-<br/> 
+<span/>
 
 O objeto OrderLineItemV6 contém os parâmetros a seguir.
 
@@ -147,7 +148,7 @@ O objeto OrderLineItemV6 contém os parâmetros a seguir.
 | Title                   | string         | O título traduzido do item de linha.                                                                        | Sim      |
 | totalAmount             | decimal        | O valor total da compra do item de linha com imposto.                                                    | Sim      |
 
-<br/> 
+<span/>
 
 O objeto IdentityV6 contém os parâmetros a seguir.
 
@@ -156,7 +157,7 @@ O objeto IdentityV6 contém os parâmetros a seguir.
 | identityType  | string | Contém o valor **"pub"**.                                                      | Sim      |
 | identityValue | string | O valor da cadeia de caracteres de *publisherUserId* da chave de ID da Windows Store especificada. | Sim      |
 
-<br/> 
+<span/> 
 
 ### Exemplo de resposta
 
@@ -229,7 +230,7 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 | 401  | Não autorizado | InconsistentClientId       | A declaração *clientId* na chave de ID da Windows Store no corpo da solicitação e a declaração *appid* no token de acesso do Azure AD no cabeçalho de autorização não coincidem.                     |
 | 400  | BadRequest   | InvalidParameter           | Os detalhes contêm informações relativas ao corpo da solicitação e aos campos que contêm um valor inválido.                                                                                    |
 
-<br/> 
+<span/> 
 
 ## Tópicos relacionados
 
@@ -244,6 +245,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

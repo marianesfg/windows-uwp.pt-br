@@ -4,8 +4,8 @@ ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
 title: "Criar um item de trabalho periódico"
 description: "Saiba como criar um item de trabalho periódico que se repete periodicamente."
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: f5b16c62b591481c52cfa4bb7e1ddb162bf18f42
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 8bf4bb511f84b314d48aedf9dd05c8955875029c
 
 ---
 # Criar um item de trabalho periódico
@@ -23,13 +23,15 @@ Saiba como criar um item de trabalho periódico que se repete periodicamente.
 
 Use o método [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) para criar um item de trabalho periódico. Forneça um lambda que realize o trabalho e use o parâmetro *period* para especificar o intervalo entre os envios. O período é especificado usando uma estrutura [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996). O item de trabalho será reenviado sempre que o período acabar, assim, verifique se o período é longo o suficiente para o trabalho ser concluído.
 
-[
-              **CreateTimer**
-            ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) retorna um objeto [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587). Armazene esse objeto no caso de o temporizador ter que ser cancelado.
 
-> **Observação**  Evite especificar um valor igual a zero (ou qualquer valor inferior a um milésimo de segundo) para o intervalo. Isso faz com que o temporizador periódico se comporte como um temporizador de disparo único.
+              [
+              **CreateTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) retorna um objeto [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587). Armazene esse objeto no caso de o temporizador ter que ser cancelado.
 
-> **Observação**  Você pode usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
+> 
+              **Observação**  Evite especificar um valor igual a zero (ou qualquer valor inferior a um milésimo de segundo) para o intervalo. Isso faz com que o temporizador periódico se comporte como um temporizador de disparo único.
+
+> 
+              **Observação**  Você pode usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
 
 O seguinte exemplo cria um item de trabalho que é executado a cada 60 segundos:
 
@@ -184,7 +186,7 @@ O exemplo a seguir cria um item de trabalho periódico que se repete a cada 60 s
 
 ## Cancelar o temporizador
 
-Quando necessário, chame o método [**Cancel**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.threading.threadpooltimer.cancel.aspx) para impedir que o item de trabalho periódico se repita. Se o item de trabalho estiver sendo executado quando o temporizador periódico for cancelado, ele poderá ser concluído. O [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926) (se fornecido) é chamado quando todas as instâncias do item de trabalho periódico foram concluídas.
+Quando necessário, chame o método [**Cancel**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.cancel.aspx) para impedir que o item de trabalho periódico se repita. Se o item de trabalho estiver sendo executado quando o temporizador periódico for cancelado, ele poderá ser concluído. O [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926) (se fornecido) é chamado quando todas as instâncias do item de trabalho periódico foram concluídas.
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -208,6 +210,6 @@ Para obter mais informações sobre temporizadores de uso único, consulte [Usar
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

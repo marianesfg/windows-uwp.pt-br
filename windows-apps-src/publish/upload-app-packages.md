@@ -1,15 +1,15 @@
 ---
 author: jnHs
 Description: "A página Pacotes é onde você carrega todos os arquivos de pacote (.xap, .appx, .appxupload e/ou .appxbundle) para o aplicativo que você está enviando. Você pode carregar pacotes para qualquer sistema operacional visado por seu aplicativo nesta etapa."
-title: Carregue os pacotes do aplicativo
+title: Carregar pacotes de aplicativo
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: bb89968c261cc0c14f82375d0d708bbce5da9869
+ms.sourcegitcommit: 7f1a40f33a3137e4e0ded674b5bfdf35f11135dc
+ms.openlocfilehash: f628820747f51f7200e2748c2c3f41b58455b2fa
 
 ---
 
-# Carregue os pacotes do aplicativo
+# Carregar pacotes de aplicativo
 
 
 A página **Pacotes** é onde você carrega todos os arquivos de pacote (.xap, .appx, .appxupload e/ou .appxbundle) para o aplicativo que você está enviando. Você pode carregar pacotes para qualquer sistema operacional visado por seu aplicativo nesta etapa. Quando um cliente baixar seu aplicativo, a Loja examinará todos os pacotes disponíveis do aplicativo e fornecerá automaticamente para cada cliente o pacote que funciona melhor em seus dispositivos.
@@ -23,7 +23,8 @@ Para carregar os pacotes, arraste-os para o campo de carregamento ou clique em p
 
 Caso tenha criado [pacotes de pré-lançamento](package-flights.md) para seu aplicativo, você verá uma lista suspensa com a opção para copiar pacotes de um dos pacotes de pré-lançamento. Selecione o pacote de pré-lançamento que tiver os pacotes que você deseja puxar. Em seguida, você pode selecionar qualquer um ou todos os seus pacotes para incluir nesse envio.
 
-> **Importante** Para o Windows 10, você deve sempre carregar o arquivo .appxupload aqui e não o .appX nem o .appxbundle. Para obter mais informações sobre o empacotamento de aplicativos UWP da Loja, consulte [Empacotando aplicativos Universais do Windows para Windows 10](../packaging/packaging-uwp-apps.md).
+> 
+            **Importante** Para o Windows 10, você deve sempre carregar o arquivo .appxupload aqui e não o .appX nem o .appxbundle. Para obter mais informações sobre o empacotamento de aplicativos UWP da Loja, consulte [Empacotando aplicativos Universais do Windows para Windows 10](../packaging/packaging-uwp-apps.md).
 
 Se detectarmos problemas com seus pacotes ao validá-los, você precisará remover o pacote, corrigir o problema e tentar carregá-lo novamente. Para saber mais, consulte [Corrigir erros de carregamento de pacote](resolve-package-upload-errors.md).
 
@@ -45,12 +46,6 @@ Se detectarmos que um ou mais dos seus pacotes são redundantes, exibiremos um a
 
 Quando detectarmos que você tem pacotes redundantes, forneceremos uma opção para remover todos os pacotes redundantes deste envio automaticamente. Você também pode remover pacotes individualmente deste envio, se preferir.
 
-## Pacotes com Visual Studio Application Insights
-
-
-É recomendável usar o [Application Insights do Visual Studio](http://go.microsoft.com/fwlink/?LinkId=615086) em seus pacotes (ou ativá-lo, marcando a caixa para "Mostrar telemetria no Centro de Desenvolvimento do Windows" ao criar seu pacote) para que possamos fornecer [detalhes de telemetria de uso do aplicativo](usage-report.md) a você. Se você não tiver configurado o Application Insights no Microsoft Visual Studio, quando detectarmos que um pacote o inclui, exibiremos uma mensagem confirmando que, enviando seu pacote, você concorda em habilitar a telemetria de uso do aplicativo sobre a sua conta de desenvolvedor. Você pode desabilitar a telemetria de uso do aplicativo a qualquer momento nas **Configurações da conta**.
-
- 
 
  
 
@@ -60,6 +55,6 @@ Quando detectarmos que você tem pacotes redundantes, forneceremos uma opção p
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

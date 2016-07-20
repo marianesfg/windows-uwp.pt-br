@@ -5,6 +5,7 @@ label: Sound
 title: Som
 template: detail.hbs
 ms.assetid: 9fa77494-2525-4491-8f26-dc733b6a18f6
+translationtype: Human Translation
 ms.sourcegitcommit: 7bb23094d569bb29c7227ccd628abd0989b575a4
 ms.openlocfilehash: e6dab48935cd5345ee734e6fda7e6fd4d333bb90
 
@@ -147,6 +148,6 @@ O objetivo por trás desse recurso de ciclo é evitar que os sons de foco se tor
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

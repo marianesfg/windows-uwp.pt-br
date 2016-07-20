@@ -2,6 +2,7 @@
 author: WilliamsJason
 title: "Referência da API de Gerenciamento do usuário de teste da Xbox Live"
 description: "Saiba como acessar as APIs de Gerenciamento do usuário de maneira programática."
+translationtype: Human Translation
 ms.sourcegitcommit: 67f158b1d3d5ece14c36483a2513a2db2f478660
 ms.openlocfilehash: ad01d4daf089c61fc50c7927cfbf123d7d7ee4df
 
@@ -71,6 +72,6 @@ Esta API tem os códigos de status esperados a seguir.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

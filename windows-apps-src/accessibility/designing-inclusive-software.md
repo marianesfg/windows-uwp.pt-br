@@ -5,8 +5,9 @@ ms.assetid: A6393A57-53F2-4F06-89AF-0D806FD76DB0
 title: Projetando software inclusivo no Windows 10
 label: Designing inclusive software
 template: detail.hbs
-ms.sourcegitcommit: ea4d413e0b2ade1429d255afbc6a1a73ea308051
-ms.openlocfilehash: 6f1c0663034f81bb0ddfe42c04fbe60562b45c1c
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: cdd41595ee2727c0eeefab7b041c1adfefc15dfa
 
 ---
 
@@ -18,20 +19,24 @@ Na Microsoft, estamos desenvolvendo nossos princípios de design e práticas rec
 
 Essa nova filosofia de design é chamada de design inclusivo. A ideia é criar um software com todas as pessoas em mente desde o começo. Isso é o oposto de enxergar a acessibilidade como uma tecnologia você inclui no final do processo de desenvolvimento para satisfazer alguns pequenos grupos de usuários.
 
-"Definimos deficiência como uma incompatibilidade entre as necessidades do indivíduo e o serviço, produto ou ambiente oferecidos. Qualquer pessoa pode sofrer uma deficiência. É uma característica humana comum a ser eliminada".  \- do vídeo [Inclusivo](https://www.microsoft.com/en-us/design/inclusive)  
+"Definimos deficiência como uma incompatibilidade entre as necessidades do indivíduo e o serviço, produto ou ambiente oferecidos. Qualquer pessoa pode sofrer uma deficiência. É uma característica humana comum a ser eliminada".  \- do vídeo [Inclusivo](https://www.microsoft.com/design/inclusive)  
 
 O design inclusivo cria produtos melhores para todos. Trata-se de considerar a gama completa de diversidade humana. Considere os recortes de meio-fio que você encontra na maioria das calçadas das esquinas. Eles foram claramente pensados para serem usados por pessoas em cadeiras de rodas. Mas agora quase todo mundo os usa, inclusive pessoas com carrinhos de bebê, ciclistas, esqueitistas. Até mesmo pedestres geralmente os usam porque estão disponíveis e proporcionam uma melhor experiência. O controle remoto da televisão pode ser considerado uma tecnologia assistencial (AT) para alguém com limitações físicas. No entanto hoje é praticamente impossível comprar uma televisão sem um. Antes de as crianças aprenderem a amarrar os sapatos, elas podem usar sapatos com fechamento de velcro. Sapatos que são fáceis de calçar e tirar geralmente são preferenciais em culturas nas quais eles são removidos antes de entrar em uma casa. Eles também são melhores para pessoas com problemas de destreza como artrite ou até mesmo um pulso temporariamente quebrado.
 
 ## Princípios de design inclusivo  
 Os quatro princípios seguintes estão orientando a mudança da Microsoft para o design inclusivo:
 
-**Pense universal**: vamos nos concentrar no que unifica as pessoas — motivações, relações e habilidades humanas. Isso nos ajuda a considerar o impacto social mais amplo do nosso trabalho. O resultado é uma experiência que tem uma diversidade de maneiras para todas as pessoas participarem.
 
-**Personalize**: em seguida, nós nos desafiamos a criar conexões emocionais. Interações de humanos com humanos podem inspirar melhor a interação de humanos com a tecnologia. Circunstâncias únicas de uma pessoa podem melhorar um design para todos. O resultado é uma experiência que parece ter sido criada para uma pessoa.
+              **Pense universal**: vamos nos concentrar no que unifica as pessoas — motivações, relações e habilidades humanas. Isso nos ajuda a considerar o impacto social mais amplo do nosso trabalho. O resultado é uma experiência que tem uma diversidade de maneiras para todas as pessoas participarem.
 
-**Mantenha a simplicidade**: começamos com a simplicidade como o unificador principal. Quando reduzimos a desordem as pessoas sabem o que fazer em seguida. Eles são inspirados a seguir em frente em espaços que são limpos, luminosos e abertos. O resultado é uma experiência que seja sincera e atemporal.
 
-**Crie alegria**: experiências alegres evocam admiração e descoberta. Às vezes, é mágico. Às vezes, é um detalhe que está correto. Criamos esses momentos para que pareçam uma mudança bem-vinda no ritmo. O resultado é uma experiência que tem impulso e fluxo.
+              **Personalize**: em seguida, nós nos desafiamos a criar conexões emocionais. Interações de humanos com humanos podem inspirar melhor a interação de humanos com a tecnologia. Circunstâncias únicas de uma pessoa podem melhorar um design para todos. O resultado é uma experiência que parece ter sido criada para uma pessoa.
+
+
+              **Mantenha a simplicidade**: começamos com a simplicidade como o unificador principal. Quando reduzimos a desordem as pessoas sabem o que fazer em seguida. Eles são inspirados a seguir em frente em espaços que são limpos, luminosos e abertos. O resultado é uma experiência que seja sincera e atemporal.
+
+
+              **Crie alegria**: experiências alegres evocam admiração e descoberta. Às vezes, é mágico. Às vezes, é um detalhe que está correto. Criamos esses momentos para que pareçam uma mudança bem-vinda no ritmo. O resultado é uma experiência que tem impulso e fluxo.
 
 ## Usuários de design inclusivo  
 Há essencialmente dois tipos de usuários de tecnologia assistencial (AT):
@@ -68,7 +73,7 @@ Depois de ter a sua estrutura, crie uma hierarquia lógica para mapear seus cont
 2.  Identificar limites claros entre os controles padrão e os controles personalizados na interface do usuário  
 3.  Determinar como partes da interface do usuário interagem juntas  
 
-Uma hierarquia lógica é uma ótima maneira de lidar com quaisquer possíveis problemas de usabilidade. Se não pode estruturar a interface do usuário de maneira relativamente simples, talvez você possa ter problemas com a usabilidade. Uma representação lógica de uma caixa de diálogo simples não deve resultar em páginas de diagramas. Para hierarquias lógicas que se tornam muito profundas ou muito amplas, talvez seja necessário reprojetar sua interface do usuário. Para saber mais, baixe o eBook [Engenharia de software para acessibilidade](https://www.microsoft.com/en-us/download/details.aspx?id=19262).  
+Uma hierarquia lógica é uma ótima maneira de lidar com quaisquer possíveis problemas de usabilidade. Se não pode estruturar a interface do usuário de maneira relativamente simples, talvez você possa ter problemas com a usabilidade. Uma representação lógica de uma caixa de diálogo simples não deve resultar em páginas de diagramas. Para hierarquias lógicas que se tornam muito profundas ou muito amplas, talvez seja necessário reprojetar sua interface do usuário. Para saber mais, baixe o eBook [Engenharia de software para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262).  
 
 ### Crie configurações visuais apropriadas da interface do usuário  
 Ao criar a interface do usuário visual, verifique se o seu produto tem uma configuração de alto contraste, usa as fontes padrão do sistema e as opções de suavização, é dimensionada corretamente para as configurações de tela de pontos por polegada (dpi), tem texto padrão com pelo menos uma taxa de contraste de 5:1 com a tela de fundo e tem combinações de cores que serão fáceis para os usuários com daltonismo diferenciar.  
@@ -94,18 +99,18 @@ Em resumo, siga essas sete etapas para garantir que o seu software seja inclusiv
 2.  Ao criar soluções para suas necessidades, use controles fornecidos por sua estrutura (controles padrão) tanto quanto possível e evite qualquer esforço desnecessário e os custos de controles personalizados.  
 3.  Crie uma hierarquia lógica para seu produto, observando onde estão os controles padrão, os controles personalizados e o foco do teclado na interface do usuário.  
 4.  Crie configurações úteis do sistema (como navegação de teclado, alto contraste e alto dpi) em seu produto.  
-5.  Implemente seu design, usando o [hub de desenvolvedor de acessibilidade Microsoft](https://developer.microsoft.com/en-us/windows/accessible-apps) e a especificação de acessibilidade da estrutura como um ponto de referência.  
+5.  Implemente seu design, usando o [hub de desenvolvedor de acessibilidade Microsoft](https://developer.microsoft.com/windows/accessible-apps) e a especificação de acessibilidade da estrutura como um ponto de referência.  
 6.  Teste seu produto com os usuários com necessidades especiais para garantir que eles poderão aproveitar as técnicas de design inclusivo implementadas nele.  
 7.  Ofereça seu produto final e documente sua implementação para quem possa trabalhar no projeto depois de você.  
 
 ## Tópicos relacionados  
 * [Design inclusivo](http://design.microsoft.com/inclusive)
-* [Software de engenharia para acessibilidade](https://www.microsoft.com/en-us/download/details.aspx?id=19262)
-* [Hub de desenvolvedor de acessibilidade da Microsoft](https://developer.microsoft.com/en-us/windows/accessible-apps)
+* [Software de engenharia para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262)
+* [Hub de desenvolvedor de acessibilidade da Microsoft](https://developer.microsoft.com/windows/accessible-apps)
 * [Desenvolvendo aplicativos inclusivos do Windows](developing-inclusive-windows-apps.md)  
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

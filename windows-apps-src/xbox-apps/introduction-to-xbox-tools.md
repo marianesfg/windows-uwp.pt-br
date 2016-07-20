@@ -3,8 +3,9 @@ author: Mtoepke
 title: "Introdução às ferramentas do Xbox One"
 description: "Ferramenta Dev Home específica ao Xbox usando o Windows Device Portal."
 area: Xbox
-ms.sourcegitcommit: 914a1b76c6b502415bee36865af009a8dfe9bb53
-ms.openlocfilehash: e2f87cdeb8ce3371a34bb989e5fa29ef63d18621
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 4414677e942818506020888fa15e7e16ecaf4733
 
 ---
 
@@ -14,7 +15,8 @@ Esta seção aborda a ferramenta _Dev Home_ específica ao Xbox One usando o Win
 
 ## Dev Home
 
-A _Dev Home_ é uma experiência de ferramentas no Xbox One Development Kit criada para auxiliar na produtividade do desenvolvedor. A Dev Home oferece funcionalidade para gerenciar e configurar o kit de desenvolvimento.
+
+              A _Dev Home_ é uma experiência de ferramentas no Xbox One Development Kit criada para auxiliar na produtividade do desenvolvedor. A Dev Home oferece funcionalidade para gerenciar e configurar o kit de desenvolvimento.
 
 Para abrir a Dev Home, selecione o bloco **Dev Home** na tela inicial. Se não houver nenhum bloco presente, o console não estará no modo de desenvolvedor.
 
@@ -89,8 +91,8 @@ Ao se comunicar com o console em seu PC de desenvolvimento, você pode definir u
 
 Para definir um nome de host para um kit de desenvolvimento, vá para a ferramenta de configurações do Console e digite o nome do host na caixa __Hostname__.  
 
-  > **Observação**
-            &nbsp;&nbsp;A exclusividade do nome não é aplicada quando o nome do host é criado. Tenha cuidado para evitar duplicação de nomes. Uma maneira de fazer isso é derivar o nome do host do nome de seu computador de desenvolvimento, que é exclusivo dentro de uma organização.
+  > 
+              **Observação**&nbsp;&nbsp;A exclusividade do nome não é aplicada quando o nome do host é criado. Tenha cuidado para evitar duplicação de nomes. Uma maneira de fazer isso é derivar o nome do host do nome de seu computador de desenvolvimento, que é exclusivo dentro de uma organização.
 
 ## Windows Device Portal
 O Windows Device Portal (WDP) é uma ferramenta de gerenciamento de dispositivos do OneCore que permite uma experiência de gerenciamento de dispositivos baseada em navegador.
@@ -115,7 +117,8 @@ Para habilitar o WDP no console do Xbox One:
   ![Aviso de certificado segurança](images/security_cert_warning.jpg)
 
 ## Consulte também
-- [Tecnologias Microsoft Developer: Windows Device Portal](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-xbox)
+- [Como usar o Fiddler com o Xbox One ao desenvolver para UWP](uwp-fiddler.md)
+- [Tecnologias Microsoft Developer: Windows Device Portal](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-xbox)
 - [UWP no Xbox One](index.md)
 
 
@@ -124,6 +127,6 @@ Para habilitar o WDP no console do Xbox One:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

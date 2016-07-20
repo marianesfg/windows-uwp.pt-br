@@ -4,8 +4,8 @@ ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Criar um aplicativo Hello, world (XAML)
 description: "Este tutorial ensina a usar XAML (Extensible Application Markup Language) com C# para criar um aplicativo Hello, world simples destinado à UWP (Plataforma Universal do Windows) no Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 0d6b6421b4f5ebc01c865e80db96d1158b9bd825
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 0a524d51f713c37ce2069b4e750bf3ed20fe19ab
 
 ---
 
@@ -13,7 +13,8 @@ ms.openlocfilehash: 0d6b6421b4f5ebc01c865e80db96d1158b9bd825
 
 Este tutorial ensina a usar XAML (Extensible Application Markup Language) com C# para criar um aplicativo "Hello, world" simples destinado à UWP (Plataforma Universal do Windows) no Windows 10. Com um único projeto no Microsoft Visual Studio, você pode compilar um aplicativo que seja executado em qualquer dispositivo do Windows 10. Aqui, nosso foco é criar um aplicativo que seja executado igualmente bem em dispositivos móveis e desktops.
 
-**Importante**   Este tutorial deve ser usado com o Microsoft Visual Studio 2015 e o Windows 10. Ele não funcionará corretamente com versões anteriores.
+
+              **Importante**   Este tutorial deve ser usado com o Microsoft Visual Studio 2015 e o Windows 10. Ele não funcionará corretamente com versões anteriores.
 
 Aqui, você aprenderá a:
 
@@ -42,9 +43,11 @@ Aqui, você aprenderá a:
 
    A caixa de diálogo **Novo Projeto** será exibida. O painel esquerdo da caixa de diálogo permite que você selecione o tipo de modelos a exibir.
 
-3.  No painel esquerdo, expanda **Instalado > Modelos > Visual C# > Windows** e escolha o grupo de modelos **Universal**. O painel central da caixa de diálogo exibe uma lista de modelos de projeto para aplicativos UWP (Plataforma Universal do Windows).
+3.  No painel esquerdo, expanda **Instalado > Modelos > Visual C# > Windows** e escolha o grupo de modelos **Universal**. O painel central da caixa de diálogo exibe uma lista de modelos de projetos para aplicativos UWP (Plataforma Universal do Windows).
 
    ![A janela Novo Projeto ](images/newproject-cs.png)
+   
+   (Se você não vir essas opções, verifique se tem as ferramentas de desenvolvimento de aplicativo Universal do Windows instaladas. Consulte [Prepare-se para começar](get-set-up.md) para saber mais.)
 
 4.  No painel central, selecione o modelo **Aplicativo em Branco (Universal do Windows)**.
 
@@ -212,6 +215,8 @@ Além das opções para depurar em um dispositivo da área de trabalho, o Visual
 -   **Emulador <SDK version> WVGA de 4 polegadas e 1 GB**
 -   etc. (Diversos emuladores em outras configurações)
 
+(Se você não vir os emuladores, verifique se tem as ferramentas de desenvolvimento de aplicativo Universal do Windows instaladas. Consulte [Prepare-se para começar](get-set-up.md) para saber mais.)
+
 É recomendável testar o aplicativo em um dispositivo com tela pequena e memória limitada, portanto use a opção **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
 **Para iniciar a depuração em um emulador de dispositivo móvel**
 
@@ -239,7 +244,7 @@ Você também perceberá que é possível digitar na [**TextBox**](https://msdn.
 
 Elementos XAML podem enviar mensagens quando determinados eventos ocorrem. Essas mensagens de evento permitem executar uma ação em resposta ao evento. Você coloca seu código para responder ao evento em um método do manipulador de eventos. Um dos eventos mais comuns em vários aplicativos é o usuário clicar em um [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265).
 
-Agora, criaremos um manipulador de eventos para o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) do botão. O manipulador de eventos obterá o nome do usuário por meio do controle `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e o usará para gerar uma saudação no `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652).
+Agora, criaremos um manipulador de eventos para o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) do botão. O manipulador de eventos obterá o nome do usuário por meio do controle `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e o usará para gerar uma saudação no `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652).
 
 ### Usando eventos que funcionam com a entrada de toque, mouse e caneta
 
@@ -261,7 +266,7 @@ Quais eventos devem ser manipulados? Como seu aplicativo da Windows Store poder�
    <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
 ```    
 
-5.  Adicione código ao manipulador de eventos criado na página code-behind. No manipulador de eventos, recupere o nome do usuário por meio do controle `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e use-o para criar uma saudação. Use o `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) para exibir o resultado.
+5.  Adicione código ao manipulador de eventos criado na página code-behind. No manipulador de eventos, recupere o nome do usuário por meio do controle `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e use-o para criar uma saudação. Use o `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) para exibir o resultado.
     
 ```csharp    
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -309,9 +314,9 @@ Agora faremos a interface do usuário se adaptar a diferentes tamanhos de tela p
 
 Se você usou um [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021) nas versões anteriores do XAML, poderá notar que o XAML aqui usa uma sintaxe simplificada.
 
-O [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) denominado `wideState` tem um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) com a propriedade [**MinWindowWidth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) definida como 641. Isso significa que o estado deverá ser aplicado somente quando a largura da janela não for menor que o mínimo de 641 pixels. Se você não definir objetos [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) para esse estado, ele usará as propriedades de layout definidas no XAML para o conteúdo da página.
+O [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) denominado `wideState` tem um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) com a propriedade [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) definida como 641. Isso significa que o estado deverá ser aplicado somente quando a largura da janela não for menor que o mínimo de 641 pixels. Se você não definir objetos [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) para esse estado, ele usará as propriedades de layout definidas no XAML para o conteúdo da página.
 
-O segundo [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`, tem um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) com a propriedade [**MinWindowWidth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) definida como 0. Esse estado é aplicado quando a largura da janela for maior que 0, mas menor que 641 pixels. (Em 641 pixels, o `wideState` é aplicado.) Nesse estado, você define alguns objetos [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) para alterar as propriedades de layout dos controles da interface do usuário:
+O segundo [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`, tem um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) com a propriedade [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) definida como 0. Esse estado é aplicado quando a largura da janela for maior que 0, mas menor que 641 pixels. (Em 641 pixels, o `wideState` é aplicado.) Nesse estado, você define alguns objetos [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) para alterar as propriedades de layout dos controles da interface do usuário:
 
 -   Você altera a [**Orientação**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.orientation) do elemento `inputPanel` de **Horizontal** para **Vertical**.
 -   Adicione uma margem superior de 4 ao elemento `inputButton`.
@@ -323,6 +328,6 @@ Parabéns, você criou seu primeiro aplicativo para o Windows 10 e a UWP!
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

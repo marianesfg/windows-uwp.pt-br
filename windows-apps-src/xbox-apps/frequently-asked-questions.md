@@ -3,8 +3,9 @@ author: Mtoepke
 title: Perguntas frequentes
 description: Perguntas frequentes sobre a UWP no Xbox.
 area: Xbox
-ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
-ms.openlocfilehash: 34e186049039d5a8366f34e985ad7250ef664f00
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 01173aeabb74d6d703597a9bd7a48c179c688c07
 
 ---
 
@@ -20,8 +21,8 @@ Se seus jogos e aplicativos não estiverem funcionando ou se você não tiver ac
 
 Comece verificando se você está executando no modo de desenvolvedor e não no modo de varejo. Você não pode se conectar ao Xbox One quando está no modo de varejo. Você pode verificar isso simplesmente pressionando o botão **Início** e procurando o bloco Dev Home no lado direito da tela. Se o bloco não estiver lá, mas se em vez disso você vir conteúdo Gold/Live, você estará no modo de varejo. Você precisa executar o aplicativo de ativação Desenvolver Mais para alternar para o modo de desenvolvedor.
 
-> **Observação**
-            &nbsp;&nbsp;Você deve ter um usuário conectado para implantar um aplicativo.
+> 
+              **Observação**&nbsp;&nbsp;Você deve ter um usuário conectado para implantar um aplicativo.
 
 Para saber mais, veja [Corrigindo falhas na implantação](frequently-asked-questions.md#fixing-deployment-failures) posteriormente nesta página.
 
@@ -64,9 +65,11 @@ A publicação de aplicativos estará disponível por meio do Centro de Desenvol
 
 ### Posso publicar meu jogo?
 
-Você pode usar a UWP e o Xbox One no modo de desenvolvedor para compilar e testar seus jogos no Xbox One. Para publicar jogos UWP você deve se registrar no [ID@XBOX](http://www.xbox.com/en-us/Developers/id). 
-O [ID@XBOX](http://www.xbox.com/en-us/Developers/id) fornece aos desenvolvedores total acesso às APIs do Xbox Live para seus jogos, incluindo pontuação e conquistas, bem como a funcionalidade de vários jogadores entre dispositivos, salvamentos na nuvem e todos os recursos do Xbox Live no Xbox One. 
-O [ID@Xbox](http://www.xbox.com/en-us/Developers/id) também pode fornecer acesso aos kits de desenvolvimento do Xbox One para jogos que exigem acesso ao potencial máximo do hardware do Xbox One.
+Você pode usar a UWP e o Xbox One no modo de desenvolvedor para compilar e testar seus jogos no Xbox One. Para publicar jogos UWP você deve se registrar no [ID@XBOX](http://www.xbox.com/Developers/id). 
+
+              O [ID@XBOX](http://www.xbox.com/Developers/id) fornece aos desenvolvedores total acesso às APIs do Xbox Live para seus jogos, incluindo pontuação e conquistas, bem como a funcionalidade de vários jogadores entre dispositivos, salvamentos na nuvem e todos os recursos do Xbox Live no Xbox One. 
+
+              O [ID@Xbox](http://www.xbox.com/Developers/id) também pode fornecer acesso aos kits de desenvolvimento do Xbox One para jogos que exigem acesso ao potencial máximo do hardware do Xbox One.
 
 ### Os mecanismos de jogo padrão funcionarão?
 
@@ -88,8 +91,8 @@ Confira a página [Problemas conhecidos](known-issues.md) para esta versão de t
 
 Se você não puder implantar seu aplicativo no Visual Studio, estas etapas poderão ajudá-lo a resolver o problema. Se você ficar paralisado, peça ajuda no fórum.
 
-> **Observação**
-            &nbsp;&nbsp;Você deve ter um usuário conectado para implantar um aplicativo. Se você receber uma mensagem de erro 0x87e10008, verifique se tem um usuário conectado e tente novamente.
+> 
+              **Observação**&nbsp;&nbsp;Você deve ter um usuário conectado para implantar um aplicativo. Se você receber uma mensagem de erro 0x87e10008, verifique se tem um usuário conectado e tente novamente.
 
 Se o Visual Studio não puder se conectar ao Xbox One:
 
@@ -99,8 +102,8 @@ Se o Visual Studio não puder se conectar ao Xbox One:
 3. Se ainda não tiver lido, leia o tópico [Configuração do ambiente de desenvolvimento](development-environment-setup.md) e o tópico [Introdução às ferramentas do Xbox One](introduction-to-xbox-tools.md).
 
 4. Verifique se você pode executar "ping" no endereço IP do console em seu computador de desenvolvimento.
-> **Observação**
-            &nbsp;&nbsp;Para obter o melhor desempenho de implantação, recomendamos que você use uma conexão com fio com seu console.
+> 
+              **Observação**&nbsp;&nbsp;Para obter o melhor desempenho de implantação, recomendamos que você use uma conexão com fio com seu console.
 
 5. Verifique se você está usando o Universal (protocolo não criptografado) na lista suspensa Autenticação na guia **Depurar**. Veja [Configuração do ambiente de desenvolvimento](development-environment-setup.md) para obter mais detalhes.
 
@@ -137,6 +140,6 @@ Para saber mais, veja o projeto [TVHelpers](https://github.com/Microsoft/TVHelpe
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

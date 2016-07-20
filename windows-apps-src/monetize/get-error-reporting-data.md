@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados para um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter dados de relatório de erros"
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: 5b2421daf9df4ca417d5089166c0927e2b2f7436
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 682f727a21d74f5cea8fddc4886c873d537e1cfb
 
 ---
 
@@ -33,19 +34,19 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 | Método | URI da solicitação                                                          |
 |--------|----------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/failurehits |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/failurehits``` |
 
- 
+<span/> 
 
 ### Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
 
- 
+<span/> 
 
-### Corpo da solicitação
+### Parâmetros solicitados
 
 <table>
 <colgroup>
@@ -65,7 +66,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 <tbody>
 <tr class="odd">
 <td align="left">applicationId</td>
-<td align="left">string</td>
+<td align="left">cadeia de caracteres</td>
 <td align="left">A ID da Loja do aplicativo para o qual você deseja recuperar dados de relatório de erros. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.</td>
 <td align="left">Sim</td>
 </tr>
@@ -154,10 +155,11 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 </tbody>
 </table>
 
+<span/>
  
 ### Campos de filtro
 
-O parâmetro *filter* do corpo da solicitação contém uma ou mais instruções que filtram as linhas da resposta. Cada instrução contém um campo e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Estes são alguns exemplos dos parâmetros *filter*:
+O parâmetro *filter* da solicitação contém uma ou mais instruções que filtram as linhas da resposta. Cada instrução contém um campo e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Estes são alguns exemplos dos parâmetros *filter*:
 
 -   *filter=market eq 'US' and gender eq 'm'*
 -   *filter=(market ne 'US') and (gender ne 'Unknown') and (gender ne 'm') and (market ne 'NO') and (ageGroup ne 'greater than 55' or ageGroup ne ‘less than 13’)*
@@ -241,7 +243,7 @@ Para obter uma lista dos campos com suporte, consulte a tabela a seguir. Valores
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### Exemplo de solicitação
 
@@ -266,7 +268,8 @@ Authorization: Bearer <your access token>
 | @nextLink  | string  | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você pode usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10.000, mas houver mais de 10.000 linhas de erros para a consulta. |
 | TotalCount | inumber | O número total de linhas no resultado dos dados da consulta.                                                                                                                                                                                                                     |
 
- 
+<span/>
+
 ### Valores de erros
 
 Os elementos na matriz *Value* contêm os seguintes valores.
@@ -288,7 +291,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 | eventCount      | inumber | O número de eventos que são atribuídos a esse erro para o nível de agregação especificado.                                                                                                                                            |
 | deviceCount     | inumber | O número de dispositivos exclusivos que correspondem a esse erro para o nível de agregação especificado.                                                                                                                                        |
 
- 
+<span/> 
 
 ### Exemplo de resposta
 
@@ -330,6 +333,6 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -3,8 +3,9 @@ author: msatranjr
 ms.assetid: 5B3A6326-15EE-4618-AA8C-F1C7FB5232FB
 title: Bluetooth RFCOMM
 description: "Este artigo apresenta uma visão geral do Bluetooth RFCOMM em aplicativos da Plataforma Universal do Windows (UWP), além do código de exemplo sobre como enviar ou receber um arquivo."
-ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
-ms.openlocfilehash: 61e5844f18d09aa170498d261ca1a6fd60ef170c
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a4d7b0c9e51f3d118c5ed9ac83af2cc6d502d6b3
 
 ---
 # Bluetooth RFCOMM
@@ -33,7 +34,7 @@ Ao enviar um arquivo, o cenário mais básico é estabelecer conexão com um dis
 
 -   Use as funções **RfcommDeviceService.GetDeviceSelector\*** para ajudar a gerar uma consulta AQS que possa ser usada para instâncias de dispositivos emparelhados enumerados do serviço desejado.
 -   Escolha um dispositivo enumerado, crie um [**RfcommDeviceService**](https://msdn.microsoft.com/library/windows/apps/Dn263463) e leia os atributos SDP conforme necessário (usando [**established data helpers**](https://msdn.microsoft.com/library/windows/apps/BR208119) para analisar os dados do atributo).
--   Crie um soquete e use as propriedades [**RfcommDeviceService.ConnectionHostName**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname.aspx) e [**RfcommDeviceService.ConnectionServiceName**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename.aspx) para [**StreamSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701504) para o serviço de dispositivo remoto com os parâmetros apropriados.
+-   Crie um soquete e use as propriedades [**RfcommDeviceService.ConnectionHostName**](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname.aspx) e [**RfcommDeviceService.ConnectionServiceName**](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename.aspx) para [**StreamSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701504) para o serviço de dispositivo remoto com os parâmetros apropriados.
 -   Siga os padrões de fluxo de dados estabelecidos para ler dados do arquivo e enviá-lo no [**StreamSocket.OutputStream**](https://msdn.microsoft.com/library/windows/apps/BR226920) do soquete para o dispositivo.
 
 ```csharp
@@ -367,6 +368,6 @@ void OnConnectionReceived(
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

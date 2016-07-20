@@ -3,6 +3,7 @@ author: joannaleecy
 title: "Tronando os jogos acessíveis"
 description: "Aprenda a criar jogos acessíveis. Use o princípio do design de jogo inclusivo para alcançar a acessibilidade do jogo."
 ms.assetid: f5ba1e60-0d7c-11e6-91ec-0002a5d5c51b
+translationtype: Human Translation
 ms.sourcegitcommit: 2492ff5c8b3ba0331e831234943a1db124f8fa4f
 ms.openlocfilehash: 2b78d767a7ac75e27f759c0eb06953e6158fb88b
 
@@ -216,6 +217,6 @@ Aqui estão alguns sites externos que fornecem informações adicionais sobre ac
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

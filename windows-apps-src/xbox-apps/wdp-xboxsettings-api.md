@@ -2,8 +2,9 @@
 author: payzer
 title: "Referência da API de configurações do desenvolvedor do Xbox do Device Portal"
 description: "Aprenda a acessar as configurações do desenvolvedor do Xbox."
-ms.sourcegitcommit: c392e6a2356d4180943c17d37512ef8ea35f5719
-ms.openlocfilehash: 52fb6e76bd7ad35127eeebeced8f6f8cc076fb7f
+translationtype: Human Translation
+ms.sourcegitcommit: a9a2b6e58dfa0d1e77164a59f204deabf8f5c3e0
+ms.openlocfilehash: e3637f5a8481c0800af42c011fb811b908b946b1
 
 ---
 
@@ -46,7 +47,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 Código de status HTTP      | Descrição
 :------     | :-----
-200 | A solicitação para acessar as credenciais do compartilhamento de arquivos foi concedida.
+200 | A solicitação foi bem-sucedida
 4XX | Códigos de erro
 5XX | Códigos de erro
 
@@ -87,7 +88,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 Código de status HTTP      | Descrição
 :------     | :-----
-200 | A solicitação para acessar as credenciais do compartilhamento de arquivos foi concedida.
+200 | A solicitação foi bem-sucedida
 4XX | Códigos de erro
 5XX | Códigos de erro
 
@@ -124,7 +125,7 @@ Esta API tem os códigos de status esperados a seguir.
 
 Código de status HTTP      | Descrição
 :------     | :-----
-200 | A solicitação para acessar as credenciais do compartilhamento de arquivos foi concedida.
+200 | A solicitação foi bem-sucedida
 4XX | Códigos de erro
 5XX | Códigos de erro
 
@@ -136,6 +137,6 @@ Código de status HTTP      | Descrição
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

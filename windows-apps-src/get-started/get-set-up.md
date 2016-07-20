@@ -4,8 +4,8 @@ ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: "Prepare-se para começar"
 description: "É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8c5dfb692d647a25eea13036cd320366f3c5a09c
+ms.sourcegitcommit: a47dc36129daaed02cb181dde625d440fa4cf6e4
+ms.openlocfilehash: f20707cab08998d86142f7d657b51faa78d9a777
 
 ---
 # Prepare-se para começar
@@ -26,9 +26,13 @@ Você é assinante do MSDN? É possível obter os downloads ISO aqui:
 
 O Microsoft Visual Studio 2015 ajuda você a projetar, codificar, testar e depurar seus aplicativos.
 
-Se você ainda não tem o Visual Studio 2015, clique neste link para instalar o Microsoft Visual Studio Community 2015 grátis. Esse download inclui simuladores de dispositivos e telefones para testar seus dispositivos:
+Se você ainda não tem o Visual Studio 2015, clique neste link para instalar o Microsoft Visual Studio Community 2015 grátis. Esse download inclui simuladores de dispositivos e telefones para testar seus aplicativos:
 
 -   [Baixar ferramentas de desenvolvedor do Windows 10](https://go.microsoft.com/fwlink/p/?LinkID=534189)
+
+Quando você instalar o Visual Studio, use a opção personalizada e verifique se todas as opções de ferramentas de desenvolvimento de aplicativos universais do Windows estão selecionadas, conforme mostrado aqui.
+
+![Ferramentas do Visual Studio para UWP](images/vs-2015-community-setup.png)
 
 ## 3. Habilitar seu dispositivo para desenvolvimento
 
@@ -46,7 +50,8 @@ Você pode começar a desenvolver aplicativos agora, mas antes de enviá-los par
 
 Após instalar as ferramentas e obtido uma licença de desenvolvedor ou uma conta de desenvolvedor, use o nosso tutorial para criar seu primeiro aplicativo:
 
--   Tutoriais para [Criar seu primeiro aplicativo](your-first-app.md)
+-   
+            Tutoriais para [Criar seu primeiro aplicativo](your-first-app.md)
 
 ## Deseja mais ferramentas e downloads?
 
@@ -56,6 +61,6 @@ Para obter a lista completa de ferramentas e downloads, consulte [Downloads](htt
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

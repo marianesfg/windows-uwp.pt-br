@@ -3,8 +3,8 @@ author: Jwmsft
 label: Buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 91399060e129df18acd38e18d98cad848667a5ad
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: de5af77435b34b8f28005351a7de125f211ca522
 
 ---
 # Botões
@@ -71,7 +71,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 Quando você toca em um botão com um dedo ou uma caneta, ou pressiona o botão esquerdo do mouse enquanto o ponteiro está sobre ele, o botão gera o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx). Se um botão tem foco do teclado, pressionar a tecla Enter ou a barra de espaço também aciona o evento Click.
 
-Geralmente, não se pode manipular eventos de baixo nível [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) em um botão porque, em vez disso, ele tem o comportamento Click. Para saber mais, consulte [Events and routed events overview](https://msdn.microsoft.com/en-us/library/windows/apps/mt185584.aspx).
+Geralmente, não se pode manipular eventos de baixo nível [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) em um botão porque, em vez disso, ele tem o comportamento Click. Para saber mais, consulte [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx).
 
 Você pode alterar a forma como um botão aciona o evento Click, alterando a propriedade [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx). O valor ClickMode padrão é **Release**. Se ClickMode for **Hover**, o evento Click não poderá ser chamado com o teclado ou o toque. 
 
@@ -204,7 +204,8 @@ Surface Hub ![sistema Voltar em um Surface Hub](images/nav-back-surfacehub.png)
 
     Histórico de navegação de página no aplicativo é mantido; não há suporte para navegação regressiva entre aplicativos.
 
-    **Observação**  No modo Tablet, a barra do título é exibida quando um usuário desliza para a baixo, a partir da parte superior do dispositivo, ou move o ponteiro do mouse próximo à parte superior do dispositivo. Para evitar duplicação e confusão, o botão Voltar na barra de título não é exibido no modo Tablet.
+    
+              **Observação**  No modo Tablet, a barra do título é exibida quando um usuário desliza o dedo de cima para baixo no dispositivo, ou move o ponteiro do mouse próximo à parte superior do dispositivo. Para evitar duplicação e confusão, o botão Voltar na barra de título não é exibido no modo Tablet.
 
      
 
@@ -229,6 +230,6 @@ Surface Hub ![sistema Voltar em um Surface Hub](images/nav-back-surfacehub.png)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

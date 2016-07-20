@@ -3,8 +3,9 @@ author: mtoepke
 title: Guia de desenvolvimento de jogos do Windows 10
 description: "Um guia completo de recursos e informações para desenvolver jogos da Plataforma Universal do Windows (UWP)."
 ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
-ms.sourcegitcommit: 35017dd14f873350d7e9d75ff6c5c519067547b5
-ms.openlocfilehash: 33c158e254a367e65607e86ff425e9829b8255f5
+translationtype: Human Translation
+ms.sourcegitcommit: a9beb420ac13eb74c0109b30508e49d5305bc67c
+ms.openlocfilehash: 30f8408e6d125423e69615a3f9341e8f7d886fc8
 
 ---
 
@@ -30,12 +31,10 @@ Este guia será atualizado à medida que recursos e materiais adicionais de dese
 
 ## Recursos de desenvolvimento de jogos
 
-
 De documentação a programas, fóruns, blogs e exemplos para desenvolvedores, há muitos recursos disponíveis para ajudar você em sua jornada de desenvolvimento de jogos. Este é um resumo dos recursos que você deve conhecer para desenvolver seu jogo do Windows 10.
 
-> **Observação**   Os recursos de desenvolvimento do Xbox One e alguns recursos de jogos do Windows 10 (Serviços Xbox Live, por exemplo) são gerenciados por meio de programas como ID@Xbox e Microsoft Studios. Este guia abrange uma ampla variedade de recursos, então, você pode descobrir que alguns recursos não são acessíveis dependendo do programa em que você está ou de sua função de desenvolvimento específica. Os exemplos são links que se resolvem em developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com ou no Game Developer Network (GDN). Para obter informações sobre parcerias com a Microsoft, consulte [Programas de desenvolvedor](#programs).
-
- 
+> 
+              **Observação**   Os recursos de desenvolvimento do Xbox One e alguns recursos de jogos do Windows 10 (Serviços Xbox Live, por exemplo) são gerenciados por meio de programas como ID@Xbox e Microsoft Studios. Este guia abrange uma ampla variedade de recursos, então, você pode descobrir que alguns recursos não são acessíveis dependendo do programa em que você está ou de sua função de desenvolvimento específica. Os exemplos são links que se resolvem em developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com ou no Game Developer Network (GDN). Para obter informações sobre parcerias com a Microsoft, consulte [Programas de desenvolvedor](#programs).
 
 ### Documentação de desenvolvimento de jogos
 
@@ -80,7 +79,6 @@ Ao longo deste guia, você encontrará links profundos para a documentação rel
     </tr>     
 </table>
 
-
 ### Programas de desenvolvedor
 
 A Microsoft oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. Para publicar um jogo na Windows Store, você precisará criar uma conta de desenvolvedor no Centro de Desenvolvimento do Windows. Outros programas podem ser de seu interesse, dependendo de suas necessidades de jogo e estúdio, e podem gerar oportunidades, como desenvolvimento para o Xbox One e integração com o Xbox Live.
@@ -97,7 +95,7 @@ Registrar uma conta de desenvolvedor no Centro de Desenvolvimento do Windows é 
     <tr>
         <td>Registrar uma conta de desenvolvedor</td>
         <td>[Você está pronto para se inscrever?](https://msdn.microsoft.com/library/windows/apps/bg124287)</td>
-    </tr>
+    </tr> 
 </table>  
 
 
@@ -188,7 +186,7 @@ Há muitas amostras de jogos e aplicativos do Windows 10 disponíveis para ajuda
     </tr>
     <tr>
         <td>Exemplos de jogos do Xbox One (GDN)</td>
-        <td>[Exemplos](https://developer.xboxlive.com/en-us/platform/development/education/Pages/Samples.aspx)</td>
+        <td>[Exemplos](https://developer.xboxlive.com/platform/development/education/Pages/Samples.aspx)</td>
     </tr>
     <tr>
         <td>Exemplos de jogos do Windows 8 (Galeria de Códigos do MSDN)</td>
@@ -329,7 +327,27 @@ Estes três vídeos da GDC 2015 fornecem uma boa visão geral do desenvolvimento
         <td>[O futuro dos jogos no ecossistema da Microsoft](http://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem)</td>
     </tr>
 </table>
- 
+
+### Planejamento de jogo
+
+Estes são alguns tópicos de conceito e planejamento de nível alto a serem considerados ao planejar seu jogo.
+
+<table>
+    <colgroup>
+    <col width="50%" />
+    <col width="50%" />
+    </colgroup>
+    <tr>
+        <td>Tornando seu jogo acessível</td>
+        <td>[Acessibilidade para jogos](https://msdn.microsoft.com/windows/uwp/gaming/accessibility-for-games)</td>
+    </tr>
+    <tr>
+        <td>Usando a nuvem para jogos</td>
+        <td>[Nuvem para jogos](https://msdn.microsoft.com/windows/uwp/gaming/cloud-for-games)</td>
+    </tr>
+</table>
+
+
 
 ### Escolhendo a tecnologia de elementos gráficos e a linguagem de programação
 
@@ -673,7 +691,8 @@ Cocos2d-X é um pacote de ferramentas e mecanismos de desenvolvimento de jogos d
 
 #### Unreal Engine
 
-O Unreal Engine 4 é um conjunto completo de ferramentas de desenvolvimento de jogos para todos os tipos de jogos e desenvolvedores. Para os jogos de console e de computador mais exigentes, o Unreal Engine é usado por desenvolvedores de jogos em todo o mundo. Os membros do [Programa de acesso antecipado ao DirectX 12](#dxeap) que se inscrevem no Unreal Engine 4 podem receber acesso a um projeto de desenvolvimento Unreal Engine 4.4 que oferece suporte ao DirectX 12.
+O Unreal Engine 4 é um conjunto completo de ferramentas de desenvolvimento de jogos para todos os tipos de jogos e desenvolvedores. Para os jogos de console e de computador mais exigentes, o Unreal Engine é usado por desenvolvedores de jogos em todo o mundo. 
+              Os membros do [Programa de acesso antecipado ao DirectX 12](#dxeap) que se inscrevem no Unreal Engine 4 podem receber acesso a um projeto de desenvolvimento Unreal Engine 4.4 que oferece suporte ao DirectX 12.
 
 <table>
     <colgroup>
@@ -1028,7 +1047,7 @@ Saiba o que mudou no Direct3D 12 e como começar a programar usando o Direct3D 1
  
 #### Bibliotecas e kit de ferramentas do DirectX
 
-O kit de ferramentas DirectX, a biblioteca de processamento de texturas DirectX e a biblioteca de processamento de geometria DirectXMesh fornecem textura, malha, sprite e outras classes auxiliares e funcionalidades de utilitários para desenvolvimento no DirectX. Essas bibliotecas podem poupar bastante tempo e esforço em comparação à implementação desses recursos por conta própria. Embora implementadas principalmente para o Direct3D 11, algumas partes dessas bibliotecas também funcionam no Direct3D 12.
+O kit de ferramentas DirectX, a biblioteca de processamento de texturas DirectX, a biblioteca de processamento de geometria DirectXMesh, a biblioteca UVAtlas e a biblioteca DirectXMath fornecem textura, malha, sprite e outras classes auxiliares e funcionalidades de utilitários para desenvolvimento no DirectX. Essas bibliotecas podem ajudá-lo a economizar tempo e esforço de desenvolvimento.
 
 <table>
     <colgroup>
@@ -1036,16 +1055,28 @@ O kit de ferramentas DirectX, a biblioteca de processamento de texturas DirectX 
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Baixar o Kit de ferramentas do DirectX (DirectX 11)</td>
+        <td>Baixar o Kit de ferramentas do DirectX para DirectX 11</td>
         <td>[DirectXTK](http://go.microsoft.com/fwlink/?LinkId=248929)</td>
     </tr>
     <tr>
-        <td>Baixar a biblioteca de processamento de texturas do DirectX (DirectX 11)</td>
+        <td>Baixar o Kit de ferramentas do DirectX para DirectX 12</td>
+        <td>[DirectXTK 12](http://go.microsoft.com/fwlink/?LinkID=615561)</td>
+    </tr>
+    <tr>
+        <td>Baixar a biblioteca de processamento de texturas DirectX</td>
         <td>[DirectXTex](http://go.microsoft.com/fwlink/?LinkId=248926)</td>
     </tr>
     <tr>
         <td>Baixar a biblioteca de processamento de geometria DirectXMesh</td>
         <td>[DirectXMesh](http://go.microsoft.com/fwlink/?LinkID=324981)</td>
+    </tr>
+    <tr>
+        <td>Baixar UVAtlas para criar e compactar atlas de textura de isográfico</td>
+        <td>[UVAtlas](http://go.microsoft.com/fwlink/?LinkID=512686)</td>
+    </tr>
+    <tr>
+        <td>Baixar a biblioteca DirectXMath</td>
+        <td>[DirectXMath](http://go.microsoft.com/fwlink/?LinkID=615560)</td>
     </tr>
     <tr>
         <td>Suporte para Direct3D 12 no DirectXTK (postagem de blog)</td>
@@ -1072,11 +1103,11 @@ Esta é a documentação adicional do DirectX criada por parceiros externos.
     </tr>
     <tr>
         <td>Intel: Suporte a vários adaptadores no DirectX 12</td>
-        <td>[Como implementar um aplicativo de vários adaptadores explícitos usando o DirectX 12](https://software.intel.com/en-us/articles/multi-adapter-support-in-directx-12)</td>
+        <td>[Como implementar um aplicativo de vários adaptadores explícitos usando o DirectX 12](https://software.intel.com/articles/multi-adapter-support-in-directx-12)</td>
     </tr>
     <tr>
         <td>Intel: Tutorial do DirectX 12</td>
-        <td>[White paper colaborativo da Intel, da Suzhou Snail e da Microsoft](https://software.intel.com/en-us/articles/tutorial-migrating-your-apps-to-directx-12-part-1)</td>
+        <td>[White paper colaborativo da Intel, da Suzhou Snail e da Microsoft](https://software.intel.com/articles/tutorial-migrating-your-apps-to-directx-12-part-1)</td>
     </tr>
 </table>
 
@@ -1114,6 +1145,14 @@ Um bloco é a representação de seu jogo no menu Iniciar. Os blocos e notifica�
     <tr>
         <td>Aplicativo do Windows 10 para desenvolver modelos de blocos dinâmicos interativamente</td>
         <td>[Visualizador de notificações](https://www.microsoft.com/store/apps/9nblggh5xsl1)</td>
+    </tr>
+    <tr>
+        <td>Extensão de gerador de bloco UWP para o Visual Studio</td>
+        <td>[Ferramenta de criação de todos os blocos necessários usando uma única imagem](https://visualstudiogallery.msdn.microsoft.com/09611e90-f3e8-44b7-9c83-18dba8275bb2)</td>
+    </tr>
+    <tr>
+        <td>Extensão de gerador de bloco UWP para o Visual Studio (postagem de blog)</td>
+        <td>[Dicas sobre como usar a ferramenta de gerador de bloco UWP](https://blogs.windows.com/buildingapps/2016/02/15/uwp-tile-generator-extension-for-visual-studio/)</td>
     </tr>
 </table>
  
@@ -1262,8 +1301,16 @@ Você usará o novo painel unificado do Centro de Desenvolvimento do Windows par
         <td>[Criar pacotes carregáveis sem acesso à conta do fornecedor da loja](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/)</td>
     </tr>
     <tr>
+        <td>Criando aplicativos e pacotes de aplicativo usando MakeAppx</td>
+        <td>[Criar pacotes usando a ferramenta de empacotador de aplicativo MakeAppx.exe](https://msdn.microsoft.com/library/windows/desktop/hh446767)</td>
+    </tr>
+    <tr>
+        <td>Assinando seus arquivos digitalmente com a SignTool</td>
+        <td>[Assinar arquivos e verificar assinaturas em arquivos usando a SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764)</td>
+    </tr>      
+    <tr>
         <td>Carregando e controlando a versão de seu jogo</td>
-        <td>[Carregue os pacotes do aplicativo](https://msdn.microsoft.com/library/windows/apps/mt148542)</td>
+        <td>[Carregar pacotes de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt148542)</td>
     </tr>
 </table>
  
@@ -1320,6 +1367,10 @@ Quando você termina o desenvolvimento e envia seu jogo, não é "fim de jogo". 
     <col width="50%" />
     <col width="50%" />
     </colgroup>
+    <tr>
+        <td>Aplicativo do Centro de Desenvolvimento</td>
+        <td>[Aplicativo do Centro de Desenvolvimento do Windows 10 para exibir o desempenho de seus aplicativos publicados](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)</td>
+    </tr>  
     <tr>
         <td>Análises do Centro de Desenvolvimento do Windows</td>
         <td>[Análises](https://msdn.microsoft.com/library/windows/apps/mt148522)</td>
@@ -1378,7 +1429,8 @@ Para atualizar seu jogo publicado, envie um novo pacote do aplicativo com um nú
 ## Adicionando o Xbox Live ao seu jogo
 
 
-> **Observação**   O desenvolvimento para o Xbox Live é gerenciado por programas como ID@Xbox e Microsoft Studios. Este guia abrange uma ampla variedade de recursos, e você pode descobrir que alguns recursos não são acessíveis dependendo de sua participação no programa ou de sua função de desenvolvimento específica. Os exemplos são links que se resolvem em developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com ou no Game Developer Network (GDN). Para obter informações sobre parcerias com a Microsoft, consulte [Programas de desenvolvedor](#programs).
+> 
+              **Observação**   O desenvolvimento para o Xbox Live é gerenciado por programas como ID@Xbox e Microsoft Studios. Este guia abrange uma ampla variedade de recursos, e você pode descobrir que alguns recursos não são acessíveis dependendo de sua participação no programa ou de sua função de desenvolvimento específica. Os exemplos são links que se resolvem em developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com ou no Game Developer Network (GDN). Para obter informações sobre parcerias com a Microsoft, consulte [Programas de desenvolvedor](#programs).
 
 <table>
     <colgroup>
@@ -1447,6 +1499,6 @@ Para atualizar seu jogo publicado, envie um novo pacote do aplicativo com um nú
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

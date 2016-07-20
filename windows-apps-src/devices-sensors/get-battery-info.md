@@ -4,8 +4,8 @@ ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
 title: "Obter informações sobre a bateria"
 description: "Saiba como obter informações de bateria detalhadas usando APIs no namespace Windows.Devices.Power."
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 716123f7401350748c7eb81a2ca4208a74b6e4ac
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 9b1394c28b25b8b1b7401fcc794659dcf38fed6f
 
 ---
 # Obter informações de bateria
@@ -24,7 +24,8 @@ Saiba como obter informações de bateria detalhadas usando APIs no namespace [*
 
 Alguns dispositivos têm mais de uma bateria e nem sempre é óbvio como cada uma contribui com a capacidade de energia geral do dispositivo. É aí que a classe [**AggregateBattery**](https://msdn.microsoft.com/library/windows/apps/Dn895011) entra. A *bateria agregada* representa todos os controladores de bateria conectados ao dispositivo e pode fornecer um único objeto geral [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005).
 
-**Observação**  Uma classe [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004), na verdade, corresponde a um controlador de bateria. Dependendo do dispositivo, às vezes, o controlador é conectado à bateria física e, às vezes, ao compartimento do dispositivo. Assim, é possível criar um objeto de bateria, mesmo quando não há baterias presentes. Outras vezes, o objeto de bateria pode ser **nulo**.
+
+              **Observação**  Uma classe [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004), na verdade, corresponde a um controlador de bateria. Dependendo do dispositivo, às vezes, o controlador é conectado à bateria física e, às vezes, ao compartimento do dispositivo. Assim, é possível criar um objeto de bateria, mesmo quando não há baterias presentes. Outras vezes, o objeto de bateria pode ser **nulo**.
 
 Quando você tiver um objeto de bateria agregada, chame [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport) para o [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)correspondente.
 
@@ -44,7 +45,7 @@ private void RequestAggregateBatteryReport()
 
 ## Obter relatórios de bateria individual
 
-Você também pode criar um objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) para baterias individuais. Use [**GetDeviceSelector**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.power.battery.getdeviceselector.aspx) com o método [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/BR225432) para obter uma coleção de objetos [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) que representam qualquer controlador de bateria conectado ao dispositivo. Em seguida, usando a propriedade **Id** do objeto **DeviceInformation** desejado, crie um [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004) correspondente ao método [**FromIdAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.power.battery.fromidasync.aspx). Por fim, chame [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport) para obter o relatório de bateria individual.
+Você também pode criar um objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) para baterias individuais. Use [**GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getdeviceselector.aspx) com o método [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/BR225432) para obter uma coleção de objetos [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) que representam qualquer controlador de bateria conectado ao dispositivo. Em seguida, usando a propriedade **Id** do objeto **DeviceInformation** desejado, crie um [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004) correspondente ao método [**FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.fromidasync.aspx). Por fim, chame [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport) para obter o relatório de bateria individual.
 
 Este exemplo mostra como criar um relatório de bateria para todas as baterias conectadas ao dispositivo.
 
@@ -73,7 +74,7 @@ async private void RequestIndividualBatteryReports()
 
 ## Acessar detalhes do relatório
 
-O objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) fornece muitas informações de bateria. Para mais informações, consulte a referência de API para ver suas propriedades: **Status** (uma enumeração [**BatteryStatus**](https://msdn.microsoft.com/library/windows/apps/Dn818458)), [**ChargeRateInMilliwatts**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.power.batteryreport.chargerateinmilliwatts.aspx), [**DesignCapacityInMilliwattHours**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.power.batteryreport.designcapacityinmilliwatthours.aspx), [**FullChargeCapacityInMilliwattHours**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.power.batteryreport.fullchargecapacityinmilliwatthours.aspx) e [**RemainingCapacityInMilliwattHours**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.remainingcapacityinmilliwatthours). Este exemplo mostra algumas das propriedades de relatório de bateria usadas no aplicativo básico de bateria, que é fornecido no final deste tópico.
+O objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) fornece muitas informações de bateria. Para mais informações, consulte a referência de API para ver suas propriedades: **Status** (uma enumeração [**BatteryStatus**](https://msdn.microsoft.com/library/windows/apps/Dn818458)), [**ChargeRateInMilliwatts**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.chargerateinmilliwatts.aspx), [**DesignCapacityInMilliwattHours**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.designcapacityinmilliwatthours.aspx), [**FullChargeCapacityInMilliwattHours**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.fullchargecapacityinmilliwatthours.aspx) e [**RemainingCapacityInMilliwattHours**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.remainingcapacityinmilliwatthours). Este exemplo mostra algumas das propriedades de relatório de bateria usadas no aplicativo básico de bateria, que é fornecido no final deste tópico.
 
 ```csharp
 ...
@@ -332,13 +333,14 @@ Se o nome do seu aplicativo não for **App1**, será necessário renomear o name
 
 Por fim, para executar este aplicativo básico de bateria: no menu **Depurar**, clique em **Iniciar Depuração** para testar a solução.
 
-**Dica**  Para receber valores numéricos do objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005), depure o seu aplicativo no **Computador Local** ou em um **Dispositivo** externo (como um Windows Phone). Ao fazer a depuração em um emulador de dispositivo, o objeto **BatteryReport** devolve **nulo** às propriedade de capacidade e taxa.
+
+              **Dica**  Para receber valores numéricos do objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005), depure o seu aplicativo no **Computador Local** ou em um **Dispositivo** externo (como um Windows Phone). Ao fazer a depuração em um emulador de dispositivo, o objeto **BatteryReport** devolve **nulo** às propriedade de capacidade e taxa.
 
  
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

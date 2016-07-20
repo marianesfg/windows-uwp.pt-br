@@ -5,8 +5,8 @@ title: O que vem em seguida?
 description: "Agora que você já criou seu primeiro aplicativo, confira o restante do Centro de Desenvolvimento. Veja a seguir uma introdução às diversas seções disponíveis."
 keywords: Dev Center, Getting started
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: cb77a32f99bc6e27cfe87af16d6cd4e08855d7b6
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 5d8f036b7dcaba1c697f574011875cadbf1970c1
 
 ---
 # O que vem em seguida?
@@ -39,7 +39,7 @@ Vá para [Publicar](http://go.microsoft.com/fwlink/p/?linkid=268275).
 
 Esta seção contém informações detalhadas sobre classes, propriedades, métodos, eventos, estilos e outras APIs que você pode usar para criar aplicativos da Plataforma Universal do Windows (UWP).
 
-Vá para [Referência de API](https://msdn.microsoft.com/en-us/library/windows/apps/br211369.aspx).
+Vá para [Referência de API](https://msdn.microsoft.com/library/windows/apps/br211369.aspx).
 
 ## Referência de linguagem
 
@@ -72,6 +72,6 @@ Vá para [Desenvolver aplicativos IoT](http://go.microsoft.com/fwlink/p/?LinkId=
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

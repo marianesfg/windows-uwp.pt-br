@@ -2,6 +2,7 @@
 author: jnHs
 Description: "Gerenciar seus IAPs em massa permite fazer alterações em vários IAPs ao mesmo tempo, em vez de enviar individualmente cada atualização."
 title: Gerenciar IAPs em massa
+translationtype: Human Translation
 ms.sourcegitcommit: 475371dd55aa111f3743c03dc1600e8cfdbeb5b0
 ms.openlocfilehash: ae4d4ed33b9bd10a2b01b336c942ad3212de6533
 
@@ -10,7 +11,8 @@ ms.openlocfilehash: ae4d4ed33b9bd10a2b01b336c942ad3212de6533
 
 # Gerenciar IAPs em massa
 
-> **Importante** Este recurso está disponível atualmente apenas para contas de desenvolvedor que participam do [Programa Insider do Centro de Desenvolvimento](dev-center-insider-program.md). A implementação deste recurso pode ser alterada antes que ele esteja disponível para todos os desenvolvedores. Esta documentação preliminar fornece algumas informações básicas sobre como funciona o recurso.
+> 
+            **Importante** Este recurso está disponível atualmente apenas para contas de desenvolvedor que participam do [Programa Insider do Centro de Desenvolvimento](dev-center-insider-program.md). A implementação deste recurso pode ser alterada antes que ele esteja disponível para todos os desenvolvedores. Esta documentação preliminar fornece algumas informações básicas sobre como funciona o recurso.
 
 Gerenciar seus IAPs em massa permite fazer alterações em vários IAPs ao mesmo tempo, em vez de enviar individualmente cada atualização. Você pode acessar essa funcionalidade na página da visão geral do aplicativo. Clique em **Gerenciar IAPs em massa**.
 
@@ -43,7 +45,8 @@ Antes de importar as alterações, você precisará atualizar o arquivo. csv bai
 
 Para fazer alterações nos IAPs que você já publicou, atualize os valores que deseja alterar em sua cópia da planilha. Você pode remover todas as linhas dos IAPs que você não deseja atualizar ou deixá-las como está. Observe que se já houver um envio em andamento do IAP, você não poderá fazer alterações usando o arquivo. csv.
 
-> **Importante** Ao enviar atualizações de IAPs que você já publicou, não é possível alterar os campos **ID do Produto** e o **Tipo de Produto**.
+> 
+            **Importante** Ao enviar atualizações de IAPs que você já publicou, não é possível alterar os campos **ID do Produto** e o **Tipo de Produto**.
 
 Para enviar um novo IAP, adicione uma nova linha e insira as informações de seu novo IAP. Assegure-se de fornecer todas as informações necessárias. 
 
@@ -52,6 +55,6 @@ Quando terminar de fazer todas as alterações, salve o arquivo. csv (com o mesm
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

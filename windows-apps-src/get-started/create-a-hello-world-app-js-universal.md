@@ -4,15 +4,16 @@ ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
 title: Criar um aplicativo Hello, world (JS)
 description: Este tutorial ensina a usar JavaScript e HTML para criar um aplicativo Hello, world simples segmentado para a Plataforma Universal do Windows (UWP) no Windows 10.
 translationtype: Human Translation
-ms.sourcegitcommit: f3cb50e5b0b0baa73431392a1f6854a62f3655de
-ms.openlocfilehash: 5f534169117da94cb2249c897603f567c007299b
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: be731072824e81eadc95cebd5855234f9331962b
 
 ---
 # Criar um aplicativo "Hello, world" (JS)
 
 Este tutorial ensina a usar JavaScript e HTML para criar um aplicativo "Hello, world" simples segmentado para a Plataforma Universal do Windows (UWP) no Windows 10. Com um único projeto no Microsoft Visual Studio, você pode compilar um aplicativo que seja executado em qualquer dispositivo do Windows 10. Aqui, nosso foco é criar um aplicativo que seja executado igualmente bem em dispositivos móveis e desktops.
 
-**Importante**   Este tutorial deve ser usado com o Microsoft Visual Studio 2015 e o Windows 10. Ele não funcionará corretamente com versões anteriores.
+
+              **Importante**   Este tutorial deve ser usado com o Microsoft Visual Studio 2015 e o Windows 10. Ele não funcionará corretamente com versões anteriores.
 
 Aqui, você aprenderá a:
 
@@ -45,11 +46,13 @@ Criaremos um novo aplicativo chamado `HelloWorld`. Este é o procedimento:
 
     A caixa de diálogo **Novo Projeto** será exibida. O painel esquerdo da caixa de diálogo permite selecionar o tipo dos modelos que serão exibidos.
 
-3.  No painel esquerdo, expanda **Instalado > Modelos > JavaScript > Windows** e selecione o grupo de modelos **Universal**. O painel central da caixa de diálogo exibe uma lista de modelos de projeto para aplicativos UWP (Plataforma Universal do Windows).
+3.  No painel esquerdo, expanda **Instalado > Modelos > JavaScript > Windows** e selecione o grupo de modelos **Universal**. O painel central da caixa de diálogo exibe uma lista de modelos de projetos para aplicativos UWP (Plataforma Universal do Windows).
 
     ![A janela Novo Projeto ](images/js-tut-newproject.png)
 
     Para este tutorial, usaremos o modelo **Aplicativo em Branco**. Esse modelo cria um aplicativo UWP básico que pode ser compilado e executado, mas que não contém controles de interface do usuário nem dados. Você adicionará controles e dados ao aplicativo ao longo desses tutoriais.
+
+   (Se você não vir essas opções, verifique se tem as ferramentas de desenvolvimento de aplicativo Universal do Windows instaladas. Consulte [Prepare-se para começar](get-set-up.md) para saber mais.)
 
 4.  No painel central, selecione o modelo **Aplicativo em Branco (Universal do Windows)**.
 
@@ -135,6 +138,8 @@ Além das opções para depurar em um dispositivo da área de trabalho, o Visual
 -   **Emulador <SDK version> WVGA de 4 polegadas e 1 GB**
 -   etc. (Diversos emuladores em outras configurações)
 
+(Se você não vir os emuladores, verifique se tem as ferramentas de desenvolvimento de aplicativo Universal do Windows instaladas. Consulte [Prepare-se para começar](get-set-up.md) para saber mais.)
+
 É recomendável testar o aplicativo em um dispositivo com tela pequena e memória limitada, portanto use a opção **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
 **Para iniciar a depuração em um emulador de dispositivo móvel**
 
@@ -219,7 +224,7 @@ Antes de adicionarmos nosso próprio código, vejamos as primeiras e últimas li
 
 Você deve estar se perguntando o que é isso. Essas linhas de código encapsulam o restante do código de default.js em uma função anônima autoexecutável. Uma função anônima de autoexecução torna mais fácil evitar conflitos de nomenclatura ou a modificação acidental de valores que não deveriam ser modificados. Isso também mantém identificadores desnecessários fora do namespace global, o que contribui com o desempenho. Parece um pouco estranho, mas trata-se de uma boa prática de programação.
 
-A próxima linha de código ativa o [modo estrito](https://msdn.microsoft.com/en-us/library/windows/apps/br230269.aspx) para o código JavaScript. O modo estrito fornece verificações de erro adicionais para o código. Por exemplo, ele impede o uso de variáveis declaradas de modo implícito ou a atribuição de valor a propriedades somente leitura.
+A próxima linha de código ativa o [modo estrito](https://msdn.microsoft.com/library/windows/apps/br230269.aspx) para o código JavaScript. O modo estrito fornece verificações de erro adicionais para o código. Por exemplo, ele impede o uso de variáveis declaradas de modo implícito ou a atribuição de valor a propriedades somente leitura.
 
 Observe o restante do código em default.js. Ele manipula os eventos [**activated**](https://msdn.microsoft.com/library/windows/apps/BR212679) e [**checkpoint**](https://msdn.microsoft.com/library/windows/apps/BR229839) do aplicativo. Esses eventos serão descritos com mais detalhes mais tarde. Por enquanto, apenas lembre-se de que o evento **activated** é acionado quando o aplicativo é iniciado.
 
@@ -252,13 +257,14 @@ Observe o restante do código em default.js. Ele manipula os eventos [**activate
 })();
 ```
 
-Agora definiremos um manipulador de eventos para o [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017). Nosso novo manipulador de eventos obtém o nome do usuário por meio do controle `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) e o usa para gerar uma saudação no elemento `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) criado na seção anterior.
+Agora definiremos um manipulador de eventos para o [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017). Nosso novo manipulador de eventos obtém o nome do usuário por meio do controle `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) e o usa para gerar uma saudação no elemento `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) criado na seção anterior.
 
 ### Usando eventos que funcionam com a entrada de toque, mouse e caneta
 
 Em um aplicativo UWP, você não precisa se preocupar com as diferenças entre toque, mouse e outras formas de entrada de ponteiro. Você pode simplesmente usar os eventos que já conhece, como [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312), e eles funcionarão com todas as formas de entrada.
 
-**Dica**   O aplicativo também pode usar os novos eventos *MSPointer\** e *MSGesture\**, que funcionam com a entrada por toque, mouse e caneta e podem fornecer informações adicionais sobre o dispositivo que disparou o evento. Para saber mais, veja [Respondendo à interação do usuário](https://msdn.microsoft.com/library/windows/apps/Hh700412) e [Gestos, manipulações e interações](https://msdn.microsoft.com/library/windows/apps/Hh761498).
+
+              **Dica**   O aplicativo também pode usar os novos eventos *MSPointer\** e *MSGesture\**, que funcionam com a entrada por toque, mouse e caneta e podem fornecer informações adicionais sobre o dispositivo que disparou o evento. Para saber mais, veja [Respondendo à interação do usuário](https://msdn.microsoft.com/library/windows/apps/Hh700412) e [Gestos, manipulações e interações](https://msdn.microsoft.com/library/windows/apps/Hh761498).
 
 Agora, prosseguiremos para criar o manipulador de eventos.
 
@@ -271,7 +277,7 @@ Agora, prosseguiremos para criar o manipulador de eventos.
         }
 ```
 
-2.  Dentro do manipulador de eventos, recupere o nome do usuário a partir do controle `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) e use-o para criar uma saudação. Use o `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) para exibir o resultado.
+2.  Dentro do manipulador de eventos, recupere o nome do usuário a partir do controle `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) e use-o para criar uma saudação. Use o `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) para exibir o resultado.
 ```javascript
     function buttonClickHandler(eventInfo) {
             var userName = document.getElementById("nameInput").value;
@@ -332,10 +338,10 @@ Em seguida, chama [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/w
     };
 ```    
 
-[
-            **WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) é chamado independentemente de o aplicativo já ter sido encerrado anteriormente ou de ser a primeira vez que está sendo iniciado. O **WinJS.UI.processAll** está contido em uma mensagem para o método [**setPromise**](https://msdn.microsoft.com/library/windows/apps/JJ215609), que verifica se a tela não é retirada até que a página do aplicativo esteja pronta.
+[**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) é chamado independentemente de o aplicativo já ter sido encerrado anteriormente ou de ser a primeira vez que está sendo iniciado. O **WinJS.UI.processAll** está contido em uma mensagem para o método [**setPromise**](https://msdn.microsoft.com/library/windows/apps/JJ215609), que verifica se a tela não é retirada até que a página do aplicativo esteja pronta.
 
-**Dica**   A função [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) verifica o arquivo default.html para localizar controles WinJS e os inicializa. Até agora, ainda não adicionamos esses controles, mas é recomendável manter esse código para o caso de você desejar adicioná-los posteriormente.
+
+              **Dica**   A função [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) verifica o arquivo default.html para localizar controles WinJS e os inicializa. Até agora, ainda não adicionamos esses controles, mas é recomendável manter esse código para o caso de você desejar adicioná-los posteriormente.
 
 Um bom local para registrar os manipuladores de eventos de controles que não sejam WinJS é logo após a chamada de [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975).
 
@@ -408,7 +414,8 @@ Execute o aplicativo. Quando você inserir seu nome na caixa de texto e clicar n
 
 ![Saudação personalizada do aplicativo HelloWorld](images/helloworld-3-js-phone.png)
 
-**Observação**   Se você está se perguntando por que usamos [**addEventListener**](https://msdn.microsoft.com/library/windows/apps/Hh441145) para registrar o evento no código em vez de definir o evento [**onclick**](https://msdn.microsoft.com/library/windows/apps/Hh441312) no HTML, veja [Codificando aplicativos básicos](https://msdn.microsoft.com/library/windows/apps/Hh780660) para obter uma explicação detalhada.
+
+              **Observação**   Se você está se perguntando por que usamos [**addEventListener**](https://msdn.microsoft.com/library/windows/apps/Hh441145) para registrar o evento no código em vez de definir o evento [**onclick**](https://msdn.microsoft.com/library/windows/apps/Hh441312) no HTML, veja [Codificando aplicativos básicos](https://msdn.microsoft.com/library/windows/apps/Hh780660) para obter uma explicação detalhada.
 
 ## Etapa 6: adicionar uma Biblioteca do Windows para controle JavaScript
 
@@ -419,7 +426,7 @@ Diferentemente dos controles HTML, os controles WinJS não possuem elementos de 
 
 Adicione um controle [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) ao seu aplicativo.
 
-1.  No arquivo default.html, adicione um [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321) e um controle [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) após o `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133).
+1.  No arquivo default.html, adicione um [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321) e um controle [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) após o `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133).
 
     ```html
     <body class="win-type-body">
@@ -459,9 +466,9 @@ Se [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh4
 
 Como em todos os métodos WinJS assíncronos, [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) retorna um objeto [**Promise**](https://msdn.microsoft.com/library/windows/apps/BR211867). Uma **Promise** é uma "promessa" que algo ocorrerá no futuro; quando isto ocorre, diz-se que a **Promise** foi concretizada.
 
-[
-              Os objetos **Promise**
-            ](https://msdn.microsoft.com/library/windows/apps/BR211867) têm um método [**then**](https://msdn.microsoft.com/library/windows/apps/BR229728) que consideram uma função "concluída" como um parâmetro. A **Promise** chama essa função quando é concluída.
+
+              [
+              Os objetos **Promise**](https://msdn.microsoft.com/library/windows/apps/BR211867) têm um método [**then**](https://msdn.microsoft.com/library/windows/apps/BR229728) que considera uma função "concluída" como um parâmetro. A **Promise** chama essa função quando é concluída.
 
 Adicionando seu código a uma função "concluída" e a passando para o objeto [**Promise**](https://msdn.microsoft.com/library/windows/apps/BR211867) no método [**then**](https://msdn.microsoft.com/library/windows/apps/BR229728), você pode ter certeza que seu código é executado após a conclusão do [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975).
 
@@ -556,6 +563,6 @@ Parabéns, você criou seu primeiro aplicativo para o Windows 10 e a UWP usando 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -78,7 +78,8 @@ Você também pode ter ou definir a propriedade da classe **Frame** [**CacheSize
 
 Para saber mais sobre navegação, consulte [Navegação](https://msdn.microsoft.com/library/windows/apps/mt187344) e [XAML personality animations sample](http://go.microsoft.com/fwlink/p/?LinkID=242401).
 
-**Observação**  Para saber mais sobre navegação para aplicativos da Windows Store usando JavaScript e HTML, consulte [Guia de início rápido: usando a navegação de página única (HTML)](https://msdn.microsoft.com/library/windows/apps/hh452768).
+
+            **Observação**  Para saber mais sobre navegação para aplicativos da Windows Store usando JavaScript e HTML, consulte [Guia de início rápido: usando a navegação de página única (HTML)](https://msdn.microsoft.com/library/windows/apps/hh452768).
  
 ### Próxima etapa
 

@@ -3,8 +3,9 @@ title: "Chaves criptográficas"
 description: "Este artigo mostra como usar funções de derivação de chaves padrão para derivar chaves e como criptografar conteúdo usando chaves simétricas e assimétricas."
 ms.assetid: F35BEBDF-28C5-4F91-A94E-F7D862B6ED59
 author: awkoren
-ms.sourcegitcommit: 4c8f586f711b1a9e2d2f252cf28a5239d9d68122
-ms.openlocfilehash: c23e0ba44a5013dca9ceec94ff434a34323d53bc
+translationtype: Human Translation
+ms.sourcegitcommit: e7fba930c108744815f261e7d01d198626d7e7c9
+ms.openlocfilehash: a86f31a0b62958f1300e386dfb99fd7fc1432fc5
 
 ---
 
@@ -14,7 +15,7 @@ ms.openlocfilehash: c23e0ba44a5013dca9ceec94ff434a34323d53bc
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo mostra como usar funções de derivação de chaves padrão para derivar chaves e como criptografar conteúdo usando chaves simétricas e assimétricas.
+Este artigo mostra como usar funções de derivação de chaves padrão para derivar chaves e como criptografar conteúdo usando chaves simétricas e assimétricas. 
 
 ## Chaves simétricas
 
@@ -75,6 +76,6 @@ Geralmente é necessário derivar chaves adicionais de um segredo compartilhado.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

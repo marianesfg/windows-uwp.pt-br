@@ -3,20 +3,27 @@ author: v-angraf
 title: "O que há de novo para UWP no Xbox One"
 description: Destaca os novos recursos para UWP em aplicativos do Xbox One.
 area: Xbox
-ms.sourcegitcommit: 59019f209729b56e02ebdbdfd53a8fbf835c69f7
-ms.openlocfilehash: dfa94ad42a79d0f6b3f72fbf2efe9ce043532c56
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: edc9a914f200c643b1133cf07778e2ca3931d0d9
 
 ---
 
-# Novidades no Developer Preview para UWP no Xbox One de junho de 2016
+# Novidades no Developer Preview para UWP no Xbox One de julho de 2016
 
-A versão de junho de 2016 Developer Preview da Plataforma Universal do Windows (UWP) no Xbox One contém os seguintes novos recursos, atualizações para os recursos existentes, e correções de bugs.
+A versão de julho de 2016 Developer Preview da Plataforma Universal do Windows (UWP) no Xbox One contém os seguintes novos recursos, atualizações para os recursos existentes, e correções de bugs.
+
+## Rede usando soquetes TCP/UDP está disponível agora  
+O acesso à rede de entrada e de saída do console que usa soquetes TCP/UDP tradicionais (WinSock, Windows.Networking.Sockets) está disponível agora.
+
+## Suporte de Fiddler
+Agora você pode habilitar o Fiddler como um proxy para um console que tenha habilitado a Plataforma Universal do Windows (UWP) no Xbox One. O Fiddler permite que você faça logon e inspecione todo o tráfego HTTP/HTTPS dos e a partir dos serviços do Xbox e serviços web de terceiros. Para obter mais informações, consulte [Como usar o Fiddler com o Xbox One durante o desenvolvimento do UWP](uwp-fiddler.md).
 
 ## Modo de mouse agora é habilitado por padrão
 Modo de mouse agora é habilitado por padrão para aplicativos Web hospedados e XAML.
 É altamente recomendável desativar essa opção e otimizar para navegação direcional de controlador.
 Para saber como desativar o modo de mouse, consulte [Como desabilitar o modo de mouse](how-to-disable-mouse-mode.md).
-Para obter mais informações sobre como compilar ótimos aplicativos para Xbox, consulte [Projetando para Xbox e TV](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode).
+Para obter mais informações sobre como compilar ótimos aplicativos para Xbox, consulte [Projetando para Xbox e TV](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode).
 
 ## Área de superfície de API UWP estendida agora está funcional no console
 APIs de UWP adicionais agora são funcionais no console do Xbox. Para obter mais informações sobre o suporte a API de UWP, consulte [Recursos UWP que ainda não têm suporte no Xbox](http://go.microsoft.com/fwlink/?LinkID=760755). 
@@ -47,6 +54,6 @@ As seguintes melhorias foram feitas na ferramenta Windows Device Portal (WDP) pa
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

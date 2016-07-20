@@ -4,6 +4,7 @@ description: "Por meio do namespace Windows.ApplicationModel.Contacts, você tem
 title: Selecionar contatos
 ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
 keywords: contact, selecting specific fields
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
 ms.openlocfilehash: 6f2c6a546ed3daa0ef0311bc54ca47f31d01f3d8
 
@@ -231,6 +232,6 @@ Agora, você já tem o entendimento básico de como usar o seletor de contatos p
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

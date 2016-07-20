@@ -8,8 +8,8 @@ template: detail.hbs
 extraBodyClass: style-typography
 brief: "As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design."
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 02d5149f945bb631e385e45a295fdfe08bd98fb0
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 7ec2c80fd571de98060282d2b321d1895e2b3dc8
 
 ---
 
@@ -39,7 +39,7 @@ Ao empilhar um tipo maior sobre um tipo menor, a distância da última linha de 
 
 ![Mostra como o tipo maior é empilhado sobre o tipo menor](images/line-height-stacking.png)
 
-Em XAML, isso é feito empilhando dois [TextBlocks](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) e definindo a margem apropriada.
+Em XAML, isso é feito empilhando dois [TextBlocks](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) e definindo a margem apropriada.
 
 ```xaml
 <StackPanel Width="200">
@@ -83,7 +83,7 @@ O espaçamento entre palavras por padrão sempre é 100% e o espaçamento entre 
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-Em um controle de texto XAML use [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) para controlar kerning e [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar o rastreamento. Por padrão Typography.Kerning é definido como "true" e FontStretch é definido como "Normal", que são os valores recomendados.
+Em um controle de texto XAML use [Typogrphy.Kerning](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) para controlar kerning e [FontStretch](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar o rastreamento. Por padrão Typography.Kerning é definido como "true" e FontStretch é definido como "Normal", que são os valores recomendados.
     </div>
 </aside>
 
@@ -129,7 +129,7 @@ Depois que a altura do texto se estende além da altura do ícone, a primeira li
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-A propriedade [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) de XAML fornece acesso às medidas de fonte iniciais e de limite de altura. Ela pode ser usada para o tipo de alinhamento superior, central ou vertical.
+A propriedade [TextBlock.TextLineBounds](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) de XAML fornece acesso às medidas de fonte iniciais e de limite de altura. Ela pode ser usada para o tipo de alinhamento superior, central ou vertical.
     </div>
 </aside>
 
@@ -154,7 +154,7 @@ Tamanhos diferentes de Segoe UI devem ser usados para criar hierarquia em uma ra
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-A maioria dos níveis de rampa está disponível como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) XAML que seguem a convenção de nomenclatura `*TextBlockStyle` (por ex.: `HeaderTextBlockStyle`). 
+A maioria dos níveis de rampa está disponível como [recursos estáticos](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) XAML que seguem a convenção de nomenclatura `*TextBlockStyle` (por ex.: `HeaderTextBlockStyle`). 
     </div>
 </aside>
 
@@ -185,6 +185,6 @@ No entanto, nomes próprios mudam seu significado quando estão em maiúsculas e
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

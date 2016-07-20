@@ -4,8 +4,8 @@ ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Camada visual
 description: "A API Windows.UI.Composition concede acesso a uma camada de composição entre a camada de estrutura (XAML) e a camada de elementos gráficos (DirectX)."
 translationtype: Human Translation
-ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
-ms.openlocfilehash: 164c01737d27451adcb685f9cda544cc00634af4
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 1abb663d0ee27d7e57ab83dab2589557d1f9f29a
 
 ---
 # Camada visual
@@ -14,9 +14,9 @@ ms.openlocfilehash: 164c01737d27451adcb685f9cda544cc00634af4
 
 No Windows 10, foi realizado um trabalho significativo para criar um novo mecanismo unificado de composição e renderização para todos os aplicativos Windows, sejam eles para área de trabalho ou dispositivos móveis. Um resultado desse trabalho foi a API de composição unificada do WinRT, chamada Windows.UI.Composition, que oferece acesso a novos objetos de composição leves juntamente com novas animações e efeitos controlados pelo Compositor.
 
-Windows.UI.Composition é uma API declarativa, [de modo retido](https://msdn.microsoft.com/library/windows/desktop/ff684178.aspx) que pode ser chamada por qualquer aplicativo da Plataforma Universal do Windows (UWP) para criar objetos de composição, animações e efeitos diretamente em um aplicativo. A API é um suplemento eficiente para estruturas existentes como XAML para fornecer aos desenvolvedores de aplicativos UWP uma superfície C# familiar para adicionar ao seu aplicativo. Essas APIs podem ser usadas para criar aplicativos sem estrutura estilo DX.
+Windows.UI.Composition é uma API declarativa, [de modo retido](https://msdn.microsoft.com/library/windows/desktop/ff684178.aspx) que pode ser chamada por qualquer aplicativo da Plataforma Universal do Windows (UWP) para criar objetos de composição, animações e efeitos diretamente em um aplicativo. A API é um suplemento eficiente para estruturas existentes como XAML para fornecer aos desenvolvedores de aplicativos UWP uma superfície C# familiar para adicionar ao seu aplicativo. Essas APIs também podem ser usadas para criar aplicativos sem estrutura estilo DX.
 
-Um desenvolvedor XAML pode "recorrer" à camada de composição em C# para realizar um trabalho personalizado na camada de composição usando o WinRT para criar uma "ilha de composição" de objetos em seu aplicativo XAML, em vez de usar a camada de elementos gráficos e o DirectX e C++ para qualquer trabalho de interface do usuário personalizada.
+Um desenvolvedor XAML pode "recorrer" à camada de composição em C# para realizar um trabalho personalizado na camada de composição usando o WinRT, em vez de usar a camada de elementos gráficos e o DirectX e C++ para qualquer trabalho de interface do usuário personalizada. Essa técnica pode ser usada para animar um elemento existente usando as APIs de composição ou para ampliar uma Interface do usuário, criando um "Visual Island" do conteúdo Windows.UI.Composition dentro da árvore de elementos XAML.
 
 ![](images/layers-win-ui-composition.png)
 ## <span id="Composition_Objects_and_The_Compositor"></span><span id="composition_objects_and_the_compositor"></span><span id="COMPOSITION_OBJECTS_AND_THE_COMPOSITOR"></span>Objetos de composição e o Compositor
@@ -27,18 +27,18 @@ A API permite que os desenvolvedores definam e criem um ou vários objetos [**Vi
 
 Elementos visuais podem ser contêineres de outros elementos visuais ou podem hospedar elementos visuais de conteúdo. A API viabiliza facilidade de uso, fornecendo um conjunto claro de objetos [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) para tarefas específicas que existem em uma hierarquia:
 
--   [
-              **Visual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706858) – o objeto base. A maioria das propriedades estão aqui e são herdadas por outros objetos visuais.
--   [
-              **ContainerVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706810) – deriva de [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) e adiciona a capacidade de inserir elementos visuais filho.
--   [
-              **SpriteVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589433) – deriva de [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e tem conteúdo na forma de imagens, efeitos e cadeias de troca.
--   [
-              **Compositor**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706789) – o alocador de objetos que gerencia a relação entre um aplicativo e o processo do compositor do sistema.
+-   
+              [
+              **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – O objeto base. A maioria das propriedades estão aqui e são herdadas por outros objetos visuais.
+-   
+              [
+              **ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – Deriva de [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) e adiciona a capacidade de inserir elementos visuais filho.
+-   
+              [
+              **SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – Deriva de [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e tem conteúdo na forma de imagens, efeitos e cadeias de troca.
+-   
+              [
+              **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – O alocador de objetos que gerencia a relação entre um aplicativo e o processo do compositor do sistema.
 
 O compositor também é um alocador de uma série de outros objetos de composição usados para recortar ou transformar elementos visuais na árvore, bem como um conjunto avançado de animações e efeitos.
 
@@ -58,19 +58,29 @@ Para obter mais informações, consulte a visão geral de [Animações de compos
 
 Além de criar uma árvore visual do zero, a API de composição pode interoperar com uma interface do usuário XAML existente usando a classe [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976) em [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908).
 
+- 
+              [
+              **ElementCompositionPreview.GetElementVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): obtém o Visual de um elemento para animá-lo usando as APIs de composição
+- 
+              [
+              **ElementCompositionPreview.SetChildVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): adiciona um "Visual island" do conteúdo da composição a uma árvore XAML.
+- 
+              [
+              **ElementCompositionPreview.GetScrollViewerManipulationPropertySet()**](https://msdn.microsoft.com/library/windows/apps/mt608980.aspx): utiliza a manipulação do [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) como entrada de uma animação de composição
+
 
 **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
 ## <span id="Additional_Resources_"></span><span id="additional_resources_"></span><span id="ADDITIONAL_RESOURCES_"></span>Recursos adicionais:
 
--   Leia o artigo de Kenny Kerr no MSDN sobre essa API: [Gráficos e Animação - Opções de Composição do Windows 10](https://msdn.microsoft.com/magazine/mt590968)
--   Exemplos de composição no [GitHub de composição](https://github.com/Microsoft/composition).
--   [
-              **Documentação de referência completa da API**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706878).
+-   Leia o artigo de Kenny Kerr no MSDN sobre essa API: [Elementos Gráficos e Animação - Opções de Composição do Windows 10](https://msdn.microsoft.com/magazine/mt590968)
+-   Exemplos de Interface do usuário avançada e composição no [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).
+-   
+              [
+              **Documentação de referência completa da API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
 -   Problemas conhecidos: [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues).
 
  
@@ -83,6 +93,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

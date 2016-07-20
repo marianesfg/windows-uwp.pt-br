@@ -5,6 +5,7 @@ title: "Diretrizes para controles de exibição de inversão"
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: ecb46c0d42821d833e8232780b553754f8f097c5
 
@@ -105,7 +106,8 @@ Aqui, o ItemsSource está associado a um [**CollectionViewSource**](https://msdn
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**Observação**
+>
+            **Observação**
             &nbsp;&nbsp;Você pode popular um recurso exibição de inversão adicionando itens a sua coleção Items ou definindo sua propriedade ItemsSource, mas você não pode usar as duas formas ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item no XAML, o item será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
 
 ### Especificar a aparência dos itens
@@ -211,6 +213,6 @@ Para coleções maiores (10 a 25 itens), considere usar um indicador que ofereç
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

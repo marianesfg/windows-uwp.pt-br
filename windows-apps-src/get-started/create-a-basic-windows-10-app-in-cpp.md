@@ -4,8 +4,8 @@ ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
 title: Criar um aplicativo Hello World em C++ (Windows 10)
 description: "Com o Microsoft Visual Studio 2015, você pode usar C++ para desenvolver um aplicativo que é executado no Windows 10, inclusive em telefones que executam o Windows 10. Esses aplicativos têm uma interface do usuário definida em linguagem XAML."
 translationtype: Human Translation
-ms.sourcegitcommit: c26054867741934f87f189cc2c115dea9cf8daba
-ms.openlocfilehash: e39752f9f13eaf93d23412252483093e704b1668
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 7836cb385cc37f39fa1af01ea981263fcf3f3634
 
 ---
 
@@ -23,9 +23,8 @@ Para tutoriais em outras linguagens de programação, consulte:
 
 ## Antes de começar...
 
--   Para concluir este tutorial, você deve usar o Visual Studio 2015 Community ou posterior, ou uma das versões que não seja Community do Visual Studio 2015, em um computador que executa o Windows 10 ou o Windows 8.1. Para baixá-los, veja [Obter as ferramentas](http://go.microsoft.com/fwlink/p/?LinkId=532666).
+-   Para concluir este tutorial, você deve usar o Visual Studio2015 Community ou posterior, ou uma das versões que não seja Community do Visual Studio 2015, em um computador que executa o Windows 10 ou o Windows 8.1. Para baixá-los, veja [Obter as ferramentas](http://go.microsoft.com/fwlink/p/?LinkId=532666).
 -   Instale o [SDK](http://go.microsoft.com/fwlink/?LinkId=533049) adequado para desenvolvimento da Plataforma Universal do Windows.
--   Você também precisará de uma licença de desenvolvedor. Para obter instruções, veja [Obter uma licença de desenvolvedor](https://msdn.microsoft.com/library/windows/apps/Hh974578).
 -   Pressupomos que você tem uma compreensão básica de C++ padrão, XAML e dos conceitos apresentados na [Visão geral de XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
 -   Pressupomos que você esteja usando o layout de janela padrão no Visual Studio. Para redefinir o layout padrão, na barra de menus, escolha **Janela** > **Redefinir Layout da Janela**.
 -   Há um problema conhecido no Visual Studio 2015 que pode resultar em um NullReferenceException durante o carregamento do designer XAML. Esse problema impede algumas das etapas deste tutorial, a menos que você aplique a solução alternativa. Para obter detalhes sobre esse problema e a solução alternativa, consulte [esta postagem no fórum MSDN](http://go.microsoft.com/fwlink/p/?LinkId=624036).
@@ -54,7 +53,7 @@ Se você tiver experiência em programação da área de trabalho do Windows em 
 
 -   Você está basicamente programando em uma nova API fácil de navegar e orientada a objetos, o Windows Runtime, embora o Win32 de dispositivos Windows ainda esteja disponível para certas funcionalidades.
 
--   Use o C++/CX para consumir e criar objetos do Windows Runtime. O C++/CX permite a manipulação de exceções C++, representantes, eventos e contagem de referências automática de objetos criados dinamicamente. Quando você usa C++/CX, os detalhes da arquitetura COM subjacente e do Windows permanecem ocultos no código do aplicativo. Para saber mais, veja [Referência da linguagem C++/CX](https://msdn.microsoft.com/en-us/library/windows/apps/hh699871.aspx).
+-   Use o C++/CX para consumir e criar objetos do Windows Runtime. O C++/CX permite a manipulação de exceções C++, representantes, eventos e contagem de referências automática de objetos criados dinamicamente. Quando você usa C++/CX, os detalhes da arquitetura COM subjacente e do Windows permanecem ocultos no código do aplicativo. Para saber mais, veja [Referência da linguagem C++/CX](https://msdn.microsoft.com/library/windows/apps/hh699871.aspx).
 
 -   O aplicativo é compilado em um pacote que também contém metadados sobre os tipos contidos no aplicativo, os recursos que ele usa e os recursos que ele exige (acesso a arquivos, à Internet, à câmera e assim por diante).
 
@@ -70,7 +69,7 @@ Começaremos com os conceitos básicos:
 
 -   Como entender os projetos e arquivos criados.
 
--   Como entender as extensões nas extensões de componentes do Visual C++ (C++/CX) e quando usá-las.
+-   Como entender as extensões nas extensões de componentes do VisualC++ (C++/CX) e quando usá-las.
 
 **Primeiro, crie uma solução no Visual Studio**
 
@@ -79,6 +78,8 @@ Começaremos com os conceitos básicos:
 2.  Na caixa de diálogo **Novo Projeto**, no painel esquerdo, expanda **Instalado** > **Visual C++** > **Windows** > **Universal**.
 
 3.  No painel central, selecione **Aplicativo em Branco (Universal Windows)**.
+
+   (Se você não vir essas opções, verifique se tem as ferramentas de desenvolvimento de aplicativo Universal do Windows instaladas. Consulte [Prepare-se para começar](get-set-up.md) para saber mais.)
 
 4.  Insira um nome para o projeto. Vamos chamá-lo de HelloWorld.
 
@@ -100,11 +101,16 @@ Cada arquivo .xaml em uma pasta de projeto tem um arquivo .xaml.h e .xaml.cpp co
 
 Primeiro, vamos examinar os arquivos de projeto.
 
--   **App.xaml, App.xaml.h, App.xaml.cpp:** representam o objeto do aplicativo, que é o ponto de entrada de um aplicativo. O App.xaml não contém uma marcação de interface do usuário específica, mas você pode adicionar estilos de interface do usuário e outros elementos que quer que sejam acessíveis de qualquer página. Os arquivos code-behind contém manipuladores para os eventos **OnLaunched** e **OnSuspending**. Normalmente, você adiciona o código personalizado aqui para inicializar o aplicativo quando ele iniciar e executar a limpeza quando ele for suspenso ou encerrado.
--   **MainPage.xaml, MainPage.xaml.h, MainPage.xaml.cpp:**contém uma marcação XAML e code-behind para a página "inicial" padrão em um aplicativo. Ele não possui suporte para navegação ou controles internos.
--   **pch.h, pch.cpp:** Um arquivo de cabeçalho pré-compilado e o arquivo que o inclui no seu projeto. No pch.h, você pode incluir quaisquer cabeçalhos que não mudam com frequência e estão incluídos em outros arquivos na solução.
--   **Package.appxmanifest:** um arquivo XML que descreve os recursos do dispositivo que seu aplicativo requer, bem como a informação de versão do aplicativos e outros metadados. Para abrir esse arquivo no **Criador de Manifestos**, basta clicar duas vezes nele.
--   **HelloWorld\_TemporaryKey.pfx:**uma chave que permite a implementação do aplicativo nessa máquina, por meio do Visual Studio.
+-   
+              **App.xaml, App.xaml.h, App.xaml.cpp:** representam o objeto do aplicativo, que é o ponto de entrada de um aplicativo. O App.xaml não contém uma marcação de interface do usuário específica, mas você pode adicionar estilos de interface do usuário e outros elementos que quer que sejam acessíveis de qualquer página. Os arquivos code-behind contém manipuladores para os eventos **OnLaunched** e **OnSuspending**. Normalmente, você adiciona o código personalizado aqui para inicializar o aplicativo quando ele iniciar e executar a limpeza quando ele for suspenso ou encerrado.
+-   
+              **MainPage.xaml, MainPage.xaml.h, MainPage.xaml.cpp:**contêm uma marcação XAML e code-behind para a página "inicial" padrão em um aplicativo. Ele não possui suporte para navegação ou controles internos.
+-   
+              **pch.h, pch.cpp:** um arquivo de cabeçalho pré-compilado e o arquivo que o inclui no seu projeto. No pch.h, você pode incluir quaisquer cabeçalhos que não mudam com frequência e estão incluídos em outros arquivos na solução.
+-   
+              **Package.appxmanifest:** um arquivo XML que descreve os recursos do dispositivo que seu aplicativo requer, bem como a informação de versão do aplicativos e outros metadados. Para abrir esse arquivo no **Criador de Manifestos**, basta clicar duas vezes nele.
+-   
+              **HelloWorld\_TemporaryKey.pfx:**uma chave que permite a implementação do aplicativo nessa máquina, por meio do Visual Studio.
 
 ## Primeira análise do código
 
@@ -131,7 +137,8 @@ Quase todas as classes do Windows Runtime, o que inclui todos os tipos na API do
 
 Todos os tipos do Windows Runtime devem ser declarados dentro de um namespace e ao contrário do ISO C++, os tipos por eles próprios têm um modificador de acessibilidade. O modificador **public** torna visível a classe para componentes do Tempo de Execução do Windows fora do namespace. A palavra-chave **sealed** significa que a classe não pode servir como uma classe base. Quase todas as classes ref são seladas. A herança de classe não é amplamente usada, pois o Javascript não entende isso.
 
--   **ref new** e **^ (hats)**
+-   
+              **ref new** e **^ (hats)**
 
  Você declara uma variável de uma classe ref usando o operador ^ (chapéu) e instancia o objeto com a nova palavra-chave ref. A partir daí você acessa métodos da instância do objeto com o operador -> como um ponteiro C++. Os métodos estáticos são acessados com o operador :: assim como no ISO C++.
 
@@ -254,8 +261,11 @@ Além das opções para depurar em um dispositivo da área de trabalho, o Visual
 -   **Emulador 10.0.0.0 WVGA de 4 polegadas e 512 MB**
 -   Vários emuladores em outras configurações
 
-É recomendável testar o aplicativo em um dispositivo com tela pequena e memória limitada, portanto use a opção **Emulador 10.0.0.0 WVGA de 4 polegadas e 512 MB**.
-**Dica**  Para obter mais informações sobre o uso do emulador do Windows Phone, consulte [Executar os aplicativos Windows Phone no emulador](http://go.microsoft.com/fwlink/p/?LinkId=394233).
+(Se você não vir os emuladores, verifique se tem as ferramentas de desenvolvimento de aplicativo Universal do Windows instaladas. Consulte [Prepare-se para começar](get-set-up.md) para saber mais.)
+
+É recomendável testar o aplicativo em um dispositivo com tela pequena e memória limitada. Portanto, use a opção **Emulador 10.0.0.0 WVGA de 4 polegadas e 512 MB**.
+
+              **Dica**  Para obter mais informações sobre o uso do emulador do Windows Phone, consulte [Executar os aplicativos Windows Phone no emulador](http://go.microsoft.com/fwlink/p/?LinkId=394233).
 
  
 
@@ -300,7 +310,7 @@ Também bastaria adicionar isso ao código xaml manualmente, o que poderá ser �
 
 O designer não será carregado se ocorrer uma exceção sem tratamento durante a renderização. A renderização no designer envolve a execução de uma versão em tempo de design da página. Pode ser útil desabilitar a execução do código do usuário. Você pode fazer isso alterando a configuração na caixa de diálogo **Ferramentas, Opções**. Em **Designer XAML**, desmarque **Executar o código do projeto no XAML Designer (se houver suporte)**.
 
-5.  Em MainPage.xaml.cpp, adicione o seguinte código para o manipulador de eventos **Button\_Click** que você acabou de criar. Esse código recupera o nome do usuário do controle `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e o utiliza para criar uma saudação. O `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) exibe o resultado.
+5.  Em MainPage.xaml.cpp, adicione o seguinte código para o manipulador de eventos **Button\_Click** que você acabou de criar. Esse código recupera o nome do usuário do controle `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e o utiliza para criar uma saudação. O `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) exibe o resultado.
 
 ```cpp
     void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
@@ -345,7 +355,8 @@ Veja a marca [**Application**](https://msdn.microsoft.com/library/windows/apps/B
 
 Qual tema você deve usar? Fica a seu critério. Em nossa perspectiva, para aplicativos que exibem sobretudo imagens ou vídeo, recomendamos o uso do tema escuro. Já para aplicativos que contêm muito texto, recomendamos o uso do tema claro. Se você estiver usando um esquema de cores personalizado, use o tema que combina melhor com a aparência do seu aplicativo. No restante deste tutorial, usamos o tema claro nas capturas de tela.
 
-**Observação**  O tema é aplicado quando o aplicativo for iniciado e não puder ser alterado enquanto o aplicativo estiver sendo executado.
+
+              **Observação**  O tema é aplicado quando o aplicativo é iniciado e não poderá ser alterado enquanto o aplicativo estiver sendo executado.
 
 ### Usando estilos do sistema
 
@@ -360,7 +371,8 @@ No momento, no aplicativo do Windows, o texto está muito pequeno e difícil de 
 5.  Expanda o grupo **Diversos** e localize a propriedade **Estilo**.
 6.  Clique no marcador de propriedade (caixa verde à direita da propriedade **Estilo**), em seguida, no menu, selecione **Recurso do Sistema** > **BaseTextBlockStyle**.
 
- **BaseTextBlockStyle** é um recurso que é definido no [ **ResourceDictionary** ](https://msdn.microsoft.com/library/windows/apps/BR208794) na <root>\\Program Files\\Windows Kits\\10\\Include\\winrt\\xaml\\design\\generic.xaml.
+ 
+              **BaseTextBlockStyle** é um recurso que é definido no [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) em <root>\\Program Files\\Windows Kits\\10\\Include\\winrt\\xaml\\design\\generic.xaml.
 
 ![Janela Propriedades, exibição das Propriedades](images/xaml-hw-style-cpp.png)
 
@@ -372,7 +384,8 @@ No momento, no aplicativo do Windows, o texto está muito pequeno e difícil de 
 
 7.  Repita o processo para definir o tamanho da fonte e atribua **BaseTextBlockStyle** para o elemento `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652).
 
-  **Dica**  Embora não exista texto neste [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), quando você passa o ponteiro sobre a área de design do XAML, um contorno azul mostra onde ele está, para que você possa selecioná-lo.  
+  
+              **Dica**  Embora não exista texto neste [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), quando você passa o ponteiro sobre a área de design do XAML, um contorno azul mostra onde ele está, para que você possa selecioná-lo.  
 
   Agora, o XAML terá a seguinte aparência:
 
@@ -428,9 +441,9 @@ Agora faremos a interface do usuário se adaptar a diferentes tamanhos de tela p
 
 Se você usou um [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021) nas versões anteriores do XAML, poderá notar que o XAML aqui usa uma sintaxe simplificada.
 
-O [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) denominado `wideState` tem um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) com a propriedade [**MinWindowWidth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) definida como 641. Isso significa que o estado deverá ser aplicado somente quando a largura da janela não for menor que o mínimo de 641 DIPs. Se você não definir objetos [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) para esse estado, ele usará as propriedades de layout definidas no XAML para o conteúdo da página.
+O [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) denominado `wideState` tem um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) com a propriedade [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) definida como 641. Isso significa que o estado deverá ser aplicado somente quando a largura da janela não for menor que o mínimo de 641 DIPs. Se você não definir objetos [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) para esse estado, ele usará as propriedades de layout definidas no XAML para o conteúdo da página.
 
-O segundo [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`, tem um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) com a propriedade [**MinWindowWidth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) definida como 0. Esse estado é aplicado quando a largura da janela for maior que 0, mas menor que 641 DIPs. (Em 641 DIPs, o `wideState` é aplicado.) Nesse estado, você define alguns objetos [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) para alterar as propriedades de layout dos controles da interface do usuário:
+O segundo [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`, tem um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) com a propriedade [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) definida como 0. Esse estado é aplicado quando a largura da janela for maior que 0, mas menor que 641 DIPs. (Em 641 DIPs, o `wideState` é aplicado.) Nesse estado, você define alguns objetos [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) para alterar as propriedades de layout dos controles da interface do usuário:
 
 -   Reduza a margem esquerda do elemento `contentPanel` de 120 para 20.
 -   Você altera a [**Orientação**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.orientation) do elemento `inputPanel` de **Horizontal** para **Vertical**.
@@ -449,6 +462,6 @@ Se você tiver um código C++ existente que deseja integrar com um aplicativo UW
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

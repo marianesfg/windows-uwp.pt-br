@@ -6,8 +6,8 @@ ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 label: Prepare your app for localization
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: e52a5322767677859e32ccbecf4951745c49f36f
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 4f9bc1d14db7c348e2b4dc9db2440f94d44ab4a5
 
 ---
 
@@ -31,7 +31,8 @@ Especifique imagens ou outros recursos de arquivo com a marca do idioma adequado
 
 Adicione comentários de localização aos arquivos de recurso do aplicativo. Os comentários ficam visíveis para o tradutor e devem fornecer informações contextuais que ajudem o tradutor a traduzir os recursos com precisão. Os comentários também devem fornecer informações de restrições suficientes sobre o recurso, para que a tradução não corrompa o software. Opcionalmente, os comentários podem ser registrados pela ferramenta Makepri.exe.
 
-**XAML:** arquivos Resw (recursos criados no Visual Studio para aplicativos usando XAML) têm um elemento de comentário. Por exemplo:
+
+              **XAML:** arquivos Resw (recursos criados no Visual Studio para aplicativos usando XAML) têm um elemento de comentário. Por exemplo:
 
 ```XML
 <data name="String1">
@@ -40,7 +41,8 @@ Adicione comentários de localização aos arquivos de recurso do aplicativo. Os
 </data>
 ```
 
-**HTML:** arquivos Resjson (recursos criados no Visual Studio para aplicativos usando HTML) permitem metadados em campos que comecem com um sublinhado, como comentários:
+
+              **HTML:** arquivos Resjson (recursos criados no Visual Studio para aplicativos usando HTML) permitem metadados em campos que comecem com um sublinhado, como comentários:
 
 ```json
 {
@@ -121,20 +123,20 @@ Depois que as cadeias de caracteres forem separadas nos arquivos de recurso, ela
 Considere as opções a seguir:
 
 -   **Os arquivos de recursos podem ser traduzidos abrindo-os diretamente no projeto.** Essa abordagem funciona bem para um projeto com um volume pequeno de cadeias de caracteres que precisa ser traduzido para dois ou três idiomas. Ela pode ser adequada para um cenário em que um desenvolvedor fale mais de um idioma e esteja disposto a se envolver no processo de tradução. Essa abordagem é vantajosa por ser rápida, não exigir ferramentas e minimizar o risco de traduções incorretas, mas ela não é escalável. Em particular, os recursos em idiomas diferentes podem facilmente ficar fora de sincronia, causando experiências ruins para o usuário e dores de cabeça para executar a manutenção.
--   **Os arquivos de recursos de cadeia de caracteres estão no formato texto XML ou ResJSON, então podem ser entregues para tradução usando qualquer editor de texto. Os arquivos traduzidos, em seguida, seriam copiados de volta no projeto.** Essa abordagem tem o risco de os tradutores editarem acidentalmente as marcações XML, mas permite que o trabalho ocorra fora do projeto do Microsoft Visual Studio. Tal abordagem pode funcionar bem para projetos que precisam ser traduzidos para poucos idiomas. O formato XLIFF é um formato XML especificamente projetado para o uso em localização e tem um bom suporte de alguns fornecedores de localização ou de ferramentas de localização. Você pode usar o [Kit de Ferramentas de Aplicativo Multilíngue](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx) para gerar arquivos XLIFF de outros arquivos de recursos, como. resw ou .resjson.
+-   **Os arquivos de recursos de cadeia de caracteres estão no formato texto XML ou ResJSON, então podem ser entregues para tradução usando qualquer editor de texto. Os arquivos traduzidos, em seguida, seriam copiados de volta no projeto.** Essa abordagem tem o risco de os tradutores editarem acidentalmente as marcações XML, mas permite que o trabalho ocorra fora do projeto do Microsoft Visual Studio. Tal abordagem pode funcionar bem para projetos que precisam ser traduzidos para poucos idiomas. O formato XLIFF é um formato XML especificamente projetado para o uso em localização e tem um bom suporte de alguns fornecedores de localização ou de ferramentas de localização. Você pode usar o [Kit de Ferramentas de Aplicativo Multilíngue](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370.aspx) para gerar arquivos XLIFF de outros arquivos de recursos, como. resw ou .resjson.
 
 Pode ser necessário que outros arquivos, como arquivos de imagem ou de áudio, sejam enviados para os tradutores. Normalmente, não recomendamos a criação de arquivos culturalmente dependentes, pois isso dificulta a tradução desses arquivos.
 
 Além disso, considere as seguintes sugestões:
 
--   **Use uma ferramenta de localização.** Há várias ferramentas de localização disponíveis para analisar arquivos de recursos e permitir que somente as cadeias de caracteres transmissíveis sejam editadas por tradutores. Essa abordagem reduz o risco de um tradutor editar acidentalmente as marcas de XML. A desvantagem é que é preciso introduzir uma nova ferramenta e um novo processo à localização. Uma ferramenta de localização é boa para projetos com grande volume de cadeias de caracteres e poucos idiomas. Para saber mais, consulte [Como usar o Kit de Ferramentas de Aplicativo Multilíngue](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
+-   **Use uma ferramenta de localização.** Há várias ferramentas de localização disponíveis para analisar arquivos de recursos e permitir que somente as cadeias de caracteres transmissíveis sejam editadas por tradutores. Essa abordagem reduz o risco de um tradutor editar acidentalmente as marcas de XML. A desvantagem é que é preciso introduzir uma nova ferramenta e um novo processo à localização. Uma ferramenta de localização é boa para projetos com grande volume de cadeias de caracteres e poucos idiomas. Para saber mais, consulte [Como usar o Kit de Ferramentas de Aplicativo Multilíngue](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370.aspx).
 -   **Use um fornecedor de localização.** Considere o uso de um fornecedor de localização se o seu projeto tiver um grande volume de cadeias de caracteres que precisam ser traduzidas para muitos idiomas. Um fornecedor de localização pode recomendar ferramentas e processos, bem como traduzir seus arquivos de recurso. Essa é a solução ideal, mas também é a opção mais dispendiosa, e pode aumentar o tempo de retorno do conteúdo traduzido.
 -   **Mantenha os tradutores informados.** Informe os tradutores sobre cadeias de caracteres que podem ser consideradas um substantivo ou um verbo. Explique as palavras fabricadas para seus tradutores usando as ferramentas de terminologia. Mantenha as cadeias de caracteres gramaticalmente corretas, sem ambiguidade e o menos técnicas possível para evitar confusão.
 
 ## <span id="keep_access_keys_and_labels_consistent."></span><span id="KEEP_ACCESS_KEYS_AND_LABELS_CONSISTENT."></span>Mantenha teclas de acesso e rótulos consistentes.
 
 
-É um desafio "sincronizar" as chaves de acesso usadas em acessibilidade com a exibição de chaves de acesso localizadas, porque os recursos com duas cadeias de caracteres são categorizados em duas seções separadas. Certifique-se de fornecer comentários para a cadeia de caracteres de rótulo como: `Make sure that the emphasized shortcut key  is synchronized with the access key.`
+É um desafio "sincronizar" as chaves de acesso usadas em acessibilidade com a exibição de chaves de acesso localizadas, porque os recursos com duas cadeias de caracteres são categorizados em duas seções separadas. Certifique-se de fornecer comentários para a cadeia de caracteres de rótulo como:  `Make sure that the emphasized shortcut key  is synchronized with the access key.`
 
 **HTML:**
 
@@ -192,6 +194,6 @@ A classificação segue o formato do **Painel de Controle Regional**.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

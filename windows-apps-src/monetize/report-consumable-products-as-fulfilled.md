@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: "Use esse método na API da coleção da Windows Store API para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário."
 title: "Declarar produtos consumíveis como providenciados"
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: b099bdc26565ef218eaf1f73c5bb3ec9c24065c3
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 5bd85c6ec9728a0dc08ab8ef4f586b0017510a74
 
 ---
 
@@ -37,9 +38,9 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 
 | Método | URI da solicitação                                                   |
 |--------|---------------------------------------------------------------|
-| POST   | `https://collections.mp.microsoft.com/v6.0/collections/consume` |
+| POST   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
 
-<br/> 
+<span/> 
 
 ### Cabeçalho da solicitação
 
@@ -50,7 +51,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
-<br/> 
+<span/>
 
 ### Corpo da solicitação
 
@@ -60,13 +61,10 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | itemId        | Cadeia de caracteres       | O valor itemID retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com trackingId                                                                                                                                                                                                  | Não       |
 | trackingId    | Guid         | Uma ID de rastreamento exclusiva fornecida pelo desenvolvedor. Use esse parâmetro com itemId.                                                                                                                                                                                                                                     | Não       |
 | productId     | Cadeia de caracteres       | O valor de productId retornado por uma [consulta por produtos](query-for-products.md). Use esse parâmetro com transactionId                                                                                                                                                                                            | Não       |
-| transactionId | Guid         | Um valor de ID de transação que é obtido de uma das seguintes fontes:                                                                                                                                                                                                                                      | Não       |
-|               |              | * A propriedade [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396) da classe [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).   |        |
-|               |              | * O recibo do aplicativo ou produto que é retornado por [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) ou [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811).   |        |
-|               |              | *O parâmetro transactionId retornado por uma [consulta por produtos](query-for-products.md).   |        |        
-|               |              | Use esse parâmetro com productId.   |        |
+| transactionId | Guid         | Um valor de ID de transação que é obtido de uma das seguintes fonte. Use esse parâmetro com productId.  <br/><br/><ul><li>A propriedade [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396) da classe [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).</li><li>O recibo do aplicativo ou produto que é retornado por [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) ou [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811).</li><li>O parâmetro transactionId retornado por uma [consulta por produtos](query-for-products.md).</li></ul>                                                                                                                                                                                                                                   | Não       |
+
  
-<br/>
+<span/>
 
 O objeto UserIdentity contém os parâmetros a seguir.
 
@@ -76,7 +74,7 @@ O objeto UserIdentity contém os parâmetros a seguir.
 | identityValue        | string | Valor cadeia de caracteres da chave ID da Windows Store ID.                                                                                                   | Sim      |
 | localTicketReference | string | Identificador solicitado para resposta retornada. Recomendamos que você use o mesmo valor que a declaração *userId* na chave ID da Windows Store. | Sim      |
 
-<br/> 
+<span/> 
 
 ### Exemplos de solicitação
 
@@ -146,7 +144,7 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 | 401  | Não autorizado | PartnerAadTicketRequired   | Um token de acesso do Azure AD não foi passado para o serviço no cabeçalho de autorização.                                                                                                   |
 | 401  | Não autorizado | InconsistentClientId       | A declaração *clientId* na chave de ID da Windows Store no corpo da solicitação e a declaração *appid* no token de acesso do Azure AD no cabeçalho de autorização não coincidem.                     |
 
-<br/> 
+<span/> 
 
 ## Tópicos relacionados
 
@@ -160,6 +158,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

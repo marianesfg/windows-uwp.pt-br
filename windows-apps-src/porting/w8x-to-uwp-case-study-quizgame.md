@@ -23,21 +23,26 @@ Faz sentido personalizar as duas metades ao PC e ao telefone, respectivamente. M
 
 O aplicativo utiliza padrões que usam modos e modelos de exibição. Como resultado dessa separação clara, o processo de portabilidade para esse aplicativo é muito simples, como você verá.
 
-**Observação**   Esta amostra pressupõe que a rede esteja configurada para enviar e receber pacotes UDP multicast em grupo personalizados (a maioria das redes domésticas está, embora sua rede de trabalho possa não estar). A amostra também envia e recebe pacotes TCP.
+
+            **Observação**   Esta amostra pressupõe que a rede esteja configurada para enviar e receber pacotes UDP multicast em grupo personalizados (a maioria das redes domésticas está, embora sua rede de trabalho possa não estar). A amostra também envia e recebe pacotes TCP.
 
  
 
-**Observação**   Ao abrir QuizGame10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+
+            **Observação**   Ao abrir QuizGame10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
 
  
 
 ## Downloads
 
-[Baixe o aplicativo Universal 8.1 QuizGame](http://go.microsoft.com/fwlink/?linkid=532953). Esse é o estado inicial do aplicativo antes da portabilidade. 
 
-[Baixe o aplicativo QuizGame10 do Windows 10](http://go.microsoft.com/fwlink/?linkid=532954). Esse é o estado do aplicativo depois da portabilidade. 
+            [Baixe o aplicativo Universal 8.1 QuizGame](http://go.microsoft.com/fwlink/?linkid=532953). Esse é o estado inicial do aplicativo antes da portabilidade. 
 
-[Veja a versão mais recente deste exemplo no GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
+
+            [Baixe o aplicativo QuizGame10 do Windows 10](http://go.microsoft.com/fwlink/?linkid=532954). Esse é o estado do aplicativo depois da portabilidade. 
+
+
+            [Veja a versão mais recente deste exemplo no GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
 
 ## A solução do WinRT 8.1
 

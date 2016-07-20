@@ -5,6 +5,7 @@ title: Controles de texto
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: b075820275d7b5e592cdae736ed92beef67a7b9a
 
@@ -102,7 +103,8 @@ Consulte estes artigos para obter diretrizes de fonte:
 
 ## Escolha o teclado correto para o controle de texto
 
-**Aplica-se a:** TextBox, PasswordBox RichEditBox
+
+            **Aplica-se a:** TextBox, PasswordBox RichEditBox
 
 Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira.
 
@@ -119,7 +121,8 @@ Para obter mais informações, consulte [Usar o escopo de entrada para alterar o
 
 ## Fontes de cores
 
-**Aplica-se a:** TextBlock, RichTextBlock, TextBox, RichEditBox
+
+            **Aplica-se a:** TextBlock, RichTextBlock, TextBox, RichEditBox
 
 No Windows, as fontes podem incluir várias camadas coloridas para cada glifo. Por exemplo, a fonte Segoe UI Emoji define versões de cor do Emoticon e outros personagens Emoji.
 
@@ -137,7 +140,8 @@ Para saber mais, consulte a propriedade [**IsColorFontEnabled**](https://msdn.mi
 
 ## Diretrizes para separadores de linha e parágrafo
 
-**Aplica-se a:** TextBlock, RichTextBlock, TextBox de várias linhas, RichEditBox
+
+            **Aplica-se a:** TextBlock, RichTextBlock, TextBox de várias linhas, RichEditBox
 
 Use o caractere separador de linha (0x2028) e o caractere separador de parágrafo (0x2029) para dividir texto sem formatação. Uma nova linha é iniciada após cada separador de linha. Um novo parágrafo é iniciado após cada separador de parágrafo.
 
@@ -149,7 +153,8 @@ Seu aplicativo pode inserir um separador de parágrafo entre parágrafos de text
 
 ## Diretrizes para verificação ortográfica
 
-**Aplica-se a:** TextBox, RichEditBox
+
+            **Aplica-se a:** TextBox, RichEditBox
 
 Durante a edição e a entrada de texto, a verificação ortográfica informa o usuário que uma palavra está com grafia incorreta realçando-a com uma linha ondulada vermelha e fornece uma maneira de o usuário corrigir o erro de ortografia.
 
@@ -187,6 +192,6 @@ Para controles TextBox e RichEditBox, a verificação ortográfica permanece ati
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

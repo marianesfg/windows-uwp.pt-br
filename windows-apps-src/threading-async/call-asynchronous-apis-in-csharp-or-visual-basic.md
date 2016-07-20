@@ -3,8 +3,9 @@ author: TylerMSFT
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
 title: "Chamar APIs assíncronas no Visual Basic ou C#"
 description: "A Plataforma Universal do Windows (UWP) inclui muitas APIs assíncronas para garantir que o seu aplicativo permaneça responsivo ao executar trabalhos demorados."
-ms.sourcegitcommit: c440d0dc2719a982a6b566c788d76111c40e263e
-ms.openlocfilehash: ba633e4d6f6f97f3ea1c78258f36b11b67b32964
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: b13f6b3fac2ce6d264ed0c44e145a89ad8be5996
 
 ---
 # Chamar APIs assíncronas no Visual Basic ou C#
@@ -28,8 +29,10 @@ Suponha que você tenha um aplicativo que lista os títulos das postagens de um 
 O exemplo a seguir obtém as listas de postagens de um blog chamando o método assíncrono, [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460), e aguardando o resultado.
 
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
-[!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"] [!code-csharp[Main](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
-          [!code-vb[Main](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
+
+              [!code-csharp
+              [Principal](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
+[!code-vb[Principal](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
 
 Há algumas coisas importantes sobre este exemplo. Primeiro, a linha `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` usa o operador de **espera** com a chamada para o método assíncrono, [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460). Você pode pensar no operador de **espera** dizendo ao compilador que está chamando um método assíncrono, o que faz com que o compilador realize um trabalho extra para que você não precise fazê-lo. Em seguida, a declaração do manipulador de eventos inclui a palavra-chave **async**. Você deve incluir essa palavra-chave na declaração de método de qualquer método em que usar o operador de **espera**.
 
@@ -49,9 +52,9 @@ Ao usar um método assíncrono, você pode examinar a assinatura para ver o que 
 -   [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)
 -   [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206594)
 -   [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)
--   [**IAsyncActionWithProgress&lt;TProgress&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/br206581.aspx)
+-   [**IAsyncActionWithProgress&lt;TProgress&gt;**](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)
 
-O tipo de resultado de um método assíncrono é o mesmo que o parâmetro do tipo `      TResult`. Os tipos sem um `TResult` não têm um resultado. Você pode pensar no resultado como sendo **nulo**. No Visual Basic, um procedimento [Sub](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/831f9wka.aspx) é equivalente a um método com um tipo de retorno **nulo**.
+O tipo de resultado de um método assíncrono é o mesmo que o parâmetro do tipo `      TResult`. Os tipos sem um `TResult` não têm um resultado. Você pode pensar no resultado como sendo **nulo**. No Visual Basic, um procedimento [Sub](https://msdn.microsoft.com/library/windows/apps/xaml/831f9wka.aspx) é equivalente a um método com um tipo de retorno **nulo**.
 
 A tabela abaixo dá exemplos de métodos assíncronos e lista o tipo de retorno e o tipo de resultado de cada um.
 
@@ -60,14 +63,14 @@ A tabela abaixo dá exemplos de métodos assíncronos e lista o tipo de retorno 
 | [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460)     | [**IAsyncOperationWithProgress&lt;SyndicationFeed, RetrievalProgress&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206594)                                 | [**SyndicationFeed**](https://msdn.microsoft.com/library/windows/apps/BR243485) |
 | [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275) | [**IAsyncOperation&lt;StorageFile&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)                                                                                | [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)          |
 | [**XmlDocument.SaveToFileAsync**](https://msdn.microsoft.com/library/windows/apps/BR206284)                 | [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)                                                                                                           | **nulo**                                          |
-| [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/br206581.aspx)                                                                   | **nulo**                                          |
-| [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [
-              **DataReaderLoadOperation**
-            ](https://msdn.microsoft.com/library/windows/apps/BR208120), uma classe de resultados personalizada que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
+| [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)                                                                   | **nulo**                                          |
+| [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | 
+              [
+              **DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120), uma classe de resultados personalizada que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
 
  
 
-Métodos assíncronos que são definidos em [**.NET para aplicativos UWP**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230232.aspx) têm o tipo de retorno [**Tarefa**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.threading.tasks.task.aspx) ou [**Task&lt;TResult&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd321424.aspx). Os métodos que retornam **Tarefa** são semelhantes aos métodos assíncronos na UWP que retornam [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx). Em cada caso, o resultado do método assíncrono é **nulo**. O tipo de retorno **Task&lt;TResult&gt;** é semelhante ao [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598) no sentido de que o resultado do método assíncrono ao executar a tarefa é do mesmo tipo do parâmetro tipo `TResult`. Para saber mais sobre como usar **.NET para aplicativos UWP** e tarefas, veja [Visão geral do .NET para aplicativos do Windows Runtime](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230302.aspx).
+Métodos assíncronos que são definidos em [**.NET para aplicativos UWP**](https://msdn.microsoft.com/library/windows/apps/xaml/br230232.aspx) têm o tipo de retorno [**Tarefa**](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.task.aspx) ou [**Task&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/dd321424.aspx). Os métodos que retornam **Tarefa** são semelhantes aos métodos assíncronos na UWP que retornam [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx). Em cada caso, o resultado do método assíncrono é **nulo**. O tipo de retorno **Task&lt;TResult&gt;** é semelhante ao [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598) no sentido de que o resultado do método assíncrono ao executar a tarefa é do mesmo tipo do parâmetro tipo `TResult`. Para saber mais sobre como usar **.NET para aplicativos UWP** e tarefas, veja [Visão geral do .NET para aplicativos do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx).
 
 ## Tratando erros
 
@@ -76,7 +79,8 @@ Ao usar o operador de **espera** para recuperar seus resultados de um método as
 
 Quando métodos assíncronos chamam outros métodos assíncronos, qualquer método assíncrono que resulta numa exceção será propagado para os métodos externos. Isso significa que você pode colocar um bloco **tentativa/obtenção** no método mais externo para encontrar erros para os métodos assíncronos aninhados. Novamente, isso é semelhante à maneira como você obtém exceções para métodos síncronos. Porém, não é possível usar **espera** no bloco **obtenção**.
 
-**Dica**  A partir de C# no Microsoft Visual Studio 2005, é possível usar **espera** no bloco **obtenção**.
+
+              **Dica**  A partir de C# no Microsoft Visual Studio 2005, é possível usar **await** no bloco **catch**.
 
 ## Resumo e próximas etapas
 
@@ -113,6 +117,6 @@ Windows 7 themes: the distinctive artwork of Cheng Ling, 7/20/2011 9:53:07 AM -0
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

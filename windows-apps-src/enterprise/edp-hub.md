@@ -6,14 +6,15 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "EDP (proteção de dados empresariais)"
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 97bdbce8360fabad63f9fe7e85e5172ccd83f403
+ms.sourcegitcommit: 235a0d96c0cf86fdb16a0a6b933fc0f2bbed99f0
+ms.openlocfilehash: 2cae64ff234a4fb85fd6a3e50ade3b91480b36c8
 
 ---
 
 # EDP (proteção de dados empresariais)
 
-__Observação__ A EDP (Proteção de Dados Empresariais) não pode ser aplicada ao Windows 10, Versão 1511 (compilação 10586) ou anterior.
+> [!NOTE]
+> A EDP (proteção de dados empresariais) não pode ser aplicada ao Windows 10, Versão 1511 (compilação 10586) ou anterior.
 
 Este é um tópico central que cobre toda a imagem do desenvolvedor de como a EDP (proteção de dados empresariais) se relaciona com arquivos, buffers, área de transferência, redes, tarefas em segundo plano e proteção de dados sob bloqueio.
 
@@ -56,12 +57,13 @@ A próxima tarefa é criar um aplicativo que reconheça e possa responder dinami
 
 Quando seu aplicativo estiver na lista de permissões, ele poderá ler dados protegidos. E, por padrão, qualquer saída de dados feita pelo aplicativo é automaticamente protegida pelo sistema. Essa proteção automática está em vigor porque a empresa encarregada do gerenciamento deve de alguma forma garantir que os seus dados empresariais permaneçam em seu próprio controle. Porém, manter seu aplicativo com tamanha restrição é apenas a maneira padrão de fazer isso. Uma maneira mais eficaz é solicitar que o sistema confie em você suficientemente para lhe proporcionar maior capacitação e flexibilidade. E, para tanto, o preço é tornar seu aplicativo mais inteligente. Isso significa dar um passo além da entrada na lista de permissões, tornando seu aplicativo capacitado para a empresa e declarando-o para essa finalidade.
 
-Seu aplicativo está capacitado quando ele utiliza as técnicas que descreveremos para manter os dados empresariais protegidos com autonomia, independentemente de eles estarem inativos, em uso ou em trânsito. Seu aplicativo capacitado reconhece fontes de dados empresariais e os dados empresariais propriamente ditos, protegendo-os assim que ele os recebe. Ser capacitado também significa reconhecer e cumprir a política de EDP sempre que os dados empresariais deixam o aplicativo. Isso inclui proibir que o conteúdo vá para um ponto de extremidade de rede não empresarial, encapsular os dados em um formato criptografado portátil antes de permitir a sua transferência móvel e possivelmente (dependendo das configurações da política) enviar um prompt para o usuário antes de colar dados empresariais em um aplicativo que não esteja na lista de permissões. Depois que você capacita o seu aplicativo, ele anuncia essa capacitação para o sistema declarando a funcionalidade restrita **enterpriseDataPolicy**. Para saber mais sobre como trabalhar com funcionalidades restritas, consulte [Funcionalidades especiais e restritas](https://msdn.microsoft.com/library/windows/apps/mt270968#special_and_restricted_capabilities).
+Seu aplicativo está capacitado quando ele utiliza as técnicas que descreveremos para manter os dados empresariais protegidos com autonomia, independentemente de eles estarem inativos, em uso ou em trânsito. Seu aplicativo capacitado reconhece fontes de dados empresariais e os dados empresariais propriamente ditos, protegendo-os assim que ele os recebe. Ser capacitado também significa reconhecer e cumprir a política de EDP sempre que os dados empresariais deixam o aplicativo. Isso inclui proibir que o conteúdo vá para um ponto de extremidade de rede não empresarial, encapsular os dados em um formato criptografado portátil antes de permitir a sua transferência móvel e possivelmente (dependendo das configurações da política) enviar um prompt para o usuário antes de colar dados empresariais em um aplicativo que não esteja na lista de permissões. Depois que você capacita o seu aplicativo, ele anuncia essa capacitação para o sistema declarando a funcionalidade restrita **enterpriseDataPolicy**. Para saber mais sobre como trabalhar com funcionalidades restritas, consulte [Funcionalidades especiais e restritas](https://msdn.microsoft.com/library/windows/apps/mt270968#special-and-restricted-capabilities).
 
 Em condições ideais, todos os dados empresariais são protegidos, estejam eles inativos ou em trânsito. Porém, inevitavelmente, deve haver um breve período entre a geração inicial desses dados e sua proteção. E, às vezes, dados empresariais podem existir em um ponto de extremidade de rede empresarial sem estarem criptografados. Um aplicativo capacitado é capaz proteger esses dados com autonomia. Aplicativos permitidos, mas não capacitados, precisarão ter uma proteção imposta pelo sistema.
 
 Isso porque um aplicativo não capacitado sempre é executado no modo empresarial. O sistema garante que isso sempre seja feito. No entanto, um aplicativo capacitado tem a liberdade de se mover entre o modo empresarial e o modo pessoal e conforme apropriado para o tipo de dados com o qual ele está trabalhando em qualquer momento específico. Também é importante que um aplicativo capacitado respeite dados pessoais e não os marque como dados empresariais. Um aplicativo capacitado pode manipular simultaneamente dados corporativos e dados pessoais, desde que essas promessas sejam mantidas. A próxima seção mostra como alternar entre os modos no código.
 
+<span id="confirming-an-identity-is-managed"/>
 ## Confirmando que uma identidade é gerenciada e determinando o nível de imposição da política de proteção
 
 Em geral, seu aplicativo obtém uma identidade empresarial de um recurso externo, como um endereço de email de caixa de correio, um domínio gerenciado ou um nome de host de URI. Você pode chamar [**ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync**](https://msdn.microsoft.com/library/windows/apps/dn706027) para obter a identidade gerenciada, se houver, para um nome de host de ponto de extremidade de rede.
@@ -102,12 +104,12 @@ A próxima etapa é determinar e implementar o nível de imposição da polític
 ## Visão geral de recursos da EDP
 
 
-**Proteção de arquivos e buffer.**
+**Proteção de arquivos e buffer**
 
 -   Seu aplicativo pode proteger, inserir em contêiner e limpar dados associados a uma identidade empresarial.
 -   O gerenciamento de chaves é manipulado pelo Windows. O Windows usa chaves de RMS da empresa quando elas estão disponíveis para o dispositivo. Caso contrário, ele efetua fallback para a proteção de Limpeza Seletiva.
 
-**Gerenciamento de políticas do dispositivo.**
+**Gerenciamento de políticas do dispositivo**
 
 -   Seu aplicativo pode consultar a identidade (empresa ou organização) que está gerenciando o dispositivo.
 -   Seu aplicativo pode proteger os usuários contra a divulgação de dados inadvertida associando uma identidade aos dados em questão.
@@ -134,7 +136,7 @@ Veja [Marcando conexões de rede com a identidade EDP](../networking/tagging_net
 
 ## DPL (proteção de dados em bloqueio) e tarefas em segundo plano
 
-Uma organização pode optar por administrar uma política segura de DPL (proteção de dados em bloqueio), na qual as chaves de criptografia necessárias para acessar recursos protegidos são temporariamente removidas da memória do dispositivo quando este está bloqueado. Para preparar seu aplicativo para esse caso, consulte a seção sobre como [manipular eventos de bloqueio de dispositivo e evitar deixar o conteúdo desprotegido na memória](#handle_lock_events) deste tópico. Além disso, se o seu aplicativo tem uma tarefa em segundo plano necessária para a proteção de arquivos, consulte o tópico sobre como [proteger dados empresariais em um novo arquivo (para uma tarefa em segundo plano)](../files/protect-your-enterprise-data-with-edp.md#protect_data_new_file_bg).
+Uma organização pode optar por administrar uma política segura de DPL (proteção de dados em bloqueio), na qual as chaves de criptografia necessárias para acessar recursos protegidos são temporariamente removidas da memória do dispositivo quando este está bloqueado. Para preparar seu aplicativo para esse caso, consulte a seção sobre como [manipular eventos de bloqueio de dispositivo e evitar deixar o conteúdo desprotegido na memória](#handle-lock-events) deste tópico. Além disso, se o seu aplicativo tem uma tarefa em segundo plano necessária para a proteção de arquivos, consulte o tópico sobre como [proteger dados empresariais em um novo arquivo (para uma tarefa em segundo plano)](../files/protect-your-enterprise-data-with-edp.md#protect-data-new-file-bg).
 
 ## Imposição de políticas da interface do usuário
 
@@ -172,15 +174,17 @@ private void SwitchMailbox(Mailbox targetMailbox)
     }
 }
 ```
-
+<span id="handle-lock-events"/>
 ## Manipular eventos de bloqueio de dispositivo e evitar deixar o conteúdo desprotegido na memória
 
 
 Nesse cenário, usaremos o exemplo de um aplicativo de email capacitado que foi projetado para manipular emails empresariais e pessoais. Quando o aplicativo é executado em uma organização que optou por administrar uma política segura de DPL (proteção de dados em bloqueio), ele deve certificar-se de remover todos os dados confidenciais da memória enquanto o dispositivo está bloqueado. Para fazer isso, ele se registra nos eventos [**ProtectionPolicyManager.ProtectedAccessSuspending**](https://msdn.microsoft.com/library/windows/apps/dn705787) e [**ProtectionPolicyManager.ProtectedAccessResumed**](https://msdn.microsoft.com/library/windows/apps/dn705786) para receber uma notificação sempre que o dispositivo for bloqueado e desbloqueado (caso a DPL esteja em vigor).
 
-[
+
+            [
               **ProtectedAccessSuspending**
-            ](https://msdn.microsoft.com/library/windows/apps/dn705787) é acionado antes que as chaves de proteção de dados provisionadas no dispositivo sejam temporariamente removidas. Essas chaves são removidas quando o dispositivo é bloqueado para garantir que o acesso não autorizado aos dados criptografados não seja possível durante o bloqueio ou enquanto esse dispositivo não estiver em posse do seu proprietário. [
+            ](https://msdn.microsoft.com/library/windows/apps/dn705787) é acionado antes que as chaves de proteção de dados provisionadas no dispositivo sejam temporariamente removidas. Essas chaves são removidas quando o dispositivo é bloqueado para garantir que o acesso não autorizado aos dados criptografados não seja possível durante o bloqueio ou enquanto esse dispositivo não estiver em posse do seu proprietário. 
+            [
               **ProtectedAccessResumed**
             ](https://msdn.microsoft.com/library/windows/apps/dn705786) é acionado depois que as chaves voltam a ficar disponíveis após o desbloqueio do dispositivo.
 
@@ -382,6 +386,6 @@ Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent("contoso.c
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

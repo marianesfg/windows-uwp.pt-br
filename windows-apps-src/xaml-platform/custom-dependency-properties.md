@@ -3,6 +3,7 @@ author: jwmsft
 description: "Explica como definir e implementar propriedades de dependência personalizadas para um aplicativo do Windows Runtime em C++, C# ou Visual Basic."
 title: "Propriedades de dependência personalizadas"
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
+translationtype: Human Translation
 ms.sourcegitcommit: d50b73fcf78c28157cff7003dc3e180de9d69f70
 ms.openlocfilehash: 80a42040887818a0c6a66ed32327144bed586dc2
 
@@ -57,7 +58,8 @@ A definição de uma propriedade de dependência pode ser considerada como um co
 -   Defina uma propriedade de wrapper seguindo o modelo de acessador de propriedade usado na linguagem que está sendo implementada. O nome da propriedade de wrapper deve corresponder à cadeia de caracteres *name* usada em [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829). Implemente **get** e os acessadores **set** para conectar o wrapper à respectiva propriedade de dependência, chamando [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) and [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) e passando seu próprio identificador de propriedade como um parâmetro.
 -   (Opcional) Coloque atributos como [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011) no wrapper.
 
-**Observação**  Ao definir uma propriedade anexada personalizada, você geralmente omite o wrapper. Em vez disso, escreva um estilo diferente de acessador que possa ser usado pelo processador XAML. Veja [Propriedades anexadas personalizadas](custom-attached-properties.md). 
+
+            **Observação**  Ao definir uma propriedade anexada personalizada, você geralmente omite o wrapper. Em vez disso, escreva um estilo diferente de acessador que possa ser usado pelo processador XAML. Veja [Propriedades anexadas personalizadas](custom-attached-properties.md). 
 
 ## Registrando a propriedade
 
@@ -82,7 +84,8 @@ Public Shared ReadOnly LabelProperty As DependencyProperty =
       New PropertyMetadata(Nothing))
 ```
 
-**Observação**  O registro da propriedade de dependência em um corpo de classe é a implementação típica, porém, você pode registrar uma propriedade de dependência no construtor estático de classe. Essa abordagem poderá fazer sentido se você precisar de mais de uma linha de código para inicializar a propriedade de dependência.
+
+            **Observação**  O registro da propriedade de dependência em um corpo de classe é a implementação típica, porém, você pode registrar uma propriedade de dependência no construtor estático de classe. Essa abordagem poderá fazer sentido se você precisar de mais de uma linha de código para inicializar a propriedade de dependência.
 
 Para C++, há opções sobre como dividir a implementação entre o cabeçalho e o arquivo de código. A divisão típica é declarar o próprio identificador como propriedade **public******static** no cabeçalho, com uma implementação **get**, mas nenhum **set. A implementação **get** se refere a um campo particular, que é uma instância [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) não inicializada. Também é possível declarar os wrappers e as implementações **get** e **set** do wrapper. Nesse caso, o cabeçalho inclui uma implementação mínima. Se os wrappers precisarem da atribuição Tempo de Execução do Windows, defina também o atributo no cabeçalho. Coloque a chamada [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) no arquivo de código dentro de uma função auxiliar que só é executada quando o aplicativo é inicializado pela primeira vez. Use o valor de retorno de **Register** para preencher os identificadores estáticos, mas não inicializados declarados no cabeçalho, que você inicialmente definiu como **nullptr** no escopo raiz do arquivo de implementação.
 
@@ -127,13 +130,15 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 }
 ```
 
-**Observação**  Para o código C++, o motivo pelo qual você tem um campo privado e uma propriedade pública somente leitura que emerge da [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) é que outros chamadores que usam sua propriedade de dependência também podem usar APIs de utilitários do sistema de propriedades que exigem que o identificador seja público. Se você mantiver o identificador como particular, as pessoas não poderão usar essas APIs de utilitários. Exemplos dessas APIs e cenários incluem [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) ou [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) por opção, [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358),  [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) e [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Não é possível usar um campo público para isso porque o Tempo de Execução do Windows compila regras que não permitem aos membros de dados públicos o uso de tipos de referência como **DependencyProperty**.
+
+            **Observação**  Para o código C++, o motivo pelo qual você tem um campo privado e uma propriedade pública somente leitura que emerge da [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) é que outros chamadores que usam sua propriedade de dependência também podem usar APIs de utilitários do sistema de propriedades que exigem que o identificador seja público. Se você mantiver o identificador como particular, as pessoas não poderão usar essas APIs de utilitários. Exemplos dessas APIs e cenários incluem [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) ou [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) por opção, [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358),  [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) e [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Não é possível usar um campo público para isso porque o Tempo de Execução do Windows compila regras que não permitem aos membros de dados públicos o uso de tipos de referência como **DependencyProperty**.
 
 ## Convenções de nomes de propriedade de dependência
 
 Há convenções de nomenclatura para propriedades de dependência; siga-as em todas as circunstâncias, a não ser que surjam situações excepcionais. A propriedade de dependência propriamente dita tem um nome básico ("Label" no exemplo anterior) que é fornecido como o primeiro parâmetro de [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829). O nome deve ser exclusivo em cada tipo de registro e o requisito de exclusividade se aplica também a todos os membros herdados. As propriedades de dependência herdadas de tipos base já são consideradas como parte do tipo de registro; não é possível registrar novamente os nomes de propriedades herdadas.
 
-**Cuidado**  Embora o nome fornecido aqui possa ser qualquer identificador de cadeia de caracteres, desde que válido na programação da linguagem escolhida, geralmente é conveniente poder definir sua propriedade de dependência também em XAML. Para definir em XAML, o nome da propriedade deve ser um nome XAML válido. Para obter mais informações, consulte [Visão geral de XAML](xaml-overview.md).
+
+            **Cuidado**  Embora o nome fornecido aqui possa ser qualquer identificador de cadeia de caracteres, desde que válido na programação da linguagem escolhida, geralmente é conveniente poder definir sua propriedade de dependência também em XAML. Para definir em XAML, o nome da propriedade deve ser um nome XAML válido. Para obter mais informações, consulte [Visão geral de XAML](xaml-overview.md).
 
 Ao criar a propriedade de identificador, combine o nome de propriedade registrado com o sufixo "Property" ("LabelProperty", por exemplo). Essa propriedade será o seu identificador da propriedade de dependência e será usada como uma entrada para as chamadas [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) e [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) que você faz nos seus próprios wrappers de propriedade. Também será usada pelo sistema de propriedades e possivelmente pelos processadores XAML.
 
@@ -141,7 +146,8 @@ Ao criar a propriedade de identificador, combine o nome de propriedade registrad
 
 O wrapper de propriedade deve chamar [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) na implementação **get** e [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) na implementação **set**.
 
-**Cuidado**  Em todas as circunstâncias, com exceção de casos extraordinários, as implementações de wrapper devem executar apenas as operações [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) e [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361). Caso contrário, você obterá um comportamento diferente quando a propriedade for definida via XAML, em comparação à definição via código. Para fins de eficiência, o analisador XAML ignora os wrappers durante a definição de propriedades de dependência. Sempre que possível, ele usará o Registro de propriedades de dependência.
+
+            **Cuidado**  Em todas as circunstâncias, com exceção de casos extraordinários, as implementações de wrapper devem executar apenas as operações [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) e [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361). Caso contrário, você obterá um comportamento diferente quando a propriedade for definida via XAML, em comparação à definição via código. Para fins de eficiência, o analisador XAML ignora os wrappers durante a definição de propriedades de dependência. Sempre que possível, ele usará o Registro de propriedades de dependência.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -189,7 +195,8 @@ Nos exemplos anteriores de chamada de [**DependencyProperty.Register**](https://
 
 Normalmente, você fornece um [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) como uma instância criada embutida, dentro dos parâmetros de [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829).
 
-**Observação**  Se está definindo uma implementação de [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812), use o método [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) do utilitário em vez de chamar um construtor de [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir a instância de **PropertyMetadata**.
+
+            **Observação**  Se está definindo uma implementação de [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812), use o método [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) do utilitário em vez de chamar um construtor de [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir a instância de **PropertyMetadata**.
 
 Este próximo exemplo modifica os exemplos de [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) mostrados antes fazendo referência a uma instância de [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) com um valor de [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770). A implementação do retorno de chamada "OnLabelChanged" é mostrada posteriormente nesta seção.
 
@@ -226,7 +233,8 @@ Você pode especificar um valor padrão para uma propriedade de dependência de 
 
 Se um valor padrão não for especificado, o valor padrão de uma propriedade de dependência será nulo para um tipo de referência, ou para o padrão do tipo de referência de um tipo de valor, ou para o primitivo de linguagem (por exemplo, 0 para número inteiro ou cadeia de caracteres vazia para uma cadeia de caracteres). O principal motivo para estabelecer um valor padrão é que esse valor será restaurado quando você chamar [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357) na propriedade. O estabelecimento de um valor padrão em cada propriedade pode ser mais conveniente do que o estabelecimento de valores padrão em construtores, particularmente para tipos de valor. Entretanto, para tipos de referência, verifique se o estabelecimento de um valor padrão não cria um padrão singleton não intencional. Para saber mais, veja [Práticas recomendadas](#best-practices), posteriormente neste tópico.
 
-**Observação**  Não registre usando um valor padrão [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371). Se fizer isso, os consumidores da propriedade poderão ficar confusos e haverá consequências indesejadas no sistema de propriedades.
+
+            **Observação**  Não registre usando um valor padrão [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371). Se fizer isso, os consumidores da propriedade poderão ficar confusos e haverá consequências indesejadas no sistema de propriedades.
 
 ### CreateDefaultValueCallback
 
@@ -374,6 +382,6 @@ A implementação para registrar uma propriedade em C++/CX é mais complicada qu
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

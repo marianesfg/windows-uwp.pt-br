@@ -3,8 +3,9 @@ author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: "Referência de API central do Device Portal"
 description: "Saiba mais sobre as APIs REST centrais do Windows Device Portal que você pode usar para acessar os dados e controlar seu dispositivo de forma programática."
-ms.sourcegitcommit: 0e36b2adbd0805d9c738de00959581417d2c1ee8
-ms.openlocfilehash: 364e19c723c6cf48a25104b5719735a533ae54a7
+translationtype: Human Translation
+ms.sourcegitcommit: 30aeffcf090c881f84331ced4f7199fd0092b676
+ms.openlocfilehash: 0fa515d28431d4256b977ee3c3c41169661f129f
 
 ---
 
@@ -894,7 +895,8 @@ Esses comandos são enviados do cliente para o servidor.
 
 Comando | Descrição
 :----- | :-----
-provider *{guid}* enable *{level}* | Habilita o provedor marcado por *{guid}* (sem colchetes) no nível especificado. *{level}* é um **int** de 1 (menos detalhes) a 5 (detalhado).
+provider *{guid}* enable *{level}* | Habilita o provedor marcado por *{guid}* (sem colchetes) no nível especificado. 
+              *{level}* é um **int** de 1 (menos detalhes) a 5 (detalhado).
 provider *{guid}* disable | Desabilita o provedor marcado por *{guid}* (sem colchetes).
 
 Estas respostas são enviadas do servidor para o cliente. Isso é enviado como texto e você obtém o formato a seguir analisando o JSON.
@@ -1137,6 +1139,60 @@ Código de status HTTP      | Descrição
 4XX | Códigos de erro
 5XX | Códigos de erro
 <br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* Xbox
+* HoloLens
+* IoT
+
+---
+### Obter a família de dispositivos 
+
+**Solicitação**
+
+Você pode obter a família de dispositivos (Xbox, telefone, área de trabalho etc.) usando o seguinte formato de solicitação.
+ 
+Método      | URI da solicitação
+:------     | :-----
+GET | /api/os/devicefamily
+<br />
+
+**Parâmetros do URI**
+
+- Nenhum
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta**
+
+A resposta inclui a família de dispositivos (SKU - Desktop, Xbox etc.).
+
+```
+{
+   "DeviceType" : string
+}
+```
+
+DeviceType aparecerá como "Windows.Xbox", "Windows.Desktop" etc. 
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK
+4XX | Códigos de erro
+5XX | Códigos de erro
+
 **Famílias de dispositivos disponíveis**
 
 * Windows Mobile
@@ -2662,7 +2718,8 @@ GET | /api/wpr/trace
 
 **Resposta**
 
-- Retorna o arquivo de rastreamento ETL.
+- Nenhuma.  
+              **Observação:** é uma operação de longa execução.  Ela retornará quando ETL terminar de gravar em disco.  
 
 **Código de status**
 
@@ -2734,6 +2791,161 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
+### Listar sessões de rastreamento concluídas (ETLs)
+
+**Solicitação**
+
+Você pode obter uma lista dos rastreamentos de ETL no dispositivo usando o seguinte formato de solicitação: 
+
+Método      | URI da solicitação
+:------     | :-----
+GET | /api/wpr/tracefiles
+<br />
+
+**Parâmetros do URI**
+
+- Nenhum
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta**
+
+A listagem de sessões de rastreamento concluídas é fornecida no formato a seguir.
+
+```
+{"Items": [{
+    "CurrentDir": string (filepath),
+    "DateCreated": int (File CreationTime),
+    "FileSize": int (bytes),
+    "Id": string (filename),
+    "Name": string (filename),
+    "SubPath": string (filepath),
+    "Type": int
+}]}
+```
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK
+4XX | Códigos de erro
+5XX | Códigos de erro
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* HoloLens
+* IoT
+
+---
+### Baixar uma sessão de rastreamento (ETL)
+
+**Solicitação**
+
+Você pode baixar um arquivo de rastreamento (rastreamento de inicialização ou rastreamento de modo de usuário) usando o seguinte formato de solicitação. 
+
+Método      | URI da solicitação
+:------     | :-----
+GET | /api/wpr/tracefile
+<br />
+
+**Parâmetros do URI**
+
+Você pode especificar o seguinte parâmetro adicional no URI da solicitação:
+
+Parâmetro do URI | Descrição
+:---          | :---
+filename   | (**obrigatório**) O nome do rastreamento de ETL a ser baixado.  Podem ser encontrados em /api/wpr/tracefiles
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta**
+
+- Retorna o arquivo de rastreamento ETL.
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK
+4XX | Códigos de erro
+5XX | Códigos de erro
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* HoloLens
+* IoT
+
+---
+### Excluir uma sessão de rastreamento (ETL)
+
+**Solicitação**
+
+Você pode excluir um arquivo de rastreamento (rastreamento de inicialização ou rastreamento de modo de usuário) usando o seguinte formato de solicitação. 
+
+Método      | URI da solicitação
+:------     | :-----
+DELETE | /api/wpr/tracefile
+<br />
+
+**Parâmetros do URI**
+
+Você pode especificar o seguinte parâmetro adicional no URI da solicitação:
+
+Parâmetro do URI | Descrição
+:---          | :---
+filename   | (**obrigatório**) O nome do rastreamento de ETL a ser excluído.  Podem ser encontrados em /api/wpr/tracefiles
+
+**Cabeçalhos de solicitação**
+
+- Nenhum
+
+**Corpo da solicitação**
+
+- Nenhum
+
+**Resposta**
+
+- Retorna o arquivo de rastreamento ETL.
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK
+4XX | Códigos de erro
+5XX | Códigos de erro
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Windows Mobile
+* Área de Trabalho do Windows
+* HoloLens
+* IoT
+
+---
 ## Marcas de DNS-SD 
 ---
 ### Exibir Marcas
@@ -2759,7 +2971,8 @@ GET | /api/dns-sd/tags
 
 - Nenhum
 
-**Resposta** as marcas atualmente aplicadas no formato a seguir. 
+
+              **Resposta** As tags atualmente aplicadas no formato a seguir. 
 ```
  {
     "tags": [
@@ -2952,7 +3165,8 @@ GET | /api/filesystem/apps/knownfolders
 
 - Nenhum
 
-**Resposta** As pastas disponíveis no formato a seguir. 
+
+              **Resposta** As pastas disponíveis no formato a seguir. 
 ```
  {"KnownFolders": [
     "folder0",
@@ -3006,7 +3220,8 @@ path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados
 
 - Nenhum
 
-**Resposta** As pastas disponíveis no formato a seguir. 
+
+              **Resposta** As pastas disponíveis no formato a seguir. 
 ```
 {"Items": [
     {
@@ -3039,13 +3254,13 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter arquivos
+### Baixar um arquivo
 
 **Solicitação**
 
-Obtenha uma lista de arquivos em uma pasta.
+Obtenha um arquivo de uma pasta conhecida ou appLocalData.
 
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 GET | /api/filesystem/apps/file
 
@@ -3183,6 +3398,6 @@ Código de status HTTP      | Descrição
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 
