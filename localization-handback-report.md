@@ -1,42 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\gaming\plan-your-directx-port.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/plan-your-directx-port.md) | InSyncHandedBackSuccess | [Details](#929ad82ce057754ee04f1f27537e03520e95157a2267)
- [windows-apps-src\get-started\plan-your-app.md](https://github.com/Microsoft/windows-apps/blob/43214b9e2c786a007b8d9cdef7700e275101aba5/windows-apps-src/get-started/plan-your-app.md) | OutofSyncHandedBackSuccess | [Details](#824ff176e1ec2d850ad11314082c588594df63d62686)
 
 ## Item Details
-##### <a name='929ad82ce057754ee04f1f27537e03520e95157a2267'></a> Source: [windows-apps-src\gaming\plan-your-directx-port.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/plan-your-directx-port.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\gaming\plan-your-directx-port.md](https://github.com/Microsoft/windows-apps.pt-br/blob/4f16ef4aaa1fb6208e766f6d619af3b3b7cc89e5/windows-apps-src/gaming/plan-your-directx-port.md)
-* Handoff File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/dfa4cdaa527c5ba1d53d7dd4bd810841542e768a/ol-handoff/Microsoft/windows-apps.pt-br/master/plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf)
-* Handoff Datetime: 2016-06-27 18:42:56
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/c6cd403a4c9bae67a0babc078b3a32d891cc42cb/ol-handback/Microsoft/windows-apps.pt-br/master/plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf)
-* Handback Datetime: 2016-07-22 15:04:53
-* [Back to Top](#report-top)
-
-##### <a name='824ff176e1ec2d850ad11314082c588594df63d62686'></a> Source: [windows-apps-src\get-started\plan-your-app.md](https://github.com/Microsoft/windows-apps/blob/43214b9e2c786a007b8d9cdef7700e275101aba5/windows-apps-src/get-started/plan-your-app.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/a0a4f787ad7e4c84c69cdcbaf9a9425634d5d475/ol-handoff/Microsoft/windows-apps.pt-br/master/plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.pt-br.xlf)
-* Handoff Datetime: 2016-07-19 20:07:31
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\plan-your-app.md](https://github.com/Microsoft/windows-apps.pt-br/blob/4f16ef4aaa1fb6208e766f6d619af3b3b7cc89e5/windows-apps-src/get-started/plan-your-app.md)
-* Current Handback File: [plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/c6cd403a4c9bae67a0babc078b3a32d891cc42cb/ol-handback/Microsoft/windows-apps.pt-br/master/plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.pt-br.xlf)
-* Current Handback Datetime: 2016-07-22 15:04:53
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
