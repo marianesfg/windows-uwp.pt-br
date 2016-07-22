@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\audio-video-camera\image-metadata.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/audio-video-camera/image-metadata.md) | InSyncHandedBackSuccess | [Details](#571d71d52931392a36c3c11030749f6ecb3cc961492)
 
 ## Item Details
-##### <a name='571d71d52931392a36c3c11030749f6ecb3cc961492'></a> Source: [windows-apps-src\audio-video-camera\image-metadata.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/audio-video-camera/image-metadata.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\audio-video-camera\image-metadata.md](https://github.com/Microsoft/windows-apps.pt-br/blob/dc4eca10b560b2d123185640b29ded55f26b7614/windows-apps-src/audio-video-camera/image-metadata.md)
-* Handoff File: [image-metadata.36996dce323e596780c32fc5306c41f69aa51cb4.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/dfa4cdaa527c5ba1d53d7dd4bd810841542e768a/ol-handoff/Microsoft/windows-apps.pt-br/master/image-metadata.36996dce323e596780c32fc5306c41f69aa51cb4.pt-br.xlf)
-* Handoff Datetime: 2016-06-27 18:42:56
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [image-metadata.36996dce323e596780c32fc5306c41f69aa51cb4.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/a330fbf600d88f90670ace88770f1f7599a66f6d/ol-handback/Microsoft/windows-apps.pt-br/master/image-metadata.36996dce323e596780c32fc5306c41f69aa51cb4.pt-br.xlf)
-* Handback Datetime: 2016-07-22 22:02:16
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
