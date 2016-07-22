@@ -1,8 +1,12 @@
 ---
 author: martinekuan
 title: Planejar seu aplicativo da Plataforma Universal do Windows (UWP)
-description: Nas equipes de design da Microsoft, nosso processo de criação de aplicativo consiste em cinco estágios distintos: conceito, estrutura, dinâmica, visual e protótipo. Recomendamos que você adote um processo semelhante e se divirta criando novas experiências para o mundo aproveitar.
+description: "Nas equipes de design da Microsoft, nosso processo de criação de aplicativo consiste em cinco estágios distintos - conceito, estrutura, dinâmica, visual e protótipo. Recomendamos que você adote um processo semelhante e se divirta criando novas experiências para o mundo aproveitar."
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9a3058aabdc6f710149a14d8f125b66efd076007
+
 ---
 
 #  Planejar seu aplicativo da Plataforma Universal do Windows (UWP)
@@ -46,7 +50,8 @@ Essa é declaração "o que há de bom" do seu aplicativo e pode guiar muitas de
 
 É muito tentador—tendo pensado em uma ideia que você gostou—ir em frente e desenvolver o aplicativo; talvez, até começar de certa forma a produção. Mas digamos que você faça isso e, em seguida, uma outra ideia interessante venha à mente. É natural que você seja tentado a ficar com a ideia em que você já investiu, independentemente dos méritos relativos das duas ideias. Se você tivesse pensado na outra ideia no início do processo! Bem, o funil de design é uma técnica que ajuda a descobrir suas melhores ideias o mais cedo possível.
 
-O termo "funil" vem de sua forma. Na extremidade ampla do funil, muitas ideias entram e cada uma é percebida como um artefato de baixíssima fidelidade do design (um esboço, talvez, ou um parágrafo de texto). Como essa coleção de ideias percorre em direção à parte mais estreita do funil, o número de ideias é diminuído, enquanto a fidelidade dos artefatos que representam as ideias aumenta. Cada artefato deve capturar apenas as informações necessárias para julgar uma ideia em relação à outra ou para responder uma pergunta em particular, como "isso é utilizável ou intuitivo?". *Não gaste mais tempo e esforço em cada fase do que isso*. Algumas ideias vão cair no esquecimento quando você testá-las, e você vai aceitar isso porque não vai investir nelas mais do que o necessário para julgar a ideia. As ideias que sobrevivem para avançar ainda mais no funil receberão sucessivamente tratamentos de alta fidelidade. No final, você terá um único artefato de design que represente a ideia vencedora. Essa é a ideia que ganhou por causa de seus méritos, e não apenas porque veio em primeiro lugar. Você terá projetado o melhor aplicativo que pôde.
+O termo "funil" vem de sua forma. Na extremidade ampla do funil, muitas ideias entram e cada uma é percebida como um artefato de baixíssima fidelidade do design (um esboço, talvez, ou um parágrafo de texto). Como essa coleção de ideias percorre em direção à parte mais estreita do funil, o número de ideias é diminuído, enquanto a fidelidade dos artefatos que representam as ideias aumenta. Cada artefato deve capturar apenas as informações necessárias para julgar uma ideia em relação à outra ou para responder uma pergunta em particular, como "isso é utilizável ou intuitivo?". 
+            *Não gaste mais tempo e esforço em cada fase do que isso*. Algumas ideias vão cair no esquecimento quando você testá-las, e você vai aceitar isso porque não vai investir nelas mais do que o necessário para julgar a ideia. As ideias que sobrevivem para avançar ainda mais no funil receberão sucessivamente tratamentos de alta fidelidade. No final, você terá um único artefato de design que represente a ideia vencedora. Essa é a ideia que ganhou por causa de seus méritos, e não apenas porque veio em primeiro lugar. Você terá projetado o melhor aplicativo que pôde.
 
 ## Estrutura
 
@@ -114,41 +119,59 @@ Técnicas comuns:
 -   Diagramas de associação: conecte seus fluxos aos recursos.
 -   Protótipo: teste os recursos para garantir que eles fazem o que você precisa.
 
-**Contratos do aplicativo**  O seu aplicativo pode participar de contratos do aplicativo que permitem fluxos de usuário amplos, entre aplicativos e entre recursos.
 
--   **Compartilhamento**  Permita que os usuários compartilhem o conteúdo do seu aplicativo com outras pessoas por meio de outros aplicativos e também recebam conteúdo compartilhável de outras pessoas e aplicativos.
--   **Reproduzir em**  Permita que os usuários aproveitem o stream de áudio, vídeo ou imagens do seu aplicativo para outros dispositivos em sua rede doméstica.
--   **Seletor de arquivos e extensões de seletor de arquivos**   Permita que os usuários carreguem e salvem seus arquivos do sistema de arquivos local, de dispositivos de armazenamento conectados, de grupos domésticos ou até mesmo de outros aplicativos. Você também pode oferecer uma extensão de seletor de arquivos para que outros aplicativos possam rodar o conteúdo do seu aplicativo.
+            **Contratos do aplicativo**  O seu aplicativo pode participar de contratos do aplicativo que permitem fluxos de usuário amplos, entre aplicativos e entre recursos.
+
+-   
+            **Compartilhamento**  Permita que os usuários compartilhem o conteúdo do seu aplicativo com outras pessoas por meio de outros aplicativos e também recebam conteúdo compartilhável de outras pessoas e aplicativos.
+-   
+            **Reproduzir em**  Permita que os usuários aproveitem o stream de áudio, vídeo ou imagens do seu aplicativo para outros dispositivos em sua rede doméstica.
+-   
+            **Seletor de arquivos e extensões de seletor de arquivos**   Permita que os usuários carreguem e salvem seus arquivos do sistema de arquivos local, de dispositivos de armazenamento conectados, de grupos domésticos ou até mesmo de outros aplicativos. Você também pode oferecer uma extensão de seletor de arquivos para que outros aplicativos possam rodar o conteúdo do seu aplicativo.
 
 Para saber mais, consulte as [extensões e contratos de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh464906).
 <!-- Win 8 page. Should have replacement. -->
 
-**Diferentes exibições, fatores forma e configurações de hardware**  O Windows coloca os usuários no comando e o seu aplicativo na linha de frente. Você provavelmente deseja que a interface do usuário do seu aplicativo chame a atenção independentemente do tipo de dispositivo, do modo de entrada, da orientação de exibição, da configuração de hardware e das circunstâncias que o usuário decida usá-lo.
 
-**Tocar primeiro**  O Windows oferece uma experiência de toque única que faz mais do que apenas emular a funcionalidade do mouse.
+            **Diferentes exibições, fatores forma e configurações de hardware**  O Windows coloca os usuários no comando e o seu aplicativo na linha de frente. Você provavelmente deseja que a interface do usuário do seu aplicativo chame a atenção independentemente do tipo de dispositivo, do modo de entrada, da orientação de exibição, da configuração de hardware e das circunstâncias que o usuário decida usá-lo.
+
+
+            **Tocar primeiro**  O Windows oferece uma experiência de toque única que faz mais do que apenas emular a funcionalidade do mouse.
 
 Por exemplo, zoom semântico é uma forma de toque otimizado para navegar por uma grande quantidade de conteúdo. Os usuários podem fazer movimentos panorâmicos ou rolar por categorias de conteúdo e depois ampliar essas categorias para ver informações cada vez mais detalhadas. Você pode usar isso para apresentar o seu conteúdo de forma mais prática, visual e informativa do que com a navegação tradicional e os padrões de layout, como guias.
 
 Claro, você pode se beneficiar de inúmeras vantagens de interações de toque, como girar, aplicar panorâmica, passar o dedo, dentre outras. Saiba mais sobre [Toque e outras interações do usuário](../input-and-devices/input-primer.md).
 
-**Interessante e novo**  Certifique-se de que seu aplicativo pareça novo e interesse aos usuários com estas experiências padrão:
 
--   **Animações**  Use sua biblioteca de animações para deixar o aplicativo rápido e fluido para os seus usuários. Ajude os usuários a compreender as alterações de contexto e a unir experiências com transições visuais. Saiba mais sobre [animações na interface do usuário](../graphics/animations-overview.md).
--   **Notificações do sistema**  Permite que seus usuários saibam sobre conteúdos sensíveis ao tempo ou pessoalmente relevantes por meio de notificações do sistema e convide-os a voltar para o seu aplicativo mesmo quando ele está fechado. Saiba mais sobre [blocos, selos e notificações do sistema](../controls-and-patterns/tiles-badges-notifications.md).
--   **Blocos de aplicativo**  Fornece atualizações recentes e relevantes para atrair os usuários de volta para o seu aplicativo. Há mais sobre isso na próxima seção. Saiba mais sobre [blocos de aplicativos](../controls-and-patterns/tiles-and-notifications-creating-tiles.md).
+            **Interessante e novo**  Certifique-se de que seu aplicativo pareça novo e interesse aos usuários com estas experiências padrão:
+
+-   
+            **Animações**  Use sua biblioteca de animações para deixar o aplicativo rápido e fluido para os seus usuários. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais. Saiba mais sobre [animações na interface do usuário](../graphics/animations-overview.md).
+-   
+            **Notificações do sistema**  Permite que seus usuários saibam sobre conteúdos sensíveis ao tempo ou pessoalmente relevantes por meio de notificações do sistema e convide-os a voltar para o seu aplicativo mesmo quando ele está fechado. Saiba mais sobre [blocos, selos e notificações do sistema](../controls-and-patterns/tiles-badges-notifications.md).
+-   
+            **Blocos de aplicativo**  Fornece atualizações recentes e relevantes para atrair os usuários de volta para o seu aplicativo. Há mais sobre isso na próxima seção. Saiba mais sobre [blocos de aplicativos](../controls-and-patterns/tiles-and-notifications-creating-tiles.md).
 
 **Personalização**
 
--   **Configurações**  Permite que seus usuários criem a experiência que quiserem ao salvar configurações no aplicativo. Consolide todas as suas configurações em uma tela, e então permita que os usuários configurem o seu aplicativo usando um mecanismo comum com o qual já estejam familiarizados. Saiba mais sobre [adicionar configurações de aplicativos](../app-settings/app-settings-and-data.md).
--   **Roaming**  Crie uma experiência contínua por meio de dispositivos fazendo roaming de dados que permite que os usuários retomem uma tarefa exatamente onde a deixaram e preserva a experiência do usuário com que eles mais se importam, independentemente do dispositivo que estejam usando. Facilite o uso do seu aplicativo em qualquer lugar—na cozinha, no computador da família ou de trabalho, no tablet pessoal, e outros fatores forma—mantendo configurações e estados com roaming. Saiba mais sobre [gerenciamento de dados de aplicativos](../app-settings/store-and-retrieve-app-data.md) e consulte [Diretrizes de dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094).
--   **Blocos de usuário**   Deixe seu aplicativo mais pessoal para os usuários carregando a imagem de bloco de usuário deles ou permita que eles definam conteúdos do seu aplicativo como bloco pessoal no Windows.
+-   
+            **Configurações**  Permite que seus usuários criem a experiência que quiserem ao salvar configurações no aplicativo. Consolide todas as suas configurações em uma tela, e então permita que os usuários configurem o seu aplicativo usando um mecanismo comum com o qual já estejam familiarizados. Saiba mais sobre [adicionar configurações de aplicativos](../app-settings/app-settings-and-data.md).
+-   
+            **Roaming**  Crie uma experiência contínua por meio de dispositivos fazendo roaming de dados que permite que os usuários retomem uma tarefa exatamente onde a deixaram e preserva a experiência do usuário com que eles mais se importam, independentemente do dispositivo que estejam usando. Facilite o uso do seu aplicativo em qualquer lugar—na cozinha, no computador da família ou de trabalho, no tablet pessoal, e outros fatores forma—mantendo configurações e estados com roaming. Saiba mais sobre [gerenciamento de dados de aplicativos](../app-settings/store-and-retrieve-app-data.md) e consulte [Diretrizes de dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094).
+-   
+            **Blocos de usuário**   Deixe seu aplicativo mais pessoal para os usuários carregando a imagem de bloco de usuário deles ou permita que eles definam conteúdos do seu aplicativo como bloco pessoal no Windows.
 
-**Capacidades de dispositivo**  Certifique-se de que o seu aplicativo se beneficie ao máximo das capacidades dos dispositivos de hoje.
 
--   **Gestos de proximidade**  Permita que seus usuários conectem dispositivos com outros usuários que estão fisicamente próximos, basicamente, encostando os dois dispositivos (jogos para vários jogadores). Saiba mais sobre [proximidade e toques](https://msdn.microsoft.com/library/windows/apps/hh465229).
--   **Câmeras e dispositivos de armazenamento externos**  Conecte seus usuários a suas câmeras internas ou conectadas para conversas ou conferências, gravar vlogs, tirar fotos de perfil, documentar o mundo à volta deles ou qualquer atividade em que seu aplicativo seja bom. Saiba mais sobre o [acesso a conteúdo em armazenamento removível](https://msdn.microsoft.com/library/windows/apps/hh465189).
--   **Acelerômetros e outros sensores**     Os dispositivos vêm com vários sensores atualmente. O seu aplicativo pode esmaecer ou clarear o seu visor com base na luz ambiente, redirecionar o fluxo da IU caso o usuário girar o visor, ou reagir a qualquer movimento físico. Saiba mais sobre [sensores](../devices-sensors/sensors.md).
--   **Geolocalização**  Use informações de geolocalização de dados da Web padrão ou de sensores de geolocalização para ajudar os seus usuários a circular, encontrar a posição deles no mapa ou receber notificações sobre pessoas e atividades próximas e destinos. Saiba mais sobre [localização geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
+            **Capacidades de dispositivo**  Certifique-se de que o seu aplicativo se beneficie ao máximo das capacidades dos dispositivos de hoje.
+
+-   
+            **Gestos de proximidade**  Permita que seus usuários conectem dispositivos com outros usuários que estão fisicamente próximos, basicamente, encostando os dois dispositivos (jogos para vários jogadores). Saiba mais sobre [proximidade e toques](https://msdn.microsoft.com/library/windows/apps/hh465229).
+-   
+            **Câmeras e dispositivos de armazenamento externos**  Conecte seus usuários a suas câmeras internas ou conectadas para conversas ou conferências, gravar vlogs, tirar fotos de perfil, documentar o mundo à volta deles ou qualquer atividade em que seu aplicativo seja bom. Saiba mais sobre o [acesso a conteúdo em armazenamento removível](https://msdn.microsoft.com/library/windows/apps/hh465189).
+-   
+            **Acelerômetros e outros sensores**     Os dispositivos vêm com vários sensores atualmente. O seu aplicativo pode esmaecer ou clarear o seu visor com base na luz ambiente, redirecionar o fluxo da IU caso o usuário girar o visor, ou reagir a qualquer movimento físico. Saiba mais sobre [sensores](../devices-sensors/sensors.md).
+-   
+            **Geolocalização**  Use informações de geolocalização de dados da Web padrão ou de sensores de geolocalização para ajudar os seus usuários a circular, encontrar a posição deles no mapa ou receber notificações sobre pessoas e atividades próximas e destinos. Saiba mais sobre [localização geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
 
 Vamos considerar o aplicativo de viagens novamente. Para ser ótimo em ajudar amigos a criar de forma colaborativa itinerários de viagens em grupo, você pode usar alguns destes recursos:
 
@@ -195,7 +218,7 @@ Vamos dar uma olhada no fluxo "Compartilhar itinerários para que amigos e famil
 
 Durante esse processo, você começa a ver que IU você precisa criar e os detalhes adicionais que você precisa descobrir (como escrever um texto cliché de email padrão para amigos que ainda não usam o aplicativo). Você também pode começar a eliminar etapas desnecessárias. Talvez o usuário não precise realmente ver os detalhes da viagem antes de compartilhá-la, por exemplo. Quanto mais limpo o fluxo, mais fácil usá-lo.
 
-Para obter mais detalhes sobre como usar superfícies diferentes, dê uma olhada em <!--[Command design basics](../layout/commanding-basics.md)-->.
+Para saber mais sobre como usar superfícies diferentes, confira <!--[Command design basics](../layout/commanding-basics.md)-->.
 
 **Qual deve ser a aparência do fluxo?** Quando definir as etapas que o usuário realizará, você pode transformar esse fluxo em metas de desempenho. Para saber mais, consulte [Planejar o desempenho](../debug-test-perf/planning-and-measuring-performance.md).
 
@@ -212,19 +235,23 @@ Para obter mais detalhes sobre como usar superfícies diferentes, dê uma olhada
 
 ![designs móveis e de computador para um aplicativo](images/ux-budgettracker1-md-notablet.png)
 
-Para obter mais informações sobre a criação de diferentes tamanhos de tela, consulte <!--[Responsive design 101](designing-in-effective-pixels.md)-->.
+Para saber mais sobre a criação para diferentes tamanhos de tela, consulte <!--[Responsive design 101](designing-in-effective-pixels.md)-->.
 
 ## Causar uma boa primeira impressão
 
 Pense naquilo que você quer que os usuários pensem, sintam ou façam assim que iniciarem o seu aplicativo. Revise a sua declaração de excelência. Mesmo que você não tenha a chance de informar pessoalmente seus usuários sobre a especialidade do seu aplicativo, pode transmitir a mensagem a eles ao passar a sua primeira impressão. Tire vantagem disto:
 
-**Bloco e notificações**    O bloco é o rosto do seu aplicativo. Entre os vários aplicativos encontrados na tela Inicial do usuário, o que vai fazer o usuário querer abrir o seu? Crie um bloco que destaque a marca do seu aplicativo e mostre o que ele tem de melhor. Use notificações de bloco para o seu aplicativo parecer sempre novo e relevantes, atraindo o usuário de volta para o seu aplicativo várias vezes.
 
-**Tela inicial**  A tela inicial deve carregar o mais rápido possível e ficar na tela o tempo necessário para inicializar o estado do seu aplicativo. O que você mostra na tela inicial deve expressar a personalidade do seu aplicativo.
+            **Bloco e notificações**    O bloco é o rosto do seu aplicativo. Entre os vários aplicativos encontrados na tela Inicial do usuário, o que vai fazer o usuário querer abrir o seu? Crie um bloco que destaque a marca do seu aplicativo e mostre o que ele tem de melhor. Use notificações de bloco para o seu aplicativo parecer sempre novo e relevantes, atraindo o usuário de volta para o seu aplicativo várias vezes.
 
-**Primeira inicialização**  Antes de os usuários inscreverem-se no seu serviço, fazerem login na conta ou adicionarem seu próprio conteúdo, o que eles verão? Tente demonstrar o valor do seu aplicativo antes de solicitar informações dos usuários. Considere mostrar amostra de conteúdos para que as pessoas possam dar uma olha e entender o que o seu aplicativo faz antes de você pedir a eles que confirmem.
 
-**Home page**  A home page é para onde você traz usuários cada vez que eles iniciam o seu aplicativo. O conteúdo aqui deve ter um foco claro e, imediatamente, apresentar para que o seu aplicativo foi feito. Dê um objetivo maior a essa página e confie que as pessoas explorem o restante do seu aplicativo. Concentre-se em eliminar as distrações na página de destino, e não na descoberta.
+            **Tela inicial**  A tela inicial deve carregar o mais rápido possível e ficar na tela o tempo necessário para inicializar o estado do seu aplicativo. O que você mostra na tela inicial deve expressar a personalidade do seu aplicativo.
+
+
+            **Primeira inicialização**  Antes de os usuários inscreverem-se no seu serviço, fazerem login na conta ou adicionarem seu próprio conteúdo, o que eles verão? Tente demonstrar o valor do seu aplicativo antes de solicitar informações dos usuários. Considere mostrar amostra de conteúdos para que as pessoas possam dar uma olha e entender o que o seu aplicativo faz antes de você pedir a eles que confirmem.
+
+
+            **Home page**  A home page é para onde você traz usuários cada vez que eles iniciam o seu aplicativo. O conteúdo aqui deve ter um foco claro e, imediatamente, apresentar para que o seu aplicativo foi feito. Dê um objetivo maior a essa página e confie que as pessoas explorem o restante do seu aplicativo. Concentre-se em eliminar as distrações na página de destino, e não na descoberta.
 
 ## Valide seu design
 
@@ -233,6 +260,7 @@ Antes de você se aprofundar muito no desenvolvimento do seu aplicativo, deve va
 Use as [Diretrizes detalhadas de experiência do usuário para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/hh465424) para manter o foco em recursos importantes. Use as [ferramentas de desempenho do Visual Studio](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx) para analisar o desempenho de cada uma das situações do seu aplicativo.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
