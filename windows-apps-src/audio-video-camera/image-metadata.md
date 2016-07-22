@@ -66,7 +66,8 @@ Assim que você tiver o decodificador, crie uma lista de cadeias de caracteres e
 
 -   Para obter informações sobre a linguagem de consulta de metadados do WIC e as propriedades com suporte, consulte [Consultas de metadados nativos de formato de imagem do WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   Muitas propriedades de metadados são suportadas apenas por um subconjunto de tipos de imagem. [
+-   Muitas propriedades de metadados são suportadas apenas por um subconjunto de tipos de imagem. 
+            [
               **GetPropertiesAsync**
             ](https://msdn.microsoft.com/library/windows/apps/br226250) falhará com o código de erro 0x88982F41 se não houver suporte para uma das propriedades solicitadas pela imagem associada ao decodificador e 0x88982F81 se a imagem não der suporte a metadados. As constantes associadas a esses códigos de erro são WINCODEC\_ERR\_PROPERTYNOTSUPPORTED e WINCODEC\_ERR\_UNSUPPORTEDOPERATION e são definidas no arquivo de cabeçalho winerror.h.
 -   Como uma imagem pode ou não conter um valor de uma propriedade específica, use o **IDictionary.ContainsKey** para verificar se uma propriedade está presente nos resultados antes de tentar acessá-la.
@@ -79,7 +80,8 @@ Crie um objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 -   Para obter detalhes sobre quais propriedades são suportadas para quais tipos de arquivo de imagem, consulte [Propriedades do Windows](https://msdn.microsoft.com/library/windows/desktop/dd561977), [Políticas de Metadados de Fotos](https://msdn.microsoft.com/library/windows/desktop/ee872003) e [Consultas de metadados nativos de formato de imagem do WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   [
+-   
+            [
               **SetPropertiesAsync**
             ](https://msdn.microsoft.com/library/windows/apps/br226252) falhará com o código de erro 0x88982F41 se não houver suporte para uma das propriedades solicitadas pela imagem associada ao codificador.
 
