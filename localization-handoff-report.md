@@ -1,27 +1,40 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/469e47bcc5a3a6b9fcc8ef2e291d97ad74817fa3/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md) | OutofSyncHandedBackSuccess | [Details](#b18ccc1aa353e8234958d4ba665711fe7e6d354b3396)
+ [windows-apps-src\porting\desktop-to-uwp-supported-api.md](https://github.com/Microsoft/windows-apps/blob/c1fdf83238b413eac6b88e8d8174d1f94455b778/windows-apps-src/porting/desktop-to-uwp-supported-api.md) | HandedOffSuccess | [Details](#a326227b99079091e008cef05ff6c86d7873a4623526)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/1fafab0806645ed43ae67dd9639dada8f2d3ab9c/windows-apps-src/TOC.md) | OutofSyncHandedBackSuccess | [Details](#acf42817ccce2c1fc76d6325e15a0be96096af905329)
 
 ## Item Details
-##### <a name='b18ccc1aa353e8234958d4ba665711fe7e6d354b3396'></a> Source: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/469e47bcc5a3a6b9fcc8ef2e291d97ad74817fa3/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='a326227b99079091e008cef05ff6c86d7873a4623526'></a> Source: [windows-apps-src\porting\desktop-to-uwp-supported-api.md](https://github.com/Microsoft/windows-apps/blob/c1fdf83238b413eac6b88e8d8174d1f94455b778/windows-apps-src/porting/desktop-to-uwp-supported-api.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/a6d5cb7063d0c0ba56abd8d5cc50e1d3b9327427/ol-handoff/Microsoft/windows-apps.pt-br/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.pt-br.xlf)
-* Handoff Datetime: 2016-07-28 17:50:39
+* Handoff File: [desktop-to-uwp-supported-api.220ba582d79150eb52605ad0af9b424c0fb476ad.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/53556f79e7f37ec123d8a8f648e2db4017383af5/ol-handoff/Microsoft/windows-apps.pt-br/master/desktop-to-uwp-supported-api.220ba582d79150eb52605ad0af9b424c0fb476ad.pt-br.xlf)
+* Handoff Datetime: 2016-07-28 18:19:32
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
-* Current Handback File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.pt-br.xlf)
-* Current Handback Datetime: 2016-07-06 15:27:44
+* [Back to Top](#report-top)
+
+##### <a name='acf42817ccce2c1fc76d6325e15a0be96096af905329'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/1fafab0806645ed43ae67dd9639dada8f2d3ab9c/windows-apps-src/TOC.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/53556f79e7f37ec123d8a8f648e2db4017383af5/ol-handoff/Microsoft/windows-apps.pt-br/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf)
+* Handoff Datetime: 2016-07-28 18:19:32
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.pt-br/blob/dbf044f5167007197ae221733c90ee5d3e669f73/windows-apps-src/TOC.md)
+* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/cbf08cbc88fac88dd61c866fefb7cd76d2b0d9a8/ol-handback/Microsoft/windows-apps.pt-br/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf)
+* Current Handback Datetime: 2016-07-20 16:42:20
 * [Back to Top](#report-top)
 
 
