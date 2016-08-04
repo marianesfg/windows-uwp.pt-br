@@ -6,22 +6,19 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps/blob/33025843c66ba4548f46655c13b3884fa5426d58/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md) | OutofSyncHandedBackSuccess | [Details](#d0d2532fbd5bfa205ff38fd34362328e719d19094286)
+ [windows-apps-src\enterprise\wip-dev-guide.md](https://github.com/Microsoft/windows-apps/blob/0c66927b773e70641f3997331858a098dcd82c89/windows-apps-src/enterprise/wip-dev-guide.md) | HandedOffSuccess | [Details](#fe3fcca5f0b7d33ad44f4b15303f1831a46e79ec3417)
 
 ## Item Details
-##### <a name='d0d2532fbd5bfa205ff38fd34362328e719d19094286'></a> Source: [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps/blob/33025843c66ba4548f46655c13b3884fa5426d58/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='fe3fcca5f0b7d33ad44f4b15303f1831a46e79ec3417'></a> Source: [windows-apps-src\enterprise\wip-dev-guide.md](https://github.com/Microsoft/windows-apps/blob/0c66927b773e70641f3997331858a098dcd82c89/windows-apps-src/enterprise/wip-dev-guide.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/a971db9d138af618c2f34bff56505461cf4e8c69/ol-handoff/Microsoft/windows-apps.pt-br/master/pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.pt-br.xlf)
-* Handoff Datetime: 2016-08-03 23:15:00
+* Handoff File: [wip-dev-guide.c2e2fe40c6255bd8f5df75ee81adcc2c3bdffc9b.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/24903c90645c56f5127432d029ef3cd9840ce8f3/ol-handoff/Microsoft/windows-apps.pt-br/master/wip-dev-guide.c2e2fe40c6255bd8f5df75ee81adcc2c3bdffc9b.pt-br.xlf)
+* Handoff Datetime: 2016-08-04 17:46:16
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md)
-* Current Handback File: [pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.pt-br.xlf)
-* Current Handback Datetime: 2016-07-06 15:27:44
 * [Back to Top](#report-top)
 
 
