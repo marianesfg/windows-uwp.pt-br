@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/110d6f3d73d0e1f44dc0b802f77d59bc1127161b/windows-apps-src/get-started/enable-your-device-for-development.md) | OutofSyncHandedBackSuccess | [Details](#69d88c092561beaeed9d093d590c10f2f5c178d43551)
+ [windows-apps-src\security\web-account-manager.md](https://github.com/Microsoft/windows-apps/blob/f3cdb187ec4056d4c7db6acde471b0bc91c78390/windows-apps-src/security/web-account-manager.md) | OutofSyncHandedBackSuccess | [Details](#093ca8906853121bbf33a729c523717d26cb7b0d5130)
 
 ## Item Details
-##### <a name='69d88c092561beaeed9d093d590c10f2f5c178d43551'></a> Source: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/110d6f3d73d0e1f44dc0b802f77d59bc1127161b/windows-apps-src/get-started/enable-your-device-for-development.md)
+##### <a name='093ca8906853121bbf33a729c523717d26cb7b0d5130'></a> Source: [windows-apps-src\security\web-account-manager.md](https://github.com/Microsoft/windows-apps/blob/f3cdb187ec4056d4c7db6acde471b0bc91c78390/windows-apps-src/security/web-account-manager.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/0f7b07d36394ecf435aed7c80e80274dc6856055/ol-handoff/Microsoft/windows-apps.pt-br/master/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.pt-br.xlf)
-* Handoff Datetime: 2016-08-05 19:44:49
+* Handoff File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/f7b3faace7af2de509d6c365dd475cfa45a3c7f3/ol-handoff/Microsoft/windows-apps.pt-br/master/web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.pt-br.xlf)
+* Handoff Datetime: 2016-08-05 20:44:23
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/get-started/enable-your-device-for-development.md)
-* Current Handback File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.pt-br.xlf)
+* Current Target File: [windows-apps-src\security\web-account-manager.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/security/web-account-manager.md)
+* Current Handback File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.pt-br.xlf)
 * Current Handback Datetime: 2016-07-06 15:27:44
 * [Back to Top](#report-top)
 
