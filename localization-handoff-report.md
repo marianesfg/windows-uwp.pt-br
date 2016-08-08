@@ -1,27 +1,63 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 4
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/55f9517d64a31876ad2003d61b5a4381df96ad66/windows-apps-src/porting/desktop-to-uwp-root.md) | OutofSyncHandedBackSuccess | [Details](#efc2fd698a5768452db30dae71b8224a8af9dd9a4844)
+ [windows-apps-src\launch-resume\communicate-with-a-remote-app-service.md](https://github.com/Microsoft/windows-apps/blob/c90304b7ca3f7185fca9146aa2303b09cba5ab9a/windows-apps-src/launch-resume/communicate-with-a-remote-app-service.md) | HandedOffSuccess | [Details](#bff77a63d0f88907410c74d4dce19fb422c1bd3f4361)
+ [windows-apps-src\launch-resume\connected-apps-and-devices.md](https://github.com/Microsoft/windows-apps/blob/c90304b7ca3f7185fca9146aa2303b09cba5ab9a/windows-apps-src/launch-resume/connected-apps-and-devices.md) | HandedOffSuccess | [Details](#16ca70ec292911068c5e04c521bf0c5b12e1bd954362)
+ [windows-apps-src\launch-resume\discover-connected-devices.md](https://github.com/Microsoft/windows-apps/blob/c90304b7ca3f7185fca9146aa2303b09cba5ab9a/windows-apps-src/launch-resume/discover-connected-devices.md) | HandedOffSuccess | [Details](#5fb49ef0783454f507f419c321f0d3c156cd513e4370)
+ [windows-apps-src\launch-resume\launch-a-remote-app.md](https://github.com/Microsoft/windows-apps/blob/c90304b7ca3f7185fca9146aa2303b09cba5ab9a/windows-apps-src/launch-resume/launch-a-remote-app.md) | HandedOffSuccess | [Details](#7e3279450a1e1a5fea04e890091a6edf59fce7424394)
 
 ## Item Details
-##### <a name='efc2fd698a5768452db30dae71b8224a8af9dd9a4844'></a> Source: [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/55f9517d64a31876ad2003d61b5a4381df96ad66/windows-apps-src/porting/desktop-to-uwp-root.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='bff77a63d0f88907410c74d4dce19fb422c1bd3f4361'></a> Source: [windows-apps-src\launch-resume\communicate-with-a-remote-app-service.md](https://github.com/Microsoft/windows-apps/blob/c90304b7ca3f7185fca9146aa2303b09cba5ab9a/windows-apps-src/launch-resume/communicate-with-a-remote-app-service.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/5b2ed5b7dc57f4ffbb338832b3705d63e3636aed/ol-handoff/Microsoft/windows-apps.pt-br/master/desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.pt-br.xlf)
-* Handoff Datetime: 2016-08-05 23:15:19
+* Handoff File: [communicate-with-a-remote-app-service.69868a774210ff17c04a11fc7511d0ac1dca3d9d.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/db644ea02359670b7410c17fd3400b5feea0d79e/ol-handoff/Microsoft/windows-apps.pt-br/master/communicate-with-a-remote-app-service.69868a774210ff17c04a11fc7511d0ac1dca3d9d.pt-br.xlf)
+* Handoff Datetime: 2016-08-08 17:37:35
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps.pt-br/blob/dbf044f5167007197ae221733c90ee5d3e669f73/windows-apps-src/porting/desktop-to-uwp-root.md)
-* Current Handback File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/cbf08cbc88fac88dd61c866fefb7cd76d2b0d9a8/ol-handback/Microsoft/windows-apps.pt-br/master/desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.pt-br.xlf)
-* Current Handback Datetime: 2016-07-20 16:42:20
+* [Back to Top](#report-top)
+
+##### <a name='16ca70ec292911068c5e04c521bf0c5b12e1bd954362'></a> Source: [windows-apps-src\launch-resume\connected-apps-and-devices.md](https://github.com/Microsoft/windows-apps/blob/c90304b7ca3f7185fca9146aa2303b09cba5ab9a/windows-apps-src/launch-resume/connected-apps-and-devices.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [connected-apps-and-devices.bc37f58754b7bcb70f7340552b803a3428d1f746.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/db644ea02359670b7410c17fd3400b5feea0d79e/ol-handoff/Microsoft/windows-apps.pt-br/master/connected-apps-and-devices.bc37f58754b7bcb70f7340552b803a3428d1f746.pt-br.xlf)
+* Handoff Datetime: 2016-08-08 17:37:35
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='5fb49ef0783454f507f419c321f0d3c156cd513e4370'></a> Source: [windows-apps-src\launch-resume\discover-connected-devices.md](https://github.com/Microsoft/windows-apps/blob/c90304b7ca3f7185fca9146aa2303b09cba5ab9a/windows-apps-src/launch-resume/discover-connected-devices.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [discover-connected-devices.c79b65dc0050392e38891f1b7a9ad78e950d8b9e.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/db644ea02359670b7410c17fd3400b5feea0d79e/ol-handoff/Microsoft/windows-apps.pt-br/master/discover-connected-devices.c79b65dc0050392e38891f1b7a9ad78e950d8b9e.pt-br.xlf)
+* Handoff Datetime: 2016-08-08 17:37:35
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='7e3279450a1e1a5fea04e890091a6edf59fce7424394'></a> Source: [windows-apps-src\launch-resume\launch-a-remote-app.md](https://github.com/Microsoft/windows-apps/blob/c90304b7ca3f7185fca9146aa2303b09cba5ab9a/windows-apps-src/launch-resume/launch-a-remote-app.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [launch-a-remote-app.ca9376133d84e80a1e47cffe465fc9586a55369d.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/db644ea02359670b7410c17fd3400b5feea0d79e/ol-handoff/Microsoft/windows-apps.pt-br/master/launch-a-remote-app.ca9376133d84e80a1e47cffe465fc9586a55369d.pt-br.xlf)
+* Handoff Datetime: 2016-08-08 17:37:35
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 
