@@ -6,22 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\input-and-devices\save-and-load-ink.md](https://github.com/Microsoft/windows-apps/blob/24817e6d6a5a43493a6b64247942ba9faabfbc28/windows-apps-src/input-and-devices/save-and-load-ink.md) | HandedOffSuccess | [Details](#c220063f7ddd102e1157d477914ac062457a74084288)
+ [windows-apps-src\xbox-apps\tailoring-for-xbox.md](https://github.com/Microsoft/windows-apps/blob/a74ca4c9c215a868a3fb4c6271811d81d529c9c8/windows-apps-src/xbox-apps/tailoring-for-xbox.md) | HandedOffSuccess | [Details](#6b02c624ae57efce1d6e91d80e4e21f9eafc53a08057)
 
 ## Item Details
-##### <a name='c220063f7ddd102e1157d477914ac062457a74084288'></a> Source: [windows-apps-src\input-and-devices\save-and-load-ink.md](https://github.com/Microsoft/windows-apps/blob/24817e6d6a5a43493a6b64247942ba9faabfbc28/windows-apps-src/input-and-devices/save-and-load-ink.md)
+##### <a name='6b02c624ae57efce1d6e91d80e4e21f9eafc53a08057'></a> Source: [windows-apps-src\xbox-apps\tailoring-for-xbox.md](https://github.com/Microsoft/windows-apps/blob/a74ca4c9c215a868a3fb4c6271811d81d529c9c8/windows-apps-src/xbox-apps/tailoring-for-xbox.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/d3e24a8cfc2a4e46f0d92ca06299b213ac5bf98c/ol-handoff/Microsoft/windows-apps.pt-br/master/save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.pt-br.xlf)
-* Handoff Datetime: 2016-08-09 01:08:13
+* Handoff File: [tailoring-for-xbox.bacdeb3e45dfd5c8fe0387ee2d4a2903bd006a24.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/e1f17c7cb04304554f23724327802fe8b62be17a/ol-handoff/Microsoft/windows-apps.pt-br/master/tailoring-for-xbox.bacdeb3e45dfd5c8fe0387ee2d4a2903bd006a24.pt-br.xlf)
+* Handoff Datetime: 2016-08-09 15:24:19
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\input-and-devices\save-and-load-ink.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/input-and-devices/save-and-load-ink.md)
-* Current Handback File: [save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.pt-br.xlf)
-* Current Handback Datetime: 2016-07-06 15:27:44
+* Current Target File: [windows-apps-src\xbox-apps\tailoring-for-xbox.md](https://github.com/Microsoft/windows-apps.pt-br/blob/dbf044f5167007197ae221733c90ee5d3e669f73/windows-apps-src/xbox-apps/tailoring-for-xbox.md)
+* Current Handback File: [tailoring-for-xbox.bacdeb3e45dfd5c8fe0387ee2d4a2903bd006a24.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/cbf08cbc88fac88dd61c866fefb7cd76d2b0d9a8/ol-handback/Microsoft/windows-apps.pt-br/master/tailoring-for-xbox.bacdeb3e45dfd5c8fe0387ee2d4a2903bd006a24.pt-br.xlf)
+* Current Handback Datetime: 2016-07-20 16:42:20
 * [Back to Top](#report-top)
 
 
