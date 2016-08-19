@@ -6,22 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\the-app-certification-process.md](https://github.com/Microsoft/windows-apps/blob/865d71374cf7d678804ce16548edd819faafed33/windows-apps-src/publish/the-app-certification-process.md) | HandedOffSuccess | [Details](#07b3631ccc875222b8d2ea30a2b69e2995a09e235048)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/30f135ee37eafba13410d0b0cc496ac95670ea98/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#bd3bc909bf3301074f893961d1913c411b766ceb7934)
 
 ## Item Details
-##### <a name='07b3631ccc875222b8d2ea30a2b69e2995a09e235048'></a> Source: [windows-apps-src\publish\the-app-certification-process.md](https://github.com/Microsoft/windows-apps/blob/865d71374cf7d678804ce16548edd819faafed33/windows-apps-src/publish/the-app-certification-process.md)
+##### <a name='bd3bc909bf3301074f893961d1913c411b766ceb7934'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/30f135ee37eafba13410d0b0cc496ac95670ea98/windows-apps-src/TOC.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [the-app-certification-process.4048325d389849d9ef4fac70cf8ced1a5f98b319.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/7cf976f0f5ab64dd3b83da1d15a3b6b86b0f8ff5/ol-handoff/Microsoft/windows-apps.pt-br/master/the-app-certification-process.4048325d389849d9ef4fac70cf8ced1a5f98b319.pt-br.xlf)
-* Handoff Datetime: 2016-08-19 20:25:09
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/44d054b9ded231f7e1561cbb6ce0727077058a94/ol-handoff/Microsoft/windows-apps.pt-br/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf)
+* Handoff Datetime: 2016-08-19 23:26:27
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\the-app-certification-process.md](https://github.com/Microsoft/windows-apps.pt-br/blob/b7cc1700e5930854bd1f5cdef3b4a27520adc15a/windows-apps-src/publish/the-app-certification-process.md)
-* Current Handback File: [the-app-certification-process.4048325d389849d9ef4fac70cf8ced1a5f98b319.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/7d943cc6c136850b0652613949438de118f8068c/ol-handback/Microsoft/windows-apps.pt-br/master/the-app-certification-process.4048325d389849d9ef4fac70cf8ced1a5f98b319.pt-br.xlf)
-* Current Handback Datetime: 2016-07-06 15:27:44
+* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.pt-br/blob/dbf044f5167007197ae221733c90ee5d3e669f73/windows-apps-src/TOC.md)
+* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/cbf08cbc88fac88dd61c866fefb7cd76d2b0d9a8/ol-handback/Microsoft/windows-apps.pt-br/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf)
+* Current Handback Datetime: 2016-07-20 16:42:20
 * [Back to Top](#report-top)
 
 
