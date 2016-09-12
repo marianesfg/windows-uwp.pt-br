@@ -1,40 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps/blob/c1188f00b38e6bfadd57d24fe579f70049b2ca81/windows-apps-src/get-started/whats-a-uwp.md) | HandedOffSuccess | [Details](#7f216cebc0c52f792d1c71ad096f312749a59e5d3949)
- [windows-apps-src\updates-and-versions\choose-a-uwp-version.md](https://github.com/Microsoft/windows-apps/blob/46852d305b2c19b46a904cabf928978c6c9f1606/windows-apps-src/updates-and-versions/choose-a-uwp-version.md) | HandedOffSuccess | [Details](#249bba67b844585b590294a456e3d0e74c392c958005)
+ [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/d6158b654b3d9edcb9bd3a52b0fe58154ce40565/windows-apps-src/devices-sensors/3d-printing.md) | HandedOffSuccess | [Details](#f3e01344bf7879e8992f4f7976c65ca0b7e616b13326)
 
 ## Item Details
-##### <a name='7f216cebc0c52f792d1c71ad096f312749a59e5d3949'></a> Source: [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps/blob/c1188f00b38e6bfadd57d24fe579f70049b2ca81/windows-apps-src/get-started/whats-a-uwp.md)
+##### <a name='f3e01344bf7879e8992f4f7976c65ca0b7e616b13326'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/d6158b654b3d9edcb9bd3a52b0fe58154ce40565/windows-apps-src/devices-sensors/3d-printing.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/e806adaeb8b7a062d377d0883390f62d0b20dc70/ol-handoff/Microsoft/windows-apps.pt-br/master/whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.pt-br.xlf)
-* Handoff Datetime: 2016-09-09 22:44:47
+* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/d7b54279f20812712579fec35781874e7f454917/ol-handoff/Microsoft/windows-apps.pt-br/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.pt-br.xlf)
+* Handoff Datetime: 2016-09-12 18:43:39
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps.pt-br/blob/dbf044f5167007197ae221733c90ee5d3e669f73/windows-apps-src/get-started/whats-a-uwp.md)
-* Current Handback File: [whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/cbf08cbc88fac88dd61c866fefb7cd76d2b0d9a8/ol-handback/Microsoft/windows-apps.pt-br/master/whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.pt-br.xlf)
+* Current Target File: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps.pt-br/blob/dbf044f5167007197ae221733c90ee5d3e669f73/windows-apps-src/devices-sensors/3d-printing.md)
+* Current Handback File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.pt-br.xlf](https://github.com/Microsoft/WDG.handback/blob/cbf08cbc88fac88dd61c866fefb7cd76d2b0d9a8/ol-handback/Microsoft/windows-apps.pt-br/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.pt-br.xlf)
 * Current Handback Datetime: 2016-07-20 16:42:20
-* [Back to Top](#report-top)
-
-##### <a name='249bba67b844585b590294a456e3d0e74c392c958005'></a> Source: [windows-apps-src\updates-and-versions\choose-a-uwp-version.md](https://github.com/Microsoft/windows-apps/blob/46852d305b2c19b46a904cabf928978c6c9f1606/windows-apps-src/updates-and-versions/choose-a-uwp-version.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [choose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.pt-br.xlf](https://github.com/Microsoft/WDG.handoff/blob/e806adaeb8b7a062d377d0883390f62d0b20dc70/ol-handoff/Microsoft/windows-apps.pt-br/master/choose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.pt-br.xlf)
-* Handoff Datetime: 2016-09-09 22:44:47
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 
