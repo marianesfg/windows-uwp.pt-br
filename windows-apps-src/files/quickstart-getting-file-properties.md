@@ -3,7 +3,6 @@ author: TylerMSFT
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obter propriedades do arquivo
 description: "Obtenha as propriedades&\\#8212;nível superior, básicas e estendidas&\\#8212;de um arquivo representado pelo objeto StorageFile."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 56b83d2f05189b4cbb5bbc015987a4ffce8d86fd
 
@@ -21,7 +20,8 @@ ms.openlocfilehash: 56b83d2f05189b4cbb5bbc015987a4ffce8d86fd
 
 Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo representado pelo objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
-**Observação**  Consulte também a [Amostra de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
+
+            **Observação**  Consulte também a [Amostra de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
  
 
@@ -40,7 +40,8 @@ Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo
 
 Muitas propriedades de nível superior são acessadas como membros da classe [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). Essas propriedades incluem atributos do arquivo, tipo de conteúdo, data de criação, nome para exibição, tipo de arquivo etc.
 
-**Observação**  Lembre-se de declarar a funcionalidade **picturesLibrary**.
+
+            **Observação**  Lembre-se de declarar a funcionalidade **picturesLibrary**.
 
  
 

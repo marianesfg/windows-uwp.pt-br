@@ -8,7 +8,6 @@ title: Recursos de temas XAML
 ms.assetid: 41B87DBF-E7A2-44E9-BEBA-AF6EEBABB81B
 label: XAML theme resources
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: fa0d0881eee0f87b549a7d053e75882ffd2afa6e
 
@@ -35,7 +34,8 @@ Por outro lado, uma [extensão de marcação {StaticResource}](../xaml-platform/
 
 Cada recurso de tema é parte do arquivo XAML themeresources.xaml. Para fins de design, themeresources.xaml está disponível na pasta \\(Arquivos de Programa)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP\\&lt;versão do SDK&gt;\\Generic de uma instalação do Software Development Kit do Windows (SDK do Windows). Os dicionários de recursos em themeresources.xaml também são reproduzidos em generic.xaml no mesmo diretório.
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;O Windows Runtime não usa esses arquivos físicos para pesquisa de tempo de execução. É por isso que eles estão especificamente em uma pasta DesignTime, e eles não são copiados para aplicativos por padrão. Em vez disso, esses dicionários de recursos existem na memória como parte do Windows Runtime propriamente dito, e as referências de recurso XAML do aplicativo a recursos de tema (ou recursos do sistema) são resolvidas no tempo de execução.
 
  ## Diretrizes para usar recursos de temas
@@ -53,7 +53,8 @@ NÃO FAZER:
 
     EXCEÇÃO: é correto usar a [extensão de marcação {ThemeResource}](../xaml-platform/themeresource-markup-extension.md) para referenciar recursos independentes para o tema do aplicativo em [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807). Exemplos desses recursos são recursos de cor de destaque como `SystemAccentColor`, ou recursos de cor do sistema, que normalmente têm o prefixo "SystemColor" como `SystemColorButtonFaceColor`.
 
-**Cuidado** Caso não siga essas diretrizes, você pode notar um comportamento inesperado relacionado aos temas no aplicativo. Para obter mais informações, consulte a seção [Solução de problemas de recursos de tema](#troubleshooting_theme_resources).
+
+           **Cuidado** Caso não siga essas diretrizes, você pode notar um comportamento inesperado relacionado aos temas no aplicativo. Para obter mais informações, consulte a seção [Solução de problemas de recursos de tema](#troubleshooting_theme_resources).
  
 
 ## A rampa de cores XAML e os pincéis dependentes de temas
@@ -102,11 +103,15 @@ Esta tabela lista as cores de todo o sistema que XAML fornece como objetos de re
 
 | Chave                           | Ease of Access name            | Simple HighContrast name | Initial default |
 |-------------------------------|--------------------------------|--------------------------|-----------------|
-| SystemColorButtonFaceColor    | **Texto do Botão** (em segundo plano)   | Histórico               | \#FFF0F0F0      |
-| SystemColorButtonTextColor    | **Texto do Botão** (em primeiro plano)   | Primeiro plano               | \#FF000000      |
+| SystemColorButtonFaceColor    | 
+            **Texto do Botão** (em segundo plano)   | Histórico               | \#FFF0F0F0      |
+| SystemColorButtonTextColor    | 
+            **Texto do Botão** (em primeiro plano)   | Primeiro plano               | \#FF000000      |
 | SystemColorGrayTextColor      | **Texto desabilitado**              | Desabilitada                 | \#FF6D6D6D      |
-| SystemColorHighlightColor     | **Texto Selecionado** (em segundo plano) | Highlight                | \#FF3399FF      |
-| SystemColorHighlightTextColor | **Texto Selecionado** (em primeiro plano) | HighlightAlt             | \#FFFFFFFF      |
+| SystemColorHighlightColor     | 
+            **Texto Selecionado** (em segundo plano) | Highlight                | \#FF3399FF      |
+| SystemColorHighlightTextColor | 
+            **Texto Selecionado** (em primeiro plano) | HighlightAlt             | \#FFFFFFFF      |
 | SystemColorHotlightColor      | **Hiperlinks**                 | Hyperlink                | \#FF0066CC      |
 | SystemColorWindowColor        | **Histórico**                 | PageBackground           | \#FFFFFFFF      |
 | SystemColorWindowTextColor    | **Texto**                       | PageText                 | \#FF000000      |
@@ -122,7 +127,8 @@ Para obter mais informações sobre como dar suporte a temas de alto contraste, 
 
 Além das cores do tema de alto contraste do sistema, a cor de destaque do sistema é fornecida como um recurso de cores especial usando-se a chave `SystemAccentColor`. Em tempo de execução, esse recurso obtém a cor que o usuário especificou como a cor de destaque nas configurações de personalização do Windows.
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;É possível substituir os recursos de cores do sistema para cores de alto contraste e destaque criando-se recursos com os mesmos nomes, mas é uma prática recomendada é respeitar as opções de cores do usuário, especialmente para configurações de alto contraste.
 
 ### Pincéis dependentes de temas
@@ -151,7 +157,8 @@ Você pode usar o esquema de nomenclatura `SystemControl[Simple HighContrast nam
 For many examples of how the brushes are used in the XAML control templates, see the [Default control styles and templates](default-control-styles-and-templates.md).
 -->
 
-> **Note**
+> 
+            **Note**
             &nbsp;&nbsp;;Nem toda combinação de \[*nome simples HighContrast*\]\[*nome claro/escuro simples*\] é fornecida como um recurso de pincel.
 
 ## A rampa de tipos XAML
@@ -166,7 +173,8 @@ Os estilos têm esta aparência quando aplicados a um [**TextBlock**](https://ms
 
 ### BaseTextBlockStyle
 
-**TargetType**: [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)
+
+           **TargetType**: [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)
 
 Fornece as propriedades comuns para todos os outros estilos de contêiner [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
 
@@ -276,7 +284,8 @@ Fornece as propriedades comuns para todos os outros estilos de contêiner [**Tex
 
 ### BaseRichTextBlockStyle
 
-**TargetType**: [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)
+
+            **TargetType**: [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)
 
 Fornece as propriedades comuns para todos os outros estilos de contêiner [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565).
 
@@ -313,7 +322,8 @@ Fornece as propriedades comuns para todos os outros estilos de contêiner [**Ric
 </Style>
 ```
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp; Os estilos [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565) não têm todos os estilos de rampa de texto de [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652), principalmente porque o modelo de objeto de documento baseado em bloco de **RichTextBlock** facilita a definição de atributos nos elementos de texto individuais. Além disso, definir [**TextBlock.Text**](https://msdn.microsoft.com/library/windows/apps/br209676) com o uso da propriedade de conteúdo XAML provoca uma situação em que não há elementos de texto para os quais definir um estilo e, portanto, você teria que definir um estilo para o contêiner. Isso não é um problema para **RichTextBlock** pois o conteúdo de texto sempre precisa estar em elementos de texto específicos, como [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/br244503), onde você pode aplicar estilos XAML do cabeçalho de página, do subcabeçalho de página e das definições de rampa de texto semelhantes.
 
 ## Estilos nomeados diversos
@@ -322,7 +332,8 @@ Há um conjunto adicional de definições [**Style**](https://msdn.microsoft.com
 
 ### TextBlockButtonStyle
 
-**TargetType**: [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736)
+
+            **TargetType**: [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736)
 
 Aplique esse estilo a um [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) quando você precisar mostrar o texto em que um usuário pode clicar para realizar uma ação. O texto é criado usando-se a cor de destaque atual para diferenciá-lo como interativo e tem retângulos de foco que funcionam bem para textos. Diferentemente do estilo implícito de um [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739), o **TextBlockButtonStyle** não sublinha o texto.
 
@@ -341,7 +352,8 @@ Ele é semelhante ao seguinte:
 
 ### NavigationBackButtonNormalStyle
 
-**TargetType**: [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)
+
+            **TargetType**: [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)
 
 Esse [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) oferece um modelo completo para um [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) que pode ser o botão voltar de navegação de um aplicativo de navegação. Como ele inclui referências de recursos de tema que fazem esse botão usar a fonte símbolo Segoe MDL2 Assets, você deve usar um valor [**Symbol**](https://msdn.microsoft.com/library/windows/apps/dn252842) como o conteúdo, em vez de texto. As dimensões padrão são 40 x 40 pixels. Para personalizar o estilo, você pode definir explicitamente a [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718), [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751), [**FontSize**](https://msdn.microsoft.com/library/windows/apps/br209406) e outras propriedades no **Button** ou criar um estilo derivado usando [**BasedOn**](https://msdn.microsoft.com/library/windows/apps/br208852).
 
@@ -358,7 +370,8 @@ Ele é semelhante ao seguinte:
 
 ### NavigationBackButtonSmallStyle
 
-**TargetType**: [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)
+
+            **TargetType**: [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)
 
 Esse [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) oferece um modelo completo para um [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) que pode ser o botão voltar de navegação de um aplicativo de navegação. Ele é semelhante a **NavigationBackButtonNormalStyle**, mas as dimensões são 30 por 30 pixels.
 

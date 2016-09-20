@@ -3,7 +3,6 @@ author: jwmsft
 description: "Na marcação XAML, especifica um valor null para uma propriedade."
 title: "Extensão de marcação xNull"
 ms.assetid: E6A4038E-4ADA-4E82-9824-582FC16AB037
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 96ec27fa36d5a30d6bcf3b3c4ad4a330bf799a09
 
@@ -23,7 +22,8 @@ Na marcação XAML, especifica um valor **null** para uma propriedade.
 
 ## Comentários
 
-**null** é uma palavra-chave com referência nula para C# e C++. A palavra-chave do Microsoft Visual Basic para uma referência nula é **Nothing**.
+
+            **null** é uma palavra-chave com referência nula para C# e C++. A palavra-chave do Microsoft Visual Basic para uma referência nula é **Nothing**.
 
 O valor inicial padrão pode variar entre as propriedades de dependência, e não é necessariamente **null**. Além disso, muitas propriedades de dependência não aceitarão **null** como um valor (seja por marcação ou código) em função da implementação interna. Nesses casos, a definição de um valor de atributo XAML com **{x:Null}** pode resultar em uma exceção do analisador.
 

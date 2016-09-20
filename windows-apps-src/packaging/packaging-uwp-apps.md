@@ -3,7 +3,6 @@ author: msatranjr
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Empacotando aplicativos UWP
 description: "Para vender seu aplicativo da Plataforma Universal do Windows (UWP) ou distribuí-lo para outros usuários, você precisa criar um pacote appxupload para ele."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: a77e441cbd1b6826e06064dbd4be449813754b25
 
@@ -16,10 +15,14 @@ Para vender seu aplicativo da Plataforma Universal do Windows (UWP) ou distribu�
 
 Para o Windows 10, você gera um pacote (.appxupload) que pode ser carregado para a Windows Store. Assim, o aplicativo fica disponível para ser instalado e executado em qualquer dispositivo com o Windows 10. Aqui estão as etapas para criar um pacote do aplicativo.
 
-1.  [Antes de empacotar seu aplicativo](#before-packaging-your-app). Siga estas etapas para se certificar de que o aplicativo esteja pronto para ser empacotado para envio à loja.
-2.  [Configure um pacote do aplicativo](#configure-an-app-package). Use o designer de manifesto para configurar o pacote. Por exemplo, adicione imagens de bloco e escolha as orientações compatíveis com o aplicativo.
-3.  [Crie um pacote do aplicativo](#create-an-app-package). Use o assistente no Microsoft Visual Studio para criar um pacote do aplicativo e, em seguida, certificar o pacote com o Kit de Certificação de Aplicativos Windows.
-4.  [Faça o sideload de seu pacote do aplicativo](#sideload-your-app-package). Depois do sideload do aplicativo para um dispositivo, você poderá testar se ele funciona corretamente.
+1.  
+            [Antes de empacotar seu aplicativo](#before-packaging-your-app). Siga estas etapas para se certificar de que o aplicativo esteja pronto para ser empacotado para envio à loja.
+2.  
+            [Configure um pacote do aplicativo](#configure-an-app-package). Use o designer de manifesto para configurar o pacote. Por exemplo, adicione imagens de bloco e escolha as orientações compatíveis com o aplicativo.
+3.  
+            [Crie um pacote do aplicativo](#create-an-app-package). Use o assistente no Microsoft Visual Studio para criar um pacote do aplicativo e, em seguida, certificar o pacote com o Kit de Certificação de Aplicativos Windows.
+4.  
+            [Faça o sideload de seu pacote do aplicativo](#sideload-your-app-package). Depois do sideload do aplicativo para um dispositivo, você poderá testar se ele funciona corretamente.
 
 Depois de concluir as etapas acima, você estará pronto para vender o aplicativo na loja. Se você tem um aplicativo de linha de negócios (LOB) que não pretende vender porque serve apenas para usuários internos, você pode fazer o sideload dele para instalá-lo em qualquer dispositivo Windows 10.
 
@@ -91,11 +94,13 @@ Para distribuir um aplicativo por meio da Loja, você deve criar um pacote appxu
 **Valide seu pacote do aplicativo em um dispositivo Windows 10 remoto.**
 
 1.  Habilite seu dispositivo Windows 10 para desenvolvimento seguindo as instruções de [Habilitar seu dispositivo para desenvolvimento](https://msdn.microsoft.com/library/windows/apps/Dn706236).
-    **Importante**  Não é possível validar seu pacote de aplicativo em um dispositivo ARM remoto para Windows 10.
+    
+            **Importante**  Não é possível validar seu pacote de aplicativo em um dispositivo ARM remoto para Windows 10.
 2.  Baixe e instale as ferramentas remotas para o Visual Studio. Essas ferramentas são usadas para executar o Kit de Certificação de Aplicativos Windows remotamente. Você pode obter mais informações sobre essas ferramentas, inclusive onde baixá-las visitando [Executar aplicativos da Windows Store em uma máquina remota](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor).
 3.  Baixe o [Kit de Certificação de Aplicativos Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) exigido e, depois, instale-o em seu dispositivo Windows 10 remoto.
 4.  Na página **Criação de pacote concluída** do assistente, escolha o botão de opção **Máquina remota** e, em seguida, escolha o botão de reticências próximo ao botão **Conexão de teste**.
-    **Observação**  O botão de opção **Máquina remota** ficará disponível apenas se você selecionar pelo menos uma configuração de solução que tenha suporte para validação. Para obter mais informações sobre como testar o aplicativo com o WACK, consulte [Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/Mt186449).
+    
+            **Observação**  O botão de opção **Máquina remota** ficará disponível apenas se você selecionar pelo menos uma configuração de solução que tenha suporte para validação. Para obter mais informações sobre como testar o aplicativo com o WACK, consulte [Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/Mt186449).
 5.  Especifique uma forma de dispositivo dentro de sua sub-rede, ou forneça o Servidor de Nomes de Domínios DNS ou o endereço IP de um dispositivo que esteja fora de sua sub-rede.
 6.  Na lista **Modo de autenticação**, escolha **Nenhum**, se seu dispositivo não exigir que você se registre usando suas credenciais do Windows.
 7.  Escolha o botão **Selecionar** e, em seguida, escolha o botão **Iniciar o Kit de Certificação de Aplicativos Windows**. Se as ferramentas remotas estiverem sendo executadas nesse dispositivo, o Visual Studio se conectará a ele e, então, realizará o testes de validação. Consulte [Testes do Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/mt186450).
@@ -128,7 +133,8 @@ A lista a seguir apresenta requisitos para o sideload do aplicativo.
 
     Quando o pacote do aplicativo tiver sido instalado, você verá a seguinte mensagem na janela do PowerShell: Seu aplicativo foi instalado com êxito.
 
-    **Observação**  Para abrir o menu de atalho em um tablet, toque a tela onde você gostaria de clicar com o botão direito, segure até um círculo completo aparecer e, então, levante o dedo. O menu de atalho será exibido depois que você levantar o dedo.
+    
+            **Observação**  Para abrir o menu de atalho em um tablet, toque a tela onde você gostaria de clicar com o botão direito, segure até um círculo completo aparecer e, então, levante o dedo. O menu de atalho será exibido depois que você levantar o dedo.
 4.  Clique no botão Iniciar e digite o nome do aplicativo para iniciá-lo.
 
  

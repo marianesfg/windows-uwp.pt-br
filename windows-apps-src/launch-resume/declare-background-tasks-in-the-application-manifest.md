@@ -84,7 +84,8 @@ Copie o código no elemento Extensions (você adicionará atributos nas próxima
 
 2.  Modifique a lista de atributos Tipo de Tarefa para indicar o tipo do registro de tarefa usado com essa tarefa em segundo plano. Se a tarefa em segundo plano for registrada com vários tipos de gatilho, adicione outros elementos Task e atributos Type para cada um deles.
 
-    **Observação**  Certifique-se de listar cada um dos tipos de gatilho que você está usado ou a tarefa em segundo plano não registrará com os tipos de gatilho não declarados (o método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) falhará e gerará uma exceção).
+    
+            **Observação**  Certifique-se de listar cada um dos tipos de gatilho que você está usado ou a tarefa em segundo plano não registrará com os tipos de gatilho não declarados (o método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) falhará e gerará uma exceção).
 
     Este exemplo de trecho indica o uso de gatilhos de evento do sistema e notificações por push:
 
@@ -97,7 +98,8 @@ Copie o código no elemento Extensions (você adicionará atributos nas próxima
                 </Extension>
     ```
 
-    > **Observação**  Normalmente, um aplicativo é executado em um processo especial chamado "BackgroundTaskHost.exe". É possível adicionar um elemento Executável ao elemento Extensão, permitindo que a tarefa em segundo plano seja executada no contexto do aplicativo. Use o elemento Executável apenas com tarefas em segundo plano que o exigem, como [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).    
+    > 
+            **Observação**  Normalmente, um aplicativo é executado em um processo especial chamado "BackgroundTaskHost.exe". É possível adicionar um elemento Executável ao elemento Extensão, permitindo que a tarefa em segundo plano seja executada no contexto do aplicativo. Use o elemento Executável apenas com tarefas em segundo plano que o exigem, como [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).    
 
 ## Adicionar outras extensões de tarefa em segundo plano
 

@@ -5,14 +5,14 @@ description: "Aqui, mostramos a você como criar um dispositivo Direct3D, a cade
 ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f60d7c5b526fcdea8552256a6ebe4b92d5736264
+ms.openlocfilehash: af52969011a90f0c665dc8a5508c213d3a73b5b7
 
 ---
 
 # Configurar recursos DirectX e exibir uma imagem
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aqui, mostramos a você como criar um dispositivo Direct3D, a cadeia de troca, a exibição de destino de renderização e como apresentar a imagem renderizada para a exibição.
 
@@ -220,15 +220,9 @@ Entramos em um loop infinito para processar e exibir a cena continuamente.
 
 Neste loop, temos:
 
-1.  [
-              **ID3D11DeviceContext::OMSetRenderTargets**
-            ](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar o destino de renderização como o destino de saída.
-2.  [
-              **ID3D11DeviceContext::ClearRenderTargetView**
-            ](https://msdn.microsoft.com/library/windows/desktop/ff476388) para limpar o destino de renderização para uma cor sólida.
-3.  [
-              **IDXGISwapChain::Present**
-            ](https://msdn.microsoft.com/library/windows/desktop/bb174576) para apresentar a imagem renderizada na janela.
+1.  [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar o destino de renderização como o destino de saída.
+2.  [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) para limpar o destino de renderização para uma cor sólida.
+3.  [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) para apresentar a imagem renderizada na janela.
 
 Como definimos anteriormente a latência máxima de quadros como 1, o Windows geralmente retarda o loop de renderização para a taxa de atualização de tela, geralmente em torno de 60 Hz. O Windows retarda o loop de processamento, fazendo o aplicativo entrar no modo de suspensão quando o aplicativo chama [**Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576). O Windows faz o aplicativo entrar no modo de suspensão até que a tela seja atualizada.
 
@@ -298,6 +292,6 @@ Também desenhamos um triângulo na tela.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

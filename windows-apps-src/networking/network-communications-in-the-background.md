@@ -4,8 +4,8 @@ description: "Aplicativos usam tarefas em segundo plano e dois mecanismos princi
 title: "Comunicações de rede em segundo plano"
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 4ab9ca2a1cd337bd0af8fbbfcf44d8fc6e6dda3e
+ms.sourcegitcommit: eea01135c60df0323b73bf3fda8b44e6d02cd04b
+ms.openlocfilehash: bea161a9eeac012aa7b09547212f021f1289afa6
 
 ---
 
@@ -18,7 +18,13 @@ ms.openlocfilehash: 4ab9ca2a1cd337bd0af8fbbfcf44d8fc6e6dda3e
 -   [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)
 -   [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)
 
-Os aplicativos usam tarefas em segundo plano e dois mecanismos principais para manter as comunicações quando não estão em primeiro plano: agente de soquete e gatilhos de canal de controle. Os aplicativos que usam soquetes podem delegar a propriedade de um soquete para um agente de soquete do sistema quando saem do primeiro plano. O agente ativa o aplicativo quando chega tráfego no soquete, transfere a propriedade de volta para o aplicativo, e o aplicativo processa o tráfego de chegada.
+Os aplicativos usam tarefas em segundo plano e dois mecanismos principais para manter as comunicações quando não estão em primeiro plano: agente de soquete e gatilhos de canal de controle. Os aplicativos que usam soquetes para conexões de longa duração podem delegar a propriedade de um soquete para um agente de soquete do sistema quando saem do primeiro plano. O agente ativa o aplicativo quando chega tráfego no soquete, transfere a propriedade de volta para o aplicativo, e o aplicativo processa o tráfego de chegada.
+
+## Realizando operações de rede de curta duração em tarefas em segundo plano
+
+SocketActivityTrigger e ControlChannelTrigger (abordados mais adiante neste tópico) são projetados para aplicativos que mantêm conexões de rede de longa duração que persistem mesmo quando o aplicativo é executado em segundo plano. Aplicativos que exigem interações de rede de curta duração como parte da lógica da tarefa em segundo plano (por exemplo, enviando uma solicitação HTTP) pode chamar diretamente as principais APIs de rede ([**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) ou [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)). No entanto, essas tarefas devem ser configuradas de modo que funcionem adequadamente em todas as circunstâncias. Tarefas em segundo plano devem usar a condição [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) com sua tarefa em segundo plano ou usar o sinalizador [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) no registro da tarefa em segundo plano. Isso solicita que a infraestrutura de tarefas em segundo plano acompanhe a rede enquanto a tarefa está em execução, mesmo se o dispositivo entrar em modo de espera conectado.
+
+Se sua tarefa em segundo plano não usa [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) nem [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) conforme descrito aqui, sua tarefa em segundo plano não poderá acessar a rede quando estiver em modo de espera conectado (por exemplo, quando a tela do telefone está desativada).
 
 ## Agente de soquete e SocketActivityTrigger
 
@@ -26,10 +32,8 @@ Se o aplicativo usa conexões [**DatagramSocket**](https://msdn.microsoft.com/li
 
 Para que seu aplicativo receba e processe os dados recebidos em um soquete quando o aplicativo não está ativo, o aplicativo deve executar uma configuração única na inicialização e, em seguida, transferir a propriedade do soquete para o agente de soquete quando ele estiver fazendo a transição para um estado não ativo.
 
--   As etapas da configuração única são:
-
-    -   Crie um SocketActivityTrigger e registre uma tarefa em segundo plano para o gatilho com o parâmetro TaskEntryPoint definido como seu código para processar um pacote recebido.
-
+As etapas de configuração únicas se destinam a criar um gatilho, registrar uma tarefa em segundo plano para o gatilho e habilitar o soquete para o agente de soquete:
+  - Crie um **SocketActivityTrigger** e registre uma tarefa em segundo plano para o gatilho com o parâmetro TaskEntryPoint definido como seu código para processar um pacote recebido.
 ```csharp
             var socketTaskBuilder = new BackgroundTaskBuilder(); 
             socketTaskBuilder.Name = _backgroundTaskName; 
@@ -38,10 +42,7 @@ Para que seu aplicativo receba e processe os dados recebidos em um soquete quand
             socketTaskBuilder.SetTrigger(trigger); 
             _task = socketTaskBuilder.Register(); 
 ```
-
-    -   Call EnableTransferOwnership on the socket, before you bind the socket.
-
-
+  - Chame **EnableTransferOwnership** no soquete antes de associar o soquete.
 ```csharp
            _tcpListener = new StreamSocketListener(); 
           
@@ -54,15 +55,12 @@ Para que seu aplicativo receba e processe os dados recebidos em um soquete quand
            await _tcpListener.BindServiceNameAsync("my-service-name"); 
 ```
 
--   A ação a ser executada em suspensão é:
+Depois de configurar corretamente o soquete, quando o aplicativo estiver prestes a ser suspenso, chame **TransferOwnership** no soquete para transferi-lo para um agente de soquete. O agente monitora o soquete e ativa a tarefa em segundo plano quando são recebidos dados. O exemplo a seguir inclui uma função utilitária **TransferOwnership** para realizar a transferência para soquetes **StreamSocketListener**. (Observe que tipos diferentes de soquetes têm seu próprio método **TransferOwnership**, sendo assim, você deve chamar o método apropriado para o soquete cuja propriedade está transferindo. O código provavelmente conterá um auxiliar sobrecarregado **TransferOwnership** com uma implementação para cada tipo de soquete que você usa, de forma que o código **OnSuspending** continua sendo de leitura fácil.)
 
-    Quando o aplicativo estiver prestes a ser suspenso, chame **TransferOwnership** no soquete para transferi-lo para um agente de soquete. O agente monitora o soquete e ativa a tarefa em segundo plano quando são recebidos dados. O exemplo a seguir inclui uma função utilitária **TransferOwnership** para realizar a transferência para soquetes **StreamSocketListener**. (Observe que tipos diferentes de soquetes têm seu próprio método **TransferOwnership**, sendo assim, você deve chamar o método apropriado para o soquete cuja propriedade está transferindo. O código provavelmente conterá um auxiliar sobrecarregado **TransferOwnership** com uma implementação para cada tipo de soquete que você usa, de forma que o código **OnSuspending** continua sendo de leitura fácil.)
-
-    Um aplicativo transfere a propriedade de um soquete para um agente de soquete e passa a ID da tarefa em segundo plano usando um dos métodos apropriados a seguir:
-
-    -   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256) em um [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319).
-    -   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433) em um [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882).
-    -   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407) em um [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906).
+Um aplicativo transfere a propriedade de um soquete para um agente de soquete e passa a ID da tarefa em segundo plano usando um dos métodos apropriados a seguir:
+-   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256) em um [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319).
+-   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433) em um [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882).
+-   Um dos métodos [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407) em um [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906).
 
 ```csharp
     private void TransferOwnership(StreamSocketListener tcpListener) 
@@ -84,26 +82,20 @@ Para que seu aplicativo receba e processe os dados recebidos em um soquete quand
         deferral.Complete(); 
     } 
 ```
-
--  No manipulador de eventos da sua tarefa em segundo plano:
-
+No manipulador de eventos da sua tarefa em segundo plano:
    -  Primeiramente, obtenha um adiamento da tarefa em segundo plano para que você possa manipular o evento usando métodos assíncronos.
-
 ```csharp
 var deferral = taskInstance.GetDeferral();
 ```
-
-   -  Em seguida, extraia o SocketActivityTriggerDetails dos argumentos do evento e descubra o motivo pelo qual o evento foi gerado:
-
+   -  Em seguida, extraia SocketActivityTriggerDetails dos argumentos do evento e descubra o motivo pelo qual o evento foi gerado:
 ```csharp
 var details = taskInstance.TriggerDetails as SocketActivityTriggerDetails; 
     var socketInformation = details.SocketInformation; 
     switch (details.Reason) 
 ```
+   -   Se o evento foi gerado por atividade de soquete, crie um DataReader no soquete, carregue o leitor de forma assíncrona e, em seguida, use os dados de acordo com o design do seu aplicativo. Observe que você deve retornar a propriedade do soquete para o agente de soquete, para ser notificado de outras atividades do soquete novamente.
 
-    -   If the event was raised because of socket activity, create a DataReader on the socket, load the reader asynchronously, and then use the data according to your app's design. Note that you must return ownership of the socket back to the socket broker, in order to be notified of further socket activity again.
-
-        In the following example, the text received on the socket is displayed in a toast.
+   No exemplo a seguir, o texto recebido no soquete é exibido em uma notificação do sistema.
 
 ```csharp
 case SocketActivityTriggerReason.SocketActivity: 
@@ -117,7 +109,7 @@ case SocketActivityTriggerReason.SocketActivity:
             break; 
 ```
 
-    -   If the event was raised because a keep alive timer expired, then your code should send some data over the socket in order to keep the socket alive and restart the keep alive timer. Again, it is important to return ownership of the socket back to the socket broker in order to receive further event notifications:
+   -   Se o evento foi gerado porque um temporizador de keep alive expirou, seu código deverá enviar alguns dados pelo soquete para manter o soquete ativo e reiniciar o temporizador de keep alive. Mais uma vez, é importante retornar a propriedade do soquete de volta para o agente de soquete para receber notificações de eventos adicionais:
 
 ```csharp
 case SocketActivityTriggerReason.KeepAliveTimerExpired: 
@@ -131,7 +123,7 @@ case SocketActivityTriggerReason.KeepAliveTimerExpired:
             break; 
 ```
 
-    -   If the event was raised because the socket was closed, re-establish the socket, making sure that after you create the new socket, you transfer ownership of it to the socket broker. In this sample, the hostname and port are stored in local settings so that they can be used to establish a new socket connection:
+   -   Se o evento foi gerado porque o soquete foi fechado, restabeleça o soquete, certificando-se de que, depois de criar o novo soquete, você transfira a propriedade para o agente de soquete. Neste exemplo, o nome do host e a porta são armazenados nas configurações locais para que elas possam ser usadas para estabelecer uma nova conexão de soquete:
 
 ```csharp
 case SocketActivityTriggerReason.SocketClosed: 
@@ -148,7 +140,7 @@ case SocketActivityTriggerReason.SocketClosed:
             break; 
 ```
 
--   Não se esqueça de concluir o adiamento depois que terminar de processar a notificação de evento:
+   -   Não se esqueça de concluir o adiamento depois que terminar de processar a notificação de evento:
 
 ```csharp
   deferral.Complete();
@@ -437,8 +429,7 @@ Para obter mais informações sobre o uso de [**MessageWebSocket**](https://msdn
 
 Algumas considerações especiais se aplicam quando usamos [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Há alguns padrões de uso específicos de transporte e práticas recomendadas que devem ser seguidos ao usar um [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com **ControlChannelTrigger**. Além disso, essas considerações afetam o modo como são manipuladas as solicitações para receber pacotes em [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637).
 
-**Observação**
-            No momento, não há suporte a [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com SSL usando o recurso de gatilho de rede e [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
+**Observação**  No momento, não há suporte para [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com SSL usando o recurso de gatilho de rede e [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 
  
 Os seguintes padrões de uso e práticas recomendadas devem ser seguidos ao usar [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032):
@@ -599,6 +590,6 @@ Para obter mais informações sobre o uso de [**IXMLHTTPRequest2**](https://msdn
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

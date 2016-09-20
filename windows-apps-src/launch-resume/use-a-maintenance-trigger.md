@@ -29,7 +29,8 @@ Este exemplo pressupõe que você tenha um código leve que possa executar em se
 
 Crie um novo objeto [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). O segundo parâmetro, *OneShot*, especifica se a tarefa de manutenção será executada apenas uma vez ou se continuará a ser executada periodicamente. Se *OneShot* for definido como verdadeiro, o primeiro parâmetro (*FreshnessTime*) especificará o número de minutos aguardados até que a tarefa em segundo plano seja agendada. Se *OneShot* for definido como falso, *FreshnessTime* especificará a frequência com que a tarefa em segundo plano será executada.
 
-> **Observação** Se *FreshnessTime* for definido como menos de 15 minutos, uma exceção será lançada quando você tentar registrar a tarefa em segundo plano.
+> 
+            **Observação** Se *FreshnessTime* for definido como menos de 15 minutos, uma exceção será lançada quando você tentar registrar a tarefa em segundo plano.
 
  
 
@@ -84,23 +85,27 @@ Esse código de exemplo cria um gatilho que é executado uma vez a cada hora:
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, taskTrigger, exampleCondition);
     > ```
 
-    > Para obter mais informações sobre como registrar tarefas em segundo plano, consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md). O código a seguir registra a tarefa de manutenção: [!div class="tabbedCodeSnippets"] **Observação**  Para todas as famílias de dispositivos, exceto desktop, se o dispositivo estiver com memória insuficiente, as tarefas em segundo plano poderão ser encerradas.
+    > Para obter mais informações sobre como registrar tarefas em segundo plano, consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md). O código a seguir registra a tarefa de manutenção: [!div class="tabbedCodeSnippets"] 
+            **Observação**  Para todas as famílias de dispositivos, exceto desktop, se o dispositivo estiver com memória insuficiente, as tarefas em segundo plano poderão ser encerradas.
 
     > Se uma exceção de falta de memória não surgir ou se o aplicativo não manipulá-la, a tarefa em segundo plano será encerrada sem aviso e sem gerar o evento OnCanceled.
 
     Isso ajuda a assegurar a experiência do usuário do aplicativo em primeiro plano. A tarefa em segundo plano deve ser projetada para tratar desse cenário.
 
-    > **Observação** Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano. Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
+    > 
+            **Observação** Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano. Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
 
-> **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido.
+> 
+            **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido.
 
 ## Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas em segundo plano apresenta falha. Se, em vez disso, o aplicativo precisar ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
 
 
 ****
 
-* [**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](create-and-register-a-background-task.md)
+* [
+            **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](create-and-register-a-background-task.md)
 * [Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](declare-background-tasks-in-the-application-manifest.md)
 * [Tópicos relacionados](handle-a-cancelled-background-task.md)
 * [Criar e registrar uma tarefa em segundo plano](monitor-background-task-progress-and-completion.md)

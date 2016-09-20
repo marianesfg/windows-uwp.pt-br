@@ -20,7 +20,8 @@ As tarefas em segundo plano são classes separadas que implementam a interface d
 
 Para começar rapidamente com uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano](create-and-register-a-background-task.md).
 
-**Dica**  A partir do Windows 10, você não precisa mais colocar um aplicativo na tela de bloqueio para registrar tarefas em segundo plano.
+
+            **Dica**  A partir do Windows 10, você não precisa mais colocar um aplicativo na tela de bloqueio para registrar tarefas em segundo plano.
 
  
 
@@ -69,11 +70,14 @@ Antes que o aplicativo possa registrar com êxito uma tarefa em segundo plano, e
 
 Os gatilhos em tempo real a seguir podem ser usados para executar código personalizado leve em segundo plano:
 
-**Canal de Controle:  **As tarefas em segundo plano podem manter a conexão ativada e receber mensagens no canal de controle usando o [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Se seu aplicativo estiver ouvindo um soquete, você poderá usar o Agente de Soquete em vez do **ControlChannelTrigger**. Para obter mais detalhes sobre como usar o Agente de Soquete, consulte [SocketActivityTrigger](https://msdn.microsoft.com/library/windows/apps/dn806009). O **ControlChannelTrigger** não é compatível com o Windows Phone.
 
-**Temporizador:  **É possível executar tarefas em segundo plano a cada 15 minutos, e elas podem ser configuradas para execução em um horário específico com [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para obter mais informações, consulte [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md).
+            **Canal de Controle:  **As tarefas em segundo plano podem manter a conexão ativada e receber mensagens no canal de controle usando o [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Se seu aplicativo estiver ouvindo um soquete, você poderá usar o Agente de Soquete em vez do **ControlChannelTrigger**. Para obter mais detalhes sobre como usar o Agente de Soquete, consulte [SocketActivityTrigger](https://msdn.microsoft.com/library/windows/apps/dn806009). O **ControlChannelTrigger** não é compatível com o Windows Phone.
 
-**Notificação por Push:  **As tarefas em segundo plano respondem ao [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) para receber notificações por push brutas.
+
+            **Temporizador:  **É possível executar tarefas em segundo plano a cada 15 minutos, e elas podem ser configuradas para execução em um horário específico com [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para obter mais informações, consulte [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md).
+
+
+            **Notificação por Push:  **As tarefas em segundo plano respondem ao [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) para receber notificações por push brutas.
 
 **Observação**  
 
@@ -84,7 +88,8 @@ Para garantir que seu aplicativo Universal do Windows continue a ser executado c
 ## Gatilhos de eventos do sistema
 
 
-> **Observação**  A enumeração [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839) inclui os gatilhos de eventos do sistema a seguir.
+> 
+            **Observação**  A enumeração [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839) inclui os gatilhos de eventos do sistema a seguir.
 
 | Nome do gatilho            | Descrição                                                       |
 |-------------------------|-------------------------------------------------------------------|

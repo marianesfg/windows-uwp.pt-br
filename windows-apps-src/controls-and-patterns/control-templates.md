@@ -8,7 +8,6 @@ title: Modelos de controle
 ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 071ba59af02b860e9fe58133eb5f1c2a7207ed2b
 
@@ -96,7 +95,10 @@ Esta tabela lista os possíveis valores do [**IsChecked**](https://msdn.microsof
 
 |                     |                    |                         |
 |---------------------|--------------------|-------------------------|
-| Valor **IsChecked** | Estado da **CheckBox** | Aparência da **CheckBox** |
+| 
+            Valor **IsChecked** | 
+            Estado da **CheckBox** | 
+            Aparência da **CheckBox** |
 | **true**            | `Checked`          | Contém um "X".        |
 | **false**           | `Unchecked`        | Vazio.                  |
 | **null**            | `Indeterminate`    | Contém um círculo.      |

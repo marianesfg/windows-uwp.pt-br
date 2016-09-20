@@ -5,8 +5,9 @@ title: "Visão geral da entrada de texto personalizada"
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 31f10b862ba53f2ba51f3936a73e874466590b30
+ms.openlocfilehash: 614c1b8f319ea1925cd15c5ad1a3093b2bce54d3
 
 ---
 
@@ -24,7 +25,7 @@ As APIs de texto básicas no namespace [**Windows.UI.Text.Core**](https://msdn.m
 ## Por que usar APIs de texto básicas?
 
 
-Para muitos aplicativos, os controles de caixa de texto XAML ou HTML são suficientes para entrada de texto e edição. No entanto, caso seu aplicativo manipule cenários de texto complexos, como um aplicativo de processamento de texto, talvez você precise da flexibilidade de um controle de edição de texto personalizado. Você pode usar as APIs de teclado [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para criar o controle de edição de texto, mas elas não oferecem uma maneira de receber entrada de texto com base na composição, algo necessário para dar suporte a idiomas do leste asiático.
+Para muitos aplicativos, os controles de caixa de texto XAML ou HTML são suficientes para entrada de texto e edição. No entanto, caso seu aplicativo trate cenários de texto complexos, como um aplicativo de processamento de texto, talvez você precise da flexibilidade de um controle de edição de texto personalizado. Você pode usar as APIs de teclado [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para criar o controle de edição de texto, mas elas não oferecem uma maneira de receber entrada de texto com base na composição, algo necessário para dar suporte a idiomas do leste asiático.
 
 Em vez disso, use as APIs [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) quando você precisar criar um controle de edição de texto personalizado. Essas APIs foram projetadas para dar muita flexibilidade no processamento de entrada de texto, em qualquer idioma e permitir que você ofereça a experiência de texto mais adequada ao seu aplicativo. Os controles de edição e entrada de texto criados com APIs de texto básicas podem receber entrada de texto de todos os métodos de entrada de texto em dispositivos Windows, dos Editores de Método de Entrada (IMEs) baseados na [Estrutura de Serviços de Texto](https://msdn.microsoft.com/library/windows/desktop/ms629032) e manuscrito em computadores até o teclado WordFlow (que fornece correção automática, previsão e ditado) em dispositivos móveis.
 
@@ -34,7 +35,7 @@ Em vez disso, use as APIs [**Windows.UI.Text.Core**](https://msdn.microsoft.com/
 A seguir, uma representação simples do sistema de entrada de texto.
 
 -   "Application" representa um aplicativo UWP que hospeda um controle de edição personalizado criado usando-se as APIs de texto básicas.
--   As APIs [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) facilitam a comunicação com serviços de texto por meio do Windows. A comunicação entre o controle de edição de texto e os serviços de texto é manipulada principalmente por meio de um objeto [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158) que fornece os métodos e os eventos para facilitar a comunicação.
+-   As APIs [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) facilitam a comunicação com serviços de texto por meio do Windows. A comunicação entre o controle de edição de texto e os serviços de texto é tratada principalmente por meio de um objeto [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158) que fornece os métodos e os eventos para facilitar a comunicação.
 
 ![diagrama da arquitetura de texto básica](images/coretext/architecture.png)
 
@@ -96,15 +97,9 @@ Por exemplo, esse é o estado de um controle de edição antes de o usuário dig
 
 ![exemplo de diagrama de fluxo de texto](images/coretext/stream-3.png) Quando o usuário digita "d", um evento [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) é acionado com os seguintes dados [**CoreTextTextUpdatingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn958229):
 
--   [
-              **Range**
-            ](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
--   [
-              **Text**
-            ](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
--   [
-              **NewSelection**
-            ](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
+-   [**Range**](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
+-   [**Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
+-   [**NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
 
 Em seu controle de edição, aplique as alterações especificadas e defina [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) como **Succeeded**. Aqui está o estado do controle após as alterações serem aplicadas.
 
@@ -129,7 +124,7 @@ Por exemplo, esse é o estado de um controle de edição antes de o usuário col
 -   *newLength* = 5
 -   *newSelection* = \[11, 11\]
 
-Um ou mais [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) eventos virão depois, manipulados para atualizar o texto com que os serviços de texto estão trabalhando.
+Um ou mais [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) eventos virão depois, tratados para atualizar o texto com que os serviços de texto estão trabalhando.
 
 ### Substituindo atualizações de texto
 
@@ -147,7 +142,7 @@ Por exemplo, considere um controle de edição que forneça um recurso de corre�
 -   *newLength* = 2
 -   *newSelection* = \[5, 5\]
 
-Um ou mais [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) eventos virão depois, manipulados para atualizar o texto com que os serviços de texto estão trabalhando.
+Um ou mais [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) eventos virão depois, tratados para atualizar o texto com que os serviços de texto estão trabalhando.
 
 ### Fornecendo texto solicitado
 
@@ -170,6 +165,6 @@ Haverá vezes em que o [**Range**](https://msdn.microsoft.com/library/windows/ap
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -76,6 +76,7 @@ Visite o tópico sobre [conceitos e considerações sobre portabilidade](porting
             
           
             [Escrevendo sombreadores HLSL no Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+          
 
 [Criar um novo projeto do DirectX 11 para a UWP](user-interface.md)
 
@@ -85,6 +86,7 @@ Visite o tópico sobre [conceitos e considerações sobre portabilidade](porting
             [
               **Microsoft::WRL::ComPtr**
             ](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
+          
 
 [**Manipular o operador de objeto (^)**] https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 

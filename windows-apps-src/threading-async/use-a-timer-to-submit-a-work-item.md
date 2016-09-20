@@ -3,7 +3,6 @@ author: TylerMSFT
 ms.assetid: AAE467F9-B3C7-4366-99A2-8A880E5692BE
 title: Usar um temporizador para enviar um item de trabalho
 description: "Saiba como criar um item de trabalho que seja executado após um temporizador."
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 033669a781aa85cc2c90fa11816e385ffefa997d
 
@@ -23,7 +22,8 @@ Saiba como criar um item de trabalho que seja executado após um temporizador.
 
 Use o método [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para criar um temporizador para o item de trabalho. Forneça um lambda que realiza o trabalho e use o parâmetro *delay* para especificar por quanto tempo o pool de threads deve aguardar antes de atribuir o item de trabalho a um thread disponível. O atraso é especificado usando uma estrutura [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996).
 
-> **Observação**  Você pode usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
+> 
+            **Observação**  Você pode usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
 
 O seguinte exemplo cria um item de trabalho que é executado em três minutos:
 
@@ -81,11 +81,11 @@ O seguinte exemplo cria um item de trabalho que é executado em três minutos:
 >         }), delay);
 > ```
 
-## Forneça um manipulador de conclusão.
+## [!div class="tabbedCodeSnippets"]
 
-Se necessário, manipule o cancelamento e a conclusão do item de trabalho com um [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926). Use a sobrecarga de [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para fornecer um lambda adicional. Isso é executado quando o temporizador é cancelado ou quando o item de trabalho é concluído.
+Forneça um manipulador de conclusão. Se necessário, manipule o cancelamento e a conclusão do item de trabalho com um [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926). Use a sobrecarga de [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para fornecer um lambda adicional.
 
-O seguinte exemplo cria um timer que envia o item de trabalho e chama um método quando o item de trabalho é concluído ou o timer é cancelado:
+Isso é executado quando o temporizador é cancelado ou quando o item de trabalho é concluído.
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -201,9 +201,9 @@ O seguinte exemplo cria um timer que envia o item de trabalho e chama um método
 >         }));
 > ```
 
-## Cancelar o timer
+## O seguinte exemplo cria um temporizador que envia o item de trabalho e chama um método quando o item de trabalho é concluído ou o temporizador é cancelado:
 
-Se o temporizador ainda estiver em contagem regressiva, mas o item de trabalho não for mais necessário, chame [**Cancelar**](https://msdn.microsoft.com/library/windows/apps/BR230588). O temporizador é cancelado e o item de trabalho não é enviado para o pool de threads.
+[!div class="tabbedCodeSnippets"] Cancelar o temporizador
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -213,19 +213,19 @@ Se o temporizador ainda estiver em contagem regressiva, mas o item de trabalho n
 > DelayTimer->Cancel();
 > ```
 
-## Comentários
+## Se o temporizador ainda estiver em contagem regressiva, mas o item de trabalho não for mais necessário, chame [**Cancelar**](https://msdn.microsoft.com/library/windows/apps/BR230588).
 
-Os aplicativos UWP (Plataforma Universal do Windows) não podem usar **Thread.Sleep** porque esse método pode bloquear o thread da interface do usuário. Em vez disso, você pode usar um [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) para criar um item de trabalho. Isso atrasará a tarefa realizada pelo item de trabalho sem bloquear o thread da interface do usuário.
+O temporizador é cancelado e o item de trabalho não é enviado para o pool de threads. [!div class="tabbedCodeSnippets"]
 
-Veja o [exemplo do pool de threads](http://go.microsoft.com/fwlink/p/?linkid=255387) para obter um exemplo de código completo que demonstra os itens de trabalho, os itens de trabalho de timer e os itens de trabalho periódico. O exemplo de código foi originalmente escrito para o Windows 8.1, mas o código pode ser reutilizado no Windows 10.
+Comentários Os aplicativos UWP (Plataforma Universal do Windows) não podem usar **Thread.Sleep** porque esse método pode bloquear o thread da interface do usuário.
 
-Para saber mais sobre temporizadores repetidos, veja [Criar um item de trabalho periódico](create-a-periodic-work-item.md).
+Em vez disso, você pode usar um [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) para criar um item de trabalho. Isso atrasará a tarefa realizada pelo item de trabalho sem bloquear o thread da interface do usuário.
 
-## Tópicos relacionados
+## Veja o [exemplo do pool de threads](http://go.microsoft.com/fwlink/p/?linkid=255387) para obter um exemplo de código completo que demonstra os itens de trabalho, os itens de trabalho de timer e os itens de trabalho periódico.
 
-* [Enviar um item de trabalho ao pool de threads](submit-a-work-item-to-the-thread-pool.md)
-* [Práticas recomendadas para usar o pool de threads](best-practices-for-using-the-thread-pool.md)
-* [Usar um temporizador para enviar um item de trabalho](use-a-timer-to-submit-a-work-item.md)
+* [O exemplo de código foi originalmente escrito para o Windows 8.1, mas o código pode ser reutilizado no Windows 10.](submit-a-work-item-to-the-thread-pool.md)
+* [Para saber mais sobre temporizadores repetidos, veja [Criar um item de trabalho periódico](create-a-periodic-work-item.md).](best-practices-for-using-the-thread-pool.md)
+* [Tópicos relacionados](use-a-timer-to-submit-a-work-item.md)
  
 
  

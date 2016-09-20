@@ -33,8 +33,7 @@ Este artigo lista e fornece diretrizes de uso dos glifos que vêm com a fonte Se
 
 A fonte de ícones **Segoe UI Symbol** do Windows 8/8.1 foi substituída pela fonte **Segoe MDL2 Assets** a partir do lançamento do Windows 10. Ela pode ser usada da mesma maneira que a fonte mais antiga, mas muitos glifos foram redesenhados no estilo de ícone do Windows 10 com métricas da fonte definidas de modo que os ícones sejam alinhados dentro do quadrado-em da fonte, em vez de em uma linha de base tipográfica.
 
-
-              **Observação**   Um **Em** é uma unidade de medida na fonte. 1 Em na fonte é igual a 100% do valor de ponto especificado em 72 ppi. Por exemplo 16 pt é igual a 16 px em 72 ppi (também conhecida como plateau 100%). As novas fontes MDL2 são projetadas para que o volume da área do ícone seja um Em quadrado. Assim, se você colocar 16 px de largura e altura no código, obterá um volume de ícone 16x16px. Isso nem sempre significa que o ícone terá a dimensão completa do volume.
+**Observação**   Um **Em** é uma unidade de medida na fonte. 1 Em na fonte é igual a 100% do valor de ponto especificado em 72 ppi. Por exemplo 16 pt é igual a 16 px em 72 ppi (também conhecida como plateau 100%). As novas fontes MDL2 são projetadas para que o volume da área do ícone seja um Em quadrado. Assim, se você colocar 16 px de largura e altura no código, obterá um volume de ícone 16x16px. Isso nem sempre significa que o ícone terá a dimensão completa do volume.
 
  
 
@@ -1602,8 +1601,7 @@ Use os glifos da lista seguinte para [**AppBar**](https://msdn.microsoft.com/lib
 
 **Para designers**
 * [Diretrizes de fontes](fonts.md)
-* 
-              [W3C no qual os idiomas são escritos da direita para a esquerda (RTL)?](http://www.i18nguy.com/temp/rtl.mdl)
+* [W3C no qual os idiomas são escritos da direita para a esquerda (RTL)?](http://www.i18nguy.com/temp/rtl.mdl)
 **Para desenvolvedores (XAML)**
 * [**Enumeração Symbol**](https://msdn.microsoft.com/library/windows/apps/dn252842)
 

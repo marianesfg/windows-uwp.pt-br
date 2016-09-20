@@ -4,7 +4,6 @@ Description: "A primeira etapa na criação de um novo aplicativo no painel do C
 title: Crie seu aplicativo reservando um nome
 keywords: 
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
-translationtype: Human Translation
 ms.sourcegitcommit: 3b65bbaf2498dde7484c055ff86ed09e89bf3405
 ms.openlocfilehash: 5e4933be456bc76eb5923f5c081e8376c43c118b
 
@@ -15,7 +14,8 @@ ms.openlocfilehash: 5e4933be456bc76eb5923f5c081e8376c43c118b
 
 A primeira etapa na criação de um novo aplicativo no painel do Centro de Desenvolvimento do Windows é reservar um nome de aplicativo. Veja como reservar nomes e encontrar sugestões para [escolher um nome excelente para o seu aplicativo](#choosing-your-app-s-name). Cada nome reservado deve ser exclusivo em toda a Loja.
 
-> **Observação**  Se você tiver um aplicativo do Windows Phone criado anteriormente e nunca reservou um nome para ele, ainda será possível gerenciar e enviar o aplicativo. No entanto, para carregar pacotes .appx pacotes para ele, ou [exibir detalhes de identidade de aplicativo](view-app-identity-details.md) específicos à criação de pacotes .appx, você precisará reservar um nome exclusivo seguindo as etapas abaixo. Isso também impede que outra pessoa reserve o nome para si.
+> 
+            **Observação**  Se você tiver um aplicativo do Windows Phone criado anteriormente e nunca reservou um nome para ele, ainda será possível gerenciar e enviar o aplicativo. No entanto, para carregar pacotes .appx pacotes para ele, ou [exibir detalhes de identidade de aplicativo](view-app-identity-details.md) específicos à criação de pacotes .appx, você precisará reservar um nome exclusivo seguindo as etapas abaixo. Isso também impede que outra pessoa reserve o nome para si.
 
 Quando você [carrega seus pacotes de aplicativo](upload-app-packages.md), o [**Package/Properties/DisplayName**](https://msdn.microsoft.com/library/windows/apps/dn423240) valor deve corresponder ao nome que você reservou para seu aplicativo no **Painel**. Se você usar o Microsoft Visual Studio para criar o pacote de seu aplicativo, esse atributo será preenchido para você.
 
@@ -29,7 +29,8 @@ Reservar um nome é a primeira etapa na criação de um aplicativo no painel. Vo
 
 O nome agora fica reservado e você pode começar a trabalhar em seu [envio](app-submissions.md) quando estiver pronto.
 
-> **Observação**  Como os nomes podem ser reservados por um ano, talvez você descubra que não pode reservar um nome, mesmo que não haja nenhum aplicativo listado com esse nome na Loja. Geralmente isso ocorre porque outro desenvolvedor reservou o nome para o aplicativo dele, mas ainda não enviou o aplicativo. Se você não puder reservar um nome registrado por você ou sobre o qual possua outros direitos jurídicos, ou se achar outro aplicativo na Windows Store com o mesmo nome, [fale com a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).
+> 
+            **Observação**  Como os nomes podem ser reservados por um ano, talvez você descubra que não pode reservar um nome, mesmo que não haja nenhum aplicativo listado com esse nome na Loja. Geralmente isso ocorre porque outro desenvolvedor reservou o nome para o aplicativo dele, mas ainda não enviou o aplicativo. Se você não puder reservar um nome registrado por você ou sobre o qual possua outros direitos jurídicos, ou se achar outro aplicativo na Windows Store com o mesmo nome, [fale com a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).
 
 Depois de reservar um nome, você terá um ano para enviar o aplicativo. Se você não enviá-lo em um ano, a reserva expirará e outro desenvolvedor poderá usar o nome em um aplicativo. Você pode encontrar um erro se tentar enviar um aplicativo sob um nome que deixou expirar.
 
@@ -39,7 +40,8 @@ Escolher o melhor nome para o aplicativo é uma tarefa importante. Escolha um no
 
 -   **Mantenha-o curto.** O espaço para exibir o nome do seu aplicativo é limitado em muitos lugares; por isso, sugerimos usar o nome mais curto possível. Embora o nome do aplicativo possa ter até 256 caracteres, nem sempre o final de um nome muito longo pode ficar visível aos clientes.
 
-    > **Observação**  O número real de caracteres exibidos em vários locais pode variar dependendo do comprimento alocado e dos tipos de caracteres usados no nome do aplicativo. Por exemplo, na fonte Segoe UI que o Windows usa, cerca de 30 caracteres "I" caberão no mesmo espaço que 10 caracteres "W". Em decorrência dessa variação, teste seu aplicativo e verifique como o nome aparece nos blocos (se você optar por sobrepor o nome do aplicativo), nos resultados da pesquisa e dentro do próprio aplicativo antes de enviá-lo. Considere também cada idioma no qual você oferece seu aplicativo. Tenha em mente que caracteres do Leste Asiático tendem a ser mais largos que caracteres latinos, portanto, menos caracteres serão exibidos.
+    > 
+            **Observação**  O número real de caracteres exibidos em vários locais pode variar dependendo do comprimento alocado e dos tipos de caracteres usados no nome do aplicativo. Por exemplo, na fonte Segoe UI que o Windows usa, cerca de 30 caracteres "I" caberão no mesmo espaço que 10 caracteres "W". Em decorrência dessa variação, teste seu aplicativo e verifique como o nome aparece nos blocos (se você optar por sobrepor o nome do aplicativo), nos resultados da pesquisa e dentro do próprio aplicativo antes de enviá-lo. Considere também cada idioma no qual você oferece seu aplicativo. Tenha em mente que caracteres do Leste Asiático tendem a ser mais largos que caracteres latinos, portanto, menos caracteres serão exibidos.
 
 -   **Evite adicionar informações de diferenciação no fim do nome.** Caso as informações que diferenciam vários aplicativos sejam adicionadas ao final do nome, é possível que os clientes não as vejam, principalmente se o nome for longo; assim, parecerá que todos os aplicativos têm o mesmo nome. Se não for possível evitar isso, use logotipos e imagens do aplicativo diferentes para facilitar a diferenciação dos vários aplicativos.
 -   **Seja original.** Assegure que o nome do aplicativo seja diferente o suficiente para que não seja confundido com um aplicativo existente.

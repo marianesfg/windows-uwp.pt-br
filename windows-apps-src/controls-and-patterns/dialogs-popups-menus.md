@@ -5,7 +5,6 @@ title: "Menus de contexto e caixas de diálogo"
 ms.assetid: 7CA2600C-A1DB-46AE-8F72-24C25E224417
 label: Menus, dialogs, and popups
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
 
@@ -27,7 +26,7 @@ Caixas de diálogo são sobreposições de interface do usuário modais que forn
 Um submenu é um pop-up contextual leve que exibe a interface do usuário relacionada ao que o usuário está fazendo. Ele inclui a lógica de colocação e dimensionamento, e pode ser usado para exibir um controle oculto, mostrar mais detalhes de um item ou pedir que o usuário confirme uma ação. Os submenus podem ser ignorados tocando ou clicando em algum lugar fora do popup.
 
 
-## Esse é o controle correto?
+## Este é o controle correto?
 
 Menus de contexto podem ser usados para:
 
@@ -74,7 +73,8 @@ Aqui está um exemplo de uma caixa de diálogo de dois botões que apresenta ao 
 
 As caixas de diálogo são modais, o que significa que elas bloqueiam toda a interação com o aplicativo até que o usuário selecione um botão de caixa de diálogo. Para reforçar visualmente seu comportamento modal, as caixas de diálogo desenham uma camada de sobreposição que obscurece parcialmente a interface de usuário do aplicativo inacessível temporariamente.
 
-**Observação** Quando Cancelar é uma das opções disponíveis da caixa de diálogo, os aplicativos podem optar por permitir que os usuários ignorem a caixa de diálogo, pressionando a tecla Escape. Esse comportamento não é incorporado ao controle, mas é um atalho comumente implementado.
+
+            **Observação** Quando Cancelar é uma das opções disponíveis da caixa de diálogo, os aplicativos podem optar por permitir que os usuários ignorem a caixa de diálogo, pressionando a tecla Escape. Esse comportamento não é incorporado ao controle, mas é um atalho comumente implementado.
 
 Submenus e menus de contexto são controles light dismiss, o que significa que os usuários podem escolher entre uma variedade de ações para ignorar rapidamente as interfaces do usuário transitórias. Essas interações destinam-se a ser leves e sem bloqueio. As ações light dismiss incluem
 - Clicar ou tocar fora da interface de usuário transitória

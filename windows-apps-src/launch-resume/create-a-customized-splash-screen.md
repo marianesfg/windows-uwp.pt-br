@@ -22,7 +22,8 @@ ms.openlocfilehash: 6ad43ec4fc865c5aae439693e0cd5b37a5d2c5dc
 
 Exiba uma tela inicial por mais tempo criando uma tela inicial estendida para o seu aplicativo. Essa tela estendida imita a tela inicial exibida quando o aplicativo é iniciado, mas pode ser personalizada. Seja para mostrar informações de carregamento em tempo real ou para simplesmente proporcionar ao aplicativo mais tempo para preparar a interface do usuário inicial, uma tela inicial estendida permite definir a experiência de inicialização.
 
-> **Observação**  A expressão "tela inicial estendida" neste tópico refere-se a uma tela inicial que permanece na tela por um período de tempo estendido. Ela não quer dizer uma subclasse que deriva da classe [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763).
+> 
+            **Observação**  A expressão "tela inicial estendida" neste tópico refere-se a uma tela inicial que permanece na tela por um período de tempo estendido. Ela não quer dizer uma subclasse que deriva da classe [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763).
 
  
 
@@ -69,7 +70,8 @@ Adicione o seguinte código para definir elementos [**Canvas**](https://msdn.mic
     </Grid>
 ```
 
-**Observação**  Esse código define a largura de [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) como 20 pixels. Você pode definir manualmente a largura com um valor que funciona para o seu aplicativo, porém o controle não renderizará em larguras de menos de 20 pixels.
+
+            **Observação**  Esse código define a largura de [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) como 20 pixels. Você pode definir manualmente a largura com um valor que funciona para o seu aplicativo, porém o controle não renderizará em larguras de menos de 20 pixels.
 
  
 
@@ -213,7 +215,8 @@ Use estas etapas de forma a definir os métodos para a exibição correta da sua
     }
     ```
 
-    **Observação**  Antes de tentar obter a localização da imagem, verifique se a variável de classe (`splash`) contém um objeto [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, como mostra o exemplo.
+    
+            **Observação**  Antes de tentar obter a localização da imagem, verifique se a variável de classe (`splash`) contém um objeto [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, como mostra o exemplo.
 
      
 
@@ -259,7 +262,8 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 ## Código completo
 
 
-> **Observação**  O código a seguir é um pouco diferente dos trechos de código mostrados nas etapas anteriores.
+> 
+            **Observação**  O código a seguir é um pouco diferente dos trechos de código mostrados nas etapas anteriores.
 -   ExtendedSplash.xaml inclui um botão `DismissSplash`. Quando esse botão é clicado, um manipulador de eventos, `DismissSplashButton_Click`, chama o método `DismissExtendedSplash`. No seu aplicativo, chame `DismissExtendedSplash` quando o aplicativo concluir o carregamento de recursos ou a inicialização da interface do usuário.
 -   Esse aplicativo também usa um modelo de projeto de aplicativo UWP, que usa a navegação [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682). Consequentemente, em App.xaml.cs, o manipulador de ativação de inicialização ([**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)) define `rootFrame` e usa-o para definir o conteúdo da janela do aplicativo.
 

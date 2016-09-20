@@ -3,7 +3,6 @@ author: mtoepke
 title: "Concluir código para DDSTextureLoader"
 description: "Conclua código para a classe e o método que carrega uma textura DDS da memória."
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
-translationtype: Human Translation
 ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
 ms.openlocfilehash: 9a842c773ce16e1093a158426b89caf239858f05
 
@@ -30,13 +29,17 @@ Este exemplo não está disponível para download.
 
 ## Tecnologias
 
-**Linguagens de programação** - C++    
-**Modelos de programação** -Windows Runtime
+
+            **Linguagens de programação** - C++    
+
+            **Modelos de programação** -Windows Runtime
 
 ## Requisitos
 
-**Cliente mínimo com suporte** - Windows 10                               
-**Servidor mínimo com suporte** - Windows Server 2016 Technical Preview
+
+            **Cliente mínimo com suporte** - Windows 10                               
+
+            **Servidor mínimo com suporte** - Windows Server 2016 Technical Preview
 
 
 

@@ -5,7 +5,6 @@ description: "Parabéns! A esta altura, você já entende os componentes princip
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
 keywords:
 - DirectX, XAML
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: 02b8681c45c84e1cdd5b97dfc717a68015df1252
 

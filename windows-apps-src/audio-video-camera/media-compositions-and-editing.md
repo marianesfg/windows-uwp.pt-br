@@ -5,7 +5,7 @@ description: "As APIs no namespace Windows.Media.Editing permitem que você dese
 title: "Composições e edição de mídia"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 226ee9212f6688c48c4d4d7b3195ec5c27a3afdd
+ms.openlocfilehash: ee46b6d4ad116034cd84f062e7bf710ff8600479
 
 ---
 
@@ -63,7 +63,7 @@ Declare uma variável de membro do tipo [**MediaStreamSource**](https://msdn.mic
 
 [!code-cs[DeclareMediaStreamSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetDeclareMediaStreamSource)]
 
-Chame o método do objeto **MediaComposition** [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) para criar um **MediaStreamSource** para a composição e, em seguida, chame o método [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) do **MediaElement**. Agora a composição pode ser exibida na interface do usuário.
+Chame o método do objeto **MediaComposition**[**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) para criar um **MediaStreamSource** para a composição e, em seguida, chame o método [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) do **MediaElement**. Agora a composição pode ser exibida na interface do usuário.
 
 
 [!code-cs[UpdateMediaElementSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetUpdateMediaElementSource)]
@@ -155,6 +155,6 @@ Composições de mídia podem ser desserializadas de um arquivo para permitir qu
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

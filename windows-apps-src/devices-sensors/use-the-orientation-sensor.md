@@ -3,7 +3,6 @@ author: DBirtolo
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: "Usar sensor de orientação"
 description: "Saiba como usar os sensores de orientação para determinar a orientação do dispositivo."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 67c23795be54207c54c1e871dad045e6c0cd7c77
 
@@ -30,8 +29,8 @@ A API do [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps
 |-----------------|-----------------------------------|
 | Portrait Up     | NotRotated                        |
 | Landscape Left  | Rotated90DegreesCounterclockwise  |
-| Portrait Down   | Rotated180DegreesCounterclockwise |
-| Landscape Right | Rotated270DegreesCounterclockwise |
+| Portrait Down   | Rotated180DegreesCounterclockwise  |
+| Landscape Right | Rotated270DegreesCounterclockwise  |
 
 ## Pré-requisitos
 

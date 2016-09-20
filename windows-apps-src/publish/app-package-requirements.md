@@ -3,7 +3,6 @@ author: jnHs
 Description: "Siga estas diretrizes para preparar os pacotes de seu aplicativo para envio à Windows Store."
 title: Requisitos do pacote do aplicativo
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 951c00f9fd2c945ac44d47bfae701049e937b98f
 
@@ -21,7 +20,8 @@ Certifique-se de [testar seu aplicativo com o Kit de Certificação de Aplicativ
 
 Se estiver usando o Microsoft Visual Studio como seu ambiente de desenvolvimento, você já tem ferramentas internas que tornam a criação do pacote do aplicativo um processo rápido e fácil. Para obter mais informações, consulte [Empacotando aplicativos](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
-> **Observação**  Certifique-se de que todos os seus nomes de arquivo usem ANSI. 
+> 
+            **Observação**  Certifique-se de que todos os seus nomes de arquivo usem ANSI. 
 
 
 Quando for criar seu pacote no Visual Studio, certifique-se de estar conectado com a mesma conta da Microsoft associada a sua conta de desenvolvedor. Algumas partes do manifesto do pacote têm detalhes específicos relacionados à sua conta. Essas informações são detectadas e adicionadas automaticamente.
@@ -34,7 +34,8 @@ Os pacotes do seu aplicativo não precisam ser assinados com um certificado prov
 
 Para aplicativos voltados para Windows 8.1, Windows Phone 8.1 e versões posteriores, o Visual Studio pode gerar um lote de aplicativo (.appxbundle) para reduzir o tamanho do aplicativo que os usuários baixam. Isso pode ser útil se você definiu ativos específicos de idioma, uma variedade de ativos em escala de imagem ou recursos que se aplicam a versões específicas do Microsoft DirectX.
 
-> **Observação**  Um lote de aplicativo pode conter seus pacotes para todas as arquiteturas. Você deve enviar apenas um pacote para cada sistema operacional de destino.
+> 
+            **Observação**  Um lote de aplicativo pode conter seus pacotes para todas as arquiteturas. Você deve enviar apenas um pacote para cada sistema operacional de destino.
 
 
 Com um lote de aplicativo, o usuário só baixa os arquivos relevantes, em vez de todos os recursos possíveis. Para obter mais informações sobre lotes de aplicativo, consulte [Empacotando aplicativos](https://msdn.microsoft.com/library/windows/apps/mt270969) e [Empacotando aplicativos universais do Windows para Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=620193 ).
@@ -47,12 +48,14 @@ Confira a documentação [Manifesto do pacote do aplicativo](https://msdn.micros
 
 Seu manifesto deve incluir algumas informações específicas sobre sua conta e seu aplicativo. Você pode encontrar essa informação em [visualizar detalhes de identidade do aplicativo](view-app-identity-details.md) na seção **Gerenciamento de aplicativo** da página de visão geral do seu aplicativo no painel.
 
-> **Observação**  Os valores no manifesto diferenciam maiúsculas de minúsculas. Espaços e outros sinais de pontuação também devem corresponder. Insira os valores com cuidado e os revise para garantir que estejam corretos.
+> 
+            **Observação**  Os valores no manifesto diferenciam maiúsculas de minúsculas. Espaços e outros sinais de pontuação também devem corresponder. Insira os valores com cuidado e os revise para garantir que estejam corretos.
 
 
 Pacotes de aplicativos usam outro manifesto. Analise a documentação do [Manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/dn263089) para obter os detalhes e os requisitos para manifestos de lote de aplicativo.
 
-> **Dica**  Certifique-se de executar o [Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/mt186449) antes de enviar seus pacotes. Ele pode ajudar a determinar se o manifesto apresenta algum problema que possa causar falhas na certificação ou no envio.
+> 
+            **Dica**  Certifique-se de executar o [Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/mt186449) antes de enviar seus pacotes. Ele pode ajudar a determinar se o manifesto apresenta algum problema que possa causar falhas na certificação ou no envio.
 
 
 Se seu aplicativo tiver mais de um pacote, os elementos de manifesto do aplicativo devem ser os mesmos em cada pacote (por sistema operacional de destino):

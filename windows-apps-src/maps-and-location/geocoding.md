@@ -5,7 +5,7 @@ description: "Converta endereços em localizações geográficas (geocódigo) e 
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: caf3ad6fecd6ed90c65f85477643fb42ab4787d3
+ms.openlocfilehash: d42708a82f99e345183b6cbcb87cfdd136b10e52
 
 ---
 
@@ -17,7 +17,7 @@ ms.openlocfilehash: caf3ad6fecd6ed90c65f85477643fb42ab4787d3
 
 Converta endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979).
 
-**Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe a amostra a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
+**Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe o exemplo a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
 -   [Exemplo de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -25,11 +25,10 @@ Veja como as classes de geocódigo e geocódigo reverso estão relacionadas:
 
 -   A classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) possui métodos que fazem o geocódigo ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) e o geocódigo reverso ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928))
 -   Esses métodos retornam um [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
--   [
-            **MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) contém uma coleção de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549). Acesse essa coleção por meio da propriedade [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) do **MapLocationFinderResult**.
+-   [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) contém uma coleção de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549). Acesse essa coleção por meio da propriedade [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) do **MapLocationFinderResult**.
 -   Cada objeto [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) contém um objeto [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533). Acesse esse objeto por meio da propriedade [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) de cada **MapLocation**.
 
-**Importante**  Você deve especificar uma chave de autenticação de mapas antes que possa usar os serviços de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).
+**Importante**  Você deve especificar uma chave de autenticação de mapas para poder usar os serviços de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).
 
  
 
@@ -139,6 +138,6 @@ town = Redmond
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

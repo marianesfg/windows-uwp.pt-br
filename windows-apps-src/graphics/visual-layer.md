@@ -4,8 +4,8 @@ ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Camada visual
 description: "A API Windows.UI.Composition concede acesso a uma camada de composição entre a camada de estrutura (XAML) e a camada de elementos gráficos (DirectX)."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 1abb663d0ee27d7e57ab83dab2589557d1f9f29a
+ms.sourcegitcommit: 4a00847f0559d93eea199d7ddca0844b5ccaa5aa
+ms.openlocfilehash: 3a3dbf7b529d5d2848b161869d2f77fef3651488
 
 ---
 # Camada visual
@@ -27,18 +27,10 @@ A API permite que os desenvolvedores definam e criem um ou vários objetos [**Vi
 
 Elementos visuais podem ser contêineres de outros elementos visuais ou podem hospedar elementos visuais de conteúdo. A API viabiliza facilidade de uso, fornecendo um conjunto claro de objetos [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) para tarefas específicas que existem em uma hierarquia:
 
--   
-              [
-              **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – O objeto base. A maioria das propriedades estão aqui e são herdadas por outros objetos visuais.
--   
-              [
-              **ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – Deriva de [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) e adiciona a capacidade de inserir elementos visuais filho.
--   
-              [
-              **SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – Deriva de [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e tem conteúdo na forma de imagens, efeitos e cadeias de troca.
--   
-              [
-              **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – O alocador de objetos que gerencia a relação entre um aplicativo e o processo do compositor do sistema.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – O objeto base. A maioria das propriedades estão aqui e são herdadas por outros objetos visuais.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – É derivado de [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) e adiciona a capacidade de inserir elementos visuais filho.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – É derivado de [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e tem conteúdo na forma de imagens, efeitos e cadeias de troca.
+-   [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – O alocador de objetos que gerencia a relação entre um aplicativo e o processo do compositor do sistema.
 
 O compositor também é um alocador de uma série de outros objetos de composição usados para recortar ou transformar elementos visuais na árvore, bem como um conjunto avançado de animações e efeitos.
 
@@ -58,15 +50,9 @@ Para obter mais informações, consulte a visão geral de [Animações de compos
 
 Além de criar uma árvore visual do zero, a API de composição pode interoperar com uma interface do usuário XAML existente usando a classe [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976) em [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908).
 
-- 
-              [
-              **ElementCompositionPreview.GetElementVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): obtém o Visual de um elemento para animá-lo usando as APIs de composição
-- 
-              [
-              **ElementCompositionPreview.SetChildVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): adiciona um "Visual island" do conteúdo da composição a uma árvore XAML.
-- 
-              [
-              **ElementCompositionPreview.GetScrollViewerManipulationPropertySet()**](https://msdn.microsoft.com/library/windows/apps/mt608980.aspx): utiliza a manipulação do [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) como entrada de uma animação de composição
+- [**ElementCompositionPreview.GetElementVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): obtém o Visual de um elemento para animá-lo usando as APIs de composição
+- [**ElementCompositionPreview.SetChildVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): adiciona um "Visual island" do conteúdo da composição a uma árvore XAML.
+- [**ElementCompositionPreview.GetScrollViewerManipulationPropertySet()**](https://msdn.microsoft.com/library/windows/apps/mt608980.aspx): utiliza a manipulação do [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) como entrada de uma animação de composição
 
 
 **Observação**  
@@ -78,10 +64,8 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 -   Leia o artigo de Kenny Kerr no MSDN sobre essa API: [Elementos Gráficos e Animação - Opções de Composição do Windows 10](https://msdn.microsoft.com/magazine/mt590968)
 -   Exemplos de Interface do usuário avançada e composição no [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).
--   
-              [
-              **Documentação de referência completa da API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
--   Problemas conhecidos: [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues).
+-   [**Documentação de referência completa da API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
+-   Problemas conhecidos: [Problemas conhecidos](http://go.microsoft.com/fwlink/?LinkId=823237).
 
  
 
@@ -93,6 +77,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

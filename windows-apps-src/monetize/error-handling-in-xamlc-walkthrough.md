@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: cf0d2709-21a1-4d56-9341-d4897e405f5d
 description: Saiba como detectar erros de AdControl em seu aplicativo.
 title: Tratamento de erros no passo a passo do XAML/C#
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 7cb827b4269afb55f0326eec0a0ee25b93119eb0
 

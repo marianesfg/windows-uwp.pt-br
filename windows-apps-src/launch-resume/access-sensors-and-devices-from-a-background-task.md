@@ -14,7 +14,8 @@ ms.openlocfilehash: 65471f26596f94fe550c92a10e01ca7f5cef64a1
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-[
+
+            [
               **DeviceUseTrigger**
             ](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu aplicativo em primeiro plano estiver suspenso. Por exemplo, dependendo de onde o seu aplicativo estiver sendo executado, ele poderá usar uma tarefa em segundo plano para sincronizar dados com dispositivos ou monitorar sensores. Para ajudar a economizar a duração da bateria e assegurar o consentimento do usuário adequado, o uso do [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) está sujeito a políticas descritas neste tópico.
 
@@ -25,7 +26,8 @@ Para acessar sensores ou dispositivos periféricos em segundo plano, crie uma ta
 
 Quando o aplicativo não estiver mais visível para o usuário, o Windows suspenderá ou encerrará seu aplicativo para recuperar memória e recursos da CPU. Isso permite que outros aplicativos sejam executados em primeiro plano e reduz o consumo de bateria. Quando isso acontece, sem a ajuda de uma tarefa em segundo plano, todos os eventos de dados em andamento são perdidos. O Windows oferece o gatilho de tarefa em segundo plano, [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337), para permitir que o seu aplicativo execute sincronia de longa execução e monitore operações em dispositivos e sensores em segundo plano, mesmo que o aplicativo esteja suspenso. Para saber mais sobre o ciclo de vida do aplicativo, consulte [Iniciando, retomada e as tarefas em segundo plano](index.md). Para saber mais sobre tarefas em segundo plano, consulte [Support your app with background tasks](support-your-app-with-background-tasks.md).
 
-**Observação**  Em um aplicativo Universal do Windows, sincronizar um dispositivo em segundo plano exige que o usuário tenha aprovado a sincronização em segundo plano pelo seu aplicativo. O dispositivo deve também estar conectado ou vinculado ao computador, com E/S ativa e ter permissão de um máximo de 10 minutos de atividade em segundo plano. Mais detalhes sobre imposição da política serão descritos posteriormente neste tópico.
+
+            **Observação**  Em um aplicativo Universal do Windows, sincronizar um dispositivo em segundo plano exige que o usuário tenha aprovado a sincronização em segundo plano pelo seu aplicativo. O dispositivo deve também estar conectado ou vinculado ao computador, com E/S ativa e ter permissão de um máximo de 10 minutos de atividade em segundo plano. Mais detalhes sobre imposição da política serão descritos posteriormente neste tópico.
 
 ### Limitação: operações de dispositivo críticas
 
@@ -95,7 +97,8 @@ Leve esses pontos importantes em consideração ao usar o [**DeviceUseTrigger**]
 
  
 
-**Dica**  Para ver como as tarefas em segundo plano trabalham, baixe um exemplo. Para ver um exemplo que mostra como isso é feito em um computador, consulte [Custom USB device sample](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para obter um exemplo em um telefone, consulte o [Exemplo de sensores em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+
+            **Dica**  Para ver como as tarefas em segundo plano trabalham, baixe um exemplo. Para ver um exemplo que mostra como isso é feito em um computador, consulte [Custom USB device sample](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para obter um exemplo em um telefone, consulte o [Exemplo de sensores em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
 
  
 

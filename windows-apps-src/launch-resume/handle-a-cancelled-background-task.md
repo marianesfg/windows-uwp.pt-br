@@ -20,7 +20,8 @@ ms.openlocfilehash: ab575415e5e6a091fb45dab49af21d0552834406
 
 Saiba como criar uma tarefa em segundo plano que reconhece solicitações de cancelamento e interrompe o trabalho, relatando o cancelamento ao aplicativo usando armazenamento persistente.
 
-> **Observação**  Para todas as famílias de dispositivos, exceto desktop, se o dispositivo estiver com memória insuficiente, as tarefas em segundo plano poderão ser encerradas. Se uma exceção de falta de memória não surgir ou se o aplicativo não manipulá-la, a tarefa em segundo plano será encerrada sem aviso e sem gerar o evento OnCanceled. Isso ajuda a assegurar a experiência do usuário do aplicativo em primeiro plano. A tarefa em segundo plano deve ser projetada para tratar desse cenário.
+> 
+            **Observação**  Para todas as famílias de dispositivos, exceto desktop, se o dispositivo estiver com memória insuficiente, as tarefas em segundo plano poderão ser encerradas. Se uma exceção de falta de memória não surgir ou se o aplicativo não manipulá-la, a tarefa em segundo plano será encerrada sem aviso e sem gerar o evento OnCanceled. Isso ajuda a assegurar a experiência do usuário do aplicativo em primeiro plano. A tarefa em segundo plano deve ser projetada para tratar desse cenário.
 
 Este tópico pressupõe que você já tenha criado uma classe de tarefa em segundo plano, inclusive o método Run que é usado como o ponto de entrada da tarefa em segundo plano. Para criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano](create-and-register-a-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
 
@@ -202,7 +203,8 @@ O [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=
 
 ## [!div class="tabbedCodeSnippets"]
 
-**Observação**  O código de exemplo mostrado anteriormente usa a propriedade [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800) que está sendo usada para registrar o progresso da tarefa em segundo plano.
+
+            **Observação**  O código de exemplo mostrado anteriormente usa a propriedade [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800) que está sendo usada para registrar o progresso da tarefa em segundo plano.
 
 O progresso é relatado para o aplicativo usando a classe [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782).
 
@@ -335,7 +337,8 @@ O [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=
 * [Exemplo do método Run](declare-background-tasks-in-the-application-manifest.md)
 * [O método Run completo e o código de retorno de chamada do temporizador do [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) são mostrados a seguir para contextualização:](guidelines-for-background-tasks.md)
 * [[!div class="tabbedCodeSnippets"]](monitor-background-task-progress-and-completion.md)
-* [**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](register-a-background-task.md)
+* [
+            **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](register-a-background-task.md)
 * [Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](respond-to-system-events-with-background-tasks.md)
 * [Tópicos relacionados](run-a-background-task-on-a-timer-.md)
 * [Criar e registrar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)

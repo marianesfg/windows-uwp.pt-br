@@ -3,7 +3,6 @@ author: mcleblanc
 title: "Introdução, O que vem depois"
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
 description: "Com essas informações básicas, você agora pode começar a escrever aplicativos UWP (Plataforma Universal do Windows) mais interessantes."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 2b11133fda76fb42f3a850848c426cbb33fb8366
 

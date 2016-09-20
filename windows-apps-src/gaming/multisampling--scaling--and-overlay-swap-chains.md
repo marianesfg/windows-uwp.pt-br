@@ -3,7 +3,6 @@ author: mtoepke
 title: "Dimensionamento e sobreposições de cadeia de troca"
 description: "Saiba como criar cadeias de troca dimensionadas para permitir renderização mais rápida em dispositivos móveis e usar cadeias de troca sobrepostas (quando disponíveis) para aumentar a qualidade visual."
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
-translationtype: Human Translation
 ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
 ms.openlocfilehash: 3380c5156072a9853261ec6b706a612b42e7ba10
 
@@ -145,7 +144,8 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
     ```
     
-    > **Observação**   Se o adaptador DXGI der suporte a sobreposições, vá para a etapa seguinte. Se o dispositivo não ser suporte a sobreposições, a renderização com várias cadeias de troca não será eficiente. Em vez disso, renderize a interface do usuário em uma resolução reduzida na mesma cadeia de troca que o conteúdo do jogo em tempo real.
+    > 
+            **Observação**   Se o adaptador DXGI der suporte a sobreposições, vá para a etapa seguinte. Se o dispositivo não ser suporte a sobreposições, a renderização com várias cadeias de troca não será eficiente. Em vez disso, renderize a interface do usuário em uma resolução reduzida na mesma cadeia de troca que o conteúdo do jogo em tempo real.
 
      
 
@@ -161,7 +161,8 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
      foregroundSwapChainDesc.AlphaMode = DXGI_ALPHA_MODE_PREMULTIPLIED; // Foreground swap chain alpha values must be premultiplied.
     ```
 
-    > **Observação**   Defina o [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) novamente sempre que a cadeia de troca for redimensionada.
+    > 
+            **Observação**   Defina o [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) novamente sempre que a cadeia de troca for redimensionada.
 
     ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(

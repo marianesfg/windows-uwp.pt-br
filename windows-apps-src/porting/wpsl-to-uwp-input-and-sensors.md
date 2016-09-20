@@ -3,7 +3,6 @@ author: mcleblanc
 description: "O código que se integra ao dispositivo propriamente dito e aos sensores envolve a entrada do usuário e a saída para ele."
 title: Portabilidade do Windows Phone Silverlight para a UWP para modelo de aplicativo, dispositivo e E/S
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 6b29e741c9cad68083502b25445b965fc266ef6e
 

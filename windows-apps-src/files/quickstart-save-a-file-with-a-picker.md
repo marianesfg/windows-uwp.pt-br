@@ -3,7 +3,6 @@ author: TylerMSFT
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: Salvar um arquivo com um seletor
 description: "Use o FileSavePicker para permitir que os usuários especifiquem o nome e o local em que desejam que o aplicativo salve um arquivo."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 68c7fcedbea40541632aa0a7ae65aa77db206280
 
@@ -22,7 +21,8 @@ ms.openlocfilehash: 68c7fcedbea40541632aa0a7ae65aa77db206280
 
 Use o [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir que os usuários especifiquem o nome e o local onde desejam que o aplicativo salve um aplicativo.
 
-> **Observação**  Consulte também a [Amostra de seletor de arquivo](http://go.microsoft.com/fwlink/p/?linkid=619994).
+> 
+            **Observação**  Consulte também a [Amostra de seletor de arquivo](http://go.microsoft.com/fwlink/p/?linkid=619994).
 
  
 
@@ -58,7 +58,8 @@ Defina propriedades no objeto do seletor de arquivos que forem relevantes para s
 
 Este exemplo define três propriedades: [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880), [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) e [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878).
 
-> **Observação**
+> 
+            **Observação**
              Os objetos[**
             FileSavePicker**
             ](https://msdn.microsoft.com/library/windows/apps/br207871) exibem o seletor de arquivos usando [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891).
@@ -68,7 +69,8 @@ Este exemplo define três propriedades: [**SuggestedStartLocation**](https://msd
  
 - Como desejamos que nosso aplicativo abra o arquivo depois dele ser salvo, usamos [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) para especificar os tipos de arquivos que a amostra suporta (documentos do Microsoft Word e arquivos de texto). Certifique-se de que todos os tipos de arquivos sejam suportados por seu aplicativo. Os usuários poderão salvar seus arquivos como qualquer tipo de arquivo que você especificar. Eles também podem alterar o tipo de arquivo selecionando outro tipo de arquivo que você especificou. A primeira opção de tipo de arquivo na lista será selecionada por padrão: para controlar isso, configure a propriedade [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873).
 
-> **Observação**  O seletor de arquivos também usa o tipo de arquivo atualmente selecionado para filtrar quais arquivos são exibidos, de forma que somente os tipos de arquivos que correspondam aos tipos de arquivos selecionados sejam exibidos para o usuário.
+> 
+            **Observação**  O seletor de arquivos também usa o tipo de arquivo atualmente selecionado para filtrar quais arquivos são exibidos, de forma que somente os tipos de arquivos que correspondam aos tipos de arquivos selecionados sejam exibidos para o usuário.
 
 - Para poupar o usuário da digitação, o exemplo define um [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878). Torne seu nome de arquivo sugerido relevante para o arquivo que está sendo salvo. Por exemplo, como no Word, você pode sugerir o nome de arquivo existente se houver um, ou a primeira linha de um documento se o usuário estiver salvando um arquivo que ainda não possui nome.
 
@@ -107,7 +109,8 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
 
 O exemplo verifica se o arquivo é válido e grava seu próprio nome de arquivo nele. Consulte também [Criando, escrevendo e lendo um arquivo](quickstart-reading-and-writing-files.md).
 
-**Dica**  Sempre verifique o arquivo salvo para ter certeza de sua validade antes de executar qualquer outro processamento. Depois disso, você poderá salvar o conteúdo no arquivo, conforme apropriado ao seu aplicativo, e fornecer o comportamento adequado se o arquivo selecionado não for válido.
+
+            **Dica**  Sempre verifique o arquivo salvo para ter certeza de sua validade antes de executar qualquer outro processamento. Depois disso, você poderá salvar o conteúdo no arquivo, conforme apropriado ao seu aplicativo, e fornecer o comportamento adequado se o arquivo selecionado não for válido.
 
      
 

@@ -3,7 +3,6 @@ author: mtoepke
 title: Criar sombreadores e desenhando primitivas
 description: "Aqui, mostramos a você como usar arquivos de origem HLSL para compilar e criar sombreadores que você pode usar para desenhar primitivas no monitor."
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 15b5f83b45b928baaa484c10dc6e7bfe9c27a924
 
@@ -18,7 +17,8 @@ Aqui, mostramos a você como usar arquivos de origem HLSL para compilar e criar 
 
 Podemos criar e desenhar um triângulo amarelo usando sombreadores de vértice e pixel. Depois de criarmos o dispositivo Direct3D, a cadeia de troca e o modo de exibição de destino de processamento, podemos ler dados dos arquivos de objeto de sombreador binário no disco.
 
-**Objetivo:** criar sombreadores e desenhar primitivas.
+
+            **Objetivo:** criar sombreadores e desenhar primitivas.
 
 ## Pré-requisitos
 
@@ -27,7 +27,8 @@ Partimos do princípio de que você conhece C++. Você também precisa ter exper
 
 Também supomos que você leu [Guia de início rápido: configurando recursos DirectX e exibindo uma imagem](setting-up-directx-resources.md).
 
-**Tempo para concluir:** 20 minutos.
+
+            **Tempo para concluir:** 20 minutos.
 
 ## Instruções
 

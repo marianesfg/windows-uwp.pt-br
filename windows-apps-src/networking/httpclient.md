@@ -5,7 +5,7 @@ title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b1908e83ffcab562c12c82cfcf7b5fe281d7ada1
+ms.openlocfilehash: a3d63f7bd090d9afe92813133503997b98502683
 
 ---
 
@@ -41,27 +41,13 @@ A classe [**Windows.Web.Http.HttpRequestMessage**](https://msdn.microsoft.com/li
 
 O namespace [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) representa conteúdo HTTP como o corpo e os cabeçalhos da entidade HTTP, incluindo cookies. O conteúdo HTTP pode ser associado a uma solicitação HTTP ou a uma resposta HTTP. O namespace **Windows.Web.Http** fornece várias classes diferentes para representar o conteúdo HTTP.
 
--   [
-              **HttpBufferContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298625). Conteúdo como um buffer
--   [
-              **HttpFormUrlEncodedContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298685). Conteúdo como tuplas de nome e valor codificadas com o tipo MIME **application/x-www-form-urlencoded**
--   [
-              **HttpMultipartContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298708). Conteúdo na forma do tipo MIME **multipart/\***.
--   [
-              **HttpMultipartFormDataContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279596). Conteúdo que é codificado como o tipo MIME **multipart/form-data**.
--   [
-              **HttpStreamContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279649). Conteúdo como um fluxo (o tipo interno é usado pelo método HTTP GET para receber dados e o método HTTP POST para carregar dados)
--   [
-              **HttpStringContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279661). Conteúdo como uma cadeia de caracteres.
--   [
-              **IHttpContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279684) – Uma interface base para os desenvolvedores criarem seus próprios objetos de conteúdo
+-   [**HttpBufferContent**](https://msdn.microsoft.com/library/windows/apps/dn298625). Conteúdo como um buffer
+-   [**HttpFormUrlEncodedContent**](https://msdn.microsoft.com/library/windows/apps/dn298685). Conteúdo como tuplas de nome e valor codificadas com o tipo MIME **application/x-www-form-urlencoded**
+-   [**HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708). Conteúdo na forma do tipo MIME **multipart/\***.
+-   [**HttpMultipartFormDataContent**](https://msdn.microsoft.com/library/windows/apps/dn279596). Conteúdo que é codificado como o tipo MIME **multipart/form-data**.
+-   [**HttpStreamContent**](https://msdn.microsoft.com/library/windows/apps/dn279649). Conteúdo como um fluxo (o tipo interno é usado pelo método HTTP GET para receber dados e o método HTTP POST para carregar dados)
+-   [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661). Conteúdo como uma cadeia de caracteres.
+-   [**IHttpContent**](https://msdn.microsoft.com/library/windows/apps/dn279684) – Uma interface base para os desenvolvedores criarem seus próprios objetos de conteúdo
 
 O trecho de código na seção "Enviar uma solicitação GET simples por HTTP" usa a classe [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661) para representar a resposta HTTP de uma solicitação GET HTTP como uma cadeia de caracteres.
 
@@ -132,6 +118,6 @@ Para a maioria dos erros de validação de parâmetro, o **HRESULT** retornado �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,7 +3,6 @@ author: jnHs
 Description: "Se você tiver publicado aplicativos anteriormente na Loja para Windows ou para Windows Phone, esses aplicativos também estarão disponíveis para clientes em dispositivos Windows 10."
 title: Como seu aplicativo aparece na Loja para clientes do Windows 10
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 5e8d25264a17307c61f4e8b1295ded3f920ee2cf
 
@@ -14,7 +13,8 @@ ms.openlocfilehash: 5e8d25264a17307c61f4e8b1295ded3f920ee2cf
 
 Se você tiver publicado aplicativos anteriormente na Loja para Windows ou para Windows Phone, esses aplicativos também estarão disponíveis para clientes em dispositivos Windows 10. Como a forma em que a Loja apresenta e categoriza os aplicativos para clientes que executam o Windows 10 foi alterada, este tópico o ajudará a entender essas mudanças.
 
-**Observação**  Se você quiser alterar qualquer um desses detalhes, [crie um novo envio](app-submissions.md), faça suas alterações e envie a atualização para a Loja.
+
+            **Observação**  Se você quiser alterar qualquer um desses detalhes, [crie um novo envio](app-submissions.md), faça suas alterações e envie a atualização para a Loja.
 
  
 
@@ -28,7 +28,8 @@ A maioria dos desenvolvedores definiu os mesmos preços e outras propriedades pa
 ### Preço
 Se você tiver escolhido preços base diferentes para seu aplicativo (ou IAP) em cada Loja, o preço base da Windows Store será usado.
 
-**Observação**  Se você tiver definido preços por mercado na Loja do Windows Phone, os preços personalizados também serão mostrados para seus clientes do Windows 10.
+
+            **Observação**  Se você tiver definido preços por mercado na Loja do Windows Phone, os preços personalizados também serão mostrados para seus clientes do Windows 10.
 
 ### Avaliações gratuitas
 As opções de avaliação eram diferentes nas duas Lojas anteriores. Se você as usava, é possível que tenha escolhido opções diferentes para cada Loja. A opção de avaliação disponível para seus clientes do Windows 10 é determinada de acordo com a tabela a seguir.
@@ -67,7 +68,8 @@ Se você quiser atualizar a descrição exibida aos clientes do Windows 10 para 
 
 Em muitos casos, as novas [categorias e subcategorias](category-and-subcategory-table.md) de aplicativos e jogos são iguais às da Loja para versões anteriores do sistema operacional. No entanto, houve algumas alterações. Examine a tabela a seguir para entender a categorização de seu aplicativo na Loja para clientes no Windows 10 de acordo com a categoria anterior.
 
-**Observação**  Você verá a nova categoria listada no painel ao exibir a [categoria do aplicativo](category-and-subcategory-table.md) na página [Propriedades do aplicativo](enter-app-properties.md) de um envio, e os clientes que acessarem a Loja em dispositivos Windows 10 verão seu aplicativo na nova categoria. No entanto, os clientes que acessarem a Loja de um sistema operacional anterior continuarão a ver o aplicativo listado em sua categoria original.
+
+            **Observação**  Você verá a nova categoria listada no painel ao exibir a [categoria do aplicativo](category-and-subcategory-table.md) na página [Propriedades do aplicativo](enter-app-properties.md) de um envio, e os clientes que acessarem a Loja em dispositivos Windows 10 verão seu aplicativo na nova categoria. No entanto, os clientes que acessarem a Loja de um sistema operacional anterior continuarão a ver o aplicativo listado em sua categoria original.
 
 
 **Alterações de categoria para aplicativos Windows Phone:**

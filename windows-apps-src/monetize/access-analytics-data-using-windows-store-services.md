@@ -29,16 +29,20 @@ Antes de poder usar a API de análise da Windows Store, você deve associar um a
 
 As etapas a seguir descrevem o processo de ponta a ponta:
 
-1.  [Associe um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows](#associate-an-azure-ad-application-with-your-windows-dev-center-account).
-2.  [Obtenha um token de acesso do Azure AD](#obtain-an-azure-ad-access-token).
-3.  [Chame a API de análise da Windows Store](#call-the-windows-store-analytics-api).
+1.  
+            [Associe um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows](#associate-an-azure-ad-application-with-your-windows-dev-center-account).
+2.  
+            [Obtenha um token de acesso do Azure AD](#obtain-an-azure-ad-access-token).
+3.  
+            [Chame a API de análise da Windows Store](#call-the-windows-store-analytics-api).
 
 
 ### Associe um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows
 
 1.  No Centro de Desenvolvimento, acesse suas **Configurações de conta**, clique em **Gerenciar usuários** e associe a sua conta do Centro de Desenvolvimento ao diretório do Azure AD da sua organização. Para obter instruções detalhadas, consulte [Gerenciar usuários de conta](https://msdn.microsoft.com/library/windows/apps/mt489008). Você pode, de forma alternativa, adicionar outros usuários do diretório do Azure AD da sua organização para que eles também possam acessar a conta no Centro de Desenvolvimento.
 
-    > **Observação**  Apenas uma conta do Centro de Desenvolvimento pode ser associada ao Active Directory do Azure. Da mesma forma, apenas um Active Directory do Azure pode ser associado uma conta do Centro de Desenvolvimento. Depois de estabelecer essa associação, você não poderá removê-la sem contatar o suporte.
+    > 
+            **Observação**  Apenas uma conta do Centro de Desenvolvimento pode ser associada ao Active Directory do Azure. Da mesma forma, apenas um Active Directory do Azure pode ser associado uma conta do Centro de Desenvolvimento. Depois de estabelecer essa associação, você não poderá removê-la sem contatar o suporte.
 
      
 

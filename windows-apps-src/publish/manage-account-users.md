@@ -3,7 +3,6 @@ author: jnHs
 Description: "Adicione os usuários à sua conta do Centro de Desenvolvimento e atribua a eles funções com permissões específicas."
 title: "Gerenciar usuários de contas"
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
-translationtype: Human Translation
 ms.sourcegitcommit: 3cfc50e56f3fa65a9dfa2c8b4582c1a53c2b13d1
 ms.openlocfilehash: 18e25d0064652089d450eec811a7a5d24b8dc3e8
 
@@ -14,7 +13,8 @@ ms.openlocfilehash: 18e25d0064652089d450eec811a7a5d24b8dc3e8
 
 Você pode usar o Active Directory do Azure para adicionar usuários à sua conta do Centro de Desenvolvimento. Cada usuário recebe uma função que oferece um conjunto específico de permissões para a conta. Você também pode atribuir uma função a um grupo de usuários, ou a um aplicativo Azure AD.
 
-> **Importante**  Para adicionar e gerenciar usuários da conta, você deve primeiro associar sua conta do Centro de Desenvolvimento ao Active Directory do Azure de sua organização. Isso exige que você entre no Azure AD com uma conta de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654). Depois de estabelecer essa associação, você não poderá removê-la sem contatar o suporte.
+> 
+            **Importante**  Para adicionar e gerenciar usuários da conta, você deve primeiro associar sua conta do Centro de Desenvolvimento ao Active Directory do Azure de sua organização. Isso exige que você entre no Azure AD com uma conta de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654). Depois de estabelecer essa associação, você não poderá removê-la sem contatar o suporte.
 
  
 
@@ -25,7 +25,8 @@ O Centro de Desenvolvimento do Windows aproveita o Active Directory do Azure par
 
 Observe que apenas uma conta do Centro de Desenvolvimento pode ser associada a um Azure AD. Da mesma forma, apenas um Azure AD pode ser associado uma conta do Centro de Desenvolvimento.
 
-> **Observação**  Você só poderá adicionar usuários à sua conta do Centro de Desenvolvimento se eles fizerem parte do Azure AD de sua organização (ou se você criar novas contas do Azure AD para eles). Você não poderá adicionar usuários à sua conta do Centro de Desenvolvimento com suas contas pessoais da Microsoft.
+> 
+            **Observação**  Você só poderá adicionar usuários à sua conta do Centro de Desenvolvimento se eles fizerem parte do Azure AD de sua organização (ou se você criar novas contas do Azure AD para eles). Você não poderá adicionar usuários à sua conta do Centro de Desenvolvimento com suas contas pessoais da Microsoft.
 
 Para associar sua conta do Centro de Desenvolvimento ao Azure AD existente de sua organização:
 
@@ -39,21 +40,26 @@ Para criar um novo Azure AD para associar à sua conta do Centro de Desenvolvime
 1.  Acesse suas **Configurações da conta** e clique em **Gerenciar usuários**.
 2.  Clique no botão **Criar novo Azure AD**.
 3.  Insira as informações de diretório para seu novo Azure AD:
-- **Nome de domínio**: o nome exclusivo que usaremos para seu domínio do Azure AD, junto com ". onmicrosoft.com". Por exemplo, se você inseriu "exemplo", seu domínio do Azure AD seria "example.onmicrosoft.com". 
-- **Email de contato**: um endereço de email onde possamos contatá-lo sobre a sua conta, se necessário.
-- **Informações de conta de usuário do administrador global**: o nome, sobrenome, nome de usuário e senha que você deseja usar para a nova conta de administrador. 
+- 
+            **Nome de domínio**: o nome exclusivo que usaremos para seu domínio do Azure AD, junto com ". onmicrosoft.com". Por exemplo, se você inseriu "exemplo", seu domínio do Azure AD seria "example.onmicrosoft.com". 
+- 
+            **Email de contato**: um endereço de email onde possamos contatá-lo sobre a sua conta, se necessário.
+- 
+            **Informações de conta de usuário do administrador global**: o nome, sobrenome, nome de usuário e senha que você deseja usar para a nova conta de administrador. 
 4.  Clique em **Criar** para confirmar as novas informações de domínio e conta.
 5.  Entre com o nome de usuário e senha do novo Azure AD para começar a adicionar e gerenciar usuários de contas adicionais na página **Gerenciar usuários** da sua conta, conforme descrito nas seções a seguir.
 
 
-> **Importante**  Depois de associar sua conta do Centro de Desenvolvimento ao Azure AD, você sempre precisará entrar no Centro de Desenvolvimento usando a conta de administrador global do Azure AD (e não uma conta pessoal da Microsoft) para adicionar e gerenciar usuários de contas.
+> 
+            **Importante**  Depois de associar sua conta do Centro de Desenvolvimento ao Azure AD, você sempre precisará entrar no Centro de Desenvolvimento usando a conta de administrador global do Azure AD (e não uma conta pessoal da Microsoft) para adicionar e gerenciar usuários de contas.
 
 ## Adicionar e gerenciar usuários da conta, grupos e aplicativos Azure AD
 
 
 Depois de estabelecer a associação, você pode adicionar usuários, grupos e aplicativos Azure AD à sua conta. Pode também alterar funções, editar detalhes da conta ou remover usuários.
 
-> **Observação**  Se a sua organização usa a [integração de diretório](http://go.microsoft.com/fwlink/p/?LinkID=724033) para sincronizar o serviço de diretório local com o Azure AD, não será possível criar novos usuários, grupos nem aplicativos do Azure AD no Centro de Desenvolvimento. Você (ou outro admin em seu diretório local) precisará criá-los diretamente no diretório local antes de vê-los e adicioná-los no Centro de Desenvolvimento.
+> 
+            **Observação**  Se a sua organização usa a [integração de diretório](http://go.microsoft.com/fwlink/p/?LinkID=724033) para sincronizar o serviço de diretório local com o Azure AD, não será possível criar novos usuários, grupos nem aplicativos do Azure AD no Centro de Desenvolvimento. Você (ou outro admin em seu diretório local) precisará criá-los diretamente no diretório local antes de vê-los e adicioná-los no Centro de Desenvolvimento.
 
 Ao gerenciar usuários, tenha o seguinte em mente:
 
@@ -68,7 +74,8 @@ Ao gerenciar usuários, tenha o seguinte em mente:
 
 Cada usuário, grupo ou aplicativo Azure AD que você adicionar a uma conta deve receber pelo menos uma das funções a seguir. Cada função tem um conjunto específico de permissões para executar determinadas funções na conta.
 
-> **Observação**  O proprietário da conta é a pessoa que a criou com uma conta da Microsoft (em vez de usuários adicionados por meio do Azure AD). Esse proprietário da conta é a única pessoa com acesso completo à conta, incluindo a capacidade de excluir aplicativos, criar e editar todos os usuários da conta e alterar todas as informações financeiras e configurações da conta. A conta da Microsoft que foi usada para criar a conta deve ser utilizada durante a criação de pacotes de aplicativo no Microsoft Visual Studio.
+> 
+            **Observação**  O proprietário da conta é a pessoa que a criou com uma conta da Microsoft (em vez de usuários adicionados por meio do Azure AD). Esse proprietário da conta é a única pessoa com acesso completo à conta, incluindo a capacidade de excluir aplicativos, criar e editar todos os usuários da conta e alterar todas as informações financeiras e configurações da conta. A conta da Microsoft que foi usada para criar a conta deve ser utilizada durante a criação de pacotes de aplicativo no Microsoft Visual Studio.
 
 | Função                 | Descrição              |
 |----------------------|--------------------------|
@@ -78,7 +85,8 @@ Cada usuário, grupo ou aplicativo Azure AD que você adicionar a uma conta deve
 | Colaborador financeiro  | Pode exibir [relatórios de pagamento](payout-summary.md). Não pode fazer alterações em aplicativos, IAPs ou configurações da conta.                                                                                                                                                                                                                                                                                                                                                                                 |
 | Vendedor             | Pode [responder às avaliações dos clientes](respond-to-customer-reviews.md) e exibir [relatórios analíticos](analytics.md) não financeiros. Não pode fazer alterações em aplicativos, IAPs ou configurações da conta.                                                                                                                                                                                                                                                                                                            |
 
-> **Observação**  Os usuários com a função Gerente ou Desenvolvedor podem enviar aplicativos por meio do painel. No entanto, ao criar pacotes de aplicativo no Visual Studio, a conta da Microsoft usada para abrir a conta do desenvolvedor deve ser usada, em vez de uma conta do Azure AD.
+> 
+            **Observação**  Os usuários com a função Gerente ou Desenvolvedor podem enviar aplicativos por meio do painel. No entanto, ao criar pacotes de aplicativo no Visual Studio, a conta da Microsoft usada para abrir a conta do desenvolvedor deve ser usada, em vez de uma conta do Azure AD.
 
 ### Adicionar e gerenciar usuários da conta
 
@@ -125,7 +133,8 @@ Se você precisar alterar a senha para uma conta de usuário que adicionou à su
 1.  Na página **Gerenciar usuários**, clique no nome da conta de usuário que deseja editar.
 2.  Clique no botão **Redefinir senha** na parte inferior da página.
 3.  Uma página de confirmação será exibida mostrando as informações de logon do usuário, incluindo uma senha temporária.
-  > **Importante**  Certifique-se de imprimir ou copiar essas informações e fornecê-las ao usuário, já que você não conseguirá acessar a senha temporária depois de sair dessa página.
+  > 
+            **Importante**  Certifique-se de imprimir ou copiar essas informações e fornecê-las ao usuário, já que você não conseguirá acessar a senha temporária depois de sair dessa página.
 
 ### Adicionar e gerenciar grupos
 
@@ -202,13 +211,15 @@ Se o aplicativo Azure AD ler e gravar dados no Microsoft Azure AD, ele precisar�
 
 1.  Na página **Gerenciar usuários**, clique no nome do aplicativo Azure AD.
 
-    > **Dica**  Ao clicar no nome do aplicativo Azure AD, você verá todas as suas chaves ativas, incluindo a data de criação e de expiração da chave. Para remover uma chave que não é mais necessária, clique em **Remover**.
+    > 
+            **Dica**  Ao clicar no nome do aplicativo Azure AD, você verá todas as suas chaves ativas, incluindo a data de criação e de expiração da chave. Para remover uma chave que não é mais necessária, clique em **Remover**.
 
 2.  Para adicionar uma nova chave, clique em **Adicionar nova chave**.
 
 3.  Você verá uma tela mostrando os valores **ID do Cliente** e **Chave**.
 
-    > **Importante**  Certifique-se de imprimir ou copiar essas informações, já que você não conseguirá acessá-la novamente depois que sair dessa página.
+    > 
+            **Importante**  Certifique-se de imprimir ou copiar essas informações, já que você não conseguirá acessá-la novamente depois que sair dessa página.
 
 4.  Se quiser criar mais chaves, clique em **Adicionar outra chave**.
 
@@ -216,7 +227,8 @@ Se o aplicativo Azure AD ler e gravar dados no Microsoft Azure AD, ele precisar�
 
 Para remover um usuário, um grupo ou um aplicativo Azure AD de sua conta do Centro de Desenvolvimento, clique no link **Remover** que aparece ao lado do nome na página **Gerenciar usuários**. Depois de confirmar que deseja removê-la, esse usuário, grupo ou aplicativo do Azure AD não poderá mais acessar sua conta do Centro de Desenvolvimento (a menos que você a adicione novamente mais tarde).
 
-> **Observação**  Remover um usuário, um grupo ou um aplicativo Azure AD significa que ele não terá mais acesso à sua conta do Centro de Desenvolvimento. Isso não exclui o usuário, grupo ou aplicativo Azure AD do diretório da organização.
+> 
+            **Observação**  Remover um usuário, um grupo ou um aplicativo Azure AD significa que ele não terá mais acesso à sua conta do Centro de Desenvolvimento. Isso não exclui o usuário, grupo ou aplicativo Azure AD do diretório da organização.
 
  
 

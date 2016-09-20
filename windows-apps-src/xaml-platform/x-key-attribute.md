@@ -3,7 +3,6 @@ author: jwmsft
 description: "Identifica de forma exclusiva os elementos que são criados e usados como referência de recursos e que existam em um ResourceDictionary."
 title: Atributo xKey
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
-translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
 ms.openlocfilehash: 00d801dc3ebb8894f8e21ba0c1b9f3aecc981f30
 
@@ -59,7 +58,9 @@ CombiningCharacter::= none
 
 Geralmente, os elementos filhos de um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) incluem um atributo **x:Key** que especifica um valor de chave exclusivo nesse dicionário. A exclusividade da chave é fiscalizada em tempo de carregamento pelo processador XAML. Os valores **x:Key** que não são exclusivos geram exceções de análise de XAML. Se for solicitado por [Extensão de marcação {StaticResource}](staticresource-markup-extension.md), uma chave não resolvida também vai gerar exceções de análise de XAML.
 
-**x:Key** e [x:Name](x-name-attribute.md) não são conceitos idênticos. **x:Key** é usado exclusivamente em dicionários de recursos. x:Name é usado em todas as áreas de XAML. Uma chamada [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) que usa um valor de chave não recuperará um recurso inserido.
+
+            **x:Key** e [x:Name](x-name-attribute.md) não são conceitos idênticos. 
+           **x:Key** é usado exclusivamente em dicionários de recursos. x:Name é usado em todas as áreas de XAML. Uma chamada [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) que usa um valor de chave não recuperará um recurso inserido.
 
 Na sintaxe mostrada, observe que o objeto [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) está implícito no modo como o processador XAML produz um novo objeto para popular uma coleção de [**Resources**](https://msdn.microsoft.com/library/windows/apps/br208740).
 

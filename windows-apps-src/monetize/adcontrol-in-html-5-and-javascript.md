@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
 description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo JavaScript/HTML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1."
 title: AdControl em HTML 5 e Javascript
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 6e96b085132126a2c3e7b0b0b86124aba4cd651e
 
@@ -23,7 +22,8 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 
 * Instale o [SDK do Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk) com o Visual Studio 2015 ou o Visual Studio 2013.
 
-> **Observação** Se você instalou a Compilação 14295 do Windows 10 Anniversary SDK Preview ou superior com o Visual Studio 2015, também deverá instalar a biblioteca WinJS. Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows para Windows 10, mas a partir da Compilação do 14295 Windows 10 Anniversary SDK Preview, ela deve ser instalada separadamente. Para instalar o WinJS, consulte [Baixar o WinJS](http://try.buildwinjs.com/download/GetWinJS/).
+> 
+            **Observação** Se você instalou a Compilação 14295 do Windows 10 Anniversary SDK Preview ou superior com o Visual Studio 2015, também deverá instalar a biblioteca WinJS. Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows para Windows 10, mas a partir da Compilação do 14295 Windows 10 Anniversary SDK Preview, ela deve ser instalada separadamente. Para instalar o WinJS, consulte [Baixar o WinJS](http://try.buildwinjs.com/download/GetWinJS/).
 
 ## Desenvolvimento de código
 
@@ -43,7 +43,8 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 
     ![javascriptaddreference](images/13-f7f6d6a6-161e-4f17-995d-1236d0b5d9f2.png)
 
-    > **Observação**  Esta imagem é do Visual Studio 2015 compilando um projeto UWP para Windows 10. Se você estiver compilando um aplicativo do Windows 8.1 ou Windows Phone 8.1 ou usando o Visual Studio 2013, sua tela terá uma aparência diferente.
+    > 
+            **Observação**  Esta imagem é do Visual Studio 2015 compilando um projeto UWP para Windows 10. Se você estiver compilando um aplicativo do Windows 8.1 ou Windows Phone 8.1 ou usando o Visual Studio 2013, sua tela terá uma aparência diferente.
 
 5.  No **Gerenciador de Referências**, clique em OK.
 
@@ -65,7 +66,8 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
     <script src="/MSAdvertisingJS/ads/ad.js"></script>
     ```
 
-    > **Observação**   Esta linha deve ser colocada na seção **&lt;head&gt;** após a inclusão do default.js; caso contrário, você encontrará um erro ao compilar seu projeto.
+    > 
+            **Observação**   Esta linha deve ser colocada na seção **&lt;head&gt;** após a inclusão do default.js; caso contrário, você encontrará um erro ao compilar seu projeto.
 
 8.  Modifique a seção **&lt;body&gt;** no arquivo default.html (ou outro arquivo html apropriado para o seu projeto) para incluir o elemento div do **AdControl**. Atribua as propriedades **applicationId** e **adUnitId** no **AdControl** para testar os valores fornecidos em [Valores de modo de teste](test-mode-values.md), e ajuste a altura e a largura do controle para que ele fique com um dos [tamanhos de anúncio compatíveis com anúncios em faixa](supported-ad-sizes-for-banner-ads.md).
 
@@ -88,7 +90,8 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 
 2.  Em seu código, substitua os valores da unidade de anúncio de teste (**applicationId** e **adUnitId**) pelos valores dinâmicos gerados no Centro de Desenvolvimento.
 
-3.  [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento.
+3.  
+            [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento.
 
 4.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento.
 

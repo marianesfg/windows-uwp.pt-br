@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 9165f709-71d7-42cf-9b30-3190fe029fb4
 description: "Saiba mais sobre as diferenças entre a classe AdControl nas bibliotecas do Microsoft Advertising e a classe AdMediatorControl nas bibliotecas de controle de anúncios."
 title: "Qual é a diferença – AdMediatorControl ou AdControl"
-translationtype: Human Translation
 ms.sourcegitcommit: 8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707
 ms.openlocfilehash: 291e1c4d707e8987d29ae5840248918543d7d12a
 
@@ -21,7 +20,8 @@ Use as bibliotecas do Microsoft Advertising para XAML e JavaScript em seu aplica
 
 As bibliotecas do Microsoft Advertising e as bibliotecas de controle de anúncios estão incluídas no SDK de Microsoft Store Engagement and Monetization. Para obter mais informações sobre como instalar este SDK e as diferentes bibliotecas de publicidade Microsoft que estão incluídas nesse SDK, consulte [Instalar as bibliotecas do Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
 
->**Observação** Para mostrar anúncios intersticiais, use o controle **InterstitialAd**. O **AdControl** e **AdMediatorControl** não podem mostrar anúncios intersticiais. Para saber mais, consulte [Anúncios intersticiais](interstitial-ads.md).
+>
+            **Observação** Para mostrar anúncios intersticiais, use o controle **InterstitialAd**. O **AdControl** e **AdMediatorControl** não podem mostrar anúncios intersticiais. Para saber mais, consulte [Anúncios intersticiais](interstitial-ads.md).
 
  
 

@@ -3,7 +3,6 @@ author: mtoepke
 title: Perguntas frequentes de portabilidade do DirectX 11
 description: Respostas a perguntas frequentes sobre a portabilidade de jogos para a Plataforma Universal do Windows (UWP).
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: dc98f15d80fb70fb6e106555659d699c41fbfa0b
 
@@ -30,7 +29,8 @@ Agora o dispositivo Direct3D é usado para criar recursos na memória de vídeo,
 ##  Preciso atualizar o cronômetro do jogo para a UWP?
 
 
-[
+
+            [
               **QueryPerformanceCounter**
             ](https://msdn.microsoft.com/library/windows/desktop/ms644904), junto com [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905), ainda são a melhor maneira de implementar um timer de jogo para aplicativos UWP.
 

@@ -11,8 +11,7 @@ ms.openlocfilehash: a7f7dccb9c7461e482bd43c8f370a2a7244eb735
 
 # Acessar recursos da Plataforma Universal do Windows (UWP)
 
-Seu aplicativo da web pode ter acesso completo à Plataforma Universal do Windows (UWP), ativar recursos nativos em dispositivos Windows, [beneficiar-se da segurança do Windows](#keep-your-app-secure-setting-application-content-uri-rules-acurs), [chamar APIs do Windows Runtime](#call-windows-runtime-apis) diretamente do script hospedado em um servidor, aproveitar a [integração com a Cortana](#integrate-cortana-voice-commands)e usar um [provedor de autenticação on-line](#web-authentication-broker). 
-              [Também há suporte para aplicativos híbridos](#create-hybrid-apps-packaged-web-apps-vs-hosted-web-apps), pois você pode incluir código local para ser chamado do script hospedado e gerenciar a navegação do aplicativo entre as páginas locais e remotas.
+Seu aplicativo da web pode ter acesso completo à Plataforma Universal do Windows (UWP), ativar recursos nativos em dispositivos Windows, [beneficiar-se da segurança do Windows](#keep-your-app-secure-setting-application-content-uri-rules-acurs), [chamar APIs do Windows Runtime](#call-windows-runtime-apis) diretamente do script hospedado em um servidor, aproveitar a [integração com a Cortana](#integrate-cortana-voice-commands)e usar um [provedor de autenticação on-line](#web-authentication-broker). [Também há suporte para aplicativos híbridos](#create-hybrid-apps-packaged-web-apps-vs-hosted-web-apps), pois você pode incluir código local para ser chamado do script hospedado e gerenciar a navegação do aplicativo entre as páginas locais e remotas.
 
 ## Mantenha seu aplicativo seguro – Definir regras de URI de conteúdo do aplicativo (ACURs)
 
@@ -48,12 +47,9 @@ Se uma URL é definida dentro dos limites do aplicativo (ACURs), ele pode chamar
 
 Para habilitar esse recurso, você precisa especificar o atributo `(WindowsRuntimeAccess="<<level>>")` em ACURs com um destes valores:
 
-- 
-              **all**: remove o código JavaScript que tem acesso a todas às APIs UWP e aos componentes empacotados locais.
-- 
-              **allowForWeb**: remove o código JavaScript que tem acesso somente ao código de pacote personalizado. Acesso local à componente C++/C# personalizados.
-- 
-              **none**: padrão. A URL especificada não tem acesso a plataforma.
+- **all**: remove o código JavaScript que tem acesso a todas às APIs UWP e aos componentes empacotados locais.
+- **allowForWeb**: remove o código JavaScript que tem acesso somente ao código de pacote personalizado. Acesso local à componente C++/C# personalizados.
+- **none**: padrão. A URL especificada não tem acesso a plataforma.
 
 Veja um tipo de regra de exemplo:
 
@@ -131,12 +127,9 @@ Para saber mais, consulte [Considerações do agente de autenticação da Web pa
 
 Se seu aplicativo precisar de acesso programático a recursos do usuário como imagens ou músicas, ou dispositivos como uma câmera ou microfone, você deverá declarar a funcionalidade apropriada. Há três categorias de declaração de recurso de aplicativo: 
 
-- 
-              [As funcionalidades de uso geral](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#General-use_capabilities) que se aplicam à maioria dos cenários de aplicativos. 
-- 
-              [As funcionalidades do dispositivo](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Device_capabilities) que permitem que seu aplicativo acesse dispositivos periféricos e internos. 
-- 
-              [Funcionalidades de uso especiais](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Special_and_restricted_capabilities) que requerem uma conta empresarial especial para serem enviadas à Store para uso. 
+- [As funcionalidades de uso geral](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#General-use_capabilities) que se aplicam à maioria dos cenários de aplicativos. 
+- [As funcionalidades do dispositivo](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Device_capabilities) que permitem que seu aplicativo acesse dispositivos periféricos e internos. 
+- [Funcionalidades de uso especiais](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Special_and_restricted_capabilities) que requerem uma conta empresarial especial para serem enviadas à Store para uso. 
 
 Para saber mais sobre contas empresariais, consulte [Tipos de conta, locais e taxas](https://msdn.microsoft.com/library/windows/apps/jj863494.aspx).
 

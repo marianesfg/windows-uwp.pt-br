@@ -3,7 +3,6 @@ title: Criptografia
 description: "O artigo fornece uma visão geral dos recursos de criptografia disponíveis para aplicativos UWP (Plataforma Universal do Windows). Para obter informações detalhadas sobre tarefas específicas, consulte a tabela no final deste artigo."
 ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
 ms.openlocfilehash: b8cccf54e414de084c5b3fd080007b225b9a9b12
 

@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
 description: "Este artigo mostra como converter mídia em dispositivos remotos de um aplicativo Universal do Windows."
 title: "Transmissão de mídia"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 9c8d549c9b770af351894f2a19dd035a43d70264
 
@@ -66,7 +65,8 @@ No manipulador de eventos **Click** para o botão, chame [**TransformToVisual**]
 
 No manipulador de eventos do **CastingDeviceSelected**, chame o método [**CreateCastingConnection**](https://msdn.microsoft.com/library/windows/apps/dn972547) da propriedade [**SelectedCastingDevice**](https://msdn.microsoft.com/library/windows/apps/dn972546) dos argumentos do evento, que representa o dispositivo de transmissão selecionado pelo usuário. Registre manipuladores para os eventos [**ErrorOccurred**](https://msdn.microsoft.com/library/windows/apps/dn972519) e [**StateChanged**](https://msdn.microsoft.com/library/windows/apps/dn972523). Por fim, chame [**RequestStartCastingAsync**](https://msdn.microsoft.com/library/windows/apps/dn972520) para começar a transmissão, passando no resultado do método do objeto **MediaElement** [**GetAsCastingSource**](https://msdn.microsoft.com/library/windows/apps/dn920012) para especificar que a mídia a ser convertida está contida no **MediaElement**.
 
-**Observação**  A conexão de transmissão deve ser iniciada no thread da interface do usuário. Como o **CastingDeviceSelected** não é chamado no thread da interface do usuário, você deve colocar essas chamadas dentro de uma chamada para [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317), o que faz com que elas sejam chamadas no thread da interface do usuário.
+
+            **Observação**  A conexão de transmissão deve ser iniciada no thread da interface do usuário. Como o **CastingDeviceSelected** não é chamado no thread da interface do usuário, você deve colocar essas chamadas dentro de uma chamada para [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317), o que faz com que elas sejam chamadas no thread da interface do usuário.
 
 [!code-cs[CastingDeviceSelected](./code/MediaCastingWin10/cs/MainPage.xaml.cs#SnippetCastingDeviceSelected)]
 

@@ -1,125 +1,129 @@
 ---
 author: mijacobs
-Description: Learn how to use tiles, badges, toasts, and notifications to provide entry points into your app and keep users up-to-date.
-title: Tiles, badges, and notifications
+Description: "Saiba como usar blocos, selos, notificações do sistema e notificações para fornecer pontos de entrada em seu aplicativo e manter os usuários atualizados."
+title: "Blocos, selos e notificações"
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: a02793e45f190b9401f18e845af3dc73d235c3fc
+
 ---
+# Notificações de selo para aplicativos UWP
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Badge notifications for UWP apps
-
 <div style="float:left; font-size:80%; text-align:left; margin: 0px 15px 15px 0px;">
-<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/>A tile with a numeric badge displaying<br/> the number 63 to indicate 63 unread mails.</div>
+<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/>Bloco com um selo numérico exibindo<br/> o número 63 para indicar 63 emails não lidos.</div>
 
-A notification badge conveys summary or status information specific to your app. They can be numeric (1-99) or one of a set of system-provided glyphs. Examples of information best conveyed through a badge include network connection status in an online game, user status in a messaging app, number of unread mails in a mail app, and number of new posts in a social media app. 
+Um selo de notificação transmite as informações de resumo ou estado específicas de seu aplicativo. Elas podem ser numéricas (1 a 99) ou um de um conjunto de glifos fornecidos pelo sistema. Os exemplos de informações mais bem transmitidas por meio de um selo incluem o status da conexão de rede em um jogo online, o status de usuário em um aplicativo de mensagens, o número de emails não lidos em um aplicativo de email e o número de novas postagens em um aplicativo de mídia social. 
 
-Notification badges appear on your app's taskbar icon and in the lower-right corner of its start tile, regardless of whether the app is running. Badges can be displayed on all tile sizes.  
+Selos de notificação aparecem no ícone de barra de tarefas ícone de seu aplicativo e no canto inferior direito do bloco inicial, independentemente de o aplicativo estar ou não em execução. Os selos podem ser exibidos em todos os tamanhos de bloco.  
 
-**Note**&nbsp;&nbsp;You cannot provide your own badge image; only system-provided badge images can be used.
+**Observação**&nbsp;&nbsp;Você não pode fornecer sua própria imagem de selo; podem ser usadas somente imagens de selo fornecidas pelo sistema.
 
-## Numeric badges
+## Selos numéricos
 
 <table>
     <tr>
-        <th>Value</th>
-        <th>Badge</th>
+        <th>Valor</th>
+        <th>Selo</th>
         <th>XML</th>
     </tr>
     <tr>
-        <td>A number from 1 to 99. A value of 0 is equivalent to the glyph value "none" and will clear the badge.</td>
-        <td>![A numeric badge less than 100.](images/badges/badge-numeric.png)</td>
+        <td>Um número de 1 a 99. Um valor 0 é equivalente ao valor de glifo "nenhum" e eliminará o selo.</td>
+        <td>![Um selo numérico menor do que 100.](images/badges/badge-numeric.png)</td>
         <td>`<badge value="1"/>`</td>
     </tr>
     <tr>
-        <td>Any number greater than 99.</td>
-        <td>![A numeric badge greater than 99.](images/badges/badge-numeric-greater.png)</td></td>
+        <td>Qualquer número maior que 99.</td>
+        <td>![Um selo numérico maior que 99.](images/badges/badge-numeric-greater.png)</td></td>
         <td>`<badge value="100"/>`</td>
     </tr>    
 </table>
 
-## Glyph badges
-Instead of a number, a badge can display one of a non-extensible set of status glyphs. 
+## Selos de glifo
+Em vez de um número, um selo pode exibir um de um conjunto de glifos de status não extensíveis. 
 
 <table>
 <tr>
     <th>Status</th>
-    <th>Glyph</th>
+    <th>Glifo</th>
     <th>XML</th>
 </tr>
 <tr>
-    <td>none</td>
-    <td>(No badge shown.)</td>
+    <td>nenhum</td>
+    <td>(Nenhum selo mostrado.)</td>
     <td>`<badge value="none"/>`</td>
 </tr>
 <tr>
-    <td>activity</td>
-    <td>![Glyph](images/badges/badge-activity.png)</td>
+    <td>atividade</td>
+    <td>![Glifo](images/badges/badge-activity.png)</td>
     <td>`<badge value="activity"/>`</td>
 </tr>
 <tr>
-    <td>alarm</td>
-    <td>![Glyph](images/badges/badge-alarm.png)</td>
+    <td>alarme</td>
+    <td>![Glifo](images/badges/badge-alarm.png)</td>
     <td>`<badge value="alarm"/>`</td>
 </tr>
 <tr>
-    <td>alert</td>
-    <td>![Glyph](images/badges/badge-alert.png)</td>
+    <td>alerta</td>
+    <td>![Glifo](images/badges/badge-alert.png)</td>
     <td>`<badge value="alert"/>`</td>
 </tr>
 <tr>
-    <td>attention</td>
-    <td>![Glyph](images/badges/badge-attention.png)</td>
+    <td>atenção</td>
+    <td>![Glifo](images/badges/badge-attention.png)</td>
     <td>`<badge value="attention"/>`</td>
 </tr>
 <tr>
-    <td>available</td>
-    <td>![Glyph](images/badges/badge-available.png)</td>
+    <td>disponível</td>
+    <td>![Glifo](images/badges/badge-available.png)</td>
     <td>`<badge value="available"/>`</td>
 </tr>
 <tr>
-    <td>away</td>
-    <td>![Glyph](images/badges/badge-away.png)</td>
+    <td>ausente</td>
+    <td>![Glifo](images/badges/badge-away.png)</td>
     <td>`<badge value="away"/>`</td>
 </tr>
 <tr>
-    <td>busy</td>
-    <td>![Glyph](images/badges/badge-busy.png)</td>
+    <td>ocupado</td>
+    <td>![Glifo](images/badges/badge-busy.png)</td>
     <td>`<badge value="busy"/>`</td>
 </tr>
 <tr>
-    <td>error</td>
-    <td>![Glyph](images/badges/badge-error.png)</td>
+    <td>erro</td>
+    <td>![Glifo](images/badges/badge-error.png)</td>
     <td>`<badge value="error"/>`</td>
 </tr>
 <tr>
     <td>newMessage</td>
-    <td>![Glyph](images/badges/badge-newMessage.png)</td>
+    <td>![Glifo](images/badges/badge-newMessage.png)</td>
     <td>`<badge value="newMessage"/>`</td>
 </tr>
 <tr>
-    <td>paused</td>
-    <td>![Glyph](images/badges/badge-paused.png)</td>
+    <td>pausado</td>
+    <td>![Glifo](images/badges/badge-paused.png)</td>
     <td>`<badge value="paused"/>`</td>
 </tr>
 <tr>
-    <td>playing</td>
-    <td>![Glyph](images/badges/badge-playing.png)</td>
+    <td>reproduzindo</td>
+    <td>![Glifo](images/badges/badge-playing.png)</td>
     <td>`<badge value="playing"/>`</td>
 </tr>
 <tr>
-    <td>unavailable</td>
-    <td>![Glyph](images/badges/badge-unavailable.png)</td>
+    <td>indisponível</td>
+    <td>![Glifo](images/badges/badge-unavailable.png)</td>
     <td>`<badge value="unavailable"/>`</td>
 </tr>
 </table>
 
-## Create a badge
+## Criar um selo
 
-These examples show you how to to create a badge update.
+Estes exemplos mostram como criar uma atualização de selo.
 
-### Create a numeric badge
+### Criar um selo numérico
 
 ````csharp
 private void setBadgeNumber(int num)
@@ -146,7 +150,7 @@ private void setBadgeNumber(int num)
 }
 ````
 
-### Create a glyph badge
+### Criar um selo de glifo
 ````csharp
 private void updateBadgeGlyph()
 {
@@ -174,7 +178,7 @@ private void updateBadgeGlyph()
 }
 ````
 
-### Clear a badge
+### Limpar um selo
 
 ````csharp
 private void clearBadge()
@@ -183,12 +187,17 @@ private void clearBadge()
 }
 ````
 
-## Get the samples
+## Obter os exemplos
 
-* [Notifications sample](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> Shows how to create live tiles, send badge updates, and display toast notifications. 
+* [Exemplo de notificações](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> Mostra como criar blocos dinâmicos, enviar atualizações de selo e exibir notificações do sistema. 
 
-## Related articles
+## Artigos relacionados
 
-* [Adaptive and interactive toast notifications](tiles-and-notifications-adaptive-interactive-toasts.md)
-* [Create tiles](tiles-and-notifications-creating-tiles.md)
-* [Create adaptive tiles](tiles-and-notifications-create-adaptive-tiles.md)
+* [Notificações do sistema interativas e adaptáveis](tiles-and-notifications-adaptive-interactive-toasts.md)
+* [Criar blocos](tiles-and-notifications-creating-tiles.md)
+* [Criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md)
+
+
+<!--HONumber=Aug16_HO3-->
+
+

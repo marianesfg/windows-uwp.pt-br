@@ -3,7 +3,6 @@ author: mtoepke
 title: Fazer a portabilidade do loop do jogo
 description: Mostra como implementar uma janela para um jogo da Plataforma Universal do Windows (UWP) e como ativar o loop do jogo, inclusive como criar uma IFrameworkView para controlar uma CoreWindow em tela inteira.
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3c2369a2fdc48aed14f7ad363df8792e0ed5d795
 
@@ -30,7 +29,8 @@ Para configurar uma janela da área de trabalho com um visor do Direct3D 9, era 
 
 O ambiente UWP tem um sistema muito mais simples. Em vez de configurar uma janela tradicional, um jogo da Windows Store que usa DirectX implementa [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478). Essa interface existe para que aplicativos e jogos em DirectX sejam executados diretamente em uma [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), dentro do contêiner de aplicativo.
 
-> **Observação**   O Windows oferece ponteiros gerenciados para recursos como o objeto do aplicativo de origem e a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulte [**Manipular o operador de objeto (^)**] https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> 
+            **Observação**   O Windows oferece ponteiros gerenciados para recursos como o objeto do aplicativo de origem e a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulte [**Manipular o operador de objeto (^)**] https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
  
 

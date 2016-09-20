@@ -13,9 +13,11 @@ ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
 
 Para entender suas considerações fiscais para seleção de preço, implicações de pagamento e responsabilidade fiscal, veja seus países/regiões de distribuição nas tabelas abaixo.
 
-> **Observação**  O Ajuste de Expansão do Comércio pode ter implicações de pagamento em um conjunto limitado de países/regiões. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio e os mercados ao qual se aplica, consulte o [Contrato do Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e a lista de [países/regiões afetados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+> 
+            **Observação**  O Ajuste de Expansão do Comércio pode ter implicações de pagamento em um conjunto limitado de países/regiões. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio e os mercados ao qual se aplica, consulte o [Contrato do Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e a lista de [países/regiões afetados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
-> **Observação**  Taxas de imposto estão sujeitas a alterações a qualquer momento. A Microsoft não poderá garantir que as taxas nas tabelas acima serão sempre precisas.
+> 
+            **Observação**  Taxas de imposto estão sujeitas a alterações a qualquer momento. A Microsoft não poderá garantir que as taxas nas tabelas acima serão sempre precisas.
 
  
 

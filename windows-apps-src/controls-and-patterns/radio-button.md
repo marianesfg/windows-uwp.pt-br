@@ -5,7 +5,6 @@ title: "Diretrizes de botões de opção"
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: 317df548e72f9aff475ba0959668b6441ac29d3d
 
@@ -58,7 +57,8 @@ Botões de opção funcionam em grupos. Há 2 maneiras de agrupar controles de b
 - Colocá-los dentro do mesmo contêiner pai.
 - Defina a propriedade [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) em cada botão de opção como o mesmo valor.
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;Um grupo de botões de opção se comportam como um controle único quando acessados pelo teclado. Apenas a opção selecionada pode ser acessada usando a tecla Tab, mas os usuários podem alternar pelo grupo usando as teclas de seta.
 
 Neste exemplo, o primeiro grupo de botões de opção é implicitamente agrupado por estar no painel empilhado. O segundo grupo é dividido entre 2 painéis empilhados e, portanto, são explicitamente agrupados por GroupName.
@@ -164,7 +164,7 @@ Um botão de opção tem dois estados: *marcado* ou *desmarcado*. Quando um bot�
 -   Não coloque mais que oito opções em um grupo de botão de opção. Quando for necessário apresentar mais opções, use uma [lista suspensa](lists.md), [caixa de listagem](lists.md)ou um [modo de exibição de lista](lists.md) em vez disso.
 -   Não coloque dois grupos de botão de opção próximos um do outro. Quando dois grupos de botão de opção estão próximos um do outro é difícil determinar quais botões pertencem a qual grupo. Use rótulos de grupos para separá-los.
 
-## Diretrizes de uso adicionais
+## Diretriz de uso adicional
 
 Esta ilustração mostra a maneira correta de posicionar e espaçar os botões de opção.
 

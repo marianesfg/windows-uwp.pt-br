@@ -6,8 +6,8 @@ title: Acessibilidade do teclado
 label: Keyboard accessibility
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 6ac488b6db1ed838cc458c6adaa90dcca18d4c7d
+ms.sourcegitcommit: 2215aeae041ff975d99d29ea42350f6ce0f2a681
+ms.openlocfilehash: 112c7be4cb5418332a19565be9b739e7032ba834
 
 ---
 
@@ -238,10 +238,10 @@ Os atalhos do teclado não são normalmente relevantes para os aplicativos no Wi
 * [Entrada: amostra de teclado virtual](http://go.microsoft.com/fwlink/p/?linkid=246019)
 * [Respondendo ao aparecimento da amostra de teclado na tela](http://go.microsoft.com/fwlink/p/?linkid=231633)
 * [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
- 
 
 
 
-<!--HONumber=Jul16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

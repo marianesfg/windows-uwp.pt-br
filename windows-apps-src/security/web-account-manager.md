@@ -3,8 +3,8 @@ title: Conectar a provedores de identidade com o Gerenciador de Contas da Web
 description: Este artigo descreve como usar o AccountsSettingsPane para conectar seu aplicativo da Plataforma Universal do Windows (UWP) a provedores de identidade externos, como a Microsoft ou o Facebook, usando as novas APIs do Gerenciador de Contas da Web do Windows 10.
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: c9f6a0183edc3c01566311360417c256329ef904
-ms.openlocfilehash: 6ab12d6da9c4858cf6ab16d4143cf073bb0cb275
+ms.sourcegitcommit: f3cdb187ec4056d4c7db6acde471b0bc91c78390
+ms.openlocfilehash: 093ca8906853121bbf33a729c523717d26cb7b0d
 
 ---
 # Conectar a provedores de identidade com o Gerenciador de Contas da Web
@@ -188,6 +188,8 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
     }
 }
 ```
+
+> Observação: se você receber um erro ao solicitar um token, verifique se que associou seu aplicativo à Loja, conforme descrito na etapa 1. Seu aplicativo não conseguirá obter um token se você ignorou essa etapa. 
 
 Quando você tiver um token, poderá usá-lo para chamar a API do provedor. No código abaixo, chamaremos as APIs do Microsoft Live para obter informações básicas sobre o usuário e exibi-las em nossa interface do usuário. 
 
@@ -388,6 +390,6 @@ Teoricamente, você pode usar comandos de configurações para tudo. No entanto,
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

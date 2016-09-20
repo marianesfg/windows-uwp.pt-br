@@ -18,7 +18,8 @@ Depois de clicar no botão, você verá a página **Criar um novo IAP**. Aqui, v
 
 Primeiro, você precisará indicar qual tipo de IAP está oferecendo. Esta seleção se refere a como o cliente pode usar seu IAP.
 
-> **Observação** Não será possível alterar o tipo de produto depois de salvar essa página para criar o IAP. Se você escolheu o tipo de produto errado, pode excluir seu envio de IAP em andamento e começar pela criação de um novo IAP.
+> 
+            **Observação** Não será possível alterar o tipo de produto depois de salvar essa página para criar o IAP. Se você escolheu o tipo de produto errado, pode excluir seu envio de IAP em andamento e começar pela criação de um novo IAP.
 
 Selecione o tipo de produto que seja adequado para seu IAP:
 

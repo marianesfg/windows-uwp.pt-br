@@ -5,7 +5,6 @@ title: "Visualizador de notificações"
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: dcbf05669093047bd76dc01c217daf353d8fb9da
 
@@ -32,7 +31,8 @@ Esta captura de tela do aplicativo mostra a carga XML e como tamanhos de bloco s
 
 Com o Visualizador de Notificações, é possível criar e testar cargas de bloco adaptável sem que seja necessário editar e implantar o aplicativo propriamente dito. Depois que tiver criado uma carga com resultados visuais ideais, você pode integrá-la ao aplicativo. Consulte [Enviar uma notificação de bloco local](tiles-and-notifications-sending-a-local-tile-notification.md) para saber mais.
 
-**Observação**   A simulação do Visualizador de Notificações do menu Iniciar do Windows nem sempre é totalmente precisa e não dá suporte a algumas propriedades de carga como [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712). Quando tiver o design de bloco que você deseja, teste-o fixando o bloco no menu Iniciar real para verificar se ele é exibido como você deseja.
+
+            **Observação**   A simulação do Visualizador de Notificações do menu Iniciar do Windows nem sempre é totalmente precisa e não dá suporte a algumas propriedades de carga como [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712). Quando tiver o design de bloco que você deseja, teste-o fixando o bloco no menu Iniciar real para verificar se ele é exibido como você deseja.
 
  
 

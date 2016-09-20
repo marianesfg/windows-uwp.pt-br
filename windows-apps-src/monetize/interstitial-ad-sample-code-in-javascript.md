@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
 description: "Saiba como iniciar um anúncio intersticial em HTML/JavaScript."
 title: "Código de exemplo de anúncio intersticial em JavaScript"
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: d6a561aaff834cd782118abb72b4770985176bf0
 

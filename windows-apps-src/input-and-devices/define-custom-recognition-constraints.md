@@ -5,8 +5,9 @@ title: "Definir restrições de reconhecimento personalizadas"
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 75e7367ee13357d3463213ca7d8f1ff37c4f0b77
+ms.openlocfilehash: d619cd6b3c9f5d62ca7d68f555e4c051abaf9bad
 
 ---
 
@@ -31,15 +32,9 @@ Use a propriedade [**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/
 
 Aqui, abordamos os três tipos de restrições de reconhecimento de fala usados de dentro de um aplicativo. Para restrições de comando de voz, consulte [Iniciar um aplicativo em primeiro plano com comandos de voz na Cortana](launch-a-foreground-app-with-voice-commands-in-cortana.md).
 
--   [
-              **SpeechRecognitionTopicConstraint**
-            ](https://msdn.microsoft.com/library/windows/apps/dn631446) — Uma restrição baseada em uma gramática predefinida (ditado ou pesquisa na Web).
--   [
-              **SpeechRecognitionListConstraint**
-            ](https://msdn.microsoft.com/library/windows/apps/dn631421) — Uma restrição baseada em uma lista de palavras ou frases.
--   [
-              **SpeechRecognitionGrammarFileConstraint**
-            ](https://msdn.microsoft.com/library/windows/apps/dn631412) — Uma restrição definida em um arquivo SRGS (Especificação de Gramática de Reconhecimento de Fala).
+-   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446) — Uma restrição baseada em uma gramática predefinida (ditado ou pesquisa na Web).
+-   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421) — Uma restrição baseada em uma lista de palavras ou frases.
+-   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412) — Uma restrição definida em um arquivo SRGS (Especificação de Gramática de Reconhecimento de Fala).
 
 Cada reconhecedor de fala pode ter uma coleção de restrição. Somente essas combinações de restrições são válidas:
 
@@ -246,6 +241,6 @@ Para avisar o usuário sobre o que pode ser falado, use as propriedades [**Speec
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

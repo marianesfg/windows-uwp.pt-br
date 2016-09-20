@@ -3,7 +3,6 @@ author: mtoepke
 title: Como ativar um aplicativo (DirectX e C++)
 description: "Este tópico mostra como definir a experiência de ativação para um aplicativo UWP (Plataforma Universal do Windows) DirectX."
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 14859d03c7af45a17772c76f8c79b3c1bc56272c
 

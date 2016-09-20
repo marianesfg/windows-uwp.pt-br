@@ -5,7 +5,7 @@ title: "Fazendo a portabilidade de XAML e da interface do usuário do Windows Ph
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7fa520443f242844cd661d70bad0fdeb2297fb1d
+ms.openlocfilehash: 344ea7a71fce744bcf90ac99ada9a6fe17568a9b
 
 ---
 
@@ -65,8 +65,7 @@ Seus modelos de exibição são um lugar onde há código imperativo que referen
     return new BitmapImage(new Uri(this.CoverImagePath, UriKind.Relative));
 ```
 
-
-              **BitmapImage** está no namespace **System.Windows.Media.Imaging** no Windows Phone Silverlight, e usar uma diretiva no mesmo arquivo permite que **BitmapImage** seja usado sem qualificação de namespace como no trecho acima. Em casos assim, é possível clicar com o botão direito do mouse no nome do tipo (**BitmapImage**) no Visual Studio e usar o comando **Resolver** no menu de contexto para adicionar uma nova diretiva de namespace ao arquivo. Nesse caso, o namespace [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) é adicionado, que é onde o tipo está na UWP. É possível remover a diretiva de uso de **System.Windows.Media.Imaging**, e bastará fazer isso para portar código como no trecho acima. Quando terminar, você terá removido todos os namespaces do Windows Phone Silverlight.
+**BitmapImage** está no namespace **System.Windows.Media.Imaging** no Windows Phone Silverlight, e usar uma diretiva no mesmo arquivo permite que **BitmapImage** seja usado sem qualificação de namespace como no trecho acima. Em casos assim, é possível clicar com o botão direito do mouse no nome do tipo (**BitmapImage**) no Visual Studio e usar o comando **Resolver** no menu de contexto para adicionar uma nova diretiva de namespace ao arquivo. Nesse caso, o namespace [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) é adicionado, que é onde o tipo está na UWP. É possível remover a diretiva de uso de **System.Windows.Media.Imaging**, e bastará fazer isso para portar código como no trecho acima. Quando terminar, você terá removido todos os namespaces do Windows Phone Silverlight.
 
 Em casos simples como este, onde você está mapeando os tipos em um namespace antigo para os mesmos tipos em um novo, é possível usar o comando **Localizar e Substituir** do Visual Studio para fazer alterações em massa em seu código-fonte. O comando **Resolver** é uma ótima maneira de descobrir o novo namespace do tipo. Como outro exemplo, você pode substituir todos os "System.Windows" por "Windows.UI.Xaml". Essencialmente, isso portará todas as diretivas using e todos os nomes de tipo totalmente qualificados que fazem referência a esse namespace.
 
@@ -194,12 +193,10 @@ Os aplicativos Windows Phone Silverlight usam controles definidos nos namespaces
 | Classe ControlTiltEffect.TiltEffect | As animações da biblioteca de animações UWP são inseridas nos estilos padrão dos controles comuns. Veja [Animando ações de ponteiro](https://msdn.microsoft.com/library/windows/apps/xaml/jj649432). |
 | LongListSelector com dados agrupados | O LongListSelector do Windows Phone Silverlight funciona de duas maneiras, que podem ser usadas em conjunto. Primeiro, ele é capaz de exibir dados agrupados por uma chave, por exemplo, uma lista de nomes agrupados pela letra inicial. Segundo, é capaz de aplicar "zoom" entre duas exibições semânticas: a lista agrupada de itens (por exemplo, nomes) e uma lista somente com as próprias chaves de grupo (por exemplo, letras iniciais). Com a UWP, você pode exibir dados agrupados com as [Diretrizes de controles de exibição de grade e de lista](https://msdn.microsoft.com/library/windows/apps/mt186889). |
 | LongListSelector com dados simples | Por motivos de desempenho, no caso de listas muito longas, é recomendável LongListSelector em vez de uma caixa de listagem do Windows Phone Silverlight mesmo para dados simples não agrupados. Em um aplicativo UWP, [GridView](https://msdn.microsoft.com/library/windows/apps/br242705) são preferíveis para listas longas de itens, sejam dados receptivos a agrupamento ou não. |
-| Panorama | O controle de Panorama do Windows Phone Silverlight é mapeado para as [Diretrizes para controles hub nos aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn449149) e Diretrizes para controle hub. <br/> Observe que um controle de Panorama encapsula da última seção à primeira, e sua imagem da tela de fundo se move na paralaxe em relação às seções. 
-              As seções [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843) não encapsulam, e a paralaxe não é usada. |
+| Panorama | O controle de Panorama do Windows Phone Silverlight é mapeado para as [Diretrizes para controles hub nos aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn449149) e Diretrizes para controle hub. <br/> Observe que um controle de Panorama encapsula da última seção à primeira, e sua imagem da tela de fundo se move na paralaxe em relação às seções. As seções [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843) não encapsulam, e a paralaxe não é usada. |
 | Pivô | O equivalente da UWP para o controle de Pivô do Windows Phone Silverlight é [Windows.UI.Xaml.Controls.Pivot](https://msdn.microsoft.com/library/windows/apps/dn608241). Ele está disponível para todas as famílias de dispositivos. |
 
-
-              **Observação** O estado visual PointerOver é relevante em estilos/modelos personalizados em aplicativos do Windows 10, mas não em aplicativos Windows Phone Silverlight. Há outros motivos por que seus estilos/modelos personalizados existentes podem não ser adequados aos aplicativos do Windows 10, incluindo as chaves de recurso do sistema que você está usando, as alterações nos conjuntos de estados visuais usados e as melhorias de desempenho nos estilos/modelos padrão do Windows 10. Recomendamos que você edite uma cópia nova de um modelo padrão do controle para o Windows 10 e reaplique a personalização de estilo e modelo a ela.
+**Observação** O estado visual PointerOver é relevante em estilos/modelos personalizados em aplicativos do Windows 10, mas não em aplicativos Windows Phone Silverlight. Há outros motivos por que seus estilos/modelos personalizados existentes podem não ser adequados aos aplicativos do Windows 10, incluindo as chaves de recurso do sistema que você está usando, as alterações nos conjuntos de estados visuais usados e as melhorias de desempenho nos estilos/modelos padrão do Windows 10. Recomendamos que você edite uma cópia nova de um modelo padrão do controle para o Windows 10 e reaplique a personalização de estilo e modelo a ela.
 
 Para saber mais sobre controles da UWP, consulte [Controles por função](https://msdn.microsoft.com/library/windows/apps/mt185405), [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406) e [Diretrizes para controles](https://msdn.microsoft.com/library/windows/apps/dn611856).
 
@@ -372,8 +369,7 @@ Uma vez que anteriormente a largura fixa em pixels de exibição de uma tela do 
 
 Para que seu aplicativo tenha a melhor experiência em todas as telas, recomendamos que você crie cada ativo de bitmap em um intervalo de tamanhos, cada um adequado a um fator de escala específico. O fornecimento de ativos em escala de 100%, 200% e 400% (nessa ordem de prioridade) trará excelentes resultados na maioria dos casos em todos os fatores de escala intermediários.
 
-
-              **Observação** Se, por qualquer motivo, você não puder criar ativos em mais de um tamanho, crie ativos na escala de 100%. No Microsoft Visual Studio, o modelo de projeto padrão para aplicativos UWP fornece ativos de identidade visual (logotipos e imagens do bloco) em um único tamanho, mas eles não estão na escala de 100%. Quando criar ativos para seu próprio aplicativo, siga as diretrizes nesta seção e forneça tamanhos de 100%, 200% e 400%, além de usar pacotes de ativos.
+**Observação** Se, por qualquer motivo, você não puder criar ativos em mais de um tamanho, crie ativos na escala de 100%. No Microsoft Visual Studio, o modelo de projeto padrão para aplicativos UWP fornece ativos de identidade visual (logotipos e imagens do bloco) em um único tamanho, mas eles não estão na escala de 100%. Quando criar ativos para seu próprio aplicativo, siga as diretrizes nesta seção e forneça tamanhos de 100%, 200% e 400%, além de usar pacotes de ativos.
 
 Caso você tenha uma arte complexa, convém fornecer os ativos em ainda mais tamanhos. Caso você seja um principiante na arte vetorial, é relativamente fácil gerar ativos de alta qualidade em qualquer fator de escala.
 
@@ -399,6 +395,6 @@ O próximo tópico é [Portabilidade para E/S, dispositivo e modelo de aplicativ
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

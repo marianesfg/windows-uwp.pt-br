@@ -3,7 +3,6 @@ author: jnHs
 Description: "Assim que seu aplicativo estiver na Windows Store, é hora de aparecer para a maior quantidade possível de clientes."
 title: "Compromisso do cliente e promoção do aplicativo"
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3511533f76294767ca409b09a718555a6194e451
 

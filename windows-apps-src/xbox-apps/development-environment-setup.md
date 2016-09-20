@@ -28,7 +28,8 @@ Este artigo discute as etapas para configurar e testar seu ambiente de desenvolv
 
 Instale a versão prévia mais recente do SDK do Windows 10. Para obter informações de instalação, consulte [Baixe atualizações do Insider Preview para desenvolvedores](http://go.microsoft.com/fwlink/p/?LinkId=780552).
 
-  > **Importante**
+  > 
+            **Importante**
             &nbsp;&nbsp;Você precisa instalar o SDK mais recente, mas _não_ precisa instalar a versão mais recente do Windows Insider Preview do sistema operacional.
 
 ## Configurando o Xbox One

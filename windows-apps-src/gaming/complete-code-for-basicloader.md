@@ -3,7 +3,6 @@ author: mtoepke
 title: "Concluir código para BasicLoader"
 description: "Conclua código para classe e métodos que convertam e carreguem recursos gráficos comuns; por exemplo, malhas, texturas e vários objetos sombreadores."
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
-translationtype: Human Translation
 ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
 ms.openlocfilehash: 355e5a65a16e5e2df9bb039383f68dda16ff23a2
 
@@ -30,13 +29,17 @@ Este exemplo não está disponível para download.
 
 ## Tecnologias
 
-**Linguagens de programação** - C++  
-**Modelos de programação** -Windows Runtime
+
+            **Linguagens de programação** - C++  
+
+            **Modelos de programação** -Windows Runtime
 
 ## Requisitos
 
-**Cliente mínimo com suporte** - Windows 10                              
-**Servidor mínimo com suporte** - Windows Server 2016 Technical Preview 
+
+            **Cliente mínimo com suporte** - Windows 10                              
+
+            **Servidor mínimo com suporte** - Windows Server 2016 Technical Preview 
 
 
 ## Exibir o código (C++)

@@ -3,7 +3,6 @@ author: mtoepke
 title: "Adicionando áudio ao exemplo do Marble Maze"
 description: "Este documento descreve as principais práticas a serem consideradas quando se trabalha com áudio e mostra como o Marble Maze as aplica."
 ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
-translationtype: Human Translation
 ms.sourcegitcommit: c663692e31a62fdf40df9d706070d0d2ce0e1cdd
 ms.openlocfilehash: 0b2a0cb240431a49ef2bdb82a188f3dcb0294fc5
 
@@ -19,7 +18,8 @@ Este documento descreve as principais práticas a serem consideradas quando se t
 
 O Marble Maze executa música em segundo plano e usa sons do jogo para indicar eventos do jogo, por exemplo, quando a bolinha bate em uma parede. Uma parte importante da implementação é que o Marble Maze usa um efeito de reverberação (ou eco) para simular o som de uma bolinha quando ela quica. A implementação do efeito de reverberação faz com que ecos cheguem a você mais rapidamente e mais altos em ambientes pequenos; os ecos chegam até você mais lentamente e mais baixos em ambientes maiores.
 
-> **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
+> 
+            **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
 
 Seguem alguns dos pontos principais discutidos neste documento para quando você trabalhar com o áudio do seu jogo:
 
@@ -147,7 +147,8 @@ DX::ThrowIfFailed(
     );
 ```
 
-> **Dica**   Se você quiser anexar uma cadeia de efeitos existente a uma voz de submixagem existente ou substituir a cadeia de efeitos atual, use o método [**IXAudio2Voice::SetEffectChain**](https://msdn.microsoft.com/library/windows/desktop/ee418594).
+> 
+            **Dica**   Se você quiser anexar uma cadeia de efeitos existente a uma voz de submixagem existente ou substituir a cadeia de efeitos atual, use o método [**IXAudio2Voice::SetEffectChain**](https://msdn.microsoft.com/library/windows/desktop/ee418594).
 
  
 
@@ -251,7 +252,8 @@ DX::ThrowIfFailed(
     );
 ```
 
-O **MediaStreamer::Initialize**, em seguida, chama o [**MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110) para criar um objeto [**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655). Um objeto **IMFSourceReader** lê os dados de mídia do arquivo especificado por uma url.
+
+            O **MediaStreamer::Initialize**, em seguida, chama o [**MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110) para criar um objeto [**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655). Um objeto **IMFSourceReader** lê os dados de mídia do arquivo especificado por uma url.
 
 ```cpp
 DX::ThrowIfFailed(
@@ -300,7 +302,8 @@ CopyMemory(&m_waveFormat, waveFormat, sizeof(m_waveFormat));
 CoTaskMemFree(waveFormat);
 ```
 
-> **Importante**   A função [**MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177) usa o **CoTaskMemAlloc** para alocar o objeto [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799). Portanto, tenha certeza de chamar o **CoTaskMemFree** quando tiver terminado de usar esse objeto.
+> 
+            **Importante**   A função [**MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177) usa o **CoTaskMemAlloc** para alocar o objeto [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799). Portanto, tenha certeza de chamar o **CoTaskMemFree** quando tiver terminado de usar esse objeto.
 
  
 
@@ -427,15 +430,17 @@ void Audio::Start()
 }
 ```
 
-A voz de origem passa esses dados de áudio para o próximo estágio do gráfico de áudio. No caso do Marble Maze, o próximo estágio contém duas vozes de submixagem que aplicam os dois efeitos de reverberação ao áudio. Uma voz de submixagem aplica uma reverberação tardia a curta distância; a segundo aplica uma reverberação tardia a longa distância. A intensidade com que cada voz de submixagem contribui para a combinação final é determinada pelo tamanho e pela forma da sala. A reverberação a curta distância contribui mais quando a bola está próxima de uma parede ou em uma sala pequena, e a reverberação a longa distância contribui mais quando a bola está em um espaço grande. Essa técnica produz um efeito de eco mais realista quando a bolinha se movimenta pelo labirinto. Para saber mais sobre como o Marble Maze implementa esse efeito, consulte **Audio::SetRoomSize** and **Physics::CalculateCurrentRoomSize** no código-fonte do in the Marble Maze.
+A voz de origem passa esses dados de áudio para o próximo estágio do gráfico de áudio. No caso do Marble Maze, o próximo estágio contém duas vozes de submixagem que aplicam os dois efeitos de reverberação ao áudio.  Uma voz de submixagem aplica uma reverberação tardia a curta distância; a segundo aplica uma reverberação tardia a longa distância. A intensidade com que cada voz de submixagem contribui para a combinação final é determinada pelo tamanho e pela forma da sala. A reverberação a curta distância contribui mais quando a bola está próxima de uma parede ou em uma sala pequena, e a reverberação a longa distância contribui mais quando a bola está em um espaço grande. Essa técnica produz um efeito de eco mais realista quando a bolinha se movimenta pelo labirinto. Para saber mais sobre como o Marble Maze implementa esse efeito, consulte **Audio::SetRoomSize** and **Physics::CalculateCurrentRoomSize** no código-fonte do in the Marble Maze.
 
-> **Observação**  Em um jogo em que a maioria dos tamanhos dos ambientes é praticamente a mesma, você pode usar um modelo de reverberação mais básico. Por exemplo, você pode usar uma configuração de reverberação para todos os ambientes ou pode criar uma configuração de reverberação pré-definida para cada ambiente.
+> 
+            **Observação**  Em um jogo em que a maioria dos tamanhos dos ambientes é praticamente a mesma, você pode usar um modelo de reverberação mais básico. Por exemplo, você pode usar uma configuração de reverberação para todos os ambientes ou pode criar uma configuração de reverberação pré-definida para cada ambiente.
 
  
 
 O método **Audio::CreateResources** usa o Media Foundation para carregar a música em segundo plano. A esta altura, no entanto, a voz de origem não tem dados de áudio com os quais trabalhar. Além disso, como a música em segundo plano fica em loop, a voz de origem deve ser atualizada regularmente com dados para que a música continue sendo executada. Para manter a voz de origem com os dados, a atualização do loop do jogo atualiza o buffer do áudio a cada quadro. O método **MarbleMaze::Render** chama o **Audio:: Render** para processar o buffer de áudio da música em segundo plano. O **Audio::Render** define uma matriz de três buffers de áudio, **m\_audioBuffers**. Cada buffer armazena 64 KB (65536 bytes) de dados. O loop lê dados do objeto do Media Foundation e os escreve na voz de origem até que ela tenha três buffers em fila.
 
-> **Cuidado**  Apesar de o Marble Maze usar um buffer de 64 KB para armazenar dados de música, pode ser que você precise usar um buffer maior ou menor. A quantidade depende dos requisitos do jogo.
+> 
+            **Cuidado**  Apesar de o Marble Maze usar um buffer de 64 KB para armazenar dados de música, pode ser que você precise usar um buffer maior ou menor. A quantidade depende dos requisitos do jogo.
 
  
 
@@ -533,7 +538,8 @@ if(sound == RollingEvent)
 
 No entanto, para a música em segundo plano, o Marble Maze gerencia os buffers diretamente de forma que ele possa controlar melhor a quantidade de memória usada. Quando os arquivos de música são grandes, é possível transmitir os dados de música em buffers menores. Assim, você pode ajudar a equilibrar o tamanho da memória com a frequência da habilidade do jogo de processar e transmitir os dados de áudio.
 
-> **Dica**  Se o seu jogo tem uma taxa de quadros baixa ou variável, o processamento de áudio no thread principal pode produzir pausas ou estalos inesperados no áudio porque o mecanismo de áudio tem dados insuficientes de áudio em buffer para trabalhar. Se o jogo for sensível a esse problema, considere processar áudio em um thread separado que não execute a renderização. Essa abordagem é útil principalmente em computadores que têm processadores múltiplos, porque o seu jogo pode usar os que estiverem ociosos.
+> 
+            **Dica**  Se o seu jogo tem uma taxa de quadros baixa ou variável, o processamento de áudio no thread principal pode produzir pausas ou estalos inesperados no áudio porque o mecanismo de áudio tem dados insuficientes de áudio em buffer para trabalhar. Se o jogo for sensível a esse problema, considere processar áudio em um thread separado que não execute a renderização. Essa abordagem é útil principalmente em computadores que têm processadores múltiplos, porque o seu jogo pode usar os que estiverem ociosos.
 
  
 
@@ -546,7 +552,8 @@ A classe **MarbleMaze** fornece métodos como **PlaySoundEffect**, **IsSoundEffe
 m_audio.PlaySoundEffect(FallingEvent);
 ```
 
-O método **Audio:: PlaySoundEffect** chama o método [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471) para iniciar a reprodução do som. Se o método **IXAudio2SourceVoice::Start** já tiver sido chamado, ele não iniciará de novo. O **Audio::PlaySoundEffect**, em seguida, executa a lógica personalizada de certos sons.
+O método **Audio:: PlaySoundEffect** chama o método [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471) para iniciar a reprodução do som. Se o método **IXAudio2SourceVoice::Start** já tiver sido chamado, ele não iniciará de novo. 
+            O **Audio::PlaySoundEffect**, em seguida, executa a lógica personalizada de certos sons.
 
 ```cpp
 void Audio::PlaySoundEffect(SoundEvent sound)
@@ -765,7 +772,8 @@ if (m_engineExperiencedCriticalError)
 
 O Marble Maze também usa o sinalizador **m\_engineExperiencedCriticalError** para evitar chamar o XAudio2 quando não há dispositivo de áudio disponível. Por exemplo, o método **MarbleMaze::Update** não processa áudio para eventos de rolagem ou colisão quando o sinalizador está definido. O aplicativo tenta reparar o mecanismo de áudio a cada quadro, caso seja necessário. Entretanto, o sinalizador **m\_engineExperiencedCriticalError** poderá estar sempre definido se o computador não tiver um dispositivo de som ou se os fones de ouvido estiverem desconectados e não houver nenhum outro dispositivo de som disponível.
 
-> **Cuidado**   Como via de regra, não execute operações de bloqueio no corpo de um retorno de chamada de um mecanismo. Fazer isso pode causar problemas de desempenho. O Marble Maze define um sinalizador no retorno de chamada **OnCriticalError** e, depois, lida com o erro durante a fase de processamento de áudio regular. Para mais informações sobre retornos de chamada de XAudio2, consulte [XAudio2 Callbacks](https://msdn.microsoft.com/library/windows/desktop/ee415745).
+> 
+            **Cuidado**   Como via de regra, não execute operações de bloqueio no corpo de um retorno de chamada de um mecanismo. Fazer isso pode causar problemas de desempenho. O Marble Maze define um sinalizador no retorno de chamada **OnCriticalError** e, depois, lida com o erro durante a fase de processamento de áudio regular. Para mais informações sobre retornos de chamada de XAudio2, consulte [XAudio2 Callbacks](https://msdn.microsoft.com/library/windows/desktop/ee415745).
 
  
 

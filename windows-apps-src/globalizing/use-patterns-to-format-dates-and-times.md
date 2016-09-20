@@ -7,7 +7,7 @@ label: Use patterns to format dates and times
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 17cd1619a13adced643b4c8983dbf874bebaa740
+ms.openlocfilehash: f49af17ada36ceb2e5898d80047c2d616b1d0c6e
 
 ---
 
@@ -28,13 +28,11 @@ Use a API [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.
 ## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>Introdução
 
 
-[
-              **Windows.Globalization.DateTimeFormatting**
-            ](https://msdn.microsoft.com/library/windows/apps/br206859) fornece várias maneiras de formatar corretamente datas e horas para vários idiomas e países/regiões ao redor do mundo. Você pode usar formatos padrão para ano, mês, dia e assim por diante, ou você pode usar modelos de cadeias de caracteres padrão, como "longdate" ou "month day".
+[**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) fornece várias maneiras de formatar corretamente datas e horas para vários idiomas e países/regiões ao redor do mundo. Você pode usar formatos padrão para ano, mês, dia e assim por diante, ou você pode usar modelos de cadeias de caracteres padrão, como "longdate" ou "month day".
 
 Mas quando quiser mais controle sobre a ordem e o formato dos componentes da cadeia de caracteres [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576) que deseja exibir, você pode usar uma sintaxe especial para o parâmetro de modelo da cadeia de caracteres, chamada"pattern". A sintaxe de padrões permite que você obtenha os componentes individuais de um objeto **DateTime**, como o nome do mês ou o ano, a fim de exibi-los em qualquer formato personalizado que você escolher. Além disso, o padrão pode ser traduzido para se adaptar a outros idiomas e países/regiões.
 
-**Observação** Esta é uma visão geral dos padrões de formato. Para saber mais sobre modelos e padrões de formato, consulte a seção Comentários da classe [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828).
+**Observação**  Esta é uma visão geral dos padrões de formato. Para saber mais sobre modelos e padrões de formato, consulte a seção Comentários da classe [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828).
 
  
 
@@ -103,7 +101,7 @@ Para resumir as diferenças entre os modelos de cadeia de caracteres padrão e p
 
 -   Representação abstrata de um formato de [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576) que inclui valores para o mês e o dia, em alguma ordem.
 -   Garante retornar um formato padrão válido em todos os valores da região de idioma com suporte do Windows.
--   Garante fornecer uma cadeia de caracteres formatada culturalmente de forma adequada  para a região de idioma determinada.
+-   Garante fornecer uma cadeia de caracteres formatada culturalmente de forma adequada para a região de idioma determinada.
 -   Nem todas as combinações de componentes são válidas. Por exemplo, não há modelo de cadeia de caracteres para "dayofweek dia".
 
 **Padrões de cadeias de caracteres, como "{month.full} {day.integer}":**
@@ -194,6 +192,6 @@ var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

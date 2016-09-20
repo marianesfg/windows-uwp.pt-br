@@ -37,13 +37,15 @@ Quando você usa um modelo do Visual Studio 2015 para criar o seu aplicativo, um
 
 4.  Para selecionar uma nova imagem de tela inicial para um aplicativo UWP, pressione o botão com reticências que aparece próximo ao rótulo **1240 x 600 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1240 x 600 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
 
-    **Importante**  A imagem de tela inicial que você escolher deve ter 620 x 300 pixels usando um fator de escala 1x. Além disso, ao projetar sua tela inicial, observe que ela é menor do que a tela e centralizada. Ela não preenche a tela como uma tela inicial de um aplicativo da Loja do Windows Phone faz.
+    
+            **Importante**  A imagem de tela inicial que você escolher deve ter 620 x 300 pixels usando um fator de escala 1x. Além disso, ao projetar sua tela inicial, observe que ela é menor do que a tela e centralizada. Ela não preenche a tela como uma tela inicial de um aplicativo da Loja do Windows Phone faz.
 
      
 
 5.  Para selecionar uma nova imagem de tela inicial para um aplicativo da Loja do Windows Phone, pressione o botão com reticências que aparece próximo ao rótulo **1152 x 1920 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1152 x 1920 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
 
-    **Importante**  A imagem de tela inicial que você escolher deve ter 1152 x 1920 pixels, que é o tamanho correto para um fator de escala 2,4x. Se esse for o único ativo que você fornecer, então, ele será reduzido para os fatores de dimensionamento 1,4 x e 1x.
+    
+            **Importante**  A imagem de tela inicial que você escolher deve ter 1152 x 1920 pixels, que é o tamanho correto para um fator de escala 2,4x. Se esse for o único ativo que você fornecer, então, ele será reduzido para os fatores de dimensionamento 1,4 x e 1x.
 
      
 

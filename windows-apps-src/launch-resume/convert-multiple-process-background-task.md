@@ -1,18 +1,28 @@
 ---
 author: TylerMSFT
-title: Convert a multi-process background task to a single-process background task
-description: Convert a background task that runs in a separate process into a background task that runs inside your foreground app process.
+title: "Converter uma tarefa em segundo plano de vários processos em uma tarefa em segundo plano de processo único"
+description: "Converta uma tarefa em segundo plano que é executada em um processo separado em uma tarefa em segundo plano que é executada em seu processo de aplicativo em primeiro plano."
+translationtype: Human Translation
+ms.sourcegitcommit: 2c34ca40d3c930254500477ab5a2e41e5206d823
+ms.openlocfilehash: e342667347cf3b89a5aa193495cbf7195263b276
+
 ---
 
-# Convert a multi-process background task to a single-process background task
+# Converter uma tarefa em segundo plano de vários processos em uma tarefa em segundo plano de processo único
 
-The simplest way to convert your multiple process background activity into single process is to bring your [IBackgroundTask.Run](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) method code inside your application and initiate it from [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).
+A maneira mais simples de converter sua atividade de segundo plano de vários processos em um único processo é trazer seu código de método [IBackgroundTask.Run](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) em seu aplicativo e iniciá-lo em [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).
 
-If your app has multiple background tasks, the [Background Activation Sample](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation) shows how you can use `BackgroundActivatedEventArgs.TaskInstance.Task.Name` to identify which task is being initiated.
+Se seu aplicativo tem várias tarefas em segundo plano, o [Exemplo de ativação em segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation) mostra como usar `BackgroundActivatedEventArgs.TaskInstance.Task.Name` para identificar qual tarefa está sendo iniciada.
 
-If you are currently communicating between background and foreground processes, you can remove that state management and communication code.
+Se você estiver atualmente se comunicando entre processos em primeiro e segundo planos, poderá remover esse código de comunicação e gerenciamento de estado.
 
-## Background tasks and trigger types that cannot be converted
+## Tarefas em segundo plano e tipos de gatilho que não podem ser convertidos
 
-* Single-process background tasks don't support activating a VoIP background task.
-* Single-process background tasks don't support the following triggers:  [DeviceUseTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) and **IoTStartupTask**
+* Tarefas em segundo plano de processo único não dão suporte à ativação de uma tarefa em segundo plano de VoIP.
+* Tarefas em segundo plano de processo único não dão suporte aos seguintes gatilhos: [DeviceUseTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) e **IoTStartupTask**
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

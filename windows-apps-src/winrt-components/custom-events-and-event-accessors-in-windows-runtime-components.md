@@ -27,7 +27,8 @@ Felizmente, os compiladores de Visual Basic e C# simplificam esse processo: quan
 
 O código a seguir do evento NumberChanged mostra o padrão básico de eventos UWP. Neste exemplo, o construtor do objeto de argumento do evento, NumberChangedEventArgs, utiliza um único parâmetro inteiro que representa o valor numérico alterado.
 
-> **Observação**  Esse é o mesmo padrão que os compiladores usam para eventos comuns que você declara em um componente do Tempo de Execução do Windows.
+> 
+            **Observação**  Esse é o mesmo padrão que os compiladores usam para eventos comuns que você declara em um componente do Tempo de Execução do Windows.
 
  
 > [!div class="tabbedCodeSnippets"]
@@ -95,7 +96,8 @@ O código a seguir do evento NumberChanged mostra o padrão básico de eventos U
 
 [!div class="tabbedCodeSnippets"] O método estático (compartilhado em Visual Basic) GetOrCreateEventRegistrationTokenTable cria a instância do evento do objeto EventRegistrationTokenTable&lt;T&gt; lentamente. Passe o campo de nível de classe que armazenará a instância da tabela de tokens para esse método. Caso o campo esteja vazio, o método cria a tabela, armazena uma referência à tabela no campo e retorna uma referência para a tabela.
 
-> Caso o campo já contenha uma referência à tabela de tokens, o método retorna apenas essa referência. **Importante**  Para garantir a segurança do thread, o campo que mantém a instância do evento de EventRegistrationTokenTable&lt;T&gt; deve ser um campo de nível de classe. Caso ele seja um campo de nível de classe, o método GetOrCreateEventRegistrationTokenTable garante que, quando vários threads tentam criar a tabela de tokens, todos os threads obtêm a mesma instância da tabela.
+> Caso o campo já contenha uma referência à tabela de tokens, o método retorna apenas essa referência. 
+            **Importante**  Para garantir a segurança do thread, o campo que mantém a instância do evento de EventRegistrationTokenTable&lt;T&gt; deve ser um campo de nível de classe. Caso ele seja um campo de nível de classe, o método GetOrCreateEventRegistrationTokenTable garante que, quando vários threads tentam criar a tabela de tokens, todos os threads obtêm a mesma instância da tabela.
 
 Para um determinado evento, todas as chamadas para o método GetOrCreateEventRegistrationTokenTable devem usar o mesmo campo de nível de classe.
 
@@ -106,9 +108,11 @@ Chamar o método GetOrCreateEventRegistrationTokenTable no acessador remove e no
 
     >A sobrecarga de método [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) remove o representante da tabela e da lista de invocações.
 
--   **Observação**  Os métodos AddEventHandler e RemoveEventHandler(EventRegistrationToken) bloqueiam a tabela para ajudar a garantir a segurança do thread. A propriedade [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) retorna um representante que inclui todos os manipuladores de eventos registrados no momento para manipular o evento.
+-   
+            **Observação**  Os métodos AddEventHandler e RemoveEventHandler(EventRegistrationToken) bloqueiam a tabela para ajudar a garantir a segurança do thread. A propriedade [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) retorna um representante que inclui todos os manipuladores de eventos registrados no momento para manipular o evento.
 
-    >Use esse representante para acionar o evento ou use os métodos da classe Delegate para invocar os manipuladores individualmente. **Observação**  Recomendamos seguir o padrão mostrado no exemplo fornecido anteriormente neste artigo e copiar o representante para uma variável temporária antes de chamá-lo. Isso evita uma condição de corrida em que um thread remove o último manipulador, o que reduz o representante para nulo antes de outro thread tentar invocar o representante.
+    >Use esse representante para acionar o evento ou use os métodos da classe Delegate para invocar os manipuladores individualmente. 
+            **Observação**  Recomendamos seguir o padrão mostrado no exemplo fornecido anteriormente neste artigo e copiar o representante para uma variável temporária antes de chamá-lo. Isso evita uma condição de corrida em que um thread remove o último manipulador, o que reduz o representante para nulo antes de outro thread tentar invocar o representante.
 
 Como os representantes são imutáveis, a cópia continua sendo válida. Coloque o próprio código nos acessadores conforme apropriado.
 

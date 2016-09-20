@@ -5,7 +5,6 @@ title: "Como criar controles personalizados de transporte de mídia"
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 5500f41b254b32b8d293181fba3acebbfffa90e7
 
@@ -16,7 +15,8 @@ MediaElement tem controles de transporte XAML personalizáveis para gerenciar o 
 
 Antes de começar, você deve estar familiarizado com as classes MediaElement e MediaTransportControls. Para obter mais informações, consulte o Guia do controle MediaElement. 
 
-> **Dica**
+> 
+            **Dica**
             &nbsp;&nbsp;Os exemplos neste tópico se baseiam na [Amostra de controles de transporte de mídia](http://go.microsoft.com/fwlink/p/?LinkId=620023). Você pode baixar a amostra para exibir e executar o código completo.
 
 <span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
@@ -27,7 +27,8 @@ Antes de começar, você deve estar familiarizado com as classes MediaElement e 
 
 ## Quando você deve personalizar o modelo?
 
-**MediaElement** tem controles de transporte internos que foram projetados para funcionar bem sem modificação na maioria dos aplicativos de reprodução de áudio e vídeo. Eles são fornecidos pela classe [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) e incluem botões para executar, parar e navegar na mídia, além de ajustar volume, alternar tela inteira, converter em um segundo dispositivo, habilitar legendas, alternar faixas de áudio e ajustar a taxa de reprodução. MediaTransportControls tem propriedades que permitem controlar se cada botão é mostrado e habilitado. Você também pode definir a propriedade [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.iscompact.aspx) para especificar se os controles são mostrados em uma linha ou duas.
+
+            **MediaElement** tem controles de transporte internos que foram projetados para funcionar bem sem modificação na maioria dos aplicativos de reprodução de áudio e vídeo. Eles são fornecidos pela classe [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) e incluem botões para executar, parar e navegar na mídia, além de ajustar volume, alternar tela inteira, converter em um segundo dispositivo, habilitar legendas, alternar faixas de áudio e ajustar a taxa de reprodução. MediaTransportControls tem propriedades que permitem controlar se cada botão é mostrado e habilitado. Você também pode definir a propriedade [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.iscompact.aspx) para especificar se os controles são mostrados em uma linha ou duas.
 
 No entanto, talvez haja cenários em que você precise personalizar ainda mais a aparência do controle ou alterar seu comportamento. Aqui estão alguns exemplos:
 - Altere os ícones, o comportamento do controle deslizante e as cores.
@@ -37,7 +38,8 @@ No entanto, talvez haja cenários em que você precise personalizar ainda mais a
 
 Você pode personalizar a aparência do controle modificando o modelo padrão. Para modificar o comportamento do controle ou adicionar novos comandos, você pode criar um controle personalizado derivado de MediaTransportControls.
 
->**Dica**
+>
+            **Dica**
             &nbsp;&nbsp;Os modelos de controle personalizáveis são um recurso avançado da plataforma XAML, mas também há consequências que você deve levar em consideração. Quando você personaliza um modelo, ele se torna uma parte estática de seu aplicativo e, portanto, não receberá as atualizações da plataforma feitas no modelo pela Microsoft. Se atualizações de modelo forem feitas pela Microsoft, você deverá pegar o novo modelo e modificá-lo novamente para obter os benefícios do modelo atualizado.
 
 ## Estrutura do modelo
@@ -47,14 +49,17 @@ O [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/win
 - A segunda seção define os diversos estados visuais que são usados pelos MediaTransportControls.
 - A terceira seção contém o [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) que contém vários elementos MediaTransportControls juntos e define o layout dos componentes.
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;Para obter mais informações sobre como modificar modelos, consulte [Modelos de controle](). Você pode usar um editor de texto ou editores semelhantes no IDE para abrir os arquivos XAML em \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic. O modelo e o estilo padrão para cada controle são definidos no arquivo **generic.xaml**. Você pode encontrar o modelo MediaTransportControls em generic.xaml procurando por "MediaTransportControls".
 
 Nas seguintes seções, você aprende a personalizar diversos dos principais elementos dos controles de transporte: 
-- [
+- 
+            [
               **Slider**
             ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): permite que um usuário navegue em sua mídia e também exibe o progresso
-- [
+- 
+            [
               **CommandBar**
             ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): contém todos os botões.
 Para obter mais informações, consulte a seção Anatomia do tópico de referência MediaTransportControls. 
@@ -178,7 +183,8 @@ Como o menu de estouro é composto de botões de texto, você deve adicionar um 
 </CommandBar.SecondaryCommands>
 ```
 
-> **Importante**
+> 
+            **Importante**
             &nbsp;&nbsp;Você ainda precisa deixar o botão visível e habilitá-lo para usá-lo no menu de estouro. Neste exemplo, o elemento PlaybackRateButton não permanece visível no menu de estouro, a menos que a propriedade IsPlaybackRateButtonVisible seja true. Ele não é habilitado, a menos que a propriedade IsPlaybackRateEnabled seja true. A definição dessas propriedades é mostrada na seção anterior.
 
 ### Adicionando um botão personalizado

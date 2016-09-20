@@ -3,8 +3,9 @@ author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
 title: "Árvore visual de composição"
 description: "Elementos visuais de composição compõem a estrutura da árvore visual que todos os outros recursos da API de composição usam e têm como referência. A API permite que os desenvolvedores definam e criem um ou vários objetos visuais, cada um representando um único nó em uma árvore visual."
+translationtype: Human Translation
 ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 61adc6a894c56c6cfd292d89d4cd5c4ba6b0d017
+ms.openlocfilehash: 0603939bb62b107a781cb3804bcf92aeac7a6155
 
 ---
 # Árvore visual de composição
@@ -17,18 +18,10 @@ Elementos visuais de composição compõem a estrutura da árvore visual que tod
 
 Há três tipos de elementos visuais que compõem a estrutura da árvore visual, além de uma classe de pincel de base com várias subclasses que afetam o conteúdo de um elemento visual:
 
--   [
-              **Visual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706858) – objeto base, a maioria das propriedades estão aqui e são herdadas por outros objetos visuais.
--   [
-              **ContainerVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706810) – deriva de [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) e adiciona a capacidade de criar filhos.
--   [
-              **SpriteVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589433) – deriva de [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e adiciona a capacidade de associar um pincel para que o elemento visual possa renderizar pixels, incluindo imagens, efeitos ou uma cor sólida.
--   [
-              **CompositionBrush**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589398) – permite a aplicação de um efeito ao conteúdo de um elemento visual. Há uma série de subclasses de CompositionBrush.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – objeto base, a maioria das propriedades está aqui e é herdada por outros objetos visuais.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – é derivado de [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) e adiciona a capacidade de criar filhos.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – é derivado de [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e adiciona a capacidade de associar um pincel para que o elemento visual possa renderizar pixels, incluindo imagens, efeitos ou uma cor sólida.
+-   [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) – permite a aplicação de um efeito ao conteúdo de um elemento visual. Há uma série de subclasses de CompositionBrush.
 
 ## Amostra CompositionVisual
 
@@ -45,15 +38,9 @@ Isso mostra uma série de conceitos básicos para trabalhar com a API, incluindo
 
 Na amostra, também há três elementos visuais diferentes no trabalho:
 
--   [
-              **Visual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706858) – objeto base, a maioria das propriedades estão aqui e são herdadas por outros objetos visuais.
--   [
-              **ContainerVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706810) – deriva de Visual e adiciona a capacidade de criar filhos.
--   [
-              **SpriteVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589433) – deriva do elemento visual e adiciona a capacidade de associar um pincel para que o elemento visual possa renderizar pixels, incluindo imagens, efeitos ou uma cor sólida.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – objeto base, a maioria das propriedades está aqui e é herdada por outros objetos visuais.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – é derivado de Visual e adiciona a capacidade de criar filhos.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – é derivado do elemento visual e adiciona a capacidade de associar um pincel para que o elemento visual possa renderizar pixels, incluindo imagens, efeitos ou uma cor sólida.
 
 Embora esta amostra não abranja conceitos como animações ou efeitos mais complexos, ela contém os blocos de construção que todos esses sistemas usam.
 
@@ -521,6 +508,6 @@ namespace compositionvisual
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

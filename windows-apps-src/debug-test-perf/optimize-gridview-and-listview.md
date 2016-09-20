@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: "Otimização da interface do usuário em ListView e GridView"
 description: "Melhore o desempenho e o tempo de inicialização em ListView e GridView por meio de virtualização da interface do usuário, redução de elementos e atualização progressiva de itens."
-translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
 ms.openlocfilehash: 362fbb6b733e855a2126196f12c650bdf2a7665d
 
@@ -27,7 +26,8 @@ Para o movimento panorâmico/rolagem suave, é essencial que o thread de interfa
 
 ## Virtualização de interface do usuário
 
-A virtualização da interface do usuário é o aprimoramento mais importante que você pode fazer. Isso significa que os elementos de interface do usuário que representam os itens são criados por demanda. Para uma associação de controle de itens para uma coleção de 1.000 itens, seria um desperdício de recursos criar a interface do usuário para todos os itens ao mesmo tempo, pois eles não podem ser todos exibidos ao mesmo tempo. [
+A virtualização da interface do usuário é o aprimoramento mais importante que você pode fazer. Isso significa que os elementos de interface do usuário que representam os itens são criados por demanda. Para uma associação de controle de itens para uma coleção de 1.000 itens, seria um desperdício de recursos criar a interface do usuário para todos os itens ao mesmo tempo, pois eles não podem ser todos exibidos ao mesmo tempo. 
+            [
               **ListView**
             ](https://msdn.microsoft.com/library/windows/apps/BR242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) (e outros controles derivados de [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) padrão) executam a virtualização de interface do usuário para você. Quando os itens estão quase sendo rolados para a exibição (a algumas páginas distância), a estrutura gera a interface do usuário para os itens e os armazena em cache. Quando torna-se improvável que os itens sejam mostrados novamente, a estrutura recupera a memória.
 
@@ -247,9 +247,12 @@ Em alguns aplicativos, você precisa ter diferentes interfaces do usuário para 
 
 **O evento ChoosingItemContainer**
 
-[
+
+            [
               **ChoosingItemContainer**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)  é um evento que permite que você forneça um item (**ListViewItem**/**GridViewItem**) to the [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) sempre que um novo item é necessário durante a inicialização ou a reciclagem. Você pode criar um contêiner com base no tipo de item de dados que o contêiner exibirá (mostrado no exemplo a seguir). **ChoosingItemContainer** é a melhor maneira de usar diferentes modelos de dados para itens diversificados. Contêiner em cache é algo que pode ser alcançado usando **ChoosingItemContainer**. Por exemplo, se você tiver cinco modelos diferentes, com um modelo ocorrendo uma ordem de magnitude com mais frequência do que os outros, então ChoosingItemContainer permite que você não apenas crie itens nas taxas necessárias, mas também mantenha uma quantidade adequada de elementos em cache e disponíveis para reciclagem. [
+            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)  é um evento que permite que você forneça um item (**ListViewItem**/**GridViewItem**) to the [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) sempre que um novo item é necessário durante a inicialização ou a reciclagem. Você pode criar um contêiner com base no tipo de item de dados que o contêiner exibirá (mostrado no exemplo a seguir). 
+            **ChoosingItemContainer** é a melhor maneira de usar diferentes modelos de dados para itens diversificados. Contêiner em cache é algo que pode ser alcançado usando **ChoosingItemContainer**. Por exemplo, se você tiver cinco modelos diferentes, com um modelo ocorrendo uma ordem de magnitude com mais frequência do que os outros, então ChoosingItemContainer permite que você não apenas crie itens nas taxas necessárias, mas também mantenha uma quantidade adequada de elementos em cache e disponíveis para reciclagem. 
+            [
               **ChoosingGroupHeaderContainer**
             ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) oferece as mesmas funcionalidades para cabeçalhos de grupo.
 

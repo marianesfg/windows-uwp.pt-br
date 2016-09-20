@@ -9,7 +9,7 @@ ms.assetid: 6E5F55D7-24D6-47CC-B457-B6231EDE2A71
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 02f06ee498b136f811b4b3b8080a9cb043693504
+ms.openlocfilehash: 692905c1c6d9b3d706baeadc480041c77163c272
 
 ---
 
@@ -36,8 +36,7 @@ Por exemplo, se uma caixa de texto for usada somente para a inserção de um PIN
 
 Os escopos de entrada disponíveis para seu aplicativo são membros da enumeração [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028). Você pode definir a propriedade **InputScope** de uma [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) ou [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548) para um desses valores.
 
-> **Importante**
-            &nbsp;&nbsp;A propriedade [**InputScope**](https://msdn.microsoft.com/library/windows/apps/dn996570) em [**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519) dá suporte apenas aos valores **Password** e **NumericPin**. Qualquer outro valor é ignorado.
+> **Importante**&nbsp;&nbsp;A propriedade [**InputScope**](https://msdn.microsoft.com/library/windows/apps/dn996570) em [**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519) dá suporte apenas aos valores **Password** e **NumericPin**. Qualquer outro valor é ignorado.
 
 Aqui, você altera o escopo de entrada de várias caixas de texto para corresponder aos dados esperados para cada caixa de texto.
 
@@ -118,34 +117,25 @@ phoneNumberTextBox.InputScope = new InputScope()
 
 Os controles [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) e [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548) têm várias propriedades que influenciam o comportamento do SIP. Para fornecer a melhor experiência para seus usuários, é importante entender como essas propriedades afetam a entrada de texto usando toque.
 
--   [
-              **IsSpellCheckEnabled**
-            ](https://msdn.microsoft.com/library/windows/apps/br209688)— Quando a verificação ortográfica está habilitada para um controle de texto, o controle interage com o mecanismo de verificação ortográfica do sistema para marcar palavras não reconhecidas. Você pode tocar em uma palavra para ver uma lista de correções sugeridas. A verificação ortográfica é habilitada por padrão.
+-   [**IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/br209688)— Quando a verificação ortográfica está habilitada para um controle de texto, o controle interage com o mecanismo de verificação ortográfica do sistema para marcar palavras não reconhecidas. Você pode tocar em uma palavra para ver uma lista de correções sugeridas. A verificação ortográfica é habilitada por padrão.
 
     Para o escopo de entrada **Default**, essa propriedade também habilita o uso automático de maiúsculas da primeira palavra em uma frase e a correção automática das palavras conforme você digita. Esses recursos de correção automática podem estar desabilitados em outros escopos de entrada. Para saber mais, consulte as tabelas mais adiante neste tópico.
 
--   [
-              **IsTextPredictionEnabled**
-            ](https://msdn.microsoft.com/library/windows/apps/br209690) — Quando a previsão de texto está habilitada para um controle de texto, o sistema mostra uma lista de palavras que você pode estar começando a digitar. Você pode selecionar na lista para não precisar digitar a palavra inteira. A previsão de texto é habilitada por padrão.
+-   [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690) — Quando a previsão de texto está habilitada para um controle de texto, o sistema mostra uma lista de palavras que você pode estar começando a digitar. Você pode selecionar na lista para não precisar digitar a palavra inteira. A previsão de texto é habilitada por padrão.
 
     A previsão de texto poderá estar desabilitada se o escopo de entrada for diferente de **Default**, mesmo se a propriedade [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690) for **true**. Para saber mais, consulte as tabelas mais adiante neste tópico.
 
-    **Observação**
-            &nbsp;&nbsp;Na família de dispositivos móveis, as previsões de texto e as correções ortográficas são mostradas no SIP na área acima do teclado. Se [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690) for definido como **false**, essa parte do SIP ficará oculta e a correção automática estará desabilitada, mesmo se [**IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/br209688) for **true**.
+    **Observação**&nbsp;&nbsp;Na família de dispositivos móveis, as previsões de texto e as correções ortográficas são mostradas no SIP na área acima do teclado. Se [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690) for definido como **false**, essa parte do SIP ficará oculta e a correção automática estará desabilitada, mesmo se [**IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/br209688) for **true**.
 
--   [
-              **PreventKeyboardDisplayOnProgrammaticFocus**
-            ](https://msdn.microsoft.com/library/windows/apps/dn299273) — Quando essa propriedade for **true**, isso impedirá que o sistema mostre o SIP quando o foco for definido programaticamente em um controle de texto. Em vez disso, o teclado só será mostrado quando o usuário interagir com o controle.
+-   [**PreventKeyboardDisplayOnProgrammaticFocus**](https://msdn.microsoft.com/library/windows/apps/dn299273) — Quando essa propriedade for **true**, impedirá que o sistema mostre o SIP quando o foco for definido programaticamente em um controle de texto. Em vez disso, o teclado só será mostrado quando o usuário interagir com o controle.
 
 ## Índice de teclado virtual para o Windows e o Windows Phone
 
 Estas tabelas mostram os layouts do SIP (Soft Input Panel) em dispositivos móveis e desktops para valores de escopo de entrada comuns. O efeito do escopo de entrada sobre os recursos habilitados pelas propriedades **IsSpellCheckEnabled** e **IsTextPredictionEnabled** é listado para cada escopo de entrada. Esta não é uma lista abrangente de escopos de entrada disponíveis.
 
-> **Observação**
-            &nbsp;&nbsp;O tamanho menor do SIP em dispositivos móveis faz com que seja particularmente importante para os aplicativos móveis que você defina o escopo de entrada correto. Como mostramos aqui, o Windows Phone fornece uma variedade maior de layouts de teclado especializados. Um campo de texto que não precisa ter seu escopo de entrada definido em um aplicativo da Windows Store pode se beneficiar de tê-lo definido em um aplicativo da Loja do Windows Phone.
+> **Observação**&nbsp;&nbsp;O tamanho menor do SIP em dispositivos móveis faz com que seja particularmente importante para os aplicativos móveis que você defina o escopo de entrada correto. Como mostramos aqui, o Windows Phone fornece uma variedade maior de layouts de teclado especializados. Um campo de texto que não precisa ter seu escopo de entrada definido em um aplicativo da Windows Store pode se beneficiar de tê-lo definido em um aplicativo da Loja do Windows Phone.
 
-> **Dica**
-            &nbsp;&nbsp;Você pode alternar a maioria dos teclados virtuais entre um layout alfabético e um layout de números e símbolos. No Windows, alterne a tecla **&123**. No Windows Phone, pressione a tecla **&123** para mudar para o layout de números e símbolos e pressione a tecla **abcd** para mudar para o layout alfabético.
+> **Dica**&nbsp;&nbsp;Você pode alternar a maioria dos teclados virtuais entre um layout alfabético e um layout de números e símbolos. No Windows, alterne a tecla **&123**. No Windows Phone, pressione a tecla **&123** para mudar para o layout de números e símbolos e pressione a tecla **abcd** para mudar para o layout alfabético.
 
 ### Padrão
 
@@ -243,7 +233,7 @@ Inclui a tecla **=**.
 
 | Windows                                                    | Windows Phone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
-| ![Teclado virtual do Windows para números de telefone](images/input-scopes/kbdpcformula.png)<br>Também inclui as teclas **%**, **$** e **+**.| ![Teclado virtual do Windows Phone para fórmula](images/input-scopes/kbdwpformula.png)<br>Pressione e segure a tecla de ponto para exibir opções adicionais ( - ! ? , ). Pressione e segure a tecla **=** para exibir opções adicionais ( ( ) : &lt;&gt; ). |
+| ![Teclado virtual do Windows para números de telefone](images/input-scopes/kbdpcformula.png)<br>Também inclui as teclas **%**, **$** e **+**.| ![Teclado virtual do Windows Phone para fórmula](images/input-scopes/kbdwpformula.png)<br>Pressione e segure a tecla de ponto para exibir opções adicionais ( - ! ? , ). Pressione e segure a tecla **=** para exibir opções adicionais ( ( ) : &lt; &gt; ). |
 |Disponibilidade de recursos:<ul><li>Verificação ortográfica: desativada por padrão, pode ser habilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> | Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: ativada por padrão, pode ser desabilitada</li><li>Capitalização automática: sempre desabilitada</li><li>Previsão de texto: ativada por padrão, pode ser desabilitada</li></ul> |
 
 ### Chat
@@ -266,6 +256,6 @@ Inclui a tecla **=**.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

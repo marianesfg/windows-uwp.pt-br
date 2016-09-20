@@ -3,7 +3,6 @@ author: jwmsft
 description: "Você pode usar a classe PropertyPath e a sintaxe de cadeia de caracteres para instanciar um valor PropertyPath em XAML ou em código."
 title: Sintaxe de Property-path'
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 0b1851bc9d19de5b678f8c6c3a255c0ba3057a85
 
@@ -13,7 +12,8 @@ ms.openlocfilehash: 0b1851bc9d19de5b678f8c6c3a255c0ba3057a85
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Você pode usar a classe [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) e a sintaxe de cadeia de caracteres para instanciar um valor **PropertyPath** vem XAML ou em código. Valores **PropertyPath** são usados por vinculação de dados. Uma sintaxe semelhante é usada para direcionar animações em storyboard. Porém, o direcionamento da animação não cria valores de sintaxe de Property-path subjacentes, mas mantém as informações como uma cadeia de caracteres. Nos dois cenários, um caminho de propriedade descreve uma passagem de uma ou mais relações objeto-propriedade que eventualmente são resolvidas para uma única propriedade.
+Você pode usar a classe [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) e a sintaxe de cadeia de caracteres para instanciar um valor **PropertyPath** vem XAML ou em código. 
+            Valores **PropertyPath** são usados por vinculação de dados. Uma sintaxe semelhante é usada para direcionar animações em storyboard. Porém, o direcionamento da animação não cria valores de sintaxe de Property-path subjacentes, mas mantém as informações como uma cadeia de caracteres. Nos dois cenários, um caminho de propriedade descreve uma passagem de uma ou mais relações objeto-propriedade que eventualmente são resolvidas para uma única propriedade.
 
 Você pode definir uma cadeia de caracteres de caminho de propriedade a um atributo em XAML. Você pode usar a mesma sintaxe de cadeia de caracteres para construir um [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) que define uma [**Associação**](https://msdn.microsoft.com/library/windows/apps/br209820) em código ou definir um destino de animação em código usando [**SetTargetProperty**](https://msdn.microsoft.com/library/windows/apps/br210503). Há duas áreas de recurso diferentes no Windows Runtime que usam um caminho de propriedade: vinculação de dados e direcionamento de animação. O direcionamento da animação não cria valores de sintaxe de Property-path subjacentes na implementação do Tempo de Execução do Windows; ele mantém as informações como uma cadeia de caracteres, mas os conceitos de passagem objeto-propriedade são bastante semelhantes. A vinculação de dados e o direcionamento da animação avaliam um caminho de propriedade de maneira um pouco diferente, então vamos descrever a sintaxe do caminho de propriedade separadamente para cada um.
 
@@ -51,7 +51,8 @@ Um caminho de propriedade para vinculação de dados pode incluir referências a
 
 Por exemplo, considere um objeto comercial em que haja uma lista de "Times" (lista ordenada), cada uma tendo um dicionário de "Jogadores" onde cada jogador é citado pelo último nome. Um exemplo de caminho de propriedade para um jogador específico no segundo time é: "Times\[1\].Jogadores\[Smith\]". (Você usa 1 para indicar o segundo item em "Times" porque a lista é indexada com zero.)
 
-**Observação**  Indexar suporte para fontes de dados C++ é limitado, consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
+
+            **Observação**  Indexar suporte para fontes de dados C++ é limitado, consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### Propriedades anexadas
 
@@ -89,7 +90,8 @@ Por exemplo, para especificar que você deseja animar a primeira cor de interrup
 
 Não é comum, mas é possível animar uma propriedade anexada, desde que ela tenha um valor de propriedade que corresponda a um tipo de animação. Como o nome que identifica uma propriedade anexada já inclui um ponto, todos os nomes de propriedades anexadas devem estar entre parênteses para que o ponto não seja tratado como uma etapa de objeto-propriedade. Por exemplo, a cadeia de caracteres para especificar que você quer animar a propriedade anexada [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) em um objeto, use o caminho de propriedade "(Grid.Row)".
 
-**Observação**  Nesse exemplo, o valor de [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) é um tipo de propriedade **Int32**. então, você não pode animá-lo com uma animação **Double**. Em vez disso, você definiria um [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tem componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132), onde o [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) é definido como um inteiro como "0" ou "1".
+
+            **Observação**  Nesse exemplo, o valor de [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) é um tipo de propriedade **Int32**. então, você não pode animá-lo com uma animação **Double**. Em vez disso, você definiria um [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tem componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132), onde o [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) é definido como um inteiro como "0" ou "1".
 
 ## Regras para as propriedades em um caminho de propriedade de direcionamento de animação
 
@@ -104,7 +106,8 @@ A classe [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br24
 
 Na maioria das vezes, é possível aplicar um [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) em XAML sem usar nenhum código. Mas, em alguns casos, pode ser que você queria definir um objeto **PropertyPath** usando um código e atribuí-lo a uma propriedade em tempo de execução.
 
-[
+
+            [
               **PropertyPath**
             ](https://msdn.microsoft.com/library/windows/apps/br244259) tem um construtor [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261), mas não tem um construtor padrão. A cadeia de caracteres que você passa para esse construtores é definida usando uma sintaxe de caminho de propriedade, como explicado anteriormente. Ela também é a mesma cadeia de caracteres que você usaria para atribuir [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) como atributo XAML. O único outro API da classe **PropertyPath** na propriedade [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260), que é somente para leitura. Você poderia usar essa propriedade como a cadeia de caracteres de construção para outra instância **PropertyPath**.
 

@@ -3,7 +3,6 @@ author: mtoepke
 title: "Oferecendo suporte à orientação de tela (DirectX e C++)"
 description: "Abordaremos neste documento as práticas recomendadas para controlar a rotação da tela no aplicativo UWP DirectX, para que o hardware gráfico do dispositivo Windows 10 seja usado de forma eficiente e eficaz."
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 8da32494e0bb0bd48d485c946df1c9a5baec7fbe
 
@@ -22,7 +21,7 @@ Para aplicativos UWP DirectX, o objeto [**DisplayInformation**](https://msdn.mic
 
 O Windows 10 define quatro modos de orientação de exibição específicos:
 
--   Paisagem - a orientação de exibição padrão para o Windows 10 e é considerada o ângulo base ou de identificação da rotação (0 graus).
+-   Paisagem - a orientação de exibição padrão para o Windows10 e é considerada o ângulo base ou de identificação da rotação (0 graus).
 -   Retrato - o vídeo tem que ser girado no sentido horário 90 graus (ou sentido anti-horário 270 graus).
 -   Paisagem, invertida - o tela foi girada 180 graus (virada de cabeça para baixo).
 -   Retrato invertido - o vídeo foi girado no sentido horário a 270 graus (ou no sentido anti-horário a 90 graus).
@@ -344,7 +343,8 @@ Nesse processo, você está trabalhando um pouco mais do que trabalharia se simp
 
     A matriz correta é selecionada com base nos dados fornecidos pelo Windows 10 (como os resultados do [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)) para determinar a orientação da exibição, e ela será multiplicada pelas coordenadas de cada pixel (Direct2D) ou vértice (Direct3D) na cena, girando-as efetivamente para se alinhar à orientação da tela. (Note que no Direct2D, a origem da tela é definida como o canto superior esquerdo, enquanto em Direct3D a origem é definida como o centro lógico da janela.)
 
-> **Observação**   Para obter mais informações sobre as transformações 2-D usadas para rotação e como defini-las, consulte [Definindo as matrizes para a rotação da tela (2-D)](#defining_matrices_2d). Para obter mais informações sobre as transformações 3-D usadas para rotação, veja [Definindo as matrizes para a rotação da tela (3-D)](#defining_matrices_3d).
+> 
+            **Observação**   Para obter mais informações sobre as transformações 2-D usadas para rotação e como defini-las, consulte [Definindo as matrizes para a rotação da tela (2-D)](#defining_matrices_2d). Para obter mais informações sobre as transformações 3-D usadas para rotação, veja [Definindo as matrizes para a rotação da tela (3-D)](#defining_matrices_3d).
 
  
 
@@ -377,7 +377,7 @@ CoreWindowResizeManager^ resizeManager = Windows::UI::Core::CoreWindowResizeMana
 resizeManager->NotifyLayoutCompleted();
 ```
 
-Quando um usuário gira a orientação do vídeo, o Windows 10 mostra uma animação independente de seu aplicativo como feedback para o usuário. Existem três partes para essa animação que ocorrem na seguinte ordem:
+Quando um usuário gira a orientação do vídeo, o Windows10 mostra uma animação independente de seu aplicativo como feedback para o usuário. Existem três partes para essa animação que ocorrem na seguinte ordem:
 
 -   O Windows 10 reduz a imagem original.
 -   O Windows 10 mantém a imagem durante tempo que leva para recriar um novo layout. Esse é o período que você gostaria de reduzir, porque seu aplicativo provavelmente não precisará dele inteiro.
@@ -446,7 +446,8 @@ default:
 
 Depois que você tiver a matriz e a origem de rotação corretas para a imagem 2D, a defina com uma chamada para [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) entre suas chamadas para [**ID2D1DeviceContext::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371768) e [**ID2D1DeviceContext::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371924).
 
-**Aviso**   O Direct2D não tem uma pilha de transformação. Se o seu aplicativo também estiver usando o [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) como parte de seu código de desenho, essa matriz precisa ser multiplicada posteriormente em qualquer outra transformação que você tenha aplicado.
+
+            **Aviso**   O Direct2D não tem uma pilha de transformação. Se o seu aplicativo também estiver usando o [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) como parte de seu código de desenho, essa matriz precisa ser multiplicada posteriormente em qualquer outra transformação que você tenha aplicado.
 
  
 

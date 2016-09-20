@@ -3,7 +3,6 @@ author: mtoepke
 title: "Referência de GLSL para HLSL"
 description: "Porte seu código GLSL (OpenGL Shader Language) para código Microsoft HLSL (High Level Shader Language) ao portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11 para criar um jogo para a UWP (Plataforma Universal do Windows)."
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
-translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
 ms.openlocfilehash: 02a3ba1768b6fa7b09b6c9f637a72d88c0cef604
 
@@ -69,7 +68,8 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left">Modificadores de armazenamento de [variável](#variables)</td>
+<td align="left">
+            Modificadores de armazenamento de [variável](#variables)</td>
 <td align="left">Buffers constantes e transferências de dados via declarações de layout de entrada</td>
 </tr>
 <tr class="even">
@@ -81,11 +81,13 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 </tr>
 <tr class="odd">
 <td align="left">texture2D [Function]</td>
-<td align="left">[texture.Sample](https://msdn.microsoft.com/library/windows/desktop/bb509695) [datatype.Function]</td>
+<td align="left">
+            [texture.Sample](https://msdn.microsoft.com/library/windows/desktop/bb509695) [datatype.Function]</td>
 </tr>
 <tr class="even">
 <td align="left">sampler2D [datatype]</td>
-<td align="left">[Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) [datatype]</td>
+<td align="left">
+            [Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) [datatype]</td>
 </tr>
 <tr class="odd">
 <td align="left">Matrizes da linha principal (padrão)</td>
@@ -106,7 +108,8 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 
  
 
-> **Observação**  O HLSL tem texturas e amostras como dois objetos separados. No GLSL, assim como no Direct3D 9, a associação de textura faz parte do estado da amostra.
+> 
+            **Observação**  O HLSL tem texturas e amostras como dois objetos separados. No GLSL, assim como no Direct3D 9, a associação de textura faz parte do estado da amostra.
 
  
 

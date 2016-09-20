@@ -3,7 +3,6 @@ author: mtoepke
 title: "Adicionando conteúdo visual ao exemplo do Marble Maze"
 description: "Este documento descreve como o jogo Marble Maze usa Direct3D e Direct2D no ambiente do aplicativo da Plataforma Universal do Windows (UWP) para que você aprenda e adapte os parâmetros quando trabalhar com o conteúdo do seu próprio jogo."
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 16eb493595bbac4f15ed0e755258104693dfba05
 
@@ -29,7 +28,8 @@ Também nos concentramos primeiro em adicionar ativos 3D e, em seguida, ativos 2
 
 Também precisamos repetir algumas dessas etapas várias vezes durante o processo de desenvolvimento. Por exemplo, conforme fazíamos mudanças aos modelos de malha e de bola de gude, também tivemos que mudar parte do código de sombreador que dá suporte a tais modelos.
 
-> **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
+> 
+            **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 Seguem alguns dos principais pontos discutidos neste documento para quando você trabalhar com DirectX e conteúdo visual de jogos, ou seja, quando inicializar as bibliotecas de elementos gráficos do DirectX, carregar recursos de cena e atualizar e renderizar a cena.
@@ -52,10 +52,14 @@ O Marble Maze usa o Direct3D 11.1 para renderizar os ativos de jogo 3D, ou seja,
 
 O processo de desenvolvimento de jogos requer planejamento. Se você não conhecer o elementos gráficos do DirectX, pode ler Creating a DirectX game para familiarizar-se com os conceitos básicos da criação de um jogo DirectX UWP. Ao ler esse documento e trabalhar com o código-fonte do Marble Maze, você pode consultar os seguintes recursos para obter informações mais detalhadas sobre elementos gráficos DirectX.
 
--   [Elementos gráficos Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080) Descreve o Direct3D 11, uma poderosa API de elementos gráficos 3D com aceleração de hardware para a renderização da geometria 3D na plataforma Windows.
--   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) Descreve o Direct2D, uma API de elementos gráficos 2D com aceleração de hardware que fornece alto desempenho e renderização de alta qualidade para geometria 2D, bitmaps e texto.
--   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) Descreve a DirectWrite, que dá suporte à renderização de texto de alta qualidade.
--   [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902) Descreve o WIC, uma plataforma extensível que fornece uma API de baixo nível para imagens digitais.
+-   
+            [Elementos gráficos Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080) Descreve o Direct3D 11, uma poderosa API de elementos gráficos 3D com aceleração de hardware para a renderização da geometria 3D na plataforma Windows.
+-   
+            [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) Descreve o Direct2D, uma API de elementos gráficos 2D com aceleração de hardware que fornece alto desempenho e renderização de alta qualidade para geometria 2D, bitmaps e texto.
+-   
+            [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) Descreve a DirectWrite, que dá suporte à renderização de texto de alta qualidade.
+-   
+            [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902) Descreve o WIC, uma plataforma extensível que fornece uma API de baixo nível para imagens digitais.
 
 ### Níveis de recursos
 
@@ -247,7 +251,8 @@ DX::ThrowIfFailed(
 
 O método **DeviceResources::CreateWindowSizeDependentResources** inicializa os recursos de elementos gráficos de forma que funcione para a maioria dos jogos.
 
-> **Observação**   O termo *exibição* tem significados diferentes no Windows Runtime e no Direct3D. No Windows Runtime, uma exibição refere-se ao conjunto de configurações de interface do usuário para um aplicativo, incluindo a área de exibição e os comportamentos de entrada, além do thread utilizado para processamento. Você pode especificar as configurações necessárias ao criar uma exibição. O processo de configurar uma exibição de aplicativo é descrito em [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md). No Direct3D, o termo exibição tem vários significados. Em primeiro lugar, uma exibição de recurso define os sub-recursos que um recurso pode acessar. Por exemplo, quando um objeto de textura está associado a uma exibição de recurso de sombreador, esse sombreador pode acessar a textura mais tarde. Uma das vantagens de uma exibição de recurso é que você pode interpretar os dados de diferentes maneiras em diferentes estágios no pipeline de renderização. Para saber mais sobre exibições de recursos, consulte [Exibições de textura (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb205128). Quando usada no contexto de uma transformação de exibição ou de uma matriz de transformação de exibição, uma exibição refere-se à localização e à orientação da câmara. Uma transformação de exibição realoca objetos ao redor da posição e da orientação da câmera. Para saber mais sobre transformações de exibição, consulte [Transformação de exibição (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb206342). Como o Marble Maze usa exibições de matriz e recurso é descrito com mais detalhes neste tópico.
+> 
+            **Observação**   O termo *exibição* tem significados diferentes no Windows Runtime e no Direct3D. No Windows Runtime, uma exibição refere-se ao conjunto de configurações de interface do usuário para um aplicativo, incluindo a área de exibição e os comportamentos de entrada, além do thread utilizado para processamento. Você pode especificar as configurações necessárias ao criar uma exibição. O processo de configurar uma exibição de aplicativo é descrito em [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md). No Direct3D, o termo exibição tem vários significados. Em primeiro lugar, uma exibição de recurso define os sub-recursos que um recurso pode acessar. Por exemplo, quando um objeto de textura está associado a uma exibição de recurso de sombreador, esse sombreador pode acessar a textura mais tarde. Uma das vantagens de uma exibição de recurso é que você pode interpretar os dados de diferentes maneiras em diferentes estágios no pipeline de renderização. Para saber mais sobre exibições de recursos, consulte [Exibições de textura (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb205128). Quando usada no contexto de uma transformação de exibição ou de uma matriz de transformação de exibição, uma exibição refere-se à localização e à orientação da câmara. Uma transformação de exibição realoca objetos ao redor da posição e da orientação da câmera. Para saber mais sobre transformações de exibição, consulte [Transformação de exibição (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb206342). Como o Marble Maze usa exibições de matriz e recurso é descrito com mais detalhes neste tópico.
 
  
 
@@ -304,7 +309,8 @@ protected:
 
 Ao fornecer uma classe de base comum para elementos de interface do usuário, a classe **UserInterface**, que gerencia a interface do usuário, precisa apenas armazenar uma coleção de objetos **ElementBase**, o que simplifica o gerenciamento de interface do usuário que é reutilizável. O Marble Maze define tipos que derivam do **ElementBase** que implementam comportamentos específicos do jogo. Por exemplo, **HighScoreTable** define o comportamento da tabela de recordes. Para saber mais sobre esses tipos, vá ao código-fonte.
 
-> **Observação**   Devido ao XAML permitir que você crie mais facilmente interfaces do usuário complexas, como as encontradas em jogos de simulação e estratégia, considere usar ou não o XAML para definir a sua interface do usuário. Para obter informações sobre como desenvolver uma interface do usuário em XAML em um jogo DirectX da UWP, consulte [Estender a amostra do jogo (Windows)](tutorial-resources.md). Este documento refere-se à amostra do jogo de tiro 3D do DirectX.
+> 
+            **Observação**   Devido ao XAML permitir que você crie mais facilmente interfaces do usuário complexas, como as encontradas em jogos de simulação e estratégia, considere usar ou não o XAML para definir a sua interface do usuário. Para obter informações sobre como desenvolver uma interface do usuário em XAML em um jogo DirectX da UWP, consulte [Estender a amostra do jogo (Windows)](tutorial-resources.md). Este documento refere-se à amostra do jogo de tiro 3D do DirectX.
 
  
 
@@ -376,7 +382,8 @@ float4 main(sPSInput input) : SV_TARGET
 }
 ```
 
-> **Cuidado**  O sombreador de pixel compilado contém 32 instruções aritméticas e 1 instrução de textura. Esse sombreador terá um bom desempenho em desktops e em tablets modernos. No entanto, um computador mais simples pode não ser capaz de processar esse sombreador e ainda fornecer uma taxa de quadros interativa. Considere o hardware típico de seu público alvo e projete seus sombreadores para atender às capacidades do mesmo.
+> 
+            **Cuidado**  O sombreador de pixel compilado contém 32 instruções aritméticas e 1 instrução de textura. Esse sombreador terá um bom desempenho em desktops e em tablets modernos. No entanto, um computador mais simples pode não ser capaz de processar esse sombreador e ainda fornecer uma taxa de quadros interativa. Considere o hardware típico de seu público alvo e projete seus sombreadores para atender às capacidades do mesmo.
 
  
 
@@ -440,7 +447,8 @@ sPSInput main(sVSInput input)
 
 O documento [Semantics](https://msdn.microsoft.com/library/windows/desktop/bb509647) descreve cada semântica disponível com mais detalhes.
 
-> **Observação**   Em um layout, você pode especificar componentes adicionais que não são usados para habilitar vários sombreadores para compartilhar o mesmo layout. Por exemplo, o elemento **TANGENT** não é usado pelo sombreador. Você pode usar o elemento **TANGENT** se quiser testar técnicas como mapeamento normal. Usando o mapeamento de normais, também conhecido como mapeamento de impacto, você pode criar o efeito de impactos nas superfícies de objetos. Para saber mais sobre o mapeamento de impacto, consulte [Mapeamento de impacto (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb172379).
+> 
+            **Observação**   Em um layout, você pode especificar componentes adicionais que não são usados para habilitar vários sombreadores para compartilhar o mesmo layout. Por exemplo, o elemento **TANGENT** não é usado pelo sombreador. Você pode usar o elemento **TANGENT** se quiser testar técnicas como mapeamento normal. Usando o mapeamento de normais, também conhecido como mapeamento de impacto, você pode criar o efeito de impactos nas superfícies de objetos. Para saber mais sobre o mapeamento de impacto, consulte [Mapeamento de impacto (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb172379).
 
  
 
@@ -514,9 +522,11 @@ O Marble Maze usa o SDK-Mesh como formato do tempo de execução porque esse for
 
 O método **MarbleMaze::LoadDeferredResources** carrega dados de malha depois de carregar sombreadores de pixel e vértice. Uma malha é uma coleção de dados de vértice que muitas vezes inclui informações como posições, dados de normais, cores, materiais e coordenadas de textura. Malhas são tipicamente criadas em softwares de autoria de 3D e mantidos em arquivos que são separados do código do aplicativo. A bola de gude e o labirinto são dois exemplos de malhas que o jogo usa.
 
-O Marble Maze usa a classe **SDKMesh** para carregar as malhas 3D para o labirinto e a bola de gude. Essa classe está declarada no SDKMesh.h. O **SDKMesh** fornece métodos de carregar, renderizar e destruir dados de malha.
+O Marble Maze usa a classe **SDKMesh** para carregar as malhas 3D para o labirinto e a bola de gude. Essa classe está declarada no SDKMesh.h. 
+            O **SDKMesh** fornece métodos de carregar, renderizar e destruir dados de malha.
 
-> **Importante**   O Marble Maze usa o formato SDK-Mesh e fornece a classe **SDKMesh** somente para ilustração. Apesar de o formato SDK-Mesh ser útil para o aprendizado e para a criação de protótipos, é um formato muito básico que pode não atender às exigências da maior parte do desenvolvimento de jogos. Recomendamos que você use um formato de malha que atenda às exigências específicas do seu jogo.
+> 
+            **Importante**   O Marble Maze usa o formato SDK-Mesh e fornece a classe **SDKMesh** somente para ilustração. Apesar de o formato SDK-Mesh ser útil para o aprendizado e para a criação de protótipos, é um formato muito básico que pode não atender às exigências da maior parte do desenvolvimento de jogos. Recomendamos que você use um formato de malha que atenda às exigências específicas do seu jogo.
 
  
 
@@ -731,7 +741,8 @@ Antes de renderizar os objetos de cena, execute as seguintes etapas para prepara
 2.  Defina os sombreadores de vértice e pixel como os sombreadores atuais.
 3.  Atualize todos os buffers constantes com dados que você tenha para passar os sombreadores.
 
-> **Importante**  O Marble Maze usa um par de sombreadores de vértice e pixel para todos os objetos 3D. Se o seu jogo usar mais de um par de sombreadores, você deverá realizar essas etapas sempre que desenhar objetos que usam sombreadores diferentes. Para reduzir a sobrecarga associada à mudança do estado do sombreador, convém agrupar as chamadas de renderização para todos os objetos que usam os mesmos sombreadores.
+> 
+            **Importante**  O Marble Maze usa um par de sombreadores de vértice e pixel para todos os objetos 3D. Se o seu jogo usar mais de um par de sombreadores, você deverá realizar essas etapas sempre que desenhar objetos que usam sombreadores diferentes. Para reduzir a sobrecarga associada à mudança do estado do sombreador, convém agrupar as chamadas de renderização para todos os objetos que usam os mesmos sombreadores.
 
  
 

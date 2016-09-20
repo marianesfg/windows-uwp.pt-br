@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Device Portal para HoloLens
 description: "Saiba como o Windows Device Portal para HoloLens permite que você configure e gerencie seu dispositivo HoloLens remotamente."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: bd1ae8ccdd81f319fc36ca04b8b839cb313b2854
 
@@ -23,7 +22,8 @@ ms.openlocfilehash: bd1ae8ccdd81f319fc36ca04b8b839cb313b2854
 4. Selecione item de menu **Atualização**.
 5. Selecione o item de menu **Para desenvolvedores**.
 6. Habilite o **Modo de Desenvolvedor**.
-7. [Role para baixo](https://dev.windows.com/holographic/Gestures.html#Navigation) e habilite o Device Portal.
+7. 
+            [Role para baixo](https://dev.windows.com/holographic/Gestures.html#Navigation) e habilite o Device Portal.
 
 
 ### Emparelhar seu dispositivo
@@ -84,36 +84,60 @@ Cada HoloLens gera um certificado autoassinado exclusivo para sua conexão SSL. 
 A sessão do Device Portal é iniciada na home page. Acesse outras páginas a partir da barra de navegação no lado esquerdo da página inicial.
 
 A barra de ferramentas na parte superior da página fornece acesso a recursos e status normalmente usados.
-- **Online**: indica se o dispositivo está conectado ao Wi-Fi.
-- **Desligar**: desativa o dispositivo.
-- **Reiniciar**: repete o ciclo de energia no dispositivo.
-- **Segurança**: abre a página Device Security.
-- **Frio**: indica a temperatura do dispositivo.
-- **A/C**: indica se o dispositivo está conectado e carregando.
-- **Ajuda**: abre a página de documentação de interface REST.
+- 
+            **Online**: indica se o dispositivo está conectado ao Wi-Fi.
+- 
+            **Desligar**: desativa o dispositivo.
+- 
+            **Reiniciar**: repete o ciclo de energia no dispositivo.
+- 
+            **Segurança**: abre a página Device Security.
+- 
+            **Frio**: indica a temperatura do dispositivo.
+- 
+            **A/C**: indica se o dispositivo está conectado e carregando.
+- 
+            **Ajuda**: abre a página de documentação de interface REST.
 
 A página inicial mostra as seguintes informações:
-- **Status do Dispositivo**: monitora a integridade do dispositivo e relata erros críticos.
-- **Informações do Windows**: mostra o nome do HoloLens e a versão do Windows instalada atualmente.
-- A seção **Preferências** contém as seguintes configurações:
-    - **IPD**: define a DIP (distância interpupilar), que é a distância, em milímetros, entre o centro das pupilas do usuário quando ele olha para a frente. A configuração entra em vigor imediatamente. O valor padrão é calculado automaticamente quando você configura seu dispositivo.
-    - **Nome do dispositivo**: atribua um nome para o HoloLens. Você deve reinicializar o dispositivo depois de alterar esse valor para que ele entre em vigor. Depois de clicar em Salvar, uma caixa de diálogo perguntará se você deseja reiniciar o dispositivo imediatamente ou reiniciar mais tarde.
-    - **Configurações de suspensão**: define o tempo de espera antes que o dispositivo entre em suspensão quando ele estiver conectado e quando estiver na bateria.
+- 
+            **Status do Dispositivo**: monitora a integridade do dispositivo e relata erros críticos.
+- 
+            **Informações do Windows**: mostra o nome do HoloLens e a versão do Windows instalada atualmente.
+- 
+            A seção **Preferências** contém as seguintes configurações:
+    - 
+            **IPD**: define a DIP (distância interpupilar), que é a distância, em milímetros, entre o centro das pupilas do usuário quando ele olha para a frente. A configuração entra em vigor imediatamente. O valor padrão é calculado automaticamente quando você configura seu dispositivo.
+    - 
+            **Nome do dispositivo**: atribua um nome para o HoloLens. Você deve reinicializar o dispositivo depois de alterar esse valor para que ele entre em vigor. Depois de clicar em Salvar, uma caixa de diálogo perguntará se você deseja reiniciar o dispositivo imediatamente ou reiniciar mais tarde.
+    - 
+            **Configurações de suspensão**: define o tempo de espera antes que o dispositivo entre em suspensão quando ele estiver conectado e quando estiver na bateria.
 
 ### Modo de exibição 3D 
 
 Use a página Modo de exibição 3D para ver como o HoloLens interpreta seus arredores. Navegue pelo modo de exibição usando o mouse:
-- **Girar**: clique com o botão esquerdo + mouse;
-- **Panorâmica**: clique com o botão direito + mouse;
-- **Zoom**: a rolagem do mouse.
-- **Opções de controle**: ative o rastreamento visual contínuo ao marcar Force visual tracking. Pausar para o rastreamento visual.
-- **Opções de exibição**: defina opções no modo de exibição 3D: – Rastreamento: indica se o rastreamento visual está ativo.
-- **Mostrar piso**: exibe um plano de chão quadriculado.
-- **Mostrar tronco**: exibe o tronco de exibição.
-- **Mostrar o plano de estabilização**: exibe o plano que o HoloLens usa para estabilizar o movimento.
-- **Mostrar malha**: exibe a malha de mapeamento de superfície que representa seus arredores.
-- **Mostrar detalhes**: exibe as posições das mãos, os quatérnios de rotação da cabeça e o vetor de origem do dispositivo conforme eles mudam em tempo real.
-- **Botão tela inteira**: mostra o Modo de exibição 3D em modo de tela inteira. Pressione ESC para sair do modo de exibição de tela inteira.
+- 
+            **Girar**: clique com o botão esquerdo + mouse;
+- 
+            **Panorâmica**: clique com o botão direito + mouse;
+- 
+            **Zoom**: a rolagem do mouse.
+- 
+            **Opções de controle**: ative o rastreamento visual contínuo ao marcar Force visual tracking. Pausar para o rastreamento visual.
+- 
+            **Opções de exibição**: defina opções no modo de exibição 3D: – Rastreamento: indica se o rastreamento visual está ativo.
+- 
+            **Mostrar piso**: exibe um plano de chão quadriculado.
+- 
+            **Mostrar tronco**: exibe o tronco de exibição.
+- 
+            **Mostrar o plano de estabilização**: exibe o plano que o HoloLens usa para estabilizar o movimento.
+- 
+            **Mostrar malha**: exibe a malha de mapeamento de superfície que representa seus arredores.
+- 
+            **Mostrar detalhes**: exibe as posições das mãos, os quatérnios de rotação da cabeça e o vetor de origem do dispositivo conforme eles mudam em tempo real.
+- 
+            **Botão tela inteira**: mostra o Modo de exibição 3D em modo de tela inteira. Pressione ESC para sair do modo de exibição de tela inteira.
 
 - Surface reconstruction: clique ou toque em Atualizar para exibir a malha de mapeamento espacial mais recente do dispositivo. Uma passagem completa pode levar um tempo para ser concluída, cerca de alguns segundos. A malha não atualiza automaticamente no modo de exibição 3D, e você deve clicar manualmente em Atualizar para obter a malha mais recente do dispositivo. Clique em Salvar para salvar a malha de mapeamento espacial atual como um arquivo obj em seu computador.
 
@@ -121,15 +145,20 @@ Use a página Modo de exibição 3D para ver como o HoloLens interpreta seus arr
 
 Use a página Mixed Reality Capture para salvar fluxos de mídia do HoloLens.
 - Configurações: controle os fluxos de mídia que são capturados verificando as seguintes configurações:– Hologramas: captura o conteúdo holográfico no fluxo de vídeo. Hologramas são renderizados em mono, não em estéreo.
-- **Câmera de PV**: captura o fluxo de vídeo da câmera de foto/vídeo.
-- **Mic Audio**: captura o áudio do grupo de microfones.
-- **App Audio**: captura o áudio do aplicativo em execução no momento.
-- **Qualidade de visualização dinâmica**: selecione a resolução de tela, a taxa de quadros e a taxa de streaming para a visualização dinâmica.
+- 
+            **Câmera de PV**: captura o fluxo de vídeo da câmera de foto/vídeo.
+- 
+            **Mic Audio**: captura o áudio do grupo de microfones.
+- 
+            **App Audio**: captura o áudio do aplicativo em execução no momento.
+- 
+            **Qualidade de visualização dinâmica**: selecione a resolução de tela, a taxa de quadros e a taxa de streaming para a visualização dinâmica.
 
 - Clique ou toque no botão Visualização dinâmica para mostrar o fluxo de captura. Parar a visualização dinâmica interrompe o fluxo de captura.
 - Clique ou toque em Gravar para iniciar a gravação do fluxo de realidade combinada, usando as configurações especificadas. Parar a gravação encerra a gravação e salva-a.
 - Clique ou toque em Tirar foto para tirar uma imagem estática do fluxo de captura.
-- **Vídeos e fotos**: mostra uma lista de capturas de vídeos e fotos feitas no dispositivo.
+- 
+            **Vídeos e fotos**: mostra uma lista de capturas de vídeos e fotos feitas no dispositivo.
 
 Observe que os aplicativos do HoloLens não poderão capturar uma foto ou um vídeo MRC enquanto você estiver gravando ou transmitindo uma visualização dinâmica do Device Portal.
 
@@ -138,9 +167,12 @@ Observe que os aplicativos do HoloLens não poderão capturar uma foto ou um ví
 A ferramenta Desempenho do Sistema no HoloLens tem três métricas adicionais que podem ser registradas. 
 
 Estas são as métricas disponíveis:
-- **Energia SoC**: utilização instantânea de energia do sistema-em-um-chip, com base na média de um minuto
-- **Energia do sistema**: utilização instantânea de energia do sistema, com base na média de um minuto
-- **Taxa de quadros**: quadros por segundo, VBlanks perdidos por segundo e VBlanks perdidos consecutivos
+- 
+            **Energia SoC**: utilização instantânea de energia do sistema-em-um-chip, com base na média de um minuto
+- 
+            **Energia do sistema**: utilização instantânea de energia do sistema, com base na média de um minuto
+- 
+            **Taxa de quadros**: quadros por segundo, VBlanks perdidos por segundo e VBlanks perdidos consecutivos
 
 ### Página de despejos de memória de aplicativos 
 
@@ -157,10 +189,14 @@ Observe que o aplicativo será executado no momento da inicialização, mesmo se
 ### Simulação 
 
 Permite que você grave e reproduza dados de entrada para testes.
-- **Capturar sala**: usado para baixar um arquivo de sala simulada que contém a malha de mapeamento espacial para os arredores do usuário. Dê um nome à sala e clique em Capturar para salvar os dados como um arquivo .xef em seu computador. Esse arquivo de sala pode ser carregado no emulador do HoloLens.
-- **Gravação**: verifique os fluxos para gravar, dê um nome para a gravação e clique ou toque em Gravar para iniciar a gravação. Execute ações com o HoloLens e, em seguida, clique em Parar para salvar os dados como um arquivo .xef em seu computador. Esse arquivo pode ser carregado no emulador ou dispositivo HoloLens.
-- **Reprodução**: clique ou toque em Carregar gravação para selecionar um arquivo .xef do computador e enviar os dados ao HoloLens.
-- **Modo de controle**: selecione Padrão ou Simulação na lista suspensa e clique ou toque no botão Definir para selecionar o modo no HoloLens. Escolher "Simulação" desabilita os sensores reais em seu HoloLens e usa dados simulados carregados em vez disso. Se você alternar para "Simulação", o HoloLens não responderá ao usuário real até que você volte para "Padrão".
+- 
+            **Capturar sala**: usado para baixar um arquivo de sala simulada que contém a malha de mapeamento espacial para os arredores do usuário. Dê um nome à sala e clique em Capturar para salvar os dados como um arquivo .xef em seu computador. Esse arquivo de sala pode ser carregado no emulador do HoloLens.
+- 
+            **Gravação**: verifique os fluxos para gravar, dê um nome para a gravação e clique ou toque em Gravar para iniciar a gravação. Execute ações com o HoloLens e, em seguida, clique em Parar para salvar os dados como um arquivo .xef em seu computador. Esse arquivo pode ser carregado no emulador ou dispositivo HoloLens.
+- 
+            **Reprodução**: clique ou toque em Carregar gravação para selecionar um arquivo .xef do computador e enviar os dados ao HoloLens.
+- 
+            **Modo de controle**: selecione Padrão ou Simulação na lista suspensa e clique ou toque no botão Definir para selecionar o modo no HoloLens. Escolher "Simulação" desabilita os sensores reais em seu HoloLens e usa dados simulados carregados em vez disso. Se você alternar para "Simulação", o HoloLens não responderá ao usuário real até que você volte para "Padrão".
 
 
 ### Entrada virtual 

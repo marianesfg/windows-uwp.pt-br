@@ -3,7 +3,6 @@ author: mcleanbyron
 Description: "O SDK de Microsoft Store Engagement and Monetization fornece bibliotecas e ferramentas que você pode usar para adicionar recursos aos seus aplicativos que ajudam você a ganhar mais dinheiro e clientes."
 title: SDK de Microsoft Store Engagement and Monetization
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
-translationtype: Human Translation
 ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
 ms.openlocfilehash: 481cf2aab806a1f9ce368256a9df8930cbc756c1
 
@@ -30,7 +29,8 @@ Use a classe [Feedback](https://msdn.microsoft.com/library/windows/apps/microsof
 
 Para obter mais informações, consulte [Iniciar o Hub de Feedback do seu aplicativo](launch-feedback-hub-from-your-app.md).
 
->**Observação** O relatório de **Feedback** está disponível somente para contas de desenvolvedor que tenham ingressado no [Programa Insider do Centro de Desenvolvimento](../publish/dev-center-insider-program.md).
+>
+            **Observação** O relatório de **Feedback** está disponível somente para contas de desenvolvedor que tenham ingressado no [Programa Insider do Centro de Desenvolvimento](../publish/dev-center-insider-program.md).
 
 ### Apresentar anúncios em seus aplicativos
 
@@ -38,7 +38,8 @@ Aumente sua receita exibindo anúncios em forma de banner ou anúncios interstic
 
 Para obter mais informações, consulte [Exibir anúncios no seu aplicativo](display-ads-in-your-app.md).
 
->**Observação** Os recursos de publicidade das versões anteriores do SDK Universal Ad Client, da extensão Ad Mediator e do Microsoft Advertising SDK agora estão incluídos no SDK de Microsoft Store Monetization and Engagement.
+>
+            **Observação** Os recursos de publicidade das versões anteriores do SDK Universal Ad Client, da extensão Ad Mediator e do Microsoft Advertising SDK agora estão incluídos no SDK de Microsoft Store Monetization and Engagement.
 
 ### Referência de API
 
@@ -56,7 +57,8 @@ A Microsoft lança periodicamente novas versões do SDK de Microsoft Store Monet
 
 Os recursos de publicidade das versões anteriores do SDK Universal Ad Client, extensão Ad Mediator e do Microsoft Advertising SDK agora estão incluídos no SDK de Microsoft Store Monetization and Engagement SDK. Se você tiver projetos do Visual Studio 2015 ou do Visual Studio 2013 que usam recursos de anúncio de uma dessas versões anteriores, você pode continuar trabalhando com seus projetos sem alterações depois que você instalar o SDK de Microsoft Store Monetization and Engagement.
 
->**Observação** Para instalar o SDK de Microsoft Store Engagement and Monetization com o Visual Studio 2015, você deve ter a versão 1.1 ou posterior das Ferramentas do Visual Studio para Aplicativos Universais do Windows instalada. Para obter mais informações sobre essa atualização das Ferramentas do Visual Studio para Aplicativos Universais do Windows, consulte as [notas de versão](http://go.microsoft.com/fwlink/?LinkID=624516).
+>
+            **Observação** Para instalar o SDK de Microsoft Store Engagement and Monetization com o Visual Studio 2015, você deve ter a versão 1.1 ou posterior das Ferramentas do Visual Studio para Aplicativos Universais do Windows instalada. Para obter mais informações sobre essa atualização das Ferramentas do Visual Studio para Aplicativos Universais do Windows, consulte as [notas de versão](http://go.microsoft.com/fwlink/?LinkID=624516).
 
 ## Pacotes de estrutura no SDK
 

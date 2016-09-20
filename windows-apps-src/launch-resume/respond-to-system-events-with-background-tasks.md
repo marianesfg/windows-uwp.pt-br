@@ -64,9 +64,11 @@ Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano cr
 
     > O código a seguir registra a tarefa em segundo plano:
 
-    [!div class="tabbedCodeSnippets"] **Observação** Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
+    [!div class="tabbedCodeSnippets"] 
+            **Observação** Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
 
-    > Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md). **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro.
+    > Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md). 
+            **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro.
 
      
 
@@ -82,7 +84,8 @@ Tarefas em segundo plano podem ser executadas em resposta aos eventos de [**Syst
 > Os aplicativos com recurso de tela de bloqueio podem registrar tarefas em segundo plano que respondem aos eventos de [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) e [**NetworkOperatorNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/br224831), permitindo que forneçam comunicação em tempo real com o usuário, mesmo quando o aplicativo não está em primeiro plano. Para saber mais, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
 
  
-## **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).
+## 
+            **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).
 
 
 ****

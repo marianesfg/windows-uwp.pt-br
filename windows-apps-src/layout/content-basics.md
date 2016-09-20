@@ -5,7 +5,6 @@ title: "Noções básicas de design de conteúdo para aplicativos da Plataforma 
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: c8328150601bf132c28e569c4db21095cb77f88c
 
@@ -22,9 +21,12 @@ Este artigo fornece recomendações de design do conteúdo para os três cenári
 
 Há três cenários de conteúdo principais:
 
--   **Consumo**: uma experiência principalmente unidirecional na qual o conteúdo é consumido. Inclui tarefas como leitura, ouvir música, assistir a vídeos e visualização de fotos e imagens.
--   **Criação**: uma experiência principalmente unidirecional em que o foco é criar novo conteúdo. Pode ser dividida em fazer coisas do zero, como tirar uma foto ou fazer um vídeo, criar uma nova imagem em um aplicativo de pintura, ou abrir um documento atualizado.
--   **Interativo**: uma experiência de conteúdo bidirecional que inclui consumir, criar e revisar o conteúdo.
+-   
+            **Consumo**: uma experiência principalmente unidirecional na qual o conteúdo é consumido. Inclui tarefas como leitura, ouvir música, assistir a vídeos e visualização de fotos e imagens.
+-   
+            **Criação**: uma experiência principalmente unidirecional em que o foco é criar novo conteúdo. Pode ser dividida em fazer coisas do zero, como tirar uma foto ou fazer um vídeo, criar uma nova imagem em um aplicativo de pintura, ou abrir um documento atualizado.
+-   
+            **Interativo**: uma experiência de conteúdo bidirecional que inclui consumir, criar e revisar o conteúdo.
 
 ## <span id="Consumption-focused_apps"></span><span id="consumption-focused_apps"></span><span id="CONSUMPTION-FOCUSED_APPS"></span>Aplicativos voltados para consumo
 
@@ -50,7 +52,8 @@ Por exemplo, aqui está um design para um aplicativo de fotos que usa barras de 
 Recomendações gerais para aplicativos voltados para criação:
 
 -   Minimize o uso de elementos de [navegação](navigation-basics.md).
--   Os elementos de [comando](commanding-basics.md) são especialmente importantes em aplicativos voltados para criação. Como os usuários executarão muitos comandos, é recomendável fornecer funcionalidade de histórico/desfazer um comando.
+-   
+            Os elementos de [comando](commanding-basics.md) são especialmente importantes em aplicativos voltados para criação. Como os usuários executarão muitos comandos, é recomendável fornecer funcionalidade de histórico/desfazer um comando.
 
 ## <span id="Apps_with_interactive_content"></span><span id="apps_with_interactive_content"></span><span id="APPS_WITH_INTERACTIVE_CONTENT"></span>Aplicativos com conteúdo interativo
 
@@ -61,8 +64,10 @@ Em um aplicativo com conteúdo interativo, os usuários criam, visualizam e edit
 
 Esse tipo de aplicativo precisa equilibrar todos os três elementos de interface do usuário:
 
--   Os elementos de [navegação](navigation-basics.md) ajudam os usuários a encontrar e visualizar o conteúdo. Se a exibição e localização de conteúdo for o cenário mais importante, priorize elementos de navegação, filtrar e classificar, e pesquisa.
--   Os elementos de [comando](commanding-basics.md) permitem ao usuário criar, editar e manipular o conteúdo.
+-   
+            Os elementos de [navegação](navigation-basics.md) ajudam os usuários a encontrar e visualizar o conteúdo. Se a exibição e localização de conteúdo for o cenário mais importante, priorize elementos de navegação, filtrar e classificar, e pesquisa.
+-   
+            Os elementos de [comando](commanding-basics.md) permitem ao usuário criar, editar e manipular o conteúdo.
 
 Recomendações gerais para aplicativos com conteúdo interativo:
 
@@ -94,7 +99,8 @@ Veja alguns elementos de interface do usuário comumente usados para exibir o co
 </tr>
 <tr class="even">
 <td align="left">Visualizadores de imagem</td>
-<td align="left">[Inverter exibição](../controls-and-patterns/flipview.md), [imagem](../controls-and-patterns/images-imagebrushes.md)</td>
+<td align="left">
+            [Inverter exibição](../controls-and-patterns/flipview.md), [imagem](../controls-and-patterns/images-imagebrushes.md)</td>
 <td align="left">Exibe imagens. A exibição virando a página mostra as imagens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, uma imagem de uma vez.</td>
 </tr>
 <tr class="odd">
@@ -104,7 +110,8 @@ Veja alguns elementos de interface do usuário comumente usados para exibir o co
 </tr>
 <tr class="even">
 <td align="left">Texto e entrada de texto</td>
-<td align="left"><p>[Bloco de texto](../controls-and-patterns/text-block.md), [caixa de texto](../controls-and-patterns/text-box.md), [caixa de edição com formato](../controls-and-patterns/rich-edit-box.md)</p>
+<td align="left"><p>
+            [Bloco de texto](../controls-and-patterns/text-block.md), [caixa de texto](../controls-and-patterns/text-box.md), [caixa de edição com formato](../controls-and-patterns/rich-edit-box.md)</p>
 </td>
 <td align="left">Exibe texto. Alguns elementos permitem que o usuário edite texto. Para obter mais informações, consulte [Controles de texto](../controls-and-patterns/text-controls.md)</td>
 </tr>

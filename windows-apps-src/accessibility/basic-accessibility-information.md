@@ -5,8 +5,9 @@ ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
 title: "Expor informações básicas de acessibilidade"
 label: Expose basic accessibility information
 template: detail.hbs
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 1c6bc8567b39357d414a46ef2b92197c78bca971
+translationtype: Human Translation
+ms.sourcegitcommit: 05fa9bb674839c255d8b63da04a018e397c84490
+ms.openlocfilehash: a72a49756b5d2828526a39fce50357ae90549aae
 
 ---
 
@@ -29,7 +30,7 @@ Esta tabela descreve como definir ou obter um nome acessível para vários tipos
 | Imagens            | O elemento [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) XAML não tem um análogo direto ao atributo **alt** HTML de **img** e elementos similares. Use [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) ou a técnica de legendagem para fornecer um nome. Consulte [Nomes acessíveis para imagens](#images). |
 | Elementos de formulário     | O nome acessível para um elemento de formulário deve ser o mesmo que o rótulo exibido para esse elemento. Consulte [Rótulos e LabeledBy](#labels). |
 | Botões e links | Por padrão, o nome acessível de um botão ou link se baseia no texto visível, usando as mesmas regras descritas em [Nome do texto interno](#name_from_inner_text). Nos casos em que um botão contém apenas uma imagem, use [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) para fornecer um equivalente apenas em texto da ação pretendida do botão. |
-
+<br/>
 A maioria dos elementos de contêiner (como painéis) não promove o seu conteúdo como nome acessível. Isso é porque é o conteúdo do item que deve informar um nome e a função correspondente, não seu contêiner. O elemento contêiner pode relatar que é um elemento que tem filhos em uma representação de Automação de Interface do Usuário da Microsoft, de forma que a lógica de tecnologia adaptativa possa atravessá-lo. Mas os usuários de tecnologias adaptativas geralmente não precisam saber sobre os contêineres e, assim, a maioria dos contêineres não é nomeada.
 
 <span id="role_value"/>
@@ -55,9 +56,7 @@ Por padrão, qualquer classe derivada de [**Control**](https://msdn.microsoft.co
 ## Nome do texto interno  
 Para facilitar o uso de cadeias de caracteres que já existem na IU visível para valores de nome acessível, muitos dos controles e outros elementos de IU oferecem suporte para determinar automaticamente um nome acessível padrão com base no texto interno dentro do elemento ou a partir de valores de cadeias de caracteres com propriedades de conteúdo.
 
-* [
-              **TextBlock**
-            ](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e **RichTextBlock** promovem o valor da propriedade **Text** como o nome acessível padrão.
+* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) e **RichTextBlock** promovem o valor da propriedade **Text** como o nome acessível padrão.
 * Qualquer subclasse [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) usa uma técnica "ToString" iterativa para encontrar cadeias de caracteres em seu valor [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) e promove essas cadeias de caracteres como o nome acessível padrão.
 
 > [!NOTE]
@@ -147,6 +146,6 @@ Observe que as propriedades anexadas, como as propriedades [**AutomationProperti
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ title: "Otimizar sua marcação XAML"
 description: "Analisar a marcação XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu aplicativo."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c2131b084d8bb989f1f7767f54db697e1cdd8dcf
+ms.openlocfilehash: 655603e7fa8687480b5376806bc199afecd425fd
 
 ---
 # Otimizar sua marcação XAML
@@ -82,7 +82,7 @@ Se você usar um recurso em várias páginas em todo o aplicativo, armazenando-o
 </Application> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-A maneira de tornar o contraexemplo acima mais eficiente é mover `SecondPageTextBrush` para SecondPage.xaml e `ThirdPageTextBrush` para ThirdPage.xaml. `InitialPageTextBrush` pode permanecer em App.xaml porque os recursos de aplicativo devem ser analisados na inicialização do aplicativo em qualquer caso.
+A maneira de tornar o contraexemplo acima mais eficiente é mover `SecondPageTextBrush` para SecondPage.xaml e `ThirdPageTextBrush` para ThirdPage.xaml. `InitialPageTextBrush`  pode permanecer em App.xaml porque os recursos de aplicativo devem ser analisados na inicialização do aplicativo em qualquer caso.
 
 ## Minimizar a contagem de elementos
 
@@ -291,6 +291,6 @@ Para verificar se você tem o XBF2, abra seu aplicativo em um editor binário; o
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

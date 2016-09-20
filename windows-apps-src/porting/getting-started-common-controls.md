@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: "Introdução aos controles comuns"
 title: "Introdução aos controles comuns"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 9d67cf02f80b5aa9d49fe3a0c5eb47a89419991a
 
@@ -48,7 +47,8 @@ O que há de mais inteligente com relação aos controles UWP é que eles podem 
 
 Para ainda mais controles, consulte [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406).
 
-**Observação**  Para uma lista de controles para aplicativos da Windows Store usando JavaScript e HTML, consulte [Lista de controles](https://msdn.microsoft.com/library/windows/apps/hh465453).
+
+            **Observação**  Para uma lista de controles para aplicativos da Windows Store usando JavaScript e HTML, consulte [Lista de controles](https://msdn.microsoft.com/library/windows/apps/hh465453).
 
 ### Próxima etapa
 

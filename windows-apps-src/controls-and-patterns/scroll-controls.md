@@ -5,7 +5,6 @@ title: Diretrizes para barras de rolagem
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scroll bars
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: b390f8a2cbabf243bd4d73c16122648e3d4a0586
 
@@ -21,7 +20,8 @@ O movimento panorâmico e a rolagem permitem que usuários acessem conteúdos qu
 
 Um controle do visualizador de rolagem é composto de tanto conteúdo quanto caberá no visor do aplicativo, além de uma ou então duas barras de rolagem. Gestos de toque podem ser utilizados para aplicar movimento panorâmico e zoom (as barras de rolagem desaparecem somente durante a manipulação) e o ponteiro pode ser utilizado para rolagem. O gesto de movimento rápido aplica movimento panorâmico com inércia.
 
-**Observação**  Windows: existem dois modos de exibição do movimento panorâmico baseados no dispositivo de entrada detectado: os indicadores de movimento panorâmico para toque e as barras de rolagem para outros dispositivos de entrada, que incluem mouse, touchpad, teclado e caneta.
+
+            **Observação**  Windows: existem dois modos de exibição do movimento panorâmico baseados no dispositivo de entrada detectado: os indicadores de movimento panorâmico para toque e as barras de rolagem para outros dispositivos de entrada, que incluem mouse, touchpad, teclado e caneta.
 
 ![Uma amostra da aparência dos controles de barra de rolagem e indicador de movimento panorâmico](images/SCROLLBAR.png)
 
@@ -45,7 +45,8 @@ Este XAML mostra como colocar uma imagem em um visualizador de rolagem e habilit
 
 ## ScrollViewer em um modelo de controle
 
-É comum que um controle ScrollViewer exista como uma parte composta de outros controles. Uma parte de ScrollViewer, junto com a classe [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx) para suporte, exibirá um visor com barras de rolagem somente quando o espaço de layout do controle host estiver sendo restrito com um tamanho menor que o do conteúdo expandido. Geralmente, esse é o caso de listas e, portanto, modelos [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx) sempre incluem um ScrollViewer. [
+É comum que um controle ScrollViewer exista como uma parte composta de outros controles. Uma parte de ScrollViewer, junto com a classe [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx) para suporte, exibirá um visor com barras de rolagem somente quando o espaço de layout do controle host estiver sendo restrito com um tamanho menor que o do conteúdo expandido. Geralmente, esse é o caso de listas e, portanto, modelos [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx) sempre incluem um ScrollViewer. 
+            [
               **TextBox**
             ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) e [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) também incluem um ScrollViewer em seus modelos.
 

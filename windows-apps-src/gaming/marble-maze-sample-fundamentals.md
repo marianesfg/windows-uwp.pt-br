@@ -3,7 +3,6 @@ author: mtoepke
 title: "Princípios básicos da amostra do Marble Maze"
 description: "Este documento descreve as características fundamentais do projeto Marble Maze, por exemplo, como ele usa o Visual C++ no ambiente de Windows Runtime, como ele é criado e estruturado e como ele é compilado."
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 5a9df995078763df73542a4101e73e147517b1eb
 
@@ -17,7 +16,8 @@ ms.openlocfilehash: 5a9df995078763df73542a4101e73e147517b1eb
 
 Este documento descreve as características fundamentais do projeto Marble Maze, por exemplo, como ele usa o Visual C++ no ambiente de Windows Runtime, como ele é criado e estruturado e como ele é compilado. O documento também descreve várias das convenções que são usadas no código.
 
-> **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
+> 
+            **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 ## 
@@ -38,7 +38,8 @@ Quando criamos o projeto do Visual Studio para o Marble Maze, começamos com um 
 
 Uma definição de projeto importante no modelo de **Aplicativo DirectX 11 (Universal do Windows)** é a opção **/ZW**, que permite que o programa use as extensões de linguagem do Windows Runtime. Essa opção é habilitada por padrão quando você usa o modelo do Visual Studio.
 
-> **Cuidado**   A opção **/ZW** não é compatível com opções, como **/clr**. No caso de **/clr**, isso significa que você não pode direcionar o .NET Framework e o Windows Runtime do mesmo projeto Visual C++.
+> 
+            **Cuidado**   A opção **/ZW** não é compatível com opções, como **/clr**. No caso de **/clr**, isso significa que você não pode direcionar o .NET Framework e o Windows Runtime do mesmo projeto Visual C++.
 
  
 

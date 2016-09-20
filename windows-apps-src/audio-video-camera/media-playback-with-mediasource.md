@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
 description: "A classe MediaSource fornece uma maneira comum de fazer referência e reproduzir mídia de diferentes origens, como arquivos locais ou remotos, e expõe um modelo comum para acessar dados de mídia, independentemente do formato da mídia subjacente."
 title: "Reprodução de mídia com o MediaSource"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
@@ -16,7 +15,8 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 \[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não faz nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
-A classe [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) fornece uma maneira comum de referenciar e reproduzir mídia de diferentes fontes, como arquivos locais ou remotos, e expõe um modelo comum para acessar dados de mídia, independentemente do formato de mídia subjacente. A classe [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) estende a funcionalidade do **MediaSource**, permitindo que você gerencie e selecione várias faixas de áudio, vídeo e metadados contidas em um item de mídia. [
+A classe [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) fornece uma maneira comum de referenciar e reproduzir mídia de diferentes fontes, como arquivos locais ou remotos, e expõe um modelo comum para acessar dados de mídia, independentemente do formato de mídia subjacente. A classe [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) estende a funcionalidade do **MediaSource**, permitindo que você gerencie e selecione várias faixas de áudio, vídeo e metadados contidas em um item de mídia. 
+            [
               **MediaPlaybackList**
             ](https://msdn.microsoft.com/library/windows/apps/dn930955) permite que você crie listas de reprodução a partir de um ou mais itens de reprodução de mídia.
 
@@ -142,10 +142,10 @@ Este exemplo adiciona uma faixa de texto personalizada especificando **TimedMeta
 
 ## Reproduzir uma lista de itens de mídia com MediaPlaybackList
 
-[
-            **MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite criar uma playlist de itens de mídia, que são representados por objetos **MediaPlaybackItem**.
+[**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite criar uma playlist de itens de mídia, que são representados por objetos **MediaPlaybackItem**.
 
-**Observação**  Itens em uma [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) são renderizadas usando-se a reprodução sem intervalos. O sistema usará metadados fornecidos em arquivos MP3 ou AAC codificados para determinar o atraso ou a compensação de preenchimento necessária à reprodução sem intervalos. Se os arquivos MP3 ou AAC codificados não fornecerem esses metadados, o sistema determinará o atraso ou o preenchimento heuristicamente. Para os formatos sem perdas, como PCM, FLAC ou ALAC, o sistema não executa nenhuma ação porque esses codificadores não apresentam atraso ou preenchimento.
+
+            **Observação**  Itens em uma [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) são renderizadas usando-se a reprodução sem intervalos. O sistema usará metadados fornecidos em arquivos MP3 ou AAC codificados para determinar o atraso ou a compensação de preenchimento necessária à reprodução sem intervalos. Se os arquivos MP3 ou AAC codificados não fornecerem esses metadados, o sistema determinará o atraso ou o preenchimento heuristicamente. Para os formatos sem perdas, como PCM, FLAC ou ALAC, o sistema não executa nenhuma ação porque esses codificadores não apresentam atraso ou preenchimento.
 
 Para começar, declare uma variável para armazenar seu **MediaPlaybackList**.
 

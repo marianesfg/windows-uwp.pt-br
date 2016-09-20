@@ -3,7 +3,6 @@ author: mtoepke
 title: "Otimizar a latência de entrada para jogos em DirectX da Plataforma Universal do Windows (UWP)"
 description: "A latência de entrada pode afetar significativamente a experiência de um jogo, e a sua otimização pode tornar um jogo mais bem acabado."
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 19bcf043f3fc8c729f5f9fbbeee237bd1749443d
 

@@ -1,18 +1,18 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: Abrir arquivos e pastas com um seletor
 description: "Acesse arquivos e pastas permitindo que o usuário interaja com um seletor. Você pode usar as classes FileOpenPicker e FileSavePicker para obter acesso a arquivos e FolderPicker para obter acesso a uma pasta."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 387529636eb44206a23356b0a8bb2748d7c10748
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: 91128639cea8948579ec128e4cd695bdfeb5fe86
 
 ---
 
 # Abrir arquivos e pastas com um seletor
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -23,8 +23,7 @@ ms.openlocfilehash: 387529636eb44206a23356b0a8bb2748d7c10748
 
 Acesse arquivos e pastas permitindo que o usuário interaja com um seletor. Você pode usar as classes [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) e [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para obter acesso a arquivos e [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881) para obter acesso a uma pasta.
 
-
-              **Observação**  Consulte também a [Amostra de seletor de arquivo](http://go.microsoft.com/fwlink/p/?linkid=619994).
+**Observação**  Consulte também o [Exemplo de seletor de arquivo](http://go.microsoft.com/fwlink/p/?linkid=619994).
 
  
 
@@ -71,7 +70,7 @@ Por exemplo, você pode chamar o seletor de arquivos em seu aplicativo, dessa fo
 ```CSharp
 var picker = new Windows.Storage.Pickers.FileOpenPicker();
 picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-picker.SuggestedStartLocation = 
+picker.SuggestedStartLocation =
     Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
 picker.FileTypeFilter.Add(".jpg");
 picker.FileTypeFilter.Add(".jpeg");
@@ -101,7 +100,7 @@ Usar um seletor de arquivos envolve criar e personalizar um objeto de seletor de
 ```CSharp
 var picker = new Windows.Storage.Pickers.FileOpenPicker();
     picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-    picker.SuggestedStartLocation = 
+    picker.SuggestedStartLocation =
         Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
     picker.FileTypeFilter.Add(".jpg");
     picker.FileTypeFilter.Add(".jpeg");
@@ -178,21 +177,16 @@ else
 }
 ```
 
-
-              **Dica**  Sempre que o aplicativo acessar um arquivo ou uma pasta por meio de um seletor, adicione-o a [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) ou [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458) do seu aplicativo para rastreá-lo. Você pode saber mais sobre o uso dessas listas em [Como rastrear arquivos e pastas usados recentemente](how-to-track-recently-used-files-and-folders.md).
-
- 
+**Dica**  Sempre que o aplicativo acessar um arquivo ou uma pasta por meio de um seletor, adicione-o a [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) ou [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458) do seu aplicativo para rastreá-lo. Você pode saber mais sobre o uso dessas listas em [Como rastrear arquivos e pastas usados recentemente](how-to-track-recently-used-files-and-folders.md).
 
  
 
  
 
+ 
 
 
 
-
-
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

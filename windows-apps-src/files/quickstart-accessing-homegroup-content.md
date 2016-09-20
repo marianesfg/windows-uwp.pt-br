@@ -3,7 +3,6 @@ author: TylerMSFT
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: "Acessando o conteúdo do Grupo Doméstico"
 description: "Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo imagens, músicas e vídeos."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
 
@@ -29,7 +28,8 @@ Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo i
 
     Para acessar o conteúdo do Grupo Doméstico, a máquina do usuário deverá ter um Grupo Doméstico configurado e seu aplicativo deve ter pelo menos um dos seguintes recursos: **picturesLibrary**, **musicLibrary** ou **videosLibrary**. Quando seu aplicativo acessar a pasta Grupo Doméstico, ele verá somente as bibliotecas correspondentes aos recursos declarados em seu manifesto do aplicativo. Para saber mais, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
-    **Observação**  O conteúdo na biblioteca Documentos de um Grupo Doméstico não fica visível para seu aplicativo independentemente dos recursos declarados em seu manifesto do aplicativo e independente das configurações de compartilhamento do usuário.
+    
+            **Observação**  O conteúdo na biblioteca Documentos de um Grupo Doméstico não fica visível para seu aplicativo independentemente dos recursos declarados em seu manifesto do aplicativo e independente das configurações de compartilhamento do usuário.
 
      
 
@@ -190,7 +190,8 @@ Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Domés
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **Abra a seleção de arquivos do usuário para obter acesso à leitura e defina o fluxo do arquivo como a origem do**
+3.  
+            **Abra a seleção de arquivos do usuário para obter acesso à leitura e defina o fluxo do arquivo como a origem do**
             [
               **MediaElement**
             ](https://msdn.microsoft.com/library/windows/apps/br242926) e reproduza o arquivo.

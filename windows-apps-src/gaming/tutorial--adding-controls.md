@@ -5,7 +5,7 @@ description: "Agora veremos como o jogo de exemplo implementa controles move-loo
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b3297ffd92d9a61d73c574def7e8101dc9196a69
+ms.openlocfilehash: 49214f3bc14b6a475a77c5dbb7c0f08bb0818df6
 
 ---
 
@@ -37,21 +37,11 @@ Os controles de toque e de mouse/teclado possuem uma implementação básica mui
 
 Ao ser inicializada, a classe **MoveLookController** no jogo de exemplo é registrada para quatro eventos específicos de ponteiro e um evento específico de mouse:
 
--   [
-              **CoreWindow::PointerPressed**
-            ](https://msdn.microsoft.com/library/windows/apps/br208278). O botão esquerdo ou direito do mouse foi pressionado (e mantido nessa posição) ou a superfície sensível ao toque foi tocada.
--   [
-              **CoreWindow::PointerMoved**
-            ](https://msdn.microsoft.com/library/windows/apps/br208276). O mouse foi movido ou uma ação de arrastar foi executada na superfície sensível ao toque.
--   [
-              **CoreWindow::PointerReleased**
-            ](https://msdn.microsoft.com/library/windows/apps/br208279). O botão esquerdo do mouse foi liberado ou o objeto em contato com a superfície sensível ao toque foi erguido.
--   [
-              **CoreWindow::PointerExited**
-            ](https://msdn.microsoft.com/library/windows/apps/br208275). O ponteiro moveu-se para fora da janela principal.
--   [
-              **Windows::Devices::Input::MouseMoved**
-            ](https://msdn.microsoft.com/library/windows/apps/hh758356). O mouse se moveu em uma determinada distância. Lembre-se de que só estamos interessados nos valores delta de movimento do mouse e não na atual posição x-y.
+-   [**CoreWindow::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278). O botão esquerdo ou direito do mouse foi pressionado (e mantido nessa posição) ou a superfície sensível ao toque foi tocada.
+-   [**CoreWindow::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276). O mouse foi movido ou uma ação de arrastar foi executada na superfície sensível ao toque.
+-   [**CoreWindow::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279). O botão esquerdo do mouse foi liberado ou o objeto em contato com a superfície sensível ao toque foi erguido.
+-   [**CoreWindow::PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208275). O ponteiro moveu-se para fora da janela principal.
+-   [**Windows::Devices::Input::MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356). O mouse se moveu em uma determinada distância. Lembre-se de que só estamos interessados nos valores delta de movimento do mouse e não na atual posição x-y.
 
 ```cpp
 void MoveLookController::Initialize(
@@ -92,7 +82,7 @@ O controlador Xbox é tratado separadamente usando-se as APIs [XInput](https://m
 
 No jogo de exemplo, a classe **MoveLookController** tem três estados específicos de controlador, independentemente do tipo de controle:
 
--   **Nenhuma**. Esse é o estado inicializado para o controlador. O jogo não está esperando nenhuma entrada do controlador.
+-   **Nenhum**. Esse é o estado inicializado para o controlador. O jogo não está esperando nenhuma entrada do controlador.
 -   **WaitForInput**. O jogo está em pausa e aguardando que o jogador continue.
 -   **Ativo**. O jogo está em execução e processando a entrada do jogador.
 
@@ -811,7 +801,7 @@ Se o controlador de jogo está no estado **Ativo**, esse método verifica se o u
 
 O método **Update** executa a mesma verificação no joystick direito para determinar se o jogador alterou a direção de visão da câmera, contanto que o movimento no joystick seja maior que outro raio da zona morta.
 
-**Update** calcula as novas rotações sobre os rotação sobre o eixo x e rotação sobre o eixo y e, em seguida, verifica se o usuário pressionou o gatilho analógico direito, que é nosso botão de tiro.
+**Update** calcula as novas rotações sobre os eixos x e y e, em seguida, verifica se o usuário pressionou o gatilho analógico direito, que é nosso botão de tiro.
 
 E é assim que nosso exemplo implementa um conjunto completo de opções de controle. Novamente, lembre-se que um bom aplicativo UWP dá suporte a uma ampla gama de opções de controle, para que jogadores com diferentes fatores forma e dispositivos possam jogar da maneira que preferirem!
 
@@ -1930,6 +1920,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

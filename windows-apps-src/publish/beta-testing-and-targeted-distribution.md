@@ -3,7 +3,6 @@ author: jnHs
 Description: "O painel do Centro de Desenvolvimento do Windows oferece a opção de tornar seu aplicativo disponível apenas para pessoas específicas para que você possa fazer com que testadores o testem antes de oferecê-lo ao público."
 title: "Teste da versão beta e distribuição específica"
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: a544565bf7bb82f2be1ded3e60836d5d191c6e93
 
@@ -59,17 +58,20 @@ Com essa opção, apenas as pessoas com um link direto para os detalhes do aplic
 
 Para usar essa opção, selecione **Ocultar esse aplicativo na Loja. Clientes com um link direto para a listagem do aplicativo ainda podem baixá-lo, exceto no Windows 8 e no Windows 8.1:** na seção [Distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility) da página **Preço e visibilidade** quando for enviar o aplicativo.
 
-> **Importante**  Essa opção não funciona para testadores no Windows 8 ou no Windows 8.1.
+> 
+            **Importante**  Essa opção não funciona para testadores no Windows 8 ou no Windows 8.1.
 
 ### Distribuição direcionada a clientes com endereços de email especificados
 
 Para testar no Windows Phone 8.1 e em versões anteriores, essa opção oferece uma maneira de limitar a distribuição de seu aplicativo. Apenas as pessoas cujo email (associado a suas contas da Microsoft) você inserir na caixa poderão baixar seu aplicativo usando o link direto para sua listagem.
 
-> **Importante**  As pessoas com os endereços de email que você inserir só poderão baixar o aplicativo em dispositivos que executam o Windows Phone 8.1 ou versões anteriores.
+> 
+            **Importante**  As pessoas com os endereços de email que você inserir só poderão baixar o aplicativo em dispositivos que executam o Windows Phone 8.1 ou versões anteriores.
  
 Você pode encontrar o link direto de seu aplicativo na página [Identidade do aplicativo](view-app-identity-details.md) no painel (use a **URL para o Windows Phone**). Nenhum cliente poderá encontrar o aplicativo pesquisando ou navegando na Loja e, mesmo que tenham o link para a listagem de seu aplicativo, não poderão baixá-lo a menos que estejam usando uma conta da Microsoft associada a um email que você forneceu quando enviou esse aplicativo.
 
-> **Observação**  Se você usar essa opção, ainda poderá tornar o aplicativo disponível para testadores em dispositivos Windows 10, [gerando códigos promocionais](generate-promotional-codes.md) como descrito acima. Qualquer pessoa com um dos códigos promocionais de seu aplicativo pode baixá-lo em um dispositivo Windows 10, mesmo que você não tenha inserido o email.
+> 
+            **Observação**  Se você usar essa opção, ainda poderá tornar o aplicativo disponível para testadores em dispositivos Windows 10, [gerando códigos promocionais](generate-promotional-codes.md) como descrito acima. Qualquer pessoa com um dos códigos promocionais de seu aplicativo pode baixá-lo em um dispositivo Windows 10, mesmo que você não tenha inserido o email.
 
 Para usar essa opção, selecione **Ocultar esse aplicativo e torná-lo disponível apenas para pessoas especificadas abaixo, que podem baixá-lo em dispositivos Windows Phone 8.x. Um código promocional pode ser usado para baixar esse aplicativo em dispositivos Windows 10** na seção [Distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility) da página **Preço e visibilidade** quando for enviar o aplicativo.
 

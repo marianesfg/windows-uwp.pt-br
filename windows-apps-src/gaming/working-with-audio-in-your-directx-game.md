@@ -3,7 +3,6 @@ author: mtoepke
 title: "Áudio para jogos"
 description: "Aprenda como desenvolver e incorporar música e sons a seu jogo do DirectX e como processar sinais de áudio para criar sons dinâmicos e posicionais."
 ms.assetid: ab29297a-9588-c79b-24c5-3b94b85e74a8
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 98896d4966ee2adb3bf494dcba22656fc8bb6414
 

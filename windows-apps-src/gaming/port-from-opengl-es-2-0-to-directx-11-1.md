@@ -15,7 +15,8 @@ ms.openlocfilehash: 40380582a9210cb705a5e7e591d4a8f37c42f8dd
 
 Inclui artigos, visões gerais e guias passo a passo para a portabilidade de uma pipeline de elementos gráficos em OpenGL ES 2.0 para um Direct3D 11 e o Windows Runtime.
 
-> **Observação**   Uma etapa intermediária na portabilidade do seu projeto OpenGL ES 2.0 é usar o ANGLE para Windows Store. O ANGLE permite executar conteúdo do OpenGL ES no Windows, o que converte chamadas de API do OpenGL ES em chamadas de API do DirectX 11. Para obter mais informações sobre o ANGLE, vá para [ANGLE for Windows Store Wiki](http://go.microsoft.com/fwlink/p/?linkid=618387).
+> 
+            **Observação**   Uma etapa intermediária na portabilidade do seu projeto OpenGL ES 2.0 é usar o ANGLE para Windows Store. O ANGLE permite executar conteúdo do OpenGL ES no Windows, o que converte chamadas de API do OpenGL ES em chamadas de API do DirectX 11. Para obter mais informações sobre o ANGLE, vá para [ANGLE for Windows Store Wiki](http://go.microsoft.com/fwlink/p/?linkid=618387).
 
  
 

@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: "Este artigo descreve como usar a classe CameraCaptureUI para capturar fotos ou vídeos usando a interface do usuário da câmera integrada ao Windows"
 title: "Capturar fotos e vídeos com CameraCaptureUI"
-translationtype: Human Translation
 ms.sourcegitcommit: 72abc006de1925c3c06ecd1b78665e72e2ffb816
 ms.openlocfilehash: a98edd0b4c52271fad4255af5ab0a005b0c66d68
 
@@ -26,7 +25,8 @@ Para usar a interface do usuário de captura com câmera, inclua o namespace [**
 
 Para capturar uma foto, crie um novo objeto [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030). Usando a propriedade [**PhotoSettings**](https://msdn.microsoft.com/library/windows/apps/br241058) do objeto, você pode especificar propriedades para a foto retornada, como o formato de imagem da foto. Por padrão, a interface do usuário de captura com câmera permite ao usuário recortar a foto antes de ela ser retornada, embora isso possa ser desabilitado com a propriedade [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042). Este exemplo define [**CroppedSizeInPixels**](https://msdn.microsoft.com/library/windows/apps/br241044) para solicitar que a imagem retornada seja de 200 x 200 pixels.
 
-**Observação**  Não há suporte para o corte de imagem no CameraCaptureUI para dispositivos da família de dispositivos móveis. O valor da propriedade [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) é ignorado quando seu aplicativo é executado nesses dispositivos.
+
+            **Observação**  Não há suporte para o corte de imagem no CameraCaptureUI para dispositivos da família de dispositivos móveis. O valor da propriedade [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) é ignorado quando seu aplicativo é executado nesses dispositivos.
 
 Chame [**CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057) e especifique [**CameraCaptureUIMode.Photo**](https://msdn.microsoft.com/library/windows/apps/br241040) para especificar que uma foto deve ser capturada. O método retorna uma instância [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que conterá a imagem se a captura for bem-sucedida. Se o usuário cancelar a captura, o objeto retornado será nulo.
 

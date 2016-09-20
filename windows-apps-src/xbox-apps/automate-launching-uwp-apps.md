@@ -2,7 +2,6 @@
 title: "Automatizar a inicialização de aplicativos UWP (Plataforma Universal do Windows) para Windows 10"
 description: "Os desenvolvedores podem usar a ativação de protocolos e a ativação de inicialização para automatizar a inicialização de seus aplicativos UWP ou jogos para testes automatizados."
 author: listurm
-translationtype: Human Translation
 ms.sourcegitcommit: adf2d16f9c208631f91fbcad19d1ea8087cd9cb5
 ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
 
@@ -14,9 +13,11 @@ ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
 
 Os desenvolvedores têm várias opções para realizar a inicialização automatizada de aplicativos UWP (Plataforma Universal do Windows). Neste documento, exploraremos métodos de inicialização de um aplicativo usando a ativação de protocolos e a ativação de inicialização.
 
-*Ativação de protocolo* permite que um aplicativo registrou como um manipulador para um determinado protocolo. 
 
-*Ativação de inicialização* é a inicialização normal de um aplicativo, tal como iniciar no bloco do aplicativo.
+            *Ativação de protocolo* permite que um aplicativo registrou como um manipulador para um determinado protocolo. 
+
+
+            *Ativação de inicialização* é a inicialização normal de um aplicativo, tal como iniciar no bloco do aplicativo.
 
 Com cada método de ativação, você tem a opção de usar a linha de comando ou um aplicativo inicializador. Em todos os métodos de ativação, se o aplicativo estiver sendo executado no momento, a ativação trará o aplicativo para o primeiro plano (reativando-o) e fornecerá os novos argumentos de ativação. Isso oferece flexibilidade ao uso de comandos de ativação para fornecer novas mensagens para o aplicativo. É importante observar que o projeto precisa ser compilado e implantado para que o método de ativação execute o aplicativo recém-atualizado. 
 

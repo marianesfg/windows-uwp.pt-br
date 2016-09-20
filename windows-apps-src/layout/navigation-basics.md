@@ -5,7 +5,6 @@ title: "Noções básicas de design de navegação de aplicativos da Plataforma 
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 6926d70c7140b1545a8b5492981d6d0b61af3784
 
@@ -23,7 +22,8 @@ Para serem bem-sucedidas e fazerem sentido para os usuários, as experiências d
 
     Criar uma estrutura de navegação que faça sentido para o usuário é fundamental para criar uma experiência de navegação intuitiva.
 
--   **Elementos de navegação compatíveis** que deem suporte à estrutura escolhida.
+-   
+            **Elementos de navegação compatíveis** que deem suporte à estrutura escolhida.
 
     Elementos de navegação podem ajudar o usuário a acessar o conteúdo desejado e também permitem que os usuários saibam onde eles estão dentro do aplicativo. No entanto, eles também ocupam um espaço que poderia ser usado para elementos de conteúdo ou comandos, logo, é importante usar os elementos de navegação certos para a estrutura do seu aplicativo.
 

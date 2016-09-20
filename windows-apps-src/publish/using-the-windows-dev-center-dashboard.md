@@ -3,7 +3,6 @@ author: jnHs
 Description: "O painel do Centro de Desenvolvimento do Windows permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um único local."
 title: Usando o painel do Centro de Desenvolvimento do Windows
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 7478a832cea6114c7a6e7f6be5cc3e908981a64c
 
@@ -14,7 +13,8 @@ ms.openlocfilehash: 7478a832cea6114c7a6e7f6be5cc3e908981a64c
 
 O painel do Centro de Desenvolvimento do Windows permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um único local.
 
-> **Observação** Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acessar o painel do Centro de Desenvolvimento do Windows.
+> 
+            **Observação** Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acessar o painel do Centro de Desenvolvimento do Windows.
 
 Ao [criar um envio para o seu aplicativo](app-submissions.md) (pela primeira vez ou como uma atualização), você pode [carregar pacotes do aplicativo](upload-app-packages.md) para qualquer sistema operacional com suporte e a Loja automaticamente oferecerá aos clientes o pacote que funcionará melhor para eles. Você pode usar as mesmas [descrições](create-app-descriptions.md) e [artes](app-screenshots-and-images.md) para todos os sistemas operacionais aos quais seu aplicativo dá suporte, ou pode [personalizar a descrição para plataformas específicas](create-platform-specific-descriptions.md).
 

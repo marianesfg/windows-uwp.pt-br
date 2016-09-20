@@ -3,7 +3,6 @@ author: mtoepke
 title: Modelos de projeto e ferramentas para jogos
 description: "Mostra o que é necessário para começar a programar jogos DirectX para a Plataforma Universal do Windows (UWP)."
 ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: b7b4cba0c88a914c3d0da4cf79adb51bcad2307f
 
@@ -22,7 +21,8 @@ Primeiro, você precisa do Visual Studio.
 ## Obter Visual Studio
 
 
-[Baixe e instale o Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
+
+            [Baixe e instale o Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
 
 <table>
 <colgroup>

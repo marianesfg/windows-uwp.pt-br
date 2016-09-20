@@ -3,7 +3,6 @@ author: Mtoepke
 title: Amostras da UWP no Xbox One
 description: "Amostras e bibliotecas para ajudar você a criar excelentes experiências de TV e do Xbox One."
 area: Xbox
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 6f38f5aabb6a409fab894bf7127ad4011162f7c6
 

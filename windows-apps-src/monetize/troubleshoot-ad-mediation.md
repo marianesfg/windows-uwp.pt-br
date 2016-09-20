@@ -3,7 +3,6 @@ author: mcleanbyron
 Description: "Estas são algumas soluções para vários problemas comuns de desenvolvimento relacionados ao controle de anúncios."
 title: "Solucionar problemas de controle de anúncios"
 ms.assetid: 8728DE4F-E050-4217-93D3-588DD3280A3A
-translationtype: Human Translation
 ms.sourcegitcommit: 10dcf3c2b8ea530b94e9c17ada80aaa98e9418fe
 ms.openlocfilehash: f32dc28c9b199c11a1932639f49ab4c29d3e1e8f
 
@@ -21,7 +20,8 @@ Quando você arrasta o controle **AdMediatorControl** para o designer pela prime
 
 Se você ainda não conseguir adicionar o controle ao designer, verifique se o projeto se destina à arquitetura do processador pertinente a seu aplicativo (por exemplo, **x86**) em vez de **Qualquer CPU**. O controle não poderá ser adicionado ao designer se o projeto se destinar a **Qualquer CPU** da plataforma de compilação.
 
-*
+
+            *
               *O AdMediatorControl mostra o erro "&lt;*width*
             &gt; x &lt;*height*&gt; Not supported" no tempo de execução ao servir anúncios da Microsoft**  O Microsoft Advertising só dá suporte a [determinados tamanhos de anúncios recomendados pelo Interactive Advertising Bureau (IAB)](add-and-use-the-ad-mediator-control.md#supported-ad-sizes-for-microsoft-advertising). Em alguns casos, mesmo se você definir a altura e a largura do controle de mediador de anúncios no designer ou em seu XAML como um desses tamanhos de anúncio com suporte, problemas de dimensionamento e arredondamento podem impedir que a estrutura de mediação de anúncios sirva um anúncio. Para evitar esse problema, atribua os parâmetros opcionais **Width** e **Height** para o Microsoft Advertising em seu código a um dos tamanhos de anúncio com suporte.
 
@@ -52,7 +52,8 @@ myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.AdDuplex]["Size"] = "160x
 ```
 
 **Você recebe o erro “Something is covering the ad control”**  
-O AD Duplex sempre mostrará um erro se o anúncio estiver coberto de alguma forma em seu aplicativo. [Leia a solução](http://blog.adduplex.com/2014/01/solving-something-is-covering-ad.mdl) para esse erro.
+O AD Duplex sempre mostrará um erro se o anúncio estiver coberto de alguma forma em seu aplicativo. 
+            [Leia a solução](http://blog.adduplex.com/2014/01/solving-something-is-covering-ad.mdl) para esse erro.
 
 **Você recebe o erro "There was a conflict between two files"**  
 Você referenciou os assemblies do Microsoft Advertising em outro lugar de seu aplicativo. O controle de anúncios foi desenvolvido para funcionar exclusivamente em seu aplicativo. Ele não funcionará se outras referências aos assemblies do Microsoft Advertising forem usadas. Remova as referências do Microsoft Advertising manualmente e reinstale o SDK do Microsoft Store Engagement and Monetization para apagar o erro.

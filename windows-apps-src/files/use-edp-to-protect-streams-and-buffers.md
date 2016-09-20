@@ -5,7 +5,6 @@ MS-HAID: dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Usar EDP (proteção de dados empresariais) para proteger fluxos e buffers"
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: fdde4f7d2ab46b6349273f7c1c9d91cf27aa341a
 
@@ -13,11 +12,13 @@ ms.openlocfilehash: fdde4f7d2ab46b6349273f7c1c9d91cf27aa341a
 
 # Usar EDP (proteção de dados empresariais) para proteger fluxos e buffers
 
-__Observação__ A EDP (Proteção de Dados Empresariais) não pode ser aplicada ao Windows 10, Versão 1511 (compilação 10586) ou anterior.
+
+            __Observação__ A EDP (Proteção de Dados Empresariais) não pode ser aplicada ao Windows 10, Versão 1511 (compilação 10586) ou anterior.
 
 Este tópico mostra exemplos das tarefas de codificação necessárias para obter alguns dos cenários mais comuns de EDP (proteção de dados empresariais) relacionados a fluxos e buffers. Para obter o panorama completo para desenvolvedores de como a EDP está relacionada a arquivos, fluxos, buffers, área de transferência, redes, tarefas em segundo plano e proteção de dados sob bloqueio, veja [Proteção de dados empresariais](../enterprise/edp-hub.md).
 
-**Observação**  O [exemplo de EDP (proteção de dados empresariais)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) trata de muitas das situações demonstradas neste tópico.
+
+            **Observação**  O [exemplo de EDP (proteção de dados empresariais)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) trata de muitas das situações demonstradas neste tópico.
 
 ## Pré-requisitos
 
@@ -37,7 +38,8 @@ Este tópico mostra exemplos das tarefas de codificação necessárias para obte
 ## Proteger um fluxo de dados para uma identidade empresarial
 
 
-**Observação** Sempre que você proteger um fluxo ou um buffer, é altamente recomendável que você assine o evento [**ProtectionPolicyManager.PolicyChanged**](https://msdn.microsoft.com/library/windows/apps/mt608411) para que seu aplicativo esteja ciente de que a EDP fica desativada no dispositivo. Quando isso acontece, você deve desproteger streams e buffers. Qualquer fluxo ou buffer que você deixar protegido estará qualificado para revogação se o usuário cancelar o registro do dispositivo no MDM (gerenciamento de dispositivo móvel). E se a EDP foi desabilitada quando o recurso foi criado, essa revogação será inadequada. Desproteger os recursos quando a EDP é desabilitada impede esse processo.
+
+            **Observação** Sempre que você proteger um fluxo ou um buffer, é altamente recomendável que você assine o evento [**ProtectionPolicyManager.PolicyChanged**](https://msdn.microsoft.com/library/windows/apps/mt608411) para que seu aplicativo esteja ciente de que a EDP fica desativada no dispositivo. Quando isso acontece, você deve desproteger streams e buffers. Qualquer fluxo ou buffer que você deixar protegido estará qualificado para revogação se o usuário cancelar o registro do dispositivo no MDM (gerenciamento de dispositivo móvel). E se a EDP foi desabilitada quando o recurso foi criado, essa revogação será inadequada. Desproteger os recursos quando a EDP é desabilitada impede esse processo.
 
 
 
@@ -293,7 +295,8 @@ private async void EnableUIPolicyFromProtectedBuffer(IBuffer buffer)
 
 ```
 
-**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+            **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 

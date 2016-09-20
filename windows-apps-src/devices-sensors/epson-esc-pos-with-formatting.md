@@ -3,7 +3,6 @@ author: DBirtolo
 ms.assetid: 70667353-152B-4B18-92C1-0178298052D4
 title: "ESC/POS Epson com formatação"
 description: "Saiba como usar a linguagem de comando ESC/POS para formatar texto, como caracteres em negrito e tamanho dobrado para sua impressora Ponto de Serviço."
-translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
 ms.openlocfilehash: 33231abb1e573d837193daeee21713f09c7d8448
 

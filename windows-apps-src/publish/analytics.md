@@ -3,7 +3,6 @@ author: jnHs
 Description: "Você pode visualizar análises detalhadas de seus aplicativos no painel do Centro de Desenvolvimento do Windows."
 title: "Análises"
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
-translationtype: Human Translation
 ms.sourcegitcommit: dfaf348956b19746aa5332aeb7ad5cbc4b224e8c
 ms.openlocfilehash: 8922a53da8b1bc97bef7faf49d0e412a26127188
 
@@ -13,7 +12,8 @@ ms.openlocfilehash: 8922a53da8b1bc97bef7faf49d0e412a26127188
 
 Você pode visualizar análises detalhadas de seus aplicativos no painel do Centro de Desenvolvimento do Windows. Estatísticas e gráficos permitem que você saiba como está andamento de seus aplicativos, desde quantos clientes você conseguiu até como eles estão usando seu aplicativo e o que eles têm a dizer sobre ele. Você também pode encontrar informações sobre a integridade do aplicativo, o uso de anúncios e muito mais. Visualize os relatórios no painel ou [baixe os relatórios de que você precisa](download-analytic-reports.md) para analisar os dados offline. Também oferecemos várias maneiras para você [acessar seus dados analíticos sem usar o painel](#no-dashboard).
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;Além dos relatórios do painel, é possível acessar programaticamente alguns dados analíticos usando a [API REST de análises da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 ## Análises para todos os seus aplicativos
@@ -40,7 +40,8 @@ Nesta seção, você encontrará detalhes sobre as informações apresentadas em
 -   [Relatório de anúncios de instalação de aplicativos](app-install-ads-reports.md)
 -   [Relatório de canais e conversões](channels-and-conversions-report.md)
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;Dependendo dos recursos específicos e da implementação de seu aplicativo, você talvez não veja dados em todos esses relatórios.
 
 ## Filtros de seção e página
@@ -70,7 +71,8 @@ Use os recursos a seguir para começar a usar o Power BI para acessar seus dados
 * [Saiba como usar o Power BI](https://powerbi.microsoft.com/guided-learning/)
 * [Saiba como usar o pacote de conteúdo do Centro de Desenvolvimento do Windows para Power BI para se conectar aos seus dados analíticos](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;Para se conectar ao pacote de conteúdo do Centro de Desenvolvimento do Windows para Power BI, recomendamos que você especifique suas credenciais em um diretório do Azure AD que esteja associado com sua conta do Centro de Desenvolvimento. Se você usar suas credenciais de conta da Microsoft, seus dados analíticos não serão atualizados automaticamente no Power BI, e você terá que fazer logon no Power BI para atualizar seus dados. Se sua organização já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem Azure AD. Caso contrário, você pode [baixá-lo gratuitamente](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obter mais informações sobre como associar sua conta do Centro de Desenvolvimento com um Azure AD, consulte [Gerenciar usuários de contas](manage-account-users.md).
 
 ### Aplicativo do Centro de Desenvolvimento

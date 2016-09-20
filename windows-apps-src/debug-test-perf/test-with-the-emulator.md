@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: Testar com o Emulador Microsoft para Windows 10 Mobile
 description: "Simule a interação do mundo real com um dispositivo e teste os recursos de seu aplicativo usando as ferramentas incluídas no Emulador Microsoft para Windows 10 Mobile."
-translationtype: Human Translation
 ms.sourcegitcommit: 9a33710315486c23a204a528d3d87421c6990b85
 ms.openlocfilehash: c53bda2329cd984e3a03d4a166e7353097e62cef
 
@@ -48,13 +47,15 @@ O Emulador da Microsoft para Windows 10 Mobile não pode carregar aplicativos di
 
 ## Instalando e desinstalando
 
--   **Instalando**.
+-   
+            **Instalando**.
 
     O Emulador da Microsoft para Windows 10 Mobile é fornecido como parte do SDK do Windows 10. O SDK do Windows 10 e o emulador podem ser instalados como parte da instalação do Visual Studio 2015. Confira a [página de download do Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
 
     Você também pode instalar o Emulador da Microsoft para Windows 10 Mobile usando a instalação do Emulador da Microsoft. Confira a [página de download de Ferramentas do Windows 10](https://go.microsoft.com/fwlink/p/?LinkID=534189).
 
--   **Desinstalando**.
+-   
+            **Desinstalando**.
 
     Você pode desinstalar o Emulador da Microsoft para Windows 10 Mobile usando a opção instalar/reparar do Visual Studio. Ou você pode usar a opção **Programas e Recursos** no **Painel de Controle** para remover o emulador.
 
@@ -72,29 +73,38 @@ Além de oferecer suporte à Plataforma Universal do Windows (UWP), o emulador a
 
 Além dos novos recursos mencionados na seção anterior, você pode testar os recursos normalmente usados a seguir no Emulador Microsoft para Windows 10 Mobile.
 
--   **Resolução de tela, tamanho da tela e memória** Obtenha um mercado amplo para o seu aplicativo, o testando em diversas imagens do emulador para simular várias resoluções de tela, tamanhos físicos e restrições de memória.
+-   
+            **Resolução de tela, tamanho da tela e memória** Obtenha um mercado amplo para o seu aplicativo, o testando em diversas imagens do emulador para simular várias resoluções de tela, tamanhos físicos e restrições de memória.
 
     ![Emuladores disponíveis com resolução, tamanho e memória](images/em-list.png)
 
--   **Configuração de tela**. Altere o emulador do modo retrato para paisagem. Altere as configurações de zoom para ajustar o emulador à tela da área de trabalho.
+-   
+            **Configuração de tela**. Altere o emulador do modo retrato para paisagem. Altere as configurações de zoom para ajustar o emulador à tela da área de trabalho.
 
--   **Redes**. O suporte de rede é integrado ao Emulador do Windows Phone. A rede é habilitada por padrão. Você não precisa instalar drivers de rede para o Emulador do Windows Phone ou configure as opções de rede manualmente na maioria dos ambientes.
+-   
+            **Redes**. O suporte de rede é integrado ao Emulador do Windows Phone. A rede é habilitada por padrão. Você não precisa instalar drivers de rede para o Emulador do Windows Phone ou configure as opções de rede manualmente na maioria dos ambientes.
 
     O emulador utiliza a conexão de rede do computador host. Isto não aparece como um dispositivo separado na rede. Isto elimina algumas das questões que os usuários enfrentam com o emulador Windows Phone SDK 8.0.
 
--   **Configurações de idioma e região**. Prepare seu aplicativo para um mercado internacional alterando as configurações de idioma e de região da interface no Emulador do Windows Phone.
+-   
+            **Configurações de idioma e região**. Prepare seu aplicativo para um mercado internacional alterando as configurações de idioma e de região da interface no Emulador do Windows Phone.
 
     No emulador que está sendo executado, vá ao aplicativo **Configurações**, selecione as configurações do **sistema** e, em seguida, selecione **idioma** ou **região**. Altere as configurações que você deseja testar. Se for solicitado, clique em **reiniciar telefone** para aplicar a nova configuração e reiniciar o emulador.
 
--   **Ciclo de vida da aplicação e marcação para exclusão**. Teste o comportamento ou seu aplicativo quando este estiver desativado ou marcado para exclusão ao alterar o valor da opção **Marcar para exclusão mediante desabilitação ao depurar** na página **Depurar** das propriedades do projeto.
+-   
+            **Ciclo de vida da aplicação e marcação para exclusão**. Teste o comportamento ou seu aplicativo quando este estiver desativado ou marcado para exclusão ao alterar o valor da opção **Marcar para exclusão mediante desabilitação ao depurar** na página **Depurar** das propriedades do projeto.
 
--   **Pasta de armazenamento local (anteriormente conhecida como um armazenamento isolado)**. Os dados no armazenamento isolado persistem enquanto o emulador está sendo executado, mas são perdidos logo que o emulador se fecha.
+-   
+            **Pasta de armazenamento local (anteriormente conhecida como um armazenamento isolado)**. Os dados no armazenamento isolado persistem enquanto o emulador está sendo executado, mas são perdidos logo que o emulador se fecha.
 
--   **Microfone**. Requer e utiliza o microfone no computador host.
+-   
+            **Microfone**. Requer e utiliza o microfone no computador host.
 
--   **Teclado do telefone**. O emulador dá suporte a mapeamento do teclado de hardware no computador de desenvolvimento para o teclado em um Windows Phone. O comportamento das chaves é o mesmo que em um dispositivo Windows Phone
+-   
+            **Teclado do telefone**. O emulador dá suporte a mapeamento do teclado de hardware no computador de desenvolvimento para o teclado em um Windows Phone. O comportamento das chaves é o mesmo que em um dispositivo Windows Phone
 
--   **Tela de bloqueio**. Com o emulador aberto, pressione F12 duas vezes no teclado de seu computador. A tecla F12 emula o botão de energia no telefone. A primeira tecla pressionada desliga a tela. A segunda liga novamente a tela com a tela de bloqueio habilitada. Desbloqueie a tela usando o mouse para deslizar a tela de bloqueio para cima.
+-   
+            **Tela de bloqueio**. Com o emulador aberto, pressione F12 duas vezes no teclado de seu computador. A tecla F12 emula o botão de energia no telefone. A primeira tecla pressionada desliga a tela. A segunda liga novamente a tela com a tela de bloqueio habilitada. Desbloqueie a tela usando o mouse para deslizar a tela de bloqueio para cima.
 
 ## Recursos que você pode testar no emulador
 
@@ -169,7 +179,8 @@ Em todos os modos, a janela do emulador tem três áreas de interesse.
 -   A parte superior direita lista os logs. Quando você toca um dispositivo no outro (ou toca em um terminal de PDV), o evento de toque é registrado; quando os dispositivos são separados, o evento de cancelamento de toque é registrado. Esta seção também registra se seu aplicativo respondeu antes de a conexão ser interrompida, ou qualquer outra ação que você tenha executado na interface do usuário do emulador com carimbos de data/hora. Os logs são persistentes entre as alternâncias de modos, e você pode limpá-los a qualquer momento clicando no botão **Limpar** situado acima da tela de **Logs**.
 -   A metade inferior da tela é o log de mensagens e mostra a transcrição de todas as mensagens enviadas ou recebidas pela conexão selecionada no momento, dependendo do modo selecionado.
 
-> **Importante**  Ao iniciar a ferramenta de toque pela primeira vez, você receberá uma solicitação do Firewall do Windows. Você deve selecionar todas as três caixas de seleção e permitir que a ferramenta atravesse o firewall, ou a ferramenta silenciosamente deixará de funcionar.
+> 
+            **Importante**  Ao iniciar a ferramenta de toque pela primeira vez, você receberá uma solicitação do Firewall do Windows. Você deve selecionar todas as três caixas de seleção e permitir que a ferramenta atravesse o firewall, ou a ferramenta silenciosamente deixará de funcionar.
 
 Depois de iniciar o instalador de início rápido, certifique-se de seguir as instruções acima e marque todas as três caixas de seleção na solicitação do firewall. Além disso, a ferramenta de toque deve ser instalada e usada no mesmo computador host físico que o Emulador da Microsoft.
 
@@ -417,11 +428,13 @@ Teste seu aplicativo com um cartão SD removível usando a aba **Cartão SD** na
 
 A aba **cartão SD** utiliza uma pasta no computador de desenvolvimento para simular um cartão SD removível no telefone.
 
-1.  **Selecione uma pasta**.
+1.  
+            **Selecione uma pasta**.
 
     Clique em **Navegador** para selecionar uma pasta no computador de desenvolvimento para assegurar o conteúdo do cartão SD simulado.
 
-2.  **Insira o cartão SD**.
+2.  
+            **Insira o cartão SD**.
 
     Após selecionar uma pasta, clique em **Inserir cartão SD**. Quando você inserir o cartão SD, as seguintes coisas acontecem:
 
@@ -434,7 +447,8 @@ A aba **cartão SD** utiliza uma pasta no computador de desenvolvimento para sim
 
     A opção está habilitada por padrão. Quando esta opção está habilitada, os arquivos são sincronizados do emulador para a pasta no computador de desenvolvimento quando você ejeta o cartão SD.
 
-4.  **Ejete o cartão SD**.
+4.  
+            **Ejete o cartão SD**.
 
     Clique em **Ejetar o cartão SD**. Quando você ejetar o cartão SD, as seguintes coisas acontecem:
 
@@ -444,7 +458,8 @@ A aba **cartão SD** utiliza uma pasta no computador de desenvolvimento para sim
         -   Se você clicar em **Cancelar sincronização** enquanto a operação de sincronização está em progresso, o cartão é ejetado e os resultados da operação de sincronização são incompletas.
     -   O botão **Ejetar cartão SD** altera para **Inserir cartão SD**.
 
-> **Observação**  Como um cartão SD usado pelo telefone é formatado com um sistema de arquivos FAT32, 32 GB é o tamanho máximo.
+> 
+            **Observação**  Como um cartão SD usado pelo telefone é formatado com um sistema de arquivos FAT32, 32 GB é o tamanho máximo.
 
 A velocidade de leitura e escrita para o cartão SD simulado é projetada para imitar as velocidades do mundo real. Acessar o cartão SD é mais lento do que acessar o disco rígido do computador.
 
@@ -607,53 +622,56 @@ Você pode habilitar ou desabilitar a tela das taxas de fotogramas em seu códig
 >End If
 >```
 
-## Problemas conhecidos
+## [!div class="tabbedCodeSnippets"]
 
-A seguir estão os problemas conhecidos com o emulador, com as formas sugeridas de contornar problemas se você se deparar com eles.
+Problemas conhecidos
 
-### Mensagem de erro: "Falha ao remover o comutador Ethernet virtual"
+### A seguir estão os problemas conhecidos com o emulador, com as formas sugeridas de contornar problemas se você se deparar com eles.
 
-Em determinadas situações, inclusive depois de atualizar para uma nova versão de pré-lançamento do Windows 10, um comutador de rede virtual associado ao emulador pode entrar em um estado no qual ele não pode ser excluído pela interface do usuário.
+Mensagem de erro: "Falha ao remover o comutador Ethernet virtual"
 
-Para recuperar o sistema dessa situação, execute "netcfg -d" em um prompt de comando de administrador: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Quando a execução do comando for concluída, reinicie o computador para concluir o processo de recuperação.
+Em determinadas situações, inclusive depois de atualizar para uma nova versão de pré-lançamento do Windows 10, um comutador de rede virtual associado ao emulador pode entrar em um estado no qual ele não pode ser excluído pela interface do usuário. Para recuperar o sistema dessa situação, execute "netcfg -d" em um prompt de comando de administrador: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`.
 
-**Observação**  Esse comando excluirá todos os dispositivos em rede, não apenas aqueles associados ao emulador. Quando o computador for reiniciado, todos os dispositivos de hardware em rede serão descobertos automaticamente.
+Quando a execução do comando for concluída, reinicie o computador para concluir o processo de recuperação. 
+            **Observação**  Esse comando excluirá todos os dispositivos em rede, não apenas aqueles associados ao emulador.
  
-### Não é possível iniciar os emuladores
+### Quando o computador for reiniciado, todos os dispositivos de hardware em rede serão descobertos automaticamente.
 
-O Emulador Microsoft inclui o arquivo XDECleanup.exe, uma ferramenta que exclui todas as VMs, discos diff e comutadores de rede específicos ao emulador, e já inclui os binários do emulador (XDE). Você deve usar essa ferramenta para limpar VMs do emulador caso elas entrem em um estado inválido. Execute a ferramenta em um prompt de comando de administrador:`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
+Não é possível iniciar os emuladores O Emulador Microsoft inclui o arquivo XDECleanup.exe, uma ferramenta que exclui todas as VMs, discos diff e comutadores de rede específicos ao emulador, e já inclui os binários do emulador (XDE). Você deve usar essa ferramenta para limpar VMs do emulador caso elas entrem em um estado inválido.`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **Observação**  XDECleanup.exe exclui todas as VMs do Hyper-V específicas ao emulador e também exclui todos os pontos de verificação de VM ou estados salvos.
+> Execute a ferramenta em um prompt de comando de administrador:
 
-### Desinstalar a imagem do Windows 10 para dispositivos móveis
+### 
+            **Observação**  XDECleanup.exe exclui todas as VMs do Hyper-V específicas ao emulador e também exclui todos os pontos de verificação de VM ou estados salvos.
 
-Quando você instala o emulador, uma imagem VHD do Windows 10 para dispositivos móveis é instalada, a qual recebe sua própria entrada na lista **Programas e Recursos** no Painel de Controle. Se desejar desinstalar a imagem, procure o item **Windows 10 for Mobile Image - <version>** na lista de programas instalados, clique com botão direito nele e escolha **Desinstalar**.
+Desinstalar a imagem do Windows 10 para dispositivos móveis Quando você instala o emulador, uma imagem VHD do Windows 10 para dispositivos móveis é instalada, a qual recebe sua própria entrada na lista **Programas e Recursos** no Painel de Controle.
 
-Na versão atual, você deve, em seguida, excluir manualmente o arquivo VHD do emulador. Se você instalou o emulador no caminho padrão, o arquivo VHD está em C:\\Arquivos de Programas (x86)\\Windows Kits\\10\\Emulation\Mobile\\<version>\\flash.vhd.
+Se desejar desinstalar a imagem, procure o item **Windows 10 for Mobile Image - <version>** na lista de programas instalados, clique com botão direito nele e escolha **Desinstalar**. Na versão atual, você deve, em seguida, excluir manualmente o arquivo VHD do emulador.
 
-###Como desabilitar elementos gráficos acelerados de hardware
+###Se você instalou o emulador no caminho padrão, o arquivo VHD está em C:\\Arquivos de Programas (x86)\\Windows Kits\\10\\Emulation\Mobile\\<version>\\flash.vhd.
 
-Por padrão, o Windows 10 Mobile Emulator usa elementos gráficos acelerados de hardware. Se você tiver problemas ao iniciar o emulador com aceleração de hardware habilitada, poderá desativá-lo definindo um valor do Registro.
+Como desabilitar elementos gráficos acelerados de hardware Por padrão, o Windows 10 Mobile Emulator usa elementos gráficos acelerados de hardware.
 
-Para desativar a aceleração de hardware:
+Se você tiver problemas ao iniciar o emulador com aceleração de hardware habilitada, poderá desativá-lo definindo um valor do Registro.
 
-1. Inicie o Editor do registro.
-2. Crie a subchave de Registro se ela não existir: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
-3. Clique com o botão direito na pasta 10.0, aponte para **Novo** e clique em **Valor DWORD**.
-4. Clique em **DisableRemoteFx** e pressione Enter.
-5. Clique duas vezes em **DisableRemoteFx**, digite 1 na caixa de dados **Valor**, selecione a opção **Decimal** e, em seguida, clique em **OK**.
-6. Feche o Editor do Registro.
+1. Para desativar a aceleração de hardware:
+2. Inicie o Editor do registro.
+3. Crie a subchave de Registro se ela não existir: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
+4. Clique com o botão direito na pasta 10.0, aponte para **Novo** e clique em **Valor DWORD**.
+5. Clique em **DisableRemoteFx** e pressione Enter.
+6. Clique duas vezes em **DisableRemoteFx**, digite 1 na caixa de dados **Valor**, selecione a opção **Decimal** e, em seguida, clique em **OK**.
 
-**Observação:** depois de definir esse valor de Registro, você deve excluir a máquina virtual no Gerenciador do Hyper-V para a configuração que iniciou no Visual Studio e, em seguida, reiniciar o emulador com elementos gráficos renderizados de software.
+Feche o Editor do Registro.
 
-## Recursos de suporte
+## 
+            **Observação:** depois de definir esse valor de Registro, você deve excluir a máquina virtual no Gerenciador do Hyper-V para a configuração que iniciou no Visual Studio e, em seguida, reiniciar o emulador com elementos gráficos renderizados de software.
 
-Para encontrar respostas e resolver problemas ao começar a trabalhar com as ferramentas do Windows 10, visite o [Fórum das ferramentas do Windows 10](http://go.microsoft.com/fwlink/?LinkId=534765). Para ver todos os fóruns sobre o desenvolvimento do Windows 10, acesse [este link](http://go.microsoft.com/fwlink/?LinkId=535000).
+Recursos de suporte Para encontrar respostas e resolver problemas ao começar a trabalhar com as ferramentas do Windows 10, visite o [Fórum das ferramentas do Windows 10](http://go.microsoft.com/fwlink/?LinkId=534765).
 
-## Tópicos relacionados
+## Para ver todos os fóruns sobre o desenvolvimento do Windows 10, acesse [este link](http://go.microsoft.com/fwlink/?LinkId=535000).
 
-* [Executar aplicativos do Windows Phone no emulador](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
-* [Arquivo morto do SDK do Windows e do Windows Phone](https://dev.windows.com/downloads/sdk-archive)
+* [Tópicos relacionados](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
+* [Executar aplicativos do Windows Phone no emulador](https://dev.windows.com/downloads/sdk-archive)
  
 
 

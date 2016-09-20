@@ -4,8 +4,8 @@ ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
 description: Este artigo mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo Universal do Windows.
 title: MIDI
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a67b859cc2bd42abc13bcba0d405783b99a0ca5c
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: cc3553aff7c30a2e84b527dc9e108f7c45b7b21f
 
 ---
 
@@ -63,18 +63,10 @@ Registre manipuladores para os manipuladores de eventos do inspetor.
 
 O **DeviceWatcher** tem os eventos a seguir:
 
--   [
-              **Added**
-            ](https://msdn.microsoft.com/library/windows/apps/br225450) - Gerado quando um novo dispositivo é adicionado ao sistema.
--   [
-              **Removed**
-            ](https://msdn.microsoft.com/library/windows/apps/br225453) - Gerado quando um dispositivo é removido do sistema.
--   [
-              **Updated**
-            ](https://msdn.microsoft.com/library/windows/apps/br225458) - Gerado quando as informações associadas a um dispositivo existente são atualizadas.
--   [
-              **EnumerationCompleted**
-            ](https://msdn.microsoft.com/library/windows/apps/br225451) - Gerado quando o inspetor concluiu sua enumeração do tipo de dispositivo solicitado.
+-   [**Added**](https://msdn.microsoft.com/library/windows/apps/br225450) - Gerado quando um novo dispositivo é adicionado ao sistema.
+-   [**Removed**](https://msdn.microsoft.com/library/windows/apps/br225453) - Gerado quando um dispositivo é removido do sistema.
+-   [**Updated**](https://msdn.microsoft.com/library/windows/apps/br225458) - Gerado quando as informações associadas a um dispositivo existente são atualizadas.
+-   [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451) - Gerado quando o inspetor concluiu sua enumeração do tipo de dispositivo solicitado.
 
 No manipulador para cada um desses eventos, um método auxiliar, **UpdateDevices**, é chamado para atualizar o **ListBox** com a lista atual de dispositivos. Por **UpdateDevices** atualizar elementos de interface do usuário e esses manipuladores de eventos não serem chamados no thread da interface do usuário, cada chamada deve ser encapsulada em uma chamada para [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317), que faz com que o código especificado seja executado no thread da interface do usuário.
 
@@ -140,7 +132,8 @@ Quando você enumerar dispositivos MIDI de saída usando a técnica descrita aci
 2.  Expanda o nó **Universal do Windows**.
 3.  Selecione **Extensões**.
 4.  Na lista de extensões, selecione **Microsoft General MIDI DLS para aplicativos universais do Windows**.
-    **Observação**  Se houver várias versões da extensão, certifique-se de selecionar a versão que corresponde ao seu aplicativo. Você pode ver qual versão do SDK destina-se ao seu aplicativo na guia **Aplicativo** das propriedades do projeto.
+    > [!NOTE] 
+    > Se houver várias versões da extensão, certifique-se de selecionar a versão que corresponde ao seu aplicativo. Você pode ver qual versão do SDK destina-se ao seu aplicativo na guia **Aplicativo** das propriedades do projeto.
 
  
 
@@ -152,6 +145,6 @@ Quando você enumerar dispositivos MIDI de saída usando a técnica descrita aci
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

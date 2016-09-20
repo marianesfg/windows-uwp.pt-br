@@ -5,7 +5,6 @@ title: "Animações de interface do usuário pop-up em aplicativos UWP"
 ms.assetid: 4E9025CE-FC90-4d4c-9DE6-EC6B6F2AD9DF
 label: Motion--Pop-up animations
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 2b135fb62d871c559892e6b1e968767b7be716bd
 

@@ -6,7 +6,6 @@ ms.assetid: d4a01425-4dee-4de3-9a05-3e85c3fc03cb
 isNew: true
 label: Date picker
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: c237d4bc013ad0a1d0d16f695f4332a6aac7efdc
 
@@ -49,7 +48,8 @@ O seletor de data resultante tem esta aparência:
 
 ![Exemplo de seletor de data](images/date-picker-closed.png)
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os controles de Data e Hora.
 
 

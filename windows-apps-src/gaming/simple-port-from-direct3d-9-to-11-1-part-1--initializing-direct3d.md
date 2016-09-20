@@ -3,7 +3,6 @@ author: mtoepke
 title: Inicializar o Direct3D 11.
 description: "Consulte como converter o código de inicialização do Direct3D 9 para usá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca."
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: f0e25e43633d895673d640f139af338f6f0713f2
 
@@ -70,7 +69,8 @@ Primeiramente, criamos o dispositivo. Vamos obter uma lista de níveis de recurs
 
 Após a criação do dispositivo Direct3D 11 e de seu contexto, podemos usar a funcionalidade do ponteiro COM para obter as versões mais recentes das interfaces, que incluem recursos adicionais e são sempre recomendadas.
 
-> **Observação**   D3D\_FEATURE\_LEVEL\_9\_1 (correspondente ao modelo de sombreador 2.0) é o nível mínimo de suporte exigido para seu jogo da Windows Store. (Ocorrerá falha na certificação dos pacotes ARM de seu jogo se você não der suporte a 9\_1.) Se o seu jogo também incluir um caminho de renderização de recursos do modelo 3 de sombreador, você deverá incluir D3D\_FEATURE\_LEVEL\_9\_3 na matriz.
+> 
+            **Observação**   D3D\_FEATURE\_LEVEL\_9\_1 (correspondente ao modelo de sombreador 2.0) é o nível mínimo de suporte exigido para seu jogo da Windows Store. (Ocorrerá falha na certificação dos pacotes ARM de seu jogo se você não der suporte a 9\_1.) Se o seu jogo também incluir um caminho de renderização de recursos do modelo 3 de sombreador, você deverá incluir D3D\_FEATURE\_LEVEL\_9\_3 na matriz.
 
  
 
@@ -122,7 +122,8 @@ O Direct3D 11 inclui uma API de dispositivo chamada DXGI (infraestrutura de elem
 
 O dispositivo Direct3D implementa uma interface COM para DXGI. Primeiro precisamos obter essa interface e usá-la para solicitar o adaptador DXGI que hospeda o dispositivo. Depois, usamos o adaptador DXGI para criar uma fábrica DXGI.
 
-> **Observação**   Tratam-se de interfaces COM; por isso, como primeira resposta, é possível usar [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Porém, em vez disso, use ponteiros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Em seguida, chame o método [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), fornecendo um ponteiro COM vazio do tipo de interface correto.
+> 
+            **Observação**   Tratam-se de interfaces COM; por isso, como primeira resposta, é possível usar [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Porém, em vez disso, use ponteiros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Em seguida, chame o método [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), fornecendo um ponteiro COM vazio do tipo de interface correto.
 
  
 
@@ -146,7 +147,8 @@ dxgiAdapter->GetParent(
 
 Agora que temos a fábrica DXGI, podemos usá-la para criar a cadeia de permuta. É hora de definir os parâmetros da cadeia de troca. Precisamos especificar o formato da superfície; escolheremos [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059)por ser compatível com Direct2D. Desativaremos a colocação da exibição em escala, a multiamostragem e a renderização estéreo, pois elas não são usadas neste exemplo. Como a execução é feita diretamente em uma CoreWindow, podemos deixar a largura e altura como 0 e obter os valores de tela inteira automaticamente.
 
-> **Observação**   Sempre defina o parâmetro *SDKVersion* de aplicativos UWP como D3D11\_SDK\_VERSION.
+> 
+            **Observação**   Sempre defina o parâmetro *SDKVersion* de aplicativos UWP como D3D11\_SDK\_VERSION.
 
  
 
@@ -166,7 +168,8 @@ swapChain.As(&m_swapChain);
 
 Para garantir que não estejamos realizando mais renderizações do que a tela pode exibir, definimos a latência de quadros como 1 e usamos [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077). Assim, é possível economizar energia e atender a um requisito de certificação da loja; a parte 2 deste guia passo a passo fala mais sobre apresentação na tela.
 
-> **Observação**   Você pode usar multithreading (por exemplo, itens de trabalho [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) para dar continuidade a outros trabalhos enquanto o thread de renderização está bloqueado.
+> 
+            **Observação**   Você pode usar multithreading (por exemplo, itens de trabalho [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) para dar continuidade a outros trabalhos enquanto o thread de renderização está bloqueado.
 
  
 

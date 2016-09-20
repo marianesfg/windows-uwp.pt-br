@@ -16,7 +16,8 @@ ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
 
 Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo.
 
-> **Dica**  Para saber mais sobre como usar mapas e local no aplicativo, baixe as seguintes amostras do [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
+> 
+            **Dica**  Para saber mais sobre como usar mapas e local no aplicativo, baixe as seguintes amostras do [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
 -   [Amostra de mapa da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 -   [Amostra de geolocalização da UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 

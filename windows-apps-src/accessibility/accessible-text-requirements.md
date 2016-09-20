@@ -5,8 +5,9 @@ ms.assetid: BA689C76-FE68-4B5B-9E8D-1E7697F737E6
 title: "Requisitos de texto acessível"
 label: Accessible text requirements
 template: detail.hbs
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 1307b4f70cf7ffed300f4254a7d92b67b5afd085
+translationtype: Human Translation
+ms.sourcegitcommit: f36c6a8c191f48c6fb04820c19a98891e46ecf9d
+ms.openlocfilehash: a87e578ae9cfb3fd3104392028f6b7412d23d619
 
 ---
 
@@ -39,22 +40,67 @@ Use as ferramentas de contraste de cores para verificar se a taxa de contraste d
 ## Funções de elementos de texto  
 Um aplicativo UWP pode usar esses elementos padrão (usualmente chamados de *text elements* or *textedit controls*):
 
-* [
-              **TextBlock**
-            ](https://msdn.microsoft.com/library/windows/apps/BR209652): a função é [**Texto**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [
-              **TextBox**
-            ](https://msdn.microsoft.com/library/windows/apps/BR209683): a função é [**Editar**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [
-              **RichTextBlock**
-            ](https://msdn.microsoft.com/library/windows/apps/BR227565) (e classe excedente [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): a função é [**Texto**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [
-              **RichEditBox**
-            ](https://msdn.microsoft.com/library/windows/apps/BR227548): a função é [**Editar**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652): a função é [**Texto**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+* [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683): a função é [**Editar**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+* [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) (e classe excedente [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): a função é [**Texto**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+* [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/BR227548): a função é [**Editar**](https://msdn.microsoft.com/library/windows/apps/BR209182)
 
 Quando um controle reporta sua função como [**Editar**](https://msdn.microsoft.com/library/windows/apps/BR209182), tecnologias adaptativas supõem que haja formas de os usuários mudarem os valores. Então, se você colocar texto estático em um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683), reportando o papel e, portanto, a estrutura de forma errônea do aplicativo para o usuário de acessibilidade.
 
-Nos modelos de texto de XAML, há dois elementos que são principalmente usados para texto estático, [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) e [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565). Nenhum deles é uma subclasse [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) e, assim, nenhum deles é focalizável no teclado ou pode aparecer na ordem da guia. Mas isso não significa que as tecnologias adaptativas não podem ou não conseguem lê-los. Os leitores de tela são normalmente concebidos para suportar vários modos de leitura de conteúdo em um aplicativo, incluindo um modo de leitura dedicado ou padrões de navegação que vão além do foco e da ordem de tabulação, como um “cursor virtual”. Então, não coloque o seu texto estático em contêineres focalizáveis para a sua ordem de guia leve o usuário até lá. Os usuários de tecnologia adaptativa esperam que qualquer coisa na ordem de guia seja interativa e se encontrarem o texto estático ali, ficarão confusos. Você deve testar isso por si próprio com o Narrador para ter uma noção da experiência do usuário com seu aplicativo ao usar um leitor de tela para examinar o texto estático do seu aplicativo.
+Nos modelos de texto de XAML, há dois elementos que são principalmente usados para texto estático, [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) e [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565). Nenhum deles é uma subclasse [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) e, assim, nenhum deles é focalizável no teclado ou pode aparecer na ordem da guia. Mas isso não significa que as tecnologias adaptativas não podem ou não conseguem lê-los. Os leitores de tela são normalmente concebidos para suportar vários modos de leitura de conteúdo em um aplicativo, incluindo um modo de leitura dedicado ou padrões de navegação que vão além do foco e da ordem de tabulação, como um “cursor virtual”. Então, não coloque o seu texto estático em contêineres focalizáveis para a sua ordem de guia leve o usuário até lá. Os usuários de tecnologia adaptativa esperam que qualquer coisa na ordem de guia seja interativa e se encontrarem o texto estático ali, ficarão confusos. Você deve testar isso com o Narrador para ter uma noção da experiência do usuário com seu aplicativo ao usar um leitor de tela para examinar o texto estático do seu aplicativo.
+
+<span id="Auto-suggest_accessibility"/>
+<span id="auto-suggest_accessibility"/>
+<span id="AUTO-SUGGEST_ACCESSIBILITY"/>
+## Acessibilidade de sugestão automática  
+Quando um usuário digita em um campo de entrada e uma lista de sugestões é exibida, esse tipo de cenário é chamado de sugestão automática. Isso é comum na linha **Para:** de um email, na caixa de pesquisa da Cortana no Windows, no campo de entrada de URL no Microsoft Edge, no campo de entrada de localização no aplicativo Clima, etc. Se você estiver usando um XAML [**AutosuggestBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.autosuggestbox) ou os controles HTML intrínsecos, essa experiência já estará disponível para você por padrão. Para tornar essa experiência acessível, o campo de entrada e a lista devem estar associados. Isso é explicado na seção [Implementando a sugestão automática](#implementing_auto-suggest) seção.
+
+O Narrador foi atualizado para tornar esse tipo de experiência acessível por meio de um modo de sugestões especial. Em um nível alto, quando o campo de edição e a lista estão conectados corretamente, o usuário final:
+
+* Saberá que a lista está presente e quando ela é fechada
+* Saberá quantas sugestões estão disponíveis
+* Conhecerá o item selecionado, se houver
+* Poderá mover o foco do Narrador para a lista
+* Poderá navegar por uma sugestão com todos os outros modos de leitura
+
+![Lista de sugestões](images/autosuggest-list.png)<br/>
+_Exemplo de uma lista de sugestões_
+
+<span id="Implementing_auto-suggest"/>
+<span id="implementing_auto-suggest"/>
+<span id="IMPLEMENTING_AUTO-SUGGEST"/>
+### Implementando a sugestão automática  
+Para tornar essa experiência acessível, o campo de entrada e a lista devem ser associados na árvore de UIA. Essa associação é feita com a propriedade [UIA_ControllerForPropertyId](https://msdn.microsoft.com/windows/desktop/ee684017) em aplicativos de desktop ou com a propriedade [ControlledPeers](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) em aplicativos UWP.
+
+Em um nível alto, há dois tipos de experiências de sugestão automática.
+
+**Seleção padrão**  
+Se uma seleção padrão é feita na lista, o Narrador procura um evento [**UIA_SelectionItem_ElementSelectedEventId**](https://msdn.microsoft.com/library/windows/desktop/ee671223) em um aplicativo de desktop, ou o evento [**AutomationEvents.SelectionItemPatternOnElementSelected**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) para ser gerado em um aplicativo UWP. Sempre que a seleção é alterada, quando o usuário digita outra letra e as sugestões foram atualizadas ou quando um usuário navega pela lista, o evento **ElementSelected** deve ser disparado.
+
+![Lista com uma seleção padrão](images/autosuggest-default-selection.png)<br/>
+_Exemplo de onde há uma seleção padrão_
+
+**Nenhuma seleção padrão**  
+Se não houver nenhuma seleção padrão, como na caixa de local do aplicativo Clima, o Narrador procurará o evento [**UIA_LayoutInvalidatedEventId**](https://msdn.microsoft.com/library/windows/desktop/ee671223 ) de área de trabalho ou o evento [**LayoutInvalidated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) UWP para ser disparado na lista sempre que a lista for atualizada.
+
+![Lista sem uma seleção padrão](images/autosuggest-no-default-selection.png)<br/>
+_Exemplo de onde não há uma seleção padrão_
+
+### Implementação de XAML  
+Se você estiver usando [**AutosuggestBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.autosuggestbox) de XAML padrão, tudo já estará disponível para você. Se estiver criando sua própria experiência de sugestão automática com um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox) e uma lista, você precisará definir a lista como [**AutomationProperties.ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) no **TextBox**. Você deverá disparar o evento **AutomationPropertyChanged** para a propriedade [**ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) sempre que adicionar ou remover essa propriedade e também disparar seu próprio evento [**SelectionItemPatternOnElementSelected**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) ou [**LayoutInvalidated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) dependendo do tipo de cenário, que foi explicado anteriormente neste artigo.
+
+### Implementação de HTML  
+Se você estiver usando os controles intrínsecos em HTML, a implementação de UIA já foi mapeada para você. Veja a seguir um exemplo de implementação que já está disponível para você:
+
+``` HTML
+<label>Sites <input id="input1" type="text" list="datalist1" /></label>
+<datalist id="datalist1">
+        <option value="http://www.google.com/" label="Google"></option>
+        <option value="http://www.reddit.com/" label="Reddit"></option>
+</datalist>
+```
+
+ Se você estiver criando seus próprios controles, deverá configurar seus próprios controles ARIA, que são explicados nos padrões W3C.
 
 <span id="Text_in_graphics"/>
 <span id="text_in_graphics"/>
@@ -110,15 +156,11 @@ O valor do **TextScaleFactor** é o dobro no intervalo \[1,2\]. O menor texto es
 
 Esses tipos têm uma propriedade **IsTextScaleFactorEnabled**:  
 * [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378)
-* [
-              **Control**
-            ](https://msdn.microsoft.com/library/windows/apps/BR209390) e classes derivadas
+* [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) e classes derivadas
 * [**FontIcon**](https://msdn.microsoft.com/library/windows/apps/Dn279514)
 * [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)
 * [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)
-* [
-              **TextElement**
-            ](https://msdn.microsoft.com/library/windows/apps/BR209967) e classes derivadas
+* [**TextElement**](https://msdn.microsoft.com/library/windows/apps/BR209967) e classes derivadas
 
 <span id="related_topics"/>
 ## Tópicos relacionados  
@@ -126,10 +168,10 @@ Esses tipos têm uma propriedade **IsTextScaleFactorEnabled**:
 * [Informações básicas de acessibilidade](basic-accessibility-information.md)
 * [Amostra de exibição de texto XAML](http://go.microsoft.com/fwlink/p/?linkid=238579)
 * [Amostra de edição de texto XAML](http://go.microsoft.com/fwlink/p/?linkid=251417)
-* [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570) 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

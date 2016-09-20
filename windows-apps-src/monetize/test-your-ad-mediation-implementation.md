@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 54ECD653-7FC2-4A95-AC5A-972C4FB5A54B
 description: "Antes de enviar seu aplicativo, recomendamos que você teste sua implementação de controle de anúncios."
 title: "Testar sua implementação de controle de anúncios"
-translationtype: Human Translation
 ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
 ms.openlocfilehash: 0805ed5462a4b100b837ed9c11ec2d9e7caabc34
 
@@ -19,13 +18,14 @@ Antes de enviar seu aplicativo, recomendamos que você teste sua implementação
 ## Testar com valores de configuração de rede de publicidade de teste
 
 
-Se você executar o aplicativo sem inserir a configuração de rede de publicidade iniciando **Serviços Conectados** para seu projeto no Visual Studio, o controle de anúncios usará automaticamente os valores de configuração de teste quando você executar o aplicativo no computador de desenvolvimento (para aplicativos da Plataforma Universal do Windows (UWP) e XAML do Windows 8.1) ou no emulador ou dispositivo (para aplicativos do Windows Phone). Isso permite que você teste rapidamente seu aplicativo e verifique se ele está codificado corretamente antes de inserir os parâmetros necessários da rede de publicidade.
+Se você executar o aplicativo sem inserir a configuração de rede de publicidade iniciando **Serviços Conectados** para seu projeto no Visual Studio, o controle de anúncios usará automaticamente os valores de configuração de teste quando você executar o aplicativo no computador de desenvolvimento (para aplicativos da Plataforma Universal do Windows (UWP) e XAML do Windows8.1) ou no emulador ou dispositivo (para aplicativos do Windows Phone). Isso permite que você teste rapidamente seu aplicativo e verifique se ele está codificado corretamente antes de inserir os parâmetros necessários da rede de publicidade.
 
 As redes de publicidade girarão em ordem sequencial, com uma rede exibida após a outra na mesma quantidade de tempo. Espere tempo suficiente para a execução de alguns ciclos para que você possa ver todas as redes de publicidade e reduzir a chance de quaisquer problemas de conectividade temporários que possam ocorrer.
 
 Os anúncios de teste serão exibidos em redes de publicidade que deem suporte a eles. Observe que os anúncios de teste, às vezes, podem se parecer com erros. Revise os eventos para determinar se houve erros.
 
-> **Observação**  Ao testar um aplicativo Silverlight do Windows Phone, o Google AdMob sempre retornará um erro de **Solicitação Inválida** já que ele não usa metadados de teste. Para verificar sua implementação do Google AdMob, você deve inserir os parâmetros necessários, conforme descrito na próxima seção.
+> 
+            **Observação**  Ao testar um aplicativo Silverlight do Windows Phone, o Google AdMob sempre retornará um erro de **Solicitação Inválida** já que ele não usa metadados de teste. Para verificar sua implementação do Google AdMob, você deve inserir os parâmetros necessários, conforme descrito na próxima seção.
 
  
 

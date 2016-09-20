@@ -3,7 +3,6 @@ author: jnHs
 Description: "Se você anteriormente tinha configurado uma conta de pagamento pubCenter referente aos lucros do Microsoft Advertising, essa conta não será mais usada para pagamentos a partir de 1º de abril de 2016. Seus pagamentos agora serão feitos por meio de sua conta de pagamento do Centro de Desenvolvimento."
 title: "Conta de pagamento DevCenter pubCenter e consolidação de perfil fiscal"
 ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 8973b1def46c7ada8b73337cb20d01ae1e5b97d8
 
@@ -16,7 +15,8 @@ Se você anteriormente tinha configurado uma conta de pagamento pubCenter refere
 
 Para garantir que todos os pagamentos devidos sejam enviados a tempo, entre em seu painel do Centro de Desenvolvimento e confirme que sua [conta de pagamento e perfil fiscal](setting-up-your-payout-account-and-tax-forms.md) estão definidos corretamente e atualizados.
 
-> **Importante**  Caso nunca tenha configurado seu perfil fiscal nem uma conta de pagamento no Centro de Desenvolvimento, você precisará fazer isso agora. Para saber mais, consulte [Configurando sua conta de pagamento e formulários fiscais](setting-up-your-payout-account-and-tax-forms.md).
+> 
+            **Importante**  Caso nunca tenha configurado seu perfil fiscal nem uma conta de pagamento no Centro de Desenvolvimento, você precisará fazer isso agora. Para saber mais, consulte [Configurando sua conta de pagamento e formulários fiscais](setting-up-your-payout-account-and-tax-forms.md).
 
 Para saber mais sobre pagamentos no Centro de Desenvolvimento, veja [Resumo de pagamento](payout-summary.md). Para saber mais sobre as moedas usadas para pagamentos em diferentes países e regiões, veja [Mercados de conta e envio de aplicativo do desenvolvedor](account-types-locations-and-fees.md#account_markets).
 

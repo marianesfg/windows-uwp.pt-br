@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
 description: Saiba mais sobre como instalar as bibliotecas do Microsoft Advertising.
 title: Instalar as bibliotecas do Microsoft Advertising
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 0951818ceaf3d96543f9f97ec6993d08fdaab2b8
 
@@ -19,7 +18,8 @@ As bibliotecas do Microsoft Advertising para aplicativos do Windows estão inclu
 
 Para obter instruções sobre instalação, consulte [Monetizar seu aplicativo e envolver os clientes com o SDK do Microsoft Store Engagement and Monetization](https://msdn.microsoft.com/windows/uwp/monetize/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk).
 
-> **Observação** Se você instalou a Compilação 14295 do Windows 10 Anniversary SDK Preview ou posterior com o Visual Studio 2015, também precisará instalar a biblioteca WinJS se quiser adicionar anúncios a um aplicativo JavaScript/HTML. Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows para Windows 10, mas a partir da Compilação 14295 do Windows 10 Anniversary SDK Preview, ela deve ser instalada separadamente. Para instalar o WinJS, consulte [Baixar o WinJS](http://try.buildwinjs.com/download/GetWinJS/).
+> 
+            **Observação** Se você instalou a Compilação 14295 do Windows 10 Anniversary SDK Preview ou posterior com o Visual Studio 2015, também precisará instalar a biblioteca WinJS se quiser adicionar anúncios a um aplicativo JavaScript/HTML. Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows para Windows 10, mas a partir da Compilação 14295 do Windows 10 Anniversary SDK Preview, ela deve ser instalada separadamente. Para instalar o WinJS, consulte [Baixar o WinJS](http://try.buildwinjs.com/download/GetWinJS/).
 
 ## Nomes de bibliotecas para publicidade e mediação de anúncios
 
@@ -38,7 +38,8 @@ Para poder usar qualquer um dos controles de publicidade no código do aplicativ
     </thead>
     <tbody>
     <tr>
-            <td rowspan="3">**AdControl** e **InterstitialAd** (XAML)</td>
+            <td rowspan="3">
+            **AdControl** e **InterstitialAd** (XAML)</td>
             <td>UWP</td>
             <td>SDK do Microsoft Advertising para XAML</td>
             <td>10.0</td>
@@ -54,7 +55,8 @@ Para poder usar qualquer um dos controles de publicidade no código do aplicativ
             <td>1.0</td>
         </tr>
     <tr>
-            <td rowspan="3">**AdControl** e **InterstitialAd** (JavaScript/HTML)</td>
+            <td rowspan="3">
+            **AdControl** e **InterstitialAd** (JavaScript/HTML)</td>
             <td>UWP</td>
             <td>SDK do Microsoft Advertising para JavaScript</td>
             <td>10.0</td>
@@ -70,7 +72,8 @@ Para poder usar qualquer um dos controles de publicidade no código do aplicativ
             <td>8.5</td>
         </tr>
     <tr>
-            <td rowspan="3">**AdMediatorControl** (somente XAML)</td>
+            <td rowspan="3">
+            **AdMediatorControl** (somente XAML)</td>
             <td>UWP</td>
             <td>SDK do Microsoft Advertising Universal</td>
             <td>1.0</td>

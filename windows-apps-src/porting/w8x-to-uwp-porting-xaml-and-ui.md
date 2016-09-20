@@ -5,7 +5,7 @@ title: "Portabilidade do Windows Runtime 8.x XAML e da interface do usuário par
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
 translationtype: Human Translation
 ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: eb543a5ef1da7c9b39438349757c1b394a3be9b5
+ms.openlocfilehash: c81c017817e55aed5dc4d19d919e22dd511c2b01
 
 ---
 
@@ -97,12 +97,8 @@ Veja alguns exemplos mais específicos de mudanças nos controles.
 | [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | Em um aplicativo da Windows Store, os comandos secundários de um [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) estão sempre visíveis. Em um aplicativo da Loja do Windows Phone e em um aplicativo do Windows 10, eles não aparecem até que a barra de comando seja aberta. |
 | [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | Para um aplicativo da Loja do Windows Phone, o valor de [**CommandBar.IsSticky**](https://msdn.microsoft.com/library/windows/apps/hh701944) não afeta se a barra é light dismiss. Para um aplicativo do Windows 10, caso **IsSticky** seja definido como verdadeiro, a **CommandBar** ignora um gesto de light dismiss. |
 | [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | Em um aplicativo do Windows 10, um [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) não manipula o evento [**EdgeGesture.Completed**](https://msdn.microsoft.com/library/windows/apps/hh701622) nem o [**UIElement.RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984). Ele também não reage a um toque nem a um passar de dedo para cima. Você ainda tem a opção de manipular esses eventos e definir o [**IsOpen**](https://msdn.microsoft.com/library/windows/apps/hh701939). |
-| [
-              **DatePicker**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | Examine a aparência do seu aplicativo com as alterações visuais em [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) e [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280). Para um aplicativo do Windows 10 em execução em um dispositivo móvel, esses controles não navegarão mais até uma página de seleção, mas usarão um pop-up light-dismiss. |
-| [
-              **DatePicker**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | Em um aplicativo do Windows 10, você não pode colocar o [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) ou o [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) dentro de um menu suspenso. Caso você queira que esses controles sejam exibidos em um controle tipo pop-up, é possível usar o [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) e o [**TimePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn608313). |
+| [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | Examine a aparência do seu aplicativo com as alterações visuais em [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) e [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280). Para um aplicativo do Windows 10 em execução em um dispositivo móvel, esses controles não navegarão mais até uma página de seleção, mas usarão um pop-up light-dismiss. |
+| [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | Em um aplicativo do Windows 10, você não pode colocar o [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) ou o [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) dentro de um menu suspenso. Caso você queira que esses controles sejam exibidos em um controle tipo pop-up, é possível usar o [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) e o [**TimePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn608313). |
 | **GridView**, **ListView** | Para **GridView**/**ListView**, consulte [Alterações na GridView/ListView](#gridview). |
 | [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) | Em um aplicativo da Loja do Windows Phone, um controle [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) encapsula da última seção à primeira. Em um aplicativo da Windows Store e em um aplicativo do Windows 10, as seções de hub não encapsulam. |
 | [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) | Em um aplicativo da Loja do Windows Phone, uma imagem de plano de fundo do controle [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) move no paralaxe em relação às seções do hub. Em um aplicativo da Windows Store e em um aplicativo do Windows 10, o paralaxe não é usado. |
@@ -113,9 +109,7 @@ Veja alguns exemplos mais específicos de mudanças nos controles.
 | [**Pivô**](https://msdn.microsoft.com/library/windows/apps/dn608241) | O controle [**Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241) agora é universal e não tem mais o uso limitado a dispositivos móveis. |
 | [**Caixa de pesquisa**](https://msdn.microsoft.com/library/windows/apps/dn252771) | Embora [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803) seja implementado na família de dispositivos Universal, não é totalmente funcional em dispositivos móveis. Veja [SearchBox preterido em favor do AutoSuggestBox](#searchbox). |
 | **SemanticZoom** | Para **SemanticZoom**, consulte [alterações em SemanticZoom changes](#semantic-zoom). |
-| [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)  | Algumas propriedades padrão do [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) mudaram. [
-              **HorizontalScrollMode**
-            ](https://msdn.microsoft.com/library/windows/apps/br209549) está **Auto**, [**VerticalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209589) está **Auto** e [**ZoomMode**](https://msdn.microsoft.com/library/windows/apps/br209601) está **Disabled**. Caso os novos valores padrão não sejam apropriados para o aplicativo, você pode alterá-los em um estilo ou como valores locais no próprio controle.  |
+| [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)  | Algumas propriedades padrão do [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) mudaram. [**HorizontalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209549) está **Auto**, [**VerticalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209589) está **Auto** e [**ZoomMode**](https://msdn.microsoft.com/library/windows/apps/br209601) está **Disabled**. Caso os novos valores padrão não sejam apropriados para o aplicativo, você pode alterá-los em um estilo ou como valores locais no próprio controle.  |
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | Em um aplicativo da Windows Store, a verificação ortográfica está desativada por padrão para um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683). Em um aplicativo da Loja do Windows Phone e em um aplicativo do Windows 10, ela está ativada por padrão. |
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | O tamanho de fonte padrão para um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) mudou de 11 para 15. |
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | O valor padrão de [**TextBox.TextReadingOrder**](https://msdn.microsoft.com/library/windows/apps/dn252859) foi alterado de **Default** para **DetectFromContent**. Se não for esta a sua vontade, use **UseFlowDirection**. **Default** é preterido. |
@@ -417,9 +411,7 @@ Embora [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803)
 
 Depois que o usuário começa a digitar, o **TextChanged** evento é acionado, com um motivo de **UserInput**. Você então preenche a lista de sugestões e define o **ItemsSource** do [**AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/dn633874). Conforme o usuário navega na lista, o evento **SuggestionChosen** é acionado (e, se você tiver definido **TextMemberDisplayPath**, a caixa de texto é preenchida automaticamente com a propriedade especificada). Quando o usuário envia uma opção com a tecla Enter, o **QuerySubmitted** evento é gerado, no ponto em que você pode executar uma ação naquela sugestão (neste caso, provavelmente navegar para outra página com mais detalhes sobre o conteúdo especificado). Observe que as propriedades **LinguisticDetails** e **Language** do **SearchBoxQuerySubmittedEventArgs** não são mais suportadas (há APIs equivalentes para dar suporte a essa funcionalidade). E para **KeyModifiers** não há mais suporte.
 
-[
-              **AutoSuggestBox**
-            ](https://msdn.microsoft.com/library/windows/apps/dn633874) também tem suporte para editores de método de entrada (IMEs). E, caso queira mostrar um ícone de "localizar", você pode fazer isso também (interagir com o ícone fará o evento **QuerySubmitted** ser gerado).
+[**AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/dn633874) também tem suporte para editores de método de entrada (IMEs). E, caso queira mostrar um ícone de "localizar", você pode fazer isso também (interagir com o ícone fará o evento **QuerySubmitted** ser gerado).
 
 ```xml
    <AutoSuggestBox ... >
@@ -493,6 +485,6 @@ O próximo tópico é [Portabilidade para E/S, dispositivo e modelo de aplicativ
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

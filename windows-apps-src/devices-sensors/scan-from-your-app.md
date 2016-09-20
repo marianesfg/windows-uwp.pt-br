@@ -3,7 +3,6 @@ author: DBirtolo
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: Digitalize a partir de seu aplicativo
 description: "Aprenda aqui a digitalizar conteúdos do seu aplicativo usando uma fonte de scanner de mesa, alimentador ou autoconfigurado."
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: fe01ccf5b0b91ffcca7937842cf0152622d59f9e
 
@@ -20,7 +19,8 @@ ms.openlocfilehash: fe01ccf5b0b91ffcca7937842cf0152622d59f9e
 
 Aprenda aqui a digitalizar conteúdos do seu aplicativo usando uma fonte de scanner de mesa, alimentador ou autoconfigurado.
 
-**Importante**  As APIS [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) fazem parte da [família de dispositivos](https://msdn.microsoft.com/library/windows/apps/Dn894631) de desktop. Os aplicativos podem usar essas APIs somente na versão para a área de trabalho do Windows 10.
+
+            **Importante**  As APIS [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) fazem parte da [família de dispositivos](https://msdn.microsoft.com/library/windows/apps/Dn894631) de desktop. Os aplicativos podem usar essas APIs somente na versão para a área de trabalho do Windows 10.
 
 Para digitalizar de seu aplicativo, você deve primeiro listar os scanners disponíveis declarando um novo objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) e obtendo o tipo [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381). Somente scanners instalados localmente com drivers WIA são listados e disponibilizados a seu aplicativo.
 
@@ -94,7 +94,8 @@ Para cada tipo de enumeração [**ImageScannerScanSource**](https://msdn.microso
 
 Para digitalizar com as configurações padrão, seu aplicativo conta com o namespace [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) para selecionar um scanner e digitalizar dessa origem. Nenhuma configuração de digitalização é alterada. Os scanners possíveis são configurado automaticamente, plano ou alimentador. Esse tipo de digitalização é o mais provável que produza uma operação de digitalização bem-sucedida, mesmo se digitalizar da fonte errada, como de scanner plano em vez de alimentador.
 
-**Observação**  Se o usuário colocar o documento para digitalizar no alimentador, o scanner digitalizará a partir do scanner plano. Se o usuário tentar digitalizar de um alimentador vazio, a tarefa de digitalização não produzirá qualquer arquivo digitalizado.
+
+            **Observação**  Se o usuário colocar o documento para digitalizar no alimentador, o scanner digitalizará a partir do scanner plano. Se o usuário tentar digitalizar de um alimentador vazio, a tarefa de digitalização não produzirá qualquer arquivo digitalizado.
  
 ```csharp
     var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default, 
@@ -105,7 +106,8 @@ Para digitalizar com as configurações padrão, seu aplicativo conta com o name
 
 Seu aplicativo pode usar [Digitalização configurada automaticamente](https://msdn.microsoft.com/library/windows/hardware/Ff539393) do dispositivo, para digitalizar com as melhores configurações de digitalização. Com essa opção, o próprio dispositivo pode determinar as melhores configurações de digitalização, como modo de cor e resolução da digitalização, de acordo com o conteúdo que está sendo digitalizado. O dispositivo seleciona as configurações de digitalização no tempo de execução para cada nova tarefa de digitalização.
 
-**Observação**  Nem todos os scanners dão suporte a esse recurso, portanto o aplicativo deve verificar se o scanner tem suporte para esse recurso antes de usar essa configuração.
+
+            **Observação**  Nem todos os scanners dão suporte a esse recurso, portanto o aplicativo deve verificar se o scanner tem suporte para esse recurso antes de usar essa configuração.
 
 Nesse exemplo, o aplicativo primeiro verifica se o scanner é capaz de usar configuração automática e então digitaliza. Para especificar se em plano ou alimentador, simplesmente substitua **AutoConfigured** por **Flatbed** ou **Feeder**.
 

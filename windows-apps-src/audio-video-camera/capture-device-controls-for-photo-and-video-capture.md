@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
 description: "Este artigo mostra controles de vídeo do dispositivo para habilitar cenários de captura de fotos e vídeos avançados, incluindo estabilização de imagem ótica e zoom suave."
 title: "Controles de captura do dispositivo para a captura de fotos e vídeos"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
 
@@ -20,7 +19,8 @@ Os controles discutidos neste artigo são todos adicionados ao seu aplicativo us
 
 O código neste artigo foi adaptado da [amostra do SDK de Controles Manuais de Câmera](http://go.microsoft.com/fwlink/?LinkId=619479). Você pode baixar a amostra para ver o código usado no contexto ou usar a amostra como ponto de partida para seu próprio aplicativo.
 
-**Observação** Este artigo se baseia nos conceitos e códigos discutidos em [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md) que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
+
+            **Observação** Este artigo se baseia nos conceitos e códigos discutidos em [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md) que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
 
 Todas as APIs de controle de dispositivo discutidas neste artigo são membros do namespace [**Windows.Media.Devices**](https://msdn.microsoft.com/library/windows/apps/br206902).
 
@@ -50,7 +50,8 @@ No manipulador de eventos **CheckedChanged** da caixa de seleção de exposiçã
 
 [!code-cs[ExposureCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetExposureCheckBox)]
 
-**Importante** Somente há suporte para o modo de exposição automática enquanto o fluxo de visualização está em execução. Verifique se o fluxo de visualização está em execução antes de ativar a exposição automática.
+
+            **Importante** Somente há suporte para o modo de exposição automática enquanto o fluxo de visualização está em execução. Verifique se o fluxo de visualização está em execução antes de ativar a exposição automática.
 
 ## Compensação de exposição
 
@@ -96,7 +97,8 @@ Por fim, no manipulador da caixa de seleção da lanterna de vídeo, defina a pr
 
 [!code-cs[Lanterna](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
 
-**Observação** Em alguns dispositivos, a lanterna não emitirá luz, mesmo que [**TorchControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) esteja definido como true, a menos que o dispositivo tenha um fluxo de visualização em execução e esteja ativamente capturando vídeo. A ordem recomendada das operações é ativar a visualização de vídeo, ativar a lanterna definindo **Enabled** como true e depois iniciar a captura de vídeo. Em alguns dispositivos, a lanterna acende depois que a visualização é iniciada. Em outros dispositivos, o lanterna não pode acender até que captura de vídeo seja iniciada.
+
+            **Observação** Em alguns dispositivos, a lanterna não emitirá luz, mesmo que [**TorchControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) esteja definido como true, a menos que o dispositivo tenha um fluxo de visualização em execução e esteja ativamente capturando vídeo. A ordem recomendada das operações é ativar a visualização de vídeo, ativar a lanterna definindo **Enabled** como true e depois iniciar a captura de vídeo. Em alguns dispositivos, a lanterna acende depois que a visualização é iniciada. Em outros dispositivos, o lanterna não pode acender até que captura de vídeo seja iniciada.
 
 ## Foco
 
@@ -118,7 +120,8 @@ Crie um novo objeto [**FocusSettings**](https://msdn.microsoft.com/library/windo
 
 [!code-cs[CafFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCafFocusRadioButton)]
 
-**Importante** O modo de foco automático é aceito somente enquanto o fluxo de visualização está em execução. Verifique se o fluxo de visualização está em execução antes de ativar o foco automático contínuo.
+
+            **Importante** O modo de foco automático é aceito somente enquanto o fluxo de visualização está em execução. Verifique se o fluxo de visualização está em execução antes de ativar o foco automático contínuo.
 
 ### Tocar para focalizar
 
@@ -162,9 +165,11 @@ Em seguida, obtenha o [**RegionsOfInterestControl**](https://msdn.microsoft.com/
 
 Por fim, chame [**FocusAsync**](https://msdn.microsoft.com/library/windows/apps/dn297794) no **FocusControl** para iniciar a focalização.
 
-**Importante** Ao implementar o modo de tocar para focalizar, a ordem das operações é importante. Você deve chamar essas APIs na seguinte ordem:
 
-**1.**
+            **Importante** Ao implementar o modo de tocar para focalizar, a ordem das operações é importante. Você deve chamar essas APIs na seguinte ordem:
+
+
+            **1.**
             [
               **FocusControl.Configure**
             ](https://msdn.microsoft.com/library/windows/apps/dn608067)
@@ -180,6 +185,7 @@ Por fim, chame [**FocusAsync**](https://msdn.microsoft.com/library/windows/apps/
             [
               **FocusControl.FocusAsync**
             ](https://msdn.microsoft.com/library/windows/apps/dn297794)
+          
 
 [!code-cs[TapToFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapToFocus)]
 
@@ -291,9 +297,11 @@ No manipulador de eventos **ValueChanged**, obtenha o valor atual do controle e 
 
 [!code-cs[WhiteBalanceSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetWhiteBalanceSlider)]
 
-**Importante** O ajuste da proporção de branco só é permitido enquanto o fluxo de visualização está em execução. Verifique se o fluxo de visualização está em execução antes de definir o valor ou a predefinição da proporção de branco.
 
-**Importante** O valor predefinido **ColorTemperaturePreset.Auto** instrui o sistema a ajustar automaticamente o nível de proporção de branco. Para alguns cenários, como a captura de uma sequência de fotos em que os níveis de proporção de branco devem ser iguais para cada quadro, convém bloquear o controle no valor automático atual. Para fazer isso, chame [**SetPresetAsync**](https://msdn.microsoft.com/library/windows/apps/dn279113) e especifique a predefinição **Manual** e não defina um valor no controle usando [**SetValueAsync**](https://msdn.microsoft.com/library/windows/apps/dn279114). Isso fará com que o dispositivo bloqueie o valor atual. Não tente ler o valor atual do controle atual e depois transmitir o valor retornado para **SetValueAsync**, pois não há garantia de que esse valor seja correto.
+            **Importante** O ajuste da proporção de branco só é permitido enquanto o fluxo de visualização está em execução. Verifique se o fluxo de visualização está em execução antes de definir o valor ou a predefinição da proporção de branco.
+
+
+            **Importante** O valor predefinido **ColorTemperaturePreset.Auto** instrui o sistema a ajustar automaticamente o nível de proporção de branco. Para alguns cenários, como a captura de uma sequência de fotos em que os níveis de proporção de branco devem ser iguais para cada quadro, convém bloquear o controle no valor automático atual. Para fazer isso, chame [**SetPresetAsync**](https://msdn.microsoft.com/library/windows/apps/dn279113) e especifique a predefinição **Manual** e não defina um valor no controle usando [**SetValueAsync**](https://msdn.microsoft.com/library/windows/apps/dn279114). Isso fará com que o dispositivo bloqueie o valor atual. Não tente ler o valor atual do controle atual e depois transmitir o valor retornado para **SetValueAsync**, pois não há garantia de que esse valor seja correto.
 
 ## Zoom
 

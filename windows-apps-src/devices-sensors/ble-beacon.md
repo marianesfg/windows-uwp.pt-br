@@ -21,8 +21,10 @@ Este artigo fornece uma visão geral dos anúncios de Bluetooth (Beacons) para a
 
 Há duas funções principais que um desenvolvedor pode executar usando as APIs de anúncio:
 
--   [Inspetor de anúncio](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): ouve beacons nas proximidades e filtra com base na carga ou proximidade.  
--   [Fornecedor de anúncio](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): define uma carga para o Windows anunciar em nome de um desenvolvedor.  
+-   
+            [Inspetor de anúncio](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): ouve beacons nas proximidades e filtra com base na carga ou proximidade.  
+-   
+            [Fornecedor de anúncio](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): define uma carga para o Windows anunciar em nome de um desenvolvedor.  
 
 O código de exemplo completo é encontrado no [Exemplo de anúncio de Bluetooth](http://go.microsoft.com/fwlink/p/?LinkId=619990) no Github
 

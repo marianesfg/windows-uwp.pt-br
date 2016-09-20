@@ -3,7 +3,6 @@ author: mtoepke
 title: Mudando do DirectX 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)
 description: "Esta seção guia você na portabilidade do jogo de área de trabalho em DirectX 9 para DirectX 11 e Plataforma Universal do Windows (UWP)."
 ms.assetid: 7a3f8ddf-d5b2-1c05-b532-70459befda4e
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 0f27f9e9219fca10798a09e6f934b72ad7b1b5a8
 

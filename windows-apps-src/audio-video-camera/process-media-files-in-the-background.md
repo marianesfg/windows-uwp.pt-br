@@ -5,13 +5,13 @@ description: "Este artigo mostra como usar o MediaProcessingTrigger e uma tarefa
 title: "Processar arquivos de mídia em segundo plano"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dcf655ff80c4463a567ade0b6d1cc784b60c18be
+ms.openlocfilehash: 704fa52a9e98382940b7863d6196ca0af5d33460
 
 ---
 
 # Processar arquivos de mídia em segundo plano
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar o [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) e uma tarefa em segundo plano para processar arquivo de mídia em segundo plano.
@@ -140,6 +140,6 @@ O manipulador de evento **OnCompleted** é chamado quando a tarefa em segundo pl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

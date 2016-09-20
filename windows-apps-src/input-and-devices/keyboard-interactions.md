@@ -5,18 +5,18 @@ title: "Interações por teclado"
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
-ms.sourcegitcommit: d65e1315e83fef5e53771adad0943c9cb59d9139
-ms.openlocfilehash: 9de90236d94522f1b80309c3fec51ce59aee0319
+translationtype: Human Translation
+ms.sourcegitcommit: f9c475a90c270270217999c5a7289e29e7fef208
+ms.openlocfilehash: a1d97c5a66db1b799ccc16769ff18130155743b8
 
 ---
 
 # Interações por teclado
 
 
-A entrada por teclado é uma parte importante da experiência geral da interação do usuário com aplicativos. O teclado é indispensável para pessoas portadoras de determinadas deficiências ou usuários que simplesmente o consideram um método mais eficiente de interagir com um aplicativo. Por exemplo, os usuários devem ser capazes de navegar pelo seu aplicativo usando as teclas Tab e de direção, de ativar elementos da interface do usuário ao usar as teclas Barra de Espaços e Enter, e acessar comandos ao usar atalhos de teclado.
+A entrada por teclado é uma parte importante da experiência geral da interação do usuário com aplicativos. O teclado é indispensável para pessoas portadoras de determinadas deficiências ou usuários que simplesmente o consideram um método mais eficiente de interagir com um aplicativo. Por exemplo, os usuários devem ser capazes de navegar pelo seu aplicativo usando as teclas Tab e de direção, de ativar elementos da interface do usuário ao usar as teclas Barra de Espaços e Enter, e acessar comandos ao usar atalhos de teclado.  
+
 ![imagem hero do teclado](images/input-patterns/input-keyboard-small.jpg)
-
-
 
 **APIs importantes**
 
@@ -34,7 +34,7 @@ O teclado virtual é um teclado de software visual, que você pode usar no lugar
 
 O teclado virtual pode ser ativado na página Teclado em Configurações &gt; Facilidade de acesso.
 
-**Observação**  O teclado virtual tem prioridade sobre o teclado touch, que não será mostrado se o Teclado Virtual estiver presente.
+**Observação**  O teclado virtual tem prioridade sobre o teclado virtual, que não será mostrado se o Teclado Virtual estiver presente.
 
  
 
@@ -78,26 +78,26 @@ Consulte aqui exemplos de modos diferentes do teclado virtual. A primeira imagem
 <table>
 <tr>
     <td>**O teclado virtual no modo de layout padrão:  **</td>
-    <td>![the touch keyboard in default layout mode](images/touchkeyboard-standard.png)</td>
+    <td>![o teclado virtual no modo de layout padrão](images/touchkeyboard-standard.png)</td>
 </tr>
 <tr>
     <td>**O teclado virtual no modo de layout expandido:  **</td>
-    <td>![the touch keyboard in expanded layout mode](images/touchkeyboard-expanded.png)</td>
+    <td>![o teclado virtual no modo de layout expandido](images/touchkeyboard-expanded.png)</td>
 </tr>
 <tr>
     <td>**O teclado virtual no modo de layout em miniatura padrão:  **</td>
-    <td>![the touch keyboard in thumb layout mode](images/touchkeyboard-thumb.png)</td>
+    <td>![o teclado virtual no modo de layout em miniatura](images/touchkeyboard-thumb.png)</td>
 </tr>
 <tr>
     <td>**O teclado virtual no modo de layout em miniatura numérico:  **</td>
-    <td>![the touch keyboard in numeric thumb layout mode](images/touchkeyboard-numeric-thumb.png)</td>
+    <td>![o teclado virtual no modo de layout em miniatura numérico](images/touchkeyboard-numeric-thumb.png)</td>
 </tr>
 </table>
 
 
 Interações de teclado bem-sucedidas permitem que os usuários utilizem cenários básicos de aplicativos apenas com o teclado, ou seja, os usuários podem acessar todos os elementos interativos da interface do usuário e ativar a funcionalidade padrão. Diversos fatores podem afetar o grau de sucesso, incluindo a navegação por teclado, as teclas de acesso para acessibilidade e as teclas de aceleração (atalho) para usuários avançados.
 
-**Observações**  O teclado virtual não dá suporte à alternância e à maioria dos comandos do sistema (consulte [Padrões](#keyboard_command_patterns)).
+**Observações**  O teclado virtual não dá suporte à alternância e a maioria dos comandos do sistema (consulte [Padrões](#keyboard_command_patterns)).
 
 ## Navegação
 
@@ -354,9 +354,7 @@ Um manipulador de eventos de entrada implementa um delegado que fornece as segui
 
 -   O remetente do evento. O remetente relata o objeto ao qual o manipulador de eventos está anexado.
 -   Dados do evento. Para eventos do teclado, esses dados serão uma instância de [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072). O delegado para manipuladores é [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904). As propriedades mais relevantes de **KeyRoutedEventArgs** para a maioria dos cenários de manipulação são [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) e possivelmente [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075).
--   [
-              **OriginalSource**
-            ](https://msdn.microsoft.com/library/windows/apps/br208810). Como eventos do teclado são eventos roteados, os dados dos eventos fornecem **OriginalSource**. Se você deliberadamente permite que eventos subam a árvore de um objeto, **OriginalSource** é, por vezes, o objeto em questão em vez do remetente. No entanto, isso depende do seu design. Para saber mais sobre como você pode usar **OriginalSource** em vez do remetente, consulte a seção "Eventos roteados do teclado" deste tópico, ou [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/mt185584).
+-   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). Como eventos do teclado são eventos roteados, os dados dos eventos fornecem **OriginalSource**. Se você deliberadamente permite que eventos subam a árvore de um objeto, **OriginalSource** é, por vezes, o objeto em questão em vez do remetente. No entanto, isso depende do seu design. Para saber mais sobre como você pode usar **OriginalSource** em vez do remetente, consulte a seção "Eventos roteados do teclado" deste tópico, ou [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
 ### Anexando um manipulador de eventos do teclado
 
@@ -401,9 +399,7 @@ Todos os eventos do teclado usam [**KeyRoutedEventArgs**](https://msdn.microsoft
 -   [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074)
 -   [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)
 -   [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)
--   [
-              **OriginalSource**
-            ](https://msdn.microsoft.com/library/windows/apps/br208810) (herdado de [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809))
+-   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) herdado de [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809))
 
 ### Key
 
@@ -706,6 +702,6 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

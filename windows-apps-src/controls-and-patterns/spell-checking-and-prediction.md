@@ -56,10 +56,12 @@ Para controles TextBox XAML, a verificação ortográfica está desabilitada por
 
 * [Texto e controles de texto](text-controls.md)
 * [Diretrizes para entrada de texto](https://msdn.microsoft.com/library/windows/apps/hh750315)
-* [Diretrizes para texto e tipografia](https://msdn.microsoft.com/library/windows/apps/hh700394)
+* 
+            [Diretrizes para texto e tipografia](https://msdn.microsoft.com/library/windows/apps/hh700394)
             
           
             **Para desenvolvedores (XAML)**
+          
 * [**Propriedade TextBox.IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/br209688)
 * [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 

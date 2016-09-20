@@ -23,8 +23,7 @@ Crie rapidamente um aplicativo da Plataforma Universal do Windows para Windows 1
 
 ## Opção 1: ManifoldJS
 
-
-            [ManifoldJS](http://manifoldjs.com/) é um aplicativo Node.js que instala facilmente a partir do NPM. Ele leva os metadados para seu site da Web e gera os aplicativos nativos hospedados no Android, iOS e Windows. Se seu site não tiver um [manifesto do aplicativo Web](https://www.w3.org/TR/appmanifest/), ele será gerado automaticamente para você.
+[ManifoldJS](http://manifoldjs.com/) é um aplicativo Node.js que instala facilmente a partir do NPM. Ele leva os metadados para seu site da Web e gera os aplicativos nativos hospedados no Android, iOS e Windows. Se seu site não tiver um [manifesto do aplicativo Web](https://www.w3.org/TR/appmanifest/), ele será gerado automaticamente para você.
 
 1. Instale [NodeJS](https://nodejs.org/) que inclui o NPM (Gerenciador de pacotes de nó). <br>
 
@@ -40,16 +39,14 @@ manifoldjs http://codepen.io/seksenov/pen/wBbVyb/?editors=101
 
 4. Siga as etapas do vídeo abaixo para concluir o empacotamento e publicar seu Aplicativo Web hospedado na Windows Store.
 
-
-            [
+[
               ![Publicando um Aplicativo Web UWP em um Mac usando o ManifoldJS]
             (images/hwa-to-uwp/mac_manifoldjs_video.png)](https://sec.ch9.ms/ch9/0a67/9b06e5c7-d7aa-478d-b30d-f99e145a0a67/ManifoldJS_high.mp4 "Publicando um Aplicativo Web UWP em um Mac usando o ManifoldJS")
           
 
 ## Opção 2: App Studio
 
-
-            [App Studio](http://appstudio.windows.com/) é uma ferramenta de criação de aplicativo on-line gratuita que permite criar rapidamente aplicativos para o Windows 10.
+[App Studio](http://appstudio.windows.com/) é uma ferramenta de criação de aplicativo on-line gratuita que permite criar rapidamente aplicativos para o Windows 10.
 
 1. Abra o [App Studio](http://appstudio.windows.com/) no seu navegador da web.
 

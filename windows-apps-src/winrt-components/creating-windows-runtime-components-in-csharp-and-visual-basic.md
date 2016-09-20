@@ -35,7 +35,8 @@ Internamente, os tipos do Windows Runtime no componente podem usar qualquer func
     -   Derivar de tipos que não estejam no Windows Runtime, como System.Exception e System.EventArgs.
 -   Todos os tipos públicos devem ter um namespace raiz correspondente ao nome do assembly, e o nome do assembly não deve começar com "Windows".
 
-    > **Dica**  Por padrão, os projetos do Visual Studio têm nomes de namespace correspondentes ao nome do assembly. No Visual Basic, a instrução Namespace desse namespace padrão não é mostrada no código.
+    > 
+            **Dica**  Por padrão, os projetos do Visual Studio têm nomes de namespace correspondentes ao nome do assembly. No Visual Basic, a instrução Namespace desse namespace padrão não é mostrada no código.
 
 -   As estruturas públicas não podem ter membros que não sejam campos públicos, e esses campos devem ser tipos de valor ou cadeias de caracteres.
 -   As classes públicas devem ser **sealed** (**NotInheritable** no Visual Basic). Caso o modelo de programação exija polimorfismo, é possível criar uma interface pública e implementar essa interface nas classes que devem ser polimórficas.
@@ -99,7 +100,8 @@ Para alguns tipos de coleção mais usados, o mapeamento é entre as interfaces 
 
 Quando um tipo implementa mais de uma interface, é possível usar qualquer uma das interfaces implementadas como um tipo de parâmetro ou um tipo de retorno de um membro. Por exemplo, é possível passar ou retornar um Dictionary&lt;int, string&gt; (Dictionary(Of Integer, String) em Visual Basic) como IDictionary&lt;int, string&gt;, IReadOnlyDictionary&lt;int, string&gt; ou IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;.
 
-**Importante**  O JavaScript usa a primeira interface exibida na lista de interfaces implementadas por um tipo gerenciado. Por exemplo, se você retornar Dictionary&lt;int, string&gt; ao código JavaScript, ele será exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especificar como o tipo de retorno. Isso significa que, caso a primeira interface não inclua um membro exibido em interfaces posteriores, esse membro não permanece visível para JavaScript.
+
+            **Importante**  O JavaScript usa a primeira interface exibida na lista de interfaces implementadas por um tipo gerenciado. Por exemplo, se você retornar Dictionary&lt;int, string&gt; ao código JavaScript, ele será exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especificar como o tipo de retorno. Isso significa que, caso a primeira interface não inclua um membro exibido em interfaces posteriores, esse membro não permanece visível para JavaScript.
 
 No Windows Runtime, IMap&lt;K, V&gt; e IMapView&lt;K, V&gt; são iterados usando-se IKeyValuePair. Quando você os passa para código gerenciado, eles são exibidos como IDictionary&lt;TKey, TValue&gt; e IReadOnlyDictionary&lt;TKey, TValue&gt;, logo, você naturalmente usa System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt; para enumerá-los.
 
@@ -137,7 +139,8 @@ No Windows Runtime, os métodos podem ser sobrecarregados. No entanto, se declar
 > End Function
 > ```
 
- [!div class="tabbedCodeSnippets"] **Cuidado**  O JavaScript permite passar qualquer valor para OverloadExample e força o valor para o tipo exigido pelo parâmetro. É possível chamar OverloadExample com "quarenta e dois", "42" ou 42.3, mas todos esses valores são passados para a sobrecarga padrão.
+ [!div class="tabbedCodeSnippets"] 
+            **Cuidado**  O JavaScript permite passar qualquer valor para OverloadExample e força o valor para o tipo exigido pelo parâmetro. É possível chamar OverloadExample com "quarenta e dois", "42" ou 42.3, mas todos esses valores são passados para a sobrecarga padrão.
 
 A sobrecarga padrão no exemplo anterior retorna 0, 42 e 42, respectivamente. Não é possível aplicar o atributo DefaultOverloadAttribute a construtores.
 
@@ -263,7 +266,8 @@ Acionamento de exceções É possível acionar qualquer tipo de exceção que es
 
     > Em JavaScript, a exceção é exibida como um objeto no qual a mensagem de exceção é substituída por um rastreamento de pilha. Ao depurar o aplicativo no Visual Studio, você pode ver o texto da mensagem original exibido na caixa de diálogo de exceção do depurador, identificado como "Informações de WinRT".
 
--   Não é possível acessar o texto da mensagem original no código JavaScript. **Dica**  Atualmente, o rastreamento de pilha contém o tipo de exceção gerenciado, mas não recomendamos analisar o rastreamento para identificar o tipo de exceção. Em vez disso, use um valor HRESULT conforme descrito mais à frente nesta seção. Em C++, a exceção é exibida como uma exceção da plataforma. Caso a propriedade HResult da exceção gerenciada possa ser mapeada para o HRESULT de uma exceção de plataforma específica, a exceção específica é usada; do contrário, uma exceção [Platform::COMException](https://msdn.microsoft.com/library/windows/apps/xaml/hh710414.aspx) é acionada.
+-   Não é possível acessar o texto da mensagem original no código JavaScript. 
+            **Dica**  Atualmente, o rastreamento de pilha contém o tipo de exceção gerenciado, mas não recomendamos analisar o rastreamento para identificar o tipo de exceção. Em vez disso, use um valor HRESULT conforme descrito mais à frente nesta seção. Em C++, a exceção é exibida como uma exceção da plataforma. Caso a propriedade HResult da exceção gerenciada possa ser mapeada para o HRESULT de uma exceção de plataforma específica, a exceção específica é usada; do contrário, uma exceção [Platform::COMException](https://msdn.microsoft.com/library/windows/apps/xaml/hh710414.aspx) é acionada.
 -   O texto da mensagem da exceção gerenciada não está disponível para o código C++.
 
 Caso uma exceção de plataforma específica seja acionada, o texto da mensagem padrão desse tipo de exceção é exibido; do contrário, nenhum texto de mensagem é exibido. Consulte [Exceções (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699896.aspx).
@@ -272,7 +276,8 @@ Caso uma exceção de plataforma específica seja acionada, o texto da mensagem 
 
 ## O HRESULT está disponível para o chamador JavaScript por meio da propriedade de número do objeto de exceção e para um chamador C++ por meio da propriedade [COMException::HResult](https://msdn.microsoft.com/library/windows/apps/xaml/hh710415.aspx).
 
-**Observação**  Use um valor negativo para o HRESULT. Um valor positivo é interpretado como êxito, e nenhuma exceção é acionada no chamador JavaScript ou C++. Declaração e acionamento de eventos
+
+            **Observação**  Use um valor negativo para o HRESULT. Um valor positivo é interpretado como êxito, e nenhuma exceção é acionada no chamador JavaScript ou C++. Declaração e acionamento de eventos
 
 Quando você declara um tipo para manter os dados do evento, derive de Object, em vez de EventArgs, porque EventArgs não é um tipo do Windows Runtime. Use [EventHandler&lt;TEventArgs&gt;](https://msdn.microsoft.com/library/db0etb8x.aspx) como o tipo do evento e use o tipo de argumento do evento como o argumento de tipo genérico. Acione o evento, assim como você faria em um aplicativo do .NET Framework.
 

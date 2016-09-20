@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 76776b0f-3163-48c9-835b-3f4213968079
 title: Acesso a dados
 description: "Esta seção aborda o armazenamento de dados no dispositivo em um banco de dados privado e o uso do mapeamento relacional de objeto em aplicativos da Plataforma Universal do Windows (UWP)."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 007e07d05f4f89771f6a0b93fb4279783ca170f6
 

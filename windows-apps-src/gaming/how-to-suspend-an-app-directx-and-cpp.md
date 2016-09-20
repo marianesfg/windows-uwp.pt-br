@@ -3,7 +3,6 @@ author: mtoepke
 title: Como suspender um aplicativo (DirectX e C++)
 description: "Este tópico mostra como salvar dados importantes do aplicativo e do estado do sistema quando o sistema suspende o aplicativo UWP (Plataforma Universal do Windows) DirectX."
 ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 38e03a4a6312c5a0521c7263944897260624aa38
 

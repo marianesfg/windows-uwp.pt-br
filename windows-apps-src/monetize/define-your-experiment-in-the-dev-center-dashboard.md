@@ -3,7 +3,6 @@ author: mcleanbyron
 Description: "Antes de executar um experimento em seu aplicativo UWP (Plataforma Universal do Windows) com os testes A/B, você deve definir seu experimento no painel do Centro de Desenvolvimento."
 title: Definir seu experimento no painel do Centro de Desenvolvimento
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 7462c23de58b44f897a1737d0d54913144b14f75
 
@@ -38,7 +37,8 @@ Em seguida, crie um novo experimento e defina as metas para o experimento.
 4. Se você quiser criar um experimento de teste, clique na caixa de seleção **Experimento de teste**. A diferença entre experimentos de teste e experimentos normais é que apenas os experimentos de teste podem ser alterados depois que são ativados.
 
   Os experimentos de teste destinam-se a ajudá-lo a testar todas as variações em um dispositivo cliente antes de liberar seu experimento para os clientes. Para se certificar de que uma variação seja enviada para os clientes conforme o esperado, você pode ativar um experimento de teste com a distribuição de 100% alocada para uma variação e 0% alocada para outras variações. Depois de verificar essa variação, você pode repetir o processo para outras variações.
-  > **Observação**  Marque essa caixa de seleção apenas se você estiver criando um experimento de teste para validar parâmetros por meio de testes internos. Não marque essa caixa se estiver criando um experimento que você liberará para os clientes.
+  > 
+            **Observação**  Marque essa caixa de seleção apenas se você estiver criando um experimento de teste para validar parâmetros por meio de testes internos. Não marque essa caixa se estiver criando um experimento que você liberará para os clientes.
 
 5. No campo **Exibir nome do evento**, digite o nome do *evento de exibição* para seu experimento. O evento de exibição é uma cadeia de caracteres arbitrária que representa uma atividade quando o usuário começa a exibir uma variação que faz parte do seu experimento. O código do seu aplicativo enviará essa cadeia de caracteres de evento de exibição para o Centro de Desenvolvimento, quando o usuário começar a exibir uma variação. Para saber mais, veja [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md).
 6. Na seção **Metas e eventos de conversão**, defina pelo menos uma meta para seu experimento:
@@ -46,7 +46,8 @@ Em seguida, crie um novo experimento e defina as metas para o experimento.
   * No campo **Nome do evento de conversão**, digite o nome do *evento de conversão* dessa meta. Um evento de conversão é uma cadeia de caracteres arbitrária que representa um objetivo para essa meta. O código do seu aplicativo enviará essa cadeia de caracteres de evento de conversão para o Centro de Desenvolvimento quando o usuário atingir um objetivo. Para saber mais, veja [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md).
   * No campo **Objetivo**, escolha **Maximizar** ou **Minimizar**, dependendo se você deseja maximizar ou minimizar as ocorrências do evento de conversão. Essas informações são usadas no resumo dos resultados do experimento.
 
-  >**Observação** O Centro de Desenvolvimento relata apenas o primeiro evento de conversão de cada modo de exibição do usuário em um período de 24 horas. Se um usuário aciona vários eventos de conversão em seu aplicativo em um período de 24 horas, apenas o primeiro evento de conversão é relatado. Isso se destina a impedir que um usuário único distorça os resultados do experimento de um grupo de amostra de usuários quando o objetivo é maximizar o número de usuários que executam uma conversão.
+  >
+            **Observação** O Centro de Desenvolvimento relata apenas o primeiro evento de conversão de cada modo de exibição do usuário em um período de 24 horas. Se um usuário aciona vários eventos de conversão em seu aplicativo em um período de 24 horas, apenas o primeiro evento de conversão é relatado. Isso se destina a impedir que um usuário único distorça os resultados do experimento de um grupo de amostra de usuários quando o objetivo é maximizar o número de usuários que executam uma conversão.
 
 ## Definir as variações e as configurações para o experimento
 
@@ -64,17 +65,21 @@ Para definir as variações e as configurações de seu experimento:
 
 Quando você terminar de inserir os campos obrigatórios do seu experimento, clique em **Salvar** para salvar seu experimento.
 
-> **Importante** Depois de salvar um experimento, você não pode alterar a chave de API desse experimento, mesmo que ainda não o tenha ativado.
+> 
+            **Importante** Depois de salvar um experimento, você não pode alterar a chave de API desse experimento, mesmo que ainda não o tenha ativado.
 
 Se você estiver satisfeito com os parâmetros de seu experimento e estiver pronto para ativá-lo para poder iniciar a coleta de dados do experimento do seu aplicativo, clique em **Ativar**. Quando o experimento está ativo, seu aplicativo pode recuperar as configurações de variação e relatar os eventos de exibição e de conversão para o Centro de Desenvolvimento.
 
-> **Importante**  Depois de ativar um experimento, você não pode mais modificar os parâmetros dele, a menos que ele seja um experimento de teste (você clicou na caixa de seleção **Experimento de teste** quando criou o experimento). Recomendamos que você codifique o experimento em seu aplicativo antes de ativar seu experimento.
+> 
+            **Importante**  Depois de ativar um experimento, você não pode mais modificar os parâmetros dele, a menos que ele seja um experimento de teste (você clicou na caixa de seleção **Experimento de teste** quando criou o experimento). Recomendamos que você codifique o experimento em seu aplicativo antes de ativar seu experimento.
 
 ## Próximas etapas
 
 Depois de definir seu experimento no painel do Centro de Desenvolvimento, você está pronto para as seguintes etapas:
-1. [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md). Use uma API no SDK de Microsoft Store Engagement and Monetization para obter configurações de variação para o experimento. Use esses dados para modificar o comportamento do recurso que você está testando e envie eventos de exibição e de conversão para o Centro de Desenvolvimento.
-2. [Execute e gerencie seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md). Use o painel para analisar os resultados do experimento e conclua o experimento.
+1. 
+            [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md). Use uma API no SDK de Microsoft Store Engagement and Monetization para obter configurações de variação para o experimento. Use esses dados para modificar o comportamento do recurso que você está testando e envie eventos de exibição e de conversão para o Centro de Desenvolvimento.
+2. 
+            [Execute e gerencie seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md). Use o painel para analisar os resultados do experimento e conclua o experimento.
 
 ## Tópicos relacionados
 

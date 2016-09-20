@@ -1,104 +1,108 @@
 ---
 author: drewbatgit
 ms.assetid: 
-description: This article describes how to import media from a device, including searching for available media sources, importing files such as photos and sidecar files, and deleting the imported files from the source device.
-title: Import media
+description: "Este artigo descreve como importar mídia de um dispositivo, inclusive procurar fontes de mídia disponíveis, importar arquivos, como fotos e arquivos secundários, e excluir os arquivos importados do dispositivo de origem."
+title: "Importar mídia"
+translationtype: Human Translation
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: b1b8467e181d1a04317a8a0b8688ffb02621730c
+
 ---
 
-# Import media from a device
+# Importar mídia de um dispositivo
 
-This article describes how to import media from a device, including searching for available media sources, importing files such as videos, photos, and sidecar files, and deleting the imported files from the source device.
+Este artigo descreve como importar mídia de um dispositivo, inclusive procurar fontes de mídia disponíveis, importar arquivos, como vídeos, fotos e arquivos secundários, e excluir os arquivos importados do dispositivo de origem.
 
 > [!NOTE] 
-> The code in this article was adapted from the [**MediaImport UWP app sample**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport) . You can clone or download this sample from the [**Universal Windows app samples Git repo**](https://github.com/Microsoft/Windows-universal-samples) to see the code in context or to use it as a starting point for your own app.
+> O código neste artigo foi adaptado da [**amostra de aplicativo UWP MediaImport**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport). Você pode clonar ou baixar essa amostra do [**repositório Git de amostras de aplicativo Universal do Windows**](https://github.com/Microsoft/Windows-universal-samples) para ver o código no contexto ou usá-la como ponto de partida para seu próprio aplicativo.
 
-## Create a simple media import UI
-The example in this article uses a minimal UI to enable the core media import scenarios. To see how to create a more robust UI for a media import app, see the [**MediaImport sample**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport). The following XAML creates a stack panel with the following controls:
-* A [**Button**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Button) to initiate searching for sources from which media can be imported.
-* A [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox) to list and select from the media import sources that are found.
-* A [**ListView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ListView) control to display and select from the media items from the selected import source.
-* A **Button** to initiate importing media items from the selected source.
-* A **Button** to initiate deleting the items that have been imported from the selected source.
-* A **Button** to cancel an asynchronous media import operation.
+## Criar uma interface do usuário de importação de mídia simples
+O exemplo neste artigo usa uma interface do usuário mínima para habilitar os principais cenários de importação de mídia. Para ver como criar uma interface do usuário mais robusta para um aplicativo de importação de mídia, veja a amostra [**amostra MediaImport**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport). O XAML a seguir cria um painel de pilha com os seguintes controles:
+* Um controle [**Button**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Button) para começar a procurar fontes de onde a mídia possa ser importada.
+* Um controle [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox) para listar e selecionar as fontes de importação de mídia encontradas.
+* Um controle [**ListView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ListView) para exibir e selecionar os itens de mídia da fonte de importação selecionada.
+* Um controle **Button** para começar a importar itens de mídia da fonte selecionada.
+* Um controle **Button** para começar a excluir os itens que foram importados da fonte selecionada.
+* Um controle **Button** para cancelar a operação de importação de mídia assíncrona.
 
 [!code-xml[ImportXAML](./code/PhotoImport_Win10/cs/MainPage.xaml#SnippetImportXAML)]
 
-## Set up your code-behind file
-Add *using* directives to include the namespaces used by this example that are not already included in the default project template.
+## Configurar seu arquivo code-behind
+Adicione diretivas *using* para incluir os namespaces usados por este exemplo que ainda não estão incluídos no modelo de projeto padrão.
 
 [!code-cs[Using](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetUsing)]
 
-## Set up task cancellation for media import operations
+## Configurar o cancelamento de tarefas para operações de importação de mídia
 
-Because media import operations can take a long time, they are performed asynchronously using [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/en-us/library/windows/apps/br206594.aspx). Declare a class member variable of type [**CancellationTokenSource**](https://msdn.microsoft.com/en-us/library/system.threading.cancellationtokensource) that will be used to cancel an in-progress operation if the user clicks the cancel button.
+Como as operações de importação de mídia podem levar muito tempo, elas são executadas assincronamente usando [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/en-us/library/windows/apps/br206594.aspx). Declare uma variável de membro de classe do tipo [**CancellationTokenSource**](https://msdn.microsoft.com/en-us/library/system.threading.cancellationtokensource) que será usada para cancelar uma operação em andamento se o usuário clicar no botão Cancelar.
 
 [!code-cs[DeclareCts](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareCts)]
 
-Implement a handler for the cancel button. The examples shown later in this article will initialize the **CancellationTokenSource** when an operation begins and set it to null when the operation completes. In the cancel button handler, check to see if the token is null, and if not, call [**Cancel**](https://msdn.microsoft.com/en-us/library/dd321955) to cancel the operation.
+Implemente um manipulador para o botão Cancelar. Os exemplos mostrados mais adiante neste artigo inicializam o **CancellationTokenSource** quando uma operação começa e os definem como nulos quando a operação é concluída. No manipulador do botão Cancelar, verifique se o token é nulo e, se não for, chame [**Cancel**](https://msdn.microsoft.com/en-us/library/dd321955) para cancelar a operação.
 
 [!code-cs[OnCancel](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetOnCancel)]
 
-## Data binding helper classes
+## Classes auxiliares de vinculação de dados
 
-In a typical media import scenario you show the user a list of available media items to import, there can be a large number of media files to choose from and, typically, you want to show a thumbnail for each media item. For this reason, this example uses three helper classes to incrementally load entries into the ListView control as the user scrolls down through the list.
+Em um cenário de importação de mídia comum, você mostre ao usuário uma lista de itens de mídia disponíveis para importação, pode haver um grande número de arquivos de mídia para escolher e, em geral, convém mostrar uma miniatura de cada item de mídia. Por esse motivo, este exemplo usa três classes auxiliares para carregar entradas incrementalmente no controle ListView conforme o usuário rola a lista para baixo.
 
-* **IncrementalLoadingBase** class - Implements the [**IList**](https://msdn.microsoft.com/en-us/library/system.collections.ilist), [**ISupportIncrementalLoading**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading), and [**INotifyCollectionChanged**](https://msdn.microsoft.com/en-us/library/windows/apps/system.collections.specialized.inotifycollectionchanged(v=vs.105).aspx) to provide the base incremental loading behavior.
-* **GeneratorIncrementalLoadingClass** class - Provides an implementation of the incremental loading base class.
-* **ImportableItemWrapper** class - A thin wrapper around the [**PhotoImportItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem) class to add a bindable [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Media.Imaging.BitmapImage) property for the thumbnail image for each imported item.
+* Classe **IncrementalLoadingBase** – Implementa [**IList**](https://msdn.microsoft.com/en-us/library/system.collections.ilist), [**ISupportIncrementalLoading**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading) e [**INotifyCollectionChanged**](https://msdn.microsoft.com/en-us/library/windows/apps/system.collections.specialized.inotifycollectionchanged(v=vs.105).aspx) para fornecer o comportamento base de carregamento incremental.
+* Classe **GeneratorIncrementalLoadingClass** – Fornece uma implementação da classe base de carregamento incremental.
+* Classe **ImportableItemWrapper** – Um wrapper fino ao redor da classe [**PhotoImportItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem) para adicionar uma propriedade [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Media.Imaging.BitmapImage) associável à imagem de miniatura para cada item importado.
 
-These classes are provided in the [**MediaImport sample**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport) and can be added to your project without modifications. After adding the helper classes to your project, declare a class member variable of type **GeneratorIncrementalLoadingClass** that will be used later in this example.
+Essas classes são fornecidas na [**amostra MediaImport**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport) e podem ser adicionadas ao seu projeto sem modificações. Depois de adicionar as classes auxiliares ao seu projeto, declare uma variável de membro de classe do tipo **GeneratorIncrementalLoadingClass** que será usada mais tarde neste exemplo.
 
 [!code-cs[GeneratorIncrementalLoadingClass](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetGeneratorIncrementalLoadingClass)]
 
 
-# Find available sources from which media can be imported
+# Localizar fontes disponíveis das quais mídias podem ser importadas
 
-In the click handler for the find sources button, call the static method [**PhotoImportManager.FindAllSourcesAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportManager.FindAllSourcesAsync) to start the system searching for devices from which media can be imported. After awaiting the completion of the operation, loop through each [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) object in the returned list and add an entry to the **ComboBox**, setting the **Tag** property to the source object itself so it can be easily retrieved when the user makes a selection.
+No manipulador de cliques do botão Localizar fontes, chame o método estático [**PhotoImportManager.FindAllSourcesAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportManager.FindAllSourcesAsync) para começar a procurar no sistema por dispositivos dos quais mídias possam ser importadas. Depois de aguardar a conclusão da operação, percorra cada objeto [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) na lista retornada de objeto e adicione uma entrada a **ComboBox**, definindo a propriedade **Tag** ao objeto de origem em si, para que ela possa ser facilmente recuperado quando o usuário fizer uma seleção.
 
 [!code-cs[FindSourcesClick](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetFindSourcesClick)]
 
-Declare a class member variable to store the user's selected import source.
+Declare uma variável de membro de classe para armazenar a fonte de importação selecionada do usuário.
 
 [!code-cs[DeclareImportSource](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareImportSource)]
 
-In the [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Primitives.Selector.SelectionChanged) handler for the import source **ComboBox**, set the class member variable to the selected source and then call the **FindItems** helper method which will be shown later in this article. 
+No manipulador [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Primitives.Selector.SelectionChanged) para **ComboBox** da fonte de importação, defina a variável de membro de classe para a fonte selecionada e, em seguida, chame o método auxiliar **FindItems** que será mostrado neste artigo. 
 
 [!code-cs[SourcesSelectionChanged](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetSourcesSelectionChanged)]
 
-# Find items to import
+# Localizar itens para importação
 
-Add class member variables of type [**PhotoImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSession) and [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult) which will be used in the following steps.
+Adicione as variáveis de membro de classe do tipo [**PhotoImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSession) e [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult) que serão usadas nas próximas etapas.
 
 [!code-cs[DeclareImport](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareImport)]
 
-In the FindItems method, initialize the **CancellationTokenSource** variable so it can be used to cancel the find operation if necessary. Within a **try** block, create a new import session by calling [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession) on the [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) object selected by the user. Create a new [**Progress**](https://msdn.microsoft.com/en-us/library/hh193692.aspx) object to provide a callback to display the progress of the find operation. Next, call [**FindItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSession.FindItemsAsync(Windows.Media.Import.PhotoImportContentTypeFilter,Windows.Media.Import.PhotoImportItemSelectionMode) to start the find operation. Provide a [**PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter) value to specify whether photos, videos, or both should be returned. Provide a [**PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode) value to specify whether all, none, or only the new media items are returned with their [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected) property set to true. This property is bound to a checkbox for each media item in our ListBox item template.
+No método FindItems, inicialize a variável **CancellationTokenSource** para que ela possa ser usada para cancelar a operação de localização, se necessário. Em um bloco **try**, crie uma nova sessão de importação chamando [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession) no objeto [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) selecionado pelo usuário. Crie um novo objeto [**Progress**](https://msdn.microsoft.com/en-us/library/hh193692.aspx) para fornecer um retorno de chamada para exibir o progresso da operação de localização. Em seguida, chame [**FindItemsAsync**] (https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSession.FindItemsAsync (Windows.Media.Import.PhotoImportContentTypeFilter,Windows.Media.Import.PhotoImportItemSelectionMode) para iniciar a operação de localização. Forneça um valor [**PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter) para especificar se fotos, vídeos ou ambos devem ser retornados. Forneça um valor [**PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode) para especificar se todos, nenhum ou apenas os novos itens de mídia são retornados com a propriedade [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected) definida como true. Essa propriedade está associada a uma caixa de seleção de cada item de mídia em nosso modelo de item ListBox.
 
-**FindItemsAsync** returns an [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/en-us/library/windows/apps/br206594.aspx). The extension method [**AsTask**](https://msdn.microsoft.com/en-us/library/hh779750.aspx) is used to create a task that can be awaited, can be cancelled with the cancellation token, and that reports progress using the supplied **Progress** object.
+**FindItemsAsync** retorna [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/en-us/library/windows/apps/br206594.aspx). O método de extensão [**AsTask**](https://msdn.microsoft.com/en-us/library/hh779750.aspx) é usado para criar uma tarefa que pode ser aguardada, pode ser cancelada com o token de cancelamento e que relata o progresso usando o objeto **Progress** fornecido.
 
-Next the data binding helper class, **GeneratorIncrementalLoadingClass** is initialized. **FindItemsAsync**, when it returns from being awaited, returns a [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult) object. This object contains status information about the find operation, including the success of the operation and the count of different types of media items that were found. The [**FoundItems**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.FoundItems) property contains a list of [**PhotoImportItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem) objects representing the found media items. The **GeneratorIncrementalLoadingClass** constructor takes as arguments the total count of items that will be loaded incrementally, and a function that generates new items to be loaded as needed. In this case, the provided lambda expression creates a new instance of the **ImportableItemWrapper** which wraps **PhotoImportItem** and includes a thumbnail for each item. Once the incremental loading class has been initialized, set it to the [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsControl.ItemsSource) property of the **ListView** control in the UI. Now, the found media items will be loaded incrementally and displayed in the list.
+Depois, a classe auxiliar de vinculação de dados **GeneratorIncrementalLoadingClass** é inicializada. **FindItemsAsync**, quando retorna da espera, retorna um objeto [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult). Esse objeto contém informações de status sobre a operação de localização, incluindo o sucesso da operação e o número de diferentes tipos de itens de mídia que foram encontrados. A propriedade [**FoundItems**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.FoundItems) contém uma lista de objetos [**PhotoImportItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem) que representam os itens de mídia encontrados. O construtor **GeneratorIncrementalLoadingClass** assume como argumentos o número total de itens que serão carregados de forma incremental e uma função que gera novos itens a serem carregados conforme necessário. Nesse caso, a expressão lambda fornecida cria uma nova instância de **ImportableItemWrapper** que ajusta **PhotoImportItem** e inclui uma miniatura para cada item. Depois que a classe de carregamento incremental for inicializada, defina-a como a propriedade [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsControl.ItemsSource) do controle **ListView** da interface do usuário. Agora, os itens de mídia encontrados serão carregados de forma incremental e exibidos na lista.
 
-Next, the status information of the find operation are output. A typical app will display this information to the user in the UI, but this example simply outputs the information to the debug console. Finally, set the cancellation token to null because the operation is complete.
+Em seguida, as informações de status da operação de localização serão geradas. Um aplicativo comum exibirá essas informações na interface do usuário, mas este exemplo simplesmente gera as informações no console de depuração. Por fim, defina o token de cancelamento como null porque a operação foi concluída.
 
 [!code-cs[FindItems](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetFindItems)]
 
-## Import media items
+## Importar itens de mídia
 
-Before implementing the import operation, declare a [**PhotoImportImportItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportImportItemsResult) object to store the results of the import operation. This will be used later to delete media items that were successfully imported from the source.
+Antes de implementar a operação de importação, declare um objeto [**PhotoImportImportItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportImportItemsResult) para armazenar os resultados da operação de importação. Isso será usado mais tarde para excluir itens de mídia que foram importados com sucesso da fonte.
 
 [!code-cs[DeclareImportResult](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareImportResult)]
 
-Before starting the media import operation initialize the **CancellationTokenSource** variable and by setting the value of the [**ProgressBar**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ProgressBar) control to 0.
+Antes de iniciar a operação de importação de mídia, inicialize a variável **CancellationTokenSource** e defina o valor do controle [**ProgressBar**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ProgressBar) como 0.
 
-If there are no selected items in the **ListView** control, then there is nothing to import. Otherwise, initialize a [**Progress**](https://msdn.microsoft.com/en-us/library/hh193692.aspx) object to provide a progress callback which updates the value of the progress bar control. Register a handler for the [**ItemImported**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ItemImported) event of the [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult) returned by the find operation. This event will be raised whenever an item is imported and, in this example, outputs the name of each imported file to the debug console.
+Se não houver itens selecionados no controle **ListView**, não há nada para importar. Caso contrário, inicialize um objeto [**Progress**](https://msdn.microsoft.com/en-us/library/hh193692.aspx) para fornecer um retorno de chamada de progresso que atualiza o valor do controle da barra de progresso. Registre um manipulador para o evento [**ItemImported**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ItemImported) do [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult) retornado pela operação de localização. Esse evento é gerado sempre que um item é importado e, neste exemplo, gera o nome de cada arquivo importado no console de depuração.
 
-Call [**ImportItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ImportItemsAsync) to begin the import operation. Just as with the find operation, the [**AsTask**](https://msdn.microsoft.com/en-us/library/hh779750.aspx) extension method is used to convert the returned operation to a task that can be awaited, reports progress, and can be cancelled.
+Chame [**ImportItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ImportItemsAsync) para iniciar a operação de importação. Assim como na operação de localização, o método de extensão [**AsTask**](https://msdn.microsoft.com/en-us/library/hh779750.aspx) é usado para converter a operação retornada em uma tarefa que possa ser aguardada, informe o progresso e possa ser cancelada.
 
-After the import operation is complete, the operation status can be obtained from the [**PhotoImportImportItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportImportItemsResult) object returned by [**ImportItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ImportItemsAsync). This example outputs the status information to the debug console and then finallly, sets the cancellation token to null.
+Depois que a operação de importação for concluída, o status da operação poderá ser obtido do objeto [**PhotoImportImportItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportImportItemsResult) retornado por [**ImportItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ImportItemsAsync). Este exemplo gera as informações de status no console de depuração e, por fim, define o token de cancelamento como null.
 
 [!code-cs[ImportClick](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetImportClick)]
 
-## Delete imported items
-To delete the successfully imported items from the source from which they were imported, first initialize the cancellation token so that the delete operation can be cancelled and set the progress bar value to 0. Make sure that the [**PhotoImportImportItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportImportItemsResult) returned from [**ImportItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ImportItemsAsync) is not null. If not, once again create a [**Progress**](https://msdn.microsoft.com/en-us/library/hh193692.aspx) object to provide a progress callback for the delete operation. Call [**DeleteImportedItemsFromSourceAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportImportItemsResult.DeleteImportedItemsFromSourceAsync) to start deleting the imported items. Us **AsTask** to convert the result to an awaitable task with progress and cancellation capabilities. After awaiting, the returned [**PhotoImportDeleteImportedItemsFromSourceResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult) object can be used to get and display status information about the delete operation.
+## Excluir itens importados
+Para excluir os itens importados com sucesso da fonte de onde foram importados, primeiro inicialize o token de cancelamento para que a operação de exclusão possa ser cancelada e defina o valor da barra de progresso como 0. Certifique-se de que o [**PhotoImportImportItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportImportItemsResult) retornado de [**ImportItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult.ImportItemsAsync) não seja null. Se não for, crie mais uma vez um objeto [**Progress**](https://msdn.microsoft.com/en-us/library/hh193692.aspx) para fornecer um retorno de chamada de progresso para a operação de exclusão. Chame [**DeleteImportedItemsFromSourceAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportImportItemsResult.DeleteImportedItemsFromSourceAsync) para iniciar a exclusão dos itens importados. Use **AsTask** para converter o resultado em uma tarefa que possa ser aguardada com recursos de progresso e cancelamento. Depois de aguardar, o objeto [**PhotoImportDeleteImportedItemsFromSourceResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult) retornado pode ser usado para obter e exibir informações de status sobre a operação de exclusão.
 
 [!code-cs[DeleteClick](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeleteClick)]
 
@@ -110,5 +114,11 @@ To delete the successfully imported items from the source from which they were i
 
 
  
+
+
+
+
+
+<!--HONumber=Aug16_HO3-->
 
 

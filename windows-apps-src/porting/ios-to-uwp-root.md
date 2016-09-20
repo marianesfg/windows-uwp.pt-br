@@ -4,7 +4,6 @@ description: Mudar do iOS para a UWP
 Search.SourceType: Video
 title: Mudar do iOS para a UWP
 ms.assetid: 7a05751d-02df-4240-9ba5-d95f65a7a9c5
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 7f6160d651a4264d81ac1a1c9a011e32f53778b0
 

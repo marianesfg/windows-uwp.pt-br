@@ -3,7 +3,6 @@ author: PatrickFarley
 Description: "Siga estas práticas recomendadas para cerca geográfica em seu aplicativo."
 title: "Diretrizes de aplicativos com cerca geográfica"
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d631885eced58d360d3e0442cbb49ede7b9b86c3
 
@@ -40,7 +39,7 @@ Siga estas práticas recomendadas para [**cerca geográfica**](https://msdn.micr
 -   Não use mais de 1000 cercas geográficas por aplicativo. O sistema na realidade oferece suporte para milhares de cercas geográficas por aplicativo. Você pode manter um bom desempenho do aplicativo para reduzir o uso de memória do aplicativo, usando menos de 1000.
 -   Não crie uma cerca geográfica com um raio menor que 50 metros. Se seu aplicativo precisar usar cercas geográficas com raios pequenos, sugira aos usuários para o utilizarem em um dispositivo com rádio GPS para garantir um melhor desempenho.
 
-## Diretrizes de uso adicionais
+## Diretrizes de uso adicional
 
 ### Verificando o carimbo de data/hora e a localização atual
 

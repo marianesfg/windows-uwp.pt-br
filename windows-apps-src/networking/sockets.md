@@ -3,7 +3,6 @@ author: DelfCo
 description: "Você pode usar Windows.Networking.Sockets e Winsock para se comunicar com outros dispositivos como um desenvolvedor de aplicativo da Plataforma Universal do Windows (UWP)."
 title: Soquetes
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
-translationtype: Human Translation
 ms.sourcegitcommit: 4557fa59d377edc2ae5bf5a9be63516d152949bb
 ms.openlocfilehash: 432d9849335c537836fd23a4cd95c79c51bc881d
 
@@ -20,7 +19,8 @@ ms.openlocfilehash: 432d9849335c537836fd23a4cd95c79c51bc881d
 
 Você pode usar [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) e [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523) para se comunicar com outros dispositivos como um desenvolvedor de aplicativo da Plataforma Universal do Windows (UWP). Este tópico fornece orientações detalhadas sobre como usar o namespace **Windows.Networking.Sockets** para executar operações de rede.
 
->**Observação** Como parte do [isolamento de rede](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx), o sistema proíbe estabelecer conexões de soquete (soquetes ou WinSock) entre dois aplicativos UWP em execução no mesmo computador por um endereço de loopback local (127.0.0.0) ou especificando explicitamente o endereço IP local. Isso significa que você não pode usar soquetes para se comunicar entre dois aplicativos UWP. A UWP fornece outros mecanismos de comunicação entre aplicativos. Consulte [Comunicações entre aplicativos](https://msdn.microsoft.com/windows/uwp/app-to-app/index) para obter detalhes.
+>
+>            **Observação** Como parte do [isolamento de rede](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx), o sistema proíbe estabelecer conexões de soquete (soquetes ou WinSock) entre dois aplicativos UWP em execução no mesmo computador por um endereço de loopback local (127.0.0.0) ou especificando explicitamente o endereço IP local. Isso significa que você não pode usar soquetes para se comunicar entre dois aplicativos UWP. A UWP fornece outros mecanismos de comunicação entre aplicativos. Consulte [Comunicações entre aplicativos](https://msdn.microsoft.com/windows/uwp/app-to-app/index) para obter detalhes.
 
 ## Operações de soquete TCP básicas
 
@@ -255,7 +255,8 @@ foreach (IBuffer packet in packetsToSend)
 await outputStream.FlushAsync();
 ```
 
-Em versões anteriores do Windows, **FlushAsync** é retornado imediatamente e não garante que todas as operações no fluxo tinham sido concluídas ainda. No Windows 10, o comportamento mudou. Agora é garantido que o**FlushAsync** retorne depois que todas as operações no fluxo de saída são concluídas.
+Em versões anteriores do Windows, **FlushAsync** é retornado imediatamente e não garante que todas as operações no fluxo tinham sido concluídas ainda. No Windows 10, o comportamento mudou. 
+            Agora é garantido que o**FlushAsync** retorne depois que todas as operações no fluxo de saída são concluídas.
 
 Existem algumas limitações importantes impostas por usar gravações em lote no seu código.
 

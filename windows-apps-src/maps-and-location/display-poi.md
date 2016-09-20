@@ -3,8 +3,9 @@ author: msatranjr
 title: Exibir pontos de interesse (POI) em um mapa
 description: "Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 6f21f9bf9c909d0f89a663cdda05934ad9b4011b
+ms.openlocfilehash: aec420d6591546e63c6343d7151afe9e95d1afd8
 
 ---
 
@@ -16,7 +17,7 @@ ms.openlocfilehash: 6f21f9bf9c909d0f89a663cdda05934ad9b4011b
 
 Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML. Uma ponto de interesse é um ponto específico no mapa que representa algo de seu interesse. Por exemplo, o local de uma empresa, cidade ou amigo.
 
-**Dica** Para saber mais sobre a exibição de pontos de interesse no seu aplicativo, baixe a amostra a seguir do [repositório de amostras universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+**Dica** Para saber mais sobre a exibição de pontos de interesse no seu aplicativo, baixe o exemplo a seguir do [repositório de exemplos universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
 -   [Exemplo de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -230,6 +231,6 @@ Este exemplo exibe uma coleção de elementos XAML vinculados a um [**MapItemsCo
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -6,7 +6,6 @@ ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
 label: Media player
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 2dbc4e7fa227de3f37b8a337eded0004496dbe36
 
@@ -74,7 +73,8 @@ Você também pode integrar o [**MediaElement**](https://msdn.microsoft.com/libr
 ### Definir a origem da mídia
 Para reproduzir arquivos na rede ou arquivos inseridos com o aplicativo, defina a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) como o caminho do arquivo.
 
-**Dica** para abrir arquivos da Internet, você precisa declarar a funcionalidade **Internet (Client)** no manifesto do aplicativo (Package.appxmanifest). Para obter mais informações sobre como declarar recursos, consulte [Declarações de recursos de aplicativos](https://msdn.microsoft.com/library/windows/apps/mt270968).
+
+            **Dica** para abrir arquivos da Internet, você precisa declarar a funcionalidade **Internet (Client)** no manifesto do aplicativo (Package.appxmanifest). Para obter mais informações sobre como declarar recursos, consulte [Declarações de recursos de aplicativos](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
  
 
@@ -268,7 +268,8 @@ private void MediaElement_CurrentStateChanged(object sender, RoutedEventArgs e)
     ```
 
 ### Controlar o media player de forma programática
-[
+
+            [
               **MediaElement**
             ](https://msdn.microsoft.com/library/windows/apps/br242926) oferece inúmeras propriedades, métodos e eventos para controlar a reprodução de áudio e vídeo. Para uma listagem completa de propriedades, métodos e eventos, consulte página de referência do [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926).
     
@@ -318,7 +319,8 @@ private bool SetAudioLanguage(string lcid, MediaElement media)
 
 ### Habilitar a renderização de vídeo da janela inteira
 
-Defina a propriedade [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/dn298980) para habilitar ou desabilitar a renderização de janela inteira. Ao definir de forma programática a renderização de janela inteira em seu aplicativo, você sempre deve usar **IsFullWindow** em vez de fazer isso manualmente. **IsFullWindow** garante que as otimizações em nível de sistema sejam executadas, o que melhora o desempenho e a duração da bateria. Se a renderização de janela inteira não estiver configurada corretamente, essas otimizações não poderão ser habilitadas.
+Defina a propriedade [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/dn298980) para habilitar ou desabilitar a renderização de janela inteira. Ao definir de forma programática a renderização de janela inteira em seu aplicativo, você sempre deve usar **IsFullWindow** em vez de fazer isso manualmente. 
+            **IsFullWindow** garante que as otimizações em nível de sistema sejam executadas, o que melhora o desempenho e a duração da bateria. Se a renderização de janela inteira não estiver configurada corretamente, essas otimizações não poderão ser habilitadas.
 
 Este código cria um [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) que alterna a renderização da janela inteira.
 
@@ -339,16 +341,20 @@ private void FullWindow_Click(object sender, object e)
 
 Use a propriedade [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) para mudar a forma como o conteúdo de vídeo preenche seu contêiner. Isso redimensiona e amplia o vídeo de acordo com o valor de [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Os estados de **Stretch** são parecidos com as configurações de tamanho de imagem em aparelhos de TV. Você pode enganchá-la em um botão para que o usuário possa escolher a configuração de sua preferência.
 
--   [
+-   
+            [
               **None**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) mostra a resolução nativa do conteúdo em seu tamanho original.
--   [
+-   
+            [
               **Uniform**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) preenche o máximo do espaço possível, mantendo a taxa de proporção e o conteúdo da imagem. Isso pode produzir barras pretas horizontais ou verticais nas bordas do vídeo. Isso é semelhante aos modos widescreen.
--   [
+-   
+            [
               **UniformToFill**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) preenche todo o espaço, mantendo a taxa de proporção. Isso pode fazer parte da imagem ser cortada. Isso é semelhante aos modos de tela inteira.
--   [
+-   
+            [
               **Fill**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) preenche todo o espaço, mas não mantém a taxa de proporção. A imagem não é cortada, mas pode ocorrer um alongamento. Isso é semelhante aos modos de alongamento.
 

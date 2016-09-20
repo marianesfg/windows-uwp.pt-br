@@ -5,7 +5,6 @@ title: "Gerenciar idioma e região"
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 label: Manage language and region
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: 294f087fffeefda67ddacd09636915144bf18ff4
 
@@ -89,7 +88,8 @@ Há situações em que nem todos os recursos precisam ser localizados.
 
 ### <span id="Create_the_application_language_list."></span><span id="create_the_application_language_list."></span><span id="CREATE_THE_APPLICATION_LANGUAGE_LIST."></span>Crie a lista de idiomas de aplicativo.
 
-Em tempo de execução, o sistema determina as preferências de idioma do usuário para as quais o aplicativo declara suporte em seu manifesto, além de criar *uma lista de idiomas do aplicativo*. Ele usa essa lista para determinar o(s) idioma(s) em que o aplicativo deve estar. A lista determina o(s) idioma(s) usado(s) para o aplicativo e os recursos do sistema, as datas, as horas e os números, além de outros componentes. Por exemplo, o Sistema de Gerenciamento de Recursos ([**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) e [**namespace WinJS.Resources**](https://msdn.microsoft.com/library/windows/apps/br229779)) carrega os recursos da interface do usuário de acordo com o idioma do aplicativo. [
+Em tempo de execução, o sistema determina as preferências de idioma do usuário para as quais o aplicativo declara suporte em seu manifesto, além de criar *uma lista de idiomas do aplicativo*. Ele usa essa lista para determinar o(s) idioma(s) em que o aplicativo deve estar. A lista determina o(s) idioma(s) usado(s) para o aplicativo e os recursos do sistema, as datas, as horas e os números, além de outros componentes. Por exemplo, o Sistema de Gerenciamento de Recursos ([**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) e [**namespace WinJS.Resources**](https://msdn.microsoft.com/library/windows/apps/br229779)) carrega os recursos da interface do usuário de acordo com o idioma do aplicativo. 
+            [
               **Windows.Globalization**
             ](https://msdn.microsoft.com/library/windows/apps/br206813) também escolhe formatos com base na lista de idiomas do aplicativo. A lista de idiomas do aplicativo está disponível usando [**Windows.Globalization.ApplicationLanguages.Languages**](https://msdn.microsoft.com/library/windows/apps/hh972396).
 
@@ -118,7 +118,8 @@ A lista de idiomas do aplicativo é definida para a variação regional do usuá
 
 A lista de idiomas do aplicativo é composta pelos seguintes itens:
 
-1.  **Substituição do idioma principal (opcional)** O [**PrimaryLanguageOverride**](https://msdn.microsoft.com/library/windows/apps/hh972398) é uma configuração de substituição simples para aplicativos que permitirão aos usuários fazer sua própria escolha de idioma independente ou para aplicativos que, por motivos realmente importantes, substituirão as opções de idioma padrão. Para obter mais informações, consulte o [Exemplo de recursos e localização de aplicativos](http://go.microsoft.com/fwlink/p/?linkid=231501).
+1.  
+            **Substituição do idioma principal (opcional)** O [**PrimaryLanguageOverride**](https://msdn.microsoft.com/library/windows/apps/hh972398) é uma configuração de substituição simples para aplicativos que permitirão aos usuários fazer sua própria escolha de idioma independente ou para aplicativos que, por motivos realmente importantes, substituirão as opções de idioma padrão. Para obter mais informações, consulte o [Exemplo de recursos e localização de aplicativos](http://go.microsoft.com/fwlink/p/?linkid=231501).
 2.  **Os idiomas do usuário com suporte pelo aplicativo.** Esta é uma lista de preferências de idioma do usuário, em ordem de preferência de idioma. Ela é filtrada pela lista de idiomas suportados no manifesto do aplicativo. Filtrar os idiomas do usuário por aqueles suportados pelo aplicativo mantém a consistência entre os SDKs (software development kits), bibliotecas de classes, pacotes de estrutura dependente e o aplicativo.
 3.  **Se 1 e 2 estão vazios, o padrão ou o primeiro idioma suportado pelo aplicativo.** Se o usuário não falar nenhum idioma com suporte pelo aplicativo, o idioma do aplicativo escolhido será o primeiro idioma suportado pelo aplicativo.
 
@@ -132,7 +133,8 @@ As solicitações de HTTP feitas a partir dos aplicativos da Windows Store e apl
 
 Normalmente, os elementos da API no namespace [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) usam a lista de idiomas do aplicativo para determinar o idioma. Se nenhum dos idiomas tiver um formato de correspondência, a localidade do usuário será usada. Esta é a mesma localidade usada no relógio do sistema. A localidade do usuário está disponível em **Configurações**&gt;**Hora e idioma**&gt;**Região e idioma**&gt;**Configurações adicionais de data, hora e regionais**&gt;**Região: Alterar formatos de data, hora ou número**. As APIs **Windows.Globalization** também aceitam uma substituição para especificar uma lista de idiomas a ser usada em vez da lista de idiomas do aplicativo.
 
-[
+
+            [
               **Windows.Globalization**
             ](https://msdn.microsoft.com/library/windows/apps/br206813) também tem um objeto [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) que é fornecido como um objeto auxiliar. Ele permite que os aplicativos inspecionem os detalhes sobre o idioma, como o script do idioma, o nome para exibição e o nome nativo.
 
@@ -140,7 +142,8 @@ Normalmente, os elementos da API no namespace [**Windows.Globalization**](https:
 
 Em vez do idioma, você pode usar a configuração local de região geográfica do usuário para escolher o conteúdo a ser exibido para o usuário. Por exemplo, um aplicativo de notícias pode exibir, por padrão, o conteúdo do local de residência do usuário, que é definido quando o Windows está instalado e disponível na interface do usuário do Windows em **Região: Alterar formatos de data, hora ou número** conforme descrito na tarefa anterior. Você pode recuperar a configuração da região de residência do usuário atual usando [**Windows.System.UserProfile.GlobalizationPreferences.HomeGeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br241829).
 
-[
+
+            [
               **Windows.Globalization**
             ](https://msdn.microsoft.com/library/windows/apps/br206813) também tem um objeto [**GeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br206795) que é fornecido como um objeto auxiliar. Ele permite que os aplicativos inspecionem os detalhes sobre uma região específica, como o nome para exibição, o nome nativo e as moedas em uso.
 

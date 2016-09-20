@@ -5,7 +5,6 @@ title: "Diretrizes para configurações de aplicativos"
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: aeccd755c5fe5df8f2ff5549950ce2d6cb74e8e4
 
@@ -115,11 +114,16 @@ Assim que você tiver uma lista de itens que deseja incluir na página de config
 -   Apresente o conteúdo de cima para baixo em uma única coluna, com rolagem, se necessário. Limite a rolagem para no máximo de duas vezes a altura da tela.
 -   Use os seguintes controles para configurações do aplicativo:
 
-    -   [Botões de alternância](../controls-and-patterns/toggles.md): para permitir que os usuários definam valores como "ativado" ou "desativado".
-    -   [Botões de opção](../controls-and-patterns/radio-button.md): para permitir que os usuários escolham um item de um conjunto de até cinco opções relacionadas exclusivas.
-    -   [Caixa de entrada de texto](../controls-and-patterns/text-block.md): para permitir que os usuários insiram texto. Use o tipo da caixa de entrada de texto que corresponde ao tipo de texto que você está obtendo do usuário, como um email ou senha.
-    -   [Hiperlinks](../controls-and-patterns/hyperlinks.md): para conduzir o usuário para outra página dentro do aplicativo ou para um site externo. Quando um usuário clicar em um hiperlink, o submenu Configurações será ignorado.
-    -   [Botões](../controls-and-patterns/buttons.md): para permitir que os usuários iniciem uma ação imediata sem ignorar o submenu Configurações atual.
+    -   
+            [Botões de alternância](../controls-and-patterns/toggles.md): para permitir que os usuários definam valores como "ativado" ou "desativado".
+    -   
+            [Botões de opção](../controls-and-patterns/radio-button.md): para permitir que os usuários escolham um item de um conjunto de até cinco opções relacionadas exclusivas.
+    -   
+            [Caixa de entrada de texto](../controls-and-patterns/text-block.md): para permitir que os usuários insiram texto. Use o tipo da caixa de entrada de texto que corresponde ao tipo de texto que você está obtendo do usuário, como um email ou senha.
+    -   
+            [Hiperlinks](../controls-and-patterns/hyperlinks.md): para conduzir o usuário para outra página dentro do aplicativo ou para um site externo. Quando um usuário clicar em um hiperlink, o submenu Configurações será ignorado.
+    -   
+            [Botões](../controls-and-patterns/buttons.md): para permitir que os usuários iniciem uma ação imediata sem ignorar o submenu Configurações atual.
 -   Adicione uma mensagem descritiva se um dos controles estiver desativado. Coloque esta mensagem acima do controle desativado.
 -   Anime o conteúdo e os controles como um bloco único depois que o submenu Configurações e o cabeçalho forem animados. Anime o conteúdo usando a animação [**enterPage**](https://msdn.microsoft.com/library/windows/apps/br212672) ou [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288) com um deslocamento à esquerda de 100px.
 -   Use cabeçalhos de seção, parágrafos e rótulos para ajudar a organizar e esclarecer conteúdo, se necessário.
@@ -132,12 +136,15 @@ Assim que você tiver uma lista de itens que deseja incluir na página de config
 ## <span id="related_topics"></span>Tópicos relacionados
 
 * [Noções básicas de design de comandos](https://msdn.microsoft.com/library/windows/apps/dn958433)
-* [Diretrizes para controles de progresso](https://msdn.microsoft.com/library/windows/apps/hh465469)
+* 
+            [Diretrizes para controles de progresso](https://msdn.microsoft.com/library/windows/apps/hh465469)
             
           
             **para desenvolvedores (XAML)**
+         
 * [Armazenar e recuperar dados de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt299098)
-* [
+* 
+            [
               **EntranceThemeTransition**
             ](https://msdn.microsoft.com/library/windows/apps/br210288) �
 

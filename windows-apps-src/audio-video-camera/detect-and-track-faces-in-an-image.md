@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 84729E44-10E9-4D7D-8575-6A9D97467ECD
 description: "Este tópico mostra como usar FaceDetector para detectar rostos em uma imagem. FaceTracker é otimizado para acompanhamento facial ao longo do tempo em uma sequência de quadros de vídeo."
 title: "Detectar rostos em imagens ou vídeos"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
 
@@ -16,8 +15,7 @@ ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
 
 \[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
-Este tópico mostra como usar [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) para detectar rostos em uma imagem. [
-            **FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150) é otimizado para acompanhamento facial ao longo do tempo em uma sequência de quadros de vídeo.
+Este tópico mostra como usar [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) para detectar rostos em uma imagem. [**FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150) é otimizado para acompanhamento facial ao longo do tempo em uma sequência de quadros de vídeo.
 
 Para um método alternativo de acompanhamento facial que usa [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776), consulte [Análise de cena para captura de mídia](scene-analysis-for-media-capture.md).
 
@@ -47,7 +45,8 @@ Na versão atual, a classe **FaceDetector** dá suporte somente a imagens em Gra
 
 [!code-cs[Formato](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFormat)]
 
-Instancie o objeto **FaceDetector** chamando [**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132) e chame [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134), passando o bitmap que foi dimensionado para um tamanho razoável e convertido em um formato de pixel com suporte. Esse método retorna uma lista de objetos [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123). **ShowDetectedFaces** é um método auxiliar, mostrado abaixo, que desenha quadrados ao redor dos rostos na imagem.
+Instancie o objeto **FaceDetector** chamando [**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132) e chame [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134), passando o bitmap que foi dimensionado para um tamanho razoável e convertido em um formato de pixel com suporte. Esse método retorna uma lista de objetos [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123). 
+            **ShowDetectedFaces** é um método auxiliar, mostrado abaixo, que desenha quadrados ao redor dos rostos na imagem.
 
 [!code-cs[Detectar](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDetect)]
 

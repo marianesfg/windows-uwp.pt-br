@@ -3,7 +3,6 @@ ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
 description: "Esta seção explica como compartilhar dados entre aplicativos UWP (Plataforma Universal do Windows), incluindo como usar o contrato de Compartilhamento, copiar e colar, e arrastar e soltar."
 title: "Comunicação de aplicativo para aplicativo"
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: dcd542257761083f3ec04eb0da2b13d5d68a19e2
 ms.openlocfilehash: 63550064b6f31b85cd3b6fa2a09bac4b7cfcf895
 

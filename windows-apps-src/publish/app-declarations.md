@@ -3,7 +3,6 @@ author: jnHs
 Description: "Você pode fornecer informações adicionais sobre seu aplicativo na seção Declarações do aplicativo da página Propriedades do aplicativo durante o processo de envio."
 title: "Declarações de aplicativo"
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae
 
@@ -35,7 +34,8 @@ Ao declarar seu aplicativo como acessível, você concorda que o aplicativo é a
 
 Para obter mais informações, consulte [Acessibilidade para aplicativos do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/dn263101), [Testes de acessibilidade](https://msdn.microsoft.com/library/windows/apps/mt297664) e [Acessibilidade na Loja](https://msdn.microsoft.com/library/windows/apps/mt297663).
 
-> **Importante**  Não liste seu aplicativo como acessível a menos que tenha feito a engenharia e os testes especificamente para isso. Se seu aplicativo for declarado como acessível, mas não der suporte real à acessibilidade, você provavelmente receberá comentários negativos da comunidade.
+> 
+            **Importante**  Não liste seu aplicativo como acessível a menos que tenha feito a engenharia e os testes especificamente para isso. Se seu aplicativo for declarado como acessível, mas não der suporte real à acessibilidade, você provavelmente receberá comentários negativos da comunidade.
 
 ## Os clientes podem instalar esse aplicativo em unidades alternativas ou armazenamento removível.
 
@@ -45,7 +45,8 @@ Se você deseja impedir que seu aplicativo seja instalado em unidades alternativ
 
 Não há opção de restringir a instalação para que o aplicativo possa ser instalado apenas em mídia de armazenamento removível.
 
-> **Observação**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
+> 
+            **Observação**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
 
 ## O Windows pode incluir dados do aplicativo em backups automáticos no OneDrive.
 
@@ -53,7 +54,8 @@ Esta caixa é marcada por padrão, para permitir que os dados do seu aplicativo 
 
 Se você deseja impedir que os dados do aplicativo sejam incluídos em backups automáticos, desmarque essa caixa.
 
-> **Observação**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
+> 
+            **Observação**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
 
  
 

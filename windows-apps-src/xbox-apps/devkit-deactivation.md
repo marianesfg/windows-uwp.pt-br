@@ -3,7 +3,6 @@ author: Mtoepke
 title: "Desativação do Modo de Desenvolvedor do Xbox One"
 description: Como desativar o Modo de Desenvolvedor.
 area: Xbox
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 0751598ba50d69e1667b20ddc03f30d65ce08002
 
@@ -45,7 +44,8 @@ O método preferencial de desativação do Modo de Desenvolvedor no seu console 
 
 Você também pode desativar o Modo de Desenvolvedor redefinindo seu console.  
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;Quando o console for redefinido, todos os dados de jogos salvos localmente serão perdidos.
 
 Para redefinir o console, siga estas etapas:
@@ -83,7 +83,7 @@ Se você ainda não retornou o console Xbox One para o Modo de Varejo, faça iss
 
 ![Etapa de Ativação 13](images/deactivation-leave-dev-mode.png)
 
-## Consulte também
+## Veja também
 - [Ativação do Modo de Desenvolvedor do Xbox One](devkit-activation.md)
 - [UWP no Xbox One](index.md)
 

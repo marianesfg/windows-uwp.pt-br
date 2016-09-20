@@ -3,7 +3,6 @@ author: mcleblanc
 title: "Introdução a animações"
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: "Neste projeto, vamos mover um retângulo, aplicar um efeito de esmaecimento e trazê-lo de volta à visualização."
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: 6e0b92af1d3c5f61aa2341d43ca40330fcc359f4
 
@@ -123,7 +122,8 @@ Se você abrir o arquivo MainPage.xaml, no modo de exibição **XAML**, verá qu
 
 Você pode editar esse XAML manualmente ou retornar ao Blend para continuar a trabalhar com ele lá. O Blend torna divertida a criação de interfaces do usuário interessantes e permite animá-las usando uma ferramenta gráfica pode acelerar drasticamente o tempo de desenvolvimento. Para obter mais informações sobre animações, consulte [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350).
 
-**Observação**  Para obter informações sobre animações para aplicativos da Windows Store que usam JavaScript e HTML, consulte [Animating your UI (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
+
+            **Observação**  Para obter informações sobre animações para aplicativos da Windows Store que usam JavaScript e HTML, consulte [Animating your UI (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
 
 ### Próxima etapa
 

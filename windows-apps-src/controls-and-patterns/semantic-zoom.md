@@ -5,7 +5,6 @@ title: "Zoom semântico"
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 47e39290a63408fc66783617ad2f12345eab2fa3
 
@@ -21,7 +20,8 @@ O controle de zoom semântico permite que o usuário aplique zoom entre duas exi
 
 -   [**Classe SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)
 
-**Recursos**:
+
+            **Recursos**:
 
 -   O tamanho da exibição reduzida é restrito pelos limites do controle de zoom semântico.
 -   Ao tocar em um cabeçalho de grupo, os modos de exibição são alternados. É possível habilitar a pinçagem para alternar entre os modos de exibição.

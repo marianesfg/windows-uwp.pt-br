@@ -5,7 +5,6 @@ title: "Mostrar vários modos de exibição para um aplicativo"
 ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 23e999f86fb0552b96cddbd3b9d11803106bf6c2
 
@@ -147,7 +146,8 @@ Caso os modos de exibição secundários estejam abertos, a janela do modo de ex
 
 Outros modos de exibição, inclusive todos os modos de exibição que você cria chamando [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278) no código do aplicativo, são modos de exibição secundários. Os modos de exibição principal e secundário são armazenados na coleção [**CoreApplication.Views**](https://msdn.microsoft.com/library/windows/apps/br205861). Normalmente, você cria modos de exibição secundários em resposta à ação de um usuário. Em alguns casos, o sistema cria modos de exibição secundários para o aplicativo.
 
-**Observação**  Você pode usar o recurso *acesso atribuído* do Windows para executar um aplicativo em [modo de quiosque](https://technet.microsoft.com/library/mt219050.aspx). Quando você faz isso, o sistema cria um modo de exibição secundário para apresentar a interface do usuário do aplicativo acima da tela de bloqueio. Os modos de exibição secundários criados pelo aplicativo não são permitidos, logo, caso você tente mostrar o próprio modo de exibição secundário no modo de quiosque, uma exceção é lançada.
+
+            **Observação**  Você pode usar o recurso *acesso atribuído* do Windows para executar um aplicativo em [modo de quiosque](https://technet.microsoft.com/library/mt219050.aspx). Quando você faz isso, o sistema cria um modo de exibição secundário para apresentar a interface do usuário do aplicativo acima da tela de bloqueio. Os modos de exibição secundários criados pelo aplicativo não são permitidos, logo, caso você tente mostrar o próprio modo de exibição secundário no modo de quiosque, uma exceção é lançada.
 
  
 

@@ -37,11 +37,14 @@ Se você quiser oferecer seu IAP por um preço reduzido por um período limitado
 
 Você pode determinar se seu IAP deve ser oferecido para compra aos clientes. Escolha uma das seguintes opções:
 
--   **Disponível para compra. Podem ser exibidas na página de detalhes do seu aplicativo:** esta é a configuração padrão e é recomendada, a menos que você deseje restringir o acesso ao seu IAP. Deixe essa opção marcada para IAPs que serão disponibilizados para qualquer cliente.
--   **Disponível para compra. Não exibido nos detalhes do seu aplicativo:** escolher essa opção permite que os clientes comprem o IAP de dentro de seu aplicativo, mas o IAP não será exibido nos detalhes do aplicativo na loja. Use essa opção somente quando a oferta não for amplamente disponível, por exemplo, durante os períodos iniciais de testes internos.
+-   
+            **Disponível para compra. Podem ser exibidas na página de detalhes do seu aplicativo:** esta é a configuração padrão e é recomendada, a menos que você deseje restringir o acesso ao seu IAP. Deixe essa opção marcada para IAPs que serão disponibilizados para qualquer cliente.
+-   
+            **Disponível para compra. Não exibido nos detalhes do seu aplicativo:** escolher essa opção permite que os clientes comprem o IAP de dentro de seu aplicativo, mas o IAP não será exibido nos detalhes do aplicativo na loja. Use essa opção somente quando a oferta não for amplamente disponível, por exemplo, durante os períodos iniciais de testes internos.
 -   **Não estão mais disponíveis para compra. Não é exibido nos detalhes do seu aplicativo.** Escolher essa opção significa que o IAP não será exibido nos detalhes de seu aplicativo e novos clientes não podem adquirir o IAP. No entanto, **essa opção não tem suporte para os clientes no Windows 8.1 ou versões anteriores**. Se o seu aplicativo estiver disponível no Windows 8.1 ou anterior, o IAP ainda estará disponível para compra aos clientes. Para interromper a oferta deste IAP aos clientes no Windows 8.1 ou anterior, você precisará atualizar seu aplicativo para remover o código que oferece o IAP e depois publicar um novo envio do aplicativo. Isso é recomendado mesmo se o seu aplicativo não for para o Windows 8.1 ou versões anteriores. Seus clientes terão uma experiência melhor se você nunca lhes oferecer um IAP que você optou por tornar indisponível.
     
- > **Observação**  Escolher essa configuração e/ou enviar uma atualização de aplicativo que remove o IAP do código do seu aplicativo não afeta clientes que já compraram o IAP, independentemente do sistema operacional.
+ > 
+            **Observação**  Escolher essa configuração e/ou enviar uma atualização de aplicativo que remove o IAP do código do seu aplicativo não afeta clientes que já compraram o IAP, independentemente do sistema operacional.
 
 
 ## Data de publicação
@@ -52,7 +55,8 @@ Você pode indicar quando seu IAP (ou atualização) será publicado, escolhendo
 -   Escolha **Publicar manualmente este IAP** se você não quiser que seu aplicativo seja publicado até você indicar que ele deve ser. Você pode fazer isso na página de status de certificação, clicando em **Publicar agora**, ou selecionando uma data específica, conforme descrito a seguir.
 -   Escolha **Não mais cedo do que \[data\]** para garantir que o envio não seja publicado até uma data específica. Com esta opção, seu envio será lançado assim que possível na data especificada ou depois dela A data deve ser pelo menos 24 horas no futuro. Com a data, você também pode especificar a hora em que o envio deve começar a ser publicado.
 
- > **Observação**  Atrasos durante a certificação ou publicação podem fazer com que a data real de lançamento seja posterior à data solicitada. A Windows Store não pode garantir que seu IAP (ou atualização) estará disponível em uma data específica.
+ > 
+            **Observação**  Atrasos durante a certificação ou publicação podem fazer com que a data real de lançamento seja posterior à data solicitada. A Windows Store não pode garantir que seu IAP (ou atualização) estará disponível em uma data específica.
  
 
  

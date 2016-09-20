@@ -3,7 +3,6 @@ author: TylerMSFT
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar e consultar arquivos e pastas
 description: "Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 6ecad1bbd3c08dcd7aa1d3b82739931f20fc4ee2
 
@@ -16,7 +15,8 @@ ms.openlocfilehash: 6ecad1bbd3c08dcd7aa1d3b82739931f20fc4ee2
 
 Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta.
 
-**Observação**  Consulte também a [Amostra de enumeração de pastas](http://go.microsoft.com/fwlink/p/?linkid=619993).
+
+            **Observação**  Consulte também a [Amostra de enumeração de pastas](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
  
 ## Pré-requisitos
@@ -31,7 +31,8 @@ Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou loc
 
 ## Enumerar arquivos e pastas em um local
 
-> **Observação**  Lembre-se de declarar a funcionalidade **picturesLibrary**.
+> 
+            **Observação**  Lembre-se de declarar a funcionalidade **picturesLibrary**.
 
 Neste exemplo, usamos primeiro o método [**StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276) para obter todos os arquivos na pasta raiz da [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (não em subpastas) e listar o nome de cada arquivo. Em seguida, usamos o método [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227280) para obter todas as subpastas na **PicturesLibrary** e listar o nome de cada subpasta.
 
@@ -136,10 +137,11 @@ Neste exemplo, usamos primeiro o método [**StorageFolder.GetFilesAsync**](https
 > ```
 
 
-> **Observação**  Em C# ou Visual Basic, lembre-se de colocar a palavra-chave **async** na declaração de qualquer método no qual você utilize o operador **await**.
+> [!div class="tabbedCodeSnippets"]
  
 
-Como alternativa, você pode usar o método [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286) para obter todos os itens (arquivos e subpastas) em um local específico. O seguinte exemplo usa o método **GetItemsAsync** para obter todos os arquivos e subpastas na pasta raiz da [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (e não em subpastas). Em seguida, o exemplo lista o nome de cada arquivo e subpasta. Se o item é uma subpasta, o exemplo anexa `"folder"` ao nome.
+
+            **Observação**  Em C# ou Visual Basic, lembre-se de colocar a palavra-chave **async** na declaração de qualquer método no qual você utilize o operador **await**. Como alternativa, você pode usar o método [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286) para obter todos os itens (arquivos e subpastas) em um local específico. O seguinte exemplo usa o método **GetItemsAsync** para obter todos os arquivos e subpastas na pasta raiz da [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (e não em subpastas). Em seguida, o exemplo lista o nome de cada arquivo e subpasta.
 
 > [!div class="tabbedCodeSnippets"] 
 > ```cpp
@@ -208,11 +210,11 @@ Como alternativa, você pode usar o método [**GetItemsAsync**](https://msdn.mic
 > Next item
 > ```
 
-## Consultar arquivos em um local e enumerar os arquivos correspondentes
+## Se o item é uma subpasta, o exemplo anexa `"folder"` ao nome.
 
-Neste exemplo, consultamos todos os arquivos na [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) agrupados por mês e, desta vez, o exemplo retorna em subpastas. Primeiro, chamamos [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) e passamos o valor [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) para o método. Isso nos dá um objeto [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066).
+[!div class="tabbedCodeSnippets"] Consultar arquivos em um local e enumerar os arquivos correspondentes Neste exemplo, consultamos todos os arquivos na [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) agrupados por mês e, desta vez, o exemplo retorna em subpastas.
 
-Em seguida, chamamos [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br208074), que retorna objetos [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representam pastas virtuais. Nesse caso, estamos agrupando por mês, para que as pastas virtuais representem um grupo de arquivos com o mesmo mês.
+Primeiro, chamamos [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) e passamos o valor [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) para o método. Isso nos dá um objeto [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066).
 
 > [!div class="tabbedCodeSnippets"] 
 > ```cpp
@@ -311,7 +313,7 @@ Em seguida, chamamos [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn
 > Next folder
 > ```
 
-O resultado do exemplo é parecido com o seguinte:
+Em seguida, chamamos [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br208074), que retorna objetos [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representam pastas virtuais.
 
 ``` syntax
 July ‎2015 (2)

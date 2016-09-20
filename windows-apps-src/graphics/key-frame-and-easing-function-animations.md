@@ -5,7 +5,7 @@ ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: "Animações de quadro chave lineares, animações de quadro chave com um valor KeySpline ou funções de easing são três técnicas diferentes para praticamente o mesmo cenário."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 9c010e0abca4dd095b32b42b3a8606f8faf3fcaa
+ms.openlocfilehash: 00abdacf8d1f8376a3d1a0c472ff7cf2c15afb01
 
 ---
 # Animações de quadro chave e animações com função de easing
@@ -31,25 +31,14 @@ A duração de uma animação de quadro chave é implicitamente a duração equi
 
 Além de [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration), você pode definir todas as propriedades baseadas em [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) em uma animação de quadro chave, da mesma maneira que é possível com uma animação **From**/**To**/**By** porque as classes de animação de quadro chave também são derivadas de **Timeline**. São elas:
 
--   
-              [
-              **AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): depois que o último quadro chave é atingido, os quadros são repetidos na ordem inversa a partir do final. Isso duplica a duração aparente da animação.
--   
-              [
-              **BeginTime**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): atrasa o início da animação. A linha do tempo dos valores **KeyTime** nos quadros não começa a contar até que **BeginTime** seja atingido, assim, não há risco de que os quadros sejam cortados
--   
-              [
-              **FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): controla o que acontece quando o último quadro chave é atingido. 
-              **FillBehavior** não tem efeito sobre quadros chave intermediários.
--   
-              [
-              **RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
+-   [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): depois que o último quadro chave é atingido, os quadros são repetidos na ordem inversa a partir do final. Isso duplica a duração aparente da animação.
+-   [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): atrasa o início da animação. A linha do tempo dos valores **KeyTime** nos quadros não começa a contar até que **BeginTime** seja atingido, assim, não há risco de que os quadros sejam cortados
+-   [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): controla o que acontece quando o último quadro chave é atingido. **FillBehavior** não tem efeito sobre quadros chave intermediários.
+-   [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
     -   Se definidos como **Forever**, os quadros chave e sua linha do tempo serão repetidos infinitamente.
     -   Se definida como uma contagem de iteração, a linha do tempo será repetida várias vezes.
     -   Se definida como [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377), a linha do tempo será repetida até que esse tempo seja atingido. Isso pode truncar a animação no meio da sequência de quadros chave se não for um fator inteiro da duração implícita da linha do tempo.
--   
-              [
-              **SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (não usada com frequência)
+-   [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (não usada com frequência)
 
 ### Quadros chave lineares
 
@@ -77,8 +66,7 @@ Consulte a seguir como usar uma animação de quadro chave para redimensionar a 
 
 Os quadros chave separados não usam interpolação. Quando um **KeyTime** é atingido, o novo **Value** é simplesmente aplicado. Dependendo de qual propriedade da interface do usuário estiver sendo animada, isso geralmente produz uma animação que parece "saltar". Certifique-se de que esse é o comportamento estético realmente desejado. Você pode atenuar os saltos aparentes aumentando o número de quadros chave declarados, mas, se desejar uma animação suave, é melhor usar quadros chave lineares ou de spline.
 
-
-              **Observação**  Quadros chave separados são a única maneira de animar um valor que não é do tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) e [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723), com um [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132). Abordaremos isso em mais detalhes adiante neste tópico.
+**Observação**  Quadros chave separados são a única maneira de animar um valor que não é do tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) e [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723), com um [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132). Abordaremos isso em mais detalhes adiante neste tópico.
 
  
 
@@ -166,39 +154,17 @@ As funções de easing podem ser aplicadas a animações de três maneiras:
 
 Consulte a seguir uma lista das funções de easing:
 
--   
-              [
-              **BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049): retrai levemente o movimento de uma animação antes que ela comece a se animar no caminho indicado.
--   
-              [
-              **BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057): cria um efeito de saltos.
--   
-              [
-              **CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063): cria uma animação que é acelerada ou desacelerada usando uma função circular.
--   
-              [
-              **CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t3.
--   
-              [
-              **ElasticEase**](https://msdn.microsoft.com/library/windows/apps/BR210282): cria uma animação que parece uma mola oscilando até descansar.
--   
-              [
-              **ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294): cria uma animação que é acelerada ou desacelerada usando uma fórmula exponencial.
--   
-              [
-              **PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = tp, em que p é igual à propriedade [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power).
--   
-              [
-              **QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t2.
--   
-              [
-              **QuarticEase**](https://msdn.microsoft.com/library/windows/apps/BR210405): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t4.
--   
-              [
-              **QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t5.
--   
-              [
-              **SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): cria uma animação que é acelerada ou desacelerada usando uma fórmula seno.
+-   [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049): retrai levemente o movimento de uma animação antes que ela comece a se animar no caminho indicado.
+-   [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057): cria um efeito de saltos.
+-   [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063): cria uma animação que é acelerada ou desacelerada usando uma função circular.
+-   [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t3.
+-   [**ElasticEase**](https://msdn.microsoft.com/library/windows/apps/BR210282): cria uma animação que parece uma mola oscilando até descansar.
+-   [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294): cria uma animação que é acelerada ou desacelerada usando uma fórmula exponencial.
+-   [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = tp, em que p é igual à propriedade [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power).
+-   [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t2.
+-   [**QuarticEase**](https://msdn.microsoft.com/library/windows/apps/BR210405): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t4.
+-   [**QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): cria uma animação que é acelerada ou desacelerada usando a fórmula f(t) = t5.
+-   [**SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): cria uma animação que é acelerada ou desacelerada usando uma fórmula seno.
 
 Algumas das funções de easing têm suas próprias propriedades. Por exemplo, [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) tem duas propriedades [**Bounces**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) e [**Bounciness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx) que modificam o comportamento da função ao longo do tempo desse **BounceEase** específico. Outras funções de easing, como [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126) não têm propriedades adicionais além da propriedade [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275) compartilhada por todas as funções de easeing e sempre produzem o mesmo comportamento de função ao longo do tempo.
 
@@ -317,6 +283,6 @@ Você pode usar mais de um [**DiscreteObjectKeyFrame**](https://msdn.microsoft.c
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

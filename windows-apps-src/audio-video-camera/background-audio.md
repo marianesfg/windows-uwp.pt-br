@@ -1,136 +1,120 @@
 ---
 author: drewbatgit
-ms.assetid: 923D8156-81D3-4A1E-9D02-DB219F600FDB
-description: "Este artigo descreve como criar aplicativos da Plataforma Universal do Windows (UWP) que toquem áudio em segundo plano."
-title: "Áudio em segundo plano"
-ms.sourcegitcommit: 99d1ffa637fd8beca5d1e829cc7cacc18a9c21e9
-ms.openlocfilehash: 9275a194017f08692adee6de1c4d1f6deb680613
+ms.assetid: 
+description: "Este artigo mostra como reproduzir mídia enquanto seu aplicativo é executado em segundo plano."
+title: "Reproduzir mídia em segundo plano"
+translationtype: Human Translation
+ms.sourcegitcommit: c8cbc538e0979f48b657197d59cb94a90bc61210
+ms.openlocfilehash: a477827553ac1780ac625deeee08d84ab638d4c2
 
 ---
 
-# Áudio em segundo plano
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-Este artigo descreve como criar aplicativos da Plataforma Universal do Windows (UWP) que toquem áudio em segundo plano. Isso significa que, mesmo depois que o usuário minimizar o aplicativo, retornar à tela inicial ou navegar para fora do aplicativo de alguma outra forma, seu aplicativo poderá continuar a reproduzir o áudio. Este artigo aborda os componentes de um aplicativo de áudio em segundo plano e como eles funcionam em conjunto.
+# Reproduzir mídia em segundo plano
+Este artigo mostra como configurar seu aplicativo para que a mídia continue a ser reproduzida quando o aplicativo for movido do primeiro para o segundo plano. Isso significa que, mesmo depois que o usuário minimizar o aplicativo, retornar à tela inicial ou sair do aplicativo de alguma outra forma, o aplicativo poderá continuar a reproduzir o áudio. 
 
 Os cenários de reprodução de áudio em segundo plano incluem:
 
--   **Playlists de longa duração:** o usuário ativa brevemente um aplicativo em primeiro plano para selecionar e iniciar uma playlist, esperando que depois disso a playlist continue sendo reproduzida em segundo plano.
+-   **Playlists de longa duração:** o usuário ativa brevemente o aplicativo em primeiro plano para selecionar e iniciar uma playlist, esperando que depois disso a playlist continue sendo reproduzida em segundo plano.
 
--   **Usando o alternador de tarefas:** o usuário ativa brevemente um aplicativo em primeiro plano para iniciar a reprodução de áudio e, em seguida, alterna para outro aplicativo aberto usando o alternador de tarefas. O usuário espera que o áudio continue sendo reproduzido em segundo plano.
+-   **Uso do alternador de tarefas:** o usuário ativa brevemente um aplicativo em primeiro plano para iniciar a reprodução de áudio e, em seguida, alterna para outro aplicativo aberto usando o alternador de tarefas. O usuário espera que o áudio continue sendo reproduzido em segundo plano.
 
-A implementação de áudio em segundo plano descrita neste artigo permitirá que seu aplicativo seja executado universalmente em todos os dispositivos Windows, incluindo móveis, desktop e Xbox.
+A implementação de áudio em segundo plano descrita neste artigo permitirá que seu aplicativo seja executado universalmente em todos os dispositivos Windows, incluindo dispositivos móveis, desktop e Xbox.
 
-**Observação**  
-A [amostra UWP de áudio em segundo plano](http://go.microsoft.com/fwlink/?LinkId=619485) implementa o código abordado nesta visão geral. Você pode baixar a amostra para ver o código usado no contexto ou usá-lo como ponto de partida para seu próprio aplicativo.
+> [!NOTE]
+> O código neste artigo foi adaptado da [Amostra de áudio em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=800141) da UWP.
 
- 
+## Explicação do modelo de um processo
+Com o Windows 10, versão 1607, foi introduzido um novo modelo de processo único que simplifica significativamente o processo para habilitar áudio em segundo plano. Anteriormente, era necessário que o aplicativo gerenciasse um processo em segundo plano além do aplicativo em primeiro plano e comunicasse manualmente as mudanças de estado entre os dois processos. Com o novo modelo, você simplesmente adiciona a funcionalidade de áudio em segundo plano ao manifesto do aplicativo e ele continuará reproduzindo áudio automaticamente quando for movido para o segundo plano. Dois novos eventos de ciclo de vida do aplicativo, [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) e [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) permitem que o aplicativo saiba quando ele entra em segundo plano e sai dele. Quando o aplicativo move para as transições de ou para o segundo plano, as restrições de memória impostas pelo sistema podem mudar, portanto, você pode usar esses eventos para verificar o consumo de memória atual e liberar recursos para ficar abaixo do limite.
 
-## Arquitetura de áudio em segundo plano
+Eliminando a complexa comunicação entre processos e o gerenciamento de estados, o novo modelo permite que você implemente áudio em segundo plano de forma muito mais rápida, com uma redução significativa no código. No entanto, o modelo de dois processos ainda tem suporte na versão atual para a compatibilidade com versões anteriores. Para saber mais, consulte [Modelo de áudio em segundo plano herdado](background-audio.md).
 
-Um aplicativo executando a reprodução em segundo plano consiste em dois processos. O primeiro processo é o aplicativo principal, que contém a interface do usuário do aplicativo e a lógica do cliente, executando em primeiro plano. O segundo processo é a tarefa de reprodução em segundo plano, que implementa [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) como todas as tarefas em segundo plano de aplicativo UWP. A tarefa em segundo plano contém a lógica de reprodução de áudio e os serviços em segundo plano. A tarefa em segundo plano se comunica com o sistema por meio de controles de transporte de mídia do sistema.
+## Requisitos para áudio em segundo plano
+O aplicativo deve atender aos seguintes requisitos para reprodução de áudio enquanto ele estiver em segundo plano.
 
-O diagrama a seguir é uma visão geral de como o sistema foi criado.
+* Adicione a funcionalidade **Reprodução de Mídia em Segundo Plano** ao manifesto do aplicativo, conforme descrito mais adiante neste artigo.
+* Se o aplicativo desabilita a integração automática do **MediaPlayer** com o Controle de transporte de mídia do sistema (SMTC), como ao definir a propriedade [**CommandManager.IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) como falsa, então é necessário implementar a integração manual com o SMTC para habilitar a reprodução de mídia em segundo plano. Você deve também integrar manualmente o SMTC se estiver usando uma API que não seja **MediaPlayer**, por exemplo [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph), para reproduzir áudio se quiser que o áudio continue sendo reproduzido quando o aplicativo for movido para o segundo plano. Os requisitos mínimos de integração do SMTC são descritos na seção "Usar os controles de transporte de mídia do sistema para áudio em segundo plano" do [Controle manual dos controles de transporte de mídia do sistema](system-media-transport-controls.md).
+* Enquanto o aplicativo estiver em segundo plano, você deve permanecer dentro dos limites de uso de memória definidos pelo sistema para aplicativos em segundo plano. Neste artigo, são fornecidas orientações para o gerenciamento de memória enquanto o aplicativo estiver em segundo plano.
 
-![Arquitetura de áudio em segundo plano do Windows 10](images/backround-audio-architecture-win10.png)
-## MediaPlayer
+## Recurso do manifesto de reprodução de mídia em segundo plano
+Para habilitar o áudio em segundo plano, você deve adicionar o recurso de reprodução de mídia em segundo plano ao arquivo de manifesto do aplicativo, Package.appxmanifest. 
 
-O namespace [**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) contém APIs usadas para reproduzir áudio em segundo plano. Há uma única instância de [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652535) por aplicativo através da qual ocorre a reprodução. Seu aplicativo de áudio em segundo plano chama métodos e configura propriedades na classe **MediaPlayer** para definir a faixa atual, iniciar reprodução, pausar, avançar, voltar e assim por diante. A instância de objeto media player sempre é acessada através da propriedade [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528).
+**Para adicionar funcionalidades ao manifesto do aplicativo usando o designer de manifesto**
 
-## Proxy e Stub do MediaPlayer
+1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do aplicativo clicando duas vezes no item **package.appxmanifest**.
+2.  Selecione a guia **Recursos**.
+3.  Marque a caixa de seleção **Reprodução de Mídia em Segundo Plano**.
 
-Quando **BackgroundMediaPlayer.Current** é acessado do processo em segundo plano de seu aplicativo, a instância **MediaPlayer** é ativada no host de tarefa em segundo plano e pode ser manipulada diretamente.
+Para definir o recurso editando manualmente o xml de manifesto do aplicativo, primeiro verifique se o prefixo do namespace *uap3* está definido no elemento **Package**. Se não estiver, adicione-o conforme mostrado abaixo.
+```xml
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  IgnorableNamespaces="uap uap3 mp">
+```
 
-Quando **BackgroundMediaPlayer.Current** é acessado do aplicativo em primeiro plano, a instância **MediaPlayer** retornada é, na verdade, um proxy que se comunica com um stub no processo em segundo plano. Esse stub se comunica com a verdadeira instância **MediaPlayer**, que também é hospedada no processo em segundo plano.
+Em seguida, adicione o recurso *backgroundMediaPlayback* ao elemento **Capabilities**:
+```xml
+<Capabilities>
+    <uap3:Capability Name="backgroundMediaPlayback"/>
+</Capabilities>
+```
 
-Os processos em primeiro e segundo plano podem acessar a maioria das propriedades da instância **MediaPlayer**, com exceção de [**MediaPlayer.Source**](https://msdn.microsoft.com/library/windows/apps/dn987010) e [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635), que só o processo em segundo plano pode acessar. O aplicativo em primeiro plano e o processo em segundo podem receber notificações de eventos específicos de mídia, como [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/dn652609), [**MediaEnded**](https://msdn.microsoft.com/library/windows/apps/dn652603) e [**MediaFailed**](https://msdn.microsoft.com/library/windows/apps/dn652606).
+##Tratar a transição entre primeiro e segundo plano
+Quando o aplicativo é movido do primeiro para o segundo plano, o evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) é acionado. E quando o aplicativo retorna ao primeiro plano, o evento [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) é acionado. Como eles são eventos de ciclo de vida do aplicativo, é necessário registrar manipuladores para esses eventos quando o aplicativo for criado. No modelo de projeto padrão, isso significa adicioná-los ao construtor de classe **App** em App.xaml.cs. Como a execução em segundo plano reduz os recursos de memória que o aplicativo tem permissão para reter pelo sistema, também é necessário realizar o registro dos eventos [**AppMemoryUsageIncreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageIncreased) e [**AppMemoryUsageLimitChanging**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageLimitChanging), que serão usados para verificar o uso da memória do aplicativo e o limite atuais. Os manipuladores para esses eventos são mostrados nos exemplos a seguir. Para saber mais sobre o ciclo de vida de aplicativos para aplicativos UWP, consulte [Ciclo de vida do aplicativo](../\launch-resume\app-lifecycle.md).
 
-## Listas de reprodução
+[!code-cs[RegisterEvents](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetRegisterEvents)]
 
-Um cenário comum para aplicativos de áudio em segundo plano é reproduzir vários itens em fila. Isso é mais facilmente atingido em seu processo em segundo plano usando um objeto [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955), que pode ser definido como uma fonte no **MediaPlayer** atribuindo-o à propriedade [**MediaPlayer.Source**](https://msdn.microsoft.com/library/windows/apps/dn987010).
+Crie uma variável para controlar se você está em execução em segundo plano.
 
-Não é possível acessar uma **MediaPlaybackList** a partir do processo em primeiro plano que foi configurada no processo em segundo plano.
+[!code-cs[DeclareBackgroundMode](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetDeclareBackgroundMode)]
 
-## Controles de transporte de mídia do sistema
+Quando o evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) for acionado, defina a variável de rastreamento para indicar que você está em execução em segundo plano. Você não deve executar tarefas de longa duração no evento **EnteredBackground** porque isso pode fazer com que a transição para o segundo plano pareça lenta para o usuário.
 
-Um usuário pode controlar a reprodução de áudio sem usar diretamente a interface do usuário de seu aplicativo através de meios como dispositivos Bluetooth, SmartGlass e os controles de transporte de mídia do sistema. Sua tarefa em segundo plano usa a classe [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) para assinar esses eventos de sistema iniciados pelo usuário.
+[!code-cs[EnteredBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetEnteredBackground)]
 
-Para obter uma instância **SystemMediaTransportControls** de dentro do processo em segundo plano, use a propriedade [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635). Os aplicativos em primeiro plano obtém uma instância da classe chamando [**SystemMediaTransportControls.GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708), mas a instância retornada é somente de primeiro plano e não tem relação com a tarefa em segundo plano.
+Quando o aplicativo faz a transição para o segundo plano, o limite de memória para o aplicativo é reduzido pelo sistema para garantir que o aplicativo em primeiro plano no momento tenha recursos suficientes para proporcionar uma experiência de usuário responsiva. O manipulador de eventos [**AppMemoryUsageLimitChanging**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageLimitChanging) permite que o aplicativo saiba que sua memória alocada foi reduzida e fornece o novo limite nos argumentos de eventos passados ao manipulador. Compare a propriedade [**Appmemoryusage**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsage), que fornece o uso atual do aplicativo, com a propriedade [**NewLimit**](https://msdn.microsoft.com/library/windows/apps/Windows.System.AppMemoryUsageLimitChangingEventArgs.NewLimit) dos argumentos de eventos, que especifica o novo limite. Se o uso da memória exceder o limite, você precisará reduzi-lo. Neste exemplo, isso é feito no método auxiliar **ReduceMemoryUsage**, que é definido posteriormente neste artigo.
 
-## Enviando mensagens entre tarefas
+[!code-cs[MemoryUsageLimitChanging](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetMemoryUsageLimitChanging)]
 
-Há ocasiões em que você deseja a comunicação entre os dois processos de um aplicativo de áudio em segundo plano. Por exemplo, você pode querer que a tarefa em segundo plano notifique a tarefa em primeiro plano quando uma nova faixa começar a ser reproduzida e, em seguida, envie o título da nova música à tarefa em primeiro plano para exibição na tela.
+> [!NOTE] 
+> Algumas configurações de dispositivo permitirão que um aplicativo continue em execução com o novo limite de memória até que o sistema sofra pressão por recursos, mas algumas delas não permitirão. No Xbox especificamente, os aplicativos serão suspensos ou encerrados caso não reduzam o uso de memória para os novos limites dentro de 2 >>> segundos. Isso significa que você pode oferecer a melhor experiência na mais ampla variedade de dispositivos usando esse evento para reduzir o uso de recursos para abaixo do limite, dentro dos dois segundos após o acionamento do evento.
 
-Um mecanismo de comunicação simples suscita eventos nos processos em primeiro e segundo plano. Os métodos [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) e [**SendMessageToBackground**](https://msdn.microsoft.com/library/windows/apps/dn652532) invocam eventos nos processos correspondentes. Mensagens podem ser recebidas assinando os eventos [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) e [**MessageReceivedFromForeground**](https://msdn.microsoft.com/library/windows/apps/dn652531).
 
-Os dados podem ser passados como um argumento para os métodos de mensagem de envio que são, então, passados para os manipuladores de eventos de mensagem recebida. Passe dados usando a classe [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131). Essa classe é um dicionário que contém uma cadeia de caracteres como uma chave e outros tipos de valor como valores. Você pode passar tipos de valores simples, como inteiros, cadeias de caracteres e boolianos.
+É possível que quando o aplicativo faça a transição para o segundo plano pela primeira vez, seu uso de memória esteja abaixo do limite de memória para aplicativos em segundo plano, mas, em algum momento posterior, ele aumente sua utilização e comece a se aproximar do limite. O manipulador [**AppMemoryUsageIncreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageIncreased) oferece uma oportunidade para verificar o uso quando ele aumenta e, se necessário, liberar espaço na memória. Verifique se o [**AppMemoryUsageLevel**](https://msdn.microsoft.com/library/windows/apps/Windows.System.AppMemoryUsageLevel) está **High** ou **OverLimit**e, em caso afirmativo, reduza o uso de memória. Mais uma vez, neste exemplo, esse processo é tratado pelo método auxiliar **ReduceMemoryUsage**. Você também pode se inscrever no evento [**AppMemoryUsageDecreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageDecreased). Verifique se o aplicativo está abaixo do limite e, em caso afirmativo, você sabe que pode alocar recursos adicionais.
 
-**Observação**  
-Os aplicativos só deverão chamar [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) enquanto o aplicativo em primeiro plano estiver em execução. A tentativa de chamar esse método enquanto o aplicativo em primeiro plano não estiver em execução gerará uma exceção. Um aplicativo é responsável por comunicar o estado do aplicativo em primeiro plano ao processo em segundo plano. Isso pode ser feito usando eventos de ciclo de vida do aplicativo, valores de estado mantidos no armazenamento local e mensagens entre processos. 
+[!code-cs[MemoryUsageIncreased](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetMemoryUsageIncreased)]
 
-## Ciclo de vida de tarefas em segundo plano
+**ReduceMemoryUsage** é um método auxiliar que pode ser implementado para liberar espaço na memória quando o aplicativo estiver além do limite de uso para aplicativos em execução em segundo plano. A maneira de liberar espaço na memória depende das especificações do seu aplicativo, mas uma forma recomendada para liberar memória é descartar a interface do usuário e outros recursos associados ao modo de exibição do aplicativo. Primeiro, assegure-se de que você está no modo de execução em segundo plano e, em seguida, defina a propriedade [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content) da janela do aplicativo como nula. Chame **GC.Collect** para instruir o sistema para recuperar a memória liberada imediatamente.
 
-O tempo de vida de uma tarefa em segundo plano está estreitamente relacionado ao status de reprodução atual do seu aplicativo. Por exemplo, quando o usuário pausa a reprodução de áudio, o sistema pode encerrar ou cancelar seu aplicativo, dependendo das circunstâncias. Após um período de tempo sem reprodução de áudio, o sistema pode desligar automaticamente a tarefa em segundo plano.
+[!code-cs[UnloadViewContent](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetUnloadViewContent)]
 
-O método [**IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) é chamado na primeira vez que seu aplicativo acessa [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528) do código sendo executado no aplicativo em primeiro plano ou quando você registra um manipulador para o evento [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530), o que quer que aconteça primeiro. É recomendável que você se registre para o manipulador de mensagem recebida antes de chamar **BackgroundMediaPlayer.Current** pela primeira vez, para que o aplicativo em primeiro plano não perca nenhuma mensagem enviada do processo em segundo plano.
+Quando o conteúdo da janela for coletado, cada quadro começará seu processo de desconexão. Se houver páginas na árvore visual de objetos sob o conteúdo da janela, elas começarão a acionar seus eventos [**Unloaded**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.FrameworkElement.Unloaded). As páginas não podem ser completamente limpas da memória, a menos que todas as referências a elas sejam removidas. No retorno de chamada **Unloaded**, faça o seguinte para garantir que a memória seja liberada rapidamente:
+* Limpe e defina qualquer estrutura de dados grande em sua página como nula.
+* Cancele o registro de todos os manipuladores de eventos que tenham métodos de retorno de chamada dentro da página. Assegure-se de registrar esses retornos de chamada durante a utilização do manipulador de eventos Loaded da página. O evento Loaded é acionado quando a interface do usuário for reconstituída e a página for adicionada à árvore visual do objeto.
+* Chame **GC.Collect** no final do retorno da chamada Unloaded para coletar rapidamente o lixo de qualquer uma das estruturas de dados grandes que você definiu como nulas.
 
-Para manter a tarefa em segundo plano viva, seu aplicativo deve solicitar um [**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499) de dentro do método **Run** e chamar [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504) quando a instância de tarefa receber os eventos [**Canceled**](https://msdn.microsoft.com/library/windows/apps/br224798) ou [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788). Não faça um loop nem espere no método **Run**, porque isso consome recursos e pode fazer com que a tarefa em segundo plano de seu aplicativo seja finalizada pelo sistema.
+[!code-cs[Unloaded](./code/BackgroundAudio_RS1/cs/MainPage.xaml.cs#SnippetUnloaded)]
 
-Sua tarefa em segundo plano obtém o evento **Completed** quando o método **Run** é completo e não há solicitação de adiamento. Em alguns casos, quando seu aplicativo obtém o evento **Canceled**, ele também pode ser seguido pelo evento **Completed**. Sua tarefa pode receber um evento **Canceled** enquanto **Run** está sendo executado, então certifique-se de gerenciar essa concorrência potencial.
+No manipulador de eventos [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground), você deve definir a variável de rastreamento para indicar que o aplicativo não está mais em execução em segundo plano. Em seguida, verifique se [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content) da janela atual é nulo, o que acontecerá se você tiver descartado os modos de exibição do aplicativo para liberar memória enquanto estava em execução em segundo plano. Se o conteúdo da janela for nulo, recompile o modo de exibição do aplicativo. Neste exemplo, o conteúdo da janela é criado no método auxiliar **CreateRootFrame**.
 
-Situações nas quais a tarefa em segundo plano pode ser cancelada incluem:
+[!code-cs[LeavingBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetLeavingBackground)]
 
--   Um novo aplicativo com recursos de reprodução de áudio é iniciado em sistemas que aplicam a subpolítica de exclusividade. Consulte a seção [Políticas de sistema para o tempo de vida de tarefas de áudio em segundo plano](#system-policies-for-background-audio-task-lifetime) abaixo.
+O método auxiliar **CreateRootFrame** recria o conteúdo do modo de exibição para o aplicativo. O código desse método é idêntico ao do código do manipulador [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) fornecido no modelo de projeto padrão. A única diferença é que o manipulador **Launching** determina o estado de execução anterior a partir da propriedade [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.PreviousExecutionState) do [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) e o método **CreateRootFrame** simplesmente obtém o estado de execução anterior passado como um argumento. Para minimizar o código duplicado, você pode refatorar o código padrão do manipulador de eventos **Launching** para chamar **CreateRootFrame**, se quiser.
 
--   Uma tarefa em segundo plano foi iniciada, mas a música ainda não está tocando, então o aplicativo em primeiro plano é suspenso.
+[!code-cs[CreateRootFrame](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetCreateRootFrame)]
 
--   Outras interrupções de mídia, como a entrada de chamadas telefônicas ou chamadas VoIP.
+## Disponibilidade da rede para aplicativos de mídia em segundo plano
+Todas as fontes de mídia com reconhecimento de rede, aquelas que não são criadas de um fluxo ou de um arquivo, manterão a conexão de rede ativa enquanto recuperam conteúdo remoto, e a liberarão quando não estiverem recuperando conteúdo remoto. [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaStreamSource), especificamente, depende do aplicativo reportar corretamente o intervalo de buffer correto à plataforma, usando [**SetBufferedRange**](https://msdn.microsoft.com/library/windows/apps/dn282762). Depois que todo o conteúdo for armazenado totalmente em buffer, a rede não será mais reservada em nome do aplicativo.
 
-Situações em que a tarefa em segundo plano pode ser encerrada sem notificação incluem:
+Se você precisar fazer chamadas de rede que ocorrem em segundo plano quando a mídia não estiver sendo baixada, elas deverão ser encapsuladas em uma tarefa apropriada como [**ApplicationTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.ApplicationTrigger), [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.MaintenanceTrigger) ou [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.TimeTrigger). Para saber mais, consulte [Dar suporte a seu aplicativo com tarefas em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/support-your-app-with-background-tasks).
 
--   Uma chamada VoIP entra e não há memória suficiente disponível no sistema para manter a tarefa em segundo plano ativa.
-
--   Uma política de recurso é violada.
-
--   O cancelamento ou a conclusão da tarefa não termina corretamente.
-
-## Políticas de sistema para o tempo de vida de tarefas de áudio em segundo plano
-
-As políticas a seguir ajudam a determinar como o sistema gerencia o tempo de vida de tarefas de áudio em segundo plano.
-
-### Exclusividade
-
-Se habilitada, essa subpolítica limita o número de tarefas de áudio em segundo plano para no máximo 1, a qualquer momento. Ela está habilitada em SKUs de dispositivos móveis e outras que não sejam de área de trabalho.
-
-### Tempo limite de inatividade
-
-Devido a restrições de recursos, o sistema poderá encerrar sua tarefa em segundo plano após um período de inatividade.
-
-Uma tarefa em segundo plano será considerada "inativa" se ambas as seguintes condições forem atendidas:
-
--   O aplicativo em primeiro plano não está visível (ele está suspenso ou encerrado).
-
--   O media player em segundo plano não está no estado de execução.
-
-Se ambas as condições forem atendidas, a política de sistema de mídia em segundo plano iniciará um temporizador. Se nenhuma condição mudar quando o temporizador expirar, a política de sistema de mídia em segundo plano encerrará a tarefa em segundo plano.
-
-### Tempo de vida compartilhado
-
-Se habilitada, essa subpolítica força a tarefa em segundo plano a ser dependente do tempo de vida da tarefa em primeiro plano. Se a tarefa em primeiro plano for encerrada, pelo usuário ou pelo sistema, a tarefa em segundo plano também será encerrada.
-
-No entanto, observe que isso não significa que o primeiro plano seja dependente do segundo plano. Se a tarefa em segundo plano for encerrada, isso não força o encerramento da tarefa em primeiro plano.
-
-A tabela a seguir lista as políticas que são aplicadas em quais tipos de dispositivos.
-
-| Subpolítica             | Área de trabalho  | Dispositivos móveis   | Outros    |
-|------------------------|----------|----------|----------|
-| **Exclusividade**        | Desabilitada | Habilitada  | Habilitada  |
-| **Tempo limite de inatividade** | Desabilitada | Habilitada  | Desabilitada |
-| **Tempo de vida compartilhado**    | Habilitada  | Desabilitada | Desabilitada |
-
- 
+## Tópicos relacionados
+* [Reprodução de mídia](media-playback.md)
+* [Reproduzir áudio e vídeo com o MediaPlayer](play-audio-and-video-with-mediaplayer.md)
+* [Integrar ao Controle de Transporte de Mídia do Sistema](integrate-with-systemmediatransportcontrols.md)
+* [Amostra de áudio em segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
 
  
 
@@ -142,6 +126,6 @@ A tabela a seguir lista as políticas que são aplicadas em quais tipos de dispo
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

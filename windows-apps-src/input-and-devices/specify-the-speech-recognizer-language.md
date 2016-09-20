@@ -5,8 +5,9 @@ title: Especificar o idioma do reconhecedor de fala
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 8af4fe64e586037d68ab5cd422d7195bd3a64b94
+ms.openlocfilehash: 1a70ac671c11d2ab3c34a95f2571685f4f851836
 
 ---
 
@@ -67,13 +68,9 @@ Os idiomas instalados podem variar entre dispositivos. Verifique a existência d
 
 Determine os idiomas com suporte em um dispositivo verificando uma das duas propriedades estáticas da classe [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226):
 
--   [
-              **SupportedTopicLanguages**
-            ](https://msdn.microsoft.com/library/windows/apps/dn653251) - A coleção de objetos [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) usada com ditado predefinido e gramáticas de pesquisa na Web.
+-   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251) - A coleção de objetos [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) usada com ditado predefinido e gramáticas de pesquisa na Web.
 
--   [
-              **SupportedGrammarLanguages**
-            ](https://msdn.microsoft.com/library/windows/apps/dn653250) - A coleção de objetos [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) usada com uma restrição de lista ou um arquivo SRGS (Especificação de Gramática de Reconhecimento de Fala).
+-   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250) - A coleção de objetos [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) usada com uma restrição de lista ou um arquivo SRGS (Especificação de Gramática de Reconhecimento de Fala).
 
 ## Especificar um idioma
 
@@ -105,21 +102,16 @@ Uma restrição de tópico pode ser configurada adicionando uma [**SpeechRecogni
 
 Uma restrição de lista é configurada adicionando uma [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421) à coleção [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) do [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) e chamando [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240). Você não pode especificar o idioma de uma lista personalizada diretamente. Em vez disso, a lista será processada usando o idioma do reconhecedor.
 
-Uma gramática SRGS é um formato XML de padrão aberto representado pela classe [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412). Ao contrário de listas personalizadas, você pode especificar o idioma da gramática na marcação SRGS. [
-              Haverá falha de**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) com um [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433) de **TopicLanguageNotSupported** se o reconhecedor não for inicializado com o mesmo idioma que a marcação SRGS.
+Uma gramática SRGS é um formato XML de padrão aberto representado pela classe [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412). Ao contrário de listas personalizadas, você pode especificar o idioma da gramática na marcação SRGS. Haverá falha de [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) com um [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433) de **TopicLanguageNotSupported** se o reconhecedor não for inicializado com o mesmo idioma que a marcação SRGS.
 
 ## Artigos relacionados
 
 
 **Desenvolvedores**
 * [Interações de fala](speech-interactions.md)
-            
-          
-            **Designers**
+**Designers**
 * [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
-            
-          
-            **Exemplos**
+**Exemplos**
 * [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -131,6 +123,6 @@ Uma gramática SRGS é um formato XML de padrão aberto representado pela classe
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

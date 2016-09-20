@@ -1,144 +1,148 @@
 ---
 author: Jwmsft
-Description: Use nested UI to enable multiple actions on a list item
-title: Nested UI in list items
+Description: "Usar interface do usuário aninhada para permitir várias ações em um item de lista"
+title: "Interface do usuário aninhada em itens de lista"
 label: Nested UI in list items
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 37f47db0d7085bf61836ed3fc9ccdc03470f58da
+
 ---
+# Interface do usuário aninhada em itens de lista
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Nested UI in list items
+Interface do usuário aninhada é uma interface do usuário (IU) que expõe controles aninhados acionáveis colocados dentro de um contêiner que também pode ter foco independente.
 
-Nested UI is a user interface (UI) that exposes nested actionable controls enclosed inside a container that also can take independent focus.
+Você pode usar a interface do usuário aninhada para apresentar ao usuário opções adicionais que ajudam a acelerar a execução de ações importantes. No entanto, quanto mais ações você expõe, mais complicada sua interface do usuário se torna. Você precisa tomar mais cuidado ao optar por usar esse padrão de interface do usuário. Este artigo fornece diretrizes para ajudar você a determinar o melhor curso de ação para sua interface do usuário específica.
 
-You can use nested UI to present a user with additional options that help accelerate taking important actions. However, the more actions you expose, the more complicated your UI becomes. You need to take extra care when you choose to use this UI pattern. This article provides guidelines to help you determine the best course of action for your particular UI.
+Neste artigo, vamos falar sobre a criação da interface do usuário aninhada em itens [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) e [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). Embora esta seção não fale sobre outros casos de interface do usuário aninhada, esses conceitos são transferíveis. Antes de começar, você deve estar familiarizado com as diretrizes gerais para usar controles ListView ou GridView em sua interface do usuário, que são encontradas nos artigos [Listas](lists.md) e [Exibição de lista e exibição de grade](listview-and-gridview.md).
 
-In this article, we discuss the creation of nested UI in [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) and [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) items. While this section does not talk about other nested UI cases, these concepts are transferrable. Before you start, you should be familiar with the general guidance for using ListView or GridView controls in your UI, which is found in the [Lists](lists.md) and [List view and grid view](listview-and-gridview.md) articles.
+Neste artigo, usamos os termos *lista*, *item de lista* e *interface do usuário aninhada* conforme definido aqui:
+- *Lista* refere-se a uma coleção de itens contidos em uma exibição de lista ou exibição de grade.
+- *Item de lista* refere-se a um item individual no qual o usuário pode executar uma ação em uma lista.
+- *Interface do usuário aninhada* refere-se a elementos da interface do usuário em um item de lista nos quais o usuário pode executar uma ação separadamente da execução da ação no item de lista em si.
 
-In this article, we use the terms *list*, *list item*, and *nested UI* as defined here:
-- *List* refers to a collection of items contained in a list view or grid view.
-- *List item* refers to an individual item that a user can take action on in a list.
-- *Nested UI* refers to UI elements within a list item that a user can take action on separate from taking action on the list item itself.
+![Partes da interface do usuário aninhada](images/nested-ui-example-1.png)
 
-![Nested UI parts](images/nested-ui-example-1.png)
+> OBSERVAÇÃO&nbsp;&nbsp; Os controles ListView e GridView são derivados da classe [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), portanto, eles têm a mesma funcionalidade, mas exibem dados de modo diferente. Neste artigo, ao falarmos sobre listas, as informações se aplicam aos controles ListView e GridView.
 
-> NOTE&nbsp;&nbsp; ListView and GridView both derive from the [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx) class, so they have the same functionality, but display data differently. In this article, when we talk about lists, the info applies to both the ListView and GridView controls.
+## Ações principais e secundárias
 
-## Primary and secondary actions
+Ao criar a interface do usuário com uma lista, considere quais ações o usuário pode executar dentre os itens de lista.  
 
-When creating UI with a list, consider what actions the user might take from those list items.  
+- O usuário pode clicar em um item para executar uma ação?
+    - Normalmente, clicar em um item de lista inicia uma ação, mas não precisa.
+- Há mais de uma ação que o usuário pode executar?
+    - Por exemplo, tocar em um email em uma lista abre o email. No entanto, pode haver outras ações, como excluir o email, que o usuário poderia executar sem abri-lo primeiro. Isso daria ao usuário o benefício de acessar essa ação diretamente na lista.
+- Como as ações devem ser expostas ao usuário?
+    - Considere todos os tipos de entrada. Algumas formas de interface do usuário aninhada funcionam muito bem com um método de entrada, mas talvez não funcionem com outros métodos.  
 
-- Can a user click on the item to perform an action?
-    - Typically, clicking a list item initiates an action, but it doesn't have too.
-- Is there more than one action the user can take?
-    - For example, tapping an email in a list opens that email. However, there might be other actions, like deleting the email, that the user would want to take without opening it first. It would benefit the user to access this action directly in the list.
-- How should the actions be exposed to the user?
-    - Consider all input types. Some forms of nested UI work great with one method of input, but might not work with other methods.  
+A *ação principal* é o que o usuário espera acontecer ao pressionar o item de lista.
 
-The *primary action* is what the user expects to happen when they press the list item.
+*Ações secundárias* são normalmente aceleradores associados a itens de lista. Esses aceleradores podem ser para gerenciamento de lista ou ações relacionadas ao item de lista.
 
-*Secondary actions* are typically accelerators associated with list items. These accelerators can be for list management or actions related to the list item.
+## Opções para ações secundárias
 
-## Options for secondary actions
+Ao criar a interface do usuário de lista, você precisa primeiro considerar todos os métodos de entrada que a UWP aceita. Para saber mais sobre os diferentes tipos de entrada, consulte a [Cartilha de entrada](../input-and-devices/input-primer.md).
 
-When creating list UI, you first need to make sure you account for all input methods that UWP supports. For more info about different kinds of input, see [Input primer](../input-and-devices/input-primer.md).
+Depois de confirmar que seu aplicativo aceita todas as entradas que a UWP aceita, você deve decidir se as ações secundárias de seu aplicativo são importantes o suficiente para serem expostas como aceleradores na lista principal. Lembre-se de que quanto mais ações que você expõe, mais complicado sua interface do usuário se torna. Você realmente precisa expor as ações secundárias na lista principal da interface do usuário ou pode colocá-las em outro lugar?
 
-After you have made sure that your app supports all inputs that UWP supports, you should decide if your app’s secondary actions are important enough to expose as accelerators in the main list. Remember that the more actions you expose, the more complicated your UI becomes. Do you really need to expose the secondary actions in the main list UI, or can you put them somewhere else?
+Você pode considerar expor ações adicionais na lista principal da interface do usuário quando essas ações precisam ser acessadas por qualquer entrada sempre.
 
-You might consider exposing additional actions in the main list UI when those actions need to be accessible by any input at all times.
+Se você decidir que não é necessário colocar as ações secundárias na lista principal da interface do usuário, há várias outras maneiras de apresentá-las ao usuário. Aqui estão algumas opções de lugar em que você pode considerar colocar as ações secundárias.
 
-If you decide that putting secondary actions in the main list UI is not necessary, there are several other ways you can expose them to the user. Here are some options you can consider for where to place secondary actions.
+### Colocar as ações secundárias na página de detalhes
 
-### Put secondary actions on the detail page
+Colocar as ações secundárias na página para onde o item de lista navega quando é pressionado. Quando você usa o padrão mestre/detalhes, a página de detalhes é geralmente um bom lugar para colocar ações secundárias.
 
-Put the secondary actions on the page that the list item navigates to when it’s pressed. When you use the master/details pattern, the detail page is often a good place to put secondary actions.
+Para saber mais, veja o [Padrão mestre/detalhes](master-details.md).
 
-For more info, see the [Master/detail pattern](master-details.md).
+### Colocar as ações secundárias em um menu de contexto
 
-### Put secondary actions in a context menu
+Coloque as ações secundárias em um menu de contexto que o usuário possa acessar ao clicar com o botão direito ou ao pressionar e segurar. Isso oferece a vantagem de permitir que o usuário execute uma ação, como excluir um email, sem precisar carregar a página de detalhes. Também é recomendável disponibilizar essas opções na página de detalhes, pois os menus de contexto devem ser aceleradores, em vez da interface do usuário principal.
 
-Put the secondary actions in a context menu that the user can access via right-click or press-and-hold. This provides the benefit of letting the user perform an action, such as deleting an email, without having to load the detail page. It's a good practice to also make these options available on the detail page, as context menus are intended to be accelerators rather than primary UI.
+Para expor as ações secundárias quando a entrada é de um gamepad ou controle remoto, recomendamos que você use um menu de contexto.
 
-To expose secondary actions when input is from a gamepad or remote control, we recommend that you use a context menu.
+Para obter mais informações, consulte [Menus de contexto e submenus](menus.md).
 
-For more info, see [Context menus and flyouts](menus.md).
+### Colocar as ações secundárias na interface do usuário de foco para otimizar para entrada de ponteiro
 
-### Put secondary actions in hover UI to optimize for pointer input
+Se você espera que seu aplicativo seja usado com frequência com entrada de ponteiro, como mouse e caneta, e deseja disponibilizar ações secundárias prontamente somente para essas entradas, é possível mostrar as ações secundárias apenas em foco. Esse acelerador fica visível somente quando uma entrada de ponteiro é usada, então, use as outras opções para dar suporte a outros tipos de entrada também.
 
-If you expect your app to be used frequently with pointer input such as mouse and pen, and want to make secondary actions readily available only to those inputs, then you can show the secondary actions only on hover. This accelerator is visible only when a pointer input is used, so be sure to use the other options to support other input types as well.
-
-![Nested UI shown on hover](images/nested-ui-hover.png)
+![Interface do usuário aninhada mostrada em foco](images/nested-ui-hover.png)
 
 
-For more info, see [Mouse interactions](../input-and-devices/mouse-interactions.md).
+Para obter mais informações, consulte [Interações por mouse](../input-and-devices/mouse-interactions.md).
 
-## UI placement for primary and secondary actions
+## Posicionamento da interface do usuário para ações principais e secundárias
 
-If you decide that secondary actions should be exposed in the main list UI, we recommend the following guidelines.
+Se você decidir que as ações secundárias devem ser expostas na interface do usuário da lista principal, recomendamos as diretrizes a seguir.
 
-When you create a list item with primary and secondary actions, place the primary action to the left and secondary actions to the right. In left-to-right reading cultures, users associate actions on the left side of list item as the primary action.
+Quando você criar um item de lista com ações principais e secundárias, coloque a ação principal à esquerda e as ações secundárias à direita. Em culturas de leitura da esquerda para a direita, os usuários associam as ações no lado esquerdo do item de lista como a ação principal.
 
-In these examples, we talk about list UI where the item flows more horizontally (it is wider than its height). However, you might have list items that are more square in shape, or taller than their width. Typically, these are items used in a grid. For these items, if the list doesn't scroll vertically, you can place the secondary actions at the bottom of the list item rather than to the right side.
+Nestes exemplos, falaremos sobre a interface do usuário de lista em que o item flui mais horizontalmente (é mais larga do que sua altura). No entanto, você pode ter itens de lista que têm a forma mais quadrados ou a altura maior do que a largura. Normalmente, esses itens são usados em uma grade. Para esses itens, se a lista não rolar verticalmente, você poderá colocar as ações secundárias na parte inferior do item de lista, em vez do lado direito.
 
-## Consider all inputs
+## Considerar todas as entradas
 
-When deciding to use nested UI, also evaluate the user experience with all input types. As mentioned earlier, nested UI works great for some input types. However, it does not always work great for some other. In particular, keyboard, controller, and remote inputs can have difficulty accessing nested UI elements. Be sure to follow the guidance below to ensure your UWP works with all input types.
+Ao decidir usar a interface do usuário aninhada, avalie também a experiência do usuário com todos os tipos de entrada. Conforme mencionado anteriormente, a interface do usuário aninhada funciona bem para alguns tipos de entrada. No entanto, ela nem sempre funciona bem para outros tipos. Em particular, entradas por teclado, controlador e remotas podem ter dificuldade para acessar elementos da interface do usuário aninhada. Certifique-se de seguir as orientações para garantir que sua UWP funcione com todos os tipos de entrada.
 
-## Nested UI handling
+## Manipulação da interface do usuário aninhada
 
-When you have more than one action nested in the list item, we recommend this guidance to handle navigation with a keyboard, gamepad, remote control, or other non-pointer input.
+Quando você tiver mais de uma ação aninhada no item de lista, recomendamos estas orientações para manipular a navegação com teclado, gamepad, controle remoto ou outra entrada sem ponteiro.
 
-### Nested UI where list items perform an action
+### Interface do usuário aninhada onde os itens de lista executam uma ação
 
-If your list UI with nested elements supports actions such as invoking, selection (single or multiple), or drag-and-drop operations, we recommend these arrowing techniques to navigate through your nested UI elements.
+Se a interface do usuário de lista com elementos aninhados aceitar ações como invocar, seleção (única ou vários) ou operações de arrastar e soltar, recomendamos estas técnicas de seta para navegar pelos elementos da interface do usuário aninhada.
 
-![Nested UI parts](images/nested-ui-navigation.png)
+![Partes da interface do usuário aninhada](images/nested-ui-navigation.png)
 
 **Gamepad**
 
-When input is from a gamepad, provide this user experience:
+Quando a entrada é de um gamepad, forneça esta experiência de usuário:
 
-- From **A**, right directional key puts focus on **B**.
-- From **B**, right directional key puts focus on **C**.
-- From **C**, right directional key is either no op, or if there is a focusable UI element to the right of List, put the focus there.
-- From **C**, left directional key puts focus on **B**.
-- From **B**, left directional key puts focus on **A**.
-- From **A**, left directional key is either no op, or if there is a focusable UI element to the right of List, put the focus there.
-- From **A**, **B**, or **C**, down directional key puts focus on **D**.
-- From UI element to the left of List Item, right directional key puts focus on **A**.
-- From UI element to the right of List Item, left directional key puts focus on **A**.
+- De **A**, a tecla de direção para a direita coloca o foco em **B**.
+- De **B**, a tecla de direção para a direita coloca o foco em **C**.
+- De **C**, a tecla de direção para a direita não funciona ou, se houver um elemento de interface do usuário focalizável à direita da lista, coloca o foco nela.
+- De **C**, a tecla de direção para a esquerda coloca o foco em **B**.
+- De **B**, a tecla de direção para a esquerda coloca o foco em **A**.
+- De **A**, a tecla de direção para a esquerda não funciona ou, se houver um elemento de interface do usuário focalizável à direita da lista, coloca o foco nela.
+- De **A**, **B** ou **C**, a tecla de direção para baixo coloca o foco em **D**.
+- Do elemento de interface do usuário à esquerda do item de lista, a tecla de direção para a direita coloca o foco em **A**.
+- Do elemento de interface do usuário à direita do item de lista, a tecla de direção para a esquerda coloca o foco em **A**.
 
-**Keyboard**
+**Teclado**
 
-When input is from a keyboard, this is the experience user gets:
+Quando a entrada é de um teclado, esta é a experiência que o usuário tem:
 
-- From **A**, tab key puts focus on **B**.
-- From **B**, tab key puts focus on **C**.
-- From **C**, tab key puts focus on next focusable UI element in the tab order.
-- From **C**, shift+tab key puts focus on **B**.
-- From **B**, shift+tab or left arrow key puts focus on **A**.
-- From **A**, shift+tab key puts focus on next focusable UI element in the reverse tab order.
-- From **A**, **B**, or **C**, down arrow key puts focus on **D**.
-- From UI element to the left of List Item, tab key puts focus on **A**.
-- From UI element to the right of List Item, shift tab key puts focus on **C**.
+- De **A**, a tecla tab coloca o foco em **B**.
+- De **B**, a tecla tab coloca o foco em **C**.
+- De **C**, a tecla tab coloca o foco no próximo elemento de interface do usuário focalizável na ordem de tabulação.
+- De **C**, as teclas shift + tab colocam o foco em **B**.
+- De **B**, as teclas shift + tab ou a tecla de seta para a esquerda colocam o foco em **A**.
+- De **A**, as teclas shift + tab colocam o foco no próximo elemento de interface do usuário focalizável na ordem de tabulação inversa.
+- De **A**, **B** ou **C**, a tecla de seta para baixo coloca o foco em **D**.
+- Do elemento de interface do usuário à esquerda do item de lista, a tecla tab coloca o foco em **A**.
+- Do elemento de interface do usuário à direita do item de lista, as teclas shift e tab colocam o foco em **C**.
 
-To achieve this UI, set [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) to **true** on your list. [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) can be any value.
+Para chegar a essa interface do usuário, defina [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) como **true** em sua lista. [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) pode ter qualquer valor.
 
-For the code to implement this, see the [Example](#example) section of this article.
+Para saber o código para implementar isso, consulte a seção [Exemplo](#example) deste artigo.
 
-### Nested UI where list items do not perform an action
+### Interface do usuário aninhada onde os itens de lista não executam uma ação
 
-You might use a list view because it provides virtualization and optimized scrolling behavior, but not have an action associated with a list item. These UIs typically use the list item only to group elements and ensure they scroll as a set.
+Você pode usar uma exibição de lista porque ela fornece o comportamento de virtualização e rolagem otimizado, mas não têm uma ação associada a um item de lista. Essas interfaces do usuário geralmente usam o item de lista somente para agrupar elementos e garantir a rolagem como um conjunto.
 
-This kind of UI tends to be much more complicated than the previous examples, with a lot of nested elements that the user can take action on.
+Esse tipo de interface do usuário tende a ser muito mais complicado do que os exemplos anteriores, com muitos elementos aninhados nos quais o usuário pode executar uma ação.
 
-![Nested UI parts](images/nested-ui-grouping.png)
+![Partes da interface do usuário aninhada](images/nested-ui-grouping.png)
 
 
-To achieve this UI, set the following properties on your list:
-- [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) to **None**.
-- [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) to **false**.
-- [IsFocusEngagementEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isfocusengagementenabled.aspx) to **true**.
+Para chegar a essa interface do usuário, defina as propriedades a seguir em sua lista:
+- [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) como **None**.
+- [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) como **false**.
+- [IsFocusEngagementEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isfocusengagementenabled.aspx) como **true**.
 
 ```xaml
 <ListView SelectionMode="None" IsItemClickEnabled="False" >
@@ -150,30 +154,30 @@ To achieve this UI, set the following properties on your list:
 </ListView>
 ```
 
-When the list items do not perform an action, we recommend this guidance to handle navigation with a gamepad or keyboard.
+Quando os itens de lista não executam uma ação, recomendamos estas orientações para manipular a navegação com um gamepad ou teclado.
 
 **Gamepad**
 
-When input is from a gamepad, provide this user experience:
+Quando a entrada é de um gamepad, forneça esta experiência de usuário:
 
-- From List Item, down directional key puts focus on next List Item.
-- From List Item, left/right key is either no op, or if there is a focusable UI element to the right of List, put the focus there.
-- From List Item, 'A' button puts the focus on Nested UI in top/down left/right priority.
-- While inside Nested UI, follow the XY Focus navigation model.  Focus can only navigate around Nested UI contained inside the current List Item until user presses 'B' button, which puts the focus back onto the List Item.
+- Do item de lista, a tecla de direção para baixo coloca o foco no próximo item de lista.
+- Do item de lista, a tecla para a esquerda/direita não funciona ou, se houver um elemento de interface do usuário focalizável à direita da lista, coloca o foco nela.
+- Do item de lista, o botão 'A' coloca o foco na interface do usuário aninhada na ordem de prioridade de cima para baixo, da esquerda para a direita.
+- Enquanto estiver dentro da interface de usuário aninhada, siga o modelo de navegação de foco XY.  O foco só pode navegar pela interface do usuário aninhada contida no item de lista atual até que o usuário pressione o botão 'B', que volta o foco para o item de lista.
 
-**Keyboard**
+**Teclado**
 
-When input is from a keyboard, this is the experience user gets:
+Quando a entrada é de um teclado, esta é a experiência que o usuário tem:
 
-- From List Item, down arrow key puts focus on the next List Item.
-- From List Item, pressing left/right key is no op.
-- From List Item, pressing tab key puts focus on the next tab stop amongst the Nested UI item.
-- From one of the Nested UI items, pressing tab traverses the nested UI items in tab order.  Once all the Nested UI items are traveled to, it puts the focus onto the next control in tab order after ListView.
-- Shift+Tab behaves in reverse direction from tab behavior.
+- Do item de lista, a tecla de seta para baixo coloca o foco no próximo item de lista.
+- Do item de lista, pressionar a tecla para a esquerda/direita não executa qualquer operação.
+- Do item da lista, pressionar a tecla tab coloca o foco na próxima parada de tabulação entre o item da interface do usuário aninhada.
+- De um dos itens da interface do usuário aninhada, pressionar a tecla tab percorre os itens da interface do usuário aninhada na ordem de tabulação.  Depois que todos os itens da interface do usuário aninhada são percorridos, coloca o foco no próximo controle na ordem de tabulação após ListView.
+- A combinação Shift + Tab tem o comportamento na direção inversa do comportamento da tecla Tab.
 
-## Example
+## Exemplo
 
-This example shows how to implement [nested UI where list items perform an action](#nested-ui-where-list-items-perform-an-action).
+Este exemplo mostra como implementar uma [interface do usuário aninhada onde os itens de lista executam uma ação](#nested-ui-where-list-items-perform-an-action).
 
 ```xaml
 <ListView SelectionMode="None" IsItemClickEnabled="True"
@@ -298,3 +302,9 @@ public static class DependencyObjectExtensions
     }
 }
 ```
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

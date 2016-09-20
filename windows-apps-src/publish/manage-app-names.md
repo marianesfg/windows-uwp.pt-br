@@ -3,7 +3,6 @@ author: jnHs
 Description: "Exiba os nomes que você já reservou para seu aplicativo, reserve nomes adicionais (para outros idiomas ou para alterar o nome do aplicativo) e exclua nomes reservados de que você não precisa mais."
 title: Gerenciar nomes de aplicativo
 ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
-translationtype: Human Translation
 ms.sourcegitcommit: 48952b5d4f2565d06ec79475f88fbabf93fd0f70
 ms.openlocfilehash: e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e5
 
@@ -20,7 +19,8 @@ Você pode reservar vários nomes de aplicativo para usar no mesmo aplicativo. I
 
 Na seção **Reservar mais nomes** da página **Gerenciar nomes de aplicativo**, você verá uma caixa de texto. Digite o nome que você gostaria de reservar e, em seguida, clique em **Verificar disponibilidade**. Se o nome estiver disponível, clique em **Reservar nome**.
 
-> **Observação**  Para saber mais sobre como reservar nomes de aplicativo, e por que um determinado nome pode não estar disponível, consulte [Criar seu aplicativo reservando um nome](create-your-app-by-reserving-a-name.md).
+> 
+            **Observação**  Para saber mais sobre como reservar nomes de aplicativo, e por que um determinado nome pode não estar disponível, consulte [Criar seu aplicativo reservando um nome](create-your-app-by-reserving-a-name.md).
 
 Você pode continuar a reservar nomes de aplicativo adicionais aqui, se desejar.
 

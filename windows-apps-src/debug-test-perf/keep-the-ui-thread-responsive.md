@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: "Mantenha o thread de interface do usuário responsivo"
 description: "Os usuários esperam que um aplicativo continue respondendo enquanto executa cálculos, independentemente do tipo de computador."
-translationtype: Human Translation
 ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
 ms.openlocfilehash: 6144b5b60a0092efd1056dd5de166a64733356ec
 
@@ -18,7 +17,8 @@ Seu aplicativo é controlado por eventos, o que significa que seu código execut
 
 Você precisa usar o thread de interface do usuário para fazer quase todas as alterações no thread de interface do usuário, inclusive criar tipos de interface do usuário e acessar seus membros. Você não pode atualizar a interface do usuário de um thread em segundo plano, mas você pode postar uma mensagem para ele com [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para fazer com que o código seja executado ali.
 
-> **Observação**  A única exceção é que há um thread de renderização separado que pode aplicar alterações à interface do usuário que não afetarão como a entrada será manipulada nem o layout básico. Por exemplo, muitas animações e transições que não afetam o layout podem ser executadas nesse thread de renderização.
+> 
+            **Observação**  A única exceção é que há um thread de renderização separado que pode aplicar alterações à interface do usuário que não afetarão como a entrada será manipulada nem o layout básico. Por exemplo, muitas animações e transições que não afetam o layout podem ser executadas nesse thread de renderização.
 
 ## Atrasar a instanciação de elementos
 
@@ -27,7 +27,8 @@ Alguns dos estágios mais lentos de um aplicativo podem incluir a inicializaçã
 -   Use [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785) para atrasar a instanciação de elementos.
 -   Insira de forma programada elementos na árvore sob demanda.
 
-[
+
+            [
               **CoreDispatcher.RunIdleAsync**
             ](https://msdn.microsoft.com/library/windows/apps/Hh967918) enfileira o trabalho para o thread de interface do usuário processar quando não estiver ocupado.
 
@@ -97,13 +98,14 @@ public class AsyncExample
 > End Class
 > ```
 
-Neste exemplo, o manipulador `NextMove-Click` retornará em **await** para manter o thread de interface do usuário responsivo. Mas a execução seleciona esse manipulador novamente depois que `ComputeNextMove` (que é executado em um thread em segundo plano) é concluído. O restante do código no manipulador atualiza a interface do usuário com os resultados.
+[!div class="tabbedCodeSnippets"] Neste exemplo, o manipulador `NextMove-Click` retornará no **await** para manter o thread de interface do usuário responsivo. Mas a execução seleciona esse manipulador novamente depois que `ComputeNextMove` (que é executado em um thread em segundo plano) é concluído.
 
-> **Observação**  Também há uma API [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) e [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para a UWP que pode ser usada em cenários semelhantes. Para obter mais informações, consulte [Programação threading e assíncrona](https://msdn.microsoft.com/library/windows/apps/Mt187340).
+> O restante do código no manipulador atualiza a interface do usuário com os resultados. 
+            **Observação**  Também há uma API [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) e [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para a UWP que pode ser usada em cenários semelhantes.
 
-## Tópicos relacionados
+## Para obter mais informações, consulte [Programação threading e assíncrona](https://msdn.microsoft.com/library/windows/apps/Mt187340).
 
-* [Interações personalizadas do usuário](https://msdn.microsoft.com/library/windows/apps/Mt185599)
+* [Tópicos relacionados](https://msdn.microsoft.com/library/windows/apps/Mt185599)
 
 
 

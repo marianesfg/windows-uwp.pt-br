@@ -36,7 +36,8 @@ Defina a classe do seu aplicativo.
 
 Substitua o método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). Esse método é chamado sempre que o usuário abre o aplicativo. O parâmetro [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) contém o estado anterior do seu aplicativo e os argumentos de ativação.
 
-**Observação**  Para aplicativos da Loja do Windows Phone, esse método é chamado cada vez que o usuário abre o aplicativo no bloco Iniciar ou na lista de aplicativos, mesmo quando ele está suspenso na memória. No Windows, abrir um aplicativo suspenso no Bloco iniciar ou na Lista de aplicativos chama esse método.
+
+            **Observação**  Para aplicativos da Loja do Windows Phone, esse método é chamado cada vez que o usuário abre o aplicativo no bloco Iniciar ou na lista de aplicativos, mesmo quando ele está suspenso na memória. No Windows, abrir um aplicativo suspenso no Bloco iniciar ou na Lista de aplicativos chama esse método.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -162,7 +163,8 @@ O aplicativo deve carregar seus dados salvos e atualizar o conteúdo exibido.
 
 ## [!div class="tabbedCodeSnippets"]
 
-> Se o valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) estiver como **NotRunning**, o aplicativo não conseguiu salva seus dados com sucesso e ele deve iniciar novamente como se estivesse sido aberto inicialmente. Comentários **Observação**  Para aplicativos da Loja do Windows Phone, o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) é sempre seguido por [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), mesmo quando o seu aplicativo está suspenso no momento e o usuário reabri-lo em um bloco principal ou lista de aplicativos.
+> Se o valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) estiver como **NotRunning**, o aplicativo não conseguiu salva seus dados com sucesso e ele deve iniciar novamente como se estivesse sido aberto inicialmente. Comentários 
+            **Observação**  Para aplicativos da Loja do Windows Phone, o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) é sempre seguido por [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), mesmo quando o seu aplicativo está suspenso no momento e o usuário reabri-lo em um bloco principal ou lista de aplicativos.
 
 ## Os aplicativos podem pular a inicialização se já houver conteúdo definido na janela atual.
 

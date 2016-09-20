@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
 description: "Este artigo mostra como os controles de dispositivo de vídeo permitem cenários de captura de vídeo aprimorados, incluindo vídeo HDR e prioridade de exposição."
 title: "Controles de dispositivo de captura para captura de vídeo"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 65883f1be1a014b6c7e211e2e060ae97fbd9eb0d
 

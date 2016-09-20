@@ -3,8 +3,9 @@ author: msatranjr
 Description: "Este tópico descreve as diretrizes de desempenho para aplicativos que exigem acesso ao local de um usuário."
 title: Diretrizes de aplicativos com reconhecimento de local
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
+ms.openlocfilehash: bbdd4d5a54deba11161c1865cd8f6f2fb47bcad4
 
 ---
 
@@ -99,7 +100,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 
     As APIs do Windows Runtime podem acessar todos esses sensores, com exceção do magnetômetro. Os sensores fusion são mais precisos e estáveis do que os sensores raw, mas usam mais energia. Você deve usar os sensores corretos para cada finalidade. Para obter mais informações, consulte [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
 
-**Connected standby:  **Quando o computador está conectado no modo de espera, sempre é possível criar uma instância para objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534). No entanto, o objeto **Geolocator** não encontrará nenhum sensor a ser agregado e, portanto, as chamadas para [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) atingirão seu tempo limite após sete segundos, os ouvintes do evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) nunca serão chamados, e os ouvintes do evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) serão chamados uma vez com o status **NoData**.
+**Modo de espera conectado:  **quando o computador está conectado no modo de espera, sempre é possível criar uma instância para objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534). No entanto, o objeto **Geolocator** não encontrará nenhum sensor a ser agregado e, portanto, as chamadas para [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) atingirão seu tempo limite após sete segundos, os ouvintes do evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) nunca serão chamados, e os ouvintes do evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) serão chamados uma vez com o status **NoData**.
 
 ## Diretrizes de uso adicionais
 
@@ -109,11 +110,11 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 O usuário pode desativar a funcionalidade de localização usando as **configurações de privacidade de localização** no aplicativo **Configurações**.
 
 -   Para saber quando o usuário desabilita ou reabilita os serviços de localização:
-    -   Manipule o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542). A propriedade [**Status**](https://msdn.microsoft.com/library/windows/apps/br225601) do argumento para o evento **StatusChanged** tem o valor **Disabled** quando o usuário desabilita os serviços de localização.
+    -   Trate o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542). A propriedade [**Status**](https://msdn.microsoft.com/library/windows/apps/br225601) do argumento para o evento **StatusChanged** tem o valor **Disabled** quando o usuário desabilita os serviços de localização.
     -   Verifique os códigos de erro retornados de [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536). Se o usuário tiver desabilitado os serviços de localização, haverá falha nas chamadas para **GetGeopositionAsync** com um erro **ACCESS\_DENIED** e a propriedade [**LocationStatus**](https://msdn.microsoft.com/library/windows/apps/br225538) terá o valor **Disabled**.
 -   Se você tiver um aplicativo cujos dados de localização são essenciais, por exemplo, um aplicativo de mapa, faça o seguinte:
-    -   Manipule o evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) para obter atualizações se houver mudança na localização do usuário.
-    -   Manipule o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542), conforme descrito anteriormente, para detectar mudanças nas configurações de localização.
+    -   Trate o evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) para obter atualizações se houver mudança na localização do usuário.
+    -   Trate o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542), conforme descrito anteriormente, para detectar mudanças nas configurações de localização.
 
 Observe que o serviço de localização retornará os dados quando estiver disponível. Ela pode retornar primeiro um local com um raio de erro maior e atualizar o local com mais informações precisas assim que estiver disponível. Os aplicativos que exibem o local do usuário normalmente desejam atualizar o local quando informações precisas estiverem disponíveis.
 
@@ -171,6 +172,6 @@ A localização geográfica do usuário faz parte das PII (informações de iden
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

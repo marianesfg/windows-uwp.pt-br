@@ -5,7 +5,6 @@ title: "Ativos de bloco e ícone"
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 98eebc4fbf18aa2fbe4586958f666b41580cf6d9
 

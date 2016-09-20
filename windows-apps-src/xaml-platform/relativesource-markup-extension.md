@@ -41,7 +41,8 @@ Fornece um meio para especificar o origem de uma associação em termos de uma r
 
 Um [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) pode definir [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) como um atributo em um elemento de objeto **Binding** ou como um componente em uma extensão de marcação [{Binding}](binding-markup-extension.md). É por isso que são exibidas duas sintaxes XAML diferentes.
 
-**RelativeSource** é semelhante à [extensão de marcação {Binding}](binding-markup-extension.md).  É uma extensão de marcação capaz de retornar instâncias de si, suportando uma construção baseada em cadeias de caracteres que, essencialmente, passa um argumento para o construtor. Nesse caso, o argumento passado é o valor de [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209915).
+
+            **RelativeSource** é semelhante à [extensão de marcação {Binding}](binding-markup-extension.md).  É uma extensão de marcação capaz de retornar instâncias de si, suportando uma construção baseada em cadeias de caracteres que, essencialmente, passa um argumento para o construtor. Nesse caso, o argumento passado é o valor de [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209915).
 
 O modo **Self** é útil para associar uma propriedade de um elemento a outra propriedade do mesmo elemento, e é uma variação da associação com [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828), mas não exige o nome e a autorreferência do elemento. Se você associar uma propriedade de um elemento a outra propriedade do mesmo elemento, as propriedades devem usar o mesmo tipo de propriedade, ou você também terá que usar um [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826) na associação para converter os valores. Por exemplo, é possível usar [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) como origem de [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) sem conversão, mas seria necessário um conversor para usar [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) como origem de [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br209006).
 
@@ -56,7 +57,8 @@ Veja um exemplo a seguir. Esse [**Rectangle**](https://msdn.microsoft.com/librar
 
 Outro uso de `RelativeSource={RelativeSource Self}` é como uma maneira de definir um [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) do objeto como si próprio.  Por exemplo, você pode ver essa técnica em alguns exemplos do SDK onde a classe [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) foi estendida com uma propriedade personalizada que já está fornecendo um modelo de exibição pronto para sua própria vinculação de dados, como: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
 
-**Observação**  O uso de XAML para **RelativeSource** mostra apenas o uso pretendido: definir um valor para [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) em XAML como parte de uma expressão de associação. Teoricamente, outros usos são possíveis no caso da definição de uma propriedade na qual o valor é [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
+
+            **Observação**  O uso de XAML para **RelativeSource** mostra apenas o uso pretendido: definir um valor para [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) em XAML como parte de uma expressão de associação. Teoricamente, outros usos são possíveis no caso da definição de uma propriedade na qual o valor é [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
 
 ## Tópicos relacionados
 

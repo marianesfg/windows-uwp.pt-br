@@ -3,7 +3,6 @@ author: mtoepke
 title: "Referência do OpenGL ES 2.0 para Direct3D 11"
 description: "Use estes tópicos de referência para procurar por mapeamento de API e exemplos de código curtos quando fizer a portabilidade de OpenGL ES 2.0 para Direct3D 11."
 ms.assetid: fe18c8a9-b113-8f5d-9c31-c294dede8560
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: ad6da83773bf5b791f4b2921b8ea55345aae999b
 

@@ -3,7 +3,6 @@ author: mcleblanc
 description: "É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado."
 title: "Soluções de problemas de portabilidade do Windows Phone Silverlight para a UWP"
 ms.assetid: d9a9a2a7-9401-4990-a992-4b13887f2661
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: 0e7c4ba00ab513c1ea9da94f1a3f69b5921c2dc1
 
@@ -28,6 +27,7 @@ Um último recurso é uma divisão binária. Remova cerca da metade da marcaçã
 ## TargetPlatformVersion
 
 Esta seção explica o que fazer se, ao abrir um projeto do Windows 10 no Visual Studio, aparecer a mensagem "Atualização do Visual Studio necessária. Um ou mais projetos exigem um SDK &lt;versão&gt; da plataforma que não está instalado ou que faz parte de uma atualização futura do Visual Studio".
+
 
 -   Primeiro, determine o número da versão do SDK do Windows 10 que você instalou. Navegue para **C:\\Program Files (x86)\\Windows Kits\\10\\Include\\&lt;nomedapastadaversão&gt;** e faça uma anotação de *&lt;nomedapastadaversão&gt;*, que será em notação quad, "Major.Minor.Build.Revision".
 -   Abra o arquivo do projeto para editar e encontre os elementos `TargetPlatformVersion` e `TargetPlatformMinVersion`. Edite-os como a seguir, substituindo *&lt;nomedapastadaversão&gt;* pelo número da versão em notação quádrupla encontrado no disco:
@@ -54,7 +54,8 @@ As informações de solução da tabela destinam-se a dar instruções suficient
 | _Erro de XamlCompiler WMC0011: membro desconhecido 'OpacityMask' no elemento '&lt;tipo UIElement&gt;'_ | O aplicativo UWP [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) e XAML C++ UWP. |
 | _Uma exceção de primeira chance do tipo 'System.Runtime.InteropServices.COMException' ocorreu em SYSTEM.NI.DLL. Informações adicionais: O aplicativo chamou uma interface que foi empacotada para um thread diferente. (Exceção de HRESULT: 0x8001010E (RPC_E_WRONG_THREAD))._ | O trabalho que você está fazendo precisa ser feito no thread da interface do usuário. Chame o [**CoreWindow.GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589)). |
 | Uma animação está em execução, mas ela não está tendo efeito em sua propriedade de destino. | Torne a animação independente ou defina `EnableDependentAnimation="True"` nela. Consulte [Animação](wpsl-to-uwp-porting-xaml-and-ui.md#animation). |
-| Ao abrir um projeto do Windows 10 no Visual Studio, você verá a mensagem "Atualização do Visual Studio necessária. Um ou mais projetos exigem um SDK &lt;versão&gt; da plataforma que não está instalado ou que faz parte de uma atualização futura do Visual Studio". | Consulte a seção [TargetPlatformVersion](#targetplatformversion) neste tópico. |
+| Ao abrir um projeto do Windows 10 no Visual Studio, você verá a mensagem "Atualização do Visual Studio necessária. Um ou mais projetos exigem um SDK &lt;versão&gt; da plataforma que não está instalado ou que faz parte de uma atualização futura do Visual Studio".
+ | Consulte a seção [TargetPlatformVersion](#targetplatformversion) neste tópico. |
 | Um System.InvalidCastException é gerado quando InitializeComponent é chamado em um arquivo xaml.cs. | Isso pode acontecer quando você tem mais de um arquivo xaml (sendo que pelo menos um deles contém qualificadores MRT) que compartilham o mesmo arquivo xaml.cs e os elementos têm atributos x:Name inconsistentes entre os dois arquivos xaml. Tente adicionar o mesmo nome aos mesmos elementos nos dois arquivos xaml ou omita todos os nomes. | 
 
 O próximo tópico é [Portando XAML e a interface do usuário](wpsl-to-uwp-porting-xaml-and-ui.md).

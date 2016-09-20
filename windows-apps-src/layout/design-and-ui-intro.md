@@ -5,7 +5,6 @@ title: "Introdução ao design de aplicativos UWP (Plataforma Universal do Windo
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 label: Intro to UWP app design
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: ec154ec64ba18badb5f81b59e76fc04e539de1a8
 
@@ -47,7 +46,8 @@ A próxima ilustração mostra os elementos de design que não são mapeados par
 
 ![elementos de design que não estão alinhados à grade de pixels de 4x4](images/rsp-design/offthegridillustration.png)
 
-**Dica**   Ao criar modelos de tela em programas de edição de imagens, defina o DPI para 72 e defina as dimensões da imagem para a resolução efetiva da classe de tamanho pretendida. (Para obter uma lista de classes de tamanho e resoluções efetivas, consulte a seção [Recomendações para classes de tamanho específico](#sizeclasses) deste artigo.)
+
+            **Dica**   Ao criar modelos de tela em programas de edição de imagens, defina o DPI para 72 e defina as dimensões da imagem para a resolução efetiva da classe de tamanho pretendida. (Para obter uma lista de classes de tamanho e resoluções efetivas, consulte a seção [Recomendações para classes de tamanho específico](#sizeclasses) deste artigo.)
 
 
 ### Entrada universal e interações inteligentes

@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
 description: "Este tópico mostra como obter um quadro de visualização do fluxo de visualização de captura de mídia."
 title: "Obter um quadro de visualização"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c512ec92272ab03cfd8e91602018f09ef8225652
 

@@ -5,7 +5,6 @@ title: Seletor de hora
 ms.assetid: 5124ecda-09e6-449e-9d4a-d969dca46aa3
 label: Time picker
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 5056a9f304ca21c977b9cc65b8ead007eccd4288
 
@@ -48,7 +47,8 @@ O seletor de hora resultante tem esta aparência:
 
 ![Exemplo de seletor de hora](images/time-picker-closed.png)
 
-> **Observação**
+> 
+            **Observação**
             &nbsp;&nbsp;Para obter informações importantes sobre valores de data e hora, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os *Controles de data e hora*.
 
 

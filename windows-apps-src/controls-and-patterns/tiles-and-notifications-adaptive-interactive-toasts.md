@@ -5,7 +5,6 @@ title: "Notificações do sistema interativas e adaptáveis"
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
 
@@ -25,7 +24,8 @@ O modelo de notificações do sistema interativas e adaptáveis tem estas atuali
 -   Três tipos diferentes de ativação para a notificação do sistema principal e para cada ação.
 -   A opção para criar uma notificação para determinados cenários, inclusive alarmes, lembretes e chamadas de entrada.
 
-**Observação**   Para ver os modelos herdados do Windows 8.1 e Windows Phone 8.1, consulte o [catálogo de modelos de notificação do sistema herdados](https://msdn.microsoft.com/library/windows/apps/hh761494).
+
+            **Observação**   Para ver os modelos herdados do Windows8.1 e Windows Phone 8.1, consulte o [catálogo de modelos de notificação do sistema herdados](https://msdn.microsoft.com/library/windows/apps/hh761494).
 
  
 
@@ -111,7 +111,8 @@ Você pode usar notificações do sistema para alarmes, lembretes e chamadas de 
 ## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>Exemplos de XML
 
 
-**Observação**  As capturas de tela de notificação do sistema para estes exemplos foram extraídas de um aplicativo em desktop. Em dispositivos móveis, uma notificação do sistema pode estar recolhida quando aparece, com um elemento na parte inferior da notificação do sistema para expandi-la.
+
+            **Observação**  As capturas de tela de notificação do sistema para estes exemplos foram extraídas de um aplicativo em desktop. Em dispositivos móveis, uma notificação do sistema pode estar recolhida quando aparece, com um elemento na parte inferior da notificação do sistema para expandi-la.
 
  
 

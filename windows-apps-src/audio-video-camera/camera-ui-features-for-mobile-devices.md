@@ -1,63 +1,71 @@
 ---
 author: drewbatgit
 ms.assetid: 
-description: This article show you how to take advantage of special camera UI features that are only present on mobile devices.
-title: Camera UI features for mobile devices
+description: "Este artigo mostra como tirar proveito dos recursos especiais da interface do usuário da câmera que estão presentes apenas em dispositivos móveis."
+title: "Recursos da interface do usuário da câmera para dispositivos móveis"
+translationtype: Human Translation
+ms.sourcegitcommit: 77d1709cd42253c229b01df21ae3416e57c1c2ab
+ms.openlocfilehash: ec437d7111b1490f52bfc53b3ad2cd06f0c66ef3
+
 ---
 
-#Camera UI features for mobile devices
+#Recursos da interface do usuário da câmera para dispositivos móveis
 
-This article show you how to take advantage of special camera UI features that are only present on mobile devices. 
+Este artigo mostra como tirar proveito dos recursos especiais da interface do usuário da câmera que estão presentes apenas em dispositivos móveis. 
 
-## Add the mobile extension to your project 
+## Adicionar a extensão móvel ao seu projeto 
 
-To use these features, you must add a reference to the Microsoft Mobile Extension SDK for Universal App Platform to your project.
+Para usar esses recursos, você deve adicionar uma referência ao SDK de extensão do Microsoft Mobile para a plataforma de aplicativos universais ao seu projeto.
 
-**To add a reference to the mobile extension SDK for hardware camera button support**
+**Para adicionar uma referência ao SDK de extensão móvel para suporte ao botão de câmera físico**
 
-1.  In **Solution Explorer**, right-click **References** and select **Add Reference...**
+1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e selecione **Adicionar Referência**.
 
-2.  Expand the **Windows Universal** node and select **Extensions**.
+2.  Expanda o nó **Universal do Windows** e selecione **Extensões**.
 
-3.  Click the checkbox next to **Microsoft Mobile Extension SDK for Universal App Platform**.
+3.  Marque a caixa de seleção **Microsoft Mobile Extension SDK for Universal App Platform**.
 
-## Hide the status bar
+## Ocultar a barra de status
 
-Mobile devices have a [**StatusBar**](https://msdn.microsoft.com/library/windows/apps/dn633864) control that provides the user with status information about the device. This control takes up space on the screen that can interfere with the media capture UI. You can hide the status bar by calling [**HideAsync**](https://msdn.microsoft.com/library/windows/apps/dn610339), but you must make this call from within a conditional block where you use the [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/dn949016) method to determine if the API is available. This method will only return true on mobile devices that support the status bar. You should hide the status bar when your app launches or when you begin previewing from the camera.
+Os dispositivos móveis têm um controle [**StatusBar**](https://msdn.microsoft.com/library/windows/apps/dn633864) que fornece ao usuário informações de status sobre o dispositivo. Esse controle ocupa espaço na tela que pode interferir com a interface do usuário de captura de mídia. Você pode ocultar a barra de status chamando [**HideAsync**](https://msdn.microsoft.com/library/windows/apps/dn610339), mas deve fazer essa chamada em um bloco condicional onde o método [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/dn949016) é usado para determinar se a API está disponível. Esse método só retornará true em dispositivos móveis que aceitam a barra de status. Você deve ocultar a barra de status quando o aplicativo for iniciado ou quando você iniciar a visualização da câmera.
 
 [!code-cs[HideStatusBar](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHideStatusBar)]
 
-When your app is shutting down or when the user navigates away from the media capture page of your app, you make the control visible again.
+Quando seu aplicativo estiver sendo desligado ou quando o usuário sair da página de captura de mídia do aplicativo, você poderá tornar o controle visível novamente.
 
 [!code-cs[ShowStatusBar](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetShowStatusBar)]
 
-## Use the hardware camera button
+## Usar o botão de câmera do hardware
 
-Some mobile devices have a dedicated hardware camera button that some users prefer over an on-screen control. To be notified when the hardware camera button is pressed, register a handler for the [**HardwareButtons.CameraPressed**](https://msdn.microsoft.com/library/windows/apps/dn653805) event. Because this API is available on mobile devices only, you must again use the **IsTypePresent** to make sure the API is supported on the current device before attempting to access it.
+Alguns dispositivos móveis têm um botão de câmera físico dedicado que alguns usuários preferem em vez de um controle na tela. Para ser notificado quando o botão de câmera físico for pressionado, registre um manipulador para o evento [**HardwareButtons.CameraPressed**](https://msdn.microsoft.com/library/windows/apps/dn653805). Como essa API está disponível somente em dispositivos móveis, você deve usar novamente **IsTypePresent** para certificar-se de que a API é compatível com o dispositivo atual antes de tentar acessá-la.
 
 [!code-cs[PhoneUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPhoneUsing)]
 
 [!code-cs[RegisterCameraButtonHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterCameraButtonHandler)]
 
-In the handler for the **CameraPressed** event, you can initiate a photo capture.
+No manipulador do evento **CameraPressed**, você pode iniciar uma captura de foto.
 
 [!code-cs[CameraPressed](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCameraPressed)]
 
-When your app is shutting down or the user moves away from the media capture page of your app, unregister the hardware button handler.
+Quando seu aplicativo estiver sendo desligado ou o usuário sair da página de captura de mídia do aplicativo, cancele o registro do manipulador de botão físico.
 
 [!code-cs[UnregisterCameraButtonHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUnregisterCameraButtonHandler)]
 
-[!NOTE]
-This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you're developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).                                                                                   |
+> [!NOTE]
+> Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).                                                                                   |
 
-## Related topics
+## Tópicos relacionados
 
-* [Camera](camera.md)
-* [Basic photo, video, and audio capture with MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
- 
-
- 
+* [Câmera](camera.md)
+* [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 
 
+
+
+
+
+
+
+<!--HONumber=Aug16_HO3-->
 
 

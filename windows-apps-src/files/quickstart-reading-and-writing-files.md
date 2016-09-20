@@ -1,18 +1,18 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
 title: Criar, gravar e ler um arquivo
 description: Leia e grave um arquivo usando o objeto StorageFile.
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 067a9fb20c393e6486206a230b882a835264303a
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: 145acd5a5a6143a31b792df721d94f9ddc5718fa
 
 ---
 
 # Criar, gravar e ler um arquivo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -23,7 +23,7 @@ ms.openlocfilehash: 067a9fb20c393e6486206a230b882a835264303a
 
 Leia e grave um arquivo usando um objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
-> **Observação**  Consulte também a [Amostra de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
+> **Observação**  Consulte também o [Exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## Pré-requisitos
 
@@ -139,7 +139,7 @@ using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
 ```
 ```vb
     Dim dataWriter As New DataWriter(outputStream)
-    
+
     dataWriter.WriteString("DataWriter has methods to write to various types, such as DataTimeOffset.")
 ```
 
@@ -147,7 +147,7 @@ using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
 > [!div class="tabbedCodeSnippets"]
 ```cs
     await dataWriter.StoreAsync();
-        await outputStream.FlushAsync(); 
+        await outputStream.FlushAsync();
 ```
 ```vb
     Await dataWriter.StoreAsync()
@@ -260,10 +260,6 @@ Dim dataReader As New DataReader(inputStream)
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

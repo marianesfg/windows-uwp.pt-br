@@ -36,13 +36,15 @@ Para decidir como distribuir o componente, leve em consideração como ele é co
 
 Um SDK de extensão é especialmente útil caso mais de uma das opções acima seja verdadeira.
 
-> **Observação**  Para componentes complexos, o sistema de gerenciamento de pacotes NuGet oferece uma alternativa de software livre para SDKs de extensão. Assim como os SDKs de extensão, NuGet permite criar pacotes que simplificam a instalação de componentes complexos. Para obter uma comparação de pacotes NuGet e SDKs de extensão do Visual Studio, consulte [Adição de referências usando-se NuGet em comparação com um SDK de extensão](https://msdn.microsoft.com/library/jj161096.aspx) na Biblioteca MSDN.
+> 
+            **Observação**  Para componentes complexos, o sistema de gerenciamento de pacotes NuGet oferece uma alternativa de software livre para SDKs de extensão. Assim como os SDKs de extensão, NuGet permite criar pacotes que simplificam a instalação de componentes complexos. Para obter uma comparação de pacotes NuGet e SDKs de extensão do Visual Studio, consulte [Adição de referências usando-se NuGet em comparação com um SDK de extensão](https://msdn.microsoft.com/library/jj161096.aspx) na Biblioteca MSDN.
 
 ## Distribuição por cópia do arquivo
 
 Caso o componente consista em um único arquivo .winmd ou em um arquivo .winmd e um arquivo de índice de recurso (.pri), basta disponibilizar o arquivo .winmd para os usuários copiarem. Os usuários podem colocar o arquivo onde quiserem em um projeto, usar a caixa de diálogo **Adicionar Item Existente** para adicionar o arquivo .winmd ao projeto e usar a caixa de diálogo do Gerenciador de Referências para criar uma referência. Caso você inclua um arquivo .pri ou um arquivo .xml, instrua os usuários a colocarem esses arquivos com o arquivo .winmd.
 
-> **Observação**  O Visual Studio sempre produz um arquivo .pri quando você compila o componente do Tempo de Execução do Windows, mesmo que o projeto não inclua recursos. Caso tenha um aplicativo de teste para o componente, você pode determinar se o arquivo .pri é usado examinando o conteúdo do pacote do aplicativo na pasta bin\\debug\\AppX. Caso o arquivo .pri no componente não seja exibido, você não precisa distribuí-lo. Também é possível usar a ferramenta [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) para despejar o arquivo de recurso do projeto do componente do Tempo de Execução do Windows. Por exemplo, na janela Prompt de Comando do Visual Studio, digite: makepri dump /if MyComponent.pri /of MyComponent.pri.xml É possível saber mais sobre arquivos .pri em [Sistema de Gerenciamento de Recursos (Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
+> 
+            **Observação**  O Visual Studio sempre produz um arquivo .pri quando você compila o componente do Tempo de Execução do Windows, mesmo que o projeto não inclua recursos. Caso tenha um aplicativo de teste para o componente, você pode determinar se o arquivo .pri é usado examinando o conteúdo do pacote do aplicativo na pasta bin\\debug\\AppX. Caso o arquivo .pri no componente não seja exibido, você não precisa distribuí-lo. Também é possível usar a ferramenta [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) para despejar o arquivo de recurso do projeto do componente do Tempo de Execução do Windows. Por exemplo, na janela Prompt de Comando do Visual Studio, digite: makepri dump /if MyComponent.pri /of MyComponent.pri.xml É possível saber mais sobre arquivos .pri em [Sistema de Gerenciamento de Recursos (Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
 
 ## Distribuição pelo SDK de extensão
 
@@ -54,9 +56,12 @@ Um componente complexo normalmente inclui recursos do Windows, mas consulte a ob
 2.  Crie um novo projeto usando o modelo de projeto VSIX. É possível encontrar o modelo em Visual C# ou Visual Basic, na categoria de extensibilidade. Esse modelo é instalado como parte do SDK do Visual Studio. ([Procedimento passo a passo: criação de um SDK em C# ou Visual Basic](https://msdn.microsoft.com/library/jj127119.aspx) ou [Procedimento passo a passo: criação de um SDK usando C++](https://msdn.microsoft.com/library/jj127117.aspx) demonstra o uso desse modelo em um cenário muito simples. )
 3.  Determine a estrutura de pastas do SDK. A estrutura de pastas começa no nível raiz do projeto VSIX, com as pastas **References**, **Redist** e **DesignTime**.
 
-    -   **References** é o local para arquivos binários que os usuários podem programar. O SDK de extensão cria referências para esses arquivos em projetos do Visual Studio dos usuários.
-    -   **Redist** é o local para outros arquivos que devem ser distribuídos com os arquivos binários, em aplicativos criados usando o componente.
-    -   **DesignTime** é o local para os arquivos que só são usados quando os desenvolvedores estão criando aplicativos que usam o componente.
+    -   
+            **References** é o local para arquivos binários que os usuários podem programar. O SDK de extensão cria referências para esses arquivos em projetos do Visual Studio dos usuários.
+    -   
+            **Redist** é o local para outros arquivos que devem ser distribuídos com os arquivos binários, em aplicativos criados usando o componente.
+    -   
+            **DesignTime** é o local para os arquivos que só são usados quando os desenvolvedores estão criando aplicativos que usam o componente.
 
     Em cada uma dessas pastas, é possível criar pastas de configuração. Os nomes permitidos são debug, retail e CommonConfiguration. A pasta CommonConfiguration se destina a arquivos que sejam iguais, independentemente de serem usados por compilações de varejo ou depuração. Caso só esteja distribuindo compilações de varejo do componente, você pode colocar tudo em CommonConfiguration e omitir as outras duas pastas.
 

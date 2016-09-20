@@ -8,7 +8,7 @@ template: detail.hbs
 isNew: true
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 463da46dc1f4e2ed5125a26b058075e7fe1faafd
+ms.openlocfilehash: c353d649529eef8361c982ff6451371a4cebc4eb
 
 ---
 
@@ -19,20 +19,18 @@ Agora você pode conectar e usar o gamepad com aplicativos UWP no computador o q
 
 Para garantir uma experiência de usuário bem-sucedida e agradável para seu aplicativo UWP ao usar um gamepad ou controle remoto, você deve considerar o seguinte:
 
-* [Botões de hardware](designing-for-tv.md#hardware-buttons)
-             -
+* [Botões de hardware](designing-for-tv.md#hardware-buttons) -
 O gamepad e o controle remoto fornecem configurações e botões muito diferentes.
 
 * [Interação e navegação de foco do plano XY](designing-for-tv.md#xy-focus-navigation-and-interaction)
-             -
+ -
 A navegação de foco do plano XY permite que o usuário navegue na interface do usuário do aplicativo.
 
-* [Modo de mouse](designing-for-tv.md#mouse-mode)
-             -
+* [Modo de mouse](designing-for-tv.md#mouse-mode) -
 O modo de mouse permite que seu aplicativo emule uma experiência de mouse quando a navegação de foco do plano XY não for suficiente.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

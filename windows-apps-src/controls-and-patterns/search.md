@@ -5,7 +5,6 @@ title: "Pesquisar e localizar na página"
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: cd746f81e8cca27c5111f3d15342d1def0f874dc
 
@@ -51,7 +50,8 @@ A pesquisa é um recurso comum, e os usuários encontrarão interface do usuári
 
 Alguns escopos comuns da pesquisa incluem:
 
-**Global** e **contextual/refinado.**  Pesquisa várias origens de nuvem e conteúdo local. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
+
+            **Global** e **contextual/refinado.**  Pesquisa várias origens de nuvem e conteúdo local. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
 
 **Web.**  Pesquisa um índice da Web. Os resultados incluem páginas, entidades e respostas.
 
@@ -152,63 +152,63 @@ O recurso de localização na página permite que os usuários encontrem corresp
 
         -   Caixa de entrada
         -   Botões Anterior e Próximo
-        -   Uma contagem de correspondências
-        -   Fechar (somente desktop)
-    -   A exibição deve realçar as correspondências e rolar para mostrar a próxima correspondência na tela. Os usuários podem se mover rapidamente pelo documento usando os botões **Anterior** e **Próximo** e usando barras de rolagem ou manipulação direta via toque.
-
+        -   Uma contagem de correspondências - Fechar (somente desktop) - A exibição deve realçar as correspondências e rolar para mostrar a próxima correspondência na tela.
+        -   Os usuários podem se mover rapidamente pelo documento usando os botões **Anterior** e **Próximo** e usando barras de rolagem ou manipulação direta via toque.
     -   A funcionalidade de localização na página deve funcionar junto com a funcionalidade básica de localização na página. Para aplicativos que possuem o recurso Localizar e Substituir, verifique se a localização na página não está interferindo nesse recurso.
 
--   Inclua um contador de correspondência para indicar ao usuário o número de correspondências de texto existentes na página.
--   Habilite o atalho de teclado (CTRL+F).
+    -   Inclua um contador de correspondência para indicar ao usuário o número de correspondências de texto existentes na página. Habilite o atalho de teclado (CTRL+F).
 
-## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>Exemplos
+-   Exemplos
+-   Fornece uma maneira fácil de acessar o recurso de localização na página.
+
+## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>Neste exemplo em uma interface do usuário móvel, "Localizar na página" aparece após dois comandos "Adicionar a..." em um menu expansível:
 
 
-Fornece uma maneira fácil de acessar o recurso de localização na página. Neste exemplo em uma interface do usuário móvel, "Localizar na página" aparece após dois comandos "Adicionar a..." em um menu expansível:
+exemplo de localização na página 1 Depois de selecionar localizar na página, o usuário insere um termo de pesquisa.
 
-![exemplo de localização na página 1](images/findinpage-01.png)
-
- 
-
-Depois de selecionar localizar na página, o usuário insere um termo de pesquisa. Sugestões de texto podem aparecer quando um termo de pesquisa está sendo inserido:
-
-![exemplo de localização na página 2](images/findinpage-02.png)
+![Sugestões de texto podem aparecer quando um termo de pesquisa está sendo inserido:](images/findinpage-01.png)
 
  
 
-Se não houver uma correspondência de texto na pesquisa, uma cadeia de caracteres de texto "Nenhum resultado" deve aparecer na caixa de resultados:
+exemplo de localização na página 2 Se não houver uma correspondência de texto na pesquisa, uma cadeia de caracteres de texto "Nenhum resultado" deve aparecer na caixa de resultados:
 
-![exemplo de localização na página 3](images/findinpage-03.png)
+![exemplo de localização na página 3](images/findinpage-02.png)
 
  
 
 Se houver uma correspondência de texto na pesquisa, o primeiro termo deverá ser destacado em uma cor distinta, com as próximas correspondências em um tom mais sutil dessa mesma paleta de cores, como visto neste exemplo:
 
-![exemplo de localização na página 4](images/findinpage-04.png)
+![exemplo de localização na página 4](images/findinpage-03.png)
 
  
 
 Localizar na página tem um contador de correspondência:
 
-![exemplo de contador de pesquisa de localizar na página](images/findinpage-counter.png)
+![exemplo de contador de pesquisa de localizar na página](images/findinpage-04.png)
+
+ 
+
+Implementando a localização na página
+
+![Visualizadores de documentos, leitores e navegadores, os tipos de aplicativo mais prováveis para fornecer localizar na página, permitem que o usuário tenha uma experiência de visualização/leitura em tela inteira.](images/findinpage-counter.png)
 
 
 
 
 ## <span id="implementing_find_in_page"></span><span id="IMPLEMENTING_FIND_IN_PAGE"></span>
 
-**Implementando a localização na página**
+**A funcionalidade de localização na página é secundária e deve estar localizada em uma barra de comando.**
 
--   Visualizadores de documentos, leitores e navegadores, os tipos de aplicativo mais prováveis para fornecer localizar na página, permitem que o usuário tenha uma experiência de visualização/leitura em tela inteira.
--   A funcionalidade de localização na página é secundária e deve estar localizada em uma barra de comando.
+-   Para saber mais sobre como adicionar comandos à sua barra de comando, veja [Barra de comandos](app-bars.md).
+-   Artigos relacionados
 
-Para saber mais sobre como adicionar comandos à sua barra de comando, veja [Barra de comandos](app-bars.md).
+Caixa de sugestão automática
 
 
 
-## <span id="related_topics"></span>Artigos relacionados
+## <span id="related_topics"></span>Related articles
 
-* [**Caixa de sugestão automática**](auto-suggest-box.md)
+* [**Auto-suggest box**](auto-suggest-box.md)
 
 
  

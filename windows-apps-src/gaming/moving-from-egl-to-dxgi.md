@@ -3,7 +3,6 @@ author: mtoepke
 title: "Comparar código EGL com DXGI e Direct3D"
 description: "A DXGI (interface gráfica do DirectX) e várias APIs Direct3D desempenham a mesma função que EGL. Este tópico o ajuda a entender a DXGI e o Direct3D 11 do ponto de vista do EGL."
 ms.assetid: 90f5ecf1-dd5d-fea3-bed8-57a228898d2a
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 461983b646148c21aba7da2adb703510d95b0343
 
@@ -25,7 +24,8 @@ A DXGI (interface gráfica do DirectX) e várias APIs Direct3D desempenham a mes
 
 Assim como o EGL, a DXGI e o Direct3D fornecem métodos de configuração de recursos gráficos, obtenção de um contexto de renderização para desenho dos sombreadores e exibição de resultados em uma janela. No entanto, DXGI e Direct3D têm muitas opções adicionais e exigem mais esforço para serem configurados corretamente em caso de migração da EGL.
 
-> **Observação**   Esta orientação é baseada na especificação aberta do Khronos Group para EGL 1.4, encontrada aqui: [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). Diferenças na sintaxe específica de outras plataformas e linguagens de programação não são abordadas por esta orientação.
+> 
+            **Observação**   Esta orientação é baseada na especificação aberta do Khronos Group para EGL 1.4, encontrada aqui: [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). Diferenças na sintaxe específica de outras plataformas e linguagens de programação não são abordadas por esta orientação.
 
  
 
@@ -69,7 +69,8 @@ Este é o processo mais básico para configurar uma exibição simples de elemen
 6.  Quando o pipeline tiver sido executado e um quadro for desenhado no buffer de fundo, apresente-o na tela com [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797).
 
 Para examinar esse processo mais detalhadamente, consulte [Getting started with DirectX graphics](https://msdn.microsoft.com/library/windows/desktop/hh309467). O restante deste artigo abrange muitas etapas comuns para a configuração e o gerenciamento de pipeline gráfico básico.
-> **Observação**   Os aplicativos da área de trabalho do Windows têm APIs diferentes para obter uma cadeia de troca Direct3D, como [**D3D11Device::CreateDeviceAndSwapChain**](https://msdn.microsoft.com/library/windows/desktop/ff476083), e não usam um objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225).
+> 
+            **Observação**   Os aplicativos da área de trabalho do Windows têm APIs diferentes para obter uma cadeia de troca Direct3D, como [**D3D11Device::CreateDeviceAndSwapChain**](https://msdn.microsoft.com/library/windows/desktop/ff476083), e não usam um objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225).
 
  
 

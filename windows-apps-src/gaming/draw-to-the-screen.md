@@ -5,7 +5,7 @@ description: "Por fim, compatibilizamos o código que desenha o cubo giratório 
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1b7431c20e25173a0aa3f8d6ee0d407be869d60a
+ms.openlocfilehash: 1e2039743ba45d577c08c0a6d9c17c7f923b2d86
 
 ---
 
@@ -31,18 +31,10 @@ Resumindo: as APIs da DXGI contêm principalmente recursos de gerenciamento rela
 
 Para fins de comparação nesta amostra, consulte os tipos relevantes de APIs:
 
--   [
-              **ID3D11Device1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404575): oferece uma representação visual do dispositivo de elementos gráficos e de seus recursos.
--   [
-              **ID3D11DeviceContext1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404598): oferece a interface de configuração de buffers e emissão de comandos de renderização.
--   [
-              **IDXGISwapChain1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404631): a cadeia de troca é análoga ao buffer de fundo no OpenGL ES 2.0. No adaptador gráfico, corresponde à região da memória que contém as imagens finais renderizadas para exibição. Ela é chamada de "cadeia de troca" porque tem diversos buffers que podem ser gravados e "trocados" para apresentar o renderizador mais recente na tela.
--   [
-              **ID3D11RenderTargetView**
-            ](https://msdn.microsoft.com/library/windows/desktop/ff476582): contém o buffer de bitmap 2D no qual o contexto de dispositivo Direct3D desenha e que é apresentado pela cadeia de troca. Assim como no OpenGL ES 2.0, você pode ter vários destinos de renderização, alguns não vinculados à cadeia de troca, mas usados para técnicas de sombreamento com passagem múltipla.
+-   [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575): oferece uma representação visual do dispositivo de elementos gráficos e de seus recursos.
+-   [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598): oferece a interface de configuração de buffers e emissão de comandos de renderização.
+-   [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631): a cadeia de troca é análoga ao buffer de fundo no OpenGL ES 2.0. No adaptador gráfico, corresponde à região da memória que contém as imagens finais renderizadas para exibição. Ela é chamada de "cadeia de troca" porque tem diversos buffers que podem ser gravados e "trocados" para apresentar o renderizador mais recente na tela.
+-   [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582): contém o buffer de bitmap 2D no qual o contexto de dispositivo Direct3D desenha e que é apresentado pela cadeia de troca. Assim como no OpenGL ES 2.0, você pode ter vários destinos de renderização, alguns não vinculados à cadeia de troca, mas usados para técnicas de sombreamento com passagem múltipla.
 
 No modelo, o objeto de renderizador contém os seguintes campos:
 
@@ -230,6 +222,6 @@ Este exemplo fala muito da complexidade de configurar recursos de dispositivo, p
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,7 +3,6 @@ author: martinekuan
 ms.assetid: 16AB1111-4BA8-4352-B796-E97AA9243E31
 title: "Você está pronto para se inscrever?"
 description: Registre-se agora para criar uma conta de desenvolvedor, colocar seus aplicativos na Windows Store e participar de outros programas da Microsoft.
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 53d23b3f8502e1f182c728b9f787fbbc4b694d42
 

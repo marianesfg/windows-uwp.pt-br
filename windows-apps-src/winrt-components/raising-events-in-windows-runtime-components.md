@@ -139,7 +139,8 @@ Adicione um componente do Tempo de Execução do Windows C# à solução: no Ger
 
 No Gerenciador de Soluções, abra o menu de atalho da solução e escolha **Propriedades**. Na caixa de diálogo **Páginas de Propriedades**, selecione **Propriedades de Configuração** no painel esquerdo e, na parte superior da caixa de diálogo, defina **Configuração** como **Depurar** e **Plataforma** como x86, x64 ou ARM. Escolha o botão **OK**.
 
-**Importante** Plataforma = nenhuma CPU funcionará porque ela não é válida para a DLL Win32 de código nativo que você adicionará à solução mais tarde.
+
+            **Importante** Plataforma = nenhuma CPU funcionará porque ela não é válida para a DLL Win32 de código nativo que você adicionará à solução mais tarde.
 
 No Gerenciador de Soluções, renomeie class1.cs para ToasterComponent.cs de maneira que ele corresponda ao nome do projeto. O Visual Studio renomeia automaticamente a classe no arquivo para coincidir com o novo nome de arquivo.
 
@@ -147,7 +148,8 @@ No arquivo .cs, adicione uma diretiva using para o namespace Windows.Foundation 
 
 Quando você precisa de proxies e stubs, o componente deve usar interfaces para expor os membros públicos. Em ToasterComponent.cs, defina uma interface para o notificador do sistema (toaster) e outra para a notificação (Toast) que o notificador produz.
 
-**Observação** Em C#, você pode ignorar essa etapa. Em vez disso, crie primeiro uma classe e, em seguida, abra o menu de atalho e escolha **Refatorar &gt; Extrair Interface**. No código gerado, dê manualmente às interfaces acessibilidade pública.
+
+            **Observação** Em C#, você pode ignorar essa etapa. Em vez disso, crie primeiro uma classe e, em seguida, abra o menu de atalho e escolha **Refatorar &gt; Extrair Interface**. No código gerado, dê manualmente às interfaces acessibilidade pública.
 
 ```csharp
     public interface IToaster
@@ -215,7 +217,8 @@ Em seguida, precisamos de classes que implementem essas interfaces e sejam públ
 
 No código anterior, criamos a notificação do sistema e giramos um item de trabalho do pool de threads para acionar a notificação. Embora o IDE possa sugerir que você aplique a palavra-chave await à chamada assíncrona, isso não é necessário neste caso porque o método não faz nenhum trabalho que dependa dos resultados da operação.
 
-**Observação** A chamada assíncrona no código anterior usa ThreadPool.RunAsync exclusivamente para demonstrar uma forma simples de acionar o evento em um thread em segundo plano. Você pode escrever esse método em particular, conforme mostrado no exemplo a seguir, e ele funcionaria bem porque o agendador de tarefas .NET realiza marshaling automaticamente de chamadas async/await de volta para o thread da interface do usuário.
+
+            **Observação** A chamada assíncrona no código anterior usa ThreadPool.RunAsync exclusivamente para demonstrar uma forma simples de acionar o evento em um thread em segundo plano. Você pode escrever esse método em particular, conforme mostrado no exemplo a seguir, e ele funcionaria bem porque o agendador de tarefas .NET realiza marshaling automaticamente de chamadas async/await de volta para o thread da interface do usuário.
   
 ````csharp
     public async void MakeToast(string message)

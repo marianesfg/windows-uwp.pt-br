@@ -5,7 +5,6 @@ title: "Noções básicas de design de comando para aplicativos da Plataforma Un
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: be7ff187df9800a8c2c47c4315f3f9b021e265f8
 
@@ -33,7 +32,8 @@ Usar os elementos certos para as interações certas pode significar a diferenç
 | Seletores de data e hora | [seletor de data do calendário, modo de exibição de calendário, seletor de data, seletor de hora](https://msdn.microsoft.com/library/windows/apps/hh465466)                                                                                                                 | Permite que o usuário exiba e modifique informações de data e hora, como quando inserir uma data de validade de cartão de crédito ou definir um alarme.                   |
 | Listas                 | [lista suspensa, caixa de listagem, modo de exibição de lista e modo de exibição de grade](https://msdn.microsoft.com/library/windows/apps/mt186889)                                                                                                                                              | Apresenta itens em uma lista interativa ou em uma grade. Use esses elementos para permitir que os usuários selecionem um filme em uma lista de lançamentos ou gerenciem um estoque. |
 | Entrada de texto previsto | [Caixa de sugestão automática](https://msdn.microsoft.com/library/windows/apps/dn997762)                                                                                                                                                                    | Economiza tempo dos usuários quando eles inserem dados ou realizam consultas ao fornecer sugestões conforme eles digitam.                                                   |
-| Controles de seleção    | [caixa de seleção](https://msdn.microsoft.com/library/windows/apps/hh700393), [botão de opção](https://msdn.microsoft.com/library/windows/apps/hh700395), [botão de alternância](https://msdn.microsoft.com/library/windows/apps/hh465475) | Permite que o usuário escolha entre diferentes opções, por exemplo, quando concluir uma pesquisa ou definir as configurações do aplicativo.                                      |
+| Controles de seleção    | 
+            [caixa de seleção](https://msdn.microsoft.com/library/windows/apps/hh700393), [botão de opção](https://msdn.microsoft.com/library/windows/apps/hh700395), [botão de alternância](https://msdn.microsoft.com/library/windows/apps/hh465475) | Permite que o usuário escolha entre diferentes opções, por exemplo, quando concluir uma pesquisa ou definir as configurações do aplicativo.                                      |
 
  
 
@@ -135,7 +135,8 @@ Não importa se a interface do usuário foi bem projetada e se o usuário é cui
     -   Modificar o conteúdo ou editar texto
     -   Renomear um arquivo
 
-**Dica**  Tome cuidado com a quantidade de caixas de diálogo de confirmação que seu aplicativo usa; elas podem ser muito úteis quando o usuário comete um erro, mas são um obstáculo sempre que ele está tentando executar intencionalmente uma ação.
+
+            **Dica**  Tome cuidado com a quantidade de caixas de diálogo de confirmação que seu aplicativo usa; elas podem ser muito úteis quando o usuário comete um erro, mas são um obstáculo sempre que ele está tentando executar intencionalmente uma ação.
 
  
 

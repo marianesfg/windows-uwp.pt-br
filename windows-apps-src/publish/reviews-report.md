@@ -3,7 +3,6 @@ author: jnHs
 Description: "O relatório Críticas do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja."
 title: "Relatório de avaliações"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 7d1a768ce558718b43a4d124f7c88868e999fb93
 
@@ -14,7 +13,8 @@ ms.openlocfilehash: 7d1a768ce558718b43a4d124f7c88868e999fb93
 
 O relatório **Críticas** do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar esses dados de forma programática usando a [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
-> **Observação** Você também pode [responder às críticas dos clientes](respond-to-customer-reviews.md) nessa página.
+> 
+            **Observação** Você também pode [responder às críticas dos clientes](respond-to-customer-reviews.md) nessa página.
 
 Esse relatório mostra o número de estrelas que um cliente concedeu ao seu aplicativo ao fazer uma crítica, mas não analisa as classificações por estrelas em seu aplicativo. Para obter estatísticas sobre suas classificações, consulte o [Relatório de classificações](ratings-report.md).
 
@@ -36,21 +36,32 @@ Cada opinião do cliente contém:
 
 Perto da parte superior da página, você pode expandir **Aplicar filtros** para filtrar todos os dados dessa página.
 
->**Dica** Se você não visualizar críticas na página, verifique se os seus filtros não excluíram todas as críticas. Por exemplo, se você filtrar por um sistema operacional de destino que não dá suporte ao seu aplicativo, você não verá quaisquer críticas
+>
+            **Dica** Se você não visualizar críticas na página, verifique se os seus filtros não excluíram todas as críticas. Por exemplo, se você filtrar por um sistema operacional de destino que não dá suporte ao seu aplicativo, você não verá quaisquer críticas
 
--   **Classificação**: por padrão, todas as classificações por estrelas estão marcadas, mas você pode marcar e desmarcar as classificações (de 1 a 5 estrelas) se quiser ver apenas as análises associadas a uma classificação por estrelas específica.
--   **Data**: o filtro padrão é **Últimos 30 dias**, mas você pode expandi-lo até **Últimos 12 meses**.
--   **Conteúdo da crítica**: a configuração padrão é **Todos**, o que inclui classificações sem texto de crítica adicionado. Você pode selecionar **Classificações com conteúdo de crítica** para mostrar apenas as classificações que incluem conteúdo de crítica escrito.
--   **Sistema operacional de destino**: a configuração padrão é **Todos**. Você pode escolher um sistema operacional de destino específico, se quiser que essa página mostre apenas as classificações dos clientes que usando pacotes destinados a esse sistema operacional.
--   **Respostas**: a configuração padrão é **Todos**. Você pode optar por filtrar as análises para mostrar apenas as críticas em que você [respondeu aos clientes](respond-to-customer-reviews.md), ou apenas aquelas em que você ainda não respondeu.
--   **Atualizações**: a configuração padrão é **Todas**. Você pode optar por filtrar as análises para mostrar apenas as críticas que foram atualizadas pelo cliente desde que você [respondeu a uma crítica](respond-to-customer-reviews.md), ou apenas aquelas que ainda não foram atualizadas pelo cliente.
--   **Mercado**: a configuração padrão é **Todos os mercados**. Você pode escolher um mercado específico, se quiser que esta página mostre somente as críticas de clientes desse mercado.
--   **Tipo do dispositivo**: o filtro padrão é **Todos os dispositivos**. Você poderá escolher um tipo de dispositivo específico, se quiser que essa página mostre somente análises deixadas por clientes que estão usando esse dispositivo.
--   **Versão do pacote**: o filtro padrão é **Todos os pacotes**. Se você quiser que essa página mostre apenas análises deixadas por clientes que tinham esse pacote quando analisaram seu aplicativo, você poderá escolher um pacote específico.
+-   
+            **Classificação**: por padrão, todas as classificações por estrelas estão marcadas, mas você pode marcar e desmarcar as classificações (de 1 a 5 estrelas) se quiser ver apenas as análises associadas a uma classificação por estrelas específica.
+-   
+            **Data**: o filtro padrão é **Últimos 30 dias**, mas você pode expandi-lo até **Últimos 12 meses**.
+-   
+            **Conteúdo da crítica**: a configuração padrão é **Todos**, o que inclui classificações sem texto de crítica adicionado. Você pode selecionar **Classificações com conteúdo de crítica** para mostrar apenas as classificações que incluem conteúdo de crítica escrito.
+-   
+            **Sistema operacional de destino**: a configuração padrão é **Todos**. Você pode escolher um sistema operacional de destino específico, se quiser que essa página mostre apenas as classificações dos clientes que usando pacotes destinados a esse sistema operacional.
+-   
+            **Respostas**: a configuração padrão é **Todos**. Você pode optar por filtrar as análises para mostrar apenas as críticas em que você [respondeu aos clientes](respond-to-customer-reviews.md), ou apenas aquelas em que você ainda não respondeu.
+-   
+            **Atualizações**: a configuração padrão é **Todas**. Você pode optar por filtrar as análises para mostrar apenas as críticas que foram atualizadas pelo cliente desde que você [respondeu a uma crítica](respond-to-customer-reviews.md), ou apenas aquelas que ainda não foram atualizadas pelo cliente.
+-   
+            **Mercado**: a configuração padrão é **Todos os mercados**. Você pode escolher um mercado específico, se quiser que esta página mostre somente as críticas de clientes desse mercado.
+-   
+            **Tipo do dispositivo**: o filtro padrão é **Todos os dispositivos**. Você poderá escolher um tipo de dispositivo específico, se quiser que essa página mostre somente análises deixadas por clientes que estão usando esse dispositivo.
+-   
+            **Versão do pacote**: o filtro padrão é **Todos os pacotes**. Se você quiser que essa página mostre apenas análises deixadas por clientes que tinham esse pacote quando analisaram seu aplicativo, você poderá escolher um pacote específico.
 
 As informações em todos os gráficos listados a seguir refletirão o período de tempo selecionado na seção **Aplicar filtros** e refletirá todos os outros filtros que você tenha escolhido aqui.
 
-> **Observação** A classificação média que um cliente vê na Loja leva em consideração o mercado e o tipo de dispositivo do cliente, além das classificações no ano anterior; portanto, ela pode ser diferente do que você vê nesse relatório. Para ver como a classificação média será exibida na Loja para um determinado cliente, você precisará aplicar filtros para selecionar um mercado e um tipo de dispositivo específicos e definir a **Data** como **Últimos 12 meses**.
+> 
+            **Observação** A classificação média que um cliente vê na Loja leva em consideração o mercado e o tipo de dispositivo do cliente, além das classificações no ano anterior; portanto, ela pode ser diferente do que você vê nesse relatório. Para ver como a classificação média será exibida na Loja para um determinado cliente, você precisará aplicar filtros para selecionar um mercado e um tipo de dispositivo específicos e definir a **Data** como **Últimos 12 meses**.
 
 ## Traduzindo críticas
 
@@ -74,7 +85,8 @@ Veja algumas ações adicionais que você pode realizar com base nas classifica�
 -   Caso veja muitas críticas sugerindo um recurso novo ou alterado ou com reclamações sobre um problema, pense em lançar uma nova versão que atenda especificamente a esses comentários (Não se esqueça de atualizar a [descrição](create-app-descriptions.md) do aplicativo para indicar que o problema foi corrigido).
 -   Caso a classificação média seja alta, mas o número de downloads seja baixo, convém procurar formas de [expor seu aplicativo a mais pessoas](app-promotion-and-customer-engagement.md), já que ele foi é bem-recebido pelos usuários que o testaram.
 
-> **Observação** É provável que você consulte um número diferente de críticas ao comparar o relatório **Críticas** no Centro de Desenvolvimento do Windows com o relatório Críticas no aplicativo móvel mais antigo do Centro de Desenvolvimento. Isso ocorre porque o aplicativo mostra apenas os dados de avaliações de clientes no Windows Phone 8.1 e versões anteriores. Isso também pode ser resultado do trabalho da Microsoft de remover avaliações da Windows Store que foram identificadas como spam, inadequadas, ofensivas ou que violam a política de outra forma. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
+> 
+            **Observação** É provável que você consulte um número diferente de críticas ao comparar o relatório **Críticas** no Centro de Desenvolvimento do Windows com o relatório Críticas no aplicativo móvel mais antigo do Centro de Desenvolvimento. Isso ocorre porque o aplicativo mostra apenas os dados de avaliações de clientes no Windows Phone 8.1 e versões anteriores. Isso também pode ser resultado do trabalho da Microsoft de remover avaliações da Windows Store que foram identificadas como spam, inadequadas, ofensivas ou que violam a política de outra forma. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
 
  
 

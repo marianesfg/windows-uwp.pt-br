@@ -70,7 +70,8 @@ Verificar registros existentes Verifique se a tarefa já está registrada.
 
 É importante verificar isso porque, se a tarefa for registrada várias vezes, ela será executada mais de uma vez sempre que for disparada; isso pode usar excessivamente a CPU e causar comportamentos inesperados. Você pode verificar se existem registros consultando a propriedade [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) e iterando no resultado.
 
-> Verifique o nome de cada instância – se ele corresponder ao nome da tarefa que você está registrando, interrompa o loop e defina uma variável de sinalização, para que seu código possa escolher outro caminho na próxima etapa. **Observação**  Use nomes de tarefas em segundo plano exclusivos para seu aplicativo.
+> Verifique o nome de cada instância – se ele corresponder ao nome da tarefa que você está registrando, interrompa o loop e defina uma variável de sinalização, para que seu código possa escolher outro caminho na próxima etapa. 
+            **Observação**  Use nomes de tarefas em segundo plano exclusivos para seu aplicativo.
 
 Verifique se cada tarefa em segundo plano possui um nome exclusivo.
 
@@ -143,7 +144,8 @@ Verifique se cada tarefa em segundo plano possui um nome exclusivo.
 
 Verifique se a tarefa foi encontrada na lista de registros de tarefas em segundo plano existentes. Caso afirmativo, retorne aquela instância da tarefa. Em seguida, registre a tarefa usando um novo objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768).
 
-> Este código deve verificar se o parâmetro da condição é nulo e, se não for, adicionar a condição ao objeto de registro. Retorne a [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) retornada pela função [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772). **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro.
+> Este código deve verificar se o parâmetro da condição é nulo e, se não for, adicionar a condição ao objeto de registro. Retorne a [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) retornada pela função [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772). 
+            **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro.
 
 Um erro será retornado se algum parâmetro de registro for inválido.
 
@@ -374,7 +376,8 @@ O exemplo a seguir retorna a tarefa existente ou adiciona código que registra a
 ****
 
 * [[!div class="tabbedCodeSnippets"]](create-and-register-a-background-task.md)
-* [**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](declare-background-tasks-in-the-application-manifest.md)
+* [
+            **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](declare-background-tasks-in-the-application-manifest.md)
 * [Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
 * [Tópicos relacionados](monitor-background-task-progress-and-completion.md)
 * [Criar e registrar uma tarefa em segundo plano](respond-to-system-events-with-background-tasks.md)

@@ -3,7 +3,6 @@ author: jnHs
 Description: "Você pode gerenciar e visualizar detalhes relacionados a cada um de seus aplicativos no painel do Centro de Desenvolvimento do Windows e configurar serviços como notificações por push e mapas."
 title: "Gerenciamento de aplicativos e serviços"
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 71077ac3f64e10734021e5fb655168f7273e3cb6
 
@@ -23,11 +22,14 @@ A seção **Serviços** permite que você gerencie vários serviços diferentes 
 
 Dependendo do tipo de pacote do aplicativo e seus requisitos específicos, você pode usar uma das opções a seguir para notificações por push:
 
--   **Serviço de Notificação por Push do Windows (WNS)** permite que você envie notificações do sistema, blocos, selos e atualizações brutas de seu próprio serviço de nuvem. Para saber mais, consulte a [Visão geral do WNS (Serviços de Notificação por Push do Windows)](https://msdn.microsoft.com/library/windows/apps/mt187203).
+-   
+            **Serviço de Notificação por Push do Windows (WNS)** permite que você envie notificações do sistema, blocos, selos e atualizações brutas de seu próprio serviço de nuvem. Para saber mais, consulte a [Visão geral do WNS (Serviços de Notificação por Push do Windows)](https://msdn.microsoft.com/library/windows/apps/mt187203).
 
--   **Aplicativos Móveis do Microsoft Azure** permite que você envie notificações por push, autentique e gerencie usuários de aplicativo e armazene dados de aplicativo na nuvem. Para saber mais, consulte a [documentação de Aplicativos Móveis](http://go.microsoft.com/fwlink/p/?LinkId=221116).
+-   
+            **Aplicativos Móveis do Microsoft Azure** permite que você envie notificações por push, autentique e gerencie usuários de aplicativo e armazene dados de aplicativo na nuvem. Para saber mais, consulte a [documentação de Aplicativos Móveis](http://go.microsoft.com/fwlink/p/?LinkId=221116).
 
--   **Serviço de Notificação por Push da Microsoft (MPNS)** pode ser usado com seus pacotes .xap para Windows Phone. Você pode enviar um número limitado de notificações não autenticadas sem fazer qualquer configuração aqui, embora seja recomendável usar notificações autenticadas para evitar limitações. Se você estiver usando o MPNS, será necessário carregar um certificado para o campo fornecido na página **Notificações por push**. Para saber mais, veja [Configurando um serviço Web autenticado para enviar notificações por push para Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
+-   
+            **Serviço de Notificação por Push da Microsoft (MPNS)** pode ser usado com seus pacotes .xap para Windows Phone. Você pode enviar um número limitado de notificações não autenticadas sem fazer qualquer configuração aqui, embora seja recomendável usar notificações autenticadas para evitar limitações. Se você estiver usando o MPNS, será necessário carregar um certificado para o campo fornecido na página **Notificações por push**. Para saber mais, veja [Configurando um serviço Web autenticado para enviar notificações por push para Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
 
 ### Experimentação
 
@@ -39,7 +41,8 @@ Para saber mais, veja [Executar experimentos de aplicativos com testes A/B](../m
 
 Para usar os serviços de mapa em aplicativos para Windows Phone 8.1 e versões anteriores, você precisa de uma ID de aplicativo de serviço de mapa e um token para incluir no código do seu aplicativo. Você pode obter esse token na página **Mapas** na seção **Serviços**.
 
-> **Observação**  Para usar serviços de mapa em aplicativos destinados a outros sistemas operacionais, visite o [Centro de Desenvolvimento do Bing Mapas](http://go.microsoft.com/fwlink/p/?LinkId=614880). Consulte [Solicitar uma chave de autenticação de mapas](https://msdn.microsoft.com/library/windows/apps/mt219694) para obter mais informações.
+> 
+            **Observação**  Para usar serviços de mapa em aplicativos destinados a outros sistemas operacionais, visite o [Centro de Desenvolvimento do Bing Mapas](http://go.microsoft.com/fwlink/p/?LinkId=614880). Consulte [Solicitar uma chave de autenticação de mapas](https://msdn.microsoft.com/library/windows/apps/mt219694) para obter mais informações.
 
 Para saber mais, consulte [Usar serviços de mapa](use-map-services.md).
 
@@ -69,7 +72,8 @@ Para saber mais, consulte [Gerenciar nomes de aplicativo](manage-app-names.md).
 
 Essa página permite que você visualize detalhes relacionados a todos os seus pacotes publicados.
 
-> **Nota**  Você não verá nenhuma informação aqui até seu aplicativo ter sido publicado.
+> 
+            **Nota**  Você não verá nenhuma informação aqui até seu aplicativo ter sido publicado.
 
 O nome, a versão e a arquitetura de cada pacote são mostrados. Clique em **Detalhes** para mostrar informações adicionais, idioma com suporte, recursos do aplicativo e tamanhos de arquivo.
 

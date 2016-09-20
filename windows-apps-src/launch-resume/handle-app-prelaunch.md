@@ -80,7 +80,8 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
-**Dica**  Se você quiser recusar a pré-inicialização, marque o sinalizador [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740). Se ele estiver definido, retorne de OnLaunched() antes de fazer qualquer trabalho para criar um quadro ou ativar a janela.
+
+            **Dica**  Se você quiser recusar a pré-inicialização, marque o sinalizador [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740). Se ele estiver definido, retorne de OnLaunched() antes de fazer qualquer trabalho para criar um quadro ou ativar a janela.
 
  
 

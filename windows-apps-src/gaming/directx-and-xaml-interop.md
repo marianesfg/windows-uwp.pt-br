@@ -5,7 +5,7 @@ description: "Você pode usar a XAML (Extensible Application Markup Language) e 
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: dda452a6f9b2a47d7ddaee9732bb714f0f5dbe5d
+ms.openlocfilehash: 167709c7ba3470c144924801cb8cf18ffa544c5d
 
 ---
 
@@ -18,8 +18,7 @@ Você pode usar a XAML (Extensible Application Markup Language) e o Microsoft Di
 
 Se seu aplicativo se preocupar principalmente com renderização 2D, convém usar biblioteca do Windows Runtime [**Win2D**](https://github.com/microsoft/win2d). Essa biblioteca é mantida pela Microsoft e criada com base nas tecnologias principais de Direct2D. Ela simplifica bastante o padrão de uso para implementar os gráficos 2D e inclui abstrações úteis para algumas das técnicas descritas neste documento. Consulte a página de projeto para obter mais detalhes. Esse documento aborda orientações para desenvolvedores de aplicativos que optam por *não* usar Win2D.
 
-> 
-              **Observação**  As APIs do DirectX não são definidas como tipos do Windows Runtime e, portanto, você normalmente usa extensões de componentes Visual C++ (C++/CX) para desenvolver componentes XAML UWP que interoperam com o DirectX. Além disso, você pode criar um aplicativo UWP em C# e XAML que usa DirectX se encapsular as chamadas DirectX em um arquivo de metadados do Windows Runtime separado.
+> **Observação**  As APIs do DirectX não são definidas como tipos do Windows Runtime e, portanto, você normalmente usa extensões de componentes Visual C++ (C++/CX) para desenvolver componentes XAML UWP que interoperam com o DirectX. Além disso, você pode criar um aplicativo UWP em C# e XAML que usa DirectX se encapsular as chamadas DirectX em um arquivo de metadados do Windows Runtime separado.
 
  
 
@@ -30,8 +29,7 @@ O DirectX fornece duas bibliotecas poderosas para gráficos 2D e 3D: Direct2D e 
 Se estiver implementando interoperabilidade personalizada entre XAML e DirectX, você precisa conhecer estes dois conceitos:
 
 -   Superfícies compartilhadas são regiões de tamanho da tela, definidas pela XAML, em que você pode usar o DirectX para desenhar indiretamente, usando tipos de [**Windows::UI::Xaml::Media::ImageSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imagesource.aspx). Para superfícies compartilhadas, você não controla o tempo preciso para quando o novo conteúdo é exibido na tela. Em vez disso, as atualizações para a superfície compartilhada são sincronizadas para atualizar a estrutura do XAML.
--   
-              [Cadeias de troca](https://msdn.microsoft.com/library/windows/desktop/bb206356(v=vs.85).aspx) representam uma coleção de buffers usados para exibir elementos gráficos com latência mínima. Normalmente, as cadeias de troca são atualizadas em 60 quadros por segundo separadamente do thread da interface do usuário. No entanto, as cadeias de troca usam mais memória e recursos da CPU para dar suporte a atualizações rápidas e são mais difíceis de usar, pois é necessário gerenciar vários threads.
+-   [Cadeias de troca](https://msdn.microsoft.com/library/windows/desktop/bb206356(v=vs.85).aspx) representam uma coleção de buffers usados para exibir elementos gráficos com latência mínima. Normalmente, as cadeias de troca são atualizadas em 60 quadros por segundo separadamente do thread da interface do usuário. No entanto, as cadeias de troca usam mais memória e recursos da CPU para dar suporte a atualizações rápidas e são mais difíceis de usar, pois é necessário gerenciar vários threads.
 
 Reflita sobre porque você está usando o DirectX. Ele será usado para compor ou animar um único controle que se encaixa dentro das dimensões da janela de exibição? Ela conterá a saída que precisa ser renderizada e controlada em tempo real, como em um jogo? Em caso afirmativo, você provavelmente precisará implementar uma cadeia de troca. Caso contrário, deve ser recomendado usando uma superfície compartilhada.
 
@@ -39,16 +37,14 @@ Depois de determinar como pretende usar o DirectX, você pode usar um destes tip
 
 -   Se quiser compor uma imagem estática ou desenhar uma imagem nos intervalos acionados por eventos, desenhe em uma superfície compartilhada com [**Windows::UI::Xaml::Media::Imaging::SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041). Esse tipo lida com uma superfície de desenho dimensionada do DirectX. Normalmente, você usa esse tipo ao compor uma imagem ou textura como um bitmap para exibição em um documento ou elemento da interface do usuário. Ele não funciona bem para interatividade em tempo real, como para um jogo de alto desempenho. Isso ocorre porque as atualizações em um objeto **SurfaceImageSource** são sincronizadas com as atualizações da interface do usuário da XAML, e isso pode introduzir latência no feedback visual que você fornece ao usuário, como uma taxa de quadros flutuante ou uma resposta fraca percebida para entrada em tempo real. Ainda assim, as atualizações são suficientemente rápidas para controles dinâmicos ou simulações de dados!
 
--   Se a imagem for maior que o estado real fornecido da tela, e puder ser panorâmica ou ampliada pelo usuário, use [**Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Esse tipo manipula uma superfície de desenho dimensionada do DirectX que é maior que a tela. Como [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041), você usa isso ao compor uma imagem ou controle complexo dinamicamente. E, assim como **SurfaceImageSource**, ele não funciona bem para jogos de alto desempenho. Alguns exemplos de elementos XAML que podem usar um **VirtualSurfaceImageSource** são controles de mapa ou um visualizador de documentos para imagens grandes e densas.
+-   Se a imagem for maior que o estado real fornecido da tela, e puder ser panorâmica ou ampliada pelo usuário, use [**Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Esse tipo trata uma superfície de desenho dimensionada do DirectX que é maior que a tela. Como [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041), você usa isso ao compor uma imagem ou controle complexo dinamicamente. E, assim como **SurfaceImageSource**, ele não funciona bem para jogos de alto desempenho. Alguns exemplos de elementos XAML que podem usar um **VirtualSurfaceImageSource** são controles de mapa ou um visualizador de documentos para imagens grandes e densas.
 
 -   Se você estiver usando o DirectX para apresentar gráficos atualizados em tempo real ou em uma situação na qual as atualizações devem vir em intervalos regulares de baixa latência, use a classe [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) para que você possa atualizar os gráficos sem sincronizar com o timer de atualização da estrutura da XAML. Esse tipo permite acessar diretamente a cadeia de troca do dispositivo gráfico ([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)) e a camada da XAML sobre o destino da renderização. Esse tipo funciona muito bem para jogos e aplicativos do DirectX em tela inteira que necessitam de uma interface de usuário baseada em XAML. É necessário conhecer bem o DirectX para usar essa abordagem, incluindo as tecnologias Microsoft DirectX Graphics Infrastructure (DXGI), Direct2D e Direct3D. Para saber mais, consulte [Guia de programação para Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345).
 
 ## SurfaceImageSource
 
 
-
-              [
-              **SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) fornece superfícies compartilhadas do Microsoft DirectX nas quais desenhar e depois compôs os bits no conteúdo do aplicativo.
+[**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) fornece superfícies compartilhadas do Microsoft DirectX nas quais desenhar e depois compôs os bits no conteúdo do aplicativo.
 
 Veja a seguir um processo básico para criar e atualizar um objeto [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) no code behind:
 
@@ -94,8 +90,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**SurfaceIma
 
 4.  Forneça um ponteiro para o objeto [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) para [**ISurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) e desenhe nessa superfície usando o DirectX. Somente a área especificada para atualização no parâmetro *updateRect* é desenhada.
 
-    > 
-              **Observação**   Você pode ter somente uma operação [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) pendente ativa por vez para cada [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527).
+    > **Observação**   Você pode ter somente uma operação [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) pendente ativa por vez para cada [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527).
 
      
 
@@ -125,21 +120,16 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**SurfaceIma
     brush->ImageSource = surfaceImageSource;
     ```
 
-> 
-              **Observação**   Chamar [**SurfaceImageSource::SetSource**](https://msdn.microsoft.com/library/windows/apps/br243255) (herdado de **IBitmapSource::SetSource**) lança atualmente uma exceção. Não o chame do seu objeto [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041).
+> **Observação**   Chamar [**SurfaceImageSource::SetSource**](https://msdn.microsoft.com/library/windows/apps/br243255) (herdado de **IBitmapSource::SetSource**) lança atualmente uma exceção. Não o chame do seu objeto [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041).
 
  
 
 ## VirtualSurfaceImageSource
 
 
+[**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) estende a [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) quando o conteúdo é potencialmente maior que o que cabe na tela e, portanto, precisa ser virtualizado para ser renderizado de forma ideal.
 
-              [
-              **VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) estende a [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) quando o conteúdo é potencialmente maior que o que cabe na tela e, portanto, precisa ser virtualizado para ser renderizado de forma ideal.
-
-
-              [
-              **VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) difere de [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) por usar um retorno de chamada, [**IVirtualSurfaceImageSourceCallbacksNative::UpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848337), que você implementa para atualizar regiões da superfície à medida que se elas tornam visíveis na tela. Você não precisa limpar as regiões que estão ocultas, pois a estrutura da XAML cuida disso para você.
+[**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) difere de [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) por usar um retorno de chamada, [**IVirtualSurfaceImageSourceCallbacksNative::UpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848337), que você implementa para atualizar regiões da superfície à medida que se elas tornam visíveis na tela. Você não precisa limpar as regiões que estão ocultas, pois a estrutura da XAML cuida disso para você.
 
 Veja a seguir um processo básico para criar e atualizar um objeto [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) no codebehind:
 
@@ -244,8 +234,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**VirtualSur
 
         Como no caso de [**IlSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323), esse método retorna o deslocamento do ponto (x,y) do retângulo-alvo atualizado no parâmetro *offset*. Você pode usar esse deslocamento para determinar onde desenhar em [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565).
 
-        > 
-              **Observação**   Você pode ter somente uma operação [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) pendente ativa por vez para cada [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527).
+        > **Observação**   Você pode ter somente uma operação [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) pendente ativa por vez para cada [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527).
 
          
 
@@ -270,9 +259,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**VirtualSur
 ## SwapChainPanel e jogos
 
 
-
-              [
-              **SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) é o tipo do Windows Runtime desenvolvido para dar suporte a gráficos de alto desempenho e jogos, no qual você gerencia a cadeia de troca diretamente. Nesse caso, você cria a sua própria cadeia de troca do DirectX e gerencia a apresentação do seu conteúdo renderizado.
+[**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) é o tipo do Windows Runtime desenvolvido para dar suporte a gráficos de alto desempenho e jogos, no qual você gerencia a cadeia de troca diretamente. Nesse caso, você cria a sua própria cadeia de troca do DirectX e gerencia a apresentação do seu conteúdo renderizado.
 
 Para assegurar um bom desempenho, há algumas limitações para o tipo [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834):
 
@@ -287,8 +274,7 @@ Atualize o [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/
 Se você precisar receber a entrada do ponteiro de baixa latência de **SwapChainPanel**, use [**SwapChainPanel::CreateCoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.swapchainpanel.createcoreindependentinputsource). Esse método retorna um objeto [**CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coreindependentinputsource) que pode ser usado para receber eventos de entrada na latência mínima em um thread em segundo plano. Observe que, depois que esse método é chamado, eventos normais de entrada de ponteiro XAML não serão disparados para **SwapChainPanel**, já que todas as entradas serão redirecionadas para o thread em segundo plano.
 
 
-> 
-              **Observação**   Em geral, seus aplicativos DirectX devem criar cadeias de troca na orientação paisagem e se igualar ao tamanho da janela de exibição (que normalmente é a resolução de tela nativa na maioria dos jogos da Windows Store). Isso garante que seu aplicativo use a implementação de cadeia de troca ideal quando não tiver nenhuma sobreposição XAML visível. Se o aplicativo for girado para o modo retrato, ele deverá chamar [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801) na cadeia de troca existente, aplicar uma transformação ao conteúdo, se necessário, e depois chamar [**SetSwapChain**](https://msdn.microsoft.com/library/windows/desktop/dn302144) novamente na mesma cadeia de troca. Da mesma forma, seu aplicativo deverá chamar **SetSwapChain** novamente na mesma cadeia de troca sempre que esta for redimensionada com uma chamada para [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577).
+> **Observação**   Em geral, seus aplicativos DirectX devem criar cadeias de troca na orientação paisagem e se igualar ao tamanho da janela de exibição (que normalmente é a resolução de tela nativa na maioria dos jogos da Windows Store). Isso garante que seu aplicativo use a implementação de cadeia de troca ideal quando não tiver nenhuma sobreposição XAML visível. Se o aplicativo for girado para o modo retrato, ele deverá chamar [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801) na cadeia de troca existente, aplicar uma transformação ao conteúdo, se necessário, e depois chamar [**SetSwapChain**](https://msdn.microsoft.com/library/windows/desktop/dn302144) novamente na mesma cadeia de troca. Da mesma forma, seu aplicativo deverá chamar **SetSwapChain** novamente na mesma cadeia de troca sempre que esta for redimensionada com uma chamada para [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577).
 
 
  
@@ -386,6 +372,6 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**SwapChainP
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

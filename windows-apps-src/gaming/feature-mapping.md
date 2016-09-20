@@ -3,7 +3,6 @@ author: mtoepke
 title: Correlacionar recursos do DirectX 9 com APIs do DirectX 11
 description: "Compreenda como os recursos utilizados por seu jogo do Direct3D 9 serão convertidos para o Direct3D 11 e a UWP (Plataforma Universal do Windows)."
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3a9e9c32ed2d892674592f32d0f067fed668d9d1
 
@@ -26,7 +25,8 @@ Compreenda como os recursos utilizados por seu jogo do Direct3D 9 serão convert
 ## Mapeamento do Direct3D 9 para APIs do DirectX 11
 
 
-O [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) ainda é a base dos elementos gráficos do DirectX, mas a API mudou a partir do DirectX 9:
+
+            O [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) ainda é a base dos elementos gráficos do DirectX, mas a API mudou a partir do DirectX 9:
 
 -   A DXGI (infraestrutura gráfica do DirectX) da Microsoft é usada para configurar adaptadores gráficos. Use [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534) para selecionar formatos de buffer, criar cadeias de troca, apresentar quadros e criar recursos compartilhados. Consulte a [visão geral de DXGI](https://msdn.microsoft.com/library/windows/desktop/bb205075).
 -   Um contexto de dispositivo Direct3D é usado para definir o estado do pipeline e gerar comandos de renderização. A maioria das amostras usa um contexto imediato para realizar a renderização diretamente no dispositivo; o Direct3D 11 também oferece suporte a renderização multithreading, onde ocorre o uso de contextos adiados. Consulte a [introdução a um dispositivo no Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476880).
@@ -37,7 +37,8 @@ Veja uma lista completa de recursos do Direct3D 11 em [Recursos do Direct3D 11](
 ## Mudando do Direct2D 9 para p Direct2D 11
 
 
-O [Direct2D (Windows)](https://msdn.microsoft.com/library/windows/desktop/dd370990) ainda é uma parte importante dos elementos gráficos do DirectX e do Windows. Você ainda pode usar o Direct2D para desenhar jogos 2D e sobreposições (HUDs) sobre o Direct3D.
+
+            O [Direct2D (Windows)](https://msdn.microsoft.com/library/windows/desktop/dd370990) ainda é uma parte importante dos elementos gráficos do DirectX e do Windows. Você ainda pode usar o Direct2D para desenhar jogos 2D e sobreposições (HUDs) sobre o Direct3D.
 
 O Direct2D é executado sobre o Direct3D; os jogos 2D podem ser implementados usando qualquer uma das APIs. Por exemplo, um jogo 2D implementado usando Direct3D pode usar projeção ortográfica, definir valores de Z para controlar a ordem do desenho de primitivas e usar sombreadores de pixel para adicionar efeitos especiais.
 
@@ -91,7 +92,8 @@ Não há suporte para DirectInput na UWP:
 ## Usar a Microsoft Media Foundation em vez do DirectShow
 
 
-O DirectShow não faz mais parte da API do DirectX (ou do Windows). O [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) fornece conteúdo de vídeo para o Direct3D usando superfícies compartilhadas. Consulte [APIs de vídeo do Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh447677).
+O DirectShow não faz mais parte da API do DirectX (ou do Windows). 
+            O [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) fornece conteúdo de vídeo para o Direct3D usando superfícies compartilhadas. Consulte [APIs de vídeo do Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh447677).
 
 ## Substituir o DirectPlay por código de rede
 

@@ -3,7 +3,6 @@ title: "Autenticação e identidade do usuário"
 description: "Aplicativos da Plataforma Universal do Windows (UWP) têm várias opções para autenticação do usuário, desde logon único (SSO) usando agente de autenticação da Web até autenticação de dois fatores altamente segura."
 ms.assetid: 53E36DDC-200A-4850-AAF0-07ECA3662BB9
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: 3c890ac8d8363982d9f014c36b6cba59bee39f20
 ms.openlocfilehash: e748b319cdeda82aadaf8516e41883a3e32dc10c
 

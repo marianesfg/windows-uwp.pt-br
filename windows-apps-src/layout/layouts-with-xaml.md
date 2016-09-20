@@ -7,7 +7,7 @@ label: Page layouts with XAML
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 681023be35b01eac84272a73d1ae3e7a459351db
-ms.openlocfilehash: 0cc466ccdc4d214539fb4258f95fda72e08ac9db
+ms.openlocfilehash: 8ca8852df2747410b9d139b55a4f24366cc0eefc
 
 ---
 # Definir layouts de página com XAML
@@ -16,27 +16,22 @@ XAML oferece um sistema de layout flexível que permite usar dimensionamento aut
 
 Aqui, abordamos como usar painéis de layout e propriedades XAML para deixar seu aplicativo dinâmico e adaptável. Compilamos informações importantes sobre design de interface do usuário responsiva e técnicas encontradas em [Introdução ao design do aplicativo UWP](../layout/design-and-ui-intro.md). Você deve compreender o que são pixels efetivos e entender cada uma das técnicas de design responsivo: reposicionar, redimensionar, refluir, revelar, substituir e reformular.
 
-> **Observação**
-            &nbsp;&nbsp;O layout do aplicativo começa com o modelo de navegação escolhido, como se você deseja usar  [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) com o modelo [‘guias e pivô’](../controls-and-patterns/tabs-pivot.md) ou [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) com o modelo [‘nav pane’](../controls-and-patterns/nav-pane.md). Para obter mais informações sobre isso, consulte [Noções básicas de design de navegação para aplicativos UWP](../layout/navigation-basics.md). Falamos aqui sobre as técnicas para tornar o layout de uma única página ou um de grupo de elementos dinâmico. Essas informações são aplicáveis independentemente de qual modelo de navegação você escolher para seu aplicativo.
+> **Observação**&nbsp;&nbsp;O layout do aplicativo começa com o modelo de navegação escolhido, como se você deseja usar [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) com o modelo [‘guias e pivô’](../controls-and-patterns/tabs-pivot.md) ou [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) com o modelo [‘painel de navegação’](../controls-and-patterns/nav-pane.md). Para obter mais informações sobre isso, consulte [Noções básicas de design de navegação para aplicativos UWP](../layout/navigation-basics.md). Falamos aqui sobre as técnicas para tornar o layout de uma única página ou um de grupo de elementos dinâmico. Essas informações são aplicáveis independentemente de qual modelo de navegação você escolher para seu aplicativo.
 
 A estrutura XAML fornece vários níveis de otimização que você pode usar para criar uma interface do usuário responsiva.
 - **Layout fluido**
-              
-            Use propriedades e painéis de layout para tornar sua interface do usuário padrão fluida.
+    Use propriedades e painéis de layout para tornar sua interface do usuário padrão fluida.
 
     A base de um layout dinâmico é o uso apropriado de propriedades e painéis de layout para reposicionar, redimensionar e refluir o conteúdo. Você pode definir um tamanho fixo em um elemento ou usar o dimensionamento automático para permitir que o painel de layout pai o dimensione. As diversas classes [**Panel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.panel.aspx), como [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) e [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), oferecem maneiras diferentes de dimensionar e posicionar seus filhos.
 
 - **Layout adaptável**
-              
-            Use estados visuais para fazer alterações significativas na interface do usuário com base no tamanho da janela ou em outras alterações.
+    Use estados visuais para fazer alterações significativas na interface do usuário com base no tamanho da janela ou em outras alterações.
 
     Quando a janela do aplicativo é ampliada ou reduzida além de um determinado valor, convém alterar as propriedades do layout para reposicionar, redimensionar, refluir, revelar ou substituir seções de sua interface do usuário. Você pode definir estados visuais diferentes para sua interface do usuário e aplicá-los quando a largura ou altura da janela ultrapassar um limite especificado. Um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) oferece uma maneira fácil para definir o limite (também chamado de "ponto de interrupção") onde um estado é aplicado.
 
 - **Layout personalizado**
-              
-            Um layout personalizado é otimizado para uma família de dispositivos específica ou um intervalo de tamanhos de tela. Dentro da família de dispositivos, o layout ainda deve responder e se adaptar a alterações dentro do intervalo de tamanhos de janela compatíveis.
-    > **Observação**
-            &nbsp;&nbsp; Com [Continuum para Telefones](http://go.microsoft.com/fwlink/p/?LinkID=699431), os usuários podem conectar seus telefones a um monitor, mouse e teclado. Esse recurso desfoca as linhas entre famílias de dispositivos de telefone e desktop.
+    Um layout personalizado é otimizado para uma família de dispositivos específica ou um intervalo de tamanhos de tela. Dentro da família de dispositivos, o layout ainda deve responder e se adaptar a alterações dentro do intervalo de tamanhos de janela compatíveis.
+    > **Observação**&nbsp;&nbsp; Com [Continuum para Telefones](http://go.microsoft.com/fwlink/p/?LinkID=699431), os usuários podem conectar seus telefones a um monitor, mouse e teclado. Esse recurso desfoca as linhas entre famílias de dispositivos de telefone e desktop.
 
     As abordagens de adaptação incluem
     - Criar gatilho personalizado
@@ -71,8 +66,7 @@ Defina as propriedades [**Height**](https://msdn.microsoft.com/library/windows/a
 
 Você pode usar o dimensionamento automático para permitir que os elementos de interface do usuário sejam redimensionados para caber no contêiner de conteúdo ou pai. Você também pode usar o dimensionamento automático com as linhas e as colunas de uma grade. Para usar o dimensionamento automático, defina o Height e/ou Width dos elementos de interface do usuário como **Auto**.
 
-> **Observação**
-            &nbsp;&nbsp;Um elemento ser redimensionado para seu conteúdo ou seu contêiner depende do valor das propriedades [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) e [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) e de como o contêiner pai manipula o dimensionamento dos filhos. Para obter mais informações, consulte [Alinhamento]() e [Painéis de layout]() mais adiante neste artigo.
+> **Observação**&nbsp;&nbsp;Um elemento ser redimensionado para seu conteúdo ou seu contêiner depende do valor das propriedades [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) e [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) e de como o contêiner pai manipula o dimensionamento dos filhos. Para obter mais informações, consulte [Alinhamento]() e [Painéis de layout]() mais adiante neste artigo.
 
 Você usa o dimensionamento proporcional, também chamado de *dimensionamento em estrela* para distribuir o espaço disponível entre as linhas e as colunas de uma grade segundo proporções ponderadas. Em XAML, os valores estrela são expressos como \* (ou *n*\* para dimensionamento em estrela ponderado). Por exemplo, para especificar se uma coluna é cinco vezes mais larga do que a segunda coluna em um layout de 2 colunas, use "5\*" e "\*" para as propriedades [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.width.aspx) nos elementos [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.aspx).
 
@@ -156,8 +150,7 @@ Você pode revelar ou ocultar um elemento definindo sua propriedade [**Visibilit
 
 Você pode alterar a propriedade Visibility de um elemento no código ou em um estado visual. Quando o Visibility de um elemento é alterado, todos os seus elementos filho também são alterados. Você pode substituir seções de sua interface do usuário, revelando um painel e recolhendo outro.
 
-> **Dica**
-            &nbsp;&nbsp;Quando você tiver elementos em sua interface do usuário **Collapsed** por padrão, ainda assim os objetos serão criados na inicialização, mesmo quando não estiverem visíveis. Você pode adiar o carregamento desses elementos até que eles sejam mostrados definindo o **atributo x:DeferLoadStrategy** como "Lazy". Isso pode melhorar o desempenho da inicialização. Para obter mais informações, consulte [Atributo x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md).
+> **Dica**&nbsp;&nbsp;Quando você tiver elementos em sua interface do usuário **Collapsed** por padrão, ainda assim os objetos serão criados na inicialização, mesmo quando não estiverem visíveis. Você pode adiar o carregamento desses elementos até que eles sejam mostrados definindo o **atributo x:DeferLoadStrategy** como "Lazy". Isso pode melhorar o desempenho da inicialização. Para obter mais informações, consulte [Atributo x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### Recursos de estilo
 
@@ -284,8 +277,7 @@ Este exemplo faz a mesma coisa que o exemplo anterior, mas usa a sintaxe simplif
 </Page>
 ```
 
-> **Importante**
-            &nbsp;&nbsp;No exemplo anterior, a propriedade anexada VisualStateManager.VisualStateGroups está definida no elemento **Grid**. Ao usar StateTriggers, certifique-se sempre de que VisualStateGroups esteja anexado ao primeiro filho da raiz para que os gatilhos entrem em vigor automaticamente. (Aqui, **Grid** é o primeiro filho do elemento **Page** raiz.)
+> **Importante**&nbsp;&nbsp;No exemplo anterior, a propriedade anexada VisualStateManager.VisualStateGroups está definida no elemento **Grid**. Ao usar StateTriggers, certifique-se sempre de que VisualStateGroups esteja anexado ao primeiro filho da raiz para que os gatilhos entrem em vigor automaticamente. (Aqui, **Grid** é o primeiro filho do elemento **Page** raiz.)
 
 ### Sintaxe da propriedade anexada
 
@@ -389,8 +381,7 @@ Use modos de exibição XAML para criar definições de interface do usuário di
 
 **Para adicionar um modo de exibição XAML a um aplicativo**
 1. Selecione Projeto > Adicionar Novo Item. A caixa de diálogo Adicionar Novo Item é aberta.
-    > **Dica**
-            &nbsp;&nbsp;Verifique se uma pasta ou o projeto, e não a solução, está selecionado no Gerenciador de Soluções.
+    > **Dica**&nbsp;&nbsp;Verifique se uma pasta ou o projeto, e não a solução, está selecionado no Gerenciador de Soluções.
 2. Em Visual C# ou Visual Basic no painel esquerdo, selecione o tipo de modelo XAML.
 3. No painel central, selecione Exibição XAML.
 4. Insira o nome do modo de exibição. O modo de exibição deve ser nomeado corretamente. Para obter mais informações sobre a nomenclatura, consulte o restante desta seção.
@@ -424,8 +415,7 @@ Para oferecer modos de exibição e funcionalidade exclusivos, você pode criar 
 
 **Para adicionar uma página XAML a um aplicativo**
 1. Selecione Projeto > Adicionar Novo Item. A caixa de diálogo Adicionar Novo Item é aberta.
-    > **Dica**
-            &nbsp;&nbsp;Verifique se o projeto, e não a solução, está selecionado no Gerenciador de Soluções.
+    > **Dica**&nbsp;&nbsp;Verifique se o projeto, e não a solução, está selecionado no Gerenciador de Soluções.
 2. Em Visual C# ou Visual Basic no painel esquerdo, selecione o tipo de modelo XAML.
 3. No painel central, selecione Página em branco.
 4. Insira o nome da página. Por exemplo, "MainPage_Mobile". Um MainPage_Mobile.xaml e o arquivo de código MainPage_Mobile.xaml.cs/vb/cpp são criados.
@@ -448,6 +438,6 @@ Você também pode usar critérios diferentes para determinar para qual página 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -2,7 +2,6 @@
 title: Desbloqueio do Windows com dispositivos complementares (IoT)
 description: "Um dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a Estrutura de Dispositivo Complementar, um dispositivo complementar pode fornecer uma experiência avançada para o Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo de leitor de impressão digital, por exemplo)."
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: a6265ca66a1a9d729465845da1014d1aff0e7d4d
 ms.openlocfilehash: 18102d6277ff1c66ebd147b5c1fd2f2d6c91edd1
 
@@ -11,7 +10,8 @@ ms.openlocfilehash: 18102d6277ff1c66ebd147b5c1fd2f2d6c91edd1
 
 Um dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a Estrutura de Dispositivo Complementar, um dispositivo complementar pode fornecer uma experiência avançada para o Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo de leitor de impressão digital, por exemplo).
 
-> **Observação** A Estrutura de Dispositivo Complementar é um recurso especializado não disponível para todos os desenvolvedores de aplicativos. Para usar essa estrutura, seu aplicativo deve ser especificamente provisionado pela Microsoft e listar a funcionalidade restrita *secondaryAuthenticationFactor* em seu manifesto. Para obter aprovação, entre em contato com [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
+> 
+            **Observação** A Estrutura de Dispositivo Complementar é um recurso especializado não disponível para todos os desenvolvedores de aplicativos. Para usar essa estrutura, seu aplicativo deve ser especificamente provisionado pela Microsoft e listar a funcionalidade restrita *secondaryAuthenticationFactor* em seu manifesto. Para obter aprovação, entre em contato com [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
 
 ## Introdução
 
@@ -56,9 +56,12 @@ Normalmente, dispositivos complementares são fornecidos com um aplicativo para 
 
 Cada dispositivo complementar deve ser combinado com um aplicativo que dê suporte a três sinais do usuário. Esses sinais podem ser no formato de uma ação ou de um gesto.
 
-- **Sinal de intenção**: permite que o usuário mostre sua intenção de desbloquear, por exemplo, pressionando um botão no dispositivo complementar. O sinal de intenção deve ser coletado no lado do **dispositivo complementar**.
-- **Sinal de presença do usuário**: prova a presença do usuário. O dispositivo complementar pode, por exemplo, exigir um PIN antes de poder ser usado para desbloquear o computador (isso não deve ser confundido com o PIN do computador) ou pode exigir o pressionamento de um botão.
-- **Sinal de diferenciação**: remove a ambiguidade de qual área de trabalho do Windows 10 o usuário deseja desbloquear quando várias opções estão disponíveis para o dispositivo complementar.
+- 
+            **Sinal de intenção**: permite que o usuário mostre sua intenção de desbloquear, por exemplo, pressionando um botão no dispositivo complementar. O sinal de intenção deve ser coletado no lado do **dispositivo complementar**.
+- 
+            **Sinal de presença do usuário**: prova a presença do usuário. O dispositivo complementar pode, por exemplo, exigir um PIN antes de poder ser usado para desbloquear o computador (isso não deve ser confundido com o PIN do computador) ou pode exigir o pressionamento de um botão.
+- 
+            **Sinal de diferenciação**: remove a ambiguidade de qual área de trabalho do Windows 10 o usuário deseja desbloquear quando várias opções estão disponíveis para o dispositivo complementar.
 
 Qualquer número desses sinais de usuário pode ser combinado em um único sinal. Sinais de presença e intenção do usuário devem ser necessários em cada uso.
 

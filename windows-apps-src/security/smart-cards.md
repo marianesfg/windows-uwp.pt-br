@@ -4,18 +4,18 @@ description: "Este tópico explica como os aplicativos da Plataforma Universal d
 ms.assetid: 86524267-50A0-4567-AE17-35C4B6D24745
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 6e673ce75ee7f178332da6fc9ae68dbf01a9d7ce
+ms.sourcegitcommit: 2ea21aeee5dd93bb44de3a1793b352d2046b3839
+ms.openlocfilehash: d0646aca9863f3f326df9b3a86adb2481fdcda70
 
 ---
 
 # Cartões inteligentes
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este tópico explica como os aplicativos da Plataforma Universal do Windows (UWP) podem usar cartões inteligentes para conectar os usuários à serviços de rede seguros, incluindo como acessar os leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, se comunicar com cartões inteligentes, autenticar usuários, redefinir PINs de usuário e como remover ou desconectar cartões inteligentes.
+Este tópico explica como os aplicativos da Plataforma Universal do Windows (UWP) podem usar cartões inteligentes para conectar os usuários à serviços de rede seguros, incluindo como acessar os leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, se comunicar com cartões inteligentes, autenticar usuários, redefinir PINs de usuário e como remover ou desconectar cartões inteligentes. 
 
 ## Configure o manifesto do aplicativo
 
@@ -116,9 +116,7 @@ Agora que temos a lógica definida para os desafios de autenticação, podemos n
 
 2.  Em seguida, passe o valor do desafio do cartão e a chave de administração fornecidos pelo serviço ou pela ferramenta de gerenciamento ao **ChallengeResponseAlgorithm** que definimos no exemplo anterior.
 
-3.  [
-              **VerifyResponseAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/dn297627) retornará **true** se a autenticação for bem-sucedida.
+3.  [**VerifyResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn297627) retornará **true** se a autenticação for bem-sucedida.
 
 ```cs
 bool verifyResult = false;
@@ -156,9 +154,7 @@ bool result = await provisioning.RequestPinChangeAsync();
 Para solicitar uma redefinição de PIN:
 
 1.  Chame [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) para iniciar a operação. Essa chamada inclui um método [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) que representa o cartão inteligente e a solicitação de redefinição de PIN.
-2.  [
-              **SmartCardPinResetHandler**
-            ](https://msdn.microsoft.com/library/windows/apps/dn297701) fornece informações de que nosso **ChallengeResponseAlgorithm**, encapsulado em uma chamada [**SmartCardPinResetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn297693), usa para comparar o valor do desafio do cartão e a chave de administração fornecida pelo serviço ou pela ferramenta de gerenciamento para autenticar a solicitação.
+2.  [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) fornece informações de que nosso **ChallengeResponseAlgorithm**, encapsulado em uma chamada [**SmartCardPinResetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn297693), usa para comparar o valor do desafio do cartão e a chave de administração fornecida pelo serviço ou pela ferramenta de gerenciamento para autenticar a solicitação.
 
 3.  Se o desafio for bem-sucedido, a chamada [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) estará concluída; retornando **true** se o PIN teve uma redefinição bem-sucedida.
 
@@ -208,6 +204,6 @@ bool result = await SmartCardProvisioning
 ```
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

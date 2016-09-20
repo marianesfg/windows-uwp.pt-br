@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 5E722AFF-539D-456E-8C4A-ADE90CF7674A
 description: "Se o seu aplicativo oferecer um catálogo abrangente de produtos no aplicativo, você também poderá seguir o processo descrito neste tópico para ajudar a gerenciar seu catálogo."
 title: "Gerenciar um catálogo abrangente de produtos no aplicativo"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 0927df3cd696e5a6fbd3a235d2b87074f1d63929
 
@@ -20,7 +19,8 @@ Para habilitar esse recurso, use a sobrecarga de método [**RequestProductPurcha
 
 A Loja usará somente a *offerId* da solicitação de compra nos [**PurchaseResults**](https://msdn.microsoft.com/library/windows/apps/dn263392) resultantes. Esse processo não modifica diretamente as informações originalmente fornecidas ao [listar o produto no aplicativo na Loja](https://msdn.microsoft.com/library/windows/apps/mt148551).
 
-**Observação**  A partir do Windows 10, a Loja não terá limite no número de listagens de produtos por conta de desenvolvedor. Em versões anteriores, a Loja tem um limite de 200 listagens de produtos por conta de desenvolvedor, e o processo descrito neste tópico poderá ser usado para contornar essa limitação.
+
+            **Observação**  A partir do Windows 10, a Loja não terá limite no número de listagens de produtos por conta de desenvolvedor. Em versões anteriores, a Loja tem um limite de 200 listagens de produtos por conta de desenvolvedor, e o processo descrito neste tópico poderá ser usado para contornar essa limitação.
 
 ## Pré-requisitos
 

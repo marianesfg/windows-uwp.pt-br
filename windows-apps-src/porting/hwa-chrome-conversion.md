@@ -59,8 +59,7 @@ Depois de empacotar d]o aplicativo da web para a Windows Store, personalize para
 
 ### Regras de URI de conteúdo do aplicativo
 
-
-              [Regras de URI de conteúdo do aplicativo (ACURs)](/hwa-access-features.md#keep-your-app-secure-setting-application-content-uri-rules-acurs) ou URIs de conteúdo definem o escopo do seu Aplicativo Web hospedado por meio de uma lista de permissão de URL no manifesto do pacote do aplicativo. Para controlar a comunicação para o/do conteúdo remoto, você deve definir quais URLs estão incluídas e/ou excluídas da lista. Se um usuário clicar em uma URL que não está incluída explicitamente, o Windows abrirá o caminho de destino no navegador padrão. Com ACURs, você também é capaz de conceder um acesso por URL às [APIs do universais do Windows](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
+[Regras de URI de conteúdo do aplicativo (ACURs)](/hwa-access-features.md#keep-your-app-secure-setting-application-content-uri-rules-acurs) ou URIs de conteúdo definem o escopo do seu Aplicativo Web hospedado por meio de uma lista de permissão de URL no manifesto do pacote do aplicativo. Para controlar a comunicação para o/do conteúdo remoto, você deve definir quais URLs estão incluídas e/ou excluídas da lista. Se um usuário clicar em uma URL que não está incluída explicitamente, o Windows abrirá o caminho de destino no navegador padrão. Com ACURs, você também é capaz de conceder um acesso por URL às [APIs do universais do Windows](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 
 No mínimo, as regras devem incluir a página inicial do aplicativo. A ferramenta de conversão criará automaticamente um conjunto de ACURs para você, com base na sua página inicial e domínio. No entanto, se houver quaisquer redirecionamentos programáticos, seja no servidor ou no cliente, os destinos precisarão ser adicionados à lista de permissões.
 

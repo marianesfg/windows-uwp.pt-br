@@ -5,7 +5,7 @@ title: WebSockets
 ms.assetid: EAA9CB3E-6A3A-4C13-9636-CCD3DE46E7E2
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7e9ee140914718ce71357ba8ecaf10116949b87b
+ms.openlocfilehash: ff2429e1e9ea56c414978c126497551b1e1864b8
 
 ---
 
@@ -176,7 +176,7 @@ Antes de estabelecer uma conexão e enviar dados com um WebSocket, seu aplicativ
 
 Quando uma conexão é estabelecida, o cliente de WebSocket pode enviar dados ao servidor. O método [**DataWriter.StoreAsync**](https://msdn.microsoft.com/library/windows/apps/br208171) retorna um parâmetro que é mapeado para um int não assinado. Isso altera como definimos a tarefa para enviar a mensagem em comparação com a tarefa para estabelecer a conexão.
 
-**Observação** quando você cria um novo objeto DataWriter usando OutputStream do MessageWebSocket, a DataWriter se apropria do OutputStream e desalocará o Outputstream quando o DataWriter sair do escopo. Isso faz com que tentativas subsequentes de usar o OutputStream falhem com um valor HRESULT de 0x80000013. Para evitar a desalocação do OutputStream, esse código chama o método DetachStream do DataWriter, que devolve a propriedade do fluxo para o objeto WebSocket.
+**Observação**   Quando você cria um novo objeto DataWriter usando OutputStream do MessageWebSocket, o DataWriter se apropria do OutputStream e desalocará o Outputstream quando o DataWriter sair do escopo. Isso faz com que tentativas subsequentes de usar o OutputStream falhem com um valor HRESULT de 0x80000013. Para evitar a desalocação do OutputStream, esse código chama o método DetachStream do DataWriter, que devolve a propriedade do fluxo para o objeto WebSocket.
 
 A função a seguir envia a cadeia de caracteres fornecida a um WebSocket conectado e imprime uma mensagem de verificação na janela de saída do depurador.
 
@@ -226,41 +226,28 @@ A função a seguir envia a cadeia de caracteres fornecida a um WebSocket conect
 
 ## Usando controles avançados com WebSockets
 
-[
-              **MessageWebSocket**
-            ](https://msdn.microsoft.com/library/windows/apps/br226842) e [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) seguem o mesmo modelo para o uso de controles avançados. Cada uma das classes primárias acima corresponde a classes relacionadas de acesso a controles avançados.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) e [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) seguem o mesmo modelo para o uso de controles avançados. Cada uma das classes primárias acima corresponde a classes relacionadas de acesso a controles avançados.
 
-[
-              **MessageWebSocketControl**
-            ](https://msdn.microsoft.com/library/windows/apps/br226843) fornece dados de controle de soquete sobre um objeto [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842).
-[
-              **StreamWebSocketControl**
-            ](https://msdn.microsoft.com/library/windows/apps/br226924) fornece dados de controle de soquete sobre um objeto [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923).
+[**MessageWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226843) fornece dados de controle de soquete sobre um objeto [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842).
+[**StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924) fornece dados de controle de soquete sobre um objeto [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923).
 O modelo básico para usar controles avançados é o mesmo para os dois tipos de WebSockets. O assunto abordado a seguir usa [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) como exemplo, mas o mesmo processo pode ser usado com [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842).
 
 1.  Crie o objeto [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923).
 2.  Use a propriedade [**StreamWebSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226934) para recuperar a instância [**StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924) associada ao objeto [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923).
 3.  Obtenha ou defina propriedades na instância [**StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924) para obter ou definir controles avançados específicos.
 
-[
-            **StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) e [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) impõem requisitos sobre quando os controles avançados podem ser definidos.
+[**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) e [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) impõem requisitos sobre quando os controles avançados podem ser definidos.
 
 -   Para todos os controles avançados em [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923), o aplicativo deve antes de definir a propriedade antes de emitir uma operação Connect. Por causa desse requisito, é recomendável definir todas as propriedades de controle imediatamente após criar o objeto **StreamWebSocket**. Não tente definir uma propriedade de controle depois que o método [**StreamWebSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/br226933) tiver sido chamado.
 -   Para todos os controles avançados no [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842), exceto o tipo de mensagem, você deve definir a propriedade antes de emitir uma operação Connect. É recomendável definir todas as propriedades de controle imediatamente após criar o **MessageWebSocket**. Exceto para o tipo de mensagem, não tente alterar uma propriedade de controle depois que [**MessageWebSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/br226859) tiver sido chamado.
 
 ## Classes de informações de WebSocket
 
-[
-              **MessageWebSocket**
-            ](https://msdn.microsoft.com/library/windows/apps/br226842) e [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) têm uma classe correspondente que fornece informações adicionais sobre uma instância de WebSocket.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) e [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) têm uma classe correspondente que fornece informações adicionais sobre uma instância de WebSocket.
 
-[
-              **MessageWebSocketInformation**
-            ](https://msdn.microsoft.com/library/windows/apps/br226849) fornece informações sobre um [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842). Recupere uma instância da classe de informações usando a propriedade [**MessageWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226861).
+[**MessageWebSocketInformation**](https://msdn.microsoft.com/library/windows/apps/br226849) fornece informações sobre um [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842). Recupere uma instância da classe de informações usando a propriedade [**MessageWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226861).
 
-[
-              **StreamWebSocketInformation**
-            ](https://msdn.microsoft.com/library/windows/apps/br226929) fornece informações sobre um [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923). Recupere uma instância da classe de informações usando a propriedade [**StreamWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226935).
+[**StreamWebSocketInformation**](https://msdn.microsoft.com/library/windows/apps/br226929) fornece informações sobre um [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923). Recupere uma instância da classe de informações usando a propriedade [**StreamWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226935).
 
 Observe que todas as propriedades nas duas classes de informações são somente leitura, e que você pode recuperar informações atuais a qualquer momento durante o tempo de vida de um objeto WebSocket.
 
@@ -358,6 +345,6 @@ O exemplo a seguir cria uma tarefa que é concluída após um atraso especificad
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

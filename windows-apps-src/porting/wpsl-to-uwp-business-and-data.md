@@ -3,7 +3,6 @@ author: mcleblanc
 description: "Por trás de sua interface do usuário estão as camadas de negócios e dados."
 title: "Portando camadas de negócios e dados do Windows Phone Silverlight para UWP"
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 24e94e91adc0e5ef0b7a076d54299eab8c4ba527
 

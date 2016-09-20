@@ -76,7 +76,8 @@ typedef struct
 
 Essa estrutura tem uma instância e contém todos os componentes necessários para renderizar uma malha de vértice sombreado bem simples.
 
-> **Observação**  Qualquer código OpenGL ES 2.0 neste tópico se baseia na implementação de API do Windows fornecida pelo Khronos Group e usa a sintaxe de programação C do Windows.
+> 
+            **Observação**  Qualquer código OpenGL ES 2.0 neste tópico se baseia na implementação de API do Windows fornecida pelo Khronos Group e usa a sintaxe de programação C do Windows.
 
  
 

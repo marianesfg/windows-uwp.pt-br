@@ -3,7 +3,6 @@ author: mcleanbyron
 Description: "Você pode incentivar os clientes a deixar comentários iniciando o Hub de Feedback do seu aplicativo."
 title: Iniciar o Hub de Feedback do seu aplicativo
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
-translationtype: Human Translation
 ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
 ms.openlocfilehash: ccda01d9bfa4ffdff2bbce5d6c60c78e026270e5
 
@@ -13,11 +12,13 @@ ms.openlocfilehash: ccda01d9bfa4ffdff2bbce5d6c60c78e026270e5
 
 Você pode incentivar os clientes a deixar comentários adicionando um controle (como um botão) ao seu aplicativo da Plataforma Universal do Windows (UWP) que inicia o Hub de Feedbacks. Hub de Feedback é um aplicativo pré-instalado que oferece um local único para coletar feedback sobre o Windows e os aplicativos instalados. Todo o feedback do cliente que é enviado para seu aplicativo por meio do Hub de Feedback é coletado e apresentado no [Relatório de feedback](../publish/feedback-report.md) no painel do Centro de Desenvolvimento do Windows. Assim, você pode ver os problemas, as sugestões e atualizações que seus clientes enviaram em um relatório.
 
->**Observação** O relatório de **Feedback** está disponível somente para contas de desenvolvedor que tenham ingressado no [Programa Insider do Centro de Desenvolvimento](../publish/dev-center-insider-program.md). 
+>
+            **Observação** O relatório de **Feedback** está disponível somente para contas de desenvolvedor que tenham ingressado no [Programa Insider do Centro de Desenvolvimento](../publish/dev-center-insider-program.md). 
 
 Para iniciar o Hub de Feedback do seu aplicativo, use uma API que seja fornecida pelo [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk). Recomendamos que você use essa API para iniciar o Hub de Feedback de um elemento de interface do usuário em seu aplicativo que siga nossas diretrizes de design.
 
->**Observação** O Hub de Feedback está disponível apenas em dispositivos que executam o Windows 10 versão 10.0.14271 ou posterior. Recomendamos que você mostre um controle de feedback no seu aplicativo apenas se o Hub de Feedback estiver disponível no dispositivo do usuário. O código neste tópico demonstra como fazer isso.
+>
+            **Observação** O Hub de Feedback está disponível apenas em dispositivos que executam o Windows 10 versão 10.0.14271 ou posterior. Recomendamos que você mostre um controle de feedback no seu aplicativo apenas se o Hub de Feedback estiver disponível no dispositivo do usuário. O código neste tópico demonstra como fazer isso.
 
 ## Como iniciar o Hub de Feedback do seu aplicativo
 
@@ -33,7 +34,8 @@ Para iniciar o Hub de Feedback do seu aplicativo:
   * Defina o texto no controle como o código de caractere Unicode hexadecimal E939. Este é o código de caractere do ícone de feedback recomendado na fonte **Segoe MDL2 Assets**.
   * Defina a visibilidade do controle como oculto.
 
-    > **Observação** O Hub de Feedback está disponível apenas em dispositivos que executam o Windows 10 versão 10.0.14271 ou posterior. Recomendamos que você oculte o controle de feedback por padrão e mostre-o no seu código de inicialização somente se o Hub de Feedback estiver disponível no dispositivo do usuário. A próxima etapa demonstra como fazer isso.
+    > 
+            **Observação** O Hub de Feedback está disponível apenas em dispositivos que executam o Windows 10 versão 10.0.14271 ou posterior. Recomendamos que você oculte o controle de feedback por padrão e mostre-o no seu código de inicialização somente se o Hub de Feedback estiver disponível no dispositivo do usuário. A próxima etapa demonstra como fazer isso.
 
   O código a seguir demonstra a definição XAML de um [Botão](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) que é configurado conforme descrito acima.
   ```xml
@@ -61,15 +63,18 @@ Para iniciar o Hub de Feedback, recomendamos que você adicione um elemento de i
 ![]Feedback icon](images/feedback_icon.PNG)
 
 Também recomendamos que você use uma ou mais das seguintes opções de posicionamento para vinculação ao Hub de Feedback em seu aplicativo.
-* **Diretamente na barra de aplicativos**. Dependendo de sua implementação, convém usar apenas o ícone ou adicionar texto (como mostrado abaixo).
+* 
+            **Diretamente na barra de aplicativos**. Dependendo de sua implementação, convém usar apenas o ícone ou adicionar texto (como mostrado abaixo).
 
   ![]Feedback icon](images/feedback_appbar_placement.png)
 
-* **Nas configurações do seu aplicativo**. Essa é uma maneira mais sutil de fornecer acesso ao Hub de Feedback. No exemplo a seguir, o link Feedback aparece como um dos links em Aplicativo.
+* 
+            **Nas configurações do seu aplicativo**. Essa é uma maneira mais sutil de fornecer acesso ao Hub de Feedback. No exemplo a seguir, o link Feedback aparece como um dos links em Aplicativo.
 
   ![]Feedback icon](images/feedback_settings_placement.png)
 
-* **Em um submenu acionado por eventos**. Isso é útil quando você deseja consultar os clientes sobre uma pergunta específica antes de iniciar o Hub do Windows Feedback. Por exemplo, depois que seu aplicativo usar um determinado recurso, você pode fazer ao cliente uma pergunta específica sobre sua satisfação com esse recurso. Se o cliente optar por responder, seu aplicativo iniciará o Hub de Feedback.
+* 
+            **Em um submenu acionado por eventos**. Isso é útil quando você deseja consultar os clientes sobre uma pergunta específica antes de iniciar o Hub do Windows Feedback. Por exemplo, depois que seu aplicativo usar um determinado recurso, você pode fazer ao cliente uma pergunta específica sobre sua satisfação com esse recurso. Se o cliente optar por responder, seu aplicativo iniciará o Hub de Feedback.
 
 
 ## Tópicos relacionados

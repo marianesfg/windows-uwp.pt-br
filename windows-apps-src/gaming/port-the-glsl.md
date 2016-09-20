@@ -3,7 +3,6 @@ author: mtoepke
 title: Fazer a portabilidade do GLSL
 description: "Quando você tiver movido o código que cria e configura os seus buffers e objetos de sombreador, será o momento de fazer a portabilidade do código dentro dos sombreadores da linguagem de sombreadores GL do OpenGL ES 2.0 (GLSL) para a linguagem de sombreadores de alto nível do Direct3D 11 (HLSL)."
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d1d203fa74bd80fe26401e64d4e15bb11e5c1050
 
@@ -153,10 +152,12 @@ A cor do pixel na posição é gravada no destino de renderização. Agora, vamo
 ## Etapa anterior
 
 
-[Fazer a portabilidade de buffers de vértices e dados](port-the-vertex-buffers-and-data-config.md) Próxima etapa
+
+            [Fazer a portabilidade de buffers de vértices e dados](port-the-vertex-buffers-and-data-config.md) Próxima etapa
 ---------
 
-[Desenhar na tela](draw-to-the-screen.md) Observações
+
+            [Desenhar na tela](draw-to-the-screen.md) Observações
 -------
 
 Entender a semântica HLSL e o compactação de buffers constantes pode evitar certa dor de cabeça, e oferecer oportunidade de otimização. Caso tenha chance, leia [Sintaxe variável (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Introdução a buffers no Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898) e [Como: criar um buffer constante](https://msdn.microsoft.com/library/windows/desktop/ff476896). Caso não consiga fazer isso, consulte algumas dicas iniciais sobre semântica e buffers constantes para ter sempre em mente:

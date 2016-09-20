@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 9FCBAF2E-5419-4169-A17C-9C4058DCF909
 description: "A Windows Store oferece vários serviços que você pode chamar por meio das APIs REST para acessar programaticamente certos tipos de dados para aplicativos que são registrados na sua conta do Centro de Desenvolvimento do Windows ou na conta de sua organização."
 title: "Usar serviços da Windows Store"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 43e3155315a9132daa36f592b54af3e943ea3e21
 

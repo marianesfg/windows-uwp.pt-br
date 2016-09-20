@@ -5,7 +5,6 @@ MS-HAID: dev\_devices\_sensors.generate\_3mf
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Gerar um pacote 3MF
-translationtype: Human Translation
 ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
 ms.openlocfilehash: fd85530d27a157bd65a6feec8a20cca8cadfb88f
 
@@ -60,7 +59,8 @@ O próximo método define todos os triângulos a serem desenhados nesses vértic
 
 [!code-cs[TriangleIndices](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetTriangleIndices)]
 
-> **Observação** Todos os triângulos devem ter seus índices definidos no sentido anti-horário (ao exibir o triângulo fora do objeto de malha), para que seus vetores de face normal apontem para fora.
+> 
+            **Observação** Todos os triângulos devem ter seus índices definidos no sentido anti-horário (ao exibir o triângulo fora do objeto de malha), para que seus vetores de face normal apontem para fora.
 
 Quando um objeto Printing3DMesh contém conjuntos de vértices e triângulos válidos, ele deve ser adicionado à propriedade **Malhas** do modelo. Todos os objetos **Printing3DMesh** em um pacote devem ser armazenados na propriedade **Malhas** da classe **Printing3DModel**.
 
@@ -82,17 +82,20 @@ O tipo de material padrão é **Material de base**, que tem tanto um valor de **
 
 [!code-cs[BaseMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetBaseMaterialGroup)]
 
-**Observação**  O dispositivo de fabricação 3D determinará quais materiais físicos disponíveis serão mapeados para quais elementos de materiais virtuais armazenados no 3MF. Não é necessário que o mapeamento de material seja 1:1: se uma impressora 3D usa apenas um material, ela imprimirá todo o modelo nesse material, independentemente de quais objetos ou faces sejam atribuídos a materiais diferentes.
+
+            **Observação**  O dispositivo de fabricação 3D determinará quais materiais físicos disponíveis serão mapeados para quais elementos de materiais virtuais armazenados no 3MF. Não é necessário que o mapeamento de material seja 1:1: se uma impressora 3D usa apenas um material, ela imprimirá todo o modelo nesse material, independentemente de quais objetos ou faces sejam atribuídos a materiais diferentes.
 
 ### Materiais de cor
 
-**Materiais de cor** são semelhantes aos **Materiais de base**, mas eles não contêm um nome. Assim, não dão nenhuma instrução sobre que tipo de material deve ser usado pela máquina. Eles contêm apenas dados de cor e permitem que a máquina escolha o tipo de material (e a máquina pode solicitar que o usuário escolha). No código a seguir, os objetos `colrMat` do método anterior são usados de forma isolada.
+
+            **Materiais de cor** são semelhantes aos **Materiais de base**, mas eles não contêm um nome. Assim, não dão nenhuma instrução sobre que tipo de material deve ser usado pela máquina. Eles contêm apenas dados de cor e permitem que a máquina escolha o tipo de material (e a máquina pode solicitar que o usuário escolha). No código a seguir, os objetos `colrMat` do método anterior são usados de forma isolada.
 
 [!code-cs[ColorMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetColorMaterialGroup)]
 
 ### Materiais de composição
 
-**Materiais de composição** simplesmente instruem o dispositivo de fabricação a usar uma mistura uniforme de diferentes **Materiais de base**. Cada **Grupo de Material de Composição** deve fazer referência a exatamente um **Grupo de Material de Base** do qual retira ingredientes. Além disso, os **Materiais de base** dentro desse grupo que serão disponibilizados devem estar em uma lista de **Índices de Materiais**, na qual cada **Material de composição** fará referência ao especificar as proporções (cada **Material de composição** é simplesmente uma proporção de **Materiais de Base**).
+
+            **Materiais de composição** simplesmente instruem o dispositivo de fabricação a usar uma mistura uniforme de diferentes **Materiais de base**. Cada **Grupo de Material de Composição** deve fazer referência a exatamente um **Grupo de Material de Base** do qual retira ingredientes. Além disso, os **Materiais de base** dentro desse grupo que serão disponibilizados devem estar em uma lista de **Índices de Materiais**, na qual cada **Material de composição** fará referência ao especificar as proporções (cada **Material de composição** é simplesmente uma proporção de **Materiais de Base**).
 
 [!code-cs[CompositeMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetCompositeMaterialGroup)]
 
@@ -102,7 +105,8 @@ O tipo de material padrão é **Material de base**, que tem tanto um valor de **
 
 [!code-cs[TextureResource](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetTextureResource)]
 
-**Observação** Dados de textura pertencem ao pacote 3MF em si, não à parte do modelo dentro do pacote.
+
+            **Observação** Dados de textura pertencem ao pacote 3MF em si, não à parte do modelo dentro do pacote.
 
 Em seguida, devemos preencher **Materiais Texture3Coord**. Cada um deles faz referência a um recurso de textura e especifica um ponto em particular na imagem (em coordenadas UV).
 
@@ -116,7 +120,8 @@ Para ditar quais materiais são mapeados para quais vértices em cada triângulo
 
 ## Componentes e compilação
 
-A estrutura do componente permite que o usuário coloque mais de um objeto de malha em um modelo 3D imprimível. O objeto [**Printing3DComponent**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponent.aspx) contém uma única malha e uma lista de referências a outros componentes. Isso é realmente uma lista de objetos [**Printing3DComponentWithMatrix**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponentwithmatrix.aspx). Cada um dos objetos **Printing3DComponentWithMatrix** contém um **Printing3DComponent** e, principalmente, uma matriz de transformação que é aplicável à malha e componentes contidos do dito **Printing3DComponent**.
+A estrutura do componente permite que o usuário coloque mais de um objeto de malha em um modelo 3D imprimível. O objeto [**Printing3DComponent**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponent.aspx) contém uma única malha e uma lista de referências a outros componentes. Isso é realmente uma lista de objetos [**Printing3DComponentWithMatrix**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponentwithmatrix.aspx). 
+            Cada um dos objetos **Printing3DComponentWithMatrix** contém um **Printing3DComponent** e, principalmente, uma matriz de transformação que é aplicável à malha e componentes contidos do dito **Printing3DComponent**.
 
 Por exemplo, um modelo de um carro pode consistir em um "Corpo" **Printing3DComponent** que mantém a malha para o corpo do carro. O componente "Corpo" pode conter referências a quatro objetos **Printing3DComponentWithMatrix** diferentes, que fazem referência ao mesmo **Printing3DComponent** com a malha "Roda" e conter quatro matrizes de transformação diferente (mapeando as rodas para quatro posições diferentes no corpo do carro). Nesse cenário, a malha "Corpo" e a malha "Roda" só precisariam ser armazenadas uma vez, embora o produto final apresentasse cinco malhas no total.
 

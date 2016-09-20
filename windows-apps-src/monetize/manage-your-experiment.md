@@ -3,7 +3,6 @@ author: mcleanbyron
 Description: "Depois de definir seu experimento no painel do Centro de Desenvolvimento e codificar seu experimento em seu aplicativo, você estará pronto para ativar seu experimento e usar o painel do Centro de Desenvolvimento para analisar os resultados de seu experimento."
 title: Gerenciar seu experimento no painel do Centro de Desenvolvimento
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 24ca106cc83c4495657972f463c556585cdfcb45
 
@@ -13,7 +12,8 @@ ms.openlocfilehash: 24ca106cc83c4495657972f463c556585cdfcb45
 
 Depois de [definir seu experimento no painel do Centro de Desenvolvimento](define-your-experiment-in-the-dev-center-dashboard.md) e [codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md), você estará pronto para ativar seu experimento e usar o painel do Centro de Desenvolvimento para analisar os resultados de seu experimento. Depois de obter todos os dados de que precisa, você pode encerrar seu experimento e escolher se deseja continuar usando as configurações de variação do controle em todos os seus aplicativos ou alternar para usar as configurações em uma de suas variações.
 
-> **Observação** Quando você ativa um experimento, o Centro de Desenvolvimento começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar os dados de seu experimento. No entanto, pode levar várias horas para que os dados do experimento apareçam no painel.
+> 
+            **Observação** Quando você ativa um experimento, o Centro de Desenvolvimento começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar os dados de seu experimento. No entanto, pode levar várias horas para que os dados do experimento apareçam no painel.
 
 Para um guia passo a passo que demonstra o processo de criação e execução de um experimento de ponta a ponta, veja [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
@@ -26,7 +26,8 @@ Quando estiver satisfeito com os parâmetros de seu experimento no painel e tive
 3. No painel de navegação, selecione **Serviços** e, em seguida, selecione **Experimentação**.
 4. A seção **Experimentos** lista os experimentos de rascunho, ativos e concluídos para o aplicativo atual. Clique no filtro **Rascunho** e, em seguida, clique em **Ativar** para o experimento que você deseja ativar.
 
-> **Importante**  Depois de ativar um experimento, você não pode mais modificar os parâmetros dele, a menos que ele seja um experimento de teste (você clicou na caixa de seleção **Experimento de teste** quando criou o experimento). Recomendamos que você codifique o experimento em seu aplicativo antes de ativar seu experimento.
+> 
+            **Importante**  Depois de ativar um experimento, você não pode mais modificar os parâmetros dele, a menos que ele seja um experimento de teste (você clicou na caixa de seleção **Experimento de teste** quando criou o experimento). Recomendamos que você codifique o experimento em seu aplicativo antes de ativar seu experimento.
 
 
 ## Analise os resultados de seu experimento
@@ -37,7 +38,8 @@ Quando estiver satisfeito com os parâmetros de seu experimento no painel e tive
   * A seção **Resumo dos resultados** lista suas metas para o experimento e a porcentagem de taxa de conversão para cada variação.
   * A seção **Detalhes dos resultados** fornece mais detalhes para cada meta em seu experimento, incluindo os modos de exibição, conversões, taxa de conversão, delta %, confiança e importância. A *confiança* é uma medida estatística da confiabilidade de uma estimativa, que calcula a margem de erro. A *importância* é uma medida estatística, com base no tamanho da amostra, para determinar a probabilidade de que um resultado não seja devido à chance, mas em vez disso, seja atribuído a uma causa específica.
 
-  >**Observação** O Centro de Desenvolvimento relata apenas o primeiro evento de conversão de cada usuário em um período de 24 horas. Se um usuário aciona vários eventos de conversão em seu aplicativo em um período de 24 horas, apenas o primeiro evento de conversão é relatado. Isso se destina a ajudar a impedir que um usuário único com muitos eventos de conversão distorça os resultados do experimento de um grupo de amostra de usuários.
+  >
+            **Observação** O Centro de Desenvolvimento relata apenas o primeiro evento de conversão de cada usuário em um período de 24 horas. Se um usuário aciona vários eventos de conversão em seu aplicativo em um período de 24 horas, apenas o primeiro evento de conversão é relatado. Isso se destina a ajudar a impedir que um usuário único com muitos eventos de conversão distorça os resultados do experimento de um grupo de amostra de usuários.
 
 
 ## Conclua seu experimento

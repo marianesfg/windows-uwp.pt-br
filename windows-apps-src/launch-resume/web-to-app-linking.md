@@ -1,27 +1,28 @@
 ---
 author: TylerMSFT
-title: Support web-to-app linking with app Uri handlers
-description: Drive user engagement with your app by using app URI handlers
-keywords: App Links Windows
-keywords: Universal Links Windows
-keywords: App Handlers Windows
-keywords: Deep Linking Windows
+title: "Dar suporte à vinculação de aplicativos à Web com manipuladores de URI de aplicativos"
+description: "Promover o envolvimento do usuário com seu aplicativo usando os manipuladores de URI de aplicativos"
+keywords: "Vinculação profunda do Windows"
+translationtype: Human Translation
+ms.sourcegitcommit: 9ef86dcd4ae3d922b713d585543f1def48fcb645
+ms.openlocfilehash: c9833f29d6080509c849e9d624f2bfcd0b0af04c
+
 ---
 
-# Support web-to-app linking with app URI handlers
+# Dar suporte à vinculação de aplicativos à Web com manipuladores de URI de aplicativos
 
-Learn how to drive user engagement with your app by supporting web-to-app linking. Web-to-app linking allows you to associate an app with a website. When users open an http or https link to your website, instead of opening the browser, your app is launched. If your app is not installed, a link is provided to open your website in the browser. Users can trust this experience because only verified content owners can register for a link.
+Aprenda como promover o envolvimento do usuário com seu aplicativo, dando suporte à vinculação de aplicativos à Web. A vinculação de aplicativos Web permite que você associe um aplicativo a um site. Quando os usuários abrirem um link http ou https para o seu site, em vez de abrir o navegador, seu aplicativo será iniciado. Se seu aplicativo não estiver instalado, será fornecido um link para abrir seu site no navegador. Os usuários podem confiar nessa experiência porque apenas proprietários conteúdo verificados podem se registrar para um link.
 
-In order to enable web to app linking you will need:
-- Identify the URIs your app will handle in the manifest file
-- A JSON file with the app Package Family Name at the same host root as the app manifest declaration.
-- Handle the activation in the app.
+Para habilitar a vinculação de aplicativos à Web, você precisará:
+- Identificar os URIs que seu aplicativo manipulará no arquivo de manifesto
+- Um arquivo JSON com o Nome da Família de Pacotes do aplicativo na mesma raiz host que a declaração de manifesto do aplicativo.
+- Manipule a ativação no aplicativo.
 
-## Register to handle http and https links in the app manifest
+## Registre-se para manipular links http e https no manifesto do aplicativo
 
-Your app needs to identify the URIs for the websites it will handle. To do so, add the **Windows.appUriHandler** extension registration to your app’s manifest file **Package.appxmanifest**.
+Seu aplicativo deve identificar os URIs para os sites que ele manipulará. Para fazer isso, adicione o registro de extensão **Windows.appUriHandler** no arquivo de manifesto do aplicativo **Package. appxmanifest**.
 
-For example, if your website’s address is “msn.com” you would make the following entry in your app’s manifest:
+Por exemplo, se o endereço do site for "msn.com", faça a seguinte entrada no manifesto do aplicativo:
 
 ```xml
 <Applications>
@@ -37,13 +38,16 @@ For example, if your website’s address is “msn.com” you would make the fol
 </Applications>
 ```
 
-The declaration above registers your app to handle links from the specified host. If your website has multiple addresses (for example: m.example.com, www.example.com, and example.com) then add a separate `<uap3:Host Name=... />` entry inside of the `<uap3:AppUriHandler>` for each address.
+A declaração acima registra seu aplicativo para lidar com os links do host especificado. Se seu site tiver vários endereços (por exemplo: m.example.com, www.example.com e example.com), inclua uma entrada `<uap3:Host Name=... />` separada no `<uap3:AppUriHandler>` para cada endereço.
 
-## Associate your app and website with a JSON file
+## Associar seu aplicativo e o site com um arquivo JSON
 
-To ensure that only your app can open content on your website, include your app's package family name in a JSON file located in the web server root, or at the well-known directory on the domain. This signifies that your website gives consent for the listed apps to open content on your site. You can find the package family name in the Packages section in the app manifest designer.
+Para garantir que somente seu aplicativo possa abrir conteúdo em seu site, inclua o nome de família do pacote do seu aplicativo em um arquivo JSON localizado na raiz do servidor Web ou no diretório conhecido no domínio. Isso significa que seu site autoriza que os aplicativos listados abram conteúdo no seu site. Você pode encontrar o nome de família do pacote na seção Pacotes no designer de manifesto do aplicativo.
 
-Create a JSON file named **microsoft-app-uri-handlers** and provide your app’s package family name. For example:
+>[!Important]
+> O arquivo JSON não deve ter um sufixo de arquivo .json.
+
+Crie um arquivo JSON (sem a extensão de arquivo .json) chamado **windows-app-web-link** e forneça o nome de família do pacote do aplicativo. Por exemplo:
 
 ``` JSON
 [{
@@ -53,23 +57,23 @@ Create a JSON file named **microsoft-app-uri-handlers** and provide your app’s
  }]
 ```
 
-Windows will make an https connection to your website and will look for the corresponding JSON file on your web server.
+O Windows estabelecerá uma conexão https com seu site e procurará o arquivo JSON correspondente em seu servidor Web.
 
-### Wildcards
+### Curingas
 
-The JSON file example above demonstrates the use of wildcards. Wildcards allow you to support a wide variety of links with fewer lines of code. Web-to-app linking supports two types of wildcards in the JSON file:
+O exemplo de arquivo JSON acima demonstra o uso de curingas. Os curingas permitem que você dê suporte a uma ampla variedade de links com menos linhas de código. A vinculação de aplicativos à Web dá suporte a dois tipos de curingas no arquivo JSON:
 
-| **Wildcard** | **Description**               |
+| **Curinga** | **Descrição**               |
 |--------------|-------------------------------|
-| **\***       | Represents any substring      |
-| **?**        | Represents a single character |
+| *****       | Representa qualquer subcadeia de caracteres      |
+| **?**        | Representa um único caractere |
 
-For instance, given `"excludePaths" : [ "/news/*, /blog/*" ]` in the example above, your app will support all paths that start with your website’s address (e.g. msn.com), **except** those under `/news/` and `/blog/`. **msn.com/weather.html** will be supported, but not ****msn.com/news/topnews.html****.
+Por exemplo, o `"excludePaths" : [ "/news/*, /blog/*" ]` fornecido no exemplo acima, seu aplicativo dará suporte a todos os caminhos que começam com o endereço do site (por exemplo, msn.com), **exceto** aqueles em `/news/` e `/blog/`. **msn.com/weather.html** terá suporte, mas não ****msn.com/news/topnews.html****.
 
 
-### Multiple apps
+### Vários aplicativos
 
-If you have two apps that you would like to link to your website, list both of the application package family names in your **microsoft-app-uri-handlers** JSON file. Both apps can be supported. The user will be presented with a choice of which is the default link if both are installed. If they want to change the default link later, they can change it in **Settings > Apps for Websites**. Developers can also change the JSON file at any time and see the change as early as the same day but no later than eight days after the update.
+Se você tiver dois aplicativos que gostaria de vincular ao seu site, indique os dois nomes de família do pacote do aplicativo em seu arquivo JSON **windows-app-web-link**. Os dois aplicativos podem ter suporte. O usuário poderá escolher qual o link padrão se os dois forem instalados. Se desejar alterar o link padrão posteriormente, poderá fazê-lo em **Configurações > Aplicativos para Sites**. Os desenvolvedores também podem alterar o arquivo JSON a qualquer momento e ver a alteração no mesmo dia, mas até oito dias após a atualização.
 
 ``` JSON
 [{
@@ -83,13 +87,13 @@ If you have two apps that you would like to link to your website, list both of t
  }]
 ```
 
-To provide the best experience for your users, use excluded paths to make sure that online-only content is excluded from the supported paths in your JSON file.
+Para proporcionar a melhor experiência para seus usuários, use caminhos excluídos para garantir que o conteúdo somente online seja excluído dos caminhos com suporte em seu arquivo JSON.
 
-Excluded paths are checked first and if there is a match the corresponding page will be opened with the browser instead of the designated app. In the example above, ‘/news/\*’ includes any pages under that path while ‘/news\*’ (no forward slash trails 'news') includes any paths under ‘news\*’ such as ‘newslocal/’, ‘newsinternational/’, and so on.
+Caminhos excluídos são verificados primeiro e se houver uma correspondência, a página correspondente será aberta com o navegador em vez do aplicativo designado. No exemplo acima, "/news/\*" inclui todas as páginas nesse caminho enquanto "/news\*" (sem trilhas de barra invertida "new") inclui todos os caminhos em "news\*" como "newslocal/", "newsinternational/", e assim por diante.
 
-## Handle links on Activation to link to content
+## Manipular links na ativação para vincular ao conteúdo
 
-Navigate to **App.xaml.cs** in your app’s Visual Studio solution and in **OnActivated()** add handling for linked content. In the following example, the page that is opened in the app depends on the URI path:
+Navegue até **App.xaml.cs** na solução do Visual Studio do seu aplicativo e em **OnActivated ()**, adicione manipulação para conteúdo vinculado. No exemplo a seguir, a página que é aberta no aplicativo depende do caminho URI:
 
 ``` CS
 protected override void OnActivated(IActivatedEventArgs e)
@@ -137,54 +141,60 @@ protected override void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-**Important** Make sure to replace the final `if (rootFrame.Content == null)` logic with `rootFrame.Navigate(deepLinkPageType, e);` as shown in the example above.
+**Importante** Certifique-se de substituir a lógica `if (rootFrame.Content == null)` final por `rootFrame.Navigate(deepLinkPageType, e);` conforme mostrado no exemplo acima.
 
-## Test it out: Local validation tool
+## Teste: ferramenta de validação de local
 
-You can test the configuration of your app and website by running the App host registration verifier tool which is available in:
+Você pode testar a configuração do seu aplicativo e do site executando a ferramenta de verificação de registro de host de aplicativo que está disponível em:
 
 %windir%\\system32\\**AppHostRegistrationVerifier.exe**
 
-Test the configuration of your app and website by running this tool with the following parameters:
+Teste a configuração do seu aplicativo e do site executando essa ferramenta com os seguintes parâmetros:
 
 **AppHostRegistrationVerifier.exe** *hostname packagefamilyname filepath*
 
--   Hostname: Your website (e.g. microsoft.com)
--   Package Family Name (PFN): Your app’s PFN
--   File path: The JSON file for local validation (e.g. C:\\SomeFolder\\microsoft-app-uri-handlers.json)
+-   Nome do host: seu site (por exemplo, microsoft.com)
+-   Nome da Família de Pacotes (PFN): o PFN do seu aplicativo
+-   Caminho do arquivo: o arquivo JSON para a validação de local (por exemplo, C:\\SomeFolder\\windows-app-web-link)
 
-## Test it: Web validation
+## Teste: validação Web
 
-Close your application to verify that the app is activated when you click a link. Then, copy the address of one of the supported paths in your website. For example, if your website’s address is “msn.com”, and one of the support paths is “path1”, you would use `http://msn.com/path1`
+Feche o aplicativo para verificar se ele é ativado quando você clica em um link. Em seguida, copie o endereço de um dos caminhos com suporte no seu site. Por exemplo, se o endereço do site for "msn.com" e um dos caminhos de suporte for "path1", você usará `http://msn.com/path1`
 
-Verify that your app is closed. Press **Windows Key + R** to open the **Run** dialog box and paste the link in the window. Your app should launch instead of the web browser.
+Verifique se seu aplicativo é fechado. Pressione a **tecla Windows + R** para abrir a caixa de diálogo **Executar** e cole o link na janela. Seu aplicativo deve ser iniciado em vez do navegador da Web.
 
-Additionally, you can test your app by launching it from another app using the [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx) API. You can use this API to test on phones as well.
+Além disso, você pode testar seu aplicativo iniciando-o em outro aplicativo com a API [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx). Você pode usar essa API para testar em telefones também.
 
-If you would like to follow the protocol activation logic, set a breakpoint in the **OnActivated** event handler.
+Se você quiser seguir a lógica de ativação de protocolo, defina um ponto de interrupção no manipulador de eventos **OnActivated**.
 
-**Note:** If you click a link in the Microsoft Edge browser, it will not launch your app but will take you to your website.
+**Observação:** se você clicar em um link no navegador Microsoft Edge, ele não iniciará seu aplicativo, mas levará você para seu site.
 
-## AppUriHandlers tips:
+## Dicas sobre AppUriHandlers:
 
-- Make sure to only specify links that your app can handle.
+- Certifique-se de especificar somente links que seu aplicativo possa manipular.
 
-- List all of the hosts that you will support.  Note that www.example.com and example.com are different hosts.
+- Liste todos os hosts aos quais você dará suporte.  Observe que www.example.com e example.com são hosts diferentes.
 
-- Users can choose which app they prefer to handle websites in Settings.
+- Os usuários podem escolher qual aplicativo preferem para lidar com sites em Configurações.
 
-- Your JSON file must be uploaded to an https server.
+- Seu arquivo JSON deve ser carregado para um servidor https.
 
-- If you need to change the paths that you wish to support, you can republish your JSON file without republishing your app. Users will see the changes in 1-8 days.
+- Se você precisar alterar os caminhos aos quais deseja dar suporte, você pode republicar seu arquivo JSON sem precisar republicar seu aplicativo. Os usuários verão as alterações em 1 a 8 dias.
 
-- All sideloaded apps with AppUriHandlers will have validated links for the host on install. You do not need to have a JSON file uploaded to test the feature.
+- Todos os aplicativos de sideload com AppUriHandlers terão links validados para o host na instalação. Você não precisa ter um arquivo JSON carregado para testar o recurso.
 
-- This feature works whenever your app is a UWP app launched with  [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx) or a Windows desktop app launched with  [ShellExecuteEx](https://msdn.microsoft.com/en-us/library/windows/desktop/bb762154(v=vs.85).aspx). If the URL corresponds to a registered App URI handler, the app will be launched instead of the browser.
+- Esse recurso funciona sempre que seu aplicativo é iniciado com um aplicativo UWP [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx) ou um aplicativo da área de trabalho do Windows iniciado com [ShellExecuteEx](https://msdn.microsoft.com/en-us/library/windows/desktop/bb762154(v=vs.85).aspx). Se a URL corresponder a um manipulador de URI do aplicativo registrado, o aplicativo será iniciado em vez do navegador.
 
-## See also
+## Consulte também
 
 [windows.protocol registration](https://msdn.microsoft.com/en-us/library/windows/apps/br211458.aspx)
 
-[Handle URI Activation](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/handle-uri-activation)
+[Manipular a ativação do URI](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/handle-uri-activation)
 
-[Association Launching sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) illustrates how to use the LaunchUriAsync() API.
+O [Exemplo de execução de associação](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) ilustra como usar a API LaunchUriAsync().
+
+
+
+<!--HONumber=Aug16_HO4-->
+
+

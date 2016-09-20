@@ -5,7 +5,6 @@ MS-HAID: dev\_app\_to\_app.use\_edp\_to\_protect\_enterprise\_data\_transferred\
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Usar EDP para proteger dados empresariais transferidos entre aplicativos
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 77533d4aca3cc84e0a021a0faac57f5afbbefdd7
 
@@ -13,11 +12,13 @@ ms.openlocfilehash: 77533d4aca3cc84e0a021a0faac57f5afbbefdd7
 
 # Usar EDP para proteger dados empresariais transferidos entre aplicativos
 
-__Observação__ A EDP (Proteção de Dados Empresariais) não pode ser aplicada ao Windows 10, Versão 1511 (compilação 10586) ou anterior.
+
+            __Observação__ A EDP (Proteção de Dados Empresariais) não pode ser aplicada ao Windows 10, Versão 1511 (compilação 10586) ou anterior.
 
 Este tópico mostra exemplos das tarefas de codificação necessárias para obter alguns dos cenários mais comuns de EDP (proteção de dados empresariais) relacionados à transferência de arquivos. Para obter o panorama completo para desenvolvedores de como a EDP está relacionada a arquivos, fluxos, buffers, área de transferência, redes, tarefas em segundo plano e proteção de dados sob bloqueio, veja [Proteção de dados empresariais](../enterprise/edp-hub.md).
 
-**Observação**  O [exemplo de EDP (proteção de dados empresariais)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) trata de muitas das situações demonstradas neste tópico.
+
+            **Observação**  O [exemplo de EDP (proteção de dados empresariais)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) trata de muitas das situações demonstradas neste tópico.
 
 ## Pré-requisitos
 
@@ -37,7 +38,8 @@ Este tópico mostra exemplos das tarefas de codificação necessárias para obte
 ## Origem da área de transferência simples
 
 
-Neste cenário, seu aplicativo é um tipo de bloco de notas que manipula arquivos pessoais e da empresa. Aqui, o aplicativo não precisa alterar sua lógica copiar-colar; ele só precisa chamar [**ProtectionPolicyManager.TryApplyProcessUIPolicy**](https://msdn.microsoft.com/library/windows/apps/dn705791) sempre que o usuário abrir e exibir o conteúdo de um documento empresarial. Depois que o conteúdo é exibido na interface do usuário do seu aplicativo, o usuário copia-o para colar em um aplicativo diferente. Por isso, é importante definir a política de interface do usuário. Dessa forma, o sistema operacional pode aplicar a política atualmente definida à operação de colar envolvendo dados protegidos. Da mesma forma, é importante limpar a política de interface do usuário assim que ela não for mais necessária, para que o usuário fique mais uma vez livre para copiar e colar dados pessoais. **TryApplyProcessUIPolicy** retornará false se o argumento de identidade não estiver sendo gerenciado por uma política empresarial.
+Neste cenário, seu aplicativo é um tipo de bloco de notas que manipula arquivos pessoais e da empresa. Aqui, o aplicativo não precisa alterar sua lógica copiar-colar; ele só precisa chamar [**ProtectionPolicyManager.TryApplyProcessUIPolicy**](https://msdn.microsoft.com/library/windows/apps/dn705791) sempre que o usuário abrir e exibir o conteúdo de um documento empresarial. Depois que o conteúdo é exibido na interface do usuário do seu aplicativo, o usuário copia-o para colar em um aplicativo diferente. Por isso, é importante definir a política de interface do usuário. Dessa forma, o sistema operacional pode aplicar a política atualmente definida à operação de colar envolvendo dados protegidos. Da mesma forma, é importante limpar a política de interface do usuário assim que ela não for mais necessária, para que o usuário fique mais uma vez livre para copiar e colar dados pessoais. 
+            **TryApplyProcessUIPolicy** retornará false se o argumento de identidade não estiver sendo gerenciado por uma política empresarial.
 
 ```CSharp
 using Windows.Security.EnterpriseData;
@@ -212,7 +214,8 @@ Seu aplicativo tem um documento novo e vazio aberto, que é considerado neutro d
 
 Quando você dá suporte ao contrato de Compartilhamento em seu aplicativo, para configurar uma origem de compartilhamento, defina o contexto de identidade empresarial no [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/br205873) conforme mostra este exemplo de código.
 
-**Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção como seu modo de exibição atual (consulte [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
+
+            **Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção como seu modo de exibição atual (consulte [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
 
 
 
@@ -305,7 +308,8 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 
 Neste cenário, seu aplicativo habilita a interface do usuário de colar somente quando há dados na área de transferência. Para esse recurso, você pode usar o método [**ProtectionPolicyManager.CheckAccess**](https://msdn.microsoft.com/library/windows/apps/dn705783), que permite uma verificação passiva da política.
 
-**Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção como seu modo de exibição atual (consulte [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
+
+            **Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção como seu modo de exibição atual (consulte [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
 
 
 
@@ -338,7 +342,8 @@ private bool IsClipboardPeekAllowedAsync()
 
 Este cenário mostra como verificar o acesso para uma operação de colar.
 
-**Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção como seu modo de exibição atual (consulte [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
+
+            **Observação** Este exemplo de código depende de você já ter definido a identidade no objeto gerenciador de política de proteção como seu modo de exibição atual (consulte [Marcar uma janela específica com identidade empresarial](#tag_window_with_id)); caso contrário, a propriedade [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) conterá a cadeia de caracteres vazia.
 
 
 
@@ -382,7 +387,8 @@ private async void OnPasteWithRequestAccess()
 }
 ```
 
-**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+            **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
 

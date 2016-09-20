@@ -3,7 +3,6 @@ author: mtoepke
 title: Passo a passo - exemplos de portabilidade do OpenGL ES 2.0
 description: "Este conjunto de tópicos mostra várias situações de portabilidade de elementos gráficos em OpenGL ES 2.0 de diferentes graus de dificuldade."
 ms.assetid: 07390da1-83f3-7fbb-5696-d1da3a2bc870
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c7fcbcdfc1b0776ac53728fc4f2dc58b6887ab56
 

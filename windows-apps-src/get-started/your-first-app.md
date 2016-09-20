@@ -3,7 +3,6 @@ author: martinekuan
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
 title: Criar seu primeiro aplicativo
 description: "É mais fácil criar um aplicativo da Plataforma Universal do Windows (UWP) para Windows 10 do que você imagina."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: e2ed4b9587927a2a6a765b47ff69b9cedfd9b92d
 

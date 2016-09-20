@@ -20,7 +20,8 @@ Antes de poder inserir informações de descrição, você precisa especificar u
 
 Na seção**Descrições** de envio do IAP, clique em **Gerenciar idiomas de descrição**, em seguida, clique em **Gerenciar idiomas** na próxima página. Marque as caixas de seleção dos idiomas que você deseja adicionar e depois clique em **Atualizar**. Os idiomas selecionados serão exibidos na seção **Idiomas de descrição** da página. Para remover um ou mais desses idiomas, clique em **Remover** (ou clique em **Gerenciar idiomas** e desmarque a caixa de idiomas que você deseja remover). Clique em **Salvar** quando estiver satisfeito com a lista de idiomas.
 
-> **Dica** para adicionar e remover idiomas adicionais, clique em **Gerenciar idiomas de descrição** da visão geral do envio do IAP.
+> 
+            **Dica** para adicionar e remover idiomas adicionais, clique em **Gerenciar idiomas de descrição** da visão geral do envio do IAP.
 
 Para editar uma descrição, clique no nome do idioma na visão geral do envio do IAP. As informações que você pode inserir para cada idioma são descritas abaixo.
 

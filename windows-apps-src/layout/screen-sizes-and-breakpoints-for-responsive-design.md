@@ -5,7 +5,6 @@ description: .
 ms.assetid: BF42E810-CDC8-47D2-9C30-BAA19DCBE2DA
 label: Screen sizes and break points
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 153652c9fcc9745bdee087033d65eec2bc860e53
 
@@ -15,7 +14,8 @@ ms.openlocfilehash: 153652c9fcc9745bdee087033d65eec2bc860e53
 
 O número de destinos de dispositivo e tamanhos de tela do ecossistema do Windows 10 é muito grande para você se preocupar com a otimização de sua interface do usuário em cada um deles. Em vez disso, recomendamos projetar para algumas larguras principais (também chamadas de "pontos de interrupção"): 360, 640, 1024 e 1366 epx.
 
-**Dica** Ao projetar para pontos de interrupção específicos, projete pela quantidade de espaço de tela disponível para seu aplicativo (a janela do aplicativo). Quando o aplicativo é executado em tela inteira, a janela do aplicativo é do mesmo tamanho da tela, mas em outros casos, ela é menor.
+
+            **Dica** Ao projetar para pontos de interrupção específicos, projete pela quantidade de espaço de tela disponível para seu aplicativo (a janela do aplicativo). Quando o aplicativo é executado em tela inteira, a janela do aplicativo é do mesmo tamanho da tela, mas em outros casos, ela é menor.
  
 
 Esta tabela descreve as classes de tamanho diferentes e fornece recomendações gerais para se adequar a essas classes de tamanho.

@@ -5,7 +5,6 @@ title: Diretrizes de design de toque
 ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
 label: Touch design guidelines
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 67b851ce854c803934c2b97dbe7519e2916383a3
 
@@ -30,7 +29,7 @@ Crie aplicativos para a UWP (Plataforma Universal do Windows) com a experiência
 -   Não use interações cronometradas sempre que possível (exemplos de uso apropriado: tocar e segurar).
 -   Não use o número de dedos usados para distinguir a manipulação sempre que possível.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicionais
+## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
 
 
 Primeiro e mais importante, projete o seu aplicativo com a expectativa de que o toque será o método de entrada principal dos usuários. Se você usar os controles da plataforma, o suporte para touchpad, mouse e caneta não exigirá qualquer programação adicional, pois o Windows 8 o fornece gratuitamente.
@@ -90,7 +89,7 @@ A resposta visual é importante quando o usuário recorre à entrada por toque e
 
 As técnicas a seguir aprimoram a experiência imersiva de aplicativos da Windows Store.
 
-**Seleção por área touch**
+**Direcionamento**
 
 O direcionamento é otimizado através de:
 
@@ -156,7 +155,8 @@ Além disso, as dicas a seguir são altamente recomendadas:
 -   As interações devem permitir interações combinadas. Por exemplo, pinçar para aplicar zoom e, ao mesmo tempo, arrastar os dedos para fazer movimento panorâmico.
 -   As interações não devem ser diferenciadas por tempo. A mesma interação deve ter o mesmo resultado, independentemente do tempo que leva para realizá-la. Ativações baseadas em tempo geram atrasos obrigatórios para os usuários e fogem de sua natureza imersiva de manipulação direta e percepção da capacidade de resposta do sistema.
 
-    **Observação**  Uma exceção a isso ocorre quando você usa interações com tempo limite específicas para ajudar no aprendizado e na exploração (por exemplo, pressionar e segurar).
+    
+            **Observação**  Uma exceção a isso ocorre quando você usa interações com tempo limite específicas para ajudar no aprendizado e na exploração (por exemplo, pressionar e segurar).
 
      
 

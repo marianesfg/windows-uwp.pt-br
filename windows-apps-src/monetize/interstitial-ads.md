@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: "Aprenda a incluir anúncios intersticiais em um aplicativo do Windows 10, Windows 8.1 ou Windows Phone 8.1 usando as bibliotecas do Microsoft Advertising no SDK do Microsoft Store Engagement and Monetization."
 title: "Anúncios intersticiais"
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 0f159409bb584aacaf66550efe8d147cd8fddd50
 
@@ -51,7 +50,8 @@ Diferentemente de anúncios, os anúncios intersticiais (ou *intersticiais*) sã
 <span id="interstitialadsxaml10"/>
 ### Anúncios intersticiais (XAML/.NET)
 
-> **Observação**   Esta seção fornece exemplos em C#, mas também há suporte para Visual Basic e C++.
+> 
+            **Observação**   Esta seção fornece exemplos em C#, mas também há suporte para Visual Basic e C++.
  
 1. Abra seu projeto no Visual Studio.
 2. Em **Gerenciador de Referências**, selecione uma das seguintes referências dependendo do tipo de projeto:
@@ -83,7 +83,8 @@ Diferentemente de anúncios, os anúncios intersticiais (ou *intersticiais*) sã
 #endif
     ```
 
-    > **Observação**   Você substituirá os valores de teste por valores dinâmicos antes de enviar seu aplicativo.
+    > 
+            **Observação**   Você substituirá os valores de teste por valores dinâmicos antes de enviar seu aplicativo.
 
 5.  Instancie um [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx), ative todos os manipuladores de eventos e solicite um anúncio.
 
@@ -241,7 +242,8 @@ Neste exemplo, supõe-se que você tenha criado um projeto de aplicativo univers
 
 Neste exemplo, supõe-se que você tenha criado um projeto de aplicativo Universal para XAML no Visual Studio 2015 e esteja direcionando para uma arquitetura de CPU específica.
 
-> **Importante**   Esse código é escrito em C++ conforme necessário para o DirectX.
+> 
+            **Importante**   Esse código é escrito em C++ conforme necessário para o DirectX.
 
  
 1. Abra seu projeto no Visual Studio.
@@ -358,7 +360,8 @@ Neste exemplo, supõe-se que você tenha criado um projeto de aplicativo Univers
 
 2.  Em seu código, substitua os valores de unidade de anúncio de teste pelos valores dinâmicos gerados no Centro de Desenvolvimento.
 
-3.  [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento do Windows.
+3.  
+            [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento do Windows.
 
 4.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento.
 

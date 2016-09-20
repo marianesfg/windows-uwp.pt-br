@@ -5,19 +5,19 @@ description: "Configure uma cerca geográfica no aplicativo e saiba como manipul
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
 translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: e161e478b1b306f5d8d77b7649aeecd80e21b5be
+ms.openlocfilehash: e91f0bbb203ef1c77ad1435b1a3f10aa53c3a483
 
 ---
 
 # Configurar uma cerca geográfica
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Configure uma [**cerca geográfica**](https://msdn.microsoft.com/library/windows/apps/dn263587) no aplicativo e saiba como manipular notificações em primeiro e segundo planos.
 
-**Dica ** Para saber mais sobre como acessar o local no aplicativo, baixe a amostra a seguir no [Repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+**Dica** Para saber mais sobre como acessar o local no aplicativo, baixe a amostra a seguir no [Repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
 -   [Amostra de mapa da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -39,7 +39,7 @@ Configure uma [**cerca geográfica**](https://msdn.microsoft.com/library/windows
 
 ### Etapa 1: Solicitar acesso ao local do usuário
 
-**Importante ** Você deverá solicitar acesso ao local do usuário usando o método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de tentar acessar o local do usuário. É necessário chamar o método **RequestAccessAsync** no thread da interface do usuário e o aplicativo deve estar em segundo plano. O aplicativo não será capaz de acessar informações de local do usuário até o usuário conceder permissão ao aplicativo.
+**Importante** Você deverá solicitar acesso ao local do usuário usando o método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de tentar acessar o local do usuário. É necessário chamar o método **RequestAccessAsync** no thread da interface do usuário e o aplicativo deve estar em segundo plano. O aplicativo não será capaz de acessar informações de local do usuário até o usuário conceder permissão ao aplicativo.
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -53,7 +53,7 @@ O método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/ap
 
 Neste exemplo, uma instrução **switch** é usada com **accessStatus** (do exemplo anterior) para funcionar somente quando o acesso ao local do usuário for permitido. Caso o acesso ao local do usuário seja permitido, o código acessa as cercas geográficas atuais, registra alterações de estado da cerca geográfica e registra alterações em permissões de localização.
 
-**Dica ** Ao usar uma cerca geográfica, o monitor é alterado em permissões de local usando o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) na classe GeofenceMonitor em vez do evento StatusChanged da classe Geolocator. Um [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599) de **Disabled** é equivalente a um [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599) desabilitado – os dois indicam que o aplicativo não tem permissão para acessar o local do usuário.
+**Dica** Ao usar uma cerca geográfica, o monitor é alterado em permissões de local usando o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) na classe GeofenceMonitor em vez do evento StatusChanged da classe Geolocator. Um [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599) de **Disabled** é equivalente a um [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599) desabilitado – os dois indicam que o aplicativo não tem permissão para acessar o local do usuário.
 
 ```csharp
 switch (accessStatus)
@@ -115,21 +115,11 @@ Geofence geofence = new Geofence(fenceId, geocircle);
 
 Você pode ajustar ainda mais sua cerca geográfica usando um dos outros construtores. No próximo exemplo, o construtor de cerca geográfica especifica estes parâmetros adicionais:
 
--   [
-              **MonitoredStates**
-            ](https://msdn.microsoft.com/library/windows/apps/dn263728) - Indica os eventos de cerca geográfica para os quais você deseja receber notificações: entrada na região definida, saída da região definida ou remoção da cerca geográfica.
--   [
-              **SingleUse**
-            ](https://msdn.microsoft.com/library/windows/apps/dn263732) - Remove a cerca geográfica quando todos os estados que estão sendo monitorados na cerca geográfica são cumpridos.
--   [
-              **DwellTime**
-            ](https://msdn.microsoft.com/library/windows/apps/dn263703) - Indica por quanto tempo o usuário deve permanecer dentro ou fora da área definida para que os eventos de entrada/saída sejam disparados.
--   [
-              **StartTime**
-            ](https://msdn.microsoft.com/library/windows/apps/dn263735) - Indica quando começar a monitorar a cerca geográfica.
--   [
-              **Duration**
-            ](https://msdn.microsoft.com/library/windows/apps/dn263697) - Indica o período durante o qual monitorar a cerca geográfica.
+-   [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) - Indica os eventos de cerca geográfica para os quais você deseja receber notificações: entrada na região definida, saída da região definida ou remoção da cerca geográfica.
+-   [**SingleUse**](https://msdn.microsoft.com/library/windows/apps/dn263732) - Remove a cerca geográfica quando todos os estados que estão sendo monitorados na cerca geográfica são cumpridos.
+-   [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) - Indica por quanto tempo o usuário deve permanecer dentro ou fora da área definida para que os eventos de entrada/saída sejam disparados.
+-   [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn263735) - Indica quando começar a monitorar a cerca geográfica.
+-   [**Duration**](https://msdn.microsoft.com/library/windows/apps/dn263697) - Indica o período durante o qual monitorar a cerca geográfica.
 
 ```csharp
 // Set the fence ID.
@@ -169,7 +159,7 @@ Geofence geofence = new Geofence(fenceId, geocircle, monitoredStates, singleUse,
 
 ### Etapa 4: Manipular alterações em permissões de localização
 
-O objeto [**GeofenceMonitor**](https://msdn.microsoft.com/library/windows/apps/dn263595) dispara o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) para indicar que as configurações de localização do usuário mudaram. Esse evento transmite o status correspondente por meio da propriedade **sender.Status** do argumento (do tipo  [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599)). Observe que esse método não é chamado no thread de interface do usuário, e o objeto [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) invoca as alterações de interface do usuário.
+O objeto [**GeofenceMonitor**](https://msdn.microsoft.com/library/windows/apps/dn263595) dispara o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) para indicar que as configurações de localização do usuário mudaram. Esse evento transmite o status correspondente por meio da propriedade **sender.Status** do argumento (do tipo [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599)). Observe que esse método não é chamado no thread de interface do usuário, e o objeto [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) invoca as alterações de interface do usuário.
 
 ```csharp
 using Windows.UI.Core;
@@ -483,6 +473,6 @@ Para que o aplicativo possa acessar a localização, é necessário habilitar **
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

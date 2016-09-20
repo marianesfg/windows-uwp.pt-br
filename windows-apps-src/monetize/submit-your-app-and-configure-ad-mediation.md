@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 69E05E56-B5F0-4D4C-A1FF-B6EAFF5D0E28
 description: "Durante o processo de envio, você pode configurar o comportamento de mediação de anúncio que gostaria de ver. Você poderá ajustá-lo posteriormente sem precisar fazer alterações no código ou enviar novos pacotes."
 title: "Enviar seu aplicativo e configurar o controle de anúncios"
-translationtype: Human Translation
 ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
 ms.openlocfilehash: 13dd6a9c38d85ead29a43f470b7c0f63d025d612
 
@@ -29,12 +28,15 @@ As etapas a seguir descrevem como criar uma configuração de linha de base na s
 1.  Em **Configurar controle para**, certifique-se de que o pacote do aplicativo que você deseja configurar esteja selecionado.
 2.  Em **Destino**, certifique-se de a opção **Linha de base** esteja selecionada.
 3.  Em **Taxa de atualização**, escolha o comprimento do ciclo de controle (a frequência com que os novos anúncios deverão ser mostrados). A duração deve ser entre 30 e 120 segundos.
-  > **Observação**  Se você já tiver configurado uma taxa de atualização em qualquer um dos seus portais de rede de publicidade, certifique-se de definir a mesma taxa de atualização aqui.
+  > 
+            **Observação**  Se você já tiver configurado uma taxa de atualização em qualquer um dos seus portais de rede de publicidade, certifique-se de definir a mesma taxa de atualização aqui.
 
 4.  A seguir, a seção **Controle de anúncios do Windows** lista todas as redes de publicidade usadas pelo seu aplicativo e fornece duas maneiras diferentes de especificar a frequência com que seu aplicativo deve usar cada rede. Escolha uma destas opções na lista suspensa **Mediation type**:
 
-    -   **Order by weight**. Escolha esta opção para aplicar valores percentuais a cada rede de publicidade que especificam a frequência com que elas devem ser usadas pelo seu aplicativo. As porcentagens totais definidas para todas as redes de publicidade devem somar exatamente 100%. Para saber mais, consulte [Ordenar redes de publicidade por peso](#order-ad-networks-by-weight).
-    -   **Order by rank**. Escolha esta opção para aplicar um número de classificação a cada rede de publicidade, de 1 a  *n*, que especifica a frequência com que seu aplicativo deve usar cada rede. Para saber mais, consulte [Ordenar redes de publicidade por classificação](#order-ad-networkds-by-rank).
+    -   
+            **Order by weight**. Escolha esta opção para aplicar valores percentuais a cada rede de publicidade que especificam a frequência com que elas devem ser usadas pelo seu aplicativo. As porcentagens totais definidas para todas as redes de publicidade devem somar exatamente 100%. Para saber mais, consulte [Ordenar redes de publicidade por peso](#order-ad-networks-by-weight).
+    -   
+            **Order by rank**. Escolha esta opção para aplicar um número de classificação a cada rede de publicidade, de 1 a  *n*, que especifica a frequência com que seu aplicativo deve usar cada rede. Para saber mais, consulte [Ordenar redes de publicidade por classificação](#order-ad-networkds-by-rank).
 
     O Centro de Desenvolvimento aplica automaticamente [configurações padrão](#default-ad-mediation-settings) que especificam a frequência com que seu aplicativo deve usar cada rede de publicidade.
 
@@ -104,7 +106,8 @@ Quando você envia uma atualização de aplicativo, as informações de configur
 
 Se alguma dessas condições não for atendida, você deverá recriar as configurações de linha de base e quaisquer configurações de destino específicas do mercado aplicáveis para o seu aplicativo.
 
-> **Observação**  O ID de um **AdMediatorControl** é gerado quando você arrasta o controle para uma superfície de design em seu aplicativo. Essa ID não será alterada, a menos que você exclua o controle e a substitua arrastando um novo controle para a mesma superfície de design.
+> 
+            **Observação**  O ID de um **AdMediatorControl** é gerado quando você arrasta o controle para uma superfície de design em seu aplicativo. Essa ID não será alterada, a menos que você exclua o controle e a substitua arrastando um novo controle para a mesma superfície de design.
 
  
 

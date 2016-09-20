@@ -36,7 +36,8 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 
     -   Se *FreshnessTime* for definido como 15 minutos e *OneShot* for falso, a tarefa será executada a cada 15 minutos começando entre 0 e 15 a partir do momento em que for registrada.
 
-    **Observação** Se *FreshnessTime* for definido como menos de 15 minutos, uma exceção será lançada quando você tentar registrar a tarefa em segundo plano.
+    
+            **Observação** Se *FreshnessTime* for definido como menos de 15 minutos, uma exceção será lançada quando você tentar registrar a tarefa em segundo plano.
 
      
 
@@ -104,16 +105,19 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 
 ## [!div class="tabbedCodeSnippets"]
 
-> **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido.
+> 
+            **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido.
 
 > Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar. Comentários
 
 
-## **Observação**  A partir do Windows 10, o usuário não precisa mais adicionar o aplicativo à tela de bloqueio para usar tarefas em segundo plano.
+## 
+            **Observação**  A partir do Windows 10, o usuário não precisa mais adicionar o aplicativo à tela de bloqueio para usar tarefas em segundo plano.
 
 
 * [Para obter diretrizes sobre os tipos de gatilhos de tarefa em segundo plano, consulte [Dar suporte ao aplicativo com tarefas em segundo plano](support-your-app-with-background-tasks.md).](create-and-register-a-background-task.md)
-* [**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](declare-background-tasks-in-the-application-manifest.md)
+* [
+            **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](declare-background-tasks-in-the-application-manifest.md)
 * [Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
 * [Tópicos relacionados](monitor-background-task-progress-and-completion.md)
 * [Criar e registrar uma tarefa em segundo plano](register-a-background-task.md)

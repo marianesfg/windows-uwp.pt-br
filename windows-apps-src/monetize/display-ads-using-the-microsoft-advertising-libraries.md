@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 5cde1c22-91fd-4f5c-ac82-32efaa0d9fee
 description: "Use as bibliotecas do Microsoft Advertising no SDK de Microsoft Store Engagement and Monetization para mostrar anúncios em faixa e anúncios intersticiais em vídeo em seus aplicativos XAML ou JavaScript/HTML."
 title: "Apresentar anúncios usando as bibliotecas do Microsoft Advertising"
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: ab96dac3af382d334c767ad42a563c0dbc67a8f5
 
@@ -16,7 +15,8 @@ ms.openlocfilehash: ab96dac3af382d334c767ad42a563c0dbc67a8f5
 
 Use as bibliotecas do Microsoft Advertising no [SDK de Microsoft Store Engagement and Monetization](monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md) para mostrar anúncios em faixa e intersticiais em vídeo em seus aplicativos XAML ou JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 e Windows Phone 8.
 
-> **Importante**   As bibliotecas do Microsoft Advertising são um conjunto diferente de extensões de bibliotecas de mediação de anúncios. Para obter mais informações sobre as diferenças entre o controle de anúncios e as bibliotecas do Microsoft Advertising, consulte [Qual é a diferença: AdMediatorControl ou AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md). Para obter mais informações sobre como usar mediação de anúncios, consulte [Usar a mediação de anúncios para maximizar a receita](https://msdn.microsoft.com/windows/uwp/monetize/use-ad-mediation-to-maximize-revenue).
+> 
+            **Importante**   As bibliotecas do Microsoft Advertising são um conjunto diferente de extensões de bibliotecas de mediação de anúncios. Para obter mais informações sobre as diferenças entre o controle de anúncios e as bibliotecas do Microsoft Advertising, consulte [Qual é a diferença: AdMediatorControl ou AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md). Para obter mais informações sobre como usar mediação de anúncios, consulte [Usar a mediação de anúncios para maximizar a receita](https://msdn.microsoft.com/windows/uwp/monetize/use-ad-mediation-to-maximize-revenue).
 
  
 Os tópicos a seguir fornecem informações sobre tarefas comuns envolvendo as bibliotecas de publicidade do Windows.

@@ -3,7 +3,6 @@ author: mcleblanc
 description: "Você começa o processo de portabilidade ao criar um novo projeto do Windows 10 no Visual Studio e ao copiar seus arquivos nele."
 title: Portando um projeto Windows Phone Silverlight para um projeto UWP
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 74cbd9789636383e6d04798435780dcda6b897d0
 
@@ -113,7 +112,8 @@ Você pode ter usado compilação condicional para limitar a manipulação do bo
 
 ```
 
-Você pode ter usado compilação condicional para limitar a manipulação do botão da câmera do hardware para o Windows Phone. No Windows 10, o botão da câmera do hardware é um conceito específico à família de dispositivos móveis. Como um pacote do aplicativo será executado em todos os dispositivos, mudaremos nossa condição em tempo de compilação para uma condição em tempo de execução usando o que é conhecido como código adaptável. Para isso, usamos a classe [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar, em tempo de execução, a presença da classe [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** é definido no SDK de extensão móvel, portanto, precisamos adicionar uma referência a esse SDK ao nosso projeto para que esse código seja compilado. Porém, o manipulador só será executado em um dispositivo que implementa os tipos definidos no SDK de extensão móvel, que é a família de dispositivos móveis. Assim, o código a seguir tem o cuidado em usar apenas recursos que estão presentes, embora consiga isso de maneira diferente da compilação condicional.
+Você pode ter usado compilação condicional para limitar a manipulação do botão da câmera do hardware para o Windows Phone. No Windows 10, o botão da câmera do hardware é um conceito específico à família de dispositivos móveis. Como um pacote do aplicativo será executado em todos os dispositivos, mudaremos nossa condição em tempo de compilação para uma condição em tempo de execução usando o que é conhecido como código adaptável. Para isso, usamos a classe [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar, em tempo de execução, a presença da classe [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). 
+            **HardwareButtons** é definido no SDK de extensão móvel, portanto, precisamos adicionar uma referência a esse SDK ao nosso projeto para que esse código seja compilado. Porém, o manipulador só será executado em um dispositivo que implementa os tipos definidos no SDK de extensão móvel, que é a família de dispositivos móveis. Assim, o código a seguir tem o cuidado em usar apenas recursos que estão presentes, embora consiga isso de maneira diferente da compilação condicional.
 
 ```csharp
        // Note: Cache the value instead of querying it more than once.

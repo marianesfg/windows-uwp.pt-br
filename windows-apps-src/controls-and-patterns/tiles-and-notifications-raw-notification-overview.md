@@ -5,7 +5,6 @@ title: "Visão geral de notificações brutas"
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
 label: TBD
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 4b487e44c7acd882a86c0b24dd9994092d976b06
 
@@ -21,7 +20,8 @@ As notificações brutas são notificações por push curtas com finalidade gera
 
 Você pode usar as notificações brutas para diversas finalidades, inclusive para disparar seu aplicativo para executar uma tarefa em segundo plano, se o usuário tiver permissão para isso no aplicativo. Ao usar o WNS para se comunicar com o aplicativo, você evita a sobrecarga de processamento na hora de criar conexões de soquete persistentes, enviando mensagens HTTP GET, e outras conexões de serviço para aplicativo.
 
-**Importante**   Para entender as notificações brutas, é melhor estar familiarizado com os conceitos abordados na [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md).
+
+            **Importante**   Para entender as notificações brutas, é melhor estar familiarizado com os conceitos abordados na [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md).
 
  
 
@@ -75,11 +75,15 @@ Seu aplicativo pode usar um evento de entrega de notificação ([**PushNotificat
 
 Se o aplicativo não estiver em execução e não usar [tarefas em segundo plano](#bg_tasks), nenhuma notificação bruta enviada a ele será removida pelo WNS no recebimento. Para evitar desperdício de recursos de seu serviço em nuvem, convém implementar a lógica no serviço para acompanhar se o aplicativo está ativo. Há duas fontes para essas informações: um aplicativo pode informar claramente ao serviço que ele está pronto para começar a receber notificações, e o WNS pode informar ao serviço quando parar.
 
--   **O aplicativo notifica o serviço em nuvem**: o aplicativo entra em contato com seu serviço para informá-lo de que o aplicativo está sendo executado em primeiro plano. A desvantagem dessa abordagem é que o aplicativo pode acabar contatando o serviço com muita frequência. Mas a vantagem é que o serviço sempre vai saber quando o aplicativo está pronto para receber as notificações brutas de entrada. Outra vantagem é que quando o aplicativo entra em contato com o serviço, o serviço sabe quando enviar notificações brutas para a instância específica do aplicativo, em vez de difundir.
--   **O serviço de nuvem responde a mensagens de resposta do WNS** : o serviço de seu aplicativo pode usar as informações de [X-WNS-NotificationStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_notification) e [X-WNS-DeviceConnectionStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_dcs) retornadas pelo WNS para determinar quando parar de enviar notificações brutas ao aplicativo. Quando o serviço envia uma notificação para um canal como HTTP POST, ele pode receber uma das seguintes mensagens na resposta:
+-   
+            **O aplicativo notifica o serviço em nuvem**: o aplicativo entra em contato com seu serviço para informá-lo de que o aplicativo está sendo executado em primeiro plano. A desvantagem dessa abordagem é que o aplicativo pode acabar contatando o serviço com muita frequência. Mas a vantagem é que o serviço sempre vai saber quando o aplicativo está pronto para receber as notificações brutas de entrada. Outra vantagem é que quando o aplicativo entra em contato com o serviço, o serviço sabe quando enviar notificações brutas para a instância específica do aplicativo, em vez de difundir.
+-   
+            **O serviço de nuvem responde a mensagens de resposta do WNS** : o serviço de seu aplicativo pode usar as informações de [X-WNS-NotificationStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_notification) e [X-WNS-DeviceConnectionStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_dcs) retornadas pelo WNS para determinar quando parar de enviar notificações brutas ao aplicativo. Quando o serviço envia uma notificação para um canal como HTTP POST, ele pode receber uma das seguintes mensagens na resposta:
 
-    -   **X-WNS-NotificationStatus: dropped**: indica que a notificação não foi recebida pelo cliente. É seguro afirmar que a resposta **dropped** ocorreu porque seu aplicativo não está mais em primeiro plano no dispositivo do usuário.
-    -   **X-WNS-DeviceConnectionStatus: disconnected** ou **X-WNS-DeviceConnectionStatus: tempconnected**: indica que o cliente do Windows não está mais conectado ao WNS. Para receber essa mensagem do WNS, você tem que solicitá-la definindo o cabeçalho [X-WNS-RequestForStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_request) no HTTP POST da notificação.
+    -   
+            **X-WNS-NotificationStatus: dropped**: indica que a notificação não foi recebida pelo cliente. É seguro afirmar que a resposta **dropped** ocorreu porque seu aplicativo não está mais em primeiro plano no dispositivo do usuário.
+    -   
+            **X-WNS-DeviceConnectionStatus: disconnected** ou **X-WNS-DeviceConnectionStatus: tempconnected**: indica que o cliente do Windows não está mais conectado ao WNS. Para receber essa mensagem do WNS, você tem que solicitá-la definindo o cabeçalho [X-WNS-RequestForStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_request) no HTTP POST da notificação.
 
     O serviço em nuvem de seu aplicativo pode usar as informações nessas mensagens de status para interromper as tentativas de comunicação através das notificações brutas. O serviço pode retomar o envio das notificações brutas assim que for contatado pelo aplicativo, quando ele voltar ao primeiro plano.
 
@@ -89,7 +93,8 @@ Se o aplicativo não estiver em execução e não usar [tarefas em segundo plano
 
 ### <span id="bg_tasks"></span><span id="BG_TASKS"></span>Tarefas em segundo plano disparadas pelas notificações brutas
 
-**Importante**   Antes de usar tarefas em segundo plano de notificação bruta, um aplicativo deve ter acesso ao segundo plano via [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485).
+
+            **Importante**   Antes de usar tarefas em segundo plano de notificação bruta, um aplicativo deve ter acesso ao segundo plano via [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485).
 
  
 
@@ -111,7 +116,7 @@ Para cada aplicativo, apenas uma tarefa em segundo plano pode ser executada de c
 ## <span id="Other_resources"></span><span id="other_resources"></span><span id="OTHER_RESOURCES"></span>Outros recursos
 
 
-Você pode saber mais baixando a [Amostra de notificações de dados brutos](http://go.microsoft.com/fwlink/p/?linkid=241553) para Windows 8.1 e a [Amostra de notificações periódicas e por push](http://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows 8.1 e reutilizando o código-fonte no aplicativo do Windows 10.
+Você pode saber mais baixando a [Amostra de notificações de dados brutos](http://go.microsoft.com/fwlink/p/?linkid=241553) para Windows8.1 e a [Amostra de notificações periódicas e por push](http://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows8.1 e reutilizando o código-fonte no aplicativo do Windows10.
 
 ## <span id="related_topics"></span>Tópicos relacionados
 

@@ -3,7 +3,6 @@ author: mcleblanc
 description: "É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado."
 title: Solucionando problemas de portabilidade do Windows Runtime 8.x para UWP
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: e5758472d303f4baaf80d45d6b23b54f2a21e002
 
@@ -43,7 +42,8 @@ As informações de solução da tabela destinam-se a dar instruções suficient
 
 | Sintoma | Solução |
 |---------|--------|
-| Ao abrir um projeto do Windows 10 no Visual Studio, você verá a mensagem "Atualização do Visual Studio necessária. Um ou mais projetos exigem um SDK &lt;versão&gt; da plataforma que não está instalado ou que faz parte de uma atualização futura do Visual Studio". | Consulte a seção [TargetPlatformVersion](#targetplatformversion) neste tópico. |
+| Ao abrir um projeto do Windows 10 no Visual Studio, você verá a mensagem "Atualização do Visual Studio necessária. Um ou mais projetos exigem um SDK &lt;versão&gt; da plataforma que não está instalado ou que faz parte de uma atualização futura do Visual Studio".
+ | Consulte a seção [TargetPlatformVersion](#targetplatformversion) neste tópico. |
 | Um System.InvalidCastException é gerado quando InitializeComponent é chamado em um arquivo xaml.cs.| Isso pode acontecer quando você tem mais de um arquivo xaml (sendo que pelo menos um deles contém qualificadores MRT) que compartilham o mesmo arquivo xaml.cs e os elementos têm atributos x:Name inconsistentes entre os dois arquivos xaml. Tente adicionar o mesmo nome aos mesmos elementos nos dois arquivos xaml ou omita todos os nomes. |
 | Quando executado no dispositivo, o aplicativo é encerrado, ou quando iniciado no Visual Studio, você vê o erro "Não é possível ativar o aplicativo da Windows Store \[…\]. A solicitação de ativação falhou com o erro "O Windows não pôde se comunicar com o aplicativo de destino". Isso geralmente indica que o processo do aplicativo de destino foi anulado. \[…\]”. | O problema poderia ser o código imperativo sendo executado em suas próprias páginas ou em propriedades vinculadas (ou outros tipos) durante a inicialização. Ou, isso pode acontecer durante a análise do arquivo XAML prestes a ser exibido quando o aplicativo foi encerrado (se inicializado no Visual Studio, essa será a página de inicialização). Procure chaves de recurso inválidas e/ou tente algumas das diretrizes da seção "Rastreando problemas" neste tópico.|
 | O analisador ou o compilador de XAML, ou uma exceção de tempo de execução, mostra o erro "*O recurso "<resourcekey>" não pôde ser resolvido*". | A chave de recurso não se aplica a aplicativos da Plataforma Universal do Windows (UWP) (isso acontece com alguns recursos do Windows Phone, por exemplo). Encontre o recurso equivalente correto e atualize sua marcação. Exemplos que você pode encontrar imediatamente são chaves de sistema, como `PhoneAccentBrush`. |

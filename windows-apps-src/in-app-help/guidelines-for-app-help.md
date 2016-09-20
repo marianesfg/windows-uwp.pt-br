@@ -29,15 +29,20 @@ Um usuário não irá procurar o conteúdo da ajuda, a menos que ele já tenha u
 
 Toda ajuda, qualquer que seja, deve seguir estes princípios básicos:
 
--   **Fácil de entender:** a ajuda que confunde o usuário é pior que nenhuma ajuda.
+-   
+            **Fácil de entender:** a ajuda que confunde o usuário é pior que nenhuma ajuda.
 
--   **Simples:** os usuários que procuram a ajuda querem respostas claras apresentadas diretamente a eles.
+-   
+            **Simples:** os usuários que procuram a ajuda querem respostas claras apresentadas diretamente a eles.
 
--   **Relevante:** os usuários não querem ter a necessidade de procurar seu problema específico. Eles querem uma ajuda mais relevante apresentada em primeiro lugar (isso é chamado de "ajuda contextual") ou querem uma interface fácil de navegar.
+-   
+            **Relevante:** os usuários não querem ter a necessidade de procurar seu problema específico. Eles querem uma ajuda mais relevante apresentada em primeiro lugar (isso é chamado de "ajuda contextual") ou querem uma interface fácil de navegar.
 
--   **Direta:** quando um usuário procura a ajuda, eles querem ver a ajuda. Se seu aplicativo contiver páginas para relatar bugs, enviar comentários, ver os termos de serviço ou funções semelhantes, elas devem ser incluídas como links ou notas de rodapé na página principal da ajuda, e não como itens de importância.
+-   
+            **Direta:** quando um usuário procura a ajuda, eles querem ver a ajuda. Se seu aplicativo contiver páginas para relatar bugs, enviar comentários, ver os termos de serviço ou funções semelhantes, elas devem ser incluídas como links ou notas de rodapé na página principal da ajuda, e não como itens de importância.
 
--   **Consistente:** independentemente do seu tipo, a ajuda ainda faz parte do seu aplicativo e deve ser tratada como qualquer outra parte da interface do usuário. Os mesmos princípios de design de usabilidade, acessibilidade e estilo usados em todo o restante de seu aplicativo também devem estar presentes na ajuda que você oferece.
+-   
+            **Consistente:** independentemente do seu tipo, a ajuda ainda faz parte do seu aplicativo e deve ser tratada como qualquer outra parte da interface do usuário. Os mesmos princípios de design de usabilidade, acessibilidade e estilo usados em todo o restante de seu aplicativo também devem estar presentes na ajuda que você oferece.
 
 ## <span id="types_of_help"></span><span id="TYPES_OF_HELP"></span>Tipos de ajuda
 

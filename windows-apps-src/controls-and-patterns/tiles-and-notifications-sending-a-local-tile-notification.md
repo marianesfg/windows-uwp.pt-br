@@ -5,7 +5,6 @@ title: "Enviar uma notificação de bloco local"
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: cc2f86f2a56aae5ee9e3019dafa3417a25e7d610
 
@@ -21,7 +20,8 @@ Os blocos dos aplicativos primários no Windows 10 são definidos no manifesto d
 
 ![bloco padrão e bloco com notificação](images/sending-local-tile-01.png)
 
-**Observação**   Saiba mais sobre [como criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md) e [esquema de modelo de bloco adaptável](tiles-and-notifications-adaptive-tiles-schema.md).
+
+            **Observação**   Saiba mais sobre [como criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md) e [esquema de modelo de bloco adaptável](tiles-and-notifications-adaptive-tiles-schema.md).
 
  
 

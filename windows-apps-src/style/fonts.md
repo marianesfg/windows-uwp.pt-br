@@ -47,8 +47,7 @@ Você não precisa usar a fonte Segoe UI para tudo. Você pode usar outras fonte
 
 Esta é a lista de fontes que certamente estão disponíveis em todas as edições do Windows 10 que dão suporte a aplicativos UWP.
 
-
-              **Observação**  Se você usar uma fonte que não esteja nessa lista, seu aplicativo poderá disparar um download automático dos dados de fontes de um serviço Microsoft. Isso pode causar problemas de desempenho e outros impactos preocupantes, especialmente para dispositivos móveis. Em particular, observe que isso pode consumir parte do plano de dados móveis do usuário ou resultar em custos de uso de dados móveis. Os aplicativos UWP que serão disponibilizados em dispositivos móveis nunca devem usar fontes para conteúdo de interface do usuário diferentes das fontes nessa lista.
+**Observação**  Se você usar uma fonte que não esteja nessa lista, seu aplicativo poderá disparar um download automático dos dados de fontes de um serviço Microsoft. Isso pode causar problemas de desempenho e outros impactos preocupantes, especialmente para dispositivos móveis. Em particular, observe que isso pode consumir parte do plano de dados móveis do usuário ou resultar em custos de uso de dados móveis. Os aplicativos UWP que serão disponibilizados em dispositivos móveis nunca devem usar fontes para conteúdo de interface do usuário diferentes das fontes nessa lista.
 
  
 
@@ -275,8 +274,7 @@ Esta é a lista de fontes que certamente estão disponíveis em todas as ediçõ
 
 **Para designers**
 * [Rótulo (ou bloco de texto)](../controls-and-patterns/labels.md)
-* 
-              [Ícones Segoe UI Symbol](segoe-ui-symbol-font.md)
+* [Ícones Segoe UI Symbol](segoe-ui-symbol-font.md)
 **para desenvolvedores (XAML)**
 * [Recursos de temas XAML](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [Definindo o layout de uma página de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh872191)

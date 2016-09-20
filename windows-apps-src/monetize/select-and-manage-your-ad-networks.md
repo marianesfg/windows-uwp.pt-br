@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 86D9D3CF-8FDC-4B67-881B-DF33A1BEE8BF
 description: "Antes de usar o controle de anúncios, você precisará configurar as contas com cada rede de publicidade que você gostaria de usar em seus aplicativos."
 title: Selecionar e gerenciar suas redes de publicidade
-translationtype: Human Translation
 ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
 ms.openlocfilehash: 49c9b8e60da9239c948265fb22563013019da259
 
@@ -44,7 +43,8 @@ Observe que, quando você [adiciona o controle de mediador de anúncios](add-and
 
 | Site                        | Para configurar os parâmetros da rede de publicidade, use a página [Monetizar com anúncios](https://msdn.microsoft.com/library/windows/apps/mt170658) no [painel do Centro de Desenvolvimento do Windows](https://dev.windows.com/overview).   |
 |--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Localização do SDK                   | [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk).                                                                                                                                                                                                                         |
+| Localização do SDK                   | 
+            [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk).                                                                                                                                                                                                                         |
 | Carregando um aplicativo              | Adicione o controle de anúncios ao seu aplicativo e envie-o para o painel do Centro de Desenvolvimento do Windows.                                                                                                                                                                                                            |
 | Parâmetros necessários            | ApplicationId e AdUnitId: esses parâmetros são preenchidos automaticamente para você quando você envia o pacote do aplicativo, com base no conteúdo do seu aplicativo. No entanto, você também pode editar esses parâmetros ao [enviar seu aplicativo e configurar o controle de anúncios](submit-your-app-and-configure-ad-mediation.md). <br> <br> Altura e Largura (obrigatórias apenas para Windows Phone 8 Silverlight e Windows Phone 8.1 Silverlight).                                                                                                                                                                                                           |
 | Parâmetros substituídos/ignorados | Latitude (substituído)  <br><br> Longitude (substituído) <br><br> AutoRefreshIntervalInSeconds (ignorado) <br><br> IsAutoRefreshEnabled (ignorado) <br><br> IsAutoCollapsedEnabled (ignorado) <br><br> IsEngaged (ignorado) <br><br> IsSuspended (ignorado) |

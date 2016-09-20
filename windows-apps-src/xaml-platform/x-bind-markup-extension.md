@@ -3,7 +3,6 @@ author: jwmsft
 description: "A extensão de marcação xBind é uma alternativa a Binding. xBind não tem alguns dos recursos de Binding, mas ele é executado em menos tempo e usando menos memória do que Binding e suporta melhor a depuração."
 title: "Extensão de marcação xBind"
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: ceb5562ae08d7cc966f80fdb7e23f12afe040430
 
@@ -13,9 +12,11 @@ ms.openlocfilehash: ceb5562ae08d7cc966f80fdb7e23f12afe040430
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Observação** Para obter informações gerais sobre o uso da vinculação de dados no seu aplicativo com **{x:Bind}** (e para todas as comparações entre **{x:Bind}** e **{Binding}**), consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-A extensão de marcação **{x: Bind}** — nova no Windows 10 — é uma alternativa ao **{Binding}**. **{x:Bind}** não tem alguns dos recursos de **{Binding}**, mas ele é executado em menos tempo e usando menos memória do que **{Binding}** e suporta melhor a depuração.
+            **Observação** Para obter informações gerais sobre o uso da vinculação de dados no seu aplicativo com **{x:Bind}** (e para todas as comparações entre **{x:Bind}** e **{Binding}**), consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
+
+A extensão de marcação **{x: Bind}** — nova no Windows 10 — é uma alternativa ao **{Binding}**. 
+           **{x:Bind}** não tem alguns dos recursos de **{Binding}**, mas ele é executado em menos tempo e usando menos memória do que **{Binding}** e suporta melhor a depuração.
 
 No tempo de carregamento do XAML, **{x:Bind}** é convertido no que parece um objeto de associação, e esse objeto obtém um valor de uma propriedade numa fonte de dados. O objeto de associação, opcionalmente, pode ser configurado para observar mudanças no valor da propriedade de origem de dados e atualizar-se com base nessas alterações. Ele também pode ser configurado opcionalmente para enviar as alterações em seu próprio valor de volta para a propriedade de origem. Os objetos de associação criados por **{x:Bind}** e **{Binding}** são em grande parte funcionalmente equivalentes. Mas o **{x:Bind}** executa o código de finalidade especial, que ele gera no tempo de compilação, e o **{Binding}** usa inspeção de objeto de tempo de execução de finalidade geral. Consequentemente, as associações **{x:Bind}** (normalmente chamadas de associações compiladas) têm excelente desempenho, fornecem validação de tempo de compilação de suas expressões de associação e dão suporte à depuração permitindo que você defina pontos de interrupção nos arquivos de código que são gerados como a classe parcial para sua página. Esses arquivos podem ser encontrados em sua pasta `obj`, com nomes como (para C#) `<view name>.g.cs`.
 
@@ -41,7 +42,8 @@ No tempo de carregamento do XAML, **{x:Bind}** é convertido no que parece um ob
 |------|-------------|
 | _propertyPath_ | Uma cadeia de caracteres que especifica o caminho de propriedade para a associação. Mais informações estão na seção [caminho de propriedade](#property-path) abaixo. |
 | _bindingProperties_ |
-| _propName_
+| 
+            _propName_
             =
             _value_\[, _propName_=_value_\]* | Uma ou mais propriedades de associação que são especificadas usando uma sintaxe de par nome/valor. |
 | _propName_ | O nome da cadeia de caracteres da propriedade a ser definida no objeto Binding. Por exemplo, "Converter". | 
@@ -49,9 +51,12 @@ No tempo de carregamento do XAML, **{x:Bind}** é convertido no que parece um ob
 
 ## Caminho de propriedade
 
-*PropertyPath* define a propriedade **Path** de uma expressão **{x:Bind}**. **Path** é um caminho de propriedade que especifica o valor da propriedade, da subpropriedade, do campo ou do método ao qual você está se associando (à origem). Você pode mencionar o nome da propriedade **Path** explicitamente: `{Binding Path=...}`. Ou você pode omiti-lo: `{Binding ...}`.
 
-**{x:Bind}** não usa o **DataContext** como uma fonte padrão; em vez disso, usa o controle de página ou do usuário propriamente dito. Portanto, ele aparecerá no code-behind de sua página ou controle de usuário para métodos, propriedades e campos. Para expor seu modelo de exibição **{x:Bind}**, você geralmente deseja adicionar novos campos ou propriedades para o code-behind para sua página ou controle de usuário. Etapas de um caminho de propriedade são delimitadas por pontos (.), e você pode incluir vários delimitadores para percorrer subpropriedades sucessivas. Use o ponto delimitador independentemente da linguagem de programação usada para implementar o objeto sendo associado.
+            *PropertyPath* define a propriedade **Path** de uma expressão **{x:Bind}**. 
+            **Path** é um caminho de propriedade que especifica o valor da propriedade, da subpropriedade, do campo ou do método ao qual você está se associando (à origem). Você pode mencionar o nome da propriedade **Path** explicitamente: `{Binding Path=...}`. Ou você pode omiti-lo: `{Binding ...}`.
+
+
+           **{x:Bind}** não usa o **DataContext** como uma fonte padrão; em vez disso, usa o controle de página ou do usuário propriamente dito. Portanto, ele aparecerá no code-behind de sua página ou controle de usuário para métodos, propriedades e campos. Para expor seu modelo de exibição **{x:Bind}**, você geralmente deseja adicionar novos campos ou propriedades para o code-behind para sua página ou controle de usuário. Etapas de um caminho de propriedade são delimitadas por pontos (.), e você pode incluir vários delimitadores para percorrer subpropriedades sucessivas. Use o ponto delimitador independentemente da linguagem de programação usada para implementar o objeto sendo associado.
 
 Por exemplo: em uma página, **Text="{x:Bind Employee.FirstName}"** procurará por um membro **Funcionário** na página e, em seguida, um membro **FirstName** no objeto retornado por **Funcionário**. Se você estiver associando o controle de um item a uma propriedade que contém dependentes de um funcionário, o seu caminho de propriedade pode ser "Employee.Dependents", o modelo de item do controle do item exibiria os itens em "Dependents".
 
@@ -84,7 +89,8 @@ Para saber mais sobre a sintaxe de cadeia de caracteres de um caminho de proprie
 ##  Propriedades que você pode definir com {x: Bind}
 
 
-**{x:Bind}** é ilustrado com a sintaxe de espaço reservado *bindingProperties* porque há várias propriedades de leitura/gravação que podem ser definidas na extensão de marcação. As propriedades podem ser definidas em qualquer ordem com pares *propName*=*value* separados por vírgula. Observe que você não pode incluir quebras de linha na expressão de associação. Algumas das propriedades exigem tipos que não têm uma conversão de tipo específica, então são necessárias extensões de marcação próprias aninhadas no **{x:Bind}**.
+
+            **{x:Bind}** é ilustrado com a sintaxe de espaço reservado *bindingProperties* porque há várias propriedades de leitura/gravação que podem ser definidas na extensão de marcação. As propriedades podem ser definidas em qualquer ordem com pares *propName*=*value* separados por vírgula. Observe que você não pode incluir quebras de linha na expressão de associação. Algumas das propriedades exigem tipos que não têm uma conversão de tipo específica, então são necessárias extensões de marcação próprias aninhadas no **{x:Bind}**.
 
 Essas propriedades funcionam da mesma forma que as propriedades da classe [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820).
 
@@ -98,7 +104,8 @@ Essas propriedades funcionam da mesma forma que as propriedades da classe [**Bin
 | **Mode** | Especifica o mode de associação como uma dessas cadeias de caracteres: "OneTime", "OneWay" ou "TwoWay". O padrão é "OneTime". Observe que isso é diferente do padrão para **{Binding}**, que é "OneWay" na maioria dos casos. |
 | **TargetNullValue** | Especifica um valor a ser exibido quando o valor de origem é solucionado, mas é explicitamente **null**. | 
 
-**Observação** Se você estiver convertendo a marcação de **{Binding}** para **{x:Bind}**, examine as diferenças nos valores padrão da propriedade **Mode**.
+
+            **Observação** Se você estiver convertendo a marcação de **{Binding}** para **{x:Bind}**, examine as diferenças nos valores padrão da propriedade **Mode**.
  
 ## Comentários
 
@@ -108,15 +115,19 @@ Ao usar **{x:Bind}** com modelos de dados, você deve indicar o tipo associado d
 
 As associações compiladas dependem da geração de código. Portanto, se você usar **{x:Bind}** em um dicionário de recursos, o dicionário de recursos precisará ter uma classe code-behind. Veja [Dicionários de recursos com {x:Bind}](../data-binding/data-binding-in-depth.md#resource-dictionaries-with-x-bind) para obter um exemplo de código.
 
-**Importante** Se você definir um valor local para uma propriedade que anteriormente tinha uma extensão de marcação **{x:Bind}** para fornecer um valor local, a associação será totalmente removida.
 
-**Dica** Se você precisar especificar uma única chave para um valor, como em [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) ou [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), coloque uma barra invertida antes dela: `\{`. De forma alternativa, colo a cadeia de caracteres inteira que contém a chave que precisa de escape entre apóstrofos; por exemplo, `ConverterParameter='{Mix}'`.
+            **Importante** Se você definir um valor local para uma propriedade que anteriormente tinha uma extensão de marcação **{x:Bind}** para fornecer um valor local, a associação será totalmente removida.
 
-[
+
+            **Dica** Se você precisar especificar uma única chave para um valor, como em [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) ou [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), coloque uma barra invertida antes dela: `\{`. De forma alternativa, colo a cadeia de caracteres inteira que contém a chave que precisa de escape entre apóstrofos; por exemplo, `ConverterParameter='{Mix}'`.
+
+
+            [
               **Converter**
             ](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) e **ConverterLanguage** são todos relacionados à situação de conversão de um valor ou tipo de uma fonte de associação a um tipo ou valor que é compatível com a propriedade do destino da associação. Para saber mais, veja a seção "Conversões de dados" em [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-**{x:Bind}** é apenas uma extensão de marcação, sem nenhuma maneira de criar ou manipular essas associações de forma programática. Para saber mais sobre extensões de marcação, veja [Visão geral do XAML](xaml-overview.md).
+
+            **{x:Bind}** é apenas uma extensão de marcação, sem nenhuma maneira de criar ou manipular essas associações de forma programática. Para saber mais sobre extensões de marcação, veja [Visão geral do XAML](xaml-overview.md).
 
 ## Exemplos
 

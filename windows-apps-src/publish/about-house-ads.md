@@ -3,7 +3,6 @@ author: jnHs
 Description: "Você pode criar um anúncio para promover um dos seus aplicativos em outros aplicativos seus gratuitamente. Chamamos isso de anúncios domésticos."
 title: "Sobre anúncios domésticos"
 ms.assetid: C6507C8B-351B-49E7-A194-35AB05BC3358
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c9b73bb1963839640243fce4caaa7f3701b1eb45
 
@@ -21,7 +20,8 @@ Para configurar um anúncio doméstico, selecione **Campanha doméstica gratuita
 
 Quando um anúncio doméstico do Aplicativo A aparecer no Aplicativo B, você não será cobrado pela impressão, nem receberá receita por exibir o anúncio em sua unidade de anúncio do Aplicativo B. Anúncios pagos têm prioridade sobre anúncios domésticos para aparecer nas suas unidades de anúncio.
 
-> **Observação**  Um usuário final individual verá cada anúncio de cada no máximo cinco vezes por dia.
+> 
+            **Observação**  Um usuário final individual verá cada anúncio de cada no máximo cinco vezes por dia.
 
  
 

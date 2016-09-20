@@ -26,7 +26,8 @@ Saiba como definir condições que controlam quando a sua tarefa em segundo plan
 
 Colocar condições em tarefas em segundo plano poupa bateria e tempo de execução da CPU, evitando que as tarefas sejam executadas sem necessidade. Por exemplo, se a sua tarefa em segundo plano é executada com um temporizador e requer conectividade com a Internet, adicione a condição **InternetAvailable** a [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar a tarefa. Isso ajudará a evitar que a tarefa use recursos do sistema e duração da bateria desnecessariamente, permitindo que ela seja executada quando o temporizador tiver expirado e a Internet estiver disponível.
 
-**Observação**  É possível integrar várias condições chamando AddCondition muitas vezes no mesmo [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Tome cuidado para não adicionar condições conflitantes, como **UserPresent**e **UserNotPresent**.
+
+            **Observação**  É possível integrar várias condições chamando AddCondition muitas vezes no mesmo [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Tome cuidado para não adicionar condições conflitantes, como **UserPresent**e **UserNotPresent**.
 
  
 
@@ -81,9 +82,11 @@ Registrar sua tarefa em segundo plano
 
 O código a seguir registra a tarefa e armazena o objeto BackgroundTaskRegistration resultante: [!div class="tabbedCodeSnippets"]
 
-> **Observação** Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano. Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
+> 
+            **Observação** Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano. Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
-## **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro.
+## 
+            **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro.
 
 Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
 
@@ -155,19 +158,22 @@ Para adicionar várias condições, seu aplicativo faz várias chamadas ao méto
 ## Essas chamadas devem ser feitas antes que o registro da tarefa se torne efetivo.
 
 
-> **Observação**  Tome cuidado para não adicionar condições conflitantes a uma tarefa em segundo plano. O trecho a seguir mostra várias condições no contexto de criação e registro de uma tarefa em segundo plano:
+> 
+            **Observação**  Tome cuidado para não adicionar condições conflitantes a uma tarefa em segundo plano. O trecho a seguir mostra várias condições no contexto de criação e registro de uma tarefa em segundo plano:
 
 > [!div class="tabbedCodeSnippets"] Comentários
 
  
 
-## **Observação**  Escolha as condições certas para a sua tarefa em segundo plano, de forma que ela apenas seja executada quando for necessária, e não em situações nas quais ela não irá funcionar.
+## 
+            **Observação**  Escolha as condições certas para a sua tarefa em segundo plano, de forma que ela apenas seja executada quando for necessária, e não em situações nas quais ela não irá funcionar.
 
 
 ****
 
 * [Confira [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para ver descrições das diferentes condições de tarefas em tela de fundo.](create-and-register-a-background-task.md)
-* [**Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](declare-background-tasks-in-the-application-manifest.md)
+* [
+            **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](declare-background-tasks-in-the-application-manifest.md)
 * [Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
 * [Tópicos relacionados](monitor-background-task-progress-and-completion.md)
 * [Criar e registrar uma tarefa em segundo plano](register-a-background-task.md)

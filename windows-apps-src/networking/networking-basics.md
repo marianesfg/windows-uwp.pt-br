@@ -5,7 +5,7 @@ title: "Noções básicas de rede"
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 96c6617595b49c48ee77bec87b6aa87ae1634ed9
+ms.openlocfilehash: 221c3278f8561fa322257714f67bd2985fa04f22
 
 ---
 
@@ -67,12 +67,8 @@ Um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br2
 
 Há duas maneiras de proteger uma conexão [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) com SSL/TLS:
 
--   [
-              **ConnectAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701504) - estabeleça a conexão inicial com um serviço de rede e negocie imediatamente para usar SSL/TLS em todas as comunicações.
--   [
-              **UpgradeToSslAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/br226922) - conecte inicialmente a um serviço de rede sem criptografia. O aplicativo pode enviar ou receber dados. Feito isso, atualize a conexão para usar SSL/TLS em todas as comunicações adicionais.
+-   [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) - estabeleça a conexão inicial com um serviço de rede e negocie imediatamente para usar SSL/TLS em todas as comunicações.
+-   [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) - conecte inicialmente a um serviço de rede sem criptografia. O aplicativo pode enviar ou receber dados. Feito isso, atualize a conexão para usar SSL/TLS em todas as comunicações adicionais.
 
 O valor SocketProtectionLevel que você fornece define o nível de proteção mínimo que está disposto a permitir. No entanto, o nível de proteção eventual da conexão estabelecida é determinado em um processo de negociação entre ambos os pontos de extremidade da conexão. O resultado pode ser um nível de proteção mais seguro do que aquele especificado, se o outro ponto de extremidade exigir um nível superior. A força da SSL efetivamente negociada usando [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) ou [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) pode ser determinada obtendo-se a propriedade [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) depois que a operação assíncrona for concluída com êxito.
 
@@ -80,16 +76,10 @@ O valor SocketProtectionLevel que você fornece define o nível de proteção m�
 
 ### Usar ConnectAsync
 
-[
-              **ConnectAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701504) pode ser usado para estabelecer a conexão inicial com um serviço de rede e, em seguida, negociar imediatamente para usar SSL/TLS em todas as comunicações. Há dois métodos **ConnectAsync** que dão suporte a um parâmetro *protectionLevel*:
+[**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) pode ser usado para estabelecer a conexão inicial com um serviço de rede e, em seguida, negociar imediatamente para usar SSL/TLS em todas as comunicações. Há dois métodos **ConnectAsync** que dão suporte a um parâmetro *protectionLevel*:
 
--   [
-              **ConnectAsync(EndpointPair, SocketProtectionLevel)**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701511) - inicia uma operação assíncrona em um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para conectar a um destino de rede remoto especificado como um objeto [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953) e um [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
--   [
-              **ConnectAsync(HostName, String, SocketProtectionLevel)**
-            ](https://msdn.microsoft.com/library/windows/apps/br226916) - inicia uma operação assíncrona em um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para conectar a um destino remoto especificado por um nome de host remoto, um nome de serviço remoto e um [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
+-   [**ConnectAsync(EndpointPair, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/hh701511) - inicia uma operação assíncrona em um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para se conectar a um destino de rede remoto especificado como um objeto [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953) e um [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
+-   [**ConnectAsync(HostName, String, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/br226916) - inicia uma operação assíncrona em um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para se conectar a um destino remoto especificado por um nome de host remoto, um nome de serviço remoto e um [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
 
 Se o parâmetro *protectionLevel* é definido como **Windows.Networking.Sockets.SocketProtectionLevel.Ssl** ao chamar um dos métodos [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) acima, o [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) será estabelecido para usar SSL/TLS para criptografia. Esse valor exige criptografia e jamais permite o uso de uma criptografia NULL.
 
@@ -434,6 +424,6 @@ As APIs de rede dão suporte a métodos diferentes para recuperar essas informa�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

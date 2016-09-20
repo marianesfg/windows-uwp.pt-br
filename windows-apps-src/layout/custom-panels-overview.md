@@ -10,7 +10,7 @@ label: XAML custom panels overview
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 8fba13d28f885d89d5b115eebf1a2e75abb8c890
+ms.openlocfilehash: aebe6b873fff2a4284f03ca519f998ded742f677
 
 ---
 
@@ -71,28 +71,14 @@ O layout candidato deve caber dentro da janela do aplicativo atual. Caso contrá
 
 Uma grande parte do que faz o trabalho de sistema de layout funcionar é que qualquer elemento com base em [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) já tem um pouco do próprio comportamento inerente ao agir como um filho em um contêiner. Por exemplo, existem várias APIs de **FrameworkElement** que informam o comportamento de layout ou são necessárias para fazer o trabalho de layout. São elas:
 
--   [
-              **DesiredSize**
-            ](https://msdn.microsoft.com/library/windows/apps/br208921) (na verdade uma propriedade [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911))
--   [
-              **ActualHeight**
-            ](https://msdn.microsoft.com/library/windows/apps/br208707) e [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)
--   [
-              **Height**
-            ](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
+-   [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) (na verdade uma propriedade [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911))
+-   [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) e [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)
+-   [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
 -   [**Margem**](https://msdn.microsoft.com/library/windows/apps/br208724)
--   [
-              Evento **LayoutUpdated**
-            ](https://msdn.microsoft.com/library/windows/apps/br208722)
--   [
-              **HorizontalAlignment**
-            ](https://msdn.microsoft.com/library/windows/apps/br208720) e [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
--   [
-              Métodos **ArrangeOverride**
-            ](https://msdn.microsoft.com/library/windows/apps/br208711) e [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
--   [
-              Métodos **Arrange**
-            ](https://msdn.microsoft.com/library/windows/apps/br208914) e [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952): eles têm implementações nativas definidas no nível [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), que manipulam a ação de layout de nível elemento
+-   Evento [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722)
+-   [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720) e [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
+-   Métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) e [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
+-   [Métodos **Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) e [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952): eles têm implementações nativas definidas no nível [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), que tratam a ação de layout de nível elemento
 
 ## **MeasureOverride**
 
@@ -187,15 +173,9 @@ Uma razão pela qual a distinção entre controle e painel é importante é a Au
 
 Existem outras APIs que fazem parte do sistema de layout, mas não são declaradas pelo [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). Você pode utilizá-las em uma implementação do painel ou em um controle personalizado que utiliza painéis.
 
--   [
-              **UpdateLayout**
-            ](https://msdn.microsoft.com/library/windows/apps/br208989), [**InvalidateMeasure**](https://msdn.microsoft.com/library/windows/apps/br208930) e [**InvalidateArrange**](https://msdn.microsoft.com/library/windows/apps/br208929) são métodos que iniciam um cálculo de layout. **InvalidateArrange** pode não disparar um cálculo de medição, mas os outros dois fazem isso. Nunca chame esses métodos de dentro de um método de substituição de layout, pois é quase certo que eles vão causar um loop de layout. O código de controle normalmente também não precisa chamá-los. A maioria dos aspectos do layout é acionada automaticamente ao detectar alterações nas propriedades de layout definidas pelo quadro como [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) e assim por diante.
--   [
-              **LayoutUpdated**
-            ](https://msdn.microsoft.com/library/windows/apps/br208722) é um evento que aciona quando algum aspecto do layout do elemento é alterado. Isso não é específico para painéis; o evento é definido por [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706).
--   [
-              **SizeChanged**
-            ](https://msdn.microsoft.com/library/windows/apps/br208742) é um evento que é acionado somente depois que os cálculos do layout são finalizados e indicam que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) ou [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) foram alterados como resultado. Esse é outro evento [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706). Há casos em que [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) dispara, mas **SizeChanged** não dispara. Por exemplo o conteúdo interno pode ser reorganizado, mas o tamanho dos elementos não é alterado.
+-   [**UpdateLayout**](https://msdn.microsoft.com/library/windows/apps/br208989), [**InvalidateMeasure**](https://msdn.microsoft.com/library/windows/apps/br208930) e [**InvalidateArrange**](https://msdn.microsoft.com/library/windows/apps/br208929) são métodos que iniciam um cálculo de layout. **InvalidateArrange** pode não disparar um cálculo de medição, mas os outros dois fazem isso. Nunca chame esses métodos de dentro de um método de substituição de layout, pois é quase certo que eles vão causar um loop de layout. O código de controle normalmente também não precisa chamá-los. A maioria dos aspectos do layout é acionada automaticamente ao detectar alterações nas propriedades de layout definidas pelo quadro como [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) e assim por diante.
+-   [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) é um evento que é acionado quando algum aspecto do layout do elemento é alterado. Isso não é específico para painéis; o evento é definido por [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706).
+-   [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br208742) é um evento que é acionado somente depois que os cálculos do layout são finalizados e indicam que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) ou [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) foram alterados como resultado. Esse é outro evento [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706). Há casos em que [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) dispara, mas **SizeChanged** não dispara. Por exemplo o conteúdo interno pode ser reorganizado, mas o tamanho dos elementos não é alterado.
 
 
 ## Tópicos relacionados
@@ -214,6 +194,6 @@ Existem outras APIs que fazem parte do sistema de layout, mas não são declarad
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

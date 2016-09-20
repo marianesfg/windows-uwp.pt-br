@@ -5,7 +5,7 @@ description: "A Plataforma Universal do Windows (UWP) com jogos em DirectX não 
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a8c8cb8fa8ccec54af4c824d23bc26cb91db7cf7
+ms.openlocfilehash: 78e2bbcc4c9182b09138da457c839466b49ac31a
 
 ---
 
@@ -27,7 +27,7 @@ Primeiramente, vejamos os namespaces do Windows Runtime que você deve incluir (
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **Observação**   Se você não estiver desenvolvendo um aplicativo UWP, use os componentes de interface do usuário fornecidos nas bibliotecas específicas de JavaScript ou XAML e os namespaces dos tipos fornecidos nesses namespaces.
+> **Observação**   Se você não estiver desenvolvendo um aplicativo UWP, use os componentes da interface do usuário fornecidos nas bibliotecas específicas de JavaScript ou XAML e os namespaces em vez dos tipos fornecidos nesses namespaces.
 
  
 
@@ -82,18 +82,14 @@ Em resumo, o objeto de aplicativo fornece uma fábrica de provedores de visualiz
 ## Comportamentos e propriedades do CoreApplicationView
 
 
-[
-              **CoreApplicationView**
-            ](https://msdn.microsoft.com/library/windows/apps/br225017) representa a exibição atual do aplicativo. O singleton do aplicativo cria a exibição do aplicativo durante a inicialização, mas a exibição se mantém inativa até ser ativada. Você pode obter o [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que mostra a exibição acessando a propriedade [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) nele, e pode manipular eventos de ativação e desativação para a exibição registrando delegados com o evento [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018).
+[**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) representa a exibição atual do aplicativo. O singleton do aplicativo cria a exibição do aplicativo durante a inicialização, mas a exibição se mantém inativa até ser ativada. Você pode obter o [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que mostra a exibição acessando a propriedade [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) nele, e pode manipular eventos de ativação e desativação para a exibição registrando delegados com o evento [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018).
 
 ## Comportamentos e propriedades do CoreWindow
 
 
 A janela pai, que é uma instância [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), é criada e passada para o provedor de modo de exibição quando o objeto do aplicativo é inicializado. Se o aplicativo tem uma janela para ser exibida, ele o fará. Caso contrário, ele simplesmente inicializará a exibição.
 
-[
-             O **CoreWindow**
-            ](https://msdn.microsoft.com/library/windows/apps/br208225) oferece vários eventos específicos a entradas e comportamentos de janela básicos. Você pode tratar desses eventos registrando seus próprios delegados com eles.
+[**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) oferece vários eventos específicos a entradas e comportamentos de janela básicos. Você pode tratar desses eventos registrando seus próprios delegados com eles.
 
 Você também pode obter o despachante do evento de janela para a janela acessando a propriedade [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264), que fornece uma instância do [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211).
 
@@ -160,6 +156,6 @@ De forma geral, quando for projetar o seu aplicativo UWP, use o [**CoreDispatche
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

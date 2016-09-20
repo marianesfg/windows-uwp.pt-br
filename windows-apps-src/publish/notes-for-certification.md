@@ -3,7 +3,6 @@ author: jnHs
 Description: "Ao enviar seu aplicativo, você tem a opção de usar a página Notas para certificação para fornecer informações adicionais aos testadores de certificação. Essas informações podem ajudar a garantir que seu aplicativo seja testado corretamente."
 title: "Notas para certificação"
 ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 02a0f17fef730da305f5dfb24c834b53045e3eb8
 

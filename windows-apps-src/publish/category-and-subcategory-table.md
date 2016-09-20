@@ -3,7 +3,6 @@ author: jnHs
 Description: A listagem do aplicativo na categoria e subcategoria corretas ajuda os clientes a encontrarem o aplicativo e a saber mais sobre ele.
 title: Tabela de categoria e subcategoria
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 9f9f5da100109af5dc38f7ffbc3cadca842b1214
 
@@ -16,7 +15,8 @@ A listagem do aplicativo na categoria e subcategoria corretas ajuda os clientes 
 
 Escolha a categoria que melhor descreve seu aplicativo. Em seguida, escolha uma subcategoria, se disponível.
 
-> **Observação**  Se você escolher **Jogos** como sua categoria, será necessária uma subcategoria.
+> 
+            **Observação**  Se você escolher **Jogos** como sua categoria, será necessária uma subcategoria.
 
  
 
@@ -59,7 +59,8 @@ Apenas algumas categorias possuem subcategorias. Lembre-se que só é possível 
 | Utilitários + ferramentas           | Backup + gerenciar <br> Gerenciadores de arquivos                |
  
 
-> **Observação**  Para saber mais sobre as categorias usadas na Windows Store para Windows 8.1 e versões anteriores e na Loja do Windows Phone, e como elas se relacionam com a lista de categorias acima, consulte [Como seu aplicativo aparece na Loja para clientes do Windows 10](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
+> 
+            **Observação**  Para saber mais sobre as categorias usadas na Windows Store para Windows 8.1 e versões anteriores e na Loja do Windows Phone, e como elas se relacionam com a lista de categorias acima, consulte [Como seu aplicativo aparece na Loja para clientes do Windows 10](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
 
 
 

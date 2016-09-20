@@ -32,7 +32,8 @@ A lista a seguir descreve os novos recursos e alterações feitas à Extensão d
 
     Você pode usar um objeto PlayReady com vários identificadores-chave (KeyIDs) como no Windows 8.1 ou [dados de modelo de descriptografia de conteúdo (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) com várias KeyIDs.
 
-    **Observação**  No Windows 10, vários identificadores-chave têm suporte em &lt;KeyID&gt; em CDMData.
+    
+            **Observação**  No Windows 10, vários identificadores-chave têm suporte em &lt;KeyID&gt; em CDMData.
 
      
 
@@ -68,7 +69,8 @@ Para usar hardware DRM do PlayReady, o seu aplicativo Web JavaScript deve usar o
 
 Ocasionalmente, não há suporte para parte do conteúdo no DRM de hardware. Não há suporte para conteúdo Cocktail no DRM de hardware. Se você deseja reproduzir conteúdo Cocktail, recuse o DRM de hardware. Alguns hardwares DRM darão suporte HEVC e outros, não. Se você deseja reproduzir conteúdo HEVC e o hardware DRM não dá suporte a ele, você terá que recusar também.
 
-**Observação**  Para determinar se o conteúdo HEVC tem suporte, depois de instanciar `com.microsoft.playready`, use o método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
+
+            **Observação**  Para determinar se o conteúdo HEVC tem suporte, depois de instanciar `com.microsoft.playready`, use o método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
 
  
 
@@ -259,7 +261,8 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 }
 ```
 
-**Observação**  O `<SessionID>B64 encoded session ID</SessionID>` dos dados de parada segura na amostra acima pode ser um (\*), que é um caractere curinga para todas as sessões de parada segura registradas. Ou seja, a marcação **SessionID** pode ser uma sessão específica ou um caractere curinga (\*) para selecionar todas as sessões de parada segura.
+
+            **Observação**  O `<SessionID>B64 encoded session ID</SessionID>` dos dados de parada segura na amostra acima pode ser um (\*), que é um caractere curinga para todas as sessões de parada segura registradas. Ou seja, a marcação **SessionID** pode ser uma sessão específica ou um caractere curinga (\*) para selecionar todas as sessões de parada segura.
 
 ## Considerações sobre a programação de Extensão de mídia criptografada
 

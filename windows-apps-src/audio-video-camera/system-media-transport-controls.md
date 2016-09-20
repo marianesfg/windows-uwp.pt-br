@@ -2,52 +2,37 @@
 author: drewbatgit
 ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
 description: "A classe SystemMediaTransportControls permite que seu aplicativo use os controles de transporte de mídia do sistema que estão integrados ao Windows e atualize os metadados que os controles exibem sobre a mídia que seu aplicativo está reproduzindo atualmente."
-title: "Controles de transporte de mídia do sistema"
+title: "Controle manual dos controles de transporte de mídia do sistema"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5a94ce4112f7662d3fe9bf3c8a7d3f60b1569931
+ms.sourcegitcommit: 2cf432bc9d6eb0e564b6d6aa7fdbfd78c7eef272
+ms.openlocfilehash: 6643f6bee55c1c9631ca20d2fe7eb6ac1c5ae3e2
 
 ---
 
-# Controles de transporte de mídia do sistema
+# Controle manual dos controles de transporte de mídia do sistema
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
+A partir do Windows 10, versão 1607, os aplicativos UWP que usam a classe [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) para reproduzir mídia automaticamente são integrados com os controles de transporte do sistema mídia (SMTC) por padrão. Essa é a maneira recomendada de interagir com o SMTC para a maioria dos cenários. Para obter mais informações sobre como personalizar a integração padrão do SMTC com **MediaPlayer**, consulte [Integrar com Controles de transporte de mídia do sistema](integrate-with-systemmediatransportcontrols.md).
 
-A classe [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) permite que seu aplicativo use os controles de transporte de mídia do sistema que estão integrados ao Windows e atualize os metadados que os controles exibem sobre a mídia que seu aplicativo está reproduzindo atualmente.
-
-Os controles de transporte do sistema são diferentes dos controles de transporte no objeto [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). Esses controles de transporte aparecem quando você pressiona teclas de mídia no hardware, como o controle de volume nos fones de ouvido ou os botões de mídia nos teclados. Se o usuário pressionar a tecla de pausa em um teclado e seu aplicativo der suporte a [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677), seu aplicativo será notificado e você poderá tomar a medida apropriada.
-
-Seu aplicativo também pode atualizar as informações de mídia, como o título da música e a imagem em miniatura mostrada pelos [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677).
-
-**Observação**  
-A [Amostra UWP de controles de transporte de mídia do sistema](http://go.microsoft.com/fwlink/?LinkId=619488) implementa o código abordado nesta visão geral. Você pode baixar a amostra para ver o código usado no contexto ou usá-lo como ponto de partida para seu próprio aplicativo.
+Existem alguns cenários em que talvez você precise implementar o controle manual do SMTC. Entre eles, se você estiver usando um [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) para controlar a reprodução de um ou mais media players. Ou se você estiver usando vários media players e apenas deseja ter uma instância de SMTC para seu aplicativo. Você deverá controlar o SMTC manualmente se estiver usando [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaElement) para reproduzir mídia.
 
 ## Configurar os controles de transporte
+Se você estiver usando o **MediaPlayer** para reproduzir mídia, poderá obter uma instância da classe [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.SystemMediaTransportControls) acessando a propriedade [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.SystemMediaTransportControls). Se você pretende controlar manualmente o SMTC, deverá desabilitar a integração automática fornecida pelo **MediaPlayer** definindo a propriedade [**CommandManager.IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) como false.
 
-No arquivo XAML da página, defina um [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) que será controlado pelos controles de transporte de mídia do sistema. Os eventos [**CurrentStateChanged**](https://msdn.microsoft.com/library/windows/apps/br227375) e [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/br227394) são usados para atualizar os controles de transporte de mídia do sistema e serão abordados neste artigo.
+[!code-cs[InitSMTCMediaPlayer](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetInitSMTCMediaPlayer)]
 
-[!code-xml[MediaElementSystemMediaTransportControls](./code/SMTCWin10/cs/MainPage.xaml#SnippetMediaElementSystemMediaTransportControls)]
+Você também pode obter uma instância dos [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) chamando [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708). Você deverá obter o objeto com esse método se estiver usando **MediaElement** para reproduzir mídia.
 
-Adicione um botão ao arquivo XAML que permita que o usuário selecione um arquivo para reproduzir.
-
-[!code-xml[OpenButton](./code/SMTCWin10/cs/MainPage.xaml#SnippetOpenButton)]
-
-Em sua página code-behind, adicione diretivas de uso aos namespaces a seguir.
-
-[!code-cs[Namespace](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetNamespace)]
-
-Adicione um manipulador de clique de botão que use um [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para permitir que o usuário selecione um arquivo e chame [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) para torná-lo o arquivo ativo para o **MediaElement**.
-
-[!code-cs[OpenMediaFile](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetOpenMediaFile)]
-
-Obtenha uma instância dos [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) chamando [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708).
+[!code-cs[InitSMTCMediaElement](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetInitSMTCMediaElement)]
 
 Ative os botões que seu aplicativo usará configurando a propriedade "is enabled" correspondente do objeto **SystemMediaTransportControls**, como [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714), [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713), [**IsNextEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278712) e [**IsPreviousEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278715). Veja uma lista completa de controles disponíveis na documentação de referência aos **SystemMediaTransportControls**.
 
+[!code-cs[EnableContols](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetEnableContols)]
+
 Registre um manipulador para o evento [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706) para receber notificações quando o usuário pressionar um botão.
 
-[!code-cs[SystemMediaTransportControlsSetup](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsSetup)]
+[!code-cs[RegisterButtonPressed](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetRegisterButtonPressed)]
 
 ## Manipular pressionamentos de botões de controles de transporte de mídia do sistema
 
@@ -83,9 +68,7 @@ Os controles de transporte do sistema exibem informações sobre a linha do temp
 
 -   Você deve fornecer um valor para [**StartTime**](https://msdn.microsoft.com/library/windows/apps/mt218751), [**EndTime**](https://msdn.microsoft.com/library/windows/apps/mt218747) e [**Position**](https://msdn.microsoft.com/library/windows/apps/mt218755) para que os controles do sistema mostrem uma linha do tempo para o item em execução.
 
--   [
-              **MinSeekTime**
-            ](https://msdn.microsoft.com/library/windows/apps/mt218749) e [**MaxSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218748) permitem que você especifique o intervalo na linha do tempo que o usuário pode buscar. Um cenário típico para isso é permitir que os provedores de conteúdo incluam pausas para anúncios em suas mídias.
+-   [**MinSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218749) e [**MaxSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218748) permitem que você especifique o intervalo na linha do tempo que o usuário pode buscar. Um cenário típico para isso é permitir que os provedores de conteúdo incluam pausas para anúncios em suas mídias.
 
     Você deve configurar [**MinSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218749) e [**MaxSeekTime**](https://msdn.microsoft.com/library/windows/apps/mt218748) para que a [**PositionChangeRequest**](https://msdn.microsoft.com/library/windows/apps/mt218755) seja lançada.
 
@@ -114,22 +97,25 @@ No manipulador do evento, certifique-se primeiramente de que o valor solicitado 
 
 ## Usar os controles de transporte de mídia do sistema para áudio em segundo plano
 
-Para usar os controles de transporte de mídia do sistema para áudio em segundo plano, você deve ativar os botões de reprodução e pausa configurando [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714) e [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713) como true. O aplicativo também deve manipular o evento [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706).
+Se você não estiver usando a integração de SMTC automática fornecida pelo **MediaPlayer** manualmente, deverá efetuar a integração com o SMTC para habilitar o áudio em segundo plano. No mínimo, seu aplicativo deverá habilitar os botões de reprodução e pausa definindo [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714) e [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713) como true. O aplicativo também deve manipular o evento [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706). Se seu aplicativo não cumprir esses requisitos, reprodução de áudio será interrompida quando seu aplicativo for movido para segundo plano.
 
-Para obter uma instância dos [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) a partir da tarefa em segundo plano do aplicativo, você deve usar [**BackgroundMediaPlayer.Current.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635), em vez de [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708), que só pode ser usado em seu aplicativo em primeiro plano.
+Aplicativos que usam o novo modelo de um processo para áudio em segundo plano devem obter uma instância do [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) chamando [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708). Aplicativos que usam o modelo de dois processos herdado para áudio em segundo plano devem usar [**BackgroundMediaPlayer.Current.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635) para acessar o SMTC de seu processo em segundo plano.
 
-Para obter informações sobre como reproduzir áudio em segundo plano, consulte [Áudio em segundo plano](background-audio.md).
+Para obter informações sobre como reproduzir áudio em segundo plano, consulte [Reproduzir mídia em segundo plano](background-audio.md).
+
+## Tópicos relacionados
+* [Reprodução de mídia](media-playback.md)
+* [Integrar aos Controles de transporte de mídia do sistema](integrate-with-systemmediatransportcontrols.md) 
+* [Exemplo de transporte de mídia do sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
 
  
 
- 
 
 
 
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

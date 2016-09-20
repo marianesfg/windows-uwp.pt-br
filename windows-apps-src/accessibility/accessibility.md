@@ -5,7 +5,6 @@ ms.assetid: C89D79C2-B830-493D-B020-F3FF8EB5FFDD
 title: Acessibilidade
 label: Accessibility
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: 3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3
 
@@ -20,7 +19,8 @@ Apresenta conceitos de acessibilidade que se relacionam a aplicativos da Platafo
 A acessibilidade envolve proporcionar experiências que disponibilizem seu aplicativo para pessoas que usam a tecnologia em uma ampla variedade de ambientes e abordam sua interface do usuário com uma variedade de experiências e necessidades. Para algumas situações, os requisitos de acessibilidade são impostos por lei. No entanto, é uma boa ideia resolver os problemas de acessibilidade independentemente dos requisitos legais, para que seus aplicativos tenham a maior audiência possível. Há também uma declaração da Windows Store em relação à acessibilidade para o seu aplicativo.
 
 > [!NOTE]
-> Declarar o aplicativo como acessível somente é relevante para aplicativos da Windows Store.
+> 
+            [!NOTE] Declarar o aplicativo como acessível somente é relevante para aplicativos da Windows Store.
 
 | Artigo | Descrição |
 |---------|-------------|

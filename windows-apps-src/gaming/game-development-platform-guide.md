@@ -3,7 +3,6 @@ author: mtoepke
 title: Tecnologias de jogos para aplicativos UWP (Plataforma Universal do Windows)
 description: "Neste guia, você aprenderá sobre as tecnologias disponíveis para o desenvolvimento de jogos UWP (Plataforma Universal do Windows)."
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3c7807d0b46a32bfe90c79b7eee3111039ca94ab
 

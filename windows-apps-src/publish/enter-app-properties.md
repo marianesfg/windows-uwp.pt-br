@@ -3,7 +3,6 @@ author: jnHs
 Description: "A página Propriedades do aplicativo do processo de envio de aplicativo permite definir a categoria do seu aplicativo e indicar as preferências de hardware ou outras declarações."
 title: Insira as propriedades do aplicativo
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 8861c13478adbe2010a164126c56f555375e0472
 
@@ -13,7 +12,8 @@ ms.openlocfilehash: 8861c13478adbe2010a164126c56f555375e0472
 
 A página **Propriedades do aplicativo** do [processo de envio de aplicativo](app-submissions.md) permite definir a categoria do seu aplicativo e indicar as preferências de hardware ou outras declarações. Aqui, nós o guiaremos pelas opções desta página e o que você deve considerar ao inserir essas informações.
 
-> **Observação**  Classificações etárias agora são uma página separada do processo de envio. Para saber mais, consulte [Classificações etárias](age-ratings.md).
+> 
+            **Observação**  Classificações etárias agora são uma página separada do processo de envio. Para saber mais, consulte [Classificações etárias](age-ratings.md).
 
 ## Categoria e subcategoria
 
@@ -30,11 +30,13 @@ Nesse caso, a Windows Store tentará detectar se o dispositivo de um cliente dá
 
 Isso não impede que as pessoas baixem seu aplicativo em dispositivos que não tenham o hardware apropriado, mas elas não poderão classificar ou analisar o aplicativo nesses dispositivos.
 
-> **Importante**  Com exceção da **Tela de toque**, esses avisos só são exibidos aos clientes em dispositivos Windows 10 que não tenham o(s) recurso(s) selecionado(s).
+> 
+            **Importante**  Com exceção da **Tela de toque**, esses avisos só são exibidos aos clientes em dispositivos Windows10 que não tenham o(s) recurso(s) selecionado(s).
 
 Além de fazer uma seleção aqui, recomendamos adicionar verificações de tempo de execução para o hardware especificado em seu aplicativo, uma vez que a Loja nem sempre pode detectar que o recurso selecionado está ausente no dispositivo do cliente e ele ainda poderá baixar seu aplicativo, mesmo se um aviso for exibido.
 
-> **Dica**  Se quiser impedir que seu aplicativo UWP seja baixado em um dispositivo que não atende aos requisitos mínimos de memória ou nível do DirectX, você pode designar os requisitos mínimos em um arquivo XML StoreManifest. Para saber mais, consulte [Esquema StoreManifest (Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335).
+> 
+            **Dica**  Se quiser impedir que seu aplicativo UWP seja baixado em um dispositivo que não atende aos requisitos mínimos de memória ou nível do DirectX, você pode designar os requisitos mínimos em um arquivo XML StoreManifest. Para saber mais, consulte [Esquema StoreManifest (Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335).
 
 ## Declarações de aplicativo
 

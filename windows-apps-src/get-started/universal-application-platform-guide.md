@@ -1,11 +1,11 @@
 ---
 author: TylerMSFT
 title: Guia para aplicativos UWP (Plataforma Universal do Windows)
-description: Neste guia, saiba mais sobre os aplicativos UWP (Plataforma Universal do Windows) que podem ser executados em uma ampla variedade de dispositivos.
+description: Saiba mais sobre os aplicativos UWP (Plataforma Universal do Windows) que podem ser executados em uma ampla variedade de dispositivos.
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 4ad8dc5883b7edafa2c2579d3733eafba0b9cc1f
-ms.openlocfilehash: 8f4e906c9f1c685a5f6aeebd5fe0ebcc96ff9a7c
+ms.sourcegitcommit: 2df873ad451e2bb1196a1ce42e3fcd40f8c3ac8e
+ms.openlocfilehash: 925db2c5242eb49229f41298f1db4e2653f3499d
 
 ---
 
@@ -34,7 +34,7 @@ Como seu aplicativo UWP é executado em uma ampla variedade de dispositivos com 
 
 Aplicativos do Windows 8.1 e Windows Phone 8.1 são executados em um SO (sistema operacional): Windows ou Windows Phone. Com o Windows 10 não é mais preciso focar em um sistema operacional; em vez disso, você direciona seu aplicativo para uma ou mais famílias de dispositivos. Uma família de dispositivos identifica as APIs, as características do sistema e os comportamentos esperados entre dispositivos dentro da família de dispositivos. Ela também determina o conjunto de dispositivos nos quais seu aplicativo pode ser instalado na Loja. Aqui está a hierarquia de família de dispositivos.
 
-![famílias de dispositivos](images/devicefamilytree.png)
+![famílias de dispositivos](images/device-family-tree.png)
 
 Uma família de dispositivos é um conjunto de APIs reunidas que recebe um nome e um número de versão. Uma família de dispositivos é a base de um sistema operacional. Computadores executam a sistema operacional, que é baseado em uma família de dispositivos desktops. Telefones, tablets e etc., executam o sistema operacional móvel, que é baseado na família de dispositivos móveis. E assim em diante.
 
@@ -51,6 +51,8 @@ A decisão sobre qual família de dispositivos (ou famílias) será destinado se
 -   O conjunto de dispositivos em que seu aplicativo pode ser instalado a partir da Loja (e, consequentemente, os fatores de forma que você precisa considerar).
 
 Há dois consequências principais de fazer uma escolha de família de dispositivos: a superfície de API que pode ser chamada incondicionalmente pelo aplicativo e o número de dispositivos que o aplicativo pode acessar. Esses dois fatores envolvem as compensações estão inversamente relacionados. Por exemplo, um aplicativo UWP é um aplicativo especificamente direcionado à família de dispositivos universais e consequentemente está disponível para todos os dispositivos. Um aplicativo destinado à família de dispositivos universais pode pressupor a presença de apenas as APIs da família de dispositivos universais (porque é a qual ele se destina). Outras APIs devem ser chamadas condicionalmente. Além disso, esse aplicativo deve ter uma interface de usuário altamente adaptável e recursos de entrada abrangentes porque ele pode ser executado em uma ampla variedade de dispositivos. Um aplicativo móvel do Windows é um aplicativo especificamente direcionado à família de dispositivo móvel e está disponível para dispositivos cujo sistema operacional é baseado na família de dispositivos móveis (o que inclui telefones, tablets e dispositivos semelhantes). Um aplicativo de família de dispositivo móvel pode pressupor a presença de todas as APIs na família de dispositivos móveis e sua interface do usuário tem que ser moderadamente adaptável. Um aplicativo destinado à família de dispositivo IoT pode ser instalado apenas em dispositivos IoT e pode pressupor a presença de todas as APIs na família de dispositivos IoT. Esse aplicativo pode ser muito especializado em sua interface do usuário e recursos de entrada porque você sabe que ele será executado apenas em um tipo específico de dispositivo.
+
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-UWP-and-Device-Families/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
 Aqui estão algumas considerações para ajudá-lo a decidir qual família de dispositivo se focar:
 
@@ -103,9 +105,7 @@ Para ajudá-lo a adaptar o layout da interface do usuário geral com base na qua
 
 ### Projetar a interface do usuário adaptável com os painéis adaptáveis
 
-Os painéis de layout especificam as posições e tamanhos para seus filhos, dependendo do espaço disponível. Por exemplo, o [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) chama seus filhos de forma sequencial (horizontal ou verticalmente). 
-              [
-              **Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) é como uma grade CSS que coloca seus filhos em células.
+Os painéis de layout especificam as posições e tamanhos para seus filhos, dependendo do espaço disponível. Por exemplo, o [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) chama seus filhos de forma sequencial (horizontal ou verticalmente). [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) é como uma grade CSS que coloca seus filhos em células.
 
 O novo [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/dn879546) implementa um estilo de layout que é definido pelas relações entre os elementos filho. Ele deve ser usado na criação de layouts de aplicativo que podem se adaptar a mudanças de resolução de tela. O **RelativePanel** facilita o processo de reorganização de elementos definindo relações entre os elementos, o que permite criar uma interface do usuário mais dinâmica sem o uso de layouts aninhados.
 
@@ -185,15 +185,9 @@ Você pode criar um Aplicativo Universal do Windows usando controles universais 
 
 As seguintes APIs dão acesso à entrada:
 
--   
-              [
-              **CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) é uma nova API que permite consumir dados brutos no thread principal ou em um thread em segundo plano.
--   
-              [
-              **PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) unifica dados brutos de toque, mouse e caneta em um conjunto único, consistente, de interfaces e eventos que podem ser consumidos no thread principal ou no thread em segundo plano usando-se **CoreInput.**
--   
-              [
-              **PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) é uma API de dispositivo que dá suporte a recursos de dispositivo de consulta de maneira que você possa determinar quais modalidades de entrada estão disponíveis no dispositivo.
+-   [**CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) é uma nova API que permite consumir dados brutos no thread principal ou em um thread em segundo plano.
+-   [**PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) unifica dados brutos de toque, mouse e caneta em um conjunto único, consistente, de interfaces e eventos que podem ser consumidos no thread principal ou no thread em segundo plano usando-se **CoreInput.**
+-   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) é uma API de dispositivo que dá suporte a recursos de dispositivo de consulta de maneira que você possa determinar quais modalidades de entrada estão disponíveis no dispositivo.
 -   O novo controle XAML [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) e as APIs do Windows Runtime [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) permitem acessar dados de traço de tinta.
 
 ## Escrevendo código
@@ -263,8 +257,7 @@ Para obter a lista completa de APIs do Win32 disponíveis para aplicativos UWP, 
 
 Um Aplicativo Universal do Windows permite que você aproveite os recursos exclusivos do dispositivo no qual ele é executado. Seu aplicativo pode fazer uso de todo o poder de um dispositivo desktop, da interação natural de manipulação direta de um tablet (incluindo entrada por toque e caneta), da portabilidade e conveniência de dispositivos móveis, da capacidade de colaboração do [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365) e outros dispositivos que suportam aplicativos UWP.
 
-Um bom [projeto](http://go.microsoft.com/fwlink/?LinkId=258848) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, bem como será sua aparência e como vai funcionar. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. 
-              [Noções básicas de design](https://dev.windows.com/design) apresenta você ao design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://msdn.microsoft.com/library/windows/apps/dn958439) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../input-and-devices/device-primer.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
+Um bom [projeto](http://go.microsoft.com/fwlink/?LinkId=258848) é o processo de decisão sobre como os usuários vão interagir com seu aplicativo, bem como será sua aparência e como vai funcionar. A experiência do usuário desempenha uma função enorme em determinar o quão feliz as pessoas serão com seu aplicativo, portanto não economize nesta etapa. [Noções básicas de design](https://dev.windows.com/design) apresenta você ao design de um aplicativo Universal do Windows. Consulte a [Introdução aos aplicativos da Plataforma Universal do Windows (UWP) para os designers](https://msdn.microsoft.com/library/windows/apps/dn958439) para obter informações sobre como projetar aplicativos UWP que encantam seus usuários. Antes de começar a codificar, consulte a [cartilha de dispositivos](../input-and-devices/device-primer.md) para ajudá-lo a pensar sobre a experiência de interação quanto ao uso do seu aplicativo em todos os fatores forma diferentes de destino.
 
 ![dispositivos da plataforma Windows](images/1894834-hig-device-primer-01-500.png)
 
@@ -274,8 +267,7 @@ Além da interação em diferentes dispositivos, [planeje seu aplicativo](https:
 
 -   Considere como você pode dar suporte aos usuários na migração de um dispositivo para outro, selecionando onde eles pararam. Inclua [notificações](https://msdn.microsoft.com/library/windows/apps/mt187203) e [compras no aplicativo](https://msdn.microsoft.com/library/windows/apps/mt219684) em seu planejamento. Esses recursos devem funcionar em todos os dispositivos.
 
--   Projete o fluxo de trabalho usando [Noções básicas de design de navegação para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958438) para acomodar dispositivos móveis com tela pequena e grande. 
-              [Dispor a interface do usuário](https://msdn.microsoft.com/library/windows/apps/dn958435) para responder a diferentes tamanhos de tela e resoluções.
+-   Projete o fluxo de trabalho usando [Noções básicas de design de navegação para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958438) para acomodar dispositivos móveis com tela pequena e grande. [Dispor a interface do usuário](https://msdn.microsoft.com/library/windows/apps/dn958435) para responder a diferentes tamanhos de tela e resoluções.
 
 -   Considere se há recursos do seu aplicativo que não fazem sentido em uma tela pequena de dispositivo móvel. Também pode haver áreas que não fazem sentido em um computador desktop e exigem um dispositivo móvel para se destacar. Por exemplo, a maioria dos cenários em torno de [local](https://msdn.microsoft.com/library/windows/apps/mt219698) implica em um dispositivo móvel.
 
@@ -290,12 +282,8 @@ O novo painel unificado do Centro de Desenvolvimento do Windows permite que voc�
 
 Veja [Usando o painel do Centro de Desenvolvimento do Windows unificado](../publish/using-the-windows-dev-center-dashboard.md) para aprender a enviar seus aplicativos para publicação na Windows Store.
 
- 
-
- 
 
 
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,7 +3,6 @@ title: MACs, hashes e assinaturas
 description: "Esse artigo discute como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em aplicativos da Plataforma Universal do Windows (UWP) para detectar violação de mensagem."
 ms.assetid: E674312F-6678-44C5-91D9-B489F49C4D3C
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
 ms.openlocfilehash: d7c66d9ead6e3dbf750f1d058e311ef3c84a204f
 

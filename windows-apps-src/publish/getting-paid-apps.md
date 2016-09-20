@@ -3,7 +3,6 @@ author: jnHs
 Description: "Veja algumas informações importantes de que você precisará para garantir o recebimento de pagamentos pelos seus aplicativos e produtos no aplicativo (IAPs), além de lucros do Microsoft Advertising."
 title: Recebendo pagamento
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: b7c9bcf36aaee0344c6916fcc81aca189ef0f481
 
@@ -12,7 +11,8 @@ ms.openlocfilehash: b7c9bcf36aaee0344c6916fcc81aca189ef0f481
 # Recebendo pagamento
 Veja algumas informações importantes de que você precisará para garantir o recebimento de pagamentos pelos seus aplicativos e produtos no aplicativo (IAPs), além de lucros do Microsoft Advertising.
 
-> **Importante**  Antes de receber dinheiro pelas vendas de aplicativo na Windows Store, é necessário [definir sua conta de pagamento e preencher os formulários de tributos necessários](setting-up-your-payout-account-and-tax-forms.md).
+> 
+            **Importante**  Antes de receber dinheiro pelas vendas de aplicativo na Windows Store, é necessário [definir sua conta de pagamento e preencher os formulários de tributos necessários](setting-up-your-payout-account-and-tax-forms.md).
 
 ## Taxa da loja
 
@@ -26,7 +26,8 @@ A taxa da Windows Store é aplicada a todas as vendas de aplicativo recolhidas p
 
 A faixa de preço define o preço de venda em todos os países/regiões em que você decidir distribuir seu aplicativo. Você pode oferecer seu aplicativo gratuitamente ou pode especificar o preço que os clientes deverão pagar para comprá-lo. As faixas de preço começam em 0,99 USD, com incrementos adicionais (1,29 USD, 1,49 USD, 1,99 USD, e assim por diante). Os incrementos entre as faixas de preço aumentam conforme o preço fica mais alto.
 
-> **Observação**  Essas faixas de preço também se aplicam a qualquer IAP que você ofereça dentro do seu aplicativo.
+> 
+            **Observação**  Essas faixas de preço também se aplicam a qualquer IAP que você ofereça dentro do seu aplicativo.
 
 Cada faixa de preço tem um valor correspondente em cada uma das mais de 60 moedas oferecidas pela Loja. Nós usamos esses valores para ajudar você a vender seus aplicativos com um preço proporcional em todo o mundo. Porém, devido a alterações cambiais, o valor exato das vendas pode sofrer uma pequena variação de uma moeda para a outra.
 
@@ -48,7 +49,8 @@ Para colocar seus pagamentos em espera, acesse **Configurações da Conta**. Em 
 
 Depois de definir o status de espera de pagamento para **Ativado**, todos os pagamentos ficarão em espera até que você alterne novamente para **Desativado**. Quando fizer isso, você estará incluído no próximo ciclo de pagamento mensal (desde que tenham sido atingidos os limites de pagamento aplicáveis). Por exemplo, se você tem seus pagamentos em espera, mas gostaria de ter um pagamento gerado em junho, alterne o status de espera de pagamento para **Desativado** antes do final de maio.
 
-> **Importante** Sua seleção de **Status de espera de pagamento** aplica-se a **todas** as fontes de receita pagas através do Centro de Desenvolvimento do Windows (Windows Store, Microsoft Advertising, Azure Marketplace, etc.). Você não pode selecionar um status de espera de pagamento diferente para cada fonte de receita.
+> 
+            **Importante** Sua seleção de **Status de espera de pagamento** aplica-se a **todas** as fontes de receita pagas através do Centro de Desenvolvimento do Windows (Windows Store, Microsoft Advertising, Azure Marketplace, etc.). Você não pode selecionar um status de espera de pagamento diferente para cada fonte de receita.
 
 
  

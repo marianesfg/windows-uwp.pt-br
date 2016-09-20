@@ -3,7 +3,6 @@ title: Compartilhar certificados entre aplicativos
 description: "Os aplicativos da Plataforma Universal do Windows (UWP) que exigem autenticação segura além de uma combinação de ID de usuário e senha podem usar certificados na autenticação."
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
 
@@ -71,7 +70,8 @@ Agora que você já tem um ou mais serviços Web seguros, seus aplicativos podem
 
 Se não houver certificados cliente disponíveis, então o usuário precisará adicionar um certificado ao repositório de certificados. Você pode incluir código em seu aplicativo que permite que um usuário selecione um arquivo PFX que contenha um certificado cliente e, em seguida, importe esse certificado para o repositório de certificados cliente.
 
-**Dica**  Você pode usar makecert.exe para criar um arquivo PFX para usar com esse guia de início rápido. Para obter informações sobre como usar makecert.exe, consulte [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
+
+            **Dica**  Você pode usar makecert.exe para criar um arquivo PFX para usar com esse guia de início rápido. Para obter informações sobre como usar makecert.exe, consulte [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
 
  
 

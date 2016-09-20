@@ -27,9 +27,11 @@ Para aceitar anúncios da comunidade:
 
 1. Vá para a página **Monetização**&gt;**Monetizar com anúncios** no painel do Centro de Desenvolvimento do Windows.
 2. Na seção **Anúncios da comunidade**, marque a caixa **Mostrar anúncios da comunidade em meu aplicativo**.
-   > **Observação**  Depois de marcar ou desmarcar essa caixa, você não precisará republicar seu aplicativo para que as alterações entrem em vigor.
+   > 
+            **Observação**  Depois de marcar ou desmarcar essa caixa, você não precisará republicar seu aplicativo para que as alterações entrem em vigor.
 
-3. [Criar uma campanha publicitária](create-an-ad-campaign-for-your-app.md) para seu aplicativo. Para o tipo de campanha, selecione **Anúncios gratuitos da comunidade**.
+3. 
+            [Criar uma campanha publicitária](create-an-ad-campaign-for-your-app.md) para seu aplicativo. Para o tipo de campanha, selecione **Anúncios gratuitos da comunidade**.
 
 
 ## Tópicos relacionados

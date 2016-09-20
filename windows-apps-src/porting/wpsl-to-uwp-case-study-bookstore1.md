@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
 description: "Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Windows Phone Silverlight muito simples para um aplicativo Plataforma Universal do Windows (UWP) do Windows 10."
 title: Estudo de caso Windows Phone Silverlight para UWP, Bookstore1
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: dbffb4245efece2d39b4eba8979e323fd71626d0
 

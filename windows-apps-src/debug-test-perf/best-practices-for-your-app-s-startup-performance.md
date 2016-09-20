@@ -102,9 +102,11 @@ A janela [Live Visual Tree no Visual Studio](http://blogs.msdn.com/b/visualstudi
 
 ![Live Visual Tree.](images/live-visual-tree.png)
 
-**Use x:DeferLoadStrategy**. Recolher um elemento ou definir sua opacidade para 0 não impede que o elemento seja criado. Usar x:DeferLoadStrategy, você pode atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Essa é uma boa maneira de atrasar o processamento da interface do usuário que não é visível durante a tela de inicialização, para que você possa carregá-la quando necessário, ou como parte de uma definição de lógica atrasada. Para disparar o carregamento, você só precisa chamar FindName para o elemento. Para obter um exemplo e mais informações, consulte [Atributo x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785).
 
-**Virtualização**. Se houver conteúdo em lista ou de repetição em sua interface do usuário, é altamente recomendável que você use a virtualização da interface do usuário. Se a interface do usuário de lista não for virtualizada, você pagará o preço de criar todos os elementos com antecedência, e isso pode retardar a inicialização. Consulte [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md).
+            **Use x:DeferLoadStrategy**. Recolher um elemento ou definir sua opacidade para 0 não impede que o elemento seja criado. Usar x:DeferLoadStrategy, você pode atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Essa é uma boa maneira de atrasar o processamento da interface do usuário que não é visível durante a tela de inicialização, para que você possa carregá-la quando necessário, ou como parte de uma definição de lógica atrasada. Para disparar o carregamento, você só precisa chamar FindName para o elemento. Para obter um exemplo e mais informações, consulte [Atributo x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785).
+
+
+            **Virtualização**. Se houver conteúdo em lista ou de repetição em sua interface do usuário, é altamente recomendável que você use a virtualização da interface do usuário. Se a interface do usuário de lista não for virtualizada, você pagará o preço de criar todos os elementos com antecedência, e isso pode retardar a inicialização. Consulte [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md).
 
 O desempenho do aplicativo não envolve apenas o desempenho bruto, também envolve percepção. Alterar a ordem das operações para que os aspectos visuais ocorram primeiro comumente faz com que o usuário tenha a impressão de que o aplicativo é mais rápido. Os usuários considerarão o aplicativo carregado quando o conteúdo estiver na tela. Normalmente, os aplicativos precisam fazer várias coisas como parte da inicialização, e nem todas elas são necessárias para exibir a interface do usuário, então, essas partes devem ser atrasadas ou ter menor prioridade que a interface do usuário.
 
@@ -346,13 +348,15 @@ Se um aplicativo precisa de um determinado arquivo na inicialização, você pod
 
 O controle Frame fornece recursos de navegação.
 
-Ele oferece navegação para uma página (método Navigate), diário de navegação (propriedades BackStack/ForwardStack, método GoForward/GoBack), armazenamento de páginas em cache (Page.NavigationCacheMode) e suporte para serialização (método GetNavigationState). O desempenho com o qual devemos ficar atentos com o Frame envolve principalmente o registro no diário e o armazenamento de páginas em cache. **Registro de Frame no diário**. Quando você navega até uma página com Frame.Navigate(), uma PageStackEntry para a página atual é adicionada à coleção Frame.BackStack.
+Ele oferece navegação para uma página (método Navigate), diário de navegação (propriedades BackStack/ForwardStack, método GoForward/GoBack), armazenamento de páginas em cache (Page.NavigationCacheMode) e suporte para serialização (método GetNavigationState). O desempenho com o qual devemos ficar atentos com o Frame envolve principalmente o registro no diário e o armazenamento de páginas em cache. 
+            **Registro de Frame no diário**. Quando você navega até uma página com Frame.Navigate(), uma PageStackEntry para a página atual é adicionada à coleção Frame.BackStack.
 
 A PageStackEntry é relativamente pequena, mas não nenhum limite interno para o tamanho da coleção BackStack. Possivelmente, um usuário pode navegar em um loop e ampliar essa coleção indefinidamente. A PageStackEntry também inclui o parâmetro que foi passado para o método Frame.Navigate(). É recomendável que esse parâmetro seja um tipo primitivo serializável (como int ou string), para permitir que o método Frame.GetNavigationState() funcione.
 
 Mas esse parâmetro pode referenciar um objeto que envolva quantidades de conjuntos de trabalho mais significativas ou outros recursos, tornando cada entrada no BackStack muito mais cara. Por exemplo, você poderia usar um StorageFile como parâmetro e, consequentemente, o BackStack manteria um número indefinido de arquivos abertos.
 
-Portanto, é recomendável manter os parâmetros de navegação ao mínimo e limitar o tamanho do BackStack. O BackStack é um vetor padrão (IList em C#, Platform::Vector em C++/CX) e, portanto, pode ser cortado com a simples remoção de entradas. **Armazenamento de páginas em cache**.
+Portanto, é recomendável manter os parâmetros de navegação ao mínimo e limitar o tamanho do BackStack. O BackStack é um vetor padrão (IList em C#, Platform::Vector em C++/CX) e, portanto, pode ser cortado com a simples remoção de entradas. 
+            **Armazenamento de páginas em cache**.
 
 Por padrão, quando você navega para uma página com o método Frame.Navigate, uma nova instância da página é instanciada. Da mesma forma, se você retornar à página anterior com Frame.GoBack, uma nova instância da página anterior será alocada. O Frame, porém, oferece um cache de página opcional que pode evitar essas criações de instâncias. Para armazenar uma página em cache, use a propriedade Page.NavigationCacheMode. Definindo esse modo como Required forçará a página a ser armazenada em cache, definindo-a como Enabled permitirá que ela seja armazenada em cache.
 

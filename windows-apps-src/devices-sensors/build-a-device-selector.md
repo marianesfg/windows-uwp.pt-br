@@ -3,7 +3,6 @@ author: DBirtolo
 ms.assetid: D06AA3F5-CED6-446E-94E8-713D98B13CAA
 title: Criar um seletor de dispositivo
 description: "Construir um seletor de dispositivo permitirá que você limite os dispositivos que está pesquisando ao enumerar dispositivos."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 67bf2795a7d555dc5cd236eeafb07009511fe5d3
 
@@ -32,7 +31,8 @@ Ao usar as APIs [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/lib
 
 As APIs [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) usam sintaxe AQS Canonical, mas nem todos os operadores são suportados. Para obter uma lista de propriedades que estão disponíveis quando você constrói sua cadeia de caracteres de filtro, consulte [Device information properties](device-information-properties.md).
 
-**Cuidado**  As propriedades personalizadas que são definidas usando o formato `{GUID} PID` não podem ser usadas ao construir a sua cadeia de caracteres de filtro AQS. Isso é porque o tipo de propriedade é derivado do nome da propriedade conhecida.
+
+            **Cuidado**  As propriedades personalizadas que são definidas usando o formato `{GUID} PID` não podem ser usadas ao construir a sua cadeia de caracteres de filtro AQS. Isso é porque o tipo de propriedade é derivado do nome da propriedade conhecida.
 
  
 
@@ -56,9 +56,11 @@ A tabela a seguir lista os operadores AQS e os tipos de parâmetros a que dão s
 | **COP\_APPLICATION\_SPECIFIC** | Sem suporte                                                               |
 
 
-> **Dica**  Você pode especificar **NULL** para **COP\_EQUAL** ou **COP\_NOTEQUAL**. Isso se traduz em uma propriedade sem valor ou cujo valor não existe. No AQS, você especifica **NULL** usando colchetes vazios \[\].
+> 
+            **Dica**  Você pode especificar **NULL** para **COP\_EQUAL** ou **COP\_NOTEQUAL**. Isso se traduz em uma propriedade sem valor ou cujo valor não existe. No AQS, você especifica **NULL** usando colchetes vazios \[\].
 
-> **Importante**  Ao usar os operadores **COP\_VALUE\_CONTAINS** e **COP\_VALUE\_NOTCONTAINS**, eles se comportam de forma diferente com cadeias de caracteres e matrizes de cadeia de caracteres. No caso de uma cadeia de caracteres, o sistema fará uma pesquisa sem diferenciação de maiúsculas de minúsculas para ver se o dispositivo contém a cadeia de caracteres indicada como uma subcadeia de caracteres. No caso de uma matriz de cadeia de caracteres, as subcadeias de caracteres não são pesquisadas. Com a matriz de cadeia de caracteres, a matriz é pesquisada para ver se ela contém a cadeia de caracteres especificada inteira. Não é possível pesquisar uma matriz de cadeia de caracteres para verificar se os elementos na matriz contém uma subcadeia de caracteres.
+> 
+            **Importante**  Ao usar os operadores **COP\_VALUE\_CONTAINS** e **COP\_VALUE\_NOTCONTAINS**, eles se comportam de forma diferente com cadeias de caracteres e matrizes de cadeia de caracteres. No caso de uma cadeia de caracteres, o sistema fará uma pesquisa sem diferenciação de maiúsculas de minúsculas para ver se o dispositivo contém a cadeia de caracteres indicada como uma subcadeia de caracteres. No caso de uma matriz de cadeia de caracteres, as subcadeias de caracteres não são pesquisadas. Com a matriz de cadeia de caracteres, a matriz é pesquisada para ver se ela contém a cadeia de caracteres especificada inteira. Não é possível pesquisar uma matriz de cadeia de caracteres para verificar se os elementos na matriz contém uma subcadeia de caracteres.
 
 Se você não puder criar uma cadeia de caracteres de filtro AQS única que analise seus resultados de forma apropriada, poderá filtrar os resultados depois de recebê-los. Entretanto, se você escolher fazer isso, recomendamos que limite os resultados da sua cadeia de caracteres de filtro AQS inicial o quanto puder quando a fornecer para as APIs [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459). Isso ajudará a melhorar o desempenho do seu aplicativo.
 
@@ -66,7 +68,8 @@ Se você não puder criar uma cadeia de caracteres de filtro AQS única que anal
 
 Os exemplos a seguir demonstram como a sintaxe AQS pode ser usada para limitar dispositivos que você quer enumerar. Todas essas cadeias de caracteres de filtro são emparelhadas com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) para criar um filtro completo. Se nenhum tipo for especificado, lembre-se de que o tipo padrão é **DeviceInterface**.
 
-Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceInterface**, ele enumera todos os objetos que contêm a classe da interface de Captura de Áudio e os que estão habilitados no momento. **
+Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceInterface**, ele enumera todos os objetos que contêm a classe da interface de Captura de Áudio e os que estão habilitados no momento. 
+            **
               =
             ** é convertido para **COP\_EQUALS**.
 
@@ -75,7 +78,8 @@ System.Devices.InterfaceClassGuid:="{2eef81be-33fa-4800-9670-1cd474972c3f}" AND
 System.Devices.InterfaceEnabled:=System.StructuredQueryType.Boolean#True
 ```
 
-Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **Device**, ele enumera todos os objetos que têm pelo menos um ID de hardware do GenCdRom. **
+Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **Device**, ele enumera todos os objetos que têm pelo menos um ID de hardware do GenCdRom. 
+            **
               ~~
             ** é convertido para **COP\_VALUE\_CONTAINS**.
 
@@ -83,7 +87,8 @@ Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msd
 System.Devices.HardwareIds:~~"GenCdRom"
 ```
 
-Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceContainer**, ele enumera todos os objetos que tem um nome de modelo contendo a subcadeia de caracteres da Microsoft. **
+Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceContainer**, ele enumera todos os objetos que tem um nome de modelo contendo a subcadeia de caracteres da Microsoft. 
+            **
               ~~
             ** é convertido para **COP\_VALUE\_CONTAINS**.
 
@@ -91,7 +96,8 @@ Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msd
 System.Devices.ModelName:~~"Microsoft"
 ```
 
-Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceInterface**, ele enumera todos os objetos que tem um nome que começa com a subcadeia de caracteres da Microsoft. **
+Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceInterface**, ele enumera todos os objetos que tem um nome que começa com a subcadeia de caracteres da Microsoft. 
+            **
               ~&lt;
             ** é convertido para **COP\_STARTSWITH**.
 
@@ -99,14 +105,16 @@ Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msd
 System.ItemNameDisplay:~<"Microsoft"
 ```
 
-Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **Device**, ele enumera todos os objetos que têm um conjunto de propriedade **System.Devices.IpAddress**. **
+Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **Device**, ele enumera todos os objetos que têm um conjunto de propriedade **System.Devices.IpAddress**. 
+            **
               &lt;&gt;\[\]** é convertido para **COP\_NOTEQUALS** combinado com um valor **NULL**.
 
 ``` syntax
 System.Devices.IpAddress:<>[]
 ```
 
-Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **Device**, ele enumera todos os objetos que não têm um conjunto de propriedade **System.Devices.IpAddress**. **=\[\]** é convertido para **COP\_EQUALS** combinado com um valor **NULL**.
+Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **Device**, ele enumera todos os objetos que não têm um conjunto de propriedade **System.Devices.IpAddress**. 
+            **=\[\]** é convertido para **COP\_EQUALS** combinado com um valor **NULL**.
 
 ``` syntax
 System.Devices.IpAddress:=[]

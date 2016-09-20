@@ -3,7 +3,6 @@ author: mtoepke
 title: "Comparação de buffers, uniformes e atributos de vértice do OpenGL ES 2.0 com os do Direct3D"
 description: "Durante o processo de portabilidade do OpenGL ES 2.0 para Direct3D 11, você deve alterar a sintaxe e o comportamento da API para passar dados entre o aplicativo e os programas de sombreador."
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: a588ba010ddf21a07d493774cff7f6ab5dbfdf47
 

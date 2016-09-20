@@ -3,7 +3,6 @@ author: jwmsft
 description: "Modifica o comportamento de compilação XAML de forma que os campos de referência de objetos nomeados sejam definidos com o acesso público em vez do comportamento padrão privado."
 title: Atributo xFieldModifier
 ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3f6c759d582d92aa33df5874186aeaa3a7c37b01
 
@@ -23,7 +22,8 @@ Modifica o comportamento de compilação XAML de forma que os campos de referên
 
 ## Dependências
 
-[O atributo x:Name](x-name-attribute.md) também deve ser incluído no mesmo elemento.
+
+            [O atributo x:Name](x-name-attribute.md) também deve ser incluído no mesmo elemento.
 
 ## Comentários
 
@@ -31,9 +31,11 @@ O valor do atributo **x:FieldModifier** varia de acordo com a linguagem de progr
 
 Você também pode especificar **NonPublic** (**internal** em C# ou C++/CX, **Friend** em Visual Basic) mas isso não é o mais comum. O acesso interno não tem nenhuma aplicação no modelo de geração de código XAML do Windows Runtime. O padrão é o acesso particular.
 
-**x:FieldModifier** só é relevante para elementos com um [atributo x:Name](x-name-attribute.md), pois esse nome é usado para fazer referência ao campo já que ele é público.
 
-**Observação** O XAML do Windows Runtime não aceita **x:ClassModifier** ou **x:Subclass**.
+           **x:FieldModifier** só é relevante para elementos com um [atributo x:Name](x-name-attribute.md), pois esse nome é usado para fazer referência ao campo já que ele é público.
+
+
+           **Observação** O XAML do Windows Runtime não aceita **x:ClassModifier** ou **x:Subclass**.
 
 
 

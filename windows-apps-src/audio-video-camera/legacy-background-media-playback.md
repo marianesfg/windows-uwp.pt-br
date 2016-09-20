@@ -1,120 +1,130 @@
 ---
 author: drewbatgit
 ms.assetid: 
-description: This article provides support for apps using the legacy background media model for playback and provides guidance for migrating to the new model.
-title: Legacy background media playback
+description: "Este artigo fornece suporte para aplicativos que usam o modelo de mídia em segundo plano herdado para reprodução e fornece orientações para migrar para o novo modelo."
+title: "Reprodução de mídia em segundo plano herdada"
+translationtype: Human Translation
+ms.sourcegitcommit: 545841e00af8324ae023378e666b71ef49a4a3b5
+ms.openlocfilehash: 2f55941de8b163a4c457fc292e968dc638fffde0
+
 ---
 
-# Legacy background media playback
+# Reprodução de mídia em segundo plano herdada
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-This article describes the legacy, two-process model for adding background audio support to your UWP app. Starting with Windows 10, version 1607, a single-process model for background audio that is much simpler to implement. For more information on the current recommendations for background audio, see [Play media in the background](background-audio.md). This article is intended to provide support for apps that are have already been developed using the legacy two-process model.
+Este artigo descreve o modelo herdado de dois processos para adicionar suporte para áudio em segundo plano ao seu aplicativo UWP. A partir do Windows 10, versão 1607, é usado um modelo de processo único para áudio em segundo plano que é muito mais simples de implementar. Para obter mais informações sobre as recomendações atuais para áudio em segundo plano, consulte [Reproduzir mídia em segundo plano](background-audio.md). Este artigo tem o objetivo de fornecer suporte para aplicativos que já foram desenvolvidos usando o modelo herdado de dois processos.
 
-## Background audio architecture
+## Arquitetura de áudio em segundo plano
 
-An app performing background playback consists of two processes. The first process is the main app, which contains the app UI and client logic, running in the foreground. The second process is the background playback task, which implements [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) like all UWP app background tasks. The background task contains the audio playback logic and background services. The background task communicates with the system through the System Media Transport Controls.
+Um aplicativo executando a reprodução em segundo plano consiste em dois processos. O primeiro processo é o aplicativo principal, que contém a interface do usuário do aplicativo e a lógica do cliente, executando em primeiro plano. O segundo processo é a tarefa de reprodução em segundo plano, que implementa [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) como todas as tarefas em segundo plano de aplicativo UWP. A tarefa em segundo plano contém a lógica de reprodução de áudio e os serviços em segundo plano. A tarefa em segundo plano se comunica com o sistema por meio de controles de transporte de mídia do sistema.
 
-The following diagram is an overview of how the system is designed.
+O diagrama a seguir é uma visão geral de como o sistema foi criado.
 
-![windows 10 background audio architecture](images/backround-audio-architecture-win10.png)
+![Arquitetura de áudio em segundo plano do Windows 10](images/backround-audio-architecture-win10.png)
 ## MediaPlayer
 
-The [**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) namespace contains APIs used to play audio in the background. There is a single instance of [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652535) per app through which playback occurs. Your background audio app calls methods and sets properties on the **MediaPlayer** class to set the current track, start playback, pause, fast forward, rewind, and so on. The media player object instance is always accessed through the [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528) property.
+O namespace [**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) contém APIs usadas para reproduzir áudio em segundo plano. Há uma única instância de [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652535) por aplicativo através da qual ocorre a reprodução. Seu aplicativo de áudio em segundo plano chama métodos e configura propriedades na classe **MediaPlayer** para definir a faixa atual, iniciar reprodução, pausar, avançar, voltar e assim por diante. A instância de objeto media player sempre é acessada através da propriedade [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528).
 
-## MediaPlayer Proxy and Stub
+## Proxy e Stub do MediaPlayer
 
-When **BackgroundMediaPlayer.Current** is accessed from your app's background process, the **MediaPlayer** instance is activated in the background task host and can be manipulated directly.
+Quando **BackgroundMediaPlayer.Current** é acessado do processo em segundo plano de seu aplicativo, a instância **MediaPlayer** é ativada no host de tarefa em segundo plano e pode ser manipulada diretamente.
 
-When **BackgroundMediaPlayer.Current** is accessed from the foreground application, the **MediaPlayer** instance that is returned is actually a proxy that communicates with a stub in the background process. This stub communicates with the actual **MediaPlayer** instance, which is also hosted in the background process.
+Quando **BackgroundMediaPlayer.Current** é acessado do aplicativo em primeiro plano, a instância **MediaPlayer** retornada é, na verdade, um proxy que se comunica com um stub no processo em segundo plano. Esse stub se comunica com a verdadeira instância **MediaPlayer**, que também é hospedada no processo em segundo plano.
 
-Both the foreground and background process can access most of the properties of the **MediaPlayer** instance, with the exception of [**MediaPlayer.Source**](https://msdn.microsoft.com/library/windows/apps/dn987010) and [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635) which can only be accessed from the background process. The foreground app and the background process can both receive notifications of media-specific events like [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/dn652609), [**MediaEnded**](https://msdn.microsoft.com/library/windows/apps/dn652603), and [**MediaFailed**](https://msdn.microsoft.com/library/windows/apps/dn652606).
+Os processos em primeiro e segundo plano podem acessar a maioria das propriedades da instância **MediaPlayer**, com exceção de [**MediaPlayer.Source**](https://msdn.microsoft.com/library/windows/apps/dn987010) e [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635), que só o processo em segundo plano pode acessar. O aplicativo em primeiro plano e o processo em segundo podem receber notificações de eventos específicos de mídia, como [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/dn652609), [**MediaEnded**](https://msdn.microsoft.com/library/windows/apps/dn652603) e [**MediaFailed**](https://msdn.microsoft.com/library/windows/apps/dn652606).
 
-## Playback Lists
+## Listas de reprodução
 
-A common scenario for background audio applications is to play multiple items in a row. This is most easily accomplished in your background process by using a [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) object, which can be set as a source on the **MediaPlayer** by assigning it to the [**MediaPlayer.Source**](https://msdn.microsoft.com/library/windows/apps/dn987010) property.
+Um cenário comum para aplicativos de áudio em segundo plano é reproduzir vários itens em fila. Isso é mais facilmente atingido em seu processo em segundo plano usando um objeto [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955), que pode ser definido como uma fonte no **MediaPlayer** atribuindo-o à propriedade [**MediaPlayer.Source**](https://msdn.microsoft.com/library/windows/apps/dn987010).
 
-It is not possible to access a **MediaPlaybackList** from the foreground process that was set in the background process.
+Não é possível acessar uma **MediaPlaybackList** a partir do processo em primeiro plano que foi configurada no processo em segundo plano.
 
-## System Media Transport Controls
+## Controles de transporte de mídia do sistema
 
-A user may control audio playback without directly using your app's UI through means such as Bluetooth devices, SmartGlass, and the System Media Transport Controls. Your background task uses the [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) class to subscribe to these user-initiated system events.
+Um usuário pode controlar a reprodução de áudio sem usar diretamente a interface do usuário de seu aplicativo através de meios como dispositivos Bluetooth, SmartGlass e os controles de transporte de mídia do sistema. Sua tarefa em segundo plano usa a classe [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) para assinar esses eventos de sistema iniciados pelo usuário.
 
-To get a **SystemMediaTransportControls** instance from within the background process, use the [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635) property. Foreground apps get an instance of the class by calling [**SystemMediaTransportControls.GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708), but the instance returned is a foreground-only instance that does not relate to the background task.
+Para obter uma instância **SystemMediaTransportControls** de dentro do processo em segundo plano, use a propriedade [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635). Os aplicativos em primeiro plano obtém uma instância da classe chamando [**SystemMediaTransportControls.GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708), mas a instância retornada é somente de primeiro plano e não tem relação com a tarefa em segundo plano.
 
-## Sending Messages Between Tasks
+## Enviando mensagens entre tarefas
 
-There are times when you will want to communicate between the two processes of a background audio app. For example, you might want the background task to notify the foreground task when a new track starts playing, and then send the new song title to the foreground task to display on the screen.
+Há ocasiões em que você deseja a comunicação entre os dois processos de um aplicativo de áudio em segundo plano. Por exemplo, você pode querer que a tarefa em segundo plano notifique a tarefa em primeiro plano quando uma nova faixa começar a ser reproduzida e, em seguida, envie o título da nova música à tarefa em primeiro plano para exibição na tela.
 
-A simple communication mechanism raises events in both the foreground and background processes. The [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) and [**SendMessageToBackground**](https://msdn.microsoft.com/library/windows/apps/dn652532) methods each invoke events in the corresponding process. Messages can be received by subscribing to the [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) and [**MessageReceivedFromForeground**](https://msdn.microsoft.com/library/windows/apps/dn652531) events.
+Um mecanismo de comunicação simples suscita eventos nos processos em primeiro e segundo plano. Os métodos [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) e [**SendMessageToBackground**](https://msdn.microsoft.com/library/windows/apps/dn652532) invocam eventos nos processos correspondentes. Mensagens podem ser recebidas assinando os eventos [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) e [**MessageReceivedFromForeground**](https://msdn.microsoft.com/library/windows/apps/dn652531).
 
-Data can be passed as an argument to the send message methods that are then passed into the message received event handlers. Pass data using the [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) class. This class is a dictionary that contains a string as a key and other value types as values. You can pass simple value types such as integers, strings, and booleans.
+Os dados podem ser passados como um argumento para os métodos de mensagem de envio que são, então, passados para os manipuladores de eventos de mensagem recebida. Passe dados usando a classe [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131). Essa classe é um dicionário que contém uma cadeia de caracteres como uma chave e outros tipos de valor como valores. Você pode passar tipos de valores simples, como inteiros, cadeias de caracteres e boolianos.
 
-## Background Task Life Cycle
+## Ciclo de vida de tarefas em segundo plano
 
-The lifetime of a background task is closely tied to your app's current playback status. For example, when the user pauses audio playback, the system may terminate or cancel your app depending on the circumstances. After a period of time without audio playback, the system may automatically shut down the background task.
+O tempo de vida de uma tarefa em segundo plano está estreitamente relacionado ao status de reprodução atual do seu aplicativo. Por exemplo, quando o usuário pausa a reprodução de áudio, o sistema pode encerrar ou cancelar seu aplicativo, dependendo das circunstâncias. Após um período de tempo sem reprodução de áudio, o sistema pode desligar automaticamente a tarefa em segundo plano.
 
-The [**IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) method is called the first time your app accesses either [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528) from code running in the foreground app or when you register a handler for the [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) event, whichever occurs first. It is recommended that you register for the message received handler before calling **BackgroundMediaPlayer.Current** for the first time so that the foreground app doesn't miss any messages sent from the background process.
+O método [**IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) é chamado na primeira vez que seu aplicativo acessa [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528) do código sendo executado no aplicativo em primeiro plano ou quando você registra um manipulador para o evento [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530), o que quer que aconteça primeiro. É recomendável que você se registre para o manipulador de mensagem recebida antes de chamar **BackgroundMediaPlayer.Current** pela primeira vez, para que o aplicativo em primeiro plano não perca nenhuma mensagem enviada do processo em segundo plano.
 
-To keep the background task alive, your app must request a [**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499) from within the **Run** method and call [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504) when the task instance receives the [**Canceled**](https://msdn.microsoft.com/library/windows/apps/br224798) or [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788) events. Do not loop or wait in the **Run** method because this consumes resources and may cause your app's background task to be terminated by the system.
+Para manter a tarefa em segundo plano viva, seu aplicativo deve solicitar um [**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499) de dentro do método **Run** e chamar [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504) quando a instância de tarefa receber os eventos [**Canceled**](https://msdn.microsoft.com/library/windows/apps/br224798) ou [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788). Não faça um loop nem espere no método **Run**, porque isso consome recursos e pode fazer com que a tarefa em segundo plano de seu aplicativo seja finalizada pelo sistema.
 
-Your background task gets the **Completed** event when the **Run** method is completed and deferral is not requested. In some cases, when your app gets the **Canceled** event, it can be also followed by the **Completed** event. Your task may receive a **Canceled** event while **Run** is executing, so be sure to manage this potential concurrence.
+Sua tarefa em segundo plano obtém o evento **Completed** quando o método **Run** é completo e não há solicitação de adiamento. Em alguns casos, quando seu aplicativo obtém o evento **Canceled**, ele também pode ser seguido pelo evento **Completed**. Sua tarefa pode receber um evento **Canceled** enquanto **Run** está sendo executado, então certifique-se de gerenciar essa concorrência potencial.
 
-Situations in which the background task can be cancelled include:
+Situações nas quais a tarefa em segundo plano pode ser cancelada incluem:
 
--   A new app with audio playback capabilities starts on systems that enforce the exclusivity sub-policy. See the [System policies for background audio task lifetime](#system-policies-for-background-audio-task-lifetime) section below.
+-   Um novo aplicativo com recursos de reprodução de áudio é iniciado em sistemas que aplicam a subpolítica de exclusividade. Consulte a seção [Políticas de sistema para o tempo de vida de tarefas de áudio em segundo plano](#system-policies-for-background-audio-task-lifetime) abaixo.
 
--   A background task has been launched but music is not yet playing, and then the foreground app is suspended.
+-   Uma tarefa em segundo plano foi iniciada, mas a música ainda não está tocando, então o aplicativo em primeiro plano é suspenso.
 
--   Other media interruptions, such as incoming phone calls or VoIP calls.
+-   Outras interrupções de mídia, como a entrada de chamadas telefônicas ou chamadas VoIP.
 
-Situations in which the background task can be terminated without notice include:
+Situações em que a tarefa em segundo plano pode ser encerrada sem notificação incluem:
 
--   A VoIP call comes in and there is not enough available memory on the system to keep the background task alive.
+-   Uma chamada VoIP entra e não há memória suficiente disponível no sistema para manter a tarefa em segundo plano ativa.
 
--   A resource policy is violated.
+-   Uma política de recurso é violada.
 
--   Task cancellation or completion does not end gracefully.
+-   O cancelamento ou a conclusão da tarefa não termina corretamente.
 
-## System policies for background audio task lifetime
+## Políticas de sistema para o tempo de vida de tarefas de áudio em segundo plano
 
-The following policies help determine how the system manages the lifetime of background audio tasks.
+As políticas a seguir ajudam a determinar como o sistema gerencia o tempo de vida de tarefas de áudio em segundo plano.
 
-### Exclusivity
+### Exclusividade
 
-If enabled, this sub-policy limits the number of background audio tasks to be at most 1 at any given time. It is enabled on Mobile and other non-Desktop SKUs.
+Se habilitada, essa subpolítica limita o número de tarefas de áudio em segundo plano para no máximo 1, a qualquer momento. Ela está habilitada em SKUs de dispositivos móveis e outras que não sejam de área de trabalho.
 
-### Inactivity Timeout
+### Tempo limite de inatividade
 
-Due to resource constraints, the system may terminate your background task after a period of inactivity.
+Devido a restrições de recursos, o sistema poderá encerrar sua tarefa em segundo plano após um período de inatividade.
 
-A background task is considered “inactive” if both of the following conditions are met:
+Uma tarefa em segundo plano será considerada "inativa" se ambas as seguintes condições forem atendidas:
 
--   The foreground app is not visible (it is suspended or terminated).
+-   O aplicativo em primeiro plano não está visível (ele está suspenso ou encerrado).
 
--   The background media player is not in the playing state.
+-   O media player em segundo plano não está no estado de execução.
 
-If both of these conditions are satisfied, the background media system policy will start a timer. If neither condition has changed when the timer expires, the background media system policy will terminate the background task.
+Se ambas as condições forem atendidas, a política de sistema de mídia em segundo plano iniciará um temporizador. Se nenhuma condição mudar quando o temporizador expirar, a política de sistema de mídia em segundo plano encerrará a tarefa em segundo plano.
 
-### Shared Lifetime
+### Tempo de vida compartilhado
 
-If enabled, this sub-policy forces the background task to be dependent on the lifetime of the foreground task. If the foreground task is shut down, either by the user or the system, the background task will also shut down.
+Se habilitada, essa subpolítica força a tarefa em segundo plano a ser dependente do tempo de vida da tarefa em primeiro plano. Se a tarefa em primeiro plano for encerrada, pelo usuário ou pelo sistema, a tarefa em segundo plano também será encerrada.
 
-However, note that this does not mean that the foreground is dependent on the background. If the background task is shut down, this does not force the foreground task to shut down.
+No entanto, observe que isso não significa que o primeiro plano seja dependente do segundo plano. Se a tarefa em segundo plano for encerrada, isso não força o encerramento da tarefa em primeiro plano.
 
-The following table lists the which policies are enforced on which device types.
+A tabela a seguir lista as políticas que são aplicadas em quais tipos de dispositivos.
 
-| Sub-policy             | Desktop  | Mobile   | Other    |
+| Subpolítica             | Área de trabalho  | Dispositivos móveis   | Outros    |
 |------------------------|----------|----------|----------|
-| **Exclusivity**        | Disabled | Enabled  | Enabled  |
-| **Inactivity Timeout** | Disabled | Enabled  | Disabled |
-| **Shared Lifetime**    | Enabled  | Disabled | Disabled |
+| **Exclusividade**        | Desabilitada | Habilitada  | Habilitada  |
+| **Tempo limite de inatividade** | Desabilitada | Habilitada  | Desabilitada |
+| **Tempo de vida compartilhado**    | Habilitada  | Desabilitada | Desabilitada |
 
 
- 
+ 
 
- 
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO3-->
 
 
