@@ -8395,9 +8395,6 @@
   "62db1be80faeaf94583b66e693f822da4f66d5d2": [
     "windows-apps-src\\xbox-apps\\images\\activation-step-5.png"
   ],
-  "84119964d253bcc32ba76f8e53f06df010523683": [
-    "windows-apps-src\\xbox-apps\\images\\activation-step-5.png"
-  ],
   "78f743f172eefaeea8c3cc000e3c55aacd3325a1": [
     "windows-apps-src\\xbox-apps\\images\\activation-step-8.png"
   ],
@@ -8411,9 +8408,6 @@
     "windows-apps-src\\xbox-apps\\images\\automate-uwp-apps-2.png"
   ],
   "4e2a58a4c35f144c85a811e6ecfb0f24ad7278ec": [
-    "windows-apps-src\\xbox-apps\\images\\deactivation-app.png"
-  ],
-  "307559f31730beecc3f98d44f061f6311cdce416": [
     "windows-apps-src\\xbox-apps\\images\\deactivation-app.png"
   ],
   "d89e3d1efe898c154d5ac46517077115366d1713": [
@@ -8639,9 +8633,6 @@
     "windows-apps-src\\xbox-apps\\images\\cpusets-table4.png"
   ],
   "0e2bef11807e50fee9424ecf662c95630d57e42e": [
-    "windows-apps-src\\graphics\\images\\composition-animation-types.png"
-  ],
-  "32d970c9a95073fa716893356ec1487d3085867e": [
     "windows-apps-src\\graphics\\images\\composition-animation-types.png"
   ],
   "0a97fa3e180c545cd78ef0da45d83e1cdce65d9a": [
@@ -9172,9 +9163,6 @@
   "ec3c2f27223c35a423a5e5a5ff189e39b179f8d8": [
     "windows-apps-src\\get-started\\images\\vs-2015-community-setup.png"
   ],
-  "c76ac5f735c5dc93e5f5014b77181a2e862386a1": [
-    "windows-apps-src\\get-started\\images\\vs-2015-community-setup.png"
-  ],
   "2aa55797ed3a6588b3a27158282a02827fbd2109": [
     "windows-apps-src\\porting\\desktop-to-uwp-extensions.md"
   ],
@@ -9389,9 +9377,6 @@
     "windows-apps-src\\get-started\\images\\winjs-tut-helloworld.png"
   ],
   "7920f4f0ea31e50c7c7ca69054f969df43545319": [
-    "windows-apps-src\\get-started\\images\\winjs-tut-newproject.png"
-  ],
-  "147a0a48f77c0a5679dff07cf8927969806165c8": [
     "windows-apps-src\\get-started\\images\\winjs-tut-newproject.png"
   ],
   "d42d460623779397cf99559fbc29182a27a89c95": [
