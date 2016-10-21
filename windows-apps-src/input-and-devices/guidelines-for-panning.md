@@ -5,8 +5,9 @@ title: "Movimento panorâmico"
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 45a2d3cb8cd1db1b138d62b7d6525ed7077207b0
+ms.openlocfilehash: 5d82af288d389c6eeb5373d1b1f4230fc992a441
 
 ---
 
@@ -120,9 +121,7 @@ O diagrama a seguir mostra duas áreas que permitem movimento panorâmico de dif
 ![imagem mostrando duas áreas que permitem movimento panorâmico de diferentes tamanhos e seus indicadores de movimento panorâmico.](images/scrolling-indicators.png)
 
 **Comportamentos de movimento panorâmico**
-            
-          
-            **Pontos de alinhamento** O movimento panorâmico com o gesto de passar o dedo introduz comportamento inercial na interação quando o contato por toque é retirado. Com inércia, o conteúdo continua a se mover panoramicamente até que um limite de distância seja atingido sem entrada direta do usuário. Use pontos de alinhamento para modificar esse comportamento inercial.
+**Pontos de alinhamento** O movimento panorâmico com o gesto de passar o dedo introduz comportamento inercial na interação quando o contato por toque é retirado. Com inércia, o conteúdo continua a se mover panoramicamente até que um limite de distância seja atingido sem entrada direta do usuário. Use pontos de alinhamento para modificar esse comportamento inercial.
 
 Pontos de alinhamento especificam paradas lógicas no conteúdo do aplicativo. De forma cognitiva, os pontos de alinhamento atuam como um mecanismo de paginação para o usuário e minimizam o trabalho cansativo de deslizar ou passar o dedo excessivamente em grandes regiões deslocáveis. Com eles, você pode manipular entradas imprecisas do usuário e garantir que um subconjunto específico de conteúdo ou informações importantes sejam exibidas no visor.
 
@@ -196,6 +195,6 @@ Essa diretriz também é útil para aplicativos como, por exemplo, álbuns de fo
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

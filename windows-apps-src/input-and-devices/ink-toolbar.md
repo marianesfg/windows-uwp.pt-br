@@ -6,8 +6,8 @@ label: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, InkToolbar, Universal Windows Platform, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 743ce43be6220d96d7e9bc295ab72bdec4905edc
-ms.openlocfilehash: 4c50c8ded127b2261df901d9da3210ff397b00ca
+ms.sourcegitcommit: 71b73605bab71dad36977d0506c090c34359a3e2
+ms.openlocfilehash: c4a5b0ae2893fda7697457b9e7449a996707de4b
 
 ---
 
@@ -303,12 +303,14 @@ using Windows.UI.Input.Inking;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 ```
+
 4. Especifique que a classe CalligraphicPen é derivada de [InkToolbarCustomPen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompen.aspx).
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
 {
 }
 ```
+
 5. Substitua [CreateInkDrawingAttributesCore](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompen.createinkdrawingattributescore.aspx) para especificar seu próprio tamanho de pincel e traço.
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
@@ -319,6 +321,7 @@ class CalligraphicPen : InkToolbarCustomPen
     }
 }
 ```
+
 6. Crie um objeto [InkDrawingAttributes](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.aspx) e defina o [formato da ponta da caneta](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.pentip.aspx), a [rotação da ponta](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.pentiptransform.aspx), o [tamanho do traço](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.size.aspx) e a [cor da tinta](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.color.aspx).
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
@@ -365,6 +368,7 @@ Em seguida, adicionamos as referências necessárias à caneta personalizada em 
     </BrushCollection>
 </Page.Resources>
 ```
+
 2. Em seguida, adicionamos um InkToolbar com um elemento [InkToolbarCustomPenButton](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompenbutton.aspx) filho.
 
   O botão de caneta personalizada inclui as duas referências de recurso estático declaradas nos recursos da página: `CalligraphicPen` e `CalligraphicPenPalette`.
@@ -403,13 +407,13 @@ Enable touch inking
 
 * [Interações com caneta](pen-and-stylus-interactions.md)
 
-**Amostras**
+**Exemplos**
 * [Amostra de tinta](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Amostra de tinta simples](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Amostra de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO2-->
 
 

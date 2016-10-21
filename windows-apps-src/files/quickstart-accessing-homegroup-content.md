@@ -1,15 +1,16 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: "Acessando o conteúdo do Grupo Doméstico"
 description: "Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo imagens, músicas e vídeos."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
+translationtype: Human Translation
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
 
 ---
 # Acessando o conteúdo do Grupo Doméstico
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** APIs importantes **
@@ -28,8 +29,7 @@ Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo i
 
     Para acessar o conteúdo do Grupo Doméstico, a máquina do usuário deverá ter um Grupo Doméstico configurado e seu aplicativo deve ter pelo menos um dos seguintes recursos: **picturesLibrary**, **musicLibrary** ou **videosLibrary**. Quando seu aplicativo acessar a pasta Grupo Doméstico, ele verá somente as bibliotecas correspondentes aos recursos declarados em seu manifesto do aplicativo. Para saber mais, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
-    
-            **Observação**  O conteúdo na biblioteca Documentos de um Grupo Doméstico não fica visível para seu aplicativo independentemente dos recursos declarados em seu manifesto do aplicativo e independente das configurações de compartilhamento do usuário.
+    **Observação**  O conteúdo na biblioteca Documentos de um Grupo Doméstico não fica visível para seu aplicativo independentemente dos recursos declarados em seu manifesto do aplicativo e independente das configurações de compartilhamento do usuário.
 
      
 
@@ -57,7 +57,7 @@ Siga essas etapas para abrir uma instancia do seletor de arquivos que permite qu
     picker.FileTypeFilter.Clear();
     picker.FileTypeFilter.Add("*");
     ```
-  
+
 2.  **Mostre o seletor de arquivos e processe o arquivo selecionado.**
 
     Depois de criar e personalizar um seletor de arquivos, permita que o usuário selecione um arquivo chamando o [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275)ou vários arquivos chamando o [**FileOpenPicker.PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851).
@@ -93,11 +93,11 @@ Esta seção mostra como encontrar itens do Grupo Doméstico correspondentes a u
 
     Este exemplo define as opções de consulta que classificam os resultados da pesquisa por importância e depois a data é modificada. O filtro de pesquisa é o termo da consulta que o usuário inseriu na etapa anterior:
     ```csharp
-    Windows.Storage.Search.QueryOptions queryOptions = 
+    Windows.Storage.Search.QueryOptions queryOptions =
             new Windows.Storage.Search.QueryOptions
                 (Windows.Storage.Search.CommonFileQuery.OrderBySearchRank, null);
     queryOptions.UserSearchFilter = queryTerm.Text;
-    Windows.Storage.Search.StorageFileQueryResult queryResults = 
+    Windows.Storage.Search.StorageFileQueryResult queryResults =
             Windows.Storage.KnownFolders.HomeGroup.CreateFileQueryWithOptions(queryOptions);    
     ```
 
@@ -105,7 +105,7 @@ Esta seção mostra como encontrar itens do Grupo Doméstico correspondentes a u
 
     O exemplo a seguir executa a consulta da pesquisa no Grupo Doméstico e salva os nomes de quaisquer arquivos correspondentes como uma lista de cadeia de caracteres.
     ```csharp
-    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFile> files = 
+    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFile> files =
         await queryResults.GetFilesAsync();
 
     if (files.Count > 0)
@@ -127,7 +127,7 @@ Esta seção mostra a você como encontrar arquivos do Grupo Doméstico comparti
 
     Cada uma das pastas de primeiro nível no Grupo Doméstico representa um usuário do Grupo Doméstico individual. Assim, para obter a coleção de usuários do Grupo Doméstico, chame [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227279) para recuperar as pastas do Grupo Doméstico de nível superior.
     ```csharp
-    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFolder> hgFolders = 
+    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFolder> hgFolders =
         await Windows.Storage.KnownFolders.HomeGroup.GetFoldersAsync();    
     ```
 
@@ -142,7 +142,7 @@ Esta seção mostra a você como encontrar arquivos do Grupo Doméstico comparti
         {
             // Found the target user's folder, now find all files in the folder.
             userFound = true;
-            Windows.Storage.Search.QueryOptions queryOptions = 
+            Windows.Storage.Search.QueryOptions queryOptions =
                 new Windows.Storage.Search.QueryOptions
                     (Windows.Storage.Search.CommonFileQuery.OrderBySearchRank, null);
             queryOptions.UserSearchFilter = "*";
@@ -190,11 +190,7 @@ Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Domés
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  
-            **Abra a seleção de arquivos do usuário para obter acesso à leitura e defina o fluxo do arquivo como a origem do**
-            [
-              **MediaElement**
-            ](https://msdn.microsoft.com/library/windows/apps/br242926) e reproduza o arquivo.
+3.  **Abra a seleção de arquivos do usuário para obter acesso à leitura e defina o fluxo do arquivo como a origem do ** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) e reproduza o arquivo.
     ```csharp
     if (file != null)
     {
@@ -215,10 +211,6 @@ Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Domés
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

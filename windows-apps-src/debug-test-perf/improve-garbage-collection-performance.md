@@ -3,18 +3,18 @@ author: mcleblanc
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
 title: Melhore o desempenho de coleta de lixo
 description: "Os aplicativos da Plataforma Universal do Windows (UWP) em C# e Visual Basic fazem o gerenciamento de memória automático a partir do coletor de lixo do .NET. Esta seção resume as práticas recomendadas de comportamento e desempenho para o coletor de lixo do .NET nos aplicativos UWP."
+translationtype: Human Translation
 ms.sourcegitcommit: 5f9626c644315884ea8605a4e69e7e580a44010b
-ms.openlocfilehash: 3fb6a0469a0e7488c40fc03bce8c90780b524656
+ms.openlocfilehash: 32290820d4732f1a8b28fd18682514e3948e0356
 
 ---
 # Melhorar o desempenho da coleta de lixo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Os aplicativos UWP (Plataforma Universal do Windows) no C# e no Visual Basic fazem o gerenciamento automático da memória a partir do coletor de lixo do .NET. Esta seção resume as práticas recomendadas de comportamento e desempenho para o coletor de lixo do .NET nos aplicativos UWP. Para obter mais informações sobre o funcionamento do coletor de lixo do .NET e sobre as ferramentas de depuração e análise de desempenho do coletor de lixo, consulte [Coleta de lixo](https://msdn.microsoft.com/library/windows/apps/xaml/0xy59wtx.aspx).
 
-
-            **Observação**  Precisar intervir no comportamento padrão do coletor de lixo é um forte indicativo de problemas gerais de memória em seu aplicativo. Para obter mais informações, consulte [Ferramenta de uso de memória durante a depuração no Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tópico se aplica somente a C# e Visual Basic.
+**Observação**  Precisar intervir no comportamento padrão do coletor de lixo é um forte indicativo de problemas gerais de memória em seu aplicativo. Para obter mais informações, consulte [Ferramenta de uso de memória durante a depuração no Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tópico se aplica somente a C# e Visual Basic.
 
  
 
@@ -38,8 +38,7 @@ Induza uma coleta de lixo somente depois de medir o desempenho de seu aplicativo
 
 É possível induzir uma coleta de lixo de uma geração chamando [**GC.Collect(n)**](https://msdn.microsoft.com/library/windows/apps/xaml/y46kxc5e.aspx), em que n é a geração que você deseja coletar (0, 1 ou 2).
 
-
-            **Observação**  Recomendamos que você não imponha uma coleta de lixo em seu aplicativo porque o coletor de lixo usa várias heurísticas para determinar a melhor ocasião para a execução de uma coleta, e impor uma coleta é, em muitos casos, um uso desnecessário da CPU. Mas se você souber que tem um grande número de objetos em seu aplicativo que não são mais usados e desejar retornar essa memória para o sistema, poderá ser adequado impor uma coleta de lixo. Por exemplo, você pode induzir uma coleta no final de uma sequência de carregamento em um jogo para liberar memória antes de começar a jogar.
+**Observação**  Recomendamos que você não imponha uma coleta de lixo em seu aplicativo porque o coletor de lixo usa várias heurísticas para determinar a melhor ocasião para a execução de uma coleta, e impor uma coleta é, em muitos casos, um uso desnecessário da CPU. Mas se você souber que tem um grande número de objetos em seu aplicativo que não são mais usados e desejar retornar essa memória para o sistema, poderá ser adequado impor uma coleta de lixo. Por exemplo, você pode induzir uma coleta no final de uma sequência de carregamento em um jogo para liberar memória antes de começar a jogar.
  
 Para evitar a indução inadvertida de coletas de lixo em excesso, é possível definir [**GCCollectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/bb495757.aspx) como **Optimized**. Esse recurso instrui o coletor de lixo a iniciar a coleta somente se ele determinar que a coleta será produtiva o bastante para ser justificada.
 
@@ -85,6 +84,6 @@ Substituir referências de objeto por índices pode ser uma alteração prejudic
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

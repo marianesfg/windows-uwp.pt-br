@@ -1,16 +1,16 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: "Permissões de acesso a arquivo"
 description: "Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: abcd6c1747566c7f8464016fadcb5a0441652afb
+ms.sourcegitcommit: ef8d0e7ad9063fa57a9db7c3cbdcb6846d3b1133
+ms.openlocfilehash: e58cdce7f803cd15b66371e3b03c4405cbdeb3ff
 
 ---
 # Permissões de acesso a arquivo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades.
@@ -19,8 +19,7 @@ Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. O
 
 Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais do sistema de arquivos:
 
--   
-              **Diretório de instalação do aplicativo**. A pasta onde o aplicativo está instalado no sistema do usuário.
+-   **Diretório de instalação do aplicativo**. A pasta onde o aplicativo está instalado no sistema do usuário.
 
     Há duas maneiras principais de acessar arquivos e pastas no diretório de instalação de seu aplicativo:
 
@@ -48,7 +47,7 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
             }
         );
         ```
-        
+
         Quando o [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) é concluído, ele retorna um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo *file.txt* no diretório de instalação do aplicativo (`file` no exemplo).
 
         O prefixo "ms-appx:///" no URI refere-se ao diretório de instalação do aplicativo. Você pode aprender mais sobre como usar os URIs em [Como usar URIs para conteúdo de referência](https://msdn.microsoft.com/library/windows/apps/hh781215).
@@ -72,7 +71,7 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
         ```javascript
         var localFolder = Windows.Storage.ApplicationData.current.localFolder;
         ```
- 
+
         Se você quiser acessar o roaming do seu aplicativo ou uma pasta temporária, use a propriedade [**RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623) ou [**TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629).
 
         Depois que você recuperar um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que represente um local de dados do aplicativo, você pode acessar arquivos e pastas nesse local usando os métodos **StorageFolder**. No exemplo, esses objetos **StorageFolder** são armazenados na variável `localFolder`. Você pode saber mais sobre como usar locais de dados de aplicativo em [Gerenciando dados de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465109) e baixando a [Amostra de dados de aplicativo](http://go.microsoft.com/fwlink/p/?linkid=231478) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
@@ -81,7 +80,7 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
         > [!div class="tabbedCodeSnippets"]
         ```csharp
         using Windows.Storage;
-        StorageFile file = await StorageFile.GetFileFromApplicationUriAsync("ms-appdata:///local/file.txt");
+        StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///file.txt"));
         ```
         ```javascript
         Windows.Storage.StorageFile.getFileFromApplicationUriAsync("ms-appdata:///local/file.txt").done(
@@ -103,8 +102,7 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
 
     É claro que você também pode obter acesso a arquivos e pastas em um dispositivo removível chamando o seletor de arquivos (usando o [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) e o [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881)) e permitindo que o usuário escolha os arquivos e pastas para seu aplicativo acessar. Saiba como usar o seletor de arquivos em [Abrir arquivos e pastas com um seletor](quickstart-using-file-and-folder-pickers.md).
 
-    
-              **Observação**  Para obter mais informações sobre como acessar um cartão SD em aplicativos móveis, consulte [Acessar o cartão SD](access-the-sd-card.md).
+    **Observação**  Para obter mais informações sobre como acessar um cartão SD em aplicativos móveis, consulte [Acessar o cartão SD](access-the-sd-card.md).
 
      
 
@@ -127,10 +125,8 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
             }
         );
         ```
- 
-        
-              [
-              **DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) é sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver um arquivo existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo que foi criado. Esse arquivo é chamado `newFile` no exemplo.
+
+        [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) é sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver um arquivo existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa o arquivo que foi criado. Esse arquivo é chamado `newFile` no exemplo.
 
     -   Você pode criar uma subpasta na pasta Downloads do usuário desta forma:
         > [!div class="tabbedCodeSnippets"]
@@ -145,10 +141,8 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
             }
         );
         ```
- 
-        
-              [
-              **DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver uma subpasta existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa a subpasta que foi criada. Esse arquivo é chamado `newFolder` no exemplo.
+
+        [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) sobrecarregado de modo que você possa especificar o que o sistema deve fazer se já houver uma subpasta existente na pasta Downloads com o mesmo nome. Quando esses métodos são concluídos, eles retornam um [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa a subpasta que foi criada. Esse arquivo é chamado `newFolder` no exemplo.
 
     Se você criar um arquivo ou uma pasta na pasta Downloads, recomendamos adicionar esse item ao [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) do seu aplicativo, para que ele possa acessar prontamente esse item no futuro.
 
@@ -166,12 +160,11 @@ A tabela a seguir lista locais adicionais que você pode acessar declarando os r
 | Vídeos    | VideosLibrary<br>Consulte também [Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   
 | Dispositivos removíveis  | RemovableDevices <br><br>Observação  Você deve adicionar Associações de tipo de arquivo ao manifesto do aplicativo que declarem tipos específicos de arquivos que seu aplicativo pode acessar neste local. <br><br>Consulte também [Acessar o cartão SD](access-the-sd-card.md). | [KnownFolders.RemovableDevices](https://msdn.microsoft.com/library/windows/apps/br227158) |  
 | Bibliotecas de grupo doméstico  | Pelo menos um dos seguintes recursos é necessário. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.HomeGroup](https://msdn.microsoft.com/library/windows/apps/br227153) |      
-| Dispositivos do servidor de mídia (DLNA) | Pelo menos um dos seguintes recursos é necessário. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.MediaServerDevices](https://msdn.microsoft.com/library/windows/apps/br227154) | 
+| Dispositivos do servidor de mídia (DLNA) | Pelo menos um dos seguintes recursos é necessário. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.MediaServerDevices](https://msdn.microsoft.com/library/windows/apps/br227154) |
 | Pastas UNC (Convenção de Nomenclatura Universal) | Uma combinação dos seguintes recursos é necessária. <br><br>O recurso de redes de trabalho e domésticas: <br>- PrivateNetworkClientServer <br><br>E pelo menos um recurso de internet e de redes públicas: <br>- InternetClient <br>- InternetClientServer <br><br>E, se aplicável, o recurso de credenciais de domínio:<br>- EnterpriseAuthentication <br><br>Observação: você deve adicionar Associações de tipo de arquivo ao manifesto do aplicativo que declarem tipos específicos de arquivos que seu aplicativo pode acessar neste local. | Recupere uma pasta usando: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>Recupere um arquivo usando: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
 
 
 
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

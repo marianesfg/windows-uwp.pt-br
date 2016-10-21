@@ -3,14 +3,15 @@ author: mcleanbyron
 ms.assetid: 141900dd-f1d3-4432-ac8b-b98eaa0b0da2
 description: "Conheça as soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos XAML."
 title: "Guia de solução de problemas de XAML e C#"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: ef9ad8f8056b17793d7ad8230e410e014edf2c95
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 0688ca6e0c88628803ad4e9a55b9285bd39351b4
 
 ---
 
 # Guia de solução de problemas de XAML e C#
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Este tópico contém soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos XAML.
 
@@ -289,8 +290,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
     O erro mais comum que causa uma caixa preta é “Nenhum anúncio disponível”. Esse erro significa que não há anúncios disponíveis para serem retornados da solicitação.
 
-3.  
-            O **AdControl** está funcionando normalmente. Às vezes, o mesmo anúncio aparecerá mais do que uma vez em uma linha, dando a impressão de que anúncios não estão sendo atualizados.
+3.  **AdControl** está funcionando normalmente. Às vezes, o mesmo anúncio aparecerá mais do que uma vez em uma linha, dando a impressão de que anúncios não estão sendo atualizados.
 
 <span id="csharp-adsnotrefreshing"/>
 ### Anúncios não são atualizados
@@ -340,6 +340,6 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

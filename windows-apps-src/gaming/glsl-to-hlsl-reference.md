@@ -3,15 +3,16 @@ author: mtoepke
 title: "Referência de GLSL para HLSL"
 description: "Porte seu código GLSL (OpenGL Shader Language) para código Microsoft HLSL (High Level Shader Language) ao portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11 para criar um jogo para a UWP (Plataforma Universal do Windows)."
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
+translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 02a3ba1768b6fa7b09b6c9f637a72d88c0cef604
+ms.openlocfilehash: 1be2c49dc88dcaecfa1d349f9dda7a9cc0619b92
 
 ---
 
 # Referência de GLSL para HLSL
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Porte seu código GLSL (OpenGL Shader Language) para código Microsoft HLSL (High Level Shader Language) ao [portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md) para criar um jogo para a UWP (Plataforma Universal do Windows). O GLSL citado neste documento é compatível com OpenGL ES 2.0; o HLSL é compatível com Direct3D 11. Para saber mais sobre as diferenças entre o Direct3D 11 e versões anteriores do Direct3D, consulte [Mapeamento de recursos](feature-mapping.md).
 
@@ -68,8 +69,7 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left">
-            Modificadores de armazenamento de [variável](#variables)</td>
+<td align="left">Modificadores de armazenamento [variáveis](#variables)</td>
 <td align="left">Buffers constantes e transferências de dados via declarações de layout de entrada</td>
 </tr>
 <tr class="even">
@@ -81,13 +81,11 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 </tr>
 <tr class="odd">
 <td align="left">texture2D [Function]</td>
-<td align="left">
-            [texture.Sample](https://msdn.microsoft.com/library/windows/desktop/bb509695) [datatype.Function]</td>
+<td align="left">[texture.Sample](https://msdn.microsoft.com/library/windows/desktop/bb509695) [datatype.Function]</td>
 </tr>
 <tr class="even">
 <td align="left">sampler2D [datatype]</td>
-<td align="left">
-            [Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) [datatype]</td>
+<td align="left">[Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) [datatype]</td>
 </tr>
 <tr class="odd">
 <td align="left">Matrizes da linha principal (padrão)</td>
@@ -108,8 +106,7 @@ Geralmente, o GLSL e o HLSL diferem das seguintes maneiras:
 
  
 
-> 
-            **Observação**  O HLSL tem texturas e amostras como dois objetos separados. No GLSL, assim como no Direct3D 9, a associação de textura faz parte do estado da amostra.
+> **Observação**  O HLSL tem texturas e amostras como dois objetos separados. No GLSL, assim como no Direct3D 9, a associação de textura faz parte do estado da amostra.
 
  
 
@@ -135,7 +132,7 @@ No GLSL, você deve aplicar modificadores (qualificadores) a uma declaração de
 <tr class="odd">
 <td align="left"><p><strong>uniforme</strong></p>
 <p>Você passa uma variável uniforme do código do aplicativo para o sombreador de vértice, para o sombreador de fragmento ou para ambos. Você deve definir os valores de todos os uniformes antes de desenhar triângulos com os sombreadores, de modo que os valores sejam os mesmos em todo o desenho de uma malha de triângulos. Esses valores são uniformes. Alguns uniformes são definidos para todo e quadro, e outros são exclusivos de um par específico de sombreadores de vértice-pixel.</p>
-<p>As variáveis uniformes são específicas aos polígonos.</p></td>
+<p>As variáveis uniformes são específicas dos polígonos.</p></td>
 <td align="left"><p>Use buffers constantes.</p>
 <p>Consulte [Como: criar um buffer constante](https://msdn.microsoft.com/library/windows/desktop/ff476896) e [Constantes de sombreador](https://msdn.microsoft.com/library/windows/desktop/bb509581).</p></td>
 </tr>
@@ -146,7 +143,7 @@ No GLSL, você deve aplicar modificadores (qualificadores) a uma declaração de
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>atributo</strong></p>
-<p>Um atributo é uma parte da descrição de um vértice que você passa do código do aplicativo para o sombreador de vértice. Ao contrário de um uniforme, você pode definir o valor do atributo de cada vértice, que, por sua vez, permite que cada vértice tenha um valor diferente. As variáveis de atributo são específicas aos vértices.</p></td>
+<p>Um atributo é uma parte da descrição de um vértice que você passa do código do aplicativo para o sombreador de vértice. Ao contrário de um uniforme, você pode definir o valor do atributo de cada vértice, que, por sua vez, permite que cada vértice tenha um valor diferente. As variáveis de atributo são específicas dos vértices.</p></td>
 <td align="left"><p>Defina um buffer de vértice no código do aplicativo em Direct3D e corresponda-o à entrada de vértice definida no sombreador de vértice. Você também pode definir um buffer de índice. Veja [Como: criar um buffer de vértice](https://msdn.microsoft.com/library/windows/desktop/ff476899) e [Como: criar um buffer de índice](https://msdn.microsoft.com/library/windows/desktop/ff476897).</p>
 <p>Crie um layout de entrada no código de seu aplicativo Direct3D e corresponda os valores semânticos aos da entrada do vértice. Consulte [Criar o layout de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout).</p></td>
 </tr>
@@ -574,6 +571,6 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

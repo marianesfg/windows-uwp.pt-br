@@ -5,15 +5,14 @@ title: "Criar um aplicativo de cartão inteligente NFC"
 description: "O Windows Phone 8.1 dava suporte a aplicativos de emulação de cartão NFC usando um elemento seguro baseado em SIM, mas esse modelo exigia que aplicativos de pagamento seguro estivessem rigidamente acoplados a MNO (operadoras de rede móvel)."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 1c131951d725107daffd8286e85c53acd9c0b88a
+ms.openlocfilehash: 52a8be1df522c6b5512a7fe560d01e8d840194af
 
 ---
 # Criar um aplicativo de cartão inteligente NFC
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-
-              **Importante**  Este tópico se aplica apenas ao Windows 10 Mobile.
+**Importante**  Este tópico se aplica apenas ao Windows 10 Mobile.
 
 O Windows Phone 8.1 dava suporte a aplicativos de emulação de cartão NFC usando um elemento seguro baseado em SIM, mas esse modelo exigia que aplicativos de pagamento seguro estivessem rigidamente acoplados a MNO (operadoras de rede móvel). Isso limitava a variedade de soluções de pagamento possíveis por outros comerciantes ou desenvolvedores que não estão associados a MNOs. No Windows 10 Mobile, apresentamos uma nova tecnologia de emulação de cartão, chamada Emulação de Cartão Host (HCE). A tecnologia HCE permite que seu aplicativo se comunique diretamente com um leitor de cartão NFC. Este tópico ilustra como a HCE (Emulação de Cartão Host) funciona em dispositivos Windows 10 Mobile, e como você pode desenvolver um aplicativo HCE para que os clientes possam acessar seus serviços usando um telefone, em vez de um cartão físico, sem colaborar com uma MNO.
 
@@ -101,8 +100,7 @@ taskBuilder.SetTrigger(new SmartCardTrigger(SmartCardTriggerType.EmulatorHostApp
 bgTask = taskBuilder.Register();
 ```
 
-Observe que o gatilho da tarefa é definido como [**SmartCardTriggerType**](https://msdn.microsoft.com/library/windows/apps/Dn608017). 
-              **EmulatorHostApplicationActivated**. Isso significa que, sempre que um comando APDU SELECT AID for recebido pelo sistema operacional sendo resolvido para o seu aplicativo, sua tarefa em segundo plano será iniciada.
+Observe que o gatilho da tarefa é definido como [**SmartCardTriggerType**](https://msdn.microsoft.com/library/windows/apps/Dn608017). **EmulatorHostApplicationActivated**. Isso significa que, sempre que um comando APDU SELECT AID for recebido pelo sistema operacional sendo resolvido para o seu aplicativo, sua tarefa em segundo plano será iniciada.
 
 ## Receber e responder a APDUs
 
@@ -388,6 +386,6 @@ O suporte à intercepção de SMS binário herdado no Windows Phone 8.1 foi remo
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

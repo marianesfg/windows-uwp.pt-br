@@ -3,8 +3,9 @@ author: jnHs
 Description: "O Relatório de aquisições no painel do Centro de Desenvolvimento do Windows permite que você veja quem adquiriu o seu aplicativo, juntamente com detalhes demográficos e de plataforma."
 title: "Relatório de aquisições"
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: bfdf4f9f2d94a31a1c159e947615c10abf556aad
+ms.openlocfilehash: 2556e7bd8f827287c917c3b9ffa2da980d0d5d88
 
 ---
 
@@ -15,8 +16,7 @@ O Relatório de **aquisições** no painel do Centro de Desenvolvimento do Windo
 
 Neste relatório, uma aquisição significa que um novo cliente obteve uma licença para o seu aplicativo (tendo você cobrado dinheiro ou oferecido gratuitamente).
 
-> 
-            **Importante**  O relatório **Aquisições** não inclui dados sobre reembolsos, reversões, estornos etc. Para estimar a receita do seu aplicativo, visite [Resumo de pagamento](payout-summary.md). Na seção **Reservado**, clique no link **Download reserved transactions**.
+> **Importante**  O Relatório de **Aquisições** não inclui dados sobre reembolsos, reversões, estornos, etc. Para estimar a receita do seu aplicativo, visite [Resumo de pagamento](payout-summary.md). Na seção **Reservado**, clique no link **Download reserved transactions**.
 
 
 
@@ -25,14 +25,12 @@ Neste relatório, uma aquisição significa que um novo cliente obteve uma licen
 
 Na parte superior da página, você pode expandir **Aplicar filtros** para filtrar todos os dados dessa página por intervalo de datas e/ou por tipo de dispositivo.
 
--   
-            **Data**: o filtro padrão é **Últimos 30 dias**, mas você pode expandi-lo até **Últimos 12 meses**.
--   
-            **Tipo de dispositivo**: a configuração padrão é **Todos os dispositivos**. Se desejar mostrar dados para aquisições de um determinado tipo de dispositivo apenas, você pode escolher um específico aqui.
+-   **Data**: o filtro padrão é **Últimos 30 dias**, mas você pode expandi-lo até **Últimos 12 meses**.
+-   **Tipo de dispositivo**: a configuração padrão é **Todos os dispositivos**. Se desejar mostrar dados para aquisições de um determinado tipo de dispositivo apenas, você pode escolher um específico aqui.
 
 As informações dos gráficos listados abaixo refletirão o período de tempo selecionado na seção **Aplicar filtros**.
 
-As informações de todos os gráficos listados abaixo refletirão o período de tempo selecionado na seção **Aplicar filtros**. Por padrão, isso incluem dados para todos os tipos de dispositivos, a menos que você tenha usado **Aplicar filtros** para escolher apenas um.
+As informações de todos os gráficos listados abaixo refletirão o período de tempo selecionado na seção **Aplicar filtros**. Por padrão, isso inclui dados para todos os tipos de dispositivos, a menos que você tenha usado **Aplicar filtros** para escolher apenas um.
 
 ## Aquisições
 
@@ -48,8 +46,7 @@ Você pode filtrar os resultados por mercado e/ou por versão do sistema operaci
 
 O gráfico **Customer demographic** mostra informações demográficas sobre as pessoas que adquiriram seu aplicativo. Você pode ver quantas aquisições (ao longo do período de tempo selecionado) foram feitas por pessoas em uma determinada faixa etária e por sexo.
 
-> 
-            **Observação**  Alguns clientes optam por não compartilhar essas informações. Se não for possível determinar a faixa etária ou sexo, a aquisição será categorizada como **Desconhecido**.
+> **Observação**  Alguns clientes optam por não compartilhar essas informações. Se não for possível determinar a faixa etária ou sexo, a aquisição será categorizada como **Desconhecido**.
 
  
 
@@ -71,6 +68,6 @@ O catálogo em destaque **OS version** mostra o número total de aquisições co
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

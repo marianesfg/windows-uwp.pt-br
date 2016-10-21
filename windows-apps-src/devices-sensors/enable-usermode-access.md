@@ -4,12 +4,12 @@ title: "Habilitar o acesso de modo do usuário no Windows 10 IoT Core"
 description: "Este tutorial descreve como habilitar o acesso de modo do usuário para GPIO, I2C, SPI e UART no Windows 10 IoT Core."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: eddb2ca0aaa4bdbc19b2c3015ec8d599e0ef5584
+ms.openlocfilehash: 363e73101157e1c9cc233d87b3964736c260f665
 
 ---
 # Habilitar o acesso de modo do usuário no Windows 10 IoT Core
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 O Windows 10 IoT Core contém novas APIs para acessar GPIO, I2C, SPI e UART diretamente no modo do usuário. Placas de desenvolvimento como Raspberry Pi 2 expõem uma sub-rede dessas conexões, o que permite que os usuários estendam um módulo de computação base com circuitos personalizados para endereçar um aplicativo específico. Esses barramentos de nível inferior geralmente são compartilhados com outras funções onboard críticas, com apenas um subconjunto de pinos e barramentos GPIO expostos em cabeçalhos. Para preservar a estabilidade do sistema, é necessário especificar quais pinos e barramentos são seguros para modificação por aplicativos de modo do usuário. 
@@ -617,8 +617,7 @@ Consulte [Funções de retorno de chamada de evento GpioClx](https://msdn.micros
 
 Além dessas duas novas DDIs, as DDIs existentes devem ser auditadas em relação à compatibilidade de multiplexação de pino: 
 
-* CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins é chamada pelo GpioClx para forçar o driver de miniporta a configurar um conjunto de pinos para entrada ou saída do GPIO. O GPIO e o MsftFunctionConfig são mutuamente exclusivos, ou seja, um pino nunca será ser conectado para GPIO e MsftFunctionConfig ao mesmo tempo. Como a função padrão de um pino não precisa ser GPIO, um pino não necessariamente precisa ser multiplexado para o GPIO quando ConnectIoPins é chamado. ConnectIoPins é obrigatório para a execução de todas as operações necessárias para tornar o pino pronto para E/S de GPIO, incluindo operações de multiplexação. 
-              *CLIENT_ConnectInterrupt* deve se comportar de forma semelhante, já que as interrupções podem ser consideradas como um caso especial de entrada de GPIO. 
+* CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins é chamada pelo GpioClx para forçar o driver de miniporta a configurar um conjunto de pinos para entrada ou saída do GPIO. O GPIO e o MsftFunctionConfig são mutuamente exclusivos, ou seja, um pino nunca será ser conectado para GPIO e MsftFunctionConfig ao mesmo tempo. Como a função padrão de um pino não precisa ser GPIO, um pino não necessariamente precisa ser multiplexado para o GPIO quando ConnectIoPins é chamado. ConnectIoPins é obrigatório para a execução de todas as operações necessárias para tornar o pino pronto para E/S de GPIO, incluindo operações de multiplexação. *CLIENT_ConnectInterrupt* deve se comportar de forma semelhante, já que as interrupções podem ser consideradas como um caso especial de entrada de GPIO. 
 * CLIENT_DisconnectIoPins/CLIENT_DisconnectInterrupt – esta rotina deve retornar os pinos para o estado em que estavam quando CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt foi chamada, a menos que o sinalizador PreserveConfiguration seja especificado. Além de reverter a direção dos pinos para seu estado padrão, a miniporta também deve reverter o estado de multiplexação de cada pino para o estado em que estava quando a rotina _Connect foi chamada. 
 
 Por exemplo, presuma que a configuração de multiplexação padrão de um pino seja UART e o pino também pode ser usado como GPIO. Quando CLIENT_ConnectIoPins é chamada para conectar o pin para GPIO, ela deve multiplexar o pino para GPIO e, em CLIENT_DisconnectIoPins, ela deve multiplexar o pino de volta para UART. Em geral, as rotinas _Disconnect devem desfazer operações feitas pelas rotinas _Connect. 
@@ -1087,6 +1086,6 @@ GpioInt(Edge, ActiveBoth, Shared, $($_.PullConfig), 0, "\\_SB.GPI0",) { $($_.Pin
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

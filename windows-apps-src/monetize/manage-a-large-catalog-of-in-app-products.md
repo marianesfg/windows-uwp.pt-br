@@ -3,15 +3,18 @@ author: mcleanbyron
 ms.assetid: 5E722AFF-539D-456E-8C4A-ADE90CF7674A
 description: "Se o seu aplicativo oferecer um catálogo abrangente de produtos no aplicativo, você também poderá seguir o processo descrito neste tópico para ajudar a gerenciar seu catálogo."
 title: "Gerenciar um catálogo abrangente de produtos no aplicativo"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0927df3cd696e5a6fbd3a235d2b87074f1d63929
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 529735319848fc0b8fac12e51b8536b178db0646
 
 ---
 
 # Gerenciar um catálogo abrangente de produtos no aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
+
+>**Observação**&nbsp;&nbsp;Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar complementos (também conhecidos como produtos no aplicativo ou IAPs), em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
 
 Se o seu aplicativo oferecer um catálogo abrangente de produtos no aplicativo, você também poderá seguir o processo descrito neste tópico para ajudar a gerenciar seu catálogo. Você criará algumas entradas de produtos para faixas de preços específicos, em que cada uma poderá representar centenas de produtos em um catálogo.
 
@@ -19,14 +22,13 @@ Para habilitar esse recurso, use a sobrecarga de método [**RequestProductPurcha
 
 A Loja usará somente a *offerId* da solicitação de compra nos [**PurchaseResults**](https://msdn.microsoft.com/library/windows/apps/dn263392) resultantes. Esse processo não modifica diretamente as informações originalmente fornecidas ao [listar o produto no aplicativo na Loja](https://msdn.microsoft.com/library/windows/apps/mt148551).
 
-
-            **Observação**  A partir do Windows 10, a Loja não terá limite no número de listagens de produtos por conta de desenvolvedor. Em versões anteriores, a Loja tem um limite de 200 listagens de produtos por conta de desenvolvedor, e o processo descrito neste tópico poderá ser usado para contornar essa limitação.
+**Observação**  A partir do Windows 10, a Loja não terá limite no número de listagens de produtos por conta de desenvolvedor. Em versões anteriores, a Loja tem um limite de 200 listagens de produtos por conta de desenvolvedor, e o processo descrito neste tópico poderá ser usado para contornar essa limitação.
 
 ## Pré-requisitos
 
 -   Esse tópico abrange o suporte da Loja para a representação de várias ofertas no aplicativo usando um único produto no aplicativo listado na Loja. Se você não tiver familiaridade com compras no próprio aplicativo, revise [Habilitar compras de produtos no aplicativo](enable-in-app-product-purchases.md) para saber mais sobre informações de licença e como listar adequadamente sua compra no próprio aplicativo na Windows Store.
 -   Ao codificar e testar novas ofertas no aplicativo pela primeira vez, use o objeto [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) em vez do objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765). Dessa forma, é possível verificar a lógica do licenciamento usando chamadas simuladas ao servidor de licenças em vez de chamar o servidor ativo. Para fazer isso, você precisa personalizar o arquivo chamado "WindowsStoreProxy.xml" em %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. O simulador do Microsoft Visual Studio cria esse arquivo quando você executa seu aplicativo pela primeira vez, mas também é possível carregar um arquivo personalizado no tempo de execução. Para saber mais, veja **CurrentAppSimulator**.
--   Este tópico também faz referência a exemplos de código fornecidos no [Exemplo da Loja](http://go.microsoft.com/fwlink/p/?LinkID=627610). Este exemplo é uma ótima maneira de obter experiência prática com as diferentes opções de monetização fornecidas para os aplicativos UWP (Plataforma Universal do Windows).
+-   Este tópico também faz referência a exemplos de código fornecidos no [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store). Este exemplo é uma ótima maneira de obter experiência prática com as diferentes opções de monetização fornecidas para os aplicativos UWP (Plataforma Universal do Windows).
 
 ## Fazer a solicitação de compra para o produto no aplicativo
 
@@ -112,12 +114,12 @@ switch (result)
 
 * [Habilitar compras de produtos no aplicativo](enable-in-app-product-purchases.md)
 * [Habilitar compras de produtos consumíveis no aplicativo](enable-consumable-in-app-product-purchases.md)
-* [Exemplo da Loja (demonstra avaliações e compras no aplicativo)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
+* [Exemplo da Loja (demonstra avaliações e compras no aplicativo)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [**RequestProductPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/dn263382)
 * [**ProductPurchaseDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/dn263384)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

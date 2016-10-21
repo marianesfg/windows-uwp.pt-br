@@ -3,36 +3,33 @@ author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrindo uma conta de desenvolvedor
 description: "Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Windows Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta."
+translationtype: Human Translation
 ms.sourcegitcommit: c4a753b7642354c4fe42cff721fb21337b14528f
-ms.openlocfilehash: 979df6390fef01a32fb1728956622fbfe38bafa9
+ms.openlocfilehash: b9ccd8e4756dd35fd775d91747710dd13b9ca7ed
 
 ---
 # Abrindo uma conta de desenvolvedor
 
 Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Windows Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta.
 
-> 
-            **Observação**  Quando você se inscrever para obter uma conta de desenvolvedor, usaremos o endereço de email que você fornecer nas suas informações de contato para enviar comunicações por email relacionadas à sua conta. Às vezes, isso incluir emails informativos sobre nossos programas. Mesmo que você opte por não receber esses emails informativos, [recusando-os](http://go.microsoft.com/fwlink/p/?LinkId=533280), ainda enviaremos emails transacionais (por exemplo, para que você saiba que seu aplicativo foi aprovado para certificação ou que um pagamento está sendo feito). Esses emails são uma parte fundamental da sua conta e, a menos que você feche sua conta, continuará a receber esses emails transacionais.
+> **Observação**  Quando você se inscrever para obter uma conta de desenvolvedor, usaremos o endereço de email que você fornecer nas suas informações de contato para enviar comunicações por email relacionadas à sua conta. Às vezes, isso incluir emails informativos sobre nossos programas. Mesmo que você opte por não receber esses emails informativos, [recusando-os](http://go.microsoft.com/fwlink/p/?LinkId=533280), ainda enviaremos emails transacionais (por exemplo, para que você saiba que seu aplicativo foi aprovado para certificação ou que um pagamento está sendo feito). Esses emails são uma parte fundamental da sua conta e, a menos que você feche sua conta, continuará a receber esses emails transacionais.
 
 ## O processo de inscrição de conta
 
-> 
-            **Observação**  Em alguns casos, as telas e os campos que você vir ao se registrar para obter uma conta de desenvolvedor podem variar um pouco em relação ao que é destacado a seguir, embora as informações e o processo básicos sejam os mesmos.
+> **Observação**  Em alguns casos, as telas e os campos que você vir ao se registrar para obter uma conta de desenvolvedor podem variar um pouco em relação ao que é destacado a seguir, embora as informações e o processo básicos sejam os mesmos.
 
 1.  Vá para a [página de registro](http://go.microsoft.com/fwlink/p/?LinkId=615100) e clique em **Inscreva-se**.
 2.  Selecione o [país/região](account-types-locations-and-fees.md#account-markets) em que você vive ou onde sua empresa está localizada. Não será possível alterar isso posteriormente.
 3.  Selecione seu [tipo de conta de desenvolvedor](account-types-locations-and-fees.md) (individual ou empresa). Você não poderá alterar isso depois, por isso, esteja atento para escolher o tipo de conta correto. Para uma conta de empresa, certifique-se de examinar as [diretrizes](#additional-guidelines-for-company-accounts) abaixo.
 4.  Insira as informações de contato que deseja usar para sua conta de desenvolvedor.
 
-  > 
-            **Observação**  Usaremos esses dados para entrar em contato com você a respeito de assuntos relacionados à conta. Por exemplo, você receberá uma mensagem de confirmação por email após concluir o registro. Depois disso, nós enviaremos mensagens quando formos pagar você ou se você precisar corrigir alguma coisa com a sua conta. Também podemos enviar emails informativos conforme descrito acima, a menos que você recuse o recebimento de emails não transacionais.
+  > **Observação**  Usaremos esses dados para entrar em contato com você a respeito de assuntos relacionados à conta. Por exemplo, você receberá uma mensagem de confirmação por email após concluir o registro. Depois disso, nós enviaremos mensagens quando formos pagar você ou se você precisar corrigir alguma coisa com a sua conta. Também podemos enviar emails informativos conforme descrito acima, a menos que você recuse o recebimento de emails não transacionais.
 
    Se você estiver se registrando como empresa, também precisará inserir o nome, o endereço de email e o telefone da pessoa que aprovará a conta da sua empresa.
 
 5.  Informe o **nome de exibição do editor** que você deseja usar (50 caracteres ou menos). Observe que se você inserir um nome já selecionado por outra pessoa ou se aparentemente alguém já tiver os direitos de usar esse nome, nós não permitiremos que você selecione esse nome. Para contas de empresa, o nome de exibição do fornecedor deve ser o nome comercial ou registrado da sua organização. Selecione isso com cuidado, pois os clientes verão esse nome quando navegarem e reconhecerão seus aplicativos por esse nome.
 
-  >  
-            **Observação**  Verifique se tem os direitos para usar o nome. Se outra pessoa tiver registrado a marca ou detiver os direitos autorais sobre o nome escolhido, sua conta poderá ser fechada. Veja o [Contrato de Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/Hh694058) para saber mais. Se alguém estiver usando um nome de exibição do editor do qual você detenha a marca ou outros direitos jurídicos, [contate a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
+  >  **Observação**  Verifique se tem os direitos para usar o nome. Se outra pessoa tiver registrado a marca ou detiver os direitos autorais sobre o nome escolhido, sua conta poderá ser fechada. Veja o [Contrato de Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/Hh694058) para saber mais. Se alguém estiver usando um nome de exibição do editor do qual você detenha a marca ou outros direitos jurídicos, [contate a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
 
 6.  Insira as informações de contato para a conta. Para uma conta de empresa, você também precisará fornecer informações de contato da pessoa que pode verificar se você está autorizado a criar a conta em nome de sua organização. Quando tiver terminado, clique em **Avançar** para ir para a seção **Pagamento**.
 
@@ -46,8 +43,7 @@ Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a
 
 Ao criar uma conta da empresa, siga estas diretrizes se mais de uma pessoa precisar acessar a conta fazendo logon com a conta da Microsoft usada para abri-la. 
 
-> 
-            **Importante** Para permitir que vários usuários acessem sua conta do Centro de Desenvolvimento, recomendamos usar o Azure Active Directory para atribuir funções a usuários individuais, que podem acessar a conta ao entrar com suas credenciais individuais do Azure AD. Para obter mais informações, consulte [Gerenciar usuários de contas](manage-account-users.md).
+> **Importante** Para permitir que vários usuários acessem sua conta do Centro de Desenvolvimento, recomendamos usar o Azure Active Directory para atribuir funções a usuários individuais, que podem acessar a conta ao entrar com suas credenciais individuais do Azure AD. Para obter mais informações, consulte [Gerenciar usuários de contas](manage-account-users.md).
 
 -   Crie sua conta da Microsoft usando um endereço de email que pertença ao domínio de sua empresa, mas não a uma pessoa especificamente, por exemplo, windowsapps@fabrikam.com.
 -   Limite o acesso a essa conta da Microsoft ao menor número possível de desenvolvedores.
@@ -86,6 +82,6 @@ Quando você fechar sua conta, é importante entender o que acontece com qualque
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,15 +1,16 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obter propriedades do arquivo
 description: "Obtenha as propriedades&\\#8212;nível superior, básicas e estendidas&\\#8212;de um arquivo representado pelo objeto StorageFile."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 56b83d2f05189b4cbb5bbc015987a4ffce8d86fd
+translationtype: Human Translation
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: 78fdc200b134525fc0445af64e73b184b49ef2a3
 
 ---
 # Obter propriedades do arquivo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** APIs importantes **
@@ -20,8 +21,7 @@ ms.openlocfilehash: 56b83d2f05189b4cbb5bbc015987a4ffce8d86fd
 
 Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo representado pelo objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
-
-            **Observação**  Consulte também a [Amostra de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
+**Observação**  Consulte também o [Exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
  
 
@@ -40,8 +40,7 @@ Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo
 
 Muitas propriedades de nível superior são acessadas como membros da classe [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). Essas propriedades incluem atributos do arquivo, tipo de conteúdo, data de criação, nome para exibição, tipo de arquivo etc.
 
-
-            **Observação**  Lembre-se de declarar a funcionalidade **picturesLibrary**.
+**Observação**  Lembre-se de declarar a funcionalidade **picturesLibrary**.
 
  
 
@@ -80,14 +79,14 @@ foreach (Windows.Storage.StorageFile file in files)
     StringBuilder fileProperties = new StringBuilder();
 
     // Get file's basic properties.
-    Windows.Storage.FileProperties.BasicProperties basicProperties = 
+    Windows.Storage.FileProperties.BasicProperties basicProperties =
         await file.GetBasicPropertiesAsync();
     string fileSize = string.Format("{0:n0}", basicProperties.Size);
     fileProperties.AppendLine("File size: " + fileSize + " bytes");
     fileProperties.AppendLine("Date modified: " + basicProperties.DateModified);
 }
  ```
- 
+
 ## Obtendo as propriedades estendidas de um arquivo
 
 Além das propriedades de nível superior e básicas (de um arquivo), há muitas propriedades associadas ao conteúdo do arquivo. Essas propriedades estendidas são acessadas com a chamada ao método [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124). (Um objeto [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113) é obtido chamando a propriedade [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225).) Embora propriedades de arquivo de nível superior e básicas sejam acessadas como propriedades de uma classe —[**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) e **BasicProperties**, respectivamente — propriedades estendidas são obtidas transmitindo uma coleção [IEnumerable](http://go.microsoft.com/fwlink/p/?LinkID=313091) de objetos [String](http://go.microsoft.com/fwlink/p/?LinkID=325032) que representam os nomes das propriedades que devem ser recuperadas para o método **BasicProperties.RetrievePropertiesAsync**. Esse método então retorna uma coleção [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238). Cada propriedade estendida é recuperada da coleção, por nome ou índice.
@@ -113,7 +112,7 @@ foreach (Windows.Storage.StorageFile file in files)
     propertyNames.Add(fileOwnerProperty);
 
     // Get extended properties.
-    IDictionary<string, object> extraProperties = 
+    IDictionary<string, object> extraProperties =
         await file.Properties.RetrievePropertiesAsync(propertyNames);
 
     // Get date-accessed property.
@@ -138,10 +137,6 @@ foreach (Windows.Storage.StorageFile file in files)
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

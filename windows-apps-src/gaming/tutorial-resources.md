@@ -5,15 +5,16 @@ description: "Parabéns! A esta altura, você já entende os componentes princip
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
 keywords:
 - DirectX, XAML
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 02b8681c45c84e1cdd5b97dfc717a68015df1252
+ms.openlocfilehash: 17d34f0edcbe6729fe63204123faf4b7393beea7
 
 ---
 
 # Estender o exemplo de jogo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Parabéns! A esta altura, você já entende os componentes principais de um jogo UWP (Plataforma Universal do Windows) DirectX 3D básico. Você pode configurar a estrutura de um jogo, inclusive o provedor de exibição e o pipeline de renderização, e implementar um loop básico de jogo. Você também pode criar uma sobreposição de interface do usuário básica, além de incorporar sons e controles. Você está a caminho de criar um jogo por conta própria. Aqui estão alguns recursos para aprofundar seus conhecimentos sobre o desenvolvimento de jogos em DirectX.
 
@@ -1520,6 +1521,6 @@ Para baixar uma versão do jogo de exemplo que usa XAML para sobreposição, vá
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

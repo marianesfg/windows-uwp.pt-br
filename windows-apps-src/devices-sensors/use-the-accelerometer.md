@@ -3,8 +3,9 @@ author: DBirtolo
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
 title: "Usar o acelerômetro"
 description: "Saiba como usar o acelerômetro para responder ao movimento do usuário."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f1ec749d7bec245632f1998ac5cc94b9bfcad533
+ms.openlocfilehash: 8ce3baf2b030096ae5cfc56f31b97ec58e138a44
 
 ---
 # Usar o acelerômetro
@@ -129,11 +130,11 @@ Você precisará substituir o nome do namespace no trecho anterior pelo nome que
 
 Você precisará substituir a primeira parte do nome da classe no trecho anterior pelo namespace de seu aplicativo. Por exemplo, se você criou um projeto denominado **AccelerometerCS**, pode substituir `x:Class="App1.MainPage"` por `x:Class="AccelerometerCS.MainPage"`. Você também deve substituir `xmlns:local="using:App1"` por `xmlns:local="using:AccelerometerCS"`.
 
--   Pressione F5 ou selecione **Depurar**&gt;**Iniciar Depuração** para criar, implantar e executar o aplicativo.
+-   Pressione F5 ou selecione **Depurar** &gt; **Iniciar Depuração** para criar, implantar e executar o aplicativo.
 
 Quando o aplicativo estiver em execução, você poderá alterar os valores do acelerômetro. Basta mover o dispositivo ou usar as ferramentas do emulador.
 
--   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar**&gt;**Parar Depuração** para parar o aplicativo.
+-   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** &gt; **Parar Depuração** para parar o aplicativo.
 
 ### Explicação
 
@@ -174,6 +175,6 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

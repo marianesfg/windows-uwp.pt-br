@@ -3,8 +3,9 @@ author: jwmsft
 title: Atributo xPhase
 description: "Use xPhase com a extensão de marcação xBind para renderizar os itens ListView e GridView de maneira incremental e melhorar a experiência de movimento panorâmico."
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: dfa12909d19a44ed38939c612712c8fe90f3f584
+ms.openlocfilehash: c6100f59bb91bc3c6451fc2167d914b0a4a36ded
 
 ---
 
@@ -12,8 +13,7 @@ ms.openlocfilehash: dfa12909d19a44ed38939c612712c8fe90f3f584
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Use **x:Phase** com a [extensão de marcação {x:Bind}](x-bind-markup-extension.md) para renderizar os itens [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) de maneira incremental e melhorar a experiência de movimento panorâmico. 
-            **x:Phase** oferece uma maneira declarativa de conseguir o mesmo efeito que o uso do evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) para controlar manualmente a renderização de itens de lista. Consulte também [Atualizar os itens GridView e ListView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
+Use **x:Phase** com a [extensão de marcação {x:Bind}](x-bind-markup-extension.md) para renderizar os itens [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) de maneira incremental e melhorar a experiência de movimento panorâmico. **x:Phase** oferece uma maneira declarativa de conseguir o mesmo efeito que o uso do evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) para controlar manualmente a renderização de itens de lista. Consulte também [Atualizar os itens GridView e ListView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
 ## Uso do atributo XAML
 
@@ -81,6 +81,6 @@ O atributo Phase será aplicado somente quando o modelo de item for renderizado,
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,9 +3,10 @@ author: Xansky
 description: "Mostra como iniciar a caixa de diálogo de email para permitir que o usuário envie uma mensagem de email. Você pode previamente preencher os campos de email com dados antes de mostrar a caixa. A mensagem não será enviada até que o usuário toque no botão enviar."
 title: Enviar email
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
-keywords: contacts, email, send
+keywords: contatos, email, envio
+translationtype: Human Translation
 ms.sourcegitcommit: 252e144b2436f047f7b0849bb6e5aee87b2e3464
-ms.openlocfilehash: ff0d2cd86f8ba422db7a26565c52293a3e21a018
+ms.openlocfilehash: ff09393af072eb8aee8c3001e7323cc20201da70
 
 ---
 
@@ -59,7 +60,7 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 
 ## Resumo e próximas etapas
 
-Este tópico mostrou como iniciar a caixa de redação de email. Para saber mais sobre como selecionar contatos para usar como destinatários de uma mensagem de email, consulte [Selecionar contatos](selecting-contacts.md). Veja [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275) para selecionar um arquivo a ser usado como um anexo de email.
+Este tópico mostrou como iniciar a caixa de redação de email. Para obter mais informações sobre como selecionar contatos para usar como destinatários de uma mensagem de email, consulte [Selecionar contatos](selecting-contacts.md). Veja [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275) para selecionar um arquivo a ser usado como um anexo de email.
 
 ## Tópicos relacionados
 
@@ -75,6 +76,6 @@ Este tópico mostrou como iniciar a caixa de redação de email. Para saber mais
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

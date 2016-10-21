@@ -4,28 +4,25 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados para um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter dados de relatório de erros"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 682f727a21d74f5cea8fddc4886c873d537e1cfb
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: 64bd3491bc8ff37f5eb7ca852ad6dc738f6e2711
 
 ---
 
 # Obter dados de relatório de erros
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados para um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
 ## Pré-requisitos
 
 
-Para usar este método, você precisa do seguinte:
+Para usar este método, primeiro você precisa do seguinte:
 
--   Associe o aplicativo do Azure AD que você usará para chamar esse método com sua conta do Centro de Desenvolvimento.
-
--   Obtenha um token de acesso do Azure AD para seu aplicativo.
-
-Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md).
+* Se você não tiver feito isso, conclua todos os [pré-requisitos](access-analytics-data-using-windows-store-services.md#prerequisites) para a API de análise da Windows Store.
+* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
 ## Solicitação
 
@@ -42,7 +39,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -66,7 +63,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 <tbody>
 <tr class="odd">
 <td align="left">applicationId</td>
-<td align="left">cadeia de caracteres</td>
+<td align="left">string</td>
 <td align="left">A ID da Loja do aplicativo para o qual você deseja recuperar dados de relatório de erros. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.</td>
 <td align="left">Sim</td>
 </tr>
@@ -277,7 +274,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 | Valor           | Tipo    | Descrição                                                                                                                                                                                                                              |
 |-----------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date            | string  | A primeira data no intervalo de datas dos dados de aquisição. Se a solicitação especificou um único dia, esse valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, esse valor será a primeira data nesse intervalo de datas. |
-| applicationId   | string  | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição de IAP.                                                                                                                                                           |
+| applicationId   | string  | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição do complemento.                                                                                                                                                           |
 | applicationName | string  | O nome de exibição do aplicativo.                                                                                                                                                                                                             |
 | failureName     | string  | O nome do erro.                                                                                                                                                                                                                 |
 | failureHash     | string  | O identificador exclusivo para o erro.                                                                                                                                                                                                   |
@@ -327,12 +324,12 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
 * [Obter aquisições de aplicativo](get-app-acquisitions.md)
-* [Obter aquisições IAP](get-in-app-acquisitions.md)
-* [Obter classificações de aplicativo](get-app-ratings.md)
+* [Obter aquisições de complemento](get-in-app-acquisitions.md)
+* [Obter classificações de aplicativos](get-app-ratings.md)
 * [Obter avaliações de aplicativo](get-app-reviews.md)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

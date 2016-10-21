@@ -3,8 +3,9 @@ author: TylerMSFT
 title: Adicionar uma tela inicial
 description: Defina a imagem da tela inicial e a cor da tela de fundo usando o Microsoft Visual Studio 2015.
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 261b52d1835e992a784aa5fa356230fdd326b8c5
+ms.openlocfilehash: 4d8a00cf7bd151ab97e9abc10a09a3794a0e292f
 
 ---
 
@@ -22,7 +23,7 @@ Defina a imagem da tela inicial e a cor da tela de fundo usando o Microsoft Visu
 Quando você usa um modelo do Visual Studio 2015 para criar o seu aplicativo, uma imagem padrão é adicionada ao seu projeto e definida como a imagem da tela inicial. A cor de tela de fundo da tela inicial muda para um padrão de cinza claro. Se você quiser mudar a imagem ou cor padrão da tela inicial de seu aplicativo, siga estas etapas:
 
 1.  Abra o seu projeto de aplicativa do Plataforma Universal do Windows (UWP) no Visual Studio 2015.
-2.  Em **Solution Explorer**, abra o arquivo "Package.appxmanifest". Você também pode abrir esse arquivo pela barra de menus escolhendo **Projeto**&gt;**Loja**&gt;**Editar Manifesto do Aplicativo**.
+2.  Em **Solution Explorer**, abra o arquivo "Package.appxmanifest". Você também pode abrir esse arquivo pela barra de menus escolhendo **Projeto** &gt; **Loja** &gt; **Editar Manifesto do Aplicativo**.
 3.  Abra a guia **Ativos Visuais** e selecione **Tela inicial** no painel **Todos os Ativos de imagem** no lado esquerdo da janela "Package.appxmanifest". Se você estiver alterando sua tela inicial pela primeira vez, verá o caminho "Assets\\SplashScreen.png"no campo **Tela inicial**.
 
     A tela a seguir mostra a janela "Package.appxmanifest" no Visual Studio 2015. Dependendo do tipo de projeto, você verá um conjunto de ativos visuais ligeiramente diferente.
@@ -37,15 +38,13 @@ Quando você usa um modelo do Visual Studio 2015 para criar o seu aplicativo, um
 
 4.  Para selecionar uma nova imagem de tela inicial para um aplicativo UWP, pressione o botão com reticências que aparece próximo ao rótulo **1240 x 600 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1240 x 600 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
 
-    
-            **Importante**  A imagem de tela inicial que você escolher deve ter 620 x 300 pixels usando um fator de escala 1x. Além disso, ao projetar sua tela inicial, observe que ela é menor do que a tela e centralizada. Ela não preenche a tela como uma tela inicial de um aplicativo da Loja do Windows Phone faz.
+    **Importante**  A imagem de tela inicial que você escolher deve ter 620 x 300 pixels usando um fator de escala 1x. Além disso, ao projetar sua tela inicial, observe que ela é menor do que a tela e centralizada. Ela não preenche a tela como uma tela inicial de um aplicativo da Loja do Windows Phone faz.
 
      
 
 5.  Para selecionar uma nova imagem de tela inicial para um aplicativo da Loja do Windows Phone, pressione o botão com reticências que aparece próximo ao rótulo **1152 x 1920 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1152 x 1920 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
 
-    
-            **Importante**  A imagem de tela inicial que você escolher deve ter 1152 x 1920 pixels, que é o tamanho correto para um fator de escala 2,4x. Se esse for o único ativo que você fornecer, então, ele será reduzido para os fatores de dimensionamento 1,4 x e 1x.
+    **Importante**  A imagem de tela inicial que você escolher deve ter 1152 x 1920 pixels, que é o tamanho correto para um fator de escala 2,4x. Se esse for o único ativo que você fornecer, então, ele será reduzido para os fatores de dimensionamento 1,4 x e 1x.
 
      
 
@@ -78,6 +77,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,79 +1,83 @@
 ---
 author: mcleanbyron
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
-description: Use this method in the Windows Store submission API to retrieve all add-on data for all the apps that are registered to your Windows Dev Center account.
-title: Get all add-ons using the Windows Store submission API
+description: "Use este método na API de envio da Windows Store para recuperar todos os dados de complemento para todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
+title: Obter todos os complementos usando a API de envio da Windows Store
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 64d40badaa4664e4f516900e82d290f60a499149
+
 ---
 
-# Get all add-ons using the Windows Store submission API
+# Obter todos os complementos usando a API de envio da Windows Store
 
 
 
 
-Use this method in the Windows Store submission API to retrieve data for all add-ons (also known as in-app products or IAPs) for all the apps that are registered to your Windows Dev Center account.
+Use este método na API de envio da Windows Store para recuperar dados de todos os complementos (também conhecidos como produtos no aplicativo ou IAPs) para todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
 
-## Prerequisites
+## Pré-requisitos
 
-To use this method, you need to first do the following:
+Para usar este método, primeiro você precisa do seguinte:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+* Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Request
+## Solicitação
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
-| Method | Request URI                                                      |
+| Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Cabeçalho da solicitação
 
-| Header        | Type   | Description                                                                 |
+| Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Parâmetros solicitados
 
-All request parameters are optional for this method. If you call this method without parameters, the response contains data for all add-ons for all apps that are registered to your account.
- 
-|  Parameter  |  Type  |  Description  |  Required  |
+Todos os parâmetros de solicitação são opcionais para esse método. Se você chamar esse método sem parâmetros, a resposta conterá dados para todos os complementos de todos os aplicativos que estão registrados em sua conta.
+ 
+|  Parâmetro  |  Tipo  |  Descrição  |  Obrigatório  |
 |------|------|------|------|
-|  top  |  int  |  The number of items to return in the request (that is, the number of add-ons to return). If your account has more add-ons than the value you specify in the query, the response body includes a relative URI path that you can append to the method URI to request the next page of data.  |  No  |
-|  skip  |  int  |  The number of items to bypass in the query before returning the remaining items. Use this parameter to page through data sets. For example, top=10 and skip=0 retrieves items 1 through 10, top=10 and skip=10 retrieves items 11 through 20, and so on.  |  No  |
+|  top  |  int  |  O número de itens a serem retornados na solicitação (ou seja, o número de complementos a serem retornados). Se sua conta tiver mais complementos que o valor especificado na consulta, o corpo da resposta incluirá um caminho relativo do URI que você pode acrescentar ao URI do método para solicitar a próxima página de dados.  |  Não  |
+|  skip  |  int  |  O número de itens a serem ignorados na consulta antes de retornar os itens restantes. Use este parâmetro para percorrer conjuntos de dados. Por exemplo, top=10 e skip=0 recuperam os itens de 1 a 10, top=10 e skip=10 recuperam os itens de 11 a 20 e assim por diante.  |  Não  |
 
 <span/>
 
-### Request body
+### Corpo da solicitação
 
-Do not provide a request body for this method.
+Não forneça um corpo da solicitação para esse método.
 
-### Request examples
+### Exemplos de solicitação
 
-The following example demonstrates how to retrieve all add-on data for all the apps that are registered to your account.
+O exemplo a seguir demonstra como recuperar todos os dados de complemento de todos os aplicativos que estão registrados em sua conta.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-The following example demonstrates how to retrieve the first 10 add-ons only.
+O exemplo a seguir demonstra como recuperar somente os 10 primeiros complementos.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Resposta
 
-The following example demonstrates the JSON response body returned by a successful request for the first 5 add-ons that are registered to a developer account with 1072 total add-ons. For brevity, this example only shows the data for the first two add-ons returned by the request. For more details about the values in the response body, see the following section.
+O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicitação bem-sucedida para os 5 primeiros complementos que são registrados para uma conta de desenvolvedor com 1072 complementos no total. Para abreviar, este exemplo mostra apenas os dados dos dois primeiros complementos retornados pela solicitação. Para obter mais detalhes sobre os valores no corpo da resposta, veja a seção a seguir.
 
 ```json
 {
@@ -130,31 +134,37 @@ The following example demonstrates the JSON response body returned by a successf
 }
 ```
 
-### Response body
+### Corpo da resposta
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | string | If there are additional pages of data, this string contains a relative path that you can append to the base ```https://manage.devcenter.microsoft.com/v1.0/my/``` request URI to request the next page of data. For example, if the *top* parameter of the initial request body is set to 10 but there are 100 add-ons registered to your account, the response body will include a @nextLink value of ```inappproducts?skip=10&top=10```, which indicates that you can call ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?skip=10&top=10``` to request the next 10 add-ons. |
-| value            | array  |  An array that contains objects that provide information about each add-on. For more information, see [add-on resource](manage-add-ons.md#add-on-object).   |
-| totalCount   | int  | The number of app objects in the *value* array of the response body.                                                                                                                                                 |
+| @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 100 complementos registrados em sua conta, o corpo da resposta incluirá um valor @nextLink ```inappproducts?skip=10&top=10```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?skip=10&top=10``` para solicitar os próximos 10 complementos. |
+| value            | array  |  Uma matriz que contém objetos que fornecem informações sobre cada complemento. Para saber mais, veja [recurso de complemento](manage-add-ons.md#add-on-object).   |
+| totalCount   | int  | O número de objetos de aplicativo na matriz *value* do corpo da resposta.                                                                                                                                                 |
 
 
 
-## Error codes
+## Códigos de erro
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
-| Error code |  Description   |
+| Código de erro |  Descrição   |
 |--------|------------------|
-| 404  | No add-ons were found. |
-| 409  | The apps or add-ons use Dev Center dashboard features that are [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 404  | Nenhum complemento foi encontrado. |
+| 409  | Os aplicativos ou complementos usam recursos de painel do Centro de Desenvolvimento que [atualmente não são compatíveis com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 <span/>
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage add-on submissions](manage-add-on-submissions.md)
-* [Get an add-on](get-an-add-on.md)
-* [Create an add-on](create-an-add-on.md)
-* [Delete an add-on](delete-an-add-on.md)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Gerenciar envios de complemento](manage-add-on-submissions.md)
+* [Obter um complemento](get-an-add-on.md)
+* [Criar um complemento](create-an-add-on.md)
+* [Excluir um complemento](delete-an-add-on.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

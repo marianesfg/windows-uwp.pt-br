@@ -3,15 +3,16 @@ author: mtoepke
 title: Como ativar um aplicativo (DirectX e C++)
 description: "Este tópico mostra como definir a experiência de ativação para um aplicativo UWP (Plataforma Universal do Windows) DirectX."
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 14859d03c7af45a17772c76f8c79b3c1bc56272c
+ms.openlocfilehash: 0b13604d2b0349817881a5c1c56c311931c90759
 
 ---
 
 # Como ativar um aplicativo (DirectX e C++)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico mostra como definir a experiência de ativação para um aplicativo UWP (Plataforma Universal do Windows) DirectX.
 
@@ -38,8 +39,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## Ativar a instância do CoreWindow para o aplicativo
 
 
-Quando seu aplicativo é iniciado, você deve obter uma referência ao [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para ele. 
-            **O CoreWindow** inclui o dispatcher de mensagem de eventos de janela que seu aplicativo usa para processar os eventos da janela. Obtenha essa referência no retorno de chamada do evento de ativação do aplicativo chamando [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589). Depois que você obtiver essa referência, ative a janela principal do aplicativo chamando [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).
+Quando seu aplicativo é iniciado, você deve obter uma referência ao [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para ele. **CoreWindow** inclui o dispatcher de mensagem de eventos de janela que seu aplicativo usa para processar os eventos da janela. Obtenha essa referência no retorno de chamada do evento de ativação do aplicativo chamando [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589). Depois que você obtiver essa referência, ative a janela principal do aplicativo chamando [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).
 
 ```cpp
 void App::OnActivated(CoreApplicationView^ applicationView, IActivatedEventArgs^ args)
@@ -95,6 +95,6 @@ void App::Run()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

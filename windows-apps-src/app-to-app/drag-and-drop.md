@@ -3,13 +3,14 @@ description: Este artigo explica como adicionar o recurso de arrastar e soltar e
 title: Arrastar e soltar
 ms.assetid: A15ED2F5-1649-4601-A761-0F6C707A8B7E
 author: awkoren
-ms.sourcegitcommit: 03f3f86ed1310e6e3ac5f53cc5e81ebef708a1a2
-ms.openlocfilehash: ffa2f0f368a61ef4f3003c1fa03e143b26c6859b
+translationtype: Human Translation
+ms.sourcegitcommit: f2133ca15e30f7451a61f78b48e883db1a5687a6
+ms.openlocfilehash: ee3d0c40effc12382f6fd31154016953f172be70
 
 ---
 # Arrastar e soltar
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo explica como adicionar o recurso de arrastar e soltar em seu aplicativo UWP (Plataforma Universal do Windows). Arrastar e soltar é uma maneira clássica e natural de interagir com conteúdo, como imagens e arquivos. Uma vez implementada, a função arrastar e soltar funciona diretamente em todas as direções, incluindo de aplicativo para aplicativo, de aplicativo para área de trabalho e de área de trabalho para aplicativo.
@@ -48,8 +49,23 @@ O sistema fornece uma interface do usuário padrão para arrastar e soltar. No e
 
 [!code-cs[Principal](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
 
-## Veja também
+## Abra um menu de contexto em um item que você possa arrastar com o recurso touch
 
+Usando o recurso touch, arraste um [**UIElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement) e abra o menu de contexto semelhante a gestos de toque; cada um começa com um gesto pressionar e segurar. É assim que o sistema remove a ambiguidade entre as duas ações para os elementos em seu aplicativo que dão suporte para ambos: 
+
+* Se um usuário pressiona e segura um item e começa a arrastá-lo dentro de 500 milissegundos, o item é arrastado e o menu de contexto não é mostrado. 
+* Se o usuário pressiona e mantém, mas não arrasta dentro de 500 milissegundos, o menu de contexto é aberto. 
+* Após o menu de contexto ser aberto, se o usuário tentar arrastar o item (sem levantar o dedo), o menu de contexto é ignorado e o arraste será iniciado.
+
+## Designar um item em ListView ou GridView como uma pasta
+
+Você pode especificar um [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ListViewItem) ou [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridViewItem) como uma pasta. Isso é particularmente útil para cenários de TreeView e Explorador de Arquivos. Para fazer isso, defina explicitamente a propriedade [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) como **True** nesse item. 
+
+O sistema irá exibir automaticamente as animações apropriadas para soltar em uma pasta em vez de um item que não pertence a pasta. O código do aplicativo deve continuar a manipular o evento [**Drop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.Drop) no item da pasta (bem como no item que não pertence a pasta) para atualizar a fonte de dados e adicionar o item solto para a pasta de destino.
+
+## Consulte também
+
+* [Comunicação de aplicativo a aplicativo](index.md)
 * [AllowDrop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.allowdrop.aspx)
 * [CanDrag](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.candrag.aspx)
 * [DragOver](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.dragover.aspx)
@@ -57,8 +73,10 @@ O sistema fornece uma interface do usuário padrão para arrastar e soltar. No e
 * [DataView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.dataview.aspx)
 * [DragUiOverride](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.draguioverride.aspx)
 * [Drop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.drop.aspx)
+* [IsDragSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isdragsource.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

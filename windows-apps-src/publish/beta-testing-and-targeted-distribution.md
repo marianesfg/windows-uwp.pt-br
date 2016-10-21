@@ -3,8 +3,9 @@ author: jnHs
 Description: "O painel do Centro de Desenvolvimento do Windows oferece a opção de tornar seu aplicativo disponível apenas para pessoas específicas para que você possa fazer com que testadores o testem antes de oferecê-lo ao público."
 title: "Teste da versão beta e distribuição específica"
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a544565bf7bb82f2be1ded3e60836d5d191c6e93
+translationtype: Human Translation
+ms.sourcegitcommit: 70020d3c6e0fb0fea321ce1951720803fd25f9c0
+ms.openlocfilehash: 48164cd255f776f700a08e389ba1d2d6754ddeca
 
 ---
 
@@ -27,24 +28,26 @@ Se você já publicou uma versão do seu aplicativo, pode criar pacotes de pré-
 
 Para saber mais, veja [Pacotes de pré-lançamento](package-flights.md).
 
+> **Observação** Para distribuir pacotes para uma seleção aleatória de clientes do Windows 10 em uma porcentagem especificada, em vez de em um grupo designado de clientes específicos, você pode usar uma [distribuição de pacote gradual](gradual-package-rollout.md). Você também pode combinar distribuição com seus pacotes de pré-lançamento se quiser distribuir gradualmente uma atualização para um de seus grupos de versão de pré-lançamento.
+
 ### Ocultando o aplicativo na Loja e usando códigos promocionais
 
-Se você deseja limitar a distribuição de um aplicativo para apenas um determinado grupo de testadores, sem primeiro publicar um envio de disponibilidade geral, pode usar o mesmo [processo de envio de aplicativo](app-submissions.md) válido para qualquer outro aplicativo enviado. Para permitir que apenas algumas pessoas obtenham o aplicativo gratuitamente e impedir que outros clientes vejam sua listagem ou façam seu download, siga este procedimento:
+Se você deseja limitar a distribuição de um aplicativo para apenas um determinado grupo de testadores, **sem** primeiro publicar um envio de disponibilidade geral, pode usar o mesmo [processo de envio de aplicativo](app-submissions.md) válido para qualquer outro aplicativo enviado. Para permitir que apenas algumas pessoas obtenham o aplicativo gratuitamente e impedir que outros clientes vejam sua listagem ou façam seu download, siga este procedimento:
 
--   No seu envio, na página **Preço e disponibilidade**, escolha **Ocultar esse aplicativo e evitar aquisição. Clientes com um código promocional ainda podem baixá-lo em dispositivos Windows 10**, na seção [Distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility). Isso impede que qualquer pessoa encontre seu aplicativo na Loja por meio de pesquisa ou navegação.
+-   No seu envio, na página **Preço e disponibilidade**, escolha **Ocultar este aplicativo e evitar a aquisição. Os clientes com um link direto podem ver a listagem do aplicativo, mas só pode baixar o aplicativo se eles tiverem um código promocional e estiver usando um dispositivo Windows 10** na seção [Distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility). Isso impede que qualquer pessoa encontre seu aplicativo na Loja por meio de pesquisa ou navegação.
 -   Depois que o aplicativo for aprovado na certificação, [gere códigos promocionais](generate-promotional-codes.md) para o aplicativo e distribua-os aos seus testadores. Você pode gerar até 250 códigos promocionais para um único aplicativo em um período de seis meses. Esses códigos fornecem aos testadores um link direto para os detalhes do aplicativo e permitem que eles o baixem gratuitamente, mesmo se você tiver definido um preço para ele quando criou seu envio.
 
-Depois de distribuir os links de código promocional para os testadores, eles podem baixar seu aplicativo gratuitamente, experimentar e fornecer feedback para ajudar a melhorar o aplicativo. Em seguida, quando estiver pronto para disponibilizar seu aplicativo para o público, basta criar um novo envio e alterar a opção **Distribuição e visibilidade** para **Qualquer pessoa pode encontrar seu aplicativo na Loja** (junto com quaisquer outras alterações que você queira fazer).
+Depois de distribuir os links de código promocional para os testadores, eles podem baixar seu aplicativo gratuitamente, experimentar e fornecer feedback para ajudar a melhorar o aplicativo. Em seguida, quando estiver pronto para disponibilizar seu aplicativo para o público, basta criar um novo envio e alterar a opção **Distribuição e visibilidade** para **Disponibilizar este aplicativo na Loja** (junto com quaisquer outras alterações que você queira fazer).
 
 Veja algumas coisas para se ter em mente ao fazer isso:
 
--   Você pode dar aos testadores uma versão atualizada do seu aplicativo a qualquer momento. Basta criar um novo envio. Certifique-se de manter a opção **Distribuição e visibilidade** definida como **Ocultar esse aplicativo e evitar aquisição. Clientes com um código promocional ainda podem baixá-lo em dispositivos Windows 10**. Os testadores receberão a atualização após passar pelo processo de certificação, mas nenhuma outra pessoa a receberá.
+-   Você pode dar aos testadores uma versão atualizada do seu aplicativo a qualquer momento. Basta criar um novo envio. Certifique-se de manter a opção **Distribuição e visibilidade** definida como **Ocultar este aplicativo e evitar a aquisição. Os clientes com um link direto podem ver a listagem do aplicativo, mas só podem baixá-lo se tiverem um código promocional e estiver usando um dispositivo Windows 10**. Os testadores receberão a atualização após passar pelo processo de certificação, mas nenhuma outra pessoa a receberá.
 -   Seus testadores devem ter um dispositivo Windows 10 no qual possam instalar o aplicativo. (Contudo, seu aplicativo não precisa incluir pacotes do Windows 10 para usar esse método de teste).
--   Você pode criar mais [códigos promocionais](generate-promotional-codes.md) para distribuir a qualquer momento (até 250 códigos a cada seis meses).
+-   Você pode criar mais [códigos promocionais](generate-promotional-codes.md) para distribuir a qualquer momento (até 500 códigos a cada seis meses).
 -   Você não pode revogar o acesso ao aplicativo que os testadores baixá-lo. Depois que eles baixarem o aplicativo, poderão continuar a usá-lo, e eles obterão as atualizações que você publicar posteriormente.
 -   Você precisa determinar como deseja receber feedback dos testadores. Recomendamos fornecer um link de email ou site no aplicativo beta para que eles possam fornecer comentários facilmente.
 -   Você pode examinar [relatórios analíticos](analytics.md) do seu aplicativo, incluindo classificações ou críticas deixadas pelos testadores.
--   Você pode incluir produtos no aplicativo (IAPs) ao distribuir seu aplicativo para os testadores. Como você provavelmente não deseja cobrá-los, defina o preço para os IAPs como Gratuito enquanto estiver fazendo o teste. Em seguida, quando você disponibilizar o aplicativo para outros clientes, poderá criar um novo envio para cada IAP para alterar o preço.
+-   Você pode incluir complementos quando você distribuir seu aplicativo aos testadores. Como você provavelmente não deseja cobrá-los, defina o preço para os complementos como Gratuito enquanto estiver fazendo o teste. Em seguida, quando você disponibilizar o aplicativo para outros clientes, poderá criar um novo envio para cada complemento para alterar o preço.
 
 ## Métodos adicionais limitados para distribuir aplicativos aos testadores
 
@@ -54,30 +57,27 @@ Se você escolher qualquer uma dessas opções acima, sempre poderá enviar uma 
 
 ### Distribuição direcionada a clientes com um link para os detalhes do aplicativo
 
-Com essa opção, apenas as pessoas com um link direto para os detalhes do aplicativo podem baixá-lo. Você pode encontrar esse link na página [Identidade do aplicativo](view-app-identity-details.md) no painel (use a **URL para Windows Phone** ou **URL para Windows 10**). Os clientes não serão capazes de encontrar o aplicativo pesquisando ou navegando na loja, mas qualquer pessoa com o link pode baixá-lo. (Observe que seu aplicativo deve ter o preço estabelecido como **Grátis** para que os testadores possam baixá-lo sem custo.)
+Com essa opção, apenas as pessoas com um link direto para os detalhes do aplicativo podem baixá-lo. Você pode encontrar essa **URL** na página [Identidade do aplicativo](view-app-identity-details.md) no painel. Os clientes não serão capazes de encontrar o aplicativo pesquisando ou navegando na loja, mas qualquer pessoa com o link pode baixá-lo. (Observe que seu aplicativo deve ter o preço estabelecido como **Grátis** para que os testadores possam baixá-lo sem custo.)
 
 Para usar essa opção, selecione **Ocultar esse aplicativo na Loja. Clientes com um link direto para a listagem do aplicativo ainda podem baixá-lo, exceto no Windows 8 e no Windows 8.1:** na seção [Distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility) da página **Preço e visibilidade** quando for enviar o aplicativo.
 
-> 
-            **Importante**  Essa opção não funciona para testadores no Windows 8 ou no Windows 8.1.
+> **Importante**  Essa opção não funciona para testadores no Windows 8 ou no Windows 8.1.
 
 ### Distribuição direcionada a clientes com endereços de email especificados
 
-Para testar no Windows Phone 8.1 e em versões anteriores, essa opção oferece uma maneira de limitar a distribuição de seu aplicativo. Apenas as pessoas cujo email (associado a suas contas da Microsoft) você inserir na caixa poderão baixar seu aplicativo usando o link direto para sua listagem.
+Para testar **somente no Windows Phone 8.1 e em versões anteriores**, essa opção oferece uma maneira de limitar a distribuição de seu aplicativo. Apenas as pessoas cujo email (associado a suas contas da Microsoft) você inserir na caixa poderão baixar seu aplicativo usando o link direto para sua listagem.
 
-> 
-            **Importante**  As pessoas com os endereços de email que você inserir só poderão baixar o aplicativo em dispositivos que executam o Windows Phone 8.1 ou versões anteriores.
+> **Importante**  As pessoas com os endereços de email que você inserir só poderão baixar o aplicativo em dispositivos que executam o Windows Phone 8.1 ou versões anteriores.
  
-Você pode encontrar o link direto de seu aplicativo na página [Identidade do aplicativo](view-app-identity-details.md) no painel (use a **URL para o Windows Phone**). Nenhum cliente poderá encontrar o aplicativo pesquisando ou navegando na Loja e, mesmo que tenham o link para a listagem de seu aplicativo, não poderão baixá-lo a menos que estejam usando uma conta da Microsoft associada a um email que você forneceu quando enviou esse aplicativo.
+Você pode encontrar o link direto do seu aplicativo na página [Identidade de aplicativo](view-app-identity-details.md) no painel. Nenhum cliente poderá encontrar o aplicativo pesquisando ou navegando na Loja e, mesmo que tenham o link para a listagem de seu aplicativo, não poderão baixá-lo a menos que estejam usando uma conta da Microsoft associada a um email que você forneceu quando enviou esse aplicativo.
 
-> 
-            **Observação**  Se você usar essa opção, ainda poderá tornar o aplicativo disponível para testadores em dispositivos Windows 10, [gerando códigos promocionais](generate-promotional-codes.md) como descrito acima. Qualquer pessoa com um dos códigos promocionais de seu aplicativo pode baixá-lo em um dispositivo Windows 10, mesmo que você não tenha inserido o email.
+> **Observação**  Se você usar essa opção, ainda poderá tornar o aplicativo disponível para testadores em dispositivos Windows 10, [gerando códigos promocionais](generate-promotional-codes.md) como descrito acima. Qualquer pessoa com um dos códigos promocionais de seu aplicativo pode baixá-lo em um dispositivo Windows 10, mesmo que você não tenha inserido o email.
 
 Para usar essa opção, selecione **Ocultar esse aplicativo e torná-lo disponível apenas para pessoas especificadas abaixo, que podem baixá-lo em dispositivos Windows Phone 8.x. Um código promocional pode ser usado para baixar esse aplicativo em dispositivos Windows 10** na seção [Distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility) da página **Preço e visibilidade** quando for enviar o aplicativo.
 
 Se você escolher essa opção, tenha o seguinte em mente:
 
--   Essa opção só pode ser selecionada se você nunca tiver publicado o aplicativo com a opção [Distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility) definida como **Qualquer pessoa pode encontrar seu aplicativo na Loja**.
+-   Essa opção só pode ser selecionada se você nunca tiver publicado o aplicativo com a opção [Distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility) definida como **Disponibilizar este aplicativo na Loja**.
 -   O aplicativo deve ter o preço estabelecido como **Grátis** para que os testadores possam baixá-lo sem custo.
 -   Seus testadores só podem baixar o aplicativo no Windows Phone 8.1 e versões anteriores. Os testadores deverão ter um dispositivo Windows Phone comercial para usar o aplicativo, mas o dispositivo não precisa ser desbloqueado ou registrado.
 -   Os testadores precisarão ter uma conta da Microsoft para acessar a Windows Store e baixar seu aplicativo. Você precisará saber o email associado à conta da Microsoft de cada testador para adicioná-los à sua lista. Para criar uma nova conta da Microsoft, os testadores podem acessar a página [Configuração da conta da Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=618945).
@@ -88,6 +88,6 @@ Se você escolher essa opção, tenha o seguinte em mente:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -3,8 +3,9 @@ author: mtoepke
 title: Criar recursos de dispositivo de buffer de profundidade
 description: "Aprenda a criar recursos de dispositivos Direct3D necessários ao suporte de testes e profundidade para volumes de sombra."
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f0aedb99832ecd10da547cf73a074070008a4344
+ms.openlocfilehash: 85fb020e7d476d3b2095875376903c5e28f08d94
 
 ---
 
@@ -264,6 +265,6 @@ Na próxima parte deste guia passo a passo, veremos como criar o mapa de sombra 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

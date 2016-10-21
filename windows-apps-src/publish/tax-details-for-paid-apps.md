@@ -3,8 +3,9 @@ author: jnHs
 Description: "Para entender suas considerações fiscais para seleção de preço, implicações de pagamento e responsabilidade fiscal, veja seus países/regiões de distribuição nas tabelas abaixo."
 title: Detalhes de impostos para aplicativos pagos
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
+translationtype: Human Translation
 ms.sourcegitcommit: a59d999ac36e04fbfa53d5b8992b235bff2d3818
-ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
+ms.openlocfilehash: 3efc5a575a7ed81b4dfb8e2349e252e61355cfc2
 
 ---
 
@@ -13,11 +14,9 @@ ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
 
 Para entender suas considerações fiscais para seleção de preço, implicações de pagamento e responsabilidade fiscal, veja seus países/regiões de distribuição nas tabelas abaixo.
 
-> 
-            **Observação**  O Ajuste de Expansão do Comércio pode ter implicações de pagamento em um conjunto limitado de países/regiões. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio e os mercados ao qual se aplica, consulte o [Contrato do Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e a lista de [países/regiões afetados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+> **Observação**  O Ajuste de Expansão do Comércio pode ter implicações de pagamento em um conjunto limitado de países/regiões. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio e os mercados ao qual se aplica, consulte o [Contrato do Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e a lista de [países/regiões afetados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
-> 
-            **Observação**  Taxas de imposto estão sujeitas a alterações a qualquer momento. A Microsoft não poderá garantir que as taxas nas tabelas acima serão sempre precisas.
+> **Observação**  Taxas de imposto estão sujeitas a alterações a qualquer momento. A Microsoft não poderá garantir que as taxas nas tabelas acima serão sempre precisas.
 
  
 
@@ -284,6 +283,6 @@ Cada linha do relatório contém a data e hora da transação e, se disponível,
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

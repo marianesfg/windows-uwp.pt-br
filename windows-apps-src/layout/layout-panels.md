@@ -7,7 +7,7 @@ label: Layout panels
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: a8abaf9e272af3e9563ddb48a1a53993a762c675
+ms.openlocfilehash: 58187f34de283b407278a75f1b7b6de61908387f
 
 ---
 # Painéis de layout
@@ -35,8 +35,7 @@ Aqui está um exemplo de como você pode definir a propriedade anexada [**Canvas
 
 Para obter mais informações sobre propriedades anexadas, consulte [Visão geral das propriedades anexadas](../xaml-platform/attached-properties-overview.md).
 
-> 
-              **Observação**&nbsp;&nbsp;Uma propriedade anexada é um conceito XAML que exige uma sintaxe especial para obtenção ou definição com base no código. Para usar propriedades anexadas no código, consulte a seção *Propriedades anexadas no código* do artigo *Visão geral das propriedades anexadas*.
+> **Observação**&nbsp;&nbsp;Uma propriedade anexada é um conceito XAML que exige uma sintaxe especial para obtenção ou definição com base no código. Para usar propriedades anexadas no código, consulte a seção *Propriedades anexadas no código* do artigo *Visão geral das propriedades anexadas*.
 
 **Bordas do painel**
 
@@ -56,9 +55,7 @@ O uso das propriedades de borda internas reduz a contagem de elementos XAML, o q
 
 ## RelativePanel
 
-
-              [
-              **RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) permite definir o layout dos elementos de interface do usuário de layout especificando onde eles devem ficar em relação a outros elementos e em relação ao painel. Por padrão, um elemento é posicionado no canto superior esquerdo do painel. Você pode usar RelativePanel com um [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) e [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx)s a fim de reorganizar a interface do usuário para diferentes tamanhos de janela.
+[**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) permite definir o layout dos elementos de interface do usuário de layout especificando onde eles devem ficar em relação a outros elementos e em relação ao painel. Por padrão, um elemento é posicionado no canto superior esquerdo do painel. Você pode usar RelativePanel com um [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) e [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx)s a fim de reorganizar a interface do usuário para diferentes tamanhos de janela.
 
 Esta tabela mostra as propriedades anexadas que você pode usar para alinhar um elemento com a borda ou com o centro do painel, além de alinhar e posicioná-lo em relação a outros elementos.
 
@@ -105,9 +102,7 @@ Aqui estão algumas coisas a serem observadas sobre o dimensionamento dos retân
 
 ## StackPanel
 
-
-              [
-              **StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) é um painel de layout simples que organiza seus elementos filho em uma única linha que pode ser orientada horizontal ou verticalmente. Os controles StackPanel normalmente são usados em cenários em que você quer organizar uma pequena subseção da interface do usuário em sua página.
+[**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) é um painel de layout simples que organiza seus elementos filho em uma única linha que pode ser orientada horizontal ou verticalmente. Os controles StackPanel normalmente são usados em cenários em que você quer organizar uma pequena subseção da interface do usuário em sua página.
 
 Você pode usar a propriedade [**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.orientation.aspx) para especificar a direção dos elementos filho. A orientação padrão é [**Vertical**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.orientation.aspx).
 
@@ -168,9 +163,7 @@ Neste exemplo, o dimensionamento funciona da maneira a seguir:
 
 ## VariableSizedWrapGrid
 
-
-              [
-              **VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) oferece um painel de layout do estilo grade em que os elementos são organizados em linhas ou colunas que se encapsulam automaticamente em uma nova linha ou coluna quando o valor [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx) é alcançado. 
+[**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) oferece um painel de layout do estilo grade em que os elementos são organizados em linhas ou colunas que se encapsulam automaticamente em uma nova linha ou coluna quando o valor [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx) é alcançado. 
 
 A propriedade [**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.orientation.aspx) especifica se a grade adiciona seus itens em linhas ou colunas antes do encapsulamento. A orientação padrão é **Vertical**, o que significa que a grade adiciona itens de cima para baixo até que uma coluna esteja cheia e, em seguida, encapsula em uma nova coluna. Quando o valor é **Horizontal**, a grade adiciona itens da esquerda para a direita e, em seguida, encapsula em uma nova linha.
 
@@ -232,6 +225,6 @@ Existem vários painéis de finalidade especial que podem ser usados apenas como
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

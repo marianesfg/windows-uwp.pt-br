@@ -6,11 +6,10 @@ title: Som
 template: detail.hbs
 ms.assetid: 9fa77494-2525-4491-8f26-dc733b6a18f6
 translationtype: Human Translation
-ms.sourcegitcommit: 7bb23094d569bb29c7227ccd628abd0989b575a4
-ms.openlocfilehash: e6dab48935cd5345ee734e6fda7e6fd4d333bb90
+ms.sourcegitcommit: e240197b4cc233b9fc1ecaa4a1835c4a4dcd3bf8
+ms.openlocfilehash: 91021d76b180e2bc26c0d502098e0a0b21f0219f
 
 ---
-[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.] *Este artigo fornece uma visualização de recursos que ainda não estão disponíveis.*
 
 # Som
 
@@ -31,7 +30,7 @@ Se definido como **Desativado**, não importa onde seu aplicativo seja executado
 ### Som de TV e Xbox
 
 O som é uma parte essencial da experiência de 3 metros e, por padrão, o estado do **ElementSoundPlayer** é **Auto**, o que significa que você só obterá som quando seu aplicativo estiver em execução no Xbox.
-Para saber mais sobre como projetar para Xbox e TV, consulte o artigo [Projetando para Xbox e TV](http://go.microsoft.com/fwlink/?LinkId=760736).
+Para obter mais informações sobre como projetar para Xbox e TV, consulte o artigo [Projetando para Xbox e TV](http://go.microsoft.com/fwlink/?LinkId=760736).
 
 ## Substituição de volume do som
 
@@ -148,6 +147,6 @@ O objetivo por trás desse recurso de ciclo é evitar que os sons de foco se tor
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

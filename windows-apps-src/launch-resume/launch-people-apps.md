@@ -3,15 +3,16 @@ author: TylerMSFT
 title: Iniciar o aplicativo Pessoas
 description: "Este tópico descreve o esquema de URI ms-people. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo Pessoas para ações específicas."
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: fd3c38dd0b6df2f430d7be4c40e7131d4ae98616
+ms.openlocfilehash: 3125ec2a73410f3d3f5b13e154ea30b1319a9a1e
 
 ---
 
 # Iniciar o aplicativo Pessoas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo Pessoas para ações específicas.
@@ -208,6 +209,6 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

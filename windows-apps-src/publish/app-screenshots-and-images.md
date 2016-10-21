@@ -4,8 +4,8 @@ Description: "Seu aplicativo precisa incluir vários logotipos, capturas de tela
 title: Imagens e capturas de tela do aplicativo
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
 translationtype: Human Translation
-ms.sourcegitcommit: ecb030b7c529f765eded46e4e3e9db99ad0c27e8
-ms.openlocfilehash: 9eac5658e2ac04b2abc1bf06abf5c73b16260bc7
+ms.sourcegitcommit: 70020d3c6e0fb0fea321ce1951720803fd25f9c0
+ms.openlocfilehash: eb61c9bca6b8ddfba5287482508e7d04b240d29f
 
 ---
 
@@ -14,17 +14,16 @@ ms.openlocfilehash: 9eac5658e2ac04b2abc1bf06abf5c73b16260bc7
 
 Seu aplicativo precisa incluir vários logotipos, capturas de tela e imagens. Algumas dessas imagens são obrigatórias, enquanto outras são opcionais. Lembre-se de que suas imagens constituem uma das principais maneiras de representar seu aplicativo. Imagens ricamente elaboradas podem ser uma grande ajuda para tornar seu aplicativo atraente aos olhos dos clientes.
 
-Durante o [processo de envio do aplicativo](app-submissions.md), você fornece [capturas de tela](#screenshots) e [arte promocional](#promotional-artwork) na etapa [Descrições](create-app-descriptions.md). Essas imagens são usadas para ajudar a exibir seu aplicativo na Loja.
+Durante o [processo de envio do aplicativo](app-submissions.md), você fornece [capturas de tela](#screenshots) e [arte promocional](#promotional-artwork) na etapa [Listagens da Loja](create-app-store-listings.md). Essas imagens são usadas para ajudar a exibir seu aplicativo na Loja.
 
 A Loja também usa o bloco do aplicativo e outras imagens que você inclui no pacote do aplicativo. Execute o [Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/mt186449) para determinar se está faltando alguma imagem exigida. Para diretrizes e recomendações sobre essas imagens, consulte [Ativos de bloco e ícone](../controls-and-patterns/tiles-and-notifications-app-assets.md).
 
-> 
-            **Observação**  O modo como as imagens são usadas na Loja, na tela inicial do cliente e dentro do próprio aplicativo pode variar, dependendo do sistema operacional do cliente e de outros fatores.
+> **Observação**  O modo como as imagens são usadas na Loja, na tela inicial do cliente e dentro do próprio aplicativo pode variar, dependendo do sistema operacional do cliente e de outros fatores.
 
 
 ## Imagens fornecidas durante o processo de envio
 
-Ao inserir as informações de descrição do seu aplicativo, você tem a opção de fornecer várias capturas de tela (uma captura de tela é obrigatória) e arte promocional. Essas imagens não são tiradas do pacote do seu aplicativo; você precisará fornecê-las na etapa **Descrição** para cada um dos seus idiomas.
+Ao inserir as informações da Listagem da Loja do seu aplicativo, você tem a opção de fornecer várias capturas de tela (uma captura de tela é obrigatória) e arte promocional. Essas imagens não são tiradas do pacote do seu aplicativo; você precisará fornecê-las na etapa **Listagem da Loja** para cada um dos seus idiomas.
 
 A tabela a seguir lista as diversas imagens que você pode carregar e explica como elas são usadas. Mais detalhes são fornecidos nas seções a seguir.
 
@@ -43,12 +42,11 @@ A tabela a seguir lista as diversas imagens que você pode carregar e explica co
 
 As capturas de tela são as imagens do seu aplicativo que são exibidas para os clientes nos detalhes de seu aplicativo.
 
-Você verá vários campos na página **Descrição** onde você tem a opção de fornecer capturas de tela de famílias de dispositivos diferentes (que serão mostradas quando um cliente visualizar detalhes do aplicativo na Loja sobre esse tipo de dispositivo).
+Você verá vários campos na página **Listagem da Loja** onde você tem a opção de fornecer capturas de tela de famílias de dispositivos diferentes (que serão mostradas quando um cliente visualizar detalhes do aplicativo na Loja sobre esse tipo de dispositivo).
 
 Apenas uma captura de tela é necessária para seu envio (mas você pode fornecer várias; até 9 capturas de tela de desktop e até 8 capturas de tela de dispositivos móveis e holográficos). Você não precisa fornecer capturas de tela separadas para cada família de dispositivos, mas é recomendável fornecer capturas de tela de cada tipo de dispositivo compatível com aplicativo, para que os clientes vejam imagens semelhantes à aparência do aplicativo nos dispositivos deles.
 
-> 
-            **Observação**  O Microsoft Visual Studio fornece uma [ferramenta para ajudá-lo a capturar telas](http://go.microsoft.com/fwlink/p/?LinkId=221135).
+> **Observação**  O Microsoft Visual Studio fornece uma [ferramenta para ajudá-lo a capturar telas](http://go.microsoft.com/fwlink/p/?LinkId=221135).
 
 Cada captura de tela deve ser um arquivo .png em orientação paisagem ou retrato e o tamanho do arquivo não pode ser maior que 2 MB.
 
@@ -59,13 +57,14 @@ Os requisitos de tamanho variam de acordo com a família de dispositivos:
 
 Você pode fornecer uma legenda curta que descreva cada captura de tela em 200 caracteres ou menos.
 
-> 
-            **Observação**  Caso crie descrições para [vários idiomas](supported-languages.md), você terá uma página **Descrição** para cada um. Você precisará carregar imagens para cada idioma separadamente (mesmo que esteja usando as mesmas imagens) e fornecer legendas a serem usadas para cada idioma.
+> **Observação**  Caso crie as listagens da Loja para [vários idiomas](supported-languages.md), você terá uma página **Listagens da Loja** para cada um. Você precisará carregar imagens para cada idioma separadamente (mesmo que esteja usando as mesmas imagens) e fornecer legendas a serem usadas para cada idioma.
 
 
 ## Ícone do bloco do aplicativo
 
-Isso não é obrigatório para todos os envios, mas é altamente recomendável se seu aplicativo funcionar no Windows Phone 8.1 ou versões anteriores. O ícone do bloco do aplicativo é usado na exibição dos detalhes do aplicativo aos clientes no Windows Phone 8.1 e versões anteriores. Caso não forneça essa imagem, os cliente do Windows Phone 8.1 ou de versões anteriores verão um ícone em branco com a listagem de seu aplicativo. (Isso também se aplica a clientes no Windows 10, caso seu aplicativo tenha pacotes voltados apenas para Windows Phone 8.1 ou versões anteriores).
+Isso não é obrigatório para todos os envios, mas é altamente recomendável se seu aplicativo funcionar no Windows Phone 8.1 ou versões anteriores. O ícone do bloco do aplicativo é usado na exibição da listagem da Loja do aplicativo aos clientes no Windows Phone 8.1 e versões anteriores. Caso não forneça essa imagem, os cliente do Windows Phone 8.1 ou de versões anteriores verão um ícone em branco com a listagem de seu aplicativo. (Isso também se aplica a clientes no Windows 10, caso seu aplicativo tenha pacotes voltados apenas para Windows Phone 8.1 ou versões anteriores).
+
+Se seu envio **somente** incluir pacotes UWP, você não precisará fornecer essa imagem. Observe que, se seu envio incluir pacotes UWP e fornecer um ícone do bloco do aplicativo, ele poderá ser exibido com a listagem do seu aplicativo no Windows 10 em alguns layouts de loja. Para evitar completamente que o ícone do bloco de aplicativo seja exibido aos clientes no Windows 10, você poderá criar uma [listagem específica da plataforma](create-platform-specific-descriptions.md) para versões anteriores do sistema operacional e incluir somente o ícone do bloco de aplicativo lá.
 
 O ícone do bloco do aplicativo deve ser um arquivo .png medindo 300 x 300 pixels.
 
@@ -73,8 +72,7 @@ O ícone do bloco do aplicativo deve ser um arquivo .png medindo 300 x 300 pixel
 
 A equipe editorial da Windows Store usa imagens diferentes para promover aplicativos na Loja. O envio de ilustrações promocionais permite que a equipe da Windows Store leve seu aplicativo em consideração nos layouts promocionais.
 
-> 
-            **Importante**  O envio de imagens promocionais para seu aplicativo não garante que ele ficará em destaque, mas não enviá-las significa que ele não poderá ser considerado para nenhuma oportunidade promocional. Veja [Facilite a promoção do seu aplicativo](make-your-app-easier-to-promote.md) para saber mais.
+> **Importante**  O envio de imagens promocionais para seu aplicativo não garante que ele ficará em destaque, mas não enviá-las significa que ele não poderá ser considerado para nenhuma oportunidade promocional. Veja [Facilite a promoção do seu aplicativo](make-your-app-easier-to-promote.md) para saber mais.
 
 Você pode enviar artes finais promocionais em tamanhos diferentes, dependendo de quais versões de sistema operacional sejam o alvo de seu aplicativo. Para todos os tamanhos, as imagens devem estar no formato .png.
 
@@ -103,8 +101,7 @@ A imagem abaixo mostra as proporções essenciais que devem ser lembradas. A "zo
 
 Na Loja no Windows Phone 8.1 e versões anteriores, dois tamanhos de imagem podem ser usados em layouts promocionais: 1000 x 800 pixels e 358 x 358 pixels. Se seu aplicativo é executado no Windows Phone 8.1 ou em versões anteriores, é recomendável fornecer imagens nesses dois tamanhos para que sejam levadas em consideração para fins promocionais.
 
-> 
-            **Dica**   Além disso, certifique-se de fornecer uma [imagem de ícone de bloco do aplicativo](#app-tile-icon) 300 x 300 para garantir que seu aplicativo não apareça na Loja com um ícone em branco.
+> **Dica**   Além disso, certifique-se de fornecer uma [imagem de ícone de bloco do aplicativo](#app-tile-icon) 300 x 300 para garantir que seu aplicativo não apareça na Loja com um ícone em branco.
 
 ### Para Windows 8.1 e versões anteriores: 414 x 180
 
@@ -112,6 +109,6 @@ Na Loja do Windows 8.1 e de versões anteriores, os layouts promocionais podem u
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

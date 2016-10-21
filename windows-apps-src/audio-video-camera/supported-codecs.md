@@ -4,8 +4,8 @@ ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
 description: "Este artigo lista os codecs de áudio e de vídeo e os formatos compatíveis com os aplicativos UWP."
 title: "Codecs compatíveis"
 translationtype: Human Translation
-ms.sourcegitcommit: b4d6a9f7cc8b343ee1cbd31bcfd8f19e329c82dc
-ms.openlocfilehash: 00fbbdde8d805ce7ae07df1d52dd8171de7d58ab
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: 0f6da61ba167328968694d240e250dbc454d5e7b
 
 ---
 
@@ -22,8 +22,8 @@ Nas tabelas abaixo "D" indica suporte de decodificador e "E" indica suporte de c
 
 As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada família de dispositivos.
 
-**Observação**  
--   Onde suporte a AMR-NB é indicado, este codec não tem suporte em SKUs de servidor.
+> [!NOTE] 
+> Onde suporte a AMR-NB é indicado, este codec não tem suporte em SKUs de servidor.
 
  
 
@@ -1586,9 +1586,9 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 
 As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada família de dispositivos.
 
-**Observação**  
--   Onde suporte a H.265 é indicado, ele não tem necessariamente suporte em todos os dispositivos dentro da família de dispositivos.
--   Onde suporte a MPEG-2/MPEG-1 é indicado, ele tem suporte somente com a instalação do Aplicativo Universal do Windows de DVD opcional da Microsoft.
+> [!NOTE] 
+> Onde suporte a H.265 é indicado, ele não tem necessariamente suporte em todos os dispositivos dentro da família de dispositivos.
+> Onde suporte a MPEG-2/MPEG-1 é indicado, ele tem suporte somente com a instalação do Aplicativo Universal do Windows de DVD opcional da Microsoft.
 
  
 
@@ -2697,6 +2697,6 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

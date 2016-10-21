@@ -2,16 +2,15 @@
 description: "Personalize seu aplicativo UWP para tipos específicos de entrada e dispositivos. Tire proveito dos comandos de voz e toque. Execute seus aplicativos no Xbox, telefone e até mesmo TV."
 title: "Design de entrada do aplicativo UWP e dispositivo – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
-keywords: device primer, app inputs, customize UWP application
+keywords: cartilha de dispositivos, entradas de aplicativo, personalizar o aplicativo UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 350de23331f7fe951304ba877c40e07feb424adc
-ms.openlocfilehash: 2d3f0588b56b26e125652c12eeca3028bfe6573e
+ms.sourcegitcommit: 5a6666d4e706d4d49d646b5bb2e43b82394eb215
+ms.openlocfilehash: 85bcd15d4b9262188f0821642faf0d3d0cb7dbad
 
 ---
+# Entradas e dispositivos
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-# Entrada e dispositivos
 
 Os aplicativos UWP processam automaticamente uma ampla variedade de entradas e funcionam em uma variedade de dispositivos — você não precisa de mais nada para habilitar a entrada por toque ou fazer seu aplicativo funcionar em um telefone, por exemplo. 
 
@@ -169,6 +168,6 @@ Conhecer os dispositivos que dão suporte a aplicativos UWP ajudará você a ofe
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

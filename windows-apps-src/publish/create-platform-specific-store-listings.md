@@ -1,45 +1,55 @@
-﻿---
+---
 author: jnHs
-Description: If you've provided packages targeting different operating systems, you have the option to customize parts of your Store listing for different targeted operating systems.
-title: Create platform-specific Store listings
+Description: "Caso tenha fornecido pacotes direcionados a diferentes sistemas operacionais, você tem a opção de personalizar partes da listagem da Loja para os diferentes sistemas operacionais de destino."
+title: "Criar listagens específicas de plataforma da Loja"
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
+translationtype: Human Translation
+ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
+ms.openlocfilehash: 8d9b026cf09d076cd7f7dc8a72d611e68ddd61c7
+
 ---
 
-# Create platform-specific Store listings
+# Criar listagens específicas de plataforma da Loja
 
 
-If you've provided packages targeting different operating systems, you have the option to customize parts of your Store listing for different targeted operating systems. You will not see this option unless you have already uploaded packages, and include packages for earlier OS versions (Windows 8.x or earlier and/or Windows Phone 8.x or earlier).
+Caso tenha fornecido pacotes direcionados a diferentes sistemas operacionais, você tem a opção de personalizar partes da listagem da Loja para os diferentes sistemas operacionais de destino. Você não não verá essa opção a menos que você já tenha carregado pacotes e inclua pacotes para versões anteriores do sistema operacional (Windows 8.x ou versões anteriores e/ou Windows Phone 8.x ou anterior).
 
-> **Important**  Customers on Windows 10 will always see your default Store listing.
+> **Importante**  Os clientes no Windows 10 sempre verão sua listagem de Loja padrão.
 
-Platform-specific Store listings can be useful if you want to mention features that appear only in one OS version, or want to provide screenshots that are specific to a particular OS (independent of device type), rather than having all customers see the same Store listing.
+Listagens da Loja específicas da plataforma podem ser úteis se você quer mencionar recursos que aparecem apenas em uma versão do sistema operacional ou se quer fornecer capturas de tela que sejam específicas a um determinado sistema operacional (independentemente do tipo de dispositivo), em vez de todos os clientes verem a mesma listagem da Loja.
 
-> **Note**  Creating a platform-specific Store listing in one language does not create a platform-specific Store listing in other languages that your app supports, even if you have [entered Store listing info](create-app-store-listings.md) for those languages. You'll need to create the platform-specific Store listing separately for each language.
+> **Observação**  Criar uma listagem da Loja específica da plataforma em um idioma não cria uma listagem da Loja específica da plataforma em outros idiomas que seu aplicativo aceita, mesmo que você tenha [inserido informações de listagem da Loja](create-app-store-listings.md) desses idiomas. Você precisará criar a listagem da Loja específica da plataforma separadamente para cada idioma.
 
-## Creating a platform-specific Store listing
+## Criando uma listagem específica da Loja da plataforma
 
-Near the top of your **Store listing** page, you'll see a link to **create a platform-specific app Store listing** if you have uploaded packages that support earlier OS versions ((Windows 8.x or earlier and/or Windows Phone 8.x or earlier).
+Próximo da parte superior da página de **listagem da Loja**, você verá um link para **criar uma listagem da Loja de aplicativos específicos da plataforma** se você tiver carregado pacotes que oferecem suporte a versões anteriores do sistema operacional (Windows 8.x ou versões anteriores e/ou Windows Phone 8.x ou versões anteriores).
 
-> **Tip** You can't create platform-specific Store listings until after you've uploaded packages.
+> **Dica** Você não pode criar listagens da Loja específicas da plataforma até ter carregado os pacotes.
 
-When you click the link to **create a platform-specific app Store listing**, a popup will appear asking you to choose from your supported targeted operating systems. Windows 10 is not included in the list of choices, because customers on Windows 10 will always see the app's default Store listing.
+Quando você clicar no link para **criar uma listagem da Loja de aplicativos específicos da plataforma**, um menu pop-up será exibido solicitando que você escolha entre seus sistemas operacionais de destino com suporte. O Windows 10 não está incluído na lista de opções, pois os clientes no Windows 10 sempre verão a listagem da Loja padrão do aplicativo.
 
-> **Note**  If you've already created platform-specific Store listings for all of the OS versions your app targets, you won't be able to make a selection.
+> **Observação**  Caso ainda não tenha criado listagens da Loja específicas da plataforma para todas as versões de sistema operacional às quais o seu aplicativo se destina, não será possível fazer uma seleção.
 
-You can use your default Store listing as a starting point, which will bring over all of the text and images you've entered for your default Store listing; you'll then be able to make any changes you'd like before saving. You can also start from a completely blank Store listing if you prefer.
+Você pode optar por usar a listagem da Loja padrão como um ponto de partida, o que mostrará todo o texto e as imagens inseridos na listagem da Loja padrão. Em seguida, você poderá fazer alterações que quiser antes de salvar. Você também pode iniciar uma listagem da Loja completamente nova se preferir.
 
-After you click **Continue**, your **Store listing** page will now include a section for the platform-specific Store listing you've just created (underneath the [Default Store listing](create-app-store-listings.md#default-store-listing-fields) section). This section will include its own set of fields for **Description** (required), **Release notes**, **Screenshots**, **App tile icon**, **App features**, and **Additional system requirements**. Make sure to enter info into each field where you want to display info in the custom Store listing, even if it's the same info as in your default Store listing. If you leave any of these fields blank, no info will appear for that field in the custom Store listing.
+Depois que você clicar em **Continuar**, a página **listagem da Loja** incluirá uma seção para a listagem da Loja específica da plataforma que você acabou de criar (sob a seção [Listagem da Loja padrão](create-app-store-listings.md#default-store-listing-fields)). Esta seção incluirá seu próprio conjunto de campos para **Descrição** (necessário), **Notas de versão**, **Capturas de tela**, **Ícone do bloco do aplicativo**, **Recursos do aplicativo** e **Requisitos adicionais do sistema**. Certifique-se de inserir informações em cada campo em que você deseja exibir informações na listagem da Loja personalizada, mesmo que sejam as mesmas informações da listagem da Loja padrão. Se você deixar um desses campos em branco, nenhuma informação será exibida para tal campo na listagem da Loja personalizada.
 
-> **Note**  Not all fields of your app's Store listing can be customized for a specific targeted OS. For more info, see [Shared fields](create-app-store-listings.md#shared-fields).
+> **Observação**  Nem todos os campos de listagem da Loja do seu aplicativo podem ser personalizados para um sistema operacional de destino específico. Para saber mais, consulte [Campos compartilhados](create-app-store-listings.md#shared-fields).
 
-## Removing a platform-specific Store listing
+## Removendo uma listagem da Loja específica de plataforma
 
-If you create a platform-specific Store listing and later decide you'd rather show your default Store listing to customers on that operating system, click the **Delete** link. After confirming that you'd like to show those customers your default Store listing, click **OK**. The platform-specific Store listing will be removed. If you decide you want it back later, you can always create a new platform-specific Store listing for that operating system by following the steps listed above.
+Se você criar uma listagem da Loja específica de plataforma e depois decidir que quer mostrar a listagem da Loja padrão para os clientes desse sistema operacional, clique no link **Excluir**. Depois de confirmar que você deseja mostrar a listagem da Loja padrão aos clientes, clique em **OK**. A listagem da Loja específica de plataforma será removida. Se decidir tê-la de volta mais tarde, você sempre pode criar uma nova listagem da Loja específica de plataforma para o sistema operacional seguindo as etapas listadas acima.
 
- 
+ 
 
- 
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO5-->
 
 

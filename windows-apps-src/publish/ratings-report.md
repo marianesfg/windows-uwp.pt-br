@@ -3,8 +3,9 @@ author: jnHs
 Description: "O relatório Classificações no painel do Centro de Desenvolvimento do Windows permite que você consulte a distribuição de como os clientes classificam seu aplicativo na Windows Store."
 title: "Relatório de classificações"
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: e0258bc9402772d0a036b32563348d11acd0fdb7
+ms.openlocfilehash: 1613c8a5e5a28ba431fcfb186a0fcd5fe9bd7582
 
 ---
 
@@ -20,12 +21,9 @@ Nesse relatório, uma classificação significa o número de estrelas (de 1 a 5)
 
 Na parte superior da página, você pode expandir **Aplicar filtros** para filtrar todos os dados nessa página por intervalo de datas e/ou por mercado.
 
--   
-            **Data**: o filtro padrão é **Últimos 30 dias**, mas você pode expandi-lo até **Últimos 12 meses**.
--   
-            **Mercado**: o filtro padrão é **Todos os mercados**. Você pode escolher um mercado específico, se quiser que esta página mostre somente as classificações de clientes desse mercado.
--   
-            **Tipo do dispositivo**: o filtro padrão é **Todos os dispositivos**. Você poderá escolher um tipo de dispositivo específico, se quiser que essa página mostre somente classificações deixadas por clientes que estão usando esse dispositivo.
+-   **Data**: o filtro padrão é **Últimos 30 dias**, mas você pode expandi-lo até **Últimos 12 meses**.
+-   **Mercado**: o filtro padrão é **Todos os mercados**. Você pode escolher um mercado específico, se quiser que esta página mostre somente as classificações de clientes desse mercado.
+-   **Tipo do dispositivo**: o filtro padrão é **Todos os dispositivos**. Você poderá escolher um tipo de dispositivo específico, se quiser que essa página mostre somente classificações deixadas por clientes que estão usando esse dispositivo.
 
 As informações em todos os gráficos listados a seguir refletirão o período de tempo selecionado na seção **Aplicar filtros** e refletirá todos os outros filtros que você tenha escolhido aqui.
 
@@ -44,13 +42,10 @@ O gráfico **Número de classificações** mostra o número total de classifica�
 
 O gráfico **Classificações novas e revisadas** mostra o número de classificações de cada tipo de classificação (nova ou revisada) durante o período de tempo selecionado.
 
--   
-            **Classificações de novas** são classificações que os clientes enviaram, mas que não foram alteradas.
--   
-            **Classificações revisadas** são classificações que foram alteradas pelo cliente.
+-   **Classificações de novas** são classificações que os clientes enviaram, mas que não foram alteradas.
+-   **Classificações revisadas** são classificações que foram alteradas pelo cliente.
 
->
-            **Observação**  Uma classificação aparecerá aqui como revisada mesmo se o cliente tiver apenas alterado ou adicionado o texto ou o título de sua análise e deixado a classificação em si inalterada.
+>**Observação**  Uma classificação aparecerá aqui como revisada mesmo se o cliente tiver apenas alterado ou adicionado o texto ou o título de sua análise e deixado a classificação em si inalterada.
 
 ## Classificação média ao longo do tempo
 
@@ -66,13 +61,11 @@ Se você filtrou as informações por **Últimos 30 dias** ou **Últimos três m
 
 O gráfico **Mercados** mostra a classificação média e o número de classificações durante o período de tempo selecionado por mercado.
 
-> 
-            **Observação**  Se tiver usado os **Filtros de página** para especificar um mercado específico, você não verá este gráfico no relatório **Classificações**. Para ver este gráfico, altere os **Filtros de página** para mostrar todos os mercados.
+> **Observação**  Se tiver usado os **Filtros de página** para especificar um mercado específico, você não verá este gráfico no relatório **Classificações**. Para ver este gráfico, altere os **Filtros de página** para mostrar todos os mercados.
 
 Por padrão, podemos mostrar o mercado que tinha mais críticas e continuar para baixo, mas você pode reverter essa ordem, alternando a seta na coluna **Número de classificações** deste gráfico. Você também pode classificar os dados por **Média de classificação** ou **Mercado**, clicando nessas colunas.
 
-> 
-            **Observação** É provável que você consulte um número diferente de classificações ao comparar o relatório **Classificações** no Centro de Desenvolvimento do Windows com o relatório Críticas no aplicativo móvel mais antigo do Centro de Desenvolvimento. Isso ocorre porque o aplicativo mostra apenas os dados de avaliações de clientes no Windows Phone 8.1 e versões anteriores. Isso também pode ser resultado do trabalho da Microsoft de remover avaliações da Windows Store que foram identificadas como spam, inadequadas, ofensivas ou que violam a política de outra forma. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
+> **Observação** É provável que você consulte um número diferente de classificações ao comparar o relatório **Classificações** no Centro de Desenvolvimento do Windows com o relatório Críticas no aplicativo móvel mais antigo do Centro de Desenvolvimento. Isso ocorre porque o aplicativo mostra apenas os dados de avaliações de clientes no Windows Phone 8.1 e versões anteriores. Isso também pode ser resultado do trabalho da Microsoft de remover avaliações da Windows Store que foram identificadas como spam, inadequadas, ofensivas ou que violam a política de outra forma. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
 
  
 
@@ -80,6 +73,6 @@ Por padrão, podemos mostrar o mercado que tinha mais críticas e continuar para
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

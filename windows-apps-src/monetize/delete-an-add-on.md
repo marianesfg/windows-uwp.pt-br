@@ -1,87 +1,97 @@
 ---
 author: mcleanbyron
 ms.assetid: 16D4C3B9-FC9B-46ED-9F87-1517E1B549FA
-description: Use this method in the Windows Store submission API to delete an add-on for an app that is registered to your Windows Dev Center account.
-title: Delete an add-on using the Windows Store submission API
+description: "Use este método na API de envio da Windows Store para excluir um complemento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
+title: Excluir um complemento usando a API de envio da Windows Store
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 8c28205ca004bd63b3f6a3fea2971cf927f7e2e4
+
 ---
 
-# Delete an add-on using the Windows Store submission API
+# Excluir um complemento usando a API de envio da Windows Store
 
 
 
 
-Use this method in the Windows Store submission API to delete an add-on (also known as in-app product or IAP) for an app that is registered to your Windows Dev Center account.
+Use este método na API de envio da Windows Store para excluir um complemento (também conhecido como produto no app ou IAP) para um aplicativo que está registrado para sua conta do Centro de Desenvolvimento do Windows.
 
-## Prerequisites
+## Pré-requisitos
 
-To use this method, you need to first do the following:
+Para usar este método, primeiro você precisa do seguinte:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+* Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para o envio da API da Windows Store.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows as quais foram dadas permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Request
+## Solicitação
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e de cabeçalho.
 
-| Method | Request URI                                                      |
+| Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | DELETE    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Cabeçalho da solicitação
 
-| Header        | Type   | Description                                                                 |
+| Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Parâmetros solicitados
 
-| Name        | Type   | Description                                                                 |
+| Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | string | Required. The Store ID of the add-on to delete. The Store ID is available on the Dev Center dashboard.  |
+| id | string | Obrigatório. A ID da Loja do complemento para excluir. A ID da Loja está disponível no painel do Centro de Desenvolvimento.  |
 
 <span/>
 
-### Request body
+### Corpo da solicitação
 
-Do not provide a request body for this method.
+Não fornece um corpo da solicitação para esse método.
 
 <span/>
 
-### Request example
+### Exemplo de solicitação
 
-The following example demonstrates how to delete an add-on.
+O exemplo a seguir demonstra como excluir um complemento.
 
 ```
 DELETE https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Resposta
 
-If successful, this method returns an empty response body.
+Se for bem-sucedida, esse método retorna um corpo de resposta vazia.
 
-## Error codes
+## Códigos de erro
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Se a solicitação não pode ser concluída com êxito, a resposta conterá um dos seguintes códigos de erro HTTP.
 
-| Error code |  Description                                                                                                                                                                           |
+| Código de erro |  Descrição                                                                                                                                                                           |
 |--------|------------------|
-| 400  | The request is invalid. |
-| 404  | The specified add-on could not be found.  |
-| 409  | The specified add-on was found but it could not be deleted in its current state, or the add-on uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 400  | A solicitação é inválida. |
+| 404  | O complemento especificado não pôde ser encontrado.  |
+| 409  | O complemento especificado foi encontrado, mas não pôde ser excluído em seu estado atual ou o complemento que usa um recurso de painel do Centro de Desenvolvimento atualmente [não é compatível com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 <span/>
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Get all add-ons](get-all-add-ons.md)
-* [Get an add-on](get-an-add-on.md)
-* [Create an add-on](create-an-add-on.md)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Obter todos os complementos](get-all-add-ons.md)
+* [Obter um complemento](get-an-add-on.md)
+* [Criar um complemento](create-an-add-on.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

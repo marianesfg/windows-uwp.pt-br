@@ -3,8 +3,9 @@ author: jnHs
 ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: "Tipos de conta, localizações e taxas"
 description: "Oferecemos contas de desenvolvedor individuais e empresariais em muitos países e regiões."
+translationtype: Human Translation
 ms.sourcegitcommit: 93b6d952e42949917a0fff5b39f3f194f49531d5
-ms.openlocfilehash: b4707f53aa1a1bd7bd7c03c74f2d18a0f9f55b10
+ms.openlocfilehash: 0712a74ffaa691a90a1f57d0ee7f9c0ea3fcc510
 
 ---
 
@@ -12,13 +13,11 @@ ms.openlocfilehash: b4707f53aa1a1bd7bd7c03c74f2d18a0f9f55b10
 
 Oferecemos dois tipos de contas de desenvolvedor: contas individuais e contas empresariais. As contas de desenvolvedor são oferecidas em muitos [países e regiões](#developer-account-and-app-submission-markets). Os dois fornecem acesso para publicar aplicativos na loja e participar de programas adicionais de desenvolvedor da Microsoft.
 
-> 
-            **Observação**  Criando uma conta individual ou empresarial, você pode associar apenas uma conta da Microsoft à conta de desenvolvedor. Ao se inscrever em uma conta, certifique-se de entrar com a conta da Microsoft que deseja usar para sua conta de desenvolvedor.
+> **Observação**  Criando uma conta individual ou empresarial, você pode associar apenas uma conta da Microsoft à conta de desenvolvedor. Ao se inscrever em uma conta, certifique-se de entrar com a conta da Microsoft que deseja usar para sua conta de desenvolvedor.
 
 Quando você [começar o processo de inscrição](http://go.microsoft.com/fwlink/p/?LinkId=615100), precisará escolher entre criar uma conta individual ou uma conta empresarial. As contas individuais são projetadas para desenvolvedores autônomos que trabalham por conta própria. Contas de empresa são projetadas para organizações e empresas. As contas de empresa fornecem acesso a alguns recursos adicionais de aplicativos. Também exigimos uma verificação maior para contas de empresa depois do seu registro para confirmar se você está autorizado a configurar a conta para sua empresa. Essa verificação pode levar desde alguns dias a até várias semanas e normalmente inclui um telefonema para sua empresa. Os dois tipos de conta permitirão que você envie aplicativos, suplementos e serviços.
 
-> 
-            **Importante**  Você não pode alterar o tipo de conta quando fizer a seleção, então tenha certeza de escolher o tipo certo.
+> **Importante**  Você não pode alterar o tipo de conta quando fizer a seleção, então tenha certeza de escolher o tipo certo.
 
 Aqui estão as principais diferenças entre os dois tipos de conta.
 
@@ -26,22 +25,17 @@ Aqui estão as principais diferenças entre os dois tipos de conta.
 |--------------------|-----------------|
 | <ul><li>Não pode usar funcionalidades específicas do aplicativo</li><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li></ul> | <ul><li>Requer verificação via Symantec ou Dun & Bradstreet</li><li>Mais acesso a todas as funcionalidades do aplicativo</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Custa aproximadamente US$99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li></ul> |
 
-> 
-            **Importante**  Se você decidir criar uma conta empresarial, tenha certeza de analisar nossas [diretrizes para contas empresariais](opening-a-developer-account.md#additional-guidelines-for-company-accounts).
+> **Importante**  Se você decidir criar uma conta empresarial, tenha certeza de analisar nossas [diretrizes para contas empresariais](opening-a-developer-account.md#additional-guidelines-for-company-accounts).
 
 As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Um dos principais benefícios de ter uma conta empresarial é a capacidade de enviar aplicativos que incluem [Declarações de funcionalidades do aplicativo](https://msdn.microsoft.com/library/windows/apps/Mt270968) adicionais.
 
 Você deve ter uma conta empresarial, especificamente para publicar aplicativos que usam as três funcionalidades a seguir:
 
--   
-            **enterpriseAuthentication**—Usa credenciais do Windows para acessar uma intranet corporativa. Normalmente usado em aplicativos de linha de negócios que se conectam aos servidores em uma empresa. (Você não precisa dessa funcionalidade para comunicação genérica pela internet)
--   
-            **sharedUserCertificates**—Permite que um aplicativo acesse certificados de hardware e software, como certificados armazenados em um cartão inteligente. Isso normalmente é usado por aplicativos corporativos ou financeiros que exigem um cartão inteligente para autenticação.
--   
-            **documentsLibrary**—Permite acesso programático aos Documentos do usuário, filtrados para a associação de tipo de arquivo declarada no manifesto de pacote. (Você não precisa declarar essa funcionalidade para acessar os Documentos de um usuário com o [seletor de arquivos](https://msdn.microsoft.com/library/windows/apps/Hh465174)). Observe que aplicativos destinados até o Windows Phone 8.1 não podem usar a funcionalidade documentsLibrary.
+-   **enterpriseAuthentication**—Usa credenciais do Windows para acessar uma intranet corporativa. Normalmente usado em aplicativos de linha de negócios que se conectam aos servidores em uma empresa. (Você não precisa dessa funcionalidade para comunicação genérica pela internet)
+-   **sharedUserCertificates**—Permite que um aplicativo acesse certificados de hardware e software, como certificados armazenados em um cartão inteligente. Isso normalmente é usado por aplicativos corporativos ou financeiros que exigem um cartão inteligente para autenticação.
+-   **documentsLibrary**—Permite acesso programático aos Documentos do usuário, filtrados para a associação de tipo de arquivo declarada no manifesto de pacote. (Você não precisa declarar essa funcionalidade para acessar os Documentos de um usuário com o [seletor de arquivos](https://msdn.microsoft.com/library/windows/apps/Hh465174)). Observe que aplicativos destinados até o Windows Phone 8.1 não podem usar a funcionalidade documentsLibrary.
 
-> 
-            **Observação**  Além disso, você deve contatar o suporte e obter uma aprovação antes de poder enviar aplicativos que declaram a funcionalidade **documentsLibrary**.
+> **Observação**  Além disso, você deve contatar o suporte e obter uma aprovação antes de poder enviar aplicativos que declaram a funcionalidade **documentsLibrary**.
 
 O fato de ter uma conta de empresa não garante que os aplicativos usando esses recursos passarão pela certificação. Esses recursos se destinam a cenários específicos, e a maioria dos aplicativos não os declara. Para obter mais informações, consulte [Declarações de funcionalidades do aplicativo](https://msdn.microsoft.com/library/windows/apps/Mt270968).
 
@@ -53,13 +47,11 @@ Você pode se registrar para obter uma conta de desenvolvedor e enviar aplicativ
 
 Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua conta de desenvolvedor. Os preços estão sujeito a mudanças.
 
-> 
-            **Observação**  Adicionaremos os impostos e as taxas aplicáveis à taxa de registro quando você se inscrever. Além disso, quando pagarmos a você, o seu banco pode cobrar uma taxa para receber o pagamento.
+> **Observação**  Adicionaremos os impostos e as taxas aplicáveis à taxa de registro quando você se inscrever. Além disso, quando pagarmos a você, o seu banco pode cobrar uma taxa para receber o pagamento.
 
 A coluna **Pagamento** descreve como pagaremos a você o dinheiro que você ganha nos seus aplicativos. Você poderá escolher a [conta de pagamento](setting-up-your-payout-account-and-tax-forms.md) em que depositaremos o dinheiro.
 
-> 
-            **Observação**  Alguns mercados não dão suporte a aplicativos pagos (**pagamento**). Apenas aplicativos grátis podem ser enviados para esses mercados.
+> **Observação**  Alguns mercados não dão suporte a aplicativos pagos (**pagamento**). Apenas aplicativos grátis podem ser enviados para esses mercados.
 
 A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte que pode ser usado para sua [conta de pagamento](https://msdn.microsoft.com/library/windows/apps/Bg124529) (e, exceto onde observado, para sua taxa de registro na conta de desenvolvedor).
 
@@ -268,6 +260,6 @@ A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte qu
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

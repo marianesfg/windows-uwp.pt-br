@@ -6,8 +6,9 @@ title: "Globalização e localização"
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 1fc82ff462a5c0af6b10e7dc8455adc215558b4e
+ms.openlocfilehash: a34b682cc903555b9d6f64636c3d1cf7bee75b5d
 
 ---
 
@@ -18,8 +19,7 @@ ms.openlocfilehash: 1fc82ff462a5c0af6b10e7dc8455adc215558b4e
 
 O Windows é usado no mundo todo, por públicos de várias culturas, regiões e idiomas. Um usuário pode falar qualquer idioma ou até mesmo vários idiomas. Um usuário pode estar localizado em qualquer lugar do mundo e falar qualquer idioma em qualquer local. Você pode aumentar o mercado potencial para seu aplicativo desenvolvendo-o para ser prontamente adaptável usando *globalização* e *localização*.
 
-
-            **Globalização** é o processo de projetar e desenvolver seu aplicativo para funcionar adequadamente em diferentes mercados globais sem nenhuma alteração ou personalização.
+**Globalização** é o processo de projetar e desenvolver seu aplicativo para funcionar adequadamente em diferentes mercados globais sem nenhuma alteração ou personalização.
 
 Por exemplo, você pode:
 
@@ -27,8 +27,7 @@ Por exemplo, você pode:
 -   Recupere texto e imagens dependentes de cultura de recursos que possam ser adaptados para diferentes mercados locais, em vez de inseri-los no código ou na marcação de seu aplicativo.
 -   Use APIs de globalização para exibir dados que são formatados de forma diferente em regiões diferentes, como valores numéricos, datas, horas e moedas.
 
-
-            **Localização** é o processo de adaptar seu aplicativo para atender aos requisitos de idioma, cultura e política de um mercado local específico.
+**Localização** é o processo de adaptar seu aplicativo para atender aos requisitos de idioma, cultura e política de um mercado local específico.
 
 Por exemplo:
 
@@ -100,6 +99,6 @@ Consulte também a documentação criada originalmente para o Windows 8.x que ai
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

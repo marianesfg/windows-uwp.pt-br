@@ -5,21 +5,31 @@ ms.assetid: E9E4537F-1160-4183-9A83-26602FCFDC9A
 description: "Um controle de modo divisão tem um painel que pode ser expandido/recolhido e uma área de conteúdo."
 label: Split view
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 391bfdbbf09474ad707dbbf306d4997825fa8386
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 7fae1477b997508ade92a5bbb977c1d6530a181f
 
 ---
+# Controle de modo de exibição dividido
 
-# Diretrizes para o controle SplitView
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+Um controle de modo divisão tem um painel que pode ser expandido/recolhido e uma área de conteúdo.
+
+<div class="important-apis" >
+<b>APIs Importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn864360"><strong>Classe SplitView (XAML)</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn919970"><strong>Objeto SplitView (HTML)</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
 
-**APIs importantes**
 
--   [**Classe SplitView (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn864360)
--   [**Objeto SplitView (HTML)**](https://msdn.microsoft.com/library/windows/apps/dn919970)
-
-Um controle de modo divisão tem um painel que pode ser expandido/recolhido e uma área de conteúdo. A área de conteúdo está sempre visível. O painel pode ser expandido e recolhido ou ficar em estado aberto, e pode apresentar-se do lado esquerdo ou direito da janela de um aplicativo. O painel tem quatro modos:
+ A área de conteúdo da exibição dividida está sempre visível. O painel pode ser expandido e recolhido ou ficar em estado aberto, e pode apresentar-se do lado esquerdo ou direito da janela de um aplicativo. O painel tem quatro modos:
 
 -   **Sobreposição**
 
@@ -37,13 +47,13 @@ Um controle de modo divisão tem um painel que pode ser expandido/recolhido e um
 
     Uma parte estreita do painel está sempre visível, com largura suficiente para mostrar os ícones. A largura do painel padrão fechado é 48px, que pode ser modificada com `CompactPaneLength`. Se o painel estiver aberto, ele reduzirá o espaço disponível para o conteúdo, empurrando o conteúdo do seu jeito.
 
-## <span id="Is_this_the_right_control_"></span><span id="is_this_the_right_control_"></span><span id="IS_THIS_THE_RIGHT_CONTROL_"></span>Esse é o controle correto?
+## Esse é o controle correto?
 
 O controle de modo divisão pode ser usado para criar um [painel de navegação](nav-pane.md). Para criar esse padrão, adicione um botão expandir/recolher (o botão "hambúrguer") e um modo de exibição de lista representando os itens de navegação.
 
 O controle de modo divisão também pode ser usado para criar qualquer experiência de "gaveta" na qual os usuários podem abrir e fechar o painel complementar.
 
-## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>Exemplos
+## Exemplos
 
 O controle de modo divisão em sua forma padrão é um contêiner básico. Veja a seguir um exemplo do aplicativo Microsoft Edge usando SplitView para mostrar seu Hub.
 
@@ -51,7 +61,7 @@ O controle de modo divisão em sua forma padrão é um contêiner básico. Veja 
 
 
 
-## <span id="related_topics"></span>Tópicos relacionados
+## Tópicos relacionados
 
 
 * [Padrão do painel de navegação](nav-pane.md)
@@ -62,6 +72,6 @@ O controle de modo divisão em sua forma padrão é um contêiner básico. Veja 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

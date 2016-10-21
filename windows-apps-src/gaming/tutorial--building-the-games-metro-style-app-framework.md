@@ -3,8 +3,9 @@ author: mtoepke
 title: Definir a estrutura do aplicativo UWP (Plataforma Universal do Windows) do jogo
 description: "A primeira parte da codificação de um jogo UWP (Plataforma Universal do Windows) com DirectX é criar a estrutura que permite que o objeto de jogo interaja com o Windows."
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2ebc7bca06454f78ab375058e49f012cacb00cc8
+ms.openlocfilehash: 9dea19c87c4049c73a938b1cd5576644f7b0f8b9
 
 ---
 
@@ -218,10 +219,7 @@ No exemplo de jogo, iniciamos um while loop que termina quando o jogador fecha a
 
 Quando seu jogo tem foco, você deve lidar com todos os eventos na fila de mensagens conforme eles chegam. Por isso, é preciso chamar [**CoreWindowDispatch.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) com a opção **ProcessAllIfPresent**. Outras opções podem causar atrasos no processamento de eventos de mensagens, que fazem com que o jogo pareça não responder, ou resultar em comportamentos de toque lentos, e não "fluidos".
 
-Quando o aplicativo não estiver visível, suspenso ou encaixado, não queremos que ele consuma ciclos de recursos para enviar mensagens que nunca chegarão. Se o jogo precisar usar o **ProcessOneAndAllPending**, que é bloqueado até receber um evento e processa esse evento e todos os outros que chegam na fila do processo durante o processamento da primeira. 
-            [
-              **ProcessEvents**
-            ](https://msdn.microsoft.com/library/windows/apps/br208215) retorna, em seguida, imediatamente após o processamento da fila.
+Quando o aplicativo não estiver visível, suspenso ou encaixado, não queremos que ele consuma ciclos de recursos para enviar mensagens que nunca chegarão. Se o jogo precisar usar o **ProcessOneAndAllPending**, que é bloqueado até receber um evento e processa esse evento e todos os outros que chegam na fila do processo durante o processamento da primeira. [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) retorna, em seguida, imediatamente após o processamento da fila.
 
 O jogo está em execução. Os eventos que ele usa para passar de um estado do jogo para outro estão sendo enviados e processados. Os elementos gráficos são atualizados, assim como os ciclos de loop do jogo. Esperamos que o jogador se divirta. Mas, por fim, a diversão tem que acabar...
 
@@ -363,12 +361,9 @@ No loop do jogo em **Run**, o exemplo implementou uma máquina de estado básico
 
 No exemplo de jogo, há três estados principais (UpdateEngineState) em que o jogo pode estar:
 
--   
-            **Aguardando recursos**. O loop do jogo está em exibição cíclica, não será possível transitar até os recursos (especificamente os recursos gráficos) estarem disponíveis. Quando as tarefas assíncronas para o carregamento de recursos são concluídas, o estado é atualizado para **ResourcesLoaded**. Isso geralmente acontece entre os níveis, quando o nível precisa carregar novos recursos do disco. No exemplo de jogo, simulamos esse comportamento porque o exemplo não precisa de nenhum recurso adicional por nível naquele momento.
--   
-            **Aguardando pressionar**. O loop do jogo está em exibição cíclica, aguardando uma entrada específica do usuário. Esta entrada é um ação do jogador para carregar um jogo, iniciar um nível ou continuar um nível. O código de exemplo se refere a esses subestados como valores de enumeração PressResultState.
--   
-            **Dynamics**. O loop do jogo está sendo executado com o usuário jogando. Enquanto o usuário está jogando, o jogo verifica três condições para as quais ele pode transitar: a expiração do tempo definido para um nível, a conclusão de um nível pelo jogador ou a conclusão de todos os níveis pelo jogador.
+-   **Aguardando recursos**. O loop do jogo está em exibição cíclica, não será possível transitar até os recursos (especificamente os recursos gráficos) estarem disponíveis. Quando as tarefas assíncronas para o carregamento de recursos são concluídas, o estado é atualizado para **ResourcesLoaded**. Isso geralmente acontece entre os níveis, quando o nível precisa carregar novos recursos do disco. No exemplo de jogo, simulamos esse comportamento porque o exemplo não precisa de nenhum recurso adicional por nível naquele momento.
+-   **Aguardando pressionar**. O loop do jogo está em exibição cíclica, aguardando uma entrada específica do usuário. Esta entrada é um ação do jogador para carregar um jogo, iniciar um nível ou continuar um nível. O código de exemplo se refere a esses subestados como valores de enumeração PressResultState.
+-   **Dynamics**. O loop do jogo está sendo executado com o usuário jogando. Enquanto o usuário está jogando, o jogo verifica três condições para as quais ele pode transitar: a expiração do tempo definido para um nível, a conclusão de um nível pelo jogador ou a conclusão de todos os níveis pelo jogador.
 
 Consulte a estrutura do código. O código completo está em [Código completo desta seção](#code_sample).
 
@@ -1433,6 +1428,6 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

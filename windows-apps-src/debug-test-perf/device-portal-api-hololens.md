@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 41ac0142-4d86-4bb3-b580-36d0d6956091
 title: "Referência de API do Device Portal para HoloLens"
 description: "Saiba mais sobre as APIs REST do Windows Device Portal para Hololens que você pode usar para acessar os dados e controlar seu dispositivo de forma programática."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5ed8ffe0a409569777fbf4e56a90ab3b80cd395c
+ms.openlocfilehash: 638ebca167b2ca56f00a83aab13b15c57b2dca2a
 
 ---
 # Referência de API do Device Portal para HoloLens
@@ -26,19 +27,19 @@ GET | /api/holographic/os/webmanagement/settings/https
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -58,19 +59,19 @@ GET | /api/holographic/os/settings/ipd
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -90,19 +91,19 @@ GET | /api/holographic/os/etw/customproviders
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -122,19 +123,19 @@ GET | /api/holographic/os/services
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -162,15 +163,15 @@ required   | (**necessário**) Determina se o HTTPS é necessário ou não para 
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -198,15 +199,15 @@ ipd   | (**necessário**) O novo valor da DIP a ser armazenado. Esse valor deve 
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -236,15 +237,15 @@ clientmode   | (**necessário**) Determina o modo de rastreamento. Um valor **ac
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -265,15 +266,15 @@ GET | /api/holographic/
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -314,15 +315,15 @@ streamid   | (**necessário na postagem em um fluxo criado**) O identificador do
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -342,19 +343,19 @@ DELETE | /api/holographic/simulation/control/stream
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -374,19 +375,19 @@ GET/WebSocket | /api/holographic/simulation/control/stream
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -406,19 +407,19 @@ GET | /api/holographic/simulation/control/mode
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -446,15 +447,15 @@ mode   | (**necessário**) Indica o modo de simulação. Os valores possíveis i
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -484,15 +485,15 @@ recording   | (**necessário**) O nome da gravação a ser excluída.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -512,19 +513,19 @@ GET | /api/holographic/simulation/playback/files
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -552,15 +553,15 @@ recording   | (**necessário**) O nome da gravação pela qual você se interess
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -580,19 +581,19 @@ GET | /api/holographic/simulation/playback/session/files
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -620,15 +621,15 @@ recording   | (**necessário**) O nome da gravação pela qual você se interess
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -656,15 +657,15 @@ recording   | (**necessário**) O nome da gravação a ser carregada.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -692,15 +693,15 @@ recording   | (**necessário**) O nome da gravação a ser pausada.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -728,15 +729,15 @@ recording   | (**necessário**) O nome da gravação a ser reproduzida.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -764,15 +765,15 @@ recording   | (**necessário**) O nome da gravação a ser parada.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -800,15 +801,15 @@ recording   | (**necessário**) O nome da gravação a ser descarregada.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -828,19 +829,19 @@ POST | /api/holographic/simulation/playback/file
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -862,19 +863,19 @@ GET | /api/holographic/simulation/recording/status
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -909,15 +910,15 @@ Para esses parâmetros, um dos seguintes parâmetros deve ser definido exatament
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -937,19 +938,19 @@ POST | /api/holographic/simulation/recording/stop
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -979,15 +980,15 @@ filename   | (**necessário**) O nome do arquivo de vídeo a ser excluído. O no
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1016,15 +1017,15 @@ op   | (**opcional**) Defina esse valor como **stream** se você deseja baixar u
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhum
+- Nenhum(a)
 
 **Código de status**
 
@@ -1044,19 +1045,19 @@ GET | /api/holographic/mrc/settings
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1076,19 +1077,19 @@ GET | /api/holographic/mrc/status
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1108,19 +1109,19 @@ GET | /api/holographic/mrc/files
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1140,19 +1141,19 @@ POST | /api/holographic/mrc/settings
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1172,19 +1173,19 @@ POST | /api/holographic/mrc/video/control/start
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1204,19 +1205,19 @@ POST | /api/holographic/mrc/video/control/stop
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1236,19 +1237,19 @@ GET | /api/holographic/mrc/photo
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1281,15 +1282,15 @@ loopback   | (**opcional**) Indica se deve ser capturado o áudio do aplicativo.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1320,15 +1321,15 @@ loopback   | (**opcional**) Indica se deve ser capturado o áudio do aplicativo.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1359,15 +1360,15 @@ loopback   | (**opcional**) Indica se deve ser capturado o áudio do aplicativo.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1398,15 +1399,15 @@ loopback   | (**opcional**) Indica se deve ser capturado o áudio do aplicativo.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -1414,6 +1415,6 @@ loopback   | (**opcional**) Indica se deve ser capturado o áudio do aplicativo.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

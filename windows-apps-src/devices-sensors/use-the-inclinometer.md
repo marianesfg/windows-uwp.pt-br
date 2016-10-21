@@ -3,8 +3,9 @@ author: DBirtolo
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: "Usar o inclinômetro"
 description: "Saiba como usar o inclinômetro para determinar a rotação sobre o eixo x, a rolagem e a rotação sobre o eixo y."
+translationtype: Human Translation
 ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
-ms.openlocfilehash: f8b56e0ef13e471d99519256b5a6d124b569102d
+ms.openlocfilehash: 17828018f2c8db8a5a60d839e7f73904de7a1a24
 
 ---
 # Usar o inclinômetro
@@ -176,6 +177,6 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

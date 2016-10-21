@@ -4,12 +4,12 @@ Description: "Implante e depure um aplicativo UWP (Plataforma Universal do Windo
 Search.Product: eADQiWindows 10XVcnh
 title: "Implantar e depurar um aplicativo UWP (Plataforma Universal do Windows) convertido de um aplicativo de área de trabalho do Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 618b129449d285054604008615c32de74c8bfd9b
+ms.sourcegitcommit: 2c1a8ea38081c947f90ea835447a617c388aec08
+ms.openlocfilehash: 75e176f17845bdbd618c6ca63fbbb5765bef54fb
 
 ---
 
-# Implantar e depurar seu aplicativo UWP convertido (Project Centennial)
+# Implemente e depure o aplicativo UWP convertido
 
 \[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
@@ -17,7 +17,7 @@ Este tópico contém informações para ajudá-lo a implantar e depurar seu apli
 
 ## Depurar seu aplicativo UWP convertido
 
-Você tem duas opções principais para depurar seu aplicativo convertido usando o Visual Studio.
+Você tem algumas opções para depurar seu aplicativo convertido.
 
 ### Anexar ao processo
 
@@ -29,7 +29,7 @@ O Visual Studio agora oferece suporte a um novo projeto de empacotamento que per
 
 Veja como começar: 
 
-1. Primeiro, certifique-se de que você está configurado para usar o Centennial. Para obter instruções, consulte [Visualização de conversor de aplicativo da área de trabalho (projeto Centennial)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter). 
+1. Primeiro, verifique se você configurou para usar o Desktop App Converter. Para obter instruções , consulte [Visualizar Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter). 
 
 2. Execute o conversor e o instalador do seu aplicativo Win32. O conversor captura o layout, e todas as alterações feitas no registro, e produz um Appx com manifesto e registery.dat para virtualizar o registro:
 
@@ -164,7 +164,30 @@ Você também pode usar a compilação condicional para habilitar caminhos de c�
 
 4.  Agora você pode alternar o destino de compilação para DesktopUWP, se quiser compilar no destino a API de UWP que você adicionou.
 
+### PLMDebug 
+
+O Visual Studio F5 e Anexar ao Processo são úteis para depurar seu aplicativo enquanto ele é executado. Em alguns casos, no entanto, você talvez queira fazer um controle mais refinado sobre o processo de depuração, incluindo a capacidade de depurar seu aplicativo antes de ser iniciado. Nesses cenários mais avançados, use [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396). Essa ferramenta permite que você depure seu aplicativo convertido usando o depurador do Windows e oferece o controle total sobre o ciclo de vida do aplicativo incluindo suspensão, retomada e encerramento. 
+
+O PLMDebug está incluído no SDK do Windows. Para obter mais informações, consulte [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396). 
+
+### Executar outro processo dentro do contêiner de confiança total 
+
+Você pode chamar processos personalizados dentro do contêiner de um pacote do aplicativo especificado. Isso pode ser útil para testar os cenários (por exemplo, se você tiver um utilitário de teste personalizado e deseja testar a saída do aplicativo). Para fazer isso, use o cmdlet do PowerShell ```Invoke-CommandInDesktopPackage```: 
+
+```CMD
+Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [-Command] <string> [[-Args]
+    <string>]  [<CommonParameters>]
+```
+
 ## Implantar seu aplicativo UWP convertido
+
+Há 2 maneiras de implementar seu aplicativo convertido: registro de arquivo flexível e implementar o pacote appx. 
+
+O registro de arquivo flexível é útil para fins onde os arquivos são dispostos em disco em um local que você pode acessar facilmente e atualização e não requer um certificado ou assinatura de depuração.  
+
+A implementação do pacote AppX fornece uma maneira fácil para a implementação e o aplicativo de sideload em vários computadores, mas exige que o pacote seja assinado e o certificado confiável no computador.
+
+### Registro de arquivo flexível
 
 Para implantar seu aplicativo durante o desenvolvimento, execute o seguinte cmdlet do PowerShell: 
 
@@ -174,15 +197,24 @@ Para atualizar os arquivos .exe ou .dll do seu aplicativo, simplesmente substitu
 
 Observe o seguinte: 
 
-Qualquer unidade em que você instale seu aplicativo convertido deve ser formatada para o formato NTFS.
+* Qualquer unidade em que você instale seu aplicativo convertido deve ser formatada para o formato NTFS.
 
-Um aplicativo convertido sempre é executado como o usuário interativo. Isso tem significado particular para uma aplicativo .NET cujo manifesto especifica um nível de execução __requireAdministrator__. Se o usuário interativo tiver privilégios de administrador, será exibido um aviso de UAC _cada vez que o aplicativo for iniciado_. Para usuários padrão, o aplicativo falhará ao iniciar.
+* Um aplicativo convertido sempre é executado como o usuário interativo.
 
-Se você tentar executar o cmdlet Add-AppxPackage em um computador para o qual ainda não tiver importado o certificado criado, você receberá um erro.
+### Implementação do pacote AppX 
 
 Antes de implantar seu aplicativo, você precisará assiná-lo com um certificado. Para obter informações sobre a criação de um certificado, consulte [Assinar seu pacote .AppX](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter#deploy-your-converted-appx). 
 
-Veja a seguir como importar um certificado que você criou anteriormente. Você pode instalá-lo diretamente, ou pode instalá-lo de um appx que você assinou, como o cliente fará.
+Veja a seguir como importar um certificado que você criou anteriormente. Você pode importar o certificado diretamente com o CERTUTIL, ou pode instalá-lo de um appx que você assinou, como o cliente fará. 
+
+Para instalar o certificado via CERTUTIL, execute o seguinte comando em um prompt de comando de administrador:
+
+```cmd
+Certutil -addStore TrustedPeople <testcert.cer>
+```
+
+Para importar o certificado de appx como um cliente faria:
+
 1.  No Explorador de Arquivos, clique com botão direito do mouse em um appx que você assinou com um certificado de teste e escolha **Propriedades** no menu de contexto.
 2.  Clique ou toque na guia **Assinaturas Digitais**.
 3.  Clique ou toque no certificado e escolha **Detalhes**.
@@ -195,7 +227,7 @@ Veja a seguir como importar um certificado que você criou anteriormente. Você 
 10. Clique ou toque em **Avançar**. Uma nova tela aparece. Clique ou toque em **Concluir**.
 11. Uma caixa de diálogo de confirmação deve aparecer. Em caso afirmativo, clique em **OK**. Caso apareça uma caixa diferente, isso significa que há um problema com o certificado. Talvez seja preciso solucionar esses problemas.
 
-Para o Windows confiar no certificado, o certificado deve estar no nó **Certificados (Computador Local) > Autoridades de Certificação Confiáveis > Certificados** ou no nó **Certificados (Computador Local) > Pessoas Confiáveis > Certificados**. Somente certificados nessas duas localizações podem validar a relação de confiança de certificado no contexto da máquina local. Caso contrário, aparece uma mensagem de erro que se parece com a seguinte cadeia de caracteres:
+Observação: para o Windows confiar no certificado, o certificado deve estar no nó **Certificados (Computador Local) > Autoridades de Certificação Confiáveis > Certificados** ou no nó **Certificados (Computador Local) > Pessoas Confiáveis > Certificados**. Somente certificados nessas duas localizações podem validar a relação de confiança de certificado no contexto da máquina local. Caso contrário, aparece uma mensagem de erro que se parece com a seguinte cadeia de caracteres:
 ```CMD
 "Add-AppxPackage : Deployment failed with HRESULT: 0x800B0109, A certificate chain processed,
 but terminated in a rootcertificate which is not trusted by the trust provider.
@@ -203,7 +235,13 @@ but terminated in a rootcertificate which is not trusted by the trust provider.
 in the app package must be trusted."
 ```
 
-### Nos bastidores
+Agora que o certificado foi marcado como confiável, há 2 maneiras de instalar o pacote, por meio do powershell ou clicando duas vezes no arquivo de pacote de appx para instalá-lo.  Para instalar por meio do powershell, execute o seguinte cmdlet:
+
+```powershell
+Add-AppxPackage <MyApp>.appx
+```
+
+## Nos bastidores
 
 Quando você executar o aplicativo convertido, seu pacote de aplicativo UWP será iniciado em \Arquivos de Programas\WindowsApps\\&lt;_nome do pacote_&gt;\\&lt;_nome do aplicativo_&gt;.exe. Se você observar lá, verá que o aplicativo tem um manifesto de pacote de aplicativo (chamado AppxManifest.xml), que faz referência a um namespace xml especial usado para aplicativos convertidos. Dentro desse arquivo de manifesto está um elemento __&lt;EntryPoint&gt;__, que faz referência a um aplicativo de confiança total. Quando esse aplicativo é iniciado, ele não é executado dentro de um contêiner de aplicativo, mas, em vez disso, ele é executado como o usuário normalmente faria.
 
@@ -211,16 +249,37 @@ Mas o aplicativo é executado em um ambiente especial onde quaisquer acessos que
 
 Em uma pasta chamada VFS, você verá pastas que contêm as DLLs das quais o seu aplicativo depende. Essas DLLs são instaladas em pastas de sistema para a versão de área de trabalho clássica do seu aplicativo. Mas, como se trata de um aplicativo UWP, as DLLs são locais em seu aplicativo. Dessa forma, não há problemas de controle de versão quando aplicativos UWP são instalados e desinstalados.
 
+### Locais dos pacotes VFS
+
+A tabela a seguir mostra onde os arquivos fornecidos como parte do seu pacote estão sobrepostos no sistema para o aplicativo. Seu aplicativo perceberá que esses arquivos estarão em locais do sistema listado, quando na verdade estão nos locais redirecionados dentro do [Package Root]\VFS\. Os locais de FOLDERID são das constantes [**KNOWNFOLDERID**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd378457.aspx).
+
+Local do sistema | Local redirecionado (em [PackageRoot]\VFS\) | Válido em arquiteturas
+ :---- | :---- | :---
+FOLDERID_SystemX86 | SystemX86 | x86, amd64 
+FOLDERID_System | SystemX64 | amd64 
+FOLDERID_ProgramFilesX86 | ProgramFilesX86 | x86, amd6 
+FOLDERID_ProgramFilesX64 | ProgramFilesX64 | amd64 
+FOLDERID_ProgramFilesCommonX86 | ProgramFilesCommonX86 | x86, amd64
+FOLDERID_ProgramFilesCommonX64 | ProgramFilesCommonX64 | amd64 
+FOLDERID_Windows | Windows | x86, amd64 
+FOLDERID_ProgramData | AppData comum | x86, amd64 
+FOLDERID_System\catroot | AppVSystem32Catroot | x86, amd64 
+FOLDERID_System\catroot2 | AppVSystem32Catroot2 | x86, amd64 
+FOLDERID_System\drivers\etc | AppVSystem32DriversEtc | x86, amd64 
+FOLDERID_System\driverstore | AppVSystem32Driverstore | x86, amd64 
+FOLDERID_System\logfiles | AppVSystem32Logfiles | x86, amd64 
+FOLDERID_System\spool | AppVSystem32Spool | x86, amd64 
+
 ## Consulte também
 [Converter o seu aplicativo da área de trabalho em um aplicativo UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)
 
-[Visualização Conversor de Aplicativos da Área de Trabalho (Projeto Centennial)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter)
+[Pré-visualização do Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter)
 
 [Converter manualmente o seu aplicativo da área de trabalho do Windows em um aplicativo UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion)
 
 [Exemplos de código de ponte de aplicativos da área de trabalho para UWP no GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO2-->
 
 

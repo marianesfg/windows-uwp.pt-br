@@ -1,74 +1,78 @@
 ---
 author: mcleanbyron
 ms.assetid: C09F4B7C-6324-4973-980A-A60035792EFC
-description: Use this method in the Windows Store submission API to create a new add-on submission for an app that is registered to your Windows Dev Center account.
-title: Create an add-on submission using the Windows Store submission API
+description: "Use este método na API de envio da Windows Store para criar um novo envio de complemento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
+title: Criar um envio de complemento usando a API de envio da Windows Store
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: b7de4b00fb4d48b9f4c542437c38e0282e155a29
+
 ---
 
-# Create an add-on submission using the Windows Store submission API
+# Criar um envio de complemento usando a API de envio da Windows Store
 
 
 
 
-Use this method in the Windows Store submission API to create a new add-on (also known as in-app product or IAP) submission for an app that is registered to your Windows Dev Center account. After you successfully create a new submission by using this method, [update the submission](update-an-add-on-submission.md) to make any necessary changes to the submission data, and then [commit the submission](commit-an-add-on-submission.md) for ingestion and publishing.
+Use este método na API de envio da Windows Store para criar um novo envio de complemento (também conhecido como produto no app ou IAP) para um aplicativo que está registrado para sua conta do Centro de Desenvolvimento do Windows. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-add-on-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-add-on-submission.md) para inclusão e publicação.
 
-For more information about how this method fits into the process of creating an add-on submission by using the Windows Store submission API, see [Manage add-on submissions](manage-add-on-submissions.md).
+Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de complemento, usando a API de envio da Windows Store, consulte [Gerenciar envios de complemento](manage-add-on-submissions.md).
 
->**Note**&nbsp;&nbsp;This method creates a submission for an existing add-on. To create an add-on, use the [Create an add-on](create-an-add-on.md) method.
+>**Observação**&nbsp;&nbsp;Este método cria um envio para um complemento existente. Para criar um complemento, use o método [Criar um complemento](create-an-add-on.md).
 
-## Prerequisites
+## Pré-requisitos
 
-To use this method, you need to first do the following:
+Para usar este método, primeiro você precisa do seguinte:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
-* Create an add-on for an app in your Dev Center account. You can do this in the Dev Center dashboard, or you can do this by using the [Create an add-on](create-an-add-on.md) method.
+* Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* Crie um complemento para um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [Criar um complemento](create-an-add-on.md).
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
 ## Request
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
-| Method | Request URI                                                      |
+| Método | URI da Solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Cabeçalho da solicitação
 
-| Header        | Type   | Description                                                                 |
+| Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Parâmetros solicitados
 
-| Name        | Type   | Description                                                                 |
+| Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | Required. The Store ID of the add-on for which you want to create a submission. The Store ID is available on the Dev Center dashboard, and it is included in the response data for requests to [Create an add-on](create-an-add-on.md) or [get add-on details](get-all-add-ons.md).  |
+| inAppProductId | cadeia de caracteres | Obrigatório. A ID da Loja do complemento para o qual você deseja criar um envio. A ID da Loja está disponível no painel do Centro de Desenvolvimento, e ela está incluída nos dados de resposta de solicitações para [Criar um complemento](create-an-add-on.md) ou [obter detalhes de complemento](get-all-add-ons.md).  |
 
 <span/>
 
-### Request body
+### Corpo da solicitação
 
-Do not provide a request body for this method.
+Não forneça um corpo da solicitação para esse método.
 
-### Request example
+### Exemplo de solicitação
 
-The following example demonstrates how to create a new submission for an add-on.
+O exemplo a seguir demonstra como criar um novo envio para um complemento.
 
 ```
 POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP/submissions HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Resposta
 
-The following example demonstrates the JSON response body for a successful call to this method. The response body contains information about the new submission. For more details about the values in the response body, see [add-on submission resource](manage-add-on-submissions.md#add-on-submission-object).
+O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. O corpo da resposta contém informações sobre o novo envio. Para obter mais detalhes sobre os valores no corpo da resposta, veja [recurso do envio de complemento](manage-add-on-submissions.md#add-on-submission-object).
 
 ```json
 {
@@ -142,24 +146,30 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-## Error codes
+## Códigos de erro
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
-| Error code |  Description   |
+| Código de erro |  Descrição   |
 |--------|------------------|
-| 400  | The submission could not be created because the request is invalid. |
-| 409  | The submission could not be created because of the current state of the app, or the app uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 400  | O envio não pôde ser criado porque a solicitação não é válida. |
+| 409  | Não foi possível criar o envio por causa do estado atual do aplicativo, ou o aplicativo usa um recurso de painel do Centro de Desenvolvimento [não é compatível no momento com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 <span/>
 
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage add-on submissions](manage-add-on-submissions.md)
-* [Get an add-on submission](get-an-add-on-submission.md)
-* [Commit an add-on submission](commit-an-add-on-submission.md)
-* [Update an add-on submission](update-an-add-on-submission.md)
-* [Delete an add-on submission](delete-an-add-on-submission.md)
-* [Get the status of an add-on submission](get-status-for-an-add-on-submission.md)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Gerenciar envios de complemento](manage-add-on-submissions.md)
+* [Obter um envio de complemento](get-an-add-on-submission.md)
+* [Confirmar um envio de complemento](commit-an-add-on-submission.md)
+* [Atualizar um envio de complemento](update-an-add-on-submission.md)
+* [Excluir um envio de complemento](delete-an-add-on-submission.md)
+* [Obter o status de um envio de complemento](get-status-for-an-add-on-submission.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

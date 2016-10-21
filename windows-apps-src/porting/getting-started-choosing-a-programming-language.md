@@ -3,14 +3,15 @@ author: mcleblanc
 title: "Escolhendo uma linguagem de programação"
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
 description: "Escolhendo uma linguagem de programação"
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 10fa4a349621c8e7b248c7daf4d7cdf967e25255
+ms.openlocfilehash: c7d99923a0deac61e289d3a2796b8dd1720430b4
 
 ---
 
 # Introdução: escolhendo uma linguagem de programação
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Escolhendo uma linguagem de programação
 
@@ -26,8 +27,7 @@ Apesar de nosso foco ser a linguagem C# neste artigo, as outras linguagens ofere
 -   [Crie seu primeiro aplicativo da Loja do Windows Phone usando C# ou Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=397877)
 -   [WinJS no Windows Phone 8.1](http://go.microsoft.com/fwlink/p/?LinkID=397879)
 
-
-            **Observação**  Para aplicativos que usam elementos gráficos 3D, os padrões OpenGL e OpenGL ES não estão nativamente disponíveis para aplicativos UWP. Caso prefira não reescrever seu código OpenGL ES no Microsoft DirectX, talvez se interesse em aprender sobre o **Angle**. O Angle é um projeto em andamento criado para converter OpenGL para DirectX traduzindo as chamadas à API OpenGL em chamadas à API DirectX. Para saber mais, consulte o seguinte:
+**Observação**  Para aplicativos que usam elementos gráficos 3D, os padrões OpenGL e OpenGL ES não estão nativamente disponíveis para aplicativos UWP. Caso prefira não reescrever seu código OpenGL ES no Microsoft DirectX, talvez se interesse em aprender sobre o **Angle**. O Angle é um projeto em andamento criado para converter OpenGL para DirectX traduzindo as chamadas à API OpenGL em chamadas à API DirectX. Para saber mais, consulte o seguinte:
 -   [Ângulo](https://code.google.com/p/angleproject/)
 -   [Criar seu primeiro aplicativo da Windows Store usando o DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
 -   [Exemplos de aplicativo da Windows Store que usam DirectX](http://go.microsoft.com/fwlink/p/?LinkId=263603)
@@ -145,6 +145,6 @@ C# é uma linguagem fácil de usar e vem com as muitas classes de suporte e estr
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: "Leia sobre soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos JavaScript/HTML."
 title: "Guia de solução de problemas em HTML e JavaScript"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: af4ea6f3360ea85d1c70ec9b757db65ec23c88af
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 2b86d307dfbaf6d82e99a323762cfb5515f865da
 
 
 ---
@@ -12,7 +13,7 @@ ms.openlocfilehash: af4ea6f3360ea85d1c70ec9b757db65ec23c88af
 # Guia de solução de problemas em HTML e JavaScript
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Este tópico contém soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos JavaScript/HTML.
 
@@ -382,6 +383,6 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

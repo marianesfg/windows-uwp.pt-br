@@ -5,7 +5,7 @@ description: "Converter seu aplicativo Chrome ou Extensão Chrome em um aplicati
 kw: Package Chrome Extension for Windows Store tutorial, Port Chrome Extension to Windows 10, How to convert Chrome App to Windows, How to add Chrome Extension to Windows Store, hwa-cli, Hosted Web Apps Command Line Interface CLI Tool, Install Chrome Extension on Windows 10 Device, convert .crx to .AppX
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7d1cceb931d3ee9d128c6ba47113f501625830da
+ms.openlocfilehash: 7847f69c85708cb42b878253839b06929f837708
 
 ---
 
@@ -101,6 +101,6 @@ O Chrome fornece aplicativos com [APIs de finalidade especial](https://developer
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

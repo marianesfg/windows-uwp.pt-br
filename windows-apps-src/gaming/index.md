@@ -4,15 +4,15 @@ title: Jogos e DirectX
 description: A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, distribuir e monetizar jogos. Saiba como iniciar um novo jogo ou portar um jogo existente.
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 translationtype: Human Translation
-ms.sourcegitcommit: 41ee0d2a45408b5b1a0dbc0b102f1b59843814b2
-ms.openlocfilehash: e5447f6238ece768513d160579e1c7e89b04e509
+ms.sourcegitcommit: adaff9abeb0ae8f9c9deb964b18e673c4d4c5f73
+ms.openlocfilehash: fccc85584e84bf3364130fe80c61b75c6377c0c8
 
 ---
 
 # Jogos e DirectX
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, distribuir e monetizar jogos. Saiba como iniciar um novo jogo ou portar um jogo existente.
 
@@ -31,8 +31,9 @@ A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, 
 | [Suporte à orientação de tela](supporting-screen-rotation-directx-and-cpp.md) | Discutiremos neste documento as práticas recomendadas para manipular a rotação da tela no aplicativo UWP do DirectX, para que o hardware gráfico do dispositivo Windows 10 seja usado de forma eficiente e eficaz. |
 | [Áudio para jogos](working-with-audio-in-your-directx-game.md) | Aprenda como desenvolver e incorporar música e sons a seu jogo do DirectX e como processar sinais de áudio para criar sons dinâmicos e posicionais. |
 | [Controles de toque para jogos](tutorial--adding-touch-controls-to-your-directx-game.md) | Aprenda como adicionar controles de toque básicos ao seu jogo UWP do C++ com o DirectX. Mostraremos como adicionar controles baseados em toque para mover uma câmera com plano fixo em um ambiente Direct3D, no qual arrastar com o dedo ou a caneta muda a perspectiva da câmera. |
-| [Controles move-look para jogos](tutorial--adding-move-look-controls-to-your-directx-game.md) | Aprenda como adicionar controles move-look tradicionais (também conhecidos como controle mouselook) usando o mouse e o teclado ao seu jogo do DirectX. |
-| [Otimizar entrada e loop de renderização](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) | A latência de entrada pode impactar significativamente a experiência de um jogo, e a sua otimização pode tornar o jogo mais bem-acabado. Além disso, a otimização adequada dos eventos de entrada pode aumentar a vida útil da bateria. Saiba como escolher as opções corretas de processamento dos eventos de entrada do [CoreDispatcher](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) para verificar se seu jogo controla a entrada da melhor forma possível. |
+| [Controles move-look para jogos](tutorial--adding-move-look-controls-to-your-directx-game.md) | Aprenda a adicionar controles move-look tradicionais (também conhecidos como controles mouselook) usando o mouse e o teclado ao seu jogo do DirectX. |
+| [Movimento relativo do mouse](relative-mouse-movement.md) | Saiba como adicionar controles relativos de mouse, que não usam o cursor do sistema e não retornam coordenadas absolutas da tela; em vez disso, rastreiam o delta de pixel entre os movimentos do mouse. |
+| [Otimizar entrada e loop de renderização](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) | A latência de entrada pode afetar significativamente a experiência de um jogo, e a sua otimização pode tornar um jogo mais bem acabado. Além disso, a otimização adequada dos eventos de entrada pode aumentar a vida útil da bateria. Saiba como escolher as opções corretas de processamento dos eventos de entrada do [CoreDispatcher](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) para verificar se seu jogo controla a entrada da melhor forma possível. |
 | [Dimensionamento e sobreposições de cadeia de troca](multisampling--scaling--and-overlay-swap-chains.md) | Saiba como criar cadeias de troca dimensionadas para permitir renderização mais rápida em dispositivos móveis e usar cadeias de troca sobrepostas (quando disponíveis) para aumentar a qualidade visual. |
 | [Reduzir a latência com cadeias de troca DXGI 1.3](reduce-latency-with-dxgi-1-3-swap-chains.md) | Use o DXGI 1.3 para reduzir a latência de quadros eficaz aguardando a cadeia de troca sinalizar o horário apropriado para começar a renderizar um novo quadro. |
 | [Multisampling em aplicativos UWP](multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md) | Aprenda a usar multisampling em aplicativos UWP criados com o Direct3D. |
@@ -42,7 +43,8 @@ A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, 
 | [Acessibilidade para jogos](accessibility-for-games.md) | Aprenda a tornar os jogos mais acessíveis. |
 | [Nuvem para jogos](cloud-for-games.md) | Aprenda a fazer uso de tecnologias de nuvem para desenvolvimento de jogos. |
 | [Interoperabilidade entre DirectX e XAML](directx-and-xaml-interop.md) | Você pode usar o XAML (Extensible Application Markup Language) e o Microsoft DirectX juntos em seu jogo UWP. |
-| [Empacotar seu jogo](package-your-windows-store-directx-game.md) | Os jogos UWP maiores, especialmente os que dão suporte a vários idiomas com ativos específicos à região ou que possuem ativos opcionais de alta definição podem ser facilmente dimensionados para tamanhos grandes. Neste tópico, você aprenderá a usar pacotes e lotes de aplicativos para personalizar seu aplicativo de forma que os clientes recebam apenas os recursos de que realmente precisam. |
+| [Empacotar seu jogo](package-your-windows-store-directx-game.md) | Os jogos UWP maiores, especialmente os que dão suporte a vários idiomas com ativos específicos à região ou que possuem ativos opcionais de alta definição podem ser facilmente dimensionados para tamanhos grandes. Neste tópico, você aprenderá a usar pacotes e lotes de aplicativos para personalizar seu aplicativo de forma que os clientes recebam apenas os recursos que eles realmente precisam. |
+| [Aprovação de conceito](concept-approval.md) | Saiba como enviar seu produto para aprovação de conceito, que você precisará se seu produto for executado no Xbox ou usar o Xbox Live. |
 | [Guias de portabilidade para jogos](porting-guides.md) | Fornece guias para portabilidade de seus jogos existentes para o Direct3D 11, a UWP e o Windows 10. |
 | [Recursos de programação de jogos](additional-directx-game-programming-resources.md) | Para saber mais sobre programação de jogos no Windows, confira os recursos a seguir. |
 
@@ -70,6 +72,6 @@ Para fazer o melhor uso das visões gerais e dos tutoriais de desenvolvimento de
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
 description: "Saiba como adicionar valores de ID da unidade de anúncios e do aplicativo do painel do Centro de Desenvolvimento do Windows ao seu aplicativo antes de enviá-lo para a Loja."
 title: "Configurar unidades de anúncios em seu aplicativo"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 96c09de9321f67dc26cc3538f2655bd598f134f9
+translationtype: Human Translation
+ms.sourcegitcommit: c6e0cf98c6eb2cdc656d5b4555d794ff6a94d2bc
+ms.openlocfilehash: 705955faf7ddd67f80098f8c3ac7b2844553de95
 
 
 ---
@@ -12,7 +13,7 @@ ms.openlocfilehash: 96c09de9321f67dc26cc3538f2655bd598f134f9
 # Configurar unidades de anúncios em seu aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Quando você usa um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) ou [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) para exibir anúncios em seu aplicativo, você deve especificar um ID do aplicativo e de unidade de anúncios. Enquanto você estiver desenvolvendo seu aplicativo, use os valores de [ID do aplicativo de teste e ID da unidade de anúncios](test-mode-values.md) para ver como seu aplicativo renderiza anúncios durante o teste.
 
@@ -29,9 +30,6 @@ Para configurar as unidades de anúncios e ID do aplicativo para o seu aplicativ
 
     * Se seu aplicativo mostrar anúncios em vídeos intersticiais, passe esses valores para o método **RequestAd** de seu objeto **InterstitialAd**.
 
-> 
-            **Importante**   Se seu aplicativo usa o controle de anúncios para mostrar anúncios em banner do Microsoft Advertising (ou seja, ele usa um objeto **AdMediatorControl**), você não precisará solicitar unidades de anúncios. Nesse cenário, as unidades de anúncios são geradas automaticamente para você. Para obter mais informações, consulte [Qual é a diferença: AdMediatorControl ou AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
-
  
 
 ## Tópicos relacionados
@@ -45,6 +43,6 @@ Para configurar as unidades de anúncios e ID do aplicativo para o seu aplicativ
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

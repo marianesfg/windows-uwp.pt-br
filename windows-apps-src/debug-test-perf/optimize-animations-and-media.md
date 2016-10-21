@@ -5,7 +5,7 @@ title: "Otimizar animações, mídia e imagens"
 description: "Crie aplicativos da Plataforma Universal do Windows (UWP) com animações suaves, taxa de quadros elevada e captura e reprodução de mídia de alto desempenho."
 translationtype: Human Translation
 ms.sourcegitcommit: 622df404dbf85740aa0029f53a0b4e0d541608f9
-ms.openlocfilehash: 8fd9ce5f43159ae00414d05ddb757c507aaa370d
+ms.openlocfilehash: 62e35ef31a5c2c4c3ca1ce6f6749057d59c22af3
 
 ---
 # Otimizar animações, mídia e imagens
@@ -49,9 +49,7 @@ O conteúdo Web dentro de um controle [**WebView**](https://msdn.microsoft.com/l
 
 Animar um [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) também é má ideia. Além do detrimento de desempenho, isso pode causar ruptura ou outros artefatos no conteúdo de vídeo sendo reproduzido.
 
-> 
-            **Observação**   As recomendações neste artigo para **MediaPlayerElement** também se aplicam ao [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). 
-            **MediaPlayerElement** só está disponível no Windows 10, versão 1607, portanto se você está criando um aplicativo para uma versão anterior do Windows, precisará usar o **MediaElement**.
+> **Observação**   As recomendações neste artigo para **MediaPlayerElement** também se aplicam ao [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** só está disponível no Windows 10, versão 1607, portanto se você está criando um aplicativo para uma versão anterior do Windows, precisará usar o **MediaElement**.
 
 ### Use animações infinitas com moderação
 
@@ -63,8 +61,7 @@ Adicionar um manipulador para [**CompositionTarget.Rendering**](https://msdn.mic
 
 O namespace [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/BR243232) inclui uma biblioteca de animações suaves de alto desempenho que têm aspecto consistente com outras animações do Windows. As classes relevantes têm "Theme" no nome e estão descritas em [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/Mt187350). Esta biblioteca é compatível com vários cenários de animação comuns, como a animação da primeira exibição do aplicativo e a criação de transições de estado e conteúdo. É recomendável usar essa biblioteca de animação sempre que possível, para aumentar o desempenho e a consistência para a interface do usuário do UWP.
 
-> 
-            **Observação**   A Biblioteca de Animação não pode animar todas as propriedades possíveis. Para todos os cenários XAML onde a biblioteca de animação não se aplica, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/Mt187354).
+> **Observação**   A Biblioteca de Animação não pode animar todas as propriedades possíveis. Para todos os cenários XAML onde a biblioteca de animação não se aplica, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/Mt187354).
 
 
 ### Animar propriedades CompositeTransform3D independentemente
@@ -259,10 +256,7 @@ Seu aplicativo deve usar [**SoftwareBitmap**](https://msdn.microsoft.com/library
 
 ### Use GetThumbnailAsync para miniaturas
 
-Um caso de uso para o dimensionamento de imagens é a criação de miniaturas. Embora você possa usar [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) e [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) para providenciar versões menores de imagens, a UWP fornece APIs ainda mais eficientes para a recuperação de miniaturas. 
-            [
-              **GetThumbnailAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/BR227210) fornece as miniaturas para imagens que já têm o sistema de arquivo em cache. Isso oferece um desempenho ainda melhor do que as APIs do XAML porque a imagem não precisa ser aberta ou decodificada.
+Um caso de uso para o dimensionamento de imagens é a criação de miniaturas. Embora você possa usar [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) e [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) para providenciar versões menores de imagens, a UWP fornece APIs ainda mais eficientes para a recuperação de miniaturas. [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210) fornece as miniaturas para imagens que já têm o sistema de arquivo em cache. Isso oferece um desempenho ainda melhor do que as APIs do XAML porque a imagem não precisa ser aberta ou decodificada.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -309,6 +303,6 @@ Para evitar que as imagens sejam decodificadas mais de uma vez, assine a proprie
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

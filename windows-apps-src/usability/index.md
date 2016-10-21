@@ -1,17 +1,16 @@
 ---
 description: "Saiba como tornar seu aplicativo inclusivo e acessível para pessoas ao redor do mundo."
-keywords: uwp app accessibility, globalization, design inclusive apps, accessibility app requirements
+keywords: "acessibilidade do aplicativo UWP, globalização, aplicativos de design inclusivo, requisitos de aplicativo de acessibilidade"
 title: "Usabilidade em aplicativos UWP – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 5370dd078db81de606b7a4bbfcf6dd36b2280a17
-ms.openlocfilehash: 457ddacd80b3f9308b2eb66ce0ac2d448bb59ed2
+ms.sourcegitcommit: 589e3290a47a9245ddb5e43f64d13bae1244ac8b
+ms.openlocfilehash: d7246bc898e36155996941875b6c00da7891809d
 
 ---
-
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
 # Usabilidade para aplicativos UWP
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 São os pequenos toques, uma atenção extra aos detalhes, que podem transformar uma boa experiência do usuário em uma experiência do usuário realmente inclusiva que atenda as necessidades dos usuários em todo o mundo.
 
@@ -104,7 +103,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
 
 ## Globalização e localização
 
-O Windows é usado no mundo todo, por públicos de várias culturas, regiões e idiomas. Um usuário pode falar qualquer idioma ou até mesmo vários idiomas. Um usuário pode estar localizado em qualquer lugar do mundo e falar qualquer idioma em qualquer local. Você pode aumentar o mercado potencial para seu aplicativo desenvolvendo-o para ser prontamente adaptável usando globalização e localização. 
+O Windows é usado no mundo todo, por públicos de várias culturas, regiões e idiomas. Um usuário pode falar qualquer idioma ou até mesmo vários idiomas. Um usuário pode estar localizado em qualquer lugar do mundo e falar qualquer idioma em qualquer local. Você pode aumentar o mercado potencial para seu aplicativo desenvolvendo-o para ser prontamente adaptável usando globalização e localização.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -154,7 +153,7 @@ O Windows é usado no mundo todo, por públicos de várias culturas, regiões e 
 
 ## Configurações de aplicativo
 
-As configurações do aplicativo permitem que o usuário personalize seu aplicativo, otimizando-o para suas necessidades e preferências individuais. Fornecer as configurações certas e armazená-las adequadamente podem tornar uma experiência de usuário ótima ainda melhor. 
+As configurações do aplicativo permitem que o usuário personalize seu aplicativo, otimizando-o para suas necessidades e preferências individuais. Fornecer as configurações certas e armazená-las adequadamente podem tornar uma experiência de usuário ótima ainda melhor.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -168,16 +167,16 @@ As configurações do aplicativo permitem que o usuário personalize seu aplicat
 </div>
 
 ## Ajuda no aplicativo
-Não importa quão bem você projetou o aplicativo, alguns usuários precisarão de um pouco mais de ajuda. 
+Não importa quão bem você projetou o aplicativo, alguns usuários precisarão de um pouco mais de ajuda.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[Diretrizes da ajuda do aplicativo](../app-help-guidelines/guidelines-for-app-help.md)</b><br/>Os aplicativos podem ser complexos e o fornecimento de ajuda eficaz pode melhorar consideravelmente a experiência dos usuários. 
+<p><b>[Diretrizes da ajuda do aplicativo](../in-app-help/guidelines-for-app-help.md)</b><br/>Os aplicativos podem ser complexos e o fornecimento de ajuda eficaz pode melhorar consideravelmente a experiência dos usuários.
 </p>
   </div>
   <div class="side-by-side-content-right">
-<p><b>[Interface do usuário instrucional](../app-help-guidelines/instructional-ui.md)</b><br/>Às vezes, pode ser útil ensinar o usuário sobre funções em seu aplicativo que podem não ser óbvias, como interações de toque específicas. Nesses casos, você precisa apresentar instruções para o usuário por meio da interface do usuário, para que ele possa descobrir e usar os recursos que talvez tenha ignorado.</p>
+<p><b>[Interface do usuário instrucional](../in-app-help/instructional-ui.md)</b><br/>Às vezes, pode ser útil ensinar o usuário sobre funções em seu aplicativo que podem não ser óbvias, como interações de toque específicas. Nesses casos, você precisa apresentar instruções para o usuário por meio da interface do usuário, para que ele possa descobrir e usar os recursos que talvez tenha ignorado.</p>
   </div>
 </div>
 </div>
@@ -185,19 +184,16 @@ Não importa quão bem você projetou o aplicativo, alguns usuários precisarão
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[Ajuda no aplicativo](../app-help-guidelines/in-app-help.md)</b><br/>Na maioria das vezes, é melhor que a ajuda seja exibida dentro do aplicativo e quando o usuário optar por exibi-la. Considere as diretrizes a seguir ao criar a ajuda no aplicativo.</p>
+<p><b>[Ajuda no aplicativo](../in-app-help/in-app-help.md)</b><br/>Na maioria das vezes, é melhor que a ajuda seja exibida dentro do aplicativo e quando o usuário optar por exibi-la. Considere as diretrizes a seguir ao criar a ajuda no aplicativo.</p>
   </div>
   <div class="side-by-side-content-right">
-<p><b>[Ajuda externa](../app-help-guidelines/external-help.md)</b><br/>Na maioria das vezes, é melhor que a ajuda seja exibida dentro do aplicativo e quando o usuário optar por exibi-la. Considere as diretrizes a seguir ao criar a ajuda no aplicativo.</p>
+<p><b>[Ajuda externa](../in-app-help/external-help.md)</b><br/>Na maioria das vezes, é melhor que a ajuda seja exibida dentro do aplicativo e quando o usuário optar por exibi-la. Considere as diretrizes a seguir ao criar a ajuda no aplicativo.</p>
   </div>
 </div>
 </div>
 
 
 
-
-
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

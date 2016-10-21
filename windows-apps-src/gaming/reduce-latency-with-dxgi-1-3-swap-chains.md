@@ -3,15 +3,16 @@ author: mtoepke
 title: "Reduzir a latência com cadeias de troca DXGI 1.3"
 description: "Use o DXGI 1.3 para reduzir a latência de quadros eficaz aguardando a cadeia de troca sinalizar o horário apropriado para começar a renderizar um novo quadro."
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 174e2918d54a2b03124752d009f43f0cb0c800ca
+ms.openlocfilehash: 7eb0eab864c58b07e29803895423998dd647a87e
 
 ---
 
 # Reduzir a latência com cadeias de troca DXGI 1.3
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use o DXGI 1.3 para reduzir a latência de quadros eficaz aguardando a cadeia de troca sinalizar o horário apropriado para começar a renderizar um novo quadro. Os jogos normalmente precisam oferecer a menor quantidade de latência possível do momento em que a entrada do jogador é recebida até o momento em que o jogador responde a essa entrada atualizando a tela. Este tópico explica uma técnica disponível a partir do Direct3D 11.2 que pode ser usada para minimizar a latência de quadros eficaz no jogo.
 
@@ -31,8 +32,7 @@ Especifique o sinalizador [**DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
 ```
 
-> 
-            **Observação**   Ao contrário de alguns sinalizadores, esse sinalizador não pode ser adicionado nem removido usando [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). O DXGI retornará um código de erro se esse sinalizador for definido de maneira diferente de quando a cadeia de troca foi criada.
+> **Observação**   Ao contrário de alguns sinalizadores, esse sinalizador não pode ser adicionado nem removido usando [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). O DXGI retornará um código de erro se esse sinalizador for definido de maneira diferente de quando a cadeia de troca foi criada.
 
  
 
@@ -163,6 +163,6 @@ Para saber mais sobre programação multithreaded no Windows, consulte os seguin
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

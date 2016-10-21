@@ -1,75 +1,79 @@
 ---
 author: mcleanbyron
 ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
-description: Use this method in the Windows Store submission API to create a new package flight submission for an app that is registered to your Windows Dev Center account.
-title: Create a package flight submission using the Windows Store submission API
+description: "Use este método na API de envio da Windows Store para criar um novo envio de um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
+title: "Criar um envio do pacote de pré-lançamento usando a API de envio da Windows Store"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 33f008c7b2bd32aacaf5a31d0b3201a00d145276
+
 ---
 
-# Create a package flight submission using the Windows Store submission API
+# Criar um envio do pacote de pré-lançamento usando a API de envio da Windows Store
 
 
 
 
-Use this method in the Windows Store submission API to create a new submission for a package flight for an app. After you successfully create a new submission by using this method, [update the submission](update-a-flight-submission.md) to make any necessary changes to the submission data, and then [commit the submission](commit-a-flight-submission.md) for ingestion and publishing.
+Use este método na API de envio da Windows Store para criar um novo envio para um pacote de pré-lançamento para um aplicativo. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-a-flight-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-a-flight-submission.md) para inclusão e publicação.
 
-For more information about how this method fits into the process of creating a package flight submission by using the Windows Store submission API, see [Manage package flight submissions](manage-flight-submissions.md).
+Para obter mais informações sobre como esse método se encaixa no processo de criação de um envio de pacote de pré-lançamento usando a API de envio da Windows Store, consulte [Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md).
 
->**Note**&nbsp;&nbsp;This method creates a submission for an existing package flight. To create a package flight, use the [create a package flight](create-a-flight.md) method.
+>**Observação**&nbsp;&nbsp;Este método cria um envio para um pacote de pré-lançamento existente. Para criar um pacote de pré-lançamento, use o método [criar um pacote de pré-lançamento](create-a-flight.md).
 
-## Prerequisites
+## Pré-requisitos
 
-To use this method, you need to first do the following:
+Para usar este método, primeiro você precisa do seguinte:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
-* Create a package flight for an app in your Dev Center account. You can do this in the Dev Center dashboard, or you can do this by using the [create a package flight](create-a-flight.md) method.
+* Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* Crie um pacote de pré-lançamento de um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [criar um pacote de pré-lançamento](create-a-flight.md).
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
 ## Request
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
-| Method | Request URI                                                      |
+| Método | URI da Solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Cabeçalho da solicitação
 
-| Header        | Type   | Description                                                                 |
+| Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Parâmetros solicitados
 
-| Name        | Type   | Description                                                                 |
+| Name        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Required. The Store ID of the app for which you want to create a package flight submission. For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Required. The ID of the package flight for which you want to add the submission. This ID is available in the Dev Center dashboard, and it is included in the response data for requests to [create a package flight](create-a-flight.md) and [get package flights for an app](get-flights-for-an-app.md).  |
+| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio do pacote de pré-lançamento. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| flightId | cadeia de caracteres | Obrigatório. A ID do pacote de pré-lançamento para o qual você deseja adicionar o envio. Essa ID está disponível no painel do Centro de Desenvolvimento, e está incluída nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
 
 <span/>
 
-### Request body
+### Corpo da solicitação
 
-Do not provide a request body for this method.
+Não forneça um corpo da solicitação para esse método.
 
-### Request example
+### Exemplo de solicitação
 
-The following example demonstrates how to create a new package flight submission for an app that has the Store ID 9WZDNCRD91MD.
+O exemplo a seguir demonstra como criar um novo envio de pacote de pré-lançamento para um aplicativo que tem a ID da Loja 9WZDNCRD91MD.
 
 ```
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights/43e448df-97c9-4a43-a0bc-2a445e736bcd/submissions HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Resposta
 
-The following example demonstrates the JSON response body for a successful call to this method. The response body contains information about the new submission. For more details about the values in the response body, see [Package flight submission resource](manage-flight-submissions.md#flight-submission-object).
+O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. O corpo da resposta contém informações sobre o novo envio. Para obter mais detalhes sobre os valores no corpo da resposta, consulte [Recurso de envio de pacote de pré-lançamento](manage-flight-submissions.md#flight-submission-object).
 
 ```json
 {
@@ -100,23 +104,29 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-## Error codes
+## Códigos de erro
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
-| Error code |  Description   |
+| Código de erro |  Descrição   |
 |--------|------------------|
-| 400  | The package flight submission could not be created because the request is invalid. |
-| 409  | The package flight submission could not be created because of the current state of the app, or the app uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 400  | Não foi possível criar o envio do pacote de pré-lançamento porque a solicitação é inválida. |
+| 409  | Não foi possível criar o envio do pacote de pré-lançamento por causa do estado atual do aplicativo, ou o aplicativo usa um recurso de painel do Centro de Desenvolvimento [não é compatível no momento com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 <span/>
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage package flight submissions](manage-flight-submissions.md)
-* [Get a package flight submission](get-a-flight-submission.md)
-* [Commit a package flight submission](commit-a-flight-submission.md)
-* [Update a package flight submission](update-a-flight-submission.md)
-* [Delete a package flight submission](delete-a-flight-submission.md)
-* [Get the status of a package flight submission](get-status-for-a-flight-submission.md)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md)
+* [Obter um envio de pacote de pré-lançamento](get-a-flight-submission.md)
+* [Confirmar um envio de pacote de pré-lançamento](commit-a-flight-submission.md)
+* [Atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md)
+* [Excluir um envio de pacote de pré-lançamento](delete-a-flight-submission.md)
+* [Obter o status de um envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

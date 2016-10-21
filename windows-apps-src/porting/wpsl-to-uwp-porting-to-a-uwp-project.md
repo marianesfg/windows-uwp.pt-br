@@ -3,8 +3,9 @@ author: mcleblanc
 description: "Você começa o processo de portabilidade ao criar um novo projeto do Windows 10 no Visual Studio e ao copiar seus arquivos nele."
 title: Portando um projeto Windows Phone Silverlight para um projeto UWP
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 74cbd9789636383e6d04798435780dcda6b897d0
+ms.openlocfilehash: ffcc7a76a8604deb4f7cb57ac32b9a29de7be46d
 
 ---
 
@@ -30,7 +31,7 @@ A maioria das APIs da Plataforma Universal do Windows (UWP) que o aplicativo por
 
 Em caso de erros de compilação sobre namespaces ou tipos ou membros que não foram encontrados, essa deve ser a provável causa. Abra o tópico da API na documentação de referência da API e navegue até a seção Requisitos; ele informará qual é a implementação da família de dispositivos. Se essa não for a família de dispositivos de destino, para disponibilizar a API para o projeto, você precisará de uma referência para o SDK de extensão dessa família de dispositivos.
 
-Clique em **Projeto**&gt;**Adicionar referência**&gt;**Windows Universal**&gt;**Extensões** e selecione o SDK de extensão apropriado. Por exemplo, se as APIs que você deseja chamar estão disponíveis somente na família de dispositivos móveis e elas foram introduzidas na versão 10.0.x.y, selecione **Extensões do Windows Mobile para UWP**.
+Clique em **Projeto** &gt; **Adicionar Referência** &gt; **Windows Universal** &gt; **Extensões** e selecione o SDK de extensão apropriado. Por exemplo, se as APIs que você deseja chamar estão disponíveis somente na família de dispositivos móveis e elas foram introduzidas na versão 10.0.x.y, selecione **Extensões do Windows Mobile para UWP**.
 
 Isso adicionará a seguinte referência ao seu arquivo de projeto:
 
@@ -112,8 +113,7 @@ Você pode ter usado compilação condicional para limitar a manipulação do bo
 
 ```
 
-Você pode ter usado compilação condicional para limitar a manipulação do botão da câmera do hardware para o Windows Phone. No Windows 10, o botão da câmera do hardware é um conceito específico à família de dispositivos móveis. Como um pacote do aplicativo será executado em todos os dispositivos, mudaremos nossa condição em tempo de compilação para uma condição em tempo de execução usando o que é conhecido como código adaptável. Para isso, usamos a classe [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar, em tempo de execução, a presença da classe [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). 
-            **HardwareButtons** é definido no SDK de extensão móvel, portanto, precisamos adicionar uma referência a esse SDK ao nosso projeto para que esse código seja compilado. Porém, o manipulador só será executado em um dispositivo que implementa os tipos definidos no SDK de extensão móvel, que é a família de dispositivos móveis. Assim, o código a seguir tem o cuidado em usar apenas recursos que estão presentes, embora consiga isso de maneira diferente da compilação condicional.
+Você pode ter usado compilação condicional para limitar a manipulação do botão da câmera do hardware para o Windows Phone. No Windows 10, o botão da câmera do hardware é um conceito específico à família de dispositivos móveis. Como um pacote do aplicativo será executado em todos os dispositivos, mudaremos nossa condição em tempo de compilação para uma condição em tempo de execução usando o que é conhecido como código adaptável. Para isso, usamos a classe [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar, em tempo de execução, a presença da classe [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** é definido no SDK de extensão móvel, portanto, precisamos adicionar uma referência a esse SDK ao nosso projeto para que esse código seja compilado. Porém, o manipulador só será executado em um dispositivo que implementa os tipos definidos no SDK de extensão móvel, que é a família de dispositivos móveis. Assim, o código a seguir tem o cuidado em usar apenas recursos que estão presentes, embora consiga isso de maneira diferente da compilação condicional.
 
 ```csharp
        // Note: Cache the value instead of querying it more than once.
@@ -149,6 +149,6 @@ O próximo tópico é [Solução de problemas](wpsl-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

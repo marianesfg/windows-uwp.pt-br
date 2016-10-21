@@ -6,20 +6,19 @@ title: Desenvolvendo aplicativos inclusivos do Windows 10
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 826c6984962ecbe3b49ba3753e9cc795344f5057
+ms.sourcegitcommit: 9f68c2bdc92bfbdbc8328e4df161f7ecdfccf8e5
+ms.openlocfilehash: 19c90991ab86383fa259b05460cbd656d408e977
 
 ---
 
 # Desenvolvendo aplicativos inclusivos do Windows  
 
-Aprenda a desenvolver aplicativos UWP para Windows 10 acessíveis que incluem navegação de teclado, configurações de cor e contraste, além de suporte para as tecnologias assistenciais.
-
-Este artigo discute como desenvolver aplicativos UWP (Plataforma Universal do Windows) acessíveis. Especificamente, ele presume que você entende como criar a hierarquia lógica para seu aplicativo.  
+Este artigo discute como desenvolver aplicativos UWP (Plataforma Universal do Windows) acessíveis. Especificamente, ele presume que você entende como criar a hierarquia lógica para seu aplicativo. Aprenda a desenvolver aplicativos UWP para Windows 10 acessíveis que incluem navegação de teclado, configurações de cor e contraste, além de suporte para as tecnologias assistenciais.
 
 Se você ainda não tiver feito isso, comece lendo [Criando software inclusivo](designing-inclusive-software.md).
 
 Há três coisas que você deve fazer para se certificar de que seu aplicativo seja acessível:
+
 1. Exponha seus elementos de interface do usuário para [acesso programático](#programmatic-access).
 2. Certifique-se de que seu aplicativo dê suporte a [navegação de teclado](#keyboard-navigation) pessoas que não são capazes de usar um mouse ou uma tela touch.
 3. Certifique-se de que seu aplicativo dê suporte a configurações [cor e contraste](#color-and-contrast) acessíveis.
@@ -53,7 +52,7 @@ XAML
 ```xml
 <Button Background="{ThemeResource ButtonBackgroundThemeBrush}">OK</Button>
 ```
-Para saber mais sobre o uso de cores e recursos do sistema, veja [Recursos de tema XAML](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources).
+Para saber mais sobre o uso de cores e recursos do sistema, veja [Recursos de tema XAML](../controls-and-patterns/xaml-theme-resources.md).
 
 Desde que você não tenha substituído as cores do sistema, um aplicativo UWP dá suporte a temas de alto contraste por padrão. Quando o usuário decide que o sistema deve utilizar um tema de alto contraste das configurações de sistema ou ferramentas de acessibilidade, a estrutura usa automaticamente as cores e as configurações de estilo que produzem layout e renderização de alto contraste para controles e componentes na interface do usuário.   
 
@@ -61,14 +60,13 @@ Para saber mais, veja [Temas de alto contraste](high-contrast-themes.md).
 
 Se você decidiu usar seu próprio tema de cores em vez de cores do sistema, considere estas diretrizes:  
 
+**Taxa de contraste de cor** – A Seção 508 atualizada do Americans with Disability Act, bem como outras leis, exige que o contraste de cor padrão entre o texto e seu plano de fundo deve ser 5:1. Para texto grande (tamanhos de fonte de 18 pontos ou 14 pontos e em negrito), o contraste padrão necessário é 3:1.  
 
-              **Taxa de contraste de cor** – A Seção 508 atualizada do Americans with Disability Act, bem como outras leis, exige que o contraste de cor padrão entre o texto e seu plano de fundo deve ser 5:1. Para texto grande (tamanhos de fonte de 18 pontos ou 14 pontos e em negrito), o contraste padrão necessário é 3:1.  
-
-
-              **Combinações de cores** – Cerca de 7% dos homens (e menos de 1% das mulheres) têm alguma forma de deficiência para identificar cores. Os usuários com daltonismo têm problemas para diferenciar determinadas cores, portanto, é importante que não apenas a cor seja usada para transmitir status ou significado em um aplicativo. Assim como em imagens decorativas (como ícones ou planos de fundo), as combinações de cores devem ser escolhidas de forma que maximize a percepção da imagem por usuários daltônicos.  
+**Combinações de cores** – Cerca de 7% dos homens (e menos de 1% das mulheres) têm alguma forma de deficiência para identificar cores. Os usuários com daltonismo têm problemas para diferenciar determinadas cores, portanto, é importante que não apenas a cor seja usada para transmitir status ou significado em um aplicativo. Assim como em imagens decorativas (como ícones ou planos de fundo), as combinações de cores devem ser escolhidas de forma que maximize a percepção da imagem por usuários daltônicos.  
 
 ## Lista de verificação de acessibilidade  
-Veja a seguir uma versão abreviada da lista de verificação de acessibilidade:  
+Veja a seguir uma versão abreviada da lista de verificação de acessibilidade:
+
 1. Defina o nome acessível (obrigatório) e a descrição (opcional) dos elementos de interface de usuário interativa e do conteúdo em seu aplicativo.
 2. Implemente a acessibilidade do teclado.
 3. Verifique sua interface do usuário para garantir que o contraste do texto esteja adequado, que os elementos renderizem corretamente nos temas em alto contraste e que as cores estejam sendo usadas corretamente.
@@ -79,14 +77,15 @@ Veja a seguir uma versão abreviada da lista de verificação de acessibilidade:
 Para obter mais detalhes, veja o tópico [Lista de verificação de acessibilidade](accessibility-checklist.md) inteiro.
 
 ## Tópicos relacionados  
-* [Criando Software inclusivo](designing-inclusive-software.md)  
+* [Criando software inclusivo](designing-inclusive-software.md)  
 * [Design inclusivo](http://design.microsoft.com/inclusive)
 * [Práticas de acessibilidade a evitar](practices-to-avoid.md)
 * [Software de engenharia para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Hub de desenvolvedor de acessibilidade da Microsoft](https://msdn.microsoft.com/enable)
+* [Acessibilidade](accessibility.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

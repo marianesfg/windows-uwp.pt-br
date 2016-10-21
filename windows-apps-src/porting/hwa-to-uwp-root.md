@@ -3,8 +3,8 @@ title: Aplicativos Web hospedados - Converter seu aplicativo web para um aplicat
 description: "Criar um aplicativo da Plataforma Universal do Windows (UWP) a partir da URL do seu site. Acessar recursos de dispositivo nativo do Windows 10 a partir do código que está dentro do seu aplicativo da web. Pontes do Windows da Microsoft para Aplicativos Web hospedados, anteriormente conhecido como Projeto Westminster, torna rápido e fácil incluir seu aplicativo Web na Windows Store."
 author: seksenov
 translationtype: Human Translation
-ms.sourcegitcommit: 765789ef83f9b6a845ab79505b1b9ecbfd987126
-ms.openlocfilehash: 491665558f713dcbaae7ea20739ed72c61a12cd2
+ms.sourcegitcommit: 7fe6e240e4ef221b49f9b103cf30192449ce4502
+ms.openlocfilehash: 95d50aa37f349f494f260ea3af97211a085623a9
 
 ---
 
@@ -35,8 +35,7 @@ Se você estiver em um Mac ou PC, você pode criar seu próprio Aplicativo Web h
 
 ## Converter seu aplicativo Chrome existente
 
-Tornamos fácil [converter seu aplicativo hospedado Chrome existente](hwa-chrome-conversion.md) em um Aplicativo Web hospedado do Windows. 
-            [ManifoldJS](http://manifoldjs.com/) agora aceita manifestos do Chrome como uma forma de entrada. Desenvolvemos também uma [ferramenta CLI](https://github.com/MicrosoftEdge/hwa-cli) que gera um `.appx` pacote do seu `.zip` existente ou arquivos `.crx`.
+Tornamos fácil [converter seu aplicativo hospedado Chrome existente](hwa-chrome-conversion.md) em um Aplicativo Web hospedado do Windows. [ManifoldJS](http://manifoldjs.com/) agora aceita manifestos do Chrome como uma forma de entrada. Desenvolvemos também uma [ferramenta CLI](https://github.com/MicrosoftEdge/hwa-cli) que gera um `.appx` pacote do seu `.zip` existente ou arquivos `.crx`.
 
 ## Demonstrações
 
@@ -46,6 +45,6 @@ Tornamos fácil [converter seu aplicativo hospedado Chrome existente](hwa-chrome
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

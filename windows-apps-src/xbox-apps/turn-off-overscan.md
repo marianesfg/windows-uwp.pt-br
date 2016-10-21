@@ -1,22 +1,31 @@
 ---
 author: payzer
-title: Como desativar overscan
+title: Como desenhar a interface para a borda da tela
 description: 
-area: Xbox
-ms.sourcegitcommit: 32a875348debac9aec9f5a26bc4e7e0af2a0a5b4
-ms.openlocfilehash: abd06e78364ff32cc10d733e33b153b854dbc467
+translationtype: Human Translation
+ms.sourcegitcommit: b5961d3266a031ab09a9da63319e9883cf050789
+ms.openlocfilehash: cddde27a17e897ab8a68bbed099e532a8cd48f07
 
 ---
 
 # Como desenhar a interface para a borda da tela   
-Por padrão, os aplicativos terão bordas colocadas nas bordas do visor. Isso é para levar em conta a área de TV-safe. Para obter mais informações, consulte [Projetando para Xbox e TV](http://go.microsoft.com/fwlink/?LinkID=760736#tv-safe-area).  Recomendamos desativar esse recurso e desenhar para a borda da tela. Você pode desenhar para a borda da tela, adicionando o código a seguir quando iniciar seu aplicativo:
+Por padrão, os aplicativos terão bordas colocadas nas bordas do visor para levar em conta a área de segurança da TV (para obter mais informações, consulte [Projetando para Xbox e TV](../input-and-devices/designing-for-tv.md#tv-safe-area)). 
+
+Recomendamos desativar esse recurso e desenhar para a borda da tela. Você pode desenhar para a borda da tela, adicionando o código a seguir quando iniciar seu aplicativo:
    
-`Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMode(Windows.UI.ViewManagement.ApplicationViewBoundsMode.UseCoreWindow);`
+```
+Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMode(Windows.UI.ViewManagement.ApplicationViewBoundsMode.UseCoreWindow);
+```
    
-Observação: aplicativos C++/DirectX não precisam se preocupar com isso. O sistema sempre renderizará seu aplicativo para a borda da tela.
+> [!NOTE]
+> Aplicativos C++/DirectX não precisam se preocupar com isso. O sistema sempre renderizará seu aplicativo para a borda da tela.
+
+## Consulte também
+- [Práticas recomendadas para Xbox](tailoring-for-xbox.md)
+- [UWP no Xbox One](index.md)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

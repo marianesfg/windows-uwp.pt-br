@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: "Kit de Certificação de Aplicativos Windows"
 description: "Para aumentar as chances de seu aplicativo ser publicado na Windows Store ou obter certificação do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 16e116c2a92a6ad751b0e4fe58fc7b41de0455cb
+ms.openlocfilehash: 478ba4a24cff3c2df34d98157624c9c4339d432a
 
 ---
 # Kit de Certificação de Aplicativos Windows
@@ -47,20 +48,17 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( http://go.m
 
 6.  Abra o arquivo de relatório e examine os resultados do teste.
 
-
-            **Observação**  Se você usa o Visual Studio, execute o Kit de Certificação de Aplicativos Windows ao criar o pacote do aplicativo. Consulte [Empacotando aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/Mt627715) para saber como.
+**Observação**  Se você usa o Visual Studio, execute o Kit de Certificação de Aplicativos Windows ao criar o pacote do aplicativo. Consulte [Empacotando aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/Mt627715) para saber como.
 
  
 
 ## Validar seu aplicativo do Windows usando o Kit de Certificação de Aplicativos Windows a partir de uma linha de comando
 
-
-            **Importante**  O Kit de Certificação de Aplicativos Windows deve executar no contexto de uma sessão de usuário ativa.
+**Importante**  O Kit de Certificação de Aplicativos Windows deve executar no contexto de uma sessão de usuário ativa.
 
 1.  Na janela de comando, navegue até o diretório que contém o Kit de Certificação de Aplicativos Windows.
 
-    
-            **Observação**   O caminho padrão é C:\\Program Files\\Windows Kits\\10\\App Certification Kit\\.
+    **Observação**   O caminho padrão é C:\\Program Files\\Windows Kits\\10\\App Certification Kit\\.
 
 2.  Insira os seguintes comandos nesta ordem para testar um aplicativo que já está instalado no computador de teste:
 
@@ -76,11 +74,9 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( http://go.m
 
 3.  Quando o teste for concluído, abra o arquivo de relatório denominado `[report file name]` e examine os resultados.
 
+**Observação**  O Kit de Certificação de Aplicativos Windows pode ser executado em um serviço, mas o serviço deve iniciar o processo do kit dentro de uma sessão de usuário ativa e não pode ser executado em Session0.
 
-            **Observação**  O Kit de Certificação de Aplicativos Windows pode ser executado em um serviço, mas o serviço deve iniciar o processo do kit dentro de uma sessão de usuário ativa e não pode ser executado em Session0.
-
-
-            **Observação**   Para saber mais sobre a linha de comando do Kit de Certificação de Aplicativos Windows, insira o comando `appcert.exe /?`
+**Observação**   Para saber mais sobre a linha de comando do Kit de Certificação de Aplicativos Windows, insira o comando `appcert.exe /?`
 
 ## Testando com um computador com baixo consumo de energia
 
@@ -104,6 +100,6 @@ As características de desempenho podem mudar ao longo do tempo para acompanhar 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

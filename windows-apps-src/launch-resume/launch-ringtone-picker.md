@@ -1,24 +1,28 @@
 ---
 author: TylerMSFT
-title: ms-tonepicker scheme
-description: This topic describes the ms-tonepicker URI scheme and how to use it to display a tone picker to select a tone, save a tone, and get the friendly name for a tone.
+title: Esquema ms-tonepicker
+description: "Este tópico descreve o esquema de URI ms-tonepicker e como usá-lo para exibir um seletor de tom para selecionar um tom, salvar um tom e obter o nome amigável para um tom."
+translationtype: Human Translation
+ms.sourcegitcommit: 4c7037cc91603af97a64285fd6610445de0523d6
+ms.openlocfilehash: ef605f9d749148240ecee5e0ecfd473f8440ca25
+
 ---
 
-# Choose and save tones using the ms-tonepicker URI scheme
+# Escolher e salvar tons usando o esquema de URI ms-tonepicker
 
-This topic describes how to use the **ms-tonepicker:** URI scheme. This URI scheme can be used to:
-- Determine if the tone picker is available on the device.
-- Display the tone picker to list available ringtones, system sounds, text tones, and alarm sounds; and get a tone token which represents the sound the user selected.
-- Display the tone saver, which takes a sound file token as input and saves it to the device. Saved tones are then available via the tone picker. Users can also give the tone a friendly name.
-- Convert a tone token to its friendly name.
+Este tópico descreve como usar o esquema de URI **ms-tonepicker:**. Esse esquema de URI pode ser usado para:
+- Determinar se o seletor de tom está disponível no dispositivo.
+- Exibir o seletor de tom para listar toques, sons do sistema, tons de texto e sons de alarme disponíveis; e obter um token de tom que representa o som que o usuário selecionou.
+- Exibir o protetor de tom, que usa um token de arquivo de som como entrada e salva-o no dispositivo. Os tons salvos estão disponíveis por meio do seletor de tom. Os usuários também podem dar um nome amigável ao tom.
+- Converta um token de tom em seu nome amigável.
 
-## ms-tonepicker: URI scheme reference
+## Referência de esquema de URI ms-tonepicker:
 
-This URI scheme does not pass arguments via the URI scheme string, but instead passes arguments via a [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx). All strings are case-sensitive.
+Esse esquema de URI não passa argumentos via cadeia de caracteres de esquema URI, mas passa argumentos por meio de um [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx). Todas as cadeias de caracteres diferenciam maiúsculas de minúsculas.
 
-The sections below indicate which arguments should be passed to accomplish the specified task.
+As seções a seguir indicam quais argumentos devem ser transmitidos para realizar a tarefa especificada.
 
-## Task: Determine if the tone picker is available on the device
+## Tarefa: determinar se o seletor de tom está disponível no dispositivo
 ```cs
 var status = await Launcher.QueryUriSupportAsync(new Uri("ms-tonepicker:"),     
                                      LaunchQuerySupportType.UriForResults,
@@ -30,25 +34,25 @@ if (status != LaunchQuerySupportStatus.Available)
 }
 ```
 
-## Task: Display the tone picker
+## Tarefa: exibir o seletor de tom
 
-The arguments you can pass to display the tone picker are as follows:
+Os argumentos que você pode passar para exibir o seletor de tom são os seguintes:
 
-| Parameter | Type | Required | Possible values | Description |
+| Parâmetro | Tipo | Obrigatório | Valores possíveis | Descrição |
 |-----------|------|----------|-------|-------------|
-| Action | string | yes | "PickRingtone" | Opens the tone picker. |
-| CurrentToneFilePath | string | no | An existing tone token. | The tone to show as the current tone in the tone picker. If this value is not set, the first tone on the list is selected by default.<br>This is not, strictly speaking, a file path. You can get a suitable value for `CurrenttoneFilePath` from the `ToneToken` value returned from the tone picker.  |
-| TypeFilter | string | no | "Ringtones", "Notifications", "Alarms", "None" | Selects which tones to add to the picker. If no filter is specified then all tones are displayed. |
+| Ação | string | sim | "PickRingtone" | Abre o seletor de tom. |
+| CurrentToneFilePath | string | não | Um token de tom existente. | O tom a ser exibido como o tom atual no seletor de tom. Se esse valor não for definido, o tom primeiro na lista será selecionado por padrão.<br>Não, estritamente falando, isso é um caminho de arquivo. Você pode obter um valor adequado para `CurrenttoneFilePath` do valor `ToneToken` retornado do seletor de tom.  |
+| TypeFilter | string | não | "Toques", "Notificações", "Alarmes", "None" | Seleciona quais tons serão adicionados ao seletor. Se nenhum filtro for especificado, todos os tons serão exibidos. |
 
-<br>The values that are returned in [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
+<br>Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
 
-| Return values | Type | Possible values | Description |
+| Valores de retorno | Tipo | Valores possíveis | Descrição |
 |--------------|------|-------|-------------|
-| Result | Int32 | 0-success. <br> 1-cancelled. <br> 7-invalid parameters. <br> 8 - no tones match the filter criteria. <br> 255 - specified action is not implemented. | The result of the picker operation. |
-| ToneToken | string | The selected tone's token. <br> The string is empty if the user selects **default** in the picker. | This token can be used in a toast notification payload, or can be assigned as a contact’s ringtone or text tone. The parameter is returned in the ValueSet only if **Result** is 0. |
-| DisplayName | string | The specified tone’s friendly name. | A string that can be shown to the user to represent the selected tone. The parameter is returned in the ValueSet only if **Result** is 0. |
+| Resultado | Int32 | 0 = êxito. <br> 1 = cancelado. <br> 7 = parâmetros inválidos. <br> 8 = nenhum tom corresponde aos critérios de filtro. <br> 255 = a ação especificada não foi implementada. | O resultado da operação de seletor. |
+| ToneToken | string | Token do tom selecionado. <br> A cadeia de caracteres ficará vazia se o usuário selecionar **padrão** no seletor. | Esse token pode ser usado em uma carga de notificação do sistema, ou pode ser atribuído como toque ou tom do texto de um contato. O parâmetro será retornado no ValueSet somente se **Resultado** for 0. |
+| DisplayName | string | Nome amigável do tom especificado. | Uma cadeia de caracteres que pode ser exibida ao usuário para representar o tom selecionado. O parâmetro será retornado no ValueSet somente se **Resultado** for 0. |
 <br>
-**Example: Open the tone picker so that the user can select a tone**
+**Exemplo: abrir o seletor de tom para que o usuário possa selecionar um tom**
 
 ``` cs
 LauncherOptions options = new LauncherOptions();
@@ -76,23 +80,23 @@ if (result.Status == LaunchUriStatus.Success)
 }
 ```
 
-## Task: Display the tone saver
+## Tarefa: exibir o protetor de tom
 
-The arguments you can pass to display the tone saver are as follows:
+Os argumentos que você pode passar para exibir o protetor de tom são os seguintes:
 
-| Parameter | Type | Required | Possible values | Description |
+| Parâmetro | Tipo | Obrigatório | Valores possíveis | Descrição |
 |-----------|------|----------|-------|-------------|
-| Action | string | yes | "SaveRingtone" | Opens the picker to save a ringtone. |
-| ToneFileSharingToken | string | yes | [SharedStorageAccessManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.aspx) file sharing token for the ringtone file to save. | Saves a specific sound file as a ringtone. The supported content types for the file are mpeg audio and x-ms-wma audio. |
-| DisplayName | string | no | The specified tone’s friendly name. | Sets the display name to use when saving the specified ringtone. |
+| Ação | string | sim | "SaveRingtone" | Abre o seletor para salvar um toque. |
+| ToneFileSharingToken | string | sim | Token de compartilhamento de arquivo [SharedStorageAccessManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.aspx) para o arquivo de toque a ser salvo. | Salva um arquivo de som específico como um toque. Os tipos de conteúdo com suporte para o arquivo são áudio mpeg e áudio x-ms-wma. |
+| DisplayName | string | não | Nome amigável do tom especificado. | Define o nome de exibição a ser usado ao salvar o toque especificado. |
 
-<br>The values that are returned in [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
+<br>Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
 
-| Return values | Type | Possible values | Description |
+| Valores de retorno | Tipo | Valores possíveis | Descrição |
 |--------------|------|-------|-------------|
-| Result | Int32 | 0-success.<br>1-cancelled by user.<br>2-Invalid file.<br>3-Invalid file content type.<br>4-file exceeds maximum ringtone size (1MB in Windows 10).<br>5-File exceeds 40 second length limit.<br>6-File is protected by digital rights management.<br>7-invalid  parameters. | The result of the picker operation. |
+| Resultado | Int32 | 0 = êxito.<br>1 = cancelado pelo usuário.<br>2 = arquivo inválido.<br>3 = tipo de conteúdo de arquivo inválido.<br>4 = o arquivo excede o tamanho máximo de toque (1 MB no Windows 10).<br>5 = o arquivo excede o limite de duração de 40 segundos.<br>6 = o arquivo está protegido pelo gerenciamento de direitos digitais.<br>7 = parâmetros inválidos. | O resultado da operação de seletor. |
 <br>
-**Example: Save a local music file as a ringtone**
+**Exemplo: salvar um arquivo de música local como um toque**
 
 ``` cs
 LauncherOptions options = new LauncherOptions();
@@ -140,23 +144,23 @@ if (result.Status == LaunchUriStatus.Success)
  }
 ```
 
-## Task: Convert a tone token to its friendly name
+## Tarefa: converter um token de tom em seu nome amigável
 
-The arguments you can pass to get the friendly name of a tone are as follows:
+Os argumentos que você pode passar para obter o nome amigável de um tom são os seguintes:
 
-| Parameter | Type | Required | Possible values | Description |
+| Parâmetro | Tipo | Obrigatório | Valores possíveis | Descrição |
 |-----------|------|----------|-------|-------------|
-| Action | string | yes | "GetToneName" | Indicates that you want to get the friendly name of a tone. |
-| ToneToken | string | yes | The tone token | The tone token from which to obtain a display name. |
+| Ação | string | sim | "GetToneName" | Indica que você deseja obter o nome amigável de um tom. |
+| ToneToken | string | sim | O token de tom | O token de tom de onde obter um nome de exibição. |
 
-<br>The values that are returned in [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
+<br>Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
 
-| Return value | Type | Possible values | Description |
+| Valor de retorno | Tipo | Valores possíveis | Descrição |
 |--------------|------|-------|-------------|
-| Result | Int32 | 0-The picker operation succeeded.<br>7-Incorrect parameter (for example, no ToneToken provided).<br>9-Error reading the name for the specified token.<br>10-Unable to find specified tone token. | The result of the picker operation.
-| DisplayName | string | The tone's friendly name. | Returns the selected tone's display name. This parameter is only returned in the ValueSet if **Result** is 0. |
+| Resultado | Int32 | 0 = operação de seletor bem-sucedida.<br>7 = parâmetro incorreto (por exemplo, nenhum ToneToken fornecido).<br>9 = erro ao ler o nome do token especificado.<br>10 = não é possível encontrar o token de tom especificado. | O resultado da operação de seletor.
+| DisplayName | string | Nome amigável do tom. | Retorna o nome de exibição do tom selecionado. Esse parâmetro será retornado no ValueSet somente se **Resultado** for 0. |
 <br>
-**Example: Retrieve a tone token from Contact.RingToneToken and display its friendly name in the contact card.**
+**Exemplo: recuperar um token de tom de Contact.RingToneToken e exibir o nome amigável no cartão de visita.**
 
 ```cs
 using (var connection = new AppServiceConnection())
@@ -190,3 +194,9 @@ using (var connection = new AppServiceConnection())
     }
 }
 ```
+
+
+
+<!--HONumber=Aug16_HO4-->
+
+

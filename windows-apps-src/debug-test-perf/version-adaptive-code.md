@@ -3,8 +3,8 @@ author: jwmsft
 title: "Código adaptável de versão"
 description: "Saiba como tirar proveito das novas APIs e manter a compatibilidade com versões anteriores"
 translationtype: Human Translation
-ms.sourcegitcommit: 3f81d80cef0fef6d24cad1b42ce9726b03857b5a
-ms.openlocfilehash: db6b9c83d36ac876661197dce81e5724e44bb640
+ms.sourcegitcommit: 24a62c9331d4f651937f3f795fb1e7c9704af2ca
+ms.openlocfilehash: 7656018c61688bddbf23f889a82af4fd6d58c3ea
 
 ---
 
@@ -13,9 +13,6 @@ ms.openlocfilehash: db6b9c83d36ac876661197dce81e5724e44bb640
 Cada versão do SDK do Windows 10 adiciona novas funcionalidades interessantes que você vai querer aproveitar. No entanto, nem todos os seus clientes atualizarão seus dispositivos para a versão mais recente do Windows 10 ao mesmo tempo, e você quer garantir que seu aplicativo funcione na maior variedade possível de dispositivos. Aqui, mostraremos como projetar seu aplicativo de modo que ele seja executado em versões anteriores do Windows 10, mas também tire proveito dos novos recursos, sempre que o aplicativo for executado em um dispositivo com a atualização mais recente instalada.
 
 Há duas etapas que devem ser seguidas a fim de garantir que o aplicativo seja compatível com a mais ampla gama de dispositivos Windows 10. Primeiro, configure seu projeto do Visual Studio para acessar as APIs mais recentes. Isso afeta o que acontece quando você compila o aplicativo. Segundo, execute verificações de tempo de execução para garantir que você só chama APIs que estão presentes no dispositivo em que seu aplicativo esteja sendo executado.
-
-> [!NOTE] 
-> Este artigo usa exemplos do SDK do Windows Insider Preview para Windows 10, versão 1607 (atualização de aniversário). O SDK do Preview é uma versão de pré-lançamento e não pode ser usado em um ambiente de produção. Instale o SDK somente em sua máquina de teste. O SDK do Preview contém correções de erros e mudanças em desenvolvimento para a área de superfície da API. Se estiver trabalhando em um aplicativo que precisa enviar à loja, você não deve instalar o Preview.
 
 ## Configurar seu projeto no Visual Studio
 
@@ -43,7 +40,7 @@ Para alterar a versão Mínima e de Destino de um projeto que já tenha sido cri
 Para referência, estes são os números de compilação para cada SDK:
 - Windows 10, versão 1506: SDK versão 10240
 - Windows 10, versão 1511 (atualização de novembro): SDK versão 10586
-- Windows 10, versão 1607 Insider Preview (atualização de aniversário): na ocasião em que este documento foi redigido, [a versão mais recente do SDK do Insider Preview é 14332](https://blogs.windows.com/buildingapps/2016/04/28/windows-10-anniversary-sdk-preview-build-14332-released/).
+- Windows 10, versão 1607 (Atualização de Aniversário): versão do SDK 14393.
 
 Você pode baixar qualquer versão do SDK do [arquivo de emulador e do SDK do Windows](https://developer.microsoft.com/downloads/sdk-archive). Você pode baixar o SDK mais recente do Windows Insider Preview na seção de desenvolvedor do site [Windows Insider](https://insider.windows.com/).
 
@@ -481,6 +478,6 @@ class IsEnumPresentTrigger : StateTriggerBase
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,20 +1,20 @@
 ---
 author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
-description: "Use esse método na API da coleção da Windows Store API para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário."
+description: "Use esse método na API da coleção da Windows Store para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário."
 title: "Declarar produtos consumíveis como providenciados"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 5bd85c6ec9728a0dc08ab8ef4f586b0017510a74
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: dd3e687d49e538187c123b7123c184f9182905de
 
 ---
 
 # Declarar produtos consumíveis como providenciados
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Use esse método na API da coleção da Windows Store API para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário.
+
+Use esse método na API da coleção da Windows Store para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário.
 
 Há duas maneiras de usar esse método para declarar um produto consumível como providenciado:
 
@@ -46,7 +46,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;.                           |
+| Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;.                           |
 | Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
@@ -158,6 +158,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

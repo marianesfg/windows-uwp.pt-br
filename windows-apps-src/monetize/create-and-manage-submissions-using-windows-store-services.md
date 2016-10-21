@@ -1,72 +1,76 @@
 ---
 author: mcleanbyron
 ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
-description: Use the Windows Store submission API to programmatically create and manage submissions for apps that are registered to your Windows Dev Center account.
-title: Create and manage submissions using Windows Store services
+description: "Use a API de envio da Windows Store para criar e gerenciar de forma programática os envios de aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
+title: "Criar e gerenciar envios usando serviços da Windows Store"
+translationtype: Human Translation
+ms.sourcegitcommit: 47e0ac11178af98589e75cc562631c6904b40da4
+ms.openlocfilehash: 0a566dfee8f7fe08c06ce4963435a70c30b1650d
+
 ---
 
-# Create and manage submissions using Windows Store services
+# Criar e gerenciar envios usando serviços da Windows Store
 
 
-Use the *Windows Store submission API* to programmatically query and create submissions for apps, add-ons (also known as in-app products or IAPs) and package flights for your or your organization's Windows Dev Center account. This API is useful if your account manages many apps or add-ons, and you want to automate and optimize the submission process for these assets. This API uses Azure Active Directory (Azure AD) to authenticate the calls from your app or service.
+Use a *API de envio da Windows Store* para consultar e criar programaticamente os envios de aplicativos, complementos (também conhecidos como produtos no aplicativo ou IAPs) e pacotes de pré-lançamento para a sua conta e a para a conta do Centro de Desenvolvimento do Windows da sua organização. Essa API será útil se sua conta gerenciar muitos aplicativos ou complementos e você quiser automatizar e otimizar o processo de envio para esses ativos. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
 
-The following steps describe the end-to-end process of using the Windows Store submission API:
+As etapas a seguir descrevem o processo completo de usar a API de envio da Windows Store:
 
-1.  Make sure that you have completed all the [prerequisites](#prerequisites).
-3.  Before you call a method in the Windows Store submission API, [obtain an Azure AD access token](#obtain-an-azure-ad-access-token). After you obtain a token, you have 60 minutes to use this token in calls to the Windows Store submission API before the token expires. After the token expires, you can generate a new token.
-4.  [Call the Windows Store submission API](#call-the-windows-store-submission-api).
+1.  Certifique-se de que você tenha concluído todos os [pré-requisitos](#prerequisites).
+3.  Antes de chamar um método na API de envio da Windows Store [obtenha um token de acesso do Azure AD](#obtain-an-azure-ad-access-token). Depois de obter um token, você tem 60 minutos para usá-lo em chamadas para a API de envio da Windows Store antes que ele expire. Depois que o token expirar, você poderá gerar um novo.
+4.  [Chame a API de envio da Windows Store](#call-the-windows-store-submission-api).
 
 
 
 <span id="not_supported" />
->**Important**
+>**Importante**
 
-> * This API can only be used for Windows Dev Center accounts that have been given permission to use the API. This permission is being enabled to developer accounts in stages, and not all accounts have this permission enabled at this time. To request earlier access, log on to the Dev Center dashboard, click **Feedback** at the bottom of the dashboard, select **Submission API** for the feedback area, and submit your request. You'll receive an email when this permission is enabled for your account.
+> * Essa API pode ser usada somente para contas do Centro de Desenvolvimento do Windows que têm permissão para usar a API. Essa permissão está sendo habilitada para contas de desenvolvedor em estágios, e nem todas as contas têm essa permissão habilitado no momento. Para solicitar acesso anterior, fazer logon no painel do Centro de Desenvolvimento, clique em **Comentários** na parte inferior do painel, selecione **API de envio** para a área de comentários e envie sua solicitação. Você receberá um email quando essa permissão for habilitada em sua conta.
 
-> * This API cannot be used with apps or add-ons that use certain features that were introduced to the Dev Center dashboard in August 2016, including (but not limited to) mandatory app updates and Store-managed consumable add-ons. If you use the Windows Store submission API with an app or add-on that uses one of these features, the API will return a 409 error code. In this case, you must use the dashboard to manage the submissions for the app or add-on.
+> * Essa API não pode ser usada com aplicativos ou complementos que usam determinados recursos que foram introduzidos no painel do Centro de Desenvolvimento em agosto de 2016, incluindo (mas não se limitando a) atualizações obrigatórias de aplicativos e complementos de consumíveis gerenciados pela Loja. Se você usar a API de envio da Windows Store com um aplicativo ou um complemento que usa um desses recursos, a API retornará um código de erro 409. Nesse caso, você deve usar o painel para gerenciar os envios para o aplicativo ou um complemento.
 
 <span id="prerequisites" />
-## Step 1: Complete prerequisites for using the Windows Store submission API
+## Etapa 1: complete os pré-requisitos para usar a API de envio da Windows Store
 
-Before you start writing code to call the Windows Store submission API, make sure that you have completed the following prerequisites.
+Antes de começar a escrever o código para chamar a API de envio da Windows Store, certifique-se de que você concluiu os pré-requisitos a seguir.
 
-* You (or your organization) must have an Azure AD directory and you must have [Global administrator](http://go.microsoft.com/fwlink/?LinkId=746654) permission for the directory. If you already use Office 365 or other business services from Microsoft, you already have Azure AD directory. Otherwise, you can [create a new Azure AD in Dev Center](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) for no additional charge.
+* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) sem nenhum custo adicional.
 
-* You must [associate an Azure AD application with your Windows Dev Center account](#associate-an-azure-ad-application-with-your-windows-dev-center-account) and obtain your tenant ID, client ID and key. You need these values to obtain an Azure AD access token, which you will use in calls to the Windows Store submission API.
+* Você deve [associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento do Windows](#associate-an-azure-ad-application-with-your-windows-dev-center-account) e obter a ID de locatário, a ID do cliente e a chave. Você precisa desses valores para obter um token de acesso do Azure AD, que você usará em chamadas para a API de envio da Windows Store.
 
-* Prepare your app for use with the Windows Store submission API:
+* Prepare seu aplicativo para uso com a API de envio da Windows Store:
 
-  * If you your app does not yet exist in Dev Center, [create your app in the Dev Center dashboard](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name). You cannot use the Windows Store submission API to create an app in Dev Center; you must create your app using the dashboard, and then you can use the API to access the app and programmatically create submissions for it. However, you can use the API to programmatically create add-ons and package flights before you create submissions for them.
+  * Se seu aplicativo ainda não existir no Centro de Desenvolvimento, [crie seu aplicativo no painel do Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name). Você não pode usar a API de envio da Windows Store para criar um aplicativo no Centro de Desenvolvimento; você deve criar seu aplicativo usando o painel e, em seguida, usar a API para acessar o aplicativo e criar programaticamente envios para ele. No entanto, você pode usar a API para criar complementos e pacotes de pré-lançamento programaticamente antes de criar envios para eles.
 
-  * Before you can create a submission for a given app using this API, you must first [create one submission for the app in the Dev Center dashboard](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), including answering the [age ratings](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) questions. After you do this, you will be able to programmatically create new submissions for this app using the API. You do not need to create an add-on submission or package flight submission before using the API for those types of submissions.
+  * Antes de criar um envio para um determinado aplicativo usando essa API, você deve primeiro [criar um envio para o aplicativo no painel do Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), inclusive respondendo as perguntas sobre [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings). Depois que você fizer isso, você poderá criar novos envios para este aplicativo usando a API programaticamente. Você não precisa criar um envio de complemento nem o envio de versão de pré-lançamento do pacote antes de usar a API para esses tipos de envios.
 
-  * If you are creating or updating an app submission and you need to include an app package, [prepare the app package](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements).
+  * Se você estiver criando ou atualizando um envio de aplicativo e você precisar incluir um pacote do aplicativo, [prepare o pacote do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements).
 
-  * If you are creating or updating an app submission and you need to include screenshots or images for the Store listing, [prepare the app screenshots and images](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images).
+  * Se você estiver criando ou atualizando um envio de aplicativo e você precisar incluir capturas de tela ou imagens para a listagem da Loja, [prepare as imagens e capturas de tela do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images).
 
-  * If you are creating or updating an add-on submission and you need to include an icon, [prepare the icon](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon).
+  * Se você estiver criando ou atualizando um envio de complemento e você precisar incluir um ícone, [prepare o ícone](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon).
 
 <span id="associate-an-azure-ad-application-with-your-windows-dev-center-account" />
-### How to associate an Azure AD application with your Windows Dev Center account
+### Como associar um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows
 
-Before you can use the Windows Store submission API, you must associate an Azure AD application with your Dev Center account, retrieve the tenant ID and client ID for the application and generate a key. The Azure AD application represents the app or service from which you want to call the Windows Store submission API. You need the tenant ID, client ID and key to obtain an Azure AD access token that you pass to the API.
+Antes de usar a API de envio da Windows Store, você deverá associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento, recuperar a ID do locatário e a ID do cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de envio da Windows Store. Você precisa da ID do locatário, da ID do cliente e da chave para obter um token de acesso do Azure AD que você passa para a API.
 
->**Note**&nbsp;&nbsp;You only need to perform this task one time. After you have the tenant ID, client ID and key, you can reuse them any time you need to create a new Azure AD access token.
+>**Observação**&nbsp;&nbsp;Você só precisa executar essa tarefa uma vez. Depois que você tiver a ID do locatário, a ID do cliente e a chave, poderá reutilizá-las sempre que precisa criar um novo token de acesso do Azure AD.
 
-1.  In Dev Center, go to your **Account settings**, click **Manage users**, and associate your organization's Dev Center account with your organization's Azure AD directory. For detailed instructions, see [Manage account users](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
+1.  No Centro de Desenvolvimento, acesse suas **Configurações de conta**, clique em **Gerenciar usuários** e associe a sua conta do Centro de Desenvolvimento ao diretório do Azure AD da sua organização. Para obter instruções detalhadas, consulte [Gerenciar usuários de conta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
 
-2.  In the **Manage users** page, click **Add Azure AD applications**, add the Azure AD application that represents the app or service that you will use to access submissions for your Dev Center account, and assign it the **Manager** role. If this application already exists in your Azure AD directory, you can select it on the **Add Azure AD applications** page to add it to your Dev Center account. Otherwise, you can create a new Azure AD application on the **Add Azure AD applications** page. For more information, see [Add and manage Azure AD applications](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
+2.  Na página **Gerenciar usuários**, clique em **Adicionar aplicativos do Azure AD**, adicione o aplicativo do Azure AD que representa o aplicativo ou o serviço que você usará para acessar envios de sua conta do Centro de Desenvolvimento e atribua-o a função **Gerente**. Se esse aplicativo já existe no diretório do Azure AD, selecione-o na página **Adicionar aplicativos do Azure AD** para adicioná-lo à sua conta do Centro de Desenvolvimento. Do contrário, você pode criar um novo aplicativo do Azure AD na página **Add Azure AD applications**. Para obter mais informações, consulte [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
-3.  Return to the **Manage users** page, click the name of your Azure AD application to go to the application settings, and copy down the **Tenant ID** and **Client ID** values.
+3.  Volte para a página **Gerenciar usuários**, clique no nome do seu aplicativo Azure AD para ir para as configurações do aplicativo e copie os valores da **ID do locatário** e da **ID do cliente**.
 
-4. Click **Add new key**. On the following screen, copy down the **Key** value. You won't be able to access this info again after you leave this page. For more information, see the information about managing keys in [Add and manage Azure AD applications](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
+4. Clique em **Adicionar nova chave**. Na tela seguinte, copie o valor da **Chave**. Você não poderá acessar essas informações novamente depois que você sair desta página. Para obter mais informações, consulte as informações sobre o gerenciamento de chaves em [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
 <span id="obtain-an-azure-ad-access-token" />
-## Step 2: Obtain an Azure AD access token
+## Etapa 2: Obter um token de acesso do Azure AD
 
-Before you call any of the methods in the Windows Store submission API, you must first obtain an Azure AD access token that you pass to the **Authorization** header of each method in the API. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can refresh the token so you can continue to use it in further calls to the API.
+Antes de chamar qualquer um dos métodos na API de envio da Windows Store, primeiro você deve obter um token de acesso do Azure AD que você passa para o cabeçalho **Autorização** de cada método na API. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá atualizar o token para que você possa continuar a usá-lo em outras chamadas à API.
 
-To obtain the access token, follow the instructions in [Service to Service Calls Using Client Credentials](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) to send an HTTP POST to the ```https://login.microsoftonline.com/<tenant_id>/oauth2/token``` endpoint. Here is a sample request.
+Para obter o token de acesso, siga as instruções em [Chamadas de serviço a serviço usando credenciais do cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar um HTTP POST para o ponto de extremidade ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Aqui está um exemplo de solicitação.
 
 ```
 POST https://login.microsoftonline.com/<your_tenant_id>/oauth2/token HTTP/1.1
@@ -79,52 +83,58 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-For the *tenant\_id*, *client\_id* and *client\_secret* parameters, specify the tenant ID, client ID and the key for your application that you retrieved from Dev Center in the previous section. For the *resource* parameter, you must specify the ```https://manage.devcenter.microsoft.com``` URI.
+Para os parâmetros *tenant\_id*, *client\_id* e *client\_secret*, especifique a ID do locatário, a ID do cliente e a chave para o aplicativo que você recuperou do Centro de Desenvolvimento na seção anterior. Para o parâmetro *resource*, especifique o seguinte URI ```https://manage.devcenter.microsoft.com```.
 
-After your access token expires, you can refresh it by following the instructions [here](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
+Depois que seu token de acesso expirar, você poderá atualizá-l0 seguindo as instruções [aqui](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
 <span id="call-the-windows-store-submission-api">
-## Step 3: Use the Windows Store submission API
+## Etapa 3: usar a API de envio da Windows Store
 
-After you have an Azure AD access token, you can call methods in the Windows Store submission API. The API includes many methods that are grouped into scenarios for apps, add-ons, and package flights. To create or update submissions, you typically call multiple methods in the Windows Store submission API in a specific order. For information about each scenario and the syntax of each method, see the articles in the following table.
+Depois que tiver um token de acesso do Azure AD, você poderá chamar métodos na API de envio da Windows Store. A API inclui muitos métodos que são agrupados em cenários de aplicativos, complementos e pacotes de pré-lançamento. Para criar ou atualizar os envios, você normalmente chama vários métodos na API de envio da Windows Store em uma ordem específica. Para obter informações sobre cada cenário e a sintaxe de cada método, consulte os artigos na tabela a seguir.
 
->**Note**&nbsp;&nbsp;After you obtain an access token, you have 60 minutes to call methods in the Windows Store submission API before the token expires.
+>**Observação**&nbsp;&nbsp;Depois de obter um token de acesso, você tem 60 minutos para chamar métodos na API de envio da Windows Store antes que ele expire.
 
-| Scenario       | Description                                                                 |
+| Cenário       | Descrição                                                                 |
 |---------------|----------------------------------------------------------------------|
-| Apps |  Retrieve data for all the apps that are registered to your Windows Dev Center account and create submissions for apps. For more information about these methods, see the following articles: <ul><li>[Get app data](get-app-data.md)</li><li>[Manage app submissions](manage-app-submissions.md)</li></ul> |
-| Add-ons | Get, create, or delete add-ons for your apps, and then get, create, or delete submissions for the add-ons. For more information about these methods, see the following articles: <ul><li>[Manage add-ons](manage-add-ons.md)</li><li>[Manage add-on submissions](manage-add-on-submissions.md)</li></ul> |
-| Package flights | Get, create, or delete package flights for your apps, and then get, create, or delete submissions for the package flights. For more information about these methods, see the following articles: <ul><li>[Manage package flights](manage-flights.md)</li><li>[Manage package flight submissions](manage-flight-submissions.md)</li></ul> |
+| Aplicativos |  Recupere dados de todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows e crie os envios de aplicativos. Para obter mais informações sobre esses métodos, consulte os seguintes artigos: <ul><li>[Obter dados de aplicativo](get-app-data.md)</li><li>[Gerenciar envios de aplicativo](manage-app-submissions.md)</li></ul> |
+| Complementos | Obtenha, crie ou exclua complementos para seus aplicativos e, em seguida, obtenha, crie ou exclua os envios dos complementos. Para obter mais informações sobre esses métodos, consulte os seguintes artigos: <ul><li>[Gerenciar complementos](manage-add-ons.md)</li><li>[Gerenciar envios de complemento](manage-add-on-submissions.md)</li></ul> |
+| Pacotes de pré-lançamento | Obtenha, crie ou exclua pacotes de pré-lançamento para seus aplicativos e, em seguida, obtenha, crie ou exclua os envios de pacotes de pré-lançamento. Para obter mais informações sobre esses métodos, consulte os seguintes artigos: <ul><li>[Gerenciar pacotes de pré-lançamento](manage-flights.md)</li><li>[Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md)</li></ul> |
 
 <span />
 
-## Code examples
+## Exemplos de código
 
-The following articles provide detailed code examples that demonstrate how to use the Windows Store submission API in several different programming languages:
+Os artigos a seguir fornecem exemplos detalhados de código que demonstram como usar a API de envio da Windows Store em várias linguagens de programação diferentes:
 
-* [C# code examples](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Java code examples](java-code-examples-for-the-windows-store-submission-api.md)
-* [Python code examples](python-code-examples-for-the-windows-store-submission-api.md)
+* [Exemplo de código C#](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [Exemplo de código Java](java-code-examples-for-the-windows-store-submission-api.md)
+* [Exemplo de código Python](python-code-examples-for-the-windows-store-submission-api.md)
 
-## Troubleshooting
+## Solução de problemas
 
-| Issue      | Resolution                                          |
+| Problema      | Resolução                                          |
 |---------------|---------------------------------------------|
-| After calling the Windows Store submission API from PowerShell, the response data for the API is corrupted if you convert it from JSON format to a PowerShell object using the [ConvertFrom-Json](https://technet.microsoft.com/en-us/library/hh849898.aspx) cmdlet and then back to JSON format using the [ConvertTo-Json](https://technet.microsoft.com/en-us/library/hh849922.aspx) cmdlet. |  By default, the *-Depth* parameter for the [ConvertTo-Json](https://technet.microsoft.com/en-us/library/hh849922.aspx) cmdlet is set to 2 levels of objects, which is too shallow for most of the JSON objects that are returned by the Windows Store submission API. When you call the [ConvertTo-Json](https://technet.microsoft.com/en-us/library/hh849922.aspx) cmdlet, set the *-Depth* parameter to a larger number, such as 20. |
+| Depois de chamar a API de envio da Windows Store do PowerShell, os dados de resposta da API ficarão corrompidos se você convertê-la do formato JSON para um objeto PowerShell usando o cmdlet [ConvertFrom-Json](https://technet.microsoft.com/en-us/library/hh849898.aspx) e depois voltar para o formato JSON usando o cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx). |  Por padrão, o parâmetro *-Depth* para o cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx) é definido como 2 níveis de objetos, que é muito superficial para a maioria dos objetos JSON que são retornados pela API de envio da Windows Store. Quando você chamar o cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx), defina o parâmetro *-Depth* como um número maior, como 20. |
 
-## Additional help
+## Ajuda adicional
 
-If you have questions about the Windows Store submission API or need assistance managing your submissions with this API, use the following resources:
+Se você tiver dúvidas sobre a API de envio da Windows Store ou precisar de ajuda para gerenciar seus envios com essa API, use os seguintes recursos:
 
-* Ask your questions on our [forums](https://social.msdn.microsoft.com/Forums/windowsapps/en-us/home?forum=wpsubmit).
-* Visit our [support page](https://developer.microsoft.com/windows/support) and request one of the assisted support options for Dev Center dashboard. If you are prompted to choose a problem type and category, choose **App submission and certification** and **Submitting an app**, respectively.  
+* Pergunte em nossos [fóruns](https://social.msdn.microsoft.com/Forums/windowsapps/en-us/home?forum=wpsubmit).
+* Visite nossa [página de suporte](https://developer.microsoft.com/windows/support) e solicite uma das opções de suporte assistido para o painel do Centro de Desenvolvimento. Se você for solicitado a escolher um tipo de problema e categoria, escolha **Certificação e envio de aplicativo** e **Enviando um aplicativo**, respectivamente.  
 
-## Related topics
+## Tópicos relacionados
 
-* [Get app data](get-app-data.md)
-* [Manage app submissions](manage-app-submissions.md)
-* [Manage add-ons](manage-add-ons.md)
-* [Manage add-on submissions](manage-add-on-submissions.md)
-* [Manage package flights](manage-flights.md)
-* [Manage package flight submissions](manage-flight-submissions.md)
- 
+* [Obter dados de aplicativo](get-app-data.md)
+* [Gerenciar envios de aplicativo](manage-app-submissions.md)
+* [Gerenciar complementos](manage-add-ons.md)
+* [Gerenciar envios de complemento](manage-add-on-submissions.md)
+* [Gerenciar pacotes de pré-lançamento](manage-flights.md)
+* [Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md)
+ 
+
+
+
+<!--HONumber=Sep16_HO1-->
+
+

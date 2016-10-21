@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: c0450f7b-5c81-4d8c-92ef-2b1190d18af7
 description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo Silverlight para Windows Phone 8.1 ou Windows Phone 8.0."
 title: AdControl no Windows Phone Silverlight
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 5a12badfb11cfd43c0833522d996da7df73b3d55
+translationtype: Human Translation
+ms.sourcegitcommit: 3a09b37a5cae0acaaf97a543cae66e4de3eb3f60
+ms.openlocfilehash: 40e68625ed666a9242ed83729b2f8113da363735
 
 
 ---
@@ -12,30 +13,36 @@ ms.openlocfilehash: 5a12badfb11cfd43c0833522d996da7df73b3d55
 # AdControl no Windows Phone Silverlight
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Este guia passo a passo mostra como usar a classe [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) para exibir anúncios em faixa em um aplicativo Silverlight para Windows Phone 8.1 ou Windows Phone 8.0.
 
-## Pré-requisitos
-
-*  Instale o [SDK do Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk) com o Visual Studio 2015 ou o Visual Studio 2013.
+> **Observação para Windows Phone Silverlight 8.0**&nbsp;&nbsp;Os anúncios em faixa ainda são compatíveis com os aplicativos existentes do Windows Phone 8.0 Silverlight que usam um **AdControl** de uma versão anterior do SDK do Universal Ad Client ou do SDK do Microsoft Advertising e que já estão disponíveis na Loja. No entanto, anúncios em faixa não são mais compatíveis com os novos projetos do Windows Phone 8.0 Silverlight. Além disso, alguns cenários de depuração e testes são limitados nos projetos do Windows Phone 8.x Silverlight. Para obter mais informações, consulte [Exibir anúncios no seu aplicativo](display-ads-in-your-app.md#silverlight_support).
 
 
-## Adicionar as referências de assembly de publicidade
+## Adicione os assemblies de publicidade ao seu projeto
 
-Os assemblies do Microsoft Advertising para projetos do Windows Phone Silverlight não são instalados localmente com o SDK do Microsoft Store Engagement and Monetization. Antes de começar a atualizar seu código, você deve primeiro usar os **Serviços Conectados** com o suporte à mediação de anúncios no SDK do Microsoft Store Engagement and Monetization para baixar esses assemblies e fazer referência a eles em seu projeto.
+Para começar, baixe e instale o pacote NuGet que contém os assemblies do Microsoft Advertising para Windows Phone Silverlight ao seu projeto.
 
-1.  No Visual Studio, clique em **Projeto** e **Adicionar Serviço Conectado**.
+1.  Abra seu projeto no Visual Studio.
 
-2.  Na caixa de diálogo **Adicionar Serviço Conectado**, clique em **Ad Mediator** e, em seguida, em **Configurar**.
+2.  Clique em **Ferramentas**, aponte para **Gerenciador de Pacotes NuGet** e clique em **Console do Gerenciador de Pacote**.
 
-3.  Clique em **Selecionar redes de anúncios**, selecione **Microsoft Advertising** somente.
+3.  Na janela **Console do Gerenciador de Pacote**, insira um desses comandos.
 
-    Neste ponto, todos os assemblies necessários do Microsoft Advertising para o Silverlight são baixados para o seu projeto local por meio de pacotes NuGet, e as referências a esses assemblies são adicionadas automaticamente ao seu projeto. Uma referência ao assembly de mediação de anúncios também é adicionada ao seu projeto. Você removerá a referência ao assembly de mediação de anúncios em uma etapa posterior, pois ele não é necessário neste cenário.
+  * Se seu projeto for direcionado para Windows Phone 8.0, digite este comando.
 
-4.  Na caixa de diálogo **Selecionar redes de anúncios**, clique em **OK**. Clique em **OK** novamente na página de confirmação **Obtendo status** seguinte e, finalmente, clique em **Adicionar** para fechar a caixa de diálogo **Ad Mediator**.
+      ```
+      Install-Package Microsoft.Advertising.WindowsPhone.SL80 -Version 6.2.40501.1
+      ```
 
-5.  No **Gerenciador de Soluções**, expanda o nó **Referências**. Clique com o botão direito do mouse em **Microsoft.AdMediator.WindowsPhone81SL.MicrosoftAdvertising** e clique em **Remover**. Esta referência ao assembly não é necessária neste cenário.
+  * Se seu projeto for direcionado para Windows Phone 8.1, digite este comando.
+
+      ```
+      Install-Package Microsoft.Advertising.WindowsPhone.SL81 -Version 8.1.50112
+      ```
+
+    Depois de inserir o comando, todos os assemblies necessários do Microsoft Advertising para o Silverlight serão baixados para o seu projeto local por meio de pacotes NuGet, e as referências a esses assemblies serão adicionadas automaticamente ao seu projeto.
 
 ## Codificar seu aplicativo
 
@@ -89,8 +96,7 @@ Os assemblies do Microsoft Advertising para projetos do Windows Phone Silverligh
 
 6.  Na marca **Grade**, adicione o código a seguir do **AdControl**. Atribua as propriedades **ApplicationId** e **AdUnitId** aos valores de teste fornecidos em [Valores de modo de teste](test-mode-values.md), e ajuste as propriedades **Height** e **Width** para um dos [tamanhos de anúncio compatíveis com anúncios em faixa](supported-ad-sizes-for-banner-ads.md).
 
-    > **Observação**  
-    Você substituirá os valores de teste **ApplicationId** e **AdUnitId** por valores dinâmicos antes de enviar seu aplicativo.
+    > **Observação**&nbsp;&nbsp;Você substituirá os valores de teste **ApplicationId** e **AdUnitId** por valores dinâmicos antes de enviar seu aplicativo.
 
     ``` syntax
     <Grid x:Name="ContentPanel" Grid.Row="1">
@@ -113,12 +119,11 @@ Os assemblies do Microsoft Advertising para projetos do Windows Phone Silverligh
 ## Lançar seu aplicativo com anúncios dinâmicos usando o Centro de Desenvolvimento
 
 
-1.  No painel do Centro de Desenvolvimento, vá para a página **Monetização**&gt;**Monetizar com anúncios** para seu aplicativo e [crie uma unidade autônoma do Microsoft Advertising](../publish/monetize-with-ads.md). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote o ID da unidade de anúncio e o ID do aplicativo.
+1.  No painel do Centro de Desenvolvimento, vá para a página **Monetização** &gt; **Monetizar com anúncios** para seu aplicativo e [crie uma unidade autônoma do Microsoft Advertising](../publish/monetize-with-ads.md). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote o ID da unidade de anúncio e o ID do aplicativo.
 
 2.  Em seu código, substitua os valores da unidade de anúncio de teste (**applicationId** e **adUnitId**) pelos valores dinâmicos gerados no Centro de Desenvolvimento.
 
-3.  
-            [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento.
+3.  [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento.
 
 4.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento.
 
@@ -127,6 +132,6 @@ Os assemblies do Microsoft Advertising para projetos do Windows Phone Silverligh
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

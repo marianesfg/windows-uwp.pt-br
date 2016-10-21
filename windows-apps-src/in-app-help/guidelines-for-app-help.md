@@ -4,14 +4,15 @@ Description: "Estas diretrizes descrevem como criar conteúdo da ajuda eficaz pa
 title: Diretrizes da ajuda do aplicativo
 label: Guidelines for app help
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 0aa2db498ab7ec25839da259dd0026b0a7cd2b13
-ms.openlocfilehash: f2522afa91abe26303a85cbfbabd5ec5b3dba59c
+ms.openlocfilehash: 0ca099b0acfcba16d62c6158c7a829adaf475891
 
 ---
 
 # Diretrizes da ajuda do aplicativo
 
-\[ Atualizado para aplicativos da Plataforma Universal do Windows (UWP) no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos da Plataforma Universal do Windows (UWP) no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Os aplicativos podem ser complexos e o fornecimento de ajuda eficaz pode melhorar consideravelmente a experiência dos usuários. Nem todos os aplicativos precisam fornecer ajuda para seus usuários, e o tipo de ajuda fornecido pode variar bastante, dependendo do aplicativo e de como as pessoas o usarão.
 
@@ -29,20 +30,15 @@ Um usuário não irá procurar o conteúdo da ajuda, a menos que ele já tenha u
 
 Toda ajuda, qualquer que seja, deve seguir estes princípios básicos:
 
--   
-            **Fácil de entender:** a ajuda que confunde o usuário é pior que nenhuma ajuda.
+-   **Fácil de entender:** a ajuda que confunde o usuário é pior que nenhuma ajuda.
 
--   
-            **Simples:** os usuários que procuram a ajuda querem respostas claras apresentadas diretamente a eles.
+-   **Simples:** os usuários que procuram a ajuda querem respostas claras apresentadas diretamente a eles.
 
--   
-            **Relevante:** os usuários não querem ter a necessidade de procurar seu problema específico. Eles querem uma ajuda mais relevante apresentada em primeiro lugar (isso é chamado de "ajuda contextual") ou querem uma interface fácil de navegar.
+-   **Relevante:** os usuários não querem ter a necessidade de procurar seu problema específico. Eles querem uma ajuda mais relevante apresentada em primeiro lugar (isso é chamado de "ajuda contextual") ou querem uma interface fácil de navegar.
 
--   
-            **Direta:** quando um usuário procura a ajuda, eles querem ver a ajuda. Se seu aplicativo contiver páginas para relatar bugs, enviar comentários, ver os termos de serviço ou funções semelhantes, elas devem ser incluídas como links ou notas de rodapé na página principal da ajuda, e não como itens de importância.
+-   **Direta:** quando um usuário procura a ajuda, eles querem ver a ajuda. Se seu aplicativo contiver páginas para relatar bugs, enviar comentários, ver os termos de serviço ou funções semelhantes, elas devem ser incluídas como links ou notas de rodapé na página principal da ajuda, e não como itens de importância.
 
--   
-            **Consistente:** independentemente do seu tipo, a ajuda ainda faz parte do seu aplicativo e deve ser tratada como qualquer outra parte da interface do usuário. Os mesmos princípios de design de usabilidade, acessibilidade e estilo usados em todo o restante de seu aplicativo também devem estar presentes na ajuda que você oferece.
+-   **Consistente:** independentemente do seu tipo, a ajuda ainda faz parte do seu aplicativo e deve ser tratada como qualquer outra parte da interface do usuário. Os mesmos princípios de design de usabilidade, acessibilidade e estilo usados em todo o restante de seu aplicativo também devem estar presentes na ajuda que você oferece.
 
 ## <span id="types_of_help"></span><span id="TYPES_OF_HELP"></span>Tipos de ajuda
 
@@ -66,10 +62,10 @@ Para tutoriais detalhados, funções avançadas ou bibliotecas de tópicos da aj
 
 [Consulte Diretrizes de ajuda externa](external-help.md)
 
-\[Este artigo contém informações que são específicas aos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+\[Este artigo contém informações que são específicas dos aplicativos UWP (Plataforma Universal do Windows) e do Windows 10. Para obter as diretrizes do Windows 8.1, baixe o [PDF de diretrizes do Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

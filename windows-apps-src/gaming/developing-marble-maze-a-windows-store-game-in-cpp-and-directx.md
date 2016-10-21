@@ -3,8 +3,9 @@ author: mtoepke
 title: Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX
 description: "Esta seção da documentação descreve como usar o DirectX e o Visual C++ para criar um jogo 3D UWP (Plataforma Universal do Windows)."
 ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c74a455f84618cb57147c8f0c9baf343b41b02be
+ms.openlocfilehash: d660e05ab43f1c45f21b028a78c6cfa3e0897164
 
 ---
 
@@ -16,13 +17,11 @@ ms.openlocfilehash: c74a455f84618cb57147c8f0c9baf343b41b02be
 
 Esta seção da documentação descreve como usar o DirectX e o Visual C++ para criar um jogo 3D UWP (Plataforma Universal do Windows). Esta documentação mostra como criar um jogo 3D denominado Marble Maze que adota novos fatores forma, como tablets, e também funciona em desktops e notebooks tradicionais.
 
-> 
-            **Observação**   Para baixar o código-fonte do Marble Maze, consulte [Amostra do jogo DirectX Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Observação**   Para baixar o código-fonte do Marble Maze, consulte [Amostra do jogo DirectX Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 
-> 
-            **Importante**  O Marble Maze ilustra padrões de design que consideramos ser as práticas recomendadas para a criação de jogos UWP. Você pode adaptar muitos dos detalhes de implementação às próprias práticas e aos requisitos específicos do jogo que você está desenvolvendo. Sinta-se à vontade para usar técnicas ou bibliotecas diferentes se estas forem mais adequadas para as suas necessidades. (No entanto, sempre garanta que seu código é aprovado no Kit de Certificação de Aplicativos Windows.) Quando consideramos que uma implementação do Marble Maze é essencial para o desenvolvimento de jogos com êxito, enfatizamos isso nesta documentação.
+> **Importante**  O Marble Maze ilustra padrões de design que consideramos ser as práticas recomendadas para a criação de jogos UWP. Você pode adaptar muitos dos detalhes de implementação às próprias práticas e aos requisitos específicos do jogo que você está desenvolvendo. Sinta-se à vontade para usar técnicas ou bibliotecas diferentes se estas forem mais adequadas para as suas necessidades. (No entanto, sempre garanta que seu código é aprovado no Kit de Certificação de Aplicativos Windows.) Quando consideramos que uma implementação do Marble Maze é essencial para o desenvolvimento de jogos com êxito, enfatizamos isso nesta documentação.
 
  
 
@@ -107,6 +106,6 @@ Recomendamos que você comece com os princípios básicos da amostra do Marble M
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

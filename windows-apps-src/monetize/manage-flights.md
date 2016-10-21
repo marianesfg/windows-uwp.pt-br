@@ -1,31 +1,41 @@
 ---
 author: mcleanbyron
 ms.assetid: 37F2C162-4910-4336-BEED-8536C88DCA65
-description: Use these methods in the Windows Store submission API to manage package flights for apps that are registered to your Windows Dev Center account.
-title: Manage package flights using the Windows Store submission API
+description: "Use estes métodos na API de envio da Windows Store para gerenciar pacotes de pré-lançamento dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
+title: "Gerenciar pacotes de pré-lançamento usando a API de envio da Windows Store"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: de1c23d721cee67d813520e3a23eb553cd90b7e9
+
 ---
 
-# Manage package flights using the Windows Store submission API
+# Gerenciar pacotes de pré-lançamento usando a API de envio da Windows Store
 
 
 
 
-Use the following methods in the Windows Store submission API to manage package flights for apps that are registered to your Windows Dev Center account. For an introduction to the Windows Store submission API, including prerequisites for using the API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+Use os métodos a seguir na API de envio da Windows Store para gerenciar pacotes de pré-lançamento dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows. Para obter uma introdução à API de envio da Windows Store, incluindo os pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
->**Note**&nbsp;&nbsp;These methods can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled. These methods can only be used to get, create, or delete package flights. To create submissions for package flights, see the methods in [Manage package flight submissions](manage-flight-submissions.md).
+>**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada. Esses métodos só podem ser usados para obter, criar ou excluir os pacotes de pré-lançamento. Para criar envios para pacotes de pré-lançamento, consulte os métodos em [Gerenciar envios do pacote de pré-lançamento](manage-flight-submissions.md).
 
-| Method        | URI    | Description                                                                 |
+| Método        | URI    | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}``` | Gets data for a package flight for an app that is registered to your Windows Dev Center account. For more information, see [Get a package flight](get-a-flight.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights``` | Creates a new package flight. For more information, see [Create a package flight](create-a-flight.md).|
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}``` | Deletes a package flight. For more information, see [Delete a package flight](delete-a-flight.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}``` | Obtém dados para um pacote de pré-lançamento de um aplicativo que está registrado em sua conta do Centro de Desenvolvimento do Windows. Para obter mais informações, consulte [Obter um pacote de pré-lançamento](get-a-flight.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights``` | Cria um novo pacote de pré-lançamento. Para saber mais, veja [Criar um pacote de pré-lançamento](create-a-flight.md).|
+| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}``` | Exclui um pacote de pré-lançamento. Para saber mais, veja [Excluir um pacote de pré-lançamento](delete-a-flight.md). |
 
 
-## Prerequisites
+## Pré-requisitos
 
-If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API before trying to use any of these methods.
+Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) da API de envio da Windows Store antes de tentar usar qualquer um desses métodos.
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage package flight submissions](manage-flight-submissions.md)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

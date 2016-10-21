@@ -3,8 +3,9 @@ author: jnHs
 Description: "A Windows Store abrange clientes em mais de 200 países e regiões em todo o mundo."
 title: "Definir preço e seleção de mercado"
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
+translationtype: Human Translation
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: 3fb8594748d303216a4437983604b5d78c993934
 
 ---
 
@@ -13,8 +14,7 @@ ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
 
 A Windows Store abrange clientes em mais de 200 países e regiões em todo o mundo. Você pode escolher os mercados em que gostaria de oferecer seu aplicativo, e pode determinar o preço para cobrar os clientes, com a opção de personalizar preços por mercado.
 
-
-            **Observação**  Considere nossas [diretrizes para facilitar a globalização do seu aplicativo](https://msdn.microsoft.com/library/windows/apps/hh969150).
+**Observação**  Considere nossas [diretrizes para facilitar a globalização do seu aplicativo](https://msdn.microsoft.com/library/windows/apps/hh969150).
 
  
 
@@ -25,8 +25,7 @@ Quando você seleciona o **Preço base** do seu aplicativo, esse preço será us
 
 Você pode definir o **Preço base** como **Grátis**, ou pode escolher uma faixa de preço disponíveis. o que define o preço de venda em todos os países/regiões em que você decidir distribuir seu aplicativo. As faixas de preço começam em 0,99 USD, com incrementos adicionais (1,29 USD, 1,49 USD, 1,99 USD, e assim por diante). Esses incrementos aumentam conforme o preço fica mais alto.
 
-> 
-            **Observação**  Essas faixas de preço também se aplicam aos [IAPs (produtos no aplicativo))](iap-submissions.md).
+> **Observação**  Essas faixas de preço também se aplicam aos [complementos](add-on-submissions.md).
 
 Cada faixa de preço tem um valor correspondente em cada uma das mais de 60 moedas oferecidas pela Loja. Nós usamos esses valores para ajudar você a vender seus aplicativos com um preço proporcional em todo o mundo. Porém, devido a alterações cambiais, o valor exato das vendas pode sofrer uma pequena variação de uma moeda para a outra.
 
@@ -39,25 +38,22 @@ Por padrão, seu aplicativo será listado em todos os mercados possíveis, inclu
 
 Para alterar essas configurações, expanda a seção **Mercados e preços personalizados** na página **Preço e disponibilidade** de envio do seu aplicativo. Você pode desmarcar mercados individuais para excluí-los, ou clicar em **Desmarcar tudo** e adicionar mercados individuais de sua escolha.
 
-> 
-            **Importante**   É sua responsabilidade cumprir os requisitos legais locais, mesmo que esses requisitos não estejam listados aqui ou no painel do Centro de Desenvolvimento do Windows.
+> **Importante**   É sua responsabilidade cumprir os requisitos legais locais, mesmo que esses requisitos não estejam listados aqui ou no painel do Centro de Desenvolvimento do Windows.
 
 Se deseja definir preços personalizados para o seu aplicativo em mercados específicos, faça isso aqui também. Caso contrário, por padrão, seu aplicativo será oferecido pelo preço base (na moeda local daquele mercado).
 
-> 
-            **Observação**  Você também pode definir preços personalizados para mercados específicos nos [envios de IAP](iap-submissions.md).
+> **Observação**  Você também pode definir preços personalizados para mercados específicos nos [envios de complementos](add-on-submissions.md).
 
 Tenha em mente que mesmo se você selecionar todos os mercados, leis locais e restrições ou outros fatores podem impedir que certos aplicativos sejam listados em alguns países e regiões. Além disso, alguns mercados podem ter requisitos específicos relacionados às classificações etárias. Se o seu aplicativo não cumprir esses requisitos, não poderemos oferecer o seu aplicativo nesse mercado. Veja [Classificações etárias](age-ratings.md) para saber mais.
 
-> 
-            **Observação**  Para aplicativos destinados ao Windows 8 ou Windows 8.1, alguns mercados individuais são tratados como um único mercado "Resto do mundo". Para saber mais, veja [Mercados "Resto do mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8-x). Também tenha em mente que os clientes no Windows 8 ou Windows 8.1 verão apenas o aplicativo listado com seu preço base, mesmo que você altere o preço nos respectivos mercados.
+> **Observação**  Para aplicativos destinados ao Windows 8 ou Windows 8.1, alguns mercados individuais são tratados como um único mercado "Resto do mundo". Para saber mais, veja [Mercados "Resto do mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8-x). Também tenha em mente que os clientes no Windows 8 ou Windows 8.1 verão apenas o aplicativo listado com seu preço base, mesmo que você altere o preço nos respectivos mercados.
 
  
 
 ## Mercados de consumidor da Windows Store
 
 
-Você pode optar por listar seu aplicativo (ou IAP) em um ou mais dos mercados a seguir.
+Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos mercados a seguir.
 
 -   Afeganistão
 -   Ilhas Aland
@@ -555,11 +551,10 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
 -   Zâmbia
 -   Zimbábue
 
-> 
-            **Observação**  Para uma lista de países e regiões em que você pode registrar uma conta de desenvolvedor, consulte [Tipos de conta, locais e tarifas](https://msdn.microsoft.com/library/windows/apps/jj863494).
+> **Observação**  Para uma lista de países e regiões em que você pode registrar uma conta de desenvolvedor, consulte [Tipos de conta, locais e tarifas](https://msdn.microsoft.com/library/windows/apps/jj863494).
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

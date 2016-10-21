@@ -5,8 +5,9 @@ title: "Interações por mouse"
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 10deda7b44d4cfb5c65b425bf82ceaf6654aab95
+ms.openlocfilehash: 5a26ff6380383965d51a6938db68ad8406941229
 
 ---
 
@@ -91,7 +92,7 @@ Responda à entrada do mouse em seus aplicativos manipulando os mesmos eventos d
 
 Use eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) para implementar funcionalidade de entrada básica sem a necessidade de gravar código para cada dispositivo de entrada de ponteiro. No entanto, você ainda pode aproveitar as funcionalidades especiais de cada dispositivo (como eventos do botão de rolagem do mouse) usando os eventos de ponteiro, gesto e manipulação desse objeto.
 
-**Exemplos: **consulte essa funcionalidade em ação nos [exemplos de aplicativos](http://go.microsoft.com/fwlink/p/?LinkID=264996).
+**Exemplos:  **consulte essa funcionalidade em ação nos [exemplos de aplicativos](http://go.microsoft.com/fwlink/p/?LinkID=264996).
 
 
 - [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
@@ -155,6 +156,6 @@ Se você precisa personalizar o cursor do mouse:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

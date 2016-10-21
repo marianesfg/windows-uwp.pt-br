@@ -1,31 +1,28 @@
 ---
 author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
-description: "Use este método na API de análise da Windows Store para obter dados agregados de aquisição de um produto no aplicativo (IAP) durante um determinado intervalo de datas e outros filtros opcionais."
-title: "Obter aquisições IAP"
+description: "Use este método na API de análise da Windows Store para obter os dados de aquisição agregados de um complemento durante um determinado intervalo de datas e outros filtros opcionais."
+title: "Obter aquisições de complemento"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: bff5eb8ecf5a11067a590393d443343dc6ed94bc
+ms.sourcegitcommit: ecb0f5263b7f7f470484e9bd579b7bdb6efcdfa4
+ms.openlocfilehash: 9d895200e6d1bc823ebcb52e0b034883f5a059e0
 
 ---
 
-# Obter aquisições IAP
+# Obter aquisições de complemento
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Use este método na API de análise da Windows Store para obter dados agregados de aquisição de um produto no aplicativo (IAP) durante um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
+
+Use este método na API de análise da Windows Store para obter dados agregados de aquisição de um complemento (também conhecido como produto no aplicativo ou IAP) durante um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
 ## Pré-requisitos
 
 
-Para usar este método, você precisa do seguinte:
+Para usar este método, primeiro você precisa do seguinte:
 
--   Associe o aplicativo do Azure AD que você usará para chamar esse método com sua conta do Centro de Desenvolvimento.
-
--   Obtenha um token de acesso do Azure AD para seu aplicativo.
-
-Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md).
+* Se você não tiver feito isso, conclua todos os [pré-requisitos](access-analytics-data-using-windows-store-services.md#prerequisites) para a API de análise da Windows Store.
+* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
 ## Solicitação
 
@@ -42,13 +39,13 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
 ### Parâmetros solicitados
 
-O parâmetro *applicationId* ou *inAppProductId* é obrigatório. Para recuperar dados de aquisição para todos os IAPs registrados no aplicativo, especifique o parâmetro *applicationId*. Para recuperar dados de aquisição de um único IAP, especifique o parâmetro *inAppProductId*. Se você especificar ambos, o parâmetro *inAppProductId* será ignorado.
+O parâmetro *applicationId* ou *inAppProductId* é obrigatório. Para recuperar dados de aquisição para todos os complementos registrados no aplicativo, especifique o parâmetro *applicationId*. Para recuperar dados de aquisição de um único complemento, especifique o parâmetro *inAppProductId*. Se você especificar ambos, o parâmetro *applicationId* será ignorado.
 
 <table>
 <colgroup>
@@ -69,25 +66,25 @@ O parâmetro *applicationId* ou *inAppProductId* é obrigatório. Para recuperar
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">string</td>
-<td align="left">A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição de IAP. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.</td>
+<td align="left">A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição do complemento. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.</td>
 <td align="left">Sim</td>
 </tr>
 <tr class="even">
 <td align="left">inAppProductId</td>
 <td align="left">string</td>
-<td align="left">A ID de produto do IAP para o qual você deseja recuperar dados de aquisição.</td>
+<td align="left">A ID da Loja do complemento para o qual você deseja recuperar dados de aquisição. A ID da Loja está disponível na URL da página de visão geral do complemento no painel do Centro de Desenvolvimento do Windows. Por exemplo, se a URL da página do painel de um complemento for ```https://developer.microsoft.com/en-us/dashboard/iaps/9NBLGGH4SCZS?appId=9NBLGGH29DM8```, a ID da Loja do complemento será a string 9NBLGGH4SCZS.</td>
 <td align="left">Sim</td>
 </tr>
 <tr class="odd">
 <td align="left">startDate</td>
 <td align="left">date</td>
-<td align="left">A data de início no intervalo de datas para os dados de aquisição de IAP a serem recuperados. O padrão é a data atual.</td>
+<td align="left">A data de início no intervalo de datas de dados de aquisição de complemento a serem recuperados. O padrão é a data atual.</td>
 <td align="left">Não</td>
 </tr>
 <tr class="even">
 <td align="left">endDate</td>
 <td align="left">date</td>
-<td align="left">A data de término no intervalo de datas para os dados de aquisição de IAP a serem recuperados. O padrão é a data atual.</td>
+<td align="left">A data final no intervalo de datas de dados de aquisição de complemento a serem recuperados. O padrão é a data atual.</td>
 <td align="left">Não</td>
 </tr>
 <tr class="odd">
@@ -117,7 +114,7 @@ O parâmetro *applicationId* ou *inAppProductId* é obrigatório. Para recuperar
 <tr class="odd">
 <td align="left">orderby</td>
 <td align="left">string</td>
-<td align="left">Uma instrução que classifica os valores dos dados do resultado de cada aquisição de IAP. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser uma das seguintes cadeias de caracteres:
+<td align="left">Uma instrução que classifica os valores de dados resultantes de cada aquisição de complemento. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser uma das seguintes cadeias de caracteres:
 <ul>
 <li><strong>date</strong></li>
 <li><strong>acquisitionType</strong></li>
@@ -247,7 +244,7 @@ Para obter uma lista dos campos com suporte, consulte a tabela a seguir. Valores
 
 ### Exemplo de solicitação
 
-Os exemplos a seguir demonstram várias solicitações de obtenção de dados de aquisição de IAP. Substitua os valores de *inAppProductId* e *applicationId* com a ID de produto apropriada para seu IAP e a ID da Loja para seu aplicativo.
+Os exemplos a seguir demonstram várias solicitações de obtenção de dados de aquisição do complemento. Substitua os valores de *inAppProductId* e *applicationId* pela ID da Loja apropriada para seu complemento ou aplicativo.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?inAppProductId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -267,22 +264,23 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                                |
 |------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Valor      | array  | Uma matriz de objetos que contém dados agregados de aquisição de IAP. Para obter mais informações sobre os dados em cada objeto, consulte a seção [Valores de aquisição de IAP](#iap-acquisition-values) a seguir.                                                                                                              |
-| @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você pode usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 10000, mas houver mais de 10000 linhas de dados de aquisição de IAP para a consulta. |
+| Valor      | array  | Uma matriz de objetos que contém dados agregados de aquisição de complemento. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [valores de aquisição de complemento](#add-on-acquisition-values) a seguir.                                                                                                              |
+| @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você pode usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 10000, mas houver mais de 10000 linhas de dados de aquisição de complemento para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                                                                                                                                                                                                                 |
 
 <span/>
 
-### Valores de aquisição de IAP
+<span id="add-on-acquisition-values" />
+### Valores de aquisição de complemento
 
 Os elementos na matriz *Value* contêm os seguintes valores.
 
 | Valor               | Tipo    | Descrição                                                                                                                                                                                                                              |
 |---------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date                | string  | A primeira data no intervalo de datas dos dados de aquisição. Se a solicitação especificou um único dia, esse valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, esse valor será a primeira data nesse intervalo de datas. |
-| inAppProductId      | string  | A ID de produto do IAP para o qual você está recuperando os dados de aquisição.                                                                                                                                                                 |
-| inAppProductName    | string  | O nome de exibição do IAP.                                                                                                                                                                                                             |
-| applicationId       | string  | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição de IAP.                                                                                                                                                           |
+| inAppProductId      | string  | A ID da Loja do complemento do qual você está recuperando dados de aquisição.                                                                                                                                                                 |
+| inAppProductName    | string  | O nome de exibição do complemento.                                                                                                                                                                                                             |
+| applicationId       | string  | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição do complemento.                                                                                                                                                           |
 | applicationName     | string  | O nome de exibição do aplicativo.                                                                                                                                                                                                             |
 | deviceType          | string  | O tipo de dispositivo que concluiu a aquisição. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                                  |
 | orderName           | string  | O nome do pedido.                                                                                                                                                                                                                   |
@@ -306,7 +304,7 @@ O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
     {
       "date": "2015-01-02",
       "inAppProductId": "9NBLGGH3LHKL",
-      "inAppProductName": "Contoso IAP 7",
+      "inAppProductName": "Contoso add-on 7",
       "applicationId": "9NBLGGGZ5QDR",
       "applicationName": "Contoso Demo",
       "deviceType": "Phone",
@@ -316,7 +314,7 @@ O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
       "market": "GB",
       "gender": "m",
       "ageGroup": "50orover",
-      "acquisitionType": "Iap",
+      "acquisitionType": "iap",
       "acquisitionQuantity": 1
     }
   ],
@@ -330,7 +328,7 @@ O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
 * [Obter aquisições de aplicativo](get-app-acquisitions.md)
 * [Obter dados de relatório de erros](get-error-reporting-data.md)
-* [Obter classificações de aplicativo](get-app-ratings.md)
+* [Obter classificações de aplicativos](get-app-ratings.md)
 * [Obter avaliações de aplicativo](get-app-reviews.md)
 
  
@@ -339,6 +337,6 @@ O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

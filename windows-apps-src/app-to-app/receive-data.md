@@ -3,14 +3,15 @@ description: "Este artigo explica como receber conteúdo em seu aplicativo UWP (
 title: Receber dados
 ms.assetid: 0AFF9E0D-DFF4-4018-B393-A26B11AFDB41
 author: awkoren
-ms.sourcegitcommit: 7069e55b92e69a0af9ba23a0a737b61d427c615c
-ms.openlocfilehash: 806bcb591ec3b7c786f8aa98d854863539d723e2
+translationtype: Human Translation
+ms.sourcegitcommit: b8d627da82da463b87ace2a2ef6e739b1caafaa2
+ms.openlocfilehash: 0092fe2832eeafbc4e7cfa36a3444b9551a4f672
 
 ---
 
 # Receber dados
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo explica como receber conteúdo em seu aplicativo UWP (Plataforma Universal do Windows) compartilhado de outro aplicativo usando o contrato de Compartilhamento. Este contrato de Compartilhamento permite que seu aplicativo seja apresentado como uma opção quando o usuário invoca o compartilhamento.
@@ -21,7 +22,7 @@ O sistema exibe uma lista de possíveis aplicativos de destino quando um usuári
 
 1.  Abra o arquivo de manifesto. Ele deve ser nomeado como algo semelhante a **package.appxmanifest**.
 2.  Abra a guia **Declarações**.
-3.  Escolha **Compartilhamento de Destino** na lista **Declarações disponíveis** e clique em **Adicionar**.
+3.  Escolha **Compartilhamento de Destino** na lista **Declarações disponíveis** e selecione **Adicionar**.
 
 ## Escolher tipos de arquivo e formatos
 
@@ -32,14 +33,14 @@ Registre somente os formatos que seu aplicativo pode manipular. São exibidos so
 Para definir os tipos de arquivo:
 
 1.  Abra o arquivo de manifesto. Ele deve ser nomeado como algo semelhante a **package.appxmanifest**.
-2.  Na seção **Tipos de Arquivos com Suporte** da página **Declarações**, clique em **Adicionar novo**.
-3.  Digite a extensão de nome de arquivo à qual você deseja dar suporte. Por exemplo, .docx. É necessário incluir o ponto. Se quiser dar suporte a todos os tipos de arquivos, marque a caixa **SupportsAnyFileType**.
+2.  Na seção **Tipos de Arquivos com Suporte** da página **Declarações**, selecione **Adicionar novo**.
+3.  Digite a extensão de nome de arquivo à qual você deseja dar suporte, por exemplo, ".docx". É necessário incluir o ponto. Se quiser dar suporte a todos os tipos de arquivos, marque a caixa de seleção **SupportsAnyFileType**.
 
 Para definir os formatos de dados:
 
 1.  Abra o arquivo de manifesto.
-2.  Abra a seção **Formatos de Dados** da página **Declarações** e clique em **Adicionar Novo**.
-3.  Digite o nome do formato de dados com suporte. Por exemplo, "Texto".
+2.  Abra a seção **Formatos de Dados** da página **Declarações** e selecione **Adicionar Novo**.
+3.  Digite o nome do formato de dados compatível, por exemplo, "Texto".
 
 ## Manipular a ativação de compartilhamento
 
@@ -95,7 +96,7 @@ Por fim, quando o aplicativo tiver processado o conteúdo compartilhado, chame [
 shareOperation.ReportCompleted();
 ```
 
-Ao usar esses métodos, você costuma chamá-los na ordem descrita e apenas uma vez. Porém, tem vezes que um aplicativo de destino pode chamar [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved) antes de [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted). Por exemplo, o aplicativo pode recuperar os dados como parte de uma tarefa no manipulador de ativação, mas não pode chamar **ReportStarted** até que o usuário clique no botão Compartilhar.
+Ao usar esses métodos, você costuma chamá-los na ordem descrita e apenas uma vez. Porém, tem vezes que um aplicativo de destino pode chamar [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved) antes de [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted). Por exemplo, o aplicativo pode recuperar os dados como parte de uma tarefa no manipulador de ativação, mas não pode chamar **ReportStarted** até que o usuário clique no botão **Compartilhar**.
 
 ## Retornar um QuickLink se o compartilhamento tiver sido bem-sucedido
 
@@ -129,6 +130,7 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 
 ## Consulte também 
 
+* [Comunicação de aplicativo a aplicativo](index.md)
 * [Compartilhar dados](share-data.md)
 * [OnShareTargetActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onsharetargetactivated.aspx)
 * [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
@@ -140,6 +142,7 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 * [QuickLInkId](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.id.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

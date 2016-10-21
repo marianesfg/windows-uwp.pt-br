@@ -3,8 +3,9 @@ author: mcleblanc
 description: "O código que se integra ao dispositivo propriamente dito e aos sensores envolve a entrada do usuário e a saída para ele."
 title: Portabilidade do Windows Runtime 8.x para UWP para E/S, dispositivo e modelo de aplicativo
 ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: e5e560ca4f40496edf9d11c3eef546fdc4c3b079
+ms.openlocfilehash: 4f7a73eb48d898ed99a5145eccc04da259fe4871
 
 ---
 
@@ -37,8 +38,7 @@ O Windows 10 mudou a forma de pensar sobre alterações direcionadas ao aplicati
 
 Se você tiver em seu aplicativo Universal 8.1 um código que detecte qual sistema operacional está em execução, então talvez seja necessário alterar isso, dependendo do motivo dessa lógica. Se o aplicativo estiver passando o valor e não agindo em relação a ele, então talvez você queira continuar a coletar informações do sistema operacional.
 
-
-            **Observação**   Recomendamos que você não use o sistema operacional nem a família de dispositivos para detectar a presença de recursos. Identificar o sistema operacional ou a família de dispositivos atual normalmente não é a melhor maneira de determinar se um recurso de sistema operacional ou de família de dispositivos está presente. Em vez de detectar o sistema operacional ou a família de dispositivos (e o número de versão), teste a presença do próprio recurso (consulte [Compilação condicional e código adaptável](w8x-to-uwp-porting-to-a-uwp-project.md#reviewing-conditional-compilation)). Se você precisar de um determinado sistema operacional ou uma família de dispositivos, certifique-se de usá-la como uma versão mínima compatível, em vez de criar o teste para essa versão.
+**Observação** Recomendamos que você não use o sistema operacional ou a família de dispositivos para detectar a presença de recursos. Identificar o sistema operacional ou a família de dispositivos atual normalmente não é a melhor maneira de determinar se um recurso de sistema operacional ou de família de dispositivos está presente. Em vez de detectar o sistema operacional ou a família de dispositivos (e o número de versão), teste a presença do próprio recurso (consulte [Compilação condicional e código adaptável](w8x-to-uwp-porting-to-a-uwp-project.md#reviewing-conditional-compilation)). Se você precisar de um determinado sistema operacional ou uma família de dispositivos, certifique-se de usá-la como uma versão mínima compatível, em vez de criar o teste para essa versão.
 
  
 
@@ -78,6 +78,6 @@ Quando um aplicativo que declara a funcionalidade Localização no manifesto do 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

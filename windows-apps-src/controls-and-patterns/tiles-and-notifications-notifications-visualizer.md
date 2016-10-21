@@ -5,20 +5,19 @@ title: "Visualizador de notificações"
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: dcbf05669093047bd76dc01c217daf353d8fb9da
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: a954404ccc2e986c1603402315c8497f802ad254
 
 ---
-
 # Visualizador de notificações
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Visualizador de Notificações é um novo aplicativo da Plataforma Universal do Windows (UWP) na [Loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores no design de blocos dinâmicos adaptáveis para Windows 10.
 
-## <span id="Overview"></span><span id="overview"></span><span id="OVERVIEW"></span>Visão geral
+## Visão geral
 
 
 O aplicativo Visualizador de Notificações oferece visualizações visuais instantâneas do bloco à medida que você edita, semelhante ao modo de exibição editor/design XAML do Visual Studio. O aplicativo também verifica se há erros, o que garante que você crie uma carga de bloco válida.
@@ -31,12 +30,11 @@ Esta captura de tela do aplicativo mostra a carga XML e como tamanhos de bloco s
 
 Com o Visualizador de Notificações, é possível criar e testar cargas de bloco adaptável sem que seja necessário editar e implantar o aplicativo propriamente dito. Depois que tiver criado uma carga com resultados visuais ideais, você pode integrá-la ao aplicativo. Consulte [Enviar uma notificação de bloco local](tiles-and-notifications-sending-a-local-tile-notification.md) para saber mais.
 
-
-            **Observação**   A simulação do Visualizador de Notificações do menu Iniciar do Windows nem sempre é totalmente precisa e não dá suporte a algumas propriedades de carga como [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712). Quando tiver o design de bloco que você deseja, teste-o fixando o bloco no menu Iniciar real para verificar se ele é exibido como você deseja.
+**Observação**   A simulação do Visualizador de Notificações do menu Iniciar do Windows nem sempre é totalmente precisa e não dá suporte a algumas propriedades de carga como [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712). Quando tiver o design de bloco que você deseja, teste-o fixando o bloco no menu Iniciar real para verificar se ele é exibido como você deseja.
 
  
 
-## <span id="Features"></span><span id="features"></span><span id="FEATURES"></span>Recursos
+## Recursos
 
 
 Visualizador de Notificações acompanha várias cargas de exemplo para demonstrar o que é possível com blocos dinâmicos adaptáveis e ajudar na introdução. É possível testar todas as opções de texto diferente, grupos/subgrupos, imagens de plano de fundo, e você pode ver como o bloco se adapta a dispositivos e telas diferentes. Depois que tiver feito alterações, você poderá salvar a carga atualizada em um arquivo para uso futuro.
@@ -51,7 +49,7 @@ Esta captura de tela do aplicativo mostra o editor de blocos:
 
  
 
-## <span id="related_topics"></span>Tópicos relacionados
+## Tópicos relacionados
 
 
 * [Obtenha o Visualizador de Notificações na Loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)
@@ -69,6 +67,6 @@ Esta captura de tela do aplicativo mostra o editor de blocos:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

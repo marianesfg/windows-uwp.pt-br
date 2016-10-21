@@ -5,8 +5,9 @@ title: "Noções básicas de design de navegação de aplicativos da Plataforma 
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 6926d70c7140b1545a8b5492981d6d0b61af3784
+translationtype: Human Translation
+ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
+ms.openlocfilehash: 2a4005aa12a123c0f9e98486fa1c69839a14276c
 
 ---
 
@@ -22,8 +23,7 @@ Para serem bem-sucedidas e fazerem sentido para os usuários, as experiências d
 
     Criar uma estrutura de navegação que faça sentido para o usuário é fundamental para criar uma experiência de navegação intuitiva.
 
--   
-            **Elementos de navegação compatíveis** que deem suporte à estrutura escolhida.
+-   **Elementos de navegação compatíveis** que deem suporte à estrutura escolhida.
 
     Elementos de navegação podem ajudar o usuário a acessar o conteúdo desejado e também permitem que os usuários saibam onde eles estão dentro do aplicativo. No entanto, eles também ocupam um espaço que poderia ser usado para elementos de conteúdo ou comandos, logo, é importante usar os elementos de navegação certos para a estrutura do seu aplicativo.
 
@@ -99,13 +99,13 @@ Então, quando você deve organizar as páginas em hierarquias e quando deve org
 
 Elementos de navegação podem fornecer dois serviços: eles ajudam o usuário a acessar o conteúdo desejado e alguns elementos também permitem que os usuários saibam onde eles estão dentro do aplicativo. No entanto, eles também ocupam espaço que o aplicativo poderia usar para elementos de conteúdo ou comandos, portanto, é importante usar os elementos de navegação que sejam ideais para a estrutura do seu aplicativo.
 
-### <span id="Peer-to-peer_navigation_elements"></span><span id="peer-to-peer_navigation_elements"></span><span id="PEER-TO-PEER_NAVIGATION_ELEMENTS"></span>Elementos de navegação ponto a ponto
+### <span id="Peer_navigation_elements"></span><span id="peer_navigation_elements"></span><span id="PEER_NAVIGATION_ELEMENTS"></span>Elementos de navegação de mesmo nível
 
-Os elementos de navegação ponto a ponto permitem a navegação entre páginas no mesmo nível da mesma subárvore.
+Os elementos de navegação de mesmo nível permitem a navegação entre páginas no mesmo nível da mesma subárvore.
 
-![navegação ponto a ponto](images/nav/nav-lateralmovement.png)
+![navegação de mesmo nível](images/nav/nav-lateralmovement.png)
 
-Para a navegação ponto a ponto, recomendamos o uso de guias ou de um painel de navegação.
+Para a navegação de mesmo nível, recomendamos o uso de guias ou de um painel de navegação.
 
 <table>
 <colgroup>
@@ -151,11 +151,11 @@ Para a navegação ponto a ponto, recomendamos o uso de guias ou de um painel de
 
  
 
-Se a sua estrutura de navegação tiver vários níveis, recomendamos que elementos de navegação ponto a ponto sejam vinculados apenas aos pares em sua subárvore atual. Considere a ilustração a seguir, que mostra uma estrutura de navegação que tem três níveis:
+Se a sua estrutura de navegação tiver vários níveis, recomendamos que elementos de navegação de mesmo nível sejam vinculados apenas aos pares em sua subárvore atual. Considere a ilustração a seguir, que mostra uma estrutura de navegação que tem três níveis:
 
 ![um aplicativo com duas subárvores](images/nav/nav-subtrees.png)
--   Para o nível 1, o elemento de navegação ponto a ponto deve fornecer acesso às páginas A, B, C e D.
--   No nível 2, os elementos de navegação ponto a ponto para as páginas A2 só devem vincular a outras páginas A2. Eles não devem vincular a páginas do nível 2 páginas na subárvore C.
+-   Para o nível 1, o elemento de navegação de mesmo nível deve fornecer acesso às páginas A, B, C e D.
+-   No nível 2, os elementos de navegação de mesmo nível para as páginas A2 só devem vincular a outras páginas A2. Eles não devem vincular a páginas do nível 2 páginas na subárvore C.
 
 ![um aplicativo com duas subárvores](images/nav/nav-subtrees2.png)
 
@@ -265,10 +265,6 @@ Você pode combinar elementos de navegação para criar uma experiência de nave
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

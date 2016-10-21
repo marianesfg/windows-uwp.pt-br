@@ -5,7 +5,7 @@ title: "Programação assíncrona"
 description: "Este tópico descreve a programação assíncrona na Plataforma Universal do Windows (UWP) e sua representação em C#, Microsoft Visual Basic .NET, extensões de componente do Visual C++ (C++/CX) e JavaScript."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 36300453bbffd06c675ff63e6e9cb4cafe3a56f5
+ms.openlocfilehash: c033c1d985b9373d9cbadf38463610aa1922163e
 
 ---
 # Programação assíncrona
@@ -45,12 +45,9 @@ Com um padrão assíncrono UWP, você pode evitar explicitamente gerenciar todos
 
 | Linguagem de programação | Representação assíncrona           |
 |----------------------|---------------------------------------|
-| C#                  | 
-              Palavra-chave **async**, operador **await** |
-| Visual Basic         | 
-              Palavra-chave **Async**, operador **Await** |
-| C++/CX               | 
-              classe **task**, método **.then**      |
+| C#                  | Palavra-chave **async**, operador **await** |
+| Visual Basic         | Palavra-chave **Async**, operador **Await** |
+| C++/CX               | classe **task**, método **.then**      |
 | JavaScript           | objeto promise, função **then**     |
 
  
@@ -84,6 +81,6 @@ Em muitos casos, chamar uma função assíncrona é quase tão simples quando ch
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

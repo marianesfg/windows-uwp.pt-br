@@ -2,17 +2,18 @@
 author: mcleanbyron
 ms.assetid: 48a1ef86-8514-4af8-9c93-81e869d36de7
 description: Saiba como criar programaticamente um **AdControl** em JavaScript.
-title: Criar uma AdControl em JavaScript
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 481f9d785181ca197debdb807bb0b0c7b4168632
+title: Criar um AdControl em JavaScript
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 68bc124aea079bc60fa22e1e6a038caf95fe765c
 
 
 ---
 
-# Criar uma AdControl em JavaScript
+# Criar um AdControl em JavaScript
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Este exemplo mostra como criar programaticamente um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) em JavaScript.
 
@@ -61,6 +62,6 @@ Se você usa esse código e não vê anúncios, tente inserir um atributo **posi
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

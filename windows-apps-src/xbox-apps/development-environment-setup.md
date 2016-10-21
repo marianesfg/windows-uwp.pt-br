@@ -2,9 +2,9 @@
 author: Mtoepke
 title: Configurar seu ambiente de desenvolvimento da UWP no Xbox
 description: Etapas para configurar e testar sua UWP no ambiente de desenvolvimento do Xbox.
-area: Xbox
-ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
-ms.openlocfilehash: d56206f990e7885af4935401356bd3a2ce2cd292
+translationtype: Human Translation
+ms.sourcegitcommit: e273cc55935f961e0b5493c0648347cba399fa3d
+ms.openlocfilehash: 5ffe0ce35e4aabcfc74e9bfa9017248320925603
 
 ---
 
@@ -28,9 +28,12 @@ Este artigo discute as etapas para configurar e testar seu ambiente de desenvolv
 
 Instale a versão prévia mais recente do SDK do Windows 10. Para obter informações de instalação, consulte [Baixe atualizações do Insider Preview para desenvolvedores](http://go.microsoft.com/fwlink/p/?LinkId=780552).
 
-  > 
-            **Importante**
-            &nbsp;&nbsp;Você precisa instalar o SDK mais recente, mas _não_ precisa instalar a versão mais recente do Windows Insider Preview do sistema operacional.
+> [!IMPORTANT]
+> Você precisa instalar o SDK mais recente, mas _não_ precisa instalar a versão mais recente do Windows Insider Preview do sistema operacional.
+
+## Habilitar o modo de desenvolvedor
+
+Antes de implementar aplicativos em seu computador de desenvolvimento, você deve habilitar o Modo de Desenvolvedor por meio do menu do Windows: Configurações/Atualização e segurança/Para desenvolvedores/Modo de desenvolvedor.
 
 ## Configurando o Xbox One
 
@@ -42,7 +45,7 @@ Para que você possa implantar um aplicativo em seu Xbox One, precisa ter um usu
 
 1. Verifique se o seu console Xbox One está no Modo de Desenvolvedor.  Para saber mais, consulte [Habilitando o Modo de Desenvolvedor no Xbox One](devkit-activation.md).
 
-1. Decida qual linguagem de programação você deseja usar para o seu aplicativo UWP.
+1. Decida qual linguagem de programação que você deseja usar para o seu aplicativo UWP.
 
 1. No computador de desenvolvimento, selecione **Novo Projeto** e depois **Windows / Universal / Aplicativo em Branco**.
 
@@ -110,6 +113,6 @@ Parabéns! Você criou e implantou com êxito o seu primeiro aplicativo UWP no X
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

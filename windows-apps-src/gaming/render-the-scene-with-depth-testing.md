@@ -3,15 +3,16 @@ author: mtoepke
 title: Renderizar a cena com teste de profundidade
 description: "Crie um efeito de sombra adicionando testes de profundidade ao sombreador de vértice (ou geometria) e ao sombreador de pixel."
 ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2bac8e8337a10a8411b02eeed53d772dbb5abad6
+ms.openlocfilehash: 6351cc9f6efe0d4bffb54961624a35b4a9f4136a
 
 ---
 
 # Renderizar a cena com teste de profundidade
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Crie um efeito de sombra adicionando testes de profundidade ao sombreador de vértice (ou geometria) e ao sombreador de pixel. Parte 3 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -164,6 +165,6 @@ Na próxima parte deste guia passo a passo, veremos como dar [Suporte a mapas de
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

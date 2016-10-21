@@ -3,8 +3,9 @@ author: mtoepke
 title: "Elementos gráficos 3D básicos para jogos DirectX"
 description: "Mostramos como usar programação em DirectX para implementar os conceitos fundamentais de elementos gráficos 3D."
 ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8f27c5060ffdc566c596168e54d51730c349d401
+ms.openlocfilehash: d4b059bed3cb21403b742048d6f6df47780b8aab
 
 ---
 
@@ -15,24 +16,21 @@ ms.openlocfilehash: 8f27c5060ffdc566c596168e54d51730c349d401
 
 Mostramos como usar programação em DirectX para implementar os conceitos fundamentais de elementos gráficos 3D.
 
-
-            **Objetivo:** aprender a programar um aplicativo com elementos gráficos 3D.
+**Objetivo:** aprender a programar um aplicativo com elementos gráficos 3D.
 
 ## Pré-requisitos
 
 
 Partimos do princípio de que você conhece C++. Você também precisa ter experiência básica com conceitos de programação de elementos gráficos.
 
-
-            **Tempo total para concluir:** 30 minutos.
+**Tempo total para concluir:** 30 minutos.
 
 ## Para onde ir a partir daqui
 
 
 Aqui, falamos sobre como desenvolver elementos gráficos 3D com DirectX e C++\\Cx. Este tutorial em cinco partes introduz a API [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) e os conceitos e códigos que também são usados em muitas das outras amostras de DirectX. Essas partes se complementam, desde a configuração do DirectX para seu aplicativo em C++ da UWP até a texturização de primitivos e a adição de efeitos.
 
-> 
-            **Observação**  Este tutorial usa um sistema de coordenadas destro com vetores coluna. Muitos exemplos e aplicativos em DirectX usam um sistema de coordenadas à esquerda, com vetores de linha. Para uma solução matemática de elementos gráficos mais completa e que suporte um sistema de coordenadas canhoto com vetores linha, considere o uso de [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). Para obter mais informações, consulte [Usando DirectXMath com Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
+> **Observação**  Este tutorial usa um sistema de coordenadas destro com vetores coluna. Muitos exemplos e aplicativos em DirectX usam um sistema de coordenadas à esquerda, com vetores de linha. Para uma solução matemática de elementos gráficos mais completa e que suporte um sistema de coordenadas canhoto com vetores linha, considere o uso de [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). Para obter mais informações, consulte [Usando DirectXMath com Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
 
  
 
@@ -70,6 +68,6 @@ Em seguida, criamos um dispositivo Direct3D, uma cadeia de troca e um modo de ex
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

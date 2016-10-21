@@ -1,16 +1,16 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 3604524F-112A-474F-B0CA-0726DC8DB885
 title: Determinando a disponibilidade de arquivos do Microsoft OneDrive
 description: "Determine se um arquivo do Microsoft OneDrive está disponível usando a propriedade StorageFile.IsAvailable."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: a46507f007e0f5c3a9b28e4a6e72f6ba31114294
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: 2ed00b525fd2b7af51da00ad0464e37f1cabd889
 
 ---
 # Determinando a disponibilidade de arquivos do Microsoft OneDrive
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** APIs importantes **
@@ -35,9 +35,7 @@ Determine se um arquivo do Microsoft OneDrive está disponível usando a proprie
 
 Os usuários podem marcar os arquivos OneDrive como disponível offline (padrão) ou somente online. Com essa funcionalidade, os usuários podem transferir arquivos grandes (como fotos e vídeos) para o OneDrive, marcá-los como somente online e economizar espaço em disco (a única coisa mantida localmente é um arquivo de metadados).
 
-
-              [
-              **StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) é usada para determinar se um arquivo está disponível no momento. A tabela a seguir mostra o valor da propriedade **StorageFile.IsAvailable** em diversos cenários.
+[**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) é usada para determinar se um arquivo está disponível no momento. A tabela a seguir mostra o valor da propriedade **StorageFile.IsAvailable** em diversos cenários.
 
 | Tipo de arquivo                              | Online | Rede limitada        | Offline |
 |-------------------------------------------|--------|------------------------|---------|
@@ -80,9 +78,9 @@ private async void CheckAvailabilityOfFilesInPicturesLibrary()
         StorageFile file = files[i];
 
         StringBuilder fileInfo = new StringBuilder();
-        fileInfo.AppendFormat("{0} (on {1}) is {2}", 
-                    file.Name, 
-                    file.Provider.DisplayName, 
+        fileInfo.AppendFormat("{0} (on {1}) is {2}",
+                    file.Name,
+                    file.Provider.DisplayName,
                     file.IsAvailable ? "available" : "not available");
     }
 }
@@ -94,10 +92,6 @@ private async void CheckAvailabilityOfFilesInPicturesLibrary()
 
 
 
-
-
-
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

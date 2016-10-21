@@ -6,22 +6,36 @@ ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
 label: Password box
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 1a2d5efbeacd5ce8a71f5261aa52f09400c75c97
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 4f08195bcd70429f103c730c6c4a6d69dcf5b55e
 
 ---
 # Caixa de senha
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Caixa de senha é uma caixa de entrada de texto que oculta os caracteres digitados nela, para fins de privacidade. Uma caixa de senha se parece com uma caixa de texto, exceto que ela renderiza caracteres de espaço reservado no lugar do texto que foi inserido. Você pode configurar o caractere de espaço reservado.
 
 Por padrão, a caixa de senha oferece uma maneira para o usuário visualizar a senha pressionando um botão de revelar. Você pode desabilitar o botão de revelação ou fornecer um mecanismo alternativo para revelar a senha, como uma caixa de seleção.
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx"><strong>Classe PasswordBox</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx"><strong>Propriedade Password</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx"><strong>Propriedade PasswordChar</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx"><strong>Propriedade PasswordRevealMode</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx"><strong>Evento PasswordChanged</strong></a></li>
+</ul>
 
--   [**Classe PasswordBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
--   [**Propriedade Password**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx)
--   [**Propriedade PasswordChar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx)
--   [**Propriedade PasswordRevealMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx)
--   [**Evento PasswordChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)
+</div>
+</div>
+
+
+
+
+
 
 ## Esse é o controle correto?
 
@@ -55,7 +69,7 @@ Aqui está o XAML para um controle de caixa de senha que demonstra a aparência 
 <StackPanel>  
   <PasswordBox x:Name="passwordBox" Width="200" MaxLength="16"
              PasswordChanged="passwordBox_PasswordChanged"/>
-           
+
   <TextBlock x:Name="statusText" Margin="10" HorizontalAlignment="Center" />
 </StackPanel>   
 ```
@@ -115,9 +129,7 @@ Por padrão, o botão de revelação de senha (ou botão de "espiada") é exibid
 
 O valor da propriedade [PasswordRevealMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx) não é único fator que determina se um botão de revelar a senha é visível para o usuário. Outros fatores incluem se o controle é exibido acima de uma largura mínima, se a PasswordBox tem foco e se o campo de entrada de texto contém pelo menos um caractere. O botão de revelar a senha é exibido apenas quando a PasswordBox recebe foco pela primeira vez e um caractere é inserido. Se a PasswordBox perde foco e o retoma em seguida, o botão de revelar não é exibido novamente, a menos que a senha seja apagada e a entrada de caracteres recomece.
 
-> 
-            **Cuidado**
-            &nbsp;&nbsp;Antes do Windows 10, o botão de revelar a senha não era exibido por padrão. Se a segurança de seu aplicativo exigir que a senha esteja sempre oculta, certifique-se de definir PasswordRevealMode como Hidden.
+> **Cuidado**&nbsp;&nbsp;Antes do Windows 10, o botão de revelar a senha não era exibido por padrão. Se a segurança de seu aplicativo exigir que a senha esteja sempre oculta, certifique-se de definir PasswordRevealMode como Hidden.
 
 ### Modos ocultos e visíveis
 
@@ -131,10 +143,10 @@ Este exemplo mostra como uma [CheckBox](https://msdn.microsoft.com/library/windo
 
 ```xaml
 <StackPanel Width="200">
-    <PasswordBox Name="passwordBox1" 
+    <PasswordBox Name="passwordBox1"
                  PasswordRevealMode="Hidden"/>
     <CheckBox Name="revealModeCheckBox" Content="Show password"
-              IsChecked="False" 
+              IsChecked="False"
               Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
 </StackPanel>
 ```
@@ -156,12 +168,12 @@ private void CheckBox_Changed(object sender, RoutedEventArgs e)
 Esta PasswordBox tem esta aparência.
 
 ![Caixa de senha com um botão de revelação personalizado](images/passwordbox-custom-reveal.png)
-    
+
 ## Escolha o teclado correto para seu controle de texto
 
 Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira. A PasswordBox oferece suporte apenas ao valores de escopo de entrada **Password** e **NumericPin**. Qualquer outro valor é ignorado.
 
-Para obter mais informações sobre como usar escopos de entrada, consulte [Usar o escopo de entrada para alterar o teclado virtual]().
+Para obter mais informações sobre como usar escopos de entrada, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
 ## Recomendações
 
@@ -193,6 +205,6 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

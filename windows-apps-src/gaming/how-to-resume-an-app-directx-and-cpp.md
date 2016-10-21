@@ -3,15 +3,16 @@ author: mtoepke
 title: Como retomar um aplicativo (DirectX e C++)
 description: "Este tópico mostra como restaurar dados importantes do aplicativo quando o sistema retoma o aplicativo UWP (Plataforma Universal do Windows) DirectX."
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d5383da7332c80d4337f0e0b3eef0a6851fcd527
+ms.openlocfilehash: 978f779eaeb732b549657751c11cd2192728999b
 
 ---
 
 # Como retomar um aplicativo (DirectX e C++)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico mostra como restaurar dados importantes do aplicativo quando o sistema retoma o aplicativo UWP (Plataforma Universal do Windows) DirectX.
 
@@ -99,6 +100,6 @@ O sistema suspende o aplicativo sempre que o usuário alterna para outro aplicat
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

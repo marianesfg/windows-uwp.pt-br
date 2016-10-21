@@ -2,8 +2,9 @@
 title: "Automatizar a inicialização de aplicativos UWP (Plataforma Universal do Windows) para Windows 10"
 description: "Os desenvolvedores podem usar a ativação de protocolos e a ativação de inicialização para automatizar a inicialização de seus aplicativos UWP ou jogos para testes automatizados."
 author: listurm
-ms.sourcegitcommit: adf2d16f9c208631f91fbcad19d1ea8087cd9cb5
-ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
+translationtype: Human Translation
+ms.sourcegitcommit: c5d0f685f4c733cbe4ba4c07aab565b888ddfe58
+ms.openlocfilehash: 4b31ec06b1ded4882d26cffed029eb8179ff47c3
 
 ---
 
@@ -13,11 +14,9 @@ ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
 
 Os desenvolvedores têm várias opções para realizar a inicialização automatizada de aplicativos UWP (Plataforma Universal do Windows). Neste documento, exploraremos métodos de inicialização de um aplicativo usando a ativação de protocolos e a ativação de inicialização.
 
+*Ativação de protocolo* permite que um aplicativo registrou como um manipulador para um determinado protocolo. 
 
-            *Ativação de protocolo* permite que um aplicativo registrou como um manipulador para um determinado protocolo. 
-
-
-            *Ativação de inicialização* é a inicialização normal de um aplicativo, tal como iniciar no bloco do aplicativo.
+*Ativação de inicialização* é a inicialização normal de um aplicativo, tal como iniciar no bloco do aplicativo.
 
 Com cada método de ativação, você tem a opção de usar a linha de comando ou um aplicativo inicializador. Em todos os métodos de ativação, se o aplicativo estiver sendo executado no momento, a ativação trará o aplicativo para o primeiro plano (reativando-o) e fornecerá os novos argumentos de ativação. Isso oferece flexibilidade ao uso de comandos de ativação para fornecer novas mensagens para o aplicativo. É importante observar que o projeto precisa ser compilado e implantado para que o método de ativação execute o aplicativo recém-atualizado. 
 
@@ -46,7 +45,7 @@ O aplicativo pode ser ativado por protocolo usando a linha de comando com o coma
   scheme://username:password@host:port/path.extension?query#fragment
   ```
 
-O objeto Uri tem métodos para analisar uma cadeia de caracteres do URI nesse formato. Para obter mais informações, consulte [Classe Uri (MSDN)](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.uri.aspx). 
+O objeto Uri tem métodos para analisar uma cadeia de caracteres do URI nesse formato. Para obter mais informações, consulte [Classe Uri (MSDN)](https://msdn.microsoft.com/library/windows/apps/windows.foundation.uri.aspx). 
 
 Exemplos:
 
@@ -134,7 +133,7 @@ Essa opção não dá suporte a argumentos de linha de comando.
 
 ### Aplicativo inicializador
 
-Você pode criar um aplicativo separado que dê suporte ao uso de COM na inicialização. O exemplo a seguir mostra o código C++ a ser iniciado com a ativação de inicialização em um programa inicializador. Com esse código, você pode criar um objeto **ApplicationActivationManager** e chamar **ActivateApplication** passando a AUMID encontrada anteriormente e quaisquer argumentos. Para obter mais informações sobre os outros parâmetros, consulte[Método IApplicationActivationManager::ActivateApplication (MSDN)](https://msdn.microsoft.com/en-us/library/windows/desktop/hh706903(v=vs.85).aspx).
+Você pode criar um aplicativo separado que dê suporte ao uso de COM na inicialização. O exemplo a seguir mostra o código C++ a ser iniciado com a ativação de inicialização em um programa inicializador. Com esse código, você pode criar um objeto **ApplicationActivationManager** e chamar **ActivateApplication** passando a AUMID encontrada anteriormente e quaisquer argumentos. Para obter mais informações sobre os outros parâmetros, consulte[Método IApplicationActivationManager::ActivateApplication (MSDN)](https://msdn.microsoft.com/library/windows/desktop/hh706903(v=vs.85).aspx).
 
 ```
 #include <ShObjIdl.h>
@@ -208,8 +207,12 @@ Platform::String^ argval = launchArgs->Arguments;
 ## Resumo
 Em resumo, você pode usar vários métodos para iniciar o aplicativo UWP. Dependendo dos requisitos e casos de uso, métodos diferentes podem ser mais adequados que outros. 
 
+## Consulte também
+- [UWP no Xbox One](index.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 

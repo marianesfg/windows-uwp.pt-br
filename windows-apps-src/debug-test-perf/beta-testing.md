@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: Teste beta
 description: "O teste beta oferece a você a oportunidade de melhorar seu aplicativo com base nos comentários de pessoas de fora da sua equipe de desenvolvimento que experimentam o aplicativo ainda não lançado em seus próprios dispositivos."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7404a90fc9efc05d4e2bb83321bb2ba80b8378ce
+ms.openlocfilehash: 13857b2ba5946149d04ad4f6eda6828cc11a0640
 
 ---
 # Teste de versão beta
@@ -12,8 +13,7 @@ ms.openlocfilehash: 7404a90fc9efc05d4e2bb83321bb2ba80b8378ce
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-
-          O *teste beta* dá a você a chance de aprimorar seu aplicativo com base nos comentários de pessoas de fora de sua equipe de desenvolvimento de aplicativos que experimentam seu aplicativo não lançado em seus próprios dispositivos.
+O *teste beta* oferece a você a oportunidade de melhorar seu aplicativo com base nos comentários de pessoas de fora da sua equipe de desenvolvimento que experimentam o aplicativo ainda não lançado em seus próprios dispositivos.
 
 Esta seção descreve as opções de teste beta de Aplicativos Universais do Windows.
 
@@ -50,6 +50,6 @@ Consulte [Teste beta e distribuição direcionada](https://msdn.microsoft.com/li
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,12 +5,12 @@ title: "Obter informações sobre a bateria"
 description: "Saiba como obter informações de bateria detalhadas usando APIs no namespace Windows.Devices.Power."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 9b1394c28b25b8b1b7401fcc794659dcf38fed6f
+ms.openlocfilehash: 0671ad8deef7c0062172e3a441d206efb15de7dd
 
 ---
 # Obter informações de bateria
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -24,8 +24,7 @@ Saiba como obter informações de bateria detalhadas usando APIs no namespace [*
 
 Alguns dispositivos têm mais de uma bateria e nem sempre é óbvio como cada uma contribui com a capacidade de energia geral do dispositivo. É aí que a classe [**AggregateBattery**](https://msdn.microsoft.com/library/windows/apps/Dn895011) entra. A *bateria agregada* representa todos os controladores de bateria conectados ao dispositivo e pode fornecer um único objeto geral [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005).
 
-
-              **Observação**  Uma classe [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004), na verdade, corresponde a um controlador de bateria. Dependendo do dispositivo, às vezes, o controlador é conectado à bateria física e, às vezes, ao compartimento do dispositivo. Assim, é possível criar um objeto de bateria, mesmo quando não há baterias presentes. Outras vezes, o objeto de bateria pode ser **nulo**.
+**Observação**  Uma classe [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004), na verdade, corresponde a um controlador de bateria. Dependendo do dispositivo, às vezes, o controlador é conectado à bateria física e, às vezes, ao compartimento do dispositivo. Assim, é possível criar um objeto de bateria, mesmo quando não há baterias presentes. Outras vezes, o objeto de bateria pode ser **nulo**.
 
 Quando você tiver um objeto de bateria agregada, chame [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport) para o [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)correspondente.
 
@@ -333,14 +332,13 @@ Se o nome do seu aplicativo não for **App1**, será necessário renomear o name
 
 Por fim, para executar este aplicativo básico de bateria: no menu **Depurar**, clique em **Iniciar Depuração** para testar a solução.
 
-
-              **Dica**  Para receber valores numéricos do objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005), depure o seu aplicativo no **Computador Local** ou em um **Dispositivo** externo (como um Windows Phone). Ao fazer a depuração em um emulador de dispositivo, o objeto **BatteryReport** devolve **nulo** às propriedade de capacidade e taxa.
+**Dica**  Para receber valores numéricos do objeto [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005), depure o seu aplicativo no **Computador Local** ou em um **Dispositivo** externo (como um Windows Phone). Ao fazer a depuração em um emulador de dispositivo, o objeto **BatteryReport** devolve **nulo** às propriedade de capacidade e taxa.
 
  
 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

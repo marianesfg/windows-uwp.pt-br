@@ -1,23 +1,37 @@
 ---
 author: Jwmsft
-Description: "É possível usar um controle RichEditBox para inserir e editar documentos rich text que contenham texto formatado, hiperlinks e imagens. Você pode tornar um RichEditBox somente leitura definindo sua propriedade IsReadOnly como \"true\"."
+Description: "É possível usar um controle RichEditBox para inserir e editar documentos rich text que contenham texto formatado, hiperlinks e imagens. Você pode tornar um RichEditBox somente leitura definindo sua propriedade IsReadOnly como &quot;true&quot;."
 title: RichEditBox
 ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
 label: Rich edit box
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: fc685b952db7292a9eea4d8a54bd6e2685cb13c0
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: f26bcc596417f607ee348e93009905ec4a3e27c8
 
 ---
 # Caixa de edição com formato
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 É possível usar um controle RichEditBox para inserir e editar documentos rich text que contenham texto formatado, hiperlinks e imagens. Você pode tornar um RichEditBox somente leitura definindo sua propriedade IsReadOnly como **true**.
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx"><strong>Classe RichEditBox</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx"><strong>Propriedade Document</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx"><strong>Propriedade IsReadOnly</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx"><strong>Propriedade IsSpellCheckEnabled</strong></a></li>
+</ul>
 
--   [**Classe RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)
--   [**Propriedade Document**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx)
--   [**Propriedade IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx)
--   [**Propriedade IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx)
+</div>
+</div>
+
+
+
+
+
 
 ## Esse é o controle correto?
 
@@ -27,7 +41,7 @@ Use **RichEditBox** para exibir e editar arquivos Rich Text. Você não usa um R
 -   Ao capturar texto que só será consumido e não exibido mais tarde aos usuários, use um controle de entrada de texto sem formatação.
 -   Para todos os outros cenários, use um controle de entrada de texto sem formatação.
 
-Para saber mais sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
+Para obter mais informações sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
 
 ## Exemplos
 
@@ -37,7 +51,7 @@ Essa caixa de edição com formato contém um documento rich text aberto. Os bot
 
 ## Criar uma caixa de edição com formato
 
-Por padrão, RichEditBox dá suporte à verificação ortográfica. Para desabilitar o corretor ortográfico, defina a propriedade [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx) como **false**. Para saber mais, consulte Diretrizes e lista de verificação de verificação ortográfica.
+Por padrão, RichEditBox dá suporte à verificação ortográfica. Para desabilitar o corretor ortográfico, defina a propriedade [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx) como **false**. Para obter mais informações, consulte o artigo [Diretrizes para verificação ortográfica](spell-checking-and-prediction.md).
 
 Use a propriedade [Document](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx) de RichEditBox para obter seu conteúdo. O conteúdo de RichEditBox é um objeto [Windows.UI.Text.ITextDocument](https://msdn.microsoft.com/library/windows/apps/xaml/bb774052.aspx), ao contrário do controle RichTextBlock, que usa objetos [Windows.UI.Xaml.Documents.Block](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.block.aspx) como conteúdo. A interface ITextDocument fornece um modo de carregar e salvar o documento em um fluxo, recuperar faixas de texto, obter a seleção ativa, desfazer e refazer alterações, definir atributos de formatação padrão, entre outras coisas.
 
@@ -50,20 +64,20 @@ Este exemplo mostra como editar, carregar e salvar um arquivo .rtf (Rich Text Fo
             <Setter Property="IsCompact" Value="True"/>
         </Style>
     </RelativePanel.Resources>
-    <AppBarButton x:Name="openFileButton" Icon="OpenFile" 
+    <AppBarButton x:Name="openFileButton" Icon="OpenFile"
                   Click="OpenButton_Click" ToolTipService.ToolTip="Open file"/>
-    <AppBarButton Icon="Save" Click="SaveButton_Click" 
-                  ToolTipService.ToolTip="Save file" 
+    <AppBarButton Icon="Save" Click="SaveButton_Click"
+                  ToolTipService.ToolTip="Save file"
                   RelativePanel.RightOf="openFileButton" Margin="8,0,0,0"/>
 
-    <AppBarButton Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold" 
+    <AppBarButton Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold"
                   RelativePanel.LeftOf="italicButton" Margin="0,0,8,0"/>
-    <AppBarButton x:Name="italicButton" Icon="Italic" Click="ItalicButton_Click" 
+    <AppBarButton x:Name="italicButton" Icon="Italic" Click="ItalicButton_Click"
                   ToolTipService.ToolTip="Italic" RelativePanel.LeftOf="underlineButton" Margin="0,0,8,0"/>
-    <AppBarButton x:Name="underlineButton" Icon="Underline" Click="UnderlineButton_Click" 
+    <AppBarButton x:Name="underlineButton" Icon="Underline" Click="UnderlineButton_Click"
                   ToolTipService.ToolTip="Underline" RelativePanel.AlignRightWithPanel="True"/>
 
-    <RichEditBox x:Name="editor" Height="200" RelativePanel.Below="openFileButton" 
+    <RichEditBox x:Name="editor" Height="200" RelativePanel.Below="openFileButton"
                  RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
 </RelativePanel>
 ```
@@ -119,7 +133,7 @@ private async void SaveButton_Click(object sender, RoutedEventArgs e)
     Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
     if (file != null)
     {
-        // Prevent updates to the remote version of the file until we 
+        // Prevent updates to the remote version of the file until we
         // finish making changes and call CompleteUpdatesAsync.
         Windows.Storage.CachedFileManager.DeferUpdates(file);
         // write to file
@@ -128,7 +142,7 @@ private async void SaveButton_Click(object sender, RoutedEventArgs e)
 
         editor.Document.SaveToStream(Windows.UI.Text.TextGetOptions.FormatRtf, randAccStream);
 
-        // Let Windows know that we're finished changing the file so the 
+        // Let Windows know that we're finished changing the file so the
         // other app can update the remote version of the file.
         Windows.Storage.Provider.FileUpdateStatus status = await Windows.Storage.CachedFileManager.CompleteUpdatesAsync(file);
         if (status != Windows.Storage.Provider.FileUpdateStatus.Complete)
@@ -184,7 +198,7 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 
 Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira. O layout do teclado padrão é geralmente apropriado para trabalhar com documentos rich text.
 
-Para saber mais sobre como usar escopos de entrada, consulte [Usar o escopo de entrada para alterar o teclado virtual]().
+Para obter mais informações sobre como usar escopos de entrada, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
 ## Recomendações
 
@@ -205,7 +219,7 @@ Para saber mais sobre como usar escopos de entrada, consulte [Usar o escopo de e
 
 **Para designers**
 - [Diretrizes para verificação ortográfica](spell-checking-and-prediction.md)
-- [Adicionando pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [Adicionando pesquisa](search.md)
 - [Diretrizes para entrada de texto](text-controls.md)
 
 **Para desenvolvedores (XAML)**
@@ -214,7 +228,6 @@ Para saber mais sobre como usar escopos de entrada, consulte [Usar o escopo de e
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

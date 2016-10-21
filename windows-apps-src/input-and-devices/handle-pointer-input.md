@@ -5,8 +5,9 @@ title: Identificar entrada do ponteiro
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 2204e8f3ddce067cf2cbc24ce89cbdcea5b361bf
+ms.openlocfilehash: 2053062f6a5f850da8983bce2465cd10cdc01d56
 
 ---
 
@@ -249,10 +250,7 @@ Em seguida, usamos comentários da interface do usuário para demonstrar manipul
 
 -   Esse manipulador gerencia um evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). Adicionamos o evento ao log de eventos, adicionamos o ponteiro à matriz de ponteiros usada para acompanhar os ponteiros de interesse e exibimos os detalhes do ponteiro.
 
-    **Observação**
-            [
-              Os eventos **PointerPressed**
-            ](https://msdn.microsoft.com/library/windows/apps/br208971) e [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) nem sempre ocorrem em pares. O aplicativo deve escutar e manipular qualquer evento que possa concluir uma ação de ponteiro para baixo (como [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) e [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).
+    **Observação**  Os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) e [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) nem sempre ocorrem em pares. O aplicativo deve escutar e manipular qualquer evento que possa concluir uma ação de ponteiro para baixo (como [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) e [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).
 
      
 
@@ -522,10 +520,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
 
 -   Esse manipulador gerencia um evento [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965). Adicionamos o evento ao log de eventos, removemos o ponteiro da matriz de ponteiros e atualizamos os detalhes do ponteiro.
 
-    **Observação**
-            [
-              **PointerCaptureLost**
-            ](https://msdn.microsoft.com/library/windows/apps/br208965) pode ocorrer no lugar de [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972). A captura do ponteiro pode ser perdida por vários motivos.
+    **Observação**  [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) pode ocorrer no lugar de [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972). A captura do ponteiro pode ser perdida por vários motivos.
 
      
 
@@ -1111,6 +1106,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

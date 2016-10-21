@@ -2,20 +2,21 @@
 author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: "Este artigo descreve como usar a classe CameraCaptureUI para capturar fotos ou vídeos usando a interface do usuário da câmera integrada ao Windows"
-title: "Capturar fotos e vídeos com CameraCaptureUI"
-ms.sourcegitcommit: 72abc006de1925c3c06ecd1b78665e72e2ffb816
-ms.openlocfilehash: a98edd0b4c52271fad4255af5ab0a005b0c66d68
+title: "Capturar fotos e vídeos com a interface do usuário da câmera interna do Windows"
+translationtype: Human Translation
+ms.sourcegitcommit: b4bf4d74ae291186100a553a90fd93f890b8ece4
+ms.openlocfilehash: fea1c2f8f52ec9ac485d9a4846cc0661243a7ccc
 
 ---
 
-# Capturar fotos e vídeos com CameraCaptureUI
+# Capturar fotos e vídeos com a interface do usuário da câmera interna do Windows
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo descreve como usar a classe CameraCaptureUI para capturar fotos ou vídeos usando a interface do usuário da câmera integrada ao Windows Esse recurso é fácil de usar e permite que seu aplicativo obtenha uma foto capturada pelo usuário ou um vídeo com apenas algumas linhas de código.
 
-Se seu cenário exigir um controle aprofundado e mais robusto da operação de captura, você deve usar o objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) e implementar sua própria experiência de captura. Para obter mais informações, consulte [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md).
+Se você quiser fornecer a interface de usuário da sua própria câmera ou se seu cenário exigir um controle aprofundado e mais robusto da operação de captura, você deverá usar o objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) e implementar sua própria experiência de captura. Para obter mais informações, consulte [Captura básica de foto, vídeo e áudio com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md).
 
 ## Capturar uma foto com CameraCaptureUI
 
@@ -25,14 +26,18 @@ Para usar a interface do usuário de captura com câmera, inclua o namespace [**
 
 Para capturar uma foto, crie um novo objeto [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030). Usando a propriedade [**PhotoSettings**](https://msdn.microsoft.com/library/windows/apps/br241058) do objeto, você pode especificar propriedades para a foto retornada, como o formato de imagem da foto. Por padrão, a interface do usuário de captura com câmera permite ao usuário recortar a foto antes de ela ser retornada, embora isso possa ser desabilitado com a propriedade [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042). Este exemplo define [**CroppedSizeInPixels**](https://msdn.microsoft.com/library/windows/apps/br241044) para solicitar que a imagem retornada seja de 200 x 200 pixels.
 
-
-            **Observação**  Não há suporte para o corte de imagem no CameraCaptureUI para dispositivos da família de dispositivos móveis. O valor da propriedade [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) é ignorado quando seu aplicativo é executado nesses dispositivos.
+> [!NOTE]
+> Não há suporte para o corte de imagem no **CameraCaptureUI** para dispositivos da família de dispositivos móveis. O valor da propriedade [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) é ignorado quando seu aplicativo é executado nesses dispositivos.
 
 Chame [**CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057) e especifique [**CameraCaptureUIMode.Photo**](https://msdn.microsoft.com/library/windows/apps/br241040) para especificar que uma foto deve ser capturada. O método retorna uma instância [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que conterá a imagem se a captura for bem-sucedida. Se o usuário cancelar a captura, o objeto retornado será nulo.
 
 [!code-cs[CapturePhoto](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCapturePhoto)]
 
-Assim que você tiver o **StorageFile** contendo a foto capturada, poderá criar um objeto [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) que possa ser usado com vários recursos diferentes de aplicativo Universal do Windows.
+É fornecido um nome gerado dinamicamente ao **StorageFile** que contém a foto capturada e salvo na pasta local do aplicativo. Para organizar melhor suas fotos capturadas, convém mover o arquivo para uma pasta diferente.
+
+[!code-cs[CopyAndDeletePhoto](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCopyAndDeletePhoto)]
+
+Para usar sua foto em seu aplicativo, talvez você queira criar um objeto [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) que pode ser usado com vários recursos diferentes de aplicativo Universal do Windows.
 
 Primeiro você deve incluir o namespace [**Windows.Graphics.Imaging**](https://msdn.microsoft.com/library/windows/apps/br226400) em seu projeto.
 
@@ -93,15 +98,16 @@ Por fim, defina a fonte de fluxo usando o método [**SetMediaStreamSource**](htt
 
 Você pode continuar a capturar videoclipes e adicioná-los à composição. Para saber mais sobre composições de mídia, consulte [Composições de mídia e edição](media-compositions-and-editing.md).
 
-**Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> [!NOTE] 
+> Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
 ## Tópicos relacionados
 
-* [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md)
-* [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030)
+* [Câmera](camera.md)
+* [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 
  
 
  
@@ -112,6 +118,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

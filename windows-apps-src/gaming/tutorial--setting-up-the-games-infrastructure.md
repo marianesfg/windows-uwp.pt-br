@@ -3,8 +3,9 @@ author: mtoepke
 title: Configurar o projeto de jogo
 description: "O primeiro passo na montagem do jogo é configurar um projeto no Microsoft Visual Studio de modo a minimizar a quantidade de trabalho de infraestrutura de código necessária."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
+ms.openlocfilehash: fd8e676e66c1df530aca41e05f2ea68d96d01a32
 
 ---
 
@@ -30,7 +31,7 @@ Você pode criar um jogo do zero, com apenas um editor de texto, alguns exemplos
 
 Um modelo do Visual Studio é uma coleção de configurações e arquivos de código voltados para um tipo específico de aplicativo com base na linguagem e na tecnologia de preferência. No Microsoft Visual Studio 2015, você encontrará vários modelos que podem facilitar consideravelmente o desenvolvimento de aplicativos gráficos e jogos. Se você não usar um modelo, será necessário desenvolver grande parte da estrutura básica de exibição e renderização de elementos gráficos por conta própria. Isso pode ser um pouco complexo para um novo desenvolvedor de jogos.
 
-O modelo certo para este tutorial é o chamado Aplicativo DirectX 11 (Universal Windows). No Visual Studio 2015, clique em **Arquivo**&gt;**Novo Projeto** e então:
+O modelo certo para este tutorial é o chamado Aplicativo DirectX 11 (Universal Windows). No Visual Studio 2015, clique em **Arquivo...** &gt; **Novo Projeto** e:
 
 1.  Em **Modelos**, selecione **Visual C++**, **Windows**, **Universal**.
 2.  No painel central, selecione **Aplicativo DirectX 11 (Universal Windows)**.
@@ -168,6 +169,6 @@ No próximo tutorial, [Definindo a estrutura UWP do jogo](tutorial--building-the
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

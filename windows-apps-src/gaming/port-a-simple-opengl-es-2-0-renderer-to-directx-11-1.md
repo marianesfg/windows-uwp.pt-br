@@ -3,15 +3,16 @@ author: mtoepke
 title: Como fazer a portabilidade de um renderizador simples do OpenGL ES 2.0 para o Direct3D 11
 description: "Para o primeiro exercício de portabilidade, vamos começar com noções básicas - trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de aplicativo do DirectX 11 (Windows Universal) do Visual Studio 2015."
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
+translationtype: Human Translation
 ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
-ms.openlocfilehash: f70d4ec46743d930f8cb45084e55cce2e60e2460
+ms.openlocfilehash: 307b611eece3de6288d67e1e340368763f26fa2e
 
 ---
 
 # Como fazer a portabilidade de um renderizador simples do OpenGL ES 2.0 para o Direct3D 11
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Para este exercício de portabilidade, vamos começar com noções básicas: trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de aplicativo do DirectX 11 (Windows Universal) do Visual Studio 2015. Conforme seguimos por este processo de compatibilização, você aprenderá o seguinte:
 
@@ -76,8 +77,7 @@ typedef struct
 
 Essa estrutura tem uma instância e contém todos os componentes necessários para renderizar uma malha de vértice sombreado bem simples.
 
-> 
-            **Observação**  Qualquer código OpenGL ES 2.0 neste tópico se baseia na implementação de API do Windows fornecida pelo Khronos Group e usa a sintaxe de programação C do Windows.
+> **Observação**  Qualquer código OpenGL ES 2.0 neste tópico se baseia na implementação de API do Windows fornecida pelo Khronos Group e usa a sintaxe de programação C do Windows.
 
  
 
@@ -146,6 +146,6 @@ Essa estrutura tem uma instância e contém todos os componentes necessários pa
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

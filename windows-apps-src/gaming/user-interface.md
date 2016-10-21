@@ -3,8 +3,9 @@ author: mtoepke
 title: Modelos de projeto de jogo DirectX
 description: Saiba mais sobre os modelos para criar um jogo da Plataforma Universal do Windows (UWP) e DirectX.
 ms.assetid: 41b6cd76-5c9a-e2b7-ef6f-bfbf6ef7331d
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b7d01fda0bc8dbafebb7485ec01acb5c7431a815
+ms.openlocfilehash: 1e91814825a0944f9a70fdc7bbc6e8ef78215f29
 
 ---
 
@@ -20,8 +21,7 @@ Os modelos DirectX e UWP (Plataforma Universal do Windows) permitem criar rapida
 
 Para criar o projeto, você precisa:
 
--   
-            [Baixar o Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions). O Visual Studio 2015 possui ferramentas de programação gráfica, como ferramentas de depuração. Para uma visão geral dos recursos e das ferramentas de elementos gráficos e jogos em DirectX, veja [Ferramentas do Visual Studio para desenvolvimento de jogos em DirectX](set-up-visual-studio-for-game-development.md).
+-   [Baixar o Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions). O Visual Studio 2015 possui ferramentas de programação gráfica, como ferramentas de depuração. Para uma visão geral dos recursos e das ferramentas de elementos gráficos e jogos em DirectX, veja [Ferramentas do Visual Studio para desenvolvimento de jogos em DirectX](set-up-visual-studio-for-game-development.md).
 
 ## Escolhendo um modelo
 
@@ -90,6 +90,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

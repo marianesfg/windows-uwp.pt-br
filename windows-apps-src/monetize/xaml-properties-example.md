@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: d074e9d5-b3e0-4f16-b1e4-02b32ac99b2c
 description: Saiba como atribuir propriedades **AdControl** a valores.
 title: Exemplo de propriedades XAML
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 43d579d2d0a92a8f03f17efa2ec42707357e99f9
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: fb0533aa0ea760bca686276f886f0afcb21bf6f7
 
 
 ---
@@ -12,7 +13,7 @@ ms.openlocfilehash: 43d579d2d0a92a8f03f17efa2ec42707357e99f9
 # Exemplo de propriedades XAML
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 O exemplo XAML a seguir demonstra como atribuir propriedades [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) a valores. Se uma propriedade não estiver definida, o **AdControl** usará valores padrão para criar um anúncio consistente com a experiência do usuário do aplicativo.
 
@@ -37,6 +38,6 @@ IsEngagedChanged="OnAdEngagedChanged"
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

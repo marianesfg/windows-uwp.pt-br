@@ -6,11 +6,13 @@ ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: fdff043aa92842adb6ac2d572794bf02fdd5c6b3
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
 
 ---
 # Controle/padrão Hub
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Um controle Hub permite organizar o conteúdo do aplicativo em seções ou categorias distintas, mas relacionadas. A seções de um hub devem ser percorridas em uma ordem preferencial e podem servir como ponto de partida para experiências mais detalhadas.
@@ -19,9 +21,19 @@ Um controle Hub permite organizar o conteúdo do aplicativo em seções ou categ
 
 O conteúdo em um hub pode ser mostrado em uma exibição panorâmica em que os usuários têm uma prévia das novidades, do que está disponível e do que é relevante. Normalmente os hubs têm um cabeçalho de página, e cada uma das várias seções de conteúdo tem um cabeçalho de seção.
 
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251843"><strong>Classe Hub</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251845"><strong>Classe HubSection</strong></a></li>
+</ul>
 
--   [**Classe Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)
--   [**Classe HubSection**](https://msdn.microsoft.com/library/windows/apps/dn251845)
+</div>
+</div>
+
+
+
+
 
 ## Esse é o controle correto?
 
@@ -112,6 +124,6 @@ Em dispositivos móveis, uma seção de hub está visível por vez.
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

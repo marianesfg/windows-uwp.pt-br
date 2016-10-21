@@ -3,8 +3,9 @@ author: mtoepke
 title: "Concluir código para BasicReaderWriter"
 description: "Conclua código para classe e métodos de leitura e gravação de arquivos de dados binários em geral."
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
+translationtype: Human Translation
 ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: 46762d7b7234be9ff7b4c288a09162d4f942a707
+ms.openlocfilehash: de6ab2687cfbe7b485e51bc90811b1988e29fb7e
 
 ---
 
@@ -29,18 +30,14 @@ Este exemplo não está disponível para download.
 
 ## Tecnologias
 
-
-            **Linguagens de programação** - C++  
-
-            **Modelos de programação** -Windows Runtime
+**Linguagens de programação** - C++  
+**Modelos de programação** -Windows Runtime
 
 
 ## Requisitos
 
- 
-            **Cliente mínimo com suporte** - Windows 10       
-
-             **Servidor mínimo com suporte** - Windows Server 2016 Technical Preview 
+ **Cliente mínimo com suporte** - Windows 10       
+ **Servidor mínimo com suporte** - Windows Server 2016 Technical Preview 
 
 ## Exibir o código (C++)
 
@@ -269,6 +266,6 @@ task<void> BasicReaderWriter::WriteDataAsync(
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

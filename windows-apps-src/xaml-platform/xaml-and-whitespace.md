@@ -3,8 +3,9 @@ author: jwmsft
 description: "Conheça as regras de processamento de espaços em branco usadas por XAML."
 title: "XAML e espaço em branco"
 ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 408c9c7f79f5db81bdf7810a6c71cf25c1c8ec51
+ms.openlocfilehash: 3b8b68ae8823ec23105d5f92e533d271ab3dcc88
 
 ---
 
@@ -23,8 +24,7 @@ De forma consistente com XML, os caracteres de espaço em branco em XAML são es
 -   Todos os espaços consecutivos são excluídos e substituídos por um espaço.
 -   Um espaço imediatamente posterior à marca inicial é excluído.
 -   Um espaço imediatamente anterior à marca inicial é excluído.
--   
-            *Caracteres do leste asiático* são definidos como um conjunto de caracteres Unicode que vai de U+20000 até U+2FFFD e de U+30000 até U+3FFFD. Às vezes, esse subconjunto também é chamado de *ideogramas CJK*. Para saber mais, acesse http://www.unicode.org.
+-   *Caracteres do leste asiático* são definidos como um conjunto de caracteres Unicode que vai de U+20000 até U+2FFFD e de U+30000 até U+3FFFD. Às vezes, esse subconjunto também é chamado de *ideogramas CJK*. Para saber mais, acesse http://www.unicode.org.
 
 "Padrão" corresponde ao estado denotado pelo valor padrão do atributo **xml:space**.
 
@@ -54,6 +54,6 @@ Entidades e espaços sem quebra: o XAML dá suporte à inserção de qualquer en
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

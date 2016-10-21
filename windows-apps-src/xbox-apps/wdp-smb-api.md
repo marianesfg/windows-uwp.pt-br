@@ -4,7 +4,7 @@ title: "Referência de API SMB do Device Portal"
 description: "Saiba como acessar as APIs SMB de maneira programática."
 translationtype: Human Translation
 ms.sourcegitcommit: 3d76bf181baa9dfd973467d43241230fddf2daf7
-ms.openlocfilehash: 5efe2af3524d97e6014c4d6be2a8f1aef22f2e66
+ms.openlocfilehash: d6a097c84e6b967c41507d9e60c266f0bacb93fe
 
 ---
 
@@ -55,6 +55,6 @@ Código de status HTTP      | Descrição
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

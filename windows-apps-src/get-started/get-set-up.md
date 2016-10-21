@@ -1,16 +1,20 @@
 ---
-author: martinekuan
+author: GrantMeStrength
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: "Prepare-se para começar"
 description: "É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: a47dc36129daaed02cb181dde625d440fa4cf6e4
-ms.openlocfilehash: f20707cab08998d86142f7d657b51faa78d9a777
+ms.sourcegitcommit: 75c036fc934a8071f17a8690a22a03e10c4fe1d4
+ms.openlocfilehash: 729c71fbe0db202bd4f5ce15bea87caa973adf80
 
 ---
 # Prepare-se para começar
 
-Preparar-se é mais fácil do que você pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
+É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
+
+> [!NOTE]
+> Você é um usuário do Mac? Ou talvez você não queira instalar nada em seu computador ainda? Experimente as [máquinas virtuais baseadas na Web configuradas para desafios de codificação do Build2016](https://developer.microsoft.com/windows/projects/events/build2016/all/codingchallenges).
+
 
 ## 1. Obtenha o Windows 10
 
@@ -21,6 +25,8 @@ Para desenvolver aplicativos UWP, você precisará da versão mais recente do Wi
 Você é assinante do MSDN? É possível obter os downloads ISO aqui:
 
 -   Obtenha o Windows 10 em [Downloads para Assinantes do MSDN](http://go.microsoft.com/fwlink/p/?LinkId=266384)
+
+
 
 ## 2. Baixe ou atualize o Visual Studio
 
@@ -50,8 +56,7 @@ Você pode começar a desenvolver aplicativos agora, mas antes de enviá-los par
 
 Após instalar as ferramentas e obtido uma licença de desenvolvedor ou uma conta de desenvolvedor, use o nosso tutorial para criar seu primeiro aplicativo:
 
--   
-            Tutoriais para [Criar seu primeiro aplicativo](your-first-app.md)
+-   Tutoriais para [Criar seu primeiro aplicativo](your-first-app.md)
 
 ## Deseja mais ferramentas e downloads?
 
@@ -60,7 +65,6 @@ Para obter a lista completa de ferramentas e downloads, consulte [Downloads](htt
 
 
 
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

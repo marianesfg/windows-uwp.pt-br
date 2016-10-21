@@ -1,19 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
-description: "Use esse método na API de compra da Windows Store para conceder um aplicativo ou IAP (produto no aplicativo) gratuito a um determinado usuário."
+description: "Use esse método na API de compra da Windows Store para conceder um aplicativo ou complemento gratuito a um determinado usuário."
 title: Conceder produtos gratuitos
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 64c600460c1cbcbd6bb486649e2bc98298ca9dbe
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: a04918a562d132f6a721b96c7f4ad78218eb8819
 
 ---
 
 # Conceder produtos gratuitos
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Use esse método na API de compra da Windows Store para conceder um aplicativo ou IAP (produto no aplicativo) gratuito a um determinado usuário.
+
+Use este método na API de compra da Windows Store para conceder um aplicativo ou complemento (também conhecido como produto no aplicativo ou IAP) gratuito a um determinado usuário.
 
 No momento, você pode conceder apenas produtos gratuitos. Se seu serviço tenta usar esse método para conceder um produto que não seja gratuito, esse método retornará um erro.
 
@@ -41,7 +41,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorização  | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;.                           |
+| Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;.                           |
 | Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
@@ -58,7 +58,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | language       | string | O idioma do usuário.                                                                                                                                                                                                                                                                                              | Sim      |
 | market         | string | O mercado do usuário.                                                                                                                                                                                                                                                                                                | Sim      |
 | orderId        | guid   | Uma GUID gerada para o pedido. Esse valor é exclusivo para o usuário, mas não é necessário que seja exclusivo em todos os pedidos.                                                                                                                                                                                              | Sim      |
-| productId      | string | A ID da Loja do catálogo da Windows Store. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. | Sim      |
+| productId      | string | A ID da Loja do catálogo da Windows Store. Para aplicativos, a ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Para complementos, a ID da Loja está disponível na URL da página de visão geral do complemento no painel do Centro de Desenvolvimento do Windows. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. | Sim      |
 | quantity       | int    | A quantidade a ser comprada. Atualmente, o único valor com suporte é 1. Se não for especificado, o padrão é 1.                                                                                                                                                                                                                | Não       |
 | skuId          | string | A ID da SKU do catálogo da Windows Store. Um ID de SKU de exemplo é “0010”.                                                                                                                                                                                                                                                | Sim      |
 
@@ -128,7 +128,7 @@ O objeto OrderLineItemV6 contém os parâmetros a seguir.
 | billingState            | string         | O estado da cobrança do pedido. Isso é definido como **Charged** quando concluído.                                   | Não       |
 | campaignId              | string         | A ID de campanha desse pedido.                                                                              | Não       |
 | currencyCode            | string         | O código de moeda usado nos detalhes do preço.                                                                    | Sim      |
-| Descrição             | string         | Uma descrição traduzida do item de linha.                                                                    | Sim      |
+| description             | string         | Uma descrição traduzida do item de linha.                                                                    | Sim      |
 | devofferId              | string         | A ID de oferta do pedido específico, se presente.                                                           | Não       |
 | fulfillmentDate         | datetimeoffset | A data em que ocorreu o providência.                                                                           | Não       |
 | fulfillmentState        | string         | O estado do abastecimento desse item. Isso é definido como **Fulfilled** quando concluído.                      | Não       |
@@ -137,9 +137,9 @@ O objeto OrderLineItemV6 contém os parâmetros a seguir.
 | legacyBillingOrderId    | string         | A ID de cobrança herdada.                                                                                       | Não       |
 | lineItemId              | string         | A ID do item de linha do item nesse pedido.                                                                 | Sim      |
 | listPrice               | decimal        | O preço de lista do item nesse pedido.                                                                    | Sim      |
-| productId               | string         | A ID de produto do item de linha na Windows Store.                                                               | Sim      |
+| productId               | string         | A ID da Loja do item de linha.                                                               | Sim      |
 | productType             | string         | O tipo do produto. Os valores suportados são **Durable**, **Application** e **UnmanagedConsumable**. | Sim      |
-| Quantity                | int            | A quantidade do item solicitado.                                                                            | Sim      |
+| quantity                | int            | A quantidade do item solicitado.                                                                            | Sim      |
 | retailPrice             | decimal        | O preço de varejo do item solicitado.                                                                        | Sim      |
 | revenueRecognitionState | string         | O estado de reconhecimento da receita.                                                                               | Sim      |
 | skuId                   | string         | A ID de SKU do item de linha na Windows Store.                                                                   | Sim      |
@@ -245,6 +245,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

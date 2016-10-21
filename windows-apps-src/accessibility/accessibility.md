@@ -5,8 +5,9 @@ ms.assetid: C89D79C2-B830-493D-B020-F3FF8EB5FFDD
 title: Acessibilidade
 label: Accessibility
 template: detail.hbs
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3
+translationtype: Human Translation
+ms.sourcegitcommit: 13894c199a95060395886635ebb7c294f18c9d6b
+ms.openlocfilehash: 8974ea067e033796c491781997067aafea773d96
 
 ---
 
@@ -19,13 +20,12 @@ Apresenta conceitos de acessibilidade que se relacionam a aplicativos da Platafo
 A acessibilidade envolve proporcionar experiências que disponibilizem seu aplicativo para pessoas que usam a tecnologia em uma ampla variedade de ambientes e abordam sua interface do usuário com uma variedade de experiências e necessidades. Para algumas situações, os requisitos de acessibilidade são impostos por lei. No entanto, é uma boa ideia resolver os problemas de acessibilidade independentemente dos requisitos legais, para que seus aplicativos tenham a maior audiência possível. Há também uma declaração da Windows Store em relação à acessibilidade para o seu aplicativo.
 
 > [!NOTE]
-> 
-            [!NOTE] Declarar o aplicativo como acessível somente é relevante para aplicativos da Windows Store.
+> Declarar o aplicativo como acessível somente é relevante para aplicativos da Windows Store.
 
 | Artigo | Descrição |
 |---------|-------------|
 | [Visão geral de acessibilidade](accessibility-overview.md) | Este artigo é uma visão geral dos conceitos e tecnologias relacionados a cenários de acessibilidade de aplicativos UWP. |
-| [Criando software inclusivo](designing-inclusive-software.md) | Saiba mais sobre como evoluir o design inclusivo com aplicativos da Plataforma Universal do Windows (UWP) para o Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente. |
+| [Criando software inclusivo](designing-inclusive-software.md) | Saiba mais sobre como evoluir o design inclusivo com aplicativos UWP para o Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente. |
 | [Desenvolvendo aplicativos inclusivos do Windows](developing-inclusive-windows-apps.md) | Este artigo é uma estratégia para desenvolver aplicativos UWP acessíveis. |
 | [Testes de acessibilidade](accessibility-testing.md) | Procedimentos de teste a serem seguidos para garantir que seu aplicativo UWP seja acessível. |
 | [Acessibilidade na Loja](accessibility-in-the-store.md) | Descreve os requisitos para declarar seu aplicativo UWP como acessível na Windows Store. |
@@ -40,10 +40,10 @@ A acessibilidade envolve proporcionar experiências que disponibilizem seu aplic
 
 <span id="related_topics"/>
 ## Tópicos relacionados  
-* [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
+* [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179) 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

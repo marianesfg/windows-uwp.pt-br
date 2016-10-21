@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
 title: "Otimizar suspensão/retomada"
 description: "Crie aplicativos da Plataforma Universal do Windows (UWP) que agilizem o uso do sistema de tempo de vida de processo para continuar de modo eficiente após suspensão ou término."
+translationtype: Human Translation
 ms.sourcegitcommit: e0f04c4242891b25db460d4852ab8cc070d82260
-ms.openlocfilehash: 9fee4ab9c55c1243c04c2ed5f007412751528037
+ms.openlocfilehash: 312c0a64308a42d74a52fe6587dae10de7c838a3
 
 ---
 # Otimizar suspensão/retomada
@@ -59,10 +60,7 @@ As opções disponíveis de tecnologia de serialização para aplicativos .NET s
 
 A partir de uma perspectiva de desempenho, é recomendável usar a classe [**XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx). O **XmlSerializer** tem os menores tempos de serialização e desserialização, além de manter um baixo volume de memória. O **XmlSerializer** tem poucas dependências na estrutura .NET, o que significa que comparado a outras tecnologias de serialização, menos módulos precisam ser carregados em seu aplicativo para usar o **XmlSerializer**.
 
-
-            [
-              **DataContractSerializer**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) facilita a serialização de classes personalizadas, embora tenha um impacto de desempenho maior do que **XmlSerializer**. Caso precise de desempenho melhor, considere mudar. No geral, você não deve carregar mais do que um serializador e deve preferir **XmlSerializer**, a menos que precise dos recursos de outro serializador.
+[**DataContractSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) facilita a serialização de classes personalizadas, embora tenha um impacto de desempenho maior do que **XmlSerializer**. Caso precise de desempenho melhor, considere mudar. No geral, você não deve carregar mais do que um serializador e deve preferir **XmlSerializer**, a menos que precise dos recursos de outro serializador.
 
 ### Reduzir o volume de memória
 
@@ -94,6 +92,6 @@ A maioria dos aplicativos precisa manipular o evento [**Resuming**](https://msdn
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: jnHs
 Description: "Se sua conta de desenvolvedor tiver recebido as permissões adequadas, você poderá gerar e baixar pacotes de pré-instalação que um OEM pode usar para incluir seu aplicativo na imagem dele."
 title: "Gerar pacotes de pré-instalação para OEMs"
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dba1c1f754b4200bd00395e0b71d18bee30e3a2d
+ms.openlocfilehash: 1c08ab2e29e70e198ee72798f29e7667254272fd
 
 ---
 
@@ -30,8 +31,7 @@ Quando uma conta tiver sido habilitada com permissões de pré-instalação, con
 3.  Na seção **Solicitar pacotes para pré-instalação do sistema operacional**, clique em **Habilitar pacotes baixáveis**.
 4.  Será exibida uma caixa de diálogo de confirmação, informando que aplicativos pré-instalados em um sistema operacional anterior ao Windows 10 devem ser gratuitos. Selecione **Habilitar.**
 5.  Localize o pacote que você deseja baixar e clique no link **Gerar pacote** apropriado.
-    > 
-            **Observação**  O tempo de geração de pacotes de pré-instalação varia de acordo com o tamanho do pacote que você selecionou. Você pode deixar essa página e voltar mais tarde, ou deixar a página aberta.
+    > **Observação**  O tempo de geração de pacotes de pré-instalação varia de acordo com o tamanho do pacote que você selecionou. Você pode deixar essa página e voltar mais tarde, ou deixar a página aberta.
 6.  Quando o pacote tiver sido gerado, um link para **Baixar pacote** aparecerá. Clique nesse link para baixar o arquivo .zip.
 
 Em seguida, você pode fornecer esse arquivo. zip para o OEM para inclusão na imagem do sistema operacional.
@@ -51,6 +51,6 @@ Se você ainda tiver dúvidas sobre a geração de pacotes de pré-instalação,
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

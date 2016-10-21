@@ -5,8 +5,9 @@ ms.assetid: 272D9C9E-B179-4F5A-8493-926D007A0225
 title: Testes de acessibilidade
 label: Accessibility testing
 template: detail.hbs
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: ec436f939c672d6e6d852d3dd6713fd6ca20a53b
+translationtype: Human Translation
+ms.sourcegitcommit: 82d43f6553be280831c0a739680a2f9c833286f9
+ms.openlocfilehash: cc988037a8b3270045c7dd5faac4bf7d69fd6274
 
 ---
 
@@ -32,9 +33,7 @@ A ferramenta [**AccScope**](https://msdn.microsoft.com/library/windows/desktop/D
 <span id="INSPECT"/>
 ### **Inspect**  
 
-[
-              O **Inspect**
-            ](https://msdn.microsoft.com/library/windows/desktop/Dd318521) permite que você selecione qualquer elemento de interface do usuário e visualize seus dados acessíveis. Você pode visualizar as propriedades e padrões de controle Automação da Interface do Usuário da Microsoft e testar a estrutura navegacional dos elementos de automação na árvore de automação da IU. Use **Inspect** conforme desenvolve a interface do usuário para verificar como os tributos de acessibilidade estão expostos na Automação da Interface do Usuário. Em alguns casos, os atributos vêm do suporte à Automação da Interface do Usuário que já está implementado para os controles XAML padrão. Em outros casos, os atributos vêm de valores específicos que você definiu na sua marcação XAML, como as propriedades anexadas [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties).
+[**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) permite que você selecione qualquer elemento de interface do usuário e visualize seus dados acessíveis. Você pode visualizar as propriedades e padrões de controle Automação da Interface do Usuário da Microsoft e testar a estrutura navegacional dos elementos de automação na árvore de automação da IU. Use **Inspect** conforme desenvolve a interface do usuário para verificar como os tributos de acessibilidade estão expostos na Automação da Interface do Usuário. Em alguns casos, os atributos vêm do suporte à Automação da Interface do Usuário que já está implementado para os controles XAML padrão. Em outros casos, os atributos vêm de valores específicos que você definiu na sua marcação XAML, como as propriedades anexadas [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties).
 
 A imagem a seguir mostra a ferramenta [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) consultando as propriedades de Automação da Interface do Usuário no elemento do menu **Edit** no Bloco de Notas.
 
@@ -54,8 +53,7 @@ O **UI Automation Verify (UIA Verify)** é uma estrutura automatizada de testes 
 <span id="ACCESSIBLE_EVENT_WATCHER"/>
 ### **Accessible Event Watcher**  
 [
-              O **Accessible Event Watcher (AccEvent)**
-            ](https://msdn.microsoft.com/library/windows/desktop/Dd317979) testa se os elementos de interface do usuário de um aplicativo disparam eventos adequados da Automação da Interface do Usuário e do Microsoft Active Accessibility quando ocorrem mudanças na interface do usuário. As alterações na interface do usuário podem ocorrer quando o foco muda ou quando um elemento de interface do usuário é chamado, selecionado ou sofre uma mudança de estado ou propriedade.
+              O **Accessible Event Watcher (AccEvent)**](https://msdn.microsoft.com/library/windows/desktop/Dd317979) testa se os elementos de interface do usuário de um aplicativo disparam eventos adequados da Automação da Interface do Usuário e do Microsoft Active Accessibility quando ocorrem mudanças na interface do usuário. As alterações na interface do usuário podem ocorrer quando o foco muda ou quando um elemento de interface do usuário é chamado, selecionado ou sofre uma mudança de estado ou propriedade.
 
 > [!NOTE]
 > A maioria das ferramentas de teste de acessibilidade mencionadas na documentação é executada em um computador, não em um telefone. Você pode executar algumas das ferramentas enquanto desenvolve e utiliza um emulador, mas a maioria dessas ferramentas não pode expor a árvore de Automação da IU dentro do emulador.
@@ -63,7 +61,7 @@ O **UI Automation Verify (UIA Verify)** é uma estrutura automatizada de testes 
 <span id="test_keyboard_accessibility"/>
 <span id="TEST_KEYBOARD_ACCESSIBILITY"/>
 ## Testar a acessibilidade do teclado  
-A melhor maneira de testar a acessibilidade do seu teclado é desconectar o mouse ou usar o Teclado Virtual se você estiver usando um dispositivo tablet. Teste a navegação da acessibilidade de teclado usando a tecla Tab. Você deverá ser capaz de alternar entre todos os elementos interativos da interface do usuário usando a tecla Tab. Para elementos compostos da interface do usuário, verifique se é possível navegar entre partes de elementos usando as teclas de seta. Por exemplo, você deve ser capaz de navegar nas listas de itens com as teclas do teclado. Finalmente, certifique-se de que é possível invocar todos os elementos interativos da interface do usuário com o teclado assim que esses elementos obtêm foco, geralmente usando Enter ou a tecla de espaço.
+A melhor maneira de testar a acessibilidade do seu teclado é desconectar o mouse ou usar o Teclado Virtual se você estiver usando um dispositivo tablet. Teste a navegação da acessibilidade de teclado usando a tecla _Tab_. Você deverá ser capaz de alternar entre todos os elementos interativos da interface do usuário usando a tecla _Tab_. Para elementos compostos da interface do usuário, verifique se é possível navegar entre partes de elementos usando as teclas de seta. Por exemplo, você deve ser capaz de navegar nas listas de itens com as teclas do teclado. Finalmente, certifique-se de que é possível invocar todos os elementos interativos da interface do usuário com o teclado assim que esses elementos obtêm foco, geralmente usando Enter ou a tecla de espaço.
 
 <span id="verify_the_contrast_ratio_of_visible_text"/>
 <span id="VERIFY_THE_CONTRAST_RATIO_OF_VISIBLE_TEXT"/>
@@ -89,15 +87,17 @@ Use as opções de exibição do sistema que ajustam o valor de pontos por poleg
 Use o Narrador para testar a experiência de leitura da tela do seu aplicativo executando as seguintes etapas:
 
 **Use estas etapas para testar o seu aplicativo usando o Narrador com um mouse e teclado:**
-1.  Inicie o Narrador pressionando a tecla de logotipo do Windows + Enter.
-2.  Navegue pelo aplicativo com o teclado usando a tecla Tab, as teclas direcionais e Caps Lock + teclas direcionais.
+1.  Inicie o Narrador pressionando a tecla de logotipo do _Windows + Enter_.
+2.  Navegue pelo aplicativo com o teclado usando a tecla _Tab_, as teclas direcionais e _Caps Lock + teclas direcionais_.
 3.  Enquanto navega no seu aplicativo, ouça o Narrador lendo os elementos da sua interface do usuário e verifique o seguinte:
     * Para cada controle, verifique se o Narrador lê todo o conteúdo visível. Verifique também se o Narrador lê o nome de cada controle, seu estado aplicável (marcado, selecionado e assim por diante) e o tipo do controle (botão, caixa de seleção, item de lista e assim por diante).
-    * Se o elemento for interativo, verifique se é possível usar o Narrador para invocar a sua ação pressionando a tecla Caps Lock + Barra de espaço.
+    * Se o elemento for interativo, verifique se é possível usar o Narrador para invocar a sua ação pressionando a tecla _Caps Lock + Enter_.
     * Para cada tabela, garanta que o Narrador leia corretamente o nome, a descrição (se disponível) e os cabeçalhos de linha e coluna.
 
-4.  Pressione Caps Lock + Enter para pesquisar o aplicativo e verificar se todos os controles aparecem na lista de pesquisa e se os nomes desses controles estão localizados e são legíveis.
-5.  Desligue seu monitor e tente realizar os cenários do aplicativo principal usando apenas o teclado e o Narrador. Para ver a lista completa de comandos e atalhos do Narrador, pressione Caps Lock + F1.
+4.  Pressione _Caps Lock + Shift + Enter_ para pesquisar o aplicativo e verificar se todos os controles aparecem na lista de pesquisa e se os nomes desses controles estão localizados e são legíveis.
+5.  Desligue seu monitor e tente realizar os cenários do aplicativo principal usando apenas o teclado e o Narrador. Para ver a lista completa de comandos e atalhos do Narrador, pressione _Caps Lock + F1_.
+
+A partir da versão 1607 do Windows 10, apresentamos um novo modo de desenvolvedor no Narrador. Ativar o modo de desenvolvedor, quando o Narrador já estiver em execução pressionando _Caps Lock + Shift + F12_. Quando o modo de desenvolvedor estiver habilitado, a tela será mascarada e realçará apenas os objetos acessíveis e o texto associado que é exposto por meio de programação para o Narrador. Isso proporciona a você uma boa representação visual das informações que são expostas para o Narrador.
 
 **Use estas etapas para testar seu aplicativo usando o modo de toque do Narrador:**
 
@@ -106,10 +106,10 @@ Use o Narrador para testar a experiência de leitura da tela do seu aplicativo e
 
 1.  Familiarize-se com a interface do usuário e explore o layout.
 
-    * **Navegue pela interface do usuário usando gestos de passar o dedo.** Deslize o dedo para a esquerda ou direita para mover entre itens e para cima ou para baixo para mudar a categoria de itens navegados. As categorias incluem todos os itens, links, tabelas, cabeçalhos e assim por diante. A navegação com gestos simples de passar o dedo é semelhante à navegação com Caps Lock + Seta.
-    * **Use gestos de tabulação para navegar por elementos focalizáveis.** Deslizar três dedos para a direita ou esquerda equivale a navegar com Tab e Shift + Tab em um teclado.
+    * **Navegue pela interface do usuário usando gestos de passar o dedo.** Deslize o dedo para a esquerda ou direita para mover entre itens e para cima ou para baixo para mudar a categoria de itens navegados. As categorias incluem todos os itens, links, tabelas, cabeçalhos e assim por diante. A navegação com gestos simples de passar o dedo é semelhante à navegação com _Caps Lock + Seta_.
+    * **Use gestos de tabulação para navegar por elementos focalizáveis.** Deslizar três dedos para a direita ou esquerda equivale a navegar com _Tab_ e _Shift + Tab_ em um teclado.
     * **Investigue espacialmente a interface do usuário com um único dedo.** Arraste um único dedo para cima e para baixo, ou para a esquerda e para a direita, para que o Narrador leia os itens sob seu dedo. É possível usar o mouse como alternativa, pois ele usa a mesma lógica de teste por pressionamento que o gesto de arrastar um único dedo.
-    * **Leia a janela inteira e todos os seus conteúdos deslizando três dedos para cima**. Isso equivale a usar Caps Lock + W.
+    * **Leia a janela inteira e todos os seus conteúdos deslizando três dedos para cima**. Isso equivale a usar _Caps Lock + W_.
 
     Se houver um elemento importante da interface do usuário que você não consiga acessar, talvez exista um problema de acessibilidade.
 
@@ -142,10 +142,10 @@ Um aspecto que você pode testar é se há elementos aparecendo na exibição do
 * [Acessibilidade](accessibility.md)
 * [Práticas que devem ser evitadas](practices-to-avoid.md)
 * [Automação da Interface do Usuário.](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
-* [Acessibilidade no Windows](http://go.microsoft.com/fwlink/p/?LinkId=320802)
+* [Acessibilidade no Windows](http://go.microsoft.com/fwlink/p/?LinkId=320802) 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

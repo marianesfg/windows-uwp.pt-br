@@ -3,8 +3,9 @@ author: DBirtolo
 ms.assetid: 88132B6F-FB50-4B03-BC21-233988746230
 title: "Personalizar a interface do usuário para visualização de impressão"
 description: "Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão."
+translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 36c1499b51aa5b8b5ab4b0b354197c67dc89801f
+ms.openlocfilehash: dd64266c2015e1bb640cf159b0836b9819cf7845
 
 ---
 # Personalizar a interface do usuário para visualização de impressão
@@ -20,8 +21,7 @@ ms.openlocfilehash: 36c1499b51aa5b8b5ab4b0b354197c67dc89801f
 
 Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão. Para obter mais informações sobre a impressão, consulte [Imprimir no aplicativo](print-from-your-app.md).
 
-
-            **Dica**  A maioria dos exemplos neste tópico é baseada na amostra de impressão. Para ver o código completo, baixe a [amostra de impressão da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619984) do [repositório de amostras universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+**Dica**  A maioria dos exemplos neste tópico é baseada na amostra de impressão. Para ver o código completo, baixe a [amostra de impressão da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619984) do [repositório de amostras universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
  
 
@@ -44,8 +44,7 @@ Essas opções são definidas na classe [**StandardPrintTaskOptions**](https://m
 
 No entanto, as modificações feitas com o uso desse método só afetam a interface do usuário para visualização de impressão. O usuário sempre pode acessar todas as opções com suporte na impressora tocando em **Mais configurações** na interface do usuário para visualização de impressão.
 
-
-            **Observação**  Embora o seu aplicativo possa especificar qualquer opção de impressão para exibição, apenas aquelas com suporte na impressora selecionada serão apresentadas na interface do usuário para visualização de impressão. A interface do usuário para impressão não mostrará nenhuma opção para a qual não haja suporte na impressora selecionada.
+**Observação**  Embora o seu aplicativo possa especificar qualquer opção de impressão para exibição, apenas aquelas com suporte na impressora selecionada serão apresentadas na interface do usuário para visualização de impressão. A interface do usuário para impressão não mostrará nenhuma opção para a qual não haja suporte na impressora selecionada.
 
  
 
@@ -93,8 +92,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-
-            **Importante**  Chamar [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)() remove todas as opções de impressão da interface do usuário para visualização de impressão, incluindo o link **Mais configurações**. Não deixe de acrescentar as opções que você quer mostrar na interface de usuário para visualização de impressão.
+**Importante**  Chamar [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)() remove todas as opções de impressão da interface do usuário para visualização de impressão, incluindo o link **Mais configurações**. Não deixe de acrescentar as opções que você quer mostrar na interface de usuário para visualização de impressão.
 
 ### Especificar opções padrão
 
@@ -190,6 +188,6 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

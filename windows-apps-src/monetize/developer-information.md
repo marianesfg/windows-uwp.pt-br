@@ -1,10 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 278114aa-2a44-4d63-a1d2-d512d8aababc
-description: "Obtenha as informações gerais para desenvolvedor sobre as bibliotecas do Microsoft Advertising no SDK de Microsoft Store Engagement and Monetization."
+description: "Obtenha as informações gerais para desenvolvedor sobre as bibliotecas do Microsoft Advertising no Microsoft Store Services SDK."
 title: "Informações para desenvolvedores sobre as bibliotecas do Microsoft Advertising"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: ec3b1d5c33a24da4ad2a4c5c8e4e11c71ece4828
+translationtype: Human Translation
+ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
+ms.openlocfilehash: 70692d09c037d9e5802734bc5de6a6c79799bffb
 
 
 ---
@@ -12,12 +13,10 @@ ms.openlocfilehash: ec3b1d5c33a24da4ad2a4c5c8e4e11c71ece4828
 # Informações para desenvolvedores sobre as bibliotecas do Microsoft Advertising
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Os tópicos desta seção fornecem informações úteis para desenvolvedores sobre as bibliotecas do Microsoft Advertising no SDK de Microsoft Store Engagement and Monetization.
 
-  > 
-            **Importante**   As bibliotecas do Microsoft Advertising são um conjunto diferente de extensões de bibliotecas de mediação de anúncios. Use as classes [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) e [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) nas bibliotecas do Microsoft Advertising se quiser exibir anúncios em banner ou intersticiais em vídeo da Microsoft em um aplicativo XAML ou JavaScript. Use a classe **AdMediatorControl** nas bibliotecas de mediação de anúncios, se você quiser exibir anúncios em faixa de várias redes de publicidade em um aplicativo XAML. Para obter mais informações, consulte [Qual é a diferença: AdMediatorControl ou AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
+Os tópicos nesta seção fornecem informações úteis para desenvolvedores sobre as bibliotecas do Microsoft advertising no Microsoft Store Services SDK (para aplicativos UWP) e o Microsoft Advertising SDK para Windows e Windows Phone 8.x (para aplicativos do Windows 8.1 e Windows Phone 8.x).
+
 
 ## Nesta seção
 
@@ -39,6 +38,6 @@ Os tópicos desta seção fornecem informações úteis para desenvolvedores sob
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

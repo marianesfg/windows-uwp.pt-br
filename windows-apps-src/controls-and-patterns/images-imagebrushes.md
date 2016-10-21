@@ -5,20 +5,33 @@ title: "Imagens e pincéis de imagem"
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
 template: detail.hbs
-ms.sourcegitcommit: 485f3069ff92995082550366839f14be50f674a5
-ms.openlocfilehash: f37f609d87b48a39b958a8e32470488689a3e68c
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: bcb23963bfe59006efff2df01bb5ea3d98525497
 
 ---
 # Imagens e pincéis de imagem
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Para exibir uma imagem, você pode usar o objeto **Image** ou **ImageBrush**. Um objeto Image renderiza uma imagem e um objeto ImageBrush pinta outro objeto com uma imagem. 
 
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx"><strong>Classe Image</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx"><strong>Propriedade Source</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx"><strong>Classe ImageBrush</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx"><strong>Propriedade ImageSource</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
--   [**Classe Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
--   [**Propriedade Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)
--   [**Classe ImageBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)
--   [**Propriedade ImageSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)
+
+
+
 
 ## Estes são os elementos certos?
 Use um elemento **Image** para exibir uma imagem independente em seu aplicativo.
@@ -115,6 +128,10 @@ Esta é a imagem renderizada com uma opacidade de 0,5 e um plano de fundo preto 
 
 As APIs de [**Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx), [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) e [**BitmapSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.aspx) não incluem métodos dedicados para codificar e decodificar formatos de mídia. Todas as operações de codificação e decodificação são internas e irão, no máximo, trazer à tona aspectos de codificação e decodificação como parte dos dados de eventos de carregamento. Caso deseje realizar trabalhos especiais com codificação ou decodificação de imagens (algo que você provavelmente fará se seu aplicativo realizar conversões ou manipulação de imagens), use as APIs disponíveis no namespace [**Windows.Graphics.Imaging**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.graphics.imaging.aspx). Essas APIs também têm suporte do componente Windows Imaging Component (WIC) no Windows.
 
+A partir do Windows 10, versão 1607, o elemento **Image** dá suporte a imagens GIF animadas. Quando você usa um **BitmapImage** como a imagem de **Origem**, pode acessar APIs de BitmapImage para controlar a reprodução da imagem GIF animada. Para obter mais informações, consulte os Comentários sobre a página da classe [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx).
+
+> **Observação**&nbsp;&nbsp;O suporte para GIF animado está disponível quando seu aplicativo é compilado para Windows 10, versão 1607 e executado na versão 1607 (ou posterior). Quando seu aplicativo é compilado para ou é executado em versões anteriores, o primeiro quadro do GIF é mostrado, mas não é animado.
+
 Para obter mais informações sobre os recursos do aplicativo e como empacotar as origens de imagem em um aplicativo, consulte [Definindo recursos de aplicativos](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321).
 
 ### WriteableBitmap
@@ -123,7 +140,7 @@ Um [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/wi
 
 ### RenderTargetBitmap
 
-A classe [**RenderTargetBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.rendertargetbitmap.aspx) pode capturar a árvore da interface do usuário XAML de um aplicativo em execução e representar a origem de uma imagem de bitmap. Após a captura, a origem dessa imagem poderá ser aplicada a outras partes do aplicativo, salva como recurso ou dados de aplicativo pelo usuário ou utilizada em outros cenários. Um cenário especificamente útil é a criação de uma miniatura em tempo de execução de uma página XAML para um esquema de navegação, como incluir o link da imagem de um controle [**Hub**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.hub.aspx). **O RenderTargetBitmap** tem algumas limitações sobre o conteúdo que vai aparecer na imagem capturada. Para obter mais informações, consulte o tópico de referência da API de [**RenderTargetBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.rendertargetbitmap.aspx).
+A classe [**RenderTargetBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.rendertargetbitmap.aspx) pode capturar a árvore da interface do usuário XAML de um aplicativo em execução e representar a origem de uma imagem de bitmap. Após a captura, a origem dessa imagem poderá ser aplicada a outras partes do aplicativo, salva como recurso ou dados de aplicativo pelo usuário ou utilizada em outros cenários. Um cenário especificamente útil é a criação de uma miniatura em tempo de execução de uma página XAML para um esquema de navegação, como incluir o link da imagem de um controle [**Hub**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.hub.aspx). **RenderTargetBitmap** tem algumas limitações sobre o conteúdo que vai aparecer na imagem capturada. Para obter mais informações, consulte o tópico de referência da API de [**RenderTargetBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.rendertargetbitmap.aspx).
 
 ### Origens de imagens e dimensionamento
 
@@ -137,8 +154,7 @@ Para obter mais informações sobre como desenvolver para dimensionamento, consu
 
 Se você definir um Image ou ImageBrush usando código, use os construtores padrão e defina a propriedade relevante ([**Image.Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) ou [**ImageBrush.ImageSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)). As propriedades de source exigem um [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) (não um URI) quando você os define usando código. Se a sua origem for um fluxo, use o método [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx) para inicializar o valor. Se sua origem for um URI que inclua conteúdo no seu aplicativo que usa o esquema **ms-appx** ou **ms-resource**, use o construtor [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx) que inclui um URI. Você também pode considerar a manipulação do evento [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx) se houver algum problema de temporização com a recuperação ou decodificação da origem da imagem, onde você pode precisar de conteúdo alternativo para exibir até que a origem da imagem esteja disponível. Para obter um código de exemplo, consulte [Exemplo de imagens XAML](http://go.microsoft.com/fwlink/p/?linkid=238575).
 
-> **Observação**
-            &nbsp;&nbsp;Se você definir as imagens usando código, poderá usar a manipulação automática para acessar recursos não qualificados com os qualificadores atuais de escala e cultura ou usar [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) e [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) com qualificadores de escala e cultura para obter esses recursos diretamente. Para saber mais, veja [Sistema de gerenciamento de recursos](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
+> **Observação**&nbsp;&nbsp;Se você definir as imagens usando código, poderá usar a manipulação automática para acessar recursos não qualificados com os qualificadores atuais de escala e cultura ou usar [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) e [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) com qualificadores de escala e cultura para obter esses recursos diretamente. Para saber mais, veja [Sistema de gerenciamento de recursos](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
 
 ## Artigos relacionados
 
@@ -147,6 +163,6 @@ Se você definir um Image ou ImageBrush usando código, use os construtores padr
 -   [**Classe ImageBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

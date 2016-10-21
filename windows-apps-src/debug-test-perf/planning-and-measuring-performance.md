@@ -3,13 +3,14 @@ author: mcleblanc
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: Planejando para o desempenho
 description: "Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria."
+translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
+ms.openlocfilehash: a53434223585d2c36fe30f4c2a49f019c7552662
 
 ---
 # Planejando para o desempenho
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria. Tecnicamente, o desempenho é um requisito não funcional, mas tratar o desempenho como um recurso ajudará você atender às expectativas dos usuários. Especificar metas e mensurar são fatores importantes. Determine quais são os cenários críticos de desempenho; defina o que significa bom desempenho. Em seguida, faça medições o quanto antes e com frequência suficiente ao longo do ciclo de vida do projeto para cumprir suas metas.
@@ -160,7 +161,7 @@ Use essas técnicas e ferramentas para testar como seu aplicativo se compara às
 -   Faça testes com base em várias configurações de hardware, incluindo PCs de desktop e multifuncionais, laptops e ultrabooks e tablets, entre outros dispositivos móveis.
 -   Faça testes com base em uma ampla variedade de tamanhos de tela. Embora tamanhos de tela mais amplos possam mostrar muito mais conteúdo, trazer todo esse conteúdo extra pode prejudicar o desempenho.
 -   Elimine o máximo possível das variáveis de teste.
-    -   Desative aplicativos em segundo plano no dispositivo de teste. Para isso, no Windows, selecione **Configurações** no menu Iniciar&gt;**Personalização**&gt;**Tela de bloqueio**. Selecione cada aplicativo ativo e selecione **Nenhum**.
+    -   Desative aplicativos em segundo plano no dispositivo de teste. Para isso, no Windows, selecione **Configurações** no menu Iniciar &gt; **Personalização** &gt; **Tela de bloqueio**. Selecione cada aplicativo ativo e selecione **Nenhum**.
     -   Compile seu aplicativo no código nativo o criando na configuração da versão antes de implantá-lo no dispositivo de teste.
     -   Para garantir que a manutenção automática não afete o desempenho do dispositivo de teste, dispare-o manualmente e aguarde a conclusão. No Windows, no menu Iniciar, procure **Segurança e Manutenção**. Na área de **Manutenção**, em **Manutenção Automática**, selecione **Iniciar manutenção** e aguarde o status sair de **Manutenção em progresso**.
     -   Execute o aplicativo várias vezes para ajudar a eliminar variáveis de teste aleatórias e a garantir medições consistentes.
@@ -193,6 +194,6 @@ Otimize somente os caminhos de código críticos de desempenho em seu aplicativo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

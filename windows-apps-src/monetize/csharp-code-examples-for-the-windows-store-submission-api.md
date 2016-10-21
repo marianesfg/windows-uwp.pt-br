@@ -1,33 +1,37 @@
 ---
 author: mcleanbyron
 ms.assetid: FABA802F-9CB2-4894-9848-9BB040F9851F
-description: Use the C# code examples in this section to learn more about using the Windows Store submission API.
-title: C# code examples for the Windows Store submission API
+description: "Use os exemplos de código C# nesta seção para saber mais sobre como usar a API de envio da Windows Store."
+title: "Exemplos de código C# para a API de envio da Windows Store"
+translationtype: Human Translation
+ms.sourcegitcommit: 1f577f33563d6acd7d2f791a48176f9a6164d287
+ms.openlocfilehash: 9ae200699027f908cfc4b59dfc5035dcb09e93f6
+
 ---
 
-# C\# code examples for the Windows Store submission API
+# Exemplos de código C\# para a API de envio da Windows Store
 
-This article provides C# code examples for using the *Windows Store submission API*. For more information about this API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+Este artigo fornece exemplos de código C# para usar a *API de envio da Windows Store*. Para saber mais sobre essa API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
-These code examples demonstrate the following tasks:
+Esses exemplos de códigos demonstram as seguintes tarefas:
 
-* [Update an app submission](csharp-code-examples-for-the-windows-store-submission-api.md#update-app-submission).
-* [Create and commit an add-on submission](csharp-code-examples-for-the-windows-store-submission-api.md#create-and-commit-add-on-submission).
-* [Update an add-on submission](csharp-code-examples-for-the-windows-store-submission-api.md#update-add-on-submission).
-* [Update a package flight submission](csharp-code-examples-for-the-windows-store-submission-api.md#update-flight-submission).
+* [Atualizar um envio de aplicativo](csharp-code-examples-for-the-windows-store-submission-api.md#update-app-submission)
+* [Criar e confirmar um envio de complemento](csharp-code-examples-for-the-windows-store-submission-api.md#create-and-commit-add-on-submission).
+* [Atualizar um envio de complemento](csharp-code-examples-for-the-windows-store-submission-api.md#update-add-on-submission).
+* [Atualizar um envio de pacote de pré-lançamento](csharp-code-examples-for-the-windows-store-submission-api.md#update-flight-submission).
 
-You can review each example to learn more about the task it demonstrates, or you can build all the code examples in this article into a console application. To build the examples, create a C# console application named **DeveloperApiCSharpSample** in Visual Studio, copy each example to a separate code file in the project, and build the project.
+Você pode examinar cada exemplo para saber mais sobre a tarefa que ele demonstra ou criar todos os exemplos de código neste artigo em um aplicativo de console. Para compilar os exemplos, crie um aplicativo de console C# chamado **DeveloperApiCSharpSample** no Visual Studio, copie cada exemplo em um arquivo de código separado no projeto e compile o projeto.
 
-## Prerequisites
+## Pré-requisitos
 
-These examples use the following libraries:
+Estes exemplos usam as seguintes bibliotecas:
 
-* Microsoft.WindowsAzure.Storage.dll. This library is available in the [Azure SDK for .NET](https://azure.microsoft.com/downloads/), or you can obtain it by installing the [WindowsAzure.Storage NuGet package](https://www.nuget.org/packages/WindowsAzure.Storage).
-* [Json.NET](http://www.newtonsoft.com/json) from Newtonsoft.
+* Microsoft.WindowsAzure.Storage.dll. Essa biblioteca está disponível no [SDK do Azure para .NET](https://azure.microsoft.com/downloads/) ou você pode obtê-la instalando o [pacote NuGet do WindowsAzure.Storage](https://www.nuget.org/packages/WindowsAzure.Storage).
+* [Json.NET](http://www.newtonsoft.com/json) da Newtonsoft.
 
-## Main program
+## Programa principal
 
-The following example implements a command line program that calls the other example methods in this article to demonstrate different ways to use the Windows Store submission API.
+O exemplo a seguir implementa um programa de linha de comando que chama os outros métodos de exemplo neste artigo para demonstrar as diversas maneiras de usar a API do envio da Windows Store.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -60,14 +64,14 @@ namespace DeveloperApiCSharpSample
 }
 ```
 
-## Helper classes
+## Classes de ajuda
 
-This section provides helper classes that are used by the Windows Store submission API examples in this article.
+Esta seção fornece classes auxiliares que são usadas pelos exemplos de API de envio da Windows Store neste artigo.
 
 <span id="clientconfiguration" />
-### ClientConfiguration helper class
+### Classe auxiliar ClientConfiguration
 
-The following example defines a ```ClientConfiguration``` class that is used to pass data to each of the other example methods that use the Windows Store submission API.
+O exemplo a seguir define uma classe ```ClientConfiguration``` que é usada para transmitir dados para cada um dos outros métodos de exemplo que usam o envio da API da Windows Store.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -134,9 +138,9 @@ namespace DeveloperApiCSharpSample
 ```
 
 <span id="ingestionclient" />
-### IngestionClient helper class
+### Classe auxiliar IngestionClient
 
-The following example defines an ```IngestionClient``` class that provides helper methods for some key tasks involving the Windows Store submission API.
+O exemplo a seguir define uma classe ```IngestionClient``` que fornece métodos auxiliares para algumas tarefas-chave que envolvem a API de envio da Windows Store.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -415,9 +419,9 @@ namespace DeveloperApiCSharpSample
 ```
 
 <span id="update-app-submission" />
-## Update an app submission
+## Atualizar um envio de aplicativo
 
-The following example demonstrates how to [update an app submission](manage-app-submissions.md). This example uses the [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) and [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) helper classes that are described above.
+O exemplo a seguir demonstra como [atualizar um envio de aplicativo](manage-app-submissions.md). Este exemplo usa as classes auxiliares [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) e [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) que estão descritas acima.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -645,9 +649,9 @@ namespace DeveloperApiCSharpSample
 ```
 
 <span id="create-and-commit-add-on-submission" />
-## Create and commit an add-on submission
+## Criar e confirmar um envio de complemento
 
-The following example demonstrates how to [create and commit a new add-on submission](manage-add-on-submissions.md) (add-ons are also known as in-app products or IAPs). This example uses the [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) and [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) helper classes that are described above.
+O exemplo a seguir demonstra como [criar e confirmar um novo envio de complemento](manage-add-on-submissions.md) (os complementos também são conhecidos como produtos no aplicativo ou IAPs). Este exemplo usa as classes auxiliares [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) e [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) que estão descritas acima.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -822,9 +826,9 @@ namespace DeveloperApiCSharpSample
 ```
 
 <span id="update-add-on-submission" />
-## Update an add-on submission
+## Atualizar um envio de complemento
 
-The following example demonstrates how to [update an add-on submission](manage-add-on-submissions.md) (add-ons are also known as in-app products or IAPs). This example uses the [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) and [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) helper classes that are described above.
+O exemplo a seguir demonstra como [atualizar um envio de complemento](manage-add-on-submissions.md) (os complementos também são conhecidos como produtos no aplicativo ou IAPs). Este exemplo usa as classes auxiliares [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) e [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) que estão descritas acima.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -1003,9 +1007,9 @@ namespace DeveloperApiCSharpSample
 ```
 
 <span id="update-flight-submission" />
-## Update a package flight submission
+## Atualizar um envio de pacote de pré-lançamento
 
-The following example demonstrates how to [update a new package flight submission](manage-flight-submissions.md). This example uses the [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) and [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) helper classes that are described above.
+O exemplo a seguir demonstra como [atualizar um novo envio de pacote de pré-lançamento do pacote](manage-flight-submissions.md). Este exemplo usa as classes auxiliares [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) e [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) que estão descritas acima.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -1198,6 +1202,12 @@ namespace DeveloperApiCSharpSample
 }
 ```
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

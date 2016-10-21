@@ -1,11 +1,11 @@
 ---
 description: "Obtenha os downloads e ferramentas mais recentes para o layout da interface do usuário e designs de controle de aplicativos UWP."
-keywords: uwp app layout, UI, user interface designs, downloads, uwp tools
+keywords: "layout de aplicativo UWP, interface do usuário, designs de interface do usuário, downloads, ferramentas de UWP"
 title: "Downloads de design para aplicativos UWP – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 1370af75dcd45d52d0d31f57acb958d366f9bee5
-ms.openlocfilehash: 4ac5db9da4cd9ba0edff5b08dfff6ed6473ab4e3
+ms.sourcegitcommit: f1ea979f5179cce0bb059534b064c2ecf805ce89
+ms.openlocfilehash: da21817eea3a26ffd162bd19c8eb69345ac1d726
 
 ---
 
@@ -73,7 +73,7 @@ Esse conjunto de ações para o Adobe Photoshop gera os 68 ativos recomendados d
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
             <p><b>Ferramenta Redliner para o Adobe Illustrator</b><br/>
-Gera sem esforço linhas vermelhas dos seus protótipos do Illustrator. <br/>[Baixar a ferramenta Redliner para o Adobe Illustrator](https://go.microsoft.com/fwlink/p/?LinkId=534641)</p>    
+Gera sem esforço linhas vermelhas dos seus protótipos do Illustrator. (Requer o Adobe Illustrator CC ou posterior.)<br/>[Baixar a ferramenta Redliner para o Adobe Illustrator](https://go.microsoft.com/fwlink/p/?LinkId=534641)</p>  
   </div>
   <div class="side-by-side-content-right">
 <a href="https://go.microsoft.com/fwlink/p/?LinkId=534641"><img src="images/redliner-tool.png" alt="Download the Redliner tool for Adobe Illustrator" /></a>
@@ -109,6 +109,6 @@ Esta amostra se integra aos recursos do Windows com a automação doméstica int
 <b>Quer mais código?</b> Confira a página de exemplo do Windows para obter uma lista completa de todos as nossas amostras de aplicativos UWP. [Acesse o portal de amostras](https://developer.microsoft.com/samples)
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

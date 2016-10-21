@@ -3,15 +3,16 @@ author: mcleanbyron
 ms.assetid: 4804e371-065e-4d5a-ab1a-9c5732f52a9e
 description: "Saiba mais sobre os países e regiões com suporte para anúncios intersticiais e em banner."
 title: Mercados aceitos no Microsoft Advertising
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 2d17a3936a4932b0aa30c80a38bb492f3f21fb37
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 297659aa33d37bd8da29b0cb4e0d43ce29e5e7c0
 
 ---
 
 # Mercados aceitos no Microsoft Advertising
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Anúncios intersticiais e em banner têm suporte nos seguintes países e regiões.
 
@@ -314,6 +315,6 @@ Anúncios intersticiais e em banner têm suporte nos seguintes países e regiõe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

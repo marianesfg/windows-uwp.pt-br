@@ -3,15 +3,16 @@ author: mtoepke
 title: "Manipular Cenários removidos de dispositivos no Direct3D 11"
 description: "Este tópico explica como recriar a cadeia de interface do dispositivo Direct3D e DXGI quando o adaptador gráfico é removido ou reinicializado."
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8d522a309386b06f97bc63b9eead1ca4cecf165c
+ms.openlocfilehash: 3cb625886add852d9faa36a0ad5bc611c1929077
 
 ---
 
 # <span id="dev_gaming.handling_device-lost_scenarios"></span>Manipular cenários removidos de dispositivos no Direct3D 11
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico explica como recriar a cadeia de interface do dispositivo Direct3D e DXGI quando o adaptador gráfico é removido ou reinicializado.
 
@@ -136,18 +137,12 @@ Quando o método HandleDeviceLost é encerrado, o controle retorna ao loop de re
 
 Problemas repetitivos com erros de dispositivo DXGI removido podem indicar que o seu código gráfico está criando condições inválidas durante uma rotina de desenho. Também podem indicar uma falha de hardware ou um bug no driver gráfico. Para investigar a causa dos erros de dispositivo removido, chame [**ID3D11Device::GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) antes de liberar o dispositivo Direct3D. Esse método retorna um de seis códigos de erro DXGI possíveis, indicando o motivo do erro de dispositivo removido:
 
--   
-            **DXGI\_ERROR\_DEVICE\_HUNG**: o driver gráfico parou de responder devido a uma combinação inválida de comandos gráficos enviados pelo aplicativo. Se esse erro ocorrer repetidamente, é uma indicação de que provavelmente seu aplicativo fez o dispositivo parar e precisa ser depurado.
--   
-            **DXGI\_ERROR\_DEVICE\_REMOVED**: o dispositivo gráfico foi fisicamente removido, desativado ou um driver foi atualizado. Isso acontece ocasionalmente e é normal, seu aplicativo ou jogo deve recriar os recursos do dispositivo conforme descrito neste tópico.
--   
-            **DXGI\_ERROR\_DEVICE\_RESET**: o dispositivo gráfico falhou devido a um comando malformado. Se esse erro ocorrer repetidamente, pode significar que seu código está enviando comandos inválidos de desenho.
--   
-            **DXGI\_ERROR\_DRIVER\_INTERNAL\_ERROR**: o driver gráfico encontrou um erro e restaurou o dispositivo.
--   
-            **DXGI\_ERROR\_INVALID\_CALL**: o aplicativo forneceu dados de parâmetro inválidos. Se esse erro ocorrer mesmo que seja uma única vez, significa que o seu código causou a condição de dispositivo removido e deve ser depurado.
--   
-            **S\_OK**: retornado quando um dispositivo gráfico foi habilitado, desabilitado ou redefinido sem invalidar o dispositivo gráfico atual. Por exemplo, esse código de erro pode ser retornado se um aplicativo estiver usando a [WARP (Plataforma de Rasterização Avançada do Windows)](https://msdn.microsoft.com/library/windows/desktop/gg615082) e um adaptador de hardware ficar indisponível.
+-   **DXGI\_ERROR\_DEVICE\_HUNG**: o driver gráfico parou de responder devido a uma combinação inválida de comandos gráficos enviados pelo aplicativo. Se esse erro ocorrer repetidamente, é uma indicação de que provavelmente seu aplicativo fez o dispositivo parar e precisa ser depurado.
+-   **DXGI\_ERROR\_DEVICE\_REMOVED**: o dispositivo gráfico foi fisicamente removido, desativado ou um driver foi atualizado. Isso acontece ocasionalmente e é normal, seu aplicativo ou jogo deve recriar os recursos do dispositivo conforme descrito neste tópico.
+-   **DXGI\_ERROR\_DEVICE\_RESET**: o dispositivo gráfico falhou devido a um comando malformado. Se esse erro ocorrer repetidamente, pode significar que seu código está enviando comandos inválidos de desenho.
+-   **DXGI\_ERROR\_DRIVER\_INTERNAL\_ERROR**: o driver gráfico encontrou um erro e restaurou o dispositivo.
+-   **DXGI\_ERROR\_INVALID\_CALL**: o aplicativo forneceu dados de parâmetro inválidos. Se esse erro ocorrer mesmo que seja uma única vez, significa que o seu código causou a condição de dispositivo removido e deve ser depurado.
+-   **S\_OK**: retornado quando um dispositivo gráfico foi habilitado, desabilitado ou redefinido sem invalidar o dispositivo gráfico atual. Por exemplo, esse código de erro pode ser retornado se um aplicativo estiver usando a [WARP (Plataforma de Rasterização Avançada do Windows)](https://msdn.microsoft.com/library/windows/desktop/gg615082) e um adaptador de hardware ficar indisponível.
 
 O código a seguir recuperará o código de erro [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) e o imprimirá no console de depuração. Insira esse código no início do método HandleDeviceLost:
 
@@ -168,8 +163,7 @@ Para obter mais detalhes, consulte [**GetDeviceRemovedReason**](https://msdn.mic
 
 O Prompt de Comando do Desenvolvedor do Visual Studio dá suporte a uma ferramenta de linha de comando chamada 'dxcap' para captura de eventos Direct3D e reprodução relacionada ao Diagnóstico de Gráficos do Visual Studio. Você pode usar a opção de linha de comando "-forcetdr" enquanto seu aplicativo estiver em execução, o que forçará um evento de recuperação e detecção de tempo limite de GPU, disparando DXGI\_ERROR\_DEVICE\_REMOVED e permitindo que você teste seu código de tratamento de erro.
 
-> 
-            **Note**  O DXCap e suas DLLs de suporte são instalados em system32/syswow64 como parte das Ferramentas Gráficas para Windows 10, que não são mais distribuídas por meio do SDK do Windows. Em vez disso, elas são fornecidas através do Recurso de Ferramentas de Gráficos sob Demanda que é um componente opcional do sistema operacional e deve ser instalado para que as Ferramentas de Gráficos sejam habilitadas e usadas no Windows 10. Mais informações sobre como instalar as Ferramentas de Gráficos para Windows 10 podem ser encontradas aqui: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>
+> **Note**  O DXCap e suas DLLs de suporte são instalados em system32/syswow64 como parte das Ferramentas Gráficas para Windows 10, que não são mais distribuídas por meio do SDK do Windows. Em vez disso, elas são fornecidas através do Recurso de Ferramentas de Gráficos sob Demanda que é um componente opcional do sistema operacional e deve ser instalado para que as Ferramentas de Gráficos sejam habilitadas e usadas no Windows 10. Mais informações sobre como instalar as Ferramentas de Gráficos para Windows 10 podem ser encontradas aqui: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>
 
  
 
@@ -183,6 +177,6 @@ O Prompt de Comando do Desenvolvedor do Visual Studio dá suporte a uma ferramen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

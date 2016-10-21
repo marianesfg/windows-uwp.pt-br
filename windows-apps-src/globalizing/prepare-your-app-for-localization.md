@@ -7,7 +7,7 @@ label: Prepare your app for localization
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 4f9bc1d14db7c348e2b4dc9db2440f94d44ab4a5
+ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
 
 ---
 
@@ -31,8 +31,7 @@ Especifique imagens ou outros recursos de arquivo com a marca do idioma adequado
 
 Adicione comentários de localização aos arquivos de recurso do aplicativo. Os comentários ficam visíveis para o tradutor e devem fornecer informações contextuais que ajudem o tradutor a traduzir os recursos com precisão. Os comentários também devem fornecer informações de restrições suficientes sobre o recurso, para que a tradução não corrompa o software. Opcionalmente, os comentários podem ser registrados pela ferramenta Makepri.exe.
 
-
-              **XAML:** arquivos Resw (recursos criados no Visual Studio para aplicativos usando XAML) têm um elemento de comentário. Por exemplo:
+**XAML:** arquivos Resw (recursos criados no Visual Studio para aplicativos usando XAML) têm um elemento de comentário. Por exemplo:
 
 ```XML
 <data name="String1">
@@ -41,8 +40,7 @@ Adicione comentários de localização aos arquivos de recurso do aplicativo. Os
 </data>
 ```
 
-
-              **HTML:** arquivos Resjson (recursos criados no Visual Studio para aplicativos usando HTML) permitem metadados em campos que comecem com um sublinhado, como comentários:
+**HTML:** arquivos Resjson (recursos criados no Visual Studio para aplicativos usando HTML) permitem metadados em campos que comecem com um sublinhado, como comentários:
 
 ```json
 {
@@ -194,6 +192,6 @@ A classificação segue o formato do **Painel de Controle Regional**.
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

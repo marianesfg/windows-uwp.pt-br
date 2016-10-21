@@ -2,16 +2,14 @@
 description: "Obtenha orientação de design e instruções de codificação para adicionar controles e padrões ao seu aplicativo UWP. Encontre mais de 45 controles poderosos para uso com o seu aplicativo."
 title: "Controles e padrões UWP - Desenvolvimento de aplicativos do Windows"
 author: mijacobs
-keywords: uwp controls, user interface, app controls
+keywords: "controles de UWP, interface do usuário, controles de aplicativo"
 translationtype: Human Translation
-ms.sourcegitcommit: 7c45a464be250e210df48d3fdef35f00d77e16d5
-ms.openlocfilehash: 23fdd3513d11a0fa0171e50fe71d49c8e3db7376
+ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
+ms.openlocfilehash: ef383e46f2c610b57eec1c7767d5100e42075f6c
 
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-
 # Controles e padrões para aplicativos UWP
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 No desenvolvimento de aplicativos UWP, um <i>controle</i> é um elemento de interface do usuário que exibe conteúdo ou permite interação. Os controles são os blocos de construção da interface do usuário. Fornecemos mais de 45 controles para você usar, desde botões simples a controles de dados avançados, como o modo de exibição de grade. Um <i>padrão</i> é a receita para combinar vários controles para criar algo novo.
 
@@ -58,7 +56,7 @@ Informações detalhadas sobre controles e padrões específicos.
 
 <li>[Seletor de data do calendário](calendar-date-picker.md)</li>
 
-<li>[Exibição de calendário](calendar-view.md)</li>
+<li>[Exibição de Calendário](calendar-view.md)</li>
 
 <li>[Seletor de data](date-picker.md)</li>
 
@@ -67,7 +65,7 @@ Informações detalhadas sobre controles e padrões específicos.
 </li>
 
 
-<li>[Caixas de diálogo, pop-ups e menus](dialogs-popups-menus.md)</li>
+<li>[Caixas de diálogo e submenus](dialogs.md)</li>
 
 <li>[Exibição de inversão](flipview.md)</li>
 
@@ -88,6 +86,8 @@ Informações detalhadas sobre controles e padrões específicos.
 <li>[Controles personalizados de transporte](custom-transport-controls.md)</li>
 </ul>
 </li>
+
+<li>[Menus e menus de contexto](menus.md)</li>
 
 <li>[Painel de navegação](nav-pane.md)</li>
 
@@ -143,6 +143,8 @@ Informações detalhadas sobre controles e padrões específicos.
 
 <li>[Notificações do sistema interativas e adaptáveis](tiles-and-notifications-adaptive-interactive-toasts.md)</li>
 
+<li>[Notificações de selo](tiles-and-notifications-badges.md)</li>
+
 <li>[Visualizador de notificações](tiles-and-notifications-notifications-visualizer.md)</li>
 
 <li>[Métodos de entrega de notificação](tiles-and-notifications-choosing-a-notification-delivery-method.md)</li>
@@ -167,6 +169,6 @@ Informações detalhadas sobre controles e padrões específicos.
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

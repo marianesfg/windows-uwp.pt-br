@@ -5,32 +5,26 @@ title: "Blocos, selos e notificações"
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 32b1c3ec674a84ca4ed08d98119fe21f77e15554
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: dbc178f5df541e482f4a2e86c6662ead1992a1ce
 
 ---
-
 # Blocos, selos e notificações para aplicativos UWP
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Saiba como usar blocos, selos, notificações do sistema e notificações para fornecer pontos de entrada em seu aplicativo e manter os usuários atualizados.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><img src="images/tile-and-live-tile.png" alt="Breakdown of tile elements" /></td>
-<td align="left"><p>Todo aplicativo tem um bloco. <em>Bloco</em> é a representação de um aplicativo no menu Iniciar. Você pode habilitar diferentes tamanhos de bloco (pequeno, médio, largo e grande). Você pode usar uma <em>notificação de bloco</em> para atualizar o bloco regularmente para comunicar novas informações ao usuário, como manchetes, ou o assunto da mensagem mais recente não lida. Você pode usar um <em>selo</em> ou uma <em>notificação</em> para fornecer informações de status ou resumo na forma de um glifo fornecido pelo sistema ou de um número de 1 a 99.</p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" />
+Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo UWP tem um bloco. Você pode habilitar diferentes tamanhos de bloco (pequeno, médio, largo e grande).</p>
+
+<p>Você pode usar uma <em>notificação de bloco</em> para atualizar o bloco regularmente para comunicar novas informações ao usuário, como manchetes, ou o assunto da mensagem mais recente não lida.</p>
+
+<p>Você pode usar um <em>selo</em> para fornecer informações de status ou resumo na forma de um glifo fornecido pelo sistema ou de um número de 1 a 99. Selos também são exibidos no ícone da barra de tarefas para um aplicativo. </p>
+
 <p>Uma <em>notificação do sistema</em> é uma notificação que seu aplicativo envia para o usuário por meio de um elemento de interface do usuário pop-up chamado <em>notificação do sistema</em> (ou <em>banner</em>). A notificação poderá ser vista se o usuário estiver em seu aplicativo ou não.</p>
-<p>Uma <em>notificação por push</em> ou <em>notificação de dados brutos</em> é uma notificação enviada para seu aplicativo pelo Serviço de Notificação por Push do Windows (WNS) ou por uma tarefa em segundo plano. Seu aplicativo pode responder a essas notificações avisando o usuário que algo de interesse aconteceu (por meio de atualização de notificação, atualização de bloco ou notificação do sistema) ou de qualquer forma a sua escolha.</p></td>
-</tr>
-</tbody>
-</table>
+<p>Uma <em>notificação por push</em> ou <em>notificação de dados brutos</em> é uma notificação enviada para seu aplicativo pelo Serviço de Notificação por Push do Windows (WNS) ou por uma tarefa em segundo plano. Seu aplicativo pode responder a essas notificações avisando o usuário que algo de interesse aconteceu (por meio de atualização de notificação, atualização de bloco ou notificação do sistema) ou de qualquer forma a sua escolha.</p>
 
  
 ## Blocos 
@@ -131,6 +125,6 @@ Saiba como usar blocos, selos, notificações do sistema e notificações para f
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

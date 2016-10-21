@@ -3,8 +3,9 @@ author: mtoepke
 title: Adicionando entrada e interatividade ao exemplo do Marble Maze
 description: Jogos de aplicativos da Plataforma Universal do Windows (UWP) funcionam em uma variedade de dispositivos, como computadores de mesa, laptops e tablets.
 ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 563ee292ec7189b0c365ae5ee0d1c41fd6fd1a09
+ms.openlocfilehash: ddaa13c6bf7d1bcf5a01d7525389a893a077f4f4
 
 ---
 
@@ -16,8 +17,7 @@ ms.openlocfilehash: 563ee292ec7189b0c365ae5ee0d1c41fd6fd1a09
 
 Jogos de aplicativos da Plataforma Universal do Windows (UWP) funcionam em uma variedade de dispositivos, como computadores de mesa, laptops e tablets. Um dispositivo pode ter diversos mecanismos de entrada e controle. Dê suporte a vários dispositivos de entrada para permitir que o seu jogo acomode uma ampla variedade de preferências e recursos entre seus clientes. Este documento descreve as principais práticas a serem consideradas quando se trabalha com dispositivos de entrada e mostra como o Marble Maze as aplica.
 
-> 
-            **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 Seguem alguns dos pontos principais discutidos neste documento para quando você trabalhar com entrada no seu jogo:
@@ -34,13 +34,11 @@ Seguem alguns dos pontos principais discutidos neste documento para quando você
 
 O Marble Maze aceita dispositivos controladores comuns do Xbox 360, mouse e toque para selecionar itens de menu e o controlador do Xbox 360, mouse, toque e acelerômetro para controlar o jogo. O Marble Maze usa a API XInput para sondar a entrada do controlador. O toque permite aos aplicativos acompanhar e responder à entrada pela ponta do dedo. Um acelerômetro é um sensor que mede a força aplicada ao longo dos eixos x, y e z. Usando o Windows Runtime, você pode pesquisar o estado atual do dispositivo do acelerômetro, e também receber eventos de touch através mecanismo que lida com eventos do Windows Runtime.
 
-> 
-            **Observação**  Este documento usa touch para referir-se tanto a touch quanto à entrada de mouse e ponteiro para referir-se a qualquer dispositivo que use eventos de ponteiro. Pelo touch e o mouse usarem eventos de ponteiro padrão, você pode usar qualquer um desses dispositivos para selecionar itens do menu e controlar o jogo.
+> **Observação**  Este documento usa touch para referir-se tanto a touch quanto à entrada de mouse e ponteiro para referir-se a qualquer dispositivo que use eventos de ponteiro. Pelo touch e o mouse usarem eventos de ponteiro padrão, você pode usar qualquer um desses dispositivos para selecionar itens do menu e controlar o jogo.
 
  
 
-> 
-            **Observação**  O manifesto do pacote define Paisagem como a rotação suportada para o jogo prevenir a orientação de mudar quando você gira o dispositivo para rolar a bola de gude.
+> **Observação**  O manifesto do pacote define Paisagem como a rotação suportada para o jogo prevenir a orientação de mudar quando você gira o dispositivo para rolar a bola de gude.
 
  
 
@@ -448,8 +446,7 @@ for (DWORD userIndex = 0; userIndex < XUSER_MAX_COUNT; ++userIndex)
 
 XInput define a constante **XINPUT\_GAMEPAD\_LEFT\_THUMB\_DEADZONE** da alavanca esquerda. Essa é um limiar de dead zone para a maioria dos jogos.
 
-> 
-            **Importante**  Quando você tralhar com o controle do Xbox 360, sempre leve em consideração a dead zone. A zona morta se refere a variação de sensibilidade ao movimento inicial entre os consoles de jogos. Em alguns controladores, um pequeno movimento pode não gerar nenhuma leitura, mas em outros pode gerar uma leitura mensurável. Para considerar isio em seu jogo, crie uma zona de não movimento para o movimento inicial do thumbstick. Para saber mais sobre a zona morta, consulte [Introdução ao XInput.](https://msdn.microsoft.com/library/windows/desktop/ee417001)
+> **Importante**  Quando você tralhar com o controle do Xbox 360, sempre leve em consideração a dead zone. A zona morta se refere a variação de sensibilidade ao movimento inicial entre os consoles de jogos. Em alguns controladores, um pequeno movimento pode não gerar nenhuma leitura, mas em outros pode gerar uma leitura mensurável. Para considerar isio em seu jogo, crie uma zona de não movimento para o movimento inicial do thumbstick. Para saber mais sobre a zona morta, consulte [Introdução ao XInput.](https://msdn.microsoft.com/library/windows/desktop/ee417001)
 
  
 
@@ -457,8 +454,7 @@ XInput define a constante **XINPUT\_GAMEPAD\_LEFT\_THUMB\_DEADZONE** da alavanca
 
 Os dispositivos relatam valores de entrada de diferentes maneiras. Por exemplo, a entrada de ponteiro pode ser em coordenadas de tela e a entrada de controlador pode ser em um formato completamente diferente. Um desafio ao se combinarem entradas de vários dispositivos em um conjunto de valores de entrada é a normalização, ou a conversão de valores para um formato comum. O Marble Maze normaliza valores dimensionando-os no intervalo \[-1,0, 1,0\]. Para normalizar a entrada de controle do Xbox 360, o Marble Maze divide os valores de entrada por 32768 porque os valores de entrada da alavanca sempre ficam entre -32768 e 32767. A função **PointToTouch**, que já foi descrita nesta seção, alcança um resultado semelhante ao converter coordenadas de tela para valores normalizados que vão, aproximadamente, de -1,0 a +1,0.
 
-> 
-            **Dica**  Mesmo que o seu aplicativo use um método de entrada, aconselhamos que você sempre use valores de entrada normalizados. Isso pode simplificar como a entrada é interpretada por outros componentes do seu jogo, como a simulação física, e facilita a gravação de jogos que funcionam em resoluções de tela diferentes.
+> **Dica**  Mesmo que o seu aplicativo use um método de entrada, aconselhamos que você sempre use valores de entrada normalizados. Isso pode simplificar como a entrada é interpretada por outros componentes do seu jogo, como a simulação física, e facilita a gravação de jogos que funcionam em resoluções de tela diferentes.
 
  
 
@@ -531,6 +527,6 @@ Leia [Adicionando áudio ao exemplo do Marble Maze](adding-audio-to-the-marble-m
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,8 +5,9 @@ title: Reconhecimento de fala
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 66bab97e7108a1728e9659a04ea2f1ecf15f68b7
+ms.openlocfilehash: 59cebc2235b8ae4214156a4140b0b003c717375d
 
 ---
 
@@ -208,13 +209,9 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 **Desenvolvedores**
 * [Interações de fala](speech-interactions.md)
-            
-          
-            **Designers**
+**Designers**
 * [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
-            
-          
-            **Exemplos**
+**Exemplos**
 * [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -226,6 +223,6 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

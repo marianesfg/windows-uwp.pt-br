@@ -5,14 +5,14 @@ ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: a178f992ddd39b5609ce6d15b7e3560e157b9afb
-ms.openlocfilehash: 23897e7e78f3391fbee60a5f7cdf93615401247d
+ms.openlocfilehash: 19f024bd3ad99b4ef9355cc3c9229b1b3ffc51e2
 
 ---
 
 # Segurança
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta seção contém artigos sobre como compilar aplicativos seguros da Plataforma Universal do Windows (UWP) para o Windows 10.
 
@@ -54,6 +54,6 @@ A seção de criptografia contém informações sobre tópicos relacionados mais
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

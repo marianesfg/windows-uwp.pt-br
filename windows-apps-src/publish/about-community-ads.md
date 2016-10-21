@@ -3,8 +3,9 @@ author: jnHs
 Description: "Você pode promover seu aplicativo com aplicativos publicados por outros desenvolvedores. Chamamos este recurso de anúncios de comunidade."
 title: "Sobre anúncios de comunidade"
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
+translationtype: Human Translation
 ms.sourcegitcommit: 90e63d53c68e25816fd1f7b532792d9ad6dc2cc6
-ms.openlocfilehash: 582b26d2dde6cf4f3c7dd6f6d7b182ec4b7002ea
+ms.openlocfilehash: db771fbd56db55b5767e4e335dcb10514f7a0bae
 
 ---
 
@@ -25,13 +26,11 @@ Veja como este programa funciona:
 
 Para aceitar anúncios da comunidade:
 
-1. Vá para a página **Monetização**&gt;**Monetizar com anúncios** no painel do Centro de Desenvolvimento do Windows.
+1. Vá para a página **Monetização** &gt; **Monetizar com anúncios** no painel do Centro de Desenvolvimento do Windows.
 2. Na seção **Anúncios da comunidade**, marque a caixa **Mostrar anúncios da comunidade em meu aplicativo**.
-   > 
-            **Observação**  Depois de marcar ou desmarcar essa caixa, você não precisará republicar seu aplicativo para que as alterações entrem em vigor.
+   > **Observação**  Depois de marcar ou desmarcar essa caixa, você não precisará republicar seu aplicativo para que as alterações entrem em vigor.
 
-3. 
-            [Criar uma campanha publicitária](create-an-ad-campaign-for-your-app.md) para seu aplicativo. Para o tipo de campanha, selecione **Anúncios gratuitos da comunidade**.
+3. [Criar uma campanha publicitária](create-an-ad-campaign-for-your-app.md) para seu aplicativo. Para o tipo de campanha, selecione **Anúncios gratuitos da comunidade**.
 
 
 ## Tópicos relacionados
@@ -41,6 +40,6 @@ Para aceitar anúncios da comunidade:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

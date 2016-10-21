@@ -5,8 +5,9 @@ title: "Seleção por área touch"
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 50a285b484f7e9ed7b349921c3460bd7c9c81603
+ms.openlocfilehash: 5707d36533e1b6566efb23ca9b6bf2bbf659cc63
 
 ---
 
@@ -53,7 +54,7 @@ Por exemplo, quando um toque é detectado, ele é registrado se o objeto for arr
 ## Tamanhos do alvo
 
 
-Em geral, defina o tamanho do alvo de toque como 9 mm ou maior (48x48 pixels em uma tela de 135 PPI em um nível de ajuste predefinido de 1,0x). Evite usar alvos de toque que tenham menos de 7 mm.
+Em geral, defina o tamanho do alvo de toque como 9mm ou maior (48x48 pixels em uma tela de 135PPI em um nível de ajuste predefinido de 1,0x). Evite usar alvos de toque que tenham menos de 7mm.
 
 O diagrama a seguir mostra como o tamanho do destino normalmente é uma combinação do destino visual, do tamanho do destino real e de qualquer área de preenchimento entre o destino real e outros destinos possíveis.
 
@@ -88,8 +89,8 @@ A tabela a seguir lista os tamanhos mínimos e recomendados para os componentes 
 </tr>
 <tr class="odd">
 <td align="left">Tamanho real do alvo</td>
-<td align="left">7 mm</td>
-<td align="left">Maior ou igual a 9 mm (48 x 48 px em 1x)</td>
+<td align="left">7mm</td>
+<td align="left">Maior ou igual a 9mm (48 x 48 px em 1x)</td>
 </tr>
 <tr class="even">
 <td align="left">Tamanho total do alvo</td>
@@ -174,6 +175,6 @@ Siga estas diretrizes para criar interações de esfregar:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

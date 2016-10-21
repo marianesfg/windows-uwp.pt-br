@@ -3,8 +3,9 @@ author: jnHs
 Description: "Saiba como os pacotes do aplicativo são disponibilizados para seus clientes e como gerenciar cenários de pacotes específicos."
 title: "Orientação para gerenciamento de pacote de aplicativo"
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ac8d150f426c7d32e8a3b61b7f08cc0b84feedb8
+ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 
 ---
 
@@ -76,20 +77,17 @@ No exemplo de aplicativo 4, qualquer dispositivo que execute o Windows 10 pode o
 
 Se você tiver um aplicativo na Loja e quiser atualizar seu aplicativo para Windows 10, crie um novo envio e adicione seus pacotes .appxupload UWP durante a etapa [Pacotes](upload-app-packages.md). Depois que seu aplicativo passar pelo processo de certificação, os clientes que já tinham seu aplicativo antes de atualizar para o Windows 10 poderão baixar o pacote UWP como uma atualização na Loja. O pacote UWP também estará disponível para novas aquisições pelos clientes no Windows 10.
 
-> 
-            **Importante**  Depois que um cliente no Windows 10 obtiver seu pacote UWP, você não poderá reverter esse cliente para usar um pacote para qualquer versão anterior do sistema operacional. Não se esqueça de testar exaustivamente seus pacotes UWP no Windows 10 antes de adicioná-los ao seu envio.
+> **Importante**  Depois que um cliente no Windows 10 obtiver seu pacote UWP, você não poderá reverter esse cliente para usar um pacote para qualquer versão anterior do sistema operacional. Não se esqueça de testar exaustivamente seus pacotes UWP no Windows 10 antes de adicioná-los ao seu envio.
 
 Você pode atualizar qualquer um dos seus outros pacotes ao mesmo tempo ou fazer outras alterações no envio (por exemplo, você pode [criar descrições específicas da plataforma](create-platform-specific-descriptions.md) para serem exibidas para clientes em versões anteriores do sistema operacional). Você também pode deixar tudo exatamente igual, se preferir.
 
-> 
-            **Observação**  O número de versão de seus pacotes do Windows 10 deve ser maior que os dos pacotes do Windows 8, Windows 8.1 e/ou Windows Phone 8.1 que você estiver publicando (ou pacotes para as versões do sistema operacional que você publicou anteriormente) para o mesmo aplicativo. Para obter mais informações sobre numeração de versão no Windows 10, consulte [Numeração de versão do pacote](package-version-numbering.md).
+> **Observação**  O número de versão de seus pacotes do Windows 10 deve ser maior que os dos pacotes do Windows 8, Windows 8.1 e/ou Windows Phone 8.1 que você estiver publicando (ou pacotes para as versões do sistema operacional que você publicou anteriormente) para o mesmo aplicativo. Para obter mais informações sobre numeração de versão no Windows 10, consulte [Numeração de versão do pacote](package-version-numbering.md).
 
 Depois que o novo envio concluir o processo de certificação, os pacotes UWP estarão disponíveis, juntamente com todos os outros pacotes que você disponibilizou para os clientes que ainda não estão no Windows 10.
 
 Para obter mais informações sobre o empacotamento de aplicativos UWP para a Loja, consulte [Empacotando aplicativos universais do Windows para Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=620193 ).
 
-> 
-            **Importante**  Tenha em mente que, se você fornecer pacotes destinados à família de dispositivos universal, todo cliente que já tiver seu aplicativo em algum sistema operacional anterior (Windows Phone 8, Windows 8.1 etc.) e atualizar para o Windows 10 será atualizado para o pacote universal do Windows 10.
+> **Importante**  Tenha em mente que, se você fornecer pacotes destinados à família de dispositivos universal, todo cliente que já tiver seu aplicativo em algum sistema operacional anterior (Windows Phone 8, Windows 8.1 etc.) e atualizar para o Windows 10 será atualizado para o pacote universal do Windows 10.
 > 
 > Isso acontece mesmo se você excluiu uma família de dispositivos específica na etapa [Preço e disponibilidade](set-app-pricing-and-availability.md#windows-10-device-families) de seu envio, pois a seleção **Famílias de dispositivos** só se aplica a novas aquisições. Se não quiser que cada cliente anterior obtenha o novo pacote do Windows 10, atualize o elemento [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) em seu manifesto appx para incluir somente a família de dispositivos específica à qual você deseja dar suporte.
 > 
@@ -114,15 +112,13 @@ Se essas regras não forem seguidas, haverá erros de carregamento de pacote que
 
 Às vezes, você pode desejar cancelar completamente a oferta de um aplicativo aos clientes efetivamente "cancelando sua publicação". Para fazer isso, clique em **Tornar aplicativo indisponível** na página de visão geral do aplicativo. Depois que você confirmar que deseja tornar o aplicativo indisponível, em algumas horas ele não estará mais visível na Loja, e os novos clientes não poderão obtê-lo por meio de qualquer método, incluindo códigos promocionais.
 
-> 
-            **Importante**  Isso substituirá todas as configurações de [distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility) que você selecionou em seus envios.
+> **Importante**  Isso substituirá todas as configurações de [distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility) que você selecionou em seus envios.
 
 Observe que todos os clientes que já têm o aplicativo ainda poderão usá-lo (e ainda poderão receber atualizações se você enviar novos pacotes mais tarde).
 
 Depois de tornar o aplicativo indisponível, você continuará a vê-lo em seu painel. Se optar por oferecer o aplicativo aos clientes novamente, você poderá clicar em **Tornar aplicativo disponível** na página Visão geral do aplicativo. Depois que você confirmar, o aplicativo estará disponível a novos clientes (a menos que esteja restrito pelas configurações no seu último envio) dentro de algumas horas.
 
-> 
-            **Observação**  Se você desejar manter seu aplicativo disponível, mas não desejar continuar a oferecê-lo aos clientes em uma determinada versão do sistema operacional, poderá criar um novo envio e remover todos os pacotes para a versão do sistema operacional na qual você deseja impedir novas aquisições. Por exemplo, se antes você tinha pacotes para Windows Phone 8, Windows Phone 8.1 e Windows 10, e agora não deseja continuar oferecendo o aplicativo para novos clientes no Windows Phone 8, remova os pacotes do Windows Phone 8 do envio. Depois que a atualização for publicada, os novos clientes do Windows Phone 8 não poderão adquirir o aplicativo (embora os clientes que já o tenham possam continuar a usá-lo). O aplicativo ainda estará disponível para novos clientes no Windows Phone 8.1 e no Windows 10.
+> **Observação**  Se você desejar manter seu aplicativo disponível, mas não desejar continuar a oferecê-lo aos clientes em uma determinada versão do sistema operacional, poderá criar um novo envio e remover todos os pacotes para a versão do sistema operacional na qual você deseja impedir novas aquisições. Por exemplo, se antes você tinha pacotes para Windows Phone 8, Windows Phone 8.1 e Windows 10, e agora não deseja continuar oferecendo o aplicativo para novos clientes no Windows Phone 8, remova os pacotes do Windows Phone 8 do envio. Depois que a atualização for publicada, os novos clientes do Windows Phone 8 não poderão adquirir o aplicativo (embora os clientes que já o tenham possam continuar a usá-lo). O aplicativo ainda estará disponível para novos clientes no Windows Phone 8.1 e no Windows 10.
 
 ## Removendo pacotes para uma família de dispositivos com suporte anterior
 
@@ -143,6 +139,6 @@ Lembre-se de que mesmo se você remover todos os pacotes que dão suporte a uma 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

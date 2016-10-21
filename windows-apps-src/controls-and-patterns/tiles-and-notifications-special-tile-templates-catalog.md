@@ -5,11 +5,12 @@ title: Modelos de blocos especiais
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: ab7366b8b3cbf75f1f7e9fe35ca83077ac21d081
+translationtype: Human Translation
+ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
+ms.openlocfilehash: b03ea68ea2a0f66edac81a4c7e2671b2f756aa45
 
 ---
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # Modelos de blocos especiais
 
 
@@ -18,14 +19,14 @@ ms.openlocfilehash: ab7366b8b3cbf75f1f7e9fe35ca83077ac21d081
 
 Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. Cada modelo de bloco especial foi compilado especificamente para o Windows 10, exceto para o modelo de bloco icônico, um modelo especial clássico que foi atualizado para o Windows 10. Este artigo aborda três modelos de blocos especiais: Icônico, Fotos e Pessoas.
 
-## <span id="Iconic_tile_template"></span><span id="iconic_tile_template"></span><span id="ICONIC_TILE_TEMPLATE"></span>Modelo de bloco icônico
+## Modelo de bloco icônico
 
 
 O modelo icônico (também conhecido como o modelo "IconWithBadge") permite exibir uma imagem pequena no centro do bloco. O Windows 10 dá suporte ao modelo em telefone e tablet/desktop.
 
 ![blocos de email pequenos e médios](images/iconic-template-mail-2sizes.png)
 
-### <span id="How_to_create_an_iconic_tile"></span><span id="how_to_create_an_iconic_tile"></span><span id="HOW_TO_CREATE_AN_ICONIC_TILE"></span>Como criar um bloco icônico
+### Como criar um bloco icônico
 
 As etapas a seguir abrangem tudo o que você precisa saber para criar um bloco icônico para o Windows 10. Em um nível alto, você precisa do ativo de imagem icônico e, em seguida, envia uma notificação para o bloco usando o modelo icônico e, por fim, uma notificação de selo que fornece o número a ser exibido no bloco.
 
@@ -90,14 +91,14 @@ A imagem a seguir ilustra como as diversas APIs e as cargas estão associadas a 
 
 ![apis e cargas associadas ao modelo de bloco icônico](images/iconic-template-properties-info.png)
 
-## <span id="Photos_tile_template"></span><span id="photos_tile_template"></span><span id="PHOTOS_TILE_TEMPLATE"></span>Modelo de bloco de fotos
+## Modelo de bloco de fotos
 
 
 O modelo de bloco de fotos permite exibir uma apresentação de slides de fotos no bloco dinâmico. O modelo é compatível com todos os tamanhos de bloco, inclusive pequeno, e se comporta da mesma maneira em cada tamanho de bloco. O exemplo abaixo mostra cinco quadros de um bloco médio que usa o modelo de fotos. O modelo tem um zoom e uma animação de fading cruzado que percorre as fotos selecionadas e permanece em loop indefinidamente.
 
 ![apresentação de slides de imagens usando o modelo de bloco de fotos](images/photo-tile-template-image01.jpg)
 
-### <span id="How_to_use_the_photos_template"></span><span id="how_to_use_the_photos_template"></span><span id="HOW_TO_USE_THE_PHOTOS_TEMPLATE"></span>Como usar o modelo de fotos
+### Como usar o modelo de fotos
 
 Usar o modelo de fotos é fácil caso você tenha instalado a [Versão de NotificationExtensions do Windows 10](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx). Embora seja possível usar XML bruto, é altamente recomendável utilizar NotificationExtensions de maneira que você não precisa se preocupar com a geração de XML válido ou conteúdo de escape XML.
 
@@ -105,7 +106,7 @@ O Windows Phone exibe até nove fotos em uma apresentação de slides; tablet, l
 
 Para obter informações sobre como enviar a notificação de bloco, consulte o [Artigo sobre envio de notificações](tiles-badges-notifications.md).
 
-<span codelanguage="XML"></span>
+
 ```XML
 <colgroup>
 <col width="100%" />
@@ -181,29 +182,26 @@ TileContent content = new TileContent()
 };
 ```
 
-## <span id="People_tile_template"></span><span id="people_tile_template"></span><span id="PEOPLE_TILE_TEMPLATE"></span>Modelo de bloco Pessoas
+## Modelo de bloco Pessoas
 
 
 O aplicativo Pessoas no Windows 10 usa um modelo de bloco especial que exibe uma coleção de imagens em círculos que deslizam vertical ou horizontalmente no bloco. Esse modelo de bloco está disponível desde o Windows 10 compilação 10572, e qualquer pessoa pode usá-lo no aplicativo.
 
 O modelo de bloco Pessoas funciona em blocos destes tamanhos:
 
-
-            **Bloco médio** (TileMedium)
+**Bloco médio** (TileMedium)
 
 ![bloco Pessoas médio](images/people-tile-medium.png)
 
  
 
-
-            **Bloco largo** (TileWide)
+**Bloco largo** (TileWide)
 
 ![bloco Pessoas largo](images/people-tile-wide.png)
 
  
 
-
-            **Bloco grande (somente desktop)** (TileLarge)
+**Bloco grande (somente desktop)** (TileLarge)
 
 ![bloco Pessoas grande](images/people-tile-large.png)
 
@@ -272,7 +270,7 @@ Ter esse número de fotos possibilita alguns círculos vazios, o que significa q
 
 Para enviar a notificação, consulte [Escolher um método de entrega de notificação](tiles-and-notifications-choosing-a-notification-delivery-method.md).
 
-## <span id="related_topics"></span>Tópicos relacionados
+## Tópicos relacionados
 
 
 * [Amostra de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-people-tile-template)
@@ -290,6 +288,6 @@ Para enviar a notificação, consulte [Escolher um método de entrega de notific
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

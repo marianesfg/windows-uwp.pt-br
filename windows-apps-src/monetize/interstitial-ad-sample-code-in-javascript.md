@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
 description: "Saiba como iniciar um anúncio intersticial em HTML/JavaScript."
 title: "Código de exemplo de anúncio intersticial em JavaScript"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: d6a561aaff834cd782118abb72b4770985176bf0
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 5317895c2f28166c2905d0d49c5e98da5567943a
 
 
 ---
@@ -12,7 +13,7 @@ ms.openlocfilehash: d6a561aaff834cd782118abb72b4770985176bf0
 # Código de exemplo de anúncio intersticial em JavaScript
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Este tópico mostra como iniciar um anúncio intersticial em JavaScript/HTML. Para obter instruções passo a passo que ilustram como configurar seu projeto para usar esse código, consulte [anúncios intersticiais](interstitial-ads.md). Para um projeto de exemplo completo que demonstra como adicionar anúncios intersticiais de vídeo a um aplicativo JavaScript/HTML, consulte os [Exemplos de publicidade no GitHub](http://aka.ms/githubads).
 
@@ -237,6 +238,6 @@ ad.</b>");
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

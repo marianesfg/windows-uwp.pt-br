@@ -1,55 +1,41 @@
 ---
 author: Jwmsft
-Description: Siga estas diretrizes ao selecionar fontes e especificar seus tamanhos e cores.
-title: Fontes
+Description: Siga estas diretrizes ao selecionar fontes e especificar seus tamanhos e cores para aplicativos UWP.
+title: Fontes para aplicativos UWP
 ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
 label: Fonts
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7db364240dd98f59a4a4d1d0c23cee1195682de2
-ms.openlocfilehash: 52de4d9517c7f3064ad9e589a95e6f96400524cc
+ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
+ms.openlocfilehash: b79a6f3ee32494f04fa472c0531c06aa0a60098b
 
 ---
 
-# Diretrizes de fontes
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-**APIs importantes**
+# Fontes para aplicativos UWP
 
--   [**Propriedade FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209655)
+Este artigo lista as fontes recomendadas para aplicativos UWP. Essas fontes certamente estão disponíveis em todas as edições do Windows 10 que dão suporte a aplicativos UWP.
 
-O uso apropriado de tamanhos, espessuras, cores, rastreamento e espaçamento de fontes pode ajudar a dar a seu aplicativo UWP (Plataforma Universal do Windows (UWP) um visual limpo e organizado que o torna mais fácil de usar. Siga estas diretrizes ao selecionar fontes e especificar seus tamanhos e cores.
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br209655"><strong>Propriedade FontFamily</strong></a></li>
+</ul>
 
-Se você estiver procurando uma lista de ícones Segoe UI Symbol, veja [**Diretrizes de ícones Segoe UI Symbol**](segoe-ui-symbol-font.md).
+</div>
+</div>
 
-## A rampa de tipos do Windows 10
 
 
-A rampa de tipos estabelece uma relação de design fundamental dos títulos ao texto do corpo e garante uma hierarquia clara e compreensível entre os diferentes níveis. Os usuários compreendem imediatamente onde encontrar as informações e como analisar a página.
+O [guia de tipografia UWP](typography.md) recomenda que os aplicativos usem a fonte Segoe UI e, embora Segoe UI seja uma excelente escolha para a maioria dos aplicativos, você não precisa usá-la para tudo. Você pode usar outras fontes para determinados cenários, como leitura, ou ao exibir texto em alguns idiomas diferentes do inglês. 
 
-Veja a rampa de tipos que é recomendável para aplicativos UWP:
 
-| Estilo de texto | Face de tipos | Espessura    | Tamanho (epx) | Espaçamento entre linhas (epx) | Espaçamento entre palavras | Rastreamento (1/1000 em) | Chave de estilo XAML          |
-|------------|----------|-----------|------------|--------------------|--------------|----------------------|-------------------------|
-| Cabeçalho     | Segoe UI | Light     | 46         | 56                 | 100%         | 0                    | HeaderTextBlockStyle    |
-| Subcabeçalho  | Segoe UI | Light     | 34         | 40                 | 100%         | 0                    | SubheaderTextBlockStyle |
-| Título      | Segoe UI | Semileve | 24         | 28                 | 100%         | 0                    | TitleTextBlockStyle     |
-| Subtítulo   | Segoe UI | Regular   | 20         | 24                 | 100%         | 0                    | SubtitleTextBlockStyle  |
-| Base       | Segoe UI | Semileve  | 15         | 20                 | 100%         | 0                    | BaseTextBlockStyle      |
-| Corpo       | Segoe UI | Regular   | 15         | 20                 | 100%         | 0                    | BodyTextBlockStyle      |
-| Legenda    | Segoe UI | Regular   | 12         | 14                 | 100%         | 0                    | CaptionTextBlockStyle   |
 
  
+## Fontes sans-serif
 
-## Fontes recomendadas
-
-
-Você não precisa usar a fonte Segoe UI para tudo. Você pode usar outras fontes para determinados cenários, como leitura, ou quando exibir texto em idiomas diferentes do inglês.
-
-Esta é a lista de fontes que certamente estão disponíveis em todas as edições do Windows 10 que dão suporte a aplicativos UWP.
-
-**Observação**  Se você usar uma fonte que não esteja nessa lista, seu aplicativo poderá disparar um download automático dos dados de fontes de um serviço Microsoft. Isso pode causar problemas de desempenho e outros impactos preocupantes, especialmente para dispositivos móveis. Em particular, observe que isso pode consumir parte do plano de dados móveis do usuário ou resultar em custos de uso de dados móveis. Os aplicativos UWP que serão disponibilizados em dispositivos móveis nunca devem usar fontes para conteúdo de interface do usuário diferentes das fontes nessa lista.
-
- 
+As fontes sans-serif são uma excelente escolha para títulos e elementos de interface do usuário. 
 
 <table>
 <colgroup>
@@ -61,54 +47,147 @@ Esta é a lista de fontes que certamente estão disponíveis em todas as ediçõ
 <tr class="header">
 <th align="left">Família de fontes</th>
 <th align="left">Estilos</th>
-<th align="left">Comentário</th>
+<th align="left">Observações</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Arial</td>
+<td align="left" style="font-family: Arial;">Arial</td>
 <td align="left">Regular, itálico, negrito, negrito itálico, preto</td>
-<td align="left"></td>
+<td align="left">Dá suporte a scripts da Europa e do Oriente Médio (latino, grego, cirílico, árabe, armênio e hebraico). O padrão preto oferece suporte somente a scripts europeus.</td>
 </tr>
 <tr class="even">
-<td align="left">Calibri</td>
+<td align="left" style="font-family: Calibri;">Calibri</td>
 <td align="left">Regular, itálico, negrito, negrito itálico, leve, itálico leve</td>
-<td align="left"></td>
+<td align="left">Dá suporte a scripts da Europa e do Oriente Médio (latino, grego, cirílico, árabe e hebraico). Árabe disponível apenas em linha reta.</td>
+</tr>
+<td style="font-family: Consolas;">Consolas</td>
+<td>Regular, itálico, negrito, negrito itálico</td>
+<td>Fonte de largura fixa que oferece suporte a scripts europeus (latino, grego e cirílico).</td>
+</tr>
+
+<tr>
+<td style="font-family: Segoe UI;">Segoe UI</td>
+<td>Regular, itálico, itálico claro, itálico preto, negrito, negrito itálico, claro, semileve, seminegrito, preto</td>
+<td>Fonte de interface do usuário para scripts da Europa e do Oriente Médio (árabe, armênio, cirílico, georgiano, grego, hebraico, latino) e também script Lisu.</td>
+</tr>
+
+<tr class="odd">
+<td>Segoe UI Historic</td>
+<td align="left">Regular</td>
+<td align="left">Fonte de fallback para scripts históricos</td>
+</tr>
+
+<tr class="even">
+<td style="font-family: Selawik;">Selawik</td>
+<td align="left">Regular, semileve, claro, negrito, seminegrito</td>
+<td align="left">Uma fonte de código-fonte que é metricamente compatível com Segoe UI, destinada a aplicativos em outras plataformas que não desejam usar Segoe UI. [Obtenha Selawik no GitHub.](https://github.com/Microsoft/Selawik)</td>
+</tr>
+
+<tr class="even">
+<td style="font-family: Verdana;">Verdana</td>
+<td align="left">Regular, itálico, negrito, negrito itálico</td>
+<td align="left">Dá suporte a scripts europeus (latino, grego, cirílico e armênio).</td>
+</tr>
+
+</tbody>
+</table>
+
+
+## Fontes serif
+
+As fontes serif são adequadas para apresentar grandes quantidades de texto. 
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">Família de fontes</th>
+<th align="left">Estilos</th>
+<th align="left">Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="font-family: Cambria;">Cambria</td>
+<td align="left">Regular</td>
+<td align="left">Fonte serif que oferece suporte a scripts europeus (latino, grego, cirílico).</td>
+</tr>
+<tr class="even">
+<td style="font-family: Courier New;">Courier New</td>
+<td align="left">Regular, itálico, negrito, negrito itálico</td>
+<td align="left">A fonte de largura fixa serif dá suporte a scripts da Europa e do Oriente Médio (latino, grego, cirílico, árabe, armênio e hebraico).</td>
 </tr>
 <tr class="odd">
-<td align="left">Cambria</td>
+<td style="font-family: Georgia;">Georgia</td>
+<td align="left">Regular, itálico, negrito, negrito itálico</td>
+<td align="left">Dá suporte a scripts europeus (latino, grego e cirílico).</td>
+</tr>
+
+
+<tr class="even">
+<td style="font-family: Times New Roman;">Times New Roman</td>
+<td align="left">Regular, itálico, negrito, negrito itálico</td>
+<td align="left">Fonte herdada que oferece suporte a scripts europeus (latino, grego, cirílico, árabe, armênio, hebraico).</td>
+</tr>
+
+</tbody>
+</table>
+
+## Ícones e símbolos
+
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">Família de fontes</th>
+<th align="left">Estilos</th>
+<th align="left">Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Ativos de Segoe MDL2</td>
+<td align="left">Regular</td>
+<td align="left">Fonte de interface do usuário para ícones de aplicativos. Para obter mais informações, consulte o [artigo de ativos de Segoe MDL2](segoe-ui-symbol-font.md).</td>
+</tr>
+<tr class="even">
+<td align="left">Emoji Segoe da interface do usuário</td>
 <td align="left">Regular</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">Cambria Math</td>
+<td align="left">Segoe UI Symbol</td>
 <td align="left">Regular</td>
-<td align="left"></td>
+<td align="left">Fonte de fallback para símbolos</td>
 </tr>
+</tbody>
+</table>
+
+
+
+## Fontes para idiomas não latinos
+
+Embora muitas dessas fontes forneçam caracteres latinos.
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">Família de fontes</th>
+<th align="left">Estilos</th>
+<th align="left">Observações</th>
+</tr>
+</thead>
+<tbody>
+
 <tr class="odd">
-<td align="left">Comic Sans MS</td>
-<td align="left">Regular, itálico, negrito, negrito itálico</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Courier New</td>
-<td align="left">Regular, itálico, negrito, negrito itálico</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Ebrima</td>
+<td style="font-family: Embrima;">Ebrima</td>
 <td align="left">Regular, negrito</td>
-<td align="left">Fonte de interface do usuário para scripts da África (etíope, n’Ko, osmanli, tifinagh, Vai)</td>
+<td align="left">Fonte de interface do usuário para scripts da África (etíope, n’Ko, osmanli, tifinagh, Vai).</td>
 </tr>
 <tr class="even">
-<td align="left">Gadugi</td>
-<td align="left">Regular</td>
-<td align="left">Fonte de interface do usuário para scripts na América do Norte (silábico canadense, Cherokee)</td>
-</tr>
-<tr class="odd">
-<td align="left">Geórgia</td>
-<td align="left">Regular, itálico, negrito, negrito itálico</td>
-<td align="left"></td>
+<td style="font-family: Gadugi;">Gadugi</td>
+<td align="left">Regular, negrito</td>
+<td align="left">Fonte de interface do usuário para scripts na América do Norte (silábico canadense, Cherokee).</td>
 </tr>
 <tr class="even">
 <td align="left">Fonte de Fallback regular para texto em javanês para script javanês</td>
@@ -116,175 +195,126 @@ Esta é a lista de fontes que certamente estão disponíveis em todas as ediçõ
 <td align="left">Fonte de fallback para script javanês</td>
 </tr>
 <tr class="odd">
-<td align="left">Leelawadee UI</td>
+<td align="left" style="font-family: Leelawadee UI;">Leelawadee UI</td>
 <td align="left">Regular, semileve, negrito</td>
-<td align="left">Fonte de interface do usuário para scripts do Sudeste Asiático (bugi, laosiano, khmer, tailandês)</td>
+<td align="left">Fonte de interface do usuário para scripts do Sudeste Asiático (bugi, laosiano, khmer, tailandês).</td>
+</tr>
+
+<tr class="odd">
+<td align="left" style="font-family: Malgun Gothic;">Malgun Gothic</td>
+<td align="left">Regular</td>
+<td align="left">Fonte de interface do usuário para coreano.</td>
 </tr>
 <tr class="even">
-<td align="left">Lucida Console</td>
+<td align="left" style="font-family: Microsoft Himalaya;">Microsoft Himalaya</td>
+<td align="left">Regular</td>
+<td align="left">Fonte de fallback para script tibetano.</td>
+</tr>
+<!--
+<tr class="odd">
+<td align="left" style="font-family: Microsoft JhengHei;">Microsoft JhengHei</td>
 <td align="left">Regular</td>
 <td align="left"></td>
 </tr>
+-->
+<tr class="even">
+<td align="left" style="font-family: Microsoft JhengHei UI;">Microsoft JhengHei UI</td>
+<td align="left">Regular, negrito, claro</td>
+<td align="left">Fonte de interface do usuário para chinês tradicional.</td>
+</tr>
 <tr class="odd">
-<td align="left">Malgun Gothic</td>
+<td align="left" style="font-family: Microsoft New Tai Lue;">Microsoft New Tai Lue</td>
 <td align="left">Regular</td>
-<td align="left">Fonte de interface do usuário para coreano</td>
+<td align="left">Fonte de fallback para script New Tai Lue.</td>
 </tr>
 <tr class="even">
-<td align="left">Microsoft Himalaya</td>
+<td align="left" style="font-family: Microsoft PhagsPa;">Microsoft PhagsPa</td>
 <td align="left">Regular</td>
-<td align="left">Fonte de fallback para script tibetano</td>
+<td align="left">Fonte de fallback para script Phags-pa.</td>
 </tr>
 <tr class="odd">
-<td align="left">Microsoft JhengHei</td>
+<td align="left" style="font-family: Microsoft Tai Le;">Microsoft Tai Le</td>
+<td align="left">Regular</td>
+<td align="left">Fonte de fallback para script Tai Le.</td>
+</tr>
+<!--
+<tr class="even">
+<td align="left" style="font-family: Microsoft YaHei;">Microsoft YaHei</td>
 <td align="left">Regular</td>
 <td align="left"></td>
 </tr>
+-->
+<tr class="odd">
+<td align="left" style="font-family: Microsoft YaHei UI;">Microsoft YaHei UI</td>
+<td align="left">Regular, negrito, claro</td>
+<td align="left">Fonte de interface do usuário para chinês simplificado.</td>
+</tr>
 <tr class="even">
-<td align="left">Microsoft JhengHei UI</td>
+<td align="left" style="font-family: Microsoft Yi Baiti;">Microsoft Yi Baiti</td>
 <td align="left">Regular</td>
-<td align="left">Fonte de interface do usuário para chinês tradicional</td>
+<td align="left">Fonte de fallback para script Yi.</td>
 </tr>
 <tr class="odd">
-<td align="left">Microsoft New Tai Lue</td>
+<td align="left" style="font-family: Mongolian Baiti;">Mongolian Baiti</td>
 <td align="left">Regular</td>
-<td align="left">Fonte de fallback para script New Tai Lue</td>
+<td align="left">Fonte de fallback para script mongol.</td>
 </tr>
 <tr class="even">
-<td align="left">Microsoft PhagsPa</td>
+<td align="left" style="font-family: MV Boli;">MV Boli</td>
 <td align="left">Regular</td>
-<td align="left">Fonte de fallback para script Phags-pa</td>
+<td align="left">Fonte de fallback para script Thaana.</td>
 </tr>
 <tr class="odd">
-<td align="left">Microsoft Tai Le</td>
+<td align="left" style="font-family: Myanmar Text;">Myanmar Text</td>
 <td align="left">Regular</td>
-<td align="left">Fonte de fallback para script Tai Le</td>
+<td align="left">Fonte de fallback para script de Myanmar.</td>
 </tr>
 <tr class="even">
-<td align="left">Microsoft YaHei</td>
-<td align="left">Regular</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Microsoft YaHei UI</td>
-<td align="left">Regular</td>
-<td align="left">Fonte de interface do usuário para chinês simplificado</td>
-</tr>
-<tr class="even">
-<td align="left">Microsoft Yi Baiti</td>
-<td align="left">Regular</td>
-<td align="left">Fonte de fallback para script Yi</td>
-</tr>
-<tr class="odd">
-<td align="left">Mongolian Baiti</td>
-<td align="left">Regular</td>
-<td align="left">Fonte de fallback para script mongol</td>
-</tr>
-<tr class="even">
-<td align="left">MV Boli</td>
-<td align="left">Regular</td>
-<td align="left">Fonte de fallback para script Thaana</td>
-</tr>
-<tr class="odd">
-<td align="left">Myanmar Text</td>
-<td align="left">Regular</td>
-<td align="left">Fonte de fallback para script de Myanmar</td>
-</tr>
-<tr class="even">
-<td align="left">Nirmala UI</td>
+<td align="left" style="font-family: Nirmala UI;">Nirmala UI</td>
 <td align="left">Regular, semileve, negrito</td>
 <td align="left">Fonte de interface do usuário para scripts do Sul Asiático (bengali, devanágari, gujarati, gurmukhi, kannada, malaiala, odia, ol chiki, cingalês, sora sompeng, tâmil, télugo)</td>
 </tr>
+
 <tr class="odd">
-<td align="left">Ativos de Segoe MDL2</td>
+<td align="left" style="font-family: SimSun;">SimSun</td>
 <td align="left">Regular</td>
-<td align="left">Fonte de interface do usuário para ícones de aplicativos</td>
-</tr>
-<tr class="even">
-<td align="left">Segoe Print</td>
-<td align="left">Regular</td>
-<td align="left"></td>
+<td align="left">Uma fonte de interface do usuário chinesa herdada. </td>
 </tr>
 <tr class="odd">
-<td align="left">Segoe UI</td>
-<td align="left">Regular, itálico, negrito, negrito itálico, leve, semileve, seminegrito, preto</td>
-<td align="left">Fonte de interface do usuário para scripts da Europa e do Oriente Médio (árabe, armênio, cirílico, georgiano, grego, hebraico, latino) e também script Lisu</td>
-</tr>
-<tr class="even">
-<td align="left">Emoji Segoe da interface do usuário</td>
-<td align="left">Regular</td>
-<td align="left">A versão fornecida no Windows Phone inclui um contorno branco ao redor de cada emoji para garantir que ele será exibido em qualquer tela de fundo colorida. Ela é metricamente compatível com a versão fornecida no Windows.</td>
-</tr>
-<tr class="odd">
-<td align="left">Segoe UI Historic</td>
-<td align="left">Regular</td>
-<td align="left">Fonte de fallback para scripts históricos</td>
-</tr>
-<tr class="even">
-<td align="left">Segoe UI Symbol</td>
-<td align="left">Regular</td>
-<td align="left">Fonte de fallback para símbolos</td>
-</tr>
-<tr class="odd">
-<td align="left">SimSun</td>
-<td align="left">Regular</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Times New Roman</td>
-<td align="left">Regular, itálico, negrito, negrito itálico</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Trebuchet MS</td>
-<td align="left">Regular, itálico, negrito, negrito itálico</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Verdana</td>
-<td align="left">Regular, itálico, negrito, negrito itálico</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Webdings</td>
-<td align="left">Regular</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Wingdings</td>
-<td align="left">Regular</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Yu Gothic</td>
+<td align="left" style="font-family: Yu Gothic;">Yu Gothic</td>
 <td align="left">Médio</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">Interface do usuário Yu Gothic</td>
+<td align="left" style="font-family: Yu Gothic UI;">Interface do usuário Yu Gothic</td>
 <td align="left">Regular</td>
-<td align="left">Fonte de interface do usuário para japonês</td>
+<td align="left">Fonte de interface do usuário para japonês.</td>
 </tr>
 </tbody>
 </table>
 
- 
 
-## Tópicos relacionados
+## Fontes de globalização/localização
+Use as [APIs de mapeamento de fonte LanguageFont](https://msdn.microsoft.com/library/windows/apps/br206864) para acesso via programação à família de fontes, tamanho, peso e estilo recomendados para um idioma específico. O objeto LanguageFont oferece acesso às informações corretas de fonte para várias categorias de conteúdo, incluindo cabeçalhos de interface do usuário, notificações, texto do corpo e fontes de corpo de documento editáveis pelo usuário. Para obter mais informações, consulte [Ajustando layout e fontes para dar suporte à globalização](https://msdn.microsoft.com/windows/uwp/globalizing/adjust-layout-and-fonts--and-support-rtl).
 
-**Para designers**
-* [Rótulo (ou bloco de texto)](../controls-and-patterns/labels.md)
-* [Ícones Segoe UI Symbol](segoe-ui-symbol-font.md)
-**para desenvolvedores (XAML)**
+<!--
+## Triggering a font download
+If you use a font that's not listed in this article, your app might trigger an automatic download of the font data from a Microsoft service. This can have performance and other impacts that may be a concern, particularly for mobile devices. In particular, note that this might consume some of a user's mobile data plan or result in mobile data usage costs. UWP apps that will available on mobile devices should never use fonts for UI content other than fonts in this list.
+-->
+
+## Obter os exemplos
+
+* [Amostra de fontes baixáveis](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlCloudFontIntegration)
+* [Amostra de noções básicas de interface do usuário](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Amostra de espaçamento entre linhas com DirectWrite](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DWriteLineSpacingModes) 
+
+## Artigos relacionados
+
+* [Ajustando layout e fontes para dar suporte à globalização](https://msdn.microsoft.com/windows/uwp/globalizing/adjust-layout-and-fonts--and-support-rtl)
+* [Segoe MDL2](segoe-ui-symbol-font.md)
+* [Controles de texto)](../controls-and-patterns/text-controls.md)
 * [Recursos de temas XAML](https://msdn.microsoft.com/library/windows/apps/mt187274)
-* [Definindo o layout de uma página de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh872191)
-* [Ícones Segoe UI Symbol](segoe-ui-symbol-font.md)
-* [**Propriedade TextBlock.FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209655)
 
-**Exemplos**
-* [Amostra de exibição de texto XAML](http://go.microsoft.com/fwlink/p/?linkid=238578)
-* [Estilo CSS: atribuindo uma marca à sua amostra de aplicativo](http://go.microsoft.com/fwlink/p/?linkid=231641)
-* [Amostra de mapeamento de fonte de idioma](http://go.microsoft.com/fwlink/p/?linkid=231603)
  
 
  
@@ -295,6 +325,6 @@ Esta é a lista de fontes que certamente estão disponíveis em todas as ediçõ
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ title: "Interoperação nativa entre DirectX e Direct2D de composição com Begi
 description: "A API Windows.UI.Composition fornece interfaces de interoperação nativa que permitem que o conteúdo seja movido diretamente para o compositor."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: c2086e703e3972d4dd38dc1b7147bfa5f01231cf
+ms.openlocfilehash: 4d1bf75fee06c8f4c31ce23c89bf6267ab9e6394
 
 ---
 # Interoperação nativa entre DirectX e Direct2D de composição com BeginDraw e EndDraw
@@ -28,8 +28,7 @@ Para carregar pixels na superfície, o aplicativo deve chamar o método [**Begin
 
 O aplicativo só pode chamar BeginDraw em uma superfície por vez, para qualquer [**CompositionGraphicsDevice**](https://msdn.microsoft.com/library/windows/apps/Dn706749) fornecido. Depois de chamar [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), o aplicativo deve chamar [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) nessa superfície antes de chamar **BeginDraw** em outra. Como a API é ágil, o aplicativo é responsável por sincronizar essas chamadas se quiser realizar uma renderização de vários threads de trabalho. Se um aplicativo quiser interromper a renderização de uma superfície e alternar para outra temporariamente, ele poderá usar o método [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx). Isso permite que outro **BeginDraw** seja executado com êxito, mas não disponibiliza a primeira atualização da superfície para na composição na tela. Isso permite que o aplicativo execute várias atualizações de maneira transacional. Quando uma superfície é suspensa, o aplicativo pode continuar a atualização chamando o método [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062), ou pode declarar que a atualização foi concluída chamando **EndDraw**. Isso significa que somente uma superfície pode ser atualizada ativamente por vez para qualquer **CompositionGraphicsDevice** fornecido. Cada dispositivo gráfico mantém esse estado independentemente dos outros, então, um aplicativo pode renderizar nas duas superfícies simultaneamente se pertencerem a dispositivos gráficos diferentes. No entanto, isso impede que as memórias de vídeo dessas duas superfícies sejam agrupados e, dessa forma, é menos eficiente em termos de memória.
 
-Os métodos [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx), [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) e [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) retornam falhas se o aplicativo executar uma operação incorreta (como passar argumentos inválidos ou chamar **BeginDraw** em uma superfície antes de chamar **EndDraw** em outra). Esses tipos de falhas representam bugs do aplicativo e, sendo assim, a expectativa é que eles sejam manipulados com uma falha rápida. 
-              **BeginDraw** também poderá retornar uma falha se o dispositivo DirectX subjacente for perdido. Essa falha não é fatal quando o aplicativo pode recriar o dispositivo DirectX e tentar novamente. Dessa forma, o aplicativo deve manipular a perda de dispositivo simplesmente ignorando a renderização. Se **BeginDraw** falhar por qualquer motivo, o aplicativo também não deverá chamar **EndDraw**, já que o início também não teve êxito.
+Os métodos [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx), [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) e [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) retornam falhas se o aplicativo executar uma operação incorreta (como passar argumentos inválidos ou chamar **BeginDraw** em uma superfície antes de chamar **EndDraw** em outra). Esses tipos de falhas representam bugs do aplicativo e, sendo assim, a expectativa é que eles sejam manipulados com uma falha rápida. **BeginDraw** também poderá retornar uma falha se o dispositivo DirectX subjacente for perdido. Essa falha não é fatal quando o aplicativo pode recriar o dispositivo DirectX e tentar novamente. Dessa forma, o aplicativo deve manipular a perda de dispositivo simplesmente ignorando a renderização. Se **BeginDraw** falhar por qualquer motivo, o aplicativo também não deverá chamar **EndDraw**, já que o início também não teve êxito.
 
 ## Rolagem
 
@@ -271,6 +270,6 @@ private:
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

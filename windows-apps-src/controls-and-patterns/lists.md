@@ -6,11 +6,13 @@ ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
+ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
+ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 
 ---
 # Listas
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Listas são exibidas e permitem interações com conteúdo baseado em coleção. Os quatro padrões de lista abordados neste artigo incluem:
 
@@ -21,11 +23,18 @@ Listas são exibidas e permitem interações com conteúdo baseado em coleção.
 
 Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de lista. No final do artigo há links para tópicos e APIs relacionados.
 
-## APIs importantes
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br242878"><strong>Classe ListView</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br242705"><strong>Classe GridView</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br209348"><strong>Classe ComboBox</strong></a></li>
+</ul>
 
--   [**Classe ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)
--   [**Classe GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)
--   [**Classe ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)
+</div>
+</div>
+
+
 
 
 ## Modos de exibição de lista
@@ -42,20 +51,50 @@ Use um modo de exibição de lista para:
 
 ### Exemplos
 
-Ao usar um [padrão mestre/detalhes](master-details.md), você pode usar a exibição de lista para organizar o painel mestre. O painel mestre exibe uma lista de itens para seleção. Quando o usuário seleciona um item no painel mestre, outras informações sobre o item selecionado são exibidas no painel de detalhes. Muitas vezes, o painel de detalhes contém um modo de exibição de grade.
+Veja uma exibição de lista simples que mostra dados agrupados em um telefone.
 
-![Exemplo de um padrão mestre/detalhes](images/Stock_Tracker/uap_finance_desktop700.png)
-
-Você pode encadear várias listas para criar hierarquias mestre/detalhes complexas. Para saber mais, veja o [padrão mestre/detalhes](master-details.md).
-
-O exemplo de um layout de lista possui cabeçalhos de grupo e é exibido como uma coluna única:
-
-![Exemplo de um modo de exibição de lista com quatro tipos de unidades principais](images/controls_listview_4types.png)
+![Uma exibição de lista com dados agrupados](images/simple-list-view-phone.png)
 
 ### Recomendações
 
 -   Os itens em uma lista devem ter o mesmo comportamento.
 -   Se a sua lista estiver dividida em grupos, você pode usar o [zoom semântico](semantic-zoom.md), para tornar mais fácil para os usuários navegarem pelo conteúdo agrupado.
+
+### Artigos sobre exibição de lista
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tópico</th>
+<th align="left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>[Exibição de lista e exibição de grade](listview-and-gridview.md)</p></td>
+<td align="left"><p>Conheça as noções básicas do uso de uma exibição de lista ou grade em seu aplicativo.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[Modelos de item de exibição de lista](listview-item-templates.md)</p></td>
+<td align="left"><p>Os itens exibidos em uma lista ou grade podem desempenhar uma função importante na aparência geral do seu aplicativo. Modifique modelos de controle e modelos de dados para definir a aparência dos itens e deixar seu aplicativo com uma ótima aparência.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[Listas invertidas](inverted-lists.md)</p></td>
+<td align="left"><p>As listas invertidas têm novos itens adicionados na parte inferior, como em um aplicativo de chat. Siga estas orientações para usar uma lista invertida em seu aplicativo.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[Puxar para atualizar](pull-to-refresh.md)</p></td>
+<td align="left"><p>O padrão puxar para atualizar permite a um usuário extrair uma lista de dados com toque para recuperar mais dados. Use estas orientações para implementar esse padrão em sua exibição de lista.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[Interface do usuário aninhada](nested-ui.md)</p></td>
+<td align="left"><p>Interface do usuário aninhada é uma interface do usuário (IU) que expõe controles acionáveis colocados dentro de um contêiner que o usuário também pode usar. Por exemplo, você pode ter um item de exibição de lista que contém um botão e o usuário pode selecionar o item de lista ou pressionar o botão aninhado dentro dele. Siga estas práticas recomendadas para oferecer a melhor experiência da interface do usuário aninhada para seus usuários.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## Exibições em grade
 
@@ -83,6 +122,34 @@ Um modo de exibição de grade é a solução ideal para uma biblioteca de conte
 
 -   Os itens em uma lista devem ter o mesmo comportamento.
 -   Se a sua lista estiver dividida em grupos, você pode usar o [zoom semântico](semantic-zoom.md), para tornar mais fácil para os usuários navegarem pelo conteúdo agrupado.
+
+### Artigos sobre exibição de grade
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tópico</th>
+<th align="left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>[Exibição de lista e exibição de grade](listview-and-gridview.md)</p></td>
+<td align="left"><p>Conheça as noções básicas do uso de uma exibição de lista ou grade em seu aplicativo.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[Modelos de item de exibição de lista](listview-item-templates.md)</p></td>
+<td align="left"><p>Os itens exibidos em uma lista ou grade podem desempenhar uma função importante na aparência geral do seu aplicativo. Modifique modelos de controle e modelos de dados para definir a aparência dos itens e deixar seu aplicativo com uma ótima aparência.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[Interface do usuário aninhada](nested-ui.md)</p></td>
+<td align="left"><p>Interface do usuário aninhada é uma interface do usuário (IU) que expõe controles acionáveis colocados dentro de um contêiner que o usuário também pode usar. Por exemplo, você pode ter um item de exibição de lista que contém um botão e o usuário pode selecionar o item de lista ou pressionar o botão aninhado dentro dele. Siga estas práticas recomendadas para oferecer a melhor experiência da interface do usuário aninhada para seus usuários.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## Listas suspensas
 
@@ -187,6 +254,7 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 - [Mestre/detalhes](master-details.md)
 - [Painel de navegação](nav-pane.md)
 - [Zoom semântico](semantic-zoom.md)
+- [Arrastar e soltar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 
 **Para desenvolvedores**
 - [**Classe ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)
@@ -196,6 +264,6 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

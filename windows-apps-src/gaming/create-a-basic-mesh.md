@@ -3,8 +3,9 @@ author: mtoepke
 title: "Criar e exibir uma malha básica"
 description: "Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos para representar objetos e superfícies do jogo."
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada2
+ms.openlocfilehash: b8795438053adebfbd36cada86a8ef13afb3eef2
 
 ---
 
@@ -15,8 +16,7 @@ ms.openlocfilehash: c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada2
 
 Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos para representar objetos e superfícies do jogo. As listas de vértices que compõem a estrutura desses objetos e superfícies poligonais são chamadas de malhas. Aqui, vamos criar uma malha básica para um objeto cúbico e fornecê-lo no pipeline de sombreador para renderização e exibição.
 
-> 
-            **Importante**   O código de exemplo incluído aqui usa tipos (como DirectX::XMFLOAT3 e DirectX::XMFLOAT4X4) e métodos embutidos declarados no DirectXMath.h. Se você estiver recortando e colando esse código, \#include &lt;DirectXMath.h&gt; no seu projeto.
+> **Importante**   O código de exemplo incluído aqui usa tipos (como DirectX::XMFLOAT3 e DirectX::XMFLOAT4X4) e métodos embutidos declarados no DirectXMath.h. Se você estiver recortando e colando esse código, \#include &lt;DirectXMath.h&gt; no seu projeto.
 
  
 
@@ -88,18 +88,15 @@ m_d3dDevice->CreateInputLayout(
 
 Nesse código, você define um layout para os vértices; especificamente, quais dados cada elemento da lista de vértices contém. Aqui, na **basicVertexLayoutDesc**, são especificados dois componentes de dados:
 
--   
-            **POSITION**: uma semântica HLSL para dados de posição fornecidos a um sombreador. Nesse código, é um DirectX::XMFLOAT3 ou, mais especificamente, uma estrutura com 3 valores de ponto de flutuação de 32 bits correspondente a uma coordenada 3D (x, y, z). Também será possível usar um float4 se você fornecer a coordenada homogênea "w" e, nesse caso, especifique DXGI\_FORMAT\_R32G32B32A32\_FLOAT. A escolha de um DirectX::XMFLOAT3 ou de um float4 depende das necessidades inerentes ao jogo. Portanto, verifique se os dados de vértice da sua malha correspondem corretamente ao formato que você usa.
+-   **POSITION**: uma semântica HLSL para dados de posição fornecidos a um sombreador. Nesse código, é um DirectX::XMFLOAT3 ou, mais especificamente, uma estrutura com 3 valores de ponto de flutuação de 32 bits correspondente a uma coordenada 3D (x, y, z). Também será possível usar um float4 se você fornecer a coordenada homogênea "w" e, nesse caso, especifique DXGI\_FORMAT\_R32G32B32A32\_FLOAT. A escolha de um DirectX::XMFLOAT3 ou de um float4 depende das necessidades inerentes ao jogo. Portanto, verifique se os dados de vértice da sua malha correspondem corretamente ao formato que você usa.
 
     Cada valor de coordenada é expresso como um valor de ponto de flutuação entre -1 e 1 no espaço de coordenadas do objeto. Quando o sombreador de vértice é concluído, o vértice transformado está no espaço de projeção de exibição (perspectiva corrigida) homogênea.
 
     "Porém, o valor de enumeração indica RGB, não XYZ!" você observa. Muito bem! Nos dois casos de dados de cor e dados de coordenada, você geralmente usa 3 ou 4 valores de componentes, então, por que não usar o mesmo formato em ambos? A semântica HLSL, não o nome do formato, indica como o sombreador trata os dados.
 
--   
-            **COLOR**: uma semântica HLSL para dados de cor. Como em **POSITION**, ela consiste em três valores de ponto de flutuação de 32 bits (DirectX::XMFLOAT3). Cada valor contém um componente de cor: vermelho (r), azul (b) ou verde (g), expressos como um número flutuante entre 0 e 1.
+-   **COLOR**: uma semântica HLSL para dados de cor. Como em **POSITION**, ela consiste em três valores de ponto de flutuação de 32 bits (DirectX::XMFLOAT3). Cada valor contém um componente de cor: vermelho (r), azul (b) ou verde (g), expressos como um número flutuante entre 0 e 1.
 
-    
-            Os valores **COLOR** são tipicamente retornados como um valor RGBA de componente 4 no final do pipeline de sombreador. Para esse exemplo, você definirá o valor alfabético "A" como 1.0 (opacidade máxima) no pipeline de sombreador para todos os pixels.
+    Os valores **COLOR** são tipicamente retornados como um valor RGBA de componente 4 no final do pipeline de sombreador. Para esse exemplo, você definirá o valor alfabético "A" como 1.0 (opacidade máxima) no pipeline de sombreador para todos os pixels.
 
 Para obter uma lista completa de formatos, consulte [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059). Para ver uma lista completa de semânticas HLSL, consulte [Semânticas](https://msdn.microsoft.com/library/windows/desktop/bb509647).
 
@@ -196,8 +193,7 @@ Buffers constantes não são alterados por HLSL. Você pode alterá-los quando o
 
 Neste exemplo, temos apenas a classe que nunca é modificada: os dados DirectX::XMFLOAT4X4 das três matrizes.
 
-> 
-            **Observação**   O exemplo de código apresentado aqui usa matrizes principais de colunas. É possível usar matrizes principais de linhas, usando a palavra-chave **row\_major** em HLSL e garantindo que os dados da matriz de origem também sejam principais de linha. O DirectXMath usa matrizes principais de linhas e pode ser usado com matrizes HLSL definidas com a palavra-chave **row\_major**.
+> **Observação**   O exemplo de código apresentado aqui usa matrizes principais de colunas. É possível usar matrizes principais de linhas, usando a palavra-chave **row\_major** em HLSL e garantindo que os dados da matriz de origem também sejam principais de linha. O DirectXMath usa matrizes principais de linhas e pode ser usado com matrizes HLSL definidas com a palavra-chave **row\_major**.
 
  
 
@@ -249,8 +245,7 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> 
-            **Observação**  Geralmente, você declara a matriz de projeção ao configurar recursos específicos do dispositivo, porque os resultados dessa multiplicação devem coincidir com os parâmetros de tamanho do visor atual em 2D (que normalmente correspondem à altura e à largura de pixel da exibição). Se isso mudar, dimensione os valores das coordenadas x e y de acordo com as alterações.
+> **Observação**  Geralmente, você declara a matriz de projeção ao configurar recursos específicos do dispositivo, porque os resultados dessa multiplicação devem coincidir com os parâmetros de tamanho do visor atual em 2D (que normalmente correspondem à altura e à largura de pixel da exibição). Se isso mudar, dimensione os valores das coordenadas x e y de acordo com as alterações.
 
  
 
@@ -372,8 +367,7 @@ PixelShaderInput SimpleVertexShader(VertexShaderInput input)
 
 Está vendo **cbuffer** na parte superior? É o HLSL análogo para o mesmo buffer constante que declaramos antes no código C++. E o **VertexShaderInputstruct**? Ora, aparentemente é o layout de entrada e a declaração de dados de vértice. É importante que o buffer constante e as declarações de dados de vértice do código C++ correspondam às declarações do código HLSL, e isso inclui sinais, tipos e alinhamento de dados.
 
-
-            **PixelShaderInput** especifica o layout dos dados que são retornados pela função principal do sombreador de vértice. Ao concluir o processamento de um vértice, você retornará uma posição de vértice no espaço de projeção 2D e uma cor usada para iluminação por vértice. A placa gráfica usa a saída de dados do sombreador para calcular os "fragmentos" (pixels possíveis) que deverão ser coloridos quando o sombreador de pixel for executado no próximo estágio do pipeline.
+**PixelShaderInput** especifica o layout dos dados que são retornados pela função principal do sombreador de vértice. Ao concluir o processamento de um vértice, você retornará uma posição de vértice no espaço de projeção 2D e uma cor usada para iluminação por vértice. A placa gráfica usa a saída de dados do sombreador para calcular os "fragmentos" (pixels possíveis) que deverão ser coloridos quando o sombreador de pixel for executado no próximo estágio do pipeline.
 
 ### Etapa 7: passar a malha pelo sombreador de pixel
 
@@ -456,6 +450,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

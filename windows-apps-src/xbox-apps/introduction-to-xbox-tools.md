@@ -2,10 +2,9 @@
 author: Mtoepke
 title: "Introdução às ferramentas do Xbox One"
 description: "Ferramenta Dev Home específica ao Xbox usando o Windows Device Portal."
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 4414677e942818506020888fa15e7e16ecaf4733
+ms.sourcegitcommit: b3e1a6f1dfe3537d0db8e917163cfbba7b8705fe
+ms.openlocfilehash: 6030f666f213865a92d071210fe66f587c1bffb1
 
 ---
 
@@ -15,8 +14,7 @@ Esta seção aborda a ferramenta _Dev Home_ específica ao Xbox One usando o Win
 
 ## Dev Home
 
-
-              A _Dev Home_ é uma experiência de ferramentas no Xbox One Development Kit criada para auxiliar na produtividade do desenvolvedor. A Dev Home oferece funcionalidade para gerenciar e configurar o kit de desenvolvimento.
+A _Dev Home_ é uma experiência de ferramentas no Xbox One Development Kit criada para auxiliar na produtividade do desenvolvedor. A Dev Home oferece funcionalidade para gerenciar e configurar o kit de desenvolvimento.
 
 Para abrir a Dev Home, selecione o bloco **Dev Home** na tela inicial. Se não houver nenhum bloco presente, o console não estará no modo de desenvolvedor.
 
@@ -33,7 +31,7 @@ O cabeçalho contém informações importantes "em um relance" sobre o kit de de
 #### Janelas da ferramenta
 Sob o cabeçalho está a área principal do aplicativo que contém um conjunto de janelas de ferramentas configuráveis. Elas têm o objetivo de permitir que os desenvolvedores personalizem o aplicativo para fornecer acesso a várias ferramentas e conjuntos de informações. Para obter mais detalhes sobre as ferramentas, consulte as descrições de cada ferramenta a seguir. Para obter informações sobre como configurar o layout e a aparência das janelas da ferramenta, consulte a seção [Personalizando a Dev Home](#customizing-dev-home) posteriormente nesta página.
 
-##### Menu principal
+#### Menu principal
 Pressionando o botão **Menu** em seu controlador ou navegando para o botão ("Hambúrguer") do menu na parte superior esquerda da tela, você pode acessar o menu principal que permite que você configure a cor do tema e a imagem de plano de fundo do espaço de trabalho do aplicativo e fornecer comentários sobre o aplicativo.
 
   ![Menu principal](images/devhome_mainmenu.png)
@@ -49,7 +47,7 @@ A Dev Home será ajustada à direita. Você pode alternar o contexto tocando dua
 
   ![Nexus](images/devhome_nexus.png)
 
-##### Descrições das ferramentas
+#### Descrições das ferramentas
 | Ferramenta  | Recursos |
 |-------|--------------|
 | Jogos e aplicativos  | Lista os títulos e os aplicativos instalados no kit de desenvolvimento e a capacidade de abri-los rapidamente. Você também pode exibir o estado do PLM (Gerenciamento do Tempo de Vida do Processo) de jogos e aplicativos e alterar os estados do PLM de um menu de contexto. |
@@ -58,10 +56,11 @@ A Dev Home será ajustada à direita. Você pode alternar o contexto tocando dua
 | Visual Studio | Permite que você emparelhe o console com uma instância do Visual Studio para permitir a implantação. Se necessário, desmarque as instâncias emparelhadas existentes do VS para evitar a implantação do aplicativo UWP em um kit. |
 | [Windows Device Portal](#windows-device-portal) | Habilita o WDP (uma ferramenta de gerenciamento de dispositivos baseada em navegador) no kit. |
 | Status do Xbox Live | Fornece o status atual do serviço Xbox Live. |
-
+<br/>
 ### Gerenciando o tamanho da alocação de armazenamento do desenvolvedor
 
-Para aumentar ou diminuir a quantidade de espaço de disco que é usado para armazenamento do desenvolvedor, selecione **Manage dev storage** no menu principal. Altere o valor da barra **Dev storage** e selecione **Salvar e reiniciar** para reinicializar seu console.
+Para aumentar ou diminuir a quantidade de espaço de disco que é usado para armazenamento do desenvolvedor, selecione **Manage dev storage** no menu principal. Altere o valor da barra **Dev storage** e selecione **Salvar e reiniciar** para reiniciar seu console.
+
   ![Gerenciar a alocação de armazenamento de desenvolvimento](images/devhome_storage.png)
 
 ### Personalizando a Dev Home
@@ -91,11 +90,14 @@ Ao se comunicar com o console em seu PC de desenvolvimento, você pode definir u
 
 Para definir um nome de host para um kit de desenvolvimento, vá para a ferramenta de configurações do Console e digite o nome do host na caixa __Hostname__.  
 
-  > 
-              **Observação**&nbsp;&nbsp;A exclusividade do nome não é aplicada quando o nome do host é criado. Tenha cuidado para evitar duplicação de nomes. Uma maneira de fazer isso é derivar o nome do host do nome de seu computador de desenvolvimento, que é exclusivo dentro de uma organização.
+> [!NOTE]
+> A exclusividade do nome não é aplicada quando o nome do host é criado. Tenha cuidado para evitar duplicação de nomes. Uma maneira de fazer isso é derivar o nome do host do nome de seu computador de desenvolvimento, que é exclusivo dentro de uma organização.
 
 ## Windows Device Portal
 O Windows Device Portal (WDP) é uma ferramenta de gerenciamento de dispositivos do OneCore que permite uma experiência de gerenciamento de dispositivos baseada em navegador.
+
+> [!NOTE]
+> Para obter mais informações sobre WDP, consulte a [visão geral do Windows Device Portal](../debug-test-perf/device-portal.md).
 
 Para habilitar o WDP no console do Xbox One:
 
@@ -116,17 +118,19 @@ Para habilitar o WDP no console do Xbox One:
 
   ![Aviso de certificado segurança](images/security_cert_warning.jpg)
 
+## Complemento do modo de desenvolvimento do Xbox
+Complemento do modo de desenvolvimento do Xbox é uma ferramenta que permite que você trabalhe no seu console sem deixar seu computador. O aplicativo permite que você exiba a tela do console e envie a entrada para ele. Para obter mais informações, consulte [Complemento do modo de desenvolvimento do Xbox](xbox-dev-mode-companion.md).
+
 ## Consulte também
 - [Como usar o Fiddler com o Xbox One ao desenvolver para UWP](uwp-fiddler.md)
-- [Tecnologias Microsoft Developer: Windows Device Portal](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-xbox)
+- [Visão geral do Windows Device Portal](../debug-test-perf/device-portal.md)
 - [UWP no Xbox One](index.md)
-
 
 
 ----
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO1-->
 
 

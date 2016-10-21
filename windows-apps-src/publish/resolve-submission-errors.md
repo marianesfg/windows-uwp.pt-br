@@ -5,7 +5,7 @@ title: Resolver erros de envio
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
 translationtype: Human Translation
 ms.sourcegitcommit: e295011db20d151f54e2581f8c67014b30261eb6
-ms.openlocfilehash: cd0e1011bd1f857d8c859428ae0ff7e755db842e
+ms.openlocfilehash: 71f8ee9e2b8d1f892711ada30c58eefde250cca3
 
 ---
 
@@ -25,16 +25,11 @@ Você poderá ver **erro 2001** quando os problemas com pacotes do Windows Phone
 
 Existem alguns problemas que podem causar esse erro. Examine a lista abaixo para determinar quais podem se aplicar a seus pacotes.
 
--   
-            **Um ou mais assemblies no pacote estão ofuscados incorretamente:** use uma ferramenta diferente para realizar a ofuscação ou removê-la. O processo de compilação otimiza os assemblies ofuscados, mas, às vezes, alguns assemblies são ofuscados usando uma ferramenta que modifica o MSIL de maneira não compatível, o que causará um erro.
--   
-            **O tamanho de um ou mais métodos no aplicativo excede 256 KB de IL:** refatore o método ofensivo em funções menores. O tamanho de MSIL para métodos em um assembly pode ser determinado usando-se a ferramenta ILDASM.
--   
-            **A validação de assinatura de nome forte falhou em um ou mais assemblies:** esse erro normalmente ocorre quando a assinatura de nome forte foi realizada usando-se uma chave diferente da esperada nos metadados do assembly. Assine usando a chave correta ou remova assinaturas de nome forte.
--   
-            **O pacote contém assemblies de modo misto (com códigos gerenciado e nativo):** assemblies de modo misto não são compatíveis no Windows Phone. Remova os assemblies de modo misto do pacote e reenvie o aplicativo.
--   
-            **Um XAP do Windows Phone 8.1 ou um assembly appx/appxbundle não é válido:** certifique-se de que o arquivo .winmd tenha pelo menos um ponto de entrada público. Você pode usar qualquer aplicativo descompilador para examinar o código e verificar se há pontos de entrada públicos, se necessário.
+-   **Um ou mais assemblies no pacote estão ofuscados incorretamente:** use uma ferramenta diferente para realizar a ofuscação ou removê-la. O processo de compilação otimiza os assemblies ofuscados, mas, às vezes, alguns assemblies são ofuscados usando uma ferramenta que modifica o MSIL de maneira não compatível, o que causará um erro.
+-   **O tamanho de um ou mais métodos no aplicativo excede 256 KB de IL:** refatore o método ofensivo em funções menores. O tamanho de MSIL para métodos em um assembly pode ser determinado usando-se a ferramenta ILDASM.
+-   **A validação de assinatura de nome forte falhou em um ou mais assemblies:** esse erro normalmente ocorre quando a assinatura de nome forte foi realizada usando-se uma chave diferente da esperada nos metadados do assembly. Assine usando a chave correta ou remova assinaturas de nome forte.
+-   **O pacote contém assemblies de modo misto (com códigos gerenciado e nativo):** assemblies de modo misto não são compatíveis no Windows Phone. Remova os assemblies de modo misto do pacote e reenvie o aplicativo.
+-   **Um XAP do Windows Phone 8.1 ou um assembly appx/appxbundle não é válido:** certifique-se de que o arquivo .winmd tenha pelo menos um ponto de entrada público. Você pode usar qualquer aplicativo descompilador para examinar o código e verificar se há pontos de entrada públicos, se necessário.
 
 Outro erro que você poderá ver depois de enviar seu aplicativo é **erro 1300**. Isso ocorre quando um ou mais assemblies (ou todo o pacote) já estão pré-compilados. Para corrigir esse problema, recompile o pacote do aplicativo no Microsoft Visual Studio e, em seguida, envie o pacote recém-gerado.
 
@@ -45,8 +40,7 @@ Se você vir um erro que diz **The name found in the package is not one of your 
 - Vá até a página [Identidade do aplicativo](view-app-identity-details.md) para seu aplicativo (em **Gerenciamento de Aplicativos**) para confirmar se o seu aplicativo tem uma identidade atribuída. Se isso não acontecer, você verá uma opção para criar uma. Você precisará reservar um nome para seu aplicativo a fim de criar a identidade. Verifique se esse é o nome que você usou em seu pacote.
 - Se o seu aplicativo já tiver uma identidade, você talvez ainda precise reservar o nome que você deseja usar no seu pacote. Em **Gerenciamento de Aplicativos**, clique em [Gerenciar nomes de aplicativos](manage-app-names.md). Digite o nome que você gostaria de usar e clique em **Reservar o nome do aplicativo**.
 
-> 
-            **Importante** Se o nome que você deseja usar não estiver disponível, outro aplicativo talvez já tenha reservado esse nome. Se seu aplicativo já tiver sido publicado sob esse nome ou se você acha que tem o direito de usar esse nome, [contate o suporte](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
+> **Importante** Se o nome que você deseja usar não estiver disponível, outro aplicativo talvez já tenha reservado esse nome. Se seu aplicativo já tiver sido publicado sob esse nome ou se você acha que tem o direito de usar esse nome, [contate o suporte](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
 
  
 
@@ -58,6 +52,6 @@ Se você vir um erro que diz **The name found in the package is not one of your 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,14 +5,14 @@ description: "Os componentes do Tempo de Execução do Windows são objetos inde
 ms.assetid: 55887622-828b-4318-87f2-25592268f7c1
 translationtype: Human Translation
 ms.sourcegitcommit: 4e9f3de68c44cf545ceee2efd99d9db8cab08676
-ms.openlocfilehash: ddbfc30f765bdb1dacbf5c6b72255233fe134073
+ms.openlocfilehash: e0dfdce921ee910d0440f01b4f816598499925f5
 
 ---
 
 # Componentes do Tempo de Execução do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Os componentes do Tempo de Execução do Windows são objetos independentes para os quais você pode criar uma instância e usar em qualquer linguagem, incluindo C#, Visual Basic, JavaScript e C++.
 
@@ -37,6 +37,6 @@ Os componentes do Tempo de Execução do Windows são objetos independentes para
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

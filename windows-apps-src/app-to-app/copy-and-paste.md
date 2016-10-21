@@ -4,8 +4,8 @@ title: Copiar e colar
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 9a8fd6d34c4b89dae1ec4be2db69498b5d458b5a
-ms.openlocfilehash: 3e3ba8811f4fac283164143aad88913aaabbee49
+ms.sourcegitcommit: 0dceeb53737cc790e1c3810b0487e0a839968bef
+ms.openlocfilehash: 2655dc67b14ba665deabc879f13340202d97c494
 
 ---
 #Copiar e colar
@@ -16,7 +16,6 @@ ms.openlocfilehash: 3e3ba8811f4fac283164143aad88913aaabbee49
 Este artigo explica como dar suporte a copiar e colar em aplicativos da Plataforma Universal do Windows (UWP) usando a área de transferência. Copiar e colar é a maneira clássica de trocar dados entre aplicativos ou dentro de um aplicativo, e quase todos os aplicativos podem suportar operações da área de transferência em algum grau.
 
 ## Verifique Suporte interno da área de transferência
-
 
 Em muitos casos, você não precisa gravar código para suportar operações da área da transferência. Muitos dos controles XAML padrão que você pode usar para criar aplicativos já permitem operações na área da transferência. 
 
@@ -29,11 +28,11 @@ Primeiro, inclua o namespace [**Windows.ApplicationModel.DataTransfer**](https:/
 DataPackage dataPackage = new DataPackage();
 ```
 
-AuthenticateAsync
+<!-- AuthenticateAsync-->
 
 ## Copiar e cortar
 
-Copiar e cortar (também chamado de mover) funcionam quase exatamente da mesma maneira. Escolha qual operação deseja usando a propriedade [**RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation).
+Copiar e cortar (também chamado de *mover*) funcionam quase exatamente da mesma maneira. Escolha qual operação deseja usando a propriedade [**RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation).
 
 ```cs
 // copy 
@@ -41,7 +40,9 @@ dataPackage.RequestedOperation = DataPackageOperation.Copy;
 // or cut
 dataPackage.RequestedOperation = DataPackageOperation.Move;
 ```
-Arrastar e soltar Em seguida, você pode adicionar os dados que um usuário selecionou para o objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage). Se esses dados tiverem suporte pela classe **DataPackage**, você poderá usar um dos métodos correspondentes no objeto **DataPackage**. Veja a seguir como adicionar texto:
+## Arrastar e soltar
+
+Em seguida, você pode adicionar os dados que um usuário selecionou para o objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage). Se esses dados tiverem suporte pela classe **DataPackage**, você poderá usar um dos métodos correspondentes no objeto **DataPackage**. Veja a seguir como adicionar texto:
 
 ```cs
 dataPackage.SetText("Hello World!");
@@ -85,6 +86,7 @@ Clipboard.ContentChanged += (s, e) =>
 
 ## Consulte também
 
+* [Comunicação de aplicativo a aplicativo](index.md)
 * [DataTransfer](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.aspx)
 * [DataPackage](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.aspx)
 * [DataPackageView](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.aspx)
@@ -104,6 +106,6 @@ Clipboard.ContentChanged += (s, e) =>
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

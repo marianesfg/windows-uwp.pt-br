@@ -3,22 +3,22 @@ title: "Restrições de exportação na criptografia"
 description: "Use estas informações para determinar se seu aplicativo usa criptografia de forma que possa impedir que ele seja listado na Windows Store."
 ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 37d6131891e93d73021c860df45d1b5fdd7cfa53
+ms.openlocfilehash: a6bd271ddfece1cc104243b8800f6473df14c275
 
 ---
 
 # Restrições de exportação na criptografia
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use estas informações para determinar se seu aplicativo usa criptografia de forma que possa impedir que ele seja listado na Windows Store.
 
 O Bureau of Industry and Security do Departamento de Comércio dos Estados Unidos regula a exportação de tecnologia que usa determinados tipos de criptografia. Todos os aplicativos listados na Windows Store devem estar em conformidade com estas leis e regulamentações porque os arquivos do aplicativo podem ser armazenados nos Estados Unidos. Mesmo os aplicativos carregados por desenvolvedores de aplicativos de outros países/regiões para distribuição fora dos Estados Unidos devem estar em conformidade com essas regulamentações. Sendo assim, ao enviar um aplicativo para a Windows Store, todos os desenvolvedores devem garantir que seus aplicativos não contenham tecnologia proibida por essas regulamentações.
 
-> 
-            **Observação**  As informações descritas aqui fornecem algumas orientações, mas é sua responsabilidade, como desenvolvedor que publica aplicativos na Windows Store, garantir que seu aplicativo esteja em conformidade com todas as leis e regulamentos aplicáveis.
+> **Observação**  As informações descritas aqui fornecem algumas orientações, mas é sua responsabilidade, como desenvolvedor que publica aplicativos na Windows Store, garantir que seu aplicativo esteja em conformidade com todas as leis e regulamentos aplicáveis.
 
  
 
@@ -30,8 +30,7 @@ Para saber mais sobre os regulamentos EAR (Controle de exportações dos EUA) qu
 
 Primeiro, determine se seu aplicativo usa um tipo de criptografia controlado pelos regulamentos do Controle de exportação dos EUA. A questão inclui os exemplos mostrados nesta lista; mas lembre-se de que esta lista não inclui todos os aplicativos possíveis de criptografia.
 
-> 
-            **Importante**  Considere não apenas o código que você escreveu para seu aplicativo, mas também todas as bibliotecas de software, utilitários e componentes do sistema operacional que seu aplicativo inclui ou tem links relacionados.
+> **Importante**  Considere não apenas o código que você gravou para seu aplicativo, mas também todas as bibliotecas de software, utilitários e componentes do sistema operacional que seu aplicativo inclui ou tem links relacionados.
 
 -   Qualquer uso de uma assinatura digital, como autenticação ou verificação de integridade
 -   Criptografia de dados ou arquivos que seu aplicativo usa ou acessa
@@ -61,6 +60,6 @@ Se você não tiver um ECCN, consulte [Perguntas e respostas sobre ECCN](http://
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,19 +3,21 @@ author: mcleanbyron
 Description: "Se você permitir que os clientes usem seu aplicativo gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do aplicativo, excluindo ou limitando alguns recursos durante o período de avaliação."
 title: "Excluir ou limitar recursos em uma versão de avaliação"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: free trial code sample
+keywords: "amostra de código de avaliação gratuita"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9c38784325f4dc51052f70a819012508f2a0bdbb
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: fdca95a6e925ca2238fdcd8791ade2ed4ea5a310
 
 ---
 
 # Excluir ou limitar recursos em uma versão de avaliação
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Se você permitir que os clientes usem seu aplicativo gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do aplicativo excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
+
+>**Observação**&nbsp;&nbsp;Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para implementar uma versão de avaliação, em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Implementar uma versão de avaliação do seu aplicativo](implement-a-trial-version-of-your-app.md).
+
+Se você permitir que os clientes usem seu aplicativo gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do aplicativo, excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
 Vamos examinar como adicionar isso a seu aplicativo.
 
@@ -73,7 +75,7 @@ void initializeLicense()
     // Initialize the license info for testing.
     // comment the next line for release
     licenseInformation = CurrentAppSimulator.LicenseInformation;
-      
+
 }
 ```
 
@@ -144,8 +146,8 @@ void DisplayTrialVersionExpirationTime()
         if (licenseInformation.IsTrial)
         {
             var longDateFormat = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longdate");
-                                                
-            // Display the expiration date using the DateTimeFormatter. 
+
+            // Display the expiration date using the DateTimeFormatter.
             // For example, longDateFormat.Format(licenseInformation.ExpirationDate)
 
             var daysRemaining = (licenseInformation.ExpirationDate - DateTime.Now).Days;
@@ -168,9 +170,7 @@ void DisplayTrialVersionExpirationTime()
 
 Agora, teste o aplicativo usando chamadas simuladas para o servidor de licenças No JavaScript, no C#, no Visual Basic ou no Visual C++, substitua as referências ao [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) por [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) no código de inicialização do aplicativo.
 
-[
-              **CurrentAppSimulator**
-            ](https://msdn.microsoft.com/library/windows/apps/hh779766) obtém informações específicas do teste de um arquivo XML denominado "WindowsStoreProxy.xml", localizado em %userprofile%\\AppData\\local\\packages\\&lt;nome do pacote&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Se esse caminho e esse arquivo não existirem, você deverá criá-los ou fornecê-los durante a instalação ou no tempo de execução. Se você tentar acessar a propriedade [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768) sem o WindowsStoreProxy.xml presente nesse local específico, será apresentado um erro.
+[**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) obtém informações específicas do teste de um arquivo XML denominado "WindowsStoreProxy.xml", localizado em %userprofile%\\AppData\\local\\packages\\&lt;nome do pacote&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Se esse caminho e esse arquivo não existirem, você deverá criá-los ou fornecê-los durante a instalação ou no tempo de execução. Se você tentar acessar a propriedade [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768) sem o WindowsStoreProxy.xml presente nesse local específico, será apresentado um erro.
 
 Este exemplo ilustra como você pode adicionar código ao aplicativo para testá-lo sob os estados diferentes de licença.
 
@@ -224,7 +224,7 @@ Para saber mais sobre a descrição de seu aplicativo, consulte [Criar descriç�
 
 ## Tópicos relacionados
 
-* [Exemplo da Loja (demonstra avaliações e compras no aplicativo)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
+* [Exemplo da Loja (demonstra avaliações e compras no aplicativo)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [Definir a disponibilidade e o preço do aplicativo](https://msdn.microsoft.com/library/windows/apps/mt148548)
 * [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)
 * [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)
@@ -234,10 +234,6 @@ Para saber mais sobre a descrição de seu aplicativo, consulte [Criar descriç�
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

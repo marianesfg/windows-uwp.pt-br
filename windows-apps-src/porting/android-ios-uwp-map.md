@@ -4,8 +4,8 @@ Description: Compare os recursos entre as plataformas iOS, Android e Windows 10.
 Search.Product: eADQiWindows 10XVcnh
 title: Mapeamento do conceito de aplicativos do Windows para desenvolvedores do Android e iOS
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 640ddc7b77d5a23562dba2ecd9812464beb8a422
+ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
+ms.openlocfilehash: 8acd22c44cf6423aba01083d1e32d282c87f44cb
 
 ---
 
@@ -120,16 +120,16 @@ Consulte também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-u
 <td align="left">XAML que fornece um sistema de layout flexível composto por <strong>classes de painel de layout</strong> como <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.canvas.aspx">Canvas</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx">Grid</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.relativepanel.aspx">RelativePanel</a></strong> e <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx">StackPanel</a></strong> para layouts dinâmicos e estáticos. <strong><a href="https://msdn.microsoft.com/library/ms171352.aspx">Propriedades</a></strong> são usadas para controlar o tamanho e aposição dos elementos.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx">Definir layouts com XAML</a><br/></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>Navegação ponto a ponto.</strong> <br><br>Apresentar ao usuário métodos de navegação entre páginas de importância hierárquica igual.</td>
+<td align="left"><strong>Navegação de par.</strong> <br><br>Apresentar ao usuário métodos de navegação entre páginas de importância hierárquica igual.</td>
 <td align="left"><strong>Guias</strong>, <strong>visualizações de passar o dedo</strong> e <strong>gavetas de navegação</strong> fornecem <strong>navegação lateral</strong>.</td>
 <td align="left"><strong>Controladores de barra de guias</strong>, <strong>controladores de modo divisão</strong> e <strong>controladores de exibição de página</strong> permitem a navegação entre as visualizações de hierarquia igual.</td>
-<td align="left">Você pode exibir uma lista persistente de links/guias acima do conteúdo usando <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">guias/pivôs</a></strong>. O <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">painel de navegação/modo divisão</a></strong> permite que você exiba uma lista de links junto com o conteúdo.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187344.aspx">Navegação</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt465735.aspx">Navegação ponto a ponto entre duas páginas</a></td>
+<td align="left">Você pode exibir uma lista persistente de links/guias acima do conteúdo usando <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">guias/pivôs</a></strong>. O <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">painel de navegação/modo divisão</a></strong> permite que você exiba uma lista de links junto com o conteúdo.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navegação</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navegar entre duas páginas</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Navegação hierárquica.</strong> <br><br>Navegação entre páginas pai e filho de uma hierarquia.</td>
 <td align="left"><strong>Listas</strong> e <strong>listas de grade</strong>, <strong>botões</strong> e outros controles fornecem <strong>navegação descendente</strong> quando usados com <strong>intenções</strong> de carregar outras <strong>atividades</strong>.</td>
 <td align="left"><strong>Controladores de navegação</strong> permitem que os usuários naveguem entre níveis de uma hierarquia.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">Hubs</a></strong> permitem que você mostre ao usuário uma visualização de conteúdo que foi selecionada para navegar para páginas filho. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">Mestre/detalhes</a></strong> permite que os usuários selecionem de uma lista de resumos que é exibida ao lado da seção de detalhes correspondente.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187344.aspx">Navegação</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">Hubs</a></strong> permitem que você mostre ao usuário uma visualização de conteúdo que foi selecionada para navegar para páginas filho. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">Mestre/detalhes</a></strong> permite que os usuários selecionem de uma lista de resumos que é exibida ao lado da seção de detalhes correspondente.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navegação</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navegar entre duas páginas</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Navegação do botão Voltar.</strong> <br><br>Navegar de volta através de um aplicativo.</td>
@@ -665,6 +665,6 @@ Consulte também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-u
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,8 @@ author: payzer
 title: "Referência da API de configurações do desenvolvedor do Xbox do Device Portal"
 description: "Aprenda a acessar as configurações do desenvolvedor do Xbox."
 translationtype: Human Translation
-ms.sourcegitcommit: a9a2b6e58dfa0d1e77164a59f204deabf8f5c3e0
-ms.openlocfilehash: e3637f5a8481c0800af42c011fb811b908b946b1
+ms.sourcegitcommit: c51eff41e63d815f6298b4fc46a9b11314bc8bc9
+ms.openlocfilehash: 5a983714cda9b5a5f45e555e2cb6f980f082a003
 
 ---
 
@@ -58,21 +58,21 @@ As configurações também podem ser recuperadas individualmente.
 
 É possível usar a solicitação a seguir para obter informações sobre uma configuração individual.
 
-Método      | URI da solicitação
+Método      | URI da Solicitação
 :------     | :-----
-GET | /ext/settings/<setting name>
+GET | /ext/settings/\<nome da configuração\>
 <br />
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhuma
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhuma
 
 **Resposta**   
 A resposta é um objeto JSON com os seguintes campos:   
@@ -99,17 +99,17 @@ Código de status HTTP      | Descrição
 
 É possível usar a solicitação a seguir para definir o valor de uma configuração.
 
-Método      | URI da solicitação
+Método      | URI da Solicitação
 :------     | :-----
-PUT | /ext/settings/<setting name>
+PUT | /ext/settings/\<nome da configuração\>
 <br />
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhuma
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhuma
 
 **Corpo da solicitação**   
 O corpo da solicitação é um objeto JSON contendo o seguinte campo:   
@@ -137,6 +137,6 @@ Código de status HTTP      | Descrição
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

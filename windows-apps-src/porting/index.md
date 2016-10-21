@@ -5,13 +5,13 @@ description: "Esta seção descreve como portar seus aplicativos existentes para
 title: Portando aplicativos para o Windows 10
 translationtype: Human Translation
 ms.sourcegitcommit: 5b7b5f985eccf905698d7995d1574967bbec176f
-ms.openlocfilehash: fd7f2dc0d83ef8c4d075e25d3e2fa453d9ce849d
+ms.openlocfilehash: 777542dd6a105b432e25db082cb0e1b7b87101f2
 
 ---
 
 # Portando aplicativos para o Windows 10
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta seção descreve como portar seus aplicativos existentes para a Plataforma Universal do Windows (UWP), onde você pode criar um único pacote de aplicativos do Windows 10 que os clientes podem instalar em todos os tipos de dispositivos. Seu aplicativo se beneficiará com o novo hardware instigante, ótimas oportunidades de monetização, um conjunto de APIs modernas, controles de interface do usuário adaptáveis e uma variedade de modalidades de entrada, incluindo mouse/teclado, toque e fala.
 
@@ -37,6 +37,6 @@ Este guia de portabilidade explica as diferenças entre a tecnologia do seu apli
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

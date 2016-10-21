@@ -3,8 +3,9 @@ author: msatranjr
 Description: "O controle de mapa pode exibir mapas de rodovias e vistas aéreas, trajeto, resultados de pesquisa e informações sobre trânsito."
 title: Diretrizes para mapas
 ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 3c1d37a119eca88ee443772292f8cfe97cb3c1ac
+ms.openlocfilehash: e094e29220a0f8fcae6ca2af36ab86ecd22b520d
 
 ---
 
@@ -23,8 +24,7 @@ O controle de mapa pode exibir mapas de rodovias, visualizações aéreas, 3D, t
 
 Use um controle de mapa quando quiser que um mapa dentro de seu aplicativo permita aos usuários ver informações geográficas gerais ou específicas do aplicativo. Ter um controle de mapa no seu aplicativo significa que os usuários não têm que sair do seu aplicativo para obter informações.
 
-
-            **Observação**  Se você não se importar que os usuários saiam do seu aplicativo para obter essas informações, considere usar o aplicativo Mapas do Windows para fornecer essas informações. Seu aplicativo pode iniciar o aplicativo Mapas do Windows para exibir mapas específicos, trajetos e resultados de pesquisa. Para obter mais informações, consulte [Iniciar o aplicativo Mapas do Windows](https://msdn.microsoft.com/library/windows/apps/mt228341).
+**Observação**  Se você não se importar que os usuários saiam do seu aplicativo para obter essas informações, considere usar o aplicativo Mapas do Windows para fornecer essas informações. Seu aplicativo pode iniciar o aplicativo Mapas do Windows para exibir mapas específicos, trajetos e resultados de pesquisa. Para obter mais informações, consulte [Iniciar o aplicativo Mapas do Windows](https://msdn.microsoft.com/library/windows/apps/mt228341).
 
 ## Exemplos
 
@@ -74,6 +74,6 @@ Este exemplo mostra um aplicativo com uma vista aérea 3D e um modo de exibiçã
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

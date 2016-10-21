@@ -32,6 +32,8 @@ Não há suporte para algumas APIs UWP para aplicativos de desktop completos par
 
 Veja a seguir uma lista completa de APIs UWP com suporte em aplicativos convertidos. Você pode exibir [APIs com suporte recente em aplicativos convertidos](#new) ou [APIs com suporte em aplicativos de desktop e aplicativos convertidos](#both). 
 
+Para obter exemplos sobre como chamar APIs da UWP a partir de um aplicativo convertido, consulte os [exemplos de código do Desktop Bridge no GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples).
+
 <span id="new" />
 ### APIs com suporte em aplicativos recentemente convertidos
 
@@ -1028,6 +1030,6 @@ Veja a seguir uma lista completa de APIs UWP com suporte em aplicativos converti
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO5-->
 
 

@@ -1,92 +1,102 @@
 ---
 author: mcleanbyron
 ms.assetid: 1A69A388-B1CC-4D2C-886B-EA07E6E60252
-description: Use this method in the Windows Store submission API to delete an existing package flight submission.
-title: Delete a package flight submission using the Windows Store submission API
+description: "Use este método na API de envio da Windows Store para excluir um envio de pacote de pré-lançamento existente do pacote."
+title: "Exclua um envio do pacote de pré-lançamento usando a API de envio da Windows Store"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 9712f0ef68cc3614c9961183dba8b67a71c0ec39
+
 ---
 
-# Delete a package flight submission using the Windows Store submission API
+# Exclua um envio do pacote de pré-lançamento usando a API de envio da Windows Store
 
 
 
 
-Use this method in the Windows Store submission API to delete an existing package flight submission.
+Use este método na API de envio da Windows Store para excluir um envio de pacote de pré-lançamento existente do pacote.
 
-## Prerequisites
+## Pré-requisitos
 
-To use this method, you need to first do the following:
+Para usar este método, primeiro você precisa do seguinte:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+* Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para o envio da API da Windows Store.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows as quais foram dadas permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Request
+## Solicitação
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e de cabeçalho.
 
-| Method | Request URI                                                      |
+| Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | DELETE    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/flights/{flightId}/submissions/{submissionId}``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Cabeçalho da solicitação
 
-| Header        | Type   | Description                                                                 |
+| Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Parâmetros solicitados
 
-| Name        | Type   | Description                                                                 |
+| Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Required. The Store ID of the app that contains the package flight submission you want to delete. For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Required. The ID of the package flight that contains the submission to delete. This ID is available in the Dev Center dashboard, and it is included in the response data for requests to [create a package flight](create-a-flight.md) and [get package flights for an app](get-flights-for-an-app.md).  |
-| submissionId | string | Required. The ID of the submission to delete. This ID is available in the Dev Center dashboard, and it is included in the response data for requests to [create a package flight submission](create-a-flight-submission.md).  |
+| applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o envio do pacote de pré-lançamento que você deseja excluir. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| flightId | string | Obrigatório. A ID do pacote de pré-lançamento que contém o envio para excluir. Esse ID está disponível no painel do Centro de Desenvolvimento e está incluído nos dados de resposta para solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
+| submissionId | string | Obrigatório. A ID do envio para excluir. Esse ID está disponível no painel do Centro de Desenvolvimento e está incluído nos dados de resposta para solicitações para [criar um envio de pacote de pré-lançamento do pacote](create-a-flight-submission.md).  |
 
 <span/>
 
-### Request body
+### Corpo da solicitação
 
-Do not provide a request body for this method.
+Não fornece um corpo da solicitação para esse método.
 
 <span/>
 
-### Request example
+### Exemplo de solicitação
 
-The following example demonstrates how to delete a submission for a package flight.
+O exemplo a seguir demonstra como excluir um envio para um pacote de pré-lançamento.
 
 ```
 DELETE https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights/43e448df-97c9-4a43-a0bc-2a445e736bcd/submissions/1152921504621243649 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Resposta
 
-If successful, this method returns an empty response body.
+Se for bem-sucedida, esse método retorna um corpo de resposta vazia.
 
-## Error codes
+## Códigos de erro
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Se a solicitação não pode ser concluída com êxito, a resposta conterá um dos seguintes códigos de erro HTTP.
 
-| Error code |  Description   |
+| Código de erro |  Descrição   |
 |--------|------------------|
-| 400  | The request parameters are invalid. |
-| 404  | The specified submission could not be found. |
-| 409  | The specified submission was found but it could not be deleted in its current state, or the app uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 400  | Os parâmetros de solicitação não são válidos. |
+| 404  | O envio especificado não pôde ser encontrado. |
+| 409  | O envio especificado foi encontrado, mas não pôde ser excluído em seu estado atual ou o aplicativo que usa um recurso de painel do Centro de Desenvolvimento atualmente [não é compatível com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 <span/>
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage package flight submissions](manage-flight-submissions.md)
-* [Get a package flight submission](get-a-flight-submission.md)
-* [Create a package flight submission](create-a-flight-submission.md)
-* [Commit a package flight submission](commit-a-flight-submission.md)
-* [Update a package flight submission](update-a-flight-submission.md)
-* [Get the status of a package flight submission](get-status-for-a-flight-submission.md)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md)
+* [Obter um envio de pacote de pré-lançamento](get-a-flight-submission.md)
+* [Criar um envio de pacote de pré-lançamento](create-a-flight-submission.md)
+* [Confirmar um envio de pacote de pré-lançamento](commit-a-flight-submission.md)
+* [Atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md)
+* [Obter o status de um envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

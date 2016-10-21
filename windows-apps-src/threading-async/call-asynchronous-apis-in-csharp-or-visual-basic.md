@@ -5,7 +5,7 @@ title: "Chamar APIs assíncronas no Visual Basic ou C#"
 description: "A Plataforma Universal do Windows (UWP) inclui muitas APIs assíncronas para garantir que o seu aplicativo permaneça responsivo ao executar trabalhos demorados."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b13f6b3fac2ce6d264ed0c44e145a89ad8be5996
+ms.openlocfilehash: da2c6eddcc842e176e31b1a1628c91994efb1969
 
 ---
 # Chamar APIs assíncronas no Visual Basic ou C#
@@ -29,9 +29,7 @@ Suponha que você tenha um aplicativo que lista os títulos das postagens de um 
 O exemplo a seguir obtém as listas de postagens de um blog chamando o método assíncrono, [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460), e aguardando o resultado.
 
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
-
-              [!code-csharp
-              [Principal](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
+[!code-csharp[Principal](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
 [!code-vb[Principal](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
 
 Há algumas coisas importantes sobre este exemplo. Primeiro, a linha `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` usa o operador de **espera** com a chamada para o método assíncrono, [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460). Você pode pensar no operador de **espera** dizendo ao compilador que está chamando um método assíncrono, o que faz com que o compilador realize um trabalho extra para que você não precise fazê-lo. Em seguida, a declaração do manipulador de eventos inclui a palavra-chave **async**. Você deve incluir essa palavra-chave na declaração de método de qualquer método em que usar o operador de **espera**.
@@ -64,9 +62,7 @@ A tabela abaixo dá exemplos de métodos assíncronos e lista o tipo de retorno 
 | [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275) | [**IAsyncOperation&lt;StorageFile&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)                                                                                | [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)          |
 | [**XmlDocument.SaveToFileAsync**](https://msdn.microsoft.com/library/windows/apps/BR206284)                 | [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)                                                                                                           | **nulo**                                          |
 | [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)                                                                   | **nulo**                                          |
-| [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | 
-              [
-              **DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120), uma classe de resultados personalizada que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
+| [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [**DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120), uma classe de resultados personalizada que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
 
  
 
@@ -79,8 +75,7 @@ Ao usar o operador de **espera** para recuperar seus resultados de um método as
 
 Quando métodos assíncronos chamam outros métodos assíncronos, qualquer método assíncrono que resulta numa exceção será propagado para os métodos externos. Isso significa que você pode colocar um bloco **tentativa/obtenção** no método mais externo para encontrar erros para os métodos assíncronos aninhados. Novamente, isso é semelhante à maneira como você obtém exceções para métodos síncronos. Porém, não é possível usar **espera** no bloco **obtenção**.
 
-
-              **Dica**  A partir de C# no Microsoft Visual Studio 2005, é possível usar **await** no bloco **catch**.
+**Dica**  A partir de C# no Microsoft Visual Studio 2005, é possível usar **await** no bloco **catch**.
 
 ## Resumo e próximas etapas
 
@@ -117,6 +112,6 @@ Windows 7 themes: the distinctive artwork of Cheng Ling, 7/20/2011 9:53:07 AM -0
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

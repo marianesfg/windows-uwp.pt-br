@@ -3,15 +3,16 @@ author: TylerMSFT
 title: "Manipular a ativação de arquivos"
 description: "Um aplicativo pode se registrar para ser o manipulador padrão de um determinado tipo de arquivo."
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 9c6358bccdea55a7c3749388c35aa770f4325960
+translationtype: Human Translation
+ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
+ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
 
 ---
 
 # Manipular a ativação de arquivos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -19,14 +20,13 @@ ms.openlocfilehash: 9c6358bccdea55a7c3749388c35aa770f4325960
 -   [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
 -   [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
 
-Um aplicativo pode se registrar para ser o manipulador padrão de um determinado tipo de arquivo. Os aplicativos da Plataforma Clássica do Windows (CWP) e os aplicativos da Plataforma Universal do Windows (UWP) podem ser registrados como um manipulador de arquivo padrão. Se o usuário escolher seu aplicativo como o manipulador padrão de um determinado tipo de arquivo, seu aplicativo será ativado quando esse tipo de arquivo for iniciado.
+Um aplicativo pode se registrar para ser o manipulador padrão de um determinado tipo de arquivo. Os aplicativos da área de trabalho do Windows e os aplicativos da Plataforma Universal do Windows (UWP) podem ser registrados como um manipulador de arquivo padrão. Se o usuário escolher seu aplicativo como o manipulador padrão de um determinado tipo de arquivo, seu aplicativo será ativado quando esse tipo de arquivo for iniciado.
 
 Recomendamos que você só se registre para um tipo de arquivo se quiser manipular todas as inicializações desse tipo de arquivo. Se o seu aplicativo precisar usar o tipo de arquivo apenas internamente, então você não precisará se registrar para ser o manipulador padrão. Se você decidir se registrar para um tipo de arquivo, você deve fornecer ao usuário a funcionalidade esperada quando o seu aplicativo é ativado para esse tipo de arquivo. Por exemplo, um aplicativo de visualização de imagens pode se registrar para exibir um arquivo .jpg. Para mais informações sobre associações de arquivos, consulte [Diretrizes de tipos de arquivos e URIs](https://msdn.microsoft.com/library/windows/apps/hh700321).
 
 Estas etapas mostram como registrar um tipo de arquivo personalizado, o .alsdk, e como ativar seu aplicativo quando o usuário inicia um arquivo .alsdk.
 
-> 
-            **Observação**  Nos aplicativos UWP, determinados URIs e extensões de arquivo são reservados para uso por aplicativos nativos e pelo sistema operacional. Tentativas de registrar seu aplicativo com um URI ou extensão de arquivo reservada serão ignoradas. Para obter mais informações, consulte [Nomes de arquivos e esquemas de URI reservados](reserved-uri-scheme-names.md).
+> **Observação**  Nos aplicativos UWP, determinados URIs e extensões de arquivo são reservados para uso por aplicativos nativos e pelo sistema operacional. Tentativas de registrar seu aplicativo com um URI ou extensão de arquivo reservada serão ignoradas. Para obter mais informações, consulte [Nomes de arquivos e esquemas de URI reservados](reserved-uri-scheme-names.md).
 
 ## Etapa 1: especificar o ponto de extensão no manifesto do pacote
 
@@ -42,12 +42,9 @@ O aplicativo recebe os eventos de ativação somente para as extensões de arqui
 | **Nome de exibição** | Especifique o nome de exibição para um grupo de tipos de arquivos. O nome de exibição é usado para identificar o tipo de arquivo em [Definir Programas Padrão](https://msdn.microsoft.com/library/windows/desktop/cc144154) no **Painel de Controle**. |
 | **Logotipo** | Especifique o logotipo que é usado para identificar o tipo de arquivo na área de trabalho e em [Definir Programas Padrão](https://msdn.microsoft.com/library/windows/desktop/cc144154) no **Painel de Controle**. Se nenhum logotipo for especificado, o logotipo pequeno do aplicativo será usado. |
 | **Dica de informações** | Especifique a [dica de informações](https://msdn.microsoft.com/library/windows/desktop/cc144152) para um grupo de tipos de arquivo. O texto dessa dica de ferramenta é exibido quando o usuário passa o mouse sobre o ícone de um arquivo desse tipo. |
-| **Nome** | Escolha o nome de um grupo de tipos de arquivos que compartilham o mesmo nome de exibição, logotipo, dica de informações e sinalizadores de edição. Escolha um nome de grupo que se mantenha igual entre atualizações de aplicativos. 
-            **Observação**  O nome precisa estar completamente em letras minúsculas. |
-| **Tipo de conteúdo** | Especifique o tipo de conteúdo MIME, como **image/jpeg**, para um tipo de arquivo específico. 
-            **Observação importante sobre tipos de conteúdo permitidos: **está é uma lista em ordem alfabética dos tipos de conteúdo MIME que você não pode inserir no manifesto do pacote porque eles são reservados ou proibidos: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
-| **Tipo de arquivo** | Especifique o tipo de arquivo para o qual registrar, precedido por um ponto, por exemplo, ".jpeg". 
-            **Tipos de arquivos reservados e proibidos** Consulte [Nomes de esquemas de URI e tipos de arquivos reservados](reserved-uri-scheme-names.md) para obter uma lista, em ordem alfabética, dos tipos de arquivo para aplicativos internos para os quais você não pode registrar seus aplicativos UWP porque são reservados ou proibidos. |
+| **Nome** | Escolha o nome de um grupo de tipos de arquivos que compartilham o mesmo nome de exibição, logotipo, dica de informações e sinalizadores de edição. Escolha um nome de grupo que se mantenha igual entre atualizações de aplicativos. **Observação**  O nome precisa estar completamente em letras minúsculas. |
+| **Tipo de conteúdo** | Especifique o tipo de conteúdo MIME, como **image/jpeg**, para um tipo de arquivo específico. **Observação importante sobre tipos de conteúdo permitidos: **esta é uma lista em ordem alfabética dos tipos de conteúdo MIME que você não pode inserir no manifesto do pacote porque eles são reservados ou proibidos: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
+| **Tipo de arquivo** | Especifique o tipo de arquivo para o qual registrar, precedido por um ponto, por exemplo, ".jpeg". **Tipos de arquivos reservados e proibidos** Consulte [Nomes de esquemas de URI e tipos de arquivos reservados](reserved-uri-scheme-names.md) para obter uma lista, em ordem alfabética, dos tipos de arquivo para aplicativos internos para os quais você não pode registrar seus aplicativos UWP porque são reservados ou proibidos. |
 
 2.  Insira `alsdk` como o **Nome**.
 3.  Insira `.alsdk` como o **Tipo de arquivo**.
@@ -114,50 +111,49 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
     > **Note**  When launched via File Contract, make sure that Back button takes the user back to the screen that launched the app and not to the app's previous content.
 
-[!div class="tabbedCodeSnippets"] É recomendado que os aplicativos criem um novo Quadro XAML para cada evento de ativação que abre uma nova página. Dessa forma, o backstack de navegação do novo Quadro XAML não terá nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso.
+É recomendado que os aplicativos criem um novo Quadro XAML para cada evento de ativação que abre uma nova página. Dessa forma, o backstack de navegação do novo Quadro XAML não terá nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso. Aplicativos que decidem usar um único Quadro XAML para Contrato de inicialização e arquivos devem limpar as páginas do diário de navegação do Quadro antes de navegar para uma nova página.
 
-Aplicativos que decidem usar um único Quadro XAML para Contrato de inicialização e arquivos devem limpar as páginas do diário de navegação do Quadro antes de navegar para uma nova página.
+Quando iniciado por ativação de Arquivo, os aplicativos devem considerar incluir uma interface do usuário que permita ao usuário voltar para o início da página do aplicativo.
 
-## Quando iniciado por ativação de Arquivo, os aplicativos devem considerar incluir uma interface do usuário que permita ao usuário voltar para o início da página do aplicativo.
+## Comentários
 
 
-Comentários Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que você valide o conteúdo de um arquivo antes de processá-lo.
+Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que você valide o conteúdo de um arquivo antes de processá-lo. Para obter mais informações sobre a validação de entrada, consulte [Escrevendo código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053)
 
-> Para obter mais informações sobre a validação de entrada, consulte [Escrevendo código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053) 
-            **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).
-
- 
-
-## Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
-**Tópicos relacionados**
-
-* [Exemplo completo](http://go.microsoft.com/fwlink/p/?LinkID=231484)
-
-**Amostra de inicialização de associação**
-
-* [Conceitos](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [Programas padrão](https://msdn.microsoft.com/library/windows/desktop/hh848047)
-
-**Tipo de Arquivo e Modelo de Associações de Protocolo**
-
-* [Tarefas](launch-the-default-app-for-a-file.md)
-* [Iniciar o aplicativo padrão para um arquivo](handle-uri-activation.md)
-
-**Manipular a ativação do URI**
-
-* [Diretrizes](https://msdn.microsoft.com/library/windows/apps/hh700321)
-
-**Diretrizes de tipos de arquivos e URIs**
-* [**Referência**](https://msdn.microsoft.com/library/windows/apps/br224716)
-* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br242331)
+> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
+## Tópicos relacionados
+
+**Exemplo completo**
+
+* [Amostra de inicialização de associação](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+
+**Conceitos**
+
+* [Programas padrão](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+* [Tipo de Arquivo e Modelo de Associações de Protocolo](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+
+**Tarefas**
+
+* [Iniciar o aplicativo padrão para um arquivo](launch-the-default-app-for-a-file.md)
+* [Manipular a ativação do URI](handle-uri-activation.md)
+
+**Diretrizes**
+
+* [Diretrizes de tipos de arquivos e URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
+
+**Referência**
+* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
+* [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
+
+ 
+
  
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

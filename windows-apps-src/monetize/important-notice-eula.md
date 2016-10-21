@@ -3,15 +3,16 @@ author: mcleanbyron
 ms.assetid: 5efb4f40-a021-4dd2-82b4-7c95c3849485
 description: "Leia o contrato de licença do usuário final (EULA) em sua totalidade para obter informações importantes."
 title: Aviso importante - EULA
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 89af54f5b8cf52366100b4751ed37ddd7a7bacb7
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 1482450a8e5039ffd61a90f7cd38738115c5f2f0
 
 ---
 
 # Aviso importante - EULA
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Leia o contrato de licença do usuário final (EULA) em sua totalidade.
 
@@ -29,6 +30,6 @@ O EULA pode ser encontrado na pasta onde seu SDKs de extensão estão localizado
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

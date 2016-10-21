@@ -3,8 +3,9 @@ author: mcleblanc
 description: "É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado."
 title: Solucionando problemas de portabilidade do Windows Runtime 8.x para UWP
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: e5758472d303f4baaf80d45d6b23b54f2a21e002
+ms.openlocfilehash: a6901946f873b751515cb5d9805158e4b78b92bb
 
 ---
 
@@ -54,6 +55,6 @@ O próximo tópico é [Portando XAML e a interface do usuário](w8x-to-uwp-porti
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

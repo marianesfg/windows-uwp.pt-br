@@ -6,8 +6,8 @@ title: Projetando software inclusivo no Windows 10
 label: Designing inclusive software
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: cdd41595ee2727c0eeefab7b041c1adfefc15dfa
+ms.sourcegitcommit: c5ccae0e095b7c8e403a230fe8f3442754aa2ad7
+ms.openlocfilehash: 94848fd1acf51e7ab8dab0f45584d3214be58830
 
 ---
 
@@ -26,17 +26,13 @@ O design inclusivo cria produtos melhores para todos. Trata-se de considerar a g
 ## Princípios de design inclusivo  
 Os quatro princípios seguintes estão orientando a mudança da Microsoft para o design inclusivo:
 
+**Pense universal**: vamos nos concentrar no que unifica as pessoas — motivações, relações e habilidades humanas. Isso nos ajuda a considerar o impacto social mais amplo do nosso trabalho. O resultado é uma experiência que tem uma diversidade de maneiras para todas as pessoas participarem.
 
-              **Pense universal**: vamos nos concentrar no que unifica as pessoas — motivações, relações e habilidades humanas. Isso nos ajuda a considerar o impacto social mais amplo do nosso trabalho. O resultado é uma experiência que tem uma diversidade de maneiras para todas as pessoas participarem.
+**Personalize**: em seguida, nós nos desafiamos a criar conexões emocionais. Interações de humanos com humanos podem inspirar melhor a interação de humanos com a tecnologia. Circunstâncias únicas de uma pessoa podem melhorar um design para todos. O resultado é uma experiência que parece ter sido criada para uma pessoa.
 
+**Mantenha a simplicidade**: começamos com a simplicidade como o unificador principal. Quando reduzimos a desordem as pessoas sabem o que fazer em seguida. Eles são inspirados a seguir em frente em espaços que são limpos, luminosos e abertos. O resultado é uma experiência que seja sincera e atemporal.
 
-              **Personalize**: em seguida, nós nos desafiamos a criar conexões emocionais. Interações de humanos com humanos podem inspirar melhor a interação de humanos com a tecnologia. Circunstâncias únicas de uma pessoa podem melhorar um design para todos. O resultado é uma experiência que parece ter sido criada para uma pessoa.
-
-
-              **Mantenha a simplicidade**: começamos com a simplicidade como o unificador principal. Quando reduzimos a desordem as pessoas sabem o que fazer em seguida. Eles são inspirados a seguir em frente em espaços que são limpos, luminosos e abertos. O resultado é uma experiência que seja sincera e atemporal.
-
-
-              **Crie alegria**: experiências alegres evocam admiração e descoberta. Às vezes, é mágico. Às vezes, é um detalhe que está correto. Criamos esses momentos para que pareçam uma mudança bem-vinda no ritmo. O resultado é uma experiência que tem impulso e fluxo.
+**Crie alegria**: experiências alegres evocam admiração e descoberta. Às vezes, é mágico. Às vezes, é um detalhe que está correto. Criamos esses momentos para que pareçam uma mudança bem-vinda no ritmo. O resultado é uma experiência que tem impulso e fluxo.
 
 ## Usuários de design inclusivo  
 Há essencialmente dois tipos de usuários de tecnologia assistencial (AT):
@@ -107,10 +103,11 @@ Em resumo, siga essas sete etapas para garantir que o seu software seja inclusiv
 * [Design inclusivo](http://design.microsoft.com/inclusive)
 * [Software de engenharia para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Hub de desenvolvedor de acessibilidade da Microsoft](https://developer.microsoft.com/windows/accessible-apps)
-* [Desenvolvendo aplicativos inclusivos do Windows](developing-inclusive-windows-apps.md)  
+* [Desenvolvendo aplicativos inclusivos do Windows](developing-inclusive-windows-apps.md) 
+* [Acessibilidade](accessibility.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

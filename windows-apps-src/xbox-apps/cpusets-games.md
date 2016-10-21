@@ -2,8 +2,9 @@
 title: CPUSets para desenvolvimento de jogos
 description: "Este artigo fornece uma visão geral da API CPUSets nova na Plataforma Universal do Windows (UWP) e aborda as informações básicas relacionadas ao desenvolvimento de jogos e aplicativos."
 author: hammondsp
-ms.sourcegitcommit: 3cefaf4e527d2a0da412dab474a348b55ad409c9
-ms.openlocfilehash: f125ae7e268a8d35b477a1557c498762869f859b
+translationtype: Human Translation
+ms.sourcegitcommit: 9f15d551715d9ccf23e4eb397637f4fafacec350
+ms.openlocfilehash: 6065435dc3add0d9bde15dc6bdd355935b8f53cd
 
 ---
 
@@ -16,10 +17,8 @@ A Plataforma Universal do Windows (UWP) é o núcleo de uma ampla variedade de d
 ## API CPUSets
 
 A API CPUSets proporciona controle de quais conjuntos de CPU estão disponíveis para agendamento de threads. Duas funções estão disponíveis para controlar onde os threads são agendados:
-- 
-            **SetProcessDefaultCpuSets** – essa função pode ser usada para especificar em quais conjuntos de CPU novos threads poderão ser executados se não forem atribuídos a conjuntos de CPU específicos.
-- 
-            **SetThreadSelectedCpuSets** – essa função permite que você limite os conjuntos de CPU nos quais um thread específico pode ser executado.
+- **SetProcessDefaultCpuSets** – essa função pode ser usada para especificar em quais conjuntos de CPU novos threads poderão ser executados se não forem atribuídos a conjuntos de CPU específicos.
+- **SetThreadSelectedCpuSets** – essa função permite que você limite os conjuntos de CPU nos quais um thread específico pode ser executado.
 
 Se a função **SetProcessDefaultCpuSets** nunca for usada, os threads recém-criados poderão ser agendados em qualquer conjunto de CPU que esteja disponível para seu processo. Esta seção aborda as noções básicas sobre a API CPUSets.
 
@@ -97,9 +96,7 @@ Como vimos, a API CPUSets fornece muitas informações e flexibilidade quando se
 
 Este método será eficaz se seu jogo tiver alguns threads que devem ser executados em tempo real com outros threads de trabalho que exigem relativamente pouco tempo de CPU. Algumas tarefas, como música contínua em segundo plano, devem ser executadas sem interrupção a fim de proporcionar uma experiência de jogo ideal. Até mesmo um único quadro da privação para um thread de áudio pode causar falhas ou exibir pop-ups, portanto, é fundamental que ele receba a quantidade necessária de tempo de CPU em cada quadro.
 
-O uso de **SetThreadSelectedCpuSets** com **SetProcessDefaultCpuSets** pode garantir que os threads de trabalho não interrompam seus threads pesados. 
-            **SetThreadSelectedCpuSets** pode ser usado para atribuir seus threads pesados a conjuntos de CPU específicos. 
-            **SetProcessDefaultCpuSets**, em seguida, pode ser usado para garantir que todos os threads não atribuídos criados sejam colocados em outro conjunto de CPU. No caso de CPUs que usem hyperthreading, também é importante levar em conta os núcleos lógicos no mesmo núcleo físico. Threads de trabalho não devem ser executados em núcleos lógicos que compartilham o mesmo núcleo físico que um thread que você deseja executar com capacidade de resposta em tempo real. O código a seguir demonstra como determinar se um computador usa hyperthreading.
+O uso de **SetThreadSelectedCpuSets** com **SetProcessDefaultCpuSets** pode garantir que os threads de trabalho não interrompam seus threads pesados. **SetThreadSelectedCpuSets** pode ser usado para atribuir seus threads pesados a conjuntos de CPU específicos. **SetProcessDefaultCpuSets**, em seguida, pode ser usado para garantir que todos os threads não atribuídos criados sejam colocados em outro conjunto de CPU. No caso de CPUs que usem hyperthreading, também é importante levar em conta os núcleos lógicos no mesmo núcleo físico. Threads de trabalho não devem ser executados em núcleos lógicos que compartilham o mesmo núcleo físico que um thread que você deseja executar com capacidade de resposta em tempo real. O código a seguir demonstra como determinar se um computador usa hyperthreading.
 
 ```
 unsigned long retsize = 0;
@@ -193,10 +190,11 @@ A API CPUSets disponível para desenvolvimento de UWP fornece uma quantidade con
 ## Recursos adicionais
 - [Conjuntos de CPU (MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
 - [Exemplo de CPUSets fornecido pelo ATG](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
+- [UWP no Xbox One](index.md)
 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

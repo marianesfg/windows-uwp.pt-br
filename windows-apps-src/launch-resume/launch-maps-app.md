@@ -3,21 +3,21 @@ author: TylerMSFT
 title: Iniciar o aplicativo Mapas do Windows
 description: Saiba como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo.
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 0dcd15c7d04ed452f69208ad1e68a8949baf40dd
+ms.openlocfilehash: a2f09aa510c9c3db6b8eca25f4c8cee98fa0eb46
 
 ---
 
 # Iniciar o aplicativo Mapas do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Saiba como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo. Este tópico descreve os esquemas de URI (Uniform Resource Identifier) **bingmaps:**, **ms-drive-to:**, **ms-walk-to:** e *ms-settings:*. Use esses esquemas de URI para iniciar o aplicativo Mapas do Windows para ver mapas, trajetos e resultados de pesquisa específicos ou para baixar mapas offline de Mapas do Windows no aplicativo Configurações.
 
-
-            **Dica** Para saber mais sobre como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo, baixe a [amostra de mapas da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) do [repositório de amostras universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+**Dica** Para saber mais sobre como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo, baixe a [amostra de mapas da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) do [repositório de amostras universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
 ## Apresentando URIs
 
@@ -67,8 +67,7 @@ Neste exemplo, a classe [**LauncherOptions**](https://msdn.microsoft.com/library
 
 Há várias maneiras de controlar o ponto central do mapa e o nível de zoom. Usar os parâmetros *cp* (ponto central) e *lvl* (nível de zoom) é o método mais simples e produz resultados previsíveis. Usar o parâmetro *bb* (especifica uma área delimitada por valores de latitude e longitude) é menos previsível porque ele leva em conta a resolução da tela e determina o ponto central do mapa e o nível de zoom com base nas coordenadas fornecidas. O parâmetro *bb* é ignorado quando todos os três parâmetros (*bb*, *cp* e *lvl*) estão presentes.
 
-Para controlar o tipo de exibição, use os parâmetros *ss* (Streetside) e *sty* (estilo). O parâmetro *ss* coloca o mapa em um modo de exibição Streetside. O parâmetro *sty* permite que você alterne entre os modos de exibição de estrada, vista aérea e 3D. Ao usar o estilo 3D, os parâmetros *hdg*, *pit* e *rad* podem ser usados para especificar o modo de exibição 3D. 
-            *hdg* especifica o título do modo de exibição, *pit* especifica a rotação sobre o eixo x do modo de exibição, e *rad* especifica a distância entre o ponto central para mostrar na exibição. Para obter mais informações sobre esses e outros parâmetros, consulte a [referência de parâmetro bingmaps:](#bingmaps).
+Para controlar o tipo de exibição, use os parâmetros *ss* (Streetside) e *sty* (estilo). O parâmetro *ss* coloca o mapa em um modo de exibição Streetside. O parâmetro *sty* permite que você alterne entre os modos de exibição de estrada, vista aérea e 3D. Ao usar o estilo 3D, os parâmetros *hdg*, *pit* e *rad* podem ser usados para especificar o modo de exibição 3D. *hdg* especifica o título do modo de exibição, *pit* especifica a rotação sobre o eixo x do modo de exibição, e *rad* especifica a distância entre o ponto central para mostrar na exibição. Para obter mais informações sobre esses e outros parâmetros, consulte a [referência de parâmetro bingmaps:](#bingmaps).
 
 | URI de Exemplo                                                                 | Resultados                                                                                                                                                                                                   |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -142,8 +141,7 @@ Você pode exibir o trajeto entre dois pontos usando o parâmetro *rtp*; esses p
 
 Os esquemas de URI **ms-drive-to:** e **ms-walk-to:** permitem que você inicie diretamente em um modo de exibição de curva a curva de uma rota. Esses esquemas de URI só podem fornecer o trajeto da localização atual do usuário. Se você tiver de fornecer o trajeto entre pontos que não incluem a localização atual do usuário, use o esquema de URI **bingmaps:** conforme descrito na seção anterior. Para saber mais sobre esses esquemas de URI, consulte as referências de parâmetro [ms-drive-to:](#msdriveto) e [ms-walk-to:](#mswalkto).
 
-> 
-            **Importante**  Quando os esquemas de URI **ms-drive-to:** ou **ms-walk-to:** são iniciados, o aplicativo Mapas verifica se o dispositivo passou por uma correção de localização do GPS. Em caso afirmativo, o aplicativo Mapas continuará com o trajeto curva a curva. Caso contrário, o aplicativo exibirá a visão geral da rota, conforme descrito em [Exibir trajeto e tráfego](#directions).
+> **Importante**  Quando os esquemas de URI **ms-drive-to:** ou **ms-walk-to:** são iniciados, o aplicativo Mapas verifica se o dispositivo passou por uma correção de localização do GPS. Em caso afirmativo, o aplicativo Mapas continuará com o trajeto curva a curva. Caso contrário, o aplicativo exibirá a visão geral da rota, conforme descrito em [Exibir trajeto e tráfego](#directions).
 
  
 
@@ -249,16 +247,12 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>sty=a</p></td>
 <td align="left"><p>Define o estilo de mapa. Os valores válidos para esse parâmetro incluem:</p>
 <ul>
-<li>
-            **a**: exibe uma vista aérea do mapa.</li>
-<li>
-            **r**: exibe uma vista das ruas do mapa.</li>
-<li>
-            **3d**: exibe uma vista em 3D do mapa. Use em conjunto com o parâmetro **cp** e, opcionalmente, com o parâmetro **rad**.</li>
+<li>**a**: exibe uma vista aérea do mapa.</li>
+<li>**r**: exibe uma vista das ruas do mapa.</li>
+<li>**3d**: exibe uma vista em 3D do mapa. Use em conjunto com o parâmetro **cp** e, opcionalmente, com o parâmetro **rad**.</li>
 </ul>
 <p>No Windows 10, os estilos de vista aérea e exibição 3D são os mesmos.</p>
 <div class="alert">
-            
 **Observação**  Omitir o parâmetro **sty** produz os mesmos resultados que sty=r.
 </div>
 <div>
@@ -297,7 +291,6 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>ss=1</p></td>
 <td align="left"><p>Indica as imagens em nível de rua que serão mostradas quando <code>ss=1</code>. Omitir o parâmetro **ss** produz os mesmos resultados que <code>ss=0</code>. Use em conjunto com o parâmetro **cp** para especificar o local do modo de exibição em nível de rua.</p>
 <div class="alert">
-            
 > **Observação**  As imagens em nível de rua não estão disponíveis em todas as regiões.
 </div>
 <div>
@@ -312,7 +305,6 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>trfc=1</p></td>
 <td align="left"><p>Especifica se as informações de trânsito estão incluídas no mapa. Omitir o parâmetro trfc produz os mesmos resultados que <code>trfc=0</code>.</p>
 <div class="alert">
-            
 > **Observação**  Observe que os dados sobre o trânsito não estão disponíveis em todas as regiões.
 </div>
 <div>
@@ -342,7 +334,6 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>Nenhuma linha de rota é desenhada quando uma rota incompleta é determinada.</p>
 <p>Use em conjunto com o parâmetro **mode** para especificar o modo de transporte (de carro, transporte público ou a pé). Se **mode** não for especificado, o trajeto será fornecido usando o modo de preferência de transporte do usuário.</p>
 <div class="alert">
-            
 **Observação**  Um título pode ser usado para um local se o local for especificado pelo valor do parâmetro **pos**. Em vez de mostrar a latitude e a longitude, o título será exibido.
 </div>
 <div>
@@ -357,12 +348,9 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>mode=d</p></td>
 <td align="left"><p>Define o modo de transporte. Os valores válidos para esse parâmetro incluem:</p>
 <ul>
-<li>
-            **d**: exibe a visão geral dos trajetos por automóvel</li>
-<li>
-            **t**: exibe a visão geral dos trajetos</li>
-<li>
-            **w**: exibe a visão geral dos trajetos a pé</li>
+<li>**d**: exibe a visão geral dos trajetos por automóvel</li>
+<li>**t**: exibe a visão geral dos trajetos</li>
+<li>**w**: exibe a visão geral dos trajetos a pé</li>
 </ul>
 <p>Use em conjunto com o parâmetro **rtp** para o trajeto de transporte. Se **mode** não for especificado, o trajeto será fornecido usando o modo de preferência de transporte do usuário. Um **modo** pode ser fornecido sem nenhum parâmetro de rota para inserir entradas de trajeto para o modo em questão do local atual.</p></td>
 </tr>
@@ -386,8 +374,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>Separe o nome e vários pontos com tils (**~**).</p>
 <p>Se o item que você especificar contiver um til, verifique se o til está codificado como <code>%7E</code>. Se não estiver acompanhada dos parâmetros de Ponto central e de Nível de zoom, a coleção fornecerá o melhor modo de exibição de mapa.</p>
 
-<p>
-            **Importante** Se o item que você especificar contiver um sublinhado, verifique se o sublinhado está codificado duplamente como %255F.</p>
+<p>**Importante** Se o item que você especificar contiver um sublinhado, verifique se o sublinhado está codificado duplamente como %255F.</p>
 
 <p>Se o item que você especificar contiver um sublinhado, verifique se o sublinhado está codificado duplamente como %255F.</p></td>
 </tr>
@@ -401,8 +388,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 
 O URI para iniciar uma solicitação de trajetos de automóvel curva a curva não precisa ser codificado e tem o seguinte formato.
 
-> 
-            **Observação**  Você não especifica o ponto de partida nesse esquema de URI. O ponto de partida é sempre presumido como sendo a localização atual. Se você precisa especificar um ponto de partida que não seja a localização atual, consulte [Exibir trajeto e tráfego](#directions).
+> **Observação**  Você não especifica o ponto de partida nesse esquema de URI. O ponto de partida é sempre presumido como sendo a localização atual. Se você precisa especificar um ponto de partida que não seja a localização atual, consulte [Exibir trajeto e tráfego](#directions).
 
  
 
@@ -419,8 +405,7 @@ O URI para iniciar uma solicitação de trajetos de automóvel curva a curva nã
 
 O URI para iniciar uma solicitação de trajetos a pé curva a curva não precisa ser codificado e tem o seguinte formato.
 
-> 
-            **Observação**  Você não especifica o ponto de partida nesse esquema de URI. O ponto de partida é sempre presumido como sendo a localização atual. Se você precisa especificar um ponto de partida que não seja a localização atual, consulte [Exibir trajeto e tráfego](#directions).
+> **Observação**  Você não especifica o ponto de partida nesse esquema de URI. O ponto de partida é sempre presumido como sendo a localização atual. Se você precisa especificar um ponto de partida que não seja a localização atual, consulte [Exibir trajeto e tráfego](#directions).
 
  
 
@@ -434,8 +419,7 @@ O URI para iniciar uma solicitação de trajetos a pé curva a curva não precis
 ## Referência de parâmetro ms-settings:
 
 
-A sintaxe para parâmetros específicos do aplicativo Mapas para o esquema de URI **ms-settings:** é definida abaixo. 
-            **mapas downloadmaps** é especificado junto com a URI **ms-settings:** na forma de **ms-configurações: mapas-downloadmaps? ** para indicar a página de configurações de mapas offline.
+A sintaxe para parâmetros específicos do aplicativo Mapas para o esquema de URI **ms-settings:** é definida abaixo. **mapas downloadmaps** é especificado junto com a URI **ms-settings:** na forma de **ms-configurações: mapas-downloadmaps?** para indicar a página de configurações de mapas offline.
 
  
 
@@ -448,6 +432,6 @@ A sintaxe para parâmetros específicos do aplicativo Mapas para o esquema de UR
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,17 +1,26 @@
 ---
 author: Jwmsft
 Description: "Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário. Mostramos aqui como adicionar controles ao seu aplicativo."
-title: Adicionar controles e manipular eventos
+title: "Introdução a controles e padrões"
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
-label: Intro to controls and events
+label: Intro to controls and patterns
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 709771424daba7c034dc6f19d6998469705a24da
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: c597b2e5a1da23247a2100aeae88beaf1bfdaa64
 
 ---
-# Introdução aos controles e eventos
+# Introdução a controles e padrões
 
-Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário. Mostramos aqui como adicionar controles ao seu aplicativo. Há 3 etapas principais para adicionar controles ao seu aplicativo: 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+No desenvolvimento de aplicativos UWP, um *controle* é um elemento de interface do usuário que exibe conteúdo ou permite interação. Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário.
+
+Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o padrão de [painel de navegação](nav-pane.md) é uma maneira pela qual você pode usar um controle [SplitView](split-view.md) de navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um controle [Pivô](tabs-pivot.md) para implementar o padrão de guia.
+
+Em muitos casos, você pode usar um controle da forma como ele se apresenta. No entanto, os controles XAML separam a função da estrutura e aparência para que você possa fazer vários níveis de modificação para torná-los adequados às suas necessidades. Na seção [Estilo](../style/index.md), você pode aprender a usar [estilos XAML](xaml-styles.md) e [modelos de controle](control-templates.md) para modificar um controle.
+
+Nesta seção, fornecemos diretrizes para cada um dos controles XAML que você pode usar para criar sua interface do usuário do aplicativo. Para começar, este artigo mostra como adicionar controles ao seu aplicativo. Há 3 etapas principais para usar controles em seu aplicativo: 
 
 - Adicione um controle à interface do usuário de seu aplicativo. 
 - Defina as propriedades no controle, como largura, altura e cor de primeiro plano. 
@@ -131,12 +140,14 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 
 ## Tópicos relacionados
 
--   [**Barras de comandos**](app-bars.md)
--   [Pesquisa](search.md)
--   [Submenus](dialogs-popups-menus.md)
+-   [Índice de controles por função](controls-by-function.md)
+-   [Namespace Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+-   [Layout](../layout/index.md)
+-   [Estilo](../style/index.md)
+-   [Usabilidade](../usability/index.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

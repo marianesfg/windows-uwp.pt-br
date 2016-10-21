@@ -1,21 +1,22 @@
 ---
 author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
-description: "Este tópico mostra como obter um quadro de visualização do fluxo de visualização de captura de mídia."
+description: "Este tópico mostra como obter um único quadro de visualização do fluxo de visualização de captura de mídia."
 title: "Obter um quadro de visualização"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c512ec92272ab03cfd8e91602018f09ef8225652
+translationtype: Human Translation
+ms.sourcegitcommit: e19fa2a574e6824941c89db1db1e7e69f9e38ae9
+ms.openlocfilehash: d8d5780672592b1888a9c894dcc3ed58ebc2be36
 
 ---
 
 # Obter um quadro de visualização
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este tópico mostra como obter um quadro de visualização do fluxo de visualização de captura de mídia.
+Este tópico mostra como obter um único quadro de visualização do fluxo de visualização de captura de mídia.
 
-**Observação**  
-Este artigo se baseia em conceitos e códigos discutidos em [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tem uma instância de MediaCapture que foi inicializada corretamente e que você tem um [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) com um fluxo de visualização de vídeo ativo.
+> [!NOTE] 
+> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. Recomendamos que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tem uma instância de MediaCapture que foi inicializada corretamente e que você tem um [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) com um fluxo de visualização de vídeo ativo.
 
 Além dos namespaces necessários para captura de mídia básica, a captura de um quadro de visualização exige o namespace a seguir.
 
@@ -37,12 +38,12 @@ Você também poderá obter uma representação de [**IDirect3DSurface**](https:
 
 [!code-cs[GetPreviewSurface](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewSurface)]
 
-**Importante**  
-As propriedades [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) ou [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn930920) do **VideoFrame** retornado podem ser nulas dependendo da forma como você chama **GetPreviewFrameAsync** e do dispositivo no qual o aplicativo está sendo executado.
+> [!IMPORTANT]
+> As propriedades [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) ou [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn930920) do **VideoFrame** retornado podem ser nulas dependendo da forma como você chama **GetPreviewFrameAsync** e do dispositivo no qual o aplicativo está sendo executado.
 
--   Se você chamar a sobrecarga de [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926713) que aceita um argumento **VideoFrame**, então o **VideoFrame** retornado terá um **SoftwareBitmap** diferente de nulo e a propriedade **Direct3DSurface** será nula.
--   Se você chamar a sobrecarga de [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712) que não tem argumentos em um dispositivo que usa uma superfície Direct3D para representar o quadro internamente, a propriedade **Direct3DSurface** será diferente de nula e a propriedade **SoftwareBitmap** será nula.
--   Se você chamar a sobrecarga de [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712) que não tem argumentos em um dispositivo que não usa uma superfície Direct3D para representar o quadro internamente, a propriedade **SoftwareBitmap** será diferente de nula e a propriedade **Direct3DSurface** será nula.
+> - Se você chamar a sobrecarga de [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926713) que aceita um argumento **VideoFrame**, o **VideoFrame** retornado terá um **SoftwareBitmap** não nulo e a propriedade **Direct3DSurface** será nula.
+> - Se você chamar a sobrecarga de [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712) que não tem argumentos em um dispositivo que usa uma superfície Direct3D para representar o quadro internamente, a propriedade **Direct3DSurface** será diferente de nula e a propriedade **SoftwareBitmap** será nula.
+> - Se você chamar a sobrecarga de [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712) que não tem argumentos em um dispositivo que não usa uma superfície Direct3D para representar o quadro internamente, a propriedade **SoftwareBitmap** será diferente de nula e a propriedade **Direct3DSurface** será nula.
 
 Seu aplicativo sempre deverá verificar se há um valor nulo antes de tentar operar nos objetos retornados pelas propriedades **SoftwareBitmap** ou **Direct3DSurface**.
 
@@ -52,7 +53,8 @@ Quando terminar de usar o quadro de visualização, certifique-se de chamar seu 
 
 ## Tópicos relacionados
 
-* [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Câmera](camera.md)
+* [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -63,6 +65,6 @@ Quando terminar de usar o quadro de visualização, certifique-se de chamar seu 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

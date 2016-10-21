@@ -6,20 +6,32 @@ ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: ecb46c0d42821d833e8232780b553754f8f097c5
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 7e52f9d379b909c4dd35bc535cbca2d7b8cca6ac
 
 ---
 # Exibição de inversão
 
-Use um recurso exibição de inversão para procurar imagens ou outros itens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, um item por vez. Em dispositivos sensíveis ao toque, deslizar o dedo em um item move a coleção. Com um mouse, os botões de navegação aparecem na passagem do mouse. No teclado, as teclas de seta movem a coleção.
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+Use um recurso exibição de inversão para procurar imagens ou outros itens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, um item por vez. Em dispositivos sensíveis ao toque, deslizar o dedo em um item move a coleção. Com um mouse, os botões de navegação aparecem no foco do mouse. No teclado, as teclas de seta movem a coleção.
+
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx"><strong>Classe FlipView</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx"><strong>Propriedade ItemsSource</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx"><strong>Propriedade ItemTemplate</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
 
 
--   [**Classe FlipView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx)
--   [**Propriedade ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)
--   [**Propriedade ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)
+
+
 
 ## Esse é o controle correto?
 
@@ -106,9 +118,7 @@ Aqui, o ItemsSource está associado a um [**CollectionViewSource**](https://msdn
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->
-            **Observação**
-            &nbsp;&nbsp;Você pode popular um recurso exibição de inversão adicionando itens a sua coleção Items ou definindo sua propriedade ItemsSource, mas você não pode usar as duas formas ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item no XAML, o item será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
+>**Observação**&nbsp;&nbsp;Você pode preencher um recurso exibição de inversão adicionando itens a sua coleção Items ou definindo sua propriedade ItemsSource, mas você não pode usar as duas formas ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item no XAML, o item será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
 
 ### Especificar a aparência dos itens
 
@@ -213,6 +223,6 @@ Para coleções maiores (10 a 25 itens), considere usar um indicador que ofereç
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

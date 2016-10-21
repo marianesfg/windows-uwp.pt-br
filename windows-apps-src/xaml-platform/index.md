@@ -3,14 +3,15 @@ author: jwmsft
 ms.assetid: b632a6cc-3503-4ab8-bfd1-dde731bd89ab
 description: "Esta seção inclui tópicos que explicam os conceitos de programação que geralmente são aplicáveis a qualquer aplicativo que você escreve."
 title: Plataforma XAML
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4deae037857312f891c8c4beae2b6a89adc152cd
+ms.openlocfilehash: bd2423c9c58a2c6bf20b0b15715b9e9e7aa219dd
 
 ---
 
 # Plataforma XAML
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta seção inclui tópicos que explicam os conceitos de programação que geralmente são aplicáveis a qualquer aplicativo que você desenvolve, usando as extensões de componente (C++/CX) do C#, do Microsoft Visual Basic ou do Visual C++ como a linguagem de programação e, XAML como a definição da interface do usuário. Isso inclui conceitos de programação básicos, tais como o uso de propriedades e eventos, e como eles se aplicam à programação de aplicativos da Plataforma Universal do Windows (UWP). A Plataforma Universal do Windows (UWP) estende os conceitos de propriedades do C#, Visual Basic ou C++/CX e seus valores, adicionando o sistema de propriedade de dependência. Os tópicos desta seção também documentam a linguagem XAML como é usada pela UWP e aborda cenários básicos e tópicos avançados que explicam como usar o XAML para definir a interface do usuário de seu aplicativo UWP.
  
@@ -27,6 +28,6 @@ Esta seção inclui tópicos que explicam os conceitos de programação que gera
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

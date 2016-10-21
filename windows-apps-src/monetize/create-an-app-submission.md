@@ -1,73 +1,77 @@
 ---
 author: mcleanbyron
 ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
-description: Use this method in the Windows Store submission API to create a new submission for an app that is registered to your Windows Dev Center account.
-title: Create an app submission using the Windows Store submission API
+description: "Use este método na API de envio da Windows Store para criar um novo envio para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
+title: Criar um envio de aplicativo usando a API de envio da Windows Store
+translationtype: Human Translation
+ms.sourcegitcommit: 178b70db1583790c174d65e060c8bce6e4f69243
+ms.openlocfilehash: 4857e0a9d7eec1d4f862ba61d39d2c0dcb138bd8
+
 ---
 
-# Create an app submission using the Windows Store submission API
+# Criar um envio de aplicativo usando a API de envio da Windows Store
 
 
 
 
-Use this method in the Windows Store submission API to create a new submission for an app that is registered to your Windows Dev Center account. After you successfully create a new submission by using this method, [update the submission](update-an-app-submission.md) to make any necessary changes to the submission data, and then [commit the submission](commit-an-app-submission.md) for ingestion and publishing.
+Use este método na API de envio da Windows Store para criar um novo envio para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-app-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-app-submission.md) para inclusão e publicação.
 
-For more information about how this method fits into the process of creating an app submission by using the Windows Store submission API, see [Manage app submissions](manage-app-submissions.md).
+Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de aplicativo, usando a API de envio da Windows Store, consulte [Gerenciar envios de aplicativo](manage-app-submissions.md).
 
 
-## Prerequisites
+## Pré-requisitos
 
-To use this method, you need to first do the following:
+Para usar este método, primeiro você precisa do seguinte:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
-* Make sure the app already has at least one submission with the [age ratings](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) information completed.
+* Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* Verifique se o aplicativo já tem pelo menos um envio com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Request
+## Solicitação
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
-| Method | Request URI                                                      |
+| Método | URI da Solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Cabeçalho da solicitação
 
-| Header        | Type   | Description                                                                 |
+| Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Parâmetros solicitados
 
-| Name        | Type   | Description                                                                 |
+| Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Required. The Store ID of the app for which you want to create a submission. For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
 <span/>
 
-### Request body
+### Corpo da solicitação
 
-Do not provide a request body for this method.
+Não forneça um corpo da solicitação para esse método.
 
-### Request example
+### Exemplo de solicitação
 
-The following example demonstrates how to create a new submission for an app.
+O exemplo a seguir demonstra como criar um novo envio para um aplicativo.
 
 ```
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/submissions HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Resposta
 
-The following example demonstrates the JSON response body for a successful call to this method. The response body contains information about the new submission. For more details about the values in the response body, see [App submission resource](manage-app-submissions.md#app-submission-object).
+O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. O corpo da resposta contém informações sobre o novo envio. Para obter mais detalhes sobre os valores no corpo da resposta, veja [Recurso do envio de aplicativo](manage-app-submissions.md#app-submission-object).
 
 ```json
 {
@@ -159,23 +163,29 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-## Error codes
+## Códigos de erro
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
-| Error code |  Description   |
+| Código de erro |  Descrição   |
 |--------|------------------|
-| 400  | The submission could not be created because the request is invalid. |
-| 409  | The submission could not be created because of the current state of the app, or the app uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 400  | O envio não pôde ser criado porque a solicitação não é válida. |
+| 409  | Não foi possível criar o envio por causa do estado atual do aplicativo, ou o aplicativo usa um recurso de painel do Centro de Desenvolvimento [não é compatível no momento com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 <span/>
 
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Get an app submission](get-an-app-submission.md)
-* [Commit an app submission](commit-an-app-submission.md)
-* [Update an app submission](update-an-app-submission.md)
-* [Delete an app submission](delete-an-app-submission.md)
-* [Get the status of an app submission](get-status-for-an-app-submission.md)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Obter um envio de aplicativo](get-an-app-submission.md)
+* [Confirmar um envio de aplicativo](commit-an-app-submission.md)
+* [Atualizar um envio de aplicativo](update-an-app-submission.md)
+* [Excluir um envio de aplicativo](delete-an-app-submission.md)
+* [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: EAC34672-5C12-402D-920B-6F2835EA5ACE
 title: "Ferramentas de criação de perfil e desempenho"
 description: "A Microsoft oferece várias ferramentas para ajudar a melhorar o desempenho do aplicativo da Plataforma Universal do Windows (UWP)."
+translationtype: Human Translation
 ms.sourcegitcommit: 5bbd14fb53cae67bbb827f94e695b2703e07fc34
-ms.openlocfilehash: f7f9821be7d1423b2f89367bd20c09981eca24eb
+ms.openlocfilehash: 3d0cf5f983efdee116bcf8b87398fe376efca3c6
 
 ---
 # Ferramentas de criação de perfil e desempenho
@@ -13,8 +14,7 @@ ms.openlocfilehash: f7f9821be7d1423b2f89367bd20c09981eca24eb
 
 A Microsoft oferece várias ferramentas para ajudar a melhorar o desempenho do aplicativo da Plataforma Universal do Windows (UWP). Siga estes links para saber como usar essas ferramentas.
 
-
-            **Ferramenta Capacidade de Resposta de IU XAML no Visual Studio 2015**. Uma das melhores ferramentas para medir o impacto no desempenho em seu aplicativo é a ferramenta Capacidade de Resposta de IU XAML. Esse componente foi [atualizado para o Visual Studio 2015](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) para dar suporte a ainda mais cenários.
+**Ferramenta Capacidade de Resposta de IU XAML no Visual Studio 2015**. Uma das melhores ferramentas para medir o impacto no desempenho em seu aplicativo é a ferramenta Capacidade de Resposta de IU XAML. Esse componente foi [atualizado para o Visual Studio 2015](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) para dar suporte a ainda mais cenários.
 
 Consulte também:
 
@@ -30,6 +30,6 @@ Consulte também:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,15 +4,15 @@ ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "Use esse método para renovar uma chave da Windows Store."
 title: Renovar uma chave ID da Windows Store
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: a3cef13e84c5bb06be4f3e3d4b2db4e02650df62
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 1a2cb625f95a5ad8e94911ead2402cb2589e209a
 
 ---
 
 # Renovar uma chave ID da Windows Store
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Use esse método para renovar uma chave da Windows Store. Quando você gera uma chave ID da Windows Store chamando o método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) ou [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675), essa chave é válida por 90 dias. Depois que a chave expira, você pode usar a chave expirada para renegociar uma nova chave usando esse método.
 
@@ -42,7 +42,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 
 | Cabeçalho         | Tipo   | Descrição                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Host           | cadeia de caracteres | Deve ser definido como o valor **collections.mp.microsoft.com** ou **purchase.mp.microsoft.com**.           |
+| Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com** ou **purchase.mp.microsoft.com**.           |
 | Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
@@ -119,6 +119,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

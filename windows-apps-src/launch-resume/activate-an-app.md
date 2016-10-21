@@ -3,20 +3,17 @@ author: TylerMSFT
 title: "Manipular a ativação do aplicativo"
 description: "Aprenda a manipular ativação de aplicativo substituindo o método OnLaunched."
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
-ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
-ms.openlocfilehash: f47a3b7fcb4bec4138e11a079c3d10e918c1eb95
+translationtype: Human Translation
+ms.sourcegitcommit: a1bb0d5d24291fad1acab41c149dd9d763610907
+ms.openlocfilehash: e41a683026a4543545556e98f6b4e9194099b362
 
 ---
 
 # Manipular a ativação do aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-
-**APIs importantes**
-
--   [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)
 
 Aprenda a manipular ativação de aplicativo substituindo o método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
 
@@ -36,8 +33,7 @@ Defina a classe do seu aplicativo.
 
 Substitua o método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). Esse método é chamado sempre que o usuário abre o aplicativo. O parâmetro [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) contém o estado anterior do seu aplicativo e os argumentos de ativação.
 
-
-            **Observação**  Para aplicativos da Loja do Windows Phone, esse método é chamado cada vez que o usuário abre o aplicativo no bloco Iniciar ou na lista de aplicativos, mesmo quando ele está suspenso na memória. No Windows, abrir um aplicativo suspenso no Bloco iniciar ou na Lista de aplicativos chama esse método.
+**Observação**  Para aplicativos da Loja do Windows Phone, esse método é chamado cada vez que o usuário abre o aplicativo no bloco Iniciar ou na lista de aplicativos, mesmo quando ele está suspenso na memória. No Windows, esse método não é chamado ao iniciar um aplicativo suspenso do bloco Iniciar ou da lista de aplicativos.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -101,10 +97,10 @@ Substitua o método [**OnLaunched**](https://msdn.microsoft.com/library/windows/
 > }
 > ```
 
-## [!div class="tabbedCodeSnippets"]
+## Restaurar os dados de aplicativo se o aplicativo foi suspenso e depois terminado
 
 
-Restaurar dados do aplicativo se ele for suspenso e encerrado Quando o usuário muda para o seu aplicativo encerrado, o sistema manda o evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018), com [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) definido como **Abrir** e [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) definido como **Encerrado** ou **ClosedByUser**.
+Quando o usuário muda para o seu aplicativo encerrado, o sistema manda o evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018), com [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) definido como **Abrir** e [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) definido como **Encerrado** ou **ClosedByUser**. O aplicativo deve carregar seus dados salvos e atualizar o conteúdo exibido.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -159,31 +155,30 @@ Restaurar dados do aplicativo se ele for suspenso e encerrado Quando o usuário 
 > }
 > ```
 
-O aplicativo deve carregar seus dados salvos e atualizar o conteúdo exibido.
+Se o valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) estiver como **NotRunning**, o aplicativo não conseguiu salva seus dados com sucesso e ele deve iniciar novamente como se estivesse sido aberto inicialmente.
 
-## [!div class="tabbedCodeSnippets"]
+## Comentários
 
-> Se o valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) estiver como **NotRunning**, o aplicativo não conseguiu salva seus dados com sucesso e ele deve iniciar novamente como se estivesse sido aberto inicialmente. Comentários 
-            **Observação**  Para aplicativos da Loja do Windows Phone, o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) é sempre seguido por [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), mesmo quando o seu aplicativo está suspenso no momento e o usuário reabri-lo em um bloco principal ou lista de aplicativos.
+> **Observação**  Para aplicativos da Loja do Windows Phone, o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) é sempre seguido por [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), mesmo quando o seu aplicativo está suspenso no momento e o usuário reabri-lo em um bloco principal ou lista de aplicativos. Os aplicativos podem pular a inicialização se já houver conteúdo definido na janela atual. Você pode verificar a propriedade [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar se o aplicativo foi aberto de um bloco principal ou secundário e, com base nisso, decidir se você deve ou não retomar a experiência de aplicativo a partir daquele ponto ou apresentar uma nova.
 
-## Os aplicativos podem pular a inicialização se já houver conteúdo definido na janela atual.
+## Tópicos relacionados
 
-* [Você pode verificar a propriedade [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar se o aplicativo foi aberto de um bloco principal ou secundário e, com base nisso, decidir se você deve ou não retomar a experiência de aplicativo a partir daquele ponto ou apresentar uma nova.](suspend-an-app.md)
-* [Tópicos relacionados](resume-an-app.md)
-* [Manipular a suspensão do aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Manipular a retomada do aplicativo](app-lifecycle.md)
+* [Manipular a suspensão do aplicativo](suspend-an-app.md)
+* [Manipular a retomada do aplicativo](resume-an-app.md)
+* [Diretrizes para suspensão e retomada de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [Ciclo de vida do aplicativo](app-lifecycle.md)
 
-**Diretrizes para suspensão e retomada de aplicativo**
+**Referência**
 
-* [**Ciclo de vida do aplicativo**](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [**Referência**](https://msdn.microsoft.com/library/windows/apps/br242324)
-
- 
+* [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)
+* [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/br242324)
 
  
 
+ 
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

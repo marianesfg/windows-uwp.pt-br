@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: "Testes do Kit de Certificação de Aplicativos Windows"
 description: "O Kit de Certificação de Aplicativos Windows contém diversos testes que podem ajudar a garantir que seu aplicativo esteja pronto para ser publicado na Windows Store."
+translationtype: Human Translation
 ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: 816b147c91a340505348aa579c8b1540962a1df5
+ms.openlocfilehash: 78a1a2ad4aea11275aa3db1d13790c490a50c232
 
 ---
 ## Testes do Kit de Certificação de Aplicativos Windows
@@ -159,8 +160,7 @@ Os testes do Analisador de Binários BinScope verificam o uso correto destes rec
 
 ### <span id="binscope-1"></span>AllowPartiallyTrustedCallersAttribute
 
-
-            **Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste APTCACheck
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** Falha no teste APTCACheck
 
 O atributo AllowPartiallyTrustedCallersAttribute (APTCA) habilita o acesso a código totalmente confiável a partir de código parcialmente confiável em assemblies assinados. Quando você aplica o atributo APTCA a um assembly, chamadores parcialmente confiáveis podem acessar esse assembly durante a vida do assembly, o que pode comprometer a segurança.
 
@@ -174,8 +174,7 @@ Esse teste é realizado apenas em código gerenciado (C#, .NET etc.).
 
 ### <span id="binscope-2"></span>Proteção de manipulação de exceções /SafeSEH
 
-
-            **Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste SafeSEHCheck
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste SafeSEHCheck
 
 Um manipulador de exceções é executado quando o aplicativo encontra uma condição excepcional, tal como um erro de divisão por zero. Como o endereço do manipulador da exceção é armazenado na pilha quando uma função é chamadas, ele ficaria vulnerável a um ataque de estouro de buffer se algum software malicioso substituísse a pilha.
 
@@ -189,8 +188,7 @@ O teste não é realizado em arquivos binários de 64 bits ou em arquivos binár
 
 ### <span id="binscope-3"></span>Prevenção de Execução de Dados
 
-
-            **Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste NXCheck
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** Falha no teste NXCheck
 
 Este teste verifica se o seu aplicativo executa código armazenado em um segmento de dados.
 
@@ -204,8 +202,7 @@ Recomendamos que você teste os seus aplicativos em uma CPU habilitada para DEP 
 
 ### <span id="binscope-4"></span>ASLR (Address Space Layout Randomization)
 
-
-            **Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste DBCheck
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** Falha no teste DBCheck
 
 O ASLR carrega imagens executáveis em locais imprevisíveis da memória, o que dificulta a ação de softwares mal-intencionados que esperam que um programa seja carregado em um determinado endereço virtual para operar de maneira previsível. Seu aplicativo e todos os componentes usados por ele devem oferecer suporte para ASLR.
 
@@ -221,8 +218,7 @@ Esse teste apenas é realizado em aplicativos gravados em código gerenciado, po
 
 ### <span id="binscope-5"></span>Ler/gravar seção PE compartilhada
 
-
-            **Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste SharedSectionsCheck.
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste SharedSectionsCheck.
 
 Arquivos binários com seções graváveis marcadas como compartilhadas são uma ameaça à segurança. Não compile aplicativos com seções graváveis compartilhadas, a não ser que isso seja realmente necessário. Use [**CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) ou [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761) para criar um objeto de memória compartilhado devidamente protegido.
 
@@ -236,8 +232,7 @@ Esse teste apenas é realizado em aplicativos gravados em linguagens não gerenc
 
 ### AppContainerCheck
 
-
-            **Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste AppContainerCheck.
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste AppContainerCheck.
 
 AppContainerCheck verifica se o bit **appcontainer** no cabeçalho PE de um binário executável está definido. Os aplicativos devem ter o bit **appcontainer** em todos os arquivos .exe e em todas as DLLs não gerenciadas para serem executados corretamente.
 
@@ -253,8 +248,7 @@ Esse teste é realizado em todos os arquivos .exe e em todas as DLLs não gerenc
 
 ### <span id="binscope-7"></span>ExecutableImportsCheck
 
-
-            **Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste ExecutableImportsCheck.
+**Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste ExecutableImportsCheck.
 
 Uma imagem PE é reprovada nesse teste quando sua tabela de importação foi inserida em uma seção de código executável. Isso poderá ocorrer se você tiver habilitado a mesclagem de .rdata para a imagem PE, definindo o sinalizador */merge* do vinculador Visual C++ como */merge:.rdata=.text*.
 
@@ -268,8 +262,7 @@ Esse teste é realizado em todo o código binário, com exceção de assemblies 
 
 ### <span id="binscope-8"></span>WXCheck
 
-
-            **Mensagem de erro do Kit de Certificação de Aplicativos Windows:** falha no teste WXCheck.
+**Mensagem de erro do Kit de Certificação de Aplicativos para Windows:** Falha no teste WXCheck.
 
 A verificação ajuda a garantir que um binário não tenha nenhuma página mapeada como gravável e executável. Isso pode acontecer se o binário tem uma seção gravável e executável ou se *SectionAlignment* do binário é menor que *PAGE\-SIZE*.
 
@@ -283,8 +276,7 @@ Esse teste é feito em todos os arquivos .exe e em todas as DLLs nativas não ge
 
 Um executável pode ter uma seção gravável e executável quando é criado com Editar e Continuar ativado (/ZI). Desativando Editar e Continuar, a seção inválida não está presente.
 
-
-            *PAGE\-SIZE* é o *SectionAlignment* padrão para executáveis.
+*PAGE\-SIZE* é o *SectionAlignment* padrão para executáveis.
 
 ### Assinatura de códigos privados
 
@@ -319,13 +311,11 @@ Para serem certificados na Windows Store, os aplicativos devem usar as APIs para
 
 Verifique se o aplicativo foi compilado como uma compilação de versão e não como uma compilação de depuração.
 
-> 
-            **Observação**  A compilação de depuração de um aplicativo não passará neste teste mesmo se o aplicativo usar somente [APIs para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+> **Observação**  A compilação de depuração de um aplicativo não passará neste teste mesmo se o aplicativo usar somente [APIs para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
 Consulte as mensagens de erro para identificar a API usada pelo aplicativo que não é uma [API para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-> 
-            **Observação**  Os aplicativos C++ integrados em uma configuração de depuração falham no teste se a configuração usar somente APIs do SDK do Windows para aplicativos da Windows Store. Para saber mais, veja [Alternativas às APIs do Windows em aplicativos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=244022) para saber mais.
+> **Observação**  Os aplicativos C++ integrados em uma configuração de depuração falham no teste se a configuração usar somente APIs do SDK do Windows para aplicativos da Windows Store. Para saber mais, veja [Alternativas às APIs do Windows em aplicativos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=244022) para saber mais.
 
 ## Testes de desempenho
 
@@ -553,8 +543,7 @@ Verifique se o aplicativo renderiza corretamente no recurso nível 9\-1 do Direc
 
 ### Corte Direct3D após a suspensão
 
-> 
-            **Observação**  Esse teste aplica-se apenas aos aplicativos da Windows Store desenvolvidos para Windows 8.1 e posterior.
+> **Observação**  Esse teste aplica-se apenas aos aplicativos da Windows Store desenvolvidos para Windows 8.1 e posterior.
 
 ### Histórico
 
@@ -603,18 +592,12 @@ Verifica se os arquivos **.winmd** no pacote estão em conformidade com as regra
 
 ### Ações corretivas
 
--   
-            **Teste do atributo ExclusiveTo:** assegure-se de que as classes UWP não implementem interfaces marcadas como outra classe ExclusiveTo.
--   
-            **Teste de localização de tipos:** assegure-se de que os metadados de todos os tipos UWP estejam localizados no arquivo winmd que tem o nome correspondente ao namespace mais longo no pacote do aplicativo.
--   
-            **Teste de diferenciação de maiúsculas e minúsculas de nomes de tipos:** verifique se todos os tipos UWP têm nomes exclusivos e sem diferenciação de maiúsculas e minúsculas no pacote do aplicativo. Assegure-se também de que nenhum nome de tipo UWP seja usado como nome de namespace no pacote do aplicativo.
--   
-            **Teste de exatidão de nomes de tipos:** assegure-se de que não haja tipos UWP no namespace global nem no namespace de nível superior do Windows.
--   
-            **Teste de exatidão de metadados gerais:** assegure-se de que o compilador que você está usando para gerar seus tipos esteja atualizado de acordo com as especificações da UWP.
--   
-            **Teste de propriedades:** verifique se todas as propriedades em uma classe UWP têm um método get (os métodos set são opcionais). Verifique se o tipo do valor de retorno do método get corresponde ao tipo do parâmetro de entrada do método set em todas as propriedades em tipos UWP.
+-   **Teste do atributo ExclusiveTo:** assegure-se de que as classes UWP não implementem interfaces marcadas como outra classe ExclusiveTo.
+-   **Teste de localização de tipos:** assegure-se de que os metadados de todos os tipos UWP estejam localizados no arquivo winmd que tem o nome correspondente ao namespace mais longo no pacote do aplicativo.
+-   **Teste de diferenciação de maiúsculas e minúsculas de nomes de tipos:** verifique se todos os tipos UWP têm nomes exclusivos e sem diferenciação de maiúsculas e minúsculas no pacote do aplicativo. Assegure-se também de que nenhum nome de tipo UWP seja usado como nome de namespace no pacote do aplicativo.
+-   **Teste de exatidão de nomes de tipos:** assegure-se de que não haja tipos UWP no namespace global nem no namespace de nível superior do Windows.
+-   **Teste de exatidão de metadados gerais:** assegure-se de que o compilador que você está usando para gerar seus tipos esteja atualizado de acordo com as especificações da UWP.
+-   **Teste de propriedades:** verifique se todas as propriedades em uma classe UWP têm um método get (os métodos set são opcionais). Verifique se o tipo do valor de retorno do método get corresponde ao tipo do parâmetro de entrada do método set em todas as propriedades em tipos UWP.
 
 ## Testes de integridade do pacote
 
@@ -678,8 +661,7 @@ Se o aplicativo não tiver um arquivo de tarefa em segundo plano especificado no
 
 Atualize o código JavaScript em segundo plano para chamar Close() corretamente.
 
-> 
-            **Observação** Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos UWP. Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Observação** Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos UWP. Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -689,6 +671,6 @@ Atualize o código JavaScript em segundo plano para chamar Close() corretamente.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

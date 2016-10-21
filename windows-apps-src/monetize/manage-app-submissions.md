@@ -1,61 +1,65 @@
 ---
 author: mcleanbyron
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
-description: Use these methods in the Windows Store submission API to manage submissions for apps that are registered to your Windows Dev Center account.
-title: Manage app submissions using the Windows Store submission API
+description: "Use estes métodos na API de envio da Windows Store para gerenciar envios dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
+title: Gerenciar envios de aplicativo usando a API de envio da Windows Store
+translationtype: Human Translation
+ms.sourcegitcommit: 178b70db1583790c174d65e060c8bce6e4f69243
+ms.openlocfilehash: 448eafbdadb21476da43e7408bb8bad354ba486d
+
 ---
 
-# Manage app submissions using the Windows Store submission API
+# Gerenciar envios de aplicativo usando a API de envio da Windows Store
 
 
 
 
-Use the following methods in the Windows Store submission API to manage submissions for apps that are registered to your Windows Dev Center account. For an introduction to the Windows Store submission API, including prerequisites for using the API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+Use os métodos a seguir na API de envio da Windows Store para gerenciar envios dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows. Para obter uma introdução à API de envio da Windows Store, incluindo os pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
->**Note**&nbsp;&nbsp;These methods can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
 
-| Method        | URI    | Description                                                                 |
+| Método        | URI    | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Gets data for an existing app submission. For more information, see [Get an app submission](get-an-app-submission.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status``` | Gets the status of an existing app submission. For more information, see [Get the status of an app submission](get-status-for-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` | Creates a new submission for an app that is registered to your Windows Dev Center account. For more information, see [Create an app submission](create-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` | Commits a new or updated app submission to Windows Dev Center. For more information, see [Commit an app submission](commit-an-app-submission.md). |
-| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Updates an existing app submission. For more information, see [Update an app submission](update-an-app-submission.md). |
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Deletes an app submission. For more information, see [Delete an app submission](delete-an-app-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Obtém dados para um envio de aplicativo existente. Para saber mais, veja [Obter um envio de aplicativo](get-an-app-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status``` | Obtém o status de um envio de aplicativo existente. Para obter mais informações, consulte [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` | Cria um novo envio para um aplicativo que está registrado em sua conta do Centro de Desenvolvimento do Windows. Para saber mais, veja [Criar um envio de aplicativo](create-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` | Confirma um envio de aplicativo novo ou atualizado para o Centro de Desenvolvimento do Windows. Para saber mais, veja [Confirmar um envio de aplicativo](commit-an-app-submission.md). |
+| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Atualiza um envio de aplicativo existente. Para saber mais, veja [Atualizar um envio de aplicativo](update-an-app-submission.md). |
+| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Exclui um envio de aplicativo. Para obter mais informações, consulte [Excluir um envio de aplicativo](delete-an-app-submission.md). |
 
 <span id="create-an-app-submission">
-## Create an app submission
+## Criar um envio de aplicativo
 
-To create a submission for an app, follow this process.
+Para criar um envio de um aplicativo, siga este processo.
 
-1. If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
+1. Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
 
-  >**Note**&nbsp;&nbsp;Make sure the app already has at least one completed submission with the [age ratings](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) information completed.
+  >**Observação**&nbsp;&nbsp;Verifique se o aplicativo já tem pelo menos um envio concluído com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
 
-3. [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). You must pass this access token to the methods in the Windows Store submission API. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+3. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Windows Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
-4. Execute the following method in the Windows Store submission API. This method creates a new in-progress submission, which is a copy of your last published submission. For more information, see [Create an app submission](create-an-app-submission.md).
+4. Execute o seguinte método na API de envio da Windows Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado. Para saber mais, veja [Criar um envio de aplicativo](create-an-app-submission.md).
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
   ```
 
-  The response body contains three items: the ID of the new submission, the data for the new submission (including all the listings and pricing information), and the shared access signature (SAS) URI for uploading any app packages and listing images for the submission. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
+  O corpo da resposta contém três itens: a ID do novo envio, os dados para o novo envio (incluindo todas as listagens e informações de preço) e a URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes de aplicativo e as imagens de lista para o envio. Para saber mais sobre SAS, consulte [Assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
 
-3. If you are adding new packages or images for the submission, [prepare the app packages](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) and [prepare the app screenshots and images](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Add all of these files to a ZIP archive.
+3. Se você estiver adicionando novos pacotes ou imagens para o envio, [prepare os pacotes de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) e as [imagens e capturas de tela do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Adicione todos esses arquivos a um arquivo ZIP.
 
-4. Update the submission data with any required changes for the new submission, and execute the following method to update the submission. For more information, see [Update an app submission](update-an-app-submission.md).
+4. Atualize os dados de envio com as alterações necessárias para o novo envio e execute o método a seguir para atualizar o envio. Para saber mais, veja [Atualizar um envio de aplicativo](update-an-app-submission.md).
 
   ```
   PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
   ```
 
-  >**Note**&nbsp;&nbsp;If you are adding new packages or images for the submission, make sure you update the submission data to refer to the name and relative path of these files in the ZIP archive.
+  >**Observação**&nbsp;&nbsp;Se você estiver adicionando novos pacotes ou imagens para o envio, atualize os dados de envio para fazer referência ao nome e caminho relativo desses arquivos no arquivo ZIP.
 
-4. If you are adding new packages or images for the submission, upload the ZIP archive to the SAS URI that was provided in the response body of the POST method you called in step 2. For more information, see [Shared Access Signatures, Part 2: Create and use a SAS with Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+4. Se você estiver adicionando novos pacotes ou imagens para o envio, carregue o arquivo ZIP na URI de SAS que foi fornecida no corpo da resposta do método POST chamado na etapa 2. Para obter mais informações, consulte [Assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de Blob](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
-  The following code snippet demonstrates how to upload the archive using the [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) class in the Azure Storage Client Library for .NET.
+  O snippet de código a seguir demonstra como carregar o arquivo usando a classe [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) na biblioteca de cliente de armazenamento do Azure para .NET.
 
   ```csharp
   string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -65,30 +69,30 @@ To create a submission for an app, follow this process.
   await blockBob.UploadFromStreamAsync(stream);
   ```
 
-5. Commit the submission by executing the following method. This will alert Dev Center that you are done with your submission and that your updates should now be applied to your account. For more information, see [Commit an app submission](commit-an-app-submission.md).
+5. Confirme o envio executando o método a seguir. Isso alertará o Centro de Desenvolvimento que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta. Para saber mais, veja [Confirmar um envio de aplicativo](commit-an-app-submission.md).
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
   ```
 
-6. Check on the commit status by executing the following method. For more information, see [Get the status of an app submission](get-status-for-an-app-submission.md).
+6. Verifique o status de confirmação executando o método a seguir. Para obter mais informações, consulte [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md).
 
     ```
     GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
     ```
 
-    To confirm the submission status, review the *status* value in the response body. This value should change from **CommitStarted** to either **PreProcessing** if the request succeeds or to **CommitFailed** if there are errors in the request. If there are errors, the *statusDetails* field contains further details about the error.
+    Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
-7. After the commit has successfully completed, the submission is sent to the Store for ingestion. You can continue to monitor the submission progress by using the previous method, or by visiting the Dev Center dashboard.
+7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar a monitorar o progresso de envio usando o método anterior ou visitando o painel do Centro de Desenvolvimento.
 
-## Resources
+## Recursos
 
-These methods use the following resources to format data.
+Esses métodos usam os recursos a seguir para formatar dados.
 
 <span id="app-submission-object" />
-### App submission
+### Envio de aplicativo
 
-This resource represents a submission for an app. The following example demonstrates the format of this resource.
+Esse recurso representa um envio para um aplicativo. O exemplo a seguir demonstra o formato desse recurso.
 
 ```json
 {
@@ -180,133 +184,133 @@ This resource represents a submission for an app. The following example demonstr
 }
 ```
 
-This resource has the following values.
+Este recurso tem os seguintes valores.
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id            | string  | The ID of the submission.  |
-| applicationCategory           | string  |   A string that specifies the [category and/or subcategory](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) for your app. Categories and subcategories are combined into a single string with the underscore '_' character, such as **BooksAndReference_EReader**.      |  
-| pricing           |  object  | An object that contains pricing info for the app. For more information, see the [Pricing resource](#pricing-object) section below.       |   
-| visibility           |  string  |  The visibility of the app. This can be one of the following values: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
-| targetPublishMode           | string  | The publish mode for the submission. This can be one of the following values: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | string  | The publish date for the submission in ISO 8601 format, if the *targetPublishMode* is set to SpecificDate.  |  
-| listings           |   object  |  A dictionary of key and value pairs, where each key is a country code and each value is a [Listing resource](#listing-object) object that contains listing info for the app.       |   
-| hardwarePreferences           |  array  |   An array of strings that define the [hardware preferences](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) for your app. This can be one of the following values: <ul><li>Touch</li><li>Keyboard</li><li>Mouse</li><li>Camera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telephony</li></ul>     |   
-| automaticBackupEnabled           |  boolean  |   Indicates whether Windows can include your app's data in automatic backups to OneDrive. For more information, see [App declarations](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
-| canInstallOnRemovableMedia           |  boolean  |   Indicates whether customers can install your app to removable storage. For more information, see [App declarations](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| isGameDvrEnabled           |  boolean |   Indicates whether game DVR is enabled for the app.    |   
-| hasExternalInAppProducts           |     boolean          |   Indicates whether your app allows users to make purchase outside the Windows Store commerce system. For more information, see [App declarations](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| meetAccessibilityGuidelines           |    boolean           |  Indicates whether your app has been tested to meet accessibility guidelines. For more information, see [App declarations](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
-| notesForCertification           |  string  |   Contains [notes for certification](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) for your app.    |    
-| status           |   string  |  The status of the submission. This can be one of the following values: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>      |    
-| statusDetails           |   object  |  Contains additional details about the status of the submission, including information about any errors. For more information, see the [Status details](#status-details-object) section below.       |    
-| fileUploadUrl           |   string  | The shared access signature (SAS) URI for uploading any packages for the submission. If you are adding new packages or images for the submission, upload the ZIP archive that contains the packages and images to this URI. For more information, see [Create an app submission](#create-an-app-submission).       |    
-| applicationPackages           |   array  | Contains objects that provide details about each package in the submission. For more information, see the [Application package](#application-package-object) section below. |    
-| enterpriseLicensing           |  string  |  One of the [enterprise licensing values](#enterprise-licensing) values that indicate the enterprise licensing behavior for the app.  |    
-| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indicates whether Microsoft is allowed to [make the app available to future Windows 10 device families](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
-| allowTargetFutureDeviceFamilies           | object   |  A dictionary of key and value pairs, where each key is a [Windows 10 device family](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) and each value is a boolean that indicates whether your app is allowed to target the specified device family.     |    
-| friendlyName           |   string  |  The friendly name of the app, used for display purposes.       |  
+| id            | string  | A ID do envio.  |
+| applicationCategory           | string  |   Uma cadeia de caracteres que especifica a [categoria e/ou subcategoria](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) para o aplicativo. Categorias e subcategorias são combinadas em uma única cadeia de caracteres com o caractere de sublinhado '_', como **BooksAndReference_EReader**.      |  
+| pricing           |  object  | Um objeto que contém informações de preços do aplicativo. Para saber mais, veja a seção [Preços de recurso](#pricing-object) abaixo.       |   
+| visibility           |  string  |  A visibilidade do aplicativo. Ele pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
+| targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishDate           | string  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |  
+| listings           |   object  |  Um dicionário de pares de chave e valor, no qual cada chave é um código de país e cada valor é um objeto [recurso de listagem](#listing-object) objeto que contém as informações de listagem do aplicativo.       |   
+| hardwarePreferences           |  array  |   Uma matriz de cadeias de caracteres que definem as [preferências de hardware](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) do aplicativo. Ele pode ter um dos seguintes valores: <ul><li>Touch</li><li>Teclado</li><li>Mouse</li><li>Câmera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonia</li></ul>     |   
+| automaticBackupEnabled           |  boolean  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
+| canInstallOnRemovableMedia           |  boolean  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| isGameDvrEnabled           |  boolean |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
+| hasExternalInAppProducts           |     boolean          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Windows Store. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| meetAccessibilityGuidelines           |    boolean           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
+| notesForCertification           |  string  |   Contém [observações de certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
+| status           |   string  |  O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>      |    
+| statusDetails           |   object  |  Contém detalhes adicionais sobre o status do envio, incluindo informações sobre os erros. Para saber mais, consulte a seção [Detalhes de status](#status-details-object) a seguir.       |    
+| fileUploadUrl           |   string  | A URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes ou imagens para o envio, carregue o arquivo ZIP que contém os pacotes e imagens para essa URI. Para saber mais, veja [Criar um envio de aplicativo](#create-an-app-submission).       |    
+| applicationPackages           |   array  | Contém objetos que fornecem detalhes sobre cada pacote no envio. Para saber mais, veja a seção [Pacote de aplicativos](#application-package-object) abaixo. |    
+| enterpriseLicensing           |  string  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
+| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
+| allowTargetFutureDeviceFamilies           | object   |  Um dicionário de pares de chave e valor, onde cada chave é uma [família de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) e cada valor é um valor booleano que indica se seu aplicativo tem permissão para segmentar a família de dispositivos especificadas.     |    
+| friendlyName           |   string  |  O nome amigável do aplicativo, usado para propósitos de exibição.       |  
 
 
 <span id="listing-object" />
-### Listing
+### Listagem
 
-This resource contains listing info for an app. This resource has the following values.
+Esse recurso contém informações de detalhes de um aplicativo. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  baseListing               |   object      |  The [base listing](#base-listing-object) info for the app, which defines the default listing info for all platforms.   |     
-|  platformOverrides               | object |   A dictionary of key and value pairs, where each key is string that identifies a platform for which to override the listing info, and each value is a [base listing](#base-listing-object)  object (containing only the values from description to title) that specifies the listing info to override for the specified platform. The keys can have the following values: <ul><li>Unknown</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
+|  baseListing               |   object      |  As informações de [listagem básica](#base-listing-object) do aplicativo, que definem o padrão de informações de listagem para todas as plataformas.   |     
+|  platformOverrides               | object |   Um dicionário de pares de chave e valor, onde cada chave é a cadeia de caracteres que identifica uma plataforma para a qual substituir as informações de listagem, e cada valor é um objeto de [listagem básica](#base-listing-object) (contendo apenas os valores de descrição ao título) que especifica as informações de listagem a serem substituídas para a plataforma especificada. As chaves podem ter os seguintes valores: <ul><li>Desconhecido</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
 
 <span id="base-listing-object" />
-### Base listing
+### Listagem básica
 
-This resource contains base listing info for an app. This resource has the following values.
+Esse recurso contém informações de detalhes básicos de um aplicativo. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  copyrightAndTrademarkInfo                |   string      |  Optional [copyright and/or trademark info](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info).  |
-|  keywords                |  array       |  An array of [keyword](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords) to help your app appear in search results.    |
-|  licenseTerms                |    string     | The optional [license terms](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) for your app.     |
-|  privacyPolicy                |   string      |   The URL for the [privacy policy](https://msdn.microsoft.com/windows/uwp/publish/privacy-policy) for your app.    |
-|  supportContact                |   string      |  The URL or email address for the [support contact info](https://msdn.microsoft.com/windows/uwp/publish/support-contact-info) for your app.     |
-|  websiteUrl                |   string      |  The URL of the [web page](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#website) for your app.    |    
-|  description               |    string     |   The [description](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) for the app listing.   |     
-|  features               |    array     |  An array of up to 20 strings that list the [features](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) for your app.     |
-|  releaseNotes               |  string       |  The [release notes](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) for your app.    |
-|  images               |   array      |  An array of [image and icon](#image-object) data for the app listing.  |
-|  recommendedHardware               |   array      |  An array of up to 11 strings that list the [recommended hardware configurations](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#recommended-hardware) for your app.     |
-|  title               |     string    |   The title for the app listing.   |  
+|  copyrightAndTrademarkInfo                |   string      |  Informações opcionais de [direitos autorais e/ou marca comercial](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info).  |
+|  keywords                |  array       |  Uma matriz de [palavra-chave](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords) para ajudar seu aplicativo a aparecer nos resultados de pesquisa.    |
+|  licenseTerms                |    string     | Os [termos de licença](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) opcionais do seu aplicativo.     |
+|  privacyPolicy                |   string      |   A URL para a [política de privacidade](https://msdn.microsoft.com/windows/uwp/publish/privacy-policy) do seu aplicativo.    |
+|  supportContact                |   string      |  A URL ou endereço de email para as [informações de contato de suporte](https://msdn.microsoft.com/windows/uwp/publish/support-contact-info) do seu aplicativo.     |
+|  websiteUrl                |   string      |  A URL da [página da Web](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#website) do seu aplicativo.    |    
+|  description               |    string     |   A [descrição](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) dos detalhes do aplicativo.   |     
+|  features               |    array     |  Uma matriz de até 20 cadeias de caracteres que lista os [recursos](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) do seu aplicativo.     |
+|  releaseNotes               |  string       |  As [notas de versão](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) do seu aplicativo.    |
+|  images               |   array      |  Uma matriz de dados de [imagem e ícone](#image-object) para a listagem do aplicativo.  |
+|  recommendedHardware               |   array      |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware recomendadas](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#recommended-hardware) para seu aplicativo.     |
+|  title               |     string    |   O título da listagem do aplicativo.   |  
 
 
 <span id="image-object" />
-### Image
+### Imagem
 
-This resource contains image and icon data for an app listing. For more information about images and icons for listing, see [App screenshots and images](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). This resource has the following values.
+Esse recurso contém dados de imagem e ícone para uma página de detalhes do aplicativo. Para obter mais informações sobre imagens e ícones para detalhes, consulte [Capturas de tela e imagens do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  fileName               |    string     |   The name of the image file in the ZIP archive that you uploaded for the submission.    |     
-|  fileStatus               |   string      |  The status of the image file. This can be one of the following values: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
-|  id  |  string  | The ID for the image, as specified by Dev Center.  |
-|  description  |  string  | The description for the image.  |
-|  imageType  |  string  | One of the following strings that indicates the type of the image: <ul><li>Unknown</li><li>Screenshot</li><li>PromotionalArtwork414X180</li><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>PromotionalArtwork2400X1200</li><li>Icon</li><li>WideIcon358X173</li><li>BackgroundImage1000X800</li><li>SquareIcon358X358</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul>      |
+|  fileName               |    string     |   O nome do arquivo de imagem no arquivo ZIP que você carregou para o envio.    |     
+|  fileStatus               |   string      |  O status do arquivo de imagem. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>   |
+|  id  |  string  | A ID da imagem, conforme especificado pelo Centro de Desenvolvimento.  |
+|  description  |  string  | A descrição da imagem.  |
+|  imageType  |  string  | Uma das seguintes cadeias de caracteres que indica o tipo da imagem: <ul><li>Desconhecido</li><li>Captura de tela</li><li>PromotionalArtwork414X180</li><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>PromotionalArtwork2400X1200</li><li>Ícone</li><li>WideIcon358X173</li><li>BackgroundImage1000X800</li><li>SquareIcon358X358</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul>      |
 
 
 <span id="pricing-object" />
-### Pricing
+### Preço
 
-This resource contains pricing info for the app. This resource has the following values.
+Esse recurso contém informações de preço do aplicativo. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  trialPeriod               |    string     |  A string that specifies the trial period for the app. This can be one of the following values: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
-|  marketSpecificPricings               |    object     |  A dictionary of key and value pairs, where each key is a two-letter ISO 3166-1 alpha-2 country code and each value is a [price tier](#price-tiers). These items represent the [custom prices for your app in specific markets](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Any items in this dictionary override the base price specified by the *priceId* value for the specified market.      |     
-|  sales               |   array      |  An array of objects that contain sales information for the app. For more information, see the [Sale](#sale-object) section below.    |     
-|  priceId               |   string      |  A [price tier](#price-tier) that specifies the [base price](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) for the app.   |
+|  trialPeriod               |    string     |  Uma cadeia de caracteres que especifica o período de avaliação do aplicativo. Ele pode ter um dos seguintes valores: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
+|  marketSpecificPricings               |    object     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor de *priceId* para o mercado especificado.      |     
+|  sales               |   array      |  Uma matriz de objetos que contêm informações de promoções do aplicativo. Para saber mais, consulte a seção [Promoção](#sale-object) a seguir.    |     
+|  priceId               |   string      |  A [faixa de preço](#price-tier) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) do aplicativo.   |
 
 
 <span id="sale-object" />
-### Sale
+### Promoção
 
-This resources contains sale info for an app. This resource has the following values.
+Esse recursos contém informações de promoção de um aplicativo. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  name               |    string     |   The name of the sale.    |     
-|  basePriceId               |   string      |  The [price tier](#price-tiers) to use for the base price of the sale.    |     
-|  startDate               |   string      |   The start date for the sale in ISO 8601 format.  |     
-|  endDate               |   string      |  The end date for the sale in ISO 8601 format.      |     
-|  marketSpecificPricings               |   object      |   A dictionary of key and value pairs, where each key is a two-letter ISO 3166-1 alpha-2 country code and each value is a [price tier](#price-tiers). These items represent the [custom prices for your app in specific markets](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Any items in this dictionary override the base price specified by the *basePriceId* value for the specified market.    |
+|  name               |    string     |   O nome da promoção.    |     
+|  basePriceId               |   string      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
+|  startDate               |   string      |   A data de início da promoção no formato ISO 8601.  |     
+|  endDate               |   string      |  A data de término da promoção no formato ISO 8601.      |     
+|  marketSpecificPricings               |   object      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor de *basePriceId* para o mercado especificado.    |
 
 
 <span id="status-details-object" />
-### Status details
+### Detalhes de status
 
-This resource contains additional details about the status of a submission. This resource has the following values.
+Esse recurso contém detalhes adicionais sobre o status de um envio. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  errors               |    object     |   An array of objects that contain error details for the submission. For more information, see the [Status detail](#status-detail-object) section below.   |     
-|  warnings               |   object      | An array of objects that contain warning details for the submission. For more information, see the [Status detail](#status-detail-object) section below.     |
-|  certificationReports               |     object    |   An array of objects that provide access to the certification report data for the submission. You can examine these reports for more information if the certification fails. For more information, see the [Certification report](#certification-report-object) section below.   |  
+|  errors               |    object     |   Uma matriz de objetos que contêm os detalhes de erro do envio. Para saber mais, consulte a seção [Detalhes de status](#status-detail-object) a seguir.   |     
+|  warnings               |   object      | Uma matriz de objetos que contêm os detalhes de aviso do envio. Para saber mais, consulte a seção [Detalhes de status](#status-detail-object) a seguir.     |
+|  certificationReports               |     object    |   Uma matriz de objetos que fornecem acesso aos dados do relatório de certificação para o envio. Se a certificação falhar, você poderá examinar esses relatórios para obter mais informações. Para saber mais, consulte a seção [Relatório de certificação](#certification-report-object) a seguir.   |  
 
 
 <span id="status-detail-object" />
-### Status detail
+### Detalhes de status
 
-This resource contains additional information about any related errors or warnings for a submission. This resource has the following values.
+Esse recurso contém informações adicionais sobre erros ou avisos relatados para um envio. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  code               |    string     |   A string that describes the type of error or warning. For more information, see the [Submission status code](#submission-status-code) section below.   |     
-|  details               |     string    |  A message with more details about the issue.     |
+|  code               |    string     |   Uma cadeia de caracteres que descreve o tipo de erro ou aviso. Para obter mais informações, consulte a seção [Código de status de envio](#submission-status-code) abaixo.   |     
+|  details               |     string    |  Uma mensagem com mais detalhes sobre o problema.     |
 
 
 <span id="application-package-object" />
-### Application package
+### Pacote de aplicativo
 
-This resource contains details about an app package for the submission. The following example demonstrates the format of this resource.
+Esse recurso contém detalhes sobre um pacote do aplicativo para o envio. O exemplo a seguir demonstra o formato desse recurso.
 
 ```json
 {
@@ -335,93 +339,99 @@ This resource contains details about an app package for the submission. The foll
 }
 ```
 
-This resource has the following values.  
+Este recurso tem os seguintes valores.  
 
->**Note**&nbsp;&nbsp;When calling the [update an app submission](update-an-app-submission.md) method, only the *fileName*, *fileStatus*, *minimumDirectXVersion*, and *minimumSystemRam* values of this object are required in the request body. The other values are populated by Dev Center.
+>**Observação**&nbsp;&nbsp;Durante a chamada do método para [atualizar um envio de aplicativo](update-an-app-submission.md), somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion* e *minimumSystemRam* desse objeto são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Centro de Desenvolvimento.
 
-| Value           | Type    | Description                   |
+| Valor           | Tipo    | Descrição                   |
 |-----------------|---------|------|
-| fileName   |   string      |  The name of the package.    |  
-| fileStatus    | string    |  The status of the package. This can be one of the following values: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  string   |  An ID that uniquely identifies the package. This value is used by Dev Center.   |     
-| version    |  string   |  The version of the app package. For more information, see [Package version numbering](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
-| architecture    |  string   |  The architecture of the package (for example, ARM).   |     
-| languages    | array    |  An array of language codes for the languages the app supports. For more information, see For more information, see [Supported languages](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
-| capabilities    |  array   |  An array of capabilities required by the package. For more information about capabilities, see [App capability declarations](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
-| minimumDirectXVersion    |  string   |  The minimum DirectX version that is supported by the app package. This can be set only for apps that target Windows 8.x; it is ignored for apps that target other versions. This can be one of the following values: <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
-| minimumSystemRam    | string    |  The minimum RAM that is required by the app package. This can be set only for apps that target Windows 8.x; it is ignored for apps that target other versions. This can be one of the following values: <ul><li>None</li><li>Memory2GB</li></ul>   |       
-| targetDeviceFamilies    | array    |  An array of strings that represent the device families that the package targets. This value is used only for packages that target Windows 10; for packages that target earlier releases, this value has the value **None**. The following device family strings are currently supported for Windows 10 packages, where *{0}* is a Windows 10 version string such as 10.0.10240.0, 10.0.10586.0 or 10.0.14393.0: <ul><li>Windows.Universal min version *{0}*</li><li>Windows.Desktop min version *{0}*</li><li>Windows.Mobile min version *{0}*</li><li>Windows.Xbox min version *{0}*</li><li>Windows.Holographic min version *{0}*</li></ul>   |    
+| fileName   |   string      |  O nome do pacote.    |  
+| fileStatus    | string    |  O status do pacote. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>    |  
+| id    |  string   |  Uma ID que identifica exclusivamente o pacote. Esse valor é usado pelo Centro de Desenvolvimento.   |     
+| version    |  string   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
+| architecture    |  string   |  A arquitetura do pacote (por exemplo, ARM).   |     
+| languages    | array    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas suportados](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
+| capabilities    |  array   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
+| minimumDirectXVersion    |  string   |  A versão mínima do DirectX que é compatível com o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
+| minimumSystemRam    | string    |  A RAM mínima necessária para o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Memory2GB</li></ul>   |       
+| targetDeviceFamilies    | array    |  Uma matriz de cadeias de caracteres que representam as famílias de dispositivos que o pacote segmenta. Esse valor é usado somente para pacotes destinados ao Windows 10; para pacotes destinados a versões anteriores, esse valor tem o valor **Nenhum**. As seguintes strings de família de dispositivos são atualmente suportadas para pacotes do Windows 10, onde *{0}* é uma string de versão do Windows 10, como 10.0.10240.0, 10.0.10586.0 ou 10.0.14393.0: <ul><li>Versão mínima do Windows.Universal *{0}*</li><li>Versão mínima do Windows.Desktop *{0}*</li><li>Versão mínima do Windows.Mobile *{0}*</li><li>Versão mínima do Windows.Xbox *{0}*</li><li>Versão mínima do Windows.Holographic *{0}*</li></ul>   |    
 
 <span/>
 
 <span id="certification-report-object" />
-### Certification report
+### Relatório de certificação
 
-This resource provides access to the certification report data for a submission. This resource has the following values.
+Esse recurso fornece acesso aos dados do relatório de certificação para um envio. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|     date            |    string     |  The date and time the report was generated, in in ISO 8601 format.    |
-|     reportUrl            |    string     |  The URL at which you can access the report.    |
+|     date            |    string     |  A data e hora em que o relatório foi gerado, no formato ISO 8601.    |
+|     reportUrl            |    string     |  A URL na qual você pode acessar o relatório.    |
 
 
 
-## Enums
+## Enumerações
 
-These methods use the following enums.
+Esses métodos usam as enumerações a seguir.
 
 
 <span id="price-tiers" />
-### Price tiers
+### Faixas de preço
 
-The following values represent available price tiers for an app submission.
+Os seguintes valores representam as faixas de preço disponíveis para um envio de aplicativo.
 
-| Value           | Description                                                                                                                                                                                                                          |
+| Valor           | Descrição                                                                                                                                                                                                                          |
 |-----------------|------|
-|  Base               |   The price tier is not set; use the base price for the app.      |     
-|  NotAvailable              |   The app is not available in the specified region.    |     
-|  Free              |   The app is free.    |    
-|  Tier2 through Tier194               |   Tier2 represents the .99 USD price tier. Each additional tier represents additional increments (1.29 USD, 1.49 USD, 1.99 USD, and so on).    |
+|  Base               |   A faixa de preço não está definida. Use o preço base para o aplicativo.      |     
+|  NotAvailable              |   O aplicativo não está disponível na região especificada.    |     
+|  Grátis              |   O aplicativo é gratuito.    |    
+|  Tier2 até Tier194               |   Tier2 representa a faixa de preço 0,99 USD. Cada nível adicional representa incrementos adicionais (1,29 USD, 1,49 USD, 1,99 USD e assim por diante).    |
 
 
 <span id="enterprise-licensing" />
-### Enterprise licensing values
+### Valores de licenciamento da empresa
 
-The following values represent the enterprise licensing behavior for the app. For more information about these options, see [Organizational licensing options](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
+Os seguintes valores representam o comportamento de licenciamento para empresa do aplicativo. Para obter mais informações sobre essas opções, consulte [Opções de licenciamento organizacional](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
 
-| Value           |  Description      |
+| Valor           |  Descrição      |
 |-----------------|---------------|
-| None            |     Do not make your app available to enterprises with Store-managed (online) volume licensing.         |     
-| Online        |     Make your app available to enterprises with Store-managed (online) volume licensing.  |
-| OnlineAndOffline | Make your app available to enterprises with Store-managed (online) volume licensing, and make your app available to enterprises via disconnected (offline) licensing. |
+| Nenhum(a)            |     Não disponibilize seu aplicativo para empresas com licenciamento por volume gerenciado pela Loja (online).         |     
+| Online        |     Disponibilize seu aplicativo para empresas com licenciamento por volume gerenciado pela Loja (online).  |
+| OnlineAndOffline | Disponibilize seu aplicativo para as empresas com licenciamento por volume gerenciado pela Loja (online) e disponibilize seu aplicativo a empresas por meio de licenciamento desconectado (offline). |
 
 
 <span id="submission-status-code" />
-### Submission status code
+### Código de status do envio
 
-The following values represent the status code of a submission.
+Os seguintes valores representam o código de status de um envio.
 
-| Value           |  Description      |
+| Valor           |  Descrição      |
 |-----------------|---------------|
-| None            |     No code was specified.         |     
-| InvalidArchive        |     The ZIP archive containing the package is invalid or has an unrecognized archive format.  |
-| MissingFiles | The ZIP archive does not have all files which were listed in your submission data, or they are in the wrong location in the archive. |
-| PackageValidationFailed | One or more packages in your submission failed to validate. |
-| InvalidParameterValue | One of the parameters in the request body is invalid. |
-| InvalidOperation | The operation you attempted is invalid. |
-| InvalidState | The operation you attempted is not valid for the current state of the package flight. |
-| ResourceNotFound | The specified package flight could not be found. |
-| ServiceError | An internal service error prevented the request from succeeding. Try the request again. |
-| ListingOptOutWarning | The developer removed a listing from a previous submission, or did not include listing information that is supported by the package. |
-| ListingOptInWarning  | The developer added a listing. |
-| UpdateOnlyWarning | The developer is trying to insert something that only has update support. |
-| Other  | The submission is in an unrecognized or uncategorized state. |
-| PackageValidationWarning | The package validation process resulted in a warning. |
+| Nenhum(a)            |     Nenhum código foi especificado.         |     
+| InvalidArchive        |     O arquivo ZIP que contém o pacote não é válido ou tem um formato de arquivo não reconhecido.  |
+| MissingFiles | O arquivo ZIP não tem todos os arquivos que foram listados nos seus dados de envio ou estão no local errado no arquivo. |
+| PackageValidationFailed | Falha ao validar um ou mais pacotes no seu envio. |
+| InvalidParameterValue | Um dos parâmetros no corpo da solicitação não é válido. |
+| InvalidOperation | A operação tentada não é válida. |
+| InvalidState | A operação tentada não é válida para o estado atual do pacote de pré-lançamento. |
+| ResourceNotFound | O pacote de pré-lançamento especificado não foi encontrado. |
+| ServiceError | Um erro de serviço interno impediu o êxito da solicitação. Repita a solicitação. |
+| ListingOptOutWarning | O desenvolvedor removeu uma listagem de um envio anterior ou não incluiu informações de listagem que são compatíveis com o pacote. |
+| ListingOptInWarning  | O desenvolvedor adicionou uma listagem. |
+| UpdateOnlyWarning | O desenvolvedor está tentando inserir algo que só tem suporte para a atualização. |
+| Outro  | O envio está em um estado não reconhecido ou não categorizado. |
+| PackageValidationWarning | O processo de validação do pacote resultou em um aviso. |
 
 <span/>
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Get app data using the Windows Store submission API](get-app-data.md)
-* [App submissions in the Dev Center dashboard](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Obter dados de aplicativo usando a API de envio da Windows Store](get-app-data.md)
+* [Envios de aplicativo no painel do Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

@@ -5,7 +5,7 @@ title: "Relatório de desempenho de anúncios"
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
 translationtype: Human Translation
 ms.sourcegitcommit: 6b354b1b009bf9e4f2899f7ef97ef8791712f52b
-ms.openlocfilehash: 2b06e25a7e96c3645d7067dc0082da3fc942249d
+ms.openlocfilehash: b75d9310e577c77d1caed3e9f34762e925eb11ae
 
 ---
 
@@ -14,10 +14,8 @@ ms.openlocfilehash: 2b06e25a7e96c3645d7067dc0082da3fc942249d
 
 Para exibir dados de desempenho para as unidades de anúncios em seus aplicativos, você pode usar os seguintes relatórios no painel do Centro de Desenvolvimento do Windows:
 
--   
-              [Relatório de desempenho de anúncios no nível do aplicativo](advertising-performance-report.md#app-level-advertising-performance-report). Esse relatório fornece dados de desempenho para as unidades de anúncios da Microsoft no aplicativo atualmente selecionado no painel.
--   
-              [Relatório de desempenho de anúncios no nível da conta](advertising-performance-report.md#account-level-advertising-performance-report). Esse relatório fornece dados de desempenho detalhados para unidades de anúncios da Microsoft e anúncios de comunidade para todos os aplicativos que estão registrados em sua conta de desenvolvedor.
+-   [Relatório de desempenho de anúncios no nível do aplicativo](advertising-performance-report.md#app-level-advertising-performance-report). Esse relatório fornece dados de desempenho para as unidades de anúncios da Microsoft no aplicativo atualmente selecionado no painel.
+-   [Relatório de desempenho de anúncios no nível da conta](advertising-performance-report.md#account-level-advertising-performance-report). Esse relatório fornece dados de desempenho detalhados para unidades de anúncios da Microsoft e anúncios de comunidade para todos os aplicativos que estão registrados em sua conta de desenvolvedor.
 
 Por padrão, os relatórios são filtrados pelo desempenho dos últimos 30 dias, em todos os dispositivos. Para alterar esses filtros, selecione **Aplicar filtros** e escolha um intervalo de tempo diferente (um dos períodos predefinidos ou um intervalo de datas personalizado) ou escolha um tipo de dispositivo individual. 
 
@@ -32,20 +30,13 @@ Esta página fornece dados de desempenho em forma de gráfico, mapa do mundo e t
 
 Os dados são obtidos destas métricas de desempenho que rastreamos para os anúncios em seu aplicativo:
 
--   
-              **Receita estimada**: a quantidade estimada de dinheiro que você recebeu dos anúncios executados em seu aplicativo.
--   
-              **eCPM**: o custo efetivo por milhares de impressões.
--   
-              **Solicitações**: o número de vezes que uma solicitação de anúncio foi enviada do seu aplicativo.
--   
-              **Impressões**: a quantidade de vezes que um anúncio foi exibido em seu aplicativo.
--   
-              **Taxa de preenchimento**: a porcentagem de solicitações de anúncio enviadas de seu aplicativo nas quais um anúncio foi exibido.
--   
-              **Cliques**: a quantidade de vezes que alguém clicou em um anúncio em seu aplicativo.
--   
-              **CTR**: taxa de cliques, que significa o número de vezes que um anúncio foi clicado, dividido pelo número de impressões.
+-   **Receita estimada**: a quantidade estimada de dinheiro que você recebeu dos anúncios executados em seu aplicativo.
+-   **eCPM**: o custo efetivo por milhares de impressões.
+-   **Solicitações**: o número de vezes que uma solicitação de anúncio foi enviada do seu aplicativo.
+-   **Impressões**: a quantidade de vezes que um anúncio foi exibido em seu aplicativo.
+-   **Taxa de preenchimento**: a porcentagem de solicitações de anúncio enviadas de seu aplicativo nas quais um anúncio foi exibido.
+-   **Cliques**: a quantidade de vezes que alguém clicou em um anúncio em seu aplicativo.
+-   **CTR**: taxa de cliques, que significa o número de vezes que um anúncio foi clicado, dividido pelo número de impressões.
 
 Para examinar todas essas métricas de desempenho para as unidades de anúncios em seu aplicativo, consulte a tabela abaixo dos modos de exibição de gráfico e mapa.
 
@@ -67,12 +58,9 @@ Este relatório fornece dados de desempenho para todas as unidades de anúncios 
 
 Esse relatório mostra as mesmas sete métricas de desempenho e modos de exibição (gráfico, mapa do mundo e tabela) como o relatório de desempenho do anúncio no nível de aplicativo descrito acima. Você pode aplicar os seguintes filtros a esse relatório:
 
--   
-              **Todas as unidades de anúncio**. Ao selecionar esse filtro, você pode optar por exibir dados de todas as unidades de anúncio ou de até seis unidades de anúncio específicas.
--   
-              **Todos os aplicativos**. Ao selecionar esse filtro, você pode optar por exibir dados de todos os aplicativos ou de até seis aplicativos específicos.
--   
-              **Aplicativo individual**. Ao selecionar um aplicativo, você poderá optar por exibir dados de todas as unidades de anúncio usadas pelo aplicativo ou de até seis unidades de anúncio específicas usadas pelo aplicativo.
+-   **Todas as unidades de anúncio**. Ao selecionar esse filtro, você pode optar por exibir dados de todas as unidades de anúncio ou de até seis unidades de anúncio específicas.
+-   **Todos os aplicativos**. Ao selecionar esse filtro, você pode optar por exibir dados de todos os aplicativos ou de até seis aplicativos específicos.
+-   **Aplicativo individual**. Ao selecionar um aplicativo, você poderá optar por exibir dados de todas as unidades de anúncio usadas pelo aplicativo ou de até seis unidades de anúncio específicas usadas pelo aplicativo.
 
 Se você criou unidades de anúncio para um aplicativo usando o Microsoft pubCenter, é possível que nem todas elas tenham sido mapeadas com êxito aos seus aplicativos no Centro de Desenvolvimento. Nesse relatório, essas unidades de anúncio são associadas a nomes de aplicativo que você especificou no pubCenter, com a cadeia de caracteres **(pubCenter)** anexada ao nome do aplicativo.
 
@@ -88,18 +76,12 @@ Esta seção fornece dados de desempenho em forma de gráfico e mapa do mundo pa
 
 Os dados são obtidos destas métricas de desempenho que rastreamos para os anúncios em seu aplicativo:
 
--   
-              **Solicitações**: o número de vezes que uma solicitação de anúncio da comunidade foi enviada do seu aplicativo.
--   
-              **Taxa de preenchimento**: a porcentagem de solicitações de anúncio da comunidade enviadas de seu aplicativo nas quais um anúncio foi exibido.
--   
-              **Cliques**: a quantidade de vezes que alguém clicou em um anúncio da comunidade em seu aplicativo.
--   
-              **CTR**: taxa de cliques, indicando a quantidade de vezes que um anúncio da comunidade foi clicado, dividida pela quantidade de impressões.
--   
-              **Créditos obtidos**: o número de créditos de anúncio da comunidade obtidos com esse aplicativo. Para obter mais detalhes sobre como os créditos são obtidos, veja [Sobre os anúncios da comunidade](about-community-ads.md).
--   
-              **Créditos gastos**: o número de créditos de anúncio da comunidade gastos para este aplicativo. Para obter mais detalhes sobre como os créditos são gastos, veja [Sobre os anúncios da comunidade](about-community-ads.md).
+-   **Solicitações**: o número de vezes que uma solicitação de anúncio da comunidade foi enviada do seu aplicativo.
+-   **Taxa de preenchimento**: a porcentagem de solicitações de anúncio da comunidade enviadas de seu aplicativo nas quais um anúncio foi exibido.
+-   **Cliques**: a quantidade de vezes que alguém clicou em um anúncio da comunidade em seu aplicativo.
+-   **CTR**: taxa de cliques, indicando a quantidade de vezes que um anúncio da comunidade foi clicado, dividida pela quantidade de impressões.
+-   **Créditos obtidos**: o número de créditos de anúncio da comunidade obtidos com esse aplicativo. Para obter mais detalhes sobre como os créditos são obtidos, veja [Sobre os anúncios da comunidade](about-community-ads.md).
+-   **Créditos gastos**: o número de créditos de anúncio da comunidade gastos para este aplicativo. Para obter mais detalhes sobre como os créditos são gastos, veja [Sobre os anúncios da comunidade](about-community-ads.md).
 
 Para analisar os dados de uma dessas métricas em um modo de exibição de gráfico ou mapa do mundo, clique em **Gráfico** ou **Mapa**. Clique nos cabeçalhos acima do gráfico ou mapa para alternar entre as métricas diferentes. No modo de exibição de mapa, os tons mais escuros representam valores maiores e os tons mais claros representam valores menores. Você pode focalizar em um país ou uma região específica no mapa para analisar o valor da métrica selecionada. Você também pode ampliar qualquer área do mapa para ver dados de países ou regiões menores.
 
@@ -117,6 +99,6 @@ Veja algumas coisas a ter em mente ao usar os relatórios de desempenho de anún
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -6,25 +6,36 @@ ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: b075820275d7b5e592cdae736ed92beef67a7b9a
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 201244521f8110181e268af47d52c1ac1315e9d3
 
 ---
 # Controles de texto
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Controles de texto consistem em caixas de entrada de texto, caixas de senha, caixas de sugestão automática e blocos de texto. A estrutura do XAML fornece vários controles para renderizar, inserir e editar texto, com um conjunto de propriedades para formatar o texto.
 
 - Os controles para exibir texto somente leitura são [TextBlock](text-block.md) e [RichTextBlock](rich-text-block.md).
 - Os controles de entrada e edição de texto são: [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) e [RichEditBox](rich-edit-box.md).
 
 
-**APIs importantes**
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx"><strong>Classe AutoSuggestBox</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx"><strong>Classe PasswordBox</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx"><strong>Classe RichEditBox</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx"><strong>Classe RichTextBlock</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx"><strong>Classe TextBlock</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx"><strong>Classe TextBox</strong></a></li>
+</ul>
 
--   [**Classe AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
--   [**Classe PasswordBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
--   [**Classe RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)
--   [**Classe RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)
--   [**Classe TextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)
--   [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
+</div>
+</div>
+
+
+
 
 ## Esse é o controle correto?
 
@@ -103,8 +114,7 @@ Consulte estes artigos para obter diretrizes de fonte:
 
 ## Escolha o teclado correto para o controle de texto
 
-
-            **Aplica-se a:** TextBox, PasswordBox RichEditBox
+**Aplica-se a:** TextBox, PasswordBox RichEditBox
 
 Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira.
 
@@ -121,8 +131,7 @@ Para obter mais informações, consulte [Usar o escopo de entrada para alterar o
 
 ## Fontes de cores
 
-
-            **Aplica-se a:** TextBlock, RichTextBlock, TextBox, RichEditBox
+**Aplica-se a:** TextBlock, RichTextBlock, TextBox, RichEditBox
 
 No Windows, as fontes podem incluir várias camadas coloridas para cada glifo. Por exemplo, a fonte Segoe UI Emoji define versões de cor do Emoticon e outros personagens Emoji.
 
@@ -140,8 +149,7 @@ Para saber mais, consulte a propriedade [**IsColorFontEnabled**](https://msdn.mi
 
 ## Diretrizes para separadores de linha e parágrafo
 
-
-            **Aplica-se a:** TextBlock, RichTextBlock, TextBox de várias linhas, RichEditBox
+**Aplica-se a:** TextBlock, RichTextBlock, TextBox de várias linhas, RichEditBox
 
 Use o caractere separador de linha (0x2028) e o caractere separador de parágrafo (0x2029) para dividir texto sem formatação. Uma nova linha é iniciada após cada separador de linha. Um novo parágrafo é iniciado após cada separador de parágrafo.
 
@@ -153,8 +161,7 @@ Seu aplicativo pode inserir um separador de parágrafo entre parágrafos de text
 
 ## Diretrizes para verificação ortográfica
 
-
-            **Aplica-se a:** TextBox, RichEditBox
+**Aplica-se a:** TextBox, RichEditBox
 
 Durante a edição e a entrada de texto, a verificação ortográfica informa o usuário que uma palavra está com grafia incorreta realçando-a com uma linha ondulada vermelha e fornece uma maneira de o usuário corrigir o erro de ortografia.
 
@@ -192,6 +199,6 @@ Para controles TextBox e RichEditBox, a verificação ortográfica permanece ati
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

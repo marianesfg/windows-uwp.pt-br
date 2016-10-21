@@ -5,14 +5,14 @@ description: "Planeje o seu projeto de portabilidade para jogos do DirectX 9 par
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 929ad82ce057754ee04f1f27537e03520e95157a
+ms.openlocfilehash: fbd582b2cc90ee763cb167c65dac88cee4e7a025
 
 ---
 
 # Planejar a portabilidade do DirectX
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
@@ -32,8 +32,7 @@ A atualização do Direct3D 9 para o Direct3D 11 é mais do que uma alteração 
 
 Você deve substituir as livrarias auxiliares D3DX e DXUT pelas suas ou por ferramentas da comunidade. Veja a seção [Mapeamento de recursos](feature-mapping.md) para saber mais.
 
-> 
-            **Observação**   Você pode usar o [Kit de ferramentas do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=248929) ou [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) para substituir uma funcionalidade que antes era fornecida pelo D3DX e DXUT.
+> **Observação**   Você pode usar o [Kit de ferramentas do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=248929) ou [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) para substituir uma funcionalidade que antes era fornecida pelo D3DX e DXUT.
 
  
 
@@ -48,8 +47,7 @@ Aplicativos UWP são executados em uma janela criada por um contêiner de aplica
 
 O ciclo de vida de um aplicativo UWP é muito diferente de um aplicativo de área de trabalho. Será necessário salvar o jogo frequentemente, porque quando o evento suspenso ocorre, seu aplicativo tem apenas um tempo limitado para parar de executar o código e você precisa garantir que o jogador possa voltar para onde estava assim que o aplicativo for retomado. Os jogos devem ser salvos com frequência suficiente para manter uma experiência de jogabilidade contínua a partir da retomada, mas não com tanta frequência a ponto de o processo influenciar na taxa de quadros ou fazer com que o jogo trave. Seu jogo precisará carregar potencialmente o estado de jogo quando for retomado a partir de um estado encerrado.
 
-
-            [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/ee415571) pode ser usado como substituto de D3DXMath e XNAMath, e pode ser útil se você precisar de uma biblioteca matemática. DirectXMath possui tipos de dados rápidos e portáteis, além dos tipos alinhados e empacotados com sombreadores.
+[DirectXMath](https://msdn.microsoft.com/library/windows/desktop/ee415571) pode ser usado como substituto de D3DXMath e XNAMath, e pode ser útil se você precisar de uma biblioteca matemática. DirectXMath possui tipos de dados rápidos e portáteis, além dos tipos alinhados e empacotados com sombreadores.
 
 As bibliotecas nativas, como [API encaixada](https://msdn.microsoft.com/library/windows/desktop/dd405529), foram expandidas para dar suporte a intrínsecos ARM. Se o seu jogo usa APIs entrelaçadas, você pode continuar usando no DirectX 11 e na UWP.
 
@@ -70,6 +68,6 @@ Há dois conceitos que você usará com frequência:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: msatranjr
 title: Sobrepor imagens lado a lado em um mapa
 description: "Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 71d044eb19e71786da39ca71d4f4fbd2d87645be
+ms.openlocfilehash: a00d3d27161310077a0690cef7e4d11a5209bee7
 
 ---
 
@@ -16,8 +17,7 @@ ms.openlocfilehash: 71d044eb19e71786da39ca71d4f4fbd2d87645be
 
 Sobreponha imagens lado a lado de terceiros ou personalizadas em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão.
 
-
-            **Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe a amostra a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
+**Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe o exemplo a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
 -   [Amostra de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -144,36 +144,36 @@ void MainPage::AddHttpMapTileSource()
 }
 ```
 
-## [!div class="tabbedCodeSnippets"]
+## Sobreponha blocos de um armazenamento local
 
 
-Sobreponha blocos de um armazenamento local Sobreponha imagens lado a lado armazenadas como arquivos em armazenamento local usando o [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994).
+Sobreponha imagens lado a lado armazenadas como arquivos em armazenamento local usando o [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Tipicamente, você empacota e distribui esses arquivos com seu aplicativo.
 
-1.  Tipicamente, você empacota e distribui esses arquivos com seu aplicativo.
-2.  Instancie um [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Especifique o formado dos nomes dos arquivos como o valor da propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998). Para criar esse valor, insira parâmetros substituíveis no nome de arquivo base.
+1.  Instancie um [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994).
+2.  Especifique o formado dos nomes dos arquivos como o valor da propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998). Para criar esse valor, insira parâmetros substituíveis no nome de arquivo base. Por exemplo, no exemplo de código a seguir, o valor do [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) é:
 
     ``` syntax
         Tile_{zoomlevel}_{x}_{y}.png
     ```
 
-    Por exemplo, no exemplo de código a seguir, o valor do [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) é: Se o formato dos nomes dos arquivos exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001).
+    Se o formato dos nomes dos arquivos exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#customuri) posteriormente neste tópico.
 
-3.  Para obter mais informações, consulte a seção [Forneça um URI personalizado](#customuri) posteriormente neste tópico.
+3.  Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tileintro).
 
-Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tileintro).
+Você pode usar os seguintes protocolos e locais para carregar blocos do armazenamento local:
 
-| Você pode usar os seguintes protocolos e locais para carregar blocos do armazenamento local: | Uri |
+| Uri | Mais informações |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Mais informações | ms-appx:/// |
-|  | Aponta para a raiz da pasta de instalação do aplicativo. |
-| Esse é o local referenciado pela propriedade [Package.InstalledLocation](https://msdn.microsoft.com/library/windows/apps/br224681). | ms-appdata:///local |
-|  | Aponta para a raiz do armazenamento local do aplicativo. |
-| Este é o local referenciado pela propriedade [ApplicationData.LocalFolder](https://msdn.microsoft.com/library/windows/apps/br241621). | ms-appdata:///temp |
-|  | Aponta para a pasta temporária do aplicativo. |
+| ms-appx:/// | Aponta para a raiz da pasta de instalação do aplicativo. |
+|  | Esse é o local referenciado pela propriedade [Package.InstalledLocation](https://msdn.microsoft.com/library/windows/apps/br224681). |
+| ms-appdata:///local | Aponta para a raiz do armazenamento local do aplicativo. |
+|  | Este é o local referenciado pela propriedade [ApplicationData.LocalFolder](https://msdn.microsoft.com/library/windows/apps/br241621). |
+| ms-appdata:///temp | Aponta para a pasta temporária do aplicativo. |
+|  | Este é o local referenciado pela propriedade [ApplicationData.TemporaryFolder](https://msdn.microsoft.com/library/windows/apps/br241629). |
 
  
 
-Este é o local referenciado pela propriedade [ApplicationData.TemporaryFolder](https://msdn.microsoft.com/library/windows/apps/br241629). O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de instalação do aplicativo usando o protocolo `ms-appx:///`. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) é especificado no construtor do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994).
+O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de instalação do aplicativo usando o protocolo `ms-appx:///`. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) é especificado no construtor do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Neste exemplo, os blocos são exibidos apenas quando o nível de zoom do mapa está dentro da margem especificada pela propriedade [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171) opcional.
 
 ```csharp
         void AddLocalMapTileSource()
@@ -195,15 +195,15 @@ Este é o local referenciado pela propriedade [ApplicationData.TemporaryFolder](
         }
 ```
 
-## Neste exemplo, os blocos são exibidos apenas quando o nível de zoom do mapa está dentro da margem especificada pela propriedade [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171) opcional.
+## Forneça um URI personalizado
 
 
-Forneça um URI personalizado Se os parâmetros substituíveis disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) do [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) ou a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994) não são suficientes para recuperar seus blocos, você deve criar um Uri personalizado. Crie e retorne um Uri personalizado fornecendo um manipulador personalizado para o evento **UriRequested**.
+Se os parâmetros substituíveis disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) do [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) ou a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994) não são suficientes para recuperar seus blocos, você deve criar um Uri personalizado. Crie e retorne um Uri personalizado fornecendo um manipulador personalizado para o evento **UriRequested**. O evento **UriRequested** é gerado para cada bloco individual.
 
-1.  O evento **UriRequested** é gerado para cada bloco individual.
-2.  Em seu manipulador personalizado para o evento **UriRequested**, junte os argumentos personalizados exigidos com as propriedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn610743), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn610744) e [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn610745) do [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177) para criar o Uri personalizado.
+1.  Em seu manipulador personalizado para o evento **UriRequested**, junte os argumentos personalizados exigidos com as propriedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn610743), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn610744) e [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn610745) do [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177) para criar o Uri personalizado.
+2.  Retorne o Uri personalizado na propriedade [**Uri**](https://msdn.microsoft.com/library/windows/apps/dn610748) do [**MapTileUriRequest**](https://msdn.microsoft.com/library/windows/apps/dn637173), que está contido na propriedade [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637179) do [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177).
 
-Retorne o Uri personalizado na propriedade [**Uri**](https://msdn.microsoft.com/library/windows/apps/dn610748) do [**MapTileUriRequest**](https://msdn.microsoft.com/library/windows/apps/dn637173), que está contido na propriedade [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637179) do [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177). O exemplo a seguir mostra como fornecer um Uri personalizado criando um manipulador personalizado para o evento **UriRequested**.
+O exemplo a seguir mostra como fornecer um Uri personalizado criando um manipulador personalizado para o evento **UriRequested**. Ele também mostra como implementar o padrão de adiamento se você tiver que fazer algo assincronamente para criar o Uri personalizado.
 
 ```csharp
 using Windows.UI.Xaml.Controls.Maps;
@@ -241,17 +241,17 @@ using System.Threading.Tasks;
         }
 ```
 
-## Ele também mostra como implementar o padrão de adiamento se você tiver que fazer algo assincronamente para criar o Uri personalizado.
+## Sobreponha blocos de uma fonte personalizada
 
 
-Sobreponha blocos de uma fonte personalizada Sobreponha blocos personalizados usando o [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983).
+Sobreponha blocos personalizados usando o [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983). Crie blocos programaticamente na memória em tempo real ou escreva seu próprio código para carregar blocos existentes de outra fonte.
 
-Crie blocos programaticamente na memória em tempo real ou escreva seu próprio código para carregar blocos existentes de outra fonte. Para criar ou carregar blocos personalizados. forneça um manipulador personalizado para o evento [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984).
+Para criar ou carregar blocos personalizados. forneça um manipulador personalizado para o evento [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984). O evento **BitmapRequested** é gerado para cada bloco individual.
 
-1.  O evento **BitmapRequested** é gerado para cada bloco individual.
-2.  Em seu manipulador personalizado para o evento [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984), junte os argumentos personalizados exigidos com as propriedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) e [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) do [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132) para criar ou recuperar um bloco personalizado. Retorne o bloco personalizado na propriedade [**PixelData**](https://msdn.microsoft.com/library/windows/apps/dn637140) do [**MapTileBitmapRequest**](https://msdn.microsoft.com/library/windows/apps/dn637128), que está contido na propriedade [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637134) do [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132).
+1.  Em seu manipulador personalizado para o evento [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984), junte os argumentos personalizados exigidos com as propriedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) e [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) do [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132) para criar ou recuperar um bloco personalizado.
+2.  Retorne o bloco personalizado na propriedade [**PixelData**](https://msdn.microsoft.com/library/windows/apps/dn637140) do [**MapTileBitmapRequest**](https://msdn.microsoft.com/library/windows/apps/dn637128), que está contido na propriedade [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637134) do [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132). A propriedade **PixelData** é do tipo [**IRandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701664).
 
-A propriedade **PixelData** é do tipo [**IRandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701664). O exemplo a seguir mostra como fornecer blocos personalizados criando um manipulador personalizado para o evento **BitmapRequested**. Este exemplo cria blocos vermelhos idênticos que são parcialmente opacos. O exemplo ignora as propriedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) e [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) do [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132). Embora esse não seja um exemplo do mundo real, ele demonstra como você pode criar blocos personalizados na memória em tempo real.
+O exemplo a seguir mostra como fornecer blocos personalizados criando um manipulador personalizado para o evento **BitmapRequested**. Este exemplo cria blocos vermelhos idênticos que são parcialmente opacos. O exemplo ignora as propriedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) e [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) do [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132). Embora esse não seja um exemplo do mundo real, ele demonstra como você pode criar blocos personalizados na memória em tempo real. O exemplo também mostra como implementar o padrão de adiamento se você tiver de fazer algo assincronamente para criar os blocos personalizados.
 
 ```csharp
 using Windows.UI.Xaml.Controls.Maps;
@@ -350,25 +350,25 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
 }
 ```
 
-## O exemplo também mostra como implementar o padrão de adiamento se você tiver de fazer algo assincronamente para criar os blocos personalizados.
+## Substituir o mapa padrão
 
 
-Substituir o mapa padrão
+Para substituir o mapa padrão inteiramente com blocos de terceiros ou personalizados:
 
--   Para substituir o mapa padrão inteiramente com blocos de terceiros ou personalizados:
 -   Especifique [**MapTileLayer**](https://msdn.microsoft.com/library/windows/apps/dn637143).**BackgroundReplacement** como o valor da propriedade [**Layer**](https://msdn.microsoft.com/library/windows/apps/dn637157) do [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144).
+-   Especifique [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127).**None** como o valor da propriedade [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-## Especifique [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127).**None** como o valor da propriedade [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+## Tópicos relacionados
 
-* [Tópicos relacionados](https://www.bingmapsportal.com/)
-* [Central de desenvolvedores do Bing Mapas](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Amostra de mapa UWP](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Diretrizes de design para mapas](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
+* [Central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
+* [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Exemplo do aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 
 
-<!--HONumber=Jun16_HO5-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 

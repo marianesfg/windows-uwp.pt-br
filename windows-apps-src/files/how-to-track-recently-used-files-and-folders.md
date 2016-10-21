@@ -1,15 +1,16 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: Rastrear arquivos e pastas usados recentemente
 description: "Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu aplicativo."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 83100d1246dd18324104a63c9cd950e2ff1fce0b
+translationtype: Human Translation
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: 84b78cc4af9490f142c0f74fec127e1d003ce6df
 
 ---
 # Acompanhar arquivos e pastas usados recentemente
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** APIs importantes **
@@ -21,8 +22,7 @@ Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à li
 
 Os itens recém-usados do aplicativo são representados pela classe [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475) que você obtém da propriedade estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458). Os itens recém-usados são armazenados como objetos [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129), portanto, os objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (que representam arquivos) e [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) (que representam pastas) podem ser adicionados aos itens recém-usados.
 
-
-            **Observação**  Consulte também o [Exemplo de seletor de arquivos](http://go.microsoft.com/fwlink/p/?linkid=619994) e o [Exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
+**Observação**  Consulte também o [Exemplo de seletor de arquivos](http://go.microsoft.com/fwlink/p/?linkid=619994) e o [Exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
  
 
@@ -46,20 +46,16 @@ Os itens recém-usados do aplicativo são representados pela classe [**StorageIt
 
     ```CSharp
     ...
-    
+
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
 
     var mru = Windows.Storage.AccessCache.StorageApplicationPermissions.MostRecentlyUsedList;
     string mruToken = mru.Add(file, "profile pic");
     ```
-    
-    
-            [
-              **StorageItemMostRecentlyUsedList.Add**
-            ](https://msdn.microsoft.com/library/windows/apps/br207476) está sobrecarregado. No exemplo, usamos [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481) para podermos associar metadados ao arquivo. A configuração de metadados permite que você registre a finalidade do item, por exemplo, "profile pic". Você também pode adicionar o arquivo à lista de itens recém-usados sem metadados chamando [**Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480). Quando você adiciona um item à lista de itens recém-usados, o método retorna uma cadeia de caracteres de identificação exclusiva, denominada token, que é usada para recuperar o item.
 
-    
-            **Dica**   Você precisará do token para recuperar um item da lista de itens recém-usados, portanto, mantenha-o em algum lugar. Para saber mais sobre dados de aplicativos, consulte [Gerenciando dados do aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465109).
+    [**StorageItemMostRecentlyUsedList.Add**](https://msdn.microsoft.com/library/windows/apps/br207476) está sobrecarregado. No exemplo, usamos [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481) para podermos associar metadados ao arquivo. A configuração de metadados permite que você registre a finalidade do item, por exemplo, "profile pic". Você também pode adicionar o arquivo à lista de itens recém-usados sem metadados chamando [**Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480). Quando você adiciona um item à lista de itens recém-usados, o método retorna uma cadeia de caracteres de identificação exclusiva, denominada token, que é usada para recuperar o item.
+
+    **Dica**   Você precisará do token para recuperar um item da lista de itens recém-usados, portanto, mantenha-o em algum lugar. Para saber mais sobre dados de aplicativos, consulte [Gerenciando dados do aplicativo](https://msdn.microsoft.com/library/windows/apps/hh465109).
 
      
 
@@ -110,10 +106,6 @@ Quando um usuário seleciona um item, considere adicioná-lo à sua lista de ace
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

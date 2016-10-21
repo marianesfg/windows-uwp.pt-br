@@ -5,22 +5,36 @@ title: "Diretrizes de botões de opção"
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 317df548e72f9aff475ba0959668b6441ac29d3d
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 435a2a6f1b9707d1f64587a693bd9a60d587ca83
 
 ---
 # Botões de opção
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Botões de opção permitem que os usuários selecionem uma opção entre duas ou mais escolhas. Cada opção é representada por um botão de opção; um usuário pode selecionar apenas um botão de opção em um grupo de botões de opção.
 
 (Se você tem curiosidade em saber a origem do nome, os botões de opção, também conhecidos como botões de rádio, receberam esse nome por causa dos botões predefinidos de canais em um rádio.
 
 ![Botões de opção](images/controls/radio-button.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br227544"><strong>Classe RadioButton</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx"><strong>Evento Checked</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx"><strong>Propriedade IsChecked</strong></a></li>
+</ul>
 
--   [**Classe RadioButton**](https://msdn.microsoft.com/library/windows/apps/br227544)
--   [**Evento Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)
--   [**Propriedade IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+</div>
+</div>
+
+
+
+
+
 
 ## Esse é o controle correto?
 
@@ -57,9 +71,7 @@ Botões de opção funcionam em grupos. Há 2 maneiras de agrupar controles de b
 - Colocá-los dentro do mesmo contêiner pai.
 - Defina a propriedade [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) em cada botão de opção como o mesmo valor.
 
-> 
-            **Observação**
-            &nbsp;&nbsp;Um grupo de botões de opção se comportam como um controle único quando acessados pelo teclado. Apenas a opção selecionada pode ser acessada usando a tecla Tab, mas os usuários podem alternar pelo grupo usando as teclas de seta.
+> **Observação**&nbsp;&nbsp;Um grupo de botões de opção se comportam como um controle único quando acessados pelo teclado. Apenas a opção selecionada pode ser acessada usando a tecla Tab, mas os usuários podem alternar pelo grupo usando as teclas de seta.
 
 Neste exemplo, o primeiro grupo de botões de opção é implicitamente agrupado por estar no painel empilhado. O segundo grupo é dividido entre 2 painéis empilhados e, portanto, são explicitamente agrupados por GroupName.
 
@@ -186,6 +198,6 @@ Esta ilustração mostra a maneira correta de posicionar e espaçar os botões d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

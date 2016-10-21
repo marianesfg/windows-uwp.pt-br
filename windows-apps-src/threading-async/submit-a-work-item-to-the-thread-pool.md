@@ -5,7 +5,7 @@ title: Enviar um item de trabalho ao pool de threads
 description: Aprenda a trabalhar em um thread separado enviando um item de trabalho ao pool de threads.
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: d8b0f512d075510fae527e563ef99f24cc201577
+ms.openlocfilehash: d41f53a40c46087c5a1c21367a34c0f60486f24d
 
 ---
 # Enviar um item de trabalho ao pool de threads
@@ -25,8 +25,7 @@ Crie um item de trabalho chamando [**RunAsync**](https://msdn.microsoft.com/libr
 
 Três versões de [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) estão disponíveis para que, opcionalmente, você possa especificar a prioridade do item de trabalho e controlar se ele é executado simultaneamente com outros itens de trabalho.
 
-
-              **Observação**  Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
+**Observação**  Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
 
 O exemplo a seguir cria um item de trabalho e fornece um lambda para fazer o trabalho:
 
@@ -264,6 +263,6 @@ Você pode saber mais baixando o código deste guia de início rápido em [Crian
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

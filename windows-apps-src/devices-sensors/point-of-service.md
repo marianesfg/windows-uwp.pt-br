@@ -1,16 +1,26 @@
 ---
 author: ivorb
-title: Point of Service
-description: This section contains articles on how to use various features of the Point of Service namespace.
+title: "Ponto de Serviço"
+description: "Esta seção contém artigos sobre como usar diversos recursos do namespace Ponto de Serviço."
+translationtype: Human Translation
+ms.sourcegitcommit: e28134c21654c957c9d9b70fa7edef49419998b9
+ms.openlocfilehash: 0db6e9dbc8b2c1a7ab01e65cb750b47c278ce1c0
+
 ---
-# Point of Service
+# Ponto de Serviço
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-This section contains articles on how to use Point Of Service (POS) with Universal Windows Platform (UWP) apps, including how to use Espon ESC/POS command language and out-of-band pairing of a POS peripheral.
+Esta seção contém artigos sobre como usar o Ponto de Serviço (POS) com aplicativos da Plataforma Universal do Windows (UWP), inclusive como usar a linguagem de comando ESC/POS Espon e o emparelhamento fora de banda de um periférico POS.
 
-|Topic|Description|
+|Tópico|Descrição|
 |--------|------------------|
-| [Epson ESC/POS with formatting](epson-esc-pos-with-formatting.md)   | This article provides an overview of the Epson ESC/POS command language and how to use it with the [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx) APIs. |
-| [Out of band pairing](out-of-band-pairing.md) | This article provides information on how out-of-band pairing allows apps to connect to a Point-of-Service peripheral without requiring discovery, using the [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx) namespace. |
+| [Epson ESC/POS com formatação](epson-esc-pos-with-formatting.md)   | Este artigo apresenta uma visão geral da linguagem de comando Epson ESC/POS e como usá-la com as APIs [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx). |
+| [Emparelhamento fora de banda](out-of-band-pairing.md) | Este artigo apresenta informações sobre como o emparelhamento fora de banda permite que aplicativos se conectem a um periférico de ponto de serviço sem necessidade de descoberta usando o namespace [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx). |
+
+
+
+
+<!--HONumber=Sep16_HO2-->
+
 

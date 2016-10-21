@@ -1,35 +1,45 @@
 ---
 author: JnHs
-Description: If your app uses an AdMediatorControl or AdControl to display banner ads, you could increase your ad fill rate and revenue by showing Microsoft affiliate ads in your app.
-title: Gradual package rollout
+Description: "Se seu aplicativo usa um AdMediatorControl ou AdControl para exibir anúncios na barra de notificação, você pode aumentar sua taxa de preenchimento de anúncio e receita mostrando anúncios de afiliada da Microsoft em seu aplicativo."
+title: "Distribuição gradual de pacote"
+translationtype: Human Translation
+ms.sourcegitcommit: ac9eed95edba99cdba914ff21b25383f35a20012
+ms.openlocfilehash: 3ec642ef0a21d06b20cabb12a47d2abcfd19fe59
+
 ---
 
-# Gradual package rollout
+# Distribuição gradual de pacote
 
-When you publish an update to a submission, you can choose to gradually roll out the updated packages to a percentage of your app’s customers on Windows 10. This allows you to monitor feedback and analytic data for the specific packages to make sure you’re confident about the update before rolling it out more broadly. You can increase the percentage (or halt the update) any time without having to create a new submission. 
+Quando você publica uma atualização para um envio, pode optar por distribuir gradualmente os pacotes atualizados para um percentual de clientes do seu aplicativo no Windows 10. Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode aumentar a porcentagem (ou parar a atualização) a qualquer tempo sem precisar criar um novo envio. 
 
-> **Important** Your rollout selections apply to all of your packages, but will only apply to your customers running OS versions that support package flights (Windows.Desktop build 10586 or later; Windows.Mobile build 10586.63 or later, and Xbox), including any customers who get the app via [Store-managed (online) licensing](organizational-licensing.md) via the [Windows Store for Business](https://www.microsoft.com/business-store). When using gradual package rollout, customers on earlier OS versions will not get packages from the latest submission until you finalize the package rollout as described below.
+> **Importante** Suas seleções de distribuição se aplicam a todos os seus pacotes, mas se aplicarão somente aos clientes que executam versões do sistema operacional compatíveis com pacotes de pré-lançamento (Windows.Desktop versão 10586 ou posterior, Windows.Mobile versão 10586.63 ou posterior e Xbox), incluindo os clientes que obtêm o aplicativo via [Licenciamento gerenciado pela Loja (online)](organizational-licensing.md) pela [Windows Store for Business](https://www.microsoft.com/business-store). Ao usar a distribuição de pacote gradual, os clientes em versões anteriores do sistema operacional não receberão pacotes do envio mais recente até finalizar a distribuição de pacote, conforme descrito a seguir.
 
-Note that all of your customers will see the Store listing details that you entered with your latest submission. The rollout settings only apply to the packages that customers receive, both for new acquisitions and for updates to existing customers.
+Observe que todos os seus clientes verão os detalhes da listagem da Loja que você inseriu com seu envio mais recente. As configurações de distribuição só se aplicam aos pacotes que os clientes recebem, tanto para novas aquisições quanto para atualizações para os clientes existentes.
 
-> **Tip** Package rollout distributes packages to a random selection of customers in the percentages that you specify. To distribute specific packages to selected customers that you specify, you can use package flights.  You can also combine rollout with your package flights if you want to gradually distribute an update to one of your flight groups.
+> **Dica** A distribuição de pacote distribui pacotes para clientes aleatórios nas porcentagens especificadas. Para distribuir pacotes específicos aos clientes selecionados que você especificar, use pacotes de pré-lançamento.  Você também pode combinar distribuição com seus pacotes de pré-lançamento se quiser distribuir gradualmente uma atualização para um de seus grupos de versão de pré-lançamento.
 
-## Setting the rollout percentage
+## Definindo o percentual de distribuição
 
-You can select to roll out your update on the **Packages** page of an updated submission. To do so, check the box that says **Roll out update gradually after this submission is published (to Windows 10 customers only)**. Then enter the percentage of customers who should get the update when the submission is first published. For example, you might enter 5 if you want to start by rolling the update out to only a small percentage of your app’s customers.
+Você pode selecionar para implantar a atualização na página **Pacotes** de um envio atualizado. Para fazer isso, marque a caixa **Distribur a atualização gradualmente depois que esse envio for publicado (somente para clientes do Windows 10)**. Insira o percentual de clientes que devem receber a atualização quando o envio for publicado pela primeira vez. Por exemplo, você pode inserir 5 se quiser começar distribuindo a atualização só para uma pequena porcentagem de clientes do seu aplicativo.
 
-Click **Update** to save your selections. After your app completes the certification process, the packages will be distributed to customers according to the percentage that you specified, both for new acquisitions and for updates to existing customers.
+Clique em **Atualizar** para salvar suas seleções. Depois que seu aplicativo concluir o processo de certificação, os pacotes serão distribuídos para clientes de acordo com a porcentagem especificada, tanto para novas aquisições quanto para atualizações para os clientes existentes.
 
-## Adjusting the rollout after the submission is published
+## Ajustando a distribuição depois que o envio for publicado
 
-To adjust the rollout after the submission has been published, go to your app’s Overview page. You can drag the selector to change the percentage of customers getting the packages from your newest submission. Click **Update** to save your selections. The packages will then start to be distributed to customers according to the percentage that you specified, both for new acquisitions and for updates to existing customers.
+Para ajustar a distribuição depois que o envio foi publicado, acesse a página Visão geral do seu aplicativo. Você pode arrastar o seletor para alterar o percentual de clientes que recebem os pacotes de seu envio mais recente. Clique em **Atualizar** para salvar suas seleções. Os pacotes começarão a ser distribuídos para clientes de acordo com a porcentagem especificada, tanto para novas aquisições quanto para atualizações para os clientes existentes.
 
-## Completing the rollout
+## Concluindo a distribuição
 
-Before you can create a new submission, you'll need to complete the package rollout. You can **finalize** the rollout and distribute the latest packages to all of your customers, or **halt** the rollout to stop distributing the latest packages.
+Antes de criar um novo envio, você precisará concluir a distribuição de pacote. Você pode **finalizar** a distribuição e distribuir os pacotes mais recentes para todos os seus clientes, ou **interromper** a distribuição para parar de distribuir os pacotes mais recentes.
 
-If you have confidence in the update and would like to make it available to all of your customers, click **Finalize package rollout** to distribute the newest packages to all of your customers.
+Se você tiver confiança na atualização e quiser disponibilizá-la para todos os seus clientes, clique em **Finalizar a distribuição de pacote** para distribuir os pacotes mais recentes para todos os seus clientes.
 
-> **Tip** Changing the rollout percentage to 100% does not ensure that all of your customers will get the packages from the latest submissions, because some customers may be on OS versions that don’t support rollout. You must finalize the rollout in order to stop distributing the older packages and update all existing customers to the newer ones.
+> **Dica** Alterar a porcentagem de distribuição para 100% não garante que todos os clientes receberão os pacotes dos envios mais recentes, pois alguns clientes podem usar versões do sistema operacional que não suportam distribuição. Você deve finalizar a distribuição para parar de distribuir os pacotes mais antigos e atualizar todos os clientes existentes para os mais recentes.
 
-If you find that there are problems with the update and you don’t want to distribute it any further, you can click **Halt package rollout** to stop distributing packages from the latest submission. Once you halt a package rollout, those packages will no longer be distributed to any customers; only the packages from the previous submission will be used for any new or updating customers. However, any customers who already had the newer packages will keep those packages; they won’t be rolled back to the previous version. To provide an update to these customers, you’ll need to create a new submission with the packages you’d like them to get. Note that if you use a gradual rollout in your next submission, customers who had the package you halted will be offered the new update in the same order they were offered the halted package. The new rollout will be between your last finalized submission and your newest submission; once you halt a package rollout, those packages will no longer be distributed to any customers.
+Se você achar que há problemas com a atualização e não quiser mais distribuí-la, clique em **Interromper distribuição de pacote** parar parar de distribuir pacotes do envio mais recente. Depois que você interromper uma distribuição do pacote, esses pacotes não serão distribuídos para os clientes; apenas os pacotes do envio anterior serão usados para todos os clientes novos ou da atualização. No entanto, os clientes que já tinham os pacotes mais recentes manterão esses pacotes; eles não voltarão para a versão anterior. Para fornecer uma atualização para esses clientes, você precisará criar um novo envio com os pacotes que deseja que eles tenham. Observe que, se você usar uma distribuição gradual em seu próximo envio, os clientes que tinham o pacote interrompido receberão a nova atualização na mesma ordem em que receberam o pacote interrompido. A nova distribuição será entre seu último envio finalizado e seu envio mais recente. Depois que você interromper uma distribuição do pacote, esses pacotes não serão mais distribuídos para os clientes.
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

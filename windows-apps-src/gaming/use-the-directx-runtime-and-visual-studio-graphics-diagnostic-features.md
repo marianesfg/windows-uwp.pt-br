@@ -3,8 +3,9 @@ author: mtoepke
 title: "Ferramentas de diagnóstico de elementos gráficos"
 description: "Saiba como obter e usar os recursos de diagnóstico de elementos gráficos, incluindo depuração de elementos gráficos, análise do quadro de elementos gráficos e uso da GPU no Visual Studio."
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f266cb50893fd37162f21be169d6daf6e37c6bb9
+translationtype: Human Translation
+ms.sourcegitcommit: 765cde8afe32cef6515ee6ca9750365aa35984a2
+ms.openlocfilehash: 5d8f7a8dbba2da76c6093d034c2ca8c2b4592c7e
 
 ---
 
@@ -15,8 +16,9 @@ ms.openlocfilehash: f266cb50893fd37162f21be169d6daf6e37c6bb9
 
 Com o Windows 10, as ferramentas de diagnóstico de gráficos agora estão disponíveis dentro do Windows como recurso opcional. Para usar os recursos de diagnóstico de gráficos fornecidos em tempo de execução e no Visual Studio para desenvolver jogos ou aplicativos DirectX, instale o recurso opcional Ferramentas Gráficas:
 
-1.  Vá para **Configurações**, selecione **Sistema**, selecione **Recursos opcionais**e, em seguida, clique em **Adicionar um recurso**. Vá para **Configurações**, selecione **Sistema**, **Aplicativos e recursos**, **Gerenciar recursos opcionais** e clique em **Adicionar um recurso**.
-2.  Na lista **Adicionar um recurso**, clique em **Ferramentas de Elemento Gráfico**.
+1.  Vá para **Configurações**, selecione **Sistema**, selecione **Aplicativos e Recursos** e clique em **Gerenciar recursos opcionais**.
+2.  Clique em **Adicionar um recurso**.   
+3.  Na lista **Recursos opcionais**, selecione **Ferramentas de Gráficos** e clique em **Instalar**.
 
 Recursos de diagnóstico de elementos gráficos incluem a capacidade de criar dispositivos de depuração do Direct3D (por meio de camadas Direct3D SDK) no tempo de execução do DirectX, além de depuração de elementos gráficos, análise de quadros e uso da GPU.
 
@@ -39,6 +41,6 @@ Recursos de diagnóstico de elementos gráficos incluem a capacidade de criar di
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

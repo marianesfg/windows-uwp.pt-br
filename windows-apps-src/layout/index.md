@@ -2,18 +2,15 @@
 description: "Saiba como projetar e codificar um aplicativo UWP que seja fácil de navegar e tenha um visual espetacular em uma variedade de dispositivos e tamanhos de tela."
 title: "Design de layout do aplicativo UWP – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
-keywords: uwp app layout, universal windows platform, app design, interface
+keywords: layout do aplicativo UWP, Plataforma Universal do Windows, design do aplicativo, interface
 translationtype: Human Translation
-ms.sourcegitcommit: fa1567d3ff80dc9c9376736c7d25c2bb06e79cc9
-ms.openlocfilehash: 7a1233724b9b0fd9af709bbf114669fe102e6f0d
+ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
+ms.openlocfilehash: 72c4b957c98956965c773b4c2182796880f59a1d
 
 ---
-
+# Layout para aplicativos UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-<div class="uwpd-banner">
-<h1 class="uwpd-ruledheader">Layout para aplicativos UWP</h1>
-</div>
 
 A estrutura, o layout de página e a navegação do aplicativo são a base da experiência do usuário de seu aplicativo. Os artigos nesta seção ajudarão você a criar um aplicativo que seja fácil de navegar e tenha um visual espetacular em uma variedade de dispositivos e tamanhos de tela.
 
@@ -86,6 +83,6 @@ Além das propriedades de dimensão (largura, altura e restrições), os element
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

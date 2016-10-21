@@ -3,8 +3,9 @@ author: jwmsft
 description: "Configura a compilação XAML para associar classes parciais entre marcação e code-behind. A classe parcial de código é definida em um arquivo de código separado. Já a classe parcial de marcação é criada pela geração do código durante a compilação XAML."
 title: Atributo xClass
 ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 83267df025baeb802bfdd0ec03ecd3bf7b01db76
+translationtype: Human Translation
+ms.sourcegitcommit: 3144758352b99f8c145a3c7be8a6c43d6a002104
+ms.openlocfilehash: 1d04755cc9a2b7689d5373772803b6697227b18a
 
 ---
 
@@ -32,8 +33,7 @@ Configura a compilação XAML para associar classes parciais entre marcação e 
 
 ## Comentários
 
-
-            **x:Class** pode ser declarado como um atributo para qualquer elemento que seja raiz de um arquivo/árvore de objetos XAML e esteja sendo compilado por ações de compilação, ou para a raiz [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) na definição de um aplicativo compilado. A declaração **x:Class** em qualquer elemento que não seja uma raiz de página ou de aplicativo e, sob qualquer circunstância, para um arquivo XAML não compilado com a ação de compilação **Page** gerará um erro de tempo de compilação.
+**x:Class** pode ser declarado como um atributo para qualquer elemento que seja raiz de um arquivo/árvore de objetos XAML e esteja sendo compilado por ações de compilação, ou para a raiz [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) na definição de um aplicativo compilado. A declaração **x:Class** em qualquer elemento que não seja um nó raiz e, sob qualquer circunstância, para um arquivo XAML não compilado com a ação de compilação **Page** gerará um erro de tempo de compilação.
 
 A classe usada como **x:Class** não pode ser aninhada.
 
@@ -46,6 +46,6 @@ Embora seu arquivo code-behind possa ser um arquivo em C++, há certas convenç�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

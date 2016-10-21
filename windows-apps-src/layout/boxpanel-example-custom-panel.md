@@ -8,8 +8,9 @@ title: BoxPanel, um exemplo de painel personalizado
 ms.assetid: 981999DB-81B1-4B9C-A786-3025B62B74D6
 label: BoxPanel, an example custom panel
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: e03a4c9d2116d779545cb1fb8e87fa86a632bca8
+ms.openlocfilehash: 4427219987f0524858233cf382cd13121cf77b07
 
 ---
 
@@ -119,8 +120,7 @@ protected override Size MeasureOverride(Size availableSize)
 }
 ```
 
-O padrão necessário de uma implementação [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) é o loop em cada elemento [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514). Sempre chame o método [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) em cada um desses elementos. 
-            **Measure** tem um parâmetro de tipo [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995). O que está sendo passado aqui é o tamanho que o seu painel está se comprometendo a ter para aquele elemento filho em particular. Então, antes que possa fazer o loop e começar a chamar o **Measure**, você precisa saber quanto espaço cada célula pode dedicar. Do próprio método **MeasureOverride**, você tem o valor *availableSize*. Esse é o tamanho que pai do painel usou quando chamou o **Measure**, que era o gatilho para este **MeasureOverride** ser chamado. Então uma lógica típica é planejar um esquema em que cada elemento filho divide o espaço do *availableSize* geral do painel. Em seguida, você passa cada divisão de tamanho para o **Measure** de cada elemento filho.
+O padrão necessário de uma implementação [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) é o loop em cada elemento [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514). Sempre chame o método [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) em cada um desses elementos. **Measure** tem um parâmetro de tipo [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995). O que está sendo passado aqui é o tamanho que o seu painel está se comprometendo a ter para aquele elemento filho em particular. Então, antes que possa fazer o loop e começar a chamar o **Measure**, você precisa saber quanto espaço cada célula pode dedicar. Do próprio método **MeasureOverride**, você tem o valor *availableSize*. Esse é o tamanho que pai do painel usou quando chamou o **Measure**, que era o gatilho para este **MeasureOverride** ser chamado. Então uma lógica típica é planejar um esquema em que cada elemento filho divide o espaço do *availableSize* geral do painel. Em seguida, você passa cada divisão de tamanho para o **Measure** de cada elemento filho.
 
 É simples como o `BoxPanel` divide o tamanho: ele divide o espaço em um número de caixas controlado, em grande parte, pelo número de itens. As caixas são dimensionadas com base na contagem de linhas e colunas e no tamanho disponível. Às vezes, não é necessária uma linha ou coluna de um quadrado, de modo que ela é descartada e o painel se torna um retângulo em vez de quadrado em termos de sua linha: a proporção da coluna. Para obter mais informações sobre como essa lógica foi atingida, avance para ["O cenário para BoxPanel"](#scenario).
 
@@ -128,10 +128,7 @@ Então, o que o cálculo da medida faz? Ele define um valor para a propriedade a
 
 É possível que esse painel seja usado quando o componente altura do *availableSize* for ilimitado. Se for verdade, o painel não precisa ter uma altura conhecida para ser dividida. Nesse caso, a lógica para o cálculo da medida informa cada filho que ele ainda não tem uma altura ilimitada. Ele o faz passando [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) para a chamada [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) para os filhos cujo [**Size.Height**](https://msdn.microsoft.com/library/windows/apps/hh763910) é infinito. Isso é legal. Quando o **Measure** for chamado, a lógica é que o [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) seja definido como o mínimo disso: o que foi passado para **Measure**, ou o tamanho natural do elemento de fatores como [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) explicitamente definidos.
 
-
-            **Observação**
-            &nbsp;&nbsp;A lógica interna do [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) também tem esse comportamento: **StackPanel** passa um valor de dimensão infinita para o [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) em filhos, indicando que não há restrição nos filhos na dimensão de orientação. 
-            **StackPanel** costuma dimensionar a si próprio para acomodar todos os filhos em uma pilha que cresce naquela dimensão.
+**Observação**&nbsp;&nbsp;A lógica interna do [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) também tem esse comportamento: **StackPanel** passa um valor de dimensão infinita para o [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) em filhos, indicando que não há restrição nos filhos na dimensão de orientação. **StackPanel** costuma dimensionar a si próprio para acomodar todos os filhos em uma pilha que cresce naquela dimensão.
 
 Entretanto, o painel em si não pode devolver um [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) com um valor infinito de [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730); o que se torna uma exceção durante o layout. Então, parte da lógica é descobrir a altura máxima que qualquer filho solicitar e usar tal altura como a altura da célula no caso de isso não vir nas próprias restrições de tamanho do painel. Aqui está a função auxiliar `LimitUnboundedSize` que foi referenciada no código anterior, que pega a altura máxima da célula e a usa para dar ao painel uma altura finita em retorno, além de assegurar que `cellheight` seja um número finito antes de o cálculo de organização ser iniciado:
 
@@ -175,8 +172,7 @@ O padrão necessário de uma implementação [**ArrangeOverride**](https://msdn.
 
 Observe que não há tantos cálculos como em [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730); o que é comum. O tamanho dos filhos já é conhecido pela própria lógica **MeasureOverride** do painel ou pelo valor [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) de cada filho definido durante o cálculo da medida. Entretanto, ainda precisamos decidir a localização onde cada filho aparecerá no painel. Em um painel típico, cada filho deve renderizar em uma posição diferente. Um painel que cria elementos de sobreposição não é recomendável para cenários comuns (embora não esteja fora de questão criar painéis com sobreposições intencionais, se esse for realmente o cenário pretendido).
 
-Esse painel é organizado pelo conceito de linhas e colunas. O número de linhas e colunas já foi calculado (foi necessário para medir). Agora, o formato das linhas e colunas mais os tamanhos conhecidos de cada célula contribuem com a lógica de definir uma posição de renderização (o `anchorPoint`) para cada elemento que o painel contém. Aquele [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)junto com o [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) já conhecido da medida, são usados como os dois componentes que constroem um [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994). 
-            **Rect** é o tipo de entrada para [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914).
+Esse painel é organizado pelo conceito de linhas e colunas. O número de linhas e colunas já foi calculado (foi necessário para medir). Agora, o formato das linhas e colunas mais os tamanhos conhecidos de cada célula contribuem com a lógica de definir uma posição de renderização (o `anchorPoint`) para cada elemento que o painel contém. Aquele [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)junto com o [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) já conhecido da medida, são usados como os dois componentes que constroem um [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994). **Rect** é o tipo de entrada para [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914).
 
 Às vezes, painéis precisam recortar seu conteúdo. Se o fizeram, o tamanho recortado é o tamanho presente em [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921), porque a lógica [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) o define como o mínimo do que foi passado para **Measure** ou outros fatores de tamanho natural. Então não é comum precisar verificar o recorte durante [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914); o recorte acontece com base no **DesiredSize** ser passado em cada chamada **Arrange**.
 
@@ -217,9 +213,7 @@ Uma situação antecipada para estender mais o `BoxPanel` (não mostrado aqui) p
 
 Você pode se perguntar por que o painel não escolheria 5x2 para 10 itens, pois encaixaria o número de itens perfeitamente. Mas, na prática, painéis são dimensionados como retângulos que raramente têm uma taxa de proporção bem orientada. A técnica de menos quadrados é uma forma de levar a lógica de dimensionamento a trabalhar bem com formatos de layout típicos e desencorajar o dimensionamento onde os formatos de células fiquem com taxas de proporção estranhas.
 
-
-            **Observação**
-            &nbsp;&nbsp;Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+**Observação**&nbsp;&nbsp;Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## Tópicos relacionados
 
@@ -237,6 +231,6 @@ Você pode se perguntar por que o painel não escolheria 5x2 para 10 itens, pois
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

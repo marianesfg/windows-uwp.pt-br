@@ -1,57 +1,61 @@
 ---
 author: mcleanbyron
 ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
-description: Use these methods in the Windows Store submission API to manage add-on submissions for apps that are registered to your Windows Dev Center account.
-title: Manage add-on submissions using the Windows Store submission API
+description: "Use estes métodos na API de envio da Windows Store para gerenciar envios de complemento dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
+title: Gerenciar envios de complemento usando a API de envio da Windows Store
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 52e589c90a8d78905a9617dc2802d76a2f0f0360
+
 ---
 
-# Manage add-on submissions using the Windows Store submission API
+# Gerenciar envios de complemento usando a API de envio da Windows Store
 
 
 
-Use the following methods in the Windows Store submission API to manage add-on (also known as in-app product or IAP) submissions for apps that are registered to your Windows Dev Center account. For an introduction to the Windows Store submission API, including prerequisites for using the API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+Use os métodos a seguir na API de envio da Windows Store para gerenciar envios de complemento (também conhecidos como produto no aplicativo ou IAP) de aplicativos que estão registrados na sua conta do Centro de Desenvolvimento do Windows. Para obter uma introdução à API de envio da Windows Store, incluindo os pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
->**Note**&nbsp;&nbsp;These methods can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled. Before you can use these methods to create or manage submissions for an add-on, the add-on must already exist in your Dev Center account. You can create an add-on by [using the Dev Center dashboard](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions) or by using the Windows Store submission API methods in described in [Manage add-ons](manage-add-ons.md).
+>**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada. Antes de usar esses métodos para criar ou gerenciar envios de um complemento, o complemento já deve existir na sua conta do Centro de Desenvolvimento. Você pode criar um complemento [usando o painel do Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions) ou usando os métodos da API de envio da Windows Store descritos em [Gerenciar complementos](manage-add-ons.md).
 
-| Method        | URI    | Description                                                                 |
+| Método        | URI    | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}``` | Gets data for an existing add-on submission. For more information, see [Get an add-on submission](get-an-add-on-submission.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status``` | Gets the status of an existing add-on submission. For more information, see [Get the status of an add-on submission](get-status-for-an-add-on-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions``` | Creates a new add-on submission for an app that is registered to your Windows Dev Center account. For more information, see [Create an add-on submission](create-an-add-on-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit``` | Commits a new or updated add-on submission to Windows Dev Center. For more information, see [Commit an add-on submission](commit-an-add-on-submission.md). |
-| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}``` | Updates an existing add-on submission. For more information, see [Update an add-on submission](update-an-add-on-submission.md). |
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}``` | Deletes an add-on submission. For more information, see [Delete an add-on submission](delete-an-add-on-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}``` | Obtém dados para um envio de complemento existente. Para saber mais, veja [Obter um envio de complemento](get-an-add-on-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status``` | Obtém o status de um envio de complemento existente. Para obter mais informações, consulte [Obter o status de um envio de complemento](get-status-for-an-add-on-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions``` | Cria um novo envio de complemento para um aplicativo que está registrado em sua conta do Centro de Desenvolvimento do Windows. Para saber mais, veja [Criar um envio de complemento](create-an-add-on-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit``` | Confirma um envio de complemento novo ou atualizado para o Centro de Desenvolvimento do Windows. Para saber mais, veja [Confirmar um envio de complemento](commit-an-add-on-submission.md). |
+| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}``` | Atualiza um envio de complemento existente. Para saber mais, veja [Atualizar um envio de complemento](update-an-add-on-submission.md). |
+| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}``` | Exclui um envio de complemento. Para obter mais informações, consulte [Excluir um envio de complemento](delete-an-add-on-submission.md). |
 
 <span id="create-an-add-on-submission">
-## Create an add-on submission
+## Criar um envio de complemento
 
-To create a submission for an add-on, follow this process.
+Para criar um envio de um complemento, siga este processo.
 
-1. If you have not yet done so, complete the prerequisites described in [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md), including associating an Azure AD application with your Windows Dev Center account and obtaining your client ID and key. You only need to do this one time; after you have the client ID and key, you can reuse them any time you need to create a new Azure AD access token.  
+1. Se você ainda não tiver feito isso, conclua os pré-requisitos descritos em [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md), incluindo associar um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows e obter a ID e a chave do cliente. Você só precisa fazer uma vez. Depois que você tiver a ID e a chave do cliente, poderá reutilizá-las sempre que precisar criar um novo token de acesso do Azure AD.  
 
-2. [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). You must pass this access token to the methods in the Windows Store submission API. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Windows Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
-3. Execute the following method in the Windows Store submission API. This method creates a new in-progress submission, which is a copy of your last published submission. For more information, see [Create an add-on submission](create-an-add-on-submission.md).
+3. Execute o seguinte método na API de envio da Windows Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado. Para saber mais, veja [Criar um envio de complemento](create-an-add-on-submission.md).
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions
   ```
 
-  The response body contains three items: the ID of the new submission, the data for the new submission (including all the listings and pricing information), and the shared access signature (SAS) URI for uploading any add-on icons for the submission. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
+  O corpo da resposta contém três itens: a ID do novo envio, os dados para o novo envio (incluindo todas as listagens e informações de preço) e a URI da assinatura de acesso compartilhado (SAS) para carregar todos os ícones de complemento para o envio. Para saber mais sobre SAS, consulte [Assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
 
-4. If you are adding new icons for the submission, [prepare the icons](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon) and add them to a ZIP archive.
+4. Se você estiver adicionando novos ícones para o envio, [preparar os ícones](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon) e adicione-os a um arquivo ZIP.
 
-5. Update the submission data with any required changes for the new submission, and execute the following method to update the submission. For more information, see [Update an add-on submission](update-an-add-on-submission.md).
+5. Atualize os dados de envio com as alterações necessárias para o novo envio e execute o método a seguir para atualizar o envio. Para saber mais, veja [Atualizar um envio de complemento](update-an-add-on-submission.md).
 
   ```
   PUT https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}
   ```
 
-  >**Note**&nbsp;&nbsp;If you are adding new icons for the submission, make sure you update the submission data to refer to the name and relative path of these files in the ZIP archive.
+  >**Observação**&nbsp;&nbsp;Se você estiver adicionando novos ícones para o envio, atualize os dados de envio para fazer referência ao nome e caminho relativo desses arquivos no arquivo ZIP.
 
-4. If you are adding new icons for the submission, upload the ZIP archive to the SAS URI that was provided in the response body of the POST method you called in step 2. For more information, see [Shared Access Signatures, Part 2: Create and use a SAS with Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+4. Se você estiver adicionando novos ícones para o envio, carregue o arquivo ZIP na URI de SAS que foi fornecida no corpo da resposta do método POST chamado na etapa 2. Para obter mais informações, consulte [Assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de Blob](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
-  The following code snippet demonstrates how to upload the archive using the [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) class in the Azure Storage Client Library for .NET.
+  O snippet de código a seguir demonstra como carregar o arquivo usando a classe [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) na biblioteca de cliente de armazenamento do Azure para .NET.
 
   ```csharp
   string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -61,30 +65,30 @@ To create a submission for an add-on, follow this process.
   await blockBob.UploadFromStreamAsync(stream);
   ```
 
-5. Commit the submission by executing the following method. This will alert Dev Center that you are done with your submission and that your updates should now be applied to your account. For more information, see [Commit an add-on submission](commit-an-add-on-submission.md).
+5. Confirme o envio executando o método a seguir. Isso alertará o Centro de Desenvolvimento que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta. Para saber mais, veja [Confirmar um envio de complemento](commit-an-add-on-submission.md).
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
   ```
 
-6. Check on the commit status by executing the following method. For more information, see [Get the status of an add-on submission](get-status-for-an-add-on-submission.md).
+6. Verifique o status de confirmação executando o método a seguir. Para obter mais informações, consulte [Obter o status de um envio de complemento](get-status-for-an-add-on-submission.md).
 
   ```
   GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status
   ```
 
-  To confirm the submission status, review the *status* value in the response body. This value should change from **CommitStarted** to either **PreProcessing** if the request succeeds or to **CommitFailed** if there are errors in the request. If there are errors, the *statusDetails* field contains further details about the error.
+  Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
-7. After the commit has successfully completed, the submission is sent to the Store for ingestion. You can continue to monitor the submission progress by using the previous method, or by visiting the Dev Center dashboard.
+7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar a monitorar o progresso de envio usando o método anterior ou visitando o painel do Centro de Desenvolvimento.
 
-## Resources
+## Recursos
 
-These methods use the following resources to format data.
+Esses métodos usam os recursos a seguir para formatar dados.
 
 <span id="add-on-submission-object" />
-### Add-on submission
+### Envio de complemento
 
-This resource represents a submission for an add-on. The following example demonstrates the format of this resource.
+Esse recurso representa um envio para um complemento. O exemplo a seguir demonstra o formato desse recurso.
 
 ```json
 {
@@ -159,152 +163,158 @@ This resource represents a submission for an add-on. The following example demon
 }
 ```
 
-This resource has the following values.
+Este recurso tem os seguintes valores.
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id            | string  | The ID of the submission.  |
-| contentType           | string  |  The [type of content](https://msdn.microsoft.com/windows/uwp/publish/enter-iap-properties#content-type) that is provided in the add-on. This can be one of the following values: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
-| keywords           | array  | An array of strings that contain up to 10 [keywords](../publish/enter-iap-properties.md#keywords) for the add-on. Your app can query for add-ons using these keywords.   |
-| lifetime           | string  |  The lifetime of the add-on. This can be one of the following values: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
-| listings           | object  |  A dictionary of key and value pairs, where each key is a two-letter ISO 3166-1 alpha-2 country code and each value is a [Listing resource](#listing-object) object that contains listing info for the add-on.  |
-| pricing           | object  | An object that contains pricing info for the add-on. For more information, see the [Pricing resource](#pricing-object) section below.  |
-| targetPublishMode           | string  | The publish mode for the submission. This can be one of the following values: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | string  | The publish date for the submission in ISO 8601 format, if the *targetPublishMode* is set to SpecificDate.  |
-| tag           | string  |  The [tag](../publish/enter-iap-properties.md#tag) for the add-on.   |
-| visibility  | string  |  The visibility of the add-on. This can be one of the following values: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
-| status  | string  |  The status of the submission. This can be one of the following values: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
-| statusDetails           | object  |  Contains additional details about the status of the submission, including information about any errors. For more information, see the [Status details](#status-details-object) section below. |
-| fileUploadUrl           | string  | The shared access signature (SAS) URI for uploading any packages for the submission. If you are adding new packages for the submission, upload the ZIP archive that contains the packages to this URI. For more information, see [Create an add-on submission](#create-an-add-on-submission).  |
-| friendlyName  | string  |  The friendly name of the add-on, used for display purposes.  |
+| id            | string  | A ID do envio.  |
+| contentType           | string  |  O [tipo de conteúdo](https://msdn.microsoft.com/windows/uwp/publish/enter-iap-properties#content-type) fornecido no complemento. Ele pode ter um dos seguintes valores: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
+| keywords           | array  | Uma matriz de cadeias de caracteres que contenham até 10 [palavras-chave](../publish/enter-iap-properties.md#keywords) do complemento. O aplicativo pode consultar complementos usando essas palavras-chave.   |
+| lifetime           | string  |  O tempo de vida do complemento. Ele pode ter um dos seguintes valores: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
+| listings           | object  |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é um objeto de [Recurso de listagem](#listing-object) que contém as informações de detalhes do complemento.  |
+| pricing           | object  | Um objeto que contém as informações de preços do complemento. Para saber mais, veja a seção [Preços de recurso](#pricing-object) abaixo.  |
+| targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishDate           | string  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
+| tag           | string  |  A [marca](../publish/enter-iap-properties.md#tag) do complemento.   |
+| visibility  | string  |  A visibilidade do complemento. Ele pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
+| status  | string  |  O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
+| statusDetails           | object  |  Contém detalhes adicionais sobre o status do envio, incluindo informações sobre os erros. Para saber mais, consulte a seção [Detalhes de status](#status-details-object) a seguir. |
+| fileUploadUrl           | string  | A URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de complemento](#create-an-add-on-submission).  |
+| friendlyName  | string  |  O nome amigável do complemento, usado para propósitos de exibição.  |
 
 <span id="listing-object" />
-### Listing
+### Listagem
 
-This resource contains listing info for an add-on. This resource has the following values.
+Esse recurso contém informações de detalhes de um complemento. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  description               |    string     |   The description for the add-on listing.   |     
-|  icon               |   object      |  Contains data for the icon for the add-on listing. For more information, see the [Icon](#icon-object) section below.   |
-|  title               |     string    |   The title for the add-on listing.   |  
+|  description               |    string     |   A descrição da listagem do complemento.   |     
+|  icon               |   object      |  Contém dados do ícone para a listagem do complemento. Para saber mais, consulte a seção [Ícone](#icon-object) a seguir.   |
+|  title               |     string    |   O título da listagem do complemento.   |  
 
 <span id="icon-object" />
-### Icon
+### Ícone
 
-This resource contains icon data for an add-on listing. This resource has the following values.
+Esse recurso contém dados de ícone para a listagem de um complemento. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  fileName               |    string     |   The name of the icon file in the ZIP archive that you uploaded for the submission.    |     
-|  fileStatus               |   string      |  The status of the icon file. This can be one of the following values: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
+|  fileName               |    string     |   O nome do arquivo de ícone no arquivo ZIP que você carregou para o envio.    |     
+|  fileStatus               |   string      |  O status do arquivo de ícone. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>   |
 
 <span id="pricing-object" />
-### Pricing
+### Preço
 
-This resource contains pricing info for the add-on. This resource has the following values.
+Esse recurso contém informações de preço do complemento. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  marketSpecificPricings               |    object     |  A dictionary of key and value pairs, where each key is a two-letter ISO 3166-1 alpha-2 country code and each value is a [price tier](#price-tiers). These items represent the [custom prices for your add-on in specific markets](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-prices). Any items in this dictionary override the base price specified by the *priceId* value for the specified market.     |     
-|  sales               |   array      |  An array of objects that contain sales information for the add-on. For more information, see the [Sale](#sale-object) section below.    |     
-|  priceId               |   string      |  A [price tier](#price-tier) that specifies the [base price](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) for the add-on.    |
+|  marketSpecificPricings               |    object     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor de *priceId* para o mercado especificado.     |     
+|  sales               |   array      |  Uma matriz de objetos que contêm informações de promoções do complemento. Para saber mais, consulte a seção [Promoção](#sale-object) a seguir.    |     
+|  priceId               |   string      |  A [faixa de preço](#price-tier) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) do complemento.    |
 
 
 <span id="sale-object" />
-### Sale
+### Promoção
 
-This resources contains sale info for an add-on. This resource has the following values.
+Esse recursos contém informações de promoção de um complemento. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  name               |    string     |   The name of the sale.    |     
-|  basePriceId               |   string      |  The [price tier](#price-tiers) to use for the base price of the sale.    |     
-|  startDate               |   string      |   The start date for the sale in ISO 8601 format.  |     
-|  endDate               |   string      |  The end date for the sale in ISO 8601 format.      |     
-|  marketSpecificPricings               |   object      |   A dictionary of key and value pairs, where each key is a two-letter ISO 3166-1 alpha-2 country code and each value is a [price tier](#price-tiers). These items represent the [custom prices for your add-on in specific markets](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-pricess). Any items in this dictionary override the base price specified by the *basePriceId* value for the specified market.    |
+|  name               |    string     |   O nome da promoção.    |     
+|  basePriceId               |   string      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
+|  startDate               |   string      |   A data de início da promoção no formato ISO 8601.  |     
+|  endDate               |   string      |  A data de término da promoção no formato ISO 8601.      |     
+|  marketSpecificPricings               |   object      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-pricess). Todos os itens nesse dicionário substituem o preço base especificado pelo valor de *basePriceId* para o mercado especificado.    |
 
 
 
 <span id="status-details-object" />
-### Status details
+### Detalhes de status
 
-This resource contains additional details about the status of a submission. This resource has the following values.
+Esse recurso contém detalhes adicionais sobre o status de um envio. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  errors               |    object     |   An array of objects that contain error details for the submission. For more information, see the [Status detail](#status-detail-object) section below.   |     
-|  warnings               |   object      | An array of objects that contain warning details for the submission. For more information, see the [Status detail](#status-detail-object) section below.     |
-|  certificationReports               |     object    |   An array of objects that provide access to the certification report data for the submission. You can examine these reports for more information if the certification fails. For more information, see the [Certification report](#certification-report-object) section below.   |  
+|  errors               |    object     |   Uma matriz de objetos que contêm os detalhes de erro do envio. Para saber mais, consulte a seção [Detalhes de status](#status-detail-object) a seguir.   |     
+|  warnings               |   object      | Uma matriz de objetos que contêm os detalhes de aviso do envio. Para saber mais, consulte a seção [Detalhes de status](#status-detail-object) a seguir.     |
+|  certificationReports               |     object    |   Uma matriz de objetos que fornecem acesso aos dados do relatório de certificação para o envio. Se a certificação falhar, você poderá examinar esses relatórios para obter mais informações. Para saber mais, consulte a seção [Relatório de certificação](#certification-report-object) a seguir.   |  
 
 
 <span id="status-detail-object" />
-### Status detail
+### Detalhes de status
 
-This resource contains additional information about any related errors or warnings for a submission. This resource has the following values.
+Esse recurso contém informações adicionais sobre erros ou avisos relatados para um envio. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  code               |    string     |   A string that describes the type of error or warning. For more information, see the [Submission status code](#submission-status-code) section below.   |     
-|  details               |     string    |  A message with more details about the issue.     |
+|  code               |    string     |   Uma cadeia de caracteres que descreve o tipo de erro ou aviso. Para obter mais informações, consulte a seção [Código de status de envio](#submission-status-code) abaixo.   |     
+|  details               |     string    |  Uma mensagem com mais detalhes sobre o problema.     |
 
 
 <span id="certification-report-object" />
-### Certification report
+### Relatório de certificação
 
-This resource provides access to the certification report data for a submission. This resource has the following values.
+Esse recurso fornece acesso aos dados do relatório de certificação para um envio. Este recurso tem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|     date            |    string     |  The date and time the report was generated, in in ISO 8601 format.    |
-|     reportUrl            |    string     |  The URL at which you can access the report.    |
+|     date            |    string     |  A data e hora em que o relatório foi gerado, no formato ISO 8601.    |
+|     reportUrl            |    string     |  A URL na qual você pode acessar o relatório.    |
 
 
 
-## Enums
+## Enumerações
 
-These methods use the following enums.
+Esses métodos usam as enumerações a seguir.
 
 
 <span id="price-tiers" />
-### Price tiers
+### Faixas de preço
 
-The following values represent available price tiers for an add-on submission.
+Os seguintes valores representam as faixas de preço disponíveis para um envio de complemento.
 
-| Value           | Description                                                                                                                                                                                                                          |
+| Valor           | Descrição                                                                                                                                                                                                                          |
 |-----------------|------|
-|  Base               |   The price tier is not set; use the base price for the add-on.      |     
-|  NotAvailable              |   The add-on is not available in the specified region.    |     
-|  Free              |   The add-on is free.    |    
-|  Tier2 through Tier194               |   Tier2 represents the .99 USD price tier. Each additional tier represents additional increments (1.29 USD, 1.49 USD, 1.99 USD, and so on).    |
+|  Base               |   A faixa de preço não está definida. Use o preço base para o complemento.      |     
+|  NotAvailable              |   O complemento não está disponível na região especificada.    |     
+|  Grátis              |   O complemento é gratuito.    |    
+|  Tier2 até Tier194               |   Tier2 representa a faixa de preço 0,99 USD. Cada nível adicional representa incrementos adicionais (1,29 USD, 1,49 USD, 1,99 USD e assim por diante).    |
 
 
 <span id="submission-status-code" />
-### Submission status code
+### Código de status do envio
 
-The following values represent the status code of a submission.
+Os seguintes valores representam o código de status de um envio.
 
-| Value           |  Description      |
+| Valor           |  Descrição      |
 |-----------------|---------------|
-|  None            |     No code was specified.         |     
-|      InvalidArchive        |     The ZIP archive containing the package is invalid or has an unrecognized archive format.  |
-| MissingFiles | The ZIP archive does not have all files which were listed in your submission data, or they are in the wrong location in the archive. |
-| PackageValidationFailed | One or more packages in your submission failed to validate. |
-| InvalidParameterValue | One of the parameters in the request body is invalid. |
-| InvalidOperation | The operation you attempted is invalid. |
-| InvalidState | The operation you attempted is not valid for the current state of the package flight. |
-| ResourceNotFound | The specified package flight could not be found. |
-| ServiceError | An internal service error prevented the request from succeeding. Try the request again. |
-| ListingOptOutWarning | The developer removed a listing from a previous submission, or did not include listing information that is supported by the package. |
-| ListingOptInWarning  | The developer added a listing. |
-| UpdateOnlyWarning | The developer is trying to insert something that only has update support. |
-| Other  | The submission is in an unrecognized or uncategorized state. |
-| PackageValidationWarning | The package validation process resulted in a warning. |
+|  Nenhum(a)            |     Nenhum código foi especificado.         |     
+|      InvalidArchive        |     O arquivo ZIP que contém o pacote não é válido ou tem um formato de arquivo não reconhecido.  |
+| MissingFiles | O arquivo ZIP não tem todos os arquivos que foram listados nos seus dados de envio ou estão no local errado no arquivo. |
+| PackageValidationFailed | Falha ao validar um ou mais pacotes no seu envio. |
+| InvalidParameterValue | Um dos parâmetros no corpo da solicitação não é válido. |
+| InvalidOperation | A operação tentada não é válida. |
+| InvalidState | A operação tentada não é válida para o estado atual do pacote de pré-lançamento. |
+| ResourceNotFound | O pacote de pré-lançamento especificado não foi encontrado. |
+| ServiceError | Um erro de serviço interno impediu o êxito da solicitação. Repita a solicitação. |
+| ListingOptOutWarning | O desenvolvedor removeu uma listagem de um envio anterior ou não incluiu informações de listagem que são compatíveis com o pacote. |
+| ListingOptInWarning  | O desenvolvedor adicionou uma listagem. |
+| UpdateOnlyWarning | O desenvolvedor está tentando inserir algo que só tem suporte para a atualização. |
+| Outro  | O envio está em um estado não reconhecido ou não categorizado. |
+| PackageValidationWarning | O processo de validação do pacote resultou em um aviso. |
 
 <span/>
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage add-ons using the Windows Store submission API](manage-add-ons.md)
-* [Add-on submissions in the Dev Center dashboard](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Gerenciar complementos usando a API de envio da Windows Store](manage-add-ons.md)
+* [Envios de complemento no painel do Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

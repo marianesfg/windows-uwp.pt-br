@@ -3,8 +3,9 @@ author: jnHs
 Description: "Você pode fornecer informações adicionais sobre seu aplicativo na seção Declarações do aplicativo da página Propriedades do aplicativo durante o processo de envio."
 title: "Declarações de aplicativo"
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae
+translationtype: Human Translation
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: 419d41de3ba26f6470ad99b44826f2935aea4eff
 
 ---
 
@@ -16,7 +17,7 @@ As seções a seguir descrevem cada declaração e o que você precisa considera
 
 ## Este aplicativo permite que os usuários façam compras, mas não usa o sistema de comércio da Windows Store.
 
-Essa caixa deve ficar desmarcada na maioria dos aplicativos, pois os aplicativos que oferecem oportunidades para fazer compras no aplicativo geralmente usam a API de compra no aplicativo da Microsoft para criar e [enviar os IAPs](iap-submissions.md). Segundo o [Contrato de Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/hh694058), os aplicativos que foram criados e enviados antes de 29 de junho de 2015 podem continuar oferecendo a funcionalidade de compra no aplicativo sem usar o mecanismo de comércio da Microsoft, desde que a funcionalidade de compra esteja em conformidade com as [políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_8). Se isso se aplica ao seu aplicativo, você deve marcar esta caixa. Caso contrário, deixe-a desmarcada.
+Essa caixa deve ficar desmarcada na maioria dos aplicativos, pois os aplicativos que oferecem oportunidades para fazer compras no aplicativo geralmente usam a API de compra no aplicativo da Microsoft para criar e [enviar os complementos](add-on-submissions.md). Segundo o [Contrato de Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/hh694058), os aplicativos que foram criados e enviados antes de 29 de junho de 2015 podem continuar oferecendo a funcionalidade de compra no aplicativo sem usar o mecanismo de comércio da Microsoft, desde que a funcionalidade de compra esteja em conformidade com as [políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_8). Se isso se aplica ao seu aplicativo, você deve marcar esta caixa. Caso contrário, deixe-a desmarcada.
 
 ## Este aplicativo foi testado para atender às diretrizes de acessibilidade.
 
@@ -34,8 +35,7 @@ Ao declarar seu aplicativo como acessível, você concorda que o aplicativo é a
 
 Para obter mais informações, consulte [Acessibilidade para aplicativos do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/dn263101), [Testes de acessibilidade](https://msdn.microsoft.com/library/windows/apps/mt297664) e [Acessibilidade na Loja](https://msdn.microsoft.com/library/windows/apps/mt297663).
 
-> 
-            **Importante**  Não liste seu aplicativo como acessível a menos que tenha feito a engenharia e os testes especificamente para isso. Se seu aplicativo for declarado como acessível, mas não der suporte real à acessibilidade, você provavelmente receberá comentários negativos da comunidade.
+> **Importante**  Não liste seu aplicativo como acessível a menos que tenha feito a engenharia e os testes especificamente para isso. Se seu aplicativo for declarado como acessível, mas não der suporte real à acessibilidade, você provavelmente receberá comentários negativos da comunidade.
 
 ## Os clientes podem instalar esse aplicativo em unidades alternativas ou armazenamento removível.
 
@@ -45,8 +45,7 @@ Se você deseja impedir que seu aplicativo seja instalado em unidades alternativ
 
 Não há opção de restringir a instalação para que o aplicativo possa ser instalado apenas em mídia de armazenamento removível.
 
-> 
-            **Observação**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
+> **Observação**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
 
 ## O Windows pode incluir dados do aplicativo em backups automáticos no OneDrive.
 
@@ -54,8 +53,7 @@ Esta caixa é marcada por padrão, para permitir que os dados do seu aplicativo 
 
 Se você deseja impedir que os dados do aplicativo sejam incluídos em backups automáticos, desmarque essa caixa.
 
-> 
-            **Observação**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
+> **Observação**  Para o Windows Phone 8.1, isso costumava ser indicado por meio do StoreManifest.xml.
 
  
 
@@ -69,6 +67,6 @@ Se você deseja impedir que os dados do aplicativo sejam incluídos em backups a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

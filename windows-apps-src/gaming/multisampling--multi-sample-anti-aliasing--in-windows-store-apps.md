@@ -3,8 +3,9 @@ author: mtoepke
 title: Multisampling nos aplicativos UWP (Plataforma Universal do Windows)
 description: Saiba como utilizar o multisampling em aplicativos da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7b240de9ab3c7b53877d38eb9097dde25b2a40be
+ms.openlocfilehash: cf82c34e23a1c66bfc2d59f9ea3b4ebce99ab52e
 
 ---
 
@@ -26,8 +27,7 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
 
 1.  Chame [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para descobrir quais formatos DXGI podem ser usados com o multisampling. Forneça os formatos de destino de renderização que seu jogo pode usar. O destino de renderização e o destino de resolução devem usar o mesmo formato. Portanto, verifique [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134) e **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**.
 
-    
-            **Nível de recurso 9: ** Apesar dos dispositivos de nível de recurso 9 [garantirem suporte a formatos de destino de renderização multisample](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), o suporte não é garantido para destinos de resolução multisample. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
+    **Nível de recurso 9:  ** Apesar dos dispositivos de nível de recurso 9 [garantirem suporte a formatos de destino de renderização multisample](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), o suporte não é garantido para destinos de resolução multisample. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
 
     O código a seguir verifica o suporte a multisampling para todos os valores de DXGI\_FORMAT:
 
@@ -79,8 +79,7 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
     }
     ```
 
-    > 
-            **Observação**   Use [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) se você precisar verificar o suporte a multisample para buffers de recursos com alocação dinâmica.
+    > **Observação**   Use [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) se você precisar verificar o suporte a multisample para buffers de recursos com alocação dinâmica.
 
      
 
@@ -211,6 +210,6 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

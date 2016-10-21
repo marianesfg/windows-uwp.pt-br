@@ -1,19 +1,16 @@
 ---
 author: mijacobs
-Description: "Como a representação visual da linguagem, a tarefa principal da tipografia é ser clara. Seu estilo nunca deve atrapalhar essa meta. Porém, a tipografia também tem um papel importante como componente de layout, pois afeta consideravelmente a densidade e a complexidade do design, além de exercer forte influência na experiência do usuário desse design."
+description: "Como a representação visual da linguagem, a tarefa principal da tipografia é ser clara. Seu estilo nunca deve atrapalhar essa meta. Porém, a tipografia também tem um papel importante como componente de layout, pois afeta consideravelmente a densidade e a complexidade do design, além de exercer forte influência na experiência do usuário desse design."
 title: Tipografia
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
-label: Typography
 template: detail.hbs
-extraBodyClass: style-typography
-brief: "As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7ec2c80fd571de98060282d2b321d1895e2b3dc8
+ms.sourcegitcommit: 8338b4ebcdd73f1b7ebf1dedafe68d861cd9d93b
+ms.openlocfilehash: 481c66e3edd42722cfd59bf420fe5b6286706245
 
 ---
 
-# Tipografia para aplicativos UWP
+# Tipografia
 
 Como a representação visual da linguagem, a tarefa principal da tipografia é ser clara. Seu estilo nunca deve atrapalhar essa meta. Porém, a tipografia também tem um papel importante como componente de layout, pois afeta consideravelmente a densidade e a complexidade do design, além de exercer forte influência na experiência do usuário desse design.
 
@@ -39,9 +36,9 @@ Ao empilhar um tipo maior sobre um tipo menor, a distância da última linha de 
 
 ![Mostra como o tipo maior é empilhado sobre o tipo menor](images/line-height-stacking.png)
 
-Em XAML, isso é feito empilhando dois [TextBlocks](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) e definindo a margem apropriada.
+Em XAML, isso é feito empilhando dois [TextBlocks](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) e definindo a margem apropriada.
 
-```xaml
+```xml
 <StackPanel Width="200">
     <!-- Setting a bottom margin of 3px on the header
          puts the baseline of the body text exactly 24px
@@ -61,7 +58,7 @@ Em XAML, isso é feito empilhando dois [TextBlocks](https://msdn.microsoft.com/l
 </StackPanel>
 ```
 
-<!-- OP version -->
+
 
 ## Kerning e tracking
 
@@ -69,7 +66,10 @@ Segoe é uma face de tipos humanista, com uma aparência suave e amigável, ela 
 
 Kerning deve ser definido como "métricas" e tracking deve ser definido como "0".
 
-<img src="images/kerning-tracking.png" alt="Shows the difference between kerning and tracking" />
+
+![Mostra a diferença entre kerning e tracking](images/kerning-tracking.png)
+
+
 
 ## Espaçamento entre letras e palavras
 
@@ -77,29 +77,29 @@ Semelhante ao kerning e tracking, o espaçamento entre letras e o espaçamento e
 
 O espaçamento entre palavras por padrão sempre é 100% e o espaçamento entre letras deve ser definido como "0".
 
-<img src="images/word-letter.png" alt="Shows the difference between word and letter spacing" />
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-Em um controle de texto XAML use [Typogrphy.Kerning](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) para controlar kerning e [FontStretch](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar o rastreamento. Por padrão Typography.Kerning é definido como "true" e FontStretch é definido como "Normal", que são os valores recomendados.
-    </div>
-</aside>
+![Mostra a diferença entre espaçamento entre letras e palavras](images/word-letter.png)
+
+**Observação**&nbsp;&nbsp;Em um controle de texto XAML use [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) para controlar kerning e [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar tracking. Por padrão Typography.Kerning é definido como "true" e FontStretch é definido como "Normal", que são os valores recomendados.
 
 
-<!-- OP version -->
+
+
 ## Alinhamento
 
 Em geral, recomendamos que os elementos visuais e as colunas de tipo sejam alinhados à esquerda. Na maioria dos casos, essa abordagem flush à esquerda e irregular à direita fornece ancoragem consistente do conteúdo e um layout uniforme.
 
-<img src="images/alignment.png" alt="Shows flush-left text" />
+
+![Mostra texto à esquerda](images/alignment.png)
+
+
 
 ## Terminações de linha
 
 Quando a tipografia não está posicionada como flush à esquerda e irregular à direita, tente garantir terminações de linha pares e evitar a hifenização.
 
-<img src="images/line-endings.png" alt="Shows even line endings" />
+
+![Mostra até mesmo terminações de linha](images/line-endings.png)
 
 ## Parágrafos
 
@@ -125,13 +125,7 @@ Depois que a altura do texto se estende além da altura do ícone, a primeira li
 
 ![Mostra vários emparelhamentos de ícone e texto](images/hanging-text-alignment.png)
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-A propriedade [TextBlock.TextLineBounds](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) de XAML fornece acesso às medidas de fonte iniciais e de limite de altura. Ela pode ser usada para o tipo de alinhamento superior, central ou vertical.
-    </div>
-</aside>
+**Observação**A propriedade &nbsp;&nbsp;[TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx)de XAML fornece acesso às medidas de fonte iniciais e de limite de altura. Ela pode ser usada para o tipo de alinhamento superior, central ou vertical.
 
 ## Recorte e elipses
 
@@ -141,22 +135,13 @@ Exceções: para contêineres que não são bem definidos (por exemplo, nenhuma 
 
 ![Mostra um quadro de dispositivo com alguns recortes de texto](images/clipping.png)
 
-# Rampa de tipos
+## Rampa de tipos
+A rampa de tipos estabelece uma relação de design fundamental dos títulos ao texto do corpo e garante uma hierarquia clara e compreensível entre os diferentes níveis. Essa hierarquia cria uma estrutura que permite aos usuários navegar facilmente por meio de comunicação escrita.
 
-Tamanhos diferentes de Segoe UI devem ser usados para criar hierarquia em uma rampa de tipos. Essa hierarquia cria uma estrutura que permite aos usuários navegar facilmente por meio de comunicação escrita.
+![Mostra a o aumento do tipo](images/type-ramp.png) Todos os tamanhos estão em pixels efetivos. 
 
-<figure class="figure-img" >
-    <img src="images/type-ramp.png" alt="Shows the type ramp"  />
-        <figcaption>Todos os tamanhos estão em pixels efetivos. Para obter mais detalhes, veja o link TODO:</figcaption>
-</figure>
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-A maioria dos níveis de rampa está disponível como [recursos estáticos](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) XAML que seguem a convenção de nomenclatura `*TextBlockStyle` (por ex.: `HeaderTextBlockStyle`). 
-    </div>
-</aside>
+**Observação**&nbsp;&nbsp;A maioria dos níveis de rampa está disponível como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) que seguem a convenção de nomenclatura `*TextBlockStyle` (por ex.: `HeaderTextBlockStyle`).
 
 
 ## Texto principal e secundário
@@ -171,13 +156,25 @@ Determinados títulos de página devem ser em maiúsculas para adicionar outra d
 No entanto, nomes próprios mudam seu significado quando estão em maiúsculas em certos idiomas; portanto, títulos de página com base em nomes ou entradas do usuário *não* devem ser convertidos em maiúsculas.
 
 
-## O que fazer e o que não fazer
+**Você deve**
+
+
+
 * Usar Corpo para a maioria dos textos
 * Usar Base para títulos quando o espaço é limitado
 * Incorporar SubtitleAlt para criar contraste e hierarquia, enfatizando o conteúdo de nível superior
+
+
+
+**Você não deve**
+
+
+
 * Não usar Legenda para cadeias de caracteres longas ou qualquer ação principal
 * Não usar Cabeçalho ou Subcabeçalho se for preciso quebra automática de linha
 * Não combinar Subtítulo e SubtitleAlt na mesma página
+
+
 
 ## Artigos relacionados
 
@@ -185,6 +182,6 @@ No entanto, nomes próprios mudam seu significado quando estão em maiúsculas e
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,16 +1,21 @@
 ---
-title: Trazer seu jogo Unity para o Xbox One
 author: JordanEllis6809
-ms.sourcegitcommit: 008ff2566b17a05b52dee0a8cd6c070d841b1f62
-ms.openlocfilehash: cc854bc707a9c08687d3c6d92a704f5099d52d5b
+title: Trazendo o jogos Unity para UWP no Xbox
+description: Desenvolvimento de UWP Unity no Xbox.
+translationtype: Human Translation
+ms.sourcegitcommit: ea3bea2e5d6de0e55615de701a69e90d81f0f553
+ms.openlocfilehash: 73f701a2608c6ce8d10cab817683ada4e9eecc08
 
 ---
 
-# Trazer seu jogo Unity para o Xbox One
+# Trazendo o jogos Unity para UWP no Xbox
+
 
 Neste tutorial passo a passo, presumimos que você já tenha um jogo no Unity, pronto para ser compilado e implantado.
 
-[Versão em vídeo deste tutorial.](https://www.youtube.com/watch?v=f0Ptvw7k-CE)
+Consulte também uma [versão em vídeo deste tutorial](https://www.youtube.com/watch?v=f0Ptvw7k-CE).
+
+Procurando a versão do seu projeto Unity UWP? Consulte [Controle de versão do seu projeto UWP](development-lanes-unity-versioning.md).
 
 ## Etapa 0: Verifique se o Unity está instalado corretamente
 
@@ -20,35 +25,40 @@ Ao instalar o Unity, estes componentes devem ser selecionados:
 
 ## Etapa 1: Criando a solução UWP
 
-No seu projeto de jogo Unity, abra as janelas Configurações da Compilação localizadas em `File -> Build Settings...`e vá para o menu de opções da Windows Store mostrado abaixo.
+No seu projeto de jogo Unity, abra as janelas **Configurações da Compilação** localizadas em **Arquivo -> Configurações da Compilação** e vá para o menu de opções da Windows Store mostrado abaixo.
 
 ![Janela Configurações da Compilação](images/build-settings.png)
 
-Verifique se a configuração `SDK` está definida como `Universal 10`. Em seguida, pressione o botão Compilação na parte inferior do menu. Isso iniciará uma janela do explorer solicitando uma pasta de destino. Crie uma pasta denominada `UWP` no diretório `Assets` do seu projeto e escolha esta pasta como a pasta de destino da compilação.
+Verifique se a configuração do **SDK** está definida como **Universal 10** e, em seguida, selecione o botão **Compilar**, que iniciará uma janela do Explorador de Arquivos solicitando uma pasta de destino. Crie uma pasta denominada **UWP** ao lado do diretório **Ativos** do seu projeto e escolha esta pasta como a pasta de destino da compilação.
 
 ![Pasta de destino da compilação](images/build-destination.png)
 
-O Unity criou uma nova solução do Visual Studio que usaremos para implantar seu jogo UWP na próxima etapa.
+O Unity criou uma nova solução do Visual Studio que usaremos para implantar seu jogo UWP.
 
 ![Solução do VS da UWP](images/uwp-vs-solution.png)
 
-## Etapa 2: Implantando seu jogo
+## Etapa 2: Implementando seu jogo
 
-Abra a solução recentemente gerada na pasta `Assets/UWP`.  Depois de abrir, altere a plataforma de destino para X64.
+Abra a solução recentemente gerada na pasta **UWP** e, em seguida, altere a plataforma de destino para **x64**.
 
 ![Plataforma da Compilação x64](images/x64-build-platform.png)
 
-Agora que você tem uma solução do Visual Studio da UWP para seu jogo, [seguir estas etapas](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/getting-started) permitirá que você implante com êxito seu jogo em seu Xbox One de varejo!
+Agora que você tem uma solução do Visual Studio da UWP para seu jogo, [seguir estas etapas](getting-started.md) permitirá que você implante com êxito seu jogo em seu Xbox One de varejo!
 
-## Notas para desenvolvedor
+## Etapa 3: Modificar e recriar
 
-- É recomendável que você ignore a pasta UWP no seu controle de versão. Se você estiver tentando adicionar outros elementos XAML ao seu projeto e precisar criar uma versão de alguns ativos na pasta UWP, consulte [estes exemplos que fazem exatamente isso](https://bitbucket.org/Unity-Technologies/windowsstoreappssamples/overview).
+Se forem feitas alterações em algo que não seja um script, para que essas alterações sejam mostradas na versão UWP do jogo, o projeto deve ser recriado no Editor (conforme descrito na __Etapa 1__).
 
-- Se você fizer alterações no Unity para qualquer conteúdo (exceto scripts) que estiver incluído na compilação do seu jogo, precisará recriar sua solução UWP para ver essas alterações na próxima vez que implantar. Isso ocorre porque durante a etapa de compilação do Unity, todos os ativos do projeto são compilados em um arquivo de recurso. A solução UWP faz referência a esse arquivo de recurso gerado ao implantar o jogo.
+## Controle de versão do seu projeto UWP
+
+Há algumas situações comuns onde adicionar partes desse diretório UWP recentemente gerado ao controle de versão se torna necessário. Por exemplo, se você estiver adicionando uma nova dependência ao projeto UWP (por exemplo, SDK do Xbox Live).  Vamos examinar este exemplo em detalhes em [Controle de versão do seu projeto UWP](development-lanes-unity-versioning.md).
+
+## Consulte também
+- [Trazendo jogos existentes para o Xbox](development-lanes-landing.md)
+- [UWP no Xbox One](index.md)
 
 
 
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -3,23 +3,25 @@ author: mcleanbyron
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
 description: "Cada transação da Windows Store que resulta em uma compra do produto bem-sucedida, pode retornar, opcionalmente, um recibo da transação."
 title: Usar recibos para verificar compras de produtos
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: b1322b74bf1038f05cd1cba275e432e279ed362d
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 01b75d25c385d8dd856af79581fb4a346064c400
 
 ---
 
 # Usar recibos para verificar compras de produtos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
+
+>**Observação**&nbsp;&nbsp;Os exemplos neste artigo usam membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se o aplicativo segmenta Windows 10, versão 1607, ou posterior, recomendamos usar membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar compras realizadas em aplicativo, em vez do namespace Windows.ApplicationModel.Store. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
 
 **APIs Importantes**
 
 -   [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)
 -   [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)
 
-Cada transação da Windows Store que resulta em uma compra do produto bem-sucedida, pode retornar, opcionalmente, um recibo da transação. Esses recibos fornecem informações sobre o produto listado e o custo monetário ao cliente.
+Cada transação da Windows Store que resulta em uma compra do produto bem-sucedida, pode retornar, opcionalmente, um recibo da transação. Esse recibo fornece informações sobre o produto listado e o custo monetário ao cliente.
 
 Ter acesso a essas informações dá suporte a cenários nos quais seu aplicativo precisa confirmar que um usuário adquiriu seu aplicativo ou fez compras de produto no aplicativo da Windows Store. Por exemplo, imagine um jogo que oferece conteúdo para download. Se o usuário que comprou o conteúdo do jogo desejar jogar em outro dispositivo, será necessário verificar se ele de fato comprou o conteúdo. Veja aqui como fazer isso.
 
@@ -155,7 +157,7 @@ namespace ReceiptVerificationSample
             {
                 const int MaxCertificateSize = 10000;
 
-                // We are attempting to retrieve the following url. The getAppReceiptAsync website at 
+                // We are attempting to retrieve the following url. The getAppReceiptAsync website at
                 // http://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.getappreceiptasync.aspx
                 // lists the following format for the certificate url.
                 String certificateUrl = String.Format("https://go.microsoft.com/fwlink/?LinkId=246509&cid={0}", certificateId);
@@ -240,9 +242,6 @@ namespace ReceiptVerificationSample
 
 
 
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

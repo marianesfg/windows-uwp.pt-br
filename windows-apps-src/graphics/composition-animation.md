@@ -4,8 +4,8 @@ ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: "Animações de composição"
 description: "Muitas propriedades de objeto e efeito de composição podem ser animadas usando animações de quadro chave e expressão permitindo que as propriedades de um elemento de interface do usuário mudem ao longo do tempo ou com base em um cálculo."
 translationtype: Human Translation
-ms.sourcegitcommit: 62f0ea80940ff862d26feaa063414d95b048f685
-ms.openlocfilehash: e0088692b9de10c188f15b85b1f20b98cc113517
+ms.sourcegitcommit: 9146f0d3771f1f3687c94dc9f4978b5db5765c5d
+ms.openlocfilehash: 9f098ef590e51547f066289965a7ce9fd02dc8cd
 
 ---
 # Animações de composição
@@ -13,33 +13,37 @@ ms.openlocfilehash: e0088692b9de10c188f15b85b1f20b98cc113517
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A API do WinRT Windows.UI.Composition permite criar, animar, transformar e manipular os objetos do compositor em uma camada de API unificada. As animações de composição fornecem uma maneira avançada e eficiente de executar animações na interface do usuário do aplicativo. Elas foram projetadas desde o início para garantir que suas animações sejam executadas em 60 FPS independente do thread da interface do usuário e para oferecer a você a flexibilidade para criar experiências incríveis usando não só propriedades de tempo, mas também de entrada e outras propriedades, para ativar as animações.
-Este tópico fornece uma visão geral da funcionalidade disponível que permite animar propriedades do Objeto de Composição.
+Este tópico fornece uma visão geral da funcionalidade disponível que permite animar propriedades do objeto Composition.
 Este documento presume que você esteja familiarizado com as noções básicas sobre a estrutura de Camada Visual. Para obter mais informações, [veja aqui](./composition-visual-tree.md). Existem dois tipos de animações de composição: **animações de quadro-chave** e **animações de expressão**  
 
 ![](./images/composition-animation-types.png)  
    
  
 ##Tipos de animações de composição
+**Animações de quadro-chave** proporcionam experiências de animação tradicionais, *quadro por quadro* controladas por tempo. Os desenvolvedores podem definir explicitamente *pontos de controle* descrevendo os valores nos quais uma propriedade de animação precisa estar nos pontos específicos, na linha do tempo de animação. O mais importante é que você consegue usar funções de easing (também chamadas de interpoladores) para descrever como fazer a transição entre esses pontos de controle.  
 
-            **Animações de quadro-chave** proporcionam experiências de animação tradicionais, *quadro por quadro* controladas por tempo. Os desenvolvedores podem definir explicitamente *pontos de controle* descrevendo os valores nos quais uma propriedade de animação precisa estar nos pontos específicos, na linha do tempo de animação. O mais importante é que você consegue usar funções de easing (também chamadas de interpoladores) para descrever como fazer a transição entre esses pontos de controle.  
+**Animações implícitas** são um tipo de animação que permite que os desenvolvedores definam animações individuais reutilizáveis ou uma série de animações separadamente da lógica de aplicativos importantes. Animações implícitas permitem que os desenvolvedores criem *modelos* de animação e vinculem-os a gatilhos. Esses gatilhos são alterações de propriedade resultantes de atribuições explícitas. Os desenvolvedores podem definir um modelo como uma única animação ou um grupo de animação. Os grupos de animação são uma coleção de modelos de animação que podem ser iniciados juntos explicitamente ou com um gatilho. Animações implícitas eliminam a necessidade de criar KeyFrameAnimations explícitas sempre que você deseja alterar o valor de uma propriedade e vê-la animada.
 
-
-            **Animações de expressão** são um novo tipo de animação introduzido na Camada Visual com a atualização de novembro do Windows 10 (compilação 10586). A ideia por trás das animações de expressão é que um desenvolvedor pode criar relacionamentos matemáticos entre as propriedades visuais e valores distintos que serão avaliados e atualizados a cada quadro. Os desenvolvedores podem fazer referência a propriedades de objetos de Composição ou Conjuntos de propriedades, usar auxiliares de função matemática e até mesmo fazer referência à Entrada para gerar esses relacionamentos matemáticos. As expressões tornam as experiências como cabeçalhos paralaxe e fixos possíveis e fáceis na plataforma Windows.  
+**Animações de expressão** são um tipo de animação introduzido na Camada Visual com a atualização de novembro do Windows 10 (compilação 10586). A ideia por trás das animações de expressão é que um desenvolvedor pode criar relacionamentos matemáticos entre as propriedades [visuais](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) e valores distintos que serão avaliados e atualizados a cada quadro. Os desenvolvedores podem fazer referência a propriedades de objetos de Composição ou conjuntos de propriedades, usar auxiliares de função matemática e até mesmo fazer referência à entrada para gerar esses relacionamentos matemáticos. As expressões tornam as experiências como cabeçalhos paralaxe e fixos possíveis e fáceis na plataforma Windows.  
 
 ##Por que animações de composição?
 **Desempenho**  
- Ao criar aplicativos Universais Windows, a maior parte do código do desenvolvedor é executada no thread da interface de usuário. Dessa forma, para garantir que as animações sejam executadas perfeitamente em todas as diferentes categorias de dispositivo, o sistema executa os cálculos de animação e o trabalho em um thread independente para manter 60 FPS. Isso significa que os desenvolvedores podem contar com o sistema para fornecer animações perfeitas enquanto seus aplicativos realizam outras operações complexas para experiências de usuário avançado.    
+ Ao criar aplicativos Universais Windows, a maior parte do código do desenvolvedor é executada no thread da interface de usuário. Para garantir que as animações sejam executadas perfeitamente em todas as diferentes categorias de dispositivo, o sistema executa os cálculos de animação e o trabalho em um thread independente para manter 60 FPS. Isso significa que os desenvolvedores podem contar com o sistema para fornecer animações perfeitas enquanto seus aplicativos realizam outras operações complexas para experiências de usuário avançado.    
  
 **Possibilidades**  
-A meta das animações de composição na Camada Visual é viabilizar interfaces do usuário bonitas. Queremos fornecer aos desenvolvedores flexibilidade e diferentes tipos de animações para desenvolver suas ideias incríveis e exceder os limites da UWP
+A meta das animações de composição na Camada visual é facilitar a criação de interfaces do usuário bonitas. Queremos fornecer aos desenvolvedores diversos tipos de animações que tornam mais fácil criar suas ideias incríveis.
  
- (Você também pode conferir o [GitHub Composition](http://go.microsoft.com/fwlink/?LinkID=789439) para obter exemplos de como usar as APIs e alguns exemplos de fidelidade superiores das APIs em ação)  
+   
 
 **Modelagem de texto**  
  Todas as animações de composição na Camada Visual são modelos – isso significa que os desenvolvedores podem usar uma animação em vários objetos sem precisar criar animações separadas. Isso permite que os desenvolvedores usem a mesma animação e ajuste as propriedades ou os parâmetros para atender a outras necessidades sem se preocupar em obstruir os usos anteriores.  
+
+Você pode conferir nossas discussões sobre //BUILD para [Animações de expressão](https://channel9.msdn.com/events/Build/2016/P486), [Experiências interativas](https://channel9.msdn.com/Events/Build/2016/P405), [Animações implícitas](https://channel9.msdn.com/events/Build/2016/P484) e [Animações conectadas](https://channel9.msdn.com/events/Build/2016/P485) para ver alguns exemplos do que é possível.
+
+Você também pode conferir o [GitHub Composition](http://go.microsoft.com/fwlink/?LinkID=789439) para obter exemplos de como usar as APIs e alguns exemplos de fidelidade superiores das APIs em ação.
  
 ##O que você pode animar com animações de composição?
-As animações de composição podem ser aplicadas à maioria dos objetos de Composição como Visual e InsetClip. Você também pode aplicar animações de composição a efeitos de composição e conjuntos de propriedades. **Ao escolher o que animar, anote o tipo – use isso para determinar qual tipo de animação de quadro-chave criar ou para qual tipo sua expressão deverá ser resolvida.**  
+As animações de composição podem ser aplicadas à maioria dos objetos de composição como [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) e **InsetClip**. Você também pode aplicar animações de composição a efeitos de composição e conjuntos de propriedades. **Ao escolher o que animar, anote o tipo – use isso para determinar qual tipo de animação de quadro-chave criar ou para qual tipo sua expressão deverá ser resolvida.**  
  
 ###Visual
 |Propriedades visuais animáveis|  Tipo|
@@ -55,7 +59,7 @@ As animações de composição podem ser aplicadas à maioria dos objetos de Com
 |Scale| Vector3|
 |Tamanho|  Vector2|
 |TransformMatrix *|  Matrix4x4|
-* Se você quiser animar a propriedade TransformMatrix toda como uma Matrix4x4, precisará usar uma animação de expressão para fazer isso. Caso contrário, você poderá se concentrar células individuais da matriz e usar animações de quadro-chave ou expressão.  
+*Se você quiser animar a propriedade TransformMatrix toda como uma Matrix4x4, precisará usar uma ExpressionAnimation para fazer isso. Caso contrário, você poderá se concentrar células individuais da matriz e usar KeyFrame ou ExpressionAnimation.  
 
 ###InsetClip
 |Propriedades InsetClip animáveis|   Tipo|
@@ -66,7 +70,7 @@ As animações de composição podem ser aplicadas à maioria dos objetos de Com
 |TopInset|  Escalar|
 
 ##Propriedades do subcanal Visual
-Além de poder animar propriedades do Visual, você também pode direcionar os componentes do *subcanal* dessas propriedades para animações. Por exemplo, digamos que você simplesmente deseje animar o deslocamento X de um Visual em vez do deslocamento inteiro. A animação pode direcionar a propriedade Deslocamento Vector3 ou o componente X Escalar da propriedade Deslocamento. Além de poder direcionar um componente de subcanal individual de uma propriedade, você também pode direcionar vários componentes. Por exemplo, você pode direcionar o componente X e Y de Escala.
+Além de poder animar propriedades do [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), você também pode direcionar os componentes do *subcanal* dessas propriedades para animações. Por exemplo, digamos que você simplesmente deseje animar o deslocamento X de um [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) em vez do deslocamento inteiro. A animação pode direcionar a propriedade Deslocamento Vector3 ou o componente X Escalar da propriedade Deslocamento. Além de poder direcionar um componente de subcanal individual de uma propriedade, você também pode direcionar vários componentes. Por exemplo, você pode direcionar o componente X e Y de Escala.
 
 |Propriedades do subcanal Visual animável|  Tipo|
 |----------------------------------------|------|
@@ -91,7 +95,7 @@ Além de poder animar propriedades do Visual, você também pode direcionar os c
 * Animar o subcanal de cor da propriedade Pincel é um pouco diferente. Você anexa StartAnimation() ao Visual.Brush e declara a propriedade para animar no parâmetro como "Cor". (Mais detalhes sobre como animar cor são abordados posteriormente)
 
 ##Conjuntos de Propriedades e Efeitos
-Além de animar propriedades de Visual de Composição e InsetClip, você também pode animar propriedades em um PropertySet ou um Efeito. Para conjuntos de propriedades, você pode definir uma propriedade e armazená-la em um Conjunto de Propriedades de Composição – essa propriedade pode ser o destino de uma animação posteriormente (e também ser referenciada simultaneamente em outra). Isso será discutido em mais detalhes nas seções a seguir.  
+Além de animar propriedades de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) de Composição e InsetClip, você também pode animar propriedades em um PropertySet ou um Efeito. Para conjuntos de propriedades, você pode definir uma propriedade e armazená-la em um Conjunto de Propriedades de Composição – essa propriedade pode ser o destino de uma animação posteriormente (e também ser referenciada simultaneamente em outra). Isso será discutido em mais detalhes nas seções a seguir.  
 
 Para efeitos, você pode definir efeitos gráficos usando as APIs de Efeitos de Composição (veja aqui para obter a [Visão geral de Efeitos](./composition-effects.md). Além de definir Efeitos, você também pode animar os valores de propriedade do Efeito. Isso é feito direcionando-se o componente de propriedades da propriedade Pincel em sprites visuais.
 
@@ -104,7 +108,7 @@ Antes de entrar em detalhes sobre como construir e usar os diferentes tipos de a
 3.  Defina o conteúdo para animação – Insira seus quadros-chave ou a cadeia de caracteres de expressão  
     *  Para animações de quadro-chave, certifique-se de que o valor de seus quadros-chave sejam do mesmo tipo que a propriedade que você deseja animar.  
     *  Para Animações de expressão, certifique-se de que sua cadeia de caracteres de expressão seja resolvida para o mesmo tipo que a propriedade que você deseja animar.  
-4.  Inicie sua animação no Visual cuja propriedade você deseja animar – chame StartAnimation e inclua como parâmetros: o nome da propriedade que você deseja animar (na forma de cadeia de caracteres) e o objeto para a sua animação.  
+4.  Inicie sua animação no [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) cuja propriedade você deseja animar – chame StartAnimation e inclua como parâmetros: o nome da propriedade que você deseja animar (na forma de cadeia de caracteres) e o objeto para a sua animação.  
 
 ```cs
 // KeyFrame Animation Example to target Opacity property
@@ -155,11 +159,12 @@ Um exemplo que insere um quadro-chave no ponto intermediário da animação:
 animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f));
 ```
 
-
-            **Observação:** ao animar cor com Animações de quadro-chave, há alguns itens adicionais a serem lembrados:
-1.  Você anexa StartAnimation ao Visual.Brush em vez de Visual, com **Cor** como o parâmetro de propriedade que você deseja animar.
+**Observação:** ao animar cor com Animações de quadro-chave, há alguns itens adicionais a serem lembrados:
+1.  Você anexa StartAnimation ao Visual.Brush em vez de [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), com **Cor** como o parâmetro de propriedade que você deseja animar.
 2.  O componente "value" do quadro-chave é definido pelo objeto Cores do namespace Windows. UI.
-3.  Você tem a opção de definir o espaço de cores pelo qual a interpolação passará definindo a propriedade InterpolationColorSpace. Os valores possíveis incluem: a.  CompositionColorSpace.Rgb b.  CompositionColorSpace.Hsl
+3.  Você tem a opção de definir o espaço de cores pelo qual a interpolação passará definindo a propriedade InterpolationColorSpace. Os valores possíveis incluem:
+    *   CompositionColorSpace.Rgb
+    *   CompositionColorSpace.Hsl
 
 
 ##Propriedades da animação de quadro-chave
@@ -169,7 +174,8 @@ Depois de definir sua animação de quadro-chave e os quadros-chave individuais,
 *   IterationBehavior – comportamento de contagem ou de repetição infinita de uma animação
 *   IterationCount – número de vezes finitas que uma animação de quadro-chave será repetida
 *   Contagem de quadros-chave – leitura do número de quadros chave em determinada animação de quadro-chave
-*   StopBehavior – especifica o comportamento de um valor de propriedade de animação quando StopAnimation é chamado.  
+*   StopBehavior – especifica o comportamento de um valor de propriedade de animação quando StopAnimation é chamado  
+*   Direção – especifica a direção da animação para reprodução  
 
 Um exemplo que define a duração da animação como 5 segundos:  
 ```cs
@@ -181,13 +187,15 @@ Funções de easing (CompositionEasingFunction) indicam como valores intermediá
 Há dois tipos de funções de easing com suporte:
 *   Linear
 *   Bézier cúbica  
+*   Etapa  
 
 Béziers cúbicas são uma função paramétrica frequentemente usada para descrever curvas suaves que podem ser dimensionadas. Ao usar com animações de quadro-chave de composição, você define dois pontos de controle que são objetos Vector2. Esses pontos de controle são usados para definir a forma da curva. É recomendável usar sites semelhantes como [isso](http://cubic-bezier.com/#0,-0.01,.48,.99) para visualizar como os dois pontos de controle formam a curva de uma Bézier cúbica.
 
-Para criar uma função de easing, utilize o método de construtor fora de seu objeto Compositor. Dois exemplos abaixo que criam uma função de easing Linear e uma Bézier cúbica de easeIn básica.  
+Para criar uma função de easing, utilize o método de construtor fora de seu objeto Compositor. Dois exemplos abaixo que criam uma função de easing Linear e uma função de easing da Bézier cúbica.    
 ```cs
 var linear = _compositor.CreateLinearEasingFunction();
 var easeIn = _compositor.CreateCubicBezierEasingFunction(new Vector2(0.5f, 0.0f), new Vector2(1.0f, 1.0f));
+var step = _compositor.CreateStepEasingFunction();
 ```
 Para adicionar sua função de easing ao seu quadro-chave, basta adicionar o terceiro parâmetro ao quadro-chave ao inseri-lo na animação.   
 Um exemplo que adiciona uma função de easing easeIn com o quadro-chave:  
@@ -196,11 +204,10 @@ animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f), easeIn);
 ```
 
 ##Iniciando e interrompendo animações de quadro-chave
-Depois de definir a animação e quadros-chave, você estará pronto para vincular sua animação. Ao iniciar sua animação, você especifica o Visual a ser animado, a propriedade de destino a ser animada e uma referência para a animação. Você pode fazer isso chamando a função StartAnimation(). Lembre-se de que chamar StartAnimation() em uma propriedade desconectará e removerá todas as animações em execução anteriormente.  
+Depois de definir a animação e quadros-chave, você estará pronto para vincular sua animação. Ao iniciar sua animação, você especifica o [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) a ser animado, a propriedade de destino a ser animada e uma referência para a animação. Você pode fazer isso chamando a função StartAnimation(). Lembre-se de que chamar StartAnimation() em uma propriedade desconectará e removerá todas as animações em execução anteriormente.  
+**Observação:** a referência para a propriedade que você escolher para animar estará na forma de uma cadeia de caracteres.  
 
-            **Observação:** a referência para a propriedade que você escolher para animar estará na forma de uma cadeia de caracteres.  
-
-Um exemplo que define e inicia uma animação na propriedade Deslocamento do Visual:  
+Um exemplo que define e inicia uma animação na propriedade Deslocamento do [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx):  
 ```cs
 targetVisual.StartAnimation("Offset", animation);
 ```  
@@ -208,7 +215,7 @@ targetVisual.StartAnimation("Offset", animation);
 Se você quiser direcionar uma propriedade de subcanal, adicione o subcanal à cadeia de caracteres que define a propriedade que você deseja animar. Nos exemplos acima, a sintaxe seria alterada para StartAnimation("Offset.X, animation2), em que animation2 é uma ScalarKeyFrameAnimation.  
 
 Depois de iniciar a animação, você também pode interrompê-la antes do término. Para tal, use a função StopAnimation().  
-Um exemplo que interrompe uma animação na propriedade Deslocamento do Visual:    
+Um exemplo que interrompe uma animação na propriedade Deslocamento do [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx):    
 ```cs
 targetVisual.StopAnimation("Offset");
 ```
@@ -295,8 +302,7 @@ Animações de expressão são um novo tipo de animação que a equipe de compos
 
 **Então por que as animações de expressão são úteis?** O consumo de energia real das animações de expressão vem de sua capacidade de criar um relacionamento matemático que inclua referências a parâmetros ou propriedades em outros objetos. Isso significa que você pode ter uma equação que faça referência a valores de propriedades em outros objetos de composição, variáveis locais ou até mesmo valores compartilhados em conjuntos de propriedades de composição. Devido a esse modelo de referência e porque a equação é avaliada a cada quadro, se os valores que definem uma equação mudarem, a saída da equação também será alterada. Isso abre possibilidades maiores além das tradicionais animações de quadro-chave onde os valores devem ser distintos e predefinidos. Por exemplo, experiências como cabeçalhos fixos e paralaxe podem ser facilmente descrita usando as animações de expressão.
 
-
-            **Observação:** usamos os termos "Expressão" ou "Cadeia de caracteres de expressão" como referência à sua equação matemática que define o objeto de animação de expressão.
+**Observação:** usamos os termos "Expressão" ou "Cadeia de caracteres de expressão" como referência à sua equação matemática que define o objeto de animação de expressão.
 
 ##Criando e anexando sua animação de expressão
 Antes de abordarmos a sintaxe de criação de animações de expressão, há alguns princípios fundamentais a serem mencionados:  
@@ -311,7 +317,7 @@ Um exemplo do construtor no qual é definida uma expressão muito básica que so
 ```cs
 var expression = _compositor.CreateExpressionAnimation("0.2 + 0.3");
 ```
-Semelhante a animações de quadro-chave, depois de definir sua animação de expressão, você precisa anexá-la ao Visual e declarar a propriedade que deseja que a animação anime. A seguir, vamos continuar com o exemplo acima e anexar nossa animação de expressão à propriedade Opacidade do Visual (um tipo escalar):  
+Semelhante a animações de quadro-chave, depois de definir sua animação de expressão, você precisa anexá-la ao Visual e declarar a propriedade que deseja que a animação anime. A seguir, vamos continuar com o exemplo acima e anexar nossa animação de expressão à propriedade Opacidade do [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) (um tipo escalar):  
 ```cs
 targetVisual.StartAnimation("Opacity", expression);
 ```
@@ -329,6 +335,7 @@ A cadeia de expressão dá suporte ao uso de operadores típicos que devem descr
 |Unários| -|
 |Multiplicativos|    * /|
 |Aditivos|  + -|
+|Mod| %|  
 
 Da mesma forma, quando a expressão é avaliada, ela seguirá a precedência do operador e associação conforme definido na especificação da linguagem C#. Em outras palavras, ela seguirá a ordem básica das operações.  
 
@@ -338,7 +345,7 @@ No exemplo a seguir, quando avaliados, os parênteses serão resolvidos primeiro
 ```
 
 ###Parâmetros de propriedade
-Parâmetros de propriedade são um dos componentes mais sofisticados das animações de expressão. Na cadeia de caracteres de expressão, você pode fazer referência a valores de propriedades de outros objetos, como Visual de composição, conjunto de propriedades de composição ou outros objetos C#.   
+Parâmetros de propriedade são um dos componentes mais sofisticados das animações de expressão. Na cadeia de caracteres de expressão, você pode fazer referência a valores de propriedades de outros objetos, como [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) de composição, conjunto de propriedades de composição ou outros objetos C#.   
 
 Para usá-los em uma cadeia de caracteres de expressão, basta definir as referências como parâmetros para a animação de expressão. Isso é feito por meio do mapeamento da cadeia de caracteres usada na expressão para o objeto real. Isso permite que o sistema, ao avaliar a equação, saiba o que inspecionar para calcular o valor. Existem diferentes tipos de parâmetros que correspondem ao tipo do objeto que você deseja incluir na equação:  
 
@@ -349,9 +356,10 @@ Para usá-los em uma cadeia de caracteres de expressão, basta definir as refer�
 |Matrix|    SetMatrix3x2Parameter(String ref, Matrix3x2 obj)<br/>SetMatrix4x4Parameter(String ref, Matrix4x4 obj)|
 |Quatérnion|    SetQuaternionParameter(String ref, Quaternion obj)|
 |Cor| SetColorParameter(String ref, Color obj)|
-|CompositionObject| SetReferenceParameter(String ref, Composition object obj)|
+|CompositionObject| SetReferenceParameter(cadeia de caracteres ref, Composition object obj)|
+|Booliano| SetBooleanParameter (ref. de cadeia de caracteres, objeto booleano)|  
 
-No exemplo a seguir, criamos uma animação de expressão que faz referência ao deslocamento de dois outros elementos visuais de composição e um objeto System.Numerics Vector3 básico.  
+No exemplo a seguir, criamos uma animação de expressão que faz referência ao deslocamento de dois outros elementos [visuais](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) de composição e um objeto System.Numerics Vector3 básico.  
 ```cs
 var commonOffset = new Vector3(25.0, 17.0, 10.0);
 var expression = _compositor.CreateExpressionAnimation("SomeOffset / ParentOffset + additionalOffset);
@@ -374,7 +382,7 @@ expression.SetReferenceParameter("sharedProperties", _sharedProperties);
 
 Por fim, ao fazer referência a propriedades de outros objetos, também é possível fazer referência às propriedades de subcanal na cadeia de caracteres de expressão ou como parte do parâmetro de referência.  
  
-No exemplo a seguir, fazemos referência ao subcanal x de propriedades Deslocamento de dois Visuais – um na cadeia de caracteres de expressão em si e o outro ao criar a referência de parâmetro.
+No exemplo a seguir, fazemos referência ao subcanal x de propriedades Deslocamento de dois [Visuais](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) – um na cadeia de caracteres de expressão em si e o outro ao criar a referência de parâmetro.
 Observe que, ao referenciar o componente X do deslocamento, podemos alterar o tipo de parâmetro para um parâmetro Escalar em vez de um Vector3 como no exemplo anterior:  
 ```cs
 var expression = _compositor.CreateExpressionAnimation("xOffset/ ParentOffset.X");
@@ -535,7 +543,92 @@ exp.Expression = “ScrollManipulation.Translation.Y / ScrollBounds”;
 _target.StartAnimation(“Opacity”, exp);
 ```
 
+##Usando animações implícitas  
+As animações são uma ótima maneira para você descrever um comportamento aos seus usuários. Há várias maneiras de animar o seu conteúdo, mas todos os métodos abordados até agora exigem que você *inicie* explicitamente sua animação. Embora isso permita que você tenha controle total para definir quando uma animação será iniciada, torna-se difícil de gerenciar quando uma animação é necessária sempre que um valor de propriedade for alterado. Isso ocorre com bastante frequência quando aplicativos são separados da "personalidade" do aplicativo que define as animações da "lógica" do aplicativo que define os principais componentes e a infraestrutura do aplicativo. Animações implícitas fornecem uma maneira mais fácil e mais limpa de definir a animação separadamente da lógica principal do aplicativo. Você pode vincular essas animações para executar gatilhos de alteração de propriedade específica.
 
+###Configurando seu ImplicitAnimationCollection  
+Animações implícitas são definidas por outros objetos **CompositionAnimation** (**KeyFrameAnimation** ou **ExpressionAnimation**). **ImplicitAnimationCollection** representa o conjunto de objetos **CompositionAnimation** que serão iniciados quando o *gatilho* de alteração de propriedades for atendido. Note que, ao definir animações, certifique-se de definir a propriedade **Target**, isso define a propriedade [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) a qual a animação se destinará quando ela for iniciada. A propriedade **Target** só pode ser uma propriedade [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) que pode ser animada.
+No trecho de código abaixo, um único **Vector3KeyFrameAnimation** é criado e definido como parte de **ImplicitAnimationCollection**. **ImplicitAnimationCollection** é então anexado à propriedade **ImplicitAnimation** do [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), de forma que, quando o gatilho for atendido, a animação será iniciada.  
+```csharp
+Vector3KeyFrameAnimation animation = _compositor.CreateVector3KeyFrameAnimation();
+animation.DelayTime =  TimeSpan.FromMilliseconds(index);
+animation.InsertExpressionKeyFrame(1.0f, "this.FinalValue");
+animation.Target = "Offset";
+ImplicitAnimationCollection implicitAnimationCollection = compositor.CreateImplicitAnimationCollection();
+
+visual.ImplicitAnimations = implicitAnimationCollection;
+```
+
+
+###Disparando quando ImplicitAnimation iniciar  
+Gatilho é o termo usado para descrever quando as animações começarão implicitamente. No momento os gatilhos são definidos como alterações em qualquer uma das propriedades animáveis em [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) – essas alterações ocorrem por conjuntos explícitos na propriedade. Por exemplo, ao colocar um gatilho de **Deslocamento** em **ImplicitAnimationCollection** e associar uma animação a ele, as atualizações para **Deslocamento** do [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) direcionado acionará a animação para seu novo valor usando a animação na coleção.  
+No exemplo acima, podemos adicionar esta linha adicional para definir o gatilho para a propriedade **Offset** do [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) de destino.  
+```csharp
+implicitAnimationCollection["Offset"] = animation;
+```  
+Observe que um **ImplicitAnimationCollection** pode ter vários gatilhos. Isso significa que a animação implícita ou o grupo de animações pode iniciar as alterações nas propriedades diferentes. No exemplo acima, o desenvolvedor pode potencialmente adicionar um gatilho para outras propriedades como Opacidade.  
+###this.FinalValue     
+No primeiro exemplo implícito, nós usamos um ExpressionKeyFrame para o KeyFrame "1.0" e atribuímos a expressão  **this.FinalValue** a ele. **this.FinalValue** é uma palavra-chave reservada no idioma da expressão que fornece comportamento diferenciado para animações implícitas. **this.FinalValue** associa o valor definido na propriedade da API à animação. Isso ajuda na criação de modelos reais. **this.FinalValue** não é útil em animações explícitas uma vez que a propriedade da API é definida instantaneamente enquanto no caso de animações implícitas ela é adiada.  
+ 
+##Usando grupos de animação  
+O **CompositionAnimationGroup** fornece uma maneira fácil para os desenvolvedores agruparem uma lista de animações que podem ser usadas com animações implícitas ou explícitas.   
+###Criando e preenchendo grupos de animação  
+O método **CreateAnimationGroup** do objeto Compositor permite que os desenvolvedores criem um grupo de animação:  
+```sharp
+CompositionAnimationGroup animationGroup = _compositor.CreateAnimationGroup();
+animationGroup.Add(animationA);
+animationGroup.Add(animationB);
+```   
+Depois que o grupo for criado, animações individuais poderão ser adicionadas ao grupo de animação. Lembre-se de que você não precisa iniciar explicitamente as animações individuais – todas elas serão iniciadas quando **StartAnimationGroup** for chamado para o cenário explícito ou quando o gatilho for atendido para o implícito.  
+Observação: certifique-se de que as animações que são adicionadas ao grupo tenham a propriedade **Target** definida. Isso definirá qual propriedade do [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) alvo elas animarão.
+
+###Usando grupos de animação com animações implícitas  
+Os desenvolvedores podem criar animações implícitas de forma que, quando um gatilho for atendido, um conjunto de animações na forma de um grupo de animação será iniciado. Nesse caso, defina o grupo de animação como o conjunto de animações que é iniciado quando o gatilho é atendido.  
+```csharp
+implicitAnimationCollection["Offset"] = animationGroup;
+```   
+###Usando grupos de animação com animações explícitas  
+Os desenvolvedores podem criar animações explícitas de forma que as animações individuais adicionadas sejam iniciadas quando **StartAnimationGroup** for chamado. Observe que nesta chamada de **StartAnimation**, não há nenhuma propriedade direcionada para o grupo uma vez que as animações individuais podem estar direcionadas a propriedades diferentes. Certifique-se de que a propriedade de destino para cada animação seja definida.  
+```csharp
+visual.StartAnimationGourp(AnimationGroup);
+```  
+
+###Amostra de E2E 
+Este exemplo mostra como animar a propriedade Offset implicitamente quando um novo valor for definido.  
+```csharp 
+class PropertyAnimation
+{
+    PropertyAnimation(Compositor compositor, SpriteVisual heroVisual, SpriteVisual listVisual)
+    {
+        // Define ImplicitAnimationCollection
+        ImplicitAnimationCollection implicitAnimations = 
+        compositor.CreateImplicitAnimationCollection();
+
+        // Trigger animation when the “Offset” property changes.
+        implicitAnimations["Offset"] = CreateAnimation(compositor);
+
+        // Assign ImplicitAnimations to a visual. Unlike Visual.Children,    
+        // ImplicitAnimations can be shared by multiple visuals so that they 
+        // share the same implicit animation behavior (same as Visual.Clip).
+        heroVisual.ImplicitAnimations = implicitAnimations;
+
+        // ImplicitAnimations can be shared among visuals 
+        listVisual.ImplicitAnimations = implicitAnimations;
+
+        listVisual.Offset = new Vector3(20f, 20f, 20f);
+    }
+
+    Vector3KeyFrameAnimation CreateAnimation(Compositor compositor)
+    {
+        Vector3KeyFrameAnimation animation = compositor.CreateVector3KeyFrameAnimation();
+        animation.InsertExpressionKeyFrame(0f, "this.StartingValue");
+        animation.InsertExpressionKeyFrame(1f, "this.FinalValue");
+        animation.Target = “Offset”;
+        animation.Duration = TimeSpan.FromSeconds(0.25);
+        return animation;
+    }
+}
+```   
 
  
  
@@ -545,29 +638,29 @@ _target.StartAnimation(“Opacity”, exp);
 
 |Operações de construtor e função| Descrição|  
 |-----------------------------------|--------------|  
-|Abs(Float value)|  Retorna um Float que representa o valor absoluto do parâmetro float|  
-|Clamp(Float value, Float min, Float max)|  Retorna um valor flutuante que é maior do que o mínimo e menor do que o máximo ou o mínimo se o valor for menor do que o mínimo ou máximo se o valor for maior do que o máximo|  
-|Max (Float value1, Float value2)|  Retorna o maior flutuante entre value1 e value2.|  
-|Min (Float value1, Float value2)|  Retorna o menor flutuante entre value1 e value2.|  
-|Lerp(Float value1, Float value2, Float progress)|  Retorna um flutuante que representa o cálculo de interpolação linear calculada entre os dois valores escalares com base no andamento (Observação: o andamento é entre 0,0 e 1,0)|  
+|Abs(Float value)| Retorna um Float que representa o valor absoluto do parâmetro float|  
+|Clamp(Float value, Float min, Float max)| Retorna um valor flutuante que é maior do que o mínimo e menor do que o máximo ou o mínimo se o valor for menor do que o mínimo ou máximo se o valor for maior do que o máximo|  
+|Max (Float value1, Float value2)| Retorna o maior flutuante entre value1 e value2.|  
+|Min (Float value1, Float value2)| Retorna o menor flutuante entre value1 e value2.|  
+|Lerp(Float value1, Float value2, Float progress)| Retorna um flutuante que representa o cálculo de interpolação linear calculada entre os dois valores escalares com base no andamento (Observação: o andamento é entre 0,0 e 1,0)|  
 |Slerp(Float value1, Float value2, Float progress)| Retorna um flutuante que representa a interpolação esférica calculada entre os dois valores flutuantes com base no andamento (Observação: o andamento é entre 0,0 e 1,0)|  
-|Mod(Float value1, Float value2)|   Retorna o flutuante resultante da divisão de value1 e value2|  
-|Ceil(Float value)|     Retorna o parâmetro Float arredondado para o próximo número inteiro maior|  
-|Floor(Float value)|    Retorna o parâmetro Float para o próximo número inteiro menor|  
+|Mod(Float value1, Float value2)| Retorna o flutuante resultante da divisão de value1 e value2|  
+|Ceil(Float value)| Retorna o parâmetro Float arredondado para o próximo número inteiro maior|  
+|Floor(Float value)| Retorna o parâmetro Float para o próximo número inteiro menor|  
 |Sqrt(Float value)| Retorna a raiz quadrada do parâmetro Float|  
-|Square(Float value)|   Retorna o quadrado do parâmetro Float|  
-|Sin(Float value1)||
-|Asin(Float value2)|    Retorna o Sin ou ArcSin do parâmetro Float|
-|Cos(Float value1)||
-|ACos(Float value2)|    Retorna o Cos ou ArcCos do parâmetro Float|
-|Tan(Float value1)||
-|ATan(Float value2)|    Retorna o Tan ou ArcTan do parâmetro Float|
-|Round(Float value)|    Retorna o parâmetro Float arredondado para o número inteiro mais próximo|
-|Log10(Float value)|    Retorna o resultado de Log (base 10) do parâmetro Float|
-|Ln(Float value)|   Retorna o resultado de Log Natural do parâmetro Float|
+|Square(Float value)| Retorna o quadrado do parâmetro Float|  
+|Sin(Float value1)| Retorna o Sin do parâmetro Float|
+|Asin(Float value2)| Retorna o ArcSin do parâmetro Float|
+|Cos(Float value1)| Retorna o Cos do parâmetro Float|
+|ACos(Float value2)| Retorna o ArcCos do parâmetro Float|
+|Tan(Float value1)| Retorna o Tan do parâmetro Float|
+|ATan(Float value2)| Retorna o ArcTan do parâmetro Float|
+|Round(Float value)| Retorna o parâmetro Float arredondado para o número inteiro mais próximo|
+|Log10(Float value)| Retorna o resultado de Log (base 10) do parâmetro Float|
+|Ln(Float value)| Retorna o resultado de Log Natural do parâmetro Float|
 |Pow(Float value, Float power)| Retorna o resultado do parâmetro Float elevado a uma potência específica|
-|ToDegrees(Float radians)|  Retorna o parâmetro Float convertido em graus|
-|ToRadians (graus Float)|  Retorna o parâmetro Float convertido em radianos|
+|ToDegrees(Float radians)| Retorna o parâmetro Float convertido em graus|
+|ToRadians (graus Float)| Retorna o parâmetro Float convertido em radianos|
 
 ###Vector2  
 
@@ -631,7 +724,12 @@ _target.StartAnimation(“Opacity”, exp);
 |Lerp(Matrix3x2 value1, Matrix3x2 value2, Float progress)|  Retorna um Matrix3x2 que representa o cálculo de interpolação linear calculada entre os dois valores Matrix3x2 com base no andamento (Observação: o andamento é entre 0,0 e 1,0)|
 |Matrix3x2(Float M11, Float M12, Float M21, Float M22, Float M31, Float M32)|   Constroi uma Matrix3x2 usando 6 parâmetros Float|
 |Matrix3x2.CreateFromScale(Vector2 scale)|  Constrói uma Matrix3x2 de uma escala que representa Vector2<br/>\[scale.X, 0.0<br/> 0.0, scale.Y<br/> 0.0, 0.0 \]|
-|Matrix3x2.CreateFromTranslation(Vector2 translation)|  Constrói uma Matrix3x2 de uma conversão que representa Vector2<br/>\[1.0, 0.0,<br/> 0.0, 1.0,<br/> translation.X, translation.Y\]|
+|Matrix3x2.CreateFromTranslation(Vector2 translation)|  Constrói uma Matrix3x2 de uma conversão que representa Vector2<br/>\[1.0, 0.0,<br/> 0.0, 1.0,<br/> translation.X, translation.Y\]|  
+|Matrix3x2.CreateSkew(Float x, Float y, Vector2 centerpoint)| Constrói uma Matrix3x2 de dois Float e um Vector2 que representa a inclinação<br/>\[1.0, Tan(y),<br/>Tan(x), 1.0,<br/>-centerpoint.Y * Tan(x), -centerpoint.X * Tan(y)\]|  
+|Matrix3x2.CreateRotation(Float radians)| Constrói uma Matrix3x2 de uma rotação em radianos<br/>\[Cos(radians), Sin(radians),<br/>-Sin(radians), Cos(radians),<br/>0.0, 0.0 \]|   
+|Matrix3x2.CreateTranslation(Vector2 translation)| Mesmo que CreateFromTranslation|      
+|Matrix3x2.CreateScale(Vector2 scale)| Mesmo que CreateFromScale|    
+
     
 ###Matrix4x4  
 
@@ -644,6 +742,10 @@ _target.StartAnimation(“Opacity”, exp);
 |Matrix4x4.CreateFromScale(Vector3 scale)|  Constrói uma Matrix4x4 de uma escala que representa Vector3<br/>\[scale.X, 0.0, 0.0, 0.0,<br/> 0.0, scale.Y, 0.0, 0.0,<br/> 0.0, 0.0, scale.Z, 0.0,<br/> 0.0, 0.0, 0.0, 1.0\]|
 |Matrix4x4.CreateFromTranslation(Vector3 translation)|  Constrói uma Matrix4x4 de uma conversão que representa Vector3<br/>\[1.0, 0.0, 0.0, 0.0,<br/> 0.0, 1.0, 0.0, 0.0,<br/> 0.0, 0.0, 1.0, 0.0,<br/> translation.X, translation.Y, translation.Z, 1.0\]|
 |Matrix4x4.CreateFromAxisAngle(Vector3 axis, Float angle)|  Constroi uma Matrix4x4 de um eixo Vector3 e Float que representa um ângulo|
+|Matrix4x4(Matrix3x2 matrix)| Constroi uma Matrix4x4 usando uma Matrix3x2<br/>\[matrix.11, matrix.12, 0, 0,<br/>matrix.21, matrix.22, 0, 0,<br/>0, 0, 1, 0,<br/>matrix.31, matrix.32, 0, 1\]|  
+|Matrix4x4.CreateTranslation(Vector3 translation)| Mesmo que CreateFromTranslation|  
+|Matrix4x4.CreateScale(Vector3 scale)| Mesmo que CreateFromScale|  
+
 
 ###Quatérnion  
 
@@ -673,6 +775,6 @@ _target.StartAnimation(“Opacity”, exp);
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

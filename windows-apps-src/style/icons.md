@@ -5,8 +5,9 @@ title: "Ícones"
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: e5e601bf3ff9d0b1518c86130a5b0fefbb86a773
+ms.openlocfilehash: 9d19107a29c471a811e87fc548656ff2d970754d
 
 ---
 
@@ -24,10 +25,10 @@ ms.openlocfilehash: e5e601bf3ff9d0b1518c86130a5b0fefbb86a773
         <td>48px x 48px</td>
     </tr>
     <tr> 
-        <td>![Icons at 16x16 effective pixels](images/icons-16x16.png)</td>
-        <td>![Icons at 24x24 effective pixels](images/icons-24x24.png)</td>
-        <td>![Icons at 32x32 effective pixels](images/icons-32x32.png)</td>
-        <td>![Icons at 48x48 effective pixels](images/icons-48x48.png)</td>
+        <td>![Ícones de 16 x 16 pixels efetivos](images/icons-16x16.png)</td>
+        <td>![Ícones de 24 x 24 pixels efetivos](images/icons-24x24.png)</td>
+        <td>![Ícones de 32 x 32 pixels efetivos](images/icons-32x32.png)</td>
+        <td>![Ícones de 48 x 48 pixels efetivos](images/icons-48x48.png)</td>
     </tr>
 </table>
 
@@ -46,17 +47,17 @@ Use a forma que corresponda à orientação do ícone e componha ao redor desses
         <td>Triângulo</td>
     </tr>
     <tr>
-        <td>![A circle](images/icons-common-shapes-examples-1.png)<td>
-        <td>![A square](images/icons-common-shapes-examples-2.png)</td>
-        <td>![A triangle ](images/icons-common-shapes-examples-3.png)</td>
+        <td>![Um círculo](images/icons-common-shapes-examples-1.png)<td>
+        <td>![Um quadrado](images/icons-common-shapes-examples-2.png)</td>
+        <td>![Um triângulo ](images/icons-common-shapes-examples-3.png)</td>
     </tr>
         <tr>
         <td>Retângulo horizontal<td>
         <td colspan="2">Retângulo vertical</td>        
         </tr>
     <tr>
-        <td>![A horizontal rectangle](images/icons-common-shapes-examples-4.png)<td>
-        <td colspan="2">![A vertical rectangle](images/icons-common-shapes-examples-5.png)</td>
+        <td>![Um retângulo horizontal](images/icons-common-shapes-examples-4.png)<td>
+        <td colspan="2">![Um retângulo vertical](images/icons-common-shapes-examples-5.png)</td>
          
     </tr>
 
@@ -74,8 +75,8 @@ Essas linhas podem ser combinadas, unidas, giradas e refletidas para criar ícon
     <tr>
         <td>**1:1**<br/>45 °</td>
         <td>**1:2**<br />26,57 ° (vertical)<br/>63,43 ° (horizontal)</td>
-        <td>**1:3**<br/>18,43 ° (vertical)<br/>71,57 ° (horizontal)</td>
-        <td>**1:4**<br/>14,04 ° (vertical)<br/>75,96 ° (horizontal)</td>
+        <td>**1:3**<br/>18,43 ° (vertical)<br/>71,57° (horizontal)</td>
+        <td>**1:4**<br/>14,04° (vertical)<br/>75,96° (horizontal)</td>
     </tr>
     <tr>
         
@@ -90,10 +91,10 @@ Essas linhas podem ser combinadas, unidas, giradas e refletidas para criar ícon
 
 <table>
     <tr>
-        <td>![A 1:1 angle example](images/icons-angles-examples-1.png)</td>
-        <td>![A 1:2 angle example](images/icons-angles-examples-2.png)</td>
-        <td>![A 1:3 angle example](images/icons-angles-examples-3.png)</td>
-        <td>![A 1:4 angle example](images/icons-angles-examples-4.png)</td>
+        <td>![Um exemplo de ângulo de 1:1](images/icons-angles-examples-1.png)</td>
+        <td>![Um exemplo de ângulo de 1:2](images/icons-angles-examples-2.png)</td>
+        <td>![Um exemplo de ângulo de 1:3](images/icons-angles-examples-3.png)</td>
+        <td>![Um exemplo de ângulo de 1:4](images/icons-angles-examples-4.png)</td>
     </tr>
 </table>
 
@@ -107,12 +108,12 @@ Linhas curvas são construídas a partir das seções de um círculo completo e 
         <td>1/8 de círculo</td>
     </tr>
     <tr>
-        <td>![1/4 circle](images/icons-curves-14circle.png)</td>
-        <td>![1/8 circle](images/icons-curves-18circle.png)</td>
+        <td>![1/4 de círculo](images/icons-curves-14circle.png)</td>
+        <td>![1/8 de círculo](images/icons-curves-18circle.png)</td>
     </tr>
     <tr>
-        <td>![1/4 cirlce example](images/icons-curves-examples-1.png)</td>
-        <td>![1/8 circle example](images/icons-curves-examples-2.png)</td>
+        <td>![Exemplo de 1/4 de círculo](images/icons-curves-examples-1.png)</td>
+        <td>![Exemplo de 1/8 de círculo](images/icons-curves-examples-2.png)</td>
     </tr>    
 </table>
 
@@ -144,8 +145,8 @@ Os selos de status utilizam um objeto preenchido colorido que está sobre o íco
     <td>Selos de ações comuns</td>
 </tr>
 <tr>
-    <td>![Status badge ](images/icons-badge-common-states-1.png)</td>
-    <td>![Action badge ](images/icons-badge-common-states-2.png)</td>
+    <td>![Selo de status ](images/icons-badge-common-states-1.png)</td>
+    <td>![Selo de ação ](images/icons-badge-common-states-2.png)</td>
 </tr>
 </table>
 <p></p>
@@ -157,8 +158,8 @@ Os selos coloridos devem ser usados apenas para transmitir o estado de um ícone
 <table>
 <tr><td>Verde - #128B44</td><td>Azul - #2C71B9</td><td>Amarelo - #FDC214</td></tr>
 <tr><td>Positivo: feito, concluído </td><td>Neutro: ajuda, notificação </td><td>Advertência: alerta, aviso </td></tr>
-<tr><td>![Green status](images/icons-color-inbadging-1.png)</td><td>![Blue status](images/icons-color-inbadging-2.png)</td>
-<td>![Yellow status](images/icons-color-inbadging-3.png)</td></tr>
+<tr><td>![Status verde](images/icons-color-inbadging-1.png)</td><td>![Status azul](images/icons-color-inbadging-2.png)</td>
+<td>![Status amarelo](images/icons-color-inbadging-3.png)</td></tr>
 </table>
 <p></p>
 
@@ -176,6 +177,6 @@ Os selos devem ser dimensionados com 10 a 18 px em uma grade de 32px x 32px.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

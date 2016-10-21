@@ -1,16 +1,16 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Arquivos, pastas e bibliotecas
 description: "Aprenda como ler e gravar configurações do aplicativo, seletores de pastas e arquivos e sobre locais especiais de área restrita, como a biblioteca de vídeo/música."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: ea52cafab084f202705282d63f4a37ec0d65bd03
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: 32c6e33f9506abc1876075f6ca11656241921005
 
 ---
  # Arquivos, pastas e bibliotecas
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/br227346), [Windows.Storage.Streams](https://msdn.microsoft.com/library/windows/apps/br241791) e [Windows.Storage.Pickers](https://msdn.microsoft.com/library/windows/apps/br207928) para ler e gravar texto e outros formatos de dados em arquivos e gerenciar arquivos e pastas. Nesta seção, você aprenderá também sobre como ler e gravar configurações de aplicativo, sobre seletores de arquivos e pastas e sobre os locais de área restrita especiais, como a biblioteca de vídeos/músicas.
 
@@ -20,9 +20,7 @@ Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/
 | [Criar, gravar e ler um arquivo](quickstart-reading-and-writing-files.md) | Leia e grave um arquivo usando o objeto [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171). |
 | [Obter propriedades do arquivo](quickstart-getting-file-properties.md) | Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo representado pelo objeto [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171). |
 | [Abrir arquivos e pastas com um seletor](quickstart-using-file-and-folder-pickers.md) | Acesse arquivos e pastas permitindo que o usuário interaja com um seletor. Você pode usar o [FolderPicker](https://msdn.microsoft.com/library/windows/apps/br207881) para obter acesso a uma pasta. |
-| [Salvar um arquivo com um seletor](quickstart-save-a-file-with-a-picker.md) | Use o [FileSavePicker](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir que os usuários especifiquem o nome e o local em que desejam que o aplicativo salve um arquivo. |
-| [Usar a EDP (proteção de dados empresariais) para proteger arquivos](protect-your-enterprise-data-with-edp.md) | Este tópico mostra exemplos das tarefas de codificação necessárias para obter alguns dos cenários mais comuns de EDP (proteção de dados empresariais) relacionados à transferência de arquivos. |
-| [Usar a EDP (proteção de dados empresariais) para proteger fluxos e buffers](use-edp-to-protect-streams-and-buffers.md) | Este tópico mostra exemplos das tarefas de codificação necessárias para obter alguns dos cenários mais comuns de EDP (proteção de dados empresariais) relacionados a fluxos e buffers. |
+| [Salvar um arquivo com um seletor](quickstart-save-a-file-with-a-picker.md) | Use o [FileSavePicker](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir que os usuários especifiquem o nome e o local em que desejam que o aplicativo salve um aplicativo. |
 | [Acessando o conteúdo do Grupo Doméstico](quickstart-accessing-homegroup-content.md) | Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo imagens, músicas e vídeos. |
 | [Determinando a disponibilidade de arquivos do Microsoft OneDrive](quickstart-determining-availability-of-microsoft-onedrive-files.md) | Determine se um arquivo do Microsoft OneDrive está disponível usando a propriedade [StorageFile.IsAvailable](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx). |
 | [Arquivos e pastas nas bibliotecas Música, Imagens e Vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | Adicione pastas existentes de música, fotos ou vídeos às bibliotecas correspondentes. Você também pode remover pastas de bibliotecas, obter a lista de pastas em uma biblioteca e descobrir fotos, músicas e vídeos armazenados. |
@@ -42,10 +40,6 @@ Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/
 
 
 
-
-
-
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

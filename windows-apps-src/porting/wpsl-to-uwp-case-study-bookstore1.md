@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
 description: "Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Windows Phone Silverlight muito simples para um aplicativo Plataforma Universal do Windows (UWP) do Windows 10."
 title: Estudo de caso Windows Phone Silverlight para UWP, Bookstore1
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dbffb4245efece2d39b4eba8979e323fd71626d0
+ms.openlocfilehash: 86cccfd462717483720c412c1de9eaf6bbc1c5cd
 
 ---
 
@@ -18,16 +19,13 @@ O aplicativo que portaremos consiste em uma **ListBox** associada a um modelo de
 
 Os tópicos anteriores desta seção descrevem as diferenças entre as plataformas, e eles fornecem detalhes e orientações sobre o processo de portabilidade de vários aspectos de um aplicativo de marcação XAML, através da associação a um modelo de exibição, para acessar dados. Um estudo de caso visa complementar essa orientação, mostrando-o em ação em um exemplo real. Os estudos de caso pressupõem que você tenha lido as orientações, já que elas não serão repetidas aqui.
 
-
-            **Observação** ao abrir Bookstore1Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md#targetplatformversion).
+**Observação** ao abrir Bookstore1Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md#targetplatformversion).
 
 ## Downloads
 
+[Baixe o aplicativo Windows Phone Silverlight Bookstore1WPSL8](http://go.microsoft.com/fwlink/?linkid=517053).
 
-            [Baixe o aplicativo Windows Phone Silverlight Bookstore1WPSL8](http://go.microsoft.com/fwlink/?linkid=517053).
-
-
-            [Baixe o aplicativo do Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
+[Baixe o aplicativo do Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
 
 ## O aplicativo Windows Phone Silverlight
 
@@ -86,7 +84,7 @@ Para esse aplicativo, o item nº 3 não é um débito, pois a barra de status (a
 | PhoneTextNormalStyle                | CaptionTextBlockStyle  |
 | PhoneTextTitle1Style                | HeaderTextBlockStyle   |
  
-Para definir esses estilos, basta digitá-los no editor de marcação ou usar as ferramentas de XAML do Visual Studio e defini-los sem digitar nada. Para fazer isso, clique com o botão direito do mouse em um **TextBlock** e clique em **Editar Estilo**&gt;**Aplicar Recurso**. Para fazer isso com os **TextBlock**s no modelo de item, clique com o botão direito do mouse em **ListBox**, depois clique em **Editar Modelos Adicionais**&gt;**Editar Itens Gerados (ItemTemplate)**.
+Para definir esses estilos, basta digitá-los no editor de marcação ou usar as ferramentas de XAML do Visual Studio e defini-los sem digitar nada. Para fazer isso, clique com o botão direito do mouse em um **TextBlock** e clique em **Editar Estilo** &gt; **Aplicar Recurso**. Para fazer isso com os **TextBlock**s no modelo de item, clique com o botão direito do mouse em **ListBox**, depois clique em **Edit Additional Templates** &gt; **Edit Generated Items (ItemTemplate)**.
 
 Existe uma tela de fundo branca 80% opaca atrás dos itens, pois o estilo padrão do controle **ListBox** define sua tela de fundo como o recurso do sistema `ListBoxBackgroundThemeBrush`. Defina `Background="Transparent"` na **ListBox** para limpar a tela de fundo. Para alinhar à esquerda os **TextBlock**s no modelo de item, edite-o novamente conforme descrito acima e defina uma **Margin** de `"9.6,0"` em ambos os **TextBlock**s.
 
@@ -138,6 +136,6 @@ O próximo estudo de caso é o [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

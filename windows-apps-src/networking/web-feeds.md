@@ -3,8 +3,9 @@ author: DelfCo
 description: "Recupere ou crie o conteúdo da Web mais atual e popular usando feeds sindicalizados gerados de acordo com os padrões RSS e Atom, usando os recursos no namespace Windows.Web.Syndication."
 title: Feeds RSS/Atom
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
+translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 625a18203bd2d60acc97a6243d4f3e1e0cf2b297
+ms.openlocfilehash: b20eb8a241d3cb7800904c26331ac39da93f4d44
 
 ---
 
@@ -94,13 +95,13 @@ try {
 }
 ```
 
-[!div class="tabbedCodeSnippets"] Em seguida, configuraremos a solicitação definindo as credenciais do Servidor (a propriedade [**ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243461)), as credenciais do proxy (a propriedade [**ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243459)) e os cabeçalhos HTTP (o método [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br243462)) necessários. Com os parâmetros de solicitação básicos configurados, um objeto [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017) válido, criado usando uma cadeia de caracteres URI do feed fornecida pelo aplicativo.
+Em seguida, configuraremos a solicitação definindo as credenciais do Servidor (a propriedade [**ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243461)), as credenciais do proxy (a propriedade [**ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243459)) e os cabeçalhos HTTP (o método [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br243462)) necessários. Com os parâmetros de solicitação básicos configurados, um objeto [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017) válido, criado usando uma cadeia de caracteres URI do feed fornecida pelo aplicativo. O objeto **Uri** é então passado para a função [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) para solicitar o feed.
 
-O objeto **Uri** é então passado para a função [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) para solicitar o feed.
+Pressupondo que o conteúdo de feed desejado foi retornado, o exemplo de código itera cada item do feed, chamando **displayCurrentItem** (que definiremos em seguida), para exibir itens e seu conteúdo como uma lista na IU.
 
-Pressupondo que o conteúdo de feed desejado foi retornado, o exemplo de código itera cada item do feed, chamando **displayCurrentItem** (que definiremos em seguida), para exibir itens e seu conteúdo como uma lista na IU. É necessário escrever um código para tratar exceções quando você chama a maioria dos métodos de rede assíncronos.
+É necessário escrever um código para tratar exceções quando você chama a maioria dos métodos de rede assíncronos. Seu manipulador de exceção recupera informações mais detalhadas sobre a causa da exceção para entender melhor a falha e tomar as medidas adequadas.
 
-Seu manipulador de exceção recupera informações mais detalhadas sobre a causa da exceção para entender melhor a falha e tomar as medidas adequadas. O método [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) lança uma exceção se uma conexão não puder ser estabelecida com o servidor HTTP ou o objeto [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017) não apontar para um AtomPub ou RSS feed válido.
+O método [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) lança uma exceção se uma conexão não puder ser estabelecida com o servidor HTTP ou o objeto [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017) não apontar para um AtomPub ou RSS feed válido. O código de exemplo Javascript usa uma função **onError** para capturar quaisquer exceções e imprime mais informações detalhadas sobre a exceção, se ocorrer um erro.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -169,7 +170,7 @@ function retreiveFeed(uri) {
 }
 ```
 
-O código de exemplo Javascript usa uma função **onError** para capturar quaisquer exceções e imprime mais informações detalhadas sobre a exceção, se ocorrer um erro. [!div class="tabbedCodeSnippets"] Na etapa anterior, [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) retornou o conteúdo de feed solicitado e o código de exemplo teve que trabalhar iterando através dos itens de feed disponíveis.
+Na etapa anterior, [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) retornou o conteúdo de feed solicitado e o código de exemplo teve que trabalhar iterando através dos itens de feed disponíveis. Cada um desses itens é representado através de um objeto [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533) que contém todas as propriedades e conteúdo do item suportado pelo padrão de sindicalização relevante (RSS ou Atom). No exemplo a seguir, observamos a função **displayCurrentItem** trabalhando em cada item e exibindo seu conteúdo através de vários elementos de IU indicados.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -217,7 +218,7 @@ function displayCurrentItem() {
                 //displayCurrentItem is continued below.
 ```
 
-Cada um desses itens é representado através de um objeto [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533) que contém todas as propriedades e conteúdo do item suportado pelo padrão de sindicalização relevante (RSS ou Atom). No exemplo a seguir, observamos a função **displayCurrentItem** trabalhando em cada item e exibindo seu conteúdo através de vários elementos de IU indicados. [!div class="tabbedCodeSnippets"]
+Como sugerido anteriormente, o tipo de conteúdo representado por um objeto [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533) diferirá dependendo do padrão de feed (RSS ou Atom) empregado para publicar o feed. Por exemplo, um feed Atom é capaz de fornecer uma lista de [**Contributors**](https://msdn.microsoft.com/library/windows/apps/br243540), mas um feed RSS não é. No entanto, elementos de extensão incluídos em um feed que não são aceitos por nenhum padrão (por exemplo, elementos de extensão Dublin Core) podem ser acessados com a propriedade [**SyndicationItem.ElementExtensions**](https://msdn.microsoft.com/library/windows/apps/br243543) e, depois, exibidos como demonstrado no seguinte exemplo de código.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -260,6 +261,6 @@ Cada um desses itens é representado através de um objeto [**SyndicationItem**]
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

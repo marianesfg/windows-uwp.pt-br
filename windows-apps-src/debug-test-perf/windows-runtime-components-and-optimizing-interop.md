@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
 title: "Componentes da Plataforma Universal do Windows e otimização de interoperabilidade"
 description: Crie aplicativos da Plataforma Universal do Windows (UWP) que usam componentes UWP e interoperam entre tipos nativos e gerenciados, evitando problemas de desempenho de interoperabilidade.
+translationtype: Human Translation
 ms.sourcegitcommit: 5c7a49558ed11f82b7afea1ea96271c45c2f9139
-ms.openlocfilehash: b9300b3feb1e5229951f3e1ebe454b61ba8065ae
+ms.openlocfilehash: bfbf4a630b1874f718a1ebd41caf96c72e2f05c5
 
 ---
 # Componentes da Plataforma Universal do Windows e otimização de interoperabilidade
@@ -89,6 +90,6 @@ Todas as sugestões com vistas ao bom desempenho nos aplicativos são extensivas
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

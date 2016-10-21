@@ -1,22 +1,23 @@
 ---
 author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: "Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo."
-title: "Perfis de câmera"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 755b2747b2250c4ad19970095aed220551389471
+description: "Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo. Isso inclui tarefas como selecionar perfis com suporte a resoluções ou taxas de quadro específicos, perfis que dão suporte ao acesso simultâneo a várias câmeras e perfis compatíveis com HDR."
+title: "Descobrir e selecionar as funcionalidades da câmera com perfis de câmera"
+translationtype: Human Translation
+ms.sourcegitcommit: 625cf715a88837cb920433fa34e47a1e1828a4c8
+ms.openlocfilehash: 09cb41f834de52d541addee4e44715c52f5e99dc
 
 ---
 
-# Perfis de câmera
+# Descobrir e selecionar as funcionalidades da câmera com perfis de câmera
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo.
+Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo. Isso inclui tarefas como selecionar perfis com suporte a resoluções ou taxas de quadro específicos, perfis que dão suporte ao acesso simultâneo a várias câmeras e perfis compatíveis com HDR.
 
-**Observação**  
-Este artigo se baseia em conceitos e códigos discutidos em [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
+> [!NOTE] 
+> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
 
  
 
@@ -25,8 +26,6 @@ Este artigo se baseia em conceitos e códigos discutidos em [Capturar fotos e v�
 As câmeras em diferentes dispositivos oferecem suporte a várias funcionalidades, inclusive ao conjunto de resoluções de captura com suporte, à taxa de quadros para capturas de vídeo ou a capturas de taxa de quadros variáveis ou HDR. A estrutura de captura de mídia da Plataforma Universal do Windows (UWP) armazena esse cojnunto de funcionalidades em uma [**MediaCaptureVideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695). Um perfil de câmera, representado por um objeto [**MediaCaptureVideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn926694), tem três conjuntos de descrições de mídia: um para captura de fotos, um para captura de vídeos e outro para visuaçização de vídeos.
 
 Antes de inicializar seu objeto [MediaCapture](capture-photos-and-video-with-mediacapture.md), você pode consultar os dispositivos de captura no dispositivo atual para saber quais perfis têm suporte. Ao selecionar um perfil com suporte, você sabe que o dispositivo de captura oferece suporte a todas as funcionalidades nas descrições de mídia do perfil. Isso elimina a necessidade de uma abordagem de tentativa e erro para determinar quais combinações de funcionalidades têm suporte em um determinado dispositivo.
-
-No artigo sobre captura de mídia básica, [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md), a [**MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/apps/br226573) usada para inicializar a captura de mídia é criada somente com a cadeia de caracteres da ID do dispositivo de captura, a quantidade mínima de dados necessária para a inicialização.
 
 [!code-cs[BasicInitExample](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetBasicInitExample)]
 
@@ -98,7 +97,8 @@ Você pode refinar essa consulta para procurar perfis com suporte a resoluções
 
 ## Tópicos relacionados
 
-* [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Câmera](camera.md)
+* [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -109,6 +109,6 @@ Você pode refinar essa consulta para procurar perfis com suporte a resoluções
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

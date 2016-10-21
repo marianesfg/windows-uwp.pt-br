@@ -5,8 +5,9 @@ ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: "Visão geral de acessibilidade"
 label: Accessibility overview
 template: detail.hbs
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 430484a9243abc644de75d35c03bb11cf47960c0
+translationtype: Human Translation
+ms.sourcegitcommit: a93f6fb154300ac27b9dc700182d90083fb2cbc8
+ms.openlocfilehash: 669672ecd8c15adb2e53eb8e4a8efd8483af14d1
 
 ---
 
@@ -157,8 +158,7 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 Para saber mais sobre as declarações de acessibilidade e a publicação do seu aplicativo, consulte [Accessibility in the Store](accessibility-in-the-store.md).
 
 > [!NOTE]
-> 
-            [!NOTE] Declarar o aplicativo como acessível somente é relevante para aplicativos da Windows Store.
+> Declarar o aplicativo como acessível somente é relevante para aplicativos da Windows Store.
 
 <span id="Assistive_technology_support_in_custom_controls"/>
 <span id="assistive_technology_support_in_custom_controls"/>
@@ -177,9 +177,10 @@ O conteúdo do Microsoft DirectX hospedado em uma interface do usuário XAML (us
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 * [Design de acessibilidade](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Acessibilidade](accessibility.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

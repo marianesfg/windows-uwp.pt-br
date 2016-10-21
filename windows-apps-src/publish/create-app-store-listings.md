@@ -1,111 +1,121 @@
-﻿---
+---
 author: jnHs
-Description: The Store listings section of the app submission process is where you provide the text and images that customers will see in your app's Store listing.
-title: Create app Store listings
+Description: "A seção de listagens da Loja do processo de envio de aplicativo é onde você fornece o texto e as imagens que os clientes verão na página de detalhes do seu aplicativo na Loja."
+title: Criar listagens de aplicativos da Loja
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
+translationtype: Human Translation
+ms.sourcegitcommit: d24294583d1ec0186cd63138979d40a06b0c7351
+ms.openlocfilehash: 9ef2a465cb8f9143775feab163ee1d66d135a6b3
+
 ---
 
-# Create app Store listings
+# Criar listagens de aplicativos da Loja
 
 
-The **Store listings** section of the [app submission process](app-submissions.md) is where you provide the text and [images](app-screenshots-and-images.md) that customers will see in your app's Store listing.
+A seção de **listagens da Loja** do [processo de envio de aplicativo](app-submissions.md) é onde você fornece o texto e as [imagens](app-screenshots-and-images.md) que os clientes verão na listagem da Loja do seu aplicativo.
 
-Many of the fields in a **Store listing** are optional, but we suggest providing multiple images and as much info as possible to make your listing stand out. The minimum required for the **Store listings** step to be considered complete is a text description and at least one [screenshot](app-screenshots-and-images.md).
+Muitos dos campos da seção **listagem da Loja** são opcionais, mas sugerimos o fornecimento de várias imagens e tantas informações quanto possível para fazer a sua listagem se destacar. O mínimo necessário para a etapa **listagens da Loja** ser considerada completa é uma descrição de texto e pelo menos uma [captura de tela](app-screenshots-and-images.md).
 
-By default, we'll use the same Store listing (per language) for all of your targeted operating systems. If you'd like to use a customized Store listing for a specific operating system, you can [create platform-specific Store listings](create-platform-specific-store-listings.md).
+Por padrão, usaremos a mesma listagem da Loja (por idioma) para todos os seus sistemas operacionais de destino. Se quiser usar uma listagem da Loja personalizada para um sistema operacional específico, você poderá [criar listagens da Loja específicas da plataforma](create-platform-specific-store-listings.md).
 
-## Store listing languages
+## Idiomas de listagem da Loja
 
-You must complete the **Store listing** page for at least one language. We recommend providing a Store listing in each language that your packages support, but you have flexibility to remove languages for which you don’t wish to provide a Store listing. You can also create Store listings in additional languages which aren’t supported by your packages.
+Você deve preencher a página **listagem da Loja** para pelo menos um idioma. Convém fornecer uma listagem da Loja em cada idioma com suporte nos seus pacotes, mas você tem flexibilidade de remover idiomas para os quais não deseja fornecer uma listagem da Loja. Você também pode criar listagens da Loja em outros idiomas que não são compatíveis com seus pacotes.
 
-> **Note**  If your submission includes packages already, we’ll show the [languages](supported-languages.md) supported in your packages on the submission overview page (unless you remove any of them).
+> **Observação** Se o seu envio já incluir pacotes, mostraremos os [idiomas](supported-languages.md) com suporte nos seus pacotes na página de visão geral do envio (a menos que você remova qualquer um deles).
 
-To add or remove languages for your Store listings, click **Manage Store listing languages** from the submission overview page. If you‘ve already uploaded packages, you’ll see their languages listed in the **Languages supported by your packages** section. To remove one or more of these languages, click **Remove**. If you later decide to include a language that you previously removed from this section, you can click **Add**.
+Para adicionar ou remover idiomas para suas listagens da Loja, clique em **Gerenciar idiomas de listagem da Loja** na página de visão geral de envio. Se você já tiver carregado pacotes, verá seus idiomas listados na seção **Idiomas com suporte em seus pacotes**. Para remover um ou mais desses idiomas, clique em **Remover**. Se você decidir mais tarde incluir um idioma que foi removido anteriormente desta seção, poderá clicar em **Adicionar**.
 
-In the **Additional Store listing languages** section, you can click **Manage additional languages** to add or remove languages that are *not* included in your packages. Check the boxes for the languages that you’d like to add, then click **Update**. The languages you’ve selected will be displayed in the **Additional Store listing languages** section. To remove one or more of these languages, click **Remove** (or click **Manage additional languages** and uncheck the box for languages you’d like to remove).
+Na seção **Idiomas adicionais da listagem da Loja**, você pode clicar em **Gerenciar idiomas adicionais** para adicionar ou remover idiomas *não* incluídos nos seus pacotes. Marque as caixas de seleção dos idiomas que você deseja adicionar e depois clique em **Atualizar**. Os idiomas selecionados serão exibidos na seção **Idiomas adicionais da listagem da Loja**. Para remover um ou mais desses idiomas, clique em **Remover** (ou clique em **Gerenciar idiomas adicionais** e desmarque a caixa de idiomas que você deseja remover).
 
-When you have finished making your selections, click **Save** to return to the submission overview page.
+Quando terminar de fazer suas seleções, clique em **Salvar** para retornar à página de visão geral do envio.
 
-> **Note** When creating a Store listing in a language that isn't supported by your packages, you'll need to indicate which of your reserved app names should be displayed in that Store listing, since there isn't an associated package in that language from which to pull the name. The name you choose here only applies to the Store listing for this language and does not impact the name displayed when a customer installs the app.
+> **Observação** Ao criar uma listagem da Loja em um idioma que não tenha suporte em seus pacotes, você precisará indicar quais dos seus nomes de aplicativo reservados devem ser exibidos nessa listagem da Loja, pois não há um pacote associado nesse idioma no qual obter o nome. O nome que você escolher aqui se aplicará somente à listagem da Loja desse idioma e não causará impacto no nome exibido quando um cliente instalar o aplicativo.
 
-To edit a Store listing, click the language name from the Submission overview. The sections of the **Store listing** page are described below.
+Para editar uma listagem da Loja, clique no nome do idioma na visão geral do envio. As seções da página **listagem da Loja** estão descritas abaixo.
 
-## Default Store listing fields
+## Campos de listagem da Loja padrão
 
-At the top of the **Store listing** page are the fields associated with your default Store listing for the selected language. These fields will be shown to all of your customers, unless you have packages targeting earlier OS versions (Windows 8.x or earlier; Windows Phone 8.x or earlier) and create platform-specific Store listings to include different screenshots or info to display to customers on specified OS versions. For more info, see [Create platform-specific Store listings](create-platform-specific-store-listings.md).
+Na parte superior da página **listagem da Loja** são os campos associados à sua listagem da Loja padrão para o idioma selecionado. Esses campos serão mostrados para todos os seus clientes, a menos que você tenha pacotes direcionados a versões anteriores do sistema operacional (Windows 8.x ou versões anteriores; Windows Phone 8.x ou versões anteriores) e crie listagens da Loja específicas da plataforma para incluir capturas de tela diferentes ou informações a serem exibidas aos clientes em versões específicas do sistema operacional. Para saber mais, consulte [Criar listagens da Loja específicas de plataforma](create-platform-specific-store-listings.md).
 
-### Description
+### Descrição
 
-The description field is where you can tell customers what your app does. This field is required, and will accept up to 10,000 characters of plain text.
+O campo Descrição é onde você pode informar aos clientes o que seu aplicativo faz. Esse campo é obrigatório e aceita até 10.000 caracteres de texto sem formatação.
 
-For some tips on making your description stand out, see [Write a great app description](write-a-great-app-description.md).
+Para obter algumas dicas sobre como fazer a sua descrição se destacar, consulte [Escrever uma ótima descrição do aplicativo](write-a-great-app-description.md).
 
-### Release notes
+### Notas de versão
 
-If this is the first time you're submitting your app, you'll probably want to leave this field blank. For an update to an existing app, this is where you can let customer know what's changed in the latest release. This field has a 1500 character limit.
+Se esta for a primeira vez em que está enviando o seu aplicativo, provavelmente você vai querer deixar este campo em branco. No caso da atualização de um aplicativo existente, é aqui que você pode informar ao cliente o que mudou na versão mais recente. Este campo tem um limite de 1500 caracteres.
 
-### Screenshots
+### Capturas de tela
 
-In most cases, you'll see multiple fields to provide screenshots for different types of devices. You are not required to provide separate screenshots for each device type; only one screenshot is required for your submission (though you can provide up to nine per device type). In most cases we suggest providing screenshots on as many device types as your app supports, so that customers will see images that resemble how the app will look on their device.
+Na maioria dos casos, você verá vários campos para fornecer capturas de tela de diferentes tipos de dispositivos. Você não tem obrigação de fornecer capturas de tela separadas de cada tipo de dispositivo; apenas uma captura de tela é necessária para o seu envio (mas você pode fornecer até nove por tipo de dispositivo). Na maior parte dos casos, sugerimos que você forneça capturas de tela de todos os tipos de dispositivos compatíveis com o seu aplicativo, para que os clientes vejam imagens parecidas com a aparência que o aplicativo terá no dispositivo deles.
 
-For more info, see [App screenshots and images](app-screenshots-and-images.md).
+Para saber mais, consulte [Capturas de tela e imagens do aplicativo](app-screenshots-and-images.md).
 
-### App tile icon
+### Ícone do bloco do aplicativo
 
-The app tile icon is used when displaying your app's Store listing to customers on Windows Phone 8.1 and earlier (and in some Store layouts for customers on Windows 10). This must be a .png file measuring 300 x 300 pixels.
+O ícone do bloco de aplicativos é usado ao exibir a listagem da Loja do seu aplicativo para clientes no Windows Phone 8.1 e versões anteriores (e em alguns layouts da Loja para clientes no Windows 10). Deve ser um arquivo .png medindo 300 x 300 pixels.
 
-For more info, see [App tile icon](app-screenshots-and-images.md#app-tile-icon).
+Para saber mais, consulte [Ícone do bloco de aplicativo](app-screenshots-and-images.md#app-tile-icon).
 
-### App features
+### Recursos do aplicativo
 
-These are short summaries of your app's key features. They are displayed to the customer as a bulleted list in your app's Store listing, along with the Description. Keep these brief, with just a few words (and no more than 200 characters) per feature. You may include up to 20 features.
+Trata-se de resumos dos principais recursos do aplicativo. Eles são exibidos para o cliente na forma de uma lista com marcadores na listagem da Loja do aplicativo, junto com a Descrição. Deixe-os resumidos, com apenas algumas palavras (e não mais que 200 caracteres) por recurso. Você pode incluir até 20 recursos.
 
-**Note**  These will appear bulleted in your Store listing, so don't add your own bullets.
+**Observação**  Eles serão exibidos com marcadores na sua listagem da Loja. Assim, não adicione marcadores próprios.
 
-### Additional system requirements
+### Requisitos adicionais do sistema
 
-If needed, you can describe the hardware configurations that your app requires to work properly (beyond the info you provided in the **System requirements** section in [App properties](enter-app-properties.md#system-requirements). This is especially important if your app requires hardware that might not be available on every computer.
+Se necessário, você poderá descrever as configurações de hardware necessárias para que o aplicativo funcione corretamente (além das informações fornecidas na seção **Requisitos do sistema** em [Propriedades do aplicativo](enter-app-properties.md#system-requirements). Essas informações são especialmente importantes se o aplicativo exigir um hardware que possa não estar disponível em todo computador.
 
- You can enter up to 11 items for both **Minimum hardware** and **Recommended hardware**.  They are displayed to the customer as a bulleted list in your app's listing. Keep these brief, with just a few words (and no more than 200 characters) per item. The info you enter here will be shown to customers viewing your app's Store listing on Windows 10, version 1607 or later, along with the requirements you indicated on the product's properties page.
+ Você pode inserir até 11 itens tanto para **Hardware mínimo** quanto para **Hardware recomendado**.  Elas são exibidas para o cliente na forma de uma lista com marcadores nos detalhes do seu aplicativo. Deixe-os resumidos, com apenas algumas palavras (e não mais que 200 caracteres) por item. As informações que você insere aqui serão mostradas aos clientes que estão exibindo a listagem da Loja do aplicativo no Windows 10, versão 1607 ou posterior, juntamente com os requisitos que você indicou na página de propriedades do produto.
 
-**Note**  These will appear bulleted in the listing, so don't add your own bullets.
+**Observação**  Eles serão exibidos com marcadores na lista. Assim, não adicione marcadores próprios.
 
-## Shared fields
+## Campos compartilhados
 
-The items described below are all shared fields and will apply to all of your Store listings in a given language, regardless of operating system, even if you [create platform-specific Store listings](create-platform-specific-store-listings.md).
+Os itens descritos abaixo são todos os campos compartilhados e se aplicarão às listagens da Loja em um determinado idioma, independentemente do sistema operacional, mesmo se você [criar listagens da Loja específicas de plataforma](create-platform-specific-store-listings.md).
 
-### Keywords
+### Palavras-chave
 
-Keywords are single words or short phrases that are not displayed to customers, but can help your app appear in search results related to the keyword. You can include up to 7 keywords with a maximum of 30 characters each.
+As palavras-chave são termos isolados ou pequenas frases que não são exibidos aos clientes, mas podem ajudar seu aplicativo a aparecer nos resultados de pesquisa relacionados à palavra-chave. Você pode incluir até 7 palavras-chave com um máximo de 30 caracteres.
 
-If you want to add keywords, think about the words that customers might use when searching for apps like yours, especially if they're not part of your app's name. Be sure not to use any keywords that are not actually relevant to your app.
+Se você quiser adicionar palavras-chave, pense nas palavras que os clientes podem usam ao pesquisar aplicativos como o seu, especialmente se elas não fazem parte do nome do seu aplicativo. Não deixe de usar todas as palavras-chave realmente importantes para o aplicativo.
 
-### Copyright and trademark info
+### Informações sobre direitos autorais e marcas registradas
 
-If you'd like to provide additional copyright and/or trademark info, enter it here. This field has a 200 character limit.
+Se quiser fornecer informações adicionais sobre direitos autorais e/ou marca comercial, digite-as aqui. Este campo tem um limite de 200 caracteres.
 
-### Additional license terms
+### Termos de licença adicionais
 
-Leave this field blank if you want your app to be licensed to customers under the terms of the **Standard Application License Terms** (which are linked to from the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058)).
+Deixe este campo em branco se quiser que seu aplicativo seja licenciado para os seus clientes sob os **Termos de Licença de Aplicativo Padrão** (associados ao [Contrato do Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/hh694058)).
 
-If your license terms are different from the **Standard Application License Terms**, enter them here.
+Se os termos de licença forem diferentes dos **Termos de Licença de Aplicativo Padrão**, insira-os aqui.
 
-If you enter a single URL into this field, it will be displayed to customers as a link that they can click to read your additional license terms. This is useful if your additional license terms are very long, or if you want to include clickable links or formatting in your additional license terms.
+Se você inserir uma única URL para este campo, ela será exibido para os clientes como um link em que eles podem clicar para ler os termos de licença adicionais. Isso será útil se os termos de licença adicionais forem muito longos ou se você quiser incluir links clicáveis ou formatação em seus termos de licença adicionais.
 
-You can also up to 10,000 characters of text in this field. If you do that, customers will see these additional license terms displayed as plain text.
+Você também pode adicionar até 10.000 caracteres de texto nesse campo. Se você fizer isso, os clientes verão esses termos de licença adicionais exibidos como texto sem formatação.
 
-### Website
+### Site
 
-Enter the URL of the web page for your app. This URL must point to a page on your own website, not your app's web listing in the Store.
+Insira a URL da página da Web do seu aplicativo. A URL deve apontar para uma página em seu próprio site, não para os detalhes do seu aplicativo na Loja.
 
-### Support contact info
+### Informações de contato de suporte
 
-Enter the URL of the web page where your customers can go for support on your app, or an email address that customers can contact for support.
+Insira a URL da página da Web em que seus clientes podem buscar suporte relacionado ao seu aplicativo ou o endereço de email que os seus clientes podem contatar para obter suporte).
 
-**Important**  Microsoft doesn't provide your customers with support for your app.
+**Importante**  A Microsoft não fornece suporte para seu aplicativo aos seus clientes.
 
-### Privacy policy
+### Política de privacidade
 
-If you have a privacy policy for your app, enter its URL here. You are responsible for ensuring your app complies with privacy laws and regulations and for providing a privacy policy, if required.
+Se você tiver uma política de privacidade para o seu aplicativo, insira sua URL aqui. Você é responsável por garantir que seu aplicativo esteja em conformidade com as leis e as normas privacidade e por fornecer uma política de privacidade, se necessário.
 
-**Important**  Microsoft doesn't provide a default privacy policy for your app. Likewise, your app is not covered by any Microsoft privacy policy. To determine if your app requires a privacy policy, review the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058) and the [Windows Store Policies](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
+**Importante**  A Microsoft não fornece uma política de privacidade padrão para o aplicativo. Da mesma forma, o aplicativo não é coberto por nenhuma política de privacidade da Microsoft. Para determinar se o seu aplicativo requer uma política de privacidade, consulte o [Contrato de Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

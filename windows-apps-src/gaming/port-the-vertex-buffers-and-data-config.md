@@ -3,15 +3,16 @@ author: mtoepke
 title: "Fazer a portabilidade de dados e buffers de vértices"
 description: "Nesta etapa, você definirá os buffers de vértices que conterão suas malhas e os buffers de índice que permitem que os sombreadores percorram os vértices em uma ordem específica."
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9692b33303099f9d1193b93ab458a19a5d95abe3
+ms.openlocfilehash: ee8b3f693e40d9c0fba679a44ebcd4986d06d7ac
 
 ---
 
 # Fazer a portabilidade de dados e buffers de vértices
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -151,8 +152,7 @@ Esta descrição de entrada define um vértice como um par de dois vetores com t
 
 Para uma lista de todos os tipos de formatos possíveis, consulte [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059).
 
-Como o layout de entrada por vértice definido, você cria o objeto de layout. No código a seguir, você escreve isso para **m\_inputLayout**, uma variável de tipo **ComPtr** (que aponta para um objeto de tipo [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)). 
-            **fileData** contém o objeto de sombreador de vértice compilado da etapa anterior, [Compatibilizar os sombreadores](port-the-shader-config.md).
+Como o layout de entrada por vértice definido, você cria o objeto de layout. No código a seguir, você escreve isso para **m\_inputLayout**, uma variável de tipo **ComPtr** (que aponta para um objeto de tipo [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)). **fileData** contém o objeto de sombreador de vértice compilado da etapa anterior, [Compatibilizar os sombreadores](port-the-shader-config.md).
 
 Direct3D: criar o layout de entrada usado pelo buffer de vértices.
 
@@ -318,6 +318,6 @@ Ao estruturar o seu Direct3D, separe o código que chama métodos em [**ID3D11De
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

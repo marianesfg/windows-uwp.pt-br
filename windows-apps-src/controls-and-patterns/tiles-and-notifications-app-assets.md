@@ -5,29 +5,28 @@ title: "Ativos de bloco e ícone"
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 98eebc4fbf18aa2fbe4586958f666b41580cf6d9
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 4aa22b9eae8ff7f7da2c73f3fdf3a63ed12ff87b
 
 ---
-
 # Diretrizes para ativos de bloco e ícone
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Ativos de ícone de aplicativo, exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada do seu aplicativo de Plataforma Universal do Windows (UWP). Estas diretrizes detalham onde os ativos de ícone de aplicativo são exibidos no sistema e fornecem dicas de design aprofundadas sobre como criar os ícones mais elaborados.
 
 ![início e blocos do windows 10](images/assetguidance01.jpg)
 
-## <span id="Adaptive_scaling"></span><span id="adaptive_scaling"></span><span id="ADAPTIVE_SCALING"></span>Dimensionamento adaptável
+## Dimensionamento adaptável
 
 
 Primeiro, uma breve visão geral sobre dimensionamento adaptável para entender melhor como o dimensionamento funciona com ativos. O Windows 10 apresenta uma evolução do modelo de dimensionamento existente. Além do dimensionamento de conteúdo com vetor, há um conjunto de fatores de escala unificado que fornece um tamanho consistente para os elementos de interface do usuário em uma variedade de tamanhos e resoluções de tela. Os fatores de escala também são compatíveis com os fatores de escala de outros sistemas operacionais, como iOS e Android, o que torna mais fácil compartilhar ativos entre essas plataformas.
 
 A Loja seleciona os ativos a serem baixados com base, em parte, no DPI do dispositivo. Apenas os ativos que melhor correspondem ao dispositivo são baixados.
 
-## <span id="Tile_elements"></span><span id="tile_elements"></span><span id="TILE_ELEMENTS"></span>Elementos do bloco
+## Elementos do bloco
 
 
 Os componentes básicos de um bloco Iniciar consistem em um fundo, um ícone, uma barra de identidade visual e um título de aplicativo:
@@ -66,7 +65,7 @@ A largura da margem se baseia no fator de escala do dispositivo em que ele é ex
 
  
 
-## <span id="Tile_assets"></span><span id="tile_assets"></span><span id="TILE_ASSETS"></span>Ativos de bloco
+## Ativos de bloco
 
 
 Cada ativo de bloco tem o mesmo tamanho do bloco no qual ele é colocado. Você pode marcar os blocos do seu aplicativo com duas representações diferentes de um ativo:
@@ -135,7 +134,7 @@ Neste exemplo, as margens estão muito apertadas:
 
 ![bloco de sangramento completo com margens muito pequenas](images/assetguidance15.png)
 
-## <span id="Tile_assets_in_list_views"></span><span id="tile_assets_in_list_views"></span><span id="TILE_ASSETS_IN_LIST_VIEWS"></span>Ativos de bloco em modos de exibição de lista
+## Ativos de bloco em modos de exibição de lista
 
 
 Os blocos também podem ser exibidos em um modo de exibição de lista. As diretrizes de dimensionamento para ativos de bloco mostrados em modos de exibição de lista são um pouco diferentes das diretrizes dos ativos de bloco descritas anteriormente. Esta seção detalha essas especificações de dimensionamento.
@@ -162,7 +161,7 @@ Neste exemplo, o ícone é muito pequeno dentro de seu bloco:
 
 ![ícone muito pequeno para o bloco](images/assetguidance20b.png)
 
-## <span id="Target-based_assets"></span><span id="target-based_assets"></span><span id="TARGET-BASED_ASSETS"></span>Ativos baseados no destino
+## Ativos baseados no destino
 
 
 Os ativos baseados no destino são para ícones e blocos que aparecem na barra de tarefas do Windows, na visão de tarefas, em ALT+TAB, no Assistente de Ajuste e no canto inferior direito dos blocos em Iniciar. Você não precisa adicionar preenchimento a esses ativos; o Windows adicionará o preenchimento, se necessário. Esses ativos devem levar em conta uma superfície mínima de 16 pixels. Aqui está um exemplo desses ativos conforme eles aparecem em ícones da barra de tarefas do Windows:
@@ -195,7 +194,7 @@ Para ativos não quadrados, ocorrem a centralização horizontal/vertical autom�
 
 ![dimensionamento de ativo não quadrado, com e sem selo](images/assetguidance26b.png)
 
-## <span id="Splash_screen_assets"></span><span id="splash_screen_assets"></span><span id="SPLASH_SCREEN_ASSETS"></span>Ativos de tela inicial
+## Ativos de tela inicial
 
 
 A imagem da tela inicial pode ser fornecida como um caminho direto para um arquivo de imagem ou como um recurso. Usando uma referência de recurso, você pode fornecer imagens de escalas diferentes, para que o Windows possa escolher o melhor tamanho para o dispositivo e a resolução de tela. Você também pode fornecer imagens de alto contraste para acessibilidade e imagens traduzidas para corresponder a diferentes idiomas da interface do usuário.
@@ -213,7 +212,7 @@ O ativo de tela inicial é centralizado por qualquer dispositivo no qual seja ex
 
 ![dimensionamento do ativo de tela inicial](images/assetguidance27.png)
 
-## <span id="High-contrast_assets"></span><span id="high-contrast_assets"></span><span id="HIGH-CONTRAST_ASSETS"></span>Ativos de alto contraste
+## Ativos de alto contraste
 
 
 O modo de alto contraste usa conjuntos de ativos separados para branco de alto contraste (plano de fundo branco com texto preto) e preto de alto contraste (plano de fundo preto com texto branco). Se você não fornecer ativos de alto contraste para seu aplicativo, serão usados ativos padrão.
@@ -224,7 +223,7 @@ Caso ativos padrão do seu aplicativo ofereçam uma experiência de visualizaç�
 
 Caso opte por fornecer ativos de alto contraste, você precisa incluir dois conjuntos – branco sobre preto e preto sobre branco. Incluindo esses ativos em seu pacote, você pode criar uma pasta "preto de contraste" para ativos de branco sobre preto e uma pasta "branco de contraste" para ativos de preto sobre branco.
 
-## <span id="Asset_size_tables"></span><span id="asset_size_tables"></span><span id="ASSET_SIZE_TABLES"></span>Tabelas de tamanho do ativo
+## Tabelas de tamanho do ativo
 
 
 É altamente recomendável, no mínimo, que você forneça ativos para os fatores de escala 100, 200 e 400. Fornecer ativos para todos os fatores de escala proporcionará a experiência ideal do usuário.
@@ -292,7 +291,7 @@ A seguinte tabela lista todos os tamanhos de ativos baseados no destino e os exe
 
 \* Enviar esses tamanhos de ativos como uma linha de base
 
-## <span id="Asset_types"></span><span id="asset_types"></span><span id="ASSET_TYPES"></span>Tipos de ativo
+## Tipos de ativo
 
 
 Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo recomendados.
@@ -373,7 +372,7 @@ Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo reco
 
 
 
-## <span id="related_topics"></span>Tópicos relacionados
+## Tópicos relacionados
 
 
 
@@ -388,6 +387,6 @@ Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo reco
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

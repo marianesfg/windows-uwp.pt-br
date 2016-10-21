@@ -1,22 +1,29 @@
 ---
-author: martinekuan
+author: GrantMeStrength
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
 title: "O que é um aplicativo da Plataforma Universal do Windows (UWP)?"
 description: "Saiba mais sobre os diferentes tipos de aplicativos que nós chamamos de aplicativos Universais do Windows - aplicativos da Windows Store, aplicativos da Loja do Windows Phone e aplicativos do Windows Runtime."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f02851d848a82af7104a6038c5d8850d5362c832
+translationtype: Human Translation
+ms.sourcegitcommit: 6be8bb0a78b614e160fb40629601bdab2d7fc71a
+ms.openlocfilehash: 3fd9f4d539977c4b531e08efe0719328365c757c
 
 ---
 
 # O que é um aplicativo da Plataforma Universal do Windows (UWP)?
 
+Se estiver começando na plataforma Windows ou chegando dos mundos de .NET, Windows Forms ou Silverlight, você deverá estar se perguntando o que um aplicativo UWP, na verdade, *é*. 
+
+Como um livro famoso disse certa vez "Não entre em pânico!" Tudo ficará claro em instantes. 
+
 Um aplicativo da Plataforma Universal do Windows (UWP) é uma experiência do Windows que se baseia na Plataforma Universal do Windows (UWP), que foi introduzida no Windows 8 como Windows Runtime. Na essência dos aplicativos UWP está a ideia de que os usuários querem que suas *experiências* sejam móveis em todos os seus dispositivos, e querem usar o dispositivo que for mais conveniente ou produtivo para a tarefa em questão.
 
-O Windows 10 facilita ainda mais o desenvolvimento de aplicativos para a UWP com apenas um conjunto de APIs, um pacote do aplicativo e uma loja para alcançar todos os dispositivos Windows 10: computadores, tablets, telefones e muito mais. É fácil dar suporte a vários tamanhos de tela e também a vários modelos de interação, seja com toque, com mouse e teclado, com um controlador de jogo ou com uma caneta.
+O Windows 10 facilita ainda mais o desenvolvimento de aplicativos para a UWP com apenas um conjunto de APIs, um pacote do aplicativo e uma loja para alcançar todos os dispositivos Windows 10: computadores, tablets, telefones, Xbox, HoloLens, Surface Hub e muito mais. É fácil dar suporte a vários tamanhos de tela e também a vários modelos de interação, seja com toque, com mouse e teclado, com um controlador de jogo ou com uma caneta.
+
+O resultado: você pode dedicar seu tempo trabalhando com linguagens de programação e APIs familiares, tudo em um único projeto e ter o mesmo código executado na vasta gama hardware Windows existente atualmente.
 
 ![Dispositivos Windows](images/1894834-hig-device-primer-01-500.png)
 
-##Então o que é um aplicativo UWP?
+##Assim, o que *exatamente* é um aplicativo UWP?
 
 
 O que torna um aplicativo UWP especial? Estas são algumas das características que tornam os aplicativos UWP no Windows 10 diferentes.
@@ -90,10 +97,16 @@ Para obter uma visão mais detalhada da UWP, leia o [Guia para Aplicativos da Pl
 
 
 * [Guia para Aplicativos da Plataforma Universal do Windows](universal-application-platform-guide.md)
-* [Preparar-se](get-set-up.md)
+* [Prepare-se para começar](get-set-up.md)
+
+## Tópicos mais avançados
+
+* [.NET Native - o que significa para os desenvolvedores da Plataforma Universal do Windows (UWP)](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
+* [Aplicativos Universais do Windows em .NET](https://blogs.msdn.microsoft.com/dotnet/2015/07/30/universal-windows-apps-in-net)
+* [.NET para aplicativos UWP](https://msdn.microsoft.com/en-us/library/mt185501.aspx)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

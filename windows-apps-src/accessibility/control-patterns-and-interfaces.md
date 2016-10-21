@@ -5,8 +5,9 @@ ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: "Padrões e interfaces de controle"
 label: Control patterns and interfaces
 template: detail.hbs
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 9f38c3bd26ef7b409d4c743abf25a5b0a6455f20
+translationtype: Human Translation
+ms.sourcegitcommit: 74e5af4c3eb5a2e17c95afce156474b613e966c5
+ms.openlocfilehash: d2ae98f95538c014ef256f5d4a400aabb36c3118
 
 ---
 
@@ -65,10 +66,10 @@ Ao implementar um padrão de controle, você também deverá consultar a documen
 <span id="related_topics"/>
 ## Tópicos relacionados  
 * [Pares de automação personalizados](custom-automation-peers.md)
-* [Acessibilidade](accessibility.md)
+* [Acessibilidade](accessibility.md) 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

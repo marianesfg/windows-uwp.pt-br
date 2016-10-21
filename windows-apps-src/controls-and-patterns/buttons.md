@@ -1,23 +1,34 @@
 ---
 author: Jwmsft
+Description: "Um botão dá ao usuário uma forma de acionar uma ação imediata."
 label: Buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: de5af77435b34b8f28005351a7de125f211ca522
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 845aa9935908aa68b64c856ee5e263490a3340c4
 
 ---
 # Botões
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Um botão dá ao usuário uma forma de acionar uma ação imediata.
 
 ![Exemplo de botões](images/controls/button.png)
 
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx"><strong>Classe Button</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx"><strong>Classe RepeatButton</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx"><strong>Evento Click</strong></a></li>
+</ul>
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+</div>
+</div>
 
--   [**Classe Button**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
--   [**Classe RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)
--   [**Evento Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)
+
+
+
 
 ## Este é o controle correto?
 
@@ -71,7 +82,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 Quando você toca em um botão com um dedo ou uma caneta, ou pressiona o botão esquerdo do mouse enquanto o ponteiro está sobre ele, o botão gera o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx). Se um botão tem foco do teclado, pressionar a tecla Enter ou a barra de espaço também aciona o evento Click.
 
-Geralmente, não se pode manipular eventos de baixo nível [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) em um botão porque, em vez disso, ele tem o comportamento Click. Para saber mais, consulte [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx).
+Geralmente, não se pode manipular eventos de baixo nível [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) em um botão porque, em vez disso, ele tem o comportamento Click. Para saber mais, consulte [Events and routed events overview](https://msdn.microsoft.com/en-us/library/windows/apps/mt185584.aspx).
 
 Você pode alterar a forma como um botão aciona o evento Click, alterando a propriedade [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx). O valor ClickMode padrão é **Release**. Se ClickMode for **Hover**, o evento Click não poderá ser chamado com o teclado ou o toque. 
 
@@ -150,86 +161,24 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   Não coloque conteúdo em excesso dentro de um botão. Deixe o conteúdo conciso e fácil de entender (nada mais que uma imagem e um pouco de texto).
 
 ## Botões Voltar
-O botão Voltar é uma funcionalidade de interface do usuário fornecida pelo sistema que permite a navegação regressiva através da pilha Voltar ou do histórico de navegação de um usuário.
+O botão Voltar é um elemento de interface do usuário fornecida pelo sistema que permite a navegação regressiva através da pilha Voltar ou do histórico de navegação de um usuário. Você não precisa criar seu próprio botão Voltar, mas talvez precise trabalhar um pouco para permitir uma boa experiência de navegação regressiva. Para obter mais informações, consulte [Histórico e navegação regressiva](../layout/navigation-history-and-backwards-navigation.md)
 
-O escopo do histórico de navegação (no aplicativo ou global) depende do dispositivo e do modo de dispositivo.
+## Obter os exemplos
+*   [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
+    Veja todos os controles XAML em um formato interativo.
 
-## <span id="examples"></span><span id="EXAMPLES"></span>Exemplo
-
-
-A interface do usuário para o botão Voltar do sistema é otimizada para cada tipo de dispositivo e entrada, mas a experiência de navegação é global e consistente entre dispositivos e aplicativos da Plataforma Universal do Windows (UWP). Essas diferentes experiências incluem:
-
-Telefone de dispositivo ![sistema Voltar em um telefone](images/nav-back-phone.png)
--   Sempre presente.
--   Um botão de hardware ou software na parte inferior do dispositivo.
--   Navegação regressiva global no aplicativo e entre aplicativos.
-
-<span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>Tablet ![sistema Voltar em um tablet (no modo tablet)](images/nav-back-tablet.png)
--   Sempre presente no modo Tablet.
-
-    Não está disponível no modo de área de trabalho. Em vez disso, o botão Voltar da barra de título pode ser habilitado. Consulte [Computador, laptop, tablet](#PC).
-
-    Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho indo para **Configurações &gt; Sistema &gt; modo Tablet** e definindo **Deixar o Windows mais fácil para o toque ao usar o seu dispositivo como tablet**.
-
--   Um botão de software na barra de navegação na parte inferior do dispositivo.
--   Navegação regressiva global no aplicativo e entre aplicativos.
-
-<span id="PC"></span><span id="pc"></span>PC, Laptop, Tablet ![sistema Voltar em um computador ou notebook](images/nav-back-pc.png)
--   Opcional no modo Área de trabalho.
-
-    Não está disponível no modo Tablet. Consulte [Tablet](#Tablet).
-
-    Desabilitado por padrão. Deve aceitar para habilitá-lo.
-
-    Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho indo para **Configurações &gt; Sistema &gt; modo Tablet** e definindo **Deixar o Windows mais fácil para o toque ao usar o seu dispositivo como tablet**.
-
--   Um botão de software na barra de título do aplicativo.
--   Navegação regressiva somente no aplicativo. Não oferece suporte à navegação entre aplicativos.
-
-Surface Hub ![sistema Voltar em um Surface Hub](images/nav-back-surfacehub.png)
--   Sempre presente.
--   Um botão de software na parte inferior do dispositivo.
--   Navegação regressiva dentro do aplicativo e entre aplicativos.
-
- 
-
-## O que fazer e o que não fazer
-
-
--   Habilite a navegação regressiva.
-
-    Se a navegação regressiva não estiver habilitada, seu aplicativo será incluído na pilha Voltar global, mas o histórico de navegação no aplicativo não será mantido.
-
--   Habilite o botão Voltar da barra de título no modo de área de trabalho.
-
-    Histórico de navegação de página no aplicativo é mantido; não há suporte para navegação regressiva entre aplicativos.
-
-    
-              **Observação**  No modo Tablet, a barra do título é exibida quando um usuário desliza o dedo de cima para baixo no dispositivo, ou move o ponteiro do mouse próximo à parte superior do dispositivo. Para evitar duplicação e confusão, o botão Voltar na barra de título não é exibido no modo Tablet.
-
-     
-
--   Oculte ou desabilite o botão Voltar no modo de área de trabalho na barra de título quando o histórico de navegação no aplicativo está esgotado ou indisponível.
-
-    Fornece uma indicação clara para o usuário de que ele voltou até onde foi possível.
-
--   Cada comando Voltar deve voltar uma página na pilha ou, caso não esteja no modo de área de trabalho, para o aplicativo imediatamente anterior.
-
-    Os usuários podem ficar confusos se a navegação regressiva não for intuitiva, consistente e previsível.
 
 ## Artigos relacionados
 
-- [Botões de rádio](radio-button.md)
+- [Botões de opção](radio-button.md)
 - [Switches de alternância](toggles.md)
 - [Caixas de seleção](checkbox.md)
-
-**Para desenvolvedores (XAML)**
 - [**Classe Button**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
 
 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 5A47301A-2291-4FC8-8BA7-55DB2A5C653F
 title: Bancos de dados SQLite
 description: "SQLite é um mecanismo de banco de dados sem servidor inserido. Este artigo explica como usar a biblioteca SQLite incluída no SDK, empacotar a própria biblioteca SQLite em um aplicativo Universal do Windows ou compilá-lo desde a origem."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dd628d16b3ee230ddc0c56b47fd381a518b8af00
+ms.openlocfilehash: 33148e8cfe301c6016d3f8a16bbcc904ca403d0e
 
 ---
 # Bancos de dados SQLite
@@ -38,7 +39,7 @@ Para referenciar o SDK do SQLite, inclua o cabeçalho a seguir no projeto. O cab
 
 `#include <winsqlite/winsqlite3.h>`
 
-Configure o projeto para vincular a winsqlite3.lib. Em **Gerenciador de Soluções**, clique com botão direito em seu projeto e selecione **Propriedades**&gt;**Vinculador**&gt;**Entrada**, em seguida, adicione winsqlite3.lib a **Dependências Adicionais**.
+Configure o projeto para vincular a winsqlite3.lib. Em **Gerenciador de Soluções**, clique com botão direito em seu projeto e selecione **Propriedades** &gt; **Vinculador** &gt; **Entrada**, em seguida, adicione winsqlite3.lib a **Dependências Adicionais**.
 
 ### 2. Inclusão de SQLite no pacote do aplicativo
 
@@ -94,6 +95,6 @@ Existem seis interfaces para realizar operações de banco de dados nesses objet
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

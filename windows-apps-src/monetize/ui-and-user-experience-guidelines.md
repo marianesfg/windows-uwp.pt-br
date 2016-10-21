@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Saiba mais sobre diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos."
 title: "Diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: d464a2de442e6f1833f429c8460c27bf85e577d1
 
 
 ---
@@ -12,7 +13,7 @@ ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
 # Diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 ## Recursos gerais da interface do usuário para aplicativos do Windows
 
@@ -142,6 +143,6 @@ Aqui, nosso objetivo é ajudar você a atingir a elegância. Como você conhece 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

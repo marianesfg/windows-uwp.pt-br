@@ -5,11 +5,12 @@ title: "Código gerado pelo assistente de notificação por push"
 ms.assetid: 340F55C1-0DDF-4233-A8E4-C15EF9030785
 label: TBD
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 6b7bf3c8019e6c3e92fd07b114cdc688fe7ad8de
+translationtype: Human Translation
+ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
+ms.openlocfilehash: e61c887cc474504cc283de1d433180eb3cfe72a0
 
 ---
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # Código gerado pelo assistente de notificação por push
 
 
@@ -17,7 +18,7 @@ ms.openlocfilehash: 6b7bf3c8019e6c3e92fd07b114cdc688fe7ad8de
 
 Ao usar um assistente no Visual Studio, você pode gerar notificações por push a partir de um serviço móvel que foi criado com os Serviços Móveis do Azure. O assistente do Visual Studio gera código para ajudá-lo a começar. Este tópico explica como o assistente modifica seu projeto, o que o código gerado faz, como usá-lo e o que pode ser feito em seguida para aproveitar ao máximo as notificações por push. Veja [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md).
 
-## <span id="How_the_wizard_modifies_your_project"></span><span id="how_the_wizard_modifies_your_project"></span><span id="HOW_THE_WIZARD_MODIFIES_YOUR_PROJECT"></span>Como o assistente modifica seu projeto
+## Como o assistente modifica seu projeto
 
 
 O assistente de notificação por push modifica seu projeto das seguintes maneiras:
@@ -37,7 +38,7 @@ var <mobile-service-name>Client = new Microsoft.WindowsAzure.MobileServices.Mobi
                 "<your client secret>");
 ```
 
-## <span id="Registration_for_push_notifications"></span><span id="registration_for_push_notifications"></span><span id="REGISTRATION_FOR_PUSH_NOTIFICATIONS"></span>Registro para notificações por push
+## Registro para notificações por push
 
 
 No push.register.\*, o método UploadChannel registra o dispositivo para receber notificações por push. A Loja controla as instâncias instaladas do seu aplicativo e fornece o canal de notificação por push. Consulte [**PushNotificationChannelManager**](https://msdn.microsoft.com/library/windows/apps/br241284).
@@ -169,7 +170,7 @@ void mymobileservice1234Push::HandleExceptionsComingFromTheServer()
 
 Marcas de notificação por push fornecem uma maneira de restringir as notificações a um subconjunto de clientes. Você pode usar o método registerNative (ou RegisterNativeAsync) para se registrar para todas as notificações por push sem especificar marcas, ou você pode se registrar com marcas, fornecendo o segundo argumento, uma matriz de marcas. Se você se registrar com uma ou mais marcas, só receberá notificações que correspondem às marcas.
 
-## <span id="Server-side_scripts__JavaScript_backend_only_"></span><span id="server-side_scripts__javascript_backend_only_"></span><span id="SERVER-SIDE_SCRIPTS__JAVASCRIPT_BACKEND_ONLY_"></span>Scripts do lado do servidor (back-end JavaScript somente)
+## Scripts do lado do servidor (back-end JavaScript somente)
 
 
 Para os serviços móveis que usam o back-end JavaScript, os scripts do lado do servidor são executados quando ocorrem exclusão, inserção, leitura ou operações de atualização. Os scripts não implementam essas operações, mas são executados quando uma chamada do cliente para a API REST do Windows Mobile dispara esses eventos. Os scripts repassam o controle para as próprias operações chamando request.execute ou request.respond para emitir uma resposta ao contexto de chamada. Consulte [Referência da API REST dos Serviços Móveis do Microsoft Azure](http://go.microsoft.com/fwlink/p/?linkid=511139).
@@ -205,12 +206,11 @@ function sendNotifications(request) {
 
 A função sendNotifications envia uma única notificação como notificação do sistema. Você também pode usar outros tipos de notificações por push.
 
-
-            **Dica**  Para saber como obter ajuda ao editar scripts, consulte [Habilitando o IntelliSense para JavaScript do lado do servidor](http://go.microsoft.com/fwlink/p/?LinkId=309275).
+**Dica**  Para saber como obter ajuda ao editar scripts, consulte [Habilitando o IntelliSense para JavaScript do lado do servidor](http://go.microsoft.com/fwlink/p/?LinkId=309275).
 
  
 
-## <span id="Push_notification_types"></span><span id="push_notification_types"></span><span id="PUSH_NOTIFICATION_TYPES"></span>Tipos de notificação por push
+## Tipos de notificação por push
 
 
 O Windows dá suporte a notificações que não são notificações por push. Para obter informações gerais sobre notificações, veja [Oferecendo notificações agendadas, periódicas e por push](https://msdn.microsoft.com/library/windows/apps/hh761484).
@@ -223,21 +223,20 @@ Você deve usar as notificações por push de acordo com as diretrizes para os a
 
 Se você estiver atualizando blocos dinâmicos com notificações por push, também deverá seguir as diretrizes em [Diretrizes e lista de verificação de blocos e notificações](https://msdn.microsoft.com/library/windows/apps/hh465403).
 
-## <span id="Next_steps"></span><span id="next_steps"></span><span id="NEXT_STEPS"></span>Próximas etapas
+## Próximas etapas
 
 
-### <span id="Using_the_Windows_Push_Notification_Services__WNS_"></span><span id="using_the_windows_push_notification_services__wns_"></span><span id="USING_THE_WINDOWS_PUSH_NOTIFICATION_SERVICES__WNS_"></span>Usando o WNS (Serviços de Notificação por Push do Windows)
+### Usando o WNS (Serviços de Notificação por Push do Windows)
 
 Você poderá chamar os Serviços de Notificação por Push do Windows (WNS) diretamente se os Serviços Móveis não oferecerem flexibilidade suficiente, se quiser escrever o código do servidor em C# ou Visual Basic ou se já tiver um serviço de nuvem e quiser enviar notificações por push a partir dele. Chamando o WNS diretamente, é possível enviar notificações por push de seu próprio serviço de nuvem, como uma função do funcionário que monitora dados de um banco de dados ou de outro serviço da Web. Seu serviço de nuvem precisa se autenticar com WNS para enviar notificações por push aos seus aplicativos. Consulte [Como se autenticar com o Serviço de Notificação por Push do Windows (JavaScript)](https://msdn.microsoft.com/library/windows/apps/hh465407) ou [(C#/C++/VB)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868206).
 
 Você também pode enviar notificações por push executando uma tarefa agendada em seu serviço móvel. Consulte [Agendar trabalhos recorrentes em Serviços Móveis](http://go.microsoft.com/fwlink/p/?linkid=301694).
 
-
-            **Aviso**  Depois que você executar o assistente de notificação por push uma vez, não execute o assistente uma segunda vez para adicionar o código de registro para outro serviço móvel. Executar o assistente mais de uma vez por projeto gera código que resulta na sobreposição de chamadas para o método [**CreatePushNotificationChannelForApplicationAsync**](https://msdn.microsoft.com/library/windows/apps/br241287), o que leva a uma exceção de tempo de execução. Se você quiser se registrar para notificações por push em mais de um serviço móvel, execute o assistente uma vez e, em seguida, reescreva o código de registro para garantir que as chamadas para **CreatePushNotificationChannelForApplicationAsync** não sejam executadas ao mesmo tempo. Por exemplo, você pode fazer isso movendo o código gerado pelo assistente em push.register.\* (incluindo a chamada para **CreatePushNotificationChannelForApplicationAsync**) para fora do evento OnLaunched, mas os aspectos específicos disso dependerão da arquitetura do aplicativo.
+**Aviso**  Depois que você executar o assistente de notificação por push uma vez, não execute o assistente uma segunda vez para adicionar o código de registro para outro serviço móvel. Executar o assistente mais de uma vez por projeto gera código que resulta na sobreposição de chamadas para o método [**CreatePushNotificationChannelForApplicationAsync**](https://msdn.microsoft.com/library/windows/apps/br241287), o que leva a uma exceção de tempo de execução. Se você quiser se registrar para notificações por push em mais de um serviço móvel, execute o assistente uma vez e, em seguida, reescreva o código de registro para garantir que as chamadas para **CreatePushNotificationChannelForApplicationAsync** não sejam executadas ao mesmo tempo. Por exemplo, você pode fazer isso movendo o código gerado pelo assistente em push.register.\* (incluindo a chamada para **CreatePushNotificationChannelForApplicationAsync**) para fora do evento OnLaunched, mas os aspectos específicos disso dependerão da arquitetura do aplicativo.
 
  
 
-## <span id="related_topics"></span>Tópicos relacionados
+## Tópicos relacionados
 
 
 * [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md)
@@ -255,6 +254,6 @@ Você também pode enviar notificações por push executando uma tarefa agendada
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

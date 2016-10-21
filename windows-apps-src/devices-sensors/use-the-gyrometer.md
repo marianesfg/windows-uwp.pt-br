@@ -3,8 +3,9 @@ author: DBirtolo
 ms.assetid: 454953E1-DD8F-44B7-A614-7BAD8C683536
 title: "Usar o girômetro"
 description: "Saiba como usar o girômetro para detectar mudanças no movimento do usuário."
+translationtype: Human Translation
 ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: ad76837574b8887bceb135db156e2744542259b0
+ms.openlocfilehash: f53ae8de70ddca0d8293283012bedb8a39ac7ac1
 
 ---
 # Usar o girômetro
@@ -178,6 +179,6 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

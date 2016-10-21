@@ -1,18 +1,15 @@
 ---
 author: TylerMSFT
-title: Guia para aplicativos UWP (Plataforma Universal do Windows)
-description: Saiba mais sobre os aplicativos UWP (Plataforma Universal do Windows) que podem ser executados em uma ampla variedade de dispositivos.
+title: "Introdução à Plataforma Universal do Windows"
+description: "Saiba mais sobre os aplicativos UWP (Plataforma Universal do Windows) que podem ser executados em uma ampla variedade de dispositivos nos quais o Windows 10 esteja em execução."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 2df873ad451e2bb1196a1ce42e3fcd40f8c3ac8e
-ms.openlocfilehash: 925db2c5242eb49229f41298f1db4e2653f3499d
+ms.sourcegitcommit: 0f2ed552898f7cbb476055a6d6b7aa76545113b1
+ms.openlocfilehash: c433bd2eba2a5be114680f52a8da0b5c7b563186
 
 ---
 
-# Guia para aplicativos UWP (Plataforma Universal do Windows)
-
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+# Introdução à Plataforma Universal do Windows
 
 Neste guia, você aprenderá sobre:
 
@@ -284,6 +281,6 @@ Veja [Usando o painel do Centro de Desenvolvimento do Windows unificado](../publ
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 

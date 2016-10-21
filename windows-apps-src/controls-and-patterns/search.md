@@ -5,22 +5,34 @@ title: "Pesquisar e localizar na página"
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: cd746f81e8cca27c5111f3d15342d1def0f874dc
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: f245db6c37b7c8257e4fe937417d981e49101b8c
 
 ---
-
 # Pesquisar e localizar na página
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 A pesquisa é uma das principais maneiras para os usuários encontrarem conteúdo em seu aplicativo. As diretrizes neste artigo abordam elementos da experiência de pesquisa, escopos da pesquisa, implementação e exemplos de pesquisa em contexto.
 
-**APIs importantes**
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn633874"><strong>Classe AutoSuggestBox (XAML)</strong></a></li>
+</ul>
 
--   [**Classe AutoSuggestBox (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)
+</div>
+</div>
 
 
 
-## <span id="Elements_of_the_search_experience"></span><span id="elements_of_the_search_experience"></span><span id="ELEMENTS_OF_THE_SEARCH_EXPERIENCE"></span>Elementos da experiência de pesquisa
+
+
+
+
+
+## Elementos da experiência de pesquisa
 
 
 **Entrada.**  Texto é o modo mais comum de entrada de pesquisa e o foco destas diretrizes. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
@@ -43,15 +55,14 @@ Um método para permitir acesso eficiente para editar a consulta anterior e inse
 
 O conjunto de resultados pode aparecer em qualquer formato que comunique melhor o conteúdo. Um [modo de exibição de lista](lists.md) fornece flexibilidade e é adequado para a maioria das pesquisas. Um modo de exibição em grade funciona bem para imagens ou outras mídias, e um mapa pode ser usado para comunicar a distribuição espacial.
 
-## <span id="Search_scopes"></span><span id="search_scopes"></span><span id="SEARCH_SCOPES"></span>Escopos da pesquisa
+## Escopos da pesquisa
 
 
 A pesquisa é um recurso comum, e os usuários encontrarão interface do usuário de pesquisa no shell e em muitos aplicativos. Embora os pontos de entrada de pesquisa tendam a ser visualizados da mesma forma, eles podem fornecer acesso aos resultados que variam de amplo (pesquisas na Web ou no dispositivo) a limitado (lista de contatos do usuário). O ponto de entrada de pesquisa deve estar justaposto em relação ao conteúdo que está sendo pesquisado.
 
 Alguns escopos comuns da pesquisa incluem:
 
-
-            **Global** e **contextual/refinado.**  Pesquisa várias origens de nuvem e conteúdo local. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
+**Global** e **contextual/refinado.**  Pesquisa várias origens de nuvem e conteúdo local. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
 
 **Web.**  Pesquisa um índice da Web. Os resultados incluem páginas, entidades e respostas.
 
@@ -75,7 +86,7 @@ Use o texto de dica para comunicar o escopo da pesquisa. Os exemplos incluem:
 
 Ao comunicar efetivamente o escopo de um ponto de entrada de pesquisa, você pode ajudar a garantir que a expectativa do usuário seja atendida pelos recursos da pesquisa realizada e a reduzir a possibilidade de frustração.
 
-## <span id="Implementation"></span><span id="implementation"></span><span id="IMPLEMENTATION"></span>Implementação
+## Implementação
 
 
 Para a maioria dos aplicativos, é melhor ter um campo de entrada de texto como o ponto de entrada de pesquisa, o que fornece uma superfície visual proeminente. Além disso, o texto de dica ajuda na capacidade de descoberta e na comunicação do escopo da pesquisa. Quando a pesquisa for uma ação mais secundária ou quando o espaço for limitado, o ícone de pesquisa poderá servir como um ponto de entrada sem o campo de entrada que o acompanha. Quando visualizada como um ícone, assegure-se de que haja espaço para uma caixa de pesquisa modal, conforme visto nos exemplos abaixo.
@@ -102,7 +113,7 @@ No caso de listas roláveis, é útil sempre ter a entrada de pesquisa visível.
 
 A funcionalidade de entrada zero e formulação de consulta é opcional para pesquisas contextuais/refinadas, em que a lista será filtrada em tempo real pela entrada do usuário. As exceções incluem casos em que sugestões de formatação de consulta podem estar disponíveis, como opções de filtragem de caixa de entrada (para: &lt;cadeia de caracteres de entrada&gt;, de: &lt;cadeia de caracteres de entrada&gt;, assunto: &lt;cadeia de caracteres de entrada&gt;, e assim por diante).
 
-## <span id="examples"></span><span id="EXAMPLES"></span>Exemplo
+## Exemplo
 
 
 Os exemplos nesta seção mostram a pesquisa colocada em contexto.
@@ -135,7 +146,7 @@ A pesquisa embutida é mais adequada para casos em que a pesquisa é acessada co
 
 O recurso de localização na página permite que os usuários encontrem correspondências de texto no corpo de texto atual. Visualizadores, leitores e navegadores de documentos são os aplicativos mais típicos que fornecem o recurso de localização na página.
 
-## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Recomendações
+## Recomendações
 
 
 -   Coloque uma barra de comandos em seu aplicativo com a funcionalidade de localização na página para permitir que o usuário pesquise texto na página. Para obter detalhes de posicionamento, consulte a seção Exemplos.
@@ -152,63 +163,61 @@ O recurso de localização na página permite que os usuários encontrem corresp
 
         -   Caixa de entrada
         -   Botões Anterior e Próximo
-        -   Uma contagem de correspondências - Fechar (somente desktop) - A exibição deve realçar as correspondências e rolar para mostrar a próxima correspondência na tela.
-        -   Os usuários podem se mover rapidamente pelo documento usando os botões **Anterior** e **Próximo** e usando barras de rolagem ou manipulação direta via toque.
+        -   Uma contagem de correspondências
+        -   Fechar (somente desktop)
+    -   A exibição deve realçar as correspondências e rolar para mostrar a próxima correspondência na tela. Os usuários podem se mover rapidamente pelo documento usando os botões **Anterior** e **Próximo** e usando barras de rolagem ou manipulação direta via toque.
+
     -   A funcionalidade de localização na página deve funcionar junto com a funcionalidade básica de localização na página. Para aplicativos que possuem o recurso Localizar e Substituir, verifique se a localização na página não está interferindo nesse recurso.
 
-    -   Inclua um contador de correspondência para indicar ao usuário o número de correspondências de texto existentes na página. Habilite o atalho de teclado (CTRL+F).
+-   Inclua um contador de correspondência para indicar ao usuário o número de correspondências de texto existentes na página.
+-   Habilite o atalho de teclado (CTRL+F).
 
--   Exemplos
--   Fornece uma maneira fácil de acessar o recurso de localização na página.
-
-## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>Neste exemplo em uma interface do usuário móvel, "Localizar na página" aparece após dois comandos "Adicionar a..." em um menu expansível:
+## Exemplos
 
 
-exemplo de localização na página 1 Depois de selecionar localizar na página, o usuário insere um termo de pesquisa.
+Fornece uma maneira fácil de acessar o recurso de localização na página. Neste exemplo em uma interface do usuário móvel, "Localizar na página" aparece após dois comandos "Adicionar a..." em um menu expansível:
 
-![Sugestões de texto podem aparecer quando um termo de pesquisa está sendo inserido:](images/findinpage-01.png)
+![exemplo de localização na página 1](images/findinpage-01.png)
 
  
 
-exemplo de localização na página 2 Se não houver uma correspondência de texto na pesquisa, uma cadeia de caracteres de texto "Nenhum resultado" deve aparecer na caixa de resultados:
+Depois de selecionar localizar na página, o usuário insere um termo de pesquisa. Sugestões de texto podem aparecer quando um termo de pesquisa está sendo inserido:
 
-![exemplo de localização na página 3](images/findinpage-02.png)
+![exemplo de localização na página 2](images/findinpage-02.png)
+
+ 
+
+Se não houver uma correspondência de texto na pesquisa, uma cadeia de caracteres de texto "Nenhum resultado" deve aparecer na caixa de resultados:
+
+![exemplo de localização na página 3](images/findinpage-03.png)
 
  
 
 Se houver uma correspondência de texto na pesquisa, o primeiro termo deverá ser destacado em uma cor distinta, com as próximas correspondências em um tom mais sutil dessa mesma paleta de cores, como visto neste exemplo:
 
-![exemplo de localização na página 4](images/findinpage-03.png)
+![exemplo de localização na página 4](images/findinpage-04.png)
 
  
 
 Localizar na página tem um contador de correspondência:
 
-![exemplo de contador de pesquisa de localizar na página](images/findinpage-04.png)
-
- 
-
-Implementando a localização na página
-
-![Visualizadores de documentos, leitores e navegadores, os tipos de aplicativo mais prováveis para fornecer localizar na página, permitem que o usuário tenha uma experiência de visualização/leitura em tela inteira.](images/findinpage-counter.png)
+![exemplo de contador de pesquisa de localizar na página](images/findinpage-counter.png)
 
 
 
 
-## <span id="implementing_find_in_page"></span><span id="IMPLEMENTING_FIND_IN_PAGE"></span>
+## **Implementando a localização na página**
 
-**A funcionalidade de localização na página é secundária e deve estar localizada em uma barra de comando.**
+-   Visualizadores de documentos, leitores e navegadores, os tipos de aplicativo mais prováveis para fornecer localizar na página, permitem que o usuário tenha uma experiência de visualização/leitura em tela inteira.
+-   A funcionalidade de localização na página é secundária e deve estar localizada em uma barra de comando.
 
--   Para saber mais sobre como adicionar comandos à sua barra de comando, veja [Barra de comandos](app-bars.md).
--   Artigos relacionados
-
-Caixa de sugestão automática
+Para obter mais informações sobre como adicionar comandos à sua barra de comando, veja [Barra de comandos](app-bars.md).
 
 
 
-## <span id="related_topics"></span>Related articles
+## Artigos relacionados
 
-* [**Auto-suggest box**](auto-suggest-box.md)
+* [**Caixa de sugestão automática**](auto-suggest-box.md)
 
 
  
@@ -217,10 +226,6 @@ Caixa de sugestão automática
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

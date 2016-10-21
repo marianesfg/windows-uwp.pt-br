@@ -3,14 +3,15 @@ author: Xansky
 description: "Pelo namespace Windows.ApplicationModel.Appointments, você pode criar e gerenciar compromissos no aplicativo de calendário de um usuário."
 title: Gerenciar compromissos
 ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 020b020d90a52d45fa989e0f630320b4630b955e
+ms.openlocfilehash: ae7fe9075a4c49c99a572087bf4b7b176555caef
 
 ---
 
 # Gerenciar compromissos
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Pelo namespace [**Windows.ApplicationModel.Appointments**](https://msdn.microsoft.com/library/windows/apps/Dn263359), você pode criar e gerenciar compromissos no aplicativo de calendário de um usuário. Aqui, mostraremos como criar um compromisso, adicioná-lo a um aplicativo de calendário, substituí-lo no aplicativo de calendário e depois removê-lo desse aplicativo de calendário. Também mostraremos como exibir um intervalo de tempo para um aplicativo de calendário e criar um objeto de recorrência de compromisso.
@@ -503,9 +504,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
 
 ## Adicionar um novo compromisso editável
 
-[
-              **ShowEditNewAppointmentAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) funciona como [**ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) só que o diálogo de adição do compromisso é editável tornando possível que o usuário altere a data antes de salvá-lo.
+[**ShowEditNewAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) funciona como [**ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) só que o diálogo de adição do compromisso é editável tornando possível que o usuário altere a data antes de salvá-lo.
 
 ``` cs
 private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
@@ -540,9 +539,7 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
 
 ## Mostrar detalhes do compromisso
 
-[
-              **ShowAppointmentDetailsAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) faz com que o sistema mostre detalhes do compromisso específico. Você pode escolher ativar um aplicativo de calendário para mostrar detalhes do compromisso no próprio calendário. Ou o sistema irá exibir os detalhes do compromisso. Uma sobrecarga no método que aceita o argumento da data inicial é fornecida para mostrar detalhes, por exemplo, de um compromisso recorrente.
+[**ShowAppointmentDetailsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) faz com que o sistema mostre detalhes do compromisso específico. Você pode escolher ativar um aplicativo de calendário para mostrar detalhes do compromisso no próprio calendário. Ou o sistema irá exibir os detalhes do compromisso. Uma sobrecarga no método que aceita o argumento da data inicial é fornecida para mostrar detalhes, por exemplo, de um compromisso recorrente.
 
 ```cs
 private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e)
@@ -576,6 +573,6 @@ Agora, você já conhece as noções básicas de como gerenciar compromissos. Ba
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

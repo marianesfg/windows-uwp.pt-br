@@ -1,59 +1,69 @@
-﻿---
+---
 author: jnHs
-Description: When submitting an add-on, the options on the Pricing and availability page determine what to charge for your add-on and how it should be offered to customers.
-title: Set add-on pricing and availability
+Description: "Ao enviar um complemento, as opções na página Preço e disponibilidade determinam quanto cobrar por seu complemento e como ele deve ser oferecido aos clientes."
+title: "Definir disponibilidade e preço de complemento"
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
+translationtype: Human Translation
+ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
+ms.openlocfilehash: 17fe4e836dc75e0dfd44389a503a6a94afe44f42
+
 ---
 
-# Set add-on pricing and availability
+# Definir disponibilidade e preço de complemento
 
 
-When submitting an add-on, the options on the **Pricing and availability** page determine what to charge for your add-on and how it should be offered to customers.
+Ao enviar um complemento, as opções na página **Preço e disponibilidade** determinam quanto cobrar por seu complemento e como ele deve ser oferecido aos clientes.
 
-## Base price
-
-
-You must select a base price for your add-on. These price tiers are the same as the price tiers for apps, starting at .99 USD. You also have the option to offer your add-on for free.
-
-## Markets and custom prices
+## Preço base
 
 
-By default, your add-on will be listed in all possible markets, including any future markets that we may add later, at its base price.
+Você deve selecionar um preço base para seu complemento. Essas faixas de preço são as mesmas dos aplicativos, começando em 0,99 USD. Você também tem a opção de oferecer seu complemento gratuitamente.
 
-However, just as with an app, you have the option to choose the markets in which you'd like to offer your add-on. In most cases you'll want to pick the same set of markets as the app, but you have the flexibility to make changes as needed. You can also set custom prices so that you can charge different prices for the add-on in different markets.
-
-For more info and a full list of the available markets, see [Define pricing and market selection](define-pricing-and-market-selection.md).
-
-## Sale pricing
+## Mercados e preços personalizados
 
 
-If you want to offer your add-on at a reduced price for a limited period of time, you can create and schedule a sale. For more info, see [Put apps and add-ons on sale](put-apps-and-add-ons-on-sale.md).
+Por padrão, seu complemento será listado em todos os mercados possíveis, incluindo quaisquer mercados futuros que poderemos adicionar mais tarde, com o preço base.
 
-## Distribution and visibility
+No entanto, assim como com um aplicativo, você tem a opção de escolher os mercados em que gostaria de oferecer seu complemento. Na maioria dos casos, você vai querer selecionar o mesmo conjunto de mercados que o aplicativo, mas terá flexibilidade para fazer alterações, conforme necessário. Você também pode definir preços personalizados para que possa cobrar preços diferentes para o complemento em diferentes mercados.
+
+Para obter mais informações e obter uma lista completa dos mercados disponíveis, consulte [Definir preço e seleção de mercado](define-pricing-and-market-selection.md).
+
+## Preço de venda
 
 
-You can determine whether your add-on should be offered for purchase to customers. Choose from one of the following options:
+Se você quiser oferecer seu complemento por um preço reduzido por um período limitado de tempo, será possível criar e agendar uma promoção. Para obter mais informações, consulte [Colocar aplicativos e complementos em promoção](put-apps-and-add-ons-on-sale.md).
 
--   **Available for purchase. May be displayed in your app's listing:** This is the default setting and is recommended unless you want to restrict access to your add-on. Leave this option checked for add-ons that will be made available to any customer.
--   **Available for purchase. Not displayed in your app's listing:** Choosing this option allows customers to purchase the add-on from within your app, but the add-on will not be displayed in your app's Store listing. Use this only when the offer is not broadly available, for example during initial periods of internal testing.
--   **No longer available for purchase. Not displayed in your app's listing.** Choosing this option means that the add-on won't be displayed in your app's listing, and no new customers may purchase the add-on. However, **this option is not supported for customers on Windows 8.1 or earlier**. If your app is available on Windows 8.1 or earlier, the add-on will still be available for purchase to those customers. To stop offering the add-on to customers on Windows 8.1 or earlier, you'll need to update your app to remove the code that offers the add-on, then publish a new submission for the app. This is recommended even if your app doesn't target Windows 8.1 or earlier; it's a better experience for your customers if you never offer them an add-on that you've opted to make unavailable.
+## Distribuição e visibilidade
+
+
+Você pode determinar se seu complemento deve ser oferecido para compra aos clientes. Escolha uma das seguintes opções:
+
+-   **Disponível para compra. Podem ser exibidas na página de detalhes do seu aplicativo:** esta é a configuração padrão e é recomendada, a menos que você deseje restringir o acesso ao seu complemento. Deixe essa opção marcada para complementos que serão disponibilizados para qualquer cliente.
+-   **Disponível para compra. Não exibido nos detalhes do seu aplicativo:** escolher essa opção permite que os clientes comprem o complemento de dentro de seu aplicativo, mas o complemento não será exibido na listagem da Loja do aplicativo. Use essa opção somente quando a oferta não for amplamente disponível, por exemplo, durante os períodos iniciais de testes internos.
+-   **Não estão mais disponíveis para compra. Não é exibido nos detalhes do seu aplicativo.** Escolher essa opção significa que o complemento não será exibido nos detalhes de seu aplicativo e novos clientes não podem adquirir o complemento. No entanto, **essa opção não tem suporte para os clientes no Windows 8.1 ou versões anteriores**. Se o seu aplicativo estiver disponível no Windows 8.1 ou anterior, o complemento ainda estará disponível para compra aos clientes. Para interromper a oferta deste complemento aos clientes no Windows 8.1 ou anterior, você precisará atualizar seu aplicativo para remover o código que oferece o complemento e depois publicar um novo envio do aplicativo. Isso é recomendado mesmo se o seu aplicativo não for para o Windows 8.1 ou versões anteriores. Seus clientes terão uma experiência melhor se você nunca lhes oferecer um complemento que você optou por tornar indisponível.
     
- > **Note**  Choosing this setting, and/or submitting an app update that removes the add-on from your app's code, does not affect any customers who have already purchased the add-on, regardless of their operating system.
+ > **Observação**  Escolher essa configuração e/ou enviar uma atualização de aplicativo que remove o complemento do código do seu aplicativo não afeta clientes que já compraram o complemento, independentemente do sistema operacional.
 
 
-## Publish date
+## Data de publicação
 
-You can indicate when your add-on submission should be published by choosing an option in the **Publish date** section.
+Você pode indicar quando o envio do complemento deverá ser publicado, escolhendo uma opção na seção **Data de publicação**.
 
--   Choose **Publish my add-on as soon as it passes certification** to make this submission available in the Store as soon as possible.
--   Choose **Publish this add-on manually** if you don't want your submission to be published until you indicate that it should be. You can do this from the certification status page by clicking **Publish now**, or by selecting a specific date as described below.
--   Choose **No sooner than \[date\]** to ensure that the submission is not published until a certain date. With this option, your submission will be released as soon as possible on or after the date you specify. The date must be at least 24 hours in the future. Along with the date, you can also specify the time at which the submission should begin to be published.
+-   Escolha **Publicar meu complemento assim que ele for aprovado na certificação** para disponibilizá-lo na Loja assim que possível.
+-   Escolha **Publicar manualmente este complemento** se você não quiser que seu aplicativo seja publicado até você indicar que ele deve ser. Você pode fazer isso na página de status de certificação, clicando em **Publicar agora**, ou selecionando uma data específica, conforme descrito a seguir.
+-   Escolha **Não mais cedo do que \[data\]** para garantir que o envio não seja publicado até uma data específica. Com esta opção, seu envio será lançado assim que possível na data especificada ou depois dela A data deve ser pelo menos 24 horas no futuro. Com a data, você também pode especificar a hora em que o envio deve começar a ser publicado.
 
- > **Note**  Delays during certification or publishing could cause the actual release date to be later than the date you request. The Windows Store cannot guarantee that your add-on (or update) will be available on a specific date.
- 
+ > **Observação**  Atrasos durante a certificação ou publicação podem fazer com que a data real de lançamento seja posterior à data solicitada. A Windows Store não pode garantir que seu complemento (ou atualização) estará disponível em uma data específica.
+ 
 
- 
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO3-->
 
 

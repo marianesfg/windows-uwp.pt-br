@@ -1,18 +1,20 @@
 ---
 author: mcleanbyron
-Description: "Neste passo a passo, você criará e executará seu primeiro experimento com testes A/B."
+Description: "Neste passo a passo, você criará, executará e gerenciará seu primeiro experimento com testes A/B."
 title: Criar e executar seu primeiro experimento com testes A/B
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0f889c22b8999408341f4c12387602b344f49439
+translationtype: Human Translation
+ms.sourcegitcommit: bfe4862c441ca095a40df4f594fdf9b3e213d142
+ms.openlocfilehash: ab15741531b829c496811cdfca35059cd113f91d
 
 ---
 
 # Criar e executar seu primeiro experimento com testes A/B
 
 Neste passo a passo, você fará o seguinte:
-* Criará um experimento no painel do Centro de Desenvolvimento do Windows que testa se uma mudança na cor de fundo de um botão de aplicativo aumenta com êxito o número de cliques do botão.
-* Criará um aplicativo que recupera configurações de variação do Centro de Desenvolvimento, usa esses dados para alterar a cor de fundo de um botão e registra em log dados de eventos de exibição e conversão no Centro de Desenvolvimento.
+* Criará uma experimentação [projeto](run-app-experiments-with-a-b-testing.md#terms) no painel do Centro de Desenvolvimento que define diversas variáveis remotas que representam o texto e a cor de um botão de aplicativo.
+* Criará um aplicativo com código que recupera os valores de variáveis remotas, usará esses dados para alterar a cor de fundo de um botão e registrará em log dados de eventos de exibição e conversão novamente no Centro de Desenvolvimento.
+* Criará um experimento no projeto para testar se a mudança na cor de fundo de um botão de aplicativo aumenta com êxito o número de cliques do botão.
 * Executará o aplicativo para coletar dados de experimento.
 * Examinará os resultados do experimento no painel do Centro de Desenvolvimento, escolherá uma variação a ser habilitada para todos os usuários do aplicativo e concluirá o experimento.
 
@@ -22,39 +24,30 @@ Para obter uma visão geral de testes A/B teste com o Centro de Desenvolvimento,
 
 Para seguir este passo a passo, você deve ter uma conta do Centro de Desenvolvimento do Windows e configurar seu computador de desenvolvimento conforme descrito em [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md).
 
-## Criar o experimento no Centro de Desenvolvimento do Windows
+## Criar um projeto com variáveis remotas no Centro de Desenvolvimento do Windows
 
 1. Entre no [painel do Centro de Desenvolvimento](https://dev.windows.com/overview).
-2. Se já tiver um aplicativo no Centro de Desenvolvimento que você deseja usar para criar um experimento, selecione-o em **Seus aplicativos**. Se você ainda não tiver um aplicativo no seu painel, [crie um novo aplicativo reservando um nome](../publish/create-your-app-by-reserving-a-name.md) e, em seguida, selecione esse aplicativo no painel.
+2. Se já tiver um aplicativo no Centro de Desenvolvimento que você deseja usar para criar um experimento, selecione-o no painel. Se você ainda não tiver um aplicativo no seu painel, [crie um novo aplicativo reservando um nome](../publish/create-your-app-by-reserving-a-name.md) e, em seguida, selecione esse aplicativo no painel.
 3. No painel de navegação, clique em **Serviços** e depois em **Experimentação**.
-4. Na seção **Chaves de API**, selecione **Nova chave de API** para gerar uma nova chave de API e insira o nome **Meu primeiro experimento** para essa chave de API. Você usará essa chave de API na próxima seção deste passo a passo.
-5. Na seção **Experimentos**, clique em **Novo experimento**. No campo **Nome do experimento**, digite o nome **Otimizar Cliques de Botão**.
-6. No campo **Nome do evento de exibição**, digite o nome **userViewedButton**. Mais adiante neste guia passo a passo, você adicionará um código que registra esse evento de exibição quando a página principal do seu aplicativo é inicializada e o botão fica visível para o usuário.
-7. Na seção **Metas e eventos de conversão**, insira os seguintes valores:
-  * No campo **Nome da meta**, digite **Aumentar Cliques de Botão**.
-  * No campo **Nome do evento de conversão**, digite o nome **userClickedButton**. Mais adiante neste guia passo a passo, você adicionará um código que registra esse evento de conversão no manipulador de eventos Click do botão.
-  * No campo **Objetivo**, escolha **Maximizar**.
-8. Na seção **Variações e configurações**, clique em **Adicionar configuração** três vezes. Agora, você terá quatro linhas das configurações vazias.
-  * Na primeira linha, digite **buttonText** para o nome de configuração, **Botão Cinza** na coluna **Variação A** e **Botão Azul** na coluna **Variação B**.
-  * Na segunda linha, digite **r** para o nome da configuração, **128** na coluna **Variação A** e **1** na coluna **Variação B**.
-  * Na terceira linha, digite **g** para o nome da configuração, **128** na coluna **Variação A** e **1** na coluna **Variação B**.
-  * Na quarta linha, digite **b** para o nome da configuração, **128** na coluna **Variação A** e **255** na coluna **Variação B**.  
-9. Confirme que a caixa de seleção **Distribuir igualmente** está marcada para que as variações sejam distribuídas igualmente no seu aplicativo.
-10. Clique em **Salvar** e depois em **Ativar**.
-
-> 
-            **Importante**  Depois de ativar um experimento, você não pode mais modificar os parâmetros dele, a menos que ele seja um experimento de teste (você clicou na caixa de seleção **Experimento de teste** quando criou o experimento). Em geral, recomendamos codificar o experimento no seu aplicativo antes de ativar esse experimento. Por questões de simplicidade, neste guia passo a passo, você pode ativar o experimento agora.
+4. Na seção **Projetos** da próxima página, clique no botão **Novo projeto**.
+5. Na página **Novo projeto**, insira o nome **Experimentos de clique de botão** para seu novo projeto.
+6. Expanda a seção **Variáveis remotas** e clique em **Adicionar variável** quatro vezes. Agora, você terá quatro linhas de variáveis em branco.
+  * Na primeira linha, digite **buttonText** para o tipo e o nome de variável **Botão cinza** na coluna **Valor padrão**.
+  * Na segunda linha, digite **r** para o tipo e o nome de variável **128** na coluna **Valor padrão**.
+  * Na terceira linha, digite **g** para o tipo e o nome de variável **128** na coluna **Valor padrão**.
+  * Na quarta linha, digite **b** para o tipo e o nome de variável **128** na coluna **Valor padrão**.
+7. Clique em **Salvar** e anote o valor da [ID do projeto](run-app-experiments-with-a-b-testing.md#terms) que consta na seção **integração do SDK**. Na próxima seção, você atualizará o código do aplicativo e fará referência a esse valor em seu código.
 
 ## Codificar o experimento no seu aplicativo
 
 1. No Visual Studio 2015, crie um novo projeto da Plataforma Universal do Windows usando Visual C#. Especifique o nome **SampleExperiment** para o projeto.
 2. No Gerenciador de Soluções, expanda o nó do seu projeto, clique com botão direito no nó **Referências** e clique em **Adicionar Referência**.
 3. No **Gerenciador de Referências**, expanda **Universal do Windows** e clique em **Extensões**.
-4. Na lista de SDKs, marque a caixa de seleção ao lado de **SDK de Microsoft Store Engagement** e clique em **OK**.
+4. Na lista de SDKs, marque a caixa de seleção ao lado de **Microsoft Engagement Framework** e clique em **OK**.
 5. No **Gerenciador de Soluções**, clique duas vezes em MainPage.xaml para abrir o designer da página principal no aplicativo.
 6. Arraste um elemento **Button** de **Toolbox** até a página.
 7. Clique duas vezes no botão do designer para abrir o arquivo de código e adicionar um manipulador de eventos para o evento **Click**.  
-8. Substitua o conteúdo inteiro do arquivo de código pelo código a seguir.
+8. Substitua o conteúdo inteiro do arquivo de código pelo código a seguir. Atribua a variável ```projectId``` ao valor da [ID do projeto](run-app-experiments-with-a-b-testing.md#terms) que você obteve no painel do Centro de Desenvolvimento na seção anterior.
 
   ```CSharp
   using System;
@@ -70,55 +63,51 @@ Para seguir este passo a passo, você deve ter uma conta do Centro de Desenvolvi
 
   namespace SampleExperiment
   {  
-    public sealed partial class MainPage : Page
-    {
-        private readonly ExperimentClient experiment;
-        private ExperimentVariation variation;
+     public sealed partial class MainPage : Page
+     {
+        private StoreServicesExperimentVariation variation;
+        private StoreServicesCustomEventLogger logger;
 
-        // Assign this variable to your API key from Dev Center. The API key
-        // shown below is for example purposes only.
-        private string apiKey = "F48AC670-4472-4387-AB7D-D65B095153FB";    
+        // Assign this variable to the project ID for your experiment from Dev Center.
+        private string projectId = "";
 
         public MainPage()
         {
             this.InitializeComponent();
 
-            // Initialize the ExperimentClient for A/B testing.
-            experiment = new ExperimentClient(apiKey);
-
             // Because this call is not awaited, execution of the current method
             // continues before the call is completed.
-            #pragma warning disable CS4014
-            Initialize();
-            #pragma warning restore CS4014
+#pragma warning disable CS4014
+            InitializeExperiment();
+#pragma warning restore CS4014
         }
 
-        private async Task Initialize()
+        private async Task InitializeExperiment()
         {
             // Get the current cached variation assignment for the experiment.
-            ExperimentVariationResult result = await experiment.GetVariationAsync();
-            variation = result.Variation;
+            var result = await StoreServicesExperimentVariation.GetCachedVariationAsync(projectId);
+            variation = result.ExperimentVariation;
 
             // Check whether the cached variation assignment needs to be refreshed.
             // If so, then refresh it.
-            if (result.ErrorCode != EngagementErrorCode.Success || result.Variation.NeedsRefresh)
+            if (result.ErrorCode != StoreServicesEngagementErrorCode.None || result.ExperimentVariation.IsStale)
             {
-                result = await experiment.RefreshVariationAsync();
+                result = await StoreServicesExperimentVariation.GetRefreshedVariationAsync(projectId);
 
                 // If the call succeeds, use the new result. Otherwise, use the cached value.
-                if (result.ErrorCode == EngagementErrorCode.Success)
+                if (result.ErrorCode == StoreServicesEngagementErrorCode.None)
                 {
-                    variation = result.Variation;
+                    variation = result.ExperimentVariation;
                 }
             }
 
-            // Get settings named "buttonText", "r", "g", and "b" from the variation
-            // assignment. If no variation assignment is available, the settings default
+            // Get remote variables named "buttonText", "r", "g", and "b" from the variation
+            // assignment. If no variation assignment is available, the variables default
             // to "Grey button" for the button text and grey RGB value for the button color.
             var buttonText = variation.GetString("buttonText", "Grey Button");
-            var r = (byte)variation.GetInteger("r", 128);
-            var g = (byte)variation.GetInteger("g", 128);
-            var b = (byte)variation.GetInteger("b", 128);
+            var r = (byte)variation.GetInt32("r", 128);
+            var g = (byte)variation.GetInt32("g", 128);
+            var b = (byte)variation.GetInt32("b", 128);
 
             // Assign button text and color.
             await button.Dispatcher.RunAsync(
@@ -131,26 +120,52 @@ Para seguir este passo a passo, você deve ter uma conta do Centro de Desenvolvi
                 });
 
             // Log the view event named "userViewedButton" to Dev Center.
-            StoreServicesCustomEvents.Log("userViewedButton", variation);
+            if (logger == null)
+            {
+                logger = StoreServicesCustomEventLogger.GetDefault();
+            }
+
+            logger.LogForVariation(variation, "userViewedButton");
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             // Log the conversion event named "userClickedButton" to Dev Center.
-            StoreServicesCustomEvents.Log("userClickedButton", variation);
+            if (logger == null)
+            {
+                logger = StoreServicesCustomEventLogger.GetDefault();
+            }
+
+            logger.LogForVariation(variation, "userClickedButton");
         }
      }
   }
   ```
-9. Na linha de código a seguir, atribua a variável *apiKey* à chave de API que você obteve no painel do Centro de Desenvolvimento na seção anterior. A chave de API mostrada abaixo é apenas para fins de exemplo.
-```CSharp
-private string apiKey = "F48AC670-4472-4387-AB7D-D65B095153FB";
-```
 10. Salve o arquivo de código e construa o projeto.
+
+## Criar o experimento no Centro de Desenvolvimento do Windows
+
+1. Volte para a página do projeto de **Experimentos de clique de botão** no painel do Centro de Desenvolvimento do Windows.
+2. Na seção **Experimentos**, clique no botão **Novo experimento**.
+5. Na seção **Detalhes do experimento**, digite o nome **Otimizar cliques de botão** no campo **Nome do experimento**.
+6. Na seção **Evento de visualização**, digite **userViewedButton** no campo **Nome do evento de visualização**. Observe que esse nome corresponde à cadeia de caracteres de evento de visualização ao qual você conectou o código que você adicionou na seção anterior.
+7. Na seção **Metas e eventos de conversão**, insira os seguintes valores:
+  * No campo **Nome da meta**, digite **Aumentar Cliques de Botão**.
+  * No campo **Nome do evento de conversão**, digite o nome **userClickedButton**. Observe que esse nome corresponde à cadeia de caracteres de evento de conversão ao qual você conectou o código que você adicionou na seção anterior.
+  * No campo **Objetivo**, escolha **Maximizar**.
+8. Na seção **Variações e variáveis remotas**, confirme se a caixa de seleção **Distribuir igualmente** está marcada para que as variações sejam distribuídas igualmente ao seu aplicativo.
+9. Adicione variáveis ao seu experimento:
+  9. Clique no controle de lista suspensa, escolha **buttonText**e clique em **Adicionar variável**. A cadeia de caracteres **Botão cinza** deve ser exibida automaticamente na coluna **Variação A** (esse valor é derivado das configurações do projeto). Na coluna **Variação B**, digite **Botão azul**.
+  9. Clique novamente no controle de lista suspensa, escolha **r**e clique em **Adicionar variável**. A cadeia de caracteres **128** deve aparecer automaticamente na coluna **Variação A**. Na coluna **Variação B**, digite **1**.
+  9. Clique novamente no controle de lista suspensa, escolha **g**e clique em **Adicionar variável**. A cadeia de caracteres **128** deve aparecer automaticamente na coluna **Variação A**. Na coluna **Variação B**, digite **1**.  
+  9. Clique novamente no controle de lista suspensa, escolha **b**e clique em **Adicionar variável**. A cadeia de caracteres **128** deve aparecer automaticamente na coluna **Variação A**. Na coluna **Variação B**, digite **255**.  
+10. Clique em **Salvar** e depois em **Ativar**.
+
+> **Importante**&nbsp;&nbsp;Depois de ativar um experimento, você não poderá mais modificar os parâmetros dele, a menos que você tenha clicado na caixa de seleção **Experimento editável** quando criou o experimento. Em geral, recomendamos codificar o experimento no seu aplicativo antes de ativar esse experimento.
 
 ## Execute o aplicativo para coletar dados de experimento
 
-1. Execute o aplicativo **SampleExperiment** criado na seção anterior.
+1. Execute o aplicativo **SampleExperiment** criado anteriormente.
 2. Confirme que você está vendo um botão cinza ou azul. Clique no botão e, em seguida, feche o aplicativo.
 3. Repita as etapas acima várias vezes no mesmo computador para confirmar que o aplicativo está mostrando a mesma cor de botão.
 
@@ -158,16 +173,13 @@ private string apiKey = "F48AC670-4472-4387-AB7D-D65B095153FB";
 
 Aguarde várias horas depois de concluir a seção anterior e, em seguida, siga estas etapas para analisar os resultados do seu experimento e concluir o processo.
 
-> 
-            **Observação** Assim que você ativa um experimento, o Centro de Desenvolvimento começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar dados para o seu experimento. No entanto, pode levar várias horas para que os dados do experimento apareçam no painel.
+> **Observação**&nbsp;&nbsp; Assim que você ativa um experimento, o Centro de Desenvolvimento começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar dados para o seu experimento. No entanto, pode levar várias horas para que os dados do experimento apareçam no painel.
 
 1. No Centro de Desenvolvimento, volte para a página **Experimentação** do seu aplicativo.
-2. Na seção **Experimentos**, clique no filtro **Ativo** e, em seguida, clique em **Otimizar Cliques de Botão** para acessar a página desse experimento.
+2. Na seção **Experimentos ativos**, clique em **Otimizar cliques de botão** para acessar a página desse experimento.
 3. Confirme que os resultados mostrados nas seções **Resumo dos resultados** e **Detalhes dos resultados** correspondem ao que você espera ver. Para saber mais sobre essas seções, veja [Gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md#review-the-results-of-your-experiment).
 
-  >
-            **Observação** O Centro de Desenvolvimento relata apenas o primeiro evento de conversão de cada usuário em um período de 24 horas. Se um usuário aciona vários eventos de conversão em seu aplicativo em um período de 24 horas, apenas o primeiro evento de conversão é relatado. Isso se destina a ajudar a impedir que um usuário único com muitos eventos de conversão distorça os resultados do experimento de um grupo de amostra de usuários.
-
+  >**Observação**&nbsp;&nbsp;O Centro de Desenvolvimento relata apenas o primeiro evento de conversão de cada usuário em um período de 24 horas. Se um usuário aciona vários eventos de conversão em seu aplicativo em um período de 24 horas, apenas o primeiro evento de conversão é relatado. Isso se destina a ajudar a impedir que um usuário único com muitos eventos de conversão distorça os resultados do experimento de um grupo de amostra de usuários.
 4. Agora, você está pronto para finalizar o experimento. Na seção **Resumo dos resultados**, na coluna **Variação B**, clique em **Alternar**. Isso alterna todos os usuários do seu aplicativo para o botão azul.
 5. Clique em **OK** para confirmar que você deseja finalizar o experimento.
 6. Execute o aplicativo **SampleExperiment** criado na seção anterior.
@@ -175,13 +187,14 @@ Aguarde várias horas depois de concluir a seção anterior e, em seguida, siga 
 
 ## Tópicos relacionados
 
-  * [Definir seu experimento no painel do Centro de Desenvolvimento](define-your-experiment-in-the-dev-center-dashboard.md)
-  * [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md)
-  * [Gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md)
-  * [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md)
+* [Criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md)
+* [Definir seu experimento no painel do Centro de Desenvolvimento](define-your-experiment-in-the-dev-center-dashboard.md)
+* [Gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md)
+* [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

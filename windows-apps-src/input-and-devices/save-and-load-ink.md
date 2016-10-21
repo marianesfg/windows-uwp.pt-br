@@ -6,8 +6,9 @@ ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: cdef00304e1835532eceb8e51fecc8045f2ff300
+translationtype: Human Translation
+ms.sourcegitcommit: 75e93920422b5ad8ad0e9399bccc403ea69e7feb
+ms.openlocfilehash: 8ba48ed9aa7589ddee6009c5a8cb8ec1091d51ef
 
 ---
 
@@ -17,15 +18,15 @@ ms.openlocfilehash: cdef00304e1835532eceb8e51fecc8045f2ff300
 Os aplicativos UWP que dão suporte ao Windows Ink podem serializar e desserializar traços de tinta para um arquivo Ink Serialized Format (ISF). O arquivo ISF é uma imagem GIF com metadados adicionais para todos os comportamentos e propriedades de traço de tinta. Aplicativos que não são habilitados para tinta podem exibir a imagem GIF estática, incluindo transparência de plano de fundo de canal alfa.
 
 
-**APIs importantes**
+**APIs Importantes**
 
 -   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)
 -   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
 
-**Observação**  
-O ISF é a representação mais compacta e persistente de tinta. Ele pode ser inserido em um formato de documento binário, como um arquivo GIF, ou colocado diretamente na Área de Transferência.
+> [!NOTE]
+> O ISF é a representação mais compacta e persistente de tinta. Ele pode ser inserido em um formato de documento binário, como um arquivo GIF, ou colocado diretamente na Área de Transferência.
 
  
 
@@ -66,8 +67,7 @@ Aqui, demonstramos como salvar traços de tinta desenhados em um controle [**Ink
 
 2.  Em seguida, definimos alguns comportamentos básicos de entrada à tinta.
 
-    [
-            **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), e os ouvintes dos eventos de clique nos botões são declarados.
+    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), e os ouvintes dos eventos de clique nos botões são declarados.
 ```    CSharp
 public MainPage()
     {
@@ -89,8 +89,7 @@ public MainPage()
 
 3.  Por fim, salvamos os dados à tinta no manipulador de eventos de clique do botão **Salvar**.
 
-    [
-            **FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) permite que o usuário selecione o arquivo e o local onde os dados à tinta serão salvos.
+    [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) permite que o usuário selecione o arquivo e o local onde os dados à tinta serão salvos.
 
     Depois de selecionar um arquivo, abrimos um fluxo [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) definido como [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241635).
 
@@ -158,13 +157,10 @@ public MainPage()
     }
 ```
 
-[!NOTE]  
-O formato GIF é o único com suporte para salvar dados à tinta. Entretanto, o método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) (demonstrado na próxima seção) dá suporte a outros formatos para compatibilidade com versões anteriores.
-
- 
+> [!NOTE]  
+> O formato GIF é o único formato de arquivo compatível para salvar dados à tinta. Entretanto, o método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) (demonstrado na próxima seção) dá suporte a outros formatos para compatibilidade com versões anteriores.
 
 ## Carregar traços de tinta de um arquivo
-
 
 Aqui, demonstramos como carregar traços de tinta de um arquivo e renderizá-los em um controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
@@ -200,8 +196,7 @@ Aqui, demonstramos como carregar traços de tinta de um arquivo e renderizá-los
 
 2.  Em seguida, definimos alguns comportamentos básicos de entrada à tinta.
 
-    [
-            **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), e os ouvintes dos eventos de clique nos botões são declarados.
+    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), e os ouvintes dos eventos de clique nos botões são declarados.
 ```    CSharp
 public MainPage()
     {
@@ -223,12 +218,15 @@ public MainPage()
 
 3.  Por fim, carregamos os dados à tinta no manipulador de eventos de clique do botão **Carregar**.
 
-    [
-            **FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) permite que o usuário selecione o arquivo e o local de onde recuperar os dados à tinta salvos.
+    [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) permite que o usuário selecione o arquivo e o local de onde recuperar os dados à tinta salvos.
 
     Depois de selecionar um arquivo, abrimos um fluxo [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) definido como [**Read**](https://msdn.microsoft.com/library/windows/apps/br241635).
 
     Em seguida, chamamos [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) para ler, desserializar e carregar os traços de tinta salvos em [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492). Carregar os traços em **InkStrokeContainer** faz com que [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) os renderize imediatamente para [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+
+    > [!NOTE]
+    > Todos os traços existentes em InkStrokeContainer são apagados antes de novos traços serem carregados.
+
 ``` csharp
 // Load ink data from a file.
 private async void btnLoad_Click(object sender, RoutedEventArgs e)
@@ -250,7 +248,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
         // Read from file.
         using (var inputStream = stream.GetInputStreamAt(0))
         {
-            await inkCanvas.InkPresenter.StrokeContainer.LoadAsync(stream);
+            await inkCanvas.InkPresenter.StrokeContainer.LoadAsync(inputStream);
         }
         stream.Dispose();
     }
@@ -262,8 +260,8 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Observação**  
-O formato GIF é o único com suporte para salvar dados à tinta. Entretanto, o método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) oferece suporte aos formatos a seguir para compatibilidade com versões anteriores.
+> [!NOTE]
+> O formato GIF é o único formato de arquivo compatível para salvar dados à tinta. Entretanto, o método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) oferece suporte aos formatos a seguir para compatibilidade com versões anteriores.
 
 | Formato                    | Descrição |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -434,7 +432,7 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 * [Interações com caneta](pen-and-stylus-interactions.md)
 
-**Amostras**
+**Exemplos**
 * [Amostra de tinta](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Amostra de tinta simples](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Amostra de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314)
@@ -448,6 +446,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

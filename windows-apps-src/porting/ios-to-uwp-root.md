@@ -4,14 +4,15 @@ description: Mudar do iOS para a UWP
 Search.SourceType: Video
 title: Mudar do iOS para a UWP
 ms.assetid: 7a05751d-02df-4240-9ba5-d95f65a7a9c5
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7f6160d651a4264d81ac1a1c9a011e32f53778b0
+ms.openlocfilehash: fd7eaa4dea5e4fcc4f9096199178f341b97879b6
 
 ---
 
 # Mudar do iOS para a UWP
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Se você for um desenvolvedor do iOS se perguntando como expandir sua base de usuários para incluir o Windows 10 e a Plataforma Universal do Windows (UWP), há um número cada vez maior de ferramentas para ajudá-lo. As abordagens que você pode adotar dependem do tipo de aplicativo no qual você esteja trabalhando (jogo, estilo de vida, corporativo, etc.) e do ponto em que você se encontra no processo de desenvolvimento. Por exemplo, um jogo concluído ou quase concluído que seja muito dependente de OpenGL ou Cocos2D é um candidato ideal para a [Ponte do Windows para iOS](https://dev.windows.com/bridges/ios), enquanto se você estiver planejando um aplicativo de plataforma cruzada para uma pequena empresa, deve considerar o uso de [Xamarin.Forms](https://www.xamarin.com/forms). E se você tiver desenvolvido seu aplicativo em uma ferramenta de plataforma cruzada como o Unity, [publicar no Windows](http://blogs.unity3d.com/2015/09/09/windows-10-universal-apps-in-unity-5-2/) é bastante simples.
@@ -39,6 +40,6 @@ Hoje em dia, o Windows é executado em um grande número de dispositivos. A UWP 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

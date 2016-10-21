@@ -3,8 +3,9 @@ title: "Agente de autenticação da Web"
 description: "Este artigo explica como conectar seu aplicativo da Plataforma Universal do Windows (UWP) a um provedor de identidade online que use protocolos de autenticação como OpenID ou OAuth, como Facebook, Twitter, Flickr, Instagram e assim por diante."
 ms.assetid: 05F06961-1768-44A7-B185-BCDB74488F85
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd
+ms.openlocfilehash: ea3d3e1df07c8cf9701e7bd39af006cd681ef1fe
 
 ---
 
@@ -16,8 +17,7 @@ ms.openlocfilehash: 96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd
 
 Este artigo explica como conectar seu aplicativo da Plataforma Universal do Windows (UWP) a um provedor de identidade online que use protocolos de autenticação como OpenID ou OAuth, como Facebook, Twitter, Flickr, Instagram e assim por diante. O método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) envia uma solicitação ao provedor de identidade online e obtém um token de acesso que descreve os recursos do provedor aos quais o aplicativo tem acesso.
 
-
-            **Observação** para obter uma amostra de código funcional completa, clone o [WebAuthenticationBroker repo on GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
+**Observação** para obter uma amostra de código funcional completa, clone o [WebAuthenticationBroker repo on GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
 
  
 
@@ -152,22 +152,7 @@ O depurador da Web Fiddler pode ser usado com aplicativos.
 
 1.  Por o AuthHost executar no seu próprio contêiner de aplicativo para dar maior capacidade de rede privada, você deve definir uma chave de registro: Windows Registry Editor Version 5.00
 
-    
-            **HKEY\_LOCAL\_MACHINE**
-            \\
-            **SOFTWARE**
-            \\
-            **Microsoft**
-            \\
-            **Windows NT**
-            \\
-            **CurrentVersion**
-            \\
-            **Image File Execution Options**
-            \\
-            **authhost.exe**
-            \\
-            **EnablePrivateNetwork** = 00000001
+    **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Image File Execution Options**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
 
                          Data type  
                          DWORD
@@ -193,6 +178,6 @@ O depurador da Web Fiddler pode ser usado com aplicativos.
 3.  Adicione uma regra de firewall para o tráfego de entrada ao Fiddler.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

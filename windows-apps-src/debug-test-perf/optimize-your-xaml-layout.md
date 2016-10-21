@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 79CF3927-25DE-43DD-B41A-87E6768D5C35
 title: Otimizar seu layout XAML
 description: "O layout pode ser uma parte cara de um aplicativo XAML&\\#8212;, tanto no uso de CPU quanto na sobrecarga de memória. Aqui estão algumas etapas simples que você pode seguir para melhorar o desempenho de layout do seu aplicativo XAML."
+translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: dbec176310896164ebc99c20aefca4c5b2b29ee9
+ms.openlocfilehash: ae6ad7a761737613c323eb80af993ab5dfcd7977
 
 ---
 # Otimizar seu layout XAML
@@ -129,8 +130,7 @@ Como esses exemplos mostram, há muitas maneiras de atingir a mesma interface do
 
 Um requisito da interface do usuário comum é ter um layout em que elementos se sobrepõem uns aos outros. Geralmente, preenchimento, margens, alinhamentos e transformações são usados para posicionar os elementos dessa maneira. O controle [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) XAML é otimizado para melhorar o desempenho do layout para elementos que se sobrepõem.
 
-
-            **Importante**  Para ver a melhora, use um [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) de célula única. Não defina [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ou [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
+**Importante**  Para ver a melhora, use um [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) de célula única. Não defina [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ou [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
 
 ### Exemplos
 
@@ -156,10 +156,7 @@ Um requisito da interface do usuário comum é ter um layout em que elementos se
 
 ## Use as propriedades de borda internas do painel
 
-
-            Os controles [
-              **Grid**
-            ](https://msdn.microsoft.com/library/windows/apps/BR242704), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/Dn879546) e [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378) têm propriedades de borda internas que permitem que você desenhe uma borda em torno deles sem acrescentar um elemento [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) ao XAML. As novas propriedades que oferecem suporte à borda interna são: **BorderBrush**, **BorderThickness**, **CornerRadius** e **preenchimento**. Cada um desses é um [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362), então você pode usá-los com ligações e animações. Eles são feitos para serem uma substituição total para um elemento **Border** separado.
+Os controles [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/Dn879546) e [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378) têm propriedades de borda internas que permitem que você desenhe uma borda em torno deles sem acrescentar um elemento [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) ao XAML. As novas propriedades que oferecem suporte à borda interna são: **BorderBrush**, **BorderThickness**, **CornerRadius** e **preenchimento**. Cada um desses é um [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362), então você pode usá-los com ligações e animações. Eles são feitos para serem uma substituição total para um elemento **Border** separado.
 
 Se a sua interface do usuário tem elementos [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) em torno desses painéis, use a borda interna ao invés, o que economiza um elemento extra na estrutura do layout de seu aplicativo. Como mencionado anteriormente, isso pode ser uma economia significativa, principalmente no caso de interface do usuário repetida.
 
@@ -176,13 +173,9 @@ Se a sua interface do usuário tem elementos [**Border**](https://msdn.microsoft
 
 A classe [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) expõe dois eventos similares para responder a alterações de layout: [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated) e [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged). Você pode estar usando um desses eventos para receber notificações quando um elemento é redimensionado durante o layout. A semântica dos dois eventos é diferente e existem considerações de desempenho importantes na escolha entre eles.
 
-Para um bom desempenho, [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged) é quase sempre a escolha certa. 
-            **SizeChanged** tem semântica intuitiva. É gerado durante o layout quando o tamanho do [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) foi atualizado.
+Para um bom desempenho, [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged) é quase sempre a escolha certa. **SizeChanged** tem semântica intuitiva. É gerado durante o layout quando o tamanho do [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) foi atualizado.
 
-
-            [
-              **LayoutUpdated**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated) também é gerado durante o layout, mas tem uma semântica global: é gerado em cada elemento sempre que qualquer elemento for atualizado. É comum fazer apenas processamento local no manipulador de evento. Nesse caso, o código é executado com mais frequência que o necessário. Use **LayoutUpdated** apenas se você precisar saber quando um elemento é reposicionado sem alteração de tamanho (o que é incomum).
+[**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated) também é gerado durante o layout, mas tem uma semântica global: é gerado em cada elemento sempre que qualquer elemento for atualizado. É comum fazer apenas processamento local no manipulador de evento. Nesse caso, o código é executado com mais frequência que o necessário. Use **LayoutUpdated** apenas se você precisar saber quando um elemento é reposicionado sem alteração de tamanho (o que é incomum).
 
 ## Escolhendo painéis
 
@@ -193,6 +186,6 @@ Todo painel XAML é otimizado para obter bom desempenho, e todos os painéis ofe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

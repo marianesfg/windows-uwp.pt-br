@@ -4,8 +4,8 @@ title: "Monitorar o progresso e a conclusão de tarefas em segundo plano"
 description: "Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano."
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 translationtype: Human Translation
-ms.sourcegitcommit: 6e6e28bc339364e70282a9db84593188c70a59c4
-ms.openlocfilehash: 153895a3ce41e5f4d22067e33cb5e874e89c6069
+ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
+ms.openlocfilehash: 0488e47c35b2f7c8a8db2b2aca4527c4c3b67d28
 
 ---
 
@@ -21,7 +21,9 @@ ms.openlocfilehash: 153895a3ce41e5f4d22067e33cb5e874e89c6069
 -   [**BackgroundTaskProgressEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224785)
 -   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
 
-Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano. As tarefas em segundo plano são separadas do aplicativo, e são executadas separadamente, mas o progresso e a conclusão dessas tarefas podem ser monitorados por um código do aplicativo. Para fazer isso, o aplicativo assina eventos das tarefas em segundo plano que ele registrou no sistema.
+Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano executada em um processo à parte. (Para tarefas em segundo plano de processo único, você pode definir variáveis compartilhadas para indicar o andamento e a conclusão.)
+
+ As tarefas em segundo plano são separadas do aplicativo, e são executadas separadamente, mas o progresso e a conclusão dessas tarefas podem ser monitorados por um código do aplicativo. Para fazer isso, o aplicativo assina eventos das tarefas em segundo plano que ele registrou no sistema.
 
 -   Este tópico considera que você tem um aplicativo que registra tarefas em segundo plano. Para criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano](create-and-register-a-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
 
@@ -210,7 +212,6 @@ Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por
 
 
 
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

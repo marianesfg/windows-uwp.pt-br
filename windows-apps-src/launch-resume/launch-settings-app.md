@@ -3,15 +3,16 @@ author: TylerMSFT
 title: "Iniciar o aplicativo Configurações do Windows"
 description: "Saiba como iniciar o aplicativo Configurações do Windows a partir de seu aplicativo. Este tópico descreve o esquema de URI ms-settings. Use esse esquema de URI para iniciar o aplicativo Configurações do Windows para páginas de configurações específicas."
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
-ms.sourcegitcommit: 3cf9dd4ab83139a2b4b0f44a36c2e57a92900903
-ms.openlocfilehash: e52a4245e8697a68bfc5c5605dc54e5ea510c662
+translationtype: Human Translation
+ms.sourcegitcommit: f90ba930db60f338ee0ebcc80934281363de01ee
+ms.openlocfilehash: 249e485f74364475ff96a8256ee88bdb79749259
 
 ---
 
 # Iniciar o aplicativo Configurações do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -26,10 +27,7 @@ A inicialização do aplicativo Configurações é uma parte importante da escri
 
 ## Como iniciar o aplicativo Configurações
 
-
-Se as configurações de privacidade não permitem que seu aplicativo acesse um recurso confidencial, recomendamos fornecer um link conveniente para as configurações de privacidade no aplicativo **Configurações**. Isso tornará mais fácil para os usuários alterarem suas configurações.
-
-Para iniciar diretamente o aplicativo **Configurações**, use o esquema de URI `ms-settings:`, como mostrado nos exemplos a seguir.
+Para iniciar o aplicativo **Configurações**, use o esquema de URI `ms-settings:`, como mostrado nos exemplos a seguir.
 
 Neste exemplo, um controle de hiperlink XAML é usado para iniciar a página de configurações de privacidade do microfone usando o URI `ms-settings:privacy-microphone`.
 
@@ -45,7 +43,7 @@ Neste exemplo, um controle de hiperlink XAML é usado para iniciar a página de 
 </TextBlock>
 ```
 
-Como alternativa, seu aplicativo pode chamar o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar o aplicativo **Configurações** do código.
+Como alternativa, seu aplicativo pode chamar o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar o aplicativo **Configurações** do código. Este exemplo mostra como iniciar a página de configurações de privacidade da câmera usando o URI `ms-settings:privacy-webcam`.
 
 ```cs
 using Windows.System;
@@ -53,9 +51,11 @@ using Windows.System;
 bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-webcam"));
 ```
 
-Este exemplo mostra como iniciar a página de configurações de privacidade da câmera usando o URI `ms-settings:privacy-webcam`.
+O código acima inicia a página de configurações de privacidade da câmera:
 
 ![configurações de privacidade da câmera.](images/privacyawarenesssettingsapp.png)
+
+
 
 Para obter mais informações como URIs de inicialização, consulte [Iniciar o aplicativo padrão para um URI](launch-default-app.md).
 
@@ -71,9 +71,9 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 |                    | Notificações e ações                | Ambos           | ms-settings:notifications                 |
 |                    | Telefone                                  | Somente celular    | ms-settings:phone                         |
 |                    | Mensagens                              | Somente celular    | ms-settings:messaging                     |
-|                    | Economia de Bateria                          | Móvel e desktop em dispositivos com bateria, como um tablet    | ms-settings:batterysaver                  |
+|                    | Economia de Bateria                          | Móvel e desktop em dispositivos com bateria, como um tablet | ms-settings:batterysaver                  |
 |                    | Economia de bateria/configurações de economia de bateria | Móvel e desktop em dispositivos com bateria, como um tablet | ms-settings:batterysaver-settings         |
-|                    | Economia de bateria/uso de bateria            | Móvel e desktop em dispositivos com bateria, como um tablet    | ms-settings:batterysaver-usagedetails     |
+|                    | Economia de bateria/uso de bateria            | Móvel e desktop em dispositivos com bateria, como um tablet | ms-settings:batterysaver-usagedetails     |
 |                    | Ligar/Desligar e suspensão                          | Somente desktop   | ms-settings:powersleep                    |
 |                    | Desktop: sobre                         | Ambos           | ms-settings:deviceencryption              |
 |                    |                                        |                |                                           |
@@ -90,14 +90,19 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 |                    | Rede Celular e SIM                         | Ambos           | ms-settings:network-cellular              |
 |                    | Hotspot móvel                         | Ambos           | ms-settings:network-mobilehotspot         |
 |                    | Proxy                                  | Ambos           | ms-settings:network-proxy                 |
+|                    | Status                                 | Somente desktop   | ms-settings:network-status                |
 | Personalização    | Personalização (categoria)             | Ambos           | ms-settings:personalization               |
 |                    | Em segundo plano                             | Somente desktop   | ms-settings:personalization-background    |
 |                    | Cores                                 | Ambos           | ms-settings:personalization-colors        |
 |                    | Sons                                 | Somente celular    | ms-settings:sounds                        |
 |                    | Tela de bloqueio                            | Ambos           | ms-settings:lockscreen                    |
-| Contas           | O email e as contas                | Ambos           | ms-settings:emailandaccounts              |
-|                    | Acesso de trabalho                            | Ambos           | ms-settings:workplace                     |
-|                    | Sincronize as configurações                     | Ambos           | ms-settings:sync                          |
+| Contas           | Acessar trabalho ou escola                  | Ambos           | ms-settings:workplace                     |
+|                    | Contas de email e aplicativo                   | Ambos           | ms-settings:emailandaccounts              |
+|                    | Família e outras pessoas                  | Ambos           | ms-settings:otherusers                    |
+|                    | Opções de entrada                        | Ambos           | ms-settings:signinoptions                 |
+|                    | Sincronizar suas configurações                     | Ambos           | ms-settings:sync                          |
+|                    | Outras pessoas                           | Ambos           | ms-settings:otherusers                    |
+|                    | Suas informações                              | Ambos           | ms-settings:yourinfo                      |
 | Hora e idioma  | Data e hora                            | Ambos           | ms-settings:dateandtime                   |
 |                    | Região e idioma                      | Somente desktop   | ms-settings:regionlanguage                |
 | Facilidade de acesso     | Narrador                               | Ambos           | ms-settings:easeofaccess-narrator         |
@@ -127,6 +132,6 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

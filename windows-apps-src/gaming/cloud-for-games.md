@@ -4,8 +4,8 @@ title: "Usando serviços de nuvem para jogos UWP"
 description: "Saiba mais sobre a implementação de nuvem como um back-end para seus jogos UWP."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 8bf42e9c2c2e074240eb8e7b94efdfbca65cc7f9
+ms.sourcegitcommit: 0b2d81daa8bd0fd5694b81fa14fcd064e1600d35
+ms.openlocfilehash: b23c33fac9ac8fe5e2d5563a0af6824c82a3969b
 
 ---
 #  Usando serviços de nuvem para jogos UWP
@@ -29,7 +29,7 @@ Você também pode usar servidores de nuvem dedicados para criar um grande mundo
 
 Além disso, os jogos que exigem funcionalidades de intenso gerenciamento de dados do jogo, como jogos sociais com mecânica assíncrona de vários jogadores, podem ser implementados com serviços de nuvem.
 
-##  Como as empresas de jogos usam a tecnologia de nuvem?
+##  Como as empresas de jogos usam a tecnologia de nuvem
 
 Saiba como outros desenvolvedores implementaram soluções de nuvem em seus jogos.
 
@@ -48,8 +48,7 @@ Saiba como outros desenvolvedores implementaram soluções de nuvem em seus jogo
     </tr>
     <tr>
         <td>[343 Industries](https://www.halowaypoint.com/)</td>
-        <td>
-              _Halo 5: Guardians_ implementou [Halo: Spartan Companies](https://www.halowaypoint.com/spartan-companies) como sua plataforma de jogo social usando o Banco de Dados de Documentos do Microsoft Azure, que foi selecionado por sua velocidade e flexibilidade devido às funcionalidades de indexação automática.</td>
+        <td>_Halo 5: Guardians_ implementou [Halo: Spartan Companies](https://www.halowaypoint.com/spartan-companies) como sua plataforma de jogo social usando o Banco de Dados de Documentos do Microsoft Azure, que foi selecionado por sua velocidade e flexibilidade devido às funcionalidades de indexação automática.</td>
         <td>
             <ul>
                 <li>Camada de dados escalonável para lidar com o gerenciamento/criação de grupos para jogos multijogadores <li>Integração de jogo e mídia social <li>Consultas em tempo real de dados por meio de vários atributos <li>Sincronização de conquistas e estatísticas de jogo </ul>
@@ -89,8 +88,7 @@ Saiba como outros desenvolvedores implementaram soluções de nuvem em seus jogo
     </tr>
     </td>
         <td>[Pixel Squad](http://www.crimecoast.com/)</td>
-        <td>A Pixel Squad desenvolveu _Crime Coast_ usando o mecanismo de jogo Unity e o Azure. 
-              _Crime Coast_ é um jogo de estratégia social disponível nas plataformas Android, iOS e Windows. O Armazenamento de Blobs do Azure, o Cache Redis do Azure Gerenciado, uma matriz VMs IIS de carga balanceada e o Hub de Notificação da Microsoft foram usados no jogo. Saiba como eles gerenciaram o escalonamento e lidaram com o inesperado número de 5.000 jogadores simultâneos.
+        <td>A Pixel Squad desenvolveu _Crime Coast_ usando o mecanismo de jogo Unity e o Azure. _Crime Coast_ é um jogo de estratégia social disponível nas plataformas Android, iOS e Windows. O Armazenamento de Blobs do Azure, o Cache Redis do Azure Gerenciado, uma matriz VMs IIS de carga balanceada e o Hub de Notificação da Microsoft foram usados no jogo. Saiba como eles gerenciaram o escalonamento e lidaram com o inesperado número de 5.000 jogadores simultâneos.
         </td>
         <td>
             <ul>
@@ -135,7 +133,7 @@ Primeiro, você precisa pensar no nível de serviço que é mais adequado para s
 
 * SaaS (software como serviço)
 
-    O SaaS (software como serviço) normalmente inclui aplicativos já criados para você e hospedados em uma plataforma de nuvem existente. Ele foi projetado para facilitar ainda mais para você o início da execução do seu jogo no serviço.
+    O SaaS (software como serviço) normalmente é um aplicativo já criado para você e hospedado em uma plataforma de nuvem existente. Ele foi projetado para facilitar ainda mais para você o início da execução do seu jogo no serviço.
 
 
 ### Projetar sua infraestrutura de jogo usando o Azure
@@ -154,7 +152,7 @@ A seguir estão algumas maneiras de usar as ofertas de nuvem do Azure para um jo
 | Banco de dados de jogo relacional escalonável| Armazenamento estruturado de dados relacionais como transações no jogo no banco de dados | [Banco de Dados do SQL Azure](https://azure.microsoft.com/services/sql-database/)| Banco de dados SQL como serviço ([Comparação com o SQL em uma VM](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/))  |
 | Banco de dados de jogos de baixa latência distribuído e escalonável| Leitura, gravação e consulta de dados de jogo e jogadores rápidas com flexibilidade de esquema | [Banco de Dados de Documentos do Azure](https://azure.microsoft.com/services/documentdb/)| Banco de dados como serviço de documentos NoSQL de baixa latência   |
 | Usar o próprio datacenter com serviços do Azure | O jogo é recuperado de seu próprio datacenter e enviado aos dispositivos cliente | [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) | Permite que sua organização forneça serviços do Azure no próprio datacenter para ajudá-lo a obter mais  |
-| Transferência de blocos de dados grandes| Arquivos grandes, como arquivos de imagem, áudio e vídeo de jogos, podem ser enviados aos usuários a partir do local POP da CDN (Rede de Distribuição de Conteúdo) mais próxima com a CDN do Azure  | [Rede de Distribuição de Conteúdo do Azure](https://azure.microsoft.com/services/cdn/) | Criada em uma topologia de rede moderna de nós centralizados grandes, a CDN do Azure manipula picos súbitos de tráfego e cargas pesadas para aumentar drasticamente a velocidade e a disponibilidade, o que resulta em melhorias significativas na experiência do usuário  |
+| Transferência de blocos de dados grandes| Arquivos grandes, como imagem, áudio e vídeo de jogos, podem ser enviados aos usuários a partir do local POP da CDN (Rede de Distribuição de Conteúdo) mais próxima com a CDN do Azure    | [Rede de Distribuição de Conteúdo do Azure](https://azure.microsoft.com/services/cdn/) | Criada em uma topologia de rede moderna de nós centralizados grandes, a CDN do Azure manipula picos súbitos de tráfego e cargas pesadas para aumentar drasticamente a velocidade e a disponibilidade, o que resulta em melhorias significativas na experiência do usuário  |
 | Baixa latência               | Executa o armazenamento em cache para criar jogos rápidos e escalonáveis com mais controle e isolamento garantido de dados; também pode ser usada para aprimorar o recurso de correspondência do jogo. | [Cache Redis do Azure](https://azure.microsoft.com/services/cache/) | Acesso a dados de baixa latência e alta taxa de transferência para ativar aplicativos do Azure rápidos e escalonáveis.  |
 | Alta escalabilidade, baixa latência | Manipula flutuações no número de usuários do jogo com leituras e gravações de baixa latência | [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) | Capacidade de ativar os cenários mais complexos de baixa latência com uso intenso de dados e escalonar de forma confiável para manipular mais usuários por vez. O Service Fabric permite que você crie jogos sem precisar criar um armazenamento ou cache separado, conforme necessário para aplicativos sem estado |
 | Capacidade de coletar milhões de eventos por segundo de dispositivos                         | Log de milhões de eventos por segundo de dispositivos | [Hubs de Eventos do Azure](https://azure.microsoft.com/services/event-hubs/) | Ingestão de telemetria em escala de nuvem de jogos, sites, aplicativos e dispositivos  |
@@ -204,6 +202,6 @@ Estas são algumas empresas que oferecem back-end de nuvem para jogos com base n
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

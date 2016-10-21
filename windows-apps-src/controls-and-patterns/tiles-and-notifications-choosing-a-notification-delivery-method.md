@@ -5,20 +5,19 @@ title: "Escolher um método de entrega de notificação"
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: b79a6f771afe63c9a42567875db5ef8107611afc
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: a61c9ce609856ff3addba557558c6bffec504ed7
 
 ---
-
 # Escolher um método de entrega de notificação
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Este artigo aborda as quatro opções de notificação - local, agendada, periódica e por push - que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema. Um bloco ou uma notificação do sistema pode obter informações para o usuário mesmo enquanto o usuário não está diretamente envolvido com o aplicativo. A natureza e o conteúdo do aplicativo e as informações que você deseja fornecer podem ajudá-lo a determinar qual método de notificação é melhor para o seu cenário.
 
-## <span id="Notification_delivery_methods__overview"></span><span id="notification_delivery_methods__overview"></span><span id="NOTIFICATION_DELIVERY_METHODS__OVERVIEW"></span>Visão geral de métodos de entrega de notificações
+## Visão geral de métodos de entrega de notificações
 
 
 Existem quatro mecanismos que um aplicativo pode usar para entregar uma notificação:
@@ -90,7 +89,7 @@ Esta tabela resume os tipos de entrega de notificação.
 
  
 
-## <span id="Local_notifications"></span><span id="local_notifications"></span><span id="LOCAL_NOTIFICATIONS"></span>Notificações locais
+## Notificações locais
 
 
 Atualizar o bloco ou emblema do aplicativo ou acionar uma notificação do sistema enquanto o aplicativo está sendo executado é o mecanismo mais simples de entrega de notificações. Todo aplicativo possui informações úteis ou interessantes exibidas no bloco, mesmo se esse conteúdo mudar depois que o usuário ativou e interagiu com o aplicativo. As notificações locais são uma boa maneira de manter o bloco do aplicativo atualizado, mesmo se você também usar um dos outros mecanismos de notificação. Por exemplo, um bloco de aplicativo de fotos poderia mostrar as fotos de um álbum adicionado recentemente.
@@ -109,7 +108,7 @@ Para saber mais, consulte estes tópicos:
 -   [Enviar uma notificação de bloco local](tiles-and-notifications-sending-a-local-tile-notification.md)
 -   [Exemplos de códigos de notificações da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Scheduled_notifications"></span><span id="scheduled_notifications"></span><span id="SCHEDULED_NOTIFICATIONS"></span>Notificações agendadas
+## Notificações agendadas
 
 
 As notificações agendadas estão no subconjunto de notificações locais que pode especificar a hora precisa em que um bloco deve ser atualizado ou em que uma notificação do sistema deve ser mostrada. Notificações agendadas são ideais em situações onde o conteúdo a ser atualizado já é conhecido, como o convite de uma reunião. Se você não tiver conhecimento avançado do conteúdo de notificação, deverá usar uma notificação periódica ou por push.
@@ -121,7 +120,7 @@ Para saber mais, consulte estes tópicos:
 -   [Diretrizes para notificações agendadas](https://msdn.microsoft.com/library/windows/apps/hh761464)
 -   [Exemplos de códigos de notificações da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Periodic_notifications"></span><span id="periodic_notifications"></span><span id="PERIODIC_NOTIFICATIONS"></span>Notificações periódicas
+## Notificações periódicas
 
 
 As notificações periódicas fornecem atualizações de bloco com um mínimo serviço na nuvem e investimento do cliente. Eles também são um método excelente para distribuir o mesmo conteúdo para um amplo público-alvo. O código do lado do cliente especifica a URL de um local na nuvem que o Windows sonda para atualizações de bloco ou emblema e especifica a frequência de sondagem do local. Em cada intervalo de sondagem, o Windows contata a URL para baixar o conteúdo XML especificado e exibi-lo no bloco.
@@ -135,7 +134,7 @@ Para saber mais, consulte estes tópicos:
 -   [Visão geral de notificações periódicas](tiles-and-notifications-periodic-notification-overview.md)
 -   [Exemplos de códigos de notificações da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Push_notifications"></span><span id="push_notifications"></span><span id="PUSH_NOTIFICATIONS"></span>Notificações por push
+## Notificações por push
 
 
 Notificações por push são ideais para comunicar dados em tempo real ou dados personalizados para o seu usuário. As notificações por push também são usadas para o conteúdo que é gerado em horas imprevisíveis, como notícias da rede social ou mensagens instantâneas. Essas notificações também são úteis nas situações em que os dados são suscetíveis ao tempo de uma maneira que não seria adequada às notificações periódicas, como pontuações de esportes durante um jogo.
@@ -151,7 +150,7 @@ Para obter mais informações, consulte:
 -   [Exemplos de códigos de notificações da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
-## <span id="related_topics"></span>Tópicos relacionados
+## Tópicos relacionados
 
 
 * [Enviar uma notificação de bloco local](tiles-and-notifications-sending-a-local-tile-notification.md)
@@ -171,6 +170,6 @@ Para obter mais informações, consulte:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

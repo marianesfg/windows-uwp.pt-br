@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
 description: Saiba como detectar erros de AdControl em seu aplicativo.
 title: Tratamento de erros no Guia passo a passo do JavaScript
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: d26a8efeb253c6c793d8edd21d7452bbf15da261
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: e7ce3cd96286454aaa987483ed4df1cefbee5b57
 
 
 ---
@@ -12,7 +13,7 @@ ms.openlocfilehash: d26a8efeb253c6c793d8edd21d7452bbf15da261
 # Tratamento de erros no Guia passo a passo do JavaScript
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Este tópico demonstra como detectar erros de [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) em seu aplicativo.
 
@@ -86,6 +87,6 @@ Você verá o anúncio original do aplicativo de exemplo criado anteriormente e 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

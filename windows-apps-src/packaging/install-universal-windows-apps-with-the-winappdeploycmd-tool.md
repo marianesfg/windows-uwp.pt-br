@@ -4,13 +4,13 @@ ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: Instalar aplicativos usando a ferramenta WinAppDeployCmd.exe
 description: "O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo da Plataforma Universal do Windows (UWP) de um computador com o Windows 10 em qualquer dispositivo com o Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 5f6bfb13e2e80f21902ec923e32f68046f313a13
+ms.sourcegitcommit: 7b04e2e9980da4bbdd6d9d10fc493eb05e21afc4
+ms.openlocfilehash: 87af49dc04a94bac8896b33a1d7e8b4993b0f2c3
 
 ---
 # Instalar aplicativos usando a ferramenta WinAppDeployCmd.exe
 
-[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo da Plataforma Universal do Windows (UWP) de um computador com o Windows 10 em qualquer dispositivo com o Windows 10. É possível usar essa ferramenta para implantar um pacote .appx quando o dispositivo com o Windows 10 está conectado por USB ou disponível na mesma sub-rede sem a necessidade do Microsoft Visual Studio ou a solução desse aplicativo. Você também pode implementar o aplicativo sem empacotar primeiro a um computador ou Xbox One remoto. Este artigo descreve como instalar aplicativos UWP usando essa ferramenta.
 
@@ -139,8 +139,19 @@ Registra o aplicativo no diretório app1_F5 sob o caminho de implementação do 
 WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 ```
 
+## Usando WinAppDeployCmd para configurar a implantação de Executar no Computador no Xbox One
+
+Executar no Computador permite que você implante um aplicativo UWP em um Xbox One sem copiar os binários. m vez disso, os binários são hospedados em um compartilhamento de rede na mesma rede que o Xbox.  Para fazer isso, você precisa de um Xbox One desbloqueado por desenvolvedor e um aplicativo UWP de arquivo flexível em uma unidade de rede que o Xbox pode acessar.
+
+Execute isso para registrar o aplicativo:
+``` syntax
+WinAppDeployCmd registerfiles -ip <Xbox One IP> -remotedeploydir <location of app> -username <user for network> -password <password for user>
+
+ex. WinAppDeployCmd register files -ip 192.168.0.1 -remotedeploydir \\driveA\myAppLocation -username admin -password A1B2C3
+```
 
 
-<!--HONumber=Jul16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

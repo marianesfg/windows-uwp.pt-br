@@ -5,20 +5,34 @@ title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 28c78b39bad4c66457ec5aba8cf0b4ce0de4f00a
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 82c7e80afde143d7d12bbf4fe49aa2c52f244f6f
 
 ---
 # Bloco Rich Text
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Blocos Rich Text fornecem vários recursos para layout de texto avançado que você pode usar quando precisa de suporte para parágrafos, elementos de interface do usuário embutidos ou layouts de texto complexos.
 
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx"><strong>Classe RichTextBlock</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx"><strong>Classe RichTextBlockOverflow</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx"><strong>Classe Paragraph</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx"><strong>Classe Typography</strong></a></li>
+</ul>
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+</div>
+</div>
 
--   [**Classe RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)
--   [**Classe RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx)
--   [**Classe Paragraph**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx)
--   [**Classe Typography**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
+
+
+
+
+
 
 ## Esse é o controle correto?
 
@@ -26,7 +40,7 @@ Use um **RichTextBlock** quando precisar de suporte para vários parágrafos, v�
 
 Use um **TextBlock** para exibir mais texto somente leitura em seu aplicativo. Você pode usá-lo para exibir texto de linha única ou de várias linhas, hiperlinks embutidos e texto com formatação, como negrito, itálico ou sublinhado. TextBlock fornece um modelo de conteúdo mais simples e, portanto, é mais fácil de usar e pode fornecer melhor desempenho na renderização de texto do que RichTextBlock. Esse é o controle preferencial para a maioria dos textos de interface do usuário de aplicativos. Embora você possa colocar quebras de linha no texto, TextBlock é projetado para exibir um único parágrafo e não oferece suporte a recuo de texto.
 
-Para saber mais sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
+Para obter mais informações sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
 
 ## Exemplos
 
@@ -151,6 +165,6 @@ Consulte Tipografia e Diretrizes para fontes.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

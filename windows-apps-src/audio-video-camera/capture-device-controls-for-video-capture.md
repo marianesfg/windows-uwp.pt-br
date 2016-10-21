@@ -1,19 +1,20 @@
 ---
 author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
-description: "Este artigo mostra como os controles de dispositivo de vídeo permitem cenários de captura de vídeo aprimorados, incluindo vídeo HDR e prioridade de exposição."
-title: "Controles de dispositivo de captura para captura de vídeo"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 65883f1be1a014b6c7e211e2e060ae97fbd9eb0d
+description: "Este artigo mostra como usar controles de dispositivo manuais para permitir cenários de captura de vídeo aprimorados, incluindo vídeo HDR e prioridade de exposição."
+title: "Controles manuais da câmera para captura de vídeo"
+translationtype: Human Translation
+ms.sourcegitcommit: daeb92e51a005825f1e410da9c924afc723297f1
+ms.openlocfilehash: 5a51ee9c67eb421c2478ca46f415879afb609210
 
 ---
 
-# Controles de dispositivo de captura para captura de vídeo
+# Controles manuais da câmera para captura de vídeo
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo mostra como os controles de dispositivo de vídeo permitem cenários de captura de vídeo aprimorados, incluindo: vídeo HDR e prioridade de exposição.
+Este artigo mostra como usar controles de dispositivo manuais para permitir cenários de captura de vídeo aprimorados, incluindo vídeo HDR e prioridade de exposição.
 
 Os controles de dispositivo de vídeo discutidos neste artigo são todos adicionados ao seu aplicativo usando o mesmo padrão. Primeiro, verifique se o controle tem suporte no dispositivo atual em que seu aplicativo está sendo executado. Se o controle tiver suporte, defina o modo desejado para o controle. Normalmente, se um determinado controle não tiver suporte no dispositivo atual, você deverá desabilitar ou ocultar o elemento da interface do usuário que permite ao usuário habilitar o recurso.
 
@@ -21,12 +22,12 @@ Todas as APIs de controle de dispositivo discutidas neste artigo são membros do
 
 [!code-cs[VideoControllersUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoControllersUsing)]
 
-**Observação**  
-Este artigo se baseia em conceitos e códigos discutidos em [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
+> [!NOTE] 
+> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. Recomendamos que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
 
 ## Vídeo HDR
 
-O recurso de vídeo HDR (High Dynamic Range) aplica processamento HDR ao fluxo de vídeo do dispositivo de captura. Determinar se o vídeo HDR é suportado, verificando a propriedade [**HdrVideoControl.Supported**](https://msdn.microsoft.com/library/windows/apps/dn926682).
+O recurso de vídeo HDR (High Dynamic Range) aplica processamento HDR ao fluxo de vídeo do dispositivo de captura. Determinar se o vídeo HDR é suportado, selecionando a propriedade [**HdrVideoControl.Supported**](https://msdn.microsoft.com/library/windows/apps/dn926682).
 
 O controle de vídeo HDR oferece suporte a três modos: ativado, desativado e automático, o que significa que o dispositivo determina dinamicamente se o processamento de vídeo HDR melhora a captura de mídia e, nesse caso, habilita o vídeo HDR. Para determinar se um modo específico tem suporte no dispositivo atual, verifique se a coleção [**HdrVideoControl.SupportedModes**](https://msdn.microsoft.com/library/windows/apps/dn926683) contém o modo desejado.
 
@@ -46,7 +47,8 @@ Habilite ou desabilite o controle de prioridade de exposição. Defina [**Exposu
 
 ## Tópicos relacionados
 
-* [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Câmera](camera.md)
+* [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -57,6 +59,6 @@ Habilite ou desabilite o controle de prioridade de exposição. Defina [**Exposu
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

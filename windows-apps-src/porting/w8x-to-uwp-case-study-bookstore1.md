@@ -3,8 +3,9 @@ author: mcleblanc
 title: Estudo de caso do Windows Runtime 8.x para UWP, Bookstore1
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
 description: "Este tópico apresenta um estudo de caso de portabilidade de um aplicativo universal 8.1 muito simples para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 43536aacb37a79b3e8507896474be67423a0b9fe
+ms.openlocfilehash: fdb5414a0831d6bff607cc8cec9188d3861651fb
 
 ---
 
@@ -18,16 +19,13 @@ O aplicativo que portaremos consiste em uma **ListBox** associada a um modelo de
 
 Os tópicos anteriores desta seção descrevem as diferenças entre as plataformas, e eles fornecem detalhes e orientações sobre o processo de portabilidade de vários aspectos de um aplicativo de marcação XAML, através da associação a um modelo de exibição, para acessar dados. Um estudo de caso visa complementar essa orientação, mostrando-o em ação em um exemplo real. Os estudos de caso pressupõem que você tenha lido as orientações, já que elas não serão repetidas aqui.
 
-
-            **Observação**   Ao abrir Bookstore1Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Observação**   Ao abrir Bookstore1Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
 
 ## Downloads
 
+[Baixe o aplicativo universal Bookstore1\_81 do Windows 8.1](http://go.microsoft.com/fwlink/?linkid=532946).
 
-            [Baixe o aplicativo universal Bookstore1\_81 do Windows 8.1](http://go.microsoft.com/fwlink/?linkid=532946).
-
-
-            [Baixe o aplicativo do Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
+[Baixe o aplicativo do Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
 
 ## O aplicativo Universal 8.1
 
@@ -131,6 +129,6 @@ O próximo estudo de caso é o [Bookstore2](w8x-to-uwp-case-study-bookstore2.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

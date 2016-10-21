@@ -3,23 +3,24 @@ author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
 description: "Esta seção descreve como modificar seu aplicativo Web PlayReady para oferecer suporte às alterações feitas na versão do Windows 8.1 anterior para a versão do Windows 10."
 title: "Extensão de mídia criptografada do PlayReady"
-ms.sourcegitcommit: 965443672e52938d39069f14fe23b0c5dbd0ffa8
-ms.openlocfilehash: c575125f1d35f44b873fd3db46d62f89bb726b0b
+translationtype: Human Translation
+ms.sourcegitcommit: 15b8c2cac08e59cfd9bd2c97c3a146cbc2be5548
+ms.openlocfilehash: eb85d9ea29917788612e0aa755465dbd6d1b9ba9
 
 ---
 
 # Extensão de mídia criptografada do PlayReady
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Esta seção descreve como modificar o seu aplicativo da Web PlayReady para dar suporte às alterações feitas desde a versão anterior do Windows 8.1 até a versão do Windows 10.
+Esta seção descreve como modificar seu aplicativo Web PlayReady para oferecer suporte às alterações feitas na versão do Windows 8.1 anterior para a versão do Windows 10.
 
 O uso de elementos de mídia PlayReady no Internet Explorer permite que desenvolvedores criem um aplicativo Web que possa fornecer conteúdo PlayReady ao usuário enquanto impõe regras de acesso definidas pelo provedor de conteúdo. Esta seção descreve como adicionar elementos de mídia PlayReady aos seus aplicativos Web existentes usando somente HTML5 e JavaScript.
 
 ## Novidades na extensão de mídia criptografada do PlayReady
 
-Esta seção oferece uma lista de alterações feitas à Extensão de mídia criptografada do PlayReady para habilitar proteção de conteúdos PlayReady no Windows 10.
+Esta seção oferece uma lista de alterações feitas à Extensão de mídia criptografada (EME) do PlayReady para habilitar proteção de conteúdos PlayReady no Windows 10.
 
 A lista a seguir descreve os novos recursos e alterações feitas à Extensão de mídia criptografada do PlayReady para Windows 10:
 
@@ -32,10 +33,8 @@ A lista a seguir descreve os novos recursos e alterações feitas à Extensão d
 
     Você pode usar um objeto PlayReady com vários identificadores-chave (KeyIDs) como no Windows 8.1 ou [dados de modelo de descriptografia de conteúdo (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) com várias KeyIDs.
 
-    
-            **Observação**  No Windows 10, vários identificadores-chave têm suporte em &lt;KeyID&gt; em CDMData.
-
-     
+    > [!NOTE]
+    > No Windows 10, vários identificadores-chave são suportados em &lt;KeyID&gt; em CDMData.
 
 -   Suporte de vencimento em tempo real ou licença de duração limitada (LDL) adicionada.
 
@@ -67,12 +66,10 @@ Esta seção descreve como seu aplicativo Web pode usar o DRM de hardware do Pla
 
 Para usar hardware DRM do PlayReady, o seu aplicativo Web JavaScript deve usar o método EME **isTypeSupported** com um identificador de sistema chave de `com.microsoft.playready.hardware` para consultar por suporte de hardware DRM do PlayReady do navegador.
 
-Ocasionalmente, não há suporte para parte do conteúdo no DRM de hardware. Não há suporte para conteúdo Cocktail no DRM de hardware. Se você deseja reproduzir conteúdo Cocktail, recuse o DRM de hardware. Alguns hardwares DRM darão suporte HEVC e outros, não. Se você deseja reproduzir conteúdo HEVC e o hardware DRM não dá suporte a ele, você terá que recusar também.
+Ocasionalmente, não há suporte para parte do conteúdo no DRM de hardware. Não há suporte para conteúdo Cocktail no DRM de hardware. Se você deseja reproduzir conteúdo Cocktail, recuse o DRM de hardware. Alguns DRMs de hardware oferecerão suporte a HEVC, enquanto outros não. Se você deseja reproduzir conteúdo HEVC e o DRM de hardware não oferecer suporte a ele, recuse também.
 
-
-            **Observação**  Para determinar se o conteúdo HEVC tem suporte, depois de instanciar `com.microsoft.playready`, use o método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
-
- 
+> [!NOTE]
+> Para determinar se há suporte para conteúdo HEVC, após instanciar `com.microsoft.playready`, use o método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
 
 ## Adicionar parada segura ao seu aplicativo Web
 
@@ -101,7 +98,7 @@ Para configurar uma parada segura para controles de página personalizados ou a�
 
 -   Quando uma ação personalizada do usuário ocorre, o aplicativo precisa definir a fonte para **NULO**, o que disparará o Media Foundation para destruir a topologia e o(s) descriptografador(es) e definir o estado de parada.
 
-O exemplo a seguir mostra como usar parada segura no seu aplicativo Web:
+O exemplo a seguir demonstra como usar a parada segura em seu aplicativo Web:
 
 ```JavaScript
 // JavaScript source code
@@ -261,8 +258,8 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 }
 ```
 
-
-            **Observação**  O `<SessionID>B64 encoded session ID</SessionID>` dos dados de parada segura na amostra acima pode ser um (\*), que é um caractere curinga para todas as sessões de parada segura registradas. Ou seja, a marcação **SessionID** pode ser uma sessão específica ou um caractere curinga (\*) para selecionar todas as sessões de parada segura.
+> [!NOTE]
+> A `<SessionID>B64 encoded session ID</SessionID>` dos dados da parada segura no exemplo acima pode ser um asterisco (\*), que é um curinga para todas as sessões de parada segura registradas. Ou seja, a marcação **SessionID** pode ser uma sessão específica ou um caractere curinga (\*) para selecionar todas as sessões de parada segura.
 
 ## Considerações sobre a programação de Extensão de mídia criptografada
 
@@ -296,18 +293,17 @@ function foo() {
 }
 ```
 
-Consulte as [aplicativos de exemplo](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738) para obter mais informações.
+Para obter mais informações, consulte os [aplicativos de exemplo](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738).
 
- 
-
- 
-
+## Consulte também
+- [DRM do PlayReady](playready-client-sdk.md)
 
 
 
 
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,15 +3,16 @@ author: mtoepke
 title: Guias de portabilidade para jogos
 description: Fornece guias para a portabilidade dos seus jogos existentes para Direct3D 11, a Plataforma Universal do Windows (UWP) e o Windows 10.
 ms.assetid: 1dff815b-d3bd-557e-52c1-58e40f4dd6b1
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0cf7f4e6679d362691cea8ccbd45786176715cad
+ms.openlocfilehash: 3cfc483052d12b89cf2707e7b9ebd666e5c49e3d
 
 ---
 
 # Guias de portabilidade para jogos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Fornece guias para a portabilidade dos seus jogos existentes para Direct3D 11, a Plataforma Universal do Windows (UWP) e o Windows 10.
 
@@ -40,8 +41,7 @@ Fornece guias para a portabilidade dos seus jogos existentes para Direct3D 11, a
 
  
 
-> 
-            **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -55,6 +55,6 @@ Fornece guias para a portabilidade dos seus jogos existentes para Direct3D 11, a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

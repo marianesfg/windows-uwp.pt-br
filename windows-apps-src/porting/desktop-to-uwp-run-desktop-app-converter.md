@@ -2,26 +2,46 @@
 author: awkoren
 Description: "Execute o conversor de aplicativos da área de trabalho para converter um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms) em um aplicativo UWP (Plataforma Universal do Windows)."
 Search.Product: eADQiWindows 10XVcnh
-title: "Visualização Conversor de Aplicativos da Área de Trabalho (Projeto Centennial)"
+title: Desktop App Converter
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 8a22285467005722ad6ee5bf4f129a7dfdea944c
+ms.sourcegitcommit: ed4da94f2732c279c3071135168da9e4b18953cb
+ms.openlocfilehash: c0ed8386cb823ea83e5b1f80cd584f370a85f278
 
 ---
 
-# Visualização Conversor de Aplicativos da Área de Trabalho (Projeto Centennial)
+# Desktop App Converter
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
+[Baixe o Desktop App Converter](https://aka.ms/converter)
 
-[Baixe o conversor de aplicativos da área de trabalho.](http://go.microsoft.com/fwlink/?LinkId=785437)
+O Desktop App Converter (DAC) é uma ferramenta que permite converter seus aplicativos de área de trabalho existentes escritos para .NET 4.6.1 ou Win32 em UWP (Plataforma Universal do Windows). Você pode executar seus instaladores da área de trabalho por meio do conversor em um modo autônomo (silencioso) e obter um pacote de AppX que pode instalar usando o cmdlet do PowerShell Add-AppxPackage no computador de desenvolvimento.
 
-O conversor de aplicativos da área de trabalho é uma ferramenta de pré-lançamento que permite converter seus aplicativos de área de trabalho existentes escritos para .NET 4.6.1 ou Win32 em UWP (Plataforma Universal do Windows). Você pode executar seus instaladores da área de trabalho por meio do conversor em um modo autônomo (silencioso) e obter um pacote de AppX que pode instalar usando o cmdlet do PowerShell Add-AppxPackage no computador de desenvolvimento.
+O Desktop App Converter está disponível agora na [Windows Store](https://aka.ms/converter).
 
 O conversor executa o instalador da área de trabalho em um ambiente isolado do Windows usando uma imagem de base limpa fornecida como parte do download do conversor. Ele captura qualquer E/S do registro e do sistema de arquivos feita pelo instalador da área de trabalho e a empacota como parte da saída. O conversor gera um AppX com identificador de pacote e a capacidade para chamar uma variedade maior de APIs do WinRT.
 
 ## Novidades
 
 Esta seção descreve as mudanças entre versões do conversor de aplicativos da área de trabalho. 
+
+### 14/9/2016 (v1.0)
+
+* O Desktop App Converter está disponível agora para download na [Windows Store](https://aka.ms/converter)! 
+* Pegue as últimas Imagens de Base do Windows 10 (.wim) no [Centro de Download](https://www.microsoft.com/download/details.aspx?id=53833) para uso com o DAC.
+* Com o aplicativo da loja, agora você pode usar o novo ponto inicial *DesktopAppConverter.exe <arguments>* para executar o conversor de qualquer lugar em um prompt de comando com privilégios elevados ou a janela do PowerShell.  
+
+### 2/9/2016 (v0.1.25)
+
+* Integrado ao pacote dotnet computervirtualization do NuGet mais recente.
+* Adicionado as dependências novas no common.dll.
+* Várias correções de bugs.
+
+### 4/8/2016 (v0.1.24)
+
+* Adicionado suporte à assinatura automática para aplicativos convertidos produzidos pela DAC para fins de teste. Confira o sinalizador ```–Sign``` para experimentá-lo. 
+* Adicionado avisos se qualquer um dos registros COM no hive do registro virtual não é suportado dentro do pacote AppX.  
+* Adicionado suporte para detecção automática de dependências do aplicativo em bibliotecas de VC++ e, em seguida, convertê-los para dependências de manifesto do AppX. Observe que a fim de fazer o sideload e testes dos aplicativos em tempo de execução do VC++, você precisará baixar os pacotes de estruturas VCLib conforme descrito na postagem do blog [Usando o Tempo de Execução do Microsoft Visual C++ em um projeto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project). Localize os pacotes sob a pasta ```Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop``` no seu computador, navegue até a versão dependente (por exemplo, 11.0, 12.0, 14.0) e clique duas vezes no pacote de arquitetura apropriado (x64, x86) para instalá-lo.
+* Atualizado os esquemas de manifesto para se alinhar com a Atualização de Aniversário do Windows 10 (10.0.14393.0). 
+* Várias correções de bugs e layout de saída aprimorado. 
 
 ### 7/7/2016 (v0.1.22)
 
@@ -52,7 +72,7 @@ Esta seção descreve as mudanças entre versões do conversor de aplicativos da
 - Adicionada a detecção automática de associações de tipos de arquivos e protocolos.
 - Lógica aprimorada para detectar o atalho do Menu Iniciar.
 - Filtragem de sistema de arquivo aprimorada para reter os arquivos MUI instalados do aplicativo.
-- Atualizada a versão de área de trabalho com suporte mínimo (10.0.14342.0) para o projeto Centennial no manifesto.
+- Atualizada a versão de área de trabalho com suporte mínimo (10.0.14342.0) no manifesto.
 
 ## Requisitos do sistema
 
@@ -66,10 +86,12 @@ Seu computador deve ter as seguintes funcionalidades mínimas:
 + Virtualização assistida por hardware
 + Conversão de Endereços de Segundo Nível (SLAT)
 
-### Recursos recomendados
-+ [Software Development Kit do Windows (SDK do Windows) para Windows 10](http://go.microsoft.com/fwlink/?LinkId=615097)
+### Recursos necessários
+
++ [Software Development Kit do Windows (SDK do Windows) para Windows 10](https://go.microsoft.com/fwlink/?linkid=821375)
 
 ## Configurar o conversor de aplicativos da área de trabalho   
+
 O conversor de aplicativos da área de trabalho depende de recursos do Windows 10 que são liberados como parte das compilações do Windows Insider Preview. Certifique-se de que você tem a compilação mais recente para utilizar o conversor.
 
 1. Certifique-se de que você tenha o sistema operacional Windows 10 Insider Preview mais recente – Enterprise ou Pro edition (http://insider.windows.com). 
@@ -120,39 +142,34 @@ PS C:\>.\DesktopAppConverter.ps1 -Installer C:\Installer\MyApp.exe
 ```
 
 ## Implantar seu AppX convertido
-Use o cmdlet [Add-AppxPackage](https://technet.microsoft.com/library/hh856048.aspx) no PowerShell para implantar um pacote de aplicativo assinado (.appx) em uma conta de usuário. Para assinar o pacote .appx, consulte a seção a seguir, "Assinando seu pacote .Appx". Além disso, você também pode incluir o parâmetro *Register* do cmdlet para instalar de uma pasta de arquivos não empacotados durante o processo de desenvolvimento. Para obter mais informações, consulte [Implantar e depurar seu aplicativo UWP convertido](desktop-to-uwp-deploy-and-debug.md).
+
+Use o cmdlet [Add-AppxPackage](https://technet.microsoft.com/library/hh856048.aspx) no PowerShell para implantar um pacote de aplicativo assinado (.appx) em uma conta de usuário. 
+
+Você pode usar o sinalizador ```-Sign``` no Conversor de Aplicativos de Área de Trabalho (v0.1.24) para assinar de forma automática seu aplicativo convertido. Como alternativa, consulte [Assinar seu aplicativo da área de trabalho convertido](desktop-to-uwp-signing.md) para aprender a autoassinar pacotes AppX.
+
+Você também pode utilizar o parâmetro ```-Register``` do cmdlet Add-AppXPackage PowerShell para instalar de uma pasta de arquivos não empacotados durante o processo de desenvolvimento. 
+
+Para obter mais informações sobre como implementar e depurar seu aplicativo convertido, consulte [Implementar e depurar seu aplicativo UWP convertido](desktop-to-uwp-deploy-and-debug.md). 
 
 ## Assinar seu pacote .AppX
 
-O cmdlet Add-AppxPackage requer que o pacote do aplicativo (.appx) que está sendo implantado seja assinado. Use o SignTool.exe, que é fornecido no SDK do Microsoft Windows 10, para assinar o pacote .appx.
+O cmdlet Add-AppxPackage requer que o pacote do aplicativo (.appx) que está sendo implantado seja assinado. Use o sinalizador ```-Sign``` como parte da linha de comando do conversor ou SignTool.exe, que é fornecido no SDK do Microsoft Windows 10, para assinar o pacote .appx.
 
-### Exemplo
-```CMD
-C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -sv <my.pvk> <my.cer>
-C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
-C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
-```
+Para obter detalhes adicionais sobre como assinar o pacote .appx, consulte [Assinar aplicativo da área de trabalho convertido](desktop-to-uwp-signing.md). 
 
-              **Observação:** quando você executar o MakeCert.exe e for solicitado a inserir uma senha, selecione **Nenhuma**.
+## Advertências
 
-Para obter mais informações sobre assinatura e certificados, consulte:
-
-+ [Como: criar certificados temporários para uso durante o desenvolvimento](https://msdn.microsoft.com/library/ms733813.aspx)
-+ [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
-+ [SignTool.exe (ferramenta de assinatura)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
-
-### Advertências
 1. A compilação do Windows 10 no computador host deve corresponder à imagem base que você obteve como parte do download do conversor de aplicativos da área de trabalho.  
 2. Verifique se o instalador da área de trabalho está em um diretório independente, pois o conversor copia todo o conteúdo do diretório para o ambiente isolado do Windows.  
 3. No momento, o conversor de aplicativos da área de trabalho aceita a execução do processo de conversão apenas em um sistema operacional de 64 bits. Você pode implantar os pacotes.appx convertidos apenas em um sistema operacional de 64 bits (x64).  
 4. O conversor de aplicativos da área de trabalho requer que o instalador da área de trabalho seja executado no modo autônomo. Certifique-se de passar o sinalizador silencioso do instalador para o conversor usando o parâmetro *- InstallerArguments*.
-5. Publicar assemblies SxS Fusion públicos não funcionará. Durante a instalação, um aplicativo pode publicar assemblies Fusion públicos lado a lado, acessíveis para qualquer outro processo. Durante a criação do contexto de ativação do processo, esses assemblies são recuperados por um processo do sistema denominado CSRSS.exe. Quando isso é feito em um processo Centennial, a criação do contexto de ativação e o carregamento do módulo desses assemblies falhará. Assemblies de caixa de entrada, como ComCtl, são fornecidos com o sistema operacional, portanto, assumir uma dependência deles de processos Centennial é seguro. Os assemblies SxS Fusion são registrados nos seguintes locais:
+5. Publicar assemblies SxS Fusion públicos não funcionará. Durante a instalação, um aplicativo pode publicar assemblies Fusion públicos lado a lado, acessíveis para qualquer outro processo. Durante a criação do contexto de ativação do processo, esses assemblies são recuperados por um processo do sistema denominado CSRSS.exe. Quando isso é feito em um processo convertido, a criação do contexto de ativação e o carregamento do módulo desses assemblies falhará. Assemblies de caixa de entrada, como ComCtl, são fornecidos com o sistema operacional, portanto, assumir uma dependência deles é seguro. Os assemblies SxS Fusion são registrados nos seguintes locais:
   + Registro: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners`
   + Sistema de arquivos: %windir%\\SideBySide
 
 ## Problemas conhecidos
 
-+ Se você receber uma versão de pré-lançamento do Windows Insider em uma máquina de desenvolvedor que anteriormente tinha a visualização de conversor de aplicativo de área de trabalho instalada, você poderá receber o erro `New-ContainerNetwork: The object already exists` ao configurar a nova imagem de base. Como alternativa, execute o comando `Netsh int ipv4 reset` em um prompt de comando com privilégios elevados e reinicie sua máquina. 
++ Se você receber uma pacote de pré-lançamento do Windows Insider em uma máquina de desenvolvedor que anteriormente tinha o Conversor de Aplicativo de Área de Trabalho instalado, você poderá receber o erro `New-ContainerNetwork: The object already exists` ao configurar a nova imagem de base. Como alternativa, execute o comando `Netsh int ipv4 reset` em um prompt de comando com privilégios elevados e reinicie sua máquina. 
 + Ocorrerá uma falha na instalação de um aplicativo .NET compilado com a opção de compilação "AnyCPU" se o executável principal ou qualquer uma das dependências forem colocados em "Arquivos de Programas" ou "Windows\System32". Como alternativa, use o instalador de área de trabalho específico da sua arquitetura (32 bits ou 64 bits) para gerar com êxito um pacote AppX.
 
 ## Telemetria do conversor de aplicativos da área de trabalho  
@@ -198,7 +215,7 @@ get-help .\DesktopAppConverter.ps1 -detailed
 ### Parâmetros opcionais do manifesto do Appx  
 |Parâmetro|Descrição|
 |---------|-----------|
-|```-AppExecutable <String>``` [opcional] | O caminho completo para o executável principal do seu aplicativo se ele fosse ser instalado (ele não tem que ser), por exemplo, "C:\Program Files (x86)\MyApp\MyApp.exe".|
+|```-AppExecutable <String> [optional]``` [opcional] | O nome do executável principal do aplicativo (ex: "MyApp.exe"). |
 |```-AppFileTypes <String>``` [opcional] | Uma lista separada por vírgulas de tipos de arquivo aos quais o aplicativo será associado (por exemplo, ".txt, .doc", sem aspas).|
 |```-AppId <String>``` [opcional] | Especifica um valor para definir a Id de aplicativo no manifesto do appx. Se não for especificado, ele será definido como o valor passado para *PackageName*.|
 |```-AppDisplayName <String>``` [opcional] | Especifica um valor para definir o nome para exibição do aplicativo no manifesto do appx. Se não for especificado, ele será definido como o valor passado para *PackageName*. |
@@ -212,6 +229,7 @@ get-help .\DesktopAppConverter.ps1 -detailed
 |```-ExpandedBaseImage <String>``` [opcional] | Caminho completo para uma imagem de base já expandida.|
 |```-MakeAppx [<SwitchParameter>]``` [opcional] | Um botão que, quando presente, informa a este script para chamar MakeAppx na saída. |
 |```-LogFile <String>``` [opcional] | Especifica um arquivo de log. Se omitido, um local temporário de arquivo de log será criado. |
+| ```Sign [<SwitchParameter>] [optional]``` | Informa este script para assinar o appx de saída. Essa opção deve estar presente junto com a opção ```-MakeAppx```. 
 |```<Common parameters>``` | Esse cmdlet oferece suporte aos parâmetros comuns: *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable* e *OutVariable*. Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216). |
 
 ### Parâmetros de limpeza
@@ -220,25 +238,44 @@ get-help .\DesktopAppConverter.ps1 -detailed
 |```Cleanup [<Option>]``` | Executa a limpeza de artefatos DesktopAppConverter. Há 3 opções válidas para o modo de limpeza. |
 |```Cleanup All``` | Exclui todas as imagens de base expandidas, remove todos os arquivos temporários do conversor, remove a rede de contêiner e desabilita o recurso Windows opcional, Contêineres. |
 |```Cleanup WorkDirectory``` | Remove todos os arquivos temporários do conversor. |
-|```Cleanup ExpandedImages``` | Exclui todas as imagens de base expandidas instaladas no computador host. |
+|```Cleanup ExpandedImage``` | Exclui todas as imagens de base expandidas instaladas no computador host. |
 
 ### Arquitetura de pacotes
-O Desktop App Converter Preview agora dá suporte à criação de pacotes de aplicativos x86 e x64 que você pode instalar e executar em computadores x86 e amd64. Observe que o Desktop App Converter ainda precisa ser executado em um computador AMD64 para realizar uma conversão bem-sucedida.
+O Desktop App Converter agora dá suporte à criação de pacotes de aplicativos x86 e x64 que você pode instalar e executar em computadores x86 e amd64. Observe que o Desktop App Converter ainda precisa ser executado em um computador AMD64 para realizar uma conversão bem-sucedida.
 
 |Parâmetro|Descrição|
 |---------|-----------|
-|```-PackageArch <String>``` | Gera um pacote com a arquitetura especificada. As opções válidas são 'x86' ou 'x64'; por exemplo, -PackageArch x86. Este parâmetro é opcional. Se não for especificado, o DesktopAppConverter tentará detectar automaticamente a arquitetura do pacote. Se a detecção automática falhar, o padrão será pacote x64. |
+|```-PackageArch <String>``` | Gera um pacote com a arquitetura especificada. As opções válidas são 'x86' ou 'x64'; por exemplo, -PackageArch x86. Este parâmetro é opcional. Se não for especificado, o DesktopAppConverter tentará detectar automaticamente a arquitetura do pacote. Se a detecção automática falhar, o padrão será pacote x64. 
+
+### Executando o PEHeaderCertFixTool
+
+Durante o processo de conversão, o DesktopAppConverter executa automaticamente o PEHeaderCertFixTool a fim de corrigir quaisquer cabeçalhos PE corrompidos. No entanto, você também pode executar o PEHeaderCertFixTool em um appx UWP, arquivos soltos ou um binário específico. 
+
+PEHeaderCertFixTool fornecido como parte do DesktopAppConverter.zip. Exemplo de uso: 
+
+```CMD
+PEHeaderCertFixTool.exe <binary file>|<.appx package>|<folder> [/c] [/v]
+ /c   -- check for corrupted certificate but do not fix (optional)
+ /v   -- verbose (optional)
+example1: PEHeaderCertFixTool app.exe
+example2: PEHeaderCertFixTool c:\package.appx /c
+example3: PEHeaderCertFixTool c:\myapp /c /v
+```
+
+## Idioma de suporte
+
+O Desktop App Converter não possui suporte ao Unicode, assim, não podem ser usados caracteres chineses ou caracteres não ASCII com a ferramenta.
 
 ## Consulte também
-+ [Baixar o conversor de aplicativos da área de trabalho](http://go.microsoft.com/fwlink/?LinkId=785437)
++ [Baixe o Desktop App Converter](http://go.microsoft.com/fwlink/?LinkId=785437)
 + [Traga seu aplicativo da área de trabalho para a Plataforma Universal do Windows](https://developer.microsoft.com/windows/bridges/desktop)
 + [Transformando aplicativos da área de trabalho em UWP usando o conversor de aplicativos da área de trabalho](https://channel9.msdn.com/events/Build/2016/P504)
-+ [Project Centennial: Trazendo aplicativos da área de trabalho existentes para a Plataforma Universal do Windows](https://channel9.msdn.com/events/Build/2016/B829)  
-+ [Ponte UserVoice para área de trabalho (Project Centennial)](http://aka.ms/UserVoiceDesktopToUwp)
++ [Projeto Centennial: trazendo aplicativos da área de trabalho existentes para a Plataforma Universal do Windows](https://channel9.msdn.com/events/Build/2016/B829)  
++ [UserVoice para Desktop Bridge](http://aka.ms/UserVoiceDesktopToUwp)
 + [Exemplos de código de ponte de aplicativos da área de trabalho para UWP no GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO5-->
 
 

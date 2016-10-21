@@ -7,7 +7,7 @@ label: Speech interactions
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: ecd002e6f3a92702459426858693dd7547b0ca02
+ms.openlocfilehash: d32c38c2f939e03375630439f2aa512004601a70
 
 ---
 
@@ -22,14 +22,11 @@ Integre reconhecimento de fala e conversão de texto em fala (também conhecida 
 -   Consulte [Diretrizes para design da Cortana](cortana-interactions.md) se você estiver expondo a funcionalidade do aplicativo na interface do usuário da **Cortana**.
 
 
+**Reconhecimento de fala:  **converte palavras faladas pelo usuário em texto para entrada de formulário e ditado de texto, para especificar uma ação ou comando e realizar tarefas. As gramáticas predefinidas para ditado de texto livre e pesquisa na Web e as gramáticas personalizadas criadas usando SRGS (Especificação de Gramática de Reconhecimento de Fala) Versão 1.0 têm suporte.
 
-            **Reconhecimento de fala: **converte palavras faladas pelo usuário em texto para entrada de formulário e ditado de texto, para especificar uma ação ou comando e realizar tarefas. As gramáticas predefinidas para ditado de texto livre e pesquisa na Web e as gramáticas personalizadas criadas usando SRGS (Especificação de Gramática de Reconhecimento de Fala) Versão 1.0 têm suporte.
+**TTS:  **usa um mecanismo de sintetização de voz (voz) para converter uma cadeia de caracteres de texto em palavras faladas. A cadeia de caracteres de entrada pode ser texto básico e simples ou SSML (Linguagem de Marcação de Sintetização de Voz) mais complexa. A SSML fornece uma forma padrão de controlar as características da saída de fala, como pronúncia, volume, tom, taxa ou velocidade e ênfase.
 
-
-            **TTS:  **usa um mecanismo de sintetização de voz (voz) para converter uma cadeia de caracteres de texto em palavras faladas. A cadeia de caracteres de entrada pode ser texto básico e simples ou SSML (Linguagem de Marcação de Sintetização de Voz) mais complexa. A SSML fornece uma forma padrão de controlar as características da saída de fala, como pronúncia, volume, tom, taxa ou velocidade e ênfase.
-
-
-            **Observação**  Usando a **Cortana** e comandos de voz personalizados, seu aplicativo pode ser iniciado em primeiro plano (o aplicativo recebe o foco, como se ele tivesse sido inicializado no menu Iniciar) ou ativado como um serviço em segundo plano (a **Cortana** retém o foco, mas fornece resultados do aplicativo). Comandos que exigem contexto adicional ou entrada do usuário (como enviar uma mensagem para um contato específico) são realizados com mais facilidade em um aplicativo em primeiro plano, enquanto comandos básicos podem ser realizados na **Cortana** por meio de um aplicativo em segundo plano.
+**Observação**  Usando a **Cortana** e comandos de voz personalizados, seu aplicativo pode ser iniciado em primeiro plano (o aplicativo recebe o foco, como se ele tivesse sido inicializado no menu Iniciar) ou ativado como um serviço em segundo plano (a **Cortana** retém o foco, mas fornece resultados do aplicativo). Comandos que exigem contexto adicional ou entrada do usuário (como enviar uma mensagem para um contato específico) são realizados com mais facilidade em um aplicativo em primeiro plano, enquanto comandos básicos podem ser realizados na **Cortana** por meio de um aplicativo em segundo plano.
 Se você estiver expondo a funcionalidade como um serviço em segundo plano por meio de comandos de voz na interface do usuário da **Cortana**, consulte [Diretrizes para design da Cortana](cortana-design-guidelines.md).
 
  
@@ -162,8 +159,7 @@ Ditado predefinido e gramáticas de pesquisa na Web fornecem o reconhecimento de
 -   A gramática de ditado de texto livre padrão pode reconhecer a maioria das palavras e frases que um usuário pode dizer em um determinado idioma e é otimizada para reconhecer frases curtas. O ditado de texto livre é útil quando você não deseja limitar os tipos de coisas que um usuário pode dizer. Os usos típicos incluem criação de notas ou ditado de conteúdo para uma mensagem.
 -   A gramática de pesquisa na Web, assim como uma gramática de ditado, contém um grande número de palavras e frases que um usuário pode dizer. No entanto, ela é otimizada para reconhecer termos que as pessoas normalmente usam ao pesquisar na Web.
 
-
-            **Observação**  Como as gramáticas de pesquisa na Web e de ditado predefinidas podem ser grandes e online (não no dispositivo), o desempenho pode não ser tão rápido quanto o das gramáticas personalizadas instaladas no dispositivo.
+**Observação**  Como as gramáticas de pesquisa na Web e de ditado predefinidas podem ser grandes e online (não no dispositivo), o desempenho pode não ser tão rápido quanto o das gramáticas personalizadas instaladas no dispositivo.
 
  
 
@@ -185,8 +181,7 @@ Uma gramática personalizada é projetada e criada por você e instalada com o s
     -   Evite definir frases que contenham apenas uma sílaba na sua gramática. O reconhecimento tende a ser mais preciso em frases com duas ou mais sílabas.
     -   Evite frases que pareçam iguais. Por exemplo, palavras como "cumprimento" e "comprimento" podem confundir o mecanismo de reconhecimento e resultar em reconhecimento pouco preciso.
 
-
-            **Observação**  O tipo de restrição que você usa depende da complexidade da experiência de reconhecimento que você deseja criar. Qualquer tipo pode ser a melhor escolha para uma tarefa específica de reconhecimento, e você pode encontrar usos para todos os tipos de restrição em seu aplicativo.
+**Observação**  O tipo de restrição que você usa depende da complexidade da experiência de reconhecimento que você deseja criar. Qualquer tipo pode ser a melhor escolha para uma tarefa específica de reconhecimento, e você pode encontrar usos para todos os tipos de restrição em seu aplicativo.
 
  
 
@@ -236,12 +231,8 @@ Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação 
 ## Artigos relacionados
 
 * [Interações de controle por voz](https://msdn.microsoft.com/library/windows/apps/mt185614)
-* 
-             [Interações de Cortana](https://msdn.microsoft.com/library/windows/apps/mt185598)
-            
-          
-            **Amostras**
-          
+* [Interações de Cortana](https://msdn.microsoft.com/library/windows/apps/mt185598)
+ **Amostras**
 * [Exemplo de reconhecimento de fala e sintetização de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -252,6 +243,6 @@ Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

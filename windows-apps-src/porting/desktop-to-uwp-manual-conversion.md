@@ -2,8 +2,9 @@
 Description: "Mostra como converter manualmente um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms) em um aplicativo UWP (Plataforma Universal do Windows)."
 Search.Product: eADQiWindows 10XVcnh
 title: "Converter manualmente um aplicativo da área de trabalho do Windows em um aplicativo UWP (Plataforma Universal do Windows)"
-ms.sourcegitcommit: 606d5237cb67cb4439704f81b180c3c48cc1556f
-ms.openlocfilehash: be7599403e78c8db7ba91fe5a7c25b1c1a1ab644
+translationtype: Human Translation
+ms.sourcegitcommit: 2c1a8ea38081c947f90ea835447a617c388aec08
+ms.openlocfilehash: 646a5b88cb7ca97f18bf4552950979a2ceead398
 
 ---
 
@@ -13,7 +14,7 @@ ms.openlocfilehash: be7599403e78c8db7ba91fe5a7c25b1c1a1ab644
 
 O uso do Conversor é conveniente e automático, e será útil se houver dúvidas sobre o que o instalador faz. Mas se o aplicativo for instalado usando xcopy ou se você estiver familiarizado com as alterações que o instalador de seu aplicativo faz no sistema, poderá optar por criar um pacote do aplicativo e manifestá-lo manualmente.
 
-Veja a seguir as etapas para criar manualmente um pacote do Centennial:
+Veja a seguir as etapas para criar manualmente um pacote:
 
 ## Crie um manifesto manualmente.
 
@@ -102,6 +103,6 @@ Quando você executar o MakeCert.exe e for solicitado a inserir uma senha, selec
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

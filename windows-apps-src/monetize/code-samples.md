@@ -2,16 +2,17 @@
 author: mcleanbyron
 ms.assetid: 4a311d20-ba8c-4816-8091-35726428dc94
 description: "Obtenha outros exemplos que demonstram como usar as propriedades, os métodos e os eventos das classes AdControl e InterstitialAd nas bibliotecas de publicidade da Microsoft."
-title: "Exemplos de código"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 1a7bf9ed90ed2dadf6de7a141fa03972b06ef144
+title: "Amostras de código"
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 0a852a4bf8404d7ab0d8a2a169a16451c0388122
 
 ---
 
-# Exemplos de código
+# Amostras de código
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Esta seção fornece exemplos que demonstram como usar as propriedades, os métodos e os eventos das classes [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) e [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) nas bibliotecas da plataforma Microsoft Advertising para usuários de destino, atualizar anúncios manualmente e manipular eventos. Para ver guias passo a passo introdutórios que demonstram como adicionar esses controles ao seu aplicativo, consulte [Guias passo a passo para desenvolvedor](developer-walkthroughs.md).
 
@@ -23,7 +24,7 @@ Para obter projetos de exemplo completos que demonstram como adicionar anúncios
 |----------|-------|
 | [Exemplo de propriedades HTML](html-properties-example.md)     | Mostra uma propriedade **AdControl** totalmente atribuída em HTML.        |
 | [Exemplo de propriedades XAML](xaml-properties-example.md)     | Mostra uma propriedade **AdControl** totalmente atribuída em XAML.        |
-| [Criar uma AdControl em JavaScript](create-an-adcontrol-in-javascript.md)     | Mostra como criar a **AdControl** usando JavaScript.        |
+| [Criar um AdControl em JavaScript](create-an-adcontrol-in-javascript.md)     | Mostra como criar a **AdControl** usando JavaScript.        |
 | [Eventos AdControl em JavaScript](adcontrol-events-in-javascript.md)     | Mostra como manipular eventos **AdControl** em JavaScript.       |
 | [Eventos de AdControl em C#](adcontrol-events-in-c.md)     | Mostra como manipular eventos **AdControl** em C#.       |
 | [Tratamento de erros de AdControl](adcontrol-error-handling.md)     | Fornece exemplos de código de tratamento de erro da propriedade **AdControl** em diferentes linguagens de programação.        |
@@ -40,6 +41,6 @@ Para obter projetos de exemplo completos que demonstram como adicionar anúncios
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

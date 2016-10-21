@@ -3,8 +3,9 @@ author: IvorB
 ms.assetid: E9ADC88F-BD4F-4721-8893-0E19EA94C8BA
 title: Emparelhamento fora de banda
 description: "O emparelhamento fora de banda permite que os aplicativos se conectem a um periférico Ponto de Serviço sem a necessidade de descoberta."
+translationtype: Human Translation
 ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: d8d37b779a0f9a4bec36d73fcd2d35272c587b11
+ms.openlocfilehash: 283f0a0cfc7b3827e70ea79490818bc259d98ad1
 
 ---
 # Emparelhamento fora de banda
@@ -22,17 +23,13 @@ O emparelhamento fora de banda permite que os aplicativos se conectem a um perif
     "providerName":"PrinterProtocolProvider.dll"
 ```
 
+**connectionKind** - O tipo de conexão. Valores válidos são "Rede" e "Bluetooth".
 
-            **connectionKind** - O tipo de conexão. Valores válidos são "Rede" e "Bluetooth".
+**physicalAddress** - O endereço MAC do periférico. Por exemplo, em caso de uma impressora de rede, isso seria o endereço MAC que é fornecido pela folha de teste da impressora no formato de AA:BB:CC:DD:EE:FF.
 
+**connectionString** - A cadeia de caracteres de conexão do periférico. Por exemplo, no caso de uma impressora de rede, isso seria o endereço IP fornecido pela folha de teste da impressora no formato 192.168.1.1:9001. Esse campo é omitido para todos os periféricos de Bluetooth.
 
-            **physicalAddress** - O endereço MAC do periférico. Por exemplo, em caso de uma impressora de rede, isso seria o endereço MAC que é fornecido pela folha de teste da impressora no formato de AA:BB:CC:DD:EE:FF.
-
-
-            **connectionString** - A cadeia de caracteres de conexão do periférico. Por exemplo, no caso de uma impressora de rede, isso seria o endereço IP fornecido pela folha de teste da impressora no formato 192.168.1.1:9001. Esse campo é omitido para todos os periféricos de Bluetooth.
-
-
-            **peripheralKinds** - O GUID para o tipo de dispositivo. Valores válidos são:
+**peripheralKinds** - O GUID para o tipo de dispositivo. Valores válidos são:
 
 | Tipo de dispositivo | GUID |
 | ---- | ---- |
@@ -41,8 +38,7 @@ O emparelhamento fora de banda permite que os aplicativos se conectem a um perif
 | *Caixa registradora* | 772E18F2-8925-4229-A5AC-6453CB482FDA |
 
 
-
-            **providerId** - O GUID para a classe de provedor de protocolo. Valores válidos são:
+**providerId** - O GUID para a classe de provedor de protocolo. Valores válidos são:
 
 | Classe de provedor de protocolo | GUID |
 | ---- | ---- |
@@ -56,8 +52,7 @@ O emparelhamento fora de banda permite que os aplicativos se conectem a um perif
 | *Registradora APG BT* | 332E6550-2E01-42EB-9401-C6A112D80185 |
 
 
-
-            **providerName** - O nome da DLL do provedor. Os provedores padrão são:
+**providerName** - O nome da DLL do provedor. Os provedores padrão são:
 
 | Provedor | Nome da DLL |
 | ---- | ---- |
@@ -95,6 +90,6 @@ printer = await PosPrinter.FromIdAsync(oobBlobBTPrinter);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

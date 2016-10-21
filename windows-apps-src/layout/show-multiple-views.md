@@ -5,8 +5,9 @@ title: "Mostrar vários modos de exibição para um aplicativo"
 ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 23e999f86fb0552b96cddbd3b9d11803106bf6c2
+translationtype: Human Translation
+ms.sourcegitcommit: 0d67e3cef26ca6aca07556312a18be93fe758c85
+ms.openlocfilehash: ccbcb1f3f5ee31724416f512138757865ffabc98
 
 ---
 
@@ -93,7 +94,7 @@ int newViewId = 0;</code></pre></td>
 
     Você usa o método [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) para agendar o trabalho no thread da interface do usuário para o novo modo de exibição. Você usa uma [expressão lambda](http://go.microsoft.com/fwlink/p/?LinkId=389615) para passar uma função como um argumento para o método **RunAsync**. O trabalho feito na função lambda acontece no thread do novo modo de exibição.
 
-    Em XAML, você normalmente adiciona um [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) à propriedade [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051) de [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) e passa o **Frame** para um XAML [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) em que você definiu o conteúdo do aplicativo. Para obter mais informações, consulte [Navegação ponto a ponto entre duas páginas](peer-to-peer-navigation-between-two-pages.md).
+    Em XAML, você normalmente adiciona um [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) à propriedade [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051) de [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) e passa o **Frame** para um XAML [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) em que você definiu o conteúdo do aplicativo. Para obter mais informações, veja [Navegar entre duas páginas](navigate-between-two-pages.md).
 
     Depois que o novo [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) for preenchido, você deverá chamar o método [**Activate**](https://msdn.microsoft.com/library/windows/apps/br209046) de **Window** para mostrar o **Window** mais tarde. Esse trabalho acontece no thread do novo modo de exibição, logo, o novo **Window** é ativado.
 
@@ -146,8 +147,7 @@ Caso os modos de exibição secundários estejam abertos, a janela do modo de ex
 
 Outros modos de exibição, inclusive todos os modos de exibição que você cria chamando [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278) no código do aplicativo, são modos de exibição secundários. Os modos de exibição principal e secundário são armazenados na coleção [**CoreApplication.Views**](https://msdn.microsoft.com/library/windows/apps/br205861). Normalmente, você cria modos de exibição secundários em resposta à ação de um usuário. Em alguns casos, o sistema cria modos de exibição secundários para o aplicativo.
 
-
-            **Observação**  Você pode usar o recurso *acesso atribuído* do Windows para executar um aplicativo em [modo de quiosque](https://technet.microsoft.com/library/mt219050.aspx). Quando você faz isso, o sistema cria um modo de exibição secundário para apresentar a interface do usuário do aplicativo acima da tela de bloqueio. Os modos de exibição secundários criados pelo aplicativo não são permitidos, logo, caso você tente mostrar o próprio modo de exibição secundário no modo de quiosque, uma exceção é lançada.
+**Observação**  Você pode usar o recurso *acesso atribuído* do Windows para executar um aplicativo em [modo de quiosque](https://technet.microsoft.com/library/mt219050.aspx). Quando você faz isso, o sistema cria um modo de exibição secundário para apresentar a interface do usuário do aplicativo acima da tela de bloqueio. Os modos de exibição secundários criados pelo aplicativo não são permitidos, logo, caso você tente mostrar o próprio modo de exibição secundário no modo de quiosque, uma exceção é lançada.
 
  
 
@@ -182,10 +182,6 @@ Ao usar [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn2810
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

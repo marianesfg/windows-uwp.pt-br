@@ -4,7 +4,7 @@ title: "Referência de API de carregamento da pasta do Device Portal"
 description: "Saiba como acessar as APIs de carregamento da pasta de maneira programática."
 translationtype: Human Translation
 ms.sourcegitcommit: fdc25fa4bd7bd5bfa598b993f23cd0ae9783dd0e
-ms.openlocfilehash: 942ddc13b0deba382ad7758bc30bd9a5b0cceb11
+ms.openlocfilehash: 6c3eeccdbb2bca315dc84293a36d0923f46e746d
 
 ---
 
@@ -54,6 +54,6 @@ Código de status HTTP      | Descrição
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

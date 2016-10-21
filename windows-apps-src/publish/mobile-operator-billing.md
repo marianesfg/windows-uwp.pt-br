@@ -4,8 +4,8 @@ Description: "A Windows Store oferece a Cobrança da Operadora Móvel como um m�
 title: "Cobrança da operadora móvel"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 translationtype: Human Translation
-ms.sourcegitcommit: 80a20f4f87ce2ef40ce4ff7c6551d74ac375da1c
-ms.openlocfilehash: bd70a3c5990909351f04ca4200f4ea522989d1e9
+ms.sourcegitcommit: 3afac16fb79262dd6a75cd44804747d173e60edf
+ms.openlocfilehash: 114783cb93d1d49eb1b2cd0d5218a35318a02df0
 
 ---
 
@@ -14,8 +14,7 @@ ms.openlocfilehash: bd70a3c5990909351f04ca4200f4ea522989d1e9
 
 A Windows Store oferece a Cobrança da Operadora Móvel como um método de pagamento para operadoras de celular que dão suporte a esse recurso. Se a operadora móvel de um cliente oferecer suporte a essa capacidade, o cliente pode fazer mais compras da Loja utilizando suas contas móveis.
 
-> 
-            **Observação** Se a operadora móvel do cliente oferecer a Cobrança da Operadora Móvel, mas o cliente não tiver essa opção em seu dispositivo, consulte estas [etapas de solução de problemas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
+> **Observação** Se a operadora móvel do cliente oferecer a Cobrança da Operadora Móvel, mas o cliente não tiver essa opção em seu dispositivo, consulte estas [etapas de solução de problemas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
 
  
 
@@ -28,14 +27,16 @@ O Windows 10 introduz uma nova implementação da Cobrança da Operadora Móvel.
 
 A implementação do Windows 10 de Cobrança da Operadora Móvel tem suporte dessas operadoras de celular no momento.
 
-| País/região | Operadoras móveis |
-|----------------|------------------|
-| Finlândia        | DNA, Elisa       |
-| Alemanha        | O2               |
-| Itália          | Wind             |
-| Noruega         | Telenor          |
-| Suíça    | Swisscom         |
-| Estados Unidos  | Sprint           |
+| País/região  | Operadoras móveis |
+|-----------------|------------------|
+| Finlândia         | DNA, Elisa       |
+| Alemanha         | O2               |
+| Hungria         | Telenor          |
+| Itália           | Wind             |
+| Noruega          | Telenor          |
+| Suíça     | Swisscom         |
+| Estados Unidos   | Sprint           |
+| Reino Unido  | O2               |
 
  
 
@@ -51,10 +52,10 @@ A implementação herdada da Cobrança da Operadora Móvel tem o suporte dessas 
 | Austrália            | Telstra                                                            |
 | Áustria              | A1 Telekom, T-Mobile                                               |
 | Bahrein              | Zain, VIVA                                                         |
-| Bélgica              | BASE, Mobistar, Proximus                                                     |
+| Bélgica              | BASE, Mobistar, Proximus                                           |
 | Brasil               | Claro                                                              |
 | Bulgária             | Telenor                                                            |
-| Canadá               | Fido, Rogers, Telus                                                |
+| Canadá               | Fido, Rogers                                                       |
 | Chile                | Claro                                                              |
 | China                | China Mobile                                                       |
 | Colômbia             | Claro, Movistar                                                    |
@@ -71,26 +72,25 @@ A implementação herdada da Cobrança da Operadora Móvel tem o suporte dessas 
 | Guatemala            | Claro                                                              |
 | Hungria              | Telenor, T-Mobile                                                  |
 | Índia                | Idea                                                               |
-| Indonésia            | Indosat, Telkomsel, XL Axiata, AXIS                                |
-| Irlanda              | O2, Vodafone, Three                                                      |
+| Indonésia            | Indosat, Telkomsel, XL Axiata, Hutchinson CP Telecommunications (HCPT)     |
+| Irlanda              | O2, Vodafone, Three                                                |
 | Itália                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
 | Jordânia               | Zain, Umniah                                                       |
 | Quênia                | Safaricom                                                          |
-| Kuwait               | Zain, Viva                                                         |
+| Kuwait               | Zain, Viva, Ooredoo                                                |
 | Letônia               | Tele2                                                              |
 | Lituânia            | Tele2                                                              |
 | Malásia             | DiGi                                                               |
-| México               | Iusacell, Telcel, Unefon, Movistar                                 |
+| México               | Iusacell, Telcel, Movistar                                         |
 | Países Baixos          | T-Mobile, Vodafone                                                 |
 | Noruega               | Telenor                                                            |
 | Omã                 | Ooredoo                                                            |
 | Paquistão             | Telenor                                                            |
 | Peru                 | Claro                                                              |
-| Filipinas          | Globe, Sun                                                         |
-| Polônia               | T-Mobile, Orange, Polkomtel (Plus)                                 |
-| Porto Rico          | Claro                                                              |
+| Filipinas          | Globe, Sun, Smart Communications                                   |
+| Polônia               | T-Mobile, Orange, Polkomtel (Plus), Play                           |
 | Romênia              | Orange, Vodafone                                                   |
-| Rússia               | Beeline, MTS                                                          |
+| Rússia               | Beeline, MTS                                                       |
 | Arábia Saudita         | Zain                                                               |
 | Cingapura            | M1, SingTel, StarHub                                               |
 | Eslováquia             | T-Mobile                                                           |
@@ -99,7 +99,6 @@ A implementação herdada da Cobrança da Operadora Móvel tem o suporte dessas 
 | Espanha                | Movistar, Vodafone, Orange                                         |
 | Suécia               | Telenor, Tele2                                                     |
 | Suíça          | Swisscom                                                           |
-| Tailândia             | DTAC                                                               |
 | Emirados Árabes Unidos | Etisalat, Du                                                       |
 | Reino Unido       | Everything Everywhere (T-Mobile), Telefonica (O2), Three, Vodafone |
 | Estados Unidos        | AT&T, Sprint, T-Mobile, Verizon                                    |
@@ -119,6 +118,6 @@ Essa lista será atualizada regularmente conforme expandimos o suporte para a Co
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

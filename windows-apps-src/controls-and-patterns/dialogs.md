@@ -1,21 +1,25 @@
 ---
 author: mijacobs
-Description: Dialogs and flyouts display transient UI elements that appear when the user requests them or when something happens that requires notification or approval.
-title: Dialogs and flyouts
+Description: "Caixas de diálogo e submenus exibem elementos transitórios da interface do usuário que aparecem quando o usuário os solicita ou quando acontece algo que requer notificação ou aprovação."
+title: "Caixas de diálogo e submenus"
 label: Dialogs
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: ff9940c06276165dc139e120c4e9cdeb005ff125
+
 ---
+# Caixas de diálogo e submenus
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Dialogs and flyouts
-
-Dialogs and flyouts are transient UI elements that appear when something happens that requires notification, approval, or additional information from the user.
+Caixas de diálogo e submenus são elementos transitórios da interface do usuário que aparecem quando acontece algo que requer notificação, aprovação ou informações adicionais do usuário.
 
 <div class="important-apis" >
-<b>Important APIs</b><br/>
+<b>APIs Importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">ContentDialog class</a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Flyout class</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">Classe ContentDialog</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Classe Flyout</a></li>
 </ul>
 
 </div>
@@ -43,40 +47,40 @@ Dialogs and flyouts are transient UI elements that appear when something happens
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-   <p><b>Dialogs</b> <br/><br/>
-   ![Example of a full-button dialog](images/controls_dialog_twobutton.png)</p>
-<p>Dialogs are modal UI overlays that provide contextual app information. Dialogs block interactions with the app window until being explicitly dismissed. They often request some kind of action from the user.   
+   <p><b>Caixas de diálogo</b> <br/><br/>
+   ![Exemplo de uma caixa de diálogo botão inteira](images/controls_dialog_twobutton.png)</p>
+<p>Caixas de diálogo são sobreposições de interface do usuário modais que fornecem informações contextuais do aplicativo. As caixas de diálogo bloqueiam interações com a janela do aplicativo até que sejam explicitamente ignoradas. Elas muitas vezes solicitam algum tipo de ação do usuário.   
 </p><br/>
 
   </div>
   <div class="side-by-side-content-right">
-   <p><b>Flyouts</b> <br/><br/>
-   ![Example of a flyout](images/flyout-example.png)</p>
-<p>A flyout is a lightweight contextual popup that displays UI related to what the user is doing. It includes placement and sizing logic, and can be used to reveal a hidden control, show more detail about an item, or ask the user to confirm an action. 
-</p><p>Unlike a dialog, a flyout can be quickly dismissed by tapping or clicking somewhere outside the flyout, pressing the Escape key or Back button, resizing the app window, or changing the device's orientation.
+   <p><b>Submenus</b> <br/><br/>
+   ![Exemplo de um submenu](images/flyout-example.png)</p>
+<p>Um submenu é um pop-up contextual leve que exibe a interface do usuário relacionada ao que o usuário está fazendo. Ele inclui a lógica de colocação e dimensionamento, e pode ser usado para exibir um controle oculto, mostrar mais detalhes de um item ou pedir que o usuário confirme uma ação. 
+</p><p>Ao contrário de uma caixa de diálogo, um submenu pode ser ignorado rapidamente tocando ou clicando em algum lugar fora do submenu, pressionando a tecla Escape ou botão Back, redimensionando a janela do aplicativo ou mudando a orientação do dispositivo.
 </p><br/>
 
   </div>
 </div>
 </div>
 
-## Is this the right control?
+## Este é o controle correto?
 
-* Use dialogs and flyouts to notify users of important information or to request confirmation or additional info before an action can be completed. 
-* Don't use a flyout instead of [tooltip](tooltips.md) or [context menu](menus.md). Use a tooltip to show a short description that hides after a specified time. Use a context menu for contextual actions related to a UI element, such as copy and paste.  
-
-
-Dialogs and flyouts make sure that users are aware of important information, but they also disrupt the user experience. Because dialogs are modal (blocking), they interupt users, preventing them from doing anything else until they interact with the dialog. Flyouts provide a less jarring experience, but displaying too many flyouts can be distracting. 
-
-Consider the importance of the information you want to share: is it important enough to interupt the user? Also consider how frequently the information needs to be shown; if you're showing a dialog or notification every few minutes, you might want to allocate space for this info in the primary UI instead. For example, in a chat client, rather than showing a flyout every time a friend logs in, you might display a list of friends who are online at the moment and highlight friends as they log on. 
-
-Flyouts and dialogs are frequently used to confirm an action (such as deleting a file) before executing it. If you expect the user to perform a particular action frequently, consider providing a way for the user to undo the action if it was a mistake, rather than forcing users to confirm the action every time. 
+* Use caixas de diálogo e submenus para notificar os usuários de informações importantes ou para solicitar a confirmação ou informações adicionais antes de uma ação ser concluída. 
+* Não use um submenu no lugar de [tooltip](tooltips.md) ou [menu de contexto](menus.md). Use tooltip para mostrar uma breve descrição que fica oculta depois de um determinado tempo. Use um menu de contexto para ações contextuais relacionadas a um elemento da interface do usuário, como copiar e colar.  
 
 
+Caixas de diálogo e submenus certificam-se de que os usuários estão cientes da informações importantes, mas eles também interrompem a experiência do usuário. Como caixas de diálogo são modais (bloqueando), elas interrompem os usuários, impedindo que façam algo até que interajam com a caixa. Submenus fornecem uma experiência menos desagradável, mas exibir muitos submenus pode ser uma decisão traiçoeira. 
 
-## Dialogs vs. flyouts
+Considere a importância das informações que você deseja compartilhar: é importante o suficiente para interromper o usuário? Considere também a frequência com que as informações precisam ser exibidas. Se você estiver mostrando uma caixa de diálogo ou notificação a cada poucos minutos, convém alocar espaço para essas informações na interface do usuário principal, em vez disso. Por exemplo, em um cliente de chat, em vez de mostrar um submenu sempre que um amigo entra, você pode exibir uma lista de amigos que estão online no momento e realçar amigos conforme eles entrarem. 
 
-Once you've determined that you want to use a dialog or flyout, you need to choose which one to use. 
+Caixas de diálogo e submenus são usados para confirmar uma ação (como excluir um arquivo) antes de executá-la. Se você espera que o usuário execute uma ação específica com frequência, considere fornecer uma maneira para que o usuário desfaça a ação se for um engano, em vez de forçar os usuários a confirmarem a ação toda vez. 
+
+
+
+## Caixas de diálogo vs. submenus
+
+Depois de determinar que você deseja usar uma caixa de diálogo ou menu suspenso, você precisa escolher qual usar. 
 
 <!--
 Dialogs are modal, which means they block all interaction with the app until the user selects a dialog button. To visually reinforce their modal behavior, dialogs draw an overlay layer which partially obscures the temporarily unreachable app UI.
@@ -91,34 +95,34 @@ A flyout is a light dismiss control, meaning that users can choose from a variet
 
 -->
 
-Given that dialogs block interactions and flyouts do not, dialogs should be reserved for situations where you want the user to drop everything to focus on a specific bit of information or answer a question. Flyouts, on the other hand, can be used when you want to call attention to something, but it's ok if the user wants to ignore it. 
+Considerando que as caixas de diálogo bloqueiam interações e os submenus não, as caixas de diálogo devem ser reservadas para situações em que você deseja que o usuário solte tudo para focar em uma informação específica ou responder a uma pergunta. Submenus, por outro lado, podem ser usados quando você deseja chamar a atenção para algo, mas terá problemas se o usuário desejar ignorá-lo. 
 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-   <p><b>Use a dialog for...</b> <br/>
+   <p><b>Use uma caixa de diálogo para...</b> <br/>
 <ul>
-<li>Expressing important information that the user **must** read and acknowledge before proceeding. Examples include:
+<li>Expressar informações importantes que o usuário **deve** ler e confirmar antes de prosseguir. Os exemplos incluem:
 <ul>
-  <li>When the user's security might be compromised</li>
-  <li>When the user is about to permanently alter a valuable asset</li>
-  <li>When the user is about to delete a valuable asset</li>
-  <li>To confirm an in-app purchase</li>
+  <li>Quando a segurança do usuário pode ser comprometida</li>
+  <li>Quando o usuário está prestes a alterar um ativo valioso de forma permanente</li>
+  <li>Quando o usuário está prestes a excluir um ativo valioso</li>
+  <li>Para confirmar uma compra no aplicativo</li>
 </ul>
 
 </li>
-<li>Error messages that apply to the overall app context, such as a connectivity error.</li>
-<li>Questions, when the app needs to ask the user a blocking question, such as when the app can't choose on the user's behalf. A blocking question can't be ignored or postponed, and should offer the user well-defined choices.</li>
+<li>Mensagens de erro que se aplicam ao contexto geral do aplicativo, como um erro de conectividade.</li>
+<li>Perguntas, quando o aplicativo precisar fazer uma pergunta de bloqueio ao usuário, por exemplo, quando o aplicativo não puder escolher em nome do usuário. Uma pergunta de bloqueio não pode ser ignorada ou adiada e deve oferecer ao usuário opções bem-definidas.</li>
 </ul> 
 </p>
   </div>
   <div class="side-by-side-content-right">
-   <p><b>Use a flyout for...</b> <br/>
+   <p><b>Use um submenu para...</b> <br/>
 <ul>
-<li>Collecting additional information needed before an action can be completed.</li>
-<li>Displaying info that's only relevent some of the time. For example, in a photo gallery app, when the user clicks an image thumbnail, you might use a flyout to display a large version of the image.</li>
-<li>Warnings and confirmations, including ones related to potentially destructive actions.</li>
-<li>Displaying more information, such as details or longer descriptions of an item on the page.</li>
+<li>Coletar informações adicionais necessárias para que uma ação possa ser concluída.</li>
+<li>Exibir informações que são relevantes apenas algumas vezes. Por exemplo, em um aplicativo da galeria de fotos, quando o usuário clica em uma miniatura da imagem, você pode usar um submenu para exibir uma versão grande da imagem.</li>
+<li>Avisos e confirmações, incluindo aqueles relacionados às ações potencialmente destrutivas.</li>
+<li>Exibindo mais informações, como detalhes ou descrições mais longas de um item na página.</li>
 </ul></p>
   </div>
 </div>
@@ -126,24 +130,24 @@ Given that dialogs block interactions and flyouts do not, dialogs should be rese
 
 
 
-## Dialog usage guidelines
+## Diretrizes de utilização de caixa de diálogo
 
--   Clearly identify the issue or the user's objective in the first line of the dialog's text.
--   The dialog title is the main instruction and is optional.
-    -   Use a short title to explain what people need to do with the dialog. Long titles do not wrap and are truncated.
-    -   If you're using the dialog to deliver a simple message, error or question, you can optionally omit the title. Rely on the content text to deliver that core information.
-    -   Make sure that the title relates directly to the button choices.
--   The dialog content contains the descriptive text and is required.
-    -   Present the message, error, or blocking question as simply as possible.
-    -   If a dialog title is used, use the content area to provide more detail or define terminology. Don't repeat the title with slightly different wording.
--   At least one dialog button must appear.
-    -   Buttons are the only mechanism for users to dismiss the dialog.
-    -   Use buttons with text that identifies specific responses to the main instruction or content. An example is, "Do you want to allow AppName to access your location?", followed by "Allow" and "Block" buttons. Specific responses can be understood more quickly, resulting in efficient decision making.
--   Error dialogs display the error message in the dialog box, along with any pertinent information. The only button used in an error dialog should be “Close” or a similar action.
--   Don't use dialogs for errors that are contextual to a specific place on the page, such as validation errors (in password fields, for example), use the app's canvas itself to show inline errors.
+-   Identifique claramente o problema ou o objetivo do usuário na primeira linha do texto da caixa de diálogo.
+-   O título da caixa de diálogo é a principal instrução e é opcional.
+    -   Use um título curto para explicar o que as pessoas precisam fazer na caixa de diálogo. Títulos longos não terão quebra de linha e serão truncados.
+    -   Se você está usando a caixa de diálogo para passar uma mensagem simples, de erro ou fazer uma pergunta, pode omitir o título. Utilize o texto do conteúdo para passar as informações principais.
+    -   O título deve estar diretamente relacionado às opções de botão.
+-   O conteúdo da caixa de diálogo contém o texto descritivo e é obrigatório.
+    -   Apresente a mensagem, o erro ou a pergunta de bloqueio da maneira mais simples possível.
+    -   Se um título da caixa de diálogo for usado, use a área de conteúdo para fornecer mais detalhes ou definir a terminologia. Não repita o título com palavras ligeiramente diferentes.
+-   Pelo menos um botão da caixa de diálogo deve aparecer.
+    -   Botões são o único mecanismo para que os usuários ignorem a caixa de diálogo.
+    -   Use botões com texto que identifiquem respostas específicas para a instrução ou o conteúdo principal. Um exemplo é "Você permite que NomeDoAplicativo acesse o sua localização?", seguido pelos botões "Permitir" e "Bloquear". Respostas específicas podem ser entendidas mais rapidamente, resultando na tomada de decisão eficiente.
+-   Caixas de diálogo de erro exibem a mensagem de erro na caixa de diálogo, juntamente com quaisquer informações pertinentes. O único botão usado em uma caixa de diálogo de erro deve ser "Fechar" ou uma ação semelhante.
+-   Não use caixas de diálogo para erros que são contextuais a um local específico da página, como erros de validação (em campos de senha, por exemplo). Use a própria tela do aplicativo para mostrar erros embutidos.
 
-## Create a dialog
-To create a dialog, you use the [ContentDialog class](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx). You can create a dialog in code or markup. Although its usually easier to define UI elements in XAML, in the case of a simple dialog, it's actually easier to just use code. This example creates a dialog to notify the user that there's no WiFi connection, and then uses the [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) method to display it.
+## Criar uma caixa de diálogo
+Para criar uma caixa de diálogo, use a [classe ContentDialog](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx). Você pode criar uma caixa de diálogo no código ou na marcação. Embora seja geralmente mais fácil definir os elementos de interface do usuário em XAML, no caso de uma caixa de diálogo simples, é realmente mais fácil usar apenas o código. Este exemplo cria uma caixa de diálogo para notificar o usuário que não há nenhuma conexão Wi-Fi e, em seguida, usa o método [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) para exibi-la.
 
 ```csharp
 private async void displayNoWifiDialog()
@@ -159,9 +163,9 @@ private async void displayNoWifiDialog()
 }
 ```
 
-When the user clicks a dialog button, the [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) method returns a [ContentDialogResult](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialogresult.aspx) to let you know which button the user clicks. 
+Quando o usuário clica em um botão de caixa de diálogo, o método [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) retorna um [ContentDialogResult](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialogresult.aspx) para informar em qual botão o usuário clica. 
 
-The dialog in this example asks a question and uses the returned [ContentDialogResult](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialogresult.aspx) to determine the user's response. 
+A caixa de diálogo neste exemplo faz uma pergunta e usa o [ContentDialogResult](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialogresult.aspx) retornado para determinar a resposta do usuário. 
 
 ```csharp
 private async void displayDeleteFileDialog()
@@ -186,13 +190,13 @@ private async void displayDeleteFileDialog()
 ```
 
 
-##  Create a flyout
+##  Criar um submenu
 
-A flyout is an open-ended container that can show arbitrary UI as its content.  
+Um submenu é um contêiner aberto que pode mostrar uma interface do usuário arbitrária como conteúdo.  
 
-Flyouts are attached to specific controls. You can use the [Placement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx) property to specify where flyout appears: Top, Left, Bottom, Right, or Full. If you select the [Full placement mode](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx), the app stretches the flyout and centers it inside the app window. When visible, they should be anchored to the invoking object and specify their preferred relative position to the object: Top, Left, Bottom, or Right. Flyout also has a Full placement mode which attempts to stretch the flyout and center it inside the app window. Some controls, such as [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx), provide a [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) property that you can use to associate a flyout. 
+Submenus são anexados a controles específicos. Você pode usar a propriedade [Placement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx) para especificar onde o submenu aparece: Parte superior, esquerda, inferior, direito ou inteira. Se você selecionar o [Modo de posicionamento completo](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx), o aplicativo se estende o submenu e centraliza na janela do aplicativo. Quando visíveis, eles devem ser ancorados ao objeto de chamada e especificar sua posição relativa preferencial para o objeto: parte superior, esquerda, inferior ou direita. O submenu também tem um modo de posicionamento completo que tenta ampliá-lo e centralizá-lo dentro da janela do aplicativo. Alguns controles, como [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx), fornecem uma propriedade [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) que você pode usar para associar um submenu. 
 
-This example creates a simple flyout that displays some text when the button is pressed. 
+Este exemplo cria um submenu simples que exibe algum texto quando o botão é pressionado. 
 ````xaml
 <Button Content="Click me">
   <Button.Flyout>
@@ -203,9 +207,9 @@ This example creates a simple flyout that displays some text when the button is 
 </Button>
 ````
 
-If the control doesn't have a flyout property, you can use the [FlyoutBase.AttachedFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) attached property instead. When you do this, you also need to call the [FlyoutBase.ShowAttachedFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.showattachedflyout) method to show the flyout. 
+Se o controle não tem uma propriedade flyout, você pode usar a propriedade [Flyoutbase](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) anexada em vez disso. Quando você fizer isso, você também precisará chamar o método [Showattachedflyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.showattachedflyout) para mostrar o submenu. 
 
-This example adds a simple flyout to an image. When the user taps the image, the app shows the flyout. 
+Este exemplo adiciona um submenu simples a uma imagem. Quando o usuário toca na imagem, o aplicativo mostra o submenu. 
 
 ````xaml
 <Image Source="Assets/cliff.jpg" Width="50" Height="50" 
@@ -225,7 +229,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-The previous examples defined their flyouts inline. You can also define a flyout as a static resource and then use it with multiple elements. This example creates a more complicated flyout that displays a larger version of an image when its thumbnail is tapped. 
+Os exemplos anteriores definiram seus submenus embutido. Você pode também definir um submenu como um recurso estático e, em seguida, usá-lo com vários elementos. Este exemplo cria um submenu mais complicado que exibe uma versão maior de uma imagem quando sua miniatura é tocada. 
 
 ````xaml
 <!-- Declare the shared flyout as a resource. -->
@@ -274,8 +278,8 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-## Style a flyout
-To style a Flyout, modify its [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx). This example shows a paragraph of wrapping text and makes the text block accessible to a screen reader.
+## Dê estilo ao submenu
+Para estilizar um submenu, modifique o [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx). Este exemplo mostra um parágrafo de quebra de texto e torna o bloco de texto acessível para um leitor de tela.
 
 ````xaml
 <Flyout>
@@ -292,12 +296,18 @@ To style a Flyout, modify its [FlyoutPresenterStyle](https://msdn.microsoft.com/
 </Flyout>
 ````
 
-## Get the samples
-*   [XAML UI basics](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
-    See all of the XAML controls in an interactive format.
+## Obter os exemplos
+*   [Noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
+    Veja todos os controles XAML em um formato interativo.
 
-## Related articles
-- [Tooltips](tooltips.md)
-- [Menus and context menu](menus.md)
-- [**Flyout class**](https://msdn.microsoft.com/library/windows/apps/dn279496)
-- [**ContentDialog class**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)
+## Artigos relacionados
+- [Dicas de ferramenta](tooltips.md)
+- [Menus e menu de contexto](menus.md)
+- [**Classe Flyout**](https://msdn.microsoft.com/library/windows/apps/dn279496)
+- [**Classe ContentDialog**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

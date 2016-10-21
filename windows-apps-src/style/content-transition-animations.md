@@ -3,8 +3,9 @@ author: mijacobs
 Description: "Animações de transição de conteúdo permitem que você mude o conteúdo de uma área da tela enquanto mantém constante o contêiner ou o plano de fundo. O novo conteúdo aparece. Se houver conteúdo existente para ser substituído, esse conteúdo desaparecerá."
 title: "Diretrizes para animações de transição de conteúdo"
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
+translationtype: Human Translation
+ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
+ms.openlocfilehash: 2b3e0196b573fb426c9cd71fc613819a2dd2d615
 
 ---
 
@@ -21,7 +22,7 @@ ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
 
 Animações de transição de conteúdo permitem que você mude o conteúdo de uma área da tela enquanto mantém constante o contêiner ou o plano de fundo. O novo conteúdo aparece. Se houver conteúdo existente para ser substituído, esse conteúdo desaparecerá.
 
-## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>O que fazer e o que não fazer
+## O que fazer e o que não fazer
 
 
 -   Use uma animação de entrada quando houver um conjunto de novos itens a serem inseridos em um contêiner vazio. Por exemplo, após o carregamento inicial de um aplicativo, parte do conteúdo do aplicativo pode não estar disponível imediatamente para exibição. Quando esse conteúdo estiver pronto para ser exibido, use uma animação de transição de conteúdo para inserir esse conteúdo atrasado na exibição.
@@ -34,7 +35,7 @@ Animações de transição de conteúdo permitem que você mude o conteúdo de u
 
 
 
-## <span id="related_topics"></span>Artigos relacionados
+## Artigos relacionados
 
 **Para desenvolvedores (XAML)**
 * [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
@@ -52,6 +53,6 @@ Animações de transição de conteúdo permitem que você mude o conteúdo de u
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

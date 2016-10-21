@@ -3,8 +3,9 @@ author: jwmsft
 description: "Saiba mais sobre os comandos de movimentação e desenho (uma minilinguagem) que você pode usar para especificar geometrias de caminho como um valor de atributo XAML."
 title: "Sintaxe de comandos de movimentação e desenho"
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
+translationtype: Human Translation
 ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 49c3a061c51c07677ffb43a230e0900220ba0299
+ms.openlocfilehash: 832e757c5bbdc10c2f0f10db127d3f21932313b3
 
 ---
 
@@ -25,9 +26,7 @@ Há duas propriedades no Windows Runtime que podem usar uma cadeia que represent
   Data="M4.12,0 L9.67,5.47 L4.12,10.94 L0,10.88 L5.56,5.47 L0,0.06" />
 ```
 
-[
-              **PathGeometry.Figures**
-            ](https://msdn.microsoft.com/library/windows/apps/br210169) também pode usar comandos de movimentação e desenho. Você pode combinar um objeto [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) que use os comandos de movimentação e desenho com outros tipos [**Geometry**](https://msdn.microsoft.com/library/windows/apps/br210041) em um objeto [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/br210057), que então seria usado como o valor de [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Mas isso não é tão comum quanto usar os comandos de movimentação e desenho para dados definidos por atributos.
+[**PathGeometry.Figures**](https://msdn.microsoft.com/library/windows/apps/br210169) também pode usar comandos de movimentação e desenho. Você pode combinar um objeto [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) que use os comandos de movimentação e desenho com outros tipos [**Geometry**](https://msdn.microsoft.com/library/windows/apps/br210041) em um objeto [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/br210057), que então seria usado como o valor de [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Mas isso não é tão comum quanto usar os comandos de movimentação e desenho para dados definidos por atributos.
 
 ## Uso de comandos de movimentação e desenho versus uso de **PathGeometry**
 
@@ -49,17 +48,7 @@ As regras gerais dessa sintaxe são:
 -   Cada comando, com exceção do comando de fechamento, é normalmente seguido por um ou mais números.
 -   Se houver mais de um número para um comando, separe-os com uma vírgula ou um espaço.
 
-**\[**
-            _fillRule_
-            **\]**
-            _moveCommand_
-            _drawCommand_
-            **\[**
-            _drawCommand_
-            **\*\]**
-            **\[**
-            _closeCommand_
-            **\]**
+**\[**_fillRule_**\]** _moveCommand_ _drawCommand_ **\[**_drawCommand_**\*\]** **\[**_closeCommand_**\]**
 
 Muitos comandos de desenho usam pontos, nos quais você fornece um valor _x,y_. Sempre que você vir um espaço reservado \*_points_, poderá supor que está fornecendo dois valores decimais para o valor _x,y_ de um ponto.
 
@@ -139,11 +128,7 @@ Cria uma curva de Bézier cúbica entre o ponto atual e o ponto final especifica
 
 | Sintaxe |
 |--------|
-| `C ` *controlPoint1*
-            *controlPoint2*
-            *endPoint* <br/> - ou - <br/> `c ` *controlPoint1*
-            *controlPoint2*
-            *endPoint* |
+| `C ` *controlPoint1* *controlPoint2* *endPoint* <br/> - ou - <br/> `c ` *controlPoint1* *controlPoint2* *endPoint* |
 
 | Termo | Descrição |
 |------|-------------|
@@ -170,8 +155,7 @@ Cria uma curva de Bézier cúbica entre o ponto atual e o ponto final especifica
 
 | Sintaxe |
 |--------|
-| `S` *controlPoint2*
-            *endPoint* <br/> - ou - <br/>`s` *controlPoint2 endPoint* |
+| `S` *controlPoint2* *endPoint* <br/> - ou - <br/>`s` *controlPoint2 endPoint* |
 
 | Termo | Descrição |
 |------|-------------|
@@ -184,9 +168,7 @@ Cria uma curva de Bézier quadrática entre o ponto atual e o ponto final especi
 
 | Sintaxe |
 |--------|
-| `T` *controlPoint*
-            *endPoint* <br/> - ou - <br/> `t` *controlPoint*
-            *endPoint* |
+| `T` *controlPoint* *endPoint* <br/> - ou - <br/> `t` *controlPoint* *endPoint* |
 
 | Termo | Descrição |
 |------|-------------|
@@ -199,11 +181,7 @@ Cria um arco elíptico entre o ponto atual e a ponto final especificado. Define 
 
 | Sintaxe |
 |--------|
-| `A ` *size*
-            *rotationAngle*
-            *isLargeArcFlag*
-            *sweepDirectionFlag*
-            *endPoint* <br/> - ou - <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
+| `A ` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> - ou - <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
 
 | Termo | Descrição |
 |------|-------------|
@@ -227,8 +205,7 @@ Descreve as coordenadas x e y de um ponto. Consulte também [**Point**](https://
 
 | Sintaxe |
 |--------|
-| *x*,*y*<br/> - ou - <br/>*x*
-            *y* |
+| *x*,*y*<br/> - ou - <br/>*x* *y* |
 
 | Termo | Descrição |
 |------|-------------|
@@ -263,6 +240,6 @@ Há exportadores ou plug-ins disponíveis para outras ferramentas de desenho gr�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

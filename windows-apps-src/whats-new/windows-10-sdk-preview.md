@@ -1,19 +1,19 @@
 ---
 author: QuinnRadich
-title: Novidades no Windows 10
-description: "A Compilação do Windows 10 Anniversary SDK Preview e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da nova Plataforma Universal do Windows."
+title: "Novidades no Windows 10, versão 1607, versão prévia"
+description: "O Windows 10 versão 1607 Preview e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da nova Plataforma Universal do Windows."
+keywords: "novidades, novidades, atualizar, atualizações, recursos, novo, Windows 10, 1607 preview"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 9623e10b15dbc5f9480d1cd9bd740fa8e914b3c6
+ms.sourcegitcommit: 5646bf7681b5b028031eab02f8dd5c352d4b9cc1
+ms.openlocfilehash: 33c1888620d4e3c2d95cbf701e9128ce006961da
 
 ---
 
 # Novidades no Windows
 
-A compilação 14295 do Windows 10 Anniversary SDK Preview e as atualizações das ferramentas de desenvolvedor do Windows continuarão a fornecer as ferramentas, os recursos e as experiências da Plataforma Universal do Windows. 
-              [Instale as ferramentas e o SDK](https://developer.microsoft.com/windows/downloads#_blank) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) ou descobrir como pode usar seu [código de aplicativo existente no Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
+O Windows 10 versão 1607 Preview e as atualizações das ferramentas de desenvolvedor do Windows continuam fornecendo as ferramentas, os recursos e as experiências da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) ou descobrir como pode usar seu [código de aplicativo existente no Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
 
-## Compilação 12295 do Windows 10 Anniversary SDK Preview
+## Windows 10, versão 1607 preview
 
 Recurso | Descrição
  :---- | :----
@@ -30,6 +30,6 @@ APIs de mapas | O [MapControl](https://msdn.microsoft.com/library/windows/apps/w
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

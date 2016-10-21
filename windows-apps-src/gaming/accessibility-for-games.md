@@ -4,8 +4,8 @@ title: "Tronando os jogos acessíveis"
 description: "Aprenda a criar jogos acessíveis. Use o princípio do design de jogo inclusivo para alcançar a acessibilidade do jogo."
 ms.assetid: f5ba1e60-0d7c-11e6-91ec-0002a5d5c51b
 translationtype: Human Translation
-ms.sourcegitcommit: 2492ff5c8b3ba0331e831234943a1db124f8fa4f
-ms.openlocfilehash: 2b78d767a7ac75e27f759c0eb06953e6158fb88b
+ms.sourcegitcommit: d61b834adb50e71ba67ea32662069f257c33a676
+ms.openlocfilehash: 185e79b96cdc64f3ead6c85d067659b9087ec082
 
 ---
 #  Tornando os jogos acessíveis
@@ -20,7 +20,7 @@ No nível mais básico, a justificativa comercial da acessibilidade é simples:
 
 Número de usuários que podem jogar o jogo x grandiosidade do jogo = vendas do jogo
 
-Se tiver feito um jogo incrível muito complicado ou intrincado e que apenas algumas pessoas podem jogá-lo, você limitará as vendas. Da mesma forma, se tiver feito um jogo que não possa ser jogado por pessoas com deficiências física, sensorial ou cognitiva, você perderá vendas em potencial. Considerando que [19% da população apenas nos Estados Unidos têm alguma forma de deficiência](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), isso pode ter um grande impacto na receita do título. 
+Se tiver feito um jogo incrível muito complicado ou intrincado e que apenas algumas pessoas podem jogá-lo, você limitará as vendas. Da mesma forma, se tiver feito um jogo que não possa ser jogado por pessoas com deficiências física, sensorial ou cognitiva, você perderá vendas em potencial. Considerando que, por exemplo, [19% da população apenas nos Estados Unidos têm alguma forma de deficiência](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), isso pode ter um grande impacto na receita do título. 
 
 Para mais justificativas comerciais, consulte [Criando videogames acessíveis](https://msdn.microsoft.com/library/windows/desktop/ee415219).
 
@@ -89,7 +89,7 @@ O design inclusivo se concentra na criação de produtos e serviços mais acess�
 
 Para serem bem-sucedidos, os designers de jogos atuais precisam pensar além da criação de jogos divertidos para um público-alvo pequeno e segmentado. Os designers de jogos precisam estar cientes de como as decisões de design afetam a acessibilidade geral do jogo, a jogabilidade do jogo para o público-alvo em potencial geral, inclusive pessoas com deficiências.
 
-Assim, os paradigmas do design de jogo tradicional devem mudar para abranger o conceito do design de jogo inclusivo. O design de jogo inclusivo significa ir além do design de jogo básico de criar diversão para o público-alvo, criar personas adicionais ou modificadas para incluir um conjunto mais amplo de pessoas. 
+Assim, os paradigmas do design de jogo tradicional devem mudar para abranger o conceito do design de jogo inclusivo. O design de jogo inclusivo significa ir além do design de jogo básico de criar diversão para o público-alvo, criar personas adicionais ou modificadas para incluir um conjunto mais amplo de jogadores. 
 
 Essa etapa extra ajuda a identificar lacunas no design original. Identificando lacunas, você pode iterar o conceito do design original e melhorá-lo. Quando você reserva um tempo para ser mais inclusivo no processo de design do jogo, o jogo final se torna mais acessível.
 
@@ -217,6 +217,6 @@ Aqui estão alguns sites externos que fornecem informações adicionais sobre ac
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

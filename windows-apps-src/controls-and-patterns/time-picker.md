@@ -5,19 +5,28 @@ title: Seletor de hora
 ms.assetid: 5124ecda-09e6-449e-9d4a-d969dca46aa3
 label: Time picker
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 5056a9f304ca21c977b9cc65b8ead007eccd4288
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 69f682b0edddbcf88515af537c33b3d8297f91f0
 
 ---
-
 # Seletor de hora
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 O seletor de hora oferece uma maneira padronizada de permitir que os usuários escolham um valor usando entrada por toque, mouse ou teclado. 
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx"><strong>Classe TimePicker</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.time.aspx"><strong>Propriedade Time</strong></a></li>
+</ul>
 
--   [**Classe TimePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)
--   [**Propriedade Time**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.time.aspx)
+</div>
+</div>
+
+
+
 
 ## Esse é o controle correto?
 Use um seletor de hora para permitir que um usuário selecione um valor de hora único.
@@ -47,9 +56,7 @@ O seletor de hora resultante tem esta aparência:
 
 ![Exemplo de seletor de hora](images/time-picker-closed.png)
 
-> 
-            **Observação**
-            &nbsp;&nbsp;Para obter informações importantes sobre valores de data e hora, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os *Controles de data e hora*.
+> **Observação**&nbsp;&nbsp;Para obter informações importantes sobre valores de data e hora, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os *Controles de data e hora*.
 
 
 
@@ -62,6 +69,6 @@ O seletor de hora resultante tem esta aparência:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

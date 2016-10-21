@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: fcebd659-438b-4d03-bc73-6b662ed6f1f3
 description: "Saiba mais sobre o processo de ponta a ponta para desenvolver e publicar um aplicativo com anúncios."
 title: "Fluxos de trabalho para criar aplicativos com anúncios"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 0f832674f0e635f609f09fa15acead109b1d67ff
 
 
 ---
@@ -12,7 +13,7 @@ ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
 # Fluxos de trabalho para criar aplicativos com anúncios
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Para exibir anúncios em seus aplicativos, o aplicativo precisa ser capaz de recebe anúncios de uma rede de publicidade. A Microsoft fornece um serviço Web que permite que os desenvolvedores de aplicativos do Windows recebam anúncios. Quando os usuários clicam no anúncio em seu aplicativo, você (sendo o *fornecedor* do anúncio) ganha dinheiro do criador dos anúncios (o *anunciante*). O dinheiro ganho dos anunciantes é pago para você usando sua conta.
 
@@ -65,6 +66,6 @@ Depois que o aplicativo for publicado e disponibilizado na Windows Store, você 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

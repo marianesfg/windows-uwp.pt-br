@@ -8,19 +8,28 @@ title: Modelos de controle
 ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 071ba59af02b860e9fe58133eb5f1c2a7207ed2b
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 2aa257fa422ed954206dffb5ac68461e4e3a544f
 
 ---
-
 # Modelos de controle
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br209391"><strong>Classe ControlTemplate</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx"><strong>Propriedade Control.Template</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
-**APIs importantes**
 
--   [**Classe ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)
--   [**Propriedade Control.Template**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)
+
 
 Você pode personalizar a estrutura e o comportamento visual de um controle criando um modelo de controle na estrutura XAML. Os controles têm muitas propriedades, como [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414), e [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404), que você pode definir para especificar diferentes aspectos da aparência do controle. Mas as mudanças que você pode fazer ao definir essas propriedades são limitadas. Você pode especificar personalizações adicionais criando um modelo usando a classe [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). Aqui, mostramos a você como criar um **ControlTemplate** para personalizar a aparência de um controle [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316).
 
@@ -95,10 +104,7 @@ Esta tabela lista os possíveis valores do [**IsChecked**](https://msdn.microsof
 
 |                     |                    |                         |
 |---------------------|--------------------|-------------------------|
-| 
-            Valor **IsChecked** | 
-            Estado da **CheckBox** | 
-            Aparência da **CheckBox** |
+| Valor **IsChecked** | Estado da **CheckBox** | Aparência da **CheckBox** |
 | **true**            | `Checked`          | Contém um "X".        |
 | **false**           | `Unchecked`        | Vazio.                  |
 | **null**            | `Indeterminate`    | Contém um círculo.      |
@@ -107,7 +113,7 @@ Esta tabela lista os possíveis valores do [**IsChecked**](https://msdn.microsof
 
 Você especifica a aparência de um controle quando ele está em um determinado estado usando os objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007). Um **VisualState** contém um [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) ou [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br243053) que muda a aparência dos elementos no [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). Quando o controle entra no estado que a propriedade [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031) especifica, as alterações de propriedade no **Setter** ou [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) são aplicadas. Quando o controle sai do estado, as alterações são removidas. Adicione objetos **VisualState** aos objetos [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014). Adicione objetos **VisualStateGroup** à propriedade [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) anexada, a qual você definiu na raiz do [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) do **ControlTemplate**.
 
-Este XAML mostra os objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) para os estados `Checked`, `Unchecked` e `Indeterminate`. O exemplo define a propriedade [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) anexada no [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250), que é o elemento raiz do [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). O `Checked`**VisualState** especifica que o [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962) do [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) chamado `CheckGlyph` (que mostramos no exemplo anterior) é 1. O `Indeterminate`**VisualState** especifica que o **Opacity** do [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/br243343) nomeado `IndeterminateGlyph` é 1. O `Unchecked`**VisualState** não tem nenhum [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) ou [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490), assim, a [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) volta a sua aparência padrão.
+Este XAML mostra os objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) para os estados `Checked`, `Unchecked` e `Indeterminate`. O exemplo define a propriedade [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) anexada no [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250), que é o elemento raiz do [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). O `Checked` **VisualState** especifica que o [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962) do [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) chamado `CheckGlyph` (que mostramos no exemplo anterior) é 1. O `Indeterminate` **VisualState** especifica que o **Opacity** do [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/br243343) nomeado `IndeterminateGlyph` é 1. O `Unchecked` **VisualState** não tem nenhum [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) ou [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490), assim, a [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) volta a sua aparência padrão.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
@@ -175,9 +181,9 @@ Para entender melhor como os objetos [**VisualState**](https://msdn.microsoft.co
 |                                      |                                                                                                                                                                                                                                                                                                                                                |                                                   |
 |--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | Transição de estado                     | O que ocorre                                                                                                                                                                                                                                                                                                                                   | Aparência da caixa de seleção quando a transição completa |
-| De `Unchecked` a `Checked`.       | O valor [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) do `Checked`[**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) é aplicado, então o [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962) de `CheckGlyph` é 1.                                                                                                                                                         | Um X é exibido.                                |
-| De `Checked` a `Indeterminate`.   | O valor [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) do `Indeterminate`[**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) é aplicado, então o [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962) de `IndeterminateGlyph` é 1. O valor **Setter** do `Checked`**VisualState** é removido, então o [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br228078) de `CheckGlyph` é 0. | Um círculo é exibido.                            |
-| De `Indeterminate` a `Unchecked`. | O valor [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) do `Indeterminate`[**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) é removido, então o [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962) de `IndeterminateGlyph` é 0.                                                                                                                                           | Nada é exibido.                             |
+| De `Unchecked` a `Checked`.       | O valor [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) do `Checked` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) é aplicado, então o [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962) de `CheckGlyph` é 1.                                                                                                                                                         | Um X é exibido.                                |
+| De `Checked` a `Indeterminate`.   | O valor [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) do `Indeterminate` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) é aplicado, então o [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962) de `IndeterminateGlyph` é 1. O valor **Setter** do `Checked` **VisualState** é removido, então o [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br228078) de `CheckGlyph` é 0. | Um círculo é exibido.                            |
+| De `Indeterminate` a `Unchecked`. | O valor [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) do `Indeterminate` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) é removido, então o [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962) de `IndeterminateGlyph` é 0.                                                                                                                                           | Nada é exibido.                             |
 
  
 Para saber mais sobre como criar estados visuais para controles e, em especial, como usar a classe [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) e os tipos de animação, consulte [Animações de storyboard para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808).
@@ -216,6 +222,6 @@ Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

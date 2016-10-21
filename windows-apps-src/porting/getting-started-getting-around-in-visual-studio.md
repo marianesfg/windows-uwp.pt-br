@@ -3,14 +3,15 @@ author: mcleblanc
 description: Conhecendo o Visual Studio
 title: Conhecendo o Visual Studio
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d31e6e940f0b03667f1e19abec17804f6f3e16a6
+ms.openlocfilehash: 3f23745d161965d08a35abbef31b8e4342cf1ff6
 
 ---
 
 # Introdução: conhecendo o Visual Studio
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Noções básicas do Microsoft Visual Studio
 
@@ -125,6 +126,6 @@ Para encerrar o aplicativo, volte ao Visual Studio, toque no menu **Depurar** e,
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

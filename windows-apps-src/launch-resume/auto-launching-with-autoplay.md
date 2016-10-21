@@ -3,8 +3,9 @@ author: TylerMSFT
 title: "Iniciando automaticamente com a Reprodução Automática"
 description: "Você pode usar a Reprodução Automática para fornecer seu aplicativo como uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como uma câmera ou um player de mídia, ou dispositivos com volume, como pen drives, cartões de memória ou DVDs."
 ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 72e61f07c4b37488525d74ae28c9f605f20ca94c
+ms.openlocfilehash: 2c7dc2ad19867c9f721f7f4cc51c8a7096bc9501
 
 ---
 
@@ -16,13 +17,11 @@ ms.openlocfilehash: 72e61f07c4b37488525d74ae28c9f605f20ca94c
 
 Você pode usar a **Reprodução Automática** para fornecer seu aplicativo como uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como uma câmera ou um player de mídia, ou dispositivos com volume, como pen drives, cartões de memória ou DVDs. Também é possível usar a **Reprodução Automática** para oferecer seu aplicativo como uma opção quando os usuários compartilham arquivos entre dois computadores usando proximidade (encostar).
 
-> 
-            **Observação**  Se você for um fabricante de dispositivos e desejar associar seu [aplicativo de dispositivo da Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=301381) como um manipulador de **Reprodução Automática** para o dispositivo, identifique o aplicativo nos metadados do dispositivo. Para obter mais informações, consulte [Reprodução Automática para aplicativos de dispositivo da Windows Store](http://go.microsoft.com/fwlink/p/?LinkId=306684).
+> **Observação**  Se você for um fabricante de dispositivos e desejar associar seu [aplicativo de dispositivo da Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=301381) como um manipulador de **Reprodução Automática** para o dispositivo, identifique o aplicativo nos metadados do dispositivo. Para obter mais informações, consulte [Reprodução Automática para aplicativos de dispositivo da Windows Store](http://go.microsoft.com/fwlink/p/?LinkId=306684).
 
 ## Registrar para conteúdo de Reprodução Automática
 
-Você pode registrar aplicativos como opções de eventos de conteúdo de **Reprodução Automática**. 
-            Os eventos de conteúdo da **Reprodução Automática** são gerados quando um dispositivo de volume, como um cartão de memória de câmera, um pen drive ou um DVD, for inserido no computador. Aqui, mostramos como identificar o aplicativo como uma opção de **Reprodução Automática** quando um dispositivo de volume de uma câmera for inserido.
+Você pode registrar aplicativos como opções de eventos de conteúdo de **Reprodução Automática**. Os eventos de conteúdo da **Reprodução Automática** são gerados quando um dispositivo de volume, como um cartão de memória de câmera, um pen drive ou um DVD, for inserido no computador. Aqui, mostramos como identificar o aplicativo como uma opção de **Reprodução Automática** quando um dispositivo de volume de uma câmera for inserido.
 
 Neste tutorial, você criou um aplicativo que exibe arquivos de imagem ou os copia para Imagens. Você registrou o aplicativo para o evento de conteúdo **ShowPicturesOnArrival** da Reprodução Automática.
 
@@ -108,8 +107,7 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> 
-            **Observação**  Os métodos `DisplayImages` e `CopyImages` são adicionados nas etapas a seguir.
+> **Observação**  Os métodos `DisplayImages` e `CopyImages` são adicionados nas etapas a seguir.
 
 ### Etapa 4: Adicionar código para exibir imagens
 
@@ -221,19 +219,16 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 1.  Pressione F5 para compilar e implantar o aplicativo (no modo de depuração).
 2.  Para executar o aplicativo, insira um cartão de memória de câmera ou outro dispositivo de armazenamento de uma câmera no computador. Em seguida, selecione uma das opções de evento de conteúdo que você especificou no arquivo package.appxmanifest na lista de opções de Reprodução Automática. Este código de exemplo apenas exibe ou copia imagens na pasta DCIM de um cartão de memória de câmera. Se o cartão de memória da câmera armazenar imagens em uma pasta AVCHD ou PRIVATE\\ACHD, será necessário atualizar o código adequadamente.
-    
-            **Observação**  Se você não tiver um cartão de memória da câmera, poderá usar uma unidade flash se ela tiver uma pasta chamada **DCIM** na raiz e se a pasta DCIM tiver uma subpasta que contenha imagens.
+    **Observação**  Se você não tiver um cartão de memória da câmera, poderá usar uma unidade flash se ela tiver uma pasta chamada **DCIM** na raiz e se a pasta DCIM tiver uma subpasta que contenha imagens.
 
 ## Registrar para um dispositivo de Reprodução Automática
 
 
-Você pode registrar aplicativos como opções de eventos de dispositivo de **Reprodução Automática**. 
-            Os eventos de dispositivo de **Reprodução Automática** são gerados quando um dispositivo é conectado a um computador.
+Você pode registrar aplicativos como opções de eventos de dispositivo de **Reprodução Automática**. Os eventos de dispositivo de **Reprodução Automática** são gerados quando um dispositivo é conectado a um computador.
 
 Nesta seção, mostramos como identificar seu aplicativo como uma opção **Reprodução Automática** quando uma câmera é conectada a um computador. O aplicativo registra como um manipulador para o evento **WPD\\ImageSourceAutoPlay**. Esse é um evento comum que o sistema Dispositivo Portátil do Windows (WPD) gera quando câmeras e outros dispositivos de imagem o notifica que são uma ImageSource usando MTP. Para saber mais, consulte [Dispositivos portáteis do Windows](https://msdn.microsoft.com/library/windows/hardware/ff597729).
 
-
-            **Importante**  As APIS [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) fazem parte da [família de dispositivos da área de trabalho](https://msdn.microsoft.com/library/windows/apps/dn894631). Os aplicativos podem usar essas APIs somente em dispositivos com Windows 10 na família de dispositivos da área de trabalho, como computadores.
+**Importante**  As APIS [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) fazem parte da [família de dispositivos da área de trabalho](https://msdn.microsoft.com/library/windows/apps/dn894631). Os aplicativos podem usar essas APIs somente em dispositivos com Windows 10 na família de dispositivos da área de trabalho, como computadores.
 
  
 
@@ -342,8 +337,7 @@ protected override void OnActivated(IActivatedEventArgs args)
 }
 ```
 
-> 
-            **Observação**  O método `ShowImages` é adicionado na etapa a seguir.
+> **Observação**  O método `ShowImages` é adicionado na etapa a seguir.
 
 ### Etapa 5: Adicionar código para exibir informações de dispositivo
 
@@ -371,8 +365,7 @@ internal async void ShowImages(Windows.Storage.StorageFolder folder)
 }
 ```
 
-> 
-            **Observação**  Os métodos `GetImageList` e `GetThumbnail` são adicionados na etapa a seguir.
+> **Observação**  Os métodos `GetImageList` e `GetThumbnail` são adicionados na etapa a seguir.
 
  
 
@@ -417,8 +410,7 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 
 1.  Pressione F5 para compilar e implantar o aplicativo (no modo de depuração).
 2.  Para executar o aplicativo, conecte uma câmera ao seu computador. Em seguida, selecione o aplicativo na lista de opções da Reprodução Automática.
-    
-            **Observação**  Nem todas as câmeras anunciam o evento de dispositivo de Reprodução Automática **WPD\\ImageSource**.
+    **Observação**  Nem todas as câmeras anunciam o evento de dispositivo de Reprodução Automática **WPD\\ImageSource**.
 
      
 
@@ -429,8 +421,7 @@ Você pode identificar um dispositivo de volume, como um cartão de memória ou 
 
 Este exemplo mostra como identificar seu dispositivo de volume como um dispositivo de **Reprodução Automática**.
 
-Para identificar seu dispositivo de volume como um dispositivo de **Reprodução Automática**, adicione um arquivo autorun.inf à unidade raiz do dispositivo. No arquivo autorun.inf, adicione uma chave **CustomEvent** à seção **AutoRun**. Quando o dispositivo de volume se conectar a um computador, a **Reprodução Automática** encontrará o arquivo autorun.inf e tratará o volume como um dispositivo. 
-            A **Reprodução Automática** criará um evento de **Reprodução Automática** usando o nome que você forneceu na chave **CustomEvent**. Em seguida, você pode criar um aplicativo e registrá-lo como manipulador desse evento de **Reprodução Automática**. Quando o dispositivo se conectar ao computador, a **Reprodução Automática** mostrar o aplicativo como manipulador do dispositivo de volume. Para obter mais informações sobre arquivos autorun.inf, consulte [entradas de autorun.inf](https://msdn.microsoft.com/library/windows/desktop/cc144200).
+Para identificar seu dispositivo de volume como um dispositivo de **Reprodução Automática**, adicione um arquivo autorun.inf à unidade raiz do dispositivo. No arquivo autorun.inf, adicione uma chave **CustomEvent** à seção **AutoRun**. Quando o dispositivo de volume se conectar a um computador, a **Reprodução Automática** encontrará o arquivo autorun.inf e tratará o volume como um dispositivo. A **Reprodução Automática** criará um evento de **Reprodução Automática** usando o nome que você forneceu na chave **CustomEvent**. Em seguida, você pode criar um aplicativo e registrá-lo como manipulador desse evento de **Reprodução Automática**. Quando o dispositivo se conectar ao computador, a **Reprodução Automática** mostrar o aplicativo como manipulador do dispositivo de volume. Para obter mais informações sobre arquivos autorun.inf, consulte [entradas de autorun.inf](https://msdn.microsoft.com/library/windows/desktop/cc144200).
 
 ### Etapa 1: Criar um arquivo autorun.inf
 
@@ -447,8 +438,7 @@ CustomEvent=AutoPlayCustomEventQuickstart
 2.  Abra o arquivo Package.appxmanifest e selecione a guia **Recursos**. Selecione o recurso **Armazenamento Removível**. Isso dá ao aplicativo acesso aos arquivos e pastas em dispositivos de armazenamento removíveis.
 3.  No arquivo de manifesto, selecione a guia **Declarações**. Na lista suspensa **Declarações Disponíveis**, selecione **Conteúdo de Reprodução Automática** e clique em **Adicionar**. Selecione o novo item **Conteúdo da Reprodução Automática** que foi adicionado à lista **Declarações Suportadas**.
 
-    
-            **Observação**  Como alternativa, você também pode optar por adicionar uma declaração de **Dispositivo de Reprodução Automática** para seu evento de Reprodução Automática personalizado.
+    **Observação**  Como alternativa, você também pode optar por adicionar uma declaração de **Dispositivo de Reprodução Automática** para seu evento de Reprodução Automática personalizado.
     
 4.  Na seção **Ações de Inicialização** para a declaração de evento **Conteúdo de Reprodução Automática**, insira os valores da tabela abaixo na primeira ação de inicialização.
 5.  Na lista suspensa **Declarações Disponíveis**, selecione **Associações de Tipo de Arquivo** e clique em **Adicionar**. Nas Propriedades da nova declaração **Associações de Tipo de Arquivo**, defina o campo **Nome de Exibição** como **Mostrar Arquivos .ms** e o campo **Nome** como **ms\_association**. Na seção **Tipos de Arquivo com Suporte**, clique em **Adicionar Novo**. Defina o campo **Tipo de Arquivo** como **.ms**. Para eventos de conteúdo, a Reprodução Automática não mostra os tipos de arquivo que não estejam explicitamente associados ao seu aplicativo.
@@ -492,8 +482,7 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> 
-            **Observação**  O método `DisplayFiles` é adicionado na etapa a seguir.
+> **Observação**  O método `DisplayFiles` é adicionado na etapa a seguir.
 
  
 
@@ -591,6 +580,6 @@ Você pode registrar seu aplicativo como um conteúdo de Reprodução Automátic
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

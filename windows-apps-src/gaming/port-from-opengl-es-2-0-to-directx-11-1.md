@@ -3,20 +3,20 @@ author: mtoepke
 title: Fazer a portabilidade do OpenGL ES 2.0 para o Direct3D 11
 description: "Inclui artigos, visões gerais e guias passo a passo para a portabilidade de uma pipeline de elementos gráficos em OpenGL ES 2.0 para um Direct3D 11 e o Windows Runtime."
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
+translationtype: Human Translation
 ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
-ms.openlocfilehash: 40380582a9210cb705a5e7e591d4a8f37c42f8dd
+ms.openlocfilehash: aab0c3e9f3816e0657dfb6fec4917d62f2be5280
 
 ---
 
 # Fazer a portabilidade do OpenGL ES 2.0 para o Direct3D 11
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Inclui artigos, visões gerais e guias passo a passo para a portabilidade de uma pipeline de elementos gráficos em OpenGL ES 2.0 para um Direct3D 11 e o Windows Runtime.
 
-> 
-            **Observação**   Uma etapa intermediária na portabilidade do seu projeto OpenGL ES 2.0 é usar o ANGLE para Windows Store. O ANGLE permite executar conteúdo do OpenGL ES no Windows, o que converte chamadas de API do OpenGL ES em chamadas de API do DirectX 11. Para obter mais informações sobre o ANGLE, vá para [ANGLE for Windows Store Wiki](http://go.microsoft.com/fwlink/p/?linkid=618387).
+> **Observação**   Uma etapa intermediária na portabilidade do seu projeto OpenGL ES 2.0 é usar o ANGLE para Windows Store. O ANGLE permite executar conteúdo do OpenGL ES no Windows, o que converte chamadas de API do OpenGL ES em chamadas de API do DirectX 11. Para obter mais informações sobre o ANGLE, vá para [ANGLE for Windows Store Wiki](http://go.microsoft.com/fwlink/p/?linkid=618387).
 
  
 
@@ -64,6 +64,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

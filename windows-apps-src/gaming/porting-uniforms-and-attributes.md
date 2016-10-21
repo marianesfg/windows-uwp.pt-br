@@ -3,15 +3,16 @@ author: mtoepke
 title: "Comparação de buffers, uniformes e atributos de vértice do OpenGL ES 2.0 com os do Direct3D"
 description: "Durante o processo de portabilidade do OpenGL ES 2.0 para Direct3D 11, você deve alterar a sintaxe e o comportamento da API para passar dados entre o aplicativo e os programas de sombreador."
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a588ba010ddf21a07d493774cff7f6ab5dbfdf47
+ms.openlocfilehash: d3a1c0d3a37f24bdf4dfec1118aa206dfd6b9ac1
 
 ---
 
 # Comparação de buffers, uniformes e atributos de vértice do OpenGL ES 2.0 com os do Direct3D
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -301,6 +302,6 @@ struct VertexShaderInput
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

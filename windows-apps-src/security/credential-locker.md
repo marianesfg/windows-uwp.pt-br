@@ -3,8 +3,9 @@ title: Cofre de credenciais
 description: "Este artigo descreve como aplicativos UWP (Plataforma Universal do Windows) podem usar o Cofre de credenciais para armazenar com segurança e recuperar credenciais do usuário, e alternar entre os dispositivos com a conta da Microsoft do usuário."
 ms.assetid: 7BCC443D-9E8A-417C-B275-3105F5DED863
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: ba3f4fc8584108fefe25de146ae7fc84ee7c9e2c
+ms.openlocfilehash: 2d5e1fada82e0c39ad0dce31c779ac80005aff17
 
 ---
 
@@ -131,6 +132,6 @@ Salve senhas no cofre de credenciais somente se os seguintes critérios forem at
 Nunca armazene credenciais em texto sem formatação usando dados de aplicativo ou configurações de roaming.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

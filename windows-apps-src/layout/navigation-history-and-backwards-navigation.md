@@ -6,8 +6,9 @@ ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
 label: History and backwards navigation
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
+translationtype: Human Translation
+ms.sourcegitcommit: 75e8c342775f7d6c564cb1014519f8e4707a0632
+ms.openlocfilehash: f18fc0806313cc1656860b0fd8b5ae692fa3d4c6
 
 ---
 
@@ -29,18 +30,18 @@ Estes são os principais fatores forma com o botão Voltar da interface do usuá
      </tr>
     <tr>
         <td>Telefone</td>
-        <td>![system back on a phone](images/back-systemback-phone.png)</td>
+        <td>![sistema Voltar em um telefone](images/back-systemback-phone.png)</td>
         <td>
         <ul>
 <li>Sempre presente.</li>
 <li>Um botão de hardware ou software na parte inferior do dispositivo.</li>
-<li>Navegação regressiva global dentro do aplicativo e entre aplicativos.</li>
+<li>Navegação regressiva global no aplicativo e entre aplicativos.</li>
 </ul>
 </td>
      </tr>
      <tr>
         <td>Tablet</td>
-        <td>![system back on a tablet (in tablet mode)](images/back-systemback-tablet.png)</td>
+        <td>![volta do sistema em um tablet (no modo tablet)](images/back-systemback-tablet.png)</td>
         <td>
 <ul>
 <li>Sempre presente no modo Tablet.
@@ -50,12 +51,12 @@ Estes são os principais fatores forma com o botão Voltar da interface do usuá
     Users can switch between running in Tablet mode and Desktop mode by going to **Settings &gt; System &gt; Tablet mode** and setting **Make Windows more touch-friendly when using your device as a tablet**.</li>
 
 <li> Um botão de software na barra de navegação na parte inferior do dispositivo.</li>
-<li>Navegação regressiva global dentro do aplicativo e entre aplicativos.</li></ul>        
+<li>Navegação regressiva global no aplicativo e entre aplicativos.</li></ul>        
         </td>
      </tr>
     <tr>
         <td>PC, notebook, tablet</td>
-        <td>![system back on a pc or laptop](images/back-systemback-pc.png)</td>
+        <td>![sistema de volta em um computador ou laptop](images/back-systemback-pc.png)</td>
         <td>
 <ul>
 <li>Opcional no modo Área de Trabalho.
@@ -67,12 +68,12 @@ Estes são os principais fatores forma com o botão Voltar da interface do usuá
     Users can switch between running in Tablet mode and Desktop mode by going to **Settings &gt; System &gt; Tablet mode** and setting **Make Windows more touch-friendly when using your device as a tablet**.</li>
 
 <li>Um botão de software na barra de título do aplicativo.</li>
-<li>Navegação regressiva dentro do aplicativo apenas. Não oferece suporte à navegação entre aplicativos.</li></ul>        
+<li>Navegação regressiva dentro do aplicativo apenas. Não dá suporte à navegação de aplicativo para aplicativo.</li></ul>        
         </td>
      </tr>
     <tr>
         <td>Surface Hub</td>
-        <td>![system back on a surface hub](images/nav/nav-back-surfacehub.png)</td>
+        <td>![sistema Voltar em um Surface Hub](images/nav/nav-back-surfacehub.png)</td>
         <td>
 <ul>
 <li>Opcional.</li>
@@ -89,74 +90,75 @@ Estes são alguns tipos de entrada alternativos que não dependem de um botão V
 
 <table>
 <tr><td colspan="3">Dispositivos de entrada</td></tr>
-<tr><td>Teclado</td><td>![keyboard](images/keyboard-wireframe.png)</td><td>Tecla Windows + Backspace</td></tr>
-<tr><td>Cortana</td><td>![speech](images/speech-wireframe.png)</td><td>Diga, "Ei Cortana, voltar".</td></tr>
+<tr><td>Teclado</td><td>![teclado](images/keyboard-wireframe.png)</td><td>Tecla Windows + Backspace</td></tr>
+<tr><td>Cortana</td><td>![controle por voz](images/speech-wireframe.png)</td><td>Diga, "Ei Cortana, voltar".</td></tr>
 </table>
  
 
 Quando seu aplicativo é executado em um telefone, tablet, ou em um PC ou notebook que tenha o Voltar do sistema habilitado, o sistema notifica o aplicativo quando o botão Voltar é pressionado. O usuário espera que o botão Voltar navegue para o local anterior no histórico de navegação do aplicativo. Cabe a você decidir quais ações de navegação serão adicionadas ao histórico de navegação e como responder ao pressionar botão Voltar.
 
 
-## <span id="Enable_system_back_navigation_support"></span><span id="enable_system_back_navigation_support"></span><span id="ENABLE_SYSTEM_BACK_NAVIGATION_SUPPORT"></span>Como habilitar o suporte a navegação regressiva do sistema
+## Como habilitar o suporte a navegação regressiva do sistema
 
 
 Os aplicativos devem habilitar a navegação regressiva para todos os botões Voltar do sistema de todos os hardwares e softwares. Faça isso registrando um ouvinte para o evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) e definindo um manipulador correspondente.
 
 Aqui, nós registramos um ouvinte global para evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) no arquivo de code-behind App.xaml. É possível se registrar para esse evento em cada página se você quiser excluir páginas específicas da navegação regressiva ou quiser executar código no nível da página antes de exibi-la.
 
-```CSharp
+> [!div class="tabbedCodeSnippets"]
+```csharp
+Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += 
+    App_BackRequested;
+```
+```cpp
 Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
     BackRequested += ref new Windows::Foundation::EventHandler<
     Windows::UI::Core::BackRequestedEventArgs^>(
         this, &amp;App::App_BackRequested);
 ```
 
-```CSharp
-Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += 
-    App_BackRequested;
-```
-
 Este é o manipulador de eventos [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) correspondente que chama [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568) no quadro raiz do aplicativo.
 
 Esse manipulador é invocado em um evento Voltar global. Se a pilha Voltar dentro do aplicativo estiver vazia, o sistema pode navegar para o aplicativo anterior na pilha de aplicativos ou para a tela inicial. Não há pilha Voltar de aplicativos no modo Área de Trabalho e o usuário fica no aplicativo mesmo quando a pilha Voltar no aplicativo é descarregada.
 
-```CSharp
-void App::App_BackRequested(
-    Platform::Object^ sender, 
-    Windows::UI::Core::BackRequestedEventArgs^ e)
-{
-    Frame^ rootFrame = dynamic_cast<Frame^>(Window::Current->Content);
-    if (rootFrame == nullptr)
-        return;
-
-    // Navigate back if possible, and if the event has not
-    // already been handled.
-    if (rootFrame->CanGoBack &amp;&amp; e->Handled == false)
-    {
-        e->Handled = true;
-        rootFrame->GoBack();
-    }
-}
+> [!div class="tabbedCodeSnippets"]
+```csharp
+>private void App_BackRequested(object sender, 
+>    Windows.UI.Core.BackRequestedEventArgs e)
+>{
+>    Frame rootFrame = Window.Current.Content as Frame;
+>    if (rootFrame == null)
+>        return;
+>
+>    // Navigate back if possible, and if the event has not 
+>    // already been handled .
+>    if (rootFrame.CanGoBack &amp;&amp; e.Handled == false)
+>    {
+>        e.Handled = true;
+>        rootFrame.GoBack();
+>    }
+>}
+```
+```cpp
+>void App::App_BackRequested(
+>    Platform::Object^ sender, 
+>    Windows::UI::Core::BackRequestedEventArgs^ e)
+>{
+>    Frame^ rootFrame = dynamic_cast<Frame^>(Window::Current->Content);
+>    if (rootFrame == nullptr)
+>        return;
+>
+>    // Navigate back if possible, and if the event has not
+>    // already been handled.
+>    if (rootFrame->CanGoBack && e->Handled == false)
+>    {
+>        e->Handled = true;
+>        rootFrame->GoBack();
+>    }
+>}
 ```
 
-```CSharp
-private void App_BackRequested(object sender, 
-    Windows.UI.Core.BackRequestedEventArgs e)
-{
-    Frame rootFrame = Window.Current.Content as Frame;
-    if (rootFrame == null)
-        return;
-
-    // Navigate back if possible, and if the event has not 
-    // already been handled .
-    if (rootFrame.CanGoBack &amp;&amp; e.Handled == false)
-    {
-        e.Handled = true;
-        rootFrame.GoBack();
-    }
-}
-```
-## <span id="Enable_the_title_bar_back_button"></span><span id="enable_the_title_bar_back_button"></span><span id="ENABLE_THE_TITLE_BAR_BACK_BUTTON"></span>Como habilitar o botão Voltar da barra de título
+## Como habilitar o botão Voltar da barra de título
 
 
 Os dispositivos que têm suporte ao modo de Área de Trabalho (geralmente PCs e notebooks, mas também alguns tablets) e têm a configuração habilitada (**Configurações &gt; Sistema &gt; Modo tablet**) não oferecem uma barra de navegação global com o botão Voltar do sistema.
@@ -165,8 +167,7 @@ No modo de área de trabalho, cada aplicativo é executado em uma janela com uma
 
 O botão Voltar da barra de título está disponível somente em aplicativos que sejam executados em dispositivos no modo Área de Trabalho, e oferece suporte apenas a histórico de navegação no aplicativo. Ele não oferece suporte a histórico de navegação de aplicativo para aplicativo.
 
-
-            **Importante**  O botão Voltar da barra de título não é exibido por padrão. Você deve aceitar.
+**Importante**  O botão Voltar da barra de título não é exibido por padrão. Você deve aceitar.
 
  
 
@@ -181,63 +182,64 @@ Substitua o evento [**OnNavigatedTo**](https://msdn.microsoft.com/library/window
 
 Para esse exemplo, listamos cada página na pilha Voltar e habilitamos o botão Voltar se a propriedade [**CanGoBack**](https://msdn.microsoft.com/library/windows/apps/br242685) do quadro tiver o valor **true**.
 
-```ManagedCPlusPlus
-void StartPage::OnNavigatedTo(NavigationEventArgs^ e)
-{
-    auto rootFrame = dynamic_cast<Windows::UI::Xaml::Controls::Frame^>(Window::Current->Content);
+> [!div class="tabbedCodeSnippets"]
+>```csharp
+>protected override void OnNavigatedTo(NavigationEventArgs e)
+>{
+>    Frame rootFrame = Window.Current.Content as Frame;
+>
+>    string myPages = "";
+>    foreach (PageStackEntry page in rootFrame.BackStack)
+>    {
+>        myPages += page.SourcePageType.ToString() + "\n";
+>    }
+>    stackCount.Text = myPages;
+>
+>    if (rootFrame.CanGoBack)
+>    {
+>        // Show UI in title bar if opted-in and in-app backstack is not empty.
+>        SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = 
+>            AppViewBackButtonVisibility.Visible;
+>    }
+>    else
+>    {
+>        // Remove the UI from the title bar if in-app back stack is empty.
+>        SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = 
+>            AppViewBackButtonVisibility.Collapsed;
+>    }
+>}
+>```
+>```cpp
+>void StartPage::OnNavigatedTo(NavigationEventArgs^ e)
+>{
+>    auto rootFrame = dynamic_cast<Windows::UI::Xaml::Controls::Frame^>(Window::Current->Content);
+>
+>    Platform::String^ myPages = "";
+>
+>    if (rootFrame == nullptr)
+>        return;
+>
+>    for each (PageStackEntry^ page in rootFrame->BackStack)
+>    {
+>        myPages += page->SourcePageType.ToString() + "\n";
+>    }
+>    stackCount->Text = myPages;
+>
+>    if (rootFrame->CanGoBack)
+>    {
+>        // If we have pages in our in-app backstack and have opted in to showing back, do so
+>        Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->AppViewBackButtonVisibility =
+>            Windows::UI::Core::AppViewBackButtonVisibility::Visible;
+>    }
+>    else
+>    {
+>        // Remove the UI from the title bar if there are no pages in our in-app back stack
+>        Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->AppViewBackButtonVisibility =
+>            Windows::UI::Core::AppViewBackButtonVisibility::Collapsed;
+>    }
+>}
+>```
 
-    Platform::String^ myPages = "";
-
-    if (rootFrame == nullptr)
-        return;
-
-    for each (PageStackEntry^ page in rootFrame->BackStack)
-    {
-        myPages += page->SourcePageType.ToString() + "\n";
-    }
-    stackCount->Text = myPages;
-
-    if (rootFrame->CanGoBack)
-    {
-        // If we have pages in our in-app backstack and have opted in to showing back, do so
-        Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->AppViewBackButtonVisibility =
-            Windows::UI::Core::AppViewBackButtonVisibility::Visible;
-    }
-    else
-    {
-        // Remove the UI from the title bar if there are no pages in our in-app back stack
-        Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->AppViewBackButtonVisibility =
-            Windows::UI::Core::AppViewBackButtonVisibility::Collapsed;
-    }
-}
-```
-
-```CSharp
-protected override void OnNavigatedTo(NavigationEventArgs e)
-{
-    Frame rootFrame = Window.Current.Content as Frame;
-
-    string myPages = "";
-    foreach (PageStackEntry page in rootFrame.BackStack)
-    {
-        myPages += page.SourcePageType.ToString() + "\n";
-    }
-    stackCount.Text = myPages;
-
-    if (rootFrame.CanGoBack)
-    {
-        // Show UI in title bar if opted-in and in-app backstack is not empty.
-        SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = 
-            AppViewBackButtonVisibility.Visible;
-    }
-    else
-    {
-        // Remove the UI from the title bar if in-app back stack is empty.
-        SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = 
-            AppViewBackButtonVisibility.Collapsed;
-    }
-}
-```
 
 ### Diretrizes para o comportamento da navegação regressiva personalizada
 
@@ -295,14 +297,17 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 </table>
 
 
-### <span id="Resuming"></span><span id="resuming"></span><span id="RESUMING"></span>Retomando
+### Retomando
 
 Quando o usuário alternar para outro aplicativo e retornar ao seu aplicativo, recomendamos retornar para a última página no histórico de navegação.
 
 
+## Obter os exemplos
+*   [Exemplo do botão Voltar](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackButton)<br/>
+    Mostra como configurar um manipulador de eventos para o evento do botão Voltar e como habilitar o botão Voltar da barra de títulos quando o aplicativo está em modo de janela de área de trabalho na janela.
 
-
-
+## Artigos relacionados
+* [Noções básicas de navegação](navigation-basics.md)
 
  
 
@@ -312,6 +317,6 @@ Quando o usuário alternar para outro aplicativo e retornar ao seu aplicativo, r
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

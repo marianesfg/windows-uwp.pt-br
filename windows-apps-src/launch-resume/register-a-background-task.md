@@ -3,16 +3,15 @@ author: TylerMSFT
 title: Registrar uma tarefa em segundo plano
 description: "Aprenda a criar uma função que pode ser reutilizada para registrar com segurança a maioria das tarefas em segundo plano."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
+translationtype: Human Translation
+ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
+ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
 
 ---
 
 # Registrar uma tarefa em segundo plano
 
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs importantes**
 
@@ -22,7 +21,7 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 
 Aprenda a criar uma função que pode ser reutilizada para registrar com segurança a maioria das tarefas em segundo plano.
 
-Este tópico considera que você já tem uma tarefa em segundo plano que precisa ser registrada. (Consulte [Criar e registrar uma tarefa em segundo plano](create-and-register-a-background-task.md) para obter informações sobre como escrever uma tarefa em segundo plano).
+Este tópico se aplica a tarefas em segundo plano de processo único e em segundo plano executadas em um processo à parte. Este tópico considera que você já tem uma tarefa em segundo plano que precisa ser registrada. (Consulte [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md) ou [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md) para obter informações sobre como escrever uma tarefa em segundo plano).
 
 Este tópico discorre sobre a função utilitária que registra tarefas em segundo plano. Esta função utilitária verifica registros existentes antes de registrar a tarefa várias vezes para evitar problemas com registros múltiplos e pode aplicar uma condição de sistema à tarefa em segundo plano. O tópico inclui um exemplo completo e prático desta função utilitária.
 
@@ -34,8 +33,11 @@ Para garantir que seu aplicativo Universal do Windows continue a ser executado c
 
 ## Definir a assinatura do método e o tipo de retorno
 
-
 Esta função obtém o ponto de entrada da tarefa, seu nome, um gatilho de tarefa em segundo plano pré-construído e (opcionalmente) uma [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) para a tarefa em segundo plano. Este método retorna um objeto [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).
+
+> [!Important]
+> `taskEntryPoint` - para tarefas em segundo plano executadas em um processo à parte; ele deve ser construído como o nome do namespace, '.', e o nome da classe que contém a classe em segundo plano. A cadeia de caracteres diferencia maiúsculas de minúsculas.  Por exemplo, se você tivesse um namespace "MyBackgroundTasks" e uma classe "BackgroundTask1" contendo o código da classe em segundo plano, a cadeia de caracteres para `taskEntryPoint` seria "MyBackgroundTasks.BackgruondTask1".
+> Se a tarefa em segundo plano for executada no mesmo processo do aplicativo (ou seja, uma tarefa em segundo plano de processo único) `taskEntryPoint` não deverá ser definido.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -63,17 +65,15 @@ Esta função obtém o ponto de entrada da tarefa, seu nome, um gatilho de taref
 > }
 > ```
 
-## [!div class="tabbedCodeSnippets"]
+## Verificar registros existentes
 
+Verifique se a tarefa já está registrada. É importante verificar isso porque, se a tarefa for registrada várias vezes, ela será executada mais de uma vez sempre que for disparada; isso pode usar excessivamente a CPU e causar comportamentos inesperados.
 
-Verificar registros existentes Verifique se a tarefa já está registrada.
+Você pode verificar se existem registros consultando a propriedade [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) e iterando no resultado. Verifique o nome de cada instância – se ele corresponder ao nome da tarefa que você está registrando, interrompa o loop e defina uma variável de sinalização, para que seu código possa escolher outro caminho na próxima etapa.
 
-É importante verificar isso porque, se a tarefa for registrada várias vezes, ela será executada mais de uma vez sempre que for disparada; isso pode usar excessivamente a CPU e causar comportamentos inesperados. Você pode verificar se existem registros consultando a propriedade [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) e iterando no resultado.
+> **Observação**  Use nomes de tarefas em segundo plano exclusivos para seu aplicativo. Verifique se cada tarefa em segundo plano possui um nome exclusivo.
 
-> Verifique o nome de cada instância – se ele corresponder ao nome da tarefa que você está registrando, interrompa o loop e defina uma variável de sinalização, para que seu código possa escolher outro caminho na próxima etapa. 
-            **Observação**  Use nomes de tarefas em segundo plano exclusivos para seu aplicativo.
-
-Verifique se cada tarefa em segundo plano possui um nome exclusivo.
+O código abaixo registra uma tarefa em segundo plano usando o [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) que criamos na última etapa:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -137,17 +137,17 @@ Verifique se cada tarefa em segundo plano possui um nome exclusivo.
 > }
 > ```
 
-## O código abaixo registra uma tarefa em segundo plano usando o [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) que criamos na última etapa:
+## Registrar a tarefa em segundo plano (ou retornar ao registro existente)
 
 
-[!div class="tabbedCodeSnippets"] Registrar a tarefa em segundo plano (ou retornar ao registro existente)
+Verifique se a tarefa foi encontrada na lista de registros de tarefas em segundo plano existentes. Caso afirmativo, retorne aquela instância da tarefa.
 
-Verifique se a tarefa foi encontrada na lista de registros de tarefas em segundo plano existentes. Caso afirmativo, retorne aquela instância da tarefa. Em seguida, registre a tarefa usando um novo objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768).
+Em seguida, registre a tarefa usando um novo objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Este código deve verificar se o parâmetro da condição é nulo e, se não for, adicionar a condição ao objeto de registro. Retorne a [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) retornada pela função [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772).
 
-> Este código deve verificar se o parâmetro da condição é nulo e, se não for, adicionar a condição ao objeto de registro. Retorne a [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) retornada pela função [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772). 
-            **Observações** Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro.
+> **Observações**  Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo trata tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
+> **Observação** Se você registrar uma tarefa em segundo plano executada no mesmo processo do aplicativo, envie `String.Empty` ou `null` para o parâmetro `taskEntryPoint`.
 
-Um erro será retornado se algum parâmetro de registro for inválido.
+O exemplo a seguir retorna a tarefa existente ou adiciona código que registra a tarefa em segundo plano (incluindo a condição de sistema opcional, se presente):
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -181,12 +181,16 @@ Um erro será retornado se algum parâmetro de registro for inválido.
 >     var builder = new BackgroundTaskBuilder();
 >
 >     builder.Name = name;
->     builder.TaskEntryPoint = taskEntryPoint;
+>
+>     // single-process background tasks don't set TaskEntryPoint
+>     if ( taskEntryPoint != null && taskEntryPoint != String.Empty)
+>     {
+>         builder.TaskEntryPoint = taskEntryPoint;
+>     }
 >     builder.SetTrigger(trigger);
 >
 >     if (condition != null)
 >     {
->
 >         builder.AddCondition(condition);
 >     }
 >
@@ -247,10 +251,10 @@ Um erro será retornado se algum parâmetro de registro for inválido.
 > }
 > ```
 
-## Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
+## Complete a função utilitária de registro de tarefa em segundo plano
 
 
-O exemplo a seguir retorna a tarefa existente ou adiciona código que registra a tarefa em segundo plano (incluindo a condição de sistema opcional, se presente): [!div class="tabbedCodeSnippets"]
+Este exemplo mostra a função completa de registro de tarefa em segundo plano. Esta função pode ser usada para registrar a maioria das tarefas em segundo plano, com exceção das tarefas em segundo plano de rede.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -367,30 +371,28 @@ O exemplo a seguir retorna a tarefa existente ou adiciona código que registra a
 > }
 > ```
 
-> Complete a função utilitária de registro de tarefa em segundo plano Este exemplo mostra a função completa de registro de tarefa em segundo plano.
+> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
-## Esta função pode ser usada para registrar a maioria das tarefas em segundo plano, com exceção das tarefas em segundo plano de rede.
-
+## Tópicos relacionados
 
 ****
 
-* [[!div class="tabbedCodeSnippets"]](create-and-register-a-background-task.md)
-* [
-            **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows).](declare-background-tasks-in-the-application-manifest.md)
-* [Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
-* [Tópicos relacionados](monitor-background-task-progress-and-completion.md)
-* [Criar e registrar uma tarefa em segundo plano](respond-to-system-events-with-background-tasks.md)
-* [Declarar tarefas em segundo plano no manifesto do aplicativo](set-conditions-for-running-a-background-task.md)
-* [Manipular uma tarefa em segundo plano cancelada](update-a-live-tile-from-a-background-task.md)
-* [Monitorar o progresso e a conclusão de tarefas em segundo plano](use-a-maintenance-trigger.md)
-* [Responder a eventos do sistema com tarefas em segundo plano](run-a-background-task-on-a-timer-.md)
-* [Definir condições para executar uma tarefa em segundo plano](guidelines-for-background-tasks.md)
+* [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md)
+* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
+* [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
+* [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
+* [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
+* [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
+* [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
+* [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 
 ****
 
-* [Atualizar um bloco dinâmico de uma tarefa em segundo plano](debug-a-background-task.md)
-* [Usar um gatilho de manutenção](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
+* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
@@ -398,6 +400,6 @@ O exemplo a seguir retorna a tarefa existente ou adiciona código que registra a
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

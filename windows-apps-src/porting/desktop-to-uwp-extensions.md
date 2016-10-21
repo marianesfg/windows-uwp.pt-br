@@ -4,8 +4,8 @@ Description: "Além das APIs normais disponíveis para todos os aplicativos UWP,
 Search.Product: eADQiWindows 10XVcnh
 title: "Extensões de aplicativos da área de trabalho convertidos"
 translationtype: Human Translation
-ms.sourcegitcommit: aa64c39c452beb2356186789a0d8bc44f79d82d2
-ms.openlocfilehash: 0ad7e8d0fe63ffbfa8668be8955859258887d6f0
+ms.sourcegitcommit: 09ddc8cad403a568a43e08f32abeaf0bbd40d59a
+ms.openlocfilehash: 2aa55797ed3a6588b3a27158282a02827fbd2109
 
 ---
 
@@ -26,18 +26,12 @@ Para declarar uma tarefa de inicialização, adicione o seguinte ao manifesto do
     <desktop:StartupTask TaskId="MyStartupTask" Enabled="true" DisplayName="My App Service" />
 </desktop:Extension>
 ```
-- 
-            *Categoria de extensão* sempre deve ter o valor "windows.startupTask".
-- 
-            *Executável da extensão* é o caminho relativo para iniciar o .exe.
-- 
-            *EntryPoint da extensão* sempre deve ter o valor "Windows.FullTrustApplication".
-- 
-            *StartupTask TaskId* é um identificador exclusivo para a sua tarefa. Usando esse identificador, seu aplicativo pode chamar as APIs na classe **Windows.ApplicationModel.StartupTask** para habilitar ou desabilitar uma tarefa de inicialização de forma programática.
-- 
-            *StartupTask habilitado* indica se a primeira inicialização da tarefa está ativada ou desativada. As tarefas habilitadas serão executadas na próxima vez em que o usuário fizer logon (a menos que o usuário as tenha desabilitado). 
-- 
-            *StartupTask DisplayName* é o nome da tarefa que aparece no Gerenciador de Tarefas. Essa sequência é localizável usando ```ms-resource```. 
+- *Categoria de extensão* sempre deve ter o valor "windows.startupTask".
+- *Executável da extensão* é o caminho relativo para iniciar o .exe.
+- *EntryPoint da extensão* sempre deve ter o valor "Windows.FullTrustApplication".
+- *StartupTask TaskId* é um identificador exclusivo para a sua tarefa. Usando esse identificador, seu aplicativo pode chamar as APIs na classe **Windows.ApplicationModel.StartupTask** para habilitar ou desabilitar uma tarefa de inicialização de forma programática.
+- *StartupTask habilitado* indica se a primeira inicialização da tarefa está ativada ou desativada. As tarefas habilitadas serão executadas na próxima vez em que o usuário fizer logon (a menos que o usuário as tenha desabilitado). 
+- *StartupTask DisplayName* é o nome da tarefa que aparece no Gerenciador de Tarefas. Essa sequência é localizável usando ```ms-resource```. 
 
 Os aplicativos podem declarar várias tarefas de inicialização; cada uma será acionada e executada de forma independente. Todas as tarefas de inicialização serão exibidas no Gerenciador de Tarefas na guia **Inicialização** com o nome especificado no manifesto do aplicativo e no ícone do aplicativo. O Gerenciador de Tarefas analisará automaticamente o impacto de inicialização de suas tarefas. Os usuários podem optar por desativar manualmente as tarefas de inicialização do seu aplicativo usando o Gerenciador de Tarefas. Se um usuário desabilita uma tarefa, você não pode reativá-la programaticamente.
 
@@ -50,19 +44,15 @@ Para especificar um alias de execução do aplicativo, adicione o seguinte ao ma
 ```XML 
 <uap3:Extension Category="windows.appExecutionAlias" Executable="exes\launcher.exe" EntryPoint="Windows.FullTrustApplication">
     <uap3:AppExecutionAlias>
-        <desktop:ExecutionAlias Alias="Foo.exe">
+        <desktop:ExecutionAlias Alias="Foo.exe" />
     </uap3:AppExecutionAlias>
 </uap3:Extension>
 ```
 
-- 
-            *Categoria de extensão* sempre deve ter o valor "windows.appExecutionAlias".
-- 
-            *Executável da extensão* é o caminho relativo para o executável a ser iniciado quando o alias é invocado.
-- 
-            *EntryPoint da extensão* sempre deve ter o valor "Windows.FullTrustApplication".
-- 
-            *ExecutionAlias Alias* é o nome curto do seu aplicativo. Sempre deve terminar com a extensão ".exe". 
+- *Categoria de extensão* sempre deve ter o valor "windows.appExecutionAlias".
+- *Executável da extensão* é o caminho relativo para o executável a ser iniciado quando o alias é invocado.
+- *EntryPoint da extensão* sempre deve ter o valor "Windows.FullTrustApplication".
+- *ExecutionAlias Alias* é o nome curto do seu aplicativo. Sempre deve terminar com a extensão ".exe". 
 
 Você só pode especificar um único alias de execução de aplicativo para cada aplicativo no pacote. Se vários aplicativos se registrarem para o mesmo alias, o sistema irá chamar o último que foi registrado. Portanto, escolha um alias exclusivo que outros aplicativos provavelmente não substituirão.
 
@@ -78,12 +68,9 @@ Para declarar uma associação de protocolo, adicione o seguinte ao manifesto do
 </uap3:Extension>
 ```
 
-- 
-            *Categoria de extensão* sempre deve ter o valor "windows.protocol". 
-- 
-            *Nome do protocolo* é o nome do protocolo. 
-- 
-            *Parâmetros de protocolo* é a lista de parâmetros e valores a serem transmitidos para o seu aplicativo como argumentos do evento quando ele for ativado. Observe que, se uma variável puder conter um caminho de arquivo, você deverá encapsular o valor entre aspas para que ele não seja interrompido se for transmitido um caminho que inclui espaços.
+- *Categoria de extensão* sempre deve ter o valor "windows.protocol". 
+- *Nome do protocolo* é o nome do protocolo. 
+- *Parâmetros de protocolo* é a lista de parâmetros e valores a serem transmitidos para o seu aplicativo como argumentos do evento quando ele for ativado. Observe que, se uma variável puder conter um caminho de arquivo, você deverá encapsular o valor entre aspas para que ele não seja interrompido se for transmitido um caminho que inclui espaços.
 
 ## Arquivos e integração com o Explorador de Arquivos
 
@@ -99,10 +86,8 @@ Para começar, primeiro adicione o seguinte ao manifesto do aplicativo:
 </uap3:Extension>
 ```
 
-- 
-            *Categoria de extensão* sempre deve ter o valor "windows.fileTypeAssociation". 
-- 
-            *Nome de FileTypeAssociation* é uma ID exclusiva. Essa Id é usada internamente para gerar um ProgID com hash associado a sua associação de tipo de arquivo. Você pode usar essa Id para gerenciar as alterações em versões futuras do seu aplicativo. Por exemplo, se você quiser alterar o ícone de uma extensão de arquivo, poderá movê-lo para uma nova FileTypeAssociation com um nome diferente.  
+- *Categoria de extensão* sempre deve ter o valor "windows.fileTypeAssociation". 
+- *Nome de FileTypeAssociation* é uma ID exclusiva. Essa Id é usada internamente para gerar um ProgID com hash associado a sua associação de tipo de arquivo. Você pode usar essa Id para gerenciar as alterações em versões futuras do seu aplicativo. Por exemplo, se você quiser alterar o ícone de uma extensão de arquivo, poderá movê-lo para uma nova FileTypeAssociation com um nome diferente.  
 
 Em seguida, adicione outros elementos filhos a essa entrada com base nos recursos específicos de que você precisa. As opções disponíveis são descritas a seguir.
 
@@ -119,8 +104,7 @@ Exemplo:
 </uap:SupportedFileTypes>
 ```
 
-- 
-            *FileType* é a extensão compatível com seu aplicativo.
+- *FileType* é a extensão compatível com seu aplicativo.
 
 ### Verbos de menu de contexto 
 
@@ -137,26 +121,19 @@ Exemplo:
 </uap2:SupportedVerbs>
 ```
 
-- 
-            *Id do Verbo* é uma Id exclusiva do verbo. Se seu aplicativo for um aplicativo UWP, isso será transmitido para seu aplicativo como parte de seus argumentos do evento de ativação para que ele possa manipular a seleção do usuário de forma adequada. Se seu aplicativo for um aplicativo convertido confiável, receberá parâmetros (veja o próximo item). 
-- 
-            *Parâmetros de Verbo* é a lista de parâmetros de argumento e valores associados ao verbo. Se seu aplicativo for um aplicativo convertido confiável, eles serão transmitidos como argumentos de evento quando ele for ativado para que você possa personalizar seu comportamento para verbos de ativação diferentes. Se uma variável puder conter um caminho de arquivo, você deverá encapsular o valor entre aspas para que ele não seja interrompido se for transmitido um caminho que inclui espaços. Observe que, se seu aplicativo for um aplicativo UWP, você não poderá transmitir parâmetros; ele receberá a Id (veja o item anterior). 
-- 
-            *Verbo Estendido* especifica que o verbo deve aparecer somente se o usuário mantiver a tecla **Shift** pressionada antes de clicar com o botão direito no arquivo para mostrar o menu de contexto. Esse atributo é opcional e o padrão é *False* (por exemplo, mostrar sempre o verbo) se não listado. Você especifica esse comportamento individualmente para cada verbo (com exceção de "Abrir", que é sempre *False*). 
-- 
-            *Verbo* é o nome para exibição no menu de contexto do Explorador de Arquivos. Essa sequência é localizável usando ```ms-resource```.
+- *Id do Verbo* é uma Id exclusiva do verbo. Se seu aplicativo for um aplicativo UWP, isso será transmitido para seu aplicativo como parte de seus argumentos do evento de ativação para que ele possa manipular a seleção do usuário de forma adequada. Se seu aplicativo for um aplicativo convertido confiável, receberá parâmetros (veja o próximo item). 
+- *Parâmetros de Verbo* é a lista de parâmetros de argumento e valores associados ao verbo. Se seu aplicativo for um aplicativo convertido confiável, eles serão transmitidos como argumentos de evento quando ele for ativado para que você possa personalizar seu comportamento para verbos de ativação diferentes. Se uma variável puder conter um caminho de arquivo, você deverá encapsular o valor entre aspas para que ele não seja interrompido se for transmitido um caminho que inclui espaços. Observe que, se seu aplicativo for um aplicativo UWP, você não poderá transmitir parâmetros; ele receberá a Id (veja o item anterior). 
+- *Verbo Estendido* especifica que o verbo deve aparecer somente se o usuário mantiver a tecla **Shift** pressionada antes de clicar com o botão direito no arquivo para mostrar o menu de contexto. Esse atributo é opcional e o padrão é *False* (por exemplo, mostrar sempre o verbo) se não listado. Você especifica esse comportamento individualmente para cada verbo (com exceção de "Abrir", que é sempre *False*). 
+- *Verbo* é o nome para exibição no menu de contexto do Explorador de Arquivos. Essa sequência é localizável usando ```ms-resource```.
 
 ### Modelo de seleção múltipla
 
 Várias seleções permitem que você especifique como seu aplicativo lida com um usuário que abre vários arquivos simultaneamente (por exemplo, selecionando 10 arquivos no Explorador de Arquivos e tocando em "Abrir").
 
 Aplicativos da área de trabalho convertidos têm as mesmas três opções dos aplicativos de área de trabalho normais. 
-- 
-            *Player*: seu aplicativo é ativado uma vez com todos os arquivos selecionados transmitidos como parâmetros de argumento.
-- 
-            *Único*: o aplicativo é ativado uma vez para o primeiro arquivo selecionado. Outros arquivos são ignorados. 
-- 
-            *Documento*: uma nova instância separada do seu aplicativo é ativada para cada arquivo selecionado.
+- *Player*: seu aplicativo é ativado uma vez com todos os arquivos selecionados transmitidos como parâmetros de argumento.
+- *Único*: o aplicativo é ativado uma vez para o primeiro arquivo selecionado. Outros arquivos são ignorados. 
+- *Documento*: uma nova instância separada do seu aplicativo é ativada para cada arquivo selecionado.
 
 Você pode definir preferências diferentes para diferentes tipos de arquivo e ações. Por exemplo, você pode abrir *Documentos* no modo *Documento* e *Imagens* no modo *Player*.
 
@@ -202,6 +179,6 @@ Veja a seguir um exemplo completo que integra muitos elementos relacionados a ar
 - [Manifesto do pacote do aplicativo](https://msdn.microsoft.com/library/windows/apps/br211474.aspx)
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,21 +5,33 @@ title: Diretrizes para os controles de data e hora
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
 label: Calendar, date, and time controls
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: e9d8d73c35e2e600e89330fbd54aea57a815aebf
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 417f1294b1d8e5034fd7c8b346461fbe334f4b03
 
 ---
-
 # Controles de calendário, data e hora
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Os controles de data e hora oferecem formas padrão e localizadas para permitir que um usuário exiba e defina valores de data e hora em seu aplicativo. Este artigo fornece diretrizes de design e ajuda você a escolher o controle correto.
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx"><strong>Classe CalendarView</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx"><strong>Classe CalendarDatePicker</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx"><strong>Classe DatePicker</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx"><strong>Classe TimePicker</strong></a></li>
+</ul>
 
--   [**Classe CalendarView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx)
--   [**Classe CalendarDatePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx)
--   [**Classe DatePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx)
--   [**Classe TimePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)
+</div>
+</div>
+
+
+
+
+
 
 ## Qual controle de data ou hora você deve usar?
 
@@ -36,8 +48,7 @@ Seletor de hora         |![Exemplo de seletor de hora](images/time-picker-closed
 
 ### Visão de calendário
 
-
-            **CalendarView** permite que um usuário visualize e interaja com um calendário em que ele pode navegar por mês, ano ou década. Um usuário pode selecionar uma única data ou um intervalo de datas. Ele não tem uma superfície de seletor e o calendário está sempre visível.
+**CalendarView** permite que um usuário visualize e interaja com um calendário em que ele pode navegar por mês, ano ou década. Um usuário pode selecionar uma única data ou um intervalo de datas. Ele não tem uma superfície de seletor e o calendário está sempre visível.
 
 A visão de calendário é composta de três visões separadas: a visão de mês, a visão de ano e a visão de década. Por padrão, ele é iniciado com a visão de mês aberta, mas você pode especificar qualquer visão como a visão de inicialização.
 
@@ -48,8 +59,7 @@ A visão de calendário é composta de três visões separadas: a visão de mês
 
 ### Seletor de data do calendário
 
-
-            **CalendarDatePicker** é um controle suspenso que é otimizado para selecionar uma única data em uma visão de calendário, onde informações contextuais como o dia da semana ou o preenchimento do calendário são importantes. Você pode modificar o calendário para fornecer contexto adicional ou limitar as datas disponíveis.
+**CalendarDatePicker** é um controle suspenso que é otimizado para selecionar uma única data em um modo de exibição de calendário, onde informações contextuais como o dia da semana ou o preenchimento do calendário são importantes. Você pode modificar o calendário para fornecer contexto adicional ou limitar as datas disponíveis.
 
 O ponto de entrada exibirá o texto de espaço reservado se uma data não tiver sido definida; caso contrário, ele exibirá a data escolhida. Quando o usuário seleciona o ponto de entrada, uma visão de calendário se expande para que o usuário faça uma seleção de data. A visão de calendário se sobrepõe à outra interface do usuário; ela não remove a outra interface do usuário.
 
@@ -103,9 +113,7 @@ Um conceito relacionado é a classe Calendar, que influencia como as datas são 
 
 O .NET também dá suporte a um tipo chamado [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx), que é implicitamente conversível para um [**DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx). Portanto, você pode ver um tipo de "DateTime"usado em código .NET que é usado para definir valores que são realmente DateTimeOffset. Para saber mais sobre a diferença entre DateTime e DateTimeOffset, consulte Comentários na classe [**DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx).
 
-> 
-            **Observação**
-            &nbsp;&nbsp;Propriedades que usam objetos de data não podem ser definidas como uma cadeia de caracteres de atributo XAML, pois o analisador de XAML do Windows Runtime não tem uma lógica de conversão para converter cadeias de caracteres em datas como objetos DateTime/DateTimeOffset. Você normalmente define esses valores no código. Outra técnica possível é definir uma data que está disponível como um objeto de dados ou no contexto de dados e, em seguida, definir a propriedade como um atributo XAML que faz referência a uma expressão [\{Binding\} expressão de marcação](../xaml-platform/binding-markup-extension.md) que pode acessar a data como dados.
+> **Observação**&nbsp;&nbsp;Propriedades que usam objetos de data não podem ser definidas como uma cadeia de caracteres de atributo XAML, pois o analisador de XAML do Windows Runtime não tem uma lógica de conversão para converter cadeias de caracteres em datas como objetos DateTime/DateTimeOffset. Você normalmente define esses valores no código. Outra técnica possível é definir uma data que está disponível como um objeto de dados ou no contexto de dados e, em seguida, definir a propriedade como um atributo XAML que faz referência a uma expressão [\{Binding\} expressão de marcação](../xaml-platform/binding-markup-extension.md) que pode acessar a data como dados.
 
 
 ## Tópicos relacionados
@@ -118,6 +126,6 @@ O .NET também dá suporte a um tipo chamado [**DateTime**](https://msdn.microso
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

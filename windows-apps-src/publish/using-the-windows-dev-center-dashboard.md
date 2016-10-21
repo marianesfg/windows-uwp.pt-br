@@ -3,8 +3,9 @@ author: jnHs
 Description: "O painel do Centro de Desenvolvimento do Windows permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um único local."
 title: Usando o painel do Centro de Desenvolvimento do Windows
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7478a832cea6114c7a6e7f6be5cc3e908981a64c
+translationtype: Human Translation
+ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
+ms.openlocfilehash: 2ccec6e85666ef328f4aa0baa8ba6a705986a4c4
 
 ---
 
@@ -13,12 +14,11 @@ ms.openlocfilehash: 7478a832cea6114c7a6e7f6be5cc3e908981a64c
 
 O painel do Centro de Desenvolvimento do Windows permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um único local.
 
-> 
-            **Observação** Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acessar o painel do Centro de Desenvolvimento do Windows.
+> **Observação** Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acessar o painel do Centro de Desenvolvimento do Windows.
 
-Ao [criar um envio para o seu aplicativo](app-submissions.md) (pela primeira vez ou como uma atualização), você pode [carregar pacotes do aplicativo](upload-app-packages.md) para qualquer sistema operacional com suporte e a Loja automaticamente oferecerá aos clientes o pacote que funcionará melhor para eles. Você pode usar as mesmas [descrições](create-app-descriptions.md) e [artes](app-screenshots-and-images.md) para todos os sistemas operacionais aos quais seu aplicativo dá suporte, ou pode [personalizar a descrição para plataformas específicas](create-platform-specific-descriptions.md).
+Ao [criar um envio para o seu aplicativo](app-submissions.md) (pela primeira vez ou como uma atualização), você pode [carregar pacotes do aplicativo](upload-app-packages.md) para qualquer sistema operacional com suporte e a Loja automaticamente oferecerá aos clientes o pacote que funcionará melhor para eles. Você pode usar as mesmas [listagens da Loja](create-app-store-listings.md) e [artes](app-screenshots-and-images.md) para todos os sistemas operacionais aos quais seu aplicativo dá suporte, ou pode [personalizar as listagens da Loja para versões do sistema operacional específicas](create-platform-specific-Store-listings.md).
 
-Os IAPs (produtos no aplicativo) são gerenciados independentemente do envio do seu aplicativo. Isso proporciona a você maior flexibilidade e a capacidade de fazer alterações de forma independente. Para saber mais, consulte [Envios de IAP](iap-submissions.md).
+Os complementos (produtos no aplicativo) são gerenciados independentemente do envio do seu aplicativo. Isso proporciona a você maior flexibilidade e a capacidade de fazer alterações de forma independente. Para obter mais informações, consulte [Envios de complemento](add-on-submissions.md).
 
 O painel do Centro de Desenvolvimento também oferece recursos para [serviços de gerenciamento e configuração de aplicativos](app-management-and-services.md), [revisão de dados analíticos](analytics.md), [relatório de pagamento](payout-summary.md), [promoção e compromisso do cliente](app-promotion-and-customer-engagement.md), [teste beta](beta-testing-and-targeted-distribution.md), [distribuição de aplicativos LOB a empresas](distribute-lob-apps-to-enterprises.md) e muito mais.
 
@@ -38,6 +38,6 @@ Os aplicativos que foram vinculados para compartilhar a identidade no Centro de 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

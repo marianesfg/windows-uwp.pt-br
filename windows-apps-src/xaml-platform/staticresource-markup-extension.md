@@ -3,8 +3,9 @@ author: jwmsft
 description: "Fornece um valor para qualquer atributo XAML analisando uma referência a um recurso já definido. Recursos são definidos em um ResourceDictionary, e o uso de StaticResource faz referência à chave desse recurso no ResourceDictionary."
 title: "Extensão de marcação StaticResource"
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 3f486a8ac56e37a7401b9a87a4d560cac6b68f6f
+ms.openlocfilehash: 48cdfd86705ff29e4ffc7e9f69de2f01e75f7f2a
 
 ---
 
@@ -28,27 +29,22 @@ Fornece um valor para qualquer atributo XAML analisando uma referência a um rec
 
 ## Comentários
 
+**StaticResource** é uma técnica para obtenção de valores referentes a um atributo XAML definidos em outro lugar em um dicionário de recursos XAML. Os valores podem ser colocados em um dicionário de recursos porque sua finalidade de uso é a de serem compartilhados por diversos valores de propriedades, ou porque um dicionário de recursos XAML é usado como uma técnica de empacotamento ou fatoramento XAML. Um exemplo de técnica de empacotamento XAML é o dicionário temático de um controle. Outro exemplo são os dicionários de recursos mesclados usados para fallback de recursos.
 
-            **StaticResource** é uma técnica para obtenção de valores referentes a um atributo XAML definidos em outro lugar em um dicionário de recursos XAML. Os valores podem ser colocados em um dicionário de recursos porque sua finalidade de uso é a de serem compartilhados por diversos valores de propriedades, ou porque um dicionário de recursos XAML é usado como uma técnica de empacotamento ou fatoramento XAML. Um exemplo de técnica de empacotamento XAML é o dicionário temático de um controle. Outro exemplo são os dicionários de recursos mesclados usados para fallback de recursos.
+**StaticResource** obtém um argumento, que especifica a chave para o recurso solicitado. Uma chave de recurso sempre é uma cadeia de caracteres no XAML de Tempo de Execução do Windows. Para obter mais informações sobre como a chave de recurso é especificada inicialmente, consulte [atributo x:Key](x-key-attribute.md).
 
-
-            **StaticResource** obtém um argumento, que especifica a chave para o recurso solicitado. Uma chave de recurso sempre é uma cadeia de caracteres no XAML de Tempo de Execução do Windows. Para saber mais sobre como a chave de recurso é especificada inicialmente, consulte [atributo x:Key](x-key-attribute.md).
-
-As regras pelas quais **StaticResource** é resolvido para um item em um dicionário de recursos não estão descritas neste tópico. Isso depende de a referência e o recurso existirem ou não em um modelo, de os dicionários de recursos mesclados serem usados ou não e assim por diante. Para saber mais sobre como definir recursos e como usar adequadamente um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), incluindo o exemplo de código, consulte [Referências aos recursos ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
+As regras pelas quais **StaticResource** é resolvido para um item em um dicionário de recursos não estão descritas neste tópico. Isso depende de a referência e o recurso existirem ou não em um modelo, de os dicionários de recursos mesclados serem usados ou não e assim por diante. Para obter mais informações sobre como definir recursos e como usar adequadamente um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), incluindo o exemplo de código, consulte [Referências aos recursos ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
 
 **Importante**  
 Um **StaticResource** não deve tentar fazer uma referência de encaminhamento a um recurso definido lexicalmente com mais detalhes no arquivo XAML. Não é possível fazer isso. Mesmo se a referência de encaminhamento não falhar, tentar fazê-la acarreta uma penalidade de desempenho. Para obter melhores resultados, ajuste a composição dos seus dicionários de recursos de maneira que seja possível evitar referências de encaminhamento.
 
 Tentar especificar um **StaticResource** para uma chave incapaz de resolver gera uma exceção de análise de XAML em tempo de execução. As ferramentas de design também podem apresentar avisos ou erros.
 
-Na implementação do processador XAML do Windows Runtime XAML, não há uma representação de classe de suporte para a funcionalidade **StaticResource**. 
-            **StaticResource** é exclusivamente para ser usado em marcação XAML. O equivalente mais próximo em código é usar a API de coleção de um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), chamando, por exemplo, [**Contains**](https://msdn.microsoft.com/library/windows/apps/jj635925) ou [**TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj603139).
+Na implementação do processador XAML do Windows Runtime XAML, não há uma representação de classe de suporte para a funcionalidade **StaticResource**. **StaticResource** é exclusivamente para ser usado em marcação XAML. O equivalente mais próximo em código é usar a API de coleção de um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), chamando, por exemplo, [**Contains**](https://msdn.microsoft.com/library/windows/apps/jj635925) ou [**TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj603139).
 
+A [extensão de marcação {ThemeResource}](themeresource-markup-extension.md) é uma extensão de marcação similar que faz referência a recursos nomeados em outro local. A diferença é que a extensão de marcação {ThemeResource} tem a capacidade de retornar recursos diferentes, dependendo do tema do sistema que estiver ativo. Para obter mais informações, consulte [Extensão de marcação {ThemeResource}](themeresource-markup-extension.md).
 
-            A [extensão de marcação {ThemeResource}](themeresource-markup-extension.md) é uma extensão de marcação similar que faz referência a recursos nomeados em outro local. A diferença é que a extensão de marcação {ThemeResource} tem a capacidade de retornar recursos diferentes, dependendo do tema do sistema que estiver ativo. Para obter mais informações, consulte [Extensão de marcação {ThemeResource}](themeresource-markup-extension.md).
-
-
-            **StaticResource** é uma extensão de marcação. As extensões de marcação geralmente são implementadas quando é necessário efetuar um escape de valores de atributo para que sejam diferentes de valores literais ou nomes de manipulador e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em XAML usam os caracteres "\{" e "\}" na sintaxe de atributo, sendo esta a convenção pela qual um processador XAML reconhece que uma extensão de marcação deve processar o atributo.
+**StaticResource** é uma extensão de marcação. As extensões de marcação geralmente são implementadas quando é necessário efetuar um escape de valores de atributo para que sejam diferentes de valores literais ou nomes de manipulador e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em XAML usam os caracteres "\{" e "\}" na sintaxe de atributo, sendo esta a convenção pela qual um processador XAML reconhece que uma extensão de marcação deve processar o atributo.
 
 ### Exemplo de uso {StaticResource}
 
@@ -91,6 +87,6 @@ Como uma chave de recurso existe como parte de qualquer uso de **{StaticResource
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

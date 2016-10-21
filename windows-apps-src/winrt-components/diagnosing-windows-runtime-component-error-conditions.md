@@ -3,15 +3,16 @@ author: msatranjr
 title: "Diagnóstico das condições de erro do componente do Tempo de Execução do Windows"
 description: "Este artigo fornece informações adicionais sobre restrições em componentes do Tempo de Execução do Windows escritos com código gerenciado."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 29199b7c94c4fecd173fb96f0d8fb43692d72464
+ms.openlocfilehash: 02cb16d88add782321ca86a27fcb8b5c6d1bab34
 
 ---
 
 # Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo fornece informações adicionais sobre restrições em componentes do Tempo de Execução do Windows escritos com código gerenciado. Ele expande as informações fornecidas em mensagens de erro da [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](https://msdn.microsoft.com/library/hh925576.aspx) e complementa as informações sobre as restrições fornecidas em [Criação de componentes de Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
@@ -29,8 +30,7 @@ Os componentes do Tempo de Execução do Windows gerenciados não podem implemen
 
  
 
-> 
-            **Observação** As mensagens de erro que se referem ao Windows Runtime usam uma terminologia anterior. Ele agora é conhecido como a Plataforma Universal do Windows (UWP). Por exemplo, agora os tipos de Tempo de Execução do Windows são chamados de tipos UWP.
+> **Observação** As mensagens de erro que se referem ao Windows Runtime usam uma terminologia anterior. Ele agora é conhecido como a Plataforma Universal do Windows (UWP). Por exemplo, agora os tipos de Tempo de Execução do Windows são chamados de tipos UWP.
 
  
 
@@ -51,8 +51,7 @@ Esse problema só ocorre quando você usa Winmdexp.exe na linha de comando. Reco
 
 Em um componente do Tempo de Execução do Windows escrito em código gerenciado, não é possível expor operadores sobrecarregados em tipos públicos.
 
-> 
-            **Observação** Na mensagem de erro, o operador é identificado pelo nome de metadados, como op\_Addition, op\_Multiply, op\_ExclusiveOr, op\_Implicit (conversão implícita) etc.
+> **Observação** Na mensagem de erro, o operador é identificado pelo nome de metadados, como op\_Addition, op\_Multiply, op\_ExclusiveOr, op\_Implicit (conversão implícita) etc.
 
  
 
@@ -90,8 +89,7 @@ Na UWP, os métodos sobrecarregados só podem ter o mesmo número de parâmetros
 
 Na Plataforma Universal do Windows, todos os tipos públicos em um arquivo de metadados do Windows (. winmd) devem estar em um namespace que compartilha o nome do arquivo .winmd ou em subnamespaces do nome do arquivo. Por exemplo, caso o projeto do Visual Studio se chame A.B (ou seja, o componente do Tempo de Execução do Windows é A.B.winmd), ele pode conter classes públicas A.B.Class1 e A.B.C.Class2, mas não A.Class3 (WME0006) ou D.Class4 (WME1044).
 
-> 
-            **Observação**  Essas restrições só se aplicam a tipos públicos, e não a tipos privados usados na implementação.
+> **Observação**  Essas restrições só se aplicam a tipos públicos, e não a tipos privados usados na implementação.
 
  
 
@@ -105,8 +103,7 @@ O componente deve conter pelo menos um tipo **public sealed** (**Public NotInher
 
 Um tipo em um componente do Tempo de Execução do Windows não pode ter um nome que seja igual ao de um namespace (WME1068).
 
-> 
-            **Cuidado**  Caso você chame Winmdexp.exe diretamente e não use a opção /out para especificar um nome para o componente do Tempo de Execução do Windows, Winmdexp.exe tenta gerar um nome que inclua todos os namespaces no componente. Renomear namespaces pode alterar o nome do componente.
+> **Cuidado**  Caso você chame Winmdexp.exe diretamente e não use a opção /out para especificar um nome para o componente do Tempo de Execução do Windows, Winmdexp.exe tenta gerar um nome que inclua todos os namespaces no componente. Renomear namespaces pode alterar o nome do componente.
 
  
 
@@ -130,11 +127,9 @@ Muitos desses mapeamentos são interfaces. Por exemplo, [IList&lt;T&gt;](https:/
 
 Em geral, a melhor opção é a interface mais próxima do tipo. Por exemplo, para Dictionary&lt;int, string&gt;, a melhor opção é mais provavelmente IDictionary&lt;int, string&gt;.
 
-> 
-            **Importante**  O JavaScript usa a primeira interface exibida na lista de interfaces implementadas por um tipo gerenciado. Por exemplo, se você retornar Dictionary&lt;int, string&gt; ao código JavaScript, ele será exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especificar como o tipo de retorno. Isso significa que, caso a primeira interface não inclua um membro exibido em interfaces posteriores, esse membro não permanece visível para JavaScript.
+> **Importante**  O JavaScript usa a primeira interface exibida na lista de interfaces implementadas por um tipo gerenciado. Por exemplo, se você retornar Dictionary&lt;int, string&gt; ao código JavaScript, ele será exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especificar como o tipo de retorno. Isso significa que, caso a primeira interface não inclua um membro exibido em interfaces posteriores, esse membro não permanece visível para JavaScript.
 
-> 
-            **Cuidado**  Evite usar as interfaces [IList](https://msdn.microsoft.com/library/system.collections.ilist.aspx) e [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx) não genéricas se o componente for usado pelo JavaScript. Essas interfaces são mapeadas para [IBindableVector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindablevector.aspx) e [IBindableIterator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindableiterator.aspx), respectivamente. Elas dão suporte à associação de controles XAML e permanecem invisíveis para JavaScript. O JavaScript emite o erro de tempo de execução "A função 'X' tem uma assinatura inválida e não pode ser chamada".
+> **Cuidado**  Evite usar as interfaces [IList](https://msdn.microsoft.com/library/system.collections.ilist.aspx) e [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx) não genéricas se o componente for usado pelo JavaScript. Essas interfaces são mapeadas para [IBindableVector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindablevector.aspx) e [IBindableIterator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindableiterator.aspx), respectivamente. Elas dão suporte à associação de controles XAML e permanecem invisíveis para JavaScript. O JavaScript emite o erro de tempo de execução "A função 'X' tem uma assinatura inválida e não pode ser chamada".
 
  
 
@@ -161,7 +156,6 @@ Em geral, a melhor opção é a interface mais próxima do tipo. Por exemplo, pa
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>O método '{0}' tem um parâmetro do tipo '{1}' na assinatura. Embora esse tipo genérico não seja um tipo de Tempo de Execução do Windows válido, o tipo ou os parâmetros genéricos implementam interfaces que são tipos de Tempo de Execução do Windows válidos. {2}</p>
-            
 > **Observação**  Para {2}, Winmdexp.exe acrescenta uma lista de alternativas, como "Levar em consideração alterar o tipo 'System.Collections.Generic.List&lt;T&gt;' na assinatura do método para um dos seguintes tipos em vez disso: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
 </td>
 </tr>
@@ -190,8 +184,7 @@ Na UWP, uma estrutura só pode conter campos, e apenas estruturas podem conter c
 
 Na UWP, as matrizes em assinaturas de membro devem ser unidimensionais com um limite inferior de 0 (zero). Tipos de matrizes aninhados como `myArray[][]` (`myArray()()` em Visual Basic) não são permitidos.
 
-> 
-            **Observação** Essa restrição não se aplica a matrizes usadas internamente na implementação.
+> **Observação** Essa restrição não se aplica a matrizes usadas internamente na implementação.
 
  
 
@@ -242,25 +235,23 @@ Na UWP, os valores de retorno são considerados parâmetros de saída e os nomes
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> [!div class="tabbedCodeSnippets"]
+> **Observação**  Se alterar o nome do valor de retorno e o novo nome colidir com o nome de outro parâmetro, você obterá o erro WME1091.
 
+O código JavaScript pode acessar os parâmetros de saída de um método por nome, inclusive o valor de retorno. Por exemplo, consulte o atributo [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx).
 
-            **Observação**  Se alterar o nome do valor de retorno e o novo nome colidir com o nome de outro parâmetro, você obterá o erro WME1091. O código JavaScript pode acessar os parâmetros de saída de um método por nome, inclusive o valor de retorno.
-
-| Por exemplo, consulte o atributo [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx). | Número do erro |
+| Número do erro | Texto da mensagem |
 |---------------|------------|
-| Texto da mensagem | WME1091 O método '\{0}' tem o valor de retorno chamado '\{1}', que é o mesmo de um nome de parâmetro. |
-| Os parâmetros de método de Tempo de Execução do Windows e o valor de retorno devem ter nomes exclusivos. | WME1092 O método '\{0}' tem um parâmetro chamado '\{1}', que é o mesmo nome do valor de retorno padrão.<br/>Leve em consideração usar outro nome para o parâmetro ou usar o System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explicitamente o nome do valor de retorno. |
+| WME1091 | O método '\{0}' tem o valor de retorno chamado '\{1}', que é o mesmo de um nome de parâmetro. Os parâmetros de método de Tempo de Execução do Windows e o valor de retorno devem ter nomes exclusivos. |
+| WME1092 | O método '\{0}' tem um parâmetro chamado '\{1}', que é o mesmo nome do valor de retorno padrão. Leve em consideração usar outro nome para o parâmetro ou usar o System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explicitamente o nome do valor de retorno.<br/>**Observação**  O nome padrão é "returnValue" para acessadores de propriedade e "value" para todos os outros métodos. |
  
 
-## 
-            **Observação**  O nome padrão é "returnValue" para acessadores de propriedade e "value" para todos os outros métodos.
+## Tópicos relacionados
 
-* [Tópicos relacionados](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-* [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](https://msdn.microsoft.com/library/hh925576.aspx)
-
+* [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

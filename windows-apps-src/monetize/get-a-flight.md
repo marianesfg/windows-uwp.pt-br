@@ -1,73 +1,77 @@
 ---
 author: mcleanbyron
 ms.assetid: 87708690-079A-443D-807E-D2BF9F614DDF
-description: Use this method in the Windows Store submission API to get data for a package flight for an app that is registered to your Windows Dev Center account.
-title: Get a package flight using the Windows Store submission API
+description: "Use este método na API de envio da Windows Store para obter dados para um pacote de pré-lançamento de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows."
+title: "Obter um pacote de pré-lançamento usando a API de envio da Windows Store"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: fb8328981a45e353987a62d7794158c2e1179087
+
 ---
 
-# Get a package flight using the Windows Store submission API
+# Obter um pacote de pré-lançamento usando a API de envio da Windows Store
 
 
 
 
-Use this method in the Windows Store submission API to get data for a package flight for an app that is registered to your Windows Dev Center account.
+Use este método na API de envio da Windows Store para obter dados para um pacote de pré-lançamento de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows.
 
-## Prerequisites
+## Pré-requisitos
 
-To use this method, you need to first do the following:
+Para usar este método, primeiro você precisa do seguinte:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+* Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Request
+## Solicitação
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
-| Method | Request URI                                                      |
+| Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Cabeçalho da solicitação
 
-| Header        | Type   | Description                                                                 |
+| Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Parâmetros solicitados
 
 
-| Name        | Type   | Description                                                                 |
+| Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Required. The Store ID of the app that contains the package flight you want to get. The Store ID for the app is available on the Dev Center dashboard.  |
-| flightId | string | Required. The ID of the package flight to get. This ID is available in the Dev Center dashboard, and it is included in the response data for requests to [create a package flight](create-a-flight.md) and [get package flights for an app](get-flights-for-an-app.md).  |
+| applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o pacote de pré-lançamento que você deseja obter. A ID da Loja do aplicativo está disponível no painel do Centro de Desenvolvimento.  |
+| flightId | string | Obrigatório. A ID do pacote de pré-lançamento a ser obtida. Essa ID está disponível no painel do Centro de Desenvolvimento, e está incluída nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
 
 <span/>
 
-### Request body
+### Corpo da solicitação
 
-Do not provide a request body for this method.
+Não forneça um corpo da solicitação para esse método.
 
 <span/>
 
-### Request example
+### Exemplo de solicitação
 
-The following example demonstrates how to retrieve information about a package flight with the ID 43e448df-97c9-4a43-a0bc-2a445e736bcd for an app with the Store ID value 9WZDNCRD91MD.
+O exemplo a seguir demonstra como recuperar informações sobre um pacote de pré-lançamento com a ID 43e448df-97c9-4a43-a0bc-2a445e736bcd para um aplicativo com o valor de ID da Loja 9WZDNCRD91MD.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights/43e448df-97c9-4a43-a0bc-2a445e736bcd HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Resposta
 
-The following example demonstrates the JSON response body for a successful call to this method. For more details about the values in the response body, see the following sections.
+O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. Para obter mais detalhes sobre os valores no corpo da resposta, veja as seções a seguir.
 
 ```json
 {
@@ -88,43 +92,49 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-### Response body
+### Corpo da resposta
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightId            | string  | The ID for the package flight. This value is supplied by Dev Center.  |
-| friendlyName           | string  | The name of the package flight, as specified by the developer.   |  
-| lastPublishedFlightSubmission       | object | An object that provides information about the last published submission for the package flight. For more information, see the [Submission object](#submission_object) section below.  |
-| pendingFlightSubmission        | object  |  An object that provides information about the current pending submission for the package flight. For more information, see the [Submission object](#submission_object) section below.  |   
-| groupIds           | array  | An array of strings that contain the IDs of the flight groups that are associated with the package flight. For more information about flight groups, see [Package flights](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
-| rankHigherThan           | string  | The friendly name of the package flight that is ranked immediately lower than the current package flight. For more information about ranking flight groups, see [Package flights](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
+| flightId            | string  | A ID do pacote de pré-lançamento. Esse valor é fornecido pelo Centro de Desenvolvimento.  |
+| friendlyName           | string  | O nome do pacote de pré-lançamento, conforme especificado pelo desenvolvedor.   |  
+| lastPublishedFlightSubmission       | object | Um objeto que fornece informações sobre o último envio publicado do pacote de pré-lançamento. Para saber mais, consulte a seção [Objeto de envio](#submission_object) a seguir.  |
+| pendingFlightSubmission        | object  |  Um objeto que fornece informações sobre o envio pendente atual do pacote de pré-lançamento. Para saber mais, consulte a seção [Objeto de envio](#submission_object) a seguir.  |   
+| groupIds           | array  | Uma matriz de cadeias de caracteres que contêm as IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
+| rankHigherThan           | string  | O nome amigável do pacote de pré-lançamento que ficou imediatamente abaixo do pacote de pré-lançamento atual. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
 
 <span id="submission_object" />
-### Submission object
+### Objeto de envio
 
-The *lastPublishedFlightSubmission* and *pendingFlightSubmission* values in the response body contain objects that provide resource information about a submission for the package flight. These objects have the following values.
+Os valores *lastPublishedFlightSubmission* e *pendingFlightSubmission* no corpo da resposta contêm objetos que fornecem informações do recurso sobre um envio para o pacote de pré-lançamento. Esses objetos possuem os seguintes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id            | string  | The ID of the submission.    |
-| resourceLocation   | string  | A relative path that you can append to the base ```https://manage.devcenter.microsoft.com/v1.0/my/``` request URI to retrieve the complete data for the submission.                                                                                                                                               |
- 
+| id            | string  | A ID do envio.    |
+| resourceLocation   | string  | Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do envio.                                                                                                                                               |
+ 
 <span/>
 
-## Error codes
+## Códigos de erro
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
-| Error code |  Description     |
+| Código de erro |  Descrição     |
 |--------|---------------------  |
-| 400  | The request is invalid. |
-| 404  | The specified package flight could not be found.   |   
-| 409  | The app uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |                                                                                                 
+| 400  | A solicitação é inválida. |
+| 404  | O pacote de pré-lançamento especificado não foi encontrado.   |   
+| 409  | O aplicativo usa um recurso de painel do Centro de Desenvolvimento que [atualmente não é compatível com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |                                                                                                 
 
 <span/>
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Create a package flight](create-a-flight.md)
-* [Delete a package flight](delete-a-flight.md)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Criar um pacote de pré-lançamento](create-a-flight.md)
+* [Excluir um pacote de pré-lançamento](delete-a-flight.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

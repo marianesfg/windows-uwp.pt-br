@@ -3,8 +3,9 @@ author: mtoepke
 title: Controles move-look para jogos
 description: "Aprenda a adicionar controles move-look tradicionais (também conhecidos como controles mouselook) usando o mouse e o teclado ao seu jogo do DirectX."
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7adbfdb77af6992be9448969f635bdebac58344b
+ms.openlocfilehash: d5bd0a43c1f261e6a12ed947e497d3e45d0ab6a7
 
 ---
 
@@ -141,69 +142,45 @@ Nosso código contém quatro grupos de campos privados. Examinaremos a finalidad
 
 Primeiro, definimos alguns campos úteis para conter informações atualizadas sobre o ponto de vista da câmera.
 
--   
-            **m\_position** é a posição da câmera (e, portanto, do plano de visão) na cena 3D, usando coordenadas da cena.
--   
-            **m\_pitch** é a rotação sobre o eixo x da câmera, ou sua rotação para cima e para baixo em torno do eixo x do plano de visão, em radianos.
--   
-            **m\_yaw** é a rotação sobre o eixo y da câmera, ou sua rotação para a esquerda e para a direita em torno do eixo y do plano de visão, em radianos.
+-   **m\_position** é a posição da câmera (e, portanto, do plano de visão) na cena 3D, usando coordenadas da cena.
+-   **m\_pitch** é a rotação sobre o eixo x da câmera, ou sua rotação para cima e para baixo em torno do eixo x do plano de visão, em radianos.
+-   **m\_yaw** é a rotação sobre o eixo y da câmera, ou sua rotação para a esquerda e para a direita em torno do eixo y do plano de visão, em radianos.
 
 Agora definiremos os campos que serão usados para armazenar informações sobre o status e a posição de nossos controladores. Primeiro definimos os campos necessários para o controlador de movimento baseado em toque. (A implementação do teclado como controlador de movimento não exige nada de especial. Simplesmente lemos os eventos de teclado com manipuladores específicos.)
 
--   
-            **m\_moveInUse** indica se o controlador de movimento está em uso.
--   
-            **m\_movePointerID** é o ID exclusivo do ponteiro de movimento atual. Nós o usamos para diferenciar o ponteiro de visão do ponteiro de movimento quando verificamos o valor do ID de ponteiro.
--   
-            **m\_moveFirstDown** é o ponto na tela onde o jogador tocou inicialmente a área de ponteiro do controlador de movimento. Esse valor será usado posteriormente para definir uma zona morta a fim de evitar que movimentos minúsculos façam o ponto de vista oscilar.
--   
-            **m\_movePointerPosition** é o ponto na tela para o qual o jogador moveu o ponteiro no momento. Nós o usamos para determinar a direção para a qual o jogador quis se mover examinando-a em relação a **m\_moveFirstDown**.
--   
-            **m\_moveCommand** é o comando final calculado para o controlador de movimento: para cima (para a frente), para baixo (para trás), para a esquerda ou para a direita.
+-   **m\_moveInUse** indica se o controlador de movimento está em uso.
+-   **m\_movePointerID** é o ID exclusivo do ponteiro de movimento atual. Nós o usamos para diferenciar o ponteiro de visão do ponteiro de movimento quando verificamos o valor do ID de ponteiro.
+-   **m\_moveFirstDown** é o ponto na tela onde o jogador tocou inicialmente a área de ponteiro do controlador de movimento. Esse valor será usado posteriormente para definir uma zona morta a fim de evitar que movimentos minúsculos façam o ponto de vista oscilar.
+-   **m\_movePointerPosition** é o ponto na tela para o qual o jogador moveu o ponteiro no momento. Nós o usamos para determinar a direção para a qual o jogador quis se mover examinando-a em relação a **m\_moveFirstDown**.
+-   **m\_moveCommand** é o comando final calculado para o controlador de movimento: para cima (para a frente), para baixo (para trás), para a esquerda ou para a direita.
 
 Agora definimos os campos que usaremos para o controlador de visão, nas implementações para mouse e touch.
 
--   
-            **m\_lookInUse** indica se o controle de visão está em uso.
--   
-            **m\_lookPointerID** é o ID exclusivo do ponteiro de visão atual. Nós o usamos para diferenciar o ponteiro de visão do ponteiro de movimento quando verificamos o valor do ID de ponteiro.
--   
-            **m\_lookLastPoint** é o último ponto, em coordenadas da cena, que foi capturado no quadro anterior.
--   
-            **m\_lookLastDelta** é a diferença calculada entre o atual **m\_position** e **m\_lookLastPoint**.
+-   **m\_lookInUse** indica se o controle de visão está em uso.
+-   **m\_lookPointerID** é o ID exclusivo do ponteiro de visão atual. Nós o usamos para diferenciar o ponteiro de visão do ponteiro de movimento quando verificamos o valor do ID de ponteiro.
+-   **m\_lookLastPoint** é o último ponto, em coordenadas da cena, que foi capturado no quadro anterior.
+-   **m\_lookLastDelta** é a diferença calculada entre o atual **m\_position** e **m\_lookLastPoint**.
 
 Finalmente, definimos seis valores booleanos para os seis graus de movimento, que usamos para indicar o estado atual de cada ação de movimento direcional (ativa ou inativa):
 
--   
-            **m\_forward**, **m\_back**, **m\_left**, **m\_right**, **m\_up** e **m\_down**.
+-   **m\_forward**, **m\_back**, **m\_left**, **m\_right**, **m\_up** e **m\_down**.
 
 Usamos os seis manipuladores de eventos para capturar os dados de entrada empregados para atualizar o estado dos controladores:
 
--   
-            **OnPointerPressed**. O jogador pressionou o botão esquerdo do mouse com o ponteiro na tela do jogo ou tocou na tela.
--   
-            **OnPointerMoved**. O jogador moveu o mouse com o ponteiro na tela do jogo ou arrastou o ponteiro de toque na tela.
--   
-            **OnPointerReleased**. O jogador liberou o botão esquerdo do mouse com o ponteiro na tela do jogo ou parou de tocar na tela.
--   
-            **OnKeyDown**. O jogador pressionou uma tecla.
--   
-            **OnKeyUp**. O jogador liberou uma tecla.
+-   **OnPointerPressed**. O jogador pressionou o botão esquerdo do mouse com o ponteiro na tela do jogo ou tocou na tela.
+-   **OnPointerMoved**. O jogador moveu o mouse com o ponteiro na tela do jogo ou arrastou o ponteiro de toque na tela.
+-   **OnPointerReleased**. O jogador liberou o botão esquerdo do mouse com o ponteiro na tela do jogo ou parou de tocar na tela.
+-   **OnKeyDown**. O jogador pressionou uma tecla.
+-   **OnKeyUp**. O jogador liberou uma tecla.
 
 Finalmente, usamos esses métodos e propriedades para inicializar, acessar e atualizar as informações de estado dos controladores.
 
--   
-            **Initialize**. O aplicativo chama esse manipulador de eventos para inicializar os controles e anexá-los ao objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que descreve a janela de exibição.
--   
-            **SetPosition**. O aplicativo chama esse método para definir as coordenadas (x, y e z) dos controles no espaço da cena.
--   
-            **SetOrientation**. O aplicativo chama esse método para definir a rotação sobre o eixo x e a rotação sobre o eixo y da câmera.
--   
-            **get\_Position**. O aplicativo acessa essa propriedade para obter a posição atual da câmera no espaço da cena. Essa propriedade é usada como um método para comunicar a posição atual da câmera ao aplicativo.
--   
-            **get\_LookPoint**. O aplicativo acessa essa propriedade para obter o ponto para o qual a câmera do controlador está voltada atualmente.
--   
-            **Update**. Lê o estado dos controladores de movimento e visão e atualiza a posição da câmera. Esse método é chamado continuamente a partir do loop principal do aplicativo para atualizar os dados do controlador da câmera e a posição da câmera no espaço da cena.
+-   **Initialize**. O aplicativo chama esse manipulador de eventos para inicializar os controles e anexá-los ao objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que descreve a janela de exibição.
+-   **SetPosition**. O aplicativo chama esse método para definir as coordenadas (x, y e z) dos controles no espaço da cena.
+-   **SetOrientation**. O aplicativo chama esse método para definir a rotação sobre o eixo x e a rotação sobre o eixo y da câmera.
+-   **get\_Position**. O aplicativo acessa essa propriedade para obter a posição atual da câmera no espaço da cena. Essa propriedade é usada como um método para comunicar a posição atual da câmera ao aplicativo.
+-   **get\_LookPoint**. O aplicativo acessa essa propriedade para obter o ponto para o qual a câmera do controlador está voltada atualmente.
+-   **Update**. Lê o estado dos controladores de movimento e visão e atualiza a posição da câmera. Esse método é chamado continuamente a partir do loop principal do aplicativo para atualizar os dados do controlador da câmera e a posição da câmera no espaço da cena.
 
 Agora já temos todos os componentes necessários para implementar os controles move-look. Portanto, chegou o momento de conectar todas essas peças.
 
@@ -444,8 +421,7 @@ void MoveLookController::Initialize( _In_ CoreWindow^ window )
 }
 ```
 
-
-            **Initialize** recebe uma referência à instância de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do aplicativo como um parâmetro e registra os manipuladores de eventos que desenvolvemos para os eventos apropriados nessa **CoreWindow**. Ele inicializa os IDs dos ponteiros de movimento e visão, zera o vetor de comando para nossa implementação do controlador de movimento de tela sensível ao toque e coloca a câmera voltada diretamente para a frente quando o aplicativo é iniciado.
+**Initialize** recebe uma referência à instância de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do aplicativo como um parâmetro e registra os manipuladores de eventos que desenvolvemos para os eventos apropriados nessa **CoreWindow**. Ele inicializa os IDs dos ponteiros de movimento e visão, zera o vetor de comando para nossa implementação do controlador de movimento de tela sensível ao toque e coloca a câmera voltada diretamente para a frente quando o aplicativo é iniciado.
 
 ## Obtendo e definindo a posição e a orientação da câmera
 
@@ -613,6 +589,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

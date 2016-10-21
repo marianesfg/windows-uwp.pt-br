@@ -1,27 +1,31 @@
 ---
 author: mcleanbyron
 ms.assetid: 8AC56AAF-8D8C-4193-A6B3-BB5D0669D994
-description: Use the Python code examples in this section to learn more about using the Windows Store submission API.
-title: Python code examples for the Windows Store submission API
+description: "Use os exemplos de código Python nesta seção para saber mais sobre como usar a API de envio da Windows Store."
+title: "Exemplos de código Python para a API de envio da Windows Store"
+translationtype: Human Translation
+ms.sourcegitcommit: bd8c8cbf6ed10a583d2008e8b01a499b4d400c11
+ms.openlocfilehash: 52fd41ca41628d41140c8c24047e2a50ea72bf40
+
 ---
 
-# Python code examples for the Windows Store submission API
+# Exemplos de código Python para a API de envio da Windows Store
 
-This article provides Python code examples for using the *Windows Store submission API*. For more information about this API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+Este artigo fornece exemplos de código Python para usar a *API de envio da Windows Store*. Para saber mais sobre essa API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
-These code examples demonstrate the following tasks:
+Esses exemplos de códigos demonstram as seguintes tarefas:
 
-* [Obtain an Azure AD access token](python-code-examples-for-the-windows-store-submission-api.md#token).
-* [Create an add-on](python-code-examples-for-the-windows-store-submission-api.md#create-add-on).
-* [Create a package flight](python-code-examples-for-the-windows-store-submission-api.md#create-package-flight).
-* [Create and commit an app submission](python-code-examples-for-the-windows-store-submission-api.md#create-app-submission).
-* [Create and commit an add-on submission](python-code-examples-for-the-windows-store-submission-api.md#create-add-on-submission).
-* [Create and commit a package flight submission](python-code-examples-for-the-windows-store-submission-api.md#create-flight-submission).
+* [Obtenha um token de acesso do Azure AD](python-code-examples-for-the-windows-store-submission-api.md#token).
+* [Crie um complemento](python-code-examples-for-the-windows-store-submission-api.md#create-add-on).
+* [Crie um pacote de pré-lançamento](python-code-examples-for-the-windows-store-submission-api.md#create-package-flight).
+* [Crie e confirme um envio de aplicativo](python-code-examples-for-the-windows-store-submission-api.md#create-app-submission).
+* [Crie e confirme um envio de complemento](python-code-examples-for-the-windows-store-submission-api.md#create-add-on-submission).
+* [Crie e confirme um envio de pacote de pré-lançamento](python-code-examples-for-the-windows-store-submission-api.md#create-flight-submission).
 
 <span id="token" />
-## Obtain an Azure AD access token
+## Obtenha um token de acesso do Azure AD
 
-The following example demonstrates how to [obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token).
+O exemplo a seguir demonstra como [obter um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token).
 
 ```python
 import http.client, json
@@ -47,9 +51,9 @@ tokenConnection.close()
 ```
 
 <span id="create-add-on" />
-## Create an add-on
+## Criar um complemento
 
-The following example demonstrates how to [create a new add-on](manage-add-ons.md) (add-ons are also known as in-app products or IAPs).
+O exemplo a seguir demonstra como [criar um novo complemento](manage-add-ons.md) (os complementos também são conhecidos como produtos no aplicativo ou IAPs).
 
 ```python
 import http.client, json
@@ -82,9 +86,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-package-flight" />
-## Create a package flight
+## Criar um pacote de pré-lançamento
 
-The following example demonstrates how to [create a new package flight](manage-flights.md).
+O exemplo a seguir demonstra como [criar um novo pacote de pré-lançamento](manage-flights.md).
 
 ```python
 import http.client, json, requests, time
@@ -121,9 +125,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-app-submission" />
-## Create and commit an app submission
+## Criar e confirmar um envio de aplicativo
 
-The following example demonstrates how to [create and commit a new app submission](manage-app-submissions.md).
+O exemplo a seguir demonstra como [criar e confirmar um novo envio de aplicativo](manage-app-submissions.md).
 
 ```python
 import http.client, json, requests, time
@@ -204,9 +208,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-add-on-submission" />
-## Create and commit an add-on submission
+## Criar e confirmar um envio de complemento
 
-The following example demonstrates how to [create and commit a new add-on submission](manage-add-on-submissions.md) (add-ons are also known as in-app products or IAPs).
+O exemplo a seguir demonstra como [criar e confirmar um novo envio de complemento](manage-add-on-submissions.md) (os complementos também são conhecidos como produtos no aplicativo ou IAPs).
 
 ```python
 import http.client, json, requests, time
@@ -286,9 +290,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-flight-submission" />
-## Create and commit a package flight submission
+## Criar e confirmar um envio de pacote de pré-lançamento
 
-The following example demonstrates how to [create and commit a new package flight submission](manage-flight-submissions.md).
+O exemplo a seguir demonstra como [criar e confirmar um novo envio de pacote de pré-lançamento](manage-flight-submissions.md).
 
 ```python
 import http.client, json, requests, time, zipfile
@@ -369,6 +373,12 @@ print(submissionJsonObject)
 ingestionConnection.close()
 ```
 
-## Related topics
+## Tópicos relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
+* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

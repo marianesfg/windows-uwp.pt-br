@@ -3,8 +3,9 @@ author: mtoepke
 title: Controles de toque para jogos
 description: "Aprenda a adicionar controles de toque básicos ao seu jogo C++ da Plataforma Universal do Windows (UWP) com DirectX."
 ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a2460ba2ffcf191fe87132180b2cca7519e87141
+ms.openlocfilehash: 901b83b1c4a2e572e4fe41e1df59910432982687
 
 ---
 
@@ -17,8 +18,7 @@ Aprenda a adicionar controles de toque básicos ao seu jogo C++ da Plataforma Un
 
 Você pode incorporar esses controles a jogos nos quais deseja que o jogador arraste para rolar ou ter uma visão panorâmica de um ambiente 3D, como um mapa ou espaço de jogo. Por exemplo, em um jogo de estratégia ou quebra-cabeças, você pode usar esses controles para permitir que o jogador veja um ambiente de jogo maior do que a tela realizando um movimento panorâmico para a esquerda ou direita.
 
-> 
-            **Observação**  Nosso código também funciona com controles de movimentos panorâmicos baseados em mouse. Os eventos relacionados a ponteiros são abstraídos pelas APIs do Windows Runtime para que possam lidar com eventos de ponteiro baseados em toque ou mouse.
+> **Observação**  Nosso código também funciona com controles de movimentos panorâmicos baseados em mouse. Os eventos relacionados a ponteiros são abstraídos pelas APIs do Windows Runtime para que possam lidar com eventos de ponteiro baseados em toque ou mouse.
 
  
 
@@ -101,40 +101,26 @@ public:
 
 Os campos privados contêm o estado atual do controlador da câmera. Vamos revisá-los.
 
--   
-            **m\_position** é a posição da câmera no espaço da cena. Neste exemplo, o valor da coordenada z está fixo em 0. Podemos usar DirectX::XMFLOAT2 para representar esse valor, mas para os fins desta amostra e de extensibilidade futura, usamos DirectX::XMFLOAT3. Passamos esse valor pela propriedade **get\_Position** para o próprio aplicativo para que ele posa atualizar o visor de acordo.
--   
-            **m\_panInUse** é um valor booliano que indica se uma operação de movimento panorâmico está ativa, ou, mais especificamente, se o jogador está tocando na tela e movendo a câmera.
--   
-            **m\_panPointerID** é um ID exclusivo do ponteiro. Não o usaremos nesta amostra, mas recomendamos associar a classe de estado do controlador a um ponteiro específico.
--   
-            **m\_panFirstDown** é o primeiro ponto na tela tocado ou clicado pelo jogador durante a ação de movimento panorâmico da câmera. Usaremos esse valor mais adiante para definir uma zona morta a fim de evitar distorções quando a tela for tocada, ou se o mouse balançar um pouco.
--   
-            **m\_panPointerPosition** é o ponto na tela para o qual o jogador moveu o ponteiro no momento. Nós o usamos para determinar a direção para a qual o jogador quis se mover examinando-a em relação a **m\_panFirstDown**.
--   
-            **m\_panCommand** é o comando final calculado para o controlador da câmera: para cima, para baixo, para a esquerda ou para a direita. Como estamos trabalhando com uma câmera fixa no plano x-y, esse valor pode ser DirectX::XMFLOAT2.
+-   **m\_position** é a posição da câmera no espaço da cena. Neste exemplo, o valor da coordenada z está fixo em 0. Podemos usar DirectX::XMFLOAT2 para representar esse valor, mas para os fins desta amostra e de extensibilidade futura, usamos DirectX::XMFLOAT3. Passamos esse valor pela propriedade **get\_Position** para o próprio aplicativo para que ele posa atualizar o visor de acordo.
+-   **m\_panInUse** é um valor booliano que indica se uma operação de movimento panorâmico está ativa, ou, mais especificamente, se o jogador está tocando na tela e movendo a câmera.
+-   **m\_panPointerID** é um ID exclusivo do ponteiro. Não o usaremos nesta amostra, mas recomendamos associar a classe de estado do controlador a um ponteiro específico.
+-   **m\_panFirstDown** é o primeiro ponto na tela tocado ou clicado pelo jogador durante a ação de movimento panorâmico da câmera. Usaremos esse valor mais adiante para definir uma zona morta a fim de evitar distorções quando a tela for tocada, ou se o mouse balançar um pouco.
+-   **m\_panPointerPosition** é o ponto na tela para o qual o jogador moveu o ponteiro no momento. Nós o usamos para determinar a direção para a qual o jogador quis se mover examinando-a em relação a **m\_panFirstDown**.
+-   **m\_panCommand** é o comando final calculado para o controlador da câmera: para cima, para baixo, para a esquerda ou para a direita. Como estamos trabalhando com uma câmera fixa no plano x-y, esse valor pode ser DirectX::XMFLOAT2.
 
 Usamos estes três manipuladores de eventos para atualizar as informações de estado do controlador da câmera.
 
--   
-            **OnPointerPressed** é um manipulador de evento chamado pelo aplicativo quando os jogadores pressionam o dedo sobre a superfície de toque e o ponteiro é movido para as coordenadas do ponto pressionado.
--   
-            **OnPointerMoved** é um manipulador de evento chamado pelo aplicativo quando o jogador desliza um dedo pela superfície de toque. Ele é atualizado com as novas coordenadas do caminho de arraste.
--   
-            **OnPointerReleased** é um manipulador de evento chamado pelo aplicativo quando o jogador retira o dedo da superfície de toque.
+-   **OnPointerPressed** é um manipulador de evento chamado pelo aplicativo quando os jogadores pressionam o dedo sobre a superfície de toque e o ponteiro é movido para as coordenadas do ponto pressionado.
+-   **OnPointerMoved** é um manipulador de evento chamado pelo aplicativo quando o jogador desliza um dedo pela superfície de toque. Ele é atualizado com as novas coordenadas do caminho de arraste.
+-   **OnPointerReleased** é um manipulador de evento chamado pelo aplicativo quando o jogador retira o dedo da superfície de toque.
 
 Por fim, usamos estes métodos e propriedades para iniciar, acessar e atualizar as informações de estado do controlador da câmera.
 
--   
-            **Initialize** é um manipulador de evento chamado pelo aplicativo para iniciar os controles e associá-los ao objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que descreve sua janela de exibição.
--   
-            **SetPosition** é um método chamado pelo aplicativo para definir as coordenadas (x,y e z) dos controles no espaço da cena. Observe que as coordenadas z são 0 neste tutorial.
--   
-            **get\_Position** é uma propriedade acessada pelo aplicativo para conseguir a posição atual da câmera no espaço da cena. Use essa propriedade como meio de comunicar o aplicativo a respeito da posição atual da câmera.
--   
-            **get\_FixedLookPoint** é uma propriedade acessada pelo aplicativo para conseguir o ponto atual para o qual a câmera do controlador está voltada. Neste exemplo, ela está bloqueada em um vetor normal em relação ao plano x-y.
--   
-            **Update** é um método que lê o estado do controlador e atualiza a posição da câmera. Você chama esse &lt;algo&gt; constantemente do loop principal do aplicativo para atualizar os dados do controlador e a posição da câmera no espaço da cena.
+-   **Initialize** é um manipulador de evento chamado pelo aplicativo para iniciar os controles e associá-los ao objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que descreve sua janela de exibição.
+-   **SetPosition** é um método chamado pelo aplicativo para definir as coordenadas (x,y e z) dos controles no espaço da cena. Observe que as coordenadas z são 0 neste tutorial.
+-   **get\_Position** é uma propriedade acessada pelo aplicativo para conseguir a posição atual da câmera no espaço da cena. Use essa propriedade como meio de comunicar o aplicativo a respeito da posição atual da câmera.
+-   **get\_FixedLookPoint** é uma propriedade acessada pelo aplicativo para conseguir o ponto atual para o qual a câmera do controlador está voltada. Neste exemplo, ela está bloqueada em um vetor normal em relação ao plano x-y.
+-   **Update** é um método que lê o estado do controlador e atualiza a posição da câmera. Você chama esse &lt;algo&gt; constantemente do loop principal do aplicativo para atualizar os dados do controlador e a posição da câmera no espaço da cena.
 
 Agora, você tem todos os componentes necessários para implementar os controles de toque. Você pode detectar onde e quando os eventos de toque ou ponteiro do mouse ocorrerão e qual foi a ação. Você pode definir a posição e a orientação da câmera em relação ao espaço da cena, além de controlar as alterações. Por fim, você pode informar a nova posição da câmera ao aplicativo que fez a chamada.
 
@@ -250,8 +236,7 @@ void CameraPanController::Initialize( _In_ CoreWindow^ window )
 }
 ```
 
-
-            **Initialize** recebe uma referência à instância de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do aplicativo como um parâmetro e registra os manipuladores de eventos que desenvolvemos para os eventos apropriados nessa **CoreWindow**.
+**Initialize** recebe uma referência à instância de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do aplicativo como um parâmetro e registra os manipuladores de eventos que desenvolvemos para os eventos apropriados nessa **CoreWindow**.
 
 ## Obtendo e definindo a posição do controlador da câmera
 
@@ -281,14 +266,11 @@ DirectX::XMFLOAT3 CameraPanController::get_FixedLookPoint()
 }
 ```
 
+**SetPosition** é um método público que podemos chamar a partir do aplicativo quando precisamos definir a posição do controlador da câmera para um ponto específico.
 
-            **SetPosition** é um método público que podemos chamar a partir do aplicativo quando precisamos definir a posição do controlador da câmera para um ponto específico.
+**get\_Position** é a propriedade pública mais importante: é o modo pelo qual o aplicativo obtém a posição atual do controlador da câmera no espaço da cena para atualizar o visor de acordo.
 
-
-            **get\_Position** é a propriedade pública mais importante: é o modo pelo qual o aplicativo obtém a posição atual do controlador da câmera no espaço da cena para atualizar o visor de acordo.
-
-
-            **get\_FixedLookPoint** é uma propriedade pública que, neste exemplo, obtém um ponto de associação normal para o plano x-y. Você pode alterar esse método para usar funções trigonométricas, senos e cossenos ao calcular os valores das coordenadas x, y e z quando quiser criar ângulos mais oblíquos para a câmera fixa.
+**get\_FixedLookPoint** é uma propriedade pública que, neste exemplo, obtém um ponto de associação normal para o plano x-y. Você pode alterar esse método para usar funções trigonométricas, senos e cossenos ao calcular os valores das coordenadas x, y e z quando quiser criar ângulos mais oblíquos para a câmera fixa.
 
 ## Atualizando as informações de estado do controlador da câmera
 
@@ -371,6 +353,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

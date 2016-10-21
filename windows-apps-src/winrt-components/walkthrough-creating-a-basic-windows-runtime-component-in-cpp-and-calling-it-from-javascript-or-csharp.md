@@ -3,8 +3,9 @@ author: msatranjr
 title: "Criando um componente do Tempo de Execução do Windows básico em C++ e chamando-o em JavaScript ou C#"
 description: "Este procedimento passo a passo mostra como criar uma DLL de componente do Tempo de Execução do Windows básica que pode ser chamada em JavaScript, C# ou Visual Basic."
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 860333e3239198cd54eea061195e2a51d786821b
+ms.openlocfilehash: 0085d3edb2ec1fbe14ce268c54532cd246a73dde
 
 ---
 
@@ -634,6 +635,6 @@ Caso remova um projeto de componente do Tempo de Execução do Windows C++ de um
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

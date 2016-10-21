@@ -2,84 +2,76 @@
 author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: "Use a API de análise da Windows Store para recuperar de forma programática dados analíticos de aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows."
-title: "Acesse dados analíticos usando serviços da Windows Store."
-ms.sourcegitcommit: 204bace243fb082d3ca3b4259982d457f9c533da
-ms.openlocfilehash: 30388a975e9623c5511abe608aa1b21956e2c974
+title: "Acessar dados analíticos usando serviços da Windows Store"
+translationtype: Human Translation
+ms.sourcegitcommit: 47e0ac11178af98589e75cc562631c6904b40da4
+ms.openlocfilehash: 1293bb5beb927425928d832f887129263db5a895
 
 ---
 
-# Acesse dados analíticos usando serviços da Windows Store.
+# Acessar dados analíticos usando serviços da Windows Store
 
+Uso da *API de análise da Windows Store* para recuperar, de forma programática, dados analíticos de aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows. Essa API permite que você recupere dados para aquisições de aplicativos e complementos (também conhecidos como produto no aplicativo ou IAP), erros, classificações de aplicativos e avaliações. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+As etapas a seguir descrevem o processo completo:
 
+1.  Certifique-se de que você tenha concluído todos os [pré-requisitos](#prerequisites).
+2.  Antes de chamar um método na API de análise da Windows Store [obtenha um token de acesso do Azure AD](#obtain-an-azure-ad-access-token). Depois de obter um token, você tem 60 minutos para usá-lo em chamadas para a API de análise da Windows Store antes que ele expire. Depois que o token expirar, você poderá gerar um novo.
+3.  [Chame a API de análise da Windows Store](#call-the-windows-store-analytics-api).
 
-Uso da *API de análise da Windows Store* para recuperar, de forma programática, dados analíticos de aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows. Essa API permite que você recupere dados de aplicativo e aquisições IAP, erros e classificações e avaliações de aplicativo. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
+<span id="prerequisites" />
+## Etapa 1: complete os pré-requisitos para usar a API de análise da Windows Store
 
-## Pré-requisitos para usar a API de análise da Windows Store
+Antes de começar a escrever o código para chamar a API de análise da Windows Store, certifique-se de que você concluiu os pré-requisitos a seguir.
 
+* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) sem nenhum custo adicional.
 
--   Você (ou sua organização) deve ter um diretório do Azure AD. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Ou você pode [fazer isso gratuitamente](http://go.microsoft.com/fwlink/p/?LinkId=703757).
--   Você deve ter uma [conta de usuário](https://azure.microsoft.com/documentation/articles/active-directory-create-users/) no diretório do Azure AD que você deseja associar à sua conta do Centro de Desenvolvimento do Windows.
+* Você deve associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento, recuperar a ID do locatário e a ID de cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de análise da Windows Store. Você precisa a ID do locatário, a ID do cliente e a chave para obter um token de acesso do Azure AD que você passa para a API.
 
-## Usando a API de análise da Windows Store
+  >**Observação**&nbsp;&nbsp;Você só precisa executar essa tarefa uma vez. Depois que você tiver a ID do locatário, a ID do cliente e a chave, poderá reutilizá-las sempre que precisa criar um novo token de acesso do Azure AD.
 
+Para associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento e recuperar os valores necessários:
 
-Antes de poder usar a API de análise da Windows Store, você deve associar um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento e obter um token de acesso do Azure AD. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de análise da Windows Store. Depois que tiver um token de acesso, você poderá chamar a API de análise da Windows Store a partir do seu aplicativo ou serviço.
+1.  No Centro de Desenvolvimento, acesse suas **Configurações de conta**, clique em **Gerenciar usuários** e associe a sua conta do Centro de Desenvolvimento ao diretório do Azure AD da sua organização. Para obter instruções detalhadas, consulte [Gerenciar usuários de conta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
 
-As etapas a seguir descrevem o processo de ponta a ponta:
+2.  Na página **Gerenciar usuários**, clique em **Adicionar aplicativos do Azure AD**, adicione o aplicativo do Azure AD que representa o aplicativo ou o serviço que você usará para acessar dados analíticos de sua conta do Centro de Desenvolvimento e atribua-o a função **Gerente**. Se esse aplicativo já existe no diretório do Azure AD, selecione-o na página **Adicionar aplicativos do Azure AD** para adicioná-lo à sua conta do Centro de Desenvolvimento. Do contrário, você pode criar um novo aplicativo do Azure AD na página **Add Azure AD applications**. Para obter mais informações, consulte [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
-1.  
-            [Associe um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows](#associate-an-azure-ad-application-with-your-windows-dev-center-account).
-2.  
-            [Obtenha um token de acesso do Azure AD](#obtain-an-azure-ad-access-token).
-3.  
-            [Chame a API de análise da Windows Store](#call-the-windows-store-analytics-api).
+3.  Volte para a página **Gerenciar usuários**, clique no nome do seu aplicativo Azure AD para ir para as configurações do aplicativo e copie os valores da **ID do locatário** e da **ID do cliente**.
 
+4. Clique em **Adicionar nova chave**. Na tela seguinte, copie o valor da **Chave**. Você não poderá acessar essas informações novamente depois que você sair desta página. Para obter mais informações, consulte as informações sobre o gerenciamento de chaves em [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
-### Associe um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows
+<span id="obtain-an-azure-ad-access-token" />
+## Etapa 2: Obter um token de acesso do Azure AD
 
-1.  No Centro de Desenvolvimento, acesse suas **Configurações de conta**, clique em **Gerenciar usuários** e associe a sua conta do Centro de Desenvolvimento ao diretório do Azure AD da sua organização. Para obter instruções detalhadas, consulte [Gerenciar usuários de conta](https://msdn.microsoft.com/library/windows/apps/mt489008). Você pode, de forma alternativa, adicionar outros usuários do diretório do Azure AD da sua organização para que eles também possam acessar a conta no Centro de Desenvolvimento.
+Antes de chamar qualquer um dos métodos na API de análise da Windows Store, primeiro você deve obter um token de acesso do Azure AD que você passa para o cabeçalho **Autorização** de cada método na API. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá atualizar o token para que você possa continuar a usá-lo em outras chamadas à API.
 
-    > 
-            **Observação**  Apenas uma conta do Centro de Desenvolvimento pode ser associada ao Active Directory do Azure. Da mesma forma, apenas um Active Directory do Azure pode ser associado uma conta do Centro de Desenvolvimento. Depois de estabelecer essa associação, você não poderá removê-la sem contatar o suporte.
+Para obter o token de acesso, siga as instruções em [Chamadas de serviço a serviço usando credenciais do cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar um HTTP POST para o ponto de extremidade ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Aqui está um exemplo de solicitação.
 
-     
+```
+POST https://login.microsoftonline.com/<your_tenant_id>/oauth2/token HTTP/1.1
+Host: login.microsoftonline.com
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
 
-2.  Na página **Gerenciar usuários**, clique em **Adicionar aplicativos do Azure AD**, adicione o aplicativo do Azure AD que representa o aplicativo ou o serviço que você usará para acessar dados analíticos de sua conta do Centro de Desenvolvimento e atribua-o a função **Gerente**. Se esse aplicativo já existe no diretório do Azure AD, selecione-o na página **Adicionar aplicativos do Azure AD** para adicioná-lo à sua conta do Centro de Desenvolvimento. Do contrário, você pode criar um novo aplicativo do Azure AD na página **Add Azure AD applications**. Para saber mais, consulte a seção sobre o gerenciamento de aplicativos do Azure AD em [Manage account users](https://msdn.microsoft.com/library/windows/apps/mt489008).
-
-3.  Volte para a página **Gerenciar usuários**, clique no nome do seu aplicativo do Azure AD para ir para as configurações do aplicativo e clique em **Adicionar nova chave**. Na tela seguinte, copie os valores **ID do cliente** e **Chave**. Para saber mais, consulte a seção sobre o gerenciamento de aplicativos do Azure AD em [Manage account users](https://msdn.microsoft.com/library/windows/apps/mt489008). Você precisa da ID e da chave do cliente para obter um token de acesso do Azure AD a ser usado ao chamar a API de análise da Windows Store. Você não poderá acessar essas informações novamente depois que você sair desta página.
-
-
-### Obtenha um token de acesso do Azure AD
-
-Depois de associar um aplicativo do Azure AD à sua conta no Centro de Desenvolvimento e recuperar o ID do cliente e a chave do aplicativo, você pode usar essas informações para obter o token de acesso do Azure AD. Você precisa de um token de acesso antes de poder chamar qualquer um dos métodos na API de análise da Windows Store. Depois de criar um token de acesso, você terá 60 minutos para usá-lo antes que ele expire.
-
-Para obter o token de acesso, siga as instruções em [Chamadas de serviço a serviço usando credenciais do cliente](https://msdn.microsoft.com/library/azure/dn645543.aspx) para enviar um HTTP POST para o seguinte ponto de extremidade do Azure AD.
-
-```syntax
-https://login.microsoftonline.com/<tenant id>/oauth2/token
+grant_type=client_credentials
+&client_id=<your_client_id>
+&client_secret=<your_client_secret>
+&resource=https://manage.devcenter.microsoft.com
 ```
 
--   Para obter seu ID de locatário, faça logon no [Portal de gerenciamento do Azure](http://manage.windowsazure.com/), navegue até **Active Directory** e clique no diretório que você vinculou à sua conta do Centro de Desenvolvimento. A ID de locatário para este diretório é incorporada à URL dessa página, conforme mostrado pela cadeia de caracteres *your\_tenant\_ID* no exemplo a seguir.
+Para os parâmetros *tenant\_id*, *client\_id* e *client\_secret*, especifique a ID do locatário, a ID do cliente e a chave para o aplicativo que você recuperou do Centro de Desenvolvimento na seção anterior. Para o parâmetro *resource*, especifique o seguinte URI ```https://manage.devcenter.microsoft.com```.
 
-  ```syntax
-  https://manage.windowsazure.com/@<your_tenant_name>#Workspaces/ActiveDirectoryExtension/Directory/<your_tenant_ID>/directoryQuickStart
-  ```
+Depois que seu token de acesso expirar, você poderá atualizá-l0 seguindo as instruções [aqui](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
--   Para os parâmetros *client\_id* e *client\_secret*, especifique a ID do cliente e a chave do seu aplicativo que você recuperou anteriormente do Centro de Desenvolvimento.
--   Para o parâmetro *resource*, especifique o seguinte URI: ```https://manage.devcenter.microsoft.com```.
-
-
-### Chame a API de análise da Windows Store
+<span id="call-the-windows-store-analytics-api" />
+## Etapa 3: Chame a API de análise da Windows Store
 
 Depois que tiver um token de acesso do Azure AD, você estará pronto para chamar a API de análise da Windows Store. Para saber mais sobre a sintaxe de cada método, consulte os artigos a seguir. Você deve passar o token de acesso no cabeçalho **Autorização** de cada método.
 
--   [Obtenha aquisições de aplicativo](get-app-acquisitions.md)
--   [Obtenha aquisições IAP](get-in-app-acquisitions.md)
--   [Obtenha dados de relatório de erros](get-error-reporting-data.md)
--   [Obtenha classificações de aplicativo](get-app-ratings.md)
--   [Obtenha avaliações de aplicativo](get-app-reviews.md)
+-   [Obter aquisições de aplicativo](get-app-acquisitions.md)
+-   [Obter aquisições de complemento](get-in-app-acquisitions.md)
+-   [Obter dados de relatórios de erros](get-error-reporting-data.md)
+-   [Obter classificações de aplicativos](get-app-ratings.md)
+-   [Obter avaliações de aplicativo](get-app-reviews.md)
 
 ## Exemplo de código
 
@@ -139,7 +131,7 @@ namespace TestAnalyticsAPI
                 "https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions?applicationId={0}&startDate={1}&endDate={2}&top={3}&skip={4}",
                 appID, startDate, endDate, top, skip);
 
-            //// Get IAP acquisitions
+            //// Get add-on acquisitions
             //requestURI = string.Format(
             //    "https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?applicationId={0}&startDate={1}&endDate={2}&top={3}&skip={4}",
             //    appID, startDate, endDate, top, skip);
@@ -236,15 +228,15 @@ A API de análise da Windows Store devolve respostas de erro em um objeto JSON q
 
 ## Tópicos relacionados
 
-* [Obtenha aquisições de aplicativo](get-app-acquisitions.md)
-* [Obtenha aquisições IAP](get-in-app-acquisitions.md)
-* [Obtenha dados de relatório de erros](get-error-reporting-data.md)
-* [Obtenha classificações de aplicativo](get-app-ratings.md)
+* [Obter aquisições de aplicativo](get-app-acquisitions.md)
+* [Obter aquisições de complemento](get-in-app-acquisitions.md)
+* [Obter dados de relatórios de erros](get-error-reporting-data.md)
+* [Obter classificações de aplicativos](get-app-ratings.md)
 * [Obter avaliações de aplicativo](get-app-reviews.md)
  
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

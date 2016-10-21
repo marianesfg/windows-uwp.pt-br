@@ -4,8 +4,8 @@ ms.assetid: 2383296e-c3d7-4b49-bcd2-621391228fdb
 description: Saiba como manipular os eventos da classe AdControl.
 title: Eventos AdControl em JavaScript
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b3c41f38f42c390c52c96fa93cfce3fe9bbd181d
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: d24030dfae92451924000ba4f1ac19cf6c4d4abe
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: b3c41f38f42c390c52c96fa93cfce3fe9bbd181d
 # Eventos AdControl em JavaScript
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Os exemplos a seguir demonstram como manipular os eventos da classe [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx). Esses exemplos pressupõem que você atribuiu anteriormente os manipuladores de eventos aos eventos **AdControl**. Para obter mais informações sobre como fazer isso, consulte [Exemplo das propriedades HTML](html-properties-example.md).
 
@@ -56,6 +56,6 @@ window.myAdEngagedChanged = function (sender) {
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

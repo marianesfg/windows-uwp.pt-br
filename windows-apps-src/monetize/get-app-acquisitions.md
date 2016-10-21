@@ -4,28 +4,23 @@ ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: "Use este método na API de análise da Windows Store para obter os dados de aquisição agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter aquisições de aplicativo"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: e28c309a51d28e14e57b8bd027dc8c353311d89a
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: c3efa347d11c2694d8814eb31f7e5f6825c7173a
 
 ---
 
 # Obter aquisições de aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 Use este método na API de análise da Windows Store para obter os dados de aquisição agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
 ## Pré-requisitos
 
 
-Para usar este método, você precisa do seguinte:
+Para usar este método, primeiro você precisa do seguinte:
 
--   Associe o aplicativo do Azure AD que você usará para chamar esse método com sua conta do Centro de Desenvolvimento.
-
--   Obtenha um token de acesso do Azure AD para seu aplicativo.
-
-Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md).
+* Se você não tiver feito isso, conclua todos os [pré-requisitos](access-analytics-data-using-windows-store-services.md#prerequisites) para a API de análise da Windows Store.
+* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
 ## Solicitação
 
@@ -42,7 +37,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer**&lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -66,7 +61,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 <tbody>
 <tr class="odd">
 <td align="left">applicationId</td>
-<td align="left">cadeia de caracteres</td>
+<td align="left">string</td>
 <td align="left">A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.</td>
 <td align="left">Sim</td>
 </tr>
@@ -258,7 +253,7 @@ Authorization: Bearer <your access token>
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Valor      | array  | Uma matriz de objetos que contêm dados de classificações agregadas. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [valores de aquisição](#acquisition-values) a seguir.                                                                                                                      |
 | @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você pode usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10.000, mas houver mais de 10.000 linhas de dados de aquisição para a consulta. |
-| TotalCount | int    | O número total de linhas no resultado de dados da consulta.                                                                                                                                                                                                                             |
+| TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                                                                                                                                                                                                             |
 
 <span/>
  
@@ -313,13 +308,13 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 ## Tópicos relacionados
 
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
-* [Obter aquisições IAP](get-in-app-acquisitions.md)
-* [Obter dados de relatórios de erros](get-error-reporting-data.md)
+* [Obter aquisições de complemento](get-in-app-acquisitions.md)
+* [Obter dados de relatório de erros](get-error-reporting-data.md)
 * [Obter classificações de aplicativos](get-app-ratings.md)
 * [Obter avaliações de aplicativo](get-app-reviews.md)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

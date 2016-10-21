@@ -1,21 +1,22 @@
 ---
 author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
-description: "Este tópico descreve os efeitos projetados para uso em cenários de captura de vídeo. Isso inclui o efeito de estabilização de vídeo."
+description: "Este tópico mostra como usar o efeito de estabilização de vídeo."
 title: "Efeitos para captura de vídeo"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
+translationtype: Human Translation
+ms.sourcegitcommit: 367ab34663d66d8c454ff305c829be66834e4ebe
+ms.openlocfilehash: 3fe7abcc417db76b4375243d66b1c0ecb9092147
 
 ---
 
 # Efeitos para captura de vídeo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este tópico descreve os efeitos projetados para uso em cenários de captura de vídeo. Isso inclui o efeito de estabilização de vídeo.
+Este tópico mostra como usar o efeito de estabilização de vídeo.
 
-**Observação**  
-Este artigo se baseia em conceitos e códigos discutidos em [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que o seu aplicativo já tenha uma instância do MediaCapture inicializada corretamente.
+> [!NOTE] 
+> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. Recomendamos que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que o seu aplicativo já tenha uma instância do MediaCapture inicializada corretamente.
 
 ## Efeito de estabilização de vídeo
 
@@ -33,7 +34,7 @@ Declare uma variável membro para armazenar o objeto [**VideoStabilizationEffect
 
 [!code-cs[DeclareVideoStabilizationEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareVideoStabilizationEffect)]
 
-Na implementação básica de captura de vídeo descrita no artigo [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md), o objeto de perfil de codificação de mídia é atribuído a uma variável local porque não é usado em outro lugar no código. Para esse cenário, você deve atribuir o objeto a uma variável membro para poder acessá-lo posteriormente.
+Para esse cenário, você deve atribuir o objeto de perfil de codificação de mídia a uma variável membro para poder acessá-lo posteriormente.
 
 [!code-cs[EncodingProfileMember](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetEncodingProfileMember)]
 
@@ -77,7 +78,8 @@ Para limpar o efeito de estabilização de vídeo, chame [**ClearEffectsAsync**]
 
 ## Tópicos relacionados
 
-* [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Câmera](camera.md)
+* [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -88,6 +90,6 @@ Para limpar o efeito de estabilização de vídeo, chame [**ClearEffectsAsync**]
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

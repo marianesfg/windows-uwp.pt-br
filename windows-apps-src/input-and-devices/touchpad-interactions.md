@@ -5,8 +5,9 @@ title: "Interações por touchpad"
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 361df3a06faa771a81a6d63c2fe873a1aace1125
+ms.openlocfilehash: 30607a9db9f5a7d5ea1085fa1105e6a2bd8ebd1b
 
 ---
 
@@ -149,16 +150,12 @@ Se você precisa personalizar o cursor do mouse:
 
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
-            
-          
-            **Exemplos**
+**Exemplos**
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Exemplo de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-            
-          
-            **Exemplos do arquivo**
+**Exemplos de arquivo morto**
 * [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
@@ -170,6 +167,6 @@ Se você precisa personalizar o cursor do mouse:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

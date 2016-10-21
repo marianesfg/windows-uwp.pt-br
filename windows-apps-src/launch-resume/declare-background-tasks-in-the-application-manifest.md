@@ -3,8 +3,9 @@ author: TylerMSFT
 title: Declarar tarefas em segundo plano no manifesto do aplicativo
 description: "Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
+translationtype: Human Translation
+ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
+ms.openlocfilehash: 6ec298a956673c114d34d64b026394ece2c33506
 
 ---
 
@@ -21,7 +22,10 @@ ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
 
 Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo.
 
-As tarefas em segundo plano devem ser declaradas no manifesto do aplicativo, ou seu aplicativo não será capaz de registrá-los (uma exceção será gerada). Além disso, as tarefas em segundo plano devem ser declaradas no manifesto do aplicativo para passar certificação.
+> [!Important]
+>  Este artigo é específico para tarefas em segundo plano que são executados em um processo separado. Tarefas em segundo plano de processo único não são declaradas no manifesto.
+
+As tarefas em segundo plano que são executadas em um processo separado devem ser declaradas no manifesto do aplicativo, ou seu aplicativo não será capaz de registrá-los (uma exceção será gerada). Além disso, as tarefas em segundo plano devem ser declaradas no manifesto do aplicativo para passar certificação.
 
 Este tópico considera que você criou uma ou mais classes de tarefa em segundo plano e que o seu aplicativo registra cada tarefa em segundo plano para execução em resposta a pelo menos um gatilho.
 
@@ -59,50 +63,46 @@ Declare sua primeira tarefa em segundo plano.
 Copie o código no elemento Extensions (você adicionará atributos nas próximas etapas).
 
 ```xml
-      <Extensions>
-        <Extension Category="windows.backgroundTasks" EntryPoint="">
-          <BackgroundTasks>
-            <Task Type="" />
-          </BackgroundTasks>
-        </Extension>
-      </Extensions>
+<Extensions>
+    <Extension Category="windows.backgroundTasks" EntryPoint="">
+      <BackgroundTasks>
+        <Task Type="" />
+      </BackgroundTasks>
+    </Extension>
+</Extensions>
 ```
 
 1.  Altere o atributo EntryPoint para que ele tenha a mesma cadeia de caracteres usada pelo código como o ponto de entrada ao registrar a tarefa em segundo plano (**namespace.classname**).
 
     Neste exemplo, o ponto de entrada é ExampleBackgroundTaskNameSpace.ExampleBackgroundTaskClassName:
 
-    ```xml
-          <Extensions>
-            <Extension Category="windows.backgroundTasks" EntryPoint="Tasks.ExampleBackgroundTaskClassName">
-              <BackgroundTasks>
-                <Task Type="" />
-              </BackgroundTasks>
-            </Extension>
-          </Extensions>
-    ```
+```xml
+<Extensions>
+    <Extension Category="windows.backgroundTasks" EntryPoint="Tasks.ExampleBackgroundTaskClassName">
+       <BackgroundTasks>
+         <Task Type="" />
+       </BackgroundTasks>
+    </Extension>
+</Extensions>
+```
 
 2.  Modifique a lista de atributos Tipo de Tarefa para indicar o tipo do registro de tarefa usado com essa tarefa em segundo plano. Se a tarefa em segundo plano for registrada com vários tipos de gatilho, adicione outros elementos Task e atributos Type para cada um deles.
 
-    
-            **Observação**  Certifique-se de listar cada um dos tipos de gatilho que você está usado ou a tarefa em segundo plano não registrará com os tipos de gatilho não declarados (o método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) falhará e gerará uma exceção).
+    **Observação**  Certifique-se de listar cada um dos tipos de gatilho que você está usado ou a tarefa em segundo plano não registrará com os tipos de gatilho não declarados (o método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) falhará e gerará uma exceção).
 
     Este exemplo de trecho indica o uso de gatilhos de evento do sistema e notificações por push:
 
-    ```xml
-                <Extension Category="windows.backgroundTasks" EntryPoint="Tasks.BackgroundTaskClass">
-                  <BackgroundTasks>
-                    <Task Type="systemEvent" />
-                    <Task Type="pushNotification" />
-                  </BackgroundTasks>
-                </Extension>
-    ```
+```xml
+<Extension Category="windows.backgroundTasks" EntryPoint="Tasks.BackgroundTaskClass">
+    <BackgroundTasks>
+        <Task Type="systemEvent" />
+        <Task Type="pushNotification" />
+    </BackgroundTasks>
+</Extension>
+```
 
-    > 
-            **Observação**  Normalmente, um aplicativo é executado em um processo especial chamado "BackgroundTaskHost.exe". É possível adicionar um elemento Executável ao elemento Extensão, permitindo que a tarefa em segundo plano seja executada no contexto do aplicativo. Use o elemento Executável apenas com tarefas em segundo plano que o exigem, como [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).    
 
 ## Adicionar outras extensões de tarefa em segundo plano
-
 
 Repita a etapa 2 para cada classe adicional de tarefa em segundo plano registrada pelo aplicativo.
 
@@ -147,7 +147,64 @@ O exemplo a seguir mostra o elemento Application completo da [amostra de tarefa 
 </Applications>
 ```
 
+## Declare sua tarefa em segundo plano para ser executada em um processo diferente
+
+Nova funcionalidade no Windows 10, versão 1507, permite que você execute a tarefa em segundo plano em um processo diferente do BackgroundTaskHost.exe (o processo em que tarefas em segundo plano são executadas por padrão).  Há duas opções: executar no mesmo processo de seu aplicativo em primeiro plano; executar em uma instância do BackgroundTaskHost.exe separada de outras instâncias das tarefas em segundo plano do mesmo aplicativo.  
+
+### Executar no aplicativo em primeiro plano
+
+Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é executada no mesmo processo como o aplicativo em primeiro plano. Observe o atributo `Executable`:
+
+```xml
+<Extensions>
+    <Extension Category="windows.backgroundTasks" EntryPoint="ExecModelTestBackgroundTasks.ApplicationTriggerTask" Executable="$targetnametoken$.exe">
+        <BackgroundTasks>
+            <Task Type="systemEvent" />
+        </BackgroundTasks>
+    </Extension>
+</Extensions>
+```
+
+> [!Note]
+> Use o elemento Executável apenas com tarefas em segundo plano que o exigem, como [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).  
+
+### Executar em um processo de host de segundo plano diferente
+
+Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é executada em um processo do BackgroundTaskHost.exe, mas em um separado de outras instâncias de tarefas em segundo plano do mesmo aplicativo. Observe o atributo `ResourceGroup`, que identifica quais tarefas em segundo plano serão executadas juntas.
+
+```xml
+<Extensions>
+    <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.SessionConnectedTriggerTask" ResourceGroup="foo">
+      <BackgroundTasks>
+        <Task Type="systemEvent" />
+      </BackgroundTasks>
+    </Extension>
+    <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.TimeZoneTriggerTask" ResourceGroup="foo">
+      <BackgroundTasks>
+        <Task Type="systemEvent" />
+      </BackgroundTasks>
+    </Extension>
+    <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.TimerTriggerTask" ResourceGroup="bar">
+      <BackgroundTasks>
+        <Task Type="timer" />
+      </BackgroundTasks>
+    </Extension>
+    <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.ApplicationTriggerTask" ResourceGroup="bar">
+      <BackgroundTasks>
+        <Task Type="general" />
+      </BackgroundTasks>
+    </Extension>
+    <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.MaintenanceTriggerTask" ResourceGroup="foobar">
+      <BackgroundTasks>
+        <Task Type="general" />
+      </BackgroundTasks>
+    </Extension>
+</Extensions>
+```
+
+
 ## Tópicos relacionados
+
 
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
@@ -155,6 +212,6 @@ O exemplo a seguir mostra o elemento Application completo da [amostra de tarefa 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,25 +1,37 @@
 ---
 author: mcleanbyron
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
-description: Learn how to enable in-app purchases and trials in UWP apps that target releases before Windows 10, version 1607.
-title: In-app purchases and trials using the Windows.ApplicationModel.Store namespace
+description: "Saiba como habilitar compras no aplicativo e avaliações em aplicativos UWP destinados a versões antes do Windows 10, versão 1607."
+title: "Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 649d082cddcf301fe602a5ab99637ad7bea67d49
+
 ---
 
-# In-app purchases and trials using the Windows.ApplicationModel.Store namespace
+# Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store
 
-The Windows SDK provides members in the [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) namespace that you can use to add in-app purchases and trial functionality to your Universal Windows Platform (UWP) app to help monetize your app and add new functionality. These APIs also provide access to the license info for your app.
+O SDK do Windows fornece membros no namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) que você pode usar para adicionar compras no aplicativo e a funcionalidade de avaliação ao seu aplicativo da Plataforma Universal do Windows (UWP) para ajudar a monetizar seu aplicativo e adicionar nova funcionalidade. Essas APIs também fornecem acesso às informações de licença de seu aplicativo.
 
->**Note** If your app targets Windows 10, version 1607 or later, we recommend that you use members of the [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) namespace instead of the **Windows.ApplicationModel.Store** namespace. The **Windows.Services.Store** namespace supports the latest add-on types, such as Store-managed consumable add-ons, and is designed to be compatible with future types of products and features supported by Windows Dev Center and the Store. The **Windows.Services.Store** namespace is also designed to have better performance. For more information, see [In-app purchases and trials](in-app-purchases-and-trials.md).
+>**Observação**&nbsp;&nbsp;Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx), em vez do namespace **Windows.ApplicationModel.Store**. O namespace **Windows.Services.Store** dá suporte aos tipos de complemento mais recentes, como complementos consumíveis gerenciados pela Loja, e foi projetado para ser compatível com tipos de produtos e recursos futuros com suporte do Centro de Desenvolvimento do Windows e da Loja. O namespace **Windows.Services.Store** também foi projetado para ter um desempenho melhor. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
 
-The articles in this section provide in-depth guidance and code examples for using the members in members in the **Windows.ApplicationModel.Store** namespace for several common scenarios. For an overview of concepts related to in-app purchases in UWP apps, see [In-app purchases and trials](in-app-purchases-and-trials.md).
+Os artigos nesta seção fornecem orientações detalhadas e exemplos de código para usar os membros em membros no namespace **Windows.ApplicationModel.Store** para vários cenários comuns. Para uma visão geral dos conceitos relacionados a compras no aplicativo em aplicativos UWP, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
 
-## In this section
+Para obter um exemplo completo que demonstra como implementar avaliações e compras no aplicativo usando o namespace **Windows.ApplicationModel.Store**, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
+
+## Nesta seção
 
 
-| Topic                                                                                                       | Description                 |
+| Tópico                                                                                                       | Descrição                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
-| [Enable in-app product purchases](enable-in-app-product-purchases.md)      |  Whether your app is free or not, you can sell content, other apps, or new app functionality (such as unlocking the next level of a game) from right within the app. Here we show you how to enable these products in your app.  |
-| [Enable consumable in-app product purchases](enable-consumable-in-app-product-purchases.md)      | Offer consumable in-app products—items that can be purchased, used, and purchased again—through the Store commerce platform to provide your customers with a purchase experience that is both robust and reliable. This is especially useful for things like in-game currency (gold, coins, etc.) that can be purchased and then used to purchase specific power-ups. |
-| [Exclude or limit features in a trial version](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | If you enable customers to use your app for free during a trial period, you can entice your customers to upgrade to the full version of your app by excluding or limiting some features during the trial period. |
-| [Manage a large catalog of in-app products](manage-a-large-catalog-of-in-app-products.md)      |   If your app offers a large in-app product catalog, you can optionally follow the process described in this topic to help manage your catalog.    |
-| [Use receipts to verify product purchases](use-receipts-to-verify-product-purchases.md)      |   Each Windows Store transaction that results in a successful product purchase can optionally return a transaction receipt that provides information about the listed product and monetary cost to the customer. Having access to this information supports scenarios where your app needs to verify that a user purchased your app, or has made in-app product purchases from the Windows Store. |
+| [Habilitar compras de produtos no aplicativo](enable-in-app-product-purchases.md)      |  Seja seu aplicativo gratuito ou não, você pode vender conteúdo, outros aplicativos ou uma nova funcionalidade do aplicativo (como o desbloqueio do próximo nível de um jogo) no próprio aplicativo. Veja a seguir como habilitar esses produtos no seu aplicativo.  |
+| [Habilitar compras de produtos consumíveis no aplicativo](enable-consumable-in-app-product-purchases.md)      | Ofereça produtos consumíveis no aplicativo — itens que podem ser comprados, usados e comprados novamente — por meio da plataforma de comércio da Loja para proporcionar aos seus clientes uma experiência de compra robusta e confiável. Isso é especialmente útil para coisas como moedas em jogos (ouro, moedas, etc.) que podem ser compradas e então usadas para comprar power-ups específicos. |
+| [Excluir ou limitar recursos em uma versão de avaliação](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | Se você permitir que os clientes usem seu aplicativo gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do aplicativo, excluindo ou limitando alguns recursos durante o período de avaliação. |
+| [Gerenciar um catálogo abrangente de produtos no aplicativo](manage-a-large-catalog-of-in-app-products.md)      |   Se o seu aplicativo oferecer um catálogo abrangente de produtos no aplicativo, você também poderá seguir o processo descrito neste tópico para ajudar a gerenciar seu catálogo.    |
+| [Usar recibos para verificar compras de produtos](use-receipts-to-verify-product-purchases.md)      |   Cada transação da Windows Store que resulta em uma compra do produto bem-sucedida pode retornar um recibo de transação que fornece informações sobre o produto listado e o custo monetário ao cliente. Ter acesso a essas informações dá suporte a cenários nos quais seu aplicativo precisa confirmar que um usuário adquiriu seu aplicativo ou fez compras de produto no aplicativo da Windows Store. |
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: "Este estudo de caso, que se baseia nas informações fornecidas no Bookstore, começa com um aplicativo do Windows Phone Silverlight que exibe dados agrupados em um LongListSelector."
 title: Estudo de caso Windows Phone Silverlight para UWP, Bookstore2
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 019f9ae1fc226c9aa1d921ce58cd2e5fa2424a2b
+ms.openlocfilehash: f421b42798d9472cd97ec9ed51036bd312c3e79e
 
 ---
 
@@ -14,16 +15,13 @@ ms.openlocfilehash: 019f9ae1fc226c9aa1d921ce58cd2e5fa2424a2b
 
 Este estudo de caso, que se baseia nas informações fornecidas no [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), começa com um aplicativo do Windows Phone Silverlight que exibe dados agrupados em um **LongListSelector**. No modelo de exibição, cada instância da classe **Author** representa o grupo dos livros escritos por esse autor e, no **LongListSelector**, podemos exibir a lista de livros agrupados por autor ou reduzir o zoom para ver uma lista de atalhos de autores. A lista de atalhos proporciona uma navegação mais rápida do que rolar pela lista de livros. Veremos as etapas para a portabilidade do aplicativo para um aplicativo UWP (Plataforma Universal do Windows) do Windows 10.
 
-
-            **Observação** ao abrir Bookstore2Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Observação** ao abrir Bookstore2Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
 
 ## Downloads
 
+[Baixe o aplicativo Windows Phone Silverlight Bookstore2WPSL8](http://go.microsoft.com/fwlink/p/?linkid=522601).
 
-            [Baixe o aplicativo Windows Phone Silverlight Bookstore2WPSL8](http://go.microsoft.com/fwlink/p/?linkid=522601).
-
-
-            [Baixe o aplicativo do Windows 10 Bookstore2Universal\_10](http://go.microsoft.com/fwlink/?linkid=532952).
+[Baixe o aplicativo do Windows 10 Bookstore2Universal\_10](http://go.microsoft.com/fwlink/?linkid=532952).
 
 ##  O aplicativo Windows Phone Silverlight
 
@@ -304,6 +302,6 @@ Este estudo de caso envolveu uma interface do usuário mais ambiciosa do que a a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

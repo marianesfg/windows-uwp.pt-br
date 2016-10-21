@@ -5,15 +5,16 @@ title: Diretrizes de deslizamento transversal
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 label: Cross-slide
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 47a16acc4025541b1cc19582c2c7d59755fd2594
+ms.openlocfilehash: 6f89875b5ef14c029103155f4e3c333dbdad0cab
 
 ---
 
 # Diretrizes de deslizamento transversal
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -54,8 +55,7 @@ Aqui estão algumas diretrizes a serem consideradas ao incluir a funcionalidade 
 
 Use o deslizamento transversal para listas ou coleções que rolam em uma única direção. Para obter mais informações, consulte [Adicionando controles ListView](https://msdn.microsoft.com/library/windows/apps/hh465382).
 
-
-            **Observação**  Nos casos em que a área de conteúdo pode ter movimento panorâmico nas duas direções, como navegadores da Web ou leitores eletrônicos, a interação com o tempo de pressionar e manter pressionado deve ser usada para chamar o menu de contexto para objetos como imagens e hiperlinks.
+**Observação**  Nos casos em que a área de conteúdo pode ter movimento panorâmico nas duas direções, como navegadores da Web ou leitores eletrônicos, a interação com o tempo de pressionar e manter pressionado deve ser usada para chamar o menu de contexto para objetos como imagens e hiperlinks.
 
  
 
@@ -135,12 +135,8 @@ Se for necessário mover mais de um objeto, permita que os usuários selecionem 
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* 
-            [Exemplo de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-            
-          
-            **arquivar amostras**
-          
+* [Exemplo de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+**Exemplos do arquivo**
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de teste de toque](http://go.microsoft.com/fwlink/p/?linkid=231590)
@@ -159,6 +155,6 @@ Se for necessário mover mais de um objeto, permita que os usuários selecionem 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

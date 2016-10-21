@@ -5,11 +5,12 @@ title: "Enviar uma notificação de bloco local"
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: cc2f86f2a56aae5ee9e3019dafa3417a25e7d610
+translationtype: Human Translation
+ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
+ms.openlocfilehash: a4f654b286db44d4054be296e76114024616f632
 
 ---
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # Enviar uma notificação de bloco local
 
 
@@ -20,19 +21,18 @@ Os blocos dos aplicativos primários no Windows 10 são definidos no manifesto d
 
 ![bloco padrão e bloco com notificação](images/sending-local-tile-01.png)
 
-
-            **Observação**   Saiba mais sobre [como criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md) e [esquema de modelo de bloco adaptável](tiles-and-notifications-adaptive-tiles-schema.md).
+**Observação**   Saiba mais sobre [como criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md) e [esquema de modelo de bloco adaptável](tiles-and-notifications-adaptive-tiles-schema.md).
 
  
 
-## <span id="Install_the_NuGet_package"></span><span id="install_the_nuget_package"></span><span id="INSTALL_THE_NUGET_PACKAGE"></span>Instalar o pacote NuGet
+## Instalar o pacote NuGet
 
 
 Recomendamos instalar o [Pacote NuGet NotificationsExtensions](https://www.nuget.org/packages/NotificationsExtensions.Win10/), que simplifica as coisas gerando cargas de bloco com objetos, em vez de XML bruto.
 
 Os exemplos de código embutido neste artigo são para C# com o pacote NuGet [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) instalado. (Caso prefira criar o próprio XML, você pode encontrar exemplos de código sem [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) ao final do artigo.)
 
-## <span id="Add_namespace_declarations"></span><span id="add_namespace_declarations"></span><span id="ADD_NAMESPACE_DECLARATIONS"></span>Adicionar declarações de namespace
+## Adicionar declarações de namespace
 
 
 Para acessar as APIs de bloco, inclua o namespace [**Windows.UI.Notifications**](https://msdn.microsoft.com/library/windows/apps/br208661). Também recomendamos incluir o namespace **NotificationsExtensions.Tiles** de maneira que seja possível usufruir nossas APIs auxiliares de bloco (você deve instalar o pacote NuGet [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) para acessar essas APIs).
@@ -42,7 +42,7 @@ using Windows.UI.Notifications;
 using NotificationsExtensions.Tiles; // NotificationsExtensions.Win10
 ```
 
-## <span id="Create_the_notification_content"></span><span id="create_the_notification_content"></span><span id="CREATE_THE_NOTIFICATION_CONTENT"></span>Criar o conteúdo da notificação
+## Criar o conteúdo da notificação
 
 
 No Windows 10, as cargas de bloco são definidas usando-se modelos de bloco adaptável, que permitem criar layouts visuais personalizados para as notificações. (Para saber o que é possível com blocos adaptáveis, consulte os artigos [Criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md) e [Modelos de bloco adaptável](tiles-and-notifications-adaptive-tiles-schema.md).)
@@ -121,7 +121,7 @@ O conteúdo da notificação se parece com o seguinte quando exibido em um bloco
 
 ![conteúdo de notificação em um bloco médio](images/sending-local-tile-02.png)
 
-## <span id="Create_the_notification"></span><span id="create_the_notification"></span><span id="CREATE_THE_NOTIFICATION"></span>Criar a notificação
+## Criar a notificação
 
 
 Depois de ter o conteúdo da notificação, você precisará criar um novo [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616). O construtor **TileNotification** utiliza um objeto[**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br208620) do Windows Runtime, que é possível obter no método **TileContent.GetXml** caso você esteja usando [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki).
@@ -133,7 +133,7 @@ Este exemplo de código cria uma notificação para um novo bloco.
 var notification = new TileNotification(content.GetXml());
 ```
 
-## <span id="Set_an_expiration_time_for_the_notification__optional_"></span><span id="set_an_expiration_time_for_the_notification__optional_"></span><span id="SET_AN_EXPIRATION_TIME_FOR_THE_NOTIFICATION__OPTIONAL_"></span>Definir um tempo de expiração para a notificação (opcional)
+## Definir um tempo de expiração para a notificação (opcional)
 
 
 Por padrão, as notificações locais de bloco e selo não expiram, enquanto as notificações por push, periódicas e agendadas expiram após três dias. Como o conteúdo do bloco não deve persistir por mais tempo do que o necessário, é melhor prática definir um tempo de expiração que faça sentido para o aplicativo, especialmente em notificações de bloco e selo locais.
@@ -147,7 +147,7 @@ tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(10);</code></
 </table>
 ```
 
-## <span id="Send_the_notification"></span><span id="send_the_notification"></span><span id="SEND_THE_NOTIFICATION"></span>Enviar a notificação
+## Enviar a notificação
 
 
 Embora o envio local de uma notificação de bloco seja simples, enviar a notificação para um bloco primário ou secundário é um pouco diferente.
@@ -158,7 +158,7 @@ Para enviar uma notificação a um bloco primário, use o [**TileUpdateManager**
 
 Este exemplo de código envia uma notificação para um bloco primário.
 
-<span codelanguage=""></span>
+
 ```
 <colgroup>
 <col width="100%" />
@@ -189,7 +189,7 @@ if (SecondaryTile.Exists("MySecondaryTile"))
 
 ![bloco padrão e bloco com notificação](images/sending-local-tile-01.png)
 
-## <span id="Clear_notifications_on_the_tile__optional_"></span><span id="clear_notifications_on_the_tile__optional_"></span><span id="CLEAR_NOTIFICATIONS_ON_THE_TILE__OPTIONAL_"></span>Limpar notificações no bloco (opcional)
+## Limpar notificações no bloco (opcional)
 
 
 Na maioria dos casos, você deverá limpar uma notificação assim que o usuário tiver interagido com esse conteúdo. Por exemplo, quando o usuário inicia o aplicativo, convém limpar todas as notificações do bloco. Caso as notificações estejam associadas ao tempo, recomendamos definir um tempo de expiração na notificação, em vez de limpar explicitamente a notificação.
@@ -209,7 +209,7 @@ Notificações periódicas ou enviadas por push só podem adicionar novas notifi
 
 ![bloco com notificação e bloco após ser limpo](images/sending-local-tile-03.png)
 
-## <span id="Next_steps"></span><span id="next_steps"></span><span id="NEXT_STEPS"></span>Próximas etapas
+## Próximas etapas
 
 
 **Como usar a fila de notificações**
@@ -224,7 +224,7 @@ Este artigo mostra como enviar a atualização do bloco como uma notificação. 
 
 Caso você não esteja usando [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki), esse método de entrega da notificação é outra alternativa.
 
-<span codelanguage=""></span>
+
 ```
 <colgroup>
 <col width="100%" />
@@ -243,7 +243,7 @@ public string XmlEncode(string text)
 }
 ```
 
-## <span id="Code_examples_without_NotificationsExtensions"></span><span id="code_examples_without_notificationsextensions"></span><span id="CODE_EXAMPLES_WITHOUT_NOTIFICATIONSEXTENSIONS"></span>Exemplos de código sem NotificationsExtensions
+## Exemplos de código sem NotificationsExtensions
 
 
 Caso você prefira trabalhar com XML bruto, em vez do pacote NuGet [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki), use esses exemplos de código alternativos para os três primeiros exemplos fornecidos neste artigo. O restante dos exemplos de código podem ser usados com [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) ou com XML bruto.
@@ -299,7 +299,7 @@ doc.LoadXml(content);
 var notification = new TileNotification(doc);
 ```
 
-## <span id="related_topics"></span>Tópicos relacionados
+## Tópicos relacionados
 
 
 * [Criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md)
@@ -320,6 +320,6 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

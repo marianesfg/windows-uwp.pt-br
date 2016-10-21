@@ -3,8 +3,9 @@ author: mcleblanc
 description: "O código que se integra ao dispositivo propriamente dito e aos sensores envolve a entrada do usuário e a saída para ele."
 title: Portabilidade do Windows Phone Silverlight para a UWP para modelo de aplicativo, dispositivo e E/S
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6b29e741c9cad68083502b25445b965fc266ef6e
+ms.openlocfilehash: f3b3e32461b7804639c1c0e8ff9b55fa57a23cf0
 
 ---
 
@@ -20,8 +21,7 @@ O código que se integra ao dispositivo propriamente dito e aos sensores envolve
 
 Seu aplicativo Windows Phone Silverlight contém o código para salvar e restaurar o estado do aplicativo e o estado da exibição, para que possa ser marcado para exclusão e depois reativado. O ciclo de vida de aplicativos da Plataforma Universal do Windows (UWP) tem forte paralelo com o dos aplicativos do Windows Phone Silverlight, já que eles foram criados com o mesmo objetivo de maximizar os recursos disponíveis para qualquer aplicativo que o usuário colocado em primeiro plano a qualquer momento. Você descobrirá que seu código se adaptará facilmente ao novo sistema.
 
-
-            **Observação** Pressionar o botão **Voltar** do hardware automaticamente encerra um aplicativo do Windows Phone Silverlight. Pressionar o botão **Voltar** em um dispositivo móvel *não* encerra automaticamente um aplicativo UWP. Em vez disso, ele fica suspenso e, em seguida, pode ser encerrado. Porém, esses detalhes são transparentes para um aplicativo que responde corretamente a eventos do ciclo de vida do aplicativo.
+**Observação** Pressionar o botão **Voltar** do hardware automaticamente encerra um aplicativo do Windows Phone Silverlight. Pressionar o botão **Voltar** em um dispositivo móvel *não* encerra automaticamente um aplicativo UWP. Em vez disso, ele fica suspenso e, em seguida, pode ser encerrado. Porém, esses detalhes são transparentes para um aplicativo que responde corretamente a eventos do ciclo de vida do aplicativo.
 
 Uma "janela de enumeração" é o período entre a entrada do aplicativo em inatividade e o acionamento do evento de suspensão pelo sistema. Para um aplicativo UWP, não existe uma janela de enumeração; o evento de suspensão é acionado assim que o aplicativo se torna inativo.
 
@@ -39,8 +39,7 @@ Não há suporte a aplicativos de lente para aplicativos UWP.
 
 O Windows 10 mudou a forma de pensar sobre alterações direcionadas ao aplicativo. O novo modelo conceitual é um aplicativo direcionado à UWP (Plataforma Universal do Windows) e executado em todos os dispositivos Windows. Ele também pode destacar recursos que sejam exclusivos de famílias de dispositivos específicas. Se necessário, o aplicativo também tem a opção de se limitar a uma ou mais famílias de dispositivos especificamente. Para saber mais sobre o que são famílias de dispositivos (e como decidir qual família de dispositivos priorizar), veja [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
-
-            **Observação** Recomendamos que você não use o sistema operacional ou a família de dispositivos para detectar a presença de recursos. Identificar o sistema operacional ou a família de dispositivos atual normalmente não é a melhor maneira de determinar se um recurso de sistema operacional ou de família de dispositivos está presente. Em vez de detectar o sistema operacional ou a família de dispositivos (e o número de versão), teste a presença do próprio recurso (consulte [Compilação condicional e código adaptável](wpsl-to-uwp-porting-to-a-uwp-project.md#conditional-compilation)). Se você precisar de um determinado sistema operacional ou uma família de dispositivos, certifique-se de usá-la como uma versão mínima compatível, em vez de criar o teste para essa versão.
+**Observação** Recomendamos que você não use o sistema operacional ou a família de dispositivos para detectar a presença de recursos. Identificar o sistema operacional ou a família de dispositivos atual normalmente não é a melhor maneira de determinar se um recurso de sistema operacional ou de família de dispositivos está presente. Em vez de detectar o sistema operacional ou a família de dispositivos (e o número de versão), teste a presença do próprio recurso (consulte [Compilação condicional e código adaptável](wpsl-to-uwp-porting-to-a-uwp-project.md#conditional-compilation)). Se você precisar de um determinado sistema operacional ou uma família de dispositivos, certifique-se de usá-la como uma versão mínima compatível, em vez de criar o teste para essa versão.
 
 Recomendamos várias técnicas para personalizar a interface do usuário do seu aplicativo em diferentes dispositivos. Continue a usar elementos de dimensionamento automático e painéis de layout dinâmico como você sempre fez. Em sua marcação XAML, continue usando tamanhos em pixels efetivos (anteriormente conhecidos como pixels de exibição) para que sua interface do usuário se adapte a diferentes resoluções e fatores de escala (consulte [Pixels de exibição/efetivos, distância de exibição e fatores de escala](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels).). E use os acionadores e setters adaptáveis do Gerenciador de Estado Visual para adaptar sua interface do usuário ao tamanho de janela (consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).).
 
@@ -69,45 +68,18 @@ Um aplicativo do Windows Phone Silverlight pode usar a classe **Microsoft.Phone.
 
 | Windows Phone Silverlight                                                               | UWP                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 
-            Propriedades **ApplicationCurrentMemoryUsage** e **ApplicationCurrentMemoryUsageLimit** | 
-            Propriedades [
-              **MemoryManager.AppMemoryUsage**
-            ](https://msdn.microsoft.com/library/windows/apps/dn633832) e [**AppMemoryUsageLimit**](https://msdn.microsoft.com/library/windows/apps/dn633836)                                                                                                                                    |
-| 
-            Propriedade **ApplicationPeakMemoryUsage**                                                 | Use as ferramentas de criação de perfil de memória no Visual Studio. Para saber mais, veja [Analisar o uso da memória](http://msdn.microsoft.com/library/windows/apps/dn645469.aspx).                                                                                                                                                                          |
-| 
-            Propriedade **DeviceFirmwareVersion**                                                      | 
-            Propriedade [
-              **EasClientDeviceInformation.SystemFirmwareVersion**
-            ](https://msdn.microsoft.com/library/windows/apps/dn608144) (somente para famílias de dispositivos de desktop)                                                                                                                                                                             |
-| 
-            Propriedade **DeviceHardwareVersion**                                                      | 
-            Propriedade [
-              **EasClientDeviceInformation.SystemHardwareVersion**
-            ](https://msdn.microsoft.com/library/windows/apps/dn608145) (somente família de dispositivos de desktop)                                                                                                                                                                             |
-| 
-            Propriedade **DeviceManufacturer**                                                         | 
-            Propriedade [
-              **EasClientDeviceInformation.SystemManufacturer**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701398) (somente família de dispositivos de desktop)                                                                                                                                                                                |
-| 
-            Propriedade **DeviceName**                                                                 | 
-            Propriedade [
-              **EasClientDeviceInformation.SystemProductName**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701401) (somente família de dispositivos de desktop)                                                                                                                                                                                 |
-| 
-            Propriedade **DeviceTotalMemory**                                                          | Sem equivalente                                                                                                                                                                                                                                                                                                                      |
-| 
-            Propriedade **IsKeyboardDeployed**                                                         | Sem equivalente. Essa propriedade fornece informações sobre teclados de hardware para dispositivos móveis, que não são comumente usados.                                                                                                                                                                                                        |
-| 
-            Propriedade **IsKeyboardPresent**                                                          | Sem equivalente. Essa propriedade fornece informações sobre teclados de hardware para dispositivos móveis, que não são comumente usados.                                                                                                                                                                                                        |
-| 
-            Evento **KeyboardDeployedChanged**                                                       | Sem equivalente. Essa propriedade fornece informações sobre teclados de hardware para dispositivos móveis, que não são comumente usados.                                                                                                                                                                                                        |
-| 
-            Propriedade **PowerSource**                                                                | Sem equivalente                                                                                                                                                                                                                                                                                                                      |
-| 
-            Evento **PowerSourceChanged**                                                            | Manipule o evento [**RemainingChargePercentChanged**](https://msdn.microsoft.com/library/windows/apps/jj207240) (somente família de dispositivos móveis). O evento é acionado quando o valor da propriedade [**RemainingChargePercent**](https://msdn.microsoft.com/library/windows/apps/jj207239) (somente família de dispositivos móveis) diminui em 1%. |
+| Propriedades **ApplicationCurrentMemoryUsage** e **ApplicationCurrentMemoryUsageLimit** | Propriedades [**MemoryManager.AppMemoryUsage**](https://msdn.microsoft.com/library/windows/apps/dn633832) e [**AppMemoryUsageLimit**](https://msdn.microsoft.com/library/windows/apps/dn633836)                                                                                                                                    |
+| Propriedade **ApplicationPeakMemoryUsage**                                                 | Use as ferramentas de criação de perfil de memória no Visual Studio. Para saber mais, veja [Analisar o uso da memória](http://msdn.microsoft.com/library/windows/apps/dn645469.aspx).                                                                                                                                                                          |
+| Propriedade **DeviceFirmwareVersion**                                                      | Propriedade [**EasClientDeviceInformation.SystemFirmwareVersion**](https://msdn.microsoft.com/library/windows/apps/dn608144) (somente para famílias de dispositivos de desktop)                                                                                                                                                                             |
+| Propriedade **DeviceHardwareVersion**                                                      | Propriedade [**EasClientDeviceInformation.SystemHardwareVersion**](https://msdn.microsoft.com/library/windows/apps/dn608145) (somente família de dispositivos de desktop)                                                                                                                                                                             |
+| Propriedade **DeviceManufacturer**                                                         | Propriedade [**EasClientDeviceInformation.SystemManufacturer**](https://msdn.microsoft.com/library/windows/apps/hh701398) (somente família de dispositivos de desktop)                                                                                                                                                                                |
+| Propriedade **DeviceName**                                                                 | Propriedade [**EasClientDeviceInformation.SystemProductName**](https://msdn.microsoft.com/library/windows/apps/hh701401) (somente família de dispositivos de desktop)                                                                                                                                                                                 |
+| Propriedade **DeviceTotalMemory**                                                          | Sem equivalente                                                                                                                                                                                                                                                                                                                      |
+| Propriedade **IsKeyboardDeployed**                                                         | Sem equivalente. Essa propriedade fornece informações sobre teclados de hardware para dispositivos móveis, que não são comumente usados.                                                                                                                                                                                                        |
+| Propriedade **IsKeyboardPresent**                                                          | Sem equivalente. Essa propriedade fornece informações sobre teclados de hardware para dispositivos móveis, que não são comumente usados.                                                                                                                                                                                                        |
+| Evento **KeyboardDeployedChanged**                                                       | Sem equivalente. Essa propriedade fornece informações sobre teclados de hardware para dispositivos móveis, que não são comumente usados.                                                                                                                                                                                                        |
+| Propriedade **PowerSource**                                                                | Sem equivalente                                                                                                                                                                                                                                                                                                                      |
+| Evento **PowerSourceChanged**                                                            | Manipule o evento [**RemainingChargePercentChanged**](https://msdn.microsoft.com/library/windows/apps/jj207240) (somente família de dispositivos móveis). O evento é acionado quando o valor da propriedade [**RemainingChargePercent**](https://msdn.microsoft.com/library/windows/apps/jj207239) (somente família de dispositivos móveis) diminui em 1%. |
 
 ## Localização
 
@@ -124,6 +96,6 @@ O próximo tópico é [Portando negócios e as camadas de dados](wpsl-to-uwp-bus
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

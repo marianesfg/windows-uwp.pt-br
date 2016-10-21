@@ -1,19 +1,16 @@
 ---
 description: Saiba como usar cores, tipografia e movimentos para definir a personalidade do seu aplicativo UWP com o guia de estilo UWP do Centro de Desenvolvimento do Windows.
-keywords: uwp style guide, design guidance, typography, motion, sound, motion, app development
+keywords: guia de estilo da UWP, diretrizes de design, tipografia, movimento, som, movimento, desenvolvimento de aplicativos
 title: "Guia de estilo da UWP – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 0a7f655a6f122787873adac76ac4dec9d775a154
-ms.openlocfilehash: d55aab04696441dbbcba0cbda61fd599fdacec67
+ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
+ms.openlocfilehash: 4a96db626f6f3682248e7e720c956fa343186b4a
 
 ---
+# Guia de estilo da UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-<div class="uwpd-banner">
-<h1 class="uwpd-ruledheader">Guia de estilo da UWP</h1>
-</div>
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -77,6 +74,6 @@ Como a representação visual da linguagem, a tarefa principal da tipografia é 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

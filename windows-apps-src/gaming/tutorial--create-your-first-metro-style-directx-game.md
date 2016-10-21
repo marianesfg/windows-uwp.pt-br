@@ -4,12 +4,12 @@ title: Criar um jogo simples UWP (Plataforma Universal do Windows) com DirectX
 description: "Este conjunto de tutoriais mostra como criar um jogo básico UWP (Plataforma Universal do Windows) em DirectX e C++."
 ms.assetid: 9edc5868-38cf-58cc-1fb3-8fb85a7ab2c9
 keywords:
-- DirectX game sample
-- game sample, Universal Windows Platform (UWP)
-- Direct3D 11 game
+- Jogo de exemplo DirectX
+- exemplo de jogo, Plataforma Universal do Windows (UWP)
+- Jogo Direct3D 11
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7891642d33e7391e05ae0639e36ff90e6697def6
+ms.openlocfilehash: 0e409f846c0f2e24c469c84610b22a0171e65018
 
 ---
 
@@ -78,6 +78,6 @@ O exemplo demonstra os conceitos do jogo:
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,23 +1,37 @@
 ---
 author: Jwmsft
+redirect_url: https://msdn.microsoft.com/windows/uwp/controls-and-patterns/dialogs
 Description: "Um submenu é um pop-up leve que é usado para mostrar temporariamente a interface do usuário relacionada ao que o usuário está fazendo no momento."
 title: "Menus de contexto e caixas de diálogo"
 ms.assetid: 7CA2600C-A1DB-46AE-8F72-24C25E224417
 label: Menus, dialogs, and popups
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 6572acefa25e464b6edaca9fee5b2b3e3b46ff3f
 
 ---
 # Menus, caixas de diálogo, submenus e pop-ups
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Menus, caixas de diálogo, menus suspensos e pop-ups exibem elementos transitórios da interface do usuário que aparecem quando o usuário os solicita ou quando acontece algo que requer notificação ou aprovação.
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn299030">Classe MenuFlyout</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Classe Flyout</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">Classe ContentDialog</a></li>
+</ul>
 
--   [Classe MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030)
--   [Classe Flyout](https://msdn.microsoft.com/library/windows/apps/dn279496)
--   [Classe ContentDialog](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)
+</div>
+</div>
+
+
+
+
+
 
 Um menu de contexto fornece ações instantâneas ao usuário. Ele pode ser preenchido com comandos de texto. Os menus de contexto podem ser ignorados com o toque ou clique em algum lugar fora do menu.
 
@@ -73,8 +87,7 @@ Aqui está um exemplo de uma caixa de diálogo de dois botões que apresenta ao 
 
 As caixas de diálogo são modais, o que significa que elas bloqueiam toda a interação com o aplicativo até que o usuário selecione um botão de caixa de diálogo. Para reforçar visualmente seu comportamento modal, as caixas de diálogo desenham uma camada de sobreposição que obscurece parcialmente a interface de usuário do aplicativo inacessível temporariamente.
 
-
-            **Observação** Quando Cancelar é uma das opções disponíveis da caixa de diálogo, os aplicativos podem optar por permitir que os usuários ignorem a caixa de diálogo, pressionando a tecla Escape. Esse comportamento não é incorporado ao controle, mas é um atalho comumente implementado.
+**Observação** Quando Cancelar é uma das opções disponíveis da caixa de diálogo, os aplicativos podem optar por permitir que os usuários ignorem a caixa de diálogo, pressionando a tecla Escape. Esse comportamento não é incorporado ao controle, mas é um atalho comumente implementado.
 
 Submenus e menus de contexto são controles light dismiss, o que significa que os usuários podem escolher entre uma variedade de ações para ignorar rapidamente as interfaces do usuário transitórias. Essas interações destinam-se a ser leves e sem bloqueio. As ações light dismiss incluem
 - Clicar ou tocar fora da interface de usuário transitória
@@ -100,29 +113,9 @@ Submenus e menus de contexto são controles light dismiss, o que significa que o
 -   Caixas de diálogo de erro exibem a mensagem de erro na caixa de diálogo, juntamente com quaisquer informações pertinentes. O único botão usado em uma caixa de diálogo de erro deve ser "Fechar" ou uma ação semelhante.
 -   Não use caixas de diálogo para erros que são contextuais a um local específico da página, como erros de validação (em campos de senha, por exemplo). Use a própria tela do aplicativo para mostrar erros embutidos.
 
-## Menus de contexto e submenus
+## Submenu
 
-Submenus e menus de contexto são controles relacionados que compartilham comportamentos de interação. A principal diferença entre esses controles é o tipo de conteúdo que eles aceitam.
-
-### MenuFlyout
-Um menu de contexto, implementado com a classe MenuFlyout, pode conter [**MenuFlyoutItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutitem.aspx), [**ToggleMenuFlyoutItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.togglemenuflyoutitem.aspx), [**MenuFlyoutSubItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutsubitem.aspx) e [**MenuFlyoutSeparator**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutseparator.aspx). Para mostrar qualquer outro tipo de interface do usuário, use Flyout.
-
-- **Diretrizes de utilização**
-  - Use um separador entre grupos de comandos em um menu de contexto para:
-    - Diferenciar grupos de comandos relacionados.
-    - Agrupar conjuntos de comandos.
-    - Dividir um conjunto previsível de comandos, como comandos da área de transferência (Recortar/Copiar/Colar), de comandos específicos do aplicativo ou do modo de exibição.
-  -   Em laptops e desktops, os menus de contexto e as dicas de ferramentas não se limitam à janela do aplicativo e podem aparecer parcialmente fora dela. Se o aplicativo tentar renderizar um menu de contexto completamente fora da janela, será gerada uma exceção.
-
-- **O que fazer e o que não fazer**
-  -   Mantenha os comandos do menu de contexto curtos. Comandos mais longos acabam truncados.
-  -   Use a primeira letra maiúscula em cada nome de comando.
-  -   Em qualquer menu de contexto, mostre o menor número possível de comandos.
-  -   Se a manipulação direta de um elemento de interface do usuário for possível, evite colocar esse comando em um menu de contexto. Um menu de contexto deve ser reservado para os comandos contextuais que não são detectáveis na tela.
-
-### Submenu
-
-Um submenu é um contêiner aberto que pode mostrar uma interface do usuário arbitrária como conteúdo.  Os submenus não têm partes visuais por si próprios, eles são simplesmente um controle de conteúdo. Os submenus têm uma margem e barras de rolagem opcionais adicionadas em torno de seu conteúdo. Para estilizar um submenu, modifique o `FlyoutPresenterStyle`.
+Um submenu é um contêiner aberto que pode mostrar uma interface do usuário arbitrária como conteúdo.  Os submenus não têm partes visuais por si próprios, eles são simplesmente um controle de conteúdo. Os submenus têm uma margem e barras de rolagem opcionais adicionadas em torno de seu conteúdo. Para estilizar um submenu, modifique o [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx).
 
 O código a seguir mostra um parágrafo de quebra de texto e torna o bloco de texto acessível para um leitor de tela.
 
@@ -144,7 +137,7 @@ O código a seguir mostra um parágrafo de quebra de texto e torna o bloco de te
 
 Submenus e menus de contexto são anexados a controles específicos. Quando visíveis, eles devem ser ancorados ao objeto de chamada e especificar sua posição relativa preferencial para o objeto: parte superior, esquerda, inferior ou direita. O submenu também tem um modo de posicionamento completo que tenta ampliá-lo e centralizá-lo dentro da janela do aplicativo.
 
-A [classe Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) inclui uma propriedade `Flyout` que permite que você especifique a interface do usuário transitória que se abrirá quando o usuário clicar ou tocar no botão.
+A [classe Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) inclui uma propriedade [**Flyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) que permite que você especifique a interface do usuário transitória que se abrirá quando o usuário clicar ou tocar no botão.
 
 ````xaml
 <Button Content="Click me">
@@ -156,24 +149,6 @@ A [classe Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xam
 </Button>
 ````
 
-Para abrir um menu de contexto, os usuários podem realizar uma das seguintes ações:
-- Clique com o botão direito com o mouse
-- Pressione e segure com toque
-- Digite Shift + F10
-- Pressione a tecla de menu do teclado
-- Pressione o botão de menu do gamepad
-
-Para abrir facilmente um menu de contexto ou submenu em resposta a qualquer uma das ações acima, os aplicativos podem aproveitar a nova propriedade [`ContextFlyout`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx), a classe base para a maioria dos controles.
-
-````xaml
-<Rectangle Height="100" Width="100" Fill="Red">
-  <Rectangle.ContextFlyout>
-     <MenuFlyout>
-        <MenuFlyoutItem Text="Close"/>
-     </MenuFlyout>
-  </Rectangle.Flyout>
-</Rectangle>
-````
 
 ## Artigos relacionados
 
@@ -184,6 +159,6 @@ Para abrir facilmente um menu de contexto ou submenu em resposta a qualquer uma 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

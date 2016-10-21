@@ -4,15 +4,15 @@ ms.assetid: 2fba38c4-11be-4058-bfa3-5f979390791c
 description: Saiba como manipular os eventos da classe AdControl.
 title: Eventos de AdControl em C#
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: f92cbbb00a064ce7569d44ad952838df4d21ac8c
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 969d668c89b40e37245a8168879842159b4f5c14
 
 ---
 
 # Eventos de AdControl em C\# #  
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Os exemplos a seguir demonstram como manipular os eventos da classe [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx). Esses exemplos pressupõem que você atribuiu anteriormente os manipuladores de eventos aos eventos **AdControl** em XAML. Para obter mais informações sobre como fazer isso, consulte [Exemplo das propriedades XAML](xaml-properties-example.md).
 
@@ -52,6 +52,6 @@ private void OnAdEngagedChanged(object sender, RoutedEventArgs e) {
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

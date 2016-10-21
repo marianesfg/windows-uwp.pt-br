@@ -6,8 +6,8 @@ ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c65bb525e953228e95286d5c6a5bffdb11475e53
-ms.openlocfilehash: 6084a49a8d8d9884c3bd777160ca219059d1654b
+ms.sourcegitcommit: fe012189566a20203b2bf8cae72f80655eeadfd1
+ms.openlocfilehash: 29a33550c3b8c80c1ae2c8349fc0b771717325f1
 
 ---
 
@@ -102,8 +102,7 @@ O ditado normalmente é usado quando um aplicativo não precisa compreender o si
 
 Uma caneta pode servir como um dispositivo apontador com precisão de pixel, como um mouse, e é o dispositivo ideal para entrada de tinta digital.
 
-
-            **Observação**  Existem dois tipos de dispositivos de caneta: ativo e passivo.
+**Observação**  Existem dois tipos de dispositivos de caneta: ativo e passivo.
   -   As canetas passivas não são eletrônicas, e emulam efetivamente a entrada touch de um dedo. Elas exigem uma exibição básica do dispositivo, que reconhece a entrada com base na pressão do contato. Como os usuários geralmente repousam a mão enquanto escrevem na superfície de entrada, os dados de entrada podem ficar poluídos devido a rejeição da palma da mão bem-sucedida.
   -   As canetas ativas são eletrônicas e podem funcionar com telas de dispositivos complexas para fornecer dados de entrada muito mais extensos (incluindo passagem do mouse ou dados de proximidade) ao sistema e seu aplicativo. A rejeição da palma da mão é muito mais robusta.
 
@@ -217,8 +216,7 @@ O OSK é um teclado de software visual que você pode usar em vez do teclado fí
 
 O teclado virtual é um teclado de software visual usado para entrada de texto por toque. O teclado virtual não é uma substituição ao OSK, pois é usado apenas para entrada de texto (ele não emula o teclado de hardware) e só aparece quando um campo de texto ou outro controle de texto editável é focalizado. O teclado virtual não oferece suporte a comandos de aplicativo ou do sistema.
 
-
-            **Observação**  O OSK tem prioridade sobre o teclado virtual, que não será mostrado se o OSK estiver presente.
+**Observação**  O OSK tem prioridade sobre o teclado virtual, que não será mostrado se o OSK estiver presente.
 
 Em geral, um teclado é:
 
@@ -334,6 +332,6 @@ Assim como as pessoas usam uma combinação de voz e gestos ao se comunicar uns 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

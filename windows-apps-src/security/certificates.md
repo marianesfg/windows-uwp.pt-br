@@ -3,8 +3,9 @@ title: "Introdução a certificados"
 description: Este artigo discute o uso de certificados em aplicativos da Plataforma Universal do Windows (UWP).
 ms.assetid: 4EA2A9DF-BA6B-45FC-AC46-2C8FC085F90D
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 84596f70a5deee6cebb5f4bac442a6aaca8210cd
+ms.openlocfilehash: e46d31e2f90b9336ea19632099741c1957521578
 
 ---
 
@@ -99,6 +100,6 @@ Um certificado X.509 versão 3 contém os campos definidos na versão 1 e 2, e a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

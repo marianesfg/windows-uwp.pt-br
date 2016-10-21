@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para desktop
 description: "Saiba como o Windows Device Portal abre diagnósticos e automação em sua área de trabalho do Windows."
-ms.sourcegitcommit: f09f0233ec11b41989cf52da3c5e8cb37a97b607
-ms.openlocfilehash: 7be27f5fb15676c5330f22995dd044899eddfd3d
+translationtype: Human Translation
+ms.sourcegitcommit: b5d259172a7e3975d48a5ba669cfbe345869aebf
+ms.openlocfilehash: 3436a95124071045c8ec89ed8ddf644ccc80c29f
 
 ---
 # Device Portal para desktop
@@ -73,8 +74,10 @@ Se você quiser selecionar números de porta para o Device Portal (como 80 e 443
     - HttpPort: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTP.  
     - HttpsPort: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTPS.
 
-## Falha ao instalar o pacote do Modo de Desenvolvedor
-Às vezes, devido a problemas de rede ou de compatibilidade, o Modo de Desenvolvedor não será instalado corretamente. O pacote do Modo de Desenvolvedor é necessário para a implantação remota – Device Portal e SSH – mas não para o desenvolvimento local.  
+## Falha ao instalar o pacote do Modo de Desenvolvedor ou iniciar o Device Portal
+Às vezes, devido a problemas de rede ou de compatibilidade, o Modo de Desenvolvedor não será instalado corretamente. O pacote do Modo de Desenvolvedor é necessário para a implantação **remota** – Device Portal e SSH – mas não para o desenvolvimento local.  Mesmo se você encontrar esses problemas, você ainda pode implementar seu aplicativo localmente usando o Visual Studio. 
+
+Consulte o fórum [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para encontrar soluções alternativas para esses problemas e muito mais. 
 
 ### Falha ao localizar o pacote
 
@@ -105,6 +108,6 @@ Para resolver este problema:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

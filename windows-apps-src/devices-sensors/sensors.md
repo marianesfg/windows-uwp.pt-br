@@ -5,7 +5,7 @@ title: Sensores
 description: "Os sensores permitem ao aplicativo identificar a relação entre um dispositivo e o mundo físico ao redor dele. Os sensores podem informar ao aplicativo a direção, a orientação e o movimento do dispositivo."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 15f9fbdc48d43feb02f46313cea4001392d7f0fe
+ms.openlocfilehash: 73ee42a275d0c0f0a08ddf19ddde4eabd21a7191
 
 ---
 # Sensores
@@ -122,13 +122,13 @@ O [**SimpleOrientationSensor**](https://msdn.microsoft.com/library/windows/apps/
 
 Um aplicativo de leitura que altera sua exibição com base no dispositivo sendo segurado em paralelo ou perpendicular ao chão usará os valores de SimpleOrientationSensor para determinar como o dispositivo está sendo segurado.
 
-## Amostras
+## Exemplos
 
 Para obter alguns exemplos que demonstram o uso de alguns dos diferentes sensores, consulte [Exemplos de sensores do Windows](http://go.microsoft.com/fwlink/?LinkID=616041).
 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

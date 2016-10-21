@@ -1,30 +1,58 @@
 ---
 author: payzer
-title: "Práticas recomendadas para Xbox"
+title: "Práticas recomendadas para o Xbox"
 description: Como otimizar seu aplicativo para Xbox.
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: bf3f89d29b947c39f818de297556cc438da8901a
+ms.sourcegitcommit: 422ab09117ad25183f352992a7d21fe511a5f3bb
+ms.openlocfilehash: 6198abcdde4a30df815ff9f36d062b8db3a37fab
 
 ---
 
-# Práticas recomendadas para Xbox
-Se você deseja criar a melhor experiência para Xbox ou trabalha com o código que usa em mais de uma plataforma de TV, recomendamos que você examine as informações a seguir.  
+# Práticas recomendadas para o Xbox
+Por padrão, todos os aplicativos UWP serão executados em Xbox One sem nenhum esforço extra de sua parte. No entanto, se quiser que o aplicativo brilhe, encante os clientes e concorra com as melhores experiências de aplicativo em Xbox, você deverá seguir as práticas abaixo.
+  > [!NOTE]
+  > Antes de começar, examine as diretrizes de design dispostas em [Projetando para TV e Xbox](../input-and-devices/designing-for-tv.md).   
 
-## Como desabilitar o modo do mouse
-Modo de mouse é o padrão. É altamente recomendável desativar essa opção e otimizar para navegação direcional de controlador. [Saiba mais](how-to-disable-mouse-mode.md)
+## Para criar as melhores experiências para Xbox One
 
-## Como desenhar para a borda da tela
-Por padrão, haverá bordas ao redor de seu aplicativo. Para remover essas bordas e poder usar a altura e a largura totais da tela, você pode desativar o dimensionamento automático.  [Saiba mais](turn-off-overscan.md)
+### *Desativar:* modo mouse
+Os usuários do Xbox adoram o controlador. Para otimizar a entrada do controlador, [desabilite o modo mouse](how-to-disable-mouse-mode.md) e habilite a navegação direcional (também conhecida como [foco X-Y](../input-and-devices/designing-for-tv.md#xy-focus-navigation-and-interaction)). Tome cuidado com interceptações de foco interface do usuário inacessível.
 
-## Como desabilitar a colocação em escala
-Por padrão, seu aplicativo será dimensionado para 200% se você estiver usando XAML ou 150% para HTML. É possível desativar o dimensionamento automático.  [Saiba mais](disable-scaling.md)
+### *Desenhe:* um retângulo de foco apropriado para uma experiência de 10 pés
+Como a maioria dos usuários do Xbox permanece sentada na sala de estar diante da TV, lembre-se de que o retângulo de foco padrão é difícil de ver a dez pés de distância. Para garantir que o elemento da interface do usuário com o foco de entrada esteja claramente visível para o usuário sempre, siga as diretrizes de [Foco visual](../input-and-devices/designing-for-tv.md#focus-visual). Em XAML, você terá esse comportamento gratuitamente quando o aplicativo for executado em Xbox, mas aplicativos HTML precisarão usar um estilo CSS personalizado.
 
-## Projetando para TV e Xbox
-Para obter informações sobre as práticas de design, consulte o tópico [Projetando para Xbox e TV](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode).
+### *Integre-se:* à classe SystemMediaTransportControls 
+Os usuários do Xbox querem controlar aplicativos de mídia com o Xbox Media Remote, a Cortana (especialmente os comandos de voz "Executar" e "Pausar") e o Xbox SmartGlass. Para obter esses recursos gratuitamente, o aplicativo deve usar a classe [SystemMediaTransportControls](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.systemmediatransportcontrols.aspx), incluída automaticamente nos controles de mídia do Xbox. Se o aplicativo tiver controles de mídia personalizados, verifique se eles se integram à classe **SystemMediaTransportControls** para oferecer esses recursos aos usuários. Se você estiver criando um aplicativo de música em segundo plano, integre-o à classe **SystemMediaTransportControls** para garantir que os controles de música em segundo plano funcionem corretamente na guia multitarefa do Xbox.
+
+### *Use:* a interface do usuário adaptável para aplicativos ajustados
+Um dos recursos exclusivos do Xbox One é que os usuários podem ajustar aplicativos como a Cortana próximos a qualquer outro aplicativo, logo, o aplicativo deve responder bem quando executado em *modo de preenchimento*. Implemente a [interface do usuário adaptável](../get-started/universal-application-platform-guide.md#design-adaptive-ui-with-adaptive-panels) e não se esqueça de testar o aplicativo durante o desenvolvimento ajustando um aplicativo próximo dele.
+
+### *Considere:* desenhar a borda da tela
+Muitas TVs cortam as bordas da tela, de maneira que todo o conteúdo importante do aplicativo deva ser exibido dentro da [área de segurança da TV](../input-and-devices/designing-for-tv.md#tv-safe-area). A UWP usa *overscan* para manter o conteúdo dentro da área de segurança da TV, mas esse comportamento padrão pode desenhar uma borda evidenciada em torno do aplicativo. Para proporcionar a melhor experiência, desative o comportamento padrão e siga as instruções em [Como desenhar a interface para a borda da tela](turn-off-overscan.md).
+> [!IMPORTANT]
+  > Se você desabilitar overscan, será sua responsabilidade se certificar de que os elementos interativos e o texto permaneçam dentro da área de segurança da TV. 
+
+### *Considere:* o uso de cores seguras para TV 
+As TVs não manipulam intensidades de cores extremas, assim como fazem os monitores de computadores. Evite cores de alta intensidade no aplicativo, de maneira que os usuários não vejam efeitos de faixa estranhos ou uma imagem lavada. Além disso, lembre-se de que as diferenças entre as TVs indicam que as cores que aparente corretas na *sua* TV podem parecer muito diferentes para os usuários. Leia [Cores de TV](../input-and-devices/designing-for-tv.md#colors) para entender como deixar o aplicativo bem para todo mundo!
+
+### *Lembre-se:* você pode desabilitar a escala
+Os aplicativos UWP são dimensionados automaticamente para garantir que os elementos da interface do usuário, como controles e fontes, permaneçam legíveis em todos os dispositivos. Os aplicativos que usam XAML são dimensionados em 200%, e os aplicativos que usam HTML são dimensionados em 150%. Se você quiser mais controle sobre a aparência do aplicativo no Xbox, desabilite o fator de escala padrão para usar as dimensões de pixel reais de uma HDTV (1920x1080). Observe [Como desativar a colocação em escala](disable-scaling.md) e [Dimensionamento e pixels efetivos](../layout/design-and-ui-intro.md#effective-pixels-and-scaling) para obter informações sobre como personalizar o aplicativo para deixá-lo incrível no Xbox.
+
+## Channel 9
+A seguir, no [Channel 9](https://channel9.msdn.com/), uma excelente fonte de informações para a compilação de aplicativos incríveis em Xbox:
+
+- [Compilação de excelentes aplicativos da Plataforma Universal do Windows (UWP) para Xbox](https://channel9.msdn.com/Events/Build/2016/B883)
+- [Adaptar o aplicativo para Xbox One e TV](https://channel9.msdn.com/Events/Build/2016/T651-R1)
+- [Desenvolvimento de UWP 1: compilação de uma interface do usuário adaptável](https://channel9.msdn.com/Events/Build/2016/L724-R1)
+- [Aplicativos Web além do navegador: plataforma cruzada encontra entre dispositivos](https://channel9.msdn.com/Events/Build/2016/B888)
 
 
-<!--HONumber=Jul16_HO2-->
+## Consulte também
+- [UWP no Xbox One](index.md)
+
+
+
+
+<!--HONumber=Aug16_HO4-->
 
 

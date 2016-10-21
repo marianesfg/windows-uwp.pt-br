@@ -3,8 +3,9 @@ author: drewbatgit
 ms.assetid: 7DBEE5E2-C3EC-4305-823D-9095C761A1CD
 description: "Este artigo mostra como capturar uma sequência de fotos variável que permite que você capture vários quadros de imagem em sucessão rápida e configure cada quadro para usar diferentes configurações de foco, flash, ISO, exposição e compensação de exposição."
 title: "Sequência de fotos variável"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c6be6c0ea255c38bba65550ae44c7f88c140ca0f
+translationtype: Human Translation
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: b4f9bc3ad0340a893474360a542f35315ef01712
 
 ---
 
@@ -17,8 +18,8 @@ Este artigo mostra como capturar uma sequência de fotos variável que permite q
 
 Se você deseja capturar imagens em HDR, mas não deseja implementar seu próprio algoritmo de processamento, use a API [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) para utilizar os recursos HDR nativos do Windows. Para obter mais informações, consulte [Captura de fotos em HDR (High Dynamic Range)](high-dynamic-range-hdr-photo-capture.md).
 
-**Observação**  
-Este artigo se baseia em conceitos e códigos discutidos em [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
+> [!NOTE] 
+> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
 
 ## Configurar seu aplicativo para usar a captura de sequência de fotos variável
 
@@ -89,7 +90,8 @@ Quando você terminar de capturar as sequências de fotos variáveis ou seu apli
 
 ## Tópicos relacionados
 
-* [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Câmera](camera.md)
+* [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -100,6 +102,6 @@ Quando você terminar de capturar as sequências de fotos variáveis ou seu apli
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

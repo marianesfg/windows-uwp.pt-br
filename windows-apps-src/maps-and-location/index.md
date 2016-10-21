@@ -3,21 +3,21 @@ author: msatranjr
 title: "Visão geral de mapas e local"
 description: "Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo."
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
+translationtype: Human Translation
 ms.sourcegitcommit: a3240047ec77ada0c5f6b5586eee2404353889f6
-ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
+ms.openlocfilehash: 327185d655d8495901cfa9fa0a99c0af3a8cdae0
 
 ---
 
 # Visão geral de mapas e local
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo.
 
-> 
-            **Dica**  Para saber mais sobre como usar mapas e local no aplicativo, baixe as seguintes amostras do [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
+> **Dica**  Para saber mais sobre como usar mapas e local no aplicativo, baixe as seguintes amostras do [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
 -   [Amostra de mapa da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 -   [Amostra de geolocalização da UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 
@@ -85,6 +85,6 @@ O aplicativo pode iniciar o aplicativo Mapas do Windows conforme mostrado aqui p
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

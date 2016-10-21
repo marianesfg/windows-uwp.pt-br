@@ -5,7 +5,7 @@ title: Emparelhar dispositivos
 description: "Alguns dispositivos precisam ser emparelhados antes de serem usados. O namespace Windows.Devices.Enumeration oferece suporte a três maneiras diferentes de emparelhar dispositivos."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: e719e0ff5f97822f3d0dc937182131bf7f4224eb
+ms.openlocfilehash: 502a1a650d327e914ffef049278581851ad4ec3b
 
 ---
 # Emparelhar dispositivos
@@ -23,8 +23,7 @@ Alguns dispositivos precisam ser emparelhados antes de serem usados. O namespace
 -   Emparelhamento básico
 -   Emparelhamento personalizado
 
-
-              **Dica**  Alguns dispositivos não precisam ser emparelhados para serem usados. Isso é abordado na seção sobre emparelhamento automático.
+**Dica**  Alguns dispositivos não precisam ser emparelhados para serem usados. Isso é abordado na seção sobre emparelhamento automático.
 
  
 
@@ -77,6 +76,6 @@ Para baixar uma amostra de como usar as APIs [**Windows.Devices.Enumeration**](h
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

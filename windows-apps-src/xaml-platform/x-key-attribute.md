@@ -3,8 +3,9 @@ author: jwmsft
 description: "Identifica de forma exclusiva os elementos que são criados e usados como referência de recursos e que existam em um ResourceDictionary."
 title: Atributo xKey
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 00d801dc3ebb8894f8e21ba0c1b9f3aecc981f30
+translationtype: Human Translation
+ms.sourcegitcommit: ebda34ce4d9483ea72dec3bf620de41c98d7a9aa
+ms.openlocfilehash: 35d4e02ce477757e1a97a54fd9d200dd31675f4d
 
 ---
 
@@ -58,9 +59,7 @@ CombiningCharacter::= none
 
 Geralmente, os elementos filhos de um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) incluem um atributo **x:Key** que especifica um valor de chave exclusivo nesse dicionário. A exclusividade da chave é fiscalizada em tempo de carregamento pelo processador XAML. Os valores **x:Key** que não são exclusivos geram exceções de análise de XAML. Se for solicitado por [Extensão de marcação {StaticResource}](staticresource-markup-extension.md), uma chave não resolvida também vai gerar exceções de análise de XAML.
 
-
-            **x:Key** e [x:Name](x-name-attribute.md) não são conceitos idênticos. 
-           **x:Key** é usado exclusivamente em dicionários de recursos. x:Name é usado em todas as áreas de XAML. Uma chamada [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) que usa um valor de chave não recuperará um recurso inserido.
+**x:Key** e [x:Name](x-name-attribute.md) não são conceitos idênticos. **x:Key** é usado exclusivamente em dicionários de recursos. x:Name é usado em todas as áreas de XAML. Uma chamada [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) que usa um valor de chave não recuperará um recurso inserido. Objetos definidos em um dicionário de recursos podem ter um **x:Key** um **x:Name** ou ambos. A chave e o nome não precisam corresponder.
 
 Na sintaxe mostrada, observe que o objeto [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) está implícito no modo como o processador XAML produz um novo objeto para popular uma coleção de [**Resources**](https://msdn.microsoft.com/library/windows/apps/br208740).
 
@@ -71,6 +70,6 @@ Um item no dicionário de recursos pode omitir um valor para **x:Key** quando fo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

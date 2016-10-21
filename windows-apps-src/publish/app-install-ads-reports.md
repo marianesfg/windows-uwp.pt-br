@@ -3,8 +3,9 @@ author: jnHs
 title: "Relatório de anúncios de instalação de aplicativos"
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
 description: 
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: acd91c578d7222e5fb115a4784f3360333f2a063
+ms.openlocfilehash: 45dd0b2cb34e724313fe431a5b8b7a6df9b5a5cf
 
 ---
 
@@ -12,8 +13,8 @@ ms.openlocfilehash: acd91c578d7222e5fb115a4784f3360333f2a063
 
 Há duas maneiras de acessar a página de **relatórios de anúncios de instalação de aplicativo** no Centro de Desenvolvimento:
 
--   No menu de navegação esquerdo na página do seu aplicativo, clique em **Análises**&gt;**Anúncios de instalação de aplicativo**.
--   No menu de navegação esquerdo na página do seu aplicativo, clique em **Monetização**&gt;**Promover seu aplicativo** e, em seguida, no link **Relatório** de uma campanha.
+-   Do menu de navegação à esquerda da página de seu aplicativo, clique em **Análises** &gt; **Anúncios de instalação de aplicativo**.
+-   Do menu de navegação à esquerda da página de seu aplicativo, clique em **Monetização** &gt; **Promova seu aplicativo** e, em seguida, clique no link **Relatório** de uma campanha.
 
 Aqui, você verá duas seções: **Desempenho do anúncio** e **Histórico de cobrança de conta**.
 
@@ -21,12 +22,9 @@ Aqui, você verá duas seções: **Desempenho do anúncio** e **Histórico de co
 
 Aqui, as métricas de desempenho são exibidas como linhas plotadas em um gráfico, com tempo no eixo x e a métrica selecionada no eixo y. O relatório padrão mostra impressões. Clique nos cabeçalhos de guia para exibir dados de outras métricas de desempenho. As métricas registradas aqui são:
 
--   
-            **Impressões**: a quantidade de vezes em que seu anúncio foi exibido.
--   
-            **Cliques**: a quantidade de vezes em que alguém clicou em seu anúncio.
--   
-            **Instalações**: a quantidade de vezes em que alguém clicou em seu anúncio e instalou seu aplicativo. Veja a seguir para saber mais sobre o rastreamento de instalação.
+-   **Impressões**: a quantidade de vezes em que seu anúncio foi exibido.
+-   **Cliques**: a quantidade de vezes em que alguém clicou em seu anúncio.
+-   **Instalações**: a quantidade de vezes em que alguém clicou em seu anúncio e instalou seu aplicativo. Veja a seguir para saber mais sobre o rastreamento de instalação.
 
 Você pode exibir dados de desempenho de até quatro campanhas publicitárias diferentes de cada vez. Clique em **Mais campanhas** para escolher quais campanhas exibir. Você também pode clicar no símbolo de sinal de subtração ao lado de uma campanha exibida para removê-la.
 
@@ -40,8 +38,7 @@ Monitorando instalações de suas campanhas publicitárias, os desenvolvedores p
 
 ### Como as instalações são medidas?
 
-
-            As campanhas publicitárias **Promova seu aplicativo** fornecem impressões de anúncios dentro de outros aplicativos. Os usuários que são expostos ao anúncio têm probabilidade de instalar o aplicativo em uma de duas maneiras: clicando no anúncio ou com base na exibição da impressão de anúncios.
+As campanhas publicitárias **Promova seu aplicativo** fornecem impressões de anúncios dentro de outros aplicativos. Os usuários que são expostos ao anúncio têm probabilidade de instalar o aplicativo em uma de duas maneiras: clicando no anúncio ou com base na exibição da impressão de anúncios.
 
 Se for mostrado um anúncio para um usuário e se ele instalar o aplicativo dentro de 24 horas (clicando no anúncio ou indo diretamente para a página do aplicativo na Loja), essa instalação é atribuída a campanha que proporcionou a impressão.
 
@@ -73,6 +70,6 @@ Aqui você pode ver todas as transações associadas à sua conta. Para cada tra
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

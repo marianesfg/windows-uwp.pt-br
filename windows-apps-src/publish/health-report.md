@@ -3,8 +3,9 @@ author: jnHs
 Description: "O relatório Integridade no painel Centro de Desenvolvimento do Windows permite que você obtenha dados relacionados ao desempenho e à qualidade de seu aplicativo, incluindo falhas e eventos sem resposta."
 title: "Relatório de integridade"
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 78bedc3e0551feef8efe61b3b664145e29281714
+ms.openlocfilehash: 72c5974da441e76f2fad8e844d3391999e42cd72
 
 ---
 
@@ -13,18 +14,15 @@ ms.openlocfilehash: 78bedc3e0551feef8efe61b3b664145e29281714
 
 O relatório **Integridade** no painel Centro de Desenvolvimento do Windows permite que você obtenha dados relacionados ao desempenho e à qualidade de seu aplicativo, incluindo falhas e eventos sem resposta. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Onde for aplicável, você pode exibir rastreamentos de pilha para depuração adicional. Como alternativa, você pode recuperar esses dados de forma programática usando a [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
-> 
-            **Observação**  Caso você já tenha publicado aplicativos anteriormente e exibido dados de desempenho nos painéis anteriores, talvez perceba um número maior de falhas e eventos relatados aqui. Isso ocorre porque podemos incluir mais dados neste relatório para oferecer a você uma visão mais completa.
+> **Observação**  Caso você já tenha publicado aplicativos anteriormente e exibido dados de desempenho nos painéis anteriores, talvez perceba um número maior de falhas e eventos relatados aqui. Isso ocorre porque podemos incluir mais dados neste relatório para oferecer a você uma visão mais completa.
 
 ## Aplicar filtros
 
 
 Na parte superior da página, você pode expandir os **Aplicar filtros** para filtrar todos os dados dessa página por intervalo de datas e/ou por versão de pacote.
 
--   
-            **Data**: o filtro padrão é **Últimas 72 horas**, mas você pode expandi-lo até **Últimos 6 meses**.
--   
-            **Versão do pacote**: a configuração padrão é **Todas as versões**. Se o seu aplicativo inclui mais de uma versão do pacote, você pode escolher uma específica.
+-   **Data**: o filtro padrão é **Últimas 72 horas**, mas você pode expandi-lo até **Últimos 6 meses**.
+-   **Versão do pacote**: a configuração padrão é **Todas as versões**. Se o seu aplicativo inclui mais de uma versão do pacote, você pode escolher uma específica.
 
 As informações de todos os gráficos listados abaixo refletirão o período de tempo selecionado na seção **Aplicar filtros**. Por padrão, isso incluirá dados de todas as versões do pacote, a menos que você tenha usado **Aplicar filtros** para escolher apenas um.
 
@@ -66,6 +64,6 @@ Essas informações se baseiam em uma porcentagem do total de eventos. Na parte 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

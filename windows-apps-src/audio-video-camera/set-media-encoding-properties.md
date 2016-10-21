@@ -2,13 +2,14 @@
 author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
 description: "Este artigo mostra como usar a interface IMediaEncodingProperties para definir a resolução e a taxa de quadro do fluxo de visualização da câmera e de fotos e vídeo capturados."
-title: "Definir propriedades de codificação de mídia"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d7b44ce9db2e3d540036525c4b43e155a9500010
+title: "Definir propriedades de codificação de mídia para MediaCapture"
+translationtype: Human Translation
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: 1b20578fe52c004a55c5099ccb89e8c180571009
 
 ---
 
-# Definir propriedades de codificação de mídia
+# Definir propriedades de codificação de mídia para MediaCapture
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -19,8 +20,8 @@ Perfis de câmera oferecem uma maneira mais avançada de descobrir e definir as 
 
 O código neste artigo foi adaptado da [amostra CameraResolution](http://go.microsoft.com/fwlink/p/?LinkId=624252&clcid=0x409). Você pode baixar a amostra para ver o código usado no contexto ou usar a amostra como ponto de partida para seu próprio aplicativo.
 
-**Observação**  
-Este artigo se baseia em conceitos e códigos discutidos em [Capturar fotos e vídeos com o MediaCapture](capture-photos-and-video-with-mediacapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que seu aplicativo já tenha uma instância do MediaCapture inicializada corretamente.
+> [!NOTE] 
+> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que seu aplicativo já tenha uma instância do MediaCapture inicializada corretamente.
 
 ## Uma classe auxiliar de propriedades de codificação de mídia
 
@@ -89,6 +90,6 @@ Para garantir que os fluxos de captura de foto ou de vídeo correspondam à taxa
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

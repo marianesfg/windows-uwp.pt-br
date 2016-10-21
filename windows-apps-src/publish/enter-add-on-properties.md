@@ -1,68 +1,78 @@
-﻿---
+---
 author: jnHs
-Description: When submitting an add-on, the options on the Properties page help determine the behavior of your add-on when offered to customers.
-title: Enter add-on properties
+Description: "Ao enviar um complemento, as opções da página Propriedades ajudam a determinar o comportamento de seu complemento quando oferecido aos clientes."
+title: Inserir propriedades de complemento
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
+translationtype: Human Translation
+ms.sourcegitcommit: e3bc74fab0ae75c35581e33323100376ad755e9c
+ms.openlocfilehash: 1c030f7d79de37e20620cf56a30b1c1570e9b90b
+
 ---
 
-# Enter add-on properties
+# Inserir propriedades de complemento
 
 
-When submitting an add-on, the options on the **Properties** page help determine the behavior of your add-on when offered to customers.
+Ao enviar um complemento, as opções da página **Propriedades** ajudam a determinar o comportamento de seu complemento quando oferecido aos clientes.
 
-## Product type
+## Tipo de produto
 
-Your product type is selected when you first [create the add-on](set-your-add-on-product-id.md). The product type you selected is displayed here, but you can't change it.
+O tipo de produto é selecionado quando você [cria o complemento primeiro](set-your-add-on-product-id.md). O tipo de produto que você selecionou é exibido aqui, mas não é possível alterá-lo.
 
-> **Note**  If you haven't published the add-on. you can delete the submission and start again if you need to choose a different product type. 
+> **Observação**  Se você não tiver publicado o complemento, poderá excluir o envio e começar novamente se precisar escolher um tipo de produto diferente. 
 
-Depending on the product type you selected, you may see one of the following fields:
+Dependendo do tipo de produto selecionado, você pode ver um dos seguintes campos:
 
-### Product lifetime
-If you selected **Durable** for your product type, the **Product lifetime** is shown here. The default **Product lifetime** for a durable add-on is **Forever**, which means the add-on never expires. If you prefer, you can set the **Product lifetime** so that the add-on expires after a set duration (with options from 1-365 days). 
+### Tempo de vida do produto
+Se você selecionou **Durável** para seu tipo de produto, o **Ciclo de vida do produto** será mostrado aqui. O **Ciclo de vida do produto** padrão de um complemento durável é **Para sempre**, o que significa que o complemento nunca expira. Se preferir, você pode definir o **Ciclo de vida do produto** para que o complemento expire após uma duração definida (com opções de 1 a 365 dias). 
 
-### Quantity
-If you selected **Store-managed consumable** for your product type, the **Quantity** is shown here. You'll need to enter a number between 1 and 1000000. This quantity will be granted to the customer when they acquire your add-on, and the Store will track the balance as the app reports the customer’s consumption of the add-on.
+### Quantidade
+Se você selecionou **Consumível gerenciado pela Loja** para seu tipo de produto, a **Quantidade** será mostrada aqui. Você precisará inserir um número entre 1 e 1000000. Essa quantidade será concedida para o cliente quando ele adquirir o complemento, e a Loja detectará o equilíbrio conforme o aplicativo relatar o consumo do cliente do complemento.
 
-## Content type
+## Tipo de conteúdo
 
-Regardless of your add-on's product type, you'll also need to indicate the type of content you're offering. For most add-ons, the content type should be **Electronic software download**. If another option from the list seems to describe your add-on better (for example, if you are offering a music download or an e-book), select that option instead. 
+Independentemente do tipo de produto do complemento, você também precisará indicar o tipo de conteúdo que está oferecendo. Para a maioria dos complementos, o tipo de conteúdo deve ser **Download de software eletrônico**. Se outra opção da lista parecer descrever melhor seu complemento (por exemplo, se você estiver oferecendo um download de música ou um livro eletrônico), selecione essa opção. 
 
-These are the possible options for an add-on's content type:
+Estas são as opções de tipo de conteúdo possíveis do complemento:
 
--   Electronic software download
--   Electronic books
--   Electronic magazine single issue
--   Electronic newspaper single issue
--   Music download
--   Music streaming
--   Online data storage/services
--   Video download
--   Video streaming
--   Software as a service
+-   Download de software eletrônico
+-   Livros eletrônicos
+-   Edição única de revista eletrônica
+-   Edição única de jornal eletrônico
+-   Download de música
+-   Streaming de músicas
+-   Serviços/armazenamento de dados online
+-   Download de vídeo
+-   Streaming de vídeos
+-   Software como um serviço
 
-## Keywords
+## Palavras-chave
 
-You have the option to provide up to ten keywords of up to 30 characters each for each add-on you submit. Your app can then query for add-ons that match these words. This feature lets you build screens in your app that can load add-ons without you having to directly specify the product ID in your app's code. You can then change the add-on's keywords anytime, without having to make code changes in your app or submit the app again.
+Você tem a opção de fornecer até dez as palavras-chave de até 30 caracteres para cada complemento que você enviar. Em seguida, seu aplicativo pode consultar complementos que correspondam a essas palavras. Esse recurso permite que você crie telas em seu aplicativo que podem carregar complementos sem precisar especificar a ID do produto diretamente no código do seu aplicativo. Em seguida, você pode alterar as palavras-chave do complemento a qualquer momento, sem precisar fazer alterações no código em seu aplicativo ou enviar o aplicativo novamente.
 
-> **Note**  Keywords are not available for use in packages targeting Windows 8 and Windows 8.1.
+> **Observação**  Palavras-chave não estão disponíveis para uso em pacotes para o Windows 8 e o Windows 8.1.
 
-## Custom developer data
+## Dados de desenvolvedor personalizados
 
-You can enter up to 3000 characters into the **Custom developer data** field to provide extra context for your in-app product.
+Você pode digitar até 3000 caracteres no campo **Dados de desenvolvedor personalizados** para fornecer contexto extra para seu produto no aplicativo.
 
-> **Note** This field was formerly called **Tag**.
+> **Observação** Esse campo antes era chamado de **Tag**.
 
-For example, let’s say you have a game, and you’re selling a bag of gold coins as an add-on. Using the **Custom developer data** field, the app can query for this bag of gold. You can adjust the value at any time (in this case, the number of coins in your bag) by updating the info in the add-on's **Custom developer data** field, without having to make code changes in your app or submit the app again.
+Por exemplo, digamos que você tenha um jogo, e está vendendo uma bolsa de moedas de ouro como um complemento. Usando o campo **Dados de desenvolvedor personalizados**, o aplicativo pode consultar essa bolsa de ouro. Você pode ajustar o valor a qualquer momento (neste caso, o número de moedas em sua bolsa) atualizando as informações do campo **Dados de desenvolvedor personalizados** do complemento, sem precisar fazer alterações no código em seu aplicativo ou enviar o aplicativo novamente.
 
-> **Note**  The **Custom developer data** field is not available for use in packages targeting Windows 8 and Windows 8.1.
+> **Observação**  O campo **Dados de desenvolvedor personalizados** não está disponível para uso em pacotes para o Windows 8 e o Windows 8.1.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO5-->
 
 

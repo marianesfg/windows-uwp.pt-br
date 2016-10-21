@@ -5,16 +5,14 @@ title: "Notificações do sistema interativas e adaptáveis"
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 55f5cd9e647e74d7861a7472872373d8949b79ba
 
 ---
-
 # Notificações do sistema interativas e adaptáveis
 
-
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional.
 
@@ -24,12 +22,11 @@ O modelo de notificações do sistema interativas e adaptáveis tem estas atuali
 -   Três tipos diferentes de ativação para a notificação do sistema principal e para cada ação.
 -   A opção para criar uma notificação para determinados cenários, inclusive alarmes, lembretes e chamadas de entrada.
 
-
-            **Observação**   Para ver os modelos herdados do Windows8.1 e Windows Phone 8.1, consulte o [catálogo de modelos de notificação do sistema herdados](https://msdn.microsoft.com/library/windows/apps/hh761494).
+**Observação**   Para ver os modelos herdados do Windows8.1 e Windows Phone 8.1, consulte o [catálogo de modelos de notificação do sistema herdados](https://msdn.microsoft.com/library/windows/apps/hh761494).
 
  
 
-## <span id="toast_structure"></span><span id="TOAST_STRUCTURE"></span>Estrutura de notificação do sistema
+## Estrutura de notificação do sistema
 
 
 Notificações do sistema são construídas usando XML, que normalmente contêm estes elementos-chave:
@@ -61,7 +58,7 @@ E uma representação visual da estrutura:
 
 ![estrutura de notificação do sistema](images/adaptivetoasts-structure.jpg)
 
-### <span id="Visual"></span><span id="visual"></span><span id="VISUAL"></span>Visual
+### Visual
 
 Dentro do elemento visual, você deve ter exatamente um elemento de associação que contém o conteúdo visual da notificação do sistema.
 
@@ -72,7 +69,7 @@ As notificações de bloco em aplicativos da Plataforma Universal do Windows (UW
 
 Para todos os atributos com suporte na seção visual e seus elementos filho, consulte a seção Esquema abaixo. Para obter mais exemplos, consulte a seção Exemplos de XML abaixo.
 
-### <span id="Actions"></span><span id="actions"></span><span id="ACTIONS"></span>Ações
+### Ações
 
 Em aplicativos UWP, você pode adicionar botões e outras entradas às suas notificações do sistema, o que permite aos usuários fazer mais fora do aplicativo. Essas ações são especificadas no elemento &lt;actions&gt;, do qual há dois tipos que você pode especificar:
 
@@ -90,7 +87,7 @@ Quando uma ação é executada pelo usuário, você pode executar um destes proc
 
 Para todos os atributos com suporte na seção visual e seus elementos filho, consulte a seção Esquema abaixo. Para obter mais exemplos, consulte a seção Exemplos de XML abaixo.
 
-### <span id="Audio"></span><span id="audio"></span><span id="AUDIO"></span>Áudio
+### Áudio
 
 Sons personalizados atualmente não têm suporte em aplicativos UWP destinados à plataforma de área de trabalho; em vez disso, você pode escolher na lista de ms-winsoundevents para seu aplicativo na área de trabalho. Os aplicativos UWP em plataformas móveis permitem os dois ms-winsoundevents, juntamente com sons personalizados nestes formatos:
 
@@ -99,7 +96,7 @@ Sons personalizados atualmente não têm suporte em aplicativos UWP destinados �
 
 Consulte a [página de esquema de áudio](https://msdn.microsoft.com/library/windows/apps/br230842) para obter informações sobre áudio em notificações do sistema, que inclui uma lista completa de ms-winsoundevents.
 
-## <span id="Alarms__reminders__and_incoming_calls"></span><span id="alarms__reminders__and_incoming_calls"></span><span id="ALARMS__REMINDERS__AND_INCOMING_CALLS"></span>Alarmes, lembretes e chamadas de entrada
+## Alarmes, lembretes e chamadas de entrada
 
 
 Você pode usar notificações do sistema para alarmes, lembretes e chamadas de entrada. Essas notificações especiais têm uma aparência que é consistente com as notificações do sistema padrão, apesar de as notificações do sistema especiais apresentarem alguns padrões e IU personalizados com base em cenário:
@@ -108,11 +105,10 @@ Você pode usar notificações do sistema para alarmes, lembretes e chamadas de 
 -   Além de compartilhar os comportamentos acima com notificações de lembrete, as notificações de alarme também reproduzem automaticamente o áudio em loop.
 -   As notificações de chamadas de entrada são exibidas em tela inteira em dispositivos Windows Mobile. Isso é feito especificando o atributo de cenário dentro do elemento raiz de uma notificação do sistema – &lt;toast&gt;: &lt;toast scenario=" { default | alarm | reminder | incomingCall }" &gt;
 
-## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>Exemplos de XML
+## Exemplos de XML
 
 
-
-            **Observação**  As capturas de tela de notificação do sistema para estes exemplos foram extraídas de um aplicativo em desktop. Em dispositivos móveis, uma notificação do sistema pode estar recolhida quando aparece, com um elemento na parte inferior da notificação do sistema para expandi-la.
+**Observação**  As capturas de tela de notificação do sistema para estes exemplos foram extraídas de um aplicativo em desktop. Em dispositivos móveis, uma notificação do sistema pode estar recolhida quando aparece, com um elemento na parte inferior da notificação do sistema para expandi-la.
 
  
 
@@ -291,7 +287,7 @@ Este exemplo mostra...
 
  
 
-## <span id="Activation_samples"></span><span id="activation_samples"></span><span id="ACTIVATION_SAMPLES"></span>Exemplos de ativação
+## Exemplos de ativação
 
 
 Como mencionado acima, o corpo e as ações na notificação do sistema são capazes de ativar aplicativos de diferentes maneiras. O exemplo abaixo mostrará como lidar com tipos diferentes de ativações do corpo da notificação do sistema e/ou das ações de notificação do sistema.
@@ -353,7 +349,7 @@ namespace ToastNotificationTask
 }
 ```
 
-## <span id="Schemas___visual__and__audio_"></span><span id="schemas___visual__and__audio_"></span><span id="SCHEMAS___VISUAL__AND__AUDIO_"></span>Esquemas: &lt;visual&gt; e &lt;audio&gt;
+## Esquemas: &lt;visual&gt; e &lt;audio&gt;
 
 
 Nos esquemas a seguir, o sufixo "?" significa que o atributo é opcional.
@@ -493,7 +489,7 @@ silent?
 
 -   Consulte [este artigo sobre o esquema de elementos](https://msdn.microsoft.com/library/windows/apps/br230842) para obter detalhes sobre esse atributo opcional.
 
-## <span id="Schemas___action_"></span><span id="schemas___action_"></span><span id="SCHEMAS___ACTION_"></span>Esquemas: &lt;action&gt;
+## Esquemas: &lt;action&gt;
 
 
 Nos esquemas a seguir, o sufixo "?" significa que o atributo é opcional.
@@ -585,7 +581,7 @@ hint-inputId
 -   O valor deve ser que a identificação do elemento input desejado a ser associado.
 -   No celular e desktop, isso colocará o botão diretamente ao lado da caixa de entrada.
 
-## <span id="Attributes_for_system-handled_actions"></span><span id="attributes_for_system-handled_actions"></span><span id="ATTRIBUTES_FOR_SYSTEM-HANDLED_ACTIONS"></span>Atributos para ações manipuladas pelo sistema
+## Atributos para ações manipuladas pelo sistema
 
 
 O sistema pode manipular ações para adiar e ignorar notificações se você não quiser que seu aplicativo manipular o adiamento/reagendamento de notificações como tarefa em segundo plano. As ações manipuladas pelo sistema podem ser combinadas (ou especificadas individualmente), mas não é recomendável implementar uma ação de adiamento sem uma ação de descarte.
@@ -648,6 +644,6 @@ Para construir ações individuais de adiamento e descarte, faça o seguinte:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

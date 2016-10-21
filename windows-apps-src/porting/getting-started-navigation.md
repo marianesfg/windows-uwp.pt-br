@@ -3,14 +3,15 @@ author: mcleblanc
 title: "Introdução à navegação"
 description: "Introdução à navegação"
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c542faa6365c8558988162bee12f266d67474461
+ms.openlocfilehash: daf56299b3a5e81bb756bc9fcb8112da044b00f3
 
 ---
 
 # Introdução: navegação
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Adicionando navegação
 
@@ -77,8 +78,7 @@ Você também pode ter ou definir a propriedade da classe **Frame** [**CacheSize
 
 Para saber mais sobre navegação, consulte [Navegação](https://msdn.microsoft.com/library/windows/apps/mt187344) e [XAML personality animations sample](http://go.microsoft.com/fwlink/p/?LinkID=242401).
 
-
-            **Observação**  Para saber mais sobre navegação para aplicativos da Windows Store usando JavaScript e HTML, consulte [Guia de início rápido: usando a navegação de página única (HTML)](https://msdn.microsoft.com/library/windows/apps/hh452768).
+**Observação**  Para saber mais sobre navegação para aplicativos da Windows Store usando JavaScript e HTML, consulte [Guia de início rápido: usando a navegação de página única (HTML)](https://msdn.microsoft.com/library/windows/apps/hh452768).
  
 ### Próxima etapa
 
@@ -87,6 +87,6 @@ Para saber mais sobre navegação, consulte [Navegação](https://msdn.microsoft
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

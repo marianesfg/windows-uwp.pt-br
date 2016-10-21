@@ -3,15 +3,16 @@ author: mtoepke
 title: Renderizar o mapa de sombra para o buffer de profundidade
 description: "Faça a renderização do ponto de vista da luz para criar um mapa de profundidade bidimensional que representa o volume de sombra."
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 644e2084baa750965a5283208fde1cea24ecfdea
+ms.openlocfilehash: 337aa63ee30b05da51d5b224cb0013519e11504d
 
 ---
 
 # Renderizar o mapa de sombra para o buffer de profundidade
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Faça a renderização do ponto de vista da luz para criar um mapa de profundidade bidimensional que representa o volume de sombra. O mapa de profundidade mascara o espaço que será renderizado com sombras. Parte 2 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -121,8 +122,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-
-            **Otimizar o tronco de exibição:** garanta que a implementação calcule um tronco de exibição firme, para obter o máximo de precisão com o buffer de profundidade. Consulte as [técnicas comuns para melhorar mapas de profundidade de sombra](https://msdn.microsoft.com/library/windows/desktop/ee416324) para conhecer mais dicas sobre técnicas de sombreamento.
+**Otimizar o tronco de exibição:** garanta que a implementação calcule um tronco de exibição firme, para obter o máximo de precisão com o buffer de profundidade. Consulte as [técnicas comuns para melhorar mapas de profundidade de sombra](https://msdn.microsoft.com/library/windows/desktop/ee416324) para conhecer mais dicas sobre técnicas de sombreamento.
 
 ## Sombreador de vértice para passagem de sombra
 
@@ -157,6 +157,6 @@ Na próxima parte deste guia passo a passo, veremos como adicionar sombras pela 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

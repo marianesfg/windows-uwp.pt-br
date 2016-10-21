@@ -3,8 +3,9 @@ author: jnHs
 Description: "Você pode enviar aplicativos para a Windows Store em mais de 100 idiomas."
 title: "Idiomas compatíveis"
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 17a5a106e24305afd3041f434d2e0890d21fd7ec
+ms.openlocfilehash: 3d14f1d11290942a90498f7aff4dc324daa3a84e
 
 ---
 
@@ -13,7 +14,7 @@ ms.openlocfilehash: 17a5a106e24305afd3041f434d2e0890d21fd7ec
 
 Você pode enviar aplicativos para a Windows Store em mais de 100 idiomas.
 
-Para saber mais sobre a configuração de idiomas em seus aplicativos, consulte [Globalização e localização](../globalizing/globalizing-portal.md) e [Gerenciar idioma e região](../globalizing/manage-language-and-region.md). Também temos um [Kit de Ferramentas de Aplicativo Multilíngue](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370) para ajudar você a criar aplicativos com suporte para vários idiomas.
+Para obter mais informações sobre a configuração de idiomas em seus aplicativos, consulte [Globalização e localização](../globalizing/globalizing-portal.md) e [Gerenciar idioma e região](../globalizing/manage-language-and-region.md). Também temos um [Kit de Ferramentas de Aplicativo Multilíngue](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370) para ajudar você a criar aplicativos com suporte para vários idiomas.
 
 ## Idiomas compatíveis
 
@@ -138,6 +139,6 @@ Estes são os idiomas aceitos pela Windows Store. Seu aplicativo deve dar suport
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

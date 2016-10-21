@@ -4,15 +4,15 @@ Description: "Este tópico descreve as diretrizes de desempenho para aplicativos
 title: Diretrizes de aplicativos com reconhecimento de local
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: bbdd4d5a54deba11161c1865cd8f6f2fb47bcad4
+ms.sourcegitcommit: 7159aea3feef96781575825d019a379e0eadc603
+ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
 
 ---
 
 # Diretrizes de aplicativos com reconhecimento de local
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -98,9 +98,10 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
     -   Os sensores raw incluem o acelerômetro, o girômetro e o magnetômetro.
     -   Os sensores fusion incluem o de orientação, o inclinômetro e a bússola. Os sensores fusion obtêm seus dados de combinações dos sensores brutos.
 
-    As APIs do Windows Runtime podem acessar todos esses sensores, com exceção do magnetômetro. Os sensores fusion são mais precisos e estáveis do que os sensores raw, mas usam mais energia. Você deve usar os sensores corretos para cada finalidade. Para obter mais informações, consulte [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
+    As APIs do Windows Runtime podem acessar todos esses sensores, com exceção do magnetômetro. Os sensores fusion são mais precisos e estáveis do que os sensores raw, mas usam mais energia. Você deve usar os sensores corretos para cada finalidade. Para saber mais, consulte [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
 
-**Modo de espera conectado:  **quando o computador está conectado no modo de espera, sempre é possível criar uma instância para objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534). No entanto, o objeto **Geolocator** não encontrará nenhum sensor a ser agregado e, portanto, as chamadas para [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) atingirão seu tempo limite após sete segundos, os ouvintes do evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) nunca serão chamados, e os ouvintes do evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) serão chamados uma vez com o status **NoData**.
+**Modo de espera conectado** 
+- Quando o computador está conectado no modo de espera, objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) sempre podem ser instanciados. No entanto, o objeto **Geolocator** não encontrará nenhum sensor a ser agregado e, portanto, as chamadas para [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) atingirão seu tempo limite após sete segundos, os ouvintes do evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) nunca serão chamados, e os ouvintes do evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) serão chamados uma vez com o status **NoData**.
 
 ## Diretrizes de uso adicionais
 
@@ -172,6 +173,6 @@ A localização geográfica do usuário faz parte das PII (informações de iden
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 

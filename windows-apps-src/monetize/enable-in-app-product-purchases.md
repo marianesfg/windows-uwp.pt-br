@@ -3,27 +3,28 @@ author: mcleanbyron
 Description: "Seja seu aplicativo gratuito ou não, você pode vender conteúdo, outros aplicativos ou uma nova funcionalidade do aplicativo (como o desbloqueio do próximo nível de um jogo) no próprio aplicativo. Veja a seguir como habilitar esses produtos no seu aplicativo."
 title: Habilitar compras de produtos no aplicativo
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
-keywords: in-app offer code sample
+keywords: "exemplo de código de oferta no aplicativo"
 translationtype: Human Translation
-ms.sourcegitcommit: bb28828463b14130deede9f7cf796c6e32fcb48b
-ms.openlocfilehash: 2e9a011a248e4c7e1d3f06064a7f82e308f07131
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 531b5c5a5c70461e98b5809246fdce7215805a25
 
 ---
 
 # Habilitar compras de produtos no aplicativo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
+
+>**Observação**&nbsp;&nbsp;Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar complementos (também conhecidos como produtos no aplicativo ou IAPs), em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
 
 Seja seu aplicativo gratuito ou não, você pode vender conteúdo, outros aplicativos ou uma nova funcionalidade do aplicativo (como o desbloqueio do próximo nível de um jogo) no próprio aplicativo. Veja a seguir como habilitar esses produtos no seu aplicativo.
 
-> 
-            **Observação**  Produtos no aplicativo não podem ser oferecidos em uma versão de avaliação do aplicativo. Os clientes que usam uma versão de avaliação do aplicativo só poderão comprar um produto no aplicativo se comprarem a versão completa do seu aplicativo.
+> **Observação**  Produtos no aplicativo não podem ser oferecidos em uma versão de avaliação do aplicativo. Os clientes que usam uma versão de avaliação do aplicativo só poderão comprar um produto no aplicativo se comprarem a versão completa do seu aplicativo.
 
 ## Pré-requisitos
 
 -   Um aplicativo do Windows no qual devem ser adicionados os recursos que os clientes podem comprar.
 -   Ao codificar e testar novos produtos no aplicativo pela primeira vez, você deve usar o objeto [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) em vez do objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765). Dessa forma, é possível verificar a lógica do licenciamento usando chamadas simuladas ao servidor de licenças em vez de chamar o servidor ativo. Para fazer isso, você precisa personalizar o arquivo chamado "WindowsStoreProxy.xml" em %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. O simulador do Microsoft Visual Studio cria esse arquivo quando você executa seu aplicativo pela primeira vez, mas também é possível carregar um arquivo personalizado no tempo de execução. Para saber mais, consulte [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766).
--   Este tópico também faz referência a exemplos de código fornecidos no [Exemplo da Loja](http://go.microsoft.com/fwlink/p/?LinkID=627610). Essa amostra é uma ótima maneira de obter experiência prática com as diferentes opções de monetização fornecidas para os aplicativos UWP (Plataforma Universal do Windows).
+-   Este tópico também faz referência a exemplos de código fornecidos no [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store). Essa amostra é uma ótima maneira de obter experiência prática com as diferentes opções de monetização fornecidas para os aplicativos UWP (Plataforma Universal do Windows).
 
 ## Etapa 1: Inicie as informações de licença do aplicativo
 
@@ -32,7 +33,7 @@ Quando seu aplicativo estiver inicializando, obtenha o objeto [**LicenseInformat
 ```CSharp
 void AppInit()
 {
-    // some app initialization functions 
+    // some app initialization functions
 
     // Get the license info
     // The next line is commented out for testing.
@@ -49,17 +50,16 @@ void AppInit()
 
 Para cada recurso a ser disponibilizado por meio de uma transação de produto no aplicativo, crie uma oferta e adicione-a ao aplicativo.
 
-> 
-            **Importante**  Você deve adicionar todos os produtos no aplicativo que deseja apresentar para seus clientes antes de enviá-lo para a Loja. Para adicionar novos produtos no aplicativo depois, você deve atualizar o aplicativo e reenviar uma nova versão.
+> **Importante**  Você deve adicionar todos os produtos no aplicativo que deseja apresentar para seus clientes antes de enviá-lo para a Loja. Para adicionar novos produtos no aplicativo depois, você deve atualizar o aplicativo e reenviar uma nova versão.
 
 1.  **Crie um token de oferta no aplicativo**
 
     Você pode identificar cada produto no seu aplicativo por um token. Esse token é uma cadeia de caracteres que você define e usa no aplicativo e na Loja para identificar um produto no aplicativo específico. Dê (ao aplicativo) um nome exclusivo e significativo, para poder identificar o recurso correto que ele representa durante a codificação. Este são alguns exemplos de nomes:
 
     -   "SpaceMissionLevel4"
-    
+
     -   "ContosoCloudSave"
-    
+
     -   "RainbowThemePack"
 
 2.  **Codifique o recurso em um bloco de condições**
@@ -69,10 +69,10 @@ Para cada recurso a ser disponibilizado por meio de uma transação de produto n
     Veja a seguir um exemplo que mostra como é possível codificar um recurso de produto chamado **featureName** em um bloco condicional específico da licença. A cadeia de caracteres, **featureName**, é o token que identifica esse produto de forma exclusiva no aplicativo e também é usada para identificá-lo na Loja.
 
     ```    CSharp
-    if (licenseInformation.ProductLicenses["featureName"].IsActive) 
+    if (licenseInformation.ProductLicenses["featureName"].IsActive)
     {
         // the customer can access this feature
-    } 
+    }
     else
     {
         // the customer can' t access this feature
@@ -86,24 +86,24 @@ Para cada recurso a ser disponibilizado por meio de uma transação de produto n
     Veja aqui como testar se o cliente já possui um produto no aplicativo e, se não tiver, se ele pode visualizar a caixa de diálogo para fazer a compra. Substitua o comentário "mostrar a caixa de diálogo de compra" pelo código personalizado da caixa de diálogo de compra (como uma página com um botão "Compre este aplicativo!" ).
 
     ```    CSharp
-    void BuyFeature1() 
+    void BuyFeature1()
     {
         if (!licenseInformation.ProductLicenses["featureName"].IsActive)
         {
             try
             {
-                // The customer doesn't own this feature, so 
+                // The customer doesn't own this feature, so
                 // show the purchase dialog.
                 await CurrentAppSimulator.RequestProductPurchaseAsync("featureName", false);
-        
+
                 //Check the license state to determine if the in-app purchase was successful.
             }
             catch (Exception)
             {
-                // The in-app purchase was not completed because 
+                // The in-app purchase was not completed because
                 // an error occurred.
             }
-        } 
+        }
         else
         {
             // The customer already owns this feature.
@@ -131,14 +131,10 @@ Se você precisar usar recibos para verificar se o usuário fez uma compra no ap
 * [Habilitar compras de produtos consumíveis no aplicativo](enable-consumable-in-app-product-purchases.md)
 * [Gerenciar um catálogo abrangente de produtos no aplicativo](manage-a-large-catalog-of-in-app-products.md)
 * [Usar recibos para verificar compras de produtos](use-receipts-to-verify-product-purchases.md)
-* [Exemplo da Loja (demonstra avaliações e compras no aplicativo)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
+* [Exemplo da Loja (demonstra avaliações e compras no aplicativo)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 
 
 
-
-
-
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 
