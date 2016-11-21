@@ -6,23 +6,23 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/bee955a671dbdd03f45f4cab7ef01a6748100993?path=windows-apps-src%2Fxbox-apps%2Fknown-issues.md&_a=contents) | HandedOffSuccess | [Details](#26db02792eef6bda927bedd1ef8fcb6a644fadcf8533)
+ [windows-apps-src\packaging\packaging-uwp-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/6decb122b56bb8835b4d0fc5178af61b59455876?path=windows-apps-src%2Fpackaging%2Fpackaging-uwp-apps.md&_a=contents) | HandedOffSuccess | [Details](#312c8fb0bbbb6231da91e7d477b800a797160e965292)
 
 ## Item Details
-##### <a name='26db02792eef6bda927bedd1ef8fcb6a644fadcf8533'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/bee955a671dbdd03f45f4cab7ef01a6748100993?path=windows-apps-src%2Fxbox-apps%2Fknown-issues.md&_a=contents)
+##### <a name='312c8fb0bbbb6231da91e7d477b800a797160e965292'></a> Source: [windows-apps-src\packaging\packaging-uwp-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/6decb122b56bb8835b4d0fc5178af61b59455876?path=windows-apps-src%2Fpackaging%2Fpackaging-uwp-apps.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/2e46e5eb1635051fa4739d93df693a60fe0c3ed2?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fknown-issues.83c75815621268c5c51534a658527cef71ffe8bd.pt-br.xlf&_a=contents)
-* Handoff Datetime: 2016-11-19 06:49:52
+* Handoff File: [packaging-uwp-apps.9882a5c7945644f3b49e175219fa2d2976ceaa51.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/282191071e60160e086f15435ca7afd5fab0c766?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fpackaging-uwp-apps.9882a5c7945644f3b49e175219fa2d2976ceaa51.pt-br.xlf&_a=contents)
+* Handoff Datetime: 2016-11-21 18:49:43
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\xbox-apps\known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/3dd81a5f0104a6d0309a18f3f936e65f369d2dc5?path=windows-apps-src%2Fxbox-apps%2Fknown-issues.md&_a=contents)
-* Current Handback File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fknown-issues.83c75815621268c5c51534a658527cef71ffe8bd.pt-br.xlf&_a=contents)
+* Current Target File: [windows-apps-src\packaging\packaging-uwp-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/3dd81a5f0104a6d0309a18f3f936e65f369d2dc5?path=windows-apps-src%2Fpackaging%2Fpackaging-uwp-apps.md&_a=contents)
+* Current Handback File: [packaging-uwp-apps.9882a5c7945644f3b49e175219fa2d2976ceaa51.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fpackaging-uwp-apps.9882a5c7945644f3b49e175219fa2d2976ceaa51.pt-br.xlf&_a=contents)
 * Current Handback Datetime: 2016-10-21 16:06:32
-* Bilingual File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fknown-issues.83c75815621268c5c51534a658527cef71ffe8bd.pt-br.xlf&_a=contents)
+* Bilingual File: [packaging-uwp-apps.9882a5c7945644f3b49e175219fa2d2976ceaa51.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fpackaging-uwp-apps.9882a5c7945644f3b49e175219fa2d2976ceaa51.pt-br.xlf&_a=contents)
 * Bilingual Datetime: 2016-10-24 15:48:08
 * [Back to Top](#report-top)
 
