@@ -1,11 +1,11 @@
 ---
 author: GrantMeStrength
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
-title: Criar um aplicativo Hello, world (JS)
+title: Create a "Hello, world" app (JS)
 description: Este tutorial ensina a usar JavaScript e HTML para criar um aplicativo Hello, world simples segmentado para a Plataforma Universal do Windows (UWP) no Windows 10.
 translationtype: Human Translation
-ms.sourcegitcommit: 2e0965f964f6f2e10b895d99244b66458eb15903
-ms.openlocfilehash: 6c81b24f7fa9abe036d4ccd22ee8fa24c011fe77
+ms.sourcegitcommit: 7b4676e5c5a66450b321ab6f5f8670f9491b7a9d
+ms.openlocfilehash: 31bd2d40750e5acf09679d8ff5ea1a1540f60934
 
 ---
 # Criar um aplicativo "Hello, world" (JS)
@@ -338,7 +338,7 @@ Diferentemente dos controles HTML, os controles WinJS não têm elementos de mar
 
 1.  No arquivo index.html, adicione um [label](https://msdn.microsoft.com/library/windows/apps/Hh453321) e um controle [Rating](https://msdn.microsoft.com/library/windows/apps/BR211895) após `greetingOutput` **div**.
 
-    ```html
+```html
     <body class="win-type-body">
         <h1>Hello, world!</h1>
         <p>What's your name?</p>
@@ -351,7 +351,7 @@ Diferentemente dos controles HTML, os controles WinJS não têm elementos de mar
         <div id="ratingControlDiv" data-win-control="WinJS.UI.Rating">
         </div>
     </body>
-    ```
+```
 
 2.  Execute o aplicativo no computador local. Observe o novo controle [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895).
 
@@ -384,7 +384,7 @@ Ao adicionar seu código a uma função "concluída" e transmiti-lo para o méto
 
 1.  Em seu arquivo index.html, crie um elemento [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) para exibir o valor de classificação e dar a ele a **id** "ratingOutput".
 
-    ```html
+```html
         <body class="win-type-body">
         <h1>Hello, world!</h1>
         <p>What's your name?</p>
@@ -402,7 +402,7 @@ Ao adicionar seu código a uma função "concluída" e transmiti-lo para o méto
 
 2.  Em nosso arquivo main.js, crie um manipulador para o evento [change](https://msdn.microsoft.com/library/windows/apps/BR211891) do controle **Rating** denominado `ratingChanged`. O parâmetro [eventInfo](https://msdn.microsoft.com/library/windows/apps/Hh465776) contém uma propriedade **detail.tentativeRating** que fornece a nova classificação de usuário. Obtenha esse valor e o exiba na saída **div**.
 
-    ```javascript
+```javascript
         function ratingChanged(eventInfo) {
 
             var ratingOutput = document.getElementById("ratingOutput");
@@ -412,7 +412,7 @@ Ao adicionar seu código a uma função "concluída" e transmiti-lo para o méto
 
 3.  Atualize o código no manipulador de eventos [onactivated](https://msdn.microsoft.com/library/windows/apps/BR212679) que chama  [WinJS.UI.processAll](https://msdn.microsoft.com/library/windows/apps/Hh440975) adicionando uma chamada ao método [then](https://msdn.microsoft.com/library/windows/apps/BR229728) e passando-a para uma função `completed`. Na função `completed`, obtenha o elemento `ratingControlDiv` que hospeda o controle [Rating](https://msdn.microsoft.com/library/windows/apps/BR211895). Em seguida, use a propriedade [winControl](https://msdn.microsoft.com/library/windows/apps/Hh770814) para obter o controle **Rating** real. (Este exemplo define a função `completed` embutida.)
 
-    ```javascript
+```javascript
            args.setPromise(WinJS.UI.processAll().then(function completed() {
 
                     // Retrieve the div that hosts the Rating control.
@@ -431,7 +431,7 @@ Ao adicionar seu código a uma função "concluída" e transmiti-lo para o méto
 
     Aqui está o manipulador de eventos [**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679) atualizado:
 
-    ```javascript
+```javascript
     (function () {
     "use strict";
 
@@ -484,9 +484,9 @@ Ao adicionar seu código a uma função "concluída" e transmiti-lo para o méto
         isFirstActivation = false;
     };
 
-    ```        
+```        
 
-    Execute o aplicativo. Quando você seleciona um valor de classificação, ele gera um valor numérico abaixo do controle [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895).
+    Run the app. When you select a rating value, it outputs the numeric value below the [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) control.
 
 ![O aplicativo Hello world concluído em um computador](images/helloworld-5-winjs.png)
 
@@ -496,6 +496,6 @@ Parabéns, você criou seu primeiro aplicativo para o Windows 10 e a UWP usando 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

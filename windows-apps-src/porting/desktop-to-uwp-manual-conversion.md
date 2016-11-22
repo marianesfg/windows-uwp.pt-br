@@ -1,18 +1,17 @@
 ---
+author: awkoren
 Description: "Mostra como converter manualmente um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms) em um aplicativo UWP (Plataforma Universal do Windows)."
 Search.Product: eADQiWindows 10XVcnh
 title: "Converter manualmente um aplicativo da área de trabalho do Windows em um aplicativo UWP (Plataforma Universal do Windows)"
 translationtype: Human Translation
-ms.sourcegitcommit: 2c1a8ea38081c947f90ea835447a617c388aec08
-ms.openlocfilehash: 646a5b88cb7ca97f18bf4552950979a2ceead398
+ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
+ms.openlocfilehash: 6ca48fd829b7437fe2db8aa1251f6ed8976919ab
 
 ---
 
-# Converter manualmente o seu aplicativo da área de trabalho do Windows em um aplicativo UWP (Plataforma Universal do Windows)
+# Converter manualmente o aplicativo em UWP usando a ponte da área de trabalho
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
-
-O uso do Conversor é conveniente e automático, e será útil se houver dúvidas sobre o que o instalador faz. Mas se o aplicativo for instalado usando xcopy ou se você estiver familiarizado com as alterações que o instalador de seu aplicativo faz no sistema, poderá optar por criar um pacote do aplicativo e manifestá-lo manualmente.
+O uso do Desktop App Converter (DAC) é prático e automático, e será útil se houver dúvidas sobre o que o instalador faz. Mas se o aplicativo for instalado usando xcopy ou se você estiver familiarizado com as alterações que o instalador de seu aplicativo faz no sistema, poderá optar por criar um pacote do aplicativo e manifestá-lo manualmente.
 
 Veja a seguir as etapas para criar manualmente um pacote:
 
@@ -103,6 +102,6 @@ Quando você executar o MakeCert.exe e for solicitado a inserir uma senha, selec
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

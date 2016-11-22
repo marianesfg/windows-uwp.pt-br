@@ -4,29 +4,33 @@ ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: "Use estes métodos na API de envio da Windows Store para gerenciar envios dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: Gerenciar envios de aplicativo usando a API de envio da Windows Store
 translationtype: Human Translation
-ms.sourcegitcommit: 178b70db1583790c174d65e060c8bce6e4f69243
-ms.openlocfilehash: 448eafbdadb21476da43e7408bb8bad354ba486d
+ms.sourcegitcommit: 9b76a11adfab838b21713cb384cdf31eada3286e
+ms.openlocfilehash: 49d60048a0dd5dae3e80abb9fd4e21b8cf7b417e
 
 ---
 
 # Gerenciar envios de aplicativo usando a API de envio da Windows Store
 
 
-
-
 Use os métodos a seguir na API de envio da Windows Store para gerenciar envios dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows. Para obter uma introdução à API de envio da Windows Store, incluindo os pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
 >**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
+>**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de aplicativo no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de período de avaliação, preços e vendas para um envio de aplicativo usando a API de envio da Windows Store. Atualizaremos a API no futuro para apresentar uma nova maneira de acessar informações de preço para envios de aplicativo por meio de programação. Para saber mais, veja a seção [Recurso de preços](#pricing-object).
+
 
 | Método        | URI    | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Obtém dados para um envio de aplicativo existente. Para saber mais, veja [Obter um envio de aplicativo](get-an-app-submission.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status``` | Obtém o status de um envio de aplicativo existente. Para obter mais informações, consulte [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` | Cria um novo envio para um aplicativo que está registrado em sua conta do Centro de Desenvolvimento do Windows. Para saber mais, veja [Criar um envio de aplicativo](create-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` | Confirma um envio de aplicativo novo ou atualizado para o Centro de Desenvolvimento do Windows. Para saber mais, veja [Confirmar um envio de aplicativo](commit-an-app-submission.md). |
-| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Atualiza um envio de aplicativo existente. Para saber mais, veja [Atualizar um envio de aplicativo](update-an-app-submission.md). |
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Exclui um envio de aplicativo. Para obter mais informações, consulte [Excluir um envio de aplicativo](delete-an-app-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Obtém dados para um envio de aplicativo existente. Para obter mais informações, consulte [este artigo](get-an-app-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status``` | Obtém o status de um envio de aplicativo existente. Para obter mais informações, consulte [este artigo](get-status-for-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` | Cria um novo envio para um aplicativo que está registrado em sua conta do Centro de Desenvolvimento do Windows. Para obter mais informações, consulte [este artigo](create-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` | Confirma um envio de aplicativo novo ou atualizado para o Centro de Desenvolvimento do Windows. Para obter mais informações, consulte [este artigo](commit-an-app-submission.md). |
+| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Atualiza um envio de aplicativo existente. Para obter mais informações, consulte [este artigo](update-an-app-submission.md). |
+| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Exclui um envio de aplicativo. Para obter mais informações, consulte [este artigo](delete-an-app-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout``` | Obtém as informações de distribuição gradual para um envio de aplicativo. Para obter mais informações, consulte [este artigo](get-package-rollout-info-for-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage``` | Atualiza a porcentagem de distribuição gradual para um envio de aplicativo. Para obter mais informações, consulte [este artigo](update-the-package-rollout-percentage-for-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout``` | Interrompe a distribuição gradual para um envio de aplicativo. Para obter mais informações, consulte [este artigo](halt-the-package-rollout-for-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout``` | Finaliza a distribuição gradual para um envio de aplicativo. Para obter mais informações, consulte [este artigo](finalize-the-package-rollout-for-an-app-submission.md). |
 
 <span id="create-an-app-submission">
 ## Criar um envio de aplicativo
@@ -37,9 +41,9 @@ Para criar um envio de um aplicativo, siga este processo.
 
   >**Observação**&nbsp;&nbsp;Verifique se o aplicativo já tem pelo menos um envio concluído com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
 
-3. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Windows Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Windows Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
-4. Execute o seguinte método na API de envio da Windows Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado. Para saber mais, veja [Criar um envio de aplicativo](create-an-app-submission.md).
+3. [Criar um envio de aplicativo](create-an-app-submission.md) executando o seguinte método na API de envio da Windows Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
@@ -47,9 +51,9 @@ Para criar um envio de um aplicativo, siga este processo.
 
   O corpo da resposta contém três itens: a ID do novo envio, os dados para o novo envio (incluindo todas as listagens e informações de preço) e a URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes de aplicativo e as imagens de lista para o envio. Para saber mais sobre SAS, consulte [Assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
 
-3. Se você estiver adicionando novos pacotes ou imagens para o envio, [prepare os pacotes de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) e as [imagens e capturas de tela do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Adicione todos esses arquivos a um arquivo ZIP.
+4. Se você estiver adicionando novos pacotes ou imagens para o envio, [prepare os pacotes de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) e as [imagens e capturas de tela do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Adicione todos esses arquivos a um arquivo ZIP.
 
-4. Atualize os dados de envio com as alterações necessárias para o novo envio e execute o método a seguir para atualizar o envio. Para saber mais, veja [Atualizar um envio de aplicativo](update-an-app-submission.md).
+5. Revise os dados de envio com as alterações necessárias para o novo envio e execute o método a seguir para [atualizar o envio de aplicativo](update-an-app-submission.md).
 
   ```
   PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
@@ -69,13 +73,13 @@ Para criar um envio de um aplicativo, siga este processo.
   await blockBob.UploadFromStreamAsync(stream);
   ```
 
-5. Confirme o envio executando o método a seguir. Isso alertará o Centro de Desenvolvimento que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta. Para saber mais, veja [Confirmar um envio de aplicativo](commit-an-app-submission.md).
+5. [Confirme o envio de aplicativo](commit-an-app-submission.md) executando o método a seguir. Isso alertará o Centro de Desenvolvimento que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
   ```
 
-6. Verifique o status de confirmação executando o método a seguir. Para obter mais informações, consulte [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md).
+6. Verifique o status de confirmação executando o método a seguir para [obter o status de envio de aplicativo](get-status-for-an-app-submission.md).
 
     ```
     GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
@@ -84,6 +88,51 @@ Para criar um envio de um aplicativo, siga este processo.
     Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
 7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar a monitorar o progresso de envio usando o método anterior ou visitando o painel do Centro de Desenvolvimento.
+
+<span id="manage-gradual-package-rollout">
+## Gerencie uma distribuição de pacote gradual para um envio de aplicativo
+
+Você pode distribuir gradualmente os pacotes atualizados em um envio de aplicativo para um percentual de clientes do seu aplicativo no Windows 10. Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode alterar a porcentagem de distribuição (ou parar a atualização) para um envio publicado sem precisar criar um novo envio. Para obter mais detalhes, incluindo instruções sobre como habilitar e gerenciar uma distribuição de pacote gradual no painel do Centro de Desenvolvimento, consulte [este artigo](../publish/gradual-package-rollout.md).
+
+Você também pode habilitar e gerenciar uma distribuição de pacote gradual para um envio de aplicativo por meio de programação usando os métodos a seguir na API de envio da Windows Store.
+
+* Para habilitar uma distribuição de pacote gradual para um envio de aplicativo:
+
+  1. [Crie um envio de aplicativo](create-an-app-submission.md) ou [obtenha um envio de aplicativo](get-an-app-submission.md).
+  2. Nos dados de resposta, localize o recurso [packageRollout](#package-rollout-object), defina o campo *isPackageRollout* como verdadeiro e defina o campo *packageRolloutPercentage* para o percentual de clientes do seu aplicativo que devem receber os pacotes atualizados.
+  3. Passe os dados de envio de aplicativo atualizados para o método [atualizar um envio de aplicativo](update-an-app-submission.md).
+
+<span/>
+
+* Para [obter as informações de distribuição de pacote para um envio de aplicativo](get-package-rollout-info-for-an-app-submission.md), execute o seguinte método.
+
+  ```
+  GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout
+  ```
+
+<span/>
+
+* Para [atualizar a porcentagem de distribuição de pacote para um envio de aplicativo](update-the-package-rollout-percentage-for-an-app-submission.md), execute o seguinte método.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage  
+  ```
+
+<span/>
+
+* Para [interromper a distribuição de pacote para um envio de aplicativo](halt-the-package-rollout-for-an-app-submission.md), execute o seguinte método.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout   
+  ```  
+
+<span/>
+
+* Para [finalizar a distribuição de pacote para um envio de aplicativo](finalize-the-package-rollout-for-an-app-submission.md), execute o seguinte método.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout
+  ```
 
 ## Recursos
 
@@ -171,6 +220,16 @@ Esse recurso representa um envio para um aplicativo. O exemplo a seguir demonstr
       ]
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "enterpriseLicensing": "Online",
   "allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies": true,
   "allowTargetFutureDeviceFamilies": {
@@ -186,28 +245,29 @@ Esse recurso representa um envio para um aplicativo. O exemplo a seguir demonstr
 
 Este recurso tem os seguintes valores.
 
-| Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
-|------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Valor      | Tipo   | Descrição      |
+|------------|--------|-------------------|
 | id            | string  | A ID do envio.  |
 | applicationCategory           | string  |   Uma cadeia de caracteres que especifica a [categoria e/ou subcategoria](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) para o aplicativo. Categorias e subcategorias são combinadas em uma única cadeia de caracteres com o caractere de sublinhado '_', como **BooksAndReference_EReader**.      |  
-| pricing           |  object  | Um objeto que contém informações de preços do aplicativo. Para saber mais, veja a seção [Preços de recurso](#pricing-object) abaixo.       |   
+| pricing           |  objeto  | Um objeto que contém informações de preços do aplicativo. Para saber mais, veja a seção [Preços de recurso](#pricing-object) abaixo.       |   
 | visibility           |  string  |  A visibilidade do aplicativo. Ele pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
-| targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |  
-| listings           |   object  |  Um dicionário de pares de chave e valor, no qual cada chave é um código de país e cada valor é um objeto [recurso de listagem](#listing-object) objeto que contém as informações de listagem do aplicativo.       |   
+| listings           |   objeto  |  Um dicionário de pares de chave e valor, no qual cada chave é um código de país e cada valor é um objeto [recurso de listagem](#listing-object) objeto que contém as informações de listagem do aplicativo.       |   
 | hardwarePreferences           |  array  |   Uma matriz de cadeias de caracteres que definem as [preferências de hardware](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) do aplicativo. Ele pode ter um dos seguintes valores: <ul><li>Touch</li><li>Teclado</li><li>Mouse</li><li>Câmera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonia</li></ul>     |   
-| automaticBackupEnabled           |  boolean  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
-| canInstallOnRemovableMedia           |  boolean  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| isGameDvrEnabled           |  boolean |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
-| hasExternalInAppProducts           |     boolean          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Windows Store. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| meetAccessibilityGuidelines           |    boolean           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
+| automaticBackupEnabled           |  booliano  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
+| canInstallOnRemovableMedia           |  booliano  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| isGameDvrEnabled           |  booliano |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
+| hasExternalInAppProducts           |     booliano          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Windows Store. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| meetAccessibilityGuidelines           |    booliano           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
 | notesForCertification           |  string  |   Contém [observações de certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
 | status           |   string  |  O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   object  |  Contém detalhes adicionais sobre o status do envio, incluindo informações sobre os erros. Para saber mais, consulte a seção [Detalhes de status](#status-details-object) a seguir.       |    
 | fileUploadUrl           |   string  | A URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes ou imagens para o envio, carregue o arquivo ZIP que contém os pacotes e imagens para essa URI. Para saber mais, veja [Criar um envio de aplicativo](#create-an-app-submission).       |    
 | applicationPackages           |   array  | Contém objetos que fornecem detalhes sobre cada pacote no envio. Para saber mais, veja a seção [Pacote de aplicativos](#application-package-object) abaixo. |    
-| enterpriseLicensing           |  string  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
-| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
+| packageDeliveryOptions    | objeto  | Contém as configurações de distribuição de pacote gradual e de atualização obrigatória para o envio. Para obter mais informações, consulte a seção [Objeto de opções de entrega de pacote](#package-delivery-options-object) abaixo.  |
+| enterpriseLicensing           |  sequência  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
+| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  booliano   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
 | allowTargetFutureDeviceFamilies           | object   |  Um dicionário de pares de chave e valor, onde cada chave é uma [família de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) e cada valor é um valor booleano que indica se seu aplicativo tem permissão para segmentar a família de dispositivos especificadas.     |    
 | friendlyName           |   string  |  O nome amigável do aplicativo, usado para propósitos de exibição.       |  
 
@@ -227,7 +287,7 @@ Esse recurso contém informações de detalhes de um aplicativo. Este recurso te
 
 Esse recurso contém informações de detalhes básicos de um aplicativo. Este recurso tem os seguintes valores.
 
-| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição       |
 |-----------------|---------|------|
 |  copyrightAndTrademarkInfo                |   string      |  Informações opcionais de [direitos autorais e/ou marca comercial](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info).  |
 |  keywords                |  array       |  Uma matriz de [palavra-chave](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords) para ajudar seu aplicativo a aparecer nos resultados de pesquisa.    |
@@ -248,7 +308,7 @@ Esse recurso contém informações de detalhes básicos de um aplicativo. Este r
 
 Esse recurso contém dados de imagem e ícone para uma página de detalhes do aplicativo. Para obter mais informações sobre imagens e ícones para detalhes, consulte [Capturas de tela e imagens do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Este recurso tem os seguintes valores.
 
-| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição           |
 |-----------------|---------|------|
 |  fileName               |    string     |   O nome do arquivo de imagem no arquivo ZIP que você carregou para o envio.    |     
 |  fileStatus               |   string      |  O status do arquivo de imagem. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>   |
@@ -260,20 +320,33 @@ Esse recurso contém dados de imagem e ícone para uma página de detalhes do ap
 <span id="pricing-object" />
 ### Preço
 
-Esse recurso contém informações de preço do aplicativo. Este recurso tem os seguintes valores.
+Esse recurso contém informações de preço do aplicativo.
+
+>**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de aplicativo no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de período de avaliação, preços e vendas para um envio de aplicativo usando a API de envio da Windows Store. Você observará as seguintes alterações no comportamento:
+
+   > * Depois de chamar o [método GET para obter um envio de aplicativo](get-an-app-submission.md), o recurso **Preço** estará vazio. Você pode continuar a usar o painel do Centro de Desenvolvimento para obter os dados de preços de seu envio de aplicativo.
+   > * Ao chamar o [método PUT para atualizar um envio de aplicativo](update-an-app-submission.md), as informações no recurso **Preço** serão ignoradas. Você pode continuar a usar o painel do Centro de Desenvolvimento para modificar os dados de preços de seu envio de aplicativo.
+
+> No futuro, atualizaremos a API de envio da Windows Store para apresentar uma nova maneira de obter e atualizar as informações de preços para envios de aplicativo por meio de programação.
+
+Este recurso tem os seguintes valores.
 
 | Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
 |  trialPeriod               |    string     |  Uma cadeia de caracteres que especifica o período de avaliação do aplicativo. Ele pode ter um dos seguintes valores: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
 |  marketSpecificPricings               |    object     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor de *priceId* para o mercado especificado.      |     
 |  sales               |   array      |  Uma matriz de objetos que contêm informações de promoções do aplicativo. Para saber mais, consulte a seção [Promoção](#sale-object) a seguir.    |     
-|  priceId               |   string      |  A [faixa de preço](#price-tier) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) do aplicativo.   |
+|  priceId               |   string      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) do aplicativo.   |
 
 
 <span id="sale-object" />
 ### Promoção
 
-Esse recursos contém informações de promoção de um aplicativo. Este recurso tem os seguintes valores.
+Esse recurso contém informações de promoção de um aplicativo.
+
+>**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de aplicativo no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Promoção** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de vendas para um envio de aplicativo usando a API de envio da Windows Store. Atualizaremos a API no futuro para apresentar uma nova maneira de acessar informações de vendas para envios de aplicativo por meio de programação. Para saber mais, veja a seção [Recurso de preços](#pricing-object).
+
+Este recurso tem os seguintes valores.
 
 | Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
@@ -369,6 +442,47 @@ Esse recurso fornece acesso aos dados do relatório de certificação para um en
 |     reportUrl            |    string     |  A URL na qual você pode acessar o relatório.    |
 
 
+<span id="package-delivery-options-object" />
+### Objeto de opções de entrega de pacote
+
+Esse recurso contém configurações de distribuição de pacote gradual e de atualização obrigatória para o envio. O exemplo a seguir demonstra o formato desse recurso.
+
+```json
+{
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
+}
+```
+
+Este recurso tem os seguintes valores.
+
+| Valor           | Tipo    | Descrição        |
+|-----------------|---------|------|
+| packageRollout   |   objeto      |  Contém as configurações de distribuição de pacote gradual para o envio. Para saber mais, veja a seção [Objeto de distribuição de pacote](#package-rollout-object) abaixo.    |  
+| isMandatoryUpdate    | booleano    |  Indica se você deseja tratar os pacotes nesse envio como obrigatórios para instalar automaticamente as atualizações de aplicativos. Para obter mais informações sobre pacotes obrigatórios para instalar automaticamente as atualizações de aplicativos, consulte [Baixar e instalar atualizações de pacote para seu aplicativo](../packaging/self-install-package-updates.md).    |  
+| mandatoryUpdateEffectiveDate    |  data   |  A data e hora em que os pacotes nesse envio se tornam obrigatórios, no formato ISO 8601 e fuso horário UTC.   |        
+
+<span id="package-rollout-object" />
+### Objeto de distribuição de pacote
+
+Esse recurso contém [configurações de distribuição de pacote](#manage-gradual-package-rollout) gradual para o envio. Este recurso tem os seguintes valores.
+
+| Valor           | Tipo    | Descrição        |
+|-----------------|---------|------|
+| isPackageRollout   |   booleano      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
+| packageRolloutPercentage    | flutuante    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
+| packageRolloutStatus    |  string   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
+| fallbackSubmissionId    |  string   |  A ID do envio que será recebida por clientes que não recebem os pacotes de distribuição gradual.   |          
+
+<span/>
 
 ## Enumerações
 
@@ -432,6 +546,6 @@ Os seguintes valores representam o código de status de um envio.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 
