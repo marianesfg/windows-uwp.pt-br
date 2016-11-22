@@ -97,8 +97,8 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.pt-br\\master\\31bd2d40750e5acf09679d8ff5ea1a1540f60934.cbebc354f24db0219efaa572266e6f1c77ff2dcb.xml",
-      "LocXliff": null,
-      "LocXliffCommit": null
+      "LocXliff": "ol-handback\\cpubwin\\windows-uwp.pt-br\\master\\create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.pt-br.xlf",
+      "LocXliffCommit": "bccb44b1dfcd4a6100069196d8cd40e31351f76e"
     },
     "windows-apps-src\\graphics-concepts\\tier-2.md.f3c235498bf78ffcfc269f97d531ea41398eeee6.HT": {
       "SourceFilename": "windows-apps-src\\graphics-concepts\\tier-2.md",
@@ -1197,8 +1197,8 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.pt-br\\master\\f8bcda0cd2e31026f90f3a84a15674c00691f01d.37beb0218215fbf763622efd64ef4ceccc83d62b.xml",
-      "LocXliff": null,
-      "LocXliffCommit": null
+      "LocXliff": "ol-handback\\cpubwin\\windows-uwp.pt-br\\master\\desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.pt-br.xlf",
+      "LocXliffCommit": "bccb44b1dfcd4a6100069196d8cd40e31351f76e"
     },
     "windows-apps-src\\contacts-and-calendar\\integrating-social-feeds-into-contact-cards.md.7de4997d8b08d7bb746d166d0c076646217b5e7f.HT": {
       "SourceFilename": "windows-apps-src\\contacts-and-calendar\\integrating-social-feeds-into-contact-cards.md",
@@ -1207,8 +1207,8 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.pt-br\\master\\9d931ef590f895406e9d516110e6d200789558c7.59a610ff98a67b4031a1e2e377e112df22b61517.xml",
-      "LocXliff": null,
-      "LocXliffCommit": null
+      "LocXliff": "ol-handback\\cpubwin\\windows-uwp.pt-br\\master\\integrating-social-feeds-into-contact-cards.da122ef61a6b3eb3376ef78d2bd1a3894fa9bd10.pt-br.xlf",
+      "LocXliffCommit": "bccb44b1dfcd4a6100069196d8cd40e31351f76e"
     },
     "windows-apps-src\\graphics-concepts\\domain-shader-stage--ds-.md.feb551bde0f1a59738ae180089218dcf6f33835d.HT": {
       "SourceFilename": "windows-apps-src\\graphics-concepts\\domain-shader-stage--ds-.md",
@@ -1787,8 +1787,8 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.pt-br\\master\\49d60048a0dd5dae3e80abb9fd4e21b8cf7b417e.ead9095f3ead2b177d2b20638ad59f755b92756d.xml",
-      "LocXliff": null,
-      "LocXliffCommit": null
+      "LocXliff": "ol-handback\\cpubwin\\windows-uwp.pt-br\\master\\manage-app-submissions.289b450373e235be4b37005d83b6cc18ffe2de1f.pt-br.xlf",
+      "LocXliffCommit": "bccb44b1dfcd4a6100069196d8cd40e31351f76e"
     },
     "windows-apps-src\\audio-video-camera\\custom-video-effects.md.80bd96bdf132c9cec48f96a45aa14db8575f2398.HT": {
       "SourceFilename": "windows-apps-src\\audio-video-camera\\custom-video-effects.md",
@@ -2527,8 +2527,8 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.pt-br\\master\\483630b23eaaa2ff81883f4f828dd46ecd448f9b.9a86218e4d9faf26df26bd04b91be29c9f00521e.xml",
-      "LocXliff": null,
-      "LocXliffCommit": null
+      "LocXliff": "ol-handback\\cpubwin\\windows-uwp.pt-br\\master\\tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.pt-br.xlf",
+      "LocXliffCommit": "bccb44b1dfcd4a6100069196d8cd40e31351f76e"
     },
     "windows-apps-src\\monetize\\create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md.7fc6fd891b27586db31bb39674e1f0c46ec7a811.HT": {
       "SourceFilename": "windows-apps-src\\monetize\\create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md",
@@ -2847,8 +2847,8 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.pt-br\\master\\7ab2c9f1054509f816ef9647f340e61b6a281d8a.6b501bcc5a3c1e6e4e0e36ab61b7f841df69d725.xml",
-      "LocXliff": null,
-      "LocXliffCommit": null
+      "LocXliff": "ol-handback\\cpubwin\\windows-uwp.pt-br\\master\\windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.pt-br.xlf",
+      "LocXliffCommit": "bccb44b1dfcd4a6100069196d8cd40e31351f76e"
     },
     "windows-apps-src\\porting\\desktop-to-uwp-manual-conversion.md.2ef23c91be1d89aa68abf21e42e430829755f8ed.HT": {
       "SourceFilename": "windows-apps-src\\porting\\desktop-to-uwp-manual-conversion.md",
@@ -2857,8 +2857,8 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.pt-br\\master\\6ca48fd829b7437fe2db8aa1251f6ed8976919ab.060404a5a7f8e267c171b5f6590cfb6bcb74b6ef.xml",
-      "LocXliff": null,
-      "LocXliffCommit": null
+      "LocXliff": "ol-handback\\cpubwin\\windows-uwp.pt-br\\master\\desktop-to-uwp-manual-conversion.d3c7e2c80eddb954160086916bb876bd94a732bd.pt-br.xlf",
+      "LocXliffCommit": "bccb44b1dfcd4a6100069196d8cd40e31351f76e"
     },
     "windows-apps-src\\graphics-concepts\\appendix.md.5631f1ba572089f5a6f21949e51d5e6ada3fc0b4.HT": {
       "SourceFilename": "windows-apps-src\\graphics-concepts\\appendix.md",
@@ -3247,8 +3247,8 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.pt-br\\master\\8a14fa69089f6d796a803c1c1ff9bb678af3c913.d3d0592dae6e16fc103db213b479312a59151b03.xml",
-      "LocXliff": null,
-      "LocXliffCommit": null
+      "LocXliff": "ol-handback\\cpubwin\\windows-uwp.pt-br\\master\\listview-and-gridview.7757d74397dd2eae577ac2003eeb27120b54f483.pt-br.xlf",
+      "LocXliffCommit": "bccb44b1dfcd4a6100069196d8cd40e31351f76e"
     },
     "windows-apps-src\\xaml-platform\\binding-markup-extension.md.b89a2ff179b82c0154dc27eed1f8180045066a7c.HT": {
       "SourceFilename": "windows-apps-src\\xaml-platform\\binding-markup-extension.md",
