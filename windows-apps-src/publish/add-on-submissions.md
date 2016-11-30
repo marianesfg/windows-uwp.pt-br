@@ -4,8 +4,8 @@ Description: "Os complementos são publicados por meio do painel do Centro de De
 title: Envios de complemento
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 translationtype: Human Translation
-ms.sourcegitcommit: d67931b4ab23d2b6aef945e839d193e140240cf9
-ms.openlocfilehash: 400c2e2ee65e408c996193230b05c68264830f0d
+ms.sourcegitcommit: b0d877e46ba6958bfc61dd87687c30e91b6cd937
+ms.openlocfilehash: 7b44dabfd4badcad795e38a97590d98e1601092d
 
 ---
 
@@ -17,7 +17,7 @@ Os complementos são publicados por meio do painel do Centro de Desenvolvimento 
 
 A primeira etapa no processo de envio do complemento é criar o complemento no painel, [definindo seu tipo e ID de produto](set-your-add-on-product-id.md). Depois disso, você pode criar um envio para que seu complemento possa ser adquirido através da Windows Store. Você pode enviar um complemento ao mesmo tempo em que [envia seu aplicativo](app-submissions.md) ou pode trabalhar nele de forma independente. E você pode fazer [atualizações](#updating-an-add-on-after-submission) nos complementos depois que o aplicativo estiver na Loja, sem precisar reenviar o aplicativo.
 
-> **Observação**&nbsp;&nbsp;Esta seção da documentação descreve como usar um envio de complemento no painel do Centro de Desenvolvimento. Opcionalmente, você poderá usar a [API de envio da Windows Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de complementos.
+> **Observação**&nbsp;&nbsp;Esta seção da documentação descreve como enviar complementos no painel do Centro de Desenvolvimento. Opcionalmente, você poderá usar a [API de envio da Windows Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de complementos.
 
 ## Lista de verificação para o envio de um complemento
 
@@ -81,6 +81,6 @@ Se quiser remover um complemento oferecido anteriormente, você poderá fazer is
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

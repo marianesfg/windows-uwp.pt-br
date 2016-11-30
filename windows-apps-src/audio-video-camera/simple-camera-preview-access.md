@@ -4,8 +4,8 @@ ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
 description: "Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera em uma página XAML de um aplicativo UWP (Plataforma Universal do Windows)."
 title: "Exibir a visualização da câmera"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 8330ee43089207faab5f6f72e2ac7b32aada72ce
+ms.sourcegitcommit: 6aacd5ef8043c9c89116a1d287174210f02f7d62
+ms.openlocfilehash: 5eb53d1527f2cd002dfb66110f1f1f3618458b3a
 
 ---
 
@@ -65,8 +65,8 @@ Conecte a **MediaCapture** ao **CaptureElement** definindo a propriedade [**Sour
 Ao terminar de usar o fluxo de visualização, você sempre deve desligar o fluxo e dispor corretamente dos recursos associados para garantir que a câmera esteja disponível para outros aplicativos no dispositivo. As etapas necessárias para desligar o fluxo de visualização são:
 
 -   Se a câmera estiver atualmente em visualização, chame [**StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622) para interromper o fluxo de visualização. Uma exceção será gerada se você chamar **StopPreviewAsync** enquanto a visualização não estiver em execução.
--   Defina a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) do **CaptureElement** como nulo. Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority,Windows.UI.Core.DispatchedHandler) para garantir que essa chamada seja executada no thread da interface do usuário.
--   Chame o método [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) do objeto **MediaCapture** para liberar o objeto. Novamente, use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority,Windows.UI.Core.DispatchedHandler) para garantir que essa chamada seja executada no thread da interface do usuário.
+-   Defina a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) do **CaptureElement** como nulo. Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para garantir que essa chamada seja executada no thread de interface do usuário.
+-   Chame o método [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) do objeto **MediaCapture** para liberar o objeto. Novamente, use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para garantir que essa chamada seja executada no thread de interface do usuário.
 -   Defina a variável do membro do **MediaCapture** como nulo.
 -   Chame [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestRelease) para permitir que a tela seja desativada quando inativa.
 
@@ -93,6 +93,6 @@ No manipulador de eventos **Suspending**, verifique primeiro se a página está 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

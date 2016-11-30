@@ -3,8 +3,8 @@ title: "Desenvolvimento de aplicativos para Windows como serviço (Windows 10)"
 description: "Dissocie a versão do aplicativo e o suporte das compilações específicas do Windows."
 author: jdeckerMS
 translationtype: Human Translation
-ms.sourcegitcommit: a86002c944841536d37735bb8c4b657905582144
-ms.openlocfilehash: 72ac67b17fc519d374798e5121b309f664ff6b1b
+ms.sourcegitcommit: a98d35162c81f720e4d45990befa289abd2f2c5c
+ms.openlocfilehash: c61800c32e8ab98c13a356e7a61b11ff5b364ffe
 
 ---
 
@@ -151,14 +151,14 @@ Depois de ter atualizado para uma compilação liberada de versão de pré-lanç
 
 Conte como seu aplicativo está se comportando em relação às compilações de versões de pré-lançamento liberadas. Na medida que você descobrir problemas com seu aplicativo durante o teste, registre os bugs através do portal do parceiro se você tem acesso, ou por meio do seu representante da Microsoft. Recomendamos essas informações para que possamos construir uma experiência de qualidade para os nossos usuários juntos.
 
-### Etapa 4: Registre-se no Windows10
-O site [Pronto para o Windows10](http://go.microsoft.com/fwlink/?LinkID=780580) é um diretório de software que suporta o Windows 10. Destina-se a administradores de TI em empresas e organizações em todo o mundo que estão considerando o Windows 10 para suas implantações. Os administradores de TI podem verificar o site para ver se o software implantado em sua empresa é suportado no Windows10.
+### Etapa 4: registre-se no Ready for Windows
+O site [Ready for Windows](http://go.microsoft.com/fwlink/?LinkID=780580) é um diretório de software que suporta o Windows 10. Destina-se a administradores de TI em empresas e organizações em todo o mundo que estão considerando o Windows 10 para suas implantações. Os administradores de TI podem verificar o site para ver se o software implantado em sua empresa é suportado no Windows10.
 
 ## Tópicos relacionados
 [Opções de serviços do Windows10 para atualizações e upgrade](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

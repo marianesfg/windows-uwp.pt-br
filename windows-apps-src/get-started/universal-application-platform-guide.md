@@ -4,8 +4,8 @@ title: "Introdução à Plataforma Universal do Windows"
 description: "Saiba mais sobre os aplicativos UWP (Plataforma Universal do Windows) que podem ser executados em uma ampla variedade de dispositivos nos quais o Windows 10 esteja em execução."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 0f2ed552898f7cbb476055a6d6b7aa76545113b1
-ms.openlocfilehash: c433bd2eba2a5be114680f52a8da0b5c7b563186
+ms.sourcegitcommit: 98dd2da8e16552fcde9790bd77f17a2100b63d4f
+ms.openlocfilehash: 170bbb4e22b3ac642b0dfd0c9136d3dd39d519d0
 
 ---
 
@@ -189,7 +189,6 @@ As seguintes APIs dão acesso à entrada:
 
 ## Escrevendo código
 
-
 As opções de linguagem de programação para o seu [projeto do Windows 10 no Visual Studio](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx#target_win10) incluem Visual C++, C#, Visual Basic e JavaScript. Para Visual C++, C# e Visual Basic, você pode usar XAML para uma experiência de interface do usuário nativa de total fidelidade. Para Visual C++, você pode optar por desenhar com DirectX ou também usar o XAML. Para JavaScript, a camada de apresentação será em HTML, e é claro, o HTML é um padrão da plataforma de toda a web. Grande parte do seu código e da interface do usuário será universal e ele será executado da mesma maneira em todos os lugares. No entanto, para código adaptado para famílias de dispositivos específicos e para interface do usuário adaptada para fatores forma específicos, você terá a opção de usar código e interface do usuário adaptáveis. Vamos dar uma olhada nesses casos diferentes.
 
 **Chamar uma API que é implementada por sua família de dispositivos destinada**
@@ -279,8 +278,11 @@ O novo painel unificado do Centro de Desenvolvimento do Windows permite que voc�
 
 Veja [Usando o painel do Centro de Desenvolvimento do Windows unificado](../publish/using-the-windows-dev-center-dashboard.md) para aprender a enviar seus aplicativos para publicação na Windows Store.
 
+## Veja também ##
+Para mais material introdutório, consulte [Windows 10 - Uma Introdução sobre Como Compilar Aplicativos para Dispositivos Windows 10](https://msdn.microsoft.com/en-us/magazine/dn973012.aspx)
 
 
-<!--HONumber=Sep16_HO3-->
+
+<!--HONumber=Nov16_HO1-->
 
 

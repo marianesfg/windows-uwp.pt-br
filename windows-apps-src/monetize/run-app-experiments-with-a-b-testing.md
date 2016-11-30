@@ -4,8 +4,8 @@ Description: "Você pode usar o painel do Centro de Desenvolvimento do Windows p
 title: Executar experimentos de aplicativo com testes A/B
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 50f7ad90c04d5b5672fa7910f2df669798761472
+ms.sourcegitcommit: 126fee708d82f64fd2a49b844306c53bb3d4cc86
+ms.openlocfilehash: f6c8e830a3ffcff8db9c280b6a9df5b515b1a356
 
 ---
 
@@ -33,7 +33,7 @@ Testes A/B no Centro de Desenvolvimento do Windows têm suporte apenas para apli
 Antes de poder executar experimentos com testes A/B, você deve configurar seu computador de desenvolvimento:
 
 * Siga as instruções [aqui](../get-started/get-set-up.md) para configurar seu computador de desenvolvimento para o desenvolvimento da UWP.
-* Instale o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Além da API para experimentos, esse SDK também fornece APIs para outros recursos, como a exibição de anúncios e o direcionamento dos seus clientes ao Hub de Feedback para coletar comentários sobre o seu aplicativo. Para obter mais informações sobre esse SDK, consulte [Microsoft Store Services SDK](microsoft-store-services-sdk.md).
+* [Instale o Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk). Além da API para experimentos, esse SDK também fornece APIs para outros recursos, como a exibição de anúncios e o direcionamento dos seus clientes ao Hub de Feedback para coletar comentários sobre o seu aplicativo. 
 
 ## Práticas recomendadas
 
@@ -65,6 +65,6 @@ Para obter os resultados mais úteis, convém seguir estas recomendações ao ex
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

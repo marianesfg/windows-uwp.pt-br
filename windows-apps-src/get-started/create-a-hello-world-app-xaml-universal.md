@@ -4,8 +4,8 @@ ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Criar um aplicativo Hello, world (XAML)
 description: "Este tutorial ensina a usar XAML (Extensible Application Markup Language) com C# para criar um aplicativo Hello, world simples destinado à UWP (Plataforma Universal do Windows) no Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: 275c5cf8f8960f2be7cd9566e59eeb3bf4ee8f46
-ms.openlocfilehash: 272eb87e47c398218df85fa33f70bf9fbf240a3e
+ms.sourcegitcommit: 344ffda398c789f82973b5f08a0e3b791fc5ad10
+ms.openlocfilehash: 6cf960781862649588f361b6bfcd87605f3e8d55
 
 ---
 
@@ -109,21 +109,21 @@ Vamos adicionar um botão à nossa página. Neste tutorial, você trabalhará co
 
     Se você olhar para a janela de código XAML, verá que o botão foi adicionado lá também:
 
-    ```XAML
+ ```XAML
 <Button x:name="button" Content="Button" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
-```
+ ```
 
 4.  Altere o texto do botão.
 
     Clique no modo de exibição de código XAML e altere o conteúdo de "Botão" para "Hello, world!".
 
-    ```XAML
+```XAML
 <Button x:name="button" Content="Hello, world!" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
 ```
 
-    Observe como o botão é exibido nas atualizações de telas de design para exibir o novo texto.
+Observe como o botão é exibido nas atualizações de telas de design para exibir o novo texto.
 
-    ![Janela Gerenciador de soluções](images/win10-cs-07.png)
+![Janela Gerenciador de soluções](images/win10-cs-07.png)
 
 ## Etapa 3: inicie o aplicativo
 
@@ -253,10 +253,10 @@ Quando você executar o aplicativo e clicar no botão, seu computador (ou telefo
 ## Resumo
 
 
-Parabéns, você criou seu primeiro aplicativo para o Windows 10 e a UWP!
+Parabéns, você criou seu primeiro aplicativo para o Windows 10 e a UWP! Pronto para a [próxima etapa](learn-more.md)?
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

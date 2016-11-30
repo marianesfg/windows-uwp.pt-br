@@ -4,8 +4,8 @@ ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
 description: Saiba mais sobre como instalar as bibliotecas do Microsoft Advertising.
 title: Instalar as bibliotecas do Microsoft Advertising
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: a18822b167b7b4dab2dee02439c82c1a0dafcf31
+ms.sourcegitcommit: 126fee708d82f64fd2a49b844306c53bb3d4cc86
+ms.openlocfilehash: c717fa693c6edf8757c3eef79d60193434104bd8
 
 
 ---
@@ -15,7 +15,7 @@ ms.openlocfilehash: a18822b167b7b4dab2dee02439c82c1a0dafcf31
 
 
 
-Para aplicativos da Plataforma Universal do Windows (UWP) para Windows 10, as bibliotecas do Microsoft Advertising estão incluídas no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Esse SDK é uma extensão do Visual Studio 2015. Para saber mais sobre esse SDK, consulte [este artigo](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk).
+Para aplicativos da Plataforma Universal do Windows (UWP) para Windows 10, as bibliotecas do Microsoft Advertising estão incluídas no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Esse SDK é uma extensão do Visual Studio 2015 e versões posteriores. Para saber mais sobre a instalação desse SDK, consulte [este artigo](microsoft-store-services-sdk.md).
 
 > **Observação**&nbsp;&nbsp;Se você instalou o SDK do Windows 10 (14393) ou posterior, também precisará instalar a biblioteca WinJS se quiser adicionar anúncios a um aplicativo UWP JavaScript/HTML. Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows 10, mas a partir do SDK do Windows 10 (14393), ela deve ser instalada separadamente. Para instalar o WinJS, consulte [Baixar o WinJS](http://try.buildwinjs.com/download/GetWinJS/).
 
@@ -103,6 +103,6 @@ Para poder usar qualquer um dos controles de publicidade no código do aplicativ
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

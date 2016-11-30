@@ -1,4 +1,14 @@
-# Suporte para APIs da UWP para aplicativos da área de trabalho convertidos
+---
+author: awkoren
+Description: "Este artigo explica como assinar um aplicativo de área de trabalho convertido para a Plataforma Universal do Windows (UWP)."
+Search.Product: eADQiWindows 10XVcnh
+title: "Suporte para APIs da UWP para aplicativos da área de trabalho convertidos"
+translationtype: Human Translation
+ms.sourcegitcommit: 3751b16837a1e12f68954b2dec7dfaf0fb8554b6
+ms.openlocfilehash: c99d103fe5d613c5b654ba2b0bb83987a7fcb944
+
+---
+# APIs UWP compatíveis para aplicativos convertidos com a ponte da área de trabalho
 
 Os aplicativos de desktop convertidos podem usar uma ampla variedade de APIs da Plataforma Universal do Windows (UWP), mesmo se eles não tiverem sido totalmente convertidos em aplicativos UWP. Este artigo lista as classes disponíveis que seu aplicativo convertido pode usar. 
 
@@ -32,7 +42,7 @@ Não há suporte para algumas APIs UWP para aplicativos de desktop completos par
 
 Veja a seguir uma lista completa de APIs UWP com suporte em aplicativos convertidos. Você pode exibir [APIs com suporte recente em aplicativos convertidos](#new) ou [APIs com suporte em aplicativos de desktop e aplicativos convertidos](#both). 
 
-Para obter exemplos sobre como chamar APIs da UWP a partir de um aplicativo convertido, consulte os [exemplos de código do Desktop Bridge no GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples).
+Para obter exemplos sobre como usar APIs WinRT, consulte [Exemplos de ponte de aplicativo da área de trabalho para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) e [Exemplos de aplicativo da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) no GitHub.
 
 <span id="new" />
 ### APIs com suporte em aplicativos recentemente convertidos
@@ -1030,6 +1040,6 @@ Para obter exemplos sobre como chamar APIs da UWP a partir de um aplicativo conv
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

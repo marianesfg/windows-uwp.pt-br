@@ -4,17 +4,14 @@ ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: "Use este método na API de análise da Windows Store para obter dados de classificações agregadas para um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter classificações de aplicativos"
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: 8ec588ceb0a7c8bd6a75f72bf0a2d48c697a8e6a
+ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
+ms.openlocfilehash: 45df3a1296ba06551e08705e9d72a693ad3d33e5
 
 ---
 
 # Obter classificações de aplicativos
 
-
-
-
-Use este método na API de análise da Windows Store para obter dados de classificações agregadas para um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
+Use este método na API de análise da Windows Store para obter dados de classificações agregadas em formato JSON para um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de classificações](../publish/ratings-report.md) no painel do Centro de Desenvolvimento do Windows.
 
 ## Pré-requisitos
 
@@ -118,6 +115,31 @@ Para usar este método, primeiro você precisa do seguinte:
 <p>O parâmetro <em>order</em> é opcional e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p>
 <p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p></td>
 <td align="left">Não</td>
+</tr>
+<tr class="odd">
+<td align="left">groupby</td>
+<td align="left">string</td>
+<td align="left"><p>Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationName</strong></li>
+<li><strong>market</strong></li>
+<li><strong>osVersion</strong></li>
+<li><strong>deviceType</strong></li>
+<li><strong>isRevised</strong></li>
+</ul>
+<p>As linhas de dados retornados conterão os campos especificados no parâmetro <em>groupby</em>, bem como o seguinte:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationId</strong></li>
+<li><strong>fiveStars</strong></li>
+<li><strong>fourStars</strong></li>
+<li><strong>threeStars</strong></li>
+<li><strong>twoStars</strong></li>
+<li><strong>oneStar</strong></li>
+</ul>
+<p>O parâmetro <em>groupby</em> pode ser usado com o parâmetro <em>aggregationLevel</em>. Por exemplo: <em>&amp;groupby=osVersion,market&amp;aggregationLevel=week</em></p></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +255,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 
 ### Exemplo de resposta
 
-O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
+O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa solicitação.
 
 ```json
 {
@@ -261,6 +283,7 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 ## Tópicos relacionados
 
+* [Relatório de classificações](../publish/ratings-report.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
 * [Obter aquisições de aplicativo](get-app-acquisitions.md)
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)
@@ -269,6 +292,6 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -6,8 +6,8 @@ ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 1a70ac671c11d2ab3c34a95f2571685f4f851836
+ms.sourcegitcommit: 526493614666424089199063013b5fc72d9bc5d8
+ms.openlocfilehash: 9abde4aa5489780f3ee2e9b5e7ecbdfa4dd53b93
 
 ---
 
@@ -106,13 +106,17 @@ Uma gramática SRGS é um formato XML de padrão aberto representado pela classe
 
 ## Artigos relacionados
 
-
 **Desenvolvedores**
-* [Interações de fala](speech-interactions.md)
+
+* [Interações de controle por voz](speech-interactions.md)
+
 **Designers**
-* [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+
+* [Diretrizes para design de controle por voz] (https://msdn.microsoft.com/library/windows/apps/dn596121)
+
 **Exemplos**
-* [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+
+* [Exemplo de reconhecimento de fala e sintetização de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  
@@ -123,6 +127,6 @@ Uma gramática SRGS é um formato XML de padrão aberto representado pela classe
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

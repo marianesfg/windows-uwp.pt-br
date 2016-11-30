@@ -4,17 +4,14 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados para um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter dados de relatório de erros"
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: 64bd3491bc8ff37f5eb7ca852ad6dc738f6e2711
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 89b1c9b44aaabb49f78953877ae11d2d7a0a2a2f
 
 ---
 
 # Obter dados de relatório de erros
 
-
-
-
-Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados para um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
+Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados em formato JSON para um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de integridade](../publish/health-report.md) no painel do Centro de Desenvolvimento do Windows.
 
 ## Pré-requisitos
 
@@ -292,7 +289,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 
 ### Exemplo de resposta
 
-O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
+O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa solicitação.
 
 ```json
 {
@@ -322,6 +319,7 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 ## Tópicos relacionados
 
+* [Relatório de integridade](../publish/health-report.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
 * [Obter aquisições de aplicativo](get-app-acquisitions.md)
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)
@@ -330,6 +328,6 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

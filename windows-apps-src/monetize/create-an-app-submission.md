@@ -4,8 +4,8 @@ ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
 description: "Use este método na API de envio da Windows Store para criar um novo envio para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
 title: Criar um envio de aplicativo usando a API de envio da Windows Store
 translationtype: Human Translation
-ms.sourcegitcommit: 178b70db1583790c174d65e060c8bce6e4f69243
-ms.openlocfilehash: 4857e0a9d7eec1d4f862ba61d39d2c0dcb138bd8
+ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
+ms.openlocfilehash: dc5fcdd7a3181e07874b761c7183c6c539591704
 
 ---
 
@@ -44,7 +44,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -150,6 +150,16 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
       ]
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "enterpriseLicensing": "Online",
   "allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies": true,
   "allowTargetFutureDeviceFamilies": {
@@ -186,6 +196,6 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

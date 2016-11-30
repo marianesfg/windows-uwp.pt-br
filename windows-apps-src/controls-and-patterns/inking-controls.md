@@ -5,8 +5,8 @@ title: "Controles de escrita à tinta"
 label: Inking Controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 7198f4084df8ce484cdc5f6b3231a4bdb02f18b5
+ms.sourcegitcommit: 2fe53747da7995b5442eda0a6c20b120b3b615e5
+ms.openlocfilehash: aacf45c90458d3ca1bd295f904e8f2393d27542d
 
 ---
 # Controles de escrita à tinta
@@ -143,6 +143,7 @@ A borracha também tem um submenu que fornece o comando **Apagar Toda a Tinta**.
 - Use um controle InkToolbar com InkCanvas para fornecer configurações e recursos de escrita à tinta básicos. O InkCanvas e InkToolbar podem ser personalizados de forma programática.
 - O InkToolbar, e a escrita à tinta em geral, oferece a melhor experiência com uma caneta ativa. No entanto, a escrita à tinta com mouse e toque pode ter suporte, se exigido por seu aplicativo.
 - Para dar suporte à escrita à tinta com entrada por toque, recomendamos usar o ícone ED5F da fonte Segoe MLD2 Assets para o botão de alternância, com uma dica de ferramenta "Escrita por toque".
+- Se você fornecer seleção de traço, recomendamos usar o ícone EF20 da fonte Segoe MLD2 Assets para o botão de ferramenta, com uma dica de ferramenta "Ferramenta de seleção".
 - Se for usar mais de um InkCanvas, recomendamos usar um único InkToolbar para controlar a escrita à tinta em telas.
 - Para obter o melhor desempenho, recomendamos alterar o submenu padrão em vez de criar um personalizado para ferramentas padrão e personalizadas.
 
@@ -160,6 +161,6 @@ Para ver um exemplo de escrita à tinta mais avançado, consulte o [exemplo Comp
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

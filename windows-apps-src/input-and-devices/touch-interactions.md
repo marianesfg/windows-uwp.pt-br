@@ -6,8 +6,8 @@ ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: ca4ab33a58391f36e376323ca29d27961a2a7404
+ms.sourcegitcommit: 526493614666424089199063013b5fc72d9bc5d8
+ms.openlocfilehash: db38bfecadb7568e602646222358e0a111c638bc
 
 ---
 
@@ -621,12 +621,16 @@ Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implem
 
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
+
 **Exemplos**
+
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Exemplo de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
 **Exemplos de arquivo morto**
+
 * [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
@@ -641,6 +645,6 @@ Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implem
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

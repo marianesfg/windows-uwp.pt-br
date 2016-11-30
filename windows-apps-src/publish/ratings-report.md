@@ -4,15 +4,15 @@ Description: "O relatório Classificações no painel do Centro de Desenvolvimen
 title: "Relatório de classificações"
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1613c8a5e5a28ba431fcfb186a0fcd5fe9bd7582
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 45d22b46a750655cc723658b476ba40d18b4f745
 
 ---
 
 # Relatório de classificações
 
 
-O relatório **Classificações** no painel do Centro de Desenvolvimento do Windows permite que você consulte a distribuição de como os clientes classificam seu aplicativo na Windows Store. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar esses dados de forma programática usando a [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
+O relatório **Classificações** no painel do Centro de Desenvolvimento do Windows permite que você consulte a distribuição de como os clientes classificam seu aplicativo na Windows Store. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Você também pode recuperar programaticamente esses dados usando o método [obter classificações de aplicativo](../monetize/get-app-ratings.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Nesse relatório, uma classificação significa o número de estrelas (de 1 a 5) que um cliente deu ao seu aplicativo quando o classificou na Loja. O relatório **Classificações** não inclui informações sobre todos os comentários individuais deixados como análises. Esses comentários estão disponíveis no [Relatório de avaliações](reviews-report.md).
 
@@ -73,6 +73,6 @@ Por padrão, podemos mostrar o mercado que tinha mais críticas e continuar para
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,15 +4,15 @@ ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: "Use este método na API de análise da Windows Store para obter os dados de aquisição agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter aquisições de aplicativo"
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: c3efa347d11c2694d8814eb31f7e5f6825c7173a
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: db271b0d1ec3b20ab2ead2e35e06fd97adb2ce0c
 
 ---
 
 # Obter aquisições de aplicativo
 
 
-Use este método na API de análise da Windows Store para obter os dados de aquisição agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
+Use este método na API de análise da Windows Store para obter dados agregados de aquisição em formato JSON de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de aquisições](../publish/acquisitions-report.md) no painel do Centro de Desenvolvimento do Windows.
 
 ## Pré-requisitos
 
@@ -119,6 +119,31 @@ Para usar este método, primeiro você precisa do seguinte:
 <p>O parâmetro <em>order</em> é opcional e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p>
 <p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p></td>
 <td align="left">Não</td>
+</tr>
+<tr class="odd">
+<td align="left">groupby</td>
+<td align="left">string</td>
+<td align="left"><p>Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationName</strong></li>
+<li><strong>acquisitionType</strong></li>
+<li><strong>ageGroup</strong></li>
+<li><strong>storeClient</strong></li>
+<li><strong>gender</strong></li>
+<li><strong>market</strong></li>
+<li><strong>osVersion</strong></li>
+<li><strong>deviceType</strong></li>
+<li><strong>orderName</strong></li>
+</ul>
+<p>As linhas de dados retornados conterão os campos especificados no parâmetro <em>groupby</em>, bem como o seguinte:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationId</strong></li>
+<li><strong>acquisitionQuantity</strong></li>
+</ul>
+<p>O parâmetro <em>groupby</em> pode ser usado com o parâmetro <em>aggregationLevel</em>. Por exemplo: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></p></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -280,7 +305,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 
 ### Exemplo de resposta
 
-O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
+O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa solicitação.
 
 ```json
 {
@@ -307,6 +332,7 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 ## Tópicos relacionados
 
+* [Relatório de aquisições](../publish/acquisitions-report.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)
 * [Obter dados de relatório de erros](get-error-reporting-data.md)
@@ -315,6 +341,6 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -5,8 +5,8 @@ description: Saiba como usar o namespace Windows.Services.Store para comprar um 
 title: Habilitar compras nos aplicativos e complementos
 keywords: "exemplo de código de oferta no aplicativo"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 0347c3a72ccdf26ddd885a5bad944ae36e09a190
+ms.sourcegitcommit: 962bee0cae8c50407fe1509b8000dc9cf9e847f8
+ms.openlocfilehash: a28982e05e88b542a0b20bf481e3121d6ac8a247
 
 ---
 
@@ -33,6 +33,8 @@ O código neste exemplo pressupõe que:
 * O arquivo de código tenha uma instrução **using** para o namespace **Windows.Services.Store**.
 * O aplicativo seja um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md#api_intro).
 
+>**Observação**&nbsp;&nbsp;Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado neste exemplo para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
+
 ## Exemplo de código
 
 Este exemplo demonstra como usar o método [RequestPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.requestpurchaseasync.aspx) da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para comprar um aplicativo ou complemento com uma [ID da Loja](in-app-purchases-and-trials.md#store_ids) conhecida.
@@ -45,6 +47,9 @@ public async void PurchaseAddOn(string storeId)
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     workingProgressRing.IsActive = true;
@@ -101,6 +106,6 @@ Para obter um aplicativo de exemplo completo, consulte o [Exemplo da Loja](https
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

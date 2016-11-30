@@ -4,8 +4,8 @@ title: Jogos e DirectX
 description: A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, distribuir e monetizar jogos. Saiba como iniciar um novo jogo ou portar um jogo existente.
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 translationtype: Human Translation
-ms.sourcegitcommit: adaff9abeb0ae8f9c9deb964b18e673c4d4c5f73
-ms.openlocfilehash: fccc85584e84bf3364130fe80c61b75c6377c0c8
+ms.sourcegitcommit: 708e998e414f01bc6544d7f2435e7145ac84902b
+ms.openlocfilehash: 6437f3620afadd0b421bf11f1aa4f86558d50de1
 
 ---
 
@@ -42,6 +42,7 @@ A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, 
 | [Rede para jogos](work-with-networking-in-your-directx-game.md) | Saiba como desenvolver e incorporar recursos de rede em seu jogo com o DirectX. |
 | [Acessibilidade para jogos](accessibility-for-games.md) | Aprenda a tornar os jogos mais acessíveis. |
 | [Nuvem para jogos](cloud-for-games.md) | Aprenda a fazer uso de tecnologias de nuvem para desenvolvimento de jogos. |
+| [Monetização para jogos](monetization-for-games.md) | Saiba como seu jogo pode ser monetizado. |
 | [Interoperabilidade entre DirectX e XAML](directx-and-xaml-interop.md) | Você pode usar o XAML (Extensible Application Markup Language) e o Microsoft DirectX juntos em seu jogo UWP. |
 | [Empacotar seu jogo](package-your-windows-store-directx-game.md) | Os jogos UWP maiores, especialmente os que dão suporte a vários idiomas com ativos específicos à região ou que possuem ativos opcionais de alta definição podem ser facilmente dimensionados para tamanhos grandes. Neste tópico, você aprenderá a usar pacotes e lotes de aplicativos para personalizar seu aplicativo de forma que os clientes recebam apenas os recursos que eles realmente precisam. |
 | [Aprovação de conceito](concept-approval.md) | Saiba como enviar seu produto para aprovação de conceito, que você precisará se seu produto for executado no Xbox ou usar o Xbox Live. |
@@ -72,6 +73,6 @@ Para fazer o melhor uso das visões gerais e dos tutoriais de desenvolvimento de
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

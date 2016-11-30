@@ -4,12 +4,12 @@ Description: "Além das APIs normais disponíveis para todos os aplicativos UWP,
 Search.Product: eADQiWindows 10XVcnh
 title: "Extensões de aplicativos da área de trabalho convertidos"
 translationtype: Human Translation
-ms.sourcegitcommit: 09ddc8cad403a568a43e08f32abeaf0bbd40d59a
-ms.openlocfilehash: 2aa55797ed3a6588b3a27158282a02827fbd2109
+ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
+ms.openlocfilehash: 405b9b100be93f7098eb384d6b48b8690f5e6309
 
 ---
 
-# Extensões de aplicativos da área de trabalho convertidos
+# Extensões de aplicativo da ponte da área de trabalho
 
 Você pode aprimorar seu aplicativo de área de trabalho convertido com uma ampla gama de APIs da Plataforma Universal do Windows (UWP). No entanto, além das APIs normais disponíveis para todos os aplicativos UWP, há algumas extensões e APIs disponíveis somente para aplicativos de área de trabalho convertidos. Esses recursos se concentram em cenários como iniciar um processo quando o usuário faz logon e integração com o Explorador de Arquivos e são projetados para suavizar a transição entre o aplicativo de área de trabalho original e o pacote do aplicativo convertido.
 
@@ -58,7 +58,7 @@ Você só pode especificar um único alias de execução de aplicativo para cada
 
 ## Associações de protocolo 
 
-Associações de protocolo habilitam cenários de interoperabilidade entre o seu aplicativo convertido e outros programas ou componentes do sistema. Quando seu aplicativo convertido é iniciado usando um protocolo, você pode especificar parâmetros específicos a serem transmitidos para seus argumentos de evento de ativação para que ele possa se comportar adequadamente. Observe que só há suporte dos parâmetros para aplicativos convertidos e confiáveis; aplicativos UWP não podem usar parâmetros.  
+As associações de protocolo habilitam cenários de interoperabilidade entre o seu aplicativo convertido e outros programas ou componentes do sistema. Quando seu aplicativo convertido é iniciado usando um protocolo, você pode especificar parâmetros específicos a serem transmitidos para seus argumentos de evento de ativação para que ele possa se comportar adequadamente. Observe que só há suporte dos parâmetros para aplicativos convertidos e confiáveis; aplicativos UWP não podem usar parâmetros.  
 
 Para declarar uma associação de protocolo, adicione o seguinte ao manifesto do aplicativo:
 
@@ -106,7 +106,7 @@ Exemplo:
 
 - *FileType* é a extensão compatível com seu aplicativo.
 
-### Verbos de menu de contexto 
+### Verbos de menu de contexto do arquivo 
 
 Os usuários costumam abrir arquivos simplesmente clicando duas vezes neles. No entanto, quando um usuário clica com o botão direito em um arquivo, o menu de contexto o apresenta com várias opções (conhecidas como "Verbos") que fornecem detalhes adicionais sobre como desejam interagir com o arquivo, como "Abrir", "Editar", "Visualizar" ou "Imprimir". 
 
@@ -125,6 +125,10 @@ Exemplo:
 - *Parâmetros de Verbo* é a lista de parâmetros de argumento e valores associados ao verbo. Se seu aplicativo for um aplicativo convertido confiável, eles serão transmitidos como argumentos de evento quando ele for ativado para que você possa personalizar seu comportamento para verbos de ativação diferentes. Se uma variável puder conter um caminho de arquivo, você deverá encapsular o valor entre aspas para que ele não seja interrompido se for transmitido um caminho que inclui espaços. Observe que, se seu aplicativo for um aplicativo UWP, você não poderá transmitir parâmetros; ele receberá a Id (veja o item anterior). 
 - *Verbo Estendido* especifica que o verbo deve aparecer somente se o usuário mantiver a tecla **Shift** pressionada antes de clicar com o botão direito no arquivo para mostrar o menu de contexto. Esse atributo é opcional e o padrão é *False* (por exemplo, mostrar sempre o verbo) se não listado. Você especifica esse comportamento individualmente para cada verbo (com exceção de "Abrir", que é sempre *False*). 
 - *Verbo* é o nome para exibição no menu de contexto do Explorador de Arquivos. Essa sequência é localizável usando ```ms-resource```.
+
+### Verbos de menu de contexto do shell
+
+A adição de itens ao menu de contexto da pasta do shell não é compatível no momento. 
 
 ### Modelo de seleção múltipla
 
@@ -179,6 +183,6 @@ Veja a seguir um exemplo completo que integra muitos elementos relacionados a ar
 - [Manifesto do pacote do aplicativo](https://msdn.microsoft.com/library/windows/apps/br211474.aspx)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

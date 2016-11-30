@@ -4,13 +4,13 @@ ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: "Orientação do sensor"
 description: "Os dados do sensor das classes Accelerometer, Gyrometer, Compass, Inclinometer e OrientationSensor são definidos por seus eixos de referência. Esses eixos são definidos pela orientação paisagem do dispositivo e giram com o dispositivo conforme o usuário o vira."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: f0f9c7184c81edf8136849bf8a7bd9d04c340f62
+ms.sourcegitcommit: 62b4042cf1c6296c908a12feb5b2fcbd2b9b8734
+ms.openlocfilehash: 9deb0327f67350af49ba19224a75e766ff9805d7
 
 ---
 # Orientação do sensor
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -21,30 +21,30 @@ Os dados do sensor das classes [**Accelerometer**](https://msdn.microsoft.com/li
 
 ## Orientação de exibição x orientação do dispositivo
 
-Para poder compreender os eixos de referência para os sensores, você precisa distinguir entre a orientação de exibição e a orientação do dispositivo. A orientação de exibição é a direção na qual textos e imagens são exibidas na tela, enquanto que a orientação do dispositivo é a posição física do dispositivo. Na imagem a seguir, ambas as orientações de exibição e do dispositivo estão em **Landscape**.
+Para poder compreender os eixos de referência para os sensores, você precisa distinguir entre a orientação de exibição e a orientação do dispositivo. A orientação de exibição é a direção na qual textos e imagens são exibidas na tela, enquanto que a orientação do dispositivo é a posição física do dispositivo. Na imagem a seguir, as orientações de exibição e do dispositivo estão em **Paisagem** (observe que os eixos do sensor mostrados somente são aplicáveis a dispositivos de prioridade paisagem).
 
-![Orientação de exibição e do dispositivo em Paisagem](images/accelerometer-axis-orientation-landscape-with-text.png)
+![Orientação de exibição e do dispositivo em Paisagem](images/sensor-orientation-a.PNG)
 
 A imagem a seguir mostra ambas as orientações de exibição e dispositivo em **LandscapeFlipped**.
 
-![Orientação de exibição e do dispositivo em LandscapeFlipped](images/accelerometer-axis-orientation-landscape-180-with-text.png)
+![Orientação de exibição e do dispositivo em LandscapeFlipped](images/sensor-orientation-b.PNG)
 
 A próxima imagem exibe a orientação de exibição em Paisagem, enquanto que a orientação do dispositivo é LandscapeFlipped.
 
-![Orientação de exibição em Paisagem, enquanto que a orientação do dispositivo é LandscapeFlipped.](images/accelerometer-axis-orientation-landscape-180-with-text-inverted.png)
+![Orientação de exibição em Paisagem, enquanto que a orientação do dispositivo é LandscapeFlipped.](images/sensor-orientation-c.PNG)
 
 Você pode consultar os valores de orientação por meio da classe [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258) usando o método [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx) com a propriedade [**CurrentOrientation**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx). Em seguida, você pode criar lógica comparando com a enumeração [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142). Lembre-se de que para cada orientação com suporte, é necessário dar suporte a uma conversão dos eixos de referência para essa orientação.
 
 ## Dispositivos de prioridade paisagem x prioridade retrato
 
-Os fabricantes produzem dispositivos com ambos os formatos de prioridade paisagem e prioridade retrato. Quando o fabricante integra os componentes nos dispositivos, eles o fazem de uma maneira unificada e consistente para que todos os dispositivos operem dentro do mesmo enquadramento de referência. A tabela a seguir mostra os eixos do sensor para ambos os dispositivos prioridade paisagem e prioridade retrato.
+Os fabricantes produzem dispositivos com ambos os formatos de prioridade paisagem e prioridade retrato. O quadro de referência varia entre dispositivos de prioridade paisagem (como desktops e notebooks) e dispositivos de prioridade retrato (por exemplo, alguns telefones e tablets). A tabela a seguir mostra os eixos do sensor para ambos os dispositivos prioridade paisagem e prioridade retrato.
 
 | Orientação | Prioridade paisagem | Prioridade retrato |
 |-------------|-----------------|----------------|
-| **Paisagem** | ![Dispositivo de prioridade paisagem em orientação Paisagem](images/accelerometer-axis-orientation-landscape.png) | ![Dispositivo de prioridade retrato em orientação Paisagem](images/accelerometer-axis-orientation-portrait-270.png) |
-| **Retrato** | ![Dispositivo de prioridade paisagem em orientação Retrato](images/accelerometer-axis-orientation-landscape-90.png) | ![Dispositivo de prioridade retrato em orientação Retrato](images/accelerometer-axis-orientation-portrait.png) |
-| **LandscapeFlipped ** | ![Dispositivo de prioridade paisagem em orientação LandscapeFlipped](images/accelerometer-axis-orientation-landscape-180.png) | ![Dispositivo de prioridade retrato em orientação LandscapeFlipped](images/accelerometer-axis-orientation-portrait-90.png) | 
-| **PortraitFlipped** | ![Dispositivo de prioridade paisagem em orientação PortraitFlipped](images/accelerometer-axis-orientation-landscape-270.png)| ![Dispositivo de prioridade retrato em orientação PortraitFlipped](images/accelerometer-axis-orientation-portrait-180.png) |
+| **Paisagem** | ![Dispositivo de prioridade paisagem em orientação Paisagem](images/sensor-orientation-0.PNG) | ![Dispositivo de prioridade retrato em orientação Paisagem](images/sensor-orientation-1.PNG) |
+| **Retrato** | ![Dispositivo de prioridade paisagem em orientação Retrato](images/sensor-orientation-2.PNG) | ![Dispositivo de prioridade retrato em orientação Retrato](images/sensor-orientation-3.PNG) |
+| **LandscapeFlipped ** | ![Dispositivo de prioridade paisagem em orientação LandscapeFlipped](images/sensor-orientation-4.PNG) | ![Dispositivo de prioridade retrato em orientação LandscapeFlipped](images/sensor-orientation-5.PNG) | 
+| **PortraitFlipped** | ![Dispositivo de prioridade paisagem em orientação PortraitFlipped](images/sensor-orientation-6.PNG)| ![Dispositivo de prioridade retrato em orientação PortraitFlipped](images/sensor-orientation-7.PNG) |
 
 ## Dispositivos com transmissão de exibição e dispositivos sem periféricos
 
@@ -171,6 +171,6 @@ Os dados de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

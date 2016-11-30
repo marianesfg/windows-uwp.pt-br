@@ -7,8 +7,8 @@ label: Pen interactions and Windows Ink in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
 translationtype: Human Translation
-ms.sourcegitcommit: 8bc5612c0fc9273d32ccbfcd5b4334566d24b017
-ms.openlocfilehash: 67149f51cc16fee6f5ba818915432b18d2c1a549
+ms.sourcegitcommit: f7bc2ccbdd34bec671864323df53ab7bdda25a87
+ms.openlocfilehash: 4c87dea0387b2da055d07df5bab14c4ad61638d7
 
 ---
 
@@ -304,7 +304,7 @@ Para este exemplo, usamos os arquivos MainPage.xaml e MainPage.xaml.cs para hosp
     ![o Laço de seleção](images/ink-unprocessed-3-small.png)
 
       ```csharp
-        // Handle unprocessed pointer events from modifed input.
+        // Handle unprocessed pointer events from modified input.
         // The input is used to provide selection functionality.
         // Selection UI is drawn on a canvas under the InkCanvas.
         private void UnprocessedInput_PointerPressed(
@@ -437,6 +437,9 @@ Chamar [**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/app
 
 Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314).
 
+> [!NOTE]
+> Secagem personalizada e o [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)  
+> Se o aplicativo substituir o comportamento de renderização da tinta padrão do [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) por uma implementação de secagem personalizada, os traços da tinta renderizada não estarão mais disponíveis para o InkToolbar e os comandos de exclusão internos do InkToolbar não funcionarão conforme esperado. Para oferecer uma funcionalidade de exclusão, você deve lidar com todos os eventos de ponteiro, realizar o teste de clique em cada traço e substituir o comando "Apagar toda a tinta" interno.
 
 ## Outros artigos nesta seção
 
@@ -471,6 +474,6 @@ Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta co
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

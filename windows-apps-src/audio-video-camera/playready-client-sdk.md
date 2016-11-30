@@ -4,8 +4,8 @@ ms.assetid: DD8FFA8C-DFF0-41E3-8F7A-345C5A248FC2
 description: "Este tópico descreve como adicionar conteúdos de mídia protegida do PlayReady ao seu aplicativo da Plataforma Universal do Windows (UWP)."
 title: DRM do PlayReady
 translationtype: Human Translation
-ms.sourcegitcommit: 549826e6c355d6b8150fa20736db20a147ed41e9
-ms.openlocfilehash: 735fdfb04bcf7e4fab8265b294b117be5c614870
+ms.sourcegitcommit: 94f3145716edee7f9b86e97fb01e98b4bf71a084
+ms.openlocfilehash: b2748f0e48b25027441b183c287aa995dc6d9a9c
 
 ---
 
@@ -448,15 +448,29 @@ Para obter uma implementação de exemplo de parada segura, consulte o arquivo s
 
 ## Usar PlayReady DRM em Xbox One
 
-Para usar PlayReady DRM em um aplicativo UWP em Xbox One, você precisa adicionar um `<DeviceCapability>` ao manifesto do aplicativo. Você precisará adicioná-lo manualmente porque não há configuração disponível no momento no Designer de Manifesto do Aplicativo. Siga estas etapas para configurá-lo:
+Para usar PlayReady DRM em um aplicativo UWP no Xbox One, você precisará registrar inicialmente a conta do Centro de Desenvolvimento que está usando para publicar o aplicativo para autorização a fim de usar o PlayReady. É possível fazer isso de duas maneiras:
+
+* Fazer o contato na Microsoft solicitar permissão.
+* Solicitar autorização enviando a conta do Centro de Desenvolvimento e o nome da empresa para [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com).
+
+Depois de receber a autorização, você precisará incluir um `<DeviceCapability>` adicional ao manifesto do aplicativo. Você precisará adicioná-lo manualmente porque não há configuração disponível no momento no Designer de Manifesto do Aplicativo. Siga estas etapas para configurá-lo:
 
 1. Com o projeto aberto no Visual Studio, abra o **Gerenciador de Soluções** e clique com o botão direito do mouse em **Package. appxmanifest**.
 2. Selecione **Abrir Com...**, escolha **Editor (Texto) de XML**e clique em **OK**.
 3. Entre as marcas `<Capabilities>`, adicione o seguinte `<DeviceCapability>`:
-```xml
-<DeviceCapability Name="6a7e5907-885c-4bcb-b40a-073c067bd3d5" />
-```
+
+    ```xml
+    <DeviceCapability Name="6a7e5907-885c-4bcb-b40a-073c067bd3d5" />
+    ```
+
 4. Salve o arquivo.
+
+Por fim, há uma última consideração durante o uso do PlayReady no Xbox One: em kits de desenvolvimento, existe um limite de SL150 (ou seja, eles não conseguem reproduzir conteúdo SL2000 ou SL3000). Os dispositivos de varejo são capazes de reproduzir conteúdo com níveis de segurança mais altos, mas para testar o aplicativo em um kit de desenvolvimento, você precisará usar conteúdo SL150. É possível testar esse conteúdo das seguintes maneiras:
+
+* Use o conteúdo de teste coletado que exige licenças SL150.
+* Implemente uma lógica de maneira que apenas determinadas contas de teste autenticadas sejam capazes de adquirir licenças SL150 para um determinado conteúdo.
+
+Use a abordagem mais razoável para a empresa e o produto.
 
 ## Consulte também
 - [Reprodução de mídia](media-playback.md)
@@ -467,6 +481,6 @@ Para usar PlayReady DRM em um aplicativo UWP em Xbox One, você precisa adiciona
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

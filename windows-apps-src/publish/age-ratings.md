@@ -1,17 +1,17 @@
 ---
 author: jnHs
-Description: "A página Classificações etárias do Processo de envio de aplicativo permite que você forneça informações sobre seu aplicativo, para que ele possa receber as classificações etárias adequadas da International Age Ratings Coalition (IARC)."
+Description: "A página Classificações etárias do processo de envio de aplicativo permite que você forneça informações sobre seu aplicativo para que ele possa receber as classificações etárias adequadas da International Age Ratings Coalition (IARC)."
 title: "Classificações etárias"
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 translationtype: Human Translation
-ms.sourcegitcommit: 8781eb0e5ea352216a1f4e1c6deedbd04d4b588c
-ms.openlocfilehash: d190a32f16d1e7c1d98e33d1757bc9047277b62b
+ms.sourcegitcommit: eaba2fa0af727df29843dad38e277f5b22192b51
+ms.openlocfilehash: 6269cff868f7a4357c3006d65fcc0ad5b7f7932b
 
 ---
 
 # Classificações etárias
 
-A página **Classificações etárias** do [Processo de envio de aplicativo](app-submissions.md) permite que você forneça informações sobre seu aplicativo para que ele possa receber as classificações etárias e de conteúdo administradas pelo sistema de classificação da [International Age Ratings Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854). Essas classificações dizem respeito à adequação do conteúdo no aplicativo, em vez da idade do público-alvo.
+A página **Classificações etárias** do [processo de envio de aplicativo](app-submissions.md) permite que você forneça informações sobre seu aplicativo para que ele possa receber as classificações etárias e de conteúdo administradas pelo sistema de classificação da [International Age Ratings Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854). Essas classificações dizem respeito à adequação do conteúdo no aplicativo, em vez da idade do público-alvo.
 
 ## Respondendo ao questionário de classificação etária
 
@@ -50,6 +50,6 @@ Antes, os desenvolvedores especificavam a classificação etária para seu aplic
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

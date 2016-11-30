@@ -4,8 +4,8 @@ ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: "Use esse método na API da coleção da Windows Store para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário."
 title: "Declarar produtos consumíveis como providenciados"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: dd3e687d49e538187c123b7123c184f9182905de
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: 54095c7fd3c29fe7596be4c4b5a7148d078a7091
 
 ---
 
@@ -18,18 +18,18 @@ Use esse método na API da coleção da Windows Store para declarar um produto c
 
 Há duas maneiras de usar esse método para declarar um produto consumível como providenciado:
 
--   Forneça a ID do item do produto consumível (conforme retornado no parâmetro **itemId** de uma [consulta por produtos](query-for-products.md)) e uma ID de rastreamento exclusivo que você forneça. Se a mesma ID de rastreamento for usada em várias tentativas, o mesmo resultado será retornado mesmo se o item já tiver sido consumido. Se você não tiver certeza se uma solicitação de produto consumível foi bem-sucedida, o serviço deve reenviar as solicitações de produto consumível com a mesma ID de rastreamento. A ID de rastreamento sempre será vinculada a essa solicitação de produto consumível e poderá ser reenviada indefinidamente.
--   Forneça a ID do produto (como retornado no parâmetro **productId** de uma [consulta por produtos](query-for-products.md)) e uma ID de transação que é obtida de uma das fontes listadas na descrição do parâmetro **transactionId** na seção do corpo da solicitação abaixo.
+* Forneça a ID do item do produto consumível (conforme retornado no parâmetro **itemId** de uma [consulta por produtos](query-for-products.md)) e uma ID de rastreamento exclusivo que você forneça. Se a mesma ID de rastreamento for usada em várias tentativas, o mesmo resultado será retornado mesmo se o item já tiver sido consumido. Se você não tiver certeza se uma solicitação de produto consumível foi bem-sucedida, o serviço deve reenviar as solicitações de produto consumível com a mesma ID de rastreamento. A ID de rastreamento sempre será vinculada a essa solicitação de produto consumível e poderá ser reenviada indefinidamente.
+* Forneça a ID do produto (como retornado no parâmetro **productId** de uma [consulta por produtos](query-for-products.md)) e uma ID de transação que é obtida de uma das fontes listadas na descrição do parâmetro **transactionId** na seção do corpo da solicitação abaixo.
 
 ## Pré-requisitos
 
 
 Para usar esse método, você precisará:
 
--   Ter um token de acesso do Azure AD criado com o URI de público `https://onestore.microsoft.com`.
--   Uma chave ID da Windows Store que tenha sido gerada chamando-se o método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) no código do lado do cliente em seu aplicativo.
+* Ter um token de acesso do Azure AD criado com o URI de público `https://onestore.microsoft.com`.
+* Uma chave da ID da Windows Store que foi [gerada com base no código do lado do cliente no aplicativo](view-and-grant-products-from-a-service.md#step-4).
 
-Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-grant-products-from-a-service.md).
+Para obter mais informações, consulte [Exibir e conceder produtos de um serviço](view-and-grant-products-from-a-service.md).
 
 ## Solicitação
 
@@ -71,8 +71,8 @@ O objeto UserIdentity contém os parâmetros a seguir.
 | Parâmetro            | Tipo   | Descrição                                                                                                                                 | Obrigatório |
 |----------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | identityType         | string | Especifique o valor de cadeia de caracteres **b2b**.                                                                                                           | Sim      |
-| identityValue        | string | Valor cadeia de caracteres da chave ID da Windows Store ID.                                                                                                   | Sim      |
-| localTicketReference | string | Identificador solicitado para resposta retornada. Recomendamos que você use o mesmo valor que a declaração *userId* na chave ID da Windows Store. | Sim      |
+| identityValue        | string | A chave da ID da Windows Store que foi [gerada com base no código do lado do cliente no aplicativo](view-and-grant-products-from-a-service.md#step-4).                                                                                                   | Sim      |
+| localTicketReference | string | O identificador solicitado para resposta retornada. Recomendamos que você use o mesmo valor que a declaração *userId* na chave ID da Windows Store. | Sim      |
 
 <span/> 
 
@@ -158,6 +158,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ title: Guia de desenvolvimento de jogos do Windows 10
 description: "Um guia completo de recursos e informações para desenvolver jogos da Plataforma Universal do Windows (UWP)."
 ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
 translationtype: Human Translation
-ms.sourcegitcommit: 1c3f222b4b3ddb14a48cef138984b07ac58cc66b
-ms.openlocfilehash: 7bc6694f94eeeb6188470fee00d432b2d71e52e6
+ms.sourcegitcommit: 2584a08e0a869ab3c5f11c192f0a5a6eeb223d61
+ms.openlocfilehash: af9252d172bab96ce50eb7ff12d8f0503f010d15
 
 ---
 
@@ -63,6 +63,10 @@ Ao longo deste guia, você encontrará links profundos para a documentação rel
     <tr>
         <td>Referência e visões gerais do DirectX</td>
         <td>[Elementos gráficos e jogos do DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)</td>
+    </tr>
+    <tr>
+        <td>Azure para jogos</td>
+        <td>[Compilar e dimensionar seus jogos usando o Azure](https://azure.microsoft.com/solutions/gaming/)</td>
     </tr>
     <tr>
         <td>UWP no Xbox One</td>
@@ -653,6 +657,30 @@ O pacote modular de ferramentas e tecnologias do Havok ajuda criadores de jogos 
     </tr>
 </table>
  
+
+#### MonoGame
+
+MonoGame é uma estrutura de desenvolvimento de jogos de plataforma cruzada e código aberto originalmente com base no XNA Framework 4.0 da Microsoft. O Monogame atualmente oferece suporte para Windows, Windows Phone e Xbox, bem como Linux, macOS, iOS, Android e várias outras plataformas.
+
+<table>
+    <colgroup>
+    <col width="50%" />
+    <col width="50%" />
+    </colgroup>
+    <tr>
+        <td>MonoGame</td>
+        <td>[Site do MonoGame](http://www.monogame.net)</td>
+    </tr>
+    <tr>
+        <td>Documentação do MonoGame</td>
+        <td>[Documentação do MonoGame (mais recente)](http://www.monogame.net/documentation/)</td>
+    </tr>
+    <tr>
+        <td>Downloads do MonoGame</td>
+        <td>[Baixe versões, compilações de desenvolvimento e o código-fonte](http://www.monogame.net/downloads/) no site do MonoGame, ou [obtenha a versão mais recente via NuGet](https://www.nuget.org/profiles/MonoGame).
+    </tr>
+</table>
+
 
 #### Cocos2d
 
@@ -1506,6 +1534,6 @@ Para atualizar seu jogo publicado, envie um novo pacote do aplicativo com um nú
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

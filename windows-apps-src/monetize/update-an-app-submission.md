@@ -4,8 +4,8 @@ ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Use este método na API de envio da Windows Store para atualizar um envio de aplicativo existente."
 title: Atualizar um envio de aplicativo usando a API de envio da Windows Store
 translationtype: Human Translation
-ms.sourcegitcommit: 178b70db1583790c174d65e060c8bce6e4f69243
-ms.openlocfilehash: ad1c565f1ec84127b2ac689cc7cb23d2b39764ef
+ms.sourcegitcommit: 819843c8ba1e4a073f70f7de36fe98dd4087cdc6
+ms.openlocfilehash: 8b1a6da557b966e69345e90c48f90a6df0f27442
 
 ---
 
@@ -17,6 +17,8 @@ ms.openlocfilehash: ad1c565f1ec84127b2ac689cc7cb23d2b39764ef
 Use este método na API de envio da Windows Store para atualizar um envio de aplicativo existente. Depois de atualizar com êxito um envio usando esse método, você deverá [confirmar o envio](commit-an-app-submission.md) para ingestão e publicação.
 
 Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de aplicativo, usando a API de envio da Windows Store, consulte [Gerenciar envios de aplicativo](manage-app-submissions.md).
+
+>**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de aplicativo no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** no corpo da solicitação desse método será ignorado, e você temporariamente não conseguirá alterar os dados do período de avaliação, do preço e das vendas de um envio de aplicativo usando esse método. Atualizaremos a API de envio da Windows Store no futuro para apresentar uma nova maneira de acessar programaticamente as informações de preços para envios de aplicativo. Para obter mais informações, consulte o [Recurso de preços](manage-app-submissions.md#pricing-object).
 
 ## Pré-requisitos
 
@@ -51,7 +53,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obrigatório. A ID da Loja do aplicativo para o qual você deseja atualizar um envio. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | string | Obrigatório. A ID da Loja do aplicativo para o qual você deseja atualizar um envio. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | submissionId | string | Obrigatório. A ID do envio para atualizar. Essa ID está disponível no painel do Centro de Desenvolvimento e está incluída nos dados de resposta de solicitações para [criar um envio de aplicativo](create-an-app-submission.md).  |
 
 <span/>
@@ -76,7 +78,8 @@ O corpo da solicitação tem os parâmetros a seguir.
 | meetAccessibilityGuidelines           |    booliano           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
 | notesForCertification           |  string  |   Contém [observações de certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
 | applicationPackages           |   array  | Contém objetos que fornecem detalhes sobre cada pacote no envio. Para saber mais, veja a seção [Pacote de aplicativos](manage-app-submissions.md#application-package-object). Durante a chamada desse método para atualizar um envio de aplicativo, somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion* e *minimumSystemRam* desses objetos são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Centro de Desenvolvimento.   |    
-| enterpriseLicensing           |  string  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
+| packageDeliveryOptions    | objeto  | Contém as configurações de distribuição de pacote gradual e de atualização obrigatória para o envio. Para obter mais informações, consulte [Objeto de opções de entrega de pacote](manage-app-submissions.md#package-delivery-options-object).  |
+| enterpriseLicensing           |  string  |  Um dos [valores de licenciamento empresarial](manage-app-submissions.md#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
 | allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  booliano   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
 | allowTargetFutureDeviceFamilies           | booliano   |  Indica se o aplicativo tem permissão para [segmentar famílias de dispositivos Windows 10 futuras](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).     |    
 
@@ -144,6 +147,16 @@ Content-Type: application/json
       "minimumSystemRam": "None"
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "enterpriseLicensing": "Online",
   "allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies": true,
   "allowTargetFutureDeviceFamilies": {
@@ -237,6 +250,16 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
       ]
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "enterpriseLicensing": "Online",
   "allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies": true,
   "allowTargetFutureDeviceFamilies": {
@@ -273,6 +296,6 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

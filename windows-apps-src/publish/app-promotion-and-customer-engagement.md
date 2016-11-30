@@ -4,8 +4,8 @@ Description: "Assim que seu aplicativo estiver na Windows Store, é hora de apar
 title: "Compromisso do cliente e promoção do aplicativo"
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
 translationtype: Human Translation
-ms.sourcegitcommit: 4dec7ebaaeb0bc0dba24002f8cd8a805285de3d6
-ms.openlocfilehash: 1f43cb9fdf633cecf6848a4ef0dd49a0f07f79c3
+ms.sourcegitcommit: cb816efb9bac6b401a8be93e3fded217a031769e
+ms.openlocfilehash: 1d1f66fad9f4b0c1ef01e1a797526029d54ce33a
 
 ---
 
@@ -16,6 +16,7 @@ Assim que seu aplicativo estiver na Windows Store, é hora de aparecer para a ma
 
 -   [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md)
 -   [Criar uma campanha personalizada de promoção de aplicativo](create-a-custom-app-promotion-campaign.md)
+-   [Enviar notificações por push direcionadas para clientes do seu aplicativo](/send-push-notifications-to-your-apps-customers.md)
 -   [Gerar códigos promocionais](generate-promotional-codes.md)
 -   [Colocar aplicativos e complementos à venda](put-apps-and-add-ons-on-sale.md)
 -   [Responder ao feedback dos clientes](respond-to-customer-feedback.md)
@@ -30,6 +31,6 @@ Assim que seu aplicativo estiver na Windows Store, é hora de aparecer para a ma
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
 description: "Este artigo mostra como usar MediaSource, que fornece uma maneira comum de referenciar e reproduzir mídia de diferentes fontes, como arquivos locais ou remotos, e expõe um modelo comum para acessar dados de mídia, independentemente do formato de mídia subjacente."
 title: "Itens de mídia, playlists e faixas"
 translationtype: Human Translation
-ms.sourcegitcommit: c2e337e88f9dda3380dd62c32ca6e5d942366636
-ms.openlocfilehash: bb49af7a386356647000e268bcc6983351eaf4b8
+ms.sourcegitcommit: 9999805c8a3bf946aa323b921cea6d63f9a48789
+ms.openlocfilehash: 4c4c6fdb1ea2d42d5bda1034df082bf836d8b803
 
 ---
 
@@ -128,7 +128,7 @@ No manipulador de eventos [**OpenFailed**](https://msdn.microsoft.com/library/wi
 [!code-cs[OpenFailed](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetOpenFailed)]
 
 ## Definir propriedades de exibição usadas pelos controles de transporte de mídia do sistema
-Desde o Windows 10, versão 1607, a mídia reproduzida em um [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) é integrada automaticamente aos controles de transporte de mídia do sistema (SMTC) por padrão. Você pode especificar os metadados que serão exibidos pelo SMTC atualizando as propriedades de exibição de um **MediaPlaybackItem**. Obtenha um objeto representando as propriedades de exibição para um item chamando [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties). Defina se o item de reprodução é música ou vídeo configurando a propriedade [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type). Em seguida, defina as propriedades de [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) ou [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) do objeto. Chame [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923) para definir as propriedades do item de atualização como os valores fornecidos. Normalmente, um aplicativo recuperará os valores de exibição dinamicamente de um serviço web, mas o exemplo a seguir ilustra esse processo com valores codificados.
+Desde o Windows 10, versão 1607, a mídia reproduzida em um [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) é integrada automaticamente aos controles de transporte de mídia do sistema (SMTC) por padrão. Você pode especificar os metadados que serão exibidos pelo SMTC atualizando as propriedades de exibição de um **MediaPlaybackItem**. Obtenha um objeto representando as propriedades de exibição para um item chamando [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties). Defina se o item de reprodução é música ou vídeo configurando a propriedade [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type). Em seguida, defina as propriedades de [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) ou [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) do objeto. Chame [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923) para atualizar as propriedades do item para os valores fornecidos. Normalmente, um aplicativo recuperará os valores de exibição dinamicamente de um serviço web, mas o exemplo a seguir ilustra esse processo com valores codificados.
 
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
@@ -226,6 +226,6 @@ O evento [**ItemFailed**](https://msdn.microsoft.com/library/windows/apps/Window
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

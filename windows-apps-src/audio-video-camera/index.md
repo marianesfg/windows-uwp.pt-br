@@ -4,8 +4,8 @@ ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
 description: "Esta seção fornece informações sobre como criar aplicativos da Plataforma Universal do Windows (UWP) que capturam, reproduzem ou editem fotos, vídeos ou áudio."
 title: "Áudio, vídeo e câmera"
 translationtype: Human Translation
-ms.sourcegitcommit: 18e97dd5e607960c1c1fd640fe6fe6ae5e9f9085
-ms.openlocfilehash: 1914690b6417a5ae382e74ec76b54d9db411c213
+ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
+ms.openlocfilehash: 6e67f57fbc00e596bb07cc37f2c9f762a5c9f557
 
 ---
 
@@ -30,7 +30,7 @@ Esta seção fornece informações sobre como criar aplicativos da Plataforma Un
 | [MIDI](midi.md) | Mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo UWP. |
 | [Importar mídia de um dispositivo](import-media-from-a-device.md) | Descreve como importar mídia de um dispositivo, inclusive procurar fontes de mídia disponíveis, importar arquivos, como vídeos, fotos e arquivos secundários, e excluir os arquivos importados do dispositivo de origem. |
 | [Lanterna independente da câmera](camera-independent-flashlight.md) | Mostra como acessar e usar a lâmpada do dispositivo, se houver. A funcionalidade da lâmpada é gerenciada separadamente da funcionalidade da câmera e do flash da câmera do dispositivo. |
-| [Codecs compatíveis](supported-codecs.md) | Lista os codecs de áudio e de vídeo e os formatos compatíveis com os aplicativos UWP. |
+| [Codecs compatíveis](supported-codecs.md) | Lista os codecs de áudio, vídeo e imagem e os formatos compatíveis com os aplicativos UWP. |
 
 
 ## Consulte também
@@ -48,6 +48,6 @@ Esta seção fornece informações sobre como criar aplicativos da Plataforma Un
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

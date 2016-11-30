@@ -4,14 +4,14 @@ title: Executar uma tarefa em segundo plano em um temporizador
 description: "Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa periódica em segundo plano."
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 translationtype: Human Translation
-ms.sourcegitcommit: 16202eeb37421acf75a9032dfc1eec397d23ce4f
-ms.openlocfilehash: dd0d0fe0081eac112ce22e8a035b4bb70be3bef0
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: 1ad44208b3442e80212656db943ff088514cc954
 
 ---
 
 # Executar uma tarefa em segundo plano em um temporizador
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs importantes**
 
@@ -22,7 +22,7 @@ ms.openlocfilehash: dd0d0fe0081eac112ce22e8a035b4bb70be3bef0
 Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa periódica em segundo plano.
 
 -   Este exemplo pressupõe que você tenha uma tarefa em segundo plano que precisa ser executada periodicamente ou em um momento específico para dar suporte ao aplicativo. Uma tarefa em segundo plano só será executada usando um [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) se você tiver chamado [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485).
--   Este tópico pressupõe que você já criou uma classe de tarefa em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md) ou [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
+-   Este tópico pressupõe que você já criou uma classe de tarefa em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
 
 ## Criar um gatilho de tempo
 
@@ -80,7 +80,7 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 > [!Important]
 > Para tarefas em segundo plano executadas no mesmo processo do aplicativo, não defina `entryPoint` para tarefas em segundo plano executadas em um processo à parte do aplicativo, defina `entryPoint` para ser o namespace '.' e o nome da classe que contém a implementação da tarefa em segundo plano.
 
-    The following code registers a background task that runs in a separate process:
+    The following code registers a background task that runs out-of-process:
 
     > > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -107,10 +107,10 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 
 ## Tópicos relacionados
 
-* [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md).
-* [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md).
+* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-an-outofproc-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
-* [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
@@ -123,6 +123,6 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

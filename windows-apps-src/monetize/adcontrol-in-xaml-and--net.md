@@ -4,8 +4,8 @@ ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
 description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo XAML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1."
 title: AdControl em XAML e .NET
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: e3cc04e2c039223729a1e24224ddd19d6485d434
+ms.sourcegitcommit: 35f07c73a72e5242d59c6b45e6d5b4ac62f40741
+ms.openlocfilehash: 0652bd1c3e52c9026b26e14b2475a4b34997ac91
 
 ---
 
@@ -145,13 +145,13 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 
 ## Observações
 
-C#: veja [Exemplo de propriedades XAML](xaml-properties-example.md) para obter um exemplo de como atribuir manipuladores de eventos a eventos de **AdControl**. Em seguida, veja [Eventos de AdControl em C#](adcontrol-events-in-c.md) para obter o código de exemplo que mostra os manipuladores de eventos escritos em C#.
+* C#: veja [Exemplo de propriedades XAML](xaml-properties-example.md) para obter um exemplo de como atribuir manipuladores de eventos a eventos de **AdControl**. Em seguida, veja [Eventos de AdControl em C#](adcontrol-events-in-c.md) para obter o código de exemplo que mostra os manipuladores de eventos escritos em C#.
 
-Visual Basic: veja [Exemplo de propriedades XAML](xaml-properties-example.md) para obter um exemplo de como atribuir manipuladores de eventos a eventos de **AdControl**.
+* C++: a versão atual das bibliotecas do Microsoft Advertising são compatíveis com C++. A classe **AdControl** é implementada em C++ nativo e não carrega o CLR .NET. Para obter exemplos de código que demonstram como usar **AdControl** em C++, consulte [exemplos de anúncio no GitHub](http://aka.ms/githubads).
 
-C++: a versão atual das bibliotecas do Microsoft Advertising são compatíveis com C++. O **AdControl** carrega o CLR e usa C++ gerenciado.
+* Visual Basic: veja [Exemplo de propriedades XAML](xaml-properties-example.md) para obter um exemplo de como atribuir manipuladores de eventos a eventos de **AdControl**.
 
-Tratamento de erros: para saber mais sobre como tratar erros, consulte [Tratamento de erros de AdControl](adcontrol-error-handling.md).
+* Tratamento de erros: para saber mais sobre como tratar erros, consulte [Tratamento de erros de AdControl](adcontrol-error-handling.md).
 
 ## Tópicos relacionados
 
@@ -161,6 +161,6 @@ Tratamento de erros: para saber mais sobre como tratar erros, consulte [Tratamen
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

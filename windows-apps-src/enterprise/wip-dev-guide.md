@@ -5,8 +5,8 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Criar um aplicativo capacitado que consuma dados empresariais e pessoais
 translationtype: Human Translation
-ms.sourcegitcommit: 0da731e1211544ce6b07e783ddc2407da57781c2
-ms.openlocfilehash: 8ead30471371b9b6aca32088f115da9f68784922
+ms.sourcegitcommit: bf1c47e9cca45b626a45ca664bf2bb4be9c529e0
+ms.openlocfilehash: 82b674c72126c66aff34b0396a2c32f88023dd25
 
 ---
 
@@ -28,25 +28,17 @@ Se você estiver pronto para executar cada tarefa, vamos começar.
 
 Você precisará do seguinte:
 
-* Acesso a uma conta do Microsoft Intune.
+* Uma Máquina Virtual (VM) de teste que executa o Windows 10, versão 1607. Você depurará seu aplicativo em relação a essa VM de teste.
 
-* Um computador de desenvolvimento com o Windows 10, versão 1607.
-
-* Um dispositivo de teste com o Windows 10, versão 1607. Você depurará seu aplicativo em relação a este dispositivo de teste.
-
-  Você não pode depurá-lo em relação ao mesmo dispositivo inscrito no MDM. É por isso que você precisará de um dispositivo de teste separado.
-
-  Para manter a simplicidade, vamos supor que o seu dispositivo de teste seja um computador ou uma máquina virtual.
+* Um computador de desenvolvimento com o Windows 10, versão 1607. Pode ser a VM de teste caso você tenha o Visual Studio instalado.
 
 ## Configurar o ambiente de desenvolvimento
 
 Você executará as seguintes tarefas:
 
-* Registrar seu computador de teste.
+* Instalar o Assistente de desenvolvedor de instalação do WIP na VM de teste.
 
-* Criar uma política de proteção.
-
-* Baixar a política em seu computador de teste.
+* Criar uma política de proteção usando o Assistente de desenvolvedor de instalação do WIP.
 
 * Configurar um projeto do Visual Studio.
 
@@ -54,23 +46,17 @@ Você executará as seguintes tarefas:
 
 * Adicionar namespaces aos seus arquivos de código
 
-**Registrar seu computador de teste**
+**Instalar o Assistente de desenvolvedor de instalação do WIP na VM de teste**
 
- Para registrar seu computador de teste, adicione sua conta do Intune à página **Configurações**->**Acessar trabalho ou escola** no computador de teste.
+ Use essa ferramenta para configurar uma política de Proteção de Informações do Windows na VM de teste.
 
- ![conectar-se a MDM](images/connect-v2.png)
-
- O nome do computador, em seguida, será exibido no console de administrador do Intune.
+ Baixe a ferramenta aqui: [Assistente de desenvolvedor de instalação do WIP](https://www.microsoft.com/store/p/wip-setup-developer-assistant/9nblggh526jf).
 
 **Criar uma política de proteção**
 
-Criar uma política e implantá-la em seu computador de teste. Consulte [Criar uma política Proteção de Informações do Windows (WIP) usando o Microsoft Intune](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-intune).
+Defina sua política adicionando informações a cada seção do Assistente de desenvolvedor de instalação do WIP. Escolha o ícone de ajuda ao lado de qualquer configuração para saber mais sobre como usá-lo.
 
-**Baixar a política em seu dispositivo**
-
-No computador de teste, vá para a página **Configurações** e, em seguida, selecione **Acessar trabalho ou escola**-> **Informações**->**Sincronização**.
-
-![Sincronizar configurações com o MDM](images/sync.png)
+Para obter diretrizes gerais sobre como usar essa ferramenta, consulte a seção Notas de versão na página de download do aplicativo.
 
 **Configurar um projeto do Visual Studio**
 
@@ -103,7 +89,7 @@ No computador de teste, vá para a página **Configurações** e, em seguida, se
 
 **Configurar a depuração remota**
 
-Instale as Ferramentas Remotas para Visual Studio no computador de teste. Em seguida, no computador de desenvolvimento, inicie o depurador remoto e veja se seu aplicativo é executado no computador de destino.
+Instale as Ferramentas Remotas para Visual Studio na VM de teste somente se você estiver desenvolvendo seu aplicativo em um computador que não seja a VM. Em seguida, no computador de desenvolvimento, inicie o depurador remoto e veja se seu aplicativo é executado na VM de teste.
 
 Consulte [Instruções para computador remoto](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#remote-pc-instructions).
 
@@ -1104,6 +1090,6 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

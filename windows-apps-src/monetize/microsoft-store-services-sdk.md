@@ -4,80 +4,145 @@ Description: "O Microsoft Store Services SDK fornece bibliotecas e ferramentas q
 title: Microsoft Store Services SDK
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: 98675e9cb06b05e55d49ca625818626aea5a5346
+ms.sourcegitcommit: 011b370b7bd7ad7c7d8f60281261b6da954e2256
+ms.openlocfilehash: 840a5e76d409f547d55e558262af09c8fa36a544
 
 ---
 
 # Microsoft Store Services SDK
 
-O Microsoft Store Services SDK fornece bibliotecas e ferramentas que ajudarão você a ganhar mais dinheiro e clientes nos aplicativos da Plataforma Universal do Windows (UWP), como exibir anúncios em seus aplicativos e executar experimentos com testes A/B. Este SDK será desenvolvido com o tempo para incluir novos recursos de interação e monetização.
+O Microsoft Store Services SDK fornece recursos que ajudarão você a ganhar mais dinheiro e interagir com clientes nos aplicativos da Plataforma Universal do Windows (UWP), como exibir anúncios e executar experimentos A/B em seus aplicativos. Esse SDK é uma extensão do Visual Studio 2015 e versões posteriores do Visual Studio.
 
+## Cenários suportados pelo SDK
 
-## Recursos disponíveis no SDK
+O SDK atualmente suporta os seguintes cenários para aplicativos UWP. O SDK será desenvolvido com o tempo para suportar novos cenários de interação e monetização. Para obter a documentação de referência sobre as APIs no SDK, consulte [Referência de API do Microsoft Store Services SDK](https://msdn.microsoft.com/library/windows/apps/mt691886.aspx).
 
-O Microsoft Store Services SDK fornece bibliotecas e ferramentas que suportam os seguintes recursos.
+|  Cenário  |  Descrição   |
+|------------|----------------|
+|  [Executar experimentos em seu aplicativo UWP com testes A/B](run-app-experiments-with-a-b-testing.md)    |  Execute testes A/B em seu aplicativo UWP (Plataforma Universal do Windows) para medir a eficácia de recursos em alguns clientes antes de liberar os recursos para todos. Depois de definir um experimento em seu painel do Centro de desenvolvimento, use a classe [StoreServicesExperimentVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesexperimentvariation.aspx) para obter variações de sua experiência em seu aplicativo, use esses dados para modificar o comportamento do recurso que você está testando e, em seguida, use o método [LogForVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation.aspx) para enviar eventos de exibição e de conversão ao Centro de Desenvolvimento. Por fim, use o painel para exibir os resultados e gerenciar a experiência.  |
+|  [Inicie o Hub de Feedback do seu aplicativo UWP](launch-feedback-hub-from-your-app.md)    |  Use a classe [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) em seu aplicativo UWP para direcionar os clientes do Windows 10 ao Hub de Feedback, onde eles podem enviar problemas, sugestões e aprovações. Em seguida, gerencie esses comentários no [Relatório de comentários](../publish/feedback-report.md) no painel do Centro de Desenvolvimento. |
+|  [Configure seu aplicativo UWP para receber notificações por push do Centro de Desenvolvimento](configure-your-app-to-receive-dev-center-notifications.md)    |  Use a classe [StoreServicesEngagementManager](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.aspx) em seu aplicativo UWP para registrar o aplicativo para receber notificações por push direcionadas que você envia para seus clientes usando o painel do Centro de Desenvolvimento do Windows.  |
+|   [Registre eventos personalizados em seu aplicativo UWP para o relatório de uso no Centro de Desenvolvimento](log-custom-events-for-dev-center.md)   |  Use a classe [StoreServicesCustomEventLogger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) em seu aplicativo UWP para registrar eventos personalizados que são associados a seu aplicativo no Centro de Desenvolvimento. Em seguida, examine o total de ocorrências de seus eventos personalizados na seção **Eventos personalizados** do [Relatório de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) no painel do Centro de Desenvolvimento.  |
+|  [Apresentar anúncios em seu aplicativo UWP](display-ads-in-your-app.md)    |  Use os controles [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) ou [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) em seu aplicativo UWP para aumentar sua receita exibindo anúncios em faixa ou anúncios intersticiais.<br/><br/>**Observação**&nbsp;&nbsp;O Microsoft Store Services SDK só dá suporte a aplicativos UWP para Windows 10. Para exibir anúncios em aplicativos Windows 8.1 e no Windows Phone 8. x, use o [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk).  |
 
-### Executar experimentos com testes A/B para aplicativos UWP
+<span id="prerequisites" />
+## Pré-requisitos
 
-Execute testes A/B em seus aplicativos UWP (Plataforma Universal do Windows) para medir a eficácia de recursos em alguns clientes antes de liberar os recursos para todos. Depois de definir um experimento em seu painel do Centro de desenvolvimento, use a classe [StoreServicesExperimentVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesexperimentvariation.aspx) para obter variações de sua experiência em seu aplicativo, use esses dados para modificar o comportamento do recurso que você está testando e, em seguida, use o método [LogForVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation.aspx) para enviar eventos de exibição e de conversão ao Centro de Desenvolvimento. Por fim, use o painel para exibir os resultados e gerenciar a experiência.
+O Microsoft Store Services SDK exige:
 
-Para saber mais, consulte [Executar experimentos com testes A/B](run-app-experiments-with-a-b-testing.md).
+* Visual Studio 2015 ou uma versão posterior.
+* Ferramentas do Visual Studio para aplicativos universais do Windows instalados com sua versão do Visual Studio.
 
-### Comentários de aplicativo para aplicativos UWP
+>**Observação**&nbsp;&nbsp;Para instalar o SDK com o Visual Studio 2015, você deve ter a versão 1.1 ou posterior das Ferramentas do Visual Studio para Aplicativos Universais do Windows instalada. Para obter mais informações sobre essa atualização das Ferramentas do Visual Studio para Aplicativos Universais do Windows, consulte as [notas de versão](http://go.microsoft.com/fwlink/?LinkID=624516).
 
-Use a classe [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) em seus aplicativos UWP para direcionar os clientes do Windows 10 ao Hub de Feedback, onde eles podem enviar problemas, sugestões e aprovações. Em seguida, gerencie esses comentários no [Relatório de comentários](../publish/feedback-report.md) no painel do Centro de Desenvolvimento.
-
-Para obter mais informações, consulte [Iniciar o Hub de comentários do seu aplicativo](launch-feedback-hub-from-your-app.md).
-
-### Apresente anúncios em seus aplicativos
-
-Aumente sua receita exibindo anúncios ou anúncios intersticiais de vídeo da Microsoft em aplicativos UWP. Você também pode maximizar suas taxas de preenchimento de anúncios usando a mediação de anúncios para exibi-los de vários provedores de rede de publicidade.
-
-Para obter mais informações, consulte [Exibir anúncios no seu aplicativo](display-ads-in-your-app.md).
-
->**Observação**&nbsp;&nbsp;Microsoft Store Services SDK só dá suporte a aplicativos UWP. Para exibir anúncios em aplicativos Windows 8.1 e no Windows Phone 8. x, use o [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk).
-
-### Referência da API
-
-Para obter a documentação de referência sobre as APIs no Microsoft Store Services SDK, consulte [Referência de API do Microsoft Store Services SDK](https://msdn.microsoft.com/library/windows/apps/mt691886.aspx).
-
+<span id="install" />
 ## Instalar o SDK
 
-Para instalar o Microsoft Store Services SDK:
+Há duas opções para instalar o Microsoft Store Services SDK para uso com o Visual Studio 2015 (ou uma versão posterior) em seu computador de desenvolvimento:
 
-1.  Feche todas as instâncias do Visual Studio 2013 ou o Visual Studio 2015 e desinstale as versões anteriores do SDK Microsoft Store Engagement and Monetization, do SDK Universal Ad Client, extensão Ad Mediator ou do SDK do Microsoft Advertising.
-2.  Baixar e instalar o [SDK](http://aka.ms/store-em-sdk). A instalação pode demorar alguns minutos. Aguarde até o processo terminar.
-3.  Reinicie o Visual Studio.
+* **Instalador MSI**&nbsp;&nbsp;Você pode instalar o SDK por meio do instalador MSI disponível [aqui](http://aka.ms/store-em-sdk). Com essa opção, as bibliotecas do SDK estão instaladas em um local compartilhado no computador de desenvolvimento, de modo que elas podem ser referenciadas por qualquer projeto UWP no Visual Studio.
+* **Pacote NuGet**&nbsp;&nbsp;Você pode instalar as bibliotecas do SDK para um projeto UWP específico no Visual Studio usando o NuGet. Com essa opção, as bibliotecas do SDK são instaladas somente para o projeto no qual você instalou o pacote NuGet.
 
-A Microsoft lança periodicamente novas versões do Microsoft Store Services SDK com aperfeiçoamentos de desempenho e novos recursos. Se você tiver projetos existentes que usam o Microsoft Store Services SDK e deseja usar a versão mais recente, basta baixar e instalar a versão mais recente do SDK.
+A Microsoft lança periodicamente novas versões do Microsoft Store Services SDK com aperfeiçoamentos de desempenho e novos recursos. Se você tiver projetos existentes que usam o SDK e deseja usar a versão mais recente, baixe e instale a versão mais recente do SDK em seu computador de desenvolvimento.
 
-Os recursos de publicidade para aplicativos UWP das versões anteriores do SDK Microsoft Store Engagement and Monetization, do SDK Universal Ad Client, da extensão Ad Mediator e do Microsoft Advertising SDK agora estão incluídos no Microsoft Store Services SDK. Se tiver projetos UWP existentes que usam recursos de anúncio de uma dessas versões anteriores, você poderá continuar trabalhando com os projetos sem alterações depois de instalar o Microsoft Store Services SDK.
+>**Observação**&nbsp;&nbsp;Para instalar o SDK com o Visual Studio 2015, você deve ter a versão 1.1 ou posterior das Ferramentas do Visual Studio para Aplicativos Universais do Windows instalada. Para obter mais informações sobre essa atualização das Ferramentas do Visual Studio para Aplicativos Universais do Windows, consulte as [notas de versão](http://go.microsoft.com/fwlink/?LinkID=624516).
 
->**Observação**  Para instalar o Microsoft Store Services SDK com o Visual Studio 2015, você deve ter a versão 1.1 ou posterior das Ferramentas do Visual Studio para Aplicativos Universais do Windows instalada. Para obter mais informações sobre essa atualização das Ferramentas do Visual Studio para Aplicativos Universais do Windows, consulte as [notas de versão](http://go.microsoft.com/fwlink/?LinkID=624516).
+<span id="install-msi" />
+### Instalar por meio de MSI
 
-## Pacotes de estrutura no SDK
+Para instalar o Microsoft Store Services SDK por meio do instalador MSI:
+
+1.  Feche todas as instâncias do Visual Studio 2015 (ou uma versão posterior). Se você já instalou qualquer versão anterior do SDK do Microsoft Advertising, do SDK do Universal AD Client, da extensão Ad Mediator ou do SDK do Microsoft Store Engagement and Monetization, desinstale essas versões do SDK agora.
+
+2.  Abra uma janela do **Prompt de Comando** e execute esses comandos para limpar quaisquer versões mais antigas do SDK do Advertising que possam ter sido instaladas com o Visual Studio, mas que podem não aparecer na lista de programas instalados em seu computador:
+  ```
+  MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
+  MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
+  MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
+  ```
+
+3.  Baixe e instale o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). A instalação pode demorar alguns minutos. Aguarde até o processo terminar.
+
+4.  Reinicie o Visual Studio.
+
+5.  Se você tiver um projeto existente que referencie bibliotecas de qualquer versão anterior do Microsoft Store Services SDK, do SDK do Microsoft Advertising, do SDK do Universal Ad Client ou do SDK do Microsoft Store Engagement and Monetization, nós recomendamos que você abra seu projeto no Visual Studio e limpe e recrie seu projeto (em **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do seu projeto e escolha **Limpar** e, em seguida, clique com o botão direito do mouse novamente no nó do seu projeto e escolha **Recriar**).
+
+  Caso contrário, se você estiver usando o SDK pela primeira vez em seu projeto, você estará pronto para [adicionar as referências de biblioteca do Microsoft Store Services SDK apropriadas ao seu projeto](#references).
+
+<span id="install-nuget" />
+### Instalar por meio do NuGet
+
+Para instalar as bibliotecas do Microsoft Store Services SDK para um projeto específico por meio do NuGet:
+
+1.  Feche todas as instâncias do Visual Studio 2015 (ou uma versão posterior). Se você já instalou qualquer versão anterior do SDK do Microsoft Advertising, do SDK do Universal AD Client, da extensão Ad Mediator ou do SDK do Microsoft Store Engagement and Monetization, desinstale essas versões do SDK agora.
+
+2.  Abra uma janela do **Prompt de Comando** e execute esses comandos para limpar quaisquer versões mais antigas do SDK do Advertising que possam ter sido instaladas com o Visual Studio, mas que podem não aparecer na lista de programas instalados em seu computador:
+  ```
+  MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
+  MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
+  MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
+  ```
+
+3.  Inicie o Visual Studio e abra o projeto no qual você deseja usar as bibliotecas do Microsoft Store Services SDK.
+
+  >**Observação**&nbsp;&nbsp;Se seu projeto já inclui referências de biblioteca de uma instalação MSI anterior do SDK, remova essas referências do seu projeto. Essas referências terão ícones de aviso ao lado delas porque as bibliotecas a que fazem referência foram removidas nas etapas anteriores.
+
+4. No Visual Studio, clique em **Projeto** e **Gerenciar Pacotes NuGet**.
+
+5. Na caixa de pesquisa, digite **Microsoft.Services.Store.SDK** e instale o pacote Microsoft.Services.Store.SDK.
+
+  >**Observação**&nbsp;&nbsp;Se a janela **Saída** relatar um erro *Pacote-Instalação* que indica que o caminho especificado é muito longo, talvez seja necessário configurar o NuGet para extrair pacotes em um local alternativo com um caminho mais curto do que o local padrão. Para fazer isso, adicione o valor ```repositoryPath``` a um arquivo nuget.config em seu computador e o atribua a um caminho de pasta curto onde os pacotes NuGet possam ser extraídos. Para obter mais informações, consulte [este artigo](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) na documentação do NuGet. Você também pode tentar mover seu projeto do Visual Studio para uma pasta alternativa com um caminho mais curto.
+
+6. Feche seu projeto e depois reabra-o.
+
+7.  Se seu projeto já faz referência a bibliotecas de uma versão anterior do Microsoft Store Services SDK que foi instalado por meio do NuGet e você atualizou seu projeto para uma versão mais recente do SDK, nós recomendamos que você limpe e recrie seu projeto (em **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do seu projeto e escolha **Limpar** e, em seguida, clique com o botão direito do mouse novamente no nó do seu projeto e escolha **Recriar**).
+
+  Caso contrário, se você estiver usando o SDK pela primeira vez em seu projeto, você estará pronto para [adicionar as referências de biblioteca do Microsoft Store Services SDK apropriadas ao seu projeto](#references).
+
+<span id="references" />
+## Adicione as referências de biblioteca do SDK ao seu projeto
+
+Depois de instalar o Microsoft Store Services SDK por meio do instalador MSI ou NuGet, siga estas instruções para referenciar as bibliotecas do SDK em seu projeto UWP.
+
+1. Abra seu projeto no Visual Studio.
+
+  >**Observação**&nbsp;&nbsp;Se seu projeto for um aplicativo JavaScript que tem direcionamento **Any CPU**, atualize-o para usar uma saída de compilação de arquitetura específica (por exemplo, **x86**).
+
+2. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e selecione **Adicionar Referência...**
+
+3. Em **Gerenciador de Referências**, expanda **Universal do Windows**, clique em **Extensões** e, em seguida, marque a caixa de seleção ao lado de um dos seguintes itens.
+
+  * Para usar as APIs no namespace [Microsoft.Services.Store.Engagement](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.aspx) para cenários de compromisso do cliente, marque a caixa de seleção ao lado de **Microsoft Engagement Framework**. Escolha esta opção se você quiser [executar experimentos A/B](run-app-experiments-with-a-b-testing.md), [iniciar o Hub de Feedback](launch-feedback-hub-from-your-app.md), [receber notificações por push direcionadas do Centro de Desenvolvimento](configure-your-app-to-receive-dev-center-notifications.md) ou [registrar eventos personalizados no Centro de Desenvolvimento](log-custom-events-for-dev-center.md).
+
+  * Para usar as APIs para [exibir anúncios em faixa ou anúncios intersticiais em seu aplicativo](display-ads-in-your-app.md), marque a caixa de seleção ao lado de **SDK do Microsoft Advertising para XAML** ou **SDK do Microsoft Advertising para JavaScript**, dependendo do tipo de projeto.
+
+3. Clique em **OK**.
+
+>**Observação**&nbsp;&nbsp;Se você instalou as bibliotecas do SDK por meio do NuGet, seu projeto conterá uma referência **Microsoft.Services.Store.SDK** além do **SDK do Microsoft Advertising para XAML** ou **SDK do Microsoft Advertising para JavaScript**. A referência **Microsoft.Services.Store.SDK** representa o pacote NuGet (em vez de bibliotecas dentro dela), e você pode ignorá-la.
+
+<span id="framework" />
+## Noções básicas sobre pacotes de estrutura no SDK
 
 As seguintes bibliotecas no Microsoft Store Services SDK são configuradas como *pacotes de estrutura*:
 
 * Microsoft.Advertising.dll. Essa biblioteca contém as APIs de publicidade nos namespaces [Microsoft.Advertising](https://msdn.microsoft.com/en-us/library/windows/apps/mt313187.aspx) e [Microsoft.Advertising.WinRT.UI](https://msdn.microsoft.com/en-us/library/windows/apps/microsoft.advertising.winrt.ui.aspx).
 * Microsoft.Services.Store.Engagement.dll. Esta biblioteca contém as APIs no namespace [Microsoft.Services.Store.Engagement](https://msdn.microsoft.com/en-us/library/windows/apps/microsoft.services.store.engagement.aspx).
 
-Isso significa que depois de instalar o SDK no computador de desenvolvimento, essas bibliotecas serão atualizadas automaticamente por meio do Windows Update sempre que publicamos novas versões de bibliotecas com correções e melhorias de desempenho. Isso ajuda a garantir que você sempre terá a versão mais recente das bibliotecas instaladas no computador de desenvolvimento.
+Isso significa que, após um usuário instalar uma versão do seu aplicativo que usa essas bibliotecas, essas bibliotecas são atualizadas automaticamente em seus dispositivos por meio do Windows Update sempre que publicarmos novas versões das bibliotecas com correções e melhorias de desempenho. Isso ajuda a garantir que seus clientes sempre terão a versão mais recente das bibliotecas instaladas nos dispositivos deles.
 
-Além disso, após um usuário instalar uma versão do seu aplicativo que usa essas bibliotecas, as bibliotecas também serão atualizadas automaticamente em seus dispositivos sempre que publicarmos novas versões das bibliotecas com correções e melhorias de desempenho. Isso significa que os usuários sempre terão a versão mais recente das bibliotecas, sem qualquer necessidade de você publicar versões atualizadas do seu aplicativo na Loja.
-
-No entanto, se nós lançamos uma nova versão do SDK que apresenta novas APIs ou recursos dessas bibliotecas, você precisará instalar a versão mais recente do SDK para usar esses recursos. Nesse cenário, você também precisa publicar seu aplicativo atualizado na Loja.
+Se nós lançamos uma nova versão do SDK que apresenta novas APIs ou recursos dessas bibliotecas, você precisará instalar a versão mais recente do SDK para usar esses recursos. Nesse cenário, você também precisa publicar seu aplicativo atualizado na Loja.
 
 ## Tópicos relacionados
 
 * [Referência de API do Microsoft Store Services SDK](https://msdn.microsoft.com/library/windows/apps/mt691886.aspx)
 * [Executar experimentos com testes A/B](run-app-experiments-with-a-b-testing.md)
 * [Iniciar o Hub de Feedback do seu aplicativo](launch-feedback-hub-from-your-app.md)
+* [Configure seu aplicativo para receber notificações por push do Centro de Desenvolvimento](configure-your-app-to-receive-dev-center-notifications.md)
+* [Registre eventos personalizados para o Centro de Desenvolvimento](log-custom-events-for-dev-center.md)
 * [Apresentar anúncios em seus aplicativos](display-ads-in-your-app.md)
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

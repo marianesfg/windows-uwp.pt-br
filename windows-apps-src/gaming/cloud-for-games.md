@@ -4,8 +4,8 @@ title: "Usando serviços de nuvem para jogos UWP"
 description: "Saiba mais sobre a implementação de nuvem como um back-end para seus jogos UWP."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
 translationtype: Human Translation
-ms.sourcegitcommit: 0b2d81daa8bd0fd5694b81fa14fcd064e1600d35
-ms.openlocfilehash: b23c33fac9ac8fe5e2d5563a0af6824c82a3969b
+ms.sourcegitcommit: 2584a08e0a869ab3c5f11c192f0a5a6eeb223d61
+ms.openlocfilehash: 598384993e0e2931773cdb30e0909af6b771590e
 
 ---
 #  Usando serviços de nuvem para jogos UWP
@@ -111,7 +111,7 @@ Saiba como outros desenvolvedores implementaram soluções de nuvem em seus jogo
 
 ## Como projetar seu back-end de nuvem
 
-Enquanto produtores e designers de jogos discutem quais recursos e funcionalidades são necessários no jogo, é bom começar a considerar como você deseja projetar sua infraestrutura de jogo. A Nuvem do Azure pode ser usada como seu back-end de jogo quando você quer desenvolver jogos para vários dispositivos e em diferentes plataformas importantes.
+Enquanto produtores e designers de jogos discutem quais recursos e funcionalidades são necessários no jogo, é bom começar a considerar como você deseja projetar sua infraestrutura de jogo. O Azure pode ser usado como seu back-end de jogo quando você quer desenvolver jogos para vários dispositivos e em diferentes plataformas importantes.
 
 ### Guias de aprendizagem passo a passo
 
@@ -138,7 +138,7 @@ Primeiro, você precisa pensar no nível de serviço que é mais adequado para s
 
 ### Projetar sua infraestrutura de jogo usando o Azure
 
-A seguir estão algumas maneiras de usar as ofertas de nuvem do Azure para um jogo. O Azure funciona com Windows, Linux e tecnologias conhecidas de software livre, como Ruby, Python, Java e PHP. Para saber mais, consulte [Nuvem do Azure](https://azure.microsoft.com).
+A seguir estão algumas maneiras de usar as ofertas de nuvem do Azure para um jogo. O Azure funciona com Windows, Linux e tecnologias conhecidas de software livre, como Ruby, Python, Java e PHP. Para saber mais, consulte [Azure para jogos](https://azure.microsoft.com/solutions/gaming/).
 
 | Requisitos                 | Cenários de atividade                            | Oferta de produto                      | Funcionalidades do produto                               |
 |-----------------------------------|-----------------------------------------------|---------------------------------------|----------------------------------------------------|
@@ -191,7 +191,7 @@ Estas são algumas empresas que oferecem back-end de nuvem para jogos com base n
 ## Links relacionados
 
 * [Guia de desenvolvimento de jogos do Windows 10](https://msdn.microsoft.com/windows/uwp/gaming/e2e)
-* [Microsoft Azure](https://azure.microsoft.com/)
+* [Azure para jogos](https://azure.microsoft.com/solutions/gaming/)
 * [Microsoft BizSpark](https://www.microsoft.com/bizspark/)
 * [ID@Xbox](http://www.xbox.com/Developers/id)
 
@@ -202,6 +202,6 @@ Estas são algumas empresas que oferecem back-end de nuvem para jogos com base n
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

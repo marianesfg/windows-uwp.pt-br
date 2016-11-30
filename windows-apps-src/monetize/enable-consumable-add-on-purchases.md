@@ -5,8 +5,8 @@ description: "Saiba como usar o namespace Windows.Services.Store para trabalhar 
 title: "Habilitar compras de complementos consumíveis"
 keywords: "exemplo de código de oferta no aplicativo"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 1e9ecad5abb9addbe41b38d0b56b84404716f2a8
+ms.sourcegitcommit: 962bee0cae8c50407fe1509b8000dc9cf9e847f8
+ms.openlocfilehash: eb188ed8e69f90727c5b57af1c407fac07eaf87d
 
 ---
 
@@ -50,6 +50,8 @@ O código nestes exemplos pressupõem que:
 
 Para obter um aplicativo de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
+>**Observação**&nbsp;&nbsp;Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado nesses exemplos para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
+
 <span id="report_fulfilled" />
 ## Declarar um complemento consumível como providenciado
 
@@ -71,6 +73,9 @@ public async void ConsumeAddOn(string storeId)
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     // This is an example for a Store-managed consumable, where you specify the actual number
@@ -133,6 +138,9 @@ public async void GetRemainingBalance(string storeId)
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     string addOnStoreId = "9NBLGGH4TNNR";
@@ -180,6 +188,6 @@ public async void GetRemainingBalance(string storeId)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

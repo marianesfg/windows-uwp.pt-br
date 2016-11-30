@@ -4,8 +4,8 @@ title: Declarar tarefas em segundo plano no manifesto do aplicativo
 description: "Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 6ec298a956673c114d34d64b026394ece2c33506
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: b3518780600b9fe8f9be5af48eb5ee6022ec350f
 
 ---
 
@@ -23,9 +23,9 @@ ms.openlocfilehash: 6ec298a956673c114d34d64b026394ece2c33506
 Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo.
 
 > [!Important]
->  Este artigo é específico para tarefas em segundo plano que são executados em um processo separado. Tarefas em segundo plano de processo único não são declaradas no manifesto.
+>  Este artigo é específico para tarefas em segundo plano fora do processo. Tarefas em segundo plano no processo =não são declaradas no manifesto.
 
-As tarefas em segundo plano que são executadas em um processo separado devem ser declaradas no manifesto do aplicativo, ou seu aplicativo não será capaz de registrá-los (uma exceção será gerada). Além disso, as tarefas em segundo plano devem ser declaradas no manifesto do aplicativo para passar certificação.
+As tarefas em segundo plano fora do processo devem ser declaradas no manifesto do aplicativo, ou seu aplicativo não será capaz de registrá-los (uma exceção será gerada). Além disso, as tarefas em segundo plano fora do processo devem ser declaradas no manifesto do aplicativo para passar certificação.
 
 Este tópico considera que você criou uma ou mais classes de tarefa em segundo plano e que o seu aplicativo registra cada tarefa em segundo plano para execução em resposta a pelo menos um gatilho.
 
@@ -212,6 +212,6 @@ Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é execu
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

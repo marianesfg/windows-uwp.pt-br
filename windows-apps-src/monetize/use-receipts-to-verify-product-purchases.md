@@ -4,17 +4,15 @@ ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
 description: "Cada transação da Windows Store que resulta em uma compra do produto bem-sucedida, pode retornar, opcionalmente, um recibo da transação."
 title: Usar recibos para verificar compras de produtos
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 01b75d25c385d8dd856af79581fb4a346064c400
+ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
+ms.openlocfilehash: ea79a33a52bc45a9c8609e12bfac953c3f92db09
 
 ---
 
 # Usar recibos para verificar compras de produtos
 
 
-
-
->**Observação**&nbsp;&nbsp;Os exemplos neste artigo usam membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se o aplicativo segmenta Windows 10, versão 1607, ou posterior, recomendamos usar membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar compras realizadas em aplicativo, em vez do namespace Windows.ApplicationModel.Store. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
+>**Observação**&nbsp;&nbsp;Os exemplos neste artigo usam membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se o aplicativo segmenta Windows 10, versão 1607, ou posterior, recomendamos usar membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar compras realizadas em aplicativo, em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
 
 **APIs Importantes**
 
@@ -242,6 +240,6 @@ namespace ReceiptVerificationSample
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

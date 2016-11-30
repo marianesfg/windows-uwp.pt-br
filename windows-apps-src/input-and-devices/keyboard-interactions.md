@@ -6,8 +6,8 @@ ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: f9c475a90c270270217999c5a7289e29e7fef208
-ms.openlocfilehash: a1d97c5a66db1b799ccc16769ff18130155743b8
+ms.sourcegitcommit: 667228e10456ffbc64b7d0782d5a8bdc02f2f203
+ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
 
 ---
 
@@ -360,7 +360,7 @@ Um manipulador de eventos de entrada implementa um delegado que fornece as segui
 
 Você pode anexar funções de manipulação de eventos do teclado a qualquer objeto que inclua o evento como um membro. Isso inclui qualquer classe derivada de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). O exemplo de XAML a seguir mostra como anexar manipuladores ao evento [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) de um [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704).
 
-```XAML
+```xaml
 <Grid KeyUp="Grid_KeyUp">
   ...
 </Grid>
@@ -372,24 +372,26 @@ Você também pode anexar um manipulador de eventos em código. Para obter mais 
 
 O exemplo a seguir mostra a definição do manipulador de eventos incompleta para o manipulador de eventos [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) que foi anexado no exemplo anterior.
 
-```CSharp
+```csharp
 void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
 {
     //handling code here
 }
 ```
 
-```VisualBasic
+```vb
 Private Sub Grid_KeyUp(ByVal sender As Object, ByVal e As KeyRoutedEventArgs)
-    &#39;handling code here
+    ' handling code here
 End Sub
 ```
 
-```ManagedCPlusPlus
+```c++
 void MyProject::MainPage::Grid_KeyUp(
   Platform::Object^ sender,
   Windows::UI::Xaml::Input::KeyRoutedEventArgs^ e)
-{//handling code here}
+  {
+      //handling code here
+  }
 ```
 
 ### Usando KeyRoutedEventArgs
@@ -411,18 +413,19 @@ As teclas modificadoras são teclas como Ctrl ou Shift que os usuários normalme
 
 É possível detectar combinações de teclas de atalho usando os manipuladores de evento [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Você pode controlar o estado pressionado das teclas modificadoras em que tem interesse. Quando ocorre um evento de teclado para uma tecla não modificadora, é possível verificar se uma tecla modificadora está no estado pressionado ao mesmo tempo.
 
-**Observação**  A tecla Alt é representada pelo valor **VirtualKey.Menu**.
+> [!NOTE]
+> A tecla Alt é representada pelo valor **VirtualKey.Menu**.
 
  
 
-## Amostra de teclas de atalho
+### Amostra de teclas de atalho
 
 
 O exemplo a seguir mostra como implementar as teclas de atalho. Neste exemplo, os usuários podem controlar a reprodução de mídia usando os botões Play, Pause e Stop, ou os atalhos de teclado Ctrl+P, Ctrl+A e Ctrl+S. O botão XAML mostra os atalhos usando dicas de ferramentas e propriedades [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081) nos rótulos dos botões. Esta autodocumentação é importante para aumentar a usabilidade e acessibilidade de seu aplicativo. Para obter mais informações, consulte [Acessibilidade do teclado](https://msdn.microsoft.com/library/windows/apps/mt244347).
 
 Observe também que a página define o foco de entrada para si própria quando é carregada. Sem essa etapa, nenhum controle terá foco de entrada inicial e o aplicativo não acionará eventos de entrada até que o usuário defina o foco de entrada manualmente (por exemplo, pressionando TAB ou clicando em um controle).
 
-```XAML
+```xaml
 <Grid KeyDown="Grid_KeyDown">
 
   <Grid.RowDefinitions>
@@ -459,7 +462,7 @@ Observe também que a página define o foco de entrada para si própria quando �
 </Grid>
 ```
 
-```ManagedCPlusPlus
+```c++
 //showing implementations but not header definitions
 void MainPage::OnNavigatedTo(NavigationEventArgs^ e)
 {
@@ -487,7 +490,7 @@ void KeyboardSupport::MainPage::Grid_KeyDown(Platform::Object^ sender, Windows::
 
 void KeyboardSupport::MainPage::Grid_KeyUp(Platform::Object^ sender, Windows::UI::Xaml::Input::KeyRoutedEventArgs^ e)
 {
-    if (e->Key == VirtualKey::Control) isCtrlKeyPressed = true;
+    if (e->Key == VirtualKey::Control) isCtrlKeyPressed = false;
     else if (isCtrlKeyPressed) {
         if (e->Key==VirtualKey::P) {
             DemoMovie->Play();
@@ -498,11 +501,21 @@ void KeyboardSupport::MainPage::Grid_KeyUp(Platform::Object^ sender, Windows::UI
 }
 ```
 
-```CSharp
+```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
     // Set the input focus to ensure that keyboard events are raised.
     this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
+}
+
+private void MediaButton_Click(object sender, RoutedEventArgs e)
+{
+    switch ((sender as Button).Name)
+    {
+        case "PlayButton": DemoMovie.Play(); break;
+        case "PauseButton": DemoMovie.Pause(); break;
+        case "StopButton": DemoMovie.Stop(); break;
+    }
 }
 
 private void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
@@ -521,16 +534,6 @@ private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
             case VirtualKey.A: DemoMovie.Pause(); break;
             case VirtualKey.S: DemoMovie.Stop(); break;
         }
-    }
-}
-
-private void MediaButton_Click(object sender, RoutedEventArgs e)
-{
-    switch ((sender as Button).Name)
-    {
-        case "PlayButton": DemoMovie.Play(); break;
-        case "PauseButton": DemoMovie.Pause(); break;
-        case "StopButton": DemoMovie.Stop(); break;
     }
 }
 ```
@@ -574,7 +577,10 @@ Private Sub MediaButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-**Observação**  A configuração de [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/hh759762) ou [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/hh759763) em XAML oferece informações sobre cadeia de caracteres, que documentam a tecla de atalho para invocar a ação em particular. As .informações são capturadas por clientes de Automação da Interface do Usuário da Microsoft como o Narrador e são tipicamente fornecidas diretamente ao usuário. A configuração de **AutomationProperties.AcceleratorKey** ou de **AutomationProperties.AccessKey** não tem qualquer ação por conta própria. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) ou [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para realmente implementar o comportamento de atalho de teclado em seu aplicativo. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982) embutida se desejar mostrar texto sublinhado na interface do usuário.
+> [!NOTE]
+> A configuração de [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/hh759762) ou [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/hh759763) no XAML oferece informações sobre cadeia de caracteres, que documentam a tecla de atalho para chamar a ação em particular. As .informações são capturadas por clientes de Automação da Interface do Usuário da Microsoft como o Narrador e são tipicamente fornecidas diretamente ao usuário.
+>
+> A configuração de **AutomationProperties.AcceleratorKey** ou de **AutomationProperties.AccessKey** não tem qualquer ação por conta própria. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) ou [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para realmente implementar o comportamento de atalho de teclado em seu aplicativo. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982) embutida se desejar mostrar texto sublinhado na interface do usuário.
 
  
 
@@ -585,7 +591,7 @@ Alguns eventos são eventos roteados, inclusive [**KeyDown**](https://msdn.micro
 
 Considere o exemplo em XAML a seguir, que manipula eventos [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para um objeto [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) e dois objetos [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265). Neste caso, se você soltar uma tecla enquanto o foco é mantido por cada objeto **Button**, ele aciona o evento **KeyUp**. O evento é, então, propagado para o **Canvas** pai.
 
-```XAML
+```xaml
 <StackPanel KeyUp="StackPanel_KeyUp">
   <Button Name="ButtonA" Content="Button A"/>
   <Button Name="ButtonB" Content="Button B"/>
@@ -595,7 +601,7 @@ Considere o exemplo em XAML a seguir, que manipula eventos [**KeyUp**](https://m
 
 O exemplo a seguir mostra como implementar o manipulador de eventos [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) no conteúdo XAML correspondente do exemplo anterior.
 
-```CSharp
+```csharp
 void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 {
     statusTextBlock.Text = String.Format(
@@ -614,10 +620,37 @@ O objetivo da propriedade [**Handled**](https://msdn.microsoft.com/library/windo
 
 ### AddHandler e eventos do teclado já manipulados
 
-Você pode usar uma técnica especial para anexar manipuladores que podem atuar em eventos que já estão marcados como manipulados. Essa técnica usa o método [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) para registrar um manipulador, em vez de usar atributos XAML ou sintaxe específica de linguagem para adicionar manipuladores, como += em C\#. Uma limitação dessa técnica, em geral, é que a API **AddHandler** obtém um parâmetro do tipo [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808), que identifica o evento roteado em questão. Nem todos os eventos roteados fornecem um identificador **RoutedEvent**, e essa consideração afeta os eventos roteados que podem ainda ser manipulados no caso [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073). Os eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) possuem identificadores de eventos roteados ([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) e [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418)) em [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). Contudo, outros eventos, como [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706), não possuem identificadores de eventos roteados e, portanto, não podem ser usados com a técnica **AddHandler**.
+Você pode usar uma técnica especial para anexar manipuladores que podem atuar em eventos que já estão marcados como manipulados. Essa técnica usa o método [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) para registrar um manipulador, em vez de usar atributos XAML ou sintaxe específica de linguagem para adicionar manipuladores, como += em C\#. 
 
-## Comando
+Uma limitação geral dessa técnica é que a API **AddHandler** obtém um parâmetro do tipo [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808), que identifica o evento roteado em questão. Nem todos os eventos roteados fornecem um identificador **RoutedEvent**, e essa consideração afeta os eventos roteados que podem ainda ser manipulados no caso [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073). Os eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) possuem identificadores de eventos roteados ([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) e [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418)) em [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). Contudo, outros eventos, como [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706), não possuem identificadores de eventos roteados e, portanto, não podem ser usados com a técnica **AddHandler**.
 
+### Substituindo eventos do teclado e o comportamento
+
+Você pode substituir eventos-chave para controles específicos (como [**GridView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridView)) para fornecer navegação de foco consistente para vários dispositivos de entrada, incluindo teclado e gamepad.
+
+No exemplo a seguir, subdividimos o controle e substituímos o comportamento de KeyDown para mover o foco para o conteúdo de GridView quando qualquer tecla de seta é pressionada.
+
+```csharp
+public class CustomGridView : GridView
+  {
+    protected override void OnKeyDown(KeyRoutedEventArgs e)
+    {
+      // Override arrow key behaviors.
+      if (e.Key != Windows.System.VirtualKey.Left && e.Key !=
+        Windows.System.VirtualKey.Right && e.Key != 
+          Windows.System.VirtualKey.Down && e.Key != 
+            Windows.System.VirtualKey.Up)
+              base.OnKeyDown(e);
+      else
+        FocusManager.TryMoveFocus(FocusNavigationDirection.Down);
+    }
+  }
+```
+
+> [!NOTE]
+> Se usar um GridView apenas para layout, considere usar outros controles, como [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsControl) com [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsWrapGrid).
+
+## Execução de comandos
 
 Um pequeno número de elementos da interface do usuário fornece suporte interno para comandos. Comandos usam eventos roteados relacionados à entrada na sua implementação subjacente. Eles permitem o processamento de entrada relacionada da interface do usuário, como uma determinada ação do ponteiro ou uma tecla de aceleração específica, invocando um único manipulador de comandos.
 
@@ -626,7 +659,6 @@ Se comandos estiverem disponíveis para um elemento da interface do usuário, co
 Também é possível implementar [**ICommand**](https://msdn.microsoft.com/library/windows/apps/br227885) para encapsular a funcionalidade do comando que você invoca de manipuladores de eventos comuns. Isso permite usar comandos mesmo quando não há nenhuma propriedade **Command** disponível.
 
 ## Entrada de texto e controles
-
 
 Certos controles reagem a eventos do teclado com a sua própria manipulação. Por exemplo, [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) é um controle projetado para capturar e depois representar visualmente o texto que foi inserido com o uso de um teclado. Ele usa [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) e [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) na sua própria lógica, para capturar toques de tecla, depois ativa também seu próprio evento [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) caso o texto seja realmente alterado.
 
@@ -640,7 +672,6 @@ Controles personalizados podem implementar o próprio comportamento de substitui
 
 ## O teclado virtual
 
-
 Os controles de entrada de texto oferecem suporte automático para o teclado virtual. Quando o usuário define o foco de entrada como um controle de texto usando a entrada por toque, o teclado virtual aparece automaticamente. Quando o foco de entrada não está em um controle de texto, o teclado virtual é ocultado.
 
 Quando o teclado virtual aparece, ele reposiciona automaticamente sua interface de usuário para garantir que elemento focado permaneça visível. Isso pode fazer com que outras áreas importantes de sua interface de usuário se movam para fora da tela. No entanto, você pode desabilitar o comportamento padrão e fazer seus próprios ajustes de interface de usuário quando o teclado virtual aparece. Para obter mais informações, consulte [Respondendo ao aparecimento da amostra de teclado na tela](http://go.microsoft.com/fwlink/p/?linkid=231633).
@@ -653,6 +684,7 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
 
 
 ## Artigos adicionais nesta seção
+
 <table>
 <colgroup>
 <col width="50%" />
@@ -672,11 +704,7 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
 </tbody>
 </table>
 
- 
-
-
 ## Artigos relacionados
-
 
 **Desenvolvedores**
 * [Identificar dispositivos de entrada](identify-input-devices.md)
@@ -702,6 +730,6 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

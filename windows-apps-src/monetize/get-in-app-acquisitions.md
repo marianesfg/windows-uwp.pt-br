@@ -4,8 +4,8 @@ ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
 description: "Use este método na API de análise da Windows Store para obter os dados de aquisição agregados de um complemento durante um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter aquisições de complemento"
 translationtype: Human Translation
-ms.sourcegitcommit: ecb0f5263b7f7f470484e9bd579b7bdb6efcdfa4
-ms.openlocfilehash: 9d895200e6d1bc823ebcb52e0b034883f5a059e0
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 642bcab934a18631477e3709dcdeab0a9289844e
 
 ---
 
@@ -14,7 +14,7 @@ ms.openlocfilehash: 9d895200e6d1bc823ebcb52e0b034883f5a059e0
 
 
 
-Use este método na API de análise da Windows Store para obter dados agregados de aquisição de um complemento (também conhecido como produto no aplicativo ou IAP) durante um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
+Use este método na API de análise da Windows Store para obter dados agregados de aquisição de complementos (também conhecidos como produtos no aplicativo ou IAPs) para o aplicativo em formato JSON durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de aquisições de complemento](../publish/add-on-acquisitions-report.md) no painel do Centro de Desenvolvimento do Windows.
 
 ## Pré-requisitos
 
@@ -129,6 +129,33 @@ O parâmetro *applicationId* ou *inAppProductId* é obrigatório. Para recuperar
 <p>O parâmetro <em>order</em> é opcional e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p>
 <p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p></td>
 <td align="left">Não</td>
+</tr>
+<tr class="even">
+<td align="left">groupby</td>
+<td align="left">string</td>
+<td align="left"><p>Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationName</strong></li>
+<li><strong>inAppProductName</strong></li>
+<li><strong>acquisitionType</strong></li>
+<li><strong>ageGroup</strong></li>
+<li><strong>storeClient</strong></li>
+<li><strong>gender</strong></li>
+<li><strong>market</strong></li>
+<li><strong>osVersion</strong></li>
+<li><strong>deviceType</strong></li>
+<li><strong>orderName</strong></li>
+</ul>
+<p>As linhas de dados retornados conterão os campos especificados no parâmetro <em>groupby</em>, bem como o seguinte:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationId</strong></li>
+<li><strong>inAppProductId</strong></li>
+<li><strong>acquisitionQuantity</strong></li>
+</ul>
+<p>O parâmetro <em>groupby</em> pode ser usado com o parâmetro <em>aggregationLevel</em>. Por exemplo: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></p></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -279,7 +306,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 |---------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date                | string  | A primeira data no intervalo de datas dos dados de aquisição. Se a solicitação especificou um único dia, esse valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, esse valor será a primeira data nesse intervalo de datas. |
 | inAppProductId      | string  | A ID da Loja do complemento do qual você está recuperando dados de aquisição.                                                                                                                                                                 |
-| inAppProductName    | string  | O nome de exibição do complemento.                                                                                                                                                                                                             |
+| inAppProductName    | string  | O nome de exibição do complemento. Este valor só será exibido nos dados de resposta se o parâmetro *aggregationLevel* for definido como **day**, a menos que você especifique o campo **inAppProductName** no parâmetro *groupby*.                                                                                                                                                                                                            |
 | applicationId       | string  | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição do complemento.                                                                                                                                                           |
 | applicationName     | string  | O nome de exibição do aplicativo.                                                                                                                                                                                                             |
 | deviceType          | string  | O tipo de dispositivo que concluiu a aquisição. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                                  |
@@ -325,6 +352,7 @@ O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 ## Tópicos relacionados
 
+* [Relatório de aquisições de complemento](../publish/add-on-acquisitions-report.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
 * [Obter aquisições de aplicativo](get-app-acquisitions.md)
 * [Obter dados de relatório de erros](get-error-reporting-data.md)
@@ -337,6 +365,6 @@ O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

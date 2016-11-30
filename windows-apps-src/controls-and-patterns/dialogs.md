@@ -5,8 +5,8 @@ title: "Caixas de diálogo e submenus"
 label: Dialogs
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: ff9940c06276165dc139e120c4e9cdeb005ff125
+ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
+ms.openlocfilehash: 6b0b680cd85d6f57c3ca06758ab7dcaef3f7ffe5
 
 ---
 # Caixas de diálogo e submenus
@@ -16,7 +16,7 @@ ms.openlocfilehash: ff9940c06276165dc139e120c4e9cdeb005ff125
 Caixas de diálogo e submenus são elementos transitórios da interface do usuário que aparecem quando acontece algo que requer notificação, aprovação ou informações adicionais do usuário.
 
 <div class="important-apis" >
-<b>APIs Importantes</b><br/>
+<b>APIs importantes</b><br/>
 <ul>
 <li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">Classe ContentDialog</a></li>
 <li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Classe Flyout</a></li>
@@ -48,7 +48,7 @@ Caixas de diálogo e submenus são elementos transitórios da interface do usuá
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
    <p><b>Caixas de diálogo</b> <br/><br/>
-   ![Exemplo de uma caixa de diálogo botão inteira](images/controls_dialog_twobutton.png)</p>
+    ![Exemplo de uma caixa de diálogo](images/dialogs/dialog-delete-file-example.png)</p>
 <p>Caixas de diálogo são sobreposições de interface do usuário modais que fornecem informações contextuais do aplicativo. As caixas de diálogo bloqueiam interações com a janela do aplicativo até que sejam explicitamente ignoradas. Elas muitas vezes solicitam algum tipo de ação do usuário.   
 </p><br/>
 
@@ -130,7 +130,8 @@ Considerando que as caixas de diálogo bloqueiam interações e os submenus não
 
 
 
-## Diretrizes de utilização de caixa de diálogo
+## Caixas de diálogo
+### Diretrizes gerais
 
 -   Identifique claramente o problema ou o objetivo do usuário na primeira linha do texto da caixa de diálogo.
 -   O título da caixa de diálogo é a principal instrução e é opcional.
@@ -146,7 +147,23 @@ Considerando que as caixas de diálogo bloqueiam interações e os submenus não
 -   Caixas de diálogo de erro exibem a mensagem de erro na caixa de diálogo, juntamente com quaisquer informações pertinentes. O único botão usado em uma caixa de diálogo de erro deve ser "Fechar" ou uma ação semelhante.
 -   Não use caixas de diálogo para erros que são contextuais a um local específico da página, como erros de validação (em campos de senha, por exemplo). Use a própria tela do aplicativo para mostrar erros embutidos.
 
-## Criar uma caixa de diálogo
+### Caixas de diálogo de confirmação (OK/Cancelar)
+Uma caixa de diálogo de confirmação proporciona aos usuários a oportunidade de confirmar que desejam executar uma ação. Ele podem afirmar a ação, ou optar por cancelar.  
+Uma caixa de diálogo de confirmação típica tem dois botões: um botão de afirmação ("OK") e um botão Cancelar.  
+
+<ul>
+    <li>
+        <p>Em geral, o botão de afirmação fica à esquerda (o botão primário) e o botão Cancelar (o botão secundário) fica à direita.</p>
+         ![Uma caixa de diálogo OK/Cancelar](images/dialogs/dialog-delete-file-example.png)
+        
+    </li>
+    <li>Conforme observado na seção de recomendações gerais, use botões com texto que identifiquem respostas específicas para a instrução ou o conteúdo principal.
+    </li>
+</ul>
+
+> Algumas plataformas colocam o botão de afirmação à direita em vez de à esquerda. Por que é recomendável colocá-lo no lado esquerdo?  Se você considerar que a maioria dos usuários é destra e eles seguram o telefone com essa mão, é realmente mais confortável pressionar o botão de afirmação quando ele está à esquerda, pois o botão tem mais chances de estar dentro do raio do polegar do usuário. Botões no lado direito da tela exigem que o usuário puxe o polegar para dentro para uma posição mais confortável.
+
+### Criar uma caixa de diálogo
 Para criar uma caixa de diálogo, use a [classe ContentDialog](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx). Você pode criar uma caixa de diálogo no código ou na marcação. Embora seja geralmente mais fácil definir os elementos de interface do usuário em XAML, no caso de uma caixa de diálogo simples, é realmente mais fácil usar apenas o código. Este exemplo cria uma caixa de diálogo para notificar o usuário que não há nenhuma conexão Wi-Fi e, em seguida, usa o método [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) para exibi-la.
 
 ```csharp
@@ -174,23 +191,23 @@ private async void displayDeleteFileDialog()
     {
         Title = "Delete file permanently?",
         Content = "If you delete this file, you won't be able to recover it. Do you want to delete it?",
-        PrimaryButtonText = "Cancel",
-        SecondaryButtonText = "Delete file permanently"
+        PrimaryButtonText = "Delete",
+        SecondaryButtonText = "Cancel"
     };
 
     ContentDialogResult result = await deleteFileDialog.ShowAsync();
     
-    // Delete the file if the user clicked the second button. 
+    // Delete the file if the user clicked the primary button. 
     /// Otherwise, do nothing. 
-    if (result == ContentDialogResult.Secondary)
+    if (result == ContentDialogResult.Primary)
     {
         // Delete the file. 
     }
 }
 ```
 
-
-##  Criar um submenu
+## Submenus
+###  Criar um submenu
 
 Um submenu é um contêiner aberto que pode mostrar uma interface do usuário arbitrária como conteúdo.  
 
@@ -278,7 +295,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-## Dê estilo ao submenu
+### Dê estilo ao submenu
 Para estilizar um submenu, modifique o [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx). Este exemplo mostra um parágrafo de quebra de texto e torna o bloco de texto acessível para um leitor de tela.
 
 ````xaml
@@ -308,6 +325,6 @@ Para estilizar um submenu, modifique o [FlyoutPresenterStyle](https://msdn.micro
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

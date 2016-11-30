@@ -2,8 +2,8 @@
 author: jnHs
 Description: Veja como publicar seus aplicativos do Windows na Windows Store.
 translationtype: Human Translation
-ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
-ms.openlocfilehash: 3cc56e61be85e0938c5b923ae402ca1da881888d
+ms.sourcegitcommit: f894decad6a88ad3923e0bd5c54a6f4906555081
+ms.openlocfilehash: 6e2b6158a586fa82780664cd2ef2de0b425a1f1d
 
 
 ---
@@ -23,7 +23,7 @@ Esta seção contém informações sobre como publicar e gerenciar seus aplicati
 | [Envios de aplicativos](app-submissions.md) | Um envio de aplicativo inclui [os detalhes de preço e disponibilidade](set-app-pricing-and-availability.md), [propriedades](enter-app-properties.md), [classificações etárias](age-ratings.md), [pacotes](upload-app-packages.md) e [detalhes da listagem da Loja](create-app-store-listings.md). Seu envio passará pelo [processo de certificação](the-app-certification-process.md) antes de ser publicado na Loja. Os recursos opcionais que você pode usar [liberação de pacotes de pré-lançamento](package-flights.md), [teste beta](beta-testing-and-targeted-distribution.md) e [distribuição de LOB diretamente para empresas](distribute-lob-apps-to-enterprises.md). |
 | [Envios de complemento](add-on-submissions.md) | Saiba como publicar complementos (produtos no aplicativo) por meio do painel do Centro de Desenvolvimento do Windows. |
 | [Monetizar com anúncios](monetize-with-ads.md) | Gerencie o uso de anúncios, incluindo configurações personalizadas de controle de anúncios e publicidade de afiliadas. |
-| [Gerenciamento de aplicativos e serviços](app-management-and-services.md) | Use serviços, como notificações por push, experimentação e mapas, e veja como [ver os detalhes da identidade do aplicativo](view-app-identity-details.md) e [reservar nomes de aplicativos adicionais](manage-app-names.md) |
+| [Gerenciamento de aplicativos e serviços](app-management-and-services.md) | Use serviços teste A/B (experimentação) e mapas, e veja como [ver os detalhes da identidade do aplicativo](view-app-identity-details.md) e [reservar nomes de aplicativos adicionais](manage-app-names.md). |
 | [Análises](analytics.md) | Obtenha dados de análise detalhados de seus aplicativos para ver como está andamento de seus aplicativos, desde quantos clientes você conseguiu até como eles estão usando seu aplicativo e o que eles têm a dizer sobre ele. Você também pode encontrar informações sobre a integridade do aplicativo, o uso de anúncios e muito mais. |
 | [Compromisso do cliente e promoção do aplicativo](app-promotion-and-customer-engagement.md) | Promova seu aplicativo com [campanhas publicitárias](create-an-ad-campaign-for-your-app.md), [códigos promocionais](generate-promotional-codes.md), [preço de venda](put-apps-and-add-ons-on-sale.md) e muito mais. 
 | [Sendo pago](getting-paid-apps.md) | Obtenha detalhes sobre como receber os lucros de seus aplicativos, complementos e o Microsoft Advertising. |
@@ -32,6 +32,6 @@ Esta seção contém informações sobre como publicar e gerenciar seus aplicati
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ Description: "Você pode incentivar os clientes a deixar comentários iniciando 
 title: Iniciar o Hub de Feedback do seu aplicativo
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 translationtype: Human Translation
-ms.sourcegitcommit: ce0431243866125eff83569e3b9b1c75e0703358
-ms.openlocfilehash: c0c55c78751a7990cc7690c2ba5975a57387989c
+ms.sourcegitcommit: 126fee708d82f64fd2a49b844306c53bb3d4cc86
+ms.openlocfilehash: 7525c08319eac2adedde71cd6d5f0a9aeeef41e2
 
 ---
 
@@ -15,13 +15,13 @@ Você pode incentivar os clientes a deixar comentários adicionando um controle 
 
 Para iniciar o Hub de Feedback do seu aplicativo, use uma API que seja fornecida pelo [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Recomendamos que você use essa API para iniciar o Hub de Feedback de um elemento de interface do usuário em seu aplicativo que siga nossas diretrizes de design.
 
->**Observação**&nbsp;&nbsp;O Hub de Feedback está disponível apenas em dispositivos que executam o Windows 10 versão 10.0.14271 ou posterior. Recomendamos que você mostre um controle de feedback no seu aplicativo apenas se o Hub de Feedback estiver disponível no dispositivo do usuário. O código neste tópico demonstra como fazer isso.
+>**Observação**&nbsp;&nbsp;O Hub de Feedback está disponível apenas em dispositivos que executam a versão 10.0.14271 ou posterior de um SO Windows 10 que se baseia em [famílias de dispositivos móveis e computadores](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families). Recomendamos que você mostre um controle de feedback no seu aplicativo apenas se o Hub de Feedback estiver disponível no dispositivo do usuário. O código neste tópico demonstra como fazer isso.
 
 ## Como iniciar o Hub de Feedback do seu aplicativo
 
 Para iniciar o Hub de Feedback do seu aplicativo:
 
-1. Instale o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Além de API para iniciar o Hub de Feedback, esse SDK também fornece APIs para outros recursos como execução de experiências em seus aplicativos com testes A/B e exibição de anúncios. Para saber mais sobre esse SDK, consulte [Microsoft Store Services SDK](microsoft-store-services-sdk.md).
+1. [Instale o Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk). Além de API para iniciar o Hub de Feedback, esse SDK também fornece APIs para outros recursos como execução de experiências em seus aplicativos com testes A/B e exibição de anúncios.
 2. Abra seu projeto no Visual Studio.
 3. No Gerenciador de Soluções, clique com botão direito no nó **Referências** para seu projeto e clique em **Adicionar Referência**.
 4. No **Gerenciador de Referências**, expanda **Universal do Windows** e clique em **Extensões**.
@@ -31,14 +31,16 @@ Para iniciar o Hub de Feedback do seu aplicativo:
   * Defina o texto no controle como o código de caractere Unicode hexadecimal E939. Este é o código de caractere do ícone de feedback recomendado na fonte **Segoe MDL2 Assets**.
   * Defina a visibilidade do controle como oculto.
 
-    > **Observação**&nbsp;&nbsp;O Hub de Feedback está disponível apenas em dispositivos que executam o Windows 10 versão 10.0.14271 ou posterior. Recomendamos que você oculte o controle de feedback por padrão e mostre-o no seu código de inicialização somente se o Hub de Feedback estiver disponível no dispositivo do usuário. A próxima etapa demonstra como fazer isso.
+    > **Observação**&nbsp;&nbsp;Recomendamos que você oculte o controle de feedback por padrão e mostre-o no seu código de inicialização somente se o Hub de Feedback estiver disponível no dispositivo do usuário. A próxima etapa demonstra como fazer isso.
 
   O código a seguir demonstra a definição XAML de um [Botão](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) que é configurado conforme descrito acima.
 
   ```xml
   <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
   ```
-7. Em seu código de inicialização para a página do aplicativo que hospeda o controle de feedback, use o método estático [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported.aspx) da classe [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) para determinar se o Hub de Feedback está disponível no dispositivo do usuário. Se essa propriedade retornar **true**, deixe o controle visível. O código a seguir demonstra como fazer isso para um [Botão](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx).
+7. Em seu código de inicialização para a página do aplicativo que hospeda o controle de feedback, use o método estático [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported.aspx) da classe [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) para determinar se o Hub de Feedback está disponível no dispositivo do usuário. O Hub de Feedback está disponível apenas em dispositivos que executam a versão 10.0.14271 ou posterior de um SO Windows 10 que se baseia em [famílias de dispositivos móveis e computadores](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families).
+
+  Se essa propriedade retornar **true**, deixe o controle visível. O código a seguir demonstra como fazer isso para um [Botão](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx).
 
   ```CSharp
   if (Microsoft.Services.Store.Engagement.StoreServicesFeedbackLauncher.IsSupported())
@@ -46,6 +48,8 @@ Para iniciar o Hub de Feedback do seu aplicativo:
         this.feedbackButton.Visibility = Visibility.Visible;
   }
   ```
+
+  >**Observação**&nbsp;&nbsp;Embora o Hub de Feedback não seja compatível com dispositivos Xbox no momento, a propriedade **IsSupported** atualmente retorna **true** em dispositivos Xbox que executam a versão 10.0.14271 ou posterior do Windows 10. Isso é um problema conhecido que será corrigido em uma versão futura do Microsoft Store Services SDK.  
 
 8. No manipulador de eventos que é executado quando o usuário clica no controle, obtenha um objeto [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) e chame o método [LaunchAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync.aspx) para iniciar o aplicativo do Hub de Feedback. Há duas sobrecargas para esse método: uma sem parâmetros e outra que aceita um dicionário de pares de chave e valor que contém os metadados que você deseja associar ao feedback. O exemplo a seguir demonstra como iniciar o Hub de Feedback no manipulador de eventos [Clique](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) para um [Botão](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx).
 
@@ -81,6 +85,6 @@ Também recomendamos que você use uma ou mais das seguintes opções de posicio
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

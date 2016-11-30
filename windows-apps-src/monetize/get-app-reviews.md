@@ -4,8 +4,8 @@ ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: "Use este método na API de análise da Windows Store para obter dados de opinião para um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter avaliações de aplicativo"
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: 4190012c08e22f4efb086c711183332b23ccee38
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 581532b56851d486f7804364d1d555b81829c1d1
 
 ---
 
@@ -14,7 +14,7 @@ ms.openlocfilehash: 4190012c08e22f4efb086c711183332b23ccee38
 
 
 
-Use este método na API de análise da Windows Store para obter dados de opinião para um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
+Use este método na API de análise da Windows Store para obter dados de opinião em formato JSON para um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de análises](../publish/reviews-report.md) no painel do Centro de Desenvolvimento do Windows.
 
 ## Pré-requisitos
 
@@ -341,7 +341,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 
 ### Exemplo de resposta
 
-O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
+O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa solicitação.
 
 ```json
 {
@@ -378,6 +378,7 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 ## Tópicos relacionados
 
+* [Relatório de avaliações](../publish/reviews-report.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
 * [Obter aquisições de aplicativo](get-app-acquisitions.md)
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)
@@ -386,6 +387,6 @@ O exemplo a seguir demonstra o corpo de uma resposta JSON dessa solicitação.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

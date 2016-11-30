@@ -4,8 +4,8 @@ ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
 description: "Use estes métodos na API de envio da Windows Store para gerenciar envios de pacote de pré-lançamento dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: "Gerenciar envios de pacote de pré-lançamento usando a API de envio da Windows Store"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 18d28495b80101cf5cfe53869b0f5cd3d61b50c9
+ms.sourcegitcommit: 9b76a11adfab838b21713cb384cdf31eada3286e
+ms.openlocfilehash: 7b59bb255774c8050232831e7f0d7a78a921ec6d
 
 ---
 
@@ -20,12 +20,16 @@ Use os métodos a seguir na API de envio da Windows Store para gerenciar envios 
 
 | Método        | URI    | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | Obtém dados de um envio de pacote de pré-lançamento existente. Para obter mais informações, consulte [Obter um envio de pacote de pré-lançamento](get-a-flight-submission.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status``` | Obtém o status de um envio de pacote de pré-lançamento existente. Para obter mais informações, consulte [Obter o status de um envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/applications/{applicationId}/flights/{flightId}/submissions``` | Cria um novo envio de pacote de pré-lançamento para um aplicativo que está registrado em sua conta do Centro de Desenvolvimento do Windows. Para saber mais, veja [Criar um envio de pacote de pré-lançamento](create-a-flight-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit``` | Confirma um envio de pacote de pré-lançamento novo ou atualizado para o Centro de Desenvolvimento do Windows. Para saber mais, veja [Confirmar um envio de pacote de pré-lançamento](commit-a-flight-submission.md). |
-| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | Atualiza um envio de pacote de pré-lançamento existente. Para saber mais, veja [Atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md). |
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | Exclui um envio de pacote de pré-lançamento. Para saber mais, veja [Excluir um envio de pacote de pré-lançamento](delete-a-flight-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | Obtém dados de um envio de pacote de pré-lançamento existente. Para obter mais informações, consulte [este artigo](get-a-flight-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status``` | Obtém o status de um envio de pacote de pré-lançamento existente. Para obter mais informações, consulte [este artigo](get-status-for-a-flight-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions``` | Cria um novo envio de pacote de pré-lançamento para um aplicativo que está registrado em sua conta do Centro de Desenvolvimento do Windows. Para obter mais informações, consulte [este artigo](create-a-flight-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit``` | Confirma um envio de pacote de pré-lançamento novo ou atualizado para o Centro de Desenvolvimento do Windows. Para obter mais informações, consulte [este artigo](commit-a-flight-submission.md). |
+| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | Atualiza um envio de pacote de pré-lançamento existente. Para obter mais informações, consulte [este artigo](update-a-flight-submission.md). |
+| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | Exclui um envio de pacote de pré-lançamento. Para obter mais informações, consulte [este artigo](delete-a-flight-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/packagerollout``` | Obtém as informações de distribuição gradual para um envio de pacote de pré-lançamento. Para obter mais informações, consulte [este artigo](get-package-rollout-info-for-a-flight-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage``` | Atualiza a porcentagem de distribuição gradual para um envio de pacote de pré-lançamento. Para obter mais informações, consulte [este artigo](update-the-package-rollout-percentage-for-a-flight-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout``` | Interrompe a distribuição gradual para um envio de pacote de pré-lançamento. Para obter mais informações, consulte [este artigo](halt-the-package-rollout-for-a-flight-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout``` | Finaliza a distribuição gradual para um envio de pacote de pré-lançamento. Para obter mais informações, consulte [este artigo](finalize-the-package-rollout-for-a-flight-submission.md). |
 
 <span id="create-a-package-flight-submission">
 ## Criar um envio de pacote de pré-lançamento
@@ -36,7 +40,7 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
 
 2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Windows Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
-3. Execute o seguinte método na API de envio da Windows Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado. Para saber mais, veja [Criar um envio de pacote de pré-lançamento](create-a-flight-submission.md).
+3. [Criar um envio de pacote de pré-lançamento](create-a-flight-submission.md) executando o seguinte método na API de envio da Windows Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications{applicationId}/flights/{flightId}/submissions
@@ -44,9 +48,9 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
 
   O corpo da resposta contém três itens: a ID do novo envio, os dados para o novo envio (incluindo todas as listagens e informações de preço) e a URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Para saber mais sobre SAS, consulte [Assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
 
-4. Se você estiver adicionando novos pacotes para o envio, [preparar os pacotes](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) e adicione-os a um arquivo ZIP.
+4. Se você estiver adicionando novos pacotes para o envio, [prepare os pacotes](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) e adicione-os a um arquivo ZIP.
 
-5. Atualize os dados de envio com as alterações necessárias para o novo envio e execute o método a seguir para atualizar o envio. Para saber mais, veja [Atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md).
+5. Revise os dados de envio com as alterações necessárias para o novo envio e execute o método a seguir para [atualizar o envio de pacote de pré-lançamento](update-a-flight-submission.md).
 
   ```
   PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}
@@ -66,13 +70,13 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
   await blockBob.UploadFromStreamAsync(stream);
   ```
 
-5. Confirme o envio executando o método a seguir. Isso alertará o Centro de Desenvolvimento que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta. Para saber mais, veja [Confirmar um envio de pacote de pré-lançamento](commit-a-flight-submission.md).
+5. [Confirme o envio do pacote de pré-lançamento](commit-a-flight-submission.md) executando o método a seguir. Isso alertará o Centro de Desenvolvimento que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
   ```
 
-6. Verifique o status de confirmação executando o método a seguir. Para obter mais informações, consulte [Obter o status de um envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md).
+6. Verifique o status de confirmação executando o método a seguir para [obter o status de envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md).
 
   ```
   GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status
@@ -81,6 +85,51 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
   Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
 7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar a monitorar o progresso de envio usando o método anterior ou visitando o painel do Centro de Desenvolvimento.
+
+<span id="manage-gradual-package-rollout">
+## Gerencie uma distribuição de pacote gradual para um envio de pacote de pré-lançamento
+
+Você pode distribuir gradualmente os pacotes atualizados em um envio de pacote de pré-lançamento para um percentual de clientes do seu aplicativo no Windows 10. Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode alterar a porcentagem de distribuição (ou parar a atualização) para um envio publicado sem precisar criar um novo envio. Para obter mais detalhes, incluindo instruções sobre como habilitar e gerenciar uma distribuição de pacote gradual no painel do Centro de Desenvolvimento, consulte [este artigo](../publish/gradual-package-rollout.md).
+
+Você também pode habilitar e gerenciar uma distribuição de pacote gradual para um envio de pacote de pré-lançamento por meio de programação usando os métodos a seguir na API de envio da Windows Store.
+
+* Para habilitar uma distribuição de pacote gradual para um envio de pacote de pré-lançamento:
+
+  1. [Criar um envio de pacote de pré-lançamento](create-a-flight-submission.md) ou [obter um envio de pacote de pré-lançamento](get-a-flight-submission.md).
+  2. Nos dados de resposta, localize o recurso [packageRollout](#package-rollout-object), defina o campo *isPackageRollout* como verdadeiro e defina o campo *packageRolloutPercentage* para o percentual de clientes do seu aplicativo que devem receber os pacotes atualizados.
+  3. Passe os dados de envio de pacote de pré-lançamento atualizados para o método [atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md).
+
+<span/>
+
+* Para [obter as informações de distribuição de pacote para um envio de pacote de pré-lançamento](get-package-rollout-info-for-a-flight-submission.md), execute o seguinte método.
+
+  ```
+  GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/packagerollout
+  ```
+
+<span/>
+
+* Para [atualizar a porcentagem de distribuição de pacote para um envio de pacote de pré-lançamento](update-the-package-rollout-percentage-for-a-flight-submission.md), execute o seguinte método.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage  
+  ```
+
+<span/>
+
+* Para [interromper a distribuição de pacote para um envio de pacote de pré-lançamento](halt-the-package-rollout-for-a-flight-submission.md), execute o seguinte método.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout   
+  ```  
+
+<span/>
+
+* Para [finalizar a distribuição de pacote para um envio de pacote de pré-lançamento](finalize-the-package-rollout-for-a-flight-submission.md), execute o seguinte método.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout
+  ```
 
 ## Recursos
 
@@ -113,6 +162,16 @@ Esse recurso representa um envio para um pacote de pré-lançamento. O exemplo a
       "minimumSystemRam": "None"
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "fileUploadUrl": "https://productingestionbin1.blob.core.windows.net/ingestion/8b389577-5d5e-4cbe-a744-1ff2e97a9eb8?sv=2014-02-14&sr=b&sig=wgMCQPjPDkuuxNLkeG35rfHaMToebCxBNMPw7WABdXU%3D&se=2016-06-17T21:29:44Z&sp=rwl",
   "targetPublishMode": "Immediate",
   "targetPublishDate": "",
@@ -129,8 +188,9 @@ Este recurso tem os seguintes valores.
 | status           | string  | O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  Contém detalhes adicionais sobre o status do envio, incluindo informações sobre os erros. Para saber mais, consulte a seção [Detalhes de status](#status-details-object) a seguir. |
 | flightPackages           | array  | Contém objetos que fornecem detalhes sobre cada pacote no envio. Para saber mais, veja a seção [Pacote de versão de pré-lançamento](#flight-package-object) abaixo.  |
+| packageDeliveryOptions    | objeto  | Contém as configurações de distribuição de pacote gradual e de atualização obrigatória para o envio. Para obter mais informações, consulte a seção [Objeto de opções de entrega de pacote](#package-delivery-options-object) abaixo.  |
 | fileUploadUrl           | string  | A URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de pacote de pré-lançamento](#create-a-package-flight-submission).  |
-| targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
 | notesForCertification           | string  |  Fornece informações adicionais para os testadores de certificação, como credenciais da conta de teste e as etapas para acessar e confirmar recursos. Para obter mais informações, consulte [Notas para certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification). |
 
@@ -206,6 +266,47 @@ Este recurso tem os seguintes valores.
 | minimumDirectXVersion    |  string   |  A versão mínima do DirectX que é compatível com o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
 | minimumSystemRam    | string    |  A RAM mínima necessária para o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Memory2GB</li></ul>   |    
 
+
+<span id="package-delivery-options-object" />
+### Objeto de opções de entrega de pacote
+
+Esse recurso contém configurações de distribuição de pacote gradual e de atualização obrigatória para o envio. O exemplo a seguir demonstra o formato desse recurso.
+
+```json
+{
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
+}
+```
+
+Este recurso tem os seguintes valores.
+
+| Valor           | Tipo    | Descrição        |
+|-----------------|---------|------|
+| packageRollout   |   objeto      |  Contém as configurações de distribuição de pacote gradual para o envio. Para saber mais, veja a seção [Objeto de distribuição de pacote](#package-rollout-object) abaixo.    |  
+| isMandatoryUpdate    | booleano    |  Indica se você deseja tratar os pacotes nesse envio como obrigatórios para instalar automaticamente as atualizações de aplicativos. Para obter mais informações sobre pacotes obrigatórios para instalar automaticamente as atualizações de aplicativos, consulte [Baixar e instalar atualizações de pacote para seu aplicativo](../packaging/self-install-package-updates.md).    |  
+| mandatoryUpdateEffectiveDate    |  data   |  A data e hora em que os pacotes nesse envio se tornam obrigatórios, no formato ISO 8601 e fuso horário UTC.   |        
+
+<span id="package-rollout-object" />
+### Objeto de distribuição de pacote
+
+Esse recurso contém [configurações de distribuição de pacote](#manage-gradual-package-rollout) gradual para o envio. Este recurso tem os seguintes valores.
+
+| Valor           | Tipo    | Descrição        |
+|-----------------|---------|------|
+| isPackageRollout   |   booleano      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
+| packageRolloutPercentage    | flutuante    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
+| packageRolloutStatus    |  string   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
+| fallbackSubmissionId    |  string   |  A ID do envio que será recebida por clientes que não recebem os pacotes de distribuição gradual.   |          
+
 <span/>
 
 ## Enumerações
@@ -249,6 +350,6 @@ Os códigos a seguir representam o status de um envio.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

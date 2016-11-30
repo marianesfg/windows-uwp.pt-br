@@ -1,123 +1,92 @@
 ---
 author: awkoren
-Description: "Prepare seu aplicativo da área de trabalho do Windows (Win32, WPF e Windows Forms) para a conversão em um aplicativo UWP (Plataforma Universal do Windows) usando as extensões de conversão de área de trabalho."
+Description: "Conheça a ponte da área de trabalho para UWP e converta o aplicativo da área de trabalho do Windows (como Win32, WPF e Windows Forms) em um aplicativo da Plataforma Universal do Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
-title: "Converter o seu aplicativo da área de trabalho em um aplicativo UWP (Plataforma Universal do Windows)"
+title: "Traga o aplicativo da área de trabalho para a Plataforma Universal do Windows (UWP) usando a ponte da área de trabalho"
 translationtype: Human Translation
-ms.sourcegitcommit: ff8cd3ab5e38cfc3a2b5fabaad15f78a5f2620f2
-ms.openlocfilehash: 6cf6367ed0f6acea0f87ac36a050e874425423b1
+ms.sourcegitcommit: 933dcd48c03de1992bbfcf0d86951170264a309f
+ms.openlocfilehash: 170ed75d1cd865bfc8e4feb776fce4332cc67850
 
 ---
 
-# Converter o seu aplicativo da área de trabalho em um aplicativo UWP (Plataforma Universal do Windows)
+# Traga o aplicativo da área de trabalho para a Plataforma Universal do Windows (UWP) usando a ponte da área de trabalho
 
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
+Conheça a ponte da área de trabalho para UWP e converta o aplicativo da área de trabalho do Windows em um aplicativo da Plataforma Universal do Windows (UWP).
 
-Prepare seu aplicativo da área de trabalho do Windows (Win32, WPF e Windows Forms) para a conversão em um aplicativo UWP (Plataforma Universal do Windows) usando as extensões de conversão de área de trabalho.
+A ponte da área de trabalho é um conjunto de tecnologias que permite converter o aplicativo da área de trabalho do Windows (por exemplo, Win32, Windows Forms e WPF) ou o jogo em um aplicativo UWP ou jogo. Após a conversão, seu aplicativo de área de trabalho do Windows é empacotado, reparado e implantado na forma de um pacote de aplicativo UWP (.appx ou .appxbundle) na área de trabalho do Windows 10.
 
-## Benefícios da conversão de seu aplicativo em UWP
+Há duas partes na tecnologia que permite que os aplicativos da área de trabalho sejam convertidos em pacotes UWP. A primeira é o processo de conversão, que utiliza os binários existentes e os reempacota como um pacote UWP. O código ainda é o mesmo, apenas é empacotado de forma diferente. A segunda parte compreende tecnologias de tempo de execução na atualização de aniversário do Windows que permitem que um pacote UWP tenha arquivos executáveis que são executados com confiança total, em vez de em um contêiner de aplicativo. Essa tecnologia também dá um identificador de pacote a um aplicativo convertido, que é necessário para usar algumas APIs de UWP.
 
-UWP usando extensões de conversão de área de trabalho é uma ponte que permite que você converta seu aplicativo de área de trabalho do Windows (Win32, Windows Forms e WPF) ou jogo em um aplicativo ou jogo UWP (Plataforma Universal do Windows. Para obter mais informações, consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx). Após a conversão, seu aplicativo de área de trabalho do Windows é empacotado, reparado e implantado na forma de um pacote de aplicativo UWP (.appx ou .appxbundle) na área de trabalho do Windows 10.
+## Benefícios
 
-Há duas partes na tecnologia que permite que os aplicativos da área de trabalho sejam convertidos em pacotes UWP. A primeira é o conversor de aplicativos da área de trabalho, que usa seus binários existentes e os empacota novamente como um pacote UWP. O código ainda é o mesmo, apenas é empacotado de forma diferente. A segunda parte compreende tecnologias de tempo de execução na atualização de aniversário do Windows que permitem que um pacote UWP tenha arquivos executáveis que são executados com confiança total, em vez de em um contêiner de aplicativo. Essa tecnologia também dá um identificador de pacote a um aplicativo convertido, que é necessário para usar algumas APIs de UWP.
+Aqui estão alguns dos benefícios da conversão do aplicativo da área de trabalho do Windows: 
 
-Aqui estão alguns dos benefícios da conversão de seu aplicativo de área de trabalho do Windows.
+**Implantação simplificada**. Aplicativos e jogos que usam a ponte têm uma experiência excelente de implantação que garante que os usuários possam instalar e atualizar com confiança. Se um usuário optar por desinstalar o aplicativo, ele será removido por completo sem deixar rastreamento. Isso reduz o tempo para criar experiências de instalação e manter os usuários atualizados.
 
-* A experiência de instalação do seu aplicativo é muito mais tranquila para seus clientes. Você pode implantá-lo em computadores que usam sideload (consulte [Sideload de aplicativos LOB no Windows 10](https://technet.microsoft.com/library/mt269549.aspx)), e ele não deixa rastros depois de ser desinstalado. A longo prazo, você também poderá publicar seu aplicativo na Windows Store.
+**Atualizações automáticas e licenciamento**. Seu aplicativo pode participar dos recursos internos de atualização automática e de licenciamento da Windows Store. A atualização automática é um mecanismo altamente confiável e eficiente, pois somente as partes alteradas dos arquivos são baixadas.
 
-* Como seu aplicativo convertido tem um identificador de pacote, você pode chamar mais APIs de UWP, até mesmo da partição de confiança total, do que poderia antes. Veja uma lista completa de [APIs UWP suportadas por aplicativos da área de trabalho convertidos](desktop-to-uwp-supported-api.md). 
+**Maior alcance e monetização simplificada**. Se optar por distribuir por meio da Windows Store, você poderá alcançar milhões de usuários do Windows 10, que podem adquirir aplicativos, jogos e compras realizadas em aplicativo com opções de pagamento locais.
 
-* Em seu próprio ritmo, você pode adicionar recursos UWP ao pacote do seu aplicativo, como uma interface de usuário XAML, atualizações de bloco dinâmico, tarefas de UWP em segundo plano, serviços de aplicativo, e muito mais. Todas as funcionalidades disponíveis para qualquer outro aplicativo UWP estão disponíveis para seu aplicativo.
+**Adicione recursos UWP**.  Em seu próprio ritmo, você pode adicionar recursos UWP ao pacote do seu aplicativo, como uma interface de usuário XAML, atualizações de bloco dinâmico, tarefas de UWP em segundo plano, serviços de aplicativo, e muito mais.
 
-* Se você optar por mover toda a funcionalidade do seu aplicativo para fora da partição de confiança total do aplicativo e para dentro da partição do contêiner do aplicativo, seu aplicativo poderá ser executado em qualquer dispositivo Windows 10.
+**Casos de uso ampliados em dispositivos**. Usando a ponte, você pode migrar gradualmente o código para a Plataforma Universal do Windows a fim de alcançar todos os dispositivos Windows 10, inclusive telefones, Xbox One e HoloLens.
 
-* Como um aplicativo UWP, seu aplicativo é capaz de fazer o que ele poderia como um aplicativo de área de trabalho do Windows. Ele interage com um modo de exibição virtualizado do registro e do sistema de arquivos que é idêntico ao registro e ao sistema de arquivos reais.
+## Preparar
 
-* Seu aplicativo pode participar dos recursos internos de atualização automática e de licenciamento da Windows Store. A atualização automática é um mecanismo altamente confiável e eficiente, pois somente as partes alteradas dos arquivos são baixadas.
+A ponte da área de trabalho para UWP foi projetada para facilidade de uso, e você talvez não precise fazer muito para preparar o aplicativo para o processo de conversão. No entanto, existem algumas restrições e situações específicas a serem consideradas antes da conversão. Consulte o artigo [Preparar o aplicativo para a ponte da área de trabalho para UWP](desktop-to-uwp-prepare.md) e resolva todos os problemas que se apliquem ao aplicativo antes de continuar.
 
-## Prepare seu aplicativo da área de trabalho para a conversão em UWP
-
-Talvez você não precise fazer muito para preparar seu aplicativo para o processo de conversão. Lembre-se de que a Windows Store lida com o licenciamento e a atualização automática para você, portanto, você pode remover esses recursos de sua base de código. Se qualquer uma destas situações se aplica ao seu aplicativo, você precisará resolver o problema antes da conversão.
-
-+ __Seu aplicativo usa uma versão do .NET anterior à 4.6.1__. Somente o .NET 4.6.1 tem suporte. Você deve redirecionar seu aplicativo para o .NET 4.6.1 antes da conversão. 
-
-+ __Seu aplicativo sempre é executado com privilégios de segurança elevados__. Seu aplicativo precisa funcionar durante a execução como o usuário interativo. Os usuários que instalam seu aplicativo da Windows Store podem não ser administradores de sistema, portanto, exigir que seu aplicativo seja executado com privilégios elevados significa que ele não será executado corretamente para usuários padrão.
-
-+ __Seu aplicativo requer um driver de modo kernel ou um serviço Windows__. A ponte é adequada para um aplicativo, mas não dá suporte a um driver de modo kernel ou um serviço Windows que precisa ser executado em uma conta do sistema. Em vez de um serviço Windows, use uma [tarefa em segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task).
-
-+ __Os módulos do seu aplicativo são carregados no processo de processos que não estão em seu pacote de AppX__. Isso não é permitido, o que significa que extensões de processo, como [extensões do shell](https://msdn.microsoft.com/library/windows/desktop/dd758089.aspx), não têm suporte. Mas se você tiver dois aplicativos no mesmo pacote, será possível fazer comunicação entre processos entre eles.
-
-+ __Seu aplicativo chama [SetDllDirectory](https://msdn.microsoft.com/library/windows/desktop/ms686203) ou [AddDllDirectory](https://msdn.microsoft.com/library/windows/desktop/hh310513)__. Essas funções não são suportadas para aplicativos convertidos atualmente. Estamos trabalhando em para dar suporte em uma versão futura. Como alternativa, você pode copiar quaisquer .dlls que foram localizadas usando essas funções para a raiz do pacote. 
-
-+ __Seu aplicativo usa uma AUMID (ID do Modelo do Usuário do Aplicativo)__. Se o seu processo chama [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422.aspx) para definir sua própria AUMID, então ele poderá usar apenas a AUMID gerada para ele pelo ambiente de modelo de aplicativo/pacote AppX. Não é possível definir AUMIDs personalizadas.
-
-+ __Seu aplicativo modifica o hive do Registro HKEY_LOCAL_MACHINE (HKLM)__. Qualquer tentativa de seu aplicativo de criar uma chave HKLM, ou abrir uma para modificação, resultará em uma falha de acesso negado. Lembre-se de que seu aplicativo tem sua própria exibição virtualizada particular do registro, portanto, a noção de um hive do registro no âmbito do usuário e do computador (o que o HKLM é) não se aplica. Você precisará encontrar outra maneira de fazer o que o HKLM faz, como, por exemplo, gravar em HKEY_CURRENT_USER (HKCU).
-
-+ __Seu aplicativo usa uma subchave de registro ddeexec como um meio de iniciar outro aplicativo__. Em vez disso, use um dos manipuladores de verbo DelegateExecute conforme configurado pelas várias extensões ativáveis* no [manifesto de pacote do aplicativo](https://msdn.microsoft.com/library/windows/apps/br211474.aspx).
-
-+ __Seu aplicativo grava na pasta AppData com a intenção de compartilhar dados com outro aplicativo__. Após a conversão, a pasta AppData é redirecionada para o armazenamento de dados de aplicativo local, que é um repositório particular para cada aplicativo UWP. Use uma maneira diferente de compartilhamento de dados entre processos. Para obter mais informações, consulte [Armazene e recupere configurações e outros dados de aplicativo](https://msdn.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data).
-
-+ __Seu aplicativo grava no diretório de instalação do seu aplicativo__. Por exemplo, seu aplicativo grava em um arquivo de log que você coloca no mesmo diretório que o exe. Isso não é aceito, portanto, você precisará encontrar outro local, como o armazenamento de dados de aplicativo local.
-
-+ __A instalação do seu aplicativo requer interação do usuário__. O instalador do seu aplicativo deve ser capaz de ser executado silenciosamente, e ele deve instalar todos os pré-requisitos que não estão por padrão em uma imagem limpa do sistema operacional.
-
-+ __Seu aplicativo usa a pasta de trabalho atual__. No tempo de execução, seu aplicativo convertido não terá o mesmo diretório trabalho especificado anteriormente no atalho .LNK em sua área de trabalho. Você precisa alterar seu CWD no tempo de execução se ter o diretório correto é importante para o seu aplicativo funcionar corretamente.
-
-+ __Seu aplicativo requer UIAccess__. Se o seu aplicativo especifica `UIAccess=true` no elemento `requestedExecutionLevel` do manifesto UAC, a conversão em UWP não será possível no momento. Para obter mais informações, consulte [Visão geral sobre a Automação da Interface do Usuário](https://msdn.microsoft.com/library/ms742884.aspx).
-
-+ __Seu aplicativo já é um aplicativo UWP completo e deseja invocar um processo de confiança total de dentro do pacote do aplicativo__. Usar a ponte no modo "reverso" não é suportado e aplicativos UWP que tentam invocar processos de confiança total irão falhar na certificação da Windows Store. Para habilitar esse cenário em um aplicativo de sideload, primeiro inclua a declaração ```<desktop:Extension>``` no manifesto do aplicativo (que inclui o atributo *EntryPoint* com o valor *Windows.FullTrustApplication*). Em seguida, configure o  ```<TargetDeviceFamily>``` do seu aplicativo para *Windows.Desktop*. Isso indica que seu aplicativo se destina apenas à família de dispositivos da área de trabalho e não a todos os dispositivos UWP. Se seu aplicativo retorna o erro *APPX0501: erro de validação* com essas configurações no lugar, verifique sua família de dispositivos de destino; seu aplicativo provavelmente se destina a família *Windows.Universal* e não *Windows.Desktop*. 
-
-+ __Seu aplicativo expõe objetos COM ou assemblies GAC para uso por outros processos__. Na versão atual, seu aplicativo não pode expor objetos COM nem assemblies GAC para uso por processos originários de executáveis externos ao seu pacote AppX. Os processos de dentro do pacote podem registrar e usar objetos COM e assemblies GAC normalmente, mas eles não estarão visíveis externamente. Isso significa que cenários de interoperabilidade como OLE não funcionarão se forem invocados por processos externos. 
-
-+ __Seu aplicativo está vinculando bibliotecas de tempo de execução C de maneira incompatível__. A biblioteca de tempo de execução C/C++ da Microsoft oferece rotinas de programação para o sistema operacional Microsoft Windows. Essas rotinas automatizam muitas tarefas comuns de programação que não são fornecidas pelas linguagens C e C++. Se seu aplicativo utiliza a biblioteca de tempo de execução C/C++, você precisa garantir que ela seja vinculada de maneira compatível. 
-    
-    O Visual Studio 2015 dá suporte à vinculação dinâmica, para permitir que seu código use arquivos DLL comuns, ou vinculação estática, para vincular a biblioteca diretamente no seu código à versão atual da CRT. Se possível, recomendamos que o seu aplicativo use vinculação dinâmica com VS 2015. 
-
-    O suporte nas versões anteriores do Visual Studio varia. Para obter detalhes, consulte a tabela a seguir: 
-
-    <table>
-    <th>Versão do Visual Studio</td><th>Vinculação dinâmica</th><th>Vinculação estática</th></th>
-    <tr><td>2005 (VC 8)</td><td>Sem suporte</td><td>Com suporte</td>
-    <tr><td>2008 (VC 9)</td><td>Sem suporte</td><td>Com suporte</td>
-    <tr><td>2010 (VC 10)</td><td>Com suporte</td><td>Com suporte</td>
-    <tr><td>2012 (VC 11)</td><td>Com suporte</td><td>Sem suporte</td>
-    <tr><td>2013 (VC 12)</td><td>Com suporte</td><td>Sem suporte</td>
-    <tr><td>2015 (VC 14)</td><td>Com suporte</td><td>Com suporte</td>
-    </table>
-    
-    Observação: em todos os casos, você deve se vincular à última CRT publicamente disponível.
-
-+ __Seu aplicativo instala e carrega os assemblies da pasta lado a lado do Windows__. Por exemplo, seu aplicativo usa bibliotecas de tempo de execução C VC8 ou VC9 e está vinculando-as dinamicamente da pasta lado a lado do Windows, ou seja, seu código está usando os arquivos DLL comuns de uma pasta compartilhada. Isso não tem suporte. Você precisará vinculá-las estaticamente por meio de links aos arquivos de biblioteca redistribuível diretamente no seu código.
-
-## Iniciar o processo de conversão
+## Converter
 
 Você tem algumas opções diferentes para converter seu aplicativo.
 
-* **Desktop App Converter (DAC)**. O DAC é uma ferramenta que converte automaticamente e assina seu aplicativo para você. Usar o DAC é conveniente e automático, e é útil se seu aplicativo faz várias modificações no sistema ou se houver dúvidas sobre o instalador faz. Para começar a usar o DAC, consulte [Conversor de Aplicativos de Área de Trabalho](desktop-to-uwp-run-desktop-app-converter.md). 
+**Desktop App Converter (DAC)**. O DAC é uma ferramenta que converte automaticamente e assina seu aplicativo para você. Usar o DAC é conveniente e automático, e é útil se seu aplicativo faz várias modificações no sistema ou se houver dúvidas sobre o instalador faz. Para começar, consulte o artigo sobre o [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md). 
 
-* **Conversão manual**. Se seu aplicativo é instalado usando o xcopy ou você estiver familiarizado com as alterações que o instalador faz no sistema, a conversão manual pode ser uma opção mais simples. Isso envolve a criação de um arquivo de manifesto, a execução da ferramenta MakeAppx.exe e a assinatura do pacote do aplicativo. Para obter detalhes sobre como converter manualmente, consulte [Converter manualmente seu aplicativo da área de trabalho do Windows para um aplicativo da Plataforma Universal do Windows (UWP)](desktop-to-uwp-manual-conversion.md). 
+**Conversão manual**. Se seu aplicativo é instalado usando o xcopy ou você estiver familiarizado com as alterações que o instalador faz no sistema, a conversão manual pode ser uma opção mais simples. Isso envolve a criação de um arquivo de manifesto, a execução da ferramenta MakeAppx.exe e a assinatura do pacote do aplicativo. Para saber mais detalhes sobre como converter manualmente, consulte [Converter manualmente o aplicativo em UWP usando a ponte da área de trabalho](desktop-to-uwp-manual-conversion.md). 
 
-* **Instalador de terceiros**. Três instaladores de terceiros populares —[InstallShield by Flexera](http://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer), [WiX by FireGiant](https://www.firegiant.com/r/appx) e [Advanced Installer by Caphyon](http://www.advancedinstaller.com/uwp-app-package) — agora dão suporte ao Desktop Bridge e pode gerar um instalador MSI e o pacote de aplicativo convertido com apenas alguns cliques. Para obter mais informações, visite o site correspondentes para cada instalador. 
+**Instalador de terceiros**. Três instaladores de terceiros populares — [InstallShield by Flexera](http://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer), [WiX by FireGiant](https://www.firegiant.com/r/appx) e [Advanced Installer by Caphyon](http://www.advancedinstaller.com/uwp-app-package) — agora dão suporte ao Desktop Bridge e pode gerar um instalador MSI e o pacote de aplicativo convertido com apenas alguns cliques. Para obter mais informações, visite o site correspondentes para cada instalador. 
 
-## Obtenha suporte e deixe comentários
+## Aprimorar 
+
+É possível destacar o aplicativo da área de trabalho convertido com uma ampla variedade de APIs UWP para adicionar recursos como blocos dinâmicos, notificações por push e muito mais. Para obter exemplos de códigos completos, consulte os repositórios [Exemplos de ponte de aplicativo da área de trabalho para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) e [Exemplos de aplicativo da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) em GitHub. Para ver uma lista completa de APIs compatíveis, consulte [APIs UWP compatíveis para aplicativos convertidos com a ponte da área de trabalho](desktop-to-uwp-supported-api.md). 
+
+Além de chamar APIs UWP, é possível estender o aplicativo com recursos acessíveis somente a aplicativos convertidos. Entre eles estão cenários como iniciar um processo quando o usuário faz logon e integração com o Explorador de Arquivos e projetados para suavizar a transição entre o aplicativo da área de trabalho original e um pacote do aplicativo UWP completo. Para saber mais detalhes, consulte [Extensões de aplicativo da ponte da área de trabalho](desktop-to-uwp-extensions.md). 
+
+## Migrar
+
+Usando a ponte, você pode migrar gradualmente o código anterior para a UWP ao mesmo tempo em que mantém a capacidade de executar e publicar o aplicativo na área de trabalho do Windows. Depois que tiver migrado totalmente para a UWP (e o aplicativo não contiver mais nenhum componente Win32/WPF), você poderá atingir todos os dispositivos Windows, inclusive telefones, Xbox One e HoloLens.
+
+## Depurar
+
+Você pode depurar o aplicativo usando o Visual Studio. Consulte [Depurar aplicativos convertidos usando a ponte da área de trabalho](desktop-to-uwp-debug.md) para obter ajuda detalhada. 
+
+Se você tiver interesse nos detalhes de como a ponte da área de trabalho funciona nos bastidores, confira [Nos bastidores da ponte da área de trabalho](desktop-to-uwp-behind-the-scenes.md). 
+
+## Distribuir
+
+Você pode distribuir o aplicativo usando a Windows Store ou por meio de sideload. Para saber mais detalhes, consulte [Distribuir aplicativos convertidos usando a ponte da área de trabalho](desktop-to-uwp-distribute.md). Lembre-se de que você precisará assinar o aplicativo antes de implantá-lo para usuários. Consulte [Assinar um aplicativo convertido usando a ponte da área de trabalho](desktop-to-uwp-signing.md) para obter instruções detalhadas. 
+
+## Suporte e comentários
 
 Se você estiver com problemas de conversão do seu aplicativo, você pode visitar os [fóruns](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop) para obter ajuda. 
 
-Para fazer comentários ou sugestões de recursos, confira [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial). 
+Para fazer comentários ou dar sugestões de recursos, envie ou vote a favor de itens em [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial). 
 
 ## Nesta seção
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md) | Mostra como executar o conversor de aplicativos da área de trabalho. Você provavelmente não precisará fazer muito, ou nada, para preparar seu aplicativo para o processo de conversão. |
-| [Converter manualmente seu aplicativo da área de trabalho](desktop-to-uwp-manual-conversion.md) | Saiba como criar um pacote de aplicativo e manifestá-lo manualmente. |
-| [Extensões de aplicativos da área de trabalho convertidos](desktop-to-uwp-extensions.md) | Aprimore seu aplicativo convertido com extensões para habilitar recursos como tarefas de inicialização, integração com o Explorador de Arquivos e muito mais. |
-| [Suporte para APIs da UWP para aplicativos da área de trabalho convertidos](desktop-to-uwp-supported-api.md) | Veja quais APIs de UWP estão disponíveis para seu aplicativo da área de trabalho convertido usar. |
-| [Assinar o aplicativo da área de trabalho convertido](desktop-to-uwp-signing.md) | Saiba como assinar o pacote .appx convertido com um certificado. |
-| [Implemente e depure o aplicativo UWP convertido](desktop-to-uwp-deploy-and-debug.md) | Obtenha ajuda com a implantação e depuração do seu aplicativo após convertê-lo. Além disso, se você estiver curioso sobre alguns dos elementos internos das extensões de conversão de área de trabalho, então este tópico é para você. |
+| [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md) | Mostra como executar o Desktop App Converter. |
+| [Converter manualmente o aplicativo em UWP usando a ponte da área de trabalho](desktop-to-uwp-manual-conversion.md) | Saiba como criar um pacote de aplicativo e manifestá-lo manualmente. |
+| [Extensões de aplicativo da ponte da área de trabalho](desktop-to-uwp-extensions.md) | Aprimore o aplicativo convertido com extensões para habilitar recursos como tarefas de inicialização e integração com o Explorador de Arquivos. |
+| [APIs UWP compatíveis para aplicativos convertidos com a ponte da área de trabalho](desktop-to-uwp-supported-api.md) | Veja quais APIs de UWP estão disponíveis para seu aplicativo da área de trabalho convertido usar. |
+| [Depurar aplicativos convertidos usando a ponte da área de trabalho](desktop-to-uwp-debug.md) | Explica as opções para depurar o aplicativo convertido. | 
+| [Assinar um aplicativo convertido usando a ponte da área de trabalho](desktop-to-uwp-signing.md) | Saiba como assinar o pacote do aplicativo convertido usando um certificado. |
+| [Distribuir aplicativos convertidos usando a ponte da área de trabalho](desktop-to-uwp-distribute.md) | Veja como é possível distribuir o aplicativo convertido para usuários.  |
+| [Nos bastidores da ponte da área de trabalho](desktop-to-uwp-behind-the-scenes.md) | Aprofunde-se em como a ponte da área de trabalho para UWP funciona nos bastidores. | 
+| [Problemas conhecidos com a ponte da área de trabalho](desktop-to-uwp-known-issues.md) | Listas problemas conhecidos com a ponte da área de trabalho para UWP. | 
 | [Exemplos de código de ponte de aplicativo de área de trabalho para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) | Exemplos de código em GitHub demonstrando recursos dos aplicativos convertidos. |
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

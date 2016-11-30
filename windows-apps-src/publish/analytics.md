@@ -4,8 +4,8 @@ Description: "Você pode visualizar análises detalhadas de seus aplicativos no 
 title: "Análises"
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 translationtype: Human Translation
-ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
-ms.openlocfilehash: fd03b13d4169f265575de921ef9c42303babe972
+ms.sourcegitcommit: fa6e5945855defc99e9f5636543ec072eb777a5a
+ms.openlocfilehash: c628b1fb29601ff1d4ff3629da45409586274f6b
 
 ---
 
@@ -18,9 +18,7 @@ Você pode visualizar análises detalhadas de seus aplicativos no painel do Cent
 
 ## Análises para todos os seus aplicativos
 
-Sua página de visão geral do painel também inclui um modo de exibição acumulado para juntar detalhes sobre todos os seus aplicativos. As estatísticas mostradas na página de visão geral varia de acordo com seus aplicativos.
-
-Ao [baixar relatórios analíticos](download-analytic-reports.md), você também tem a opção de baixar relatórios sobre todos os seus aplicativos. Você precisará acessar a página **Baixar relatórios** na seção **Análises** de um dos seus aplicativos, mas não está limitado a baixar dados apenas para esse aplicativo específico.
+Para exibir análises importantes sobre seus aplicativos mais baixados, no menu de navegação superior, selecione **Visão geral** > **de análises**. Por padrão, a página **Visão geral de análises** mostra informações sobre os cinco aplicativos que têm mais aquisições durante seu ciclo de vida. Para escolher aplicativos diferentes a serem mostrados, selecione **Alterar filtros**.
 
 ## Relatórios disponíveis para cada aplicativo
 
@@ -35,8 +33,9 @@ Nesta seção, você encontrará detalhes sobre as informações apresentadas em
 -   [Relatório de aquisições de complemento](add-on-acquisitions-report.md)
 -   [Relatório de controle de anúncios](ad-mediation-report.md)
 -   [Relatório de desempenho de anúncios](advertising-performance-report.md)
--   [Relatório de anúncios de instalação de aplicativo](app-install-ads-reports.md)
--   [Relatório Canais e conversões](channels-and-conversions-report.md)
+-   [Relatório de desempenho de afiliadas](affiliates-performance-report.md)
+-   [Relatório de anúncios de instalação de aplicativos](app-install-ads-reports.md)
+-   [Relatório de canais e conversões](channels-and-conversions-report.md)
 
 > [!NOTE]
 > Dependendo dos recursos e implementação específicos do seu aplicativo, você não verá dados em todos esses relatórios.
@@ -73,13 +72,13 @@ Use os recursos a seguir para começar a usar o Power BI para acessar seus dados
 
 ### Aplicativo do Centro de Desenvolvimento
 
-Instale o aplicativo [Centro de Desenvolvimento](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para exibir rapidamente os detalhes sobre a integridade e o desempenho de seus aplicativos em qualquer dispositivo Windows 10. 
+Instale o aplicativo [Centro de Desenvolvimento](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para exibir rapidamente os detalhes sobre a integridade e o desempenho de seus aplicativos em qualquer dispositivo Windows 10.
 
 ## Tópicos relacionados
 - [Publique aplicativos do Windows](index.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

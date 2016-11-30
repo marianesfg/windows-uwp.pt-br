@@ -1,4 +1,15 @@
-# Assinar o aplicativo da área de trabalho convertido
+---
+author: awkoren
+Description: "Este artigo explica como assinar um aplicativo de área de trabalho convertido para a Plataforma Universal do Windows (UWP)."
+Search.Product: eADQiWindows 10XVcnh
+title: "Assinar um aplicativo convertido usando a ponte da área de trabalho para UWP."
+translationtype: Human Translation
+ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
+ms.openlocfilehash: 2db978089a6334214c3b4c85dbde8d4a4e846092
+
+---
+
+# Assinar um aplicativo convertido usando a ponte da área de trabalho
 
 Este artigo explica como assinar um aplicativo de área de trabalho convertido para a Plataforma Universal do Windows (UWP). Você deve assinar o pacote .appx com um certificado antes de implantá-lo.
 
@@ -80,6 +91,7 @@ Para corrigir esses binários malformados, certifique-se de que eles estejam em 
 - [SignTool.exe (ferramenta de assinatura)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
 - [Como assinar um pacote do aplicativo usando a SignTool](https://msdn.microsoft.com/library/windows/desktop/jj835835.aspx)
 
-<!--HONumber=Sep16_HO2-->
+
+<!--HONumber=Nov16_HO1-->
 
 

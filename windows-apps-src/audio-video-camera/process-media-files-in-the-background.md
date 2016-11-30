@@ -4,8 +4,8 @@ ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
 description: "Este artigo mostra como usar o MediaProcessingTrigger e uma tarefa em segundo plano para processar arquivos de mídia em segundo plano."
 title: "Processar arquivos de mídia em segundo plano"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 704fa52a9e98382940b7863d6196ca0af5d33460
+ms.sourcegitcommit: fb0e8a535ff4e27530fa45aca80b21f17a523c7b
+ms.openlocfilehash: 8a65ce9ed9de050bbcee2612bf53c5bfd44ffc72
 
 ---
 
@@ -78,6 +78,10 @@ O método auxiliar **SendToastNotification** cria uma nova notificação do sist
 
 [!code-cs[SendToastNotification](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetSendToastNotification)]
 
+No manipulador do evento [**Canceled**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.IBackgroundTaskInstance.Canceled), chamado quando o sistema cancela a tarefa em segundo plano, é possível registrar em log o erro para fins de telemetria.
+
+[!code-cs[OnCanceled](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetOnCanceled)]
+
 ## Registrar e iniciar a tarefa em segundo plano
 
 Antes de poder iniciar a tarefa em segundo plano do seu aplicativo em primeiro plano, você deve atualizar o arquivo Package.appmanifest do aplicativo em primeiro plano para informar ao sistema que seu aplicativo usa uma tarefa em segundo plano.
@@ -140,6 +144,6 @@ O manipulador de evento **OnCompleted** é chamado quando a tarefa em segundo pl
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

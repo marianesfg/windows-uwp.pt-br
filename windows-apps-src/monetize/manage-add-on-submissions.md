@@ -4,8 +4,8 @@ ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
 description: "Use estes métodos na API de envio da Windows Store para gerenciar envios de complemento dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: Gerenciar envios de complemento usando a API de envio da Windows Store
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 52e589c90a8d78905a9617dc2802d76a2f0f0360
+ms.sourcegitcommit: 4a1ea50d72e0f754658d8ee99755b873619e1969
+ms.openlocfilehash: 9d19ecae9d5c43c28e887627372aabb58bf0aab2
 
 ---
 
@@ -16,6 +16,8 @@ ms.openlocfilehash: 52e589c90a8d78905a9617dc2802d76a2f0f0360
 Use os métodos a seguir na API de envio da Windows Store para gerenciar envios de complemento (também conhecidos como produto no aplicativo ou IAP) de aplicativos que estão registrados na sua conta do Centro de Desenvolvimento do Windows. Para obter uma introdução à API de envio da Windows Store, incluindo os pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
 >**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada. Antes de usar esses métodos para criar ou gerenciar envios de um complemento, o complemento já deve existir na sua conta do Centro de Desenvolvimento. Você pode criar um complemento [usando o painel do Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions) ou usando os métodos da API de envio da Windows Store descritos em [Gerenciar complementos](manage-add-ons.md).
+
+>**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de complemento no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de preços e vendas para um envio de complemento usando a API de envio da Windows Store. Atualizaremos a API no futuro para apresentar uma nova maneira de acessar informações de preço para envios de complemento por meio de programação. Para saber mais, veja a seção [Recurso de preços](#pricing-object).
 
 | Método        | URI    | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -168,15 +170,15 @@ Este recurso tem os seguintes valores.
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | id            | string  | A ID do envio.  |
-| contentType           | string  |  O [tipo de conteúdo](https://msdn.microsoft.com/windows/uwp/publish/enter-iap-properties#content-type) fornecido no complemento. Ele pode ter um dos seguintes valores: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
-| keywords           | array  | Uma matriz de cadeias de caracteres que contenham até 10 [palavras-chave](../publish/enter-iap-properties.md#keywords) do complemento. O aplicativo pode consultar complementos usando essas palavras-chave.   |
+| contentType           | string  |  O [tipo de conteúdo](../publish/enter-add-on-properties.md#content-type) fornecido no complemento. Ele pode ter um dos seguintes valores: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
+| keywords           | array  | Uma matriz de cadeias de caracteres que contenham até 10 [palavras-chave](../publish/enter-add-on-properties.md#keywords) do complemento. O aplicativo pode consultar complementos usando essas palavras-chave.   |
 | lifetime           | string  |  O tempo de vida do complemento. Ele pode ter um dos seguintes valores: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | object  |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é um objeto de [Recurso de listagem](#listing-object) que contém as informações de detalhes do complemento.  |
 | pricing           | object  | Um objeto que contém as informações de preços do complemento. Para saber mais, veja a seção [Preços de recurso](#pricing-object) abaixo.  |
-| targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
-| tag           | string  |  A [marca](../publish/enter-iap-properties.md#tag) do complemento.   |
-| visibility  | string  |  A visibilidade do complemento. Ele pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
+| tag           | string  |  Os [dados de desenvolvedor personalizados](../publish/enter-add-on-properties.md#custom-developer-data) do complemento (essas informações foram anteriormente chamadas de *marca*).   |
+| visibilidade  | string  |  A visibilidade do complemento. Ele pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
 | status  | string  |  O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  Contém detalhes adicionais sobre o status do envio, incluindo informações sobre os erros. Para saber mais, consulte a seção [Detalhes de status](#status-details-object) a seguir. |
 | fileUploadUrl           | string  | A URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de complemento](#create-an-add-on-submission).  |
@@ -206,19 +208,32 @@ Esse recurso contém dados de ícone para a listagem de um complemento. Este rec
 <span id="pricing-object" />
 ### Preço
 
-Esse recurso contém informações de preço do complemento. Este recurso tem os seguintes valores.
+Esse recurso contém informações de preço do complemento.
+
+>**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de complemento no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de preço e venda para um envio de complemento usando a API de envio da Windows Store. Você observará as seguintes alterações no comportamento:
+
+   > * Depois de chamar o [método GET para obter um envio de complemento](get-an-add-on-submission.md), o recurso **Preço** estará vazio. Você pode continuar a usar o painel do Centro de Desenvolvimento para obter os dados de preços de seu envio de complemento.
+   > * Ao chamar o [método PUT para atualizar um envio de complemento](update-an-add-on-submission.md), as informações no recurso **Preço** serão ignoradas. Você pode continuar a usar o painel do Centro de Desenvolvimento para modificar os dados de preços de seu envio de complemento.
+
+> No futuro, atualizaremos a API de envio da Windows Store para apresentar uma nova maneira de obter e atualizar as informações de preços para envios de complemento por meio de programação.
+
+Este recurso tem os seguintes valores.
 
 | Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
 |  marketSpecificPricings               |    object     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor de *priceId* para o mercado especificado.     |     
 |  sales               |   array      |  Uma matriz de objetos que contêm informações de promoções do complemento. Para saber mais, consulte a seção [Promoção](#sale-object) a seguir.    |     
-|  priceId               |   string      |  A [faixa de preço](#price-tier) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) do complemento.    |
+|  priceId               |   string      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) do complemento.    |
 
 
 <span id="sale-object" />
 ### Promoção
 
-Esse recursos contém informações de promoção de um complemento. Este recurso tem os seguintes valores.
+Esse recurso contém informações de promoção de um complemento.
+
+>**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de complemento no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Promoção** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de vendas para um envio de complemento usando a API de envio da Windows Store. Atualizaremos a API no futuro para apresentar uma nova maneira de acessar informações de vendas para envios de complemento por meio de programação. Para saber mais, veja a seção [Recurso de preços](#pricing-object).
+
+Este recurso tem os seguintes valores.
 
 | Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
@@ -315,6 +330,6 @@ Os seguintes valores representam o código de status de um envio.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

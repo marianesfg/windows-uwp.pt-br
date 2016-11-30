@@ -6,8 +6,8 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Proteção de Informações do Windows (WIP)"
 translationtype: Human Translation
-ms.sourcegitcommit: 1070561ea95cd1d884303fdd476b40a9ec88e390
-ms.openlocfilehash: 2beec354ed7dbb3cc2d4cb502977ce028b4eaf1d
+ms.sourcegitcommit: 724d9edf67d0f73ceb3eb2ac323e0a0f42f2dd0d
+ms.openlocfilehash: f9cfa8d1d7ea4e78208a4fb3fc853884a13a676c
 
 ---
 
@@ -66,9 +66,6 @@ Entre outras coisas, os aplicativos empresariais capacitados compartilham estas 
 
   Por exemplo, eles impedem que os dados sejam enviados para uma rede não empresarial, encapsulam os dados em um formato criptografado portátil antes de permitir a sua transferência móvel e possivelmente (dependendo das configurações da política) enviam um prompt para o usuário antes de ele colar dados empresariais em um aplicativo que não esteja na lista de permissões.
 
-> **Observação**  A proteção de arquivos WIP otimiza chaves do RMS (Serviço de Gerenciamento de Direitos), se provisionadas, pois essas chaves podem ser usadas de maneira móvel entre dispositivos e, portanto, permitem a utilização móvel de dados protegidos. Na ausência de chaves do RMS, essas APIs farão fallback para chaves de Limpeza Seletiva locais e limitarão a funcionalidade de roaming. Os dados criptografados em roaming ficarão acessíveis no Windows em nível inferior e em dispositivos de terceiros por meio de aplicativos de RMS específicos de plataforma fornecidos pela Microsoft, bem como por meio de aplicativos de terceiros com capacitação para RMS.
-
-
 
 
 
@@ -79,6 +76,6 @@ Entre outras coisas, os aplicativos empresariais capacitados compartilham estas 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

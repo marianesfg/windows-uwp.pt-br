@@ -4,8 +4,8 @@ ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Camada visual
 description: "A API Windows.UI.Composition concede acesso a uma camada de composição entre a camada de estrutura (XAML) e a camada de elementos gráficos (DirectX)."
 translationtype: Human Translation
-ms.sourcegitcommit: 4a00847f0559d93eea199d7ddca0844b5ccaa5aa
-ms.openlocfilehash: 3a3dbf7b529d5d2848b161869d2f77fef3651488
+ms.sourcegitcommit: ad262cc6dcfd53156f3f3a3e850f9cfe99e87dc6
+ms.openlocfilehash: 066e5aea48340f96878a41aa28f0fef0c3bda9f5
 
 ---
 # Camada visual
@@ -30,6 +30,7 @@ Elementos visuais podem ser contêineres de outros elementos visuais ou podem ho
 -   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – O objeto base. A maioria das propriedades estão aqui e são herdadas por outros objetos visuais.
 -   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – É derivado de [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) e adiciona a capacidade de inserir elementos visuais filho.
 -   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – É derivado de [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e tem conteúdo na forma de imagens, efeitos e cadeias de troca.
+-   [**LayerVisual**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.layervisual.aspx) - Um ContainerVisual cujos filhos são achatados em uma única camada.  
 -   [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – O alocador de objetos que gerencia a relação entre um aplicativo e o processo do compositor do sistema.
 
 O compositor também é um alocador de uma série de outros objetos de composição usados para recortar ou transformar elementos visuais na árvore, bem como um conjunto avançado de animações e efeitos.
@@ -65,7 +66,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 -   Leia o artigo de Kenny Kerr no MSDN sobre essa API: [Elementos Gráficos e Animação - Opções de Composição do Windows 10](https://msdn.microsoft.com/magazine/mt590968)
 -   Exemplos de Interface do usuário avançada e composição no [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).
 -   [**Documentação de referência completa da API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
--   Problemas conhecidos: [Problemas conhecidos](http://go.microsoft.com/fwlink/?LinkId=823237).
+-   [Problemas conhecidos](http://go.microsoft.com/fwlink/?LinkId=823237).
 
  
 
@@ -77,6 +78,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

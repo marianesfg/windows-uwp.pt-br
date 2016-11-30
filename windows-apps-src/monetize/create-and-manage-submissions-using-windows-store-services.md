@@ -4,8 +4,8 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Use a API de envio da Windows Store para criar e gerenciar de forma programática os envios de aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: "Criar e gerenciar envios usando serviços da Windows Store"
 translationtype: Human Translation
-ms.sourcegitcommit: 47e0ac11178af98589e75cc562631c6904b40da4
-ms.openlocfilehash: 0a566dfee8f7fe08c06ce4963435a70c30b1650d
+ms.sourcegitcommit: 03942eb9015487cfd5690e4b1933e4febd705971
+ms.openlocfilehash: 40855465fa2f9b1c32602b1b636761b608d88fc0
 
 ---
 
@@ -26,8 +26,11 @@ As etapas a seguir descrevem o processo completo de usar a API de envio da Windo
 >**Importante**
 
 > * Essa API pode ser usada somente para contas do Centro de Desenvolvimento do Windows que têm permissão para usar a API. Essa permissão está sendo habilitada para contas de desenvolvedor em estágios, e nem todas as contas têm essa permissão habilitado no momento. Para solicitar acesso anterior, fazer logon no painel do Centro de Desenvolvimento, clique em **Comentários** na parte inferior do painel, selecione **API de envio** para a área de comentários e envie sua solicitação. Você receberá um email quando essa permissão for habilitada em sua conta.
-
+<br/><br/>
 > * Essa API não pode ser usada com aplicativos ou complementos que usam determinados recursos que foram introduzidos no painel do Centro de Desenvolvimento em agosto de 2016, incluindo (mas não se limitando a) atualizações obrigatórias de aplicativos e complementos de consumíveis gerenciados pela Loja. Se você usar a API de envio da Windows Store com um aplicativo ou um complemento que usa um desses recursos, a API retornará um código de erro 409. Nesse caso, você deve usar o painel para gerenciar os envios para o aplicativo ou um complemento.
+<br/><br/>
+> * Em breve, a Microsoft mudará o modelo de dados de preços para envios de aplicativo no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, os recursos **Preço** para envios de aplicativo e complemento não terão suporte, e não será possível temporariamente obter o período de avaliação, preço e dados de vendas para esses envios usando a API de envio da Windows Store. Atualizaremos a API no futuro para apresentar uma nova maneira de acessar informações de preço para envios de aplicativo e complemento por meio de programação. Para obter mais informações, consulte [Recurso de preço para envios de aplicativo](manage-app-submissions.md#pricing-object) e [Recurso de preço para envios de complemento](manage-add-on-submissions.md#pricing-object).
+
 
 <span id="prerequisites" />
 ## Etapa 1: complete os pré-requisitos para usar a API de envio da Windows Store
@@ -135,6 +138,6 @@ Se você tiver dúvidas sobre a API de envio da Windows Store ou precisar de aju
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

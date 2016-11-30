@@ -3,8 +3,8 @@ title: Conectar a provedores de identidade com o Gerenciador de Contas da Web
 description: Este artigo descreve como usar o AccountsSettingsPane para conectar seu aplicativo da Plataforma Universal do Windows (UWP) a provedores de identidade externos, como a Microsoft ou o Facebook, usando as novas APIs do Gerenciador de Contas da Web do Windows 10.
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: f3cdb187ec4056d4c7db6acde471b0bc91c78390
-ms.openlocfilehash: 093ca8906853121bbf33a729c523717d26cb7b0d
+ms.sourcegitcommit: e16977a9a11b292ea9624ff421aa964c11d615be
+ms.openlocfilehash: d234811b395790a35ad50dea9ef4cc56d60458e8
 
 ---
 # Conectar a provedores de identidade com o Gerenciador de Contas da Web
@@ -121,9 +121,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-Observe que também passamos a cadeia de caracteres "consumers" ao parâmetro opcional *authority*. Isso ocorre porque a Microsoft fornece dois tipos diferentes de autenticação - Contas da Microsoft (MSA) para "consumers", e Azure Active Directory (AAD) para "organizations". A autoridade "consumers" permite que o provedor saiba que temos interesse na primeira opção.
-
-Se estiver desenvolvendo um aplicativo corporativo, você pode usar o ponto de extremidade do AAD Graph. Consulte o [exemplo WebAccountManagement completo no GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620621) e a documentação do Azure para saber mais sobre como fazer isso. 
+Observe que também passamos a cadeia de caracteres "consumers" ao parâmetro opcional *authority*. Isso ocorre porque a Microsoft fornece dois tipos diferentes de autenticação - Contas da Microsoft (MSA) para "consumers", e Azure Active Directory (AAD) para "organizations". A autoridade "consumers" indica que queremos a opção MSA. Se você estiver desenvolvendo um aplicativo empresarial, use a string "organizations".
 
 Por fim, adicione o provedor ao AccountsSettingsPane criando um novo WebAccountProviderCommand da seguinte forma: 
 
@@ -168,9 +166,22 @@ Neste exemplo, passamos a cadeia de caracteres ""wl.basic" para o parâmetro de 
 
 Os provedores de serviço fornecerão documentação sobre quais escopos precisam ser especificados para obter tokens para uso com o serviço. 
 
-Para os escopos do Office 365 e do Outlook.com, consulte (Autenticar as APIs do Office 365 e do Outlook.com usando o ponto de extremidade de autenticação v2.0)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]. 
+* Para os escopos do Office 365 e do Outlook.com, consulte (Autenticar as APIs do Office 365 e do Outlook.com usando o ponto de extremidade de autenticação v2.0)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]. 
+* Para o OneDrive, consulte (Autenticação e credenciais do OneDrive)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]. 
 
-Para o OneDrive, consulte (Autenticação e credenciais do OneDrive)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]. 
+Se estiver desenvolvendo um aplicativo empresarial, você provavelmente desejará se conectar a uma instância do Azure Active Directory (AAD) e usar a API do Microsoft Graph em vez de serviços MSA normais. Nesse cenário, use o código a seguir: 
+
+```C#
+private async void GetAadTokenAsync(WebAccountProviderCommand command)
+{
+    string clientId = "your_guid_here"; // Obtain your clientId from the Azure Portal
+    WebTokenRequest request = new WebTokenRequest(provider, "User.Read", clientId);
+    request.Properties.Add("resource", "https://graph.microsoft.com");
+    WebTokenRequestResult = await WebAuthenticationCoreManager.RequestTokenAsync(request);
+}
+```
+
+O restante deste artigo continua descrevendo o cenário MSA, mas o código para AAD é muito semelhante. Para saber mais sobre AAD/Graph, incluindo um exemplo completo no GitHub, consulte a [Documentação do Microsoft Graph](https://graph.microsoft.io/docs/platform/get-started).
 
 ## Usar o token
 
@@ -390,6 +401,6 @@ Teoricamente, você pode usar comandos de configurações para tudo. No entanto,
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

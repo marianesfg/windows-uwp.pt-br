@@ -4,8 +4,8 @@ title: "Usar um gatilho de manutenção"
 description: "Saiba como usar a classe MaintenanceTrigger para executar um código leve em segundo plano enquanto o dispositivo estiver conectado."
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 1181605c097f876af49e8055e245a2c445fc30d3
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: 2f459156ac8bc52c79b9b6d3b902882693120028
 
 ---
 
@@ -25,7 +25,7 @@ Saiba como usar a classe [**MaintenanceTrigger**](https://msdn.microsoft.com/lib
 
 Este exemplo pressupõe que você tenha um código leve que possa executar em segundo plano para melhorar o aplicativo enquanto o dispositivo está conectado. Este tópico se concentra na [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517), que é semelhante a [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Mais informações sobre como escrever uma classe de tarefa em segundo plano estão disponíveis em [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md) ou em [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md).
+Mais informações sobre como escrever uma classe de tarefa em segundo plano estão disponíveis em [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou em [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md).
 
 Crie um novo objeto [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). O segundo parâmetro, *OneShot*, especifica se a tarefa de manutenção só será executada uma vez ou se continuará a ser executada periodicamente. Se *OneShot* for definido como verdadeiro, o primeiro parâmetro (*FreshnessTime*) especificará o número de minutos aguardados até que a tarefa em segundo plano seja agendada. Se *OneShot* for definido como falso, *FreshnessTime* especificará com que frequência a tarefa em segundo plano será executada.
 
@@ -96,10 +96,10 @@ O código a seguir adiciona uma condição ao criador de tarefa de manutenção:
 
 ****
 
-* [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md).
-* [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md).
+* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
-* [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
@@ -107,14 +107,11 @@ O código a seguir adiciona uma condição ao criador de tarefa de manutenção:
 * [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-
-****
-
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

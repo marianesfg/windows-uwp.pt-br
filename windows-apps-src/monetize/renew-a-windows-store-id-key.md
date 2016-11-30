@@ -4,30 +4,27 @@ ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "Use esse método para renovar uma chave da Windows Store."
 title: Renovar uma chave ID da Windows Store
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 1a2cb625f95a5ad8e94911ead2402cb2589e209a
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: 4e0ca6fe88218faef1f7c9192a5e19569e9c00b4
 
 ---
 
 # Renovar uma chave ID da Windows Store
 
 
-
-
-Use esse método para renovar uma chave da Windows Store. Quando você gera uma chave ID da Windows Store chamando o método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) ou [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675), essa chave é válida por 90 dias. Depois que a chave expira, você pode usar a chave expirada para renegociar uma nova chave usando esse método.
+Use esse método para renovar uma chave da Windows Store. Quando você [gera uma chave da ID da Windows Store](view-and-grant-products-from-a-service.md#step-4), a chave é válida por 90 dias. Depois que a chave expira, você pode usar a chave expirada para renegociar uma nova chave usando esse método.
 
 ## Pré-requisitos
 
 
 Para usar esse método, você precisará:
 
--   Ter um token de acesso do Azure AD criado com o URI de público `https://onestore.microsoft.com`.
--   Uma chave ID da Windows Store expirada que foi gerada chamando o método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) ou [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) do código no lado do cliente em seu aplicativo.
+* Ter um token de acesso do Azure AD criado com o URI de público `https://onestore.microsoft.com`.
+* Uma chave da ID da Windows Store expirada que foi [gerada com base no código do lado do cliente no aplicativo](view-and-grant-products-from-a-service.md#step-4).
 
-Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-grant-products-from-a-service.md).
+Para obter mais informações, consulte [Exibir e conceder produtos de um serviço](view-and-grant-products-from-a-service.md).
 
 ## Solicitação
-
 
 ### Sintaxe da solicitação
 
@@ -119,6 +116,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

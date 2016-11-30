@@ -4,8 +4,8 @@ ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: "Use esse método na API de compra da Windows Store para conceder um aplicativo ou complemento gratuito a um determinado usuário."
 title: Conceder produtos gratuitos
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: a04918a562d132f6a721b96c7f4ad78218eb8819
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: 2eca8712075ce1f9d876f3ae441381734bd52370
 
 ---
 
@@ -21,10 +21,10 @@ No momento, você pode conceder apenas produtos gratuitos. Se seu serviço tenta
 
 Para usar esse método, você precisará:
 
--   Ter um token de acesso do Azure AD criado com o URI de público `https://onestore.microsoft.com`.
--   Uma chave de ID da Windows Store que tenha sido gerada com a chamada do método [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) no código do lado do cliente em seu aplicativo.
+* Ter um token de acesso do Azure AD criado com o URI de público `https://onestore.microsoft.com`.
+* Uma chave da ID da Windows Store que foi [gerada com base no código do lado do cliente no aplicativo](view-and-grant-products-from-a-service.md#step-4).
 
-Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-grant-products-from-a-service.md).
+Para obter mais informações, consulte [Exibir e conceder produtos de um serviço](view-and-grant-products-from-a-service.md).
 
 ## Solicitação
 
@@ -43,7 +43,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
 | Autorização  | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;.                           |
 | Host           | string | Deve ser definido como o valor **collections.mp.microsoft.com**.                                            |
-| Content-Length | número | O comprimento do corpo da solicitação.                                                                       |
+| Content-Length | number | O comprimento do corpo da solicitação.                                                                       |
 | Content-Type   | string | Especifica o tipo de solicitação e resposta. Atualmente, o único valor com suporte é **application/json**. |
 
 <span/>
@@ -53,7 +53,7 @@ Para saber mais, consulte [Exibir e conceder produtos de um serviço](view-and-g
 | Parâmetro      | Tipo   | Descrição                                                                                                                                                                                                                                                                                                            | Obrigatório |
 |----------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | availabilityId | string | A ID de disponibilidade do produto a ser comprado no catálogo da Windows Store.                                                                                                                                                                                                                                     | Sim      |
-| b2bKey         | string | A chave ID da Windows Store que representa a identidade do cliente.                                                                                                                                                                                                                                                        | Sim      |
+| b2bKey         | string | A chave da ID da Windows Store que foi [gerada com base no código do lado do cliente no aplicativo](view-and-grant-products-from-a-service.md#step-4).                                                                                                                                                                                                                                                        | Sim      |
 | devOfferId     | string | Uma ID de oferta especificada pelo desenvolvedor que irá aparecer no item Coleção após a compra.                                                                                                                                                                                                                                 | Não       |
 | language       | string | O idioma do usuário.                                                                                                                                                                                                                                                                                              | Sim      |
 | market         | string | O mercado do usuário.                                                                                                                                                                                                                                                                                                | Sim      |
@@ -93,15 +93,15 @@ Content-Type: application/json
 | clientContext             | ClientContextV6             | Informações contextuais do cliente para este pedido. Isso será atribuído ao valor *clientID* no token do Azure AD.                                     | Sim      |
 | createdtime               | datetimeoffset              | A hora em que o pedido foi criado.                                                                                                                          | Sim      |
 | currencyCode              | string                      | Código de moeda para *totalAmount* e *totalTaxAmount*. N/D para itens gratuitos.                                                                                | Sim      |
-| friendlyName              | string                      | O nome amigável do pedido. N/A para pedidos feitos usando-se a API de compra da Windows Store.                                                               | Sim      |
+| friendlyName              | string                      | O nome amigável do pedido. N/D para pedidos feitos usando-se a API de compra da Windows Store.                                                               | Sim      |
 | isPIRequired              | boolean                     | Indica se um PI (meio de pagamento) é necessário como parte da ordem de compra.                                                                   | Sim      |
 | language                  | string                      | A ID de idioma para a ordem (por exemplo, "en").                                                                                                       | Sim      |
 | market                    | string                      | A ID de mercado para a ordem (por exemplo, "US").                                                                                                         | Sim      |
 | orderId                   | string                      | ID que identifica o pedido de um usuário específico.                                                                                                   | Sim      |
 | orderLineItems            | list&lt;OrderLineItemV6&gt; | A lista de itens de linha do pedido. Normalmente, há um item de linha por pedido.                                                                          | Sim      |
 | orderState                | string                      | O estado do pedido. Os estados válidos são: **Editing**, **CheckingOut**, **Pending**, **Purchased**, **Refunded**, **ChargedBack** e **Cancelled**. | Sim      |
-| orderValidityEndTime      | string                      | A última vez em que o preço do pedido era válido antes de ser enviado. N/A para aplicativos gratuitos.                                                                      | Sim      |
-| orderValidityStartTime    | string                      | A primeira vez em que o preço do pedido é válido antes de ser enviado. N/A para aplicativos gratuitos.                                                                     | Sim      |
+| orderValidityEndTime      | string                      | A última vez em que o preço do pedido era válido antes de ser enviado. N/D para aplicativos gratuitos.                                                                      | Sim      |
+| orderValidityStartTime    | string                      | A primeira vez em que o preço do pedido é válido antes de ser enviado. N/D para aplicativos gratuitos.                                                                     | Sim      |
 | purchaser                 | IdentityV6                  | Um objeto que descreve a identidade do comprador.                                                                                                  | Sim      |
 | totalAmount               | decimal                     | O valor total da compra de todos os itens no pedido, incluindo imposto.                                                                                       | Sim      |
 | totalAmountBeforeTax      | decimal                     | Valor total da compra de todos os itens no pedido, sem imposto.                                                                                              | Sim      |
@@ -245,6 +245,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ Description: "Execute o conversor de aplicativos da área de trabalho para conve
 Search.Product: eADQiWindows 10XVcnh
 title: Desktop App Converter
 translationtype: Human Translation
-ms.sourcegitcommit: ed4da94f2732c279c3071135168da9e4b18953cb
-ms.openlocfilehash: c0ed8386cb823ea83e5b1f80cd584f370a85f278
+ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
+ms.openlocfilehash: fcff283e0d97d76fefe3f42a6cd1076b6cdd2aae
 
 ---
 
@@ -26,8 +26,9 @@ Esta seção descreve as mudanças entre versões do conversor de aplicativos da
 ### 14/9/2016 (v1.0)
 
 * O Desktop App Converter está disponível agora para download na [Windows Store](https://aka.ms/converter)! 
-* Pegue as últimas Imagens de Base do Windows 10 (.wim) no [Centro de Download](https://www.microsoft.com/download/details.aspx?id=53833) para uso com o DAC.
+* Pegue as últimas Imagens de Base do Windows 10 (.wim) no [Centro de Download](https://aka.ms/converterimages) para uso com o DAC.
 * Com o aplicativo da loja, agora você pode usar o novo ponto inicial *DesktopAppConverter.exe <arguments>* para executar o conversor de qualquer lugar em um prompt de comando com privilégios elevados ou a janela do PowerShell.  
+
 
 ### 2/9/2016 (v0.1.25)
 
@@ -76,12 +77,12 @@ Esta seção descreve as mudanças entre versões do conversor de aplicativos da
 
 ## Requisitos do sistema
 
-### Sistema operacional com suporte
-+ Visualização da edição Enterprise da Atualização de Aniversário do Windows 10 (compilação 10.0.14342.0 e posterior)
+### Sistema operacional
 
-### Configuração de hardware necessária
++ Atualização de Aniversário do Windows 10 (10.0.14393.0 e posterior) Pro ou Enterprise Edition.
 
-Seu computador deve ter as seguintes funcionalidades mínimas:
+### Configuração do hardware
+
 + Processador de 64 bits (x64)
 + Virtualização assistida por hardware
 + Conversão de Endereços de Segundo Nível (SLAT)
@@ -90,29 +91,37 @@ Seu computador deve ter as seguintes funcionalidades mínimas:
 
 + [Software Development Kit do Windows (SDK do Windows) para Windows 10](https://go.microsoft.com/fwlink/?linkid=821375)
 
-## Configurar o conversor de aplicativos da área de trabalho   
+## Configurar o Desktop App Converter
 
-O conversor de aplicativos da área de trabalho depende de recursos do Windows 10 que são liberados como parte das compilações do Windows Insider Preview. Certifique-se de que você tem a compilação mais recente para utilizar o conversor.
+O Desktop App Converter depende dos recursos mais recentes do Windows 10. Certifique-se de que você esteja usando a Atualização de Aniversário do Windows 10 (14393.0) ou builds posteriores.
 
-1. Certifique-se de que você tenha o sistema operacional Windows 10 Insider Preview mais recente – Enterprise ou Pro edition (http://insider.windows.com). 
-2. Baixe o DesktopAppConverter.zip e o arquivo. wim de imagem de base que corresponde à compilação do Insider Preview (http://aka.ms/converter). 
-3. Extraia o DesktopAppConverter.zip para uma pasta local.
-4. Em uma janela do administrador do PowerShell:  
+### Download da Loja
+
+1.  Baixe o [DesktopAppConverter na Windows Store](https://aka.ms/converter) e o [arquivo .wim de imagem base correspondente ao build](https://aka.ms/converterimages).  
+2.  Execute o DesktopAppConverter como administrador. Você pode fazer isso no menu Iniciar clicando com o botão direito do mouse no bloco e selecionando *Executar como administrador* em *Mais* ou, na barra de tarefas, clicando com o botão direito do mouse no bloco, clicando uma segunda vez no nome do aplicativo exibido e selecionando *Executar como administrador*.
+3.  Na janela de console do aplicativo, execute ```CMD PS C:\> Set-ExecutionPolicy bypass```.
+4.  Configure o conversor executando ```CMD PS C:\> DesktopAppConverter.exe -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose``` na janela de console do aplicativo.
+5.  Se a execução do comando anterior exigir uma reinicialização, reinicie o computador.
+
+### Arquivo zip 
+
+O DAC permanece disponível como um arquivo zip no [Centro de Download](https://aka.ms/converterimages) para facilitar cenários offline. Porém, todas as atualizações futuras só serão publicadas na versão da loja.
+
+1.  Baixe o zip DAC e o [arquivo .wim da imagem base correspondente ao build](https://aka.ms/converterimages).  
+2. Extraia DesktopAppConverter.zip para uma pasta local.
+3. Em uma janela do PowerShell de administrador, execute ```CMD PS C:\> Set-ExecutionPolicy bypass```.
+4. Configure o conversor executando ```CMD PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose``` em uma janela do PowerShell de administrador.
+5. Se a execução do comando anterior exigir uma reinicialização, reinicie o computador.
+
+## Execute o Desktop App Converter
+
++ **Download da loja**: use ```DesktopAppConverter.exe``` para executar o conversor.
++ **Arquivo Zip**: use ```DesktopAppConverter.ps1``` para executar o conversor. 
+
+### Uso
+
 ```CMD
-PS C:\> Set-ExecutionPolicy bypass
-```
-5. Execute o comando a seguir em uma janela do administrador do PowerShell para configurar o conversor:
-```CMD
-PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose
-```
-6. Se executar o comando anterior exigir uma reinicialização, reinicie o computador e execute o comando novamente.
-
-## Execute o conversor de aplicativos da área de trabalho
-O conversor de aplicativos da área de trabalho tem dois pontos de entrada: PowerShell e Shell de Comando. Você pode usar qualquer um dos pontos de entrada a seguir para iniciar o processo de conversão.
-
-### Utilização
-```CMD
-DesktopAppConverter.ps1
+DesktopAppConverter.exe
 -Installer <String> [-InstallerArguments <String>] [-InstallerValidExitCodes <Int32>]
 -Destination <String>
 -PackageName <String>
@@ -132,11 +141,11 @@ DesktopAppConverter.ps1
 ```
 
 ### Exemplo
+
 O exemplo a seguir mostra como converter um aplicativo da área de trabalho denominado *MyApp* de *&lt;publisher_name&gt;* em um pacote UWP (AppX).
 
-+ Em uma janela do administrador do PowerShell, execute o seguinte comando:
 ```CMD
-PS C:\>.\DesktopAppConverter.ps1 -Installer C:\Installer\MyApp.exe 
+DesktopAppConverter.exe -Installer C:\Installer\MyApp.exe 
 -InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" 
 -Publisher "CN=<publisher_name>" -Version 0.0.0.1 -MakeAppx -Verbose
 ```
@@ -183,12 +192,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DesktopAppConverter
 + Para habilitar telemetria, remova a chave ou defina o valor como 0.
 
 ## Uso do conversor de aplicativos da área de trabalho
-Aqui está uma lista de parâmetros do conversor de aplicativos da área de trabalho. Você também pode exibir essa lista na janela do Windows Powershell, executando o seguinte comando:  
+
+Aqui está uma lista de parâmetros do Desktop App Converter. Você também pode exibir essa lista executando:   
+
 ```CMD
-get-help .\DesktopAppConverter.ps1 -detailed
+Get-Help DesktopAppConverter.exe -detailed
 ```
 
 ### Parâmetros de configuração  
+
 |Parâmetro|Descrição|
 |---------|-----------|
 |```-Setup [<SwitchParameter>]``` | Executa DesktopAppConverter no modo de instalação. O modo de instalação aceita a expansão de uma imagem de base fornecida.|
@@ -198,21 +210,25 @@ get-help .\DesktopAppConverter.ps1 -detailed
 |```-NoRestart [<SwitchParameter>]``` | Não solicite a reinicialização ao executar a instalação (é necessário reiniciar para habilitar o recurso de contêiner). |
 
 ### Parâmetros de conversão  
+
 |Parâmetro|Descrição|
 |---------|-----------|
+|```-AppInstallPath <String> [optional]``` | O caminho completo da pasta raiz do aplicativo dos arquivos instalados se ele estivesse instalado (por exemplo, "C:\Program Files (x86) \MyApp").| 
+|```-Destination <String>``` | O destino desejado para a saída de appx do conversor - o DesktopAppConverter pode criar esse local caso ele ainda não exista.|
 |```-Installer <String>``` | O caminho para o instalador do seu aplicativo - deve ser capaz de ser executado de forma autônoma/silenciosa|
 |```-InstallerArguments <String>``` [opcional] | Uma lista separada por vírgulas ou cadeia de caracteres de argumentos para forçar o instalador a ser executado de forma autônoma/silenciosa. Este parâmetro é opcional se o instalador for um msi. Para obter um log do seu instalador, forneça o argumento de registro em log do instalador aqui e use o caminho ```<log_folder>```, que é um token que o conversor substitui pelo caminho correto. <br><br>**OBSERVAÇÃO: os argumentos de log e os sinalizadores autônomo/silencioso variam entre as tecnologias de instalador.** <br><br>Um exemplo de uso deste parâmetro: ```-InstallerArguments "/silent /log <log_folder>\install.log"``` Outro exemplo que não produz um arquivo de log pode ter esta aparência: ```-InstallerArguments "/quiet", "/norestart"``` Novamente, você deve direcionar literalmente todos os logs para o caminho do token ```<log_folder>``` se quiser que o conversor os detecte e os coloque na pasta de log final.|
 |```-InstallerValidExitCodes <Int32>``` [opcional] | Uma lista separada por vírgulas de códigos de saída que indicam que o instalador foi executado com êxito (por exemplo: 0, 1234, 5678).  Por padrão, o valor é 0 para não msi e 0, 1641, 3010 para msi.|
-|```-Destination <String>``` | O destino desejado para a saída de appx do conversor - o DesktopAppConverter pode criar esse local caso ele ainda não exista.|
 
 ### Parâmetros de identidade do AppX  
+
 |Parâmetro|Descrição|
 |---------|-----------|
-|```-PackageName <String>``` | O nome do seu pacote de aplicativo Universal do Windows
+|```-PackageName <String>``` | O nome do seu pacote de aplicativo universal do Windows
 |```-Publisher <String>``` | O editor do seu pacote de aplicativo Universal do Windows
 |```-Version <Version>``` | O número de versão do seu pacote de aplicativo Universal do Windows
 
 ### Parâmetros opcionais do manifesto do Appx  
+
 |Parâmetro|Descrição|
 |---------|-----------|
 |```-AppExecutable <String> [optional]``` [opcional] | O nome do executável principal do aplicativo (ex: "MyApp.exe"). |
@@ -224,6 +240,7 @@ get-help .\DesktopAppConverter.ps1 -detailed
 |```-PackagePublisherDisplayName <String>``` [opcional] | Especifica um valor para definir o nome para exibição do editor no manifesto do appx. Se não for especificado, ele será definido como o valor passado para *Publisher*. |
 
 ### Outros parâmetros de conversão  
+
 |Parâmetro|Descrição|
 |---------|-----------|
 |```-ExpandedBaseImage <String>``` [opcional] | Caminho completo para uma imagem de base já expandida.|
@@ -233,6 +250,7 @@ get-help .\DesktopAppConverter.ps1 -detailed
 |```<Common parameters>``` | Esse cmdlet oferece suporte aos parâmetros comuns: *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable* e *OutVariable*. Para obter mais informações, consulte [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216). |
 
 ### Parâmetros de limpeza
+
 |Parâmetro|Descrição|
 |---------|-----------|
 |```Cleanup [<Option>]``` | Executa a limpeza de artefatos DesktopAppConverter. Há 3 opções válidas para o modo de limpeza. |
@@ -241,6 +259,7 @@ get-help .\DesktopAppConverter.ps1 -detailed
 |```Cleanup ExpandedImage``` | Exclui todas as imagens de base expandidas instaladas no computador host. |
 
 ### Arquitetura de pacotes
+
 O Desktop App Converter agora dá suporte à criação de pacotes de aplicativos x86 e x64 que você pode instalar e executar em computadores x86 e amd64. Observe que o Desktop App Converter ainda precisa ser executado em um computador AMD64 para realizar uma conversão bem-sucedida.
 
 |Parâmetro|Descrição|
@@ -267,15 +286,11 @@ example3: PEHeaderCertFixTool c:\myapp /c /v
 O Desktop App Converter não possui suporte ao Unicode, assim, não podem ser usados caracteres chineses ou caracteres não ASCII com a ferramenta.
 
 ## Consulte também
-+ [Baixe o Desktop App Converter](http://go.microsoft.com/fwlink/?LinkId=785437)
-+ [Traga seu aplicativo da área de trabalho para a Plataforma Universal do Windows](https://developer.microsoft.com/windows/bridges/desktop)
-+ [Transformando aplicativos da área de trabalho em UWP usando o conversor de aplicativos da área de trabalho](https://channel9.msdn.com/events/Build/2016/P504)
+
++ [Transformando aplicativos da área de trabalho em UWP usando o Desktop App Converter](https://channel9.msdn.com/events/Build/2016/P504)
 + [Projeto Centennial: trazendo aplicativos da área de trabalho existentes para a Plataforma Universal do Windows](https://channel9.msdn.com/events/Build/2016/B829)  
-+ [UserVoice para Desktop Bridge](http://aka.ms/UserVoiceDesktopToUwp)
-+ [Exemplos de código de ponte de aplicativos da área de trabalho para UWP no GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
-
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

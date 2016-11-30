@@ -7,8 +7,8 @@ label: Designing for Xbox and TV
 template: detail.hbs
 isNew: true
 translationtype: Human Translation
-ms.sourcegitcommit: 96a35ded526b09dd1ce1cb8528bb4a99e3511b32
-ms.openlocfilehash: 734a0f0574ac7698dd6bd963bf3e20225b26d401
+ms.sourcegitcommit: 8bf3a4384d97d59d2844614b981a2e837ccb493d
+ms.openlocfilehash: d168c358a3dd68f05b5d0962edb1fb62dfe0570e
 
 ---
 
@@ -164,7 +164,8 @@ A tabela a seguir lista o suporte a acelerador incorporado à UWP, bem como o qu
 | Page up/Page down  | Page up/Page down | Gatilhos esquerdo/direito | [CalendarView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.calendarview.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [ComboBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | Exibições que dão suporte à rolagem vertical
 | Página esquerda/direita | Nenhum(a) | Botões superiores esquerdo/direito | [Pivot](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.pivot.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | Exibições que dão suporte à rolagem horizontal
 | Ampliar/reduzir        | Ctrl +/- | Gatilhos esquerdo/direito | Nenhum(a) | `ScrollViewer`, exibições que dão suporte a ampliação e redução |
-| Abrir/fechar painel de navegação | Nenhum(a) | Visão | Nenhum(a) | Painéis de navegação
+| Abrir/fechar painel de navegação | Nenhum(a) | Visão | Nenhum(a) | Painéis de navegação |
+| [Pesquisar](#search-experience) | Nenhum(a) | Botão Y | Nenhum(a) | Atalho para a função de pesquisa principal no aplicativo |
 
 ## Interação e navegação de foco do plano XY
 
@@ -1030,6 +1031,16 @@ Visite [Reprodução de mídia](../controls-and-patterns/media-playback.md) para
 
 > ![NOTA] `MediaPlayerElement` só está disponível no Windows 10, versão 1607 e posterior. Se você estiver desenvolvendo um aplicativo para uma versão anterior do Windows 10, precisará usar [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926). As recomendações acima se aplicam a `MediaElement` e a propriedade `TransportControls` é acessada da mesma forma.
 
+### Experiência de pesquisa
+
+Procurar conteúdo é uma das funções mais comumente realizadas na experiência de 3 m. Se seu aplicativo fornece uma experiência de pesquisa, é útil para o usuário ter acesso rápido a ela usando o botão **Y** no gamepad como um acelerador.
+
+A maioria dos clientes já deve estar familiarizada com esse acelerador, mas se você quiser, pode adicionar um glifo visual **Y** na interface do usuário para indicar que o cliente pode usar o botão para acessar a funcionalidade de pesquisa. Se você adicionar essa indicação, use o símbolo da fonte **Segoe Xbox Symbol MDL2** (E426) para fornecer consistência com o shell do Xbox e outros aplicativos.
+
+Como o botão **Y** só está disponível no gamepad, forneça outros métodos de acesso para pesquisar, como botões na interface do usuário. Caso contrário, alguns clientes podem não ser capazes de acessar a funcionalidade.
+
+Na experiência de 3 m, geralmente é mais fácil para os clientes usar uma experiência de pesquisa em tela inteira porque há espaço limitado na tela. Seja pesquisa em tela inteira, tela parcial ou "in-loco", recomendamos que, quando o usuário abrir a experiência de pesquisa, o teclado virtual apareça já aberto, pronto para o cliente inserir termos de pesquisa.
+
 ## Gatilho de estado visual personalizado para Xbox
 
 Para adaptar seu aplicativo UWP para a experiência de 3 metros, recomendamos que você faça alterações de layout quando o aplicativo detectar que foi iniciado em um console do Xbox. Uma maneira de fazer isso é usando um *gatilho de estado visual* personalizado. Os gatilhos de estado visual são mais úteis quando você deseja editar no **Blend for Visual Studio**. O trecho de código a seguir mostra como criar um gatilho de estado visual para Xbox:
@@ -1105,6 +1116,6 @@ O design para a experiência de 3 metros tem algumas considerações especiais a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

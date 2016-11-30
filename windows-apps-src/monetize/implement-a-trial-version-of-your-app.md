@@ -5,14 +5,14 @@ description: "Saiba como usar o namespace Windows.Services.Store para implementa
 title: "Implementar uma versão de avaliação do seu aplicativo"
 keywords: "amostra de código de avaliação gratuita"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 22f355c23f4cc87932563e9885f390e9a5ac4130
+ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
+ms.openlocfilehash: 8858c9f7f9b40e2bca30054b99ab47c7388aef57
 
 ---
 
 # Implementar uma versão de avaliação do seu aplicativo
 
-Se você permitir que os clientes usem seu aplicativo gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do aplicativo, excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
+Se você configurar seu aplicativo como [avaliação gratuita no painel do Centro de Desenvolvimento do Windows](../publish/set-app-pricing-and-availability.md#free-trial) para que os clientes possam usar seu aplicativo gratuitamente durante um período de avaliação, incentive seus clientes a atualizarem para a versão completa do seu aplicativo excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
 Os aplicativos destinados ao Windows 10, versão 1607 ou posterior, podem usar membros da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para determinar se o usuário tem uma licença da versão de avaliação do seu aplicativo e ser notificado se o estado da licença mudar enquanto seu aplicativo estiver em execução.
 
@@ -64,6 +64,8 @@ O código neste exemplo pressupõe que:
 * O arquivo de código tenha uma instrução **using** para o namespace **Windows.Services.Store**.
 * O aplicativo seja um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md#api_intro).
 
+>**Observação**&nbsp;&nbsp;Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado neste exemplo para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
+
 ## Exemplo de código
 
 Quando seu aplicativo estiver inicializando, obtenha o objeto [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx) para seu aplicativo e manipule o evento [OfflineLicensesChanged](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.offlinelicenseschanged.aspx) para receber notificações quando a licença for alterada enquanto o aplicativo estiver em execução. Por exemplo, a licença do aplicativo pode ser alterada quando o período de avaliação expira ou o cliente compra o aplicativo por meio de uma Loja. Quando a licença for alterada, obtenha a nova licença e habilite ou desabilite um recurso do seu aplicativo adequadamente.
@@ -81,6 +83,9 @@ private async void InitializeLicense()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     workingProgressRing.IsActive = true;
@@ -127,6 +132,6 @@ Para obter um aplicativo de exemplo completo, consulte o [Exemplo da Loja](https
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

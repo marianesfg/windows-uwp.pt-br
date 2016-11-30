@@ -4,14 +4,18 @@ Description: "Antes de executar um experimento em seu aplicativo UWP (Plataforma
 title: "Criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento"
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: ea455892717546f7f789054609664ca1c0017699
+ms.sourcegitcommit: 32c1b379ee3913e267664e6d125fbc3daf480bb3
+ms.openlocfilehash: 88a55c9ed64d5f52f959a1c68618dc5296dc24d6
 
 ---
 
 # Criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento
 
 Para começar a usar experimentação, crie uma experimentação [projeto](run-app-experiments-with-a-b-testing.md#terms) para seu aplicativo no painel do Centro de Desenvolvimento e defina as variáveis remotas que seu aplicativo pode acessar.
+
+As instruções a seguir descrevem as etapas principais para criar um projeto. Para um guia passo a passo detalhado que demonstra o processo de criação de um projeto e execução de um experimento de ponta a ponta, veja [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
+
+## Instruções
 
 1. Entre no [painel do Centro de Desenvolvimento](https://dev.windows.com/overview).
 2. Em **Seus aplicativos**, selecione o aplicativo para o qual você deseja criar um experimento.
@@ -41,6 +45,6 @@ Depois de criar um projeto, você pode [codificar seu aplicativo para experiment
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

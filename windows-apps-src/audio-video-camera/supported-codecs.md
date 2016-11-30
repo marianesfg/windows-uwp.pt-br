@@ -4,17 +4,17 @@ ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
 description: "Este artigo lista os codecs de áudio e de vídeo e os formatos compatíveis com os aplicativos UWP."
 title: "Codecs compatíveis"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 0f6da61ba167328968694d240e250dbc454d5e7b
+ms.sourcegitcommit: 7bd0002d62519757cf582d6070a22890a0e1837e
+ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
 ---
 
 # Codecs compatíveis
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo lista os codecs de áudio e de vídeo e os formatos compatíveis com os aplicativos UWP.
+Este artigo lista os codecs de áudio, de vídeo e de imagem, e os formatos compatíveis com os aplicativos UWP.
 
 Nas tabelas abaixo "D" indica suporte de decodificador e "E" indica suporte de codificador.
 
@@ -27,7 +27,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 
  
 
-### Área de trabalho
+### Desktop
 
 <table>
 <colgroup>
@@ -1592,7 +1592,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 
  
 
-### Área de trabalho
+### Desktop
 
 <table>
 <colgroup>
@@ -2685,18 +2685,80 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 </tbody>
 </table>
 
- 
+## Suporte ao codec e ao formato de imagem 
 
- 
+<table>
+<colgroup>
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Codec</th>
+<th align="left">Desktop</th>
+<th align="left">Outras famílias de dispositivo</th>
+</tr>
+</thead>
+<tr class="odd">
+<td align="left">BMP</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="even">
+<td align="left">DDS</td>
+<td align="left">D/E<sup>1</sup></td>
+<td align="left">D/E<sup>1</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">DNG</td>
+<td align="left">D<sup>2</sup></td>
+<td align="left">D<sup>2</sup></td>
+</tr>
+<tr class="even">
+<td align="left">GIF</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="odd">
+<td align="left">ICO</td>
+<td align="left">D</td>
+<td align="left">D</td>
+</tr>
+<tr class="even">
+<td align="left">JPEG</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="odd">
+<td align="left">JPEG-XR</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="even">
+<td align="left">PNG</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="odd">
+<td align="left">TIFF</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="even">
+<td align="left">Camera RAW</td>
+<td align="left">D<sup>3</sup></td>
+<td align="left">Não</td>
+</tr>
+</table>
 
- 
+<sup>1</sup> Imagens DDS usando BC1 por meio de compactação BC5 têm suporte.  
+<sup>2</sup> Imagens DNG com uma visualização incorporada não RAW têm suporte.  
+<sup>3</sup> Somente determinados formatos de câmera RAW têm suporte.  
+
+Para obter mais informações sobre codecs de imagem, consulte [Codecs WIC nativos](https://msdn.microsoft.com/library/windows/desktop/gg430027.aspx).
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

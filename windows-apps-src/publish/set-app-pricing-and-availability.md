@@ -4,8 +4,8 @@ Description: "A página Preço e disponibilidade do processo de envio de aplicat
 title: "Definir a disponibilidade e o preço do aplicativo"
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 translationtype: Human Translation
-ms.sourcegitcommit: fc5265cf7d455e34225fd74f9792cdb46b0029d7
-ms.openlocfilehash: 91a65020c29e990d96ab26f5abbd777da7810658
+ms.sourcegitcommit: 2ce776b69eed7d5803db7a37b54c4b00f58dc6c0
+ms.openlocfilehash: e5b956f819af3cbbd7e00d77de77a15678a2ab4c
 
 ---
 
@@ -26,7 +26,7 @@ Para obter mais informações, consulte [Definir preço e seleção de mercado](
 
 Muitos desenvolvedores optam por permitir que os clientes experimentem seu aplicativo gratuitamente usando a funcionalidade de avaliação fornecida pela loja. Por padrão, um aplicativo não estará disponível como uma avaliação gratuita, mas se você gostaria de oferecer uma, selecione um valor na lista suspensa **Avaliação gratuita**.
 
-Escolha **Avaliação nunca expira** para permitir que os clientes acessem seu aplicativo gratuitamente indefinidamente. Você vai querer incentivá-los a comprar a versão completa. Portanto, certifique-se de adicionar código para [excluir ou limitar recursos na versão de avaliação](https://msdn.microsoft.com/library/windows/apps/mt219685).
+Escolha **Avaliação nunca expira** para permitir que os clientes acessem seu aplicativo gratuitamente indefinidamente. Você vai querer incentivá-los a comprar a versão completa. Portanto, certifique-se de adicionar código para [excluir ou limitar recursos na versão de avaliação](../monetize/in-app-purchases-and-trials.md).
 
 Você também tem a opção de selecionar uma avaliação por tempo limitado de **1 dia**, **7 dias**, **15 dias** ou **30 dias**. Você ainda pode limitar os recursos durante o período de avaliação, ou pode permitir que os clientes tenham acesso à funcionalidade completa durante esse período de tempo.
 
@@ -86,10 +86,6 @@ Você também pode mudar a data de lançamento após enviar o aplicativo, desde 
 
 
 
-
-
-
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

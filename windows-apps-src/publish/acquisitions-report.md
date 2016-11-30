@@ -4,15 +4,15 @@ Description: "O Relatório de aquisições no painel do Centro de Desenvolviment
 title: "Relatório de aquisições"
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2556e7bd8f827287c917c3b9ffa2da980d0d5d88
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: afac76ac5b1e1ef2a0ffef3dddf10e8e0023a275
 
 ---
 
 # Relatório de aquisições
 
 
-O Relatório de **aquisições** no painel do Centro de Desenvolvimento do Windows permite que você veja quem adquiriu o seu aplicativo, juntamente com detalhes demográficos e de plataforma. Você pode visualizar esses dados em seu painel ou [baixar o relatório](download-analytic-reports.md) para vê-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando a [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
+O Relatório de **aquisições** no painel do Centro de Desenvolvimento do Windows permite que você veja quem adquiriu o seu aplicativo, juntamente com detalhes demográficos e de plataforma. Você pode visualizar esses dados em seu painel ou [baixar o relatório](download-analytic-reports.md) para vê-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter aquisições de aplicativo](../monetize/get-app-acquisitions.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Neste relatório, uma aquisição significa que um novo cliente obteve uma licença para o seu aplicativo (tendo você cobrado dinheiro ou oferecido gratuitamente).
 
@@ -68,6 +68,6 @@ O catálogo em destaque **OS version** mostra o número total de aquisições co
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

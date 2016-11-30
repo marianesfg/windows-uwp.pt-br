@@ -4,14 +4,14 @@ title: Dar suporte a seu aplicativo com tarefas em segundo plano
 description: "Os tópicos nesta seção mostram como executar seu próprio código leve em segundo plano ao responder a gatilhos com tarefas em segundo plano."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
 translationtype: Human Translation
-ms.sourcegitcommit: 30b3b8b3b40a96c4cd063ebab2794617568fa7a3
-ms.openlocfilehash: a583cd3e40bda9ab6c5c00d528183a9d8b3bd0e0
+ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
+ms.openlocfilehash: 35b64637904e35413217d4cf500658999db07088
 
 ---
 
 # Dar suporte a seu aplicativo com tarefas em segundo plano
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Os tópicos nesta seção mostram como executar seu próprio código leve em segundo plano ao usar tarefas em segundo plano. Você pode usar tarefas em segundo plano para fornecer funcionalidade quando o seu aplicativo é suspenso ou não está em execução. Também é possível usar tarefas em segundo plano para aplicativos de comunicação em tempo real como VOIP, mail e IM.
 
@@ -19,9 +19,9 @@ Os tópicos nesta seção mostram como executar seu próprio código leve em seg
 
 Desde o Windows 10, versão 1607, a execução de áudio no segundo plano está muito mais fácil. Consulte [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio) para obter mais informações.
 
-## Tarefas em segundo plano de vários processos e processo único
+## Tarefas em segundo plano dentro do processo e fora do processo
 
-Há duas abordagens para implementar tarefas em segundo plano: dentro e fora do processo. O suporte em segundo plano dentro do processo foi introduzido no Windows 10, versão 1607, para simplificar a gravação de tarefas em segundo plano. Mas você ainda pode desenvolver tarefas em segundo plano fora do processo. Consulte [Diretrizes de tarefas em segundo plano](guidelines-for-background-tasks.md) para obter recomendações sobre quando gravar uma tarefa em segundo plano dentro versus fora do processo.
+Há duas abordagens para implementar tarefas em segundo plano: dentro do processo, em que o aplicativo e seu processo em segundo plano são executados no mesmo processo; e fora do processo, em que o aplicativo e o processo em segundo plano são executados em processos separados. O suporte em segundo plano dentro do processo foi introduzido no Windows 10, versão 1607, para simplificar a gravação de tarefas em segundo plano. Mas você ainda pode desenvolver tarefas em segundo plano fora do processo. Consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md) para obter recomendações sobre quando gravar uma tarefa em segundo plano dentro versus fora do processo.
 
 As tarefas em segundo plano fora do processo são mais resilientes porque o processo em segundo plano não conseguirá derrubar o processo do aplicativo se algo der errado. Porém, a resiliência vem ao custo de uma complexidade maior para gerenciar a comunicação entre processos.
 
@@ -29,9 +29,9 @@ As tarefas em segundo plano fora do processo são implementadas como classes lev
 
 No Windows 10, versão 1607, você pode habilitar a atividade em segundo plano sem criar uma tarefa em segundo plano. Em vez disso, você pode executar o código em segundo plano diretamente dentro do aplicativo em primeiro plano.
 
-Para começar rapidamente tarefas em segundo plano de processo único, consulte [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md).
+Para começar rapidamente tarefas em segundo plano dentro do processo, consulte [Criar e registrar uma tarefa em segundo plano dentro do processo](create-and-register-an-inproc-background-task.md).
 
-Para começar rapidamente tarefas em segundo plano de vários processos, consulte [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md).
+Para começar rapidamente tarefas em segundo plano fora do processo, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md).
 
 > [!TIP]
 > Desde o Windows 10, você não precisa mais colocar um aplicativo na tela de bloqueio como pré-requisito para registrar uma tarefa em segundo plano para ela.
@@ -68,7 +68,7 @@ Para obter mais informações, consulte o tópico sobre [Definir condições par
 
 ## Requisitos do manifesto do aplicativo
 
-Antes que o aplicativo possa registrar com êxito uma tarefa em segundo plano executada em um processo à parte, ela deve ser declarada no manifesto do aplicativo. As tarefas em segundo plano que são executadas no mesmo processo do aplicativo de host não precisam ser declaradas no manifesto do aplicativo. Para obter mais informações, consulte [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md).
+Antes que o aplicativo possa registrar com êxito uma tarefa em segundo plano executada fora do processo, ela deve ser declarada no manifesto do aplicativo. As tarefas em segundo plano que são executadas no mesmo processo do aplicativo de host não precisam ser declaradas no manifesto do aplicativo. Para obter mais informações, consulte [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md).
 
 ## Tarefas em segundo plano
 
@@ -140,7 +140,7 @@ As tarefas de manutenção são executadas apenas quando o dispositivo está con
 Seu aplicativo pode acessar sensores e dispositivos periféricos a partir de uma tarefa em segundo plano com a classe [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Você pode usar esse gatilho para operações de longa duração, como sincronização ou monitoramento de dados. Ao contrário das tarefas para eventos de sistema, uma tarefa **DeviceUseTrigger** só pode ser disparada enquanto o aplicativo está sendo executado em primeiro plano e nenhuma condição pode ser definida nele.
 
 > [!IMPORTANT]
-> O **DeviceUseTrigger** e o **DeviceServicingTrigger** não podem ser usados com tarefas em segundo plano de processo único.
+> O **DeviceUseTrigger** e o **DeviceServicingTrigger** não podem ser usados com tarefas em segundo plano dentro do processo.
 
 Algumas operações críticas de dispositivos, como atualizações de firmware de longa execução não podem ser executadas com o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Elas podem ser executadas somente no computador por um aplicativo privilegiado que usa o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Um *aplicativo privilegiado* é um aplicativo que o fabricante do dispositivo autorizou a executar tais operações. Os metadados do dispositivo são usados para especificar qual aplicativo, se houver, foi designado como o aplicativo privilegiado para um dispositivo. Para obter mais informações, consulte [Sincronização e atualização de dispositivos para aplicativos de dispositivos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkId=306619)
 
@@ -165,8 +165,8 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 * [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
 * [Acessar sensores e dispositivos a partir de uma tarefa em segundo plano](access-sensors-and-devices-from-a-background-task.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-* [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md)
-* [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-an-outofproc-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
@@ -182,6 +182,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

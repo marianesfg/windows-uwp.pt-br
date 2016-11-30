@@ -4,8 +4,8 @@ ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
 title: "Efeitos de composição"
 description: "O efeito de APIs permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada."
 translationtype: Human Translation
-ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
-ms.openlocfilehash: 12523034d9b3ad50fb5c31b2e66984df68f34de1
+ms.sourcegitcommit: 7f8660eae59219f15a083b41c581e427c140d299
+ms.openlocfilehash: 23d28144de3d051b4b569cf633f9eee30c13368d
 
 ---
 # Efeitos de composição
@@ -14,7 +14,7 @@ ms.openlocfilehash: 12523034d9b3ad50fb5c31b2e66984df68f34de1
 
 A API do WinRT [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) permite efeitos em tempo real que serão aplicados a imagens e interface do usuário com propriedades de efeitos que podem ser animados. Nesta visão geral, vamos realizar a execução por meio de funcionalidade disponível que permite adicionar efeitos a serem aplicados a uma composição visual.
 
-Para dar suporte a consistência da [Plataforma Universal do Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx) para desenvolvedores descrevendo efeitos em seus aplicativos, os efeitos de composição aproveitam a interface IGraphicsEffect do Win2D para usar as descrições do efeito via Namespace [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.md) Namespace.
+Para dar suporte a consistência da [Plataforma Universal do Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx) para desenvolvedores descrevendo efeitos em seus aplicativos, os efeitos de composição aproveitam a interface IGraphicsEffect do Win2D para usar as descrições do efeito via Namespace [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) Namespace.
 
 Efeitos de pincel são usados para pintar áreas de um aplicativo pela aplicação de efeitos a um conjunto de imagens existentes. As APIs de efeito de composição do Windows 10 APIs estão concentradas em sprites visuais. O SpriteVisual oferece excelente flexibilidade e relacionamento na criação de cores, imagens e efeitos. O SpriteVisual é um tipo de visual de composição que pode preencher um retângulo 2D com um pincel. O visual define os limites do retângulo e o pincel define os pixels usados para desenhar o retângulo.
 
@@ -36,9 +36,9 @@ Atualmente, a composição é compatível com os efeitos a seguir:
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Transformação afim 2D  | Aplica uma matriz de transformação afim 2D a uma imagem. Usamos esse efeito para animar a máscara alfa em nossos [exemplos](http://go.microsoft.com/fwlink/?LinkId=785341) de efeitos.       |
 | Composição aritmética | Combina duas imagens usando uma equação flexível. Usamos a composição aritmética para criar um efeito de fading cruzado em nossos [exemplos](http://go.microsoft.com/fwlink/?LinkId=785341). |
-| Efeito de mesclagem         | Cria um efeito de mesclagem que combina duas imagens. A composição fornece 21 dos 26 [modos de mesclagem](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.md) com suporte no Win2D.        |
+| Efeito de mesclagem         | Cria um efeito de mesclagem que combina duas imagens. A composição fornece 21 dos 26 [modos de mesclagem](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.htm) com suporte no Win2D.        |
 | Fonte de cor         | Gera uma imagem que contém uma cor sólida.                                                                                                                                                                               |
-| Composição            | Combina duas imagens. A composição fornece todos os 13 [modos compostos](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.md) com suporte no Win2D.                                              |
+| Composição            | Combina duas imagens. A composição fornece todos os 13 [modos compostos](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.htm) com suporte no Win2D.                                              |
 | Contraste             | Aumenta ou reduz o contraste de uma imagem.                                                                                                                                                                           |
 | Exposição             | Aumenta ou reduz a exposição de uma imagem.                                                                                                                                                                           |
 | Escala de cinza            | Converte uma imagem em cinza monocromático.                                                                                                                                                                                   |
@@ -51,7 +51,7 @@ Atualmente, a composição é compatível com os efeitos a seguir:
 
  
 
-Consulte o Namespace [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.md) do Win2D para obter informações mais detalhadas. Os efeitos sem suporte na composição são indicados como \[NoComposition\].
+Consulte o Namespace [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) do Win2D para obter informações mais detalhadas. Os efeitos sem suporte na composição são indicados como \[NoComposition\].
 
 ### Efeitos de encadeamento
 
@@ -248,6 +248,6 @@ brush.Surface = imageSource.Surface;
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

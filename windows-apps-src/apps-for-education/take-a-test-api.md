@@ -1,41 +1,40 @@
 ---
 author: TylerMSFT
 Description: "A API JavaScript do aplicativo Fazer um Teste Microsoft permite fazer avaliações seguras. Fazer um Teste oferece um navegador seguro que impede que alunos usem outros recursos de computador ou internet durante um teste."
-title: API JavaScript Fazer um Teste Microsoft.
+title: API JavaScript Fazer um Teste.
 translationtype: Human Translation
-ms.sourcegitcommit: f2838d95da66eda32d9cea725a33fc4084d32359
-ms.openlocfilehash: d7f185e83e81583fd6d7920e5412f76f3a97edd0
+ms.sourcegitcommit: 7f578d73a9a625b0ac7d9c10f6dc8118c36b07d0
+ms.openlocfilehash: c2e1832489d36f4ccbeae4e2f67e18caf941a68f
 
 ---
 
-# API JavaScript Fazer um Teste Microsoft
+# API JavaScript Fazer um Teste
 
-**Fazer um Teste** é um aplicativo baseado em navegador que renderiza avaliações online bloqueadas para testes de alto risco. Ele dá suporte ao padrão da API do navegador SBAC para testes básicos comuns importantes e permite se concentrar no conteúdo de avaliação, em vez de como bloquear o Windows.
+[Fazer um Teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um aplicativo baseado em navegador que renderiza avaliações online bloqueadas para testes de alto risco. Ele dá suporte ao padrão da API do navegador SBAC para testes básicos comuns importantes e permite se concentrar no conteúdo de avaliação, em vez de como bloquear o Windows.
 
-**Fazer um Teste**, da plataforma do navegador Microsoft Edge, oferece uma API JavaScript que os aplicativos Web podem usar para oferecer uma experiência de bloqueio para realizar testes.
+Fazer um Teste, da plataforma do navegador Microsoft Edge, apresenta uma API JavaScript que os aplicativos Web podem usar para oferecer uma experiência de bloqueio para realizar testes.
 
-A API (com base na [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) fornece texto para controle por voz e o recurso de consulta se o dispositivo estiver bloqueado, quais são os processos e o usuário de execução e muito mais.
+A API (com base na [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) fornece os recursos de conversão de texto em fala e de consulta se o dispositivo estiver bloqueado, quais processos de usuários e do sistema estão em execução e muito mais.
 
 Consulte A [Referência técnica do aplicativo Fazer um Teste](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) para obter informações sobre o próprio aplicativo.
 
-**Importante**
-
-As APIs não funcionam em uma sessão remota.  
-Fazer um Teste não manipula solicitações de novas janelas HTTP.
+> [!Important]
+> Essas APIs não funcionam em uma sessão remota.  
 
 Para a solução de problemas, consulte [Solução de problemas com Fazer um Teste da Microsoft com o visualizador de eventos](troubleshooting.md).
 
-**A API de Fazer um Teste consiste nos seguintes namespaces:**  
+## Documentação de referência
+A API de Fazer um Teste consiste nos seguintes namespaces. 
 
 | Namespace | Descrição |
 |-----------|-------------|
-|[namespace de segurança](#security-namespace)| Funcionalidade de texto em fala|
-|[namespace tts](#tts-namespace)|Permite bloquear o dispositivo|
+|[namespace de segurança](#security-namespace)|Permite bloquear o dispositivo|
+|[namespace tts](#tts-namespace)|Funcionalidade conversão de texto em fala|
 
 
- ## namespace de segurança
+ ### Namespace de segurança
 
-Permite bloquear o dispositivo, verificar a lista de processos de usuário e sistema, obter endereços MAC e IP e limpar recursos da web em cache.
+O namespace de segurança permite bloquear o dispositivo, verificar a lista de processos de usuário e sistema, obter endereços MAC e IP e limpar recursos da web em cache.
 
 | Método | Descrição   |
 |--------|---------------|
@@ -45,9 +44,10 @@ Permite bloquear o dispositivo, verificar a lista de processos de usuário e sis
 |[getIPAddressList](#getIPAddressList) | Obtém a lista de endereços IP do dispositivo |
 |[getMACAddress](#getMACAddress)|Obtém a lista de endereços MAC do dispositivo|
 |[getProcessList](#getProcessList)|Obtém a lista de processos do sistema e de usuários em execução|
-|[isEnvironmentSecure](#isEnvironmentSecure)|Determina se o contexto de bloqueio continua aplicado ao dispositivo|
+|[isEnvironmentSecure](#isEnvironmentSecure)|Determina se o contexto de bloqueio continua aplicado ao dispositivo|  
 
-<span id="clearCache" />
+---
+<span id="clearCache"/>
 ### void clearCache()
 Limpe recursos da web em cache.
 
@@ -114,6 +114,8 @@ Obtém a lista de endereços IP do dispositivo.
 **Valor de retorno**  
 `An array of IP addresses.`
 
+---
+
 <span id="getMACAddress" />
 ### string[] getMACAddress()
 Obtém a lista de endereços MAC do dispositivo.
@@ -170,18 +172,23 @@ Windows 10, versão 1607
 
 ---
 
-## namespace tts
+### Namespace tts
+
+O namespace tts trata da funcionalidade do aplicativo conversão de texto em fala.
+
 | Método | Descrição |
 |--------|-------------|
 |[getStatus](#getStatus) | Obtém o status de reprodução do controle por voz|
 |[getVoices](#getVoices) | Obtém uma lista de pacotes de voz disponíveis|
 |[pause](#pause)|Pausa a sintetização do controle por voz|
 |[resume](#resume)|Retome a sintetização de voz pausada|
-|[speak](#speak)|Sintetização do texto para fala no lado do cliente|
+|[speak](#speak)|Sintetização conversão do texto em fala no lado do cliente|
 |[stop](#stop)|Para sintetização do controle por voz|
 
 > [!Tip]
-> A [Microsoft Edge Speech Synthesis API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/) é uma implementação da [W3C Speech Api](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html) e recomendamos que os desenvolvedores usem essa API quando possível.
+> A [Microsoft Edge Speech Synthesis API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/) é uma implementação da [W3C Speech Api](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html) e recomendamos que os desenvolvedores usem esta API quando possível.
+
+---
 
 <span id="getStatus" />
 ### string getStatus()
@@ -260,7 +267,7 @@ Windows 10, versão 1607
 
 <span id="speak" />
 ### void speak(string text, object options, function callback)
-Sintetização do texto para fala no lado do cliente.
+Inicia a sintetização da conversão de texto em fala no lado do cliente.
 
 **Sintaxe**  
 `void browser.tts.speak(“Hello world”, options, callback);`
@@ -283,13 +290,13 @@ var options = {
 
 **Comentários** As variáveis de opção devem estar em minúsculas. O sexo, o idioma e os parâmetros de voz utilizam cadeias de caracteres.
 Volume, timbre e taxa devem ser marcados dentro o arquivo de linguagem de marcação de sintetização de controle por voz (SSML), não dentro do objeto de opções.
-
 O objeto de opções deve seguir a ordem, a nomenclatura e o uso de maiúsculas mostrados no exemplo acima.
 
 **Requisitos**  
 Windows 10, versão 1607
 
 ---
+
 <span id="stop" />
 ### void stop()
 Para sintetização do controle por voz.
@@ -308,6 +315,6 @@ Windows 10, versão 1607
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

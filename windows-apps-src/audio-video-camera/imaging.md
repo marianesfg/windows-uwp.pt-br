@@ -1,17 +1,17 @@
 ---
-author: drewbatgit
+author: laurenhughes
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: Este artigo explica como carregar e salvar arquivos de imagem usando BitmapDecoder e BitmapEncoder e como usar o objeto SoftwareBitmap para representar imagens de bitmap.
 title: Criar, editar e salvar imagens de bitmap
 translationtype: Human Translation
-ms.sourcegitcommit: c61bad4b4a5440531c0177247c425addaf452920
-ms.openlocfilehash: ff6bff692c4e0e73b2c99e06b46e8a3050ba12c4
+ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
+ms.openlocfilehash: ed153b4ebd2f1b6b26f922786b3c005a57d8255d
 
 ---
 
 # Criar, editar e salvar imagens de bitmap
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo explica como carregar e salvar arquivos de imagem usando [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) e [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) e como usar o objeto [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) para representar imagens de bitmap.
@@ -132,6 +132,6 @@ Você pode transcodificar um arquivo de imagem diretamente de um [**BitmapDecode
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

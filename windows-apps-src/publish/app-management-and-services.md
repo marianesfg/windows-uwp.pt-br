@@ -1,19 +1,19 @@
 ---
 author: jnHs
-Description: "Você pode gerenciar e visualizar detalhes relacionados a cada um de seus aplicativos no painel do Centro de Desenvolvimento do Windows e configurar serviços como notificações por push e mapas."
+Description: "Gerencie e visualize detalhes relacionados a cada um de seus aplicativos no painel do Centro de Desenvolvimento do Windows e configure serviços como notificações por push, teste A/B e mapas."
 title: "Gerenciamento de aplicativos e serviços"
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
 translationtype: Human Translation
-ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
-ms.openlocfilehash: 9787ef724622a95d291b4631196b3e13bcb1298a
+ms.sourcegitcommit: 9611b3cc87c29e29a19b87a5b5f37bef1a71dfbb
+ms.openlocfilehash: d5244bda2cefa146e3c481270fe72fdb8f2d35cf
 
 ---
 
 # Gerenciamento de aplicativos e serviços
 
-Você pode gerenciar e visualizar detalhes relacionados a cada um de seus aplicativos no painel do Centro de Desenvolvimento do Windows e configurar serviços como notificações por push e mapas.
+Você pode gerenciar e visualizar detalhes relacionados a cada um de seus aplicativos no painel do Centro de Desenvolvimento do Windows e configurar serviços como notificações por push, teste A/B e mapas.
 
-Ao trabalhar com um aplicativo em seu painel, você verá seções no menu de navegação esquerdo para gerenciamento de aplicativos e serviços. Você pode expandir essas seções para acessar a funcionalidade descrita abaixo.
+Ao trabalhar com um aplicativo em seu painel, você verá seções no menu de navegação esquerdo para **gerenciamento de aplicativos** e **serviços**. Você pode expandir essas seções para acessar a funcionalidade descrita abaixo.
 
 ## Serviços
 
@@ -21,9 +21,11 @@ A seção **Serviços** permite que você gerencie vários serviços diferentes 
 
 ### Notificações por push
 
-Dependendo do tipo de pacote do aplicativo e seus requisitos específicos, você pode usar uma das opções a seguir para notificações por push:
+A seção **Notificações por push** permite criar e enviar notificações por push direcionadas para clientes do seu aplicativo. Você pode enviá-las para todos os clientes do seu aplicativo ou para um subconjunto de clientes do Windows 10 que atendem aos critérios definidos em um [segmento do cliente](create-customer-segments.md). Para obter mais informações, consulte [Enviar notificações por push direcionadas para clientes do seu aplicativo](send-push-notifications-to-your-apps-customers.md).
 
--   **Serviço de Notificação por Push do Windows (WNS)** permite que você envie notificações do sistema, blocos, selos e atualizações brutas de seu próprio serviço de nuvem. Para saber mais, consulte a [Visão geral do WNS (Serviços de Notificação por Push do Windows)](https://msdn.microsoft.com/library/windows/apps/mt187203).
+Dependendo do tipo de pacote do aplicativo e de seus requisitos específicos, você também pode usar uma das opções a seguir para notificações por push clicando na página **WNS/MPNS** no menu de navegação esquerdo: 
+
+-   **Serviços de Notificação por Push do Windows (WNS)** permite que você envie notificações do sistema, blocos, selos e atualizações brutas de seu próprio serviço de nuvem. Para saber mais, consulte a [Visão geral do WNS (Serviços de Notificação por Push do Windows)](https://msdn.microsoft.com/library/windows/apps/mt187203).
 
 -   **Aplicativos Móveis do Microsoft Azure** permite que você envie notificações por push, autentique e gerencie usuários de aplicativo e armazene dados de aplicativo na nuvem. Para saber mais, consulte a [documentação de Aplicativos Móveis](http://go.microsoft.com/fwlink/p/?LinkId=221116).
 
@@ -39,7 +41,7 @@ Para saber mais, veja [Executar experimentos de aplicativos com testes A/B](../m
 
 Para usar os serviços de mapa em aplicativos para Windows Phone 8.1 e versões anteriores, você precisa de uma ID de aplicativo de serviço de mapa e um token para incluir no código do seu aplicativo. Você pode obter esse token na página **Mapas** na seção **Serviços**.
 
-> **Observação**  Para usar serviços de mapa em aplicativos destinados a outros sistemas operacionais, visite o [Centro de Desenvolvimento do Bing Mapas](http://go.microsoft.com/fwlink/p/?LinkId=614880). Consulte [Solicitar uma chave de autenticação de mapas](https://msdn.microsoft.com/library/windows/apps/mt219694) para obter mais informações.
+> **Observação**  Para usar serviços de mapa em aplicativos destinados ao Windows 10 ou Windows 8.x, visite o [Centro de Desenvolvimento do Bing Mapas](http://go.microsoft.com/fwlink/p/?LinkId=614880). Consulte [Solicitar uma chave de autenticação de mapas](https://msdn.microsoft.com/library/windows/apps/mt219694) para obter mais informações.
 
 Para saber mais, consulte [Usar serviços de mapa](use-map-services.md).
 
@@ -71,9 +73,7 @@ Essa página permite que você visualize detalhes relacionados a todos os seus p
 
 > **Nota**  Você não verá nenhuma informação aqui até seu aplicativo ter sido publicado.
 
-O nome, a versão e a arquitetura de cada pacote são mostrados. Clique em **Detalhes** para mostrar informações adicionais, idioma com suporte, recursos do aplicativo e tamanhos de arquivo.
-
-As informações exatas que você vê de cada pacote podem ser diferentes, dependendo do seu sistema operacional de destino e de outros fatores. Por exemplo, caso tenha adicionado [Mediação de anúncios do Windows](https://msdn.microsoft.com/library/windows/apps/mt219691) em seu pacote, você encontrará um link para configurar a mediação desse pacote aqui.
+O nome, a versão e a arquitetura de cada pacote são mostrados. Clique em **Detalhes** para mostrar informações adicionais, idioma com suporte, recursos do aplicativo e tamanhos de arquivo. As informações que você vê de cada pacote podem ser diferentes, dependendo do seu sistema operacional de destino e de outros fatores. 
 
 Os desenvolvedores com permissões de OEM também podem [gerar pacotes de pré-instalação](generate-preinstall-packages-for-oems.md) na página **Pacotes atuais**.
 
@@ -83,6 +83,6 @@ Os desenvolvedores com permissões de OEM também podem [gerar pacotes de pré-i
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

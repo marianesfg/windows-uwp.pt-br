@@ -4,8 +4,8 @@ title: Responder a eventos do sistema com tarefas em segundo plano
 description: Saiba como criar uma tarefa em segundo plano que responda a eventos de SystemTrigger.
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 37a11b573267726707ee3743309083b774727886
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: a3d7ac01724b1e8dcabe3219855eabe172924764
 
 ---
 
@@ -21,8 +21,7 @@ ms.openlocfilehash: 37a11b573267726707ee3743309083b774727886
 
 Saiba como criar uma tarefa em segundo plano que responde a eventos de [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano criada para o aplicativo e que essa tarefa precise ser executada em resposta a um evento acionado pelo sistema, como quando a disponibilidade da Internet muda ou o logon do usuário. Este tópico se concentra na classe [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839). Para obter mais informações sobre como criar uma classe de tarefa em segundo plano, veja [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md) ou
-* [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md).
+Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano criada para o aplicativo e que essa tarefa precise ser executada em resposta a um evento acionado pelo sistema, como quando a disponibilidade da Internet muda ou o logon do usuário. Este tópico se concentra na classe [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839). Mais informações sobre como escrever uma classe de tarefa em segundo plano estão disponíveis em [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou em [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md).
 
 ## Crie um objeto SystemTrigger
 
@@ -54,7 +53,7 @@ Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano cr
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
     > ```
     > ```cpp
-    > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass"; // don't set for single-process background tasks
+    > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass"; // don't set for in-process background tasks
     > String ^ taskName   = "Internet-based background task";
     >
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
@@ -62,7 +61,7 @@ Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano cr
 
     > **Observação**  Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
 
-    Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
+    Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
     > **Observações**  Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
  
@@ -80,8 +79,8 @@ Os aplicativos com recurso de tela de bloqueio podem registrar tarefas em segund
 
 ****
 
-* [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md)
-* [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-an-outofproc-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
@@ -91,14 +90,11 @@ Os aplicativos com recurso de tela de bloqueio podem registrar tarefas em segund
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-
-****
-
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

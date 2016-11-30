@@ -4,8 +4,8 @@ ms.assetid:
 description: "Este artigo mostra como interagir com os controles de transporte de mídia do sistema."
 title: "Integrar aos controles de transporte de mídia do sistema"
 translationtype: Human Translation
-ms.sourcegitcommit: 53b1cb94f90cd697a96bca49c5f2109d4749dbd1
-ms.openlocfilehash: c490ea43a6f49e09828cb6b07a6fbf1920acca74
+ms.sourcegitcommit: 34cb2fec3071add8617fe2bee2eaf50356611ac6
+ms.openlocfilehash: 702d5911f6e76d6c047fcc97c1117456ae04c3e5
 
 ---
 
@@ -70,6 +70,7 @@ Por fim, [**Complete**](https://msdn.microsoft.com/library/windows/apps/Windows.
 Como mencionado anteriormente neste artigo, o SMTC detectará e exibirá automaticamente informações de cada instância de **MediaPlayer** que seu aplicativo criar. Se você quiser usar várias instâncias de **MediaPlayer**, mas quiser que o SMTC forneça uma única entrada para seu aplicativo, deverá controlar manualmente o comportamento do SMTC em vez de depender da integração automática. Além disso, se você estiver usando [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) para controlar um ou mais media players, deverá usar a integração do SMTC manual. Além disso, se seu aplicativo usa uma API diferente de **MediaPlayer**, como a classe [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph), para reproduzir mídia, você deve implementar a integração do SMTC manual para o usuário usar o SMTC para controlar seu aplicativo. Para obter informações sobre como controlar o SMTC manualmente, consulte [Controle manual dos controles de transporte de mídia do sistema](system-media-transport-controls.md).
 
 
+
 ## Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
 * [Reproduzir áudio e vídeo com o MediaPlayer](play-audio-and-video-with-mediaplayer.md)
@@ -85,6 +86,6 @@ Como mencionado anteriormente neste artigo, o SMTC detectará e exibirá automat
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

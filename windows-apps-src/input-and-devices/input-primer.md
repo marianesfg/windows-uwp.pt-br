@@ -6,8 +6,8 @@ ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: fe012189566a20203b2bf8cae72f80655eeadfd1
-ms.openlocfilehash: 29a33550c3b8c80c1ae2c8349fc0b771717325f1
+ms.sourcegitcommit: 19e033455caf677c4e65ffb7bd7ce11a5a93b7a9
+ms.openlocfilehash: 5f6aee51984f86c67db9dc77eace614e385df088
 
 ---
 
@@ -21,6 +21,24 @@ As interações do usuário na Plataforma Universal do Windows (UWP) são uma co
 A UWP usa um sistema de interação contextual "inteligente" que, na maioria dos casos, elimina a necessidade de manipular individualmente os tipos de entrada exclusivos recebidos pelo seu aplicativo. Isso inclui manipular a entrada por touch, touchpad, mouse e caneta como um tipo de ponteiro genérico para dar suporte a gestos estáticos, como tocar ou pressionar e segurar, para gestos de manipulação como deslizar para movimento panorâmico ou para renderizar tinta digital.
 
 Familiarize-se com cada tipo de dispositivo de entrada e seus comportamentos, recursos e limitações quando combinados com determinados fatores forma. Isso pode ajudar você a decidir se os controles e as funcionalidades da plataforma são suficientes para seu aplicativo, ou exigem que você forneça experiências de interação personalizadas.
+
+## Surface Dial
+
+Para a Atualização de Aniversário do Windows 10, lançaremos uma nova categoria de dispositivo de entrada chamado Windows Wheel. O Surface Dial é o primeiro nessa classe de dispositivo. 
+
+### Suporte a dispositivos
+
+-   Tablet
+-   Computadores e notebooks
+
+### Uso típico
+
+Com um fator forma com base em uma ação (ou gesto) girar, o Surface Dial destina-se como um dispositivo de entrada secundário para vários tipos de mídia que complementa ou modifica a entrada de um dispositivo principal. Na maioria dos casos, o dispositivo é manipulado pela mão não dominante de um usuário durante a execução de uma tarefa com a mão dominante (por exemplo, escrita à tinta com uma caneta).
+
+### Mais informações
+
+[Diretrizes de design do Surface Dial](windows-wheel-interactions.md)
+
 
 ## Cortana
 
@@ -332,6 +350,6 @@ Assim como as pessoas usam uma combinação de voz e gestos ao se comunicar uns 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

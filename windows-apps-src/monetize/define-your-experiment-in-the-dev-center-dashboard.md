@@ -4,14 +4,16 @@ Description: "Antes de executar um experimento em seu aplicativo UWP (Plataforma
 title: Definir seu experimento no painel do Centro de Desenvolvimento
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
 translationtype: Human Translation
-ms.sourcegitcommit: ce0431243866125eff83569e3b9b1c75e0703358
-ms.openlocfilehash: df6744cb9f4dd60c9eef07dc89f2265ac4244aab
+ms.sourcegitcommit: b33e003af6e12df5eedfe150155db6777c5c62f6
+ms.openlocfilehash: fa209464e247e7073da2197ddd0b9a5344f3763b
 
 ---
 
 # Definir seu experimento no painel do Centro de Desenvolvimento
 
 Após [criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) e [codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md), você estará pronto para criar um experimento no projeto. Quando você cria o experimento, você definirá os objetivos e as variações as quais os usuários receberão.
+
+Para um guia passo a passo que demonstra o processo de criação e execução de um experimento de ponta a ponta, veja [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 <span id="get-an-api-key" />
 <span id="create-an-experiment" />
@@ -85,6 +87,6 @@ Depois de definir seu experimento no painel do Centro de Desenvolvimento e codif
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -3,36 +3,40 @@ author: TylerMSFT
 title: "Desenvolva aplicativos de educação."
 description: "Esta seção descreve os recursos de Aplicativos Universais do Windows que estão disponíveis para escrever aplicativos de educação para a plataforma Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: a8baa3ef15bd521a3e53b35ebcb7f0914e76a5ba
-ms.openlocfilehash: 2b553e9adc0c31eed9266853a158c622dd4deb31
+ms.sourcegitcommit: 48fcfe2b033614b445a1be6d757a8d208c7b1292
+ms.openlocfilehash: bb401b73432c072d551814dec9504a7d1742b7d4
 
 ---
-# Desenvolver aplicativos de educação Universais do Windows
-Os recursos a seguir o ajudarão você a escrever um aplicativo de educação Universal do Windows.
+# Desenvolver aplicativos Universais do Windows para educação
+Os recursos a seguir ajudarão você a gravar um aplicativo Universal do Windows para educação.
 
 ### Acessibilidade
-- Os aplicativos de educação precisam ser acessíveis. Consulte [Desenvolvendo aplicativos para acessibilidade]( https://developer.microsoft.com/en-us/windows/accessible-apps).
+Os aplicativos de educação precisam ser acessíveis. Consulte [Desenvolvendo aplicativos para acessibilidade](https://developer.microsoft.com/windows/accessible-apps) para obter mais informações.
 
-### Windows Store
--  Envie um aplicativo de educação [para uma organização específica](https://msdn.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises).
 
-### Criar avaliações seguras
-- [Fazer um Teste](https://technet.microsoft.com/en-us/edu/windows/take-tests-in-windows-10) é um aplicativo baseado em navegador que renderiza avaliações online bloqueadas para testes de alto risco.
-- Use as [APIs de Fazer um Teste](take-a-test-api.md) para impedir que alunos usem outro computador ou recursos da Internet durante um teste.
+### Avaliações seguras
+Aplicativos de avaliação/teste geralmente precisam produzir um ambiente *bloqueado* para impedir que os alunos usem outros computadores ou recursos de Internet durante um teste. Essa funcionalidade está disponível por meio da [API Fazer um Teste](take-a-test-api.md). Consulte o aplicativo Web [Fazer um Teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) no Centro de TI do Windows para obter um exemplo de um ambiente de teste com acesso online bloqueado para testes de alto interesse.
 
-### Caneta e tinta
-- [Interações com caneta](https://msdn.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions) fornece uma visão geral da plataforma Windows Ink.
-- [Reconhecer traços de tinta](https://msdn.microsoft.com/windows/uwp/input-and-devices/convert-ink-to-text) documenta o reconhecimento de manuscrito básico.
-- [Armazenar e recuperar traços de tinta](https://msdn.microsoft.com/windows/uwp/input-and-devices/save-and-load-ink) documenta como serializar e desserializar traços de tinta para um arquivo ISF (Ink Serialized Format).
-- [Amostra de tinta](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Ink) demonstra como usar a funcionalidade de tinta (como capturar, manipular e interpretar traços de tinta) em aplicativos Universais do Windows usando JavaScript.
-- [Amostra de tinta simples](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk) demonstra como usar a funcionalidade de tinta (como capturar tinta da entrada do usuário e executar o reconhecimento de manuscrito em traços de tinta) em aplicativos Universais do Windows usando C#.
-- [Amostra de tinta complexa](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk) demonstra como usar a funcionalidade avançada InkPresenter para intercalar a tinta com outros objetos, selecionar a tinta, copiar/colar e manipular eventos. Ela foi criada na Plataforma Universal do Windows (UWP) em C++ e pode ser executada em SKUs Desktop e Mobile do Windows 10.
+### Entrada do usuário
+A entrada do usuário é uma parte essencial dos aplicativos de educação; os controles de interface do usuário devem ser responsivos e intuitivos para não distrair os usuários. Para obter uma visão geral das opções de entrada disponíveis em um aplicativo Universal do Windows, consulte a [Cartilha de entrada](https://msdn.microsoft.com/windows/uwp/input-and-devices/input-primer) e os tópicos abaixo na seção Design e interface do usuário. Além disso, os seguintes aplicativos de amostra mostram a manipulação básica da interface do usuário na Plataforma Universal do Windows.
 - [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput) mostra como manipular a entrada em Aplicativos Universais do Windows.
 - [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode) mostra como detectar e responder ao modo de interação do usuário.
-- [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals) mostra como tirar proveito dos novos elementos visuais de foco desenhados pelo sistema ou como criar seus próprios elementos visuais de foco personalizados caso os elementos desenhados pelo sistema não atendam às suas necessidades.
+- [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals) mostra como tirar proveito dos novos elementos visuais de foco desenhados pelo sistema ou criar seus próprios elementos visuais de foco personalizados caso os elementos desenhados pelo sistema não atendam às suas necessidades.
+
+A plataforma do Windows Ink pode promover aplicativos de educação ajustando-os com um modo de entrada com o qual os alunos estão acostumados. Consulte [Windows Ink e interações de caneta](https://msdn.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions) e os tópicos abaixo para obter um guia abrangente de implementação do Windows Ink em seu aplicativo. Os aplicativos de exemplo a seguir fornecem exemplos práticos dessa API.
+- [Amostra de tinta](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Ink) demonstra como usar a funcionalidade de tinta (como capturar, manipular e interpretar traços de tinta) em aplicativos Universais do Windows usando JavaScript.
+- [Amostra de tinta simples](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk) demonstra como usar a funcionalidade de tinta (como capturar tinta da entrada do usuário e executar o reconhecimento de manuscrito em traços de tinta) em aplicativos Universais do Windows usando C#.
+- [Amostra de tinta complexa](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk) demonstra como usar a funcionalidade avançada InkPresenter para intercalar a tinta com outros objetos, selecionar a tinta, copiar/colar e manipular eventos. Ela foi criada na Plataforma Universal do Windows em C++ e pode ser executada em SKUs Desktop e Mobile do Windows 10.
+
+
+### Windows Store
+Os aplicativos de educação geralmente são lançados em circunstâncias especiais para uma organização específica. Consulte [Distribuir aplicativos de linha de negócios para empresas](https://msdn.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) para obter informações sobre isso.
+
+## Tópicos relacionados
+- [Windows 10 para educação](https://technet.microsoft.com/edu/windows/index) no Centro de TI do Windows
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

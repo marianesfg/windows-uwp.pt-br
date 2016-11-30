@@ -4,8 +4,8 @@ ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrindo uma conta de desenvolvedor
 description: "Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Windows Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta."
 translationtype: Human Translation
-ms.sourcegitcommit: c4a753b7642354c4fe42cff721fb21337b14528f
-ms.openlocfilehash: b9ccd8e4756dd35fd775d91747710dd13b9ca7ed
+ms.sourcegitcommit: 10446e136d324cd8490f7547f853e75b534368b0
+ms.openlocfilehash: 1f847b9c3302b092dce6eb73dd01f761ec17c0a5
 
 ---
 # Abrindo uma conta de desenvolvedor
@@ -27,9 +27,13 @@ Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a
 
    Se você estiver se registrando como empresa, também precisará inserir o nome, o endereço de email e o telefone da pessoa que aprovará a conta da sua empresa.
 
-5.  Informe o **nome de exibição do editor** que você deseja usar (50 caracteres ou menos). Observe que se você inserir um nome já selecionado por outra pessoa ou se aparentemente alguém já tiver os direitos de usar esse nome, nós não permitiremos que você selecione esse nome. Para contas de empresa, o nome de exibição do fornecedor deve ser o nome comercial ou registrado da sua organização. Selecione isso com cuidado, pois os clientes verão esse nome quando navegarem e reconhecerão seus aplicativos por esse nome.
+5.  Para contas individuais, informe o **nome de exibição do editor** que você deseja usar (50 caracteres ou menos). Selecione isso com cuidado, pois os clientes verão esse nome quando navegarem e reconhecerão seus aplicativos por esse nome.
 
-  >  **Observação**  Verifique se tem os direitos para usar o nome. Se outra pessoa tiver registrado a marca ou detiver os direitos autorais sobre o nome escolhido, sua conta poderá ser fechada. Veja o [Contrato de Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/Hh694058) para saber mais. Se alguém estiver usando um nome de exibição do editor do qual você detenha a marca ou outros direitos jurídicos, [contate a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
+    Para contas empresariais, insira o **Nome registrado** da sua empresa (nome comercial ou registrado da sua organização). Isso será usado como o nome de exibição do editor.
+    
+    Observe que, se você inserir um nome já selecionado por outra pessoa ou se aparentemente alguém já tiver os direitos de usar esse nome, nós não permitiremos que você use esse nome. 
+
+  >  **Observação**  Certifique-se de ter os direitos de uso do nome inserido aqui. Se outra pessoa tiver registrado a marca ou detiver os direitos autorais sobre o nome escolhido, sua conta poderá ser fechada. Veja o [Contrato de Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/Hh694058) para saber mais. Se alguém estiver usando um nome de exibição do editor do qual você detenha a marca ou outros direitos jurídicos, [contate a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
 
 6.  Insira as informações de contato para a conta. Para uma conta de empresa, você também precisará fornecer informações de contato da pessoa que pode verificar se você está autorizado a criar a conta em nome de sua organização. Quando tiver terminado, clique em **Avançar** para ir para a seção **Pagamento**.
 
@@ -38,6 +42,8 @@ Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a
 8.  Analise suas informações de conta e confirme se tudo estiver correto. Leia e aceite os termos e as condições do [Contrato de Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/Hh694058). Marque a caixa para indicar que você leu e aceitou os termos.
 
 9.  Clique em **Concluir** para confirmar sua compra. Enviaremos uma mensagem de confirmação para o seu endereço de email de desenvolvedor.
+
+Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas de empresa, o processo demora um pouco mais, pois também precisamos confirmar se você está autorizado a configurar a conta para sua empresa. Essa verificação pode levar desde alguns dias a até várias semanas e normalmente inclui um telefonema para sua empresa. Você pode verificar o status da verificação na página **Configurações da conta**. 
 
 ## Diretrizes adicionais para contas da empresa
 
@@ -82,6 +88,6 @@ Quando você fechar sua conta, é importante entender o que acontece com qualque
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

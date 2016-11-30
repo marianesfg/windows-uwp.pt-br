@@ -4,8 +4,8 @@ ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: "Use a API de análise da Windows Store para recuperar de forma programática dados analíticos de aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows."
 title: "Acessar dados analíticos usando serviços da Windows Store"
 translationtype: Human Translation
-ms.sourcegitcommit: 47e0ac11178af98589e75cc562631c6904b40da4
-ms.openlocfilehash: 1293bb5beb927425928d832f887129263db5a895
+ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
+ms.openlocfilehash: 468be96b70d07567163b2caccebaa8e2f6ecd592
 
 ---
 
@@ -70,8 +70,10 @@ Depois que tiver um token de acesso do Azure AD, você estará pronto para chama
 -   [Obter aquisições de aplicativo](get-app-acquisitions.md)
 -   [Obter aquisições de complemento](get-in-app-acquisitions.md)
 -   [Obter dados de relatórios de erros](get-error-reporting-data.md)
--   [Obter classificações de aplicativos](get-app-ratings.md)
+-   [Obter classificações de aplicativo](get-app-ratings.md)
 -   [Obter avaliações de aplicativo](get-app-reviews.md)
+-   [Obter dados de desempenho de anúncios](get-ad-performance-data.md)
+-   [Obter dados de desempenho da campanha de anúncios](get-ad-campaign-performance-data.md)
 
 ## Exemplo de código
 
@@ -231,12 +233,14 @@ A API de análise da Windows Store devolve respostas de erro em um objeto JSON q
 * [Obter aquisições de aplicativo](get-app-acquisitions.md)
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)
 * [Obter dados de relatórios de erros](get-error-reporting-data.md)
-* [Obter classificações de aplicativos](get-app-ratings.md)
+* [Obter classificações de aplicativo](get-app-ratings.md)
 * [Obter avaliações de aplicativo](get-app-reviews.md)
+* [Obter dados de desempenho de anúncios](get-ad-performance-data.md)
+* [Obter dados de desempenho da campanha de anúncios](get-ad-campaign-performance-data.md)
  
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

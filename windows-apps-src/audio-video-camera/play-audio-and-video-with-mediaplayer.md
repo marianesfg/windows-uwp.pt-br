@@ -4,8 +4,8 @@ ms.assetid:
 description: "Este artigo mostra como reproduzir mídia em seu aplicativo Universal do Windows com o MediaPlayer."
 title: "Reproduzir áudio e vídeo com o MediaPlayer"
 translationtype: Human Translation
-ms.sourcegitcommit: 3d6f79ea55718d988415557bc4ac9a1f746f9053
-ms.openlocfilehash: 32df2810710e78eeb8c257548c39c0d5d978e888
+ms.sourcegitcommit: 34cb2fec3071add8617fe2bee2eaf50356611ac6
+ms.openlocfilehash: 66240809d47247312d9d4c49c7bf36ff70295559
 
 ---
 
@@ -39,6 +39,9 @@ Você pode definir a instância do**MediaPlayer** à qual o elemento está vincu
 Você também pode definir a origem de reprodução no **MediaPlayerElement**, e o elemento criará automaticamente uma nova instância do **MediaPlayer** que poderá ser acessada com a propriedade [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.MediaPlayer).
 
 [!code-cs[GetPlayerFromElement](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetGetPlayerFromElement)]
+
+> [!NOTE] 
+> Se você desabilitar o [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) do [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) definindo [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) como false, isso romperá o vínculo entre o **MediaPlayer** e o [**TransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.TransportControls) fornecido pelo **MediaPlayerElement**, portanto os controles de transporte internos não vão mais controlar automaticamente a reprodução do player. Em vez disso, você deve implementar seus próprios controles para regular o **MediaPlayer**.
 
 ##Tarefas comuns do MediaPlayer
 Esta seção mostra como usar alguns recursos do **MediaPlayer**.
@@ -174,6 +177,6 @@ Observe que se o valor de deslocamento de um player for mapeado para uma posiç�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

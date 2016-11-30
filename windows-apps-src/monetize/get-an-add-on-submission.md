@@ -4,8 +4,8 @@ ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: "Use este método na API de envio da Windows Store para obter dados para um envio de complemento existente."
 title: Obter um envio de complemento usando a API de envio da Windows Store
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 699f26e8a73e1777f5966faf346945807d460315
+ms.sourcegitcommit: 03942eb9015487cfd5690e4b1933e4febd705971
+ms.openlocfilehash: ecdd4292c7980a647075c55abf7d14edd39d23d6
 
 ---
 
@@ -15,6 +15,8 @@ ms.openlocfilehash: 699f26e8a73e1777f5966faf346945807d460315
 
 
 Use este método na API de envio da Windows Store para obter dados para um envio de complemento (também conhecido como produto no aplicativo ou IAP) existente. Para obter mais informações sobre o processo de criação de um envio de complemento, usando a API de envio da Windows Store, consulte [Gerenciar envios de complemento](manage-add-on-submissions.md).
+
+>**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de complemento no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** nos dados de resposta desse método será vazio, e você temporariamente não conseguirá obter os dados do preço e das vendas de um envio de complemento usando esse método. Atualizaremos a API de envio da Windows Store no futuro para apresentar uma nova maneira de acessar programaticamente as informações de preços para envios de complemento. Para obter mais informações, consulte o [Recurso de preços](manage-add-on-submissions.md#pricing-object).
 
 ## Pré-requisitos
 
@@ -146,7 +148,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 ## Códigos de erro
 
-Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se a solicitação não puder ser concluída com êxito, a resposta conterá um dos códigos de erro HTTP a seguir.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -167,6 +169,6 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,19 +4,19 @@ ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: "Use este método na API de envio da Windows Store para atualizar um envio de complemento existente."
 title: Atualizar um envio de complemento usando a API de envio da Windows Store
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: b7a8e1d39d5ee0a0858382b84ab00cc2c481da5d
+ms.sourcegitcommit: 7307ca70467a751d5adb53f3718c7e9cf0b70dbb
+ms.openlocfilehash: f42f2dba155aa0a29e0769fd96cce6d3a0de870b
 
 ---
 
 # Atualizar um envio de complemento usando a API de envio da Windows Store
 
 
-
-
 Use este método na API de envio da Windows Store para atualizar um envio existente do complemento (também conhecido como produto no app ou IAP). Depois de atualizar com êxito um envio usando esse método, você deverá [confirmar o envio](commit-an-add-on-submission.md) para ingestão e publicação.
 
 Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de complemento, usando a API de envio da Windows Store, consulte [Gerenciar envios de complemento](manage-add-on-submissions.md).
+
+>**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de complemento no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** no corpo da solicitação desse método será ignorado, e você temporariamente não conseguirá alterar os dados do preço e das vendas de um envio de complemento usando esse método. Atualizaremos a API de envio da Windows Store no futuro para apresentar uma nova maneira de acessar programaticamente as informações de preços para envios de complemento. Para obter mais informações, consulte o [Recurso de preços](manage-add-on-submissions.md#pricing-object).
 
 ## Pré-requisitos
 
@@ -62,15 +62,15 @@ O corpo da solicitação tem os parâmetros a seguir.
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| contentType           | string  |  O [tipo de conteúdo](../publish/enter-iap-properties.md#content-type) fornecido no complemento. Ele pode ter um dos seguintes valores: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
-| keywords           | array  | Uma matriz de cadeias de caracteres que contenham até 10 [palavras-chave](../publish/enter-iap-properties.md#keywords) do complemento. O aplicativo pode consultar complementos usando essas palavras-chave.   |
+| contentType           | string  |  O [tipo de conteúdo](../publish/enter-add-on-properties.md#content-type) fornecido no complemento. Ele pode ter um dos seguintes valores: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
+| keywords           | array  | Uma matriz de cadeias de caracteres que contenham até 10 [palavras-chave](../publish/enter-add-on-properties.md#keywords) do complemento. O aplicativo pode consultar complementos usando essas palavras-chave.   |
 | lifetime           | string  |  O tempo de vida do complemento. Ele pode ter um dos seguintes valores: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | objeto  | Um objeto que contém as informações de listagem do complemento. Para obter mais informações, consulte [Recurso de listagem](manage-add-on-submissions.md#listing-object).  |
 | pricing           | objeto  | Um objeto que contém as informações de preços do complemento. Para obter mais informações, consulte [Recurso de preços](manage-add-on-submissions.md#pricing-object).  |
-| targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
-| tag           | string  |  A [marca](../publish/enter-iap-properties.md#tag) do complemento.   |
-| visibility  | string  |  A visibilidade do complemento. Ele pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
+| tag           | string  |  Os [dados de desenvolvedor personalizados](../publish/enter-add-on-properties.md#custom-developer-data) do complemento (essas informações foram anteriormente chamadas de *marca*).   |
+| visibilidade  | string  |  A visibilidade do complemento. Ele pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
 
 <span/>
 
@@ -231,6 +231,6 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

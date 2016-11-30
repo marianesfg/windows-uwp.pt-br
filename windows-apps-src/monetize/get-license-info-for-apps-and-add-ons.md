@@ -4,12 +4,12 @@ ms.assetid: 9630AF6D-6887-4BE3-A3CB-D058F275B58F
 description: "Saiba como usar o namespace Windows.Services.Store para obter informações de licença para o aplicativo atual e seus complementos."
 title: "Obter informações de licença para seus aplicativos e complementos"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 5cd43b951cededad24bf4e88156634906e5c5165
+ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
+ms.openlocfilehash: 710800bcd5491407d90e8293006a687e27d06d2d
 
 ---
 
-# Obter informações de licença para seus aplicativos e complementos
+# Obter informações de licença para aplicativos e complementos
 
 Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar métodos da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para obter informações relacionadas a licença para o aplicativo atual e seus complementos (também conhecidos como produtos no aplicativo ou IAPs). Por exemplo, você pode usar essas informações para determinar se as licenças para o aplicativo ou seus complementos estão ativas ou se são licenças de avaliação.
 
@@ -26,9 +26,13 @@ O código neste exemplo pressupõe que:
 * O arquivo de código tenha uma instrução **using** para o namespace **Windows.Services.Store**.
 * O aplicativo seja um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md#api_intro).
 
+>**Observação**&nbsp;&nbsp;Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado neste exemplo para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
+
 ## Exemplo de código
 
-Para obter informações de licença para o aplicativo atual e seus complementos, use o método [GetAppLicenseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getapplicenseasync.aspx). Isso é um método assíncrono que retorna um objeto [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx) que fornece informações de licença. A propriedade [AddOnLicenses](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) fornece acesso às informações sobre as licenças de complemento para o aplicativo.
+Para obter informações de licença para o aplicativo atual, use o método [GetAppLicenseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getapplicenseasync.aspx). Trata-se de um método assíncrono que retorna um objeto [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx) que fornece informações de licença do aplicativo, inclusive propriedades que indicam se o usuário tem uma licença para usar o aplicativo ([IsActive](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.isactive.aspx)) e se a licença se destina a uma versão de avaliação ([IsTrial](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.istrial.aspx)).
+
+Para recuperar as licenças de complemento do aplicativo, use a propriedade [AddOnLicenses](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.addonlicenses.aspx) do objeto [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx). Essa propriedade retorna objetos [StoreLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storelicense.aspx) de coleção que representam as licenças de complemento do aplicativo. Para determinar se o usuário tem uma licença para usar um complemento, use a propriedade [IsActive](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storelicense.isactive.aspx).
 
 ```csharp
 private StoreContext context = null;
@@ -38,6 +42,9 @@ public async void GetLicenseInfo()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     workingProgressRing.IsActive = true;
@@ -75,6 +82,6 @@ Para obter um aplicativo de exemplo completo, consulte o [Exemplo da Loja](https
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ description: "A extensão de marcação xBind é uma alternativa a Binding. xBin
 title: "Extensão de marcação xBind"
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 translationtype: Human Translation
-ms.sourcegitcommit: 0f9955b897c626e7f6abb5557658e1b1e5937ffd
-ms.openlocfilehash: 7380386a77338c1fce7a7184b558a06605ffdf33
+ms.sourcegitcommit: 2dc706412684ded7fe4e98c6d01fb75ae65abd5f
+ms.openlocfilehash: b7d1dd183ba35e4b694a80d3e43628c928b218e5
 
 ---
 
@@ -191,7 +191,7 @@ As associações compiladas dependem da geração de código. Portanto, se você
 
 Páginas e controles de usuário que incluem associações compiladas terão uma propriedade "Bindings" no código gerado. Entre elas estão os seguintes métodos:
 - **Update()** - Isso atualizará os valores de todas as associações compiladas. Uma associação unidirecional/bidirecional terá os ouvintes conectados para detectar alterações.
-- **Initiatlize()** - Se as associações ainda não tiverem sido inicializadas, ela chamará Update() para inicializá-las
+- **Initialize()** - Se as associações ainda não tiverem sido inicializadas, ela chamará Update() para inicializá-las
 - **StopTracking()** - Ela desconectará todos os ouvintes criados para associações uni e bidirecionais. Elas podem ser reinicializadas usando-se o método Update().
 
 > [!NOTE]
@@ -224,6 +224,6 @@ Este exemplo usa XAML **{x: Bind}** com uma propriedade **ListView.ItemTemplate*
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: Desenhar formas
 description: "Aprenda a desenhar formas, como elipses, retângulos, polígonos e caminhos. A classe Path é uma maneira de visualizar uma linguagem de desenho baseada em vetor bastante complexa em uma interface do usuário XAML; por exemplo, você pode desenhar curvas de Bézier."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 2fd20e07c9b7e54559baeeb8324f11065a25444c
+ms.sourcegitcommit: f5934600cc185c952acc57ae38e0b190466e0dfa
+ms.openlocfilehash: 1d3c0f50487aa6204f758303e0e5b05b9087eae5
 
 ---
 # Desenhar formas
@@ -13,7 +13,7 @@ ms.openlocfilehash: 2fd20e07c9b7e54559baeeb8324f11065a25444c
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** APIs importantes **
+**APIs importantes**
 
 -   [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355)
 -   [**Namespace Windows.UI.Xaml.Shapes**](https://msdn.microsoft.com/library/windows/apps/BR243401)
@@ -43,6 +43,15 @@ O próximo exemplo cria uma [**Ellipse**](https://msdn.microsoft.com/library/win
 <Ellipse Fill="SteelBlue" Height="200" Width="200" />
 ```
 
+```csharp
+var ellipse1 = new Ellipse();
+ellipse1.Fill = new SolidColorBrush(Windows.UI.Colors.SteelBlue);
+ellipse1.Width = 200;
+ellipse1.Height = 200;
+
+layoutRoot.Children.Add(ellipse1);
+```
+
 Veja a seguir o [**Elipse**](https://msdn.microsoft.com/library/windows/apps/BR243343) renderizado.
 
 ![Uma Elipse renderizada.](images/shapes-ellipse.jpg)
@@ -69,29 +78,57 @@ O próximo exemplo cria um [**Rectangle**](https://msdn.microsoft.com/library/wi
            StrokeThickness="3"
            RadiusX="50"
            RadiusY="10" />
-           ```
+```
 
-Here's the rendered [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371).
+```csharp
+var rectangle1 = new Rectangle();
+rectangle1.Fill = new SolidColorBrush(Windows.UI.Colors.Blue);
+rectangle1.Width = 200;
+rectangle1.Height = 100;
+rectangle1.Stroke = new SolidColorBrush(Windows.UI.Colors.Black);
+rectangle1.StrokeThickness = 3;
+rectangle1.RadiusX = 50;
+rectangle1.RadiusY = 10;
 
-![A rendered Rectangle.](images/shapes-rectangle.jpg)
+layoutRoot.Children.Add(rectangle1);
 
-**Tip**  There are some scenarios for UI definitions where instead of using a [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371), a [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) might be more appropriate. If your intention is to create a rectangle shape around other content, it might be better to use **Border** because it can have child content and will automatically size around that content, rather than using the fixed dimensions for height and width like **Rectangle** does. A **Border** also has the option of having rounded corners if you set the [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius) property.
+```
+
+Aqui está o [**Retângulo**](https://msdn.microsoft.com/library/windows/apps/BR243371).
+
+![Um Retângulo renderizado.](images/shapes-rectangle.jpg)
+
+**Dica**  Existem alguns cenários para definições de interface do usuário onde, em vez de usar um [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371), uma [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) pode ser mais apropriada. Se a sua intenção é criar uma forma retangular ao redor de outro conteúdo, deve ser melhor usar a **Border** porque ela pode ter conteúdo filho e será dimensionada automaticamente ao redor desse conteúdo, em vez de usar dimensões fixas para a altura e largura, como faz o **Rectangle**. Uma **Border** também tem a opção de ter bordas arredondadas quando você define a propriedade [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius).
 
  
 
-On the other hand, a [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) is probably a better choice for control composition. A **Rectangle** shape is seen in many control templates because it's used as a "FocusVisual" part for focusable controls. Whenever the control is in a "Focused" visual state, this rectangle is made visible, in other states it's hidden.
+Por outro lado, provavelmente [**Retângulo**](https://msdn.microsoft.com/library/windows/apps/BR243371) é uma opção melhor para a composição de controle. A forma **Rectangle** aparece em vários modelos de controle porque ela é usada como uma parte "FocusVisual" para controles focalizáveis. Sempre que o controle está em um estado visual "Focalizado", esse retângulo fica visível. Nos demais estados, ele fica oculto.
 
-## Polygon
+## Polígono
 
-A [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) is a shape with a boundary defined by an arbitrary number of points. The boundary is created by connecting a line from one point to the next, with the last point connected to the first point. The [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polygon.points.aspx) property defines the collection of points that make up the boundary. In XAML, you define the points with a comma-separated list. In code-behind you use a [**PointCollection**](https://msdn.microsoft.com/library/windows/apps/BR210220) to define the points and you add each individual point as a [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) value to the collection.
+Um [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) é uma forma delimitada por um número arbitrário de pontos. A delimitação se dá pela conexão de uma linha de um ponto ao seguinte, com o último ponto conectado ao primeiro ponto. A propriedade [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polygon.points.aspx) define uma coleção de pontos que formam o limite. Na XAML, os pontos são definidos por uma lista separada por vírgulas. Em code-behind, uma [**PointCollection**](https://msdn.microsoft.com/library/windows/apps/BR210220) é usada para definir os pontos e cada ponto é acrescentado como um valor [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) à coleção.
 
-You don't need to explicitly declare the points such that the start point and end point are both specified as the same [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) value. The rendering logic for a [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) assumes that you are defining a closed shape and will connect the end point to the start point implicitly.
+Você não precisa declarar explicitamente os pontos de forma que o ponto inicial e o ponto final sejam especificados como o mesmo valor [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870). A lógica de renderização de um [**Polígono**](https://msdn.microsoft.com/library/windows/apps/BR243359) pressupõe que você está definindo uma forma fechada e conectará o ponto final ao ponto inicial de forma implícita.
 
-The next example creates a [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) with 4 points set to `(10,200)`, `(60,140)`, `(130,140)`, and `(180,200)`. It uses a [**LightBlue**](https://msdn.microsoft.com/library/windows/apps/Hh747960) value of [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) for its [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill), and has no value for [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) so it has no perimeter outline.
+O próximo exemplo cria um [**Polígono**](https://msdn.microsoft.com/library/windows/apps/BR243359) com quatro pontos definidos como `(10,200)`, `(60,140)`, `(130,140)`e `(180,200)`. Ele usa um valor [**LightBlue**](https://msdn.microsoft.com/library/windows/apps/Hh747960) de [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) para seu [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill) e não tem valor para o [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) para que não tenha contorno do perímetro.
 
 ```xml
 <Polygon Fill="LightBlue"
          Points="10,200,60,140,130,140,180,200" />
+```
+
+```csharp
+var polygon1 = new Polygon();
+polygon1.Fill = new SolidColorBrush(Windows.UI.Colors.LightBlue);
+
+var points = new PointCollection();
+points.Add(new Windows.Foundation.Point(10, 200));
+points.Add(new Windows.Foundation.Point(60, 140));
+points.Add(new Windows.Foundation.Point(130, 140));
+points.Add(new Windows.Foundation.Point(180, 200));
+polygon1.Points = points;
+
+layoutRoot.Children.Add(polygon1);
 ```
 
 Veja a seguir o [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) renderizado.
@@ -100,13 +137,24 @@ Veja a seguir o [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR
 
 **Dica**  Um valor de [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) costuma ser usado como um tipo em XAML para cenários que não estejam declarando os vértices de formas. Por exemplo, **Point** faz parte dos dados de evento para os eventos de toque, para que você saiba exatamente onde ocorreu a ação de toque no espaço de uma coordenada. Para saber mais sobre **Point** e como usá-lo na XAML ou no código, consulte o tópico de referência de API para [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
 
- 
-
 ## Line
 
 Uma [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345) é simplesmente uma linha desenhada entre dois pontos no espaço coordenado. Uma **Line** ignora todos os valores fornecidos para [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill), pois não possui espaço interno. Para uma **Line**, especifique os valores para as propriedades [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) e [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness); caso contrário, a **Line** não será renderizada.
 
 Não use os valores [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) para especificar uma forma de [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345), em vez disso, use valores [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) discretos para [**X1**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.x1.aspx), [**Y1**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.y1.aspx), [**X2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.x2.aspx) e [**Y2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.y2.aspx). Isso permite a marcação mínima para as linhas horizontais ou verticais. Por exemplo, `<Line Stroke="Red" X2="400"/>` define uma linha horizontal com comprimento de 400 pixels. Por padrão, as outras propriedades X,Y são 0, portanto, em termos de pontos, este XAML desenha uma linha de `(0,0)` a `(400,0)`. Você pode então usar [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027) para mover **Line** na íntegra, caso queira começar em um ponto que não seja (0,0).
+
+```xml
+<Line Stroke="Red" X2="400"/>
+```
+
+```csharp
+var line1 = new Line();
+line1.Stroke = new SolidColorBrush(Windows.UI.Colors.Red);
+line1.X2 = 400;
+
+layoutRoot.Children.Add(line1);
+
+```
 
 ## <span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> Polilinha
 
@@ -114,7 +162,6 @@ Uma [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) é 
 
 **Observação**   Você pode ter pontos inicial e final idênticos de forma explícita nos [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) definidos para a [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365), mas nesse caso você provavelmente poderia usar um [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359).
 
- 
 
 Quando você especifica um [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill) de uma [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365), **Fill** pinta o espaço interior da forma, mesmo se os pontos inicial e final dos [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) definidos para a **Polyline** não fizerem interseção. Quando você não especifica um **Fill**, a **Polyline** é semelhante ao que teria sido renderizado se você tivesse especificado vários elementos [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345) individuais, com pontos iniciais e finais de linhas consecutivas em interseção.
 
@@ -126,6 +173,21 @@ Este exemplo cria uma [**Polyline**](https://msdn.microsoft.com/library/windows/
 <Polyline Stroke="Black"
         StrokeThickness="4"
         Points="10,200,60,140,130,140,180,200" />
+```
+
+```csharp
+var polyline1 = new Polyline();
+polyline1.Stroke = new SolidColorBrush(Windows.UI.Colors.Black);
+polyline1.StrokeThickness = 4;
+
+var points = new PointCollection();
+points.Add(new Windows.Foundation.Point(10, 200));
+points.Add(new Windows.Foundation.Point(60, 140));
+points.Add(new Windows.Foundation.Point(130, 140));
+points.Add(new Windows.Foundation.Point(180, 200));
+polyline1.Points = points;
+
+layoutRoot.Children.Add(polyline1);
 ```
 
 Veja a seguir a [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) renderizada. Observe que o primeiro e o último pontos não estão conectados pelo contorno do [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) como se estivessem em um [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359).
@@ -153,40 +215,93 @@ O segundo segmento começa com um comando de linha horizontal absoluto "H", que 
 <Path Stroke="DarkGoldenRod" 
       StrokeThickness="3"
       Data="M 100,200 C 100,25 400,350 400,175 H 280" />
-      ```
+```
 
-Here's the rendered [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355).
+Aqui está o [**Caminho**](https://msdn.microsoft.com/library/windows/apps/BR243355).
 
-![A rendered Path.](images/shapes-path.jpg)
+![Um Caminho renderizado.](images/shapes-path.jpg)
 
-The next example shows a usage of the other technique we discussed: a [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.geometrygroup) with a [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168). This example exercises some of the contributing geometry types that can be used as part of a **PathGeometry**: [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143) and the various elements that can be a segment in [**PathFigure.Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164).
+O exemplo a seguir mostra a utilização de outra técnica que discutimos: [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.geometrygroup) com [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168). Este exemplo exercitas alguns tipos de geometria auxiliar que podem ser usados como parte de **PathGeometry**: [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143) e os diversos elementos que podem ser um segmento em [**PathFigure.Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164).
 
 ```xml
 <Path Stroke="Black" StrokeThickness="1" Fill="#CCCCFF">
-            <Path.Data>
-              <GeometryGroup>
-                  <RectangleGeometry Rect="50,5 100,10" />
-                  <RectangleGeometry Rect="5,5 95,180" />
-                  <EllipseGeometry Center="100, 100" RadiusX="20" RadiusY="30"/>
-                  <RectangleGeometry Rect="50,175 100,10" />
-                  <PathGeometry>
-                    <PathGeometry.Figures>
-                      <PathFigureCollection>
+    <Path.Data>
+        <GeometryGroup>
+            <RectangleGeometry Rect="50,5 100,10" />
+            <RectangleGeometry Rect="5,5 95,180" />
+            <EllipseGeometry Center="100, 100" RadiusX="20" RadiusY="30"/>
+            <RectangleGeometry Rect="50,175 100,10" />
+            <PathGeometry>
+                <PathGeometry.Figures>
+                    <PathFigureCollection>
                         <PathFigure IsClosed="true" StartPoint="50,50">
-                          <PathFigure.Segments>
-                            <PathSegmentCollection>
-                              <BezierSegment Point1="75,300" Point2="125,100" Point3="150,50"/>
-                              <BezierSegment Point1="125,300" Point2="75,100"  Point3="50,50"/>
-                            </PathSegmentCollection>
-                          </PathFigure.Segments>
+                            <PathFigure.Segments>
+                                <PathSegmentCollection>
+                                    <BezierSegment Point1="75,300" Point2="125,100" Point3="150,50"/>
+                                    <BezierSegment Point1="125,300" Point2="75,100"  Point3="50,50"/>
+                                </PathSegmentCollection>
+                            </PathFigure.Segments>
                         </PathFigure>
-                      </PathFigureCollection>
-                    </PathGeometry.Figures>
-                  </PathGeometry>               
-              </GeometryGroup>
-            </Path.Data>
-          </Path>
+                    </PathFigureCollection>
+                </PathGeometry.Figures>
+            </PathGeometry>
+        </GeometryGroup>
+    </Path.Data>
+</Path>
 ```
+
+```csharp
+var path1 = new Windows.UI.Xaml.Shapes.Path();
+path1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 204, 204, 255));
+path1.Stroke = new SolidColorBrush(Windows.UI.Colors.Black);
+path1.StrokeThickness = 1;
+
+var geometryGroup1 = new GeometryGroup();
+var rectangleGeometry1 = new RectangleGeometry();
+rectangleGeometry1.Rect = new Rect(50, 5, 100, 10);
+var rectangleGeometry2 = new RectangleGeometry();
+rectangleGeometry2.Rect = new Rect(5, 5, 95, 180);
+geometryGroup1.Children.Add(rectangleGeometry1);
+geometryGroup1.Children.Add(rectangleGeometry2);
+
+var ellipseGeometry1 = new EllipseGeometry();
+ellipseGeometry1.Center = new Point(100, 100);
+ellipseGeometry1.RadiusX = 20;
+ellipseGeometry1.RadiusY = 30;
+geometryGroup1.Children.Add(ellipseGeometry1);
+
+var pathGeometry1 = new PathGeometry();
+var pathFigureCollection1 = new PathFigureCollection();
+var pathFigure1 = new PathFigure();
+pathFigure1.IsClosed = true;
+pathFigure1.StartPoint = new Windows.Foundation.Point(50, 50);
+pathFigureCollection1.Add(pathFigure1);
+pathGeometry1.Figures = pathFigureCollection1;
+
+var pathSegmentCollection1 = new PathSegmentCollection();
+var pathSegment1 = new BezierSegment();
+pathSegment1.Point1 = new Point(75, 300);
+pathSegment1.Point2 = new Point(125, 100);
+pathSegment1.Point3 = new Point(150, 50);
+pathSegmentCollection1.Add(pathSegment1);
+
+var pathSegment2 = new BezierSegment();
+pathSegment2.Point1 = new Point(125, 300);
+pathSegment2.Point2 = new Point(75, 100);
+pathSegment2.Point3 = new Point(50, 50);
+pathSegmentCollection1.Add(pathSegment2);
+pathFigure1.Segments = pathSegmentCollection1;
+
+geometryGroup1.Children.Add(pathGeometry1);
+path1.Data = geometryGroup1;
+
+layoutRoot.Children.Add(path1);
+
+```
+
+Aqui está o [**Caminho**](https://msdn.microsoft.com/library/windows/apps/BR243355).
+
+![Um Caminho renderizado.](images/shapes-path-2.png)
 
 Usar [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168) pode ser mais legível do que preencher uma cadeia de caracteres de [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data). Por outro lado, [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) usa uma sintaxe compatível com definições de caminho de imagem SVG (Elementos Gráficos Vetoriais Escaláveis). Então, isso pode ser útil para a portabilidade de gráficos SVG ou como resultado de uma ferramenta, como o Blend.
 
@@ -200,6 +315,6 @@ Usar [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

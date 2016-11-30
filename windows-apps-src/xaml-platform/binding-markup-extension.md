@@ -4,8 +4,8 @@ description: "A extensão de marcação Binding é convertida, em um tempo de ca
 title: "Extensão de marcação Binding"
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 translationtype: Human Translation
-ms.sourcegitcommit: 0f9955b897c626e7f6abb5557658e1b1e5937ffd
-ms.openlocfilehash: 95b48b55f11c4de0b4a51106b6cf5439bfa784b9
+ms.sourcegitcommit: 3ad7dd8261ceb549de6bd9a5ae513e6f6fdb8d49
+ms.openlocfilehash: a6431aed9941079bd05c623229f4ae3236a1b327
 
 ---
 
@@ -20,11 +20,6 @@ ms.openlocfilehash: 95b48b55f11c4de0b4a51106b6cf5439bfa784b9
 A extensão de marcação **{Binding}** é usada para propriedades de associação de dados nos controles para valores provenientes de uma fonte de dados, como o código. A extensão de marcação **{Binding}** é convertida, em um tempo de carregamento XAML, para uma instância da classe [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Esse objeto de associação obtém um valor de uma propriedade em uma fonte de dados e empurra-o para a propriedade no controle. O objeto de associação, opcionalmente, pode ser configurado para observar mudanças no valor da propriedade de origem de dados e atualizar-se com base nessas alterações. Ele também pode ser configurado opcionalmente para enviar as alterações para o valor de controle de volta para a propriedade de origem. A propriedade alvo de uma vinculação de dados deve ser uma propriedade de dependência. Para obter mais informações, consulte [Dependency properties overview](dependency-properties-overview.md).
 
 **{Binding}** tem a mesma propriedade de dependência precedente como um valor local, e definir um valor local em código imperativo remove o efeito de qualquer **{Binding}** definido em marcações.
-
-**Aplicativos de exemplo que demonstram {Binding}**
-
--   Baixe o aplicativo [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950).
--   Baixe o aplicativo [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952).
 
 ## Uso do atributo XAML
 
@@ -48,7 +43,7 @@ A extensão de marcação **{Binding}** é usada para propriedades de associaç�
 
 ## Caminho de propriedade
 
-*PropertyPath* define o valor do [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830), que descreve a propriedade a qual você está fazendo a associação (a propriedade de origem). PropertyPath é um parâmetro posicional, portanto, você pode especificá-lo como o primeiro parâmetro sem nome: `{Binding Path=...}`. Ou você pode usar o nome do parâmetro explicitamente: `{Binding Path=...}`.
+[**Caminho**](https://msdn.microsoft.com/library/windows/apps/br209830) descreve a propriedade à qual você está se associando (a propriedade de origem). Caminho é um parâmetro de posição, o que significa que você pode usar o nome do parâmetro explicitamente (`{Binding Path=EmployeeID}`), ou pode especificá-lo como o primeiro parâmetro sem nome (`{Binding EmployeeID}`).
 
 O tipo de [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) é um caminho de propriedade, que é uma cadeia de caracteres que evolui para uma propriedade ou subpropriedade do seu tipo personalizado ou de um tipo de estrutura. O tipo pode ser, mas precisa ser obrigatoriamente, um [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). Etapas de um caminho de propriedade são delimitadas por pontos (.), e você pode incluir vários delimitadores para percorrer subpropriedades sucessivas. Use o ponto delimitador independentemente da linguagem de programação usada para implementar o objeto sendo associado.
 
@@ -86,7 +81,7 @@ Para saber mais sobre a sintaxe de cadeia de caracteres para um caminho de propr
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) e **ConverterLanguage** estão todos relacionados à situação de conversão de um valor ou tipo de uma fonte de associação a um tipo ou valor que é compatível com a propriedade do destino da associação. Para saber mais, veja a seção "Conversões de dados" em [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 > [!NOTE]
-> A partir do Windows 10, versão 1607, a estrutura XAML fornece um Booleano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **falso** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um Booleano sem criar um conversor. Para usar o conversor integrado, a versão do SDK de alvo mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir do Windows 10, versão 1607, a estrutura XAML fornece um Booleano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **falso** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um Boolenao sem criar um conversor. Para usar o conversor integrado, a versão do SDK de alvo mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) e [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) especificam uma fonte de associação, portanto são mutualmente exclusivas.
 
@@ -131,6 +126,6 @@ O Microsoft IntelliSense no Microsoft Visual Studio exibe as propriedades de con
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ title: Registrar uma tarefa em segundo plano
 description: "Aprenda a criar uma função que pode ser reutilizada para registrar com segurança a maioria das tarefas em segundo plano."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
+ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
+ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
 
 Aprenda a criar uma função que pode ser reutilizada para registrar com segurança a maioria das tarefas em segundo plano.
 
-Este tópico se aplica a tarefas em segundo plano de processo único e em segundo plano executadas em um processo à parte. Este tópico considera que você já tem uma tarefa em segundo plano que precisa ser registrada. (Consulte [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md) ou [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md) para obter informações sobre como escrever uma tarefa em segundo plano).
+Este tópico se aplica a tarefas em segundo plano dentro do processo e em segundo plano executadas em um processo à parte. Este tópico considera que você já tem uma tarefa em segundo plano que precisa ser registrada. (Consulte [Criar e registrar uma tarefa em segundo plano que é executada em um processo à parte](create-and-register-an-outofproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano dentro do processo](create-and-register-an-inproc-background-task.md) para obter informações sobre como escrever uma tarefa em segundo plano).
 
 Este tópico discorre sobre a função utilitária que registra tarefas em segundo plano. Esta função utilitária verifica registros existentes antes de registrar a tarefa várias vezes para evitar problemas com registros múltiplos e pode aplicar uma condição de sistema à tarefa em segundo plano. O tópico inclui um exemplo completo e prático desta função utilitária.
 
@@ -37,7 +37,7 @@ Esta função obtém o ponto de entrada da tarefa, seu nome, um gatilho de taref
 
 > [!Important]
 > `taskEntryPoint` - para tarefas em segundo plano executadas em um processo à parte; ele deve ser construído como o nome do namespace, '.', e o nome da classe que contém a classe em segundo plano. A cadeia de caracteres diferencia maiúsculas de minúsculas.  Por exemplo, se você tivesse um namespace "MyBackgroundTasks" e uma classe "BackgroundTask1" contendo o código da classe em segundo plano, a cadeia de caracteres para `taskEntryPoint` seria "MyBackgroundTasks.BackgruondTask1".
-> Se a tarefa em segundo plano for executada no mesmo processo do aplicativo (ou seja, uma tarefa em segundo plano de processo único) `taskEntryPoint` não deverá ser definido.
+> Se a tarefa em segundo plano for executada no mesmo processo do aplicativo (ou seja, uma tarefa em segundo plano dentro do processo) `taskEntryPoint` não deverá ser definido.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -182,7 +182,7 @@ O exemplo a seguir retorna a tarefa existente ou adiciona código que registra a
 >
 >     builder.Name = name;
 >
->     // single-process background tasks don't set TaskEntryPoint
+>     // in-process background tasks don't set TaskEntryPoint
 >     if ( taskEntryPoint != null && taskEntryPoint != String.Empty)
 >     {
 >         builder.TaskEntryPoint = taskEntryPoint;
@@ -377,8 +377,8 @@ Este exemplo mostra a função completa de registro de tarefa em segundo plano. 
 
 ****
 
-* [Criar e registrar uma tarefa em segundo plano que é executada em um processo separado](create-and-register-a-background-task.md)
-* [Criar e registrar uma tarefa em segundo plano de processo único](create-and-register-a-singleprocess-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-an-outofproc-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
@@ -388,9 +388,6 @@ Este exemplo mostra a função completa de registro de tarefa em segundo plano. 
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-
-****
-
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
@@ -400,6 +397,6 @@ Este exemplo mostra a função completa de registro de tarefa em segundo plano. 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

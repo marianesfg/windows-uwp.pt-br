@@ -4,8 +4,8 @@ title: "Dar suporte à vinculação de aplicativos à Web com manipuladores de U
 description: "Promover o envolvimento do usuário com seu aplicativo usando os manipuladores de URI de aplicativos"
 keywords: "Vinculação profunda do Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 9ef86dcd4ae3d922b713d585543f1def48fcb645
-ms.openlocfilehash: c9833f29d6080509c849e9d624f2bfcd0b0af04c
+ms.sourcegitcommit: cb3dbf7fd55c92339c77124bd22b3484fa389285
+ms.openlocfilehash: d7ce1dbfdf8ce0069b4d882323de8fd6f1b242f7
 
 ---
 
@@ -53,7 +53,7 @@ Crie um arquivo JSON (sem a extensão de arquivo .json) chamado **windows-app-we
 [{
   "packageFamilyName": "YourAppsPFN",
   "paths": [ "*" ],
-  "excludePaths" : [ "/news/*, /blog/*" ]
+  "excludePaths" : [ "/news/*", "/blog/*" ]
  }]
 ```
 
@@ -68,7 +68,7 @@ O exemplo de arquivo JSON acima demonstra o uso de curingas. Os curingas permite
 | *****       | Representa qualquer subcadeia de caracteres      |
 | **?**        | Representa um único caractere |
 
-Por exemplo, o `"excludePaths" : [ "/news/*, /blog/*" ]` fornecido no exemplo acima, seu aplicativo dará suporte a todos os caminhos que começam com o endereço do site (por exemplo, msn.com), **exceto** aqueles em `/news/` e `/blog/`. **msn.com/weather.html** terá suporte, mas não ****msn.com/news/topnews.html****.
+Por exemplo, o `"excludePaths" : [ "/news/*", "/blog/*" ]` fornecido no exemplo acima, seu aplicativo dará suporte a todos os caminhos que começam com o endereço do site (por exemplo, msn.com), **exceto** aqueles em `/news/` e `/blog/`. **msn.com/weather.html** terá suporte, mas não ****msn.com/news/topnews.html****.
 
 
 ### Vários aplicativos
@@ -79,11 +79,11 @@ Se você tiver dois aplicativos que gostaria de vincular ao seu site, indique os
 [{
   "packageFamilyName": "YourAppsPFN",
   "paths": [ "*" ],
-  "excludedPaths" : [ "/news/*, /blog/*" ]
+  "excludePaths" : [ "/news/*", "/blog/*" ]
  },
  {
   "packageFamilyName": "Your2ndAppsPFN",
-  "paths": [ "/example/*, /links/*" ]
+  "paths": [ "/example/*", "/links/*" ]
  }]
 ```
 
@@ -195,6 +195,6 @@ O [Exemplo de execução de associação](https://github.com/Microsoft/Windows-u
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

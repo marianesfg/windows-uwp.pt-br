@@ -4,15 +4,15 @@ Description: "O relatório de aquisições de Complemento do painel do Centro de
 title: "Relatório de aquisições de complemento"
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 translationtype: Human Translation
-ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
-ms.openlocfilehash: 144a8400acf0333fcd50e698b333c02942081ef3
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 76ea807f1f8306bb964a61d1c81e9bf578e4b344
 
 ---
 
 # Relatório de aquisições de complemento
 
 
-O relatório de **aquisições de Complemento** do painel do Centro de Desenvolvimento do Windows permite que você veja quantos complementos você vendeu, além das informações demográficas e dos detalhes da plataforma. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando a [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
+O relatório de **aquisições de Complemento** do painel do Centro de Desenvolvimento do Windows permite que você veja quantos complementos você vendeu, além das informações demográficas e dos detalhes da plataforma. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter aquisições de complemento](../monetize/get-in-app-acquisitions.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Nesse relatório, uma aquisição de complemento significa que um cliente comprou um complemento de você. Várias compras do mesmo complemento consumível pelo mesmo cliente são contadas como aquisições de complementos separadas.
 
@@ -66,6 +66,6 @@ O catálogo em destaque **Versão do sistema operacional** mostra o número tota
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

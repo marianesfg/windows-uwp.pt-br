@@ -4,8 +4,8 @@ ms.assetid: A0DFF26B-FE06-459B-ABDC-3EA4FEB7A21E
 description: "Use este método na API de envio da Windows Store para obter dados para um envio de pacote de pré-lançamento existente."
 title: "Obter um envio do pacote de pré-lançamento usando a API de envio da Windows Store"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: d9b445361f9931a4745f5c0b17222637b5d83c4d
+ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
+ms.openlocfilehash: e2929ad3e2bb71ba3de5f74a82c4b0a43504dbd6
 
 ---
 
@@ -50,7 +50,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o envio do pacote de pré-lançamento que você deseja obter. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Obrigatório. A ID do pacote de pré-lançamento que contém o envio que você deseja obter. Essa ID está disponível no painel do Centro de Desenvolvimento, e está incluída nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
+| flightId | string | Obrigatório. A ID do pacote de pré-lançamento que contém o envio que você deseja obter. Essa ID está disponível no painel do Centro de Desenvolvimento e está incluída nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
 | submissionId | string | Obrigatório. A ID do envio a ser obtida. Essa ID está disponível no painel do Centro de Desenvolvimento e está incluída nos dados de resposta de solicitações para [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md).  |
 
 <span/>
@@ -94,6 +94,16 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
       "minimumSystemRam": "None"
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "fileUploadUrl": "https://productingestionbin1.blob.core.windows.net/ingestion/8b389577-5d5e-4cbe-a744-1ff2e97a9eb8?sv=2014-02-14&sr=b&sig=wgMCQPjPDkuuxNLkeG35rfHaMToebCxBNMPw7WABdXU%3D&se=2016-06-17T21:29:44Z&sp=rwl",
   "targetPublishMode": "Immediate",
   "targetPublishDate": "",
@@ -103,7 +113,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 ## Códigos de erro
 
-Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se a solicitação não puder ser concluída com êxito, a resposta conterá um dos códigos de erro HTTP a seguir.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -124,6 +134,6 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

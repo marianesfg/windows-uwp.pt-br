@@ -1,11 +1,11 @@
 ---
 author: jnHs
-Description: "Se seu aplicativo usa um AdMediatorControl ou AdControl para exibir anúncios na barra de notificação, você pode aumentar sua taxa de preenchimento de anúncio e receita mostrando anúncios afiliados da Microsoft em seu aplicativo."
+Description: "Você pode usar pacotes de pré-lançamento para distribuir pacotes que são dados apenas para um grupo de teste limitado."
 title: "Pacotes de pré-lançamento"
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
 translationtype: Human Translation
-ms.sourcegitcommit: baa8212b7ec26be1f50e051fa06bff4bf8095227
-ms.openlocfilehash: 34321a5fd3db10833b958049597ebf830599cfb4
+ms.sourcegitcommit: 0eef2f719dce460662215e9b5d692d6caebe5a37
+ms.openlocfilehash: 4fd74afc3935b443a5723c3ebdb0ebcf8bef18f0
 
 ---
 
@@ -17,7 +17,7 @@ Os pacotes de pré-lançamento permitem que você forneça diferentes pacotes ao
 
 Os pacotes de pré-lançamento devem passar pelo [processo de certificação](the-app-certification-process.md), exatamente como um envio de versão completa normal. Se, mais tarde, você decidir que quer tornar pacotes de um pacote de pré-lançamento disponíveis para todos seus clientes, pode puxar esses pacotes para seu envio de versão completa como descrito abaixo.
 
-Quando você configura pacotes de pré-lançamento, pode escolher as pessoas específicas que devem receber pacotes específicos, adicionando-as a um grupo de versão de pré-lançamento. Qualquer pessoa em um grupo de versão de pré-lançamento que estiver usando um dispositivo executando uma versão do Windows 10 que ofereça suporte a pacotes de pré-lançamento (build Windows.Desktop 10586 ou posterior; build Windows.Mobile 10586.63 ou posterior; ou Xbox One) receberá os pacotes dos pacote de pré-lançamentos que você atribuir a esse grupo em particular. Qualquer pessoa que não tenha sido adicionada a um de seus grupos de versão de pré-lançamento ou que esteja usando um dispositivo que não oferece suporte a pacotes de pré-lançamento receberá pacotes do envio de versão completa.
+Ao configurar pacotes de pré-lançamento, você pode escolher as pessoas específicas que devem receber pacotes específicos, adicionando-as a um **grupo de versão de pré-lançamento**. Qualquer pessoa em um grupo de versão de pré-lançamento que estiver usando um dispositivo executando uma versão do Windows 10 que ofereça suporte a pacotes de pré-lançamento (build Windows.Desktop 10586 ou posterior; build Windows.Mobile 10586.63 ou posterior; ou Xbox One) receberá os pacotes dos pacote de pré-lançamentos que você atribuir a esse grupo em particular. (Os pacotes de pré-lançamento podem incluir pacotes que segmentem qualquer versão de sistema operacional, inclusive Windows 8.1/Windows Phone 8.1 ou anteriores). Qualquer pessoa que não tiver sido adicionada a um dos grupos de versão de pré-lançamento ou que esteja usando um dispositivo não compatível com pacotes de pré-lançamento receberá pacotes do envio de versão completa.
 
 > **Importante** Em dispositivos desktop e móveis, as pessoas nos grupos de versão de pré-lançamento receberão os pacotes no pré-lançamento automaticamente sempre que você fornecer atualizações. No entanto, **pessoas nos grupos de versão de pré-lançamento que estiverem usando dispositivos Xbox precisarão verificar atualizações manualmente** para receber os pacotes mais recentes, certificando-se de que eles estejam conectados ao dispositivo usando a conta da Microsoft (com o endereço de email associado incluído no grupo de versão de pré-lançamento).
 
@@ -38,9 +38,10 @@ Ao criar um grupo de versões de pré-lançamento, você deve fornecer um nome. 
 Clique em **Criar grupo** para salvar o grupo e continuar configurando o pacote de pré-lançamento.
 
 > **Importante** Certifique-se de que você obteve o consentimento que for necessário das pessoas que acrescentar ao grupo de envio de versão de pré-lançamento e que elas entenderam que receberão pacotes diferentes do seu envio de versão completa. 
+
 > Também seria bom levar em consideração como as pessoas em seu pacote de pré-lançamento podem lhe dar a opinião delas sobre o aplicativo. Sugerimos [adicionar um controle ao seu aplicativo para iniciar o Hub de Feedback](../monetize/launch-feedback-hub-from-your-app.md), para que os clientes possam dar sua opinião diretamente. Assim, você pode analisar os comentários no [relatório de feedback](feedback-report.md)) do aplicativo.
 
-Para editar o grupo de versão de pré-lançamento mais tarde, você pode clicar em **Exportar .csv** para salvar suas informações de grupo em um arquivo .csv. Faça suas alterações nesse arquivo, clique em **Importar .csv** para usar a nova versão para atualizar a associação do grupo. Observe que pode levar até 30 minutos para que as alterações na associação do grupo de versão de pré-lançamento sejam implementadas. Se você adicionar pessoas a um grupo de versão de pré-lançamento depois de publicar um pacote de pré-lançamento associado, os pacotes serão enviados para o novo pessoal automaticamente; você não precisa criar e publicar um novo envio para esse pacote de pré-lançamento. 
+Para editar o grupo de versão de pré-lançamento depois, clique em **View and manage existing groups** ao criar uma nova versão de pré-lançamento e, em seguida, selecione o grupo da versão de pré-lançamento que você deseja modificar ou clique no nome do grupo da versão de pré-lançamento na página de visão geral de um pacote de pré-lançamento. É possível adicionar ou remover endereços de email diretamente no campo ou, para alterações maiores, clicar em **Exportar .csv** para salvar as informações de associação do grupo da versão de pré-lançamento em um arquivo .csv. Faça suas alterações nesse arquivo, clique em **Importar .csv** para usar a nova versão para atualizar a associação do grupo. Observe que pode levar até 30 minutos para que as alterações na associação do grupo de versão de pré-lançamento sejam implementadas. Se você adicionar pessoas a um grupo de versão de pré-lançamento depois de publicar um pacote de pré-lançamento associado, os pacotes serão enviados para o novo pessoal automaticamente; você não precisa criar e publicar um novo envio para esse pacote de pré-lançamento. 
 
 ## Criar um novo pacote de pré-lançamento
 
@@ -48,17 +49,17 @@ Após criar seu primeiro grupo de versão de pré-lançamento, você verá uma p
 
 Clique em **Criar versão de pré-lançamento** depois de digitar o nome e selecionar os grupos de versões de pré-lançamento. Você não poderá alterar esses detalhes posteriormente (embora nada impeça de excluir e criar um novo pacote de pré-lançamento para usar em vez disso).
 
-> Observação  Se você tiver mais de um pacote de pré-lançamento, será necessário atribuir uma classificação para cada um. Para obter mais informações, consulte Adicionar e classificar pacotes de pré-lançamento adicionais abaixo.
+> Observação Se você tiver mais de um pacote de pré-lançamento, será necessário atribuir uma classificação para cada um. Para obter mais informações, consulte Adicionar e classificar pacotes de pré-lançamento adicionais abaixo.
 
 ## Especificar pacotes para incluir em seu pacote de pré-lançamento
 
-Depois que tiver salvado os detalhes do pacote de pré-lançamento, você verá a página de visão geral. Clique em **Pacotes** para especificar os pacotes que você gostaria de incluir no versão de pré-lançamento.
+Depois que tiver salvado os detalhes do pacote de pré-lançamento, você verá a página de visão geral. Clique em **Pacotes** para especificar os pacotes que você gostaria de incluir no versão de pré-lançamento. É possível incluir pacotes que segmentem qualquer versão do sistema operacional, inclusive Windows 10, Windows 8.x e Windows Phone 8.x ou anteriores.
 
 Você tem a opção de selecionar pacotes que estavam associados a um envio publicado anterior (um envio de versão completa ou um dos seus pacotes de pré-lançamento, se você tiver mais de um). Caso precise [carregar novos pacotes](upload-app-packages.md) para usar para esse pacote de pré-lançamento, pode carregá-los aqui (usando o mesmo processo de quando carrega pacotes de aplicativo para um envio de versão completa comum). Clique em **Salvar** quando terminar de especificar os pacotes a serem incluídos no pacote de pré-lançamento.
 
 Se seu aplicativo der suporte a várias famílias de dispositivos, verifique se que você incluiu pacotes para dar suporte ao mesmo conjunto de famílias de dispositivos na sua versão de pré-lançamento. As pessoas em seus grupos de versão de pré-lançamento **só** poderão obter pacotes dessa versão. Elas não poderão acessar nenhum pacote de outras versões de pré-lançamento nem de seu envio de versão completa. 
 
-Lembre-se também de que suas informações de listagem da Loja vêm de seu envio de versão completa, incluindo quais famílias de dispositivos são compatíveis com seu aplicativo. os clientes em seus grupos de versão de pré-lançamento só poderão baixar o aplicativo em uma família de dispositivos que seja compatível com seu envio de versão completa. Para obter mais informações, consulte [Suporte à família de dispositivos](#device-family-support). 
+Lembre-se também de que suas informações de listagem da Loja vêm de seu envio de versão completa, incluindo quais famílias de dispositivos são compatíveis com seu aplicativo. Os clientes nos grupos de versão de pré-lançamento só poderão baixar o aplicativo em uma família de dispositivos que seja compatível com o envio de versão completa. Para obter mais informações, consulte [Suporte à família de dispositivos](#device-family-support). 
 
 ## Distribuição gradual de pacote
 
@@ -78,7 +79,7 @@ Quando tiver especificado os pacotes e configurado todas as opções necessária
 
 As pessoas em seus grupos de versão de pré-lançamento associados a esse pacote de pré-lançamento que já possuem seu aplicativo receberão agora uma atualização usando os pacotes incluídos em seu pacote de pré-lançamento. Se essas pessoas ainda não tiverem seu aplicativo, elas receberão os pacotes de seu pacote de pré-lançamento quando o instalarem. 
 
-> Observação  As pessoas que tiverem um pacote que está disponível apenas em um pacote de pré-lançamento podem dar ao aplicativo uma classificação por estrelas e deixar opiniões, mas elas não serão exibidas para outros clientes. (Isso exclui o legado 7.x e pacotes XAP 8.0. Classificações e opiniões deixadas por membros de seus grupos de versão de pré-lançamento usando esses pacotes ficarão visíveis para outros clientes). Você pode ver os comentários de todos os clientes, incluindo aqueles em seus grupos de versão de pré-lançamento, nos relatórios de Classificações e opiniões do aplicativo.
+> Observação As pessoas que tiverem um pacote que está disponível apenas em um pacote de pré-lançamento podem dar ao aplicativo uma classificação por estrelas e deixar opiniões, mas elas não serão exibidas para outros clientes. (Isso exclui o legado 7.x e pacotes XAP 8.0. Classificações e opiniões deixadas por membros de seus grupos de versão de pré-lançamento usando esses pacotes ficarão visíveis para outros clientes). Você pode ver os comentários de todos os clientes, incluindo aqueles em seus grupos de versão de pré-lançamento, nos relatórios de Classificações e opiniões do aplicativo.
 
 ## Suporte à família de dispositivos
 
@@ -124,6 +125,6 @@ Quando você exclui um pacote de pré-lançamento, todos os clientes que tiverem
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

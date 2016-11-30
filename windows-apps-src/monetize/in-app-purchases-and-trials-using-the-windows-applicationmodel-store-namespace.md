@@ -4,8 +4,8 @@ ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
 description: "Saiba como habilitar compras no aplicativo e avaliações em aplicativos UWP destinados a versões antes do Windows 10, versão 1607."
 title: "Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 649d082cddcf301fe602a5ab99637ad7bea67d49
+ms.sourcegitcommit: 812fa1789c5c86657b8e73e45a851c7a58a1c84e
+ms.openlocfilehash: 5a4f943357660a22217351f04d735c14cab828ff
 
 ---
 
@@ -13,11 +13,15 @@ ms.openlocfilehash: 649d082cddcf301fe602a5ab99637ad7bea67d49
 
 O SDK do Windows fornece membros no namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) que você pode usar para adicionar compras no aplicativo e a funcionalidade de avaliação ao seu aplicativo da Plataforma Universal do Windows (UWP) para ajudar a monetizar seu aplicativo e adicionar nova funcionalidade. Essas APIs também fornecem acesso às informações de licença de seu aplicativo.
 
->**Observação**&nbsp;&nbsp;Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx), em vez do namespace **Windows.ApplicationModel.Store**. O namespace **Windows.Services.Store** dá suporte aos tipos de complemento mais recentes, como complementos consumíveis gerenciados pela Loja, e foi projetado para ser compatível com tipos de produtos e recursos futuros com suporte do Centro de Desenvolvimento do Windows e da Loja. O namespace **Windows.Services.Store** também foi projetado para ter um desempenho melhor. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
-
 Os artigos nesta seção fornecem orientações detalhadas e exemplos de código para usar os membros em membros no namespace **Windows.ApplicationModel.Store** para vários cenários comuns. Para uma visão geral dos conceitos relacionados a compras no aplicativo em aplicativos UWP, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
 
 Para obter um exemplo completo que demonstra como implementar avaliações e compras no aplicativo usando o namespace **Windows.ApplicationModel.Store**, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
+
+>**Observações**&nbsp;&nbsp;
+>
+> * Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx), em vez do namespace **Windows.ApplicationModel.Store**. O namespace **Windows.Services.Store** dá suporte aos tipos de complemento mais recentes, como complementos consumíveis gerenciados pela Loja, e foi projetado para ser compatível com tipos de produtos e recursos futuros com suporte do Centro de Desenvolvimento do Windows e da Loja. O namespace **Windows.Services.Store** também foi projetado para ter um desempenho melhor. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
+<br/><br/>
+> * O namespace **ApplicationModel** não tem suporte em aplicativos da área de trabalho do Windows que usam o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop). Esses aplicativos devem usar o namespace **Windows.Services.Store** para implementar compras no aplicativo e avaliações.
 
 ## Nesta seção
 
@@ -32,6 +36,6 @@ Para obter um exemplo completo que demonstra como implementar avaliações e com
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 
