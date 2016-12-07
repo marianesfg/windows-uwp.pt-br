@@ -1,31 +1,11 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\networking\web-feeds.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/a30b58737befaae10a1dbb30416f338d8eb1cbb1?path=windows-apps-src%2Fnetworking%2Fweb-feeds.md&_a=contents) | HandedOffSuccess | [Details](#623c11eba097a072b456738b84750eb4b2d888bb5366)
 
 ## Item Details
-##### <a name='623c11eba097a072b456738b84750eb4b2d888bb5366'></a> Source: [windows-apps-src\networking\web-feeds.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/a30b58737befaae10a1dbb30416f338d8eb1cbb1?path=windows-apps-src%2Fnetworking%2Fweb-feeds.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [web-feeds.e2cccce4e3e0e7a28161cea77d8850ae5888f82c.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/04dc6f2109d89ef3207a6c1f07dc133cfa5496f8?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fweb-feeds.e2cccce4e3e0e7a28161cea77d8850ae5888f82c.pt-br.xlf&_a=contents)
-* Handoff Datetime: 2016-12-07 03:22:11
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\networking\web-feeds.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/3dd81a5f0104a6d0309a18f3f936e65f369d2dc5?path=windows-apps-src%2Fnetworking%2Fweb-feeds.md&_a=contents)
-* Current Handback File: [web-feeds.e2cccce4e3e0e7a28161cea77d8850ae5888f82c.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fweb-feeds.e2cccce4e3e0e7a28161cea77d8850ae5888f82c.pt-br.xlf&_a=contents)
-* Current Handback Datetime: 2016-10-21 16:06:32
-* Bilingual File: [web-feeds.e2cccce4e3e0e7a28161cea77d8850ae5888f82c.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fweb-feeds.e2cccce4e3e0e7a28161cea77d8850ae5888f82c.pt-br.xlf&_a=contents)
-* Bilingual Datetime: 2016-10-24 15:48:08
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
