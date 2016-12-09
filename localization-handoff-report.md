@@ -1,29 +1,47 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\interstitial-ad-sample-code-in-javascript.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/850558af2947a890b4f63f847318e8911fc737d6?path=windows-apps-src%2Fmonetize%2Finterstitial-ad-sample-code-in-javascript.md&_a=contents) | HandedOffSuccess | [Details](#2d016b24213d658951f97253bf5f8569db1a9e135307)
+ [windows-apps-src\gaming\marble-maze-application-structure.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/931d790ea54ff9ff27202f6c92d415b17e2215ed?path=windows-apps-src%2Fgaming%2Fmarble-maze-application-structure.md&_a=contents) | HandedOffSuccess | [Details](#696d4227bcd3ff4238d81e6f951a61e098fbc2f63544)
+ [windows-apps-src\gaming\plan-your-directx-port.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/115377ed3e5a13668481d1122f354610b3077763?path=windows-apps-src%2Fgaming%2Fplan-your-directx-port.md&_a=contents) | HandedOffSuccess | [Details](#f5f66f5da79eb62e3a81f4fe0d7398fed689d3783553)
 
 ## Item Details
-##### <a name='2d016b24213d658951f97253bf5f8569db1a9e135307'></a> Source: [windows-apps-src\monetize\interstitial-ad-sample-code-in-javascript.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/850558af2947a890b4f63f847318e8911fc737d6?path=windows-apps-src%2Fmonetize%2Finterstitial-ad-sample-code-in-javascript.md&_a=contents)
+##### <a name='696d4227bcd3ff4238d81e6f951a61e098fbc2f63544'></a> Source: [windows-apps-src\gaming\marble-maze-application-structure.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/931d790ea54ff9ff27202f6c92d415b17e2215ed?path=windows-apps-src%2Fgaming%2Fmarble-maze-application-structure.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [interstitial-ad-sample-code-in-javascript.67d4d65d545dde89c37899b180fe4d57421c8f22.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/4936cd460aa5aa95ee71da88f750e525f666d85e?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Finterstitial-ad-sample-code-in-javascript.67d4d65d545dde89c37899b180fe4d57421c8f22.pt-br.xlf&_a=contents)
-* Handoff Datetime: 2016-12-08 01:26:25
+* Handoff File: [marble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/348cc769f7f6b843648e4245ba665a103dbaf5a6?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fmarble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.pt-br.xlf&_a=contents)
+* Handoff Datetime: 2016-12-09 01:18:46
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\interstitial-ad-sample-code-in-javascript.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/3dd81a5f0104a6d0309a18f3f936e65f369d2dc5?path=windows-apps-src%2Fmonetize%2Finterstitial-ad-sample-code-in-javascript.md&_a=contents)
-* Current Handback File: [interstitial-ad-sample-code-in-javascript.67d4d65d545dde89c37899b180fe4d57421c8f22.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Finterstitial-ad-sample-code-in-javascript.67d4d65d545dde89c37899b180fe4d57421c8f22.pt-br.xlf&_a=contents)
+* Current Target File: [windows-apps-src\gaming\marble-maze-application-structure.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/3dd81a5f0104a6d0309a18f3f936e65f369d2dc5?path=windows-apps-src%2Fgaming%2Fmarble-maze-application-structure.md&_a=contents)
+* Current Handback File: [marble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fmarble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.pt-br.xlf&_a=contents)
 * Current Handback Datetime: 2016-10-21 16:06:32
-* Bilingual File: [interstitial-ad-sample-code-in-javascript.67d4d65d545dde89c37899b180fe4d57421c8f22.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Finterstitial-ad-sample-code-in-javascript.67d4d65d545dde89c37899b180fe4d57421c8f22.pt-br.xlf&_a=contents)
+* Bilingual File: [marble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fmarble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.pt-br.xlf&_a=contents)
 * Bilingual Datetime: 2016-10-24 15:48:08
+* [Back to Top](#report-top)
+
+##### <a name='f5f66f5da79eb62e3a81f4fe0d7398fed689d3783553'></a> Source: [windows-apps-src\gaming\plan-your-directx-port.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/115377ed3e5a13668481d1122f354610b3077763?path=windows-apps-src%2Fgaming%2Fplan-your-directx-port.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/348cc769f7f6b843648e4245ba665a103dbaf5a6?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fplan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf&_a=contents)
+* Handoff Datetime: 2016-12-09 01:18:46
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\gaming\plan-your-directx-port.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/68926285fb957ed31b47747024cb279dad5d1fc8?path=windows-apps-src%2Fgaming%2Fplan-your-directx-port.md&_a=contents)
+* Current Handback File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/a34cf1f39666c2f4cbd23dbb58d259e141e75c33?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fplan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-26 15:45:23
+* Bilingual File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/a34cf1f39666c2f4cbd23dbb58d259e141e75c33?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fplan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.pt-br.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-26 15:49:28
 * [Back to Top](#report-top)
 
 
