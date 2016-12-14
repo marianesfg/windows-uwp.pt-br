@@ -4,11 +4,11 @@ ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
 title: Create a "Hello, world" app (JS)
 description: Este tutorial ensina a usar JavaScript e HTML para criar um aplicativo Hello, world simples segmentado para a Plataforma Universal do Windows (UWP) no Windows 10.
 translationtype: Human Translation
-ms.sourcegitcommit: 7b4676e5c5a66450b321ab6f5f8670f9491b7a9d
-ms.openlocfilehash: 31bd2d40750e5acf09679d8ff5ea1a1540f60934
+ms.sourcegitcommit: 1a4aea3d31bad97fa0933e1274c037a4bb8d81bb
+ms.openlocfilehash: ad34b1bc62abf6c93f5124e774ad374f5b767f2c
 
 ---
-# Criar um aplicativo "Hello, world" (JS)
+# <a name="create-a-hello-world-app-js"></a>Criar um aplicativo "Hello, world" (JS)
 
 Este tutorial ensina a usar JavaScript e HTML para criar um aplicativo "Hello, world" simples segmentado para a Plataforma Universal do Windows (UWP) no Windows 10. Com um único projeto no Microsoft Visual Studio, você pode compilar um aplicativo que seja executado em qualquer dispositivo do Windows 10.
 
@@ -18,16 +18,15 @@ Aqui, você aprenderá a:
 -   Adicionar conteúdo HTML à página inicial
 -   Tratar a entrada de toque, caneta e mouse
 -   Executar o projeto na área de trabalho local e no emulador do telefone no Visual Studio
--   Usar um controle da Biblioteca do Windows para JavaScript
+-   Usar um controle de Biblioteca do Windows para JavaScript
 
-## Antes de começar...
+## <a name="before-you-start"></a>Antes de começar...
 
 -   [O que é um aplicativo Universal do Windows](whats-a-uwp.md)?
--   [Novidades no Windows 10](https://dev.windows.com/whats-new-windows-10-dev-preview)
 -   Para concluir este tutorial, você precisa do Windows 10 e do Visual Studio 2015. [Prepare-se para começar](get-set-up.md).
 -   Também pressupomos que você esteja usando o layout de janela padrão no Visual Studio. Se você alterar o layout padrão, poderá redefini-lo no menu **Janela** usando o comando **Redefinir Layout da Janela**.
 
-## Etapa 1: crie um novo projeto no Visual Studio.
+## <a name="step-1-create-a-new-project-in-visual-studio"></a>Etapa 1: crie um novo projeto no Visual Studio.
 
 Criaremos um novo aplicativo chamado `HelloWorld`. Este é o procedimento:
 1.  Inicie o Visual Studio 2015.
@@ -62,14 +61,14 @@ Para exibir e editar os arquivos, clique duas vezes no arquivo no **Gerenciador 
 
 Esses arquivos são essenciais para todos os aplicativos UWP em JavaScript. Eles fazem parte de qualquer projeto criado no Visual Studio.
 
-## Etapa 2: inicie o aplicativo
+## <a name="step-2-launch-the-app"></a>Etapa 2: inicie o aplicativo
 
 
 Neste ponto, você criou um aplicativo muito simples. Este é um bom momento para compilar, implantar e iniciar seu aplicativo e verificar sua aparência. Você pode depurar o aplicativo no computador local, em um simulador ou emulador, ou em um dispositivo remoto. Aqui está o menu do dispositivo de destino no Visual Studio.
 
 ![Lista suspensa de destinos de dispositivo para depuração do aplicativo](images/uap-debug.png)
 
-### Inicie o aplicativo em um dispositivo da área de trabalho
+### <a name="start-the-app-on-a-desktop-device"></a>Inicie o aplicativo em um dispositivo da área de trabalho
 
 Por padrão, o aplicativo é executado no computador local. O menu do dispositivo de destino fornece várias opções para depurar seu aplicativo em dispositivos da família de dispositivos da área de trabalho.
 
@@ -112,7 +111,7 @@ Ele ainda não faz muita coisa, mas parabéns! Você criou seu primeiro aplicati
 
    Feche a janela do aplicativo.
 
-### Iniciar o aplicativo em um emulador de dispositivo móvel
+### <a name="start-the-app-on-a-mobile-device-emulator"></a>Iniciar o aplicativo em um emulador de dispositivo móvel
 
 Seu aplicativo é executado em qualquer dispositivo do Windows 10, portanto vamos ver sua aparência em um Windows Phone.
 
@@ -141,7 +140,7 @@ O Visual Studio inicia o emulador selecionado e, em seguida, implanta e inicia o
 
 ![Tela inicial do aplicativo no dispositivo móvel](images/helloworld-1-winjs-phone.png)
 
-## Etapa 3: Modifique a página inicial
+## <a name="step-3-modify-your-start-page"></a>Etapa 3: Modifique a página inicial
 
 Um dos arquivos que o Visual Studio criou é **index.html**, a página inicial de seu aplicativo. Quando o aplicativo for executado, exibirá o conteúdo da página inicial. A página inicial também contém referências aos arquivos de código e às folhas de estilo do aplicativo. Veja a seguir a página inicial que o Visual Studio criou para você:
 
@@ -191,7 +190,7 @@ Adicionaremos novo conteúdo ao arquivo default.html. Assim como qualquer outro 
 
    Nas próximas etapas, criaremos um manipulador de eventos para o **button** que exibe uma saudação personalizada. Adicionaremos o código do manipulador de eventos ao arquivo main.js.
 
-## Etapa 4: Crie um manipulador de eventos
+## <a name="step-4-create-an-event-handler"></a>Etapa 4: Crie um manipulador de eventos
 
 Quando criamos o novo projeto, o Visual Studio automaticamente criou um arquivo /js/main.js. Esse arquivo contém código para tratar o ciclo de vida do aplicativo. Também é nele que você adicionará código para criar interatividade no arquivo index.html.
 
@@ -261,7 +260,7 @@ Observe o restante do código em main.js. Ele trata os eventos [activated](https
 
 Agora definiremos um manipulador de eventos para o [botão](https://msdn.microsoft.com/library/windows/apps/Hh453017). Nosso novo manipulador de eventos obtém o nome do usuário por meio do controle `nameInput` [input](https://msdn.microsoft.com/library/windows/apps/Hh453271) e o usa para gerar uma saudação no elemento `greetingOutput` **div** criado na seção anterior.
 
-### Usando eventos que funcionam com a entrada de toque, mouse e caneta
+### <a name="using-events-that-work-for-touch-mouse-and-pen-input"></a>Usando eventos que funcionam com a entrada de toque, mouse e caneta
 
 Em um aplicativo UWP, você não precisa se preocupar com as diferenças entre toque, mouse e outras formas de entrada de ponteiro. Você pode simplesmente usar os eventos que já conhece, como [click](https://msdn.microsoft.com/library/windows/apps/Hh441312), e eles funcionarão com todas as formas de entrada.
 
@@ -289,7 +288,7 @@ Agora, prosseguiremos para criar o manipulador de eventos.
 
 Você adicionou o manipulador de eventos a main.js. Agora, você precisa registrá-lo.
 
-## Etapa 5: Registre o manipulador de eventos quando seu aplicativo for iniciado
+## <a name="step-5-register-the-event-handler-when-your-app-launches"></a>Etapa 5: Registre o manipulador de eventos quando seu aplicativo for iniciado
 
 
 Tudo o que precisamos fazer agora é registrar o manipulador de eventos no botão. A maneira recomendada de registrar um manipulador de eventos é chamar [addEventListener](https://msdn.microsoft.com/library/windows/apps/Hh441145) do código. Um bom momento para registrar o manipulador de eventos é quando o aplicativo for ativado. Felizmente, como você viu, o Visual Studio gerou um código no arquivo main.js que trata a ativação do aplicativo.
@@ -327,7 +326,7 @@ Execute o aplicativo. Quando você inserir seu nome na caixa de texto e clicar n
 
 **Observação**   Se você está se perguntando por que usamos [addEventListener](https://msdn.microsoft.com/library/windows/apps/Hh441145) para registrar o evento no código em vez de definir o evento [onclick](https://msdn.microsoft.com/library/windows/apps/Hh441312) no HTML, consulte [Codificando aplicativos básicos](https://msdn.microsoft.com/library/windows/apps/Hh780660) para obter uma explicação detalhada.
 
-## Etapa 6: adicionar uma Biblioteca do Windows para controle JavaScript
+## <a name="step-6-add-a-windows-library-for-javascript-control"></a>Etapa 6: adicionar uma Biblioteca do Windows para controle JavaScript
 
 
 Além dos controles HTML padrão, seu aplicativo pode usar qualquer um dos controles da [Biblioteca do Windows para JavaScript](https://msdn.microsoft.com/library/windows/apps/BR229782), como os controles [WinJS.UI.DatePicker](https://msdn.microsoft.com/library/windows/apps/BR211681), [WinJS.UI.FlipView](https://msdn.microsoft.com/library/windows/apps/BR211711), [WinjS.UI.ListView](https://msdn.microsoft.com/library/windows/apps/BR211837) e [WinJS.UI.Rating](https://msdn.microsoft.com/library/windows/apps/BR211895).
@@ -361,7 +360,7 @@ Diferentemente dos controles HTML, os controles WinJS não têm elementos de mar
 
 Agora, clicar no controle **Rating** altera a classificação, mas não faz mais nada. Vamos usar um manipulador de eventos para fazer algo quando o usuário altera a classificação.
 
-## Etapa 7: registrar um manipulador de eventos para um controle de Biblioteca do Windows para JavaScript
+## <a name="step-7-register-an-event-handler-for-a-windows-library-for-javascript-control"></a>Etapa 7: registrar um manipulador de eventos para um controle de Biblioteca do Windows para JavaScript
 
 
 Registrar um manipulador de eventos para um controle WinJS é um pouco diferente de registrar um manipulador de eventos para um controle HTML padrão. Anteriormente, mencionamos que o manipulador de eventos **onactivated** chama o método **WinJS.UI.processAll** para inicializar o WinJS em sua marcação. A chamada **WinJS.UI.processAll** é encapsulada em uma chamada do método **setPromise**, da seguinte forma:
@@ -490,12 +489,14 @@ Ao adicionar seu código a uma função "concluída" e transmiti-lo para o méto
 
 ![O aplicativo Hello world concluído em um computador](images/helloworld-5-winjs.png)
 
-## Resumo
+## <a name="summary"></a>Resumo
 
-Parabéns, você criou seu primeiro aplicativo para o Windows 10 e a UWP usando JavaScript e HTML!
+Parabéns, você criou seu primeiro app para o Windows 10 e a UWP usando JavaScript e HTML!
+
+O que vem em seguida? Os documentos [WinJS](https://developer.microsoft.com/en-us/windows/develop/winjs) ajudarão você a começar a usar a Biblioteca do Windows para JavaScript.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,26 +4,26 @@ ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: "Este estudo de caso, que se baseia nas informações fornecidas no Bookstore1, começa com um aplicativo Universal 8.1 que exibe dados agrupados em um controle SemanticZoom."
 title: Estudo de caso do Windows Runtime 8.x para UWP Bookstore2
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 2d142ddb5522daf5467ce5690b3fe8e7a356ac0a
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 34762d74ba34ed3c5cee4da4809c2c509f3932e9
 
 ---
 
-# Estudo de caso do Windows Runtime 8.x para UWP: Bookstore2
+# <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Estudo de caso do Windows Runtime 8.x para UWP: Bookstore2
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este estudo de caso, que se baseia nas informações fornecidas no [Bookstore1](w8x-to-uwp-case-study-bookstore1.md), começa com um aplicativo Universal 8.1 que exibe dados agrupados em um controle [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601). No modelo de exibição, cada instância da classe **Author** representa o grupo dos livros escritos por esse autor e, no **SemanticZoom**, podemos exibir a lista de livros agrupados por autor ou reduzir o zoom para ver uma lista de atalhos de autores. A lista de atalhos proporciona uma navegação mais rápida do que rolar pela lista de livros. Veremos as etapas para a portabilidade do aplicativo para um aplicativo UWP (Plataforma Universal do Windows) do Windows 10.
 
-**Observação**   Ao abrir Bookstore2Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Observação**   Ao abrir Bookstore2Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
-## Downloads
+## <a name="downloads"></a>Downloads
 
 [Baixe o aplicativo Universal 8.1 Bookstore2\_81](http://go.microsoft.com/fwlink/?linkid=532951).
 
 [Baixe o aplicativo do Windows 10 Bookstore2Universal\_10](http://go.microsoft.com/fwlink/?linkid=532952).
 
-## O aplicativo Universal 8.1
+## <a name="the-universal-81-app"></a>O aplicativo Universal 8.1
 
 É assim que o Bookstore2\_81, o aplicativo que vamos portar, se parece. Trata-se de um [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) com rolagem horizontal (rolagem vertical no Windows Phone) que mostra os livros agrupados por autor. É possível reduzir o zoom para a lista de atalhos e, a partir daí, navegar de volta para qualquer grupo. Há duas partes principais para esse aplicativo: o modelo de exibição, que fornece a fonte de dados agrupados, e a interface do usuário, que se associa a esse modelo de exibição. Como veremos, é fácil fazer a portabilidade dessas duas peças da tecnologia do WinRT 8.1 para o Windows 10.
 
@@ -44,11 +44,11 @@ Bookstore2\_81 no Windows Phone, exibição ampliada
 
 Bookstore2\_81 no Windows Phone, exibição reduzida
 
-##  Portando para um projeto do Windows 10
+##  <a name="porting-to-a-windows-10-project"></a>Portando para um projeto do Windows 10
 
 A solução Bookstore2\_81 é um projeto de Aplicativo Universal 8.1. O projeto Bookstore2\_81.Windows compila o pacote do aplicativo para Windows 8.1, e o projeto Bookstore2\_81.WindowsPhone compila o pacote do aplicativo para Windows Phone 8.1. Bookstore2\_81.Shared é o projeto que contém o código-fonte, os arquivos de marcação e outros ativos e recursos usados pelos outros dois projetos.
 
-Como no estudo de caso anterior, a opção escolhida (dentre as descritas em [Se você tiver um aplicativo Universal 8.1](w8x-to-uwp-root.md#if-you-have-a-universal-81-app)) será a de portar o conteúdo do projeto compartilhado para um Windows 10 destinado à família de dispositivos Universais.
+Como no estudo de caso anterior, a opção escolhida (dentre as descritas em [Se você tiver um aplicativo Universal 8.1](w8x-to-uwp-root.md)) será a de portar o conteúdo do projeto compartilhado para um Windows 10 destinado à família de dispositivos Universais.
 
 Comece criando um novo projeto de Aplicativo em Branco (Windows Universal). Dê a ele o nome de Bookstore2Universal\_10. Estes são os arquivos que devem ser copiados de Bookstore2\_81 para Bookstore2Universal\_10.
 
@@ -77,22 +77,22 @@ O aplicativo do Windows 10 com as mudanças de código-fonte iniciais em execuç
 
 O modelo de exibição e as exibições ampliada e reduzida funcionam juntos corretamente, apesar de haver problemas que tornam a visualização um pouco difícil. Um problema é que o [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) não rola. Isso ocorre porque, no Windows 10, o estilo padrão de um [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) faz com que ela seja disposta na vertical (e as diretrizes de design do Windows 10 recomendam usá-la dessa maneira em aplicativos novos e portados). Porém, as configurações de rolagem horizontal do modelo de painel de itens personalizado que copiamos do projeto Bookstore2\_81 (projetado para o aplicativo 8.1) estão em conflito com as configurações de rolagem vertical do estilo padrão do Windows 10 que estão sendo aplicadas porque fizemos a portabilidade para um aplicativo do Windows 10. Em segundo lugar, o aplicativo ainda não adaptou sua interface do usuário para oferecer a melhor experiência em janelas de tamanhos diferentes e em dispositivos pequenos. E, em terceiro lugar, os estilos e pincéis corretos ainda não estão sendo usados. Por isso, uma grande parte do texto está invisível (inclusive os cabeçalhos dos grupos nos quais é possível clicar para reduzir o zoom). Então, nas próximas três seções ([Alterações de design de SemanticZoom e GridView](#semanticzoom-and-gridview-design-changes), [Interface do usuário adaptável](#adaptive-ui) e [Estilo universal](#universal-styling)), corrigiremos esses problemas.
 
-## Alterações de design de SemanticZoom e GridView
+## <a name="semanticzoom-and-gridview-design-changes"></a>Alterações de design de SemanticZoom e GridView
 
-As mudanças de design do controle [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) no Windows 10 estão descritas na seção [Alterações em SemanticZoom](w8x-to-uwp-porting-xaml-and-ui.md#semantic-zoom). Nesta seção, não precisamos fazer nada em relação a essas alterações.
+As mudanças de design do controle [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) no Windows 10 estão descritas na seção [Alterações em SemanticZoom](w8x-to-uwp-porting-xaml-and-ui.md). Nesta seção, não precisamos fazer nada em relação a essas alterações.
 
-As alterações do [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) estão descritas na seção [Alterações de GridView/ListView](w8x-to-uwp-porting-xaml-and-ui.md#gridview-listview-changes). Devemos fazer alguns ajustes mínimos para nos adaptar a essas alterações, conforme descrito a seguir.
+As alterações do [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) estão descritas na seção [Alterações de GridView/ListView](w8x-to-uwp-porting-xaml-and-ui.md). Devemos fazer alguns ajustes mínimos para nos adaptar a essas alterações, conforme descrito a seguir.
 
 -   Em SeZoUC.xaml, em `ZoomedInItemsPanelTemplate`, defina `Orientation="Horizontal"` e `GroupPadding="0,0,0,20"`.
 -   Em SeZoUC.xaml, exclua `ZoomedOutItemsPanelTemplate` e remova o atributo `ItemsPanel` da exibição reduzida.
 
 Pronto!
 
-## Interface do usuário adaptável
+## <a name="adaptive-ui"></a>Interface do usuário adaptável
 
 Após essa alteração, o layout da interface do usuário fornecido por SeZoUC.xaml é ótimo para a execução do aplicativo em uma janela larga (que só é possível em dispositivos com tela grande). Porém, quando a janela do aplicativo é estreita (o que acontece em dispositivos pequenos e também pode acontecer em dispositivos grandes), a interface do usuário que tínhamos no aplicativo da Loja do Windows Phone Store certamente é mais apropriada.
 
-Para isso, podemos usar o recurso adaptável do Gerenciador de Estado Visual. Definiremos as propriedades em elementos visuais de maneira que, por padrão, a interface do usuário seja disposta no estado estreito usando os modelos menores que usávamos no aplicativo da Loja do Windows Phone. Depois, vamos detectar quando a janela do aplicativo for mais larga ou igual a um tamanho específico (medido em unidades de [pixels efetivos](w8x-to-uwp-porting-xaml-and-ui.md#effective-pixels-viewing-distance-and-scale-factors)), e alterar as propriedades dos elementos visuais de acordo para obter um layout mais largo e maior. Colocaremos essas alterações de propriedade em um estado visual e usaremos um acionador adaptável para monitorar e determinar continuamente se esse estado visual deve ou não ser aplicado, dependendo da largura da janela em pixels efetivos. Nesse caso, vamos acionar na largura da janela, mas também é possível acionar na altura da janela.
+Para isso, podemos usar o recurso adaptável do Gerenciador de Estado Visual. Definiremos as propriedades em elementos visuais de maneira que, por padrão, a interface do usuário seja disposta no estado estreito usando os modelos menores que usávamos no aplicativo da Loja do Windows Phone. Depois, vamos detectar quando a janela do aplicativo for mais larga ou igual a um tamanho específico (medido em unidades de [pixels efetivos](w8x-to-uwp-porting-xaml-and-ui.md)), e alterar as propriedades dos elementos visuais de acordo para obter um layout mais largo e maior. Colocaremos essas alterações de propriedade em um estado visual e usaremos um acionador adaptável para monitorar e determinar continuamente se esse estado visual deve ou não ser aplicado, dependendo da largura da janela em pixels efetivos. Nesse caso, vamos acionar na largura da janela, mas também é possível acionar na altura da janela.
 
 A largura mínima de janela de 548 epx é apropriada para este caso porque esse é o tamanho do menor dispositivo no qual queremos mostrar o layout largo. Normalmente, os telefones têm menos de 548 epx. Por isso, em dispositivos pequenos assim, preferimos continuar com o layout estreito padrão. Em um computador, por padrão, a janela será aberta com largura suficiente para disparar a troca para o estado largo. De lá, você poderá arrastar a janela até que fique estreita o suficiente para exibir duas colunas dos itens de 250x250. Se ela for um pouco mais estreita, o gatilho será desativado, o estado visual largo será removido e o layout estreito padrão entrará em vigor.
 
@@ -132,7 +132,7 @@ Neste estudo de caso, optaremos pela primeira alternativa. Porém, se quiser, vo
     </Grid>
 ```
 
-## Estilo universal
+## <a name="universal-styling"></a>Estilo universal
 
 Agora corrijamos alguns problemas de estilo, inclusive o que introduzimos acima durante a cópia do projeto anterior.
 
@@ -166,7 +166,7 @@ O aplicativo do Windows 10 portado em execução em um dispositivo móvel, exibi
 
 O aplicativo do Windows 10 portado em execução em um dispositivo móvel, exibição reduzida
 
-## Conclusão
+## <a name="conclusion"></a>Conclusão
 
 Este estudo de caso envolveu uma interface do usuário mais ambiciosa do que a anterior. Assim como no estudo de caso anterior, este modelo de exibição específico não exigiu qualquer trabalho, e nossos esforços foram principalmente para refatorar a interface do usuário. Algumas mudanças foram necessárias como resultado da combinação de dois projetos em um, com suporte a muitos fatores forma (na verdade, muito mais do que antes). Algumas mudanças estavam relacionadas com as alterações feitas na plataforma.
 
@@ -174,6 +174,6 @@ O próximo estudo de caso é o [QuizGame](w8x-to-uwp-case-study-quizgame.md), no
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

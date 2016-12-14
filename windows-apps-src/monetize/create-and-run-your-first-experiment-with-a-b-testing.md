@@ -4,12 +4,12 @@ Description: "Neste passo a passo, você criará, executará e gerenciará seu p
 title: Criar e executar seu primeiro experimento com testes A/B
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
 translationtype: Human Translation
-ms.sourcegitcommit: bfe4862c441ca095a40df4f594fdf9b3e213d142
-ms.openlocfilehash: ab15741531b829c496811cdfca35059cd113f91d
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 65785e53b2e5ba788dbda533373737e193e1c792
 
 ---
 
-# Criar e executar seu primeiro experimento com testes A/B
+# <a name="create-and-run-your-first-experiment-with-ab-testing"></a>Criar e executar seu primeiro experimento com testes A/B
 
 Neste passo a passo, você fará o seguinte:
 * Criará uma experimentação [projeto](run-app-experiments-with-a-b-testing.md#terms) no painel do Centro de Desenvolvimento que define diversas variáveis remotas que representam o texto e a cor de um botão de aplicativo.
@@ -18,13 +18,13 @@ Neste passo a passo, você fará o seguinte:
 * Executará o aplicativo para coletar dados de experimento.
 * Examinará os resultados do experimento no painel do Centro de Desenvolvimento, escolherá uma variação a ser habilitada para todos os usuários do aplicativo e concluirá o experimento.
 
-Para obter uma visão geral de testes A/B teste com o Centro de Desenvolvimento, veja [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md).
+Para obter uma visão geral de testes A/B teste com o Centro de Desenvolvimento, veja [Executar experimentos de app com teste A/B](run-app-experiments-with-a-b-testing.md).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
-Para seguir este passo a passo, você deve ter uma conta do Centro de Desenvolvimento do Windows e configurar seu computador de desenvolvimento conforme descrito em [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md).
+Para seguir este passo a passo, você deve ter uma conta do Centro de Desenvolvimento do Windows e configurar seu computador de desenvolvimento conforme descrito em [Executar experimentos de app com teste A/B](run-app-experiments-with-a-b-testing.md).
 
-## Criar um projeto com variáveis remotas no Centro de Desenvolvimento do Windows
+## <a name="create-a-project-with-remote-variables-in-windows-dev-center"></a>Criar um projeto com variáveis remotas no Centro de Desenvolvimento do Windows
 
 1. Entre no [painel do Centro de Desenvolvimento](https://dev.windows.com/overview).
 2. Se já tiver um aplicativo no Centro de Desenvolvimento que você deseja usar para criar um experimento, selecione-o no painel. Se você ainda não tiver um aplicativo no seu painel, [crie um novo aplicativo reservando um nome](../publish/create-your-app-by-reserving-a-name.md) e, em seguida, selecione esse aplicativo no painel.
@@ -38,7 +38,7 @@ Para seguir este passo a passo, você deve ter uma conta do Centro de Desenvolvi
   * Na quarta linha, digite **b** para o tipo e o nome de variável **128** na coluna **Valor padrão**.
 7. Clique em **Salvar** e anote o valor da [ID do projeto](run-app-experiments-with-a-b-testing.md#terms) que consta na seção **integração do SDK**. Na próxima seção, você atualizará o código do aplicativo e fará referência a esse valor em seu código.
 
-## Codificar o experimento no seu aplicativo
+## <a name="code-the-experiment-in-your-app"></a>Codificar o experimento no seu aplicativo
 
 1. No Visual Studio 2015, crie um novo projeto da Plataforma Universal do Windows usando Visual C#. Especifique o nome **SampleExperiment** para o projeto.
 2. No Gerenciador de Soluções, expanda o nó do seu projeto, clique com botão direito no nó **Referências** e clique em **Adicionar Referência**.
@@ -49,101 +49,12 @@ Para seguir este passo a passo, você deve ter uma conta do Centro de Desenvolvi
 7. Clique duas vezes no botão do designer para abrir o arquivo de código e adicionar um manipulador de eventos para o evento **Click**.  
 8. Substitua o conteúdo inteiro do arquivo de código pelo código a seguir. Atribua a variável ```projectId``` ao valor da [ID do projeto](run-app-experiments-with-a-b-testing.md#terms) que você obteve no painel do Centro de Desenvolvimento na seção anterior.
 
-  ```CSharp
-  using System;
-  using Windows.UI.Xaml;
-  using Windows.UI.Xaml.Controls;
-  using Windows.UI.Xaml.Media;
-  using System.Threading.Tasks;
-  using Windows.UI;
-  using Windows.UI.Core;
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
-  // Namespace for A/B testing.
-  using Microsoft.Services.Store.Engagement;
+10. Salve o arquivo de código e compile o projeto.
 
-  namespace SampleExperiment
-  {  
-     public sealed partial class MainPage : Page
-     {
-        private StoreServicesExperimentVariation variation;
-        private StoreServicesCustomEventLogger logger;
-
-        // Assign this variable to the project ID for your experiment from Dev Center.
-        private string projectId = "";
-
-        public MainPage()
-        {
-            this.InitializeComponent();
-
-            // Because this call is not awaited, execution of the current method
-            // continues before the call is completed.
-#pragma warning disable CS4014
-            InitializeExperiment();
-#pragma warning restore CS4014
-        }
-
-        private async Task InitializeExperiment()
-        {
-            // Get the current cached variation assignment for the experiment.
-            var result = await StoreServicesExperimentVariation.GetCachedVariationAsync(projectId);
-            variation = result.ExperimentVariation;
-
-            // Check whether the cached variation assignment needs to be refreshed.
-            // If so, then refresh it.
-            if (result.ErrorCode != StoreServicesEngagementErrorCode.None || result.ExperimentVariation.IsStale)
-            {
-                result = await StoreServicesExperimentVariation.GetRefreshedVariationAsync(projectId);
-
-                // If the call succeeds, use the new result. Otherwise, use the cached value.
-                if (result.ErrorCode == StoreServicesEngagementErrorCode.None)
-                {
-                    variation = result.ExperimentVariation;
-                }
-            }
-
-            // Get remote variables named "buttonText", "r", "g", and "b" from the variation
-            // assignment. If no variation assignment is available, the variables default
-            // to "Grey button" for the button text and grey RGB value for the button color.
-            var buttonText = variation.GetString("buttonText", "Grey Button");
-            var r = (byte)variation.GetInt32("r", 128);
-            var g = (byte)variation.GetInt32("g", 128);
-            var b = (byte)variation.GetInt32("b", 128);
-
-            // Assign button text and color.
-            await button.Dispatcher.RunAsync(
-                CoreDispatcherPriority.Normal,
-                () =>
-                {
-                    button.Background = new SolidColorBrush(Color.FromArgb(255, r, g, b));
-                    button.Content = buttonText;
-                    button.Visibility = Visibility.Visible;
-                });
-
-            // Log the view event named "userViewedButton" to Dev Center.
-            if (logger == null)
-            {
-                logger = StoreServicesCustomEventLogger.GetDefault();
-            }
-
-            logger.LogForVariation(variation, "userViewedButton");
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            // Log the conversion event named "userClickedButton" to Dev Center.
-            if (logger == null)
-            {
-                logger = StoreServicesCustomEventLogger.GetDefault();
-            }
-
-            logger.LogForVariation(variation, "userClickedButton");
-        }
-     }
-  }
-  ```
-10. Salve o arquivo de código e construa o projeto.
-
-## Criar o experimento no Centro de Desenvolvimento do Windows
+## <a name="create-the-experiment-in-windows-dev-center"></a>Criar o experimento no Centro de Desenvolvimento do Windows
 
 1. Volte para a página do projeto de **Experimentos de clique de botão** no painel do Centro de Desenvolvimento do Windows.
 2. Na seção **Experimentos**, clique no botão **Novo experimento**.
@@ -163,13 +74,13 @@ Para seguir este passo a passo, você deve ter uma conta do Centro de Desenvolvi
 
 > **Importante**&nbsp;&nbsp;Depois de ativar um experimento, você não poderá mais modificar os parâmetros dele, a menos que você tenha clicado na caixa de seleção **Experimento editável** quando criou o experimento. Em geral, recomendamos codificar o experimento no seu aplicativo antes de ativar esse experimento.
 
-## Execute o aplicativo para coletar dados de experimento
+## <a name="run-the-app-to-gather-experiment-data"></a>Execute o aplicativo para coletar dados de experimento
 
 1. Execute o aplicativo **SampleExperiment** criado anteriormente.
 2. Confirme que você está vendo um botão cinza ou azul. Clique no botão e, em seguida, feche o aplicativo.
 3. Repita as etapas acima várias vezes no mesmo computador para confirmar que o aplicativo está mostrando a mesma cor de botão.
 
-## Examine os resultados e conclua o experimento
+## <a name="review-the-results-and-complete-the-experiment"></a>Examine os resultados e conclua o experimento
 
 Aguarde várias horas depois de concluir a seção anterior e, em seguida, siga estas etapas para analisar os resultados do seu experimento e concluir o processo.
 
@@ -185,16 +96,16 @@ Aguarde várias horas depois de concluir a seção anterior e, em seguida, siga 
 6. Execute o aplicativo **SampleExperiment** criado na seção anterior.
 7. Confirme que você está vendo um botão azul. Observe que pode levar até dois minutos para que o seu aplicativo receba uma atribuição de variação atualizada.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
 * [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md)
 * [Definir seu experimento no painel do Centro de Desenvolvimento](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md)
-* [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md)
+* [Executar experimentos de app com teste A/B](run-app-experiments-with-a-b-testing.md)
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

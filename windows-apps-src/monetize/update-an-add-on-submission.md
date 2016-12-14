@@ -4,31 +4,29 @@ ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: "Use este método na API de envio da Windows Store para atualizar um envio de complemento existente."
 title: Atualizar um envio de complemento usando a API de envio da Windows Store
 translationtype: Human Translation
-ms.sourcegitcommit: 7307ca70467a751d5adb53f3718c7e9cf0b70dbb
-ms.openlocfilehash: f42f2dba155aa0a29e0769fd96cce6d3a0de870b
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: ac126d8e8cf8301399a3248a1d65e19805e70255
 
 ---
 
-# Atualizar um envio de complemento usando a API de envio da Windows Store
+# <a name="update-an-add-on-submission-using-the-windows-store-submission-api"></a>Atualizar um envio de complemento usando a API de envio da Windows Store
 
 
 Use este método na API de envio da Windows Store para atualizar um envio existente do complemento (também conhecido como produto no app ou IAP). Depois de atualizar com êxito um envio usando esse método, você deverá [confirmar o envio](commit-an-add-on-submission.md) para ingestão e publicação.
 
 Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de complemento, usando a API de envio da Windows Store, consulte [Gerenciar envios de complemento](manage-add-on-submissions.md).
 
->**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de complemento no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** no corpo da solicitação desse método será ignorado, e você temporariamente não conseguirá alterar os dados do preço e das vendas de um envio de complemento usando esse método. Atualizaremos a API de envio da Windows Store no futuro para apresentar uma nova maneira de acessar programaticamente as informações de preços para envios de complemento. Para obter mais informações, consulte o [Recurso de preços](manage-add-on-submissions.md#pricing-object).
-
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 * Crie um envio de complemento para um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [Criar um envio de complemento](create-an-add-on-submission.md).
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Solicitação
+## <a name="request"></a>Solicitação
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
@@ -39,7 +37,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 <span/>
  
 
-### Cabeçalho da solicitação
+### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -47,7 +45,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Parâmetros solicitados
+### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -56,7 +54,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Corpo da solicitação
+### <a name="request-body"></a>Corpo da solicitação
 
 O corpo da solicitação tem os parâmetros a seguir.
 
@@ -74,7 +72,7 @@ O corpo da solicitação tem os parâmetros a seguir.
 
 <span/>
 
-### Exemplo de solicitação
+### <a name="request-example"></a>Exemplo de solicitação
 
 O exemplo a seguir demonstra como atualizar um envio de complemento.
 
@@ -111,17 +109,7 @@ Content-Type: application/json
       "RU": "Tier3",
       "US": "Tier4",
     },
-    "sales": [
-      {
-         "name": "Sale1",
-         "basePriceId": "Free",
-         "startDate": "2016-05-21T18:40:11.7369008Z",
-         "endDate": "2016-05-22T18:40:11.7369008Z",
-         "marketSpecificPricings": {
-            "RU": "NotAvailable"
-         }
-      }
-    ],
+    "sales": [],
     "priceId": "Free"
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
@@ -131,7 +119,7 @@ Content-Type: application/json
 }
 ```
 
-## Resposta
+## <a name="response"></a>Resposta
 
 O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. O corpo da resposta contém informações sobre o envio atualizado. Para obter mais detalhes sobre os valores no corpo da resposta, veja [Recurso do envio de complemento](manage-add-on-submissions.md#add-on-submission-object).
 
@@ -166,17 +154,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
       "RU": "Tier3",
       "US": "Tier4",
     },
-    "sales": [
-      {
-         "name": "Sale1",
-         "basePriceId": "Free",
-         "startDate": "2016-05-21T18:40:11.7369008Z",
-         "endDate": "2016-05-22T18:40:11.7369008Z",
-         "marketSpecificPricings": {
-            "RU": "NotAvailable"
-         }
-      }
-    ],
+    "sales": [],
     "priceId": "Free"
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
@@ -207,7 +185,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 }
 ```
 
-## Códigos de erro
+## <a name="error-codes"></a>Códigos de erro
 
 Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
@@ -219,7 +197,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 <span/>
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Gerenciar envios de complemento](manage-add-on-submissions.md)
@@ -231,6 +209,6 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

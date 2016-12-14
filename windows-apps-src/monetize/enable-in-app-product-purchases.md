@@ -1,56 +1,41 @@
 ---
 author: mcleanbyron
-Description: "Seja seu aplicativo gratuito ou não, você pode vender conteúdo, outros aplicativos ou uma nova funcionalidade do aplicativo (como o desbloqueio do próximo nível de um jogo) no próprio aplicativo. Veja a seguir como habilitar esses produtos no seu aplicativo."
+Description: "Seja seu app gratuito ou não, você pode vender conteúdo, outros apps ou uma nova funcionalidade do app (como o desbloqueio do próximo nível de um jogo) no próprio app. Veja a seguir como habilitar esses produtos no seu aplicativo."
 title: Habilitar compras de produtos no aplicativo
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
 keywords: "exemplo de código de oferta no aplicativo"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 531b5c5a5c70461e98b5809246fdce7215805a25
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 1cd748cd1b6ca7e85cfb86daba367540af25db88
 
 ---
 
-# Habilitar compras de produtos no aplicativo
-
-
+# <a name="enable-in-app-product-purchases"></a>Habilitar compras de produtos no aplicativo
 
 >**Observação**&nbsp;&nbsp;Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar complementos (também conhecidos como produtos no aplicativo ou IAPs), em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
 
-Seja seu aplicativo gratuito ou não, você pode vender conteúdo, outros aplicativos ou uma nova funcionalidade do aplicativo (como o desbloqueio do próximo nível de um jogo) no próprio aplicativo. Veja a seguir como habilitar esses produtos no seu aplicativo.
+Seja seu app gratuito ou não, você pode vender conteúdo, outros apps ou uma nova funcionalidade do app (como o desbloqueio do próximo nível de um jogo) no próprio app. Veja a seguir como habilitar esses produtos no seu aplicativo.
 
-> **Observação**  Produtos no aplicativo não podem ser oferecidos em uma versão de avaliação do aplicativo. Os clientes que usam uma versão de avaliação do aplicativo só poderão comprar um produto no aplicativo se comprarem a versão completa do seu aplicativo.
+> **Observação**&nbsp;&nbsp;Produtos no aplicativo não podem ser oferecidos em uma versão de avaliação do app. Os clientes que usam uma versão de avaliação do aplicativo só poderão comprar um produto no aplicativo se comprarem a versão completa do seu aplicativo.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 -   Um aplicativo do Windows no qual devem ser adicionados os recursos que os clientes podem comprar.
--   Ao codificar e testar novos produtos no aplicativo pela primeira vez, você deve usar o objeto [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) em vez do objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765). Dessa forma, é possível verificar a lógica do licenciamento usando chamadas simuladas ao servidor de licenças em vez de chamar o servidor ativo. Para fazer isso, você precisa personalizar o arquivo chamado "WindowsStoreProxy.xml" em %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. O simulador do Microsoft Visual Studio cria esse arquivo quando você executa seu aplicativo pela primeira vez, mas também é possível carregar um arquivo personalizado no tempo de execução. Para saber mais, consulte [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766).
+-   Ao codificar e testar novos produtos no aplicativo pela primeira vez, você deve usar o objeto [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) em vez do objeto [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765). Dessa forma, é possível verificar a lógica do licenciamento usando chamadas simuladas ao servidor de licenças, em vez de chamar o servidor ativo. Para fazer isso, você precisa personalizar o arquivo chamado WindowsStoreProxy.xml em %userprofile%\\AppData\\local\\packages\\&lt;nome do pacote&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. O simulador do Microsoft Visual Studio cria esse arquivo quando você executa seu app pela primeira vez, mas também é possível carregar um arquivo personalizado em tempo de execução. Para obter mais informações, consulte [Usando o arquivo WindowsStoreProxy.xml com CurrentAppSimulator](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy).
 -   Este tópico também faz referência a exemplos de código fornecidos no [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store). Essa amostra é uma ótima maneira de obter experiência prática com as diferentes opções de monetização fornecidas para os aplicativos UWP (Plataforma Universal do Windows).
 
-## Etapa 1: Inicie as informações de licença do aplicativo
+## <a name="step-1-initialize-the-license-info-for-your-app"></a>Etapa 1: Inicie as informações de licença do aplicativo
 
-Quando seu aplicativo estiver inicializando, obtenha o objeto [**LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/br225157) para seu aplicativo inicializando o [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) ou [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) para habilitar compras de um produto no aplicativo.
+Quando seu app estiver em processo de inicialização, obtenha o objeto [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157) para seu app inicializando [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) ou [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) para habilitar compras de um produto no aplicativo.
 
-```CSharp
-void AppInit()
-{
-    // some app initialization functions
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#InitializeLicenseTest)]
 
-    // Get the license info
-    // The next line is commented out for testing.
-    // licenseInformation = CurrentApp.LicenseInformation;
+## <a name="step-2-add-the-in-app-offers-to-your-app"></a>Etapa 2: Adicione as ofertas de produto no aplicativo ao seu app
 
-    // The next line is commented out for production/release.       
-    licenseInformation = CurrentAppSimulator.LicenseInformation;
+Para cada recurso a ser disponibilizado por meio de uma transação de produto no aplicativo, crie uma oferta e adicione-a ao seu app.
 
-    // other app initialization functions
-}
-```
-
-## Etapa 2: Adicione as ofertas de produto no aplicativo ao seu aplicativo
-
-Para cada recurso a ser disponibilizado por meio de uma transação de produto no aplicativo, crie uma oferta e adicione-a ao aplicativo.
-
-> **Importante**  Você deve adicionar todos os produtos no aplicativo que deseja apresentar para seus clientes antes de enviá-lo para a Loja. Para adicionar novos produtos no aplicativo depois, você deve atualizar o aplicativo e reenviar uma nova versão.
+> **Importante**&nbsp;&nbsp;Você deve adicionar todos os produtos no aplicativo que deseja apresentar aos clientes antes de enviar o app à Loja. Para adicionar novos produtos no aplicativo depois, você deve atualizar o aplicativo e reenviar uma nova versão.
 
 1.  **Crie um token de oferta no aplicativo**
 
@@ -66,66 +51,35 @@ Para cada recurso a ser disponibilizado por meio de uma transação de produto n
 
     Coloque o código de cada recurso associado a um produto no aplicativo em um bloco de condições que testa se o cliente tem uma licença para usar esse recurso.
 
-    Veja a seguir um exemplo que mostra como é possível codificar um recurso de produto chamado **featureName** em um bloco condicional específico da licença. A cadeia de caracteres, **featureName**, é o token que identifica esse produto de forma exclusiva no aplicativo e também é usada para identificá-lo na Loja.
+    Veja a seguir um exemplo que mostra como é possível codificar um recurso de produto chamado **featureName** em um bloco condicional específico da licença. A cadeia de caracteres **featureName** é o token que identifica esse produto de forma exclusiva no app, e também é usada para identificá-lo na Loja.
 
-    ```    CSharp
-    if (licenseInformation.ProductLicenses["featureName"].IsActive)
-    {
-        // the customer can access this feature
-    }
-    else
-    {
-        // the customer can' t access this feature
-    }
-    ```
+    > [!div class="tabbedCodeSnippets"]
+    [!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#CodeFeature)]
 
 3.  **Adicione a interface do usuário de compra para este recurso**
 
-    Seu aplicativo também deve permitir que os clientes comprem o produto ou o recurso proposto para produto no aplicativo. O jeito de comprá-los é diferente da maneira como os clientes compraram o aplicativo completo na Loja.
+    Seu app também deve permitir que os clientes comprem o produto ou o recurso proposto para produto no aplicativo. O jeito de comprá-los é diferente da maneira como os clientes compraram o aplicativo completo na Loja.
 
-    Veja aqui como testar se o cliente já possui um produto no aplicativo e, se não tiver, se ele pode visualizar a caixa de diálogo para fazer a compra. Substitua o comentário "mostrar a caixa de diálogo de compra" pelo código personalizado da caixa de diálogo de compra (como uma página com um botão "Compre este aplicativo!" ).
+    Veja aqui como testar se o cliente já possui um produto no aplicativo e, se não tiver, se ele pode visualizar a caixa de diálogo para fazer a compra. Substitua o comentário "mostrar a caixa de diálogo de compra" pelo código personalizado da caixa de diálogo de compra (como uma página com um botão "Compre este app!" ).
 
-    ```    CSharp
-    void BuyFeature1()
-    {
-        if (!licenseInformation.ProductLicenses["featureName"].IsActive)
-        {
-            try
-            {
-                // The customer doesn't own this feature, so
-                // show the purchase dialog.
-                await CurrentAppSimulator.RequestProductPurchaseAsync("featureName", false);
+    > [!div class="tabbedCodeSnippets"]
+    [!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#BuyFeature)]
 
-                //Check the license state to determine if the in-app purchase was successful.
-            }
-            catch (Exception)
-            {
-                // The in-app purchase was not completed because
-                // an error occurred.
-            }
-        }
-        else
-        {
-            // The customer already owns this feature.
-        }
-    }
-    ```
+## <a name="step-3-change-the-test-code-to-the-final-calls"></a>Etapa 3: Mude o código de teste para as chamadas finais
 
-## Etapa 3: Mude o código de teste para as chamadas finais
+Esta etapa é fácil: basta mudar todas as referências a [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) para [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) no código do app. Não é mais preciso fornecer o arquivo WindowsStoreProxy.xml, então, remova-o do caminho do aplicativo (embora você possa salvá-lo para referência ao configurar a oferta no aplicativo, na próxima etapa).
 
-Esta etapa é fácil: basta mudar todas as referências de [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) para [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) no código do aplicativo. Não é mais preciso fornecer o arquivo WindowsStoreProxy.xml, então, remova-o do caminho do aplicativo (embora você possa salvá-lo para referência ao configurar a oferta no aplicativo, na próxima etapa).
-
-## Etapa 4: Configurar o produto no aplicativo na Loja
+## <a name="step-4-configure-the-in-app-product-offer-in-the-store"></a>Etapa 4: Configurar o produto no aplicativo na Loja
 
 No painel do Centro de Desenvolvimento, defina a ID do produto, o tipo, o preço e outras propriedades para seu produto no aplicativo. Lembre-se de configurá-lo com a mesma configuração que você definiu no WindowsStoreProxy.xml durante o teste. Para obter mais informações, consulte [Envios de IAP](https://msdn.microsoft.com/library/windows/apps/mt148551).
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Se você tiver interesse em fornecer aos seus clientes opções de compra de produtos no aplicativo (itens que poderão ser comprados, usados e comprados novamente se desejado), vá para o tópico [Habilitar compras de produtos consumíveis no aplicativo](enable-consumable-in-app-product-purchases.md).
 
 Se você precisar usar recibos para verificar se o usuário fez uma compra no aplicativo, confira [Usar recibos para verificar compras de produto](use-receipts-to-verify-product-purchases.md).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Habilitar compras de produtos consumíveis no aplicativo](enable-consumable-in-app-product-purchases.md)
@@ -135,6 +89,6 @@ Se você precisar usar recibos para verificar se o usuário fez uma compra no ap
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

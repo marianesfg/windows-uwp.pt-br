@@ -4,13 +4,13 @@ ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: "Vinculação de dados em detalhes"
 description: "A vinculação de dados é uma maneira de a interface do usuário do seu aplicativo exibir dados e, opcionalmente, ficar em sincronia com esses dados."
 translationtype: Human Translation
-ms.sourcegitcommit: ef5e2819a7fd18fb3ed3162fd8debe750f29c378
-ms.openlocfilehash: fa1616c88d475393311055561a7bd219c2373f76
+ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
+ms.openlocfilehash: 48db13fec4ce9c6a9a998c84ddaaba30f7a24d83
 
 ---
-# Vinculação de dados em detalhes
+# <a name="data-binding-in-depth"></a>Vinculação de dados em detalhes
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -43,7 +43,7 @@ Existem dois tipos de associação, e ambos normalmente são declarados na marca
 -   Baixe o aplicativo [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950).
 -   Baixe o aplicativo [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952).
 
-## Cada associação envolve essas partes
+## <a name="every-binding-involves-these-pieces"></a>Cada associação envolve essas partes
 
 -   Uma *origem de associação*. Essa é a fonte de dados para a associação e pode ser uma instância de qualquer classe que tem membros cujos valores você deseja exibir em sua interface do usuário.
 -   Um *destino da associação*. Este é um [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362) da [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) em sua interface do usuário que exibe os dados.
@@ -51,7 +51,7 @@ Existem dois tipos de associação, e ambos normalmente são declarados na marca
 
 Nas seções a seguir, vamos dar uma olhada na origem da associação, no destino da associação e no objeto de associação. E vincularemos as seções com o exemplo de associação do conteúdo de um botão a uma propriedade de string chamada **NextButtonText**, que pertence a uma classe chamada **HostViewModel**.
 
-### Origem de associação
+### <a name="binding-source"></a>Origem de associação
 
 Consulte uma implementação muito rudimentar de uma classe que poderíamos usar como uma fonte de associação.
 
@@ -145,7 +145,7 @@ Uma origem de associação pode ser tratada como um único objeto cujas propried
 
 Você pode associar controles de lista a fontes de dados arbitrariamente grandes e ainda assim obter um alto desempenho, usando o carregamento incremental. Por exemplo, você pode associar controles de lista a resultados de consulta de imagens do Bing sem precisar carregar todos os resultados de uma vez. Em vez disso, você carrega apenas alguns resultados imediatamente e carrega resultados adicionais conforme o necessário. Para dar suporte ao carregamento incremental, você deve implementar [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916) em uma fonte de dados que dê suporte à notificação de alterações de coleção. Quando o mecanismo de vinculação de dados solicitar mais dados, a fonte de dados deverá fazer as solicitações apropriadas, integrar os resultados e, depois, enviar as notificações apropriadas para atualizar a interface do usuário.
 
-### Destino da associação
+### <a name="binding-target"></a>Destino da associação
 
 Nos dois exemplos a seguir, a propriedade **Button.Content** é o destino da associação, e seu valor é definido como uma extensão de marcação que declara o objeto de associação. Primeiro [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) é mostrado e depois [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Declarar as associações na marcação é o caso comum (é conveniente, legível e editável). Porém, você pode evitar a marcação e criar obrigatoriamente (programaticamente) uma instância da classe [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820), se precisar.
 
@@ -158,7 +158,7 @@ Nos dois exemplos a seguir, a propriedade **Button.Content** é o destino da ass
 <Button Content="{Binding ...}" ... />
 ```
 
-### Objeto de associação declarado usando {x:Bind}
+### <a name="binding-object-declared-using-xbind"></a>Objeto de associação declarado usando {x:Bind}
 
 Há uma etapa que precisamos fazer antes de criar nossa marcação [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). Precisamos expor nossa classe de origem de associação da classe que representa nossa página de marcação. Fazemos isso adicionando uma propriedade (do tipo **HostViewModel** neste caso) à classe da página **HostView**.
 
@@ -217,7 +217,7 @@ O código para dar suporte a **{x:Bind}** é gerado no tempo de compilação nas
 
 **{x:Bind}** não é adequado para cenários de associação tardia, como navegar na estrutura de dicionário de um objeto JSON, nem "duck typing" que é uma forma fraca de digitação com base em correspondências lexicais em nomes de propriedade ("se ele anda, nada, grasna como um pato, então é um pato"). Com "duck typing", uma associação à propriedade Age seria atendida igualmente com um objeto Pessoa ou Vinho. Para esses cenários, use **{Binding}**.
 
-### Objeto de associação declarado usando {Binding}
+### <a name="binding-object-declared-using-binding"></a>Objeto de associação declarado usando {Binding}
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) presume que, por padrão, você está associando ao [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) da sua página de marcação. Portanto, definiremos o **DataContext** de nossa página como uma instância de nossa classe de origem de associação (do tipo **HostViewModel**, nesse caso). O exemplo a seguir mostra a marcação que declara o objeto de associação. Usamos o mesmo destino da associação **Button.Content** usado na seção "Destino da associação" anteriormente e associamos à propriedade **HostViewModel.NextButtonText**.
 
@@ -252,14 +252,14 @@ Dentro de um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/
 
 A propriedade [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) dá suporte a várias opções de sintaxe para associação a propriedades aninhadas, propriedades anexadas e indexadores de inteiros e cadeias de caracteres. Para obter mais informações, consulte [Sintaxe do Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586). A associação a indexadores de inteiros tem o mesmo efeito da associação a propriedades dinâmicas, mas sem implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). A propriedade [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname) é útil para associação de elementos. A propriedade [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource) tem vários usos, um deles é como uma alternativa mais poderosa à associação de modelo dentro de um [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391). Para outras configurações, consulte [Extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) e a classe [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820).
 
-## E se a origem e o destino não forem do mesmo tipo?
+## <a name="what-if-the-source-and-the-target-are-not-the-same-type"></a>E se a origem e o destino não forem do mesmo tipo?
 
 Se desejar controlar a visibilidade de um elemento de interface do usuário com base no valor de uma propriedade booleana, ou se você desejar renderizar um elemento de interface do usuário com uma cor que é uma função de um intervalo ou tendência de um valor numérico, ou se quiser exibir um valor de data e/ou hora em uma propriedade de elemento de interface do usuário que espera uma string, precisará converter valores de um tipo em outro. Haverá casos em que a solução ideal é expor outra propriedade do tipo certo de sua classe de origem de associação e manter a lógica de conversão encapsulada e testada lá. Mas isso não é flexível nem escalável quando você tem números grandes, ou combinações grandes, das propriedades de origem e destino. Nesse caso, você tem algumas opções:
 
 * Se estiver usando {x: Bind}, você poderá vincular-se diretamente a uma função para fazer essa conversão
 * Ou poderá especificar um conversor de valor que é um objeto criado para executar a conversão 
 
-## Conversores de valor
+## <a name="value-converters"></a>Conversores de valor
 
 Consulte um conversor de valor, adequado para uma associação única ou unidirecional, que converte um valor [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx) em um valor de string que contém o mês. A classe implementa [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
 
@@ -367,13 +367,14 @@ Para exibir um valor padrão a ser usado sempre que a origem da associação nã
 Se você associar um controle de texto a um valor que não seja uma cadeia, o mecanismo de vinculação de dados converterá o valor a uma cadeia. Se o valor for um tipo de referência, o mecanismo de vinculação de dados recuperará o valor da cadeia chamando [**ICustomPropertyProvider.GetStringRepresentation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.icustompropertyprovider.getstringrepresentation) ou [**IStringable.ToString**](https://msdn.microsoft.com/library/Dn302136) se disponível e, caso não estejam, chamará [**Object.ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx). Observe, porém, que esse mecanismo ignora qualquer implementação de **ToString** que oculte a implementação da classe base. Implementações de subclasse devem substituir o método **ToString** da classe base em vez disso. Da mesma forma, nos idiomas nativos, todos os objetos gerenciados parecem implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) e [**IStringable**](https://msdn.microsoft.com/library/Dn302135). Porém, todas as chamadas para **GetStringRepresentation** e **IStringable.ToString** são roteadas para **Object.ToString** ou para uma substituição desse método e nunca para uma nova implementação de **ToString** que oculte a implementação da classe base.
 
 > [!NOTE]
-> A partir do Windows 10, versão 1607, a estrutura XAML fornece um booleano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **false** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um booleano sem criar um conversor. Para usar o conversor integrado, a versão do SDK de alvo mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir do Windows 10, versão 1607, a estrutura XAML fornece um booliano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **false** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um booliano sem criar um conversor. Para usar o conversor integrado, a versão do SDK de alvo mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-## Associação de função em {x: Bind}
+## <a name="function-binding-in-xbind"></a>Associação de função em {x: Bind}
 
 {x: Bind} permite que a etapa final em um caminho de associação seja uma função. Isso pode ser usado para realizar conversões e realizar associações que dependem de mais de uma propriedade. Consulte a [**Extensão de marcação {x: Bind}**](https://msdn.microsoft.com/en-us/windows/uwp/xaml-platform/x-bind-markup-extension)
 
-## Dicionários de recursos com {x:Bind}
+<span id="resource-dictionaries-with-x-bind"/>
+## <a name="resource-dictionaries-with-xbind"></a>Dicionários de recursos com {x:Bind}
 
 A [Extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) depende de geração do código e, assim, precisa de um arquivo de código que contém um construtor que chama **InitializeComponent** (para inicializar o código gerado). Você reutiliza o dicionário de recursos instanciando seu tipo (para que **InitializeComponent** seja chamado) em vez de fazer referência a seu nome de arquivo. Consulte um exemplo do que fazer se você tiver um dicionário de recursos existente e desejar usar {x:Bind} nele.
 
@@ -428,7 +429,7 @@ MainPage.xaml
 </Page>
 ```
 
-## Associação de eventos e ICommand
+## <a name="event-binding-and-icommand"></a>Associação de eventos e ICommand
 
 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) dá suporte a um recurso chamado de associação de eventos. Com esse recurso, você pode especificar o manipulador para um evento usando uma associação, que é uma opção adicional sobre a manipulação de eventos com um método no arquivo de código. Digamos que você tenha uma propriedade **RootFrame** em sua classe **MainPage**.
 
@@ -453,7 +454,7 @@ Métodos sobrecarregados não podem ser usados para manipular um evento com essa
 A técnica de associação de eventos é semelhante a implementar e consumir comandos (um comando é uma propriedade que retorna um objeto que implementa a interface [**ICommand**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.icommand.aspx)). [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) e [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) funcionam com comandos. Para que você não precise implementar o padrão de comando várias vezes, pode usar a classe auxiliar **DelegateCommand** que encontrará na amostra [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (na pasta "Comum").
 
 
-## Associando a uma coleção de pastas ou arquivos
+## <a name="binding-to-a-collection-of-folders-or-files"></a>Associando a uma coleção de pastas ou arquivos
 
 Você pode usar as APIs do namespace [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) para recuperar dados de pastas e arquivos. No entanto, os diversos métodos **GetFilesAsync**, **GetFoldersAsync** e **GetItemsAsync** não retornam valores adequados para a associação a controles de lista. Em vez disso, você deve associar os valores de retorno dos métodos [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422), [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428) e [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430) da classe [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501). A amostra de código a seguir, da [amostra de StorageDataSource e GetVirtualizedFilesVector](http://go.microsoft.com/fwlink/p/?linkid=228621), mostra o padrão de uso típico. Lembre-se de declarar a funcionalidade **picturesLibrary** em seu manifesto de pacote do aplicativo e confirmar que há imagens na sua pasta de biblioteca de imagens.
 
@@ -486,7 +487,7 @@ Observe que a associação bidirecional que usa essa técnica funciona apenas em
 
 Observe também que um vetor virtualizado pode retornar **null** para alguns itens antes de ele preencher seu valor. Por exemplo, você deve verificar se há **null** antes de usar o valor [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) de um limite de controle de lista para um vetor virtualizado ou use [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/BR209768).
 
-## Associação a dados agrupados por uma chave
+## <a name="binding-to-data-grouped-by-a-key"></a>Associação a dados agrupados por uma chave
 
 Se você usar uma coleção simples de itens (livros, por exemplo, representados por uma classe **BookSku**) e agrupar os itens usando uma propriedade comum, como uma chave (a propriedade **BookSku.AuthorName**, por exemplo), o resultado será chamado de dados agrupados. Quando você agrupa os dados, não é mais uma coleção simples. Dados agrupados são uma coleção de objetos de grupo, onde cada objeto de grupo tem a) uma chave e b) uma coleção de itens cuja propriedade corresponde a essa chave. Para aproveitar o exemplo de livros novamente, o resultado de agrupar os livros pelo nome do autor resulta em uma coleção de grupos de nome do autor onde cada grupo tem a) uma chave, que é um nome do autor, e b) uma coleção de **BookSku**s cuja propriedade **AuthorName** corresponde à chave do grupo.
 
@@ -575,7 +576,8 @@ Um controle [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/H
 
 Quando você associa a dados hierárquicos — como subcategorias nas categorias — pode optar por exibir os níveis hierárquicos em sua interface do usuário com uma série de controles de itens. Uma seleção em um controle de itens determina o conteúdo dos controles de itens subsequentes. Você pode manter as listas sincronizadas associando cada uma delas à sua própria [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) e associando as instâncias **CollectionViewSource** em uma cadeia. Isso é chamado de modo de exibição mestre/detalhado (ou lista/detalhes). Para saber mais, consulte [Como associar a dados hierárquicos e criar um modo de exibição mestre/detalhado](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md).
 
-## Diagnosticar e depurar problemas de vinculação de dados
+<span id="debugging"/>
+## <a name="diagnosing-and-debugging-data-binding-problems"></a>Diagnosticar e depurar problemas de vinculação de dados
 
 Sua marcação de associação contém os nomes de propriedades (e, para C#, às vezes, campos e métodos). Portanto, quando você renomeia uma propriedade, também precisa alterar qualquer associação que faz referência a ela. Esquecer de fazer isso leva a um exemplo típico de um bug de vinculação de dados, e seu aplicativo não será compilado ou não será executado corretamente.
 
@@ -583,7 +585,7 @@ Os objetos de associação criados por [{x:Bind}](https://msdn.microsoft.com/lib
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) não tem informações de tipo para a origem da associação. Mas, quando você executa o aplicativo com o depurador anexado, os possíveis erros de associação aparecem na janela **Saída** do Visual Studio.
 
-## Criando associações em código
+## <a name="creating-bindings-in-code"></a>Criando associações em código
 
 **Observação**  Esta seção só se aplica a [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), pois você não pode criar associações [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) no código. No entanto, alguns dos mesmos benefícios de {x:Bind} podem ser obtidos com [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx), o que permite que você se registre para receber notificações de alteração em qualquer propriedade de dependência.
 
@@ -627,7 +629,7 @@ Dim binding As New Binding() With {.Path = New PropertyPath("Brush1")}
 MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 ```
 
-## Comparação de recursos de {x:Bind} e {Binding}
+## <a name="xbind-and-binding-feature-comparison"></a>Comparação de recursos de {x:Bind} e {Binding}
 
 | Recurso | {x:Bind} | {Binding} | Observações |
 |---------|----------|-----------|-------|
@@ -651,6 +653,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

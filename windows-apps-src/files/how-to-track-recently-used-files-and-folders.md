@@ -1,16 +1,16 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: Rastrear arquivos e pastas usados recentemente
 description: "Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu aplicativo."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: 84b78cc4af9490f142c0f74fec127e1d003ce6df
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: fc873da2d0b48cdc614fa319a294e67642440cdf
 
 ---
-# Acompanhar arquivos e pastas usados recentemente
+# <a name="track-recently-used-files-and-folders"></a>Acompanhar arquivos e pastas usados recentemente
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** APIs importantes **
@@ -26,7 +26,7 @@ Os itens recém-usados do aplicativo são representados pela classe [**StorageIt
 
  
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 -   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
 
@@ -40,7 +40,7 @@ Os itens recém-usados do aplicativo são representados pela classe [**StorageIt
 
     Os arquivos selecionados costumam ser os mesmos arquivos que os usuários acessam com frequência.
 
- ## Adicionar um arquivo selecionado à lista MRU
+ ## <a name="add-a-picked-file-to-the-mru"></a>Adicionar um arquivo selecionado à lista MRU
 
 -   Os arquivos que o usuário seleciona costumam ser os arquivos que eles retornam repetidamente. Portanto, considere adicionar os arquivos selecionados aos itens recém-usados de seu aplicativo assim que eles forem selecionados. Consulte aqui como fazer isso.
 
@@ -59,7 +59,7 @@ Os itens recém-usados do aplicativo são representados pela classe [**StorageIt
 
      
 
-## Usar um token para recuperar um item da lista MRU
+## <a name="use-a-token-to-retrieve-an-item-from-the-mru"></a>Usar um token para recuperar um item da lista MRU
 
 Use o método de recuperação mais apropriado para o item a ser recuperado.
 
@@ -87,11 +87,11 @@ foreach (Windows.Storage.AccessCache.AccessListEntry entry in mru.Entries)
 
 O [**AccessListEntryView**](https://msdn.microsoft.com/library/windows/apps/br227349) permite que você promova a iteração de itens recém-usados. Essas entradas são estruturas de [**AccessListEntry**](https://msdn.microsoft.com/library/windows/apps/br227348) que contêm o token e os metadados de um item.
 
-## Removendo itens da lista MRU quando ela está cheia
+## <a name="removing-items-from-the-mru-when-its-full"></a>Removendo itens da lista MRU quando ela está cheia
 
 Quando o limite de 25 itens da MRU for atingido e você tentar adicionar um novo item, o item que foi acessado há mais tempo será removido automaticamente. Portanto, você nunca precisa remover um item antes de adicionar um novo.
 
-## Lista de acesso futuro
+## <a name="future-access-list"></a>Lista de acesso futuro
 
 Além da lista MRU, seu aplicativo também tem uma lista de acesso futuro. Selecionando arquivos e pastas, o usuário concede a seu aplicativo permissão para acessar itens que podem não estar acessíveis de outra maneira. Se você adicionar esses itens à sua lista de acesso futuro, manterá essa permissão quando seu aplicativo quiser acessar esses itens novamente mais tarde. A lista de acesso futuro do seu aplicativo é representada pela classe [**StorageItemAccessList**](https://msdn.microsoft.com/library/windows/apps/br207459) que você obtém da propriedade estática [**StorageApplicationPermissions.FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457).
 
@@ -106,6 +106,6 @@ Quando um usuário seleciona um item, considere adicioná-lo à sua lista de ace
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

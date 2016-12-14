@@ -5,18 +5,18 @@ description: "Saiba como usar o namespace Windows.Services.Store para trabalhar 
 title: "Habilitar compras de complementos consumíveis"
 keywords: "exemplo de código de oferta no aplicativo"
 translationtype: Human Translation
-ms.sourcegitcommit: 962bee0cae8c50407fe1509b8000dc9cf9e847f8
-ms.openlocfilehash: eb188ed8e69f90727c5b57af1c407fac07eaf87d
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 12191a946ec080c8e386191363617a9c437671c5
 
 ---
 
-# Habilitar compras de complementos consumíveis
+# <a name="enable-consumable-add-on-purchases"></a>Habilitar compras de complementos consumíveis
 
-Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar métodos da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar o atendimento de complementos consumíveis do usuário em seus aplicativos UWP (complementos também são conhecidos como produtos no aplicativo ou IAPs). Use complementos consumíveis para itens que podem ser comprados, usados e comprados novamente. Isso é especialmente útil para coisas como moedas em jogos (ouro, moedas, etc.) que podem ser compradas e então usadas para comprar power-ups específicos.
+Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar métodos da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar o atendimento de complementos consumíveis do usuário em seus aplicativos UWP (complementos também são conhecidos como produtos no aplicativo ou IAPs). Use complementos consumíveis para itens que podem ser comprados, usados e comprados novamente. Isso é especialmente útil para itens como moedas em jogos (ouro, moedas etc.) que podem ser comprados e então usados para comprar power-ups específicos.
 
 >**Observação**&nbsp;&nbsp;Este artigo se refere a aplicativos direcionados ao Windows 10, versão 1607, ou posterior. Se seu aplicativo for direcionado para uma versão anterior do Windows 10, use o namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez do **Windows.Services.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
-## Visão geral dos complementos consumíveis
+## <a name="overview-of-consumable-add-ons"></a>Visão geral dos complementos consumíveis
 
 Aplicativos destinados ao Windows 10, versão 1607, ou posterior podem oferecer dois tipos de complementos consumíveis que variam dependendo da maneira como o atendimento é gerenciado:
 
@@ -37,7 +37,7 @@ Para oferecer um complemento consumível a um usuário, siga este processo geral
 
 A qualquer momento, você também pode [obter o saldo restante](enable-consumable-add-on-purchases.md#get_balance) de um consumível gerenciado pela Loja.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Esses exemplos têm os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao Windows 10, versão 1607 ou posterior.
@@ -53,7 +53,7 @@ Para obter um aplicativo de exemplo completo, consulte o [Exemplo da Loja](https
 >**Observação**&nbsp;&nbsp;Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado nesses exemplos para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
 
 <span id="report_fulfilled" />
-## Declarar um complemento consumível como providenciado
+## <a name="report-a-consumable-add-on-as-fulfilled"></a>Declarar um complemento consumível como providenciado
 
 Depois que o usuário [comprar o complemento](enable-in-app-purchases-of-apps-and-add-ons.md) do seu aplicativo e ele consumir o complemento, seu aplicativo deverá declarar o complemento como providenciado chamando o método [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.reportconsumablefulfillmentasync.aspx) da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Você deve passar as seguintes informações para esse método:
 
@@ -65,129 +65,28 @@ Depois que o usuário [comprar o complemento](enable-in-app-purchases-of-apps-an
 
 Este exemplo demonstra como relatar um consumível gerenciado pela Loja como providenciado.
 
-```csharp
-private StoreContext context = null;
-
-public async void ConsumeAddOn(string storeId)
-{
-    if (context == null)
-    {
-        context = StoreContext.GetDefault();
-        // If your app is a desktop app that uses the Desktop Bridge, you
-        // may need additional code to configure the StoreContext object.
-        // For more info, see https://aka.ms/storecontext-for-desktop.
-    }
-
-    // This is an example for a Store-managed consumable, where you specify the actual number
-    // of units that you want to report as consumed so the Store can update the remaining
-    // balance. For a developer-managed consumable where you maintain the balance, specify 1
-    // to just report the add-on as fulfilled to the Store.
-    uint quantity = 10;
-    string addOnStoreId = "9NBLGGH4TNNR";
-    Guid trackingId = Guid.NewGuid();
-
-    workingProgressRing.IsActive = true;
-    StoreConsumableResult result = await context.ReportConsumableFulfillmentAsync(
-        addOnStoreId, quantity, trackingId);
-    workingProgressRing.IsActive = false;
-
-    if (result.ExtendedError != null)
-    {
-        // The user may be offline or there might be some other server failure.
-        textBlock.Text = $"ExtendedError: {result.ExtendedError.Message}";
-        return;
-    }
-
-    switch (result.Status)
-    {
-        case StoreConsumableStatus.Succeeded:
-            textBlock.Text = "The fulfillment was successful. Remaining balance: " +
-                result.BalanceRemaining;
-            break;
-
-        case StoreConsumableStatus.InsufficentQuantity:
-            textBlock.Text = "The fulfillment was unsuccessful because the user " +
-            "doesn't have enough remaining balance." + result.BalanceRemaining;
-            break;
-
-        case StoreConsumableStatus.NetworkError:
-            textBlock.Text = "The fulfillment was unsuccessful due to a network error.";
-            break;
-
-        case StoreConsumableStatus.ServerError:
-            textBlock.Text = "The fulfillment was unsuccessful due to a server error.";
-            break;
-
-        default:
-            textBlock.Text = "The fulfillment was unsuccessful due to an unknown error.";
-            break;
-    }
-}
-```
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/ConsumeAddOnPage.xaml.cs#ConsumeAddOn)]
 
 <span id="get_balance" />
-## Obtenha o saldo restante de um consumível gerenciado pela Loja
+## <a name="get-the-remaining-balance-for-a-store-managed-consumable"></a>Obter o saldo restante de um consumível gerenciado pela Loja
 
 Este exemplo demonstra como usar o método [GetConsumableBalanceRemainingAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getconsumablebalanceremainingasync.aspx) da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para obter o saldo restante de um complemento consumível gerenciado pela Loja.
 
-```csharp
-private StoreContext context = null;
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/GetRemainingAddOnBalancePage.xaml.cs#GetRemainingAddOnBalance)]
 
-public async void GetRemainingBalance(string storeId)
-{
-    if (context == null)
-    {
-        context = StoreContext.GetDefault();
-        // If your app is a desktop app that uses the Desktop Bridge, you
-        // may need additional code to configure the StoreContext object.
-        // For more info, see https://aka.ms/storecontext-for-desktop.
-    }
-
-    string addOnStoreId = "9NBLGGH4TNNR";
-
-    workingProgressRing.IsActive = true;
-    StoreConsumableResult result = await context.GetConsumableBalanceRemainingAsync(addOnStoreId);
-    workingProgressRing.IsActive = false;
-
-    if (result.ExtendedError != null)
-    {
-        // The user may be offline or there might be some other server failure.
-        textBlock.Text = $"ExtendedError: {result.ExtendedError.Message}";
-        return;
-    }
-
-    switch (result.Status)
-    {
-        case StoreConsumableStatus.Succeeded:
-            textBlock.Text = "Remaining balance: " + result.BalanceRemaining;
-            break;
-
-        case StoreConsumableStatus.NetworkError:
-            textBlock.Text = "Could not retrieve balance due to a network error.";
-            break;
-
-        case StoreConsumableStatus.ServerError:
-            textBlock.Text = "Could not retrieve balance due to a server error.";
-            break;
-
-        default:
-            textBlock.Text = "Could not retrieve balance due to an unknown error.";
-            break;
-    }
-}
-```
-
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md)
-* [Obter informações do produto para aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)
-* [Obter informações de licença para aplicativos e complementos](get-license-info-for-apps-and-add-ons.md)
+* [Obter informações do produto para apps e complementos](get-product-info-for-apps-and-add-ons.md)
+* [Obter informações de licença para apps e complementos](get-license-info-for-apps-and-add-ons.md)
 * [Habilitar compras nos aplicativos e complementos no aplicativo](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Implementar uma versão de avaliação do seu aplicativo](implement-a-trial-version-of-your-app.md)
 * [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,12 +4,12 @@ Description: "Este artigo lista as coisas que você precisa saber antes de conve
 Search.Product: eADQiWindows 10XVcnh
 title: "Preparar o aplicativo para a ponte da área de trabalho para UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
-ms.openlocfilehash: 4cf9c509be52a8b2c03cdaa9ac68b98ba49b7094
+ms.sourcegitcommit: f7a8b8d586983f42fe108cd8935ef084eb108e35
+ms.openlocfilehash: 81a2485d5be22dd392c21aaff281c1c9263883a9
 
 ---
 
-# Preparar um aplicativo para conversão usando a ponte da área de trabalho
+# <a name="prepare-an-app-for-conversion-with-the-desktop-bridge"></a>Preparar um app para conversão usando a ponte da área de trabalho
 
 Este artigo lista as coisas que você precisa saber antes de converter o aplicativo usando a ponte da área de trabalho para UWP. Talvez você não precise fazer muito para preparar o aplicativo para o processo de conversão, mas se algum dos itens abaixo se aplicar ao aplicativo, você precisará resolver isso antes da conversão. Lembre-se de que a Windows Store lida com o licenciamento e a atualização automática para você, portanto, você pode remover esses recursos de sua base de código.
 
@@ -59,9 +59,16 @@ Este artigo lista as coisas que você precisa saber antes de converter o aplicat
     
     Observação: em todos os casos, você deve se vincular à última CRT publicamente disponível.
 
-+ __Seu aplicativo instala e carrega os assemblies da pasta lado a lado do Windows__. Por exemplo, seu aplicativo usa bibliotecas de tempo de execução C VC8 ou VC9 e está vinculando-as dinamicamente da pasta lado a lado do Windows, ou seja, seu código está usando os arquivos DLL comuns de uma pasta compartilhada. Isso não tem suporte. Você precisará vinculá-las estaticamente por meio de links aos arquivos de biblioteca redistribuível diretamente no seu código.
++ __Seu aplicativo instala e carrega os assemblies da pasta lado a lado do Windows__. Por exemplo, seu aplicativo usa bibliotecas de tempo de execução C VC8 ou VC9 e está vinculando-as dinamicamente da pasta lado a lado do Windows, ou seja, seu código está usando os arquivos DLL comuns de uma pasta compartilhada. Isso não tem suporte. Você precisará vinculá-las de forma estática vinculando-as aos arquivos da biblioteca redistribuível diretamente no código.
+
++ __Seu app usa uma dependência na pasta System32/SysWOW64__. Para fazer essas DLLs funcionarem, você deve incluí-las na parte do sistema de arquivos virtual do pacote AppX. Isso garante que o app se comporte como se as DLLs tivessem sido instaladas na pasta **System32**/**SysWOW64**. Na raiz do pacote, crie uma pasta chamada **VFS**. Dentro dessa pasta, crie uma pasta **SystemX64** e uma **SystemX86**. Em seguida, coloque a versão de 32 bits de sua DLL na pasta **SystemX86** e a versão de 64 bits na pasta **SystemX64**.
+
++ __Seu app usa o pacote de estrutura VCLibs do Dev11__. As bibliotecas VCLibs 11 podem ser instaladas diretamente da Windows Store, caso estejam definidas como uma dependência no pacote AppX. Para fazer isso, faça a seguinte alteração no manifesto do pacote do aplicativo: sob o nó `<Dependencies>`, adicione:  
+`<PackageDependency Name="Microsoft.VCLibs.110.00.UWPDesktop" MinVersion="11.0.24217.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />`  
+Durante a instalação a partir da Windows Store, a versão apropriada (x86 ou x64) da estrutura VCLibs 11 será instalada antes da instalação do app.  
+As dependências não serão instaladas se o app for instalado por sideload. Para instalar as dependências manualmente no seu computador, você deve baixar e instalar os [pacotes de estrutura do VC 11.0 para Desktop Bridge](https://www.microsoft.com/download/details.aspx?id=53340&WT.mc_id=DX_MVP4025064). Para obter mais informações sobre esses cenários, consulte [Usando o Visual C++ Runtime no projeto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/).
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

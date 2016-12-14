@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
 title: Criar, gravar e ler um arquivo
 description: Leia e grave um arquivo usando o objeto StorageFile.
 translationtype: Human Translation
-ms.sourcegitcommit: 24f50f2c4ac7fcfe931759d42ba73e758d77f6e8
-ms.openlocfilehash: 2a9f5de71712e657bc9a0a39b668085c399ce9fb
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 0709d9c9126dc4523eae58d5db8d9037a2fb618e
 
 ---
 
-# Criar, gravar e ler um arquivo
+# <a name="create-write-and-read-a-file"></a>Criar, gravar e ler um arquivo
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -25,7 +25,7 @@ Leia e grave um arquivo usando um objeto [**StorageFile**](https://msdn.microsof
 
 > **Observação**  Consulte também o [Exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 -   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
 
@@ -35,7 +35,7 @@ Leia e grave um arquivo usando um objeto [**StorageFile**](https://msdn.microsof
 
     Você pode aprender a obter um arquivo usando um seletor de arquivos em [Abrir arquivos e pastas com um seletor](quickstart-using-file-and-folder-pickers.md).
 
-## Criando um arquivo
+## <a name="creating-a-file"></a>Criando um arquivo
 
 Consulte aqui como criar um arquivo na pasta local do aplicativo. Se ele já existir, nós o substituiremos.
 > [!div class="tabbedCodeSnippets"]
@@ -53,7 +53,7 @@ Dim storageFolder As StorageFolder = Windows.Storage.ApplicationData.Current.Loc
 Dim sampleFile As StorageFile = Await storageFolder.CreateFileAsync("sample.txt", CreationCollisionOption.ReplaceExisting)
 ```
 
-## Gravando em um arquivo
+## <a name="writing-to-a-file"></a>Gravando em um arquivo
 
 
 Veja aqui como gravar em um arquivo gravável no disco usando a classe [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). A primeira etapa comum para cada uma das maneiras de gravar em um arquivo (a menos que você grave no arquivo imediatamente depois de criá-lo) é obter o arquivo com [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272).
@@ -153,7 +153,7 @@ using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
         Await outputStream.FlushAsync()
 ```
 
-## Lendo um arquivo
+## <a name="reading-from-a-file"></a>Lendo um arquivo
 
 
 Veja aqui como ler um arquivo no disco usando a classe [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). A primeira etapa comum para cada uma das maneiras de ler um arquivo é obter o arquivo com [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272).
@@ -259,6 +259,6 @@ Dim dataReader As New DataReader(inputStream)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

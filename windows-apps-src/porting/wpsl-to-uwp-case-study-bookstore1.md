@@ -4,14 +4,14 @@ ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
 description: "Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Windows Phone Silverlight muito simples para um aplicativo Plataforma Universal do Windows (UWP) do Windows 10."
 title: Estudo de caso Windows Phone Silverlight para UWP, Bookstore1
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 86cccfd462717483720c412c1de9eaf6bbc1c5cd
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 631dab52c1d8f5745179d79182d299688be05d05
 
 ---
 
-# Estudo de caso Windows Phone Silverlight para UWP: Bookstore1
+# <a name="windows-phone-silverlight-to-uwp-case-study-bookstore1"></a>Estudo de caso Windows Phone Silverlight para UWP: Bookstore1
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Windows Phone Silverlight muito simples para um aplicativo Plataforma Universal do Windows (UWP) do Windows 10. Com o Windows 10, é possível criar um único pacote do aplicativo que os clientes podem instalar em uma ampla variedade de dispositivos, e é isso o que faremos neste estudo de caso. Consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
@@ -19,21 +19,21 @@ O aplicativo que portaremos consiste em uma **ListBox** associada a um modelo de
 
 Os tópicos anteriores desta seção descrevem as diferenças entre as plataformas, e eles fornecem detalhes e orientações sobre o processo de portabilidade de vários aspectos de um aplicativo de marcação XAML, através da associação a um modelo de exibição, para acessar dados. Um estudo de caso visa complementar essa orientação, mostrando-o em ação em um exemplo real. Os estudos de caso pressupõem que você tenha lido as orientações, já que elas não serão repetidas aqui.
 
-**Observação** ao abrir Bookstore1Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md#targetplatformversion).
+**Observação**   Ao abrir Bookstore1Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas para selecionar um Controle de Versão de Plataforma de Destino [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md).
 
-## Downloads
+## <a name="downloads"></a>Downloads
 
-[Baixe o aplicativo Windows Phone Silverlight Bookstore1WPSL8](http://go.microsoft.com/fwlink/?linkid=517053).
+[Baixe o app Windows Phone Silverlight Bookstore1WPSL8](http://go.microsoft.com/fwlink/?linkid=517053).
 
 [Baixe o aplicativo do Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
 
-## O aplicativo Windows Phone Silverlight
+## <a name="the-windows-phone-silverlight-app"></a>O aplicativo Windows Phone Silverlight
 
 Aqui está a aparência do Bookstore1WPSL8, o aplicativo que vamos portar. Trata-se apenas de uma caixa de listagem de livros com rolagem vertical abaixo do cabeçalho do nome do aplicativo e do título da página.
 
 ![aparência do Bookstore1WPSL8](images/wpsl-to-uwp-case-studies/c01-01-wpsl-how-the-app-looks.png)
 
-## Portando para um projeto do Windows 10
+## <a name="porting-to-a-windows-10-project"></a>Portando para um projeto do Windows 10
 
 É uma tarefa muito rápida criar um novo projeto no Visual Studio, copiar arquivos para ele a partir do Bookstore1WPSL8 e incluir os arquivos copiados no novo projeto. Comece criando um novo projeto Aplicativo em Branco (Universal do Windows). Dê a ele o nome de Bookstore1Universal\_10. Esses são os arquivos que devem ser copiados de Bookstore1WPSL8 para Bookstore1Universal\_10.
 
@@ -71,11 +71,11 @@ Vamos trabalhar na interface do usuário para a família de dispositivos móveis
 
 O modo de exibição e o modelo de exibição estão funcionando corretamente juntos, e **ListBox** está funcionando. Basicamente precisamos corrigir o estilo e fazer com que as imagens apareçam.
 
-## Saldando os itens de débito e alguns estilos iniciais
+## <a name="paying-off-the-debt-items-and-some-initial-styling"></a>Saldando os itens de débito e alguns estilos iniciais
 
 Por padrão, todas as orientações têm suporte. No entanto, o aplicativo Windows Phone Silverlight explicitamente restringe-se a somente retrato, portanto, para saldar os itens de débito nº 1 e nº 2, acesse o manifesto do pacote do aplicativo no novo projeto e marque **Retrato** em **Supported orientations**.
 
-Para esse aplicativo, o item nº 3 não é um débito, pois a barra de status (anteriormente chamada de bandeja do sistema) é mostrada por padrão. Para os itens nº 4 e nº 5, precisamos encontrar quatro estilos  **TextBlock** da Plataforma Universal do Windows (UWP) correspondentes aos estilos do Windows Phone Silverlight que estávamos usando. É possível executar o aplicativo do Windows Phone Silverlight no emulador e compará-lo lado a lado com a ilustração na seção [Texto](wpsl-to-uwp-porting-xaml-and-ui.md#text). Ao fazer isso e examinar as propriedades dos estilos de sistema do Windows Phone Silverlight, podemos criar esta tabela.
+Para esse aplicativo, o item nº 3 não é um débito, pois a barra de status (anteriormente chamada de bandeja do sistema) é mostrada por padrão. Para os itens nº 4 e nº 5, precisamos encontrar quatro estilos  **TextBlock** da Plataforma Universal do Windows (UWP) correspondentes aos estilos do Windows Phone Silverlight que estávamos usando. É possível executar o aplicativo do Windows Phone Silverlight no emulador e compará-lo lado a lado com a ilustração na seção [Texto](wpsl-to-uwp-porting-xaml-and-ui.md). Ao fazer isso e examinar as propriedades dos estilos de sistema do Windows Phone Silverlight, podemos criar esta tabela.
 
 | Chave de estilo do Windows Phone Silverlight | Chave de estilo da UWP          |
 |-------------------------------------|------------------------|
@@ -88,11 +88,11 @@ Para definir esses estilos, basta digitá-los no editor de marcação ou usar as
 
 Existe uma tela de fundo branca 80% opaca atrás dos itens, pois o estilo padrão do controle **ListBox** define sua tela de fundo como o recurso do sistema `ListBoxBackgroundThemeBrush`. Defina `Background="Transparent"` na **ListBox** para limpar a tela de fundo. Para alinhar à esquerda os **TextBlock**s no modelo de item, edite-o novamente conforme descrito acima e defina uma **Margin** de `"9.6,0"` em ambos os **TextBlock**s.
 
-Depois disso, como [muda em relação aos pixels de visualização](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels), precisamos avançar e multiplicar qualquer dimensão de tamanho fixo que ainda não tenha sido alterada (margens, largura, altura etc.) por 0,8. Assim, por exemplo, as imagens devem ser alteradas de 70x70 px para 56x56 px.
+Depois disso, como [muda em relação aos pixels de visualização](wpsl-to-uwp-porting-xaml-and-ui.md), precisamos avançar e multiplicar qualquer dimensão de tamanho fixo que ainda não tenha sido alterada (margens, largura, altura etc.) por 0,8. Assim, por exemplo, as imagens devem ser alteradas de 70x70 px para 56x56 px.
 
 Porém, renderizemos essas imagens antes de mostrar os resultados do nosso estilo.
 
-## Associando uma imagem a um modelo de exibição
+## <a name="binding-an-image-to-a-view-model"></a>Associando uma imagem a um modelo de exibição
 
 Em Bookstore1WPSL8, fizemos isto:
 
@@ -108,7 +108,7 @@ No Bookstore1Universal, usamos o [esquema de URI](https://msdn.microsoft.com/lib
     return new BitmapImage(new Uri(new Uri("ms-appx://"), this.CoverImagePath));
 ```
 
-## Estilo universal
+## <a name="universal-styling"></a>Estilo universal
 
 Agora só precisamos fazer alguns ajustes no estilo final e confirmar se a aparência do aplicativo está boa nos fatores forma do desktop e do dispositivo móvel (e outros). As etapas estão abaixo. E você pode usar os links do início deste tópico para baixar os projetos e ver os resultados de todas as alterações feitas aqui até o fim do estudo de caso.
 
@@ -118,24 +118,24 @@ Agora só precisamos fazer alguns ajustes no estilo final e confirmar se a apar�
 
 Com um aplicativo mais sofisticado, esse seria o momento em que usaríamos as orientações em [Portabilidade para o fator forma e a experiência do usuário](wpsl-to-uwp-form-factors-and-ux.md) e realmente usaríamos da maneira ideal o fator forma de cada um dos muitos dispositivos em que o aplicativo pode ser executado agora. Porém, para esse aplicativo simples, podemos parar aqui e ver a aparência dele após essa última sequência de operações de estilo. Na verdade, ele tem a mesma aparência em dispositivos móveis e de desktop, embora não esteja fazendo o melhor uso do espaço em fatores forma grandes (mas vamos investigar como fazer isso em um estudo de caso posterior).
 
-Consulte [Alterações de tema](wpsl-to-uwp-porting-xaml-and-ui.md#theme-changes) para ver como controlar o tema do seu aplicativo.
+Consulte [Alterações de tema](wpsl-to-uwp-porting-xaml-and-ui.md) para ver como controlar o tema do seu aplicativo.
 
 ![o aplicativo do windows 10 portado](images/w8x-to-uwp-case-studies/c01-07-mob10-ported.png)
 
 O aplicativo do Windows 10 portado em execução em um dispositivo móvel
 
-## Um ajuste opcional na caixa de listagem de dispositivos móveis
+## <a name="an-optional-adjustment-to-the-list-box-for-mobile-devices"></a>Um ajuste opcional na caixa de listagem de dispositivos móveis
 
-Quando o aplicativo é executado em um dispositivo móvel, o plano de fundo de uma caixa de listagem fica claro por padrão em ambos os temas. Esse pode ser o estilo de sua preferência e, em caso positivo, não há mais nada a fazer. Porém, os controles são projetados de maneira que seja possível personalizar a aparência deles sem afetar o comportamento. Portanto, se você quiser que a caixa de listagem fique escura no tema escuro, a aparência que o aplicativo original tinha, siga [estas instruções](w8x-to-uwp-case-study-bookstore1.md#an-optional-adjustment).
+Quando o aplicativo é executado em um dispositivo móvel, o plano de fundo de uma caixa de listagem fica claro por padrão em ambos os temas. Esse pode ser o estilo de sua preferência e, em caso positivo, não há mais nada a fazer. Porém, os controles são projetados de maneira que seja possível personalizar a aparência deles sem afetar o comportamento. Portanto, se você quiser que a caixa de listagem fique escura no tema escuro, a aparência que o app original tinha, siga [estas instruções](w8x-to-uwp-case-study-bookstore1.md) em "Um ajuste opcional".
 
-## Conclusão
+## <a name="conclusion"></a>Conclusão
 
-Este estudo de caso mostrou o processo de portabilidade de um aplicativo muito simples, sem dúvida nenhuma, um aplicativo inacreditavelmente simples. Por exemplo, controles de lista podem ser usados para a seleção ou para o estabelecimento de um contexto de navegação; o aplicativo navega até uma página com mais detalhes sobre o item que foi tocado. Este aplicativo específico não faz nada com a seleção do usuário, e ele não tem navegação. Mesmo assim, o estudo de caso serviu para quebrar o gelo, apresentar o processo de portabilidade e demonstrar técnicas importantes que podem ser usadas em aplicativos UWP reais.
+Este estudo de caso mostrou o processo de portabilidade de um app muito simples, sem dúvida nenhuma, um app inacreditavelmente simples. Por exemplo, controles de lista podem ser usados para a seleção ou para o estabelecimento de um contexto de navegação; o aplicativo navega até uma página com mais detalhes sobre o item que foi tocado. Este aplicativo específico não faz nada com a seleção do usuário, e ele não tem navegação. Mesmo assim, o estudo de caso serviu para quebrar o gelo, apresentar o processo de portabilidade e demonstrar técnicas importantes que podem ser usadas em aplicativos UWP reais.
 
 O próximo estudo de caso é o [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md), no qual analisaremos o acesso e a exibição de dados agrupados.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,12 +4,12 @@ Description: "Os complementos são publicados por meio do painel do Centro de De
 title: Envios de complemento
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 translationtype: Human Translation
-ms.sourcegitcommit: b0d877e46ba6958bfc61dd87687c30e91b6cd937
-ms.openlocfilehash: 7b44dabfd4badcad795e38a97590d98e1601092d
+ms.sourcegitcommit: 0f2b48f646423f299999a61d78dd956a78a09a8e
+ms.openlocfilehash: 1e7c02621da528c4635ab47bd7c2a898f2441da1
 
 ---
 
-# Envios de complemento
+# <a name="add-on-submissions"></a>Envios de complemento
 
 Complementos (também às vezes conhecidos como produtos no aplicativo) são itens suplementares para seu aplicativo que podem ser comprados pelos clientes. Um complemento pode ser um novo recurso suplementar divertido, um novo nível de jogo ou qualquer coisa que você ache que manterá os usuários envolvidos. Os complementos não são somente uma ótima forma de ganhar dinheiro, eles também ajudam a direcionar a interação e o compromisso do cliente.
 
@@ -19,33 +19,33 @@ A primeira etapa no processo de envio do complemento é criar o complemento no p
 
 > **Observação**&nbsp;&nbsp;Esta seção da documentação descreve como enviar complementos no painel do Centro de Desenvolvimento. Opcionalmente, você poderá usar a [API de envio da Windows Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de complementos.
 
-## Lista de verificação para o envio de um complemento
+## <a name="checklist-for-submitting-an-add-on"></a>Lista de verificação para o envio de um complemento
 
 Aqui está uma lista das informações que você fornece ao criar o envio do complemento. Os itens que você será solicitado a fornecer são indicados abaixo. Alguns são opcionais ou têm valores padrão que você possa alterar, conforme desejar.
 
-### Crie uma nova página de complemento
+### <a name="create-a-new-add-on-page"></a>Crie uma nova página de complemento
 | Nome do campo                    | Observações                            |
 |-------------------------------|----------------------------------|
-| [**Tipo de produto**](set-your-add-on-product-id.md#product-type)      | Necessário. Se **Durável**, um **Ciclo de vida do produto** é obrigatório. |  
-| [**ID do Produto**](set-your-add-on-product-id.md#product-id)          | Necessário |        
+| [**Tipo de produto**](set-your-add-on-product-id.md#product-type)      | Obrigatório. Se **Durável**, um **Ciclo de vida do produto** é obrigatório. |  
+| [**ID do Produto**](set-your-add-on-product-id.md#product-id)          | Obrigatório |        
 
 <span/>
 
-### Página de propriedades
+### <a name="properties-page"></a>Página de propriedades
 | Nome do campo                    | Observações                              |   
 |-------------------------------|------------------------------------|
 | [**Tempo de vida do produto**](enter-add-on-properties.md#product-lifetime)  | Obrigatório se o tipo de produto for **Durável**. Não aplicável a outros tipos de produto. |
 | [**Quantidade**](enter-add-on-properties.md#quantity)  | Obrigatório se o tipo de produto for **Consumível gerenciado pela loja**. Não aplicável a outros tipos de produto.
-| [**Tipo de conteúdo**](enter-add-on-properties.md#content-type)          | Necessário       |               
+| [**Tipo de conteúdo**](enter-add-on-properties.md#content-type)          | Obrigatório       |               
 | [**Palavras-chave**](enter-add-on-properties.md#keywords)                  | Opcional (até 10 palavras-chave, com limite de 30 caracteres cada) |
 | [**Dados de desenvolvedor personalizados**](enter-add-on-properties.md#custom-developer-data)                               | Opcional (limite de 3000 caracteres)             |
 
 <span/>
 
-### Página de preços e disponibilidade
+### <a name="pricing-and-availability-page"></a>Página de preços e disponibilidade
 | Nome do campo                    | Observações                                       |
 |-------------------------------|---------------------------------------------|
-| [**Preço base**](set-add-on-pricing-and-availability.md#base-price)                | Necessário                                    |
+| [**Preço base**](set-add-on-pricing-and-availability.md#base-price)                | Obrigatório                                    |
 | [**Mercados e precificação personalizada**](set-add-on-pricing-and-availability.md#markets-and-custom-prices)  | Padrão: disponível em todos os mercados possíveis |
 | [**Preço de venda**](put-apps-and-add-ons-on-sale.md)               | Opcional                             |
 | [**Distribuição e visibilidade**](set-add-on-pricing-and-availability.md#distribution-and-visibility)   | Padrão: o complemento pode ser encontrado pelos clientes que navegam ou pesquisam na loja |
@@ -53,8 +53,8 @@ Aqui está uma lista das informações que você fornece ao criar o envio do com
 
 <span/>
 
-### Listagens da Loja
-Uma listagem de Loja é necessária. É recomendável fornecer as listagens de Loja para cada [idioma](create-add-on-descriptions.md#languages) ao qual o seu aplicativo dá suporte.
+### <a name="store-listings"></a>Listagens da Loja
+Uma listagem de Loja é necessária. É recomendável fornecer as listagens de Loja para cada [idioma](create-add-on-store-listings.md#languages) ao qual o seu aplicativo dá suporte.
 
 | Nome do campo                    | Observações                                       |
 |-------------------------------|---------------------------------------------|
@@ -69,7 +69,7 @@ Quando você terminar de inserir essas informações, clique em **Enviar para a 
 **Observação**  O complemento também deve ser implementado no código do seu aplicativo. Para obter mais informações, consulte [Habilitar compras de produto no aplicativo](../monetize/enable-in-app-product-purchases.md).
 
 
-## Atualizando um complemento após a publicação
+## <a name="updating-an-add-on-after-publication"></a>Atualizando um complemento após a publicação
 
 Você pode fazer alterações em um complemento publicado a qualquer momento. As alterações de complemento são enviadas e publicadas independentemente do seu aplicativo. Portanto, em geral, você não precisa atualizar o aplicativo inteiro para fazer alterações em um complemento, como atualizar o preço ou a descrição.
 
@@ -81,6 +81,6 @@ Se quiser remover um complemento oferecido anteriormente, você poderá fazer is
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

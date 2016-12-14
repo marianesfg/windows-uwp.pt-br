@@ -5,28 +5,28 @@ title: Tipografia
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 8338b4ebcdd73f1b7ebf1dedafe68d861cd9d93b
-ms.openlocfilehash: 481c66e3edd42722cfd59bf420fe5b6286706245
+ms.sourcegitcommit: 0356d9420d85fbf54718223df77ed501d4b6f5e5
+ms.openlocfilehash: 45b4bbc86c69cabae4a2ee83d2d43c7189a710ce
 
 ---
 
-# Tipografia
+# <a name="typography"></a>Tipografia
 
 Como a representação visual da linguagem, a tarefa principal da tipografia é ser clara. Seu estilo nunca deve atrapalhar essa meta. Porém, a tipografia também tem um papel importante como componente de layout, pois afeta consideravelmente a densidade e a complexidade do design, além de exercer forte influência na experiência do usuário desse design.
 
-## Face de tipos
+## <a name="typeface"></a>Face de tipos
 
 Selecionamos Segoe UI para uso em todos os designs digitais da Microsoft. A Segoe UI fornece uma ampla variedade de caracteres e é projetada para manter a legibilidade ideal em todos os tamanhos e densidades de pixel. Ela oferece uma estética limpa, leve e aberta que complementa o conteúdo do sistema.
 
 ![Texto de exemplo da fonte Segoe UI](images/segoe-sample.png)
 
-## Espessuras
+## <a name="weights"></a>Espessuras
 
 Abordamos a tipografia em busca de simplicidade e eficiência. Podemos optar por usar uma face de tipos, um mínimo de espessuras e tamanhos e uma hierarquia clara. O posicionamento e o alinhamento seguem o estilo padrão do idioma específico. Em inglês, a sequência é executada da esquerda para a direita, de cima para baixo. As relações entre texto e imagens são claras e simples.
 
 ![Mostra espessuras de fonte compatíveis. Leve, semileve, regular, seminegrito e negrito](images/weights.png)
 
-## Espaçamento entre linhas
+## <a name="line-spacing"></a>Espaçamento entre linhas
 
 ![Exemplo de espaçamento entre linhas de 125%](images/line-spacing.png)
 
@@ -60,7 +60,7 @@ Em XAML, isso é feito empilhando dois [TextBlocks](https://msdn.microsoft.com/e
 
 
 
-## Kerning e tracking
+## <a name="kerning-and-tracking"></a>Kerning e tracking
 
 Segoe é uma face de tipos humanista, com uma aparência suave e amigável, ela tem formatos orgânicos e abertos com base em texto manuscrito. Para garantir a legibilidade ideal e manter a integridade humanista, as configurações de kerning e tracking devem ter valores específicos.
 
@@ -71,7 +71,7 @@ Kerning deve ser definido como "métricas" e tracking deve ser definido como "0"
 
 
 
-## Espaçamento entre letras e palavras
+## <a name="word-and-letter-spacing"></a>Espaçamento entre letras e palavras
 
 Semelhante ao kerning e tracking, o espaçamento entre letras e o espaçamento entre palavras usam configurações específicas para garantir a legibilidade ideal e a integridade humanista.
 
@@ -85,7 +85,7 @@ O espaçamento entre palavras por padrão sempre é 100% e o espaçamento entre 
 
 
 
-## Alinhamento
+## <a name="alignment"></a>Alinhamento
 
 Em geral, recomendamos que os elementos visuais e as colunas de tipo sejam alinhados à esquerda. Na maioria dos casos, essa abordagem flush à esquerda e irregular à direita fornece ancoragem consistente do conteúdo e um layout uniforme.
 
@@ -94,20 +94,20 @@ Em geral, recomendamos que os elementos visuais e as colunas de tipo sejam alinh
 
 
 
-## Terminações de linha
+## <a name="line-endings"></a>Terminações de linha
 
 Quando a tipografia não está posicionada como flush à esquerda e irregular à direita, tente garantir terminações de linha pares e evitar a hifenização.
 
 
 ![Mostra até mesmo terminações de linha](images/line-endings.png)
 
-## Parágrafos
+## <a name="paragraphs"></a>Parágrafos
 
 Para fornecer bordas de coluna alinhada, os parágrafos devem ser indicados, ignorando uma linha sem recuo.
 
 ![Mostra uma linha inteira de espaço entre parágrafos](images/paragraphs.png)
 
-## Contagem de caracteres
+## <a name="character-count"></a>Contagem de caracteres
 
 Se uma linha for muito curta, o olho terá que se deslocar muito frequentemente à esquerda e à direita, quebrando o ritmo do leitor. Se possível, de 50 a 60 letras por linha é melhor para facilitar a leitura.
 
@@ -117,7 +117,7 @@ Linhas muito longas afetam a atenção e podem confundir o usuário. Linhas muit
 
 ![Mostra três parágrafos com tamanhos de linha diferentes](images/character-count.png)
 
-## Alinhamento de texto deslocado
+## <a name="hanging-text-alignment"></a>Alinhamento de texto deslocado
 
 O alinhamento horizontal dos ícones com texto pode ser manipulado de diversas maneiras, dependendo do tamanho do ícone e da quantidade de texto. Quando o texto, uma ou várias linhas, se encaixa dentro da altura do ícone, o texto deve ser centralizado verticalmente.
 
@@ -127,7 +127,7 @@ Depois que a altura do texto se estende além da altura do ícone, a primeira li
 
 **Observação**A propriedade &nbsp;&nbsp;[TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx)de XAML fornece acesso às medidas de fonte iniciais e de limite de altura. Ela pode ser usada para o tipo de alinhamento superior, central ou vertical.
 
-## Recorte e elipses
+## <a name="clipping-and-ellipses"></a>Recorte e elipses
 
 Recorte por padrão: pressuponha que o texto será ajustado, a menos que a linha vermelha especifique o contrário. Ao usar texto sem disposição, recomendamos o recorte em vez do uso de elipses. O recorte pode ocorrer na borda do contêiner, na borda do dispositivo, na borda de uma barra de rolagem, etc.
 
@@ -135,7 +135,7 @@ Exceções: para contêineres que não são bem definidos (por exemplo, nenhuma 
 
 ![Mostra um quadro de dispositivo com alguns recortes de texto](images/clipping.png)
 
-## Rampa de tipos
+## <a name="type-ramp"></a>Rampa de tipos
 A rampa de tipos estabelece uma relação de design fundamental dos títulos ao texto do corpo e garante uma hierarquia clara e compreensível entre os diferentes níveis. Essa hierarquia cria uma estrutura que permite aos usuários navegar facilmente por meio de comunicação escrita.
 
 ![Mostra a o aumento do tipo](images/type-ramp.png) Todos os tamanhos estão em pixels efetivos. 
@@ -144,12 +144,12 @@ A rampa de tipos estabelece uma relação de design fundamental dos títulos ao 
 **Observação**&nbsp;&nbsp;A maioria dos níveis de rampa está disponível como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) que seguem a convenção de nomenclatura `*TextBlockStyle` (por ex.: `HeaderTextBlockStyle`).
 
 
-## Texto principal e secundário
+## <a name="primary-and-secondary-text"></a>Texto principal e secundário
 
-Para criar hierarquia adicional além da rampa de tipos, defina o texto secundário com opacidade de 60%. Na [paleta de cores de temas](color.md#color-themes), você usaria BaseMedium. O texto principal deve ter sempre 100% de opacidade ou BaseHigh.
+Para criar hierarquia adicional além da rampa de tipos, defina o texto secundário com opacidade de 60%. Na [paleta de cores de temas](color.md#color-theming), você usaria BaseMedium. O texto principal deve ter sempre 100% de opacidade ou BaseHigh.
 
 
-## Títulos em maiúsculas
+## <a name="all-caps-titles"></a>Títulos em maiúsculas
 
 Determinados títulos de página devem ser em maiúsculas para adicionar outra dimensão de hierarquia. Esses títulos devem usar BaseAlt com o espaçamento entre caracteres definido como 75 milésimos de um eme. Esse tratamento também pode ser usado para ajudar na navegação do aplicativo.
 
@@ -176,12 +176,12 @@ No entanto, nomes próprios mudam seu significado quando estão em maiúsculas e
 
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 * [Controles de texto](../controls-and-patterns/text-controls.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

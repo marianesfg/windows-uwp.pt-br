@@ -4,12 +4,12 @@ ms.assetid:
 description: "Este artigo mostra como usar um MediaFrameReader com o MediaCapture para obter quadros de mídia de uma ou mais origens disponíveis, incluindo câmeras em cores, de profundidade e infravermelho, dispositivos de áudio ou até mesmo origens personalizadas de quadros, como as que produzem quadros de rastreamento de esqueleto."
 title: "Processar quadros de mídia com o MediaFrameReader"
 translationtype: Human Translation
-ms.sourcegitcommit: 21433f812915a2b4da6b4d68151bbc922a97a7a7
-ms.openlocfilehash: 5c4bb51ea3b1740cdbb5fa43746ce7b3edca6aa1
+ms.sourcegitcommit: 881f806a61d247c6c4f73aa770ba4c5dab91af00
+ms.openlocfilehash: 648874a50dbe333f1bb6291de646d9088eec1528
 
 ---
 
-# Processar quadros de mídia com o MediaFrameReader
+# <a name="process-media-frames-with-mediaframereader"></a>Processar quadros de mídia com o MediaFrameReader
 
 Este artigo mostra como usar um [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) com [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) para obter quadros de mídia de uma ou mais origens disponíveis, incluindo câmeras em cores, de profundidade e infravermelho, dispositivos de áudio ou até mesmo origens personalizadas de quadros, como as que produzem quadros de rastreamento de esqueleto. Esse recurso foi criado para ser usado por aplicativos que executam processamento em tempo real de quadros de mídia, como aplicativos de câmera com reconhecimento de profundidade e realidade aumentada.
 
@@ -21,7 +21,7 @@ Se o seu interesse for simplesmente capturar vídeo ou fotos, como um aplicativo
 > [!NOTE] 
 > Há um exemplo de aplicativo Universal do Windows que demonstra o uso do **MediaFrameReader** para exibir quadros de origens diferentes, incluindo câmeras em cores, de profundidade e infravermelho. Para obter mais informações, consulte [Exemplo de quadros de câmera](http://go.microsoft.com/fwlink/?LinkId=823230).
 
-## Configurando seu projeto
+## <a name="setting-up-your-project"></a>Configurando seu projeto
 Como com qualquer aplicativo que usa **MediaCapture**, você deve declarar que seu aplicativo usa a funcionalidade de *webcam* antes de tentar acessar qualquer dispositivo de câmera. Se seu aplicativo fizer a captura de um dispositivo de áudio, você deve declarar também a funcionalidade do dispositivo *microfone*. 
 
 **Adicionar funcionalidades ao manifesto do aplicativo**
@@ -35,7 +35,7 @@ O código de exemplo deste artigo usa APIs dos namespaces a seguir, além dos in
 
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
-## Selecionar origens de quadro e grupos de origens de quadro
+## <a name="select-frame-sources-and-frame-source-groups"></a>Selecionar origens de quadro e grupos de origens de quadro
 Muitos aplicativos que processam quadros de mídia precisam obter quadros de várias origens ao mesmo tempo, como câmeras de profundidade e em cores de um dispositivo. O objeto [**MediaFrameSourceGroup**] (https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) representa um conjunto de origens de quadros de mídia que podem ser usados simultaneamente. Chame o método estático [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obter uma lista de todos os grupos de origens de quadro compatíveis com o dispositivo atual.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
@@ -60,7 +60,7 @@ O exemplo a seguir usa uma técnica semelhante conforme descrito acima para sele
 
 [!code-cs[ColorInfraredDepth](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetColorInfraredDepth)]
 
-## Inicializar o objeto MediaCapture para usar o grupo de origens de quadro selecionado
+## <a name="initialize-the-mediacapture-object-to-use-the-selected-frame-source-group"></a>Inicializar o objeto MediaCapture para usar o grupo de origens de quadro selecionado
 A próxima etapa é inicializar o objeto **MediaCapture** para usar o grupo de origens de quadro que você selecionou na etapa anterior.
 
 O objeto **MediaCapture** normalmente é usado em vários locais em seu aplicativo, portanto, você deve declarar uma variável de membro de classe para contê-lo.
@@ -78,14 +78,14 @@ Chame [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br22
 
 [!code-cs[InitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitMediaCapture)]
 
-## Definir o formato preferencial para a origem de quadros
+## <a name="set-the-preferred-format-for-the-frame-source"></a>Definir o formato preferencial para a origem de quadros
 Para definir o formato preferencial para uma origem de quadros, você precisa obter um objeto [**MediaFrameSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource) que represente a origem. Para obter esse objeto, acesse o dicionário [**Frames**](https://msdn.microsoft.com/library/windows/apps/Windows.Phone.Media.Capture.CameraCaptureSequence.Frames) do objeto **MediaCapture** inicializado especificando o identificador da origem de quadros que você deseja usar. Foi por essa razão que salvamos o objeto [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) quando selecionamos um grupo de origens de quadro.
 
 A propriedade [**MediaFrameSource.SupportedFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource.SupportedFormats) contém uma lista de objetos [**MediaFrameFormat**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameFormat) que descrevem os formatos com suporte para a origem de quadros. Use o método de extensão Linq **Where** para selecionar um formato com base nas propriedades desejadas. Neste exemplo, é selecionado um formato que tem uma largura de 1080 pixels e pode fornecer quadros no formato RGB de 32 bits. O método de extensão **FirstOrDefault** seleciona a primeira entrada na lista. Se o formato selecionado for nulo, o formato solicitado não será compatível com a origem de quadros. Se o formato for compatível, você poderá solicitar que a origem use esse formato chamando [**SetFormatAsync**](https://msdn.microsoft.com/library/windows/apps/).
 
 [!code-cs[GetPreferredFormat](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetGetPreferredFormat)]
 
-## Criar um leitor de quadros para a origem de quadros
+## <a name="create-a-frame-reader-for-the-frame-source"></a>Criar um leitor de quadros para a origem de quadros
 Para receber os quadros para uma origem de quadros de mídia, use um [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader).
 
 [!code-cs[DeclareMediaFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetDeclareMediaFrameReader)]
@@ -98,7 +98,7 @@ Solicite que o sistema comece a ler quadros da origem chamando [**StartAsync**](
 
 [!code-cs[CreateFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCreateFrameReader)]
 
-## Manipular o evento de chegada de quadros
+## <a name="handle-the-frame-arrived-event"></a>Manipular o evento de chegada de quadros
 O evento [**MediaFrameReader.FrameArrived**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader.FrameArrived) é acionado sempre que um novo quadro está disponível. Você pode optar por processar cada quadro recebido ou só usar os quadros quando precisar deles. Como o leitor de quadros aciona o evento em seu próprio thread, talvez seja necessário implementar alguma lógica de sincronização para certificar-se de que não esteja tentando acessar os mesmos dados de vários threads. Esta seção mostra como sincronizar desenhando quadros de cor para um controle de imagem em uma página XAML. Esse cenário aborda a restrição de sincronização adicional que exige que todas as atualizações de controles XAML sejam executadas no thread da interface do usuário.
 
 A primeira etapa na exibição de quadros em XAML é criar um controle Image. 
@@ -125,16 +125,20 @@ Na tarefa, a variável *_taskRunning* é verificada para garantir que apenas uma
 
 Por fim, a variável *_taskRunning* é definida como false para que a tarefa possa ser executada novamente na próxima vez que o manipulador for chamado.
 
+> [!NOTE] 
+> Se você acessar a propriedade [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.SoftwareBitmap) ou [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.Direct3DSurface) fornecidas pela propriedade [**VideoMediaFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.VideoMediaFrame) de uma [**MediaFrameReference**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference), o sistema criará uma forte referência a esses objetos, o que significa que eles não serão descartados quando você chamar [**Dispose**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.Close) na **MediaFrameReference** contida. Você deve chamar explicitamente o método **Dispose** do **SoftwareBitmap** ou **Direct3DSurface** diretamente para os objetos serem descartados imediatamente. Caso contrário, o coletor de lixo acabará liberando a memória para esses objetos, mas você não saberá quando isso vai ocorrer, e se o número de bitmaps ou superfícies alocados exceder o valor máximo permitido pelo sistema, o fluxo de quadros novos será interrompido.
+
+
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFrameArrived)]
 
-## Limpar os recursos
+## <a name="cleanup-resources"></a>Limpar os recursos
 Ao terminar a leitura dos quadros, certifique-se de parar o leitor de quadros de mídia chamando [**StopAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader.StopAsync), cancelando o registro do manipulador **FrameArrived** e descartando o objeto **MediaCapture**.
 
 [!code-cs[Cleanup](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCleanup)]
 
 Para obter mais informações sobre a limpeza de objetos de captura de mídia quando seu aplicativo é suspenso, consulte [**Exibir a visualização de câmera**](simple-camera-preview-access.md).
 
-## A classe auxiliar FrameRenderer
+## <a name="the-framerenderer-helper-class"></a>A classe auxiliar FrameRenderer
 O Universal Windows [Quadros de câmera de exemplo](http://go.microsoft.com/fwlink/?LinkId=823230) fornece uma classe auxiliar que torna mais fácil exibir os quadros de origens em cor, infravermelho e de profundidade em seu aplicativo. Normalmente, você vai querer fazer algo mais com dados de infravermelho e profundidade do que apenas exibi-los na tela, mas essa classe auxiliar é uma ferramenta útil para demonstrar o recurso de leitor de quadros e para a depuração de sua própria implementação do leitor de quadros.
 
 A classe auxiliar **FrameRenderer** implementa os métodos a seguir.
@@ -148,7 +152,7 @@ A classe auxiliar **FrameRenderer** implementa os métodos a seguir.
 
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/FrameRenderer.cs#SnippetFrameRenderer)]
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -163,6 +167,6 @@ A classe auxiliar **FrameRenderer** implementa os métodos a seguir.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

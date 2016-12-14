@@ -5,14 +5,14 @@ title: "Armazenar e recuperar dados de traço do Windows Ink"
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
+keywords: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
 translationtype: Human Translation
-ms.sourcegitcommit: 75e93920422b5ad8ad0e9399bccc403ea69e7feb
-ms.openlocfilehash: 8ba48ed9aa7589ddee6009c5a8cb8ec1091d51ef
+ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
+ms.openlocfilehash: d4458b66f4f1917e99495353a088680b19cb94c9
 
 ---
 
-# Armazenar e recuperar dados de traço do Windows Ink
+# <a name="store-and-retrieve-windows-ink-stroke-data"></a>Armazenar e recuperar dados de traço do Windows Ink
 
 
 Os aplicativos UWP que dão suporte ao Windows Ink podem serializar e desserializar traços de tinta para um arquivo Ink Serialized Format (ISF). O arquivo ISF é uma imagem GIF com metadados adicionais para todos os comportamentos e propriedades de traço de tinta. Aplicativos que não são habilitados para tinta podem exibir a imagem GIF estática, incluindo transparência de plano de fundo de canal alfa.
@@ -30,7 +30,7 @@ Os aplicativos UWP que dão suporte ao Windows Ink podem serializar e desseriali
 
  
 
-## Salvar traços de tinta em um arquivo
+## <a name="save-ink-strokes-to-a-file"></a>Salvar traços de tinta em um arquivo
 
 
 Aqui, demonstramos como salvar traços de tinta desenhados em um controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
@@ -160,7 +160,7 @@ public MainPage()
 > [!NOTE]  
 > O formato GIF é o único formato de arquivo compatível para salvar dados à tinta. Entretanto, o método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) (demonstrado na próxima seção) dá suporte a outros formatos para compatibilidade com versões anteriores.
 
-## Carregar traços de tinta de um arquivo
+## <a name="load-ink-strokes-from-a-file"></a>Carregar traços de tinta de um arquivo
 
 Aqui, demonstramos como carregar traços de tinta de um arquivo e renderizá-los em um controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
@@ -270,14 +270,14 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 | Gif                       | Especifica dados à tinta persistentes usando um arquivo GIF que contém ISF como metadados inseridos no arquivo. Isso permite que dados a tinta sejam visualizados em aplicativos não habilitados para tinta e mantém toda a fidelidade da tinta quando retorna para um aplicativo habilitado para tinta. Esse formato é ideal para o transporte de conteúdo de tinta dentro de um arquivo HTML e para torná-lo utilizável por aplicativos com e sem tinta. |
 | Base64Gif                 | Especifica dados a tinta persistentes usando um GIF fortificado codificado em base64. Esse formato é oferecido quando dados à tinta devem ser codificados diretamente em um arquivo XML ou HTML para conversão posterior em uma imagem. Um possível uso disso é em um formato XML gerado para conter todas as informações à tinta e usado para gerar HTML por meio de XSLT (Extensible Stylesheet Language Transformations). 
 
-## Copiar e colar traços de tinta com a área de transferência
+## <a name="copy-and-paste-ink-strokes-with-the-clipboard"></a>Copiar e colar traços de tinta com a área de transferência
 
 
 Aqui, demonstramos como usar a área de transferência para transferir os traços de tinta entre aplicativos.
 
 Para dar suporte à funcionalidade de área de transferência, os comandos recortar e colar [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) internos precisam que um ou mais traços de tinta sejam selecionados.
 
-Para este exemplo, habilitamos a seleção de traço quando a entrada é modificada com um botão da caneta (ou o botão direito do mouse). Para obter um exemplo completo de como implementar a seleção de traço, consulte [Entrada de passagem para processamento avançado](pen-and-stylus-interactions.md#passthrough) em [Interações por caneta](pen-and-stylus-interactions.md).
+Para este exemplo, habilitamos a seleção de traço quando a entrada é modificada com um botão da caneta (ou o botão direito do mouse). Para obter um exemplo completo de como implementar a seleção de traço, consulte Entrada de passagem para processamento avançado em [Interações por caneta](pen-and-stylus-interactions.md).
 
 1.  Primeiro, definimos a interface do usuário.
 
@@ -319,7 +319,7 @@ Para este exemplo, habilitamos a seleção de traço quando a entrada é modific
 
     O [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar dados de entrada da caneta e do mouse como traços de tinta ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). Os ouvintes dos eventos de clique nos botões, bem como os eventos de ponteiro e de traço para a funcionalidade de seleção, também são declarados aqui.
 
-    Para obter um exemplo completo de como implementar a seleção de traço, consulte [Entrada de passagem para processamento avançado](pen-and-stylus-interactions.md#passthrough) em [Interações por caneta](pen-and-stylus-interactions.md).
+    Para obter um exemplo completo de como implementar a seleção de traço, consulte Entrada de passagem para processamento avançado em [Interações por caneta](pen-and-stylus-interactions.md).
 ```    CSharp
 public MainPage()
     {
@@ -428,7 +428,7 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 * [Interações com caneta](pen-and-stylus-interactions.md)
 
@@ -436,16 +436,18 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 * [Amostra de tinta](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Amostra de tinta simples](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Amostra de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Exemplo de livro de colorir](https://aka.ms/cpubsample-coloringbook)
+* [Exemplo de anotações da família](https://aka.ms/cpubsample-familynotessample)
+
+
  
 
- 
 
 
 
 
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

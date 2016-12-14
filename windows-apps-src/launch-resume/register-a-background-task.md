@@ -4,12 +4,12 @@ title: Registrar uma tarefa em segundo plano
 description: "Aprenda a criar uma função que pode ser reutilizada para registrar com segurança a maioria das tarefas em segundo plano."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
-ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
+ms.sourcegitcommit: 2f46f5cd26656b2d6b7d14c0d85aa7a0a6950fb8
+ms.openlocfilehash: 809cd0ea85d4dfc6ecf633d0ca9f16bbefee78ca
 
 ---
 
-# Registrar uma tarefa em segundo plano
+# <a name="register-a-background-task"></a>Registrar uma tarefa em segundo plano
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -31,7 +31,7 @@ Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https
 
 Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
-## Definir a assinatura do método e o tipo de retorno
+## <a name="define-the-method-signature-and-return-type"></a>Definir a assinatura do método e o tipo de retorno
 
 Esta função obtém o ponto de entrada da tarefa, seu nome, um gatilho de tarefa em segundo plano pré-construído e (opcionalmente) uma [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) para a tarefa em segundo plano. Este método retorna um objeto [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).
 
@@ -40,7 +40,7 @@ Esta função obtém o ponto de entrada da tarefa, seu nome, um gatilho de taref
 > Se a tarefa em segundo plano for executada no mesmo processo do aplicativo (ou seja, uma tarefa em segundo plano dentro do processo) `taskEntryPoint` não deverá ser definido.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -52,7 +52,7 @@ Esta função obtém o ponto de entrada da tarefa, seu nome, um gatilho de taref
 >
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -65,7 +65,7 @@ Esta função obtém o ponto de entrada da tarefa, seu nome, um gatilho de taref
 > }
 > ```
 
-## Verificar registros existentes
+## <a name="check-for-existing-registrations"></a>Verificar registros existentes
 
 Verifique se a tarefa já está registrada. É importante verificar isso porque, se a tarefa for registrada várias vezes, ela será executada mais de uma vez sempre que for disparada; isso pode usar excessivamente a CPU e causar comportamentos inesperados.
 
@@ -76,7 +76,7 @@ Você pode verificar se existem registros consultando a propriedade [**Backgroun
 O código abaixo registra uma tarefa em segundo plano usando o [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) que criamos na última etapa:
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -103,7 +103,7 @@ O código abaixo registra uma tarefa em segundo plano usando o [**SystemTrigger*
 >     // We'll register the task in the next step.
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -137,7 +137,7 @@ O código abaixo registra uma tarefa em segundo plano usando o [**SystemTrigger*
 > }
 > ```
 
-## Registrar a tarefa em segundo plano (ou retornar ao registro existente)
+## <a name="register-the-background-task-or-return-the-existing-registration"></a>Registrar a tarefa em segundo plano (ou retornar ao registro existente)
 
 
 Verifique se a tarefa foi encontrada na lista de registros de tarefas em segundo plano existentes. Caso afirmativo, retorne aquela instância da tarefa.
@@ -150,7 +150,7 @@ Em seguida, registre a tarefa usando um novo objeto [**BackgroundTaskBuilder**](
 O exemplo a seguir retorna a tarefa existente ou adiciona código que registra a tarefa em segundo plano (incluindo a condição de sistema opcional, se presente):
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -199,7 +199,7 @@ O exemplo a seguir retorna a tarefa existente ou adiciona código que registra a
 >     return task;
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -251,13 +251,13 @@ O exemplo a seguir retorna a tarefa existente ou adiciona código que registra a
 > }
 > ```
 
-## Complete a função utilitária de registro de tarefa em segundo plano
+## <a name="complete-background-task-registration-utility-function"></a>Complete a função utilitária de registro de tarefa em segundo plano
 
 
 Este exemplo mostra a função completa de registro de tarefa em segundo plano. Esta função pode ser usada para registrar a maioria das tarefas em segundo plano, com exceção das tarefas em segundo plano de rede.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > //
 > // Register a background task with the specified taskEntryPoint, name, trigger,
 > // and condition (optional).
@@ -310,7 +310,7 @@ Este exemplo mostra a função completa de registro de tarefa em segundo plano. 
 >     return task;
 > }
 > ```
-> ```cpp
+> ``` cpp
 > //
 > // Register a background task with the specified taskEntryPoint, name, trigger,
 > // and condition (optional).
@@ -373,13 +373,13 @@ Este exemplo mostra a função completa de registro de tarefa em segundo plano. 
 
 > **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 ****
 
 * [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-an-outofproc-background-task.md)
-* [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md)
-* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Criar e registrar uma tarefa em segundo plano em processo](create-and-register-an-inproc-background-task.md)
+* [Declarar tarefas em segundo plano no manifesto do app](declare-background-tasks-in-the-application-manifest.md)
 * [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
@@ -397,6 +397,6 @@ Este exemplo mostra a função completa de registro de tarefa em segundo plano. 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

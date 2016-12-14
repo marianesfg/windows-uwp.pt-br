@@ -1,16 +1,16 @@
 ---
-author: msatranjr
+author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
-title: Instalar aplicativos usando a ferramenta WinAppDeployCmd.exe
+title: Instalar apps usando a ferramenta WinAppDeployCmd.exe
 description: "O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo da Plataforma Universal do Windows (UWP) de um computador com o Windows 10 em qualquer dispositivo com o Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: 7b04e2e9980da4bbdd6d9d10fc493eb05e21afc4
-ms.openlocfilehash: 87af49dc04a94bac8896b33a1d7e8b4993b0f2c3
+ms.sourcegitcommit: f467bd83c2f700d94a232c99a06f86f1f1b1a0ac
+ms.openlocfilehash: 37028e1e119f27a8c82bc024e52f939a89243244
 
 ---
-# Instalar aplicativos usando a ferramenta WinAppDeployCmd.exe
+# <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Instalar apps usando a ferramenta WinAppDeployCmd.exe
 
-[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo da Plataforma Universal do Windows (UWP) de um computador com o Windows 10 em qualquer dispositivo com o Windows 10. É possível usar essa ferramenta para implantar um pacote .appx quando o dispositivo com o Windows 10 está conectado por USB ou disponível na mesma sub-rede sem a necessidade do Microsoft Visual Studio ou a solução desse aplicativo. Você também pode implementar o aplicativo sem empacotar primeiro a um computador ou Xbox One remoto. Este artigo descreve como instalar aplicativos UWP usando essa ferramenta.
 
@@ -20,7 +20,7 @@ Para implementar em dispositivos móveis, você deve primeiro criar um pacote. P
 
 A ferramenta **WinAppDeployCmd.exe** se localiza aqui no computador com o Windows 10: **C:\\Arquivos de Programas (x86)\\Kits do Windows\\10\\bin\\x86\\WinAppDeployCmd.exe** (com base no caminho de instalação do SDK). Primeiro, conecte o dispositivo com o Windows 10 à mesma sub-rede ou conecte-o diretamente ao computador com o Windows 10 usando uma conexão USB. Em seguida, use a sintaxe e os exemplos a seguir desse comando neste artigo para implementar o aplicativo UWP:
 
-## Sintaxe e opções de WinAppDeployCmd
+## <a name="winappdeploycmd-syntax-and-options"></a>Sintaxe e opções de WinAppDeployCmd
 
 Aqui está a sintaxe possível que você pode usar para **WinAppDeployCmd.exe**
 
@@ -99,7 +99,7 @@ A tabela a seguir descreve as opções de **WinAppDeployCmd.exe**.
 | &lt;remotedeploydir&gt;| Diretório no dispositivo em relação à localização de implementação                      |
 
  
-## Exemplos de WinAppDeployCmd.exe
+## <a name="winappdeploycmdexe-examples"></a>Exemplos de WinAppDeployCmd.exe
 
 Aqui estão alguns exemplos de como fazer a implantação usando a linha de comando com a sintaxe para **WinAppDeployCmd.exe**.
 
@@ -139,7 +139,7 @@ Registra o aplicativo no diretório app1_F5 sob o caminho de implementação do 
 WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 ```
 
-## Usando WinAppDeployCmd para configurar a implantação de Executar no Computador no Xbox One
+## <a name="using-winappdeploycmd-to-set-up-run-from-pc-deployment-on-xbox-one"></a>Usando WinAppDeployCmd para configurar a implantação de Executar no Computador no Xbox One
 
 Executar no Computador permite que você implante um aplicativo UWP em um Xbox One sem copiar os binários. m vez disso, os binários são hospedados em um compartilhamento de rede na mesma rede que o Xbox.  Para fazer isso, você precisa de um Xbox One desbloqueado por desenvolvedor e um aplicativo UWP de arquivo flexível em uma unidade de rede que o Xbox pode acessar.
 
@@ -152,6 +152,6 @@ ex. WinAppDeployCmd register files -ip 192.168.0.1 -remotedeploydir \\driveA\myA
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

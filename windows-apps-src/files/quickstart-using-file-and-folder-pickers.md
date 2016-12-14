@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: Abrir arquivos e pastas com um seletor
 description: "Acesse arquivos e pastas permitindo que o usuário interaja com um seletor. Você pode usar as classes FileOpenPicker e FileSavePicker para obter acesso a arquivos e FolderPicker para obter acesso a uma pasta."
 translationtype: Human Translation
-ms.sourcegitcommit: 232008b7f80aceab201d5bedd744eedfe995648e
-ms.openlocfilehash: a27f81be16b5f032d852b377b14f1aaf89b93a2f
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: e7884f140915d66b4a9f95a4197e717d63b0f25f
 
 ---
 
-# Abrir arquivos e pastas com um seletor
+# <a name="open-files-and-folders-with-a-picker"></a>Abrir arquivos e pastas com um seletor
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -27,7 +27,7 @@ Acesse arquivos e pastas permitindo que o usuário interaja com um seletor. É p
 
  
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 -   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
@@ -38,7 +38,7 @@ Acesse arquivos e pastas permitindo que o usuário interaja com um seletor. É p
 
     Consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
-## Interface do usuário do seletor de arquivos
+## <a name="file-picker-ui"></a>Interface do usuário do seletor de arquivos
 
 
 Um seletor de arquivos exibe informações para orientar os usuários e proporcionar uma experiência consistente durante a abertura ou a gravação de arquivos.
@@ -53,7 +53,7 @@ Um aplicativo de email pode exibir um seletor de arquivos para que o usuário se
 
 ![um seletor de arquivos com dois arquivos selecionados para abertura.](images/picker-multifile-600px.png)
 
-## Como os seletores funcionam
+## <a name="how-pickers-work"></a>Como os seletores funcionam
 
 
 Usando um seletor, o aplicativo pode acessar, procurar e salvar arquivos e pastas no sistema do usuário. Seu aplicativo recebe essas seleções como objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) e [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230), nos quais você pode operar em seguida.
@@ -64,7 +64,7 @@ Por exemplo, você pode chamar o seletor de arquivos em seu aplicativo, dessa fo
 
 ![um diagrama que mostra o processo de um aplicativo obtendo um arquivo para abrir em outro aplicativo usando o seletor de arquivos como uma interface entre os dois aplicativos.](images/app-to-app-diagram-600px.png)
 
-## Selecionar um arquivo: preencher a listagem de códigos
+## <a name="pick-a-single-file-complete-code-listing"></a>Selecionar um arquivo: preencher a listagem de códigos
 
 
 ```CSharp
@@ -88,7 +88,7 @@ else
 }
 ```
 
-## Selecionar um único arquivo: passo a passo
+## <a name="pick-a-single-file-step-by-step"></a>Selecionar um único arquivo: passo a passo
 
 
 Usar um seletor de arquivos envolve criar e personalizar um objeto de seletor de arquivos e mostrar o seletor de arquivos para que o usuário possa selecionar um item ou mais itens.
@@ -153,7 +153,7 @@ var files = await picker.PickMultipleFilesAsync();
         }
 ```
 
-## Selecionar uma pasta: preencher a listagem de códigos
+## <a name="pick-a-folder-complete-code-listing"></a>Selecionar uma pasta: preencher a listagem de códigos
 
 
 ```CSharp
@@ -185,6 +185,6 @@ else
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

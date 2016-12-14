@@ -4,13 +4,13 @@ ms.assetid: 0C8DEE75-FB7B-4E59-81E3-55F8D65CD982
 title: "Visão geral de animações"
 description: "Use as animações da biblioteca de animação do Windows Runtime para integrar a aparência do Windows ao seu aplicativo."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: d622465ce3da70cdb8dbd064b68ea6983f9fe3f7
+ms.sourcegitcommit: 2a08d1def7c4d2fde0ae08eb26076526058e8aae
+ms.openlocfilehash: e3e21c55ea8ddeab0969e304080394b940da010d
 
 ---
-# Visão geral de animações
+# <a name="animations-overview"></a>Visão geral de animações
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 As animações no Windows Runtime podem aprimorar seu aplicativo acrescentando movimento e interatividade. Usando as animações da biblioteca de animações do Windows Runtime, você pode integrar a aparência do Windows ao seu aplicativo. Este tópico fornece um resumo das animações e dos exemplos de cenários típicos em que cada uma é usada.
@@ -31,7 +31,7 @@ A Biblioteca de Animação não fornece animações para todos os cenários poss
 
 Além disso, para determinados cenários avançados como animação de um item com base na posição de rolagem de um ScrollViewer, os desenvolvedores podem querer usar interoperação de Camada Visual para implementar animações personalizadas. Para obter mais informações, consulte [Camada Visual](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer).
 
-## Tipos de animações
+## <a name="types-of-animations"></a>Tipos de animações
 
 O sistema de animações do Windows Runtime e a biblioteca de animações cumprem a meta maior de habilitar controles e outras partes da interface do usuário para que tenham um comportamento animado. Há vários tipos distintos de animações.
 
@@ -41,7 +41,7 @@ O sistema de animações do Windows Runtime e a biblioteca de animações cumpre
 -   *Animações com storyboard* animam o valor de uma propriedade de dependência do Windows Runtime com o tempo. Storyboards podem ser definidos como parte de uma transição visual ou disparados no tempo de execução pelo aplicativo. Para saber mais, consulte [Animações com storyboard](storyboarded-animations.md). Para saber mais sobre as propriedades de dependência e onde elas existem, consulte [Visão geral das propriedades de dependência](https://msdn.microsoft.com/library/windows/apps/Mt185583).
 -   *Animações conectadas* fornecidas pela nova API [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx) permitem que os desenvolvedores criem com facilidade um efeito onde um elemento parece se animar entre os modos de exibição durante uma navegação. Essa API está disponível a partir do Windows 10, versão 1607. Consulte [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx) para obter mais informações.
 
-## Animações disponíveis na biblioteca
+## <a name="animations-available-in-the-library"></a>Animações disponíveis na biblioteca
 
 As seguintes animações são fornecidas na Biblioteca de Animação. Clique no nome da animação para aprender mais sobre o uso principal dos cenários, como defini-las e para ver um exemplo da animação.
 
@@ -55,45 +55,48 @@ As seguintes animações são fornecidas na Biblioteca de Animação. Clique no 
 -   [Alterações em itens de lista](./animations-overview.md#list-item-changes): adiciona ou exclui um item de uma lista ou reordena os itens.
 -   [Arrastar e soltar](./animations-overview.md#drag-drop): fornece um feedback visual durante uma operação de arrastar e soltar.
 
-### Transição da página
+### <a name="page-transition"></a>Transição da página
 
 Use transições da página para animar a navegação dentro de um aplicativo. Como quase todos os aplicativos usam algum tipo de navegação, as animações de transição da página são o tipo mais comum de animação de tema usado por aplicativos. Consulte [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) para obter mais informações sobre as APIs de transição da página.
 
 
 
-### Transição de conteúdo e transição de entrada
+### <a name="content-transition-and-entrance-transition"></a>Transição de conteúdo e transição de entrada
 
 Use animações de transição de conteúdo ([**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243103)) para mover um conteúdo ou conjunto de conteúdos para dentro ou para fora da exibição atual. Por exemplo, as animações de transição de conteúdo mostram o conteúdo que não estava pronto para exibição quando a página carregou pela primeira vez, ou quando o conteúdo muda em uma seção de uma página.
 
 [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288) representa um movimento que pode ser aplicado ao conteúdo quando uma página ou seção grande da interface do usuário é carregada pela primeira vez. Dessa forma, a primeira aparência do conteúdo pode oferecer um feedback diferente da alteração do conteúdo. [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288) é equivalente a um [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) com os parâmetros padrão, mas pode ser usado fora de um [**quadro**](https://msdn.microsoft.com/library/windows/apps/br242682).
  
  
-
-### Fade in, fade out e fading cruzado
+<span id="fade-in-out-and-crossfade"/>
+### <a name="fade-inout-and-crossfade"></a>Fade in, fade out e fading cruzado
 
 Use animações fade in e fade out para mostrar ou ocultar controles ou interface do usuário transiente. Em XAML, elas são representadas como [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) e [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302). Um exemplo está na barra de aplicativos na qual novos controles podem aparecer devido à interação do usuário. Outro exemplo seria uma barra de rolagem ou indicador panorâmico transitório que desaparece lentamente (fade out) depois que não é detectada nenhuma entrada do usuário por algum tempo. O aplicativos também devem usar a animação de fade in ao fazerem a transição de um item de espaço reservado até o item final conforme o conteúdo é carregado dinamicamente.
 
 Use uma animação de fading cruzado para suavizar a transição quando o estado de um item está mudando; por exemplo, aquando o aplicativo atualiza o conteúdo atual de uma exibição. A biblioteca de animação XAML não fornece uma animação de fading cruzado dedicada (não há equivalente para [**crossFade**](https://msdn.microsoft.com/library/windows/apps/BR212661)), mas você pode obter o mesmo resultado usando [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) e [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) com tempo sobreposto.
 
-### Ponteiro para cima/para baixo
+<span id="pointer-up-down"/>
+### <a name="pointer-updown"></a>Ponteiro para cima/para baixo
 
 Use as animações [**PointerUpThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh969168) e [**PointerDownThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh969164) para dar feedback visual ao usuário sobre o êxito ao tocar ou clicar em um bloco. Por exemplo, quando um usuário clica ou toca em um bloco, a animação do ponteiro para baixo é reproduzida. Após a liberação do toque ou do clique, a animação de ponteiro para cima é reproduzida.
 
-### Reposicionar
+### <a name="reposition"></a>Reposicionar
 
 Use as animações de reposicionar ([**RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210421) ou [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429)) para mover um elemento para uma nova posição. Por exemplo, a movimentação dos cabeçalhos em um controle de itens usa a animação de reposicionar.
 
-### Mostrar/ocultar popup
+<span id="show-hide-popup"/>
+### <a name="showhide-popup"></a>Mostrar/ocultar popup
 
 Use [**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210383) e [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210391) quando mostrar e ocultar um [**Popup**](https://msdn.microsoft.com/library/windows/apps/BR227842) ou uma interface do usuário contextual semelhante sobre a exibição atual. [**PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969172) é uma transição de tema que é um feedback útil se você deseja fazer o light dismiss de um popup.
 
-### Mostrar/ocultar interface do usuário de borda
+<span id="show-hide-edge-ui"/>
+### <a name="showhide-edge-ui"></a>Mostrar/ocultar interface do usuário de borda
 
 Use a animação [**EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh702324) para deslizar interfaces do usuário pequenas e baseadas em borda para dentro ou fora da exibição. Por exemplo, use essas animações quando mostrar uma barra de aplicativos personalizada na parte superior ou inferior da tela ou de uma superfície de IU sobre erros e avisos na parte superior da tela.
 
 Use a animação [**PaneThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969160) para mostrar e ocultar um painel. Isso é para interfaces do usuário grandes baseadas em borda, como um teclado personalizado ou um painel de tarefas.
 
-### Alterações de itens de lista
+### <a name="list-item-changes"></a>Alterações de itens de lista
 
 Use a animação [**AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047) para adicionar comportamento animado quando adicionar ou excluir um item de uma lista existente. Para adicionar, a transição vai primeiro reposicionar os itens existentes na lista para abrir espaço para os novos itens e, depois, adicionar novos itens. Para exclusões, a transição remove itens de uma lista e, se necessário, reposiciona os demais itens da lista depois que os itens excluídos são removidos.
 
@@ -101,13 +104,14 @@ Há também uma animação [**ReorderThemeTransition**](https://msdn.microsoft.c
 
 Observe que essas animações são incluídas nos modelos padrão [**ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx), portanto, você não precisa adicionar manualmente essas animações se já estiver usando esses controles.
 
-### Arrastar/soltar
+<span id="drag-drop"/>
+### <a name="dragdrop"></a>Arrastar/soltar
 
 Use as animações de arrastar ([**DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243173), [**DragOverThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243177)) e soltar ([**DropTargetItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243185)) para dar feedback visual quando o usuário arrastar ou soltar um item.
 
 Quando ativas, as animações mostram ao usuário que a lista pode ser reorganizada ao redor de um item solto. Isso é útil para usuários que sabem onde o item será colocado em uma lista se for solto no local atual. As animações fornecem feedback visual de que um item arrastado pode ser solto entre dois outros itens da lista e que esses itens sairão do caminho.
 
-## Usando animações com controles personalizados
+## <a name="using-animations-with-custom-controls"></a>Usando animações com controles personalizados
 
 A tabela a seguir resume as recomendações para uso da animação certa quando você cria uma versão personalizada destes controles do Windows Runtime:
 
@@ -124,7 +128,7 @@ A tabela a seguir resume as recomendações para uso da animação certa quando 
 
  
 
-## Exemplos de animação de transição
+## <a name="transition-animation-examples"></a>Exemplos de animação de transição
 
 Em condições ideias, seu aplicativo usa animações para aprimorar a interface do usuário ou para torná-la mais atraente sem incomodar os usuários. Uma maneira de fazer isso é aplicando transições animadas à interface do usuário de modo que quando um elemento entra ou sai da tela ou sofre qualquer alteração, a animação chama a atenção do usuário para a alteração. Por exemplo, seus botões podem esmaecer, em vez de simplesmente aparecer e desaparecer. Nós criamos diversas APIs que podem ser usadas para fazer transições de animação típicas ou recomendadas consistentes. O exemplo a seguir mostra como aplicar uma animação a um botão para que ele deslize rapidamente na exibição.
 
@@ -196,15 +200,13 @@ Os exemplos anteriores aplicam uma transição de tema a um controle individual,
 </ItemsControl>
 ```
 
-Os retângulos filho da [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) transicionam em exibição um após o outro em uma maneira visualmente agradável em vez de todos ao mesmo tempo, como aconteceria se você tivesse aplicado essa animação aos retângulos individualmente.
+Os retângulos filho do elemento [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) são exibidos um após o outro de maneira visualmente agradável em vez de todos ao mesmo tempo, como aconteceria se você tivesse aplicado essa animação aos retângulos individualmente.
 
-Veja este vídeo que demonstra a animação:
+Veja uma demonstração desta animação:
 
-![Animação mostrando um retângulo filho transicionando em exibição](./images/animation-child-rectangles.gif)
+![Animação mostrando a transição de um retângulo filho na exibição](./images/animation-child-rectangles.gif)
 
-<iframe src="https://videoplayercdn.osi.office.net/embed/bb48c68b-c15d-44e4-86e5-8a8065da7a2e?autoplay=true&mkt=en-us&csid=IA-en-us" width="640" height="360" allowFullScreen="true" frameBorder="0" scrolling="no" ></iframe>
-
-Os objetos filho de um contêiner também podem refluir quando um ou mais filhos mudarem de posição. No exemplo a seguir, aplicamos uma [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429) à grade de retângulos. Quando você remove um dos retângulos, todos os demais refluem para a nova posição.
+Os objetos filho de um contêiner também podem refluir quando um ou mais filhos mudarem de posição. No exemplo a seguir, aplicamos uma [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429) à grade de retângulos. Quando você remove um dos retângulos, todos os outros refluem para suas novas posições.
 
 ```xml
 <Button Content="Remove Rectangle" Click="RemoveButton_Click"/>
@@ -266,8 +268,6 @@ void BlankPage::RemoveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::
 }
 ```
 
-Este vídeo demonstra a animação executada para os retângulos que são removidos:
-
 Você pode aplicar várias animações de transição a um único objeto ou contêiner de objetos. Por exemplo, se você deseja que a lista de retângulos seja animada na exibição e também quando eles mudarem de posição, aplique [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429) e [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288) desta maneira:
 
 ```xml
@@ -297,7 +297,7 @@ Há vários efeitos de transição para criar animações nos seus elementos da 
 
  
 
-## Exemplos de animação de tema
+## <a name="theme-animation-examples"></a>Exemplos de animação de tema
 
 As animações de transição são simples de aplicar. Mas você pode ter um pouco mais de controle sobre o tempo e a ordem dos efeitos de animação. Você pode usar animações de tema para ter mais controle sobre o comportamento da animação ao usar um tema consistente. As animações de temas também exigem menos marcações do que animações personalizadas. Neste exemplo, usamos [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) para fazer o fade out da exibição de um retângulo.
 
@@ -366,7 +366,7 @@ Você pode aplicar várias outras animações de temas aos elementos da sua inte
 
  
 
-## Crie suas próprias animações
+## <a name="create-your-own-animations"></a>Crie suas próprias animações
 
 Quando as animações de tema não são suficientes para suas necessidades, você pode criar suas próprias animações. Você anima os objetos por meio de um ou mais dos valores de suas propriedades. Por exemplo, você pode animar a largura de um retângulo, o ângulo de um [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932) ou o valor de cor de um botão. Chamamos esse tipo de animação personalizada de animação de storyboard, para distingui-la das animações da biblioteca que o Windows Runtime já fornece como um tipo de animação pré-configurada. Para animações de storyboard, use uma animação que pode alterar valores de um determinado tipo (por exemplo [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) para animar um **Double**) e colocar essa animação dentro de um [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) para controlá-lo.
 
@@ -384,6 +384,6 @@ A maior área do aplicativo de definição da interface do usuário do XAML, ond
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

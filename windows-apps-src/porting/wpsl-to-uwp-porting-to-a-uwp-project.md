@@ -4,20 +4,20 @@ description: "Você começa o processo de portabilidade ao criar um novo projeto
 title: Portando um projeto Windows Phone Silverlight para um projeto UWP
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ffcc7a76a8604deb4f7cb57ac32b9a29de7be46d
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 273017f4607c25ee56d7400debe59e94acb36d4f
 
 ---
 
-# Portando um projeto Windows Phone Silverlight para um projeto UWP
+# <a name="porting-a-windows-phone-silverlight-project-to-a-uwp-project"></a>Portando um projeto Windows Phone Silverlight para um projeto UWP
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O tópico anterior era [Mapeamentos de namespace e de classe](wpsl-to-uwp-namespace-and-class-mappings.md).
 
 Você começa o processo de portabilidade ao criar um novo projeto do Windows 10 no Visual Studio e ao copiar seus arquivos nele.
 
-## Crie o projeto e copie os arquivos nele
+## <a name="create-the-project-and-copy-files-to-it"></a>Crie o projeto e copie os arquivos nele
 
 1.  Inicie o Microsoft Visual Studio 2015 e crie um novo projeto Aplicativo em Branco (Windows Universal). Para obter mais informações, consulte [Iniciar rapidamente seu aplicativo da Windows Store usando modelos (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Seu novo projeto cria um pacote do aplicativo (um arquivo appx) que será executado em todas as famílias de dispositivos.
 2.  No seu projeto de aplicativo Windows Phone Silverlight, identifique todos os arquivos de código-fonte e arquivos de ativo visual que você deseja reutilizar. Usando o Explorador de Arquivos, copie modelos de dados, modelos de exibição, ativos visuais, dicionários de recursos, estrutura de pastas e tudo mais que deseja reutilizar em seu novo projeto. Copie ou crie subpastas no disco conforme necessário.
@@ -25,7 +25,7 @@ Você começa o processo de portabilidade ao criar um novo projeto do Windows 10
 4.  No **Gerenciador de Soluções**, verifique se **Mostrar Todos os Arquivos** está ativado. Selecione os arquivos copiados, clique neles com o botão direito do mouse e clique em **Incluir no Projeto**. Isso incluirá automaticamente suas pastas continentes. Em seguida, você pode desativar **Mostrar Todos os Arquivos**, se desejar. Um fluxo de trabalho alternativo, se preferir, é usar o comando **Adicionar Item Existente**, tendo criado qualquer subpasta necessária no **Gerenciador de Soluções** do Visual Studio. Verifique se os ativos visuais têm **Ação de Compilação** definida como **Conteúdo** e **Copiar para Diretório de Saída** definida como **Não Copiar**.
 5.  As diferenças nos nomes de namespace e classe gerarão muitos erros de compilação nesse estágio. Por exemplo, se você abrir os modos de exibição gerados pelo Visual Studio, verá que eles são do tipo [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) e não **PhoneApplicationPage**. Existem muitas diferenças de marcação XAML e de código imperativo que os tópicos a seguir abordam em detalhes neste guia de portabilidade. Mas você fará rápido progresso apenas seguindo estas etapas gerais: altere "clr-namespace" para "using" em suas declarações de prefixo de namespace na marcação XAML; use o tópico [Mapeamentos de classes e namespaces](wpsl-to-uwp-namespace-and-class-mappings.md) e o comando **Localizar e Substituir** do Visual Studio para fazer alterações em massa em seu código-fonte (por exemplo, substituir "System.Windows" por "Windows.UI.Xaml"); e no editor de código imperativo no Visual Studio, use os comandos **Resolver** e **Organizar Usos** no menu de contexto para alterações mais direcionadas.
 
-## SDKs de extensão
+## <a name="extension-sdks"></a>SDKs de extensão
 
 A maioria das APIs da Plataforma Universal do Windows (UWP) que o aplicativo portado chamará está implementada no conjunto de APIs conhecido como família de dispositivos universais. Porém, algumas estão implementadas nos SDKs de extensão, e o Visual Studio só reconhece APIs implementadas pela família de dispositivos de destino do aplicativo ou por quaisquer SDKs de extensão que você tenha consultado.
 
@@ -51,18 +51,18 @@ A menos que o aplicativo seja segmentado para a família de dispositivos que imp
 
 Além disso, consulte [Manifesto do pacote do aplicativo](#appxpackage).
 
-## Maximizando a reutilização de marcação e de código
+## <a name="maximizing-markup-and-code-reuse"></a>Maximizando a reutilização de marcação e de código
 
 Você descobrirá que refatorar um pouco, e/ou adicionar código adaptável (que é explicado abaixo), permitirá que você maximize a marcação e o código que funcionam em todas as famílias de dispositivos. Aqui estão mais detalhes.
 
 -   Arquivos que são comuns a todas as famílias de dispositivos não precisam de nenhuma atenção especial. Esses arquivos serão usados pelo aplicativo em todas as famílias de dispositivos em que ele for executado. Isso inclui arquivos de marcação XAML, arquivos de código-fonte imperativo e arquivos de ativos.
--   É possível que seu aplicativo detecte a família de dispositivos em que ele esteja sendo executado e navegue para um modo de exibição que foi projetado especificamente para essa família de dispositivos. Para saber mais, confira [Detectando a plataforma em que seu aplicativo é executado](wpsl-to-uwp-input-and-sensors.md#detecting-the-platform).
--   Uma técnica semelhante que pode ser útil, caso não haja alternativa, é dar um nome especial a um arquivo de marcação ou arquivo **ResourceDictionary** (ou à pasta que contém o arquivo), de maneira que ele seja carregado automaticamente no tempo de execução somente quando o aplicativo é executado em uma família de dispositivos em especial. Essa técnica é ilustrada no estudo de caso [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md#an-optional-adjustment).
+-   É possível que seu aplicativo detecte a família de dispositivos em que ele esteja sendo executado e navegue para um modo de exibição que foi projetado especificamente para essa família de dispositivos. Para saber mais, confira [Detectando a plataforma em que seu aplicativo é executado](wpsl-to-uwp-input-and-sensors.md).
+-   Uma técnica semelhante que pode ser útil, caso não haja alternativa, é dar um nome especial a um arquivo de marcação ou arquivo **ResourceDictionary** (ou à pasta que contém o arquivo), de maneira que ele seja carregado automaticamente no tempo de execução somente quando o aplicativo é executado em uma família de dispositivos em especial. Essa técnica é ilustrada no estudo de caso [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md).
 -   Para usar recursos que não estejam disponíveis em todas as famílias de dispositivos (por exemplo, impressoras, scanners ou o botão da câmera), você pode escrever um código adaptável. Consulte o terceiro exemplo em [Compilação condicional e código adaptável](#conditional-compilation) neste tópico.
 -   Se você quiser dar suporte para o Windows Phone Silverlight e o Windows 10, poderá compartilhar arquivos de código-fonte entre projetos. Veja como: no Visual Studio, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções**, selecione **Adicionar Item Existente**, selecione os arquivos a serem compartilhados e clique em **Adicionar como Link**. Armazene seus arquivos de código-fonte em uma pasta comum no sistema de arquivos onde os projetos vinculados a eles possam vê-los, e não se esqueça de adicioná-los ao controle do código-fonte. Caso possa fatorar o código-fonte imperativo de maneira que a maior parte de um arquivo, se não todo ele, funcione em ambas as plataformas, você não precisa ter duas cópias dele. É possível encapsular qualquer lógica específica da plataforma no arquivo dentro das diretivas de compilação condicional, onde possível, ou das condições de tempo de execução, onde necessário. Consulte a próxima seção abaixo e [Diretivas de pré-processador C#](http://msdn.microsoft.com/library/ed8yd1ha.aspx).
 -   Para reutilização no nível binário, em vez do nível do código-fonte, há Bibliotecas de Classes Portáveis, que oferecem suporte ao subconjunto de APIs .NET disponíveis no Windows Phone Silverlight e ao subconjunto de aplicativos do Windows 10 (.NET Core). As assemblies da Biblioteca de Classes Portátil são compatíveis com binários nas plataformas .NET e mais. Use o Visual Studio para criar um projeto direcionado a uma Biblioteca de Classes Portátil. Consulte [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](http://msdn.microsoft.com/library/gg597391.aspx).
 
-## Compilação condicional e código adaptável
+## <a name="conditional-compilation-and-adaptive-code"></a>Compilação condicional e código adaptável
 
 Se quiser dar suporte ao Windows Phone Silverlight e ao Windows 10 em um único arquivo de código, você pode fazer isso. Se examinar o projeto do Windows 10 nas páginas de propriedades do projeto, você verá que o projeto define WINDOWS\_UAP como um símbolo de compilação condicional. Em geral, você pode usar a lógica a seguir para realizar uma compilação condicional.
 
@@ -134,9 +134,9 @@ Você pode ter usado compilação condicional para limitar a manipulação do bo
     }
 ```
 
-Consulte também [Detectando a plataforma em que seu aplicativo está sendo executado](wpsl-to-uwp-input-and-sensors.md#detecting-the-platform).
+Consulte também [Detectando a plataforma em que seu aplicativo está sendo executado](wpsl-to-uwp-input-and-sensors.md).
 
-## O manifesto do pacote do aplicativo
+## <a name="the-app-package-manifest"></a>O manifesto do pacote do aplicativo
 
 As configurações no projeto (inclusive todas as referências de SDKs de extensão) determinam a área da superfície da API que o aplicativo pode chamar. Porém, o manifesto do pacote do aplicativo é o que determina o conjunto real de dispositivos em que os clientes podem instalar o aplicativo da Loja. Para saber mais, veja Exemplos em [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903).
 
@@ -149,6 +149,6 @@ O próximo tópico é [Solução de problemas](wpsl-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

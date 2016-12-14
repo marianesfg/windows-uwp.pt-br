@@ -5,12 +5,12 @@ description: "Saiba como usar o namespace Windows.Services.Store para implementa
 title: "Implementar uma versão de avaliação do seu aplicativo"
 keywords: "amostra de código de avaliação gratuita"
 translationtype: Human Translation
-ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
-ms.openlocfilehash: 8858c9f7f9b40e2bca30054b99ab47c7388aef57
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: ea4c5637a970a63938da2b1bea9f11fd39de9cc8
 
 ---
 
-# Implementar uma versão de avaliação do seu aplicativo
+# <a name="implement-a-trial-version-of-your-app"></a>Implementar uma versão de avaliação do seu aplicativo
 
 Se você configurar seu aplicativo como [avaliação gratuita no painel do Centro de Desenvolvimento do Windows](../publish/set-app-pricing-and-availability.md#free-trial) para que os clientes possam usar seu aplicativo gratuitamente durante um período de avaliação, incentive seus clientes a atualizarem para a versão completa do seu aplicativo excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
@@ -18,7 +18,7 @@ Os aplicativos destinados ao Windows 10, versão 1607 ou posterior, podem usar m
 
 >**Observação**&nbsp;&nbsp;Este artigo se refere a aplicativos direcionados ao Windows 10, versão 1607, ou posterior. Se seu aplicativo for direcionado para uma versão anterior do Windows 10, use o namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez do **Windows.Services.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
-## Diretrizes para a implementação de uma versão de avaliação
+## <a name="guidelines-for-implementing-a-trial-version"></a>Diretrizes para a implementação de uma versão de avaliação
 
 O estado da licença atual de seu aplicativo é armazenado como propriedades da classe [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx). Geralmente, você coloca as funções que dependem do estado da licença em um bloco condicional, conforme descrito na próxima etapa. Ao considerar esses recursos, verifique se você pode implementá-los de maneira que funcionem em todos os estados de licença.
 
@@ -51,9 +51,9 @@ Nos aplicativos não destinados a jogos, a configuração de uma data de expira�
     -   Agradeça-os pela compra ou exiba uma mensagem.
     -   Habilitar silenciosamente os recursos disponibilizados pela licença completa (ou desabilitar os avisos de somente avaliação).
 
-Lembre-se de explicar como o aplicativo se comportará durante e após o período de avaliação gratuita, assim, os clientes não serão surpreendidos pelo comportamento do aplicativo. Para saber mais sobre a descrição de seu aplicativo, consulte [Criar descrições de aplicativos](https://msdn.microsoft.com/library/windows/apps/mt148529).
+Lembre-se de explicar como o app se comportará durante e após o período de avaliação gratuita, assim os clientes não serão surpreendidos pelo comportamento do app. Para saber mais sobre a descrição de seu aplicativo, consulte [Criar descrições de aplicativos](https://msdn.microsoft.com/library/windows/apps/mt148529).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este exemplo tem os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao Windows 10, versão 1607 ou posterior.
@@ -66,72 +66,28 @@ O código neste exemplo pressupõe que:
 
 >**Observação**&nbsp;&nbsp;Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado neste exemplo para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
 
-## Exemplo de código
+## <a name="code-example"></a>Exemplo de código
 
 Quando seu aplicativo estiver inicializando, obtenha o objeto [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx) para seu aplicativo e manipule o evento [OfflineLicensesChanged](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.offlinelicenseschanged.aspx) para receber notificações quando a licença for alterada enquanto o aplicativo estiver em execução. Por exemplo, a licença do aplicativo pode ser alterada quando o período de avaliação expira ou o cliente compra o aplicativo por meio de uma Loja. Quando a licença for alterada, obtenha a nova licença e habilite ou desabilite um recurso do seu aplicativo adequadamente.
 
 Nesse ponto, se um usuário comprou o aplicativo, é uma prática recomendada fornecer comentários para o usuário informando que o status de licença foi alterado. Você pode precisar solicitar que o usuário reinicie o aplicativo, caso este tenha sido codificado assim. Mas faça essa transição de maneira mais transparente e suave possível.
 
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[ImplementTrial](./code/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs#ImplementTrial)]
 
-```csharp
-private StoreContext context = null;
-private StoreAppLicense appLicense = null;
+Para obter um app de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
-// Call this while your app is initializing.
-private async void InitializeLicense()
-{
-    if (context == null)
-    {
-        context = StoreContext.GetDefault();
-        // If your app is a desktop app that uses the Desktop Bridge, you
-        // may need additional code to configure the StoreContext object.
-        // For more info, see https://aka.ms/storecontext-for-desktop.
-    }
-
-    workingProgressRing.IsActive = true;
-    appLicense = await context.GetAppLicenseAsync();
-    workingProgressRing.IsActive = false;
-
-    // Register for the licenced changed event.
-    context.OfflineLicensesChanged += context_OfflineLicensesChanged;
-}
-
-private async void context_OfflineLicensesChanged(StoreContext sender, object args)
-{
-    // Reload the license.
-    workingProgressRing.IsActive = true;
-    appLicense = await context.GetAppLicenseAsync();
-    workingProgressRing.IsActive = false;
-
-    if (appLicense.IsActive)
-    {
-        if (appLicense.IsTrial)
-        {
-            textBlock.Text = $"This is the trial version. Expiration date: {appLicense.ExpirationDate}";
-
-            // Show the features that are available during trial only.
-        }
-        else
-        {
-            // Show the features that are available only with a full license.
-        }
-    }
-}
-```
-
-Para obter um aplicativo de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
-
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md)
-* [Obter informações do produto para aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)
-* [Obter informações de licença para aplicativos e complementos](get-license-info-for-apps-and-add-ons.md)
+* [Obter informações do produto para apps e complementos](get-product-info-for-apps-and-add-ons.md)
+* [Obter informações de licença para apps e complementos](get-license-info-for-apps-and-add-ons.md)
 * [Habilitar compras no aplicativo e complementos no aplicativo](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Habilitar compras de complementos consumíveis](enable-consumable-add-on-purchases.md)
 * [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

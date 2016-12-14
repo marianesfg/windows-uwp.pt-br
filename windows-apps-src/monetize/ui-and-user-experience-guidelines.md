@@ -4,28 +4,26 @@ ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Saiba mais sobre diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos."
 title: "Diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos"
 translationtype: Human Translation
-ms.sourcegitcommit: 8574695fe12042e44831227f81e1f6ea45e9c0da
-ms.openlocfilehash: 3019834a314e552654d74358f4b1eed8451d5119
+ms.sourcegitcommit: 148aca16104f599f3048f5965c4131a3f37799f8
+ms.openlocfilehash: 97feb4f79e0592a7b54a8263b15cd2b85dd3243d
 
 
 ---
 
-# Diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos
+# <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>Diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos
 
 
-
-
-## Recursos gerais da interface do usuário para aplicativos do Windows
+## <a name="general-ui-resources-for-windows-apps"></a>Recursos gerais da interface do usuário para aplicativos do Windows
 
 Você pode encontrar informações sobre como projetar a aparência para aplicativos em [Design e interface do usuário](https://developer.microsoft.com/windows/design).
 
-## Práticas recomendadas para o AdControl
+## <a name="adcontrol-best-practices"></a>Práticas recomendadas para o AdControl
 
 * [Práticas recomendadas para o AdControl: O QUE FAZER](#adcontrolbestpracticesdo10)
 * [Práticas recomendadas para o AdControl: O QUE NÃO FAZER](#adcontrolbestpracticesdont10)
 
 <span id="adcontrolbestpracticesdo10"/>
-### Práticas recomendadas para o AdControl: O QUE FAZER
+### <a name="adcontrol-best-practices-do"></a>Práticas recomendadas para o AdControl: O QUE FAZER
 
 * Crie publicidade em sua experiência. Dê aos seus designers um anúncio de exemplo para planejar a aparência do anúncio. Dois exemplos de anúncios bem planejados em aplicativos são o layout de anúncios como conteúdo e o layout de divisão.
 
@@ -34,7 +32,7 @@ Você pode encontrar informações sobre como projetar a aparência para aplicat
 * Planeje os momentos que não haverá anúncios disponíveis. Pode haver momentos em que anúncios não estarão sendo enviados ao seu aplicativo. Disponha suas páginas de forma que elas fiquem ótimas exibindo ou não anúncios. Para obter mais informações, consulte [Tratamento de erros](error-handling-with-advertising-libraries.md).
 
 <span id="adcontrolbestpracticesdont10"/>
-### Práticas recomendadas para o AdControl: O QUE NÃO FAZER
+### <a name="adcontrol-best-practices-dont"></a>Práticas recomendadas para o AdControl: O QUE NÃO FAZER
 
 * Publicidade em propriedades abertas. Um anúncio não deve ser colocado na primeira propriedade aberta que você encontrar. Ele deve ser incorporado ao design geral do seu aplicativo.
 
@@ -43,18 +41,18 @@ Você pode encontrar informações sobre como projetar a aparência para aplicat
 * Distrair o usuário de suas tarefas principais. O foco principal deve estar sempre no aplicativo. O espaço de anúncio deve ser incorporado para que ele permaneça um foco secundário.
 
 <span id="interstitialbestpractices10"/>
-## Políticas e práticas recomendadas para anúncios intersticiais
+## <a name="interstitial-best-practices-and-policies"></a>Políticas e práticas recomendadas para anúncios intersticiais
 
 * [Práticas recomendadas para anúncios intersticiais: O QUE FAZER](#interstitialbestpracticesdo10)
 * [Práticas recomendadas para anúncios intersticiais: O QUE EVITAR](#interstitialbestpracticesavoid10)
 * [Práticas recomendadas para anúncios intersticiais: NUNCA (política imposta)](#interstitialbestpracticesnever10)
 
-Quando usado com elegância, anúncios intersticiais em vídeo podem aumentar consideravelmente a receita do aplicativo, sem afetar negativamente a satisfação do usuário. Quando usado inadequadamente, esses anúncios podem ter exatamente o efeito oposto.
+Quando usado com elegância, anúncios intersticiais em vídeo podem aumentar consideravelmente a receita do app, sem afetar negativamente a satisfação do usuário. Quando usado inadequadamente, esses anúncios podem ter exatamente o efeito oposto.
 
 Aqui, nosso objetivo é ajudar você a atingir a elegância. Como você conhece seu aplicativo melhor do que ninguém, exceto no que diz respeito à política, deixamos para você tomar a decisão final. O que é mais importante ter em mente é que suas classificações de aplicativo e receita estão intimamente ligadas.
 
 <span id="interstitialbestpracticesdo10"/>
-### Práticas recomendadas para anúncios intersticiais: O QUE FAZER
+### <a name="interstitial-best-practices-do"></a>Práticas recomendadas para anúncios intersticiais: O QUE FAZER
 
 * Ajuste os anúncios intersticiais no fluxo natural do aplicativo, como entre níveis de jogo.
 
@@ -84,13 +82,14 @@ Aqui, nosso objetivo é ajudar você a atingir a elegância. Como você conhece 
 
     * Anúncios em vídeo levam consideravelmente mais tempo para baixar do que em banner, especialmente em mercados que não têm conexões de alta velocidade.
 
+<span/>
 
 * Preste atenção ao plano de dados do usuário. Por exemplo, não mostre ou aviso o usuário antes de mostrar um vídeo em um dispositivo móvel que esteja próximo/acima de seu limite de dados. Existem APIs na classe [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) que podem ajudar.
 
 * Melhore continuamente seu aplicativo após o envio inicial. Analise os relatórios de anúncios e faça alterações no design para melhorar as taxas de preenchimento e conclusão de vídeos.
 
 <span id="interstitialbestpracticesavoid10"/>
-### Práticas recomendadas para anúncios intersticiais: O QUE EVITAR
+### <a name="interstitial-best-practices-avoid"></a>Práticas recomendadas para anúncios intersticiais: O QUE EVITAR
 
 * Excesso. Não mostre mais anúncios do que a cada 5 minutos, a menos que o usuário explicitamente se envolva com um benefício tangível opcional, além de apenas jogar.
 
@@ -106,8 +105,9 @@ Aqui, nosso objetivo é ajudar você a atingir a elegância. Como você conhece 
 
 * Buscar um anúncio em vídeo mais do que 5 minutos antes de chamar [Mostrar](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
 
-    * Uma boa prática maximizará a conversão de anúncios pré-obtidos em impressões faturáveis.
+  * Uma boa prática maximizará a conversão de anúncios pré-obtidos em impressões faturáveis.
 
+<span/>
 
 * Prejudicar um usuário por falhas na apresentação de anúncios, como a falta de disponibilidade de anúncios. Por exemplo, se você mostrar uma opção de interface do usuário para "Assista a um anúncio para obter *xxx*", você deverá fornecer *xxx* se o usuário fizer sua parte. Duas opções a serem consideradas:
 
@@ -122,7 +122,7 @@ Aqui, nosso objetivo é ajudar você a atingir a elegância. Como você conhece 
     * Uma camisa personalizada no avatar do jogador está bem, desde que não forneça camuflagem!
 
 <span id="interstitialbestpracticesnever10"/>
-### Práticas recomendadas para anúncios intersticiais: NUNCA (política imposta)
+### <a name="interstitial-best-practices-never-policy-enforced"></a>Práticas recomendadas para anúncios intersticiais: NUNCA (política imposta)
 
 * Nunca coloque todos os elementos da interface do usuário sobre o contêiner de anúncios.
 
@@ -130,9 +130,9 @@ Aqui, nosso objetivo é ajudar você a atingir a elegância. Como você conhece 
 
 <span/>
 
-* Nunca chame **Mostrar** enquanto o usuário está envolvido com o aplicativo.
+* Nunca chame o método [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) enquanto o usuário estiver envolvido com o app.
 
-    * Como o **InterstitialAd** criará uma sobreposição de tela inteira, o usuário achará isso dissonante.
+    * O usuário considera essa experiência desagradável porque o [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) criará uma sobreposição de tela inteira.
 
     * Também pode levar a taxas de cliques exageradas.
 
@@ -140,7 +140,7 @@ Aqui, nosso objetivo é ajudar você a atingir a elegância. Como você conhece 
 
 * Nunca solicite um novo anúncio no contexto do manipulador de eventos para o evento [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.erroroccurred.aspx). Isso pode resultar em um loop infinito e pode causar problemas operacionais para o serviço de publicidade.
 
-* Você nunca deve solicitar um anúncio intersticial e daí deixar de mostrar o anúncio que é fornecido para o seu aplicativo. Se você solicitar um anúncio e, em seguida, receber o evento [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx) em resposta à sua solicitação, você deve mostrar o anúncio. Se você estiver implementando sua própria solução de mediação de anúncio com outras redes de publicidade, solicite um anúncio para o controle **InterstitialAd** somente depois que as solicitações para outras redes de publicidade forem malsucedidas.
+* Nunca solicite um anúncio intersticial simplesmente para ter um anúncio de backup para uma sequência de cascata de anúncios. Se você solicitar um anúncio intersticial e, em seguida, receber o evento [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx), o próximo anúncio intersticial mostrado em seu app deve ser o anúncio que está pronto para ser exibido por meio do método [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
 
  
 
@@ -148,6 +148,6 @@ Aqui, nosso objetivo é ajudar você a atingir a elegância. Como você conhece 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

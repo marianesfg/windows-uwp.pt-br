@@ -4,19 +4,17 @@ ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: "Use estes métodos na API de envio da Windows Store para gerenciar envios dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: Gerenciar envios de aplicativo usando a API de envio da Windows Store
 translationtype: Human Translation
-ms.sourcegitcommit: 9b76a11adfab838b21713cb384cdf31eada3286e
-ms.openlocfilehash: 49d60048a0dd5dae3e80abb9fd4e21b8cf7b417e
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: 5c19a05f51a14d9df38e64aac3b741e916fc0524
 
 ---
 
-# Gerenciar envios de aplicativo usando a API de envio da Windows Store
+# <a name="manage-app-submissions-using-the-windows-store-submission-api"></a>Gerenciar envios de aplicativo usando a API de envio da Windows Store
 
 
 Use os métodos a seguir na API de envio da Windows Store para gerenciar envios dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows. Para obter uma introdução à API de envio da Windows Store, incluindo os pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
 >**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
-
->**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de aplicativo no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de período de avaliação, preços e vendas para um envio de aplicativo usando a API de envio da Windows Store. Atualizaremos a API no futuro para apresentar uma nova maneira de acessar informações de preço para envios de aplicativo por meio de programação. Para saber mais, veja a seção [Recurso de preços](#pricing-object).
 
 
 | Método        | URI    | Descrição                                                                 |
@@ -33,7 +31,7 @@ Use os métodos a seguir na API de envio da Windows Store para gerenciar envios 
 | POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout``` | Finaliza a distribuição gradual para um envio de aplicativo. Para obter mais informações, consulte [este artigo](finalize-the-package-rollout-for-an-app-submission.md). |
 
 <span id="create-an-app-submission">
-## Criar um envio de aplicativo
+## <a name="create-an-app-submission"></a>Criar um envio de aplicativo
 
 Para criar um envio de um aplicativo, siga este processo.
 
@@ -41,7 +39,7 @@ Para criar um envio de um aplicativo, siga este processo.
 
   >**Observação**&nbsp;&nbsp;Verifique se o aplicativo já tem pelo menos um envio concluído com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
 
-2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Windows Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Windows Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
 3. [Criar um envio de aplicativo](create-an-app-submission.md) executando o seguinte método na API de envio da Windows Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado.
 
@@ -90,7 +88,7 @@ Para criar um envio de um aplicativo, siga este processo.
 7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar a monitorar o progresso de envio usando o método anterior ou visitando o painel do Centro de Desenvolvimento.
 
 <span id="manage-gradual-package-rollout">
-## Gerencie uma distribuição de pacote gradual para um envio de aplicativo
+## <a name="manage-a-gradual-package-rollout-for-an-app-submission"></a>Gerencie uma distribuição de pacote gradual para um envio de aplicativo
 
 Você pode distribuir gradualmente os pacotes atualizados em um envio de aplicativo para um percentual de clientes do seu aplicativo no Windows 10. Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode alterar a porcentagem de distribuição (ou parar a atualização) para um envio publicado sem precisar criar um novo envio. Para obter mais detalhes, incluindo instruções sobre como habilitar e gerenciar uma distribuição de pacote gradual no painel do Centro de Desenvolvimento, consulte [este artigo](../publish/gradual-package-rollout.md).
 
@@ -134,12 +132,12 @@ Você também pode habilitar e gerenciar uma distribuição de pacote gradual pa
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout
   ```
 
-## Recursos
+## <a name="resources"></a>Recursos
 
 Esses métodos usam os recursos a seguir para formatar dados.
 
 <span id="app-submission-object" />
-### Envio de aplicativo
+### <a name="app-submission"></a>Envio de aplicativo
 
 Esse recurso representa um envio para um aplicativo. O exemplo a seguir demonstra o formato desse recurso.
 
@@ -266,24 +264,24 @@ Este recurso tem os seguintes valores.
 | fileUploadUrl           |   string  | A URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes ou imagens para o envio, carregue o arquivo ZIP que contém os pacotes e imagens para essa URI. Para saber mais, veja [Criar um envio de aplicativo](#create-an-app-submission).       |    
 | applicationPackages           |   array  | Contém objetos que fornecem detalhes sobre cada pacote no envio. Para saber mais, veja a seção [Pacote de aplicativos](#application-package-object) abaixo. |    
 | packageDeliveryOptions    | objeto  | Contém as configurações de distribuição de pacote gradual e de atualização obrigatória para o envio. Para obter mais informações, consulte a seção [Objeto de opções de entrega de pacote](#package-delivery-options-object) abaixo.  |
-| enterpriseLicensing           |  sequência  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
+| enterpriseLicensing           |  string  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
 | allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  booliano   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
-| allowTargetFutureDeviceFamilies           | object   |  Um dicionário de pares de chave e valor, onde cada chave é uma [família de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) e cada valor é um valor booleano que indica se seu aplicativo tem permissão para segmentar a família de dispositivos especificadas.     |    
+| allowTargetFutureDeviceFamilies           | object   |  Um dicionário de pares de chave e valor, onde cada chave é uma [família de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) e cada valor é um valor booliano que indica se seu aplicativo tem permissão para segmentar a família de dispositivos especificadas.     |    
 | friendlyName           |   string  |  O nome amigável do aplicativo, usado para propósitos de exibição.       |  
 
 
 <span id="listing-object" />
-### Listagem
+### <a name="listing"></a>Listagem
 
 Esse recurso contém informações de detalhes de um aplicativo. Este recurso tem os seguintes valores.
 
 | Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
 |  baseListing               |   object      |  As informações de [listagem básica](#base-listing-object) do aplicativo, que definem o padrão de informações de listagem para todas as plataformas.   |     
-|  platformOverrides               | object |   Um dicionário de pares de chave e valor, onde cada chave é a cadeia de caracteres que identifica uma plataforma para a qual substituir as informações de listagem, e cada valor é um objeto de [listagem básica](#base-listing-object) (contendo apenas os valores de descrição ao título) que especifica as informações de listagem a serem substituídas para a plataforma especificada. As chaves podem ter os seguintes valores: <ul><li>Desconhecido</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
+|  platformOverrides               | object |   Um dicionário de pares de chave e valor, onde cada chave é a cadeia de caracteres que identifica uma plataforma para a qual substituir as informações de listagem, e cada valor é um objeto de [listagem básica](#base-listing-object) (contendo apenas os valores de descrição ao título) que especifica as informações de listagem a serem substituídas para a plataforma especificada. As chaves podem ter os seguintes valores: <ul><li>Unknown</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
 
 <span id="base-listing-object" />
-### Listagem básica
+### <a name="base-listing"></a>Listagem básica
 
 Esse recurso contém informações de detalhes básicos de um aplicativo. Este recurso tem os seguintes valores.
 
@@ -304,7 +302,7 @@ Esse recurso contém informações de detalhes básicos de um aplicativo. Este r
 
 
 <span id="image-object" />
-### Imagem
+### <a name="image"></a>Imagem
 
 Esse recurso contém dados de imagem e ícone para uma página de detalhes do aplicativo. Para obter mais informações sobre imagens e ícones para detalhes, consulte [Capturas de tela e imagens do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Este recurso tem os seguintes valores.
 
@@ -314,37 +312,33 @@ Esse recurso contém dados de imagem e ícone para uma página de detalhes do ap
 |  fileStatus               |   string      |  O status do arquivo de imagem. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>   |
 |  id  |  string  | A ID da imagem, conforme especificado pelo Centro de Desenvolvimento.  |
 |  description  |  string  | A descrição da imagem.  |
-|  imageType  |  string  | Uma das seguintes cadeias de caracteres que indica o tipo da imagem: <ul><li>Desconhecido</li><li>Captura de tela</li><li>PromotionalArtwork414X180</li><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>PromotionalArtwork2400X1200</li><li>Ícone</li><li>WideIcon358X173</li><li>BackgroundImage1000X800</li><li>SquareIcon358X358</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul>      |
+|  imageType  |  string  | Uma das seguintes cadeias de caracteres que indica o tipo da imagem: <ul><li>Unknown</li><li>Screenshot</li><li>PromotionalArtwork414X180</li><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>PromotionalArtwork2400X1200</li><li>Ícone</li><li>WideIcon358X173</li><li>BackgroundImage1000X800</li><li>SquareIcon358X358</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul>      |
 
 
 <span id="pricing-object" />
-### Preço
+### <a name="pricing"></a>Preço
 
-Esse recurso contém informações de preço do aplicativo.
-
->**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de aplicativo no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de período de avaliação, preços e vendas para um envio de aplicativo usando a API de envio da Windows Store. Você observará as seguintes alterações no comportamento:
-
-   > * Depois de chamar o [método GET para obter um envio de aplicativo](get-an-app-submission.md), o recurso **Preço** estará vazio. Você pode continuar a usar o painel do Centro de Desenvolvimento para obter os dados de preços de seu envio de aplicativo.
-   > * Ao chamar o [método PUT para atualizar um envio de aplicativo](update-an-app-submission.md), as informações no recurso **Preço** serão ignoradas. Você pode continuar a usar o painel do Centro de Desenvolvimento para modificar os dados de preços de seu envio de aplicativo.
-
-> No futuro, atualizaremos a API de envio da Windows Store para apresentar uma nova maneira de obter e atualizar as informações de preços para envios de aplicativo por meio de programação.
-
-Este recurso tem os seguintes valores.
+Esse recurso contém informações de preço do aplicativo. Este recurso tem os seguintes valores.
 
 | Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
 |-----------------|---------|------|
 |  trialPeriod               |    string     |  Uma cadeia de caracteres que especifica o período de avaliação do aplicativo. Ele pode ter um dos seguintes valores: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
 |  marketSpecificPricings               |    object     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor de *priceId* para o mercado especificado.      |     
-|  sales               |   array      |  Uma matriz de objetos que contêm informações de promoções do aplicativo. Para saber mais, consulte a seção [Promoção](#sale-object) a seguir.    |     
+|  sales               |   array      |  **Preterido**. Uma matriz de objetos que contêm informações de promoções do aplicativo. Para saber mais, consulte a seção [Promoção](#sale-object) a seguir.    |     
 |  priceId               |   string      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) do aplicativo.   |
 
 
 <span id="sale-object" />
-### Promoção
+### <a name="sale"></a>Promoção
 
 Esse recurso contém informações de promoção de um aplicativo.
 
->**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de aplicativo no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Promoção** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de vendas para um envio de aplicativo usando a API de envio da Windows Store. Atualizaremos a API no futuro para apresentar uma nova maneira de acessar informações de vendas para envios de aplicativo por meio de programação. Para saber mais, veja a seção [Recurso de preços](#pricing-object).
+>**Importante**&nbsp;&nbsp;O recurso **Promoção** não tem mais suporte e atualmente não é possível acessar ou modificar os dados de venda para um envio de aplicativo usando a API de envio da Windows Store:
+
+   > * Depois de chamar o [método GET para obter um envio de aplicativo](get-an-app-submission.md), o valor de *sales* estará vazio. Você pode continuar a usar o painel do Centro de Desenvolvimento para obter os dados de venda de seu envio de aplicativo.
+   > * Ao chamar o [método PUT para atualizar um envio de aplicativo](update-an-app-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar a usar o painel do Centro de Desenvolvimento para modificar os dados de venda de seu envio de aplicativo.
+
+> No futuro, atualizaremos a API de envio da Windows Store para apresentar uma nova maneira de acessar programaticamente as informações de vendas para envios de aplicativo.
 
 Este recurso tem os seguintes valores.
 
@@ -358,7 +352,7 @@ Este recurso tem os seguintes valores.
 
 
 <span id="status-details-object" />
-### Detalhes de status
+### <a name="status-details"></a>Detalhes de status
 
 Esse recurso contém detalhes adicionais sobre o status de um envio. Este recurso tem os seguintes valores.
 
@@ -370,7 +364,7 @@ Esse recurso contém detalhes adicionais sobre o status de um envio. Este recurs
 
 
 <span id="status-detail-object" />
-### Detalhes de status
+### <a name="status-detail"></a>Detalhes de status
 
 Esse recurso contém informações adicionais sobre erros ou avisos relatados para um envio. Este recurso tem os seguintes valores.
 
@@ -381,7 +375,7 @@ Esse recurso contém informações adicionais sobre erros ou avisos relatados pa
 
 
 <span id="application-package-object" />
-### Pacote de aplicativo
+### <a name="application-package"></a>Pacote de aplicativo
 
 Esse recurso contém detalhes sobre um pacote do aplicativo para o envio. O exemplo a seguir demonstra o formato desse recurso.
 
@@ -432,7 +426,7 @@ Este recurso tem os seguintes valores.
 <span/>
 
 <span id="certification-report-object" />
-### Relatório de certificação
+### <a name="certification-report"></a>Relatório de certificação
 
 Esse recurso fornece acesso aos dados do relatório de certificação para um envio. Este recurso tem os seguintes valores.
 
@@ -443,7 +437,7 @@ Esse recurso fornece acesso aos dados do relatório de certificação para um en
 
 
 <span id="package-delivery-options-object" />
-### Objeto de opções de entrega de pacote
+### <a name="package-delivery-options-object"></a>Objeto de opções de entrega de pacote
 
 Esse recurso contém configurações de distribuição de pacote gradual e de atualização obrigatória para o envio. O exemplo a seguir demonstra o formato desse recurso.
 
@@ -467,30 +461,30 @@ Este recurso tem os seguintes valores.
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
 | packageRollout   |   objeto      |  Contém as configurações de distribuição de pacote gradual para o envio. Para saber mais, veja a seção [Objeto de distribuição de pacote](#package-rollout-object) abaixo.    |  
-| isMandatoryUpdate    | booleano    |  Indica se você deseja tratar os pacotes nesse envio como obrigatórios para instalar automaticamente as atualizações de aplicativos. Para obter mais informações sobre pacotes obrigatórios para instalar automaticamente as atualizações de aplicativos, consulte [Baixar e instalar atualizações de pacote para seu aplicativo](../packaging/self-install-package-updates.md).    |  
-| mandatoryUpdateEffectiveDate    |  data   |  A data e hora em que os pacotes nesse envio se tornam obrigatórios, no formato ISO 8601 e fuso horário UTC.   |        
+| isMandatoryUpdate    | booliano    |  Indica se você deseja tratar os pacotes nesse envio como obrigatórios para instalar automaticamente as atualizações de aplicativos. Para obter mais informações sobre pacotes obrigatórios para instalar automaticamente as atualizações de aplicativos, consulte [Baixar e instalar atualizações de pacote para seu app](../packaging/self-install-package-updates.md).    |  
+| mandatoryUpdateEffectiveDate    |  date   |  A data e hora em que os pacotes nesse envio se tornam obrigatórios, no formato ISO 8601 e fuso horário UTC.   |        
 
 <span id="package-rollout-object" />
-### Objeto de distribuição de pacote
+### <a name="package-rollout-object"></a>Objeto de distribuição de pacote
 
 Esse recurso contém [configurações de distribuição de pacote](#manage-gradual-package-rollout) gradual para o envio. Este recurso tem os seguintes valores.
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
-| isPackageRollout   |   booleano      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
+| isPackageRollout   |   booliano      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
 | packageRolloutPercentage    | flutuante    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
 | packageRolloutStatus    |  string   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
 | fallbackSubmissionId    |  string   |  A ID do envio que será recebida por clientes que não recebem os pacotes de distribuição gradual.   |          
 
 <span/>
 
-## Enumerações
+## <a name="enums"></a>Enumerações
 
 Esses métodos usam as enumerações a seguir.
 
 
 <span id="price-tiers" />
-### Faixas de preço
+### <a name="price-tiers"></a>Faixas de preço
 
 Os seguintes valores representam as faixas de preço disponíveis para um envio de aplicativo.
 
@@ -503,7 +497,7 @@ Os seguintes valores representam as faixas de preço disponíveis para um envio 
 
 
 <span id="enterprise-licensing" />
-### Valores de licenciamento da empresa
+### <a name="enterprise-licensing-values"></a>Valores de licenciamento da empresa
 
 Os seguintes valores representam o comportamento de licenciamento para empresa do aplicativo. Para obter mais informações sobre essas opções, consulte [Opções de licenciamento organizacional](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
 
@@ -515,7 +509,7 @@ Os seguintes valores representam o comportamento de licenciamento para empresa d
 
 
 <span id="submission-status-code" />
-### Código de status do envio
+### <a name="submission-status-code"></a>Código de status do envio
 
 Os seguintes valores representam o código de status de um envio.
 
@@ -538,7 +532,7 @@ Os seguintes valores representam o código de status de um envio.
 
 <span/>
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obter dados de aplicativo usando a API de envio da Windows Store](get-app-data.md)
@@ -546,6 +540,6 @@ Os seguintes valores representam o código de status de um envio.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -6,12 +6,12 @@ ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
-ms.openlocfilehash: a4f654b286db44d4054be296e76114024616f632
+ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
+ms.openlocfilehash: 8fc2fc007d14bd9c5d08ca4eb7e61a2dfdf04d3b
 
 ---
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-# Enviar uma notificação de bloco local
+# <a name="send-a-local-tile-notification"></a>Enviar uma notificação de bloco local
 
 
 
@@ -25,31 +25,31 @@ Os blocos dos aplicativos primários no Windows 10 são definidos no manifesto d
 
  
 
-## Instalar o pacote NuGet
+## <a name="install-the-nuget-package"></a>Instalar o pacote NuGet
 
 
-Recomendamos instalar o [Pacote NuGet NotificationsExtensions](https://www.nuget.org/packages/NotificationsExtensions.Win10/), que simplifica as coisas gerando cargas de bloco com objetos, em vez de XML bruto.
+Recomendamos instalar o [Pacote NuGet Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/), que simplifica as coisas pois gera cargas de bloco com objetos, em vez de XML bruto.
 
-Os exemplos de código embutido neste artigo são para C# com o pacote NuGet [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) instalado. (Caso prefira criar o próprio XML, você pode encontrar exemplos de código sem [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) ao final do artigo.)
+Os exemplos de código embutido neste artigo são para a linguagem C# usando a biblioteca de notificações. (Caso prefira criar o próprio XML, você pode encontrar exemplos de código sem o uso da biblioteca de notificações ao final do artigo.)
 
-## Adicionar declarações de namespace
+## <a name="add-namespace-declarations"></a>Adicionar declarações de namespace
 
 
-Para acessar as APIs de bloco, inclua o namespace [**Windows.UI.Notifications**](https://msdn.microsoft.com/library/windows/apps/br208661). Também recomendamos incluir o namespace **NotificationsExtensions.Tiles** de maneira que seja possível usufruir nossas APIs auxiliares de bloco (você deve instalar o pacote NuGet [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) para acessar essas APIs).
+Para acessar as APIs de bloco, inclua o namespace [**Windows.UI.Notifications**](https://msdn.microsoft.com/library/windows/apps/br208661). Também recomendamos incluir o namespace **NotificationsExtensions.Tiles** de maneira que seja possível usufruir de nossas APIs auxiliares de bloco (você deve instalar o pacote NuGet [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para acessar essas APIs).
 
-```
+```CSharp
 using Windows.UI.Notifications;
-using NotificationsExtensions.Tiles; // NotificationsExtensions.Win10
+using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 ```
 
-## Criar o conteúdo da notificação
+## <a name="create-the-notification-content"></a>Criar o conteúdo da notificação
 
 
 No Windows 10, as cargas de bloco são definidas usando-se modelos de bloco adaptável, que permitem criar layouts visuais personalizados para as notificações. (Para saber o que é possível com blocos adaptáveis, consulte os artigos [Criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md) e [Modelos de bloco adaptável](tiles-and-notifications-adaptive-tiles-schema.md).)
 
 Este exemplo de código cria conteúdo de bloco adaptável para blocos médios e largos.
 
-```
+```CSharp
 // In a real app, these would be initialized with actual data
 string from = "Jennifer Parker";
 string subject = "Photos from our trip";
@@ -67,48 +67,48 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = from
                     },
- 
-                    new TileText()
+
+                    new AdaptiveText()
                     {
                         Text = subject,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     },
- 
-                    new TileText()
+
+                    new AdaptiveText()
                     {
                         Text = body,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     }
                 }
             }
         },
- 
+
         TileWide = new TileBinding()
         {
             Content = new TileBindingContentAdaptive()
             {
                 Children =
                 {
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = from,
-                        Style = TileTextStyle.Subtitle
+                        HintStyle = AdaptiveTextStyle.Subtitle
                     },
- 
-                    new TileText()
+
+                    new AdaptiveText()
                     {
                         Text = subject,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     },
- 
-                    new TileText()
+
+                    new AdaptiveText()
                     {
                         Text = body,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     }
                 }
             }
@@ -121,33 +121,30 @@ O conteúdo da notificação se parece com o seguinte quando exibido em um bloco
 
 ![conteúdo de notificação em um bloco médio](images/sending-local-tile-02.png)
 
-## Criar a notificação
+## <a name="create-the-notification"></a>Criar a notificação
 
 
-Depois de ter o conteúdo da notificação, você precisará criar um novo [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616). O construtor **TileNotification** utiliza um objeto[**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br208620) do Windows Runtime, que é possível obter no método **TileContent.GetXml** caso você esteja usando [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki).
+Depois de ter o conteúdo da notificação, você precisará criar um novo [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616). O construtor **TileNotification** utiliza um objeto [**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br208620) do Windows Runtime, que você pode obter do método **TileContent.GetXml** caso você esteja usando a [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/).
 
 Este exemplo de código cria uma notificação para um novo bloco.
 
-```
+```CSharp
 // Create the tile notification
 var notification = new TileNotification(content.GetXml());
 ```
 
-## Definir um tempo de expiração para a notificação (opcional)
+## <a name="set-an-expiration-time-for-the-notification-optional"></a>Definir um prazo de expiração para a notificação (opcional)
 
 
-Por padrão, as notificações locais de bloco e selo não expiram, enquanto as notificações por push, periódicas e agendadas expiram após três dias. Como o conteúdo do bloco não deve persistir por mais tempo do que o necessário, é melhor prática definir um tempo de expiração que faça sentido para o aplicativo, especialmente em notificações de bloco e selo locais.
+Por padrão, as notificações locais de bloco e selo não expiram, enquanto as notificações por push, periódicas e agendadas expiram após três dias. Como o conteúdo do bloco não deve persistir por mais tempo do que o necessário, é melhor prática definir um prazo de expiração que faça sentido para o aplicativo, especialmente em notificações de bloco e selo locais.
 
 Este exemplo de código cria uma notificação que expira e será removida do bloco após dez minutos.
 
-```
-tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(10);</code></pre></td>
-</tr>
-</tbody>
-</table>
+```CSharp
+tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(10);
 ```
 
-## Enviar a notificação
+## <a name="send-the-notification"></a>Enviar a notificação
 
 
 Embora o envio local de uma notificação de bloco seja simples, enviar a notificação para um bloco primário ou secundário é um pouco diferente.
@@ -159,13 +156,8 @@ Para enviar uma notificação a um bloco primário, use o [**TileUpdateManager**
 Este exemplo de código envia uma notificação para um bloco primário.
 
 
-```
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-// And send the notification
+```CSharp
+// Send the notification to the primary tile
 TileUpdateManager.CreateTileUpdaterForApplication().Update(notification);
 ```
 
@@ -175,7 +167,7 @@ Para enviar uma notificação para um bloco secundário, primeiro assegure-se de
 
 Este exemplo de código envia uma notificação para um bloco secundário.
 
-```
+```CSharp
 // If the secondary tile is pinned
 if (SecondaryTile.Exists("MySecondaryTile"))
 {
@@ -189,18 +181,15 @@ if (SecondaryTile.Exists("MySecondaryTile"))
 
 ![bloco padrão e bloco com notificação](images/sending-local-tile-01.png)
 
-## Limpar notificações no bloco (opcional)
+## <a name="clear-notifications-on-the-tile-optional"></a>Limpar notificações no bloco (opcional)
 
 
-Na maioria dos casos, você deverá limpar uma notificação assim que o usuário tiver interagido com esse conteúdo. Por exemplo, quando o usuário inicia o aplicativo, convém limpar todas as notificações do bloco. Caso as notificações estejam associadas ao tempo, recomendamos definir um tempo de expiração na notificação, em vez de limpar explicitamente a notificação.
+Na maioria dos casos, você deverá limpar uma notificação assim que o usuário tiver interagido com esse conteúdo. Por exemplo, quando o usuário inicia o aplicativo, convém limpar todas as notificações do bloco. Caso as notificações estejam associadas ao prazo, recomendamos definir um prazo de expiração na notificação, em vez de limpar explicitamente a notificação.
 
-Este exemplo de código limpa a notificação de bloco.
+Este exemplo de código limpa a notificação de bloco para o bloco primário. Você pode fazer o mesmo para os blocos secundários. Basta criar um atualizador de bloco para o bloco secundário.
 
-```
-TileUpdateManager.CreateTileUpdaterForApplication().Clear();</code></pre></td>
-</tr>
-</tbody>
-</table>
+```CSharp
+TileUpdateManager.CreateTileUpdaterForApplication().Clear();
 ```
 
 Em um bloco com a fila de notificação habilitada e notificações na fila, chamar o método Clear esvazia a fila. No entanto, você não pode limpar uma notificação por meio do servidor de aplicativos; somente o código do aplicativo local pode limpar notificações.
@@ -209,7 +198,7 @@ Notificações periódicas ou enviadas por push só podem adicionar novas notifi
 
 ![bloco com notificação e bloco após ser limpo](images/sending-local-tile-03.png)
 
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 
 **Como usar a fila de notificações**
@@ -222,15 +211,10 @@ Este artigo mostra como enviar a atualização do bloco como uma notificação. 
 
 **Método de entrega XmlEncode**
 
-Caso você não esteja usando [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki), esse método de entrega da notificação é outra alternativa.
+Caso você não esteja usando a [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/), esse método de entrega de notificação oferece outra alternativa.
 
 
-```
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
+```CSharp
 public string XmlEncode(string text)
 {
     StringBuilder builder = new StringBuilder();
@@ -243,21 +227,21 @@ public string XmlEncode(string text)
 }
 ```
 
-## Exemplos de código sem NotificationsExtensions
+## <a name="code-examples-without-notifications-library"></a>Exemplos de código sem a Biblioteca de notificações
 
 
-Caso você prefira trabalhar com XML bruto, em vez do pacote NuGet [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki), use esses exemplos de código alternativos para os três primeiros exemplos fornecidos neste artigo. O restante dos exemplos de código podem ser usados com [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) ou com XML bruto.
+Caso você prefira trabalhar com o XML bruto, em vez do pacote NuGet [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/), use esses exemplos de código alternativos para os três primeiros exemplos fornecidos neste artigo. O restante dos exemplos de código podem ser usados com a [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) ou com o XML bruto.
 
 Adicionar declarações de namespace
 
-```
+```CSharp
 using Windows.UI.Notifications;
 using Windows.Data.Xml.Dom;
 ```
 
 Criar o conteúdo da notificação
 
-```
+```CSharp
 // In a real app, these would be initialized with actual data
 string from = "Jennifer Parker";
 string subject = "Photos from our trip";
@@ -272,16 +256,16 @@ string content = $@"
 <tile>
     <visual>
  
-        <binding template=&#39;TileMedium&#39;>
+        <binding template='TileMedium'>
             <text>{from}</text>
-            <text hint-style=&#39;captionSubtle&#39;>{subject}</text>
-            <text hint-style=&#39;captionSubtle&#39;>{body}</text>
+            <text hint-style='captionSubtle'>{subject}</text>
+            <text hint-style='captionSubtle'>{body}</text>
         </binding>
  
-        <binding template=&#39;TileWide&#39;>
-            <text hint-style=&#39;subtitle&#39;>{from}</text>
-            <text hint-style=&#39;captionSubtle&#39;>{subject}</text>
-            <text hint-style=&#39;captionSubtle&#39;>{body}</text>
+        <binding template='TileWide'>
+            <text hint-style='subtitle'>{from}</text>
+            <text hint-style='captionSubtle'>{subject}</text>
+            <text hint-style='captionSubtle'>{body}</text>
         </binding>
  
     </visual>
@@ -290,7 +274,7 @@ string content = $@"
 
 Criar a notificação
 
-```
+```CSharp
 // Load the string into an XmlDocument
 XmlDocument doc = new XmlDocument();
 doc.LoadXml(content);
@@ -299,14 +283,13 @@ doc.LoadXml(content);
 var notification = new TileNotification(doc);
 ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md)
 * [Modelos de blocos adaptáveis: esquema e documentação](tiles-and-notifications-adaptive-tiles-schema.md)
-* [NotificationsExtensions.Win10 (pacote NuGet)](https://www.nuget.org/packages/NotificationsExtensions.Win10/)
-* [NotificationsExtensions em GitHub](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)
-* [Amostra de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-sending-local-tile-win10)
+* [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+* [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-sending-local-tile-win10)
 * [**Namespace Windows.UI.Notifications**](https://msdn.microsoft.com/library/windows/apps/br208661)
 * [Como usar a fila de notificações (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
 * [Entrega de notificações](tiles-and-notifications-choosing-a-notification-delivery-method.md)
@@ -320,6 +303,6 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

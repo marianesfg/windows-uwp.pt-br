@@ -4,22 +4,22 @@ ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrindo uma conta de desenvolvedor
 description: "Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Windows Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta."
 translationtype: Human Translation
-ms.sourcegitcommit: 10446e136d324cd8490f7547f853e75b534368b0
-ms.openlocfilehash: 1f847b9c3302b092dce6eb73dd01f761ec17c0a5
+ms.sourcegitcommit: 323577311d328da6ad1e7bf0a976d3cea099816a
+ms.openlocfilehash: 19096e3f1f94fb4eb98646163c6542a94f8612d4
 
 ---
-# Abrindo uma conta de desenvolvedor
+# <a name="opening-a-developer-account"></a>Abrindo uma conta de desenvolvedor
 
 Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Windows Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta.
 
 > **Observação**  Quando você se inscrever para obter uma conta de desenvolvedor, usaremos o endereço de email que você fornecer nas suas informações de contato para enviar comunicações por email relacionadas à sua conta. Às vezes, isso incluir emails informativos sobre nossos programas. Mesmo que você opte por não receber esses emails informativos, [recusando-os](http://go.microsoft.com/fwlink/p/?LinkId=533280), ainda enviaremos emails transacionais (por exemplo, para que você saiba que seu aplicativo foi aprovado para certificação ou que um pagamento está sendo feito). Esses emails são uma parte fundamental da sua conta e, a menos que você feche sua conta, continuará a receber esses emails transacionais.
 
-## O processo de inscrição de conta
+## <a name="the-account-signup-process"></a>O processo de inscrição de conta
 
 > **Observação**  Em alguns casos, as telas e os campos que você vir ao se registrar para obter uma conta de desenvolvedor podem variar um pouco em relação ao que é destacado a seguir, embora as informações e o processo básicos sejam os mesmos.
 
 1.  Vá para a [página de registro](http://go.microsoft.com/fwlink/p/?LinkId=615100) e clique em **Inscreva-se**.
-2.  Selecione o [país/região](account-types-locations-and-fees.md#account-markets) em que você vive ou onde sua empresa está localizada. Não será possível alterar isso posteriormente.
+2.  Selecione o [país/região](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) em que você vive ou onde sua empresa está localizada. Não será possível alterar isso posteriormente.
 3.  Selecione seu [tipo de conta de desenvolvedor](account-types-locations-and-fees.md) (individual ou empresa). Você não poderá alterar isso depois, por isso, esteja atento para escolher o tipo de conta correto. Para uma conta de empresa, certifique-se de examinar as [diretrizes](#additional-guidelines-for-company-accounts) abaixo.
 4.  Insira as informações de contato que deseja usar para sua conta de desenvolvedor.
 
@@ -45,7 +45,7 @@ Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a
 
 Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas de empresa, o processo demora um pouco mais, pois também precisamos confirmar se você está autorizado a configurar a conta para sua empresa. Essa verificação pode levar desde alguns dias a até várias semanas e normalmente inclui um telefonema para sua empresa. Você pode verificar o status da verificação na página **Configurações da conta**. 
 
-## Diretrizes adicionais para contas da empresa
+## <a name="additional-guidelines-for-company-accounts"></a>Diretrizes adicionais para contas da empresa
 
 Ao criar uma conta da empresa, siga estas diretrizes se mais de uma pessoa precisar acessar a conta fazendo logon com a conta da Microsoft usada para abri-la. 
 
@@ -61,7 +61,7 @@ Ao criar uma conta da empresa, siga estas diretrizes se mais de uma pessoa preci
 
 Preferencialmente, sua conta de desenvolvedor deve ser acessada em computadores confiáveis. Isso é fundamental, já que existe um limite quanto ao número de códigos gerados por conta a cada semana. Além disso, essa é a melhor experiência de logon.
 
-## Segurança da conta do desenvolvedor
+## <a name="developer-account-security"></a>Segurança da conta do desenvolvedor
 
 Usamos as informações de segurança que você forneceu para aumentar o nível de segurança da sua conta de desenvolvedor, associando-a a várias formas de identificação. Isso dificulta bastante o acesso não autorizado à sua conta da Microsoft. Além do mais, se você se esquecer da senha ou se alguém tentar acessar a sua conta, poderemos contatar você para restabelecer o controle adequado de sua conta.
 
@@ -73,7 +73,7 @@ Quando você entra no seu painel do Centro de Desenvolvimento do Windows, o sist
 
 Recomendamos designar os computadores que você usa com frequência como dispositivos confiáveis. Ao entrar em um dispositivo confiável, você normalmente não será solicitado a fornecer um código, embora possa ocasionalmente ser solicitado a fornecer um em situações específicas ou caso não tenha se conectado por meio esse dispositivo há muito tempo. Consulte as [perguntas frequentes sobre dispositivos confiáveis](http://go.microsoft.com/fwlink/p/?LinkID=331123) para saber mais.
 
-## Fechando sua conta
+## <a name="closing-your-account"></a>Fechando sua conta
 
 As contas dos desenvolvedores não expiram, então, não há necessidade de renovar sua conta a fim de mantê-la aberto. Se você decidir fechar sua conta completamente, pode fazê-lo entrando em contato com o suporte.
 
@@ -88,6 +88,6 @@ Quando você fechar sua conta, é importante entender o que acontece com qualque
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

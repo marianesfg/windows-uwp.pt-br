@@ -6,18 +6,18 @@ ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a61c9ce609856ff3addba557558c6bffec504ed7
+ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
+ms.openlocfilehash: 71b1255c25adcb4a99d082ba5e83af60b316abe1
 
 ---
-# Escolher um método de entrega de notificação
+# <a name="choose-a-notification-delivery-method"></a>Escolher um método de entrega de notificação
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Este artigo aborda as quatro opções de notificação - local, agendada, periódica e por push - que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema. Um bloco ou uma notificação do sistema pode obter informações para o usuário mesmo enquanto o usuário não está diretamente envolvido com o aplicativo. A natureza e o conteúdo do aplicativo e as informações que você deseja fornecer podem ajudá-lo a determinar qual método de notificação é melhor para o seu cenário.
 
-## Visão geral de métodos de entrega de notificações
+## <a name="notification-delivery-methods-overview"></a>Visão geral de métodos de entrega de notificações
 
 
 Existem quatro mecanismos que um aplicativo pode usar para entregar uma notificação:
@@ -89,7 +89,7 @@ Esta tabela resume os tipos de entrega de notificação.
 
  
 
-## Notificações locais
+## <a name="local-notifications"></a>Notificações locais
 
 
 Atualizar o bloco ou emblema do aplicativo ou acionar uma notificação do sistema enquanto o aplicativo está sendo executado é o mecanismo mais simples de entrega de notificações. Todo aplicativo possui informações úteis ou interessantes exibidas no bloco, mesmo se esse conteúdo mudar depois que o usuário ativou e interagiu com o aplicativo. As notificações locais são uma boa maneira de manter o bloco do aplicativo atualizado, mesmo se você também usar um dos outros mecanismos de notificação. Por exemplo, um bloco de aplicativo de fotos poderia mostrar as fotos de um álbum adicionado recentemente.
@@ -99,49 +99,51 @@ Recomendamos que seu aplicativo atualize o respectivo bloco localmente na primei
 Embora as chamadas de API sejam locais, as notificações podem fazer referência a imagens da Web. Se a imagem da Web não estiver disponível para download, estiver corrompida ou não atender às especificações da imagem, os blocos e a notificação do sistema responderão de maneira diferente:
 
 -   Blocos: as atualizações não são mostradas
--   Notificação do sistema: a notificação é exibida, mas com uma imagem de espaço reservado
+-   Notificação do sistema: a notificação é exibida, mas sua imagem será removida
 
-Embora as notificações locais não expiram, é uma melhor prática definir um tempo de expiração explícito.
+Por padrão, as notificações do sistema local expiram em três dias e as notificações de bloco local nunca expiram. Recomendamos substituir esses padrões por um prazo de expiração explícito que seja compatível com suas notificações (as notificações do sistema têm um prazo máximo de três dias). 
 
 Para saber mais, consulte estes tópicos:
 
 -   [Enviar uma notificação de bloco local](tiles-and-notifications-sending-a-local-tile-notification.md)
+-   [Enviar uma notificação do sistema local](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/)
 -   [Exemplos de códigos de notificações da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## Notificações agendadas
+## <a name="scheduled-notifications"></a>Notificações agendadas
 
 
-As notificações agendadas estão no subconjunto de notificações locais que pode especificar a hora precisa em que um bloco deve ser atualizado ou em que uma notificação do sistema deve ser mostrada. Notificações agendadas são ideais em situações onde o conteúdo a ser atualizado já é conhecido, como o convite de uma reunião. Se você não tiver conhecimento avançado do conteúdo de notificação, deverá usar uma notificação periódica ou por push.
+As notificações agendadas estão no subconjunto de notificações locais que pode especificar a hora precisa em que um bloco deve ser atualizado ou em que uma notificação do sistema deve ser mostrada. Notificações agendadas são ideais em situações onde o conteúdo a ser atualizado já é conhecido, como o convite de uma reunião. Se você não tiver conhecimento antecipado do conteúdo da notificação, deverá usar uma notificação periódica ou por push.
 
-Por padrão, as notificações agendadas expiram três dias depois que são entregues. Se necessário, você pode substituir esse padrão por um tempo de expiração explícito.
+Observe que as notificações agendadas não podem ser usadas para as notificações de selo; as notificações de selo são melhor veiculadas pelas notificações locais, periódicas ou por push.
+
+Por padrão, as notificações agendadas expiram três dias depois que são entregues. Você pode substituir esse prazo de expiração padrão em notificações de bloco agendada, mas não pode substituir o prazo de expiração em notificações do sistema agendadas.
 
 Para saber mais, consulte estes tópicos:
 
--   [Diretrizes para notificações agendadas](https://msdn.microsoft.com/library/windows/apps/hh761464)
 -   [Exemplos de códigos de notificações da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## Notificações periódicas
+## <a name="periodic-notifications"></a>Notificações periódicas
 
 
 As notificações periódicas fornecem atualizações de bloco com um mínimo serviço na nuvem e investimento do cliente. Eles também são um método excelente para distribuir o mesmo conteúdo para um amplo público-alvo. O código do lado do cliente especifica a URL de um local na nuvem que o Windows sonda para atualizações de bloco ou emblema e especifica a frequência de sondagem do local. Em cada intervalo de sondagem, o Windows contata a URL para baixar o conteúdo XML especificado e exibi-lo no bloco.
 
 As notificações periódicas exigem que o aplicativo hospede um serviço na nuvem e este serviço será sondado no intervalo especificado por todos os usuários que têm o aplicativo instalado. Observe que as atualizações periódicas não podem ser usadas para as notificações do sistema; as notificações do sistema são melhor atendidas pelas notificações agendadas ou por push.
 
-Por padrão, as notificações periódicas expiram três dias depois que a sondagem ocorre. Se necessário, você pode substituir esse padrão por um tempo de expiração explícito.
+Por padrão, as notificações periódicas expiram três dias depois que a sondagem ocorre. Se necessário, você pode substituir esse padrão por um prazo de expiração explícito.
 
 Para saber mais, consulte estes tópicos:
 
 -   [Visão geral de notificações periódicas](tiles-and-notifications-periodic-notification-overview.md)
 -   [Exemplos de códigos de notificações da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## Notificações por push
+## <a name="push-notifications"></a>Notificações por push
 
 
 Notificações por push são ideais para comunicar dados em tempo real ou dados personalizados para o seu usuário. As notificações por push também são usadas para o conteúdo que é gerado em horas imprevisíveis, como notícias da rede social ou mensagens instantâneas. Essas notificações também são úteis nas situações em que os dados são suscetíveis ao tempo de uma maneira que não seria adequada às notificações periódicas, como pontuações de esportes durante um jogo.
 
 As notificações por push exigem um serviço na nuvem que gerenciará os canais de notificação por push e escolherá quando e a quem as notificações serão enviadas.
 
-Por padrão, as notificações por push expiram três dias depois que são recebidas pelo WNS (Serviços de Notificação por Push) do Windows. Se necessário, você pode substituir esse padrão por um tempo de expiração explícito.
+Por padrão, as notificações por push expiram três dias depois que são recebidas pelo dispositivo. Se necessário, você pode substituir esse padrão por um prazo de expiração explícito (as notificações do sistema têm um prazo máximo de três dias).
 
 Para obter mais informações, consulte:
 
@@ -150,12 +152,12 @@ Para obter mais informações, consulte:
 -   [Exemplos de códigos de notificações da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Enviar uma notificação de bloco local](tiles-and-notifications-sending-a-local-tile-notification.md)
+* [Enviar uma notificação do sistema local](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/)
 * [Diretrizes para notificações por push](https://msdn.microsoft.com/library/windows/apps/hh761462)
-* [Diretrizes para notificações agendadas](https://msdn.microsoft.com/library/windows/apps/hh761464)
 * [Diretrizes para notificações do sistema](https://msdn.microsoft.com/library/windows/apps/hh465391)
 * [Visão geral de notificações periódicas](tiles-and-notifications-periodic-notification-overview.md)
 * [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md)
@@ -170,6 +172,6 @@ Para obter mais informações, consulte:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

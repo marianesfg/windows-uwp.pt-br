@@ -3,12 +3,12 @@ author: QuinnRadich
 title: "Escolher uma versão do UWP"
 description: "Ao escrever um aplicativo UWP no Microsoft Visual Studio, você pode escolher para qual versão você o escreverá. Saiba mais sobre a diferença entre as diferentes versões de UWP e como configurar suas escolhas em projetos novos e existentes."
 translationtype: Human Translation
-ms.sourcegitcommit: 04e96e38887116fe71504e7b6cb9a275e4dd30f0
-ms.openlocfilehash: fb03ae3b4f234dc61ec6918df06c15bc3c00df09
+ms.sourcegitcommit: 006b5d01c2474591a81e4d7a83c5735dc0b3d9d8
+ms.openlocfilehash: 5d05c427ecc1ec57856b7c3909be50c3d87daa28
 
 ---
 
-# Escolher uma versão do UWP
+# <a name="choose-a-uwp-version"></a>Escolher uma versão do UWP
 
 Ao escrever um aplicativo UWP no Microsoft Visual Studio, você pode escolher para qual versão você o escreverá. Atualmente, existem apenas três versões possíveis.
 
@@ -20,13 +20,13 @@ Ao escrever um aplicativo UWP no Microsoft Visual Studio, você pode escolher pa
 
 É altamente recomendável que os novos desenvolvedores e aqueles que escrevem o código para o público em geral sempre usem a compilação mais recente do Windows (14393). Os desenvolvedores que criam Aplicativos corporativos devem realmente considerar oferecer suporte a uma **Versão mínima** mais antiga.
 
-## O que está diferente em cada versão do UWP?
+## <a name="whats-different-in-each-uwp-version"></a>O que está diferente em cada versão do UWP?
 
 APIs novas e alteradas para UWP estão disponíveis em todas as versões sucessivas do Windows 10. Para obter informações específicas sobre quais recursos foram adicionados a qual versão, consulte [Novidades para desenvolvedores no Windows 10](../whats-new/windows-10-version-1607.md).
 
-Para tópicos de referência que enumeram todas as famílias de dispositivos e suas versões e todos os contratos de API e suas versões, consulte as [Famílias de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn706137.aspx) e os [Contratos de API](https://msdn.microsoft.com/library/windows/apps/dn706135.aspx).
+Para tópicos de referência que enumeram todas as famílias de dispositivos e suas versões e todos os contratos de API e suas versões, consulte [Famílias de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn706137.aspx) e [Contratos de API](https://msdn.microsoft.com/library/windows/apps/dn706135.aspx).
 
-## Escolha qual versão deve ser usada para o seu aplicativo
+## <a name="choose-which-version-to-use-for-your-app"></a>Escolha qual versão deve ser usada para o seu aplicativo
 
 Na caixa de diálogo **Novo Projeto Universal do Windows** no Visual Studio, você pode escolher uma versão para **Versão de destino** e para **Versão mínima**.
 
@@ -35,12 +35,12 @@ Na caixa de diálogo **Novo Projeto Universal do Windows** no Visual Studio, voc
 
 Lembre-se de que você está declarando que seu aplicativo funciona em qualquer versão do Windows no intervalo de **Versão mínima** até **Versão de destino**. Se as duas forem da mesma versão, então você não precisará fazer nada especial. Se eles forem diferentes, então aqui estão algumas coisas que devem ser lembradas.
 
-* Em seu código, você pode livremente (ou seja, sem verificações de condição) chamar qualquer API que existe na versão especificada pela **Versão mínima**.
-* Certifique-se de testar seu código a **Versão mínima**, certifique-se de que ela funcione sem a necessidade de APIs presentes apenas na **Versão de destino**.
+* Em seu código, você pode livremente (ou seja, sem verificações de condição) chamar qualquer API que exista na versão especificada pela **Versão mínima**.
+* Certifique-se de testar seu código em um dispositivo que executa a **Versão mínima** para ter certeza de que ele funciona sem a necessidade de APIs presentes apenas na **Versão de destino**.
 * O valor de **Versão de destino** é usado para identificar todas as referências (contrato winmds) usadas para compilar seu projeto. Mas essas referências permitirão que você compile o código com chamadas para APIs que não existem necessariamente em dispositivos para os quais você declarou que oferece suporte (via **Versão mínima**). Portanto, qualquer API introduzida após a **Versão mínima** precisará ser chamada por meio do código adaptável. Para obter mais informações sobre o código adaptável, consulte o [Guia para aplicativos UWP (Plataforma Universal do Windows)](../get-started/universal-application-platform-guide.md).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

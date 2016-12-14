@@ -4,14 +4,14 @@ description: "Esta seção explica como compartilhar dados entre aplicativos UWP
 title: "Comunicação de aplicativo para aplicativo"
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 94e1586a73743e8918ef160897b1b22c8c545ea0
-ms.openlocfilehash: 05ac668e0e3c33f6dd9da9f578335bab96c6429c
+ms.sourcegitcommit: ea67ae5b568d1c51af3bb951fe3a68a8def8a556
+ms.openlocfilehash: 951e2ea29a47e362d9fdee0f597d2e7c808212b6
 
 ---
 
-# Comunicação de aplicativo para aplicativo
+# <a name="app-to-app-communication"></a>Comunicação de aplicativo para aplicativo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta seção explica como compartilhar dados entre aplicativos UWP (Plataforma Universal do Windows), incluindo como usar o contrato de Compartilhamento, copiar e colar, e arrastar e soltar.
 
@@ -21,7 +21,7 @@ Um aplicativo pode dar suporte ao recurso Compartilhar de duas maneiras. Uma del
 
 Além do contrato de Compartilhamento, os aplicativos também podem integrar técnicas clássicas para transferência de dados, como arrastar e soltar ou copiar e colar. Além da comunicação entre aplicativos UWP, esses métodos também permitem o compartilhamento de e para aplicativos da área de trabalho.
 
-## Nesta seção
+## <a name="in-this-section"></a>Nesta seção
 
 | Tópico | Descrição |
 |-------|-------------|
@@ -30,11 +30,11 @@ Além do contrato de Compartilhamento, os aplicativos também podem integrar té
 | [Copiar e colar](copy-and-paste.md) | Este artigo explica como dar suporte a copiar e colar em aplicativos UWP usando a área de transferência. Copiar e colar é a maneira clássica de trocar dados entre aplicativos ou dentro de um aplicativo, e quase todos os aplicativos podem suportar operações da área de transferência em algum grau. |
 | [Arrastar e soltar](drag-and-drop.md) | Este artigo explica como adicionar o recurso de arrastar e soltar ao aplicativo UWP. Arrastar e soltar é uma maneira clássica e natural de interagir com conteúdo, como imagens e arquivos. Uma vez implementada, a função arrastar e soltar funciona diretamente em todas as direções, incluindo de aplicativo para aplicativo, de aplicativo para área de trabalho e de área de trabalho para aplicativo. |
 
-## Consulte também
-- [Desenvolver aplicativos UWP](https://developer.microsoft.com/en-us/windows/develop)
+## <a name="see-also"></a>Consulte também
+- [Desenvolver aplicativos UWP](https://developer.microsoft.com/windows/develop)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

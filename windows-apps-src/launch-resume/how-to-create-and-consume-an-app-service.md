@@ -1,32 +1,32 @@
 ---
 author: TylerMSFT
-title: "Criar e consumir um serviço de aplicativo"
+title: "Criar e consumir um serviço de app"
 description: "Saiba como escrever um aplicativo UWP (Plataforma Universal do Windows) que pode fornecer serviços a outros aplicativos UWP e também como consumir esses serviços."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keyword: app to app communication, interprocess communication, IPC, Background messaging, background communication, app to app
+keywords: "comunicação entre apps, comunicação entre processos, IPC, mensagens em segundo plano, comunicação em segundo plano, app para app"
 translationtype: Human Translation
-ms.sourcegitcommit: 8b3ad18a3a0561d344b0d88a529cd929dafd9e4b
-ms.openlocfilehash: c925015e9f74edcb1859ca10279beefc31286b1e
+ms.sourcegitcommit: fadfab2f03d5cfda46d5c9f29c28ad561e6ab2db
+ms.openlocfilehash: 81786f6bf76d1d3840d5cd8c6191550b98a248b2
 
 ---
 
-# Criar e consumir um serviço de aplicativo
+# <a name="create-and-consume-an-app-service"></a>Criar e consumir um serviço de app
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Saiba como escrever um aplicativo UWP (Plataforma Universal do Windows) que pode fornecer serviços a outros aplicativos UWP e também como consumir esses serviços.
 
-A partir do Windows 10, versão 1607, você pode criar serviços de aplicativo que são executados no mesmo processo do aplicativo host. Este artigo se concentra na criação de serviços de aplicativo que são executados em um processo separado em segundo plano. Consulte [Converter um serviço de aplicativo para ser executado no mesmo processo de seu aplicativo host](convert-app-service-in-process.md) para obter mais detalhes sobre os serviços de aplicativo que são executados no mesmo processo do provedor.
+A partir do Windows 10, versão 1607, você pode criar serviços de aplicativo que são executados no mesmo processo do aplicativo host. Este artigo se concentra na criação de serviços de aplicativo que são executados em um processo separado em segundo plano. Consulte [Converter um serviço de app para ser executado no mesmo processo de seu app host](convert-app-service-in-process.md) para obter mais detalhes sobre os serviços de aplicativo que são executados no mesmo processo do provedor.
 
-## Criar um novo projeto de provedor de serviços de aplicativo
+## <a name="create-a-new-app-service-provider-project"></a>Criar um novo projeto de provedor de serviços de aplicativo
 
 Nestas instruções, criaremos tudo em uma única solução por questão de simplicidade.
 
 -   No Microsoft Visual Studio 2015, crie um novo projeto de aplicativo UWP e chame-o de AppServiceProvider. (Na caixa de diálogo **Novo Projeto**, selecione **Modelos &gt; Outros Idiomas &gt; Visual C# &gt; Windows &gt; Universal do Windows &gt; Aplicativo em Branco (Universal do Windows)**). Esse será o aplicativo que fornecerá o serviço de aplicativo.
 
-## Adicionar uma extensão de serviço de aplicativo ao arquivo package.appxmanifest
+## <a name="add-an-app-service-extension-to-packageappxmanifest"></a>Adicionar uma extensão de serviço de aplicativo ao arquivo package.appxmanifest
 
 No arquivo Package.appxmanifest do projeto AppServiceProvider, adicione a extensão AppService a seguir ao elemento **&lt;Application&gt;**. Este exemplo anuncia o serviço `com.Microsoft.Inventory` e é o que identifica esse aplicativo como um provedor de serviços de aplicativo. O serviço real será implementado como uma tarefa em segundo plano. O aplicativo de serviço de aplicativo expõe o serviço a outros aplicativos. Recomendamos usar um estilo de nome de domínio reverso para o nome do serviço.
 
@@ -50,7 +50,7 @@ O atributo **Category** identifica o aplicativo como um provedor de serviços de
 
 O atributo **EntryPoint** identifica a classe que implementa o serviço, que implementaremos a seguir.
 
-## Criar o serviço de aplicativo
+## <a name="create-the-app-service"></a>Criar o serviço de aplicativo
 
 1.  Um serviço de aplicativo é implementado como uma tarefa em segundo plano. Isso permite que um aplicativo em primeiro plano invoque um serviço de aplicativo em outro aplicativo para realizar tarefas em segundo plano. Adicione um novo projeto do componente do Tempo de Execução do Windows à solução (**Arquivo &gt; Adicionar &gt; Novo Projeto**) chamado MyAppService. (Na caixa de diálogo **Adicionar Novo Projeto**, escolha **Instalado &gt; Outros Idiomas &gt; Visual C# &gt; Windows &gt; Universal do Windows &gt; Componente do Tempo de Execução do Windows (Universal do Windows)**
 2.  No projeto AppServiceProvider, adicione uma referência ao projeto MyAppService.
@@ -103,7 +103,7 @@ O atributo **EntryPoint** identifica a classe que implementa o serviço, que imp
 
     **OnTaskCanceled()** é chamado quando a tarefa é cancelada. A tarefa é cancelada quando o aplicativo cliente descarta [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704), o aplicativo cliente é suspenso, o sistema operacional é desligado ou suspenso, ou o sistema operacional está sem recursos para executar a tarefa.
 
-## Escrever o código para o serviço de aplicativo
+## <a name="write-the-code-for-the-app-service"></a>Escrever o código para o serviço de aplicativo
 
 **OnRequestedReceived()** é para onde o código do serviço de aplicativo vai. Substitua o stub **OnRequestedReceived()** em Class1.cs de MyAppService pelo código deste exemplo. Esse código obtém um índice para um item de estoque e passa-o, juntamente com uma sequência de comando, ao serviço para recuperar o nome e o preço do item de estoque especificado. O código de tratamento de erro foi removido por questão de brevidade.
 
@@ -167,14 +167,14 @@ Uma enumeração [**AppServiceClosedStatus**](https://msdn.microsoft.com/library
 
 A chamada para [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722) retorna [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) ao chamador.
 
-## Implantar o aplicativo de serviço e obter o nome da família de pacotes
+## <a name="deploy-the-service-app-and-get-the-package-family-name"></a>Implantar o aplicativo de serviço e obter o nome da família de pacotes
 
 O aplicativo de provedor de serviços de aplicativo deve ser implantado antes de chamá-lo de um cliente. Você também precisará do nome da família de pacotes do aplicativo de serviço de aplicativo para chamá-lo.
 
 -   Uma maneira de obter o nome da família de pacotes do aplicativo de serviço de aplicativo é chamar [**Windows.ApplicationModel.Package.Current.Id.FamilyName**](https://msdn.microsoft.com/library/windows/apps/br224670) a partir do projeto **AppServiceProvider** (por exemplo, de `public App()` em App.xaml.cs) e anotar o resultado. Para executar o AppServiceProvider no Microsoft Visual Studio, defina-o como o projeto de inicialização na janela do Gerenciador de Soluções e execute o projeto.
 -   Outra maneira de obter o nome da família de pacotes é implantar a solução (**Compilar &gt; Implantar solução**) e anotar o nome completo do pacote na janela de saída (**Exibir &gt; Saída**). Você deve remover as informações de plataforma da cadeia de caracteres na janela de saída para derivar o nome do pacote. Por exemplo, se o nome completo do pacote reportado na janela de saída for "9fe3058b-3de0-4e05-bea7-84a06f0ee4f0\_1.0.0.0\_x86\_\_yd7nk54bq29ra", você deve extrair "1.0.0.0\_x86\_\_" deixando "9fe3058b-3de0-4e05-bea7-84a06f0ee4f0\_yd7nk54bq29ra" como o nome da família de pacotes.
 
-## Escrever um cliente para chamar o serviço de aplicativo
+## <a name="write-a-client-to-call-the-app-service"></a>Escrever um cliente para chamar o serviço de aplicativo
 
 1.  Adicione um novo projeto em branco do aplicativo Universal do Windows à solução (**Arquivo &gt; Adicionar &gt; Novo Projeto**) chamado ClientApp. (Na caixa de diálogo **Adicionar Novo Projeto**, escolha **Instalado &gt; Outros idiomas &gt; Visual C# &gt; Windows &gt; Universal do Windows &gt; Aplicativo em Branco (Universal do Windows)**).
 2.  No projeto ClientApp, adicione a seguinte instrução **using** à parte superior de MainPage.xaml.cs:
@@ -262,7 +262,7 @@ Se a chamada de serviço de aplicativo falhar, verifique o seguinte no ClientApp
 2.  Em **button\_Click()**, verifique se o nome do serviço de aplicativo atribuído à conexão do serviço de estoque corresponde ao nome do serviço de aplicativo no arquivo Package.appxmanifest do AppServiceProvider. Veja: `this.inventoryService.AppServiceName = "com.microsoft.inventory";`.
 3.  Certifique-se de que o aplicativo AppServiceProvider foi implantado (No Gerenciador de Soluções, clique com o botão direito do mouse na solução e escolha **Implantar**).
 
-## Depurar o serviço de aplicativo
+## <a name="debug-the-app-service"></a>Depurar o serviço de aplicativo
 
 
 1.  Certifique-se de que toda a solução esteja implantada antes da depuração, pois o aplicativo do provedor de serviços de aplicativo deve estar implantado para que o serviço possa ser chamado. (No Visual Studio, **Compilar &gt; Implantar Solução**).
@@ -272,7 +272,7 @@ Se a chamada de serviço de aplicativo falhar, verifique o seguinte no ClientApp
 5.  Inicie ClientApp no menu Iniciar (não no Visual Studio).
 6.  Insira o número 1 na caixa de texto e pressione o botão. O depurador será interrompido na chamada de serviço de aplicativo no ponto de interrupção no serviço de aplicativo.
 
-## Depurar o cliente
+## <a name="debug-the-client"></a>Depurar o cliente
 
 1.  Siga as instruções na etapa anterior para depurar o serviço de aplicativo.
 2.  Inicie ClientApp no menu Iniciar.
@@ -280,11 +280,11 @@ Se a chamada de serviço de aplicativo falhar, verifique o seguinte no ClientApp
 4.  No projeto ClientApp, defina um ponto de interrupção em **button\_Click()**.
 5.  Os pontos de interrupção no cliente e no serviço de aplicativo agora serão atingidos quando você inserir o número 1 na caixa de texto do ClientApp e clicar no botão.
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Este exemplo fornece uma introdução simples para criar um serviço de aplicativo e chamá-lo a partir de outro aplicativo. Os principais itens a serem observados são a criação de uma tarefa em segundo plano para hospedar o serviço de aplicativo, a adição da extensão windows.appservice ao arquivo Package.appxmanifest do aplicativo de provedor de serviços de aplicativo, obtendo o nome da família de pacotes do aplicativo do provedor de serviços de aplicativo para que possamos conectar a ele a partir do aplicativo cliente, e usando [**Windows.ApplicationModel.AppService.AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704) para chamar o serviço.
 
-## Código completo para MyAppService
+## <a name="full-code-for-myappservice"></a>Código completo para MyAppService
 
 ```cs
 using System;
@@ -373,13 +373,13 @@ namespace MyAppService
 }
 ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
-* [Converter um serviço de aplicativo para ser executado no mesmo processo de seu aplicativo host](convert-app-service-in-process.md)
-* [Dar suporte a seu aplicativo com tarefas em segundo plano](support-your-app-with-background-tasks.md)
+* [Converter um serviço de app para ser executado no mesmo processo de seu app host](convert-app-service-in-process.md)
+* [Dar suporte a seu app com tarefas em segundo plano](support-your-app-with-background-tasks.md)
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 
