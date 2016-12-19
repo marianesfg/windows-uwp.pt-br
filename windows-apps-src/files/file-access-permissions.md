@@ -1,21 +1,21 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: "Permissões de acesso a arquivo"
 description: "Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades."
 translationtype: Human Translation
-ms.sourcegitcommit: ef8d0e7ad9063fa57a9db7c3cbdcb6846d3b1133
-ms.openlocfilehash: e58cdce7f803cd15b66371e3b03c4405cbdeb3ff
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: d6cb8bd32766157b1edf886621bdc605ca160db5
 
 ---
-# Permissões de acesso a arquivo
+# <a name="file-access-permissions"></a>Permissões de acesso a arquivo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades.
 
-## Os locais que todos os aplicativos podem acessar
+## <a name="the-locations-that-all-apps-can-access"></a>Os locais que todos os aplicativos podem acessar
 
 Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais do sistema de arquivos:
 
@@ -106,7 +106,7 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
 
      
 
-## Locais que os aplicativos da Windows Store podem acessar
+## <a name="locations-windows-store-apps-can-access"></a>Locais que os aplicativos da Windows Store podem acessar
 
 -   **Pasta Downloads do usuário.** A pasta em que os arquivos baixados são salvos por padrão.
 
@@ -146,9 +146,9 @@ Ao criar um novo aplicativo, por padrão, você pode acessar os seguintes locais
 
     Se você criar um arquivo ou uma pasta na pasta Downloads, recomendamos adicionar esse item ao [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) do seu aplicativo, para que ele possa acessar prontamente esse item no futuro.
 
-## Acessando locais adicionais
+## <a name="accessing-additional-locations"></a>Acessando locais adicionais
 
-Além dos locais padrão, o aplicativo pode acessar arquivos e pastas adicionais declarando as funcionalidades no manifesto do aplicativo (veja [Declarações de funcionalidades do aplicativo](https://msdn.microsoft.com/library/windows/apps/mt270968)), ou chamando um seletor de arquivos para permitir que o usuário escolha os arquivos e as pastas para o aplicativo acessar (veja [Abrir arquivos e pastas com um seletor](quickstart-using-file-and-folder-pickers.md)).
+Além dos locais padrão, o aplicativo pode acessar arquivos e pastas adicionais declarando as funcionalidades no manifesto do aplicativo (veja [Declarações de funcionalidades do app](https://msdn.microsoft.com/library/windows/apps/mt270968)), ou chamando um seletor de arquivos para permitir que o usuário escolha os arquivos e as pastas para o aplicativo acessar (veja [Abrir arquivos e pastas com um seletor](quickstart-using-file-and-folder-pickers.md)).
 
 A tabela a seguir lista locais adicionais que você pode acessar declarando os recursos e usando a API [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) associada:
 
@@ -165,6 +165,6 @@ A tabela a seguir lista locais adicionais que você pode acessar declarando os r
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

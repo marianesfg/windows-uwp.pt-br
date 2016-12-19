@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: Salvar um arquivo com um seletor
 description: "Use o FileSavePicker para permitir que os usuários especifiquem o nome e o local em que desejam que o aplicativo salve um arquivo."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: 8e65131a913f5ea69438ff986151da11d3126314
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: ae6a9806e982a866834371a60788f7a788b04e47
 
 ---
 
-# Salvar um arquivo com um seletor
+# <a name="save-a-file-with-a-picker"></a>Salvar um arquivo com um seletor
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -26,7 +26,7 @@ Use o [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207
 
  
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 -   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
@@ -37,7 +37,7 @@ Use o [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207
 
     Consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
-## FileSavePicker: passo a passo
+## <a name="filesavepicker-step-by-step"></a>FileSavePicker: passo a passo
 
 
 Use um [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para que os usuários possam especificar o nome, o tipo e o local de salvamento de um arquivo. Crie, personalize e mostre um objeto do seletor de arquivos e, em seguida, salve os dados pelo objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) retornado que representa o arquivo selecionado.
@@ -114,6 +114,6 @@ O exemplo verifica se o arquivo é válido e grava seu próprio nome de arquivo 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

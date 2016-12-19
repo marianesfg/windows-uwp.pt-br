@@ -4,14 +4,14 @@ description: "Este tópico fornece um mapeamento abrangente das APIs do Windows 
 title: Mapeamentos de namespace e de classe do Windows Phone Silverlight para a UWP
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: dcdf17263dadd71572c942bff5e795928e855c03
 
 ---
 
-# Mapeamentos de namespace e de classe do Windows Phone Silverlight para a UWP
+# <a name="windows-phone-silverlight-to-uwp-namespace-and-class-mappings"></a>Mapeamentos de namespace e de classe do Windows Phone Silverlight para a UWP
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico fornece um mapeamento abrangente das APIs do Windows Phone Silverlight para seus equivalentes da UWP (Plataforma Universal do Windows). Geralmente não há um mapeamento de funcionalidade um para um: qualquer plataforma pode ter mais ou menos funcionalidades que suas equivalentes em um namespace ou classe.
 
@@ -62,7 +62,7 @@ Além disso, em um aplicativo do Windows 10, você aproveitará o .NET Native, u
 | (MPU = **Microsoft.Phone.UserData**) <br/> Classe **MPU.Appointments** | Classe [**AppointmentCalendar**](https://msdn.microsoft.com/library/windows/apps/dn596134) |
 | (MPU = **Microsoft.Phone.UserData**) <br/> Classe **MPU.Contacts** | Classe [**ContactStore**](https://msdn.microsoft.com/library/windows/apps/dn624859) |
 | Controles e infraestrutura de interface do usuário | |
-| Classe **ControlTiltEffect.TiltEffect** | As animações da biblioteca de animação do Windows Runtime são incorporadas os estilos padrão dos controles comuns. Consulte [Animação](wpsl-to-uwp-porting-xaml-and-ui.md#animation). |
+| Classe **ControlTiltEffect.TiltEffect** | As animações da biblioteca de animação do Windows Runtime são incorporadas os estilos padrão dos controles comuns. Consulte [Animação](wpsl-to-uwp-porting-xaml-and-ui.md). |
 | Namespace **Microsoft.Phone.Controls** | Namespace [**Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227716) |
 | (MPC = **Microsoft.Phone.Controls**) <br/> Classe **MPC.ContextMenu** | Classe [**PopupMenu**](https://msdn.microsoft.com/library/windows/apps/br208693) |
 | (MPC = **Microsoft.Phone.Controls**) <br/>Classe **MPC.DatePickerPage** | Classe [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) |
@@ -80,7 +80,7 @@ Além disso, em um aplicativo do Windows 10, você aproveitará o .NET Native, u
 | (MPD = **Microsoft.Phone.Data**) <br/>Namespace **MPD.Linq** | Nenhuma equivalência direta | 
 | (MPD = **Microsoft.Phone.Data**) <br/>Namespace **MPD.Linq.Mapping** | Nenhuma equivalência direta |
 | Namespace **Microsoft.Phone.Globalization** | Nenhuma equivalência direta | 
-| (MPI = **Microsoft.Phone.Info**) <br/>Classes **MPI.DeviceExtendedProperties**, **DeviceStatus** | Classes [**EasClientDeviceInformation**](https://msdn.microsoft.com/library/windows/apps/hh701390), [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831). Para obter mais detalhes, consulte [Status do dispositivo](wpsl-to-uwp-input-and-sensors.md#device-status). | 
+| (MPI = **Microsoft.Phone.Info**) <br/>Classes **MPI.DeviceExtendedProperties**, **DeviceStatus** | Classes [**EasClientDeviceInformation**](https://msdn.microsoft.com/library/windows/apps/hh701390), [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831). Para obter mais detalhes, consulte [Status do dispositivo](wpsl-to-uwp-input-and-sensors.md). | 
 | (MPI = **Microsoft.Phone.Info**) <br/>Classe **MPI.MediaCapabilities** | Nenhuma equivalência direta | 
 | (MPI = **Microsoft.Phone.Info**) <br/>Classe **MPI.UserExtendedProperties** | Classe [**AdvertisingManager**](https://msdn.microsoft.com/library/windows/apps/dn363391) | 
 | Namespace **System.Windows** | Namespace [**Windows.UI.Xaml**](https://msdn.microsoft.com/library/windows/apps/br209045) | 
@@ -129,7 +129,7 @@ Além disso, em um aplicativo do Windows 10, você aproveitará o .NET Native, u
 | Classe **Microsoft.Xna.Framework.Media.MediaQueue** | Classe [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) |
 | Classe **Microsoft.Xna.Framework.Media.Playlist** | Classe [**BackgroundMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652527) |
 | Namespace **System.Windows.Media** | Namespace [**Windows.UI.Xaml.Media**](https://msdn.microsoft.com/library/windows/apps/br243045) |
-| Classe **System.Windows.Media.RadialGradientBrush** | Nenhuma equivalência direta. Consulte [Mídia e elementos gráficos](wpsl-to-uwp-porting-xaml-and-ui.md#media). |
+| Classe **System.Windows.Media.RadialGradientBrush** | Nenhuma equivalência direta. Consulte [Mídia e elementos gráficos](wpsl-to-uwp-porting-xaml-and-ui.md). |
 | Namespace **System.Windows.Media.Animation** | Namespace [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/br243232) |
 | Namespace **System.Windows.Media.Effects** | Nenhuma equivalência direta | 
 | Namespace **System.Windows.Media.Imaging** | Namespace [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) |
@@ -249,6 +249,6 @@ O próximo tópico é [Portando o projeto](wpsl-to-uwp-porting-to-a-uwp-project.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

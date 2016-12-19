@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 3604524F-112A-474F-B0CA-0726DC8DB885
 title: Determinando a disponibilidade de arquivos do Microsoft OneDrive
 description: "Determine se um arquivo do Microsoft OneDrive está disponível usando a propriedade StorageFile.IsAvailable."
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 2ed00b525fd2b7af51da00ad0464e37f1cabd889
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 2289b85a8b26e1827446709e1db97c447b3b7964
 
 ---
-# Determinando a disponibilidade de arquivos do Microsoft OneDrive
+# <a name="determining-availability-of-microsoft-onedrive-files"></a>Determinando a disponibilidade de arquivos do Microsoft OneDrive
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 2ed00b525fd2b7af51da00ad0464e37f1cabd889
 
 Determine se um arquivo do Microsoft OneDrive está disponível usando a propriedade [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 -   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
 
@@ -31,7 +31,7 @@ Determine se um arquivo do Microsoft OneDrive está disponível usando a proprie
 
     Consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
-## Usando a propriedade StorageFile.IsAvailable
+## <a name="using-the-storagefileisavailable-property"></a>Usando a propriedade StorageFile.IsAvailable
 
 Os usuários podem marcar os arquivos OneDrive como disponível offline (padrão) ou somente online. Com essa funcionalidade, os usuários podem transferir arquivos grandes (como fotos e vídeos) para o OneDrive, marcá-los como somente online e economizar espaço em disco (a única coisa mantida localmente é um arquivo de metadados).
 
@@ -92,6 +92,6 @@ private async void CheckAvailabilityOfFilesInPicturesLibrary()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

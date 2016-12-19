@@ -3,12 +3,12 @@ author: shawjohn
 Description: "Saiba como criar segmentos de cliente para que você possa segmentar um subconjunto de sua base de clientes para fins promocionais ou de envolvimento."
 title: Criar segmentos de cliente
 translationtype: Human Translation
-ms.sourcegitcommit: c1b97d7ca331bdea101f16d3d59879db30173a0a
-ms.openlocfilehash: 6448c366784344b649084a3aa746a2fc8f21d31d
+ms.sourcegitcommit: eed71b2fc06db71fd105df37a73bd0cd0832931f
+ms.openlocfilehash: 28906c98d2826f5312e01713e2621159c6b24923
 
 ---
 
-# Criar segmentos de cliente
+# <a name="create-customer-segments"></a>Criar segmentos de cliente
 
 Há momentos em que você talvez queira direcionar um subconjunto de sua base de clientes para fins promocionais e de envolvimento. Você pode fazer isso no Centro de Desenvolvimento do Windows com a criação de um tipo de [grupo de clientes](create-customer-groups.md) conhecido como *segmento* que inclui os clientes do Windows 10 que satisfazem os critérios demográficos ou de receita escolhidos.
 
@@ -16,7 +16,7 @@ Por exemplo, você poderia criar um segmento que inclua apenas os clientes que t
 
 > **Dica** Os segmentos podem ser usados para [enviar notificações por push direcionadas](send-push-notifications-to-your-apps-customers.md) a um grupo de clientes como parte de uma campanha de envolvimento.
 
-## Para criar um segmento de cliente
+## <a name="to-create-a-customer-segment"></a>Para criar um segmento de cliente
 
 1.  No [painel do Centro de Desenvolvimento do Windows](https://developer.microsoft.com/dashboard/overview), selecione **Clientes** no menu principal.
 2.  Na página **Grupos de clientes**, siga um destes procedimentos:
@@ -26,7 +26,9 @@ Por exemplo, você poderia criar um segmento que inclua apenas os clientes que t
 4.  Na caixa **Nome do segmento**, escolha um nome para o segmento.
 5.  Na seção **Definir condições de inclusão**, escolha os critérios de filtro para o segmento.
 
-    Por exemplo, se você quiser criar um segmento que inclua somente os clientes do aplicativo com 18 a 24 anos, selecione os critérios de filtro [**Demográfico**] [**Faixa etária**] [**é**] [**18 a 24**] nas listas suspensas.
+    Você pode escolher entre uma variedade de critérios de filtro, incluindo **Fonte de aquisição**, **Aquisições**, **Demografia**, **Classificação**, **Aquisições da Loja**, **Compras na Loja** e **Gasto da Loja**.
+
+    Por exemplo, se você quiser criar um segmento que inclua somente os clientes do app com 18 a 24 anos, selecione os critérios de filtro [**Demografia**] [**Faixa etária**] [**é**] [**18 a 24**] nas listas suspensas.
 
     Você pode criar segmentos mais complexos usando consultas E/OU para incluir ou excluir clientes com base em vários atributos. Para adicionar uma consulta OU, selecione **+ instrução OU**. Para adicionar uma consulta ADICIONAR, selecione **Adicionar outro filtro**.
 
@@ -45,7 +47,7 @@ Observações importantes sobre segmentos de cliente:
 - Os segmentos excluem automaticamente todos os clientes com menos de 17 anos.
 
 
-## Estatísticas de aplicativo
+## <a name="app-statistics"></a>Estatísticas de aplicativo
 
 A seção **Estatísticas de aplicativo** do segmento fornece algumas informações sobre seu aplicativo, bem como o tamanho do segmento que acabou de criar.
 
@@ -58,6 +60,6 @@ Se você exibir os resultados e **Clientes neste segmento** for **Pequeno**, o s
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

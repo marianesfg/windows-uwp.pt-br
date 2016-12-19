@@ -6,12 +6,12 @@ ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
-ms.openlocfilehash: b03ea68ea2a0f66edac81a4c7e2671b2f756aa45
+ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
+ms.openlocfilehash: fc01951adfb151f1c5952d9181492a1d1f88b0cc
 
 ---
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-# Modelos de blocos especiais
+# <a name="special-tile-templates"></a>Modelos de blocos especiais
 
 
 
@@ -19,14 +19,14 @@ ms.openlocfilehash: b03ea68ea2a0f66edac81a4c7e2671b2f756aa45
 
 Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. Cada modelo de bloco especial foi compilado especificamente para o Windows 10, exceto para o modelo de bloco icônico, um modelo especial clássico que foi atualizado para o Windows 10. Este artigo aborda três modelos de blocos especiais: Icônico, Fotos e Pessoas.
 
-## Modelo de bloco icônico
+## <a name="iconic-tile-template"></a>Modelo de bloco icônico
 
 
 O modelo icônico (também conhecido como o modelo "IconWithBadge") permite exibir uma imagem pequena no centro do bloco. O Windows 10 dá suporte ao modelo em telefone e tablet/desktop.
 
 ![blocos de email pequenos e médios](images/iconic-template-mail-2sizes.png)
 
-### Como criar um bloco icônico
+### <a name="how-to-create-an-iconic-tile"></a>Como criar um bloco icônico
 
 As etapas a seguir abrangem tudo o que você precisa saber para criar um bloco icônico para o Windows 10. Em um nível alto, você precisa do ativo de imagem icônico e, em seguida, envia uma notificação para o bloco usando o modelo icônico e, por fim, uma notificação de selo que fornece o número a ser exibido no bloco.
 
@@ -50,7 +50,7 @@ O Windows 10 em tablet, laptop e desktop só dá suporte a ativos de ícone quad
 
 Embora essa etapa possa variar com base na notificação enviada localmente ou por push de servidor, a carga XML que você envia permanece a mesma. Para enviar uma notificação de bloco local, crie um [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628) para o bloco (primário ou secundário) e envie uma notificação para o bloco que usa o modelo de bloco icônico conforme visto abaixo. O ideal é que você também inclua associações para tamanhos de bloco largo e grande usando [modelos de bloco adaptável](tiles-and-notifications-adaptive-tiles-schema.md).
 
-Aqui está o código de amostra da carga XML:
+Aqui está o código de exemplo da carga XML:
 
 ```XML
 <tile>
@@ -74,13 +74,10 @@ Essa carga XML do modelo de bloco icônico usa um elemento de imagem que aponta 
 
 Assim como na Etapa 3, essa etapa pode variar com base na notificação enviada localmente ou por push de servidor, além da carga XML que você envia permanecer a mesma. Para enviar uma notificação de selo local, crie um [**BadgeUpdater**](https://msdn.microsoft.com/library/windows/apps/br208537) para o bloco (primário ou secundário) e envie uma notificação de selo com o valor desejado (ou limpe a notificação).
 
-Aqui está o código de amostra da carga XML:
+Aqui está o código de exemplo da carga XML:
 
 ```XML
-<badge value="2"/></code></pre></td>
-</tr>
-</tbody>
-</table>
+<badge value="2"/>
 ```
 
 A notificação do bloco será atualizada de acordo.
@@ -91,16 +88,16 @@ A imagem a seguir ilustra como as diversas APIs e as cargas estão associadas a 
 
 ![apis e cargas associadas ao modelo de bloco icônico](images/iconic-template-properties-info.png)
 
-## Modelo de bloco de fotos
+## <a name="photos-tile-template"></a>Modelo de bloco de fotos
 
 
 O modelo de bloco de fotos permite exibir uma apresentação de slides de fotos no bloco dinâmico. O modelo é compatível com todos os tamanhos de bloco, inclusive pequeno, e se comporta da mesma maneira em cada tamanho de bloco. O exemplo abaixo mostra cinco quadros de um bloco médio que usa o modelo de fotos. O modelo tem um zoom e uma animação de fading cruzado que percorre as fotos selecionadas e permanece em loop indefinidamente.
 
 ![apresentação de slides de imagens usando o modelo de bloco de fotos](images/photo-tile-template-image01.jpg)
 
-### Como usar o modelo de fotos
+### <a name="how-to-use-the-photos-template"></a>Como usar o modelo de fotos
 
-Usar o modelo de fotos é fácil caso você tenha instalado a [Versão de NotificationExtensions do Windows 10](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx). Embora seja possível usar XML bruto, é altamente recomendável utilizar NotificationExtensions de maneira que você não precisa se preocupar com a geração de XML válido ou conteúdo de escape XML.
+Usar o modelo de fotos é fácil caso você tenha instalado a [Biblioteca notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/). Embora seja possível usar o XML bruto, é altamente recomendável utilizar a biblioteca de maneira que você não precise se preocupar com a geração de XML válido ou conteúdo de escape XML.
 
 O Windows Phone exibe até nove fotos em uma apresentação de slides; tablet, laptop e desktop exibem até 12.
 
@@ -108,16 +105,6 @@ Para obter informações sobre como enviar a notificação de bloco, consulte o 
 
 
 ```XML
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
 <!--
  
 To use the Photos template...
@@ -168,9 +155,9 @@ TileContent content = new TileContent()
             {
                 Images =
                 {
-                    new TileImageSource("Assets/1.jpg"),
-                    new TileImageSource("ms-appdata:///local/Images/2.jpg"),
-                    new TileImageSource("http://msn.com/images/3.jpg")
+                    new TileBasicImage() { Source = "Assets/1.jpg" },
+                    new TileBasicImage() { Source = "ms-appdata:///local/Images/2.jpg" },
+                    new TileBasicImage() { Source = "http://msn.com/images/3.jpg" }
  
                     // TODO: Can have 12 images total
                 }
@@ -182,7 +169,7 @@ TileContent content = new TileContent()
 };
 ```
 
-## Modelo de bloco Pessoas
+## <a name="people-tile-template"></a>Modelo de bloco Pessoas
 
 
 O aplicativo Pessoas no Windows 10 usa um modelo de bloco especial que exibe uma coleção de imagens em círculos que deslizam vertical ou horizontalmente no bloco. Esse modelo de bloco está disponível desde o Windows 10 compilação 10572, e qualquer pessoa pode usá-lo no aplicativo.
@@ -203,15 +190,15 @@ O modelo de bloco Pessoas funciona em blocos destes tamanhos:
 
 **Bloco grande (somente desktop)** (TileLarge)
 
-![bloco Pessoas grande](images/people-tile-large.png)
+![bloco grande Pessoas](images/people-tile-large.png)
 
  
 
-Caso esteja usando [NotificationExtensions](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx), tudo o que você precisa fazer para usar o modelo do bloco Pessoas é criar um novo objeto *TileBindingContentPeople* para o conteúdo *TileBinding*. A classe *TileBindingContentPeople* tem uma propriedade Images em que você adicionar as imagens.
+Caso esteja usando a [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/), tudo o que você precisa fazer para usar o modelo do bloco Pessoas é criar um novo objeto *TileBindingContentPeople* para o conteúdo *TileBinding*. A classe *TileBindingContentPeople* tem uma propriedade Images em que você adicionar as imagens.
 
-Caso você esteja usando XML bruto, defina o *hint-presentation* como "people" e adicione as imagens como filhos do elemento binding.
+Caso você esteja usando XML bruto, defina *hint-presentation* como "people" e adicione as imagens como filhos do elemento binding.
 
-A amostra de código C# pressupõe que você esteja usando [NotificationExtensions](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx).
+O exemplo de código C# pressupõe que você esteja usando a [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/).
 
 ```CSharp
 TileContent content = new TileContent()
@@ -224,15 +211,15 @@ TileContent content = new TileContent()
             {
                 Images =
                 {
-                    new TileImageSource("Assets/ProfilePics/1.jpg"),
-                    new TileImageSource("Assets/ProfilePics/2.jpg"),
-                    new TileImageSource("Assets/ProfilePics/3.jpg"),
-                    new TileImageSource("Assets/ProfilePics/4.jpg"),
-                    new TileImageSource("Assets/ProfilePics/5.jpg"),
-                    new TileImageSource("Assets/ProfilePics/6.jpg"),
-                    new TileImageSource("Assets/ProfilePics/7.jpg"),
-                    new TileImageSource("Assets/ProfilePics/8.jpg"),
-                    new TileImageSource("Assets/ProfilePics/9.jpg")
+                    new TileBasicImage() { Source = "Assets/ProfilePics/1.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/2.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/3.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/4.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/5.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/6.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/7.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/8.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/9.jpg" }
                 }
             }
         }
@@ -244,16 +231,16 @@ TileContent content = new TileContent()
 <tile>
   <visual>
  
-    <binding template=&#39;TileMedium&#39; hint-presentation=&#39;people&#39;>
-      <image src=&#39;Assets/ProfilePics/1.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/2.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/3.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/4.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/5.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/6.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/7.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/8.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/9.jpg&#39;/>
+    <binding template="TileMedium" hint-presentation="people">
+      <image src="Assets/ProfilePics/1.jpg"/>
+      <image src="Assets/ProfilePics/2.jpg"/>
+      <image src="Assets/ProfilePics/3.jpg"/>
+      <image src="Assets/ProfilePics/4.jpg"/>
+      <image src="Assets/ProfilePics/5.jpg"/>
+      <image src="Assets/ProfilePics/6.jpg"/>
+      <image src="Assets/ProfilePics/7.jpg"/>
+      <image src="Assets/ProfilePics/8.jpg"/>
+      <image src="Assets/ProfilePics/9.jpg"/>
     </binding>
  
   </visual>
@@ -270,11 +257,11 @@ Ter esse número de fotos possibilita alguns círculos vazios, o que significa q
 
 Para enviar a notificação, consulte [Escolher um método de entrega de notificação](tiles-and-notifications-choosing-a-notification-delivery-method.md).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Amostra de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-people-tile-template)
-* [NotificationsExtensions em GitHub](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)
+* [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/quickstart-people-tile-template)
+* [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 * [Blocos, selos e notificações](tiles-badges-notifications.md)
 * [Criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md)
 * [Modelos de blocos adaptáveis: esquema e documentação](tiles-and-notifications-adaptive-tiles-schema.md)
@@ -288,6 +275,6 @@ Para enviar a notificação, consulte [Escolher um método de entrega de notific
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

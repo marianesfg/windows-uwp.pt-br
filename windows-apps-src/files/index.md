@@ -1,16 +1,16 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Arquivos, pastas e bibliotecas
 description: "Aprenda como ler e gravar configurações do aplicativo, seletores de pastas e arquivos e sobre locais especiais de área restrita, como a biblioteca de vídeo/música."
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 32c6e33f9506abc1876075f6ca11656241921005
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: e248a0898772f1fde38e312b1cbd24da5b2946a7
 
 ---
- # Arquivos, pastas e bibliotecas
+ # <a name="files-folders-and-libraries"></a>Arquivos, pastas e bibliotecas
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/br227346), [Windows.Storage.Streams](https://msdn.microsoft.com/library/windows/apps/br241791) e [Windows.Storage.Pickers](https://msdn.microsoft.com/library/windows/apps/br207928) para ler e gravar texto e outros formatos de dados em arquivos e gerenciar arquivos e pastas. Nesta seção, você aprenderá também sobre como ler e gravar configurações de aplicativo, sobre seletores de arquivos e pastas e sobre os locais de área restrita especiais, como a biblioteca de vídeos/músicas.
 
@@ -28,7 +28,7 @@ Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/
 | [Acessar o cartão SD](access-the-sd-card.md) | Você pode armazenar e acessar dados não essenciais em um cartão microSD opcional, especialmente em dispositivos móveis de baixo custo que têm armazenamento interno limitado. |
 | [Permissões de acesso a arquivo](file-access-permissions.md) | Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades. |
 
-## Exemplos relacionados
+## <a name="related-samples"></a>Exemplos relacionados
 [Exemplo de enumeração de pasta](http://go.microsoft.com/fwlink/p/?linkid=619993)
 
 [Exemplo de acesso a arquivos](http://go.microsoft.com/fwlink/p/?linkid=619995)
@@ -40,6 +40,6 @@ Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

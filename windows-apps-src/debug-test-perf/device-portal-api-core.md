@@ -4,19 +4,19 @@ ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: "Referência de API central do Device Portal"
 description: "Saiba mais sobre as APIs REST centrais do Windows Device Portal que você pode usar para acessar os dados e controlar seu dispositivo de forma programática."
 translationtype: Human Translation
-ms.sourcegitcommit: fae2c6b31c9c6c07026abc4718959b02a36e6600
-ms.openlocfilehash: 226ecaecd93e4996e438f56f780926ca63c184fd
+ms.sourcegitcommit: b4222774dc4b0f9cdcac871311f5ead69c1e70a9
+ms.openlocfilehash: 3bacb9ac42e157afaed5e9e0e6438654db03ff28
 
 ---
 
-# Referência de API central do Device Portal
+# <a name="device-portal-core-api-reference"></a>Referência de API central do Device Portal
 
 Tudo no Windows Device Portal foi criado com base em APIs REST, que você pode usar para acessar os dados e controlar o dispositivo de forma programática.
 
-## Implantação de aplicativos
+## <a name="app-deployment"></a>Implantação de aplicativos
 
 ---
-### Instalar um aplicativo
+### <a name="install-an-app"></a>Instalar um aplicativo
 
 **Solicitação**
 
@@ -36,7 +36,7 @@ package   | (**necessário**) O nome do arquivo do pacote a ser instalado.
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
@@ -64,7 +64,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter o status de instalação do aplicativo
+### <a name="get-app-installation-status"></a>Obter o status de instalação do aplicativo
 
 **Solicitação**
 
@@ -76,15 +76,15 @@ GET | /api/app/packagemanager/state
 <br />
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -107,7 +107,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Desinstalar um aplicativo
+### <a name="uninstall-an-app"></a>Desinstalar um aplicativo
 
 **Solicitação**
 
@@ -126,11 +126,11 @@ package   | (**necessário**) O PackageFullName (de GET/api/app/packagemanager/p
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -153,7 +153,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter aplicativos instalados
+### <a name="get-installed-apps"></a>Obter aplicativos instalados
 
 **Solicitação**
 
@@ -166,15 +166,15 @@ GET | /api/app/packagemanager/packages
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -222,9 +222,9 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## Gerenciador de dispositivos
+## <a name="device-manager"></a>Gerenciador de dispositivos
 ---
-### Obter os dispositivos instalados no computador
+### <a name="get-the-installed-devices-on-the-machine"></a>Obter os dispositivos instalados no computador
 
 **Solicitação**
 
@@ -237,15 +237,15 @@ GET | /api/devicemanager/devices
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -281,9 +281,9 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## Coleta de despejo
+## <a name="dump-collection"></a>Coleta de despejo
 ---
-### Obter a lista de todos os despejos de memória para aplicativos
+### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Obter a lista de todos os despejos de memória para aplicativos
 
 **Solicitação**
 
@@ -296,15 +296,15 @@ GET | /api/debug/dump/usermode/dumps
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -322,12 +322,13 @@ Código de status HTTP      | Descrição
 <br />
 **Famílias de dispositivos disponíveis**
 
+* Windows Mobile (no Programa Windows Insider)
 * Área de Trabalho do Windows
 * HoloLens
 * IoT
 
 ---
-### Obter configurações da coleta de despejo de memória para um aplicativo
+### <a name="get-the-crash-dump-collection-settings-for-an-app"></a>Obter configurações da coleta de despejo de memória para um app
 
 **Solicitação**
 
@@ -348,11 +349,11 @@ packageFullname   | (**necessário**) O nome completo do pacote para o aplicativ
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -373,12 +374,13 @@ Código de status HTTP      | Descrição
 <br />
 **Famílias de dispositivos disponíveis**
 
+* Windows Mobile (no Programa Windows Insider)
 * Área de Trabalho do Windows
 * HoloLens
 * IoT
 
 ---
-### Excluir um despejo de memória para um aplicativo de sideload
+### <a name="delete-a-crash-dump-for-a-sideloaded-app"></a>Excluir um despejo de memória para um app de sideload
 
 **Solicitação**
 
@@ -400,11 +402,11 @@ fileName   | (**necessário**) O nome do arquivo de despejo que deve ser excluí
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -420,12 +422,13 @@ Código de status HTTP      | Descrição
 <br />
 **Famílias de dispositivos disponíveis**
 
+* Windows Mobile (no Programa Windows Insider)
 * Área de Trabalho do Windows
 * HoloLens
 * IoT
 
 ---
-### Desabilitar despejos de memória para um aplicativo de sideload
+### <a name="disable-crash-dumps-for-a-sideloaded-app"></a>Desabilitar despejos de memória para um app de sideload
 
 **Solicitação**
 
@@ -446,11 +449,11 @@ packageFullname   | (**necessário**) O nome completo do pacote para o aplicativ
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -466,12 +469,13 @@ Código de status HTTP      | Descrição
 <br />
 **Famílias de dispositivos disponíveis**
 
+* Windows Mobile (no Programa Windows Insider)
 * Área de Trabalho do Windows
 * HoloLens
 * IoT
 
 ---
-### Baixar o despejo de memória para um aplicativo de sideload
+### <a name="download-the-crash-dump-for-a-sideloaded-app"></a>Baixar o despejo de memória para um app de sideload
 
 **Solicitação**
 
@@ -493,11 +497,11 @@ fileName   | (**necessário**) O nome do arquivo de despejo que você deseja bai
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -515,12 +519,13 @@ Código de status HTTP      | Descrição
 <br />
 **Famílias de dispositivos disponíveis**
 
+* Windows Mobile (no Programa Windows Insider)
 * Área de Trabalho do Windows
 * HoloLens
 * IoT
 
 ---
-### Habilitar despejos de memória para um aplicativo de sideload
+### <a name="enable-crash-dumps-for-a-sideloaded-app"></a>Habilitar despejos de memória para um app de sideload
 
 **Solicitação**
 
@@ -541,11 +546,11 @@ packageFullname   | (**necessário**) O nome completo do pacote para o aplicativ
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -559,12 +564,13 @@ Código de status HTTP      | Descrição
 <br />
 **Famílias de dispositivos disponíveis**
 
+* Windows Mobile (no Programa Windows Insider)
 * Área de Trabalho do Windows
 * HoloLens
 * IoT
 
 ---
-### Obter a lista de arquivos de verificação de erro
+### <a name="get-the-list-of-bugcheck-files"></a>Obter a lista de arquivos de verificação de erro
 
 **Solicitação**
 
@@ -577,24 +583,24 @@ GET | /api/debug/dump/kernel/dumplist
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
-A resposta inclui uma lista de nomes de arquivos de despejo e os tamanhos desses arquivos. Essa lista estará no formato a seguir. O segundo parâmetro *FileName* é o tamanho do arquivo. Este é um bug conhecido.
+A resposta inclui uma lista de nomes de arquivos de despejo e os tamanhos desses arquivos. Essa lista estará no formato a seguir. 
 ```
 {"DumpFiles": [
     {
         "FileName": string,
-        "FileName": string
+        "FileSize": int
     },...
 ]}
 ```
@@ -613,7 +619,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Baixar um arquivo de despejo de verificação de erro
+### <a name="download-a-bugcheck-dump-file"></a>Baixar um arquivo de despejo de verificação de erro
 
 **Solicitação**
 
@@ -634,11 +640,11 @@ filename   | (**necessário**) O nome do arquivo de despejo de memória. Você p
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -660,7 +666,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter as configurações de controle de falhas de verificação de erro
+### <a name="get-the-bugcheck-crash-control-settings"></a>Obter as configurações de controle de falhas de verificação de erro
 
 **Solicitação**
 
@@ -673,27 +679,37 @@ GET | /api/debug/dump/kernel/crashcontrol
 <br />
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
-A resposta inclui as configurações de controle de falhas. Para saber mais sobre CrashControl, consulte o artigo [CrashControl](https://technet.microsoft.com/library/cc951703.aspx). O modelo da resposta é o seguinte.
+A resposta inclui as configurações de controle de falhas. Para saber mais sobre CrashControl, consulte o artigo [CrashControl](https://technet.microsoft.com/library/cc951703.aspx). O modelo da resposta é como está a seguir.
 ```
 {
-    "autoreboot": int,
-    "dumptype": int,
+    "autoreboot": bool (0 or 1),
+    "dumptype": int (0 to 4),
     "maxdumpcount": int,
-    "overwrite": int
+    "overwrite": bool (0 or 1)
 }
 ```
+
+**Tipos de despejo**
+
+0: desabilitado
+
+1: despejo de memória completo (coleta toda a memória em uso)
+
+2: despejo de memória do kernel (ignora a memória do modo de usuário)
+
+3: minidespejo de kernel limitado
 
 **Código de status**
 
@@ -711,7 +727,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter um despejo de kernel dinâmico
+### <a name="get-a-live-kernel-dump"></a>Obter um despejo de kernel dinâmico
 
 **Solicitação**
 
@@ -724,15 +740,15 @@ GET | /api/debug/dump/livekernel
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -754,7 +770,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter um despejo de um processo de usuário dinâmico
+### <a name="get-a-dump-from-a-live-user-process"></a>Obter um despejo de um processo de usuário dinâmico
 
 **Solicitação**
 
@@ -775,11 +791,11 @@ pid   | (**necessário**) A ID de processo exclusiva do processo no qual você e
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -801,7 +817,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Definir as configurações de controle de falhas de verificação de erro
+### <a name="set-the-bugcheck-crash-control-settings"></a>Definir as configurações de controle de falhas de verificação de erro
 
 **Solicitação**
 
@@ -825,11 +841,11 @@ overwrite   | (**opcional**) True ou false. Isso indica a substituição ou não
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -849,9 +865,9 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## ETW
+## <a name="etw"></a>ETW
 ---
-### Criar uma sessão ETW em tempo real por um Websocket
+### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Criar uma sessão ETW em tempo real por um Websocket
 
 **Solicitação**
 
@@ -864,15 +880,15 @@ GET/WebSocket | /api/etw/session/realtime
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -895,7 +911,7 @@ Código de status HTTP      | Descrição
 * HoloLens
 * IoT
 
-### Comandos do ETW WebSocket
+### <a name="etw-websocket-commands"></a>Comandos do ETW WebSocket
 Esses comandos são enviados do cliente para o servidor.
 
 Comando | Descrição
@@ -945,7 +961,7 @@ Exemplo:
 ```
 
 ---
-### Enumerar os provedores ETW registrados
+### <a name="enumerate-the-registered-etw-providers"></a>Enumerar os provedores ETW registrados
 
 **Solicitação**
 
@@ -958,15 +974,15 @@ GET | /api/etw/providers
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -996,7 +1012,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Enumere os provedores ETW personalizados expostos pela plataforma.
+### <a name="enumerate-the-custom-etw-providers-exposed-by-the-platform"></a>Enumere os provedores ETW personalizados expostos pela plataforma.
 
 **Solicitação**
 
@@ -1009,15 +1025,15 @@ GET | /api/etw/customproviders
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1044,9 +1060,9 @@ GET | /api/etw/customproviders
 * IoT
 
 ---
-## Informações do sistema operacional
+## <a name="os-information"></a>Informações do sistema operacional
 ---
-### Obter o nome do computador
+### <a name="get-the-machine-name"></a>Obter o nome do computador
 
 **Solicitação**
 
@@ -1059,15 +1075,15 @@ GET | /api/os/machinename
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1096,7 +1112,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter as informações do sistema operacional
+### <a name="get-the-operating-system-information"></a>Obter as informações do sistema operacional
 
 **Solicitação**
 
@@ -1109,15 +1125,15 @@ GET | /api/os/info
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1152,7 +1168,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter a família de dispositivos 
+### <a name="get-the-device-family"></a>Obter a família de dispositivos 
 
 **Solicitação**
 
@@ -1165,15 +1181,15 @@ GET | /api/os/devicefamily
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1206,7 +1222,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Definir o nome do computador
+### <a name="set-the-machine-name"></a>Definir o nome do computador
 
 **Solicitação**
 
@@ -1227,11 +1243,11 @@ name | (**necessário**) O novo nome para o computador.
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1252,9 +1268,9 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## Dados de desempenho
+## <a name="performance-data"></a>Dados de desempenho
 ---
-### Obter a lista de processos em execução
+### <a name="get-the-list-of-running-processes"></a>Obter a lista de processos em execução
 
 **Solicitação**
 
@@ -1268,15 +1284,15 @@ GET/WebSocket | /api/resourcemanager/processes
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1315,7 +1331,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter as estatísticas de desempenho do sistema
+### <a name="get-the-system-performance-statistics"></a>Obter as estatísticas de desempenho do sistema
 
 **Solicitação**
 
@@ -1330,15 +1346,15 @@ Isso também pode ser atualizado para uma conexão WebSocket.  Isso fornece os m
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1394,9 +1410,9 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## Energia
+## <a name="power"></a>Energia
 ---
-### Obter o estado atual da bateria
+### <a name="get-the-current-battery-state"></a>Obter o estado atual da bateria
 
 **Solicitação**
 
@@ -1409,15 +1425,15 @@ GET | /api/power/battery
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1447,13 +1463,13 @@ Código de status HTTP      | Descrição
 <br />
 **Famílias de dispositivos disponíveis**
 
+* Windows Mobile
 * Área de Trabalho do Windows
 * HoloLens
 * IoT
-* Dispositivos móveis
 
 ---
-### Obter o esquema de energia ativo
+### <a name="get-the-active-power-scheme"></a>Obter o esquema de energia ativo
 
 **Solicitação**
 
@@ -1466,15 +1482,15 @@ GET | /api/power/activecfg
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1499,7 +1515,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter o subvalor para um esquema de energia
+### <a name="get-the-sub-value-for-a-power-scheme"></a>Obter o subvalor para um esquema de energia
 
 **Solicitação**
 
@@ -1514,11 +1530,11 @@ Opções:
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
@@ -1542,7 +1558,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter o estado de energia do sistema
+### <a name="get-the-power-state-of-the-system"></a>Obter o estado de energia do sistema
 
 **Solicitação**
 
@@ -1555,15 +1571,15 @@ GET | /api/power/state
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1589,7 +1605,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Definir o esquema de energia ativo
+### <a name="set-the-active-power-scheme"></a>Definir o esquema de energia ativo
 
 **Solicitação**
 
@@ -1610,11 +1626,11 @@ scheme | (**necessário**) O GUID do esquema que você deseja definir como o esq
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1634,7 +1650,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Definir o subvalor para um esquema de energia
+### <a name="set-the-sub-value-for-a-power-scheme"></a>Definir o subvalor para um esquema de energia
 
 **Solicitação**
 
@@ -1656,11 +1672,11 @@ valueDC | (**necessário**) O valor a ser usado para energia da bateria.
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1678,7 +1694,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter um relatório de estudo de suspensão
+### <a name="get-a-sleep-study-report"></a>Obter um relatório de estudo de suspensão
 
 **Solicitação**
 
@@ -1695,11 +1711,11 @@ FileName | (**necessário**) O nome completo do arquivo que você deseja baixar.
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1721,7 +1737,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Enumerar os relatórios de estudo de suspensão disponíveis
+### <a name="enumerate-the-available-sleep-study-reports"></a>Enumerar os relatórios de estudo de suspensão disponíveis
 
 **Solicitação**
 
@@ -1734,15 +1750,15 @@ GET | /api/power/sleepstudy/reports
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1772,7 +1788,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter a transformação de estudo de suspensão
+### <a name="get-the-sleep-study-transform"></a>Obter a transformação de estudo de suspensão
 
 **Solicitação**
 
@@ -1785,15 +1801,15 @@ GET | /api/power/sleepstudy/transform
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1815,9 +1831,9 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## Controle remoto
+## <a name="remote-control"></a>Controle remoto
 ---
-### Reiniciar o computador de destino
+### <a name="restart-the-target-computer"></a>Reiniciar o computador de destino
 
 **Solicitação**
 
@@ -1830,15 +1846,15 @@ POST | /api/control/restart
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1859,7 +1875,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Desligar o computador de destino
+### <a name="shut-down-the-target-computer"></a>Desligar o computador de destino
 
 **Solicitação**
 
@@ -1872,15 +1888,15 @@ POST | /api/control/shutdown
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1903,9 +1919,9 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## Gerenciador de tarefas
+## <a name="task-manager"></a>Gerenciador de tarefas
 ---
-### Iniciar um aplicativo moderno
+### <a name="start-a-modern-app"></a>Iniciar um aplicativo moderno
 
 **Solicitação**
 
@@ -1927,11 +1943,11 @@ package   | (**necessário**) O nome completo do pacote do aplicativo que você 
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -1954,7 +1970,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Parar um aplicativo moderno
+### <a name="stop-a-modern-app"></a>Parar um aplicativo moderno
 
 **Solicitação**
 
@@ -1976,11 +1992,11 @@ forcestop   | (**opcional**) Um valor **yes** indica que o sistema deve forçar 
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2003,9 +2019,9 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## Rede
+## <a name="networking"></a>Rede
 ---
-### Obter a configuração de IP atual
+### <a name="get-the-current-ip-configuration"></a>Obter a configuração de IP atual
 
 **Solicitação**
 
@@ -2018,15 +2034,15 @@ GET | /api/networking/ipconfig
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2091,7 +2107,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 --
-### Enumerar as interfaces de rede sem fio
+### <a name="enumerate-wireless-network-interfaces"></a>Enumerar as interfaces de rede sem fio
 
 **Solicitação**
 
@@ -2104,15 +2120,15 @@ GET | /api/wifi/interfaces
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2153,7 +2169,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Enumerar as redes sem fio
+### <a name="enumerate-wireless-networks"></a>Enumerar as redes sem fio
 
 **Solicitação**
 
@@ -2174,11 +2190,11 @@ interface   | (**necessário**) O GUID da interface de rede a ser usado para pro
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2223,7 +2239,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Conectar-se a uma rede Wi-Fi e desconectar-se dela
+### <a name="connect-and-disconnect-to-a-wi-fi-network"></a>Conectar-se a uma rede Wi-Fi e desconectar-se dela
 
 **Solicitação**
 
@@ -2248,11 +2264,11 @@ createprofile | (**necessário**) Crie um perfil de rede no dispositivo.  Isso f
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2273,7 +2289,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Excluir um perfil de Wi-Fi
+### <a name="delete-a-wi-fi-profile"></a>Excluir um perfil de Wi-Fi
 
 **Solicitação**
 
@@ -2295,11 +2311,11 @@ profile   | (**necessário**) O nome do perfil a ser excluído.
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2320,9 +2336,9 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## Relatório de Erros do Windows (WER)
+## <a name="windows-error-reporting-wer"></a>Relatório de Erros do Windows (WER)
 ---
-### Baixar um arquivo de relatório de erros do Windows (WER)
+### <a name="download-a-windows-error-reporting-wer-file"></a>Baixar um arquivo de relatório de erros do Windows (WER)
 
 **Solicitação**
 
@@ -2346,11 +2362,11 @@ file   | (**necessário**) O nome do arquivo a ser baixado do relatório. Isso d
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2373,7 +2389,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Enumerar arquivos em um relatório de erros do Windows (WER)
+### <a name="enumerate-files-in-a-windows-error-reporting-wer-report"></a>Enumerar arquivos em um relatório de erros do Windows (WER)
 
 **Solicitação**
 
@@ -2396,7 +2412,7 @@ name   | (**necessário**) O nome do relatório. Isso deve ser codificado em bas
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
@@ -2428,7 +2444,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Listar os relatórios WER (Relatório de Erros do Windows)
+### <a name="list-the-windows-error-reporting-wer-reports"></a>Listar os relatórios WER (Relatório de Erros do Windows)
 
 **Solicitação**
 
@@ -2441,15 +2457,15 @@ GET | /api/wer/reports
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2486,9 +2502,9 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## Windows Performance Recorder (WPR) 
+## <a name="windows-performance-recorder-wpr"></a>Windows Performance Recorder (WPR) 
 ---
-### Inicie o rastreamento com um perfil personalizado
+### <a name="start-tracing-with-a-custom-profile"></a>Inicie o rastreamento com um perfil personalizado
 
 **Solicitação**
 
@@ -2501,11 +2517,11 @@ POST | /api/wpr/customtrace
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
@@ -2540,7 +2556,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Iniciar uma sessão de rastreamento de desempenho de inicialização
+### <a name="start-a-boot-performance-tracing-session"></a>Iniciar uma sessão de rastreamento de desempenho de inicialização
 
 **Solicitação**
 
@@ -2561,11 +2577,11 @@ profile   | (**necessário**) Esse parâmetro é necessário no início. O nome 
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2596,7 +2612,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Parar uma sessão de rastreamento de desempenho de inicialização
+### <a name="stop-a-boot-performance-tracing-session"></a>Parar uma sessão de rastreamento de desempenho de inicialização
 
 **Solicitação**
 
@@ -2609,19 +2625,19 @@ GET | /api/wpr/boottrace
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
-- Retorna o arquivo de rastreamento ETL.
+-  Nenhuma.  **Observação:** é uma operação de longa execução.  Ela retornará quando ETL terminar de gravar em disco.
 
 **Código de status**
 
@@ -2641,7 +2657,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Iniciar uma sessão de rastreamento de desempenho
+### <a name="start-a-performance-tracing-session"></a>Iniciar uma sessão de rastreamento de desempenho
 
 **Solicitação**
 
@@ -2662,11 +2678,11 @@ profile   | (**necessário**) O nome do perfil que deve iniciar uma sessão de r
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2697,7 +2713,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Parar uma sessão de rastreamento de desempenho
+### <a name="stop-a-performance-tracing-session"></a>Parar uma sessão de rastreamento de desempenho
 
 **Solicitação**
 
@@ -2710,19 +2726,19 @@ GET | /api/wpr/trace
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
-- Nenhum(a).  **Observação:** é uma operação de longa execução.  Ela retornará quando ETL terminar de gravar em disco.  
+- Nenhuma.  **Observação:** é uma operação de longa execução.  Ela retornará quando ETL terminar de gravar em disco.  
 
 **Código de status**
 
@@ -2742,7 +2758,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Recuperar o status de uma sessão de rastreamento
+### <a name="retrieve-the-status-of-a-tracing-session"></a>Recuperar o status de uma sessão de rastreamento
 
 **Solicitação**
 
@@ -2755,15 +2771,15 @@ GET | /api/wpr/status
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2794,7 +2810,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Listar sessões de rastreamento concluídas (ETLs)
+### <a name="list-completed-tracing-sessions-etls"></a>Listar sessões de rastreamento concluídas (ETLs)
 
 **Solicitação**
 
@@ -2807,15 +2823,15 @@ GET | /api/wpr/tracefiles
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2851,7 +2867,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Baixar uma sessão de rastreamento (ETL)
+### <a name="download-a-tracing-session-etl"></a>Baixar uma sessão de rastreamento (ETL)
 
 **Solicitação**
 
@@ -2872,11 +2888,11 @@ filename   | (**obrigatório**) O nome do rastreamento de ETL a ser baixado.  Po
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2900,7 +2916,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Excluir uma sessão de rastreamento (ETL)
+### <a name="delete-a-tracing-session-etl"></a>Excluir uma sessão de rastreamento (ETL)
 
 **Solicitação**
 
@@ -2921,11 +2937,11 @@ filename   | (**obrigatório**) O nome do rastreamento de ETL a ser excluído.  
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -2949,9 +2965,9 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## Marcas de DNS-SD 
+## <a name="dns-sd-tags"></a>Marcas de DNS-SD 
 ---
-### Exibir Marcas
+### <a name="view-tags"></a>Exibir Marcas
 
 **Solicitação**
 
@@ -2964,15 +2980,15 @@ GET | /api/dns-sd/tags
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta** As tags atualmente aplicadas no formato a seguir. 
 ```
@@ -3004,7 +3020,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Excluir Marcas
+### <a name="delete-tags"></a>Excluir Marcas
 
 **Solicitação**
 
@@ -3017,18 +3033,18 @@ DELETE | /api/dns-sd/tags
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
- - Nenhum(a)
+ - Nenhuma
 
 **Código de status**
 
@@ -3049,7 +3065,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Excluir Marca
+### <a name="delete-tag"></a>Excluir Marca
 
 **Solicitação**
 
@@ -3068,14 +3084,14 @@ tagValue | (**obrigatório**) A marca a ser removida.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
- - Nenhum(a)
+ - Nenhuma
 
 **Código de status**
 
@@ -3095,7 +3111,7 @@ Código de status HTTP      | Descrição
 * IoT
  
 ---
-### Adicionar uma Marca
+### <a name="add-a-tag"></a>Adicionar uma Marca
 
 **Solicitação**
 
@@ -3114,14 +3130,14 @@ tagValue | (**obrigatório**) A marca a ser adicionada.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
- - Nenhum(a)
+ - Nenhum
 
 **Código de status**
 
@@ -3141,10 +3157,10 @@ Código de status HTTP      | Descrição
 * HoloLens
 * IoT
 
-## Aplicativo Explorador de Arquivos
+## <a name="app-file-explorer"></a>Aplicativo Explorador de Arquivos
 
 ---
-### Obter pastas conhecidas
+### <a name="get-known-folders"></a>Obter pastas conhecidas
 
 **Solicitação**
 
@@ -3157,15 +3173,15 @@ GET | /api/filesystem/apps/knownfolders
 
 **Parâmetros do URI**
 
-- Nenhum(a)
+- Nenhum
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta** As pastas disponíveis no formato a seguir. 
 ```
@@ -3194,7 +3210,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Obter arquivos
+### <a name="get-files"></a>Obter arquivos
 
 **Solicitação**
 
@@ -3215,11 +3231,11 @@ path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta** As pastas disponíveis no formato a seguir. 
 ```
@@ -3254,7 +3270,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Baixar um arquivo
+### <a name="download-a-file"></a>Baixar um arquivo
 
 **Solicitação**
 
@@ -3275,7 +3291,7 @@ path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
@@ -3302,7 +3318,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Renomear um arquivo
+### <a name="rename-a-file"></a>Renomear um arquivo
 
 **Solicitação**
 
@@ -3325,15 +3341,15 @@ path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
-- Nenhum(a)
+- Nenhuma
 
 **Código de status**
 
@@ -3354,7 +3370,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Excluir um arquivo
+### <a name="delete-a-file"></a>Excluir um arquivo
 
 **Solicitação**
 
@@ -3375,15 +3391,15 @@ path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
-- Nenhum(a) 
+- Nenhuma 
 
 **Código de status**
 
@@ -3404,7 +3420,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-### Carregar um arquivo
+### <a name="upload-a-file"></a>Carregar um arquivo
 
 **Solicitação**
 
@@ -3424,11 +3440,11 @@ path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Resposta**
 
@@ -3451,7 +3467,6 @@ Código de status HTTP      | Descrição
 * IoT
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

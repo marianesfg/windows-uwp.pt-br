@@ -4,12 +4,12 @@ ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Criar um aplicativo Hello, world (XAML)
 description: "Este tutorial ensina a usar XAML (Extensible Application Markup Language) com C# para criar um aplicativo Hello, world simples destinado à UWP (Plataforma Universal do Windows) no Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: 344ffda398c789f82973b5f08a0e3b791fc5ad10
-ms.openlocfilehash: 6cf960781862649588f361b6bfcd87605f3e8d55
+ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
+ms.openlocfilehash: e928b4bb116ad98ffe7c225ac1ef2306e56a13ea
 
 ---
 
-# Criar um aplicativo "Hello, world" (XAML)
+# <a name="create-a-hello-world-app-xaml"></a>Criar um aplicativo "Hello, world" (XAML)
 
 Este tutorial ensina a usar XAML e C# para criar um aplicativo "Hello, world" simples para a Plataforma Universal do Windows (UWP) no Windows 10. Com um único projeto no Microsoft Visual Studio, você pode compilar um aplicativo que seja executado em qualquer dispositivo do Windows 10.
 
@@ -20,7 +20,7 @@ Aqui, você aprenderá a:
 -   Executar o projeto na área de trabalho local e no emulador do telefone no Visual Studio.
 -   Use um SpeechSynthesizer para fazer o aplicativo falar quando você pressiona um botão.
 
-## Antes de começar...
+## <a name="before-you-start"></a>Antes de começar...
 
 -   [O que é um aplicativo Universal do Windows](whats-a-uwp.md)?
 -   [Novidades no Windows 10](https://dev.windows.com/whats-new-windows-10-dev-preview)
@@ -28,13 +28,13 @@ Aqui, você aprenderá a:
 -   Também pressupomos que você esteja usando o layout de janela padrão no Visual Studio. Se você alterar o layout padrão, poderá redefini-lo no menu **Janela** usando o comando **Redefinir Layout da Janela**.
 
 
-## Se, ao invés disso, você preferir assistir a um vídeo...
+## <a name="if-you-would-rather-watch-a-video"></a>Se, ao invés disso, você preferir assistir a um vídeo...
 
 <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Writing-Your-First-Windows-10-App/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
 Se você preferir uma abordagem visual em um guia passo a passo, este vídeo abrangerá o mesmo material, mas com uma trilha sonora agradável.
 
-## Etapa 1: crie um novo projeto no Visual Studio.
+## <a name="step-1-create-a-new-project-in-visual-studio"></a>Etapa 1: crie um novo projeto no Visual Studio.
 
 1.  Inicie o Visual Studio 2015.
 
@@ -59,7 +59,7 @@ Se você preferir uma abordagem visual em um guia passo a passo, este vídeo abr
 Apesar de ser um modelo básico, **Aplicativo em Branco (Universal do Windows)** contém vários arquivos. Esses arquivos são essenciais para todos os aplicativos UWP em C#. Eles fazem parte de todos os projetos criados no Visual Studio.
 
 
-### O que os arquivos incluem?
+### <a name="whats-in-the-files"></a>O que os arquivos incluem?
 
 Para exibir e editar um arquivo no projeto, clique duas vezes no arquivo no **Gerenciador de Soluções**. Expanda um arquivo XAML como se fosse uma pasta para ver o arquivo de código associado. Os arquivos XAML são abertos em um modo divisão que mostra a área de design e o editor de XAML.
 > [!NOTE]
@@ -87,9 +87,9 @@ Para exibir e editar um arquivo no projeto, clique duas vezes no arquivo no **Ge
 -   Assets/StoreLogo.png representa o aplicativo na Windows Store.
 -   Assets/SplashScreen.scale-200.png é a tela inicial que será exibida quando o aplicativo iniciar.
 
-## Etapa 2: adicionando um botão
+## <a name="step-2-adding-a-button"></a>Etapa 2: adicionando um botão
 
-### Usando o modo de exibição de designer
+### <a name="using-the-designer-view"></a>Usando o modo de exibição de designer
 
 Vamos adicionar um botão à nossa página. Neste tutorial, você trabalhará com apenas alguns dos arquivos mencionados anteriormente: App.xaml, MainPage.xaml e MainPage.xaml.cs.
 
@@ -125,14 +125,14 @@ Observe como o botão é exibido nas atualizações de telas de design para exib
 
 ![Janela Gerenciador de soluções](images/win10-cs-07.png)
 
-## Etapa 3: inicie o aplicativo
+## <a name="step-3-start-the-app"></a>Etapa 3: inicie o aplicativo
 
 
 Neste ponto, você criou um aplicativo muito simples. Este é um bom momento para compilar, implantar e iniciar seu aplicativo e verificar sua aparência. Você pode depurar o aplicativo no computador local, em um simulador ou emulador, ou em um dispositivo remoto. Aqui está o menu do dispositivo de destino no Visual Studio.
 
 ![Lista suspensa de destinos de dispositivo para depuração do aplicativo](images/uap-debug.png)
 
-### Inicie o aplicativo em um dispositivo da área de trabalho
+### <a name="start-the-app-on-a-desktop-device"></a>Inicie o aplicativo em um dispositivo da área de trabalho
 
 Por padrão, o aplicativo é executado no computador local. O menu do dispositivo de destino fornece várias opções para depurar seu aplicativo em dispositivos da família de dispositivos da área de trabalho.
 
@@ -175,7 +175,7 @@ Ele ainda não faz muita coisa, mas parabéns! Você criou seu primeiro aplicati
 
    Feche a janela do aplicativo.
 
-### Iniciar o aplicativo em um emulador de dispositivo móvel
+### <a name="start-the-app-on-a-mobile-device-emulator"></a>Iniciar o aplicativo em um emulador de dispositivo móvel
 
 Seu aplicativo é executado em qualquer dispositivo do Windows 10, portanto vamos ver sua aparência em um Windows Phone.
 
@@ -209,7 +209,7 @@ O Visual Studio inicia o emulador selecionado e, em seguida, implanta e inicia o
 Se você tiver um Windows Phone executando o Windows 10, também poderá conectá-lo ao computador e implantar e executar o aplicativo nele diretamente (embora você precisará [habilitar o modo de desenvolvedor](enable-your-device-for-development.md) primeiro).
 
 
-## Etapa 3: manipuladores de eventos
+## <a name="step-3-event-handlers"></a>Etapa 3: manipuladores de eventos
 
 Um "manipulador de eventos" parece complicado, mas é apenas outro nome para o código que é chamado quando ocorre um evento (por exemplo, o usuário clica no botão).
 
@@ -243,20 +243,22 @@ private async void button_Click(object sender, RoutedEventArgs e)
 
 Não deixe de incluir a palavra-chave **async** também ou você receberá um erro ao tentar executar o aplicativo.
 
-### O que acabamos de fazer?
+### <a name="what-did-we-just-do"></a>O que acabamos de fazer?
 
 Esse código usa algumas APIs do Windows para criar um objeto de síntese de fala e concede a ele algum texto a ser dito. (Para obter mais informações sobre como usar SpeechSynthesis, consulte os [documentos de namespace SpeechSynthesis](https://msdn.microsoft.com/library/windows/apps/windows.media.speechsynthesis.aspx).)
 
 Quando você executar o aplicativo e clicar no botão, seu computador (ou telefone) dirá literalmente "Hello, World!".
 
 
-## Resumo
+## <a name="summary"></a>Resumo
 
 
-Parabéns, você criou seu primeiro aplicativo para o Windows 10 e a UWP! Pronto para a [próxima etapa](learn-more.md)?
+Parabéns, você criou seu primeiro app para o Windows 10 e a UWP!
+
+Para saber como usar XAML para dispor os controles que seu app usará, experimente o ([tutorial de grade](../layout/grid-tutorial.md) ou passe diretamente para a [próxima etapa](learn-more.md)?
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,20 +4,18 @@ ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
 description: "Use estes métodos na API de envio da Windows Store para gerenciar envios de complemento dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: Gerenciar envios de complemento usando a API de envio da Windows Store
 translationtype: Human Translation
-ms.sourcegitcommit: 4a1ea50d72e0f754658d8ee99755b873619e1969
-ms.openlocfilehash: 9d19ecae9d5c43c28e887627372aabb58bf0aab2
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: a5e1f8940f53f228808e5a6540759199c4440645
 
 ---
 
-# Gerenciar envios de complemento usando a API de envio da Windows Store
+# <a name="manage-add-on-submissions-using-the-windows-store-submission-api"></a>Gerenciar envios de complemento usando a API de envio da Windows Store
 
 
 
 Use os métodos a seguir na API de envio da Windows Store para gerenciar envios de complemento (também conhecidos como produto no aplicativo ou IAP) de aplicativos que estão registrados na sua conta do Centro de Desenvolvimento do Windows. Para obter uma introdução à API de envio da Windows Store, incluindo os pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
 >**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada. Antes de usar esses métodos para criar ou gerenciar envios de um complemento, o complemento já deve existir na sua conta do Centro de Desenvolvimento. Você pode criar um complemento [usando o painel do Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions) ou usando os métodos da API de envio da Windows Store descritos em [Gerenciar complementos](manage-add-ons.md).
-
->**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de complemento no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de preços e vendas para um envio de complemento usando a API de envio da Windows Store. Atualizaremos a API no futuro para apresentar uma nova maneira de acessar informações de preço para envios de complemento por meio de programação. Para saber mais, veja a seção [Recurso de preços](#pricing-object).
 
 | Método        | URI    | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -29,13 +27,13 @@ Use os métodos a seguir na API de envio da Windows Store para gerenciar envios 
 | DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}``` | Exclui um envio de complemento. Para obter mais informações, consulte [Excluir um envio de complemento](delete-an-add-on-submission.md). |
 
 <span id="create-an-add-on-submission">
-## Criar um envio de complemento
+## <a name="create-an-add-on-submission"></a>Criar um envio de complemento
 
 Para criar um envio de um complemento, siga este processo.
 
 1. Se você ainda não tiver feito isso, conclua os pré-requisitos descritos em [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md), incluindo associar um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows e obter a ID e a chave do cliente. Você só precisa fazer uma vez. Depois que você tiver a ID e a chave do cliente, poderá reutilizá-las sempre que precisar criar um novo token de acesso do Azure AD.  
 
-2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Windows Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Windows Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
 3. Execute o seguinte método na API de envio da Windows Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado. Para saber mais, veja [Criar um envio de complemento](create-an-add-on-submission.md).
 
@@ -83,12 +81,12 @@ Para criar um envio de um complemento, siga este processo.
 
 7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar a monitorar o progresso de envio usando o método anterior ou visitando o painel do Centro de Desenvolvimento.
 
-## Recursos
+## <a name="resources"></a>Recursos
 
 Esses métodos usam os recursos a seguir para formatar dados.
 
 <span id="add-on-submission-object" />
-### Envio de complemento
+### <a name="add-on-submission"></a>Envio de complemento
 
 Esse recurso representa um envio para um complemento. O exemplo a seguir demonstra o formato desse recurso.
 
@@ -123,17 +121,7 @@ Esse recurso representa um envio para um complemento. O exemplo a seguir demonst
       "RU": "Tier3",
       "US": "Tier4",
     },
-    "sales": [
-      {
-         "name": "Sale1",
-         "basePriceId": "Free",
-         "startDate": "2016-05-21T18:40:11.7369008Z",
-         "endDate": "2016-05-22T18:40:11.7369008Z",
-         "marketSpecificPricings": {
-            "RU": "NotAvailable"
-         }
-      }
-    ],
+    "sales": [],
     "priceId": "Free"
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
@@ -185,7 +173,7 @@ Este recurso tem os seguintes valores.
 | friendlyName  | string  |  O nome amigável do complemento, usado para propósitos de exibição.  |
 
 <span id="listing-object" />
-### Listagem
+### <a name="listing"></a>Listagem
 
 Esse recurso contém informações de detalhes de um complemento. Este recurso tem os seguintes valores.
 
@@ -196,7 +184,7 @@ Esse recurso contém informações de detalhes de um complemento. Este recurso t
 |  title               |     string    |   O título da listagem do complemento.   |  
 
 <span id="icon-object" />
-### Ícone
+### <a name="icon"></a>Ícone
 
 Esse recurso contém dados de ícone para a listagem de um complemento. Este recurso tem os seguintes valores.
 
@@ -206,32 +194,28 @@ Esse recurso contém dados de ícone para a listagem de um complemento. Este rec
 |  fileStatus               |   string      |  O status do arquivo de ícone. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>   |
 
 <span id="pricing-object" />
-### Preço
+### <a name="pricing"></a>Preço
 
-Esse recurso contém informações de preço do complemento.
+Esse recurso contém informações de preço do complemento. Este recurso tem os seguintes valores.
 
->**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de complemento no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Preço** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de preço e venda para um envio de complemento usando a API de envio da Windows Store. Você observará as seguintes alterações no comportamento:
-
-   > * Depois de chamar o [método GET para obter um envio de complemento](get-an-add-on-submission.md), o recurso **Preço** estará vazio. Você pode continuar a usar o painel do Centro de Desenvolvimento para obter os dados de preços de seu envio de complemento.
-   > * Ao chamar o [método PUT para atualizar um envio de complemento](update-an-add-on-submission.md), as informações no recurso **Preço** serão ignoradas. Você pode continuar a usar o painel do Centro de Desenvolvimento para modificar os dados de preços de seu envio de complemento.
-
-> No futuro, atualizaremos a API de envio da Windows Store para apresentar uma nova maneira de obter e atualizar as informações de preços para envios de complemento por meio de programação.
-
-Este recurso tem os seguintes valores.
-
-| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descrição               |
 |-----------------|---------|------|
 |  marketSpecificPricings               |    object     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do complemento em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor de *priceId* para o mercado especificado.     |     
-|  sales               |   array      |  Uma matriz de objetos que contêm informações de promoções do complemento. Para saber mais, consulte a seção [Promoção](#sale-object) a seguir.    |     
+|  sales               |   array      |  **Preterido**. Uma matriz de objetos que contêm informações de promoções do complemento. Para saber mais, consulte a seção [Promoção](#sale-object) a seguir.    |     
 |  priceId               |   string      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) do complemento.    |
 
 
 <span id="sale-object" />
-### Promoção
+### <a name="sale"></a>Promoção
 
 Esse recurso contém informações de promoção de um complemento.
 
->**Importante**&nbsp;&nbsp;Em breve, a Microsoft mudará o modelo de dados de preços para envios de complemento no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, o recurso **Promoção** não terá mais suporte, e você não conseguirá temporariamente obter ou modificar os dados de vendas para um envio de complemento usando a API de envio da Windows Store. Atualizaremos a API no futuro para apresentar uma nova maneira de acessar informações de vendas para envios de complemento por meio de programação. Para saber mais, veja a seção [Recurso de preços](#pricing-object).
+>**Importante**&nbsp;&nbsp;O recurso **Promoção** não tem mais suporte e atualmente não é possível acessar ou modificar os dados de venda para um envio de complemento usando a API de envio da Windows Store:
+
+   > * Depois de chamar o [método GET para obter um envio de complemento](get-an-add-on-submission.md), o valor de *sales* estará vazio. Você pode continuar a usar o painel do Centro de Desenvolvimento para obter os dados de venda de seu envio de complemento.
+   > * Ao chamar o [método PUT para atualizar um envio de complemento](update-an-add-on-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar a usar o painel do Centro de Desenvolvimento para modificar os dados de venda de seu envio de complemento.
+
+> No futuro, atualizaremos a API de envio da Windows Store para apresentar uma nova maneira de acessar programaticamente as informações de vendas para envios de complemento.
 
 Este recurso tem os seguintes valores.
 
@@ -246,7 +230,7 @@ Este recurso tem os seguintes valores.
 
 
 <span id="status-details-object" />
-### Detalhes de status
+### <a name="status-details"></a>Detalhes de status
 
 Esse recurso contém detalhes adicionais sobre o status de um envio. Este recurso tem os seguintes valores.
 
@@ -258,7 +242,7 @@ Esse recurso contém detalhes adicionais sobre o status de um envio. Este recurs
 
 
 <span id="status-detail-object" />
-### Detalhes de status
+### <a name="status-detail"></a>Detalhes de status
 
 Esse recurso contém informações adicionais sobre erros ou avisos relatados para um envio. Este recurso tem os seguintes valores.
 
@@ -269,7 +253,7 @@ Esse recurso contém informações adicionais sobre erros ou avisos relatados pa
 
 
 <span id="certification-report-object" />
-### Relatório de certificação
+### <a name="certification-report"></a>Relatório de certificação
 
 Esse recurso fornece acesso aos dados do relatório de certificação para um envio. Este recurso tem os seguintes valores.
 
@@ -280,13 +264,13 @@ Esse recurso fornece acesso aos dados do relatório de certificação para um en
 
 
 
-## Enumerações
+## <a name="enums"></a>Enumerações
 
 Esses métodos usam as enumerações a seguir.
 
 
 <span id="price-tiers" />
-### Faixas de preço
+### <a name="price-tiers"></a>Faixas de preço
 
 Os seguintes valores representam as faixas de preço disponíveis para um envio de complemento.
 
@@ -299,7 +283,7 @@ Os seguintes valores representam as faixas de preço disponíveis para um envio 
 
 
 <span id="submission-status-code" />
-### Código de status do envio
+### <a name="submission-status-code"></a>Código de status do envio
 
 Os seguintes valores representam o código de status de um envio.
 
@@ -322,7 +306,7 @@ Os seguintes valores representam o código de status de um envio.
 
 <span/>
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Gerenciar complementos usando a API de envio da Windows Store](manage-add-ons.md)
@@ -330,6 +314,6 @@ Os seguintes valores representam o código de status de um envio.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

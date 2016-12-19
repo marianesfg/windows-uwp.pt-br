@@ -4,31 +4,33 @@ ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
 description: "Cada transação da Windows Store que resulta em uma compra do produto bem-sucedida, pode retornar, opcionalmente, um recibo da transação."
 title: Usar recibos para verificar compras de produtos
 translationtype: Human Translation
-ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
-ms.openlocfilehash: ea79a33a52bc45a9c8609e12bfac953c3f92db09
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 55631d364ca6f2d76d214eca6d00fbdd969c0e15
 
 ---
 
-# Usar recibos para verificar compras de produtos
+# <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para verificar compras de produtos
 
 
->**Observação**&nbsp;&nbsp;Os exemplos neste artigo usam membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se o aplicativo segmenta Windows 10, versão 1607, ou posterior, recomendamos usar membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar compras realizadas em aplicativo, em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
+>**Observação**&nbsp;&nbsp;Este artigo mostra como usar os membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para obter e validar um recibo de uma compra realizada em aplicativo. Se você estiver usando o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) alternativo para realizar compras em aplicativo (introduzido no Windows 10, versão 1607), esse namespace não fornecerá uma API para a obtenção de recibos de compra realizada em aplicativo. No entanto, você pode usar um método REST na API de coleção da Windows Store para obter dados de uma transação de compra. Para obter mais informações, consulte [Recibos para compras realizadas em aplicativo](in-app-purchases-and-trials.md#receipts).
 
-**APIs Importantes**
-
--   [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)
--   [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)
 
 Cada transação da Windows Store que resulta em uma compra do produto bem-sucedida, pode retornar, opcionalmente, um recibo da transação. Esse recibo fornece informações sobre o produto listado e o custo monetário ao cliente.
 
-Ter acesso a essas informações dá suporte a cenários nos quais seu aplicativo precisa confirmar que um usuário adquiriu seu aplicativo ou fez compras de produto no aplicativo da Windows Store. Por exemplo, imagine um jogo que oferece conteúdo para download. Se o usuário que comprou o conteúdo do jogo desejar jogar em outro dispositivo, será necessário verificar se ele de fato comprou o conteúdo. Veja aqui como fazer isso.
+Ter acesso a essas informações dá suporte a cenários nos quais seu app precisa confirmar que um usuário adquiriu seu app ou fez compras de complemento da Windows Store. Por exemplo, imagine um jogo que oferece conteúdo para download. Se o usuário que comprou o conteúdo do jogo desejar jogar em outro dispositivo, será necessário verificar se ele de fato comprou o conteúdo. Veja aqui como fazer isso.
 
-## Solicitando um recibo
+## <a name="requesting-a-receipt"></a>Solicitando um recibo
 
 
-O namespace **Windows.ApplicationModel.Store** oferece duas maneiras de obter um recibo: usando o método [**CurrentApp.RequestProductPurchaseAsync | requestProductPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/dn263381) ou [**CurrentApp.RequestAppPurchaseAsync | requestAppPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/hh967813) e o parâmetro *includeReceipt*, ou chamando o método [**CurrentApp.GetAppReceiptAsync | getAppReceiptAsync**](https://msdn.microsoft.com/library/windows/apps/hh967811). Um recibo de aplicativo tem a seguinte aparência:
+O namespace **Windows.ApplicationModel.Store** dá suporte a várias maneiras de obter um recibo:
 
-```XML
+* Quando você fizer uma compra usando [CurrentApp.RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) ou [CurrentApp.RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh779780.aspx) (ou uma das sobrecargas desse método), o valor de retorno conterá a nota fiscal.
+* Você pode chamar o método [CurrentApp.GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) para recuperar as informações do recibo atuais para seu app e os complementos em seu app.
+
+Um recibo de app tem a seguinte aparência:
+
+> [!div class="tabbedCodeSnippets"]
+```xml
 <Receipt Version="1.0" ReceiptDate="2012-08-30T23:10:05Z" CertificateId="b809e47cd0110a4db043b3f73e83acd917fe1336" ReceiptDeviceId="4e362949-acc3-fe3a-e71b-89893eb4f528">
     <AppReceipt Id="8ffa256d-eca8-712a-7cf8-cbf5522df24b" AppId="55428GreenlakeApps.CurrentAppSimulatorEventTest_z7q3q7z11crfr" PurchaseDate="2012-06-04T23:07:24Z" LicenseType="Full" />
     <ProductReceipt Id="6bbf4366-6fb2-8be8-7947-92fd5f683530" ProductId="Product1" PurchaseDate="2012-08-30T23:08:52Z" ExpirationDate="2012-09-02T23:08:49Z" ProductType="Durable" AppId="55428GreenlakeApps.CurrentAppSimulatorEventTest_z7q3q7z11crfr" />
@@ -51,7 +53,8 @@ O namespace **Windows.ApplicationModel.Store** oferece duas maneiras de obter um
 
 Um recibo de produto tem a seguinte aparência:
 
-```XML
+> [!div class="tabbedCodeSnippets"]
+```xml
 <Receipt Version="1.0" ReceiptDate="2012-08-30T23:08:52Z" CertificateId="b809e47cd0110a4db043b3f73e83acd917fe1336" ReceiptDeviceId="4e362949-acc3-fe3a-e71b-89893eb4f528">
     <ProductReceipt Id="6bbf4366-6fb2-8be8-7947-92fd5f683530" ProductId="Product1" PurchaseDate="2012-08-30T23:08:52Z" ExpirationDate="2012-09-02T23:08:49Z" ProductType="Durable" AppId="55428GreenlakeApps.CurrentAppSimulatorEventTest_z7q3q7z11crfr" />
     <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
@@ -71,168 +74,69 @@ Um recibo de produto tem a seguinte aparência:
 </Receipt>
 ```
 
-Você pode usar qualquer um desses exemplos de recibo para testar seu código de validação.
+Você pode usar qualquer um desses exemplos de recibo para testar seu código de validação. Para obter mais informações sobre o conteúdo do recebimento, consulte o [descrições de atributo e elemento](#receipt-descriptions).
 
-## Validando um recibo
+## <a name="validating-a-receipt"></a>Validando um recibo
 
+Para validar a autenticidade do recibo, você precisa de seu sistema back-end (um serviço web ou algo semelhante) para verificar a assinatura do recibo usando o certificado público. Para obter esse certificado, use a URL ```https://go.microsoft.com/fwlink/p/?linkid=246509&cid=CertificateId```, onde ```CertificateId``` é o valor **CertificateId** no recibo.
 
-Depois que você obter o recibo, precisará que seu sistema back-end (um serviço Web ou algo semelhante) o valide. Veja a seguir um exemplo do processo de validação do .NET Framework.
+Veja aqui um exemplo desse processo de validação. Esse código é executado em um app de console do .NET Framework que inclui uma referência ao assembly **System. Security**.
 
-```CSharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Xml;
-using System.IO;
-using System.Security.Cryptography.Xml;
-using System.Net;
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
 
-namespace ReceiptVerificationSample
-{
-        public sealed class RSAPKCS1SHA256SignatureDescription : SignatureDescription
-        {
-            public RSAPKCS1SHA256SignatureDescription()
-            {
-                base.KeyAlgorithm = typeof(RSACryptoServiceProvider).FullName;
-                base.DigestAlgorithm = typeof(SHA256Managed).FullName;
-                base.FormatterAlgorithm = typeof(RSAPKCS1SignatureFormatter).FullName;
-                base.DeformatterAlgorithm = typeof(RSAPKCS1SignatureDeformatter).FullName;
-            }
+<span id="receipt-descriptions" />
+## <a name="element-and-attribute-descriptions-for-a-receipt"></a>Descrições de atributo e elemento para um recibo
 
-            public override AsymmetricSignatureDeformatter CreateDeformatter(AsymmetricAlgorithm key)
-            {
-                if (key == null)
-                {
-                    throw new ArgumentNullException("key");
-                }
+Esta seção descreve os elementos e atributos em um recibo.
 
-                RSAPKCS1SignatureDeformatter deformatter = new RSAPKCS1SignatureDeformatter(key);
-                deformatter.SetHashAlgorithm("SHA256");
-                return deformatter;
-            }
+### <a name="receipt-element"></a>Elemento de recibo
 
-            public override AsymmetricSignatureFormatter CreateFormatter(AsymmetricAlgorithm key)
-            {
-                if (key == null)
-                {
-                    throw new ArgumentNullException("key");
-                }
+O elemento raiz desse arquivo é o elemento **Receipt**, que contém informações sobre apps e compras realizadas em aplicativo. Este elemento contém os elementos filho a seguir.
 
-                RSAPKCS1SignatureFormatter formatter = new RSAPKCS1SignatureFormatter(key);
-                formatter.SetHashAlgorithm("SHA256");
-                return formatter;
-            }
+|  Elemento  |  Obrigatório  |  Quantidade  |  Descrição   |
+|-------------|------------|--------|--------|
+|  [AppReceipt](#appreceipt)  |    Não        |  0 ou 1  |  Contém informações de compra para o app atual.            |
+|  [ProductReceipt](#productreceipt)  |     Não       |  0 ou mais    |   Contém informações sobre uma compra realizada em aplicativo para o app atual.     |
+|  Assinatura  |      Sim      |  1   |   Esse elemento é um padrão [constructo XML-DSIG](http://go.microsoft.com/fwlink/p/?linkid=251093). Ele contém um elemento **SignatureValue**, que contém a assinatura que você pode usar para validar o recebimento, e um elemento **SignedInfo**.      |
 
-        }
+**Receipt** tem os atributos a seguir.
 
-        class Program
-        {
+|  Atributo  |  Descrição   |
+|-------------|-------------------|
+|  **Versão**  |    O número de versão do recibo.            |
+|  **CertificateId**  |     A impressão digital do certificado usado para assinar o recibo.          |
+|  **ReceiptDate**  |    A data do recibo foi assinado e baixado.           |  
+|  **ReceiptDeviceId**  |   Identifica o dispositivo usado para solicitar o recibo.         |  |
 
-            // Utility function to read the bytes from an HTTP response
-            private static int ReadResponseBytes(byte[] responseBuffer, Stream resStream)
-            {
-                int count = 0;
+<span id="appreceipt" />
+### <a name="appreceipt-element"></a>Elemento AppReceipt
 
-                int numBytesRead = 0;
-                int numBytesToRead = responseBuffer.Length;
+Este elemento contém informações de compra para o app atual.
 
-                do
-                {
-                    count = resStream.Read(responseBuffer, numBytesRead, numBytesToRead);
+**AppReceipt** tem os atributos a seguir.
 
-                    numBytesRead += count;
-                    numBytesToRead -= count;
+|  Atributo  |  Descrição   |
+|-------------|-------------------|
+|  **Id**  |    Identifica a compra.           |
+|  **AppId**  |     O valor do Nome da Família de Pacotes que o sistema operacional usa para o app.           |
+|  **LicenseType**  |    **Full**, se o usuário tiver adquirido a versão completa do app. **Trial**, se o usuário baixou uma versão de avaliação do app.           |  
+|  **PurchaseDate**  |    A data de aquisição do app.          |  |
 
-                } while (count > 0);
+<span id="productreceipt" />
+### <a name="productreceipt-element"></a>Elemento ProductReceipt
 
-                return numBytesRead;
-            }
+Esse elemento contém informações sobre uma compra realizada em aplicativo para o app atual.
 
-            public static X509Certificate2 RetrieveCertificate(string certificateId)
-            {
-                const int MaxCertificateSize = 10000;
+**ProductReceipt** tem os atributos a seguir.
 
-                // We are attempting to retrieve the following url. The getAppReceiptAsync website at
-                // http://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.getappreceiptasync.aspx
-                // lists the following format for the certificate url.
-                String certificateUrl = String.Format("https://go.microsoft.com/fwlink/?LinkId=246509&cid={0}", certificateId);
-
-                // Make an HTTP GET request for the certificate
-                HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(certificateUrl);
-                request.Method = "GET";
-
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-                // Retrieve the certificate out of the response stream
-                byte[] responseBuffer = new byte[MaxCertificateSize];
-                Stream resStream = response.GetResponseStream();
-                int bytesRead = ReadResponseBytes(responseBuffer, resStream);
-
-                if (bytesRead < 1)
-                {
-                    //TODO: Handle error here
-                }
-
-                return new X509Certificate2(responseBuffer);
-            }
-
-            static bool ValidateXml(XmlDocument receipt, X509Certificate2 certificate)
-            {
-                // Create the signed XML object.
-                SignedXml sxml = new SignedXml(receipt);
-
-                // Get the XML Signature node and load it into the signed XML object.
-                XmlNode dsig = receipt.GetElementsByTagName("Signature", SignedXml.XmlDsigNamespaceUrl)[0];
-                if (dsig == null)
-                {
-                    // If signature is not found return false
-                    System.Console.WriteLine("Signature not found.");
-                    return false;
-                }
-
-                sxml.LoadXml((XmlElement)dsig);
-
-                // Check the signature
-                bool isValid = sxml.CheckSignature(certificate, true);
-
-                return isValid;
-            }
-
-            static void Main(string[] args)
-            {
-                // .NET does not support SHA256-RSA2048 signature verification by default, so register this algorithm for verification
-                CryptoConfig.AddAlgorithm(typeof(RSAPKCS1SHA256SignatureDescription), "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256");
-
-                // Load the receipt that needs to be verified as an XML document
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load("..\\..\\receipt.xml");
-
-                // The certificateId attribute is present in the document root, retrieve it
-                XmlNode node = xmlDoc.DocumentElement;
-                string certificateId = node.Attributes["CertificateId"].Value;
-
-                // Retrieve the certificate from the official site.
-                // NOTE: For sake of performance, you would want to cache this certificate locally.
-                //       Otherwise, every single call will incur the delay of certificate retrieval.
-                X509Certificate2 verificationCertificate = RetrieveCertificate(certificateId);
-
-                try
-                {
-                    // Validate the receipt with the certificate retrieved earlier
-                    bool isValid = ValidateXml(xmlDoc, verificationCertificate);
-                    System.Console.WriteLine("Certificate valid: " + isValid);
-                }
-                catch (Exception ex)
-                {
-                    System.Console.WriteLine(ex.ToString());
-                }
-            }
-        }
-}
-```
+|  Atributo  |  Descrição   |
+|-------------|-------------------|
+|  **Id**  |    Identifica a compra.           |
+|  **AppId**  |     Identifica o app por meio do qual o usuário fez a compra.           |
+|  **ProductId**  |     Identifica o produto adquirido.           |
+|  **ProductType**  |    Determina o tipo do produto. No momento só é compatível com um valor **Durable**.          |  
+|  **PurchaseDate**  |    A data em que ocorreu a compra.          |  |
 
  
 
@@ -240,6 +144,6 @@ namespace ReceiptVerificationSample
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

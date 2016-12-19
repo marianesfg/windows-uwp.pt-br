@@ -1,21 +1,21 @@
 ---
 author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
-description: "Este tópico apresenta um estudo de caso de portabilidade de uma amostra de aplicativo do WinRT 8.1 de um jogo de teste ponto a ponto em funcionamento para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10."
-title: Estudo de caso do Windows Runtime 8.x para UWP, amostra de aplicativo QuizGame ponto a ponto
+description: "Este tópico apresenta um estudo de caso de portabilidade de um exemplo de aplicativo do WinRT 8.1 de um jogo de teste ponto a ponto em funcionamento para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10."
+title: Estudo de caso do Windows Runtime 8.x para UWP, exemplo de aplicativo QuizGame ponto a ponto
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 353ee8511be38ad437a64e153d43523f355e080f
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 62d747a06f26bd2d069d2f23f36f48249fd11e95
 
 ---
 
-# Estudo de caso do Windows Runtime 8.x para UWP, amostra de aplicativo QuizGame ponto a ponto
+# <a name="windows-runtime-8x-to-uwp-case-study-quizgame-peer-to-peer-sample-app"></a>Estudo de caso do Windows Runtime 8.x para UWP, exemplo de aplicativo QuizGame ponto a ponto
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este tópico apresenta um estudo de caso de portabilidade de uma amostra de aplicativo do WinRT 8.1 de um jogo de teste ponto a ponto em funcionamento para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10.
+Este tópico apresenta um estudo de caso de portabilidade de um exemplo de aplicativo do WinRT 8.1 de um jogo de teste ponto a ponto em funcionamento para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10.
 
 Um aplicativo Universal 8.1 é aquele que cria duas versões do mesmo aplicativo: um pacote do aplicativo para Windows 8.1 e outro pacote do aplicativo para Windows Phone 8.1. A versão WinRT 8.1 do QuizGame usa a disposição de projeto de um Aplicativo Universal do Windows, mas adota uma abordagem diferente e compila um aplicativo funcionalmente distinto para as duas plataformas. O pacote do aplicativo do Windows 8.1 serve como host para uma sessão de jogo de teste, enquanto o pacote do aplicativo do Windows Phone 8.1 cumpre a função do cliente para o host. As duas metades da sessão do jogo de teste se comunicam por meio da rede ponto a ponto.
 
@@ -23,15 +23,15 @@ Faz sentido personalizar as duas metades ao PC e ao telefone, respectivamente. M
 
 O aplicativo utiliza padrões que usam modos e modelos de exibição. Como resultado dessa separação clara, o processo de portabilidade para esse aplicativo é muito simples, como você verá.
 
-**Observação**  Esta amostra pressupõe que a rede esteja configurada para enviar e receber pacotes UDP multicast em grupo personalizados (a maioria das redes domésticas está, embora sua rede de trabalho possa não estar). A amostra também envia e recebe pacotes TCP.
+**Observação**  Este exemplo pressupõe que a rede esteja configurada para enviar e receber pacotes UDP multicast em grupo personalizados (a maioria das redes domésticas está, embora sua rede de trabalho possa não estar). O exemplo também envia e recebe pacotes TCP.
 
  
 
-**Observação**   Ao abrir QuizGame10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Observação**   Ao abrir QuizGame10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
  
 
-## Downloads
+## <a name="downloads"></a>Downloads
 
 [Baixe o aplicativo Universal 8.1 QuizGame](http://go.microsoft.com/fwlink/?linkid=532953). Esse é o estado inicial do aplicativo antes da portabilidade. 
 
@@ -39,7 +39,7 @@ O aplicativo utiliza padrões que usam modos e modelos de exibição. Como resul
 
 [Veja a versão mais recente deste exemplo no GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
 
-## A solução do WinRT 8.1
+## <a name="the-winrt-81-solution"></a>A solução do WinRT 8.1
 
 
 Esta é a aparência do QuizGame, o aplicativo que vamos portar.
@@ -54,7 +54,7 @@ O aplicativo host QuizGame em execução no Windows
 
 O aplicativo cliente QuizGame em execução no Windows Phone
 
-## Um passo a passo do QuizGame em uso
+## <a name="a-walkthrough-of-quizgame-in-use"></a>Um passo a passo do QuizGame em uso
 
 Esta é uma breve descrição hipotética do aplicativo em uso, mas que fornece informações úteis caso você queira experimentar o aplicativo em sua rede sem fio.
 
@@ -66,13 +66,13 @@ O apresentador clica em **Iniciar jogo** e o aplicativo host mostra uma pergunta
 
 As perguntas continuam sendo feitas e respondidas nesse mesmo ciclo. Quando a última pergunta é mostrada no aplicativo host, o botão apresenta **Mostrar resultados** e não **Próxima pergunta**. Ao clicar em **Mostrar resultados**, os resultados são mostrados. Ao clicar em **Retornar ao lobby**, o jogo volta ao início do ciclo de vida, exceto pelos jogadores participantes que continuam conectados. Mas, voltar ao lobby dá a novos jogadores uma chance de entrar, e esse também é um momento prático para os participantes saírem (embora um jogador possa sair a qualquer momento, tocando em **Sair do jogo**).
 
-## Modo de teste local
+## <a name="local-test-mode"></a>Modo de teste local
 
 Para experimentar o aplicativo e as interações em um único computador, e não distribuído em vários dispositivos, você pode compilar o aplicativo host no modo de teste local. Esse modo ignora totalmente o uso da rede. Em vez disso, a interface do usuário do aplicativo host exibe a parte do host à esquerda da janela e, à direita, duas cópias da interface do usuário do aplicativo cliente, empilhadas verticalmente (observe que, nessa versão, a interface do usuário do modo teste local é fixa para um vídeo do computador; ela não se adapta a dispositivos pequenos). Esses segmentos da interface do usuário, todos no mesmo aplicativo, comunicam-se entre si por meio de um comunicador cliente fictício, que simula as interações que, de outra forma, ocorreriam na rede.
 
 Para ativar o modo de teste local, defina **LOCALTESTMODEON** (nas propriedades do projeto) como um símbolo de compilação condicional e recompile.
 
-## Portando para um projeto do Windows 10
+## <a name="porting-to-a-windows-10-project"></a>Portando para um projeto do Windows 10
 
 O QuizGame inclui as seguintes partes.
 
@@ -81,7 +81,7 @@ O QuizGame inclui as seguintes partes.
 -   QuizGame.WindowsPhone. Este é o projeto que compila o pacote do aplicativo para o aplicativo cliente, que visa o Windows Phone 8.1.
 -   QuizGame.Shared. Este é o projeto que contém o código-fonte, os arquivos de marcação e outros ativos e recursos usados pelos outros dois projetos.
 
-Para este estudo de caso, temos as opções usuais descritas em [Se você tiver um aplicativo Universal 8.1](w8x-to-uwp-root.md#if-you-have-an-81-universal-windows-app) em relação a quais dispositivos dar suporte.
+Para este estudo de caso, temos as opções usuais descritas em [Se você tiver um aplicativo Universal 8.1](w8x-to-uwp-root.md) em relação a quais dispositivos dar suporte.
 
 Com base nessas opções, portaremos QuizGame.Windows para um novo projeto do Windows 10 chamado QuizGameHost. E portaremos QuizGame.WindowsPhone para um novo projeto do Windows 10 chamado QuizGameClient. Esses projetos serão segmentados para a família de dispositivos universais; logo, eles serão executados em qualquer dispositivo. Manteremos os arquivos de origem de QuizGame.Shared etc. na própria pasta, e vincularemos esses arquivos compartilhados aos dois projetos novos. Como antes, vamos manter tudo em uma única solução e chamá-la de QuizGame10.
 
@@ -103,7 +103,7 @@ Com base nessas opções, portaremos QuizGame.Windows para um novo projeto do Wi
 
 **QuizGameHost**
 
--   Crie um novo projeto de aplicativo do Windows10 (**Adicionar** &gt; **Novo Projeto** &gt; **Windows Universal** &gt; **Blank Application (Windows Universal)**) e chame-o de QuizGameHost.
+-   Crie um novo projeto de aplicativo do Windows 10 (**Adicionar** &gt; **Novo Projeto** &gt; **Windows Universal** &gt; **Blank Application (Windows Universal)**) e chame-o de QuizGameHost.
 -   Adicione uma referência ao P2PHelper (**Adicionar Referência** &gt; **Projetos** &gt; **Solução** &gt; **P2PHelper**).
 -   No **Gerenciador de Soluções**, crie uma nova pasta para cada uma das pastas compartilhadas no disco. Clique com o botão direito do mouse na pasta recém-criada e clique em **Adicionar** &gt; **Item Existente** e navegue até uma pasta. Abra a pasta compartilhada apropriada, selecione todos os arquivos e clique em **Adicionar como Link**.
 -   Copie MainPage.xaml de \\QuizGame.Windows\\ para \\QuizGameHost\\ e altere o namespace para QuizGameHost.
@@ -130,7 +130,7 @@ por:
 
 **QuizGameClient**
 
--   Crie um novo projeto de aplicativo do Windows10 (**Adicionar** &gt; **Novo Projeto** &gt; **Windows Universal** &gt; **Blank Application (Windows Universal)**) e chame-o de QuizGameClient.
+-   Crie um novo projeto de aplicativo do Windows 10 (**Adicionar** &gt; **Novo Projeto** &gt; **Windows Universal** &gt; **Blank Application (Windows Universal)**) e chame-o de QuizGameClient.
 -   Adicione uma referência ao P2PHelper (**Adicionar Referência** &gt; **Projetos** &gt; **Solução** &gt; **P2PHelper**).
 -   No **Gerenciador de Soluções**, crie uma nova pasta para cada uma das pastas compartilhadas no disco. Clique com o botão direito do mouse na pasta recém-criada e clique em **Adicionar** &gt; **Item Existente** e navegue até uma pasta. Abra a pasta compartilhada apropriada, selecione todos os arquivos e clique em **Adicionar como Link**.
 -   Copie MainPage.xaml de \\QuizGame.WindowsPhone\\ para \\QuizGameClient\\ e altere o namespace para QuizGameClient.
@@ -139,7 +139,7 @@ por:
 
 Agora você poderá compilar e executar.
 
-## Interface do usuário adaptável
+## <a name="adaptive-ui"></a>Interface do usuário adaptável
 
 O aplicativo do Windows 10 QuizGameHost tem boa aparência quando é executado em uma janela larga (o que é possível somente em dispositivos com tela grande). Porém, quando a janela do aplicativo é estreita (o que acontece em dispositivos pequenos e também pode acontecer em dispositivos grandes), a interface do usuário é tão espremida que fica ilegível.
 
@@ -171,7 +171,7 @@ Podemos usar o recurso adaptável do Gerenciador de Estado Visual para corrigir 
 </VisualStateManager.VisualStateGroups>
 ```
 
-## Estilo universal
+## <a name="universal-styling"></a>Estilo universal
 
 
 Você notará que, no Windows 10, os botões não têm o mesmo preenchimento da área de toque nos modelos. Duas pequenas alterações corrigirão isso. Primeiro, adicione esta marcação a app.xaml em QuizGameHost e QuizGameClient.
@@ -190,12 +190,12 @@ Depois, adicione este setter a `OptionButtonStyle` em \\View\\ClientView.xaml.
 
 Com esse último ajuste, o aplicativo se comportará e parecerá como antes da portabilidade, mas agora será executado em todos os lugares.
 
-## Conclusão
+## <a name="conclusion"></a>Conclusão
 
 O aplicativo que portamos este estudo de caso era relativamente complexo, envolvendo vários projetos, uma biblioteca de classes e um volume relativamente grande de código e interface do usuário. Mesmo assim, a portabilidade foi simples. Parte da facilidade de portabilidade está diretamente relacionada à semelhança entre a plataforma de desenvolvimento do Windows 10 e as plataformas do Windows 8.1 e do Windows Phone 8.1. Além disso, também à forma como o aplicativo original foi projetado para manter os modelos, os modelos de exibição e os modos de exibição separados.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

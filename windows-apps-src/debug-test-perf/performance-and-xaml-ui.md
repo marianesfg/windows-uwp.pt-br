@@ -4,22 +4,23 @@ ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: Desempenho
 description: "Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f4589b187d05ae122839fab74d8086779847b120
+ms.sourcegitcommit: 73b19e54b863693aece045e5b653bc0583a676bb
+ms.openlocfilehash: b9395e80bca7a46076e20e42fa7ceee5df7cc0d5
 
 ---
-# Desempenho
+# <a name="performance"></a>Desempenho
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria. Tecnicamente, o desempenho é um requisito não funcional, mas tratar o desempenho como um recurso ajudará você atender às expectativas dos usuários. Especificar metas e mensurar são fatores importantes. Determine quais são os cenários críticos de desempenho; defina o que significa bom desempenho. Em seguida, faça medições o quanto antes e com frequência suficiente ao longo do ciclo de vida do projeto para cumprir suas metas. Esta seção mostra como organizar seu fluxo de trabalho de desempenho, corrigir problemas de taxa de quadros e falhas de animação e ajustar seu tempo de inicialização, tempo de navegação de página e uso de memória.
 
-Se você ainda não fez isso, uma etapa que vimos resultar em melhorias significativas de desempenho é fazer a portabilidade do seu aplicativo para Windows 10. Várias otimizações XAML (por exemplo, [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) só estão disponíveis em aplicativos do Windows 10. Consulte [Portando aplicativos para o Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) e a sessão //build/ [Migrando para a Plataforma Universal do Windows](http://channel9.msdn.com/Events/Build/2015/3-741).
+Se você ainda não fez isso, uma etapa que vimos resultar em melhorias significativas de desempenho é fazer a portabilidade do seu aplicativo para Windows 10. Várias otimizações XAML (por exemplo, [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) só estão disponíveis em aplicativos do Windows 10. Consulte [Portando apps para o Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) e a sessão //build/ [Migrando para a Plataforma Universal do Windows](http://channel9.msdn.com/Events/Build/2015/3-741).
 
 | Tópico | Descrição |
 |-------|-------------|
 | [Planejando para o desempenho](planning-and-measuring-performance.md) | Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria. Tecnicamente, o desempenho é um requisito não funcional, mas tratar o desempenho como um recurso ajudará você atender às expectativas dos usuários. Especificar metas e mensurar são fatores importantes. Determine quais são os cenários críticos de desempenho; defina o que significa bom desempenho. Em seguida, faça medições o quanto antes e com frequência suficiente ao longo do ciclo de vida do projeto para cumprir suas metas. |
-| [Otimização da interface do usuário em ListView e GridView](optimize-gridview-and-listview.md) | Melhore o desempenho de [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) e de tempo de inicialização por meio de virtualização da interface do usuário, redução de elemento e atualização progressiva de itens. |
+| [Otimizar a atividade em segundo plano](optimize-background-activity.md) | Crie aplicativos UWP que funcionem com o sistema para usar tarefas em segundo plano economizando a bateria. |
+| [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md) | Melhore o desempenho de [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) e de tempo de inicialização por meio de virtualização da interface do usuário, redução de elemento e atualização progressiva de itens. |
 | [Virtualização de dados de ListView e GridView](listview-and-gridview-data-optimization.md) | Melhore o desempenho [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) e de tempo de inicialização por meio de virtualização da interface do usuário. |
 | [Melhorar desempenho de coleta de lixo](improve-garbage-collection-performance.md) | Aplicativos da Plataforma Universal do Windows (UWP) escritos em C# e Visual Basic obtém gerenciamento de memória automático do coletor de lixo .NET. Esta seção resume as melhores práticas de comportamento e desempenho para o coletor de lixo .NET em aplicativos UWP. |
 | [Manter o thread de interface do usuário responsivo](keep-the-ui-thread-responsive.md) | Os usuários esperam que um aplicativo continue respondendo enquanto executa cálculos, independentemente do tipo de computador. Isso significa coisas diferentes para aplicativos diferentes. Para alguns, isso significa oferecer física mais realista, carregar dados do disco ou da Web mais rapidamente, apresentar cenas complexas e navegar entre páginas, encontrar referências de local ou processar dados com mais agilidade. Independentemente do tipo de cálculo, os usuários querem que o aplicativo aja com sua entrada, e instâncias nas quais ele parece não responder enquanto &quot;pensa&quot; sejam eliminadas. |
@@ -36,6 +37,6 @@ Se você ainda não fez isso, uma etapa que vimos resultar em melhorias signific
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

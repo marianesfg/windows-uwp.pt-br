@@ -1,15 +1,15 @@
 ---
 author: mcleanbyron
 Description: "Você pode incentivar os clientes a deixar comentários iniciando o Hub de Feedback do seu aplicativo."
-title: Iniciar o Hub de Feedback do seu aplicativo
+title: Iniciar o Hub de Feedback do seu app
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 translationtype: Human Translation
-ms.sourcegitcommit: 126fee708d82f64fd2a49b844306c53bb3d4cc86
-ms.openlocfilehash: 7525c08319eac2adedde71cd6d5f0a9aeeef41e2
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 4296bd4007ae5109c9a3736c977ba68f312b208c
 
 ---
 
-# Iniciar o Hub de Feedback do seu aplicativo
+# <a name="launch-feedback-hub-from-your-app"></a>Iniciar o Hub de Feedback do seu app
 
 Você pode incentivar os clientes a deixar comentários adicionando um controle (como um botão) ao seu aplicativo da Plataforma Universal do Windows (UWP) que inicia o Hub de Feedbacks. Hub de Feedback é um aplicativo pré-instalado que oferece um local único para coletar feedback sobre o Windows e os aplicativos instalados. Todo o feedback do cliente que é enviado para seu aplicativo por meio do Hub de Feedback é coletado e apresentado no [Relatório de feedback](../publish/feedback-report.md) no painel do Centro de Desenvolvimento do Windows. Assim, você pode ver os problemas, as sugestões e atualizações que seus clientes enviaram em um relatório.
 
@@ -17,7 +17,7 @@ Para iniciar o Hub de Feedback do seu aplicativo, use uma API que seja fornecida
 
 >**Observação**&nbsp;&nbsp;O Hub de Feedback está disponível apenas em dispositivos que executam a versão 10.0.14271 ou posterior de um SO Windows 10 que se baseia em [famílias de dispositivos móveis e computadores](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families). Recomendamos que você mostre um controle de feedback no seu aplicativo apenas se o Hub de Feedback estiver disponível no dispositivo do usuário. O código neste tópico demonstra como fazer isso.
 
-## Como iniciar o Hub de Feedback do seu aplicativo
+## <a name="how-to-launch-feedback-hub-from-your-app"></a>Como iniciar o Hub de Feedback do seu aplicativo
 
 Para iniciar o Hub de Feedback do seu aplicativo:
 
@@ -35,33 +35,27 @@ Para iniciar o Hub de Feedback do seu aplicativo:
 
   O código a seguir demonstra a definição XAML de um [Botão](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) que é configurado conforme descrito acima.
 
+  > [!div class="tabbedCodeSnippets"]
   ```xml
   <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
   ```
+
 7. Em seu código de inicialização para a página do aplicativo que hospeda o controle de feedback, use o método estático [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported.aspx) da classe [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) para determinar se o Hub de Feedback está disponível no dispositivo do usuário. O Hub de Feedback está disponível apenas em dispositivos que executam a versão 10.0.14271 ou posterior de um SO Windows 10 que se baseia em [famílias de dispositivos móveis e computadores](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families).
 
   Se essa propriedade retornar **true**, deixe o controle visível. O código a seguir demonstra como fazer isso para um [Botão](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx).
 
-  ```CSharp
-  if (Microsoft.Services.Store.Engagement.StoreServicesFeedbackLauncher.IsSupported())
-  {
-        this.feedbackButton.Visibility = Visibility.Visible;
-  }
-  ```
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#ToggleFeedbackVisibility)]
 
+  <span/>
   >**Observação**&nbsp;&nbsp;Embora o Hub de Feedback não seja compatível com dispositivos Xbox no momento, a propriedade **IsSupported** atualmente retorna **true** em dispositivos Xbox que executam a versão 10.0.14271 ou posterior do Windows 10. Isso é um problema conhecido que será corrigido em uma versão futura do Microsoft Store Services SDK.  
 
 8. No manipulador de eventos que é executado quando o usuário clica no controle, obtenha um objeto [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) e chame o método [LaunchAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync.aspx) para iniciar o aplicativo do Hub de Feedback. Há duas sobrecargas para esse método: uma sem parâmetros e outra que aceita um dicionário de pares de chave e valor que contém os metadados que você deseja associar ao feedback. O exemplo a seguir demonstra como iniciar o Hub de Feedback no manipulador de eventos [Clique](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) para um [Botão](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx).
 
-  ```CSharp
-  private async void feedbackButton_Click(object sender, RoutedEventArgs e)
-  {
-        var launcher = Microsoft.Services.Store.Engagement.StoreServicesFeedbackLauncher.GetDefault();
-        await launcher.LaunchAsync();
-  }
-  ```
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#FeedbackButtonClick)]
 
-## Recomendações de design para a interface do usuário de feedback
+## <a name="design-recommendations-for-your-feedback-ui"></a>Recomendações de design para a interface do usuário de feedback
 
 Para iniciar o Hub de Feedback, recomendamos que você adicione um elemento de interface do usuário em seu aplicativo (por exemplo, um botão) que exiba o seguinte ícone de feedback padrão da fonte Segoe MDL2 Assets e o código de caractere E939.
 
@@ -79,12 +73,12 @@ Também recomendamos que você use uma ou mais das seguintes opções de posicio
 * **Em um submenu acionado por eventos**. Isso é útil quando você deseja consultar os clientes sobre uma pergunta específica antes de iniciar o Hub do Windows Feedback. Por exemplo, depois que seu aplicativo usar um determinado recurso, você pode fazer ao cliente uma pergunta específica sobre sua satisfação com esse recurso. Se o cliente optar por responder, seu aplicativo iniciará o Hub de Feedback.
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Relatório de feedback](../publish/feedback-report.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

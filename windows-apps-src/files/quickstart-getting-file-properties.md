@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obter propriedades do arquivo
 description: "Obtenha as propriedades&\\#8212;nível superior, básicas e estendidas&\\#8212;de um arquivo representado pelo objeto StorageFile."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: 78fdc200b134525fc0445af64e73b184b49ef2a3
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 464548664f8065e4dba45d23ccbb71a68d0b6b17
 
 ---
-# Obter propriedades do arquivo
+# <a name="get-file-properties"></a>Obter propriedades do arquivo
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -26,7 +26,7 @@ Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo
  
 
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 -   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
 
@@ -36,7 +36,7 @@ Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo
 
     Por exemplo, o código nesses exemplos exige a funcionalidade **picturesLibrary**, mas o local talvez exija outra funcionalidade ou até mesmo nenhuma funcionalidade. Para obter mais informações, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
-## Obtendo as propriedades de nível superior de um arquivo
+## <a name="getting-a-files-top-level-properties"></a>Obtendo as propriedades de nível superior de um arquivo
 
 Muitas propriedades de nível superior são acessadas como membros da classe [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). Essas propriedades incluem atributos do arquivo, tipo de conteúdo, data de criação, nome para exibição, tipo de arquivo etc.
 
@@ -62,7 +62,7 @@ foreach (Windows.Storage.StorageFile file in files)
 }
 ```
 
-## Obtendo as propriedades básicas de um arquivo
+## <a name="getting-a-files-basic-properties"></a>Obtendo as propriedades básicas de um arquivo
 
 Muitas propriedades básicas são obtidas chamando primeiro o método [**StorageFile.GetBasicPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh701737). Esse método retorna um objeto [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113), que define propriedades para o tamanho do item (arquivo ou pasta), bem como a data da última modificação do item.
 
@@ -87,7 +87,7 @@ foreach (Windows.Storage.StorageFile file in files)
 }
  ```
 
-## Obtendo as propriedades estendidas de um arquivo
+## <a name="getting-a-files-extended-properties"></a>Obtendo as propriedades estendidas de um arquivo
 
 Além das propriedades de nível superior e básicas (de um arquivo), há muitas propriedades associadas ao conteúdo do arquivo. Essas propriedades estendidas são acessadas com a chamada ao método [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124). (Um objeto [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113) é obtido chamando a propriedade [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225).) Embora propriedades de arquivo de nível superior e básicas sejam acessadas como propriedades de uma classe —[**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) e **BasicProperties**, respectivamente — propriedades estendidas são obtidas transmitindo uma coleção [IEnumerable](http://go.microsoft.com/fwlink/p/?LinkID=313091) de objetos [String](http://go.microsoft.com/fwlink/p/?LinkID=325032) que representam os nomes das propriedades que devem ser recuperadas para o método **BasicProperties.RetrievePropertiesAsync**. Esse método então retorna uma coleção [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238). Cada propriedade estendida é recuperada da coleção, por nome ou índice.
 
@@ -137,6 +137,6 @@ foreach (Windows.Storage.StorageFile file in files)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

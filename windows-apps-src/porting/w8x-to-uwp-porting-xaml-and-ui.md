@@ -4,28 +4,28 @@ description: "A prática de definição da interface do usuário na forma de mar
 title: "Portabilidade do Windows Runtime 8.x XAML e da interface do usuário para a UWP"
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
 translationtype: Human Translation
-ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: c81c017817e55aed5dc4d19d919e22dd511c2b01
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: ea8844925cc227d9f082595b039dd68164ad1228
 
 ---
 
-# Portabilidade do Windows Runtime 8.x XAML e da interface do usuário para a UWP
+# <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Portabilidade do Windows Runtime 8.x XAML e da interface do usuário para a UWP
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O tópico anterior foi [Solução de problemas](w8x-to-uwp-troubleshooting.md).
 
 A prática de definição da interface do usuário na forma de marcação XAML declarativa traduz extremamente bem dos aplicativos Universal 8.1 para aplicativos da Plataforma Universal do Windows (UWP). Você descobrirá que a maior parte da sua marcação é compatível, embora talvez seja necessário fazer alguns ajustes nas chaves de recurso do sistema ou nos modelos personalizados que você está usando. O código imperativo em seus modelos de exibição exigirão pouca ou nenhuma alteração. Muito, ou grande parte, do código de sua camada de apresentação que manipula elementos da interface do usuário deve ser simples de portar.
 
-## Código imperativo
+## <a name="imperative-code"></a>Código imperativo
 
 Se você só quiser chegar ao estágio onde o seu projeto é compilado, poderá comentar ou apagar qualquer código não essencial. Em seguida, itere, um problema por vez, e faça referência aos seguintes tópicos desta seção (e ao tópico anterior: [Solução de problemas](w8x-to-uwp-troubleshooting.md)), até que quaisquer problemas de compilação e de tempo de execução sejam corrigidos e sua portagem esteja concluída.
 
-## Interface do usuário responsiva/adaptável
+## <a name="adaptiveresponsive-ui"></a>Interface do usuário responsiva/adaptável
 
-Como seu aplicativo pode potencialmente ser executado em uma ampla variedade de dispositivos, cada um com seu próprio tamanho da tela e resolução, você vai querer ir além das etapas mínimas para portar seu aplicativo. Você também vai querer adaptar a interface do usuário para ter a melhor aparência possível nesses dispositivos. Você pode usar o recurso adaptável do Gerenciador de Estado Visual para detectar dinamicamente o tamanho da janela e mudar o layout em resposta, e um exemplo de como fazer isso é mostrado na seção [Interface do usuário adaptável](w8x-to-uwp-case-study-bookstore2.md#adaptive-ui) no tópico estudo de caso do Bookstore2.
+Como seu aplicativo pode potencialmente ser executado em uma ampla variedade de dispositivos, cada um com seu próprio tamanho da tela e resolução, você vai querer ir além das etapas mínimas para portar seu aplicativo. Você também vai querer adaptar a interface do usuário para ter a melhor aparência possível nesses dispositivos. Você pode usar o recurso adaptável do Gerenciador de Estado Visual para detectar dinamicamente o tamanho da janela e mudar o layout em resposta, e um exemplo de como fazer isso é mostrado na seção [Interface do usuário adaptável](w8x-to-uwp-case-study-bookstore2.md) no tópico estudo de caso do Bookstore2.
 
-## Manipulação do botão Voltar
+## <a name="back-button-handling"></a>Manipulação do botão Voltar
 
 Para aplicativos universais 8.1, aplicativos da Windows Store e aplicativos da Loja do Windows Phone existem diferentes abordagens para a interface do usuário que você mostra e os eventos que você manipula para o botão Voltar. Mas, para aplicativos do Windows 10, é possível usar uma abordagem única no aplicativo. Em dispositivos móveis, o botão é fornecido a você como um botão capacitivo no dispositivo ou como um botão no shell. Em um dispositivo desktop, você adiciona um botão para elementos visuais cromados do seu aplicativo sempre que a navegação regressiva for possível dentro do aplicativo, e isso aparece na barra de título para aplicativos de janela ou na barra de tarefas para o modo Tablet. O evento do botão Voltar é um conceito universal em todas as famílias de dispositivos, e os botões implementados no hardware ou no software acionam o mesmo evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596).
 
@@ -77,11 +77,11 @@ Há também uma abordagem única para sair de forma programática do aplicativo 
    Windows.UI.Xaml.Application.Current.Exit();
 ```
 
-## Botões
+## <a name="charms"></a>Botões
 
 Você não precisa alterar o código integrado aos botões, mas precisa adicionar uma interface do usuário ao aplicativo para ocupar o lugar da barra de botões, que não faz parte do shell do Windows 10. Um aplicativo Universal 8.1 em execução no Windows 10 tem a própria interface do usuário de substituição fornecida pelo cromo renderizado pelo sistema na barra de título do aplicativo.
 
-## Controles e estilos/modelos de controles
+## <a name="controls-and-control-stylestemplates"></a>Controles e estilos/modelos de controles
 
 Um aplicativo Universal 8.1 em execução no Windows 10 manterá a aparência e o comportamento do 8.1 em relação aos controles. Mas, quando você porta esse aplicativo para um aplicativo do Windows 10, existem algumas diferenças na aparência e no comportamento que devem ser lembradas. A arquitetura e o design de controles praticamente não foram alterados para aplicativos do Windows 10; portanto, as alterações são principalmente em relação a melhorias na [linguagem de design](#design-language), na simplificação e na usabilidade.
 
@@ -103,7 +103,7 @@ Veja alguns exemplos mais específicos de mudanças nos controles.
 | [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) | Em um aplicativo da Loja do Windows Phone, um controle [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) encapsula da última seção à primeira. Em um aplicativo da Windows Store e em um aplicativo do Windows 10, as seções de hub não encapsulam. |
 | [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) | Em um aplicativo da Loja do Windows Phone, uma imagem de plano de fundo do controle [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) move no paralaxe em relação às seções do hub. Em um aplicativo da Windows Store e em um aplicativo do Windows 10, o paralaxe não é usado. |
 | [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)  | Em um aplicativo universal 8.1, a propriedade [**HubSection.IsHeaderInteractive**](https://msdn.microsoft.com/library/windows/apps/dn251917) faz com que o cabeçalho da seção, e um glifo de divisa renderizado ao lado dele, se tornem interativos. Em um aplicativo do Windows 10, há uma funcionalidade interativa "Veja mais" ao lado do cabeçalho, mas o cabeçalho em si não é interativo. **IsHeaderInteractive** ainda determina se a interação gera o evento [**Hub.SectionHeaderClick**](https://msdn.microsoft.com/library/windows/apps/dn251953). |
-| **Caixa de diálogo de mensagem** | Caso você esteja usando **MessageDialog**, leve em consideração usar o [**ContentDialog**](https://msdn.microsoft.com/library/windows/apps/dn633972), que é mais flexível. Além disso, consulte a amostra [Noções básicas de interface do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=619992). |
+| **Caixa de diálogo de mensagem** | Caso você esteja usando **MessageDialog**, leve em consideração usar o [**ContentDialog**](https://msdn.microsoft.com/library/windows/apps/dn633972), que é mais flexível. Além disso, consulte o exemplo [Noções básicas de interface do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=619992). |
 | **ListPickerFlyout**, **PickerFlyout**  | **ListPickerFlyout** e **PickerFlyout** foram substituídos para um aplicativo do Windows 10. Para um menu suspenso de seleção única, use [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/dn299030); para obter experiências mais complexas, use [**Flyout**](https://msdn.microsoft.com/library/windows/apps/dn279496). |
 | [**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519) | A propriedade [**PasswordBox.IsPasswordRevealButtonEnabled**](https://msdn.microsoft.com/library/windows/apps/hh702579) foi substituída em um aplicativo do Windows 10 e a definição não tem efeito. Em vez disso, use [**PasswordBox.PasswordRevealMode**](https://msdn.microsoft.com/library/windows/apps/dn890867), que usa como padrão **Peek** (em que um glifo de olho é exibido, como em um aplicativo da Windows Store). Além disso, consulte [Diretrizes para caixas de senha](https://msdn.microsoft.com/library/windows/apps/dn596103). |
 | [**Pivô**](https://msdn.microsoft.com/library/windows/apps/dn608241) | O controle [**Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241) agora é universal e não tem mais o uso limitado a dispositivos móveis. |
@@ -117,11 +117,11 @@ Veja alguns exemplos mais específicos de mudanças nos controles.
 
 Para saber mais sobre controles do aplicativo UWP, consulte [Controles por função](https://msdn.microsoft.com/library/windows/apps/mt185405), [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406) e [Diretrizes para controles](https://msdn.microsoft.com/library/windows/apps/dn611856).
 
-##  Linguagem de design no Windows 10
+##  <a name="design-language-in-windows-10"></a>Linguagem de design no Windows 10
 
 Existem algumas diferenças pequenas, mas importantes, na linguagem de design entre aplicativos Universais 8.1 e aplicativos do Windows 10. Para saber todos os detalhes, consulte [Design](http://dev.windows.com/design). Apesar das alterações na linguagem de design, nossos princípios de design permanecem consistentes: atenção aos detalhes, mas sempre buscando simplicidade por meio da concentração no conteúdo, e não no cromo, reduzindo drasticamente elementos visuais e permanecendo autêntico ao domínio digital; usar a hierarquia visual especialmente com tipografia; projetar em uma grade e dar vida às suas experiências com animações suaves.
 
-## Pixels efetivos, distância exibição e fatores de escala
+## <a name="effective-pixels-viewing-distance-and-scale-factors"></a>Pixels efetivos, distância exibição e fatores de escala
 
 Antes, os pixels de exibição eram a maneira de abstrair o tamanho e o layout dos elementos da interface do usuário do tamanho físico e da resolução reais dos dispositivos. Agora os pixels de exibição evoluíram para pixels efetivos. Esta é uma explicação do termo, o que significa e o valor adicional que oferece.
 
@@ -139,7 +139,7 @@ Não é recomendável que você tente dar suporte a todos os fatores de escala, 
 
 Você talvez esteja reutilizando a marcação XAML de um aplicativo da Windows Store em que os valores de dimensão literal são usados na marcação (talvez para dimensionar formas ou outros elementos, talvez para tipografia). Porém, em alguns casos, um fator de escala maior é usado em um dispositivo para um aplicativo do Windows 10 do que um aplicativo universal 8.1 (por exemplo, 150% é usado onde 140% era usado antes e 200% é usado onde antes era 180%). Portanto, se achar que esses valores literais agora estão muito grandes no Windows 10, tente multiplicá-los por 0,8. Para obter mais informações, consulte [Design responsivo 101 para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn958435).
 
-## Alterações em ListView/GridView
+## <a name="gridviewlistview-changes"></a>Alterações em ListView/GridView
 
 Foram feitas várias alterações nos setters de estilo padrão de [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) para fazer o controle rolar verticalmente (em vez de horizontalmente, como o padrão anterior). Se você tiver editado uma cópia do estilo padrão no projeto, a cópia não terá essas alterações, logo, você precisará fazê-las manualmente. Aqui está uma lista das alterações.
 
@@ -230,15 +230,15 @@ Caso você tenha um modelo de controle [**ListViewItem**](https://msdn.microsoft
 -   No grupo de estados visuais SelectionStates, mova o estado visual Selected para o grupo de estados visuais CommonStates.
 -   Remova todo o grupo de estados visuais SelectionStates.
 
-## Localização e globalização
+## <a name="localization-and-globalization"></a>Localização e globalização
 
 Você pode reutilizar os arquivos Resources.resw do seu projeto Universal 8.1 em seu projeto de aplicativo UWP. Depois de copiar o arquivo, adicione-o ao projeto e defina **Ação de Compilação** como **PRIResource** e **Copiar para Diretório de Saída** como **Não copiar**. O tópico [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/br206071) descreve como carregar recursos específicos à família de dispositivos com base no fator de seleção de recurso de família de dispositivos.
 
-## Reproduzir em
+## <a name="play-to"></a>Reproduzir em
 
 As APIs no namespace [**Windows.Media.PlayTo**](https://msdn.microsoft.com/library/windows/apps/br207025) foram preteridas para aplicativos do Windows 10 em favor das APIs [**Windows.Media.Casting**](https://msdn.microsoft.com/library/windows/apps/dn972568).
 
-## Chaves de recurso e tamanhos de estilo TextBlock
+## <a name="resource-keys-and-textblock-style-sizes"></a>Chaves de recurso e tamanhos de estilo TextBlock
 
 A linguagem de design evoluiu no Windows 10 e, consequentemente, determinados estilos do sistema mudaram. Em alguns casos, você desejará revisitar os designs visuais dos modos de exibição de maneira que eles fiquem em harmonia com as propriedades de estilo que foram alteradas.
 
@@ -405,7 +405,7 @@ Esta é uma lista completa das chaves que não têm suporte.
 -   TextStyleSmallFontSize
 -   TimeRemainingElementMargin
 
-## SearchBox preterido em favor do AutoSuggestBox
+## <a name="searchbox-deprecated-in-favor-of-autosuggestbox"></a>SearchBox preterido em favor do AutoSuggestBox
 
 Embora [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803) seja implementado na família de dispositivos Universal, não é totalmente funcional em dispositivos móveis. Use [**AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/dn633874) para a sua experiência de pesquisa universal. Aqui está como normalmente implementar uma experiência de pesquisa com **AutoSuggestBox**.
 
@@ -423,7 +423,7 @@ Depois que o usuário começa a digitar, o **TextChanged** evento é acionado, c
 
 Além disso, consulte [Exemplo de portabilidade AutoSuggestBox](http://go.microsoft.com/fwlink/p/?linkid=619996).
 
-## Alterações de SemanticZoom
+## <a name="semanticzoom-changes"></a>Alterações de SemanticZoom
 
 O gesto de reduzir do [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) convergiu no modelo do Windows Phone, que é tocar ou clicar no cabeçalho de um grupo (portanto, em computadores desktop, a funcionalidade do botão de subtração para reduzir não é mais exibida). Agora temos o mesmo comportamento consistente gratuitamente em todos os dispositivos. Uma diferença estética do modelo do Windows Phone é que a exibição reduzida (a lista de atalhos) substitui a exibição ampliada em vez de se sobrepor a ela. Por isso, você pode remover qualquer tela de fundo semiopaca das exibições reduzidas.
 
@@ -435,7 +435,7 @@ Em um aplicativo da Windows Store, quando o aplicativo é desativado e reativado
 
 Em um aplicativo da Loja do Windows Phone e em um aplicativo do Windows 10, a exibição reduzida é ignorada quando o botão Voltar é pressionado. Para um aplicativo da Windows Store, não há processamento interno do botão para voltar, logo a pergunta não se aplica.
 
-## Configurações
+## <a name="settings"></a>Configurações
 
 A classe **SettingsPane** do Windows Runtime 8.x não é apropriada ao Windows 10. Em vez disso, além de criar uma página de configurações, você deve oferecer aos usuários uma forma de acessá-la dentro do aplicativo. Recomendamos expor essa página de configurações do aplicativo no nível superior, como o último item fixo no painel de navegação, mas aqui está todo o conjunto de opções.
 
@@ -447,7 +447,7 @@ Também não é recomendável esconder as configurações dentro de um painel de
 
 A página de configurações deve preencher toda a janela do aplicativo, e a página de configurações também é onde Sobre e Comentários devem estar. Para obter uma diretriz sobre o design da página de configurações, consulte [Diretrizes para configurações de aplicativo](https://msdn.microsoft.com/library/windows/apps/hh770544).
 
-## Texto
+## <a name="text"></a>Texto
 
 Texto (ou tipografia) é um aspecto importante de um aplicativo UWP e, durante a portabilidade, convém revisitar os designs visuais dos modos de exibição de maneira que eles fiquem em harmonia com a nova linguagem de design. Use estas ilustrações para encontrar os estilos de sistema  **TextBlock** da UWP (Plataforma Universal do Windows). Encontre aqueles que correspondam aos estilos do Windows Phone Silverlight que você usou. Como alternativa, você pode criar seus próprios estilos universais e copiar as propriedades dos estilos de sistema do Windows Phone Silverlight para eles.
 
@@ -459,11 +459,11 @@ Nos aplicativos da Windows Store e da Loja do Windows Phone, o idioma padrão pa
 
 Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkID=533896). Além disso, consulte a seção [Controles](#controls) acima para saber as alterações feitas em controles de texto.
 
-## Alterações de tema
+## <a name="theme-changes"></a>Alterações de tema
 
 Para um aplicativo Universal 8.1, o tema padrão é escuro. Para dispositivos Windows 10, o tema padrão mudou, mas você pode controlar o tema usado declarando um tema solicitado em App.xaml. Por exemplo, para usar um tema escuro em todos os dispositivos, adicione `RequestedTheme="Dark"` ao elemento Application raiz.
 
-## Blocos e notificações do sistema
+## <a name="tiles-and-toasts"></a>Blocos e notificações do sistema
 
 Para blocos e notificações do sistema, os modelos que você está usando no momento continuarão funcionando no aplicativo do Windows 10. Porém, existem novos modelos adaptáveis disponíveis para você usar, e eles estão descritos em [Notificações, blocos, notificações do sistema e selos](https://msdn.microsoft.com/library/windows/apps/mt185606).
 
@@ -471,7 +471,7 @@ Anteriormente, em computadores desktop, uma notificação do sistema era uma men
 
 Para enviar uma notificação do sistema, não há mais necessidade de declarar uma funcionalidade.
 
-## Tamanho da janela
+## <a name="window-size"></a>Tamanho da janela
 
 Para um aplicativo Universal 8.1, o elemento de manifesto do aplicativo [**ApplicationView**](https://msdn.microsoft.com/library/windows/apps/dn391667) é usado para declarar uma largura mínima de janela. Em seu aplicativo UWP, você pode especificar um tamanho mínimo (largura e altura) com código imperativo. O tamanho mínimo padrão é 500 x 320 epx, que também é o menor tamanho mínimo aceito. O maior tamanho mínimo aceito é 500 x 500 epx.
 
@@ -485,6 +485,6 @@ O próximo tópico é [Portabilidade para E/S, dispositivo e modelo de aplicativ
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

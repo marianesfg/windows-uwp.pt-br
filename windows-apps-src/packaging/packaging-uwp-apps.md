@@ -1,14 +1,14 @@
 ---
-author: msatranjr
+author: laurenhughes
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Empacotando aplicativos UWP
 description: "Para vender seu aplicativo da Plataforma Universal do Windows (UWP) ou distribuí-lo para outros usuários, você precisa criar um pacote appxupload para ele."
 translationtype: Human Translation
-ms.sourcegitcommit: 68081887e16801cd28726a2a33fb7993edf71e89
-ms.openlocfilehash: e274557883071c65313893ce725cc2307856174b
+ms.sourcegitcommit: 6decb122b56bb8835b4d0fc5178af61b59455876
+ms.openlocfilehash: 312c8fb0bbbb6231da91e7d477b800a797160e96
 
 ---
-# Empacotando aplicativos UWP
+# <a name="packaging-uwp-apps"></a>Empacotando aplicativos UWP
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -23,13 +23,13 @@ Para o Windows 10, você gera um pacote (.appxupload) que pode ser carregado par
 
 Depois de concluir as etapas acima, você estará pronto para vender o aplicativo na loja. Se você tem um aplicativo de linha de negócios (LOB) que não pretende vender porque serve apenas para usuários internos, você pode fazer o sideload dele para instalá-lo em qualquer dispositivo Windows 10.
 
-## Antes de empacotar o aplicativo
+## <a name="before-packaging-your-app"></a>Antes de empacotar o aplicativo
 
 1.  Teste o aplicativo. Antes de empacotar o aplicativo para envio à loja, certifique-se de que ele funcione conforme esperado em todas as famílias de dispositivos a que você pretende dar suporte. Essas famílias de dispositivos podem incluir desktop, celular, Surface Hub, XBOX, dispositivos IoT ou outros.
 2.  Otimize o aplicativo. Você pode usar as ferramentas de criação de perfil e depuração para otimizar o desempenho do aplicativo UWP. Por exemplo, a ferramenta de linha do tempo para capacidade de resposta da interface do usuário, a ferramenta de uso da memória, a ferramenta de uso da CPU e muito mais. Para obter mais informações sobre essas ferramentas, consulte [Executar ferramentas de diagnóstico sem depuração](https://msdn.microsoft.com/library/dn957936.aspx).
 3.  Verifique a compatibilidade nativa do .NET (para aplicativos VB e C#). Com o UWP, agora existe um novo compilador nativo que melhorará o desempenho do tempo de execução do aplicativo. Com essa alteração, é extremamente recomendável que você teste seu aplicativo nesse ambiente de compilação. Por padrão, a configuração de build **Release** habilita a cadeia de ferramentas nativa .NET, então é importante testar seu aplicativo com essa configuração **Release** e verificar se seu aplicativo se comporta como o esperado. Alguns problemas de depuração comuns que podem acontecer com o .NET nativo estão explicados mais detalhadamente [aqui](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx).
 
-## Configurar um pacote do aplicativo
+## <a name="configure-an-app-package"></a>Configurar um pacote do aplicativo
 
 O arquivo de manifesto do aplicativo (package.appxmanifest.xml) tem as propriedades e as configurações necessárias para criar o pacote do aplicativo. Por exemplo, as propriedades no arquivo de manifesto descrevem a imagem a ser usada como o bloco do aplicativo e as orientações compatíveis com o aplicativo quando um usuário gira o dispositivo.
 
@@ -42,7 +42,7 @@ O Visual Studio pode associar o pacote à Loja. Quando você faz isso, alguns do
 1.  Em **Gerenciador de soluções**, expanda o nó do projeto do seu aplicativo UWP.
 2.  Clique duas vezes no arquivo **Package.appxmanifest**. Se o arquivo de manifesto já estiver aberto no modo de exibição de código XML, o Visual Studio solicitará que você feche o arquivo.
 3.  Agora é possível decidir como configurar o aplicativo. Cada guia contém informações que você pode configurar sobre o aplicativo e links para obter mais informações, se necessário.<br/>
-    ![](images/packaging-screen1.jpg)
+    ![Designer de manifesto do Visual Studio](images/packaging-screen1.jpg)
 
     Verifique se você tem todas as imagens exigidas para um aplicativo UWP na guia **Ativos visuais**.
 
@@ -50,7 +50,7 @@ O Visual Studio pode associar o pacote à Loja. Quando você faz isso, alguns do
 
 4.  Salve o arquivo depois de fazer as edições necessárias para o aplicativo.
 
-## Criar um pacote do aplicativo
+## <a name="create-an-app-package"></a>Criar um pacote de aplicativo
 
 Para distribuir um aplicativo por meio da Loja, você deve criar um pacote appxupload. Você pode fazer isso usando o assistente **Criar pacotes do aplicativo**. Siga os passos a seguir para criar um pacote adequado para envio de loja com o Microsoft Visual Studio 2015.
 
@@ -58,25 +58,25 @@ Para distribuir um aplicativo por meio da Loja, você deve criar um pacote appxu
 
 1.  Em **Gerenciador de soluções**, abra a solução para seu projeto de aplicativo UWP.
 2.  Clique com botão direito no projeto e escolha **Loja**->**Criar pacotes de aplicativo**. Se essa opção estiver desabilitada ou não aparecer, verifique se o projeto é um projeto UWP.<br/>
-    ![](images/packaging-screen2.jpg)
+    ![Menu de contexto com navegação para Criar Pacotes de Aplicativos](images/packaging-screen2.jpg)
 
     O assistente **Criar pacotes de aplicativo** aparecerá.
 
 3.  Selecione Sim na primeira caixa de diálogo perguntando se você deseja criar pacotes para carregar na Windows Store. Depois, clique em Avançar.<br/>
-    ![](images/packaging-screen3.jpg)
+    ![Janela da caixa de diálogo Crie Seus Pacotes mostrada](images/packaging-screen3.jpg)
 
     Se você escolher Não aqui, o Visual Studio não irá gerar o pacote .appxupload de que você precisa para o envio à loja. Caso queira apenas fazer o sideload do aplicativo para executá-lo em dispositivos internos, você pode selecionar essa opção. Para obter mais informações sobre o sideload, consulte [Habilitar seu dispositivo para desenvolvimento](https://msdn.microsoft.com/library/windows/apps/Dn706236).
 
 4.  Entre usando a conta de desenvolvedor no Centro de Desenvolvimento do Windows. (Se ainda não tiver uma conta de desenvolvedor, o assistente ajudará você a criar uma.)
 5.  Selecione o nome do aplicativo para o pacote ou reserve um novo caso você ainda não tenha reservado um com o portal do Centro de Desenvolvimento do Windows.<br/>
-    ![](images/packaging-screen4.jpg)
+    ![Janela Criar Pacotes de Aplicativos com a seleção do nome do aplicativo mostrada](images/packaging-screen4.jpg)
 6.  Certifique-se de selecionar todas as três configurações de arquitetura (x86, x64 e ARM) na caixa de diálogo **Selecionar e configurar pacotes**. Dessa forma, seu aplicativo poderá ser implantado na grande maioria dos dispositivos. Na caixa de listagem **Gerar lote de aplicativo**, selecione **Sempre**. Isso torna o processo de envio para a Loja muito mais simples, porque você terá apenas um arquivo para carregar (. appxupload). O pacote único conterá todos os pacotes necessários a serem implantados em dispositivos com cada arquitetura de processador.<br/>
-    ![](images/packaging-screen5.jpg)
+    ![Janela Criar Pacotes de Aplicativos com a configuração do pacote mostrada](images/packaging-screen5.jpg)
 7.  É uma boa ideia incluir arquivos de símbolo PDB completos tendo em vista a melhor experiência de [análise de falhas](http://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/) no Centro de Desenvolvimento do Windows. Você pode saber mais sobre a depuração com símbolos visitando [Depurando com símbolos](https://msdn.microsoft.com/library/windows/desktop/Ee416588).
 8.  Agora é possível configurar os detalhes para criar o pacote. Quando estiver pronto para publicar seu aplicativo, você carregará os pacotes do local de saída.
 9.  Clique em **Criar**, para gerar seu pacote appxupload.
 10. Agora, você verá esta caixa de diálogo.<br/>
-    ![](images/packaging-screen6.jpg)
+    ![Janela Criação de pacote concluída com opções de validação mostradas](images/packaging-screen6.jpg)
 
     Valide o aplicativo antes de enviá-lo para à Loja para certificação em uma máquina local ou remota. (Você pode validar apenas compilações de lançamento para o pacote do aplicativo e não compilações de depuração.)
 
@@ -100,7 +100,7 @@ Para distribuir um aplicativo por meio da Loja, você deve criar um pacote appxu
 6.  Na lista **Modo de autenticação**, escolha **Nenhum**, se seu dispositivo não exigir que você se registre usando suas credenciais do Windows.
 7.  Escolha o botão **Selecionar** e, em seguida, escolha o botão **Iniciar o Kit de Certificação de Aplicativos Windows**. Se as ferramentas remotas estiverem sendo executadas nesse dispositivo, o Visual Studio se conectará a ele e, então, realizará o testes de validação. Consulte [Testes do Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/mt186450).
 
-## Fazer o sideload do pacote do aplicativo
+## <a name="sideload-your-app-package"></a>Fazer o sideload do pacote do aplicativo
 
 Com pacotes do aplicativo UWP, não basta instalar um aplicativo no dispositivo, como aplicativos da área de trabalho. Normalmente, você baixa esses aplicativos na Loja e é assim que eles são instalados no dispositivo. Mas você pode fazer o sideload de aplicativos para o dispositivo sem enviá-los à Loja. Isso permite instalar e testá-los usando o pacote do aplicativo (.appx) que você criou. Caso tenha um aplicativo que não queira vender na Loja, como um aplicativo de linha de negócios (LOB), você pode fazer o sideload desse aplicativo de maneira que outros usuários na empresa possam usá-lo.
 
@@ -124,23 +124,14 @@ A lista a seguir apresenta requisitos para o sideload do aplicativo.
     -   C:\\Projects\\MyApp\\MyApp\\AppPackages\\MyApp\_1.0.2.0\_x64\_Test
 2.  No dispositivo de destino, abra a pasta de teste. Por exemplo, C:\\Projects\\MyApp\\MyApp\\AppPackages\\MyApp\_1.0.2.0\_Test
 3.  Clique com botão direito no arquivo **Add-AppDevPackage.ps1** e, em seguida, escolha **Executar com PowerShell** e siga os prompts.<br/>
-    ![](images/packaging-screen7.jpg)
+    ![Explorador de arquivos posicionado no script do PowerShell mostrado](images/packaging-screen7.jpg)
 
     Quando o pacote do aplicativo tiver sido instalado, você verá a seguinte mensagem na janela do PowerShell: Seu aplicativo foi instalado com êxito.
 
     **Observação**  Para abrir o menu de atalho em um tablet, toque a tela onde você gostaria de clicar com o botão direito, segure até um círculo completo aparecer e, então, levante o dedo. O menu de atalho será exibido depois que você levantar o dedo.
 4.  Clique no botão Iniciar e digite o nome do aplicativo para iniciá-lo.
 
- 
 
- 
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

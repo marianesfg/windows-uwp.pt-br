@@ -6,12 +6,12 @@ ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 5707d36533e1b6566efb23ca9b6bf2bbf659cc63
+ms.sourcegitcommit: 5b52f6a8e944e4166c2f4c7e16e4a83ddff23dac
+ms.openlocfilehash: 09e2241523411daa372bc7630d13b96a2aa8203b
 
 ---
 
-# Diretrizes de direcionamento
+# <a name="guidelines-for-targeting"></a>Diretrizes de direcionamento
 
 A seleção por área touch no Windows usa a área de contato total de cada dedo detectado por um digitalizador de toque. O conjunto maior e mais complexo de dados de entrada relatados pelo digitalizador é usado para aumentar a precisão ao determinar o destino desejado (ou mais provável) pelo usuário.
 
@@ -25,7 +25,7 @@ A seleção por área touch no Windows usa a área de contato total de cada dedo
 
 Este tópico descreve o uso da geometria de contato para seleção por área de toque e fornece as práticas recomendadas de direcionamento em aplicativos UWP.
 
-## Medidas e dimensionamento
+## <a name="measurements-and-scaling"></a>Medidas e dimensionamento
 
 
 Para manter-se consistente entre diferentes tamanhos de tela e densidades de pixels, todos os tamanhos desejados são apresentados em unidades físicas (milímetros). As unidades físicas podem ser convertidas para pixels ao usar a seguinte equação:
@@ -44,17 +44,17 @@ Pixels = 48 pixels
 
 Esse resultado deve ser ajustado de acordo com cada nível de ajuste predefinido pelo sistema.
 
-## Limites
+## <a name="thresholds"></a>Limites
 
 
 Os limites de distância e tempo podem ser usados para determinar o resultado de uma interação.
 
-Por exemplo, quando um toque é detectado, ele é registrado se o objeto for arrastado em menos de 2,7 mm do ponto de toque e o dedo for levantado em 0,1 segundo ou menos depois do toque. Mover o dedo além desse limite de 2,7 mm faz com que o objeto seja arrastado e selecionado ou movido (para saber mais, veja [Diretrizes de deslizamento transversal](guidelines-for-cross-slide.md)). Dependendo do seu aplicativo, segurar o dedo por mais de 0,1 segundo pode fazer com que o sistema faça uma interação de autorrevelação (para saber mais, veja [Diretrizes de comentários visuais](guidelines-for-visualfeedback.md#selfreveal)).
+Por exemplo, quando um toque é detectado, ele é registrado se o objeto for arrastado em menos de 2,7 mm do ponto de toque e o dedo for levantado em 0,1 segundo ou menos depois do toque. Mover o dedo além desse limite de 2,7 mm faz com que o objeto seja arrastado e selecionado ou movido (para saber mais, veja [Diretrizes de deslizamento transversal](guidelines-for-cross-slide.md)). Dependendo do seu aplicativo, segurar o dedo por mais de 0,1 segundo pode fazer com que o sistema faça uma interação de autorrevelação (para saber mais, veja [Diretrizes de comentários visuais](guidelines-for-visualfeedback.md)).
 
-## Tamanhos do alvo
+## <a name="target-sizes"></a>Tamanhos do alvo
 
 
-Em geral, defina o tamanho do alvo de toque como 9mm ou maior (48x48 pixels em uma tela de 135PPI em um nível de ajuste predefinido de 1,0x). Evite usar alvos de toque que tenham menos de 7mm.
+Em geral, defina o tamanho do alvo de toque como 9 mm ou maior (48x48 pixels em uma tela de 135 PPI em um nível de ajuste predefinido de 1,0x). Evite usar alvos de toque que tenham menos de 7 mm.
 
 O diagrama a seguir mostra como o tamanho do destino normalmente é uma combinação do destino visual, do tamanho do destino real e de qualquer área de preenchimento entre o destino real e outros destinos possíveis.
 
@@ -89,8 +89,8 @@ A tabela a seguir lista os tamanhos mínimos e recomendados para os componentes 
 </tr>
 <tr class="odd">
 <td align="left">Tamanho real do alvo</td>
-<td align="left">7mm</td>
-<td align="left">Maior ou igual a 9mm (48 x 48 px em 1x)</td>
+<td align="left">7 mm</td>
+<td align="left">Maior ou igual a 9 mm (48 x 48 px em 1x)</td>
 </tr>
 <tr class="even">
 <td align="left">Tamanho total do alvo</td>
@@ -113,7 +113,7 @@ Essas recomendações de tamanho de destino podem ser ajustadas de acordo com de
 -   Visualizações por toque
 -   Hardware e digitalizadores de toque
 
-## Assistência de direcionamento
+## <a name="targeting-assistance"></a>Assistência de direcionamento
 
 
 O Windows oferece assistência de direcionamento para suportar cenários onde as recomendações de tamanho ou de preenchimento mínimos apresentados aqui não são aplicáveis, por exemplo, hiperlinks em uma página da Web, controles de calendário, listas suspensas e caixas de combinação ou seleção de texto.
@@ -122,7 +122,7 @@ Essas melhorias na plataforma de direcionamento e os comportamentos da interface
 
 Se um elemento tocável deve ser menor que o tamanho mínimo de alvo recomendado, as seguintes técnicas podem ser usadas para minimizar os problemas de direcionamento resultantes.
 
-## Conector
+## <a name="tethering"></a>Conector
 
 
 O compartilhamento é uma indicação visual (um conector de um ponto de contato até o retângulo delimitador de um objeto) usada para indicar ao usuário que ele está conectado e interagindo com um objeto, mesmo que o contato de entrada não esteja diretamente em contato com o objeto. Isso pode ocorrer quando:
@@ -132,7 +132,7 @@ O compartilhamento é uma indicação visual (um conector de um ponto de contato
 
 Esse recurso não está para exposto para desenvolvedores de aplicativos da Windows Store que usam o JavaScript.
 
-## Esfregar
+## <a name="scrubbing"></a>Esfregar
 
 
 Esfregar significa tocar em qualquer lugar dentro de um campo de alvos e deslizar para selecionar o alvo desejado sem tirar o dedo até que esteja sobre o alvo desejado. Isso também é conhecido como "ativação sem largar", onde o objeto que é ativado é aquele que foi tocado por último quando o dedo foi suspenso da tela.
@@ -147,12 +147,12 @@ Siga estas diretrizes para criar interações de esfregar:
 -   O conector de um destino de esfregar é especificado quando as ações realizadas pelo destino não são destrutivas, como alternar entre datas no calendário.
 -   O conector é especificado em uma única direção, horizontal ou vertical.
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 
 **Exemplos**
-* [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Exemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Exemplo de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
@@ -175,6 +175,6 @@ Siga estas diretrizes para criar interações de esfregar:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,23 +4,23 @@ description: "Esta seção contém artigos sobre como compilar aplicativos segur
 ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: a178f992ddd39b5609ce6d15b7e3560e157b9afb
-ms.openlocfilehash: 19f024bd3ad99b4ef9355cc3c9229b1b3ffc51e2
+ms.sourcegitcommit: 82f6e2decde2d332bd08b0b9798350b973860f21
+ms.openlocfilehash: b30492c3c74b19d5ce306829302be17ff303723f
 
 ---
 
-# Segurança
+# <a name="security"></a>Segurança
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta seção contém artigos sobre como compilar aplicativos seguros da Plataforma Universal do Windows (UWP) para o Windows 10.
 
-## Introdução 
+## <a name="introduction"></a>Introdução 
 
-Se você for iniciante no desenvolvimento em Windows ou UWP, comece com a [Introdução ao desenvolvimento de aplicativos seguros do Windows](web-authentication-broker.md). Este artigo de nível introdutório fornece uma visão geral das considerações de segurança para aplicativos e os vários recursos disponíveis no Windows 10.
+Se você for iniciante no desenvolvimento em Windows ou UWP, comece com a [Introdução ao desenvolvimento de aplicativos seguros do Windows](intro-to-secure-windows-app-development.md). Este artigo de nível introdutório fornece uma visão geral das considerações de segurança para aplicativos e os vários recursos disponíveis no Windows 10.
 
-## Autenticação e identidade do usuário
+## <a name="authentication-and-user-identity"></a>Autenticação e identidade do usuário
 
 A [seção de autenticação e identidade do usuário](authentication-and-user-identity.md) contém instruções passo a passo para cenários relacionados ao logon do usuário e à identidade. Os aplicativos têm diversas opções para a autenticação do usuário, desde SSO (logon único) usando [agente de autenticação da Web](web-authentication-broker.md) até autenticação de dois fatores altamente segura.
 
@@ -39,7 +39,7 @@ A [seção de autenticação e identidade do usuário](authentication-and-user-i
 <tr><td>[Agente de autenticação da Web](web-authentication-broker.md)</td><td>Este artigo explica como conectar o aplicativo a um provedor de identidade online que usa protocolos de autenticação, como OpenID ou OAuth, como Facebook, Twitter, Flickr, Instagram etc. O método [AuthenticateAsync](https://msdn.microsoft.com/library/windows/apps/br212066) envia uma solicitação ao provedor de identidade online e obtém um token de acesso que descreve os recursos do provedor aos quais o aplicativo tem acesso.</td></tr>
 </table>
 
-## Criptografia 
+## <a name="cryptography"></a>Criptografia 
 
 A seção de criptografia contém informações sobre tópicos relacionados mais complexos, criptográficos. 
 
@@ -54,6 +54,6 @@ A seção de criptografia contém informações sobre tópicos relacionados mais
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

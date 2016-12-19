@@ -4,12 +4,12 @@ description: "Este artigo descreve a nova tecnologia Microsoft Passport que faz 
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 979eb3c6ac41f304e19093055574db7805a115ff
+ms.sourcegitcommit: 6dbc98867c3a1a14a04590c65ba54ca3c37cd426
+ms.openlocfilehash: cb24b1e75dbb8f37fcd4482e3e0d468855155f04
 
 ---
 
-# Microsoft Passport e Windows Hello
+# <a name="microsoft-passport-and-windows-hello"></a>Microsoft Passport e Windows Hello
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -23,76 +23,76 @@ Para obter um exemplo de código completo, consulte [Exemplo de código do Micro
 
 Para obter um tutorial passo a passo sobre como criar um aplicativo UWP usando o Microsoft Passport e o serviço de autenticação de backup, veja os artigos [Aplicativo de logon do Microsoft Passport](microsoft-passport-login.md) e [Serviço de logon do Microsoft Passport](microsoft-passport-login-auth-service.md).
 
-## 1 Introdução
+## <a name="1-introduction"></a>1 Introdução
 
 
 Uma pressuposição fundamental sobre a segurança das informações é que um sistema pode identificar quem o está usando. Identificar um usuário permite que o sistema decida se o usuário está identificado corretamente (um processo conhecido como autenticação) e, em seguida, determine o que um usuário devidamente autenticado deve ser capaz de fazer (autorização). A esmagadora maioria dos sistemas de computador implantados em todo o mundo depende de credenciais de usuário para tomar decisões sobre autenticação e autorização, o que significa que esses sistemas dependem de senhas reutilizáveis criadas pelo usuário como base da segurança. A máxima bastante citada de que a autenticação pode envolver "algo que você conhece, algo que você tem ou algo que você é" destaca o problema com precisão: uma senha reutilizável é um fator de autenticação por si, logo, quem sabe a senha pode representar o usuário que a possui.
 
-## 1.1 Problemas com as credenciais tradicionais
+## <a name="11-problems-with-traditional-credentials"></a>1.1 Problemas com as credenciais tradicionais
 
 
 Desde meados dos anos 1960, quando Fernando Corbató e sua equipe do Massachusetts Institute of Technology defenderam a introdução da senha, os usuários e administradores precisam lidar com o uso de senhas para a autenticação e autorização de usuários. Com o tempo, as melhores opções para armazenamento e uso de senhas progrediram um pouco (com hash seguro e salting, por exemplo), mas ainda há dois problemas. As senhas são fáceis de clonar e fáceis de roubar. Além disso, falhas de implementação podem torná-las inseguras, e os usuários têm dificuldades para equilibrar conveniência e segurança.
 
-## 1.1.1 Roubo de credenciais
+## <a name="111-credential-theft"></a>1.1.1 Roubo de credenciais
 
 
 O maior risco das senhas é simples: um invasor pode roubá-las facilmente. Todos os locais em que uma senha é inserida, processada ou armazenada são vulneráveis. Por exemplo, um invasor pode roubar uma coleção de senhas ou hashes de um servidor de autenticação espiando o tráfego de rede para um servidor de aplicativos, implantando malware em um aplicativo ou em um dispositivo, registrando em log pressionamentos de teclas do usuário em um dispositivo ou observando quais caracteres um usuário digita. Esses são apenas os métodos de ataque mais comuns.
 
 Outro risco relacionado é o de repetição da credencial, em que um invasor captura uma credencial válida espiando uma rede insegura e a reproduz posteriormente para representar um usuário válido. A maioria dos protocolos de autenticação (inclusive Kerberos e OAuth) protege contra ataques de reprodução incluindo um carimbo de data/hora no processo de troca de credenciais, mas essa tática só protege o token que o sistema de autenticação emitiu, e não a senha que o usuário fornece para receber o tíquete inicialmente.
 
-## 1.1.2 Reutilização de credenciais
+## <a name="112-credential-reuse"></a>1.1.2 Reutilização de credenciais
 
 
 
 
 A abordagem comum para o uso de um endereço de email como nome de usuário piora um problema ruim. Um invasor que recupera com êxito o par nome de usuário/senha de um sistema comprometido pode acabar tentando usar esse mesmo par em outros sistemas. Essa tática funciona surpreendentemente com frequência para permitir que invasores passem de um sistema comprometido para outros sistemas. O uso de endereços de email como nomes de usuário leva a mais problemas, os quais exploraremos posteriormente neste guia.
 
-## 1.2 Solucionando problemas com credenciais
+## <a name="12-solving-credential-problems"></a>1.2 Solucionando problemas com credenciais
 
 
 Resolver os problemas que as senhas trazem é complicado. Apenas apertar políticas de senha não será suficiente: os usuários podem simplesmente reciclar, compartilhar ou anotar as senhas. Embora a educação do usuário seja crítica para a segurança da autenticação, só ela também não elimina o problema.
 
 O Microsoft Passport substitui senhas pela autenticação de dois fatores (2FA) forte, verificando credenciais existentes e criando uma credencial específica para o dispositivo que um gesto do usuário com base em PIN ou biometria protege. 
 
-## 2 O que é o Microsoft Passport?
+## <a name="2-what-is-microsoft-passport"></a>2 O que é o Microsoft Passport?
 
 
-## 2.1 O que é o Windows Hello?
+## <a name="21-what-is-windows-hello"></a>2.1 O que é o Windows Hello?
 
 
 Windows Hello é o nome que a Microsoft deu ao novo sistema biométrico de entrada interno no Windows 10. Como foi integrado diretamente no sistema operacional, o Windows Hello permite a identificação de face ou impressão digital para desbloquear os dispositivos dos usuários. A autenticação acontece quando o usuário fornece seu identificador biométrico exclusivo para acessar as credenciais do Microsoft Passport específicos do dispositivo. Dessa maneira, alguém que roubar o dispositivo não conseguirá fazer logon, a menos que tenha o PIN. O repositório seguro de credenciais do Windows protege os dados biométricos no dispositivo. Ao usar o Windows Hello para desbloquear um dispositivo, o usuário autorizado tem acesso à experiência do Windows e a todos os aplicativos, dados, sites e serviços.
 
 O autenticador Windows Hello é conhecido como Hello. O Hello é exclusivo para a combinação de um dispositivo separado e um usuário específico. Ele não usa perfil móvel entre dispositivos, não é compartilhado com um servidor ou aplicativo de chamada e não pode ser facilmente extraído de um dispositivo. Se vários usuários compartilharem um dispositivo, cada um deles precisará configurar a própria conta. Cada conta recebe um Hello exclusivo para esse dispositivo. Você pode pensar em um Hello como um token que pode usar para desbloquear (ou liberar) uma credencial armazenada. O Hello em si não autentica você para um aplicativo ou serviço, mas libera credenciais que podem fazer isso. Em outras palavras, o Hello não é uma credencial de usuário, e sim um segundo fator para o Microsoft Passport.
 
-## 2.2 O que é o Microsoft Passport?
+## <a name="22-what-is-microsoft-passport"></a>2.2 O que é o Microsoft Passport?
 
 
 O Windows Hello oferece uma maneira robusta para um dispositivo reconhecer um usuário individual, o que resolve a primeira parte do caminho entre um usuário e um serviço solicitado ou item de dados. Porém, depois que o dispositivo tiver reconhecido o usuário, ele ainda precisará autenticá-lo para determinar se deve conceder acesso a um recurso solicitado. O Microsoft Passport oferece 2FA forte, que está totalmente integrada ao Windows e substitui senhas reutilizáveis por uma combinação de um dispositivo específico e um gesto biométrico ou um PIN.
 
 No entanto, o Microsoft Passport não é apenas um substituto para sistemas 2FA tradicionais. Conceitualmente, ele é semelhante a cartões inteligentes: a autenticação é realizada usando-se primitivos criptográficos em vez de comparações de cadeias de caracteres, e o material da chave do usuário permanece seguro em um hardware à prova de adulterações. O Microsoft Passport também não exige os componentes de infraestrutura extra necessários para a implantação de cartões inteligentes. Em particular, você não precisa de uma PKI (Infraestrutura de Chave Pública), caso não tenha uma no momento. O Microsoft Passport integra as principais vantagens de cartões inteligentes – a flexibilidade de implantação para cartões inteligentes virtuais e a segurança robusta para cartões inteligentes físicos – sem nenhuma das desvantagens.
 
-## 2.3 Como o Microsoft Passport funciona
+## <a name="23-how-microsoft-passport-works"></a>2.3 Como o Microsoft Passport funciona
 
 
-Quando o usuário configura o Microsoft Passport na máquina, o Microsoft Passport gera um novo par de chaves pública/privada no dispositivo. O TPM gera e protege essa chave privada. Se o dispositivo não tiver um TPM, a chave privada será criptografada e protegida por software. Além disso, os dispositivos habilitados para TPM geram um bloco de dados que pode ser usado para atestar que uma chave está associada ao TPM. Essas informações de atestado podem ser usadas na solução para decidir se o usuário recebeu um nível de autorização diferente, por exemplo.
+Quando o usuário configura o Microsoft Passport na máquina, o Microsoft Passport gera um novo par de chaves pública/privada no dispositivo. O [Trusted Platform Module](https://technet.microsoft.com/itpro/windows/keep-secure/trusted-platform-module-overview) (TPM) gera e protege essa chave privada. Se o dispositivo não tiver um chip TPM, a chave privada será criptografada e protegida por software. Além disso, os dispositivos habilitados para TPM geram um bloco de dados que pode ser usado para atestar que uma chave está associada ao TPM. Essas informações de atestado podem ser usadas na solução para decidir se o usuário recebeu um nível de autorização diferente, por exemplo.
 
 Para habilitar o Microsoft Passport em um dispositivo, o usuário deve ter sua conta do Azure Active Directory ou da Microsoft conectada nas configurações do Windows.
 
-## 2.3.1 Como as chaves são protegidas
+## <a name="231-how-keys-are-protected"></a>2.3.1 Como as chaves são protegidas
 
 
 Sempre que é gerado, o material de chave deve ser protegido contra ataques. A maneira mais robusta de fazer isso é por meio de hardware especializado. Há um longo histórico de uso de módulos de segurança de hardware (HSMs) para gerar, armazenar e processar chaves para aplicativos críticos de segurança. Os cartões inteligentes são um tipo especial de HSM, da mesma forma que os dispositivos compatíveis com o padrão TPM do Trusted Computing Group. Sempre que possível, a implementação do Microsoft Passport usufrui a vantagem do hardware do TPM onboard para gerar, armazenar e processar chaves. No entanto, o Microsoft Passport e o Microsoft Passport for Work não requerem um TPM onboard.
 
 Sempre que possível, a Microsoft recomenda o uso de hardware do TPM. O TPM protege contra diversos ataques conhecidos e possíveis, incluindo ataques de força bruta ao PIN. O TPM também fornece uma camada adicional de proteção após o bloqueio de uma conta. Quando o TPM tiver bloqueado o material da chave, o usuário precisará redefinir o PIN. A redefinição do PIN significa que todas as chaves e os certificados criptografados com o material da chave anterior serão removidos.
 
-## 2.3.2 Autenticação
+## <a name="232-authentication"></a>2.3.2 Autenticação
 
 
 Quando um usuário deseja acessar o material da chave protegido, o processo de autenticação começa com o usuário inserindo um PIN ou um gesto biométrico para desbloquear o dispositivo, um processo às vezes chamado de "liberação da chave".
 
 Um aplicativo jamais pode usar as chaves de outro aplicativo, e ninguém nunca pode usar as chaves de outro usuário. Essas chaves são usadas para assinar solicitações enviadas para o provedor de identidade ou o IDP, em busca do acesso a recursos especificados. Os aplicativos podem usar APIs específicas para solicitar operações que exijam material da chave para determinadas ações. O acesso por meio dessas APIs não requer uma validação explícita por meio de um gesto do usuário, e o material da chave não é exposto ao aplicativo solicitante. Em vez disso, o aplicativo solicita uma ação específica, como assinar uma parte de dados, e a camada do Microsoft Passport lida com o trabalho real e retorna os resultados.
 
-## 2.4 Preparando-se para implementar o Passport
+## <a name="24-getting-ready-to-implement-passport"></a>2.4 Preparando-se para implementar o Passport
 
 
 Agora que temos uma compreensão básica de como o Microsoft Passport e Windows Hello funcionam, vamos dar uma olhada em como implementá-los nos próprios aplicativos. Apenas para ser bem claro: quando falamos sobre as APIs, estamos falando sobre as APIs do Microsoft Passport. No momento, não há APIs para o Windows Hello.
@@ -101,14 +101,14 @@ Existem cenários diferentes que podemos implementar usando o Microsoft Passport
 
 Por fim, lembre-se de que as APIs do Microsoft Passport exigem o uso do SDK do Windows 10, que corresponde ao sistema operacional em que o aplicativo será usado. Em outras palavras, o SDK do Windows 10.0.10240 deve ser usado para aplicativos que serão implantados no Windows 10, e o 10.0.10586 deve ser usado para aplicativos que serão implantados no Windows 10, versão 1511.
 
-## 3 Implementação do Microsoft Passport
+## <a name="3-implementing-microsoft-passport"></a>3 Implementação do Microsoft Passport
 
 
 Neste capítulo, começamos com um cenário de ambiente intacto, sem nenhum sistema de autenticação existente, e explicamos como implementar o Microsoft Passport.
 
 A próxima seção aborda como migrar de um sistema de nome de usuário/senha existente. No entanto, mesmo que esse capítulo seja o mais interessante para você, convém procurá-lo para obter uma compreensão básica do processo e do código necessário.
 
-## 3.1 Registro de novos usuários
+## <a name="31-enrolling-new-users"></a>3.1 Registro de novos usuários
 
 
 Começamos com um serviço totalmente novo que usará o Microsoft Passport e um novo usuário hipotético que está pronto para se inscrever em um novo dispositivo.
@@ -213,7 +213,7 @@ static async void RegisterUser(string AccountId)
 }
 ```
 
-## 3.1.1 Atestado
+## <a name="311-attestation"></a>3.1.1 Atestado
 
 
 Durante a criação do par de chaves, também existe uma opção para solicitar as informações de atestado, que são geradas pelo chip do TPM. Essas informações opcionais podem ser enviadas para o servidor como parte do processo de inscrição. O atestado da chave TPM é um protocolo que prova criptograficamente que uma chave está associada ao TPM. Esse tipo de atestado pode ser usado para garantir que uma determinada operação criptográfica ocorreu no TPM de um computador específico.
@@ -231,12 +231,12 @@ Ao receber a chave RSA gerada, a instrução de atestado e o certificado AIK, o 
 
 Seu aplicativo pode atribuir ao usuário um nível de autorização diferente, dependendo dessas condições. Por exemplo, se uma dessas verificações falhar, talvez o usuário não seja registrado ou poderá haver um limite para o que o usuário pode fazer.
 
-## 3.2 Logon com o Microsoft Passport
+## <a name="32-logging-on-with-microsoft-passport"></a>3.2 Logon com o Microsoft Passport
 
 
 Depois de ser registrado no sistema, o usuário poderá usar o aplicativo. Dependendo do cenário, você pode pedir para os usuários se autenticarem antes que possam começar a usar o aplicativo ou apenas pedir para que eles se autentiquem assim que começarem a usar os serviços back-end.
 
-## 3.3 Forçar o usuário a fazer logon novamente
+## <a name="33-force-the-user-to-sign-in-again"></a>3.3 Forçar o usuário a fazer logon novamente
 
 
 Para alguns cenários, talvez você queira que o usuário comprove que ele é a pessoa que está atualmente conectada, antes de acessar o aplicativo ou, às vezes, antes de executar uma determinada ação dentro do aplicativo. Por exemplo, antes de um aplicativo bancário envie o comando para transferir dinheiro ao servidor, você deseja assegurar que o usuário, e não alguém que encontrou um dispositivo conectado, está tentando executar uma transação. Você pode forçar o usuário a entrar novamente no aplicativo usando a classe [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134). A linha de código a seguir forçará o usuário a inserir as credenciais.
@@ -253,7 +253,7 @@ if (consentResult.Equals(UserConsentVerificationResult.Verified))
 
 Obviamente, você também pode usar o mecanismo de resposta de desafio do servidor, descrito no próximo capítulo, com o servidor que exige que o usuário insira o próprio código PIN ou as credenciais biométricas. Isso depende do cenário que você como desenvolvedor precisa implementar. Esse mecanismo é descrito na seção a seguir.
 
-## 3.4 Autenticação no back-end
+## <a name="34-authentication-at-the-backend"></a>3.4 Autenticação no back-end
 
 
 Quando o aplicativo tenta acessar serviços no back-end protegido, o serviço envia um desafio para o aplicativo. O aplicativo usa a chave privada do usuário para assinar o desafio e o reenvia para o servidor. Como o servidor armazenou a chave pública para esse usuário, ele usa APIs criptográficas padrão para se assegurar de que a mensagem tenha sido assinada mesmo com a chave privada correta. No cliente, a entrada é feita pelas APIs do Microsoft Passport: o desenvolvedor jamais terá acesso à chave privada de nenhum usuário.
@@ -355,7 +355,7 @@ static async Task<IBuffer> GetAuthenticationMessageAsync(IBuffer message, String
 
 Implementar o mecanismo de resposta de desafio correto está fora do escopo deste documento, mas esse tópico é algo que precisa de muita consideração para criar um mecanismo seguro que impeça coisas como ataques de reprodução ou man-in-the-middle.
 
-## 3.5 Registro de outro dispositivo
+## <a name="35-enrolling-another-device"></a>3.5 Registro de outro dispositivo
 
 
 Hoje em dia, é bastante comum que os usuários tenham vários dispositivos com os mesmos aplicativos instalados. Como isso funciona quando se usa o Microsoft Passport com vários dispositivos?
@@ -375,7 +375,7 @@ var keyCreationResult = await KeyCredentialManager.RequestCreateAsync(
 
 Para facilitar ainda mais para o usuário reconhecer quais dispositivos estão registrados, você pode optar por enviar o nome do dispositivo ou outro identificador como parte do registro. Isso também é útil, por exemplo, caso você queira implementar um serviço no back-end onde os usuários possam cancelar o registro de dispositivos quando um dispositivo é perdido.
 
-## 3.6 Como usar várias contas no aplicativo
+## <a name="36-using-multiple-accounts-in-your-app"></a>3.6 Como usar várias contas no aplicativo
 
 
 Além de oferecer suporte a vários dispositivos para uma única conta, também é comum dar suporte a várias contas em um único aplicativo. Por exemplo, talvez você esteja se conectando a várias contas do Twitter de dentro de seu aplicativo. Com o Microsoft Passport, é possível criar vários pares de chaves e dar suporte a várias contas dentro do aplicativo.
@@ -390,7 +390,7 @@ var openKeyResult = await KeyCredentialManager.OpenAsync(AccountId);
 
 O restante do fluxo é o mesmo, conforme descrito antes. Para ser claro, todas essas contas são protegidas pelo mesmo PIN ou gesto biométrico, já que neste cenário, todas são usadas em um único dispositivo com a mesma conta do Windows.
 
-## 4 Migração de um sistema existente para o Microsoft Passport
+## <a name="4-migrating-an-existing-system-to-microsoft-passport"></a>4 Migração de um sistema existente para o Microsoft Passport
 
 
 Nesta seção, vamos abordar um aplicativo Plataforma Universal do Windows existente e um sistema back-end que usa um banco de dados que armazena o nome de usuário e a senha com hash. Esses aplicativos coletam credenciais do usuário quando o aplicativo é iniciado e fornecem as credenciais quando o sistema back-end retorna o desafio de autenticação.
@@ -415,7 +415,7 @@ Caso o aplicativo consiga criar a [**KeyCredential**](https://msdn.microsoft.com
 
 A etapa final na migração para um cenário do Microsoft Passport completo é desabilitar a opção de nome de logon e senha no aplicativo e remover as senhas com hash armazenadas no banco de dados.
 
-## 5 Resumo
+## <a name="5-summary"></a>5 Resumo
 
 
 O Windows 10 apresenta um nível mais alto de segurança que também é simples de colocar em prática. O Windows Hello oferece um novo sistema de entrada biométrica que reconhece o usuário e combate ativamente iniciativas de contornar a identificação apropriada. O Microsoft Passport funciona com o Windows Hello para oferecer várias camadas de chaves e certificados que jamais podem ser revelados ou usados fora do trusted platform module. Além disso, uma camada adicional de segurança está disponível por meio do uso opcional de chaves e certificados de identidade de atestado.
@@ -426,16 +426,16 @@ As opções de implementação flexível permitem que o Microsoft Passport e o W
 
 Missão cumprida! Você acabou de tornar a Internet um lugar seguro!
 
-## 6 Recursos
+## <a name="6-resources"></a>6 Recursos
 
 
-### 6.1 Artigos e código de exemplo
+### <a name="61-articles-and-sample-code"></a>6.1 Artigos e código de exemplo
 
 -   [Visão geral do Windows Hello](http://windows.microsoft.com/windows-10/getstarted-what-is-hello)
 -   [Detalhes de implementação do Microsoft Passport e do Windows Hello](https://msdn.microsoft.com/library/mt589441)
 -   [Exemplo de código do Microsoft Passport no GitHub](http://go.microsoft.com/fwlink/?LinkID=717812)
 
-### 6.2 Terminologia
+### <a name="62-terminology"></a>6.2 Terminologia
 
 |                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -448,12 +448,12 @@ Missão cumprida! Você acabou de tornar a Internet um lugar seguro!
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Aplicativo de logon do Microsoft Passport](microsoft-passport-login.md)
 * [Serviço de logon do Microsoft Passport](microsoft-passport-login-auth-service.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

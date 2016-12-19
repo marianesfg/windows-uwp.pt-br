@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar e consultar arquivos e pastas
 description: "Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
 
 ---
-# Enumerar e consultar arquivos e pastas
+# <a name="enumerate-and-query-files-and-folders"></a>Enumerar e consultar arquivos e pastas
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -16,10 +16,12 @@ ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
 
 Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta.
 
+Para obter orientações detalhadas sobre como armazenar dados de seu aplicativo da Plataforma Universal do Windows, consulte a classe [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx).
+
 **Observação**  Consulte também a [Amostra de enumeração de pastas](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
  
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 -   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
 
@@ -29,7 +31,7 @@ Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou loc
 
     Por exemplo, o código nesses exemplos exige a funcionalidade **picturesLibrary**, mas o local talvez exija outra funcionalidade ou até mesmo nenhuma funcionalidade. Para saber mais, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
-## Enumerar arquivos e pastas em um local
+## <a name="enumerate-files-and-folders-in-a-location"></a>Enumerar arquivos e pastas em um local
 
 > **Observação**  Lembre-se de declarar a funcionalidade **picturesLibrary**.
 
@@ -208,7 +210,7 @@ Como alternativa, você pode usar o método [**GetItemsAsync**](https://msdn.mic
 > Next item
 > ```
 
-## Consultar arquivos em um local e enumerar os arquivos correspondentes
+## <a name="query-files-in-a-location-and-enumerate-matching-files"></a>Consultar arquivos em um local e enumerar os arquivos correspondentes
 
 Neste exemplo, consultamos todos os arquivos na [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) agrupados por mês e, desta vez, o exemplo retorna em subpastas. Primeiro, chamamos [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) e passamos o valor [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) para o método. Isso nos dá um objeto [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066).
 
@@ -324,6 +326,6 @@ July ‎2015 (2)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

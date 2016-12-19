@@ -4,14 +4,14 @@ title: Estudo de caso do Windows Runtime 8.x para UWP, Bookstore1
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
 description: "Este tópico apresenta um estudo de caso de portabilidade de um aplicativo universal 8.1 muito simples para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fdb5414a0831d6bff607cc8cec9188d3861651fb
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 348012b4a23e60e24d2185baf71cbe147e30053a
 
 ---
 
-# Estudo de caso do Windows Runtime 8.x para UWP: Bookstore1
+# <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Estudo de caso do Windows Runtime 8.x para UWP: Bookstore1
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico apresenta um estudo de caso de portabilidade de um aplicativo universal 8.1 muito simples para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10. Um aplicativo Universal 8.1 é aquele que cria um pacote do aplicativo para o Windows 8.1, e um pacote do aplicativo diferente para o Windows Phone 8.1. Com o Windows 10, é possível criar um único pacote do aplicativo que os clientes podem instalar em uma ampla variedade de dispositivos, e é isso o que faremos neste estudo de caso. Consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
@@ -19,15 +19,15 @@ O aplicativo que portaremos consiste em uma **ListBox** associada a um modelo de
 
 Os tópicos anteriores desta seção descrevem as diferenças entre as plataformas, e eles fornecem detalhes e orientações sobre o processo de portabilidade de vários aspectos de um aplicativo de marcação XAML, através da associação a um modelo de exibição, para acessar dados. Um estudo de caso visa complementar essa orientação, mostrando-o em ação em um exemplo real. Os estudos de caso pressupõem que você tenha lido as orientações, já que elas não serão repetidas aqui.
 
-**Observação**   Ao abrir Bookstore1Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Observação**   Ao abrir Bookstore1Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas em [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
-## Downloads
+## <a name="downloads"></a>Downloads
 
 [Baixe o aplicativo universal Bookstore1\_81 do Windows 8.1](http://go.microsoft.com/fwlink/?linkid=532946).
 
 [Baixe o aplicativo do Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
 
-## O aplicativo Universal 8.1
+## <a name="the-universal-81-app"></a>O aplicativo Universal 8.1
 
 É assim que o Bookstore1\_81, o aplicativo que vamos portar, se parece. Trata-se apenas de uma caixa de listagem de livros com rolagem vertical abaixo do cabeçalho do nome do aplicativo e do título da página.
 
@@ -39,7 +39,7 @@ Bookstore1\_81 no Windows
 
 Bookstore1\_81 no Windows Phone
 
-##  Portando para um projeto do Windows 10
+##  <a name="porting-to-a-windows-10-project"></a>Portando para um projeto do Windows 10
 
 A solução Bookstore1\_81 é um projeto de Aplicativo Universal 8.1 e contém estes projetos.
 
@@ -47,7 +47,7 @@ A solução Bookstore1\_81 é um projeto de Aplicativo Universal 8.1 e contém e
 -   Bookstore1\_81.WindowsPhone. Este é o projeto que compila o pacote do aplicativo para o Windows Phone 8.1.
 -   Bookstore1\_81.Shared. Este é o projeto que contém o código-fonte, os arquivos de marcação e outros ativos e recursos usados pelos outros dois projetos.
 
-Para este estudo de caso, temos as opções usuais descritas em [Se você tiver um aplicativo Universal 8.1](w8x-to-uwp-root.md#if-you-have-an-81-universal-windows-app) em relação a quais dispositivos dar suporte. A decisão aqui é simples: este aplicativo tem os mesmos recursos e funciona basicamente com o mesmo código, nos formatos Windows 8.1 e Windows Phone 8.1. Assim, portaremos o conteúdo do projeto compartilhado (e tudo mais que precisarmos dos outros projetos) para um Windows 10 que segmenta a família de dispositivos universais (aquela que você pode instalar na maior variedade de dispositivos).
+Para este estudo de caso, temos as opções usuais descritas em [Se você tiver um aplicativo Universal 8.1](w8x-to-uwp-root.md) em relação a quais dispositivos dar suporte. A decisão aqui é simples: este aplicativo tem os mesmos recursos e funciona basicamente com o mesmo código, nos formatos Windows 8.1 e Windows Phone 8.1. Assim, portaremos o conteúdo do projeto compartilhado (e tudo mais que precisarmos dos outros projetos) para um Windows 10 que segmenta a família de dispositivos universais (aquela que você pode instalar na maior variedade de dispositivos).
 
 É uma tarefa muito rápida criar um novo projeto no Visual Studio, copiar arquivos para ele do Bookstore1\_81 e incluir os arquivos copiados no novo projeto. Comece criando um novo projeto Aplicativo em Branco (Universal do Windows). Dê a ele o nome de Bookstore1Universal\_10. Estes são os arquivos a serem copiados de Bookstore1\_81 para Bookstore1Universal\_10.
 
@@ -75,7 +75,7 @@ O aplicativo do Windows 10 com as mudanças de código-fonte iniciais em execuç
 
 O modo de exibição e o modelo de exibição estão funcionando corretamente juntos, e **ListBox** está funcionando. Precisamos apenas corrigir o estilo. Em um dispositivo móvel, em um tema claro, podemos ver a borda da caixa de listagem, mas isso será fácil de ocultar. Além disso, a tipografia é muito grande, logo, alteraremos os estilos que estamos usando. Além disso, o aplicativo deve ter cores claras quando em execução em um dispositivo da área de trabalho caso queiramos que ele tenha uma aparência padrão. Portanto, alteraremos isso.
 
-## Estilo universal
+## <a name="universal-styling"></a>Estilo universal
 
 O aplicativo Bookstore1\_81 usava dois dicionários de recursos diferentes (BookstoreStyles.xaml) para personalizar os estilos aos sistemas operacionais Windows 8.1 e Windows Phone 8.1. Nenhum desses dois arquivos BookstoreStyles.xaml contém exatamente os estilos de que precisamos para o aplicativo do Windows 10. Mas a boa notícia é que o que queremos realmente é muito mais simples do que ambos. Portanto, as próximas etapas envolverão principalmente remover e simplificar os arquivos de projeto e marcação. As etapas estão abaixo. E você pode usar os links do início deste tópico para baixar os projetos e ver os resultados de todas as alterações feitas aqui até o fim do estudo de caso.
 
@@ -96,7 +96,7 @@ O aplicativo do Windows 10 praticamente portado em execução em um dispositivo 
 
 O aplicativo do Windows 10 praticamente portado em execução em um dispositivo móvel
 
-## Um ajuste opcional para a caixa de listagem de dispositivos móveis
+## <a name="an-optional-adjustment-to-the-list-box-for-mobile-devices"></a>Um ajuste opcional para a caixa de listagem de dispositivos móveis
 
 Quando o aplicativo é executado em um dispositivo móvel, o plano de fundo de uma caixa de listagem fica claro por padrão em ambos os temas. Esse pode ser o estilo de sua preferência e, caso seja, não há nada mais a fazer exceto organizar: exclua o arquivo de dicionário de recursos BookstoreStyles.xaml do projeto e remova a marcação que o mescla ao MainPage.xaml.
 
@@ -119,9 +119,9 @@ Por fim, copie `BookstoreListBoxStyle` em BookstoreStyles.xaml e exclua seus tr�
 
 O aplicativo do Windows 10 portado em execução em um dispositivo móvel
 
-## Conclusão
+## <a name="conclusion"></a>Conclusão
 
-Este estudo de caso mostrou o processo de portabilidade de um aplicativo muito simples, sem dúvida nenhuma, um aplicativo inacreditavelmente simples. Por exemplo, uma caixa de listagem pode ser usada para seleção de ou para o estabelecimento de um contexto de navegação; o aplicativo navega até uma página com mais detalhes sobre o item que foi tocado. Este aplicativo específico não faz nada com a seleção do usuário, e ele não tem navegação. Mesmo assim, o estudo de caso serviu para quebrar o gelo, apresentar o processo de portabilidade e demonstrar técnicas importantes de compartilhamento de código que podem ser usadas em aplicativos UWP.
+Este estudo de caso mostrou o processo de portabilidade de um app muito simples, sem dúvida nenhuma, um app inacreditavelmente simples. Por exemplo, uma caixa de listagem pode ser usada para seleção de ou para o estabelecimento de um contexto de navegação; o aplicativo navega até uma página com mais detalhes sobre o item que foi tocado. Este aplicativo específico não faz nada com a seleção do usuário, e ele não tem navegação. Mesmo assim, o estudo de caso serviu para quebrar o gelo, apresentar o processo de portabilidade e demonstrar técnicas importantes de compartilhamento de código que podem ser usadas em aplicativos UWP.
 
 Também observamos que a portabilidade de modelos de exibição é, em geral, um processo tranquilo. É mais provável que a interface do usuário e o suporte a fatores forma exijam nossa atenção durante a portabilidade.
 
@@ -129,6 +129,6 @@ O próximo estudo de caso é o [Bookstore2](w8x-to-uwp-case-study-bookstore2.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,12 +4,12 @@ ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: "Use a API de análise da Windows Store para recuperar de forma programática dados analíticos de aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows."
 title: "Acessar dados analíticos usando serviços da Windows Store"
 translationtype: Human Translation
-ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
-ms.openlocfilehash: 468be96b70d07567163b2caccebaa8e2f6ecd592
+ms.sourcegitcommit: dcf4c263ff3fd8df846d1d5620ba31a9da7a5e6c
+ms.openlocfilehash: 5ae5dcbe6684aa34a1428760cd5c7e9b8f599ebf
 
 ---
 
-# Acessar dados analíticos usando serviços da Windows Store
+# <a name="access-analytics-data-using-windows-store-services"></a>Acessar dados analíticos usando serviços da Windows Store
 
 Uso da *API de análise da Windows Store* para recuperar, de forma programática, dados analíticos de aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows. Essa API permite que você recupere dados para aquisições de aplicativos e complementos (também conhecidos como produto no aplicativo ou IAP), erros, classificações de aplicativos e avaliações. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
 
@@ -20,7 +20,7 @@ As etapas a seguir descrevem o processo completo:
 3.  [Chame a API de análise da Windows Store](#call-the-windows-store-analytics-api).
 
 <span id="prerequisites" />
-## Etapa 1: complete os pré-requisitos para usar a API de análise da Windows Store
+## <a name="step-1-complete-prerequisites-for-using-the-windows-store-analytics-api"></a>Etapa 1: complete os pré-requisitos para usar a API de análise da Windows Store
 
 Antes de começar a escrever o código para chamar a API de análise da Windows Store, certifique-se de que você concluiu os pré-requisitos a seguir.
 
@@ -41,7 +41,7 @@ Para associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento e
 4. Clique em **Adicionar nova chave**. Na tela seguinte, copie o valor da **Chave**. Você não poderá acessar essas informações novamente depois que você sair desta página. Para obter mais informações, consulte as informações sobre o gerenciamento de chaves em [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
 <span id="obtain-an-azure-ad-access-token" />
-## Etapa 2: Obter um token de acesso do Azure AD
+## <a name="step-2-obtain-an-azure-ad-access-token"></a>Etapa 2: Obter um token de acesso do Azure AD
 
 Antes de chamar qualquer um dos métodos na API de análise da Windows Store, primeiro você deve obter um token de acesso do Azure AD que você passa para o cabeçalho **Autorização** de cada método na API. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá atualizar o token para que você possa continuar a usá-lo em outras chamadas à API.
 
@@ -63,19 +63,21 @@ Para os parâmetros *tenant\_id*, *client\_id* e *client\_secret*, especifique a
 Depois que seu token de acesso expirar, você poderá atualizá-l0 seguindo as instruções [aqui](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
 <span id="call-the-windows-store-analytics-api" />
-## Etapa 3: Chame a API de análise da Windows Store
+## <a name="step-3-call-the-windows-store-analytics-api"></a>Etapa 3: Chame a API de análise da Windows Store
 
 Depois que tiver um token de acesso do Azure AD, você estará pronto para chamar a API de análise da Windows Store. Para saber mais sobre a sintaxe de cada método, consulte os artigos a seguir. Você deve passar o token de acesso no cabeçalho **Autorização** de cada método.
 
--   [Obter aquisições de aplicativo](get-app-acquisitions.md)
--   [Obter aquisições de complemento](get-in-app-acquisitions.md)
--   [Obter dados de relatórios de erros](get-error-reporting-data.md)
--   [Obter classificações de aplicativo](get-app-ratings.md)
--   [Obter avaliações de aplicativo](get-app-reviews.md)
--   [Obter dados de desempenho de anúncios](get-ad-performance-data.md)
--   [Obter dados de desempenho da campanha de anúncios](get-ad-campaign-performance-data.md)
+* [Obter aquisições de app](get-app-acquisitions.md)
+* [Obter aquisições de complemento](get-in-app-acquisitions.md)
+* [Obter dados de relatório de erros](get-error-reporting-data.md)
+* [Obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md)
+* [Obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md)
+* [Obter classificações de app](get-app-ratings.md)
+* [Obter avaliações de app](get-app-reviews.md)
+* [Obter dados de desempenho de anúncios](get-ad-performance-data.md)
+* [Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)
 
-## Exemplo de código
+## <a name="code-example"></a>Exemplo de código
 
 
 O exemplo de código a seguir demonstra como obter um token de acesso do Azure AD e chamar a API de análise da Windows Store de um aplicativo de console C#. Para usar este exemplo de código, atribua as variáveis *tenantId*, *clientId*, *clientSecret* e *appID* aos valores adequados ao seu cenário. Este exemplo exige o [pacote Json.NET](http://www.newtonsoft.com/json) do Newtonsoft para desserializar os dados JSON devolvidos pela API de análise da Windows Store.
@@ -204,7 +206,7 @@ namespace TestAnalyticsAPI
 }
 ```
 
-## Respostas de erro
+## <a name="error-responses"></a>Respostas de erro
 
 
 A API de análise da Windows Store devolve respostas de erro em um objeto JSON que contém códigos de erro e mensagens. O exemplo a seguir demonstra uma resposta de erro causada por um parâmetro inválido.
@@ -228,19 +230,21 @@ A API de análise da Windows Store devolve respostas de erro em um objeto JSON q
 }
 ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
-* [Obter aquisições de aplicativo](get-app-acquisitions.md)
+* [Obter aquisições de app](get-app-acquisitions.md)
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)
-* [Obter dados de relatórios de erros](get-error-reporting-data.md)
-* [Obter classificações de aplicativo](get-app-ratings.md)
-* [Obter avaliações de aplicativo](get-app-reviews.md)
+* [Obter dados de relatório de erros](get-error-reporting-data.md)
+* [Obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md)
+* [Obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md)
+* [Obter classificações de app](get-app-ratings.md)
+* [Obter avaliações de app](get-app-reviews.md)
 * [Obter dados de desempenho de anúncios](get-ad-performance-data.md)
-* [Obter dados de desempenho da campanha de anúncios](get-ad-campaign-performance-data.md)
+* [Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)
  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

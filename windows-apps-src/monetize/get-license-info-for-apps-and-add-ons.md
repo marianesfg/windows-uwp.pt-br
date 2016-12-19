@@ -4,18 +4,18 @@ ms.assetid: 9630AF6D-6887-4BE3-A3CB-D058F275B58F
 description: "Saiba como usar o namespace Windows.Services.Store para obter informações de licença para o aplicativo atual e seus complementos."
 title: "Obter informações de licença para seus aplicativos e complementos"
 translationtype: Human Translation
-ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
-ms.openlocfilehash: 710800bcd5491407d90e8293006a687e27d06d2d
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 0482cc192eeff4d3633898b6fa677805c635c6e1
 
 ---
 
-# Obter informações de licença para aplicativos e complementos
+# <a name="get-license-info-for-apps-and-add-ons"></a>Obter informações de licença para apps e complementos
 
 Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar métodos da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para obter informações relacionadas a licença para o aplicativo atual e seus complementos (também conhecidos como produtos no aplicativo ou IAPs). Por exemplo, você pode usar essas informações para determinar se as licenças para o aplicativo ou seus complementos estão ativas ou se são licenças de avaliação.
 
 >**Observação**&nbsp;&nbsp;Este artigo se refere a aplicativos direcionados ao Windows 10, versão 1607, ou posterior. Se seu aplicativo for direcionado para uma versão anterior do Windows 10, use o namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez do **Windows.Services.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este exemplo tem os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao Windows 10, versão 1607 ou posterior.
@@ -28,53 +28,21 @@ O código neste exemplo pressupõe que:
 
 >**Observação**&nbsp;&nbsp;Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado neste exemplo para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
 
-## Exemplo de código
+## <a name="code-example"></a>Exemplo de código
 
 Para obter informações de licença para o aplicativo atual, use o método [GetAppLicenseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getapplicenseasync.aspx). Trata-se de um método assíncrono que retorna um objeto [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx) que fornece informações de licença do aplicativo, inclusive propriedades que indicam se o usuário tem uma licença para usar o aplicativo ([IsActive](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.isactive.aspx)) e se a licença se destina a uma versão de avaliação ([IsTrial](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.istrial.aspx)).
 
 Para recuperar as licenças de complemento do aplicativo, use a propriedade [AddOnLicenses](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.addonlicenses.aspx) do objeto [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx). Essa propriedade retorna objetos [StoreLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storelicense.aspx) de coleção que representam as licenças de complemento do aplicativo. Para determinar se o usuário tem uma licença para usar um complemento, use a propriedade [IsActive](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storelicense.isactive.aspx).
 
-```csharp
-private StoreContext context = null;
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[GetLicenseInfo](./code/InAppPurchasesAndLicenses_RS1/cs/GetLicenseInfoPage.xaml.cs#GetLicenseInfo)]
 
-public async void GetLicenseInfo()
-{
-    if (context == null)
-    {
-        context = StoreContext.GetDefault();
-        // If your app is a desktop app that uses the Desktop Bridge, you
-        // may need additional code to configure the StoreContext object.
-        // For more info, see https://aka.ms/storecontext-for-desktop.
-    }
+Para obter um app de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
-    workingProgressRing.IsActive = true;
-    StoreAppLicense appLicense = await context.GetAppLicenseAsync();
-    workingProgressRing.IsActive = false;
-
-    if (appLicense == null)
-    {
-        textBlock.Text = "An error occurred while retrieving the license.";
-        return;
-    }
-
-    // Use members of the appLicense object to access license info...
-
-    // Access the add on licenses for add-ons for this app.
-    foreach (KeyValuePair<string, StoreLicense> item in appLicense.AddOnLicenses)
-    {
-        StoreLicense addOnLicense = item.Value;
-        // Use members of the addOnLicense object to access license info
-        // for the add-on...
-    }
-}
-```
-
-Para obter um aplicativo de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
-
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md)
-* [Obter informações do produto para aplicativos e complementos](get-product-info-for-apps-and-add-ons.md)
+* [Obter informações do produto para apps e complementos](get-product-info-for-apps-and-add-ons.md)
 * [Habilitar compras nos aplicativos e complementos no aplicativo](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Habilitar compras de complementos consumíveis](enable-consumable-add-on-purchases.md)
 * [Implementar uma versão de avaliação do seu aplicativo](implement-a-trial-version-of-your-app.md)
@@ -82,6 +50,6 @@ Para obter um aplicativo de exemplo completo, consulte o [Exemplo da Loja](https
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

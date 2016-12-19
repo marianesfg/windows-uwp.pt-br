@@ -6,18 +6,18 @@ ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a954404ccc2e986c1603402315c8497f802ad254
+ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
+ms.openlocfilehash: 20e73c2de82bcc76c94fff38163dddac7ef9d8a9
 
 ---
-# Visualizador de notificações
+# <a name="notifications-visualizer"></a>Visualizador de notificações
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Visualizador de Notificações é um novo aplicativo da Plataforma Universal do Windows (UWP) na [Loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores no design de blocos dinâmicos adaptáveis para Windows 10.
 
-## Visão geral
+## <a name="overview"></a>Visão geral
 
 
 O aplicativo Visualizador de Notificações oferece visualizações visuais instantâneas do bloco à medida que você edita, semelhante ao modo de exibição editor/design XAML do Visual Studio. O aplicativo também verifica se há erros, o que garante que você crie uma carga de bloco válida.
@@ -34,7 +34,7 @@ Com o Visualizador de Notificações, é possível criar e testar cargas de bloc
 
  
 
-## Recursos
+## <a name="features"></a>Recursos
 
 
 Visualizador de Notificações acompanha várias cargas de exemplo para demonstrar o que é possível com blocos dinâmicos adaptáveis e ajudar na introdução. É possível testar todas as opções de texto diferente, grupos/subgrupos, imagens de plano de fundo, e você pode ver como o bloco se adapta a dispositivos e telas diferentes. Depois que tiver feito alterações, você poderá salvar a carga atualizada em um arquivo para uso futuro.
@@ -49,24 +49,15 @@ Esta captura de tela do aplicativo mostra o editor de blocos:
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Obtenha o Visualizador de Notificações na Loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)
 * [Criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md)
 * [Modelos de blocos adaptáveis: esquema e documentação](tiles-and-notifications-adaptive-tiles-schema.md)
 * [Blocos e notificações do sistema (blog MSDN)](http://blogs.msdn.com/b/tiles_and_toasts/)
-* [Biblioteca NotificationsExtensions (blog MSDN)](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx)
- 
-
- 
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

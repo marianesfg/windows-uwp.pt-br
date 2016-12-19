@@ -4,23 +4,23 @@ Description: "Use os relatórios de desempenho de afiliadas em nível de aplicat
 title: "Relatório de desempenho de afiliadas"
 ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
 translationtype: Human Translation
-ms.sourcegitcommit: 577b238875b2d0edd47d9ad0e5e73ca79a6acf75
-ms.openlocfilehash: cfb05b2919f40aeeb83c2ba1a75206cf74d8c51d
+ms.sourcegitcommit: 9646b9614bb2935db5880cad9bf1a58648330671
+ms.openlocfilehash: 76bb607fb0abf11c863be24489a4eea0747a4e40
 
 ---
 
-# Relatório de desempenho de afiliadas
+# <a name="affiliates-performance-report"></a>Relatório de desempenho de afiliadas
 
 Se você tiver [aceitado o programa de anúncios de afiliadas Microsoft](about-affiliate-ads.md), poderá exibir dados de desempenho para os anúncios de afiliadas que aparecem em seu aplicativo nos seguintes relatórios no painel do Centro de Desenvolvimento do Windows:
 
--   [Relatório de desempenho de afiliadas em nível de aplicativo](affiliates-performance-report.md#app-level-affiliates-performance-report). Esse relatório fornece dados de desempenho para anúncios de afiliadas no aplicativo atualmente selecionado no painel.
--   [Relatório de desempenho de afiliadas em nível de painel](affiliates-performance-report.md#dashboard-level-affiliates-performance-report). Esse relatório fornece um resumo dos dados de desempenho para anúncios de afiliadas em todos os aplicativos que você aceitou no programa de anúncios de afiliadas Microsoft.
+-   [Relatório de desempenho de afiliadas em nível de aplicativo](#app-level-affiliate-ads-performance-report). Esse relatório fornece dados de desempenho para anúncios de afiliadas no aplicativo atualmente selecionado no painel.
+-   [Relatório de desempenho de afiliadas em nível de painel](#dashboard-level-affiliate-ads-performance-report). Esse relatório fornece um resumo dos dados de desempenho para anúncios de afiliadas em todos os aplicativos que você aceitou no programa de anúncios de afiliadas Microsoft.
 
 Esses relatórios são atualizados diariamente. Por padrão, os relatórios são filtrados pelo desempenho dos últimos 30 dias, em todos os dispositivos. Para alterar esses filtros, clique em **Filtros de página** e escolha um período diferente ou um tipo de dispositivo individual. Observe que todos os dados são agregados com base na utilização UTC, não na sua zona de tempo em particular.
 
 As seções a seguir fornecem mais detalhes sobre esses relatórios.
 
-## Relatório de desempenho de anúncios de afiliadas em nível de aplicativo
+## <a name="app-level-affiliate-ads-performance-report"></a>Relatório de desempenho de anúncios de afiliadas em nível de aplicativo
 
 Esse relatório fornece dados de desempenho de anúncios de afiliadas em forma de gráfico e tabela para o aplicativo selecionado atualmente no painel. Para ver esse relatório, selecione um de seus aplicativos no painel e clique em **Análises** &gt; **Desempenho de afiliadas** no painel de navegação.
 
@@ -36,11 +36,11 @@ Os dados são obtidos destas sete métricas de desempenho que rastreamos para os
 
 > **Observação**  Depois que um usuário compra um produto na Loja, há um período de espera de 45 dias antes que a compra seja aprovada para o programa de anúncios de afiliada. Por causa desse período de espera, os dados de **Lucros estimados (aprovados)**, **Lucros estimados (aprovação pendente)**, **Compras (aprovadas)** e **Compras (aprovação pendente)** de um dia específico podem mudar depois que as compras são aprovadas ou rejeitadas.
 
-## Relatório de desempenho de anúncios de afiliadas em nível de painel
+## <a name="dashboard-level-affiliate-ads-performance-report"></a>Relatório de desempenho de anúncios de afiliadas em nível de painel
 
 A seção **Desempenho de afiliadas** em sua página **Visão geral do painel** fornece um resumo dos dados de desempenho para os anúncios de afiliadas em todos os aplicativos que aceitaram o programa de anúncios de afiliadas da Microsoft, na forma de gráfico e tabela. Esse relatório mostra as mesmas métricas de desempenho e filtros que o relatório de desempenho de afiliadas em nível de aplicativos descrito acima.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Sobre os anúncios da afiliada](about-affiliate-ads.md)
 * [Monetizar com anúncios](monetize-with-ads.md)
@@ -50,6 +50,6 @@ A seção **Desempenho de afiliadas** em sua página **Visão geral do painel** 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

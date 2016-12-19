@@ -1,18 +1,18 @@
 ---
 author: TylerMSFT
-title: "Manipular a ativação de arquivos"
+title: "Tratar a ativação do arquivo"
 description: "Um aplicativo pode se registrar para ser o manipulador padrão de um determinado tipo de arquivo."
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
 translationtype: Human Translation
-ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
-ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
+ms.sourcegitcommit: ed7aee6add80d31b48006d9dec9e207c449a1912
+ms.openlocfilehash: ffcfa8991e9eb73b8d6a47bb7dd1cd23220097e0
 
 ---
 
-# Manipular a ativação de arquivos
+# <a name="handle-file-activation"></a>Tratar a ativação do arquivo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -28,7 +28,7 @@ Estas etapas mostram como registrar um tipo de arquivo personalizado, o .alsdk, 
 
 > **Observação**  Nos aplicativos UWP, determinados URIs e extensões de arquivo são reservados para uso por aplicativos nativos e pelo sistema operacional. Tentativas de registrar seu aplicativo com um URI ou extensão de arquivo reservada serão ignoradas. Para obter mais informações, consulte [Nomes de arquivos e esquemas de URI reservados](reserved-uri-scheme-names.md).
 
-## Etapa 1: especificar o ponto de extensão no manifesto do pacote
+## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Etapa 1: especificar o ponto de extensão no manifesto do pacote
 
 
 O aplicativo recebe os eventos de ativação somente para as extensões de arquivo listadas no manifesto do pacote. Veja como indicar se seu aplicativo manipula os arquivos com a extensão `.alsdk`.
@@ -43,8 +43,8 @@ O aplicativo recebe os eventos de ativação somente para as extensões de arqui
 | **Logotipo** | Especifique o logotipo que é usado para identificar o tipo de arquivo na área de trabalho e em [Definir Programas Padrão](https://msdn.microsoft.com/library/windows/desktop/cc144154) no **Painel de Controle**. Se nenhum logotipo for especificado, o logotipo pequeno do aplicativo será usado. |
 | **Dica de informações** | Especifique a [dica de informações](https://msdn.microsoft.com/library/windows/desktop/cc144152) para um grupo de tipos de arquivo. O texto dessa dica de ferramenta é exibido quando o usuário passa o mouse sobre o ícone de um arquivo desse tipo. |
 | **Nome** | Escolha o nome de um grupo de tipos de arquivos que compartilham o mesmo nome de exibição, logotipo, dica de informações e sinalizadores de edição. Escolha um nome de grupo que se mantenha igual entre atualizações de aplicativos. **Observação**  O nome precisa estar completamente em letras minúsculas. |
-| **Tipo de conteúdo** | Especifique o tipo de conteúdo MIME, como **image/jpeg**, para um tipo de arquivo específico. **Observação importante sobre tipos de conteúdo permitidos: **esta é uma lista em ordem alfabética dos tipos de conteúdo MIME que você não pode inserir no manifesto do pacote porque eles são reservados ou proibidos: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
-| **Tipo de arquivo** | Especifique o tipo de arquivo para o qual registrar, precedido por um ponto, por exemplo, ".jpeg". **Tipos de arquivos reservados e proibidos** Consulte [Nomes de esquemas de URI e tipos de arquivos reservados](reserved-uri-scheme-names.md) para obter uma lista, em ordem alfabética, dos tipos de arquivo para aplicativos internos para os quais você não pode registrar seus aplicativos UWP porque são reservados ou proibidos. |
+| **Tipo de conteúdo** | Especifique o tipo de conteúdo MIME, como **image/jpeg**, para um tipo de arquivo específico. **Observação importante sobre tipos de conteúdo permitidos:** esta é uma lista em ordem alfabética dos tipos de conteúdo MIME que você não pode inserir no manifesto do pacote porque eles são reservados ou proibidos: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
+| **Tipo de arquivo** | Especifique o tipo de arquivo para o qual registrar, precedido por um ponto, por exemplo, ".jpeg". **Tipos de arquivos reservados e proibidos:** consulte [Nomes de esquemas de URI e tipos de arquivos reservados](reserved-uri-scheme-names.md) para obter uma lista em ordem alfabética dos tipos de arquivo para apps internos para os quais você não pode registrar seus aplicativos UWP porque são reservados ou proibidos. |
 
 2.  Insira `alsdk` como o **Nome**.
 3.  Insira `.alsdk` como o **Tipo de arquivo**.
@@ -66,7 +66,7 @@ As etapas acima adicionam um elemento [**Extension**](https://msdn.microsoft.com
       </Extensions>
 ```
 
-## Etapa 2: adicionar os ícones apropriados
+## <a name="step-2-add-the-proper-icons"></a>Etapa 2: adicionar os ícones apropriados
 
 
 Os aplicativos que se tornam padrão para um tipo de arquivo têm seus ícones exibidos em vários lugares em todo o sistema. Por exemplo, esses ícones são mostrados nos seguintes locais:
@@ -79,7 +79,7 @@ Os aplicativos que se tornam padrão para um tipo de arquivo têm seus ícones e
 Combine a aparência do logotipo do bloco do aplicativo e use a cor de fundo do aplicativo em vez de deixar o ícone transparente. Faça o logotipo se estender até a borda sem preenchê-la. Teste seus ícones em telas em segundo plano brancas. Para ícones de exemplo, consulte o [Amostra de inicialização de associação](http://go.microsoft.com/fwlink/p/?LinkID=620490).
 ![o gerenciador de soluções com uma exibição dos arquivos na pasta imagens. Há 16, 32, 48 e 256 versões de pixels de 'icon.targetsize' e 'smalltile-sdk'](images/seviewofimages.png)
 
-## Etapa 3: manipular o evento ativado
+## <a name="step-3-handle-the-activated-event"></a>Etapa 3: manipular o evento ativado
 
 
 O manipulador de eventos [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331) recebe todos os eventos de ativação de arquivos.
@@ -115,7 +115,7 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
 Quando iniciado por ativação de Arquivo, os aplicativos devem considerar incluir uma interface do usuário que permita ao usuário voltar para o início da página do aplicativo.
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 
 Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que você valide o conteúdo de um arquivo antes de processá-lo. Para obter mais informações sobre a validação de entrada, consulte [Escrevendo código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053)
@@ -124,7 +124,7 @@ Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que v
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 **Exemplo completo**
 
@@ -137,8 +137,8 @@ Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que v
 
 **Tarefas**
 
-* [Iniciar o aplicativo padrão para um arquivo](launch-the-default-app-for-a-file.md)
-* [Manipular a ativação do URI](handle-uri-activation.md)
+* [Iniciar o app padrão para um arquivo](launch-the-default-app-for-a-file.md)
+* [Tratar a ativação do URI](handle-uri-activation.md)
 
 **Diretrizes**
 
@@ -154,6 +154,6 @@ Os arquivos recebidos podem vir de uma fonte não confiável. Recomendamos que v
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

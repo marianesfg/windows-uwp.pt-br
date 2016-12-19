@@ -2,34 +2,36 @@
 author: awkoren
 Description: "Implante e depure um aplicativo da Plataforma Universal do Windows (UWP) convertido de um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms), usando a ponte da área de trabalho para UWP."
 Search.Product: eADQiWindows 10XVcnh
-title: "Depurar aplicativos convertidos usando a ponte da área de trabalho"
+title: "Depurar apps convertidos usando a ponte da área de trabalho"
 translationtype: Human Translation
-ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
-ms.openlocfilehash: 9dcc39c51e61b24c25bcbfa216c6e51b49bbfd3a
+ms.sourcegitcommit: dba00371b29b3179a6dc3bdd96a092437331e61a
+ms.openlocfilehash: 537ac8e83d5f54bf83ec0e05b71be354651000f2
 
 ---
 
-# Depurar aplicativos convertidos usando a ponte da área de trabalho
+# <a name="debug-apps-converted-with-the-desktop-bridge"></a>Depurar apps convertidos usando a ponte da área de trabalho
 
 Este tópico contém informações para ajudar você a depurar o aplicativo com êxito depois de convertê-lo usando a ponte da área de trabalho para UWP. Você tem algumas opções para depurar seu aplicativo convertido.
 
-## Anexar ao processo
+## <a name="attach-to-process"></a>Anexar ao processo
 
 Quando o Microsoft Visual Studio está em execução "como administrador", os comandos *Iniciar Depuração* e *Iniciar sem * funcionarão no projeto de um aplicativo convertido, mas o aplicativo iniciado será executado com [nível de integridade médio](https://msdn.microsoft.com/library/bb625963) (ou seja, ele não terá privilégios elevados). Para conceder privilégios de administrador para o aplicativo iniciado, primeiro você precisa iniciar o aplicativo "administrador" por meio de um atalho ou um bloco. Quando o aplicativo estiver em execução, em uma instância do Microsoft Visual Studio executada "como administrador", invoque __Anexar ao Processo__ e selecione o processo do seu aplicativo na caixa de diálogo.
 
-## Depuração F5
+## <a name="f5-debug"></a>Depuração F5
 
 O Visual Studio agora dá suporte a um novo projeto de empacotamento. O novo projeto permite copiar automaticamente todas as atualizações quando você compila o aplicativo no pacote Appx criado a partir do conversor no instalador do aplicativo. Depois de configurar o projeto de empacotamento, você também já poderá usar F5 para depurar diretamente no pacote AppX. 
 
+>Observação: você também pode usar a opção para depurar um pacote Appx existente, usando a opção Depurar -> Outros Destinos de Depuração -> Depurar Pacote do Aplicativo Instalado.
+
 Veja como começar: 
 
-1. Primeiro, verifique se você configurou para usar o Desktop App Converter. Para obter instruções, consulte [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md).
+1. Primeiro, verifique se você fez a configuração para usar o Desktop App Converter. Para obter instruções, consulte [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md).
 
-2. Execute o conversor e o instalador do seu aplicativo Win32. O conversor captura o layout, e todas as alterações feitas no registro, e produz um Appx com manifesto e registery.dat para virtualizar o registro:
+2. Execute o conversor e o instalador do seu aplicativo Win32. O conversor captura o layout, e todas as alterações feitas no Registro, e gera um Appx com manifesto e registery.dat para virtualizar o Registro:
 
 ![alt](images/desktop-to-uwp/debug-1.png)
 
-3. Instalar e iniciar [Visual Studio "15" Preview 2](https://www.visualstudio.com/downloads/visual-studio-next-downloads-vs.aspx). 
+3. Instale e inicie o [Visual Studio 2017 RC](https://www.visualstudio.com/downloads/#visual-studio-community-2017-rc). 
 
 4. Instale o projeto VSIX de empacotamento de área de trabalho para UWP a partir da [Galeria do Visual Studio](http://go.microsoft.com/fwlink/?LinkId=797871). 
 
@@ -73,7 +75,7 @@ Veja como começar:
     <?xml version="1.0" encoding=utf-8"?>
     <Project ToolsVersion=14.0" xmlns="http://scehmas.microsoft.com/developer/msbuild/2003">
         <PropertyGroup>
-            <MyProjectOutputPath>C:\{path}</MyProjectOutputPath>
+            <MyProjectOutputPath>{relativepath}</MyProjectOutputPath>
         </PropertyGroup>
         <ItemGroup>
             <LayoutFile Include="$(MyProjectOutputPath)\ProjectTracker.exe">
@@ -94,7 +96,7 @@ Veja como começar:
     <?xml version="1.0" encoding="utf-8"?>
     <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
         <PropertyGroup>
-            <MyProjectOutputPath>C:\Users\peterfar\Desktop\ProjectTracker\ProjectTracker\bin\DesktopUWP</MyProjectOutputPath>
+            <MyProjectOutputPath>..\ProjectTracker\bin\DesktopUWP</MyProjectOutputPath>
         </PropertyGroup>
     ```
 
@@ -158,13 +160,13 @@ Você também pode usar a compilação condicional para habilitar caminhos de c�
 
 4.  Agora você pode alternar o destino de compilação para DesktopUWP, se quiser compilar no destino a API de UWP que você adicionou.
 
-## PLMDebug 
+## <a name="plmdebug"></a>PLMDebug 
 
 O Visual Studio F5 e Anexar ao Processo são úteis para depurar seu aplicativo enquanto ele é executado. Em alguns casos, no entanto, você talvez queira fazer um controle mais refinado sobre o processo de depuração, incluindo a capacidade de depurar seu aplicativo antes de ser iniciado. Nesses cenários mais avançados, use [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx). Essa ferramenta permite que você depure seu aplicativo convertido usando o depurador do Windows e oferece o controle total sobre o ciclo de vida do aplicativo incluindo suspensão, retomada e encerramento. 
 
 O PLMDebug está incluído no SDK do Windows. Para obter mais informações, consulte [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx). 
 
-## Executar outro processo dentro do contêiner de confiança total 
+## <a name="run-another-process-inside-the-full-trust-container"></a>Executar outro processo dentro do contêiner de confiança total 
 
 Você pode chamar processos personalizados dentro do contêiner de um pacote do aplicativo especificado. Isso pode ser útil para testar os cenários (por exemplo, se você tiver um utilitário de teste personalizado e deseja testar a saída do aplicativo). Para fazer isso, use o cmdlet do PowerShell ```Invoke-CommandInDesktopPackage```: 
 
@@ -175,6 +177,6 @@ Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

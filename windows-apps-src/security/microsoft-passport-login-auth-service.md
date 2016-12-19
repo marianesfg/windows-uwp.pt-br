@@ -4,12 +4,12 @@ description: "Esta é a Parte 2 de um guia passo a passo completo sobre como usa
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 2250cc400828b2142bc5d152f54de554daa24aa9
+ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
+ms.openlocfilehash: d02c2029121927192430ce030684200de1656418
 
 ---
 
-# Criar um serviço de logon do Microsoft Passport
+# <a name="create-a-microsoft-passport-login-service"></a>Criar um serviço de logon do Microsoft Passport
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -21,7 +21,7 @@ Esta é a Parte 2 de um guia passo a passo completo sobre como usar o Microsoft 
 
 Para criar esse projeto, você precisará de alguma experiência em C# e XAML. Você também precisa estar usando o Visual Studio 2015 (Community Edition ou superior) em um computador com Windows 10.
 
-## Exercício 1: Lógica de servidor
+## <a name="exercise-1-server-side-logic"></a>Exercício 1: Lógica de servidor
 
 
 Neste exercício, você começará com o aplicativo Passport criado no primeiro laboratório e a criação de um servidor e um banco de dados locais fictícios. Este laboratório prático foi projetado para ensinar como o Microsoft Passport poderia ser integrado a um sistema existente. Usando um servidor e um banco de dados fictícios, grande parte da configuração não relacionada é eliminada. Em seus próprios aplicativos, você precisará substituir os objetos fictícios por serviços e bancos de dados reais.
@@ -30,9 +30,9 @@ Neste exercício, você começará com o aplicativo Passport criado no primeiro 
 -   Você começará implementando o servidor e o banco de dados fictícios. Crie uma nova pasta chamada "AuthService". No gerenciador de soluções, clique com o botão direito do mouse na solução "PassportLogin (Universal do Windows)" e selecione Add > New Folder.
 -   Crie as classes UserAccount e PassportDevices que agirão como modelos para que os dados sejam salvos no banco de dados fictício. A UserAccount será semelhante ao modelo de usuário implementado em um servidor de autenticação tradicional. Clique com o botão direito do mouse na pasta AuthService e adicione uma nova classe chamada "UserAccount.cs".
 
-    ![](images/passport-auth-1.png)
+    ![autorização do passport para criar pasta](images/passport-auth-1.png)
 
-    ![](images/passport-auth-2.png)
+    ![autorização do passport para criar classe](images/passport-auth-2.png)
 
 -   Altere a definição de classe para pública e, em seguida, adicione as propriedades públicas seguintes. Você precisará da referência seguinte.
 
@@ -538,7 +538,7 @@ Neste exercício, você começará com o aplicativo Passport criado no primeiro 
     }
     ```
 
-## Exercício 2: Lógica do cliente
+## <a name="exercise-2-client-side-logic"></a>Exercício 2: Lógica do cliente
 
 
 Neste exercício, você alterará os modos de exibição e as classes auxiliares do lado do cliente do primeiro laboratório para usar a classe AuthService. No mundo real, a classe AuthService seria o servidor de autenticação e você precisaria usar a API da Web para enviar e receber dados do servidor. Neste laboratório prático, o cliente e o servidor são locais para simplificar. O objetivo é aprender a usar as APIs do Microsoft Passport.
@@ -990,9 +990,9 @@ Neste exercício, você alterará os modos de exibição e as classes auxiliares
 
 -   Compile e execute o aplicativo (F5). Entre na conta de usuário de exemplo, com as credenciais "sampleUsername" e "samplePassword". Na tela de boas-vindas, você pode observar que o botão Forget devices é exibido, mas não há dispositivos. Quando você está criando ou migrando um usuário para trabalhar com o Microsoft Passport, as informações do Passport não estão sendo enviadas para a AuthService.
 
-    ![](images/passport-auth-3.png)
+    ![tela de logon do passport](images/passport-auth-3.png)
 
-    ![](images/passport-auth-4.png)
+    ![êxito no logon do passport](images/passport-auth-4.png)
 
 -   Para obter as informações do Passport para a AuthService, o MicrosoftPassportHelper.cs precisará ser atualizado. No método CreatePassportKeyAsync, em vez de apenas retornar verdadeiro caso ele seja bem-sucedido, você precisará chamar um novo método que tentará obter o KeyAttestation. Embora este laboratório prático não esteja registrando essas informações na AuthService, você aprenderá como obter essas informações no lado do cliente. Atualize o método CreatePassportKeyAsync.
 
@@ -1084,7 +1084,7 @@ Neste exercício, você alterará os modos de exibição e as classes auxiliares
 -   Remova o comentário da última linha no método GetKeyAttestationAsync para que as informações do Microsoft Passport sejam enviadas para a AuthService.
 -   Compile e execute o aplicativo e entre com as credenciais padrão como antes. Na tela de boas-vindas, agora você verá que a ID do dispositivo é exibida. Se você tiver se conectado em outro dispositivo, ele também apareceria aqui (se você tivesse um serviço de autenticação hospedado na nuvem). Neste laboratório prático, a ID do dispositivo real está sendo exibida. Em uma implementação real, você desejaria exibir um nome amigável que uma pessoa poderia entender e usar para determinar cada dispositivo.
 
-    ![](images/passport-auth-5.png)
+    ![id do dispositivo no logon bem-sucedido do passport](images/passport-auth-5.png)
 
 -   21. Para concluir este laboratório prático, você precisa de uma solicitação e de um desafio para o usuário quando ele selecionar na página de seleção do usuário e entrar novamente. A AuthService tem dois métodos que você criou para solicitar um desafio, um deles usa um desafio assinado. No MicrosoftPassportHelper.cs, crie um novo método chamado "RequestSignAsync". Isso solicitará um desafio da AuthService. Assine localmente esse desfaio usando uma API do Passport e envie o desafio assinado para a AuthService. Neste laboratório prático, a AuthService receberá o desafio assinado e retornará verdadeiro. Em uma implementação real, você precisaria implementar um mecanismo de verificação para determinar se o desafio foi assinado pelo usuário certo no dispositivo correto. Adicione o método a seguir ao MicrosoftPassportHelper.cs
 
@@ -1175,12 +1175,12 @@ Neste laboratório prático, você aprendeu a usar as APIs do Passport para subs
 
 Deixamos para você como um exercício os detalhes de como implementar a autenticação no lado do serviço e no lado do servidor. Espera-se que a maioria de vocês tenham sistemas existentes que precisarão ser migrados para começar a trabalhar com o Microsoft Passport e os detalhes de cada sistema serão diferentes.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Microsoft Passport e Windows Hello](microsoft-passport.md)
 * [Aplicativo de logon do Microsoft Passport](microsoft-passport-login.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

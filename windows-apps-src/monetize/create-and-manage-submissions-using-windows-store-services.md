@@ -4,12 +4,12 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Use a API de envio da Windows Store para criar e gerenciar de forma programática os envios de aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: "Criar e gerenciar envios usando serviços da Windows Store"
 translationtype: Human Translation
-ms.sourcegitcommit: 03942eb9015487cfd5690e4b1933e4febd705971
-ms.openlocfilehash: 40855465fa2f9b1c32602b1b636761b608d88fc0
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: 1172be1072f0c539828a08655236be467c6c9fba
 
 ---
 
-# Criar e gerenciar envios usando serviços da Windows Store
+# <a name="create-and-manage-submissions-using-windows-store-services"></a>Criar e gerenciar envios usando serviços da Windows Store
 
 
 Use a *API de envio da Windows Store* para consultar e criar programaticamente os envios de aplicativos, complementos (também conhecidos como produtos no aplicativo ou IAPs) e pacotes de pré-lançamento para a sua conta e a para a conta do Centro de Desenvolvimento do Windows da sua organização. Essa API será útil se sua conta gerenciar muitos aplicativos ou complementos e você quiser automatizar e otimizar o processo de envio para esses ativos. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
@@ -21,19 +21,16 @@ As etapas a seguir descrevem o processo completo de usar a API de envio da Windo
 4.  [Chame a API de envio da Windows Store](#call-the-windows-store-submission-api).
 
 
-
 <span id="not_supported" />
 >**Importante**
 
 > * Essa API pode ser usada somente para contas do Centro de Desenvolvimento do Windows que têm permissão para usar a API. Essa permissão está sendo habilitada para contas de desenvolvedor em estágios, e nem todas as contas têm essa permissão habilitado no momento. Para solicitar acesso anterior, fazer logon no painel do Centro de Desenvolvimento, clique em **Comentários** na parte inferior do painel, selecione **API de envio** para a área de comentários e envie sua solicitação. Você receberá um email quando essa permissão for habilitada em sua conta.
 <br/><br/>
 > * Essa API não pode ser usada com aplicativos ou complementos que usam determinados recursos que foram introduzidos no painel do Centro de Desenvolvimento em agosto de 2016, incluindo (mas não se limitando a) atualizações obrigatórias de aplicativos e complementos de consumíveis gerenciados pela Loja. Se você usar a API de envio da Windows Store com um aplicativo ou um complemento que usa um desses recursos, a API retornará um código de erro 409. Nesse caso, você deve usar o painel para gerenciar os envios para o aplicativo ou um complemento.
-<br/><br/>
-> * Em breve, a Microsoft mudará o modelo de dados de preços para envios de aplicativo no Centro de Desenvolvimento do Windows. Depois que essa alteração for implementada, os recursos **Preço** para envios de aplicativo e complemento não terão suporte, e não será possível temporariamente obter o período de avaliação, preço e dados de vendas para esses envios usando a API de envio da Windows Store. Atualizaremos a API no futuro para apresentar uma nova maneira de acessar informações de preço para envios de aplicativo e complemento por meio de programação. Para obter mais informações, consulte [Recurso de preço para envios de aplicativo](manage-app-submissions.md#pricing-object) e [Recurso de preço para envios de complemento](manage-add-on-submissions.md#pricing-object).
 
 
 <span id="prerequisites" />
-## Etapa 1: complete os pré-requisitos para usar a API de envio da Windows Store
+## <a name="step-1-complete-prerequisites-for-using-the-windows-store-submission-api"></a>Etapa 1: complete os pré-requisitos para usar a API de envio da Windows Store
 
 Antes de começar a escrever o código para chamar a API de envio da Windows Store, certifique-se de que você concluiu os pré-requisitos a seguir.
 
@@ -54,7 +51,7 @@ Antes de começar a escrever o código para chamar a API de envio da Windows Sto
   * Se você estiver criando ou atualizando um envio de complemento e você precisar incluir um ícone, [prepare o ícone](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon).
 
 <span id="associate-an-azure-ad-application-with-your-windows-dev-center-account" />
-### Como associar um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows
+### <a name="how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account"></a>Como associar um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows
 
 Antes de usar a API de envio da Windows Store, você deverá associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento, recuperar a ID do locatário e a ID do cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de envio da Windows Store. Você precisa da ID do locatário, da ID do cliente e da chave para obter um token de acesso do Azure AD que você passa para a API.
 
@@ -69,7 +66,7 @@ Antes de usar a API de envio da Windows Store, você deverá associar um aplicat
 4. Clique em **Adicionar nova chave**. Na tela seguinte, copie o valor da **Chave**. Você não poderá acessar essas informações novamente depois que você sair desta página. Para obter mais informações, consulte as informações sobre o gerenciamento de chaves em [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
 <span id="obtain-an-azure-ad-access-token" />
-## Etapa 2: Obter um token de acesso do Azure AD
+## <a name="step-2-obtain-an-azure-ad-access-token"></a>Etapa 2: Obter um token de acesso do Azure AD
 
 Antes de chamar qualquer um dos métodos na API de envio da Windows Store, primeiro você deve obter um token de acesso do Azure AD que você passa para o cabeçalho **Autorização** de cada método na API. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá atualizar o token para que você possa continuar a usá-lo em outras chamadas à API.
 
@@ -91,7 +88,7 @@ Para os parâmetros *tenant\_id*, *client\_id* e *client\_secret*, especifique a
 Depois que seu token de acesso expirar, você poderá atualizá-l0 seguindo as instruções [aqui](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
 <span id="call-the-windows-store-submission-api">
-## Etapa 3: usar a API de envio da Windows Store
+## <a name="step-3-use-the-windows-store-submission-api"></a>Etapa 3: usar a API de envio da Windows Store
 
 Depois que tiver um token de acesso do Azure AD, você poderá chamar métodos na API de envio da Windows Store. A API inclui muitos métodos que são agrupados em cenários de aplicativos, complementos e pacotes de pré-lançamento. Para criar ou atualizar os envios, você normalmente chama vários métodos na API de envio da Windows Store em uma ordem específica. Para obter informações sobre cada cenário e a sintaxe de cada método, consulte os artigos na tabela a seguir.
 
@@ -99,13 +96,13 @@ Depois que tiver um token de acesso do Azure AD, você poderá chamar métodos n
 
 | Cenário       | Descrição                                                                 |
 |---------------|----------------------------------------------------------------------|
-| Aplicativos |  Recupere dados de todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows e crie os envios de aplicativos. Para obter mais informações sobre esses métodos, consulte os seguintes artigos: <ul><li>[Obter dados de aplicativo](get-app-data.md)</li><li>[Gerenciar envios de aplicativo](manage-app-submissions.md)</li></ul> |
+| Aplicativos |  Recupere dados de todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows e crie os envios de aplicativos. Para obter mais informações sobre esses métodos, consulte os seguintes artigos: <ul><li>[Obter dados de app](get-app-data.md)</li><li>[Gerenciar envios de aplicativo](manage-app-submissions.md)</li></ul> |
 | Complementos | Obtenha, crie ou exclua complementos para seus aplicativos e, em seguida, obtenha, crie ou exclua os envios dos complementos. Para obter mais informações sobre esses métodos, consulte os seguintes artigos: <ul><li>[Gerenciar complementos](manage-add-ons.md)</li><li>[Gerenciar envios de complemento](manage-add-on-submissions.md)</li></ul> |
 | Pacotes de pré-lançamento | Obtenha, crie ou exclua pacotes de pré-lançamento para seus aplicativos e, em seguida, obtenha, crie ou exclua os envios de pacotes de pré-lançamento. Para obter mais informações sobre esses métodos, consulte os seguintes artigos: <ul><li>[Gerenciar pacotes de pré-lançamento](manage-flights.md)</li><li>[Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md)</li></ul> |
 
 <span />
 
-## Exemplos de código
+## <a name="code-examples"></a>Exemplos de código
 
 Os artigos a seguir fornecem exemplos detalhados de código que demonstram como usar a API de envio da Windows Store em várias linguagens de programação diferentes:
 
@@ -113,22 +110,22 @@ Os artigos a seguir fornecem exemplos detalhados de código que demonstram como 
 * [Exemplo de código Java](java-code-examples-for-the-windows-store-submission-api.md)
 * [Exemplo de código Python](python-code-examples-for-the-windows-store-submission-api.md)
 
-## Solução de problemas
+## <a name="troubleshooting"></a>Solução de problemas
 
 | Problema      | Resolução                                          |
 |---------------|---------------------------------------------|
 | Depois de chamar a API de envio da Windows Store do PowerShell, os dados de resposta da API ficarão corrompidos se você convertê-la do formato JSON para um objeto PowerShell usando o cmdlet [ConvertFrom-Json](https://technet.microsoft.com/en-us/library/hh849898.aspx) e depois voltar para o formato JSON usando o cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx). |  Por padrão, o parâmetro *-Depth* para o cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx) é definido como 2 níveis de objetos, que é muito superficial para a maioria dos objetos JSON que são retornados pela API de envio da Windows Store. Quando você chamar o cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx), defina o parâmetro *-Depth* como um número maior, como 20. |
 
-## Ajuda adicional
+## <a name="additional-help"></a>Ajuda adicional
 
 Se você tiver dúvidas sobre a API de envio da Windows Store ou precisar de ajuda para gerenciar seus envios com essa API, use os seguintes recursos:
 
 * Pergunte em nossos [fóruns](https://social.msdn.microsoft.com/Forums/windowsapps/en-us/home?forum=wpsubmit).
 * Visite nossa [página de suporte](https://developer.microsoft.com/windows/support) e solicite uma das opções de suporte assistido para o painel do Centro de Desenvolvimento. Se você for solicitado a escolher um tipo de problema e categoria, escolha **Certificação e envio de aplicativo** e **Enviando um aplicativo**, respectivamente.  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
-* [Obter dados de aplicativo](get-app-data.md)
+* [Obter dados de app](get-app-data.md)
 * [Gerenciar envios de aplicativo](manage-app-submissions.md)
 * [Gerenciar complementos](manage-add-ons.md)
 * [Gerenciar envios de complemento](manage-add-on-submissions.md)
@@ -138,6 +135,6 @@ Se você tiver dúvidas sobre a API de envio da Windows Store ou precisar de aju
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

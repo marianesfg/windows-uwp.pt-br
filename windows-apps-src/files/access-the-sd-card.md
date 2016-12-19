@@ -1,16 +1,16 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: "Acessar o cartão SD"
 description: "Você pode armazenar e acessar dados não essenciais em um cartão microSD, principalmente em dispositivos de baixo custo que possuem espaço de armazenamento interno limitado."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: c3ce9103f78a78e95214239e41a302ccd0e59796
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: a13f351af3cba8d3d9e645a6f6040dff6e81e1ff
 
 ---
-# Acessar o cartão SD
+# <a name="access-the-sd-card"></a>Acessar o cartão SD
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Você pode armazenar e acessar dados não essenciais em um cartão microSD, principalmente em dispositivos de baixo custo que possuem espaço de armazenamento interno limitado.
@@ -23,15 +23,15 @@ Você pode armazenar e acessar arquivos no cartão SD opcional usando os método
 
 - APIs do [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346).
 
-## O que você e não pode acessar no cartão SD
+## <a name="what-you-can-and-cant-access-on-the-sd-card"></a>O que você e não pode acessar no cartão SD
 
-### O que você pode acessar
+### <a name="what-you-can-access"></a>O que você pode acessar
 
 - Seu aplicativo só pode ler e gravar arquivos de tipos de arquivos que o aplicativo registrou para manipular no arquivo de manifesto do aplicativo.
 
 - Seu aplicativo também pode criar e gerenciar pastas.
 
-### O que você não pode acessar
+### <a name="what-you-cant-access"></a>O que você não pode acessar
 
 - Seu aplicativo não pode ver ou acessar pastas do sistema e os arquivos que elas contêm.
 
@@ -39,7 +39,7 @@ Você pode armazenar e acessar arquivos no cartão SD opcional usando os método
 
 - Seu aplicativo não pode ver ou acessar a Biblioteca de documentos usando [**KnownFolders.DocumentsLibrary**](https://msdn.microsoft.com/library/windows/apps/br227152). Entretanto, você pode acessar a Biblioteca de documentos no cartão SD percorrendo o sistema de arquivos.
 
-## Considerações de segurança e privacidade
+## <a name="security-and-privacy-considerations"></a>Considerações de segurança e privacidade
 
 Quando um aplicativo salva arquivos em uma localização global no cartão SD, esses arquivos não são criptografados para que sejam normalmente acessíveis a outros aplicativos.
 
@@ -49,7 +49,7 @@ Quando um aplicativo salva arquivos em uma localização global no cartão SD, e
 
 Porém, quando um aplicativo instalado no cartão SD salva arquivos no [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621), tais arquivos ficam criptografados e inacessíveis a outros aplicativos.
 
-## Requisitos para acessar arquivos no cartão SD
+## <a name="requirements-for-accessing-files-on-the-sd-card"></a>Requisitos para acessar arquivos no cartão SD
 
 Para acessar arquivos no cartão SD, costuma ser necessário especificar o seguinte.
 
@@ -60,9 +60,9 @@ Também use o método anterior para acessar arquivos de mídia no cartão SD sem
 
 Para acessar arquivos de mídia depositados nas Bibliotecas de mídia—Música, Fotos ou Vídeos—usando pastas conhecidas, você só precisa especificar a funcionalidade associada no arquivo de manifesto do aplicativo—**musicLibrary**, **picturesLibrary**, or **videoLibrary**. Você não precisa especificar a funcionalidade de **removableStorage**. Para obter mais informações, consulte [Files and folders in the Music, Pictures, and Videos libraries](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md).
 
-## Acessando arquivos no cartão SD
+## <a name="accessing-files-on-the-sd-card"></a>Acessando arquivos no cartão SD
 
-### Obtendo uma referência ao cartão SD
+### <a name="getting-a-reference-to-the-sd-card"></a>Obtendo uma referência ao cartão SD
 
 A pasta [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) é a raiz lógica [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) do conjunto de dispositivos removíveis conectados atualmente ao dispositivo. Se um cartão SD estiver presente, a primeira (e única) **StorageFolder** na pasta **KnownFolders.RemovableDevices** representa o cartão SD.
 
@@ -89,7 +89,7 @@ using Windows.Storage;
             }
 ```
 
-### Consultando os conteúdos do cartão SD
+### <a name="querying-the-contents-of-the-sd-card"></a>Consultando os conteúdos do cartão SD
 
 O cartão SD pode conter muitas pastas e arquivos que não são reconhecidos como pastas reconhecidas e não podem ser consultados usando uma localização de [**KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151). Para encontrar arquivos, o seu aplicativo tem que enumerar os conteúdos do cartão percorrendo o sistema de arquivos recursivamente. Use [**GetFilesAsync (CommonFileQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227274) e [**GetFoldersAsync (CommonFolderQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227281) para obter os conteúdos do cartão SD de maneira eficaz.
 
@@ -103,7 +103,7 @@ Quando você acessa o sistema de arquivos no cartão SD com um caminho você der
 
 -   O método [**GetFileFromPathAsync**](https://msdn.microsoft.com/library/windows/apps/br227206) falha se você não registrou para manipular a extensão do arquivo que está tentando acessar.
 
-## Identificando o cartão SD individual
+## <a name="identifying-the-individual-sd-card"></a>Identificando o cartão SD individual
 
 Quando o cartão SD é montado pela primeira vez, o sistema operacional geral um identificador exclusivo para o cartão. Ele armazena esse ID em um arquivo na pasta WPSystem na raiz do cartão. Um aplicativo pode usar esse ID para determinar se ele reconhece o cartão. Se um aplicativo reconhece o cartão, ele é capaz de adiar certas operações que foram concluídas anteriormente. Entretanto, o conteúdo do cartão pode ter sido alterado desde a última vez que o cartão foi acessado pelo aplicativo.
 
@@ -148,6 +148,6 @@ using Windows.Storage;
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

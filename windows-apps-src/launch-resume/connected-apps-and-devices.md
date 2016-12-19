@@ -1,16 +1,16 @@
 ---
 author: TylerMSFT
-title: Aplicativos e dispositivos conectados (projeto &quot;Roma&quot;)
-description: "Esta seção descreve como usar o projeto &quot;Roma&quot; para descobrir dispositivos conectados, iniciar um aplicativo em outro dispositivo e se comunicar com um aplicativo em um dispositivo remoto."
+title: Connected apps and devices (Project "Rome")
+description: "Esta seção descreve como usar a plataforma de Sistemas Remotos para descobrir dispositivos remotos, iniciar um app em um dispositivo remoto e comunicar-se com um serviço de app em um dispositivo remoto."
 translationtype: Human Translation
-ms.sourcegitcommit: ff8e16d0e376d502157ae42b9cdae11875008554
-ms.openlocfilehash: 4f49acfd7efcb10d99f9d23884d20c0fc51e5a4a
+ms.sourcegitcommit: 871599217e6da0eb0febd140323e99db7d1258cb
+ms.openlocfilehash: 2dbce34aeaf4933eee22e1e8ef40c48e633f6f7e
 
 ---
 
-# Aplicativos e dispositivos conectados (projeto "Roma")
+# <a name="connected-apps-and-devices-project-rome"></a>Apps e dispositivos conectados (Project "Rome")
 
-Esta seção explica como conectar aplicativos entre dispositivos e plataformas usando o projeto "Roma". Saiba como descobrir dispositivos conectados, iniciar um aplicativo em outro dispositivo e se comunicar com um aplicativo em um dispositivo remoto.
+Esta seção explica como conectar apps entre dispositivos e plataformas usando o Project "Rome". Saiba como descobrir dispositivos remotos, iniciar um app em um dispositivo remoto e comunicar-se com um serviço de app em um dispositivo remoto.
 
 A maioria das pessoas tem vários dispositivos e muitas vezes começam uma atividade em um dispositivo e a concluem em outro. Para acomodar isso, os aplicativos precisam estendem a dispositivos e plataformas.
 
@@ -20,16 +20,16 @@ Você também pode usar o projeto "Roma" para dispositivos complementares ou cen
 
 Os dispositivos podem ser conectados de modo proximal por meio de Bluetooth e conexão sem fio ou remotamente por meio da nuvem, e eles são conectados pela conta da Microsoft da pessoa que os estiver usando.
 
-Consulte o [Exemplo de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems ) para obter exemplos de como descobrir o sistema remoto, iniciar um aplicativo em um sistema remoto e usar os serviços de aplicativo para enviar mensagens entre aplicativos em execução em dois sistemas.
+Consulte o [Exemplo de Sistemas Remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems ) para obter exemplos de como descobrir o sistema remoto, iniciar um app em um sistema remoto e usar os serviços de app para enviar mensagens entre apps em execução em dois sistemas.
 
-| Atividade remota | Descrição                                                                                                                                                                |
-|-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Tópico | Descrição |
+|-------|-------------|
 | [Descobrir dispositivos remotos](discover-remote-devices.md)  | Saiba como descobrir dispositivos aos quais você pode se conectar. |
-| [Iniciar um aplicativo em um dispositivo remoto](launch-a-remote-app.md) | Saiba como iniciar um aplicativo em um dispositivo remoto.  |
-| [Comunicar-se com um serviço de aplicativo remoto](communicate-with-a-remote-app-service.md) | Saiba como interagir com um aplicativo em um dispositivo remoto. |
+| [Iniciar um app em um dispositivo remoto](launch-a-remote-app.md) | Saiba como iniciar um aplicativo em um dispositivo remoto.  |
+| [Comunicar-se com um serviço de app remoto](communicate-with-a-remote-app-service.md) | Saiba como interagir com um app em um dispositivo remoto. |
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -1,20 +1,20 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Converta traços de tinta em texto usando o reconhecimento de manuscrito, ou em formas usando o reconhecimento personalizado."
+Description: "Converta traços de tinta em texto usando o reconhecimento de manuscrito ou em formas usando o reconhecimento personalizado."
 title: "Reconhecer traços do Windows Ink como texto"
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
+keywords: "Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, InkCanvas, reconhecimento de manuscrito"
 translationtype: Human Translation
-ms.sourcegitcommit: dfb790980a8016da0ed9a080d7cf56b5a8a784ff
-ms.openlocfilehash: 26dc8910c779dc46d19be75abd49c20b750a9843
+ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
+ms.openlocfilehash: c402843cce752a54d8ff7301d892ef8014350a07
 
 ---
 
-# Reconhecer traços do Windows Ink como texto
+# <a name="recognize-windows-ink-strokes-as-text"></a>Reconhecer traços do Windows Ink como texto
 
-Converta traços em texto usando o suporte ao reconhecimento de manuscrito no Windows Ink.
+Converta traços de tinta em texto usando o suporte ao reconhecimento de manuscrito no Windows Ink.
 
 **APIs importantes**
 
@@ -26,7 +26,7 @@ O reconhecimento de manuscrito está integrado à plataforma de tinta do Windows
 
 Para todos os exemplos aqui, adicione as referências de namespace necessárias para a funcionalidade de tinta. Isso inclui "Windows.UI.Input.Inking".
 
-## Reconhecimento de manuscrito básico
+## <a name="basic-handwriting-recognition"></a>Reconhecimento de manuscrito básico
 
 
 Aqui, demonstramos como usar o mecanismo de reconhecimento de manuscrito, associado ao pacote de idiomas instalado por padrão, para interpretar um conjunto de traços em [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
@@ -203,7 +203,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## Reconhecimento internacional
+## <a name="international-recognition"></a>Reconhecimento internacional
 
 
 Um subconjunto abrangente de idiomas com suporte no Windows pode ser usado para reconhecimento de manuscrito.
@@ -448,7 +448,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## Reconhecimento de manuscrito dinâmico
+## <a name="dynamic-handwriting-recognition"></a>Reconhecimento de manuscrito dinâmico
 
 
 Os dois exemplos anteriores exigem que o usuário pressione um botão para iniciar o reconhecimento. Seu aplicativo também pode executar reconhecimento dinâmico usando entrada de traço em conjunto com uma função de tempo básica.
@@ -660,7 +660,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 * [Interações com caneta](pen-and-stylus-interactions.md)
 
@@ -668,12 +668,14 @@ string str = "Recognition result\n";
 * [Amostra de tinta](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Amostra de tinta simples](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Amostra de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Exemplo de livro de colorir](https://aka.ms/cpubsample-coloringbook)
+* [Exemplo de anotações da família](https://aka.ms/cpubsample-familynotessample)
+
+
  
 
- 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

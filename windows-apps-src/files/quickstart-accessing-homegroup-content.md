@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: "Acessando o conteúdo do Grupo Doméstico"
 description: "Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo imagens, músicas e vídeos."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: d55908186e5e0687c7dbd22fee9d2f7b70ba1707
 
 ---
-# Acessando o conteúdo do Grupo Doméstico
+# <a name="accessing-homegroup-content"></a>Acessando o conteúdo do Grupo Doméstico
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -19,7 +19,7 @@ ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
 
 Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo imagens, músicas e vídeos.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 -   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
 
@@ -41,7 +41,7 @@ Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo i
 
     Você pode usar consultas para enumerar arquivos e pastas no Grupo Doméstico. Para saber mais sobre as consultas de arquivo e pasta, consulte [Enumerando e consultando arquivos e pastas](quickstart-listing-files-and-folders.md).
 
-## Abrir o seletor de arquivos no Grupo Doméstico
+## <a name="open-the-file-picker-at-the-homegroup"></a>Abrir o seletor de arquivos no Grupo Doméstico
 
 Siga essas etapas para abrir uma instancia do seletor de arquivos que permite que o usuário selecione arquivos e pastas a partir do Grupo Doméstico:
 
@@ -76,7 +76,7 @@ Siga essas etapas para abrir uma instancia do seletor de arquivos que permite qu
     }   
     ```
 
-## Pesquisar o Grupo Doméstico para arquivos
+## <a name="search-the-homegroup-for-files"></a>Pesquisar o Grupo Doméstico para arquivos
 
 Esta seção mostra como encontrar itens do Grupo Doméstico correspondentes a um termo da consulta fornecido pelo usuário.
 
@@ -119,7 +119,7 @@ Esta seção mostra como encontrar itens do Grupo Doméstico correspondentes a u
     ```
 
 
-## Pesquise o Grupo Doméstico para obter arquivos compartilhados de um usuário específico
+## <a name="search-the-homegroup-for-a-particular-users-shared-files"></a>Pesquise o Grupo Doméstico para obter arquivos compartilhados de um usuário específico
 
 Esta seção mostra a você como encontrar arquivos do Grupo Doméstico compartilhados por um usuário específico.
 
@@ -164,7 +164,7 @@ Esta seção mostra a você como encontrar arquivos do Grupo Doméstico comparti
     }    
     ```
 
-## Transmitir vídeo a partir do Grupo Doméstico
+## <a name="stream-video-from-the-homegroup"></a>Transmitir vídeo a partir do Grupo Doméstico
 
 Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Doméstico:
 
@@ -211,6 +211,6 @@ Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Domés
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

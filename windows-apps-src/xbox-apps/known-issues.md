@@ -3,33 +3,33 @@ author: Mtoepke
 title: Problemas conhecidos com o Programa de desenvolvedor UWP no Xbox One
 description: 
 translationtype: Human Translation
-ms.sourcegitcommit: 5774ada049e5f300e9cb990f5a079c8c21796f8b
-ms.openlocfilehash: 5892e00f4da74af5aa4e24fdd12b0df0e8a4a7d9
+ms.sourcegitcommit: 20ac6fb738de1c8aaf10f46c359842f31714dbbf
+ms.openlocfilehash: b6fe2f90e0aff4b8e77b4c20aec0d29f2a6a36f8
 
 ---
 
-# Problemas conhecidos com o Programa de desenvolvedor UWP no Xbox
+# <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Problemas conhecidos com o Programa de desenvolvedor UWP no Xbox
 
 Este tópico descreve problemas conhecidos com o Programa de desenvolvedor UWP no Xbox One. Para saber mais sobre esse programa, consulte [UWP no Xbox](index.md). 
 
 \[Se você chegou até aqui a partir de um link em um tópico de referência de API e estiver procurando informações sobre a API da família de dispositivos Universal, consulte [Recursos da UWP que ainda não têm suporte no Xbox](http://go.microsoft.com/fwlink/?LinkID=760755).\]
 
-A lista a seguir destaca alguns problemas conhecidos que podem ocorrer nessa versão, embora essa não seja uma lista completa. 
+A lista a seguir destaca alguns problemas conhecidos que podem ocorrer, embora essa não seja uma lista completa. 
 
-**Queremos receber seu feedback**, portanto, relate todos os problemas que você encontrar no fórum [Developing Universal Windows Platform apps](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop). 
+**Queremos receber seu feedback**, portanto, relate todos os problemas que você encontrar no fórum [Desenvolvendo aplicativos da Plataforma Universal do Windows](https://social.msdn.microsoft.com/forums/windowsapps/home?forum=wpdevelop). 
 
 Se você ficar preso, leia as informações neste tópico, consulte [Perguntas frequentes](frequently-asked-questions.md)e use os fóruns para pedir ajuda.
 
 
 <!--## Developing games-->
  
-## Limites de memória para aplicativos em segundo plano foram parcialmente impostos
+## <a name="memory-limits-for-background-apps-are-partially-enforced"></a>Limites de memória para aplicativos em segundo plano foram parcialmente impostos
  
 O volume de memória máxima para aplicativos em execução em segundo plano é 128 MB. Na versão atual de UWP no Xbox One, seu aplicativo será suspenso se estiver acima esse limite quando for movido para segundo plano. Esse limite não será imposto no momento se seu aplicativo exceder o limite enquanto estiver sendo executado em segundo plano. Isso significa que, se seu aplicativo exceder 128 MB durante a execução em segundo plano, ele ainda poderá alocar memória.
  
 Atualmente, não há uma solução alternativa para esse problema. Os aplicativos devem reger o uso da memória de acordo e continuar a permanecer dentro do limite de 128 MB durante a execução em segundo plano.
  
-## A implantação a partir do VS falha com os Controles dos Pais ativados
+## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>A implantação a partir do VS falha com os Controles dos Pais ativados
 
 A inicialização do aplicativo a partir do VS falhará se o console tiver os Controles dos Pais ativados em Configurações.
 
@@ -67,7 +67,7 @@ The following game engines have been confirmed to work:
 There are likely others that are working too. We would love to get your feedback on what you find. 
 Please use the forum to report any issues you see.-->
 
-## Suporte ao DirectX 12
+## <a name="directx-12-support"></a>Suporte ao DirectX 12
 
 A UWP no Xbox One dá suporte ao DirectX 11 Feature Level 10. Não há suporte para o DirectX 12 no momento. 
 
@@ -91,11 +91,11 @@ In this developer preview, inbound and outbound network access from the console 
 Developers can still use HTTP and WebSockets.
 --> 
 
-## Portas de rede bloqueadas no Xbox One
+## <a name="blocked-networking-ports-on-xbox-one"></a>Portas de rede bloqueadas no Xbox One
 
 os aplicativos da Plataforma Universal do Windows (UWP) em dispositivos Xbox One não podem se associar a portas no intervalo [49152, 65535]. Embora a associação a essas portas possa parecer ter sucesso em tempo de execução, o tráfego de rede pode diminuir silenciosamente antes de atingir seu aplicativo. Seu aplicativo deverá se associar à porta 0 sempre que possível, o que permite que o sistema selecione a porta local. Se você precisar usar uma porta específica, o número da porta deverá estar no intervalo [1025, 49151], e você deve verificar e evitar conflitos com o registro IANA. Para obter mais informações, consulte o [Nome do serviço e registro de número de porta de protocolo de transporte](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
 
-## Cobertura de API UWP
+## <a name="uwp-api-coverage"></a>Cobertura de API UWP
 
 Nem todas as APIs UWP têm suporte no Xbox. Para obter a lista de APIs que sabemos que não funcionam, consulte [Recursos da UWP que ainda não têm suporte no Xbox](http://go.microsoft.com/fwlink/p/?LinkId=760755). Se você encontrar problemas com outras APIs, informe-os nos fóruns. 
 
@@ -160,7 +160,7 @@ This will delete all of your games, apps, settings and content, deactivate Devel
 
 Sometimes this is resolved by sorting a column on the table.-->
 
-## Navegar para o WDP provoca um aviso de certificado
+## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>Navegar para o WDP provoca um aviso de certificado
 
 Você receberá um aviso sobre o certificado que foi fornecido, semelhante à captura de tela a seguir, porque o certificado de segurança assinado por seu console do Xbox One não é considerado um publicador confiável conhecido. Para acessar o Windows Device Portal, clique em **Continuar para este site**.
 
@@ -171,12 +171,12 @@ Você receberá um aviso sobre o certificado que foi fornecido, semelhante à ca
 Occasionally, selecting the “Manage Windows Device Portal” option in Dev Home will cause Dev Home to silently exit to the Home screen. 
 This is caused by a failure in the WDP infrastructure on the console and can be resolved by restarting the console.-->
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Perguntas frequentes](frequently-asked-questions.md)
 - [UWP no Xbox One](index.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

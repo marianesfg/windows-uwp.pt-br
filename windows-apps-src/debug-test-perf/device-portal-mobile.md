@@ -4,11 +4,11 @@ ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para celulares
 description: "Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo móvel remotamente."
 translationtype: Human Translation
-ms.sourcegitcommit: df6d42d6a91b8721e905fe9bc3a339dc33408459
-ms.openlocfilehash: 802030f12f2ca3e29eec053d89ab806298974dc7
+ms.sourcegitcommit: ea4f755afbf16d4ba5043ebb6be586f19dcc4370
+ms.openlocfilehash: c39c1a843c4f466e1999b4e80bf87f5842ad1996
 
 ---
-# Device Portal para celulares
+# <a name="device-portal-for-mobile"></a>Device Portal para celulares
 
 A partir do Windows 10, versão 1511, outros recursos de desenvolvedor estão disponíveis para a família de dispositivos móveis. Esses recursos estão disponíveis apenas quando o Modo de desenvolvedor está habilitado no dispositivo.
 
@@ -16,11 +16,11 @@ Para saber mais sobre como habilitar o Modo de desenvolvedor, consulte [Habilita
 
 ![Configurações do Device Portal](images/device-portal/mob-dev-mode-options.png)
 
-## Configurar o Device Portal no Windows Phone
+## <a name="set-up-device-portal-on-windows-phone"></a>Configurar o Device Portal no Windows Phone
 
-### Ativar a descoberta e o emparelhamento de dispositivos
+### <a name="turn-on-device-discovery-and-pairing"></a>Ativar a descoberta e o emparelhamento de dispositivos
 
-Para se conectar ao Device Portal, você deve habilitar a Descoberta de dispositivo. Isso permite emparelhar seu telefone com um computador ou outro dispositivo Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB.
+Para se conectar ao Device Portal, você deve habilitar a Descoberta de dispositivo e o Device Portal. Isso permite emparelhar seu telefone com um computador ou outro dispositivo Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB.
 
 Na primeira vez que você se conectar ao Device Portal, será solicitado a fornecer um código de segurança de 6 caracteres que diferencia maiúsculas de minúsculas. Isso garante que você tenha acesso ao telefone e o mantém protegido contra invasores. Pressione o botão Emparelhar no seu telefone para gerar e exibir o código. Em seguida, insira os 6 caracteres na caixa de texto no navegador.
 
@@ -40,7 +40,7 @@ Você pode escolher entre 3 maneiras de se conectar ao Device Portal: USB, host 
 
     Use esse endereço para exibir o Device Portal localmente no telefone no Microsoft Edge para Windows 10 Mobile.
     
-    - Rede local: `https://<The IP address of the phone>`
+    - Rede local: `https://<The IP address or hostname of the phone>`
 
     Use esse endereço para se conectar por uma rede local.
 
@@ -58,25 +58,25 @@ Aqui está a seção do Device Portal da página de configurações do desenvolv
 
 Se você estiver usando o Device Portal em um ambiente protegido, como um laboratório de teste, onde confia em todos na rede local, não tem informações pessoais no dispositivo e tem requisitos exclusivos, você poderá desabilitar a autenticação. Isso permite a comunicação não criptografada e que qualquer pessoa com o endereço IP do seu telefone controle-o.
 
-## Notas da ferramenta
+## <a name="tool-notes"></a>Notas da ferramenta
 
-## Páginas do Device Portal
-### Processos
+## <a name="device-portal-pages"></a>Páginas do Device Portal
+### <a name="processes"></a>Processos
 
 A capacidade de encerrar processos arbitrários não está incluída no Windows Mobile Device Portal. 
 
 O Device Portal em dispositivos móveis fornece o conjunto padrão de páginas. Para obter descrições detalhadas, consulte [Visão geral do Windows Device Portal](device-portal.md).
 
-- Aplicativos
+- Gerenciador de aplicativos
+- Explorador de arquivos de aplicativo (explorador de armazenamento isolado)
 - Processos
-- Desempenho
-- ETW (Rastreamento de Eventos para Windows)
-- Rastreamento de desempenho
+- Gráficos de desempenho
+- Rastreamento de Eventos para Windows (ETW)
+- Rastreamento de desempenho (WPR) 
 - Dispositivos
 - Rede
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

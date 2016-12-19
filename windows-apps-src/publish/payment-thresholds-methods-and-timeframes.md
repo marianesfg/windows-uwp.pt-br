@@ -1,323 +1,324 @@
-﻿
 ---
 author: jnHs
-Description: The estimated time to transfer payments, applicable payment threshold(s), and Microsoft marketplaces from which you can receive payments can vary depending on your country/region and payout account type. This topic outlines the thresholds and payment methods supported in each country/region.
-
-title: Payment thresholds, methods, and timeframes
+Description: "O tempo estimado para transferir pagamentos, os limites de pagamento aplicáveis e os marketplaces Microsoft dos quais você pode receber pagamentos podem variar dependendo do país/região e do tipo de conta de pagamento."
+title: "Limites, formas e períodos de pagamento"
+translationtype: Human Translation
+ms.sourcegitcommit: d5ec64bbd1e8b10c17ff5c43d89e6652eadb2367
+ms.openlocfilehash: 4fd7a23f6d6c880e490f93dba248b6c1e43c7053
 
 ---
 
 
-# Payment thresholds, methods, and timeframes
+# <a name="payment-thresholds-methods-and-timeframes"></a>Limites, formas e períodos de pagamento
 
-The estimated time to transfer payments, applicable payment threshold(s), and Microsoft marketplaces from which you can receive payments can vary depending on your country/region and payout account type. This topic outlines the payment thresholds and payment methods supported in each country/region.
+O tempo estimado para transferir pagamentos, os limites de pagamento aplicáveis e os marketplaces Microsoft dos quais você pode receber pagamentos podem variar dependendo do país/região e do tipo de conta de pagamento. Este tópico descreve os limites e as formas de pagamento compatíveis em cada país/região.
 
-For any given country/region, we will either use ACH/SEPA or wire transfer to deliver our payments. Additionally, some countries/regions support PayPal as a payment method.
+Para qualquer país/região, usaremos ACH/SEPA ou transferência eletrônica para fazer nossos pagamentos. Além disso, alguns países/regiões dão suporte a PayPal como forma de pagamento.
 
-## Number of days for payments to reach payout account
+## <a name="number-of-days-for-payments-to-reach-payout-account"></a>Número de dias para pagamentos chegarem à conta de pagamento
 
-We'll typically send any payment due in a given month by the 15th day of that month, but it will take additional time for the payment to reach your account. The amount of days will vary depending on the payment method we use for your account, as described below. 
+Normalmente enviaremos qualquer pagamento devido em um dado mês até o 15º dia desse mês, mas levará um tempo adicional para o pagamento chegar à conta. O número de dias irá variar de acordo com a forma de pagamento que usamos para a conta, conforme descrito abaixo. 
 
-> **Note** The days shown below are approximate; any given payout may take a longer or shorter amount of time.
+> **Observação** Os dias mostrados abaixo são aproximados; qualquer pagamento pode demorar mais ou menos tempo.
 
 
-| Payment method | Number of days to reach payout account |
+| Forma de pagamento | Número de dias até chegar à conta de pagamento |
 |--------------------|--------------------------------------------|
-| PayPal | 1 business day |	
-| ACH/SEPA |2-3 business days |
-| Wire Transfer | 7-10 business days |
+| PayPal | 1 dia útil | 
+| ACH/SEPA |De 2 a 3 dias úteis |
+| Transferência eletrônica | De 7 a 10 dias úteis |
 
 &nbsp;
 
-To see the countries/regions in which these payment methods are used for each marketplace, see the tables below.
+Para ver os países/regiões em que essas formas de pagamento são usadas em cada marketplace, consulte as tabelas abaixo.
 
-## Payment thresholds and methods
+## <a name="payment-thresholds-and-methods"></a>Limites e formas de pagamento
 
-> **Note** Payment thresholds are listed in USD. In some markets, the equivalent in local currency is used. 
+> **Observação** Os limites de pagamento estão listados em USD. Em alguns mercados, é usado o equivalente em moeda local. 
 
-### Windows Store 
+### <a name="windows-store"></a>Windows Store 
 
 <table>
   <tr>
     <th>&nbsp;</th>
-    <th colspan="2">Payout account = Bank account</th>
-    <th colspan="2">Payout account = PayPal</th>
+    <th colspan="2">Conta de pagamento = conta bancária</th>
+    <th colspan="2">Conta de pagamento = PayPal</th>
   </tr>
   <tr>
-    <td><strong>Country/region</strong></td>
-    <td><strong>Payment threshold</strong></td>
-    <td><strong>Payment method</strong></td>
-    <td><strong>Payment threshold</strong></td>
-    <td><strong>Payment method</strong></td>
+    <td><strong>País/região</strong></td>
+    <td><strong>Limite de pagamento</strong></td>
+    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Limite de pagamento</strong></td>
+    <td><strong>Forma de pagamento</strong></td>
   </tr>
   <tr>
-    <td>Afghanistan</td>
+    <td>Afeganistão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Albania</td>
+    <td>Albânia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Algeria</td>
+    <td>Argélia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Angola</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Antigua and Barbuda</td>
+    <td>Antígua e Barbuda</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Argentina</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Armenia</td>
+    <td>Armênia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Australia</td>
+    <td>Austrália</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Austria</td>
+    <td>Áustria</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Azerbaijan</td>
+    <td>Azerbaijão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bahrain</td>
+    <td>Bahrein</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bangladesh</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Belarus</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Belgium</td>
+    <td>Bélgica</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Benin</td>
+    <td>Benim</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bolivia</td>
+    <td>Bolívia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bosnia and Herzegovina</td>
+    <td>Bósnia e Herzegovina</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Botswana</td>
+    <td>Botsuana</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Brazil</td>
+    <td>Brasil</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bulgaria</td>
+    <td>Bulgária</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Burkina Faso</td>
+    <td>Burquina Faso</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Burundi</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Cambodia</td>
+    <td>Camboja</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Cameroon</td>
+    <td>Camarões</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Canada</td>
+    <td>Canadá</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Central African Republic</td>
+    <td>República Centro-Africana</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Chad</td>
+    <td>Chade</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chile</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>China</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Colombia</td>
+    <td>Colômbia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Comoros</td>
+    <td>Comores</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Congo</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Congo (DRC)</td>
+    <td>Congo (República Democrática)</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Costa Rica</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Côte d'Ivoire</td>
+    <td>Côte d’Ivoire</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Croatia</td>
+    <td>Croácia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Cyprus</td>
+    <td>Chipre</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Czech Republic</td>
+    <td>República Tcheca</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Denmark</td>
+    <td>Dinamarca</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
@@ -326,103 +327,103 @@ To see the countries/regions in which these payment methods are used for each ma
   <tr>
     <td>Dominica</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Dominican Republic</td>
+    <td>República Dominicana</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Ecuador</td>
+    <td>Equador</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Egypt</td>
+    <td>Egito</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>El Salvador</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Eritrea</td>
+    <td>Eritreia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Estonia</td>
+    <td>Estônia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Ethiopia</td>
+    <td>Etiópia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Fiji</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Finland</td>
+    <td>Finlândia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>France</td>
+    <td>França</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Georgia</td>
+    <td>Geórgia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Germany</td>
+    <td>Alemanha</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Ghana</td>
+    <td>Gana</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Greece</td>
+    <td>Grécia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
@@ -431,75 +432,75 @@ To see the countries/regions in which these payment methods are used for each ma
   <tr>
     <td>Guatemala</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Guinea</td>
+    <td>Guiné</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Haiti</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Honduras</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Hong Kong SAR</td>
+    <td>RAE de Hong Kong</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Hungary</td>
+    <td>Hungria</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Iceland</td>
+    <td>Islândia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>India</td>
+    <td>Índia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Indonesia</td>
+    <td>Indonésia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Iraq</td>
+    <td>Iraque</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Ireland</td>
+    <td>Irlanda</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
@@ -513,7 +514,7 @@ To see the countries/regions in which these payment methods are used for each ma
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Italy</td>
+    <td>Itália</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
@@ -522,135 +523,135 @@ To see the countries/regions in which these payment methods are used for each ma
   <tr>
     <td>Jamaica</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Japan</td>
+    <td>Japão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Jordan</td>
+    <td>Jordânia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Kazakhstan</td>
+    <td>Cazaquistão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Kenya</td>
+    <td>Quênia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Korea</td>
+    <td>Coreia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Kuwait</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Laos</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Latvia</td>
+    <td>Letônia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Lebanon</td>
+    <td>Líbano</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Liberia</td>
+    <td>Libéria</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Liechtenstein</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Lithuania</td>
+    <td>Lituânia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Luxembourg</td>
+    <td>Luxemburgo</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Macedonia (FYROM)</td>
+    <td>Macedônia (ARIM)</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Madagascar</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Malawi</td>
+    <td>Maláui</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Malaysia</td>
+    <td>Malásia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Mali</td>
+    <td>Máli</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Malta</td>
@@ -660,149 +661,149 @@ To see the countries/regions in which these payment methods are used for each ma
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Mauritius</td>
+    <td>Maurício</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Mexico</td>
+    <td>México</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Monaco</td>
+    <td>Mônaco</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Mongolia</td>
+    <td>Mongólia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Montenegro</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Morocco</td>
+    <td>Marrocos</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Mozambique</td>
+    <td>Moçambique</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Nepal</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Netherlands</td>
+    <td>Países Baixos</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>New Zealand</td>
+    <td>Nova Zelândia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Nicaragua</td>
+    <td>Nicarágua</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Niger</td>
+    <td>Níger</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Nigeria</td>
+    <td>Nigéria</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Norway</td>
+    <td>Noruega</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Oman</td>
+    <td>Omã</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Pakistan</td>
+    <td>Paquistão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Panama</td>
+    <td>Panamá</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Paraguay</td>
+    <td>Paraguai</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Peru</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Philippines</td>
+    <td>Filipinas</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Poland</td>
+    <td>Polônia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
@@ -814,105 +815,105 @@ To see the countries/regions in which these payment methods are used for each ma
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Qatar</td>
+    <td>Catar</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Romania</td>
+    <td>Romênia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Russia</td>
+    <td>Rússia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Rwanda</td>
+    <td>Ruanda</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Saint Vincent and the Grenadines</td>
+    <td>São Vicente e Granadinas</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Saudi Arabia</td>
+    <td>Arábia Saudita</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Senegal</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Serbia</td>
+    <td>Sérvia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Sierra Leone</td>
+    <td>Serra Leoa</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Singapore</td>
+    <td>Cingapura</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Slovakia</td>
+    <td>Eslováquia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Slovenia</td>
+    <td>Eslovênia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Somalia</td>
+    <td>Somália</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>South Africa</td>
+    <td>África do Sul</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Spain</td>
+    <td>Espanha</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
@@ -921,465 +922,465 @@ To see the countries/regions in which these payment methods are used for each ma
   <tr>
     <td>Sri Lanka</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Sweden</td>
+    <td>Suécia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Switzerland</td>
+    <td>Suíça</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
     <td>Taiwan</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Tajikistan</td>
+    <td>Tadjiquistão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Tanzania</td>
+    <td>Tanzânia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Thailand</td>
+    <td>Tailândia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
     <td>Timor-Leste</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Togo</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tonga</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Trinidad and Tobago</td>
+    <td>Trinidad e Tobago</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Tunisia</td>
+    <td>Tunísia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Turkey</td>
+    <td>Turquia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Turkmenistan</td>
+    <td>Turcomenistão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Uganda</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Ukraine</td>
+    <td>Ucrânia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>United Arab Emirates</td>
+    <td>Emirados Árabes Unidos</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>United Kingdom</td>
+    <td>Reino Unido</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>United States</td>
+    <td>Estados Unidos</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Uruguay</td>
+    <td>Uruguai</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Uzbekistan</td>
+    <td>Uzbequistão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Venezuela</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Vietnam</td>
+    <td>Vietnã</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Zambia</td>
+    <td>Zâmbia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Zimbabwe</td>
+    <td>Zimbábue</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
 </table>
 
 &nbsp;
 
-### Microsoft Advertising 
+### <a name="microsoft-advertising"></a>Microsoft Advertising 
 
 <table>
   <tr>
     <th>&nbsp;</th>
-    <th colspan="2">Payout account = Bank account</th>
-    <th colspan="2">Payout account = PayPal</th>
+    <th colspan="2">Conta de pagamento = conta bancária</th>
+    <th colspan="2">Conta de pagamento = PayPal</th>
   </tr>
   <tr>
-    <td><strong>Country/region</strong></td>
-    <td><strong>Payment threshold</strong></td>
-    <td><strong>Payment method</strong></td>
-    <td><strong>Payment threshold</strong></td>
-    <td><strong>Payment method</strong></td>
+    <td><strong>País/região</strong></td>
+    <td><strong>Limite de pagamento</strong></td>
+    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Limite de pagamento</strong></td>
+    <td><strong>Forma de pagamento</strong></td>
   </tr>
   <tr>
-    <td>Afghanistan</td>
+    <td>Afeganistão</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Albania</td>
+    <td>Albânia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Algeria</td>
+    <td>Argélia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Angola</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Antigua and Barbuda</td>
+    <td>Antígua e Barbuda</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Argentina</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Armenia</td>
+    <td>Armênia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Australia</td>
+    <td>Austrália</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Austria</td>
+    <td>Áustria</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Azerbaijan</td>
+    <td>Azerbaijão</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bahrain</td>
+    <td>Bahrein</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bangladesh</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Belarus</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Belgium</td>
+    <td>Bélgica</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Benin</td>
+    <td>Benim</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bolivia</td>
+    <td>Bolívia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bosnia and Herzegovina</td>
+    <td>Bósnia e Herzegovina</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Botswana</td>
+    <td>Botsuana</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Brazil</td>
+    <td>Brasil</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bulgaria</td>
+    <td>Bulgária</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Burkina Faso</td>
+    <td>Burquina Faso</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Burundi</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Cambodia</td>
+    <td>Camboja</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Cameroon</td>
+    <td>Camarões</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Canada</td>
+    <td>Canadá</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Central African Republic</td>
+    <td>República Centro-Africana</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Chad</td>
+    <td>Chade</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chile</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>China</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Colombia</td>
+    <td>Colômbia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Comoros</td>
+    <td>Comores</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Congo</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Congo (DRC)</td>
+    <td>Congo (República Democrática)</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Costa Rica</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Côte d'Ivoire</td>
+    <td>Côte d’Ivoire</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Croatia</td>
+    <td>Croácia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Cyprus</td>
+    <td>Chipre</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Czech Republic</td>
+    <td>República Tcheca</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Denmark</td>
+    <td>Dinamarca</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
@@ -1388,103 +1389,103 @@ To see the countries/regions in which these payment methods are used for each ma
   <tr>
     <td>Dominica</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Dominican Republic</td>
+    <td>República Dominicana</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Ecuador</td>
+    <td>Equador</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Egypt</td>
+    <td>Egito</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>El Salvador</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Eritrea</td>
+    <td>Eritreia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Estonia</td>
+    <td>Estônia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Ethiopia</td>
+    <td>Etiópia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Fiji</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Finland</td>
+    <td>Finlândia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>France</td>
+    <td>França</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Georgia</td>
+    <td>Geórgia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Germany</td>
+    <td>Alemanha</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Ghana</td>
+    <td>Gana</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Greece</td>
+    <td>Grécia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
@@ -1493,75 +1494,75 @@ To see the countries/regions in which these payment methods are used for each ma
   <tr>
     <td>Guatemala</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Guinea</td>
+    <td>Guiné</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Haiti</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Honduras</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Hong Kong SAR</td>
+    <td>RAE de Hong Kong</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Hungary</td>
+    <td>Hungria</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Iceland</td>
+    <td>Islândia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>India</td>
+    <td>Índia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Indonesia</td>
+    <td>Indonésia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Iraq</td>
+    <td>Iraque</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Ireland</td>
+    <td>Irlanda</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
@@ -1575,7 +1576,7 @@ To see the countries/regions in which these payment methods are used for each ma
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Italy</td>
+    <td>Itália</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
@@ -1584,135 +1585,135 @@ To see the countries/regions in which these payment methods are used for each ma
   <tr>
     <td>Jamaica</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Japan</td>
+    <td>Japão</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Jordan</td>
+    <td>Jordânia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Kazakhstan</td>
+    <td>Cazaquistão</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Kenya</td>
+    <td>Quênia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Korea</td>
+    <td>Coreia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Kuwait</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Laos</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Latvia</td>
+    <td>Letônia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Lebanon</td>
+    <td>Líbano</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Liberia</td>
+    <td>Libéria</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Liechtenstein</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Lithuania</td>
+    <td>Lituânia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Luxembourg</td>
+    <td>Luxemburgo</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Macedonia (FYROM)</td>
+    <td>Macedônia (ARIM)</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Madagascar</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Malawi</td>
+    <td>Maláui</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Malaysia</td>
+    <td>Malásia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Mali</td>
+    <td>Máli</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Malta</td>
@@ -1722,149 +1723,149 @@ To see the countries/regions in which these payment methods are used for each ma
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Mauritius</td>
+    <td>Maurício</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Mexico</td>
+    <td>México</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Monaco</td>
+    <td>Mônaco</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Mongolia</td>
+    <td>Mongólia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Montenegro</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Morocco</td>
+    <td>Marrocos</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Mozambique</td>
+    <td>Moçambique</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Nepal</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Netherlands</td>
+    <td>Países Baixos</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>New Zealand</td>
+    <td>Nova Zelândia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Nicaragua</td>
+    <td>Nicarágua</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Niger</td>
+    <td>Níger</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Nigeria</td>
+    <td>Nigéria</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Norway</td>
+    <td>Noruega</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Oman</td>
+    <td>Omã</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Pakistan</td>
+    <td>Paquistão</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Panama</td>
+    <td>Panamá</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Paraguay</td>
+    <td>Paraguai</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Peru</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Philippines</td>
+    <td>Filipinas</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Poland</td>
+    <td>Polônia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
@@ -1876,105 +1877,105 @@ To see the countries/regions in which these payment methods are used for each ma
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Qatar</td>
+    <td>Catar</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Romania</td>
+    <td>Romênia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Russia</td>
+    <td>Rússia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Rwanda</td>
+    <td>Ruanda</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Saint Vincent and the Grenadines</td>
+    <td>São Vicente e Granadinas</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Saudi Arabia</td>
+    <td>Arábia Saudita</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Senegal</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Serbia</td>
+    <td>Sérvia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Sierra Leone</td>
+    <td>Serra Leoa</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Singapore</td>
+    <td>Cingapura</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Slovakia</td>
+    <td>Eslováquia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Slovenia</td>
+    <td>Eslovênia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Somalia</td>
+    <td>Somália</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>South Africa</td>
+    <td>África do Sul</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Spain</td>
+    <td>Espanha</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
@@ -1983,376 +1984,936 @@ To see the countries/regions in which these payment methods are used for each ma
   <tr>
     <td>Sri Lanka</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Sweden</td>
+    <td>Suécia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Switzerland</td>
+    <td>Suíça</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
     <td>Taiwan</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Tajikistan</td>
+    <td>Tadjiquistão</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Tanzania</td>
+    <td>Tanzânia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Thailand</td>
+    <td>Tailândia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
     <td>Timor-Leste</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Togo</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tonga</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Trinidad and Tobago</td>
+    <td>Trinidad e Tobago</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Tunisia</td>
+    <td>Tunísia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Turkey</td>
+    <td>Turquia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Turkmenistan</td>
+    <td>Turcomenistão</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Uganda</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Ukraine</td>
+    <td>Ucrânia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>United Arab Emirates</td>
+    <td>Emirados Árabes Unidos</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>United Kingdom</td>
+    <td>Reino Unido</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>United States</td>
+    <td>Estados Unidos</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Uruguay</td>
+    <td>Uruguai</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Uzbekistan</td>
+    <td>Uzbequistão</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Venezuela</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Vietnam</td>
+    <td>Vietnã</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Zambia</td>
+    <td>Zâmbia</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Zimbabwe</td>
+    <td>Zimbábue</td>
     <td>50 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
 </table>
 
 &nbsp;
 
-### Azure Marketplace
+### <a name="azure-marketplace"></a>Azure Marketplace
 
 <table>
   <tr>
     <th>&nbsp;</th>
-    <th colspan="2">Payout account = Bank account</th>
-    <th colspan="2">Payout account = PayPal</th>
+    <th colspan="2">Conta de pagamento = conta bancária</th>
+    <th colspan="2">Conta de pagamento = PayPal</th>
   </tr>
   <tr>
-    <td><strong>Country/region</strong></td>
-    <td><strong>Payment threshold</strong></td>
-    <td><strong>Payment method</strong></td>
-    <td><strong>Payment threshold</strong></td>
-    <td><strong>Payment method</strong></td>
+    <td><strong>País/região</strong></td>
+    <td><strong>Limite de pagamento</strong></td>
+    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Limite de pagamento</strong></td>
+    <td><strong>Forma de pagamento</strong></td>
+  </tr>
+  <tr>
+    <td>Afeganistão</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Albânia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Argélia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Angola</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+<tr>
+    <td>Antígua e Barbuda</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+ <tr>
+    <td>Argentina</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Armênia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Austrália</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
   </tr>
     <tr>
-    <td>Austria</td>
+    <td>Áustria</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-  <tr>
-    <td>Belgium</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Bulgaria</td>
+<tr>
+    <td>Azerbaijão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Canada</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Croatia</td>
+    <td>Bahrein</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Cyprus</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Czech Republic</td>
+    <td>Bangladesh</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Denmark</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Estonia</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Finland</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>France</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Germany</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Greece</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Hong Kong SAR</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Hungary</td>
+    <td>Belarus</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
-  <tr>
-    <td>Ireland</td>
+    <tr>
+    <td>Bélgica</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-  <tr>
-    <td>Italy</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Japan</td>
+ <tr>
+    <td>Benim</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Bolívia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Bósnia e Herzegovina</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Botsuana</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Brasil</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+   <tr>
+    <td>Bulgária</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+<tr>
+    <td>Burquina Faso</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Burundi</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Camboja</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Camarões</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+    <tr>
+    <td>Canadá</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+<tr>
+    <td>República Centro-Africana</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Chade</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Chile</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Colômbia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Comores</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Congo</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Congo (República Democrática)</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Costa Rica</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Côte d’Ivoire</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Croácia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Chipre</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Latvia</td>
+    <td>República Tcheca</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Dinamarca</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Dominica</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>República Dominicana</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Equador</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Egito</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>El Salvador</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Eritreia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Estônia</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Etiópia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Fiji</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Finlândia</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>França</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+   <tr>
+    <td>Geórgia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+ <tr>
+    <td>Alemanha</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+   <tr>
+    <td>Gana</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+ <tr>
+    <td>Grécia</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Guatemala</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Guiné</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Haiti</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Honduras</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+   <tr>
+    <td>RAE de Hong Kong</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Hungria</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Islândia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Índia</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Indonésia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Iraque</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Irlanda</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Israel</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+   <tr>
+    <td>Itália</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+   <tr>
+    <td>Jamaica</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+ <tr>
+    <td>Japão</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Jordânia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Cazaquistão</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Quênia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Coreia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Kuwait</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Laos</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+   <tr>
+    <td>Letônia</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Líbano</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Libéria</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Liechtenstein</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Lithuania</td>
+    <td>Lituânia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Luxembourg</td>
+    <td>Luxemburgo</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
+ <tr>
+    <td>Macedônia (ARIM)</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
   <tr>
+    <td>Madagascar</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Maláui</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Malásia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Máli</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+   <tr>
     <td>Malta</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-  <tr>
-    <td>Netherlands</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Norway</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Poland</td>
+ <tr>
+    <td>Maurício</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>México</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Mônaco</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Mongólia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Montenegro</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Marrocos</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Moçambique</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Nepal</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+   <tr>
+    <td>Países Baixos</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Nicarágua</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Níger</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Nigéria</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+   <tr>
+    <td>Noruega</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Omã</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Paquistão</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Panamá</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Paraguai</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Peru</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Filipinas</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+   <tr>
+    <td>Polônia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
@@ -2364,410 +2925,634 @@ To see the countries/regions in which these payment methods are used for each ma
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Romania</td>
+    <td>Catar</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Slovakia</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Slovenia</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Spain</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Sweden</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
-    <td>25 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>Switzerland</td>
+    <td>Romênia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+ <tr>
+    <td>Rússia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>United Kingdom</td>
+    <td>Ruanda</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>São Vicente e Granadinas</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Arábia Saudita</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Senegal</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Sérvia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Serra Leoa</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Cingapura</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+   <tr>
+    <td>Eslováquia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>United States</td>
+    <td>Eslovênia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-</table>
+ <tr>
+    <td>Somália</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>África do Sul</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+   <tr>
+    <td>Espanha</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Sri Lanka</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Suécia</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Suíça</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Taiwan</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Tadjiquistão</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Tanzânia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Tailândia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Timor-Leste</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Togo</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Tonga</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Trinidad e Tobago</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Tunísia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Turquia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Turcomenistão</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Uganda</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Ucrânia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Emirados Árabes Unidos</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+    <tr>
+    <td>Reino Unido</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Estados Unidos</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Uruguai</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Uzbequistão</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Venezuela</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Vietnã</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Zâmbia</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>Zimbábue</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
+  </tr>
+ </table>
 
 &nbsp;
 
-### Office Store
+### <a name="office-store"></a>Office Store
 <table>
   <tr>
     <th>&nbsp;</th>
-    <th colspan="2">Payout account = Bank account</th>
-    <th colspan="2">Payout account = PayPal</th>
+    <th colspan="2">Conta de pagamento = conta bancária</th>
+    <th colspan="2">Conta de pagamento = PayPal</th>
   </tr>
   <tr>
-    <td><strong>Country/region</strong></td>
-    <td><strong>Payment threshold</strong></td>
-    <td><strong>Payment method</strong></td>
-    <td><strong>Payment threshold</strong></td>
-    <td><strong>Payment method</strong></td>
+    <td><strong>País/região</strong></td>
+    <td><strong>Limite de pagamento</strong></td>
+    <td><strong>Forma de pagamento</strong></td>
+    <td><strong>Limite de pagamento</strong></td>
+    <td><strong>Forma de pagamento</strong></td>
   </tr>
   <tr>
-    <td>Albania</td>
+    <td>Albânia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Algeria</td>
+    <td>Argélia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Andorra</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Angola</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Argentina</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Australia</td>
+    <td>Austrália</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Austria</td>
+    <td>Áustria</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Azerbaijan</td>
+    <td>Azerbaijão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bahrain</td>
+    <td>Bahrein</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bangladesh</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Belarus</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Belgium</td>
+    <td>Bélgica</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Benin</td>
+    <td>Benim</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bolivia</td>
+    <td>Bolívia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bosnia and Herzegovina</td>
+    <td>Bósnia e Herzegovina</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Brazil</td>
+    <td>Brasil</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Bulgaria</td>
+    <td>Bulgária</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Burkina Faso</td>
+    <td>Burquina Faso</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Burundi</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Cambodia</td>
+    <td>Camboja</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Cameroon</td>
+    <td>Camarões</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Canada</td>
+    <td>Canadá</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Central African Republic</td>
+    <td>República Centro-Africana</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Chad</td>
+    <td>Chade</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chile</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>China</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Colombia</td>
+    <td>Colômbia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Congo</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Congo (DRC)</td>
+    <td>Congo (República Democrática)</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Costa Rica</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Côte d'Ivoire</td>
+    <td>Côte d’Ivoire</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Croatia</td>
+    <td>Croácia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Cyprus</td>
+    <td>Chipre</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Czech Republic</td>
+    <td>República Tcheca</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Denmark</td>
+    <td>Dinamarca</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Dominican Republic</td>
+    <td>República Dominicana</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Ecuador</td>
+    <td>Equador</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Egypt</td>
+    <td>Egito</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>El Salvador</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Eritrea</td>
+    <td>Eritreia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Estonia</td>
+    <td>Estônia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Ethiopia</td>
+    <td>Etiópia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Finland</td>
+    <td>Finlândia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>France</td>
+    <td>França</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Georgia</td>
+    <td>Geórgia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Germany</td>
+    <td>Alemanha</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Ghana</td>
+    <td>Gana</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Greece</td>
+    <td>Grécia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
@@ -2776,68 +3561,68 @@ To see the countries/regions in which these payment methods are used for each ma
   <tr>
     <td>Guatemala</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Guinea</td>
+    <td>Guiné</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Haiti</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Honduras</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Hong Kong SAR</td>
+    <td>RAE de Hong Kong</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Hungary</td>
+    <td>Hungria</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Iceland</td>
+    <td>Islândia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>India</td>
+    <td>Índia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Indonesia</td>
+    <td>Indonésia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Ireland</td>
+    <td>Irlanda</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
@@ -2851,7 +3636,7 @@ To see the countries/regions in which these payment methods are used for each ma
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Italy</td>
+    <td>Itália</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
@@ -2860,135 +3645,135 @@ To see the countries/regions in which these payment methods are used for each ma
   <tr>
     <td>Jamaica</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Japan</td>
+    <td>Japão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Jordan</td>
+    <td>Jordânia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Kazakhstan</td>
+    <td>Cazaquistão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Kenya</td>
+    <td>Quênia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Korea</td>
+    <td>Coreia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Kuwait</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Kyrgyzstan</td>
+    <td>Quirguistão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Laos</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Latvia</td>
+    <td>Letônia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Liberia</td>
+    <td>Libéria</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Liechtenstein</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Lithuania</td>
+    <td>Lituânia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Luxembourg</td>
+    <td>Luxemburgo</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Macedonia (FYROM)</td>
+    <td>Macedônia (ARIM)</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Madagascar</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Malawi</td>
+    <td>Maláui</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Malaysia</td>
+    <td>Malásia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Mali</td>
+    <td>Máli</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Malta</td>
@@ -2998,135 +3783,135 @@ To see the countries/regions in which these payment methods are used for each ma
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Mexico</td>
+    <td>México</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Mongolia</td>
+    <td>Mongólia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Montenegro</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Morocco</td>
+    <td>Marrocos</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Mozambique</td>
+    <td>Moçambique</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Nepal</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Netherlands</td>
+    <td>Países Baixos</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>New Zealand</td>
+    <td>Nova Zelândia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Nicaragua</td>
+    <td>Nicarágua</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Niger</td>
+    <td>Níger</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Nigeria</td>
+    <td>Nigéria</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Norway</td>
+    <td>Noruega</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Oman</td>
+    <td>Omã</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Pakistan</td>
+    <td>Paquistão</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Panama</td>
+    <td>Panamá</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Paraguay</td>
+    <td>Paraguai</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Peru</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Philippines</td>
+    <td>Filipinas</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Poland</td>
+    <td>Polônia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
@@ -3138,98 +3923,98 @@ To see the countries/regions in which these payment methods are used for each ma
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Puerto Rico</td>
+    <td>Porto Rico</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Qatar</td>
+    <td>Catar</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Romania</td>
+    <td>Romênia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Rwanda</td>
+    <td>Ruanda</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Saudi Arabia</td>
+    <td>Arábia Saudita</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Senegal</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Serbia</td>
+    <td>Sérvia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Sierra Leone</td>
+    <td>Serra Leoa</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Singapore</td>
+    <td>Cingapura</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Slovakia</td>
+    <td>Eslováquia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Slovenia</td>
+    <td>Eslovênia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Somalia</td>
+    <td>Somália</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>South Africa</td>
+    <td>África do Sul</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Spain</td>
+    <td>Espanha</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
@@ -3238,141 +4023,147 @@ To see the countries/regions in which these payment methods are used for each ma
   <tr>
     <td>Sri Lanka</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Sweden</td>
+    <td>Suécia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Switzerland</td>
+    <td>Suíça</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
     <td>Taiwan</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Tanzania</td>
+    <td>Tanzânia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Thailand</td>
+    <td>Tailândia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
     <td>Timor-Leste</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Togo</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Trinidad and Tobago</td>
+    <td>Trinidad e Tobago</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Tunisia</td>
+    <td>Tunísia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Turkey</td>
+    <td>Turquia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Uganda</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>United Arab Emirates</td>
+    <td>Emirados Árabes Unidos</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>United Kingdom</td>
+    <td>Reino Unido</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>United States</td>
+    <td>Estados Unidos</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Uruguay</td>
+    <td>Uruguai</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Venezuela</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Vietnam</td>
+    <td>Vietnã</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Zambia</td>
+    <td>Zâmbia</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
-    <td>Zimbabwe</td>
+    <td>Zimbábue</td>
     <td>200 USD</td>
-    <td>Wire transfer</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>Transferência eletrônica</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
 </table>
+
+
+
+<!--HONumber=Dec16_HO1-->
+
+
