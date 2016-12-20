@@ -6,24 +6,24 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ec4c5f937e4fd133bfc4f7aa96d00cee03a13c26?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-known-issues.md&_a=contents) | HandedOffSuccess | [Details](#d3ed0af32c9a44078d0f772d7fc130121f5d49705554)
+ [windows-apps-src\monetize\java-code-examples-for-the-windows-store-submission-api.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/6c24152b96223be0e2df03519b7f6921ebf7fd32?path=windows-apps-src%2Fmonetize%2Fjava-code-examples-for-the-windows-store-submission-api.md&_a=contents) | HandedOffSuccess | [Details](#2d98cf05d6f5a89518cfd66235b69951dbb213cc5455)
 
 ## Item Details
-##### <a name='d3ed0af32c9a44078d0f772d7fc130121f5d49705554'></a> Source: [windows-apps-src\porting\desktop-to-uwp-known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ec4c5f937e4fd133bfc4f7aa96d00cee03a13c26?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-known-issues.md&_a=contents)
+##### <a name='2d98cf05d6f5a89518cfd66235b69951dbb213cc5455'></a> Source: [windows-apps-src\monetize\java-code-examples-for-the-windows-store-submission-api.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/6c24152b96223be0e2df03519b7f6921ebf7fd32?path=windows-apps-src%2Fmonetize%2Fjava-code-examples-for-the-windows-store-submission-api.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d766492da797298aed1321d4521c9db88b6fd2c4?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fdesktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.pt-br.xlf&_a=contents)
-* Handoff Datetime: 2016-12-20 18:01:02
+* Handoff File: [java-code-examples-for-the-windows-store-submission-api.60f6aee67d35c7b2f09aa312dd051ec8f7c9569d.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/36b61a773945eea879d14c65afe9a163f05eda63?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fjava-code-examples-for-the-windows-store-submission-api.60f6aee67d35c7b2f09aa312dd051ec8f7c9569d.pt-br.xlf&_a=contents)
+* Handoff Datetime: 2016-12-20 20:00:02
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\porting\desktop-to-uwp-known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/1112dc6c841af42e31345a8cc529032c5fb861ec?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-known-issues.md&_a=contents)
-* Current Handback File: [desktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2d3fbe5069de1c400b9de01847b241bca6e7ba3d?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fdesktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.pt-br.xlf&_a=contents)
-* Current Handback Datetime: 2016-11-30 15:21:07
-* Bilingual File: [desktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2d3fbe5069de1c400b9de01847b241bca6e7ba3d?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fdesktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.pt-br.xlf&_a=contents)
-* Bilingual Datetime: 2016-11-30 15:25:49
+* Current Target File: [windows-apps-src\monetize\java-code-examples-for-the-windows-store-submission-api.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/3dd81a5f0104a6d0309a18f3f936e65f369d2dc5?path=windows-apps-src%2Fmonetize%2Fjava-code-examples-for-the-windows-store-submission-api.md&_a=contents)
+* Current Handback File: [java-code-examples-for-the-windows-store-submission-api.60f6aee67d35c7b2f09aa312dd051ec8f7c9569d.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fjava-code-examples-for-the-windows-store-submission-api.60f6aee67d35c7b2f09aa312dd051ec8f7c9569d.pt-br.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-21 16:06:32
+* Bilingual File: [java-code-examples-for-the-windows-store-submission-api.60f6aee67d35c7b2f09aa312dd051ec8f7c9569d.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fjava-code-examples-for-the-windows-store-submission-api.60f6aee67d35c7b2f09aa312dd051ec8f7c9569d.pt-br.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-24 15:48:08
 * [Back to Top](#report-top)
 
 
