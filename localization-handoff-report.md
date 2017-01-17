@@ -1,20 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\manage-add-on-submissions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/a8e638693973517204128e5520063816aca285e9?path=windows-apps-src%2Fmonetize%2Fmanage-add-on-submissions.md&_a=contents) | HandedOffSuccess | [Details](#927d3ff1cbe22bde40f099303752ef06b13993ea5477)
- [windows-apps-src\monetize\manage-app-submissions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/a8e638693973517204128e5520063816aca285e9?path=windows-apps-src%2Fmonetize%2Fmanage-app-submissions.md&_a=contents) | HandedOffSuccess | [Details](#5083ab4d9fcb2b5d07ceee70afdd7c00876e947f5479)
+ [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/2715dd0748aa1fe096482b5ec978c29a7468e0d8?path=windows-apps-src%2Fdebug-test-perf%2Fdevice-portal-desktop.md&_a=contents) | HandedOffSuccess | [Details](#f780866b327685a7256da8b40be81dd765d10c4d3259)
 
 ## Item Details
-##### <a name='927d3ff1cbe22bde40f099303752ef06b13993ea5477'></a> Source: [windows-apps-src\monetize\manage-add-on-submissions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/a8e638693973517204128e5520063816aca285e9?path=windows-apps-src%2Fmonetize%2Fmanage-add-on-submissions.md&_a=contents)
+##### <a name='f780866b327685a7256da8b40be81dd765d10c4d3259'></a> Source: [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/2715dd0748aa1fe096482b5ec978c29a7468e0d8?path=windows-apps-src%2Fdebug-test-perf%2Fdevice-portal-desktop.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [manage-add-on-submissions.809a5c768ca0734f5570be27d549868714bec6d9.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/ab49ccc7c1ccdfd3162720b157b3114de61b63c8?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fmanage-add-on-submissions.809a5c768ca0734f5570be27d549868714bec6d9.pt-br.xlf&_a=contents)
-* Handoff Datetime: 2017-01-17 21:45:51
+* Handoff File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/a41f2d6accbb7b008c3ae22b82a40697c081687f?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fdevice-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.pt-br.xlf&_a=contents)
+* Handoff Datetime: 2017-01-17 23:47:46
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -22,30 +21,11 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\monetize\manage-add-on-submissions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/0b0dd9c9de09bd614276fdcd31b4561e5ac784c7?path=windows-apps-src%2Fmonetize%2Fmanage-add-on-submissions.md&_a=contents)
-* Current Handback File: [manage-add-on-submissions.809a5c768ca0734f5570be27d549868714bec6d9.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c76e98828dfa587edbee98aac630a5cc90bb2853?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fmanage-add-on-submissions.809a5c768ca0734f5570be27d549868714bec6d9.pt-br.xlf&_a=contents)
-* Current Handback Datetime: 2016-12-14 14:19:50
-* Bilingual File: [manage-add-on-submissions.809a5c768ca0734f5570be27d549868714bec6d9.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c76e98828dfa587edbee98aac630a5cc90bb2853?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fmanage-add-on-submissions.809a5c768ca0734f5570be27d549868714bec6d9.pt-br.xlf&_a=contents)
-* Bilingual Datetime: 2016-12-14 14:23:54
-* [Back to Top](#report-top)
-
-##### <a name='5083ab4d9fcb2b5d07ceee70afdd7c00876e947f5479'></a> Source: [windows-apps-src\monetize\manage-app-submissions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/a8e638693973517204128e5520063816aca285e9?path=windows-apps-src%2Fmonetize%2Fmanage-app-submissions.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [manage-app-submissions.289b450373e235be4b37005d83b6cc18ffe2de1f.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/ab49ccc7c1ccdfd3162720b157b3114de61b63c8?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fmanage-app-submissions.289b450373e235be4b37005d83b6cc18ffe2de1f.pt-br.xlf&_a=contents)
-* Handoff Datetime: 2017-01-17 21:45:51
-* Handoff Reason: Include
-* Handoff Name: 
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Handback Name: 
-* Current Target File: [windows-apps-src\monetize\manage-app-submissions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/0b0dd9c9de09bd614276fdcd31b4561e5ac784c7?path=windows-apps-src%2Fmonetize%2Fmanage-app-submissions.md&_a=contents)
-* Current Handback File: [manage-app-submissions.289b450373e235be4b37005d83b6cc18ffe2de1f.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c76e98828dfa587edbee98aac630a5cc90bb2853?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fmanage-app-submissions.289b450373e235be4b37005d83b6cc18ffe2de1f.pt-br.xlf&_a=contents)
-* Current Handback Datetime: 2016-12-14 14:19:50
-* Bilingual File: [manage-app-submissions.289b450373e235be4b37005d83b6cc18ffe2de1f.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c76e98828dfa587edbee98aac630a5cc90bb2853?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fmanage-app-submissions.289b450373e235be4b37005d83b6cc18ffe2de1f.pt-br.xlf&_a=contents)
-* Bilingual Datetime: 2016-12-14 14:23:54
+* Current Target File: [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/3dd81a5f0104a6d0309a18f3f936e65f369d2dc5?path=windows-apps-src%2Fdebug-test-perf%2Fdevice-portal-desktop.md&_a=contents)
+* Current Handback File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fdevice-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.pt-br.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-21 16:06:32
+* Bilingual File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9c7d16b855d2ba637939395bb4d8f4831e154c6c?path=ol-handback%2FMicrosoft%2Fwindows-apps.pt-br%2Fmaster%2Fdevice-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.pt-br.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-24 15:48:08
 * [Back to Top](#report-top)
 
 
