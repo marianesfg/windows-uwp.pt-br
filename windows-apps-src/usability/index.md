@@ -3,12 +3,19 @@ description: "Saiba como tornar seu aplicativo inclusivo e acessível para pesso
 keywords: "acessibilidade do aplicativo UWP, globalização, aplicativos de design inclusivo, requisitos de aplicativo de acessibilidade"
 title: "Usabilidade em aplicativos UWP – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
+label: Usability
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 589e3290a47a9245ddb5e43f64d13bae1244ac8b
-ms.openlocfilehash: d7246bc898e36155996941875b6c00da7891809d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 011d4e7dcebc20e0568fd5bdc4a207a66597f073
 
 ---
-# Usabilidade para aplicativos UWP
+# <a name="usability-for-uwp-apps"></a>Usabilidade para aplicativos UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -17,7 +24,7 @@ São os pequenos toques, uma atenção extra aos detalhes, que podem transformar
 As instruções de design e codificação nesta seção podem tornar seu aplicativo UWP mais inclusivo adicionando recursos de acessibilidade, habilitando a globalização e localização, permitindo que os usuários personalizem sua experiência e fornecendo ajuda quando os usuários precisarem.
 
 
-## Acessibilidade
+## <a name="accessiblity"></a>Acessibilidade
 
 Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que possuem limitações que impeçam o uso de interfaces de usuário convencionais. Para algumas situações, os requisitos de acessibilidade são impostos por lei. No entanto, é uma boa ideia resolver os problemas de acessibilidade independentemente dos requisitos legais, para que seus aplicativos tenham a maior audiência possível.
 
@@ -101,7 +108,7 @@ Acessibilidade significa tornar os seus aplicativos utilizáveis por pessoas que
 
 
 
-## Globalização e localização
+## <a name="globalization-and-localization"></a>Globalização e localização
 
 O Windows é usado no mundo todo, por públicos de várias culturas, regiões e idiomas. Um usuário pode falar qualquer idioma ou até mesmo vários idiomas. Um usuário pode estar localizado em qualquer lugar do mundo e falar qualquer idioma em qualquer local. Você pode aumentar o mercado potencial para seu aplicativo desenvolvendo-o para ser prontamente adaptável usando globalização e localização.
 
@@ -151,7 +158,7 @@ O Windows é usado no mundo todo, por públicos de várias culturas, regiões e 
 </div>
 
 
-## Configurações de aplicativo
+## <a name="app-settings"></a>Configurações de aplicativo
 
 As configurações do aplicativo permitem que o usuário personalize seu aplicativo, otimizando-o para suas necessidades e preferências individuais. Fornecer as configurações certas e armazená-las adequadamente podem tornar uma experiência de usuário ótima ainda melhor.
 
@@ -166,7 +173,7 @@ As configurações do aplicativo permitem que o usuário personalize seu aplicat
 </div>
 </div>
 
-## Ajuda no aplicativo
+## <a name="in-app-help"></a>Ajuda no aplicativo
 Não importa quão bem você projetou o aplicativo, alguns usuários precisarão de um pouco mais de ajuda.
 
 <div class="side-by-side">
@@ -194,6 +201,6 @@ Não importa quão bem você projetou o aplicativo, alguns usuários precisarão
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -6,27 +6,26 @@ description: "Um controle de modo divisão tem um painel que pode ser expandido/
 label: Split view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 7fae1477b997508ade92a5bbb977c1d6530a181f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 61ada7839f76df92041b606066f5cbd54448cd93
 
 ---
-# Controle de modo de exibição dividido
+# <a name="split-view-control"></a>Controle de modo de exibição dividido
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Um controle de modo divisão tem um painel que pode ser expandido/recolhido e uma área de conteúdo.
 
 <div class="important-apis" >
-<b>APIs Importantes</b><br/>
+<b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn864360"><strong>Classe SplitView (XAML)</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn919970"><strong>Objeto SplitView (HTML)</strong></a></li>
+<li>[**Classe SplitView**](https://msdn.microsoft.com/library/windows/apps/dn864360)</li>
 </ul>
-
-</div>
 </div>
 
+Veja a seguir um exemplo do aplicativo Microsoft Edge usando SplitView para mostrar seu Hub.
 
+![Exemplo de modo de exibição de divisão do Microsoft Edge](images/split_view_Edge.png)
 
 
  A área de conteúdo da exibição dividida está sempre visível. O painel pode ser expandido e recolhido ou ficar em estado aberto, e pode apresentar-se do lado esquerdo ou direito da janela de um aplicativo. O painel tem quatro modos:
@@ -47,31 +46,46 @@ Um controle de modo divisão tem um painel que pode ser expandido/recolhido e um
 
     Uma parte estreita do painel está sempre visível, com largura suficiente para mostrar os ícones. A largura do painel padrão fechado é 48px, que pode ser modificada com `CompactPaneLength`. Se o painel estiver aberto, ele reduzirá o espaço disponível para o conteúdo, empurrando o conteúdo do seu jeito.
 
-## Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 O controle de modo divisão pode ser usado para criar um [painel de navegação](nav-pane.md). Para criar esse padrão, adicione um botão expandir/recolher (o botão "hambúrguer") e um modo de exibição de lista representando os itens de navegação.
 
 O controle de modo divisão também pode ser usado para criar qualquer experiência de "gaveta" na qual os usuários podem abrir e fechar o painel complementar.
 
-## Exemplos
+## <a name="create-a-split-view"></a>Criar um modo de exibição dividido
 
-O controle de modo divisão em sua forma padrão é um contêiner básico. Veja a seguir um exemplo do aplicativo Microsoft Edge usando SplitView para mostrar seu Hub.
+Eis um controle SplitView com um painel aberto sendo exibido embutido ao lado do conteúdo.
+```xaml
+<SplitView IsPaneOpen="True"
+           DisplayMode="Inline"
+           OpenPaneLength="296">
+    <SplitView.Pane>
+        <TextBlock Text="Pane"
+                   FontSize="24"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+    </SplitView.Pane>
 
-![Exemplo de modo de exibição de divisão do Microsoft Edge](images/split_view_Edge.png)
+    <Grid>
+        <TextBlock Text="Content"
+                   FontSize="24"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+    </Grid>
+</SplitView>
+```
 
 
 
-## Tópicos relacionados
-
-
+## <a name="related-topics"></a>Tópicos relacionados
 * [Padrão do painel de navegação](nav-pane.md)
-* [Exibição de lista](lists.md)
+* [Modo de exibição de lista](lists.md)
  
 
  
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

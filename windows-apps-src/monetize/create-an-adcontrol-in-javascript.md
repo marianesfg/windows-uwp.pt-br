@@ -4,55 +4,46 @@ ms.assetid: 48a1ef86-8514-4af8-9c93-81e869d36de7
 description: Saiba como criar programaticamente um **AdControl** em JavaScript.
 title: Criar um AdControl em JavaScript
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 68bc124aea079bc60fa22e1e6a038caf95fe765c
+ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
+ms.openlocfilehash: d7ecb5205d9668f83d2619869baafd569b581078
 
 
 ---
 
-# Criar um AdControl em JavaScript
+# <a name="create-an-adcontrol-in-javascript"></a>Criar um AdControl em JavaScript
 
 
 
 
-Este exemplo mostra como criar programaticamente um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) em JavaScript.
+O exemplo deste artigo mostra como criar programaticamente um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) em JavaScript. Este artigo presume que você já adicionou as referências necessárias ao seu projeto para usar um **AdControl**. Para obter mais informações, incluindo um passo a passo detalhado para criar e inicializar um **AdControl** na marcação HTML em vez de JavaScript, consulte [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md).
 
-## Div HTML para um AdControl
+## <a name="html-div-for-an-adcontrol"></a>Div HTML para um AdControl
 
 Um **AdControl** precisa ter um **div** na página html que mostrará o anúncio. O código a seguir fornece um exemplo de tal **div**.
 
-``` syntax
+> [!div class="tabbedCodeSnippets"]
+``` html
 <div id="myAd" style="position: absolute; top: 50px; left: 0px; width: 300px; height: 250px; z-index: 1"
     data-win-control="MicrosoftNSJS.Advertising.AdControl">
 </div>
 ```
 
-## JavaScript para a criação de um AdControl
+## <a name="javascript-for-creating-an-adcontrol"></a>JavaScript para a criação de um AdControl
 
 O exemplo a seguir presume que você esteja usando um **div** existente em seu HTML com a ID **myAd**.
 
 Instancie o **AdControl** na função **app.onactivated**.
 
-``` syntax
-// TODO: This application has been newly launched. Initialize
-// your application here.
-var adDiv = document.getElementById("myAd");
-var myAdControl = new MicrosoftNSJS.Advertising.AdControl(adDiv,
-    {
-        applicationId: "3f83fe91-d6be-434d-a0ae-7351c5a997f1",
-        adUnitId: "10865270"
-    });
-myAdControl.isAutoRefreshEnabled = false;
-myAdControl.onErrorOccurred = myAdError;
-myAdControl.onAdRefreshed = myAdRefreshed;
-myAdControl.onEngagedChanged = myAdEngagedChanged;
-```
+> [!div class="tabbedCodeSnippets"]
+[!code-javascript[AdControl](./code/AdvertisingSamples/AdControlSamples/js/main.js#DeclareAdControl)]
 
-Os valores são exemplos. Em seu código, você definirá os valores dessas funções e propriedades apropriados para seu aplicativo.
+Este exemplo presume que você já tenha declarado os métodos de manipulador de eventos chamados **myAdError**, **myAdRefreshed** e **myAdEngagedChanged**.
+
+>**Observação**&nbsp;&nbsp;Os valores de *applicationId* e *adUnitId* mostrados neste exemplo são [valores de modo de teste](test-mode-values.md). Você deve [substituir esses valores por valores dinâmicos](set-up-ad-units-in-your-app.md) do Centro de Desenvolvimento do Windows antes de enviar seu app.
 
 Se você usa esse código e não vê anúncios, tente inserir um atributo **position:relative** no **div** que contém o **AdControl**. Isso substituirá a configuração padrão do **IFrame**. Os anúncios serão exibidos corretamente, a menos que eles não estejam sendo mostrados devido ao valor desse atributo. Observe que novas unidades de anúncios podem não estar disponíveis por até 30 minutos.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
 
@@ -62,6 +53,6 @@ Se você usa esse código e não vê anúncios, tente inserir um atributo **posi
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

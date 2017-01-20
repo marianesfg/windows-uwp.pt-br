@@ -4,12 +4,12 @@ title: Responder a eventos do sistema com tarefas em segundo plano
 description: Saiba como criar uma tarefa em segundo plano que responda a eventos de SystemTrigger.
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: a3d7ac01724b1e8dcabe3219855eabe172924764
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 1774b853839e65fd08acb9eb8f9cbb1735cd9bee
 
 ---
 
-# Responder a eventos do sistema com tarefas em segundo plano
+# <a name="respond-to-system-events-with-background-tasks"></a>Responder a eventos do sistema com tarefas em segundo plano
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -21,9 +21,9 @@ ms.openlocfilehash: a3d7ac01724b1e8dcabe3219855eabe172924764
 
 Saiba como criar uma tarefa em segundo plano que responde a eventos de [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano criada para o aplicativo e que essa tarefa precise ser executada em resposta a um evento acionado pelo sistema, como quando a disponibilidade da Internet muda ou o logon do usuário. Este tópico se concentra na classe [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839). Mais informações sobre como escrever uma classe de tarefa em segundo plano estão disponíveis em [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou em [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md).
+Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano criada para o aplicativo e que essa tarefa precise ser executada em resposta a um evento acionado pelo sistema, como quando a disponibilidade da Internet muda ou o logon do usuário. Este tópico se concentra na classe [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839). Mais informações sobre como escrever uma classe de tarefa em segundo plano estão disponíveis em [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou em [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md).
 
-## Crie um objeto SystemTrigger
+## <a name="create-a-systemtrigger-object"></a>Crie um objeto SystemTrigger
 
 -   No código do seu aplicativo, crie um novo objeto [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838). O primeiro parâmetro, *triggerType*, especifica o tipo de gatilho de evento do sistema que ativará esta tarefa em segundo plano. Para obter uma lista dos tipos de evento, consulte [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
@@ -39,7 +39,7 @@ Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano cr
     > SystemTrigger ^ internetTrigger = ref new SystemTrigger(SystemTriggerType::InternetAvailable, false);
     > ```
 
-## Registrar a tarefa em segundo plano
+## <a name="register-the-background-task"></a>Registrar a tarefa em segundo plano
 
 -   Registre a tarefa em segundo plano chamando sua função de registro da tarefa em segundo plano. Para obter mais informações sobre como registrar tarefas em segundo plano, consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md).
 
@@ -65,7 +65,7 @@ Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano cr
 
     > **Observações**  Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
  
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Para ver o registro da tarefa em segundo plano em ação, baixe a [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
 
@@ -75,13 +75,13 @@ Os aplicativos com recurso de tela de bloqueio podem registrar tarefas em segund
 
 > **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 ****
 
-* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-an-outofproc-background-task.md)
-* [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md)
-* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-a-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano em processo](create-and-register-an-inproc-background-task.md)
+* [Declarar tarefas em segundo plano no manifesto do app](declare-background-tasks-in-the-application-manifest.md)
 * [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
@@ -95,6 +95,6 @@ Os aplicativos com recurso de tela de bloqueio podem registrar tarefas em segund
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

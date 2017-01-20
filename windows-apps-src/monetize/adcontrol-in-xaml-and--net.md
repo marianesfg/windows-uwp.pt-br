@@ -4,26 +4,24 @@ ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
 description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo XAML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1."
 title: AdControl em XAML e .NET
 translationtype: Human Translation
-ms.sourcegitcommit: 35f07c73a72e5242d59c6b45e6d5b4ac62f40741
-ms.openlocfilehash: 0652bd1c3e52c9026b26e14b2475a4b34997ac91
+ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
+ms.openlocfilehash: f68171524fc535c5c4b855305898d56b1731182d
 
 ---
 
-# AdControl em XAML e .NET
-
-
+# <a name="adcontrol-in-xaml-and-net"></a>AdControl em XAML e .NET
 
 
 Este guia passo a passo mostra como usar a classe [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para exibir anúncios em faixa em um aplicativo XAML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1. Este guia passo a passo não usa o **AdMediatorControl** nem a mediação de anúncios.
 
 Para um projeto de exemplo completo que demonstra como adicionar anúncios em faixa a um aplicativo XAML em C# e C++, consulte os [Exemplos de publicidade no GitHub](http://aka.ms/githubads).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 * Para aplicativos UWP: instale o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) com o Visual Studio 2015.
 * Em aplicativos do Windows 8.1 ou Windows Phone 8.1: instale o [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk) com o Visual Studio 2015 ou o Visual Studio 2013.
 
-## Desenvolvimento de código
+## <a name="code-development"></a>Desenvolvimento de código
 
 1. No Visual Studio, abra o projeto ou crie um novo projeto.
 
@@ -41,99 +39,91 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 
   ![addreferences](images/13-a84c026e-b283-44f2-8816-f950a1ef89aa.png)
 
-    > **Observação**  Esta imagem é do Visual Studio 2015 compilando um projeto UWP para Windows 10. Se você estiver compilando um aplicativo do Windows 8.1 ou Windows Phone 8.1 ou usando o Visual Studio 2013, sua tela terá uma aparência diferente.
+    > **Observação**&nbsp;&nbsp;Esta imagem é do Visual Studio 2015 compilando um projeto UWP para Windows 10. Se você estiver compilando um app do Windows 8.1 ou Windows Phone 8.1 ou usando o Visual Studio 2013, sua tela terá uma aparência diferente.
 
 3.  No **Gerenciador de Referências**, clique em OK.
 4.  Modifique o XAML da página em que você está inserindo anúncios para incluir o namespace **Microsoft.Advertising.WinRT.UI**. Por exemplo, no aplicativo de exemplo padrão gerado pelo Visual Studio (chamado, neste aplicativo, MyAdFundedWindows10AppXAML), a página XAML é **MainPage.XAML**.
 
-    A seção **Página** do arquivo MainPage.xaml gerado pelo Visual Studio tem o código a seguir.
+  A seção **Página** do arquivo MainPage.xaml gerado pelo Visual Studio tem o código a seguir.
 
-    ``` syntax
-    <Page
-        x:Class="MyAdFundedWindows10AppXAML.MainPage"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="using:MyAdFundedWindows10AppXAML"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d">
+  > [!div class="tabbedCodeSnippets"]
+  ``` xml
+  <Page
+      x:Class="MyAdFundedWindows10AppXAML.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:MyAdFundedWindows10AppXAML"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+      <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+      </Grid>
+  </Page>
+  ```
 
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  Adicione a referência ao namespace **Microsoft.Advertising.WinRT.UI** para que a seção **Página** do arquivo MainPage.xaml tenha o código a seguir.
 
-        </Grid>
-    </Page>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` xml
+  <Page
+      x:Class="MyAdFundedWindows10AppXAML.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:MyAdFundedWindows10AppXAML"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+      mc:Ignorable="d">
+      <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+      </Grid>
+  </Page>
+  ```
 
-    Adicione a referência ao namespace **Microsoft.Advertising.WinRT.UI** para que a seção **Página** do arquivo MainPage.xaml tenha o código a seguir.
+5. Na marca **Grade**, adicione o código do **AdControl**. Atribua as propriedades [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) e [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) na **Página** aos valores de teste fornecidos em [Valores de modo de teste](test-mode-values.md). Ajuste também a altura e a largura do controle para que ele tenha um dos [tamanhos de anúncio compatíveis com anúncios em faixa](supported-ad-sizes-for-banner-ads.md).
 
-    ``` syntax
-    <Page
-        x:Class="MyAdFundedWindows10AppXAML.MainPage"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="using:MyAdFundedWindows10AppXAML"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
-        mc:Ignorable="d">
+  > **Observação**&nbsp;&nbsp;Você substituirá os valores de teste de ID do aplicativo e ID da unidade de anúncio por valores dinâmicos antes de enviar seu aplicativo.
 
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  A marca **Grade** se parece com o código a seguir.
 
-        </Grid>
-    </Page>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` xml
+  <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+      <UI:AdControl ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
+            AdUnitId="10865270"
+            HorizontalAlignment="Left"
+            Height="250"
+            VerticalAlignment="Top"
+            Width="300"/>
+  </Grid>
+  ```
 
-5.  Na marca **Grade**, adicione o código do **AdControl**.
+  O código completo do arquivo MainPage.xaml deve ter a aparência a seguir.
 
-    1.  Atribua as propriedades [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) e [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) na **Página** aos valores de teste fornecidos em [Valores de modo de teste](test-mode-values.md).
-
-        > **Observação**   Você substituirá os valores de teste por valores dinâmicos antes de enviar seu aplicativo.
-
-    2.  Ajuste a altura e a largura do controle para que ele tenha um dos [tamanhos de anúncio compatíveis com anúncios em faixa](supported-ad-sizes-for-banner-ads.md).
-
-    A marca **Grade** se parece com o código a seguir.
-
-    ``` syntax
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-
+  > [!div class="tabbedCodeSnippets"]
+  ``` xml
+  <Page
+      x:Class="MyAdFundedWindows10AppXAML.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:MyAdFundedWindows10AppXAML"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+      mc:Ignorable="d">
+      <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
             <UI:AdControl ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
-                          AdUnitId="10865270"
-                          HorizontalAlignment="Left"
-                          Height="250"
-                          VerticalAlignment="Top"
-                          Width="300"/>
-    </Grid>
-    ```
-
-    O código completo do arquivo MainPage.xaml deve ter a aparência a seguir.
-
-    ``` syntax
-    <Page
-        x:Class="MyAdFundedWindows10AppXAML.MainPage"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="using:MyAdFundedWindows10AppXAML"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
-        mc:Ignorable="d">
-
-        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-
-            <UI:AdControl ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
-                          AdUnitId="10865270"
-                          HorizontalAlignment="Left"
-                          Height="250"
-                          VerticalAlignment="Top"
-                          Width="300"/>
+                  AdUnitId="10865270"
+                  HorizontalAlignment="Left"
+                  Height="250"
+                  VerticalAlignment="Top"
+                  Width="300"/>
         </Grid>
     </Page>
     ```
 
 6.  Compile e execute o aplicativo para vê-lo com um anúncio.
 
-## Lançar seu aplicativo com anúncios dinâmicos usando o Centro de Desenvolvimento do Windows
-
+## <a name="release-your-app-with-live-ads-using-windows-dev-center"></a>Lançar seu aplicativo com anúncios dinâmicos usando o Centro de Desenvolvimento do Windows
 
 1.  No painel do Centro de Desenvolvimento, vá para a página **Monetização** &gt; **Monetizar com anúncios** para seu aplicativo e [crie uma unidade autônoma do Microsoft Advertising](../publish/monetize-with-ads.md). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote o ID da unidade de anúncio e o ID do aplicativo.
 
@@ -143,9 +133,9 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 
 4.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento.
 
-## Observações
+## <a name="notes"></a>Observações
 
-* C#: veja [Exemplo de propriedades XAML](xaml-properties-example.md) para obter um exemplo de como atribuir manipuladores de eventos a eventos de **AdControl**. Em seguida, veja [Eventos de AdControl em C#](adcontrol-events-in-c.md) para obter o código de exemplo que mostra os manipuladores de eventos escritos em C#.
+* C#: veja [Exemplo de propriedades XAML](xaml-properties-example.md) para obter um exemplo de como atribuir manipuladores de eventos a eventos **AdControl**. Em seguida, veja [Eventos AdControl em C#](adcontrol-events-in-c.md) para obter o código de exemplo que mostra os manipuladores de eventos escritos em C#.
 
 * C++: a versão atual das bibliotecas do Microsoft Advertising são compatíveis com C++. A classe **AdControl** é implementada em C++ nativo e não carrega o CLR .NET. Para obter exemplos de código que demonstram como usar **AdControl** em C++, consulte [exemplos de anúncio no GitHub](http://aka.ms/githubads).
 
@@ -153,7 +143,7 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 
 * Tratamento de erros: para saber mais sobre como tratar erros, consulte [Tratamento de erros de AdControl](adcontrol-error-handling.md).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
 
@@ -161,6 +151,6 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

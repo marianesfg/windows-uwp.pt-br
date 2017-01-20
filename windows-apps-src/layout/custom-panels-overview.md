@@ -1,24 +1,40 @@
 ---
 author: Jwmsft
-Description: "Você pode definir painéis personalizados para layout XAML derivando uma classe personalizada da classe Panel."
+Description: "Você pode definir painéis personalizados para layouts XAML derivando uma classe personalizado da classe Panel."
 MS-HAID: dev\_ctrl\_layout\_txt.xaml\_custom\_panels\_overview
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Visão geral de painéis personalizados XAML"
 ms.assetid: 0CD395CD-E2AB-429D-BB49-56A71C5CC35D
-label: XAML custom panels overview
+label: XAML custom panels overview (Windows apps)
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: aebe6b873fff2a4284f03ca519f998ded742f677
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ff8d604be663b711bebf358f3256a5e6c55fb047
 
 ---
 
-# Visão geral de painéis personalizados XAML
+# <a name="xaml-custom-panels-overview"></a>Visão geral de painéis personalizados XAML
 
-Um *painel* é um objeto que fornece um comportamento de layout para elementos filhos que ele contém, quando o sistema de layout XAML (Extensible Application Markup Language) é executado e a interface do usuário do aplicativo é renderizada. Você pode definir painéis personalizados para layout XAML derivando uma classe personalizada da classe [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). Você fornece o comportamento para o seu painel, substituindo [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) e [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711), fornecendo uma lógica que mede e organiza os elementos filhos.
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-## A classe base **Panel**
+Um *painel* é um objeto que fornece um comportamento de layout para elementos filho que ele contém, quando o sistema de layout XAML (Extensible Application Markup Language) é executado e a interface do usuário do aplicativo é renderizada. 
+
+
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Painel**](https://msdn.microsoft.com/library/windows/apps/br227511)</li>
+<li>[**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)</li>
+<li>[**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) </li>
+</ul>
+</div>
+</div>
+
+Você pode definir painéis personalizados para layouts XAML derivando uma classe personalizado da classe [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). Você fornece o comportamento para o seu painel, substituindo [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) e [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711), fornecendo uma lógica que mede e organiza os elementos filhos.
+
+## <a name="the-panel-base-class"></a>A classe base **Panel**
 
 
 Para definir uma classe de painel personalizado, você pode derivar diretamente da classe [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) ou derivar de uma das classes de painel prático que não são seladas, como [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) ou [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635). É mais fácil derivar de **Panel**, porque pode ser difícil contornar a lógica de layout existente de um painel que já tem o comportamento de layout. Além disso, um painel com o comportamento pode ter propriedades existentes que não são relevantes para os recursos de layout do seu painel.
@@ -32,7 +48,7 @@ Do [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), seu pa
 
 O foco aqui é descrever os conceitos de layout XAML, para que você possa considerar todas as possibilidades de como um painel personalizado pode e deve se comportar no layout. Se você preferir entrar em detalhes e ver um exemplo de implementação do painel personalizado, consulte [BoxPanel, um exemplo de painel personalizado](boxpanel-example-custom-panel.md).
 
-## A propriedade **Children**.
+## <a name="the-children-property"></a>A propriedade **Children**.
 
 
 A propriedade [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) é relevante para um painel personalizado, porque todas as classes derivadas do [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) usam a propriedade **Children** como o lugar para armazenar seus elementos filho contidos em um conjunto. A propriedade **Children** é designada como a propriedade de conteúdo XAML para a classe **Panel**, e todas as classes derivadas de **Panel** podem herdar o comportamento da propriedade de conteúdo XAML. Se uma propriedade for designada a propriedade de conteúdo XAML, isso significa que a marcação XAML poderá omitir um elemento de propriedade ao especificar a propriedade na marcação e os valores serão definidos como filhos de marcação imediata (o "conteúdo"). Por exemplo, se você derivar uma classe chamada **CustomPanel** do **Panel** que não define um novo comportamento, ainda será possível usar essa marcação:
@@ -52,7 +68,7 @@ Normalmente, um painel personalizado aceita qualquer elemento filho [**UIElement
 
 Além de loop através do conjunto [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) nas substituições, a lógica do painel também pode ser influenciada por `Children.Count`. Você pode ter lógicas que aloquem espaço, pelo menos em parte, com base no número de itens, em vez de tamanhos desejados e as outras características de itens individuais.
 
-## Substituindo os métodos de layout
+## <a name="overriding-the-layout-methods"></a>Substituindo os métodos de layout
 
 
 O modelo básico para os métodos de substituição de layout ([**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) e [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)) é que eles devem percorrer através de todos os filhos e chamar o método de layout específico de cada elemento filho. O primeiro ciclo de layout começa quando o sistema de layout XAML define o visual para a janela de raiz. Como cada um dos pais invoca layout nos filhos, isso propaga uma chamada aos métodos de layout a todos os elementos de interface do usuário possível que são supostamente parte de um layout. No layout XAML, há duas fases: medição e, depois, organização.
@@ -80,7 +96,7 @@ Uma grande parte do que faz o trabalho de sistema de layout funcionar é que qua
 -   Métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) e [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
 -   [Métodos **Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) e [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952): eles têm implementações nativas definidas no nível [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), que tratam a ação de layout de nível elemento
 
-## **MeasureOverride**
+## **<a name="measureoverride"></a>MeasureOverride**
 
 
 O método [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) tem um valor de retorno que é usado pelo sistema de layout como o ponto de partida [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) para o próprio painel, quando o método [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) é chamado no painel pelo pai no layout. As escolhas lógicas dentro do método são tão importantes quanto o que ele retorna, e a lógica muitas vezes influencia o valor retornado.
@@ -117,7 +133,7 @@ Mesmo que a implementação não utilize as medidas de tamanho desejadas, é mel
 
 O valor de retorno [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) baseia-se na lógica do painel interpretando o [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) ou outras considerações de tamanho para cada um dos elementos filho em [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) quando [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) é chamado neles. O que fazer com valores **DesiredSize** dos filhos e o modo como o valor de retorno **MeasureOverride** deve usá-los depende da interpretação da própria lógica. Normalmente, você não adiciona os valores sem modificação, porque a entrada de **MeasureOverride** muitas vezes é um tamanho fixo disponível que está sendo sugerido pelo pai do painel. Se esse tamanho for excedido, o próprio painel poderá ser cortado. Normalmente, você vai comparar o tamanho total dos filhos ao tamanho disponível do painel e fazer ajustes se necessário.
 
-### Dicas e tutoriais
+### <a name="tips-and-guidance"></a>Dicas e tutoriais
 
 -   Idealmente, um painel personalizado deve ser adequado para ser o primeiro verdadeiro visual em uma composição de interface do usuário, talvez em um nível imediatamente abaixo de [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503), [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) ou outro elemento que seja a raiz da página XAML. Em implementações [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730), a entrada [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) não é geralmente retornada sem examinar os valores. Se o retorno **Size** tiver um valor **Infinity** nele, isso poderá acionar exceções em tempo de execução de lógica do layout. Um valor **Infinity** pode vir da janela de aplicativo principal, a qual é deslocável e, por isso, não tem uma altura máxima. Outros conteúdos de rolagem podem ter o mesmo comportamento.
 -   Outro erro comum em implementações [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) é retornar um novo padrão [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) (os valores de altura e largura são 0). Você pode começar com esse valor, que pode até ser o valor correto se o painel determinar que nenhum dos filhos deve ser renderizado. Mas um **Size** padrão fará com que seu painel não seja dimensionado corretamente pelo host. Ele não solicita espaço na interface do usuário e, portanto, fica sem espaço e não renderiza. Se não fosse o caso, o código do painel poderia funcionar bem, mas o painel ou seu conteúdo ainda não será exibido se ele estiver sendo composto com altura zero e largura zero.
@@ -126,7 +142,7 @@ O valor de retorno [**MeasureOverride**](https://msdn.microsoft.com/library/wind
 -   Os painéis podem introduzir um espaço reservado para preenchimento entre itens. Se você fizer isso, assegure-se de expor as medições como uma propriedade que é diferente de[**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724) ou de qualquer propriedade **Padding**.
 -   Os elementos podem ter valores para a suas propriedades [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) e [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) com base em um cálculo de layout anterior. Se os valores forem alterados, o código de interface do usuário do aplicativo poderá colocar manipuladores para [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) em elementos se houver lógica especial a ser executada, mas a lógica de painel normalmente não precisa verificar se há alterações com a manipulação de eventos. O sistema de layout já está fazendo as determinações ao executar novamente o layout porque uma propriedade relevante de layout mudou o valor foi alterado e um [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) ou [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) de painel é chamado automaticamente nas circunstâncias adequadas.
 
-## **ArrangeOverride**
+## **<a name="arrangeoverride"></a>ArrangeOverride**
 
 
 O método [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) tem um valor de retorno [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) que é usado pelo sistema de layout ao renderizar o próprio painel, quando o método [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) é chamado no painel pelo pai no layout. É comum que a entrada *finalSize* e o **ArrangeOverride** que retornaram **Size** sejam os mesmos. Se não forem, isso significa que o painel está tentando fazer um tamanho diferente do tamanho que os outros participantes do layout afirmam estar disponível. O tamanho final baseou-se em ter executado anteriormente o cálculo de medição de layout através do código de painel. É por isso que retornar um tamanho diferente não é comum, pois significa que você está ignorando deliberadamente a lógica de medição.
@@ -159,7 +175,7 @@ O que normalmente varia entre implementações de [**ArrangeOverride**](https://
 
 Há ainda influências de posicionamento adicionais nos elementos no layout, além do que você controla diretamente e calcula para [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914). Isso é proveniente da implementação nativa interna de **Arrange** que é comum a todos os tipos derivados de [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) e aumentados por outros tipos, como elementos de texto. Por exemplo, os elementos podem ter margem e alinhamento, e alguns podem ter preenchimento. Essas propriedades podem interagir. Para obter mais informações, consulte [Alinhamento, margem e preenchimento](alignment-margin-padding.md).
 
-## Controles e painéis
+## <a name="panels-and-controls"></a>Controles e painéis
 
 
 Evite colocar a funcionalidade em um painel personalizado que, em vez disso, deve ser criado como um controle personalizado. A função de um painel é apresentar qualquer conteúdo de elemento filho que exista dentro dele, como uma função de layout que acontece automaticamente. O painel pode adicionar decorações ao conteúdo (semelhante à forma como o [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) adiciona a borda em torno do elemento que apresenta), ou executar outros ajustes relacionados ao layout, como preenchimento. Mas isso é o mais longe que você deve ir ao estender a saída de árvore visual para além de relatórios e uso de informações dos filhos.
@@ -168,7 +184,7 @@ Se houver qualquer interação que seja acessível ao usuário, será necessári
 
 Uma razão pela qual a distinção entre controle e painel é importante é a Automação da Interface do Usuário da Microsoft e a acessibilidade. Os painéis oferecem um comportamento de layout visual, não um comportamento lógico. Como um elemento da interface do usuário parece visualmente não ser um aspecto de interface do usuário que seja normalmente importante para os cenários de acessibilidade. Acessibilidade é expor as partes de um aplicativo que sejam logicamente importantes para entender uma interface do usuário. Quando a interação é necessária, os controles devem expor as possibilidades de interação à infraestrutura de automação da interface do usuário. Para obter mais informações, consulte [Pares de automação personalizados](https://msdn.microsoft.com/library/windows/apps/mt297667).
 
-## Outra API de layout
+## <a name="other-layout-api"></a>Outra API de layout
 
 
 Existem outras APIs que fazem parte do sistema de layout, mas não são declaradas pelo [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). Você pode utilizá-las em uma implementação do painel ou em um controle personalizado que utiliza painéis.
@@ -178,22 +194,18 @@ Existem outras APIs que fazem parte do sistema de layout, mas não são declarad
 -   [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br208742) é um evento que é acionado somente depois que os cálculos do layout são finalizados e indicam que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) ou [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) foram alterados como resultado. Esse é outro evento [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706). Há casos em que [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) dispara, mas **SizeChanged** não dispara. Por exemplo o conteúdo interno pode ser reorganizado, mas o tamanho dos elementos não é alterado.
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 **Referência**
-
-[**FrameworkElement.ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
-
-[**FrameworkElement.MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
-
-[**Painel**](https://msdn.microsoft.com/library/windows/apps/br227511)
+* [**FrameworkElement.ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
+* [**FrameworkElement.MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
+* [**Painel**](https://msdn.microsoft.com/library/windows/apps/br227511)
 
 **Conceitos**
-
-[Alinhamento, margem e preenchimento](alignment-margin-padding.md)
-
+* [Alinhamento, margem e preenchimento](alignment-margin-padding.md)
 
 
-<!--HONumber=Aug16_HO3-->
+
+<!--HONumber=Dec16_HO2-->
 
 

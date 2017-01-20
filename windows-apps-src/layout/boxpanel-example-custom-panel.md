@@ -4,29 +4,37 @@ Description: "Aprenda a escrever código para uma classe Panel personalizada, im
 MS-HAID: dev\_ctrl\_layout\_txt.boxpanel\_example\_custom\_panel
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: BoxPanel, um exemplo de painel personalizado
+title: BoxPanel, um exemplo de painel personalizado (aplicativos do Windows)
 ms.assetid: 981999DB-81B1-4B9C-A786-3025B62B74D6
 label: BoxPanel, an example custom panel
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 4427219987f0524858233cf382cd13121cf77b07
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 9f711fbd6f3562fb05fee70f42304204e602bc0b
 
 ---
 
-# BoxPanel, um exemplo de painel personalizado
+# <a name="boxpanel-an-example-custom-panel"></a>BoxPanel, um exemplo de painel personalizado
 
-**APIs importantes**
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
--   [**Painel**](https://msdn.microsoft.com/library/windows/apps/br227511)
--   [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
--   [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
+Aprenda a escrever códigos para uma classe personalizada [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), implementando os métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) e [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) e usando a propriedade [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514). 
 
-Aprenda a escrever códigos para uma classe personalizada [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), implementando os métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) e [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) e usando a propriedade [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514). O exemplo de código mostra uma implementação de painel personalizado, mas não perdemos muito tempo explicando os conceitos de layout que influenciam como você pode personalizar cenários de layouts diferentes. Se quiser mais informações sobre esses conceitos de layout e como eles se aplicam ao seu cenário de layout específico, consulte [Visão geral de painéis personalizados XAML](custom-panels-overview.md).
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Painel**](https://msdn.microsoft.com/library/windows/apps/br227511)</li>
+<li>[**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)</li>
+<li>[**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) </li>
+</ul>
+</div>
+
+O exemplo de código mostra uma implementação de painel personalizado, mas não vamos perder muito tempo explicando os conceitos de layout que influenciam como você pode personalizar cenários de layouts diferentes. Se quiser mais informações sobre esses conceitos de layout e como eles se aplicam ao seu cenário de layout específico, consulte [Visão geral de painéis personalizados XAML](custom-panels-overview.md).
 
 Um *painel* é um objeto que oferece um comportamento de layout para os elementos filhos que contém quando o sistema de layout XAML é executado e a interface do usuário do seu aplicativo é renderizada. Você pode definir painéis personalizados para layouts XAML derivando uma classe personalizado da classe [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). Você fornece o comportamento para o seu painel ao substituir os métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) e [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) fornecendo lógica que mede e organiza os elementos filhos. Este exemplo é derivado de **Panel**. Quando você inicia pelos métodos **Panel**, **ArrangeOverride** e **MeasureOverride**, não há um comportamento de inicialização. Seu código fornece o gateway pelo qual os elementos filhos passam a ser reconhecidos pelo sistema de layout XAML e são renderizados na interface do usuário. Assim, é muito importante que o seu código seja responsável por todos os elementos filhos e siga os padrões que o sistema de layout espera.
 
-## Seu cenário de layout
+## <a name="your-layout-scenario"></a>Seu cenário de layout
 
 Ao definir um painel personalizado, você está definindo um cenário de layout.
 
@@ -38,7 +46,7 @@ Um cenário de layout é expresso por meio de:
 
 Com isso em mente, o `BoxPanel` mostrado aqui é para um cenário específico. A fim de manter sobretudo o código neste exemplo, ainda não vamos explicar o cenário em detalhes, mas, em vez disso, vamos nos concentrar nas etapas necessárias e nos padrões de codificação. Se você quiser saber mais sobre o cenário primeiro, vá direto para ["O cenário do `BoxPanel`"](#scenario) e depois volte para obter o código.
 
-## Inicie derivando o **Panel**
+## <a name="start-by-deriving-from-panel"></a>Inicie derivando o **Panel**
 
 Inicie derivando uma classe personalizada de [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). Provavelmente, a forma mais fácil de fazer isso é definir um arquivo de código separado para essa classe, usando as opções de contexto **Adicionar** | **Novo Item** | **Classe** do menu de um projeto do **Gerenciador de Soluções** no Microsoft Visual Studio. Nomeie a classe (e arquivo) como `BoxPanel`.
 
@@ -82,7 +90,7 @@ public class BoxPanel : Panel
 
 A partir de agora, estaremos mostrando uma definição de membro por vez, seja ele uma substituição de método ou algo que forneça suporte como uma propriedade de dependência. Você pode adicioná-los ao esqueleto acima em qualquer ordem, e não mostraremos as instruções **using** ou a definição do escopo de classe novamente nos trechos até que mostremos o código final.
 
-## **MeasureOverride**
+## **<a name="measureoverride"></a>MeasureOverride**
 
 
 ```CSharp
@@ -128,7 +136,8 @@ Então, o que o cálculo da medida faz? Ele define um valor para a propriedade a
 
 É possível que esse painel seja usado quando o componente altura do *availableSize* for ilimitado. Se for verdade, o painel não precisa ter uma altura conhecida para ser dividida. Nesse caso, a lógica para o cálculo da medida informa cada filho que ele ainda não tem uma altura ilimitada. Ele o faz passando [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) para a chamada [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) para os filhos cujo [**Size.Height**](https://msdn.microsoft.com/library/windows/apps/hh763910) é infinito. Isso é legal. Quando o **Measure** for chamado, a lógica é que o [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) seja definido como o mínimo disso: o que foi passado para **Measure**, ou o tamanho natural do elemento de fatores como [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) explicitamente definidos.
 
-**Observação**&nbsp;&nbsp;A lógica interna do [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) também tem esse comportamento: **StackPanel** passa um valor de dimensão infinita para o [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) em filhos, indicando que não há restrição nos filhos na dimensão de orientação. **StackPanel** costuma dimensionar a si próprio para acomodar todos os filhos em uma pilha que cresce naquela dimensão.
+> [!NOTE]
+> A lógica interna do [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) também tem esse comportamento: **StackPanel** passa um valor de dimensão infinita para [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) em filhos, indicando que não há restrição nos filhos na dimensão de orientação. **StackPanel** costuma dimensionar a si próprio para acomodar todos os filhos em uma pilha que cresce naquela dimensão.
 
 Entretanto, o painel em si não pode devolver um [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) com um valor infinito de [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730); o que se torna uma exceção durante o layout. Então, parte da lógica é descobrir a altura máxima que qualquer filho solicitar e usar tal altura como a altura da célula no caso de isso não vir nas próprias restrições de tamanho do painel. Aqui está a função auxiliar `LimitUnboundedSize` que foi referenciada no código anterior, que pega a altura máxima da célula e a usa para dar ao painel uma altura finita em retorno, além de assegurar que `cellheight` seja um número finito antes de o cálculo de organização ser iniciado:
 
@@ -149,7 +158,7 @@ Size LimitUnboundedSize(Size input)
 }
 ```
 
-## **ArrangeOverride**
+## **<a name="arrangeoverride"></a>ArrangeOverride**
 
 ```CSharp
 protected override Size ArrangeOverride(Size finalSize)
@@ -180,7 +189,7 @@ Nem sempre você precisa de uma contagem enquanto passa pelo loop se todas as in
 
 É comum que a entrada *finalSize* e o [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) que você retorna de uma implementação [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) sejam os mesmos. Para saber o porquê, consulte a seção "**ArrangeOverride**" de [XAML custom panels overview](custom-panels-overview.md).
 
-## Um refinamento: controlando a contagem de linhas x colunas
+## <a name="a-refinement-controlling-the-row-vs-column-count"></a>Um refinamento: controlando a contagem de linhas x colunas
 
 Você pode compilar e usar esse painel exatamente como ele é agora. Entretanto, vamos adicionar mais um refinamento. No código que acabamos de mostrar, a lógica coloca a linha extra ou a coluna do lado que é mais longo na taxa de proporção. Mas para um controle maior sobre os formatos das células, pode ser aconselhável escolher um conjunto 4x3 de células em vez de um 3x4, mesmo que a taxa de proporção do próprio painel seja "retrato". Então, adicionaremos uma propriedade de dependência adicional que o cliente do painel pode definir para controlar tal comportamento. Aqui está a definição de propriedade de dependência, que é bem básica:
 
@@ -201,7 +210,7 @@ E aqui está como o uso do `UseOppositeRCRatio` afeta a lógica de medida. O que
 if (UseOppositeRCRatio) { aspectratio = 1 / aspectratio;}
 ```
 
-## O cenário para BoxPanel
+## <a name="the-scenario-for-boxpanel"></a>O cenário para BoxPanel
 
 O cenário específico para `BoxPanel` é que ele é um painel em que um dos principais determinantes da forma de dividir o espaço é conhecer o número de itens filhos e dividir o espaço conhecido disponível do painel. Os painéis têm naturalmente formas retangulares. Muitos painéis operam dividindo o espaço retangular em vários retângulos, ou seja, o que o [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) faz para suas células. No caso de **Grid**'o tamanho das células é definido pelos valores [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/br209324) e [**RowDefinition**](https://msdn.microsoft.com/library/windows/apps/br227606), e os elementos declaram a célula exata onde entram com as propriedades anexadas [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) e [**Grid.Column**](https://msdn.microsoft.com/library/windows/apps/hh759774). Obter um layout bom de um **Grid** costuma exigir o conhecimento do número de elementos filhos antes, para que haja células suficientes e cada elemento filho define suas propriedades anexadas para caber em sua própria célula.
 
@@ -211,26 +220,25 @@ Mas nem todos os cenários de aplicativos passam por vinculação de dados. Às 
 
 Uma situação antecipada para estender mais o `BoxPanel` (não mostrado aqui) poderia ser tanto acomodar filhos dinâmicos quanto usar o [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) de um filho como um fator mais forte para o dimensionamento de células individuais. Essa situação pode usar tamanhos de linha e coluna variáveis ou formatos sem ser em grade para que haja menos espaço "desperdiçado". Isso exige uma estratégia de como vários retângulos de vários tamanhos e proporções podem caber em um retângulo, mantendo a estética e o menor tamanho. `BoxPanel` não faz isso; ele usa uma técnica mais simples para dividir o espaço. `BoxPanel`A técnica é determinar o número mínimo de quadrados que é maior do que a contagem de filhos. Por exemplo, 9 itens caberiam em um quadrado 3x3. 10 itens exigem um quadrado 4x4. Entretanto, costuma ser possível encaixar itens removendo uma linha ou coluna no começo do quadrado, para economizar espaço. No exemplo contagem=10, que se encaixa em um retângulo de 4x3 ou 3x4.
 
-Você pode se perguntar por que o painel não escolheria 5x2 para 10 itens, pois encaixaria o número de itens perfeitamente. Mas, na prática, painéis são dimensionados como retângulos que raramente têm uma taxa de proporção bem orientada. A técnica de menos quadrados é uma forma de levar a lógica de dimensionamento a trabalhar bem com formatos de layout típicos e desencorajar o dimensionamento onde os formatos de células fiquem com taxas de proporção estranhas.
+Você pode se perguntar por que o painel não escolheria 5x2 para 10 itens, pois encaixaria o número de itens perfeitamente. Mas, na prática, painéis são dimensionados como retângulos que raramente têm uma taxa de proporção bem orientada. A técnica de quadrados mínimos é uma maneira de influenciar a lógica de dimensionamento para funcionar bem com formas de layout típicas e não incentivar o dimensionamento onde as formas de células obtêm proporções estranhas.
 
-**Observação**&nbsp;&nbsp;Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> [!NOTE]
+> Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 **Referência**
 
-[**FrameworkElement.ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
-
-[**FrameworkElement.MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
-
-[**Painel**](https://msdn.microsoft.com/library/windows/apps/br227511)
+* [**FrameworkElement.ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
+* [**FrameworkElement.MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
+* [**Painel**](https://msdn.microsoft.com/library/windows/apps/br227511)
 
 **Conceitos**
 
-[Alinhamento, margem e preenchimento](alignment-margin-padding.md)
+* [Alinhamento, margem e preenchimento](alignment-margin-padding.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

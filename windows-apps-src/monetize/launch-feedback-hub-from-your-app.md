@@ -4,8 +4,8 @@ Description: "Você pode incentivar os clientes a deixar comentários iniciando 
 title: Iniciar o Hub de Feedback do seu app
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 4296bd4007ae5109c9a3736c977ba68f312b208c
+ms.sourcegitcommit: a3c4ebc9bfda5ed41363de139d43a6a2c7934e0e
+ms.openlocfilehash: 54c6503add19ead5226da5a862b199bc3f305b7e
 
 ---
 
@@ -57,18 +57,18 @@ Para iniciar o Hub de Feedback do seu aplicativo:
 
 ## <a name="design-recommendations-for-your-feedback-ui"></a>Recomendações de design para a interface do usuário de feedback
 
-Para iniciar o Hub de Feedback, recomendamos que você adicione um elemento de interface do usuário em seu aplicativo (por exemplo, um botão) que exiba o seguinte ícone de feedback padrão da fonte Segoe MDL2 Assets e o código de caractere E939.
+Para iniciar o Hub de Feedback, recomendamos adicionar um elemento de interface do usuário no aplicativo (como um botão) que exiba o ícone de comentários padrão a seguir da fonte Segoe MDL2 Assets e o código de caractere E939.
 
-![]Feedback icon](images/feedback_icon.PNG)
+![Ícone de comentários](images/feedback_icon.PNG)
 
-Também recomendamos que você use uma ou mais das seguintes opções de posicionamento para vinculação ao Hub de Feedback em seu aplicativo.
-* **Diretamente na barra de aplicativos**. Dependendo de sua implementação, convém usar apenas o ícone ou adicionar texto (como mostrado abaixo).
+Também recomendamos usar uma ou mais das seguintes opções de posicionamento para vinculação ao Hub de Feedback no aplicativo.
+* **Diretamente na barra de aplicativos**. Dependendo da implementação, convém usar apenas o ícone ou adicionar texto (conforme mostrado abaixo).
 
-  ![]Feedback icon](images/feedback_appbar_placement.png)
+  ![Ícone de comentários](images/feedback_appbar_placement.png)
 
-* **Nas configurações do seu aplicativo**. Essa é uma maneira mais sutil de fornecer acesso ao Hub de Feedback. No exemplo a seguir, o link Feedback aparece como um dos links em Aplicativo.
+* **Nas configurações do aplicativo**. Essa é uma maneira mais sutil de dar acesso ao Hub de Feedback. No exemplo abaixo, o link Feedback é exibido como um dos links em Aplicativo.
 
-  ![]Feedback icon](images/feedback_settings_placement.png)
+  ![Ícone de comentários](images/feedback_settings_placement.png)
 
 * **Em um submenu acionado por eventos**. Isso é útil quando você deseja consultar os clientes sobre uma pergunta específica antes de iniciar o Hub do Windows Feedback. Por exemplo, depois que seu aplicativo usar um determinado recurso, você pode fazer ao cliente uma pergunta específica sobre sua satisfação com esse recurso. Se o cliente optar por responder, seu aplicativo iniciará o Hub de Feedback.
 
@@ -79,6 +79,6 @@ Também recomendamos que você use uma ou mais das seguintes opções de posicio
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

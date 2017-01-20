@@ -3,8 +3,8 @@ author: QuinnRadich
 title: "Escolher uma versão do UWP"
 description: "Ao escrever um aplicativo UWP no Microsoft Visual Studio, você pode escolher para qual versão você o escreverá. Saiba mais sobre a diferença entre as diferentes versões de UWP e como configurar suas escolhas em projetos novos e existentes."
 translationtype: Human Translation
-ms.sourcegitcommit: 006b5d01c2474591a81e4d7a83c5735dc0b3d9d8
-ms.openlocfilehash: 5d05c427ecc1ec57856b7c3909be50c3d87daa28
+ms.sourcegitcommit: 7e59551f528e23e497122f822fbfc09ec3086cdc
+ms.openlocfilehash: 58e58c212cb6efd76f4afb8d3b6c7a3c5ddf215e
 
 ---
 
@@ -14,7 +14,7 @@ Ao escrever um aplicativo UWP no Microsoft Visual Studio, você pode escolher pa
 
 | Versão | Descrição |
 | --- | --- |
-| Compilação 14393 (edição de aniversário) | Esta é a versão mais recente do Windows 10, lançada em julho de 2016. Alguns recursos destacados desta versão incluem: </br> \* **Windows Ink:** novos controles InkCanvas e InkToolbar. </br> \* **APIs da Cortana:** use as novas ações da Cortana para integrar o suporte da Cortana com funções específicas do seu aplicativo. </br> \* **Windows Hello:** o Microsoft Edge agora oferece suporte ao Windows Hello, dando aos desenvolvedores da Web acesso à autenticação biométrica. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/en-us/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-version-1607.md)  |
+| Compilação 14393 (edição de aniversário) | Esta é a versão mais recente do Windows 10, lançada em julho de 2016. Alguns recursos destacados desta versão incluem: </br> \* **Windows Ink:** novos controles InkCanvas e InkToolbar. </br> \* **APIs da Cortana:** use as novas ações da Cortana para integrar o suporte da Cortana com funções específicas do seu aplicativo. </br> \* **Windows Hello:** o Microsoft Edge agora oferece suporte ao Windows Hello, dando aos desenvolvedores da Web acesso à autenticação biométrica. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-version-1607.md)  |
 | Build 10586 | Esta versão do Windows 10 foi lançada em novembro de 2015. Os recursos destacados incluem a introdução das APIs de ORTC (comunicações em tempo real do objeto) para a comunicação de vídeo no Microsoft Edge e as APIs de provedores para permitir que os aplicativos usem a autenticação de rosto do Windows Hello. [Mais informações sobre os recursos introduzidos nesta compilação.](../whats-new/windows-10-version-1511.md) |
 | Build 10240 | Esta é a versão de lançamento inicial do Windows 10, em julho de 2015. [Mais informações sobre os recursos introduzidos nesta compilação.](../whats-new/windows-10-version-1507.md) |
 

@@ -6,13 +6,13 @@ ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 5a26ff6380383965d51a6938db68ad8406941229
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ed0c8e86d38865fad8bb784550b9b4fc61a8b40a
 
 ---
 
-# Interações por mouse
-
+# <a name="mouse-interactions"></a>Interações por mouse
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Otimize o design do seu aplicativo UWP (Plataforma Universal do Windows) para entrada touch e obtenha, por padrão, o suporte básico para mouse.
 
@@ -28,7 +28,7 @@ Mouse e touch apresentam divergências quando o assunto é a capacidade do touch
 
 Este tópico descreve as considerações de design para interações com mouse.
 
-## A linguagem de mouse de aplicativo UWP
+## <a name="the-uwp-app-mouse-language"></a>A linguagem de mouse de aplicativo UWP
 
 
 Um conjunto conciso de interações de mouse é usado de forma consistente em todo o sistema.
@@ -86,7 +86,7 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 </tbody>
 </table>
 
-## Eventos de mouse
+## <a name="mouse-events"></a>Eventos de mouse
 
 Responda à entrada do mouse em seus aplicativos manipulando os mesmos eventos de ponteiro básicos que você usa para entrada touch e por caneta.
 
@@ -101,7 +101,7 @@ Use eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br20
 
 - [Entrada: gestos e manipulações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
 
-## Diretrizes de feedback visual
+## <a name="guidelines-for-visual-feedback"></a>Diretrizes de feedback visual
 
 
 -   Quando o mouse é detectado (por eventos de movimentação ou focalização), mostre a interface do usuário específica do mouse para indicar a funcionalidade exposta pelo elemento. Se o mouse não for movimentado por algum tempo ou se o usuário começar uma interação por toque, faça com que a interface do usuário do mouse desapareça gradualmente. Dessa forma, a interface do usuário fica mais organizada.
@@ -114,7 +114,7 @@ Use eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br20
 Para obter diretrizes mais gerais sobre comentários visuais, consulte [Diretrizes de comentários visuais](guidelines-for-visualfeedback.md).
 
 
-## Cursores
+## <a name="cursors"></a>Cursores
 
 
 Um conjunto de cursores padrão está disponível para ponteiros de mouse. São usados para indicar a ação primária de um elemento.
@@ -129,7 +129,7 @@ Se você precisa personalizar o cursor do mouse:
 -   Use os cursores de redimensionamento horizontal, vertical e diagonal (![cursor de redimensionamento vertical](images/cursor-vertical.png), ![cursor de redimensionamento horizontal](images/cursor-horizontal.png), ![cursor de redimensionamento diagonal (inferior esquerdo, superior direito)](images/cursor-diagonal2.png), ![cursor de redimensionamento diagonal (superior esquerdo, inferior direito)](images/cursor-diagonal1.png)), quando um objeto for redimensionável.
 -   Use os cursores de mão agarrando (![cursor de mão agarrando (aberto)](images/cursor-pan1.png), ![cursor de mão agarrando (fechado)](images/cursor-pan2.png)) durante o movimento panorâmico do conteúdo dentro de uma tela fixa (como um mapa).
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
@@ -156,6 +156,6 @@ Se você precisa personalizar o cursor do mouse:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

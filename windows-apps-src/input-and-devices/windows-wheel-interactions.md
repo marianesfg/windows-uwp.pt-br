@@ -4,15 +4,21 @@ Description: "Incorpore fala em seus aplicativos usando comandos de voz da Corta
 title: "Interações com o Surface Dial"
 label: Surface Dial interactions
 template: detail.hbs
+keywords: "Surface Dial, roda do Windows, RadialController, controle Radial, interação do usuário, entrada"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
-ms.openlocfilehash: 08ac5d58f2650306b162e4dec7f4e606543ca80f
+ms.sourcegitcommit: eb86863d6ce2e545b3e534ef6cafb220904e3dc8
+ms.openlocfilehash: 96b9a2e213c36b8f92664185e9cdcaea6d457368
 
 ---
 
 # <a name="surface-dial-interactions"></a>Interações com o Surface Dial
 
-![Imagem do Surface Dial com Studio Surface](images/windows-wheel/dial-pen-studio-600px.png)  
+![Imagem do Surface Dial com Surface Studio](images/windows-wheel/dial-pen-studio-600px.png)  
 *Surface Dial com Surface Studio e caneta* (disponível para compra na [Microsoft Store](https://aka.ms/purchasesurfacedial)).
 
 ## <a name="overview"></a>Visão geral
@@ -24,7 +30,7 @@ Dispositivos Windows Wheel, como o Surface Dial, são uma nova categoria de disp
 
 | Vídeos |   |
 | --- | --- |
-| <iframe width="300" height="200" src="https://www.youtube.com/embed/WMklcdzcNcU" frameborder="0" allowfullscreen></iframe> | <iframe width="300" height="200" src="https://www.youtube.com/embed/2tajuOfs9p0" frameborder="0" allowfullscreen></iframe> |
+| <iframe width="300" height="200" src="https://www.youtube.com/embed/WMklcdzcNcU" frameborder="0" allowfullscreen></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
 | *Parceiros de aplicativo do Surface Dial* | *Surface Dial para desenvolvedores* |
 
 Com um fator forma com base em uma ação (ou gesto) *girar*, o Surface Dial destina-se como um dispositivo de entrada secundário para vários tipos de mídia que complementa a entrada de um dispositivo principal. Na maioria dos casos, o dispositivo é manipulado pela mão não dominante de um usuário durante a execução de uma tarefa com a mão dominante (por exemplo, escrita à tinta com uma caneta). Ele não foi projetado para entrada de ponteiro de precisão (por exemplo, toque, caneta ou mouse). 
@@ -132,7 +138,7 @@ Nas seções a seguir, descrevemos como adicionar uma ferramenta personalizada a
 
 Neste exemplo, vamos adicionar uma ferramenta personalizada básica que passa os dados de entrada de eventos de rotação e clique para alguns controles da interface XAML.
 
-1. Primeiro, nós declaramos nossa interface do usuário (apenas um controle deslizante e botão de alternância) em XAML.
+1. Primeiro, nós declaramos nossa interface do usuário (apenas um controle deslizante e switch de alternância) em XAML.
 
    ![Imagem da interface do aplicativo de exemplo](images/windows-wheel/surface-dial-snippet-customtool1.png)  
    *A interface do usuário do aplicativo de exemplo*
@@ -423,9 +429,9 @@ Da mesma forma, se o Surface Dial é clicado quando em contato com a superfície
 
 As informações de contato ([**RadialControllerScreenContact**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContact)) incluem as coordenadas X/Y do centro do Surface Dial no espaço de coordenadas do aplicativo ([**RadialControllerScreenContact.Position**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContact.Position)), bem como o retângulo delimitador ([**RadialControllerScreenContact.Bounds**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerScreenContact.Bounds)) nos pixels independentes de dispositivo (DIPs). Essas informações são muito úteis para fornecer contexto para a ferramenta ativa e fornecer feedback visual relacionado ao dispositivo para o usuário.
 
-No exemplo a seguir, criamos um aplicativo básico com quatro seções distintas, cada uma delas inclui um controle deslizante e um botão de alternância. Em seguida, usamos a posição na tela do Surface Dial para ditar qual conjunto de controles deslizantes e botões de alternância é controlado pelo Surface Dial.
+No exemplo a seguir, criamos um aplicativo básico com quatro seções distintas, cada uma delas inclui um controle deslizante e um switch de alternância. Em seguida, usamos a posição na tela do Surface Dial para ditar qual conjunto de controles deslizantes e switches de alternância é controlado pelo Surface Dial.
 
-1. Primeiro, nós declaramos nossa interface do usuário (quatro seções, cada uma com um botão de alternância e um controle deslizante) em XAML.
+1. Primeiro, nós declaramos nossa interface do usuário (quatro seções, cada uma com um switch de alternância e um controle deslizante) em XAML.
 
    ![Imagem da interface do aplicativo de exemplo](images/windows-wheel/surface-dial-snippet-customtool3.png)  
    *A interface do usuário do aplicativo de exemplo*
@@ -662,6 +668,6 @@ Envie suas perguntas, sugestões e comentários para [radialcontroller@microsoft
 [Exemplo da área de trabalho clássica do Windows](https://aka.ms/radialcontrollerclassicsample)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -7,11 +7,11 @@ dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
 label: Password box
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 4f08195bcd70429f103c730c6c4a6d69dcf5b55e
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 1addc6eee8ae4819fa388332998ac8a69e01cdf3
 
 ---
-# Caixa de senha
+# <a name="password-box"></a>Caixa de senha
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -22,28 +22,21 @@ Por padrão, a caixa de senha oferece uma maneira para o usuário visualizar a s
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx"><strong>Classe PasswordBox</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx"><strong>Propriedade Password</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx"><strong>Propriedade PasswordChar</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx"><strong>Propriedade PasswordRevealMode</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx"><strong>Evento PasswordChanged</strong></a></li>
+<li>[**Classe PasswordBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)</li>
+<li>[**Propriedade Password**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx)</li>
+<li>[**Propriedade PasswordChar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx)</li>
+<li>[**Propriedade PasswordRevealMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx)</li>
+<li>[**Evento PasswordChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-## Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use um controle **PasswordBox** para coletar uma senha ou outros dados particulares, como números de documentos.
 
 Para obter mais informações sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 A caixa de senha tem vários estados, incluindo estes notáveis.
 
@@ -59,7 +52,7 @@ Pressionar o botão de "revelar" à direita permite ver o texto da senha sendo i
 
 ![Texto da caixa de senha revelado](images/passwordbox-text-reveal.png)
 
-## Criar uma caixa de senha
+## <a name="create-a-password-box"></a>Criar uma caixa de senha
 
 Use a propriedade [Password](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx) para obter ou configurar o conteúdo da PasswordBox. Você pode fazer isso no manipulador para o evento [PasswordChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx), para realizar a validação enquanto o usuário insere a senha. Ou então, você pode usar outro evento, como um [clique](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) em um botão, para realizar a validação após o usuários completar a entrada de texto.
 
@@ -91,7 +84,7 @@ Aqui está o resultado quando esse código é executado é o usuário insere "Se
 
 ![Caixa de senha com uma mensagem de validação](images/passwordbox-revealed-validation.png)
 
-### Caractere de senha
+### <a name="password-character"></a>Caractere de senha
 
 Você pode alterar o caractere usado para mascarar a senha, definindo a propriedade [PasswordChar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx). Aqui, o marcador padrão é substituído por um asterisco.
 
@@ -103,7 +96,7 @@ O resultado é este.
 
 ![Caixa de senha com um caractere personalizado](images/passwordbox-custom-char.png)
 
-### Cabeçalhos e texto de espaço reservado
+### <a name="headers-and-placeholder-text"></a>Cabeçalhos e texto de espaço reservado
 
 Você pode usar as propriedades [Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.header.aspx) e [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.placeholdertext.aspx) para fornecer contexto para a PasswordBox. Isso é especialmente útil quando você tem várias caixas, como em um formulário para alterar uma senha.
 
@@ -113,17 +106,17 @@ Você pode usar as propriedades [Header](https://msdn.microsoft.com/library/wind
 
 ![Caixa de senha em estado de repouso com texto de dica](images/passwordbox-rest-hinttext.png)
 
-### Comprimento máximo
+### <a name="maximum-length"></a>Comprimento máximo
 
 Especifique o número máximo de caracteres que o usuário pode inserir configurando a propriedade [MaxLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.maxlength.aspx). Não há nenhuma propriedade para especificar um comprimento mínimo, mas você pode verificar o comprimento da senha, e realizar outras validações, no código do aplicativo.
 
-## Modo de revelação de senha
+## <a name="password-reveal-mode"></a>Modo de revelação de senha
 
 A PasswordBox tem um botão interno que o usuário pode pressionar para exibir o texto da senha. Aqui está o resultado da ação do usuário. Quando usuário o libera, a senha volta a ser oculta automaticamente.
 
 ![Texto da caixa de senha revelado](images/passwordbox-text-reveal.png)
 
-### Modo espiada
+### <a name="peek-mode"></a>Modo espiada
 
 Por padrão, o botão de revelação de senha (ou botão de "espiada") é exibido. O usuário deve pressionar continuamente o botão para exibir a senha, para que um alto nível de segurança seja mantido.
 
@@ -131,7 +124,7 @@ O valor da propriedade [PasswordRevealMode](https://msdn.microsoft.com/library/w
 
 > **Cuidado**&nbsp;&nbsp;Antes do Windows 10, o botão de revelar a senha não era exibido por padrão. Se a segurança de seu aplicativo exigir que a senha esteja sempre oculta, certifique-se de definir PasswordRevealMode como Hidden.
 
-### Modos ocultos e visíveis
+### <a name="hidden-and-visible-modes"></a>Modos ocultos e visíveis
 
 Os outros valores de enumeração [PasswordRevealMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordrevealmode.aspx), **Hidden** e **Visible**, ocultam o botão de revelar senha e permitem que você gerencie programaticamente se a senha é ocultada.
 
@@ -169,13 +162,13 @@ Esta PasswordBox tem esta aparência.
 
 ![Caixa de senha com um botão de revelação personalizado](images/passwordbox-custom-reveal.png)
 
-## Escolha o teclado correto para seu controle de texto
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>Escolha o teclado correto para seu controle de texto
 
 Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira. A PasswordBox oferece suporte apenas ao valores de escopo de entrada **Password** e **NumericPin**. Qualquer outro valor é ignorado.
 
 Para obter mais informações sobre como usar escopos de entrada, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
-## Recomendações
+## <a name="recommendations"></a>Recomendações
 
 -   Se o propósito da caixa de senha não for claro, use um rótulo ou um texto de espaço reservado. Um rótulo fica visível independentemente da caixa de entrada de texto ter um valor ou não. O texto de espaço reservado é exibido dentro da caixa de entrada de texto e desaparece assim que um valor for inserido.
 -   Dê à caixa de senha uma largura adequada para o intervalo de valores que pode ser inserido. O comprimento das palavras varia entre os idiomas, então leve a localização em conta, se quiser que seu aplicativo atenda todo mundo.
@@ -186,25 +179,19 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 [Controles de texto](text-controls.md)
 
-**Para designers**
 - [Diretrizes para verificação ortográfica](spell-checking-and-prediction.md)
 - [Adicionando pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
 - [Diretrizes para entrada de texto](text-controls.md)
-
-**Para desenvolvedores (XAML)**
 - [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
-
-
-**Para desenvolvedores (outros)**
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

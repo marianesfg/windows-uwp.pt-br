@@ -5,22 +5,32 @@ title: Definir tempos limite de reconhecimento de fala
 ms.assetid: 58F446AC-4A56-454D-8125-62A2C4DBFCC8
 label: Speech recognition timeouts
 template: detail.hbs
+keywords: "controle por voz, voz, reconhecimento de fala, linguagem natural, ditado, entrada, interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 0e5b60b2a59478899343ed4dee9d9c2039607491
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 770a34c7c190540456a2748290b0aa557fcc1800
 
 ---
 
-# Definir tempos limite de reconhecimento de fala
+# <a name="set-speech-recognition-timeouts"></a>Definir tempos limite de reconhecimento de fala
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
 Defina quanto tempo um reconhecedor de fala ignora o silêncio ou sons não reconhecíveis (murmúrios) e continua escutando a entrada de fala.
 
-**APIs importantes**
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Tempos limite**](https://msdn.microsoft.com/library/windows/apps/dn653253)</li>
+<li>[**SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)</li>
+</ul>
+</div>
 
--   [**Tempos limite**](https://msdn.microsoft.com/library/windows/apps/dn653253)
--   [**SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)
-
-
-## Definir um tempo limite
+## <a name="set-a-timeout"></a>Definir um tempo limite
 
 
 Aqui, especificamos vários valores de [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253).
@@ -40,7 +50,7 @@ recognizer.Timeouts.BabbleTimeout = TimeSpan.FromSeconds(4.0);
 recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 ```
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 
 * [Interações de fala](speech-interactions.md)
@@ -56,6 +66,6 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

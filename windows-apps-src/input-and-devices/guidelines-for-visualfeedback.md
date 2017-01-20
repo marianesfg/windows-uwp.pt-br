@@ -1,44 +1,54 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "Use o feedback visual para mostrar aos usuários quando suas interações com os aplicativos da Windows Store são detectadas, interpretadas e manipuladas."
-title: "Comentários visuais"
+title: Feedback visual
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
+keywords: "feedback visual, feedback de foco, feedback de toque, visualização de contato, entrada, interação"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 388bdc42610d05a4decb5c8aecadcaf2f78b26f8
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: ab7a6cfabb98eaf841849f5045e7ebce1ec86d65
 
 ---
 
-# Diretrizes de feedback visual
+# <a name="guidelines-for-visual-feedback"></a>Diretrizes de feedback visual
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Use os comentários visuais para mostrar aos usuários quando suas interações são detectadas, interpretadas e manipuladas. O feedback visual poderá ajudar os usuários incentivando a interação. Ele indica o sucesso da interação, o que oferece ao usuário uma sensação de controle. Além de retransmitir o status do sistema, também reduz os erros.
+Use o feedback visual para mostrar aos usuários quando suas interações são detectadas, interpretadas e manipuladas. O feedback visual poderá ajudar os usuários incentivando a interação. Ele indica o sucesso da interação, o que oferece ao usuário uma sensação de controle. Além de retransmitir o status do sistema, também reduz os erros.
 
-**APIs importantes**
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+</ul>
+</div>
 
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
-
-## Recomendações
+## <a name="recommendations"></a>Recomendações
 
 -   Tente permanecer o mais próximo do modelo de controle original quanto possível, para obter controle e desempenho de aplicativo otimizados.
 -   Não use visualizações de toque em situações em que possam interferir com o uso do aplicativo. Para obter mais informações, consulte [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
--   Não exiba comentários a menos que seja absolutamente necessário. Mantenha a interface do usuário clara e organizada sem mostrar os comentários visuais, a menos que você esteja agregando valor que não esteja disponível em nenhum outro lugar.
--   Tente não personalizar os comportamentos dos comentários visuais dos gestos internos do Windows em excesso, porque isso pode criar uma experiência inconsistente e confusa para o usuário.
+-   Não exiba comentários a menos que seja absolutamente necessário. Mantenha a interface do usuário clara e organizada sem mostrar o feedback visual, a menos que você esteja agregando valor que não esteja disponível em nenhum outro lugar.
+-   Tente não personalizar os comportamentos do feedback visual dos gestos internos do Windows em excesso, porque isso pode criar uma experiência inconsistente e confusa para o usuário.
 
-## Diretrizes de uso adicionais
+## <a name="additional-usage-guidance"></a>Diretrizes de uso adicionais
 
-As visualizações por contato são especialmente críticas para as interações por toque que exigem exatidão e precisão. Por exemplo, seu aplicativo deve indicar claramente o local de um toque para permitir que um usuário saiba se errou o seu destino, o quanto errou e quais ajustes deve fazer.
+As visualizações por contato são especialmente críticas para as interações por toque que exigem exatidão e precisão. Por exemplo, seu app deve indicar claramente o local de um toque para permitir que um usuário saiba se errou o seu destino, o quanto errou e quais ajustes deve fazer.
 
-Usar os controles da plataforma padrão XAML disponíveis garantirá que o aplicativo funcione corretamente em todos os dispositivos e em situações de entrada. Se o seu aplicativo permitir interações personalizadas que exijam comentários personalizados, você deverá garantir que os comentários sejam adequados, que eles se propaguem em dispositivos de entrada e que não distraiam o usuário da tarefa. Isso pode ser um problema específico em aplicativos de jogos ou de desenho, em que o feedback visual pode entrar em conflito ou até mesmo obscurecer uma interface do usuário essencial.
+Usar os controles da plataforma padrão XAML disponíveis garante que o aplicativo funcione corretamente em todos os dispositivos e em situações de entrada. Se o seu aplicativo permitir interações personalizadas que exijam comentários personalizados, você deverá garantir que os comentários sejam adequados, que eles se propaguem em dispositivos de entrada e que não distraiam o usuário da tarefa. Isso pode ser um problema específico em aplicativos de jogos ou de desenho, em que o feedback visual pode entrar em conflito ou até mesmo obscurecer uma interface do usuário essencial.
 
 [!IMPORTANT] Não recomendamos mudar o comportamento da interação dos gestos internos. 
 
 **Comentários em todos os dispositivos**
 
-Os comentários visuais geralmente dependem do dispositivo de entrada (toque, touchpad, mouse, caneta, teclado, etc.). Por exemplo, o feedback interno de um mouse geralmente envolve movimentar e mudar o cursor, enquanto o toque e a caneta exigem visualizações de contato e entrada de teclado e a navegação usa retângulos de foco e destaque.
+O feedback visual geralmente depende do dispositivo de entrada (toque, touchpad, mouse, caneta, teclado, etc.). Por exemplo, o feedback interno de um mouse geralmente envolve movimentar e mudar o cursor, enquanto o toque e a caneta exigem visualizações de contato e entrada de teclado e a navegação usa retângulos de foco e destaque.
 
 Use [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969) para configurar o comportamento de feedback para gestos da plataforma.
 
@@ -50,11 +60,11 @@ Estes são alguns exemplos de visualizações internas de contato do Windows.
 | --- | --- | --- | --- |
 | Visualização por toque | Visualização por mouse/touchpad | Visualização por caneta | Visualização por teclado |
 
-## Elementos visuais de foco de alta visibilidade
+## <a name="high-visibility-focus-visuals"></a>Elementos visuais de foco de alta visibilidade
 
 Todos os aplicativos do Windows ostentam elementos visual de foco mais definido em torno de controles interativos do aplicativo. Esses novos elementos visuais de foco são totalmente personalizáveis, assim como desativáveis quando necessário.
 
-## Personalização e identidade visual de cores
+## <a name="color-branding--customizing"></a>Personalização e identidade visual de cores
 
 **Propriedades da borda**
 
@@ -100,7 +110,7 @@ Para alterar as cores em uma base por controle, edite as propriedades dos elemen
 <Slider Width="200" FocusVisualPrimaryBrush="DarkRed" FocusVisualSecondaryBrush="Pink"/>
 ```
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 **Para designers**
 * [Diretrizes de movimento panorâmico](guidelines-for-panning.md)
@@ -129,6 +139,6 @@ Para alterar as cores em uma base por controle, edite as propriedades dos elemen
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

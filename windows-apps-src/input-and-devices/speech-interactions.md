@@ -5,9 +5,15 @@ title: "Interações de controle por voz"
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
 template: detail.hbs
+keywords: "controle por voz, voz, reconhecimento de fala, linguagem natural, ditado, entrada, interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5b52f6a8e944e4166c2f4c7e16e4a83ddff23dac
-ms.openlocfilehash: 5efb2d1fc6a63e372e91cfdc8ae5e8117ff047d5
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 5080fe9496b7a13336b42a83fd569e44f43ba2db
 
 ---
 
@@ -237,6 +243,6 @@ Os dois problemas podem ser atendidos com SSML em vez de texto sem formatação 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

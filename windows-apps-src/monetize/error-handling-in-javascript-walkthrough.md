@@ -4,13 +4,13 @@ ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
 description: Saiba como detectar erros de AdControl em seu aplicativo.
 title: Tratamento de erros no Guia passo a passo do JavaScript
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: e7ce3cd96286454aaa987483ed4df1cefbee5b57
+ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
+ms.openlocfilehash: ad177c964f2a01640d33fc09f1789fc857801792
 
 
 ---
 
-# Tratamento de erros no Guia passo a passo do JavaScript
+# <a name="error-handling-in-javascript-walkthrough"></a>Tratamento de erros no Guia passo a passo do JavaScript
 
 
 
@@ -21,65 +21,61 @@ Estes exemplos pressupõem que você tenha um aplicativo JavaScript/HTML que con
 
 1.  No arquivo default.html, adicione um valor para o evento **onErrorOccurred**, onde você define **data-win-options** no **div** do **AdControl**. Encontre o código a seguir no arquivo default.html.
 
-    ``` syntax
-    <div id="myAd" style="position: absolute; top: 53px; left: 0px; width: 300px; height: 250px; z-index: 1"
-         data-win-control="MicrosoftNSJS.Advertising.AdControl"
-         data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: '10865270'}">
-    </div>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` html
+  <div id="myAd" style="position: absolute; top: 53px; left: 0px; width: 300px; height: 250px; z-index: 1"
+      data-win-control="MicrosoftNSJS.Advertising.AdControl"
+      data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: '10865270'}">
+  </div>
+  ```
 
-    Seguindo o **adUnitId**, adicione o valor para o evento **onErrorOccurred**.
+  Seguindo o atributo **adUnitId**, adicione o valor para o evento **onErrorOccurred**.
 
-    ``` syntax
-    onErrorOccurred: errorLogger
-    ```
-
-    Este é o código completo do **div**.
-
-    ``` syntax
-    <div id="myAd" style="position: absolute; top: 53px; left: 0px; width: 300px; height: 250px; z-index: 1"
-         data-win-control="MicrosoftNSJS.Advertising.AdControl"
-         data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: '10865270', onErrorOccurred: errorLogger}">
-    </div>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` html
+  <div id="myAd" style="position: absolute; top: 53px; left: 0px; width: 300px; height: 250px; z-index: 1"
+      data-win-control="MicrosoftNSJS.Advertising.AdControl"
+      data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: '10865270', onErrorOccurred: errorLogger}">
+  </div>
+  ```
 
 2.  Crie um **div** que exibirá o texto para que você possa ver as mensagens que estão sendo geradas. Para fazer isso, adicione o seguinte código após o **div** de **myAd**.
 
-    ``` syntax
-    <div style="position:absolute; width:100%; height:130px; top:300px; left:0px">
-        <b>Ad Events</b><br />
-        <div id="adEvents" style="width:100%; height:110px; overflow:auto"></div>
-    </div>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` html
+  <div style="position:absolute; width:100%; height:130px; top:300px; left:0px">
+      <b>Ad Events</b><br />
+      <div id="adEvents" style="width:100%; height:110px; overflow:auto"></div>
+  </div>
+  ```
 
 3.  Crie um **AdControl** que disparará um evento de erro. Pode haver somente uma id de aplicativo para todos os objetos **AdControl** em um aplicativo. Portanto, criar uma id adicional com uma id de aplicativo diferente disparará um erro em tempo de execução. Para fazer isso, após as seções **div** anteriores que você adicionou, adicione o código a seguir ao corpo da página default.html.
 
-    ``` syntax
-    <!-- since only one applicationId can be used, the following ad control will fire an error event -->
-    <div id="liveAd" style="position: absolute; top:500px; left:0px; width:480px; height:80px"
-        data-win-control="MicrosoftNSJS.Advertising.AdControl"
-        data-win-options="{applicationId: '00000000-0000-0000-0000-000000000000',
-        adUnitId: '10865270', onErrorOccurred: errorLogger }" >
-    </div>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` html
+  <!-- Because only one applicationId can be used, the following ad control will fire an error event. -->
+  <div id="liveAd" style="position: absolute; top:500px; left:0px; width:480px; height:80px"
+      data-win-control="MicrosoftNSJS.Advertising.AdControl"
+      data-win-options="{applicationId: '00000000-0000-0000-0000-000000000000', adUnitId: '10865270', onErrorOccurred: errorLogger }" >
+  </div>
+  ```
 
 4.  No arquivo default.js do projeto, após a função de inicialização padrão, você adicionará o manipulador de eventos de **errorLogger**. Role até o final do arquivo e coloque o código a seguir depois do último ponto e vírgula.
 
-    ``` syntax
-    WinJS.Utilities.markSupportedForProcessing(
-    window.errorLogger = function (sender, evt) {
+  > [!div class="tabbedCodeSnippets"]
+  ``` javascript
+  WinJS.Utilities.markSupportedForProcessing(
+  window.errorLogger = function (sender, evt) {
         adEvents.innerHTML = (new Date()).toLocaleTimeString() + ": " +
         sender.element.id + " error: " + evt.errorMessage + " error code: " +
         evt.errorCode + "<br>" + adEvents.innerHTML;
         console.log("errorhandler hit. \n");
-    });
-    ```
+  });
+  ```
 
-5.  Compile e execute o aplicativo.
+5.  Compile e execute o aplicativo. Você verá o anúncio original do aplicativo de exemplo criado anteriormente e o texto sob esse anúncio, descrevendo o erro. Você não verá o anúncio com a id do **liveAd**.
 
-Você verá o anúncio original do aplicativo de exemplo criado anteriormente e o texto sob esse anúncio, descrevendo o erro. Você não verá o anúncio com a id do **liveAd**.
-
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
 
@@ -87,6 +83,6 @@ Você verá o anúncio original do aplicativo de exemplo criado anteriormente e 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

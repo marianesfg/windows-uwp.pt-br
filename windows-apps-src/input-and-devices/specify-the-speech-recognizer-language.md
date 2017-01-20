@@ -5,25 +5,34 @@ title: Especificar o idioma do reconhecedor de fala
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
+keywords: "controle por voz, voz, reconhecimento de fala, linguagem natural, ditado, entrada, interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 526493614666424089199063013b5fc72d9bc5d8
-ms.openlocfilehash: 9abde4aa5489780f3ee2e9b5e7ecbdfa4dd53b93
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 42ddaea1de6dc4354e776b7d6db79486a6b3057e
 
 ---
 
-# Especificar o idioma do reconhecedor de fala
-
+# <a name="specify-the-speech-recognizer-language"></a>Especificar o idioma do reconhecedor de fala
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Saiba como selecionar um idioma instalado para usá-lo para reconhecimento de fala.
 
-
-
-
-**APIs importantes**
-
--   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)
--   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)
--   [**Idioma**](https://msdn.microsoft.com/library/windows/apps/br206804)
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li> [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)</li>
+<li>[**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)</li>
+<li>[**Idioma**](https://msdn.microsoft.com/library/windows/apps/br206804)</li>
+<li> </li>
+<li> </li>
+<li> </li>
+</ul>
+</div>
 
 
 Aqui, enumeramos os idiomas instalados em um sistema, identificamos qual é o idioma padrão e selecionamos um idioma diferente para o reconhecimento.
@@ -43,7 +52,7 @@ Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal
 
 Para obter dicas úteis sobre o design de um aplicativo habilitado para controle por voz interessante e prático, consulte [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121).
 
-## Identifique o idioma padrão
+## <a name="identify-the-default-language"></a>Identifique o idioma padrão
 
 
 Um reconhecedor de fala usa o idioma do controle por voz do sistema como seu idioma de reconhecimento padrão. Esse idioma é definido pelo usuário na tela Settings &gt; System &gt; Speech &gt; Speech Language do dispositivo.
@@ -57,7 +66,7 @@ var language = SpeechRecognizer.SystemSpeechLanguage; </code></pre></td>
 </table>
 ```
 
-## Confirmar um idioma instalado
+## <a name="confirm-an-installed-language"></a>Confirmar um idioma instalado
 
 
 Os idiomas instalados podem variar entre dispositivos. Verifique a existência de um idioma se você depender dele para uma determinada restrição.
@@ -72,7 +81,7 @@ Determine os idiomas com suporte em um dispositivo verificando uma das duas prop
 
 -   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250) - A coleção de objetos [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) usada com uma restrição de lista ou um arquivo SRGS (Especificação de Gramática de Reconhecimento de Fala).
 
-## Especificar um idioma
+## <a name="specify-a-language"></a>Especificar um idioma
 
 
 Para especificar um idioma, passe um objeto [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) no construtor [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226).
@@ -95,7 +104,7 @@ var language = new Windows.Globalization.Language(“en-US”);
 var recognizer = new SpeechRecognizer(language); 
 ```
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 
 Uma restrição de tópico pode ser configurada adicionando uma [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446) à coleção [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) do [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) e chamando [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240). Um [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433) de **TopicLanguageNotSupported** é retornado se o reconhecedor não for inicializado com um idioma de tópico com suporte.
@@ -104,7 +113,7 @@ Uma restrição de lista é configurada adicionando uma [**SpeechRecognitionList
 
 Uma gramática SRGS é um formato XML de padrão aberto representado pela classe [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412). Ao contrário de listas personalizadas, você pode especificar o idioma da gramática na marcação SRGS. Haverá falha de [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) com um [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433) de **TopicLanguageNotSupported** se o reconhecedor não for inicializado com o mesmo idioma que a marcação SRGS.
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 **Desenvolvedores**
 
@@ -112,11 +121,11 @@ Uma gramática SRGS é um formato XML de padrão aberto representado pela classe
 
 **Designers**
 
-* [Diretrizes para design de controle por voz] (https://msdn.microsoft.com/library/windows/apps/dn596121)
+* [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
 
 **Exemplos**
 
-* [Exemplo de reconhecimento de fala e sintetização de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  
@@ -127,6 +136,6 @@ Uma gramática SRGS é um formato XML de padrão aberto representado pela classe
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -5,27 +5,38 @@ title: "Definir restrições de reconhecimento personalizadas"
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
+keywords: "fala, voz, reconhecimento de fala, linguagem natural, ditado, entrada, interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: d619cd6b3c9f5d62ca7d68f555e4c051abaf9bad
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: c75ee725ce4bc9fc33d9ea13e4ab92ed60bfb04d
 
 ---
 
-# Definir restrições de reconhecimento personalizadas
+# <a name="define-custom-recognition-constraints"></a>Definir restrições de reconhecimento personalizadas
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Saiba como definir e usar restrições personalizadas para reconhecimento de fala.
 
-**APIs Importantes**
-
--   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)
--   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)
--   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
+<div class="important-apis" >
+<b>APIs Importantes</b><br/>
+<ul>
+<li>[**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)</li>
+<li>[**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)</li>
+<li>[**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)</li>
+</ul>
+</div>
 
 
 O reconhecimento de fala requer pelo menos uma restrição para definir um vocabulário reconhecível. Se nenhuma restrição for especificada, será usada a gramática de ditado predefinida de Aplicativos Universais do Windows. Consulte [Reconhecimento de fala](speech-recognition.md).
 
 
-## Adicionar restrições
+## <a name="add-constraints"></a>Adicionar restrições
 
 
 Use a propriedade [**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) para adicionar restrições a um reconhecedor de fala.
@@ -43,7 +54,7 @@ Cada reconhecedor de fala pode ter uma coleção de restrição. Somente essas c
 
 **Lembrete:  **Chame o método [**SpeechRecognizer.CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) para compilar restrições antes de iniciar o processo de reconhecimento.
 
-## Especifique uma gramática de pesquisa na Web (SpeechRecognitionTopicConstraint)
+## <a name="specify-a-web-search-grammar-speechrecognitiontopicconstraint"></a>Especifique uma gramática de pesquisa na Web (SpeechRecognitionTopicConstraint)
 
 
 Restrições de tópico (ditado ou gramática de pesquisa na Web) devem ser adicionadas à coleção de restrições de um reconhecedor de fala.
@@ -80,7 +91,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Especifique uma restrição de lista programática (SpeechRecognitionListConstraint)
+## <a name="specify-a-programmatic-list-constraint-speechrecognitionlistconstraint"></a>Especifique uma restrição de lista programática (SpeechRecognitionListConstraint)
 
 
 Restrições de lista devem ser adicionadas à coleção de restrições de um reconhecedor de fala.
@@ -120,7 +131,7 @@ private async void YesOrNo_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Especifique uma restrição de gramática SRGS (SpeechRecognitionGrammarFileConstraint)
+## <a name="specify-an-srgs-grammar-constraint-speechrecognitiongrammarfileconstraint"></a>Especifique uma restrição de gramática SRGS (SpeechRecognitionGrammarFileConstraint)
 
 
 Arquivos de gramática SRGS devem ser adicionados à coleção de restrições de um reconhecedor de fala.
@@ -211,7 +222,7 @@ Aqui, escutamos as variantes de "sim" e "não".
 </grammar>
 ```
 
-## Gerenciar restrições
+## <a name="manage-constraints"></a>Gerenciar restrições
 
 
 Depois que uma coleção de restrições for carregada para reconhecimento, seu aplicativo poderá gerenciar quais restrições são permitidas para operações de reconhecimento definindo a propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402) de uma restrição como **true** ou **false**. A configuração padrão é **true**.
@@ -224,7 +235,7 @@ Decida quais restrições são habilitadas com base nas frases que seu aplicativ
 
 Para avisar o usuário sobre o que pode ser falado, use as propriedades [**SpeechRecognizerUIOptions.AudiblePrompt**](https://msdn.microsoft.com/library/windows/apps/dn653235) e [**SpeechRecognizerUIOptions.ExampleText**](https://msdn.microsoft.com/library/windows/apps/dn653236), que é possível definir usando a propriedade [**SpeechRecognizer.UIOptions**](https://msdn.microsoft.com/library/windows/apps/dn653254). Preparar usuários sobre o que eles podem dizer durante a operação de reconhecimento aumenta a probabilidade deles falarem uma frase que possa ser correspondida a uma restrição ativa.
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 
 * [Interações de controle por voz](speech-interactions.md)
@@ -241,6 +252,6 @@ Para avisar o usuário sobre o que pode ser falado, use as propriedades [**Speec
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

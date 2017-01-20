@@ -4,15 +4,15 @@ Description: "Este artigo contém problemas conhecidos com a ponte da área de t
 Search.Product: eADQiWindows 10XVcnh
 title: "Problemas conhecidos com a ponte da área de trabalho"
 translationtype: Human Translation
-ms.sourcegitcommit: 537c6a3d4559da4673b68c3ab5bdddb612760849
-ms.openlocfilehash: d02921247bd77d59bbb09037a4ced8d3967c33b2
+ms.sourcegitcommit: ec4c5f937e4fd133bfc4f7aa96d00cee03a13c26
+ms.openlocfilehash: d3ed0af32c9a44078d0f772d7fc130121f5d4970
 
 ---
-# Problemas conhecidos com a ponte da área de trabalho
+# <a name="known-issues-with-the-desktop-bridge"></a>Problemas conhecidos com a ponte da área de trabalho
 
 Este artigo contém problemas conhecidos com a ponte da área de trabalho para UWP.
 
-## Tela azul com código de erro 0x139 (KERNEL_SECURITY_CHECK_FAILURE)
+## <a name="blue-screen-with-error-code-0x139-kernelsecuritycheckfailure"></a>Tela azul com código de erro 0x139 (KERNEL_SECURITY_CHECK_FAILURE)
 
 Depois da instalação ou da inicialização de determinados aplicativos da Windows Store, o computador poderá ser reiniciado inesperadamente com o erro: **0x139 (KERNEL\_SECURITY\_CHECK\_ FAILURE)**.
 
@@ -27,10 +27,10 @@ Se for um desenvolvedor, você desejará impedir a instalação dos aplicativos 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
 Os detalhes a respeito do Windows Update podem ser encontrados em: 
-* https://support.microsoft.com/3197954
+* https://support.microsoft.com/kb/3197954
 * https://support.microsoft.com/help/12387/windows-10-update-history
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

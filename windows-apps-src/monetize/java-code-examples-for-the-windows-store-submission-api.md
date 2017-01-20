@@ -4,27 +4,27 @@ ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: "Use os exemplos de código Java nesta seção para saber mais sobre como usar a API de envio da Windows Store."
 title: "Exemplos de código Java para a API de envio da Windows Store"
 translationtype: Human Translation
-ms.sourcegitcommit: b0154cc0669dd97e57ed75fa1f65afa8d23ae0b7
-ms.openlocfilehash: 26d5812e41531cf852606227805d0a84255a3f47
+ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
+ms.openlocfilehash: 7f7de7c7d9fa9131d38da48e13ce449f4440962d
 
 ---
 
-# Exemplos de código Java para a API de envio da Windows Store
+# <a name="java-code-examples-for-the-windows-store-submission-api"></a>Exemplos de código Java para a API de envio da Windows Store
 
 Este artigo fornece exemplos de código Java para usar a *API de envio da Windows Store*. Para saber mais sobre essa API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
-Esses exemplos de códigos demonstram as seguintes tarefas:
+Estes exemplos de códigos demonstram as seguintes tarefas:
 
-* [Obtenha um token de acesso do Azure AD](java-code-examples-for-the-windows-store-submission-api.md#token).
-* [Crie um complemento](java-code-examples-for-the-windows-store-submission-api.md#create-add-on).
-* [Crie um pacote de pré-lançamento](java-code-examples-for-the-windows-store-submission-api.md#create-package-flight).
-* [Crie e confirme um envio de aplicativo](java-code-examples-for-the-windows-store-submission-api.md#create-app-submission).
-* [Crie e confirme um envio de complemento](java-code-examples-for-the-windows-store-submission-api.md#create-add-on-submission).
-* [Crie e confirme um envio de pacote de pré-lançamento](java-code-examples-for-the-windows-store-submission-api.md#create-flight-submission).
+* [Obter um token de acesso do Azure AD](#token)
+* [Criar um complemento](#create-add-on)
+* [Criar um pacote de pré-lançamento](#create-package-flight)
+* [Criar um envio de aplicativo](#create-app-submission)
+* [Criar um envio de complemento](#create-add-on-submission)
+* [Criar um envio de pacote de pré-lançamento](#create-flight-submission)
 
-Você pode examinar cada exemplo para saber mais sobre a tarefa que ele demonstra ou criar todos os exemplos de código neste artigo em um aplicativo de console. Para a listagem de código completo, consulte a seção [listagem de códigos](java-code-examples-for-the-windows-store-submission-api.md#code-listing) no final deste artigo.
+É possível examinar cada exemplo para saber mais sobre a tarefa que ele demonstra ou compilar todos os exemplos de código neste artigo em um aplicativo de console. Para a listagem de código completo, consulte a seção [listagem de códigos](java-code-examples-for-the-windows-store-submission-api.md#code-listing) no final deste artigo.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Estes exemplos usam as seguintes bibliotecas:
 
@@ -32,1113 +32,98 @@ Estes exemplos usam as seguintes bibliotecas:
 * [Apache HttpComponents Core 4.4.5 e Apache HttpComponents Client 4.5.2](https://hc.apache.org/) (httpcore-4.4.5.jar e httpclient-4.5.2.jar).
 * [JSR 353 JSON Processing API 1.0](https://mvnrepository.com/artifact/javax.json/javax.json-api/1.0) e [JSR 353 JSON Processing Default Provider API 1.0.4](https://mvnrepository.com/artifact/org.glassfish/javax.json/1.0.4) (javax.json-api-1.0.jar e javax.json-1.0.4.jar).
 
-## Programa principal e importações
+## <a name="main-program-and-imports"></a>Programa principal e importações
 
 O exemplo a seguir mostra as instruções de importação usadas por todos os exemplos de código e implementa um programa de linha de comando que chama os outros métodos de exemplo.
 
-```java
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URISyntaxException;
-import java.text.MessageFormat;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpResponseException;
-import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.methods.*;
-import org.apache.http.impl.client.BasicResponseHandler;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.entity.FileEntity;
-import org.apache.http.entity.StringEntity;
-
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-
-public class IngestionServiceJavaSamples {
-
-    public static void main(String[] args) throws InterruptedException, URISyntaxException, IOException {
-
-        // Generate access token. Access token is valid for 1 hour. Regenerate access token when needed
-        String tenantId = "";//{Your tenant ID}
-        String clientId = "";//{Your client ID}
-        String clientSecret = "";//{Your client secret}
-
-        String accessToken = GenerateAccessToken(tenantId, clientId, clientSecret);
-
-        // Application submission sample
-        String applicationId = "";//{Your application ID}
-        String appSubmissionRequestJson = "";//{Your submission request JSON}
-        String appSubmissionZipFilePath = "";//{Your zip file path}
-
-        SubmitNewApplicationSubmission(accessToken, applicationId, appSubmissionRequestJson, appSubmissionZipFilePath);
-
-        // Flight samples
-        String flightId = "";//{Your flight ID}
-        String flightRequestJson = "";//{Your flight request JSON}        
-        String flightSubmissionRequestJson = "";//{Your submission request JSON}
-        String flightSubmissionZipFilePath = "";//{Your zip file path}    
-
-        CreateNewFlight(accessToken, applicationId, flightRequestJson);
-        SubmitNewFlightSubmission(accessToken, applicationId, flightId, flightSubmissionRequestJson, flightSubmissionZipFilePath);
-
-        // In-app-product samples
-        String inAppProductId = "";//{Your in-app-product ID}
-        String inAppProductRequestJson = "";//{Your in-app-product request JSON}    
-        String iapSubmissionRequestJson = "";//{Your submission request JSON}
-        String iapSubmissionZipFilePath = "";//{Your zip file path}
-
-        CreateNewInAppProduct(accessToken, inAppProductRequestJson);
-        SubmitNewInAppProductSubmission(accessToken, inAppProductId, iapSubmissionRequestJson, iapSubmissionZipFilePath);
-
-    }
-}
-```
+[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/MainExample.java#L1-L64)]
 
 <span id="token" />
-## Obtenha um token de acesso do Azure AD
+## <a name="obtain-an-azure-ad-access-token"></a>Obtenha um token de acesso do Azure AD
 
-O exemplo a seguir demonstra como [obter um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token).
+O exemplo a seguir demonstra como [obter um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) que é possível usar para chamar métodos na API de envio da Windows Store. Depois de obter um token, você terá 60 minutos para usá-lo em chamadas à API de envio da Windows Store antes que ele expire. Depois que o token expirar, será possível gerar um novo.
 
-```java
-public static String GenerateAccessToken(String tenantId, String clientId, String clientSecret) {        
-    // Generate access token. Access token is valid for 1 hour. Regenerate access token when needed
-    String tokenEndpoint = "https://login.microsoftonline.com/{0}/oauth2/token";
-    String tokenResource = "https://manage.devcenter.microsoft.com";        
-
-    HttpPost tokenRequest = new HttpPost(MessageFormat.format(tokenEndpoint, tenantId));
-    String tokenRequestBody = MessageFormat.format("grant_type=client_credentials&client_id={0}&client_secret={1}&resource={2}", clientId, clientSecret, tokenResource);
-    tokenRequest.setEntity(new StringEntity(tokenRequestBody, "utf-8"));
-    tokenRequest.addHeader("Content-Type", "application/x-www-form-urlencoded; charset=utf-8");
-
-    CloseableHttpClient httpclient = HttpClients.createDefault();
-    ResponseHandler<String> responseHandler = new BasicResponseHandler();
-
-    try {
-        String tokenResponse = httpclient.execute(tokenRequest, responseHandler);
-        JsonReader reader = Json.createReader(new ByteArrayInputStream(tokenResponse.getBytes("UTF-8")));
-        String accessToken = reader.readObject().getString("access_token");
-
-        return accessToken;
-    } catch (UnsupportedEncodingException e) {
-        e.printStackTrace();
-    } catch (ClientProtocolException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-
-    return null;
-}
-```
+[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L65-L95)]
 
 <span id="create-add-on" />
-## Criar um complemento
+## <a name="create-an-add-on"></a>Criar um complemento
 
-O exemplo a seguir demonstra como [criar um novo complemento](manage-add-ons.md) (os complementos também são conhecidos como produtos no aplicativo ou IAPs).
+O exemplo a seguir demonstra como [criar](create-an-add-on.md) e depois [excluir](delete-an-add-on.md) um complemento (os complementos também são conhecidos como produtos no aplicativo ou IAPs).
 
-```java
-public static void CreateNewInAppProduct(String accessToken, String inAppProductRequestJson) throws InterruptedException, IOException {
-    CloseableHttpClient httpclient = HttpClients.createDefault();    
-    ResponseHandler<JsonObject> responseHandler = CreateJsonResponseHandler();
-
-    try {
-        // Create a new in-app-product
-        HttpPost createInAppProductRequest = new HttpPost("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts");
-        createInAppProductRequest.addHeader("Authorization", "Bearer " + accessToken);
-        createInAppProductRequest.addHeader("Content-type", "application/json");
-        createInAppProductRequest.addHeader("User-Agent", "Java");
-        createInAppProductRequest.setEntity(new StringEntity(inAppProductRequestJson));
-        JsonObject createInAppProductResponse = httpclient.execute(createInAppProductRequest, responseHandler);
-        String inAppProductId = createInAppProductResponse.getString("id");
-        System.out.println(createInAppProductResponse.toString());
-
-        // Delete created in-app-product        
-        HttpDelete deleteInAppProductRequest = new HttpDelete("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/" + inAppProductId);
-        deleteInAppProductRequest.addHeader("Authorization", "Bearer " + accessToken);
-        deleteInAppProductRequest.addHeader("User-Agent", "Java");
-        httpclient.execute(deleteInAppProductRequest, responseHandler);
-
-    } catch (HttpResponseException e){
-        e.printStackTrace();
-    } catch (ClientProtocolException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    } finally {
-        httpclient.close();
-    }
-}
-
-private static ResponseHandler<JsonObject> CreateJsonResponseHandler(){
-    ResponseHandler<JsonObject> responseHandler = new ResponseHandler<JsonObject>() {
-        @Override
-        public JsonObject handleResponse(
-                HttpResponse response) throws IOException {
-            StatusLine statusLine = response.getStatusLine();
-            HttpEntity entity = response.getEntity();
-            JsonObject returnValue = null;
-            if(entity != null){
-                JsonReader reader = Json.createReader(entity.getContent());
-                returnValue = reader.readObject();
-            }
-
-            // Log response status and correlation ID
-            System.out.println(statusLine);
-            System.out.println(response.getFirstHeader("MS-CorrelationId"));
-
-            // Underlying failure reason is in response entity
-            if (statusLine.getStatusCode() >= 300) {
-                if(entity == null){
-                    throw new HttpResponseException(
-                            statusLine.getStatusCode(),
-                            statusLine.getReasonPhrase());
-                }
-                else{
-                    throw new HttpResponseException(
-                            statusLine.getStatusCode(),
-                            statusLine.getReasonPhrase() + " " + returnValue.toString() );
-                }
-            }
-
-            return returnValue;
-        }
-    };
-
-    return responseHandler;
-}
-```
+[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L310-L345)]
 
 <span id="create-package-flight" />
-## Criar um pacote de pré-lançamento
+## <a name="create-a-package-flight"></a>Criar um pacote de pré-lançamento
 
-O exemplo a seguir demonstra como [criar um novo pacote de pré-lançamento](manage-flights.md).
+O exemplo a seguir demonstra como [criar](create-a-flight.md) e depois [excluir](delete-a-flight.md) um pacote de pré-lançamento.
 
-```java
-public static void CreateNewFlight(String accessToken, String applicationId, String flightRequestJson) throws InterruptedException, IOException {
-    CloseableHttpClient httpclient = HttpClients.createDefault();    
-    ResponseHandler<JsonObject> responseHandler = CreateJsonResponseHandler();
-
-    try {
-        // Create a new flight, a flight submission will be created together with the flight
-        HttpPost createFlightRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights", applicationId));
-        createFlightRequest.addHeader("Authorization", "Bearer " + accessToken);
-        createFlightRequest.addHeader("Content-type", "application/json");
-        createFlightRequest.setEntity(new StringEntity(flightRequestJson));
-        JsonObject createFlightResponse = httpclient.execute(createFlightRequest, responseHandler);
-
-        System.out.println(createFlightResponse.toString());
-
-        String flightId = createFlightResponse.getString("flightId");
-        String submissionId = createFlightResponse.getJsonObject("pendingFlightSubmission").getString("id");
-
-        // Delete created flight        
-        HttpDelete deleteFlightRequest = new HttpDelete(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}", applicationId, flightId));
-        deleteFlightRequest.addHeader("Authorization", "Bearer " + accessToken);
-        httpclient.execute(deleteFlightRequest, responseHandler);
-
-    } catch (HttpResponseException e){
-        e.printStackTrace();
-    } catch (ClientProtocolException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    } finally {
-        httpclient.close();
-    }
-}
-
-private static ResponseHandler<JsonObject> CreateJsonResponseHandler(){
-    ResponseHandler<JsonObject> responseHandler = new ResponseHandler<JsonObject>() {
-        @Override
-        public JsonObject handleResponse(
-                HttpResponse response) throws IOException {
-            StatusLine statusLine = response.getStatusLine();
-            HttpEntity entity = response.getEntity();
-            JsonObject returnValue = null;
-            if(entity != null){
-                JsonReader reader = Json.createReader(entity.getContent());
-                returnValue = reader.readObject();
-            }
-
-            // Log response status and correlation ID
-            System.out.println(statusLine);
-            System.out.println(response.getFirstHeader("MS-CorrelationId"));
-
-            // Underlying failure reason is in response entity
-            if (statusLine.getStatusCode() >= 300) {
-                if(entity == null){
-                    throw new HttpResponseException(
-                            statusLine.getStatusCode(),
-                            statusLine.getReasonPhrase());
-                }
-                else{
-                    throw new HttpResponseException(
-                            statusLine.getStatusCode(),
-                            statusLine.getReasonPhrase() + " " + returnValue.toString() );
-                }
-            }
-
-            return returnValue;
-        }
-    };
-
-    return responseHandler;
-}
-```
+[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L185-L221)]
 
 <span id="create-app-submission" />
-## Criar e confirmar um envio de aplicativo
+## <a name="create-an-app-submission"></a>Criar um envio de aplicativo
 
-O exemplo a seguir demonstra como [criar e confirmar um novo envio de aplicativo](manage-app-submissions.md).
+O exemplo a seguir mostra como usar diversos métodos na API de envio da Windows Store para criar um envio de aplicativo. Para isso, o método ```SubmitNewApplicationSubmission``` cria um novo envio como um clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```SubmitNewApplicationSubmission``` realiza estas tarefas:
 
-```java
-public static void SubmitNewApplicationSubmission(String accessToken, String applicationId, String appSubmissionRequestJson, String zipFilePath) throws InterruptedException, IOException {
-    CloseableHttpClient httpclient = HttpClients.createDefault();    
-    ResponseHandler<JsonObject> responseHandler = CreateJsonResponseHandler();
+1. Para começar, o método [obtém dados do aplicativo especificado](get-an-app.md).
+2. Em seguida, ele [exclui o envio pendente para o app](delete-an-app-submission.md), caso haja um.
+3. Em seguida, ele [cria um novo envio para o app](create-an-app-submission.md) (o novo envio é uma cópia do último envio publicado).
+4. Ele muda alguns detalhes para o novo envio e carrega um novo pacote para o envio no armazenamento do Blob do Azure.
+5. Em seguida, ele [atualiza](update-an-app-submission.md) e [confirma](commit-an-app-submission.md) o novo envio para o Centro de Desenvolvimento do Windows.
+6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-an-app-submission.md) até que o envio seja confirmado com êxito.
 
-    try {            
-        // Get application
-        HttpGet getApplicationRequest = new HttpGet("https://manage.devcenter.microsoft.com/v1.0/my/applications/" + applicationId);
-        getApplicationRequest.addHeader("Authorization", "Bearer " + accessToken);
-        getApplicationRequest.addHeader("User-Agent", "Java");
-        JsonObject getApplicaiontResponse = httpclient.execute(getApplicationRequest, responseHandler);
-
-        // Delete existing in-progress submission
-        JsonObject submissionToRemove = getApplicaiontResponse.getJsonObject("pendingApplicationSubmission");
-        if(submissionToRemove != null){
-            String submissionToRemoveId = submissionToRemove.getString("id");
-            HttpDelete deleteSubmissionRequest = new HttpDelete(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/submissions/{1}", applicationId, submissionToRemoveId));
-            deleteSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            deleteSubmissionRequest.addHeader("User-Agent", "Java");
-            httpclient.execute(deleteSubmissionRequest, responseHandler);
-        }
-
-        // Create submission
-        HttpPost createSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/submissions", applicationId));
-        createSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-        createSubmissionRequest.addHeader("User-Agent", "Java");
-        JsonObject createSubmissionResponse = httpclient.execute(createSubmissionRequest, responseHandler);
-
-        String submissionId = createSubmissionResponse.getString("id");
-        String fileUploadUrl = createSubmissionResponse.getString("fileUploadUrl");
-
-        // Update submission
-        HttpPut updateSubmissionRequest = new HttpPut(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/submissions/{1}", applicationId, submissionId));
-        updateSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-        updateSubmissionRequest.addHeader("Content-type", "application/json");
-        updateSubmissionRequest.addHeader("User-Agent", "Java");
-        updateSubmissionRequest.setEntity(new StringEntity(appSubmissionRequestJson));
-        JsonObject updateSubmissionResponse = httpclient.execute(updateSubmissionRequest, responseHandler);
-
-        // Upload images and packages in a zip file
-        UploadZipFile(fileUploadUrl, zipFilePath);
-
-        // Commit submission
-        HttpPost commitSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/submissions/{1}/commit", applicationId, submissionId));
-        commitSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-        commitSubmissionRequest.addHeader("User-Agent", "Java");
-        JsonObject commitSubmissionResponse = httpclient.execute(commitSubmissionRequest, responseHandler);
-        System.out.println(commitSubmissionResponse.getString("status"));
-
-        // Pull submission status until commit process is completed
-        HttpGet getSubmissionStatusRequest = new HttpGet(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/submissions/{1}", applicationId, submissionId));
-        getSubmissionStatusRequest.addHeader("Authorization", "Bearer " + accessToken);
-        getSubmissionStatusRequest.addHeader("User-Agent", "Java");
-        JsonObject getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-        String submissionStatus = getSubmissionStatusResponse.getString("status");
-        while(submissionStatus.equals("CommitStarted")){
-            Thread.sleep(60*1000);
-            getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-            submissionStatus = getSubmissionStatusResponse.getString("status");
-        }        
-        System.out.println(submissionStatus);
-
-    } catch (HttpResponseException e){
-        e.printStackTrace();
-    } catch (ClientProtocolException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    } finally {
-        httpclient.close();
-    }
-}
-
-private static ResponseHandler<JsonObject> CreateJsonResponseHandler(){
-    ResponseHandler<JsonObject> responseHandler = new ResponseHandler<JsonObject>() {
-        @Override
-        public JsonObject handleResponse(
-                HttpResponse response) throws IOException {
-            StatusLine statusLine = response.getStatusLine();
-            HttpEntity entity = response.getEntity();
-            JsonObject returnValue = null;
-            if(entity != null){
-                JsonReader reader = Json.createReader(entity.getContent());
-                returnValue = reader.readObject();
-            }
-
-            // Log response status and correlation ID
-            System.out.println(statusLine);
-            System.out.println(response.getFirstHeader("MS-CorrelationId"));
-
-            // Underlying failure reason is in response entity
-            if (statusLine.getStatusCode() >= 300) {
-                if(entity == null){
-                    throw new HttpResponseException(
-                            statusLine.getStatusCode(),
-                            statusLine.getReasonPhrase());
-                }
-                else{
-                    throw new HttpResponseException(
-                            statusLine.getStatusCode(),
-                            statusLine.getReasonPhrase() + " " + returnValue.toString() );
-                }
-            }
-
-            return returnValue;
-        }
-    };
-
-    return responseHandler;
-}
-
-private static void UploadZipFile(String fileUploadUrl, String zipFilePath) throws IOException{
-    CloseableHttpClient httpclient = HttpClients.createDefault();
-    File uploadFile = new File(zipFilePath);
-    HttpPut uploadFileRequest = new HttpPut(fileUploadUrl.replace("+", "%2B")); // Encode '+', otherwise it will be decoded as ' '
-    uploadFileRequest.addHeader("x-ms-blob-type", "BlockBlob");
-    uploadFileRequest.setEntity(new FileEntity(uploadFile));
-    CloseableHttpResponse uploadFileResponse;
-    try {
-        uploadFileResponse = httpclient.execute(uploadFileRequest);
-        System.out.println(uploadFileResponse.getStatusLine());
-    } catch (ClientProtocolException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    } finally {
-        httpclient.close();
-    }
-}
-```
+[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L97-L183)]
 
 <span id="create-add-on-submission" />
-## Criar e confirmar um envio de complemento
+## <a name="create-an-add-on-submission"></a>Criar um envio de complemento
 
-O exemplo a seguir demonstra como [criar e confirmar um novo envio de complemento](manage-add-on-submissions.md) (os complementos também são conhecidos como produtos no aplicativo ou IAPs).
+O exemplo a seguir mostra como usar diversos métodos na API de envio da Windows Store para criar um envio de complemento. Para isso, o método ```SubmitNewInAppProductSubmission``` cria um novo envio como um clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```SubmitNewInAppProductSubmission``` realiza estas tarefas:
 
-```java
-public static void SubmitNewInAppProductSubmission(String accessToken, String inAppProductId, String iapSubmissionRequestJson, String zipFilePath) throws InterruptedException, IOException {
-    CloseableHttpClient httpclient = HttpClients.createDefault();    
-    ResponseHandler<JsonObject> responseHandler = CreateJsonResponseHandler();
+1. Para começar, o método [obtém dados do complemento especificado](get-an-add-on.md).
+2. Em seguida, ele [exclui o envio pendente para o complemento](delete-an-add-on-submission.md), caso haja um.
+3. Em seguida, ele [cria um novo envio para o complemento](create-an-add-on-submission.md) (o novo envio é uma cópia do último envio publicado).
+4. Ele carrega um arquivo ZIP que contém ícones para o envio no armazenamento do Blob do Azure.
+5. Em seguida, ele [atualiza](update-an-add-on-submission.md) e [confirma](commit-an-add-on-submission.md) o novo envio para o Centro de Desenvolvimento do Windows.
+6. Por fim, ele periodicamente [verifica o status do novo envio](get-status-for-an-add-on-submission.md) até que o envio seja confirmado com êxito.
 
-    try {
-        // Get the in-app-product                    
-        HttpGet getInAppProductRequest = new HttpGet("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/" + inAppProductId);
-        getInAppProductRequest.addHeader("Authorization", "Bearer " + accessToken);
-        getInAppProductRequest.addHeader("User-Agent", "Java");
-        JsonObject getInAppProductResponse = httpclient.execute(getInAppProductRequest, responseHandler);
-
-        // Delete existing in-progress submission
-        JsonObject submissionToRemove = getInAppProductResponse.getJsonObject("pendingInAppProductSubmission");
-        if(submissionToRemove != null){
-            String submissionToRemoveId = submissionToRemove.getString("id");
-            HttpDelete deleteSubmissionRequest = new HttpDelete(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{0}/submissions/{1}", inAppProductId, submissionToRemoveId));
-            deleteSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            deleteSubmissionRequest.addHeader("User-Agent", "Java");
-            httpclient.execute(deleteSubmissionRequest, responseHandler);
-        }            
-
-        // Create submission
-        HttpPost createSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{0}/submissions", inAppProductId));
-        createSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-        createSubmissionRequest.addHeader("User-Agent", "Java");
-        JsonObject createSubmissionResponse = httpclient.execute(createSubmissionRequest, responseHandler);
-        String submissionId = createSubmissionResponse.getString("id");
-        String fileUploadUrl = createSubmissionResponse.getString("fileUploadUrl");
-
-        // Update submission
-        HttpPut updateSubmissionRequest = new HttpPut(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{0}/submissions/{1}", inAppProductId, submissionId));
-        updateSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-        updateSubmissionRequest.addHeader("Content-type", "application/json");
-        updateSubmissionRequest.setEntity(new StringEntity(iapSubmissionRequestJson));
-        JsonObject updateSubmissionResponse = httpclient.execute(updateSubmissionRequest, responseHandler);
-
-        /// Upload images and packages in a zip file
-        UploadZipFile(fileUploadUrl, zipFilePath);
-
-        // Commit submission
-        HttpPost commitSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{0}/submissions/{1}/commit", inAppProductId, submissionId));
-        commitSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-        commitSubmissionRequest.addHeader("User-Agent", "Java");
-        JsonObject commitSubmissionResponse = httpclient.execute(commitSubmissionRequest, responseHandler);
-        System.out.println(commitSubmissionResponse.getString("status"));
-
-        // Pull submission status until commit process is completed
-        HttpGet getSubmissionStatusRequest = new HttpGet(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{0}/submissions/{1}/status", inAppProductId, submissionId));
-        getSubmissionStatusRequest.addHeader("Authorization", "Bearer " + accessToken);
-        getSubmissionStatusRequest.addHeader("User-Agent", "Java");
-        JsonObject getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-        String submissionStatus = getSubmissionStatusResponse.getString("status");
-        while(submissionStatus.equals("CommitStarted")){
-            Thread.sleep(60*1000);
-            getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-            submissionStatus = getSubmissionStatusResponse.getString("status");
-        }        
-        System.out.println(submissionStatus);
-
-    } catch (HttpResponseException e){
-        e.printStackTrace();
-    } catch (ClientProtocolException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    } finally {
-        httpclient.close();
-    }
-}
-
-private static ResponseHandler<JsonObject> CreateJsonResponseHandler(){
-    ResponseHandler<JsonObject> responseHandler = new ResponseHandler<JsonObject>() {
-        @Override
-        public JsonObject handleResponse(
-                HttpResponse response) throws IOException {
-            StatusLine statusLine = response.getStatusLine();
-            HttpEntity entity = response.getEntity();
-            JsonObject returnValue = null;
-            if(entity != null){
-                JsonReader reader = Json.createReader(entity.getContent());
-                returnValue = reader.readObject();
-            }
-
-            // Log response status and correlation ID
-            System.out.println(statusLine);
-            System.out.println(response.getFirstHeader("MS-CorrelationId"));
-
-            // Underlying failure reason is in response entity
-            if (statusLine.getStatusCode() >= 300) {
-                if(entity == null){
-                    throw new HttpResponseException(
-                            statusLine.getStatusCode(),
-                            statusLine.getReasonPhrase());
-                }
-                else{
-                    throw new HttpResponseException(
-                            statusLine.getStatusCode(),
-                            statusLine.getReasonPhrase() + " " + returnValue.toString() );
-                }
-            }
-
-            return returnValue;
-        }
-    };
-
-    return responseHandler;
-}
-
-private static void UploadZipFile(String fileUploadUrl, String zipFilePath) throws IOException{
-    CloseableHttpClient httpclient = HttpClients.createDefault();
-    File uploadFile = new File(zipFilePath);
-    HttpPut uploadFileRequest = new HttpPut(fileUploadUrl.replace("+", "%2B")); // Encode '+', otherwise it will be decoded as ' '
-    uploadFileRequest.addHeader("x-ms-blob-type", "BlockBlob");
-    uploadFileRequest.setEntity(new FileEntity(uploadFile));
-    CloseableHttpResponse uploadFileResponse;
-    try {
-        uploadFileResponse = httpclient.execute(uploadFileRequest);
-        System.out.println(uploadFileResponse.getStatusLine());
-    } catch (ClientProtocolException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    } finally {
-        httpclient.close();
-    }
-}
-```
+[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L347-L431)]
 
 <span id="create-flight-submission" />
-## Criar e confirmar um envio de pacote de pré-lançamento
+## <a name="create-a-package-flight-submission"></a>Criar um envio de pacote de pré-lançamento
 
-O exemplo a seguir demonstra como [criar e confirmar um novo envio de pacote de pré-lançamento](manage-flight-submissions.md).
+O exemplo a seguir mostra como usar diversos métodos na API de envio da Windows Store para criar um envio de pacote de pré-lançamento. Para isso, o método ```SubmitNewFlightSubmission``` cria um novo envio como um clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```SubmitNewFlightSubmission``` realiza estas tarefas:
 
-```java
-public static void SubmitNewFlightSubmission(String accessToken, String applicationId, String flightId, String flightSubmissionRequestJson, String zipFilePath) throws InterruptedException, URISyntaxException, IOException {
-    CloseableHttpClient httpclient = HttpClients.createDefault();    
-    ResponseHandler<JsonObject> responseHandler = CreateJsonResponseHandler();
+1. Para começar, o método [obtém dados do pacote de pré-lançamento especificado](get-a-flight.md).
+2. Em seguida, ele [exclui o envio pendente para o pacote de pré-lançamento](delete-a-flight-submission.md), caso haja um.
+3. Em seguida, ele [cria um novo envio para o pacote de pré-lançamento](create-a-flight-submission.md) (o novo envio é uma cópia do último envio publicado).
+4. Ele carrega um novo pacote para o envio no armazenamento do Blob do Azure.
+5. Em seguida, ele [atualiza](update-a-flight-submission.md) e [confirma](commit-a-flight-submission.md) o novo envio para o Centro de Desenvolvimento do Windows.
+6. Por fim, ele periodicamente [verifica o status do novo envio](get-status-for-a-flight-submission.md) até que o envio seja confirmado com êxito.
 
-    try {
-        // Get flight
-        HttpGet getFlightRequest = new HttpGet(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}", applicationId, flightId));
-        getFlightRequest.addHeader("Authorization", "Bearer " + accessToken);
-        getFlightRequest.addHeader("User-Agent", "Java");
-        JsonObject getFlightResponse = httpclient.execute(getFlightRequest, responseHandler);
+[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L223-L308)]
 
-        // Delete existing in-progress submission
-        JsonObject submissionToRemove = getFlightResponse.getJsonObject("pendingFlightSubmission");
-        if(submissionToRemove != null){
-            String submissionToRemoveId = submissionToRemove.getString("id");
-            HttpDelete deleteSubmissionRequest = new HttpDelete(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}/submissions/{2}", applicationId, flightId, submissionToRemoveId));
-            deleteSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            deleteSubmissionRequest.addHeader("User-Agent", "Java");
-            httpclient.execute(deleteSubmissionRequest, responseHandler);
-        }            
+<span id="utilities" />
+## <a name="utility-methods-to-upload-submission-files-and-handle-request-responses"></a>Métodos de utilitário para carregar arquivos de envio e manipular respostas à solicitação
 
-        // Create submission
-        HttpPost createSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}/submissions", applicationId, flightId));
-        createSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-        createSubmissionRequest.addHeader("User-Agent", "Java");
-        JsonObject createSubmissionResponse = httpclient.execute(createSubmissionRequest, responseHandler);
-        String submissionId = createSubmissionResponse.getString("id");
-        String fileUploadUrl = createSubmissionResponse.getString("fileUploadUrl");
+Os seguintes métodos de utilitário demonstram estas tarefas:
 
-        // Update submission
-        HttpPut updateSubmissionRequest = new HttpPut(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}/submissions/{2}", applicationId, flightId, submissionId));
-        updateSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-        updateSubmissionRequest.addHeader("Content-type", "application/json");
-        updateSubmissionRequest.addHeader("User-Agent", "Java");
-        updateSubmissionRequest.setEntity(new StringEntity(flightSubmissionRequestJson));
-        JsonObject updateSubmissionResponse = httpclient.execute(updateSubmissionRequest, responseHandler);
+* Como carregar um arquivo ZIP contendo novos ativos para um envio de aplicativo ou complemento no armazenamento do Blob do Azure. Para obter mais informações sobre como carregar um arquivo ZIP no armazenamento do Blob do Azure para envios de aplicativo e complemento, consulte as instruções relevantes em [Criar um envio de aplicativo](manage-app-submissions.md#create-an-app-submission), [Criar um envio de complemento](manage-add-on-submissions.md#create-an-add-on-submission) e [Criar um envio de pacote de pré-lançamento](manage-flight-submissions.md#create-a-package-flight-submission).
+* Como manipular respostas à solicitação
 
-        // Upload images and packages in a zip file
-        UploadZipFile(fileUploadUrl, zipFilePath);
-
-        // Commit submission
-        HttpPost commitSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}/submissions/{2}/commit", applicationId, flightId, submissionId));
-        commitSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-        commitSubmissionRequest.addHeader("User-Agent", "Java");
-        JsonObject commitSubmissionResponse = httpclient.execute(commitSubmissionRequest, responseHandler);
-        System.out.println(commitSubmissionResponse.getString("status"));
-
-        // Pull submission status until commit process is completed
-        HttpGet getSubmissionStatusRequest = new HttpGet(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}/submissions/{2}", applicationId, flightId, submissionId));
-        getSubmissionStatusRequest.addHeader("Authorization", "Bearer " + accessToken);
-        getSubmissionStatusRequest.addHeader("User-Agent", "Java");
-        JsonObject getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-        String submissionStatus = getSubmissionStatusResponse.getString("status");
-        while(submissionStatus.equals("CommitStarted")){
-            Thread.sleep(60*1000);
-            getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-            submissionStatus = getSubmissionStatusResponse.getString("status");
-        }        
-        System.out.println(submissionStatus);
-
-    } catch (HttpResponseException e){
-        e.printStackTrace();
-    } catch (ClientProtocolException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    } finally {
-        httpclient.close();
-    }
-}
-
-private static ResponseHandler<JsonObject> CreateJsonResponseHandler(){
-    ResponseHandler<JsonObject> responseHandler = new ResponseHandler<JsonObject>() {
-        @Override
-        public JsonObject handleResponse(
-                HttpResponse response) throws IOException {
-            StatusLine statusLine = response.getStatusLine();
-            HttpEntity entity = response.getEntity();
-            JsonObject returnValue = null;
-            if(entity != null){
-                JsonReader reader = Json.createReader(entity.getContent());
-                returnValue = reader.readObject();
-            }
-
-            // Log response status and correlation ID
-            System.out.println(statusLine);
-            System.out.println(response.getFirstHeader("MS-CorrelationId"));
-
-            // Underlying failure reason is in response entity
-            if (statusLine.getStatusCode() >= 300) {
-                if(entity == null){
-                    throw new HttpResponseException(
-                            statusLine.getStatusCode(),
-                            statusLine.getReasonPhrase());
-                }
-                else{
-                    throw new HttpResponseException(
-                            statusLine.getStatusCode(),
-                            statusLine.getReasonPhrase() + " " + returnValue.toString() );
-                }
-            }
-
-            return returnValue;
-        }
-    };
-
-    return responseHandler;
-}
-
-private static void UploadZipFile(String fileUploadUrl, String zipFilePath) throws IOException{
-    CloseableHttpClient httpclient = HttpClients.createDefault();
-    File uploadFile = new File(zipFilePath);
-    HttpPut uploadFileRequest = new HttpPut(fileUploadUrl.replace("+", "%2B")); // Encode '+', otherwise it will be decoded as ' '
-    uploadFileRequest.addHeader("x-ms-blob-type", "BlockBlob");
-    uploadFileRequest.setEntity(new FileEntity(uploadFile));
-    CloseableHttpResponse uploadFileResponse;
-    try {
-        uploadFileResponse = httpclient.execute(uploadFileRequest);
-        System.out.println(uploadFileResponse.getStatusLine());
-    } catch (ClientProtocolException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    } finally {
-        httpclient.close();
-    }
-}
-```
+[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L433-L490)]
 
 <span id="code-listing" />
-## Listagem de código completo
+## <a name="complete-code-listing"></a>Listagem de código completo
 
-A listagem de código a seguir contém todos os exemplos anteriores organizados no mesmo arquivo de origem.
+A listagem de código a seguir contém todos os exemplos anteriores organizados em um único arquivo de origem.
 
-```java
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URISyntaxException;
-import java.text.MessageFormat;
+[!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L1-L491)]
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpResponseException;
-import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.methods.*;
-import org.apache.http.impl.client.BasicResponseHandler;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.entity.FileEntity;
-import org.apache.http.entity.StringEntity;
-
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-
-public class IngestionServiceJavaSamples {
-
-    public static void main(String[] args) throws InterruptedException, URISyntaxException, IOException {
-
-        // Generate access token. Access token is valid for 1 hour. Regenerate access token when needed
-        String tenantId = "";//{Your tenant ID}
-        String clientId = "";//{Your client ID}
-        String clientSecret = "";//{Your client secret}
-
-        String accessToken = GenerateAccessToken(tenantId, clientId, clientSecret);
-
-        // Application submission sample
-        String applicationId = "";//{Your application ID}
-        String appSubmissionRequestJson = "";//{Your submission request JSON}
-        String appSubmissionZipFilePath = "";//{Your zip file path}
-
-        SubmitNewApplicationSubmission(accessToken, applicationId, appSubmissionRequestJson, appSubmissionZipFilePath);
-
-        // Flight samples
-        String flightId = "";//{Your flight ID}
-        String flightRequestJson = "";//{Your flight request JSON}        
-        String flightSubmissionRequestJson = "";//{Your submission request JSON}
-        String flightSubmissionZipFilePath = "";//{Your zip file path}    
-
-        CreateNewFlight(accessToken, applicationId, flightRequestJson);
-        SubmitNewFlightSubmission(accessToken, applicationId, flightId, flightSubmissionRequestJson, flightSubmissionZipFilePath);
-
-        // In-app-product samples
-        String inAppProductId = "";//{Your in-app-product ID}
-        String inAppProductRequestJson = "";//{Your in-app-product request JSON}    
-        String iapSubmissionRequestJson = "";//{Your submission request JSON}
-        String iapSubmissionZipFilePath = "";//{Your zip file path}
-
-        CreateNewInAppProduct(accessToken, inAppProductRequestJson);
-        SubmitNewInAppProductSubmission(accessToken, inAppProductId, iapSubmissionRequestJson, iapSubmissionZipFilePath);
-
-    }
-
-    public static String GenerateAccessToken(String tenantId, String clientId, String clientSecret) {        
-        // Generate access token. Access token is valid for 1 hour. Regenerate access token when needed
-        String tokenEndpoint = "https://login.microsoftonline.com/{0}/oauth2/token";
-        String tokenResource = "https://manage.devcenter.microsoft.com";        
-
-        HttpPost tokenRequest = new HttpPost(MessageFormat.format(tokenEndpoint, tenantId));
-        String tokenRequestBody = MessageFormat.format("grant_type=client_credentials&client_id={0}&client_secret={1}&resource={2}", clientId, clientSecret, tokenResource);
-        tokenRequest.setEntity(new StringEntity(tokenRequestBody, "utf-8"));
-        tokenRequest.addHeader("Content-Type", "application/x-www-form-urlencoded; charset=utf-8");
-
-        CloseableHttpClient httpclient = HttpClients.createDefault();
-        ResponseHandler<String> responseHandler = new BasicResponseHandler();
-
-        try {
-            String tokenResponse = httpclient.execute(tokenRequest, responseHandler);
-            JsonReader reader = Json.createReader(new ByteArrayInputStream(tokenResponse.getBytes("UTF-8")));
-            String accessToken = reader.readObject().getString("access_token");
-
-            return accessToken;
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
-    public static void SubmitNewApplicationSubmission(String accessToken, String applicationId, String appSubmissionRequestJson, String zipFilePath) throws InterruptedException, IOException {
-        CloseableHttpClient httpclient = HttpClients.createDefault();    
-        ResponseHandler<JsonObject> responseHandler = CreateJsonResponseHandler();
-
-        try {            
-            // Get application
-            HttpGet getApplicationRequest = new HttpGet("https://manage.devcenter.microsoft.com/v1.0/my/applications/" + applicationId);
-            getApplicationRequest.addHeader("Authorization", "Bearer " + accessToken);
-            getApplicationRequest.addHeader("User-Agent", "Java");
-            JsonObject getApplicaiontResponse = httpclient.execute(getApplicationRequest, responseHandler);
-
-            // Delete existing in-progress submission
-            JsonObject submissionToRemove = getApplicaiontResponse.getJsonObject("pendingApplicationSubmission");
-            if(submissionToRemove != null){
-                String submissionToRemoveId = submissionToRemove.getString("id");
-                HttpDelete deleteSubmissionRequest = new HttpDelete(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/submissions/{1}", applicationId, submissionToRemoveId));
-                deleteSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-                deleteSubmissionRequest.addHeader("User-Agent", "Java");
-                httpclient.execute(deleteSubmissionRequest, responseHandler);
-            }
-
-            // Create submission
-            HttpPost createSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/submissions", applicationId));
-            createSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            createSubmissionRequest.addHeader("User-Agent", "Java");
-            JsonObject createSubmissionResponse = httpclient.execute(createSubmissionRequest, responseHandler);
-
-            String submissionId = createSubmissionResponse.getString("id");
-            String fileUploadUrl = createSubmissionResponse.getString("fileUploadUrl");
-
-            // Update submission
-            HttpPut updateSubmissionRequest = new HttpPut(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/submissions/{1}", applicationId, submissionId));
-            updateSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            updateSubmissionRequest.addHeader("Content-type", "application/json");
-            updateSubmissionRequest.addHeader("User-Agent", "Java");
-            updateSubmissionRequest.setEntity(new StringEntity(appSubmissionRequestJson));
-            JsonObject updateSubmissionResponse = httpclient.execute(updateSubmissionRequest, responseHandler);
-
-            // Upload images and packages in a zip file
-            UploadZipFile(fileUploadUrl, zipFilePath);
-
-            // Commit submission
-            HttpPost commitSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/submissions/{1}/commit", applicationId, submissionId));
-            commitSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            commitSubmissionRequest.addHeader("User-Agent", "Java");
-            JsonObject commitSubmissionResponse = httpclient.execute(commitSubmissionRequest, responseHandler);
-            System.out.println(commitSubmissionResponse.getString("status"));
-
-            // Pull submission status until commit process is completed
-            HttpGet getSubmissionStatusRequest = new HttpGet(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/submissions/{1}", applicationId, submissionId));
-            getSubmissionStatusRequest.addHeader("Authorization", "Bearer " + accessToken);
-            getSubmissionStatusRequest.addHeader("User-Agent", "Java");
-            JsonObject getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-            String submissionStatus = getSubmissionStatusResponse.getString("status");
-            while(submissionStatus.equals("CommitStarted")){
-                Thread.sleep(60*1000);
-                getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-                submissionStatus = getSubmissionStatusResponse.getString("status");
-            }        
-            System.out.println(submissionStatus);
-
-        } catch (HttpResponseException e){
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            httpclient.close();
-        }
-    }
-
-    public static void CreateNewFlight(String accessToken, String applicationId, String flightRequestJson) throws InterruptedException, IOException {
-        CloseableHttpClient httpclient = HttpClients.createDefault();    
-        ResponseHandler<JsonObject> responseHandler = CreateJsonResponseHandler();
-
-        try {
-            // Create a new flight, a flight submission will be created together with the flight
-            HttpPost createFlightRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights", applicationId));
-            createFlightRequest.addHeader("Authorization", "Bearer " + accessToken);
-            createFlightRequest.addHeader("Content-type", "application/json");
-            createFlightRequest.setEntity(new StringEntity(flightRequestJson));
-            JsonObject createFlightResponse = httpclient.execute(createFlightRequest, responseHandler);
-
-            System.out.println(createFlightResponse.toString());
-
-            String flightId = createFlightResponse.getString("flightId");
-            String submissionId = createFlightResponse.getJsonObject("pendingFlightSubmission").getString("id");
-
-            // Delete created flight        
-            HttpDelete deleteFlightRequest = new HttpDelete(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}", applicationId, flightId));
-            deleteFlightRequest.addHeader("Authorization", "Bearer " + accessToken);
-            httpclient.execute(deleteFlightRequest, responseHandler);
-
-        } catch (HttpResponseException e){
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            httpclient.close();
-        }
-    }
-
-    public static void SubmitNewFlightSubmission(String accessToken, String applicationId, String flightId, String flightSubmissionRequestJson, String zipFilePath) throws InterruptedException, URISyntaxException, IOException {
-        CloseableHttpClient httpclient = HttpClients.createDefault();    
-        ResponseHandler<JsonObject> responseHandler = CreateJsonResponseHandler();
-
-        try {
-            // Get flight
-            HttpGet getFlightRequest = new HttpGet(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}", applicationId, flightId));
-            getFlightRequest.addHeader("Authorization", "Bearer " + accessToken);
-            getFlightRequest.addHeader("User-Agent", "Java");
-            JsonObject getFlightResponse = httpclient.execute(getFlightRequest, responseHandler);
-
-            // Delete existing in-progress submission
-            JsonObject submissionToRemove = getFlightResponse.getJsonObject("pendingFlightSubmission");
-            if(submissionToRemove != null){
-                String submissionToRemoveId = submissionToRemove.getString("id");
-                HttpDelete deleteSubmissionRequest = new HttpDelete(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}/submissions/{2}", applicationId, flightId, submissionToRemoveId));
-                deleteSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-                deleteSubmissionRequest.addHeader("User-Agent", "Java");
-                httpclient.execute(deleteSubmissionRequest, responseHandler);
-            }            
-
-            // Create submission
-            HttpPost createSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}/submissions", applicationId, flightId));
-            createSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            createSubmissionRequest.addHeader("User-Agent", "Java");
-            JsonObject createSubmissionResponse = httpclient.execute(createSubmissionRequest, responseHandler);
-            String submissionId = createSubmissionResponse.getString("id");
-            String fileUploadUrl = createSubmissionResponse.getString("fileUploadUrl");
-
-            // Update submission
-            HttpPut updateSubmissionRequest = new HttpPut(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}/submissions/{2}", applicationId, flightId, submissionId));
-            updateSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            updateSubmissionRequest.addHeader("Content-type", "application/json");
-            updateSubmissionRequest.addHeader("User-Agent", "Java");
-            updateSubmissionRequest.setEntity(new StringEntity(flightSubmissionRequestJson));
-            JsonObject updateSubmissionResponse = httpclient.execute(updateSubmissionRequest, responseHandler);
-
-            // Upload images and packages in a zip file
-            UploadZipFile(fileUploadUrl, zipFilePath);
-
-            // Commit submission
-            HttpPost commitSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}/submissions/{2}/commit", applicationId, flightId, submissionId));
-            commitSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            commitSubmissionRequest.addHeader("User-Agent", "Java");
-            JsonObject commitSubmissionResponse = httpclient.execute(commitSubmissionRequest, responseHandler);
-            System.out.println(commitSubmissionResponse.getString("status"));
-
-            // Pull submission status until commit process is completed
-            HttpGet getSubmissionStatusRequest = new HttpGet(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/applications/{0}/flights/{1}/submissions/{2}", applicationId, flightId, submissionId));
-            getSubmissionStatusRequest.addHeader("Authorization", "Bearer " + accessToken);
-            getSubmissionStatusRequest.addHeader("User-Agent", "Java");
-            JsonObject getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-            String submissionStatus = getSubmissionStatusResponse.getString("status");
-            while(submissionStatus.equals("CommitStarted")){
-                Thread.sleep(60*1000);
-                getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-                submissionStatus = getSubmissionStatusResponse.getString("status");
-            }        
-            System.out.println(submissionStatus);
-
-        } catch (HttpResponseException e){
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            httpclient.close();
-        }
-    }
-
-    public static void CreateNewInAppProduct(String accessToken, String inAppProductRequestJson) throws InterruptedException, IOException {
-        CloseableHttpClient httpclient = HttpClients.createDefault();    
-        ResponseHandler<JsonObject> responseHandler = CreateJsonResponseHandler();
-
-        try {
-            // Create a new in-app-product
-            HttpPost createInAppProductRequest = new HttpPost("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts");
-            createInAppProductRequest.addHeader("Authorization", "Bearer " + accessToken);
-            createInAppProductRequest.addHeader("Content-type", "application/json");
-            createInAppProductRequest.addHeader("User-Agent", "Java");
-            createInAppProductRequest.setEntity(new StringEntity(inAppProductRequestJson));
-            JsonObject createInAppProductResponse = httpclient.execute(createInAppProductRequest, responseHandler);
-            String inAppProductId = createInAppProductResponse.getString("id");
-            System.out.println(createInAppProductResponse.toString());
-
-            // Delete created in-app-product        
-            HttpDelete deleteInAppProductRequest = new HttpDelete("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/" + inAppProductId);
-            deleteInAppProductRequest.addHeader("Authorization", "Bearer " + accessToken);
-            deleteInAppProductRequest.addHeader("User-Agent", "Java");
-            httpclient.execute(deleteInAppProductRequest, responseHandler);
-
-        } catch (HttpResponseException e){
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            httpclient.close();
-        }
-    }
-
-    public static void SubmitNewInAppProductSubmission(String accessToken, String inAppProductId, String iapSubmissionRequestJson, String zipFilePath) throws InterruptedException, IOException {
-        CloseableHttpClient httpclient = HttpClients.createDefault();    
-        ResponseHandler<JsonObject> responseHandler = CreateJsonResponseHandler();
-
-        try {
-            // Get the in-app-product                    
-            HttpGet getInAppProductRequest = new HttpGet("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/" + inAppProductId);
-            getInAppProductRequest.addHeader("Authorization", "Bearer " + accessToken);
-            getInAppProductRequest.addHeader("User-Agent", "Java");
-            JsonObject getInAppProductResponse = httpclient.execute(getInAppProductRequest, responseHandler);
-
-            // Delete existing in-progress submission
-            JsonObject submissionToRemove = getInAppProductResponse.getJsonObject("pendingInAppProductSubmission");
-            if(submissionToRemove != null){
-                String submissionToRemoveId = submissionToRemove.getString("id");
-                HttpDelete deleteSubmissionRequest = new HttpDelete(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{0}/submissions/{1}", inAppProductId, submissionToRemoveId));
-                deleteSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-                deleteSubmissionRequest.addHeader("User-Agent", "Java");
-                httpclient.execute(deleteSubmissionRequest, responseHandler);
-            }            
-
-            // Create submission
-            HttpPost createSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{0}/submissions", inAppProductId));
-            createSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            createSubmissionRequest.addHeader("User-Agent", "Java");
-            JsonObject createSubmissionResponse = httpclient.execute(createSubmissionRequest, responseHandler);
-            String submissionId = createSubmissionResponse.getString("id");
-            String fileUploadUrl = createSubmissionResponse.getString("fileUploadUrl");
-
-            // Update submission
-            HttpPut updateSubmissionRequest = new HttpPut(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{0}/submissions/{1}", inAppProductId, submissionId));
-            updateSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            updateSubmissionRequest.addHeader("Content-type", "application/json");
-            updateSubmissionRequest.setEntity(new StringEntity(iapSubmissionRequestJson));
-            JsonObject updateSubmissionResponse = httpclient.execute(updateSubmissionRequest, responseHandler);
-
-            /// Upload images and packages in a zip file
-            UploadZipFile(fileUploadUrl, zipFilePath);
-
-            // Commit submission
-            HttpPost commitSubmissionRequest = new HttpPost(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{0}/submissions/{1}/commit", inAppProductId, submissionId));
-            commitSubmissionRequest.addHeader("Authorization", "Bearer " + accessToken);
-            commitSubmissionRequest.addHeader("User-Agent", "Java");
-            JsonObject commitSubmissionResponse = httpclient.execute(commitSubmissionRequest, responseHandler);
-            System.out.println(commitSubmissionResponse.getString("status"));
-
-            // Pull submission status until commit process is completed
-            HttpGet getSubmissionStatusRequest = new HttpGet(MessageFormat.format("https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{0}/submissions/{1}/status", inAppProductId, submissionId));
-            getSubmissionStatusRequest.addHeader("Authorization", "Bearer " + accessToken);
-            getSubmissionStatusRequest.addHeader("User-Agent", "Java");
-            JsonObject getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-            String submissionStatus = getSubmissionStatusResponse.getString("status");
-            while(submissionStatus.equals("CommitStarted")){
-                Thread.sleep(60*1000);
-                getSubmissionStatusResponse = httpclient.execute(getSubmissionStatusRequest, responseHandler);
-                submissionStatus = getSubmissionStatusResponse.getString("status");
-            }        
-            System.out.println(submissionStatus);
-
-        } catch (HttpResponseException e){
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            httpclient.close();
-        }
-    }
-
-    private static void UploadZipFile(String fileUploadUrl, String zipFilePath) throws IOException{
-        CloseableHttpClient httpclient = HttpClients.createDefault();
-        File uploadFile = new File(zipFilePath);
-        HttpPut uploadFileRequest = new HttpPut(fileUploadUrl.replace("+", "%2B")); // Encode '+', otherwise it will be decoded as ' '
-        uploadFileRequest.addHeader("x-ms-blob-type", "BlockBlob");
-        uploadFileRequest.setEntity(new FileEntity(uploadFile));
-        CloseableHttpResponse uploadFileResponse;
-        try {
-            uploadFileResponse = httpclient.execute(uploadFileRequest);
-            System.out.println(uploadFileResponse.getStatusLine());
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            httpclient.close();
-        }
-    }
-
-    private static ResponseHandler<JsonObject> CreateJsonResponseHandler(){
-        ResponseHandler<JsonObject> responseHandler = new ResponseHandler<JsonObject>() {
-            @Override
-            public JsonObject handleResponse(
-                    HttpResponse response) throws IOException {
-                StatusLine statusLine = response.getStatusLine();
-                HttpEntity entity = response.getEntity();
-                JsonObject returnValue = null;
-                if(entity != null){
-                    JsonReader reader = Json.createReader(entity.getContent());
-                    returnValue = reader.readObject();
-                }
-
-                // Log response status and correlation ID
-                System.out.println(statusLine);
-                System.out.println(response.getFirstHeader("MS-CorrelationId"));
-
-                // Underlying failure reason is in response entity
-                if (statusLine.getStatusCode() >= 300) {
-                    if(entity == null){
-                        throw new HttpResponseException(
-                                statusLine.getStatusCode(),
-                                statusLine.getReasonPhrase());
-                    }
-                    else{
-                        throw new HttpResponseException(
-                                statusLine.getStatusCode(),
-                                statusLine.getReasonPhrase() + " " + returnValue.toString() );
-                    }
-                }
-
-                return returnValue;
-            }
-        };
-
-        return responseHandler;
-    }
-}
-```
-
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO3-->
 
 

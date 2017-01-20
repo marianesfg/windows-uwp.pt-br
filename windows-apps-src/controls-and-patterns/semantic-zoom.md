@@ -6,11 +6,11 @@ ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 125cb6e45defe3213af3f5cd20f524a5311241af
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: b3ca48b678fb4e1ddb4b26ad7add723474527591
 
 ---
-# Zoom Semântico
+# <a name="semantic-zoom"></a>Zoom Semântico
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -24,18 +24,11 @@ Por exemplo, ao exibir um catálogo de endereços, o usuário pode reduzir a fim
 <div class="important-apis" >
 <b>APIs Importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/hh702601"><strong>Classe SemanticZoom</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx"><strong>Classe ListView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx"><strong>Classe GridView</strong></a></li>
+<li>[**Classe SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)</li>
+<li>[**Classe ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)</li>
+<li>[**Classe GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)</li>
 </ul>
-
 </div>
-</div>
-
-
-
-
-
 
 **Recursos**:
 
@@ -43,13 +36,13 @@ Por exemplo, ao exibir um catálogo de endereços, o usuário pode reduzir a fim
 -   Ao tocar em um cabeçalho de grupo, os modos de exibição são alternados. É possível habilitar a pinçagem para alternar entre os modos de exibição.
 -   Os cabeçalhos ativos alternam entre os modos de exibição.
 
-## Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use um controle **SemanticZoom** quando precisar mostrar um conjunto de dados agrupado que seja suficientemente grande para que ele não possa ser todo mostrado em uma ou duas páginas.
 
 Não confunda zoom semântico com zoom óptico. Apesar deles compartilharem a mesma interação e o mesmo comportamento básico (exibindo mais ou menos detalhes baseados em um fator de zoom), o zoom óptico se refere ao ajuste da ampliação para uma área de conteúdo ou objeto como uma fotografia. Para obter informações sobre um controle que executa ampliação óptica, veja o controle [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx).
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 **Aplicativo Fotos**
 
@@ -63,7 +56,7 @@ Um catálogo de endereços é outro exemplo de conjunto de dados que pode ser mu
 
 ![exemplo de zoom semântico usado em uma lista de contatos](images/semanticzoom-win10.png)
 
-## Criar um Zoom Semântico
+## <a name="create-a-semantic-zoom"></a>Criar um Zoom Semântico
 
 O controle **SemanticZoom** não tem nenhuma representação visual dele próprio. Ele é um controle de host que gerencia a transição entre 2 outros controles que fornecem as exibição do conteúdo, normalmente os controles **ListView** ou **GridView**.  Você define os controles de exibição como as propriedades [**ZoomedInView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedinview.aspx) e [**ZoomedOutView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedoutview.aspx) do SemanticZoom.
 
@@ -182,7 +175,7 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 }
 ```
 
-## Recomendações
+## <a name="recommendations"></a>Recomendações
 
 -   Ao usar o zoom semântico em seu aplicativo, o layout do item e a direção do movimento panorâmico não devem mudar de acordo com o nível de zoom. Os layouts e as interações de movimento panorâmico devem ser consistentes e previsíveis em todos os níveis de zoom.
 -   Como o zoom semântico, o usuário pode saltar rapidamente para o conteúdo. Então, limite o número de páginas/telas a três no modo com zoom reduzido. Muito movimento panorâmico diminui a viabilidade do zoom semântico.
@@ -191,17 +184,18 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 -   Use os nomes dos grupos para os itens em uma coleção agrupada.
 -   Use ordens de classificação para uma coleção desagrupada, porém classificada; por exemplo, a ordem cronológica para datas e ordem alfabética para uma lista de nomes.
 
-## Artigos relacionados
+
+## <a name="get-the-sample-code"></a>Obter o código de exemplo
+
+- [Amostra de noções básicas de interface do usuário XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992)
+
+
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Noções básicas de design de navegação](../layout/navigation-basics.md)
 - [Exibição de lista e exibição de grade](listview-and-gridview.md)
 - [Modelos de item de exibição de lista](listview-item-templates.md)
 
-**Exemplos**
-
-- [Amostra de noções básicas de interface do usuário XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992)
-
- 
 
 
 
@@ -209,6 +203,6 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

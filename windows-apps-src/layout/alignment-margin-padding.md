@@ -5,20 +5,22 @@ title: Alinhamento, margem e preenchimento para aplicativos da Plataforma Univer
 ms.assetid: 9412ABD4-3674-4865-B07D-64C7C26E4842
 label: Alignment, margin, and padding
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: ec16fa013e177529c517f91610b77ea22402a958
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: f6c8665c935380078efd2e8ea9d225967cf45eba
 
 ---
-# Alinhamento, margem e preenchimento
+# <a name="alignment-margin-and-padding"></a>Alinhamento, margem e preenchimento
 
 Além das propriedades de dimensão (largura, altura e restrições), os elementos também podem ter as propriedades de alinhamento, margem e preenchimento que influenciam o comportamento do layout quando um elemento passa por um cálculo de layout e é renderizado em uma interface do usuário. Há relacionamentos entre as propriedades de alinhamento, margem, preenchimento e dimensão que têm um fluxo lógico típico quando um objeto [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) é posicionado, de modo que os valores às vezes são usados e outras, ignorados, dependendo das circunstâncias.
 
-## Propriedades de alinhamento
+## <a name="alignment-properties"></a>Propriedades de alinhamento
 
 As propriedades [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720) e [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749) descrevem como um elemento filho deve ser posicionado dentro do espaço de layout alocado do elemento pai. Ao usar essas propriedades juntas, a lógica do layout para um contêiner pode posicionar elementos filho dentro do contêiner (um painel ou um controle). A finalidade das propriedades de alinhamento é dar dicas do layout desejado para um contêiner de layout adaptável, por isso elas são definidas em [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) filho e interpretadas por outro contêiner pai **FrameworkElement**. Os valores de alinhamento podem especificar se os elementos se alinham a uma das bordas de uma orientação ou são centralizados. Contudo, o valor padrão para as duas propriedades é **Stretch**. Com o alinhamento **Stretch**, os elementos preenchem o espaço fornecido no layout. **Stretch** é o padrão para que seja mais fácil usar as técnicas de layout adaptável nos casos em que não haja medição explícita ou não haja valor [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) que venha do cálculo de medição do layout. Com esse padrão, não há risco de uma largura/altura explícita não caber dentro do contêiner e ser recortada até que você dimensione cada contêiner.
 
-> **Observação**&nbsp;&nbsp;Como um princípio geral do layout, é melhor somente aplicar medições a determinados elementos-chave e usar o comportamento do layout adaptável para os outros elementos. Isso oferece comportamento de layout flexível para quando o usuário dimensiona a janela superior do aplicativo, o que geralmente é possível de ser feito a qualquer momento.
+> [!NOTE]
+> Como um princípio geral do layout, é melhor apenas aplicar medições a determinados elementos-chave e usar o comportamento do layout adaptável para os outros elementos. Isso oferece comportamento de layout flexível para quando o usuário dimensiona a janela superior do aplicativo, o que geralmente é possível de ser feito a qualquer momento.
 
  
 Se houver valores de [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) ou recortes dentro de um contêiner adaptável, mesmo que **Stretch** seja definido como um valor de alinhamento, o layout será controlado pelo comportamento de seu contêiner. Em painéis, um valor **Stretch** que tenha sido tornado óbvio por **Height** e **Width** age como se o valor fosse **Center**.
@@ -33,7 +35,7 @@ Os controles de item ocasionalmente exibem itens nos quais os tipos de base dos 
 
 As propriedades de alinhamento são relevante apenas nos casos nos quais há espaço extra disponível em uma dimensão do contêiner de layout pai. Se um contêiner de layout já estiver cortando conteúdo, o alinhamento poderá afetar a área do elemento em que o corte se aplicará. Por exemplo, se você definir `HorizontalAlignment="Left"`, o tamanho direito do elemento será recortado.
 
-## Margem
+## <a name="margin"></a>Margem
 
 A propriedade [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724) descreve a distância entre um elemento e seus pares em uma situação de layout, e também a distância entre um elemento e a área de conteúdo de um contêiner que contém o elemento. Se você considerar que os elementos são caixas delimitadoras ou retângulos nos quais as dimensões são [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) e [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709), o layout **Margin** se aplicará ao exterior do retângulo e não adicionará pixels a **ActualHeight** e **ActualWidth**. A margem também não é considerada parte do elemento para fins de teste de clique e origem de eventos de entrada.
 
@@ -49,7 +51,7 @@ O uso correto da propriedade [**Margin**](https://msdn.microsoft.com/library/win
 
 A classe [**Block**](https://msdn.microsoft.com/library/windows/apps/br244379), que é uma classe de base para [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/br244503), também tem uma propriedade [**Margin**](https://msdn.microsoft.com/library/windows/apps/jj191725). Ela exerce efeito análogo em como **Paragraph** é posicionado dentro de seu contêiner pai, que tipicamente é um objeto [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565) ou [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548), e também em como mais de um parágrafo é posicionado em relação a outros pares de **Block** da coleção [**RichTextBlock.Blocks**](https://msdn.microsoft.com/library/windows/apps/br244347).
 
-## Preenchimento
+## <a name="padding"></a>Preenchimento
 
 A propriedade **Padding** descreve a distância entre um elemento e todos os elementos filho ou conteúdo que ele contém. O conteúdo é tratado como uma única caixa delimitadora que circunscreve todo o conteúdo, caso seja um elemento que permita mais de um filho. Por exemplo, caso haja um [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/br242803) que contenha dois itens, o [**Padding**](https://msdn.microsoft.com/library/windows/apps/br209459) é aplicado ao redor da caixa delimitadora que contém os itens. **Padding** subtrai do tamanho disponível no momento do cálculo das medidas e da organização desse contêiner e faz parte dos valores de tamanho desejados quando o contêiner propriamente dito passa pelo cálculo de layout para o seu contêiner. Diferentemente de [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724), **Padding** não é uma propriedade de [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), e há várias classes que definem suas respectivas propriedades **Padding**:
 
@@ -60,28 +62,23 @@ A propriedade **Padding** descreve a distância entre um elemento e todos os ele
 
 Em cada um desses casos, o mesmo elemento também tem uma propriedade **Margin**. Se forem aplicados margem e preenchimento, eles são aditivos no sentido de que a distância aparente entre um contêiner externo e outro interno será a margem mais o preenchimento. Se houver valores de tela de fundo diferentes para conteúdo, elemento ou contêiner, o ponto no qual a margem termina e o preenchimento começa será potencialmente visível na renderização.
 
-## Dimensões (altura, largura)
+## <a name="dimensions-height-width"></a>Dimensões (altura, largura)
 
 As propriedades [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) de um [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) costumam influenciar o comportamento das propriedades alignment, margin e padding quando ocorre um cálculo de layout. Em particular, **Height** e **Width** com valores de números reais cancelam os alinhamentos **Stretch**, e também são promovidos como um componente possível do valor de [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) que é estabelecido durante o cálculo de medida do layout. **Height** e **Width** têm propriedades de restrição: o valor de **Height** pode ser restringido com [**MinHeight**](https://msdn.microsoft.com/library/windows/apps/br208731) e [**MaxHeight**](https://msdn.microsoft.com/library/windows/apps/br208726), o valor de **Width** pode ser restringido com [**MinWidth**](https://msdn.microsoft.com/library/windows/apps/br208733) e [**MaxWidth**](https://msdn.microsoft.com/library/windows/apps/br208728). Além disso, [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) e [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) são propriedades somente leitura calculadas que contêm apenas valores válidos após a conclusão do cálculo de layout. Para obter mais informações sobre como as dimensões e as restrições ou as propriedades calculadas estão relacionadas, consulte Comentários em [**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 **Referência**
 
-[**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718)
-
-[**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
-
-[**FrameworkElement.HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720)
-
-[**FrameworkElement.VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
-
-[**FrameworkElement.Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)
-
-[**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
+* [**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718)
+* [**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
+* [**FrameworkElement.HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720)
+* [**FrameworkElement.VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
+* [**FrameworkElement.Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)
+* [**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

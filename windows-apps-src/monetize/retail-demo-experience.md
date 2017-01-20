@@ -1,14 +1,14 @@
 ---
 author: joannaleecy
-title: "Criando um aplicativo de experiência de demonstração de revenda"
+title: "Criar um aplicativo de experiência de demonstração de revenda"
 description: "Crie um aplicativo de experiência de demonstração de revenda (RDX), que é um aplicativo único capaz de ser iniciado nos modos de demonstração de revenda e normal"
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
 translationtype: Human Translation
-ms.sourcegitcommit: 0110cec1857aac519f8e7c1490e5b3a0d8be9ea2
-ms.openlocfilehash: 7a5367ae13be60be6e5b0ee4f62190f8b3330c59
+ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
+ms.openlocfilehash: ca9e27944cc4504400191ef1620949b1e8b64ff2
 
 ---
-#  Criando um aplicativo de experiência de demonstração de revenda (RDX)
+#  <a name="create-a-retail-demo-experience-rdx-app"></a>Criar um aplicativo de experiência de demonstração de revenda (RDX)
 
 Quando entram em uma loja ou local de revenda, os clientes esperam encontrar os computadores e os celulares mais recentes na vitrine, e esses dispositivos na vitrine são conhecidos como dispositivos de demonstração de revenda. Os dispositivos de demonstração de revenda e o conteúdo instalado neles são amplamente responsáveis pela experiência do cliente nas lojas porque os clientes normalmente passam uma parte considerável do tempo experimentando esses dispositivos.
 
@@ -18,30 +18,30 @@ Um aplicativo de experiência de demonstração de revenda acompanha um build ú
 
 Além dos requisitos da Loja para aplicativos, aplicativos RDX também devem ser totalmente compatíveis com o sistema de configuração, limpeza e atualização dos dispositivos de demonstração de revenda para garantir que os clientes tenham uma experiência consistentemente positiva na loja de revenda.
 
-## Princípios de design
+## <a name="design-principles"></a>Princípios de design
 
-### Mostre o melhor
+### <a name="show-your-best"></a>Mostre o melhor
 
 Use a experiência de demonstração de revenda para demonstrar por que o aplicativo é demais.  Trata-se, provavelmente, da primeira vez em que o cliente verá o aplicativo, logo, mostre a ele a melhor parte!
     
-### Mostre-a rapidamente
+### <a name="show-it-fast"></a>Mostre-a rapidamente
 
 Os clientes podem ser impacientes - Quanto mais rápido um usuário puder experimentar o valor real do aplicativo, melhor. 
     
-### Mantenha a história simples
+### <a name="keep-the-story-simple"></a>Mantenha a história simples
     
 Lembre-se de que a experiência de demonstração de revenda eleva o valor agregado do aplicativo.
     
-### Concentre-se na experiência
+### <a name="focus-on-the-experience"></a>Concentre-se na experiência
 
 Dê ao usuário tempo para interpretar o conteúdo.  Embora mostrar a eles a melhor parte seja importante, projetar pausas indicadas pode ajudá-los no aproveitamento máximo da experiência.
 
-## Requisitos técnicos
+## <a name="technical-requirements"></a>Requisitos técnicos
 
 Como se destinam a demostrar o melhor do aplicativo para clientes de revenda, é essencial que aplicativos de experiência de demonstração de revenda atendam a esses requisitos técnicos e respeitem regulamentações de privacidade que a Loja tenha para todos os aplicativos de experiência de demonstração de revenda.
 Isso também pode ser usado como uma lista de verificação para ajudar você a se preparar para o processo de validação e esclarecimento no processo de teste. Esses requisitos precisam ser mantidos, não apenas para o processo de validação, mas para todo o tempo de vida do aplicativo de experiência de demonstração de revenda; desde que o aplicativo continue em execução nos dispositivos de demonstração de revenda.
 
-### Requisitos de nível crítico
+### <a name="critical-level-requirements"></a>Requisitos de nível crítico
    
 Os aplicativos RDX que não atenderem a esses requisitos críticos serão removidos de todos os dispositivos de demonstração de revenda assim que possível.
 
@@ -58,7 +58,7 @@ Os aplicativos RDX que não atenderem a esses requisitos críticos serão removi
 
     Para os aplicativos serem instalado em dispositivos de demonstração de revenda, o aplicativo precisa ser um aplicativo gratuito ou ter um modo de avaliação estabelecido.  Os clientes não esperam pagar por uma experiência em uma loja de revenda. Para obter mais informações, consulte [Excluir ou limitar recursos em uma versão de avaliação](https://msdn.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app)
 
-### Requisitos de alta prioridade
+### <a name="high-priority-requirements"></a>Requisitos de alta prioridade
     
 Os aplicativos RDX que não atendam a esses requisitos de alta prioridade precisam ser investigados em busca de uma correção imediata. Se nenhuma correção imediata for encontrada, esse aplicativo poderá ser removido de todos os dispositivos de demonstração de revenda.
 
@@ -82,7 +82,7 @@ Os aplicativos RDX que não atendam a esses requisitos de alta prioridade precis
 
     Todo o conteúdo do aplicativo de experiência de demonstração de revenda deve receber uma categoria de classificação para adolescente ou inferior. Para obter mais informações, consulte [Classificação do aplicativo pelo IARC](https://www.globalratings.com/for-developers.aspx) e [Classificações ESRB](https://www.esrb.org/ratings/ratings_guide.aspx).
     
-### Requisitos de prioridade média
+### <a name="medium-priority-requirements"></a>Requisitos de prioridade média
 
 A equipe da Loja de revenda do Windows pode entrar em contato com desenvolvedores diretamente para marcar uma reunião sobre como corrigir esses problemas.
 
@@ -94,46 +94,46 @@ A equipe da Loja de revenda do Windows pode entrar em contato com desenvolvedore
     
     O aplicativo deve ser menor do que 800 MB. Entre em contato com a equipe da Loja de revenda do Windows diretamente para saber mais se o aplicativo de experiência de demonstração de revenda não atende aos requisitos de tamanho.
 
-## Preparação da base de código para o desenvolvimento do modo de demonstração de revenda
+## <a name="preparing-codebase-for-retail-demo-mode-development"></a>Preparação da base de código para o desenvolvimento do modo de demonstração de revenda
 
 A propriedade [**IsDemoModeEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.isdemomodeenabled.aspx) na classe de utilitário [**RetailInfo**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.aspx), que faz parte do namespace [Windows](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.aspx) no SDK do Windows 10, é usada como um indicador Booliano para especificar em qual caminho de código o aplicativo é executado – o modo _normal_ ou o modo _revenda_. 
 
 Quando [**RetailInfo.IsDemoModeEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.isdemomodeenabled.aspx) retorna verdadeiro, é possível consultar um conjunto de propriedades sobre o dispositivo usando [**RetailInfo.Properties**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.properties.aspx) para criar uma experiência de demonstração de revenda mais personalizada. Entre essas propriedades estão [**ManufacturerName**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.manufacturername.aspx), [**Screensize**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.screensize.aspx), [**Memory**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.memory.aspx) etc. 
 
 
-## Processo de limpeza
+## <a name="clean-up-process"></a>Processo de limpeza
 
 O processo de limpeza é usado para redefinir automaticamente as configurações padrão originais dos dispositivos de demonstração de revenda quando não há interação com o dispositivo por uma duração fixa. Isso é para garantir que todos os usuários na loja de varejo possam ir até a um dispositivo e ter a experiência desejada padrão exata na interação com o dispositivo. Durante o desenvolvimento de um aplicativo de experiência de demonstração de revenda, é importante entender quando e como o processo de limpeza é disparado, o que acontece durante o processo de limpeza padrão e aprender a personalizar esse processo de limpeza de acordo com os requisitos da experiência de demonstração de revenda desejada.
 
-### Quando a limpeza começa?
+### <a name="when-does-clean-up-begin"></a>Quando a limpeza começa?
 
 A sequência de limpeza começará depois de um determinado período de ociosidade do dispositivo. O tempo ocioso começa a contar quando não há entrada de toque, mouse e teclado no dispositivo.
 
-#### Área de trabalho/PC
+#### <a name="desktoppc"></a>Área de trabalho/PC
 
 Depois de 120 segundos de tempo ocioso, o vídeo do aplicativo de tempo ocioso começará a ser reproduzido no dispositivo. Depois de 5 segundos, o processo de limpeza será iniciado.
 
-#### Telefone
+#### <a name="phone"></a>Telefone
 
 Depois de 60 segundos de tempo ocioso, o vídeo do aplicativo de tempo ocioso começará a ser reproduzido no dispositivo, e o processo de limpeza será iniciado imediatamente.
 
-### O que acontece durante um processo de limpeza padrão?
+### <a name="what-happens-during-a-default-clean-up-process"></a>O que acontece durante um processo de limpeza padrão?
 
-#### Etapa 1: limpar
+#### <a name="step-1-clean-up"></a>Etapa 1: limpar
 * Todos os aplicativos Win32 e da Loja são fechados
 * Todos os arquivos em pastas conhecidas como __Imagens__, __Vídeos__, __Música__, __Documentos__, __SavedPictures__, __CameraRoll__, __Área de Trabalho__ e __Downloads__ são excluídos
 * Estados de roaming não estruturados e estruturados são excluídos
 * Estados locais estruturados são excluídos
 
-#### Etapa 2: Configurar 
+#### <a name="step-2-set-up"></a>Etapa 2: Configurar 
 * Para dispositivos offline: as pastas permanecem vazias
 * Para dispositivos online: os ativos de demonstração de revenda podem ser enviados para o dispositivo pela Windows Store
 
-### Como armazenar dados entre sessões de usuário?
+### <a name="how-to-store-data-across-user-sessions"></a>Como armazenar dados entre sessões de usuário?
 
 Se quiser armazenar dados entre sessões de usuário, você poderá armazenar informações em __ApplicationData.Current.TemporaryFolder__ porque o processo de limpeza padrão não exclui automaticamente dados nessa pasta. As informações armazenadas usando-se *LocalState* são excluídas durante o processo de limpeza. 
 
-### Como personalizar o processo de limpeza?
+### <a name="how-to-customize-the-clean-up-process"></a>Como personalizar o processo de limpeza?
 
 Se quiser personalizar o processo de limpeza, você precisará implementar o serviço de aplicativo `Microsoft-RetailDemo-Cleanup` no aplicativo. 
 
@@ -245,7 +245,7 @@ namespace MyCompany.MyApp
 }
 ```
 
-## Links relacionados
+## <a name="related-links"></a>Links relacionados
 
 * [Armazene e recupere dados de aplicativo](https://msdn.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
 * [Como criar e consumir um serviço de aplicativo](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
@@ -258,6 +258,6 @@ namespace MyCompany.MyApp
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

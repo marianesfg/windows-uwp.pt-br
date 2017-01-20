@@ -5,16 +5,21 @@ title: Teclas de acesso
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Access keys
 template: detail.hbs
-keywords: Teclas de acesso, teclado, acessibilidade
+keywords: "Teclas de acesso, teclado, acessibilidade, interação do usuário, entrada"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2b6b1d7b1755aad4d75a29413d989c6e8112128a
-ms.openlocfilehash: dfe89e4d4fd089dde6b7b307325b8fe43de82c10
+ms.sourcegitcommit: 76b012ab4cf737f00fc986c81c88fd48339867fc
+ms.openlocfilehash: 34cce6acc786fe34b3d94faaec57011474e029ff
 
 ---
 
 # <a name="access-keys"></a>Teclas de acesso
 
-Os usuários que têm dificuldade em usar um mouse, como aqueles com deficiências motoras, frequentemente dependem do teclado para navegar e interagir com um app.  A estrutura XAML permite que você forneça acesso de teclado aos elementos de interface do usuário por meio da navegação por tabulação e as teclas de acesso.
+Os usuários que têm dificuldade de usar o mouse, como aqueles com deficiências motoras, frequentemente dependem do teclado para navegar e interagir com um app.  A estrutura XAML permite que você forneça acesso de teclado aos elementos de interface do usuário por meio da navegação por tabulação e as teclas de acesso.
 
 - A navegação por tabulação é uma funcionalidade básica de acessibilidade de teclado (ativada por padrão) que permite aos usuários mover o foco entre elementos de interface do usuário usando as teclas de tabulação e de seta do teclado.
 - As teclas de acesso são um recurso de acessibilidade complementar (que você implementa em seu aplicativo) para acesso rápido aos comandos do aplicativo usando uma combinação de modificador de teclado (tecla Alt) e uma ou mais teclas alfanuméricas (normalmente uma letra associada ao comando). As teclas de acesso comuns incluem _Alt + F_ para abrir o menu Arquivo e _Alt + AL_ para alinhar à esquerda.  
@@ -385,6 +390,6 @@ public sealed partial class ScopedAccessKeys : Page
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

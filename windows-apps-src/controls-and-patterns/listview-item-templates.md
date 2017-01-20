@@ -5,11 +5,11 @@ title: "Modelos de item de exibição de lista"
 label: List view item templates
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 5e85b7d8af98c48d5a75a77187acbdf3184ff875
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e64264dfa52706dd912dadb27d5109b35b5ba6b3
 
 ---
-# Contêineres e modelos de itens
+# <a name="item-containers-and-templates"></a>Contêineres e modelos de itens
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -18,18 +18,12 @@ Os controles **ListView** e **GridView** gerenciam como seus itens são organiza
 <div class="important-apis" >
 <b>APIs Importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx"><strong>Classe ListView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx"><strong>Classe GridView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx"><strong>Propriedade ItemTemplate</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx"><strong>Propriedade ItemContainerStyle</strong></a></li>
+<li>[**Classe ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)</li>
+<li>[**Classe GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)</li>
+<li>[**Propriedade ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)</li>
+<li>[**Propriedade ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx)</li>
 </ul>
-
 </div>
-</div>
-
-
-
-
 
 
 > Os controles ListView e GridView são derivados da classe [**ListViewBase**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), portanto, eles têm a mesma funcionalidade, mas exibem dados de modo diferente. Neste artigo, ao falarmos sobre exibição de lista, as informações se aplicam aos controles ListView e GridView, a menos que especificado de outra forma. Poderemos nos referir a classes, como ListView ou ListViewItem, mas o prefixo *List* poderá ser substituído por *Grid* para o equivalente a grade correspondente (GridView ou GridViewItem). 
@@ -74,12 +68,12 @@ Este é o XAML que cria este item. Vamos explicar os modelos mais tarde.
 </ListView>
 ```
  
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Presumimos que você saiba como usar um controle de exibição de lista. Para obter mais informações, consulte o artigo [ListView e GridView](listview-and-gridview.md).
 - Também presumimos que você entenda os estilos e modelos de controle, inclusive como usar um estilo embutido ou como um recurso. Para obter mais informações, consulte [Aplicando estilos a controles](styling-controls.md) e [Modelos de controle](control-templates.md).
 
-## Os dados
+## <a name="the-data"></a>Os dados
 
 Antes de nos aprofundarmos mais em como mostrar itens de dados em uma exibição de lista, precisamos entender os dados a serem mostrados. Neste exemplo, criamos um tipo de dados chamado `NamedColor`. Ele combina um nome de cor, um valor de cor e um **SolidColorBrush** da cor, que é exposto como 3 propriedades: `Name`, `Color` e `Brush`.
  
@@ -143,7 +137,7 @@ namespace ColorsListApp
 }
 ```
 
-## Modelo de dados
+## <a name="data-template"></a>Modelo de dados
 
 Você especifica um modelo de dados para dizer à exibição de lista como seu item de dados deve ser mostrado. 
 
@@ -169,11 +163,13 @@ Agora a exibição de lista exibe os itens por nome, conforme mostrado aqui. É 
 
 Você geralmente quer mostrar uma apresentação mais sofisticada de seus dados. Para especificar exatamente como os itens aparecem na exibição de lista, você cria um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx). O XAML no DataTemplate define o layout e a aparência dos controles usados para exibir cada item. Os controles no layout podem ser associados a propriedades de um objeto de dados ou ter conteúdo estático definido embutido. Você atribui o DataTemplate à propriedade [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) do controle de lista.
 
-> **Importante**&nbsp;&nbsp;Você não pode usar **ItemTemplate** e **DisplayMemberPath** ao mesmo tempo. Se as duas propriedades forem definidas, ocorrerá uma exceção.
+> [!IMPORTANT]
+> Não é possível usar **ItemTemplate** e **DisplayMemberPath** ao mesmo tempo. Se as duas propriedades forem definidas, ocorrerá uma exceção.
 
-Aqui, você define um DataTemplate que mostra um elemento [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.aspx) na cor do item, juntamente com o nome e os valores RGB da cor. 
+Aqui, você define um DataTemplate que mostra um elemento [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.aspx) na cor do item, além do nome e dos valores RGB da cor. 
 
-> **Observação**&nbsp;&nbsp;ao usar a [extensão de marcação x:Bind](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) em um DataTemplate, você precisa especificar o DataType (`x:DataType`) no DataTemplate.
+> [!NOTE]
+> Ao usar a [extensão de marcação x:Bind](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) em um DataTemplate, você precisa especificar o DataType (`x:DataType`) no DataTemplate.
 
 **XAML**
 ```XAML
@@ -257,7 +253,7 @@ Quando os dados são mostrados em uma grade usando este modelo de dados, eles t�
 
 ![Itens de exibição de grade com um modelo de dados](images/gridview-data-template.png)
 
-### Considerações sobre desempenho
+### <a name="performance-considerations"></a>Considerações sobre desempenho
 
 Os modelos de dados são a principal maneira de definir a aparência de sua exibição de lista. Eles também poderão causar um impacto significativo no desempenho se sua lista exibir um grande número de itens. 
 
@@ -281,7 +277,7 @@ Uma instância de cada elemento XAML em um modelo de dados é criada para cada i
  - Segundo, você pode usar um controle Border para renderizar uma tela de fundo sem colocar de fato itens dentro do elemento Border. Um elemento Border pode ter apenas um elemento filho. Então, você precisa adicionar um painel de layout para hospedar os 3 elementos TextBlock dentro do elemento Border no XAML. Ao não tornar os TextBlocks filhos do elemento Border, você elimina a necessidade de um painel para conter os TextBlocks.
  - Por fim, você poderia colocar os TextBlocks dentro de um StackPanel e definir as propriedades da borda no StackPanel em vez de usar um elemento Border explícito. No entanto, o elemento Border é um controle mais leve do que um StackPanel. Então, ele tem menos impacto no desempenho quando renderizado muitas vezes.
 
-## Modelo de controle
+## <a name="control-template"></a>Modelo de controle
 O modelo de controle de um item contém os elementos visuais que exibem o estado, como seleção, posição do ponteiro e foco. Esses elementos visuais são renderizados acima ou abaixo do modelo de dados. Alguns dos elementos visuais padrão comuns desenhados pelo modelo de controle ListView são mostrados aqui.
 
 - Foco – um retângulo cinza-claro desenhado abaixo o modelo de dados.  
@@ -294,13 +290,14 @@ A exibição de lista combina os elementos do modelo de dados e do modelo de con
 
 ![Exibição de lista com itens em diferentes estados](images/listview-states.png)
 
-### ListViewItemPresenter
+### <a name="listviewitempresenter"></a>ListViewItemPresenter
 
 Conforme observado anteriormente sobre modelos de dados, o número de elementos XAML criados para cada item pode ter um impacto significativo no desempenho de uma exibição de lista. Como o modelo de dados e o modelo de controle são combinados para exibir cada item, o número real de elementos necessários para exibir um item inclui os elementos em ambos os modelos.
 
 Os controles ListView e GridView são otimizados para reduzir o número de elementos XAML criados por item. O elementos visuais **ListViewItem** são criados pelo [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.aspx), que é um elemento XAML especial que exibe elementos visuais complexos para foco, seleção e outros estados visuais, sem a sobrecarga de UIElements numerosos.
  
-> **Observação**&nbsp;&nbsp;em aplicativos UWP para Windows 10, **ListViewItem** e **GridViewItem** usam **ListViewItemPresenter**; o GridViewItemPresenter está obsoleto e você não deve usá-lo. ListViewItem e GridViewItem definem valores de propriedade diferentes em ListViewItemPresenter para obter aparências padrão diferentes.)
+> [!NOTE]
+> Em aplicativos UWP para Windows 10, **ListViewItem** e **GridViewItem** usam **ListViewItemPresenter**; o GridViewItemPresenter está preterido e você não deve usá-lo. ListViewItem e GridViewItem definem valores de propriedade diferentes em ListViewItemPresenter para obter aparências padrão diferentes.)
 
 Para modificar a aparência do contêiner de item, use a propriedade [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx) e forneça um elemento [**Style**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx) com seu [**TargetType**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.targettype.aspx) definido como **ListViewItem** ou **GridViewItem**.
 
@@ -326,9 +323,10 @@ Agora a exibição de lista tem esta aparência com um espaço entre os itens.
 
 No estilo ListViewItem padrão, a propriedade **ContentMargin** de ListViewItemPresenter tem [**TemplateBinding**](https://msdn.microsoft.com/windows/uwp/xaml-platform/templatebinding-markup-extension) para a propriedade **Padding** de ListViewItem (`<ListViewItemPresenter ContentMargin="{TemplateBinding Padding}"/>`). Quando definimos a propriedade Padding, esse valor realmente está sendo passado para a propriedade ContentMargin de ListViewItemPresenter.
 
-Para modificar outras propriedades de ListViewItemPresenter que não estão vinculadas às propriedades de ListViewItems por modelo, você precisa recriar o modelo de ListViewItem com um novo ListViewItemPresenter em que seja possível modificar as propriedades. 
+Para modificar outras propriedades ListViewItemPresenter que não estejam associadas às propriedades ListViewItems por modelo, você precisa recriar o modelo de ListViewItem com um novo ListViewItemPresenter em que seja possível modificar as propriedades. 
 
-> **Observação**&nbsp;&nbsp;os estilos padrão ListViewItem e GridViewItem definem muitas propriedades em ListViewItemPresenter. Você sempre deve começar com uma cópia do estilo padrão e modificar apenas as propriedades necessárias. Caso contrário, os elementos visuais provavelmente não aparecerão conforme o esperado porque algumas propriedades não serão definidas corretamente.
+> [!NOTE]
+> Os estilos padrão ListViewItem e GridViewItem definem muitas propriedades em ListViewItemPresenter. Você sempre deve começar com uma cópia do estilo padrão e modificar apenas as propriedades necessárias. Caso contrário, os elementos visuais provavelmente não aparecerão conforme o esperado porque algumas propriedades não serão definidas corretamente.
 
 **Para fazer uma cópia do modelo padrão no Visual Studio**
  
@@ -393,7 +391,7 @@ Uma cópia do estilo padrão é adicionada ao seu aplicativo como um recurso, e 
 
 Agora você pode modificar as propriedades no ListViewItemPresenter para controlar a caixa de seleção, o posicionamento de itens e as cores do pincel para estados visuais. 
 
-#### Elementos visuais de seleção embutidos e de sobreposição
+#### <a name="inline-and-overlay-selection-visuals"></a>Elementos visuais de seleção embutidos e de sobreposição
 
 ListView e GridView indicam os itens selecionados de maneiras diferentes dependendo do controle e do [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx). Para saber mais sobre a seleção da exibição de lista, veja [ListView e GridView](listview-and-gridview.md). 
 
@@ -411,17 +409,19 @@ SelectionMode:&nbsp;&nbsp; | Única/Estendida | Múltipla
 Embutido | ![Seleção única ou estendida embutida](images/listview-single-selection.png) | ![Seleção múltipla embutida](images/listview-multi-selection.png)
 Sobreposição | ![Seleção única ou estendida sobreposta](images/gridview-single-selection.png) | ![Seleção múltipla sobreposta](images/gridview-multi-selection.png)
 
-> **Observação**&nbsp;&nbsp;neste e nos próximos exemplos, itens de dados de cadeia de caracteres simples são mostrados sem modelos de dados para enfatizar os elementos visuais fornecidos pelo modelo de controle.
+> [!NOTE]
+> Neste e nos próximos exemplos, itens de dados da cadeia de caracteres simples são mostrados sem modelos de dados para enfatizar os elementos visuais fornecidos pelo modelo de controle.
 
 Também há várias propriedades de pincel para alterar as cores da caixa de seleção. Vamos dar uma olhada nelas em seguidas com outras propriedades de pincel.
 
-#### Pincéis 
+#### <a name="brushes"></a>Pincéis 
 
 Muitas das propriedades especificam os pincéis usados para diferentes estados visuais. Você pode querer modificá-las para combinar com a cor de sua marca. 
 
-Esta tabela mostra os estados visuais comum e de seleção para ListViewItem e os pincéis usados para renderizar os elementos visuais para cada estado. As imagens mostram os efeitos dos pincéis nos estilos visuais de seleção embutida e sobreposta.
+Esta tabela mostra os estados visuais comum e de seleção para ListViewItem e os pincéis usados para renderizar os elementos visuais para cada estado. As imagens mostram os efeitos dos pincéis sobre os estilos visuais de seleção embutida e sobreposta.
 
-> **Observação**&nbsp;&nbsp;nesta tabela, os valores de cor modificados para os pincéis são cores nomeadas em código e as cores são selecionadas para tornar mais aparente onde elas são aplicadas no modelo. Estas não são as cores padrão dos estados visuais. Se você modificar as cores padrão em seu aplicativo, use os recursos de pincel para modificar os valores de cor como feito no modelo padrão.
+> [!NOTE]
+> Nesta tabela, os valores de cor modificados para os pincéis são cores nomeadas em código e as cores são selecionadas para tornar mais aparente onde elas são aplicadas no modelo. Estas não são as cores padrão dos estados visuais. Se você modificar as cores padrão em seu aplicativo, use os recursos de pincel para modificar os valores de cor como feito no modelo padrão.
 
 Nome do estado/pincel | Estilo embutido | Estilo de sobreposição
 ------------|--------------|--------------
@@ -435,13 +435,14 @@ Nome do estado/pincel | Estilo embutido | Estilo de sobreposição
 
 ListViewItemPresenter tem outras propriedades de pincel para estados de espaços reservados de dados e arrastar. Se você usa o carregamento incremental ou arrastar e soltar em sua exibição de lista, considere se é necessário também modificar essas propriedades adicionais do pincel. Veja a classe ListViewItemPresenter para obter a lista completa das propriedades que você pode modificar. 
 
-### Modelos de item XAML expandidos
+### <a name="expanded-xaml-item-templates"></a>Modelos de item XAML expandidos
 
 Se você precisar fazer modificações mais do que o que é permitido pelas propriedades **ListViewItemPresenter** – se precisar alterar a posição da caixa de seleção, por exemplo – pode usar os modelos *ListViewItemExpanded* ou *GridViewItemExpanded*. Esses modelos são incluídos com os estilos padrão em generic.xaml. Eles seguem o padrão XAML usual de criação de todos os elementos visuais de UIElements individuais.
 
-Como mencionado anteriormente, o número de UIElements em um modelo de item tem um impacto significativo no desempenho de sua exibição de lista. Substituir ListViewItemPresenter pelos modelos XAML expandidos aumenta consideravelmente o número de elementos e não é recomendado quando a exibição de lista mostrará um grande número de itens ou quando o desempenho for uma preocupação.
+Como mencionado anteriormente, o número de UIElements em um modelo de item tem um impacto significativo no desempenho de sua exibição de lista. A substituição de ListViewItemPresenter pelos modelos XAML expandidos aumenta consideravelmente o número de elementos e não é recomendada quando a exibição de lista mostrará um grande número de itens ou quando o desempenho for uma preocupação.
 
-> **Observação**&nbsp;&nbsp;**ListViewItemPresenter** tem suporte somente quando o [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) da exibição de lista for [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemswrapgrid.aspx) ou [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx). Se você alterar o ItemsPanel para usar [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.variablesizedwrapgrid.aspx), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.wrapgrid.aspx) ou [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx), o modelo de itens será alternado automaticamente para o modelo XAML expandido. Para obter mais informações, consulte [Otimização das interfaces do usuário ListView e GridView](https://msdn.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview).
+> [!NOTE]
+> **ListViewItemPresenter** só é compatível quando [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) da exibição de lista é um [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemswrapgrid.aspx) ou um [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx). Se você alterar o ItemsPanel para usar [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.variablesizedwrapgrid.aspx), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.wrapgrid.aspx) ou [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx), o modelo de itens será alternado automaticamente para o modelo XAML expandido. Para obter mais informações, consulte [Otimização das interfaces do usuário ListView e GridView](https://msdn.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview).
 
 Para personalizar um modelo XAML expandido, você precisa fazer uma cópia dele em seu aplicativo e definir a propriedade **ItemContainerStyle** para sua cópia.
 
@@ -461,7 +462,7 @@ Para personalizar um modelo XAML expandido, você precisa fazer uma cópia dele 
 Uma cópia do modelo expandido de generic.xaml será criada em seu aplicativo, que pode ser modificada conforme necessário.
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Listas](lists.md)
 - [ListView e GridView](listview-and-gridview.md)
@@ -469,6 +470,6 @@ Uma cópia do modelo expandido de generic.xaml será criada em seu aplicativo, q
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

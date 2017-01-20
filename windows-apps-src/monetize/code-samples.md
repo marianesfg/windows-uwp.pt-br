@@ -4,12 +4,12 @@ ms.assetid: 4a311d20-ba8c-4816-8091-35726428dc94
 description: "Obtenha outros exemplos que demonstram como usar as propriedades, os métodos e os eventos das classes AdControl e InterstitialAd nas bibliotecas de publicidade da Microsoft."
 title: "Amostras de código"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 0a852a4bf8404d7ab0d8a2a169a16451c0388122
+ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
+ms.openlocfilehash: a8f18048915927f9e93d4469e7288e5a06a69070
 
 ---
 
-# Amostras de código
+# <a name="code-samples"></a>Amostras de código
 
 
 
@@ -18,12 +18,12 @@ Esta seção fornece exemplos que demonstram como usar as propriedades, os méto
 
 Para obter projetos de exemplo completos que demonstram como adicionar anúncios intersticiais em faixa e vídeo a aplicativos JavaScript/HTML e XAML usando C# e C++, consulte os [exemplos de publicidade no GitHub](http://aka.ms/githubads).
 
-## Nesta seção
+## <a name="in-this-section"></a>Nesta seção
 
 |  Tópico    | Descrição |               
 |----------|-------|
-| [Exemplo de propriedades HTML](html-properties-example.md)     | Mostra uma propriedade **AdControl** totalmente atribuída em HTML.        |
-| [Exemplo de propriedades XAML](xaml-properties-example.md)     | Mostra uma propriedade **AdControl** totalmente atribuída em XAML.        |
+| [Exemplo de propriedades HTML do AdControl](html-properties-example.md)     | Mostra uma propriedade **AdControl** totalmente atribuída em HTML.        |
+| [Exemplo de propriedades XAML do AdControl](xaml-properties-example.md)     | Mostra uma propriedade **AdControl** totalmente atribuída em XAML.        |
 | [Criar um AdControl em JavaScript](create-an-adcontrol-in-javascript.md)     | Mostra como criar a **AdControl** usando JavaScript.        |
 | [Eventos AdControl em JavaScript](adcontrol-events-in-javascript.md)     | Mostra como manipular eventos **AdControl** em JavaScript.       |
 | [Eventos de AdControl em C#](adcontrol-events-in-c.md)     | Mostra como manipular eventos **AdControl** em C#.       |
@@ -41,6 +41,6 @@ Para obter projetos de exemplo completos que demonstram como adicionar anúncios
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

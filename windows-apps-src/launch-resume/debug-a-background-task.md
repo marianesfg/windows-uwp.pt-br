@@ -4,12 +4,12 @@ title: Depurar uma tarefa em segundo plano
 description: "Aprenda a depurar uma tarefa em segundo plano, incluindo ativação e rastreamento de depuração de tarefas em seguindo plano no log de eventos do Windows."
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
 translationtype: Human Translation
-ms.sourcegitcommit: e094ed9e0110fee33275721c4b6547ba53c1da3e
-ms.openlocfilehash: c4717ac41992d9a0c04d098067881ce5ca6952f0
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 6e1184729af929b771f21112083593e321cacc38
 
 ---
 
-# Depurar uma tarefa em segundo plano
+# <a name="debug-a-background-task"></a>Depurar uma tarefa em segundo plano
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -18,10 +18,10 @@ ms.openlocfilehash: c4717ac41992d9a0c04d098067881ce5ca6952f0
 
 Aprenda a depurar uma tarefa em segundo plano, incluindo ativação e rastreamento de depuração de tarefas em seguindo plano no log de eventos do Windows.
 
-## Depurando tarefas em segundo plano fora do processo vs. no processo
+## <a name="debugging-out-of-process-vs-in-process-background-tasks"></a>Depurando tarefas em segundo plano fora do processo vs. no processo
 Este tópico aborda principalmente tarefas em segundo plano que são executadas em um processo separado do aplicativo host. Se você estiver depurando uma tarefa em segundo plano no processo, não terá um projeto de tarefa em segundo plano separado e poderá definir um ponto de interrupção em **OnBackgroundActivated()** (onde seu código em segundo plano no processo é executado) e consulte a etapa 2 em [Disparar tarefas em segundo plano manualmente para depurar o código da tarefa em segundo plano](#Trigger-background-tasks-manually-to-debug-background-task-code)abaixo, para obter instruções sobre como disparar seu código em segundo plano para ser executado.
 
-## Verificar se o projeto de tarefa em segundo plano está configurado corretamente
+## <a name="make-sure-the-background-task-project-is-set-up-correctly"></a>Verificar se o projeto de tarefa em segundo plano está configurado corretamente
 
 Este tópico pressupõe que você já tenha um aplicativo com uma tarefa em segundo plano para depurar. As instruções a seguir são específicas de tarefas em segundo plano que são executadas fora do processo e não se aplicam a tarefas em segundo plano no processo.
 
@@ -29,7 +29,7 @@ Este tópico pressupõe que você já tenha um aplicativo com uma tarefa em segu
 -   Em C# e C++, verifique se o **Tipo de saída** do projeto de tarefa em segundo plano é "componente do Tempo de Execução do Windows".
 -   A classe de segundo plano deve ser declarada no atributo de ponto de entrada no manifesto do pacote.
 
-## Disparar tarefas em segundo plano manualmente para depurar o código dessas tarefas
+## <a name="trigger-background-tasks-manually-to-debug-background-task-code"></a>Disparar tarefas em segundo plano manualmente para depurar o código dessas tarefas
 
 As tarefas em segundo plano podem ser ativadas manualmente por meio do Microsoft Visual Studio. Em seguida, você pode percorrer o código e depurá-lo.
 
@@ -49,7 +49,7 @@ As tarefas em segundo plano podem ser ativadas manualmente por meio do Microsoft
 
 3.  Quando a tarefa em segundo plano é ativada, o depurador é anexado a ela e exibe a saída da depuração no VS.
 
-## Depurar a ativação de tarefas em segundo plano
+## <a name="debug-background-task-activation"></a>Depurar a ativação de tarefas em segundo plano
 
 > [!NOTE]
 > Esta seção é específica de tarefas em segundo plano que são executadas fora do processo e não se aplica a tarefas em segundo plano no processo.
@@ -83,7 +83,7 @@ A ativação da tarefa em segundo plano depende de três coisas:
 
 ![visualizador de eventos para informações de depuração das tarefas em segundo plano](images/event-viewer.png)
 
-## Implantação do pacote Visual Studio e tarefas em segundo plano
+## <a name="background-tasks-and-visual-studio-package-deployment"></a>Implantação do pacote Visual Studio e tarefas em segundo plano
 
 Se um aplicativo que utiliza tarefas em segundo plano for implantado com o Visual Studio, e a versão (principal e/ou secundária) especificada no Criador de Manifestos for atualizada, a posterior reimplantação do aplicativo com o Visual Studio poderá causar interrupção nas tarefas em segundo plano do aplicativo. Isso pode ser remediado da seguinte maneira:
 
@@ -92,7 +92,7 @@ Se um aplicativo que utiliza tarefas em segundo plano for implantado com o Visua
 -   Você pode selecionar a opção de depuração "Sempre reinstalar meu pacote" para evitar isso em projetos C#.
 -   Aguarde até que o aplicativo esteja pronto para implantação final para incrementar a versão do pacote (não o altere durante a depuração).
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 -   Veja se seu aplicativo verifica os registros de tarefas em segundo plano existentes antes de registrar novamente a tarefa em segundo plano. Vários registros da mesma tarefa em segundo plano podem causar resultados inesperados ao executarem a tarefa em segundo plano mais de uma vez sempre que ela é disparada.
 -   Se a tarefa em segundo plano exigir acesso à tela de bloqueio, coloque o aplicativo na tela de bloqueio antes de tentar depurar essa tarefa. Para obter informações sobre como especificar opções de manifesto para aplicativos compatíveis com a tela de bloqueio, consulte [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md).
@@ -100,9 +100,9 @@ Se um aplicativo que utiliza tarefas em segundo plano for implantado com o Visua
 
 Para obter mais informações sobre como usar o VS para depurar uma tarefa em segundo plano, consulte [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 * [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
@@ -116,6 +116,6 @@ Para obter mais informações sobre como usar o VS para depurar uma tarefa em se
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,17 +1,20 @@
 ---
 author: mijacobs
 Description: "Este artigo descreve os recursos, os benefícios e os requisitos da Universal Windows Platform (UWP) de uma perspectiva de design. Descubra o que a plataforma oferece gratuitamente e as ferramentas que estão à disposição."
-title: "Introdução ao design de aplicativos UWP (Plataforma Universal do Windows)"
+title: "Introdução ao design de aplicativos UWP (Plataforma Universal do Windows) (aplicativos do Windows)"
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 label: Intro to UWP app design
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 06925bc42aab6d2ca7bf97c48161cca5e1cf840b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e6169f033a224c6ad9c3ba47ef1fd0a80e137dff
 
 ---
 
-#  Introdução ao design de aplicativos UWP 
+#  <a name="introduction-to-uwp-app-design"></a>Introdução ao design de aplicativos UWP 
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Um aplicativo UWP (Plataforma Universal do Windows) pode ser executado em qualquer dispositivo baseado no Windows, como um telefone, tablet ou computador.
 
@@ -23,9 +26,9 @@ Projetar um aplicativo que tenha boa aparência em uma variedade tão grande de 
 
 Este artigo descreve os recursos de interface do usuário e os benefícios dos aplicativos UWP e fornece algumas diretrizes de design de alto nível para criar seu primeiro aplicativo UWP. Vamos começar analisando alguns recursos disponíveis ao criar um aplicativo UWP. 
 
-## Recursos de aplicativo UWP
+## <a name="uwp-app-features"></a>Recursos de aplicativo UWP
 
-### Dimensionamento e pixels eficazes
+### <a name="effective-pixels-and-scaling"></a>Dimensionamento e pixels eficazes
 
 Os aplicativos UWP ajustam automaticamente o tamanho de controles, fontes e outros elementos da interface do usuário para que eles sejam legíveis em todos os dispositivos.
 
@@ -35,7 +38,7 @@ Quando seu aplicativo é executado em um dispositivo da plataforma Windows, o si
 
 Devido ao modo como o sistema de dimensionamento funciona, ao criar seu aplicativo UWP, você está criando em *pixels efetivos*, não pixels físicos reais. Portanto, como isso impacta a forma em que você projeta o seu aplicativo?
 
--   Você pode ignorar a densidade de pixels e a resolução de tela real ao projetar. Em vez disso, projete para a resolução efetiva (a resolução em pixels efetivos) de uma classe de tamanho (definimos classes de tamanho [mais adiante neste artigo](#sizeclasses)).
+-   Você pode ignorar a densidade de pixels e a resolução de tela real ao projetar. Crie o projeto para obter a resolução efetiva (a resolução em pixels efetivos) de uma classe de tamanho (para obter detalhes, consulte o artigo [Tamanhos de tela e pontos de interrupção](screen-sizes-and-breakpoints-for-responsive-design.md)).
 
 -   Quando o sistema escalona sua interface do usuário, ele faz isso em múltiplos de 4. Para garantir uma aparência nítida, ajuste seu design para uma grade de pixel 4x4: torne as margens, tamanhos e posições dos elementos da interface do usuário, e a posição (mas não o tamanho: o texto pode ser de qualquer tamanho) do texto um múltiplo de 4 pixels efetivos.
 
@@ -47,14 +50,15 @@ A próxima ilustração mostra os elementos de design que não são mapeados par
 
 ![elementos de design que não estão alinhados à grade de pixels de 4x4](images/rsp-design/offthegridillustration.png)
 
-**Dica**   Ao criar modelos de tela em programas de edição de imagens, defina o DPI para 72 e defina as dimensões da imagem para a resolução efetiva da classe de tamanho pretendida. (Para obter uma lista de classes de tamanho e resoluções efetivas, consulte a seção [Recomendações para classes de tamanho específico](#sizeclasses) deste artigo.)
+> [!TIP]
+> Ao criar modelos de tela em programas de edição de imagens, defina o DPI para 72 e defina as dimensões da imagem para a resolução efetiva da classe de tamanho pretendida. (Para obter uma lista de classes de tamanho e resoluções efetivas, consulte a seção [Recomendações para classes de tamanho específico](#sizeclasses) deste artigo.)
 
 
-### Entrada universal e interações inteligentes
+### <a name="universal-input-and-smart-interactions"></a>Entrada universal e interações inteligentes
 
 Outro recurso interno da UWP é a entrada universal habilitada por meio de interações inteligentes. Embora você possa criar seus aplicativos para dispositivos e modos de entrada específicos, isso não é obrigatório. Isso ocorre porque, por padrão, os aplicativos Universais do Windows dependem de interações inteligentes. Isso significa que você pode criar uma interação de clique sem precisar saber nem definir se o clique vem de um clique do mouse real ou do toque de um dedo.
 
-### Controles e estilos universais
+### <a name="universal-controls-and-styles"></a>Controles e estilos universais
 
 
 A UWP também fornece alguns blocos de construção úteis que facilitam a criação de aplicativos para várias famílias de dispositivos.
@@ -85,7 +89,7 @@ A UWP também fornece alguns blocos de construção úteis que facilitam a cria�
 
 Agora que descrevemos os blocos de construção de aplicativos UWP, vamos ver como reuni-los para criar uma interface do usuário. 
     
-## A anatomia de um aplicativo UWP típico
+## <a name="the-anatomy-of-a-typical-uwp-app"></a>A anatomia de um aplicativo UWP típico
 
 
 Uma interface do usuário moderna é uma coisa complexa, composta de texto, formas, cores e animações que, em última análise, são compostas de pixels individuais da tela do dispositivo que você está usando. Quando você começa a criar uma interface do usuário, o grande número de opções pode ser complicado.
@@ -94,7 +98,7 @@ Para simplificar, vamos definir a anatomia de um aplicativo de uma perspectiva d
 
 
 
-<table>
+<table class="uwpd-noborder" >
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -122,7 +126,7 @@ No mínimo, um aplicativo tem uma tela inicial e uma página inicial que define 
 
 Ao decidir sobre os elementos da interface do usuário corretos para seu aplicativo, você também pode considerar os dispositivos e os tamanhos de tela em que o aplicativo será executado.
 
-## <span id="Why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="WHY_TAILOR_YOUR_APP_FOR_SPECIFIC_DEVICE_FAMILIES_AND_SCREEN_SIZES_"></span>Adaptar seu aplicativo para dispositivos e tamanhos de tela específicos.
+## <a name="tailoring-your-app-for-specific-devices-and-screen-sizes"></a>Adaptar seu aplicativo para dispositivos e tamanhos de tela específicos.
 
 
 Os aplicativos UWP usam pixels efetivos para garantir que seus elementos de design serão legíveis e utilizáveis em todos os dispositivos do Windows. Sendo assim, por que você desejaria personalizar a interface do usuário do seu aplicativo para uma família de dispositivos específica?
@@ -146,12 +150,12 @@ Antes de prosseguirmos, o Windows não oferece uma forma de o seu aplicativo det
 
     A biblioteca de controles universais funciona com todos os tipos de entrada (toque, caneta, teclado, mouse), mas você ainda pode otimizar para certos tipos de entrada reorganizando seus elementos de interface do usuário. Por exemplo, se você colocar elementos de navegação na parte inferior da tela, será mais fácil para os usuários de telefone acessá-los, mas a maioria dos usuários de computador espera ver os elementos de navegação na parte superior da tela.
 
-## <span id="Responsive_design_techniques"></span><span id="responsive_design_techniques"></span><span id="RESPONSIVE_DESIGN_TECHNIQUES"></span>Técnicas de design responsivo
+## <a name="responsive-design-techniques"></a>Técnicas de design responsivo
 
 
 Quando você otimiza a interface do usuário de seu aplicativo para larguras de tela específicas, dizemos que você está criando um design responsivo. Aqui estão as seis técnicas de design responsivo que você pode usar para personalizar a interface do usuário do seu aplicativo.
 
-### <span id="Reposition"></span><span id="reposition"></span><span id="REPOSITION"></span>Reposicionar
+### <a name="reposition"></a>Reposicionar
 
 Você pode alterar o local e a posição dos elementos de interface do usuário do aplicativo para obter o máximo de cada dispositivo. Neste exemplo, o modo de exibição retrato no telefone ou phablet necessita de uma interface do usuário de rolagem, pois somente um quadro completo é visível por vez. Quando o aplicativo é convertido em um dispositivo que permite dois quadros completos na tela, seja na orientação retrato ou paisagem, o quadro B pode ocupar um espaço dedicado. Se você estiver usando uma grade para posicionamento, poderá manter a mesma grade quando os elementos da interface do usuário forem reposicionados.
 
@@ -161,13 +165,13 @@ Neste design de exemplo para um aplicativo de fotos, o aplicativo de fotos repos
 
 ![um projeto para um aplicativo que reposiciona conteúdo em telas maiores](images/rsp-design/rspd-reposition-type1.png)
 
-### <span id="Resize"></span><span id="resize"></span><span id="RESIZE"></span>Redimensionar
+### <a name="resize"></a>Redimensionar
 
 Você pode otimizar o tamanho de quadro, ajustando as margens e o tamanho dos elementos da interface do usuário. Isso poderia permitir que você, como o exemplo aqui mostra, aumentasse a experiência de leitura em uma tela maior, simplesmente aumentando o quadro de conteúdo.
 
 ![redimensionando elementos de design](images/rsp-design/rspd-resize.png)
 
-### <span id="Reflow"></span><span id="reflow"></span><span id="REFLOW"></span>Refluxo
+### <a name="reflow"></a>Refluxo
 
 Alterando o fluxo de elementos da interface do usuário com base no dispositivo e na orientação, seu aplicativo pode oferecer uma exibição ideal do conteúdo. Por exemplo, ao passar para uma tela maior, talvez faça sentido alternar contêineres maiores, adicionar colunas e gerar itens de lista de maneira diferente.
 
@@ -175,7 +179,7 @@ Este exemplo mostra como uma única coluna de conteúdo de rolagem vertical no t
 
 ![refluxo de elementos de design](images/rsp-design/rspd-reflow.png)
 
-### <span id="_____________Reveal___________"></span><span id="_____________reveal___________"></span><span id="_____________REVEAL___________"></span> Revelação
+###  <a name="reveal"></a>Revelação
 
 Você pode revelar a interface do usuário com base no estado real da tela, ou quando o dispositivo dá suporte a funcionalidades adicionais, situações específicas ou orientações de tela preferenciais.
 
@@ -191,13 +195,13 @@ Parte da técnica de revelar ou ocultar inclui escolher quando exibir mais metad
 -   Em qualquer aplicativo, você pode separar colunas e revelar mais detalhes.
 -   Em qualquer aplicativo, você pode pegar algo que esteja empilhado verticalmente e dispor horizontalmente. Ao passar do telefone ou phablet para dispositivos maiores, os itens de lista empilhados podem mudar para revelar as linhas de itens de lista e colunas de metadados.
 
-### <span id="Replace"></span><span id="replace"></span><span id="REPLACE"></span>Substituir
+### <a name="replace"></a>Substituir
 
 Esta técnica permite que você alterne a interface do usuário de uma classe de tamanho de dispositivo ou orientação específica. Neste exemplo, o painel de navegação e sua interface de usuário compacta, transitória, funciona bem em um dispositivo menor, mas em um dispositivo maior, guias podem ser uma melhor opção.
 
 ![substituindo elementos de design](images/rsp-design/rspd-replace.png)
 
-### <span id="_____________Re-architect___________"></span><span id="_____________re-architect___________"></span><span id="_____________RE-ARCHITECT___________"></span> Rearquitetura
+###  <a name="re-architect"></a>Rearquitetura
 
 Você pode recolher ou bifurcar a arquitetura do seu aplicativo para melhor direcionar dispositivos específicos. Neste exemplo, ir do dispositivo à esquerda para o dispositivo à direita demonstra a junção de páginas.
 
@@ -208,7 +212,7 @@ Veja um exemplo dessa técnica aplicada ao design para um aplicativo inicial int
 ![um exemplo de um design que usa a técnica de design responsivo de rearquitetura](images/rsp-design/rspd-rearchitect-type1.png)
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 - [O que é um aplicativo UWP?](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)
 
@@ -220,6 +224,6 @@ Veja um exemplo dessa técnica aplicada ao design para um aplicativo inicial int
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

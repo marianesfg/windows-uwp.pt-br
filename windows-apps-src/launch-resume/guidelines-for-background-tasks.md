@@ -4,18 +4,18 @@ title: Diretrizes para tarefas em segundo plano
 description: Verifique se seu aplicativo atende aos requisitos para executar tarefas em segundo plano.
 ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
 translationtype: Human Translation
-ms.sourcegitcommit: 04cb13ce355b3983a55b7f7f253e6b22a7cebece
-ms.openlocfilehash: 04e8776852a68d2e15c0a08732da48756f403d15
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 2d03c7f47461422fef7a0905df7e68b3e65c33f0
 
 ---
 
-# Diretrizes para tarefas em segundo plano
+# <a name="guidelines-for-background-tasks"></a>Diretrizes para tarefas em segundo plano
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Verifique se seu aplicativo atende aos requisitos para executar tarefas em segundo plano.
 
-## Diretrizes da tarefa em segundo plano
+## <a name="background-task-guidance"></a>Diretrizes da tarefa em segundo plano
 
 Considere as diretrizes a seguir ao desenvolver a tarefa em segundo plano e antes de publicar o aplicativo.
 
@@ -34,7 +34,7 @@ Se você usar uma tarefa em segundo plano para reproduzir mídia em segundo plan
 
 **Gerenciar tarefas em segundo plano:**seu aplicativo deve obter uma lista de tarefas em segundo plano registradas, registrar os manipuladores de progresso e conclusão e tratar esses eventos de forma adequada. Suas classes de tarefa em segundo plano devem relatar progresso, cancelamento e conclusão. Para obter mais informações, consulte [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)e [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md).
 
-**Usar [BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499):**  se sua classe de tarefa em segundo plano executar código assíncrono, use adiamentos. Caso contrário, sua tarefa em segundo plano poderá ser encerrada prematuramente quando o método [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) (ou [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) no caso de tarefas em segundo plano dentro do processo). Para obter mais informações, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md)
+**Usar [BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499):**  se sua classe de tarefa em segundo plano executar código assíncrono, use adiamentos. Caso contrário, sua tarefa em segundo plano poderá ser encerrada prematuramente quando o método [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) (ou [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) no caso de tarefas em segundo plano dentro do processo). Para obter mais informações, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 
 Se preferir, solicite um adiamento e use **async/await** para concluir as chamadas de método assíncronas. Feche o adiamento após as chamadas do método **await**.
 
@@ -49,7 +49,7 @@ As tarefas em segundo plano que são executadas no mesmo processo do aplicativo 
 > **Importante**  A partir do Windows 10, os aplicativos não precisam mais estar na tela de bloqueio como um pré-requisito para executar tarefas em segundo plano.
 
 Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tipos de tarefas com suporte sem serem fixados na tela de bloqueio. No entanto, os aplicativos devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de tarefa em segundo plano. Esse método retornará [**BackgroundAccessStatus.Denied**](https://msdn.microsoft.com/library/windows/apps/hh700439) se o usuário tiver negado explicitamente permissões de tarefas em segundo plano para seu aplicativo nas configurações do dispositivo.
-## Lista de verificação da tarefa em segundo plano
+## <a name="background-task-checklist"></a>Lista de verificação da tarefa em segundo plano
 
 *Aplica-se a ambas as tarefas em segundo plano dentro e fora do processo*
 
@@ -75,7 +75,7 @@ Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tip
 -   Elabore tarefas em segundo plano de curta duração. As tarefas em segundo plano estão limitadas a 30 segundos de uso do relógio.
 -   Não conte com a interação do usuário nas tarefas em segundo plano.
 
-## Windows: lista de verificação de tarefa em segundo plano para aplicativos com recurso de tela de bloqueio
+## <a name="windows-background-task-checklist-for-lock-screen-capable-apps"></a>Windows: lista de verificação de tarefa em segundo plano para aplicativos com recurso de tela de bloqueio
 
 Siga essas diretrizes ao desenvolver tarefas em segundo plano para aplicativos que podem estar na tela de bloqueio. Siga as diretrizes em [Diretrizes e lista de verificação para blocos da tela de bloqueio](https://msdn.microsoft.com/library/windows/apps/hh465403).
 
@@ -88,10 +88,10 @@ Siga essas diretrizes ao desenvolver tarefas em segundo plano para aplicativos q
 **Observação**  
 Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md).
-* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
 * [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
@@ -111,6 +111,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

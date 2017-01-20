@@ -6,12 +6,12 @@ title: Desenvolvendo aplicativos inclusivos do Windows 10
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 9f68c2bdc92bfbdbc8328e4df161f7ecdfccf8e5
-ms.openlocfilehash: 19c90991ab86383fa259b05460cbd656d408e977
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 91f6a9d50b66064da7023599adbb058656fb1007
 
 ---
 
-# Desenvolvendo aplicativos inclusivos do Windows  
+# <a name="developing-inclusive-windows-apps"></a>Desenvolvendo aplicativos inclusivos do Windows  
 
 Este artigo discute como desenvolver aplicativos UWP (Plataforma Universal do Windows) acessíveis. Especificamente, ele presume que você entende como criar a hierarquia lógica para seu aplicativo. Aprenda a desenvolver aplicativos UWP para Windows 10 acessíveis que incluem navegação de teclado, configurações de cor e contraste, além de suporte para as tecnologias assistenciais.
 
@@ -23,12 +23,12 @@ Há três coisas que você deve fazer para se certificar de que seu aplicativo s
 2. Certifique-se de que seu aplicativo dê suporte a [navegação de teclado](#keyboard-navigation) pessoas que não são capazes de usar um mouse ou uma tela touch.
 3. Certifique-se de que seu aplicativo dê suporte a configurações [cor e contraste](#color-and-contrast) acessíveis.
 
-## Acesso programático  
+## <a name="programmatic-access"></a>Acesso programático  
 O acesso programático é essencial para a criação de acessibilidade em aplicativos. Isso é realizado por meio da definição do nome acessível (obrigatório) e a descrição (opcional) dos elementos de interface de usuário interativa e do conteúdo em seu aplicativo. Isso garante que os controles de interface do usuário sejam expostos à tecnologia assistencial (a), como leitores de tela (por exemplo, o Narrador) ou dispositivos de saída alternativos (como telas em Braille). Sem acesso programático, as APIs de tecnologia assistencial não conseguem interpretar informações corretamente, deixando o usuário incapaz de usar os produtos suficientemente ou forçando o AT a usar as interfaces de programação não documentadas ou técnicas nunca antes usadas como uma interface de acessibilidade. Quando os controles de interface do usuário são expostos à tecnologia assistencial, a AT é capaz de determinar quais ações e opções estão disponíveis para o usuário.  
 
 Para saber mais sobre como tornar os elementos de interface do usuário do seu aplicativo disponíveis para as tecnologias assistenciais (AT), veja [Expor informações básicas de acessibilidade](basic-accessibility-information.md).
 
-## Navegação de teclado  
+## <a name="keyboard-navigation"></a>Navegação de teclado  
 Para usuários cegos ou que têm problemas de mobilidade, é extremamente importante ser capaz de navegar a interface do usuário com um teclado. No entanto, apenas os controles de interface do usuário que exigem interação do usuário à função devem ter o foco do teclado. Componentes que não exigem uma ação, como imagens estáticas, não precisam do foco do teclado.  
 
 É importante lembrar que, ao contrário da navegação com um mouse ou toque, a navegação de teclado é linear. Ao considerar a navegação de teclado, pense em como o usuário interagirá com seu produto e qual será a lógica de navegação. Em culturas ocidentais, as pessoas leem da esquerda para a direita, de cima para baixo. Portanto, é prática comum seguir esse padrão para navegação de teclado.  
@@ -45,11 +45,11 @@ Para saber mais sobre a navegação de teclado entre elementos de interface do u
 
 Além disso, o eBook [Software de engenharia para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262) tem um capítulo excelente sobre esse assunto intitulado _Projetando a hierarquia lógica_.
 
-## Cor e contraste  
+## <a name="color-and-contrast"></a>Cor e contraste  
 Um dos recursos integrados de acessibilidade no Windows é o modo de alto contraste, o que aumenta o contraste de cor de texto e de imagens na tela do computador. Para algumas pessoas, aumentar o contraste das cores reduz a fadiga ocular e facilita a leitura. Ao verificar sua interface do usuário em alto contraste, você deseja verificar se os controles foram codificados consistentemente e com cores do sistema (não com cores embutidas em código) para garantir que os usuários possam ver todos os controles na tela que um usuário que não usa alto contraste veria.  
 
 XAML
-```xml
+```xaml
 <Button Background="{ThemeResource ButtonBackgroundThemeBrush}">OK</Button>
 ```
 Para saber mais sobre o uso de cores e recursos do sistema, veja [Recursos de tema XAML](../controls-and-patterns/xaml-theme-resources.md).
@@ -64,7 +64,7 @@ Se você decidiu usar seu próprio tema de cores em vez de cores do sistema, con
 
 **Combinações de cores** – Cerca de 7% dos homens (e menos de 1% das mulheres) têm alguma forma de deficiência para identificar cores. Os usuários com daltonismo têm problemas para diferenciar determinadas cores, portanto, é importante que não apenas a cor seja usada para transmitir status ou significado em um aplicativo. Assim como em imagens decorativas (como ícones ou planos de fundo), as combinações de cores devem ser escolhidas de forma que maximize a percepção da imagem por usuários daltônicos.  
 
-## Lista de verificação de acessibilidade  
+## <a name="accessibility-checklist"></a>Lista de verificação de acessibilidade  
 Veja a seguir uma versão abreviada da lista de verificação de acessibilidade:
 
 1. Defina o nome acessível (obrigatório) e a descrição (opcional) dos elementos de interface de usuário interativa e do conteúdo em seu aplicativo.
@@ -76,7 +76,7 @@ Veja a seguir uma versão abreviada da lista de verificação de acessibilidade:
 
 Para obter mais detalhes, veja o tópico [Lista de verificação de acessibilidade](accessibility-checklist.md) inteiro.
 
-## Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos relacionados  
 * [Criando software inclusivo](designing-inclusive-software.md)  
 * [Design inclusivo](http://design.microsoft.com/inclusive)
 * [Práticas de acessibilidade a evitar](practices-to-avoid.md)
@@ -86,6 +86,6 @@ Para obter mais detalhes, veja o tópico [Lista de verificação de acessibilida
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

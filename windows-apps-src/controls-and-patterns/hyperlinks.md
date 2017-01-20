@@ -6,11 +6,11 @@ ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 4d474af6930354482f9f8b6e7754ddaf6fe65dac
 
 ---
-# Hiperlinks
+# <a name="hyperlinks"></a>Hiperlinks
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,17 +21,13 @@ Os hiperlinks levam o usuário para outra parte do aplicativo, para outro aplica
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279356"><strong>Elemento de texto de hiperlink</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br242739"><strong>Controle HyperlinkButton</strong></a></li>
+<li>[**Elemento de texto de hiperlink**](https://msdn.microsoft.com/library/windows/apps/dn279356)</li>
+<li>[**Controle HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-## Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use um hiperlink quando você precisar de texto que responda quando selecionado e o usuário navegar para obter mais informações sobre o texto que foi selecionado.
 
@@ -41,13 +37,13 @@ Escolha o tipo correto de hiperlink com base em suas necessidades:
 -   Use um **HyperlinkButton** para hiperlinks autônomos. Um HyperlinkButton é um controle de botão especializado que você pode usar em qualquer lugar onde usaria um botão.
 -   Use um **HyperlinkButton** com uma [(Imagem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx) como seu conteúdo para criar uma imagem clicável.
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 Hiperlinks no aplicativo Calculadora.
 
 ![Exemplo de um hiperlink no aplicativo Calculadora](images/control-examples/hyperlinks-calculator.png)
 
-## Criar um elemento de texto de hiperlink
+## <a name="create-a-hyperlink-text-element"></a>Criar um elemento de texto de hiperlink
 
 Este exemplo mostra como usar um elemento de texto de hiperlink dentro de um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).
 
@@ -66,7 +62,7 @@ O hiperlink aparece embutido e flui com o texto ao redor:
 
 > **Dica**&nbsp;&nbsp;Quando você usa um hiperlink em um controle de texto com outros elementos de texto no XAML, coloque o conteúdo em um contêiner [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) e aplique o atributo `xml:space="preserve"` ao Span para manter o espaço em branco entre o hiperlink e os outros elementos.
 
-## Criar um HyperlinkButton
+## <a name="create-a-hyperlinkbutton"></a>Criar um HyperlinkButton
 
 Abaixo estão as instruções de como usar um HyperlinkButton com texto e com uma imagem.
 
@@ -87,15 +83,16 @@ Os botões de hiperlink com conteúdo de texto aparecem como texto marcado. A im
 
 ![Exemplo de um hiperlink como um controle de botão](images/controls_hyperlink-button-image.png)
 
-## Manipulas a navegação
+## <a name="handle-navigation"></a>Manipulas a navegação
 
 Para os dois tipos de hiperlinks, você manipula a navegação da mesma maneira. Você pode definir a propriedade **NavigateUri** ou manipular o evento **Click**.
 
 **Navegar até um URI**
 
-Para usar o hiperlink para navegar para um URI, defina a propriedade NavigateUri. Quando um usuário clica ou toca no hiperlink, o URI especificado é aberto no navegador padrão. O navegador padrão é executado em um processo separado de+ seu aplicativo.
+Para usar o hiperlink para navegar para um URI, defina a propriedade NavigateUri. Quando um usuário clica ou toca no hiperlink, o URI especificado é aberto no navegador padrão. O navegador padrão é executado em um processo à parte do aplicativo.
 
-> **Observação**&nbsp;&nbsp;Você não precisa usar esquemas http: nem https:. Você pode usar esquemas como ms-appx:, ms-appdata: ou ms-resources:, se houver conteúdo do recurso nesses locais que seja adequado carregar em um navegador. No entanto, o arquivo: o esquema é especificamente bloqueado. Para obter mais informações, consulte [Esquemas de URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
+> [!NOTE]
+> Você não precisa usar esquemas http: nem https:. Será possível usar esquemas como ms-appx:, ms-appdata: ou ms-resources:, se houver conteúdo do recurso nesses locais que seja indicado para ser carregado em um navegador. No entanto, o arquivo: o esquema é especificamente bloqueado. Para obter mais informações, consulte [Esquemas de URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
 
 > Quando um usuário clica no hiperlink, o valor da propriedade NavigateUri é passado para um manipulador do sistema para esquemas e tipos de URI. Em seguida, o sistema inicia o aplicativo que está registrado para o esquema do URI fornecido para NavigateUri.
 
@@ -110,7 +107,7 @@ Você normalmente não manipula o evento Click tão bem quanto especifica um val
 
 Não há nada que você pode fazer no manipulador de eventos Click para impedir que o navegador padrão carregue qualquer destino válido especificado para NavigateUri. Essa ação ocorre automaticamente (de forma assíncrona) quando o hiperlink é ativado e não pode ser cancelada de dentro do manipulador de eventos Click. 
 
-## Sublinhados de hiperlink
+## <a name="hyperlink-underlines"></a>Sublinhados de hiperlink
 Por padrão, os hiperlinks são sublinhados. Esse sublinhado é importante porque ele ajuda a atender a requisitos de acessibilidade. Usuários daltônicos usam o sublinhado para distinguir entre os hiperlinks e outros textos. Se você desabilitar os sublinhados, deverá considerar a adição de algum outro tipo de formatação diferente para distinguir hiperlinks de outros textos, como FontWeight ou FontStyle.
 
 **Elementos de texto de hiperlink**
@@ -127,7 +124,7 @@ O texto não aparece sublinhado nos seguintes casos:
 
 Se você precisar de um botão que apareça como texto sem sublinhado, considere usar um controle de botão padrão e aplicar o recurso interno do sistema `TextBlockButtonStyle` para sua propriedade Style.
 
-## Observações para o elemento de texto de hiperlink
+## <a name="notes-for-hyperlink-text-element"></a>Observações para o elemento de texto de hiperlink
 
 Esta seção aplica-se apenas ao elemento de texto de hiperlink, não para o controle HyperlinkButton.
 
@@ -145,16 +142,14 @@ O hiperlink não herda [Control](https://msdn.microsoft.com/library/windows/apps
 
 A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a propriedade [Foreground](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.foreground.aspx) para substituir isso.
 
-## Recomendações
+## <a name="recommendations"></a>Recomendações
 
 -   Só use hiperlinks para navegação; não os utilize para outras ações.
 -   Use o estilo Body da rampa de tipos para hiperlinks baseados em texto. Leia mais sobre [**fontes a rampa de tipos do Windows 10**](fonts.md).
 -   Mantenha hiperlinks diferentes distantes o suficiente para que o usuário possa diferenciar entre eles e tenha facilidade ao selecionar cada uma deles.
 -   Adicione dicas de ferramentas aos hiperlinks que indicam para onde o usuário será direcionado. Se o usuário for direcionado para um site externo, inclua o nome do domínio de nível superior na dica de ferramenta e defina o estilo do texto com uma cor de fonte secundária.
 
-
-
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Controles de texto](text-controls.md)
 - [Diretrizes de dicas de ferramenta](tooltips.md)
@@ -165,6 +160,6 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

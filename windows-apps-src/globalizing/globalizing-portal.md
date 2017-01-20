@@ -7,15 +7,13 @@ ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: a34b682cc903555b9d6f64636c3d1cf7bee75b5d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 3149eb8275cc74c61ff0e35963f3fd1dbdc4e833
 
 ---
 
-# Globalização e localização
-
-
-
+# <a name="globalization-and-localization"></a>Globalização e localização
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 O Windows é usado no mundo todo, por públicos de várias culturas, regiões e idiomas. Um usuário pode falar qualquer idioma ou até mesmo vários idiomas. Um usuário pode estar localizado em qualquer lugar do mundo e falar qualquer idioma em qualquer local. Você pode aumentar o mercado potencial para seu aplicativo desenvolvendo-o para ser prontamente adaptável usando *globalização* e *localização*.
 
@@ -36,7 +34,7 @@ Por exemplo:
 
 Assista a este vídeo para ter uma breve introdução sobre como preparar seu aplicativo para o mundo: [Introdução à globalização e à localização](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization).
 
-## Artigos
+## <a name="articles"></a>Artigos
 <table>
 <colgroup>
 <col width="50%" />
@@ -51,7 +49,7 @@ Assista a este vídeo para ter uma breve introdução sobre como preparar seu ap
 <tbody>
 <tr class="odd">
 <td align="left"><p>[O que fazer e o que não fazer](guidelines-and-checklist-for-globalizing-your-app.md)</p></td>
-<td align="left"><p>Siga estas práticas recomendadas ao globalizar seus aplicativos para um público-alvo maior e ao localizar seus aplicativos para um mercado específico.</p></td>
+<td align="left"><p>Siga estas práticas recomendadas ao globalizar seus apps para um público-alvo maior e ao localizar seus apps para um mercado específico.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Usar formatos prontos para o mundo](use-global-ready-formats.md)</p></td>
@@ -99,6 +97,6 @@ Consulte também a documentação criada originalmente para o Windows 8.x que ai
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

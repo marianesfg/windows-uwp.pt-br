@@ -6,16 +6,12 @@ ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: fc01951adfb151f1c5952d9181492a1d1f88b0cc
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 813a9a5fe27f3c0874eab80223afd6b3ac7be07a
 
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # <a name="special-tile-templates"></a>Modelos de blocos especiais
-
-
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. Cada modelo de bloco especial foi compilado especificamente para o Windows 10, exceto para o modelo de bloco icônico, um modelo especial clássico que foi atualizado para o Windows 10. Este artigo aborda três modelos de blocos especiais: Icônico, Fotos e Pessoas.
 
@@ -275,6 +271,6 @@ Para enviar a notificação, consulte [Escolher um método de entrega de notific
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

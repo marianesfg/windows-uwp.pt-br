@@ -6,26 +6,28 @@ ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: f49af17ada36ceb2e5898d80047c2d616b1d0c6e
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 564062173544ab368d8dd7fc8fe2c35e9d518444
 
 ---
 
-# Usar padrões para formatar datas e horas
+# <a name="use-patterns-to-format-dates-and-times"></a>Usar padrões para formatar datas e horas
 
-
-
-
-
-**APIs importantes**
-
--   [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)
--   [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)
--   [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576)
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Use a API [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) com padrões personalizados para exibir datas e horas no formato exato que você deseja.
 
-## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>Introdução
+<div class="important-apis" >
+<b>APIs Importantes</b><br/>
+<ul>
+<li>[**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)</li>
+<li>[**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)</li>
+<li>[**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576)</li>
+</ul>
+</div>
+
+
+## <a name="introduction"></a>Introdução
 
 
 [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) fornece várias maneiras de formatar corretamente datas e horas para vários idiomas e países/regiões ao redor do mundo. Você pode usar formatos padrão para ano, mês, dia e assim por diante, ou você pode usar modelos de cadeias de caracteres padrão, como "longdate" ou "month day".
@@ -36,7 +38,7 @@ Mas quando quiser mais controle sobre a ordem e o formato dos componentes da cad
 
  
 
-## <span id="What_you_need_to_know"></span><span id="what_you_need_to_know"></span><span id="WHAT_YOU_NEED_TO_KNOW"></span>O que você precisa saber
+## <a name="what-you-need-to-know"></a>O que você precisa saber
 
 
 É importante notar que, ao usar padrões, você está essencialmente construindo um formato personalizado que não tem garantia de ser válido entre culturas. Por exemplo, considere o modelo "month day":
@@ -111,7 +113,7 @@ Para resumir as diferenças entre os modelos de cadeia de caracteres padrão e p
 -   Não garante ser culturalmente apropriada.
 -   Qualquer combinação de componentes pode ser especificada, em qualquer ordem.
 
-## <span id="Tasks"></span><span id="tasks"></span><span id="TASKS"></span>Tarefas
+## <a name="tasks"></a>Tarefas
 
 
 Suponha que você queira mostrar o mês e o dia atuais juntamente com a hora atual, em um formato específico. Por exemplo, você deseja que os usuários de inglês dos EUA vejam algo parecido com isto:
@@ -177,7 +179,7 @@ var mydateplustimefmt = new Windows.Globalization.DateTimeFormatting.DateTimeFor
 var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 ```
 
-## <span id="related_topics"></span>Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Exemplo de formatação de data e hora](http://go.microsoft.com/fwlink/p/?LinkId=231618)
@@ -192,6 +194,6 @@ var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

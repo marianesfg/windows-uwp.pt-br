@@ -6,16 +6,18 @@ ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 9d19107a29c471a811e87fc548656ff2d970754d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: f8cb9c36b42936b8dfd24bbd5f88e2cf500e930f
 
 ---
 
-# Ícones para aplicativos UWP
+# <a name="icons-for-uwp-apps"></a>Ícones para aplicativos UWP
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Ícones bons se harmonizam com a tipografia e com o restante da linguagem do design. Eles não misturam metáforas e comunicam apenas o que é necessário, com a máxima rapidez e simplicidade possível. 
 
-## Rampas de tamanho de dimensionamento linear 
+## <a name="linear-scaling-size-ramps"></a>Rampas de tamanho de dimensionamento linear 
 
 <table>
     <tr> 
@@ -32,7 +34,7 @@ ms.openlocfilehash: 9d19107a29c471a811e87fc548656ff2d970754d
     </tr>
 </table>
 
-## Formas comuns
+## <a name="common-shapes"></a>Formas comuns
 
 Os ícones geralmente devem maximizar o espaço fornecido com pouco preenchimento. Essas formas fornecem pontos de partida para dimensionamento de formas básicas. 
 
@@ -40,7 +42,7 @@ Os ícones geralmente devem maximizar o espaço fornecido com pouco preenchiment
 
 Use a forma que corresponda à orientação do ícone e componha ao redor desses parâmetros básicos. Os ícones não necessariamente precisam preencher ou se encaixar completamente dentro da forma e podem ser ajustados conforme necessário para garantir um equilíbrio ideal. 
 
-<table>
+<table class="uwpd-noborder">
     <tr>
         <td>Círculo<td>
         <td>Quadrado</td>
@@ -63,7 +65,7 @@ Use a forma que corresponda à orientação do ícone e componha ao redor desses
 
 </table>
 
-## Ângulos
+## <a name="angles"></a>Ângulos
 
 Além de usar a mesma grade e peso da linha, os ícones são construídos com elementos comuns. 
 
@@ -98,7 +100,7 @@ Essas linhas podem ser combinadas, unidas, giradas e refletidas para criar ícon
     </tr>
 </table>
 
-## Curvas
+## <a name="curves"></a>Curvas
 
 Linhas curvas são construídas a partir das seções de um círculo completo e não devem ser inclinadas, a menos que necessário para o ajuste na grade de pixels. 
 
@@ -117,19 +119,19 @@ Linhas curvas são construídas a partir das seções de um círculo completo e 
     </tr>    
 </table>
 
-## Construção geométrica
+## <a name="geometric-construction"></a>Construção geométrica
 
 É recomendável usar somente formas geométricas puras ao construir ícones.
 
 ![Ícone de guitarra com sobreposição geométrica ](images/icons-geometric-construction.png)
 
-## Formas preenchidas 
+## <a name="filled-shapes"></a>Formas preenchidas 
 
 Os ícones podem conter formas preenchidas quando necessário, mas eles não devem ser maiores que 4px em 32px × 32px. Os círculos preenchidos não devem ser maiores que 6px × 6px. 
 
 ![Preenchimento de 5px por 8px ](images/icons-filled-shapes.png)
 
-## Selos
+## <a name="badges"></a>Selos
 
 Um "selo" é um termo genérico usado para descrever um elemento adicionado a um ícone que não deve ser integrado com o elemento de ícone base. Elas geralmente transmitem outras partes de informações sobre o ícone como o status ou a ação. Outros termos comuns incluem: sobreposição, anotação ou modificador. 
 
@@ -151,7 +153,7 @@ Os selos de status utilizam um objeto preenchido colorido que está sobre o íco
 </table>
 <p></p>
 
-### Cor do selo 
+### <a name="badge-color"></a>Cor do selo 
 
 Os selos coloridos devem ser usados apenas para transmitir o estado de um ícone. As cores usadas nos selos de status transmitem mensagens emocionais específicas para o usuário. 
 
@@ -163,20 +165,20 @@ Os selos coloridos devem ser usados apenas para transmitir o estado de um ícone
 </table>
 <p></p>
 
-### Posição do selo
+### <a name="badge-position"></a>Posição do selo
 
 O padrão de posição de qualquer status ou ação é o canto inferior direito. Use as outras posições apenas quando o design não permitir isso. 
 
-### Dimensionamento do selo
+### <a name="badge-sizing"></a>Dimensionamento do selo
 
 Os selos devem ser dimensionados com 10 a 18 px em uma grade de 32px x 32px. 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 * [Diretrizes de ativos de bloco e ícone](../controls-and-patterns/tiles-and-notifications-app-assets.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

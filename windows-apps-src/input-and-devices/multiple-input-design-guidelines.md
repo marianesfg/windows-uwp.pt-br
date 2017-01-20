@@ -6,12 +6,13 @@ ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: d4238e0d1becee719148b38acf5a91d74230601d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: a433660665eeaa0caad3f380a587de89b8c74441
 
 ---
 
-# Várias entradas
+# <a name="multiple-inputs"></a>Várias entradas
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Assim como as pessoas usam uma combinação de voz e gestos ao se comunicar uns com os outros, vários tipos e modos de entrada também podem ser úteis ao interagir com um aplicativo.
 
@@ -24,12 +25,12 @@ Para começar, considere os vários cenários em que seu aplicativo manipulará 
 -   Todos os métodos de entrada têm suporte em todos os momentos? Com determinados controles? Em circunstâncias ou momentos específicos?
 -   Algum método de entrada tem prioridade?
 
-## Interações de modo único (ou exclusivo)
+## <a name="single-or-exclusive-mode-interactions"></a>Interações de modo único (ou exclusivo)
 
 
 Com interações de modo único, há suporte para vários tipos de entrada, mas apenas um pode ser usado por ação. Por exemplo, o reconhecimento de fala para comandos e gestos para navegação; ou, entrada de texto usando touch ou gestos, dependendo da proximidade.
 
-## Interações multimodais
+## <a name="multimodal-interactions"></a>Interações multimodais
 
 
 Com interações multimodais, vários métodos de entrada em sequência são usados para concluir uma única ação.
@@ -45,6 +46,6 @@ O usuário seleciona uma foto usando pressionar e segurar e, em seguida, diz "En
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

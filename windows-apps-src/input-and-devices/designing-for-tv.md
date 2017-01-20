@@ -6,9 +6,15 @@ ms.assetid: 780209cb-3e8a-4cf7-8f80-8b8f449580bf
 label: Designing for Xbox and TV
 template: detail.hbs
 isNew: true
+keywords: "Xbox, TV, experiência de 3 metros, gamepad, controle remoto, interação de entrada"
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ee0a2f5a34cbbef198a9012d0425bb84e65f3b33
-ms.openlocfilehash: de76a3c6d4949b9203df79855e1748a81d76ca64
+ms.sourcegitcommit: 8a040033f99d6e8cac04b44dcec58c6b306eda54
+ms.openlocfilehash: a138e0ba73da792a63f1c22ee4342a8157f2a136
 
 ---
 
@@ -167,7 +173,7 @@ A tabela a seguir lista o suporte a acelerador incorporado à UWP, bem como o qu
 | Page up/Page down  | Page up/Page down | Gatilhos esquerdo/direito | [CalendarView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.calendarview.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [ComboBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | Exibições que dão suporte à rolagem vertical
 | Página esquerda/direita | Nenhum(a) | Botões superiores esquerdo/direito | [Pivot](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | Exibições que dão suporte à rolagem horizontal
 | Ampliar/reduzir        | Ctrl +/- | Gatilhos esquerdo/direito | Nenhum(a) | `ScrollViewer`, exibições que dão suporte a ampliação e redução |
-| Abrir/fechar painel de navegação | Nenhum(a) | Visão | Nenhum(a) | Painéis de navegação |
+| Abrir/fechar painel de navegação | Nenhum(a) | Exibir | Nenhum(a) | Painéis de navegação |
 | [Pesquisar](#search-experience) | Nenhum(a) | Botão Y | Nenhum(a) | Atalho para a função de pesquisa principal no aplicativo |
 
 ## <a name="xy-focus-navigation-and-interaction"></a>Interação e navegação de foco do plano XY
@@ -499,7 +505,7 @@ Você pode até recusar os elementos visuais de foco fornecidos pelo sistema des
 
 ### <a name="light-dismiss-overlay"></a>Sobreposição light dismiss
 
-Para chamar a atenção do usuário para os elementos de interface do usuário que ele está manipulando no momento com o controle de jogo ou o controle remoto, a UWP adiciona automaticamente uma camada de "fumaça" que abrange as áreas externas à interface do usuário pop-up quando o aplicativo é executado no Xbox One. Isso não exige nenhum trabalho extra, mas é algo que você deve ter em mente ao projetar sua interface do usuário. Você pode definir a propriedade `LightDismissOverlayMode` em qualquer `FlyoutBase` para habilitar ou desabilitar a camada de fumaça; o padrão passa a ser `Auto`, o que significa que ela está habilitada no Xbox e desabilitada em outros lugares. Para obter mais informações, consulte [Modal vs. light dismiss](../controls-and-patterns/dialogs-popups-menus.md#modal-vs-light-dismiss).
+Para chamar a atenção do usuário para os elementos de interface do usuário que ele está manipulando no momento com o controle de jogo ou o controle remoto, a UWP adiciona automaticamente uma camada de "fumaça" que abrange as áreas externas à interface do usuário pop-up quando o aplicativo é executado no Xbox One. Isso não exige nenhum trabalho extra, mas é algo que você deve ter em mente ao projetar sua interface do usuário. Você pode definir a propriedade `LightDismissOverlayMode` em qualquer `FlyoutBase` para habilitar ou desabilitar a camada de fumaça; o padrão passa a ser `Auto`, o que significa que ela está habilitada no Xbox e desabilitada em outros lugares. Para obter mais informações, consulte [Modal vs. light dismiss](../controls-and-patterns/menus.md).
 
 ## <a name="focus-engagement"></a>Envolvimento de foco
 
@@ -1017,7 +1023,7 @@ Para obter mais informações sobre a interface do usuário aninhada, consulte [
 
 ### <a name="mediatransportcontrols"></a>MediaTransportControls
 
-O elemento [MediaTransportControls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediatransportcontrols.aspx) permite que os usuários interajam com sua mídia, fornecendo uma experiência de reprodução padrão que permite reproduzir, pausar, ativar as legendas ocultas e muito mais. Esse controle é uma propriedade de [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.aspx) e oferece suporte a duas opções de layout: *linha única* e *linha dupla*. No layout de linha única, os botões de reprodução e controle deslizante estão localizados em uma linha, com o botão Reproduzir/Pausar localizado à esquerda do controle deslizante. No layout de duas linhas, o controle deslizante ocupa sua própria linha, com os botões de reprodução em uma linha inferior separada. Ao projetar para a experiência de 10 pés, o layout de duas linhas deve ser usado, pois fornece navegação melhor para gamepad. Para habilitar o layout de duas linhas, defina `IsCompact="False"` no elemento `MediaTransportControls` na propriedade [TransportControls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.transportcontrols.aspx) do `MediaPlayerElement`.
+O elemento [MediaTransportControls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediatransportcontrols.aspx) permite que os usuários interajam com sua mídia, fornecendo uma experiência de reprodução padrão que permite reproduzir, pausar, ativar as legendas ocultas e muito mais. Esse controle é uma propriedade de [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.aspx) e oferece suporte a duas opções de layout: *linha única* e *linha dupla*. No layout de linha única, os botões de reprodução e controle deslizante estão localizados em uma linha, com o botão Reproduzir/Pausar localizado à esquerda do controle deslizante. No layout de duas linhas, o controle deslizante ocupa sua própria linha, com os botões de reprodução em uma linha inferior separada. Ao projetar para a experiência de 3 metros, o layout de duas linhas deve ser usado, pois fornece navegação melhor para gamepad. Para habilitar o layout de duas linhas, defina `IsCompact="False"` no elemento `MediaTransportControls` na propriedade [TransportControls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.transportcontrols.aspx) do `MediaPlayerElement`.
 
 ```xml
 <MediaPlayerElement x:Name="mediaPlayerElement1"  
@@ -1121,6 +1127,6 @@ O design para a experiência de 3 metros tem algumas considerações especiais a
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

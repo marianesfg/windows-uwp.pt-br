@@ -4,12 +4,12 @@ title: "Usar um gatilho de manutenção"
 description: "Saiba como usar a classe MaintenanceTrigger para executar um código leve em segundo plano enquanto o dispositivo estiver conectado."
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: 2f459156ac8bc52c79b9b6d3b902882693120028
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 8ca0255be671d0a2900bb7be3a66d4df4e793725
 
 ---
 
-# Usar um gatilho de manutenção
+# <a name="use-a-maintenance-trigger"></a>Usar um gatilho de manutenção
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -21,11 +21,11 @@ ms.openlocfilehash: 2f459156ac8bc52c79b9b6d3b902882693120028
 
 Saiba como usar a classe [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) para executar um código leve em segundo plano enquanto o dispositivo estiver conectado.
 
-## Criar um objeto de gatilho de manutenção
+## <a name="create-a-maintenance-trigger-object"></a>Criar um objeto de gatilho de manutenção
 
 Este exemplo pressupõe que você tenha um código leve que possa executar em segundo plano para melhorar o aplicativo enquanto o dispositivo está conectado. Este tópico se concentra na [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517), que é semelhante a [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Mais informações sobre como escrever uma classe de tarefa em segundo plano estão disponíveis em [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou em [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md).
+Mais informações sobre como escrever uma classe de tarefa em segundo plano estão disponíveis em [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou em [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md).
 
 Crie um novo objeto [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). O segundo parâmetro, *OneShot*, especifica se a tarefa de manutenção só será executada uma vez ou se continuará a ser executada periodicamente. Se *OneShot* for definido como verdadeiro, o primeiro parâmetro (*FreshnessTime*) especificará o número de minutos aguardados até que a tarefa em segundo plano seja agendada. Se *OneShot* for definido como falso, *FreshnessTime* especificará com que frequência a tarefa em segundo plano será executada.
 
@@ -45,7 +45,7 @@ Esse código de exemplo cria um gatilho que é executada uma vez a cada hora:
 > MaintenanceTrigger ^ taskTrigger = ref new MaintenanceTrigger(waitIntervalMinutes, false);
 > ```
 
-## (Opcional) Adicionar uma condição
+## <a name="optional-add-a-condition"></a>(Opcional) Adicionar uma condição
 
 -   Se necessário, crie uma condição de tarefa em segundo plano para controlar quando a tarefa será executada. Uma condição impede que sua tarefa em segundo plano seja executada até que a condição em questão seja atendida. Para obter mais informações, consulte [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md).
 
@@ -61,7 +61,7 @@ O código a seguir adiciona uma condição ao criador de tarefa de manutenção:
 > SystemCondition ^ exampleCondition = ref new SystemCondition(SystemConditionType::InternetAvailable);
 > ```
 
-## Registrar a tarefa em segundo plano
+## <a name="register-the-background-task"></a>Registrar a tarefa em segundo plano
 
 -   Registre a tarefa em segundo plano chamando sua função de registro da tarefa em segundo plano. Para obter mais informações sobre como registrar tarefas em segundo plano, consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md).
 
@@ -92,12 +92,12 @@ O código a seguir adiciona uma condição ao criador de tarefa de manutenção:
 
 > **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 ****
 
 * [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md).
-* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
@@ -112,6 +112,6 @@ O código a seguir adiciona uma condição ao criador de tarefa de manutenção:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

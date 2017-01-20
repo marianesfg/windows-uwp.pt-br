@@ -4,12 +4,12 @@ title: Executar uma tarefa em segundo plano em um temporizador
 description: "Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa periódica em segundo plano."
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: 1ad44208b3442e80212656db943ff088514cc954
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 488bbbf1dbe99d653dded0af78a8fd22c7429cde
 
 ---
 
-# Executar uma tarefa em segundo plano em um temporizador
+# <a name="run-a-background-task-on-a-timer"></a>Executar uma tarefa em segundo plano em um temporizador
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -22,9 +22,9 @@ ms.openlocfilehash: 1ad44208b3442e80212656db943ff088514cc954
 Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa periódica em segundo plano.
 
 -   Este exemplo pressupõe que você tenha uma tarefa em segundo plano que precisa ser executada periodicamente ou em um momento específico para dar suporte ao aplicativo. Uma tarefa em segundo plano só será executada usando um [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) se você tiver chamado [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485).
--   Este tópico pressupõe que você já criou uma classe de tarefa em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
+-   Este tópico pressupõe que você já criou uma classe de tarefa em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
 
-## Criar um gatilho de tempo
+## <a name="create-a-time-trigger"></a>Criar um gatilho de tempo
 
 -   Crie um novo [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). O segundo parâmetro, *OneShot*, especifica se a tarefa em segundo plano será executada somente uma única vez ou periodicamente. Se *OneShot* for definido como verdadeiro, o primeiro parâmetro (*FreshnessTime*) especificará o número de minutos aguardados até que a tarefa em segundo plano seja agendada. Se *OneShot* for definido como falso, *FreshnessTime* especificará a frequência com que a tarefa em segundo plano será executada.
 
@@ -47,7 +47,7 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
     > TimeTrigger ^ hourlyTrigger = ref new TimeTrigger(60, false);
     > ```
 
-## (Opcional) Adicionar uma condição
+## <a name="optional-add-a-condition"></a>(Opcional) Adicionar uma condição
 
 -   Se necessário, crie uma condição de tarefa em segundo plano para controlar quando a tarefa será executada. Condições impedem que sua tarefa em segundo plano seja executada até que a condição em questão seja atendida. Para obter mais informações, consulte [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md).
 
@@ -61,7 +61,7 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
     > SystemCondition ^ userCondition = ref new SystemCondition(SystemConditionType::UserPresent)
     > ```
 
-##  Chamar RequestAccessAsync()
+##  <a name="call-requestaccessasync"></a>Chamar RequestAccessAsync()
 
 -   Antes de tentar registrar a tarefa em segundo plano [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494).
 
@@ -73,7 +73,7 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
     > BackgroundExecutionManager::RequestAccessAsync();
     > ```
 
-## Registrar a tarefa em segundo plano
+## <a name="register-the-background-task"></a>Registrar a tarefa em segundo plano
 
 -   Registre a tarefa em segundo plano chamando sua função de registro da tarefa em segundo plano. Para obter mais informações sobre como registrar tarefas em segundo plano, consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md).
 
@@ -99,16 +99,16 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
     > **Note**  Background task registration parameters are validated at the time of registration. An error is returned if any of the registration parameters are invalid. Ensure that your app gracefully handles scenarios where background task registration fails - if instead your app depends on having a valid registration object after attempting to register a task, it may crash.
 
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 > **Observação**  A partir do Windows 10, o usuário não precisa mais adicionar o aplicativo à tela de bloqueio para usar tarefas em segundo plano. Para obter diretrizes sobre os tipos de gatilhos de tarefa em segundo plano, consulte [Dar suporte ao aplicativo com tarefas em segundo plano](support-your-app-with-background-tasks.md).
 
 > **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md).
-* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-an-outofproc-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
@@ -123,6 +123,6 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

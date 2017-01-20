@@ -4,12 +4,12 @@ Description: "Conheça a ponte da área de trabalho para UWP e converta o aplica
 Search.Product: eADQiWindows 10XVcnh
 title: "Traga o aplicativo da área de trabalho para a Plataforma Universal do Windows (UWP) usando a ponte da área de trabalho"
 translationtype: Human Translation
-ms.sourcegitcommit: 933dcd48c03de1992bbfcf0d86951170264a309f
-ms.openlocfilehash: 170ed75d1cd865bfc8e4feb776fce4332cc67850
+ms.sourcegitcommit: 462d2b13cefc6abb4d7c6f814ec4ee659e4afde8
+ms.openlocfilehash: 1ef54c3c45113e434333058d0f039e213ea8eed2
 
 ---
 
-# Traga o aplicativo da área de trabalho para a Plataforma Universal do Windows (UWP) usando a ponte da área de trabalho
+# <a name="bring-your-desktop-app-to-the-universal-windows-platform-uwp-with-the-desktop-bridge"></a>Traga o aplicativo da área de trabalho para a Plataforma Universal do Windows (UWP) usando a ponte da área de trabalho
 
 Conheça a ponte da área de trabalho para UWP e converta o aplicativo da área de trabalho do Windows em um aplicativo da Plataforma Universal do Windows (UWP).
 
@@ -17,7 +17,7 @@ A ponte da área de trabalho é um conjunto de tecnologias que permite converter
 
 Há duas partes na tecnologia que permite que os aplicativos da área de trabalho sejam convertidos em pacotes UWP. A primeira é o processo de conversão, que utiliza os binários existentes e os reempacota como um pacote UWP. O código ainda é o mesmo, apenas é empacotado de forma diferente. A segunda parte compreende tecnologias de tempo de execução na atualização de aniversário do Windows que permitem que um pacote UWP tenha arquivos executáveis que são executados com confiança total, em vez de em um contêiner de aplicativo. Essa tecnologia também dá um identificador de pacote a um aplicativo convertido, que é necessário para usar algumas APIs de UWP.
 
-## Benefícios
+## <a name="benefits"></a>Benefícios
 
 Aqui estão alguns dos benefícios da conversão do aplicativo da área de trabalho do Windows: 
 
@@ -31,11 +31,11 @@ Aqui estão alguns dos benefícios da conversão do aplicativo da área de traba
 
 **Casos de uso ampliados em dispositivos**. Usando a ponte, você pode migrar gradualmente o código para a Plataforma Universal do Windows a fim de alcançar todos os dispositivos Windows 10, inclusive telefones, Xbox One e HoloLens.
 
-## Preparar
+## <a name="prepare"></a>Preparar
 
 A ponte da área de trabalho para UWP foi projetada para facilidade de uso, e você talvez não precise fazer muito para preparar o aplicativo para o processo de conversão. No entanto, existem algumas restrições e situações específicas a serem consideradas antes da conversão. Consulte o artigo [Preparar o aplicativo para a ponte da área de trabalho para UWP](desktop-to-uwp-prepare.md) e resolva todos os problemas que se apliquem ao aplicativo antes de continuar.
 
-## Converter
+## <a name="convert"></a>Converter
 
 Você tem algumas opções diferentes para converter seu aplicativo.
 
@@ -43,35 +43,43 @@ Você tem algumas opções diferentes para converter seu aplicativo.
 
 **Conversão manual**. Se seu aplicativo é instalado usando o xcopy ou você estiver familiarizado com as alterações que o instalador faz no sistema, a conversão manual pode ser uma opção mais simples. Isso envolve a criação de um arquivo de manifesto, a execução da ferramenta MakeAppx.exe e a assinatura do pacote do aplicativo. Para saber mais detalhes sobre como converter manualmente, consulte [Converter manualmente o aplicativo em UWP usando a ponte da área de trabalho](desktop-to-uwp-manual-conversion.md). 
 
-**Instalador de terceiros**. Três instaladores de terceiros populares — [InstallShield by Flexera](http://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer), [WiX by FireGiant](https://www.firegiant.com/r/appx) e [Advanced Installer by Caphyon](http://www.advancedinstaller.com/uwp-app-package) — agora dão suporte ao Desktop Bridge e pode gerar um instalador MSI e o pacote de aplicativo convertido com apenas alguns cliques. Para obter mais informações, visite o site correspondentes para cada instalador. 
+**Instalador de terceiros**. Agora vários produtos e instaladores populares de terceiros dão suporte para a ponte da área de trabalho e podem gerar instaladores MSI ou pacotes de aplicativos convertidos com apenas alguns cliques. Algumas opções incluem: 
 
-## Aprimorar 
+* [InstallShield by Flexera](http://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer)
+* [WiX by FireGiant](https://www.firegiant.com/r/appx) 
+* [Advanced Installer by Caphyon](http://www.advancedinstaller.com/uwp-app-package)
+* [RAD Studio by Embarcadero](https://www.embarcadero.com/products/rad-studio/windows-10-store-desktop-bridge) 
+* [InstallAware](https://www.installaware.com/appx.htm)
+
+Para obter mais informações, visite o site correspondente de cada instalador. 
+
+## <a name="enhance"></a>Aprimorar 
 
 É possível destacar o aplicativo da área de trabalho convertido com uma ampla variedade de APIs UWP para adicionar recursos como blocos dinâmicos, notificações por push e muito mais. Para obter exemplos de códigos completos, consulte os repositórios [Exemplos de ponte de aplicativo da área de trabalho para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) e [Exemplos de aplicativo da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) em GitHub. Para ver uma lista completa de APIs compatíveis, consulte [APIs UWP compatíveis para aplicativos convertidos com a ponte da área de trabalho](desktop-to-uwp-supported-api.md). 
 
 Além de chamar APIs UWP, é possível estender o aplicativo com recursos acessíveis somente a aplicativos convertidos. Entre eles estão cenários como iniciar um processo quando o usuário faz logon e integração com o Explorador de Arquivos e projetados para suavizar a transição entre o aplicativo da área de trabalho original e um pacote do aplicativo UWP completo. Para saber mais detalhes, consulte [Extensões de aplicativo da ponte da área de trabalho](desktop-to-uwp-extensions.md). 
 
-## Migrar
+## <a name="migrate"></a>Migrar
 
 Usando a ponte, você pode migrar gradualmente o código anterior para a UWP ao mesmo tempo em que mantém a capacidade de executar e publicar o aplicativo na área de trabalho do Windows. Depois que tiver migrado totalmente para a UWP (e o aplicativo não contiver mais nenhum componente Win32/WPF), você poderá atingir todos os dispositivos Windows, inclusive telefones, Xbox One e HoloLens.
 
-## Depurar
+## <a name="debug"></a>Depurar
 
 Você pode depurar o aplicativo usando o Visual Studio. Consulte [Depurar aplicativos convertidos usando a ponte da área de trabalho](desktop-to-uwp-debug.md) para obter ajuda detalhada. 
 
 Se você tiver interesse nos detalhes de como a ponte da área de trabalho funciona nos bastidores, confira [Nos bastidores da ponte da área de trabalho](desktop-to-uwp-behind-the-scenes.md). 
 
-## Distribuir
+## <a name="distribute"></a>Distribuir
 
 Você pode distribuir o aplicativo usando a Windows Store ou por meio de sideload. Para saber mais detalhes, consulte [Distribuir aplicativos convertidos usando a ponte da área de trabalho](desktop-to-uwp-distribute.md). Lembre-se de que você precisará assinar o aplicativo antes de implantá-lo para usuários. Consulte [Assinar um aplicativo convertido usando a ponte da área de trabalho](desktop-to-uwp-signing.md) para obter instruções detalhadas. 
 
-## Suporte e comentários
+## <a name="support-and-feedback"></a>Suporte e comentários
 
 Se você estiver com problemas de conversão do seu aplicativo, você pode visitar os [fóruns](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop) para obter ajuda. 
 
 Para fazer comentários ou dar sugestões de recursos, envie ou vote a favor de itens em [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial). 
 
-## Nesta seção
+## <a name="in-this-section"></a>Nesta seção
 
 | Tópico | Descrição |
 |-------|-------------|
@@ -87,6 +95,6 @@ Para fazer comentários ou dar sugestões de recursos, envie ou vote a favor de 
 | [Exemplos de código de ponte de aplicativo de área de trabalho para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) | Exemplos de código em GitHub demonstrando recursos dos aplicativos convertidos. |
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

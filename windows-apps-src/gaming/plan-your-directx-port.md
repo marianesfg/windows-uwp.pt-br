@@ -4,12 +4,12 @@ title: Planejar a portabilidade do DirectX
 description: "Planeje o seu projeto de portabilidade para jogos do DirectX 9 para o DirectX 11 e Plataforma Universal do Windows (UWP) - atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime."
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fbd582b2cc90ee763cb167c65dac88cee4e7a025
+ms.sourcegitcommit: 115377ed3e5a13668481d1122f354610b3077763
+ms.openlocfilehash: f5f66f5da79eb62e3a81f4fe0d7398fed689d378
 
 ---
 
-# Planejar a portabilidade do DirectX
+# <a name="plan-your-directx-port"></a>Planejar a portabilidade do DirectX
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -23,7 +23,7 @@ ms.openlocfilehash: fbd582b2cc90ee763cb167c65dac88cee4e7a025
 
 Planeje o seu projeto de portabilidade para jogos do DirectX 9 para o DirectX 11 e Plataforma Universal do Windows (UWP): atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime.
 
-## Planejar para a compatibilização do código de elementos gráficos
+## <a name="plan-to-port-graphics-code"></a>Planejar para a compatibilização do código de elementos gráficos
 
 
 Antes de você começar a compatibilizar o seu jogo com a UWP, é importante certificar que ele não tenha nenhum remanescente do Direct3D 8. Verifique se o jogo não tem resquícios do pipeline de funções fixas. Veja uma lista completa de recursos preteridos, incluindo funcionalidade de pipeline fixo, em [Recursos preteridos](https://msdn.microsoft.com/library/windows/desktop/cc308047).
@@ -40,7 +40,7 @@ Os sombreadores escritos em linguagem de assembly devem ser atualizados para HLS
 
 Conheça os diferentes [níveis de recursos do Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876). Os níveis de recursos classificam uma ampla gama de hardware de vídeo, definindo conjuntos de funcionalidades conhecidas. Cada conjunto corresponde aproximadamente às versões do Direct3D, de 9.1 a 11.2. Todos os níveis de recursos usam a API do DirectX 11.
 
-## Planeje a portabilidade do código da interface do usuário Win32 para CoreWindow
+## <a name="plan-to-port-win32-ui-code-to-corewindow"></a>Planeje a portabilidade do código da interface do usuário Win32 para CoreWindow
 
 
 Aplicativos UWP são executados em uma janela criada por um contêiner de aplicativo, chamada [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Seu jogo controle a janela herdando de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), que exige menos detalhes de implementação do que uma janela de área de trabalho. O loop principal do seu jogo estará no método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505).
@@ -55,7 +55,7 @@ Nossos modelos e exemplos de códigos usam recursos C++ com os quais você pode 
 
 Há dois conceitos que você usará com frequência:
 
--   Referências gerenciadas ([**^**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx) e [**classes gerenciadas**](https://msdn.microsoft.com/library/windows/apps/6w96b5h7.aspx) (classes de referência) são uma parte fundamental do Windows Runtime. Você precisará usar classes de referência para interagir com componentes do Tempo de Execução do Windows, por exemplo [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) (você verá mais sobre isso no passo a passo).
+-   Referências gerenciadas ([**^ operator**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)) and [**managed classes**](https://msdn.microsoft.com/library/windows/apps/6w96b5h7.aspx) (ref classes) são partes fundamentais do Windows Runtime. Você precisará usar classes de referência para interagir com componentes do Tempo de Execução do Windows, por exemplo [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) (você verá mais sobre isso no passo a passo).
 -   Ao trabalhar com interfaces do Direct3D 11 COM, use o tipo de modelo [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) para deixar ponteiros COM mais fáceis de usar.
 
  
@@ -68,6 +68,6 @@ Há dois conceitos que você usará com frequência:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

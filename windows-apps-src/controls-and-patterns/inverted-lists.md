@@ -5,11 +5,11 @@ title: Listas invertidas
 label: Inverted lists
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: c70cafe4d1dd3db46d48e9844ba9086dbba9acaa
+ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
+ms.openlocfilehash: de90c49dfc961241c1da028c8f7278e370a810bd
 
 ---
-# Listas invertidas
+# <a name="inverted-lists"></a>Listas invertidas
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -22,29 +22,24 @@ Normalmente, você precisa apresentar a lista de modo que ela pareça crescer de
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx"><strong>Classe ListView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx"><strong>Classe ItemsStackPanel</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx"><strong>Propriedade ItemsUpdatingScrollMode</strong></a></li>
+<li>[**Classe ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)</li>
+<li>[**Classe ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx)</li>
+<li>[**Propriedade ItemsUpdatingScrollMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
+## <a name="create-an-inverted-list"></a>Criar uma lista invertida
 
+Para criar uma lista invertida, use uma exibição de lista com um [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx) como seu painel de itens. No ItemsStackPanel, defina o [**ItemsUpdatingScrollMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx) como [**KeepLastItemInView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsupdatingscrollmode.aspx).
 
+> [!IMPORTANT]
+> O valor de enumeração **KeepLastItemInView** está disponível desde o Windows 10, versão 1607. Você não pode usar esse valor quando seu aplicativo é executado em versões anteriores do Windows 10.
 
-
-## Criar uma lista invertida
-
-Para criar uma lista invertida, use uma exibição de lista com um [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx) como seu painel de itens. No ItemsStackPanel, defina o [**ItemsUpdatingScrollMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx) para [**KeepLastItemInView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsupdatingscrollmode.aspx).
-
-> **Importante**&nbsp;&nbsp;O valor de enumeração **KeepLastItemInView** está disponível a partir do Windows 10, versão 1607. Você não pode usar esse valor quando seu aplicativo é executado em versões anteriores do Windows 10.
-
-Este exemplo mostra como alinhar itens da exibição de lista com a parte inferior e indicar que, quando houver uma alteração nos itens, o último item deverá permanecer na exibição.
+Este exemplo mostra como alinhar itens da exibição de lista com a parte inferior e indicar que, quando houver uma alteração nos itens, o último item deve permanecer na exibição.
  
  **XAML**
- ```xaml
+```xaml
 <ListView>
     <ListView.ItemsPanel>
         <ItemsPanelTemplate>
@@ -55,14 +50,14 @@ Este exemplo mostra como alinhar itens da exibição de lista com a parte inferi
 </ListView>
 ```
 
-## Recomendações
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
-- Alinhe as mensagens do remetente/destinatário em lados opostos para tornar o fluxo da conversa claro para os usuários.
+- Alinhe mensagens do remetente/destinatário em lados opostos para esclarecer o fluxo da conversa para os usuários.
 - Deixe as mensagens existentes fora do caminho para exibir a mensagem mais recente se o usuário já estiver no final da conversa aguardando a próxima mensagem.
 - Não interrompa o foco dos usuários movendo itens se eles não estiverem lendo o final da conversa.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

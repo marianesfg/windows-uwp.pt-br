@@ -6,22 +6,19 @@ ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: 8fc2fc007d14bd9c5d08ca4eb7e61a2dfdf04d3b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: bbc09a6638fd7c0798e49600bd74388d5bb4629d
 
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # <a name="send-a-local-tile-notification"></a>Enviar uma notificação de bloco local
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-
-
-
-
-Os blocos dos aplicativos primários no Windows 10 são definidos no manifesto do aplicativo, e os blocos secundários são criados e definidos programaticamente pelo código do aplicativo. Este artigo descreve como enviar uma notificação de bloco local para um bloco primário e um bloco secundário usando modelos de bloco adaptável. (Notificação local é aquela que é enviada pelo código do aplicativo, e não uma enviada por push ou obtida em um servidor Web.)
+Os blocos dos aplicativos primários no Windows 10 são definidos no manifesto do aplicativo, e os blocos secundários são criados e definidos programaticamente pelo código do aplicativo. Este artigo descreve como enviar uma notificação de bloco local para um bloco primário e um bloco secundário usando modelos de bloco adaptável. (Notificação local é aquela que é enviada pelo código do app, e não uma enviada por push ou obtida em um servidor Web.)
 
 ![bloco padrão e bloco com notificação](images/sending-local-tile-01.png)
 
-**Observação**   Saiba mais sobre [como criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md) e [esquema de modelo de bloco adaptável](tiles-and-notifications-adaptive-tiles-schema.md).
+> [!NOTE] 
+>Saiba mais sobre [como criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md) e [esquema de modelo de bloco adaptável](tiles-and-notifications-adaptive-tiles-schema.md).
 
  
 
@@ -285,7 +282,6 @@ var notification = new TileNotification(doc);
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-
 * [Criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md)
 * [Modelos de blocos adaptáveis: esquema e documentação](tiles-and-notifications-adaptive-tiles-schema.md)
 * [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
@@ -303,6 +299,6 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

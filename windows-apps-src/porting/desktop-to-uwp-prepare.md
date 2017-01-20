@@ -4,8 +4,8 @@ Description: "Este artigo lista as coisas que você precisa saber antes de conve
 Search.Product: eADQiWindows 10XVcnh
 title: "Preparar o aplicativo para a ponte da área de trabalho para UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: f7a8b8d586983f42fe108cd8935ef084eb108e35
-ms.openlocfilehash: 81a2485d5be22dd392c21aaff281c1c9263883a9
+ms.sourcegitcommit: d22d51d52c129534f8766ab76e043a12d140e8b7
+ms.openlocfilehash: a93d5ad1c1f429182c8df7d29df85dee70064e2f
 
 ---
 
@@ -67,6 +67,12 @@ Este artigo lista as coisas que você precisa saber antes de converter o aplicat
 `<PackageDependency Name="Microsoft.VCLibs.110.00.UWPDesktop" MinVersion="11.0.24217.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />`  
 Durante a instalação a partir da Windows Store, a versão apropriada (x86 ou x64) da estrutura VCLibs 11 será instalada antes da instalação do app.  
 As dependências não serão instaladas se o app for instalado por sideload. Para instalar as dependências manualmente no seu computador, você deve baixar e instalar os [pacotes de estrutura do VC 11.0 para Desktop Bridge](https://www.microsoft.com/download/details.aspx?id=53340&WT.mc_id=DX_MVP4025064). Para obter mais informações sobre esses cenários, consulte [Usando o Visual C++ Runtime no projeto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/).
+
++ __Seu aplicativo cria entradas da lista de atalhos e chama [ICustomDestinationList::SetAppID](https://msdn.microsoft.com/library/windows/desktop/dd378403(v=vs.85).aspx) ou [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422(v=vs.85).aspx)__. Não defina AppID de forma programática no código. Isso fará com que as entradas da lista de atalhos não sejam exibidas. Se seu app precisa de uma ID personalizada, especifique-a usando o arquivo de manifesto. Consulte [Converter manualmente o app em UWP usando a ponte da área de trabalho](desktop-to-uwp-manual-conversion.md) para obter instruções. A AppID de seu aplicativo é especificada na seção *YOUR_PRAID_HERE*. 
+
++ __Seu app adiciona um link de shell de lista de atalhos que faz referência a um executável em seu pacote__. Você não pode iniciar executáveis diretamente em seu pacote a partir de uma lista de atalhos (com a exceção do caminho absoluto do .exe do próprio aplicativo). Registre um alias de execução do app (que permita que seu app convertido seja iniciado por meio de uma palavra-chave como se estivesse no CAMINHO) e defina o caminho de destino do link como o alias. Para obter detalhes sobre como usar a extensão appExecutionAlias, consulte [Extensões de aplicativo da ponte da área de trabalho](desktop-to-uwp-extensions.md). Observe que, se você precisar que os ativos do link na lista de atalhos correspondam ao .exe original, defina os ativos, como o ícone, usando [**SetIconLocation**](https://msdn.microsoft.com/library/windows/desktop/bb761047(v=vs.85).aspx) e o nome de exibição com PKEY_Title como você faria para outras entradas personalizadas. 
+
++ __Seu app adiciona uma lista de atalhos com entradas que referenciam ativos no pacote do app por caminhos absolutos__. O caminho de instalação de um app pode mudar quando seus pacotes são atualizados, alterando o local dos ativos (como ícones, documentos, executáveis e assim por diante). Se as entradas da lista de atalhos referenciam esses ativos por caminhos absolutos, o app deve atualizar sua lista de atalhos periodicamente (por exemplo, na inicialização do app) para garantir que os caminhos se resolvam corretamente. Como alternativa, use as APIs UWP [**Windows.UI.StartScreen.JumpList**](https://msdn.microsoft.com/library/windows/apps/windows.ui.startscreen.jumplist.aspx), que permitem referenciar ativos de cadeias de caracteres e imagens usando o esquema de URI package-relative ms-resource (que também reconhece linguagem, DPI e alto contraste). 
 
 
 <!--HONumber=Dec16_HO1-->

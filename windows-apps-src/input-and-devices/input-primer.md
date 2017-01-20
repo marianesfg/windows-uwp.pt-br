@@ -6,13 +6,13 @@ ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 19e033455caf677c4e65ffb7bd7ce11a5a93b7a9
-ms.openlocfilehash: 5f6aee51984f86c67db9dc77eace614e385df088
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: b754e3f039e4dca0949bb31fe1da52f6a404dfb4
 
 ---
 
-# Cartilha de interação
-
+# <a name="interaction-primer"></a>Cartilha de interação
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 ![tipos de entrada do windows](images/input-interactions/icons-inputdevices03.png)
 
@@ -22,29 +22,29 @@ A UWP usa um sistema de interação contextual "inteligente" que, na maioria dos
 
 Familiarize-se com cada tipo de dispositivo de entrada e seus comportamentos, recursos e limitações quando combinados com determinados fatores forma. Isso pode ajudar você a decidir se os controles e as funcionalidades da plataforma são suficientes para seu aplicativo, ou exigem que você forneça experiências de interação personalizadas.
 
-## Surface Dial
+## <a name="surface-dial"></a>Surface Dial
 
 Para a Atualização de Aniversário do Windows 10, lançaremos uma nova categoria de dispositivo de entrada chamado Windows Wheel. O Surface Dial é o primeiro nessa classe de dispositivo. 
 
-### Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 
 -   Tablet
 -   Computadores e notebooks
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Com um fator forma com base em uma ação (ou gesto) girar, o Surface Dial destina-se como um dispositivo de entrada secundário para vários tipos de mídia que complementa ou modifica a entrada de um dispositivo principal. Na maioria dos casos, o dispositivo é manipulado pela mão não dominante de um usuário durante a execução de uma tarefa com a mão dominante (por exemplo, escrita à tinta com uma caneta).
 
-### Mais informações
+### <a name="more-info"></a>Mais informações
 
 [Diretrizes de design do Surface Dial](windows-wheel-interactions.md)
 
 
-## Cortana
+## <a name="cortana"></a>Cortana
 
 No Windows 10, a extensibilidade da **Cortana** permite lidar com comandos de voz de um usuário e iniciar um aplicativo para executar uma única ação.
 
-### Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 
 -   Telefones e phablets
 -   Tablet
@@ -56,18 +56,18 @@ No Windows 10, a extensibilidade da **Cortana** permite lidar com comandos de vo
 
 ![cortana](images/input-interactions/icons-cortana01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Um comando de voz é uma fala única, definida em um arquivo VCD (Definição de Comando de Voz), direcionada a um aplicativo instalado por meio da **Cortana**. O aplicativo pode ser iniciado em primeiro ou segundo plano, dependendo do nível e da complexidade da interação. Por exemplo, comandos de voz que exigem contexto adicional ou a entrada do usuário são mais bem manipulados em primeiro plano, enquanto os comandos básicos podem ser manipulados em segundo plano.
 
 A integração da funcionalidade básica do seu aplicativo e o fornecimento de um ponto de entrada central para o usuário realizar a maioria das tarefas sem abrir o aplicativo diretamente permitem que a **Cortana** se torne uma ligação entre seu aplicativo e o usuário. Em muitos casos, isso pode economizar muito tempo e esforço do usuário. Para saber mais, consulte [Diretrizes de design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233).
 
-### Mais informações
+### <a name="more-info"></a>Mais informações
 
 [Diretrizes para design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
  
 
-## Controle por voz
+## <a name="speech"></a>Controle por voz
 
 O controle por voz é uma forma eficiente e natural para as pessoas interagirem com aplicativos. É uma maneira fácil e precisa de se comunicar com aplicativos, e permite que as pessoas sejam produtivas e se mantenham informadas em diversas situações.
 
@@ -75,7 +75,7 @@ O controle por voz pode complementar ou, em muitos casos, ser o tipo de entrada 
 
 A conversão de texto em fala (também conhecida como TTS ou sintetização de voz) é usada para informar ou direcionar o usuário.
 
-### Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 
 -   Telefones e phablets
 -   Tablet
@@ -87,7 +87,7 @@ A conversão de texto em fala (também conhecida como TTS ou sintetização de v
 
 ![controle por voz](images/input-interactions/icons-speech01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Há três modos de interação de fala:
 
@@ -111,12 +111,12 @@ O método de entrada de fala mais básico. Cada expressão é convertida em text
 
 O ditado normalmente é usado quando um aplicativo não precisa compreender o significado ou a intenção.
 
-### Mais informações
+### <a name="more-info"></a>Mais informações
 
 [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
  
 
-## Caneta
+## <a name="pen"></a>Caneta
 
 Uma caneta pode servir como um dispositivo apontador com precisão de pixel, como um mouse, e é o dispositivo ideal para entrada de tinta digital.
 
@@ -126,7 +126,7 @@ Uma caneta pode servir como um dispositivo apontador com precisão de pixel, com
 
 Quando nos referimos a dispositivos de caneta aqui, estamos fazendo referência a canetas ativas que fornecem dados de entrada avançados e são usados principalmente para interações precisas de tinta e apontamento.
 
-### Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 
 -   Telefones e phablets
 -   Tablet
@@ -136,7 +136,7 @@ Quando nos referimos a dispositivos de caneta aqui, estamos fazendo referência 
 
 ![caneta](images/input-interactions/icons-pen01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 A plataforma de tinta do Windows, juntamente com uma caneta, oferece uma maneira natural de criar anotações manuscritas, desenhos e anotações. A plataforma dá suporte a captura de dados de tinta por entrada da digitalizador, geração de dados de tinta, renderização desses dados como traços de tinta no dispositivo de saída, gerenciamento dos dados de tinta e reconhecimento de manuscrito. Além de capturar os movimentos espaciais da caneta enquanto o usuário escreve ou desenha, seu aplicativo também pode coletar informações como pressão, forma, cor e opacidade, para oferecer experiências ao usuário que se aproximam bastante do ato de desenhar em papel com caneta esferográfica, lápis ou pincel.
 
@@ -144,16 +144,16 @@ A caneta e o touch apresentam divergências quando o assunto é a capacidade do 
 
 Você deve fornecer comandos de interface do usuário específicos à caneta, ou funcionalidades, para dar suporte a essas interações. Por exemplo, use os botões anterior e próximo (ou + e -) para permitir que os usuários percorram as páginas de conteúdo ou girem, redimensionem e ampliem objetos.
 
-### Mais informações
+### <a name="more-info"></a>Mais informações
 
 [Diretrizes para design de caneta](https://msdn.microsoft.com/library/windows/apps/dn456352)
  
 
-## Touch
+## <a name="touch"></a>Touch
 
 Com o touch, os gestos físicos de um ou mais dedos podem ser usados para emular a manipulação direta de elementos da interface do usuário (por exemplo, movimento panorâmico, girar, redimensionar ou mover), como um método alternativo de entrada (semelhante ao mouse ou à caneta), ou como um método de entrada complementar (para modificar aspectos da outra entrada, como borrar um traço de tinta desenhado com uma caneta). Experiências táteis como essa podem proporcionar sensações mais naturais do mundo real aos usuários conforme eles interagem com elementos em uma tela.
 
-### Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 
 -   Telefones e phablets
 -   Tablet
@@ -163,7 +163,7 @@ Com o touch, os gestos físicos de um ou mais dedos podem ser usados para emular
 
 ![touch](images/input-interactions/icons-touch01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 O suporte para entrada touch pode variar significativamente, dependendo do dispositivo.
 
@@ -179,23 +179,23 @@ Em geral, o touch é:
 -   Não restrito à orientação do dispositivo.
 -   Usado para todas as interações, incluindo entrada de texto (teclado virtual) e tinta (configurado pelo aplicativo).
 
-### Mais informações
+### <a name="more-info"></a>Mais informações
 
 [Diretrizes para design de touch](https://msdn.microsoft.com/library/windows/apps/hh465370)
  
 
-## Touchpad
+## <a name="touchpad"></a>Touchpad
 
 Um touchpad combina a entrada multi-touch indireta com a entrada de precisão de um dispositivo apontador, como um mouse. Essa combinação torna o touchpad adequado para uma interface do usuário otimizada para touch e destinos menores de aplicativos de produtividade.
 
-### Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 
 -   Computadores e notebooks
 -   IoT
 
 ![touchpad](images/input-interactions/icons-touchpad01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Os touchpads normalmente dão suporte a um conjunto de gestos touch que oferecem suporte semelhante ao touch para manipulação direta de objetos e da interface do usuário.
 
@@ -203,18 +203,18 @@ Devido a essa convergência de experiências de interação compatíveis com tou
 
 Você deve fornecer comandos de interface do usuário, ou funcionalidades, específicos ao mouse para dar suporte a essas interações. Por exemplo, use os botões anterior e próximo (ou + e -) para permitir que os usuários percorram as páginas de conteúdo ou girem, redimensionem e ampliem objetos.
 
-### Mais informações
+### <a name="more-info"></a>Mais informações
 
 [Diretrizes de design do touchpad](https://msdn.microsoft.com/library/windows/apps/dn456353)
  
 
-## Teclado
+## <a name="keyboard"></a>Teclado
 
 Um teclado é o dispositivo principal de inserção de texto, e geralmente é indispensável para pessoas portadoras de determinadas deficiências ou usuários que o consideram um método mais rápido e mais eficiente de interagir com um aplicativo.
 
 Com o [Continuum para telefone](http://go.microsoft.com/fwlink/p/?LinkID=699431), uma nova experiência para dispositivos móveis compatíveis com o Windows 10, os usuários podem conectar seus telefones a um mouse e um teclado para fazê-los funcionar como um notebook.
 
-### Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 
 -   Telefones e phablets
 -   Tablet
@@ -226,7 +226,7 @@ Com o [Continuum para telefone](http://go.microsoft.com/fwlink/p/?LinkID=699431)
 
 ![teclado](images/input-interactions/icons-keyboard01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Os usuários podem interagir com aplicativos Universais do Windows por meio de um teclado de hardware e dois teclados de software: o OSK (teclado virtual) e o teclado virtual.
 
@@ -243,16 +243,16 @@ Em geral, um teclado é:
 -   Usado para entrada de texto, navegação, jogabilidade e acessibilidade.
 -   Sempre disponível, de forma proativa ou reativa.
 
-### Mais informações
+### <a name="more-info"></a>Mais informações
 
 [Diretrizes de design do teclado](https://msdn.microsoft.com/library/windows/apps/hh972345)
  
 
-## Mouse
+## <a name="mouse"></a>Mouse
 
 Um mouse é mais adequado para aplicativos de produtividade e interfaces do usuário de alta densidade, em que as interações dos usuários exigem precisão de pixel para direcionamentos e comandos.
 
-### Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 
 -   Telefones e phablets
 -   Tablet
@@ -262,7 +262,7 @@ Um mouse é mais adequado para aplicativos de produtividade e interfaces do usu�
 
 ![mouse](images/input-interactions/icons-mouse01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 A entrada do mouse pode ser modificada com a adição de várias teclas de teclado (Ctrl, Shift, Alt e assim por diante). Essas teclas podem ser combinadas com o botão esquerdo do mouse, o botão direito do mouse, o botão de rolagem e os botões X para um conjunto de comandos expandido otimizado para o mouse. (Alguns dispositivos de mouse da Microsoft tem dois botões adicionais, conhecidos como botões X. Geralmente são usados para navegar para a frente e para trás em navegadores da Web).
 
@@ -270,16 +270,16 @@ Assim como a caneta, o mouse e o touch apresentam divergências quando o assunto
 
 Você deve fornecer comandos de interface do usuário, ou funcionalidades, específicos ao mouse para dar suporte a essas interações. Por exemplo, use os botões anterior e próximo (ou + e -) para permitir que os usuários percorram as páginas de conteúdo ou girem, redimensionem e ampliem objetos.
 
-### Mais informações
+### <a name="more-info"></a>Mais informações
 
 [Diretrizes para design de mouse](https://msdn.microsoft.com/library/windows/apps/dn456351)
  
 
-## Gesto
+## <a name="gesture"></a>Gesto
 
 Um gesto é qualquer forma de movimento do usuário que é reconhecida como entrada para controlar ou interagir com um aplicativo. Os gestos assumem várias formas, de simplesmente usar uma mão para indicar algo na tela a padrões específicos aprendidos de movimento e longas extensões de movimento contínuo em todo o corpo. Tome cuidado ao projetar gestos personalizados porque seu significado pode variar dependendo da cultura e da localidade.
 
-### Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 
 -   Computadores e notebooks
 -   IoT
@@ -288,7 +288,7 @@ Um gesto é qualquer forma de movimento do usuário que é reconhecida como entr
 
 ![gesto](images/input-interactions/icons-gesture01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Os eventos de gesto estático são disparados depois que uma interação é concluída.
 
@@ -303,11 +303,11 @@ Os eventos de gestos de manipulação indicam uma interação contínua. Eles co
 Devido à convergência de experiências de interação compatíveis com o Windows, recomendamos também que você forneça comandos ou funcionalidades de interface do usuário estilo mouse em vez de depender somente do suporte interno para entrada por toque. Por exemplo, use os botões anterior e próximo (ou + e -) para permitir que os usuários percorram as páginas de conteúdo ou girem, redimensionem e ampliem objetos.
 
 
-## Gamepad/controlador
+## <a name="gamepadcontroller"></a>Gamepad/controlador
 
 O gamepad/controlador é um dispositivo altamente especializado geralmente exclusivo para jogar. No entanto, ele também é usado para emular a entrada do teclado básico e fornece uma experiência de navegação da interface do usuário muito parecida com o teclado.
 
-### Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 
 -   Computadores e notebooks
 -   IoT
@@ -315,16 +315,16 @@ O gamepad/controlador é um dispositivo altamente especializado geralmente exclu
 
 ![controlador](images/input-interactions/icons-controller01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Jogar e interagir com um console especializado.
 
 
-## Várias entradas
+## <a name="multiple-inputs"></a>Várias entradas
 
 Acomodar o máximo possível de usuários e dispositivos e projetar seus aplicativos para funcionar com o máximo possível de tipos de entrada (gesto, controle por voz, touch, touchpad, mouse e teclado) maximiza a flexibilidade, a usabilidade e a acessibilidade.
 
-### Suporte a dispositivos
+### <a name="device-support"></a>Suporte a dispositivos
 
 -   Telefones e phablets
 -   Tablet
@@ -336,7 +336,7 @@ Acomodar o máximo possível de usuários e dispositivos e projetar seus aplicat
 
 ![várias entradas](images/input-interactions/icons-inputdevices03-vertical.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Assim como as pessoas usam uma combinação de voz e gestos ao se comunicar uns com os outros, vários tipos e modos de entrada também podem ser úteis ao interagir com um aplicativo. No entanto, essas interações combinadas precisam ser o mais naturais e intuitivas possível porque também podem criar uma experiência confusa.
 
@@ -350,6 +350,6 @@ Assim como as pessoas usam uma combinação de voz e gestos ao se comunicar uns 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

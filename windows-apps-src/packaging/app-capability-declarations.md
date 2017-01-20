@@ -4,11 +4,11 @@ ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: "Declarações de funcionalidades do aplicativo"
 description: "As funcionalidades devem ser declaradas no manifesto do pacote do aplicativo da Plataforma Universal do Windows (UWP) para acessar determinadas APIs ou recursos, como imagens, música ou dispositivos como a câmera ou o microfone."
 translationtype: Human Translation
-ms.sourcegitcommit: a86efd3e50be6a5cbe0271c1024d3b405fc0d160
-ms.openlocfilehash: 100d1b94dec44cbf00d4a3cacd6aa74f94c20d9c
+ms.sourcegitcommit: ece16df809e7f030c3cbb7a6ab5e727ae77614e3
+ms.openlocfilehash: 5b1052c8b20908cef431a4d1d144d5e8fe1a0eac
 
 ---
-# Declarações de funcionalidades do aplicativo
+# <a name="app-capability-declarations"></a>Declarações de funcionalidades do aplicativo
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -28,7 +28,7 @@ Este artigo examina quatro categorias de recursos descritos abaixo.
 
 -   Recursos restritos que só estão disponíveis para a Microsoft e seus parceiros.
 
-## Funcionalidades de uso geral
+## <a name="general-use-capabilities"></a>Funcionalidades de uso geral
 
 As funcionalidades de uso geral se aplicam à maioria dos cenários de aplicativo mais comuns.
 
@@ -55,7 +55,7 @@ As funcionalidades de uso geral se aplicam à maioria dos cenários de aplicativ
 | **Reprodução de mídia em segundo plano** | A funcionalidade **backgroundMediaPlayback** altera o comportamento das APIs específicas para mídia como as classes [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx) e [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/windows.media.audio.audiograph.aspx) para habilitar a reprodução de mídia enquanto seu aplicativo está em segundo plano. Todos os streams de áudio ativos não serão silenciados, mas continuarão sendo audíveis quando houver a transição de um aplicativo para o segundo plano. Além disso, o tempo de vida do aplicativo será estendido automaticamente enquanto ocorre a reprodução.
 | **Sistema remoto** | A funcionalidade **remoteSystem** permite que os aplicativos tenham acesso a uma lista de dispositivos associados à Conta da Microsoft do usuário. O acesso à lista de dispositivos é necessário para realizar operações que persistem em dispositivos. Essa funcionalidade é necessária para acessar todos os membros a seguir.<br /><br />Namespace Windows.System.RemoteSystems<br />Namespace Windows.System.RemoteLauncher<br />Método AppServiceConnection.OpenRemoteAsync
 
-## Funcionalidades de dispositivo
+## <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
 As funcionalidades de dispositivo permitem que o aplicativo acesse dispositivos periféricos e internos. As funcionalidades de dispositivo são especificadas usando o elemento **DeviceCapability** no manifesto do pacote do aplicativo. Esse elemento pode exigir elementos filho adicionais e algumas funcionalidades de dispositivo precisam ser acrescentadas manualmente ao manifesto do pacote. Para obter mais informações, consulte [Como especificar as funcionalidades do dispositivo em um manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/Dn263092) e [**Referência de esquema DeviceCapability**](https://msdn.microsoft.com/library/windows/apps/BR211430).
 
@@ -74,11 +74,11 @@ As funcionalidades de dispositivo permitem que o aplicativo acesse dispositivos 
 | **Disco óptico** | A funcionalidade do dispositivo **optical** permite que os aplicativos acessem funções em unidades de disco óptico, como CD, DVD e Blu-ray.<br/>Essa funcionalidade é necessária para usar algumas APIs no namespace [**Windows.Devices.Custom**](https://msdn.microsoft.com/library/windows/apps/Dn263667). |
 | **Atividade de movimento** | A funcionalidade do dispositivo **activity** permite que os aplicativos detectem o movimento atual do dispositivo.<br/>Essa funcionalidade é necessária para usar algumas APIs no namespace [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408). |
 
-## Funcionalidades especiais e restritas
+## <a name="special-and-restricted-capabilities"></a>Funcionalidades especiais e restritas
 
 Há casos em que essas funcionalidades são necessárias e apropriadas, como em transações bancárias com autenticação de dois fatores, em que os usuários fornecem um cartão inteligente com um certificado digital que confirma suas identidades. Outros aplicativos podem ser projetados principalmente para clientes corporativos e talvez precisem de acesso a recursos corporativos que não podem ser acessados sem as credenciais de domínio do usuário.
 
-Os aplicativos que utilizam as funcionalidades de uso especiais requerem uma conta empresarial para enviá-los à Store. Por outro lado, recursos restritos não requerem uma conta empresarial especial para a Loja. Eles não estão disponíveis para os desenvolvedores usarem. Recursos restritos estão disponíveis apenas aos aplicativos desenvolvidos pela Microsoft e seus parceiros. Para obter mais informações sobre contas empresariais, consulte [Account types, locations, and fees](https://msdn.microsoft.com/library/windows/apps/JJ863494).
+Os aplicativos que declaram funcionalidades de uso especiais requerem uma conta empresarial para enviá-los à Loja. Por outro lado, as funcionalidades restritas não requerem uma conta empresarial especial para a Loja. As funcionalidades restritas estão disponíveis para os desenvolvedores usarem em seus aplicativos, mas exigem aprovação para envio à loja. Para saber mais sobre contas empresariais, consulte [Tipos de conta, localizações e taxas](https://msdn.microsoft.com/library/windows/apps/JJ863494). 
 
 Todas as funcionalidades restritas devem incluir o namespace **rescap** quando são declaradas no manifesto do pacote do aplicativo de maneira diferente do que outras funcionalidades. O exemplo a seguir mostra como declarar a funcionalidade **appCaptureSettings**.
 
@@ -168,7 +168,7 @@ As funcionalidades especiais e restritas foram desenvolvidas para cenários muit
 **Observação**  
 Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos UWP. Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Designer de manifesto](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx)
 * [Diretrizes para aplicativos com reconhecimento da privacidade](https://msdn.microsoft.com/library/windows/apps/Hh768223)
@@ -178,6 +178,6 @@ Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

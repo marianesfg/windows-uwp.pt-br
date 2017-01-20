@@ -6,11 +6,11 @@ ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f245db6c37b7c8257e4fe937417d981e49101b8c
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: af8ee5679fe9bb152718b57bd198238bf9a3f6cd
 
 ---
-# Pesquisar e localizar na página
+# <a name="search-and-find-in-page"></a>Pesquisar e localizar na página
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,20 +19,11 @@ A pesquisa é uma das principais maneiras para os usuários encontrarem conteúd
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn633874"><strong>Classe AutoSuggestBox (XAML)</strong></a></li>
+<li>[**Classe AutoSuggestBox (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-
-
-## Elementos da experiência de pesquisa
+## <a name="elements-of-the-search-experience"></a>Elementos da experiência de pesquisa
 
 
 **Entrada.**  Texto é o modo mais comum de entrada de pesquisa e o foco destas diretrizes. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
@@ -55,7 +46,7 @@ Um método para permitir acesso eficiente para editar a consulta anterior e inse
 
 O conjunto de resultados pode aparecer em qualquer formato que comunique melhor o conteúdo. Um [modo de exibição de lista](lists.md) fornece flexibilidade e é adequado para a maioria das pesquisas. Um modo de exibição em grade funciona bem para imagens ou outras mídias, e um mapa pode ser usado para comunicar a distribuição espacial.
 
-## Escopos da pesquisa
+## <a name="search-scopes"></a>Escopos da pesquisa
 
 
 A pesquisa é um recurso comum, e os usuários encontrarão interface do usuário de pesquisa no shell e em muitos aplicativos. Embora os pontos de entrada de pesquisa tendam a ser visualizados da mesma forma, eles podem fornecer acesso aos resultados que variam de amplo (pesquisas na Web ou no dispositivo) a limitado (lista de contatos do usuário). O ponto de entrada de pesquisa deve estar justaposto em relação ao conteúdo que está sendo pesquisado.
@@ -86,7 +77,7 @@ Use o texto de dica para comunicar o escopo da pesquisa. Os exemplos incluem:
 
 Ao comunicar efetivamente o escopo de um ponto de entrada de pesquisa, você pode ajudar a garantir que a expectativa do usuário seja atendida pelos recursos da pesquisa realizada e a reduzir a possibilidade de frustração.
 
-## Implementação
+## <a name="implementation"></a>Implementação
 
 
 Para a maioria dos aplicativos, é melhor ter um campo de entrada de texto como o ponto de entrada de pesquisa, o que fornece uma superfície visual proeminente. Além disso, o texto de dica ajuda na capacidade de descoberta e na comunicação do escopo da pesquisa. Quando a pesquisa for uma ação mais secundária ou quando o espaço for limitado, o ícone de pesquisa poderá servir como um ponto de entrada sem o campo de entrada que o acompanha. Quando visualizada como um ícone, assegure-se de que haja espaço para uma caixa de pesquisa modal, conforme visto nos exemplos abaixo.
@@ -113,7 +104,7 @@ No caso de listas roláveis, é útil sempre ter a entrada de pesquisa visível.
 
 A funcionalidade de entrada zero e formulação de consulta é opcional para pesquisas contextuais/refinadas, em que a lista será filtrada em tempo real pela entrada do usuário. As exceções incluem casos em que sugestões de formatação de consulta podem estar disponíveis, como opções de filtragem de caixa de entrada (para: &lt;cadeia de caracteres de entrada&gt;, de: &lt;cadeia de caracteres de entrada&gt;, assunto: &lt;cadeia de caracteres de entrada&gt;, e assim por diante).
 
-## Exemplo
+## <a name="example"></a>Exemplo
 
 
 Os exemplos nesta seção mostram a pesquisa colocada em contexto.
@@ -141,12 +132,12 @@ A pesquisa embutida é mais adequada para casos em que a pesquisa é acessada co
 ![exemplo de pesquisa embutida](images/patterns-search-results-desktop.png)
 
 
-## Diretrizes de localização na página
+## <a name="guidelines-for-find-in-page"></a>Diretrizes de localização na página
 
 
 O recurso de localização na página permite que os usuários encontrem correspondências de texto no corpo de texto atual. Visualizadores, leitores e navegadores de documentos são os aplicativos mais típicos que fornecem o recurso de localização na página.
 
-## Recomendações
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
 
 -   Coloque uma barra de comandos em seu aplicativo com a funcionalidade de localização na página para permitir que o usuário pesquise texto na página. Para obter detalhes de posicionamento, consulte a seção Exemplos.
@@ -172,7 +163,7 @@ O recurso de localização na página permite que os usuários encontrem corresp
 -   Inclua um contador de correspondência para indicar ao usuário o número de correspondências de texto existentes na página.
 -   Habilite o atalho de teclado (CTRL+F).
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 
 Fornece uma maneira fácil de acessar o recurso de localização na página. Neste exemplo em uma interface do usuário móvel, "Localizar na página" aparece após dois comandos "Adicionar a..." em um menu expansível:
@@ -206,16 +197,28 @@ Localizar na página tem um contador de correspondência:
 
 
 
-## **Implementando a localização na página**
+## **<a name="implementing-find-in-page"></a>Implementando a localização na página**
 
 -   Visualizadores de documentos, leitores e navegadores, os tipos de aplicativo mais prováveis para fornecer localizar na página, permitem que o usuário tenha uma experiência de visualização/leitura em tela inteira.
 -   A funcionalidade de localização na página é secundária e deve estar localizada em uma barra de comando.
 
 Para obter mais informações sobre como adicionar comandos à sua barra de comando, veja [Barra de comandos](app-bars.md).
 
+<div class="microsoft-internal-note">
+## Lista de verificação de globalização e localização
+
+<table>
+<tr>
+<th>Espaçamento vertical</th><td>Use caracteres não latinos para espaçamento vertical para garantir que scripts não latinos sejam exibidos corretamente, inclusive números.</td>
+</tr>
+<tr>
+<th>Considerações de bidirecional</th><td>O ícone de lupa não deve ser exibido no formulário espelhado bidirecional.</td>
+</tr>
+</table>
+</div>
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 * [**Caixa de sugestão automática**](auto-suggest-box.md)
 
@@ -226,6 +229,6 @@ Para obter mais informações sobre como adicionar comandos à sua barra de coma
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

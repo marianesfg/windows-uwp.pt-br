@@ -4,15 +4,12 @@ ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
 description: "Use este método na API de envio da Windows Store para criar um novo envio de um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
 title: "Criar um envio do pacote de pré-lançamento usando a API de envio da Windows Store"
 translationtype: Human Translation
-ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
-ms.openlocfilehash: 8689fa9d314d2ba1d31a16c47aa4c7168e44c69f
+ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
+ms.openlocfilehash: 2ca6824039077d5d3ceba2c643d52a62c77104e4
 
 ---
 
-# Criar um envio do pacote de pré-lançamento usando a API de envio da Windows Store
-
-
-
+# <a name="create-a-package-flight-submission-using-the-windows-store-submission-api"></a>Criar um envio do pacote de pré-lançamento usando a API de envio da Windows Store
 
 Use este método na API de envio da Windows Store para criar um novo envio para um pacote de pré-lançamento para um aplicativo. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-a-flight-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-a-flight-submission.md) para inclusão e publicação.
 
@@ -20,7 +17,7 @@ Para obter mais informações sobre como esse método se encaixa no processo de 
 
 >**Observação**&nbsp;&nbsp;Este método cria um envio para um pacote de pré-lançamento existente. Para criar um pacote de pré-lançamento, use o método [criar um pacote de pré-lançamento](create-a-flight.md).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este método, primeiro você precisa do seguinte:
 
@@ -30,7 +27,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Solicitação
+## <a name="request"></a>Solicitação
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
@@ -41,7 +38,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 <span/>
  
 
-### Cabeçalho da solicitação
+### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -49,7 +46,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Parâmetros solicitados
+### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -58,11 +55,11 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Corpo da solicitação
+### <a name="request-body"></a>Corpo da solicitação
 
 Não forneça um corpo da solicitação para esse método.
 
-### Exemplo de solicitação
+### <a name="request-example"></a>Exemplo de solicitação
 
 O exemplo a seguir demonstra como criar um novo envio de pacote de pré-lançamento para um aplicativo que tem a ID da Loja 9WZDNCRD91MD.
 
@@ -71,7 +68,7 @@ POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/fl
 Authorization: Bearer <your access token>
 ```
 
-## Resposta
+## <a name="response"></a>Resposta
 
 O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. O corpo da resposta contém informações sobre o novo envio. Para obter mais detalhes sobre os valores no corpo da resposta, consulte [Recurso de envio de pacote de pré-lançamento](manage-flight-submissions.md#flight-submission-object).
 
@@ -114,7 +111,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 }
 ```
 
-## Códigos de erro
+## <a name="error-codes"></a>Códigos de erro
 
 Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
@@ -125,7 +122,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 
 <span/>
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md)
@@ -137,6 +134,6 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

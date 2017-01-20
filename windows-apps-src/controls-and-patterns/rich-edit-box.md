@@ -6,11 +6,11 @@ ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
 label: Rich edit box
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f26bcc596417f607ee348e93009905ec4a3e27c8
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: a8e8e42c87809eb08685fb137a242b1177b824b4
 
 ---
-# Caixa de edição com formato
+# <a name="rich-edit-box"></a>Caixa de edição com formato
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,21 +19,14 @@ ms.openlocfilehash: f26bcc596417f607ee348e93009905ec4a3e27c8
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx"><strong>Classe RichEditBox</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx"><strong>Propriedade Document</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx"><strong>Propriedade IsReadOnly</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx"><strong>Propriedade IsSpellCheckEnabled</strong></a></li>
+<li>[**Classe RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)</li>
+<li>[**Propriedade Document**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx)</li>
+<li>[**Propriedade IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx)</li>
+<li>[**Propriedade IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-## Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use **RichEditBox** para exibir e editar arquivos Rich Text. Você não usa um RichEditBox para obter a entrada do usuário em seu aplicativo da maneira que você usa outras caixas de entrada de texto padrão. Em vez disso, você o usa para trabalhar com arquivos de texto que são separados de seu aplicativo. Em geral, você salva o texto inserido em um RichEditBox em um arquivo. rtf.
 -   Se a finalidade principal da caixa de texto multilinha for criar documentos (como entradas de blog ou o conteúdo de uma mensagem de email), e esses documentos exigirem rich text, utilize uma caixa RTF.
@@ -43,13 +36,13 @@ Use **RichEditBox** para exibir e editar arquivos Rich Text. Você não usa um R
 
 Para obter mais informações sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 Essa caixa de edição com formato contém um documento rich text aberto. Os botões de formatação e arquivo não fazem parte da caixa de edição com formato, mas você deve fornecer pelo menos um conjunto mínimo de botões de estilo e implementar suas ações.
 
 ![Uma caixa rich text com um documento aberto](images/rich-edit-box.png)
 
-## Criar uma caixa de edição com formato
+## <a name="create-a-rich-edit-box"></a>Criar uma caixa de edição com formato
 
 Por padrão, RichEditBox dá suporte à verificação ortográfica. Para desabilitar o corretor ortográfico, defina a propriedade [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx) como **false**. Para obter mais informações, consulte o artigo [Diretrizes para verificação ortográfica](spell-checking-and-prediction.md).
 
@@ -194,15 +187,15 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Escolher o teclado correto para seu controle de texto
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>Escolher o teclado correto para seu controle de texto
 
 Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira. O layout do teclado padrão é geralmente apropriado para trabalhar com documentos rich text.
 
 Para obter mais informações sobre como usar escopos de entrada, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
-## Recomendações
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
--   Ao criar uma caixa de texto Rich Text, forneça botões de estilo e implemente as ações comandadas por eles.
+-   Quando você cria uma caixa de texto Rich Text, forneça botões de estilo e implemente as ações comandadas por eles.
 -   Use uma fonte que seja consistente com o estilo de seu aplicativo.
 -   Faça com que a altura do controle de texto seja suficiente para acomodar entradas típicas.
 -   Não deixe que seus controles de entrada de texto aumentem de tamanho enquanto os usuários digitam.
@@ -210,24 +203,17 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 -   Não use um controle Rich Text se um controle de texto sem formatação for adequado.
 
 
+## <a name="related-articles"></a>Artigos relacionados
 
-
-
-## Artigos relacionados
-
-[Controles de texto](text-controls.md)
-
-**Para designers**
+* [Controles de texto](text-controls.md)
 - [Diretrizes para verificação ortográfica](spell-checking-and-prediction.md)
 - [Adicionando pesquisa](search.md)
 - [Diretrizes para entrada de texto](text-controls.md)
-
-**Para desenvolvedores (XAML)**
 - [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -6,11 +6,11 @@ ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scroll bars
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 3dd5912bdd210751257bb9e495c5a95ce0be20a5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 8ead56e84e21aaf5005530ed0509efa9440bce59
 
 ---
-# Barras de rolagem
+# <a name="scroll-bars"></a>Barras de rolagem
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -22,29 +22,26 @@ Um controle do visualizador de rolagem é composto de tanto conteúdo quanto cab
 
 ![Uma amostra da aparência dos controles de barra de rolagem e indicador de movimento panorâmico](images/SCROLLBAR.png)
 
+<div class="microsoft-internal-note">
+Consulte linhas vermelhas completas no [Design Depot](http://designdepot/DesignDepot.FrontEnd/#/ML/Dashboard/1805)
+</div>
 
 <div class="important-apis" >
-<b>APIs Importantes</b><br/>
+<b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209527"><strong>Classe ScrollViewer</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx"><strong>Classe ScrollBar</strong></a></li>
+<li>[**Classe ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)</li>
+<li>[**Classe ScrollBar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 Um [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx) permite que o conteúdo seja exibido em uma área menor que o tamanho real. Quando o conteúdo do visualizador de rolagem não é totalmente visível, esse visualizador mostra barras de rolagem que o usuário pode usar para mover a área de conteúdo que está visível. A área que inclui todo o conteúdo do visualizador de rolagem é a *extensão*. A área visível do conteúdo é o *visor*.
 
 ![Uma captura de tela que ilustra o controle de barra de rolagem padrão](images/ScrollBar_Standard.jpg)
 
-## Criar um visualizador de rolagem
+## <a name="create-a-scroll-viewer"></a>Criar um visualizador de rolagem
 Para adicionar a rolagem vertical à página, encapsule o conteúdo da página em um visualizador de rolagem.
 
 ```xaml
@@ -72,7 +69,7 @@ Este XAML mostra como colocar uma imagem em um visualizador de rolagem e habilit
 </ScrollViewer>
 ```
 
-## ScrollViewer em um modelo de controle
+## <a name="scrollviewer-in-a-control-template"></a>ScrollViewer em um modelo de controle
 
 É comum que um controle ScrollViewer exista como uma parte composta de outros controles. Uma parte de ScrollViewer, junto com a classe [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx) para suporte, exibirá um visor com barras de rolagem somente quando o espaço de layout do controle host estiver sendo restrito com um tamanho menor que o do conteúdo expandido. Geralmente, esse é o caso de listas e, portanto, modelos [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx) sempre incluem um ScrollViewer. [**TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) e [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) também incluem um ScrollViewer em seus modelos.
 
@@ -108,7 +105,7 @@ Por exemplo, veja como tornar as barras de rolagem vertical sempre visíveis par
 Para os casos em que um ScrollViewer é explícito na sua XAML, conforme mostrado no exemplo de código, você não precisa usar a sintaxe de propriedade anexada. Basta usar a sintaxe de atributo, por exemplo `<ScrollViewer VerticalScrollBarVisibility="Visible"/>`.
 
 
-## Recomendações
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
 -   Sempre que possível, projete a rolagem vertical em vez de horizontal.
 -   Use o movimento panorâmico de eixo único para regiões de conteúdo que vão além do limite de um visor (vertical ou horizontal). Use o movimento panorâmico de dois eixos para regiões de conteúdo que vão além dos dois limites do visor (vertical e horizontal).
@@ -118,13 +115,13 @@ Para os casos em que um ScrollViewer é explícito na sua XAML, conforme mostrad
 -   Utilize um visualizador de rolagem para conter somente um objeto. Observe que esse objeto pode ser um painel de layout, que por sua vez pode conter em si qualquer determinado número de objetos.
 -   Não coloque um controle [Pivot](tabs-pivot.md) dentro de um visualizador de rolagem para evitar conflitos de rolagem de pivô.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 **Para desenvolvedores (XAML)**
 * [**Classe ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

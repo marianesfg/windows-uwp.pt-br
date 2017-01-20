@@ -6,8 +6,8 @@ ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 2ac3a4a1efa85a3422d8964ad4ee62db28bc975f
-ms.openlocfilehash: cfbbf110ed6df1b7e81e0505dcf55a63ba8739aa
+ms.sourcegitcommit: 76a7a6dd3f0e0026e54483fa0ee5f82376ca0c99
+ms.openlocfilehash: 4420ecac17c41858aac7379b4dfaaa43b853318d
 
 ---
 # <a name="adaptive-and-interactive-toast-notifications"></a>Notificações do sistema interativas e adaptáveis
@@ -112,16 +112,30 @@ ToastContent content = new ToastContent()
 };
 ```
 
-Depois, você pode usar esse código para criar e enviar a notificação do sistema:
+<<<<<<< HEAD Depois precisamos converter a notificação do sistema em um objeto [XmlDocument](https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.xml.dom.xmldocument.aspx). Se você tiver definido a notificação do sistema em um arquivo XML (denominado "content.xml" aqui), use este código:
 
 ```CSharp
-ToastNotification notification = new ToastNotification(content.GetXml());
+string xmlText = File.ReadAllText("content.xml");
+XmlDocument xmlContent = new XmlDocument();
+xmlContent.LoadXml(xmlText);
+```
+
+Ou, se você tiver definido o modelo de notificação do sistema em C#, use isto:
+
+```CSharp
+XmlDocument xmlContent = content.GetXml();
+```
+
+Independentemente de como você criar o XMLDocument, pode usar este código para criar e enviar a notificação do sistema:
+
+```CSharp
+ToastNotification notification = new ToastNotification(xmlContent);
 ToastNotificationManager.CreateToastNotifier().Show(notification);
 ```
 
-Para ver um aplicativo de trabalho completo que mostra notificações do sistema em ação, consulte o [Guia de início rápido sobre como enviar uma notificação do sistema local](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10).
+Para ver um app completo que mostra notificações do sistema em ação, consulte o [Guia de início rápido sobre como enviar uma notificação do sistema local](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10).
 
-E uma representação visual da estrutura:
+Esta é uma representação visual da estrutura:
 
 ![estrutura de notificação do sistema](images/adaptivetoasts-structure.jpg)
 
@@ -249,9 +263,9 @@ ToastContent content = new ToastContent()
 
  
 
-**Notificação com ações, exemplo 1**
+**Notificação com ações**
 
-Este exemplo mostra...
+Este exemplo cria uma notificação com duas ações possíveis de resposta.
 
 ```XML
 <toast launch="app-defined-string">
@@ -309,73 +323,11 @@ ToastContent content = new ToastContent()
 
 ![notificação com ações, exemplo 1](images/adaptivetoasts-xmlsample02.jpg)
 
- 
 
-**Notificação com ações, exemplo 2**
-
-Este exemplo mostra...
-
-```XML
-<toast launch="app-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Restaurant suggestion...</text>
-      <text>We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?</text>
-    </binding>
-  </visual>
-  <actions>
-    <action activationType="foreground" content="Reviews" arguments="reviews" />
-    <action activationType="protocol" content="Show map" arguments="bingmaps:?q=sushi" />
-  </actions>
-</toast>
-```
-
-```CSharp
-ToastContent content = new ToastContent()
-{
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Restaurant suggestion..."
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?"
-                }
-            }
-        }
-    },
- 
-    Actions = new ToastActionsCustom()
-    {
-        Buttons =
-        {
-            new ToastButton("Reviews", "reviews"),
- 
-            new ToastButton("Show map", "bingmaps:?q=sushi")
-            {
-                ActivationType = ToastActivationType.Protocol
-            }
-        }
-    }
-};
-```
-
-![notificação com ações, exemplo 2](images/adaptivetoasts-xmlsample03.jpg)
-
- 
 
 **Notificação com entrada de texto e ações, exemplo 1**
 
-Este exemplo mostra...
+Este exemplo cria uma notificação que aceita entrada de texto, juntamente com duas ações de resposta.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -456,7 +408,7 @@ ToastContent content = new ToastContent()
 
 **Notificação com entrada de texto e ações, exemplo 2**
 
-Este exemplo mostra...
+Este exemplo cria uma notificação que aceita entrada de texto e uma única ação.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -533,7 +485,7 @@ ToastContent content = new ToastContent()
 
 **Notificação com entrada de seleção e ações**
 
-Este exemplo mostra...
+Este exemplo cria uma notificação com um menu suspenso de seleção e duas ações possíveis.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -617,7 +569,7 @@ ToastContent content = new ToastContent()
 
 **Notificação de lembrete**
 
-Este exemplo mostra...
+Usando um menu de seleção e duas ações como no exemplo anterior, podemos criar uma notificação de lembrete:
 
 ```XML
 <toast scenario="reminder" launch="action=viewEvent&amp;eventId=1983">
@@ -1162,6 +1114,6 @@ Para construir ações individuais de adiamento e descarte, faça o seguinte:
 * [Biblioteca de notificações no GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

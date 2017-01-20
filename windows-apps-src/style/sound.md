@@ -6,16 +6,18 @@ title: Som
 template: detail.hbs
 ms.assetid: 9fa77494-2525-4491-8f26-dc733b6a18f6
 translationtype: Human Translation
-ms.sourcegitcommit: e240197b4cc233b9fc1ecaa4a1835c4a4dcd3bf8
-ms.openlocfilehash: 91021d76b180e2bc26c0d502098e0a0b21f0219f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 5e4decdfdda0cad59d80395440f974d4ff3303a6
 
 ---
 
-# Som
+# <a name="sound"></a>Som
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Há muitas maneiras de usar o som para aprimorar o aplicativo. Você pode usar som para complementar outros elementos de interface do usuário permitindo que os usuários reconheçam eventos de maneira audível. O som pode ser um elemento de interface do usuário efetivo para pessoas com deficiências visuais. É possível usar som para criar uma atmosfera que envolva o usuário; por exemplo, convém executar uma trilha sonora extravagante em segundo plano do quebra-cabeça ou usar efeitos sonoros de suspense para um jogo de terror/sobrevivência.
 
-## API de som Global
+## <a name="sound-global-api"></a>API de som Global
 
 O UWP fornece um sistema de som facilmente acessível que permite simplesmente "usar um interruptor" e obter uma intensa experiência de áudio em seu aplicativo inteiro.
 
@@ -27,12 +29,12 @@ O **ElementSoundPlayer** tem três estados diferentes: **Ativado** **Desativado*
 
 Se definido como **Desativado**, não importa onde seu aplicativo seja executado, o som nunca será reproduzido. Se definido como **Ativado** os sons de seu aplicativo serão executados em todas as plataformas.
 
-### Som de TV e Xbox
+### <a name="sound-for-tv-and-xbox"></a>Som de TV e Xbox
 
 O som é uma parte essencial da experiência de 3 metros e, por padrão, o estado do **ElementSoundPlayer** é **Auto**, o que significa que você só obterá som quando seu aplicativo estiver em execução no Xbox.
 Para obter mais informações sobre como projetar para Xbox e TV, consulte o artigo [Projetando para Xbox e TV](http://go.microsoft.com/fwlink/?LinkId=760736).
 
-## Substituição de volume do som
+## <a name="sound-volume-override"></a>Substituição de volume do som
 
 Todos os sons no aplicativo podem ser reduzidos com o controle **Volume**. No entanto, os sons no aplicativo não podem ficar *mais altos do que o volume do sistema*.
 
@@ -42,7 +44,7 @@ ElementSoundPlayer.Volume = 0.5f;
 ```
 Onde volume máximo (em relação ao volume do sistema) é 1,0 e o mínimo é 0,0 (essencialmente silencioso).
 
-## Estado de nível de controle
+## <a name="control-level-state"></a>Estado de nível de controle
 
 Se não desejar o som do padrão de um controle, ele poderá ser desativado. Isso é feito por meio do **ElementSoundMode** no controle.
 
@@ -56,13 +58,13 @@ O **ElementSoundMode** tem dois estados: **Desativado** e **Padrão**. Quando n�
 ButtonName.ElementSoundState = ElementSoundMode.Off;
 ```
 
-## Este é o som correto?
+## <a name="is-this-the-right-sound"></a>Este é o som correto?
 
 Ao criar um controle personalizado ou alterar o som de um controle existente, é importante entender os usos de todos os sons que o sistema fornece.
 
 Cada som está relacionado a uma determinada interação básica do usuário e, embora os sons possam ser personalizados para reprodução em qualquer interação, esta seção serve para ilustrar os cenários nos quais os sons devem ser usados para manter uma experiência consistente em todos os aplicativos UWP.
 
-### Invocando um elemento
+### <a name="invoking-an-element"></a>Invocando um elemento
 
 O som disparado por controle mais comum em nosso sistema hoje é o **Invoke**. Esse som é reproduzido quando o usuário invoca um controle por meio de um toque/clique/enter/espaço ou pressionamento do botão "A" em um gamepad.
 
@@ -75,7 +77,7 @@ Para reproduzir esse som a partir de qualquer evento de controle, basta chamar o
 ElementSoundPlayer.Play(ElementSoundKind.Invoke);
 ```
 
-### Mostrando e ocultando conteúdo
+### <a name="showing--hiding-content"></a>Mostrando e ocultando conteúdo
 
 Há muitos submenus, caixas de diálogo e interfaces do usuário rejeitadas em XAML, e qualquer ação que dispare uma dessas sobreposições deve chamar o som **Mostrar** ou **Ocultar**.
 
@@ -93,7 +95,7 @@ Por outro lado, quando uma janela de conteúdo de sobreposição é fechada (ou 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Hide);
 ```
-### Navegação dentro de uma página
+### <a name="navigation-within-a-page"></a>Navegação dentro de uma página
 
 Quando se navega entre os painéis ou modos de exibição na página do aplicativo (consulte [Hub](../controls-and-patterns/hub.md) ou [Guias e pivôs](../controls-and-patterns/tabs-pivot.md)), normalmente há movimento bidirecional. Ou seja, você pode passar para o modo de exibição/painel próximo ou o anterior, sem sair da página atual do aplicativo.
 
@@ -113,7 +115,7 @@ E ao mudar para um modo de exibição/painel anterior em uma lista considerado o
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);
 ```
-### Navegação regressiva
+### <a name="back-navigation"></a>Navegação regressiva
 
 Ao navegar da página atual para a página anterior dentro de um aplicativo, o som **GoBack** deve ser chamado:
 
@@ -122,7 +124,7 @@ Ao navegar da página atual para a página anterior dentro de um aplicativo, o s
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 ```
-### Focando em um elemento
+### <a name="focusing-on-an-element"></a>Focando em um elemento
 
 O som **Foco** é o único som implícito em nosso sistema. Ou seja, um usuário não está interagindo diretamente com nada, mas ainda ouve um som.
 
@@ -135,18 +137,18 @@ Para configurar um controle para reproduzir o som **Foco** quando o controle rec
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Focus);
 ```
-### Exibição cíclica de sons de foco
+### <a name="cycling-focus-sounds"></a>Exibição cíclica de sons de foco
 
 Como um recurso adicionado à chamada de **ElementSound.Focus**, o sistema de som, por padrão, percorrerá por quatro sons diferentes em cada disparador de navegação. Isso significa que dois sons de foco exatos não serão reproduzidos um após o outro.
 
 O objetivo por trás desse recurso de ciclo é evitar que os sons de foco se tornem monótonos e sejam perceptíveis pelo usuário; os sons de foco serão reproduzidos com mais frequência e, portanto, devem ser mais sutis.
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 * [Projetando para TV e Xbox](http://go.microsoft.com/fwlink/?LinkId=760736)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

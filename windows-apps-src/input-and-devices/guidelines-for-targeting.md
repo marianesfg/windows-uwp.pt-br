@@ -6,22 +6,24 @@ ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 5b52f6a8e944e4166c2f4c7e16e4a83ddff23dac
-ms.openlocfilehash: 09e2241523411daa372bc7630d13b96a2aa8203b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 9710e3060410428e1a4b7cfe89442c7df8602ed2
 
 ---
 
 # <a name="guidelines-for-targeting"></a>Diretrizes de direcionamento
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 A seleção por área touch no Windows usa a área de contato total de cada dedo detectado por um digitalizador de toque. O conjunto maior e mais complexo de dados de entrada relatados pelo digitalizador é usado para aumentar a precisão ao determinar o destino desejado (ou mais provável) pelo usuário.
 
-**APIs importantes**
-
--   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
-
-
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+</ul>
+</div>
 
 Este tópico descreve o uso da geometria de contato para seleção por área de toque e fornece as práticas recomendadas de direcionamento em aplicativos UWP.
 
@@ -49,7 +51,7 @@ Esse resultado deve ser ajustado de acordo com cada nível de ajuste predefinido
 
 Os limites de distância e tempo podem ser usados para determinar o resultado de uma interação.
 
-Por exemplo, quando um toque é detectado, ele é registrado se o objeto for arrastado em menos de 2,7 mm do ponto de toque e o dedo for levantado em 0,1 segundo ou menos depois do toque. Mover o dedo além desse limite de 2,7 mm faz com que o objeto seja arrastado e selecionado ou movido (para saber mais, veja [Diretrizes de deslizamento transversal](guidelines-for-cross-slide.md)). Dependendo do seu aplicativo, segurar o dedo por mais de 0,1 segundo pode fazer com que o sistema faça uma interação de autorrevelação (para saber mais, veja [Diretrizes de comentários visuais](guidelines-for-visualfeedback.md)).
+Por exemplo, quando um toque é detectado, ele é registrado se o objeto for arrastado em menos de 2,7 mm do ponto de toque e o dedo for levantado em 0,1 segundo ou menos depois do toque. Mover o dedo além desse limite de 2,7 mm faz com que o objeto seja arrastado e selecionado ou movido (para saber mais, veja [Diretrizes de deslizamento transversal](guidelines-for-cross-slide.md)). Dependendo do seu aplicativo, segurar o dedo por mais de 0,1 segundo pode fazer com que o sistema faça uma interação de autorrevelação (para saber mais, veja [Diretrizes de feedback visual](guidelines-for-visualfeedback.md)).
 
 ## <a name="target-sizes"></a>Tamanhos do alvo
 
@@ -175,6 +177,6 @@ Siga estas diretrizes para criar interações de esfregar:
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

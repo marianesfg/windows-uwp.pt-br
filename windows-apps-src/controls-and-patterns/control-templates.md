@@ -9,31 +9,25 @@ ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 2aa257fa422ed954206dffb5ac68461e4e3a544f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 4c6ee696dff8d8e0ddc3a9b62d0309e999762dc6
 
 ---
-# Modelos de controle
+# <a name="control-templates"></a>Modelos de controle
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+Você pode personalizar a estrutura e o comportamento visual de um controle criando um modelo de controle na estrutura XAML. Os controles têm muitas propriedades, como [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414), e [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404), que você pode definir para especificar diferentes aspectos da aparência do controle. Mas as mudanças que você pode fazer ao definir essas propriedades são limitadas. Você pode especificar personalizações adicionais criando um modelo usando a classe [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). Aqui, mostramos a você como criar um **ControlTemplate** para personalizar a aparência de um controle [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316).
 
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209391"><strong>Classe ControlTemplate</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx"><strong>Propriedade Control.Template</strong></a></li>
+<li>[**Classe ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)</li>
+<li>[**Propriedade Control.Template**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-Você pode personalizar a estrutura e o comportamento visual de um controle criando um modelo de controle na estrutura XAML. Os controles têm muitas propriedades, como [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414), e [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404), que você pode definir para especificar diferentes aspectos da aparência do controle. Mas as mudanças que você pode fazer ao definir essas propriedades são limitadas. Você pode especificar personalizações adicionais criando um modelo usando a classe [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). Aqui, mostramos a você como criar um **ControlTemplate** para personalizar a aparência de um controle [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316).
-
-## Amostra de modelo de controle personalizado
+## <a name="custom-control-template-example"></a>Amostra de modelo de controle personalizado
 
 
 Por padrão, um controle [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) coloca seu conteúdo (a cadeia de caracteres ou o objeto ao lado de **CheckBox**) à direita da caixa de seleção, e uma marca de seleção indica que um usuário marcou a **CheckBox**. Essas características representam a estrutura e o comportamento visual da **CheckBox**.
@@ -54,7 +48,7 @@ Consulte como este [**CheckBox**](https://msdn.microsoft.com/library/windows/app
 
 ![modelo personalizado de caixa de seleção](images/templates-checkbox-states.png)
 
-## Especificar a estrutura visual de um controle
+## <a name="specify-the-visual-structure-of-a-control"></a>Especificar a estrutura visual de um controle
 
 
 Ao criar um [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391), você combina os objetos [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) para construir um único controle. Um **ControlTemplate** deve ter apenas um **FrameworkElement** como seu elemento raiz. O elemento raiz normalmente contém outros objetos **FrameworkElement**. A combinação dos objetos compõe a estrutura visual do controle.
@@ -95,7 +89,7 @@ Este XAML cria um [**ControlTemplate**](https://msdn.microsoft.com/library/windo
 </ControlTemplate>
 ```
 
-## Especificar o comportamento visual do controle
+## <a name="specify-the-visual-behavior-of-a-control"></a>Especificar o comportamento visual do controle
 
 
 Um comportamento visual especifica a aparência de um controle quando ele está em um certo estado. O controle [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) tem três estados de verificação: `Checked`, `Unchecked` e `Indeterminate`. O valor da propriedade [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/br209798) determina o estado de **CheckBox** e o seu estado determina o que aparece na caixa.
@@ -188,11 +182,11 @@ Para entender melhor como os objetos [**VisualState**](https://msdn.microsoft.co
  
 Para saber mais sobre como criar estados visuais para controles e, em especial, como usar a classe [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) e os tipos de animação, consulte [Animações de storyboard para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808).
 
-## Use as ferramentas para trabalhar com os temas facilmente
+## <a name="use-tools-to-work-with-themes-easily"></a>Use as ferramentas para trabalhar com os temas facilmente
 
 Uma forma rápida de aplicar temas aos seus controles é clicar com o botão direito em um controle no **Estrutura de Tópicos do Documento** do Microsoft Visual Studio e selecionar **Editar Tema** ou **Editar Estilo** (dependendo do controle no qual você está clicando com o botão direito). Em seguida, você pode aplicar um tema existente selecionando **Aplicar Recurso** ou excluir um novo selecionando **Criar Vazio**.
 
-## Controles e acessibilidade
+## <a name="controls-and-accessibility"></a>Controles e acessibilidade
 
 Ao criar um novo modelo de controle, além da possibilidade de mudar o comportamento e a aparência visual do controle, você também pode alterar como o controle se representa nas estruturas de acessibilidade. A Plataforma Universal do Windows (UWP) é compatível com a estrutura de Automação da IU Microsoft para acessibilidade. Todos os controles padrão e seus modelos permitem tipos e padrões comuns de controle de Automação da Interface do Usuário adequados para a finalidade e a função do controle. Esses tipos e padrões de controle são interpretados por clientes de Automação da Interface do Usuário, como tecnologias adaptativas, permitindo acessar um controle como parte de uma interface do usuário de aplicativo acessível maior.
 
@@ -200,28 +194,25 @@ Para separar a lógica de controle básica e também atender a alguns requisitos
 
 Ao criar um controle personalizado completamente novo, convém também criar um novo par de automação para trabalhar com ele. Para obter mais informações, consulte [Pares de automação personalizados](../accessibility/custom-automation-peers.md).
 
-## Saiba mais sobre o modelo padrão de um controle
+## <a name="learn-more-about-a-controls-default-template"></a>Saiba mais sobre o modelo padrão de um controle
 
 Os tópicos que documentam os estilos e modelos dos controles de XAML mostram trechos do mesmo XAML inicial que você veria se usasse as técnicas **Editar Tema** ou **Editar Estilo** explicadas anteriormente. Cada tópico lista os nomes dos estados visuais, os recursos de temas usados e o XAML completo para o estilo que contém o modelo. Os tópicos podem ser diretrizes úteis se você já começou a modificar um modelo e quer ver qual era a aparência do modelo original ou verificar se o novo modelo tem todos os estados visuais nomeados obrigatórios.
 
-## Recursos de tema em modelos de controle
+## <a name="theme-resources-in-control-templates"></a>Recursos de tema em modelos de controle
 
 Para alguns dos atributos nos exemplos de XAML, você pode ter percebido referências de recursos que usam a [extensão de marcação {ThemeResource}](../xaml-platform/themeresource-markup-extension.md). Essa é uma técnica que permite que um único modelo de controle use recursos que podem ser valores diferentes dependendo de qual tema está ativo no momento. Isso é particularmente importante para pincéis e cores, porque a finalidade principal dos temas é permitir que os usuários escolham se querem um tema de contraste escuro, claro ou alto aplicado ao sistema como um todo. Os aplicativos que usam o sistema de recursos de XAML podem usar um conjunto de recursos apropriado para esse tema, de maneira que as escolhas de tema na interface do usuário de um aplicativo reflitam a escolha de tema em todo o sistema feita pelo usuário.
 
-**Observação**  
-Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos UWP. Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+ ## <a name="get-the-sample-code"></a>Obter o código de exemplo
+* [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Exemplo de controle de edição de texto personalizado](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
 
  
 
- 
-
- 
 
 
 
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

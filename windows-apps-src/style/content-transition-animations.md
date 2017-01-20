@@ -3,26 +3,27 @@ author: mijacobs
 Description: "Animações de transição de conteúdo permitem que você mude o conteúdo de uma área da tela enquanto mantém constante o contêiner ou o plano de fundo. O novo conteúdo aparece. Se houver conteúdo existente para ser substituído, esse conteúdo desaparecerá."
 title: "Diretrizes para animações de transição de conteúdo"
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
+template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: 2b3e0196b573fb426c9cd71fc613819a2dd2d615
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ed2d580568b73e787ad7b980981e025652232a83
 
 ---
 
-# Animações de transição de conteúdo
+# <a name="content-transition-animations"></a>Animações de transição de conteúdo
 
-
-
-
-
-**APIs importantes**
-
--   [**Classe ContentThemeTransition (XAML)**](https://msdn.microsoft.com/library/windows/apps/br243104)
--   [**Função enterContent (HTML)**](https://msdn.microsoft.com/library/windows/apps/hh701582)
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Animações de transição de conteúdo permitem que você mude o conteúdo de uma área da tela enquanto mantém constante o contêiner ou o plano de fundo. O novo conteúdo aparece. Se houver conteúdo existente para ser substituído, esse conteúdo desaparecerá.
 
-## O que fazer e o que não fazer
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Classe ContentThemeTransition (XAML)**](https://msdn.microsoft.com/library/windows/apps/br243104)</li>
+</ul>
+</div>
+
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
 
 -   Use uma animação de entrada quando houver um conjunto de novos itens a serem inseridos em um contêiner vazio. Por exemplo, após o carregamento inicial de um aplicativo, parte do conteúdo do aplicativo pode não estar disponível imediatamente para exibição. Quando esse conteúdo estiver pronto para ser exibido, use uma animação de transição de conteúdo para inserir esse conteúdo atrasado na exibição.
@@ -35,7 +36,7 @@ Animações de transição de conteúdo permitem que você mude o conteúdo de u
 
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 **Para desenvolvedores (XAML)**
 * [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
@@ -53,6 +54,6 @@ Animações de transição de conteúdo permitem que você mude o conteúdo de u
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

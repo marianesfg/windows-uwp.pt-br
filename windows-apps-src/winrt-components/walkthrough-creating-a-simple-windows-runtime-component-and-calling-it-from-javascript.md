@@ -4,12 +4,12 @@ title: "Criando um componente do Tempo de Execução do Windows simples e chaman
 description: "Este passo a passo mostra como é possível usar o .NET Framework com Visual Basic ou C# para criar os próprios tipos de Windows Runtime, empacotados em um componente do Tempo de Execução do Windows, e como chamar o componente no aplicativo Universal do Windows em JavaScript para Windows."
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: ff9db6298fd6d0083ae6923f3666ce4315573058
+ms.sourcegitcommit: 56fbc32ee9b75688aa3dec498eb51e8bd533a4ee
+ms.openlocfilehash: 16502dbda2495333d512d9d7a3e0a7f8a8f98562
 
 ---
 
-# Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript
+# <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -23,12 +23,12 @@ O Visual Studio facilita adicionar um componente do Tempo de Execução do Windo
 
 Este passo a passo ilustra as tarefas a seguir. Depois que tiver concluído a primeira seção, que configura o aplicativo do Windows com JavaScript, você poderá concluir as seções restantes em qualquer ordem.
 
-## Pré-requisitos:
+## <a name="prerequisites"></a>Pré-requisitos:
 
 -   Windows 10
 -   Microsoft Visual Studio 2015 ou Microsoft Visual Studio Community 2015
 
-## Criação de uma classe de Tempo de Execução do Windows simples
+## <a name="creating-a-simple-windows-runtime-class"></a>Criação de uma classe de Tempo de Execução do Windows simples
 
 
 Esta seção cria um aplicativo Universal do Windows compilado para Windows usando JavaScript e adiciona um projeto de componente do Tempo de Execução do Windows em Visual Basic ou C#. Ela mostra como definir um tipo de Tempo de Execução do Windows gerenciado, criar uma instância do tipo em JavaScript e chamar membros estáticos e de instância. A exibição visual do aplicativo de exemplo é deliberadamente fosca para manter o foco no componente. Sinta-se à vontade para deixá-la mais bonita.
@@ -39,7 +39,7 @@ Esta seção cria um aplicativo Universal do Windows compilado para Windows usan
 4.  Adicione dois membros simples à classe, um método **static** (método **Shared** em Visual Basic) e uma propriedade de instância:
 
     > [!div class="tabbedCodeSnippets"]
-    > ```cpp
+    > ```csharp
     > namespace SampleComponent
     > {
     >     public sealed class Example
@@ -66,7 +66,7 @@ Esta seção cria um aplicativo Universal do Windows compilado para Windows usan
 5.  Opcional: para habilitar o IntelliSense para os membros recém-adicionados, no Gerenciador de Soluções, abra o menu de atalho do projeto SampleComponent e escolha **Compilar**.
 6.  No Gerenciador de Soluções, no projeto do JavaScript, abra o menu de atalho de **Referências** e escolha **Adicionar Referência** para abrir o **Gerenciador de Referências**. Escolha **Projetos** e **Solução**. Marque a caixa de seleção do projeto SampleComponent e escolha **OK** para adicionar uma referência.
 
-## Chamar o componente em JavaScript
+## <a name="call-the-component-from-javascript"></a>Chamar o componente em JavaScript
 
 
 Para usar o tipo de Tempo de Execução do Windows em JavaScript, adicione o código a seguir na função anônima no arquivo default.js (na pasta js do projeto) que é fornecido pelo modelo do Visual Studio. Ele deve ficar depois do manipulador de eventos app.oncheckpoint e antes da chamada para app.start.
@@ -96,7 +96,7 @@ A primeira letra do nome de cada membro é alterada de maiúsculas para minúscu
 
 De maneira semelhante, o .NET Framework dá suporte para habilitar o uso natural do Tempo de Execução do Windows em código gerenciado. Isso é debatido em seções subsequentes deste artigo e nos artigos [Criação de componentes do Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Suporte do .NET para aplicativos da Windows Store e Tempo de Execução do Windows](https://msdn.microsoft.com/library/hh694558.aspx).
 
-## Criar uma interface do usuário simples
+## <a name="create-a-simple-user-interface"></a>Criar uma interface do usuário simples
 
 
 No projeto JavaScript, abra o arquivo default.html e atualize o corpo conforme mostrado no código a seguir. Esse código inclui o conjunto completo de controles para o aplicativo de exemplo e especifica os nomes de função para os eventos de clique.
@@ -160,7 +160,7 @@ args.setPromise(WinJS.UI.processAll().then(function () {
 
 Essa é uma maneira melhor de adicionar eventos a controles HTML do que adicionar um manipulador de eventos click diretamente no HTML. Consulte [Criar um aplicativo "Hello World" (JS)](https://msdn.microsoft.com/library/windows/apps/mt280216).
 
-## Compilar e executar o aplicativo
+## <a name="build-and-run-the-app"></a>Compilar e executar o aplicativo
 
 
 Antes de compilar, altere a plataforma de destino de todos os projetos para ARM, x64 ou x86, conforme apropriado para o computador.
@@ -184,7 +184,7 @@ Escolha o botão Básico 2 para incrementar o valor da propriedade SamplePropert
 
 Para interromper a depuração e fechar o aplicativo, alterne do aplicativo para o Visual Studio e escolha Shift+F5.
 
-## Como usar o Tempo de Execução do Windows em JavaScript e código gerenciado
+## <a name="using-the-windows-runtime-from-javascript-and-managed-code"></a>Como usar o Tempo de Execução do Windows em JavaScript e código gerenciado
 
 
 O Tempo de Execução do Windows pode ser chamado no JavaScript ou no código gerenciado. Os objetos do Tempo de Execução do Windows podem ser passados para a frente e para trás entre os dois, e os eventos podem ser manipulados de ambos os lados. No entanto, as formas como você usa os tipos de Tempo de Execução do Windows nos dois ambientes diferem em alguns detalhes, porque o JavaScript e o .NET Framework dão suporte ao Tempo de Execução do Windows de maneira diferente. O exemplo a seguir demonstra essas diferenças usando a classe [Windows.Foundation.Collections.PropertySet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.propertyset.aspx). Neste exemplo, você cria uma instância da coleção PropertySet em código gerenciado e registra um manipulador de eventos para controlar alterações na coleção. Em seguida, você adiciona código JavaScript que obtém a coleção, registra o próprio manipulador de eventos e usa a coleção. Por fim, você adiciona um método que faz alterações na coleção do código gerenciado e mostra JavaScript manipulando uma exceção gerenciada.
@@ -374,7 +374,7 @@ Para executar o aplicativo, escolha a tecla F5. Escolha **Tempo de Execução 1*
 
 Por outro lado, quando JavaScript chamou o método insert usando uma chave duplicada, o valor do item foi alterado. Essa diferença no comportamento acontece por causa das diferentes maneiras que o JavaScript e o .NET Framework dão suporte ao Tempo de Execução do Windows, conforme explicado em [Criação de componentes do Tempo de Execução do Windows em C# ou Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
-## Retorno de tipos gerenciados do componente
+## <a name="returning-managed-types-from-your-component"></a>Retorno de tipos gerenciados do componente
 
 
 Conforme abordado anteriormente, é possível passar tipos de Tempo de Execução do Windows nativos para trás e para frente livremente entre o código JavaScript e o código C# ou Visual Basic. Na maioria das vezes, os nomes de tipo e membro serão iguais em ambos os casos (exceto pelos nomes de membro começarem com letras minúsculas em JavaScript). No entanto, na seção anterior, a classe PropertySet aparenta ter membros diferentes em código gerenciado. (Por exemplo, em JavaScript é chamado o método insert, e no código do .NET Framework você chamou o método Add). Esta seção explora a maneira como essas diferenças afetam os tipos do .NET Framework passados para JavaScript.
@@ -488,7 +488,7 @@ Embora não possa expor os próprios tipos genéricos de um componente do Tempo 
 
 List&lt;T&gt; implementa IList&lt;T&gt;, exibido como o tipo de Windows Runtime IVector&lt;T&gt; em JavaScript.
 
-## Declaração de eventos
+## <a name="declaring-events"></a>Declaração de eventos
 
 
 Você pode declarar eventos usando o padrão de eventos do .NET Framework ou outros padrões usados pelo Windows Runtime. O .NET Framework dá suporte à equivalência entre o representante System.EventHandler&lt;TEventArgs&gt; e o representante EventHandler&lt;T&gt; do Windows Runtime, logo, usar EventHandler&lt;TEventArgs&gt; é uma boa maneira de implementar o padrão do .NET Framework. Para saber como isso funciona, adicione o seguinte par de classes ao projeto SampleComponent:
@@ -564,7 +564,7 @@ var events1Button = document.getElementById("events1Button");
 events1Button.addEventListener("click", events1, false);
 ```
 
-## Exposição de operações assíncronas
+## <a name="exposing-asynchronous-operations"></a>Exposição de operações assíncronas
 
 
 O .NET Framework tem um conjunto avançado de ferramentas para processamento assíncrono e processamento em paralelo, com base na tarefa e nas classes genéricas [Task&lt;TResult&gt;](https://msdn.microsoft.com/library/dd321424.aspx). Para expor um processamento assíncrono baseado em tarefa em um componente do Tempo de Execução do Windows, use as interfaces do Windows Runtime [IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/br205802.aspx) e [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/br205807.aspx). (No Windows Runtime, as operações retornam resultados, mas as ações, não.)
@@ -730,7 +730,7 @@ A função asyncCancel simplesmente chama o método cancel do objeto WinJS.Promi
 
 Para executar o aplicativo, escolha a tecla F5. Para iniciar a operação assíncrona, escolha o botão **Assíncrono**. O que acontece em seguida depende da velocidade do computador. Caso a barra de progresso seja concluída antes de você sequer piscar, aumente o tamanho do número inicial que é passado para GetPrimesInRangeAsync por um ou mais fatores de dez. Você pode ajustar a duração da operação aumentando ou diminuindo a contagem de números para testar, mas adicionar zeros no meio do número inicial terá um impacto maior. Para cancelar a operação, escolha o botão **Cancel Async**.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Visão geral do .NET para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
@@ -738,6 +738,6 @@ Para executar o aplicativo, escolha a tecla F5. Para iniciar a operação assín
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

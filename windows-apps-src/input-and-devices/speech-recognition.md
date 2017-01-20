@@ -5,27 +5,34 @@ title: Reconhecimento de fala
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
 template: detail.hbs
+keywords: "controle por voz, voz, reconhecimento de fala, linguagem natural, ditado, entrada, interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 59cebc2235b8ae4214156a4140b0b003c717375d
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: a4de0955eb6bd01ef5279b5b8d553fe1d1dd50f2
 
 ---
 
-# Reconhecimento de fala
-
+# <a name="speech-recognition"></a>Reconhecimento de fala
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Use o reconhecimento de fala para fornecer entrada, especificar uma ação ou um comando e realizar tarefas.
 
-**APIs importantes**
-
--   [**Windows.Media.SpeechRecognition**](https://msdn.microsoft.com/library/windows/apps/dn653262)
-
-
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Windows.Media.SpeechRecognition**](https://msdn.microsoft.com/library/windows/apps/dn653262)</li>
+</ul>
+</div>
 
 O reconhecimento de fala é realizado em um tempo de execução de fala, APIs de reconhecimento para programação do tempo de execução, gramáticas prontas para usar ditado e pesquisa na Web e uma interface do usuário do sistema padrão que auxilia os usuários a descobrir e usar recursos de reconhecimento de fala.
 
 
-## Configurar o feed de áudio
+## <a name="set-up-the-audio-feed"></a>Configurar o feed de áudio
 
 
 Certifique-se de que o dispositivo possui microfone ou equivalente.
@@ -34,7 +41,7 @@ Configure a capacidade do dispositivo **Microfone** ([**DeviceCapability**](http
 
 Consulte [Declarações de funcionalidades do aplicativo](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
-## Reconhecer a entrada da fala
+## <a name="recognize-speech-input"></a>Reconhecer a entrada da fala
 
 
 Uma *restrição* define as palavras e frases (vocabulário) que um aplicativo reconhece na entrada de fala. As restrições estão no núcleo do reconhecimento de fala e proporcionam a seu aplicativo mais exatidão no reconhecimento de fala.
@@ -147,7 +154,7 @@ private async void StartRecognizing_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Personalizar o reconhecimento da interface do usuário
+## <a name="customize-the-recognition-ui"></a>Personalizar o reconhecimento da interface do usuário
 
 
 Quando seu aplicativo tenta o reconhecimento de fala chamando [**SpeechRecognizer.RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245), várias telas são mostradas na ordem a seguir.
@@ -204,7 +211,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 
 **Desenvolvedores**
@@ -223,6 +230,6 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -3,19 +3,26 @@ description: "Obtenha orientação de design e instruções de codificação par
 title: "Controles e padrões UWP - Desenvolvimento de aplicativos do Windows"
 author: mijacobs
 keywords: "controles de UWP, interface do usuário, controles de aplicativo"
+label: Controls & patterns
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
-ms.openlocfilehash: ef383e46f2c610b57eec1c7767d5100e42075f6c
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e530c8fab64c160737ccc06faf676d1d113896c4
 
 ---
-# Controles e padrões para aplicativos UWP
+# <a name="controls-and-patterns-for-uwp-apps"></a>Controles e padrões para aplicativos UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 No desenvolvimento de aplicativos UWP, um <i>controle</i> é um elemento de interface do usuário que exibe conteúdo ou permite interação. Os controles são os blocos de construção da interface do usuário. Fornecemos mais de 45 controles para você usar, desde botões simples a controles de dados avançados, como o modo de exibição de grade. Um <i>padrão</i> é a receita para combinar vários controles para criar algo novo.
 
 Os artigos desta seção fornecem orientações de design e instruções de codificação para adicionar controles e padrões ao seu aplicativo UWP. 
 
-## Introdução
+## <a name="intro"></a>Introdução
 
 Instruções gerais e exemplos de código para adicionar e estilizar controles em XAML e C#.
 
@@ -34,7 +41,7 @@ Há 3 etapas principais para adicionar controles ao seu aplicativo: adicionar um
 </div>
 </div>
 
-## Índice alfabético 
+## <a name="alphabetical-index"></a>Índice alfabético 
 
 Informações detalhadas sobre controles e padrões específicos.
 
@@ -169,6 +176,6 @@ Informações detalhadas sobre controles e padrões específicos.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

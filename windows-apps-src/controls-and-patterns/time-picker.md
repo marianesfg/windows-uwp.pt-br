@@ -6,11 +6,11 @@ ms.assetid: 5124ecda-09e6-449e-9d4a-d969dca46aa3
 label: Time picker
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 69f682b0edddbcf88515af537c33b3d8297f91f0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: cfe38564f54f61b2d48918f5dd5bf41e7c57b965
 
 ---
-# Seletor de hora
+# <a name="time-picker"></a>Seletor de hora
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 O seletor de hora oferece uma maneira padronizada de permitir que os usuários escolham um valor usando entrada por toque, mouse ou teclado. 
@@ -18,28 +18,23 @@ O seletor de hora oferece uma maneira padronizada de permitir que os usuários e
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx"><strong>Classe TimePicker</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.time.aspx"><strong>Propriedade Time</strong></a></li>
+<li>[**Classe TimePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)</li>
+<li>[**Propriedade Time**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.time.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 Use um seletor de hora para permitir que um usuário selecione um valor de hora único.
 
 Para obter mais informações sobre como escolher o controle correto, consulte o artigo [Controles de data e hora](date-and-time.md).
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 O ponto de entrada mostra a hora escolhida e, quando o usuário seleciona o ponto de entrada, uma superfície de seletor se expande verticalmente do meio para que o usuário faça uma seleção. O seletor de hora se sobrepõe a outra interface do usuário; ele não remove a outra interface do usuário.
 
 ![Exemplo da expansão do seletor de hora](images/controls_timepicker_expand.png)
 
-## Criar um seletor de hora
+## <a name="create-a-time-picker"></a>Criar um seletor de hora
 
 Este exemplo mostra como criar um seletor de hora simples com um cabeçalho.
 
@@ -56,11 +51,12 @@ O seletor de hora resultante tem esta aparência:
 
 ![Exemplo de seletor de hora](images/time-picker-closed.png)
 
-> **Observação**&nbsp;&nbsp;Para obter informações importantes sobre valores de data e hora, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os *Controles de data e hora*.
+> [!NOTE]
+> Para obter informações importantes sobre valores de data e hora, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo *Controles de data e hora*.
 
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 - [Controles de data e hora](date-and-time.md)
 - [Seletor de data do calendário](calendar-date-picker.md)
@@ -69,6 +65,6 @@ O seletor de hora resultante tem esta aparência:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

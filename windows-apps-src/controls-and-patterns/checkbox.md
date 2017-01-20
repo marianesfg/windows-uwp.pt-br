@@ -6,11 +6,11 @@ ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f565acbebbee8b8fb88a72970c9dbe3202ba24df
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 874d1a7200359ecc46b26b306b208946c7a6f273
 
 ---
-# Caixas de seleção
+# <a name="check-boxes"></a>Caixas de seleção
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,20 +21,14 @@ Uma caixa de seleção é usada para marcar ou desmarcar itens de ação. Ela po
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209316"><strong>Classe CheckBox</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx"><strong>Evento Checked</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx"><strong>Propriedade IsChecked</strong></a> </li>
+<li>[**Classe CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)</li>
+<li>[**Evento Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
+<li>[**Propriedade IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) </li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 Use uma **única caixa de seleção** para uma opção de binário Sim/Não, como com um cenário de logon do tipo "Memorizar minhas informações?" ou com termos de um contrato de serviço.
 
@@ -54,7 +48,7 @@ Quando opções podem ser agrupadas, você pode usar uma caixa de seleção inde
 
 Ambos os controles de **caixa de seleção** e **botão de opção** permitem que o usuário selecione em uma lista de opções. Caixas de seleção permitem que o usuário selecione uma combinação de opções. Em contraste, botões de opção permitem que o usuário faça uma única escolha entre opções mutuamente exclusivas. Quando há mais de uma opção, mas apenas uma pode ser selecionada, use um botão de opção.
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 Uma caixa de seleção em uma caixa de diálogo no navegador Microsoft Edge.
 
@@ -64,7 +58,7 @@ Caixas de seleção no aplicativo Alarmes e Relógio do Windows.
 
 ![Caixas de seleção no aplicativo Alarmes e Relógio do Windows](images/control-examples/check-box-alarm.png)
 
-## Criar uma caixa de seleção
+## <a name="create-a-checkbox"></a>Criar uma caixa de seleção
 
 Para atribuir um rótulo à caixa de seleção, defina a propriedade [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content.aspx). O rótulo é exibido perto da caixa de seleção.
 
@@ -82,7 +76,7 @@ CheckBox checkBox1 = new CheckBox();
 checkBox1.Content = "I agree to the terms of service.";
 ```
 
-### Associar a IsChecked
+### <a name="bind-to-ischecked"></a>Associar a IsChecked
 
 Use a propriedade [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) para determinar se a caixa de seleção está marcada ou desmarcada. Você pode associar o valor da propriedade IsChecked a outro valor binário. No entanto, como IsChecked é um valor booliano [anulável](https://msdn.microsoft.com/library/windows/apps/b3h38hb0.aspx), você deve usar um conversor de valor para associá-la a um valor booliano.
 
@@ -127,7 +121,7 @@ public class NullableBooleanToBooleanConverter : IValueConverter
 }
 ```
 
-### Manipular eventos Click e Checked
+### <a name="handle-click-and-checked-events"></a>Manipular eventos Click e Checked
 
 Para realizar uma ação quando o estado da caixa de seleção é alterado, você pode manipular o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) ou os eventos [**Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx) e [**Unchecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.unchecked.aspx). 
 
@@ -180,7 +174,7 @@ private void toppingsCheckbox_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-### Usar o estado indeterminado
+### <a name="use-the-indeterminate-state"></a>Usar o estado indeterminado
 
 O controle CheckBox herda de [ToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.aspx) e pode ter três estados: 
 
@@ -276,7 +270,7 @@ private void SetCheckedState()
 }
 ```
 
-## O que fazer e o que não fazer
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
 -   Verifique se a finalidade e o estado atual da caixa de seleção estão claros.
 -   Limite o conteúdo do texto da caixa de seleção a no máximo duas linhas.
@@ -298,7 +292,7 @@ private void SetCheckedState()
     ![Grupo de botões de opção com três opções: Não temperado, Temperado e Extratemperado](images/spicyoptions.png)
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 -   [**Classe CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 
 -   [Botões de opção](radio-button.md)
@@ -308,6 +302,6 @@ private void SetCheckedState()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,8 +4,8 @@ description: "Esta é a Parte 1 de um guia passo a passo completo sobre como cri
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
-ms.openlocfilehash: 04311e9c3242bdaf6588c8102a06ae658e6637e2
+ms.sourcegitcommit: 126811b615117c0204e3ac4326d810c986a51e55
+ms.openlocfilehash: 27f06fe3031d391a03bc5f5b08723983b34308f0
 
 ---
 
@@ -624,7 +624,7 @@ Neste exercício, você continuará do exercício anterior. Quando um usuário f
 
 -   Compile e execute o aplicativo. Faça logon com "sampleUsername" e clique em login. Insira seu PIN e, se bem-sucedido, você deverá ser direcionado para a tela de boas-vindas. Tente clicar em forget user e monitore a janela de saída para ver se o usuário foi excluído. Observe que, quando o usuário é excluído, você permanece na página de boas-vindas. Você precisará criar uma página de seleção do usuário para a qual aplicativo pode navegar.
 
-    !tela de boas-vindas do passport](images/passport-login-9.png)
+    ![tela de boas-vindas do Passport](images/passport-login-9.png)
 
 -   Na pasta Views, crie uma nova página em branco chamada "UserSelection.xaml" e adicione o seguinte XAML para definir a interface do usuário. Esta página conterá uma [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) que exibe todos os usuários na lista de contas locais e um botão que navegará para a página de logon para permitir que o usuário adicione outra conta.
 
@@ -973,6 +973,6 @@ Você como desenvolvedor não precisa fazer nenhum trabalho extra para dar supor
 * [Serviço de logon do Microsoft Passport](microsoft-passport-login-auth-service.md)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

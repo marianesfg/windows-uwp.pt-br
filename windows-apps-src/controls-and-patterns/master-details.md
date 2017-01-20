@@ -6,11 +6,11 @@ ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f0083e3c50e7e899e6caf62595a7ecbf0af22b3d
+ms.sourcegitcommit: 98b3a9739b1906b7abb529cea1e7d433118cbcdd
+ms.openlocfilehash: ef57c6d1a00797e2a68291475b6a38778e5d73ad
 
 ---
-# Padrão mestre/detalhes
+# <a name="masterdetails-pattern"></a>Padrão mestre/detalhes
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -18,7 +18,7 @@ O padrão mestre/detalhes tem um painel mestre (geralmente com uma [exibição d
 
 ![Exemplo do padrão mestre/detalhes](images/HIGSecOne_MasterDetail.png)
 
-## Este é o padrão certo?
+## <a name="is-this-the-right-pattern"></a>Este é o padrão certo?
 
 O padrão mestre/detalhes funciona bem para:
 
@@ -26,7 +26,7 @@ O padrão mestre/detalhes funciona bem para:
 -   Localizar e priorizar uma grande coleção de conteúdo.
 -   Permitir a rápida adição e remoção de itens de uma lista enquanto se alterna entre contextos.
 
-## Escolher o estilo certo
+## <a name="choose-the-right-style"></a>Escolher o estilo certo
 
 Ao implementar o padrão mestre/detalhes, recomendamos usar o estilo empilhado ou lado a lado, dependendo do espaço disponível na tela.
 
@@ -36,7 +36,7 @@ Ao implementar o padrão mestre/detalhes, recomendamos usar o estilo empilhado o
 | 720 epx ou mais larga       | Lado a lado      |
 
  
-## Estilo empilhado
+## <a name="stacked-style"></a>Estilo empilhado
 
 No estilo empilhado, apenas um painel fica visível por vez: o mestre ou os detalhes.
 
@@ -44,7 +44,7 @@ No estilo empilhado, apenas um painel fica visível por vez: o mestre ou os deta
 
 O usuário começa no painel mestre e "faz drill down" até o painel de detalhes, selecionando um item na lista mestra. Para o usuário, parece que os modos de exibição mestre e detalhado existem em duas páginas separadas.
 
-### Criar um padrão mestre/detalhes empilhado
+### <a name="create-a-stacked-masterdetails-pattern"></a>Criar um padrão mestre/detalhes empilhado
 
 Uma maneira de criar o padrão mestre/detalhes empilhado é usar páginas separadas para o painel mestre e para o painel de detalhes. Coloque a exibição de lista que fornece a lista mestra em uma página, e o elemento de conteúdo do painel de detalhes em uma página separada.
 
@@ -54,7 +54,7 @@ Para o painel mestre, um controle de [exibição de lista](lists.md) funciona be
 
 Para o painel de detalhes, use o elemento de conteúdo mais lógico. Se tiver muitos campos separados, considere o uso de um layout de grade para organizar os elementos em um formulário.
 
-## Estilo lado a lado
+## <a name="side-by-side-style"></a>Estilo lado a lado
 
 No estilo lado a lado, o painel mestre e o painel de detalhes ficam visíveis ao mesmo tempo.
 
@@ -62,13 +62,13 @@ No estilo lado a lado, o painel mestre e o painel de detalhes ficam visíveis ao
 
 A lista no painel mestre tem uma seleção visual para indicar o item atualmente selecionado. Ao selecionar um novo item na lista mestra, o painel de detalhes é atualizado.
 
-### Criar um padrão de mestre/detalhes lado a lado
+### <a name="create-a-side-by-side-masterdetails-pattern"></a>Criar um padrão de mestre/detalhes lado a lado
 
 Para o painel mestre, um controle de [exibição de lista](lists.md) funciona bem para apresentar listas que podem conter imagens e texto.
 
 Para o painel de detalhes, use o elemento de conteúdo mais lógico. Se tiver muitos campos separados, considere o uso de um layout de grade para organizar os elementos em um formulário.
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 Este design de aplicativo que rastreia o mercado de ações usa um padrão mestre/detalhes. Neste exemplo do aplicativo como apareceria no telefone, o painel/lista mestra encontra-se à esquerda, com o painel de detalhes à direita.
 
@@ -76,19 +76,21 @@ Este design de aplicativo que rastreia o mercado de ações usa um padrão mestr
 
 Este design de aplicativo que rastreia o mercado de ações usa um padrão mestre/detalhes. Neste exemplo do aplicativo como apareceria na área de trabalho, o painel/lista mestra e o painel de detalhes ficam visíveis e em tela inteira. O painel mestre apresenta uma caixa de pesquisa na parte superior e uma barra de comandos na parte inferior.
 
-![Exemplo de aplicativo usando o padrão mestre-detalhes na área de trabalho](images/uap-finance-desktop700.png)
+![Exemplo de um aplicativo que usa o padrão de detalhes mestre na área de trabalho](images/uap-finance-desktop700.png)
 
+Para código de exemplo que mostra o padrão mestre/detalhes, consulte
+- [Exemplo de ListView e GridView](http://go.microsoft.com/fwlink/p/?LinkId=619900)
+- [Exemplo de leitor RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
 
-
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Listas](lists.md)
-- [Pesquisar](search.md)
+- [Pesquisa](search.md)
 - [Aplicativo e barras de comandos](app-bars.md)
 - [**Classe ListView (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

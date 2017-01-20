@@ -4,12 +4,12 @@ title: "Definir condições para executar uma tarefa em segundo plano"
 description: "Saiba como definir condições que controlam quando a sua tarefa em segundo plano será executada."
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: c22fed27b77f3287dd11a05c32405fe18521af65
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: c83f861f43209c42dff661e3277e1d8a1b67d37c
 
 ---
 
-# Definir condições para executar uma tarefa em segundo plano
+# <a name="set-conditions-for-running-a-background-task"></a>Definir condições para executar uma tarefa em segundo plano
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -27,9 +27,9 @@ Colocar condições em tarefas em segundo plano poupa bateria e tempo de execuç
 
 Também é possível integrar várias condições chamando AddCondition muitas vezes no mesmo [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Tome cuidado para não adicionar condições conflitantes, como **UserPresent**e **UserNotPresent**.
 
-## Criar um objeto SystemCondition
+## <a name="create-a-systemcondition-object"></a>Criar um objeto SystemCondition
 
-Este tópico pressupõe que você tenha uma tarefa em segundo plano já associada ao aplicativo e que o aplicativo já inclua um código que cria um objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) que se chama **taskBuilder**.  Consulte [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md) se você precisar criar uma tarefa em segundo plano primeiro.
+Este tópico pressupõe que você tenha uma tarefa em segundo plano já associada ao aplicativo e que o aplicativo já inclua um código que cria um objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) que se chama **taskBuilder**.  Consulte [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md) se você precisar criar uma tarefa em segundo plano primeiro.
 
 Este tópico se aplica a tarefas em segundo plano executadas fora do processo, bem como àquelas executadas no mesmo processo do aplicativo em primeiro plano.
 
@@ -45,7 +45,7 @@ O código a seguir cria um objeto [**SystemCondition**](https://msdn.microsoft.c
 > SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionType::InternetAvailable);
 > ```
 
-## Adicionar o objeto SystemCondition à sua tarefa em segundo plano
+## <a name="add-the-systemcondition-object-to-your-background-task"></a>Adicionar o objeto SystemCondition à sua tarefa em segundo plano
 
 
 Para adicionar a condição, chame o método [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) no objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) e passe a ele o objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834).
@@ -60,7 +60,7 @@ O código a seguir registra a condição da tarefa em segundo plano InternetAvai
 > taskBuilder->AddCondition(internetCondition);
 > ```
 
-## Registrar sua tarefa em segundo plano
+## <a name="register-your-background-task"></a>Registrar sua tarefa em segundo plano
 
 
 Agora, você pode registrar sua tarefa em segundo plano no método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772), e ela apenas será iniciada quando a condição especificada for atendida.
@@ -81,7 +81,7 @@ Para garantir que seu aplicativo Universal do Windows continue a ser executado c
 
 > **Observações**  Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
 
-## Inserir várias condições na sua tarefa em segundo plano
+## <a name="place-multiple-conditions-on-your-background-task"></a>Inserir várias condições na sua tarefa em segundo plano
 
 Para adicionar várias condições, seu aplicativo faz várias chamadas ao método [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) . Essas chamadas devem ser feitas antes que o registro da tarefa se torne efetivo.
 
@@ -150,20 +150,20 @@ O trecho a seguir mostra várias condições no contexto de criação e registro
 > BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ```
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 
 > **Observação**  Escolha as condições certas para a sua tarefa em segundo plano, de forma que ela apenas seja executada quando for necessária, e não em situações nas quais ela não irá funcionar. Confira [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para ver descrições das diferentes condições de tarefas em tela de fundo.
 
 > **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 ****
 
-* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-an-outofproc-background-task.md)
-* [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md)
-* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-a-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano em processo](create-and-register-an-inproc-background-task.md)
+* [Declarar tarefas em segundo plano no manifesto do app](declare-background-tasks-in-the-application-manifest.md)
 * [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
@@ -181,6 +181,6 @@ O trecho a seguir mostra várias condições no contexto de criação e registro
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,12 +4,12 @@ title: Manipular uma tarefa em segundo plano cancelada
 description: "Saiba como criar uma tarefa em segundo plano que reconhece solicitações de cancelamento e interrompe o trabalho, relatando o cancelamento ao aplicativo usando armazenamento persistente."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: ba40aefe83a02d29150dd25e1303ec15bb032b8c
 
 ---
 
-# Manipular uma tarefa em segundo plano cancelada
+# <a name="handle-a-cancelled-background-task"></a>Manipular uma tarefa em segundo plano cancelada
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -21,11 +21,11 @@ ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
 
 Saiba como criar uma tarefa em segundo plano que reconhece uma solicitação de cancelamento e interrompe o trabalho, relatando o cancelamento ao aplicativo usando armazenamento persistente.
 
-Este tópico pressupõe que você já tenha criado uma classe de tarefa em segundo plano, inclusive o método Run que é usado como o ponto de entrada da tarefa em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano dentro do processo](create-and-register-an-inproc-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
+Este tópico pressupõe que você já tenha criado uma classe de tarefa em segundo plano, inclusive o método Run que é usado como o ponto de entrada da tarefa em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md) ou [Criar e registrar uma tarefa em segundo plano dentro do processo](create-and-register-an-inproc-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
 
 Este tópico também é aplicável a tarefas em segundo plano dentro do processo. Mas, em vez do método Run(), substitua OnBackgroundActivated(). As tarefas em segundo plano dentro do processo não exigem que você use o armazenamento persistente para sinalizar o cancelamento, pois você pode comunicar o cancelamento usando o estado do aplicativo desde que a tarefa em segundo plano esteja em execução no mesmo processo do seu aplicativo em primeiro plano.
 
-## Usar o método OnCanceled para reconhecer as solicitações de cancelamento
+## <a name="use-the-oncanceled-method-to-recognize-cancellation-requests"></a>Usar o método OnCanceled para reconhecer as solicitações de cancelamento
 
 Grave um método para manipular o evento de cancelamento.
 
@@ -96,7 +96,7 @@ No método Run da tarefa em segundo plano, registre o método manipulador de eve
 >     taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &SampleBackgroundTask::OnCanceled);
 > ```
 
-## Manipular o cancelamento saindo da sua tarefa em segundo plano
+## <a name="handle-cancellation-by-exiting-your-background-task"></a>Manipular o cancelamento saindo da sua tarefa em segundo plano
 
 Quando uma solicitação de cancelamento é recebida, o método que realiza a tarefa em segundo plano precisa parar o trabalho e sair reconhecendo quando **\_cancelRequested** está definido como **true**. Para tarefas em segundo plano dentro do processo, isso significa retornar do método `OnBackgroundActivated()`. Para tarefas em segundo plano fora do processo, isso significa retornar do método `Run()`.
 
@@ -200,13 +200,13 @@ O [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=
 >     }
 > ```
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Você pode baixar a [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) para ver esses exemplos de código contextualizados dentro de métodos.
 
 Por questões ilustrativas, o código de amostra mostra apenas partes do método Run (e temporizador de chamada de retorno) da [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
 
-## Exemplo do método Run
+## <a name="run-method-example"></a>Exemplo do método Run
 
 O método Run completo e o código de retorno de chamada do temporizador do [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) são mostrados a seguir para contextualização:
 
@@ -329,10 +329,10 @@ O método Run completo e o código de retorno de chamada do temporizador do [amo
 
 > **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md).
-* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-an-outofproc-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
@@ -347,6 +347,6 @@ O método Run completo e o código de retorno de chamada do temporizador do [amo
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -3,8 +3,8 @@ author: Mtoepke
 title: Problemas conhecidos com o Programa de desenvolvedor UWP no Xbox One
 description: 
 translationtype: Human Translation
-ms.sourcegitcommit: 20ac6fb738de1c8aaf10f46c359842f31714dbbf
-ms.openlocfilehash: b6fe2f90e0aff4b8e77b4c20aec0d29f2a6a36f8
+ms.sourcegitcommit: 3f0647bb76340ccbd538e9e4fefe173924d6baf4
+ms.openlocfilehash: 18c8d1fcd696f336601dc6c531424fe8bfb78304
 
 ---
 
@@ -18,20 +18,26 @@ A lista a seguir destaca alguns problemas conhecidos que podem ocorrer, embora e
 
 **Queremos receber seu feedback**, portanto, relate todos os problemas que você encontrar no fórum [Desenvolvendo aplicativos da Plataforma Universal do Windows](https://social.msdn.microsoft.com/forums/windowsapps/home?forum=wpdevelop). 
 
-Se você ficar preso, leia as informações neste tópico, consulte [Perguntas frequentes](frequently-asked-questions.md)e use os fóruns para pedir ajuda.
+Se você se perder, leia as informações neste tópico. Consulte [Perguntas frequentes](frequently-asked-questions.md) e use os fóruns para pedir ajuda.
 
 
 <!--## Developing games-->
- 
-## <a name="memory-limits-for-background-apps-are-partially-enforced"></a>Limites de memória para aplicativos em segundo plano foram parcialmente impostos
- 
-O volume de memória máxima para aplicativos em execução em segundo plano é 128 MB. Na versão atual de UWP no Xbox One, seu aplicativo será suspenso se estiver acima esse limite quando for movido para segundo plano. Esse limite não será imposto no momento se seu aplicativo exceder o limite enquanto estiver sendo executado em segundo plano. Isso significa que, se seu aplicativo exceder 128 MB durante a execução em segundo plano, ele ainda poderá alocar memória.
- 
-Atualmente, não há uma solução alternativa para esse problema. Os aplicativos devem reger o uso da memória de acordo e continuar a permanecer dentro do limite de 128 MB durante a execução em segundo plano.
- 
-## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>A implantação a partir do VS falha com os Controles dos Pais ativados
 
-A inicialização do aplicativo a partir do VS falhará se o console tiver os Controles dos Pais ativados em Configurações.
+## <a name="issue-when-leaving-dev-mode"></a>Problema ao sair do Modo de Desenvolvedor
+Às vezes, pode acontecer de você não consegui sair do Modo de Desenvolvedor nem usando DevHome, nem usando as Configurações do Desenvolvedor.
+Existem duas soluções alternativas possíveis para isso: 
+1. Desmarque a caixa **Delete side loaded games and apps** ao sair do Modo de Desenvolvedor
+2. Ir até Meus jogos e apps e desinstalar todos os aplicativos de desenvolvedor instalados no console
+ 
+<!--## Memory limits for background apps are partially enforced
+ 
+The maximum memory footprint for apps running in the background is 128 megabytes. In the current version of UWP on Xbox One, your app will be suspended if it is above this limit when it is moved to the background. This limit is not currently enforced if your app exceeds the limit while it is already running in the background—this means that if your app exceeds 128 MB while running in the background, it will still be able to allocate memory.
+ 
+There is currently no workaround for this issue. Apps should govern their memory usage accordingly and continue to stay under the 128 MB limit while running in the background.-->
+ 
+## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>A implantação com base em VS falha com os Controles dos Pais ativados
+
+A inicialização do aplicativo com base em VS falhará se o console tiver os Controles dos Pais ativados em Configurações.
 
 Para contornar esse problema, desabilite temporariamente os Controles dos Pais ou:
 1. Implante seu aplicativo no console com os Controles dos Pais desativados.
@@ -93,7 +99,7 @@ Developers can still use HTTP and WebSockets.
 
 ## <a name="blocked-networking-ports-on-xbox-one"></a>Portas de rede bloqueadas no Xbox One
 
-os aplicativos da Plataforma Universal do Windows (UWP) em dispositivos Xbox One não podem se associar a portas no intervalo [49152, 65535]. Embora a associação a essas portas possa parecer ter sucesso em tempo de execução, o tráfego de rede pode diminuir silenciosamente antes de atingir seu aplicativo. Seu aplicativo deverá se associar à porta 0 sempre que possível, o que permite que o sistema selecione a porta local. Se você precisar usar uma porta específica, o número da porta deverá estar no intervalo [1025, 49151], e você deve verificar e evitar conflitos com o registro IANA. Para obter mais informações, consulte o [Nome do serviço e registro de número de porta de protocolo de transporte](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
+Os aplicativos da Plataforma Universal do Windows (UWP) em dispositivos do Xbox One não podem se associar a portas na faixa [57344, 65535], inclusive. Embora a associação a essas portas possa parecer ter sido bem-sucedida em tempo de execução, o tráfego de rede pode diminuir silenciosamente antes de atingir o aplicativo. Seu aplicativo deverá se associar à porta 0 sempre que possível, o que permite que o sistema selecione a porta local. Se você precisar usar uma porta específica, o número da porta deverá estar no intervalo [1025, 49151], e você deve verificar e evitar conflitos com o registro IANA. Para obter mais informações, consulte o [Nome do serviço e registro de número de porta de protocolo de transporte](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
 
 ## <a name="uwp-api-coverage"></a>Cobertura de API UWP
 
@@ -177,6 +183,6 @@ This is caused by a failure in the WDP infrastructure on the console and can be 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

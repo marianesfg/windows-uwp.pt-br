@@ -6,11 +6,11 @@ ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
-ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 93f5d7fe5ec14a0d5ccb69e84e9419488192a5c4
 
 ---
-# Listas
+# <a name="lists"></a>Listas
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -26,22 +26,17 @@ Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de l
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br242878"><strong>Classe ListView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br242705"><strong>Classe GridView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209348"><strong>Classe ComboBox</strong></a></li>
+<li>[**Classe ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)</li>
+<li>[**Classe GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)</li>
+<li>[**Classe ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## Modos de exibição de lista
+## <a name="list-views"></a>Modos de exibição de lista
 
 Modos de exibição de lista permitem que você classifique itens e atribua cabeçalhos de grupo, arraste e solte itens, corrija conteúdo e reordene os itens.
 
-### Esse é o controle correto?
+### <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use um modo de exibição de lista para:
 
@@ -49,18 +44,18 @@ Use um modo de exibição de lista para:
 -   Navegue em uma coleção de conteúdos única ou categorizada.
 -   Crie o painel mestre no [padrão mestre/detalhes](master-details.md). Um padrão mestre/detalhes é usado com frequência em aplicativos de email, em que um painel (o mestre) tem uma lista de itens selecionáveis e o outro painel (detalhes) tem uma exibição detalhada do item selecionado.
 
-### Exemplos
+### <a name="examples"></a>Exemplos
 
 Veja uma exibição de lista simples que mostra dados agrupados em um telefone.
 
 ![Uma exibição de lista com dados agrupados](images/simple-list-view-phone.png)
 
-### Recomendações
+### <a name="recommendations"></a>Recomendações
 
 -   Os itens em uma lista devem ter o mesmo comportamento.
 -   Se a sua lista estiver dividida em grupos, você pode usar o [zoom semântico](semantic-zoom.md), para tornar mais fácil para os usuários navegarem pelo conteúdo agrupado.
 
-### Artigos sobre exibição de lista
+### <a name="list-view-articles"></a>Artigos sobre exibição de lista
 <table>
 <colgroup>
 <col width="50%" />
@@ -96,11 +91,11 @@ Veja uma exibição de lista simples que mostra dados agrupados em um telefone.
 </tbody>
 </table>
 
-## Exibições em grade
+## <a name="grid-views"></a>Exibições em grade
 
 Modos de exibição de grade são adequados para organizar e navegar em coleções de conteúdos baseadas em imagens. Um layout de modo de exibição de grade rola verticalmente e faz movimento panorâmico na horizontal. Os itens são dispostos na ordem de leitura da esquerda para a direita, depois de cima para baixo.
 
-### Esse é o controle correto?
+### <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use um modo de exibição de lista para:
 
@@ -108,7 +103,7 @@ Use um modo de exibição de lista para:
 -   Exiba bibliotecas de conteúdo.
 -   Formate os dois modos de exibição de conteúdo associados ao [zoom semântico](semantic-zoom.md).
 
-### Exemplos
+### <a name="examples"></a>Exemplos
 
 Este exemplo mostra um layout de modo de exibição de grade típico, neste caso, para navegar aplicativos. Metadados para itens de modo de exibição de grade são geralmente restritos a algumas linhas de texto e uma classificação de item.
 
@@ -118,12 +113,12 @@ Um modo de exibição de grade é a solução ideal para uma biblioteca de conte
 
 ![Exemplo de uma biblioteca de conteúdo](images/controls_list_contentlibrary.png)
 
-### Recomendações
+### <a name="recommendations"></a>Recomendações
 
 -   Os itens em uma lista devem ter o mesmo comportamento.
 -   Se a sua lista estiver dividida em grupos, você pode usar o [zoom semântico](semantic-zoom.md), para tornar mais fácil para os usuários navegarem pelo conteúdo agrupado.
 
-### Artigos sobre exibição de grade
+### <a name="grid-view-articles"></a>Artigos sobre exibição de grade
 <table>
 <colgroup>
 <col width="50%" />
@@ -151,18 +146,18 @@ Um modo de exibição de grade é a solução ideal para uma biblioteca de conte
 </tbody>
 </table>
 
-## Listas suspensas
+## <a name="drop-down-lists"></a>Listas suspensas
 
 Listas suspensas, também conhecidas como caixas de combinação, começam em um estado compacto e se expandem para mostrar uma lista de itens selecionáveis. O item selecionado fica sempre visível, e os itens não visíveis podem ser exibidos quando o usuário toca na caixa de combinação para expandi-la.
 
-### Esse é o controle correto?
+### <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 -   Use um controle de lista suspensa para permitir aos usuários selecionar um ou mais valores de um conjunto de itens que podem ser representados adequadamente com linhas de texto únicas.
 -   Use um modo de exibição de lista ou de grade em vez de uma caixa de combinação para exibir itens que contenham várias linhas de texto ou imagens.
 -   Quando houver menos de cinco itens, considere a possibilidade de usar [botões de opção](radio-button.md) (se somente um item puder ser selecionado) [ou caixas de seleção](checkbox.md) (se vários itens puderem ser selecionados).
 -   Use a caixa de combinação quando os itens de seleção forem de importância secundária no fluxo do seu aplicativo. Se a opção padrão for recomendada para a maioria dos usuários em grande parte das situações, mostrar todos os itens usando uma exibição de lista pode chamar mais atenção para as opções do que o necessário. Você pode economizar espaço e minimizar a distração usando uma caixa de combinação.
 
-### Exemplos
+### <a name="examples"></a>Exemplos
 
 Uma caixa de combinação no estado compacto pode mostrar um cabeçalho.
 
@@ -176,20 +171,20 @@ Se a coleção em uma caixa de combinação for grande o suficiente, será exibi
 
 ![Exemplo de uma barra de rolagem em uma lista suspensa](images/combo_box_scroll.png)
 
-### Recomendações
+### <a name="recommendations"></a>Recomendações
 
 -   Limite o conteúdo de texto dos itens da caixa de combinação a uma única linha.
 -   Classifique os itens em uma caixa de combinação na ordem mais lógica. Agrupe opções relacionadas e coloque as opções mais comuns na parte superior. Classifique os nomes em ordem alfabética, os números em ordem numérica e as datas em ordem cronológica.
 
-### Pesquisa de texto
+### <a name="text-search"></a>Pesquisa de texto
 
 As caixas de combinação suportam automaticamente pesquisas dentro de suas coleções. Como os usuários digitam caracteres em um teclado físico enquanto enfocam uma caixa de combinação aberta ou fechada, os candidatos que correspondem à cadeia do usuário são inseridos na exibição. Essa funcionalidade é especialmente útil quando estiver navegando uma longa lista. Por exemplo, quando interage com uma lista suspensa contendo uma lista de estados, os usuários podem pressionar a tecla "w" para trazer "Washington" até a exibição para que haja uma seleção rápida. 
 
-## Caixas de listagem
+## <a name="list-boxes"></a>Caixas de listagem
 
 Uma caixa de listagem permite que o usuário escolha um único item ou vários itens de uma coleção. Caixas de listagem são semelhantes a listas suspensas, exceto que as caixas de listagem ficam sempre abertas: não há estado compacto (não expandido) para uma caixa de listagem. Pode-se fazer a rolagem pelos itens em uma lista se não houver espaço para mostrar tudo.
 
-### Esse é o controle correto?
+### <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 -   Uma caixa de listagem pode ser útil quando itens da lista são importantes o suficiente para serem exibidos em destaque e quando há espaço suficiente na tela para mostrar a lista completa.
 -   Uma caixa de listagem deve chamar a atenção do usuário para todo o conjunto de alternativas em uma escolha importante. Por outro lado, uma lista suspensa inicialmente atrai a atenção do usuário para o item selecionado.
@@ -200,7 +195,7 @@ Uma caixa de listagem permite que o usuário escolha um único item ou vários i
     -   Os itens são valores numéricos contíguos. Se esse for o caso, considere usar um [controle deslizante](slider.md).
     -   Os itens de seleção são de importância secundária no fluxo de seu aplicativo, ou a opção padrão é recomendada para a maioria dos usuários na maioria das situações. Utilize uma lista suspensa em vez disso.
 
-### Recomendações
+### <a name="recommendations"></a>Recomendações
 
 -   O intervalo ideal de itens em uma caixa de listagem é de 3 a 9.
 -   Uma caixa de listagem funciona bem quando seus itens podem variar dinamicamente.
@@ -211,7 +206,7 @@ Uma caixa de listagem permite que o usuário escolha um único item ou vários i
 -   Use fonte padrão, a menos que as diretrizes da marca indiquem o contrário.
 -   Não utilize uma caixa de listagem para executar comandos ou exibir ou ocultar dinamicamente outros controles.
 
-## Modo de seleção
+## <a name="selection-mode"></a>Modo de seleção
 
 O modo de seleção permite que os usuários selecionem e executem ações em um item ou em vários itens. Ele pode ser invocado por meio de um menu de contexto usando CTRL+clique ou SHIFT+clique em um item ou rolando um destino em um item em um modo de exibição de galeria. Quando o modo de seleção está ativo, as caixas de seleção aparecem ao lado de cada item da lista, e as ações podem aparecer na parte superior ou inferior da tela.
 
@@ -233,7 +228,7 @@ O ponto de entrada para o modo de seleção deve estar justaposto em relação a
 
 Veja recomendações sobre a barra de comandos em [Diretrizes de barras de comandos](app-bars.md).
 
-## Lista de verificação de globalização e localização
+## <a name="globalization-and-localization-checklist"></a>Lista de verificação de globalização e localização
 
 <table>
 <tr>
@@ -248,7 +243,7 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 </table>
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Hub](hub.md)
 - [Mestre/detalhes](master-details.md)
@@ -264,6 +259,6 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
