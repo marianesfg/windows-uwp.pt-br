@@ -2858,7 +2858,7 @@
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.pt-br\\master\\8d1cfa840e359ad1f6a890ed7e7425d387393e15.3ac73f3bcdf6f42053083d566aceb8f21900f65a.xml",
       "LocXliff": "ol-handback\\cpubwin\\windows-uwp.pt-br\\master\\input-for-games.98d9a206c764cec3db702223140e45925437bb33.pt-br.xlf",
-      "LocXliffCommit": "b6f9dbb4de8a2553950a94e79be8b916fb133403"
+      "LocXliffCommit": "ced5de4eeac89fda5e4b073dc9cc5e15afb38bbf"
     },
     "windows-apps-src\\gaming\\ui-navigation-controller.md.8d003eddef663330dea1af3553f0d6b01b770121.HT": {
       "SourceFilename": "windows-apps-src\\gaming\\ui-navigation-controller.md",
