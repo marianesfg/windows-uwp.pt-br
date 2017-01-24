@@ -17,7 +17,7 @@ Esta seção descreve os diferentes tipos de dispositivos de entrada que podem s
 
 ## <a name="gaming-input-devices"></a>Dispositivos de entrada para jogos
 
-Os dispositivos de entrada para jogos são compatíveis em jogos e aplicativos UWP para Windows 10 e Xbox One pelo namespace [Gaming][].
+Os dispositivos de entrada para jogos são compatíveis em jogos e aplicativos UWP para Windows 10 e Xbox One pelo namespace [Windows.Gaming.Input][].
 
 ### <a name="gamepads"></a>Gamepads
 
