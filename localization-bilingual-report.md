@@ -1,33 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\gaming\input-for-games.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/3c073879ab847a3e1af454e0c1550d8af0f78b3e?path=windows-apps-src%2Fgaming%2Finput-for-games.md&_a=contents) | HandedOffSuccess | [Details](#f508f6cac79e848dc991c21391ec8b205cac73ba2610)
 
 ## Item Details
-##### <a name='f508f6cac79e848dc991c21391ec8b205cac73ba2610'></a> Source: [windows-apps-src\gaming\input-for-games.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/3c073879ab847a3e1af454e0c1550d8af0f78b3e?path=windows-apps-src%2Fgaming%2Finput-for-games.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [input-for-games.98d9a206c764cec3db702223140e45925437bb33.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/ce24925f8ee1984edaadcb5f9fd87db3591a07ba?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Finput-for-games.98d9a206c764cec3db702223140e45925437bb33.pt-br.xlf&_a=contents)
-* Handoff Datetime: 2017-01-19 02:45:32
-* Handoff Reason: Include
-* Handoff Name: 
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Handback Name: 
-* Current Target File: [windows-apps-src\gaming\input-for-games.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/21edea0a1d7faad50df4b196c101b763a044e675?path=windows-apps-src%2Fgaming%2Finput-for-games.md&_a=contents)
-* Current Handback File: [input-for-games.98d9a206c764cec3db702223140e45925437bb33.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/ced5de4eeac89fda5e4b073dc9cc5e15afb38bbf?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Finput-for-games.98d9a206c764cec3db702223140e45925437bb33.pt-br.xlf&_a=contents)
-* Current Handback Datetime: 2017-01-24 18:33:36
-* Bilingual File: [input-for-games.98d9a206c764cec3db702223140e45925437bb33.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/ced5de4eeac89fda5e4b073dc9cc5e15afb38bbf?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Finput-for-games.98d9a206c764cec3db702223140e45925437bb33.pt-br.xlf&_a=contents)
-* Bilingual Datetime: 2017-01-24 18:36:59
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
