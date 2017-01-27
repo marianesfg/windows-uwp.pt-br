@@ -5,26 +5,34 @@ title: Selecionando texto e imagens
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
 template: detail.hbs
+keywords: "teclado, texto, entrada, interações do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 45184c6ce84b9db215c576c5521e8ec1e834b162
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: bb3a231a842698c18fc496c87705d269dfbeaa58
 
 ---
 
-# Selecionando texto e imagens
+# <a name="selecting-text-and-images"></a>Selecionando texto e imagens
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Este artigo descreve a seleção e a manipulação de texto, imagens e controles e fornece diretrizes da experiência do usuário que devem ser consideradas ao usar esses mecanismos em seus aplicativos.
+Este artigo descreve a seleção e a manipulação de texto, imagens e controles e fornece diretrizes da experiência do usuário que devem ser consideradas ao usar esses mecanismos em seus apps.
+
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+</ul>
+</div>
+ 
 
 
-
-
-**APIs importantes**
-
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
-
-
-## O que fazer e o que não fazer
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
 
 -   Use glifos de fonte ao implementar sua interface do usuário de garra. A garra é uma combinação das duas fontes Segoe da interface do usuário disponíveis em todo o sistema. O uso de recursos de fonte simplifica problemas de renderização em diferentes dpis e funciona bem com os vários níveis de escala da interface do usuário. Ao implementar suas próprias garras, elas devem compartilhar as seguintes características da interface do usuário:
@@ -40,7 +48,7 @@ Este artigo descreve a seleção e a manipulação de texto, imagens e controles
 
 -   Não permita a seleção de elementos da interface do usuário como controles, rótulos, imagens, conteúdo proprietário e assim por diante. Normalmente, os aplicativos do Windows permitem a seleção somente dentro de controles específicos. Controles, como botões, rótulos e logotipos não são selecionáveis. Avalie se a seleção é um problema para o seu aplicativo e, se for, identifique as áreas da interface do usuário onde a seleção deve ser proibida. 
 
-## Diretrizes de uso adicionais
+## <a name="additional-usage-guidance"></a>Diretrizes de uso adicionais
 
 
 A seleção e a manipulação de texto são particularmente suscetíveis aos desafios da experiência do usuário introduzidos pelas interações por toque. A entrada por mouse, caneta/stylus e teclado são altamente granulares: um clique do mouse ou contato da caneta/stylus é mapeado normalmente para um único pixel e uma tecla é ou não é pressionada. A entrada de toque não é granular; é difícil mapear toda a superfície da ponta de um dedo para especificar a localização x-y na tela para colocar o sinal de interpolação de texto de forma precisa.
@@ -104,7 +112,7 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 
 *Editor de imagens com garras de corte.*
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 
 
@@ -136,6 +144,6 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,18 +1,21 @@
 ---
 author: mijacobs
 Description: "A navegação em aplicativos da Plataforma Universal do Windows (UWP) é baseada em um modelo flexível de estruturas de navegação, elementos de navegação e recursos no nível do sistema."
-title: "Noções básicas de design de navegação de aplicativos da Plataforma Universal do Windows (UWP)"
+title: "Histórico de navegação e navegação retroativa (aplicativos do Windows)"
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
 label: History and backwards navigation
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: 75e8c342775f7d6c564cb1014519f8e4707a0632
-ms.openlocfilehash: f18fc0806313cc1656860b0fd8b5ae692fa3d4c6
+ms.sourcegitcommit: 5f7f40d754ec9408fe5b4ba18d6d64bd49cb449f
+ms.openlocfilehash: bfff3a4787a37156ef3232372a125db60678ebac
 
 ---
 
-#  Histórico de navegação e navegação regressiva
+#  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para aplicativos UWP
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Na Web, os sites individuais fornecem seus próprios sistemas de navegação, como índices analíticos, botões, menus, listas simples de links e outros. A experiência de navegação pode variar muito de um site para outro. No entanto, há uma experiência de navegação consistente: voltar. A maioria dos navegadores oferece um botão Voltar que se comporta da mesma maneira, independentemente do site.
 
@@ -26,12 +29,12 @@ Estes são os principais fatores forma com o botão Voltar da interface do usuá
 <table>
     <tr>
         <td colspan="2">Dispositivos</td>
-        <td>Comportamento do botão Voltar</td>
+        <td style="vertical-align:top;">Comportamento do botão Voltar</td>
      </tr>
     <tr>
-        <td>Telefone</td>
-        <td>![sistema Voltar em um telefone](images/back-systemback-phone.png)</td>
-        <td>
+        <td style="vertical-align:top;">Telefone</td>
+        <td style="vertical-align:top;">![sistema Voltar em um telefone](images/back-systemback-phone.png)</td>
+        <td style="vertical-align:top;">
         <ul>
 <li>Sempre presente.</li>
 <li>Um botão de hardware ou software na parte inferior do dispositivo.</li>
@@ -40,41 +43,31 @@ Estes são os principais fatores forma com o botão Voltar da interface do usuá
 </td>
      </tr>
      <tr>
-        <td>Tablet</td>
-        <td>![volta do sistema em um tablet (no modo tablet)](images/back-systemback-tablet.png)</td>
-        <td>
+        <td style="vertical-align:top;">Tablet</td>
+        <td style="vertical-align:top;">![volta do sistema em um tablet (no modo tablet)](images/back-systemback-tablet.png)</td>
+        <td style="vertical-align:top;">
 <ul>
-<li>Sempre presente no modo Tablet.
-
-    Not available in Desktop mode. Title bar back button can be enabled, instead. See [PC, Laptop, Tablet](#PC).
-
-    Users can switch between running in Tablet mode and Desktop mode by going to **Settings &gt; System &gt; Tablet mode** and setting **Make Windows more touch-friendly when using your device as a tablet**.</li>
-
+<li>Sempre presente no modo Tablet. Não está disponível no modo de área de trabalho. Em vez disso, o botão Voltar da barra de título pode ser habilitado. Consulte [Computador, laptop, tablet](#PC).
+Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho indo para **Configurações &gt; Sistema &gt; modo Tablet** e definindo **Deixar o Windows mais fácil para o toque ao usar o seu dispositivo como tablet**.</li>
 <li> Um botão de software na barra de navegação na parte inferior do dispositivo.</li>
 <li>Navegação regressiva global no aplicativo e entre aplicativos.</li></ul>        
         </td>
      </tr>
     <tr>
-        <td>PC, notebook, tablet</td>
-        <td>![sistema de volta em um computador ou laptop](images/back-systemback-pc.png)</td>
-        <td>
+        <td style="vertical-align:top;">PC, laptop, tablet</td>
+        <td style="vertical-align:top;">![sistema de volta em um computador ou laptop](images/back-systemback-pc.png)</td>
+        <td style="vertical-align:top;">
 <ul>
-<li>Opcional no modo Área de Trabalho.
-
-    Not available in Tablet mode. See [Tablet](#Tablet).
-
-    Disabled by default. Must opt in to enable it.
-
-    Users can switch between running in Tablet mode and Desktop mode by going to **Settings &gt; System &gt; Tablet mode** and setting **Make Windows more touch-friendly when using your device as a tablet**.</li>
-
+<li>Opcional no modo Área de trabalho. Não está disponível no modo Tablet. Consulte [Tablet](#Tablet). Desabilitado por padrão. Deve aceitar para habilitá-lo.
+Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho indo para **Configurações &gt; Sistema &gt; modo Tablet** e definindo **Deixar o Windows mais fácil para o toque ao usar o seu dispositivo como tablet**.</li>
 <li>Um botão de software na barra de título do aplicativo.</li>
-<li>Navegação regressiva dentro do aplicativo apenas. Não dá suporte à navegação de aplicativo para aplicativo.</li></ul>        
+<li>Navegação regressiva somente no aplicativo. Não dá suporte à navegação de aplicativo para aplicativo.</li></ul>        
         </td>
      </tr>
     <tr>
-        <td>Surface Hub</td>
-        <td>![sistema Voltar em um Surface Hub](images/nav/nav-back-surfacehub.png)</td>
-        <td>
+        <td style="vertical-align:top;">Surface Hub</td>
+        <td style="vertical-align:top;">![sistema Voltar em um Surface Hub](images/nav/nav-back-surfacehub.png)</td>
+        <td style="vertical-align:top;">
 <ul>
 <li>Opcional.</li>
 <li>Desabilitado por padrão. Deve aceitar para habilitá-lo.</li>
@@ -90,15 +83,15 @@ Estes são alguns tipos de entrada alternativos que não dependem de um botão V
 
 <table>
 <tr><td colspan="3">Dispositivos de entrada</td></tr>
-<tr><td>Teclado</td><td>![teclado](images/keyboard-wireframe.png)</td><td>Tecla Windows + Backspace</td></tr>
-<tr><td>Cortana</td><td>![controle por voz](images/speech-wireframe.png)</td><td>Diga, "Ei Cortana, voltar".</td></tr>
+<tr><td style="vertical-align:top;">Teclado</td><td style="vertical-align:top;">![teclado](images/keyboard-wireframe.png)</td><td style="vertical-align:top;">Tecla Windows + Backspace</td></tr>
+<tr><td style="vertical-align:top;">Cortana</td><td style="vertical-align:top;">![controle por voz](images/speech-wireframe.png)</td><td style="vertical-align:top;">Diga, "Ei Cortana, voltar".</td></tr>
 </table>
  
 
 Quando seu aplicativo é executado em um telefone, tablet, ou em um PC ou notebook que tenha o Voltar do sistema habilitado, o sistema notifica o aplicativo quando o botão Voltar é pressionado. O usuário espera que o botão Voltar navegue para o local anterior no histórico de navegação do aplicativo. Cabe a você decidir quais ações de navegação serão adicionadas ao histórico de navegação e como responder ao pressionar botão Voltar.
 
 
-## Como habilitar o suporte a navegação regressiva do sistema
+## <a name="how-to-enable-system-back-navigation-support"></a>Como habilitar o suporte a navegação regressiva do sistema
 
 
 Os aplicativos devem habilitar a navegação regressiva para todos os botões Voltar do sistema de todos os hardwares e softwares. Faça isso registrando um ouvinte para o evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) e definindo um manipulador correspondente.
@@ -158,7 +151,7 @@ Esse manipulador é invocado em um evento Voltar global. Se a pilha Voltar dentr
 >}
 ```
 
-## Como habilitar o botão Voltar da barra de título
+## <a name="how-to-enable-the-title-bar-back-button"></a>Como habilitar o botão Voltar da barra de título
 
 
 Os dispositivos que têm suporte ao modo de Área de Trabalho (geralmente PCs e notebooks, mas também alguns tablets) e têm a configuração habilitada (**Configurações &gt; Sistema &gt; Modo tablet**) não oferecem uma barra de navegação global com o botão Voltar do sistema.
@@ -241,15 +234,11 @@ Para esse exemplo, listamos cada página na pilha Voltar e habilitamos o botão 
 >```
 
 
-### Diretrizes para o comportamento da navegação regressiva personalizada
+### <a name="guidelines-for-custom-back-navigation-behavior"></a>Diretrizes para o comportamento da navegação regressiva personalizada
 
 Se você optar por fornecer sua própria pilha Voltar de navegação, a experiência deve ser consistente com outros aplicativos. Recomendamos que você siga os seguintes padrões de ações de navegação:
 
 <table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Ação de navegação</th>
@@ -258,38 +247,38 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>Página para página, grupos de pares diferentes</strong></p></td>
-<td align="left"><strong>Sim</strong>
+<td style="vertical-align:top;"><strong>Página para página, grupos de pares diferentes</strong></td>
+<td style="vertical-align:top;"><strong>Sim</strong>
 <p>Nesta ilustração, o usuário navega do nível 1 do aplicativo ao nível 2, cruzando grupos de par, de maneira que a navegação é adicionada ao histórico de navegação.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Navigation across peer groups" /></p>
 <p>Na próxima ilustração, o usuário navega entre dois grupos de par no mesmo nível, novamente cruzando grupos de par, de maneira que a navegação é adicionada ao histórico de navegação.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Navigation across peer groups" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>Página a página, mesmo grupo de par, sem elemento de navegação na tela</strong></p>
+<td style="vertical-align:top;"><strong>Página a página, mesmo grupo de par, sem elemento de navegação na tela</strong>
 <p>O usuário navega de uma página para outra com o mesmo grupo de pares. Não há qualquer elemento de navegação que seja sempre presente (como guias/pivôs ou um painel de navegação encaixado) que ofereça navegação direta para as duas páginas.</p></td>
-<td align="left"><strong>Sim</strong>
+<td style="vertical-align:top;"><strong>Sim</strong>
 <p>Na ilustração a seguir, o usuário navega entre duas páginas no mesmo grupo de pares. As páginas não usam guias ou um painel de navegação encaixado, então a navegação é adicionada ao histórico de navegação.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>Página a página, mesmo grupo de par, com elemento de navegação na tela</strong></p>
+<td style="vertical-align:top;"><strong>Página a página, mesmo grupo de par, com elemento de navegação na tela</strong>
 <p>O usuário navega de uma página para outra no mesmo grupo de pares. Ambas as páginas são mostradas no mesmo elemento de navegação. Por exemplo, as duas páginas usam o mesmo elemento guias/pivôs ou ambas as páginas aparecem em um painel de navegação encaixado.</p></td>
-<td align="left"><strong>Não</strong>
+<td style="vertical-align:top;"><strong>Não</strong>
 <p>Quando o usuário pressiona Voltar, ele volta para a última página visitada antes que o usuário navegasse para o grupo de par atual.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>Exibir uma interface do usuário transitória</strong>
+<td style="vertical-align:top;"><strong>Exibir uma interface do usuário transitória</strong>
 <p>O aplicativo exibe uma janela pop-up ou filho, como uma caixa de diálogo, tela inicial, ou teclado virtual, ou o aplicativo entra em um modo especial, como o modo de seleção múltipla.</p></td>
-<td align="left"><strong>Não</strong>
+<td style="vertical-align:top;"><strong>Não</strong>
 <p>Quando o usuário pressionar o botão Voltar, descarte a interface do usuário transitória (ocultar o teclado virtual, cancelar a caixa de diálogo, etc) e retorne à página que gerou a interface do usuário transitória.</p>
 <p><img src="images/back-transui.png" alt="Showing a transient UI" /></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><strong>Enumerar os itens</strong>
+<td style="vertical-align:top;"><strong>Enumerar os itens</strong>
 <p>O aplicativo exibe o conteúdo para um item virtual, como os detalhes de um item selecionado na lista mestre/de detalhes.</p></td>
-<td align="left"><strong>Não</strong>
+<td style="vertical-align:top;"><strong>Não</strong>
 <p>A enumeração de itens é semelhante à navegação dentro de um grupo de pares. Quando o usuário pressionar Voltar, navegue até a página anterior à página atual com a enumeração de item.</p>
 <img src="images/nav/nav-enumerate.png" alt="Iterm enumeration" /></td>
 </tr>
@@ -297,16 +286,16 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 </table>
 
 
-### Retomando
+### <a name="resuming"></a>Retomando
 
 Quando o usuário alternar para outro aplicativo e retornar ao seu aplicativo, recomendamos retornar para a última página no histórico de navegação.
 
 
-## Obter os exemplos
+## <a name="get-the-samples"></a>Obter os exemplos
 *   [Exemplo do botão Voltar](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackButton)<br/>
     Mostra como configurar um manipulador de eventos para o evento do botão Voltar e como habilitar o botão Voltar da barra de títulos quando o aplicativo está em modo de janela de área de trabalho na janela.
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 * [Noções básicas de navegação](navigation-basics.md)
 
  
@@ -317,6 +306,6 @@ Quando o usuário alternar para outro aplicativo e retornar ao seu aplicativo, r
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

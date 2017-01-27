@@ -4,8 +4,8 @@ Description: "Mostra como converter manualmente um aplicativo de área de trabal
 Search.Product: eADQiWindows 10XVcnh
 title: "Converter manualmente um aplicativo da área de trabalho do Windows em um aplicativo UWP (Plataforma Universal do Windows)"
 translationtype: Human Translation
-ms.sourcegitcommit: ee697323af75f13c0d36914f65ba70f544d046ff
-ms.openlocfilehash: f55f3bd6479cdf076c51cf574b07bfb5ce3a805c
+ms.sourcegitcommit: b612b2c94de79f48a375ae3469c35dee6ce3939d
+ms.openlocfilehash: 73f30d564fcec1b748b4d59ff545e25b62b1c719
 
 ---
 
@@ -17,7 +17,7 @@ Veja como começar:
 
 ## <a name="create-a-manifest-by-hand"></a>Criar um manifesto manualmente
 
-Seu arquivo _appxmanifest_ precisa ter o conteúdo a seguir (no mínimo). Altere os espaços reservados que estão formatados como \*\*\*THIS\*\*\* para os valores reais do seu app.
+Seu arquivo _appxmanifest_ precisa ter o conteúdo a seguir (no mínimo). Altere os espaços reservados que estão formatados \*\*\*DESTA FORMA\*\*\* para os valores reais do seu app.
 
 ```XML
     <?xml version="1.0" encoding="utf-8"?>
@@ -57,25 +57,11 @@ Seu arquivo _appxmanifest_ precisa ter o conteúdo a seguir (no mínimo). Altere
     </Package>
 ```
 
-## <a name="add-unplated-assets"></a>Adicionar ativos sem fundo
-
-Aqui está como configurar ativos de 44 x 44 para seu app que apareçam na barra de tarefas.
-
-1. Obtenha as imagens de 44 x 44 corretas e copie-as na pasta que contém suas imagens (isto é, os ativos).
-
-2. Para cada imagem de 44 x 44, crie uma cópia na mesma pasta e acrescente *.targetsize-44_altform-unplated* ao nome do arquivo. Você deve ter duas cópias de cada ícone, cada uma nomeada de uma maneira específica. Por exemplo, após a conclusão do processo, sua pasta de ativos poderá conter *MYAPP_44x44.png* e *MYAPP_44x44.targetsize-44_altform-unplated.png* (observação: o primeiro é o ícone referenciado em appxmanifest, no atributo VisualElements *Square44x44Logo*). 
-
-3.  No AppXManifest, defina o valor de BackgroundColor para cada ícone que você estiver corrigindo como transparent. Esse atributo pode ser encontrado em VisualElements para cada app.
-
-4.  Abra CMD, mude o diretório para a pasta raiz do pacote e crie um arquivo priconfig.xml executando o comando ```makepri createconfig /cf priconfig.xml /dq en-US```.
-
-5.  Usando CMD e permanecendo na pasta raiz do pacote, crie o(s) arquivo(s) resources.pri usando o comando ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml```. Por exemplo, o comando para o seu app poderia ser parecido com ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
-
-6.  Empacote seu AppX usando as instruções na próxima etapa para ver os resultados.
+Tem ativos sem fundos que você gostaria de adicionar? Consulte a seção sobre [ativos sem fundo](#unplated-assets) mais adiante neste artigo para saber como.
 
 ## <a name="run-the-makeappx-tool"></a>Executar a ferramenta MakeAppX
 
-Use o [Empacotador de aplicativo (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx) para gerar um AppX para o seu projeto. O MakeAppx.exe está incluído no SDK do Windows 10. 
+Use o [Empacotador de aplicativo (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx) para gerar um AppX para seu projeto. O MakeAppx.exe está incluído no SDK do Windows 10. 
 
 Para executar o MakeAppx, primeiro verifique se você criou um arquivo de manifesto conforme descrito anteriormente. 
 
@@ -106,14 +92,28 @@ C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -s
 C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
 C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
 ```
-
 Quando você executar o MakeCert.exe e for solicitado a inserir uma senha, selecione **none**. Para obter mais informações sobre assinatura e certificados, consulte o seguinte: 
 
 - [Como: criar certificados temporários para uso durante o desenvolvimento](https://msdn.microsoft.com/library/ms733813.aspx)
-
 - [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
-
 - [SignTool.exe (ferramenta de assinatura)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
+
+<span id="unplated-assets" />
+## <a name="add-unplated-assets"></a>Adicionar ativos sem fundo
+
+Confira aqui como configurar opcionalmente os ativos de 44 x 44 para seu app que apareçam na barra de tarefas. 
+
+1. Obtenha as imagens de 44 x 44 corretas e copie-as na pasta que contém suas imagens (isto é, os ativos).
+
+2. Para cada imagem de 44 x 44, crie uma cópia na mesma pasta e acrescente *.targetsize-44_altform-unplated* ao nome do arquivo. Você deve ter duas cópias de cada ícone, cada uma nomeada de uma maneira específica. Por exemplo, após a conclusão do processo, sua pasta de ativos poderá conter *MYAPP_44x44.png* e *MYAPP_44x44.targetsize-44_altform-unplated.png* (observação: o primeiro é o ícone referenciado em appxmanifest, no atributo VisualElements *Square44x44Logo*). 
+
+3.  No AppXManifest, defina o valor de BackgroundColor para cada ícone que você estiver corrigindo como transparent. Esse atributo pode ser encontrado em VisualElements para cada app.
+
+4.  Abra CMD, mude o diretório para a pasta raiz do pacote e crie um arquivo priconfig.xml executando o comando ```makepri createconfig /cf priconfig.xml /dq en-US```.
+
+5.  Usando CMD e permanecendo na pasta raiz do pacote, crie o(s) arquivo(s) resources.pri usando o comando ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml```. Por exemplo, o comando para o seu app poderia ser parecido com ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
+
+6.  Empacote seu AppX usando as instruções na próxima etapa para ver os resultados.
 
 
 

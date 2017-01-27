@@ -4,8 +4,8 @@ ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: "Use este método na API de análise da Windows Store para obter os dados de aquisição agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter aquisições de app"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: b82136348936d436a374cfef42d5e349ed0d0f36
+ms.sourcegitcommit: ce6535508136f8f7bfc8e0da599eea10a936908d
+ms.openlocfilehash: 2e35da3b3033ecbad8c48184d831ca9465142322
 
 ---
 
@@ -163,6 +163,6 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

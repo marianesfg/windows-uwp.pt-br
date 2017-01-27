@@ -6,16 +6,18 @@ ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: 1cdbb81c783d17af16743a4ff5f82dc1c92df6b4
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 53b6108a472e021caa0d11327c1457b3f6ca8aac
 
 ---
 
-# Movimento para aplicativos UWP
+# <a name="motion-for-uwp-apps"></a>Movimento para aplicativos UWP
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Animações significativas e bem desenvolvidas dão vida aos aplicativos e tornam a experiência avançada e refinada. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais.
 
-## Benefícios da animação
+## <a name="benefits-of-animation"></a>Benefícios da animação
 
 
 Animação é mais do que fazer coisas se mexerem. A animação é uma ferramenta para criar um ecossistema físico dentro do qual o usuário pode viver, e o qual pode manipular por touch. A qualidade da experiência depende de quão bem o aplicativo responde ao usuário, e que tipo de personalidade a interface de usuário comunica.
@@ -48,15 +50,13 @@ Conforme um usuário passa mais tempo dentro de seu aplicativo, ou conforme as t
 
     Animações podem ser utilizadas para permitir que o usuário saiba que o telefone está processando e não travado, e pode exibir passivamente novas informações nas quais o usuário pode estar interessado.
 
-## Nesta seção
+<h2>Nesta seção</h2>
+
 <table>
-<thead>
-<tr class="header">
+<tr>
 <th align="left">Tipo de animação</th>
 <th align="left">Descrição</th>
 </tr>
-</thead>
-<tbody>
     <tr>
         <td>[Adicionar e excluir](motion-list.md)
         </td>
@@ -99,8 +99,6 @@ Conforme um usuário passa mais tempo dentro de seu aplicativo, ou conforme as t
         <td>Mova elementos para uma nova posição.
         </td>
     </tr>
-
-</tbody>
 </table>
 
  
@@ -111,6 +109,6 @@ Conforme um usuário passa mais tempo dentro de seu aplicativo, ou conforme as t
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -6,20 +6,23 @@ ms.assetid: 70C6130E-23A2-4F9D-88E7-7060062DA988
 label: Respond to the presence of the touch keyboard
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 97a626aedff1b0915c845f151b16b3678e1cf977
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 7db7c360c1e6e3cadf6423d888240bb2f0f4651a
 
 ---
 
-# Responder à presença do teclado virtual
+# <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Responder à presença do teclado virtual
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Saiba como adaptar a interface do usuário do seu aplicativo ao mostrar ou ocultar o teclado virtual.
 
-
-**APIs importantes**
-
--   [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/br209185)
--   [**InputPane**](https://msdn.microsoft.com/library/windows/apps/br242255)
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/br209185)</li>
+<li>[**InputPane**](https://msdn.microsoft.com/library/windows/apps/br242255)</li>
+</ul>
+</div> 
 
 
 
@@ -48,7 +51,7 @@ Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal
 
 Para obter dicas úteis sobre o design de um aplicativo funcional e interessante, otimizado para entrada por teclado, consulte [Diretrizes de design do teclado](https://msdn.microsoft.com/library/windows/apps/hh972345).
 
-## Teclado virtual e uma interface do usuário personalizada
+## <a name="touch-keyboard-and-a-custom-ui"></a>Teclado virtual e uma interface do usuário personalizada
 
 
 Estas são algumas recomendações básicas para controles de entrada de texto personalizados.
@@ -71,7 +74,7 @@ Estas são algumas recomendações básicas para controles de entrada de texto p
 
     ![um formulário que contém áreas que devem ser sempre exibidas](images/touch-keyboard-pan2.png)
 
-## Manipulando os eventos Showing e Hiding
+## <a name="handling-the-showing-and-hiding-events"></a>Manipulando os eventos Showing e Hiding
 
 
 Este é um exemplo de como anexar manipuladores de eventos para os eventos [**showing**](https://msdn.microsoft.com/library/windows/apps/br242262) e [**hiding**](https://msdn.microsoft.com/library/windows/apps/br242260) do teclado virtual.
@@ -124,7 +127,7 @@ public class MyApplication
 }
 ```
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 * [Interações por teclado](keyboard-interactions.md)
 * [Acessibilidade do teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
@@ -146,6 +149,6 @@ public class MyApplication
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

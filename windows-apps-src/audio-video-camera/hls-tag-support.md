@@ -4,12 +4,12 @@ ms.assetid:
 description: Este artigo lista as marcas de protocolo HLS (HTTP Live Streaming) com suporte para aplicativos UWP.
 title: Suporte para marcas HLS (HTTP Live Streaming)
 translationtype: Human Translation
-ms.sourcegitcommit: 3d61f5272e4d11acfb7e0a85436ca60ba458dcae
-ms.openlocfilehash: a561f11a1638d5fea21d1d3b3f8bc47f71271f3f
+ms.sourcegitcommit: 61feba54418ad7ba8f089737ebf52d12c466b7a7
+ms.openlocfilehash: 5575a56838eae98c0d79dff61e1afaa8cf87ee86
 
 ---
 
-# Suporte para marcas HLS (HTTP Live Streaming)
+# <a name="http-live-streaming-hls-tag-support"></a>Suporte para marcas HLS (HTTP Live Streaming)
 A tabela a seguir lista as marcas HLS que têm suporte para aplicativos UWP.
 
 > [!NOTE] 
@@ -68,11 +68,15 @@ A tabela a seguir lista as marcas HLS que têm suporte para aplicativos UWP.
 | 4.3.4.3.  EXT-X-I-FRAME-STREAM-INF  |4|7|OPCIONAL|Sem suporte|Sem suporte|Sem suporte|
 | 4.3.4.4.  EXT-X-SESSION-DATA  |7|14|OPCIONAL|Sem suporte|Sem suporte|Sem suporte|
 | 4.3.4.5.  EXT-X-SESSION-KEY |7|17|OPCIONAL|Sem suporte|Sem suporte|Sem suporte|
+|4.3.5.  Marcas de mídia ou playlist mestre                  |             |                   |         |             |     |    |
+| 4.3.5.1.  EXT-X-INDEPENDENT-SEGMENTS |6|13|OPCIONAL|Sem suporte|Com suporte|Com suporte|
+| 4.3.5.2.  EXT-X-START  |6|12|OPCIONAL|Sem suporte|Com suporte parcial|Com suporte parcial|
+|&nbsp;&nbsp;&nbsp;  TIME-OFFSET|6|12|Atributo|Sem suporte|Com suporte|Com suporte|
+|&nbsp;&nbsp;&nbsp;  PRECISE|6|12|Atributo|Sem suporte|"SEM" suporte padrão|"SEM" suporte padrão|
 
 
 
-
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Reprodução de mídia](media-playback.md)
 * [Streaming adaptável](adaptive-streaming.md)
@@ -86,6 +90,6 @@ A tabela a seguir lista as marcas HLS que têm suporte para aplicativos UWP.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -5,16 +5,22 @@ title: "Interações por touchpad"
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
+keywords: "touchpad, PTP, toque, ponteiro, entrada, interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 30607a9db9f5a7d5ea1085fa1105e6a2bd8ebd1b
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: dd91c8a6c58c25799a0c43b8632fade5309850cc
 
 ---
 
-# Diretrizes de design do touchpad
+# <a name="touchpad-design-guidelines"></a>Diretrizes de design do touchpad
 
 
-Projete seu aplicativo de forma que os usuários possam interagir com ele por meio de um touchpad. Um touchpad combina a entrada multi-touch indireta com a entrada de precisão de um dispositivo apontador, como um mouse. Essa combinação torna o touchpad adequado para uma interface do usuário otimizada para touch e destinos menores de aplicativos de produtividade.
+Projete seu app de forma que os usuários possam interagir com ele por meio de um touchpad. Um touchpad combina a entrada multi-touch indireta com a entrada de precisão de um dispositivo apontador, como um mouse. Essa combinação torna o touchpad adequado para uma interface do usuário otimizada para touch e destinos menores de aplicativos de produtividade.
 
  
 
@@ -42,7 +48,7 @@ Devido à convergência de experiências de interação compatíveis com touchpa
 
 Os gestos e as diretrizes discutidos neste tópico podem ajudar a garantir que seu aplicativo dê suporte à entrada por touchpad de forma integrada e com um mínimo de código.
 
-## A linguagem do touchpad
+## <a name="the-touchpad-language"></a>A linguagem do touchpad
 
 
 Um conjunto conciso de interações por touchpad é usado de forma consistente em todo o sistema. Otimize seu aplicativo para a entrada por toque e mouse. Essa linguagem permite que o aplicativo se comporte de modo familiar aos seus usuários, aumentando o nível de confiança deles e tornando o aplicativo mais fácil de aprender e usar.
@@ -112,25 +118,25 @@ Aqui estão alguns exemplos de gestos otimizados de touchpad para realizar taref
 
  
 
-## Hardware
+## <a name="hardware"></a>Hardware
 
 
 Consulte os recursos de dispositivo do mouse ([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)) para identificar os aspectos da interface do usuário do seu aplicativo que o hardware de touchpad pode acessar diretamente. Recomendamos que você forneça uma interface do usuário para entrada por toque e mouse.
 
 Para saber mais sobre como consultar os recursos do dispositivo, veja [Identificar dispositivos de entrada](identify-input-devices.md).
 
-## Comentários visuais
+## <a name="visual-feedback"></a>Feedback visual
 
 
 -   Quando o cursor do touchpad for detectado (por eventos de movimentação ou focalização), mostre a interface do usuário específica do mouse para indicar a funcionalidade exposta pelo elemento. Se o cursor do touchpad não for movimentado por algum tempo ou se o usuário começar uma interação por toque, faça com que a interface do usuário do touchpad desapareça gradualmente. Dessa forma, a interface do usuário fica mais organizada.
 -   Não use o cursor para comentário de foco; o comentário apresentado pelo elemento é suficiente (veja [Cursores](#Cursors), a seguir).
--   Não exiba comentários visuais quando o elemento não permite manipulação (como texto estático).
+-   Não exiba feedback visual quando o elemento não permite manipulação (como texto estático).
 -   Não use retângulos de foco nas interações por touchpad; Reserve-os para as interações por teclado.
 -   Exiba respostas visuais simultaneamente para todos os elementos que representam o mesmo destino de entrada.
 
-Para obter diretrizes gerais sobre comentários visuais, veja [Diretrizes de comentários visuais](https://msdn.microsoft.com/library/windows/apps/hh465342).
+Para obter diretrizes gerais sobre feedback visual, veja [Diretrizes de feedback visual](https://msdn.microsoft.com/library/windows/apps/hh465342).
 
-## Cursores
+## <a name="cursors"></a>Cursores
 
 
 Um conjunto de cursores padrão está disponível para ponteiros de touchpad. São usados para indicar a ação primária de um elemento.
@@ -145,7 +151,7 @@ Se você precisa personalizar o cursor do mouse:
 -   Use os cursores de redimensionamento horizontal, vertical e diagonal (![cursor de redimensionamento vertical](images/cursor-vertical.png), ![cursor de redimensionamento horizontal](images/cursor-horizontal.png), ![cursor de redimensionamento diagonal (inferior esquerdo, superior direito)](images/cursor-diagonal2.png), ![cursor de redimensionamento diagonal (superior esquerdo, inferior direito)](images/cursor-diagonal1.png)), quando um objeto for redimensionável.
 -   Use os cursores de mão agarrando (![cursor de mão agarrando (aberto)](images/cursor-pan1.png), ![cursor de mão agarrando (fechado)](images/cursor-pan2.png)) durante o movimento panorâmico do conteúdo dentro de uma tela fixa (como um mapa).
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 
 * [Identificar entrada do ponteiro](handle-pointer-input.md)
@@ -167,6 +173,6 @@ Se você precisa personalizar o cursor do mouse:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

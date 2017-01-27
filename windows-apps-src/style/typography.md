@@ -5,12 +5,14 @@ title: Tipografia
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 0356d9420d85fbf54718223df77ed501d4b6f5e5
-ms.openlocfilehash: 45b4bbc86c69cabae4a2ee83d2d43c7189a710ce
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e13e9c8b559c16676628ab6e77ddad019a4c22e0
 
 ---
 
 # <a name="typography"></a>Tipografia
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Como a representação visual da linguagem, a tarefa principal da tipografia é ser clara. Seu estilo nunca deve atrapalhar essa meta. Porém, a tipografia também tem um papel importante como componente de layout, pois afeta consideravelmente a densidade e a complexidade do design, além de exercer forte influência na experiência do usuário desse design.
 
@@ -38,7 +40,7 @@ Ao empilhar um tipo maior sobre um tipo menor, a distância da última linha de 
 
 Em XAML, isso é feito empilhando dois [TextBlocks](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) e definindo a margem apropriada.
 
-```xml
+```xaml
 <StackPanel Width="200">
     <!-- Setting a bottom margin of 3px on the header
          puts the baseline of the body text exactly 24px
@@ -59,47 +61,65 @@ Em XAML, isso é feito empilhando dois [TextBlocks](https://msdn.microsoft.com/e
 ```
 
 
-
-## <a name="kerning-and-tracking"></a>Kerning e tracking
+<div class="side-by-side">
+<div class="side-by-side-content">
+  <div class="side-by-side-content-left">
+<h2>Kerning e tracking</h2>
 
 Segoe é uma face de tipos humanista, com uma aparência suave e amigável, ela tem formatos orgânicos e abertos com base em texto manuscrito. Para garantir a legibilidade ideal e manter a integridade humanista, as configurações de kerning e tracking devem ter valores específicos.
 
 Kerning deve ser definido como "métricas" e tracking deve ser definido como "0".
-
-
-![Mostra a diferença entre kerning e tracking](images/kerning-tracking.png)
-
-
-
-## <a name="word-and-letter-spacing"></a>Espaçamento entre letras e palavras
+  </div>
+  <div class="side-by-side-content-right">
+<h2>Espaçamento entre letras e palavras</h2>
 
 Semelhante ao kerning e tracking, o espaçamento entre letras e o espaçamento entre palavras usam configurações específicas para garantir a legibilidade ideal e a integridade humanista.
 
 O espaçamento entre palavras por padrão sempre é 100% e o espaçamento entre letras deve ser definido como "0".
+  </div>
+</div>
+</div>
+<div class="side-by-side">
+<div class="side-by-side-content">
+  <div class="side-by-side-content-left">
+![A diferença entre kerning e tracking](images/kerning-tracking.png)  
+  </div>
+  <div class="side-by-side-content-right">
+![A diferença entre espaçamento entre letras e palavras.](images/word-letter.png) 
+  </div>
+</div>
+</div>
 
 
-![Mostra a diferença entre espaçamento entre letras e palavras](images/word-letter.png)
+>[!NOTE]
+>Em um controle de texto XAML use [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) para controlar kerning e [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar o rastreamento. Por padrão Typography.Kerning é definido como "true" e FontStretch é definido como "Normal", que são os valores recomendados.
 
-**Observação**&nbsp;&nbsp;Em um controle de texto XAML use [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) para controlar kerning e [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar tracking. Por padrão Typography.Kerning é definido como "true" e FontStretch é definido como "Normal", que são os valores recomendados.
+<div class="side-by-side">
+<div class="side-by-side-content">
+  <div class="side-by-side-content-left">
+<h2>Alinhamento</h2>
 
-
-
-
-## <a name="alignment"></a>Alinhamento
-
-Em geral, recomendamos que os elementos visuais e as colunas de tipo sejam alinhados à esquerda. Na maioria dos casos, essa abordagem flush à esquerda e irregular à direita fornece ancoragem consistente do conteúdo e um layout uniforme.
-
-
-![Mostra texto à esquerda](images/alignment.png)
-
-
-
-## <a name="line-endings"></a>Terminações de linha
+Em geral, recomendamos que os elementos visuais e as colunas de tipo sejam alinhados à esquerda. Na maioria dos casos, essa abordagem flush à esquerda e irregular à direita fornece ancoragem consistente do conteúdo e um layout uniforme. 
+  </div>
+  <div class="side-by-side-content-right">
+<h2>Terminações de linha</h2>
 
 Quando a tipografia não está posicionada como flush à esquerda e irregular à direita, tente garantir terminações de linha pares e evitar a hifenização.
+  </div>
+</div>
+</div>
 
+<div class="side-by-side">
+<div class="side-by-side-content">
+  <div class="side-by-side-content-left">
+![Mostra texto à esquerda.](images/alignment.png)  
+  </div>
+  <div class="side-by-side-content-right">
+![Mostra até mesmo terminações de linha.](images/line-endings.png) 
+  </div>
+</div>
+</div>
 
-![Mostra até mesmo terminações de linha](images/line-endings.png)
 
 ## <a name="paragraphs"></a>Parágrafos
 
@@ -125,7 +145,8 @@ Depois que a altura do texto se estende além da altura do ícone, a primeira li
 
 ![Mostra vários emparelhamentos de ícone e texto](images/hanging-text-alignment.png)
 
-**Observação**A propriedade &nbsp;&nbsp;[TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx)de XAML fornece acesso às medidas de fonte iniciais e de limite de altura. Ela pode ser usada para o tipo de alinhamento superior, central ou vertical.
+>[!NOTE]
+>A propriedade [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) de XAML fornece acesso às medidas de fonte iniciais e de limite de altura. Ela pode ser usada para o tipo de alinhamento superior, central ou vertical.
 
 ## <a name="clipping-and-ellipses"></a>Recorte e elipses
 
@@ -138,16 +159,31 @@ Exceções: para contêineres que não são bem definidos (por exemplo, nenhuma 
 ## <a name="type-ramp"></a>Rampa de tipos
 A rampa de tipos estabelece uma relação de design fundamental dos títulos ao texto do corpo e garante uma hierarquia clara e compreensível entre os diferentes níveis. Essa hierarquia cria uma estrutura que permite aos usuários navegar facilmente por meio de comunicação escrita.
 
-![Mostra a o aumento do tipo](images/type-ramp.png) Todos os tamanhos estão em pixels efetivos. 
+<div class="uwpd-image-with-caption">
+    <img src="images/type-ramp.png" alt="Shows the type ramp" />
+    <div>Todos os tamanhos estão em pixels efetivos. Para obter mais detalhes, consulte [Introdução ao design de aplicativos UWP](../layout/design-and-ui-intro.md).</div>
+</div>
+
+>[!NOTE]
+>A maioria dos níveis de rampa está disponível como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) XAML que seguem a convenção de nomenclatura `*TextBlockStyle` (por ex.: `HeaderTextBlockStyle`).
 
 
-**Observação**&nbsp;&nbsp;A maioria dos níveis de rampa está disponível como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) que seguem a convenção de nomenclatura `*TextBlockStyle` (por ex.: `HeaderTextBlockStyle`).
+<div class="microsoft-internal-note">
+SubtitleAlt, BaseAlt e CaptionAlt não são incluídos no momento. Você pode criar os estilos em seu próprio aplicativo seguindo os trechos de código no link acima. Observe também que o XAML atualmente não iguala a altura da linha exatamente.
+</div>
 
 
 ## <a name="primary-and-secondary-text"></a>Texto principal e secundário
 
 Para criar hierarquia adicional além da rampa de tipos, defina o texto secundário com opacidade de 60%. Na [paleta de cores de temas](color.md#color-theming), você usaria BaseMedium. O texto principal deve ter sempre 100% de opacidade ou BaseHigh.
 
+<!-- Need new images
+![Two phone apps using SubtitleAlt](images/type-ramp-example-2.png)
+Recommended use of SubtitleAlt. Also note the primary and secondary text usage in list items.
+
+![Two phone apps using CaptionAlt](images/type-ramp-example-1.png)
+Recommended use of CaptionAlt.
+-->
 
 ## <a name="all-caps-titles"></a>Títulos em maiúsculas
 
@@ -156,32 +192,28 @@ Determinados títulos de página devem ser em maiúsculas para adicionar outra d
 No entanto, nomes próprios mudam seu significado quando estão em maiúsculas em certos idiomas; portanto, títulos de página com base em nomes ou entradas do usuário *não* devem ser convertidos em maiúsculas.
 
 
-**Você deve**
+<!-- Need new images
+![Shows several apps where they should and should not use all caps](images/all-caps.png)
+Green shows where all caps should be used. Red shows where it should not.
+-->
 
-
-
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 * Usar Corpo para a maioria dos textos
 * Usar Base para títulos quando o espaço é limitado
 * Incorporar SubtitleAlt para criar contraste e hierarquia, enfatizando o conteúdo de nível superior
-
-
-
-**Você não deve**
-
-
-
 * Não usar Legenda para cadeias de caracteres longas ou qualquer ação principal
 * Não usar Cabeçalho ou Subcabeçalho se for preciso quebra automática de linha
-* Não combinar Subtítulo e SubtitleAlt na mesma página
-
+* Não combinar Subtitle e SubtitleAlt na mesma página
 
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Controles de texto](../controls-and-patterns/text-controls.md)
+* [Fontes](fonts.md)
+* [Ícones Segoe MDL2](segoe-ui-symbol-font.md)
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

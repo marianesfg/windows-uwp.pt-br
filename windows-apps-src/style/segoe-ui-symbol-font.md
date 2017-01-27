@@ -7,38 +7,28 @@ ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
 label: Segoe MDL2 icons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: a779d4ff5d404c2eca658cee836c5d45c42f14d8
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 1e7914c0641d2897efbcbe5c9479a2ecc1a8dd2d
 
 ---
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+# <a name="segoe-mdl2-icons"></a>Ícones Segoe MDL2
 
-# Ícones Segoe MDL2
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Este artigo lista os ícones fornecidos pela fonte Segoe MDL2 Assets. 
 
 <div class="important-apis" >
-<b>APIs Importantes</b><br/>
+<b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn252842"><strong>Enumeração Symbol (XAML)</strong></a></li>
+<li>[**Enumeração Symbol (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn252842)</li>
 </ul>
-
-</div>
 </div>
 
 
+## <a name="about-segoe-mdl2-assets"></a>Sobre Segoe MDL2 Assets
 
-## Como obtenho essa fonte?
-Para obter a fonte Segoe MDL2 Assets, você deve instalar o Windows 10. 
-
-## Sobre Segoe MDL2 Assets
-
-A fonte Segoe MDL2 Assets A fonte de ícones Segoe UI Symbol do Windows 8/8.1 foi substituída pela fonte Segoe MDL2 Assets com o lançamento do Windows 10. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> **Segoe UI Symbol** continuará disponível como um recurso "herdado", mas recomendamos atualizar o aplicativo para usar a nova **Segoe MDL2 Assets**.
-
-> **Observação**
->
-> Um **Em** é uma unidade de medida na fonte. 1 Em na fonte é igual a 100% do valor de ponto especificado em 72 ppi. Por exemplo 16 pt é igual a 16 px em 72 ppi (também conhecida como plateau 100%). As novas fontes MDL2 são projetadas para que o volume da área do ícone seja um Em quadrado. Assim, se você colocar 16 px de largura e altura no código, obterá um volume de ícone 16x16px. Isso nem sempre significa que o ícone terá a dimensão completa do volume.
+Com o lançamento do Windows 10, a fonte Segoe MDL2 Assets substituiu a fonte de ícone Segoe UI Symbol do Windows 8/8.1. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> ( **Segoe UI Symbol** continuará disponível como um recurso "herdado", mas recomendamos atualizar o aplicativo para usar a nova **Segoe MDL2 Assets**.)
 
 A maioria dos ícones e controles da interface do usuário incluídos na fonte **Segoe MDL2 Assets** são mapeados para PUA (Área de Uso Privado de Unicode). A PUA permite que os desenvolvedores atribuam valores Unicode privados aos glifos que não são mapeados para pontos de código existentes. Isso é útil ao criar uma fonte de símbolo, mas gera um problema de interoperabilidade. Se a fonte não estiver disponível, os glifos não aparecerão. Use esses glifos somente quando puder especificar a fonte **Segoe MDL2 Assets** .
 
@@ -46,7 +36,7 @@ Use estes glifos somente quando puder especificar explicitamente a fonte **Segoe
 
 Ao contrário de **Segoe UI Symbol**, os ícones na fonte **Segoe MDL2 Assets** não são destinados ao uso embutido com texto. Isso significa que alguns "truques" mais antigos como as setas de indicação progressivas não se aplicam mais. Da mesma forma, desde que todos os novos ícones sejam dimensionados e posicionados do mesmo jeito, eles não precisam ter largura zero; apenas garantimos que eles funcionem como um conjunto. Idealmente, você pode sobrepor dois ícones que foram projetados como um conjunto e eles se ajustarão no lugar. Podemos fazer isso para permitir colorização no código. Por exemplo, U + EA3A e U + EA3B foram criados para o status de notificação do bloco Iniciar. Como eles já estão centralizados, o preenchimento de círculo pode ser colorido em diferentes estados.
 
-## Disposição em camadas e espelhamento
+## <a name="layering-and-mirroring"></a>Disposição em camadas e espelhamento
 
 Todos os glifos na fonte **Segoe MDL2 Assets** têm a mesma largura fixa com uma altura consistente e ponto de origem à esquerda, portanto, as camadas e os efeitos de colorização podem ser obtidos, desenhando glifos diretamente um em cima do outro. Este exemplo mostra um contorno preto desenhado sobre o coração vermelho de largura zero.
 
@@ -54,14 +44,17 @@ Todos os glifos na fonte **Segoe MDL2 Assets** têm a mesma largura fixa com uma
 
 Vários ícones também têm formulários espelhados disponíveis para uso em idiomas que usam a direção de texto da direita para esquerda como árabe, farsi e hebraico.
 
-## Enumeração Symbol
+## <a name="symbol-enumeration"></a>Enumeração Symbol
 Se estiver desenvolvendo um aplicativo em C#/VB/C++ e XAML, você poderá usar a [**Enumeração de símbolo**](https://msdn.microsoft.com/library/windows/apps/dn252842) para utilizar ícones da fonte Segoe MDL2 Assets. 
+
+## <a name="how-do-i-get-this-font"></a>Como obtenho essa fonte?
+Para obter a fonte Segoe MDL2 Assets, você deve instalar o Windows 10. 
 
 <!--
 Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons than we can show here. Many of these are intended for specialized purposed and are not typically used anywhere else.
 -->
 
-## Lista de ícones
+## <a name="icon-list"></a>Lista de ícones
 
 <table>
 
@@ -5143,10 +5136,7 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 
 
-
-
-
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 * [Diretrizes de fontes](fonts.md)
 * [**Enumeração Symbol**](https://msdn.microsoft.com/library/windows/apps/dn252842)
@@ -5160,6 +5150,6 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

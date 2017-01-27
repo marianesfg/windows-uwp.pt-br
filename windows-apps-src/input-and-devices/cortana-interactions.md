@@ -1,21 +1,27 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Estenda a funcionalidade básica da Cortana com comandos de voz que ativam um aplicativo UWP e execute uma única ação."
+Description: "Estenda a funcionalidade básica da Cortana com comandos de voz que ativam um aplicativo UWP e executem uma única ação."
 title: "Interações da Cortana"
 ms.assetid: 4C11A7CF-DA26-4CA1-A9B9-FE52670101F5
 label: Cortana
 template: detail.hbs
+keywords: "Cortana, tela da Cortana, design da Cortana, interface do usuário, comandos de voz, VCD"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 75e93920422b5ad8ad0e9399bccc403ea69e7feb
-ms.openlocfilehash: 8e853962cdea36a6738c094851d461c700aafd73
+ms.sourcegitcommit: 76b012ab4cf737f00fc986c81c88fd48339867fc
+ms.openlocfilehash: 8dcf45951723c0bf2302b59ef475f3b0fa973d5e
 
 ---
 
-# Interações da Cortana em aplicativos UWP
+# <a name="cortana-interactions-in-uwp-apps"></a>Interações da Cortana em aplicativos UWP
 
 A Cortana oferece uma estrutura de extensibilidade robusta e abrangente que permite que você incorpore perfeitamente a funcionalidade do seu aplicativo ou serviço à experiência da Cortana.
 
-## Mudamos
+## <a name="weve-moved"></a>Mudamos
 
 Toda a documentação do desenvolvedor para serviços e recursos da Cortana agora está disponível por meio do [Centro de desenvolvimento da Cortana](https://developer.microsoft.com/en-us/cortana).
 
@@ -23,7 +29,7 @@ Para começar, consulte a [Visão geral da extensibilidade da Cortana](https://m
 
 Para saber como estender a Cortana com funcionalidade de um aplicativo UWP usando comandos de voz, consulte [Comandos de voz da Cortana](https://developer.microsoft.com/en-us/cortana). 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 * [**Elementos e atributos VCD v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
 
@@ -43,6 +49,6 @@ Para saber como estender a Cortana com funcionalidade de um aplicativo UWP usand
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

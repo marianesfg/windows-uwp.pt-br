@@ -5,16 +5,17 @@ title: "Padrão de layout de tela ativa"
 ms.assetid: 4D768472-64D6-406C-9E87-F750F6B981A0
 label: TBD
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: ef71196ba0aefd4428daae70c54bcc9cbeaa56a2
-ms.openlocfilehash: 2c4bb601e1657bad8d1acad49f0591658b5b1d77
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: b38d7664a8a874743c5307e44e81104ce512454e
 
 ---
-# Padrão de layout de tela ativa
+# <a name="active-canvas-layout-pattern"></a>Padrão de layout de tela ativa
 
 Uma tela ativa é um padrão com uma área de conteúdo e uma área de comando. É para aplicativos de modo de exibição único ou experiências modais, como visualizadores/editores de fotos, visualizadores de documentos, mapas, pinturas ou outros aplicativos que fazem uso de um modo de exibição de rolagem livre. Para executar ações, uma tela ativa pode ser combinada com uma barra de comandos ou botões apenas, dependendo do número e dos tipos de ações necessárias.
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 Esse design de um aplicativo de edição de fotos apresenta um padrão de tela ativo, com um exemplo móvel à esquerda e um exemplo da área de trabalho à direita. A superfície de edição de imagens é uma tela, e a barra de comandos na parte inferior contém todas as ações contextuais para o aplicativo.
 
@@ -25,7 +26,7 @@ Esse design de um aplicativo de mapa do metrô usa uma tela ativa com uma faixa 
 ![Exemplo de um aplicativo de mapas usando o padrão de tela ativa](images/uap-subway-pc-phone-700.png)
 
 
-## Implementando este padrão
+## <a name="implementing-this-pattern"></a>Implementando este padrão
 
 O padrão de tela ativa consiste em uma área de conteúdo e uma área de comando.
 
@@ -35,12 +36,12 @@ O padrão de tela ativa consiste em uma área de conteúdo e uma área de comand
 
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 -   [**Barra de aplicativos e barra de comandos**](../controls-and-patterns/app-bars.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

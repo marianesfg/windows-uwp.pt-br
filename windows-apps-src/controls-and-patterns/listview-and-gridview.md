@@ -5,11 +5,11 @@ title: "Exibição de lista e exibição de grade"
 label: List view and grid view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 8f9d85f0cb15c9fe4ceec9c397e23a134a442d3f
-ms.openlocfilehash: 8a14fa69089f6d796a803c1c1ff9bb678af3c913
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 2887e2aed2c3b638343f2bd211c32f99b3c7da1a
 
 ---
-# ListView e GridView
+# <a name="listview-and-gridview"></a>ListView e GridView
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -20,19 +20,14 @@ Os controles ListView e GridView são derivados da classe ListViewBase, portanto
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx"><strong>Classe ListView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx"><strong>Classe GridView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx"><strong>Propriedade ItemsSource</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx"><strong>Propriedade Items</strong></a></li>
+<li>[**Classe ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)</li>
+<li>[**Classe GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)</li>
+<li>[**Propriedade ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)</li>
+<li>[**Propriedade Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 O ListView exibe dados empilhados verticalmente em uma única coluna. Ele é frequentemente usado para mostrar uma lista ordenada de itens, como uma lista de emails ou resultados de pesquisa. 
 
@@ -44,7 +39,7 @@ O controle GridView apresenta uma coleção de itens em linhas e colunas, que po
 
 Para obter uma comparação mais detalhada e orientação sobre qual controle usar, consulte [Listas](lists.md).
 
-## Criar um modo de exibição de lista
+## <a name="create-a-list-view"></a>Criar um modo de exibição de lista
 
 Modo de exibição de lista é um [ItemsControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.aspx) e, por isso, pode conter uma coleção de itens de qualquer tipo. Ele deve ter itens em sua coleção de [**itens**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) para mostrar algo na tela. Para popular a exibição, você pode adicionar itens diretamente à coleção de [**itens**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) ou definir a propriedade [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) como uma fonte de dados. 
 
@@ -52,7 +47,7 @@ Modo de exibição de lista é um [ItemsControl](https://msdn.microsoft.com/libr
 
 > **Observação**&nbsp;&nbsp;Em muitos exemplos deste artigo, a coleção **Items** é preenchida diretamente para simplificar. No entanto, é mais comum que os itens de uma lista sejam provenientes de uma fonte dinâmica, como uma lista de livros de um banco de dados online. Você usa a propriedade **ItemsSource** para essa finalidade. 
 
-### Adicionar itens à coleção Items
+### <a name="add-items-to-the-items-collection"></a>Adicionar itens à coleção Items
 
 Você pode adicionar itens à coleção [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) usando XAML ou código. Normalmente, você adiciona itens dessa maneira quando tem um pequeno número de itens que não mudam e são facilmente definidos no XAML ou ao gerar os itens em código no tempo de execução. 
 
@@ -89,7 +84,7 @@ O ListView tem a aparência a seguir.
 
 ![Uma exibição de lista simples](images/listview-simple.png)
 
-### Definir a origem de itens
+### <a name="set-the-items-source"></a>Definir a origem de itens
 
 Geralmente, você usa uma exibição de lista para exibir dados de uma fonte, como um banco de dados ou a Internet. Para popular uma exibição de lista em uma fonte de dados, defina sua propriedade [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) como uma coleção de itens de dados.
 
@@ -148,7 +143,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 Se você precisar mostrar dados agrupados em sua exibição de lista, deverá associar a um [ **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx). O CollectionViewSource age como um proxy para a classe da coleção em XAML e habilita o suporte a agrupamento. Para saber mais, consulte a [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx).
 
-## Modelo de dados
+## <a name="data-template"></a>Modelo de dados
 
 Um modelo de dados de um item define como os dados são visualizados. Por padrão, o item de dados aparece na exibição de lista como a representação em cadeia de caracteres do objeto de dados ao qual ele está associado. Você pode mostrar a representação em cadeia de caracteres de uma propriedade específica do item de dados definindo [**DisplayMemberPath**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.displaymemberpath.aspx) como essa propriedade.
 
@@ -189,7 +184,7 @@ Veja a seguir a aparência dos itens de dados quando exibidos com este modelo de
 
 Os modelos de dados são a principal maneira de definir a aparência de sua exibição de lista. Eles também poderão causar um impacto significativo no desempenho se sua lista exibir um grande número de itens. Neste artigo, vamos usar dados de cadeia de caracteres simples na maioria dos exemplos e não especificar um modelo de dados. Para obter mais informações e exemplos de como usar modelos de dados e contêineres de itens para definir a aparência dos itens em sua lista ou grade, consulte [Modelos de item de exibição de lista](listview-item-templates.md). 
 
-## Alterar o layout dos itens
+## <a name="change-the-layout-of-items"></a>Alterar o layout dos itens
 
 Quando você adiciona itens a uma exibição de lista ou grade, o controle encapsula automaticamente cada item de um contêiner de itens e, em seguida, dispõe todos os contêineres. A forma como esses contêineres de itens são dispostos depende do [ **ItemsPanel** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) do controle.  
 - Por padrão, **ListView** usa um [ **ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx), que gera uma lista vertical, como esta.
@@ -269,7 +264,7 @@ Se você mostrar os dados agrupados em sua exibição de lista, o ItemsPanel det
 
 ![Uma exibição de lista horizontal agrupada](images/listview-horizontal-groups.png)
 
-## Interação e seleção de itens
+## <a name="item-selection-and-interaction"></a>Interação e seleção de itens
 
 Você pode escolher entre várias maneiras de permitir que um usuário interaja com uma exibição de lista. Por padrão, um usuário pode selecionar um único item. Você pode alterar a propriedade [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) para habilitar a multisseleção ou desabilitar a seleção. É possível definir a propriedade [**IsItemClickEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) para que um usuário clique em um item em vez de selecioná-lo para invocar uma ação (como um botão).
 
@@ -304,41 +299,41 @@ myGridView.SelectionMode = ListViewSelectionMode.None;
 myGridView.IsItemClickEnabled = true;
 ```
 
-### Somente leitura
+### <a name="read-only"></a>Somente leitura
 
 É possível definir a propriedade SelectionMode como **ListViewSelectionMode.None** para desabilitar a seleção de itens. Isso coloca o controle no modo somente leitura, para ser usado para exibição de dados, mas não para interação. O próprio controle não está desabilitado, somente a seleção de itens está desabilitada.
 
-### Seleção única
+### <a name="single-selection"></a>Seleção única
 
 Esta tabela descreve as interações com o teclado, o mouse e de toque quando o SelectionMode está definido como **Único**.
 
 Tecla modificadora | Interação
 -------------|------------
-Nenhum(a) | <ul><li>Um usuário pode selecionar um único item usando a barra de espaço, um clique do mouse ou um toque.</li></ul>
-Ctrl | <ul><li>Um usuário pode desmarcar um único item usando a barra de espaço, um clique do mouse ou um toque.</li><li>Com as teclas de seta, um usuário pode mover o foco independentemente da seleção.</li></ul>
+Nenhum(a) | <li>Um usuário pode selecionar um único item usando a barra de espaço, um clique do mouse ou um toque.</li>
+Ctrl | <li>Um usuário pode desmarcar um único item usando a barra de espaço, um clique do mouse ou um toque.</li><li>Com as teclas de seta, um usuário pode mover o foco independentemente da seleção.</li>
 
 Quando SelectionMode está definido como **Único**, você pode obter o item de dados selecionado a partir da propriedade [ **SelectedItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selecteditem.aspx). Você pode obter o índice na coleção do item selecionado com a propriedade [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectedindex.aspx). Se nenhum item estiver selecionado, SelectedItem será **nulo** e SelectedIndex será -1. 
  
 Se você tentar definir um item que não está na coleção **Items** como o **SelectedItem**, a operação será ignorada e o SelectedItem será **nulo**. No entanto, se você tentar definir o **SelectedIndex** como um índice fora do intervalo de **Items** na lista, ocorrerá uma exceção **ArgumentException**. 
 
-### Seleção múltipla
+### <a name="multiple-selection"></a>Seleção múltipla
 
 Esta tabela descreve as interações com o teclado, o mouse e de toque quando o SelectionMode está definido como **Múltiplo**.
 
 Tecla modificadora | Interação
 -------------|------------
-Nenhum(a) | <ul><li>Um usuário pode selecionar vários itens usando a barra de espaço, um clique do mouse ou um toque para alternar a seleção do item focalizado.</li><li>Com as teclas de seta, um usuário pode mover o foco independentemente da seleção.</li></ul>
-Shift | <ul><li>Um usuário pode selecionar vários itens adjacentes clicando ou tocando no primeiro item da seleção e, em seguida, no último item da seleção.</li><li>Com as teclas de seta, um usuário pode criar uma seleção contígua começando com o item selecionado quando Shift é pressionada.</li></ul>
+Nenhum(a) | <li>Um usuário pode selecionar vários itens usando a barra de espaço, um clique do mouse ou um toque para alternar a seleção do item focalizado.</li><li>Com as teclas de seta, um usuário pode mover o foco independentemente da seleção.</li>
+Shift | <li>Um usuário pode selecionar vários itens adjacentes clicando ou tocando no primeiro item da seleção e, em seguida, no último item da seleção.</li><li>Com as teclas de seta, um usuário pode criar uma seleção contígua começando com o item selecionado quando Shift é pressionada.</li>
 
-### Seleção estendida
+### <a name="extended-selection"></a>Seleção estendida
 
 Esta tabela descreve as interações com o teclado, o mouse e de toque quando o SelectionMode está definido como **Estendido**.
 
 Tecla modificadora | Interação
 -------------|------------
-Nenhum(a) | <ul><li>O comportamento é o mesmo que da seleção **Único**.</li></ul>
-Ctrl | <ul><li>Um usuário pode selecionar vários itens usando a barra de espaço, um clique do mouse ou um toque para alternar a seleção do item focalizado.</li><li>Com as teclas de seta, um usuário pode mover o foco independentemente da seleção.</li></ul>
-Shift | <ul><li>Um usuário pode selecionar vários itens adjacentes clicando ou tocando no primeiro item da seleção e, em seguida, no último item da seleção.</li><li>Com as teclas de seta, um usuário pode criar uma seleção contígua começando com o item selecionado quando Shift é pressionada.</li></ul>
+Nenhum(a) | <li>O comportamento é o mesmo que da seleção **Único**.</li>
+Ctrl | <li>Um usuário pode selecionar vários itens usando a barra de espaço, um clique do mouse ou um toque para alternar a seleção do item focalizado.</li><li>Com as teclas de seta, um usuário pode mover o foco independentemente da seleção.</li>
+Shift | <li>Um usuário pode selecionar vários itens adjacentes clicando ou tocando no primeiro item da seleção e, em seguida, no último item da seleção.</li><li>Com as teclas de seta, um usuário pode criar uma seleção contígua começando com o item selecionado quando Shift é pressionada.</li>
 
 Quando SelectionMode está definido como **Múltiplo** ou **Estendido**, você pode obter os itens de dados selecionados a partir da propriedade [**SelectedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selecteditems.aspx). 
 
@@ -346,7 +341,7 @@ As propriedades **SelectedIndex**, **SelectedItem** e **SelectedItems** são sin
 
 No modo de seleção múltipla, **SelectedItem** contém o item que foi selecionado primeiro, e **Selectedindex** contém o índice do item que foi selecionado primeiro. 
 
-### Responder a alterações de seleção
+### <a name="respond-to-selection-changes"></a>Responder a alterações de seleção
 
 Para responder às alterações de seleção em uma exibição de lista, manipule o evento [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectionchanged.aspx). No código do manipulador de eventos, você pode obter a lista de itens selecionados a partir da propriedade [**SelectionChangedEventArgs.AddedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.selectionchangedeventargs.addeditems.aspx). Você pode obter todos os itens que foram desmarcados a partir da propriedade [**SelectionChangedEventArgs.RemovedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.selectionchangedeventargs.removeditems.aspx). As coleções AddedItems e RemovedItems contêm, no máximo, 1 item, a menos que o usuário selecione um intervalo de itens mantendo pressionada a tecla Shift.
 
@@ -396,7 +391,7 @@ private void ListView1_SelectionChanged(object sender, SelectionChangedEventArgs
 }
 ```
 
-### Modo de clique
+### <a name="click-mode"></a>Modo de clique
 
 Você pode alterar a exibição de lista para que um usuário clique em itens como botões em vez de selecioná-los. Por exemplo, isso é útil quando o seu aplicativo navega para uma nova página quando o seu usuário clica em um item em uma lista ou grade. Para habilitar esse comportamento:
 - Defina **SelectionMode** como **Nenhum**.
@@ -450,7 +445,7 @@ private void ListView1_ItemClick(object sender, ItemClickEventArgs e)
 }
 ```
 
-### Selecionar um intervalo de itens de forma programática
+### <a name="select-a-range-of-items-programmatically"></a>Selecionar um intervalo de itens de forma programática
 
 Às vezes, você precisa manipular a seleção de itens de uma exibição de lista de modo programático. Por exemplo, você pode ter um botão **Selecionar tudo** para permitir que o usuário selecione todos os itens de uma lista. Nesse caso, geralmente, não é muito eficiente adicionar e remover itens da coleção SelectedItems individualmente. Cada alteração de itens provoca a ocorrência de um evento SelectionChanged, e quando você trabalha com os itens diretamente em vez de trabalhar com valores de índice, o item é desvirtualizado.
 
@@ -502,19 +497,19 @@ private void DeselectAllButton_Click(object sender, RoutedEventArgs e)
 
 Para obter informações sobre como alterar a aparência dos itens selecionados, consulte [Modelos de item de exibição de lista](listview-item-templates.md).
 
-### Arrastar e soltar
+### <a name="drag-and-drop"></a>Arrastar e soltar
 
-Os controles ListView e GridView permitem arrastar e soltar itens dentro deles mesmos e entre si e outros controles ListView e GridView. Para obter mais informações sobre como implementar o padrão de arrastar e soltar, consulte [Arrastar e soltar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop). 
+Os controles ListView e GridView permitem arrastar e soltar itens dentro deles mesmos e entre si e outros controles ListView e GridView. Para obter mais informações sobre como implementar o padrão arrastar e soltar, consulte [Arrastar e soltar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop). 
 
-## Obter os exemplos
+## <a name="get-the-sample-code"></a>Obter o código de exemplo 
 
-*   [Amostra ListView e GridView em XAML](http://go.microsoft.com/fwlink/p/?LinkId=619900)<br/>
-    Este exemplo mostra o uso dos controles ListView e Gridview.
+*   [Exemplo de ListView e GridView em XAML](http://go.microsoft.com/fwlink/p/?LinkId=619900)<br/>
+    Este exemplo mostra o uso de controles ListView e Gridview.
 
 *   [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
     Veja todos os controles XAML em um formato interativo.
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Listas](lists.md)
 - [Modelos de item de exibição de lista](listview-item-templates.md)
@@ -522,6 +517,6 @@ Os controles ListView e GridView permitem arrastar e soltar itens dentro deles m
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

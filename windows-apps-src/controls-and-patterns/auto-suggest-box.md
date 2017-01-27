@@ -7,11 +7,11 @@ dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 9406f9b826dfb7d2603a0812f209dfb38cf639ae
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 6b41c8b1888b61c82aa3d54244151b08d963658d
 
 ---
-# Caixa de sugestão automática
+# <a name="auto-suggest-box"></a>Caixa de sugestão automática
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Use uma AutoSuggestBox para fornecer uma lista de sugestões para um usuário selecionar conforme digita.
@@ -21,32 +21,27 @@ Use uma AutoSuggestBox para fornecer uma lista de sugestões para um usuário se
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx"><strong>Classe AutoSuggestBox</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx"><strong>Evento TextChanged</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx"><strong>Evento SuggestionChose</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx"><strong>Evento QuerySubmitted</strong></a></li>
+<li>[**Classe AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)</li>
+<li>[**Evento TextChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)</li>
+<li>[**Evento SuggestionChose**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx)</li>
+<li>[**Evento QuerySubmitted**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-## Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 Se você quer um controle simples e personalizável que permita a pesquisa de texto com uma lista de sugestões, então escolha uma caixa de sugestão automática.
 
 Para saber mais sobre como escolher o controle de texto certo, veja o artigo [Controles de texto](text-controls.md).
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 Um caixa de sugestão automática no aplicativo Groove Música.
 
 ![Um caixa de sugestão automática no aplicativo Groove Música](images/control-examples/auto-suggest-box-groove.png)
 
-## Anatomia
+## <a name="anatomy"></a>Anatomia
 O ponto de entrada para a caixa de sugestão automática consiste de um cabeçalho opcional e uma caixa de texto com texto de dica opcional:
 
 ![Exemplo do ponto de entrada para o controle de sugestão automática](images/controls_autosuggest_entrypoint.png)
@@ -55,7 +50,7 @@ A lista de resultados da sugestão automática é preenchida automaticamente dep
 
 ![Exemplo do controle de sugestão automática expandido](images/controls_autosuggest_expanded01.png)
 
-## Criar uma caixa de sugestão automática
+## <a name="create-an-auto-suggest-box"></a>Criar uma caixa de sugestão automática
 
 Para usar uma AutoSuggestBox, você precisa responder a três ações de usuário.
 
@@ -63,7 +58,7 @@ Para usar uma AutoSuggestBox, você precisa responder a três ações de usuári
 - Sugestão escolhida – quando o usuário selecionar uma sugestão da lista, atualize a caixa de texto.
 - Consulta enviada - quando o usuário envia uma consulta, mostra os resultados da consulta.
 
-### Texto alterado
+### <a name="text-changed"></a>Texto alterado
 
 O evento [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx) ocorre sempre que o conteúdo da caixa de texto é atualizado. Use a propriedade [Reason](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxtextchangedeventargs.reason.aspx) de argumentos de evento para determinar se a alteração foi causada por entrada de usuário. Se a razão da alteração for **UserInput**, filtre seus dados de acordo com a entrada. Depois, configure os dados filtrados como o [ItemsSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) da AutoSuggestBox, para atualizar a lista de sugestões.
 
@@ -72,7 +67,7 @@ Para controlar como os itens são exibidos na lista de sugestões, você pode us
 - Para exibir o texto de uma única propriedade de seu item de dados, configure a propriedade DisplayMemberPath para escolher qual propriedade de seu objeto exibir na lista de sugestões.
 - Para definir uma aparência personalizada para cada item na lista, use a propriedade ItemTemplate.
 
-### Sugestão escolhida
+### <a name="suggestion-chosen"></a>Sugestão escolhida
 
 Quando um usuário navega pela lista de sugestões usando o teclado, você precisa atualizar o texto na caixa de texto para corresponder.
 
@@ -80,7 +75,7 @@ Você pode configurar a propriedade [TextMemberPath](https://msdn.microsoft.com/
 
 Se você precisa mostrar mais do que uma propriedade simples, manipule o evento [SuggestionChosen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx) para preencher a caixa de texto com texto personalizado com base no item selecionado.
 
-### Consulta enviada
+### <a name="query-submitted"></a>Consulta enviada
 
 Manipule o evento [QuerySubmitted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx) para executar uma ação de consulta adequada para seu aplicativo e mostre o resultado para o usuário.
 
@@ -90,7 +85,7 @@ O evento QuerySubmitted ocorre quando um usuário confirma uma cadeia de caracte
 
 Em todos os casos, a propriedade [QueryText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext.aspx) de argumentos de evento contém o texto da caixa de texto.
 
-## Use a AutoSuggestBox para pesquisa
+## <a name="use-autosuggestbox-for-search"></a>Use a AutoSuggestBox para pesquisa
 
 Use uma AutoSuggestBox para fornecer uma lista de sugestões para um usuário selecionar conforme digita.
 
@@ -104,11 +99,11 @@ Aqui está uma AutoSuggestBox com um ícone de 'pesquisar'.
 
 ![Exemplo do ponto de entrada para o controle de sugestão automática](images/controls_autosuggest_entrypoint.png)
 
-## Exemplos
+## <a name="get-the-sample-code"></a>Obter o código de exemplo 
 
-Para ver exemplos práticos completos de AutoSuggestBox, consulte [AutoSuggestBox migration sample](http://go.microsoft.com/fwlink/p/?LinkId=619996) e [XAML UI Basics sample](http://go.microsoft.com/fwlink/p/?LinkId=619992).
+Para ver exemplos práticos completos de AutoSuggestBox, consulte o [exemplo de AutoSuggestBox](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlAutoSuggestBox) e [Amostra de noções básicas de interface do usuário XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992).
 
-Aqui está uma AutoSuggestBox simples com os manipuladores de evento exigidos.
+Aqui está uma AutoSuggestBox simples com os manipuladores de eventos exigidos.
 
 ```xaml
 <AutoSuggestBox PlaceholderText="Search" QueryIcon="Find" Width="200"
@@ -150,24 +145,37 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 }
 ```
 
-## O que fazer e o que não fazer
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
--   Quando for usar a caixa de sugestão automática para realizar pesquisas e não houver resultados de pesquisa para o texto inserido, exiba uma única linha "Nenhum resultado" como resultado, para que o usuário saiba que a solicitação de pesquisa executou:
+-   Quando a caixa de sugestão automática for usada para realizar pesquisas e não houver nenhum resultado para o texto inserido, exiba a mensagem de uma linha "Nenhum resultado" para que os usuários saibam que a solicitação de pesquisa foi executada:
 
     ![Exemplo de uma caixa de sugestão automática com nenhum resultado de pesquisa](images/controls_autosuggest_noresults.png)
 
+<div class="microsoft-internal-note">
+**Lista de verificação de globalização e localização**
 
-## Artigos relacionados
+<table>
+<tr>
+<th>Espaçamento vertical</th><td>Use caracteres não latinos para espaçamento vertical para garantir que scripts não latinos sejam exibidos corretamente, inclusive números.</td>
+</tr>
+<tr>
+<th>Rolagem</th><td>Quando o texto de sugestão automática for selecionado, o usuário deverá ser capaz de rolar até o final da sequência.</td>
+</tr>
+</table>
+</div>
+
+
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Controles de texto](text-controls.md)
 - [Verificação ortográfica](spell-checking-and-prediction.md)
 - [Pesquisa](search.md)
 - [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
-- [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+- [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

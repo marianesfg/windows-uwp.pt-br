@@ -7,21 +7,30 @@ Search.Product: eADQiWindows 10XVcnh
 title: Usar o escopo de entrada para alterar o teclado virtual
 ms.assetid: 6E5F55D7-24D6-47CC-B457-B6231EDE2A71
 template: detail.hbs
+keywords: "teclado, acessibilidade, navegação, foco, texto, entrada e interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 692905c1c6d9b3d706baeadc480041c77163c272
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: caaa6228f2d5b2bb6566ccb285d90a396a1caf01
 
 ---
 
-# Usar o escopo de entrada para alterar o teclado virtual
+# <a name="use-input-scope-to-change-the-touch-keyboard"></a>Usar o escopo de entrada para alterar o teclado virtual
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira.
 
-**APIs importantes**
-
--   [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632)
--   [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028)
-
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632)</li>
+<li>[**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028)</li>
+</ul>
+</div>
 
 
 O teclado virtual pode ser usado para entrada de texto, quando o aplicativo é executado em um dispositivo com tela sensível ao toque. O teclado virtual é invocado quando o usuário toca em um campo de entrada editável, como um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) ou um [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548). Você pode tornar a entrada de dados muito mais rápida e fácil para os usuários em seu aplicativo definindo o *escopo de entrada* do controle de texto para corresponder ao tipo de dados que o usuário deve inserir. O escopo de entrada oferece uma dica para o sistema sobre o tipo de entrada de texto esperado pelo controle, para que o sistema possa fornecer um layout de teclado virtual especializado para o tipo de entrada.
@@ -32,7 +41,7 @@ Por exemplo, se uma caixa de texto for usada somente para a inserção de um PIN
 - Essas informações se aplicam somente ao SIP. Elas não se aplicam a teclados de hardware nem ao Teclado Virtual disponível nas opções de Facilidade de Acesso do Windows.
 - O escopo de entrada não faz com que qualquer validação de entrada seja executada, e não impede que o usuário forneça qualquer entrada por meio de um teclado de hardware ou de outro dispositivo de entrada. Você ainda é o responsável pela validação da entrada em seu código, conforme necessário.
 
-## Alterando o escopo de entrada de um controle de texto
+## <a name="changing-the-input-scope-of-a-text-control"></a>Alterando o escopo de entrada de um controle de texto
 
 Os escopos de entrada disponíveis para seu aplicativo são membros da enumeração [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028). Você pode definir a propriedade **InputScope** de uma [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) ou [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548) para um desses valores.
 
@@ -113,7 +122,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 };
 ```
 
-## Previsão de texto, verificação ortográfica e correção automática
+## <a name="text-prediction-spell-checking-and-auto-correction"></a>Previsão de texto, verificação ortográfica e correção automática
 
 Os controles [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) e [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548) têm várias propriedades que influenciam o comportamento do SIP. Para fornecer a melhor experiência para seus usuários, é importante entender como essas propriedades afetam a entrada de texto usando toque.
 
@@ -129,7 +138,7 @@ Os controles [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209
 
 -   [**PreventKeyboardDisplayOnProgrammaticFocus**](https://msdn.microsoft.com/library/windows/apps/dn299273) — Quando essa propriedade for **true**, impedirá que o sistema mostre o SIP quando o foco for definido programaticamente em um controle de texto. Em vez disso, o teclado só será mostrado quando o usuário interagir com o controle.
 
-## Índice de teclado virtual para o Windows e o Windows Phone
+## <a name="touch-keyboard-index-for-windows-and-windows-phone"></a>Índice de teclado virtual para o Windows e o Windows Phone
 
 Estas tabelas mostram os layouts do SIP (Soft Input Panel) em dispositivos móveis e desktops para valores de escopo de entrada comuns. O efeito do escopo de entrada sobre os recursos habilitados pelas propriedades **IsSpellCheckEnabled** e **IsTextPredictionEnabled** é listado para cada escopo de entrada. Esta não é uma lista abrangente de escopos de entrada disponíveis.
 
@@ -137,7 +146,7 @@ Estas tabelas mostram os layouts do SIP (Soft Input Panel) em dispositivos móve
 
 > **Dica**&nbsp;&nbsp;Você pode alternar a maioria dos teclados virtuais entre um layout alfabético e um layout de números e símbolos. No Windows, alterne a tecla **&123**. No Windows Phone, pressione a tecla **&123** para mudar para o layout de números e símbolos e pressione a tecla **abcd** para mudar para o layout alfabético.
 
-### Padrão
+### <a name="default"></a>Padrão
 
 `<TextBox InputScope="Default"/>`
 
@@ -154,7 +163,7 @@ Disponibilidade de recursos:
 -   Uso automático de maiúsculas: habilitado se **IsSpellCheckEnabled** = **true**, desabilitado se **IsSpellCheckEnabled** = **false**
 -   Previsão de texto: habilitada se **IsTextPredictionEnabled** = **true**, desabilitada se **IsTextPredictionEnabled** = **false**
 
-### CurrencyAmountAndSymbol
+### <a name="currencyamountandsymbol"></a>CurrencyAmountAndSymbol
 
 `<TextBox InputScope="CurrencyAmountAndSymbol"/>`
 
@@ -165,7 +174,7 @@ O layout de teclado padrão de números e símbolos.
 | ![Teclado virtual do Windows para moeda](images/input-scopes/kbdpccurrencyamountandsymbol.png)<br>Também inclui as teclas esquerda/direita da página para mostrar mais símbolos.| ![Teclado virtual do Windows Phone para moeda](images/input-scopes/kbdwpcurrencyamountandsymbol.png) |
 |Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul>Mesmo que **Number** e **TelephoneNumber**. | Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: ativada por padrão, pode ser desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: ativada por padrão, pode ser desabilitada</li>| 
 
-### Url
+### <a name="url"></a>Url
 
 `<TextBox InputScope="Url"/>`
 
@@ -176,7 +185,7 @@ Inclui as teclas **.com** e ![tecla ir](images/input-scopes/kbdgokey.png) (Ir). 
 | ![Teclado virtual do Windows para URLs](images/input-scopes/kbdpcurl.png)<br>Também inclui as teclas **:**, **-** e **/**.| ![Teclado virtual do Windows Phone para URLs](images/input-scopes/kbdwpurl.png)<br>Pressione e segure a tecla de ponto para exibir opções adicionais ( - + &quot; / &amp; : , ). |
 |Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: ativada por padrão, pode ser desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> | Disponibilidade de recursos:<ul><li>Verificação ortográfica: desativada por padrão, pode ser habilitada</li><li>Correção automática: desativada por padrão, pode ser habilitada</li><li>Capitalização automática: desativada por padrão, pode ser habilitada</li><li>Previsão de texto: desativada por padrão, pode ser habilitada</li></ul> |
 
-### EmailSmtpAddress
+### <a name="emailsmtpaddress"></a>EmailSmtpAddress
 
 `<TextBox InputScope="EmailSmtpAddress"/>`
 
@@ -187,7 +196,7 @@ Inclui as teclas **@** e **.com**. Pressione e segure a tecla **.com** para exib
 | ![Teclado virtual do Windows para endereços de email](images/input-scopes/kbdpcemailsmtpaddress.png)<br>Também inclui as teclas **_** e **-**.| ![Teclado virtual do Windows Phone para endereços de email](images/input-scopes/kbdwpemailsmtpaddress.png)<br>Pressione e segure a tecla de ponto para exibir opções adicionais ( - _ , ; ). |
 |Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: ativada por padrão, pode ser desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> | Disponibilidade de recursos:<ul><li>Verificação ortográfica: desativada por padrão, pode ser habilitada</li><li>Correção automática: desativada por padrão, pode ser habilitada</li><li>Capitalização automática: desativada por padrão, pode ser habilitada</li><li>Previsão de texto: desativada por padrão, pode ser habilitada</li></ul> |
 
-### Número
+### <a name="number"></a>Número
 
 `<TextBox InputScope="Number"/>`
 
@@ -196,7 +205,7 @@ Inclui as teclas **@** e **.com**. Pressione e segure a tecla **.com** para exib
 | ![Teclado virtual do Windows para números](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![Teclado virtual do Windows Phone para números](images/input-scopes/kbdwpnumber.png)<br>O teclado contém números e um ponto decimal. Pressione e segure a tecla de ponto decimal para exibir opções adicionais ( , - ). |
 |Mesmo que **CurrencyAmountAndSymbol** e **TelephoneNumber**. | Disponibilidade de recursos:<ul><li>Verificação ortográfica: sempre desabilitada</li><li>Correção automática: sempre desabilitada</li><li>Capitalização automática: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> |
 
-### TelephoneNumber
+### <a name="telephonenumber"></a>TelephoneNumber
 
 `<TextBox InputScope="TelephoneNumber"/>`
 
@@ -205,7 +214,7 @@ Inclui as teclas **@** e **.com**. Pressione e segure a tecla **.com** para exib
 | ![Teclado virtual do Windows para números de telefone](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![Teclado virtual do Windows Phone para números de telefone](images/input-scopes/kbdwptelephonenumber.png)<br>O teclado imita o teclado do telefone. Pressione e segure a tecla de ponto para exibir opções adicionais ( , ( ) X. ). Pressione e segure a tecla 0 para inserir +. |
 |Mesmo que **CurrencyAmountAndSymbol** e **TelephoneNumber**. | Disponibilidade de recursos:<ul><li>Verificação ortográfica: sempre desabilitada</li><li>Correção automática: sempre desabilitada</li><li>Capitalização automática: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> |
 
-### Pesquisar
+### <a name="search"></a>Pesquisar
 
 `<TextBox InputScope="Search"/>`
 
@@ -216,7 +225,7 @@ Inclui a tecla **Pesquisa**, em vez da tecla **Enter**.
 | ![Teclado virtual do Windows para pesquisa](images/input-scopes/kbdpcsearch.png)| ![Teclado virtual do Windows Phone para pesquisa](images/input-scopes/kbdwpsearch.png)|
 |Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: ativada por padrão, pode ser desabilitada</li></ul> | Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: ativada por padrão, pode ser desabilitada</li><li>Capitalização automática: sempre desabilitada</li><li>Previsão de texto: ativada por padrão, pode ser desabilitada</li></ul> |
 
-### SearchIncremental
+### <a name="searchincremental"></a>SearchIncremental
 
 `<TextBox InputScope="SearchIncremental"/>`
 
@@ -225,7 +234,7 @@ Inclui a tecla **Pesquisa**, em vez da tecla **Enter**.
 | ![Teclado virtual padrão do Windows](images/input-scopes/kbdpcdefault.png)<br>Layout igual a **Padrão**.| ![Teclado virtual padrão do Windows Phone](images/input-scopes/kbdwpdefault.png)|
 |Disponibilidade de recursos:<ul><li>Verificação ortográfica: desativada por padrão, pode ser habilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> | Mesmo que **Padrão**. |
 
-### Fórmula
+### <a name="formula"></a>Fórmula
 
 `<TextBox InputScope="Formula"/>`
 
@@ -236,7 +245,7 @@ Inclui a tecla **=**.
 | ![Teclado virtual do Windows para números de telefone](images/input-scopes/kbdpcformula.png)<br>Também inclui as teclas **%**, **$** e **+**.| ![Teclado virtual do Windows Phone para fórmula](images/input-scopes/kbdwpformula.png)<br>Pressione e segure a tecla de ponto para exibir opções adicionais ( - ! ? , ). Pressione e segure a tecla **=** para exibir opções adicionais ( ( ) : &lt; &gt; ). |
 |Disponibilidade de recursos:<ul><li>Verificação ortográfica: desativada por padrão, pode ser habilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> | Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: ativada por padrão, pode ser desabilitada</li><li>Capitalização automática: sempre desabilitada</li><li>Previsão de texto: ativada por padrão, pode ser desabilitada</li></ul> |
 
-### Chat
+### <a name="chat"></a>Chat
 
 `<TextBox InputScope="Chat"/>`
 
@@ -245,7 +254,7 @@ Inclui a tecla **=**.
 | ![Teclado virtual padrão do Windows](images/input-scopes/kbdpcdefault.png)<br>Layout igual a **Padrão**.| ![Teclado virtual padrão do Windows Phone](images/input-scopes/kbdwpdefault.png)<br>Layout igual a **Padrão**.|
 |Disponibilidade de recursos:<ul><li>Verificação ortográfica: desativada por padrão, pode ser habilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> | Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: ativada por padrão, pode ser desabilitada</li><li>Capitalização automática: ativada por padrão, pode ser desabilitada</li><li>Previsão de texto: ativada por padrão, pode ser desabilitada</li></ul> |
 
-### NameOrPhoneNumber
+### <a name="nameorphonenumber"></a>NameOrPhoneNumber
 
 `<TextBox InputScope="NameOrPhoneNumber"/>`
 
@@ -256,6 +265,6 @@ Inclui a tecla **=**.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

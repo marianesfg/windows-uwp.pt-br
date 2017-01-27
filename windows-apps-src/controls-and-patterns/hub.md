@@ -6,11 +6,11 @@ ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ad5a8dfab77c78b1c53762f5de868819e0b37d6f
 
 ---
-# Controle/padrão Hub
+# <a name="hub-controlpattern"></a>Controle/padrão Hub
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,21 +21,17 @@ Um controle Hub permite organizar o conteúdo do aplicativo em seções ou categ
 
 O conteúdo em um hub pode ser mostrado em uma exibição panorâmica em que os usuários têm uma prévia das novidades, do que está disponível e do que é relevante. Normalmente os hubs têm um cabeçalho de página, e cada uma das várias seções de conteúdo tem um cabeçalho de seção.
 
+
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251843"><strong>Classe Hub</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251845"><strong>Classe HubSection</strong></a></li>
+<li>[**Classe Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)</li>
+<li>[**Classe HubSection**](https://msdn.microsoft.com/library/windows/apps/dn251845)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-## Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 O controle Hub funciona bem para exibir grandes volumes de conteúdo organizado em uma hierarquia. Os hubs priorizam a navegação e a descoberta de novo conteúdo, tornando-se úteis para exibir itens em uma loja ou uma coleção de mídias.
 
@@ -63,13 +59,13 @@ O controle hub tem vários recursos que o fazem funcionar bem para a criação d
 
 Um Hub é apenas um dos vários elementos de navegação que você pode usar. Para saber mais sobre padrões de navegação e os outros elementos de navegação, consulte [Noções básicas de design de navegação de aplicativos UWP (Plataforma Universal do Windows)](../layout/navigation-basics.md).
 
-## Arquitetura do hub
+## <a name="hub-architecture"></a>Arquitetura do hub
 
 O controle hub tem um padrão de navegação hierárquico que dá suporte a aplicativos com uma arquitetura de informações relacionais. Um hub consiste em categorias de conteúdo diferentes, cada uma mapeada para as páginas de seção do aplicativo. As páginas de seção podem ser exibidas na forma que melhor represente o cenário e o conteúdo contido na seção.
 
 ![estrutura delineada de um aplicativo hierárquico Food with Friends](images/navigation_diagram_food_with_friends_app_new.png)
 
-## Layouts e movimento panorâmico/rolagem
+## <a name="layouts-and-panningscrolling"></a>Layouts e movimento panorâmico/rolagem
 
 Há várias maneiras de criar o dispor e navegar pelo conteúdo em um hub; basta ter certeza de que as listas de conteúdo em um hub sempre tenham movimento panorâmico na direção perpendicular à da rolagem do hub.
 
@@ -86,7 +82,7 @@ Há várias maneiras de criar o dispor e navegar pelo conteúdo em um hub; basta
 
 ![Exemplo de um hub de movimento panorâmico horizontal](images/controls_hub_vertical_horizontal_scroll.png)
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 O hub proporciona uma grande flexibilidade de design. Isso permite projetar aplicativos que possuam uma grande variedade de experiências atraentes e visualmente ricas. Você pode usar uma imagem de celebridade ou uma seção de conteúdo para o primeiro grupo; uma imagem grande da celebridade pode ser cortada tanto na vertical quanto na horizontal, sem perder o centro de interesse. Veja a seguir um exemplo de uma única imagem de celebridade e como ela pode ser cortada para paisagem, retrato e largura estreita.
 
@@ -96,7 +92,7 @@ Em dispositivos móveis, uma seção de hub está visível por vez.
 
 ![Exemplo de um padrão de hub em uma tela pequena](images/phone_hub_example.png)
 
-## Recomendações
+## <a name="recommendations"></a>Recomendações
 
 -   Para que os usuários saibam que há mais conteúdo em uma seção do hub, recomendamos recortar o conteúdo de forma que uma parte dele seja mostrada.
 -   Dependendo das necessidades do aplicativo, é possível adicionar diversas seções de hub ao controle hub, cada uma oferecendo seu próprio propósito funcional. Por exemplo, uma seção poderia conter uma série de links e controles, enquanto outra poderia ser um repositório de miniaturas. Um usuário pode se movimentar entre essas seções usando o suporte a gestos integrado no controle hub.
@@ -114,16 +110,19 @@ Em dispositivos móveis, uma seção de hub está visível por vez.
     -   Cor do plano de fundo, seções, cabeçalhos de seção e conteúdo de seção
 
 
+## <a name="get-the-sample-code"></a>Obter o código de exemplo
+* [Exemplo de noções básicas da interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
-## Artigos relacionados
+
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Classe Hub](https://msdn.microsoft.com/library/windows/apps/dn251843)
 - [Noções básicas de navegação](../layout/navigation-basics.md)
-- [Usando um Hub](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
-- [Exemplo de controle Hub em XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
+- [Como usar um hub](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
+- [Exemplo de controle do Hub em XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -3,18 +3,25 @@ description: "Saiba como projetar e codificar um aplicativo UWP que seja fácil 
 title: "Design de layout do aplicativo UWP – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
 keywords: layout do aplicativo UWP, Plataforma Universal do Windows, design do aplicativo, interface
+label: Layout
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
-ms.openlocfilehash: 72c4b957c98956965c773b4c2182796880f59a1d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e643b7029d5bc417437f7a1b8586424ac4345c3b
 
 ---
-# Layout para aplicativos UWP
+# <a name="layout-for-uwp-apps"></a>Layout para aplicativos UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 A estrutura, o layout de página e a navegação do aplicativo são a base da experiência do usuário de seu aplicativo. Os artigos nesta seção ajudarão você a criar um aplicativo que seja fácil de navegar e tenha um visual espetacular em uma variedade de dispositivos e tamanhos de tela.
 
-## Introdução
+## <a name="intro"></a>Introdução
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -28,7 +35,7 @@ Ao desenvolver um aplicativo UWP, você cria uma interface do usuário adequada 
 </div>
 </div>
 
-## Estrutura e layout do aplicativo
+## <a name="app-layout-and-structure"></a>Estrutura e layout do aplicativo
 Confira essas recomendações para estruturar seu aplicativo e usar os três tipos de elementos de interface do usuário: navegação, comandos e conteúdo.
 
 <div class="side-by-side">
@@ -50,7 +57,7 @@ Elementos de comando são os elementos interativos da interface do usuário que 
 </div>
 </div>
 
-## Layout de página 
+## <a name="page-layout"></a>Layout de página 
 Estes artigos ajudarão você a criar uma interface do usuário flexível que tenha um visual espetacular em diferentes tamanhos de tela, tamanhos de janela, resoluções e orientações. 
 
 
@@ -83,6 +90,6 @@ Além das propriedades de dimensão (largura, altura e restrições), os element
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

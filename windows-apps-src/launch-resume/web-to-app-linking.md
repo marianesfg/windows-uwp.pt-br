@@ -3,9 +3,14 @@ author: TylerMSFT
 title: "Dar suporte à vinculação de apps à Web com manipuladores de URI de apps"
 description: "Promover o envolvimento do usuário com seu app usando os manipuladores de URI de apps."
 keywords: "Vinculação profunda do Windows"
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3e57ca2cf0e7c788f5a8be12ebaf3e6b05a4fe51
-ms.openlocfilehash: e5c815ef0c776954e5b0d7f1cb9bd5e32e10356c
+ms.sourcegitcommit: ffa6ad17ee865dda5349565094c38e09dc42e0e3
+ms.openlocfilehash: 524a0897b6b8a8d17bb7493dc4d9e4357d8c1456
 
 ---
 
@@ -65,7 +70,7 @@ O exemplo de arquivo JSON acima demonstra o uso de curingas. Os curingas permite
 
 | **Curinga** | **Descrição**               |
 |--------------|-------------------------------|
-| *****       | Representa qualquer subcadeia de caracteres      |
+| **\***       | Representa qualquer subcadeia de caracteres      |
 | **?**        | Representa um único caractere |
 
 Por exemplo, o `"excludePaths" : [ "/news/*", "/blog/*" ]` fornecido no exemplo acima, seu aplicativo dará suporte a todos os caminhos que começam com o endereço do site (por exemplo, msn.com), **exceto** aqueles em `/news/` e `/blog/`. **msn.com/weather.html** terá suporte, mas não ****msn.com/news/topnews.html****.
@@ -163,7 +168,7 @@ Feche o aplicativo para verificar se ele é ativado quando você clica em um lin
 
 Verifique se seu aplicativo é fechado. Pressione a **tecla Windows + R** para abrir a caixa de diálogo **Executar** e cole o link na janela. Seu aplicativo deve ser iniciado em vez do navegador da Web.
 
-Além disso, você pode testar seu aplicativo iniciando-o em outro aplicativo com a API [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx). Você pode usar essa API para testar em telefones também.
+Além disso, você pode testar seu aplicativo iniciando-o em outro aplicativo com a API [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx). Você pode usar essa API para testar em telefones também.
 
 Se você quiser seguir a lógica de ativação de protocolo, defina um ponto de interrupção no manipulador de eventos **OnActivated**.
 
@@ -183,18 +188,18 @@ Se você quiser seguir a lógica de ativação de protocolo, defina um ponto de 
 
 - Todos os aplicativos de sideload com AppUriHandlers terão links validados para o host na instalação. Você não precisa ter um arquivo JSON carregado para testar o recurso.
 
-- Esse recurso funciona sempre que seu aplicativo é iniciado com um aplicativo UWP [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx) ou um aplicativo da área de trabalho do Windows iniciado com [ShellExecuteEx](https://msdn.microsoft.com/en-us/library/windows/desktop/bb762154(v=vs.85).aspx). Se a URL corresponder a um manipulador de URI do aplicativo registrado, o aplicativo será iniciado em vez do navegador.
+- Esse recurso funciona sempre que seu aplicativo é iniciado com um aplicativo UWP [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) ou um aplicativo da área de trabalho do Windows iniciado com [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx). Se a URL corresponder a um manipulador de URI do aplicativo registrado, o aplicativo será iniciado em vez do navegador.
 
 ## <a name="see-also"></a>Consulte também
 
-[windows.protocol registration](https://msdn.microsoft.com/en-us/library/windows/apps/br211458.aspx)
+[windows.protocol registration](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
 
-[Tratar a ativação do URI](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/handle-uri-activation)
+[Tratar a ativação do URI](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 
 O [Exemplo de execução de associação](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) ilustra como usar a API LaunchUriAsync().
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

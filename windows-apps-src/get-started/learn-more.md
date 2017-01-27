@@ -3,16 +3,21 @@ author: GrantMeStrength
 ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676
 title: O que vem em seguida?
 description: "Agora que você já criou seu primeiro aplicativo, confira o restante do Centro de Desenvolvimento. Veja a seguir uma introdução às diversas seções disponíveis."
-keywords: "Centro de Desenvolvimento, introdução"
+keywords: Centro de Desenvolvimento, tour pelo Centro de Desenvolvimento, Ponto de Partida
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
-ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
+ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
+ms.openlocfilehash: 7b1d2c1dc83bf0b6d24c1de134102f14542c907d
 
 ---
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-# <a name="whats-next"></a>O que vem em seguida?
+# <a name="whats-next"></a>E agora?
 
 Você quer escrever um aplicativo e publicá-lo na Windows Store: por onde começar? Se você for totalmente novo na plataforma UWP, veja alguns vídeos do <a href="https://channel9.msdn.com/">Channel 9</a> e cursos da <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a>. Se você já estiver familiarizado com as linguagens XAML e C#, pode começar lendo os tópicos abaixo ou ir direto para [baixar alguns exemplos](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
@@ -168,6 +173,6 @@ Veja uma lista das seções principais de conteúdo no Centro de Desenvolvimento
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

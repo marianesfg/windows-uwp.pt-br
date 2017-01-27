@@ -4,8 +4,8 @@ Description: "A Windows Store oferece a Cobrança da Operadora Móvel como um m�
 title: "Cobrança da operadora móvel"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 translationtype: Human Translation
-ms.sourcegitcommit: e829808a8e521f2308454e05e8911579b22be807
-ms.openlocfilehash: fe11b56430a07e1326f78b59579ffd9e733ed1b0
+ms.sourcegitcommit: 694c3223278c8666bfb47bf9898ac7c02ac981f4
+ms.openlocfilehash: 831e3fbd1524ce452a4346b6c52f3f1c76385d68
 
 ---
 
@@ -27,6 +27,7 @@ A implementação do Windows 10 de Cobrança da Operadora Móvel tem suporte des
 | País/região  | Operadoras móveis |
 |-----------------|------------------|
 | Finlândia         | DNA, Elisa       |
+| França          | Orange           |
 | Alemanha         | O2               |
 | Hungria         | Telenor          |
 | Itália           | Wind             |
@@ -77,7 +78,7 @@ A implementação herdada da Cobrança da Operadora Móvel tem o suporte dessas 
 | África do Sul         | Vodacom                                                            |
 | Espanha                | Movistar, Vodafone, Orange                                         |
 | Reino Unido       | Everything Everywhere (T-Mobile), Telefonica (O2), Three, Vodafone |
-| Estados Unidos        | AT&T, Sprint, T-Mobile, Verizon                                    |
+| Estados Unidos        | AT&T, T-Mobile, Verizon                                    |
 | Vietnã              | Viettel, Vietnamobile, Vinaphone, Mobifone                         |
 
  
@@ -94,6 +95,6 @@ Essa lista será atualizada regularmente conforme expandimos o suporte para a Co
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,6 +1,16 @@
+---
+author: mukin
+Description: "Este artigo estilo tutorial orienta o leitor ao longo das etapas para criar uma interface do usuário de aplicativo básico. Ele explica e demonstra o uso de Grid e StackPanel, dois dos elementos XAML mais comuns."
+title: Criar um app de clima simples usando Grid e StackPanel
+translationtype: Human Translation
+ms.sourcegitcommit: c30aed9681d7c091e9831df3f53d8779dfacce38
+ms.openlocfilehash: 1990a3ad4e56fa039d024c53a04b021e60bed145
+
+---
+
 # <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Criar um app de clima simples usando Grid e StackPanel
 
-Use XAML para criar o layout de um app de clima simples usando os elementos **Grid** e **StackPanel**. Com essas ferramentas, é fácil criar apps que funcionam bem em qualquer dispositivo que execute o Windows 10. Este tutorial dura de 10 a 20 minutos.
+Use XAML para criar o layout de um app de clima simples usando os elementos **Grid** e **StackPanel**. Com essas ferramentas que você pode criar apps com um visual excelente que funcionam em qualquer dispositivo que tenha o Windows 10 instalado. Este tutorial dura de 10 a 20 minutos.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 - Windows 10 e Microsoft Visual Studio 2015. [Clique aqui para saber como fazer a preparação inicial com o Visual Studio](../get-started/get-set-up.md).
@@ -14,7 +24,7 @@ Use XAML para criar o layout de um app de clima simples usando os elementos **Gr
 5. Para executar o programa, selecione **Depurar** > **Iniciar Depuração** no menu ou pressione F5.
 
 ## <a name="step-2-define-a-grid"></a>Etapa 2: Definir uma grade
-Em XAML, um elemento **Grid** é composto de uma série de linhas e colunas. Ao especificar a linha e a coluna de um elemento dentro de um **Grid**, você pode facilmente posicionar e espaçar outros elementos dentro de uma interface do usuário. As linhas e colunas são definidas com os elementos **RowDefinition** e **ColumnDefinition**.
+Em XAML, um elemento **Grid** é composto de uma série de linhas e colunas. Ao especificar a linha e a coluna de um elemento dentro de um **Grid**, você pode posicionar e espaçar outros elementos dentro de uma interface do usuário. As linhas e colunas são definidas com os elementos **RowDefinition** e **ColumnDefinition**.
 
 Para começar a criar um layout, abra **MainPage. XAML** usando o **Gerenciador de Soluções** e substitua o elemento **Grid** gerado automaticamente por este código.
 
@@ -33,7 +43,7 @@ Para começar a criar um layout, abra **MainPage. XAML** usando o **Gerenciador 
 
 O novo **Grid** cria um conjunto de duas linhas e colunas, que define o layout da interface do app. A primeira coluna tem o valor **Width** de "3\*", enquanto a segunda tem "5\*", dividindo o espaço horizontal entre as duas colunas em uma proporção de 3:5. Da mesma forma, as duas linhas têm um valor **Height** de "3\*" e "\*" respectivamente, assim o elemento **Grid** aloca três vezes mais espaço para a primeira linha do que para a segunda ("\*" é o mesmo que "1\*"). Essas proporções serão mantidas mesmo que a janela seja redimensionada ou o dispositivo seja alterado.
 
-Para saber mais sobre outros métodos de dimensionamento de linhas e colunas, consulte [Definir layouts com XAML](https://msdn.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#layout-properties).
+Para saber mais sobre outros métodos de dimensionamento de linhas e colunas, consulte [Definir layouts com XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml#layout-properties).
 
 Se você executar o app agora, não verá nada além de uma página em branco, pois nenhuma das áreas de **Grid** tem conteúdo. Para mostrar o elemento **Grid** vamos dar a ele uma cor.
 
@@ -53,7 +63,7 @@ Se você executar o app, o resultado será semelhante a isto.
 ![Colorindo o elemento Grid](images/grid-weather-1.png)
 
 ## <a name="step-4-organize-content-by-using-stackpanel-elements"></a>Etapa 4: Organizar o conteúdo usando elementos StackPanel
-**StackPanel** é o segundo elemento de interface do usuário que usaremos para criar nosso app de clima. O **StackPanel** é uma parte fundamental de muitos layouts de apps básicos, permitindo que você empilhe facilmente elementos na vertical ou na horizontal.
+**StackPanel** é o segundo elemento de interface do usuário que usaremos para criar nosso app de clima. O **StackPanel** é uma parte fundamental de muitos layouts de apps básicos, permitindo que você empilhe elementos na vertical ou na horizontal.
 
 No código a seguir, criamos dois elementos **StackPanel** e preenchemos cada um com três **TextBlocks**. Adicione esses elementos **StackPanel** ao **Grid** abaixo dos elementos **Border** da etapa 3. Isso faz com que os elementos **TextBlock** sejam renderizados por cima do elemento **Grid** colorido que criamos anteriormente.
 
@@ -102,11 +112,12 @@ Pronto! Você criou com êxito o layout de um app de clima simples. Se você exe
 Se desejar, experimente o layout acima e explore formas diferentes de representar dados do clima.
 
 ## <a name="related-articles"></a>Artigos relacionados
-Para obter uma introdução ao design de layouts de aplicativos UWP, consulte [Introdução ao design de aplicativos UWP](https://msdn.microsoft.com/en-us/windows/uwp/layout/design-and-ui-intro)
+Para obter uma introdução ao design de layouts de aplicativos UWP, consulte [Introdução ao design de aplicativos UWP](https://msdn.microsoft.com/windows/uwp/layout/design-and-ui-intro)
 
-Para saber mais sobre como criar layouts dinâmicos que se adaptem a diferentes tamanhos de tela, consulte [Definir layouts de página com XAML](https://msdn.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml)
+Para saber mais sobre como criar layouts dinâmicos que se adaptem a diferentes tamanhos de tela, consulte [Definir layouts de página com XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml)
 
 
-<!--HONumber=Dec16_HO1-->
+
+<!--HONumber=Jan17_HO1-->
 
 

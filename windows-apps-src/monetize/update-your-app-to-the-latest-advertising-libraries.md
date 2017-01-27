@@ -3,13 +3,13 @@ author: mcleanbyron
 description: "Saiba como atualizar o aplicativo para usar as bibliotecas do Microsoft Advertising compatíveis mais recentes e verifique se o aplicativo continua recebendo anúncios em faixa."
 title: Atualize o aplicativo para as bibliotecas do Microsoft Advertising mais recentes
 translationtype: Human Translation
-ms.sourcegitcommit: 9bd83a41ea4ec4ec7a75ef89e9c92f73d86cc731
-ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
+ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
+ms.openlocfilehash: 5333c3f8ab834a4646c63499565ef28a634f850d
 
 
 ---
 
-# Atualize o aplicativo para as bibliotecas do Microsoft Advertising mais recentes
+# <a name="update-your-app-to-the-latest-microsoft-advertising-libraries"></a>Atualize o aplicativo para as bibliotecas do Microsoft Advertising mais recentes
 
 A partir de janeiro de 2017, não veicularemos mais anúncios em faixa para aplicativos que usem versões do SDK de publicidade mais antigas da Microsoft. Se você tiver um aplicativo existente (já na Loja ou ainda em desenvolvimento) que exiba anúncios em faixa usando **AdControl** ou **AdMediatorControl**, será preciso atualizar o aplicativo para usar o SDK de publicidade mais recente para o aplicativo continuar recebendo anúncios em faixa em janeiro de 2017. Siga as instruções neste artigo para determinar se o aplicativo é afetado por essa mudança e saiba como atualizá-lo, se necessário.
 
@@ -25,7 +25,7 @@ Se você tiver algum problema ou precisar de ajuda, [contate o suporte](http://g
 
 >**Observação**&nbsp;&nbsp;Se você tiver atualizado anteriormente o aplicativo para usar o [Microsoft Store Services SDK](http://aka.ms/store-services-sdk) (para aplicativos UWP) ou o [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk) (para aplicativos do Windows 8.1 e do Windows Phone 8.x), o aplicativo já usará o SDK de publicidade mais recente disponível, e você não precisará fazer outras alterações no aplicativo.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 * O código-fonte completo e os arquivos de projeto do Visual Studio do aplicativo que usam **AdControl** ou **AdMediatorControl**.
 
@@ -34,11 +34,11 @@ Se você tiver algum problema ou precisar de ajuda, [contate o suporte](http://g
   >**Observação**&nbsp;&nbsp;Se não tiver mais o pacote .appx ou .xap do aplicativo, mas ainda tiver um computador de desenvolvimento com a versão do Visual Studio e o SDK de publicidade que foi usado para criar o aplicativo, você poderá regenerar o pacote .appx ou .xap no Visual Studio.
 
 <span id="part-1" />
-## Parte 1: Determine se você precisa atualizar o aplicativo
+## <a name="part-1-determine-whether-you-need-to-update-your-app"></a>Parte 1: Determine se você precisa atualizar o aplicativo
 
 Siga as instruções nas seções a seguir para determinar se você precisa atualizar o aplicativo.
 
-### O aplicativo usa AdControl
+### <a name="your-app-uses-adcontrol"></a>O aplicativo usa AdControl
 
 Se o aplicativo usar **AdControl** para exibir anúncios em faixa, siga estas instruções.
 
@@ -66,9 +66,11 @@ Se o aplicativo usar **AdControl** para exibir anúncios em faixa, siga estas in
 
 2. Abra o Windows PowerShell, digite o comando a seguir e atribua o argumento ```-Path``` ao caminho completo do conteúdo extraído do pacote do aplicativo. Esse comando exibe todas as bibliotecas de publicidade referenciadas pelo projeto e pela versão de cada biblioteca.
 
-    ```
-    get-childitem -Path "<path to your extracted package>" * -Recurse -include *advert*.dll,*admediator*.dll,*xamladcontrol*.dll,*universalsharedlibrary*.dll | where-object {$_.Name -notlike "*resources*" -and $_.Name -notlike "*design*" } | foreach-object { "{0}`t{1}" -f $_.FullName, [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ```syntax
+  get-childitem -Path "<path to your extracted package>" * -Recurse -include *advert*.dll,*admediator*.dll,*xamladcontrol*.dll,*universalsharedlibrary*.dll | where-object {$_.Name -notlike "*resources*" -and $_.Name -notlike "*design*" } | foreach-object { "{0}`t{1}" -f $_.FullName, [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
+  ```
+
 2. Localize o arquivo listado na tabela a seguir para a plataforma de destino do aplicativo e compare as versões desse arquivo com a versão listada na tabela.
 
   <table>
@@ -131,7 +133,7 @@ Se o aplicativo usar **AdControl** para exibir anúncios em faixa, siga estas in
 
 <span/>
 
-### O aplicativo usa AdMediatorControl
+### <a name="your-app-uses-admediatorcontrol"></a>O aplicativo usa AdMediatorControl
 
 Se o aplicativo usar **AdMediatorControl** para exibir anúncios em faixa, siga essas instruções para determinar se você precisa atualizar o aplicativo.
 
@@ -147,16 +149,17 @@ Se o aplicativo usar **AdMediatorControl** para exibir anúncios em faixa, siga 
 
 2. Abra o Windows PowerShell, digite o comando a seguir e atribua o argumento ```-Path``` ao caminho completo do conteúdo extraído do pacote do aplicativo. Esse comando exibe todas as bibliotecas de publicidade referenciadas pelo projeto e pela versão de cada biblioteca.
 
-    ```
-    get-childitem -Path "<path to your extracted package>" * -Recurse -include *advert*.dll,*admediator*.dll,*xamladcontrol*.dll,*universalsharedlibrary*.dll | where-object {$_.Name -notlike "*resources*" -and $_.Name -notlike "*design*" } | foreach-object { "{0}`t{1}" -f $_.FullName, [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ```syntax
+  get-childitem -Path "<path to your extracted package>" * -Recurse -include *advert*.dll,*admediator*.dll,*xamladcontrol*.dll,*universalsharedlibrary*.dll | where-object {$_.Name -notlike "*resources*" -and $_.Name -notlike "*design*" } | foreach-object { "{0}`t{1}" -f $_.FullName, [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
+  ```
 
 2. Se a versão dos arquivos Microsoft.AdMediator.\*.dll listada na saída for 2.0.1603.18005 ou posterior, você não precisará fazer nenhuma mudança no projeto.
 
   Se esses arquivos tiverem um número de versão menor, você deverá atualizar o projeto seguindo as instruções nas seções a seguir. Vá até [Parte 2](update-your-app-to-the-latest-advertising-libraries.md#part-2).
 
 <span id="part-2" />
-## Parte 2: Instale o SDK mais recente
+## <a name="part-2-install-the-latest-sdk"></a>Parte 2: Instale o SDK mais recente
 
 Se o aplicativo usar uma versão do SDK anterior, siga estas instruções para se certificar de que você tenha o SDK mais recente no computador de desenvolvimento.
 
@@ -168,7 +171,8 @@ Se o aplicativo usar uma versão do SDK anterior, siga estas instruções para s
 
 2.  Abra uma janela do **Prompt de Comando** e execute estes comandos para limpar todas as versões do SDK anteriores que possam ter sido instaladas com o Visual Studio, mas que talvez não sejam exibidas na lista de programas instalados no computador:
 
-  ```
+  > [!div class="tabbedCodeSnippets"]
+  ```syntax
   MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
   MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
   MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
@@ -178,11 +182,11 @@ Se o aplicativo usar uma versão do SDK anterior, siga estas instruções para s
   * Para aplicativos UWP no Windows 10, instale o [Microsoft Store Services SDK](http://aka.ms/store-services-sdk).
   * Para aplicativos segmentados para uma versão anterior do sistema operacional, instale o [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk).
 
-## Parte 3: Atualize o projeto
+## <a name="part-3-update-your-project"></a>Parte 3: Atualize o projeto
 
 Siga essas instruções para atualizar o projeto.
 
-### Projetos UWP para Windows 10
+### <a name="uwp-projects-for-windows-10"></a>Projetos UWP para Windows 10
 
 <span/>
 
@@ -192,7 +196,7 @@ Se o aplicativo usar **AdControl**, remova todas as referências existentes às 
 
 <span/>
 
-### Projetos do Windows 8.1 ou Windows Phone 8.1 (XAML ou JavaScript/HTML)
+### <a name="windows-81-or-windows-phone-81-xaml-or-javascripthtml-projects"></a>Projetos do Windows 8.1 ou Windows Phone 8.1 (XAML ou JavaScript/HTML)
 
 <span/>
 
@@ -212,7 +216,7 @@ Observe o seguinte:
 
 <span/>
 
-### Projetos do Windows Phone 8.x Silverlight
+### <a name="windows-phone-8x-silverlight-projects"></a>Projetos do Windows Phone 8.x Silverlight
 
 <span/>
 
@@ -230,7 +234,7 @@ Observe o seguinte:
 
 * Para aplicativos Windows Phone 8.x Silverlight, o teste das unidades de produção em um emulador não é compatível. Recomendamos testar em um dispositivo.
 
-## Parte 4: Teste e republique o aplicativo
+## <a name="part-4-test-and-republish-your-app"></a>Parte 4: Teste e republique o aplicativo
 
 Teste o aplicativo para garantir que ele exiba anúncios em faixa conforme o esperado.
 
@@ -244,6 +248,6 @@ Se a versão anterior do aplicativo já estiver disponível na Loja, [crie um no
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

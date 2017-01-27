@@ -5,26 +5,35 @@ title: "Gerenciar problemas com entrada de áudio"
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
 template: detail.hbs
+keywords: "controle por voz, voz, reconhecimento de fala, linguagem natural, ditado, entrada, interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 12f46dd0ec375977cc33efeb73757c5ec75077bd
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: a6f6e4c04f608898d2871113f38fe647b62bf8a5
 
 ---
 
-# Gerenciar problemas com entrada de áudio
+# <a name="manage-issues-with-audio-input"></a>Gerenciar problemas com entrada de áudio
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Saiba como gerenciar problemas com precisão do reconhecimento de fala causados pela qualidade da entrada de áudio.
 
-**APIs importantes**
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)</li>
+<li>[**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)</li>
+<li>[**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)</li>
 
--   [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)
--   [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)
--   [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
+</ul>
+</div>
 
 
-
-
-## Avaliar a qualidade de entrada de áudio
+## <a name="assess-audio-input-quality"></a>Avaliar a qualidade de entrada de áudio
 
 
 Quando o reconhecimento de fala estiver ativo, use o evento [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) de seu reconhecedor de fala para determinar se um ou mais problemas de áudio podem estar interferindo na entrada de fala. O argumento do evento ([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430)) fornece a propriedade [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431), que descreve os problemas detectados com a entrada de áudio.
@@ -63,7 +72,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Gerenciar a experiência de reconhecimento de fala
+## <a name="manage-the-speech-recognition-experience"></a>Gerenciar a experiência de reconhecimento de fala
 
 
 Use a descrição fornecida pela propriedade [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) para ajudar o usuário a melhorar condições para o reconhecimento.
@@ -103,7 +112,7 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 }
 ```
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 
 * [Interações de controle por voz](speech-interactions.md)
@@ -120,6 +129,6 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

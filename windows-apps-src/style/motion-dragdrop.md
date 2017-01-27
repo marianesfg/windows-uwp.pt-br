@@ -6,24 +6,27 @@ ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
 label: Motion--Drag and drop
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 58934982554aa3caf0060c84df113d483e62e1d2
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e71b936be1649f8ede394b019369176c7e3ca631
 
 ---
 
-# Animações da operação arrastar
+# <a name="drag-animations"></a>Animações da operação arrastar
 
 
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Use animações de arrastar e soltar quando os usuários moverem objetos, como ao mover um item dentro de uma lista ou ao soltar um item em cima de outro.
 
-**APIs importantes**
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Classe DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243174)</li>
+</ul>
+</div>
 
--   [**Classe DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243174)
 
-
-## O que fazer e o que não fazer
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
 
 **Animação de início de arraste**
@@ -52,9 +55,9 @@ Use animações de arrastar e soltar quando os usuários moverem objetos, como a
 -   Não use a animação de arraste intermediário na saída se você não usou primeiro a animação de arraste intermediário na entrada.
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
-**Para desenvolvedores (XAML)**
+**Para desenvolvedores**
 * [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [Animando sequências de arrastar e soltar](https://msdn.microsoft.com/library/windows/apps/xaml/jj649427)
 * [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
@@ -71,6 +74,6 @@ Use animações de arrastar e soltar quando os usuários moverem objetos, como a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

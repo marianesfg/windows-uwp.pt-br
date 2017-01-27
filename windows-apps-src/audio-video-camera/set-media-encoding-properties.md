@@ -2,16 +2,16 @@
 author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
 description: "Este artigo mostra como usar a interface IMediaEncodingProperties para definir a resolução e a taxa de quadro do fluxo de visualização da câmera e de fotos e vídeo capturados."
-title: "Definir propriedades de codificação de mídia para MediaCapture"
+title: "Definir o formato, a resolução e a taxa de quadros para o MediaCapture"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 1b20578fe52c004a55c5099ccb89e8c180571009
+ms.sourcegitcommit: 6c3ed4ab773fe821acaee7d5b8c70fdc8770de81
+ms.openlocfilehash: 828cbddd9568bd4e9d0a571880a867afff293e34
 
 ---
 
-# Definir propriedades de codificação de mídia para MediaCapture
+# <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>Definir o formato, a resolução e a taxa de quadros para o MediaCapture
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar a interface [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) para definir a resolução e a taxa de quadro do fluxo de visualização da câmera e de fotos e vídeo capturados. Ele também mostra como garantir que a taxa de proporção do fluxo de visualização corresponda ao da mídia capturada.
@@ -23,7 +23,7 @@ O código neste artigo foi adaptado da [amostra CameraResolution](http://go.micr
 > [!NOTE] 
 > Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código deste artigo presume que seu aplicativo já tenha uma instância do MediaCapture inicializada corretamente.
 
-## Uma classe auxiliar de propriedades de codificação de mídia
+## <a name="a-media-encoding-properties-helper-class"></a>Uma classe auxiliar de propriedades de codificação de mídia
 
 Criar uma classe auxiliar simples para encapsular a funcionalidade da interface [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) torna mais fácil selecionar um conjunto de propriedades de codificação que atendem aos critérios específicos. Essa classe auxiliar é particularmente útil devido ao seguinte comportamento do recurso de propriedades de codificação:
 
@@ -38,13 +38,13 @@ Você deve incluir o namespace [**Windows.Media.MediaProperties**](https://msdn.
 
 [!code-cs[StreamPropertiesHelper](./code/BasicMediaCaptureWin10/cs/StreamPropertiesHelper.cs#SnippetStreamPropertiesHelper)]
 
-## Determinar se os fluxos de visualização e captura são independentes
+## <a name="determine-if-the-preview-and-capture-streams-are-independent"></a>Determinar se os fluxos de visualização e captura são independentes
 
 Em alguns dispositivos, o mesmo pin de hardware é usado para fluxos de visualização e captura. Nesses dispositivos, a definição das propriedades de codificação de um também define o outro. Em dispositivos que usam pins de hardware diferentes para captura e visualização, as propriedades podem ser definidas para cada fluxo de forma independente. Use o código a seguir para determinar se os fluxos de visualização e captura são independentes. Você deve ajustar sua interface do usuário para habilitar ou desabilitar a configuração dos fluxos de forma independente com base no resultado desse teste.
 
 [!code-cs[CheckIfStreamsAreIdentical](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCheckIfStreamsAreIdentical)]
 
-## Obter uma lista de propriedades de fluxo disponíveis
+## <a name="get-a-list-of-available-stream-properties"></a>Obter uma lista de propriedades de fluxo disponíveis
 
 Obtenha uma lista das propriedades de fluxo disponíveis para um dispositivo de captura obtendo [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) para o objeto [MediaCapture](capture-photos-and-video-with-mediacapture.md) do seu aplicativo e depois chamando [**GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) e transmitindo um dos valores de [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640): **VideoPreview**, **VideoRecord** ou **Photo**. Neste exemplo, a sintaxe Linq é usada para criar uma lista de objetos **StreamPropertiesHelper**, definidos anteriormente neste artigo, para cada um dos valores [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) retornados de **GetAvailableMediaStreamProperties**. Este exemplo usa primeiro os métodos de extensão Linq para ordenar as propriedades retornadas com base, em primeiro lugar, na resolução e, depois, na taxa de quadros.
 
@@ -52,7 +52,7 @@ Se seu aplicativo tiver requisitos de resolução ou de taxa de quadros específ
 
 [!code-cs[PopulateStreamPropertiesUI](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPopulateStreamPropertiesUI)]
 
-## Definir as propriedades de fluxo desejadas
+## <a name="set-the-desired-stream-properties"></a>Definir as propriedades de fluxo desejadas
 
 Instrua o controlador de dispositivo de vídeo a usar as propriedades de codificação desejadas chamando [**SetMediaStreamPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh700895), transmitindo o valor **MediaStreamType**, que indica se as propriedades de foto, vídeo ou visualização devem ser definidas. Este exemplo define as propriedades de codificação solicitadas quando o usuário seleciona um item em um dos objetos **ComboBox** populados com o método auxiliar **PopulateStreamPropertiesUI**.
 
@@ -62,7 +62,7 @@ Instrua o controlador de dispositivo de vídeo a usar as propriedades de codific
 
 [!code-cs[VideoSettingsChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoSettingsChanged)]
 
-## Corresponder a taxa de proporção dos fluxos de visualização e captura
+## <a name="match-the-aspect-ratio-of-the-preview-and-capture-streams"></a>Corresponder a taxa de proporção dos fluxos de visualização e captura
 
 Um aplicativo de câmera típico fornecerá a interface do usuário para o usuário selecionar a resolução de captura de vídeo ou foto, mas definirá de forma programática a resolução da visualização. Há algumas estratégias diferentes para selecionar a melhor resolução de fluxo de visualização para seu aplicativo:
 
@@ -90,6 +90,6 @@ Para garantir que os fluxos de captura de foto ou de vídeo correspondam à taxa
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

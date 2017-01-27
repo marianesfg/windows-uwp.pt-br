@@ -4,12 +4,12 @@ title: "Exibir mapas com modos de exibição 2D, 3D e Streetside"
 description: "Exiba mapas personalizáveis no aplicativo usando a classe MapControl. Este tópico também apresenta modos de exibição 3D e Streetside."
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 5569722bdfc8dfb78d43dbe6abf23dcd06f619c0
+ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
+ms.openlocfilehash: 09f87f66802e5143c8eac7fce8fc2118f3d31340
 
 ---
 
-# Exibir mapas com modos de exibição 2D, 3D e Streetside
+# <a name="display-maps-with-2d-3d-and-streetside-views"></a>Exibir mapas com modos de exibição 2D, 3D e Streetside
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -21,7 +21,7 @@ Exiba mapas personalizáveis no seu aplicativo usando a classe [**MapControl**](
 
 -   [Exemplo de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-## Adicionar o controle de mapa ao aplicativo
+## <a name="add-the-map-control-to-your-app"></a>Adicionar o controle de mapa ao aplicativo
 
 
 Exiba um mapa em uma página XAML adicionando um [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). Para usar o **MapControl**, você deve declarar o namespace [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751) na página XAML ou no seu código. Se você arrastar o controle da Caixa de Ferramentas, essa declaração de namespace será adicionada automaticamente. Se você adicionar o **MapControl** à página XAML manualmente, deverá adicionar a declaração de namespace manualmente na parte superior da página.
@@ -65,12 +65,12 @@ MapControl2.MapServiceToken = "EnterYourAuthenticationKeyHere";
 pageGrid.Children.Add(MapControl2);
 ```
 
-## Obter e definir uma chave de autenticação de mapas
+## <a name="get-and-set-a-maps-authentication-key"></a>Obter e definir uma chave de autenticação de mapas
 
 
 Para poder usar [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e mapear serviços, você deve especificar uma chave de autenticação de mapas como o valor da propriedade [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036). Nos exemplos anteriores, substitua `EnterYourAuthenticationKeyHere` pela chave obtida na [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/). O texto **Aviso: MapServiceToken não especificado** continuará sendo exibido abaixo do controle até que você especifique a chave de autenticação de mapas. Para saber mais sobre como obter e definir uma chave de autenticação de mapas, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).
 
-## Definir uma localização inicial para o mapa
+## <a name="set-a-starting-location-for-the-map"></a>Definir uma localização inicial para o mapa
 
 
 Defina a localização a ser exibida no mapa especificando a propriedade [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) no código ou associando a propriedade na marcação XAML. O exemplo a seguir exibe um mapa com a cidade de Seattle no centro.
@@ -95,7 +95,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ![um exemplo de controle de mapa.](images/displaymapsexample1.png)
 
-## Definir a localização atual do mapa
+## <a name="set-the-current-location-of-the-map"></a>Definir a localização atual do mapa
 
 
 Para acessar a localização do usuário, o aplicativo deve chamar o método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152). Nesse momento, seu aplicativo deve estar em primeiro plano, e **RequestAccessAsync** deve ser chamado do thread da interface do usuário. Até que o usuário conceda permissão para a localização ao seu aplicativo, este não pode acessar dados de localização.
@@ -132,7 +132,7 @@ switch (accessStatus)
 
 Ao exibir a localização do seu dispositivo em um mapa, leve em consideração a exibição de elementos gráficos e a definição do nível de zoom com base na precisão dos dados de localização. Para obter mais informações, consulte [Diretrizes para aplicativos com reconhecimento de local](https://msdn.microsoft.com/library/windows/apps/hh465148).
 
-## Alterar a localização do mapa
+## <a name="change-the-location-of-the-map"></a>Alterar a localização do mapa
 
 
 Para alterar a localização exibida em um mapa 2D, chame um das sobrecargas do método [**TrySetViewAsync**](https://msdn.microsoft.com/library/windows/apps/dn637060). Use esse método para especificar novos valores para [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005), [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068), [**Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019) e [**Pitch**](https://msdn.microsoft.com/library/windows/apps/dn637044). Você também pode especificar uma animação opcional para usar quando exibir alterações fornecendo uma constante da enumeração de [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002).
@@ -141,7 +141,7 @@ Para alterar a localização de um mapa 3D, use em vez disso o método [**TrySet
 
 Chame o método [**TrySetViewBoundsAsync**](https://msdn.microsoft.com/library/windows/apps/dn637065) para exibir o conteúdo de uma [**GeoboundingBox**](https://msdn.microsoft.com/library/windows/apps/dn607949) no mapa. Use esse método, por exemplo, para exibir uma rota e uma parte de uma rota no mapa. Para saber mais, consulte [Exibir rotas e trajetos em um mapa](routes-and-directions.md).
 
-## Configurar o mapa
+## <a name="configure-the-map"></a>Configurar o mapa
 
 
 Configure o mapa e sua aparência definindo os valores das seguintes propriedades do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
@@ -168,7 +168,7 @@ Mostre informações no mapa configurando os valores das seguintes propriedades 
 
 Para saber mais sobre como exibir pinos de pressão, formas e controles XAML no [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), consulte [Exibir ponto de interesse (POI) em um mapa](display-poi.md).
 
-## Mostrar modos de exibição Streetside
+## <a name="display-streetside-views"></a>Mostrar modos de exibição Streetside
 
 
 Um modo de exibição Streetside é uma perspectiva a nível da rua de uma localização que aparece sobre o controle de mapa.
@@ -224,12 +224,12 @@ private async void showStreetsideView()
 }
 ```
 
-## Mostrar modos de exibição aérea 3D
+## <a name="display-aerial-3d-views"></a>Mostrar modos de exibição aérea 3D
 
 
 Especifique uma perspectiva 3D do mapa usando a classe [**MapScene**](https://msdn.microsoft.com/library/windows/apps/dn974329). A cena de mapa representa o modo de exibição 3D mostrado no mapa. A classe [**MapCamera**](https://msdn.microsoft.com/library/windows/apps/dn974244) representa a posição da câmera que mostra o modo de exibição.
 
-![](images/mapcontrol-techdiagram.png)
+![Diagrama da localização de MapCamera até o local da cena do mapa](images/mapcontrol-techdiagram.png)
 
 Para fazer com que edifícios e outros recursos na superfície do mapa apareçam em 3D, defina a propriedade [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) do controle de mapa como [**MapStyle.Aerial3DWithRoads**](https://msdn.microsoft.com/library/windows/apps/dn637127). Este é um exemplo de um modo de exibição 3D com o estilo **Aerial3DWithRoads**.
 
@@ -278,7 +278,7 @@ private async void display3DLocation()
 }
 ```
 
-## Obter informações sobre localizações e elementos
+## <a name="get-info-about-locations-and-elements"></a>Obter informações sobre localizações e elementos
 
 
 Obtenha informações sobre localizações no mapa chamando os métodos a seguir do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
@@ -288,7 +288,7 @@ Obtenha informações sobre localizações no mapa chamando os métodos a seguir
 -   Método [**IsLocationInView**](https://msdn.microsoft.com/library/windows/apps/dn637022) - Determine se a localização geográfica especificada está atualmente visível no visor do controle de Mapa.
 -   Método [**FindMapElementsAtOffset**](https://msdn.microsoft.com/library/windows/apps/dn637014) - Obtenha os elementos no mapa localizado no ponto especificado no visor do controle de Mapa.
 
-## Tratar mudanças e interação do usuário
+## <a name="handle-user-interaction-and-changes"></a>Tratar mudanças e interação do usuário
 
 
 Trate os gestos de entrada do usuário no mapa tratando os eventos a seguir do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). Obtenha informações sobre a localização geográfica no mapa e a posição física no visor onde ocorreu o gesto verificando os valores das propriedades [**Location**](https://msdn.microsoft.com/library/windows/apps/dn637091) e [**Position**](https://msdn.microsoft.com/library/windows/apps/dn637093) do [**MapInputEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637090).
@@ -306,7 +306,7 @@ Trate mudanças que acontecem quando o usuário ou o aplicativo altera as config
 -   [**PitchChanged**](https://msdn.microsoft.com/library/windows/apps/dn637045)
 -   [**ZoomLevelChanged**](https://msdn.microsoft.com/library/windows/apps/dn637069)
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
@@ -321,6 +321,6 @@ Trate mudanças que acontecem quando o usuário ou o aplicativo altera as config
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

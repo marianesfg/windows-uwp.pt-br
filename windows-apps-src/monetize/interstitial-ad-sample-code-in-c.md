@@ -4,108 +4,39 @@ ms.assetid: 7a16b0ca-6b8e-4ade-9853-85690e06bda6
 description: "Saiba como iniciar um anúncio intersticial usando c#."
 title: "Código de exemplo de anúncio intersticial em C#"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 5969bfacd34bcfab5f1bebd2cfbade4fd16c5a39
-
+ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
+ms.openlocfilehash: c7554b94e67ce7f4b83a9ad4360819881d09f0fb
 
 ---
 
-# Código de exemplo de anúncio intersticial em C\# #  
+# <a name="interstitial-ad-sample-code-in-c"></a>Código de exemplo de anúncio intersticial em C\# #  
 
+Este tópico fornece o exemplo de código completo para um aplicativo básico da Plataforma Universal do Windows (UWP) em C# e XAML que mostra um anúncio intersticial. Para obter instruções passo a passo que mostram como configurar o projeto para usar esse código, consulte [Anúncios intersticiais](interstitial-ads.md). Para obter um projeto de exemplo completo, consulte os [exemplos de publicidade no GitHub](http://aka.ms/githubads).
 
+## <a name="code-example"></a>Exemplo de código
 
+Esta seção mostra o conteúdo dos arquivos MainPage.xaml e MainPage.xaml.cs em um aplicativo básico que mostra um anúncio intersticial. Para usar esses exemplos, copie o código para um projeto **Aplicativo em Branco (Universal do Windows)** em Visual C# no Visual Studio 2015.
 
-Este tópico mostra como iniciar um anúncio intersticial usando C#. Para obter instruções passo a passo que ilustram como configurar seu projeto para usar esse código, consulte [anúncios intersticiais](interstitial-ads.md). Para um projeto de exemplo completo que demonstra como adicionar anúncios intersticiais de vídeo a um aplicativo XAML em C#, consulte os [Exemplos de publicidade no GitHub](http://aka.ms/githubads).
+Este aplicativo de exemplo usa dois botões para solicitar e, em seguida, iniciar um anúncio intersticial. Substitua os valores dos campos ```myAppId``` e ```myAdUnitId``` por valores ativos do Centro de Desenvolvimento do Windows antes de enviar o aplicativo para a Loja. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md).
 
+### <a name="mainpagexaml"></a>MainPage.xaml
 
-## Exemplo de código
+> [!div class="tabbedCodeSnippets"]
+[!code-xml[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml#L1-L13)]
 
-Esse código de exemplo mostra um arquivo de código MainPage.xaml.cs que implementa um anúncio intersticial. Esse código pressupõe que o arquivo MainPage.xaml tenha um botão funcional com um evento de **clique** que aciona e é manipulado por um método chamado **button_Click**. Esse código inicia o anúncio intersticial quando o evento de **clique** no botão é acionado.
+### <a name="mainpagexamlcs"></a>MainPage.xaml.cs
 
-Substitua o texto nas variáveis **AppID** e **AdUnitId** por valores dinâmicos antes de enviar seu aplicativo para a Loja. Para obter mais informações, consulte [Configurar unidades de anúncios em seu aplicativo](set-up-ad-units-in-your-app.md).
-
-``` syntax
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using Microsoft.Advertising.WinRT.UI;
-
-
-namespace BasicCSharpInterstitialUWP
-{
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class MainPage : Page
-    {
-        InterstitialAd MyVideoAd = new InterstitialAd();
-
-        public MainPage()
-        {
-            this.InitializeComponent();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            // Define ApplicationId and AdUnitId.
-            // Test values are shown here. Replace the test values with live values before submitting the app to the Store.
-            var MyAppId = "d25517cb-12d4-4699-8bdc-52040c712cab";
-            var MyAdUnitId = "11389925";
-
-            MyVideoAd.AdReady += MyVideoAd_AdReady;
-            MyVideoAd.ErrorOccurred += MyVideoAd_ErrorOccurred;
-            MyVideoAd.Completed += MyVideoAd_Completed;
-            MyVideoAd.Cancelled += MyVideoAd_Cancelled;
-
-            // Pre-fetch an ad 30-60 seconds before you need it.
-            MyVideoAd.RequestAd(AdType.Video, MyAppId, MyAdUnitId);
-        }
-
-        void MyVideoAd_AdReady(object sender, object e)
-        {
-            if ((InterstitialAdState.Ready) == (MyVideoAd.State))
-            {
-                MyVideoAd.Show();
-            }
-        }
-
-        void MyVideoAd_ErrorOccurred(object sender, AdErrorEventArgs e)
-        {
-            // Add your code here.
-        }
-
-        void MyVideoAd_Completed(object sender, object e)
-        {
-            // Add your code here.
-        }
-
-        void MyVideoAd_Cancelled(object sender, object e)
-        {
-            // Add your code here.  
-        }
-    }
-}
-```
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#CompleteSample)]
 
  
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
  
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

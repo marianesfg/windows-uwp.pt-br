@@ -3,8 +3,8 @@ author: msatranjr
 title: "Anúncios de Bluetooth"
 description: "Esta seção contém artigos sobre como integrar anúncios de Bluetooth de baixa energia (LE) a aplicativos UWP (Plataforma Universal do Windows) por meio do usuário de APIs AdvertisementWatcher e AdvertisementPublisher."
 translationtype: Human Translation
-ms.sourcegitcommit: b1493d3d0d61a5fc45ab563b56bffa43650bbed9
-ms.openlocfilehash: feda9b20b4cbc265832bdb51f90546d9e1f668e8
+ms.sourcegitcommit: b454e08015ea9bd6240c836563b1fec78e38dc2c
+ms.openlocfilehash: e21567bf2ffa5b05861cf96099290e1bb66dbf03
 
 ---
 
@@ -39,7 +39,7 @@ Para usar a funcionalidade Bluetooth LE básica em um aplicativo da Plataforma U
 
 Anúncios de Bluetooth LE permitem que seu dispositivo envie constantemente beacons de uma carga específica, chamada de anúncio. Esse anúncio pode ser visto por qualquer dispositivo compatível com Bluetooth LE nas proximidades, se estiver configurado para escutar esse anúncio específico.
 
-**Observação** Para a privacidade do usuário, o tempo de vida do anúncio está vinculado ao do app. Você pode criar BluetoothLEAdvertisementPublisher e chamar Start em uma tarefa em segundo plano para o anúncio em segundo plano. Para obter mais informações sobre tarefas em segundo plano, consulte [Início, retomada e tarefas em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/index).
+**Observação** Para a privacidade do usuário, o tempo de vida do anúncio está vinculado ao do app. Você pode criar BluetoothLEAdvertisementPublisher e chamar Start em uma tarefa em segundo plano para o anúncio em segundo plano. Para obter mais informações sobre tarefas em segundo plano, consulte [Início, retomada e tarefas em segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Publicação básica
 
@@ -155,6 +155,6 @@ Isso pode ser convertido aproximadamente em distância, mas não deve ser usado 
 Uma alternativa para julgar a distância pura é definir "buckets". Os rádios tendem a informar 0 para -50 DBm quando estão muito próximos, -50 a -90 quando estão a uma distância média e abaixo de -90 quando estão distantes. Tentativa e erro é a melhor forma de determinar quais devem ser esses buckets para seu app.
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

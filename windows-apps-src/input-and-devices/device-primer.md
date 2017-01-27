@@ -5,23 +5,128 @@ title: Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Wi
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
+keywords: "dispositivo, entrada, interação"
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0501d59108c5f01b3cefd3d038f3c7d320c862eb
-ms.openlocfilehash: 8821af9bc160dc2636871c3a3b2a558987707766
+ms.sourcegitcommit: bc2601bcd04f410ae4c3609c078a8684e0fbdbeb
+ms.openlocfilehash: ea19592ea98eb7d9a1b47c1a8cf8f1990ca33797
 
 ---
 
-#  Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Windows)
+#  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Windows)
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-
-
-
-![dispositivos da plataforma Windows](images/device-primer/1894834-hig-device-primer-01-500.png)
+![dispositivos da plataforma Windows](images/device-primer/device-primer-ramp.png)
 
 Conhecer os dispositivos que dão suporte a aplicativos UWP (Plataforma Universal do Windows) o ajudará a oferecer a melhor experiência de usuário para cada fator forma. Ao projetar para um dispositivo específico, as principais considerações incluem como o aplicativo aparecerá no dispositivo, onde, quando e como o aplicativo será usado nesse dispositivo, e como o usuário vai interagir com esse dispositivo.
 
-## Telefones e phablets
+## <a name="pcs-and-laptops"></a>Computadores e notebooks
+
+
+Os computadores e notebooks Windows incluem uma ampla gama de dispositivos e tamanhos de tela. Em geral, notebooks e computadores podem exibir mais informações que o telefone ou tablets.
+
+Tamanhos de tela
+-   13" e maior
+
+![um computador](images/device-primer/device-primer-desktop.png)
+
+Uso típico
+-   Os aplicativos em desktops e notebooks permitem o uso compartilhado, mas de um usuário de cada vez e geralmente por períodos maiores.
+
+Considerações sobre a interface do usuário
+-   Os aplicativos podem ter um modo de exibição em janelas. O tamanho delas é determinado pelo usuário. Dependendo do tamanho da janela, pode haver entre um e três quadros. Em monitores maiores, o aplicativo pode ter mais de três quadros.
+
+-   Ao usar um aplicativo em um desktop ou notebook, o usuário tem controle sobre arquivos de aplicativo. Como designer de aplicativos, forneça os mecanismos para gerenciar o conteúdo do seu aplicativo. Considere a inclusão de comandos e recursos, como "Salvar como", "Arquivos recentes" e assim por diante.
+
+-   A volta ao sistema é opcional. Quando um desenvolvedor de aplicativos opta por exibi-la, ela aparece na barra de título do aplicativo.
+
+Entradas
+-   Mouse
+-   Teclado
+-   Touch em laptops e em desktops tudo em um.
+-   Consoles, por exemplo, o controlador do Xbox, algumas vezes são usados.
+
+Recursos típicos do dispositivo
+-   Câmera
+-   Microfone
+
+## <a name="tablets-and-2-in-1s"></a>Tablets e conversíveis
+
+
+Computadores tablet ultraportáteis são equipados com telas touch, câmeras, microfones e acelerômetros. O tamanho da tela do tablet geralmente varia de 7" a 13,3". Dispositivos conversíveis podem atuar como um tablet ou um notebook com um teclado e mouse, dependendo da configuração (geralmente envolvendo virar a tela para trás ou colocá-la na posição vertical).
+
+Tamanhos de tela
+- 7" a 13,3" para tablet
+- 13,3" e maior para conversível
+
+![um tablet](images/device-primer/device-primer-tablet.png)
+
+Uso típico
+-   Cerca de 80% do uso do tablet é feito pelo proprietário, com outros 20% sendo de uso compartilhado.
+-   Ele geralmente é usado em casa como um dispositivo complementar ao assistir TV.
+-   Ele é usado por períodos mais longos que os telefones e phablets.
+-   O texto é inserido em ciclos rápidos.
+
+Considerações sobre a interface do usuário
+-   Nas orientações retrato e paisagem, os tablets permitem dois quadros de cada vez.
+-   O recurso Voltar do sistema está localizado na barra de navegação.
+
+Entradas
+-   Touch
+-   Caneta digitalizadora
+-   Teclado externo (ocasionalmente)
+-   Mouse (ocasionalmente)
+-   Voz (ocasionalmente)
+
+Recursos típicos do dispositivo
+-   Câmera
+-   Microfone
+-   Sensores de movimento
+-   Sensores de localização
+
+> [!NOTE]
+> A maioria das considerações para computadores e notebooks se aplica também aos conversíveis.
+
+## <a name="xbox-and-tv"></a>TV e Xbox
+
+A experiência de sentar em seu sofá na sala, usando um gamepad ou um controle remoto para interagir com sua TV, é chamada de **experiência de 3 metros**. Ela é chamada assim porque o usuário em geral está sentado a aproximadamente 3 metros de distância da tela. Isso proporciona desafios únicos que não estão presentes na, digamos, experiência de *meio metro* ou na interação com um computador. Se você estiver desenvolvendo um aplicativo para Xbox One ou qualquer outro dispositivo que seja conectado a uma tela de TV e possa usar um gamepad ou controle remoto para entrada, você sempre deve ter isso em mente.
+
+Projetar seu aplicativo UWP para a experiência de 3 metros é muito diferente de projetar para qualquer uma das outras categorias de dispositivo listadas aqui. Para obter mais informações, consulte [Projetando para Xbox e TV](designing-for-tv.md).
+
+Tamanhos de tela
+- A partir de 24"
+
+![TV e Xbox](images/device-primer/device-primer-tv-and-xbox.png)
+
+Uso típico
+- Geralmente compartilhado entre várias pessoas, mas também costuma ser usado por apenas uma pessoa.
+- Geralmente usado por períodos mais longos.
+- Mais comumente usado em casa, ficando em um só lugar.
+- Raramente solicita entrada de texto porque demora mais com um gamepad ou controle remoto.
+- A orientação da tela é fixa.
+- Geralmente executa somente um app por vez, mas talvez seja possível ajustar apps ao lado (como no Xbox).
+
+Considerações sobre a interface do usuário
+- Geralmente, os apps continuam do mesmo tamanho, a menos que outro app seja ajustado ao lado.
+- Voltar ao sistema é uma funcionalidade útil que é oferecida na maioria dos apps do Xbox, acessada usando o botão B no gamepad.
+- Como o cliente está sentado a aproximadamente 3 metros da tela, certifique-se de que a interface do usuário seja grande e clara o suficiente para ser visível.
+
+Entradas
+- Gamepad (como um controle do Xbox)
+- Controle remoto
+- Voz (ocasionalmente, se o cliente tiver um Kinect ou headset)
+
+Recursos típicos do dispositivo
+- Câmera (ocasionalmente, se o cliente tiver um Kinect)
+- Microfone (ocasionalmente, se o cliente tiver um Kinect ou headset)
+- Sensores de movimento (ocasionalmente, se o cliente tiver um Kinect)
+
+## <a name="phones-and-phablets"></a>Telefones e phablets
 
 
 O mais usado de todos os dispositivos de computação, o telefone pode fazer muito com o tamanho da tela limitado e entradas básicas. Os telefones estão disponíveis em uma variedade de tamanhos; telefones maiores são chamados de phablets. As experiências de aplicativo nos phablets são semelhantes às dos telefones, mas o espaço maior da tela dos phablets permite algumas mudanças importantes no consumo de conteúdo.
@@ -32,7 +137,7 @@ Tamanhos de tela
 -   De 4 a 5 polegadas para telefone
 -   De 5,5 a 7 polegadas para phablet
 
-![windows phone](images/device-primer/1894834-hig-device-primer-03.png)
+![windows phone](images/device-primer/device-primer-phablet.png)
 
 Uso típico
 -   Usado principalmente na orientação retrato, principalmente devido à facilidade de segurar o telefone com uma mão e poder interagir totalmente com ele dessa forma, mas há algumas experiências que funcionam bem em paisagem, como exibir fotos e vídeo, ler um livro e escrever texto.
@@ -61,74 +166,7 @@ Recursos típicos do dispositivo
 
  
 
-## Tablets
-
-
-Computadores tablet ultraportáteis são equipados com telas sensíveis ao toque, câmeras, microfones e acelerômetros. O tamanho da tela do tablet geralmente varia de 7" a 13,3".
-
-Tamanhos de tela
--   7 a 13,3 polegadas
-
-![um dispositivo de tablet](images/device-primer/1894834-hig-device-primer-05.png)
-
-Uso típico
--   Cerca de 80% do uso do tablet é feito pelo proprietário, com outros 20% de uso sendo compartilhados.
--   Ele geralmente é usado em casa como um dispositivo complementar ao assistir TV.
--   Ele é usado por períodos mais longos que os telefones e phablets.
--   O texto é inserido em ciclos rápidos.
-
-Considerações sobre a interface do usuário
--   Nas orientações retrato e paisagem, os tablets permitem dois quadros de cada vez.
--   O recurso Voltar do sistema está localizado na barra de navegação.
-
-Entradas
--   Touch
--   Caneta digitalizadora
--   Teclado externo (ocasionalmente)
--   Mouse (ocasionalmente)
--   Voz (ocasionalmente)
-
-Recursos típicos do dispositivo
--   Câmera
--   Microfone
--   Sensores de movimento
--   Sensores de localização
-
- 
-
-## Computadores e notebooks
-
-
-Os computadores e notebooks Windows incluem uma ampla gama de dispositivos e tamanhos de tela. Em geral, notebooks e computadores podem exibir mais informações que o telefone ou tablets.
-
-Tamanhos de tela
--   13" e maior
-
-![um computador](images/device-primer/1894834-hig-device-primer-06-349.png)
-
-Uso típico
--   Os aplicativos em desktops e notebooks permitem o uso compartilhado, mas de um usuário de cada vez e geralmente por períodos maiores.
-
-Considerações sobre a interface do usuário
--   Os aplicativos podem ter um modo de exibição em janelas. O tamanho delas é determinado pelo usuário. Dependendo do tamanho da janela, pode haver entre um e três quadros. Em monitores maiores, o aplicativo pode ter mais de três quadros.
-
--   Ao usar um aplicativo em um desktop ou notebook, o usuário tem controle sobre arquivos de aplicativo. Como designer de aplicativos, forneça os mecanismos para gerenciar o conteúdo do seu aplicativo. Considere a inclusão de comandos e recursos, como "Salvar como", "Arquivos recentes" e assim por diante.
-
--   A volta ao sistema é opcional. Quando um desenvolvedor de aplicativos opta por exibi-la, ela aparece na barra de título do aplicativo.
-
-Entradas
--   Mouse
--   Teclado
--   Touch em laptops e em desktops tudo em um.
--   Consoles, por exemplo, o controlador do Xbox, algumas vezes são usados.
-
-Recursos típicos do dispositivo
--   Câmera
--   Microfone
-
- 
-
-## Dispositivos Surface Hub
+## <a name="surface-hub-devices"></a>Dispositivos Surface Hub
 
 
 O Microsoft Surface Hub é um dispositivo de colaboração em equipe de tela grande projetado para uso simultâneo por vários usuários.
@@ -136,7 +174,7 @@ O Microsoft Surface Hub é um dispositivo de colaboração em equipe de tela gra
 Tamanhos de tela
 -   55 e 84 polegadas
 
-![um Surface Hub](images/device-primer/1894834-hig-device-primer-07-349.png)
+![um Surface Hub](images/device-primer/device-primer-surfacehub3.png)
 
 Uso típico
 -   Os aplicativos no Surface Hub veem o uso compartilhado por períodos curtos, como em reuniões.
@@ -161,7 +199,7 @@ Recursos típicos do dispositivo
 
  
 
-## Dispositivos Windows IoT
+## <a name="windows-iot-devices"></a>Dispositivos Windows IoT
 
 
 Os dispositivos Windows IoT são uma classe emergente de dispositivos voltada para incorporação de eletrônicos pequenos, sensores e conectividade em objetos físicos. Geralmente, esses dispositivos são conectados por meio de uma rede ou da Internet para registrar dados reais detectados e, em alguns casos, agir com base neles. Os dispositivos podem ter nenhuma tela (também conhecidos como dispositivos "sem periféricos") ou são conectados a uma tela pequena (conhecidos como dispositivos "periféricos") com um tamanho de tela geralmente de 3,5" ou menos.
@@ -170,7 +208,7 @@ Tamanhos de tela
 -   3,5" ou menor
 -   Alguns dispositivos não têm tela
 
-![um dispositivo IoT](images/device-primer/1894834-hig-device-primer-02.png)
+![um dispositivo IoT](images/device-primer/device-primer-iot-device.png)
 
 Uso típico
 -   Geralmente conectado por meio de uma rede ou da Internet para registrar dados reais detectados e, em alguns casos, agir com base neles.
@@ -189,16 +227,7 @@ Entradas
 Recursos típicos do dispositivo
 -   Variável, dependendo do dispositivo
 
- 
 
-
-
- 
-
- 
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

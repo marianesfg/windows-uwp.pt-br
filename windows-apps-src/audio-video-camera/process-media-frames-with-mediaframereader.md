@@ -4,8 +4,8 @@ ms.assetid:
 description: "Este artigo mostra como usar um MediaFrameReader com o MediaCapture para obter quadros de mídia de uma ou mais origens disponíveis, incluindo câmeras em cores, de profundidade e infravermelho, dispositivos de áudio ou até mesmo origens personalizadas de quadros, como as que produzem quadros de rastreamento de esqueleto."
 title: "Processar quadros de mídia com o MediaFrameReader"
 translationtype: Human Translation
-ms.sourcegitcommit: 881f806a61d247c6c4f73aa770ba4c5dab91af00
-ms.openlocfilehash: 648874a50dbe333f1bb6291de646d9088eec1528
+ms.sourcegitcommit: e6ab1fc16f150de2fed3797d89375a52b3965182
+ms.openlocfilehash: 11e09d9b447e9daa0498377a67ef235bdab168dd
 
 ---
 
@@ -117,7 +117,7 @@ Agora é hora de implementar o manipulador de eventos **FrameArrived**. Quando o
 
 O controle **Image** só pode exibir imagens em formato BRGA8 com um valor pré-multiplicado ou nenhum alfa. Se o quadro de chegada não estiver nesse formato, o método estático [**Convert**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.SoftwareBitmap.Covert) será usado para converter o bitmap de software no formato correto.
 
-Em seguida, o método [**Interlocked.Exchange**](https://msdn.microsoft.com/en-us/library/bb337971) é usado para trocar a referência do bitmap de chegada pelo bitmap de buffer de fundo. Esse método troca essas referências em uma operação atômica thread-safe. Após a troca, a imagem antiga do buffer de fundo, agora na variável *softwareBitmap*, é descartada para limpar seus recursos.
+Em seguida, o método [**Interlocked.Exchange**](https://msdn.microsoft.com/library/bb337971) é usado para trocar a referência do bitmap de chegada pelo bitmap de buffer de fundo. Esse método troca essas referências em uma operação atômica thread-safe. Após a troca, a imagem antiga do buffer de fundo, agora na variável *softwareBitmap*, é descartada para limpar seus recursos.
 
 Em seguida, o [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher) associado ao elemento **Image** é usado para criar uma tarefa que será executada no thread da interface do usuário chamando [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317). Como as tarefas assíncronas serão executadas dentro da tarefa, a expressão lambda transmitida para **RunAsync** é declarada com a palavra-chave *async*.
 
@@ -167,6 +167,6 @@ A classe auxiliar **FrameRenderer** implementa os métodos a seguir.
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

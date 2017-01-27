@@ -6,11 +6,11 @@ ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 7e52f9d379b909c4dd35bc535cbca2d7b8cca6ac
+ms.sourcegitcommit: 92c523c100a021808e01dffe4cd9b5c47c21b58a
+ms.openlocfilehash: 3ad89682248462efa5022467ceb330da03843de4
 
 ---
-# Exibição de inversão
+# <a name="flip-view"></a>Exibição de inversão
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,25 +19,18 @@ Use um recurso exibição de inversão para procurar imagens ou outros itens em 
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx"><strong>Classe FlipView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx"><strong>Propriedade ItemsSource</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx"><strong>Propriedade ItemTemplate</strong></a></li>
+<li>[**Classe FlipView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx)</li>
+<li> [**Propriedade ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)</li>
+<li>[**Propriedade ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)</li>
+
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-
-## Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 O recurso exibição de inversão é melhor para examinar imagens em coleções pequenas a médias (até 25 itens ou algo assim). Exemplos de tais coleções incluem itens em uma página de detalhes do produto ou fotos em um álbum de fotos. Embora não recomendemos o modo de exibição invertido em coleções maiores, o controle é comum para a visualização de imagens individuais em um álbum de fotos.
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 A navegação horizontal, começando pelo item mais à esquerda e invertendo à direita, é o layout típico para um modo de exibição invertido. Esse layout funciona bem na orientação retrato ou paisagem em todos os dispositivos:
 
@@ -47,13 +40,13 @@ O recurso exibição de inversão também pode ser procurado verticalmente:
 
 ![Exemplo do recurso exibição de inversão vertical](images/controls_flipview_vertical.jpg)
 
-## Criar um recurso exibição de inversão
+## <a name="create-a-flip-view"></a>Criar um recurso exibição de inversão
 
 FlipView é um [ItemsControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.aspx) e, por isso, pode conter uma coleção de itens de qualquer tipo. Para popular a exibição, adicione itens à coleção de [**Itens**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) ou defina a propriedade [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) como uma fonte de dados.
 
 Por padrão, o item de dados é exibido no recurso exibição de inversão como a representação do objeto de dados ao qual ele está associado. Para especificar exatamente como os itens em exibição de inversão são exibidos, crie um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.datatemplate.aspx) para definir o layout dos controles usados para exibir cada item. Os controles no layout podem ser associados a propriedades de um objeto de dados ou ter conteúdo definido embutido. Você atribui o DataTemplate à propriedade [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) do FlipView.
 
-### Adicionar itens à coleção de itens
+### <a name="add-items-to-the-items-collection"></a>Adicionar itens à coleção de itens
 
 Você pode adicionar itens à coleção [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) usando XAML ou código. Normalmente, você adiciona itens dessa maneira quando tem um pequeno número de itens que não mudam e são facilmente definidos no XAML ou quando gera os itens em código no tempo de execução. Este é um recurso exibição de inversão com itens definidos embutidos.
 
@@ -80,7 +73,7 @@ Quando você adiciona itens a um recurso exibição de inversão, eles são colo
 
 Quando você define os itens no XAML, eles também são adicionados automaticamente à coleção de Items.
 
-### Definir a origem de itens
+### <a name="set-the-items-source"></a>Definir a origem de itens
 
 Geralmente, você usa um recurso de exibição de inversão para exibir dados de uma origem, como um banco de dados ou a Internet. Para popular um recurso exibição de inversão em uma fonte de dados, você define sua propriedade [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) como uma coleção de itens de dados.
 
@@ -120,7 +113,7 @@ Aqui, o ItemsSource está associado a um [**CollectionViewSource**](https://msdn
 
 >**Observação**&nbsp;&nbsp;Você pode preencher um recurso exibição de inversão adicionando itens a sua coleção Items ou definindo sua propriedade ItemsSource, mas você não pode usar as duas formas ao mesmo tempo. Se você definir a propriedade ItemsSource e adicionar um item no XAML, o item será ignorado. Se você definir a propriedade ItemsSource e adicionar um item à coleção Items no código, uma exceção será gerada.
 
-### Especificar a aparência dos itens
+### <a name="specify-the-look-of-the-items"></a>Especificar a aparência dos itens
 
 Por padrão, o item de dados é exibido no recurso exibição de inversão como a representação do objeto de dados ao qual ele está associado. Você geralmente quer mostrar uma apresentação mais sofisticada de seus dados. Para especificar exatamente como os itens são exibidos no recurso exibição de inversão, você cria o [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx). O XAML no DataTemplate define o layout e a aparência dos controles usados para exibir cada item. Os controles no layout podem ser associados a propriedades de um objeto de dados ou ter conteúdo definido embutido. O DataTemplate é atribuído à propriedade [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) do controle FlipView.
 
@@ -149,7 +142,7 @@ Esta é a aparência do layout definido pelo modelo de dados.
 
 Modelo de recurso exibição de inversão.
 
-### Definir a orientação do recurso exibição de inversão
+### <a name="set-the-orientation-of-the-flip-view"></a>Definir a orientação do recurso exibição de inversão
 
 Por padrão, o recurso exibição de inversão inverte horizontalmente. Para fazê-lo inverter verticalmente, use um painel de pilha com uma orientação vertical como o [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) do recurso exibição de inversão.
 
@@ -186,7 +179,7 @@ Esta é a aparência do recurso exibição de inversão com uma orientação ver
 
 ![Exemplo do recurso exibição de inversão vertical](images/controls_flipview_vertical.jpg)
 
-## Adicionando um indicador de contexto
+## <a name="adding-a-context-indicator"></a>Adicionando um indicador de contexto
 
 Um indicador de contexto em um recurso exibição de inversão fornece um ponto de referência útil. Os pontos em um indicador de contexto padrão não são interativos. Conforme visto neste exemplo, o melhor posicionamento costuma ser centralizado e abaixo da galeria:
 
@@ -196,7 +189,9 @@ Para coleções maiores (10 a 25 itens), considere usar um indicador que ofereç
 
 ![Exemplo de indicador de contexto](images/controls_contextindicator.jpg)
 
-## O que fazer e o que não fazer
+Para conferir um código de exemplo que mostra como adicionar um indicador de contexto a um FlipView, consulte [Amostra de FlipView em XAML](http://go.microsoft.com/fwlink/p/?LinkID=311760).
+
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
 -   O recurso exibição de inversão funciona melhor para coleções de até aproximadamente 25 itens.
 -   Evite usar um controle de modo exibição invertido em coleções grandes, já que o movimento repetitivo de inversão em cada item pode ser entediante. Uma exceção seria para álbuns de fotos, que costumam ter centenas ou milhares de imagens. Álbuns de fotos quase sempre alternam para um modo de exibição invertido depois que uma foto é selecionada no layout do modo de exibição de grade. Para outras coleções grandes, considere o [Modo de exibição de lista ou de grade](lists.md).
@@ -206,7 +201,7 @@ Para coleções maiores (10 a 25 itens), considere usar um indicador que ofereç
     -   O ponto realçado indica o item atual. Normalmente, o ponto realçado é branco e os outros pontos são cinza.
     -   O número de pontos pode variar, mas não pode haver muitos pontos para que o usuário não tenha dificuldade para encontrar seu local – 10 pontos costuma ser o número máximo a ser mostrado.
 
-## Lista de verificação de globalização e localização
+## <a name="globalization-and-localization-checklist"></a>Lista de verificação de globalização e localização
 
 <table>
 <tr>
@@ -215,14 +210,17 @@ Para coleções maiores (10 a 25 itens), considere usar um indicador que ofereç
 
 </table>
 
+## <a name="get-the-sample-code"></a>Obter o código de exemplo
+* [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
-## Artigos relacionados
+
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Diretrizes para listas](lists.md)
 - [**Classe FlipView**](https://msdn.microsoft.com/library/windows/apps/br242678)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

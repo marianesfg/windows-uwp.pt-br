@@ -1,34 +1,41 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Receber, processar e gerenciar dados de entrada de dispositivos apontadores, como toque, mouse, caneta e touchpad, em aplicativos UWP (Plataforma Universal do Windows).
-title: Identificar entrada do ponteiro
+Description: Receba, processe e gerencie dados de entrada de dispositivos apontadores, como toque, mouse, caneta e touchpad, em aplicativos da Plataforma Universal do Windows (UWP).
+title: Manusear entrada do ponteiro
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
+keywords: "caneta, mouse, touchpad, toque, ponteiro, entrada, interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 2053062f6a5f850da8983bce2465cd10cdc01d56
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: ba4288d93924d3a32a0a659dea67af28fb607987
 
 ---
 
-# Identificar entrada do ponteiro
+# <a name="handle-pointer-input"></a>Manusear entrada do ponteiro
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Receber, processar e gerenciar dados de entrada de dispositivos apontadores, como toque, mouse, caneta e touchpad, em aplicativos UWP (Plataforma Universal do Windows).
+Receba, processe e gerencie dados de entrada de dispositivos apontadores, como toque, mouse, caneta e touchpad, em aplicativos da Plataforma Universal do Windows (UWP).
 
-**APIs importantes**
-
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
-
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+</ul>
+</div>
 
 **Importante**  
 Caso você implemente seu próprio suporte à interação, tenha em mente que os usuários esperam uma experiência intuitiva que envolva a interação direta com os elementos da interface do usuário do aplicativo. Recomendamos que você modele suas interações personalizadas na [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406) para manter tudo consistente e detectável. Os controles de plataforma oferecem a experiência da interação do usuário da Plataforma Universal do Windows (UWP) completa, inclusive interações padrão, efeitos físicos animados, comentários visuais e acessibilidade. Crie interações personalizadas somente se houver uma exigência clara e bem-definida e se as interações básicas não derem suporte a seu cenário.
 
 
-## Ponteiros
-
-
+## <a name="pointers"></a>Ponteiros
 Muitas experiências de interação envolvem a identificação do objeto pelo usuário com o qual ele deseja interagir apontando para ele usando dispositivos de entrada, como toque, mouse, caneta e touchpad. Como os dados brutos de dispositivos de interface humana (HID) fornecidos por esses dispositivos de entrada incluem muitas propriedades comuns, as informações são promovidas em uma pilha de entrada unificada e exposta como dados de ponteiro independentes de dispositivo e consolidados. Assim, os aplicativos UWP podem consumir esses dados sem se preocupar com o dispositivo de entrada que está sendo usado.
 
 **Observação**  As informações específicas do dispositivo também são promovidas dos dados brutos de HID, caso o aplicativo exija isso.
@@ -37,7 +44,7 @@ Muitas experiências de interação envolvem a identificação do objeto pelo us
 
 Cada ponto de entrada (ou contato) na pilha de entrada é representado por um objeto [**Pointer**](https://msdn.microsoft.com/library/windows/apps/br227968) exposto por meio do parâmetro [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) fornecido por vários eventos de ponteiro. No caso de entrada com várias canetas ou multitoque, cada contato é tratado como um ponto de entrada único.
 
-## Eventos de ponteiro
+## <a name="pointer-events"></a>Eventos de ponteiro
 
 
 Os eventos de ponteiro expõem informações básicas, como estado de detecção (em intervalo ou contato) e tipo de dispositivo, além de informações estendidas, como local, pressão e geometria de contato. Além disso, propriedades específicas do dispositivo, como qual botão do mouse um usuário pressionou ou se a ponta da borracha da caneta está sendo usada, também estão disponíveis. Caso o aplicativo precise diferenciar dispositivos de entrada e suas funcionalidades, consulte [Identificar dispositivos de entrada](identify-input-devices.md).
@@ -127,12 +134,12 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 
  
 
-## Exemplo
+## <a name="example"></a>Exemplo
 
 
 Aqui estão alguns exemplos de código de um aplicativo de rastreamento básico de ponteiro básico que mostram como escutar e identificar eventos de ponteiro, além de obter várias propriedades de ponteiros ativos.
 
-### Criar a interface do usuário
+### <a name="create-the-ui"></a>Criar a interface do usuário
 
 Para este exemplo, usamos um retângulo (`targetContainer`) como o objeto de destino para a entrada de ponteiro. A cor do destino muda quando o status do ponteiro muda.
 
@@ -195,7 +202,7 @@ Este é o Extensible Application Markup Language (XAML) desse exemplo.
 </Page>
 ```
 
-### Escutar eventos de ponteiro
+### <a name="listen-for-pointer-events"></a>Escutar eventos de ponteiro
 
 Na maioria dos casos, recomendamos que você obtenha informações do ponteiro por meio do [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) do manipulador de eventos.
 
@@ -244,7 +251,7 @@ O código a seguir configura o objeto de destino, declara variáveis globais e i
 
 ```
 
-### Manipular eventos de ponteiro
+### <a name="handle-pointer-events"></a>Manipular eventos de ponteiro
 
 Em seguida, usamos comentários da interface do usuário para demonstrar manipuladores de eventos de ponteiro básicos.
 
@@ -556,7 +563,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
     }
 ```
 
-### Obter as propriedades do ponteiro
+### <a name="get-pointer-properties"></a>Obter as propriedades do ponteiro
 
 Conforme mencionado anteriormente, você deve obter as informações do ponteiro mais estendido de um objeto [**Windows.UI.Input.PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) obtidas por meio dos métodos [**GetCurrentPoint**](https://msdn.microsoft.com/library/windows/apps/hh943077) e [**GetIntermediatePoints**](https://msdn.microsoft.com/library/windows/apps/hh943078) de [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076).
 
@@ -652,7 +659,7 @@ Conforme mencionado anteriormente, você deve obter as informações do ponteiro
              }
 ```
 
-### Exemplo completo
+### <a name="complete-example"></a>Exemplo completo
 
 O código C\# para este exemplo é mostrado a seguir. Para obter links para amostras mais complexas, consulte os artigos relacionados no final desta página.
 
@@ -1080,7 +1087,7 @@ namespace PointerInput
 }
 ```
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 
 **Exemplos**
@@ -1106,6 +1113,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

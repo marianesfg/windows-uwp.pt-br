@@ -1,16 +1,16 @@
 ---
 author: Jwmsft
 Description: "O switch de alternância representa um comutador físico que permite aos usuários ativar ou desativar itens."
-title: "Diretrizes para controles de botões de alternância"
+title: "Diretrizes para controles de switches de alternância"
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a4fe19dcd6f555273e74236192c5c61e8c6579ab
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 685ef17e17fb17fa620eea84335ce6688a5cfb3e
 
 ---
-# Switches de alternância
+# <a name="toggle-switches"></a>Switches de alternância
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
@@ -19,34 +19,29 @@ O switch de alternância representa um comutador físico que permite aos usuári
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx"><strong>Classe ToggleSwitch</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx"><strong>Propriedade IsOn</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx"><strong>Evento Toggled</strong></a></li>
+<li>[**Classe ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx)</li>
+<li>[**Propriedade IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx)</li>
+<li>[**Evento Toggled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)</li>
 </ul>
-
-</div>
 </div>
 
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
+Use um switch de alternância para operações binárias que entram em vigor logo depois que o usuário gira o switch. Por exemplo, use um switch de alternância para ativar ou desativar serviços ou componentes de hardware, como o Wi-Fi:
 
-
-## Esse é o controle correto?
-
-Use um switch de alternância para operações binárias que entram em vigor logo depois que o usuário gira o switch. Por exemplo, use um botão de alternância para ativar ou desativar serviços ou componentes de hardware, como o Wi-Fi:
-
-![Botão de alternância de Wi-Fi, ativado e desativado](images/toggleswitches01.png)
+![Switch de alternância de Wi-Fi, ativado e desativado](images/toggleswitches01.png)
 
 Se um comutador físico funcionaria para a ação, um switch de alternância é provavelmente o melhor controle a ser usado.
 
 Depois que o usuário ativa ou desativa o botão, é recomendável que a ação correspondente seja imediatamente executada.
 
-### Escolhendo entre o botão de alternância e a caixa de seleção
+### <a name="choosing-between-toggle-switch-and-check-box"></a>Escolhendo entre o switch de alternância e a caixa de seleção
 
 Para algumas ações, uma caixa de seleção ou um switch de alternância pode funcionar. Para decidir qual controle funcionaria melhor, siga estas dicas:
 
--   Use um botão de alternância para configurações binárias quando as alterações são efetivadas imediatamente depois que o usuário as altera.
+-   Use um switch de alternância para configurações binárias quando as alterações são efetivadas imediatamente depois que o usuário as altera.
 
-    ![Botão de alternância versus caixa de seleção](images/toggleswitches02.png)
+    ![Switch de alternância versus caixa de seleção](images/toggleswitches02.png)
 
     No exemplo acima, está claro pelo switch de alternância que a rede sem fio está "Ativada". Mas, pela caixa de seleção, o usuário precisa pensar se a rede sem fio está ativada ou se ele precisa marcar a caixa para ativá-la.
 
@@ -58,7 +53,7 @@ Para algumas ações, uma caixa de seleção ou um switch de alternância pode f
 
     ![Uma caixa de seleção com vários itens selecionados](images/guidelines_and_checklist_for_toggle_switches_checkbox_multi_select.png)
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 Switches de alternância nas configurações gerais do aplicativo de notícias.
 
@@ -68,7 +63,7 @@ Switches de alternância nas configurações do menu Iniciar no Windows.
 
 ![Switches de alternância nas configurações do menu Iniciar no Windows](images/control-examples/toggle-switch-start-settings.png)
 
-## Criar um botão de alternância
+## <a name="create-a-toggle-switch"></a>Criar um switch de alternância
 
 Veja a seguir como criar um switch de alternância simples. Este XAML cria o switch de alternância WiFi mostrado anteriormente.
 
@@ -85,7 +80,7 @@ wiFiToggle.Header = "WiFi";
 stackPanel1.Children.Add(wiFiToggle);
 ```
 
-### IsOn
+### <a name="ison"></a>IsOn
 
 O switch pode ser ativado ou desativado. Use a propriedade [**IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx) para determinar o estado do switch. Quando o switch é usado para controlar o estado de outra propriedade binária, você pode usar uma associação, conforme mostrado aqui.
 
@@ -96,7 +91,7 @@ O switch pode ser ativado ou desativado. Use a propriedade [**IsOn**](https://ms
 </StackPanel>
 ```
 
-### Toggled
+### <a name="toggled"></a>Toggled
 
 Em outros casos, você pode manipular o evento [**Toggled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx) para responder a alterações no estado.
 
@@ -140,7 +135,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 }
 ```
 
-### Rótulos Ligar/desligar
+### <a name="onoff-labels"></a>Rótulos Ligar/desligar
 
 Por padrão, o switch de alternância inclui rótulos Ligar/desligar literais, que são localizados automaticamente. Você pode substituir esses rótulos definindo as propriedades [**OnContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontent.aspx) e [**OffContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontent.aspx).
 
@@ -154,24 +149,20 @@ Este exemplo substitui os rótulos Ligar/desligar por rótulos Mostrar/ocultar.
 
 Você também pode usar conteúdo mais complexo, definindo as propriedades [**OnContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontenttemplate.aspx) e [ **OffContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontenttemplate.aspx).
 
-## Recomendações
+## <a name="recommendations"></a>Recomendações
 
 -   Substitua os rótulos Ligar e Desligar quando houver rótulos mais específicos para a configuração. Se houver rótulos curtos (3 a 4 caracteres) que representem opostos binários que são mais apropriados para uma determinada configuração, use-os. Por exemplo, use "Mostrar/ocultar" se a configuração é "Mostrar imagens". Usar rótulos mais específicos pode ajudar na localização da interface do usuário.
 -   Evite substituir os rótulos Ligar e Desligar a menos que seja necessário; use os rótulos padrão a menos que a situação peça rótulos personalizados.
 -   Os rótulos devem conter no máximo 4 caracteres.
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
-[**ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/hh701411)
+- [**Classe ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/hh701411)
 - [Botões de opção](radio-button.md)
 - [Switches de alternância](toggles.md)
 - [Caixas de seleção](checkbox.md)
 
-**Para desenvolvedores (XAML)**
-- [**Classe ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/br209712)
 
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

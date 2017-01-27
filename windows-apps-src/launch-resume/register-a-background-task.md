@@ -4,8 +4,8 @@ title: Registrar uma tarefa em segundo plano
 description: "Aprenda a criar uma função que pode ser reutilizada para registrar com segurança a maioria das tarefas em segundo plano."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: 2f46f5cd26656b2d6b7d14c0d85aa7a0a6950fb8
-ms.openlocfilehash: 809cd0ea85d4dfc6ecf633d0ca9f16bbefee78ca
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: d65b8d3312e49469bd99d458b45bf5a46f345e6a
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 809cd0ea85d4dfc6ecf633d0ca9f16bbefee78ca
 
 Aprenda a criar uma função que pode ser reutilizada para registrar com segurança a maioria das tarefas em segundo plano.
 
-Este tópico se aplica a tarefas em segundo plano dentro do processo e em segundo plano executadas em um processo à parte. Este tópico considera que você já tem uma tarefa em segundo plano que precisa ser registrada. (Consulte [Criar e registrar uma tarefa em segundo plano que é executada em um processo à parte](create-and-register-an-outofproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano dentro do processo](create-and-register-an-inproc-background-task.md) para obter informações sobre como escrever uma tarefa em segundo plano).
+Este tópico se aplica a tarefas em segundo plano dentro do processo e em segundo plano executadas em um processo à parte. Este tópico considera que você já tem uma tarefa em segundo plano que precisa ser registrada. (Consulte [Criar e registrar uma tarefa em segundo plano que é executada em um processo à parte](create-and-register-a-background-task.md) ou [Criar e registrar uma tarefa em segundo plano dentro do processo](create-and-register-an-inproc-background-task.md) para obter informações sobre como escrever uma tarefa em segundo plano).
 
 Este tópico discorre sobre a função utilitária que registra tarefas em segundo plano. Esta função utilitária verifica registros existentes antes de registrar a tarefa várias vezes para evitar problemas com registros múltiplos e pode aplicar uma condição de sistema à tarefa em segundo plano. O tópico inclui um exemplo completo e prático desta função utilitária.
 
@@ -377,7 +377,7 @@ Este exemplo mostra a função completa de registro de tarefa em segundo plano. 
 
 ****
 
-* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-an-outofproc-background-task.md)
+* [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-a-background-task.md)
 * [Criar e registrar uma tarefa em segundo plano em processo](create-and-register-an-inproc-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do app](declare-background-tasks-in-the-application-manifest.md)
 * [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
@@ -397,6 +397,6 @@ Este exemplo mostra a função completa de registro de tarefa em segundo plano. 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

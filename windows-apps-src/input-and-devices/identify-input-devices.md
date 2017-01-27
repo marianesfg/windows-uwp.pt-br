@@ -1,28 +1,37 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Identifique os dispositivos de entrada conectados a um dispositivo UWP (Plataforma Universal do Windows) e seus recursos e atributos.
+Description: Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os recursos e atributos.
 title: Identificar dispositivos de entrada
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
 template: detail.hbs
+keywords: "dispositivo, digitalizador, entrada, interação"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: df416821ad67a8eaf8a8a31879b6a1d39526df14
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 20230362a38d4541fbed25ac822c96032f7b6d8f
 
 ---
 
-# Identificar dispositivos de entrada
+# <a name="identify-input-devices"></a>Identificar dispositivos de entrada
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Identifique os dispositivos de entrada conectados a um dispositivo UWP (Plataforma Universal do Windows) e seus recursos e atributos.
+Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma Universal do Windows (UWP) e os recursos e atributos.
 
-**APIs importantes**
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+</ul>
+</div>
 
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
-
-
-## Recuperar as propriedades do mouse
+## <a name="retrieve-mouse-properties"></a>Recuperar as propriedades do mouse
 
 
 O namespace [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contém a classe [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626) usada para recuperar as propriedades expostas por um ou mais mouses conectados. Crie um novo objeto **MouseCapabilities** e obtenha as propriedades que interessam a você.
@@ -45,7 +54,7 @@ private void GetMouseProperties()
 }
 ```
 
-## Recuperar propriedades do teclado
+## <a name="retrieve-keyboard-properties"></a>Recuperar propriedades do teclado
 
 
 O namespace [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contém a classe [**KeyboardCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225623) usada para recuperar se um teclado estiver conectado. Basta criar um novo objeto **KeyboardCapabilities** e obter a propriedade [**KeyboardPresent**](https://msdn.microsoft.com/library/windows/apps/br225625).
@@ -60,7 +69,7 @@ private void GetKeyboardProperties()
 }
 ```
 
-## Recuperar as propriedades de toque
+## <a name="retrieve-touch-properties"></a>Recuperar as propriedades de toque
 
 
 O namespace [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contém a classe [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644) usada para recuperar se um digitalizador de toque estiver conectado. Basta criar um novo objeto **TouchCapabilities** e obter as propriedades que interessam a você.
@@ -80,7 +89,7 @@ private void GetTouchProperties()
 }
 ```
 
-## Recuperar as propriedades de ponteiro
+## <a name="retrieve-pointer-properties"></a>Recuperar as propriedades de ponteiro
 
 
 O namespace [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contém a classe [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) usada para recuperar se um dispositivo detectado der suporte à entrada de ponteiro (toque, touchpad, mouse ou caneta). Basta criar um novo objeto **PointerDevice** e obter as propriedades que interessam a você.
@@ -176,7 +185,7 @@ private void GetPointerDevices()
     }
 ```
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 
 **Exemplos**
@@ -196,6 +205,6 @@ private void GetPointerDevices()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

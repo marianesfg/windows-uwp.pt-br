@@ -5,19 +5,22 @@ title: "Noções básicas de design de conteúdo para aplicativos da Plataforma 
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 4ac800f9d2dd51ac074ec50cd1046e5a78c80710
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 7433fcabe455c0a0198cd23f883ed72b0b4558fc
 
 ---
 
-#  Noções básicas de design de conteúdo para aplicativos UWP
+#  <a name="content-design-basics-for-uwp-apps"></a>Noções básicas de design de conteúdo para aplicativos UWP
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 O objetivo principal de qualquer aplicativo é fornecer acesso ao conteúdo: em um aplicativo de edição de fotos, a foto é o conteúdo; em um aplicativo de viagens, mapas e informações sobre destinos de viagem são o conteúdo; e assim por diante. Os elementos de navegação fornecem acesso ao conteúdo; os elementos de comando permitem que o usuário interaja com conteúdo; os elementos de conteúdo exibem o conteúdo em si.
 
 Este artigo fornece recomendações de design do conteúdo para os três cenários de conteúdo.
 
-## <span id="Design_for_the_right_content_scenario"></span><span id="design_for_the_right_content_scenario"></span><span id="DESIGN_FOR_THE_RIGHT_CONTENT_SCENARIO"></span>Design para o cenário de conteúdo certo
+## <a name="design-for-the-right-content-scenario"></a>Design para o cenário de conteúdo certo
 
 
 Há três cenários de conteúdo principais:
@@ -26,7 +29,7 @@ Há três cenários de conteúdo principais:
 -   **Criação**: uma experiência principalmente unidirecional em que o foco é criar novo conteúdo. Pode ser dividida em fazer coisas do zero, como tirar uma foto ou fazer um vídeo, criar uma nova imagem em um aplicativo de pintura, ou abrir um documento atualizado.
 -   **Interativo**: uma experiência de conteúdo bidirecional que inclui consumir, criar e revisar o conteúdo.
 
-## <span id="Consumption-focused_apps"></span><span id="consumption-focused_apps"></span><span id="CONSUMPTION-FOCUSED_APPS"></span>Aplicativos voltados para consumo
+## <a name="consumption-focused-apps"></a>Aplicativos voltados para consumo
 
 
 Os elementos de conteúdo recebem a prioridade mais alta em um aplicativo focado em consumo, seguido pelos [elementos de navegação](navigation-basics.md) necessários para ajudar os usuários a localizar o conteúdo desejado. Exemplos de aplicativos voltados para consumo incluem players de filme, aplicativos de leitura, aplicativos de música e visualizadores de foto.
@@ -38,7 +41,7 @@ Recomendações gerais para aplicativos voltados para consumo:
 -   Considere criar páginas de [navegação](navigation-basics.md) dedicadas e páginas de visualização de conteúdo para que, quando os usuários encontrarem o conteúdo que estão procurando, eles possam visualizá-lo em uma página dedicada livre de distrações.
 -   Considere a criação de uma opção de exibição de tela inteira que expande o conteúdo para preencher a tela inteira e oculta todos os outros elementos de interface do usuário.
 
-## <span id="Creation-focused_apps"></span><span id="creation-focused_apps"></span><span id="CREATION-FOCUSED_APPS"></span>Aplicativos voltados para criação
+## <a name="creation-focused-apps"></a>Aplicativos voltados para criação
 
 
 O conteúdo e os elementos de [comando](commanding-basics.md) são os elementos da interface do usuário mais importantes em um aplicativo focado em criação: elementos de comando permitem que o usuário crie um novo conteúdo. Exemplos incluem aplicativos de pintura, aplicativos de edição de fotos, aplicativos de edição de vídeo e aplicativos de processamento de texto.
@@ -52,7 +55,7 @@ Recomendações gerais para aplicativos voltados para criação:
 -   Minimize o uso de elementos de [navegação](navigation-basics.md).
 -   Os elementos de [comando](commanding-basics.md) são especialmente importantes em aplicativos voltados para criação. Como os usuários executarão muitos comandos, é recomendável fornecer funcionalidade de histórico/desfazer um comando.
 
-## <span id="Apps_with_interactive_content"></span><span id="apps_with_interactive_content"></span><span id="APPS_WITH_INTERACTIVE_CONTENT"></span>Aplicativos com conteúdo interativo
+## <a name="apps-with-interactive-content"></a>Aplicativos com conteúdo interativo
 
 
 Em um aplicativo com conteúdo interativo, os usuários criam, visualizam e editam conteúdo; muitos aplicativos se enquadram nessa categoria. Exemplos desses tipos de aplicativos incluem aplicativos de linha de negócios, aplicativos de gerenciamento de estoque, aplicativos de culinária que permitem ao usuário criar ou modificar receitas.
@@ -68,7 +71,7 @@ Recomendações gerais para aplicativos com conteúdo interativo:
 
 -   Pode ser difícil equilibrar elementos de navegação, conteúdo e comando quando todos os três são importantes. Se possível, considere a criação de telas separadas para navegação, criação e edição de conteúdo ou o fornecimento de opções de modo.
 
-## <span id="Commonly_used_content_elements"></span><span id="commonly_used_content_elements"></span><span id="COMMONLY_USED_CONTENT_ELEMENTS"></span>Elementos de conteúdo mais usados
+## <a name="commonly-used-content-elements"></a>Elementos de conteúdo mais usados
 
 
 Veja alguns elementos de interface do usuário comumente usados para exibir o conteúdo. Para obter uma lista completa dos elementos de interface de usuário, consulte [Controles e elementos de interface do usuário](https://msdn.microsoft.com/library/windows/apps/dn611856).
@@ -123,6 +126,6 @@ Veja alguns elementos de interface do usuário comumente usados para exibir o co
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

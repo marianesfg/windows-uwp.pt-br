@@ -3,21 +3,26 @@ author: Xansky
 description: "Por meio do namespace Windows.ApplicationModel.Contacts, você tem várias opções para selecionar contatos."
 title: Selecionar contatos
 ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
-keywords: "contato, selecionando campos específicos"
+keywords: "contatos, seleção de um único contato selecionar vários contatos contatos, selecionar vários selecionar dados de contato específicos contato, seleção de contato de dados específicos, seleção de campos específicos"
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 70abebb53f96b7d9d818f3542c33ed477ff0c8a4
+ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
+ms.openlocfilehash: 7181a51a91997124b2c5c8ba184261de63de9caf
 
 ---
 
-# Selecionar contatos
+# <a name="select-contacts"></a>Selecionar contatos
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Por meio do namespace [**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002), você tem várias opções para selecionar contatos. Vamos mostrar aqui como selecionar um único contato ou vários deles e também como configurar o seletor de contatos para recuperar somente as informações de contatos necessárias para o aplicativo.
 
-## Configurar o seletor de contatos
+## <a name="set-up-the-contact-picker"></a>Configurar o seletor de contatos
 
 Crie uma instância de [**Windows.ApplicationModel.Contacts.ContactPicker**](https://msdn.microsoft.com/library/windows/apps/BR224913) e a atribua a uma variável.
 
@@ -25,7 +30,7 @@ Crie uma instância de [**Windows.ApplicationModel.Contacts.ContactPicker**](htt
 var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
 ```
 
-## Definir o modo de seleção (opcional)
+## <a name="set-the-selection-mode-optional"></a>Definir o modo de seleção (opcional)
 
 Por padrão, o seletor de contatos recupera todos os dados disponíveis para os contatos selecionados pelo usuário. A propriedade [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) permite configurar o seletor de contatos para recuperar somente os campos de dados necessários ao aplicativo. Esta é a maneira mais eficiente de usar o seletor de contatos, caso você precise apenas de um subconjunto dos dados de contato disponíveis.
 
@@ -41,7 +46,7 @@ Depois, use a propriedade [**DesiredFieldsWithContactFieldType**](https://msdn.m
 contactPicker.DesiredFieldsWithContactFieldType.Add(Windows.ApplicationModel.Contacts.ContactFieldType.Email);
 ```
 
-## Iniciar o seletor
+## <a name="launch-the-picker"></a>Iniciar o seletor
 
 ```cs
 Contact contact = await contactPicker.PickContactAsync();
@@ -54,7 +59,7 @@ public IList<Contact> contacts;
 contacts = await contactPicker.PickContactsAsync();
 ```
 
-## Processar os contatos
+## <a name="process-the-contacts"></a>Processar os contatos
 
 Quando o seletor retornar, verifique se o usuário selecionou algum contato. Se tiver selecionado, processe as informações de contatos.
 
@@ -83,7 +88,7 @@ if (contacts != null && contacts.Count > 0)
 }
 ```
 
-## Exemplo completo (contato único)
+## <a name="complete-example-single-contact"></a>Exemplo completo (contato único)
 
 Este exemplo usa o seletor de contatos para recuperar o nome de um único contato junto com um endereço de email, a localização ou o número de telefone.
 
@@ -163,7 +168,7 @@ private void AppendContactFieldValues<T>(TextBlock content, IList<T> fields)
 }
 ```
 
-## Exemplo completo (vários contatos)
+## <a name="complete-example-multiple-contacts"></a>Exemplo completo (vários contatos)
 
 Este exemplo usa o seletor de contatos para recuperar vários contatos e, em seguida, adicioná-los a um controle [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) chamado `OutputContacts`.
 
@@ -226,12 +231,12 @@ public class ContactItemAdapter
 }
 ```
 
-## Resumo e próximas etapas
+## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
 Agora, você já tem o entendimento básico de como usar o seletor de contatos para recuperar informações de contatos. Baixe as [amostras de aplicativo Universal do Windows](http://go.microsoft.com/fwlink/p/?linkid=619979) do GitHub para ver mais exemplos de como usar contatos e o seletor de contatos.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

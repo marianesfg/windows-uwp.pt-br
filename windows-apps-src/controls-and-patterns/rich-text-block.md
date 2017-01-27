@@ -6,11 +6,11 @@ ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 82c7e80afde143d7d12bbf4fe49aa2c52f244f6f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: a5a4c96723bd5c4cabdc7dd6dfc114b7af4d10f8
 
 ---
-# Bloco Rich Text
+# <a name="rich-text-block"></a>Bloco Rich Text
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,22 +19,14 @@ Blocos Rich Text fornecem vários recursos para layout de texto avançado que vo
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx"><strong>Classe RichTextBlock</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx"><strong>Classe RichTextBlockOverflow</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx"><strong>Classe Paragraph</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx"><strong>Classe Typography</strong></a></li>
+<li>[**Classe RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)</li>
+<li>[**Classe RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx)</li>
+<li>[**Classe Paragraph**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx)</li>
+<li> [**Classe Typography**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-
-## Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use um **RichTextBlock** quando precisar de suporte para vários parágrafos, várias colunas ou outros layouts de texto complexos ou elementos de interface do usuário embutidos, como imagens.
 
@@ -42,10 +34,7 @@ Use um **TextBlock** para exibir mais texto somente leitura em seu aplicativo. V
 
 Para obter mais informações sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
 
-## Exemplos
-
-
-## Criar um bloco Rich Text
+## <a name="create-a-rich-text-block"></a>Criar um bloco Rich Text
 
 A propriedade de conteúdo de RichTextBlock é a propriedade [Blocks](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.blocks.aspx), que oferece suporte a texto baseado em parágrafos por meio do elemento [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx). Ele não tem uma propriedade **Text** que você pode usar para acessar facilmente o conteúdo de texto do controle em seu aplicativo. No entanto, RichTextBlock fornece vários recursos exclusivos que TextBlock não fornece. 
 
@@ -54,7 +43,7 @@ RichTextBlock oferece suporte a:
 - Elementos de interface do usuário embutidos. Use [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.inlineuicontainer.aspx) para exibir elementos de interface do usuário, como imagens, embutidos no seu texto.
 - Contêineres de excedente. Use elementos [RichTextBlockOverflow](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx) para criar layouts de texto de várias colunas.
 
-### Parágrafos
+### <a name="paragraphs"></a>Parágrafos
 
 Use elementos [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) para definir os blocos de texto a serem exibidos dentro de um controle RichTextBlock. Cada RichTextBlock deve incluir pelo menos um Paragraph. 
 
@@ -68,7 +57,7 @@ Você pode definir o valor de recuo para todos os parágrafos em RichTextBlock d
 </RichTextBlock>
 ```
 
-### Elementos de interface do usuário embutidos
+### <a name="inline-ui-elements"></a>Elementos de interface do usuário embutidos
 
 A classe [**InlineUIContainer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.inlineuicontainer.aspx) permite inserir qualquer UIElement embutido no seu texto. Um cenário comum é colocar uma Imagem embutida no texto, mas você também pode usar elementos interativos, como Button ou CheckBox.
 
@@ -88,7 +77,7 @@ Este exemplo mostra como usar InlineUIContainer para inserir uma imagem em RichT
 </RichTextBlock>
 ```
 
-## Contêineres de excedente
+## <a name="overflow-containers"></a>Contêineres de excedente
 
 Você pode usar RichTextBlock com elementos [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx) para criar layouts de várias colunas ou outros layouts de página avançados. O conteúdo de um elemento RichTextBlockOverflow sempre vem de um elemento RichTextBlock. Vincule elementos RichTextBlockOverflow definindo-os como OverflowContentTarget de RichTextBlock ou outro RichTextBlockOverflow.
 
@@ -110,11 +99,11 @@ Consulte um exemplo simples que cria um layout de duas colunas. Veja a seção E
 </Grid>
 ```
 
-## Formatação do texto
+## <a name="formatting-text"></a>Formatação do texto
 
 Embora RichTextBlock armazene texto sem formatação, você pode aplicar várias opções de formatação para personalizar como o texto será renderizado no aplicativo. Você pode definir propriedades de controle padrão como FontFamily, FontSize, FontStyle, Foreground e CharacterSpacing para alterar a aparência do texto. Você também pode usar os elementos de texto embutidos e propriedades anexadas Typography para formatar seu texto. Essas opções afetam apenas como RichTextBlock exibe o texto localmente, portanto, se você copiar e colar o texto em um controle Rich Text, por exemplo, nenhuma formatação será aplicada.
 
-### Elementos embutidos
+### <a name="inline-elements"></a>Elementos embutidos
 
 O namespace [Windows.UI.Xaml.Documents](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.aspx) fornece uma variedade de elementos de texto embutidos que você pode usar para formatar o texto, como Bold, Italic, Run, Span e LineBreak. Uma maneira comum de aplicar formatação a seções de texto é colocar o texto em um elemento Run ou Span e, em seguida, definir propriedades nesse elemento.
 
@@ -127,7 +116,7 @@ Veja a seguir um Parágrafo com a primeira frase em texto em negrito, azul, 16 p
 </Paragraph>
 ```
 
-### Typography
+### <a name="typography"></a>Typography
 
 As propriedades anexadas da classe [Typography](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx) fornecem acesso a um conjunto de propriedades de tipografia Microsoft OpenType. Você pode definir essas propriedades anexadas em RichTextBlock ou nos elementos de texto embutidos individuais, conforme mostrado aqui.
 
@@ -140,13 +129,13 @@ As propriedades anexadas da classe [Typography](https://msdn.microsoft.com/libra
 </RichTextBlock>
 ```
 
-## Recomendações
+## <a name="recommendations"></a>Recomendações
 
 Consulte Tipografia e Diretrizes para fontes.
 
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 [Controles de texto](text-controls.md)
 
@@ -165,6 +154,6 @@ Consulte Tipografia e Diretrizes para fontes.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

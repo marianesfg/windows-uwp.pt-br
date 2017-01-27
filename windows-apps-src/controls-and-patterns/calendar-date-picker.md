@@ -6,11 +6,11 @@ ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
 label: Calendar date picker
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: d32c643db84eeb7c81304467a326566938e726c0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 0c565c036b8bcb7c26ad860231ee649b73c636c3
 
 ---
-# Seletor de data do calendário
+# <a name="calendar-date-picker"></a>Seletor de data do calendário
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,33 +19,26 @@ O seletor de data do calendário é um controle suspenso otimizado para escolher
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx"><strong>Classe CalendarDatePicker</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx"><strong>Propriedade Date</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx"><strong>Evento DateChanged</strong></a></li>
+<li>[**Classe CalendarDatePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx)</li>
+<li>[**Propriedade Date**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx)</li>
+<li>[**Evento DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-## Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 Use um **seletor de data do calendário** para permitir que um usuário selecione uma única data de um modo de exibição de calendário contextual. Use-o para coisas como escolher a data de um compromisso ou de partida.
 
 Para permitir que um usuário selecione uma data conhecida, como uma data de nascimento, onde o contexto do calendário não é importante, considere usar um [**seletor de data**](date-picker.md).
 
 Para obter mais informações sobre como escolher o controle correto, consulte o artigo [Controles de data e hora](date-and-time.md).
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
-O ponto de entrada exibe o texto de espaço reservado se uma data não tiver sido definida. Caso contrário, ele exibe a data escolhida. Quando o usuário seleciona o ponto de entrada, uma visão de calendário se expande para que o usuário faça uma seleção de data. A exibição de calendário substitui outras interfaces do usuário; ela não as tira do caminho.
+O ponto de entrada exibe o texto de espaço reservado se uma data não tiver sido definida. Caso contrário, ele exibe a data escolhida. Quando o usuário seleciona o ponto de entrada, uma exibição de calendário se expande para que o usuário faça uma seleção de data. A exibição de calendário substitui outras interfaces do usuário; ela não as tira do caminho.
 
 ![Exemplo de seletor de data do calendário](images/calendar-date-picker-2-views.png)
 
-## Criar um seletor de data
+## <a name="create-a-date-picker"></a>Criar um seletor de data
 
 ```xaml
 <CalendarDatePicker x:Name="arrivalCalendarDatePicker" Header="Arrival date"/>
@@ -64,7 +57,7 @@ O seletor de data do calendário tem um [**CalendarView**](https://msdn.microsof
 
 No entanto, você não pode alterar o [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selectionmode.aspx) do CalendarView interno para permitir seleção múltipla. Se você precisa permitir que o usuário selecione várias datas ou de um calendário que esteja sempre visível, considere usar um modo de exibição de calendário em vez de um seletor de data do calendário. Consulte o artigo [Calendar view](calendar-view.md) para saber mais sobre como você pode modificar a exibição de calendário.
 
-### Selecionando datas
+### <a name="selecting-dates"></a>Selecionando datas
 
 Use a propriedade [**Data**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx) para obter ou definir a data selecionada. Por padrão, a propriedade Date é **null**. Quando um usuário seleciona uma data na exibição de calendário, essa propriedade é atualizada. Um usuário pode limpar a data clicando na data selecionada na exibição de calendário para desmarcá-la. 
 
@@ -80,9 +73,10 @@ Quando você define a data em código, o valor é restringido pelas propriedades
 
 Você pode manipular o evento [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) para ser notificado quando o valor Date for alterado.
 
-> **Observação**&nbsp;&nbsp;Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo sobre os controles de Data e Hora.
+> [!NOTE]
+Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo Controles de data e hora.
 
-### Definindo um texto de cabeçalho e o espaço reservado
+### <a name="setting-a-header-and-placeholder-text"></a>Definindo um texto de cabeçalho e o espaço reservado
 
 Você pode adicionar um [**Header**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.header.aspx) (ou rótulo) e um [**PlaceholderText**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.placeholdertext.aspx) (ou marca d'água) para o seletor de data do calendário fornecer ao usuário uma indicação de para que ele é usado. Para personalizar a aparência do cabeçalho, você pode definir a propriedade [**HeaderTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.headertemplate.aspx) em vez de Header.
 
@@ -93,8 +87,11 @@ O texto de espaço reservado padrão é "selecionar uma data". Você pode remove
                     PlaceholderText="Choose your arrival date"/>
 ```
 
+## <a name="get-the-sample-code"></a>Obter o código de exemplo
+* [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
-## Artigos relacionados
+
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Controles de data e hora](date-and-time.md)
 - [Exibição de Calendário](calendar-view.md)
@@ -103,6 +100,6 @@ O texto de espaço reservado padrão é "selecionar uma data". Você pode remove
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

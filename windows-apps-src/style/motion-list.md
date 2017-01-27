@@ -6,24 +6,26 @@ ms.assetid: A85006AE-4992-457a-B514-500B8BEF5DC8
 label: Motion--add and delete animations
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: b6c57d1ceadd0785a51c518bc51f93892aa472d5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e1fc86e5110da8926194e20947552337216d4a72
 
 ---
 
-# Adicionar e excluir animações
+# <a name="add-and-delete-animations"></a>Adicionar e excluir animações
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Animações de lista permitem inserir ou remover um ou vários itens de uma coleção, como um álbum de fotos ou uma lista de resultados de pesquisa.
 
-**APIs importantes**
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Classe AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243048)</li>
+</ul>
+</div>
 
--   [**Classe AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243048)
 
-
-## O que fazer e o que não fazer
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
 
 -   Use as animações de lista para adicionar um único item novo a um conjunto de itens existente. Por exemplo, use-as quando um novo email chegar ou quando uma nova foto for importada para um conjunto existente.
@@ -35,10 +37,8 @@ Animações de lista permitem inserir ou remover um ou vários itens de uma cole
 
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
-
-**Para desenvolvedores (XAML)**
 * [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [Animando adições e exclusões de lista](https://msdn.microsoft.com/library/windows/apps/xaml/jj649430)
 * [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
@@ -54,6 +54,6 @@ Animações de lista permitem inserir ou remover um ou vários itens de uma cole
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

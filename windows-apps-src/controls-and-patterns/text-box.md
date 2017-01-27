@@ -4,11 +4,11 @@ ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
 label: Text box
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f9750e87516d38b16a589e5271de25d9f241e97b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 3cbfa4a2896e5e7453d9fe1793f422d2f7b60c79
 
 ---
-# Caixa de texto
+# <a name="text-box"></a>Caixa de texto
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,17 +19,13 @@ O controle TextBox tem vários recursos que podem simplificar a entrada de texto
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx"><strong>Classe TextBox</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx"><strong>Propriedade Text</strong></a></li>
+<li>[**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)</li>
+<li>[**Propriedade Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-## Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
 Use o controle **TextBox** para permitir que o usuário digite e edite texto não formatado, como em um formulário. Você pode usar a propriedade [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) para obter e definir o texto em um TextBox.
 
@@ -41,13 +37,13 @@ Use o controle [**AutoSuggestBox**](auto-suggest-box.md) para permitir que o usu
 
 Use [ **RichEditBox** ](rich-edit-box.md) para exibir e editar arquivos Rich Text.
 
-Para obter mais informações sobre como escolher o controle de texto certo, consulte o artigo [Text controls](text-controls.md).
+Para obter mais informações sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 ![Uma caixa de texto](images/text-box.png)
 
-## Criar uma caixa de texto
+## <a name="create-a-text-box"></a>Criar uma caixa de texto
 
 Aqui está o XAML para uma caixa de texto simples com um texto de cabeçalho e espaço reservado.
 
@@ -68,7 +64,7 @@ Consulte a caixa de texto resultante desse XAML.
 
 ![Uma caixa de texto simples](images/text-box-ex1.png)
 
-### Use uma caixa de texto para entrada de dados em um formulário
+### <a name="use-a-text-box-for-data-input-in-a-form"></a>Use uma caixa de texto para entrada de dados em um formulário
 
 É comum usar uma caixa de texto para aceitar a entrada de dados em um formulário e usar a propriedade [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) para obter a cadeia de caracteres de texto completa da caixa de texto. Em geral, é usado um evento, como um clique no botão Enviar, para acessar a propriedade Text, mas você poderá manipular o evento [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanged.aspx) ou [TextChanging](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanging.aspx) se precisar fazer algo quando o texto for alterado.
 
@@ -87,7 +83,7 @@ O botão Limpar tudo não é mostrado em nenhum destes casos:
 - **AcceptsReturn** é **true**
 - **TextWrap** tem um valor diferente de **NoWrap**
 
-### Tornar uma caixa de texto somente leitura
+### <a name="make-a-text-box-read-only"></a>Tornar uma caixa de texto somente leitura
 
 Você pode tornar uma caixa de texto somente leitura definindo a propriedade [IsReadOnly](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.isreadonly.aspx) como **true**. Em geral, você alterna essa propriedade no código do aplicativo com base nas condições em seu aplicativo. Se precisar que o texto seja sempre somente leitura, considere usar TextBlock.
 
@@ -98,7 +94,7 @@ Um usuário pode selecionar e copiar texto.
 IsEnabled
 
 
-### Habilitar a entrada de várias linhas
+### <a name="enable-multi-line-input"></a>Habilitar a entrada de várias linhas
 
 Há duas propriedades que você pode usar para determinar se a caixa de texto exibe texto em mais de uma linha. Em geral, as duas propriedades são definidas para fazer uma caixa de texto de várias linhas.
 - Para que a caixa de texto permita e exiba os caracteres newline ou return, defina a propriedade [**AcceptsReturn**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx) como **true**.
@@ -130,7 +126,7 @@ A caixa de texto tem a seguinte aparência depois que texto é adicionado.
 
 ![Uma caixa de texto de várias linhas](images/text-box-multi-line.png)
 
-### Formatar a exibição de texto
+### <a name="format-the-text-display"></a>Formatar a exibição de texto
 
 Use a propriedade [TextAlignment]() para alinhar o texto em uma caixa de texto. Para alinhar a caixa de texto ao layout da página, use as propriedades [HorizontalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) e [VerticalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx).
 
@@ -166,7 +162,7 @@ A caixa de texto resultante tem esta aparência.
 
 ![Uma caixa de texto formatado](images/text-box-formatted.png)
 
-### Modificar o menu de contexto
+### <a name="modify-the-context-menu"></a>Modificar o menu de contexto
 
 Por padrão, os comandos mostrados no menu de contexto da caixa de texto dependem do estado da caixa. Por exemplo, os comandos a seguir podem ser mostrados quando a caixa de texto é editável.
 
@@ -180,7 +176,7 @@ Desfazer | texto foi alterado.
 
 Para modificar os comandos mostrados no menu de contexto, manipule o evento [ContextMenuOpening](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.contextmenuopening.aspx). Para obter um exemplo disso, consulte o cenário 2 do [exemplo de ContextMenu](http://go.microsoft.com/fwlink/p/?linkid=234891). Para obter informações de design, consulte Diretrizes para ver os menus de contexto.
 
-### Selecionar, copiar e colar
+### <a name="select-copy-and-paste"></a>Selecionar, copiar e colar
 
 Você pode obter ou definir o texto selecionado em uma caixa de texto usando a propriedade [SelectedText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectedtext.aspx). Use as propriedades [SelectionStart](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionstart.aspx) e [SelectionLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionlength.aspx) e os métodos [Select](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.select.aspx) e [SelectAll](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectall.aspx) para manipular a seleção de texto. Manipule o evento [SelectionChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionchanged.aspx) para fazer algo quando o usuário selecionar ou desmarcar texto. Você pode alterar a cor usada para realçar o texto selecionado, definindo a propriedade [SelectionHighlightColor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionhighlightcolor.aspx).
 
@@ -214,7 +210,7 @@ Este é o resultado deste código.
 
 ![Texto selecionado em uma caixa de texto](images/text-box-selection.png)
 
-## Escolha o teclado correto para o controle de texto
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>Escolha o teclado correto para o controle de texto
 
 Para ajudar os usuários a inserir dados usando o teclado virtual ou SIP (Soft Input Panel), você pode configurar o escopo de entrada do controle de texto para corresponder ao tipo de dado que se espera que o usuário insira.
 
@@ -228,7 +224,7 @@ Outras propriedades que afetam o teclado virtual são [IsSpellCheckEnabled](http
 
 Para obter mais informações e exemplos, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://msdn.microsoft.com/library/windows/apps/mt280229) e a documentação de propriedade.
 
-## Recomendações
+## <a name="recommendations"></a>Recomendações
 
 -   Use um texto de rótulo ou espaço reservado se a finalidade da caixa de texto não for clara. Um rótulo fica visível, independentemente da caixa de entrada de texto ter ou não um valor. O texto de espaço reservado é exibido dentro da caixa de entrada de texto e desaparece uma vez que um valor tiver sido inserido.
 -   Defina uma largura apropriada para a caixa de texto para o intervalo de valores que podem ser inseridos. O comprimento da palavra varia entre os idiomas, então leve em conta a localização se quiser que seu aplicativo esteja preparado para uso internacional.
@@ -273,25 +269,18 @@ Para obter mais informações e exemplos, consulte [Usar o escopo de entrada par
 
 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
-[Controles de texto](text-controls.md)
-
-**Para designers**
+- [Controles de texto](text-controls.md)
 - [Diretrizes para verificação ortográfica](spell-checking-and-prediction.md)
 - [Adicionando pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
 - [Diretrizes para entrada de texto](text-controls.md)
-
-**Para desenvolvedores (XAML)**
 - [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
-
-
-**Para desenvolvedores (outros)**
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

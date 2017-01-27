@@ -6,26 +6,32 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Proteção de Informações do Windows (WIP)"
 translationtype: Human Translation
-ms.sourcegitcommit: 724d9edf67d0f73ceb3eb2ac323e0a0f42f2dd0d
-ms.openlocfilehash: f9cfa8d1d7ea4e78208a4fb3fc853884a13a676c
+ms.sourcegitcommit: 8a0ce7282ffaf76bcea94eec5ec3e3ceb99aa5ac
+ms.openlocfilehash: 81bd77d0153c17c80ccdce77332ed57fb751c8ec
 
 ---
 
-# Proteção de Informações do Windows (WIP)
+# <a name="windows-information-protection-wip"></a>Proteção de Informações do Windows (WIP)
 
 __Observação__ A política Proteção de Informações do Windows (WIP) pode ser aplicada ao Windows 10, versão 1607.
 
 A WIP protege os dados que pertencem a uma organização aplicando políticas que são definidas pela organização. Se seu aplicativo estiver incluído nessas políticas, todos os dados produzidos por seu aplicativo estarão sujeitos às restrições de política. Este tópico ajuda você a criar aplicativos que impõem essas políticas de forma mais branda sem afetar os dados pessoais do usuário.
 
-## Primeiro, o que é WIP?
+## <a name="first-what-is-wip"></a>Primeiro, o que é WIP?
 
-WIP é um conjunto de recursos em desktops, notebooks, tablets e telefones que dão suporte ao sistema Gerenciamento de Dispositivos Móveis (MDM) da organização. A WIP oferece à organização maior controle sobre como os dados são tratados em dispositivos gerenciados pela organização. Por exemplo, os administradores podem identificar quais aplicativos têm permissão para acessar os arquivos que pertencem à organização e se os usuários podem copiar dados dos arquivos e, em seguida, colá-los em seus documentos pessoais.
+WIP é um conjunto de recursos em desktops, notebooks, tablets e telefones que dão suporte ao sistema Gerenciamento de Dispositivos Móveis (MDM) e Gerenciamento de Aplicativos Móveis (MAM) da organização.
+
+A WIP, juntamente com o MDM, oferece à organização maior controle sobre como os dados são tratados em dispositivos gerenciados pela organização. Às vezes, os usuários trazem dispositivos para trabalhar e não os registram no MDM da organização  Nesses casos, as organizações podem usar o MAM para ter maior controle sobre como seus dados são manipulados em aplicativos de linha de negócios específicos que os usuários instalam em seus dispositivos.
+
+Usando o MDM ou MAM, os administradores podem identificar quais aplicativos têm permissão para acessar os arquivos que pertencem à organização e se os usuários podem copiar dados dos arquivos e, em seguida, colá-los em seus documentos pessoais.
 
 Veja como funciona. Os usuários registram seus dispositivos no sistema de gerenciamento de dispositivos móveis (MDM) da organização. O administrador da organização de gerenciamento usa o Microsoft Intune ou o System Center Configuration Manager (SCCM) para definir e, em seguida, implantar uma política nos dispositivos registrados.
 
+Se os usuários não forem obrigados a registrar seus dispositivos, os administradores usarão o sistema MAM para definir e implantar uma política que se aplique a aplicativos específicos. Quando os usuários instalarem qualquer um desses aplicativos, eles receberão a política associada.
+
 Essa política identifica os aplicativos que podem acessar dados corporativos (denominados *lista de permissão* da política). Esses aplicativos podem acessar arquivos empresariais protegidos, redes virtuais privadas (VPN) e dados corporativos na área de transferência ou por meio de um contrato de compartilhamento. A política também define as regras que controlam os dados. Por exemplo, se os dados podem ser copiados dos arquivos de propriedade da empresa e depois colados em arquivos que não pertencem à empresa.
 
-Se os usuários cancelarem o registro de seus dispositivos do sistema MDM da organização, os administradores poderão limpar remotamente os dados corporativos do dispositivo.
+Se os usuários cancelarem o registro de seus dispositivos no sistema MDM da organização ou desinstalarem os aplicativos identificados pelo sistema MAM da organização, os administradores poderão apagar remotamente os dados corporativos do dispositivo.
 
 ![Ciclo de vida do Wip](images/wip-lifecycle.png)
 
@@ -37,7 +43,7 @@ Se seu aplicativo estiver na lista de permissões, todos os dados produzidos por
 
 Isso será bom se seu aplicativo se destina apenas a uso empresarial. Mas se seu aplicativo cria dados que os usuários consideram pessoais, é possível *capacitar* seu aplicativo para distinguir, de forma inteligente, entre dados pessoais e corporativos. Chamamos esse tipo de aplicativo *habilitado para empresas* porque ele pode impor a política corporativa, mas preservar a integridade dos dados pessoais do usuário.
 
-## Criar um aplicativo habilitado para empresas
+## <a name="create-an-enterprise-enlightened-app"></a>Criar um aplicativo habilitado para empresas
 
 Use APIs do WIP para habilitar seu aplicativo e, em seguida, declará-lo como habilitado para empresas.
 
@@ -55,17 +61,29 @@ Se você estiver pronto para capacitar seu aplicativo, consulte um destes proced
 
 **Para aplicativos de desktop que você criar usando C++**
 
-[Crie um aplicativo capacitado que consuma dados corporativos e pessoais (C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
+[Crie um app habilitado que consuma dados corporativos e pessoais (C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
 
-Entre outras coisas, os aplicativos empresariais capacitados compartilham estas qualidades:
 
-* Eles mantêm dados corporativos protegidos, estejam eles em repouso, em uso ou em trânsito.
-* Eles reconhecem dados pessoais e impedem que eles sejam submetidos a restrições de política.
-* Reconhecem dados corporativos e os protegem quando chegam ao aplicativo.
-* Eles protegem os dados corporativos que saem do aplicativo.
+## <a name="create-non-enlightened-enterprise-app"></a>Criar um aplicativo corporativo não habilitado
 
-  Por exemplo, eles impedem que os dados sejam enviados para uma rede não empresarial, encapsulam os dados em um formato criptografado portátil antes de permitir a sua transferência móvel e possivelmente (dependendo das configurações da política) enviam um prompt para o usuário antes de ele colar dados empresariais em um aplicativo que não esteja na lista de permissões.
+Se você estiver criando um aplicativo de linha de negócios (LOB) não destinado ao uso pessoal, talvez não seja preciso habilitá-lo.
 
+### <a name="windows-desktop-apps"></a>Aplicativos da área de trabalho do Windows
+Você não precisa habilitar um aplicativo da área de trabalho do Windows, mas deve testá-lo para garantir que ele funcione corretamente sob a política. Por exemplo, inicie seu aplicativo, use-o e cancele o registro do dispositivo no MDM. Em seguida, verifique se o aplicativo pode ser iniciado novamente. Se os arquivos essenciais para o funcionamento do aplicativo estiverem criptografados, o aplicativo poderá não ser iniciado. Além disso, revise os arquivos com os quais seu aplicativo interage para garantir que ele não criptografe inadvertidamente arquivos pessoais para o usuário. Isso pode incluir arquivos de metadados, imagens e outras coisas.
+
+Depois de testar seu aplicativo, adicione esse sinalizador ao arquivo de recursos ou ao seu projeto e recompile o aplicativo.
+
+```cpp
+MICROSOFTEDPAUTOPROTECTIONALLOWEDAPPINFO EDPAUTOPROTECTIONALLOWEDAPPINFOID
+BEGIN
+    0x0001
+END
+```
+Embora as políticas de MDM não exijam o sinalizador, as políticas de MAM exigem.
+
+### <a name="uwp-apps"></a>Aplicativos UWP
+
+Se você espera que seu aplicativo seja incluído em uma política de MAM, habilite-o. As políticas implantadas em dispositivos sob o MDM não exigirão isso, mas se você distribuir seu aplicativo para consumidores organizacionais, será difícil, se não impossível, determinar qual tipo de sistema de gerenciamento de política eles usarão. Para garantir que seu aplicativo funcione nos dois tipos de sistemas de gerenciamento de políticas (MDM e MAM), você deve habilitar seu aplicativo.
 
 
 
@@ -76,6 +94,6 @@ Entre outras coisas, os aplicativos empresariais capacitados compartilham estas 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

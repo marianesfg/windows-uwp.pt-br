@@ -4,12 +4,12 @@ ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: "Este artigo descreve como usar a classe CameraCaptureUI para capturar fotos ou vídeos usando a interface do usuário da câmera integrada ao Windows"
 title: "Capturar fotos e vídeos com a interface do usuário da câmera interna do Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: b4bf4d74ae291186100a553a90fd93f890b8ece4
-ms.openlocfilehash: fea1c2f8f52ec9ac485d9a4846cc0661243a7ccc
+ms.sourcegitcommit: 65508d32995f57672f94dffa4866a86d57903d00
+ms.openlocfilehash: 10ac3f53f0f8128985c39154f74a9348a40641b5
 
 ---
 
-# Capturar fotos e vídeos com a interface do usuário da câmera interna do Windows
+# <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Capturar fotos e vídeos com a interface do usuário da câmera interna do Windows
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -18,7 +18,11 @@ Este artigo descreve como usar a classe CameraCaptureUI para capturar fotos ou v
 
 Se você quiser fornecer a interface de usuário da sua própria câmera ou se seu cenário exigir um controle aprofundado e mais robusto da operação de captura, você deverá usar o objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) e implementar sua própria experiência de captura. Para obter mais informações, consulte [Captura básica de foto, vídeo e áudio com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md).
 
-## Capturar uma foto com CameraCaptureUI
+> [!NOTE]
+> Você não deve especificar as funcionalidades **webcam** ou **microfone** no arquivo de manifesto do aplicativo se você estiver usando CameraCaptureUI. Se você fizer isso, seu aplicativo será exibido nas configurações de privacidade da câmera do dispositivo, mas, mesmo se o usuário negar o acesso da câmera ao seu aplicativo, isso não impedirá CameraCaptureUI de capturar a mídia. Isso ocorre porque o aplicativo de câmera interno do Windows é um aplicativo de terceiros confiável que exige que o usuário inicie a captura de foto, áudio e vídeo pressionando um botão. Seu aplicativo poderá ser reprovado na certificação do WACK (Kit de Certificação de Aplicativos Windows) quando enviado à Loja se você especificar as funcionalidades de webcam ou microfone ao usar CameraCaptureUI.
+> Você deve especificar as funcionalidades de webcam ou microfone no arquivo de manifesto do aplicativo se estiver usando o MediaCapture para capturar áudio, fotos ou vídeo por meio de programação.
+
+## <a name="capture-a-photo-with-cameracaptureui"></a>Capturar uma foto com CameraCaptureUI
 
 Para usar a interface do usuário de captura com câmera, inclua o namespace [**Windows.Media.Capture**](https://msdn.microsoft.com/library/windows/apps/br226738) em seu projeto. Para as operações de arquivo com o arquivo de imagem retornado, inclua [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346).
 
@@ -59,7 +63,7 @@ O controle **Image** requer que o controle de imagem esteja no formato de BGRA8 
 
 [!code-cs[SetImageSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetSetImageSource)]
 
-## Capturar um vídeo com CameraCaptureUI
+## <a name="capture-a-video-with-cameracaptureui"></a>Capturar um vídeo com CameraCaptureUI
 
 Para capturar um vídeo, crie um novo objeto [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030). Usando a propriedade [**VideoSettings**](https://msdn.microsoft.com/library/windows/apps/br241059) do objeto, você pode especificar propriedades para o vídeo retornado, como o formato de imagem de vídeo.
 
@@ -103,7 +107,7 @@ Você pode continuar a capturar videoclipes e adicioná-los à composição. Par
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -118,6 +122,6 @@ Você pode continuar a capturar videoclipes e adicioná-los à composição. Par
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

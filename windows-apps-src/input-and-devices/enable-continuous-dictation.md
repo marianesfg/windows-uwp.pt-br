@@ -5,24 +5,31 @@ title: "Habilitar o ditado contínuo"
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 label: Continuous dictation
 template: detail.hbs
+keywords: "fala, voz, reconhecimento de fala, linguagem natural, ditado, entrada, interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 1f074b210d42b1c40817e88b5d73921652fa7d05
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: f4353807c83cbf91c385b31acfd481abb6ea5aed
 
 ---
 
-# Ditado contínuo
+# <a name="continuous-dictation"></a>Ditado contínuo
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Saiba como capturar e reconhecer entrada de fala de ditado contínuo de formato longo.
 
-**APIs importantes**
-
--   [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896)
--   [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)
-
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896)</li>
+<li>[**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)</li>
+</ul>
+</div>
 
 Em [Reconhecimento de fala](speech-recognition.md), você aprendeu como capturar e reconhecer entradas de fala relativamente curtas usando o método [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) ou o método [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245) de um objeto [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226), por exemplo, ao compor uma mensagem SMS curta ou fazer uma pergunta.
 
@@ -30,7 +37,7 @@ Para sessões de reconhecimento de fala contínuas mais longas, como ditado ou e
 
 
 
-## Configurar
+## <a name="set-up"></a>Configurar
 
 
 Seu aplicativo precisa de alguns objetos para gerenciar uma sessão de ditado contínuo:
@@ -64,7 +71,7 @@ Aqui, usamos um objeto [**StringBuilder**](https://msdn.microsoft.com/library/sy
 private StringBuilder dictatedTextBuilder;
 ```
 
-## Inicialização
+## <a name="initialization"></a>Inicialização
 
 
 Durante a inicialização do reconhecimento de fala contínua, você deve:
@@ -99,7 +106,7 @@ SpeechRecognitionCompilationResult result =
       await speechRecognizer.CompileConstraintsAsync();
 ```
 
-## Tratar eventos de reconhecimento
+## <a name="handle-recognition-events"></a>Tratar eventos de reconhecimento
 
 
 Você pode capturar uma única expressão ou frase curta chamando [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) ou [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245). 
@@ -204,7 +211,7 @@ private async void ContinuousRecognitionSession_Completed(
       }
 ```
 
-## Fornecer feedback de reconhecimento contínuo
+## <a name="provide-ongoing-recognition-feedback"></a>Fornecer feedback de reconhecimento contínuo
 
 
 Quando as pessoas conversam, elas frequentemente dependem do contexto para entender completamente o que está sendo dito. Da mesma forma, o reconhecedor de fala precisa de contexto para fornecer resultados de reconhecimento de alta confiabilidade. Por exemplo, sozinhas, as palavras "acento" e "assento" não podem ser diferenciadas até que mais contexto seja coletado das palavras adjacentes. Até que o reconhecedor tenha alguma confiança de que uma ou mais palavras foram reconhecidas corretamente, ele não acionará um evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900).
@@ -232,7 +239,7 @@ private async void SpeechRecognizer_HypothesisGenerated(
   }
 ```
 
-## Iniciar e parar o reconhecimento
+## <a name="start-and-stop-recognition"></a>Iniciar e parar o reconhecimento
 
 
 Antes de iniciar uma sessão de reconhecimento, verifique o valor da propriedade [**State**](https://msdn.microsoft.com/library/windows/apps/dn913915) do reconhecedor de fala. O reconhecedor de fala deve estar em um estado [**Idle**](https://msdn.microsoft.com/library/windows/apps/dn653227).
@@ -267,7 +274,7 @@ Se você definir qualquer campo particular ao cancelar a sessão de reconhecimen
 
  
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 
 * [Interações de controle por voz](speech-interactions.md)
@@ -284,6 +291,6 @@ Se você definir qualquer campo particular ao cancelar a sessão de reconhecimen
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

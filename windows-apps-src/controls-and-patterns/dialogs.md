@@ -5,11 +5,11 @@ title: "Caixas de diálogo e submenus"
 label: Dialogs
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
-ms.openlocfilehash: 6b0b680cd85d6f57c3ca06758ab7dcaef3f7ffe5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: bc428b42324cd584dfaee1db3c9eb834d30cd69d
 
 ---
-# Caixas de diálogo e submenus
+# <a name="dialogs-and-flyouts"></a>Caixas de diálogo e submenus
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -18,31 +18,11 @@ Caixas de diálogo e submenus são elementos transitórios da interface do usuá
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">Classe ContentDialog</a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Classe Flyout</a></li>
+<li>[Classe ContentDialog](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)</li>
+<li>[Classe Flyout](https://msdn.microsoft.com/library/windows/apps/dn279496)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-<!--
-<table>
-<tr>
-<th>Dialogs</th><th>Flyouts</th>
-</tr>
-<tr>
-<td>![Example of a full-button dialog](images/controls_dialog_twobutton.png)</td>
-<td>![Example of a flyout](images/flyout-example.png)</td>
-</tr>
-<tr>
-<td>Dialogs are modal UI overlays that provide contextual app information. Dialogs block interactions with the app window until being explicitly dismissed. They often request some kind of action from the user.  </td>
-<td>A flyout is a lightweight contextual popup that displays UI related to what the user is doing. It includes placement and sizing logic, and can be used to reveal a hidden control, show more detail about an item, or ask the user to confirm an action. Flyouts can be quickly dismissed by tapping or clicking somewhere outside the flyout, pressing the Escape key or Back button, resizing the app window, or changing the device's orientation.
-</td>
-</tr>
-</table>
--->
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -64,7 +44,7 @@ Caixas de diálogo e submenus são elementos transitórios da interface do usuá
 </div>
 </div>
 
-## Este é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 * Use caixas de diálogo e submenus para notificar os usuários de informações importantes ou para solicitar a confirmação ou informações adicionais antes de uma ação ser concluída. 
 * Não use um submenu no lugar de [tooltip](tooltips.md) ou [menu de contexto](menus.md). Use tooltip para mostrar uma breve descrição que fica oculta depois de um determinado tempo. Use um menu de contexto para ações contextuais relacionadas a um elemento da interface do usuário, como copiar e colar.  
@@ -78,22 +58,9 @@ Caixas de diálogo e submenus são usados para confirmar uma ação (como exclui
 
 
 
-## Caixas de diálogo vs. submenus
+## <a name="dialogs-vs-flyouts"></a>Caixas de diálogo vs. submenus
 
 Depois de determinar que você deseja usar uma caixa de diálogo ou menu suspenso, você precisa escolher qual usar. 
-
-<!--
-Dialogs are modal, which means they block all interaction with the app until the user selects a dialog button. To visually reinforce their modal behavior, dialogs draw an overlay layer which partially obscures the temporarily unreachable app UI.
-
-A flyout is a light dismiss control, meaning that users can choose from a variety of actions to quickly dismiss it. These interactions are intended to be lightweight and non-blocking. Light dismiss actions include
-
-* Clicking or tap outside the transient UI
-* Pressing the Escape key
-* Pressing the Back button
-* Resizing the app window
-* Changing device orientation
-
--->
 
 Considerando que as caixas de diálogo bloqueiam interações e os submenus não, as caixas de diálogo devem ser reservadas para situações em que você deseja que o usuário solte tudo para focar em uma informação específica ou responder a uma pergunta. Submenus, por outro lado, podem ser usados quando você deseja chamar a atenção para algo, mas terá problemas se o usuário desejar ignorá-lo. 
 
@@ -128,10 +95,16 @@ Considerando que as caixas de diálogo bloqueiam interações e os submenus não
 </div>
 </div>
 
+<div class="microsoft-internal-note">
+Os controles light dismiss prendem o foco do teclado ou gamepad dentro da interface do usuário transitória até serem ignorados. Para fornecer uma indicação visual para esse comportamento, os controles light dismiss no Xbox desenharão uma sobreposição que esmaece a visibilidade da interface do usuário fora do escopo. Esse comportamento pode ser modificado com a nova propriedade `LightDismissOverlayMode`. Por padrão, interfaces do usuário transitórias desenham a sobreposição light dismiss no Xbox, mas não em outras famílias de dispositivos, mas os aplicativos podem optar por forçar a sobreposição para estar sempre **Ativada** ou **Desativada**.
 
+```xaml
+<MenuFlyout LightDismissOverlayMode=\"Off\">
+```
+</div>
 
-## Caixas de diálogo
-### Diretrizes gerais
+## <a name="dialogs"></a>Caixas de diálogo
+### <a name="general-guidelines"></a>Diretrizes gerais
 
 -   Identifique claramente o problema ou o objetivo do usuário na primeira linha do texto da caixa de diálogo.
 -   O título da caixa de diálogo é a principal instrução e é opcional.
@@ -144,10 +117,17 @@ Considerando que as caixas de diálogo bloqueiam interações e os submenus não
 -   Pelo menos um botão da caixa de diálogo deve aparecer.
     -   Botões são o único mecanismo para que os usuários ignorem a caixa de diálogo.
     -   Use botões com texto que identifiquem respostas específicas para a instrução ou o conteúdo principal. Um exemplo é "Você permite que NomeDoAplicativo acesse o sua localização?", seguido pelos botões "Permitir" e "Bloquear". Respostas específicas podem ser entendidas mais rapidamente, resultando na tomada de decisão eficiente.
+    - Apresente os botões de confirmação nesta ordem: 
+        -   OK/[Faça]/Sim
+        -   [Não faça]/Não
+        -   Cancelar
+        
+        (onde [Faça] e [Não faça] são respostas específicas à instrução principal.)
+   
 -   Caixas de diálogo de erro exibem a mensagem de erro na caixa de diálogo, juntamente com quaisquer informações pertinentes. O único botão usado em uma caixa de diálogo de erro deve ser "Fechar" ou uma ação semelhante.
 -   Não use caixas de diálogo para erros que são contextuais a um local específico da página, como erros de validação (em campos de senha, por exemplo). Use a própria tela do aplicativo para mostrar erros embutidos.
 
-### Caixas de diálogo de confirmação (OK/Cancelar)
+### <a name="confirmation-dialogs-okcancel"></a>Caixas de diálogo de confirmação (OK/Cancelar)
 Uma caixa de diálogo de confirmação proporciona aos usuários a oportunidade de confirmar que desejam executar uma ação. Ele podem afirmar a ação, ou optar por cancelar.  
 Uma caixa de diálogo de confirmação típica tem dois botões: um botão de afirmação ("OK") e um botão Cancelar.  
 
@@ -163,7 +143,7 @@ Uma caixa de diálogo de confirmação típica tem dois botões: um botão de af
 
 > Algumas plataformas colocam o botão de afirmação à direita em vez de à esquerda. Por que é recomendável colocá-lo no lado esquerdo?  Se você considerar que a maioria dos usuários é destra e eles seguram o telefone com essa mão, é realmente mais confortável pressionar o botão de afirmação quando ele está à esquerda, pois o botão tem mais chances de estar dentro do raio do polegar do usuário. Botões no lado direito da tela exigem que o usuário puxe o polegar para dentro para uma posição mais confortável.
 
-### Criar uma caixa de diálogo
+### <a name="create-a-dialog"></a>Criar uma caixa de diálogo
 Para criar uma caixa de diálogo, use a [classe ContentDialog](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx). Você pode criar uma caixa de diálogo no código ou na marcação. Embora seja geralmente mais fácil definir os elementos de interface do usuário em XAML, no caso de uma caixa de diálogo simples, é realmente mais fácil usar apenas o código. Este exemplo cria uma caixa de diálogo para notificar o usuário que não há nenhuma conexão Wi-Fi e, em seguida, usa o método [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) para exibi-la.
 
 ```csharp
@@ -206,12 +186,16 @@ private async void displayDeleteFileDialog()
 }
 ```
 
-## Submenus
-###  Criar um submenu
+## <a name="flyouts"></a>Submenus
+###  <a name="create-a-flyout"></a>Criar um submenu
 
-Um submenu é um contêiner aberto que pode mostrar uma interface do usuário arbitrária como conteúdo.  
+Um submenu é um contêiner aberto que pode mostrar uma interface do usuário arbitrária como conteúdo. 
 
-Submenus são anexados a controles específicos. Você pode usar a propriedade [Placement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx) para especificar onde o submenu aparece: Parte superior, esquerda, inferior, direito ou inteira. Se você selecionar o [Modo de posicionamento completo](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx), o aplicativo se estende o submenu e centraliza na janela do aplicativo. Quando visíveis, eles devem ser ancorados ao objeto de chamada e especificar sua posição relativa preferencial para o objeto: parte superior, esquerda, inferior ou direita. O submenu também tem um modo de posicionamento completo que tenta ampliá-lo e centralizá-lo dentro da janela do aplicativo. Alguns controles, como [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx), fornecem uma propriedade [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) que você pode usar para associar um submenu. 
+<div class="microsoft-internal-note">
+Isso inclui submenus e menus de contexto, que podem ser aninhados dentro de outros submenus.
+</div>
+
+Submenus são anexados a controles específicos. Você pode usar a propriedade [Placement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx) para especificar onde o submenu aparece: parte superior, esquerda, inferior, direita ou inteira. Se você selecionar o [Modo de posicionamento completo](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx), o aplicativo se estende o submenu e centraliza na janela do aplicativo. Quando visíveis, eles devem ser ancorados ao objeto de chamada e especificar sua posição relativa preferencial para o objeto: parte superior, esquerda, inferior ou direita. O submenu também tem um modo de posicionamento completo que tenta ampliá-lo e centralizá-lo dentro da janela do aplicativo. Alguns controles, como [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx), fornecem uma propriedade [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) que você pode usar para associar um submenu. 
 
 Este exemplo cria um submenu simples que exibe algum texto quando o botão é pressionado. 
 ````xaml
@@ -295,7 +279,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-### Dê estilo ao submenu
+### <a name="style-a-flyout"></a>Dê estilo ao submenu
 Para estilizar um submenu, modifique o [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx). Este exemplo mostra um parágrafo de quebra de texto e torna o bloco de texto acessível para um leitor de tela.
 
 ````xaml
@@ -313,11 +297,11 @@ Para estilizar um submenu, modifique o [FlyoutPresenterStyle](https://msdn.micro
 </Flyout>
 ````
 
-## Obter os exemplos
+## <a name="get-the-samples"></a>Obter os exemplos
 *   [Noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
     Veja todos os controles XAML em um formato interativo.
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 - [Dicas de ferramenta](tooltips.md)
 - [Menus e menu de contexto](menus.md)
 - [**Classe Flyout**](https://msdn.microsoft.com/library/windows/apps/dn279496)
@@ -325,6 +309,6 @@ Para estilizar um submenu, modifique o [FlyoutPresenterStyle](https://msdn.micro
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -6,11 +6,11 @@ ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a02793e45f190b9401f18e845af3dc73d235c3fc
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 465c75ccb2af9b162202a79025aa292fbd626a58
 
 ---
-# Notificações de selo para aplicativos UWP
+# <a name="badge-notifications-for-uwp-apps"></a>Notificações de selo para aplicativos UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,11 +19,13 @@ ms.openlocfilehash: a02793e45f190b9401f18e845af3dc73d235c3fc
 
 Um selo de notificação transmite as informações de resumo ou estado específicas de seu aplicativo. Elas podem ser numéricas (1 a 99) ou um de um conjunto de glifos fornecidos pelo sistema. Os exemplos de informações mais bem transmitidas por meio de um selo incluem o status da conexão de rede em um jogo online, o status de usuário em um aplicativo de mensagens, o número de emails não lidos em um aplicativo de email e o número de novas postagens em um aplicativo de mídia social. 
 
-Selos de notificação aparecem no ícone de barra de tarefas ícone de seu aplicativo e no canto inferior direito do bloco inicial, independentemente de o aplicativo estar ou não em execução. Os selos podem ser exibidos em todos os tamanhos de bloco.  
+Selos de notificação aparecem no ícone de barra de tarefas ícone de seu app e no canto inferior direito do bloco inicial, independentemente de o app estar ou não em execução. Os selos podem ser exibidos em todos os tamanhos de bloco.  
 
-**Observação**&nbsp;&nbsp;Você não pode fornecer sua própria imagem de selo; podem ser usadas somente imagens de selo fornecidas pelo sistema.
+> [!NOTE]
+> Você não pode fornecer sua própria imagem de notificação; podem ser usadas somente imagens de notificação fornecidas pelo sistema.
 
-## Selos numéricos
+
+## <a name="numeric-badges"></a>Selos numéricos
 
 <table>
     <tr>
@@ -43,7 +45,7 @@ Selos de notificação aparecem no ícone de barra de tarefas ícone de seu apli
     </tr>    
 </table>
 
-## Selos de glifo
+## <a name="glyph-badges"></a>Selos de glifo
 Em vez de um número, um selo pode exibir um de um conjunto de glifos de status não extensíveis. 
 
 <table>
@@ -119,11 +121,11 @@ Em vez de um número, um selo pode exibir um de um conjunto de glifos de status 
 </tr>
 </table>
 
-## Criar um selo
+## <a name="create-a-badge"></a>Criar um selo
 
 Estes exemplos mostram como criar uma atualização de selo.
 
-### Criar um selo numérico
+### <a name="create-a-numeric-badge"></a>Criar um selo numérico
 
 ````csharp
 private void setBadgeNumber(int num)
@@ -150,7 +152,7 @@ private void setBadgeNumber(int num)
 }
 ````
 
-### Criar um selo de glifo
+### <a name="create-a-glyph-badge"></a>Criar um selo de glifo
 ````csharp
 private void updateBadgeGlyph()
 {
@@ -178,7 +180,7 @@ private void updateBadgeGlyph()
 }
 ````
 
-### Limpar um selo
+### <a name="clear-a-badge"></a>Limpar um selo
 
 ````csharp
 private void clearBadge()
@@ -187,17 +189,17 @@ private void clearBadge()
 }
 ````
 
-## Obter os exemplos
+## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
 * [Exemplo de notificações](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> Mostra como criar blocos dinâmicos, enviar atualizações de selo e exibir notificações do sistema. 
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 * [Notificações do sistema interativas e adaptáveis](tiles-and-notifications-adaptive-interactive-toasts.md)
 * [Criar blocos](tiles-and-notifications-creating-tiles.md)
 * [Criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

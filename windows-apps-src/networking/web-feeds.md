@@ -4,12 +4,12 @@ description: "Recupere ou crie o conteúdo da Web mais atual e popular usando fe
 title: Feeds RSS/Atom
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: b20eb8a241d3cb7800904c26331ac39da93f4d44
+ms.sourcegitcommit: a30b58737befaae10a1dbb30416f338d8eb1cbb1
+ms.openlocfilehash: 623c11eba097a072b456738b84750eb4b2d888bb
 
 ---
 
-# Feeds RSS/Atom
+# <a name="rssatom-feeds"></a>Feeds RSS/Atom
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -21,11 +21,11 @@ ms.openlocfilehash: b20eb8a241d3cb7800904c26331ac39da93f4d44
 
 Recupere ou crie o conteúdo da Web mais atual e popular usando feeds sindicalizados gerados de acordo com os padrões RSS e Atom, usando os recursos no namespace [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632).
 
-## O que é um feed?
+## <a name="what-is-a-feed"></a>O que é um feed?
 
 Um web feed é um documento que contém qualquer número de entradas individuais compostas de texto, links e imagens. As atualizações feitas em um feed são na forma de novas entradas usadas para promover o conteúdo mais atualizado na Web. Os consumidores de conteúdo podem usar um aplicativo de leitura de feed para agregar e monitorar feeds de qualquer número de autores de conteúdo individual. Com isso, eles ganham ao conteúdo mais atualizado de forma rápida e conveniente.
 
-## Que padrões de formato de feed são compatíveis?
+## <a name="which-feed-format-standards-are-supported"></a>Que padrões de formato de feed são compatíveis?
 
 A UWP (Plataforma Universal do Windows) dá suporte à recuperação de feed nos padrões de formato RSS, de 0.91 a RSS 2.0, e nos padrões Atom, de 0.3 a 1.0. As classes no namespace [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) podem definir feeds e itens de feed capazes de representar elementos de RSS e Atom.
 
@@ -33,7 +33,7 @@ Adicionalmente, os formatos Atom 1.0 e RSS 2.0 permitem que seus documentos de f
 
 Observe que, para a publicação de conteúdo sindicalizado, a implementação da UWP do Protocolo Atom Publication ([**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609)) só é compatível com operações de conteúdo de feed de acordo com os padrões Atom e Atom Publication.
 
-## Usando conteúdo sindicalizado com isolamento de rede
+## <a name="using-syndicated-content-with-network-isolation"></a>Usando conteúdo sindicalizado com isolamento de rede
 
 O recurso de isolamento de rede na UWP permite que o desenvolvedor controle e limite o acesso à rede por meio de um aplicativo UWP. Nem todos os aplicativos exigem acesso à rede. Porém, para os aplicativos que fazem isso, a UWP oferece diferentes níveis de acesso à rede que podem ser ativados selecionando recursos adequados.
 
@@ -45,7 +45,7 @@ Os recursos de rede para um aplicativo são configurados no manifesto do aplicat
 
 Para saber mais sobre o isolamento de rede e as funcionalidades de rede, consulte a seção "Funcionalidades" no tópico [Noções básicas de rede](networking-basics.md).
 
-## Como acessar um web feed
+## <a name="how-to-access-a-web-feed"></a>Como acessar um web feed
 
 Esta seção mostra como recuperar e exibir um feed da Web usando classes no namespace [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) em seu aplicativo UWP escrito em C# ou Javascript.
 
@@ -63,13 +63,10 @@ O construtor [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017)
 ```csharp
 Windows.Web.Syndication.SyndicationClient client = new Windows.Web.Syndication.SyndicationClient();
 Windows.Web.Syndication.SyndicationFeed feed;
-
 // The URI is validated by catching exceptions thrown by the Uri constructor.
 Uri uri = null;
-
 // Use your own uriString for the feed you are connecting to.
 string uriString = "";
-
 try
 {
     uri = new Uri(uriString);
@@ -82,9 +79,7 @@ catch (Exception ex)
 ```javascript
 var currentFeed = null;
 var currentItemIndex = 0;
-        
 var client = new Windows.Web.Syndication.SyndicationClient();
-
 // The URI is validated by catching exceptions thrown by the Uri constructor.
 var uri = null;
 try {
@@ -111,12 +106,9 @@ try
     // others will reject the request or return a different response if this header is missing.
     // Use the setRequestHeader() method to add custom headers.
     client.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
-
     feed = await client.RetrieveFeedAsync(uri);
-
     // Retrieve the title of the feed and store it in a string.
     string title = feed.Title.Text;
-
     // Iterate through each feed item.
     foreach (Windows.Web.Syndication.SyndicationItem item in feed.Items)
     {
@@ -131,7 +123,6 @@ catch (Exception ex)
 ```javascript
 function onError(err) {
     WinJS.log && WinJS.log(err, "sample", "error");
-
     // Match error number with a ErrorStatus value.
     // Use Windows.Web.WebErrorStatus.getStatus() to retrieve HTTP error status codes.
     var errorStatus = Windows.Web.Syndication.SyndicationError.getStatus(err.number);
@@ -139,31 +130,24 @@ function onError(err) {
         displayLog("An invalid XML exception was thrown. Please make sure to use a URI that points to a RSS or Atom feed.");
     }
 }
-
 // Retrieve and display feed at given feed address.
 function retreiveFeed(uri) {
-
     // Although most HTTP servers do not require User-Agent header, 
     // others will reject the request or return a different response if this header is missing.
     // Use the setRequestHeader() method to add custom headers.
     client.setRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
-
     client.retrieveFeedAsync(uri).done(function (feed) {
         currentFeed = feed;
-
         WinJS.log && WinJS.log("Feed download complete.", "sample", "status");
-
         var title = "(no title)";
         if (currentFeed.title) {
             title = currentFeed.title.text;
         }
         document.getElementById("CurrentFeedTitle").innerText = title;
-
         currentItemIndex = 0;
         if (currentFeed.items.size > 0) {
             displayCurrentItem();
         }
-
         // List the items.
         displayLog("Items: " + currentFeed.items.size);
      }, onError);
@@ -180,32 +164,26 @@ private void displayCurrentItem(Windows.Web.Syndication.SyndicationItem item)
     string itemLink = item.Links == null ? "No link" : item.Links.FirstOrDefault().ToString();
     string itemContent = item.Content == null ? "No content" : item.Content.Text;
     //displayCurrentItem is continued below.
-
 ```
 ```javascript
 function displayCurrentItem() {
     var item = currentFeed.items[currentItemIndex];
-
     // Display item number.
     document.getElementById("Index").innerText = (currentItemIndex + 1) + " of " + currentFeed.items.size;
-
     // Display title.
     var title = "(no title)";
     if (item.title) {
         title = item.title.text;
     }
     document.getElementById("ItemTitle").innerText = title;
-
     // Display the main link.
     var link = "";
     if (item.links.size > 0) {
         link = item.links[0].uri.absoluteUri;
     }
-
     var link = document.getElementById("Link");
     link.innerText = link;
     link.href = link;
-
     // Display the body as HTML.
     var content = "(no content)";
     if (item.content) {
@@ -224,16 +202,13 @@ Como sugerido anteriormente, o tipo de conteúdo representado por um objeto [**S
 ```csharp
     //displayCurrentItem continued.
     string extensions = "";
-
     foreach (Windows.Web.Syndication.SyndicationNode node in item.ElementExtensions)
     {
         string nodeName = node.NodeName;
         string nodeNamespace = node.NodeNamespace;
         string nodeValue = node.NodeValue;
-
         extensions += nodeName + "\n" + nodeNamespace + "\n" + nodeValue + "\n";
     }
-
     this.listView.Items.Add(itemTitle + "\n" + itemLink + "\n" + itemContent + "\n" + extensions);
 }
 ```
@@ -248,19 +223,16 @@ Como sugerido anteriormente, o tipo de conteúdo representado por um objeto [**S
         };
         bindableNodes.push(bindableNode);
     }
-
     var dataList = new WinJS.Binding.List(bindableNodes);
     var listView = document.getElementById("extensionsListView").winControl;
     WinJS.UI.setOptions(listView, {
         itemDataSource: dataList.dataSource
-
     });
 }
 ```
 
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,8 +4,8 @@ title: "Início, retomada e tarefas em segundo plano"
 description: "Esta seção descreve o que acontece quando um aplicativo UWP (Plataforma Universal do Windows) é iniciado, suspenso, retomado e encerrado."
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 translationtype: Human Translation
-ms.sourcegitcommit: a21b2e9bb41e951660916bbbdb09b0bd3e5ecf2d
-ms.openlocfilehash: 7667cfb9671a7517a394f6f691aef4c305c02087
+ms.sourcegitcommit: 32737991b31eaceb33fc2ecb5152def167c36fdd
+ms.openlocfilehash: 6b350ef65f381d18585c8b080c6259f7607c7bf9
 
 ---
 
@@ -33,11 +33,12 @@ Esta seção detalha o ciclo de vida de um aplicativo UWP (Plataforma Universal 
 | [Manipular a ativação do aplicativo](activate-an-app.md)     | Saiba como manipular a ativação do aplicativo.                                                                             |
 | [Manipular a suspensão do aplicativo](suspend-an-app.md)         | Saiba como salvar dados de aplicativo importantes quando o sistema suspende o seu aplicativo.                                 |
 | [Tratar a retomada do app](resume-an-app.md)           | Saiba como atualizar o conteúdo exibido quando o sistema retomar o aplicativo.                                        |
-| [Liberar memória quando seu app é movido para o segundo plano](reduce-memory-usage.md)           | Saiba como reduzir a quantidade de memória que seu app usa quando está em segundo plano para que ele não seja encerrado.                                        |
+| [Liberar memória quando seu app é movido para o segundo plano](reduce-memory-usage.md) | Saiba como reduzir a quantidade de memória usada pelo aplicativo quando ele está em segundo plano, de maneira que ele não seja encerrado.|
+| [Executar enquanto minimizado com execução estendida](run-minimized-with-extended-execution.md) | Saiba como usar a execução estendida para manter o aplicativo em execução quando minimizado |
 
-## <a name="launch-apps"></a>Iniciar apps
+## <a name="launch-apps"></a>Iniciar aplicativos
 
-a seção [Iniciar um app com um URI](launch-app-with-uri.md) detalha como usar um URI (Uniform Resource Identifier) para iniciar um app a partir de outro app.
+A seção [Iniciar um aplicativo com um URI](launch-app-with-uri.md) detalha como usar um URI (Uniform Resource Identifier) para iniciar um aplicativo com base em outro aplicativo.
 
 | Tópico | Descrição |
 |-------|-------------|
@@ -118,6 +119,6 @@ A seção [Telas iniciais](splash-screens.md) descreve como definir e configurar
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

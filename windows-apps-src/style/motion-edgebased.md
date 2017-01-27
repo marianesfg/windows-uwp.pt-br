@@ -6,24 +6,28 @@ ms.assetid: 5A8F73B1-F4F6-424b-9EDF-A9766C5DEAE8
 label: Motion--edge-based UI
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: a835e57c3ae778149cda933d57cf74408b74b416
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 925826f2702474a0003f2ca2dee6ff10992f5f25
 
 ---
 
-# Animações de interface de usuário baseadas em borda
+# <a name="edge-based-ui-animations"></a>Animações de interface de usuário baseadas em borda
 
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 
 Animações de borda mostram ou ocultam a interface do usuário que tem origem na borda da tela. As ações de mostrar e ocultar podem ser iniciadas pelo usuário ou pelo aplicativo. A interface do usuário pode sobrepor o aplicativo ou fazer parte da superfície principal do aplicativo. Se a interface do usuário fizer parte da superfície do aplicativo, talvez seja necessário redimensionar o restante do aplicativo para acomodá-la.
 
-**APIs importantes**
+<div class="important-apis" >
+<b>APIs importantes</b><br/>
+<ul>
+<li>[**Classe EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh702324)</li>
+</ul>
+</div>
 
--   [**Classe EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh702324)
 
-
-## O que fazer e o que não fazer
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
 
 -   Use as animações de interface do usuário de borda para mostrar ou ocultar uma barra de erros ou de mensagens personalizada que não se estende muito pela tela.
@@ -38,10 +42,10 @@ Animações de borda mostram ou ocultam a interface do usuário que tem origem n
 
     ![Ilustra quando usar as animações de painel ou de interface do usuário de borda e quando usar o reposicionamento.](images/edgevsreposition.png)
 
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 
-**Para desenvolvedores (XAML)**
+**Para desenvolvedores**
 * [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [Animando interface do usuário de borda](https://msdn.microsoft.com/library/windows/apps/xaml/jj649428)
 * [Guia de início rápido: animando sua interface do usuário usando animações da biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
@@ -60,6 +64,6 @@ Animações de borda mostram ou ocultam a interface do usuário que tem origem n
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
