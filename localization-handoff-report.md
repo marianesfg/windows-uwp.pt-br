@@ -1,19 +1,20 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\get-started-tutorial-game-js2d.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/9d25fe22e134aaa7d3c39f0e9fc80adce6cd247d?path=windows-apps-src%2Fget-started%2Fget-started-tutorial-game-js2d.md&_a=contents) | HandedOffSuccess | [Details](#a83f7b37ee84d87bae0285a987628d14cfab1d692674)
+ [windows-apps-src\get-started\get-started-tutorial-game-js2d.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/29b2e5bc99a527a0b860657cdd89c1cab14dbcea?path=windows-apps-src%2Fget-started%2Fget-started-tutorial-game-js2d.md&_a=contents) | HandedOffSuccess | [Details](#b58162b04b8389f16afadc3d69e7f4b213c876cb2674)
+ [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/29b2e5bc99a527a0b860657cdd89c1cab14dbcea?path=windows-apps-src%2FTOC.md&_a=contents) | HandedOffSuccess | [Details](#1ab6fd947eb338a9d0cce41e811d0ef88b6882d67812)
 
 ## Item Details
-##### <a name='a83f7b37ee84d87bae0285a987628d14cfab1d692674'></a> Source: [windows-apps-src\get-started\get-started-tutorial-game-js2d.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/9d25fe22e134aaa7d3c39f0e9fc80adce6cd247d?path=windows-apps-src%2Fget-started%2Fget-started-tutorial-game-js2d.md&_a=contents)
+##### <a name='b58162b04b8389f16afadc3d69e7f4b213c876cb2674'></a> Source: [windows-apps-src\get-started\get-started-tutorial-game-js2d.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/29b2e5bc99a527a0b860657cdd89c1cab14dbcea?path=windows-apps-src%2Fget-started%2Fget-started-tutorial-game-js2d.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [get-started-tutorial-game-js2d.18b228bd0b0e5df38f6490299b439e7ee77d1a8b.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/3e1131392fbba28071a8a02d10696629941af580?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fget-started-tutorial-game-js2d.18b228bd0b0e5df38f6490299b439e7ee77d1a8b.pt-br.xlf&_a=contents)
-* Handoff Datetime: 2017-02-09 22:37:59
+* Handoff File: [get-started-tutorial-game-js2d.18b228bd0b0e5df38f6490299b439e7ee77d1a8b.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/cacaf6ffc182bdfaa30a810084a98b4f700b2d3d?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fget-started-tutorial-game-js2d.18b228bd0b0e5df38f6490299b439e7ee77d1a8b.pt-br.xlf&_a=contents)
+* Handoff Datetime: 2017-02-10 00:38:39
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,6 +22,25 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
+* [Back to Top](#report-top)
+
+##### <a name='1ab6fd947eb338a9d0cce41e811d0ef88b6882d67812'></a> Source: [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/29b2e5bc99a527a0b860657cdd89c1cab14dbcea?path=windows-apps-src%2FTOC.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/cacaf6ffc182bdfaa30a810084a98b4f700b2d3d?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf&_a=contents)
+* Handoff Datetime: 2017-02-10 00:38:39
+* Handoff Reason: Include
+* Handoff Name: 
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Name: 
+* Current Target File: [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/f6915a2118c39afd5018c437e0f4a34ad43ea07a?path=windows-apps-src%2FTOC.md&_a=contents)
+* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/b6f9dbb4de8a2553950a94e79be8b916fb133403?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf&_a=contents)
+* Current Handback Datetime: 2017-01-20 14:51:02
+* Bilingual File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/b6f9dbb4de8a2553950a94e79be8b916fb133403?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.pt-br.xlf&_a=contents)
+* Bilingual Datetime: 2017-01-20 14:59:40
 * [Back to Top](#report-top)
 
 
