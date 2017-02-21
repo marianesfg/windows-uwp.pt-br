@@ -1,11 +1,33 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/017addc68ab9bf49d1cbb400b6b62732837bb242?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-extensions.md&_a=contents) | HandedOffSuccess | [Details](#cc55f7041587f444abebbe9a062b2a9de6623a954655)
 
 ## Item Details
+##### <a name='cc55f7041587f444abebbe9a062b2a9de6623a954655'></a> Source: [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/017addc68ab9bf49d1cbb400b6b62732837bb242?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-extensions.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/c36dd2381fc8e4a41390ce227853904aa7bc78fa?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fdesktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.pt-br.xlf&_a=contents)
+* Handoff Datetime: 2017-02-21 19:32:30
+* Handoff Reason: Include
+* Handoff Name: 
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Name: 
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.pt-br/commit/1112dc6c841af42e31345a8cc529032c5fb861ec?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-extensions.md&_a=contents)
+* Current Handback File: [desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2d3fbe5069de1c400b9de01847b241bca6e7ba3d?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fdesktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.pt-br.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:21:07
+* Bilingual File: [desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.pt-br.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2d3fbe5069de1c400b9de01847b241bca6e7ba3d?path=ol-handback%2Fcpubwin%2Fwindows-uwp.pt-br%2Fmaster%2Fdesktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.pt-br.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:25:49
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
