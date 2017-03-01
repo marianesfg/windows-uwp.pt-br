@@ -1,26 +1,33 @@
 ---
 author: mcleanbyron
-Description: Para executar um experimento em seu aplicativo UWP (Plataforma Universal do Windows) com os testes A/B, codifique o experimento em seu aplicativo.
-title: "Codificar seu aplicativo para experimentação"
+Description: Para executar um experimento em seu app UWP (Plataforma Universal do Windows) com os testes A/B, codifique o experimento em seu app.
+title: "Codificar seu app para experimentação"
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: cc32e2688bce636e1f4bda02aade4ed1d94f3e28
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d5c46c896aad3dfbc0f6f9bdb010652507654cb0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="code-your-app-for-experimentation"></a>Codificar seu aplicativo para experimentação
+# <a name="code-your-app-for-experimentation"></a>Codificar seu app para experimentação
 
-Depois que você [criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md), você estará pronto para atualizar o código no aplicativo da UWP (Plataforma Universal do Windows) para:
+Depois que você [criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md), você estará pronto para atualizar o código no app da UWP (Plataforma Universal do Windows) para:
 * Receber valores de variáveis remotos do Centro de Desenvolvimento do Windows.
-* Usar variáveis remotas para configurar as experiências de aplicativo para seus usuários.
+* Usar variáveis remotas para configurar as experiências de app para seus usuários.
 * Registrar eventos no Centro de Desenvolvimento que indicam quando os usuários viram seu experimento e realizaram uma ação desejada (também chamada de um *conversão*).
 
-Para adicionar esse comportamento ao seu aplicativo, você vai usar APIs fornecidas pelo Microsoft Store Services SDK.
+Para adicionar esse comportamento ao seu app, você vai usar APIs fornecidas pelo Microsoft Store Services SDK.
 
-As seções a seguir descrevem o processo geral de obtenção de variações para o seu experimento e de registro de eventos em log no Centro de Desenvolvimento. Depois de codificar seu aplicativo para experimentação, você poderá [definir um experimento no painel do Centro de Desenvolvimento](define-your-experiment-in-the-dev-center-dashboard.md). Para um guia passo a passo que demonstra o processo de criação e execução de um experimento de ponta a ponta, veja [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
+As seções a seguir descrevem o processo geral de obtenção de variações para o seu experimento e de registro de eventos em log no Centro de Desenvolvimento. Depois de codificar seu app para experimentação, você poderá [definir um experimento no painel do Centro de Desenvolvimento](define-your-experiment-in-the-dev-center-dashboard.md). Para um guia passo a passo que demonstra o processo de criação e execução de um experimento de ponta a ponta, veja [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
->**Observação**&nbsp;&nbsp;Algumas APIs de experimentação no Windows Store Services SDK usam o [padrão assíncrono](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) para recuperar dados do Centro de Desenvolvimento. Isso significa que parte da execução desses métodos pode ocorrer depois que os métodos são invocados. Portanto, a interface do usuário do seu aplicativo pode permanecer responsiva enquanto as operações são concluídas. O padrão assíncrono requer que seu aplicativo use a palavra-chave **async** e o operador **await** ao chamar as APIs, como demonstrado pelos exemplos de código neste artigo. Por convenção, os métodos assíncronos terminam com **Async**.
+>**Observação**&nbsp;&nbsp;Algumas APIs de experimentação no Windows Store Services SDK usam o [padrão assíncrono](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) para recuperar dados do Centro de Desenvolvimento. Isso significa que parte da execução desses métodos pode ocorrer depois que os métodos são invocados. Portanto, a interface do usuário do seu app pode permanecer responsiva enquanto as operações são concluídas. O padrão assíncrono requer que seu app use a palavra-chave **async** e o operador **await** ao chamar as APIs, como demonstrado pelos exemplos de código neste artigo. Por convenção, os métodos assíncronos terminam com **Async**.
 
 ## <a name="configure-your-project"></a>Configurar seu projeto
 
@@ -73,7 +80,7 @@ As etapas a seguir descrevem as partes importantes desse processo em detalhes.
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet5)]
 
-4. No seu código, use os valores de variável para modificar o comportamento do recurso que você está testando. Por exemplo, o seguinte código atribui o valor *buttonText* ao conteúdo de um botão no seu aplicativo. Este exemplo pressupõe que você já definiu esse botão em outro lugar no seu projeto.
+4. No seu código, use os valores de variável para modificar o comportamento do recurso que você está testando. Por exemplo, o seguinte código atribui o valor *buttonText* ao conteúdo de um botão no seu app. Este exemplo pressupõe que você já definiu esse botão em outro lugar no seu projeto.
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet6)]
@@ -110,9 +117,4 @@ Depois de codificar o experimento no seu app, você estará pronto para as segui
 * [Gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md)
 * [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Executar experimentos de app com teste A/B](run-app-experiments-with-a-b-testing.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

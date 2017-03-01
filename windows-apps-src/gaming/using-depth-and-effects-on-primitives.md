@@ -3,13 +3,20 @@ author: mtoepke
 title: Usar efeitos e profundidade em primitivas
 description: "Aqui mostramos a você como usar profundidade, perspectiva, cor e outros efeitos em primitivas."
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, profundidade, efeitos, primitivos, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6c58e23a0831a0850a4e28887b4717abedbc7086
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 923bce3dd5f340b97fd6d4e7b31c4ed2e949ca94
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Usar efeitos e profundidade em primitivas
+# <a name="use-depth-and-effects-on-primitives"></a>Usar efeitos e profundidade em primitivas
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -18,7 +25,7 @@ Aqui mostramos a você como usar profundidade, perspectiva, cor e outros efeitos
 
 **Objetivo:** criar um objeto 3D e aplicar iluminação de vértice básica e coloração a ela.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Partimos do princípio de que você conhece C++. Você também precisa ter experiência básica com conceitos de programação de elementos gráficos.
@@ -27,10 +34,10 @@ Também supomos que você leu [Guia de início rápido: configurando recursos Di
 
 **Tempo para concluir:** 20 minutos.
 
-Instruções
+<a name="instructions"></a>Instruções
 ------------
 
-### 1. Definindo variáveis de cubo
+### <a name="1-defining-cube-variables"></a>1. Definindo variáveis de cubo
 
 Primeiro, precisamos definir as estruturas **SimpleCubeVertex** e **ConstantBuffer** para o cubo. Essas estruturas especificam a posição de vértice e as cores do cubo e como o cubo será exibido. Declaramos [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) e [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) com [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) e declaramos uma instância do **ConstantBuffer**.
 
@@ -62,7 +69,7 @@ private:
     ConstantBuffer m_constantBufferData;
 ```
 
-### 2. Criando um modo de exibição de estêncil de profundidade
+### <a name="2-creating-a-depth-stencil-view"></a>2. Criando um modo de exibição de estêncil de profundidade
 
 Além de criar o modo de exibição de destino de renderização, também criamos um modo de exibição de estêncil de profundidade. O modo de exibição de estêncil de profundidade permite que o Direct3D renderiza de forma eficiente os objetos mais próximos à câmera na frente dos objetos mais longe da câmera. Antes de podemos criar um modo de exibição para um buffer de estêncil de profundidade, devemos criar o buffer de estêncil de profundidade. Populamos um [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) para descrever o buffer de estêncil de profundidade e chamamos [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521) para criar o buffer de estêncil de profundidade. Para criar o modo de exibição de estêncil de profundidade, populamos uma [**D3D11\_DEPTH\_STENCIL\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476112) para descrever o modo de exibição de estêncil de profundidade e passar a descrição do modo de exibição de estêncil de profundidade e a textura para o [**ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507).
 
@@ -109,7 +116,7 @@ Além de criar o modo de exibição de destino de renderização, também criamo
             );
 ```
 
-### 3. Atualizando perspectiva com a janela
+### <a name="3-updating-perspective-with-the-window"></a>3. Atualizando perspectiva com a janela
 
 Atualizamos os parâmetros de projeção de perspectiva para o buffer constante, dependendo das dimensões da janela. Podemos corrigir os parâmetros para um campo de visão de 70 graus, com um intervalo de profundidade de 0,01 a 100.
 
@@ -142,7 +149,7 @@ Atualizamos os parâmetros de projeção de perspectiva para o buffer constante,
             );
 ```
 
-### 4. Criando sombreadores de vértice e pixel com elementos de cor
+### <a name="4-creating-vertex-and-pixel-shaders-with-color-elements"></a>4. Criando sombreadores de vértice e pixel com elementos de cor
 
 Neste aplicativo, criamos sombreadores de vértice e pixel mais complexos do que o que descrevemos no tutorial anterior, [Criando sombreadores e desenhando primitivas](creating-shaders-and-drawing-primitives.md). O sombreador de vértice deste aplicativo transforma cada posição de vértice no espaço de projeção e passa a cor de vértice para o sombreador de pixel.
 
@@ -332,7 +339,7 @@ Podemos criar buffers de vértice, índice e constante para definir um cubo em �
         
 ```
 
-### 5. Girando e desenhando o cubo e apresentando a imagem renderizada
+### <a name="5-rotating-and-drawing-the-cube-and-presenting-the-rendered-image"></a>5. Girando e desenhando o cubo e apresentando a imagem renderizada
 
 Entramos em um loop infinito para processar e exibir a cena continuamente. Chamamos a função em linha (BasicMath.h) **rotationY** com uma quantidade de rotação para definir valores que vão girar a matriz de modelo do cubo em torno do eixo Y. Em seguida, chamamos [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) para atualizar o buffer constante e girar o modelo de cubo. Chamamos [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar o destino de renderização como o destino de saída. Nesta chamada a **OMSetRenderTargets**, passamos o modo de exibição de estêncil de profundidade. Chamamos [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) para limpar o destino de renderização para uma cor azul sólida e chamamos [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387) para limpar o buffer de profundidade.
 
@@ -439,7 +446,7 @@ Como nos tutoriais anteriores, chamamos [**IDXGISwapChain::Present**](https://ms
                 );
 ```
 
-## Resumo e próximas etapas
+## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
 
 Usamos profundidade, perspectiva, cor e outros efeitos em primitivas.
@@ -454,10 +461,5 @@ Em seguida, aplicamos texturas a primitivas.
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

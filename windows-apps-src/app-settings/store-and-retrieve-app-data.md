@@ -5,9 +5,16 @@ title: "Armazenar e recuperar configurações e outros dados de aplicativo"
 ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
-ms.openlocfilehash: 08ad1fbddc3db2c8329594419fefdc1aa0659092
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1e615e989a25520cff86c53e383d0cc5e87956d1
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -17,7 +24,7 @@ ms.openlocfilehash: 08ad1fbddc3db2c8329594419fefdc1aa0659092
 
 
 
-*Dados de aplicativo* são dados mutáveis específicos de determinado aplicativo. Eles incluem estado de tempo de execução, preferências de usuário e outras configurações. Dados de aplicativo são diferentes de *dados do usuário*, dados que o usuário cria e gerencia ao usar um aplicativo. Os dados do usuário incluem arquivos de documentos ou mídia, emails, transcrições de comunicações ou registros de bancos de dados com conteúdo criado pelo usuário. Os dados do usuário podem ser úteis ou significativos para mais de um aplicativo. Geralmente, trata-se de dados que o usuário quer manipular ou transmitir como uma entidade independente do próprio aplicativo, como um documento.
+*Dados de aplicativo* são dados mutáveis específicos de um determinado aplicativo. Eles incluem estado de tempo de execução, preferências de usuário e outras configurações. Dados de aplicativo são diferentes de *dados do usuário*, dados que o usuário cria e gerencia ao usar um aplicativo. Os dados do usuário incluem arquivos de documentos ou mídia, emails, transcrições de comunicações ou registros de bancos de dados com conteúdo criado pelo usuário. Os dados do usuário podem ser úteis ou significativos para mais de um aplicativo. Geralmente, trata-se de dados que o usuário quer manipular ou transmitir como uma entidade independente do próprio aplicativo, como um documento.
 
 **Observação importante sobre os dados de aplicativo: **o tempo de vida dos dados de aplicativo está vinculado ao tempo de vida do aplicativo. Se o aplicativo for removido, como consequência todos os dados do aplicativo serão perdidos. Não use dados do aplicativo para armazenar dados do usuário ou qualquer coisa que os usuários possam perceber como valioso e insubstituível. Recomendamos que as bibliotecas do usuário e o Microsoft OneDrive sejam usados para armazenar esse tipo de informações. Os dados do Aplicativo são ideais para armazenar as preferências, as configurações e os favoritos do usuário específicos ao aplicativo.
 
@@ -44,11 +51,13 @@ Existem dois tipos de dados de aplicativo: configurações e arquivos.
 
 ## <a name="storing-app-data-in-the-app-data-stores"></a>Armazenando dados de aplicativo nos repositórios de dados do aplicativo
 
+
 Quando um aplicativo é instalado, o sistema concede a ele seus próprios repositórios de dados por usuário para configurações e arquivos. Você não precisa saber onde ou como esses dados existem, porque o sistema é responsável por gerenciar o armazenamento físico, garantindo que os dados sejam mantidos isolados de outros aplicativos e outros usuários. O sistema também preserva o conteúdo desses repositórios de dados quando o usuário instala uma atualização de seu aplicativo e remove totalmente o conteúdo desses repositórios de dados quando o aplicativo é desinstalado.
 
 Em seu repositório de dados de aplicativo, cada aplicativo possui diretórios-raiz definidos pelo sistema: um para arquivos locais, um para arquivos roaming e um para arquivos temporários. Seu aplicativo pode adicionar novos arquivos e novos contêineres a cada um desses diretórios raiz.
 
 ## <a name="local-app-data"></a>Dados de aplicativo local
+
 
 Dados de aplicativo local devem ser utilizados para informações que precisam ser preservadas entre sessões de aplicativo e não são adequados para dados de aplicativo de roaming. Dados que não são aplicáveis a outros dispositivos devem ser armazenados aqui também. Não há restrição de tamanho geral para dados locais armazenados. Use o repositório de dados locais de aplicativo para dados que não precisam usar perfil móvel e para conjuntos de dados maiores.
 
@@ -451,10 +460,5 @@ Como opção, você pode converter os dados do aplicativo para seu aplicativo. I
 * [**Windows.Storage.ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625)
 * [**Windows.Storage.ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588)
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

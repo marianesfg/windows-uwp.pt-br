@@ -3,10 +3,16 @@ author: mcleanbyron
 Description: "Seja seu app gratuito ou não, você pode vender conteúdo, outros apps ou uma nova funcionalidade do app (como o desbloqueio do próximo nível de um jogo) no próprio app. Veja a seguir como habilitar esses produtos no seu aplicativo."
 title: Habilitar compras de produtos no aplicativo
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
-keywords: "exemplo de código de oferta no aplicativo"
+keywords: uwp, complementos, compras no aplicativo, IAPs, Windows.ApplicationModel.Store
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 1cd748cd1b6ca7e85cfb86daba367540af25db88
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b7cd3f5d2c566958aaf83b8f633418ce444a2eaa
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -86,9 +92,4 @@ Se você precisar usar recibos para verificar se o usuário fez uma compra no ap
 * [Gerenciar um catálogo abrangente de produtos no aplicativo](manage-a-large-catalog-of-in-app-products.md)
 * [Usar recibos para verificar compras de produtos](use-receipts-to-verify-product-purchases.md)
 * [Exemplo da Loja (demonstra avaliações e compras no aplicativo)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

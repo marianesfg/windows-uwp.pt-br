@@ -1,20 +1,27 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Saiba como adaptar a interface do usuário do seu aplicativo ao mostrar ou ocultar o teclado virtual."
+Description: "Saiba como adaptar a interface do usuário do seu app ao mostrar ou ocultar o teclado virtual."
 title: "Responder à presença do teclado virtual"
 ms.assetid: 70C6130E-23A2-4F9D-88E7-7060062DA988
 label: Respond to the presence of the touch keyboard
 template: detail.hbs
+keywords: "teclado, acessibilidade, navegação, foco, texto, entrada e interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 7db7c360c1e6e3cadf6423d888240bb2f0f4651a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c08e33b95241ce95c7670e197e67496b774897cb
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Responder à presença do teclado virtual
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Saiba como adaptar a interface do usuário do seu aplicativo ao mostrar ou ocultar o teclado virtual.
+Saiba como adaptar a interface do usuário do seu app ao mostrar ou ocultar o teclado virtual.
 
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
@@ -42,14 +49,14 @@ Este tópico complementa [Interações por teclado](keyboard-interactions.md).
 
 Você deve ter um conhecimento básico de interações por teclado padrão, manipulação de entradas e eventos por teclado e Automação da Interface do Usuário.
 
-Se você for iniciante no desenvolvimento de aplicativos da Plataforma Universal do Windows (UWP), consulte estes tópicos para familiarizar-se com as tecnologias discutidas aqui.
+Se você for iniciante no desenvolvimento de apps da Plataforma Universal do Windows (UWP), consulte estes tópicos para familiarizar-se com as tecnologias discutidas aqui.
 
--   [Criar seu primeiro aplicativo](https://msdn.microsoft.com/library/windows/apps/bg124288)
+-   [Criar seu primeiro app](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   Saiba mais sobre eventos com [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/library/windows/apps/mt185584)
 
 **Diretrizes de experiência do usuário:  **
 
-Para obter dicas úteis sobre o design de um aplicativo funcional e interessante, otimizado para entrada por teclado, consulte [Diretrizes de design do teclado](https://msdn.microsoft.com/library/windows/apps/hh972345).
+Para obter dicas úteis sobre o design de um app funcional e interessante, otimizado para entrada por teclado, consulte [Diretrizes de design do teclado](https://msdn.microsoft.com/library/windows/apps/hh972345).
 
 ## <a name="touch-keyboard-and-a-custom-ui"></a>Teclado virtual e uma interface do usuário personalizada
 
@@ -145,10 +152,5 @@ public class MyApplication
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

@@ -5,9 +5,16 @@ title: "Seletor de data do calendário"
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
 label: Calendar date picker
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 0c565c036b8bcb7c26ad860231ee649b73c636c3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 801e9192f3da2f72803dcb95168b1f8dfded6695
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="calendar-date-picker"></a>Seletor de data do calendário
@@ -71,7 +78,7 @@ Quando você define a data em código, o valor é restringido pelas propriedades
 - Se **Date** é menor que **MinDate**, o valor é definido como **MinDate**.
 - Se **Date** é maior que **MaxDate**, o valor é definido como **MaxDate**.
 
-Você pode manipular o evento [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) para ser notificado quando o valor Date for alterado.
+Você pode tratar o evento [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) para ser notificado quando o valor Date for alterado.
 
 > [!NOTE]
 Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo Controles de data e hora.
@@ -97,9 +104,4 @@ O texto de espaço reservado padrão é "selecionar uma data". Você pode remove
 - [Exibição de Calendário](calendar-view.md)
 - [Seletor de data](date-picker.md)
 - [Seletor de hora](time-picker.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

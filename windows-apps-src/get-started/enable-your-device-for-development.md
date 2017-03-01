@@ -10,17 +10,21 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
-ms.openlocfilehash: 3641fdd1f7eb74a11233115d9dfb809ea959926e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dc1bf476c93ef9843c20244f24a199c7888eb4a5
+ms.lasthandoff: 02/07/2017
 
 ---
+
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 
-Antes de gravar aplicativos, você precisará habilitar o Modo de Desenvolvedor no seu computador de desenvolvimento e nos dispositivos em que testará seu código.
+Antes de gravar aplicativos, você precisará habilitar o Modo de Desenvolvedor no seu computador de desenvolvimento e nos dispositivos em que testará seu código. 
 
-## <a name="use-developer-features"></a>Usar recursos de desenvolvedor
+![Habilite seus dispositivos para desenvolvimento](images/developer-poster.png)
 
-### <a name="develop-your-app-with-microsoft-visual-studio"></a>Desenvolver seu aplicativo com o Microsoft Visual Studio
+## <a name="use-developer-features"></a>Use os recursos de desenvolvedor
+
+### <a name="develop-your-app-with-microsoft-visual-studio"></a>Desenvolva seu aplicativo com o Microsoft Visual Studio
 
 Você deve habilitar o Modo de Desenvolvedor em seu computador para poder abrir um projeto de aplicativo UWP no Visual Studio. Se você abrir um projeto UWP e o Modo de Desenvolvedor não estiver habilitado, a página de configurações **Para desenvolvedores** será aberta automaticamente. Siga as instruções na próxima seção para habilitar o Modo de Desenvolvedor.
 
@@ -77,7 +81,7 @@ Para saber mais sobre a descoberta de dispositivo e o Device Portal, consulte [V
 
 Para obter instruções de instalação específicas ao dispositivo, consulte:
 - [Device Portal para desktop](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [Device Portal para HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
+- [Device Portal para HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
 - [Device Portal para IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [Device Portal para celulares](../debug-test-perf/device-portal-mobile.md)
 - [Device Portal para Xbox](../debug-test-perf/device-portal-xbox.md)
@@ -215,9 +219,4 @@ Ao criar ou fazer sideload de aplicativos em seu dispositivo Windows 8.1, você 
 Depois disso, você precisa habilitar seu dispositivo para o desenvolvimento, conforme descrito neste tópico, para que possa continuar a desenvolver nele. Se não fizer isso, poderá ocorrer um erro quando você depurar seu aplicativo ou tentar criar um pacote para ele. Aqui está um exemplo desse erro:
 
 Erro: DEP0700: Falha no registro do aplicativo.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

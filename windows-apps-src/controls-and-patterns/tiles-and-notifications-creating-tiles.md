@@ -5,18 +5,25 @@ title: Blocos
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 37de1a413ac9b5e74c905c140899ec7577a6fae5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11640527ffdb6883885345646310e5e4b786ad2b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Blocos de aplicativos UWP
+# <a name="tiles-for-uwp-apps"></a>Blocos de aplicativos UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 *Bloco* é a representação de um aplicativo no menu Iniciar. Todo aplicativo tem um bloco. Quando você cria um novo projeto de aplicativo da Plataforma Universal do Windows (UWP) no Microsoft Visual Studio, ele inclui um bloco padrão que exibe o nome e o logotipo do seu aplicativo. O Windows exibe esse bloco quando seu aplicativo é instalado pela primeira vez. Depois que seu aplicativo é instalado, você pode alterar o conteúdo do bloco por meio de notificações. Por exemplo, você pode alterar o bloco para comunicar novas informações ao usuário, como manchetes de jornais, ou o assunto da mensagem não lida mais recente.
 
-## Configurar o bloco padrão
+## <a name="configure-the-default-tile"></a>Configurar o bloco padrão
 
 
 Quando você cria um novo projeto no Visual Studio, ele cria um bloco padrão simples que exibe o nome e o logotipo do seu aplicativo.
@@ -76,7 +83,7 @@ Há alguns itens que você deve atualizar:
       </Applications>
 ```
 
-## Use notificações para personalizar seu bloco
+## <a name="use-notifications-to-customize-your-tile"></a>Use notificações para personalizar seu bloco
 
 
 Depois que seu aplicativo for instalado, você pode usar notificações para personalizar seu bloco. Você pode fazer isso na primeira vez que seu aplicativo for iniciado ou em resposta a algum evento, como uma notificação por push.
@@ -100,10 +107,5 @@ Depois que seu aplicativo for instalado, você pode usar notificações para per
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

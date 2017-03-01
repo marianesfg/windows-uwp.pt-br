@@ -3,23 +3,30 @@ author: Jwmsft
 title: "Animações de quadro chave e animações com função de easing"
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: "Animações de quadro chave lineares, animações de quadro chave com um valor KeySpline ou funções de easing são três técnicas diferentes para praticamente o mesmo cenário."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7b4676e5c5a66450b321ab6f5f8670f9491b7a9d
-ms.openlocfilehash: 163109a8e87c0d270eeeed825958af7ec51ee336
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2eb40a8787479e6abd03ef2f0adb2d7462bfef16
+ms.lasthandoff: 02/07/2017
 
 ---
-# Animações de quadro chave e animações com função de easing
+# <a name="key-frame-animations-and-easing-function-animations"></a>Animações de quadro chave e animações com função de easing
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Animações de quadro chave lineares, animações de quadro chave com um **KeySpline** ou funções de easing são três técnicas diferentes para basicamente o mesmo cenário: criar uma animação de storyboard um pouco mais complexa e que usa um comportamento de animação não linear de um estado inicial até um estado final.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Leia o tópico [Animações de storyboard](storyboarded-animations.md). Este tópico faz referência aos conceitos de animação que foram explicados em [Animações de storyboard](storyboarded-animations.md) e não os descreverá novamente. Por exemplo, [Animações de storyboard](storyboarded-animations.md) descreve como direcionar animações, storyboards como recursos, os valores da propriedade [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) como [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration), [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior) etc.
 
-## Animando usando animações de quadro chave
+## <a name="animating-using-key-frame-animations"></a>Animando usando animações de quadro chave
 
 As animações de quadro chave permitem mais de um valor de destino, que é atingido em um ponto ao longo da linha do tempo da animação. Em outras palavras, cada quadro chave pode especificar um valor intermediário diferente e o último quadro chave atingido é o valor de animação final. Especificando vários valores a serem animados, você pode criar animações mais complexas. As animações de quadro chave também permitem uma lógica de interpolação diferente, sendo cada uma implementada como uma subclasse **KeyFrame** diferente por tipo de animação. Mais especificamente, cada tipo de animação de quadro chave tem uma variação de **Discrete**, **Linear**, **Spline** and **Easing** de sua classe **KeyFrame** para a especificação de seus quadros chave. Por exemplo, para especificar uma animação que direciona um [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) e usa quadros chave, você pode declarar quadros chave com [**DiscreteDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243130), [**LinearDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210316), [**SplineDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210446) e [**EasingDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210269). Você pode usar qualquer um e todos esses tipos em uma única coleção de **KeyFrames** para alterar a interpolação sempre que um novo quadro chave for atingido.
 
@@ -40,7 +47,7 @@ Além de [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.
     -   Se definida como [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377), a linha do tempo será repetida até que esse tempo seja atingido. Isso pode truncar a animação no meio da sequência de quadros chave se não for um fator inteiro da duração implícita da linha do tempo.
 -   [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (não usada com frequência)
 
-### Quadros chave lineares
+### <a name="linear-key-frames"></a>Quadros chave lineares
 
 Quadros chave lineares resultam em uma interpolação linear mais simples do valor até que o **KeyTime** do quadro seja atingido. Esse comportamento de interpolação é o mais semelhante às animações **From**/**To**/**By** mais simples descritas no tópico [Animações de storyboard](storyboarded-animations.md).
 
@@ -62,7 +69,7 @@ Consulte a seguir como usar uma animação de quadro chave para redimensionar a 
 </StackPanel>
 ```
 
-### Quadros chave separados
+### <a name="discrete-key-frames"></a>Quadros chave separados
 
 Os quadros chave separados não usam interpolação. Quando um **KeyTime** é atingido, o novo **Value** é simplesmente aplicado. Dependendo de qual propriedade da interface do usuário estiver sendo animada, isso geralmente produz uma animação que parece "saltar". Certifique-se de que esse é o comportamento estético realmente desejado. Você pode atenuar os saltos aparentes aumentando o número de quadros chave declarados, mas, se desejar uma animação suave, é melhor usar quadros chave lineares ou de spline.
 
@@ -70,7 +77,7 @@ Os quadros chave separados não usam interpolação. Quando um **KeyTime** é at
 
  
 
-### Quadros chave de spline
+### <a name="spline-key-frames"></a>Quadros chave de spline
 
 Um quadro chave de spline cria uma transição variável entre valores de acordo com o valor da propriedade **KeySpline**. Essa propriedade especifica o primeiro e o segundo ponto de controle de uma curva de Bézier, que descreve a aceleração da animação. Basicamente, um [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) define uma relação de função ao longo do tempo em que o gráfico função-tempo é a forma da curva de Bézier. Geralmente, você especifica um valor **KeySpline** em uma cadeia de caracteres de atributo XAML abreviada que tem quatro valores [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) separados por espaços ou vírgulas. Esses valores são pares "X, Y" para dois pontos de controle da curva de Bézier. "X" é o tempo e "Y" é o modificador de função para o valor. Cada valor deve estar sempre entre 0 e 1. Sem modificação do ponto de controle para um **KeySpline**, a linha reta de 0,0 a 1,1 é a representação de uma função ao longo do tempo para uma interpolação linear. Seus pontos de controle alteram a forma dessa curva e, assim, o comportamento da função ao longo do tempo da animação de spline. Provavelmente, é melhor conferir isso visualmente em um gráfico. Você pode executar o [Exemplo de visualizador de spline chave do Silverlight](http://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) em um navegador para ver como os pontos de controle modificam a curva e como uma animação de exemplo é executada quando é usada como um valor **KeySpline** 
 
@@ -104,7 +111,7 @@ Este próximo exemplo mostra três quadros chave diferentes aplicados a uma anim
 </Storyboard>
 ```
 
-### Quadros chave de easing
+### <a name="easing-key-frames"></a>Quadros chave de easing
 
 Um quadro chave de easing é um quadro chave em que a interpolação sendo aplicada e a função ao longo do tempo da interpolação é controlada por várias fórmulas matemáticas predefinidas. Na realidade, você pode gerar em grande parte o mesmo resultado com um quadro chave de spline que é possível com alguns dos tipos de função de easing, mas também há algumas funções de easing como [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049) que você não pode reproduzir com um spline.
 
@@ -139,7 +146,7 @@ Esse exemplo aplica um [**CubicEase**](https://msdn.microsoft.com/library/window
 
 Este é apenas um exemplo de função de easing. Abordaremos mais na próxima seção.
 
-## Funções de easing
+## <a name="easing-functions"></a>Funções de easing
 
 As funções de facilitação permitem aplicar fórmulas matemáticas personalizadas a suas animações. As operações matemáticas geralmente são úteis para produzir animações que simulam a física real em um sistema de coordenadas 2D. Por exemplo, você pode querer que um objeto salte de forma realista ou se comporte como se estivesse preso a uma mola. Você pode usar animações de quadro chave ou até mesmo animações **From**/**To**/**By** para simular esses efeitos, mas seria trabalhoso e a animação seria menos precisa do que se uma fórmula matemática fosse usada.
 
@@ -191,7 +198,7 @@ Em um exemplo anterior, mostramos como declarar uma função de easing para uma 
 
 Quando uma função de easing é aplicada a uma animação **From**/**To**/**By**, ela altera as características de função ao longo do tempo relacionadas à maneira como o valor é interpolado entre **From** e **To** ao longo da [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) da animação. Sem uma função de easing, seria uma interpolação linear.
 
-## <span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>Animações de valor de objeto separado
+## <a name="span-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspanspan-iddiscreteobjectvalueanimationsspandiscrete-object-value-animations"></a><span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>Animações de valor de objeto separado
 
 Um tipo de animação merece uma menção especial por ser a única maneira de aplicar um valor animado a propriedades que não são do tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) ou [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). Este é o [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) da animação de quadro chave. Animar usando valores [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) é diferente porque não há a possibilidade de interpolar os valores entre os quadros. Quando o [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342) do quadro é atingido, o valor animado é imediatamente definido como o valor especificado no **Value** do quadro chave. Como não há interpolação, há somente um quadro chave que você usa na coleção de quadros chave **ObjectAnimationUsingKeyFrames**: [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132).
 
@@ -264,14 +271,9 @@ Você também pode usar [**ObjectAnimationUsingKeyFrames**](https://msdn.microso
 
 Você pode usar mais de um [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) para um conjunto de quadros [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320). Essa pode ser uma maneira interessante de criar uma animação de "apresentação de slides" animando o valor de [**Image.Source**](https://msdn.microsoft.com/library/windows/apps/BR242760), como um cenário de exemplo em que vários valores de objeto podem ser úteis.
 
- ## Tópicos relacionados
+ ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Sintaxe de Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586)
 * [Visão geral das propriedades de dependência](https://msdn.microsoft.com/library/windows/apps/Mt185583)
 * [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)
 * [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)
-
-
-<!--HONumber=Nov16_HO1-->
-
-

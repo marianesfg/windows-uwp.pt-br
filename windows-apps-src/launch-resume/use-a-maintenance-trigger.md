@@ -3,9 +3,16 @@ author: TylerMSFT
 title: "Usar um gatilho de manutenção"
 description: "Saiba como usar a classe MaintenanceTrigger para executar um código leve em segundo plano enquanto o dispositivo estiver conectado."
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: 8ca0255be671d0a2900bb7be3a66d4df4e793725
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e8e955f9449d48a6586c9648b70f9565c5278a16
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -109,9 +116,4 @@ O código a seguir adiciona uma condição ao criador de tarefa de manutenção:
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

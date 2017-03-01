@@ -3,27 +3,34 @@ author: GrantMeStrength
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
 title: "O que é um aplicativo da Plataforma Universal do Windows (UWP)?"
 description: "Saiba mais sobre os diferentes tipos de aplicativos que nós chamamos de aplicativos Universais do Windows - aplicativos da Windows Store, aplicativos da Loja do Windows Phone e aplicativos do Windows Runtime."
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6be8bb0a78b614e160fb40629601bdab2d7fc71a
-ms.openlocfilehash: 3fd9f4d539977c4b531e08efe0719328365c757c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0507086a7c7ea67f43f61feef6dc5c8de5afe2e5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# O que é um aplicativo da Plataforma Universal do Windows (UWP)?
+# <a name="whats-a-universal-windows-platform-uwp-app"></a>O que é um aplicativo da Plataforma Universal do Windows (UWP)?
 
 Se estiver começando na plataforma Windows ou chegando dos mundos de .NET, Windows Forms ou Silverlight, você deverá estar se perguntando o que um aplicativo UWP, na verdade, *é*. 
 
-Como um livro famoso disse certa vez "Não entre em pânico!" Tudo ficará claro em instantes. 
+Como um livro famoso disse uma vez, "Não entre em pânico!", pois tudo logo estará claro. 
 
 Um aplicativo da Plataforma Universal do Windows (UWP) é uma experiência do Windows que se baseia na Plataforma Universal do Windows (UWP), que foi introduzida no Windows 8 como Windows Runtime. Na essência dos aplicativos UWP está a ideia de que os usuários querem que suas *experiências* sejam móveis em todos os seus dispositivos, e querem usar o dispositivo que for mais conveniente ou produtivo para a tarefa em questão.
 
-O Windows 10 facilita ainda mais o desenvolvimento de aplicativos para a UWP com apenas um conjunto de APIs, um pacote do aplicativo e uma loja para alcançar todos os dispositivos Windows 10: computadores, tablets, telefones, Xbox, HoloLens, Surface Hub e muito mais. É fácil dar suporte a vários tamanhos de tela e também a vários modelos de interação, seja com toque, com mouse e teclado, com um controlador de jogo ou com uma caneta.
+O Windows 10 facilita ainda mais o desenvolvimento de aplicativos para a UWP com apenas um conjunto de APIs, um pacote do aplicativo e uma loja para alcançar todos os dispositivos Windows 10: computadores, tablets, telefones, Xbox, HoloLens, Surface Hub e muito mais. É fácil dar suporte a vários tamanhos de tela e também a vários modelos de interação, seja com toque, com mouse e teclado, com um controlador de jogo ou com uma caneta. E mais essa: você não precisa usar C# e XAML, se você não quiser. Você gosta de desenvolver no Unity ou MonoGame? Prefere JavaScript? Não é um problema, use todos os que desejar.
 
-O resultado: você pode dedicar seu tempo trabalhando com linguagens de programação e APIs familiares, tudo em um único projeto e ter o mesmo código executado na vasta gama hardware Windows existente atualmente.
+O resultado: você pode dedicar seu tempo trabalhando com linguagens de programação, frameworks e APIs, tudo em um único projeto e ter o mesmo código executado na vasta gama hardware Windows existente atualmente. Uma vez escrito o seu aplicativo UWP, você pode publicá-lo na loja para o mundo ver.
 
 ![Dispositivos Windows](images/1894834-hig-device-primer-01-500.png)
 
-##Assim, o que *exatamente* é um aplicativo UWP?
+##<a name="so-what-exactly-is-a-uwp-app"></a>Sendo assim, o que *exatamente* é um aplicativo UWP?
 
 
 O que torna um aplicativo UWP especial? Estas são algumas das características que tornam os aplicativos UWP no Windows 10 diferentes.
@@ -54,7 +61,7 @@ O que torna um aplicativo UWP especial? Estas são algumas das características 
 
 Para obter uma visão mais detalhada da UWP, consulte [Guia para Aplicativos da Plataforma Universal do Windows](universal-application-platform-guide.md).
 
-## Use uma linguagem que você já conhece
+## <a name="use-a-language-you-already-know"></a>Use uma linguagem que você já conhece
 
 
 Você pode criar aplicativos UWP usando as linguagens de programação mais comuns, como C# ou Visual Basic com XAML, JavaScript com HTML ou C++ com DirectX e/ou a linguagem XAML. Também é possível escrever componentes em uma linguagem e usá-los em um aplicativo escrito em outra linguagem.
@@ -63,7 +70,7 @@ Os aplicativos UWP usam o Tempo de Execução do Windows, uma API nativa interna
 
 O Microsoft Visual Studio 2015 oferece um modelo de aplicativo UWP para cada linguagem que permite criar um único projeto para todos os dispositivos. Quando seu trabalho estiver concluído, você poderá produzir um pacote do aplicativo e enviá-lo à Windows Store diretamente do Visual Studio, para disponibilizar o aplicativo aos clientes em qualquer dispositivo Windows 10.
 
-## Os aplicativos UWP ganham vida no Windows
+## <a name="uwp-apps-come-to-life-on-windows"></a>Os aplicativos UWP ganham vida no Windows
 
 
 No Windows, o seu aplicativo pode fornecer informações importantes em tempo real aos usuários, além de fazê-los voltar para saberem mais. Na economia moderna dos aplicativos, seu aplicativo precisa ser atraente para ser importante na vida de seus usuários. O Windows oferece vários recursos para ajudar a que os usuários retornem ao seu aplicativo:
@@ -79,7 +86,7 @@ No Windows, o seu aplicativo pode fornecer informações importantes em tempo re
 
 Finalmente, é possível usar os dados móveis e o Cofre de Credenciais do Windows para proporcionar uma experiência de roaming consistente em todas as telas do Windows onde os usuários executam seu aplicativo. Os dados móveis oferecem uma maneira fácil de armazenar as preferências e configurações de um usuário na nuvem, sem a necessidade de ter de construir a sua própria infraestrutura de sincronização. Além disso, é possível armazenar as credenciais do usuário no Cofre de Credenciais, onde segurança e confiabilidade são as principais prioridades.
 
-##  Rentabilize seu aplicativo à sua maneira
+##  <a name="monetize-your-app-your-way"></a>Rentabilize seu aplicativo à sua maneira
 
 
 No Windows, é possível rentabilizar o seu aplicativo a sua maneira: em vários telefones, tablets, computadores e outros dispositivos. Oferecemos uma série de formas de ganhar dinheiro com seu aplicativo e os serviços que ele proporciona. Você só precisa escolher o que faz sentido para o seu aplicativo:
@@ -88,25 +95,20 @@ No Windows, é possível rentabilizar o seu aplicativo a sua maneira: em vários
 -   As avaliações são uma excelente maneira de permitir que os usuários experimentem seu aplicativo antes de comprá-lo, proporcionando uma descoberta e uma conversão mais fáceis do que as opções "freemium" mais tradicionais.
 -   A compra no aplicativo oferece o de flexibilidade ao monetizar seu aplicativo.
 
-## Vamos começar
+## <a name="lets-get-started"></a>Vamos começar
 
 
 Para obter uma visão mais detalhada da UWP, leia o [Guia para Aplicativos da Plataforma Universal do Windows](universal-application-platform-guide.md). Em seguida, confira [Preparar-se para começar](get-set-up.md) para baixar as ferramentas de que você precisa para iniciar a criação de aplicativos.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Guia para Aplicativos da Plataforma Universal do Windows](universal-application-platform-guide.md)
 * [Prepare-se para começar](get-set-up.md)
 
-## Tópicos mais avançados
+## <a name="more-advanced-topics"></a>Tópicos mais avançados
 
 * [.NET Native - o que significa para os desenvolvedores da Plataforma Universal do Windows (UWP)](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
 * [Aplicativos Universais do Windows em .NET](https://blogs.msdn.microsoft.com/dotnet/2015/07/30/universal-windows-apps-in-net)
 * [.NET para aplicativos UWP](https://msdn.microsoft.com/en-us/library/mt185501.aspx)
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

@@ -3,16 +3,23 @@ author: mtoepke
 title: Comparar o pipeline do sombreador do OpenGL ES 2.0 com Direct3D
 description: "Conceitualmente, o pipeline de sombreador do Direct3D 11 é bem parecido com o do OpenGL ES 2.0."
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, opengl, direct3d, pipeline do sombreador
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 144e3374c16118418872f6c473c5f39101fbfce0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 20d02d9b9724c0cfd8120d4d38fa476b9efa3bb3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Comparar o pipeline do sombreador do OpenGL ES 2.0 com Direct3D
+# <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>Comparar o pipeline do sombreador do OpenGL ES 2.0 com Direct3D
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -23,7 +30,7 @@ ms.openlocfilehash: 144e3374c16118418872f6c473c5f39101fbfce0
 
 Conceitualmente, o pipeline de sombreador do Direct3D 11 é bem parecido com o do OpenGL ES 2.0. Mas em termos de design da API, os componentes principais para a criação e o gerenciamento dos estágios do sombreador fazem parte de duas interfaces primárias, [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) e [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). O objetivo deste tópico é correlacionar os padrões das APIs do pipeline de sombreador do OpenGL ES 2.0 com os equivalentes em Direct3D 11 nessas interfaces.
 
-## Revisando o pipeline de sombreador do Direct3D 11
+## <a name="reviewing-the-direct3d-11-shader-pipeline"></a>Revisando o pipeline de sombreador do Direct3D 11
 
 
 Os objetos de sombreador são criados com métodos na interface [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575), bem como na [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) e [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513).
@@ -39,7 +46,7 @@ O pipeline de elementos gráficos do Direct3D 11 é gerenciado por instâncias d
 
 (Também há estágios para sombreadores de geometria, sombreadores hull, tesselators e sombreadores de domínio, mas como eles não têm elementos semelhantes no OpenGL ES 2.0, não falaremos sobre eles aqui). Para obter uma lista completa de métodos desses estágios, consulte as páginas de referência [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) e [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). O **ID3D11DeviceContext1** estende o **ID3D11DeviceContext** para o Direct3D 11.
 
-## Criando um sombreador
+## <a name="creating-a-shader"></a>Criando um sombreador
 
 
 Em Direct3D, os recursos de sombreador não são criados antes da compilação e carregamento deles; o recurso é criado quando o HLSL é carregado. Por isso, não há função diretamente análoga a glCreateShader, que cria um recurso de sombreador inicializado de um tipo específico (como GL\_VERTEX\_SHADER ou GL\_FRAGMENT\_SHADER). Em vez disso, os sombreadores são criados após o carregamento de HLSL com funções específicas como [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) e [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513), que consideram o tipo e o HLSL compilado como parâmetros.
@@ -50,10 +57,10 @@ Em Direct3D, os recursos de sombreador não são criados antes da compilação e
 
  
 
-## Compilando um sombreador
+## <a name="compiling-a-shader"></a>Compilando um sombreador
 
 
-Os sombreadores do Direct3D devem ser recompilados como arquivos .cso (objeto de sombreador compilado) em aplicativos UWP (Plataforma Universal do Windows) e carregados usando uma das APIs de arquivos do Windows Runtime. (Os aplicativos da área de trabalho podem compilar os sombreadores a partir de arquivos de texto ou de cadeias de caracteres em tempo de execução). Os arquivos CSO são criados a partir de qualquer arquivo .hlsl que faça parte do projeto do Microsoft Visual Studio e mantêm os mesmos nomes, mas com a extensão de arquivo .cso. Não se esqueça de incluí-los em seu pacote ao enviá-lo!
+Os sombreadores do Direct3D devem ser recompilados como arquivos .cso (objeto de sombreador compilado) em apps UWP (Plataforma Universal do Windows) e carregados usando uma das APIs de arquivos do Windows Runtime. (Os apps da área de trabalho podem compilar os sombreadores a partir de arquivos de texto ou de cadeias de caracteres em tempo de execução). Os arquivos CSO são criados a partir de qualquer arquivo .hlsl que faça parte do projeto do Microsoft Visual Studio e mantêm os mesmos nomes, mas com a extensão de arquivo .cso. Não se esqueça de incluí-los em seu pacote ao enviá-lo!
 
 | OpenGL ES 2.0                          | Direct3D 11                                                                                                                                                                   |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -62,7 +69,7 @@ Os sombreadores do Direct3D devem ser recompilados como arquivos .cso (objeto de
 
  
 
-## Carregando um sombreador
+## <a name="loading-a-shader"></a>Carregando um sombreador
 
 
 Como falamos na seção sobre criação de um sombreador, o Direct3D 11 cria o sombreador quando o arquivo CSO correspondente é carregado em um buffer e passado para um dos métodos na tabela a seguir.
@@ -73,7 +80,7 @@ Como falamos na seção sobre criação de um sombreador, o Direct3D 11 cria o s
 
  
 
-## Configurando o pipeline
+## <a name="setting-up-the-pipeline"></a>Configurando o pipeline
 
 
 O OpenGL ES 2.0 possui o objeto "programa de sombreador", que contém vários sombreadores para execução. Os sombreadores individuais são anexados ao objeto do programa de sombreador. Porém, no Direct3D 11, você deve trabalhar diretamente com o contexto de renderização ([**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)) e criar sombreadores nele.
@@ -109,7 +116,7 @@ D3D11CreateDevice(
 );
 ```
 
-## Configurando os visores
+## <a name="setting-the-viewports"></a>Configurando os visores
 
 
 O processo de configuração de um visor no Direct3D 11 é muito parecido com o processo no OpenGL ES 2.0. No Direct3D 11, chame [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) com um [**CD3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/jj151722) configurado.
@@ -132,7 +139,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
  
 
-## Configurando os sombreadores de vértice
+## <a name="configuring-the-vertex-shaders"></a>Configurando os sombreadores de vértice
 
 
 A configuração de um sombreador de vértice no Direct3D 11 é feita quando o sombreador é carregado. Os uniformes são passados como buffers constantes usando [**ID3D11DeviceContext1::VSSetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh446795).
@@ -145,7 +152,7 @@ A configuração de um sombreador de vértice no Direct3D 11 é feita quando o s
 
  
 
-## Configurando os sombreadores de pixel
+## <a name="configuring-the-pixel-shaders"></a>Configurando os sombreadores de pixel
 
 
 A configuração de um sombreador de pixel no Direct3D 11 é feita quando o sombreador é carregado. Os uniformes são passados como buffers constantes usando [**ID3D11DeviceContext1::PSSetConstantBuffers1.**](https://msdn.microsoft.com/library/windows/desktop/hh404649)
@@ -158,7 +165,7 @@ A configuração de um sombreador de pixel no Direct3D 11 é feita quando o somb
 
  
 
-## Gerando os resultados finais
+## <a name="generating-the-final-results"></a>Gerando os resultados finais
 
 
 Quando o pipeline é concluído, desenhe os resultados dos estágios do sombreador no buffer de fundo. No Direct3D 11, assim como com o Open GL ES 2.0, isso envolve a chamada a um comando de desenho para gerar os resultados como um mapa de cores no buffer de fundo e, depois, enviar o buffer de fundo para a exibição.
@@ -170,7 +177,7 @@ Quando o pipeline é concluído, desenhe os resultados dos estágios do sombread
 
  
 
-## Fazendo a portabilidade do GLSL para HLSL
+## <a name="porting-glsl-to-hlsl"></a>Fazendo a portabilidade do GLSL para HLSL
 
 
 Com exceção do suporte a tipos complexos e de alguns aspectos da sintaxe geral, o GLSL e o HLSL não são muito diferentes. Muitos desenvolvedores acham mais fácil fazer a portabilidade entre os dois por meio da atribuição de alias de instruções e definições comuns do OpenGL ES 2.0 aos seus equivalentes em HLSL. Lembre-se de que o Direct3D usa a versão do modelo de sombreador para expressar o conjunto de recursos do HLSL compatível com uma interface gráfica; o OpenGL tem uma especificação de versão diferente para o HLSL. O intuito da tabela a seguir é dar uma ideia aproximada dos conjuntos de recursos de linguagem de sombreador definidos para Direct3D 11 e OpenGL ES 2.0 nos termos da versão da outra linguagem.
@@ -184,12 +191,12 @@ Com exceção do suporte a tipos complexos e de alguns aspectos da sintaxe geral
 
 Leia a [referência de GLSL para HLSL](glsl-to-hlsl-reference.md) e conheça melhor as diferenças entre as duas linguagens de sombreador, além de correlações comuns entre as sintaxes.
 
-## Fazendo a portabilidade de intrínsecos do OpenGL para semântica do HLSL
+## <a name="porting-the-opengl-intrinsics-to-hlsl-semantics"></a>Fazendo a portabilidade de intrínsecos do OpenGL para semântica do HLSL
 
 
-A semântica HLSL do Direct3D 11 é composta de cadeias que, como um nome de atributo ou uniforme, são usadas para identificar um valor passado de um aplicativo para um programa de sombreador (e vice-versa). Embora haja uma grande variedade de cadeias possíveis, o melhor a fazer é usar uma cadeia, como POSITION ou COLOR, que indique o uso. Você deve atribuir essa semântica ao construir um buffer constante ou um layout de entrada de buffer. Você também pode adicionar um número de 0 a 7 à semântica, o que permite usar Registros separados para valores semelhantes. Por exemplo: COLOR0, COLOR1, COLOR2...
+A semântica HLSL do Direct3D 11 é composta de cadeias que, como um nome de atributo ou uniforme, são usadas para identificar um valor passado de um app para um programa de sombreador (e vice-versa). Embora haja uma grande variedade de cadeias possíveis, o melhor a fazer é usar uma cadeia, como POSITION ou COLOR, que indique o uso. Você deve atribuir essa semântica ao construir um buffer constante ou um layout de entrada de buffer. Você também pode adicionar um número de 0 a 7 à semântica, o que permite usar Registros separados para valores semelhantes. Por exemplo: COLOR0, COLOR1, COLOR2...
 
-A semântica prefixada com "SV\_" contém valores do sistema gravados pelo programa sombreador; por si só, o aplicativo (em execução na CPU) não pode modificá-la. Normalmente, esses valores são entradas ou saídas de outro estágio do sombreador no pipeline gráfico ou são completamente gerados pela GPU.
+A semântica prefixada com "SV\_" contém valores do sistema gravados pelo programa sombreador; por si só, o app (em execução na CPU) não pode modificá-la. Normalmente, esses valores são entradas ou saídas de outro estágio do sombreador no pipeline gráfico ou são completamente gerados pela GPU.
 
 Além disso, a semântica SV\_ tem comportamentos diferentes quando é usada para especificar a entrada ou saída de um estágio do sombreador. Por exemplo, SV\_POSITION (saída) contém os dados de vértice transformados durante o estágio do sombreador de vértice, e SV\_POSITION (entrada) contém os valores de posição de pixel interpolados durante a rasterização.
 
@@ -197,7 +204,7 @@ Veja algumas correlações com intrínsecos de sombreador comuns do OpenGL ES 2.
 
 | Valor de sistema no OpenGL | Use esta semântica HLSL                                                                                                                                                   |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| gl\_Position        | POSITION(n) dos dados do buffer de vértice. SV\_POSITION fornece uma posição do pixel ao sombreador de pixel e não pode ser gravado pelo aplicativo.                                        |
+| gl\_Position        | POSITION(n) dos dados do buffer de vértice. SV\_POSITION fornece uma posição do pixel ao sombreador de pixel e não pode ser gravado pelo app.                                        |
 | gl\_Normal          | NORMAL(n) de dados normais fornecidos pelo buffer de vértice.                                                                                                                 |
 | gl\_TexCoord\[n\]   | TEXCOORD(n) de dados de coordenadas UV (ST em alguns documentos do OpenGL) de textura fornecidos a um sombreador.                                                                       |
 | gl\_FragColor       | COLOR(n) de dados de cor RGBA fornecidos a um sombreador. Não se esqueça de que eles são tratados de forma idêntica aos dados de coordenadas; a semântica simplesmente o ajuda a identificar que são dados de cor. |
@@ -246,10 +253,5 @@ Para saber mais sobre o uso de semântica com Direct3D, leia [Semântica HLSL](h
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

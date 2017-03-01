@@ -2,15 +2,23 @@
 author: Mtoepke
 title: Perguntas frequentes
 description: Perguntas frequentes sobre a UWP no Xbox.
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 translationtype: Human Translation
-ms.sourcegitcommit: 1ee75d73cc42455677bc2c0df08b41f33fc4f7b0
-ms.openlocfilehash: a6d410e3a4873bb96fba46789b28185c392a7492
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 059fac41c0c0557dbc3d4739c1da78f794505839
+ms.lasthandoff: 02/08/2017
 
 ---
 
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 
-As coisas não estão funcionando da forma esperada? Procure nesta página de perguntas frequentes. Confira também o tópico [Problemas conhecidos](known-issues.md) e o fórum [Desenvolvendo aplicativos Universal do Windows](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop). 
+As coisas não estão funcionando da forma esperada? Procure nesta página de perguntas frequentes. Confira também o tópico [Problemas conhecidos](known-issues.md) e o fórum [Desenvolvendo aplicativos Universal do Windows](https://go.microsoft.com/fwlink/?linkid=839446). 
 
 ### <a name="why-are-my-games-and-apps-not-working"></a>Por que meus jogos e aplicativos não estão funcionando?
 
@@ -38,6 +46,9 @@ Você pode verificar isso simplesmente pressionando o botão **Início** e exami
 ### <a name="will-my-games-and-apps-still-work-if-i-activate-developer-mode"></a>Meus aplicativos e jogos ainda funcionarão se ativar o modo de desenvolvedor?
 
 Sim, você pode alternar do modo de desenvolvedor para o modo de varejo, onde você pode jogar seus jogos. Para saber mais, veja a página [Ativação do modo de desenvolvedor do Xbox One](devkit-activation.md). 
+
+### <a name="can-i-develop-and-publish-x86-apps-for-xbox"></a>Posso desenvolver e publicar aplicativos x86 para Xbox?
+Xbox não dá mais suporte ao desenvolvimento de aplicativos x86 ou envios de aplicativos x86 para a loja. 
 
 ### <a name="will-i-lose-my-games-and-apps-or-saved-changes"></a>Irei perder meus aplicativos e jogos ou alterações salvas?
 
@@ -131,9 +142,4 @@ Para saber mais, consulte o projeto [TVHelpers](https://github.com/Microsoft/TVH
 ## <a name="see-also"></a>Consulte também
 - [Problemas conhecidos com UWP no Xbox One](known-issues.md)
 - [UWP no Xbox One](index.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

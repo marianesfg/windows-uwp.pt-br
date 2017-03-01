@@ -1,10 +1,18 @@
 ---
 author: PatrickFarley
 title: Telas iniciais
-description: "Esta seção descreve como definir e configurar a tela inicial do app."
+description: "Esta seção descreve como definir e configurar a tela inicial do aplicativo."
+ms.assetid: 6b954bb3-e5b0-46d1-8afc-fb805536cf6d
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 023e37bb6f9b8d8d780bb0a536cb469c87a31ed4
-ms.openlocfilehash: bb0f3ff68b7dc15623e4f337e589989354e08b65
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 51add4631b807940e051a8f4cbaca92063e41d4a
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -28,8 +36,3 @@ Além disso, você pode usar a classe [**SplashScreen**](https://msdn.microsoft.
 |-------|-------------|
 | [Adicionar uma tela inicial](add-a-splash-screen.md) | Defina a imagem e a cor de fundo da tela inicial do seu app. |
 | [Exibir uma tela inicial por mais tempo](create-a-customized-splash-screen.md) | Exiba uma tela inicial por mais tempo criando uma tela inicial estendida para o seu aplicativo. Essa tela estendida imita a tela inicial exibida quando o aplicativo é iniciado e pode ser personalizada. |
-
-
-<!--HONumber=Dec16_HO1-->
-
-

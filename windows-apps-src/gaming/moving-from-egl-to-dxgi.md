@@ -3,16 +3,23 @@ author: mtoepke
 title: "Comparar código EGL com DXGI e Direct3D"
 description: "A DXGI (interface gráfica do DirectX) e várias APIs Direct3D desempenham a mesma função que EGL. Este tópico o ajuda a entender a DXGI e o Direct3D 11 do ponto de vista do EGL."
 ms.assetid: 90f5ecf1-dd5d-fea3-bed8-57a228898d2a
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, egl, dxgi, direct3d
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 599196300a393352540abf1154d1508af7b4caa1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7d7e4058eccd39911bd84d3967ef07b93b6ee89d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Comparar código EGL com DXGI e Direct3D
+# <a name="compare-egl-code-to-dxgi-and-direct3d"></a>Comparar código EGL com DXGI e Direct3D
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -29,7 +36,7 @@ Assim como o EGL, a DXGI e o Direct3D fornecem métodos de configuração de rec
 
  
 
-## Comparação entre a DXGI e o Direct3D
+## <a name="how-does-dxgi-and-direct3d-compare"></a>Comparação entre a DXGI e o Direct3D
 
 
 A grande vantagem da EGL em relação a DXGI e a Direct3D é que é relativamente simples começar a desenhar em uma superfície de janela. Isso ocorre porque a OpenGL ES 2.0, e consequentemente a EGL, é uma especificação implementada por vários fornecedores de plataforma, ao passo que DXGI e Direct3D são uma única referência com a qual os drivers de fornecedores de hardware devem estar em conformidade. Isso significa que a Microsoft deve implementar um conjunto de APIs que permitem o conjunto mais amplo possível de recursos dos fornecedores, em vez de focar em um subconjunto funcional oferecido por um fornecedor específico ou combinar comandos de configuração específicos a esses fornecedores em APIs mais simples. Por outro lado, o Direct3D fornece um conjunto único de APIs que abrangem uma variedade muito grande de níveis de recurso e plataformas de hardware gráfico, oferecendo mais flexibilidade para desenvolvedores experientes na plataforma.
@@ -44,7 +51,7 @@ Assim como o EGL, a DXGI e o Direct3D fornecem APIs para os seguintes comportame
 -   Renderização em destinos específicos (como texturas).
 -   Atualização da superfície de exibição da janela com os resultados da renderização com recursos gráficos.
 
-Para ver o processo Direct3D básico para configuração do pipeline gráfico, consulte o modelo de aplicativo DirectX 11 (Universal do Windows) no Microsoft Visual Studio 2015. A classe de renderização básica nele é um bom parâmetro para a configuração da infraestrutura de elementos gráficos do Direct3D 11 e para a configuração de recursos básicos nela, bem como para o suporte a recursos de aplicativos da Plataforma Universal do Windows (UWP), como a rotação da tela.
+Para ver o processo Direct3D básico para configuração do pipeline gráfico, consulte o modelo de app DirectX 11 (Universal do Windows) no Microsoft Visual Studio 2015. A classe de renderização básica nele é um bom parâmetro para a configuração da infraestrutura de elementos gráficos do Direct3D 11 e para a configuração de recursos básicos nela, bem como para o suporte a recursos de apps da Plataforma Universal do Windows (UWP), como a rotação da tela.
 
 O EGL tem pouquíssimas APIs relativas ao Direct3D 11, e navegar nele pode ser difícil se você não conhece a nomenclatura e os jargões específicos à plataforma. Consulte um panorama simples para você se orientar.
 
@@ -52,28 +59,28 @@ Primeiramente, examine o mapeamento do objeto EGL básico para a interface Direc
 
 | Abstração EGL | Representação Direct3D semelhante                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **EGLDisplay**  | No Direct3D (para aplicativos UWP), o identificador de exibição é obtido por meio da API [**Windows::UI::CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) (ou da interface **ICoreWindowInterop** que expõe o HWND). O adaptador e a configuração do hardware são definidas com as interfaces COM [**IDXGIAdapter**](https://msdn.microsoft.com/library/windows/desktop/bb174523) e [**IDXGIDevice1**](https://msdn.microsoft.com/library/windows/desktop/hh404543).                                                                                                                                                                                                                                                           |
+| **EGLDisplay**  | No Direct3D (para apps UWP), o identificador de exibição é obtido por meio da API [**Windows::UI::CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) (ou da interface **ICoreWindowInterop** que expõe o HWND). O adaptador e a configuração do hardware são definidas com as interfaces COM [**IDXGIAdapter**](https://msdn.microsoft.com/library/windows/desktop/bb174523) e [**IDXGIDevice1**](https://msdn.microsoft.com/library/windows/desktop/hh404543).                                                                                                                                                                                                                                                           |
 | **EGLSurface**  | Em Direct3D, os buffers e outros recursos de janela (visíveis ou fora da tela) são criados e configurados por interfaces DXGI específicas, incluindo [**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556) (uma implementação de padrão de fábrica usada para adquirir recursos DXGI, como [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) (buffers de exibição). O [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) que representa o dispositivo gráfico e seus recursos são adquiridos com [**D3D11Device::CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082). Para destinos de renderização, use a interface [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582). |
 | **EGLContext**  | Em Direct3D, você configura e emite comandos para o pipeline gráfico com a interface [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **EGLConfig**   | Em Direct3D 11, você cria e configura recursos gráficos como buffers, texturas, estênceis e sombreadores com métodos na interface [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575).                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
  
 
-Este é o processo mais básico para configurar uma exibição simples de elementos gráficos, recursos e contexto em DXGI e em Direct3D para um aplicativo UWP.
+Este é o processo mais básico para configurar uma exibição simples de elementos gráficos, recursos e contexto em DXGI e em Direct3D para um app UWP.
 
-1.  Obtenha um identificador para o objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para o thread de interface do usuário principal do aplicativo chamando [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589).
-2.  Para aplicativos UWP, adquira uma cadeia de troca de [**IDXGIAdapter2**](https://msdn.microsoft.com/library/windows/desktop/hh404537) com [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559), e passe-a para a referência [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) obtida na etapa 1. Você obterá uma instância de [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) em retorno. Analise-a como o objeto renderizador e seu thread de renderização.
+1.  Obtenha um identificador para o objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para o thread de interface do usuário principal do app chamando [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589).
+2.  Para apps UWP, adquira uma cadeia de troca de [**IDXGIAdapter2**](https://msdn.microsoft.com/library/windows/desktop/hh404537) com [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559), e passe-a para a referência [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) obtida na etapa 1. Você obterá uma instância de [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) em retorno. Analise-a como o objeto renderizador e seu thread de renderização.
 3.  Obtenha instâncias de [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) e [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) chamando o método [**D3D11Device::CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082). Analise-os como seu objeto renderizador, também.
 4.  Crie sombreadores, texturas e outros recursos usando métodos no objeto [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) do seu renderizador.
 5.  Defina buffers, execute sombreadores e gerencie estágios de pipeline usando métodos no objeto [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) do seu renderizador.
 6.  Quando o pipeline tiver sido executado e um quadro for desenhado no buffer de fundo, apresente-o na tela com [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797).
 
 Para examinar esse processo mais detalhadamente, consulte [Getting started with DirectX graphics](https://msdn.microsoft.com/library/windows/desktop/hh309467). O restante deste artigo abrange muitas etapas comuns para a configuração e o gerenciamento de pipeline gráfico básico.
-> **Observação**   Os aplicativos da área de trabalho do Windows têm APIs diferentes para obter uma cadeia de troca Direct3D, como [**D3D11Device::CreateDeviceAndSwapChain**](https://msdn.microsoft.com/library/windows/desktop/ff476083), e não usam um objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225).
+> **Observação**   Os apps da área de trabalho do Windows têm APIs diferentes para obter uma cadeia de troca Direct3D, como [**D3D11Device::CreateDeviceAndSwapChain**](https://msdn.microsoft.com/library/windows/desktop/ff476083), e não usam um objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225).
 
  
 
-## Obtendo uma janela para exibição
+## <a name="obtaining-a-window-for-display"></a>Obtendo uma janela para exibição
 
 
 Neste exemplo, eglGetDisplay recebe um HWND para um recurso de janela específico da plataforma Microsoft Windows. Outras plataformas, como o Apple iOS (Cocoa) e o Google Android, têm manipuladores ou referências a recursos de janela diferentes e podem ter uma sintaxe de chamada distinta no geral. Após a obtenção de uma exibição, você deve inicializá-la, definir a configuração preferida e criar uma superfície com um buffer de fundo no qual possa desenhar.
@@ -114,7 +121,7 @@ if (surface == EGL_NO_SURFACE)
 }
 ```
 
-Em Direct3D, a janela principal de um aplicativo UWP é representada pelo objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), que pode ser obtido do objeto do aplicativo chamando [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) como parte do processo de inicialização do "provedor da exibição" que você constrói para Direct3D. (Se você estiver usando o interop Direct3D-XAML, use o provedor de exibição da estrutura XAML.) O processo de criação de um provedor de exibição Direct3D é explicado em [Como configurar o seu aplicativo para mostrar uma visualização](https://msdn.microsoft.com/library/windows/apps/hh465077).
+Em Direct3D, a janela principal de um app UWP é representada pelo objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), que pode ser obtido do objeto do app chamando [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) como parte do processo de inicialização do "provedor da exibição" que você constrói para Direct3D. (Se você estiver usando o interop Direct3D-XAML, use o provedor de exibição da estrutura XAML.) O processo de criação de um provedor de exibição Direct3D é explicado em [Como configurar o seu app para mostrar uma visualização](https://msdn.microsoft.com/library/windows/apps/hh465077).
 
 Obtendo um CoreWindow para Direct3D.
 
@@ -204,7 +211,7 @@ m_d3dContext->OMSetRenderTargets(
         nullptr);
 ```
 
-## Criando um contexto de renderização
+## <a name="creating-a-rendering-context"></a>Criando um contexto de renderização
 
 
 No EGL 1.4, uma "exibição" representa um conjunto de recursos de janela. Normalmente, você deve configurar uma "superfície" para exibição fornecendo um conjunto de atributos ao objeto de exibição e obtendo uma superfície em troca. Gere um contexto para exibição do conteúdo da superfície criando esse contexto e vinculando-o à superfície e à exibição.
@@ -282,7 +289,7 @@ D3D11CreateDevice(
 );
 ```
 
-## Desenhando em uma textura ou um recurso pixmap
+## <a name="drawing-into-a-texture-or-pixmap-resource"></a>Desenhando em uma textura ou um recurso pixmap
 
 
 Para desenhar em uma textura com OpenGL ES 2.0, configure um buffer de pixels, ou PBuffer. Após a configuração e criação de uma EGLSurface para ele, você poderá fornecer um contexto de renderização e executar o pipeline do sombreador para desenhar na textura.
@@ -329,7 +336,7 @@ m_d3dContext->OMSetRenderTargets(
 
 Essa textura pode ser passada para um sombreador se ela está associada a uma [**ID3D11ShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476628).
 
-## Desenhando na tela
+## <a name="drawing-to-the-screen"></a>Desenhando na tela
 
 
 Depois que você usar EGLContext para configurar seus buffers e atualizar seus dados, execute os sombreadores vinculados a ele e desenhe os resultados no buffer de fundo com glDrawElements. O buffer de fundo é exibido chamando eglSwapBuffers.
@@ -358,7 +365,7 @@ m_d3dContext->DrawIndexed(
 m_swapChainCoreWindow->Present1(1, 0, &parameters);
 ```
 
-## Liberando recursos gráficos
+## <a name="releasing-graphics-resources"></a>Liberando recursos gráficos
 
 
 No EGL, lance os recursos de janela passando EGLDisplay para eglTerminate.
@@ -369,14 +376,14 @@ Terminando uma exibição com EGL 1.4
 EGLBoolean eglTerminate(eglDisplay);
 ```
 
-Em um aplicativo UWP, você pode fechar a CoreWindow com [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows/apps/br208260), embora isso só possa ser usado para janelas da interface do usuário secundária. O thread da interface do usuário principal e sua CoreWindow associada não podem ser fechados; em vez disso, eles são expirados pelo sistema operacional. No entanto, quando uma CoreWindow secundária é fechada, é gerado o evento [**CoreWindow::Closed**](https://msdn.microsoft.com/library/windows/apps/br208261).
+Em um app UWP, você pode fechar a CoreWindow com [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows/apps/br208260), embora isso só possa ser usado para janelas da interface do usuário secundária. O thread da interface do usuário principal e sua CoreWindow associada não podem ser fechados; em vez disso, eles são expirados pelo sistema operacional. No entanto, quando uma CoreWindow secundária é fechada, é gerado o evento [**CoreWindow::Closed**](https://msdn.microsoft.com/library/windows/apps/br208261).
 
-## Mapeamento da referência de API de EGL para Direct3D 11
+## <a name="api-reference-mapping-for-egl-to-direct3d-11"></a>Mapeamento da referência de API de EGL para Direct3D 11
 
 
 | API do EGL                          | API ou comportamento Direct3D 11 semelhante                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| eglBindAPI                       | N/D.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| eglBindAPI                       | N/A.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | eglBindTexImage                  | Chame [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521) para definir uma textura 2D.                                                                                                                                                                                                                                                                                                                                                                                          |
 | eglChooseConfig                  | O Direct3D não fornece um conjunto de configurações padrão de buffer de quadro. A configuração da cadeia de troca                                                                                                                                                                                                                                                                                                                                                                                           |
 | eglCopyBuffers                   | Para copiar dados de um buffer, chame [**ID3D11DeviceContext::CopyStructureCount**](https://msdn.microsoft.com/library/windows/desktop/ff476393). Para copiar um recurso, chame [**ID3DDeviceCOntext::CopyResource**](https://msdn.microsoft.com/library/windows/desktop/ff476392).                                                                                                                                                                                                                                                      |
@@ -385,16 +392,16 @@ Em um aplicativo UWP, você pode fechar a CoreWindow com [**CoreWindow::Close**]
 | eglCreatePbufferSurface          | Para criar um dispositivo Direct3D sem cadeia de troca, chame o método estático [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082). Para uma exibição de destino de renderização Direct3D, chame [**ID3D11Device::CreateRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476517).                                                                                                                                                                                                                               |
 | eglCreatePixmapSurface           | Para criar um dispositivo Direct3D sem cadeia de troca, chame o método estático [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082). Para uma exibição de destino de renderização Direct3D, chame [**ID3D11Device::CreateRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476517).                                                                                                                                                                                                                               |
 | eglCreateWindowSurface           | Obtenha uma [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) (para os buffers de exibição) e um [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) (uma interface virtual para o dispositivo gráfico e seus recursos). Use **ID3D11Device1** para definir uma [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) que você pode usar para criar o buffer de quadro fornecido para a **IDXGISwapChain1**.                                                                                         |
-| eglDestroyContext                | N/D. Use [**ID3D11DeviceContext::DiscardView1**](https://msdn.microsoft.com/library/windows/desktop/jj247573) para se desfazer de uma exibição de destino de renderização. Para fechar o [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) pai, defina a instância como nula e aguarde até que a plataforma recupere seus recursos. Você não pode eliminar o contexto do dispositivo de forma direta.                                                                                                                                                |
-| eglDestroySurface                | N/D. Os recursos gráficos são limpos quando a CoreWindow do aplicativo UWP é fechada pela plataforma.                                                                                                                                                                                                                                                                                                                                                                                                 |
-| eglGetCurrentDisplay             | Chame [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) para obter uma referência à janela do aplicativo principal da janela atual.                                                                                                                                                                                                                                                                                                                                                         |
+| eglDestroyContext                | N/A. Use [**ID3D11DeviceContext::DiscardView1**](https://msdn.microsoft.com/library/windows/desktop/jj247573) para se desfazer de uma exibição de destino de renderização. Para fechar o [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) pai, defina a instância como nula e aguarde até que a plataforma recupere seus recursos. Você não pode eliminar o contexto do dispositivo de forma direta.                                                                                                                                                |
+| eglDestroySurface                | N/A. Os recursos gráficos são limpos quando a CoreWindow do app UWP é fechada pela plataforma.                                                                                                                                                                                                                                                                                                                                                                                                 |
+| eglGetCurrentDisplay             | Chame [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) para obter uma referência à janela do app principal da janela atual.                                                                                                                                                                                                                                                                                                                                                         |
 | eglGetCurrentSurface             | Isso é a [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) atual. Geralmente, isso é analisado como o objeto do renderizador.                                                                                                                                                                                                                                                                                                                                                         |
 | eglGetError                      | Os erros são obtidos como HRESULTs retornados pela maioria dos métodos nas interfaces DirectX. Se o método não retorna um HRESULT, chame [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360). Para converter um erro de sistema em um valor HRESULT, use a macro [**HRESULT\_FROM\_WIN32**](https://msdn.microsoft.com/library/windows/desktop/ms680746).                                                                                                                                                                                                  |
-| eglInitialize                    | Chame [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) para obter uma referência à janela do aplicativo principal da janela atual.                                                                                                                                                                                                                                                                                                                                                         |
+| eglInitialize                    | Chame [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) para obter uma referência à janela do app principal da janela atual.                                                                                                                                                                                                                                                                                                                                                         |
 | eglMakeCurrent                   | Defina um destino de renderização para desenhar no contexto atual com [**ID3D11DeviceContext1::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464).                                                                                                                                                                                                                                                                                                                                  |
-| eglQueryContext                  | N/D. No entanto, você pode adquirir destinos de renderização de uma instância [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575), bem como alguns dados de configuração. (Siga o link da lista de métodos disponíveis.)                                                                                                                                                                                                                                                                                           |
-| eglQuerySurface                  | N/D. No entanto, você pode adquirir dados sobre visores e o hardware gráfico atual de métodos em uma instância [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575). (Siga o link da lista de métodos disponíveis.)                                                                                                                                                                                                                                                                               |
-| eglReleaseTexImage               | N/D.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| eglQueryContext                  | N/A. No entanto, você pode adquirir destinos de renderização de uma instância [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575), bem como alguns dados de configuração. (Siga o link da lista de métodos disponíveis.)                                                                                                                                                                                                                                                                                           |
+| eglQuerySurface                  | N/A. No entanto, você pode adquirir dados sobre visores e o hardware gráfico atual de métodos em uma instância [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575). (Siga o link da lista de métodos disponíveis.)                                                                                                                                                                                                                                                                               |
+| eglReleaseTexImage               | N/A.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | eglReleaseThread                 | Para multithreading geral da GPU, leia [Multithreading](https://msdn.microsoft.com/library/windows/desktop/ff476891).                                                                                                                                                                                                                                                                                                                                                                              |
 | eglSurfaceAttrib                 | Use [**D3D11\_RENDER\_TARGET\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476201) para configurar uma exibição de destino de renderização Direct3D.                                                                                                                                                                                                                                                                                                                                                               |
 | eglSwapBuffers                   | Use [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797).                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -412,10 +419,5 @@ Em um aplicativo UWP, você pode fechar a CoreWindow com [**CoreWindow::Close**]
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

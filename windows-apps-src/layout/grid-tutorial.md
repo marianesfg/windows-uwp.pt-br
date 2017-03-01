@@ -2,9 +2,17 @@
 author: mukin
 Description: "Este artigo estilo tutorial orienta o leitor ao longo das etapas para criar uma interface do usuário de aplicativo básico. Ele explica e demonstra o uso de Grid e StackPanel, dois dos elementos XAML mais comuns."
 title: Criar um app de clima simples usando Grid e StackPanel
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 translationtype: Human Translation
-ms.sourcegitcommit: c30aed9681d7c091e9831df3f53d8779dfacce38
-ms.openlocfilehash: 1990a3ad4e56fa039d024c53a04b021e60bed145
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 87947b5bd1c1db008a21828c3940475c2b53fd6d
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -14,9 +22,9 @@ Use XAML para criar o layout de um app de clima simples usando os elementos **Gr
 
 ## <a name="prerequisites"></a>Pré-requisitos
 - Windows 10 e Microsoft Visual Studio 2015. [Clique aqui para saber como fazer a preparação inicial com o Visual Studio](../get-started/get-set-up.md).
-- Conhecimento de como criar um app "Hello World" básico usando XAML e C#. Se você ainda não o tem, [clique aqui para saber como criar um app "Hello World"](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
+- Conhecimento de como criar um app "Hello World" básico usando XAML e C#. Se você ainda não o tem, [clique aqui para saber como criar um aplicativo "Hello World"](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
-## <a name="step-1-create-a-blank-app"></a>Etapa 1: Criar um app em branco
+## <a name="step-1-create-a-blank-app"></a>Etapa 1: Criar um aplicativo em branco
 1. No menu Visual Studio, selecione **Arquivo** > **Novo Projeto**.
 2. No painel esquerdo da caixa de diálogo **Novo Projeto**, selecione **Visual C#** > **Windows** > **Universal** ou **Visual C++** > **Windows** > **Universal**.
 3. No painel central, selecione **Aplicativo em Branco**.
@@ -115,9 +123,4 @@ Se desejar, experimente o layout acima e explore formas diferentes de representa
 Para obter uma introdução ao design de layouts de aplicativos UWP, consulte [Introdução ao design de aplicativos UWP](https://msdn.microsoft.com/windows/uwp/layout/design-and-ui-intro)
 
 Para saber mais sobre como criar layouts dinâmicos que se adaptem a diferentes tamanhos de tela, consulte [Definir layouts de página com XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

@@ -1,20 +1,27 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Responda à entrada do mouse em seus aplicativos manipulando os mesmos eventos de ponteiro básicos que você usa para entrada touch e por caneta."
+Description: "Responda à entrada do mouse em seus apps manipulando os mesmos eventos de ponteiro básicos que você usa para entrada touch e por caneta."
 title: "Interações por mouse"
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: ed0c8e86d38865fad8bb784550b9b4fc61a8b40a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 94a92c184f4c695caf29cb7a185842ccd72e4c53
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="mouse-interactions"></a>Interações por mouse
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Otimize o design do seu aplicativo UWP (Plataforma Universal do Windows) para entrada touch e obtenha, por padrão, o suporte básico para mouse.
+Otimize o design do seu app UWP (Plataforma Universal do Windows) para entrada touch e obtenha, por padrão, o suporte básico para mouse.
 
  
 
@@ -28,7 +35,7 @@ Mouse e touch apresentam divergências quando o assunto é a capacidade do touch
 
 Este tópico descreve as considerações de design para interações com mouse.
 
-## <a name="the-uwp-app-mouse-language"></a>A linguagem de mouse de aplicativo UWP
+## <a name="the-uwp-app-mouse-language"></a>A linguagem de mouse de app UWP
 
 
 Um conjunto conciso de interações de mouse é usado de forma consistente em todo o sistema.
@@ -51,7 +58,7 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 </tr>
 <tr class="even">
 <td align="left"><p>Clicar para uma ação principal</p></td>
-<td align="left"><p>Clique em um elemento para invocar sua ação principal (como iniciar um aplicativo ou executar um comando).</p></td>
+<td align="left"><p>Clique em um elemento para invocar sua ação principal (como iniciar um app ou executar um comando).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Rolar para mudar o modo de exibição</p></td>
@@ -59,9 +66,9 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 </tr>
 <tr class="even">
 <td align="left"><p>Clicar com o botão direito do mouse para selecionar e executar um comando</p></td>
-<td align="left"><p>Clique com o botão direito do mouse para exibir a barra de navegação (se disponível) e a barra de aplicativos com os comandos globais. Clique com o botão direito do mouse em um elemento para selecioná-lo e exibir a barra de aplicativos com os comandos contextuais relacionados ao elemento selecionado.</p>
+<td align="left"><p>Clique com o botão direito do mouse para exibir a barra de navegação (se disponível) e a barra de apps com os comandos globais. Clique com o botão direito do mouse em um elemento para selecioná-lo e exibir a barra de apps com os comandos contextuais relacionados ao elemento selecionado.</p>
 <div class="alert">
-<strong>Observação</strong>  Clique com o botão direito do mouse para exibir um menu de contexto, se os comandos de seleção ou da barra de aplicativos não forem os comportamentos adequados da interface do usuário. Mas a nossa recomendação é que você use a barra de aplicativos para os comportamentos de todos os comandos.
+<strong>Observação</strong>  Clique com o botão direito do mouse para exibir um menu de contexto, se os comandos de seleção ou da barra de apps não forem os comportamentos adequados da interface do usuário. Mas a nossa recomendação é que você use a barra de apps para os comportamentos de todos os comandos.
 </div>
 <div>
  
@@ -69,11 +76,11 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 </tr>
 <tr class="odd">
 <td align="left"><p>Comandos da interface do usuário para aplicar zoom</p></td>
-<td align="left"><p>Exiba os comandos da interface do usuário na barra de aplicativos (como + e -) ou pressione Ctrl e gire a roda do mouse para emular gestos de pinçagem e ampliação para aplicar zoom.</p></td>
+<td align="left"><p>Exiba os comandos da interface do usuário na barra de apps (como + e -) ou pressione Ctrl e gire a roda do mouse para emular gestos de pinçagem e ampliação para aplicar zoom.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Comandos da interface do usuário para girar</p></td>
-<td align="left"><p>Exiba os comandos da interface do usuário na barra de aplicativos ou pressione Ctrl+Shift e gire a roda do mouse para emular o gesto de rotação para girar. Gire o próprio dispositivo para girar a tela inteira.</p></td>
+<td align="left"><p>Exiba os comandos da interface do usuário na barra de apps ou pressione Ctrl+Shift e gire a roda do mouse para emular o gesto de rotação para girar. Gire o próprio dispositivo para girar a tela inteira.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Clicar e arrastar para reorganizar</p></td>
@@ -88,11 +95,11 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 
 ## <a name="mouse-events"></a>Eventos de mouse
 
-Responda à entrada do mouse em seus aplicativos manipulando os mesmos eventos de ponteiro básicos que você usa para entrada touch e por caneta.
+Responda à entrada do mouse em seus apps manipulando os mesmos eventos de ponteiro básicos que você usa para entrada touch e por caneta.
 
 Use eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) para implementar funcionalidade de entrada básica sem a necessidade de gravar código para cada dispositivo de entrada de ponteiro. No entanto, você ainda pode aproveitar as funcionalidades especiais de cada dispositivo (como eventos do botão de rolagem do mouse) usando os eventos de ponteiro, gesto e manipulação desse objeto.
 
-**Exemplos:  **consulte essa funcionalidade em ação nos [exemplos de aplicativos](http://go.microsoft.com/fwlink/p/?LinkID=264996).
+**Exemplos:  **consulte essa funcionalidade em ação nos [exemplos de apps](http://go.microsoft.com/fwlink/p/?LinkID=264996).
 
 
 - [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
@@ -119,7 +126,7 @@ Para obter diretrizes mais gerais sobre comentários visuais, consulte [Diretriz
 
 Um conjunto de cursores padrão está disponível para ponteiros de mouse. São usados para indicar a ação primária de um elemento.
 
-Cada cursor padrão tem uma imagem padrão correspondente associada. O usuário ou um aplicativo substitui a imagem padrão associada a qualquer cursor padrão quando desejado. Especifique uma imagem de cursor usando a função [**PointerCursor**](https://msdn.microsoft.com/library/windows/apps/br208273).
+Cada cursor padrão tem uma imagem padrão correspondente associada. O usuário ou um app substitui a imagem padrão associada a qualquer cursor padrão quando desejado. Especifique uma imagem de cursor usando a função [**PointerCursor**](https://msdn.microsoft.com/library/windows/apps/br208273).
 
 Se você precisa personalizar o cursor do mouse:
 
@@ -140,7 +147,7 @@ Se você precisa personalizar o cursor do mouse:
 * [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Exemplos de arquivo morto**
+**Exemplos de arquivo**
 * [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
@@ -152,10 +159,5 @@ Se você precisa personalizar o cursor do mouse:
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

@@ -3,13 +3,20 @@ author: jnHs
 Description: "Todos os pagamentos de lucros do Microsoft Advertising agora são feitos por meio da conta de pagamento do Centro de Desenvolvimento."
 title: "Conta de pagamento DevCenter pubCenter e consolidação de perfil fiscal"
 ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: baf488ac70ea2937a8bfda8a47d679a23053578d
-ms.openlocfilehash: e71c038575f1779c0a8d14306b0e4b8fd8eaf959
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5b93669adff4acfe791a2f607e9d8475e6213a31
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Conta de pagamento DevCenter pubCenter e consolidação de perfil fiscal
+# <a name="pubcenter-devcenter-payout-account-and-tax-profile-consolidation"></a>Conta de pagamento DevCenter pubCenter e consolidação de perfil fiscal
 
 Desde 1º de abril de 2016, todos os pagamentos de lucros do Microsoft Advertising agora são feitos por meio da conta de pagamento do Centro de Desenvolvimento. Visite o [Painel do Centro de Desenvolvimento do Windows](https://developer.microsoft.com/dashboard/apps/overview) para todo o gerenciamento de anúncios e a geração de relatórios de pagamento. 
 
@@ -21,15 +28,10 @@ Para obter mais informações sobre pagamentos no Centro de Desenvolvimento, con
 
 - [Configurando a conta de pagamento e os formulários tributários](setting-up-your-payout-account-and-tax-forms.md)
 - [Resumo do pagamento](payout-summary.md)
-- [Mercados de conta de desenvolvedor e de envio de aplicativos](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)
+- [Mercados de conta de desenvolvedor e de envio de apps](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)
 - [Limites, formas e períodos de pagamento](payment-thresholds-methods-and-timeframes.md)
 
 Se você precisar de mais ajuda, abra um [tíquete de suporte](http://go.microsoft.com/fwlink/p/?LinkId=733342).
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

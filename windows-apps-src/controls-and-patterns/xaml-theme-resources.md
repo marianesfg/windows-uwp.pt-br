@@ -8,9 +8,16 @@ title: Recursos de temas XAML
 ms.assetid: 41B87DBF-E7A2-44E9-BEBA-AF6EEBABB81B
 label: XAML theme resources
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 9ee42532cb7f13d611e2365d7c9cf8f0532dd1c5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 51e5a3dac6ab8682cd9d10efafb7e1e38f9d53d4
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
@@ -440,10 +447,5 @@ Para corrigir esse problema, use a [extensão de marcação {StaticResource}](..
 
 Observe que a [extensão de marcação {ThemeResource}](../xaml-platform/themeresource-markup-extension.md) ainda é usada no dicionário "HighContrast" no lugar da [extensão de marcação {StaticResource}](../xaml-platform/staticresource-markup-extension.md). Essa situação se enquadra na exceção apresentada anteriormente nas diretrizes. A maioria dos valores de pincéis usados para o tema "HighContrast" está usando opções de cores controladas globalmente pelo sistema, mas expostas a XAML como um recurso especialmente nomeado (os prefixados com "SystemColor" no nome). O sistema permite que o usuário defina as cores específicas que devem ser usadas nas configurações de alto contraste por meio da Central de Facilidade de Acesso. Essas opções de cores são aplicadas aos recursos especialmente nomeados. A estrutura XAML usa o mesmo evento de tema alterado para também atualizar esses pincéis ao detectar que eles foram alterados no nível do sistema. É por isso que a extensão de marcação {ThemeResource} é usada aqui.
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

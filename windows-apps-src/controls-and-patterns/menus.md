@@ -4,9 +4,17 @@ Description: "Um submenu é um pop-up leve que é usado para mostrar temporariam
 title: Menus e menus de contexto
 label: Menus and context menus
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 0327d8c1-8329-4be2-84e3-66e1e9a0aa60
 translationtype: Human Translation
-ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
-ms.openlocfilehash: badb03c97ae0f2350e5d7592f10168bb7d6e7d1a
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 515c63d5612358cf90684427f8f747e19384c6ff
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="menus-and-context-menus"></a>Menus e menus de contexto
@@ -150,10 +158,10 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 ````
 
 
-> Os controles light dismiss, como menus, menus de contexto e outros submenus, prendem o foco do teclado ou gamepad dentro da interface do usuário transitória até serem ignorados. Para fornecer uma indicação visual para esse comportamento, os controles light dismiss no Xbox desenharão uma sobreposição que esmaece a visibilidade da interface do usuário fora do escopo. Esse comportamento pode ser modificado com a nova propriedade [LightDismissOverlayMode](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx). Por padrão, interfaces do usuário transitórias desenham a sobreposição light dismiss no Xbox, mas não em outras famílias de dispositivos, mas os aplicativos podem optar por forçar a sobreposição para estar sempre **Ativada** ou **Desativada**.
+> Os controles light dismiss, como menus, menus de contexto e outros submenus, prendem o foco do teclado ou gamepad dentro da interface do usuário transitória até serem ignorados. Para fornecer uma indicação visual para esse comportamento, os controles light dismiss no Xbox desenharão uma sobreposição que esmaece a visibilidade da interface do usuário fora do escopo. Esse comportamento pode ser modificado com a nova propriedade [LightDismissOverlayMode](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx). Por padrão, interfaces do usuário transitórias desenham a sobreposição light dismiss no Xbox, mas não em outras famílias de dispositivos, mas os apps podem optar por forçar a sobreposição para estar sempre **Ativada** ou **Desativada**.
 
 > ```xaml
-> <MenuFlyout LightDismissOverlayMode="Off">
+> <MenuFlyout LightDismissOverlayMode=\"Off\">
 > ```
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
@@ -163,9 +171,4 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [**Classe MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/dn299030)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -6,9 +6,16 @@ ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 6b41c8b1888b61c82aa3d54244151b08d963658d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3700751db4b00405d3f2b5b41f6e487a32b56f38
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="auto-suggest-box"></a>Caixa de sugestão automática
@@ -37,9 +44,9 @@ Para saber mais sobre como escolher o controle de texto certo, veja o artigo [Co
 
 ## <a name="examples"></a>Exemplos
 
-Um caixa de sugestão automática no aplicativo Groove Música.
+Um caixa de sugestão automática no app Groove Música.
 
-![Um caixa de sugestão automática no aplicativo Groove Música](images/control-examples/auto-suggest-box-groove.png)
+![Um caixa de sugestão automática no app Groove Música](images/control-examples/auto-suggest-box-groove.png)
 
 ## <a name="anatomy"></a>Anatomia
 O ponto de entrada para a caixa de sugestão automática consiste de um cabeçalho opcional e uma caixa de texto com texto de dica opcional:
@@ -77,7 +84,7 @@ Se você precisa mostrar mais do que uma propriedade simples, manipule o evento 
 
 ### <a name="query-submitted"></a>Consulta enviada
 
-Manipule o evento [QuerySubmitted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx) para executar uma ação de consulta adequada para seu aplicativo e mostre o resultado para o usuário.
+Manipule o evento [QuerySubmitted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx) para executar uma ação de consulta adequada para seu app e mostre o resultado para o usuário.
 
 O evento QuerySubmitted ocorre quando um usuário confirma uma cadeia de caracteres de consulta. O usuário pode confirmar uma consulta de uma das seguintes maneiras:
 - Com o foco na caixa de texto, pressione Enter ou clique no ícone de consulta. A propriedade [ChosenSuggestion](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.chosensuggestion.aspx) de argumentos de evento é **null**.
@@ -173,9 +180,4 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 - [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -1,24 +1,31 @@
 ---
 author: mcleanbyron
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
-description: "Use este método na API de envio da Windows Store para criar um complemento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
+description: "Use este método na API de envio da Windows Store para criar um complemento para um app que está registrado à sua conta do Centro de Desenvolvimento do Windows."
 title: Criar um complemento usando a API de envio da Windows Store
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, API de envio da Windows Store, criar complemento, produto in-App, IAP
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 11cf25fbeacbe3145c9cc3f4a80bdcce3028bf55
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0492398872142aabd32d3a4d68d55b4e326f027e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Criar um complemento usando a API de envio da Windows Store
+# <a name="create-an-add-on-using-the-windows-store-submission-api"></a>Criar um complemento usando a API de envio da Windows Store
 
 
 
 
-Use este método na API de envio da Windows Store para criar um complemento (também conhecido como produto no app ou IAP) para um aplicativo que está registrado para sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Windows Store para criar um complemento (também conhecido como produto no app ou IAP) para um app que está registrado para sua conta do Centro de Desenvolvimento do Windows.
 
 >**Observação**&nbsp;&nbsp;Este método cria um complemento sem nenhum envio. Para criar um envio para um complemento, veja os métodos em [Gerenciar envios de complemento](manage-add-on-submissions.md).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este método, primeiro você precisa do seguinte:
 
@@ -27,7 +34,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Solicitação
+## <a name="request"></a>Solicitação
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
@@ -38,29 +45,29 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 <span/>
  
 
-### Cabeçalho da solicitação
+### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Corpo da solicitação
+### <a name="request-body"></a>Corpo da solicitação
 
 O corpo da solicitação tem os parâmetros a seguir.
  
 |  Parâmetro  |  Tipo  |  Descrição  |  Obrigatório  |
 |------|------|------|------|
-|  applicationIds  |  array  |  Uma matriz que contém a ID da Loja do aplicativo ao qual esse complemento está associado. Essa matriz é compatível com apenas um item.   |  Sim  |
+|  applicationIds  |  array  |  Uma matriz que contém a ID da Loja do app ao qual esse complemento está associado. Essa matriz é compatível com apenas um item.   |  Sim  |
 |  productId  |  cadeia de caracteres  |  A ID do produto do complemento. Este é um identificador que pode ser usado no código para fazer referência ao complemento. Para obter mais informações, consulte [Definir seu tipo de produto e a ID do produto](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id).  |  Sim  |
 |  productType  |  cadeia de caracteres  |  O tipo de produto do complemento. Há suporte para os seguintes valores: **Durável** e **Consumíveis**.  |  Sim  |
 
 <span/>
 
-### Exemplo de solicitação
+### <a name="request-example"></a>Exemplo de solicitação
 
-O exemplo a seguir demonstra como criar um novo complemento consumível para um aplicativo.
+O exemplo a seguir demonstra como criar um novo complemento consumível para um app.
 
 ```syntax
 POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts HTTP/1.1
@@ -73,7 +80,7 @@ Content-Type: application/json
 }
 ```
 
-## Resposta
+## <a name="response"></a>Resposta
 
 O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. Para obter mais detalhes sobre os valores no corpo da resposta, veja [recurso do complemento](manage-add-ons.md#add-on-object).
 
@@ -94,7 +101,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 }
 ```
 
-## Códigos de erro
+## <a name="error-codes"></a>Códigos de erro
 
 Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
@@ -105,16 +112,11 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 
 <span/>
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Gerenciar envios de complemento](manage-add-on-submissions.md)
 * [Obter todos os complementos](get-all-add-ons.md)
 * [Obter um complemento](get-an-add-on.md)
 * [Excluir um complemento](delete-an-add-on.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

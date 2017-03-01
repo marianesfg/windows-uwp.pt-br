@@ -1,13 +1,20 @@
 ---
 author: mijacobs
-description: "As cores tornam a orientação intuitiva por meio de vários níveis de informações de um aplicativo e são uma ferramenta essencial para reforçar o modelo de interação."
+description: "As cores tornam a orientação intuitiva por meio de vários níveis de informações de um app e são uma ferramenta essencial para reforçar o modelo de interação."
 title: Cor
 ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
 template: detail.hbs
 extraBodyClass: style-color
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: a9f9974cee58dd3c347f9f74ae1ed4c86f6c49e1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 98158e8dc1531c1d4059b5462a6839d775fb6336
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -15,7 +22,7 @@ ms.openlocfilehash: a9f9974cee58dd3c347f9f74ae1ed4c86f6c49e1
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-As cores tornam a orientação intuitiva por meio de vários níveis de informações de um aplicativo e são uma ferramenta essencial para reforçar o modelo de interação.
+As cores tornam a orientação intuitiva por meio de vários níveis de informações de um app e são uma ferramenta essencial para reforçar o modelo de interação.
 
 No Windows, a cor também é pessoal. Os usuários podem escolher uma cor e um tema claro ou escuro para serem refletidos em toda a sua experiência.
 
@@ -134,7 +141,7 @@ Como regra geral, quando a cor de destaque é usada como plano de fundo, sempre 
 </div>
 
 
-Quando os usuários escolhem uma cor de destaque, ela aparece como parte do tema do sistema. As áreas afetadas são a tela inicial, a barra de tarefas, o cromado de janela, estados de interação selecionados e hiperlinks dentro de [controles comuns](../controls-and-patterns/index.md). Cada aplicativo pode incorporar ainda mais a cor de destaque em suas tipografias, planos de fundo e interações, ou ainda anulá-la para preservar sua identidade visual específica.
+Quando os usuários escolhem uma cor de destaque, ela aparece como parte do tema do sistema. As áreas afetadas são a tela inicial, a barra de tarefas, o cromado de janela, estados de interação selecionados e hiperlinks dentro de [controles comuns](../controls-and-patterns/index.md). Cada app pode incorporar ainda mais a cor de destaque em suas tipografias, planos de fundo e interações, ou ainda anulá-la para preservar sua identidade visual específica.
 
 ## <a name="color-palette-building-blocks"></a>Blocos de construção da paleta de cores
 
@@ -159,13 +166,13 @@ Por padrão, os hiperlinks usarão a cor de destaque do usuário. Se o plano de 
 
 ## <a name="color-theming"></a>Temas de cores
 
-O usuário também pode escolher entre um tema claro ou escuro para o sistema. Alguns aplicativos optam por modificar seus temas com base na preferência do usuário, enquanto outros se recusam a fazer isso.
+O usuário também pode escolher entre um tema claro ou escuro para o sistema. Alguns apps optam por modificar seus temas com base na preferência do usuário, enquanto outros se recusam a fazer isso.
 
-Aplicativos que usam o tema claro são para cenários que envolvem aplicativos de produtividade. Exemplos seriam o pacote de aplicativos disponíveis com o Microsoft Office. O tema claro facilita a leitura de textos longos em conjunto com longos períodos de tempo em uma determinada tarefa.
+Aplicativos que usam o tema claro são para cenários que envolvem apps de produtividade. Exemplos seriam o pacote de apps disponíveis com o Microsoft Office. O tema claro facilita a leitura de textos longos em conjunto com longos períodos de tempo em uma determinada tarefa.
 
-O tema escuro permite um contraste mais visível de conteúdo para aplicativos centrados em mídia ou cenários em que os usuários uma grande variedade de vídeos ou imagens é apresentada ao usuário. Nesses cenários, a leitura não é necessariamente a principal tarefa, embora a experiência de assistir a um filme possa ser, e o conteúdo é mostrado em condições de pouca luz ambiente.
+O tema escuro permite um contraste mais visível de conteúdo para apps centrados em mídia ou cenários em que os usuários uma grande variedade de vídeos ou imagens é apresentada ao usuário. Nesses cenários, a leitura não é necessariamente a principal tarefa, embora a experiência de assistir a um filme possa ser, e o conteúdo é mostrado em condições de pouca luz ambiente.
 
-Se o seu aplicativo não se enquadra exatamente em nenhuma dessas descrições, considere seguir o tema do sistema para permitir que o usuário decida qual é a opção ideal para ele.
+Se o seu app não se enquadra exatamente em nenhuma dessas descrições, considere seguir o tema do sistema para permitir que o usuário decida qual é a opção ideal para ele.
 
 Para facilitar o design de temas, o Windows fornece uma paleta de cores adicional que se adapta automaticamente ao tema.
 
@@ -204,9 +211,9 @@ Você pode alterar temas facilmente alterando a propriedade **RequestedTheme** e
 </Application>
 ```
 
-Remover **RequestedTheme** significa que seu aplicativo manterá as configurações de modo de aplicativo do usuário, e eles poderão optar por exibir seu aplicativo no tema escuro ou claro. 
+Remover **RequestedTheme** significa que seu app manterá as configurações de modo de app do usuário, e eles poderão optar por exibir seu app no tema escuro ou claro. 
 
-Certifique-se de levar o tema em consideração ao criar seu aplicativo, uma vez que o tema tem um grande impacto sobre a aparência do seu aplicativo.
+Certifique-se de levar o tema em consideração ao criar seu app, uma vez que o tema tem um grande impacto sobre a aparência do seu app.
 
 ## <a name="accessibility"></a>Acessibilidade
 
@@ -216,9 +223,4 @@ Nossa paleta é otimizada para uso na tela. Convém manter uma proporção de co
 
 * [Estilos de XAML](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
 * [Recursos de temas XAML](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

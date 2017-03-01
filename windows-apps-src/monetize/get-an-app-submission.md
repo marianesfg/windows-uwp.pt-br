@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: BF296C25-A2E6-48E4-9D08-0CCDB5FAE0C8
 description: "Use este método na API de envio da Windows Store para obter dados para um envio de aplicativo existente."
 title: Obter um envio de aplicativo usando a API de envio da Windows Store
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, API de envio da Windows Store, envio de aplicativo
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: b092658a22b76f044000fb6accc90382dc3bd360
+ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
+ms.openlocfilehash: 1763ba9ebf95c37afbbb219244010f0d6e7cfee4
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -77,7 +84,8 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
     "trialPeriod": "FifteenDays",
     "marketSpecificPricings": {},
     "sales": [],
-    "priceId": "Tier2"
+    "priceId": "Tier2",
+    "isAdvancedPricingModel": "true"
   },
   "visibility": "Public",
   "targetPublishMode": "Manual",
@@ -189,9 +197,4 @@ Se a solicitação não puder ser concluída com êxito, a resposta conterá um 
 * [Atualizar um envio de aplicativo](update-an-app-submission.md)
 * [Excluir um envio de aplicativo](delete-an-app-submission.md)
 * [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

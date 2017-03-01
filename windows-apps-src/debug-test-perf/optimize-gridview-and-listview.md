@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: "Otimização das interfaces do usuário ListView e GridView"
 description: "Melhore o desempenho e o tempo de inicialização em ListView e GridView por meio de virtualização da interface do usuário, redução de elementos e atualização progressiva de itens."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: dca6c9c2cde4240da4b2eff4f4786ec5b81051c6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 96902d7532aed1510d959b45528cc71e0e6dca70
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>Otimização das interfaces do usuário ListView e GridView
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Observação**  
 Para obter mais detalhes, consulte a sessão //build/ em [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView](https://channel9.msdn.com/events/build/2013/3-158).
@@ -19,7 +26,7 @@ Melhore o desempenho e o tempo de inicialização em [**ListView**](https://msdn
 
 ## <a name="two-key-factors-in-collection-performance"></a>Dois fatores importantes no desempenho de coleções
 
-A manipulação de coleções é um cenário comum. Um visualizador de fotos tem coleções de fotos, um leitor tem coleções de artigos/livros/histórias, e um aplicativo de compras tem coleções de produtos. Este tópico mostra o que você pode fazer para tornar seu aplicativo eficiente na manipulação de coleções.
+A manipulação de coleções é um cenário comum. Um visualizador de fotos tem coleções de fotos, um leitor tem coleções de artigos/livros/histórias, e um app de compras tem coleções de produtos. Este tópico mostra o que você pode fazer para tornar seu app eficiente na manipulação de coleções.
 
 Há dois fatores importantes de desempenho quando se trata de coleções: um é o tempo gasto pelo thread de interface do usuário na criação de itens; o outro é a memória usada pelo conjunto de dados brutos e os elementos de interface do usuário usados para renderizar esses dados.
 
@@ -71,7 +78,7 @@ Se você está virtualização de dados, então pode manter a capacidade de resp
 
 Além disso, não importa de onde você está carregando os dados (disco local, rede ou nuvem), um usuário pode aplicar panorâmica/rolar uma [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) ou uma [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) tão rapidamente que não seria possível renderizar cada item com fidelidade total ao mesmo tempo em que é mantida a fluidez do movimento panorâmico/rolagem. Para preservar o movimento panorâmico/rolagem suave, você pode optar por renderizar um item em várias fases além de usar espaços reservados.
 
-Um exemplo dessas técnicas é geralmente visto em aplicativos de exibição de fotos: embora nem todas as imagens tenham sido carregadas e exibidas, o usuário ainda pode fazer o movimento panorâmico/rolagem e interagir com a coleção. Ou, para um item de "filme", você pode mostrar o título na primeira fase, a classificação na segunda fase e uma imagem do pôster na terceira fase. O usuário vê os dados importantes sobre cada item o mais cedo possível, e isso significa que eles podem executar a ação de uma vez. Em seguida, as informações menos importantes são preenchidas conforme o tempo permite. Estes são os recursos de plataforma que você pode usar para implementar essas técnicas.
+Um exemplo dessas técnicas é geralmente visto em apps de exibição de fotos: embora nem todas as imagens tenham sido carregadas e exibidas, o usuário ainda pode fazer o movimento panorâmico/rolagem e interagir com a coleção. Ou, para um item de "filme", você pode mostrar o título na primeira fase, a classificação na segunda fase e uma imagem do pôster na terceira fase. O usuário vê os dados importantes sobre cada item o mais cedo possível, e isso significa que eles podem executar a ação de uma vez. Em seguida, as informações menos importantes são preenchidas conforme o tempo permite. Estes são os recursos de plataforma que você pode usar para implementar essas técnicas.
 
 ### <a name="placeholders"></a>Espaços reservados
 
@@ -139,7 +146,7 @@ namespace LotsOfItems
     </Page>
     ```
 
-3.  Se você executar o aplicativo agora e aplicar panorâmica/rolar rápido o suficiente pela visualização em grade, notará que cada vez que um novo item aparece na tela, ele é renderizado primeiro como um retângulo cinza escuro (graças à propriedade [**ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) no padrão **verdadeiro**), depois aparece o título, seguido pelo subtítulo, seguido pela descrição.
+3.  Se você executar o app agora e aplicar panorâmica/rolar rápido o suficiente pela visualização em grade, notará que cada vez que um novo item aparece na tela, ele é renderizado primeiro como um retângulo cinza escuro (graças à propriedade [**ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) no padrão **verdadeiro**), depois aparece o título, seguido pelo subtítulo, seguido pela descrição.
 
 **Atualizações progressivas de modelo de dados usando ContainerContentChanging**
 
@@ -238,11 +245,11 @@ A estratégia geral para o evento [**ContainerContentChanging**](https://msdn.mi
     }
     ```
 
-4.  Se você executar o aplicativo agora e aplicar panorâmica/rolar rapidamente pela visualização em grade, verá o mesmo comportamento que para **x:Phase**.
+4.  Se você executar o app agora e aplicar panorâmica/rolar rapidamente pela visualização em grade, verá o mesmo comportamento que para **x:Phase**.
 
 ## <a name="container-recycling-with-heterogeneous-collections"></a>Reciclagem de contêiner com coleções heterogêneas
 
-Em alguns aplicativos, você precisa ter diferentes interfaces do usuário para diferentes tipos de item dentro de uma coleção. Isso pode gerar uma situação em que fica impossível para os painéis de virtualização reutilizarem/reciclarem os elementos visuais usados para exibir os itens. Recriar os elementos visuais de um item durante o movimento panorâmico elimina muitos dos ganhos de desempenho obtidos com a virtualização. No entanto, um pouco de planejamento pode permitir que os painéis de virtualização reutilizem os elementos. Os desenvolvedores têm duas opções, dependendo da situação: o evento [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) ou um seletor de modelo de item. A abordagem **ChoosingItemContainer** tem um desempenho melhor.
+Em alguns apps, você precisa ter diferentes interfaces do usuário para diferentes tipos de item dentro de uma coleção. Isso pode gerar uma situação em que fica impossível para os painéis de virtualização reutilizarem/reciclarem os elementos visuais usados para exibir os itens. Recriar os elementos visuais de um item durante o movimento panorâmico elimina muitos dos ganhos de desempenho obtidos com a virtualização. No entanto, um pouco de planejamento pode permitir que os painéis de virtualização reutilizem os elementos. Os desenvolvedores têm duas opções, dependendo da situação: o evento [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) ou um seletor de modelo de item. A abordagem **ChoosingItemContainer** tem um desempenho melhor.
 
 **O evento ChoosingItemContainer**
 
@@ -310,17 +317,12 @@ private void lst-ChoosingItemContainer
 
 **Seletor de modelo de item**
 
-Um seletor de modelo de item ([**DataTemplateSelector**](https://msdn.microsoft.com/library/windows/apps/BR209469)) permite que um aplicativo retorne um modelo de item diferente em tempo de execução com no tipo do item de dados que será exibido. Isso torna o desenvolvimento mais produtivo, mas faz a virtualização da interface do usuário mais difícil, porque nem todo modelo de item pode ser reutilizado para todo item de dados.
+Um seletor de modelo de item ([**DataTemplateSelector**](https://msdn.microsoft.com/library/windows/apps/BR209469)) permite que um app retorne um modelo de item diferente em tempo de execução com no tipo do item de dados que será exibido. Isso torna o desenvolvimento mais produtivo, mas faz a virtualização da interface do usuário mais difícil, porque nem todo modelo de item pode ser reutilizado para todo item de dados.
 
 Quando um item é reciclado (**ListViewItem**/**GridViewItem**), a estrutura deve decidir se os itens que estão disponíveis para uso na fila de reciclagem (a fila de reciclagem é um cache de itens que não estão sendo usados no momento para exibir dados) têm um modelo de item que corresponderá ao desejado pelo item de dados atual. Se não houver itens na fila de reciclagem com o modelo de item apropriado, um novo item é criado, e o modelo de item apropriado é instanciado para ele. Se, por outro lado, a fila de reciclagem contiver um item com o modelo de item apropriado, esse item será removido da fila de reciclagem e será usado para o item de dados atual. Um seletor de modelo de item funciona em situações em que somente um pequeno número de modelos de item é usado e há uma distribuição uniforme em toda a coleção de itens que usam modelos de item diferentes.
 
-Quando há uma distribuição desigual de itens que usam modelos de item diferentes, novos modelos de item provavelmente precisarão ser criados durante o movimento panorâmico e isso elimina muitos dos ganhos obtidos com a virtualização. Além disso, um seletor de modelo de item considera apenas cinco possíveis candidatos ao avaliar se um determinado contêiner pode ser reutilizado para o item de dados atual. Então, você deve considerar criteriosamente se seus dados são apropriados para uso com um seletor de modelo de item antes de usar um em seu aplicativo. Se a maior parte de coleção for homogênea, o seletor está retornando o mesmo tipo na maioria (possivelmente todas) das vezes. Apenas tenha cuidado com o preço que está pagando pelas raras exceções a essa homogeneidade e pondere se usar [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) (ou dois controles de item) não é preferível.
+Quando há uma distribuição desigual de itens que usam modelos de item diferentes, novos modelos de item provavelmente precisarão ser criados durante o movimento panorâmico e isso elimina muitos dos ganhos obtidos com a virtualização. Além disso, um seletor de modelo de item considera apenas cinco possíveis candidatos ao avaliar se um determinado contêiner pode ser reutilizado para o item de dados atual. Então, você deve considerar criteriosamente se seus dados são apropriados para uso com um seletor de modelo de item antes de usar um em seu app. Se a maior parte de coleção for homogênea, o seletor está retornando o mesmo tipo na maioria (possivelmente todas) das vezes. Apenas tenha cuidado com o preço que está pagando pelas raras exceções a essa homogeneidade e pondere se usar [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) (ou dois controles de item) não é preferível.
 
  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

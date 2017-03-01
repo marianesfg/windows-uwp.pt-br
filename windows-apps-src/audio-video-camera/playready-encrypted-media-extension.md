@@ -1,24 +1,31 @@
 ---
 author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: "Esta seção descreve como modificar seu aplicativo Web PlayReady para oferecer suporte às alterações feitas na versão do Windows 8.1 anterior para a versão do Windows 10."
-title: "Extensão de mídia criptografada do PlayReady"
+description: "Esta seção descreve como modificar seu app Web PlayReady para oferecer suporte às alterações feitas na versão do Windows 8.1 anterior para a versão do Windows 10."
+title: "Extensão de Mídia Criptografada do PlayReady"
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 15b8c2cac08e59cfd9bd2c97c3a146cbc2be5548
-ms.openlocfilehash: eb85d9ea29917788612e0aa755465dbd6d1b9ba9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0698a01b1f846581422c5ecf4d47a45dd22762c4
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Extensão de mídia criptografada do PlayReady
+# <a name="playready-encrypted-media-extension"></a>Extensão de Mídia Criptografada do PlayReady
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Esta seção descreve como modificar seu aplicativo Web PlayReady para oferecer suporte às alterações feitas na versão do Windows 8.1 anterior para a versão do Windows 10.
+Esta seção descreve como modificar seu app Web PlayReady para oferecer suporte às alterações feitas na versão do Windows 8.1 anterior para a versão do Windows 10.
 
-O uso de elementos de mídia PlayReady no Internet Explorer permite que desenvolvedores criem um aplicativo Web que possa fornecer conteúdo PlayReady ao usuário enquanto impõe regras de acesso definidas pelo provedor de conteúdo. Esta seção descreve como adicionar elementos de mídia PlayReady aos seus aplicativos Web existentes usando somente HTML5 e JavaScript.
+O uso de elementos de mídia PlayReady no Internet Explorer permite que desenvolvedores criem um app Web que possa fornecer conteúdo PlayReady ao usuário enquanto impõe regras de acesso definidas pelo provedor de conteúdo. Esta seção descreve como adicionar elementos de mídia PlayReady aos seus apps Web existentes usando somente HTML5 e JavaScript.
 
-## Novidades na extensão de mídia criptografada do PlayReady
+## <a name="whats-new-in-playready-encrypted-media-extension"></a>Novidades na extensão de mídia criptografada do PlayReady
 
 Esta seção oferece uma lista de alterações feitas à Extensão de mídia criptografada (EME) do PlayReady para habilitar proteção de conteúdos PlayReady no Windows 10.
 
@@ -54,33 +61,33 @@ A lista a seguir descreve os novos recursos e alterações feitas à Extensão d
 
     Esse recurso foi adicionado para limitar a reprodução de conteúdo a uma resolução máxima mesmo quando houver uma chave de maior capacidade (mas não uma licença). Ele suporta casos em que vários tamanhos de fluxo são codificados com uma única chave.
 
-## Suporte à extensão de mídia criptografada no PlayReady
+## <a name="encrypted-media-extension-support-in-playready"></a>Suporte à extensão de mídia criptografada no PlayReady
 
 Esta seção descreve a versão da extensão de mídia criptografada do W3C com suporte pelo PlayReady.
 
-O PlayReady para aplicativos Web está atualmente vinculado à [versão preliminar da extensão de mídia criptografada (EME) do W3C de 10 de maio de 2013](http://www.w3.org/TR/2013/WD-encrypted-media-20130510/). Esse suporte será alterado para a especificação EME atualizada em versões futuras do Windows.
+O PlayReady para apps Web está atualmente vinculado à [versão preliminar da extensão de mídia criptografada (EME) do W3C de 10 de maio de 2013](http://www.w3.org/TR/2013/WD-encrypted-media-20130510/). Esse suporte será alterado para a especificação EME atualizada em versões futuras do Windows.
 
-## Usar DRM de hardware
+## <a name="use-hardware-drm"></a>Usar DRM de hardware
 
-Esta seção descreve como seu aplicativo Web pode usar o DRM de hardware do PlayReady e como desabilitar o DRM de hardware se o conteúdo protegido não oferecer suporte a ele.
+Esta seção descreve como seu app Web pode usar o DRM de hardware do PlayReady e como desabilitar o DRM de hardware se o conteúdo protegido não oferecer suporte a ele.
 
-Para usar hardware DRM do PlayReady, o seu aplicativo Web JavaScript deve usar o método EME **isTypeSupported** com um identificador de sistema chave de `com.microsoft.playready.hardware` para consultar por suporte de hardware DRM do PlayReady do navegador.
+Para usar hardware DRM do PlayReady, o seu app Web JavaScript deve usar o método EME **isTypeSupported** com um identificador de sistema chave de `com.microsoft.playready.hardware` para consultar por suporte de hardware DRM do PlayReady do navegador.
 
 Ocasionalmente, não há suporte para parte do conteúdo no DRM de hardware. Não há suporte para conteúdo Cocktail no DRM de hardware. Se você deseja reproduzir conteúdo Cocktail, recuse o DRM de hardware. Alguns DRMs de hardware oferecerão suporte a HEVC, enquanto outros não. Se você deseja reproduzir conteúdo HEVC e o DRM de hardware não oferecer suporte a ele, recuse também.
 
 > [!NOTE]
 > Para determinar se há suporte para conteúdo HEVC, após instanciar `com.microsoft.playready`, use o método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
 
-## Adicionar parada segura ao seu aplicativo Web
+## <a name="add-secure-stop-to-your-web-app"></a>Adicionar parada segura ao seu app Web
 
-Esta seção descreve como adicionar parada segura ao seu aplicativo Web.
+Esta seção descreve como adicionar parada segura ao seu app Web.
 
 A parada segura fornece os meios para um dispositivo PlayReady afirmar com confiança para um serviço de streaming de mídia que a reprodução de mídia foi interrompida para determinada parte do conteúdo. Esse recurso garante que seus serviços de streaming de mídia forneçam relatórios e imposição precisos de limitações de uso em dispositivos diferentes para uma determinada conta.
 
 Há dois cenários principais para enviar um desafio de parada segura:
 
 -   Quando a apresentação de mídia é interrompida porque foi alcançado o fim do conteúdo ou quando o usuário interrompeu a apresentação de mídia em algum ponto intermediário.
--   Quando a sessão anterior é encerrada inesperadamente (por exemplo, devido a uma falha no sistema ou no aplicativo). O aplicativo precisará consultar, na inicialização ou no desligamento, qualquer sessão de parada segura pendente e enviar desafio(s) separadamente de qualquer outra reprodução de mídia.
+-   Quando a sessão anterior é encerrada inesperadamente (por exemplo, devido a uma falha no sistema ou no app). O app precisará consultar, na inicialização ou no desligamento, qualquer sessão de parada segura pendente e enviar desafio(s) separadamente de qualquer outra reprodução de mídia.
 
 Os procedimentos a seguir descrevem como configurar uma parada segura para vários cenários.
 
@@ -92,13 +99,13 @@ Para configurar parada segura para um fim normal de apresentação:
 
 Para configurar a parada segura se o usuário sair da página ou fechar a guia ou o navegador:
 
--   Nenhuma ação de aplicativo é necessária para registrar o estado de parada; ele será registrado para você.
+-   Nenhuma ação de app é necessária para registrar o estado de parada; ele será registrado para você.
 
 Para configurar uma parada segura para controles de página personalizados ou ações do usuário (como botões de navegação personalizados ou início de uma nova apresentação antes da conclusão da apresentação atual):
 
--   Quando uma ação personalizada do usuário ocorre, o aplicativo precisa definir a fonte para **NULO**, o que disparará o Media Foundation para destruir a topologia e o(s) descriptografador(es) e definir o estado de parada.
+-   Quando uma ação personalizada do usuário ocorre, o app precisa definir a fonte para **NULO**, o que disparará o Media Foundation para destruir a topologia e o(s) descriptografador(es) e definir o estado de parada.
 
-O exemplo a seguir demonstra como usar a parada segura em seu aplicativo Web:
+O exemplo a seguir demonstra como usar a parada segura em seu app Web:
 
 ```JavaScript
 // JavaScript source code
@@ -261,11 +268,11 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 > [!NOTE]
 > A `<SessionID>B64 encoded session ID</SessionID>` dos dados da parada segura no exemplo acima pode ser um asterisco (\*), que é um curinga para todas as sessões de parada segura registradas. Ou seja, a marcação **SessionID** pode ser uma sessão específica ou um caractere curinga (\*) para selecionar todas as sessões de parada segura.
 
-## Considerações sobre a programação de Extensão de mídia criptografada
+## <a name="programming-considerations-for-encrypted-media-extension"></a>Considerações sobre a programação de Extensão de mídia criptografada
 
-Esta seção lista as considerações sobre programação que devem ser levadas em conta ao criar aplicativo Web habilitado para PlayReady para Windows 10.
+Esta seção lista as considerações sobre programação que devem ser levadas em conta ao criar app Web habilitado para PlayReady para Windows 10.
 
-Os objetos **MSMediaKeys** e **MSMediaKeySession** criados pelo seu aplicativo devem ser mantidos ativos até o seu aplicativo encerrar. Uma maneira de garantir que esses objetos fiquem ativos é atribuí-los como variáveis globais (as variáveis ficariam fora do escopo e sujeitas à coleta de lixo se declaradas como uma variável local dentro de uma função). Por exemplo, a amostra a seguir atribui as variáveis *g\_msMediaKeys* e *g\_mediaKeySession* como globais, que são, então, atribuídas aos objetos **MSMediaKeys** e **MSMediaKeySession** na função.
+Os objetos **MSMediaKeys** e **MSMediaKeySession** criados pelo seu app devem ser mantidos ativos até o seu app encerrar. Uma maneira de garantir que esses objetos fiquem ativos é atribuí-los como variáveis globais (as variáveis ficariam fora do escopo e sujeitas à coleta de lixo se declaradas como uma variável local dentro de uma função). Por exemplo, a amostra a seguir atribui as variáveis *g\_msMediaKeys* e *g\_mediaKeySession* como globais, que são, então, atribuídas aos objetos **MSMediaKeys** e **MSMediaKeySession** na função.
 
 ``` syntax
 var g_msMediaKeys;
@@ -293,17 +300,12 @@ function foo() {
 }
 ```
 
-Para obter mais informações, consulte os [aplicativos de exemplo](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738).
+Para obter mais informações, consulte os [apps de exemplo](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738).
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [DRM do PlayReady](playready-client-sdk.md)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

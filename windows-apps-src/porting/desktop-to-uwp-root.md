@@ -2,14 +2,22 @@
 author: awkoren
 Description: "Conheça a ponte da área de trabalho para UWP e converta o aplicativo da área de trabalho do Windows (como Win32, WPF e Windows Forms) em um aplicativo da Plataforma Universal do Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
-title: "Traga o aplicativo da área de trabalho para a Plataforma Universal do Windows (UWP) usando a ponte da área de trabalho"
+title: "Traga o aplicativo da área de trabalho para a Plataforma Universal do Windows (UWP) usando a Ponte de Desktop"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 translationtype: Human Translation
-ms.sourcegitcommit: 462d2b13cefc6abb4d7c6f814ec4ee659e4afde8
-ms.openlocfilehash: 1ef54c3c45113e434333058d0f039e213ea8eed2
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: dd9f45b0ddcc201053ed8e35908da66443e47d72
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="bring-your-desktop-app-to-the-universal-windows-platform-uwp-with-the-desktop-bridge"></a>Traga o aplicativo da área de trabalho para a Plataforma Universal do Windows (UWP) usando a ponte da área de trabalho
+# <a name="bring-your-desktop-app-to-the-universal-windows-platform-uwp-with-the-desktop-bridge"></a>Traga o aplicativo da área de trabalho para a Plataforma Universal do Windows (UWP) usando a Ponte de Desktop
 
 Conheça a ponte da área de trabalho para UWP e converta o aplicativo da área de trabalho do Windows em um aplicativo da Plataforma Universal do Windows (UWP).
 
@@ -86,15 +94,11 @@ Para fazer comentários ou dar sugestões de recursos, envie ou vote a favor de 
 | [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md) | Mostra como executar o Desktop App Converter. |
 | [Converter manualmente o aplicativo em UWP usando a ponte da área de trabalho](desktop-to-uwp-manual-conversion.md) | Saiba como criar um pacote de aplicativo e manifestá-lo manualmente. |
 | [Extensões de aplicativo da ponte da área de trabalho](desktop-to-uwp-extensions.md) | Aprimore o aplicativo convertido com extensões para habilitar recursos como tarefas de inicialização e integração com o Explorador de Arquivos. |
-| [APIs UWP compatíveis para aplicativos convertidos com a ponte da área de trabalho](desktop-to-uwp-supported-api.md) | Veja quais APIs de UWP estão disponíveis para seu aplicativo da área de trabalho convertido usar. |
-| [Depurar aplicativos convertidos usando a ponte da área de trabalho](desktop-to-uwp-debug.md) | Explica as opções para depurar o aplicativo convertido. | 
+| [APIs UWP compatíveis para aplicativos convertidos com a ponte da área de trabalho](desktop-to-uwp-supported-api.md) | Veja quais APIs de UWP estão disponíveis para serem usadas pelo seu aplicativo da área de trabalho convertido. |
+| [Guia de empacotamento da Ponte de Desktop para aplicativos da área de trabalho .NET com o Visual Studio](desktop-to-uwp-packaging-dot-net.md) | Configure a solução do Visual Studio para que poder editar, depurar e empacotar seu aplicativo .NET. | 
+| [Depurar aplicativos convertidos usando a Ponte de Desktop](desktop-to-uwp-debug.md) | Explica as opções para depurar o aplicativo convertido. | 
 | [Assinar um aplicativo convertido usando a ponte da área de trabalho](desktop-to-uwp-signing.md) | Saiba como assinar o pacote do aplicativo convertido usando um certificado. |
 | [Distribuir aplicativos convertidos usando a ponte da área de trabalho](desktop-to-uwp-distribute.md) | Veja como é possível distribuir o aplicativo convertido para usuários.  |
 | [Nos bastidores da ponte da área de trabalho](desktop-to-uwp-behind-the-scenes.md) | Aprofunde-se em como a ponte da área de trabalho para UWP funciona nos bastidores. | 
 | [Problemas conhecidos com a ponte da área de trabalho](desktop-to-uwp-known-issues.md) | Listas problemas conhecidos com a ponte da área de trabalho para UWP. | 
 | [Exemplos de código de ponte de aplicativo de área de trabalho para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) | Exemplos de código em GitHub demonstrando recursos dos aplicativos convertidos. |
-
-
-<!--HONumber=Dec16_HO3-->
-
-

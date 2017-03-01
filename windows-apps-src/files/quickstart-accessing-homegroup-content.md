@@ -3,17 +3,24 @@ author: laurenhughes
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: "Acessando o conteúdo do Grupo Doméstico"
 description: "Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo imagens, músicas e vídeos."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: d55908186e5e0687c7dbd22fee9d2f7b70ba1707
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 04d34aa8f1cff2460462fff8100ab345a04d9000
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="accessing-homegroup-content"></a>Acessando o conteúdo do Grupo Doméstico
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** APIs importantes **
+**APIs importantes**
 
 -   [**Classe Windows.Storage.KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151)
 
@@ -21,15 +28,15 @@ Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo i
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
--   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
+-   **Entender a programação assíncrona para apps da Plataforma Universal do Windows (UWP)**
 
-    Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
+    Você pode aprender a escrever apps assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever apps assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
--   **Declarações de recursos do aplicativo**
+-   **Declarações de recursos do app**
 
-    Para acessar o conteúdo do Grupo Doméstico, a máquina do usuário deverá ter um Grupo Doméstico configurado e seu aplicativo deve ter pelo menos um dos seguintes recursos: **picturesLibrary**, **musicLibrary** ou **videosLibrary**. Quando seu aplicativo acessar a pasta Grupo Doméstico, ele verá somente as bibliotecas correspondentes aos recursos declarados em seu manifesto do aplicativo. Para saber mais, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
+    Para acessar o conteúdo do Grupo Doméstico, a máquina do usuário deverá ter um Grupo Doméstico configurado e seu app deve ter pelo menos um dos seguintes recursos: **picturesLibrary**, **musicLibrary** ou **videosLibrary**. Quando seu app acessar a pasta Grupo Doméstico, ele verá somente as bibliotecas correspondentes aos recursos declarados em seu manifesto do app. Para saber mais, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
-    **Observação**  O conteúdo na biblioteca Documentos de um Grupo Doméstico não fica visível para seu aplicativo independentemente dos recursos declarados em seu manifesto do aplicativo e independente das configurações de compartilhamento do usuário.
+    **Observação**  O conteúdo na biblioteca Documentos de um Grupo Doméstico não fica visível para seu app independentemente dos recursos declarados em seu manifesto do app e independente das configurações de compartilhamento do usuário.
 
      
 
@@ -47,7 +54,7 @@ Siga essas etapas para abrir uma instancia do seletor de arquivos que permite qu
 
 1.  **Criar e personalizar o seletor de arquivos**
 
-    Use o [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para criar o seletor de arquivos e defina o [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) do seletor como [**PickerLocationId.HomeGroup**](https://msdn.microsoft.com/library/windows/apps/br207890). Ou defina outras propriedades que sejam relevantes para seus usuários e seu aplicativo. Para obter diretrizes para ajudá-lo a decidir como personalizar o seletor de arquivos, consulte [Diretrizes e lista de verificação para os seletores de arquivos](https://msdn.microsoft.com/library/windows/apps/hh465182)
+    Use o [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para criar o seletor de arquivos e defina o [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) do seletor como [**PickerLocationId.HomeGroup**](https://msdn.microsoft.com/library/windows/apps/br207890). Ou defina outras propriedades que sejam relevantes para seus usuários e seu app. Para obter diretrizes para ajudá-lo a decidir como personalizar o seletor de arquivos, consulte [Diretrizes e lista de verificação para os seletores de arquivos](https://msdn.microsoft.com/library/windows/apps/hh465182)
 
     Este exemplo cria um seletor de arquivos que abre no Grupo Doméstico, inclui os arquivos de qualquer tipo e exibe os arquivos como imagens em miniatura:
     ```csharp
@@ -168,16 +175,16 @@ Esta seção mostra a você como encontrar arquivos do Grupo Doméstico comparti
 
 Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Doméstico:
 
-1.  **Incluir um MediaElement em seu aplicativo.**
+1.  **Incluir um MediaElement em seu app.**
 
-    Um [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) permite que você reproduza conteúdo de áudio e vídeo em seu aplicativo. Para saber mais sobre reprodução de áudio e vídeo, consulte [Criar controles personalizados de transporte](https://msdn.microsoft.com/library/windows/apps/mt187271) e [Áudio, vídeo e câmera](https://msdn.microsoft.com/library/windows/apps/mt203788).
+    Um [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) permite que você reproduza conteúdo de áudio e vídeo em seu app. Para saber mais sobre reprodução de áudio e vídeo, consulte [Criar controles personalizados de transporte](https://msdn.microsoft.com/library/windows/apps/mt187271) e [Áudio, vídeo e câmera](https://msdn.microsoft.com/library/windows/apps/mt203788).
     ```HTML
     <Grid x:Name="Output" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
         <MediaElement x:Name="VideoBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" Width="400" Height="300"/>
     </Grid>    
     ```
 
-2.  **Abra um seletor de arquivos no Grupo Doméstico e aplique um filtro que inclua os arquivos de vídeo nos formatos compatíveis com seu aplicativo.**
+2.  **Abra um seletor de arquivos no Grupo Doméstico e aplique um filtro que inclua os arquivos de vídeo nos formatos compatíveis com seu app.**
 
     Este exemplo inclui arquivos .mp4 e .wmv no seletor de arquivos aberto.
     ```csharp
@@ -208,9 +215,4 @@ Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Domés
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

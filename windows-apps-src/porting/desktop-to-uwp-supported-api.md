@@ -3,12 +3,20 @@ author: awkoren
 Description: "Este artigo explica como assinar um aplicativo de área de trabalho convertido para a Plataforma Universal do Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
 title: "Suporte para APIs da UWP para aplicativos da área de trabalho convertidos"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 translationtype: Human Translation
-ms.sourcegitcommit: 3751b16837a1e12f68954b2dec7dfaf0fb8554b6
-ms.openlocfilehash: c99d103fe5d613c5b654ba2b0bb83987a7fcb944
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: f5ee6f103fa9a7e5f13dc68eb9c6060e6b66e227
+ms.lasthandoff: 02/08/2017
 
 ---
-# APIs UWP compatíveis para aplicativos convertidos com a ponte da área de trabalho
+# <a name="supported-uwp-apis-for-apps-converted-with-the-desktop-bridge"></a>APIs UWP compatíveis para apps convertidos com a ponte da área de trabalho
 
 Os aplicativos de desktop convertidos podem usar uma ampla variedade de APIs da Plataforma Universal do Windows (UWP), mesmo se eles não tiverem sido totalmente convertidos em aplicativos UWP. Este artigo lista as classes disponíveis que seu aplicativo convertido pode usar. 
 
@@ -38,14 +46,14 @@ Ocasionalmente, as APIs nessas áreas podem aparecer funcionar corretamente. No 
 
 Não há suporte para algumas APIs UWP para aplicativos de desktop completos para aplicativos convertidos. Se seu aplicativo de desktop usa APIs UWP antes da conversão, verifique se essas APIs ainda têm suporte. Para saber mais, consulte [APIs do Windows Runtime para aplicativos de desktop](https://msdn.microsoft.com/library/windows/desktop/dn554295(v=vs.85).aspx).
 
-## Lista de APIs
+## <a name="list-of-apis"></a>Lista de APIs
 
 Veja a seguir uma lista completa de APIs UWP com suporte em aplicativos convertidos. Você pode exibir [APIs com suporte recente em aplicativos convertidos](#new) ou [APIs com suporte em aplicativos de desktop e aplicativos convertidos](#both). 
 
-Para obter exemplos sobre como usar APIs WinRT, consulte [Exemplos de ponte de aplicativo da área de trabalho para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) e [Exemplos de aplicativo da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) no GitHub.
+Para obter exemplos sobre como usar APIs WinRT, consulte [Exemplos de ponte de aplicativo da área de trabalho para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) e [Exemplos de aplicativo da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) no GitHub. Você também pode consultar a postagem do blog Compilando aplicativos para Windows [chamar APIs de uma área de trabalho do aplicativo do Windows 10](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application). 
 
 <span id="new" />
-### APIs com suporte em aplicativos recentemente convertidos
+### <a name="apis-supported-in-newly-converted-apps"></a>APIs com suporte em aplicativos recentemente convertidos
 
 * [Windows.ApplicationModel.DataTransfer.DataProviderHandler](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataProviderHandler)
 * [Windows.ApplicationModel.DataTransfer.DataRequest](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest)
@@ -371,7 +379,7 @@ Para obter exemplos sobre como usar APIs WinRT, consulte [Exemplos de ponte de a
 * [Windows.UI.StartScreen.JumpListItem](https://msdn.microsoft.com/library/windows/apps/Windows.UI.StartScreen.JumpListItem)
 
 <span id="both" />
-### APIs com suporte em aplicativos de desktop e aplicativos convertidos
+### <a name="apis-supported-in-both-converted-apps-and-desktop-applications"></a>APIs com suporte em aplicativos de desktop e aplicativos convertidos
 
 * [Windows.ApplicationModel.Core.AppListEntry](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.AppListEntry)
 * [Windows.ApplicationModel.DataTransfer.DataPackage](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)
@@ -1037,9 +1045,4 @@ Para obter exemplos sobre como usar APIs WinRT, consulte [Exemplos de ponte de a
 * [Windows.Web.Syndication.SyndicationPerson](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationPerson)
 * [Windows.Web.Syndication.SyndicationText](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationText)
 * [Windows.Web.WebError](https://msdn.microsoft.com/library/windows/apps/Windows.Web.WebError)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

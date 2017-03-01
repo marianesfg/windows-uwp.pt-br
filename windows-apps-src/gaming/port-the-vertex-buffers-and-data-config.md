@@ -1,18 +1,25 @@
 ---
 author: mtoepke
-title: "Fazer a portabilidade de dados e buffers de vértices"
+title: "Fazer a portabilidade de dados e buffers de vértice"
 description: "Nesta etapa, você definirá os buffers de vértices que conterão suas malhas e os buffers de índice que permitem que os sombreadores percorram os vértices em uma ordem específica."
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, porta, buffers de vértice, dados, direct3d"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ee8b3f693e40d9c0fba679a44ebcd4986d06d7ac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 85e8a47da525c0f5de7e957a0048e245e374dedc
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Fazer a portabilidade de dados e buffers de vértices
+# <a name="port-the-vertex-buffers-and-data"></a>Fazer a portabilidade de dados e buffers de vértice
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -107,9 +114,9 @@ Revisando este código, você perceberá que o cubo no código OpenGL ES 2.0 é 
 
 Supondo que tenhamos movido a malha de cubo do sistema de coordenadas destro do OpenGL ES 2.0 para o canhoto do Direct3D de forma bem-sucedida, vejamos como carregar os dados de cubo para o processamento nos dois modelos.
 
-## Instruções
+## <a name="instructions"></a>Instruções
 
-### Etapa 1: criar uma camada de entrada
+### <a name="step-1-create-an-input-layout"></a>Etapa 1: criar uma camada de entrada
 
 No OpenGL ES 2.0, seus dados de vértice são fornecidos como atributos que serão fornecidos e lidos pelos objetos de sombreador. Geralmente, você deve fornecer uma cadeia que contenha o nome do atributo usado no GLSL do sombreador para o objeto do programa de sombreador; depois, obter um local de memória que possa ser fornecido ao sombreador. Neste exemplo, um objeto de buffer de vértice contém uma lista de estruturas de vértice personalizadas, definidas e formatadas da seguinte maneira:
 
@@ -172,7 +179,7 @@ m_d3dDevice->CreateInputLayout(
 
 Definimos o layout de entrada. Agora, vamos criar um buffer que usa esse layout e o carrega com os dados de malha de cubo.
 
-### Etapa 2: criar e carregar o(s) buffer(s) de vértices
+### <a name="step-2-create-and-load-the-vertex-buffers"></a>Etapa 2: criar e carregar o(s) buffer(s) de vértices
 
 No OpenGL ES 2.0, você cria um par de buffers, um para os dados de posição e um para os dados de cor. (Você também poderia criar uma estrutura que contém ambos e um único buffer.) Você associa cada buffer e gravar dados de cor e de posição neles. Depois, durante a função de renderização, vincule os buffers novamente e forneça ao sombreador o formato dos dados no buffer, para que ele possa interpretá-los corretamente.
 
@@ -217,7 +224,7 @@ m_d3dContext->IASetVertexBuffers(
   &offset);
 ```
 
-### Etapa 3: criar e carregar o buffer de índice
+### <a name="step-3-create-and-load-the-index-buffer"></a>Etapa 3: criar e carregar o buffer de índice
 
 Buffers de índice são uma forma eficiente de permitir que o sombreador de vértice procure vértices individuais. Embora não sejam necessários, nós os usamos no exemplo de renderizador. Assim como os buffers de vértice no OpenGL ES 2.0, um buffer de índice é criado e vinculado como buffer para fins gerais; além disso, os índices de vértice criados anteriormente são acoplados a ele.
 
@@ -287,25 +294,25 @@ m_d3dContext->DrawIndexed(
   0);
 ```
 
-## Etapa anterior
+## <a name="previous-step"></a>Etapa anterior
 
 
 [Fazer a portabilidade de objetos de sombreador](port-the-shader-config.md)
 
-## Próxima etapa
+## <a name="next-step"></a>Próxima etapa
 
 [Fazer a portabilidade do GLSL](port-the-glsl.md)
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Ao estruturar o seu Direct3D, separe o código que chama métodos em [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) em um método que é chamado sempre os recursos do dispositivo precisam ser recriados. (No modelo de projeto do Direct3D, esse código está nos métodos **CreateDeviceResource** do objeto de renderização. O código que atualiza o contexto de dispositivo ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)), por outro lado, é colocado no método **Render**, já que é onde se cria, de fato, os estágios de sombreador e se associa os dados.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Como: compatibilizar um renderizador simples do OpenGL ES 2.0 ao Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
+* [Como fazer a portabilidade de um renderizador OpenGL ES 2.0 simples para Direct3D Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
 * [Fazer a portabilidade de objetos de sombreador](port-the-shader-config.md)
-* [Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
+* [Fazer a portabilidade de dados e buffers de vértice](port-the-vertex-buffers-and-data-config.md)
 * [Fazer a portabilidade do GLSL](port-the-glsl.md)
 
  
@@ -314,10 +321,5 @@ Ao estruturar o seu Direct3D, separe o código que chama métodos em [**ID3D11De
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

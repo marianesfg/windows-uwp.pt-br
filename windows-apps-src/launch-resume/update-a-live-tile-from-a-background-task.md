@@ -4,14 +4,21 @@ title: "Atualizar um bloco dinâmico de uma tarefa em segundo plano"
 description: "Use uma tarefa em segundo plano para atualizar o bloco dinâmico de seu aplicativo com novo conteúdo."
 Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: d651a5dbf8478de238944cac36ea13429b0f1849
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 76521772e4f93ee143ad698ad798f4b88ebcf3a7
+ms.lasthandoff: 02/07/2017
 
 ---
 
 
-# Atualizar um bloco dinâmico de uma tarefa em segundo plano
+# <a name="update-a-live-tile-from-a-background-task"></a>Atualizar um bloco dinâmico de uma tarefa em segundo plano
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -28,7 +35,7 @@ Veja um vídeo que mostra como adicionar blocos dinâmicos aos aplicativos.
 
 <iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/afb47cc5-edd3-4262-ae45-8f0e3ae664ac/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">One Dev Minute - Atualizando um bloco dinâmico de uma tarefa em segundo plano</iframe>
 
-## Criar o projeto de tarefa em segundo plano
+## <a name="create-the-background-task-project"></a>Criar o projeto de tarefa em segundo plano
 
 
 Para habilitar um bloco dinâmico para seu aplicativo, adicione um novo projeto Componente do Tempo de Execução do Windows à sua solução. Trata-se de um assembly separado, que o SO carrega e executa em segundo plano quando um usuário instala o aplicativo.
@@ -38,7 +45,7 @@ Para habilitar um bloco dinâmico para seu aplicativo, adicione um novo projeto 
 3.  Chame o projeto de BackgroundTasks e clique ou toque em **OK**. O Microsoft Visual Studio adiciona o novo projeto à solução.
 4.  No projeto principal, adicione uma referência ao projeto BackgroundTasks.
 
-## Implementar a tarefa em segundo plano
+## <a name="implement-the-background-task"></a>Implementar a tarefa em segundo plano
 
 
 Implemente a interface de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) para criar uma classe que atualize o bloco dinâmico de seu aplicativo. A operação em segundo plano ocorre no método Run. Neste caso, a tarefa obtém um feed de sindicalização para os blogs do MSDN. Para impedir que a tarefa feche antecipadamente enquanto o código assíncrono ainda está em execução, obtenha um adiamento.
@@ -141,7 +148,7 @@ namespace BackgroundTasks
 }
 ```
 
-## Configurar o manifesto do pacote
+## <a name="set-up-the-package-manifest"></a>Configurar o manifesto do pacote
 
 
 Para configurar o manifesto do pacote, abra-o e adicione uma nova declaração de tarefa em segundo plano. Configure o ponto de entrada da tarefa para o nome da classe, inclusive seu namespace.
@@ -158,7 +165,7 @@ Para configurar o manifesto do pacote, abra-o e adicione uma nova declaração d
 9.  No campo **Logotipo pequeno**, defina um caminho como um ícone de 30 x 30 pixels.
 10. No campo **Logotipo largo** , defina um caminho como um ícone de 310 x 150 pixels.
 
-## Registrar a tarefa em segundo plano
+## <a name="register-the-background-task"></a>Registrar a tarefa em segundo plano
 
 
 Crie um [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) para registrar a tarefa.
@@ -240,7 +247,7 @@ namespace ContosoApp
 }
 ```
 
-## Depurar a tarefa em segundo plano
+## <a name="debug-the-background-task"></a>Depurar a tarefa em segundo plano
 
 
 Para depurar a tarefa em segundo plano, defina um ponto de interrupção no método Run da tarefa. Na barra de tarefas **Local do Depurador**, selecione a tarefa em segundo plano. Isso fará com que o sistema chame o método Run imediatamente.
@@ -255,7 +262,7 @@ Para depurar a tarefa em segundo plano, defina um ponto de interrupção no mét
 8.  Pressione Shift+F5 ou toque em **Depurar &gt; Parar Depuração** para parar a depuração.
 9.  Retorne ao bloco do aplicativo na tela inicial. Após alguns segundos, as notificações do bloco serão exibidas no bloco do aplicativo.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
@@ -267,9 +274,4 @@ Para depurar a tarefa em segundo plano, defina um ponto de interrupção no mét
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

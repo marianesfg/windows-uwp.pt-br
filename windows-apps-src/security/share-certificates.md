@@ -3,13 +3,20 @@ title: Compartilhar certificados entre aplicativos
 description: "Os aplicativos da Plataforma Universal do Windows (UWP) que exigem autenticação segura além de uma combinação de ID de usuário e senha podem usar certificados na autenticação."
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 189e95695be3621754414708f1a394fe4cea4ecf
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ca4c7b82fdb7f950d3f68323dec37c2f31e02c87
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Compartilhar certificados entre aplicativos
+# <a name="share-certificates-between-apps"></a>Compartilhar certificados entre aplicativos
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -19,7 +26,7 @@ Os aplicativos da Plataforma Universal do Windows (UWP) que exigem autenticaçã
 
 Os aplicativos podem se autenticar com um serviço Web usando um certificado e vários aplicativos podem usar um único certificado do repositório de certificados para autenticar o mesmo usuário. Se um certificado não existir no repositório, você poderá adicionar código ao seu aplicativo para importar um certificado de um arquivo PFX.
 
-## Habilitar Serviços de Informações da Internet (IIS) da Microsoft e mapeamento de certificados do cliente
+## <a name="enable-microsoft-internet-information-services-iis-and-client-certificate-mapping"></a>Habilitar Serviços de Informações da Internet (IIS) da Microsoft e mapeamento de certificados do cliente
 
 
 Este artigo usa o Microsoft Internet Information Services (IIS) para fins de exemplo. O IIS não está habilitado por padrão. Você pode habilitar o IIS usando o Painel de Controle.
@@ -29,7 +36,7 @@ Este artigo usa o Microsoft Internet Information Services (IIS) para fins de exe
 3.  Expanda **Serviços de Informações da Internet** e, em seguida, expanda **Serviços Web**. Expanda **Recursos de Desenvolvimento de Aplicativos** e selecione **ASP.NET 3.5** e **ASP.NET 4.5**. Fazer essas seleções habilitará automaticamente o **Serviços de Informações da Internet**.
 4.  Clique em **OK** para aplicar as alterações.
 
-## Crie e publique um serviço Web seguro
+## <a name="create-and-publish-a-secured-web-service"></a>Crie e publique um serviço Web seguro
 
 
 1.  Execute o Microsoft Visual Studio como administrador e selecione **Novo Projeto** na página inicial. O acesso do administrador é obrigatório para publicar um serviço Web em um servidor IIS. Na caixa de diálogo Novo Projeto, altere a estrutura para **.NET Framework 3.5**. Selecione **Visual C#** -&gt; **Web** -&gt; **Visual Studio** -&gt; **Aplicativo de Serviço Web do ASP.NET**. Nomeie o aplicativo como "FirstContosoBank". Clique em **OK** para criar o projeto.
@@ -51,7 +58,7 @@ Este artigo usa o Microsoft Internet Information Services (IIS) para fins de exe
 5.  Na caixa de diálogo **Publicar na Web**, crie um novo perfil e nomeie-o "ContosoProfile". Clique em **Avançar**.
 6.  Na próxima página, insira o nome do seu servidor IIS e especifique um nome de site "Site padrão/FirstContosoBank". Clique em **Publicar** para publicar seu serviço Web.
 
-## Configure seu serviço Web para usar autenticação de certificado cliente
+## <a name="configure-your-web-service-to-use-client-certificate-authentication"></a>Configure seu serviço Web para usar autenticação de certificado cliente
 
 
 1.  Execute o **Gerenciador do Serviços de Informações da Internet (IIS)**.
@@ -64,7 +71,7 @@ Este artigo usa o Microsoft Internet Information Services (IIS) para fins de exe
 
 Você pode repetir as etapas anteriores para criar vários serviços Web que podem ser acessados usando o mesmo certificado cliente.
 
-## Criar um aplicativo da Windows Store que usa autenticação de certificados
+## <a name="create-a-windows-store-app-that-uses-certificate-authentication"></a>Criar um aplicativo da Windows Store que usa autenticação de certificados
 
 
 Agora que você já tem um ou mais serviços Web seguros, seus aplicativos podem usar certificados para autenticar esses serviços Web. Quando você cria uma solicitação para um serviço Web autenticado usando o objeto [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639), a solicitação inicial não conterá um certificado cliente. O serviço Web autenticado responderá com uma solicitação para autenticação do cliente. Quando isso ocorre, o cliente Windows consultará automaticamente o repositório de certificados para obter os certificados cliente disponíveis. O seu usuário pode selecionar dentre esses certificados para autenticar para o serviço Web. Alguns certificados são protegidos por senha, portanto você precisará fornecer ao usuário uma maneira de inserir a senha para um certificado.
@@ -203,8 +210,3 @@ Se não houver certificados cliente disponíveis, então o usuário precisará a
 8.  Execute o seu aplicativo e faça logon em seu serviço Web seguro, bem como importar um arquivo PFX para o repositório de certificados local.
 
 É possível usar essas etapas para criar vários aplicativos que usam o mesmo certificado de usuário para acessar os mesmos ou diferentes serviços Web seguros.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

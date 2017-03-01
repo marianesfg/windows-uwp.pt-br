@@ -3,9 +3,16 @@ author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: "Referência de API central do Device Portal"
 description: "Saiba mais sobre as APIs REST centrais do Windows Device Portal que você pode usar para acessar os dados e controlar seu dispositivo de forma programática."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b4222774dc4b0f9cdcac871311f5ead69c1e70a9
-ms.openlocfilehash: 3bacb9ac42e157afaed5e9e0e6438654db03ff28
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 10d8799b73a941a4a0eb89fd369d67b2fc6a68c2
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -222,7 +229,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## <a name="device-manager"></a>Gerenciador de dispositivos
+## Device manager
 ---
 ### <a name="get-the-installed-devices-on-the-machine"></a>Obter os dispositivos instalados no computador
 
@@ -281,7 +288,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## <a name="dump-collection"></a>Coleta de despejo
+## Dump collection
 ---
 ### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Obter a lista de todos os despejos de memória para aplicativos
 
@@ -865,7 +872,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## <a name="etw"></a>ETW
+## ETW
 ---
 ### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Criar uma sessão ETW em tempo real por um Websocket
 
@@ -925,7 +932,7 @@ Estas respostas são enviadas do servidor para o cliente. Isso é enviado como t
     "Events":[
         {
             "Timestamp": int,
-            "Provider": string,
+            "ProviderName": string,
             "ID": int, 
             "TaskName": string,
             "Keyword": int,
@@ -1060,7 +1067,7 @@ GET | /api/etw/customproviders
 * IoT
 
 ---
-## <a name="os-information"></a>Informações do sistema operacional
+## OS information
 ---
 ### <a name="get-the-machine-name"></a>Obter o nome do computador
 
@@ -1268,7 +1275,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## <a name="performance-data"></a>Dados de desempenho
+## Performance data
 ---
 ### <a name="get-the-list-of-running-processes"></a>Obter a lista de processos em execução
 
@@ -1410,7 +1417,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## <a name="power"></a>Energia
+## Power
 ---
 ### <a name="get-the-current-battery-state"></a>Obter o estado atual da bateria
 
@@ -1831,7 +1838,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## <a name="remote-control"></a>Controle remoto
+## Remote control
 ---
 ### <a name="restart-the-target-computer"></a>Reiniciar o computador de destino
 
@@ -1919,7 +1926,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## <a name="task-manager"></a>Gerenciador de tarefas
+## Task manager
 ---
 ### <a name="start-a-modern-app"></a>Iniciar um aplicativo moderno
 
@@ -2019,7 +2026,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## <a name="networking"></a>Rede
+## Networking
 ---
 ### <a name="get-the-current-ip-configuration"></a>Obter a configuração de IP atual
 
@@ -2336,7 +2343,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## <a name="windows-error-reporting-wer"></a>Relatório de Erros do Windows (WER)
+## Windows Error Reporting (WER)
 ---
 ### <a name="download-a-windows-error-reporting-wer-file"></a>Baixar um arquivo de relatório de erros do Windows (WER)
 
@@ -2502,7 +2509,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## <a name="windows-performance-recorder-wpr"></a>Windows Performance Recorder (WPR) 
+## Windows Performance Recorder (WPR) 
 ---
 ### <a name="start-tracing-with-a-custom-profile"></a>Inicie o rastreamento com um perfil personalizado
 
@@ -2965,7 +2972,7 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
-## <a name="dns-sd-tags"></a>Marcas de DNS-SD 
+## DNS-SD Tags 
 ---
 ### <a name="view-tags"></a>Exibir Marcas
 
@@ -3465,8 +3472,3 @@ Código de status HTTP      | Descrição
 * HoloLens
 * Xbox
 * IoT
-
-
-<!--HONumber=Dec16_HO1-->
-
-

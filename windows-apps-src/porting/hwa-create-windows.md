@@ -3,9 +3,17 @@ author: seksenov
 title: Aplicativos Web hospedados - Converter seu aplicativo Web em um aplicativo do Windows usando o Visual Studio
 description: Use o Visual Studio para tornar seu site um aplicativo da Plataforma Universal do Windows (UWP) para Windows 10.
 kw: Hosted Web Apps tutorial, Porting to Windows 10 with Visual Studio, How to convert website to Windows, How to add website to Windows Store, Packaging web application for Microsoft Store, Test Windows 10 native features and runtime APIs with CodePen, How to use Windows Cortana Live Tiles Built-in Camera on my Website with remote JavaScript
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Aplicativos Web hospedados, fazer a portabilidade de aplicativos web para o Windows 10, converter o site para o Windows, empacotamento de aplicativos web para a Windows Store
+ms.assetid: a58d2c67-77f8-4d01-bea3-a6ebce2d73b9
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 1cb4757896c9fecf05224a26949cd6e2ddffdb45
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b6781883a3e48d35a558798f369e91c4a7ea3bec
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -14,7 +22,7 @@ ms.openlocfilehash: 1cb4757896c9fecf05224a26949cd6e2ddffdb45
 Aprenda a criar rapidamente um aplicativo da Plataforma Universal do Windows para Windows 10, começando com apenas uma URL do site. 
 
 > [!NOTE]
-> As instruções a seguir referem-se ao uso de uma plataforma de desenvolvimento do Windows. Usuários do Mac, acesse as [instruções sobre como usar uma plataforma de desenvolvimento do Mac](/hwa-create-mac.md).
+> As instruções a seguir referem-se ao uso de uma plataforma de desenvolvimento do Windows. Usuários do Mac, acesse as [instruções sobre como usar uma plataforma de desenvolvimento do Mac](./hwa-create-mac.md).
 
 ## <a name="what-you-need-to-develop-on-windows"></a>O que você precisa para desenvolver no Windows
 
@@ -96,9 +104,4 @@ function cameraCapture() {
 - [Melhorar seu aplicativo Web ao acessar recursos da Plataforma Universal do Windows(UWP)](hwa-access-features.md)
 - [Guia para aplicativos UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Baixar ativos de design para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

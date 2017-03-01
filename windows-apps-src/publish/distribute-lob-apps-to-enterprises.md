@@ -1,22 +1,29 @@
 ---
 author: jnHs
 Description: "Você pode publicar aplicativos de linha de negócios (LOB) diretamente para empresas, para aquisição de volume, usando a Windows Store para Empresas sem tornar os aplicativos amplamente disponíveis na Loja."
-title: "Distribuir aplicativos LOB às empresas"
+title: Distribuir os aplicativos LOB para empresas
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 44485b32a7c5580e1a7a0ca9ca7c642e0b9b29d2
-ms.openlocfilehash: 76fc4e5cfa70d06d6f378409ecd9f331f64c0803
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 94d12656a122f623240463886297c2378753924b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Distribuir aplicativos LOB às empresas
+# <a name="distribute-lob-apps-to-enterprises"></a>Distribuir os aplicativos LOB para empresas
 
 
 Você pode publicar aplicativos de linha de negócios (LOB) diretamente para empresas, para aquisição de volume, usando a Windows Store para Empresas sem tornar os aplicativos amplamente disponíveis na Loja.
 
 > **Importante**  No momento, somente aplicativos gratuitos podem ser distribuídos exclusivamente a empresas por meio da Windows Store para Empresas. Se você enviar um aplicativo pago como LOB, ele não estará disponível para a empresa no momento. 
 
-## Configurando a associação empresarial
+## <a name="setting-up-the-enterprise-association"></a>Configurando a associação empresarial
 
 
 A primeira etapa na publicação de aplicativos LOB exclusivamente para uma empresa é estabelecer a associação entre sua conta e o repositório particular da empresa.
@@ -27,12 +34,12 @@ Quando uma empresa optar por convidá-lo a publicar aplicativos para seu uso exc
 
 Para confirmar a associação, clique em **Aceitar**. Sua conta estará, em seguida, apta a publicar aplicativos para uso exclusivo da empresa.
 
-## Enviando um aplicativo LOB
+## <a name="submitting-an-lob-app"></a>Enviando um aplicativo LOB
 
 
 Quando você estiver pronto para publicar um aplicativo para uso exclusivo de uma empresa, o processo será semelhante ao processo de envio do aplicativo. O aplicativo passa pelo mesmo processo de certificação, e deve estar em conformidade com todas as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944). Apenas poucas partes do processo são diferentes.
 
-### Distribuição e visibilidade
+### <a name="distribution-and-visibility"></a>Distribuição e visibilidade
 
 Depois de configurar uma associação empresarial, sempre que enviar um aplicativo, você verá uma caixa de lista suspensa na seção **Distribuição e visibilidade** da página **Preço e disponibilidade** do envio. Por padrão, essa opção é definida como **Retail distribution**. Para tornar o aplicativo exclusivo de uma empresa, você precisará escolher **Line-of-business (LOB) distribution**.
 
@@ -42,7 +49,7 @@ Selecione as empresas que poderão obter o aplicativo. Nenhuma outra poderá ace
 
 > **Observação**  Pelo menos uma empresa deve ser selecionada para publicar um aplicativo como linha de negócios.
 
-### Licenciamento para organizações
+### <a name="organizational-licensing"></a>Licenciamento para organizações
 
 Por padrão, a caixa para **licenciamento por volume gerenciado pela Loja (online)** é marcada quando você envia um aplicativo. Na publicação de aplicativos LOB, essa caixa deve ser marcada, para que a empresa possa adquirir seu aplicativo em volume. Isso não tornará o aplicativo disponível para qualquer pessoa fora das empresas que você selecionou na seção **Distribuição e visibilidade**.
 
@@ -50,10 +57,10 @@ Se você quiser disponibilizar o aplicativo para a empresa por meio de licenciam
 
 Para saber mais, consulte [Opções de licenciamento para organizações](organizational-licensing.md).
 
-### Classificações etárias
+### <a name="age-ratings"></a>Classificações etárias
 Para aplicativos LOB, a etapa de [classificação etária](age-ratings.md) do processo de envio funciona da mesma forma para aplicativos de varejo, mas você também tem uma opção adicional que permite que você indique a classificação etária da loja de classificação do seu aplicativo manualmente em vez de concluir o questionário ou importar uma ID de classificação IARC existente. Essa classificação manual só pode ser usada com a distribuição LOB, portanto, se você mudar a configuração de **Distribuição e visibilidade** do aplicativo para **Distribuição comercial**, você precisará fazer o questionário de classificação etária antes de publicar o envio.
 
-### Implantação empresarial de aplicativos LOB
+### <a name="enterprise-deployment-of-lob-apps"></a>Implantação empresarial de aplicativos LOB
 
 Depois de clicar em **Enviar à Loja**, o aplicativo passará pelo processo de certificação. Quando estiver pronto, um administrador da empresa deverá adicioná-lo ao seu repositório particular no portal da Windows Store para Empresas. A empresa poderá então implantar o aplicativo para seus usuários.
 
@@ -61,7 +68,7 @@ Depois de clicar em **Enviar à Loja**, o aplicativo passará pelo processo de c
 
 Para saber mais, veja [Trabalhando com aplicativos de linha de negócios](http://go.microsoft.com/fwlink/p/?LinkId=698846) e [Distribuir aplicativos usando seu repositório particular](http://go.microsoft.com/fwlink/p/?LinkId=698847).
 
-### Atualizando aplicativos LOB
+### <a name="updating-lob-apps"></a>Atualizando aplicativos LOB
 
 Para publicar atualizações de um aplicativo que você já publicou como LOB, basta criar um novo envio. Você pode carregar novos pacotes ou fazer quaisquer outras alterações e, em seguida, clicar em **Enviar à Loja** para disponibilizar a versão atualizada. Certifique-se de manter as mesmas seleções da empresa em **Distribuição e visibilidade** (a menos que você queira realmente alterá-las, como, por exemplo, selecionar uma empresa adicional para adquirir o aplicativo ou remover uma das empresas às quais você o distribuiu anteriormente).
 
@@ -69,7 +76,7 @@ Se quiser parar de oferecer um aplicativo publicado anteriormente como linha de 
 
 > **Observação** Ao alterar um aplicativo para **Distribuição comercial**, você precisará completar o [questionário de classificação etária](age-ratings.md), se ainda não tiver preenchido anteriormente (mesmo se o app não for disponibilizado para compra).
 
-### Distribuir aplicativos LOB por meio de sideload
+### <a name="distributing-lob-apps-through-sideloading"></a>Distribuir aplicativos LOB por meio de sideload
 
 A disponibilização de aplicativos por meio da Loja para Negócios garante que o aplicativo foi assinado pela Loja e está em conformidade com as Políticas da Loja padrão.
 
@@ -83,10 +90,5 @@ Para saber mais, veja [Sideload de aplicativos LOB no Windows 10](http://go.micr
 
 
 
-
-
-
-
-<!--HONumber=Sep16_HO1-->
 
 

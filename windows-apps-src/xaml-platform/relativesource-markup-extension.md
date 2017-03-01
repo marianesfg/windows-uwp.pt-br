@@ -3,19 +3,26 @@ author: jwmsft
 description: "Fornece um meio para especificar o origem de uma associação em termos de uma relação relativa no gráfico do objeto de tempo de execução."
 title: "Extensão de marcação RelativeSources"
 ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ec4c9b87655425e82a1cb792d0acc6bee265e9d2
-ms.openlocfilehash: b6af0ce865713ed0da39a87aa63799d3f89b7e89
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 46b48e8e1ef1efbff7248ddf54c22e5a8bc29deb
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Extensão de marcação {RelativeSource}
+# <a name="relativesource-markup-extension"></a>Extensão de marcação {RelativeSource}
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Fornece um meio para especificar o origem de uma associação em termos de uma relação relativa no gráfico do objeto de tempo de execução.
 
-## Uso de atributos XAML (Modo por conta própria)
+## <a name="xaml-attribute-usage-self-mode"></a>Uso de atributos XAML (Modo por conta própria)
 
 ``` syntax
 <Binding RelativeSource="{RelativeSource Self}" .../>
@@ -23,7 +30,7 @@ Fornece um meio para especificar o origem de uma associação em termos de uma r
 <object property="{Binding RelativeSource={RelativeSource Self} ...}" .../>
 ```
 
-## Uso de atributos XAML (Modo TemplatedParent)
+## <a name="xaml-attribute-usage-templatedparent-mode"></a>Uso de atributos XAML (Modo TemplatedParent)
 
 ``` syntax
 <Binding RelativeSource="{RelativeSource TemplatedParent}" .../>
@@ -31,14 +38,14 @@ Fornece um meio para especificar o origem de uma associação em termos de uma r
 <object property="{Binding RelativeSource={RelativeSource TemplatedParent} ...}" .../>
 ```
 
-## Valores XAML
+## <a name="xaml-values"></a>Valores XAML
 
 | Termo | Descrição |
 |------|-------------|
 | {RelativeSource Self} | Produz um valor de [<strong>Mode</strong>](https://msdn.microsoft.com/library/windows/apps/br209915) de <strong>Self</strong>. O elemento de destino deve ser usado como fonte para essa associação. Isso é útil para associar uma propriedade de um elemento a outra propriedade do mesmo elemento. |
 | {RelativeSource TemplatedParent} | Produz um [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391) que é aplicado como a origem dessa associação. Isso é útil para aplicar informações em tempo de execução a associações em nível de modelo. | 
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Um [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) pode definir [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) como um atributo em um elemento de objeto **Binding** ou como um componente em uma extensão de marcação [{Binding}](binding-markup-extension.md). É por isso que são exibidas duas sintaxes XAML diferentes.
 
@@ -59,17 +66,12 @@ Outro uso de `RelativeSource={RelativeSource Self}` é como uma maneira de defin
 
 **Observação**  O uso de XAML para **RelativeSource** mostra apenas o uso pretendido: definir um valor para [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) em XAML como parte de uma expressão de associação. Teoricamente, outros usos são possíveis no caso da definição de uma propriedade na qual o valor é [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Visão geral do XAML](xaml-overview.md)
 * [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [Extensão de marcação {Binding}](binding-markup-extension.md)
 * [**Associação**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

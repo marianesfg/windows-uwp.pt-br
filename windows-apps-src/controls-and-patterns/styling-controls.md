@@ -8,19 +8,26 @@ title: Aplicando estilos a controles
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: Styling controls
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 2386ccbc89cad5514c0b1a4879af6d0df328263e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 60eb44ab45873b638181bb4b3194e443d21356bc
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Aplicando estilos a controles
+# <a name="styling-controls"></a>Aplicando estilos a controles
 
 
 
 É possível personalizar a aparência de seus aplicativos de muitas formas usando a estrutura XAML. Os estilos permitem definir propriedades de controle e reutilizar essas configurações para criar uma aparência consistente em vários controles.
 
-## Noções básicas de estilos
+## <a name="style-basics"></a>Noções básicas de estilos
 
 
 Use estilos para extrair configurações de propriedades visuais para recursos reutilizáveis. Aqui está um exemplo que mostra 3 botões com um estilo que define as propriedades [**BorderBrush**](https://msdn.microsoft.com/library/windows/apps/br209397), [**BorderThickness**](https://msdn.microsoft.com/library/windows/apps/br209399) e [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414). Ao aplicar um estilo, você torna igual a aparência dos controles sem precisar definir essas propriedades em cada controle separadamente.
@@ -58,7 +65,7 @@ Cada elemento [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208
 </StackPanel>
 ```
 
-## Aplicar um estilo implícito ou explícito
+## <a name="apply-an-implicit-or-explicit-style"></a>Aplicar um estilo implícito ou explícito
 
 Se você definir um estilo como um recurso, haverá duas maneiras de aplicá-lo aos seus controles:
 
@@ -103,7 +110,7 @@ Neste exemplo, o primeiro estilo tem um [atributo x:Key](../xaml-platform/x-key-
 </Grid>
 ```
 
-## Usar estilos baseados em outros
+## <a name="use-based-on-styles"></a>Usar estilos baseados em outros
 
 Para facilitar a manutenção de estilos e otimizar sua reutilização, você pode criar estilos que herdam de outros estilos. Você usa a propriedade [**BasedOn**](https://msdn.microsoft.com/library/windows/apps/br208852) para criar estilos herdados. Estilos que herdam de outros estilos devem ter como destino o mesmo tipo de controle ou um controle derivado do tipo de destino do estilo base. Por exemplo, se um estilo base tiver como destino [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/br209365), estilos baseados nesse estilo podem ter como alvo **ContentControl** ou tipos derivados de **ContentControl**, como [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) e [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527). Se um valor não é definido no estilo baseado, ele é herdado do estilo base. Para alterar um valor do estilo base, o estilo baseado substitui esse valor. O próximo exemplo mostra um **Button** e uma [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) com estilos herdados do mesmo estilo base.
 
@@ -139,21 +146,16 @@ O estio base tem como destino [**ContentControl**](https://msdn.microsoft.com/li
 </StackPanel>
 ```
 
-## Use ferramentas para trabalhar facilmente com estilos
+## <a name="use-tools-to-work-with-styles-easily"></a>Use ferramentas para trabalhar facilmente com estilos
 
 Uma forma rápida de aplicar estilos aos seus controles é clicar com o botão direito do mouse em um controle na superfície de design XAML do Microsoft Visual Studio e selecionar **Editar Estilo** ou **Editar Modelo** (dependendo do controle no qual você está clicando com o botão direito). Você pode, então, aplicar um estilo existente selecionando **Aplicar Recurso** ou pode definir um novo estilo selecionando **Criar Vazio**. Se você criar um estilo vazio, terá a opção de defini-lo na página, no arquivo App.xaml ou em um dicionário de recursos separado.
 
-## Modificar os estilos de sistema padrão
+## <a name="modify-the-default-system-styles"></a>Modificar os estilos de sistema padrão
 
 Você deve usar os estilos provenientes dos recursos XAML padrão do Windows Runtime sempre que possível. Quando for necessário definir seus próprios estilos, tente baseá-los nos estilos padrão sempre que possível (usando estilos baseados conforme explicado anteriormente, ou editando uma cópia do estilo padrão original).
 
-## A propriedade Template
+## <a name="the-template-property"></a>A propriedade Template
 
 Um setter de estilo pode ser usado para a propriedade [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465) de um [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) e, na verdade, isso compõe a maior parte de um estilo XAML típico e dos recursos XAML de um aplicativo. Isso é discutido com mais detalhes no tópico [Modelos de controle](control-templates.md).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

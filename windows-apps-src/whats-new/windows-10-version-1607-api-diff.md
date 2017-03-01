@@ -3,13 +3,20 @@ author: QuinnRadich
 title: "Alterações de API do Windows 10 versão 1607"
 description: "Os desenvolvedores podem usar a lista a seguir para identificar namespaces novos ou alterados no Windows 10, versão 1607"
 keywords: "novidades, novidades, atualizar, atualizações, novo, Windows 10, 1607, api"
+ms.author: quradic
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+ms.assetid: 40335c70-46cc-40fd-9fe0-3cc8e6200482
 translationtype: Human Translation
-ms.sourcegitcommit: 8d7ea8adcff944a9be58f164e88623861e4cf8ad
-ms.openlocfilehash: 7ab2c9f1054509f816ef9647f340e61b6a281d8a
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 18d4bac980592b41479e01b8644f9bb9bf291575
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Alterações das APIs do Windows 10
+# <a name="windows-10-api-changes"></a>Alterações das APIs do Windows 10
 
 Muitas APIs de tempo de execução foram adicionadas ou alteradas no Windows 10 versão 1607. Esta tabela mostra os namespaces que foram adicionados ou alterados nesta versão.
 
@@ -5153,10 +5160,5 @@ Windows.Services.Store.StoreSubscriptionInfo <br /> Windows.Services.Store.Store
 
 Windows.Services.Store.StoreVideo <br /> Windows.Services.Store.StoreVideo.Caption <br /> Windows.Services.Store.StoreVideo.Height <br /> Windows.Services.Store.StoreVideo.PreviewImage <br /> Windows.Services.Store.StoreVideo.Uri <br /> Windows.Services.Store.StoreVideo.VideoPurposeTag <br /> Windows.Services.Store.StoreVideo.Width
 <hr>
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

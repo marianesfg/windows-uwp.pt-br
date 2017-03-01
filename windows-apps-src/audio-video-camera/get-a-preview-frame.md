@@ -3,13 +3,20 @@ author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
 description: "Este tópico mostra como obter um único quadro de visualização do fluxo de visualização de captura de mídia."
 title: "Obter um quadro de visualização"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e19fa2a574e6824941c89db1db1e7e69f9e38ae9
-ms.openlocfilehash: d8d5780672592b1888a9c894dcc3ed58ebc2be36
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 420f9b8c3bb6573fbc12bc974ef2382b9ba6ec03
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obter um quadro de visualização
+# <a name="get-a-preview-frame"></a>Obter um quadro de visualização
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -51,7 +58,7 @@ Quando terminar de usar o quadro de visualização, certifique-se de chamar seu 
 
 [!code-cs[CleanUpPreviewFrame](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpPreviewFrame)]
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -61,10 +68,5 @@ Quando terminar de usar o quadro de visualização, certifique-se de chamar seu 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

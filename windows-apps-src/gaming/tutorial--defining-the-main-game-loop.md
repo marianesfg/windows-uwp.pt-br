@@ -3,25 +3,32 @@ author: mtoepke
 title: Definir o objeto principal do jogo
 description: "Agora, observaremos os detalhes do objeto principal do exemplo de jogo e como as regras implementadas são convertidas em interações com o ambiente do jogo."
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, objeto principal
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8af939fee50540e5213e624703400d99cbb6785f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f81b3eaa9b896295386232f99b789dc3857b3bad
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Definir o objeto principal do jogo
+# <a name="define-the-main-game-object"></a>Definir o objeto principal do jogo
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Até agora, desenvolvemos a estrutura básica de um jogo de exemplo e implementamos uma máquina de estado que manipula os comportamentos de alto nível de usuário e de sistema. Mas não examinamos a parte que transforma o exemplo em um jogo real: as regras e a mecânica, e como elas são implementadas. Agora, observaremos os detalhes do objeto principal do exemplo de jogo e como as regras implementadas são convertidas em interações com o ambiente do jogo.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Aplicar as técnicas básicas de desenvolvimento no momento da implementação das regras e da mecânica de um jogo da Plataforma Universal do Windows (UWP) que usa DirectX.
 
-## Levando o fluxo do jogo em consideração
+## <a name="considering-the-games-flow"></a>Levando o fluxo do jogo em consideração
 
 
 A maior parte da estrutura básica do jogo está definida nestes arquivos:
@@ -33,11 +40,11 @@ Em [Definindo a estrutura do aplicativo UWP do jogo](tutorial--building-the-game
 
 **Simple3DGame.cpp** fornece o código para uma classe, **Simple3DGame**, que especifica a implementação do jogo em si. Anteriormente, levamos em consideração o tratamento do jogo de exemplo como um aplicativo UWP. Agora veremos o código que faz dele um jogo.
 
-O código completo de **Simple3DGame.h/.cpp** é fornecido em [Código de exemplo completo desta seção](#code_sample).
+O código completo de **Simple3DGame.h/.cpp** é fornecido em [Código de exemplo completo desta seção](#complete-code-sample-for-this-section).
 
 Vamos dar uma olhada na definição da classe **Simple3DGame**.
 
-## Definindo o objeto central do jogo
+## <a name="defining-the-core-game-object"></a>Definindo o objeto central do jogo
 
 
 Quando o singleton do aplicativo é iniciado, o método **Initialize** do provedor de visualização cria uma instância da classe principal do jogo, o objeto **Simple3DGame**. Esse objeto contém os métodos que informam as alterações no estado de jogo para a máquina de estado definida na estrutura do aplicativo, ou do aplicativo para o próprio objeto de jogo. Ele também contém métodos que geram informações de atualização do bitmap de sobreposição, do painel transparente, das animações e da física (dinâmica) do jogo. O código para obter os recursos de dispositivos gráficos usados pelo jogo é encontrado em GameRenderer.cpp, que abordaremos posteriormente em [Montando a estrutura de renderização](tutorial--assembling-the-rendering-pipeline.md).
@@ -100,11 +107,11 @@ E os métodos privados:
 -   **LoadSavedState** e **SaveState**. Carrega e salva o estado atual do jogo, respectivamente.
 -   **SaveHighScore** e **LoadHighScore**. Salva e carrega as pontuações máximas entre jogos, respectivamente.
 -   **InitializeAmmo**. Redefine o estado de cada objeto de esfera usado como munição de volta ao seu estado original para o início de cada rodada.
--   **UpdateDynamics**. Este é um método importante, pois atualiza todos os objetos do jogo com base em rotinas de animação, física e entrada de controles repetidas. Esse é o núcleo da interatividade que define o jogo. Falaremos mais sobre isso na seção sobre [Atualização do jogo](#update_game).
+-   **UpdateDynamics**. Este é um método importante, pois atualiza todos os objetos do jogo com base em rotinas de animação, física e entrada de controles repetidas. Esse é o núcleo da interatividade que define o jogo. Falaremos mais sobre isso na seção sobre [Atualização do jogo](#updating-the-game-world).
 
 Os outros métodos públicos são getters de propriedades que enviam informações específicas sobre o jogo e sobreposições à estrutura do aplicativo para exibição.
 
-## Definindo as variáveis de estado do jogo
+## <a name="defining-the-game-state-variables"></a>Definindo as variáveis de estado do jogo
 
 
 Uma função do objeto de jogo é servir como um contêiner para os dados que definem uma sessão de jogo, nível ou tempo de vida, dependendo de como o jogo é definido de modo geral. Neste caso, os dados de estado do jogo estão relacionados ao tempo da partida, inicializado uma vez quando o usuário inicia o jogo.
@@ -155,7 +162,7 @@ Na parte superior do exemplo do código, há quatro objetos cujas instâncias s�
 
 As outras variáveis do jogo contêm as listas de primitivas e seus respectivos valores no jogo, além de dados e restrições específicos à jogabilidade. Consultemos como a amostra configura essas variáveis quando o jogo é iniciado.
 
-## Inicializando e iniciando o jogo
+## <a name="initializing-and-starting-the-game"></a>Inicializando e iniciando o jogo
 
 
 Quando um jogado inicia o jogo, o objeto de jogo deve iniciar seu estado, criar e adicionar a sobreposição, definir as variáveis que acompanham o desempenho do jogador e instanciar os objetos usados para criar os níveis.
@@ -378,14 +385,14 @@ O exemplo de jogo configura os componentes do objeto de jogos nesta ordem:
 
 Agora, o jogo tem instâncias de todos os componentes principais: o ambiente, o jogador, os obstáculos, os alvos e as esferas de munição. Ele também tem instâncias dos níveis, que representam configurações de todos os componentes anteriores e seus comportamentos para cada nível de modo específico. Consultemos como o jogo gera os níveis.
 
-## Gerando e carregando os níveis do jogo
+## <a name="building-and-loading-the-games-levels"></a>Gerando e carregando os níveis do jogo
 
 
 A maior parte do trabalho pesado em relação à geração do nível é feita pelo arquivo **Level.h/.cpp**, no qual não nos aprofundaremos por ter foco em uma implementação muito específica. A parte importante é que o código de cada nível é executado como um objeto **LevelN** separado. Caso queira estender o jogo, você pode criar um objeto **Level** que usa um número atribuído como parâmetro e posiciona os obstáculos e os alvos aleatoriamente. Você também pode fazê-lo carregar dados de configuração de níveis de um arquivo de recursos ou até mesmo da Internet.
 
-O código completo de **Level.h/.cpp** é fornecido em [Código de exemplo completo desta seção](#code_sample).
+O código completo de **Level.h/.cpp** é fornecido em [Código de exemplo completo desta seção](#complete-code-sample-for-this-section).
 
-## Definindo a jogabilidade
+## <a name="defining-the-game-play"></a>Definindo a jogabilidade
 
 
 A esta altura, temos todos os componentes necessários para montar o jogo. Os níveis foram gerados na memória a partir das primitivas e estão prontos para que o jogador comece a interagir com eles de alguma forma.
@@ -649,7 +656,7 @@ GameState Simple3DGame::RunGame()
 
 O trunfo é este: `UpdateDynamics()`. É o que dá vida ao ambiente do jogo. Vamos revisá-lo.
 
-## Atualizando o ambiente do jogo
+## <a name="updating-the-game-world"></a>Atualizando o ambiente do jogo
 
 
 Uma experiência de jogo rápida e fluida é aquela em que o mundo parece *vivo*, quando o próprio jogo está em movimento, independente da entrada do jogador. As árvores balançam com o vento, as ondas quebram ao longo da costa, as máquinas soltam fumaça e brilham e monstros alienígenas se deformam e babam. Imagine como seria um jogo se tudo estivesse congelado, com os elementos gráficos se movendo apenas quando o jogador enviasse algum comando. Seria muito estranho e nada imersivo. Imersão, para o jogador, vem da sensação de ser um agente em um mundo vivo.
@@ -844,7 +851,7 @@ Agora que atualizamos todos os objetos na cena e calculamos as colisões, precis
 
 Agora, vamos examinar o método de renderização.
 
-## Renderizando os elementos gráficos do ambiente do jogo
+## <a name="rendering-the-game-worlds-graphics"></a>Renderizando os elementos gráficos do ambiente do jogo
 
 
 Recomendamos que os elementos gráficos de um jogo sejam atualizados sempre que possível. Isso corresponde a, no máximo, toda vez que o loop do jogo principal realiza uma iteração. À medida que o loop realiza uma iteração, o jogo é atualizado, com ou sem entradas do jogador. Isso permite que as animações e os comportamentos sejam calculados para serem exibidos de forma fluida. Imagine se tivéssemos uma cena simples de água que só se movesse quando o jogador pressionasse um botão. Isso geraria um visual terrivelmente tedioso. Um bom jogo é estável e fluido.
@@ -1041,12 +1048,12 @@ Esse método desenha a projeção do mundo 3D e gera a sobreposição em Direct2
 
 Observe que há dois estados para a sobreposição em Direct2D do jogo de exemplo: uma em que o jogo exibe a sobreposição de informações que contém o bitmap do menu de pausa e uma em que exibe as miras com os retângulos do controlador de movimento/visão da tela de toque. O texto da pontuação é gerado nos dois estados.
 
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 
 Aposto que você já está curioso a respeito do mecanismo de renderização real: como essas chamadas para os métodos **Render** nas primitivas atualizadas são convertidos em pixels na tela. Veremos isso com detalhes no tópico sobre [montagem da estrutura de renderização](tutorial--assembling-the-rendering-pipeline.md). Se estiver mais interessado em como os controles do jogador atualizam o estado do jogo, confira o tópico sobre [adição de controles](tutorial--adding-controls.md).
 
-## Código de exemplo completo desta seção
+## <a name="complete-code-sample-for-this-section"></a>Código de exemplo completo desta seção
 
 
 Simple3DGame.h
@@ -3610,7 +3617,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 [Criar um jogo UWP simples com o DirectX](tutorial--create-your-first-metro-style-directx-game.md)
@@ -3621,10 +3628,5 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

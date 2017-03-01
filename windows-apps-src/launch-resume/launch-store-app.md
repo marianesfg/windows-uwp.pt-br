@@ -1,22 +1,29 @@
 ---
 author: TylerMSFT
 title: Iniciar o aplicativo da Windows Store
-description: "Este tópico descreve o esquema de URI ms-windows-store. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo da Windows Store para páginas específicas na Loja."
+description: "Este tópico descreve o esquema de URI ms-windows-store. Seu app pode usar esse esquema de URI para iniciar o aplicativo da Windows Store para páginas específicas na Loja."
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: b66ae37adec1b68653c0fe7d552a84f61d57acd9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d80055e8c8ca1e8586cb8f2a54612206301282a1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Iniciar o aplicativo da Windows Store
+# <a name="launch-the-windows-store-app"></a>Iniciar o aplicativo da Windows Store
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este tópico descreve o esquema de URI **ms-windows-store:**. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo da Windows Store para páginas específicas na Loja.
+Este tópico descreve o esquema de URI **ms-windows-store:**. Seu app pode usar esse esquema de URI para iniciar o aplicativo da Windows Store para páginas específicas na Loja.
 
-## Referência do esquema de URI ms-windows-store:
+## <a name="ms-windows-store-uri-scheme-reference"></a>Referência do esquema de URI ms-windows-store:
 
 <table>
 <tr><th>Descrição</th><th></th><th>Esquema de URI</th></tr>
@@ -32,7 +39,7 @@ Este tópico descreve o esquema de URI **ms-windows-store:**. Seu aplicativo pod
 </tr>
 <tr>
 <td rowspan="4">Inicia a página de detalhes (PDP) de um produto. <p>O ID da Loja é recomendado para clientes no Windows 10 e funcionará em todas as versões de sistema operacional, mas as maneiras anteriores de fazer isso (ex: PFN) ainda têm suporte.</p>
-<p>Esses valores podem ser encontrados no painel Centro de Desenvolvimento do Windows na página <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">Identidade do aplicativo</a> da seção Gerenciamento do aplicativo de cada aplicativo.</p>
+<p>Esses valores podem ser encontrados no painel Centro de Desenvolvimento do Windows na página <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">Identidade do app</a> da seção Gerenciamento do app de cada app.</p>
 </td>
 <td>
 ID da Loja <p>(Recomendado)</p>
@@ -129,9 +136,4 @@ Inicia uma pesquisa para a consulta especificada. São permitidos espaços na co
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

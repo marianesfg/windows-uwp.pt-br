@@ -3,23 +3,30 @@ author: DBirtolo
 ms.assetid: D06AA3F5-CED6-446E-94E8-713D98B13CAA
 title: Criar um seletor de dispositivo
 description: "Construir um seletor de dispositivo permitirá que você limite os dispositivos que está pesquisando ao enumerar dispositivos."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 091767d6f223ce2b4538dafb1c81595015589013
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e4e3cecc0618d81554dbaae80c3bb4d907c79d31
+ms.lasthandoff: 02/07/2017
 
 ---
-# Criar um seletor de dispositivo
+# <a name="build-a-device-selector"></a>Criar um seletor de dispositivo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** APIs importantes **
+**APIs importantes**
 
--   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
 Construir um seletor de dispositivo permitirá que você limite os dispositivos que está pesquisando ao enumerar dispositivos. Isso permitirá obter apenas resultados relevantes e também melhorará o desempenho do sistema. Na maioria das situações, você obtém um seletor de dispositivo de uma pilha de dispositivo. Por exemplo, você pode usar [**GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Dn264015) para dispositivos descobertos por USB. Esses seletores de dispositivo retornam uma cadeia de caracteres de Sintaxe de Consulta Avançada (AQS). Se você não estiver familiarizado com o formato AQS, leia [Usando a Sintaxe de Consulta Avançada de forma programática](https://msdn.microsoft.com/library/windows/desktop/Bb266512).
 
-## Criando a cadeia de caracteres de filtro
+## <a name="building-the-filter-string"></a>Criando a cadeia de caracteres de filtro
 
 Há alguns casos em que você precisa enumerar dispositivos, e um seletor de dispositivo fornecido não está disponível para seu cenário. Um seletor de dispositivo é uma cadeia de caracteres de filtro AQS que contém as informações a seguir. Antes de criar uma cadeia de caracteres de filtro, você precisa saber algumas partes importantes de informações sobre os dispositivos que você deseja enumerar.
 
@@ -60,9 +67,9 @@ A tabela a seguir lista os operadores AQS e os tipos de parâmetros a que dão s
 
 > **Importante**  Ao usar os operadores **COP\_VALUE\_CONTAINS** e **COP\_VALUE\_NOTCONTAINS**, eles se comportam de forma diferente com cadeias de caracteres e matrizes de cadeia de caracteres. No caso de uma cadeia de caracteres, o sistema fará uma pesquisa sem diferenciação de maiúsculas de minúsculas para ver se o dispositivo contém a cadeia de caracteres indicada como uma subcadeia de caracteres. No caso de uma matriz de cadeia de caracteres, as subcadeias de caracteres não são pesquisadas. Com a matriz de cadeia de caracteres, a matriz é pesquisada para ver se ela contém a cadeia de caracteres especificada inteira. Não é possível pesquisar uma matriz de cadeia de caracteres para verificar se os elementos na matriz contém uma subcadeia de caracteres.
 
-Se você não puder criar uma cadeia de caracteres de filtro AQS única que analise seus resultados de forma apropriada, poderá filtrar os resultados depois de recebê-los. Entretanto, se você escolher fazer isso, recomendamos que limite os resultados da sua cadeia de caracteres de filtro AQS inicial o quanto puder quando a fornecer para as APIs [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459). Isso ajudará a melhorar o desempenho do seu aplicativo.
+Se você não puder criar uma cadeia de caracteres de filtro AQS única que analise seus resultados de forma apropriada, poderá filtrar os resultados depois de recebê-los. Entretanto, se você escolher fazer isso, recomendamos que limite os resultados da sua cadeia de caracteres de filtro AQS inicial o quanto puder quando a fornecer para as APIs [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459). Isso ajudará a melhorar o desempenho do seu app.
 
-## Exemplos de cadeia de caracteres AQS
+## <a name="aqs-string-examples"></a>Exemplos de cadeia de caracteres AQS
 
 Os exemplos a seguir demonstram como a sintaxe AQS pode ser usada para limitar dispositivos que você quer enumerar. Todas essas cadeias de caracteres de filtro são emparelhadas com um [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) para criar um filtro completo. Se nenhum tipo for especificado, lembre-se de que o tipo padrão é **DeviceInterface**.
 
@@ -70,7 +77,7 @@ Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msd
               ** é convertido para **COP\_EQUALS**.
 
 ``` syntax
-System.Devices.InterfaceClassGuid:="{2eef81be-33fa-4800-9670-1cd474972c3f}" AND 
+System.Devices.InterfaceClassGuid:="{2eef81be-33fa-4800-9670-1cd474972c3f}" AND
 System.Devices.InterfaceEnabled:=System.StructuredQueryType.Boolean#True
 ```
 
@@ -110,13 +117,4 @@ System.Devices.IpAddress:=[]
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

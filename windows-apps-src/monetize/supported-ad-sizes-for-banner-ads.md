@@ -1,22 +1,28 @@
 ---
 author: mcleanbyron
 ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
-description: "Saiba mais sobre os tamanhos de anúncios em banner com suporte."
-title: "Tamanhos aceitos de anúncios em banner"
+description: "Saiba mais sobre os tamanhos de anúncios em barra de notificação com suporte."
+title: "Tamanhos aceitos de anúncios em barra de notificação"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anúncios, publicidade, tamanhos, barra de notificação"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 488c47e7fd3ab55c51454e867d802d632a0b4df2
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0c0ae3dbb197b166993a71bad80a05b11c5d815f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Tamanhos aceitos de anúncios em banner
+# <a name="supported-ad-sizes-for-banner-ads"></a>Tamanhos aceitos de anúncios em barra de notificação
 
 
 
 O Microsoft Advertising dá suporte a anúncios nos seguintes tamanhos.
 
-## Windows 10 Mobile e Windows Phone 8.x
+## <a name="windows-10-mobile-and-windows-phone-8x"></a>Windows 10 Mobile e Windows Phone 8.x
 
 <table>
 <colgroup>
@@ -51,7 +57,7 @@ O Microsoft Advertising dá suporte a anúncios nos seguintes tamanhos.
 
  
 
-## Windows 10 (UWP) e Windows 8.1
+## <a name="windows-10-uwp-and-windows-81"></a>Windows 10 (UWP) e Windows 8.1
 
 <table>
 <colgroup>
@@ -89,9 +95,4 @@ O Microsoft Advertising dá suporte a anúncios nos seguintes tamanhos.
  
 
  
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

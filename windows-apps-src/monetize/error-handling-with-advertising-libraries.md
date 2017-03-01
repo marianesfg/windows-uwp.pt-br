@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: cb7380d0-bc14-4936-aa1c-206304b3dc70
 description: Saiba como manipular erros gerados pela classe AdControl nas bibliotecas do Microsoft Advertising.
 title: Tratamento de erros com as bibliotecas do Microsoft Advertising
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anúncios, publicidade, tratamento de erros, java script, XAML, c#"
 translationtype: Human Translation
-ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
-ms.openlocfilehash: 56df2b0f0a41d128f02aa5e2aa0ce11e6f6ca16a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f979a250872f19a54c6b638d44624ff2e1840c91
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -81,9 +88,4 @@ Consulte [Tratamento de erros no guia passo a passo XAML/C#](error-handling-in-x
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

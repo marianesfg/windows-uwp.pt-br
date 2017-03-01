@@ -1,18 +1,25 @@
 ---
 author: jnHs
-Description: "O relatório Críticas do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja."
+Description: "O relatório Avaliações no painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja."
 title: "Relatório de avaliações"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
-ms.openlocfilehash: b4667c5a3b2af76bc2ceea3013ffcf951909907a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 54666642e67581bebbb35049f7779086d23939a0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Relatório de avaliações
+# <a name="reviews-report"></a>Relatório de avaliações
 
 
-O relatório **Críticas** do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter avaliações de aplicativo](../monetize/get-app-reviews.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
+O relatório **Avaliações** no painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter avaliações de aplicativo](../monetize/get-app-reviews.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 > **Observação** Você também pode [responder às críticas dos clientes](respond-to-customer-reviews.md) nessa página.
 
@@ -33,7 +40,7 @@ Cada opinião do cliente contém:
 
 > **Observação** Às vezes, as revisões desaparecem desse relatório. Isso pode acontecer porque a Microsoft remove revisões da Loja escritas por clientes que executam determinadas compilações do Insider e pré-lançamento do Windows 10. Fazemos isso para reduzir a possibilidade de uma análise negativa causada por um problema em uma compilação de versão de pré-lançamento do Windows. Também podemos remover avaliações da Loja que foram identificadas como spam, inadequadas, ofensivas ou que tenham outras violações de política. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
 
-## Aplicar filtros
+## <a name="apply-filters"></a>Aplicar filtros
 
 
 Perto da parte superior da página, você pode expandir **Aplicar filtros** para filtrar todos os dados dessa página.
@@ -55,19 +62,19 @@ As informações em todos os gráficos listados a seguir refletirão o período 
 
 > **Observação**  A classificação média que um cliente vê na Loja leva em consideração o mercado e o tipo de dispositivo do cliente, além das classificações no ano anterior; portanto, ela pode ser diferente do que você vê nesse relatório. Para ver como a classificação média será exibida na Loja para um determinado cliente, você precisará aplicar filtros para selecionar um mercado e um tipo de dispositivo específicos e definir a **Data** como **Últimos 12 meses**.
 
-## Traduzindo críticas
+## <a name="translating-reviews"></a>Traduzindo críticas
 
 
 Por padrão, críticas que não foram escritas em seu idioma preferencial são traduzidas para você. Se você preferir, a tradução das críticas pode ser desabilitada, desmarcando-se a caixa de seleção **Traduzir análises** na parte superior direita, acima da lista de críticas.
 
 Observe que críticas são traduzidas por um sistema de tradução automática, e a tradução resultante pode não ser precisa. O texto original será fornecido, se você quiser compará-lo com a tradução, ou traduzi-lo por meio algum outro meio.
 
-## Revisões de classificação
+## <a name="sorting-reviews"></a>Revisões de classificação
 
 
 Você pode classificar as criticas na página por data e/ou por classificação, em ordem crescente ou decrescente. Clique no link **Classificar por** para exibir opções de classificação por data e/ou classificação. Quando você clicar em um botão de opção na seção Data ou Classificação, os critérios de classificação serão aplicados, e você verá o rótulo de classificação mostrado ao lado do título **Classificar por**. Você pode remover todos os critérios de classificação clicando no **X** exibido em cada rótulo.
 
-## Respondendo às críticas dos clientes
+## <a name="responding-to-customer-reviews"></a>Respondendo às críticas dos clientes
 
 Você pode usar o painel do Centro de Desenvolvimento da Windows Store para enviar respostas a muitas das críticas dos clientes. Para obter mais informações, consulte [Responder às críticas dos clientes](respond-to-customer-reviews.md)
 
@@ -82,9 +89,4 @@ Veja algumas ações adicionais que você pode realizar com base nas classifica�
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -2,13 +2,20 @@
 author: mcleblanc
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: "Visão geral da associação de dados"
-description: "Este tópico mostra como associar um controle (ou outro elemento da interface do usuário) a um único item ou um controle de itens a uma coleção de itens em um aplicativo da Plataforma Universal do Windows (UWP)."
+description: "Este tópico mostra como associar um controle (ou outro elemento da interface do usuário) a um único item ou associar um controle de itens a uma coleção de itens em um aplicativo da Plataforma Universal do Windows (UWP)."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e89580ef62d5d6ae095aa27628181181aaac9666
-ms.openlocfilehash: d452751fd4ab0cc422c3eae94507923440ec45df
+ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
+ms.openlocfilehash: 3abf2b7e9ff59099dafaa753f3a8ccf257dbc19a
+ms.lasthandoff: 01/19/2017
 
 ---
-Visão geral da vinculação de dados
+<a name="data-binding-overview"></a>Visão geral da associação de dados
 =====================
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -16,17 +23,17 @@ Visão geral da vinculação de dados
 
 Este tópico mostra como associar um controle (ou outro elemento da interface do usuário) a um único item ou um controle de itens a uma coleção de itens em um aplicativo UWP (Plataforma Universal do Windows). Este tópico também mostra como controlar a renderização de itens, implementar uma exibição de detalhes com base em uma seleção e converter dados para exibição. Para saber mais detalhes, consulte [Vinculação de dados em detalhes](data-binding-in-depth.md).
 
-Pré-requisitos
+<a name="prerequisites"></a>Pré-requisitos
 -------------------------------------------------------------------------------------------------------------
 
-Este tópico pressupõe que você saiba como criar um aplicativo UWP básico. Para obter instruções sobre como criar seu primeiro aplicativo UWP, consulte [Introdução aos aplicativos do Windows](https://developer.microsoft.com/en-us/windows/getstarted).
+Este tópico pressupõe que você saiba como criar um aplicativo UWP básico. Para obter instruções sobre como criar seu primeiro aplicativo UWP, consulte [Introdução aos aplicativos do Windows](https://developer.microsoft.com/windows/getstarted).
 
-Criar o projeto
+<a name="create-the-project"></a>Criar o projeto
 ---------------------------------------------------------------------------------------------------------------------------------
 
 Crie um novo projeto **Aplicativo em branco (universal do Windows)**. Nomeie-o como "Início rápido".
 
-Associação a um único item
+<a name="binding-to-a-single-item"></a>Associação a um único item
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Cada associação consiste em um destino da associação e uma origem de associação. Normalmente, o destino é uma propriedade de um controle ou outro elemento de interface do usuário, e a origem é uma propriedade de uma instância de classe (um modelo de dados ou um modelo de exibição). Este exemplo mostra como associar um controle a um único item. O destino é a propriedade **Text** de um **TextBlock**. A origem é uma instância de uma classe simples denominada **Recording** que representa uma gravação de áudio. Primeiro, vamos examinar a classe.
@@ -181,7 +188,7 @@ Consulte o resultado.
 
 ![Associando um bloco de texto](images/xaml-databinding0.png)
 
-Associação a uma coleção de itens
+<a name="binding-to-a-collection-of-items"></a>Associação a uma coleção de itens
 ------------------------------------------------------------------------------------------------------------------
 
 Um cenário comum é associar a uma coleção de objetos comerciais. No C# e no Visual Basic, a classe genérica [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) é uma boa escolha de coleção para a vinculação de dados, porque ela implementa as interfaces [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx) e [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx). Essas interfaces fornecem notificação de alteração para associações quando itens são adicionados ou removidos ou uma propriedade da lista muda. Se você quiser que os controles associados sejam atualizados com alterações em propriedades de objetos na coleção, o objeto comercial também deve implementar **INotifyPropertyChanged**. Para obter mais informações, consulte [Vinculação de dados em detalhes](data-binding-in-depth.md).
@@ -301,7 +308,7 @@ Para corrigir isso, podemos substituir [**ToString**](https://msdn.microsoft.com
 
 Para obter mais informações sobre a sintaxe XAML, consulte [Criar uma interface do usuário com XAML](https://msdn.microsoft.com/library/windows/apps/Mt228349). Para obter mais informações sobre o layout de controle, consulte [Definir layouts com XAML](https://msdn.microsoft.com/library/windows/apps/Mt228350).
 
-Adicionando uma visão de detalhes
+<a name="adding-a-details-view"></a>Adicionando uma visão de detalhes
 -----------------------------------------------------------------------------------------------------
 
 Você pode optar por exibir todos os detalhes dos objetos **Recording** nos itens [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878). Mas isso ocupa muito espaço. Em vez disso, você pode mostrar apenas dados suficientes no item para identificá-lo e, em seguida, quando o usuário fizer uma seleção, pode exibir todos os detalhes do item selecionado em um componente separado da interface do usuário conhecido como o modo de exibição de detalhes. Além disso, esse esquema também é conhecido como um modo de exibição mestre/detalhado, ou um modo de exibição de lista/detalhes.
@@ -375,7 +382,7 @@ E aqui está o resultado idêntico em cada caso.
 
 ![Associando um modo de exibição de lista](images/xaml-databinding4.png)
 
-Formatação ou conversão de valores de dados para exibição
+<a name="formatting-or-converting-data-values-for-display"></a>Formatação ou conversão de valores de dados para exibição
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 Há um pequeno problema com a renderização acima. A propriedade **ReleaseDateTime** não é apenas uma data, é um [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx), de forma que está sendo exibida com precisão maior do que precisamos. Uma solução é adicionar uma propriedade de string à classe **Recording** que retorna `this.ReleaseDateTime.ToString("d")`. Chamar essa propriedade **ReleaseDate** indica que ela retorna uma data, não uma data e hora. Chamar **ReleaseDateAsString** indica ainda mais que ela retorna uma string.
@@ -431,13 +438,8 @@ Consulte o resultado.
 ![exibindo uma data com formatação personalizada](images/xaml-databinding5.png)
 
 > [!NOTE]
-> A partir do Windows 10, versão 1607, a estrutura XAML fornece um booleano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **false** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um booleano sem criar um conversor. Para usar o conversor integrado, a versão do SDK de alvo mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir do Windows 10, versão 1607, a estrutura XAML fornece um booleano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **false** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um booliano sem criar um conversor. Para usar o conversor integrado, a versão do SDK de alvo mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Vinculação de dados](index.md)
-
-
-
-<!--HONumber=Sep16_HO1-->
-
 

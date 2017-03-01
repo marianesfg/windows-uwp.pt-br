@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: "Use os exemplos de código Java nesta seção para saber mais sobre como usar a API de envio da Windows Store."
 title: "Exemplos de código Java para a API de envio da Windows Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, API de envio da Windows Store, exemplos de código"
 translationtype: Human Translation
-ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
-ms.openlocfilehash: 7f7de7c7d9fa9131d38da48e13ce449f4440962d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9bf6885129176a75265d073c3f92b9f899bc265d
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -18,11 +25,11 @@ Estes exemplos de códigos demonstram as seguintes tarefas:
 * [Obter um token de acesso do Azure AD](#token)
 * [Criar um complemento](#create-add-on)
 * [Criar um pacote de pré-lançamento](#create-package-flight)
-* [Criar um envio de aplicativo](#create-app-submission)
+* [Criar um envio de app](#create-app-submission)
 * [Criar um envio de complemento](#create-add-on-submission)
 * [Criar um envio de pacote de pré-lançamento](#create-flight-submission)
 
-É possível examinar cada exemplo para saber mais sobre a tarefa que ele demonstra ou compilar todos os exemplos de código neste artigo em um aplicativo de console. Para a listagem de código completo, consulte a seção [listagem de códigos](java-code-examples-for-the-windows-store-submission-api.md#code-listing) no final deste artigo.
+É possível examinar cada exemplo para saber mais sobre a tarefa que ele demonstra ou compilar todos os exemplos de código neste artigo em um app de console. Para a listagem de código completo, consulte a seção [listagem de códigos](java-code-examples-for-the-windows-store-submission-api.md#code-listing) no final deste artigo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -48,7 +55,7 @@ O exemplo a seguir demonstra como [obter um token de acesso do Azure AD](create-
 <span id="create-add-on" />
 ## <a name="create-an-add-on"></a>Criar um complemento
 
-O exemplo a seguir demonstra como [criar](create-an-add-on.md) e depois [excluir](delete-an-add-on.md) um complemento (os complementos também são conhecidos como produtos no aplicativo ou IAPs).
+O exemplo a seguir demonstra como [criar](create-an-add-on.md) e depois [excluir](delete-an-add-on.md) um complemento (os complementos também são conhecidos como produtos no app ou IAPs).
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L310-L345)]
 
@@ -60,11 +67,11 @@ O exemplo a seguir demonstra como [criar](create-a-flight.md) e depois [excluir]
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L185-L221)]
 
 <span id="create-app-submission" />
-## <a name="create-an-app-submission"></a>Criar um envio de aplicativo
+## <a name="create-an-app-submission"></a>Criar um envio de app
 
-O exemplo a seguir mostra como usar diversos métodos na API de envio da Windows Store para criar um envio de aplicativo. Para isso, o método ```SubmitNewApplicationSubmission``` cria um novo envio como um clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```SubmitNewApplicationSubmission``` realiza estas tarefas:
+O exemplo a seguir mostra como usar diversos métodos na API de envio da Windows Store para criar um envio de app. Para isso, o método ```SubmitNewApplicationSubmission``` cria um novo envio como um clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```SubmitNewApplicationSubmission``` realiza estas tarefas:
 
-1. Para começar, o método [obtém dados do aplicativo especificado](get-an-app.md).
+1. Para começar, o método [obtém dados do app especificado](get-an-app.md).
 2. Em seguida, ele [exclui o envio pendente para o app](delete-an-app-submission.md), caso haja um.
 3. Em seguida, ele [cria um novo envio para o app](create-an-app-submission.md) (o novo envio é uma cópia do último envio publicado).
 4. Ele muda alguns detalhes para o novo envio e carrega um novo pacote para o envio no armazenamento do Blob do Azure.
@@ -106,7 +113,7 @@ O exemplo a seguir mostra como usar diversos métodos na API de envio da Windows
 
 Os seguintes métodos de utilitário demonstram estas tarefas:
 
-* Como carregar um arquivo ZIP contendo novos ativos para um envio de aplicativo ou complemento no armazenamento do Blob do Azure. Para obter mais informações sobre como carregar um arquivo ZIP no armazenamento do Blob do Azure para envios de aplicativo e complemento, consulte as instruções relevantes em [Criar um envio de aplicativo](manage-app-submissions.md#create-an-app-submission), [Criar um envio de complemento](manage-add-on-submissions.md#create-an-add-on-submission) e [Criar um envio de pacote de pré-lançamento](manage-flight-submissions.md#create-a-package-flight-submission).
+* Como carregar um arquivo ZIP contendo novos ativos para um envio de app ou complemento no armazenamento do Blob do Azure. Para obter mais informações sobre como carregar um arquivo ZIP no armazenamento do Blob do Azure para envios de app e complemento, consulte as instruções relevantes em [Criar um envio de app](manage-app-submissions.md#create-an-app-submission), [Criar um envio de complemento](manage-add-on-submissions.md#create-an-add-on-submission) e [Criar um envio de pacote de pré-lançamento](manage-flight-submissions.md#create-a-package-flight-submission).
 * Como manipular respostas à solicitação
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L433-L490)]
@@ -121,9 +128,4 @@ A listagem de código a seguir contém todos os exemplos anteriores organizados 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

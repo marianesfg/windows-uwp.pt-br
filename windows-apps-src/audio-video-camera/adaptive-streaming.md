@@ -1,34 +1,41 @@
 ---
 author: drewbatgit
 ms.assetid: AE98C22B-A071-4206-ABBB-C0F0FB7EF33C
-description: "Este artigo descreve como adicionar a reprodução de conteúdo multimídia de streaming adaptável ao aplicativo da Plataforma Universal do Windows (UWP). Atualmente, esse recurso oferece suporte à reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP)."
+description: "Este artigo descreve como adicionar a reprodução de conteúdo multimídia de streaming adaptável ao app da Plataforma Universal do Windows (UWP). Atualmente, esse recurso oferece suporte à reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP)."
 title: "Streaming adaptável"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d0941887ebc17f3665302fae6c7b0a124dfb5a0b
-ms.openlocfilehash: 431fa345c0135a08c1da68904a8d58d969490a8d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3afd0440d8e552ebc3459c5fe30dd766db3ae8b9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Streaming adaptável
+# <a name="adaptive-streaming"></a>Streaming adaptável
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este artigo descreve como adicionar a reprodução de conteúdo multimídia de streaming adaptável ao aplicativo da Plataforma Universal do Windows (UWP). Atualmente, esse recurso oferece suporte à reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP).
+Este artigo descreve como adicionar a reprodução de conteúdo multimídia de streaming adaptável ao app da Plataforma Universal do Windows (UWP). Atualmente, esse recurso oferece suporte à reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP).
 
 Para obter uma lista de marcas de protocolo HLS com suporte, consulte [Suporte à marca de HLS](hls-tag-support.md). 
 
 > [!NOTE] 
 > O código neste artigo foi adaptado da [Amostra de Streaming adaptável](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/AdaptiveStreaming) da UWP.
 
-## Streaming adaptável simples com MediaPlayer e MediaPlayerElement
+## <a name="simple-adaptive-streaming-with-mediaplayer-and-mediaplayerelement"></a>Streaming adaptável simples com MediaPlayer e MediaPlayerElement
 
-Para reproduzir mídia de streaming adaptável em um aplicativo UWP, crie um objeto **Uri** apontando para um arquivo de manifesto DASH ou HLS. Crie uma instância da classe do [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer). Chame [**MediaSource.CreateFromUri**](https://msdn.microsoft.com/library/windows/apps/dn930912) para criar um novo objeto **MediaSource** e, em seguida, defina-o como a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) do **MediaPlayer**. Chame [**Reproduzir**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play) para iniciar a reprodução do conteúdo de mídia.
+Para reproduzir mídia de streaming adaptável em um app UWP, crie um objeto **Uri** apontando para um arquivo de manifesto DASH ou HLS. Crie uma instância da classe do [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer). Chame [**MediaSource.CreateFromUri**](https://msdn.microsoft.com/library/windows/apps/dn930912) para criar um novo objeto **MediaSource** e, em seguida, defina-o como a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) do **MediaPlayer**. Chame [**Reproduzir**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play) para iniciar a reprodução do conteúdo de mídia.
 
 [!code-cs[DeclareMediaPlayer](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetDeclareMediaPlayer)]
 
 [!code-cs[ManifestSourceNoUI](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetManifestSourceNoUI)]
 
-O exemplo acima reproduzirá o áudio do conteúdo de mídia, mas ele não renderizará automaticamente o conteúdo na interface do usuário. A maioria dos aplicativos que reproduz conteúdo de vídeo deverá renderizar o conteúdo em uma página XAML.  Para fazer isso, adicione um controle [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) à página XAML.
+O exemplo acima reproduzirá o áudio do conteúdo de mídia, mas ele não renderizará automaticamente o conteúdo na interface do usuário. A maioria dos apps que reproduz conteúdo de vídeo deverá renderizar o conteúdo em uma página XAML.  Para fazer isso, adicione um controle [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) à página XAML.
 
 [!code-xml[MediaPlayerElementXAML](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml#SnippetMediaPlayerElementXAML)]
 
@@ -39,9 +46,9 @@ Chame [**MediaSource.CreateFromUri**](https://msdn.microsoft.com/library/windows
 > [!NOTE] 
 > A partir do Windows 10, versão 1607, é recomendável que você use a classe **MediaPlayer** para reproduzir itens de mídia. O **MediaPlayerElement** é um controle XAML leve que é usado para renderizar o conteúdo de um **MediaPlayer** em uma página XAML. O controle **MediaElement** continua a ser suportado para compatibilidade com versões anteriores. Para obter mais informações sobre como usar o **MediaPlayer** e o **MediaPlayerElement** para reproduzir conteúdo de mídia, consulte [Reproduzir áudio e vídeo com o MediaPlayer](play-audio-and-video-with-mediaplayer.md). Para obter informações sobre como usar o **MediaSource** e as APIs relacionadas para trabalhar com conteúdo de mídia, consulte [Itens de mídia, listas de reprodução e faixas](media-playback-with-mediasource.md).
 
-## Streaming adaptável com AdaptiveMediaSource
+## <a name="adaptive-streaming-with-adaptivemediasource"></a>Streaming adaptável com AdaptiveMediaSource
 
-Se o seu aplicativo exige recursos de streaming adaptável mais avançados, como o fornecimento de cabeçalhos em HTTP personalizados, monitoramento da taxa de bits atual de download e reprodução ou ajuste de índices que determinam quando o sistema mudar a taxa de bits do stream adaptável, use o objeto [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912).
+Se o seu app exige recursos de streaming adaptável mais avançados, como o fornecimento de cabeçalhos em HTTP personalizados, monitoramento da taxa de bits atual de download e reprodução ou ajuste de índices que determinam quando o sistema mudar a taxa de bits do stream adaptável, use o objeto [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912).
 
 As APIs de streaming adaptáveis são encontradas no namespace [**Windows.Media.Streaming.Adaptive**](https://msdn.microsoft.com/library/windows/apps/dn931279).
 
@@ -67,7 +74,7 @@ O objeto **AdaptiveMediaSource** fornece eventos que permitem que você reaja qu
 
 [!code-cs[AMSBitrateEvents](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetAMSBitrateEvents)]
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
 * [Suporte para a marca HLS](hls-tag-support.md) 
 * [Reproduzir áudio e vídeo com o MediaPlayer](play-audio-and-video-with-mediaplayer.md)
@@ -76,10 +83,5 @@ O objeto **AdaptiveMediaSource** fornece eventos que permitem que você reaja qu
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

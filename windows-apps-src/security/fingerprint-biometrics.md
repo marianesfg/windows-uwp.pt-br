@@ -3,13 +3,20 @@ title: "Biometria por impressão digital"
 description: "Este artigo explica como adicionar a biometria de impressão digital em seu aplicativo UWP (Plataforma Universal do Windows)."
 ms.assetid: 55483729-5F8A-401A-8072-3CD611DDFED2
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: d2dfbc6c69e8ee97a01bbf0d7ae82488ca62e3cb
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 84e191df23f10f81a3588662f9ba1505cee12e21
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Biometria por impressão digital
+# <a name="fingerprint-biometrics"></a>Biometria por impressão digital
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -17,7 +24,7 @@ ms.openlocfilehash: d2dfbc6c69e8ee97a01bbf0d7ae82488ca62e3cb
 
 Este artigo explica como adicionar a biometria de impressão digital em seu aplicativo UWP (Plataforma Universal do Windows). Incluir um pedido de autenticação por impressão digital quando o usuário precisar autorizar uma determinada ação aprimora a segurança do seu aplicativo. Por exemplo, você pode exigir autenticação por impressão digital antes de autorizar uma compra realizada em aplicativo ou acessar recursos restritos. A autenticação por impressão digital é gerenciada com o uso da classe [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134) no namespace [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356).
 
-## Verifique se o dispositivo tem um leitor de impressão digital
+## <a name="check-the-device-for-a-fingerprint-reader"></a>Verifique se o dispositivo tem um leitor de impressão digital
 
 
 Para saber se o dispositivo tem um leitor de impressão digital, chame [**UserConsentVerifier.CheckAvailabilityAsync**](https://msdn.microsoft.com/library/windows/apps/dn279138). Mesmo que um dispositivo dê suporte à autenticação por impressão digital, o aplicativo ainda deverá fornecer aos usuários uma opção nas Configurações para habilitá-la ou desabilitá-la.
@@ -64,7 +71,7 @@ public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
 }
 ```
 
-## Solicitar consentimento e retornar resultados
+## <a name="request-consent-and-return-results"></a>Solicitar consentimento e retornar resultados
 
 
 Para solicitar o consentimento do usuário a partir de uma digitalização de impressão digital, chame o método [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139). Para a autenticação por impressão digital funcionar, o usuário deve ter adicionado anteriormente uma "assinatura" de impressão digital ao banco de dados de impressões digitais.
@@ -123,8 +130,3 @@ private async System.Threading.Tasks.Task<string> RequestConsent(string userMess
     return returnMessage;
 }
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

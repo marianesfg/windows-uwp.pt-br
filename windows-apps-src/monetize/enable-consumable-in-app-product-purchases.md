@@ -3,10 +3,16 @@ author: mcleanbyron
 Description: "Ofereça produtos consumíveis no aplicativo&\\#8212;itens que podem ser comprados, usados e comprados novamente&\\#8212;por meio da plataforma de comércio da Loja e proporcione aos seus clientes uma experiência de compra robusta e confiável."
 title: "Habilitar compras de produtos consumíveis no aplicativo"
 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
-keywords: "exemplo de código de oferta no aplicativo"
+keywords: "uwp, consumíveis, complementos, compras no aplicativo, IAPs, Windows.ApplicationModel.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: acb7218bed287f430950d4f8d3621831b269ae18
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7395cf28f96b2f7aa9bc6a1d4c461385d50fcbf6
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -76,9 +82,4 @@ O exemplo a seguir demonstra como [GetUnfulfilledConsumablesAsync](https://msdn.
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

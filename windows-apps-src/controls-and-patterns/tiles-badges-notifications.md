@@ -5,12 +5,19 @@ title: "Blocos, selos e notificações"
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: dbc178f5df541e482f4a2e86c6662ead1992a1ce
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f8b063f45afadda50fa9ea091bf6cba71a25e8c1
+ms.lasthandoff: 02/07/2017
 
 ---
-# Blocos, selos e notificações para aplicativos UWP
+# <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Blocos, selos e notificações para aplicativos UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
@@ -27,7 +34,7 @@ Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo UWP
 <p>Uma <em>notificação por push</em> ou <em>notificação de dados brutos</em> é uma notificação enviada para seu aplicativo pelo Serviço de Notificação por Push do Windows (WNS) ou por uma tarefa em segundo plano. Seu aplicativo pode responder a essas notificações avisando o usuário que algo de interesse aconteceu (por meio de atualização de notificação, atualização de bloco ou notificação do sistema) ou de qualquer forma a sua escolha.</p>
 
  
-## Blocos 
+## <a name="tiles"></a>Blocos 
 <table>
 <colgroup>
 <col width="50%" />
@@ -63,7 +70,7 @@ Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo UWP
 </tbody>
 </table>
 
-## Notificações
+## <a name="notifications"></a>Notificações
 
 
 <table>
@@ -121,10 +128,5 @@ Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo UWP
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

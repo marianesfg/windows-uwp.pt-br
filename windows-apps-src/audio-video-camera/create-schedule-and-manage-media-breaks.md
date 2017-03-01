@@ -1,23 +1,30 @@
 ---
 author: drewbatgit
-ms.assetid: 
-description: "Este artigo mostra como criar, programar e gerenciar pausas de mídia para seu aplicativo de reprodução de mídia."
+ms.assetid: 0309c7a1-8e4c-4326-813a-cbd9f8b8300d
+description: "Este artigo mostra como criar, programar e gerenciar pausas de mídia para seu app de reprodução de mídia."
 title: "Criar, programar e gerenciar pausas de mídia"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2e969e53a29a98223f26353a5444ca9d9ebe2641
-ms.openlocfilehash: 0fe495f3eb2c15ccff4a672abd904dc43cfdf193
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 8d4e9a87009b50538adac2357badc0a7dfe8f88c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Criar, programar e gerenciar pausas de mídia
+# <a name="create-schedule-and-manage-media-breaks"></a>Criar, programar e gerenciar pausas de mídia
 
-Este artigo mostra como criar, programar e gerenciar pausas de mídia para seu aplicativo de reprodução de mídia. Quebras de mídia geralmente são usadas para inserir anúncios de áudio ou vídeos no conteúdo de mídia. A partir do Windows 10, versão 1607, você pode usar a classe [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) de forma rápida e fácil para adicionar quebras de mídia a qualquer [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) que você usar com um [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer).
+Este artigo mostra como criar, programar e gerenciar pausas de mídia para seu app de reprodução de mídia. Quebras de mídia geralmente são usadas para inserir anúncios de áudio ou vídeos no conteúdo de mídia. A partir do Windows 10, versão 1607, você pode usar a classe [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) de forma rápida e fácil para adicionar quebras de mídia a qualquer [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) que você usar com um [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer).
 
 
-Depois de programar uma ou mais interrupções de mídia, o sistema reproduzirá automaticamente seu conteúdo de mídia no horário especificado durante a reprodução. O **MediaBreakManager** fornece eventos para que seu aplicativo possa reagir quando as pausas de mídia começarem, terminarem ou quando forem ignoradas pelo usuário. Você também pode acessar uma [**MediaPlaybackSession** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) para que suas pausas de mídia monitorem eventos, como download e atualizações do andamento de buffer.
+Depois de programar uma ou mais interrupções de mídia, o sistema reproduzirá automaticamente seu conteúdo de mídia no horário especificado durante a reprodução. O **MediaBreakManager** fornece eventos para que seu app possa reagir quando as pausas de mídia começarem, terminarem ou quando forem ignoradas pelo usuário. Você também pode acessar uma [**MediaPlaybackSession** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) para que suas pausas de mídia monitorem eventos, como download e atualizações do andamento de buffer.
 
-## Programar pausas de mídia
-Cada objeto **MediaPlaybackItem** tem sua própria [**MediaBreakSchedule** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakSchedule) que você usa para configurar as pausas de mídia que serão executadas quando o item for reproduzido. A primeira etapa para usar pausas de mídia em seu aplicativo é criar um [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) para o conteúdo de reprodução principal. 
+## <a name="schedule-media-breaks"></a>Programar pausas de mídia
+Cada objeto **MediaPlaybackItem** tem sua própria [**MediaBreakSchedule** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakSchedule) que você usa para configurar as pausas de mídia que serão executadas quando o item for reproduzido. A primeira etapa para usar pausas de mídia em seu app é criar um [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) para o conteúdo de reprodução principal. 
 
 [!code-cs[MoviePlaybackItem](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetMoviePlaybackItem)]
 
@@ -25,7 +32,7 @@ Para obter mais informações sobre como trabalhar com **MediaPlaybackItem**, [*
 
 O próximo exemplo mostra como adicionar uma pausa de pré-rolagem ao **MediaPlaybackItem**, o que significa que o sistema reproduzirá a pausa de mídia antes de executar o item de reprodução ao qual pertence a pausa. Primeiro, um novo objeto [**MediaBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreak) é instanciado. Neste exemplo, o construtor é chamado com [**MediaBreakInsertionMethod.Interrupt**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakInsertionMethod), o que significa que o conteúdo principal será pausado enquanto o conteúdo da pausa for executado. 
 
-Em seguida, um novo **MediaPlaybackItem** é criado para o conteúdo que será executado durante a pausa, como um anúncio. A propriedade [**CanSkip**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.CanSkip) desse item de reprodução é definida como false. Isso significa que o usuário não poderá ignorar o item usando os controles de mídia integrada. Seu aplicativo ainda pode optar por ignorar a inclusão de maneira programática chamando [**SkipCurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.SkipCurrentBreak). 
+Em seguida, um novo **MediaPlaybackItem** é criado para o conteúdo que será executado durante a pausa, como um anúncio. A propriedade [**CanSkip**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.CanSkip) desse item de reprodução é definida como false. Isso significa que o usuário não poderá ignorar o item usando os controles de mídia integrada. Seu app ainda pode optar por ignorar a inclusão de maneira programática chamando [**SkipCurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.SkipCurrentBreak). 
 
 A propriedade [**PlaybackList** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreak.PlaybackList) da pausa de mídia é uma [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList) que permite reproduzir vários itens de mídia como uma playlist. Adicione um ou mais objetos **MediaPlaybackItem** da coleção de **itens** da lista para incluí-los na playlist da pausa de mídia.
 
@@ -45,18 +52,18 @@ Você também pode programar uma ou mais pausas de meio de rolagem que são exec
 
 [!code-cs[MidrollBreak](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetMidrollBreak)]
 
-O próximo exemplo de pausa de meio de rolagem mostrado usa o método de inserção [**MediaBreakInsertionMethod.Replace**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakInsertionMethod), o que significa que o sistema continuará a processar o conteúdo principal durante a reprodução da pausa. Essa opção é normalmente usada por aplicativos de mídia de streaming ao vivo, quando você não deseja que o conteúdo seja pausado e fique atrás do fluxo ao vivo enquanto o anúncio é reproduzido. 
+O próximo exemplo de pausa de meio de rolagem mostrado usa o método de inserção [**MediaBreakInsertionMethod.Replace**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakInsertionMethod), o que significa que o sistema continuará a processar o conteúdo principal durante a reprodução da pausa. Essa opção é normalmente usada por apps de mídia de streaming ao vivo, quando você não deseja que o conteúdo seja pausado e fique atrás do fluxo ao vivo enquanto o anúncio é reproduzido. 
 
 Este exemplo também utiliza uma sobrecarga do construtor [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) que aceita dois parâmetros [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.TimeSpan). O primeiro parâmetro especifica o ponto de partida no item de pausa de mídia em que a reprodução será iniciada. O segundo parâmetro especifica a duração em que a pausa de mídia será reproduzida. Portanto, no exemplo a seguir, a **MediaBreak** começará aos 20 minutos do conteúdo principal. Durante sua reprodução, o item de mídia começará 30 segundos após o início do item de pausa de mídia e será reproduzido por 15 segundos antes de o conteúdo de mídia principal retomar a reprodução.
 
 [!code-cs[MidrollBreak2](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetMidrollBreak2)]
 
-## Ignorar pausas de mídia
+## <a name="skip-media-breaks"></a>Ignorar pausas de mídia
 Como mencionado anteriormente neste artigo, a propriedade [**CanSkip**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.CanSkip) de um **MediaPlaybackItem** podem ser definido para impedir que o usuário ignore o conteúdo com os controles internos. No entanto, você pode chamar [**SkipCurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.SkipCurrentBreak) do seu código a qualquer momento para ignorar a pausa atual.
 
 [!code-cs[SkipButtonClick](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetSkipButtonClick)]
 
-## Tratar eventos de MediaBreak
+## <a name="handle-mediabreak-events"></a>Tratar eventos de MediaBreak
 
 Há vários eventos relacionados a pausas de mídia que você pode assinar para agir com base na alteração das estado das pausas.
 
@@ -80,13 +87,13 @@ O exemplo a seguir usa a propriedade [**Source**](https://msdn.microsoft.com/lib
 
 [!code-cs[BreakSeekedOver](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakSeekedOver)]
 
-## Obter informações sobre a pausa de mídia atual
+## <a name="get-information-about-the-current-media-break"></a>Obter informações sobre a pausa de mídia atual
 Conforme mencionado anteriormente neste artigo, a propriedade [**CurrentItemIndex**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.CurrentItemIndex) pode ser usada para determinar qual item em uma pausa de mídia está sendo reproduzido. É possível verificar periodicamente o item em execução no momento para atualizar sua interface do usuário. Não deixe de verificar se o valor da propriedade [**CurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.CurrentBreak) é nulo primeiro. Se a propriedade for nula, nenhuma pausa de mídia estará sendo reproduzida.
 
 [!code-cs[GetCurrentBreakItemIndex](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetGetCurrentBreakItemIndex)]
 
-## Acessar a sessão de reprodução atual
-O objeto [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) usa a classe **MediaPlayer** para fornecer dados e eventos relacionados ao conteúdo de mídia que está em execução no momento. O [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) também tem uma **MediaPlaybackSession** que você pode acessar para obter dados e eventos especificamente relacionados ao conteúdo da pausa de mídia que está em reprodução. As informações que você pode obter da sessão de reprodução incluem o estado atual da reprodução, em reprodução ou pausado, e a posição de reprodução atual no conteúdo. Você pode usar as propriedades [**NaturalVideoWidth**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoWidth) e [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoHeight) e o [**NaturalVideoSizeChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoSizeChanged) para ajustar sua interface do usuário de vídeo se o conteúdo da pausa de mídia tiver uma taxa de proporção diferente de seu conteúdo principal. Você também pode receber eventos como [**BufferingStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingStarted), [**BufferingEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingEnded) e [**DownloadProgressChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.DownloadProgressChanged) que podem fornecer dados de telemetria valiosos sobre o desempenho do seu aplicativo.
+## <a name="access-the-current-playback-session"></a>Acessar a sessão de reprodução atual
+O objeto [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) usa a classe **MediaPlayer** para fornecer dados e eventos relacionados ao conteúdo de mídia que está em execução no momento. O [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) também tem uma **MediaPlaybackSession** que você pode acessar para obter dados e eventos especificamente relacionados ao conteúdo da pausa de mídia que está em reprodução. As informações que você pode obter da sessão de reprodução incluem o estado atual da reprodução, em reprodução ou pausado, e a posição de reprodução atual no conteúdo. Você pode usar as propriedades [**NaturalVideoWidth**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoWidth) e [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoHeight) e o [**NaturalVideoSizeChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoSizeChanged) para ajustar sua interface do usuário de vídeo se o conteúdo da pausa de mídia tiver uma taxa de proporção diferente de seu conteúdo principal. Você também pode receber eventos como [**BufferingStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingStarted), [**BufferingEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingEnded) e [**DownloadProgressChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.DownloadProgressChanged) que podem fornecer dados de telemetria valiosos sobre o desempenho do seu app.
 
 O exemplo a seguir registra um manipulador para o **evento BufferingProgressChanged**; no manipulador de eventos, ele atualiza a interface do usuário para mostrar o andamento atual do buffer.
 
@@ -94,7 +101,7 @@ O exemplo a seguir registra um manipulador para o **evento BufferingProgressChan
 
 [!code-cs[BufferingProgressChanged](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBufferingProgressChanged)]
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
 * [Reproduzir áudio e vídeo com o MediaPlayer](play-audio-and-video-with-mediaplayer.md)
 * [Controle manual dos controles de transporte de mídia do sistema](system-media-transport-controls.md)
@@ -105,10 +112,5 @@ O exemplo a seguir registra um manipulador para o **evento BufferingProgressChan
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

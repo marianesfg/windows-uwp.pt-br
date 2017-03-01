@@ -3,29 +3,36 @@ author: mtoepke
 title: Carregar recursos no jogo em DirectX
 description: "A maioria dos jogos, em algum momento, carrega recursos e ativos (por exemplo, sombreadores, texturas, malhas predefinidas ou outros dados gráficos) do armazenamento local ou de algum outro fluxo de dados."
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, directx, carregamento de recursos
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 09221cb853b3d327b5cb60cacec109032135eabc
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 032cde6294093a2c0a1c582312b9353a146e94da
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Carregar recursos no jogo em DirectX
+# <a name="load-resources-in-your-directx-game"></a>Carregar recursos no jogo em DirectX
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A maioria dos jogos, em algum momento, carrega recursos e ativos (por exemplo, sombreadores, texturas, malhas predefinidas ou outros dados gráficos) do armazenamento local ou de algum outro fluxo de dados. Aqui, vamos examinar uma exibição de alto nível daquilo que é preciso considerar ao carregar esses arquivos para uso no jogo da UWP (Plataforma Universal do Windows).
 
 Por exemplo, é possível que as malhas para objetos poligonais do jogo tenham sido criadas com outra ferramenta e exportadas para um formato específico. O mesmo é verdadeiro para texturas e muito mais, por isso: embora um bitmap descompactado possa ser rotineiramente criado pela maioria das ferramentas e entendido por grande parte das APIs gráficas, esse bitmap pode ser extremamente ineficiente se usado no jogo. Nesta seção, vamos guiá-lo pelas etapas básicas do carregamento de três tipos diferentes de recursos gráficos para uso com o Direct3D: malhas (modelos), texturas (bitmaps) e objetos de sombreador compilados.
 
-## O que você precisa saber
+## <a name="what-you-need-to-know"></a>O que você precisa saber
 
 
-### Tecnologias
+### <a name="technologies"></a>Tecnologias
 
 -   Padrão PPL (ppltasks.h)
 
-### Pré-requisitos
+### <a name="prerequisites"></a>Pré-requisitos
 
 -   Entender os princípios básicos do Windows Runtime
 -   Entender tarefas assíncronas
@@ -68,9 +75,9 @@ O código completo desses exemplos pode ser encontrado nos seguintes links.
 
  
 
-## Instruções
+## <a name="instructions"></a>Instruções
 
-### Carregamento assíncrono
+### <a name="asynchronous-loading"></a>Carregamento assíncrono
 
 O carregamento assíncrono é feito com o modelo **task** do padrão PPL. A **task** contém uma chamada de método seguida por um lambda que processa os resultados da chamada assíncrona depois de concluída e, normalmente, segue o formato de:
 
@@ -194,11 +201,11 @@ Você viu como carregar arquivos de recursos de maneira assíncrona. Os carregam
 
 Claro!, diferentes tipos de recursos e ativos geralmente exigem processamento adicional ou conversão antes de estarem prontos para uso no seu pipeline gráfico. Vamos examinar três tipos específicos de recursos: malhas, texturas e sombreadores.
 
-### Carregando malhas
+### <a name="loading-meshes"></a>Carregando malhas
 
-Malhas são dados de vértice, gerados via procedimentos pelo código no jogo ou exportados de um arquivo de outro aplicativo (como 3DStudio MAX ou Alias WaveFront) ou ferramenta. Essas malhas representam os modelos do jogo, desde primitivos simples, como cubos e esferas, até carros e casas e caracteres. Elas geralmente contêm dados de cor e animação, dependendo do formato. Vamos nos concentrar nas malhas que contêm apenas dados de vértice.
+Malhas são dados de vértice, gerados via procedimentos pelo código no jogo ou exportados de um arquivo de outro app (como 3DStudio MAX ou Alias WaveFront) ou ferramenta. Essas malhas representam os modelos do jogo, desde primitivos simples, como cubos e esferas, até carros e casas e caracteres. Elas geralmente contêm dados de cor e animação, dependendo do formato. Vamos nos concentrar nas malhas que contêm apenas dados de vértice.
 
-Para carregar corretamente uma malha, é preciso conhecer o formato dos dados no arquivo da malha. Nosso tipo simples **BasicReaderWriter**, acima, lê os dados como um fluxo de bytes; ele não sabe que os dados de bytes representam uma malha, muito menos que um formato de malha específico foi exportado por outro aplicativo. Você precisa executar a conversão quando traz os dados de malha para a memória.
+Para carregar corretamente uma malha, é preciso conhecer o formato dos dados no arquivo da malha. Nosso tipo simples **BasicReaderWriter**, acima, lê os dados como um fluxo de bytes; ele não sabe que os dados de bytes representam uma malha, muito menos que um formato de malha específico foi exportado por outro app. Você precisa executar a conversão quando traz os dados de malha para a memória.
 
 (Tente sempre empacotar dados de ativos em um formato o mais próximo possível da representação interna. Fazendo assim, você reduzirá a utilização de recursos e economizará tempo.)
 
@@ -303,7 +310,7 @@ Enfatizando mais uma vez: conheça o formato dos seus dados de vértice. Há in�
 
 A seguir, vamos examinar o carregamento de texturas.
 
-### Carregando texturas
+### <a name="loading-textures"></a>Carregando texturas
 
 O ativo mais comum de um jogo, e aquele que abrange a maioria dos arquivos em disco e memória, são as texturas. Assim como as malhas, as texturas podem vir em vários formatos; então, você os converte em um formato que o Direct3D possa usar quando carregá-las. Texturas também têm uma grande variedade de tipos e são usadas para criar efeitos distintos. Os níveis MIP de texturas podem ser usados para melhorar a aparência e o desempenho de objetos de distância; mapas de entulho e luzes são usados para efeitos de camada e detalhes sobre a textura base; e mapas normais são usados em cálculos de iluminação por pixel. Em um jogo moderno, um cenário típico pode ter milhares de texturas individuais e o seu código deve efetivamente gerenciar todas elas.
 
@@ -514,7 +521,7 @@ Após a conclusão do código, a [**Texture2D**](https://msdn.microsoft.com/libr
 
 Além disso, cada textura ou as "aparências" de textura podem ser mapeadas para polígonos de malha ou superfícies específicas. Esses dados de mapeamento geralmente são exportados pela ferramenta, artista ou designer utilizado para criar o modelo e as texturas. Lembre-se de capturar também essas informações ao carregar os dados exportados, pois você as usará para mapear as texturas corretas para as superfícies correspondentes, quando executar o sombreamento de fragmento.
 
-### Carregando sombreadores
+### <a name="loading-shaders"></a>Carregando sombreadores
 
 Sombreadores são arquivos HLSL (High Level Shader Language), que são carregados na memória e invocados em estágios específicos do pipeline gráfico. Os sombreadores mais comuns e essenciais são os sombreadores de vértices e pixels, os quais processam cada vértice da malha e os pixels do(s) visor(es) do cenário, respectivamente. O código HLSL é executado para transformar a geometria, aplicar efeitos de luz e texturas e para executar pós-processamento no cenário renderizado.
 
@@ -689,11 +696,11 @@ Nesse código, depois de ter lido os dados de bytes do arquivo CSO do sombreador
 
 Outros tipos de sombreador, como sombreadores de envoltório e geometria, também podem exigir configuração específica. O código completo para vários métodos de carregamento de sombreador é fornecido em [Concluir código para BasicLoader](complete-code-for-basicloader.md) e no [exemplo de carregamento de recursos do Direct3D]( http://go.microsoft.com/fwlink/p/?LinkID=265132).
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Nesse ponto, você deverá estar apto a entender e criar ou modificar métodos de carregamento assíncrono de recursos e ativos comuns de jogos, como malhas, texturas e sombreadores compilados.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplo de carregamento de recursos do Direct3D]( http://go.microsoft.com/fwlink/p/?LinkID=265132)
 * [Concluir código para BasicLoader](complete-code-for-basicloader.md)
@@ -706,10 +713,5 @@ Nesse ponto, você deverá estar apto a entender e criar ou modificar métodos d
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

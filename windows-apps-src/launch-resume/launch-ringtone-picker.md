@@ -1,14 +1,22 @@
 ---
 author: TylerMSFT
 title: Esquema ms-tonepicker
-description: "Este tópico descreve o esquema de URI ms-tonepicker e como usá-lo para exibir um seletor de tom para selecionar um tom, salvar um tom e obter o nome amigável para um tom."
+description: "Este tópico descreve o esquema de URI ms-tonepicker e como usá-lo para exibir um seletor de tom para selecionar e salvar um tom e obter o nome amigável para ele."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
 translationtype: Human Translation
-ms.sourcegitcommit: 4c7037cc91603af97a64285fd6610445de0523d6
-ms.openlocfilehash: ef605f9d749148240ecee5e0ecfd473f8440ca25
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: bc3a34d16f8245ef2e932c46e76ce965ce8755b7
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Escolher e salvar tons usando o esquema de URI ms-tonepicker
+# <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>Escolher e salvar tons usando o esquema de URI ms-tonepicker
 
 Este tópico descreve como usar o esquema de URI **ms-tonepicker:**. Esse esquema de URI pode ser usado para:
 - Determinar se o seletor de tom está disponível no dispositivo.
@@ -16,13 +24,13 @@ Este tópico descreve como usar o esquema de URI **ms-tonepicker:**. Esse esquem
 - Exibir o protetor de tom, que usa um token de arquivo de som como entrada e salva-o no dispositivo. Os tons salvos estão disponíveis por meio do seletor de tom. Os usuários também podem dar um nome amigável ao tom.
 - Converta um token de tom em seu nome amigável.
 
-## Referência de esquema de URI ms-tonepicker:
+## <a name="ms-tonepicker-uri-scheme-reference"></a>Referência de esquema de URI ms-tonepicker:
 
 Esse esquema de URI não passa argumentos via cadeia de caracteres de esquema URI, mas passa argumentos por meio de um [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx). Todas as cadeias de caracteres diferenciam maiúsculas de minúsculas.
 
 As seções a seguir indicam quais argumentos devem ser transmitidos para realizar a tarefa especificada.
 
-## Tarefa: determinar se o seletor de tom está disponível no dispositivo
+## <a name="task-determine-if-the-tone-picker-is-available-on-the-device"></a>Tarefa: determinar se o seletor de tom está disponível no dispositivo
 ```cs
 var status = await Launcher.QueryUriSupportAsync(new Uri("ms-tonepicker:"),     
                                      LaunchQuerySupportType.UriForResults,
@@ -34,7 +42,7 @@ if (status != LaunchQuerySupportStatus.Available)
 }
 ```
 
-## Tarefa: exibir o seletor de tom
+## <a name="task-display-the-tone-picker"></a>Tarefa: exibir o seletor de tom
 
 Os argumentos que você pode passar para exibir o seletor de tom são os seguintes:
 
@@ -44,7 +52,7 @@ Os argumentos que você pode passar para exibir o seletor de tom são os seguint
 | CurrentToneFilePath | string | não | Um token de tom existente. | O tom a ser exibido como o tom atual no seletor de tom. Se esse valor não for definido, o tom primeiro na lista será selecionado por padrão.<br>Não, estritamente falando, isso é um caminho de arquivo. Você pode obter um valor adequado para `CurrenttoneFilePath` do valor `ToneToken` retornado do seletor de tom.  |
 | TypeFilter | string | não | "Toques", "Notificações", "Alarmes", "None" | Seleciona quais tons serão adicionados ao seletor. Se nenhum filtro for especificado, todos os tons serão exibidos. |
 
-<br>Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
+<br>Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
 
 | Valores de retorno | Tipo | Valores possíveis | Descrição |
 |--------------|------|-------|-------------|
@@ -80,7 +88,7 @@ if (result.Status == LaunchUriStatus.Success)
 }
 ```
 
-## Tarefa: exibir o protetor de tom
+## <a name="task-display-the-tone-saver"></a>Tarefa: exibir o protetor de tom
 
 Os argumentos que você pode passar para exibir o protetor de tom são os seguintes:
 
@@ -90,7 +98,7 @@ Os argumentos que você pode passar para exibir o protetor de tom são os seguin
 | ToneFileSharingToken | string | sim | Token de compartilhamento de arquivo [SharedStorageAccessManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.aspx) para o arquivo de toque a ser salvo. | Salva um arquivo de som específico como um toque. Os tipos de conteúdo com suporte para o arquivo são áudio mpeg e áudio x-ms-wma. |
 | DisplayName | string | não | Nome amigável do tom especificado. | Define o nome de exibição a ser usado ao salvar o toque especificado. |
 
-<br>Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
+<br>Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
 
 | Valores de retorno | Tipo | Valores possíveis | Descrição |
 |--------------|------|-------|-------------|
@@ -144,7 +152,7 @@ if (result.Status == LaunchUriStatus.Success)
  }
 ```
 
-## Tarefa: converter um token de tom em seu nome amigável
+## <a name="task-convert-a-tone-token-to-its-friendly-name"></a>Tarefa: converter um token de tom em seu nome amigável
 
 Os argumentos que você pode passar para obter o nome amigável de um tom são os seguintes:
 
@@ -153,7 +161,7 @@ Os argumentos que você pode passar para obter o nome amigável de um tom são o
 | Ação | string | sim | "GetToneName" | Indica que você deseja obter o nome amigável de um tom. |
 | ToneToken | string | sim | O token de tom | O token de tom de onde obter um nome de exibição. |
 
-<br>Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
+<br>Valores que são retornados em [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx):
 
 | Valor de retorno | Tipo | Valores possíveis | Descrição |
 |--------------|------|-------|-------------|
@@ -194,9 +202,4 @@ using (var connection = new AppServiceConnection())
     }
 }
 ```
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

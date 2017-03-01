@@ -1,26 +1,33 @@
 ---
 author: mtoepke
 title: Criar recursos de dispositivo de buffer de profundidade
-description: "Aprenda a criar recursos de dispositivos Direct3D necessários ao suporte de testes e profundidade para volumes de sombra."
+description: "Aprenda a criar recursos de dispositivos Direct3D necessários para dar suporte a testes de profundidade para volumes de sombra."
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, direct3d, buffer de profundidade
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 85fb020e7d476d3b2095875376903c5e28f08d94
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 87e4248545288f4725e0cf0b104a75f1925ad3a3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Criar recursos de dispositivo de buffer de profundidade
+# <a name="create-depth-buffer-device-resources"></a>Criar recursos de dispositivo de buffer de profundidade
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Aprenda a criar recursos de dispositivos Direct3D necessários ao suporte de testes e profundidade para volumes de sombra. Parte 1 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Aprenda a criar recursos de dispositivos Direct3D necessários para dar suporte a testes de profundidade para volumes de sombra. Parte 1 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
-## Recursos necessários
+## <a name="resources-youll-need"></a>Recursos necessários
 
 
-Para renderizar um mapa de profundidade para volumes de sombra, são necessários os seguintes recursos, dependentes de dispositivos Direct3D:
+Para renderizar um mapa de profundidade para volumes de sombra, são obrigatórios os seguintes recursos, dependentes de dispositivos Direct3D:
 
 -   Um recurso (buffer) para o mapa de profundidade
 -   Uma exibição de estêncil de profundidade e uma exibição de recurso de sombreador para o recurso
@@ -30,9 +37,9 @@ Para renderizar um mapa de profundidade para volumes de sombra, são necessário
 -   Um objeto de estado de renderização para habilitar o conjunto de face frontal
 -   Você também precisará de um objeto de estado de renderização para voltar ao conjunto de face traseira, caso ainda não use um.
 
-Observe que a criação desses recursos deve se incluída em uma rotina de criação de recursos dependentes de dispositivos. Desse modo, seu renderizador poderá recriá-los quando um novo driver de dispositivo for instalado ou o usuário mover o aplicativo para um monitor conectado a uma placa gráfica diferente, apenas para citar alguns exemplos.
+Observe que a criação desses recursos deve se incluída em uma rotina de criação de recursos dependentes de dispositivos. Desse modo, seu renderizador poderá recriá-los quando um novo driver de dispositivo for instalado ou o usuário mover o app para um monitor conectado a uma placa gráfica diferente, apenas para citar alguns exemplos.
 
-## Verificar o suporte ao recurso
+## <a name="check-feature-support"></a>Verificar o suporte ao recurso
 
 
 Antes de criar o mapa de profundidade, chame o método [**CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) no dispositivo Direct3D, solicite **D3D11\_FEATURE\_D3D9\_SHADOW\_SUPPORT** e forneça uma estrutura [**D3D11\_FEATURE\_DATA\_D3D9\_SHADOW\_SUPPORT**](https://msdn.microsoft.com/library/windows/desktop/jj247569).
@@ -54,7 +61,7 @@ if (isD3D9ShadowSupported.SupportsDepthAsTextureWithLessEqualComparisonFilter)
 
 Senão houver suporte para esse recurso, não tente carregar sombreadores compilados para o modelo de sombreador 4 de nível 9\_x que chama exemplos de funções de comparação. Em muitos casos, a falta de suporte a esse recurso significa que a GPU é um dispositivo herdado com um driver que não está atualizado para dar suporte a pelo menos o WDDM 1.2. Quando o dispositivo dá suporte a pelo menos o nível de recurso 10\_0, você pode carregar um exemplo de sombreador de comparação compilado para o modelo de sombreador 4\_0.
 
-## Criar o buffer de profundidade
+## <a name="create-depth-buffer"></a>Criar o buffer de profundidade
 
 
 Primeiro, tente criar o mapa de profundidade com um formato de profundidade de precisão maior. Inicialmente, configure as propriedades de exibição do recurso de sombreador correspondente. Caso ocorra uma falha na criação do recurso (por exemplo, devido à baixa memória do dispositivo ou à incompatibilidade do formato com o hardware), tente um formato de precisão mais baixa e altere as propriedades para que haja correspondência.
@@ -107,7 +114,7 @@ hr = pD3DDevice->CreateShaderResourceView(
     );
 ```
 
-## Criar estado de comparação
+## <a name="create-comparison-state"></a>Criar estado de comparação
 
 
 Agora crie o objeto de estado de amostra da comparação. O nível de recurso 9\_1 só dá suporte a D3D11\_COMPARISON\_LESS\_EQUAL. As opções de filtragem são explicadas com mais detalhes no tópico sobre [suporte a mapas de sombra em diversos hardwares](target-a-range-of-hardware.md), mas você pode simplesmente escolher a filtragem por pontos para obter mapas de sombra mais rápidos.
@@ -146,7 +153,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-## Criar estados de renderização.
+## <a name="create-render-states"></a>Criar estados de renderização.
 
 
 Agora crie um estado de renderização que você possa usar para habilitar o conjunto de face frontal. Não se esqueça de que os dispositivos com nível de recursos 9\_1 precisam de **DepthClipEnable** definido como **true**.
@@ -182,7 +189,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-## Criar buffers constantes
+## <a name="create-constant-buffers"></a>Criar buffers constantes
 
 
 Não se esqueça de criar um buffer constante para realizar a renderização do ponto de vista da luz. Você também pode usar esse buffer constante para especificar a posição da luz ao sombreador. Use uma matriz de perspectiva para pontos iluminados e matriz ortogonal para fachos de luz, como raios de sol.
@@ -239,7 +246,7 @@ context->UpdateSubresource(
     );
 ```
 
-## Criar um visor
+## <a name="create-a-viewport"></a>Criar um visor
 
 
 Você precisa de um visor separado para renderizar o mapa de sombra. O visor não é um recurso baseado em dispositivo; você pode criá-lo em qualquer parte do código. A criação do visor com o mapa de sombra pode ajudar a tornar a dimensão do visor mais congruente com a dimensão do mapa de sombra.
@@ -261,10 +268,5 @@ Na próxima parte deste guia passo a passo, veremos como criar o mapa de sombra 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

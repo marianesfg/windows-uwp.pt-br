@@ -3,9 +3,16 @@ author: mcleblanc
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Visão geral do Windows Device Portal"
 description: "Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo remotamente por uma rede ou conexão USB."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: 6c697782683bca6671c01aa0941a78bc66fb052a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8dfbdad7604e3aa7fad60ed777d16b4acd56b5ab
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="windows-device-portal-overview"></a>Visão geral do Windows Device Portal
@@ -73,21 +80,21 @@ Fornece funcionalidade de gerenciamento e de instalação/desinstalação para p
 
 **Para instalar um aplicativo**
 
-1.  Quando tiver [criado um pacote do aplicativo](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), você poderá instalá-lo remotamente em seu dispositivo. Após a compilação no Visual Studio, uma pasta de saída será gerada.
+1.    Quando tiver [criado um pacote do aplicativo](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), você poderá instalá-lo remotamente em seu dispositivo. Após a compilação no Visual Studio, uma pasta de saída será gerada.
 
     ![Instalação de aplicativos](images/device-portal/iot-installapp0.png)
-2.  Clique em Procurar e localize o pacote do aplicativo (.appx).
-3.  Clique em Procurar e localize o arquivo de certificado (.cer). (Não é necessário em todos os dispositivos.)
-4.  Adicione dependências. Se você tiver mais de uma, adicione cada uma delas individualmente.     
-5.  Em **Implantar**, clique em **Ir**. 
-6.  Para instalar outro aplicativo, clique no botão **Redefinir** para limpar os campos..
+2.    Clique em Procurar e localize o pacote do aplicativo (.appx).
+3.    Clique em Procurar e localize o arquivo de certificado (.cer). (Não é necessário em todos os dispositivos.)
+4.    Adicione dependências. Se você tiver mais de uma, adicione cada uma delas individualmente.     
+5.    Em **Implantar**, clique em **Ir**. 
+6.    Para instalar outro aplicativo, clique no botão **Redefinir** para limpar os campos..
 
 
 **Para desinstalar um aplicativo**
 
-1.  Certifique-se de que seu aplicativo não esteja em execução. 
-2.  Se estiver, vá para 'aplicativos em execução' e feche-o. Se você tentar desinstalar enquanto o aplicativo estiver em execução, isso causará problemas ao tentar instalar o aplicativo novamente. 
-3.  Assim que estiver pronto, clique em **Desinstalar**.
+1.    Certifique-se de que seu aplicativo não esteja em execução. 
+2.    Se estiver, vá para 'aplicativos em execução' e feche-o. Se você tentar desinstalar enquanto o aplicativo estiver em execução, isso causará problemas ao tentar instalar o aplicativo novamente. 
+3.    Assim que estiver pronto, clique em **Desinstalar**.
 
 ### <a name="processes"></a>Processos
 
@@ -197,9 +204,4 @@ Para proteger-se contra [ataques CSRF](https://wikipedia.org/wiki/Cross-site_req
 #### <a name="cross-site-websocket-hijacking-cswsh-protection"></a>Proteção de Cross-Site WebSocket Hijacking (CSWSH)
 
 Para se proteger contra [ataques CSWSH](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html), todos os clientes que abrem uma conexão WebSocket com o Device Portal também devem fornecer um cabeçalho Origin que corresponda ao cabeçalho Host.  Isso prova para o Device Portal que a solicitação vem da interface do usuário do Device Portal ou um aplicativo cliente válido.  Sem o cabeçalho Origin, sua solicitação será rejeitada. 
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

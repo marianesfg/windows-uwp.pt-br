@@ -3,9 +3,16 @@ author: mcleblanc
 description: "Os aplicativos do Windows compartilham uma aparência comum em computadores, dispositivos móveis e muitos outros tipos de dispositivos. Os padrões da interface do usuário, de entrada e de interação são muito semelhantes, e um usuário que alterne entre dispositivos ficará contente com a experiência familiar."
 title: "Portabilidade do Windows Phone Silverlight para UWP para fator forma e experiência do usuário"
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 71e762410b1c7dbf416e3bb81310d74115938102
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 301f1b55644842225f1b8d040d5b02a035d1940b
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -68,10 +75,5 @@ Consulte novamente a lista [maximizando a reutilização de marcação e de cód
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Mapeamentos de namespace e de classe](wpsl-to-uwp-namespace-and-class-mappings.md)
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

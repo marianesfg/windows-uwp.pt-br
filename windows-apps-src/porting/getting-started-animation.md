@@ -3,17 +3,24 @@ author: mcleblanc
 title: "Introdução a animações"
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: "Neste projeto, vamos mover um retângulo, aplicar um efeito de esmaecimento e trazê-lo de volta à visualização."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: ae08bb25d8ac56ca6e03a5c200e8a0d4e05fbfe3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9dcf81c0c0aee42d6278a3e1eeccc6dd4da61010
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introdução: Animação
+# <a name="getting-started-animation"></a>Introdução: animação
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Adicionando animações
+## <a name="adding-animations"></a>Adicionando animações
 
 No iOS, a maioria dos efeitos de animação são criados de forma programática. Por exemplo, você pode usar as animações fornecidas pelos métodos baseados em blocos **animateWithDuration** da classe **UIView** ou os métodos mais antigos, não baseados em blocos. Você também pode usar explicitamente a classe **CALayer** para animar camadas. As animações nos aplicativos do Windows podem ser criadas de forma programática, mas elas também podem ser definidas declarativamente com Extensible Application Markup Language (XAML). Você pode usar o Microsoft Visual Studio para editar o código XAML diretamente, mas o Visual Studio também vem com uma ferramenta chamada **Blend**, que cria o código XAML para você enquanto você trabalha com animações em um designer. Na realidade, o Blend permite que você abra, crie, compile e execute projetos completos do Visual Studio, graficamente. O tutorial a seguir permite experimentar.
 
@@ -125,12 +132,7 @@ Você pode editar esse XAML manualmente ou retornar ao Blend para continuar a tr
 
 **Observação**  Para obter informações sobre animações para aplicativos da Windows Store que usam JavaScript e HTML, consulte [Animating your UI (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
 
-### Próxima etapa
+### <a name="next-step"></a>Próxima etapa
 
 [Introdução: o que vem depois?](getting-started-what-next.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

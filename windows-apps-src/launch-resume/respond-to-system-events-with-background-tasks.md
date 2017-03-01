@@ -3,15 +3,22 @@ author: TylerMSFT
 title: Responder a eventos do sistema com tarefas em segundo plano
 description: Saiba como criar uma tarefa em segundo plano que responda a eventos de SystemTrigger.
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: 1774b853839e65fd08acb9eb8f9cbb1735cd9bee
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 797ee8930a01f9934692067139a3fd5321ae36df
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="respond-to-system-events-with-background-tasks"></a>Responder a eventos do sistema com tarefas em segundo plano
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs importantes**
 
@@ -21,11 +28,11 @@ ms.openlocfilehash: 1774b853839e65fd08acb9eb8f9cbb1735cd9bee
 
 Saiba como criar uma tarefa em segundo plano que responde a eventos de [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano criada para o aplicativo e que essa tarefa precise ser executada em resposta a um evento acionado pelo sistema, como quando a disponibilidade da Internet muda ou o logon do usuário. Este tópico se concentra na classe [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839). Mais informações sobre como escrever uma classe de tarefa em segundo plano estão disponíveis em [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou em [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md).
+Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano criada para o app e que essa tarefa precise ser executada em resposta a um evento acionado pelo sistema, como quando a disponibilidade da Internet muda ou o logon do usuário. Este tópico se concentra na classe [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839). Mais informações sobre como escrever uma classe de tarefa em segundo plano estão disponíveis em [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou em [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md).
 
 ## <a name="create-a-systemtrigger-object"></a>Crie um objeto SystemTrigger
 
--   No código do seu aplicativo, crie um novo objeto [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838). O primeiro parâmetro, *triggerType*, especifica o tipo de gatilho de evento do sistema que ativará esta tarefa em segundo plano. Para obter uma lista dos tipos de evento, consulte [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839).
+-   No código do seu app, crie um novo objeto [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838). O primeiro parâmetro, *triggerType*, especifica o tipo de gatilho de evento do sistema que ativará esta tarefa em segundo plano. Para obter uma lista dos tipos de evento, consulte [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
     O segundo parâmetro, *OneShot*, especifica se a tarefa em segundo plano só será executada uma única vez na próxima vez em que o evento do sistema ocorrer ou sempre que o evento do sistema ocorrer, até que o registro da tarefa seja cancelado.
 
@@ -43,7 +50,7 @@ Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano cr
 
 -   Registre a tarefa em segundo plano chamando sua função de registro da tarefa em segundo plano. Para obter mais informações sobre como registrar tarefas em segundo plano, consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md).
 
-    O código a seguir registra a tarefa em segundo plano para um processo em segundo plano executado em um processo à parte. Se você tivesse chamando uma tarefa em segundo plano executada no mesmo processo como o aplicativo de host, você não definiria `entrypoint`:
+    O código a seguir registra a tarefa em segundo plano para um processo em segundo plano executado em um processo à parte. Se você tivesse chamando uma tarefa em segundo plano executada no mesmo processo como o app de host, você não definiria `entrypoint`:
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -59,21 +66,21 @@ Este tópico pressupõe que você tenha uma classe de tarefa em segundo plano cr
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
     > ```
 
-    > **Observação**  Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
+    > **Observação**  Os aplicativos universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
 
-    Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
+    Para garantir que seu aplicativo universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu app for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
-    > **Observações**  Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
+    > **Observações**  Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o app manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o app depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
  
 ## <a name="remarks"></a>Comentários
 
 Para ver o registro da tarefa em segundo plano em ação, baixe a [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
 
-Tarefas em segundo plano podem ser executadas em resposta aos eventos de [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) e [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) sem entrar na tela de bloqueio, mas ainda será necessário [declarar as tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md). Você também deve chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de tarefa em segundo plano.
+Tarefas em segundo plano podem ser executadas em resposta aos eventos de [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) e [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) sem entrar na tela de bloqueio, mas ainda será necessário [declarar as tarefas em segundo plano no manifesto do app](declare-background-tasks-in-the-application-manifest.md). Você também deve chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de tarefa em segundo plano.
 
-Os aplicativos com recurso de tela de bloqueio podem registrar tarefas em segundo plano que respondem aos eventos de [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) e [**NetworkOperatorNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/br224831), permitindo que forneçam comunicação em tempo real com o usuário, mesmo quando o aplicativo não está em primeiro plano. Para obter mais informações, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
+Os apps com recurso de tela de bloqueio podem registrar tarefas em segundo plano que respondem aos eventos de [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) e [**NetworkOperatorNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/br224831), permitindo que forneçam comunicação em tempo real com o usuário, mesmo quando o app não está em primeiro plano. Para obter mais informações, consulte [Oferecer suporte a tarefas em segundo plano em seu app](support-your-app-with-background-tasks.md).
 
-> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram apps UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -91,10 +98,5 @@ Os aplicativos com recurso de tela de bloqueio podem registrar tarefas em segund
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
+* [Como disparar eventos de suspensão, retomada e segundo plano em apps da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 

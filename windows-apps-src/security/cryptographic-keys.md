@@ -3,26 +3,33 @@ title: "Chaves criptográficas"
 description: "Este artigo mostra como usar funções de derivação de chaves padrão para derivar chaves e como criptografar conteúdo usando chaves simétricas e assimétricas."
 ms.assetid: F35BEBDF-28C5-4F91-A94E-F7D862B6ED59
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e7fba930c108744815f261e7d01d198626d7e7c9
-ms.openlocfilehash: 420c8daa47fb36e8b7cebbc7a18bc8eb666188d3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1396382c90b370aa9d610749a92dd256c92dedab
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Chaves criptográficas
+# <a name="cryptographic-keys"></a>Chaves criptográficas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar funções de derivação de chaves padrão para derivar chaves e como criptografar conteúdo usando chaves simétricas e assimétricas. 
 
-## Chaves simétricas
+## <a name="symmetric-keys"></a>Chaves simétricas
 
 
 A criptografia de chave simétrica, também chamada de criptografia de chave secreta, exige o uso da mesma chave para criptografia e descriptografia. Você pode usar uma classe [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) para especificar um algoritmo simétrico e criar ou importar uma chave. Você pode usar métodos estáticos na classe [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) para criptografar e descriptografar dados usando o algoritmo e a chave.
 
-A criptografia de chave simétrica geralmente usa codificações de bloco e modos de codificação de bloco. Uma codificação de bloco é uma função de criptografia simétrica que opera em blocos de tamanho fixo. Se a mensagem que você quer criptografar é mais longa do que o comprimento do bloco, você deve usar um modo de codificação de bloco. Um modo de codificação de bloco é uma função de criptografia simétrica construída usando uma codificação de bloco. Ele criptografa texto sem formatação como uma série de blocos de tamanho fixo. Os seguintes modos são permitidos nos aplicativos:
+A criptografia de chave simétrica geralmente usa codificações de bloco e modos de codificação de bloco. Uma codificação de bloco é uma função de criptografia simétrica que opera em blocos de tamanho fixo. Se a mensagem que você quer criptografar é mais longa do que o comprimento do bloco, você deve usar um modo de codificação de bloco. Um modo de codificação de bloco é uma função de criptografia simétrica construída usando uma codificação de bloco. Ele criptografa texto sem formatação como uma série de blocos de tamanho fixo. Os seguintes modos são permitidos nos apps:
 
 -   O modo ECB (livro de código eletrônico) criptografa cada bloco da mensagem separadamente. Esse não é considerado um modo de criptografia seguro.
 -   O modo CBC (encadeamento de blocos de codificação) usa o bloco de texto cifrado anterior para obstruir o bloco atual. Você deve determinar qual valor usar para o primeiro bloco. Esse valor é chamado de vetor de inicialização (IV).
@@ -42,7 +49,7 @@ Enquanto as codificações de bloco são usadas para criptografar blocos de dado
 
 O exemplo a seguir mostra como usar a classe [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) para criar uma chave simétrica e usá-la para criptografar e descriptografar dados.
 
-## Chaves assimétricas
+## <a name="asymmetric-keys"></a>Chaves assimétricas
 
 
 Criptografia de chave assimétrica, também chamada de criptografia de chave pública, usa uma chave pública e uma chave privada para executar uma criptografia e descriptografia. As chaves são diferentes, mas matematicamente relacionadas. Normalmente, a chave privada é mantida em segredo e usada para descriptografar dados, enquanto a chave pública é distribuída para as partes interessadas e usada para criptografar dados. A criptografia assimétrica também é útil para assinar dados.
@@ -61,7 +68,7 @@ Como a criptografia assimétrica é muito mais lenta do que a simétrica, ela é
 
 Você pode usar um objeto [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para especificar um algoritmo simétrico ou um algoritmo de assinatura, para criar ou importar um par de chaves efêmero ou para importar a parte de chave pública de um par de chaves.
 
-## Derivando chaves
+## <a name="deriving-keys"></a>Derivando chaves
 
 
 Geralmente é necessário derivar chaves adicionais de um segredo compartilhado. Você pode usar a classe [**KeyDerivationAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241518) e um dos métodos especializados abaixo na classe [**KeyDerivationParameters**](https://msdn.microsoft.com/library/windows/apps/br241524) para derivar chaves.
@@ -73,9 +80,4 @@ Geralmente é necessário derivar chaves adicionais de um segredo compartilhado.
 | [**BuildForSP80056a**](https://msdn.microsoft.com/library/windows/apps/br241527)  | Cria um objeto KeyDerivationParameters para uso na função de derivação de chaves SP800-56A.                                                 |
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

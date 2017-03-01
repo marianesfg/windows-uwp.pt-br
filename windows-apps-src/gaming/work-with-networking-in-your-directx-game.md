@@ -3,20 +3,27 @@ author: mtoepke
 title: Rede para jogos
 description: Saiba como desenvolver e incorporar recursos de rede em seu jogo com o DirectX.
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, rede, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2a9b42ab2cab6a1f4330759c0ff114e985eb3c20
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ce94dda0eaf156f1e09fefbd76f50bc764050970
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Rede para jogos
+# <a name="networking-for-games"></a>Rede para jogos
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Saiba como desenvolver e incorporar recursos de rede em seu jogo com o DirectX.
 
-## Conceitos básicos
+## <a name="concepts-at-a-glance"></a>Conceitos básicos
 
 
 Diversos recursos de rede podem ser usados em seu jogo em DirectX, seja um simples jogo individual ou jogos com grandes quantidades de jogadores. O uso mais simples da rede seria para armazenar nomes de usuários e pontuações de jogos em um servidor de rede central.
@@ -35,7 +42,7 @@ No caso de dispositivos móveis, é importante monitorar os recursos de rede dis
 
 O isolamento de rede faz parte do modelo de segurança do aplicativo usado pelo Windows. O Windows descobre ativamente os limites da rede e impõe as restrições de acesso para isolamento de rede. Os aplicativos devem declarar funcionalidades de isolamento de rede para definir o escopo do acesso à rede. Sem declarar essas funcionalidades, seu aplicativo não terá acesso aos recursos da rede. Para saber mais sobre como o Windows impõe o isolamento de rede para os aplicativos, consulte [Como configurar recursos de isolamento de rede](https://msdn.microsoft.com/library/windows/apps/hh770532).
 
-## Considerações de design
+## <a name="design-considerations"></a>Considerações de design
 
 
 Diversas APIs de rede podem ser usadas em jogos DirectX. Portanto, é importante escolher a API correta. O Windows oferece suporte para uma série de APIs de rede que seu aplicativo pode usar para se comunicar com outros computadores e dispositivos pela Internet ou por redes privadas. Sua primeira etapa é calcular quais recursos de rede seu aplicativo precisa.
@@ -47,7 +54,7 @@ Estas são algumas das APIs de rede mais populares para jogos:
 -   UDP e soquetes - Fornece transferências de rede não confiáveis com baixa sobrecarga. O UDP é usado para operações de jogos que exigem baixa latência e podem tolerar alguma perda no pacote. Também costuma ser usado para jogos de luta, tiros e habilidades, áudio de rede e bate-papo de voz. A classe [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319) fornece um soquete de rede UDP que pode ser usado nos jogos da Windows Store. A classe **DatagramSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) no namespace.
 -   HTTP Cliente - Fornece uma conexão confiável para servidores HTTP. O cenário de rede mais comum é para acessar um site da web para recuperar ou armazenar informações. Um exemplo simples seria um jogo que usa um site da web para armazenar informações de usuários e pontuações de jogos. Quando usado com SSL para segurança, um cliente HTTP pode ser usado para logon, compra e troca de ativos, criação e gerenciamento de personagens do jogo. A classe [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) fornece uma API moderna de cliente HTTP para jogos da Windows Store. A classe **HttpClient** é usada com as classes relacionadas [**Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) no namespace.
 
-## Manipulando exceções de rede em seu jogo em DirectX
+## <a name="handling-network-exceptions-in-your-directx-game"></a>Manipulando exceções de rede em seu jogo em DirectX
 
 
 Uma exceção de rede em seu jogo em DirectX pode indicar um problema ou uma falha grave. As exceções podem ocorrer por vários motivos ao usar APIs de rede. Em geral, a exceção pode resultar de alterações na conectividade de rede ou de outros problemas de rede com o host ou servidor remoto.
@@ -74,7 +81,7 @@ As APIs de rede permitem diferentes métodos de recuperação das informações 
 -   Um método para recuperar o valor de **HRESULT** do erro que causa a exceção. A lista de possíveis valores **HRESULT** é grande e inespecífica. O valor de **HRESULT** pode ser recuperado usando qualquer uma das APIs de rede.
 -   Um método auxiliar que converte o valor **HRESULT** em um valor de enumeração. A lista de possíveis valores de enumeração é específica e relativamente pequena. Um método de ajuda está disponível para as classes de soquete em [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960).
 
-### Exceções em Windows.Networking.Sockets
+### <a name="exceptions-in-windowsnetworkingsockets"></a>Exceções em Windows.Networking.Sockets
 
 O construtor da classe [**HostName**](https://msdn.microsoft.com/library/windows/apps/br207113) usado com soquetes pode gerar uma exceção se a cadeia de caracteres passada não for um nome de host válido (ou seja, contém caracteres que não são permitidos em um nome de host). Se um aplicativo obtiver entrada do usuário para o **HostName** para uma conexão no mesmo nível, o construtor deverá estar em um bloco try/catch. Se uma exceção for gerada, o aplicativo poderá notificar o usuário e solicitar um novo nome de host.
 
@@ -217,7 +224,7 @@ using namespace Windows::Networking::Sockets;
 
 ```
 
-### Exceções em Windows.Web.Http
+### <a name="exceptions-in-windowswebhttp"></a>Exceções em Windows.Web.Http
 
 O construtor da classe [**Windows::Foundation::Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) usado com [**Windows::Web::Http::HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) pode gerar uma exceção se a cadeia passada não for uma URI válida (ou seja, contém caracteres que não são permitidos em uma URI). No C++, não há nenhum método para tentar analisar uma cadeia de caracteres para um URI. Se um aplicativo receber entrada do usuário para o **Windows::Foundation::Uri**, o construtor deverá estar em um bloco try/catch. Se uma exceção for gerada, o aplicativo poderá notificar o usuário e solicitar uma nova URI.
 
@@ -362,7 +369,7 @@ using namespace Windows::Web::Http;
 
 ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 **Outros recursos**
@@ -389,9 +396,4 @@ using namespace Windows::Web::Http;
 * [Amostra de HttpClient]( http://go.microsoft.com/fwlink/p/?linkid=242550)
 * [Exemplo de proximidade](http://go.microsoft.com/fwlink/p/?linkid=245082)
 * [Exemplo do StreamSocket](http://go.microsoft.com/fwlink/p/?linkid=243037)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

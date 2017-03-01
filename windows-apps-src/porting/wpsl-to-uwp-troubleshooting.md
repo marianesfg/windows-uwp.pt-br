@@ -3,9 +3,16 @@ author: mcleblanc
 description: "É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado."
 title: "Soluções de problemas de portabilidade do Windows Phone Silverlight para a UWP"
 ms.assetid: d9a9a2a7-9401-4990-a992-4b13887f2661
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 3b7e68803a0391ea850b513014aa56a380df4d5c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ae120cedbf0ab42fcb091ba5b01b58e8796d6a4a
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -60,10 +67,5 @@ As informações de solução da tabela destinam-se a dar instruções suficient
 | Um System.InvalidCastException é gerado quando InitializeComponent é chamado em um arquivo xaml.cs. | Isso pode acontecer quando você tem mais de um arquivo xaml (sendo que pelo menos um deles contém qualificadores MRT) que compartilham o mesmo arquivo xaml.cs e os elementos têm atributos x:Name inconsistentes entre os dois arquivos xaml. Tente adicionar o mesmo nome aos mesmos elementos nos dois arquivos xaml ou omita todos os nomes. | 
 
 O próximo tópico é [Portando XAML e a interface do usuário](wpsl-to-uwp-porting-xaml-and-ui.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

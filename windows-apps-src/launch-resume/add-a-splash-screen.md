@@ -3,24 +3,31 @@ author: TylerMSFT
 title: Adicionar uma tela inicial
 description: Defina a imagem da tela inicial e a cor da tela de fundo usando o Microsoft Visual Studio 2015.
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 4d8a00cf7bd151ab97e9abc10a09a3794a0e292f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b8d8b81b1807681d3aa3c5ed61359a5da64dfac
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Adicionar uma tela inicial
+# <a name="add-a-splash-screen"></a>Adicionar uma tela inicial
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Defina a imagem da tela inicial e a cor da tela de fundo usando o Microsoft Visual Studio 2015.
 
-## Defina a imagem da tela inicial e a cor da tela de fundo no Visual Studio 2015
+## <a name="set-the-splash-screen-image-and-background-color-in-visual-studio-2015"></a>Defina a imagem da tela inicial e a cor da tela de fundo no Visual Studio 2015
 
 
-Quando você usa um modelo do Visual Studio 2015 para criar o seu aplicativo, uma imagem padrão é adicionada ao seu projeto e definida como a imagem da tela inicial. A cor de tela de fundo da tela inicial muda para um padrão de cinza claro. Se você quiser mudar a imagem ou cor padrão da tela inicial de seu aplicativo, siga estas etapas:
+Quando você usa um modelo do Visual Studio 2015 para criar o seu app, uma imagem padrão é adicionada ao seu projeto e definida como a imagem da tela inicial. A cor de tela de fundo da tela inicial muda para um padrão de cinza claro. Se você quiser mudar a imagem ou cor padrão da tela inicial de seu app, siga estas etapas:
 
 1.  Abra o seu projeto de aplicativa do Plataforma Universal do Windows (UWP) no Visual Studio 2015.
 2.  Em **Solution Explorer**, abra o arquivo "Package.appxmanifest". Você também pode abrir esse arquivo pela barra de menus escolhendo **Projeto** &gt; **Loja** &gt; **Editar Manifesto do Aplicativo**.
@@ -36,13 +43,13 @@ Quando você usa um modelo do Visual Studio 2015 para criar o seu aplicativo, um
     <uap:SplashScreen Image="Assets\SplashScreen.png" />
     ```
 
-4.  Para selecionar uma nova imagem de tela inicial para um aplicativo UWP, pressione o botão com reticências que aparece próximo ao rótulo **1240 x 600 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1240 x 600 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
+4.  Para selecionar uma nova imagem de tela inicial para um app UWP, pressione o botão com reticências que aparece próximo ao rótulo **1240 x 600 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1240 x 600 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
 
-    **Importante**  A imagem de tela inicial que você escolher deve ter 620 x 300 pixels usando um fator de escala 1x. Além disso, ao projetar sua tela inicial, observe que ela é menor do que a tela e centralizada. Ela não preenche a tela como uma tela inicial de um aplicativo da Loja do Windows Phone faz.
+    **Importante**  A imagem de tela inicial que você escolher deve ter 620 x 300 pixels usando um fator de escala 1x. Além disso, ao projetar sua tela inicial, observe que ela é menor do que a tela e centralizada. Ela não preenche a tela como uma tela inicial de um app da Loja do Windows Phone faz.
 
      
 
-5.  Para selecionar uma nova imagem de tela inicial para um aplicativo da Loja do Windows Phone, pressione o botão com reticências que aparece próximo ao rótulo **1152 x 1920 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1152 x 1920 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
+5.  Para selecionar uma nova imagem de tela inicial para um app da Loja do Windows Phone, pressione o botão com reticências que aparece próximo ao rótulo **1152 x 1920 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1152 x 1920 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
 
     **Importante**  A imagem de tela inicial que você escolher deve ter 1152 x 1920 pixels, que é o tamanho correto para um fator de escala 2,4x. Se esse for o único ativo que você fornecer, então, ele será reduzido para os fatores de dimensionamento 1,4 x e 1x.
 
@@ -50,19 +57,19 @@ Quando você usa um modelo do Visual Studio 2015 para criar o seu aplicativo, um
 
 6.  No campo **Cor da tela de fundo** na seção **Tela inicial**, defina a cor da tela de fundo exibida na imagem da sua tela inicial. Você pode inserir o nome de uma cor ou '\#' and e o valor hex. de uma cor. Para uma lista de nomes de cores disponíveis, consulte [**elemento SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br211467).
 
-    Definir uma cor da tela de fundo para sua tela de inicial é opcional. Se você não especificar uma cor para um aplicativo UWP, a cor da tela de fundo da tela inicial fica padroniza-se em cinza claro (valor hex. \#464646). Essa é a mesma cor que a cor da tela de fundo do **Bloco** (consulte o campo **Cor da tela de fundo** da seção **Imagens e logotipos do bloco** na guia **Ativos visuais**). Se você não especificar uma cor para um aplicativo do Windows Phone, ou configurá-lo como "transparente", a cor de tela de fundo da tela inicial será transparente.
+    Definir uma cor da tela de fundo para sua tela de inicial é opcional. Se você não especificar uma cor para um app UWP, a cor da tela de fundo da tela inicial fica padroniza-se em cinza claro (valor hex. \#464646). Essa é a mesma cor que a cor da tela de fundo do **Bloco** (consulte o campo **Cor da tela de fundo** da seção **Imagens e logotipos do bloco** na guia **Ativos visuais**). Se você não especificar uma cor para um aplicativo do Windows Phone, ou configurá-lo como "transparente", a cor de tela de fundo da tela inicial será transparente.
 
-## Resumo e próximas etapas
+## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
 
-Se o aplicativo levar algum tempo para ser carregado, considere a inclusão de uma tela inicial estendida. Para obter orientação passo a passo, consulte [Create a customized splash screen](create-a-customized-splash-screen.md).
+Se o app levar algum tempo para ser carregado, considere a inclusão de uma tela inicial estendida. Para obter orientação passo a passo, consulte [Create a customized splash screen](create-a-customized-splash-screen.md).
 
 **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem apps da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar uma tela inicial personalizada](create-a-customized-splash-screen.md)
 
@@ -74,9 +81,4 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -1,32 +1,39 @@
 ---
 author: drewbatgit
-ms.assetid: 
+ms.assetid: a128edc8-8a80-4645-ac29-908ede2d1c72
 description: "Este artigo mostra como usar um MediaFrameReader com o MediaCapture para obter quadros de mídia de uma ou mais origens disponíveis, incluindo câmeras em cores, de profundidade e infravermelho, dispositivos de áudio ou até mesmo origens personalizadas de quadros, como as que produzem quadros de rastreamento de esqueleto."
 title: "Processar quadros de mídia com o MediaFrameReader"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e6ab1fc16f150de2fed3797d89375a52b3965182
-ms.openlocfilehash: 11e09d9b447e9daa0498377a67ef235bdab168dd
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 7646cce8c8aafcb881e825be1ad134ad682c362a
+ms.lasthandoff: 02/08/2017
 
 ---
 
 # <a name="process-media-frames-with-mediaframereader"></a>Processar quadros de mídia com o MediaFrameReader
 
-Este artigo mostra como usar um [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) com [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) para obter quadros de mídia de uma ou mais origens disponíveis, incluindo câmeras em cores, de profundidade e infravermelho, dispositivos de áudio ou até mesmo origens personalizadas de quadros, como as que produzem quadros de rastreamento de esqueleto. Esse recurso foi criado para ser usado por aplicativos que executam processamento em tempo real de quadros de mídia, como aplicativos de câmera com reconhecimento de profundidade e realidade aumentada.
+Este artigo mostra como usar um [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) com [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) para obter quadros de mídia de uma ou mais origens disponíveis, incluindo câmeras em cores, de profundidade e infravermelho, dispositivos de áudio ou até mesmo origens personalizadas de quadros, como as que produzem quadros de rastreamento de esqueleto. Esse recurso foi criado para ser usado por apps que executam processamento em tempo real de quadros de mídia, como apps de câmera com reconhecimento de profundidade e realidade aumentada.
 
-Se o seu interesse for simplesmente capturar vídeo ou fotos, como um aplicativo típico de fotografia, provavelmente você desejará usar uma das outras técnicas de captura compatíveis com o [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture). Para obter uma lista de técnicas de captura de mídia disponíveis e artigos mostrando como usá-las, consulte [**Câmera**](camera.md).
+Se o seu interesse for simplesmente capturar vídeo ou fotos, como um app típico de fotografia, provavelmente você desejará usar uma das outras técnicas de captura compatíveis com o [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture). Para obter uma lista de técnicas de captura de mídia disponíveis e artigos mostrando como usá-las, consulte [**Câmera**](camera.md).
 
 > [!NOTE] 
 > Os recursos abordados neste artigo só estão disponíveis a partir do Windows 10, versão 1607.
 
 > [!NOTE] 
-> Há um exemplo de aplicativo Universal do Windows que demonstra o uso do **MediaFrameReader** para exibir quadros de origens diferentes, incluindo câmeras em cores, de profundidade e infravermelho. Para obter mais informações, consulte [Exemplo de quadros de câmera](http://go.microsoft.com/fwlink/?LinkId=823230).
+> Há um exemplo de aplicativo universal do Windows que demonstra o uso do **MediaFrameReader** para exibir quadros de origens diferentes, incluindo câmeras em cores, de profundidade e infravermelho. Para obter mais informações, consulte [Exemplo de quadros de câmera](http://go.microsoft.com/fwlink/?LinkId=823230).
 
 ## <a name="setting-up-your-project"></a>Configurando seu projeto
-Como com qualquer aplicativo que usa **MediaCapture**, você deve declarar que seu aplicativo usa a funcionalidade de *webcam* antes de tentar acessar qualquer dispositivo de câmera. Se seu aplicativo fizer a captura de um dispositivo de áudio, você deve declarar também a funcionalidade do dispositivo *microfone*. 
+Como com qualquer app que usa **MediaCapture**, você deve declarar que seu app usa a funcionalidade de *webcam* antes de tentar acessar qualquer dispositivo de câmera. Se seu app fizer a captura de um dispositivo de áudio, você deve declarar também a funcionalidade do dispositivo *microfone*. 
 
-**Adicionar funcionalidades ao manifesto do aplicativo**
+**Adicionar funcionalidades ao manifesto do app**
 
-1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do aplicativo clicando duas vezes no item **package.appxmanifest**.
+1.  No Microsoft Visual Studio, no **Gerenciador de Soluções**, abra o designer do manifesto do app clicando duas vezes no item **package.appxmanifest**.
 2.  Selecione a guia **Recursos**.
 3.  Marque a caixa da **Webcam** e a caixa do **Microfone**.
 4.  Para acessar as bibliotecas Imagens e Vídeos, marque as caixas para **Biblioteca de Imagens** e a caixa para **Biblioteca de Vídeos**.
@@ -36,7 +43,7 @@ O código de exemplo deste artigo usa APIs dos namespaces a seguir, além dos in
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>Selecionar origens de quadro e grupos de origens de quadro
-Muitos aplicativos que processam quadros de mídia precisam obter quadros de várias origens ao mesmo tempo, como câmeras de profundidade e em cores de um dispositivo. O objeto [**MediaFrameSourceGroup**] (https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) representa um conjunto de origens de quadros de mídia que podem ser usados simultaneamente. Chame o método estático [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obter uma lista de todos os grupos de origens de quadro compatíveis com o dispositivo atual.
+Muitos apps que processam quadros de mídia precisam obter quadros de várias origens ao mesmo tempo, como câmeras de profundidade e em cores de um dispositivo. O objeto [**MediaFrameSourceGroup**] (https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) representa um conjunto de origens de quadros de mídia que podem ser usados simultaneamente. Chame o método estático [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obter uma lista de todos os grupos de origens de quadro compatíveis com o dispositivo atual.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
@@ -63,14 +70,14 @@ O exemplo a seguir usa uma técnica semelhante conforme descrito acima para sele
 ## <a name="initialize-the-mediacapture-object-to-use-the-selected-frame-source-group"></a>Inicializar o objeto MediaCapture para usar o grupo de origens de quadro selecionado
 A próxima etapa é inicializar o objeto **MediaCapture** para usar o grupo de origens de quadro que você selecionou na etapa anterior.
 
-O objeto **MediaCapture** normalmente é usado em vários locais em seu aplicativo, portanto, você deve declarar uma variável de membro de classe para contê-lo.
+O objeto **MediaCapture** normalmente é usado em vários locais em seu app, portanto, você deve declarar uma variável de membro de classe para contê-lo.
 
 [!code-cs[DeclareMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetDeclareMediaCapture)]
 
 Crie uma instância do objeto **MediaCapture** chamando o construtor. Em seguida, crie um objeto [**MediaCaptureSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSettings) que será usado para inicializar o objeto **MediaCapture**. Neste exemplo, as configurações a seguir serão usadas:
 
 * [**SourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SourceGroup) - Informa ao sistema qual grupo de origens você usará para obter os quadros. Lembre-se de que o grupo de origens define um conjunto de origens de quadros de mídia que podem ser usadas simultaneamente.
-* [**SharingMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SharingMode) - Informa ao sistema se você precisa de controle exclusivo sobre os dispositivos de origem de captura. Se você defini-lo como [**ExclusiveControl**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode), poderá alterar as configurações do dispositivo de captura, como o formato dos quadros que ele produz, mas isso significa que se outro aplicativo já tiver controle exclusivo, ocorrerá uma falha quando ele tentar inicializar o dispositivo de captura de mídia. Se você defini-lo como [**SharedReadOnly**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode), poderá receber quadros das origens, mesmo se eles estiverem sendo usados por outro aplicativo, mas você não poderá alterar as configurações dos dispositivos.
+* [**SharingMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SharingMode) - Informa ao sistema se você precisa de controle exclusivo sobre os dispositivos de origem de captura. Se você defini-lo como [**ExclusiveControl**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode), poderá alterar as configurações do dispositivo de captura, como o formato dos quadros que ele produz, mas isso significa que se outro app já tiver controle exclusivo, ocorrerá uma falha quando ele tentar inicializar o dispositivo de captura de mídia. Se você defini-lo como [**SharedReadOnly**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode), poderá receber quadros das origens, mesmo se eles estiverem sendo usados por outro app, mas você não poderá alterar as configurações dos dispositivos.
 * [**MemoryPreference**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.MemoryPreference) - Se você especificar [**CPU**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureMemoryPreference), o sistema usará a memória da CPU que garante que quando os quadros forem recebidos, eles estarão disponíveis como objetos [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.SoftwareBitmap). Se você especificar [**Auto**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureMemoryPreference), o sistema escolherá dinamicamente o local de memória ideal para armazenar os quadros. Se o sistema opta por usar a memória da GPU, os quadros de mídia chegarão como um objeto [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) e não como um **SoftwareBitmap**.
 * [**StreamingCaptureMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.StreamingCaptureMode) - Defina-o como [**Video**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.StreamingCaptureMode) para indicar que não é necessário o streaming de áudio.
 
@@ -136,10 +143,10 @@ Ao terminar a leitura dos quadros, certifique-se de parar o leitor de quadros de
 
 [!code-cs[Cleanup](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCleanup)]
 
-Para obter mais informações sobre a limpeza de objetos de captura de mídia quando seu aplicativo é suspenso, consulte [**Exibir a visualização de câmera**](simple-camera-preview-access.md).
+Para obter mais informações sobre a limpeza de objetos de captura de mídia quando seu app é suspenso, consulte [**Exibir a visualização de câmera**](simple-camera-preview-access.md).
 
 ## <a name="the-framerenderer-helper-class"></a>A classe auxiliar FrameRenderer
-O Universal Windows [Quadros de câmera de exemplo](http://go.microsoft.com/fwlink/?LinkId=823230) fornece uma classe auxiliar que torna mais fácil exibir os quadros de origens em cor, infravermelho e de profundidade em seu aplicativo. Normalmente, você vai querer fazer algo mais com dados de infravermelho e profundidade do que apenas exibi-los na tela, mas essa classe auxiliar é uma ferramenta útil para demonstrar o recurso de leitor de quadros e para a depuração de sua própria implementação do leitor de quadros.
+O Universal Windows [Quadros de câmera de exemplo](http://go.microsoft.com/fwlink/?LinkId=823230) fornece uma classe auxiliar que torna mais fácil exibir os quadros de origens em cor, infravermelho e de profundidade em seu app. Normalmente, você vai querer fazer algo mais com dados de infravermelho e profundidade do que apenas exibi-los na tela, mas essa classe auxiliar é uma ferramenta útil para demonstrar o recurso de leitor de quadros e para a depuração de sua própria implementação do leitor de quadros.
 
 A classe auxiliar **FrameRenderer** implementa os métodos a seguir.
 
@@ -163,10 +170,5 @@ A classe auxiliar **FrameRenderer** implementa os métodos a seguir.
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO3-->
 
 

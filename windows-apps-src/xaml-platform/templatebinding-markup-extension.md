@@ -3,38 +3,45 @@ author: jwmsft
 description: "Vincula o valor de uma propriedade em um modelo de controle ao valor de outra propriedade exposta no controle modelo. TemplateBinding só pode ser usado dentro de uma definição ControlTemplate em XAML."
 title: "Extensão de marcação TemplateBinding"
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4242bb606f29a6b70213dc8cde818ed86c3dda8d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7f279590cc1351efee2552e237ab095674768463
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Extensão de marcação {TemplateBinding}
+# <a name="templatebinding-markup-extension"></a>Extensão de marcação {TemplateBinding}
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Vincula o valor de uma propriedade em um modelo de controle ao valor de outra propriedade exposta no controle modelo. **TemplateBinding** só pode ser usado dentro de uma definição [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) em XAML.
 
-## Uso do atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
 ``` syntax
 <object propertyName="{TemplateBinding sourceProperty}" .../>
 ```
 
-## Uso de atributo XAML (para a propriedade Setter em um modelo ou estilo)
+## <a name="xaml-attribute-usage-for-setter-property-in-template-or-style"></a>Uso de atributo XAML (para a propriedade Setter em um modelo ou estilo)
 
 ``` syntax
 <Setter Property="propertyName" Value="{TemplateBinding sourceProperty}" .../>
 ```
 
-## Valores XAML
+## <a name="xaml-values"></a>Valores XAML
 
 | Termo | Descrição |
 |------|-------------|
 | propertyName | O nome da propriedade que está sendo definida na sintaxe de setter. Deve ser uma propriedade de dependência. |
 | sourceProperty | O nome de outra propriedade de dependência existente no tipo que está sendo modelado. |
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 O uso de **TemplateBinding** é uma parte fundamental de como definir um modelo de controle, seja você um autor de controle personalizado ou esteja substituindo um modelo de controle para controles existentes. Para obter mais informações, consulte [Guia de início rápido: modelos de controle](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374).
 
@@ -52,7 +59,7 @@ Um **TemplateBinding** é sempre uma associação de uma via. Ambas as proprieda
 
 **Observação**  Na implementação do processador XAML do Windows Runtime, não há uma representação de classe de suporte para **TemplateBinding**. **TemplateBinding** é de uso exclusivo na marcação XAML. Não existe uma maneira simples de reproduzir o comportamento em código.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Início rápido: modelos de controle](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
 * [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946)
@@ -60,10 +67,5 @@ Um **TemplateBinding** é sempre uma associação de uma via. Ambas as proprieda
 * [Visão geral do XAML](xaml-overview.md)
 * [Visão geral das propriedades de dependência](dependency-properties-overview.md)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

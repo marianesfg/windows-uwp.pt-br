@@ -1,18 +1,25 @@
 ---
 author: TylerMSFT
 title: "Monitorar o progresso e a conclusão de tarefas em segundo plano"
-description: "Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano."
+description: "Saiba como o app pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano."
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: c7b6062a624b194b2806788c5f498d87aaa209a2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 709f3da69e95985512835994a9bb7cf5e0e91a7f
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="monitor-background-task-progress-and-completion"></a>Monitorar o progresso e a conclusão de tarefas em segundo plano
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -21,11 +28,11 @@ ms.openlocfilehash: c7b6062a624b194b2806788c5f498d87aaa209a2
 -   [**BackgroundTaskProgressEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224785)
 -   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
 
-Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano executada em um processo à parte. (Para tarefas em segundo plano no processo, você pode definir variáveis compartilhadas para indicar o andamento e a conclusão.)
+Saiba como o app pode reconhecer o progresso e a conclusão relatados por uma tarefa em segundo plano executada em um processo à parte. (Para tarefas em segundo plano no processo, você pode definir variáveis compartilhadas para indicar o andamento e a conclusão.)
 
- O progresso e a conclusão da tarefa em segundo plano podem ser monitorados pelo código do aplicativo. Para fazer isso, o aplicativo assina eventos das tarefas em segundo plano que ele registrou no sistema.
+ O progresso e a conclusão da tarefa em segundo plano podem ser monitorados pelo código do app. Para fazer isso, o app assina eventos das tarefas em segundo plano que ele registrou no sistema.
 
--   Este tópico considera que você tem um aplicativo que registra tarefas em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu aplicativo](support-your-app-with-background-tasks.md).
+-   Este tópico considera que você tem um app que registra tarefas em segundo plano. Para começar a criar rapidamente uma tarefa em segundo plano, consulte [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md). Para obter informações mais detalhadas sobre condições e gatilhos, consulte [Oferecer suporte a tarefas em segundo plano em seu app](support-your-app-with-background-tasks.md).
 
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>Criar um manipulador de eventos para gerenciar as tarefas em segundo plano concluídas
 
@@ -112,7 +119,7 @@ Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por
 ## <a name="register-the-event-handler-functions-with-new-and-existing-background-tasks"></a>Registre as funções do manipulador de eventos com as tarefas em segundo plano novas e existentes
 
 
-1.  Quando o aplicativo registra uma tarefa em segundo plano pela primeira vez, ele deve se registrar para receber atualizações de progresso e conclusão dessa tarefa, caso ela seja executada enquanto o aplicativo ainda estiver ativo no primeiro plano.
+1.  Quando o app registra uma tarefa em segundo plano pela primeira vez, ele deve se registrar para receber atualizações de progresso e conclusão dessa tarefa, caso ela seja executada enquanto o app ainda estiver ativo no primeiro plano.
 
     Por exemplo, o [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) chama a seguinte função em cada tarefa em segundo plano que ela registra:
 
@@ -146,7 +153,7 @@ Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por
     >     }
     > ```
 
-2.  Quando o aplicativo é iniciado ou navega para uma nova página onde o status da tarefa em segundo plano é irrelevante, ele deve obter uma lista das tarefas em segundo plano atualmente registradas e associá-las às funções do manipulador de eventos de progresso e conclusão. A lista das tarefas em segundo plano atualmente registradas pelo aplicativo é mantida na propriedade [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).[**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787).
+2.  Quando o app é iniciado ou navega para uma nova página onde o status da tarefa em segundo plano é irrelevante, ele deve obter uma lista das tarefas em segundo plano atualmente registradas e associá-las às funções do manipulador de eventos de progresso e conclusão. A lista das tarefas em segundo plano atualmente registradas pelo app é mantida na propriedade [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).[**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787).
 
     Por exemplo, o [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) usa o seguinte código para anexar manipuladores de eventos quando a página SampleBackgroundTask é navegada para:
 
@@ -199,7 +206,7 @@ Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por
 
 * [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
 * [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
-* [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
+* [Declarar tarefas em segundo plano no manifesto do app](declare-background-tasks-in-the-application-manifest.md)
 * [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
@@ -210,9 +217,4 @@ Saiba como o aplicativo pode reconhecer o progresso e a conclusão relatados por
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

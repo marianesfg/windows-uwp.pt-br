@@ -3,28 +3,35 @@ author: drewbatgit
 ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
 description: "Este artigo mostra como usar o MediaProcessingTrigger e uma tarefa em segundo plano para processar arquivos de mídia em segundo plano."
 title: "Processar arquivos de mídia em segundo plano"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fb0e8a535ff4e27530fa45aca80b21f17a523c7b
-ms.openlocfilehash: 8a65ce9ed9de050bbcee2612bf53c5bfd44ffc72
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c7f3262c30797c8ce447b3e97a5cb7dd6d2ea025
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Processar arquivos de mídia em segundo plano
+# <a name="process-media-files-in-the-background"></a>Processar arquivos de mídia em segundo plano
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar o [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) e uma tarefa em segundo plano para processar arquivo de mídia em segundo plano.
 
-O aplicativo de exemplo descrito neste artigo permite que o usuário selecione um arquivo de mídia de entrada para transcodificar e especificar um arquivo de saída para o resultado da transcodificação. Em seguida, uma tarefa em segundo plano é iniciada para executar a operação de transcodificação. O objetivo do [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) é dar suporte a diferentes situações de processamento de mídia, além de transcodificar, incluindo renderização de composições de mídia para disco e carregamento de arquivos de mídia processados depois que o processamento é concluído.
+O app de exemplo descrito neste artigo permite que o usuário selecione um arquivo de mídia de entrada para transcodificar e especificar um arquivo de saída para o resultado da transcodificação. Em seguida, uma tarefa em segundo plano é iniciada para executar a operação de transcodificação. O objetivo do [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) é dar suporte a diferentes situações de processamento de mídia, além de transcodificar, incluindo renderização de composições de mídia para disco e carregamento de arquivos de mídia processados depois que o processamento é concluído.
 
-Para mais detalhes sobre os diferentes recursos do aplicativo Universal do Windows utilizados nessa amostra, consulte:
+Para mais detalhes sobre os diferentes recursos do aplicativo universal do Windows utilizados nessa amostra, consulte:
 
 -   [Transcodificar arquivos de mídia](transcode-media-files.md)
 -   [Início, retomada e tarefas em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt227652)
 -   [Blocos, selos e notificações](https://msdn.microsoft.com/library/windows/apps/mt185606)
 
-## Criar uma tarefa de processamento de mídia em segundo plano
+## <a name="create-a-media-processing-background-task"></a>Criar uma tarefa de processamento de mídia em segundo plano
 
 Para adicionar uma tarefa em segundo plano à sua solução existente no Microsoft Visual Studio, insira um nome para seu computador
 
@@ -45,7 +52,7 @@ Atualize sua declaração de classe para fazer a sua classe herdar de [**IBackgr
 
 Adicione as variáveis de membro a seguir à sua classe:
 
--   Um [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797) que será usado para atualizar o aplicativo em primeiro plano com o progresso da tarefa em segundo plano.
+-   Um [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797) que será usado para atualizar o app em primeiro plano com o progresso da tarefa em segundo plano.
 -   Um [**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499) que evita que o sistema desligue a sua tarefa em segundo plano enquanto a transcodificação de mídia está sendo executada.
 -   Um objeto **CancellationTokenSource** que pode ser usado para cancelar a operação de transcodificação assíncrona.
 -   O objeto [**MediaTranscoder**](https://msdn.microsoft.com/library/windows/apps/br207080) que será usado para transcodificar arquivos de mídia.
@@ -62,7 +69,7 @@ No fim do método **Run**, chame [**Complete**](https://msdn.microsoft.com/libra
 
 [!code-cs[Run](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetRun)]
 
-No método auxiliar **TranscodeFileAsync**, os nomes de arquivo para arquivos de saída e entrada para as operações de transcodificação são recuperados do [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para o seu aplicativo. Esses valores serão definidos pelo seu aplicativo em primeiro plano. Crie um objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) para os arquivos de entrada e saída e, em seguida, crie um perfil de codificação para ser usado na transcodificação.
+No método auxiliar **TranscodeFileAsync**, os nomes de arquivo para arquivos de saída e entrada para as operações de transcodificação são recuperados do [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para o seu app. Esses valores serão definidos pelo seu app em primeiro plano. Crie um objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) para os arquivos de entrada e saída e, em seguida, crie um perfil de codificação para ser usado na transcodificação.
 
 Chame [**PrepareFileTranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700936), passando no arquivo de entrada, arquivo de saída e perfil de codificação. O objeto [**PrepareTranscodeResult**](https://msdn.microsoft.com/library/windows/apps/hh700941) devolvido dessa chamada informa a você se a transcodificação pode ser executada. Se a propriedade [**CanTranscode**](https://msdn.microsoft.com/library/windows/apps/hh700942) for verdadeira, chame [**TranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700946) para executar a operação de transcodificação.
 
@@ -70,7 +77,7 @@ O método **AsTask** permite que você rastreie o progresso da operação assín
 
 [!code-cs[TranscodeFileAsync](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetTranscodeFileAsync)]
 
-No método que você usou para criar o objeto de Progresso na etapa anterior, **Progress**, defina o progresso da instância da tarefa em segundo plano. Isso irá passar o progresso ao aplicativo em primeiro plano, se ele estiver sendo executado.
+No método que você usou para criar o objeto de Progresso na etapa anterior, **Progress**, defina o progresso da instância da tarefa em segundo plano. Isso irá passar o progresso ao app em primeiro plano, se ele estiver sendo executado.
 
 [!code-cs[Progresso](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetProgress)]
 
@@ -82,9 +89,9 @@ No manipulador do evento [**Canceled**](https://msdn.microsoft.com/library/windo
 
 [!code-cs[OnCanceled](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetOnCanceled)]
 
-## Registrar e iniciar a tarefa em segundo plano
+## <a name="register-and-launch-the-background-task"></a>Registrar e iniciar a tarefa em segundo plano
 
-Antes de poder iniciar a tarefa em segundo plano do seu aplicativo em primeiro plano, você deve atualizar o arquivo Package.appmanifest do aplicativo em primeiro plano para informar ao sistema que seu aplicativo usa uma tarefa em segundo plano.
+Antes de poder iniciar a tarefa em segundo plano do seu app em primeiro plano, você deve atualizar o arquivo Package.appmanifest do app em primeiro plano para informar ao sistema que seu app usa uma tarefa em segundo plano.
 
 1.  No **Gerenciador de Soluções**, clique duas vezes no ícone do arquivo Package.appmanifest para abrir o editor de manifesto.
 2.  Selecione a guia **Declarações**.
@@ -94,12 +101,12 @@ Antes de poder iniciar a tarefa em segundo plano do seu aplicativo em primeiro p
    ```csharp
    MediaProcessingBackgroundTask.MediaProcessingTask
    ```
-Em seguida, você precisa adicionar uma referência à sua tarefa em segundo plano para seu aplicativo em primeiro plano.
-1.  No **Gerenciador de Soluções**, no seu projeto do aplicativo em primeiro plano, clique com botão direito na pasta **Referências** e selecione **Adicionar Referência...**.
+Em seguida, você precisa adicionar uma referência à sua tarefa em segundo plano para seu app em primeiro plano.
+1.  No **Gerenciador de Soluções**, no seu projeto do app em primeiro plano, clique com botão direito na pasta **Referências** e selecione **Adicionar Referência...**.
 2.  Expanda o nó **Projetos** e selecione **Solução**.
 3.  Marque a caixa ao lado do seu projeto de tarefa em segundo plano e clique em **OK**.
 
-O restante do código neste exemplo deve ser adicionado ao seu aplicativo em primeiro plano. Primeiro, você precisará adicionar os namespaces a seguir ao seu projeto.
+O restante do código neste exemplo deve ser adicionado ao seu app em primeiro plano. Primeiro, você precisará adicionar os namespaces a seguir ao seu projeto.
 
 [!code-cs[ForegroundUsing](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetForegroundUsing)]
 
@@ -107,9 +114,9 @@ Em seguida, adicione as seguintes variáveis de membro que são necessárias par
 
 [!code-cs[ForegroundMembers](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetForegroundMembers)]
 
-O método auxiliar **PickFilesToTranscode** usa um [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) e um [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para abrir arquivos de entrada e saída para transcodificação. O usuário pode selecionar arquivos em uma localização a que seu aplicativo não tem acesso. Para garantir que sua tarefa em segundo plano pode abrir os arquivos, adicione-os ao [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) do seu aplicativo.
+O método auxiliar **PickFilesToTranscode** usa um [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) e um [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para abrir arquivos de entrada e saída para transcodificação. O usuário pode selecionar arquivos em uma localização a que seu app não tem acesso. Para garantir que sua tarefa em segundo plano pode abrir os arquivos, adicione-os ao [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) do seu app.
 
-Por fim, defina entradas para nomes de arquivo de entrada e saída no [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) do seu aplicativo. A tarefa em segundo plano recupera os nomes de arquivos dessa localização.
+Por fim, defina entradas para nomes de arquivo de entrada e saída no [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) do seu app. A tarefa em segundo plano recupera os nomes de arquivos dessa localização.
 
 [!code-cs[PickFilesToTranscode](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetPickFilesToTranscode)]
 
@@ -140,10 +147,5 @@ O manipulador de evento **OnCompleted** é chamado quando a tarefa em segundo pl
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

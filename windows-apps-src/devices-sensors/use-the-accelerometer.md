@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
 title: "Usar o acelerômetro"
 description: "Saiba como usar o acelerômetro para responder ao movimento do usuário."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8ce3baf2b030096ae5cfc56f31b97ec58e138a44
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8f8236a68fd7628f1f53eebc13731a72414e3217
+ms.lasthandoff: 02/07/2017
 
 ---
-# Usar o acelerômetro
+# <a name="use-the-accelerometer"></a>Usar o acelerômetro
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** APIs importantes **
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Acelerômetro**](https://msdn.microsoft.com/library/windows/apps/BR225687)
@@ -23,17 +30,17 @@ Saiba como usar o acelerômetro para responder ao movimento do usuário.
 
 Um aplicativo de jogos simples conta com um sensor único, o acelerômetro, como um dispositivo de entrada. Esses aplicativos geralmente usam apenas um ou dois eixos para entrada, mas também podem usar o evento shake como outra fonte de entrada.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Você deve estar familiarizado com a linguagem XAML, o Microsoft Visual C# e eventos.
 
 O dispositivo ou emulador que você estiver usando deve ter suporte para um acelerômetro.
 
-## Criar um aplicativo simples de acelerômetro
+## <a name="create-a-simple-accelerometer-app"></a>Criar um aplicativo simples de acelerômetro
 
 Esta seção está dividida em duas subseções. A primeira subseção guiará você pelas etapas necessárias para criar um aplicativo simples de acelerômetro do zero. A subseção seguintes explica o aplicativo que você acabou de criar.
 
-### Instruções
+### <a name="instructions"></a>Instruções
 
 -   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#**.
 
@@ -67,7 +74,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
             // Sensor and dispatcher variables
             private Accelerometer _accelerometer;
 
-            // This event handler writes the current accelerometer reading to 
+            // This event handler writes the current accelerometer reading to
             // the three acceleration text blocks on the app' s main page.
 
             private async void ReadingChanged(object sender, AccelerometerReadingChangedEventArgs e)
@@ -136,7 +143,7 @@ Quando o aplicativo estiver em execução, você poderá alterar os valores do a
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** &gt; **Parar Depuração** para parar o aplicativo.
 
-### Explicação
+### <a name="explanation"></a>Explicação
 
 O exemplo anterior demonstra a codificação mínima que será necessário gravar para integrar a entrada do acelerômetro ao aplicativo.
 
@@ -157,7 +164,7 @@ _accelerometer.ReportInterval = reportInterval;
 Os novos dados do acelerômetro são capturados no método **ReadingChanged**. Toda vez que o driver do sensor recebe novos dados do sensor, ele transmite o valor para seu aplicativo usando este manipulador de eventos. O aplicativo registra este manipulador de eventos na seguinte linha.
 
 ```csharp
-_accelerometer.ReadingChanged += new TypedEventHandler<Accelerometer, 
+_accelerometer.ReadingChanged += new TypedEventHandler<Accelerometer,
 AccelerometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -168,13 +175,7 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
  <TextBlock x:Name="txtYAxis" HorizontalAlignment="Left" Height="15" Margin="70,49,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="53" Foreground="#FFF2EEEE"/>
  <TextBlock x:Name="txtZAxis" HorizontalAlignment="Left" Height="15" Margin="70,80,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="53" Foreground="#FFFFF8F8"/>
 ```
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplo de acelerômetro](http://go.microsoft.com/fwlink/p/?linkid=241377)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

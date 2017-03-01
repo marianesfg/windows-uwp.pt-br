@@ -3,20 +3,27 @@ author: mtoepke
 title: Tecnologias de jogos para aplicativos UWP (Plataforma Universal do Windows)
 description: "Neste guia, você aprenderá sobre as tecnologias disponíveis para o desenvolvimento de jogos UWP (Plataforma Universal do Windows)."
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, tecnologia, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 83c3fda490d7ab821e8e584291ded642c9c11dd1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7f6ad043299efa2aae7abdb1f1e0a7e898d40836
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Tecnologias de jogos para aplicativos UWP (Plataforma Universal do Windows)
+# <a name="game-technologies-for-universal-windows-platform-uwp-apps"></a>Tecnologias de jogos para aplicativos UWP (Plataforma Universal do Windows)
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Neste guia, você aprenderá sobre as tecnologias disponíveis para o desenvolvimento de jogos UWP (Plataforma Universal do Windows).
 
-##  Benefícios do Windows 10 para desenvolvimento de jogos
+##  <a name="benefits-of-windows-10-for-game-development"></a>Benefícios do Windows 10 para desenvolvimento de jogos
 
 
 Com a introdução da UWP no Windows 10, os títulos do Windows 10 poderão abranger todas as plataformas da Microsoft. Com a migração gratuita de versões anteriores do Windows, há um número cada vez maior de clientes do Windows 10. A combinação dessas duas coisas significa que seus títulos do Windows 10 serão capazes de chegar a um grande número de clientes por meio da Windows Store.
@@ -26,12 +33,12 @@ Além disso, o Windows 10 oferece muitos reursos novos que são particularmente 
 -   Paginação de memória reduzida e tamanho de sistema de memória geral reduzido
 -   O gerenciamento de memória de elementos gráficos aprimorado aloca ativamente e protege mais memória para o jogo de primeiro plano
 
-## Jogos UWP com C++ e DirectX
+## <a name="uwp-games-with-c-and-directx"></a>Jogos UWP com C++ e DirectX
 
 
 Os jogos em tempo real que exigem alto desempenho devem usar as APIs do DirectX. DirectX é uma coleção de APIs nativas para a criação de jogos e aplicativos multimídia que exigem alto desempenho, como jogos 3D. Como as APIs do DirectX são nativas, C++ é a única linguagem compatível com o DirectX.
 
-## Ambiente de desenvolvimento
+## <a name="development-environment"></a>Ambiente de desenvolvimento
 
 
 Para criar jogos para UWP, você precisará configurar seu ambiente de desenvolvimento instalando uma cópia do Visual Studio 2015. O Visual Studio 2015 permite que você crie aplicativos UWP e fornece ferramentas para desenvolvimento de jogos:
@@ -41,12 +48,12 @@ Para criar jogos para UWP, você precisará configurar seu ambiente de desenvolv
 
 Para obter mais informações, consulte Preparar seu ambiente da Plataforma Universal do Windows e DirectX para programação de jogos.
 
-## Introdução aos modelos de projeto de jogo em DirectX
+## <a name="getting-started-with-directx-game-project-templates"></a>Introdução aos modelos de projeto de jogo em DirectX
 
 
 Depois de configurar o ambiente de desenvolvimento, você pode usar um dos modelos de projeto DirectX relacionados para criar seu jogo DirectX UWP. O Visual Studio 2015 tem três modelos disponíveis para criar novos projetos UWP no DirectX: **Aplicativo DirectX 11 (Universal do Windows)**, **Aplicativo DirectX 12 (Universal do Windows)**e **Aplicativo DirectX 11 e XAML (Universal do Windows)**. Para obter mais informações, consulte [Criar um projeto de jogo em Plataforma Universal do Windows e DirectX usando um modelo](user-interface.md).
 
-## APIs do Windows 10
+## <a name="windows-10-apis"></a>APIs do Windows 10
 
 
 O Windows 10 oferece um amplo conjunto de APIs que são úteis para o desenvolvimento de jogos. Existem APIs para quase todos os aspectos de jogos, incluindo elementos gráficos 3D e 2D, áudio, entrada, recursos de texto, interface do usuário e rede.
@@ -316,19 +323,19 @@ Há muitas APIs relacionadas ao desenvolvimento de jogos, mas nem todos os jogos
 
      
 
-## Serviços Xbox Live
+## <a name="xbox-live-services"></a>Serviços Xbox Live
 
 
 O conjunto de recursos do Xbox Live – reprodução com o Xbox, conquistas, pontuação e muito mais – estará no Windows 10. Assim, você poderá trabalhar com ID@Xbox para incluir Live em seus jogos UWP! No futuro, também ajudaremos você a enviar seus jogos de plataforma de aplicativo universal no Xbox One. Para obter mais informações, consulte a página [ID@Xbox](http://www.xbox.com/developers/id).
 
-##  Alternativas para gravar jogos com o DirectX e a UWP
+##  <a name="alternatives-to-writing-games-with-directx-and-uwp"></a>Alternativas para gravar jogos com o DirectX e a UWP
 
 
-### Jogos UWP sem o DirectX
+### <a name="uwp-games-without-directx"></a>Jogos UWP sem o DirectX
 
 Jogos mais simples com requisitos de desempenho mínimo, como jogos de cartas ou jogos de tabuleiro, podem ser gravados sem DirectX e não necessariamente precisam ser gravados em C++. Esses tipos de jogos podem usar qualquer linguagem suportada pela UWP como C#, Visual Basic, C++ e HTML/JavaScript. Se seu jogo não precisar ter desempenho ou elementos gráficos intensivos, confira a [Amostra de jogo por toque em JavaScript e HTML5](http://code.msdn.microsoft.com/windowsapps/JavaScript-and-HTML5-touch-d96f6031) como um exemplo.
 
-### Mecanismos de jogo
+### <a name="game-engines"></a>Mecanismos de jogo
 
 Como uma alternativa à criação do próprio mecanismo de jogo usando as APIs de desenvolvimento de jogos do Windows, muitos mecanismos de jogo de alta qualidade compilados com base nas APIs de desenvolvimento de jogos do Windows estão à disposição para desenvolver jogos com base em plataformas do Windows. Ao levar em consideração um mecanismo ou uma biblioteca de jogos, você tem várias opções:
 
@@ -339,7 +346,7 @@ Como uma alternativa à criação do próprio mecanismo de jogo usando as APIs d
 -   Inteligência artificial e mecanismo para encontrar caminhos – Os mecanismos de inteligência artificial e para encontrar caminhos oferecem uma estrutura para controlar o comportamento de agentes no jogo.
 -   Mecanismos de finalidade especial – Existem vários mecanismos adicionais para identificar praticamente todas as tarefas relacionadas ao desenvolvimento de jogos como, por exemplo, criar sistemas de inventário e árvores de caixa de diálogo.
 
-## Enviar um jogo para a Loja
+## <a name="submitting-a-game-to-the-store"></a>Enviar um jogo para a Loja
 
 
 Depois que você estiver pronto para publicar seu jogo, será necessário criar uma conta de desenvolvedor e enviar seu jogo para a Windows Store.
@@ -352,10 +359,5 @@ Para obter informações sobre como enviar seu jogo para a Windows Store, veja <
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

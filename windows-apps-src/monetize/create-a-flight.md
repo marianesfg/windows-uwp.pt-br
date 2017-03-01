@@ -1,24 +1,31 @@
 ---
 author: mcleanbyron
 ms.assetid: 8C1E9E36-13AF-4386-9D0F-F9CB320F02F5
-description: "Use este método na API de envio da Windows Store para criar um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
+description: "Use este método na API de envio da Windows Store para criar um pacote de pré-lançamento para um app que está registrado à sua conta do Centro de Desenvolvimento do Windows."
 title: "Criar um pacote de pré-lançamento usando a API de envio da Windows Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, API de envio da Windows Store, criar versão de pré-lançamento"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 35823bd1fd0c059ebc9b2107c31400a7ad788a1e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2b2b8acb1cfa2a1eaa0ce586cace250cedb5cf71
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Criar um pacote de pré-lançamento usando a API de envio da Windows Store
+# <a name="create-a-package-flight-using-the-windows-store-submission-api"></a>Criar um pacote de pré-lançamento usando a API de envio da Windows Store
 
 
 
 
-Use este método na API de envio da Windows Store para criar um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Windows Store para criar um pacote de pré-lançamento para um app que está registrado à sua conta do Centro de Desenvolvimento do Windows.
 
 >**Observação**&nbsp;&nbsp;Este método cria um pacote de pré-lançamento sem nenhum envio. Para criar um envio para o pacote de pré-lançamento, consulte os métodos em [Gerenciar envios do pacote de pré-lançamento](manage-flight-submissions.md).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este método, primeiro você precisa do seguinte:
 
@@ -27,7 +34,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Request
+## <a name="request"></a>Solicitação
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
@@ -38,23 +45,23 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 <span/>
  
 
-### Cabeçalho da solicitação
+### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorização | cadeia de caracteres | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Parâmetros solicitados
+### <a name="request-parameters"></a>Parâmetros solicitados
 
-| Name        | Tipo   | Descrição                                                                 |
+| Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um pacote de pré-lançamento. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do app para o qual você deseja criar um pacote de pré-lançamento. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de app](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
 <span/>
 
-### Corpo da solicitação
+### <a name="request-body"></a>Corpo da solicitação
 
 O corpo da solicitação tem os parâmetros a seguir.
  
@@ -66,9 +73,9 @@ O corpo da solicitação tem os parâmetros a seguir.
 
 <span/>
 
-### Exemplo de solicitação
+### <a name="request-example"></a>Exemplo de solicitação
 
-O exemplo a seguir demonstra como criar um novo pacote de pré-lançamento para um aplicativo que tem a ID da Loja 9WZDNCRD911W.
+O exemplo a seguir demonstra como criar um novo pacote de pré-lançamento para um app que tem a ID da Loja 9WZDNCRD911W.
 
 ```syntax
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights HTTP/1.1
@@ -84,7 +91,7 @@ Content-Type: application/json
 
 ```
 
-## Resposta
+## <a name="response"></a>Resposta
 
 O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. Para obter mais detalhes sobre os valores no corpo da resposta, veja as seções a seguir.
 
@@ -99,35 +106,30 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 }
 ```
 
-### Corpo da resposta
+### <a name="response-body"></a>Corpo da resposta
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightId            | cadeia de caracteres  | A ID do pacote de pré-lançamento. Esse valor é fornecido pelo Centro de Desenvolvimento.  |
+| flightId            | string  | A ID do pacote de pré-lançamento. Esse valor é fornecido pelo Centro de Desenvolvimento.  |
 | friendlyName           | cadeia de caracteres  | O nome do pacote de pré-lançamento, conforme especificado na solicitação.   |  
 | groupIds           | array  | Uma matriz de cadeias de caracteres que contêm os IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento, conforme especificado na solicitação. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
-| rankHigherThan           | cadeia de caracteres  | O nome amigável do pacote de pré-lançamento que foi classificado imediatamente abaixo do pacote de pré-lançamento atual, conforme especificado na solicitação. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
+| rankHigherThan           | string  | O nome amigável do pacote de pré-lançamento que foi classificado imediatamente abaixo do pacote de pré-lançamento atual, conforme especificado na solicitação. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
 
 <span/>
 
-## Códigos de erro
+## <a name="error-codes"></a>Códigos de erro
 
 Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | A solicitação é inválida. |
-| 409  | O pacote de pré-lançamento não pôde ser criado por causa de seu estado atual ou o aplicativo usa um recurso de painel do Centro de Desenvolvimento é [atualmente não é compatível com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | O pacote de pré-lançamento não pôde ser criado por causa de seu estado atual ou o app usa um recurso de painel do Centro de Desenvolvimento é [atualmente não é compatível com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 <span/>
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obter um pacote de pré-lançamento](get-a-flight.md)
 * [Excluir um pacote de pré-lançamento](delete-a-flight.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

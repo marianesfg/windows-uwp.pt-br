@@ -3,20 +3,27 @@ author: laurenhughes
 ms.assetid: D5D98044-7221-4C2A-9724-56E59F341AB0
 description: "Este artigo mostra como ler e gravar propriedades de metadados de imagem e como adicionar marca de localização em arquivos usando a classe de utilitário GeotagHelper."
 title: Metadados de imagem
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
-ms.openlocfilehash: 958033bc054da292c85f8df0a57cf964696c82bd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: af9a4c243c939ddc04e5d0763b58df00e70d7017
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Metadados de imagem
+# <a name="image-metadata"></a>Metadados de imagem
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como ler e gravar propriedades de metadados de imagem e como adicionar marca de localização em arquivos usando a classe de utilitário [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683).
 
-## Propriedades de imagem
+## <a name="image-properties"></a>Propriedades de imagem
 
 A propriedade [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225) retorna um objeto [**StorageItemContentProperties**](https://msdn.microsoft.com/library/windows/apps/hh770642) que fornece acesso às informações relacionadas ao conteúdo sobre o arquivo. Obtenha as propriedades específicas da imagem chamando [**GetImagePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh770646). O objeto retornado [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/br207718) expõe membros que contêm campos de metadados de imagem básicos, como o título da imagem e a data de captura.
 
@@ -32,7 +39,7 @@ Para acessar um conjunto maior de metadados do arquivo, use o Windows Property S
 
 -   Como as propriedades que não são suportadas podem retornar um valor nulo quando recuperado, sempre verifique para null antes de usar um valor de metadados retornados.
 
-## GeotagHelper
+## <a name="geotag-helper"></a>GeotagHelper
 
 GeotagHelper é uma classe de utilitário que facilita a marcação de imagens com dados geográficos usando as APIs [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603) diretamente, sem precisar analisar ou construir manualmente o formato de metadados.
 
@@ -54,7 +61,7 @@ Para obter um GeoPoint que represente o local de um arquivo de imagem com marca 
 
 [!code-cs[GetGeoData](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetGeoData)]
 
-## Decodificar e codificar metadados de imagem
+## <a name="decode-and-encode-image-metadata"></a>Decodificar e codificar metadados de imagem
 
 A maneira mais avançada de trabalhar com dados de imagem é ler e gravar as propriedades no nível do fluxo usando um [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) ou um [BitmapEncoder](bitmapencoder-options-reference.md). Para essas operações, você pode usar Propriedades do Windows para especificar os dados que está lendo ou gravando, mas também pode usar a linguagem de consulta de metadados fornecida pelo Windows Imaging Component (WIC) para especificar o caminho para uma propriedade solicitada.
 
@@ -79,7 +86,7 @@ Crie um objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 -   [**SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252) falhará com o código de erro 0x88982F41 se não houver suporte para uma das propriedades solicitadas pela imagem associada ao codificador.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Imagens](imaging.md)
  
@@ -88,10 +95,5 @@ Crie um objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

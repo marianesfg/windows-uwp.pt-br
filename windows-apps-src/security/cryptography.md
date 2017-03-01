@@ -1,23 +1,30 @@
 ---
 title: Criptografia
-description: "O artigo fornece uma visão geral dos recursos de criptografia disponíveis para aplicativos UWP (Plataforma Universal do Windows). Para obter informações detalhadas sobre tarefas específicas, consulte a tabela no final deste artigo."
+description: "O artigo fornece uma visão geral dos recursos de criptografia disponíveis para apps UWP (Plataforma Universal do Windows). Para obter informações detalhadas sobre tarefas específicas, consulte a tabela no final deste artigo."
 ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: c5feae97563277dc14a64d5c96cb6229b6cfb8b1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3329a873b0e86a606d6e8899dcaca62c2e127c29
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Criptografia
+# <a name="cryptography"></a>Criptografia
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-O artigo fornece uma visão geral dos recursos de criptografia disponíveis para aplicativos UWP (Plataforma Universal do Windows). Para obter informações detalhadas sobre tarefas específicas, consulte a tabela no final deste artigo.
+O artigo fornece uma visão geral dos recursos de criptografia disponíveis para apps UWP (Plataforma Universal do Windows). Para obter informações detalhadas sobre tarefas específicas, consulte a tabela no final deste artigo.
 
-## Terminologia
+## <a name="terminology"></a>Terminologia
 
 
 A terminologia a seguir é usada comumente em criptografia e infraestrutura de chave pública (PKI).
@@ -40,11 +47,11 @@ A terminologia a seguir é usada comumente em criptografia e infraestrutura de c
 | Certificado X.509           | Um documento digital, geralmente emitido por uma autoridade de certificação, para verificar a identidade de um indivíduo, sistema ou entidade para outras partes interessadas.                                            |
 
  
-## Namespaces
+## <a name="namespaces"></a>Namespaces
 
-Os seguintes namespaces estão disponíveis para uso em aplicativos.
+Os seguintes namespaces estão disponíveis para uso em apps.
 
-### Windows.Security.Cryptography
+### <a name="windowssecuritycryptography"></a>Windows.Security.Cryptography
 
 Contém a classe CryptographicBuffer e métodos estáticos que permitem:
 
@@ -53,7 +60,7 @@ Contém a classe CryptographicBuffer e métodos estáticos que permitem:
 -   Codificar mensagens para transporte de rede
 -   Decodificar mensagens depois do transporte
 
-### Windows.Security.Cryptography.Certificates
+### <a name="windowssecuritycryptographycertificates"></a>Windows.Security.Cryptography.Certificates
 
 Contém classes, interfaces e tipos de enumeração que permitem:
 
@@ -62,7 +69,7 @@ Contém classes, interfaces e tipos de enumeração que permitem:
 -   Importar um certificado em um arquivo PFX
 -   Especificar e recuperar propriedades de solicitação de certificado
 
-### Windows.Security.Cryptography.Core
+### <a name="windowssecuritycryptographycore"></a>Windows.Security.Cryptography.Core
 
 Contém classes e tipos de enumeração que permitem:
 
@@ -76,19 +83,19 @@ Contém classes e tipos de enumeração que permitem:
 -   Trabalhar com provedores de algoritmo MAC
 -   Trabalhar com provedores de algoritmo de derivação de chave
 
-### Windows.Security.Cryptography.DataProtection
+### <a name="windowssecuritycryptographydataprotection"></a>Windows.Security.Cryptography.DataProtection
 
 Contém classes que permitem:
 
 -   Criptografar e descriptografar dados estáticos de modo assíncrono.
 -   Criptografar e descriptografar fluxos de dados de modo assíncrono.
 
-## Recursos do aplicativo de PKI e criptografia
+## <a name="crypto-and-pki-application-capabilities"></a>Recursos do app de PKI e criptografia
 
 
-A interface de programação de aplicativo simplificada disponível para aplicativos permite as seguintes funcionalidades criptográficas e de PKI (infraestrutura de chave pública):
+A interface de programação de app simplificada disponível para apps permite as seguintes funcionalidades criptográficas e de PKI (infraestrutura de chave pública):
 
-### Suporte à criptografia
+### <a name="cryptography-support"></a>Suporte à criptografia
 
 Você pode executar as seguintes tarefas criptográficas. Para obter mais informações, consulte o namespace [**Windows.Security.Cryptography.Core**](https://msdn.microsoft.com/library/windows/apps/br241547).
 
@@ -106,13 +113,13 @@ O SDK também fornece uma interface simplificada para proteção de dados basead
 -   Proteção assíncrona de dados estáticos
 -   Proteção assíncrona de um fluxo de dados
 
-### Suporte à codificação
+### <a name="encoding-support"></a>Suporte à codificação
 
-Um aplicativo pode codificar dados criptográficos para transmissão por uma rede e decodificar dados recebidos de uma fonte de rede. Para obter mais informações, consulte os métodos estáticos disponíveis no namespace [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404).
+Um app pode codificar dados criptográficos para transmissão por uma rede e decodificar dados recebidos de uma fonte de rede. Para obter mais informações, consulte os métodos estáticos disponíveis no namespace [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404).
 
-### Suporte a PKI
+### <a name="pki-support"></a>Suporte a PKI
 
-Os aplicativos podem executar as seguintes tarefas PKI. Para obter mais informações, consulte o namespace [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476).
+Os apps podem executar as seguintes tarefas PKI. Para obter mais informações, consulte o namespace [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476).
 
 -   Criar um certificado
 -   Criar um certificado autoassinado
@@ -123,31 +130,26 @@ Os aplicativos podem executar as seguintes tarefas PKI. Para obter mais informa�
 
 Além disso, você pode usar o manifesto para realizar as seguintes ações:
 
--   Especificar certificados raiz confiáveis para cada aplicativo
--   Especificar certificados confiáveis de par para cada aplicativo
+-   Especificar certificados raiz confiáveis para cada app
+-   Especificar certificados confiáveis de par para cada app
 -   Explicitamente desabilitar a herança de confiança do sistema
 -   Especificar os critérios de seleção de certificado
     -   Somente certificados de hardware
     -   Certificados que são encadeados através de um conjunto especificado de emissores
-    -   Selecionar automaticamente um certificado do repositório de aplicativos
+    -   Selecionar automaticamente um certificado do repositório de apps
 
-## Artigos detalhados
+## <a name="detailed-articles"></a>Artigos detalhados
 
 
 Os artigos a seguir fornecem mais detalhes sobre cenários de segurança:
 
 | Tópico                                                                         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Certificados](certificates.md)                                               | Este artigo aborda o uso de certificados em aplicativos UWP. Os certificados digitais são usados na criptografia de chave pública para associar uma chave pública a uma pessoa, um computador ou uma organização. As identidades associadas são usadas com mais frequência para autenticar uma entidade em outra. Por exemplo, os certificados são geralmente usados para autenticar um servidor Web em um usuário e um usuário em um servidor Web. É possível criar solicitações de certificados e instalar ou importar os certificados emitidos. Também é possível inscrever um certificado em uma hierarquia de certificados. |
+| [Certificados](certificates.md)                                               | Este artigo aborda o uso de certificados em apps UWP. Os certificados digitais são usados na criptografia de chave pública para associar uma chave pública a uma pessoa, um computador ou uma organização. As identidades associadas são usadas com mais frequência para autenticar uma entidade em outra. Por exemplo, os certificados são geralmente usados para autenticar um servidor Web em um usuário e um usuário em um servidor Web. É possível criar solicitações de certificados e instalar ou importar os certificados emitidos. Também é possível inscrever um certificado em uma hierarquia de certificados. |
 | [Chaves criptográficas](cryptographic-keys.md)                                   | Este artigo mostra como usar funções de derivação de chaves padrão para derivar chaves e como criptografar conteúdo usando chaves simétricas e assimétricas.                                                                                                                                                                                                                                                                                                                                                                             |
-| [Proteção de dados](data-protection.md)                                         | Este artigo explica como usar a classe [DataProtectionProvider](https://msdn.microsoft.com/library/windows/apps/br241559) no [Windows.Security.Cryptography.DataProtection](https://msdn.microsoft.com/library/windows/apps/br241585) para criptografar e descriptografar dados digitais em um aplicativo UWP.                                                                                                                                                                                                                  |
-| [MACs, hashes e assinaturas](macs-hashes-and-signatures.md)               | Este artigo aborda como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em aplicativos UWP para detectar adulteração de mensagem.                                                                                                                                                                                                                                                                                                                                                                                |
-| [Restrições de exportação na criptografia](export-restrictions-on-cryptography.md) | Use esta informação para determinar se seu aplicativo usa criptografia de forma que pode impedir que ele seja listado na Windows Store.                                                                                                                                                                                                                                                                                                                                                                                            |
+| [Proteção de dados](data-protection.md)                                         | Este artigo explica como usar a classe [DataProtectionProvider](https://msdn.microsoft.com/library/windows/apps/br241559) no [Windows.Security.Cryptography.DataProtection](https://msdn.microsoft.com/library/windows/apps/br241585) para criptografar e descriptografar dados digitais em um app UWP.                                                                                                                                                                                                                  |
+| [MACs, hashes e assinaturas](macs-hashes-and-signatures.md)               | Este artigo aborda como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em apps UWP para detectar adulteração de mensagem.                                                                                                                                                                                                                                                                                                                                                                                |
+| [Restrições de exportação na criptografia](export-restrictions-on-cryptography.md) | Use esta informação para determinar se seu app usa criptografia de forma que pode impedir que ele seja listado na Windows Store.                                                                                                                                                                                                                                                                                                                                                                                            |
 | [Tarefas comuns de criptografia](common-cryptography-tasks.md)                     | Estes artigos fornecem código de amostra para tarefas de criptografia comuns da UWP, como criar números aleatórios, comparar buffers, converter entre cadeias de caracteres e dados binários, copiar de e para matrizes de bytes e codificar e decodificar dados.                                                                                                                                                                                                                                                                                    |
 
  
-
-
-<!--HONumber=Aug16_HO3-->
-
-

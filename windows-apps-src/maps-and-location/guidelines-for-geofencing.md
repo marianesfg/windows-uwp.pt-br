@@ -3,13 +3,20 @@ author: PatrickFarley
 Description: "Siga estas práticas recomendadas para cerca geográfica em seu aplicativo."
 title: "Diretrizes de aplicativos com cerca geográfica"
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, mapa, localização, cerca geográfica"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0a152fbc444e252ed8c2a822036e00b8869703ac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e21b5b89c95a6b4988e1e95fc924ec3eefd46942
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Diretrizes de aplicativos com cerca geográfica
+# <a name="guidelines-for-geofencing-apps"></a>Diretrizes de aplicativos com cerca geográfica
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -22,13 +29,13 @@ ms.openlocfilehash: 0a152fbc444e252ed8c2a822036e00b8869703ac
 
 Siga estas práticas recomendadas para [**cerca geográfica**](https://msdn.microsoft.com/library/windows/apps/dn263744) em seu aplicativo.
 
-## Recomendações
+## <a name="recommendations"></a>Recomendações
 
 
 -   Se seu aplicativo precisará de acesso à Internet quando ocorrer um evento de [**Cerca geográfica**](https://msdn.microsoft.com/library/windows/apps/dn263587), verifique o acesso à Internet antes de criar a cerca geográfica.
     -   Se o aplicativo atualmente não oferece acesso à Internet, você pode pedir ao usuário que se conecte à Internet antes de você configurar a cerca geográfica.
     -   Se não for possível ter acesso à Internet, evite consumir o poder necessário para as verificações de local da cerca geográfica.
--   Verifique a relevância das notificações de cerca geográfica verificando o carimbo de data/hora e o local atual quando um evento de cerca geográfica indicar mudanças em um estado de [**Entered**](https://msdn.microsoft.com/library/windows/apps/dn263660) ou de **Exited**. Consulte [Verificando o carimbo de data/hora e o local atual](#timestamp) a seguir para obter mais informações.
+-   Verifique a relevância das notificações de cerca geográfica verificando o carimbo de data/hora e o local atual quando um evento de cerca geográfica indicar mudanças em um estado de [**Entered**](https://msdn.microsoft.com/library/windows/apps/dn263660) ou de **Exited**. Consulte **Verificando o carimbo de data/hora e o local atual** a seguir para obter mais informações.
 -   Crie exceções para gerenciar casos em que um dispositivo não pode acessar informações sobre a localização, nem notificar o usuário se necessário. As informações de localização podem não estar disponíveis porque as permissões estão desativadas, o dispositivo não contém um rádio de GPS, o sinal de GPS está bloqueado ou o sinal de Wi-Fi não está suficientemente forte.
 -   Em geral, não é necessário escutar eventos de cerca geográfica no primeiro e no segundo plano ao mesmo tempo. Todavia, se seu aplicativo precisar escutar eventos de cerca geográfica tanto em primeiro quanto em segundo plano:
 
@@ -40,9 +47,9 @@ Siga estas práticas recomendadas para [**cerca geográfica**](https://msdn.micr
 -   Não use mais de 1000 cercas geográficas por aplicativo. O sistema na realidade oferece suporte para milhares de cercas geográficas por aplicativo. Você pode manter um bom desempenho do aplicativo para reduzir o uso de memória do aplicativo, usando menos de 1000.
 -   Não crie uma cerca geográfica com um raio menor que 50 metros. Se seu aplicativo precisar usar cercas geográficas com raios pequenos, sugira aos usuários para o utilizarem em um dispositivo com rádio GPS para garantir um melhor desempenho.
 
-## Diretrizes de uso adicional
+## <a name="additional-usage-guidance"></a>Diretrizes de uso adicional
 
-### Verificando o carimbo de data/hora e a localização atual
+### <a name="checking-the-time-stamp-and-current-location"></a>Verificando o carimbo de data/hora e a localização atual
 
 Quando um evento indica uma alteração em um estado [**Entered**](https://msdn.microsoft.com/library/windows/apps/dn263660) ou **Exited**, verifique o carimbo de data/hora do evento e sua localização atual. Diversos fatores, como por exemplo o sistema não ter recursos suficientes para executar uma tarefa em segundo plano, o usuário não notar a notificação ou então o dispositivo estar em modo de standby (em Windows), podem afetar o momento em que o evento é processado pelo usuário. Por exemplo, a seguinte sequência pode ocorrer:
 
@@ -54,7 +61,7 @@ Quando um evento indica uma alteração em um estado [**Entered**](https://msdn.
 
 Pelo carimbo de data/hora, você pode dizer qual ação já ocorreu. Pela localização atual, você pode ver que o usuário agora está fora do limite geográfico. Dependendo da funcionalidade de seu aplicativo, convém remover esse evento do filtro.
 
-### Ouvintes em primeiro e segundo plano
+### <a name="background-and-foreground-listeners"></a>Ouvintes em primeiro e segundo plano
 
 Em geral, seu aplicativo não precisa escutar eventos de [**Cerca geográfica**](https://msdn.microsoft.com/library/windows/apps/dn263587) em primeiro plano e em uma tarefa em segundo plano ao mesmo tempo. O melhor método caso você precise das duas coisas, é deixar que a tarefa em segundo plano cuide das notificações. Se você configurar ouvintes de cerca geográfica em primeiro e em segundo plano, não será possível saber qual vai ser disparado primeiro, portanto, você sempre deverá chamar o método [**ReadReports**](https://msdn.microsoft.com/library/windows/apps/dn263633) para descobrir se um evento ocorreu.
 
@@ -62,9 +69,9 @@ Se você configurar ouvintes de cerca geográfica em primeiro e segundo plano, c
 
 ```csharp
     Windows.UI.Core.CoreWindow coreWindow;    
-    
+
     // This needs to be set before InitializeComponent sets up event registration for app visibility
-    coreWindow = CoreWindow.GetForCurrentThread(); 
+    coreWindow = CoreWindow.GetForCurrentThread();
     coreWindow.VisibilityChanged += OnVisibilityChanged;
 ```
 
@@ -114,13 +121,13 @@ function onVisibilityChanged() {
 }
 ```
 
-### Dimensionando suas cercas geográficas
+### <a name="sizing-your-geofences"></a>Dimensionando suas cercas geográficas
 
 Enquanto o GPS mostra as informações de localização mais precisas, o limite geográfico também usa Wi-Fi ou outros sensores de localização para determinar a posição atual do usuário. Mas o uso desses outros métodos pode afetar o tamanho dos limites geográficos que você pode criar. Se o nível de precisão for baixo, criar cercas geográficas não será útil. Em geral, é recomendado que você não crie uma cerca geográfica com um raio inferior a 50 metros. Além disso, tarefas em segundo plano de cercas geográficas são executadas apenas periodicamente no Windows. Se você utilizar uma cerca geográfica pequena, há a possibilidade de perder totalmente um evento de [**Enter**](https://msdn.microsoft.com/library/windows/apps/dn263660) ou de **Exit**.
 
 Se seu aplicativo precisar usar cercas geográficas com raios pequenos, sugira aos usuários para o utilizarem em um dispositivo com rádio GPS para garantir um melhor desempenho.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Configurar uma cerca geográfica](https://msdn.microsoft.com/library/windows/apps/mt219702)
@@ -130,13 +137,4 @@ Se seu aplicativo precisar usar cercas geográficas com raios pequenos, sugira a
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -1,33 +1,40 @@
 ---
 author: mcleanbyron
 ms.assetid: 9621641A-7462-425D-84CC-101877A738DA
-description: Saiba mais sobre como migrar do AdMediatorControl para o AdControl em seus aplicativos UWP.
-title: Migrar do AdMediatorControl para o AdControl para aplicativos UWP
+description: Saiba mais sobre como migrar do AdMediatorControl para o AdControl em seus apps UWP.
+title: Migrar do AdMediatorControl para o AdControl para apps UWP
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anúncios, propaganda, AdMediatorControl, AdControl, migrar"
 translationtype: Human Translation
-ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
-ms.openlocfilehash: 6e7e833327dce4b49e44b7485908c8a507b217ef
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 83235595a6a7f9e9b0b5d8de154d6e5d8a8db8ef
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="migrate-from-admediatorcontrol-to-adcontrol-for-uwp-apps"></a>Migrar do AdMediatorControl para o AdControl para aplicativos UWP
+# <a name="migrate-from-admediatorcontrol-to-adcontrol-for-uwp-apps"></a>Migrar do AdMediatorControl para o AdControl para apps UWP
 
-As versões anteriores do SDK de publicidade da Microsoft permitiam que os aplicativos da Plataforma Universal do Windows (UWP) exibissem anúncios em faixa usando a classe **AdMediatorControl**, o que permitia que os desenvolvedores otimizassem sua receita de anúncios exibindo anúncios em faixa de nossas redes de parceiros (AOL e AppNexus) e do AdDuplex. O [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) não dá mais suporte à classe **AdMediatorControl**. Se você tem um aplicativo existente que usa a classe **AdMediatorControl** de um SDK anterior e quer migrá-lo para um aplicativo UWP que usa o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk), siga as instruções deste artigo para atualizar seu código para usar a classe **AdControl**, em vez da classe **AdMediatorControl**. Opcionalmente, você pode configurar seu aplicativo para mediar anúncios com AdDuplex, usando uma abordagem ponderada ou classificada.
+As versões anteriores do SDK de publicidade da Microsoft permitiam que os apps da Plataforma Universal do Windows (UWP) exibissem anúncios em faixa usando a classe **AdMediatorControl**, o que permitia que os desenvolvedores otimizassem sua receita de anúncios exibindo anúncios em faixa de nossas redes de parceiros (AOL e AppNexus) e do AdDuplex. O [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) não dá mais suporte à classe **AdMediatorControl**. Se você tem um app existente que usa a classe **AdMediatorControl** de um SDK anterior e quer migrá-lo para um app UWP que usa o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk), siga as instruções deste artigo para atualizar seu código para usar a classe **AdControl**, em vez da classe **AdMediatorControl**. Opcionalmente, você pode configurar seu app para mediar anúncios com AdDuplex, usando uma abordagem ponderada ou classificada.
 
->**Observação**&nbsp;&nbsp;Os exemplos de código neste artigo são fornecidos somente para fins de ilustração. Talvez seja necessário fazer ajustes nos exemplos de código para que funcionem em seu aplicativo.
+>**Observação**&nbsp;&nbsp;Os exemplos de código neste artigo são fornecidos somente para fins de ilustração. Talvez seja necessário fazer ajustes nos exemplos de código para que funcionem em seu app.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* Um aplicativo UWP que está usando o AdMediatorControl e está publicado na Windows Store.
+* Um app UWP que está usando o AdMediatorControl e está publicado na Windows Store.
 * Um computador de desenvolvimento com o Visual Studio 2015 e o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) instalados.
 * Se você quiser mediar anúncios com AdDuplex, deverá ter também o [AdDuplex Windows 10 SDK](https://visualstudiogallery.msdn.microsoft.com/6930860a-e64b-4b46-9d72-62d7fddda077) instalado no computador de desenvolvimento.
 
-  >**Observação**&nbsp;&nbsp;Como alternativa para a execução do instalador do AdDuplex SDK do link acima, você pode instalar as bibliotecas AdDuplex para seu projeto de aplicativo UWP no Visual Studio 2015. Com seu projeto de aplicativo UWP aberto no Visual Studio 2015, clique em **Projeto** > **Gerenciar Pacotes NuGet**, procure o pacote NuGet denominado **AdDuplexWin10** e instale o pacote.
+  >**Observação**&nbsp;&nbsp;Como alternativa para a execução do instalador do AdDuplex SDK do link acima, você pode instalar as bibliotecas AdDuplex para seu projeto de app UWP no Visual Studio 2015. Com seu projeto de app UWP aberto no Visual Studio 2015, clique em **Projeto** > **Gerenciar Pacotes NuGet**, procure o pacote NuGet denominado **AdDuplexWin10** e instale o pacote.
 
-## <a name="step-1-retrieve-your-application-ids-and-ad-unit-ids"></a>Etapa 1: recuperar as IDs de seus aplicativos e unidades de anúncio
+## <a name="step-1-retrieve-your-application-ids-and-ad-unit-ids"></a>Etapa 1: recuperar as IDs de seus apps e unidades de anúncio
 
-Quando você migrar seu código para usar a classe **AdControl**, deverá saber as IDs de seus aplicativos e unidades de anúncio. A melhor maneira de obter as IDs mais recentes é recuperá-las de seu arquivo de configuração de controle.
+Quando você migrar seu código para usar a classe **AdControl**, deverá saber as IDs de seus apps e unidades de anúncio. A melhor maneira de obter as IDs mais recentes é recuperá-las de seu arquivo de configuração de controle.
 
-1. Entre no painel do Centro de Desenvolvimento do Windows e clique no aplicativo que está usando **AdMediatorControl** atualmente.
+1. Entre no painel do Centro de Desenvolvimento do Windows e clique no app que está usando **AdMediatorControl** atualmente.
 2. Clique em **Monetização** e em **Monetizar com anúncios**.
 3. Na seção **Controle de anúncios do Windows**, clique no link **Baixar configuração de controle** e abra o arquivo AdMediator.config em um editor de texto, como o Bloco de Notas.
 4. No arquivo, localize o elemento ```<AdAdapterInfo>``` com o elemento filho ```<Name>MicrosoftAdvertising</Name>```. Esta seção contém a configuração para anúncios pagos da Microsoft.
@@ -47,7 +54,7 @@ Quando você migrar seu código para usar a classe **AdControl**, deverá saber 
   </Metadata>
   ```
 
-6. Copie ambos os valores nesses elementos ```<Value>``` para uso posterior. Esses valores contêm a ID do aplicativo e a ID da unidade de anúncio não móvel para anúncios pagos da Microsoft.
+6. Copie ambos os valores nesses elementos ```<Value>``` para uso posterior. Esses valores contêm a ID do app e a ID da unidade de anúncio não móvel para anúncios pagos da Microsoft.
 5. No mesmo elemento ```<AdAdapterInfo>```, localize os elementos ```<Property>``` que contêm elementos ```<Key>``` com os valores **MApplicationId** e **MAdUnitId**. No exemplo a seguir, os valores dos elementos ```<Value>``` são exemplos.
 
   > [!div class="tabbedCodeSnippets"]
@@ -64,26 +71,26 @@ Quando você migrar seu código para usar a classe **AdControl**, deverá saber 
   </Metadata>
   ```
 
-6. Copie ambos os valores nos elementos ```<Value>``` para uso posterior. Esses valores contêm a ID do aplicativo e a ID da unidade de anúncio móvel para anúncios pagos da Microsoft.
+6. Copie ambos os valores nos elementos ```<Value>``` para uso posterior. Esses valores contêm a ID do app e a ID da unidade de anúncio móvel para anúncios pagos da Microsoft.
 7. Se você usar [anúncios domésticos](../publish/about-house-ads.md), localize o elemento ```<AdAdapterInfo>``` com o elemento filho ```<Name>MicrosoftAdvertisingHouse</Name>```. Nesse elemento, localize os elementos ```<Key>``` com os valores **MAdUnitId** e **WAdUnitId** e salve os valores dos elementos ```<Value>``` correspondentes para uso posterior. Esses são as IDs das unidades de anúncio móveis e não móveis para anúncios domésticos da Microsoft, respectivamente.
-8. Se você usar AdDuplex, localize o elemento ```<AdAdapterInfo>``` com o elemento filho ```<Name>AdDuplex</Name>```. Nesse elemento, localize os elementos ```<Key>``` com os valores **AppKey** e **AdUnitId** e salve os valores dos elementos ```<Value>``` correspondentes para uso posterior. Esses valores são sua chave de aplicativo AdDuplex e a ID da unidade de anúncio, respectivamente.
+8. Se você usar AdDuplex, localize o elemento ```<AdAdapterInfo>``` com o elemento filho ```<Name>AdDuplex</Name>```. Nesse elemento, localize os elementos ```<Key>``` com os valores **AppKey** e **AdUnitId** e salve os valores dos elementos ```<Value>``` correspondentes para uso posterior. Esses valores são sua chave de app AdDuplex e a ID da unidade de anúncio, respectivamente.
 
-## <a name="step-2-update-your-app-code"></a>Etapa 2: atualizar o código de seu aplicativo
+## <a name="step-2-update-your-app-code"></a>Etapa 2: atualizar o código de seu app
 
-Agora que você tem as IDs de seus aplicativos e unidades de anúncio, já pode atualizar o código de seu aplicativo para usar **AdControl** em vez de **AdMediatorControl**.
+Agora que você tem as IDs de seus apps e unidades de anúncio, já pode atualizar o código de seu app para usar **AdControl** em vez de **AdMediatorControl**.
 
 ### <a name="microsoft-paid-ads-only"></a>Apenas anúncios pagos da Microsoft
 
 Se você usa apenas anúncios pagos da Microsoft em sua configuração de controle de anúncios, siga estas etapas.
 
-  >**Observação**&nbsp;&nbsp;Estas etapas presumem que a página do aplicativo em que você quer exibir anúncios contenha uma grade vazia chamada **myAdGrid**, por exemplo: ```<Grid x:Name="myAdGrid"/>```. Nestas etapas, você vai criar e configurar os controles de anúncios inteiramente em código, em vez de XAML.
+  >**Observação**&nbsp;&nbsp;Estas etapas presumem que a página do app em que você quer exibir anúncios contenha uma grade vazia chamada **myAdGrid**, por exemplo: ```<Grid x:Name="myAdGrid"/>```. Nestas etapas, você vai criar e configurar os controles de anúncios inteiramente em código, em vez de XAML.
 
-1. No Visual Studio, abra o projeto de seu aplicativo UWP.
+1. No Visual Studio, abra o projeto de seu app UWP.
 2.  Na janela **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e selecione **Adicionar Referência...**.
 No **Gerenciador de Referências**, expanda **Universal do Windows**, clique em **Extensões** e marque a caixa de seleção ao lado de **SDK do Microsoft Advertising para XAML** (versão 10.0).
 3. No **Gerenciador de Referências**, clique em OK.
 4. Remova a declaração **AdMediatorControl** do XAML e remova qualquer código que use esse objeto **AdMediatorControl**, inclusive os manipuladores de eventos relacionados.
-5. Abra o arquivo de código para a **página** do aplicativo na qual você deseja exibir anúncios.
+5. Abra o arquivo de código para a **página** do app na qual você deseja exibir anúncios.
 6. Adicione a instrução a seguir à parte superior do arquivo de código, caso ainda não exista.
 
   > [!div class="tabbedCodeSnippets"]
@@ -114,14 +121,14 @@ No **Gerenciador de Referências**, expanda **Universal do Windows**, clique em 
 
 Se você usa anúncios domésticos da Microsoft ou AdDuplex, bem como anúncios pagos da Microsoft, e quer continuar a controlar anúncios com o AdDuplex, siga as etapas desta seção. Os exemplos de código dão suporte ao AdDuplex e a anúncios domésticos da Microsoft. Se você usa o AdDuplex, mas não anúncios domésticos da Microsoft ou vice-versa, remova o código que não se aplica ao seu cenário.
 
-  >**Observação**&nbsp;&nbsp;Estas etapas presumem que a página do aplicativo em que você quer exibir anúncios contenha uma grade vazia chamada **myAdGrid**, por exemplo: ```<Grid x:Name="myAdGrid"/>```. Nestas etapas, você vai criar e configurar os controles de anúncios inteiramente em código, em vez de XAML.
+  >**Observação**&nbsp;&nbsp;Estas etapas presumem que a página do app em que você quer exibir anúncios contenha uma grade vazia chamada **myAdGrid**, por exemplo: ```<Grid x:Name="myAdGrid"/>```. Nestas etapas, você vai criar e configurar os controles de anúncios inteiramente em código, em vez de XAML.
 
-1. No Visual Studio, abra o projeto de seu aplicativo UWP.
+1. No Visual Studio, abra o projeto de seu app UWP.
 2.  Na janela **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e selecione **Adicionar Referência...**.
 No **Gerenciador de Referências**, expanda **Universal do Windows**, clique em **Extensões** e marque a caixa de seleção ao lado de **SDK do Microsoft Advertising para XAML** (versão 10.0).
 3. No **Gerenciador de Referências**, clique em OK.
 4. Remova a declaração **AdMediatorControl** do XAML e remova qualquer código que use esse objeto **AdMediatorControl**, inclusive os manipuladores de eventos relacionados.
-5. Abra o arquivo de código para a **página** do aplicativo na qual você deseja exibir anúncios.
+5. Abra o arquivo de código para a **página** do app na qual você deseja exibir anúncios.
 6. Adicione as instruções a seguir à parte superior do arquivo de código, caso ainda não existam.
 
   > [!div class="tabbedCodeSnippets"]
@@ -140,7 +147,7 @@ No **Gerenciador de Referências**, expanda **Universal do Windows**, clique em 
   * **WADUNITID_HOUSE**: atribua a **WAdUnitId** para anúncios domésticos da Microsoft que você recuperou anteriormente do arquivo de configuração de controle (esse valor é para a unidade de anúncio não móvel para anúncios domésticos).
   * **MAPPLICATIONID** e **MADUNITID_PAID**: atribua aos valores **MApplicationId** e **MAdUnitId** para anúncios pagos da Microsoft que você recuperou anteriormente do arquivo de configuração de controle (esses valores são para a unidade de anúncio não móvel para anúncios pagos).
   * **MADUNITID_HOUSE**: atribua a **MAdUnitId** para anúncios domésticos da Microsoft que você recuperou anteriormente do arquivo de configuração de controle (esse valor é para a unidade de anúncio móvel para anúncios domésticos).
-  * **ADDUPLEX_APPKEY** e **ADDUPLEX_ADUNIT**: atribua aos valores de chave de aplicativo e ID da unidade de anúncio AdDuplex que você recuperou anteriormente do arquivo de configuração de controle.
+  * **ADDUPLEX_APPKEY** e **ADDUPLEX_ADUNIT**: atribua aos valores de chave de app e ID da unidade de anúncio AdDuplex que você recuperou anteriormente do arquivo de configuração de controle.
 
   >**Observação**&nbsp;&nbsp;Não altere os valores **AD_REFRESH_SECONDS** e **MAX_ERRORS_PER_REFRESH** mostrados no exemplo anterior.
 
@@ -158,9 +165,4 @@ No **Gerenciador de Referências**, expanda **Universal do Windows**, clique em 
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[AdControl](./code/AdvertisingSamples/MigrateToAdControl/cs/ExamplePage1.xaml.cs#Snippet5)]
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

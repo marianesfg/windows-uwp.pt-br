@@ -1,21 +1,28 @@
 ---
 author: mtoepke
 title: Adicionando entrada e interatividade ao exemplo do Marble Maze
-description: Jogos de aplicativos da Plataforma Universal do Windows (UWP) funcionam em uma variedade de dispositivos, como computadores de mesa, laptops e tablets.
+description: Jogos de apps da Plataforma Universal do Windows (UWP) funcionam em uma variedade de dispositivos, como computadores de mesa, laptops e tablets.
 ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, entrada, amostra
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ddaa13c6bf7d1bcf5a01d7525389a893a077f4f4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dc667be326950151b08bbaded6d4e9a0b109523b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Adicionando entrada e interatividade ao exemplo do Marble Maze
+# <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Adicionando entrada e interatividade ao exemplo do Marble Maze
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Jogos de aplicativos da Plataforma Universal do Windows (UWP) funcionam em uma variedade de dispositivos, como computadores de mesa, laptops e tablets. Um dispositivo pode ter diversos mecanismos de entrada e controle. Dê suporte a vários dispositivos de entrada para permitir que o seu jogo acomode uma ampla variedade de preferências e recursos entre seus clientes. Este documento descreve as principais práticas a serem consideradas quando se trabalha com dispositivos de entrada e mostra como o Marble Maze as aplica.
+Jogos de apps da Plataforma Universal do Windows (UWP) funcionam em uma variedade de dispositivos, como computadores de mesa, laptops e tablets. Um dispositivo pode ter diversos mecanismos de entrada e controle. Dê suporte a vários dispositivos de entrada para permitir que o seu jogo acomode uma ampla variedade de preferências e recursos entre seus clientes. Este documento descreve as principais práticas a serem consideradas quando se trabalha com dispositivos de entrada e mostra como o Marble Maze as aplica.
 
 > **Observação**   O código de exemplo que corresponde a este documento pode ser encontrado em [DirectX Marble Maze game sample](http://go.microsoft.com/fwlink/?LinkId=624011).
 
@@ -23,16 +30,16 @@ Jogos de aplicativos da Plataforma Universal do Windows (UWP) funcionam em uma v
 Seguem alguns dos pontos principais discutidos neste documento para quando você trabalhar com entrada no seu jogo:
 
 -   Quando possível, dê suporte a vários dispositivos de entrada para permitir que o seu jogo acomode uma ampla variedade de preferências e recursos entre seus clientes. Embora o uso do controlador de jogo e do sensor seja opcional, recomendamos-o para melhorar a experiência do jogador. Nós projetamos a API do controlador de jogo e do sensor para ajudá-lo a integrar mais facilmente esses dispositivos de entrada.
--   Para inicializar o touch, você deve se registrar para eventos de janela como quando o ponteiro estiver ativado, liberado e movido. Para inicializar o acelerômetro, crie um objeto [**Windows::Devices::Sensors::Accelerometer**](https://msdn.microsoft.com/library/windows/apps/br225687) quando inicializar o aplicativo. O controle do Xbox 360 não exige inicialização.
+-   Para inicializar o touch, você deve se registrar para eventos de janela como quando o ponteiro estiver ativado, liberado e movido. Para inicializar o acelerômetro, crie um objeto [**Windows::Devices::Sensors::Accelerometer**](https://msdn.microsoft.com/library/windows/apps/br225687) quando inicializar o app. O controle do Xbox 360 não exige inicialização.
 -   Para jogos de um jogador, considere a possibilidade de combinar a entrada de todos os controladores possíveis do Xbox 360. Desta forma, você não precisa acompanhar a entrada que vem de cada controlador.
 -   Processe os eventos do Windows antes de processar os dispositivos de entrada.
 -   O controlador do Xbox 360 e o acelerômetro dão suporte a sondagem. Isso é, você pode sondar dados quando precisar. Para o toque, grave os eventos de toque em estruturas de dados que estão disponíveis para o seu código de processamento de entrada.
 -   Considere a possibilidade de normalizar os valores de entrada para um formato comum. Isso pode simplificar como a entrada é interpretada por outros componentes do seu jogo, como a simulação física, e pode tornar mais fácil a gravação de jogos que funcionam em resoluções de tela diferentes.
 
-## Dispositivos de entrada compatíveis com o Marble Maze
+## <a name="input-devices-supported-by-marble-maze"></a>Dispositivos de entrada compatíveis com o Marble Maze
 
 
-O Marble Maze aceita dispositivos controladores comuns do Xbox 360, mouse e toque para selecionar itens de menu e o controlador do Xbox 360, mouse, toque e acelerômetro para controlar o jogo. O Marble Maze usa a API XInput para sondar a entrada do controlador. O toque permite aos aplicativos acompanhar e responder à entrada pela ponta do dedo. Um acelerômetro é um sensor que mede a força aplicada ao longo dos eixos x, y e z. Usando o Windows Runtime, você pode pesquisar o estado atual do dispositivo do acelerômetro, e também receber eventos de touch através mecanismo que lida com eventos do Windows Runtime.
+O Marble Maze aceita dispositivos controladores comuns do Xbox 360, mouse e toque para selecionar itens de menu e o controlador do Xbox 360, mouse, toque e acelerômetro para controlar o jogo. O Marble Maze usa a API XInput para sondar a entrada do controlador. O toque permite aos apps acompanhar e responder à entrada pela ponta do dedo. Um acelerômetro é um sensor que mede a força aplicada ao longo dos eixos x, y e z. Usando o Windows Runtime, você pode pesquisar o estado atual do dispositivo do acelerômetro, e também receber eventos de touch através mecanismo que lida com eventos do Windows Runtime.
 
 > **Observação**  Este documento usa touch para referir-se tanto a touch quanto à entrada de mouse e ponteiro para referir-se a qualquer dispositivo que use eventos de ponteiro. Pelo touch e o mouse usarem eventos de ponteiro padrão, você pode usar qualquer um desses dispositivos para selecionar itens do menu e controlar o jogo.
 
@@ -42,16 +49,16 @@ O Marble Maze aceita dispositivos controladores comuns do Xbox 360, mouse e toqu
 
  
 
-## Inicializando dispositivos de entrada
+## <a name="initializing-input-devices"></a>Inicializando dispositivos de entrada
 
 
-O controlador do Xbox 360 não precisa ser inicializado. Para inicializar o touch, você deve se registrar para eventos de janela como quando o ponteiro estiver ativado (por exemplo, seu usuário pressiona o botão do mouse ou toca a rela), liberado e movido. Para inicializar o acelerômetro, você deve criar um objeto [**Windows::Devices::Sensors::Accelerometer**](https://msdn.microsoft.com/library/windows/apps/br225687) quando inicializar o aplicativo.
+O controlador do Xbox 360 não precisa ser inicializado. Para inicializar o touch, você deve se registrar para eventos de janela como quando o ponteiro estiver ativado (por exemplo, seu usuário pressiona o botão do mouse ou toca a rela), liberado e movido. Para inicializar o acelerômetro, você deve criar um objeto [**Windows::Devices::Sensors::Accelerometer**](https://msdn.microsoft.com/library/windows/apps/br225687) quando inicializar o app.
 
-O exemplo a seguir mostra como o construtor **DirectXPage** se registra para os eventos de ponteiro [**Windows::UI::Core::CoreIndependentInputSource::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn298471), [**Windows::UI::Core::CoreIndependentInputSource::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn298472) e [**Windows::UI::Core::CoreIndependentInputSource::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn298469) para o [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834). Esses eventos são registrados durante a inicialização do aplicativo e antes do loop do jogo.
+O exemplo a seguir mostra como o construtor **DirectXPage** se registra para os eventos de ponteiro [**Windows::UI::Core::CoreIndependentInputSource::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn298471), [**Windows::UI::Core::CoreIndependentInputSource::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn298472) e [**Windows::UI::Core::CoreIndependentInputSource::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn298469) para o [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834). Esses eventos são registrados durante a inicialização do app e antes do loop do jogo.
 
 Esses eventos são tratados em um thread separado que evoca os tratadores de eventos.
 
-Para saber mais como o aplicativo é inicializado, consulte a [estrutura do aplicativo Marble Maze.](marble-maze-application-structure.md)
+Para saber mais como o app é inicializado, consulte a [estrutura do app Marble Maze.](marble-maze-application-structure.md)
 
 ```cpp
 coreInput->PointerPressed += ref new TypedEventHandler<Object^, PointerEventArgs^>(this, &DirectXPage::OnPointerPressed);
@@ -79,10 +86,10 @@ O objeto Acelerômetro é inicializado no método MarbleMaze::Initialize, como v
 m_accelerometer = Windows::Devices::Sensors::Accelerometer::GetDefault();
 ```
 
-##  Navegando nos menus
+##  <a name="navigating-the-menus"></a>Navegando nos menus
 
 
-###  Rastreando a entrada do controle do Xbox 360
+###  <a name="tracking-xbox-360-controller-input"></a>Rastreando a entrada do controle do Xbox 360
 
 Você pode usar mouse, touch ou o controle do Xbox 360 para navegar nos menus, dessa forma:
 
@@ -91,7 +98,7 @@ Você pode usar mouse, touch ou o controle do Xbox 360 para navegar nos menus, d
 -   Use o botão Iniciar para pausar ou reiniciar o jogo.
 -   Clique em um item de menu usando o mouse para escolher essa ação.
 
-###  Acompanhar a entrada por toque e de mouse
+###  <a name="tracking-touch-and-mouse-input"></a>Acompanhar a entrada por toque e de mouse
 
 Para rastrear a entrada controle do Xbox 360 o método **MarbleMaze::Update** define uma matriz de botões que definem os comportamentos de entrada. O XInput fornece apenas o estado atual do controle. Portanto, o **MarbleMaze::Update** também define duas matrizes que rastreiam, para cada possível controle do Xbox 360, se cada botão foi pressionado durante o quadro anterior ou se cada botão está pressionado no momento.
 
@@ -243,7 +250,7 @@ Depois de o método **MarbleMaze::Update** processar a entrada do controle, ele 
 memcpy(wasButtonDown, isButtonDown, sizeof(wasButtonDown));
 ```
 
-### Acompanhar a entrada por toque e de mouse
+### <a name="tracking-touch-and-mouse-input"></a>Acompanhar a entrada por toque e de mouse
 
 Para entradas de touch e de mouse, um item do menu é escolhido quando o usuário clicar ou tocar nele. O exemplo a seguir mostra como o método **MarbleMaze::Update** processa a entrada do ponteiro para selecionar itens do menu. A variável do membro **m\_pointQueue** rastreia os locais em que o usuário tocou ou clicou na tela. A forma como o Marble Maze coleta entradas de ponteiro será descrita com mais detalhes neste documento, na seção Processando a entrada de ponteiro.
 
@@ -277,7 +284,7 @@ void UserInterface::HitTest(D2D1_POINT_2F point)
 }
 ```
 
-### Atualizando o estado do jogo
+### <a name="updating-the-game-state"></a>Atualizando o estado do jogo
 
 Depois de o método **MarbleMaze::Update** processar a entrada do controle e do touch, ele atualiza o estado do jogo se algum botão for pressionado.
 
@@ -295,7 +302,7 @@ if (m_highScoreButton.IsPressed())
 }
 ```
 
-##  Controlando seu jogo
+##  <a name="controlling-game-play"></a>Controlando seu jogo
 
 
 O loop de jogo e o método **MarbleMaze::Update** trabalham juntos para atualizar o estado dos objetos de jogo. Se o seu jogo aceita a entrada de vários dispositivos, você pode acumular a entrada de todos os dispositivos em um conjunto de variáveis de modo que possa escrever um código mais fácil de manter. O método **MarbleMaze::Update** define um conjunto de variáveis que acumulam movimentos de todos os dispositivos.
@@ -307,7 +314,7 @@ float combinedTiltY = 0.0f;
 
 O mecanismo de entrada pode variar de um dispositivo de entrada para outro. Por exemplo, a entrada de ponteiro é tratada usando o modelo de manipulação de eventos do Windows Runtime. Por outro lado, você pode sondar os dados de entrada do controlador do Xbox 360 quando precisar deles. Recomendamos que você siga sempre o mecanismo de entrada que é prescrito para um determinado dispositivo. Esta seção descreve como o Marble Maze lê a entrada de cada dispositivo, como atualiza os valores de entrada combinados e como usa os valores de entrada combinados para atualizar o estado do jogo.
 
-###  Processante a entrada de ponteiro
+###  <a name="processing-pointer-input"></a>Processante a entrada de ponteiro
 
 Quando você trabalhar com entrada de ponteiro, chame o método [**Windows::UI::Core::CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208217) para processar eventos de janela. Chame esse método no loop do jogo antes de atualizar ou renderizar a cena. O Marble Maze passa o **CoreProcessEventsOption::ProcessAllIfPresent** para esse métodos processar todos os eventos em fila e, então, retorna imediatamente. Depois que todos os eventos são processados, o Marble Maze renderiza e apresenta o quadro seguinte.
 
@@ -391,7 +398,7 @@ for (TouchMap::const_iterator iter = m_touches.cbegin(); iter != m_touches.cend(
 }
 ```
 
-### Processando a entrada do acelerômetro
+### <a name="processing-accelerometer-input"></a>Processando a entrada do acelerômetro
 
 Para processar a entrada do acelerômetro, o método **MarbleMaze::Update** chama o método [**Windows::Devices::Sensors::Accelerometer::GetCurrentReading**](https://msdn.microsoft.com/library/windows/apps/br225699). Esse método devolve um objeto [**Windows::Devices::Sensors::AccelerometerReading**](https://msdn.microsoft.com/library/windows/apps/br225688), que representa uma leitura de acelerador. As propriedades **Windows::Devices::Sensors::AccelerometerReading::AccelerationX** e **Windows::Devices::Sensors::AccelerometerReading::AccelerationY** armazenam a aceleração da força-g ao longo dos eixos x e y, respectivamente.
 
@@ -415,7 +422,7 @@ if (m_accelerometer != nullptr)
 
 Como você não pode ter certeza de que um acelerômetro está presente no computador do usuário, verifique se possui um objeto Accelerometer válido antes de sondar o acelerômetro.
 
-### Processando a entrada do controlador do Xbox 360
+### <a name="processing-xbox-360-controller-input"></a>Processando a entrada do controlador do Xbox 360
 
 O exemplo a seguir mostra como o método **MarbleMaze::Update** lê a partir do controle do Xbox 360 e atualiza os valores de entrada combinados. O método **MarbleMaze::Update** usa um loop for para permitir que a entrada seja recebida de qualquer controle conectado. O método **XInputGetState** preenche um objeto XINPUT\_STATE com o estado atual do controle. Os valores **combinedTiltX** e **combinedTiltY** são atualizados de acordo com os valores x e y da alavanca esquerda.
 
@@ -450,11 +457,11 @@ XInput define a constante **XINPUT\_GAMEPAD\_LEFT\_THUMB\_DEADZONE** da alavanca
 
  
 
-###  Aplicando entrada ao estado de jogo
+###  <a name="applying-input-to-the-game-state"></a>Aplicando entrada ao estado de jogo
 
 Os dispositivos relatam valores de entrada de diferentes maneiras. Por exemplo, a entrada de ponteiro pode ser em coordenadas de tela e a entrada de controlador pode ser em um formato completamente diferente. Um desafio ao se combinarem entradas de vários dispositivos em um conjunto de valores de entrada é a normalização, ou a conversão de valores para um formato comum. O Marble Maze normaliza valores dimensionando-os no intervalo \[-1,0, 1,0\]. Para normalizar a entrada de controle do Xbox 360, o Marble Maze divide os valores de entrada por 32768 porque os valores de entrada da alavanca sempre ficam entre -32768 e 32767. A função **PointToTouch**, que já foi descrita nesta seção, alcança um resultado semelhante ao converter coordenadas de tela para valores normalizados que vão, aproximadamente, de -1,0 a +1,0.
 
-> **Dica**  Mesmo que o seu aplicativo use um método de entrada, aconselhamos que você sempre use valores de entrada normalizados. Isso pode simplificar como a entrada é interpretada por outros componentes do seu jogo, como a simulação física, e facilita a gravação de jogos que funcionam em resoluções de tela diferentes.
+> **Dica**  Mesmo que o seu app use um método de entrada, aconselhamos que você sempre use valores de entrada normalizados. Isso pode simplificar como a entrada é interpretada por outros componentes do seu jogo, como a simulação física, e facilita a gravação de jogos que funcionam em resoluções de tela diferentes.
 
  
 
@@ -505,12 +512,12 @@ if (marblePosition.z >= resetDepth)
 
 Esta seção não descreve o funcionamento da simulação física. Para saber mais sobre esse assunto, consulte os arquivos Physics.h e Physics.cpp nas origens do Marble Maze.
 
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 
 Leia [Adicionando áudio ao exemplo do Marble Maze](adding-audio-to-the-marble-maze-sample.md) para saber mais sobre as principais práticas a serem consideradas quando você trabalha com áudio. O documento discute como o Marble Maze usa o Microsoft Media Foundation e XAudio2 para carregar, mixar e reproduzir recursos de áudio.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Adicionando áudio ao exemplo do Marble Maze](adding-audio-to-the-marble-maze-sample.md)
@@ -523,10 +530,5 @@ Leia [Adicionando áudio ao exemplo do Marble Maze](adding-audio-to-the-marble-m
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

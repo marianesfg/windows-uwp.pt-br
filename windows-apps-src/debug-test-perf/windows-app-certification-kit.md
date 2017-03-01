@@ -3,19 +3,26 @@ author: mcleblanc
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: "Kit de Certificação de Aplicativos Windows"
 description: "Para aumentar as chances de seu aplicativo ser publicado na Windows Store ou obter certificação do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 478ba4a24cff3c2df34d98157624c9c4339d432a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f30eaa7edf229872170a3f661c931787938acb2d
+ms.lasthandoff: 02/07/2017
 
 ---
-# Kit de Certificação de Aplicativos Windows
+# <a name="windows-app-certification-kit"></a>Kit de Certificação de Aplicativos Windows
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Para aumentar as chances de seu aplicativo ser [publicado na Windows Store](https://msdn.microsoft.com/library/windows/apps/Hh694062) ou obter a [certificação do Windows](https://msdn.microsoft.com/windows/desktop/jj134964.aspx), valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o [Kit de Certificação de Aplicativos Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Pré-requisitos para testar um Aplicativo Universal do Windows:
 
@@ -28,7 +35,7 @@ Pré-requisitos para testar um Aplicativo Universal do Windows:
 
 A instalação de um [Kit de Certificação de Aplicativos Windows]( http://go.microsoft.com/fwlink/p/?LinkID=309666) mais recente substituirá qualquer versão anterior do kit que esteja instalada no computador.
 
-## Validar seu aplicativo do Windows usando o Kit de Certificação de Aplicativos Windows interativamente
+## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-interactively"></a>Validar seu aplicativo do Windows usando o Kit de Certificação de Aplicativos Windows interativamente
 
 1.  No menu **Iniciar**, procure por **Aplicativos**, localize **Kits do Windows** e clique em **Kit de Certificação de Aplicativos Windows**.
 
@@ -52,7 +59,7 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( http://go.m
 
  
 
-## Validar seu aplicativo do Windows usando o Kit de Certificação de Aplicativos Windows a partir de uma linha de comando
+## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-from-a-command-line"></a>Validar seu aplicativo do Windows usando o Kit de Certificação de Aplicativos Windows a partir de uma linha de comando
 
 **Importante**  O Kit de Certificação de Aplicativos Windows deve executar no contexto de uma sessão de usuário ativa.
 
@@ -78,7 +85,7 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( http://go.m
 
 **Observação**   Para saber mais sobre a linha de comando do Kit de Certificação de Aplicativos Windows, insira o comando `appcert.exe /?`
 
-## Testando com um computador com baixo consumo de energia
+## <a name="testing-with-a-low-power-computer"></a>Testando com um computador com baixo consumo de energia
 
 O limites do teste de desempenho do Kit de Certificação de Aplicativos Windows são baseados no desempenho de um computador com baixo consumo de energia.
 
@@ -86,7 +93,7 @@ As características do computador em que o teste é realizado podem afetar os re
 
 As características de desempenho podem mudar ao longo do tempo para acompanhar a evolução dos computadores com baixo consumo de energia. Consulte as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/Dn764944) mais recentes e teste seu aplicativo com a versão mais atual do Kit de Certificação de Aplicativos Windows para garantir que ele atenda aos últimos requisitos de desempenho.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Testes do Kit de Certificação de Aplicativos Windows](windows-app-certification-kit-tests.md)
 * [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
@@ -96,10 +103,5 @@ As características de desempenho podem mudar ao longo do tempo para acompanhar 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,13 +3,20 @@ title: "Agente de autenticação da Web"
 description: "Este artigo explica como conectar seu aplicativo da Plataforma Universal do Windows (UWP) a um provedor de identidade online que use protocolos de autenticação como OpenID ou OAuth, como Facebook, Twitter, Flickr, Instagram e assim por diante."
 ms.assetid: 05F06961-1768-44A7-B185-BCDB74488F85
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: ea3d3e1df07c8cf9701e7bd39af006cd681ef1fe
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d9e7fbb560b7dc3e608c22494a44fce70621173b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Agente de autenticação da Web
+# <a name="web-authentication-broker"></a>Agente de autenticação da Web
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -21,12 +28,12 @@ Este artigo explica como conectar seu aplicativo da Plataforma Universal do Wind
 
  
 
-## Registrar o aplicativo junto ao provedor online
+## <a name="register-your-app-with-your-online-provider"></a>Registrar o aplicativo junto ao provedor online
 
 
 Você deve registrar o aplicativo junto ao provedor de identidade online ao qual deseja se conectar. Consulte o provedor de identidade para saber como registrar seu aplicativo. Após o registro, o provedor online costuma fornecer uma Id ou uma chave secreta para o seu aplicativo.
 
-## Criar o URI de solicitação de autenticação
+## <a name="build-the-authentication-request-uri"></a>Criar o URI de solicitação de autenticação
 
 
 O URI de solicitação é composto pelo endereço para onde você envia a solicitação de autenticação para o seu provedor de identidade online junto com outras informações necessárias, como ID ou chave secreta do aplicativo, um URI de redirecionamento para o qual o usuário é enviado após concluir a autenticação e o tipo de resposta esperado. Seu provedor deverá informar quais são os parâmetros necessários.
@@ -43,7 +50,7 @@ System.Uri startURI = new System.Uri(startURL);
 System.Uri endURI = new System.Uri(endURL);
 ```
 
-## Conectar ao provedor online
+## <a name="connect-to-the-online-provider"></a>Conectar ao provedor online
 
 
 Chame o método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) para se conectar ao provedor de identidade online e obter um token de acesso. O método transmite o URI construído na etapa anterior como o parâmetro *requestUri* e um URI ao qual você deseja que o usuário seja redirecionado como o parâmetro *callbackUri*.
@@ -84,7 +91,7 @@ catch (Exception ex)
 
 Além do [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066), o namespace [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) contém um método [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425). Não chame esse método. Ele foi projetado para aplicativos direcionados apenas ao Windows Phone 8.1 e foi preterido a partir do Windows 10.
 
-## Conectando-se com logon único (SSO)
+## <a name="connecting-with-single-sign-on-sso"></a>Conectando-se com logon único (SSO)
 
 
 Por padrão, o agente de autenticação da Web não permite cookies persistentes. Por isso, mesmo se o usuário do aplicativo indicar que deseja permanecer conectado (por exemplo, marcando uma caixa de seleção na caixa de diálogo de login do provedor), ele terá que efetuar login cada vez que quiser acessar os recursos desse provedor. Para efetuar login com SSO, o provedor de identidade online deve ter o modo SSO habilitado para o agente de autenticação da Web e seu aplicativo deve chamar a sobrecarga de [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212068) que não transmite um parâmetro *callbackUri*.
@@ -124,12 +131,12 @@ catch (Exception ex)
 }
 ```
 
-## Depuração
+## <a name="debugging"></a>Depuração
 
 
 Existem várias maneiras de solucionar problemas com APIs de agente de autenticação da Web, incluindo a revisão de logs operacionais e a revisão de respostas e solicitações da Web usando o Fiddler.
 
-### Logs operacionais
+### <a name="operational-logs"></a>Logs operacionais
 
 Geralmente é possível determinar o que não está funcionando usando logs operacionais. Há um canal de log de eventos dedicado, a saber, Microsoft-Windows-WebAuth\\Operational, que permite aos desenvolvedores de sites entender como suas páginas da Web estão sendo processadas pelo agente de autenticação da Web. Para habilitá-lo, execute o arquivo eventvwr.exe e habilite Log operacional em Application and Services\\Microsoft\\Windows\\WebAuth. Além disso, o agente de autenticação da Web acrescenta uma cadeia de caracteres exclusiva à cadeia de caracteres do agente do usuário para se identificar no servidor Web. A cadeia de caracteres é "MSAuthHost/1.0". Observe que o número da versão pode mudar no futuro, portanto você não deve depender do número daquela versão no seu código. Um exemplo de cadeia de caracteres de agente de usuário, seguida pelas etapas de depuração completa, é o seguinte.
 
@@ -146,7 +153,7 @@ Geralmente é possível determinar o que não está funcionando usando logs oper
     -   Erro de Navegação: o AuthHost encontra um erro de navegação em uma URL, incluindo HttpStatusCode.
     -   Final da Navegação: a URL de término é encontrada.
 
-### Fiddler
+### <a name="fiddler"></a>Fiddler
 
 O depurador da Web Fiddler pode ser usado com aplicativos.
 
@@ -176,8 +183,3 @@ O depurador da Web Fiddler pode ser usado com aplicativos.
     ```
 
 3.  Adicione uma regra de firewall para o tráfego de entrada ao Fiddler.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

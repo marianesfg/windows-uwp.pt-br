@@ -3,13 +3,20 @@ author: mtoepke
 title: Controles de toque para jogos
 description: "Aprenda a adicionar controles de toque básicos ao seu jogo C++ da Plataforma Universal do Windows (UWP) com DirectX."
 ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, toque, controles, directx, entrada
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 901b83b1c4a2e572e4fe41e1df59910432982687
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 44d5071ee0cd695351c77630d699a1a060f477d6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Controles de toque para jogos
+# <a name="touch-controls-for-games"></a>Controles de toque para jogos
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -22,12 +29,12 @@ Você pode incorporar esses controles a jogos nos quais deseja que o jogador arr
 
  
 
-## Objetivos
+## <a name="objectives"></a>Objetivos
 
 
 -   Criar um controle simples de arraste por toque para realizar o movimento panorâmico de uma câmera com plano fixo em um jogo em DirectX.
 
-## Configurar a infraestrutura básica de eventos por toque
+## <a name="set-up-the-basic-touch-event-infrastructure"></a>Configurar a infraestrutura básica de eventos por toque
 
 
 Primeiro, definimos o tipo de controlador básico **CameraPanController**, neste caso. Aqui, definimos um controlador como uma ideia abstrata, o conjunto de comportamentos que o usuário pode desempenhar.
@@ -126,7 +133,7 @@ Agora, você tem todos os componentes necessários para implementar os controles
 
 Agora, vamos juntar todos os pedaços.
 
-## Criar eventos de toque básicos
+## <a name="create-the-basic-touch-events"></a>Criar eventos de toque básicos
 
 
 O dispatcher de eventos do Windows Runtime fornece três eventos com os quais queremos que nosso aplicativo lide:
@@ -204,7 +211,7 @@ void CameraPanController::OnPointerReleased(
 }
 ```
 
-## Inicializar os controles de toque e o estado dos controladores
+## <a name="initialize-the-touch-controls-and-the-controller-state"></a>Inicializar os controles de toque e o estado dos controladores
 
 
 Vamos associar os eventos e iniciar todos os campos básicos de estado do controlador da câmera.
@@ -238,7 +245,7 @@ void CameraPanController::Initialize( _In_ CoreWindow^ window )
 
 **Initialize** recebe uma referência à instância de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do aplicativo como um parâmetro e registra os manipuladores de eventos que desenvolvemos para os eventos apropriados nessa **CoreWindow**.
 
-## Obtendo e definindo a posição do controlador da câmera
+## <a name="getting-and-setting-the-position-of-the-camera-controller"></a>Obtendo e definindo a posição do controlador da câmera
 
 
 Vamos definir alguns métodos para obter e definir a posição do controlador da câmera no espaço da cena.
@@ -272,7 +279,7 @@ DirectX::XMFLOAT3 CameraPanController::get_FixedLookPoint()
 
 **get\_FixedLookPoint** é uma propriedade pública que, neste exemplo, obtém um ponto de associação normal para o plano x-y. Você pode alterar esse método para usar funções trigonométricas, senos e cossenos ao calcular os valores das coordenadas x, y e z quando quiser criar ângulos mais oblíquos para a câmera fixa.
 
-## Atualizando as informações de estado do controlador da câmera
+## <a name="updating-the-camera-controller-state-information"></a>Atualizando as informações de estado do controlador da câmera
 
 
 Agora, realizamos os cálculos que convertem as informações de coordenadas do ponteiro controladas em **m\_panPointerPosition** em novas informações de coordenadas relativas ao espaço da cena 3D. Nosso aplicativo chama esse método cada vez que seu loop principal é atualizado. Nele, calculamos as novas informações de posição que queremos passar ao aplicativo, que são usadas para atualizar a matriz de visualização antes da projeção no visor.
@@ -320,7 +327,7 @@ void CameraPanController::Update( CoreWindow ^window )
 
 Como não queremos causar distorções com toque ou mouse (o que tornaria o movimento panorâmico da câmera irregular), definimos uma zona morta em torno do ponteiro com um diâmetro de 32 pixels. Também temos um valor de velocidade, que, neste caso, é 1:1, com o pixel transversal do ponteiro além da zona morta. Você pode ajustar esse comportamento para desacelerar ou acelerar a taxa de movimento.
 
-## Atualizando a matriz de visualização com a nova posição da câmera
+## <a name="updating-the-view-matrix-with-the-new-camera-position"></a>Atualizando a matriz de visualização com a nova posição da câmera
 
 
 Agora, podemos obter uma coordenada do espaço da cena na qual a câmera está focada, e que é atualizada sempre que você informa ao aplicativo para fazer isso (a cada 60 segundos no loop principal do aplicativo, por exemplo). Esse pseudocódigo sugere o comportamento de chamada que você pode implementar:
@@ -349,10 +356,5 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

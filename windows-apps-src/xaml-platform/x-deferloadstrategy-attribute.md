@@ -3,13 +3,20 @@ author: jwmsft
 title: Atributo xDeferLoadStrategy
 description: "xDeferLoadStrategy atrasa a criação de um elemento e seus filhos, o que reduz o tempo de inicialização, mas aumenta um pouco o uso da memória. Cada elemento afetado adiciona cerca de 600 bytes para o uso da memória."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: c1a0515ea4298b6eb870bdf69e452f774962cdd8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4ccc18920a98b3c2258b4965e96fa063124d0546
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Atributo x:DeferLoadStrategy
+# <a name="xdeferloadstrategy-attribute"></a>Atributo x:DeferLoadStrategy
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -17,13 +24,13 @@ ms.openlocfilehash: c1a0515ea4298b6eb870bdf69e452f774962cdd8
 
 No entanto, a manutenção de adiamento adiciona cerca de 600 bytes ao uso da memória para cada elemento afetado. Quanto maior for a árvore de elementos que você adiar, mais tempo de inicialização você vai economizar, mas ao custo de um volume de memória maior. Portanto, é possível usar esse atributo em excesso até o limite de redução do seu desempenho.
 
-## Uso do atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
 ``` syntax
 <object x:DeferLoadStrategy="Lazy" .../>
 ```
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 As restrições para usar **x: DeferLoadStrategy** são:
 
@@ -59,7 +66,7 @@ Se o [atributo x:Phase](x-phase-attribute.md) for usado em conjunto com **x:Defe
 
 Uma diretriz geral é avaliar o aplicativo antes e depois, para garantir que você obtenha o desempenho que deseja.
 
-## Exemplo
+## <a name="example"></a>Exemplo
 
 ```xml
 <Grid x:Name="DeferredGrid" x:DeferLoadStrategy="Lazy">
@@ -86,10 +93,5 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
     this.FindName("DeferredGrid"); // This will realize the deferred grid
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

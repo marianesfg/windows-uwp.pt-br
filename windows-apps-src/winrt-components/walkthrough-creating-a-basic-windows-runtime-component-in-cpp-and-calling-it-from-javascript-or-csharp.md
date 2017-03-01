@@ -3,9 +3,16 @@ author: msatranjr
 title: "Criando um componente do Tempo de Execução do Windows básico em C++ e chamando-o em JavaScript ou C#"
 description: "Este procedimento passo a passo mostra como criar uma DLL de componente do Tempo de Execução do Windows básica que pode ser chamada em JavaScript, C# ou Visual Basic."
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 0085d3edb2ec1fbe14ce268c54532cd246a73dde
+ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
+ms.openlocfilehash: e02d7fabf6337fa23ab97858046c3b089c39a087
+ms.lasthandoff: 01/19/2017
 
 ---
 
@@ -16,13 +23,13 @@ ms.openlocfilehash: 0085d3edb2ec1fbe14ce268c54532cd246a73dde
 
 Este procedimento passo a passo mostra como criar uma DLL de componente do Tempo de Execução do Windows básica que pode ser chamada em JavaScript, C# ou Visual Basic. Antes de começar este procedimento passo a passo, assegure-se de que você compreendeu conceitos como a Abstract Binary Interface (ABI), as classes ref e as extensões de componente do Visual C++ que facilitam o trabalho com classes ref. Para obter mais informações, consulte [Criação de componentes do Tempo de Execução do Windows em C++](creating-windows-runtime-components-in-cpp.md) e [Referência da linguagem Visual C++ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
-## Criação da DLL do componente C++
+## <a name="creating-the-c-component-dll"></a>Criação da DLL do componente C++
 
 Neste exemplo, criamos o projeto de componente primeiro, mas você pode criar o projeto JavaScript primeiro. A ordem não importa.
 
 A classe principal do componente contém exemplos de definições de propriedade e método, além de uma declaração de evento. Eles são fornecidos apenas para mostrar como isso é feito. Eles não são necessários e, neste exemplo, substituiremos todos os códigos gerados pelo próprio código.
 
-## **Para criar o projeto de componente C++**
+## **<a name="to-create-the-c-component-project"></a>Para criar o projeto de componente C++**
 
 Na barra de menus do Visual Studio, escolha **Arquivo, Novo, Projeto**.
 
@@ -32,7 +39,7 @@ No painel central, selecione **Componente do Tempo de Execução do Windows** e 
 
 Escolha o botão **OK**.
 
-## **Para adicionar uma classe ativável ao componente**
+## **<a name="to-add-an-activatable-class-to-the-component"></a>Para adicionar uma classe ativável ao componente**
 
 Uma classe ativável é aquela que código cliente pode criar usando uma expressão **new** (**New** em Visual Basic ou **ref new** em C++). Em seu componente, declare-a como **classe ref pública selado**. Na verdade, os arquivos Class1.h e .cpp já têm uma classe ref. É possível alterar o nome, mas neste exemplo usaremos o nome padrão – Class1. É possível definir classes ref adicionais ou classes regulares no componente caso elas sejam necessárias. Para obter mais informações sobre classes ref, consulte [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
 
@@ -47,7 +54,7 @@ Adicione estas diretivas \#include a Class1.h:
 
 collection.h é o arquivo de cabeçalho para classes concretas C++, como a classe Platform::Collections::Vector e a classe Platform::Collections::Map, que implementam interfaces de linguagem neutra definidas pelo Windows Runtime. Os cabeçalhos amp são usados para executar computações na GPU. Eles não têm equivalentes de Tempo de Execução do Windows, e tudo bem quanto a isso porque eles são privados. Em geral, por questões de desempenho você deve usar o código C++ ISO e as bibliotecas padrão internamente dentro do componente; é apenas a interface de Tempo de Execução do Windows que deve ser expressada em tipos de Tempo de Execução do Windows.
 
-## Para adicionar um representante no escopo de namespace
+## <a name="to-add-a-delegate-at-namespace-scope"></a>Para adicionar um representante no escopo de namespace
 
 Representante é um constructo que define os parâmetros e o tipo de retorno para métodos. Evento é uma instância de um determinado tipo de representante, e qualquer método de manipulador de eventos que assine o evento deve ter a assinatura especificada no representante. O código a seguir define um tipo de representante que utiliza um int e retorna void. Em seguida, o código declara um evento público desse tipo; isso permite que o código do cliente forneça métodos invocados quando o evento é acionado.
 
@@ -59,7 +66,7 @@ public delegate void PrimeFoundHandler(int result);
 
 Caso o código não se alinhe corretamente quando você o cola no Visual Studio, basta pressionar Ctrl+K+D para corrigir o recuo de todo o arquivo.
 
-## Para adicionar membros públicos
+## <a name="to-add-the-public-members"></a>Para adicionar membros públicos
 
 A classe expõe três métodos públicos e um evento público. O primeiro método é síncrono porque ele sempre é executado muito rapidamente. Como os outros dois métodos podem levar algum tempo, eles são assíncronos, de maneira que eles não bloqueiam o thread de interface do usuário. Esses métodos retornam IAsyncOperationWithProgress e IAsyncActionWithProgress. O primeiro define um método async que retorna um resultado e o último define um método async que retorna void. Essas interfaces também permitem que o código do cliente receba atualizações sobre o progresso da operação.
 
@@ -78,7 +85,7 @@ public:
         event PrimeFoundHandler^ primeFoundEvent;
 
 ```
-## Para adicionar os membros privados
+## <a name="to-add-the-private-members"></a>Para adicionar os membros privados
 
 A classe contém três membros privados: dois métodos auxiliares para os cálculos numéricos e um objeto CoreDispatcher usado para realizar marshaling das invocações de evento em threads de trabalho de volta para o thread de interface do usuário.
 
@@ -88,7 +95,7 @@ private:
         Windows::UI::Core::CoreDispatcher^ m_dispatcher;
 ```
 
-## Para adicionar as diretivas de cabeçalho e namespace
+## <a name="to-add-the-header-and-namespace-directives"></a>Para adicionar as diretivas de cabeçalho e namespace
 
 Em Class1.cpp, adicione estas diretivas #include:
 
@@ -107,7 +114,7 @@ using namespace Windows::Foundation;
 using namespace Windows::UI::Core;
 ```
 
-## Para adicionar a implementação de ComputeResult
+## <a name="to-add-the-implementation-for-computeresult"></a>Para adicionar a implementação de ComputeResult
 
 Em Class1.cpp, adicione a implementação do método a seguir. Esse método é executado de maneira síncrona no thread de chamada, mas é muito rápido porque usa AMP C++ para paralelizar a computação na GPU. Para obter mais informações, consulte Visão geral de AMP C++. Os resultados são anexados a um tipo concreto Platform::Collections::Vector<T>, que é implicitamente convertido em um Windows::Foundation::Collections::IVector<T> quando ele é retornado.
 
@@ -141,7 +148,7 @@ IVector<double>^ Class1::ComputeResult(double input)
     return res;
 }
 ```
-## Para adicionar a implementação de GetPrimesOrdered e o método auxiliar
+## <a name="to-add-the-implementation-for-getprimesordered-and-its-helper-method"></a>Para adicionar a implementação de GetPrimesOrdered e o método auxiliar
 
 Em Class1.cpp, adicione as implementações de GetPrimesOrdered e o método auxiliar is_prime. GetPrimesOrdered usa uma classe concurrent_vector e um loop de função parallel_for para dividir o trabalho e usar os recursos máximos do computador no qual o programa está em execução para produzir resultados. Depois que os resultados são calculados, armazenados e classificados, eles são adicionados a um Platform::Collections::Vector<T> e retornados como Windows::Foundation::Collections::IVector<T> ao código do cliente.
 
@@ -211,7 +218,7 @@ IAsyncOperationWithProgress<IVector<int>^, double>^ Class1::GetPrimesOrdered(int
 }
 ```
 
-## Para adicionar a implementação de GetPrimesUnordered
+## <a name="to-add-the-implementation-for-getprimesunordered"></a>Para adicionar a implementação de GetPrimesUnordered
 
 A última etapa para criar o componente C++ é adicionar a implementação do GetPrimesUnordered em Class1.cpp. Esse método retorna cada resultado como encontrado, sem esperar todos os resultados serem encontrados. Cada resultado é retornado no manipulador de eventos e exibido na interface do usuário em tempo real. Mais uma vez, observe que um gerador de relatórios de progresso é usado. Esse método também usa o método auxiliar is_prime.
 
@@ -273,11 +280,11 @@ IAsyncActionWithProgress<double>^ Class1::GetPrimesUnordered(int first, int last
 }
 ```
 
-## Criação de um aplicativo cliente JavaScript
+## <a name="creating-a-javascript-client-app"></a>Criação de um aplicativo cliente JavaScript
 
 Caso queira criar um cliente em C#, você pode ignorar esta seção.
 
-## Para criar um projeto JavaScript
+## <a name="to-create-a-javascript-project"></a>Para criar um projeto JavaScript
 
 No Gerenciador de Soluções, abra o menu de atalho do nó Solução e escolha **Adicionar, Novo Projeto**.
 
@@ -295,7 +302,7 @@ No painel à esquerda da caixa de diálogo Gerenciador de Referências, selecion
 
 No painel central, selecione WinRT_CPP e escolha o botão **OK**
 
-## Para adicionar o HTML que invoca os manipuladores de eventos JavaScript
+## <a name="to-add-the-html-that-invokes-the-javascript-event-handlers"></a>Para adicionar o HTML que invoca os manipuladores de eventos JavaScript
 
 Cole este HTML no nó <body> da página default.html:
 
@@ -333,7 +340,7 @@ Cole este HTML no nó <body> da página default.html:
  </div>
 ```
 
-## Para adicionar estilos
+## <a name="to-add-styles"></a>Para adicionar estilos
 
 Em default.css, remova o estilo do corpo e adicione estes estilos:
 
@@ -368,7 +375,7 @@ font-size:smaller;
 }
 ```
 
-## Para adicionar os manipuladores de eventos JavaScript que chamam a DLL do componente
+## <a name="to-add-the-javascript-event-handlers-that-call-into-the-component-dll"></a>Para adicionar os manipuladores de eventos JavaScript que chamam a DLL do componente
 
 Adicione as funções a seguir ao final do arquivo default.js. Essas funções são chamadas quando os botões na página principal são escolhidos. Observe como JavaScript ativa a classe C++ e, em seguida, chama os métodos e usa os valores de retorno para popular os rótulos HTML.
 
@@ -450,9 +457,9 @@ args.setPromise(WinJS.UI.processAll().then( function completed() {
 
 Pressione F5 para executar o aplicativo.
 
-## Criação de um aplicativo cliente do C#
+## <a name="creating-a-c-client-app"></a>Criação de um aplicativo cliente do C#
 
-## Para criar um projeto C#
+## <a name="to-create-a-c-project"></a>Para criar um projeto C#
 
 No Gerenciador de Soluções, abra o menu de atalho do nó Solution e escolha **Adicionar, Novo Projeto**.
 
@@ -470,7 +477,7 @@ No painel à esquerda da caixa de diálogo **Gerenciador de Referências**, sele
 
 No painel central, selecione WinRT_CPP e escolha o botão **OK**.
 
-## Para adicionar o XAML que define a interface do usuário
+## <a name="to-add-the-xaml-that-defines-the-user-interface"></a>Para adicionar o XAML que define a interface do usuário
 
 Copie o código a seguir para o elemento Grid em MainPage.xaml.
 
@@ -492,7 +499,7 @@ Copie o código a seguir para o elemento Grid em MainPage.xaml.
 </ScrollViewer>
 ```
 
-## Para adicionar os manipuladores de eventos para os botões
+## <a name="to-add-the-event-handlers-for-the-buttons"></a>Para adicionar os manipuladores de eventos para os botões
 
 No Gerenciador de Soluções, abra MainPage.xaml.cs. (O arquivo pode estar aninhado em MainPage.xaml.) Adicione uma diretiva using para System.Text o manipulador de eventos para o cálculo de logaritmo na classe MainPage.
 
@@ -593,25 +600,25 @@ private void Clear_Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Execução do aplicativo
+## <a name="running-the-app"></a>Execução do aplicativo
 
 Selecione o projeto C# ou JavaScript como projeto de inicialização abrindo o menu de atalho do nó do projeto no Gerenciador de Soluções e escolhendo **Definir como Projeto de Inicialização**. Em seguira, pressione F5 para executar com depuração ou Ctrl+F5 para executar sem depuração.
 
-## Inspeção do componente no Pesquisador de Objetos (opcional)
+## <a name="inspecting-your-component-in-object-browser-optional"></a>Inspeção do componente no Pesquisador de Objetos (opcional)
 
 No Pesquisador de Objetos, é possível inspecionar todos os tipos de Tempo de Execução do Windows definidos em arquivos .winmd. Isso inclui os tipos nos namespaces Platform e padrão. No entanto, como os tipos no namespace Platform::Collections são definidos no arquivo de cabeçalho collections.h, e não em um arquivo winmd, eles não são exibidos no Pesquisador de Objetos.
 
-## **Para inspecionar um componente**
+## **<a name="to-inspect-a-component"></a>Para inspecionar um componente**
 
 Na barra de menus, escolha **Exibir, Pesquisador de Objetos** (Ctrl+Alt+J).
 
 No painel à esquerda do Pesquisador de Objetos, expanda o nó WinRT\_CPP para mostrar os tipos e os métodos definidos no componente.
 
-## Dicas de depuração
+## <a name="debugging-tips"></a>Dicas de depuração
 
 Para obter uma experiência de depuração melhor, baixe os símbolos de depuração dos servidores de símbolos Microsoft públicos:
 
-## **Para baixar símbolos de depuração**
+## **<a name="to-download-debugging-symbols"></a>Para baixar símbolos de depuração**
 
 Na barra de menus, escolha **Ferramentas, Opções**.
 
@@ -629,12 +636,7 @@ Caso o código JavaScript não reconheça as propriedades públicas ou os métod
 
 Caso remova um projeto de componente do Tempo de Execução do Windows C++ de uma solução, você também deve remover manualmente a referência do projeto JavaScript. Deixar de fazer isso impede operações de depuração ou compilação subsequentes. Caso necessário, é possível adicionar uma referência de assembly à DLL.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criando componentes do Tempo de Execução do Windows em C++](creating-windows-runtime-components-in-cpp.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

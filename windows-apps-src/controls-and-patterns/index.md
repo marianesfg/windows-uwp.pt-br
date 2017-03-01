@@ -1,8 +1,8 @@
 ---
-description: "Obtenha orientação de design e instruções de codificação para adicionar controles e padrões ao seu aplicativo UWP. Encontre mais de 45 controles poderosos para uso com o seu aplicativo."
+description: "Obtenha orientação de design e instruções de codificação para adicionar controles e padrões ao seu app UWP. Encontre mais de 45 controles poderosos para uso com o seu app."
 title: "Controles e padrões UWP - Desenvolvimento de aplicativos do Windows"
 author: mijacobs
-keywords: "controles de UWP, interface do usuário, controles de aplicativo"
+keywords: "controles de UWP, interface do usuário, controles de app"
 label: Controls & patterns
 template: detail.hbs
 ms.author: mijacobs
@@ -10,17 +10,19 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
+ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: e530c8fab64c160737ccc06faf676d1d113896c4
+ms.sourcegitcommit: 412a3f70861c6cd1bbf003fe0bd78c8547a5f3f8
+ms.openlocfilehash: 7b525267c8f4d24af95f6d41d46d33a3adf10f8f
+ms.lasthandoff: 02/08/2017
 
 ---
-# <a name="controls-and-patterns-for-uwp-apps"></a>Controles e padrões para aplicativos UWP
+# <a name="controls-and-patterns-for-uwp-apps"></a>Controles e padrões para apps UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-No desenvolvimento de aplicativos UWP, um <i>controle</i> é um elemento de interface do usuário que exibe conteúdo ou permite interação. Os controles são os blocos de construção da interface do usuário. Fornecemos mais de 45 controles para você usar, desde botões simples a controles de dados avançados, como o modo de exibição de grade. Um <i>padrão</i> é a receita para combinar vários controles para criar algo novo.
+No desenvolvimento de apps UWP, um <i>controle</i> é um elemento de interface do usuário que exibe conteúdo ou permite interação. Os controles são os blocos de construção da interface do usuário. Fornecemos mais de 45 controles para você usar, desde botões simples a controles de dados avançados, como o modo de exibição de grade. Um <i>padrão</i> é a receita para combinar vários controles para criar algo novo.
 
-Os artigos desta seção fornecem orientações de design e instruções de codificação para adicionar controles e padrões ao seu aplicativo UWP. 
+Os artigos desta seção fornecem orientações de design e instruções de codificação para adicionar controles e padrões ao seu app UWP. 
 
 ## <a name="intro"></a>Introdução
 
@@ -30,13 +32,13 @@ Instruções gerais e exemplos de código para adicionar e estilizar controles e
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
    <p><b>[Adicionar controles e manipular eventos](controls-and-events-intro.md)</b> <br/>
-Há 3 etapas principais para adicionar controles ao seu aplicativo: adicionar um controle à interface do usuário de seu aplicativo, definir propriedades no controle e adicionar código aos manipuladores de eventos do controle, para que ele faça algo.</li>
+Há 3 etapas principais para adicionar controles ao seu app: adicionar um controle à interface do usuário de seu app, definir propriedades no controle e adicionar código aos manipuladores de eventos do controle, para que ele faça algo.</li>
 </ul> 
 </p>
   </div>
   <div class="side-by-side-content-right">
    <p><b>[Aplicando estilos a controles](styling-controls.md)</b> <br/>
-É possível personalizar a aparência de seus aplicativos de muitas formas usando a estrutura XAML. Os estilos permitem definir propriedades de controle e reutilizar essas configurações para criar uma aparência consistente em vários controles.</p>
+É possível personalizar a aparência de seus apps de muitas formas usando a estrutura XAML. Os estilos permitem definir propriedades de controle e reutilizar essas configurações para criar uma aparência consistente em vários controles.</p>
   </div>
 </div>
 </div>
@@ -168,14 +170,16 @@ Informações detalhadas sobre controles e padrões específicos.
 
 
 <li>[Alternar](toggles.md)</li>
-<li>[Dicas de ferramentas](tooltips.md)</li>
+<li>[Dicas de ferramenta](tooltips.md)</li>
 
 <li>[Modo de exibição da Web](web-view.md)</li>
 </ul>
 </div>
 
+## <a name="additional-controls-options"></a>Opções de controles adicionais
 
+Controles adicionais para o desenvolvimento UWP estão disponíveis de empresas como [Telerik](http://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/products/uwp), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](http://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) e [ActiPro](http://www.actiprosoftware.com/products/controls/universal). Esses controles fornecem suporte adicional para empresas e desenvolvedores .NET aumentando os controles padrão do sistema com os serviços e controles personalizados.  
 
-<!--HONumber=Dec16_HO2-->
+Se você tiver interesse em aprender mais sobre esses controles, confira o exemplo de [Banco de dados de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database) no GitHub. Este exemplo usa o controle de grade de dados e a validação de entrada de dados da Telerik, que é parte da sua interface do usuário para o pacote UWP. A interface do usuário para o pacote UWP é uma coleção de mais de 20 controles que está disponível como um projeto open source pela fundação .NET.
 
-
+![Imagem de banco de dados de pedidos de cliente](images/customerOrdersDataGrid.png)

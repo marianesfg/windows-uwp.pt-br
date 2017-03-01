@@ -3,19 +3,26 @@ description: Este artigo explica como dar suporte ao contrato de Compartilhament
 title: Compartilhar dados
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 554a2cd1db0f950b8a04a5d562f6a6ba43f1be23
-ms.openlocfilehash: 8b4f9ae45ed549ba5f10062e6bad25a4fb2e2a6f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 59039fbd2cc54c757acabba7f0c981059ef95c56
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Compartilhar dados
+# <a name="share-data"></a>Compartilhar dados
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artigo explica como dar suporte ao contrato de Compartilhamento em um aplicativo da Plataforma Universal do Windows (UWP). O contrato de Compartilhamento é uma maneira fácil de compartilhar dados como texto, links, fotos e vídeos entre aplicativos rapidamente. Por exemplo, um usuário pode querer compartilhar uma página da Web com seus amigos usando um aplicativo de rede social ou salvar um link em um aplicativo de anotações para consultar mais tarde.
 
-## Configurar um manipulador de eventos
+## <a name="set-up-an-event-handler"></a>Configurar um manipulador de eventos
 
 Adicione um manipulador de eventos [**DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested) para ser chamado sempre que um usuário invocar o compartilhamento. Isso pode ocorrer quando o usuário toca em um controle no aplicativo (por exemplo, um botão ou um comando da barra de aplicativos) ou automaticamente em um cenário específico (se o usuário terminar um nível e obtiver uma pontuação alta, por exemplo).
 
@@ -25,7 +32,7 @@ Quando ocorre um evento [**DataRequested**](https://msdn.microsoft.com/library/w
 
 [!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
-## Escolher dados
+## <a name="choose-data"></a>Escolher dados
 
 Você pode compartilhar vários tipos de dados, incluindo:
 
@@ -42,7 +49,7 @@ O objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windo
 
 [!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 
-## Definir propriedades
+## <a name="set-properties"></a>Definir propriedades
 
 Ao empacotar dados para compartilhamento, você pode fornecer uma variedade de propriedades que dão informações adicionais sobre o conteúdo compartilhado. Essas propriedades podem ajudar os aplicativos de destino a melhorar a experiência do usuário. Por exemplo, uma descrição ajuda quando o usuário está compartilhando conteúdo com mais de um aplicativo. A adição de uma miniatura ao compartilhar uma imagem ou um link para uma página da Web fornece uma referência visual ao usuário. Para obter mais informações, consulte [**DataPackagePropertySet**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackagePropertySet).
 
@@ -50,17 +57,17 @@ Todas as propriedades, exceto o título, são opcionais. A propriedade de títul
 
 [!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
 
-## Iniciar a interface do usuário de compartilhamento
+## <a name="launch-the-share-ui"></a>Iniciar a interface do usuário de compartilhamento
 
 Uma interface do usuário para compartilhamento é fornecida pelo sistema. Para iniciá-la, chame o método [**ShowShareUI**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI).
 
 [!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
-## Manipular erros
+## <a name="handle-errors"></a>Manipular erros
 
 Na maioria dos casos, o compartilhamento de conteúdo é um processo simples e direto. Contudo, há sempre a chance de algo inesperado acontecer. Por exemplo, o aplicativo pode exigir que o usuário selecione conteúdo para compartilhamento, mas o usuário não faz essa seleção. Para lidar com essas situações, use o método [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)), que exibirá uma mensagem ao usuário se algo der errado.
 
-## Atrasar o compartilhamento com delegados
+## <a name="delay-share-with-delegates"></a>Atrasar o compartilhamento com delegados
 
 Às vezes, pode não fazer sentido preparar imediatamente os dados que o usuário deseja compartilhar. Por exemplo, se o seu aplicativo oferece suporte ao envio de um arquivo de imagem grande em diversos formatos possíveis, é ineficiente criar todas essas imagens antes de o usuário fazer sua seleção.
 
@@ -91,7 +98,7 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 }
 ```
 
-## Consulte também 
+## <a name="see-also"></a>Consulte também 
 
 * [Comunicação de aplicativo a aplicativo](index.md)
 * [Receber dados](receive-data.md)
@@ -102,10 +109,5 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 * [FailWithDisplayText](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext.aspx)
 * [ShowShareUi](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.showshareui.aspx)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

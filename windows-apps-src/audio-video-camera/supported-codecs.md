@@ -3,22 +3,29 @@ author: drewbatgit
 ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
 description: "Este artigo lista os codecs de áudio e de vídeo e os formatos compatíveis com os aplicativos UWP."
 title: "Codecs compatíveis"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7bd0002d62519757cf582d6070a22890a0e1837e
-ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2c477e9dc0cc86534a179edb8e3a9415f4872d93
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Codecs compatíveis
+# <a name="supported-codecs"></a>Codecs compatíveis
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo lista os codecs de áudio, de vídeo e de imagem, e os formatos compatíveis com os aplicativos UWP.
 
 Nas tabelas abaixo "D" indica suporte de decodificador e "E" indica suporte de codificador.
 
-## Suporte ao codec e ao formato de áudio
+## <a name="audio-codec--format-support"></a>Suporte ao codec e ao formato de áudio
 
 As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada família de dispositivos.
 
@@ -27,7 +34,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 
  
 
-### Desktop
+### <a name="desktop"></a>Desktop
 
 <table>
 <colgroup>
@@ -338,7 +345,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 
  
 
-### Dispositivos móveis
+### <a name="mobile"></a>Dispositivos móveis
 
 <table>
 <colgroup>
@@ -649,7 +656,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 
  
 
-### IoT Core (x86)
+### <a name="iot-core-x86"></a>IoT Core (x86)
 
 <table>
 <colgroup>
@@ -960,7 +967,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 
  
 
-### IoT Core (ARM)
+### <a name="iot-core-arm"></a>IoT Core (ARM)
 
 <table>
 <colgroup>
@@ -1271,7 +1278,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 
  
 
-### XBox
+### <a name="xbox"></a>XBox
 
 <table>
 <colgroup>
@@ -1582,7 +1589,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 
  
 
-## Suporte ao codec e ao formato de vídeo
+## <a name="video-codec--format-support"></a>Suporte ao codec e ao formato de vídeo
 
 As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada família de dispositivos.
 
@@ -1592,7 +1599,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 
  
 
-### Desktop
+### <a name="desktop"></a>Desktop
 
 <table>
 <colgroup>
@@ -1811,7 +1818,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 
  
 
-### Dispositivos móveis
+### <a name="mobile"></a>Dispositivos móveis
 
 <table>
 <colgroup>
@@ -2030,7 +2037,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 
  
 
-### IoT Core (x86)
+### <a name="iot-core-x86"></a>IoT Core (x86)
 
 <table>
 <colgroup>
@@ -2249,7 +2256,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 
  
 
-### IoT (ARM)
+### <a name="iot-arm"></a>IoT (ARM)
 
 <table>
 <colgroup>
@@ -2468,7 +2475,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 
  
 
-### XBox
+### <a name="xbox"></a>XBox
 
 <table>
 <colgroup>
@@ -2685,7 +2692,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 </tbody>
 </table>
 
-## Suporte ao codec e ao formato de imagem 
+## <a name="image-codec--format-support"></a>Suporte ao codec e ao formato de imagem 
 
 <table>
 <colgroup>
@@ -2757,8 +2764,3 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 <sup>3</sup> Somente determinados formatos de câmera RAW têm suporte.  
 
 Para obter mais informações sobre codecs de imagem, consulte [Codecs WIC nativos](https://msdn.microsoft.com/library/windows/desktop/gg430027.aspx).
-
-
-<!--HONumber=Nov16_HO1-->
-
-

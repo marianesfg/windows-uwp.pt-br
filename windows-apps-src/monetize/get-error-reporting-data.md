@@ -2,16 +2,23 @@
 author: mcleanbyron
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados para um determinado intervalo de datas e outros filtros opcionais."
-title: "Obter dados de relatório de erros"
+title: "Obter dados de relatórios de erros"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, erros"
 translationtype: Human Translation
-ms.sourcegitcommit: dcf4c263ff3fd8df846d1d5620ba31a9da7a5e6c
-ms.openlocfilehash: 800405bcac9b05af0e0295c88c27cbe3d2387947
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0d99318a2a8deba78503163c76a425c132e7de01
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="get-error-reporting-data"></a>Obter dados de relatório de erros
+# <a name="get-error-reporting-data"></a>Obter dados de relatórios de erros
 
-Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados do seu app no formato JSON para um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis na seção **Falhas** do [Relatório de integridade](../publish/health-report.md) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados do seu aplicativo no formato JSON para um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis na seção **Falhas** do [Relatório de integridade](../publish/health-report.md) no painel do Centro de Desenvolvimento do Windows.
 
 Você pode recuperar informações adicionais sobre erros usando os métodos [obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md) e [obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md).
 
@@ -169,9 +176,4 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)
 * [Obter classificações de aplicativos](get-app-ratings.md)
 * [Obter avaliações de app](get-app-reviews.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

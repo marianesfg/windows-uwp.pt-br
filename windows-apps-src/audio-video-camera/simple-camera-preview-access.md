@@ -1,15 +1,22 @@
 ---
 author: drewbatgit
 ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
-description: "Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera em uma página XAML de um aplicativo UWP (Plataforma Universal do Windows)."
+description: "Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera em uma página XAML em um aplicativo UWP (Plataforma Universal do Windows)."
 title: "Exibir a visualização da câmera"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6aacd5ef8043c9c89116a1d287174210f02f7d62
-ms.openlocfilehash: 5eb53d1527f2cd002dfb66110f1f1f3618458b3a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d65d09349850f580d8bcee2d3875b38b8ed189f1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Exibir a visualização da câmera
+# <a name="display-the-camera-preview"></a>Exibir a visualização da câmera
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -17,7 +24,7 @@ Este artigo descreve como exibir rapidamente o fluxo de visualização de câmer
 
 Para saber mais sobre como desenvolver um aplicativo de câmera que capture fotos ou vídeos, consulte [Captura básica de fotos, vídeo e áudio com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md).
 
-## Adicionar declarações de funcionalidade ao manifesto do aplicativo
+## <a name="add-capability-declarations-to-the-app-manifest"></a>Adicionar declarações de funcionalidade ao manifesto do aplicativo
 
 Para que seu aplicativo acesse a câmera do dispositivo, você deve declarar que seu aplicativo usa as funcionalidades de *webcam* e *microphone* do dispositivo. 
 
@@ -27,7 +34,7 @@ Para que seu aplicativo acesse a câmera do dispositivo, você deve declarar que
 2.  Selecione a guia **Recursos**.
 3.  Marque a caixa da **Webcam** e a caixa do **Microfone**.
 
-## Adicionar um CaptureElement à sua página
+## <a name="add-a-captureelement-to-your-page"></a>Adicionar um CaptureElement à sua página
 
 Use um [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) para exibir o fluxo de visualização na página XAML.
 
@@ -35,7 +42,7 @@ Use um [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br20
 
 
 
-## Usar o MediaCapture para iniciar o fluxo de visualização
+## <a name="use-mediacapture-to-start-the-preview-stream"></a>Usar o MediaCapture para iniciar o fluxo de visualização
 
 O objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) é a interface do seu aplicativo para a câmera do dispositivo. Esta classe é um membro do namespace Windows.Media.Capture. O exemplo deste artigo também usa APIs dos namespaces [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) e [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx), além daqueles incluídos pelo modelo de projeto padrão.
 
@@ -60,13 +67,13 @@ Conecte a **MediaCapture** ao **CaptureElement** definindo a propriedade [**Sour
 [!code-cs[StartPreviewAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStartPreviewAsync)]
 
 
-## Desligar o fluxo de visualização
+## <a name="shut-down-the-preview-stream"></a>Desligar o fluxo de visualização
 
 Ao terminar de usar o fluxo de visualização, você sempre deve desligar o fluxo e dispor corretamente dos recursos associados para garantir que a câmera esteja disponível para outros aplicativos no dispositivo. As etapas necessárias para desligar o fluxo de visualização são:
 
 -   Se a câmera estiver atualmente em visualização, chame [**StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622) para interromper o fluxo de visualização. Uma exceção será gerada se você chamar **StopPreviewAsync** enquanto a visualização não estiver em execução.
--   Defina a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) do **CaptureElement** como nulo. Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para garantir que essa chamada seja executada no thread de interface do usuário.
--   Chame o método [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) do objeto **MediaCapture** para liberar o objeto. Novamente, use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para garantir que essa chamada seja executada no thread de interface do usuário.
+-   Defina a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) do **CaptureElement** como nulo. Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para garantir que essa chamada seja executada no thread de interface do usuário.
+-   Chame o método [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) do objeto **MediaCapture** para liberar o objeto. Novamente, use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para garantir que essa chamada seja executada no thread de interface do usuário.
 -   Defina a variável do membro do **MediaCapture** como nulo.
 -   Chame [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestRelease) para permitir que a tela seja desativada quando inativa.
 
@@ -85,14 +92,9 @@ No manipulador de eventos **Suspending**, verifique primeiro se a página está 
 [!code-cs[SuspendingHandler](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetSuspendingHandler)]
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Obter um quadro de visualização](get-a-preview-frame.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

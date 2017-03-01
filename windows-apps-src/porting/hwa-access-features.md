@@ -3,17 +3,25 @@ author: seksenov
 title: "Aplicativos Web hospedados - Acessando os recursos da Plataforma Universal do Windows (UWP) e APIs de tempo de execução"
 description: "Acessar recursos nativos da Plataforma Universal do Windows (UWP) e as APIs do Windows 10 Runtime, incluindo os comandos de voz da Cortona, Blocos Dinâmicos, ACURs para segurança, OpenID e OAuth e tudo em JavaScript remoto."
 kw: Hosted Web Apps, Accessing Windows 10 features from remote JavaScript, Building a Win10 Web Application, Windows JavaScript Apps, Microsoft Web Apps, HTML5 app for PC, ACUR URI Rules for Windows App, Call Live Tiles with web app, Use Cortana with web app, Access Cortana from website, msapplication-cortanavcd
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Aplicativos hospedados na Web, APIs do WinRT para JavaScript, aplicativo de web Win10, aplicativo do Windows em JavaScript, ApplicationContentUriRules, ACURs, msapplication-cortanavcd, Cortana para aplicativos web
+ms.assetid: 86ca4590-2675-4de2-b825-c586d9669b8e
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: fb74bfc40750941860dae0a8f811fde4a614e403
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: ccb59581227db82b8566da11d6db731b362ec258
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Acessar recursos da Plataforma Universal do Windows (UWP)
+# <a name="accessing-universal-windows-platform-uwp-features"></a>Acessar recursos da Plataforma Universal do Windows (UWP)
 
-Seu aplicativo da web pode ter acesso completo à Plataforma Universal do Windows (UWP), ativar recursos nativos em dispositivos Windows, [beneficiar-se da segurança do Windows](#keep-your-app-secure-setting-application-content-uri-rules-acurs), [chamar APIs do Windows Runtime](#call-windows-runtime-apis) diretamente do script hospedado em um servidor, aproveitar a [integração com a Cortana](#integrate-cortana-voice-commands)e usar um [provedor de autenticação on-line](#web-authentication-broker). [Também há suporte para aplicativos híbridos](#create-hybrid-apps-packaged-web-apps-vs-hosted-web-apps), pois você pode incluir código local para ser chamado do script hospedado e gerenciar a navegação do aplicativo entre as páginas locais e remotas.
+Seu aplicativo da web pode ter acesso completo à Plataforma Universal do Windows (UWP), ativando recursos nativos em dispositivos Windows, [beneficiando-se da segurança do Windows](#keep-your-app-secure--setting-application-content-uri-rules-acurs), [chamando APIs do Windows Runtime](#call-windows-runtime-apis) diretamente do script hospedado em um servidor, tirando proveito da [integração com a Cortana](#integrate-cortana-voice-commands)e usando um [provedor de autenticação on-line](#web-authentication-broker). [Também há suporte para aplicativos híbridos](#create-hybrid-apps--packaged-web-apps-vs-hosted-web-apps), pois você pode incluir código local para ser chamado do script hospedado e gerenciar a navegação do aplicativo entre as páginas locais e remotas.
 
-## Mantenha seu aplicativo seguro – Definir regras de URI de conteúdo do aplicativo (ACURs)
+## <a name="keep-your-app-secure--setting-application-content-uri-rules-acurs"></a>Mantenha seu aplicativo seguro – Definir regras de URI de conteúdo do aplicativo (ACURs)
 
 Por meio de ACURs, também conhecidos como uma lista de permissão de URL, você é capaz de dar acesso direto das URLs remotas às APIs universais do Windows a partir de HTML, CSS e JavaScript remoto. No nível do sistema operacional Windows, os limites de política corretos foram definidos para permitir que o código hospedado em seu servidor web chamem diretamente as APIs da plataforma. Você pode definir esses limites no manifesto do pacote do aplicativo quando colocar o conjunto de URLs que colocam o seu Aplicativo Web hospedado nas Regras de URI de conteúdo do aplicativo (ACURs). As regras devem incluir a página inicial do aplicativo e outras páginas que você deseja incluir como páginas do aplicativo. Opcionalmente, você pode excluir URLs específicos também.
 
@@ -41,7 +49,7 @@ StartPage="http://contoso.com/home">
 </uap:ApplicationContentUriRules>
 ```
 
-## Chamar APIs de Windows Runtime
+## <a name="call-windows-runtime-apis"></a>Chamar APIs de Windows Runtime
 
 Se uma URL é definida dentro dos limites do aplicativo (ACURs), ele pode chamar APIs do Windows Runtime em JavaScript usando o atributo "WindowsRuntimeAccess". O namespace do Windows será injetado e apresentado no mecanismo de script quando uma URL com acesso apropriado for carregada no Host de aplicativo. Isso torna as APIs universais do Windows disponíveis para que scripts do aplicativo possam chamar diretamente. Como desenvolvedor, você só precisa detectar recursos para a API do Windows que você gostaria de chamar e, se disponível, ir para recursos de plataforma específicos.
 
@@ -69,12 +77,12 @@ function updateTile(message, imgUrl, imgAlt) {
 
     if (typeof Windows !== 'undefined'&&
             typeof Windows.UI !== 'undefined' &&
-            typeof Windows.UI.Notifications !== 'undefined') {  
+            typeof Windows.UI.Notifications !== 'undefined') {    
         var notifications = Windows.UI.Notifications,
         tile = notifications.TileTemplateType.tileSquare150x150PeekImageAndText01,
         tileContent = notifications.TileUpdateManager.getTemplateContent(tile),
         tileText = tileContent.getElementsByTagName('text'),
-        tileImage = tileContent.getElementsByTagName('image');  
+        tileImage = tileContent.getElementsByTagName('image');    
         tileText[0].appendChild(tileContent.createTextNode(message || 'Demo Message'));
         tileImage[0].setAttribute('src', imgUrl || 'https://unsplash.it/150/150/?random');
         tileImage[0].setAttribute('alt', imgAlt || 'Random demo image');    
@@ -95,7 +103,7 @@ Esse código produzirá um bloco que parece com isto:
 
 Chamar APIs do Windows Runtime com qualquer ambiente ou técnica é mais familiar para você, mantendo seus recursos em um servido com detecção de recurso para recursos do Windows antes de chamá-los. Se os recursos da plataforma não estiverem disponíveis e o aplicativo da web estiver sendo executado em outro host, você pode fornecer ao usuário uma experiência padrão que funciona no navegador.
 
-## Integrar comandos de voz da Cortana
+## <a name="integrate-cortana-voice-commands"></a>Integrar comandos de voz da Cortana
 
 Você pode tirar proveito da integração com a Cortana especificando um arquivo de definição de comando de voz (VCD) na sua página html. O arquivo VCD é um arquivo xml que mapeia os comandos para frases específicas. Por exemplo, um usuário pode tocar no botão Iniciar e dizer "Contoso Books, mostrar best sellers" para inicializar o aplicativo Contoso Books e navegar para a página "best sellers".
 
@@ -109,11 +117,11 @@ Veja um exemplo do uso da tag em uma página html em um aplicativo da Web hosped
 
 Para saber mais sobre integração com a Cortana e VCDs, consulte interações da Cortana e Voice Command Defintion (VCD) elements and attributes v1.2.
 
-## Criar aplicativos híbridos – Aplicativos Web empacotados vs. Aplicativos Web hospedados
+## <a name="create-hybrid-apps--packaged-web-apps-vs-hosted-web-apps"></a>Criar aplicativos híbridos – Aplicativos Web empacotados vs. Aplicativos Web hospedados
 
 Você tem opções para criar seu aplicativo UWP. O aplicativo pode ser desenvolvido para download da Windows Store e hospedagem total no cliente local, frequentemente chamado de **Aplicativo Web empacotado**. Isso permite que você execute seu aplicativo offline em qualquer plataforma compatível. Ou o aplicativo pode ser um aplicativo Web totalmente hospedado que é executado em um servidor Web remoto, geralmente conhecido como **Hosted Web App**. Mas há também uma terceira opção: o aplicativo pode ser hospedado parcialmente no cliente local e parcialmente em um servidor Web remoto. Chamamos essa terceira opção de **Hybrid app**, e ela normalmente usa o componente **WebView** para fazer com que o conteúdo remoto se pareça com o conteúdo local. Aplicativos híbridos podem incluir seu código HTML5, CSS e Javascript em execução como um pacote dentro do cliente de aplicativo local e reter a capacidade de interagir com o conteúdo remoto.
 
-## Agente de autenticação da Web
+## <a name="web-authentication-broker"></a>Agente de autenticação da Web
 
 Você pode usar o agente de autenticação da Web para manipular o fluxo de logon para os usuários se tiver um provedor de identidade online que use protocolos de autenticação e autorização da Internet como OpenID ou OAuth. Especifique os URIs iniciais e finais em uma tag `<meta>` em uma página html em seu aplicativo. O Windows detecta esses URIs e os transmite para o agente de autenticação da Web para concluir o fluxo de logon. O URI inicial é composto pelo endereço para onde você envia a solicitação de autenticação para o seu provedor de identidade online junto com outras informações necessárias, como ID do aplicativo, um URI de redirecionamento para o qual o usuário é enviado após concluir a autenticação e o tipo de resposta esperado. Seu provedor deverá informar quais são os parâmetros necessários. Veja um exemplo de uso da tag `<meta>`:
 
@@ -123,7 +131,7 @@ Você pode usar o agente de autenticação da Web para manipular o fluxo de logo
 
 Para saber mais, consulte [Considerações do agente de autenticação da Web para provedores online](https://msdn.microsoft.com/library/windows/apps/dn448956.aspx).
 
-## Declarações de funcionalidades do aplicativo
+## <a name="app-capability-declarations"></a>Declarações de funcionalidades do aplicativo
 
 Se seu aplicativo precisar de acesso programático a recursos do usuário como imagens ou músicas, ou dispositivos como uma câmera ou microfone, você deverá declarar a funcionalidade apropriada. Há três categorias de declaração de recurso de aplicativo: 
 
@@ -140,19 +148,14 @@ Solicite acesso declarando as funcionalidades no [manifesto do pacote](https://m
 
 Alguns recursos fornecem acesso de aplicativos a um recurso confidencial. Esses recursos são considerados confidenciais porque podem acessar dados pessoais do usuário ou acarretar custos para o usuário. Configurações de privacidade, gerenciadas pelo aplicativo Configurações, permitem que o usuário controle dinamicamente o acesso a recursos confidenciais. Assim, é importante que seu aplicativo não suponha que um recurso confidencial sempre está disponível. Para obter mais informações sobre como acessar recursos confidenciais, consulte [Diretrizes para aplicativos com reconhecimento de privacidade](https://msdn.microsoft.com/library/windows/apps/hh768223.aspx).
 
-## manifoldjs e o manifesto do aplicativo
+## <a name="manifoldjs-and-the-app-manifest"></a>manifoldjs e o manifesto do aplicativo
 
 Uma maneira fácil de transformar seu site em um aplicativo UWP é usar um **manifesto do aplicativo** e **manifoldjs**. O manifesto do aplicativo é um arquivo xml que contém metadados sobre o aplicativo. Ele especifica itens como o nome do aplicativo, links para recursos, o modo de exibição, URLs e outros dados que descrevem como o aplicativo deve ser implantado e executado. manifoldjs facilita esse processo, mesmo em sistemas que não oferecem suporte a aplicativos Web. Acesse [manifoldjs.com](http://www.manifoldjs.com/) para saber mais sobre seu funcionamento. Você também pode ver uma demonstração sobre manifoldjs como parte desta apresentação [Aplicativos Web do Windows 10](http://channel9.msdn.com/Events/WebPlatformSummit/2015/Hosted-web-apps-and-web-platform-innovations?wt.mc_id=relatedsession).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 - [API Tempo do Windows Runtime: exemplos de código JavaScript](http://rjs.azurewebsites.net/)
 - [Codepen: área restrita a ser usada para chamar APIs do Windows Runtime](http://codepen.io/seksenov/pen/wBbVyb/)
 - [Interações da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974231.aspx)
 - [Elementos e atributos de Voice Command Definition (VCD) v1.2](https://msdn.microsoft.com/library/windows/apps/dn954977.aspx)
 - [Considerações do agente de autenticação da Web para provedores online](https://msdn.microsoft.com/library/windows/apps/dn448956.aspx)
 - [Declarações de funcionalidades do aplicativo](https://msdn.microsoft.com/ibrary/windows/apps/hh464936.aspx)
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -1,20 +1,27 @@
 ---
 author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
-description: "Este artigo mostra como converter mídia em dispositivos remotos de um aplicativo Universal do Windows."
+description: "Este artigo mostra como converter mídia em dispositivos remotos de um app universal do Windows."
 title: "Transmissão de mídia"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ebcd2f2b28a7cd2a8a9dad16c30239b06e147ec3
-ms.openlocfilehash: fc69e3b5bb814752480fa0151c36ae0a8c783c4e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f399007426f5a973a06d473ef98a9eb7e24184dd
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="media-casting"></a>Transmissão de mídia
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo mostra como converter mídia em dispositivos remotos de um aplicativo universal do Windows.
+Este artigo mostra como converter mídia em dispositivos remotos de um app universal do Windows.
 
 ## <a name="built-in-media-casting-with-mediaplayerelement"></a>Transmissão de mídia integrada com o MediaPlayerElement
 
@@ -24,7 +31,7 @@ Para permitir que o usuário abra um arquivo de vídeo a ser reproduzido no cont
 
 [!code-cs[BuiltInCastingUsing](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetBuiltInCastingUsing)]
 
-No arquivo XAML do seu aplicativo, adicione um **MediaPlayerElement** e defina [**AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn298977) como verdadeiro.
+No arquivo XAML do seu app, adicione um **MediaPlayerElement** e defina [**AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn298977) como verdadeiro.
 
 [!code-xml[MediaElement](./code/MediaCasting_RS1/cs/MainPage.xaml#SnippetMediaElement)]
 
@@ -63,7 +70,7 @@ No seu arquivo XAML, adicione um botão para permitir que o usuário inicie o se
 
 [!code-xml[CastPickerButton](./code/MediaCasting_RS1/cs/MainPage.xaml#SnippetCastPickerButton)]
 
-No manipulador de eventos **Click** para o botão, chame [**TransformToVisual**](https://msdn.microsoft.com/library/windows/apps/br208986) para obter a transformação de um elemento de interface do usuário em relação a outro. Neste exemplo, a transformação é a posição do botão do seletor de conversão em relação à raiz visual da janela do aplicativo. Chame o método [**Show**](https://msdn.microsoft.com/library/windows/apps/dn972542) do objeto [**CastingDevicePicker**](https://msdn.microsoft.com/library/windows/apps/dn972525) para iniciar a caixa de diálogo do seletor de transmissão. Especifique o local e as dimensões do botão do seletor de conversão para que o sistema possa fazer a caixa de diálogo sair do botão que o usuário pressionou.
+No manipulador de eventos **Click** para o botão, chame [**TransformToVisual**](https://msdn.microsoft.com/library/windows/apps/br208986) para obter a transformação de um elemento de interface do usuário em relação a outro. Neste exemplo, a transformação é a posição do botão do seletor de conversão em relação à raiz visual da janela do app. Chame o método [**Show**](https://msdn.microsoft.com/library/windows/apps/dn972542) do objeto [**CastingDevicePicker**](https://msdn.microsoft.com/library/windows/apps/dn972525) para iniciar a caixa de diálogo do seletor de transmissão. Especifique o local e as dimensões do botão do seletor de conversão para que o sistema possa fazer a caixa de diálogo sair do botão que o usuário pressionou.
 
 [!code-cs[CastPickerButtonClick](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetCastPickerButtonClick)]
 
@@ -156,10 +163,5 @@ Por fim, implemente o manipulador para o botão desconectar. Pare a transmissão
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

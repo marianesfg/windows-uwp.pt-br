@@ -3,13 +3,20 @@ author: msatranjr
 Description: "Este tópico descreve as diretrizes de desempenho para aplicativos que exigem acesso ao local de um usuário."
 title: Diretrizes de aplicativos com reconhecimento de local
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, localização, mapa, localização geográfica"
 translationtype: Human Translation
-ms.sourcegitcommit: 7159aea3feef96781575825d019a379e0eadc603
-ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f52f2f7a33edcbb0bd360c7b336cc3988abb80f5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Diretrizes de aplicativos com reconhecimento de local
+# <a name="guidelines-for-location-aware-apps"></a>Diretrizes de aplicativos com reconhecimento de local
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -22,7 +29,7 @@ ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
 
 Este tópico descreve as diretrizes de desempenho para aplicativos que exigem acesso ao local de um usuário.
 
-## Recomendações
+## <a name="recommendations"></a>Recomendações
 
 
 -   Comece a usar o objeto de local somente quando o aplicativo exigir os dados de localização.
@@ -100,13 +107,13 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 
     As APIs do Windows Runtime podem acessar todos esses sensores, com exceção do magnetômetro. Os sensores fusion são mais precisos e estáveis do que os sensores raw, mas usam mais energia. Você deve usar os sensores corretos para cada finalidade. Para saber mais, consulte [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
 
-**Modo de espera conectado** 
+**Modo de espera conectado**
 - Quando o computador está conectado no modo de espera, objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) sempre podem ser instanciados. No entanto, o objeto **Geolocator** não encontrará nenhum sensor a ser agregado e, portanto, as chamadas para [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) atingirão seu tempo limite após sete segundos, os ouvintes do evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) nunca serão chamados, e os ouvintes do evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) serão chamados uma vez com o status **NoData**.
 
-## Diretrizes de uso adicionais
+## <a name="additional-usage-guidance"></a>Diretrizes de uso adicionais
 
 
-### Detectando alterações nas configurações de localização
+### <a name="detecting-changes-in-location-settings"></a>Detectando alterações nas configurações de localização
 
 O usuário pode desativar a funcionalidade de localização usando as **configurações de privacidade de localização** no aplicativo **Configurações**.
 
@@ -119,7 +126,7 @@ O usuário pode desativar a funcionalidade de localização usando as **configur
 
 Observe que o serviço de localização retornará os dados quando estiver disponível. Ela pode retornar primeiro um local com um raio de erro maior e atualizar o local com mais informações precisas assim que estiver disponível. Os aplicativos que exibem o local do usuário normalmente desejam atualizar o local quando informações precisas estiverem disponíveis.
 
-### Representações gráficas de localização
+### <a name="graphical-representations-of-location"></a>Representações gráficas de localização
 
 Faça com que seu aplicativo use [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) para denotar a localização atual do usuário no mapa claramente. Existem três bandas principais de precisão, um raio de erro de aproximadamente 10 metros, outro de aproximadamente 100 metros e um terceiro superior a 1 quilômetro. Usando as informações de precisão você pode assegurar que seu aplicativo exiba a localização com precisão no contexto dos dados disponíveis. Para obter informações gerais sobre como usar o controle de mapa, consulte [Exiba mapas em modos de exibição 2D, 3D e Streetside](https://msdn.microsoft.com/library/windows/apps/mt219695).
 
@@ -140,7 +147,7 @@ Quando a precisão da localização mudar de uma banda para outra, faça uma tra
 -   Suavizando a animação da transição e mantendo a transição rápida e fluida
 -   Aguardando alguns relatórios consecutivos para confirmar a mudança na precisão, para ajudar a evitar ampliações indesejadas e muito frequentes.
 
-### Representações textuais de localização
+### <a name="textual-representations-of-location"></a>Representações textuais de localização
 
 Alguns tipos de aplicativos, por exemplo, aplicativos de previsão de tempo ou de informações locais, precisam de maneiras de representar textualmente a localização em diferentes bandas de precisão. Verifique se a localização está sendo exibida claramente e somente no nível de precisão fornecidos nos dados.
 
@@ -148,7 +155,7 @@ Alguns tipos de aplicativos, por exemplo, aplicativos de previsão de tempo ou d
 -   Para uma precisão de aproximadamente 100 metros (resolução de Wi-Fi), os dados de localização recebidos são moderadamente precisos, por isso recomendamos a exibição de informações como o nome da cidade. Evite usar o nome do bairro.
 -   Para uma precisão superior a um quilômetro (resolução de IP), exiba somente o nome do estado ou província ou do país/região.
 
-### Considerações de privacidade
+### <a name="privacy-considerations"></a>Considerações de privacidade
 
 A localização geográfica do usuário faz parte das PII (informações de identificação do usuário). O site a seguir fornece orientações para proteger a privacidade do usuário.
 
@@ -156,7 +163,7 @@ A localização geográfica do usuário faz parte das PII (informações de iden
 
 <!--For more info, see [Guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md).-->
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Configurar uma cerca geográfica](https://msdn.microsoft.com/library/windows/apps/mt219702)
 * [Obter a localização atual](https://msdn.microsoft.com/library/windows/apps/mt219698)
@@ -166,13 +173,4 @@ A localização geográfica do usuário faz parte das PII (informações de iden
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

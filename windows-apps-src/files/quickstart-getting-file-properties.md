@@ -3,17 +3,24 @@ author: laurenhughes
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obter propriedades do arquivo
 description: "Obtenha as propriedades&\\#8212;nível superior, básicas e estendidas&\\#8212;de um arquivo representado pelo objeto StorageFile."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: 464548664f8065e4dba45d23ccbb71a68d0b6b17
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 89dee43da35e9a31bb7a795324119cb429d3734e
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="get-file-properties"></a>Obter propriedades do arquivo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** APIs importantes **
+**APIs importantes**
 
 -   [**StorageFile.GetBasicPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh701737)
 -   [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225)
@@ -28,9 +35,9 @@ Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
--   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
+-   **Entender a programação assíncrona para apps da Plataforma Universal do Windows (UWP)**
 
-    Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
+    Você pode aprender a escrever apps assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever apps assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
 -   **Acessar permissões ao local**
 
@@ -134,9 +141,4 @@ foreach (Windows.Storage.StorageFile file in files)
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

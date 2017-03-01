@@ -2,9 +2,17 @@
 author: jnHs
 Description: "Saiba mais sobre os formulários fiscais emitidos pela Microsoft, inclusive quem os receberá e quando eles serão disponibilizados."
 title: "Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft"
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 translationtype: Human Translation
-ms.sourcegitcommit: 684a76a503a0adefb1754059ffa6aa8d4d8d940b
-ms.openlocfilehash: 2927588bc096ef1ed9e8451cea73ba78efa9d7c0
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 5f51e1c5a44767e49b5c3dc5f578c2532da11008
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -54,10 +62,10 @@ EIN: \*\*\*\*\*4442<br>
     <td valign="top">Nenhuma das opções acima.</td>
     <td valign="top">Nenhum</td>
   </tr>
-</table>
-
-
-<table>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
   <tr>
      <th>Se eu for um desenvolvedor dos Estados Unidos que vende aplicativos pagos e... </th>
      <th> Devo receber este formulário</th>
@@ -119,9 +127,4 @@ EIN: \*\*\*\*\*0505<br>
 
 
 > **Observação** Se você tiver outras dúvidas ou preocupações relacionadas aos **formulários fiscais da Receita Federal dos EUA**, crie um [tíquete de suporte](http://aka.ms/storesupport). A Microsoft não pode responder a perguntas relacionadas a circunstâncias específicas de seu imposto; para essas perguntas, consulte seu contador.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -3,17 +3,24 @@ author: mcleblanc
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
 description: "O Microsoft Visual Studio está para o Windows assim como o Xcode está para o iOS e o Mac OS. Neste guia passo a passo, ajudaremos você a se familiarizar com o Visual Studio."
 title: Criando um projeto no Visual Studio
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 40dc6a52dbd495a78e5aa0d95a590d3e878d4068
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c8aba48fba1badcfeebc9868215b904c76ac6b98
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introdução: criando um projeto
+# <a name="getting-started-creating-a-project"></a>Ponto de Partida: criando um projeto
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Criando um projeto
+## <a name="creating-a-project"></a>Criando um projeto
 
 O Microsoft Visual Studio está para o Windows assim como o Xcode está para o iOS e o Mac OS. Neste guia passo a passo, ajudaremos você a se familiarizar com o Visual Studio. Ele mostra as noções básicas absolutas que você precisa saber antes de começar. Sempre que for criar um aplicativo, você seguirá etapas semelhantes a estas.
 
@@ -50,12 +57,7 @@ No Visual Studio, também há vários modelos de projeto para escolher, como mos
 
 ![caixa de diálogo novo projeto do visual studio](images/ios-to-uwp/ios-to-uwp-vs-choose-template.png) Neste guia passo a passo, toque em **Visual C#** e, em seguida, toque em **Windows**, **Universal do Windows** e **Aplicativo em Branco (Universal do Windows)**. Na caixa **Nome**, digite "MyApp" e toque em **OK**. O Visual Studio cria e exibe seu primeiro projeto. Agora, você pode começar a criar seu aplicativo e adicionar código a ele.
 
-## Próxima etapa
+## <a name="next-step"></a>Próxima etapa
 
 [Introdução: escolhendo uma linguagem de programação](getting-started-choosing-a-programming-language.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

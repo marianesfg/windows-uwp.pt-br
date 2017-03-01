@@ -2,23 +2,31 @@
 author: DelfCo
 description: "Ferramentas e técnicas para depurar e testar como o aplicativo funciona com o Gerenciamento do Tempo de Vida do Processo."
 title: Testando e depurando ferramentas para PLM (Gerenciamento do Tempo de Vida do Processo)
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 translationtype: Human Translation
-ms.sourcegitcommit: cbf3d2bb1466ca06e397561ad90d95db28e7136d
-ms.openlocfilehash: 1ea7b969ce0b8992306bb8a2d2b569905cc0cc67
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: a5315534fc305c85dcf410b4808d2f8ebd844b3e
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Testando e depurando ferramentas para PLM (Gerenciamento do Tempo de Vida do Processo)
+# <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>Testando e depurando ferramentas para PLM (Gerenciamento do Tempo de Vida do Processo)
 
 Uma das principais diferenças entre aplicativos UWP e aplicativos da área de trabalho tradicionais é que títulos UWP residem em um contêiner de aplicativo sujeito ao PLM (Gerenciamento do Tempo de Vida do Processo). Os aplicativos UWP podem ser suspensos, retomados ou encerrados em todas as plataformas pelo serviço Agente do Tempo de Execução, e há ferramentas dedicadas a serem usadas para forçar essas transições quando você testa ou depura o código que as manipula.
 
-## Recursos no Visual Studio 2015
+## <a name="features-in-visual-studio-2015"></a>Recursos no Visual Studio 2015
 
 O depurador interno do Visual Studio 2015 pode ajudar a investigar problemas em potencial durante o uso de recursos UWP exclusivos. Você pode forçar o aplicativo em diferentes estados PLM usando a barra de ferramentas **Eventos de Ciclo de Vida**, que se torna visível quando você executa e depura o título.
 
 ![Barra de ferramentas Eventos de Ciclo de Vida](images/gs-debug-uwp-apps-001.png)
 
-## A ferramenta PLMDebug
+## <a name="the-plmdebug-tool"></a>A ferramenta PLMDebug
 
 PLMDebug.exe é uma ferramenta de linha de comando que permite controlar o estado PLM de um pacote de aplicativos e é fornecida como parte do SDK do Windows. Depois de instalada, a ferramenta reside em *C:\Program Files (x86) \Windows Kits\10\Debuggers\x64* por padrão. 
 
@@ -78,12 +86,7 @@ em que `Game` é o nome do processo e `279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.
 
 Cada chamada para **/enableDebug** deverá ser acoplada posteriormente a outra chamada PLMDebug com a opção **/disableDebug**. Além disso, o caminho para um depurador deve ser absoluto (caminhos relativos não são compatíveis).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 - [Implantando e depurando aplicativos UWP](deploying-and-debugging-uwp-apps.md)
 - [Depuração, teste e desempenho](index.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

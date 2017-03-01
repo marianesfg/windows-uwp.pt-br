@@ -3,13 +3,20 @@ author: mtoepke
 title: Controles move-look para jogos
 description: "Aprenda a adicionar controles move-look tradicionais (também conhecidos como controles mouselook) usando o mouse e o teclado ao seu jogo do DirectX."
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, move-look, controles
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d5bd0a43c1f261e6a12ed947e497d3e45d0ab6a7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 40af05538aa6a6fff6e159fe8aa8812090e8b44b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles move-look para jogos
+# <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles move-look para jogos
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -22,13 +29,13 @@ Se esse conceito de controle lhe parecer pouco familiar, pense nele da seguinte 
 
 Em jogos, esses controles costumam ser chamados de controles WASD, nos quais as teclas W, S, A e D são usadas para movimentos da câmera fixos no plano x-z e o mouse é usado para controlar a rotação da câmera em torno dos eixos x e y.
 
-## Objetivos
+## <a name="objectives"></a>Objetivos
 
 
 -   Adicionar controles move-look básicos ao seu jogo DirectX, tanto para mouse e teclado como para telas sensíveis ao toque.
 -   Implementar uma câmera em primeira pessoa usada para navegar em um ambiente 3D.
 
-## Uma observação sobre implementações de controle de toque
+## <a name="a-note-on-touch-control-implementations"></a>Uma observação sobre implementações de controle de toque
 
 
 Para controles de toque, implementamos dois controladores: o controle de movimento, que se ocupa do movimento no plano x-z com relação ao ponto de vista da câmera; e o controlador de visão, que direciona o ponto de vista da câmera. O controlador de movimento é mapeado aos botões WASD do teclado e o controlador de visão é mapeado ao mouse. Entretanto, para controles de toque, precisamos definir uma região da tela que corresponda às entradas direcionais ou botões WASD virtuais, com o restante da tela servindo como espaço de entrada para os controles de visão.
@@ -39,7 +46,7 @@ Nossa tela tem a seguinte aparência.
 
 Quando você move o ponteiro de toque (e não o mouse!) no canto inferior esquerdo da tela, qualquer movimento para cima fará a câmera mover para frente. Qualquer movimento para baixo faz a câmera mover-se para trás. O mesmo se aplica aos movimentos para a esquerda e para a direita dentro do espaço do ponteiro do controlador de movimento. Fora desse espaço, a tela torna-se um controlador de visão – você simplesmente toca ou arrasta a câmera para onde deseja olhar.
 
-## Configurar a infraestrutura básica de eventos de entrada
+## <a name="set-up-the-basic-input-event-infrastructure"></a>Configurar a infraestrutura básica de eventos de entrada
 
 
 Em primeiro lugar, temos que criar a classe de controle que usaremos para manipular os eventos de entrada provenientes do mouse e do teclado e atualizar a perspectiva da câmera com base nessa entrada. Como estamos implementando controles move-look, nós a chamamos de **MoveLookController**.
@@ -184,7 +191,7 @@ Finalmente, usamos esses métodos e propriedades para inicializar, acessar e atu
 
 Agora já temos todos os componentes necessários para implementar os controles move-look. Portanto, chegou o momento de conectar todas essas peças.
 
-## Criar os eventos de entrada básicos
+## <a name="create-the-basic-input-events"></a>Criar os eventos de entrada básicos
 
 
 O dispatcher de eventos do Windows Runtime fornece cinco eventos que deverão ser manipulados por instâncias da classe **MoveLookController** para manipular:
@@ -376,7 +383,7 @@ void MoveLookController::OnKeyUp(
 
 Quando a tecla é liberada, esse manipulador de eventos define-o novamente como falso. Ao ser chamado, **Update**, verifica esses estados de movimento direcional e produz o movimento correspondente da câmera. Isso é um pouco mais simples do que a implementação de toque.
 
-## Inicializar os controles de toque e o estado dos controladores
+## <a name="initialize-the-touch-controls-and-the-controller-state"></a>Inicializar os controles de toque e o estado dos controladores
 
 
 Agora conectaremos os eventos e inicializaremos todos os campos de estado de controladores.
@@ -423,7 +430,7 @@ void MoveLookController::Initialize( _In_ CoreWindow^ window )
 
 **Initialize** recebe uma referência à instância de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do aplicativo como um parâmetro e registra os manipuladores de eventos que desenvolvemos para os eventos apropriados nessa **CoreWindow**. Ele inicializa os IDs dos ponteiros de movimento e visão, zera o vetor de comando para nossa implementação do controlador de movimento de tela sensível ao toque e coloca a câmera voltada diretamente para a frente quando o aplicativo é iniciado.
 
-## Obtendo e definindo a posição e a orientação da câmera
+## <a name="getting-and-setting-the-position-and-orientation-of-the-camera"></a>Obtendo e definindo a posição e a orientação da câmera
 
 
 Definiremos alguns métodos para obter e definir a posição da câmera em relação ao visor.
@@ -464,7 +471,7 @@ DirectX::XMFLOAT3 MoveLookController::get_LookPoint()
 }
 ```
 
-## Atualizando as informações de estado do controlador
+## <a name="updating-the-controller-state-info"></a>Atualizando as informações de estado do controlador
 
 
 Agora efetuamos os cálculos para converter as informações de coordenadas do ponteiro rastreadas em **m\_movePointerPosition** em novas informações de coordenadas relativas ao sistema de coordenadas do nosso mundo. Nosso aplicativo chama esse método cada vez que seu loop principal é atualizado. Portanto, é aqui que calculamos as informações de posição do novo ponto de visão que queremos passar ao aplicativo para que a matriz de visualização seja atualizada antes da projeção no visor.
@@ -556,7 +563,7 @@ Quando calculamos a velocidade, também traduzimos as coordenadas recebidas dos 
 
 A posição final do ponto de visão para o jogador é a última posição mais a velocidade calculada, e é isso que é lido pelo renderizador quando chama o método **get\_Position** (muito provavelmente durante a configuração para cada quadro). Depois disso, redefinimos o comando de movimento para zero.
 
-## Atualizando a matriz de visualização com a nova posição da câmera
+## <a name="updating-the-view-matrix-with-the-new-camera-position"></a>Atualizando a matriz de visualização com a nova posição da câmera
 
 
 Podemos obter a coordenada do espaço da cena em que a câmera está focalizada, que é atualizada com a frequência programada no aplicativo (a cada 60 segundos no loop principal do aplicativo, por exemplo). Este pseudocódigo sugere o comportamento de chamada que você pode implementar:
@@ -585,10 +592,5 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

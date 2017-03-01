@@ -1,20 +1,27 @@
 ---
 author: mtoepke
-title: Como fazer a portabilidade de um renderizador simples do OpenGL ES 2.0 para o Direct3D 11
-description: "Para o primeiro exercício de portabilidade, vamos começar com noções básicas - trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de aplicativo do DirectX 11 (Windows Universal) do Visual Studio 2015."
+title: Como fazer a portabilidade de um renderizador OpenGL ES 2.0 simples para Direct3D 11
+description: "Para o primeiro exercício de portabilidade, vamos começar com noções básicas - trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de app do DirectX 11 (Windows Universal) do Visual Studio 2015."
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, opengl, direct3d 11, portabilidade
 translationtype: Human Translation
-ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
-ms.openlocfilehash: 307b611eece3de6288d67e1e340368763f26fa2e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 71b4b42d2665cbeb43cbdbe2dbab9119a8f68ce9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Como fazer a portabilidade de um renderizador simples do OpenGL ES 2.0 para o Direct3D 11
+# <a name="how-to-port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Como fazer a portabilidade de um renderizador OpenGL ES 2.0 simples para Direct3D 11
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Para este exercício de portabilidade, vamos começar com noções básicas: trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de aplicativo do DirectX 11 (Windows Universal) do Visual Studio 2015. Conforme seguimos por este processo de compatibilização, você aprenderá o seguinte:
+Para este exercício de portabilidade, vamos começar com noções básicas: trazer um renderizador simples para um cubo giratório com sombreamento de vértice do OpenGL ES 2.0 para Direct3D, que corresponda ao modelo de app do DirectX 11 (Windows Universal) do Visual Studio 2015. Conforme seguimos por este processo de compatibilização, você aprenderá o seguinte:
 
 -   Como fazer a portabilidade de um conjunto simples de buffers de vértice para buffers de entrada Direct3D
 -   Como fazer a portabilidade de uniformes e atributos para buffers constantes
@@ -81,19 +88,19 @@ Essa estrutura tem uma instância e contém todos os componentes necessários pa
 
  
 
-## O que você precisa saber
+## <a name="what-you-need-to-know"></a>O que você precisa saber
 
 
-### Tecnologias
+### <a name="technologies"></a>Tecnologias
 
 -   [Microsoft Visual C++](http://msdn.microsoft.com/library/vstudio/60k1461a.aspx)
 -   OpenGL ES 2.0
 
-### Pré-requisitos
+### <a name="prerequisites"></a>Pré-requisitos
 
 -   Opcional. Consulte [Compatibilizar código EGL com DXGI e Direct3D](moving-from-egl-to-dxgi.md). Leia este tópico para entender melhor a interface de elementos gráficos oferecida pelo DirectX.
 
-## <span id="keylinks_steps_heading"></span>Etapas
+## <a name="span-idkeylinksstepsheadingspansteps"></a><span id="keylinks_steps_heading"></span>Etapas
 
 
 <table>
@@ -109,11 +116,11 @@ Essa estrutura tem uma instância e contém todos os componentes necessários pa
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Compatibilizar os objetos de sombreadores](port-the-shader-config.md)</p></td>
-<td align="left"><p>Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar que o programa principal consegue se comunicar com os objetos de sombreador depois de eles serem compilados.</p></td>
+<td align="left"><p>[Fazer a portabilidade de objetos de sombreador](port-the-shader-config.md)</p></td>
+<td align="left"><p>Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar-se de que o programa principal consiga se comunicar com os objetos de sombreador depois de eles serem compilados.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)</p></td>
+<td align="left"><p>[Fazer a portabilidade de dados e buffers de vértice](port-the-vertex-buffers-and-data-config.md)</p></td>
 <td align="left"><p>Nesta etapa, você definirá os buffers de vértices que conterão suas malhas e os buffers de índice que permitem que os sombreadores percorram os vértices em uma ordem específica.</p></td>
 </tr>
 <tr class="odd">
@@ -129,7 +136,7 @@ Essa estrutura tem uma instância e contém todos os componentes necessários pa
 
  
 
-## <span id="additional_resources"></span>Recursos adicionais
+## <a name="span-idadditionalresourcesspanadditional-resources"></a><span id="additional_resources"></span>Recursos adicionais
 
 
 -   [Prepare o seu ambiente de desenvolvimento para o desenvolvimento de jogos UWP DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
@@ -142,10 +149,5 @@ Essa estrutura tem uma instância e contém todos os componentes necessários pa
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

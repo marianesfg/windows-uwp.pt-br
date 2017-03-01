@@ -3,17 +3,24 @@ author: mcleblanc
 title: "Escolhendo uma linguagem de programação"
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
 description: "Escolhendo uma linguagem de programação"
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c7d99923a0deac61e289d3a2796b8dd1720430b4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 440fb76aac128490366677278254a5f5b2e095ed
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introdução: escolhendo uma linguagem de programação
+# <a name="getting-started-choosing-a-programming-language"></a>Introdução: escolhendo uma linguagem de programação
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Escolhendo uma linguagem de programação
+## <a name="choosing-a-programming-language"></a>Escolhendo uma linguagem de programação
 
 Antes de seguirmos adiante, você deve conhecer as linguagens de programação que poderá escolher quando for desenvolver aplicativos da Plataforma Universal do Windows (UWP). Embora as orientações passo a passo deste artigo usem C#, é possível desenvolver aplicativos UWP usando uma ou mais linguagens de programação (veja [Linguagens, ferramentas e estruturas](https://msdn.microsoft.com/library/windows/apps/dn465799)).
 
@@ -33,7 +40,7 @@ Apesar de nosso foco ser a linguagem C# neste artigo, as outras linguagens ofere
 -   [Exemplos de aplicativo da Windows Store que usam DirectX](http://go.microsoft.com/fwlink/p/?LinkId=263603)
 -   [Onde está o SDK do DirectX?](https://msdn.microsoft.com/library/windows/desktop/ee663275)
 
-## Dando uma chance para C#
+## <a name="giving-c-a-go"></a>Dando uma chance para C#
 
 Como desenvolvedor do iOS, você está habituado ao Objective-C e Swift. A linguagem de programação da Microsoft mais próxima é o C#. Para a maioria dos desenvolvedores e aplicativos, achamos que o C# é a linguagem mais fácil e rápida para aprender a usar, por isso as informações e tutoriais deste artigo se concentram nessa linguagem. Para saber mais sobre C#, consulte:
 
@@ -139,12 +146,7 @@ int result = mySampleClass.AddTwoNumbers(1, 2);
 
 C# é uma linguagem fácil de usar e vem com as muitas classes de suporte e estruturas que compõem o .NET. Você nunca gravará seu código sem um colchete visível.
 
-## Próxima etapa
+## <a name="next-step"></a>Próxima etapa
 
 [Introdução: conhecendo o Visual Studio](getting-started-getting-around-in-visual-studio.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

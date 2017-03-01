@@ -3,19 +3,26 @@ author: DBirtolo
 ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
 title: Habilitar os recursos do dispositivo
 description: "Este tutorial descreve como declarar recursos do dispositivo no Microsoft Visual Studio. Isso permite que o aplicativo use câmeras, microfones, sensores de localização e outros dispositivos."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b36dd4d77821a65b1f435d755f7bb415b2e386ee
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 15b12bfafea71705a9c18464461a73e3e2f05563
+ms.lasthandoff: 02/07/2017
 
 ---
-# Habilitar os recursos do dispositivo
+# <a name="enable-device-capabilities"></a>Habilitar os recursos do dispositivo
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tutorial descreve como declarar recursos do dispositivo no Microsoft Visual Studio. Isso permite que o aplicativo use câmeras, microfones, sensores de localização e outros dispositivos.
 
-## Especificar as funcionalidades do dispositivo que o aplicativo vai usar
+## <a name="specify-the-device-capabilities-your-app-will-use"></a>Especificar as funcionalidades do dispositivo que o aplicativo vai usar
 
 
 Os aplicativos do Windows pedem que você especifique no manifesto do pacote do aplicativo quando vai usar determinados tipos de dispositivos. No Visual Studio, você pode declarar a maioria das funcionalidades usando o [Designer de Manifesto](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx) ou pode adicioná-las manualmente conforme descrito em [Como especificar funcionalidades do dispositivo no manifesto do pacote (manualmente)](https://msdn.microsoft.com/library/windows/apps/Dn263092). Este tutorial pressupõe que você esteja usando o Designer de Manifesto.
@@ -56,7 +63,7 @@ Alguns tipos de dispositivos, como impressoras, scanners e sensores, não precis
 | Bluetooth RFCOMM |  | Permite o acesso a APIs compatíveis com o transporte BR/EDR (Basic Rate/Extended Data Rate) e também que o aplicativo da Windows Store acesse um dispositivo que implementa SPP (Serial Port Profile). Essa funcionalidade pede elementos filho. Para obter mais informações, consulte [Como especificar funcionalidades do dispositivo para Bluetooth](https://msdn.microsoft.com/library/windows/apps/Dn263090). |
 | pointOfService |  | Permite o acesso a scanners de código de barras e leitores de tarja magnética POS (Ponto do Serviço). Esse recurso não tem suporte no Windows Phone. | 
 
-## Use a API do Windows Runtime para comunicar com o seu dispositivo
+## <a name="use-the-windows-runtime-api-for-communicating-with-your-device"></a>Use a API do Windows Runtime para comunicar com o seu dispositivo
 
 A tabela a seguir conecta alguns dos recursos a APIs do Windows Runtime.
 
@@ -73,10 +80,5 @@ A tabela a seguir conecta alguns dos recursos a APIs do Windows Runtime.
 | GATT de Bluetooth           | [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) | 
 | Bluetooth RFCOMM         | [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) | 
 | POS (Ponto de Serviço)   | [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) |
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

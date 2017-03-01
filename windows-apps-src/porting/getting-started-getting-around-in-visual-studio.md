@@ -3,17 +3,24 @@ author: mcleblanc
 description: Conhecendo o Visual Studio
 title: Conhecendo o Visual Studio
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3f23745d161965d08a35abbef31b8e4342cf1ff6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 57341e52ad51e446e6828e5b4ba6228094152d7f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introdução: conhecendo o Visual Studio
+# <a name="getting-started-getting-around-in-visual-studio"></a>Introdução: conhecendo o Visual Studio
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Noções básicas do Microsoft Visual Studio
+## <a name="getting-around-in-microsoft-visual-studio"></a>Noções básicas do Microsoft Visual Studio
 
 Agora, vamos voltar ao projeto que criamos antes e ver como podemos lidar com o ambiente de desenvolvimento integrado do Microsoft Visual Studio (IDE).
 
@@ -27,7 +34,7 @@ O Microsoft Visual Studio é muito parecido, mas os controles da exibição padr
 
 Se isso for meio estranho para você, ficará aliviado em saber que pode reorganizar os painéis no Visual Studio para posicionar os arquivos de origem à esquerda da tela e a caixa de ferramentas à direita. Na verdade, você pode clicar e arrastar a barra de título de qualquer painel para reposicioná-lo, e o Visual Studio exibirá uma caixa sombreada informando onde ela será encaixada depois que você soltá-la. Muitos painéis também têm um pequeno ícone de desenho pino em sua barra de título. Isso permite que você fixe o painel como está, bloqueando no lugar. Desafixe o painel, e ele pode ser recolhido para economizar espaço: útil se o seu monitor for menor. Se você estragou tudo (não se preocupe, todos fazem isso), selecione **Redefinir Layout da Janela** no menu **Janela** para restaurar a ordem.
 
-## Adicionando controles, configurando suas propriedades e respondendo a eventos
+## <a name="adding-controls-setting-their-properties-and-responding-to-events"></a>Adicionando controles, configurando suas propriedades e respondendo a eventos
 
 Vamos agora adicionar alguns controles ao seu projeto. Em seguida, alteraremos algumas das propriedades e escreveremos alguns códigos para responder a um dos eventos do controle.
 
@@ -119,13 +126,8 @@ Por fim, para executar o aplicativo, selecione o menu **Depurar** e, em seguida,
 
 Para encerrar o aplicativo, volte ao Visual Studio, toque no menu **Depurar** e, em seguida, em **Parar Depuração** (ou basta pressionar SHIFT + F5). Observe que o Visual Studio permite que você experimente o aplicativo em vários dispositivos diferentes, para verificar como ele será executado em cada um.
 
-## Próxima etapa
+## <a name="next-step"></a>Próxima etapa
 
 [Introdução: controles comuns](getting-started-common-controls.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

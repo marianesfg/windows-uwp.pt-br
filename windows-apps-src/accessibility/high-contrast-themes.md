@@ -4,13 +4,20 @@ description: "Descreve as etapas necessárias para garantir que seu aplicativo U
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: Temas de alto contraste
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: f3da82cab8813653a6ee999976983937649b42b2
-ms.openlocfilehash: 30785998d11f09ef94f33789e3e74b0933d9c83e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b75d36d6a537f465545729cf90b36fdde1f552e0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Temas de alto contraste  
+# <a name="high-contrast-themes"></a>Temas de alto contraste  
 
 O Windows dá suporte para temas de alto contraste do sistema operacional e dos aplicativos que os usuários podem optar por habilitar. Os temas de alto contraste usam uma pequena paleta de cores contrastantes que deixa a interface mais fácil de ver.
 
@@ -38,7 +45,7 @@ Quando a cor `#E6E6E6` é definida embutida no primeiro exemplo, a grade mantém
 
 No segundo exemplo, a [**extensão de marcação {ThemeResource}**](../xaml-platform/themeresource-markup-extension.md) é usada para fazer referência a uma cor na coleção de [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx), uma propriedade dedicada de um elemento [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794). ThemeDictionaries permite que o XAML troque as cores automaticamente com base no tema atual do usuário.
 
-## Dicionários de temas
+## <a name="theme-dictionaries"></a>Dicionários de temas
 
 Quando você precisar alterar uma cor padrão do sistema, crie uma coleção de ThemeDictionaries para seu aplicativo.
 
@@ -77,7 +84,7 @@ A última etapa é determinar a cor que será usada em alto contraste, o que é 
 > [!NOTE]
 > HighContrast não é o único nome de chave disponível. Também há HighContrastBlack, HighContrastWhite e HighContrastCustom. Na maioria dos casos, HighContrast é tudo que você precisa.
 
-## Cores de alto contraste
+## <a name="high-contrast-colors"></a>Cores de alto contraste
 
 Na página *Configurações > Facilidade de acesso > Alto contraste*, há 4 temas de alto contraste por padrão. 
 
@@ -152,7 +159,7 @@ Posteriormente em seu aplicativo, você pode definir a tela de fundo.
 
 Observe como `{ThemeResource}` é usado duas vezes, uma vez para fazer referência a `SystemColorWindowColor` e novamente para fazer referência a `BrandedPageBackgroundBrush`. Ambos são necessários para seu aplicativo aplicar o tema corretamente no tempo de execução. Esse é um bom momento para testar a funcionalidade em seu aplicativo. A tela de fundo da grade será atualizada automaticamente quando você mudar para um tema de alto contraste. Ela também será atualizada ao alternar entre temas de alto contraste diferentes.
 
-## Quando usar bordas
+## <a name="when-to-use-borders"></a>Quando usar bordas
 
 Páginas, painéis, pop-ups e barras devem usar `SystemColorWindowColor` para a tela de fundo em alto contraste. Adicione uma borda somente de alto contraste quando necessário para preservar limites importantes na interface do usuário.
 
@@ -160,7 +167,7 @@ Páginas, painéis, pop-ups e barras devem usar `SystemColorWindowColor` para a 
 
 ![Um painel de navegação separado do restante da página](images/high-contrast-actions-content.png)
 
-## Itens de lista
+## <a name="list-items"></a>Itens de lista
 
 Em alto contraste, os itens em [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) têm a tela de fundo definida como `SystemColorHighlightColor` quando são focalizados, pressionados ou selecionados. Itens de lista complexos normalmente têm um bug em que o conteúdo do item de lista não inverte sua cor quando focalizado, pressionado ou selecionado. Isso torna o item impossível de ler.
 
@@ -170,7 +177,7 @@ Em alto contraste, os itens em [ListView](https://msdn.microsoft.com/library/win
 
 
 
-### Itens de lista com texto colorido
+### <a name="list-items-with-colored-text"></a>Itens de lista com texto colorido
 
 Um culpado é a definição de TextBlock.Foreground do [DataTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) de ListView. Normalmente, isso é feito para estabelecer a hierarquia visual. A propriedade Foreground é definida no [ListViewItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx), e os TextBlocks no DataTemplate herdam a cor de primeiro plano correta quando o item é focalizado, pressionado ou selecionado. No entanto, definir a propriedade Foreground interrompe a herança.
 
@@ -221,7 +228,7 @@ Você pode contornar isso definindo a propriedade Foreground condicionalmente po
 </DataTemplate>
 ```
 
-### Itens de lista com botões e links
+### <a name="list-items-with-buttons-and-links"></a>Itens de lista com botões e links
 
 Às vezes, os itens de lista têm controles mais complexos, como [HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.hyperlinkbutton.aspx) ou [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx). Esses controles têm seus próprios estados para focalizado, pressionado e, às vezes, selecionado, que não funcionam sobre um item de lista. Os hiperlinks também ficam amarelos no tema Preto em Alto Contraste, o que os torna difíceis de ler quando um item de lista é focalizado, pressionado ou selecionado.
 
@@ -284,22 +291,17 @@ Uma solução é definir a tela de fundo do DataTemplate como `SystemColorWindow
 
 
 
-## Detectando o alto contraste
+## <a name="detecting-high-contrast"></a>Detectando o alto contraste
 
 Você pode verificar programaticamente se o tema atual é um tema de alto contraste usando membros da classe [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237).
 
 > [!NOTE]
 > Certifique-se de chamar o construtor **AccessibilitySettings** de um escopo onde o aplicativo é inicializado e o conteúdo já esteja sendo exibido.
 
-## Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos relacionados  
 * [Acessibilidade](accessibility.md)
 * [Amostra de configurações e contraste da interface do usuário](http://go.microsoft.com/fwlink/p/?linkid=231539)
 * [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Amostra de alto contraste XAML](http://go.microsoft.com/fwlink/p/?linkid=254993)
 * [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

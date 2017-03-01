@@ -3,21 +3,28 @@ author: mtoepke
 title: Renderizar a cena com teste de profundidade
 description: "Crie um efeito de sombra adicionando testes de profundidade ao sombreador de vértice (ou geometria) e ao sombreador de pixel."
 ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, renderização, cena, teste de profundidade, direct3d, sombras"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6351cc9f6efe0d4bffb54961624a35b4a9f4136a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 538ebe9a604daaa5a444b0f7f1764770eec8ce7c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Renderizar a cena com teste de profundidade
+# <a name="render-the-scene-with-depth-testing"></a>Renderizar a cena com teste de profundidade
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Crie um efeito de sombra adicionando testes de profundidade ao sombreador de vértice (ou geometria) e ao sombreador de pixel. Parte 3 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
-## Incluir transformação para tronco de luz
+## <a name="include-transformation-for-light-frustum"></a>Incluir transformação para tronco de luz
 
 
 Seu sombreador de vértice precisa computar a posição transformada do espaço de luz para cada vértice. Forneça o modelo de espaço de luz e matrizes de projeção usando um buffer constante Você também pode usá-lo para fornecer a posição e a normal da luz em cálculos de iluminação. A posição transformada no espaço de luz é usada durante o teste de profundidade.
@@ -61,7 +68,7 @@ PixelShaderInput main(VertexShaderInput input)
 
 Em seguida, o sombreador de pixel usará a posição interpolada do espaço de luz fornecida pelo sombreador de vértice para testar se o pixel está na sombra.
 
-## Testar se a posição está no tronco de luz
+## <a name="test-whether-the-position-is-in-the-light-frustum"></a>Testar se a posição está no tronco de luz
 
 
 Primeiro, confira se o pixel está no tronco de exibição da luz, normalizando as coordenadas X e Y. Caso ambas estejam no intervalo \[0, 1\], é possível que o pixel esteja na sombra. Caso contrário, pule o teste de profundidade. Um sombreador pode fazer esse teste rapidamente chamando [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231) e comparando o resultado com o valor original.
@@ -83,7 +90,7 @@ if ((saturate(shadowTexCoords.x) == shadowTexCoords.x) &&
 {
 ```
 
-## Teste de profundidade com base no mapa de sombra
+## <a name="depth-test-against-the-shadow-map"></a>Teste de profundidade com base no mapa de sombra
 
 
 Use um exemplo de função de comparação ([SampleCmp](https://msdn.microsoft.com/library/windows/desktop/bb509696) ou [SampleCmpLevelZero](https://msdn.microsoft.com/library/windows/desktop/bb509697)) para testar a profundidade do pixel no espaço de luz em relação ao mapa de profundidade. Calcule o valor de profundidade do espaço de luz normalizada, que é `z / w`, e passe o valor para a função de comparação. Como nós usamos um teste de comparação LessOrEqual para a amostra, a função intrínseca retorna zero quando o teste de comparação é transmitido; isso indica que o pixel está na sombra.
@@ -115,7 +122,7 @@ lighting = float(shadowMap.SampleCmpLevelZero(
     );
 ```
 
-## Calcular a iluminação dentro ou fora da sombra
+## <a name="compute-lighting-in-or-out-of-shadow"></a>Calcular a iluminação dentro ou fora da sombra
 
 
 Caso o pixel não esteja na sombra, o sombreador de pixel calcula a iluminação direta e a adiciona ao valor do pixel.
@@ -161,10 +168,5 @@ Na próxima parte deste guia passo a passo, veremos como dar [Suporte a mapas de
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,12 +3,19 @@ author: msatranjr
 ms.assetid: 28B30708-FE08-4BE9-AE11-5429F963C330
 title: GATT Bluetooth
 description: "Este artigo fornece uma visão geral do GATT (Perfil de Atributo Genérico) de Bluetooth para aplicativos UWP (Plataforma Universal do Windows), juntamente com o código de exemplo para três cenários comuns de GATT."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
-ms.openlocfilehash: 508acd449c156fa0f5b14298e4a7700748fc65bb
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c6187f4bfe6f2940b8dbfea0e6441f2fa9ac2c66
+ms.lasthandoff: 02/07/2017
 
 ---
-# GATT de Bluetooth
+# <a name="bluetooth-gatt"></a>GATT de Bluetooth
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -19,7 +26,7 @@ ms.openlocfilehash: 508acd449c156fa0f5b14298e4a7700748fc65bb
 
 Este artigo fornece uma visão geral do GATT (Perfil de Atributo Genérico) de Bluetooth para aplicativos UWP (Plataforma Universal do Windows), juntamente com o código de exemplo para três cenários comuns de GATT: recuperação de dados de Bluetooth, controle de um dispositivo de termômetro Bluetooth LE e controle da apresentação de dados de dispositivo Bluetooth LE.
 
-## Visão geral
+## <a name="overview"></a>Visão geral
 
 Os desenvolvedores podem usar as APIs no namespace [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) para acessar serviços, descritores e características do Bluetooth LE. Os dispositivos Bluetooth LE expõem sua funcionalidade por meio de coleção de:
 
@@ -44,7 +51,7 @@ Para criar uma implementação útil, um desenvolvedor precisa antes conhecer os
 
 Por conveniência, o Bluetooth SIG mantém uma [lista de perfis públicos](http://go.microsoft.com/fwlink/p/?LinkID=317977) disponíveis.
 
-## Recuperar dados de Bluetooth
+## <a name="retrieve-bluetooth-data"></a>Recuperar dados de Bluetooth
 
 Nesse exemplo, o aplicativo usa medições de temperatura de um dispositivo Bluetooth que implementa o Serviço de Termômetro de Integridade do Bluetooth LE. O aplicativo especifica que quer ser notificado quando uma nova medição de temperatura estiver disponível. Ao registrar um manipulador de eventos para o evento "Valor característico do termômetro alterado", o aplicativo receberá notificações de evento de valor característica alterado enquanto estiver sendo executado em primeiro plano.
 
@@ -165,7 +172,7 @@ void MainPage::TemperatureMeasurementChanged(
 }
 ```
 
-## Controlar um termômetro Bluetooth LE
+## <a name="control-a-bluetooth-le-thermometer-device"></a>Controlar um termômetro Bluetooth LE
 
 Neste exemplo, um aplicativo UWP age como um controlador para um dispositivo de Termômetro Bluetooth LE fictício. O dispositivo também declara uma característica de formato que permite que os usuários recuperem a leitura do valor em graus Celsius ou Fahrenheit, além das características padrão do perfil de [**HealthThermometer**](https://msdn.microsoft.com/library/windows/apps/Dn297603). O aplicativo utiliza transações de gravação confiáveis para garantir que o formato e o intervalo da medição sejam definidos como um único valor.
 
@@ -285,7 +292,7 @@ void MainPage::Initialize()
 
 ```
 
-## Controlar a apresentação de dados do dispositivo Bluetooth LE
+## <a name="control-the-presentation-of-bluetooth-le-device-data"></a>Controlar a apresentação de dados do dispositivo Bluetooth LE
 
 Os dispositivos Bluetooth LE podem exibir um serviço de bateria que fornece o nível de bateria atual ao usuário. O serviço de bateria inclui um descritor [**PresentationFormats**](https://msdn.microsoft.com/library/windows/apps/Dn263742) opcional que permite alguma flexibilidade na interpretação dos dados do nível da bateria. Esse cenário fornece um exemplo de um aplicativo que funciona com esse dispositivo e utiliza a propriedade **PresentationFormats** para formatar um valor de característica antes de apresentá-lo ao usuário.
 
@@ -397,10 +404,5 @@ void MainPage::BatteryLevelChanged(
 ```
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

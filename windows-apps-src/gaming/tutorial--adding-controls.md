@@ -3,25 +3,32 @@ author: mtoepke
 title: Adicionar controles
 description: "Agora veremos como o jogo de exemplo implementa controles move-look em um jogo 3D e como desenvolver controles básicos de toque, mouse e controlador de jogo."
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, controles, entrada
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 49214f3bc14b6a475a77c5dbb7c0f08bb0818df6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d70e9ef8efffd2a78f6c49596e716770a9162b5c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Adicionar controles
+# <a name="add-controls"></a>Adicionar controles
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Agora veremos como o jogo de exemplo implementa controles move-look em um jogo 3D e como desenvolver controles básicos de toque, mouse e controlador de jogo.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Implementar controles de mouse/teclado, toque e controlador Xbox em um jogo da Plataforma Universal do Windows (UWP) com DirectX.
 
-## Controles e aplicativos de jogos UWP
+## <a name="uwp-game-apps-and-controls"></a>Controles e aplicativos de jogos UWP
 
 
 Um bom jogo UWP dá suporte a uma grande variedade de interfaces. Um jogador em potencial pode ter o Windows 10 em um tablet sem botões físicos, ou em um PC multimídia com um controlador Xbox conectado, ou no mais avançado equipamento desktop para jogos, com mouse e teclado de alto desempenho para jogos. Seu jogo, caso o design o permita, deve ser compatível com todos esses dispositivos.
@@ -30,7 +37,7 @@ Este exemplo dá suporte a todos os três. Trata-se de um jogo simples de tiro e
 
 Para saber mais sobre controles e especificamente sobre os controles move-look, veja [Controles move-look para jogos](tutorial--adding-move-look-controls-to-your-directx-game.md) e [Controles de toque para jogos](tutorial--adding-touch-controls-to-your-directx-game.md).
 
-## Comportamentos comuns de controle
+## <a name="common-control-behaviors"></a>Comportamentos comuns de controle
 
 
 Os controles de toque e de mouse/teclado possuem uma implementação básica muito semelhante. Em um aplicativo UWP, um ponteiro é simplesmente um ponto na tela. Você pode movê-lo deslizando o mouse ou deslizando seu dedo na tela touch. Consequentemente, você pode se registrar para um único conjunto de eventos, sem se preocupar se o jogador usará um mouse ou uma tela sensível ao toque para mover e pressionar o ponteiro.
@@ -197,11 +204,11 @@ bool MoveLookController::IsFiring()
 
 Se o jogador mover o ponteiro para fora da janela principal do jogo ou pressionar o botão de pausa (a tecla P ou o botão Iniciar do controlador Xbox), o jogo deverá ser colocado em pausa. O **MoveLookController** registra o pressionamento desse botão e informa o loop do jogo quando chama o método **IsPauseRequested**. Nesse ponto, se **IsPauseRequested** retorna **true**, o loop do jogo chama **WaitForPress** em **MoveLookController** para mover o controlador para o estado **WaitForInput**. Em seguida, **MoveLookController** espera que o jogador selecione um dos itens de menu para carregar, continuar ou sair do jogo e para de processar os eventos de entrada do jogo até que ele retorne ao estado **Ativo**.
 
-Veja o [código de exemplo completo desta seção](#code_sample).
+Veja o [código de exemplo completo desta seção](#complete-sample-code-for-this-section).
 
 Agora examinaremos a implementação de cada um dos três tipos de controle com um pouco mais de detalhe.
 
-## Implementando controles relativos do mouse
+## <a name="implementing-relative-mouse-controls"></a>Implementando controles relativos do mouse
 
 
 Se for detectado o movimento do mouse, usaremos esse movimento para determinar a nova arfagem e guinada da câmera. Fazemos isso implementando os controles relativos do mouse, onde manipulamos a distância relativa na qual o mouse se moveu (o delta entre o início do movimento e a parada) ao contrário da gravação das coordenadas de pixel x-y absolutas do movimento.
@@ -250,7 +257,7 @@ void MoveLookController::OnMouseMoved(
 }
 ```
 
-## Implementando controles de toque
+## <a name="implementing-touch-controls"></a>Implementando controles de toque
 
 
 Os controles de toque são os mais difíceis de desenvolver, porque são os mais complexos e exigem muitos ajustes finos para serem eficazes. No exemplo de jogo, um retângulo no quadrante inferior esquerdo da tela é usado como painel direcional, dentro do qual o deslizamento do seu polegar para a esquerda e para a direita move a câmera para a esquerda e a direita e o deslizamento do seu polegar para cima e para baixo move a câmera para a frente e para trás. Um retângulo no quadro inferior direito da tela pode ser pressionado para disparar as esferas. A mira (rotação sobre o eixo x e rotação sobre o eixo y) é controlada deslizando o seu dedo nas partes da tela não reservadas para movimento e disparo; a câmera (com a retícula de mira fixa) acompanha a direção de movimento do seu dedo.
@@ -471,7 +478,7 @@ Do contrário, se o evento [**PointerReleased**](https://msdn.microsoft.com/libr
 
 Esses são os aspectos básicos da implementação de controles de tela sensível ao toque no exemplo de jogo. Agora examinaremos os controles de mouse e teclado.
 
-## Implementando controles de mouse e teclado
+## <a name="implementing-mouse-and-keyboard-controls"></a>Implementando controles de mouse e teclado
 
 
 O exemplo de jogo implementa estes controles de mouse e teclado:
@@ -664,7 +671,7 @@ Quando o jogador para de pressionar um dos botões do mouse, a entrada está con
 
 Agora examinaremos o último tipo de controle: o controlador Xbox. Ele é manipulado separadamente dos controles de toque e de mouse porque não usa o objeto de ponteiro.
 
-## Implementando controles de controlador Xbox
+## <a name="implementing-xbox-controller-controls"></a>Implementando controles de controlador Xbox
 
 
 No exemplo de jogo, o suporte a controlador Xbox é adicionado por meio de chamadas às APIs [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053), que são um conjunto de APIs projetadas para simplificar a programação para controladores de jogo. No exemplo de jogo, usamos o joystick analógico esquerdo do controle do Xbox para o movimento do jogador, o joystick analógico direito para os controles de visão e o gatilho direito para disparar. Usamos o botão Iniciar para pausar e retomar o jogo.
@@ -805,12 +812,12 @@ O método **Update** executa a mesma verificação no joystick direito para dete
 
 E é assim que nosso exemplo implementa um conjunto completo de opções de controle. Novamente, lembre-se que um bom aplicativo UWP dá suporte a uma ampla gama de opções de controle, para que jogadores com diferentes fatores forma e dispositivos possam jogar da maneira que preferirem!
 
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 
 Examinamos todos os principais componentes de um jogo DirectX UWP, exceto um: o áudio! A música e os efeitos sonoros são importantes em qualquer jogo. Portanto, discutiremos agora [como adicionar som](tutorial--adding-sound.md).
 
-## Código de exemplo completo desta seção
+## <a name="complete-sample-code-for-this-section"></a>Código de exemplo completo desta seção
 
 
 MoveLookController.h
@@ -1905,7 +1912,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 [Criar um jogo UWP simples com o DirectX](tutorial--create-your-first-metro-style-directx-game.md)
@@ -1916,10 +1923,5 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

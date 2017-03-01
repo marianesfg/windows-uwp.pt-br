@@ -2,17 +2,24 @@
 author: IvorB
 ms.assetid: E9ADC88F-BD4F-4721-8893-0E19EA94C8BA
 title: Emparelhamento fora de banda
-description: "O emparelhamento fora de banda permite que os aplicativos se conectem a um periférico Ponto de Serviço sem a necessidade de descoberta."
+description: "O emparelhamento fora de banda permite que os apps se conectem a um periférico Ponto de Serviço sem a necessidade de descoberta."
+ms.author: ivorb
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: 283f0a0cfc7b3827e70ea79490818bc259d98ad1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dc0bad7d8625817cfffcc84f89afeed96a07a21f
+ms.lasthandoff: 02/07/2017
 
 ---
-# Emparelhamento fora de banda
+# <a name="out-of-band-pairing"></a>Emparelhamento fora de banda
 
-O emparelhamento fora de banda permite que os aplicativos se conectem a um periférico Ponto de Serviço sem a necessidade de descoberta. Os aplicativos devem usar o namespace [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx) passar uma cadeia de caracteres formatada especificamente (blob fora de banda) para o método **FromIdAsync** adequado para o periférico desejado. Quando **FromIdAsync** é executado, o dispositivo host se emparelha e se conecta ao periférico antes que a operação retorne ao chamador.
+O emparelhamento fora de banda permite que os apps se conectem a um periférico Ponto de Serviço sem a necessidade de descoberta. Os apps devem usar o namespace [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx) passar uma cadeia de caracteres formatada especificamente (blob fora de banda) para o método **FromIdAsync** adequado para o periférico desejado. Quando **FromIdAsync** é executado, o dispositivo host se emparelha e se conecta ao periférico antes que a operação retorne ao chamador.
 
-## Formato de blob fora de banda
+## <a name="out-of-band-blob-format"></a>Formato de blob fora de banda
 
 ```json
     "connectionKind":"Network",
@@ -60,7 +67,7 @@ O emparelhamento fora de banda permite que os aplicativos se conectem a um perif
 | Caixa registradora | CashDrawerProtocolProvider.dll |
 | Scanner | BarcodeScannerProtocolProvider.dll |
 
-## Exemplo de uso: impressora de rede
+## <a name="usage-example-network-printer"></a>Exemplo de uso: impressora de rede
 
 ```csharp
 String oobBlobNetworkPrinter =
@@ -74,7 +81,7 @@ String oobBlobNetworkPrinter =
 printer = await PosPrinter.FromIdAsync(oobBlobNetworkPrinter);
 ```
 
-## Exemplo de uso: impressora Bluetooth
+## <a name="usage-example-bluetooth-printer"></a>Exemplo de uso: impressora Bluetooth
 
 ```csharp
 string oobBlobBTPrinter =
@@ -87,9 +94,4 @@ string oobBlobBTPrinter =
 printer = await PosPrinter.FromIdAsync(oobBlobBTPrinter);
 
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

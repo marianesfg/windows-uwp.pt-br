@@ -1,45 +1,52 @@
 ---
-title: "Introdução ao desenvolvimento de aplicativos seguros do Windows"
-description: "Este artigo introdutório ajuda arquitetos e desenvolvedores de aplicativos a compreender melhor os vários recursos da plataforma Windows 10 que aceleram a criação de aplicativos UWP (Plataforma Universal do Windows) seguros."
+title: "Introdução ao desenvolvimento de apps seguros do Windows"
+description: "Este artigo introdutório ajuda arquitetos e desenvolvedores de apps a compreender melhor os vários recursos da plataforma Windows 10 que aceleram a criação de apps UWP (Plataforma Universal do Windows) seguros."
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
-ms.openlocfilehash: 2ac9edf074ceb91d5cfea17228f0a39fef200b74
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1faf53dc2f1d919af072cd52593292fc552317e9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="intro-to-secure-windows-app-development"></a>Introdução ao desenvolvimento de aplicativos seguros do Windows
+# <a name="intro-to-secure-windows-app-development"></a>Introdução ao desenvolvimento de apps seguros do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo introdutório ajuda arquitetos e desenvolvedores de aplicativos a compreender melhor os vários recursos da plataforma Windows 10 que aceleram a criação de aplicativos UWP (Plataforma Universal do Windows) seguros. Ele fornece detalhes sobre como usar os recursos de segurança do Windows disponíveis em cada um dos seguintes estágios: autenticação, dados em voo (data-in-flight) e dados em repouso (data-at-rest). Você pode encontrar informações mais detalhadas sobre cada tópico revisando os recursos adicionais incluídos em cada capítulo.
+Este artigo introdutório ajuda arquitetos e desenvolvedores de apps a compreender melhor os vários recursos da plataforma Windows 10 que aceleram a criação de apps UWP (Plataforma Universal do Windows) seguros. Ele fornece detalhes sobre como usar os recursos de segurança do Windows disponíveis em cada um dos seguintes estágios: autenticação, dados em voo (data-in-flight) e dados em repouso (data-at-rest). Você pode encontrar informações mais detalhadas sobre cada tópico revisando os recursos adicionais incluídos em cada capítulo.
 
 ## <a name="1-introduction"></a>1 Introdução
 
 
-Desenvolver um aplicativo seguro pode ser um desafio. No mundo ágil atual de aplicativos móveis, sociais, em nuvem e empresariais complexos, os clientes esperam que os aplicativos sejam disponibilizados e atualizados mais rápido do que nunca. Eles também usam vários tipos de dispositivos, aumentando ainda mais a complexidade da criação de experiências com aplicativos. Se você desenvolve para a UWP (Plataforma Universal do Windows) do Windows 10, isso pode incluir a tradicional lista de desktops, notebooks, tablets e dispositivos móveis, além de uma lista cada vez maior de novos dispositivos, que abrangem a Internet das Coisas, o Xbox One, o Microsoft Surface Hub e o HoloLens. Como desenvolvedor, você deve garantir que seus aplicativos se comuniquem e armazenem dados com segurança, em todas as plataformas ou dispositivos envolvidos.
+Desenvolver um app seguro pode ser um desafio. No mundo ágil atual de apps móveis, sociais, em nuvem e empresariais complexos, os clientes esperam que os apps sejam disponibilizados e atualizados mais rápido do que nunca. Eles também usam vários tipos de dispositivos, aumentando ainda mais a complexidade da criação de experiências com apps. Se você desenvolve para a UWP (Plataforma Universal do Windows) do Windows 10, isso pode incluir a tradicional lista de desktops, notebooks, tablets e dispositivos móveis, além de uma lista cada vez maior de novos dispositivos, que abrangem a Internet das Coisas, o Xbox One, o Microsoft Surface Hub e o HoloLens. Como desenvolvedor, você deve garantir que seus apps se comuniquem e armazenem dados com segurança, em todas as plataformas ou dispositivos envolvidos.
 
 Aqui estão alguns dos benefícios da utilização de recursos de segurança do Windows 10.
 
 -   Você tem uma segurança padronizada em todos os dispositivos que oferecem suporte ao Windows 10, usando APIs consistentes para tecnologias e componentes de segurança.
 -   Você escreve, testa e mantém menos código do que faria se implementasse um código personalizado para cobrir esses cenários de segurança.
--   Os aplicativos se tornam mais estáveis e seguros porque você usa o sistema operacional para controlar o modo como o aplicativo acessa seus recursos e os recursos do sistema local ou remoto.
+-   Os apps se tornam mais estáveis e seguros porque você usa o sistema operacional para controlar o modo como o app acessa seus recursos e os recursos do sistema local ou remoto.
 
-Durante a autenticação, a identidade de um usuário que solicita acesso a um determinado serviço é validada. O Microsoft Passport e o Windows Hello são os componentes no Windows 10 que ajudam a criar um mecanismo de autenticação mais seguro em aplicativos do Windows. Com eles, você pode usar um PIN (número de identificação pessoal) ou biometria, como as impressões digitais, o rosto ou a íris do usuário para implementar autenticação multifator para seus aplicativos.
+Durante a autenticação, a identidade de um usuário que solicita acesso a um determinado serviço é validada. O Windows Hello é o componente no Windows 10 que ajuda a criar um mecanismo de autenticação mais seguro em aplicativos do Windows. Com ele, você pode usar um PIN (número de identificação pessoal) ou biometria, como as impressões digitais, o rosto ou a íris do usuário para implementar autenticação multifator para seus apps.
 
-Os dados em voo se referem à conexão e às mensagens transferidas nela. Um exemplo disso é a recuperação de dados de um servidor remoto usando serviços Web. O uso dos protocolos SSL (Secure Sockets Layer) e HTTPS (Secure Hypertext Transfer Protocol) garante a segurança da conexão. Impedir intermediários de acessar essas mensagens, ou aplicativos não autorizados de se comunicar com os serviços Web, é essencial para proteger dados em voo.
+Os dados em voo se referem à conexão e às mensagens transferidas nela. Um exemplo disso é a recuperação de dados de um servidor remoto usando serviços Web. O uso dos protocolos SSL (Secure Sockets Layer) e HTTPS (Secure Hypertext Transfer Protocol) garante a segurança da conexão. Impedir intermediários de acessar essas mensagens, ou apps não autorizados de se comunicar com os serviços Web, é essencial para proteger dados em voo.
 
-Por fim, o termo dados em repouso significa os dados que residem na memória ou na mídia de armazenamento. O Windows 10 tem um modelo de aplicativo que impede o acesso não autorizado de dados entre aplicativos e oferece APIs de criptografia para proteger ainda mais os dados no dispositivo. Um recurso chamado Cofre de Credenciais pode ser usado para armazenar com segurança as credenciais do usuário no dispositivo, com o sistema operacional impedindo que outros aplicativos acessem esses dados.
+Por fim, o termo dados em repouso significa os dados que residem na memória ou na mídia de armazenamento. O Windows 10 tem um modelo de app que impede o acesso não autorizado de dados entre apps e oferece APIs de criptografia para proteger ainda mais os dados no dispositivo. Um recurso chamado Cofre de Credenciais pode ser usado para armazenar com segurança as credenciais do usuário no dispositivo, com o sistema operacional impedindo que outros apps acessem esses dados.
 
 ## <a name="2-authentication-factors"></a>2 Fatores de autenticação
 
 
 Para proteger os dados, a pessoa que solicita acesso a eles deve ser identificada e autorizada a acessar os recursos de dados que solicita. O processo de identificação de um usuário é chamado autenticação, e o processo de determinação de privilégios de acesso a um recurso é denominado autorização. Essas são operações estreitamente relacionadas e, para o usuário, elas podem parecer iguais. Elas podem ser operações relativamente simples ou complexas, dependendo de muitos fatores: por exemplo, se os dados residem em um servidor ou se estão distribuídos em vários sistemas. O servidor que fornece os serviços de autenticação e autorização é conhecido como o provedor de identidade.
 
-Para se autenticar usando um determinado serviço e/ou aplicativo, o usuário utiliza credenciais criadas com base em algo que conhece, algo que tem e/ou algo que é. Esses itens são denominados fatores de autenticação.
+Para se autenticar usando um determinado serviço e/ou app, o usuário utiliza credenciais criadas com base em algo que conhece, algo que tem e/ou algo que é. Esses itens são denominados fatores de autenticação.
 
 -   **Algo que o usuário saiba** costuma ser uma senha, mas também pode ser um número de identificação pessoal (PIN) ou um par pergunta/resposta "secreto".
 -   **Algo que o usuário possui** normalmente é um dispositivo de memória de hardware, como um cartão inteligente ou um pen drive que contém os dados de autenticação exclusivos para o usuário.
@@ -76,13 +83,13 @@ Conforme discutido anteriormente, um dos desafios na autenticação de senhas pa
 
 Usando o OAuth, os departamentos de TI podem efetivamente "terceirizar" a complexidade de manter um banco de dados com nomes de usuário e senhas, redefinir a funcionalidade de senha etc. para um provedor de identidade de terceiros, como o Facebook, o Twitter ou a Microsoft.
 
-Os usuários têm controle total sobre sua identidade nessas plataformas, mas os aplicativos podem solicitar um token do provedor, depois que o usuário for autenticado e com o seu consentimento, que pode ser usado para autorizar usuários autenticados.
+Os usuários têm controle total sobre sua identidade nessas plataformas, mas os apps podem solicitar um token do provedor, depois que o usuário for autenticado e com o seu consentimento, que pode ser usado para autorizar usuários autenticados.
 
-O agente de autenticação Web no Windows 10 oferece um conjunto de APIs, e a infraestrutura para que os aplicativos usem protocolos de autenticação e autorização como OAuth e OpenID. Os aplicativos podem iniciar operações de autenticação por meio da API [**WebAuthenticationBroker**](https://msdn.microsoft.com/library/windows/apps/br227025), o que resulta no retorno de um [**WebAuthenticationResult**](https://msdn.microsoft.com/library/windows/apps/br227038). Uma visão geral do fluxo de comunicação é ilustrada na figura a seguir.
+O agente de autenticação Web no Windows 10 oferece um conjunto de APIs, e a infraestrutura para que os apps usem protocolos de autenticação e autorização como OAuth e OpenID. Os apps podem iniciar operações de autenticação por meio da API [**WebAuthenticationBroker**](https://msdn.microsoft.com/library/windows/apps/br227025), o que resulta no retorno de um [**WebAuthenticationResult**](https://msdn.microsoft.com/library/windows/apps/br227038). Uma visão geral do fluxo de comunicação é ilustrada na figura a seguir.
 
 ![fluxo de trabalho wab](images/secure-wab.png)
 
-O aplicativo funciona como o agente, que inicia a autenticação com o provedor de identidade por meio de um [**WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) no aplicativo. Quando tiver autenticado o usuário, o provedor de identidade retorna um token para o aplicativo que pode ser usado para solicitar informações sobre o usuário junto ao provedor de identidade. Como medida de segurança, o aplicativo deve ser registrado junto ao provedor de identidade para que ele possa corretar processos de autenticação com o provedor de identidade. Essas etapas de registro são diferentes para cada provedor.
+O app funciona como o agente, que inicia a autenticação com o provedor de identidade por meio de um [**WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) no app. Quando tiver autenticado o usuário, o provedor de identidade retorna um token para o app que pode ser usado para solicitar informações sobre o usuário junto ao provedor de identidade. Como medida de segurança, o app deve ser registrado junto ao provedor de identidade para que ele possa corretar processos de autenticação com o provedor de identidade. Essas etapas de registro são diferentes para cada provedor.
 
 Aqui está o fluxo de trabalho geral usado para chamar a API [**WebAuthenticationBroker**](https://msdn.microsoft.com/library/windows/apps/br227025) para se comunicar com o provedor.
 
@@ -146,38 +153,38 @@ Serviços que usam autenticação multifator normalmente darão ao usuário uma 
 
 Como você pode ver, esse processo também difere da autenticação de fator único porque a credencial do segundo usuário é enviada para o usuário, em vez de ser criada ou fornecida por ele. Por isso, o usuário não está em controle completo das credenciais necessárias. Isso também se aplica quando um cartão inteligente é usado como a segunda credencial: a organização é responsável por criar e fornecê-la para o usuário.
 
-## <a name="221-azure-active-directory"></a>2.2.1 Active Directory do Azure
+## <a name="221-azure-active-directory"></a>2.2.1 Active Directory do Microsoft Azure
 
 
-Active Directory do Azure (Azure AD) é um serviço de gerenciamento de identidade e acesso com base em nuvem que pode funcionar como o provedor de identidade na autenticação de fator único ou de vários fatores. A autenticação do Azure AD pode ser usada com ou sem um código de verificação.
+Active Directory do Microsoft Azure (Azure AD) é um serviço de gerenciamento de identidade e acesso com base em nuvem que pode funcionar como o provedor de identidade na autenticação de fator único ou de vários fatores. A autenticação do Azure AD pode ser usada com ou sem um código de verificação.
 
-Embora o Azure AD também possa implementar a autenticação de fator único, as empresas geralmente exigem a maior segurança da autenticação multifator. Em uma configuração de autenticação multifator, um usuário autenticado com uma conta do Azure AD tem a opção de ter um código de verificação enviado como uma mensagem SMS para o telefone celular ou para o aplicativo Azure Authenticator no aplicativo de celular.
+Embora o Azure AD também possa implementar a autenticação de fator único, as empresas geralmente exigem a maior segurança da autenticação multifator. Em uma configuração de autenticação multifator, um usuário autenticado com uma conta do Azure AD tem a opção de ter um código de verificação enviado como uma mensagem SMS para o telefone celular ou para o app Azure Authenticator no app de celular.
 
-Além disso, o Azure AD pode ser usado como um provedor OAuth, fornecendo ao usuário padrão um mecanismo de autenticação e autorização para aplicativos em várias plataformas. Para saber mais, consulte [Active Directory do Azure](https://azure.microsoft.com/services/active-directory/) e [Autenticação multifator no Azure](https://azure.microsoft.com/services/multi-factor-authentication/).
+Além disso, o Azure AD pode ser usado como um provedor OAuth, fornecendo ao usuário padrão um mecanismo de autenticação e autorização para apps em várias plataformas. Para saber mais, consulte [Active Directory do Microsoft Azure](https://azure.microsoft.com/services/active-directory/) e [Autenticação multifator no Azure](https://azure.microsoft.com/services/multi-factor-authentication/).
 
-## <a name="24-microsoft-passport-and-windows-hello"></a>2.4 Microsoft Passport e Windows Hello
+## <a name="24-windows-hello"></a>2.4 Windows Hello
 
 
-No Windows 10, um mecanismo de autenticação multifator conveniente é integrado ao sistema operacional. Os dois componentes envolvidos são chamados Microsoft Passport e Windows Hello. Windows Hello é o nome do novo sistema biométrico de entrada interno no Windows 10. Como foi integrado diretamente no sistema operacional, o Windows Hello permite a identificação de face ou impressão digital para desbloquear os dispositivos dos usuários. O repositório seguro de credenciais do Windows protege os dados biométricos no dispositivo.
+No Windows 10, um mecanismo de autenticação multifator conveniente é integrado ao sistema operacional. Windows Hello é o nome do novo sistema biométrico de entrada interno no Windows 10. Como foi integrado diretamente no sistema operacional, o Windows Hello permite a identificação de face ou impressão digital para desbloquear os dispositivos dos usuários. O repositório seguro de credenciais do Windows protege os dados biométricos no dispositivo.
 
-O Windows Hello oferece uma maneira robusta para um dispositivo reconhecer um usuário individual, o que resolve a primeira parte do caminho entre um usuário e um serviço solicitado ou item de dados. Porém, depois que o dispositivo tiver reconhecido o usuário, ele ainda precisará autenticá-lo para determinar se deve conceder acesso a um recurso solicitado. O Microsoft Passport oferece 2FA (autenticação em dois fatores) forte, que está totalmente integrada ao Windows e substitui senhas reutilizáveis por uma combinação de um dispositivo específico e gestos biométricos ou um PIN. O PIN é especificado pelo usuário como parte da inscrição no Microsoft Passport.
+O Windows Hello oferece uma maneira robusta para um dispositivo reconhecer um usuário individual, o que resolve a primeira parte do caminho entre um usuário e um serviço solicitado ou item de dados. Porém, depois que o dispositivo tiver reconhecido o usuário, ele ainda precisará autenticá-lo para determinar se deve conceder acesso a um recurso solicitado. O Windows Hello também oferece 2FA (autenticação em dois fatores) forte, que está totalmente integrada ao Windows e substitui senhas reutilizáveis por uma combinação de um dispositivo específico e gestos biométricos ou um PIN. O PIN é especificado pelo usuário como parte da inscrição na conta da Microsoft.
 
-No entanto, o Microsoft Passport não é apenas uma renovação dos sistemas de 2FA tradicionais. Conceitualmente, ele é semelhante aos cartões inteligentes: a autenticação usa primitivos criptográficos em vez de comparações de cadeias de caracteres, e o material da chave do usuário fica seguro em um hardware à prova de adulterações. O Microsoft Passport também não requer os componentes de infraestrutura extra necessários para a implantação de cartões inteligentes. Em particular, você não precisa de uma PKI (Infraestrutura de Chave Pública), caso não tenha uma no momento. O Microsoft Passport integra as principais vantagens de cartões inteligentes – a flexibilidade de implantação para cartões inteligentes virtuais e a segurança robusta para cartões inteligentes físicos – sem nenhuma das desvantagens.
+No entanto, o Windows Hello não é apenas uma renovação dos sistemas de 2FA tradicionais. Conceitualmente, ele é semelhante aos cartões inteligentes: a autenticação usa primitivos criptográficos em vez de comparações de cadeias de caracteres, e o material da chave do usuário fica seguro em um hardware à prova de adulterações. O Windows Hello também não requer os componentes de infraestrutura extra necessários para a implantação de cartões inteligentes. Em particular, você não precisa de uma PKI (Infraestrutura de Chave Pública), caso não tenha uma no momento. O Windows Hello combina as principais vantagens da tecnologia de cartão inteligente (a flexibilidade de implantação para cartões inteligentes virtuais e a segurança robusta para cartões inteligentes físicos) sem qualquer uma das suas desvantagens.
 
-Um dispositivo deve ser registrado junto ao Microsoft Passport para que os usuários possam se autenticar junto a ele. O Microsoft Passport usa a criptografia assimétrica (chave pública/privada) em que um participante usa uma chave pública para criptografar os dados que a outra parte pode descriptografar usando uma chave privada. No caso do Microsoft Passport, ele cria um conjunto de pares de chave pública/privada e grava as chaves privadas no chip Trusted Platform Module (TPM) do dispositivo. Após o registro de um dispositivo, os aplicativos UWP (Plataforma Universal do Windows) podem chamar APIs de sistema para recuperar a chave pública do usuário, que pode ser utilizada para registrar o usuário no servidor.
+Um dispositivo deve ser registrado junto ao Windows Hello para que os usuários possam se autenticar junto a ele. O Windows Hello usa a criptografia assimétrica (chave pública/privada) em que um participante usa uma chave pública para criptografar os dados que a outra parte pode descriptografar usando uma chave privada. No caso do Windows Hello, ele cria um conjunto de pares de chave pública/privada e grava as chaves privadas no chip Trusted Platform Module (TPM) do dispositivo. Após o registro de um dispositivo, os apps UWP (Plataforma Universal do Windows) podem chamar APIs de sistema para recuperar a chave pública do usuário, que pode ser utilizada para registrar o usuário no servidor.
 
-O fluxo de trabalho de registro de um aplicativo pode ter a seguinte aparência:
+O fluxo de trabalho de registro de um app pode ter a seguinte aparência:
 
-![registro no microsoft passport](images/secure-passport.png)
+![registro do windows hello](images/secure-passport.png)
 
-As informações de registro que você coleta podem incluir muito mais informações de identificação do que são utilizadas neste cenário simples. Por exemplo, se seu aplicativo acessa um serviço protegido, como para bancos, você precisará solicitar comprovação de identidade e outros itens como parte do processo de inscrição. Depois que todas as condições forem atendidas, a chave pública do usuário será armazenada no back-end e usada para validar na próxima vez em que o usuário utilizar o serviço.
+As informações de registro que você coleta podem incluir muito mais informações de identificação do que são utilizadas neste cenário simples. Por exemplo, se seu app acessa um serviço protegido, como para bancos, você precisará solicitar comprovação de identidade e outros itens como parte do processo de inscrição. Depois que todas as condições forem atendidas, a chave pública do usuário será armazenada no back-end e usada para validar na próxima vez em que o usuário utilizar o serviço.
 
-Para obter mais informações sobre o Microsoft Passport e o Windows Hello, consulte o [Guia do Microsoft Passport](https://msdn.microsoft.com/library/mt589441) e o [Guia do desenvolvedor do Microsoft Passport](microsoft-passport.md).
+Para obter mais informações sobre o Windows Hello, consulte o [Guia do Windows Hello](https://msdn.microsoft.com/library/mt589441) e o [Guia do desenvolvedor do Windows Hello](microsoft-passport.md).
 
 ## <a name="3-data-in-flight-security-methods"></a>3 Métodos de segurança de dados em voo
 
 
-Os métodos de segurança de dados em voo se aplicam a dados em trânsito entre dispositivos conectados a uma rede. Os dados podem ser transferidos entre sistemas no ambiente de alta segurança de uma intranet corporativa privada, ou entre um cliente e um serviço Web no ambiente não seguro da Web. Os aplicativos do Windows 10 oferecem suporte a padrões como SSL por meio das APIs de rede e funcionam com tecnologias como o Gerenciamento de APIs do Azure, com o qual os desenvolvedores podem garantir o nível apropriado de segurança para os aplicativos.
+Os métodos de segurança de dados em voo se aplicam a dados em trânsito entre dispositivos conectados a uma rede. Os dados podem ser transferidos entre sistemas no ambiente de alta segurança de uma intranet corporativa privada, ou entre um cliente e um serviço Web no ambiente não seguro da Web. Os aplicativos do Windows 10 oferecem suporte a padrões como SSL por meio das APIs de rede e funcionam com tecnologias como o Gerenciamento de APIs do Azure, com o qual os desenvolvedores podem garantir o nível apropriado de segurança para os apps.
 
 ## <a name="31-remote-system-authentication"></a>3.1 Autenticação do sistema remoto
 
@@ -205,13 +212,13 @@ Quando um cliente solicita acesso a um recurso em um servidor, SSL inicia um pro
 
 Embora possa oferecer confidencialidade de mensagem usando criptografia e certificados, o SSL não faz nada para verificar se o servidor com o qual o cliente está se comunicando é o correto. O comportamento do servidor pode ser imitado por um terceiro não autorizado, interceptando os dados confidenciais que o cliente transmite. Para evitar isso, uma técnica chamada anexação SSL é utilizada para verificar se o certificado no servidor é o certificado que o cliente espera e em que confia.
 
-Existem algumas maneiras diferentes de implementar a anexação SSL em aplicativos, cada uma com prós e contras. A abordagem mais fácil é por meio da declaração de certificados no manifesto do pacote do aplicativo. Essa declaração permite que o pacote do aplicativo instale certificados digitais e especifique uma confiança exclusiva neles. Isso resulta em conexões SSL permitidas apenas entre o aplicativo e os servidores que têm os certificados correspondentes na cadeia de certificados. Esse mecanismo também permite o uso seguro de certificados autoassinados, pois nenhuma dependência de terceiros é necessária em autoridades de certificação pública confiável.
+Existem algumas maneiras diferentes de implementar a anexação SSL em apps, cada uma com prós e contras. A abordagem mais fácil é por meio da declaração de certificados no manifesto do pacote do app. Essa declaração permite que o pacote do app instale certificados digitais e especifique uma confiança exclusiva neles. Isso resulta em conexões SSL permitidas apenas entre o app e os servidores que têm os certificados correspondentes na cadeia de certificados. Esse mecanismo também permite o uso seguro de certificados autoassinados, pois nenhuma dependência de terceiros é necessária em autoridades de certificação pública confiável.
 
 ![manifesto SSL](images/secure-ssl-manifest.png)
 
 Para obter mais controle sobre a lógica de validação, há APIs disponíveis para validar os certificados retornados pelo servidor em resposta a uma solicitação HTTPS. Observe que esse método requer o envio de uma solicitação e a inspeção da resposta, logo, certifique-se de adicioná-lo como uma validação antes de enviar efetivamente informações confidenciais em uma solicitação.
 
-O código em C# a seguir ilustra esse método de anexação SSL. O método **ValidateSSLRoot** usa a classe [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) para executar uma solicitação HTTP. Depois que o cliente envia a resposta, ele usa a coleção [**RequestMessage.TransportInformation.ServerIntermediateCertificates**](https://msdn.microsoft.com/library/windows/apps/dn279681) para inspecionar os certificados retornados pelo servidor. Assim, o cliente pode validar toda a cadeia de certificados com as impressões digitais que ele incluiu. Esse método requer que as impressões digitais de certificados sejam atualizadas no aplicativo quando o certificado do servidor expirar e for renovado.
+O código em C# a seguir ilustra esse método de anexação SSL. O método **ValidateSSLRoot** usa a classe [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) para executar uma solicitação HTTP. Depois que o cliente envia a resposta, ele usa a coleção [**RequestMessage.TransportInformation.ServerIntermediateCertificates**](https://msdn.microsoft.com/library/windows/apps/dn279681) para inspecionar os certificados retornados pelo servidor. Assim, o cliente pode validar toda a cadeia de certificados com as impressões digitais que ele incluiu. Esse método requer que as impressões digitais de certificados sejam atualizadas no app quando o certificado do servidor expirar e for renovado.
 
 ```cs
 private async Task ValidateSSLRoot()
@@ -276,36 +283,36 @@ O Serviço de Gerenciamento de APIs do Azure também pode reduzir o número de c
 ## <a name="4-data-at-rest-security-methods"></a>4 Métodos de segurança de dados em repouso
 
 
-Quando os dados chegam em um dispositivo, nos referimos a eles como "dados em repouso". Esses dados precisam ser armazenados no dispositivo de maneira segura, de maneira que ele não possa ser acessado por usuários ou aplicativos não autorizados. O modelo de aplicativo no Windows 10 faz muito para garantir que os dados armazenados por qualquer aplicativo só sejam acessíveis por esse aplicativo, ao mesmo tempo em que fornece APIs para compartilhar os dados quando necessário. As APIs adicionais também estão disponíveis para garantir que os dados possam ser criptografados e as credenciais possam ser armazenadas com segurança.
+Quando os dados chegam em um dispositivo, nos referimos a eles como "dados em repouso". Esses dados precisam ser armazenados no dispositivo de maneira segura, de maneira que ele não possa ser acessado por usuários ou apps não autorizados. O modelo de app no Windows 10 faz muito para garantir que os dados armazenados por qualquer app só sejam acessíveis por esse app, ao mesmo tempo em que fornece APIs para compartilhar os dados quando necessário. As APIs adicionais também estão disponíveis para garantir que os dados possam ser criptografados e as credenciais possam ser armazenadas com segurança.
 
 ## <a name="41-windows-app-model"></a>4.1 Modelo de aplicativo do Windows
 
 
-Tradicionalmente, o Windows jamais teve uma definição de um aplicativo. Ele era mais conhecido como um executável (.exe), e isso nunca incluiu a instalação, o armazenamento do estado, a duração da execução, o controle de versão, a integração com o SO ou a comunicação de aplicativo para aplicativo. O modelo Plataforma Universal do Windows define um modelo de aplicativo que abrange instalação, ambiente de tempo de execução, gerenciamento de recursos, atualizações, modelo de dados e desinstalação.
+Tradicionalmente, o Windows jamais teve uma definição de um app. Ele era mais conhecido como um executável (.exe), e isso nunca incluiu a instalação, o armazenamento do estado, a duração da execução, o controle de versão, a integração com o SO ou a comunicação de app para app. O modelo Plataforma Universal do Windows define um modelo de app que abrange instalação, ambiente de tempo de execução, gerenciamento de recursos, atualizações, modelo de dados e desinstalação.
 
-Os aplicativos do Windows 10 são executados em um contêiner, o que significa que eles têm privilégios limitados por padrão (privilégios adicionais podem ser solicitados e concedidos pelo usuário). Por exemplo, se um aplicativo quiser acessar arquivos no sistema, um seletor de arquivos do namespace [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) tem de ser usado para permitir que o usuário selecione um arquivo (sem acesso direto aos arquivos habilitado). Outro exemplo é que se um aplicativo quiser acessar os dados de local do usuário, ele terá que permitir a declaração da capacidade do dispositivo de local, solicitando ao usuário no momento do download que esse aplicativo solicite acesso ao local do usuário. Além disso, na primeira vez que o aplicativo quiser acessar o local do usuário, um prompt de consentimento adicional será mostrado ao usuário, solicitando permissão para acessar os dados.
+Os aplicativos do Windows 10 são executados em um contêiner, o que significa que eles têm privilégios limitados por padrão (privilégios adicionais podem ser solicitados e concedidos pelo usuário). Por exemplo, se um app quiser acessar arquivos no sistema, um seletor de arquivos do namespace [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) tem de ser usado para permitir que o usuário selecione um arquivo (sem acesso direto aos arquivos habilitado). Outro exemplo é que se um app quiser acessar os dados de local do usuário, ele terá que permitir a declaração da capacidade do dispositivo de local, solicitando ao usuário no momento do download que esse app solicite acesso ao local do usuário. Além disso, na primeira vez que o app quiser acessar o local do usuário, um prompt de consentimento adicional será mostrado ao usuário, solicitando permissão para acessar os dados.
 
-Observe que esse modelo de aplicativo atua como uma "jaula" para aplicativos, o que significa que eles não podem sair, mas não e um “castelo” que não possa ser acessado do lado de fora (obviamente, os aplicativos com privilégios de administrador ainda podem acessá-los). O Device Guard no Windows 10, que permite que as organizações/TI especifiquem quais aplicativos (Win32) podem ser executados, podem ajudar a limitar esse acesso ainda mais.
+Observe que esse modelo de app atua como uma "jaula" para apps, o que significa que eles não podem sair, mas não e um “castelo” que não possa ser acessado do lado de fora (obviamente, os apps com privilégios de administrador ainda podem acessá-los). O Device Guard no Windows 10, que permite que as organizações/TI especifiquem quais apps (Win32) podem ser executados, podem ajudar a limitar esse acesso ainda mais.
 
-O modelo de aplicativo também gerencia o ciclo de vida do aplicativo. Ele limita a execução em segundo plano de aplicativos por padrão, por exemplo; assim que um aplicativo entra em segundo plano, o processo é suspenso – depois de oferecer ao aplicativo um breve período para tratar da suspensão no código – e sua memória é congelada. O sistema operacional fornece mecanismos para os aplicativos solicitarem a execução de tarefas específicas em segundo plano (em um agendamento, disparadas por vários eventos, como conectividade de Internet/Bluetooth, alterações de energia etc., e em cenários específicos, como a execução de músicas ou o rastreamento por GPS).
+O modelo de app também gerencia o ciclo de vida do app. Ele limita a execução em segundo plano de apps por padrão, por exemplo; assim que um app entra em segundo plano, o processo é suspenso – depois de oferecer ao app um breve período para tratar da suspensão no código – e sua memória é congelada. O sistema operacional fornece mecanismos para os apps solicitarem a execução de tarefas específicas em segundo plano (em um agendamento, disparadas por vários eventos, como conectividade de Internet/Bluetooth, alterações de energia etc., e em cenários específicos, como a execução de músicas ou o rastreamento por GPS).
 
-Quando faltam recursos de memória no dispositivo, o Windows libera espaço na memória encerrando aplicativos. Esse modelo do ciclo de vida força aplicativos a fechar dados sempre que são suspensos, porque não há mais tempo disponível entre a suspensão e o encerramento.
+Quando faltam recursos de memória no dispositivo, o Windows libera espaço na memória encerrando apps. Esse modelo do ciclo de vida força apps a fechar dados sempre que são suspensos, porque não há mais tempo disponível entre a suspensão e o encerramento.
 
 Para obter mais informações, consulte [É universal: Noções básicas sobre o ciclo de vida de um aplicativo do Windows 10](https://visualstudiomagazine.com/articles/2015/09/01/its-universal.aspx).
 
 ## <a name="42-stored-credential-protection"></a>4.2 Proteção de credencial armazenada
 
 
-Os aplicativos do Windows que acessam serviços autenticados normalmente dão aos usuários a opção de armazenar as credenciais no dispositivo local. Trata-se de uma comodidade para os usuários; quando eles fornecem o nome de usuário e a senha, o aplicativo automaticamente os usa em inicializações subsequentes do aplicativo. Como isso pode ser um problema de segurança caso um invasor consiga acesso aos dados armazenados, o Windows 10 oferece a possibilidade de aplicativos do Windows armazenarem as credenciais do usuário em um cofre de credenciais seguro. O aplicativo chama a API do Cofre de Credenciais para armazenar e recuperar as credenciais do cofre em vez de armazená-las no contêiner de armazenamento do aplicativo. O cofre de credenciais é gerenciado pelo sistema operacional, mas o acesso é limitado ao aplicativo que o armazena, proporcionando uma solução gerenciada de maneira segura para o armazenamento de credenciais.
+Os aplicativos do Windows que acessam serviços autenticados normalmente dão aos usuários a opção de armazenar as credenciais no dispositivo local. Trata-se de uma comodidade para os usuários; quando eles fornecem o nome de usuário e a senha, o app automaticamente os usa em inicializações subsequentes do app. Como isso pode ser um problema de segurança caso um invasor consiga acesso aos dados armazenados, o Windows 10 oferece a possibilidade de aplicativos do Windows armazenarem as credenciais do usuário em um cofre de credenciais seguro. O app chama a API do Cofre de Credenciais para armazenar e recuperar as credenciais do cofre em vez de armazená-las no contêiner de armazenamento do app. O cofre de credenciais é gerenciado pelo sistema operacional, mas o acesso é limitado ao app que o armazena, proporcionando uma solução gerenciada de maneira segura para o armazenamento de credenciais.
 
-Quando um usuário fornece as credenciais a serem armazenadas, o aplicativo obtém uma referência para o cofre de credenciais usando o objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) no namespace [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089). Em seguida, ele cria um objeto [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) que contém um identificador para o aplicativo do Windows, além do nome de usuário e da senha. Isso é passado ao método [**PasswordVault.Add**](https://msdn.microsoft.com/library/windows/apps/hh701231) para armazenar as credenciais no cofre. O código de exemplo em C# a seguir mostra como isso é feito.
+Quando um usuário fornece as credenciais a serem armazenadas, o app obtém uma referência para o cofre de credenciais usando o objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) no namespace [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089). Em seguida, ele cria um objeto [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) que contém um identificador para o aplicativo do Windows, além do nome de usuário e da senha. Isso é passado ao método [**PasswordVault.Add**](https://msdn.microsoft.com/library/windows/apps/hh701231) para armazenar as credenciais no cofre. O código de exemplo em C# a seguir mostra como isso é feito.
 
 ```cs
 var vault = new PasswordVault();
 vault.Add(new PasswordCredential("My App", username, password));
 ```
 
-No código de exemplo em C# a seguir, o aplicativo solicita todas as credenciais correspondentes ao aplicativo chamando o método [**FindAllByResource**](https://msdn.microsoft.com/library/windows/apps/br227083) do objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081). Caso mais de um seja retornado, ele solicita que o usuário insira o nome de usuário. Caso as credenciais não estejam no cofre, o aplicativo solicita ao usuário para eles. Assim, o usuário está conectado ao servidor usando as credenciais.
+No código de exemplo em C# a seguir, o app solicita todas as credenciais correspondentes ao app chamando o método [**FindAllByResource**](https://msdn.microsoft.com/library/windows/apps/br227083) do objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081). Caso mais de um seja retornado, ele solicita que o usuário insira o nome de usuário. Caso as credenciais não estejam no cofre, o app solicita ao usuário para eles. Assim, o usuário está conectado ao servidor usando as credenciais.
 
 ```cs
 private string resourceName = "My App";
@@ -371,7 +378,7 @@ Com a criptografia simétrica, o remetente e o destinatário têm a mesma chave 
 
 Uma resposta para isso é a criptografia assimétrica, na qual um par de chaves pública/privada é usado. A chave pública é compartilhada livremente com qualquer pessoa que queira criptografar uma mensagem. A chave privada sempre é mantida em segredo, de maneira que apenas você possa usá-la para descriptografar os dados. Uma técnica comum para possibilitar a descoberta da chave pública é usar certificados digitais, também conhecidos simplesmente como certificados. O certificado mantém informações sobre a chave pública, além de informações sobre o usuário ou o servidor, como nome, emissor, endereço de email e país.
 
-Os desenvolvedores de aplicativos do Windows podem usar as classes [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) e [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para implementar as criptografias simétrica e assimétrica nos aplicativos UWP. Além disso, a classe [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) pode ser usada para criptografar e descriptografar dados, assinar conteúdo e verificar assinaturas digitais. Os apps também podem usar a classe [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) no namespace [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) para criptografar e descriptografar dados locais armazenados.
+Os desenvolvedores de aplicativos do Windows podem usar as classes [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) e [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para implementar as criptografias simétrica e assimétrica nos apps UWP. Além disso, a classe [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) pode ser usada para criptografar e descriptografar dados, assinar conteúdo e verificar assinaturas digitais. Os apps também podem usar a classe [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) no namespace [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) para criptografar e descriptografar dados locais armazenados.
 
 ## <a name="432-detecting-message-tampering-macs-hashes-and-signatures"></a>4.3.2 Detecção da falsificação de mensagem (MACs, hashes e assinaturas)
 
@@ -392,7 +399,7 @@ Os aplicativos do Windows podem implementar a verificação de mensagem MAC cham
 ## <a name="433-using-hashes"></a>4.3.3 Como usar hashes
 
 
-Função de hash é um algoritmo criptográfico que utiliza um bloco de dados arbitrariamente longo e retorna uma sequência de caracteres de bit de tamanho fixo chamada de valor de hash. Existe uma família inteira de funções de hash que podem fazer isso.
+Função de hash é um algoritmo criptográfico que utiliza um bloco de dados arbitrariamente longo e retorna uma cadeia de caracteres de bit de tamanho fixo chamada de valor de hash. Existe uma família inteira de funções de hash que podem fazer isso.
 
 Um valor de hash pode ser usado em lugar de um MAC no cenário de transferência de mensagem acima. O remetente envia um valor de hash e uma mensagem, e o receptor deriva o próprio valor de hash do valor de hash do remetente e a mensagem e compara os dois valores de hash. Aplicativos em execução no Windows 10 podem chamar a classe [**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) para enumerar os algoritmos de hash disponíveis e executar um deles. A classe [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) representa o valor de hash. O método [**CryptographicHash.GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) pode ser usado para fazer hash repetidamente de dados diferentes sem a necessidade de recriar o objeto para cada uso. O método Append da classe **CryptographicHash** adiciona dados novos a um buffer para hash. Todo esse processo é mostrado no exemplo de código em C# a seguir.
 
@@ -447,11 +454,11 @@ Para obter mais informações, dê uma olhada nos artigos [Assinaturas digitais]
 ## <a name="5-summary"></a>5 Resumo
 
 
-A Plataforma Universal do Windows no Windows 10 oferece um número de formas de aproveitar recursos de sistema operacional para criar aplicativos mais seguros. Em cenários de autenticação diferentes, como fator único, multifator ou autenticação orientada com um provedor de identidade OAuth, há APIs para atenuar os desafios mais comuns com autenticação. O Windows Hello oferece um novo sistema de entrada biométrica que reconhece o usuário e combate ativamente iniciativas de contornar a identificação apropriada. O Microsoft Passport funciona com o Windows Hello para oferecer várias camadas de chaves e certificados que jamais podem ser revelados ou usados fora do trusted platform module. Além disso, uma camada adicional de segurança está disponível por meio do uso opcional de chaves e certificados de identidade de atestado.
+A Plataforma Universal do Windows no Windows 10 oferece um número de formas de aproveitar recursos de sistema operacional para criar apps mais seguros. Em cenários de autenticação diferentes, como fator único, multifator ou autenticação orientada com um provedor de identidade OAuth, há APIs para atenuar os desafios mais comuns com autenticação. O Windows Hello oferece um novo sistema de entrada biométrica que reconhece o usuário e combate ativamente iniciativas de contornar a identificação apropriada. Ele também oferece diversas camadas de chaves e certificados que nunca podem ser reveladas ou usadas fora de um módulo de plataforma confiável. Além disso, uma camada adicional de segurança está disponível por meio do uso opcional de chaves e certificados de identidade de atestado.
 
 Para proteger dados em voo, há APIs existem para se comunicar com sistemas remotos com segurança sobre SSL, ao mesmo tempo em que é oferecida a possibilidade de validar a autenticidade do servidor com anexação SSL. A publicação segura de APIs de uma forma controlada é algo em que o Gerenciamento de APIs do Azure ajuda, fornecendo opções avançadas de configuração para expor APIs na Web com o uso de um proxy que fornece mais ofuscação do ponto de extremidade de API. O acesso a essas APIs é protegido com chaves de API, e as chamadas de API podem ser limitadas para controlar o desempenho.
 
-Quando os dados chegam no dispositivo, o modelo de aplicativo do Windows fornece mais controle sobre o modo como o aplicativo é instalado, atualizado e acessa dados, impedindo- o de acessar dados de outros aplicativos de maneira não autorizada. O Cofre de Credenciais pode fornecer armazenamento seguro de credenciais do usuário gerenciado pelo sistema operacional e outros dados podem ser protegidos no dispositivo com a criptografia e APIs com hash oferecidas pela Plataforma Universal do Windows.
+Quando os dados chegam no dispositivo, o modelo de aplicativo do Windows fornece mais controle sobre o modo como o app é instalado, atualizado e acessa dados, impedindo- o de acessar dados de outros apps de maneira não autorizada. O Cofre de Credenciais pode fornecer armazenamento seguro de credenciais do usuário gerenciado pelo sistema operacional e outros dados podem ser protegidos no dispositivo com a criptografia e APIs com hash oferecidas pela Plataforma Universal do Windows.
 
 ## <a name="6-resources"></a>6 Recursos
 
@@ -459,9 +466,9 @@ Quando os dados chegam no dispositivo, o modelo de aplicativo do Windows fornece
 ### <a name="61-how-to-articles"></a>6.1 Artigos de instruções
 
 -   [Autenticação e identidade do usuário](authentication-and-user-identity.md)
--   [Microsoft Passport](microsoft-passport.md)
+-   [Windows Hello](microsoft-passport.md)
 -   [Cofre de credenciais](credential-locker.md)
--   [Agente de autenticação Web](web-authentication-broker.md)
+-   [Agente de autenticação da Web](web-authentication-broker.md)
 -   [Biometria por impressão digital](fingerprint-biometrics.md)
 -   [Cartões inteligentes](smart-cards.md)
 -   [Certificados compartilhados](share-certificates.md)
@@ -499,8 +506,3 @@ Quando os dados chegam no dispositivo, o modelo de aplicativo do Windows fornece
 -   [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585)
 -   [**Windows.Security.ExchangeActiveSyncProvisioning**](https://msdn.microsoft.com/library/windows/apps/hh701506)
 -   [**Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
-
-
-<!--HONumber=Dec16_HO1-->
-
-

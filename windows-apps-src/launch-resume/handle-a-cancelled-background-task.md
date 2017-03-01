@@ -3,13 +3,20 @@ author: TylerMSFT
 title: Manipular uma tarefa em segundo plano cancelada
 description: "Saiba como criar uma tarefa em segundo plano que reconhece solicitações de cancelamento e interrompe o trabalho, relatando o cancelamento ao aplicativo usando armazenamento persistente."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: ba40aefe83a02d29150dd25e1303ec15bb032b8c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7211ba08f1b697fb79cfca767300c92e6e41fb68
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="handle-a-cancelled-background-task"></a>Manipular uma tarefa em segundo plano cancelada
+# <a name="handle-a-cancelled-background-task"></a>Tratar uma tarefa em segundo plano cancelada
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -344,9 +351,4 @@ O método Run completo e o código de retorno de chamada do temporizador do [amo
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

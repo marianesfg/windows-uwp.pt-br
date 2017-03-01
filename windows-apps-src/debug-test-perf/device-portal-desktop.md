@@ -3,12 +3,19 @@ author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para desktop
 description: "Saiba como o Windows Device Portal abre diagnósticos e automação em sua área de trabalho do Windows."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b5d259172a7e3975d48a5ba669cfbe345869aebf
-ms.openlocfilehash: 3436a95124071045c8ec89ed8ddf644ccc80c29f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7b8b396078d59cc2ab3180e9af8b6017fd5edbda
+ms.lasthandoff: 02/07/2017
 
 ---
-# Device Portal para desktop
+# <a name="device-portal-for-desktop"></a>Device Portal para desktop
 
 A partir do Windows 10, versão 1607, outros recursos de desenvolvedor estão disponíveis para desktop. Esses recursos estão disponíveis apenas quando o Modo de Desenvolvedor está habilitado.
 
@@ -23,9 +30,9 @@ O Device Portal permite exibir informações de diagnóstico e interagir com seu
 - Coletar rastreamentos do ETW 
 - Manipular o armazenamento isolado dos aplicativos de sideload
 
-## Configurar o Device Portal na área de trabalho do Windows
+## <a name="set-up-device-portal-on-windows-desktop"></a>Configurar o Device Portal na área de trabalho do Windows
 
-### Ativar o portal de dispositivo
+### <a name="turn-on-device-portal"></a>Ativar o portal de dispositivo
 
 No menu **Configurações do Desenvolvedor**, com o Modo de Desenvolvedor habilitado, você pode habilitar o Device Portal.  
 
@@ -51,7 +58,7 @@ O HTTPS é necessário para autenticação e comunicação segura.
 
 Se você estiver usando o Device Portal em um ambiente protegido, como um laboratório de teste, onde confia em todos na rede local, não tem informações pessoais no dispositivo e tem requisitos exclusivos, você poderá desabilitar a autenticação. Isso permite a comunicação não criptografada e que qualquer pessoa com o endereço IP do seu computador controle-o.
 
-## Páginas do Device Portal
+## <a name="device-portal-pages"></a>Páginas do Device Portal
 
 O Device Portal no desktop fornece o conjunto padrão de páginas. Para obter descrições detalhadas, consulte [Visão geral do Windows Device Portal](device-portal.md).
 
@@ -65,7 +72,7 @@ O Device Portal no desktop fornece o conjunto padrão de páginas. Para obter de
 - Rede
 - Aplicativo Explorador de Arquivos 
 
-## Configurando números de porta
+## <a name="setting-port-numbers"></a>Configurando números de porta
 
 Se você quiser selecionar números de porta para o Device Portal (como 80 e 443), será possível definir as seguintes chaves do registro:
 
@@ -74,12 +81,12 @@ Se você quiser selecionar números de porta para o Device Portal (como 80 e 443
     - HttpPort: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTP.  
     - HttpsPort: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTPS.
 
-## Falha ao instalar o pacote do Modo de Desenvolvedor ou iniciar o Device Portal
+## <a name="failure-to-install-developer-mode-package-or-launch-device-portal"></a>Falha ao instalar o pacote do Modo de Desenvolvedor ou iniciar o Device Portal
 Às vezes, devido a problemas de rede ou de compatibilidade, o Modo de Desenvolvedor não será instalado corretamente. O pacote do Modo de Desenvolvedor é necessário para a implantação **remota** – Device Portal e SSH – mas não para o desenvolvimento local.  Mesmo se você encontrar esses problemas, você ainda pode implementar seu aplicativo localmente usando o Visual Studio. 
 
 Consulte o fórum [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para encontrar soluções alternativas para esses problemas e muito mais. 
 
-### Falha ao localizar o pacote
+### <a name="failed-to-locate-the-package"></a>Falha ao localizar o pacote
 
 "Não foi possível localizar o pacote do Modo de Desenvolvedor no Windows Update. Código do erro 0x001234 Saiba mais"   
 
@@ -89,13 +96,13 @@ Para resolver este problema:
 
 1. Certifique-se de que o computador esteja conectado à Internet. 
 2. Se você estiver em um computador associado a um domínio, fale com o administrador de rede. 
-3. Verifique se existem atualizações do Windows em Configurações > Atualizações e Segurança > [Atualizações do Windows](ms-settings:windowsupdate).
-4. Verifique se o pacote do Modo de Desenvolvedor do Windows está presente em Configurações > Sistema > Aplicativos e Recursos > [Gerenciar recursos opcionais](ms-settings:optionalfeatures) > Adicionar um recurso. Se ele estiver ausente, o Windows não poderá encontrar o pacote correto para o seu computador. 
+3. Verifique se existem atualizações do Windows em Configurações > Atualizações e Segurança > Atualizações do Windows.
+4. Verifique se o pacote do Modo de Desenvolvedor do Windows está presente em Configurações > Sistema > Aplicativos e Recursos > Gerenciar recursos opcionais > Adicionar um recurso. Se ele estiver ausente, o Windows não poderá encontrar o pacote correto para o seu computador. 
 
 Depois de realizar qualquer uma das etapas acima, desabilite e habilite novamente o Modo de Desenvolvedor para verificar a correção. 
 
 
-### Falha ao instalar o pacote
+### <a name="failed-to-install-the-package"></a>Falha ao instalar o pacote
 
 "Falha ao instalar o pacote do Modo de Desenvolvedor. Código do erro 0x001234 Saiba mais"
 
@@ -103,11 +110,6 @@ Esse erro pode ocorrer devido à incompatibilidade entre a compilação do Windo
 
 Para resolver este problema:
 
-1. Verifique se existem atualizações do Windows em Configurações > Atualizações e Segurança > [Atualizações do Windows](ms-settings:windowsupdate).
+1. Verifique se existem atualizações do Windows em Configurações > Atualizações e Segurança > Atualizações do Windows.
 2. Reinicialize o computador para garantir que todas as atualizações sejam aplicadas.
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

@@ -3,13 +3,20 @@ author: msatranjr
 title: "Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript"
 description: "Este passo a passo mostra como é possível usar o .NET Framework com Visual Basic ou C# para criar os próprios tipos de Windows Runtime, empacotados em um componente do Tempo de Execução do Windows, e como chamar o componente no aplicativo Universal do Windows em JavaScript para Windows."
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 56fbc32ee9b75688aa3dec498eb51e8bd533a4ee
-ms.openlocfilehash: 16502dbda2495333d512d9d7a3e0a7f8a8f98562
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6f1bfc96416febdf531dec52c14bcaee13de9f14
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript
+# <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>Procedimento passo a passo: criando um componente simples do Tempo de Execução do Windows e chamando-o em JavaScript
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -735,9 +742,4 @@ Para executar o aplicativo, escolha a tecla F5. Para iniciar a operação assín
 * [Visão geral do .NET para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
-
-
-
-<!--HONumber=Dec16_HO4-->
-
 

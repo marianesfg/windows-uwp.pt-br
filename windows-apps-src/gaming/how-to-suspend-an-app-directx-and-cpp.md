@@ -3,20 +3,27 @@ author: mtoepke
 title: Como suspender um aplicativo (DirectX e C++)
 description: "Este tópico mostra como salvar dados importantes do aplicativo e do estado do sistema quando o sistema suspende o aplicativo UWP (Plataforma Universal do Windows) DirectX."
 ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, suspensão, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dd7319b254dcaaa5da7a7055bbde299f5e7e62a3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 028350f3e4bf6bda5a72663c009e8117c9311b3e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Como suspender um aplicativo (DirectX e C++)
+# <a name="how-to-suspend-an-app-directx-and-c"></a>Como suspender um aplicativo (DirectX e C++)
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico mostra como salvar dados importantes do aplicativo e do estado do sistema quando o sistema suspende o aplicativo UWP (Plataforma Universal do Windows) DirectX.
 
-## Registrar o manipulador de eventos de suspensão
+## <a name="register-the-suspending-event-handler"></a>Registrar o manipulador de eventos de suspensão
 
 
 Primeiro, registre para manipular o evento [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860) que é acionado quando seu aplicativo é movido para um estado suspenso por uma ação do usuário ou do sistema.
@@ -35,7 +42,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 }
 ```
 
-## Salve todos os dados do aplicativo antes de suspender
+## <a name="save-any-app-data-before-suspending"></a>Salve todos os dados do aplicativo antes de suspender
 
 
 Ao manipular o evento [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860), seu aplicativo tem a oportunidade de salvar seus dados importantes na função do manipulador. O aplicativo deve usar a API de armazenamento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para salvar dados simples do aplicativo de maneira síncrona. Se você estiver desenvolvendo um jogo, salve quaisquer informações de estado de jogo crítico. Não se esqueça de suspender o processamento de áudio!
@@ -91,7 +98,7 @@ void App::Run()
 }
 ```
 
-## Chamar Trim()
+## <a name="call-trim"></a>Chamar Trim()
 
 
 A partir do Windows 8.1, todos os aplicativos DirectX da Windows Store precisam chamar [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) no momento da suspensão. Essa chamada pede para o driver gráfico liberar todos os buffers temporários alocados para o aplicativo evitando que o aplicativo seja encerrado para recuperar recursos de memória durante o estado de suspensão. Esse é um requisito de certificação do Windows 8.1.
@@ -126,12 +133,12 @@ void DX::DeviceResources::Trim()
 }
 ```
 
-## Liberar identificadores de arquivos e recursos exclusivos
+## <a name="release-any-exclusive-resources-and-file-handles"></a>Liberar identificadores de arquivos e recursos exclusivos
 
 
 Quando seu aplicativo manipula o evento [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860), ele também tem a oportunidade de liberar indicadores de arquivos e recursos exclusivos. Liberar explicitamente os indicadores de arquivos e recursos exclusivos ajuda a garantir que outros aplicativos possam acessá-los quando não estiverem sendo usados pelo seu aplicativo. Quando o aplicativo for ativado após o encerramento, ele deverá abrir seus indicadores de arquivos e recursos exclusivos.
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 
 O sistema suspende o aplicativo sempre que o usuário alterna para outro aplicativo ou para a área de trabalho. O sistema retoma o seu aplicativo sempre que o usuário alterna de volta para ele. Quando o sistema retoma o aplicativo, o conteúdo das variáveis e estruturas de dados é o mesmo de antes da suspensão do aplicativo pelo sistema. O sistema retoma o aplicativo exatamente de onde parou, o que faz parecer ao usuário que ele estava sendo executado em tela de fundo.
@@ -140,7 +147,7 @@ O sistema tenta manter o aplicativo e seus dados na memória enquanto ele está 
 
 O sistema não notifica um aplicativo quando ele está encerrado, por isso seu aplicativo deve salvar seus dados de aplicativo e liberar identificadores de arquivo e recursos exclusivos quando suspenso e restaurá-los quando ativado após o encerramento.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Como retomar um aplicativo (DirectX e C++)](how-to-resume-an-app-directx-and-cpp.md)
 * [Como ativar um aplicativo (DirectX e C++)](how-to-activate-an-app-directx-and-cpp.md)
@@ -151,10 +158,5 @@ O sistema não notifica um aplicativo quando ele está encerrado, por isso seu a
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

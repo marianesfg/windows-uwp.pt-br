@@ -3,9 +3,16 @@ author: msatranjr
 title: "Exibir mapas com modos de exibição 2D, 3D e Streetside"
 description: "Exiba mapas personalizáveis no aplicativo usando a classe MapControl. Este tópico também apresenta modos de exibição 3D e Streetside."
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, mapa, localização, controle de mapa, modos de exibição de mapa"
 translationtype: Human Translation
-ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
-ms.openlocfilehash: 09f87f66802e5143c8eac7fce8fc2118f3d31340
+ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
+ms.openlocfilehash: 7a1687ceb188fdd28943f807b877b28e93ae6937
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -26,7 +33,7 @@ Exiba mapas personalizáveis no seu aplicativo usando a classe [**MapControl**](
 
 Exiba um mapa em uma página XAML adicionando um [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). Para usar o **MapControl**, você deve declarar o namespace [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751) na página XAML ou no seu código. Se você arrastar o controle da Caixa de Ferramentas, essa declaração de namespace será adicionada automaticamente. Se você adicionar o **MapControl** à página XAML manualmente, deverá adicionar a declaração de namespace manualmente na parte superior da página.
 
-O exemplo a seguir exibe um controle de mapa básico e configura o mapa para exibir os controles de zoom e inclinação além de aceitar entradas de toque. Para obter mais informações sobre como personalizar a aparência do mapa, consulte [Configurar o mapa](#mapconfig).
+O exemplo a seguir exibe um controle de mapa básico e configura o mapa para exibir os controles de zoom e inclinação além de aceitar entradas de toque. Para obter mais informações sobre como personalizar a aparência do mapa, consulte [Configurar o mapa](#configure-the-map).
 
 ```xml
 <Page
@@ -46,7 +53,7 @@ O exemplo a seguir exibe um controle de mapa básico e configura o mapa para exi
        ZoomInteractionMode="GestureAndControl"
        TiltInteractionMode="GestureAndControl"   
        MapServiceToken="EnterYourAuthenticationKeyHere"/>
-  
+
  </Grid>
 </Page>
 ```
@@ -137,7 +144,7 @@ Ao exibir a localização do seu dispositivo em um mapa, leve em consideração 
 
 Para alterar a localização exibida em um mapa 2D, chame um das sobrecargas do método [**TrySetViewAsync**](https://msdn.microsoft.com/library/windows/apps/dn637060). Use esse método para especificar novos valores para [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005), [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068), [**Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019) e [**Pitch**](https://msdn.microsoft.com/library/windows/apps/dn637044). Você também pode especificar uma animação opcional para usar quando exibir alterações fornecendo uma constante da enumeração de [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002).
 
-Para alterar a localização de um mapa 3D, use em vez disso o método [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296). Para saber mais, consulte [Mostrar modos de exibição 3D](#display3d).
+Para alterar a localização de um mapa 3D, use em vez disso o método [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296). Para saber mais, consulte [Mostrar modos de exibição 3D](#display-aerial-3d-views).
 
 Chame o método [**TrySetViewBoundsAsync**](https://msdn.microsoft.com/library/windows/apps/dn637065) para exibir o conteúdo de uma [**GeoboundingBox**](https://msdn.microsoft.com/library/windows/apps/dn607949) no mapa. Use esse método, por exemplo, para exibir uma rota e uma parte de uma rota no mapa. Para saber mais, consulte [Exibir rotas e trajetos em um mapa](routes-and-directions.md).
 
@@ -316,11 +323,4 @@ Trate mudanças que acontecem quando o usuário ou o aplicativo altera as config
 * [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Exemplo de aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
-
-
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

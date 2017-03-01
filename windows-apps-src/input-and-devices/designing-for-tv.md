@@ -13,8 +13,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8a040033f99d6e8cac04b44dcec58c6b306eda54
-ms.openlocfilehash: a138e0ba73da792a63f1c22ee4342a8157f2a136
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 572073c2c577f3f6833b9cbee303875e378d6030
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -416,7 +417,7 @@ public App()
 }
 ```
 
-Para obter mais informações, incluindo o código de exemplo para HTML/JavaScript, consulte [Como desabilitar o modo de mouse](https://msdn.microsoft.com/windows/uwp/xbox-apps/how-to-disable-mouse-mode).
+Para obter mais informações, incluindo o código de exemplo para HTML/JavaScript, consulte [Como desabilitar o modo de mouse](../xbox-apps/how-to-disable-mouse-mode.md).
 
 O diagrama a seguir mostra os mapeamentos de botões para gamepad/controle remoto no modo de mouse.
 
@@ -595,7 +596,7 @@ Como o usuário de um aplicativo no ambiente de 3 metros está usando um control
 
 ![Alterar o tamanho do texto, aplicativos e outros itens](images/designing-for-tv/ui-scaling.png) 
 
-No Xbox One, não há nenhuma configuração do sistema assim; entretanto, para que os elementos de interface do usuário UWP sejam dimensionados adequadamente para TV, eles são dimensionados em um padrão de **200%** para apps XAML e **150%** para apps HTML. Desde que os elementos de interface do usuário sejam dimensionados adequadamente para outros dispositivos, ele serão dimensionados adequadamente para TV. O Xbox One renderiza seu aplicativo em 1080p (1920 x 1080 pixels). Portanto, ao trazer um app de outros dispositivos, como um computador, certifique-se de que a interface do usuário tenha uma boa aparência em 960 x 540 px em escala de 100% (ou 1.280 x 720 px em escala de 100% para apps HTML) utilizando [técnicas adaptáveis](https://msdn.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design).
+No Xbox One, não há nenhuma configuração do sistema assim; entretanto, para que os elementos de interface do usuário UWP sejam dimensionados adequadamente para TV, eles são dimensionados em um padrão de **200%** para apps XAML e **150%** para apps HTML. Desde que os elementos de interface do usuário sejam dimensionados adequadamente para outros dispositivos, ele serão dimensionados adequadamente para TV. O Xbox One renderiza seu aplicativo em 1080p (1920 x 1080 pixels). Portanto, ao trazer um app de outros dispositivos, como um computador, certifique-se de que a interface do usuário tenha uma boa aparência em 960 x 540 px em escala de 100% (ou 1.280 x 720 px em escala de 100% para apps HTML) utilizando [técnicas adaptáveis](../layout/screen-sizes-and-breakpoints-for-responsive-design.md).
 
 O design para Xbox é um pouco diferente do design para computador, pois você só precisa se preocupar com uma resolução, 1.920 x 1.080. Não importa se o usuário tem uma TV com melhor resolução; os aplicativos UWP sempre serão dimensionados para 1080p.
 
@@ -639,7 +640,7 @@ bool result =
 
 `result` informará se você obteve êxito na recusa.
 
-Para obter mais informações, incluindo o código de exemplo para HTML/JavaScript, consulte [Como desativar a colocação em escala](https://msdn.microsoft.com/windows/uwp/xbox-apps/disable-scaling).
+Para obter mais informações, incluindo o código de exemplo para HTML/JavaScript, consulte [Como desativar a colocação em escala](../xbox-apps/disable-scaling.md).
 
 Certifique-se de calcular os tamanhos dos elementos de interface do usuário apropriados, dobrando os valores de pixel *efetivo* mencionados neste tópico para valores de pixel *real* (ou multiplicando por 1,5 para apps HTML).
 
@@ -675,7 +676,7 @@ Isso não é ideal porque dá ao aplicativo um efeito "box-in", com partes da in
 
 ### <a name="drawing-ui-to-the-edge"></a>Desenhando a interface do usuário para a borda
 
-Recomendamos que você use determinados elementos da interface do usuário para estender para as bordas da tela a fim de fornecer mais imersão para o usuário. Isso inclui [ScrollViewers](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx), [painéis de navegação](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/nav-pane), e [CommandBars](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx).
+Recomendamos que você use determinados elementos da interface do usuário para estender para as bordas da tela a fim de fornecer mais imersão para o usuário. Isso inclui [ScrollViewers](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx), [painéis de navegação](../controls-and-patterns/nav-pane.md), e [CommandBars](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx).
 
 Por outro lado, também é importante que o texto e os elementos interativos sempre evitem as bordas da tela para garantir que eles não sejam cortados em algumas TVs. Recomendamos que você desenhe apenas efeitos visuais não essenciais dentro de 5% das bordas da tela. Como mencionado em [dimensionamento de elemento de interface do usuário](#ui-element-sizing), um aplicativo UWP seguindo o fator de escala padrão do console do Xbox One de 200% utilizará uma área de 960 x 540 epx, portanto, na interface do usuário do seu aplicativo, você deve evitar colocar elementos essenciais da interface do usuário nas seguintes áreas:
 
@@ -981,7 +982,7 @@ Um [Pivot](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.contr
 
 ![Pivot focus around headers](images/designing-for-tv/pivot-headers-focus.png)-->
 
-Você pode definir a propriedade [Pivot.IsHeaderItemsCarouselEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabled.aspx) como `true` para que os pivôs sempre mantenham a mesma posição, em vez de fazer o cabeçalho dinâmico selecionado sempre se mover para a primeira posição. Essa é uma experiência melhor para exibições em tela grande, como a TV, pois a disposição do cabeçalho pode distrair os usuários. Se nem todos os cabeçalhos dinâmicos couberem na tela ao mesmo tempo, haverá uma barra de rolagem para permitir que os clientes vejam os outros cabeçalhos; entretanto, você deveria garantir que todos eles se encaixassem na tela para proporcionar a melhor experiência. Para saber mais, consulte [Guias e pivôs](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tabs-pivot).
+Você pode definir a propriedade [Pivot.IsHeaderItemsCarouselEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabled.aspx) como `true` para que os pivôs sempre mantenham a mesma posição, em vez de fazer o cabeçalho dinâmico selecionado sempre se mover para a primeira posição. Essa é uma experiência melhor para exibições em tela grande, como a TV, pois a disposição do cabeçalho pode distrair os usuários. Se nem todos os cabeçalhos dinâmicos couberem na tela ao mesmo tempo, haverá uma barra de rolagem para permitir que os clientes vejam os outros cabeçalhos; entretanto, você deveria garantir que todos eles se encaixassem na tela para proporcionar a melhor experiência. Para saber mais, consulte [Guias e pivôs](../controls-and-patterns/tabs-pivot.md).
 
 <!--If you find it necessary to wrap headers, you can set it so that it doesn't show the selected header in the left-most position, like it does by default. When you set `Pivot.IsHeaderItemsCarouselEnabled="False"`, the selected header will move left by the minimal amount required to become fully visible. This is the recommended approach for 10-foot design.
 
@@ -991,7 +992,7 @@ Você pode definir a propriedade [Pivot.IsHeaderItemsCarouselEnabled](https://ms
 
 Um painel de navegação (também conhecido como *menu hambúrguer*) é um controle de navegação frequentemente usado em aplicativos UWP. Normalmente é um painel com várias opções para seleção em um menu de estilo de lista que levará o usuário a páginas diferentes. Em geral, esse painel começa recolhido para economizar espaço, e o usuário pode abri-lo clicando em um botão. 
 
-Embora os painéis de navegação sejam muito acessíveis com mouse e toque, o gamepad/controle remoto os torna menos acessíveis, já que o usuário precisa navegar até um botão para abrir o painel. Portanto, uma boa prática é fazer o botão **Exibir** abrir o painel de navegação, além de permitir que o usuário o abra navegando até o lado esquerdo da página. Isso oferecerá ao usuário acesso muito fácil ao conteúdo do painel. Para obter mais informações sobre como os painéis de navegação se comportam em tamanhos de tela diferentes, assim como práticas recomendadas para a navegação com gamepad/controle remoto, consulte [Painéis de navegação](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/nav-pane).
+Embora os painéis de navegação sejam muito acessíveis com mouse e toque, o gamepad/controle remoto os torna menos acessíveis, já que o usuário precisa navegar até um botão para abrir o painel. Portanto, uma boa prática é fazer o botão **Exibir** abrir o painel de navegação, além de permitir que o usuário o abra navegando até o lado esquerdo da página. Isso oferecerá ao usuário acesso muito fácil ao conteúdo do painel. Para obter mais informações sobre como os painéis de navegação se comportam em tamanhos de tela diferentes, assim como práticas recomendadas para a navegação com gamepad/controle remoto, consulte [Painéis de navegação](../controls-and-patterns/nav-pane.md).
 
 ### <a name="commandbar-labels"></a>Rótulos de CommandBar
 
@@ -1011,7 +1012,7 @@ O controle [Tooltip](https://msdn.microsoft.com/library/windows/apps/windows.ui.
 
 ### <a name="button-styles"></a>Estilos de botão
 
-Embora os botões padrão da UWP funcionem bem na TV, alguns estilos visuais de botões chamam mais a atenção para a interface do usuário, o que você pode considerar para todas as plataformas, especialmente na experiência de 3 metros, que se beneficia com a comunicação clara de onde o foco está localizado. Para ler mais sobre esses estilos, veja [Botões](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/buttons).
+Embora os botões padrão da UWP funcionem bem na TV, alguns estilos visuais de botões chamam mais a atenção para a interface do usuário, o que você pode considerar para todas as plataformas, especialmente na experiência de 3 metros, que se beneficia com a comunicação clara de onde o foco está localizado. Para ler mais sobre esses estilos, veja [Botões](../controls-and-patterns/buttons.md).
 
 ### <a name="nested-ui-elements"></a>Elementos de interface do usuário aninhados
 
@@ -1124,9 +1125,4 @@ O design para a experiência de 3 metros tem algumas considerações especiais a
 - [Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Windows)](device-primer.md)
 - [Interações de Gamepad e de controle remoto](gamepad-and-remote-interactions.md)
 - [Som em aplicativos UWP](../style/sound.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,15 +2,21 @@
 author: mcleanbyron
 ms.assetid: 571697B7-6064-4C50-9A68-1374F2C3F931
 description: "Saiba como usar o namespace Windows.Services.Store para implementar uma versão de avaliação do seu aplicativo."
-title: "Implementar uma versão de avaliação do seu aplicativo"
-keywords: "amostra de código de avaliação gratuita"
+title: "Implementar uma versão de avaliação do aplicativo"
+keywords: "windows 10, uwp, compras no aplicativo, avaliação, IAPs, Windows.Services.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: ea4c5637a970a63938da2b1bea9f11fd39de9cc8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dc5e67823521db455e12fa4b16d8204c20bff621
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="implement-a-trial-version-of-your-app"></a>Implementar uma versão de avaliação do seu aplicativo
+# <a name="implement-a-trial-version-of-your-app"></a>Implementar uma versão de avaliação do aplicativo
 
 Se você configurar seu aplicativo como [avaliação gratuita no painel do Centro de Desenvolvimento do Windows](../publish/set-app-pricing-and-availability.md#free-trial) para que os clientes possam usar seu aplicativo gratuitamente durante um período de avaliação, incentive seus clientes a atualizarem para a versão completa do seu aplicativo excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
@@ -85,9 +91,4 @@ Para obter um app de exemplo completo, consulte o [Exemplo da Loja](https://gith
 * [Habilitar compras no aplicativo e complementos no aplicativo](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Habilitar compras de complementos consumíveis](enable-consumable-add-on-purchases.md)
 * [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

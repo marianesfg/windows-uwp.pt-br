@@ -2,16 +2,23 @@
 author: jnHs
 Description: "Definir permissões personalizadas para usuários de contas."
 title: "Definir permissões personalizadas para usuários de contas"
-ms.assetid: 
+ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7dab1bf03bfc0920230d8cc57f48ad4a4f83e4d2
-ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 23d8c14bfdbfc05a1397fa67cb831d38ec092233
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Definir permissões personalizadas para usuários de contas
+# <a name="set-custom-permissions-for-account-users"></a>Definir permissões personalizadas para usuários de contas
 
-Quando você adicionar usuários a sua conta, você pode oferecer a eles uma [função padrão](manage-account-users.md#roles-and-permissions), ou você pode optar por personalizar as permissões deles para fornecer o nível apropriado de acesso ao usuário. Algumas dessas permissões se aplicam à conta inteira, e algumas podem ser concedidas a todos os produtos ou limitadas a produtos específicos. 
+Ao adicionar usuários à sua conta, você pode oferecer a eles uma [função padrão](manage-account-users.md#roles-and-permissions), ou você pode optar por personalizar as permissões deles para fornecer o nível apropriado de acesso ao usuário. Algumas dessas permissões se aplicam à conta inteira, e algumas podem ser concedidas a todos os produtos ou limitadas a produtos específicos. 
 
 Para usar permissões personalizadas em vez de funções padrão, clique em **Personalizar permissões** na seção **Funções** ao adicionar ou editar a conta de usuário. 
 
@@ -30,7 +37,7 @@ Para algumas permissões, como aquelas relacionadas à exibição de dados anal�
 
 Os detalhes específicos sobre cada permissão são descritos nas tabelas abaixo.
 
-## Permissões em nível de conta
+## <a name="account-level-permissions"></a>Permissões em nível de conta
 
 As permissões nesta seção não podem ser limitadas a produtos específicos. Conceder acesso a essas permissões permite ao usuário ter essa permissão para a conta inteira.
 
@@ -78,7 +85,7 @@ As permissões nesta seção não podem ser limitadas a produtos específicos. C
 
 \ * Permissões marcadas com um asterisco (*) concedem acesso a recursos que não estão disponíveis para todas as contas. Se sua conta não tiver sido habilitada para esses recursos, suas seleções para essas permissões não terão nenhum efeito.   
 
-## Permissões em nível de produto
+## <a name="product-level-permissions"></a>Permissões em nível de produto
 
 As permissões nesta seção podem ser concedidas a todos os produtos na conta, ou podem ser personalizadas para possibilitar a permissão somente para um ou mais produtos específicos. Essas permissões são agrupadas em quatro categorias: **Análises**, **Monetização**, **Publicação** e **Xbox Live**. Você pode expandir cada uma dessas categorias para exibir as permissões individuais em cada categoria. 
 
@@ -92,7 +99,7 @@ Cada complemento está listado em uma linha separada abaixo de seu produto pai, 
 
 Observe que algumas permissões não podem ser definidas para complementos. Isso ocorre porque elas não se aplicam aos complementos (por exemplo, a permissão **Comentários dos clientes**) ou porque a permissão concedida no nível do produto pai se aplica a todos os complementos para aquele produto (por exemplo, **Códigos promocionais**). Observe, porém, que nenhuma permissão disponível para complementos deve ser definida separadamente; os complementos não herdam as seleções feitas para o produto pai. Por exemplo, se você deseja permitir que um usuário faça seleções de preço e disponibilidade de um complemento, você precisa habilitar a permissão **Preço e disponibilidade** para o complemento (ou para **Todos os complementos**), se você tiver concedido ou não a permissão **Preço e disponibilidade** para o produto pai. 
 
-### Análises
+### <a name="analytics"></a>Análises
 
 <table>
     <thead>
@@ -114,7 +121,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
     </tbody>
     </table>
 
-### Monetização
+### <a name="monetization"></a>Monetização
 
 <table>
     <thead>
@@ -133,7 +140,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
     </tbody>
     </table>
 
-### Publicação 
+### <a name="publishing"></a>Publicação 
 
 <table>
     <thead>
@@ -158,7 +165,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
     </tbody>
     </table>
 
-### Xbox Live \*
+### <a name="xbox-live-"></a>Xbox Live \*
 
 <table>
     <thead>
@@ -177,9 +184,4 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
 </table>
 
 \ * Permissões marcadas com um asterisco (*) concedem acesso a recursos que não estão disponíveis para todas as contas. Se sua conta não tiver sido habilitada para esses recursos, suas seleções para essas permissões não terão nenhum efeito.  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

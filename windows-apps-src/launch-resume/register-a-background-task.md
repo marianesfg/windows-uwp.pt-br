@@ -3,15 +3,22 @@ author: TylerMSFT
 title: Registrar uma tarefa em segundo plano
 description: "Aprenda a criar uma função que pode ser reutilizada para registrar com segurança a maioria das tarefas em segundo plano."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: d65b8d3312e49469bd99d458b45bf5a46f345e6a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: eb3ab08cd26cd39ada38a1428b221157ebf55558
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="register-a-background-task"></a>Registrar uma tarefa em segundo plano
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs importantes**
 
@@ -27,9 +34,9 @@ Este tópico discorre sobre a função utilitária que registra tarefas em segun
 
 **Observação**  
 
-Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
+Os aplicativos universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
 
-Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
+Para garantir que seu aplicativo universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu app for iniciado após a atualização. Para saber mais, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
 ## <a name="define-the-method-signature-and-return-type"></a>Definir a assinatura do método e o tipo de retorno
 
@@ -37,7 +44,7 @@ Esta função obtém o ponto de entrada da tarefa, seu nome, um gatilho de taref
 
 > [!Important]
 > `taskEntryPoint` - para tarefas em segundo plano executadas em um processo à parte; ele deve ser construído como o nome do namespace, '.', e o nome da classe que contém a classe em segundo plano. A cadeia de caracteres diferencia maiúsculas de minúsculas.  Por exemplo, se você tivesse um namespace "MyBackgroundTasks" e uma classe "BackgroundTask1" contendo o código da classe em segundo plano, a cadeia de caracteres para `taskEntryPoint` seria "MyBackgroundTasks.BackgruondTask1".
-> Se a tarefa em segundo plano for executada no mesmo processo do aplicativo (ou seja, uma tarefa em segundo plano dentro do processo) `taskEntryPoint` não deverá ser definido.
+> Se a tarefa em segundo plano for executada no mesmo processo do app (ou seja, uma tarefa em segundo plano dentro do processo) `taskEntryPoint` não deverá ser definido.
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -71,7 +78,7 @@ Verifique se a tarefa já está registrada. É importante verificar isso porque,
 
 Você pode verificar se existem registros consultando a propriedade [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) e iterando no resultado. Verifique o nome de cada instância – se ele corresponder ao nome da tarefa que você está registrando, interrompa o loop e defina uma variável de sinalização, para que seu código possa escolher outro caminho na próxima etapa.
 
-> **Observação**  Use nomes de tarefas em segundo plano exclusivos para seu aplicativo. Verifique se cada tarefa em segundo plano possui um nome exclusivo.
+> **Observação**  Use nomes de tarefas em segundo plano exclusivos para seu app. Verifique se cada tarefa em segundo plano possui um nome exclusivo.
 
 O código abaixo registra uma tarefa em segundo plano usando o [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) que criamos na última etapa:
 
@@ -144,8 +151,8 @@ Verifique se a tarefa foi encontrada na lista de registros de tarefas em segundo
 
 Em seguida, registre a tarefa usando um novo objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Este código deve verificar se o parâmetro da condição é nulo e, se não for, adicionar a condição ao objeto de registro. Retorne a [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) retornada pela função [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772).
 
-> **Observações**  Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo trata tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
-> **Observação** Se você registrar uma tarefa em segundo plano executada no mesmo processo do aplicativo, envie `String.Empty` ou `null` para o parâmetro `taskEntryPoint`.
+> **Observações**  Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o app trata tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o app depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
+> **Observação** Se você registrar uma tarefa em segundo plano executada no mesmo processo do app, envie `String.Empty` ou `null` para o parâmetro `taskEntryPoint`.
 
 O exemplo a seguir retorna a tarefa existente ou adiciona código que registra a tarefa em segundo plano (incluindo a condição de sistema opcional, se presente):
 
@@ -371,7 +378,7 @@ Este exemplo mostra a função completa de registro de tarefa em segundo plano. 
 > }
 > ```
 
-> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram apps UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -389,14 +396,9 @@ Este exemplo mostra a função completa de registro de tarefa em segundo plano. 
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
-* [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Como disparar eventos de suspensão, retomada e segundo plano em apps da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

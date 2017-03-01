@@ -3,13 +3,20 @@ author: mtoepke
 title: Passo a passo -- Portabilidade de um aplicativo simples em Direct3D 9 para DirectX 11 e a Plataforma Universal do Windows (UWP)
 description: "Este exercício de portabilidade mostra como levar uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11 e a Plataforma Universal do Windows (UWP)."
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, directx, portabilidade, direct3d 9, direct3d 11
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 53e0b3f5a69f133e74430b1a2e32a13180569f06
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1e3f9b7fbfaa110661ebb111c60d0089757dc885
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Passo a passo: portabilidade de um aplicativo simples em Direct3D 9 para DirectX 11 e a Plataforma Universal do Windows (UWP)
+# <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Passo a passo: portabilidade de um aplicativo simples em Direct3D 9 para DirectX 11 e a Plataforma Universal do Windows (UWP)
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -62,36 +69,23 @@ Depois de concluir este guia passo a passo, você conhecerá as seguintes difere
 
 Observe que este passo a passo usa [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) por questão de simplicidade e não abrange a interoperabilidade com XAML.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Você deve [preparar seu ambiente para o desenvolvimento do jogo da UWP em DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Você ainda não precisa de um modelo, mas é necessário que o Microsoft Visual Studio 2015 carregue os exemplos de códigos neste guia passo a passo.
 
 Visite o tópico sobre [conceitos e considerações sobre portabilidade](porting-considerations.md) para conhecer melhor os conceitos de programação do DirectX 11 e da UWP mostrados neste guia.
 
-## Tópicos relacionados
-
+## <a name="related-topics"></a>Tópicos relacionados
 
 **Direct3D**
-[Escrevendo sombreadores HLSL no Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
 
-[Criar um novo projeto do DirectX 11 para a UWP](user-interface.md)
+* [Escrevendo sombreadores HLSL no Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [Modelos de projeto de jogo DirectX](user-interface.md)
 
 **Windows Store**
-[**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
 
-[**Manipular o operador de objeto (^)**] https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
-
- 
-
- 
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+* [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
+* [**Identificador para o operador de objeto (^)**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)
 
 

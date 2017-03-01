@@ -1,30 +1,37 @@
 ---
 author: msatranjr
 title: "Solicitar uma chave de autenticação de mapas"
-description: "Seu aplicativo Universal do Windows deve ser autenticado para que possa usar o MapControl e os serviços de mapa no namespace Windows.Services.Maps."
+description: "Seu aplicativo universal do Windows deve ser autenticado para que possa usar o MapControl e os serviços de mapa no namespace Windows.Services.Maps."
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, chave de autenticação de mapa, controle de mapa"
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 4cbc0142e7d76795bb147ce4cc98b3da48715b85
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 841a3bf42faaaa12df94ad9be2ffc9eb3a833ae5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Solicitar uma chave de autenticação de mapas
+# <a name="request-a-maps-authentication-key"></a>Solicitar uma chave de autenticação de mapas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Seu [aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows/apps/dn894631) deve ser autenticado para que possa usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este tópico descreve como solicitar uma chave de autenticação de mapas a partir da [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo.
+Seu [aplicativo universal do Windows](https://msdn.microsoft.com/library/windows/apps/dn894631) deve ser autenticado para que possa usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o app, você deve especificar uma chave de autenticação de mapas. Este tópico descreve como solicitar uma chave de autenticação de mapas a partir da [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao app.
 
-**Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe a amostra a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
+**Dica** Para saber mais sobre o uso de mapas em seu app, baixe a amostra a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
 
 -   [Amostra de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-## Obter uma chave
+## <a name="get-a-key"></a>Obter uma chave
 
 
-Crie e gerencie chaves de autenticação de mapa para aplicativos Universal do Windows usando a [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/).
+Crie e gerencie chaves de autenticação de mapa para aplicativos universais do Windows usando a [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/).
 
 Para criar uma nova chave
 
@@ -42,23 +49,23 @@ Para criar uma nova chave
 
 7.  Preencha o formulário **Criar Chave** e clique em **Criar**.
 
-    -   **Nome do aplicativo:** o nome do aplicativo.
-    -   **URL do aplicativo (opcional):** a URL do aplicativo.
+    -   **Nome do app:** o nome do app.
+    -   **URL do app (opcional):** a URL do app.
     -   **Tipo de chave:** selecione **Básico** ou **Empresa**.
-    -   **Tipo de aplicativo:** selecione **Aplicativo Universal Windows** para usar no aplicativo Universal do Windows.
+    -   **Tipo de app:** selecione **Aplicativo Universal Windows** para usar no aplicativo universal do Windows.
 
     Este é um exemplo da aparência do formulário.
 
     ![exemplo do formulário Criar Chave.](images/createkeydialog.png)
 
-8.  Depois de você clicar em **Criar**, a nova chave aparece abaixo do formulário **Criar Chave**. Copie-a para um local seguro ou adicione-a imediatamente ao aplicativo, conforme descrito na próxima etapa.
+8.  Depois de você clicar em **Criar**, a nova chave aparece abaixo do formulário **Criar Chave**. Copie-a para um local seguro ou adicione-a imediatamente ao app, conforme descrito na próxima etapa.
 
-## Adicionar a chave ao aplicativo
+## <a name="add-the-key-to-your-app"></a>Adicionar a chave ao app
 
 
-A chave de autenticação de mapa é obrigada a usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa ([**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)) no aplicativo Universal do Windows. Adicione-o ao controle de mapa e mapeie objetos de serviço, conforme aplicável.
+A chave de autenticação de mapa é obrigada a usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa ([**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)) no aplicativo universal do Windows. Adicione-o ao controle de mapa e mapeie objetos de serviço, conforme aplicável.
 
-### Para adicionar a chave a um controle de mapa
+### <a name="to-add-the-key-to-a-map-control"></a>Para adicionar a chave a um controle de mapa
 
 Para autenticar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), defina a propriedade [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036) como o valor da chave de autenticação. Você pode definir essa propriedade no código ou na marcação XAML, dependendo das suas preferências. Para obter mais informações sobre o uso de **MapControl**, consulte [Exibir mapas com modos de exibição 2D, 3D e Streetside](display-maps.md).
 
@@ -74,7 +81,7 @@ Para autenticar o [**MapControl**](https://msdn.microsoft.com/library/windows/ap
     <Maps:MapControl x:Name="MapControl1" MapServiceToken="abcdef-abcdefghijklmno"/>
     ```
 
-### Para adicionar a chave a serviços de mapa
+### <a name="to-add-the-key-to-map-services"></a>Para adicionar a chave a serviços de mapa
 
 Para usar serviços no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979), defina a propriedade [**ServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn636977) como o valor da chave de autenticação. Para obter mais informações sobre como usar serviços de mapa, consulte [Exibir rotas e trajetos](routes-and-directions.md) e [Executar geocodificação e geocodificação reversa](geocoding.md).
 
@@ -84,18 +91,11 @@ Para usar serviços no namespace [**Windows.Services.Maps**](https://msdn.micros
     MapService.ServiceToken = "abcdef-abcdefghijklmno";
     ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo do aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
+* [Exemplo do app de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 

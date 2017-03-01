@@ -3,39 +3,46 @@ author: mtoepke
 title: "Recursos para programação de jogos"
 description: "Para saber mais sobre programação de jogos no Windows, confira os recursos a seguir."
 ms.assetid: b84dd17a-756b-2369-8fee-f1ec7d865239
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, programação"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9d7e21a10686a22299e644600414c73f5b4991e7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 736f5f5864edc9c7a976e8e0f062779ddd1f86c5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Recursos para programação de jogos
+# <a name="game-programming-resources"></a>Recursos para programação de jogos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Para saber mais sobre programação de jogos no Windows, confira os recursos a seguir.
 
-## Referência de programação de jogo
+## <a name="game-programming-reference"></a>Referência de programação de jogo
 
 
 -   [Elementos gráficos e jogos](https://msdn.microsoft.com/library/windows/desktop/ee663279)
 -   [Referência do OpenGL](http://go.microsoft.com/fwlink/p/?LinkID=288875)
 
-## Orientações sobre design de jogos
+## <a name="game-design-guidance"></a>Orientações sobre design de jogos
 
 
 -   [Índice de diretrizes para a experiência do usuário em aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/hh465424)
 
-## Blogs
+## <a name="blogs"></a>Blogs
 
 
 -   [Jogos para Windows e SDK do DirectX]( http://go.microsoft.com/fwlink/p/?LinkID=288873)
 -   [Blog de desenvolvedores do DirectX]( http://go.microsoft.com/fwlink/p/?LinkID=288874)
 -   [Blog de Shawn Hargreaves]( http://go.microsoft.com/fwlink/p/?LinkID=288872) (informações sobre jogos em XNA).
 
-## Kits de ferramentas
+## <a name="toolkits"></a>Kits de ferramentas
 
 
 -   [Kit de ferramentas do DirectX](  http://go.microsoft.com/fwlink/p/?LinkID=248929)
@@ -44,7 +51,7 @@ Para saber mais sobre programação de jogos no Windows, confira os recursos a s
 -   [Win2D](https://github.com/Microsoft/Win2D) - Uma API de Windows Runtime fácil de usar para renderização de gráficos 2D de modo imediato com aceleração da GPU.
 -   [ANGLE for Windows Store](http://go.microsoft.com/fwlink/p/?linkid=618387) - Executa conteúdo do OpenGL ES no Windows por meio de conversão de chamadas de API do OpenGL ES em chamadas de API do DirectX 11.
 
-## Vídeos da sessão de desenvolvimento de jogos GDC 2015
+## <a name="gdc-2015-game-dev-session-videos"></a>Vídeos da sessão de desenvolvimento de jogos GDC 2015
 
 
 -   [O futuro dos jogos no ecossistema da Microsoft](http://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem) – Phil Spencer
@@ -62,14 +69,14 @@ Para saber mais sobre programação de jogos no Windows, confira os recursos a s
 -   [Criando jogos para um mundo do Windows Core](http://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World) – Todd Williams, Shai Hinitz
 -   [Jogos de computador para o Windows 10](http://channel9.msdn.com/Events/GDC/GDC-2015/PC-Games-for-Windows-10) – Chuck Walbourn
 
-## //Vídeos de sessão da compilação 2015
+## <a name="build-2015-session-videos"></a>//Vídeos de sessão da compilação 2015
 
 
 -   [Apresentando o Win2D: Desenho habilitado para DirectX em C#](https://channel9.msdn.com/Events/Build/2015/2-631) – Simon Tao
 -   [ÂNGULO: Executando código de elementos gráficos do OpenGL ES 2.0 no Windows](https://channel9.msdn.com/Events/Build/2015/3-686) – Tony Balogh
 -   [Elementos gráficos DirectX 12 e desempenho avançados](https://channel9.msdn.com/Events/Build/2015/3-673) – Max McMullen
 
-## Outros recursos
+## <a name="other-resources"></a>Outros recursos
 
 
 -   [CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=76627)
@@ -81,10 +88,5 @@ Para saber mais sobre programação de jogos no Windows, confira os recursos a s
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

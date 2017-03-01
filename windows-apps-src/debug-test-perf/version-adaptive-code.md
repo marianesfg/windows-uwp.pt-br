@@ -2,19 +2,27 @@
 author: jwmsft
 title: "Código adaptável de versão"
 description: "Saiba como tirar proveito das novas APIs e manter a compatibilidade com versões anteriores"
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 translationtype: Human Translation
-ms.sourcegitcommit: 24a62c9331d4f651937f3f795fb1e7c9704af2ca
-ms.openlocfilehash: 7656018c61688bddbf23f889a82af4fd6d58c3ea
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: f8d6c28daea2a3d5be67ad2b5da5a05a46f736cc
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Código adaptável de versão: use as novas APIs e mantenha a compatibilidade com versões anteriores
+# <a name="version-adaptive-code-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Código adaptável de versão: use as novas APIs e mantenha a compatibilidade com versões anteriores
 
 Cada versão do SDK do Windows 10 adiciona novas funcionalidades interessantes que você vai querer aproveitar. No entanto, nem todos os seus clientes atualizarão seus dispositivos para a versão mais recente do Windows 10 ao mesmo tempo, e você quer garantir que seu aplicativo funcione na maior variedade possível de dispositivos. Aqui, mostraremos como projetar seu aplicativo de modo que ele seja executado em versões anteriores do Windows 10, mas também tire proveito dos novos recursos, sempre que o aplicativo for executado em um dispositivo com a atualização mais recente instalada.
 
 Há duas etapas que devem ser seguidas a fim de garantir que o aplicativo seja compatível com a mais ampla gama de dispositivos Windows 10. Primeiro, configure seu projeto do Visual Studio para acessar as APIs mais recentes. Isso afeta o que acontece quando você compila o aplicativo. Segundo, execute verificações de tempo de execução para garantir que você só chama APIs que estão presentes no dispositivo em que seu aplicativo esteja sendo executado.
 
-## Configurar seu projeto no Visual Studio
+## <a name="configure-your-visual-studio-project"></a>Configurar seu projeto no Visual Studio
 
 A primeira etapa para dar suporte a várias versões do Windows 10 é especificar as versões de *Destino* e *Mínima* com suporte do SO/SDK em seu projeto do Visual Studio.
 - *Destino*: a versão do SDK na qual o Visual Studio compila o código do aplicativo e executa todas as ferramentas. Todas as APIs e recursos nesta versão do SDK estão disponíveis no código do aplicativo no momento da compilação.
@@ -44,11 +52,11 @@ Para referência, estes são os números de compilação para cada SDK:
 
 Você pode baixar qualquer versão do SDK do [arquivo de emulador e do SDK do Windows](https://developer.microsoft.com/downloads/sdk-archive). Você pode baixar o SDK mais recente do Windows Insider Preview na seção de desenvolvedor do site [Windows Insider](https://insider.windows.com/).
 
-## Escrever código adaptável
+## <a name="write-adaptive-code"></a>Escrever código adaptável
 
 Você pode pensar em escrever código adaptável da mesma forma que pensa em [criar uma interface do usuário adaptável](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml). Você pode projetar a interface do usuário básica para ser executada na tela menor e então mover ou adicionar elementos ao detectar que o aplicativo está sendo executado em uma tela maior. Com código adaptável, você escreve o código base para ser executado na versão mais baixa do sistema operacional e pode adicionar recursos selecionados a mão quando você detecta que o aplicativo está sendo executado em uma versão mais recente em que o novo recurso está disponível.
 
-### Verificações de API de tempo de execução
+### <a name="runtime-api-checks"></a>Verificações de API de tempo de execução
 
 Você usa a classe [Windows.Foundation.Metadata.ApiInformation](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx) em uma condição no código para testar a presença da API que você deseja chamar. Essa condição será avaliada onde quer que seu aplicativo seja executado, mas só será avaliada como **true** em dispositivos em que a API esteja presente e, portanto, disponível para ser chamada. Isso permite que você escreva código adaptável de versão para criar aplicativos que usam APIs que estão disponíveis somente em determinadas versões do sistema operacional.
 
@@ -57,7 +65,7 @@ Neste artigo, analisaremos exemplos específicos para o direcionamento de novos 
 > [!TIP]
 > Várias verificações de API do tempo de execução podem afetar o desempenho do seu aplicativo. Mostramos as verificações em linha nesses exemplos. No código de produção, você deve executar a verificação de uma vez e armazenar o resultado em cache. Depois, usar o resultado em cache em todo o aplicativo. 
 
-### Cenários sem suporte
+### <a name="unsupported-scenarios"></a>Cenários sem suporte
 
 Na maioria dos casos, você pode manter a versão mínima do aplicativo configurada para a versão 10240 do SDK e usar verificações de tempo de execução para habilitar quaisquer novas APIs quando o aplicativo for executado em uma versão mais recente. No entanto, existem alguns casos em que você deve aumentar a versão Mínima do aplicativo para usar os novos recursos.
 
@@ -65,7 +73,7 @@ Você deve aumentar a versão Mínima do seu aplicativo se você usar:
 - uma nova API que exija uma funcionalidade que não esteja disponível em uma versão anterior. Você deve aumentar a versão mínima com suporte para uma que inclua essa funcionalidade. Para saber mais, consulte [Declarações de funcionalidades do aplicativo](../packaging/app-capability-declarations.md).
 - chaves de recurso nova adicionadas a generic.xaml e não disponíveis em uma versão anterior. A versão do generic.xaml usada no tempo de execução será determinada pela versão do sistema operacional que dispositivo estiver executando. Não é possível usar verificações de API do tempo de execução para determinar a presença de recursos XAML. Portanto, você deve usar somente as chaves de recurso que estão disponíveis na versão mínima à qual o aplicativo dá suporte ou [XAMLParseException](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.markup.xamlparseexception.aspx) causará uma falha do aplicativo no tempo de execução.
 
-### Opções de código adaptável
+### <a name="adaptive-code-options"></a>Opções de código adaptável
 
 Há duas maneiras para criar código adaptável. Na maioria dos casos, escreva a marcação do aplicativo para ser executada na versão mínima e use seu código do aplicativo para utilizar os recursos mais recentes do sistema operacional quando presentes. No entanto, se precisar atualizar uma propriedade em um estado visual e houver apenas uma alteração de propriedade ou de valor de enumeração entre versões do sistema operacional, você pode criar um gatilho de estado extensível que será ativado com base na presença de uma API.
 
@@ -96,11 +104,11 @@ Desvantagens:
 - Deve-se usar Setters para especificar mudanças de valor, portanto somente alterações simples são possíveis.
 - Gatilhos de estado personalizado são bastante detalhados para configurar e usar.
 
-## Exemplos de código adaptável
+## <a name="adaptive-code-examples"></a>Exemplos de código adaptável
 
 Nesta seção, mostraremos vários exemplos de código adaptável que usam APIs que são novas no Windows 10, versão 1607 (Windows Insider Preview).
 
-### Exemplo 1: novo valor de enumeração
+### <a name="example-1-new-enum-value"></a>Exemplo 1: novo valor de enumeração
 
 O Windows 10, versão 1607 adiciona um novo valor à enumeração [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx): **ChatWithoutEmoji**. Esse novo escopo de entrada tem o mesmo comportamento de entrada que o escopo de entrada **Chat** (verificação ortográfica, preenchimento automático, uso de maiúsculas automático), mas ele é mapeado para um teclado virtual sem um botão emoji. Isso é útil se você criar seu próprio seletor de emoji e quiser desabilitar o botão emoji interno no teclado virtual. 
 
@@ -183,7 +191,7 @@ Nesses exemplos, você pode usar o valor de enumeração Chat em XAML ou no cód
 
 Se você usar o valor de ChatWithoutEmoji em XAML ou no código sem uma verificação, ele será compilado sem erros porque está presente na versão de Destino do sistema operacional. Ele também será executado sem erros em um sistema com a versão de Destino do sistema operacional. No entanto, quando o aplicativo for executado em um sistema que use a versão Mínima, haverá falha no tempo de execução porque o valor de enumeração ChatWithoutEmoji não está presente. Portanto, você deve usar esse valor somente no código e encapsulá-lo em uma verificação de API do tempo de execução para que seja chamado somente se for compatível com o sistema atual.
 
-### Exemplo 2: novo controle
+### <a name="example-2-new-control"></a>Exemplo 2: novo controle
 
 Uma nova versão do Windows normalmente traz novos controles para a superfície de API da UWP que traz novas funcionalidades à plataforma. Para aproveitar a presença de um novo controle, use o método [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx).
 
@@ -326,13 +334,13 @@ public MainPage()
 > [!IMPORTANT]
 > Lembre-se de que essa verificação somente define o objeto `mediaControl` para `MediaPlayerUserControl` ou `MediaElementUserControl`. Você precisa executar essas verificações condicionais em qualquer outro lugar no código em que é preciso determinar se o MediaPlayerElement ou as APIs MediaElement devem ser usadas. Você deve executar a verificação de uma vez e armazenar o resultado em cache. Depois, usar o resultado em cache em todo o aplicativo.
 
-## Exemplos de gatilho de estado
+## <a name="state-trigger-examples"></a>Exemplos de gatilho de estado
 
 Gatilhos de estado extensíveis permitem que você use o código e a marcação juntos para acionar as alterações de estado visual com base em uma condição que você verifica no código. Nesse caso, a presença de uma API específica. Não recomendamos os gatilhos de estado para cenários comuns de código adaptável devido à sobrecarga envolvida e a restrição somente aos estados visuais. 
 
 Você deve usar gatilhos de estado para código adaptável somente quando tiver pequenas alterações de interface do usuário entre diferentes versões do sistema operacional que não afetem o restante da interface do usuário, como uma alteração de propriedade ou de valor enumeração em um controle.
 
-### Exemplo 1: nova propriedade
+### <a name="example-1-new-property"></a>Exemplo 1: nova propriedade
 
 A primeira etapa na configuração de um gatilho de estado extensível é subclassificar a classe [StateTriggerBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.statetriggerbase.aspx) para criar um gatilho personalizado que será acionado com base na presença de uma API. Este exemplo mostra um gatilho que é acionado se a presença da propriedade corresponder à variável `_isPresent` definida em XAML.
 
@@ -400,7 +408,7 @@ O gatilho neste exemplo verifica se a propriedade está presente. Se a proprieda
 </Grid>
 ```
 
-### Exemplo 2: novo valor de enumeração
+### <a name="example-2-new-enum-value"></a>Exemplo 2: novo valor de enumeração
 
 Este exemplo mostra como definir valores de enumeração diferentes com base em se um valor estiver presente. Ele usa um gatilho de estado personalizado para obter o mesmo resultado conforme o exemplo anterior de chat. Neste exemplo, você usa o novo escopo de entrada ChatWithoutEmoji se o dispositivo estiver executando o Windows 10, versão 1607. Caso contrário, o escopo de entrada **Chat** é usado. Os estados visuais que usam esse gatilho são configurados em estilo *if-else* em que o escopo de entrada é escolhido com base na presença do novo valor de enumeração.
 
@@ -471,13 +479,8 @@ class IsEnumPresentTrigger : StateTriggerBase
     </VisualStateManager.VisualStateGroups>
 </Grid>
 ```
-## Artigos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 - [Guia para aplicativos UWP](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
 - [Detectando dinamicamente recursos com contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

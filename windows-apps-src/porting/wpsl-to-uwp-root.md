@@ -3,9 +3,16 @@ author: mcleblanc
 description: "Se você for um desenvolvedor com um aplicativo Windows Phone Silverlight, poderá fazer excelente uso de seu conjunto de habilidades e seu código-fonte na mudança para o Windows 10."
 title: Mudar do Windows Phone Silverlight para a UWP
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 05831f3e357086b338d32e83146d380ca9c78a74
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 06409936f37368351f6c8ad47e50a7d980d522f4
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -80,15 +87,12 @@ No nível do recurso, a boa notícia é que há poucos itens sem suporte na UWP.
 * [Guia para aplicativos UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/windows/apps/dn894631)
 * [Mapa de aplicativos UWP (Plataforma Universal do Windows) usando C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583)
 * [O que mais aguarda os desenvolvedores do Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
+
 **Artigos de revista**
 * [Visual Studio Magazine: Windows Phone 8.1: A Giant Leap Forward for Convergence](http://go.microsoft.com/fwlink/p/?LinkID=398541)
+
 **Apresentações**
 * [A história de migrar o Nokia Music do Windows Phone para Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=321521)
  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -3,19 +3,26 @@ author: jwmsft
 description: "Conheça as regras de processamento de espaços em branco usadas por XAML."
 title: "XAML e espaço em branco"
 ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3b8b68ae8823ec23105d5f92e533d271ab3dcc88
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 260aa6c4bae2f7e9d051e172f83563f430e4e6c4
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# XAML e espaço em branco
+# <a name="xaml-and-whitespace"></a>XAML e espaço em branco
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Conheça as regras de processamento de espaços em branco usadas por XAML.
 
-## Processamento de espaços em branco
+## <a name="whitespace-processing"></a>Processamento de espaços em branco
 
 De forma consistente com XML, os caracteres de espaço em branco em XAML são espaço, avanço de linha e tabulação. Eles correspondem aos valores Unicode 0020, 000A e 0009, respectivamente. Por padrão, ocorre a seguinte normalização de espaços em branco quando um processador XAML encontra qualquer texto interno localizado entre elementos de um arquivo XAML:
 
@@ -28,7 +35,7 @@ De forma consistente com XML, os caracteres de espaço em branco em XAML são es
 
 "Padrão" corresponde ao estado denotado pelo valor padrão do atributo **xml:space**.
 
-### Espaço em branco em texto interno e primitivas de cadeia
+### <a name="whitespace-in-inner-text-and-string-primitives"></a>Espaço em branco em texto interno e primitivas de cadeia
 
 As regras de normalização acima aplicam-se a textos internos em elementos XAML. Após a normalização, o processador XAML converte qualquer texto interno em um tipo apropriado, da seguinte maneira:
 
@@ -37,23 +44,18 @@ As regras de normalização acima aplicam-se a textos internos em elementos XAML
 -   Se o tipo de propriedade for **Object**, o texto interno será analisado como uma única **String**. Se houver marcas de elementos de divisão, isso gerará um erro de análise XAML, pois o tipo **Object** implica apenas em um objeto (**String** ou outro).
 -   Se o tipo da propriedade for uma coleção e o texto interno não for contíguo, a primeira subcadeia será convertida em uma **String** e adicionada como um item de coleção, o elemento de divisão será adicionado como item de coleção e, por fim, a subcadeia à direita (se houver) será adicionada à coleção como um terceiro item **String**.
 
-### Espaço em branco e modelos de conteúdo de texto
+### <a name="whitespace-and-text-content-models"></a>Espaço em branco e modelos de conteúdo de texto
 
 Na prática, a preservação de espaços em branco só é importante para um subconjunto de todos os modelos de conteúdo possíveis. Esse subconjunto é composto por modelos de conteúdo que podem pegar um tipo **String** e singleton em algum formulário, coleção **String** dedicada ou uma mistura de **String** e outros tipos em listas, coleções ou dicionários.
 
 Mesmo para modelos de conteúdo que podem pegar cadeias, o comportamento padrão nesses modelos de conteúdo é tratar qualquer espaço em branco restante como insignificante.
 
-### Preservando espaços em branco
+### <a name="preserving-whitespace"></a>Preservando espaços em branco
 
 Várias técnicas de preservação de espaços em branco no código XAML de origem para eventuais apresentações não são afetadas pela normalização de espaços em branco do processador XAML.
 
 `xml:space="preserve"`: especifique esse atributo no nível do elemento em que a preservação de espaços em branco é desejada. Observe que isso preserva todos os espaços em branco, inclusive os espaços que podem ser adicionados por editores de código ou áreas de design, para alinhar elementos de marcação como um aninhamento visualmente intuitivo. Se esses espaços são renderizados ou não é, mais uma vez, uma questão do modelo de conteúdo do respectivo elemento. Não recomendamos que você especifique `xml:space="preserve"` no nível da raiz, pois a maioria dos modelos de objeto não considera os espaços em branco como um meio significativo. É prática recomendada somente definir o atributo especificamente no nível dos elementos que renderizam espaços em branco em cadeias de caracteres ou que sejam coleções significativas de espaços em branco.
 
 Entidades e espaços sem quebra: o XAML dá suporte à inserção de qualquer entidade Unicode em um modelo de objeto de texto. Você pode usar entidades dedicadas, como espaços sem quebras (na codificação UTF-8). Você também pode usar controles de texto avançados com suporte a caracteres de espaço sem quebras. Seja cauteloso se estiver usando entidades para simular características de layout, como recuos, pois a saída das entidades em tempo de execução vai variar com base em um número maior de fatores do que as unidades de layout gerais, como uso adequado de painéis e margens.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

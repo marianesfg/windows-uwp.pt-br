@@ -6,21 +6,28 @@ ms.assetid: 8D4E4162-1C9C-48F4-8A94-34976FB17079
 label: Page layouts with XAML
 template: detail.hbs
 op-migration-status: ready
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: b8bb8a9468f8ac8eee9b94c5551246753016e3c1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c4c03e48c9957d78cfa8c4287c4e99b73b5609b0
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="define-page-layouts-with-xaml"></a>Definir layouts de página com XAML
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-XAML oferece um sistema de layout flexível que permite usar dimensionamento automático, painéis de layout, estados visuais e até mesmo definições de interface do usuário separadas para criar uma interface do usuário responsiva. Com um design flexível, você pode melhorar a aparência do aplicativo em telas com diferentes tamanhos, resoluções, densidades de pixel e orientações de janela.
+XAML oferece um sistema de layout flexível que permite usar dimensionamento automático, painéis de layout, estados visuais e até mesmo definições de interface do usuário separadas para criar uma interface do usuário responsiva. Com um design flexível, você pode melhorar a aparência do app em telas com diferentes tamanhos, resoluções, densidades de pixel e orientações de janela.
 
-Aqui, abordamos como usar painéis de layout e propriedades XAML para deixar seu aplicativo dinâmico e adaptável. Compilamos informações importantes sobre design de interface do usuário responsiva e técnicas encontradas em [Introdução ao design do aplicativo UWP](../layout/design-and-ui-intro.md). Você deve compreender o que são pixels efetivos e entender cada uma das técnicas de design responsivo: reposicionar, redimensionar, refluir, revelar, substituir e reformular.
+Aqui, abordamos como usar painéis de layout e propriedades XAML para deixar seu app dinâmico e adaptável. Compilamos informações importantes sobre design de interface do usuário responsiva e técnicas encontradas em [Introdução ao design do app UWP](../layout/design-and-ui-intro.md). Você deve compreender o que são pixels efetivos e entender cada uma das técnicas de design responsivo: reposicionar, redimensionar, refluir, revelar, substituir e reformular.
 
 > [!NOTE]
-> O layout do aplicativo começa com o modelo de navegação escolhido, como se você deseja usar um [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) com o modelo [‘tabs and pivot’](../controls-and-patterns/tabs-pivot.md) ou [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) com o modelo [‘nav pane’](../controls-and-patterns/nav-pane.md). Para obter mais informações sobre isso, consulte [Noções básicas de design de navegação para aplicativos UWP](../layout/navigation-basics.md). Falamos aqui sobre as técnicas para tornar o layout de uma única página ou um de grupo de elementos dinâmico. Essas informações são aplicáveis independentemente de qual modelo de navegação você escolher para seu aplicativo.
+> O layout do app começa com o modelo de navegação escolhido, como se você deseja usar um [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) com o modelo [‘tabs and pivot’](../controls-and-patterns/tabs-pivot.md) ou [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) com o modelo [‘nav pane’](../controls-and-patterns/nav-pane.md). Para obter mais informações sobre isso, consulte [Noções básicas de design de navegação para apps UWP](../layout/navigation-basics.md). Falamos aqui sobre as técnicas para tornar o layout de uma única página ou um de grupo de elementos dinâmico. Essas informações são aplicáveis independentemente de qual modelo de navegação você escolher para seu app.
 
 A estrutura XAML fornece vários níveis de otimização que você pode usar para criar uma interface do usuário responsiva.
 - **Layout fluido**
@@ -31,7 +38,7 @@ A estrutura XAML fornece vários níveis de otimização que você pode usar par
 - **Layout adaptável**
     Use estados visuais para fazer alterações significativas na interface do usuário com base no tamanho da janela ou em outras alterações.
 
-    Quando a janela do aplicativo é ampliada ou reduzida além de um determinado valor, convém alterar as propriedades do layout para reposicionar, redimensionar, refluir, revelar ou substituir seções de sua interface do usuário. Você pode definir estados visuais diferentes para sua interface do usuário e aplicá-los quando a largura ou altura da janela ultrapassar um limite especificado. Um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) oferece uma maneira fácil para definir o limite (também chamado de "ponto de interrupção") onde um estado é aplicado.
+    Quando a janela do app é ampliada ou reduzida além de um determinado valor, convém alterar as propriedades do layout para reposicionar, redimensionar, refluir, revelar ou substituir seções de sua interface do usuário. Você pode definir estados visuais diferentes para sua interface do usuário e aplicá-los quando a largura ou altura da janela ultrapassar um limite especificado. Um [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) oferece uma maneira fácil para definir o limite (também chamado de "ponto de interrupção") onde um estado é aplicado.
 
 - **Layout personalizado**
     Um layout personalizado é otimizado para uma família de dispositivos específica ou um intervalo de tamanhos de tela. Dentro da família de dispositivos, o layout ainda deve responder e se adaptar a alterações dentro do intervalo de tamanhos de janela compatíveis.
@@ -163,7 +170,7 @@ Você não precisa definir cada valor de propriedade individualmente em um contr
 
 ### <a name="layout-panels"></a>Painéis de layout
 
-A maior parte do conteúdo do aplicativo pode ser organizada por meio de agrupamentos ou hierarquias. Você usa os painéis de layout para agrupar e organizar elementos de interface do usuário em seu aplicativo. A principal coisa a ser considerada quando se escolhe um painel de layout é como o painel é posicionado e dimensiona seus elementos filho. Você também pode precisar considerar como os elementos filho sobrepostos são colocados uns sobre os outros.
+A maior parte do conteúdo do app pode ser organizada por meio de agrupamentos ou hierarquias. Você usa os painéis de layout para agrupar e organizar elementos de interface do usuário em seu app. A principal coisa a ser considerada quando se escolhe um painel de layout é como o painel é posicionado e dimensiona seus elementos filho. Você também pode precisar considerar como os elementos filho sobrepostos são colocados uns sobre os outros.
 
 Eis uma comparação dos principais recursos dos controles de painel fornecidos na estrutura XAML.
 
@@ -185,7 +192,7 @@ Use estados visuais para reposicionar, redimensionar, refluir, revelar ou substi
 
 ### <a name="set-visual-states-in-code"></a>Definir estados visuais no código
 
-Para aplicar um estado visual no código, você chama o método [**VisualStateManager.GoToState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.gotostate.aspx). Por exemplo, para aplicar um estado quando a janela do aplicativo tem um determinado tamanho, manipule o evento [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.window.sizechanged.aspx) e chame **GoToState** para aplicar o estado apropriado.
+Para aplicar um estado visual no código, você chama o método [**VisualStateManager.GoToState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.gotostate.aspx). Por exemplo, para aplicar um estado quando a janela do app tem um determinado tamanho, manipule o evento [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.window.sizechanged.aspx) e chame **GoToState** para aplicar o estado apropriado.
 
 Aqui, um [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstategroup.aspx) contém duas definições VisualState. A primeira, `DefaultState`, está vazia. Quando ela é aplicada, os valores definidos na página XAML são aplicados. A segunda, `WideState`, altera a propriedade [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.displaymode.aspx) do [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) para **Inline** e abre o painel. Esse estado é aplicado no manipulador de eventos SizeChanged caso a largura da janela seja de 720 pixels efetivos ou mais.
 
@@ -246,7 +253,7 @@ private void CurrentWindow_SizeChanged(object sender, Windows.UI.Core.WindowSize
 
 Antes do Windows 10, as definições VisualState exigiam objetos [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.storyboard.aspx) para alterações de propriedade, e você precisava chamar **GoToState** no código para aplicar o estado. Isso é mostrado no exemplo anterior. Você ainda verá muitos exemplos que usam essa sintaxe, ou pode ter um código existente que o use.
 
-A partir do Windows 10, você pode usar a sintaxe [**Setter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.setter.aspx) simplificada mostrada aqui e usar um [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) na marcação XAML para aplicar o estado. Você usa gatilhos de estado para criar regras simples que disparam alterações de estado visuais automaticamente em resposta a um evento do aplicativo.
+A partir do Windows 10, você pode usar a sintaxe [**Setter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.setter.aspx) simplificada mostrada aqui e usar um [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) na marcação XAML para aplicar o estado. Você usa gatilhos de estado para criar regras simples que disparam alterações de estado visuais automaticamente em resposta a um evento do app.
 
 Este exemplo faz a mesma coisa que o exemplo anterior, mas usa a sintaxe simplificada **Setter**, em vez de um Storyboard para definir as alterações de propriedade. E, em vez de chamar GoToState, ele usa o gatilho de estado [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) interno para aplicar o estado. Ao usar gatilhos de estado, você não precisa definir um `DefaultState` vazio. As configurações padrão são reaplicadas automaticamente quando as condições do gatilho de estado não são mais atendidas.
 
@@ -304,7 +311,7 @@ Este exemplo mostra como definir a propriedade anexada [**RelativePanel.AlignHor
 
 ### <a name="custom-state-triggers"></a>Gatilhos de estado personalizados
 
-Você pode estender a classe [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) para criar gatilhos personalizados para uma ampla variedade de cenários. Por exemplo, você pode criar um StateTrigger para disparar estados diferentes com base no tipo de entrada e, em seguida, aumentar as margens em torno de um controle quando o tipo de entrada é toque. Ou crie um StateTrigger para aplicar estados diferentes com base na família de dispositivos em que o aplicativo está em execução. Para obter exemplos de como compilar gatilhos personalizados e usá-los para criar experiências de interface do usuário otimizadas dentro de um único modo de exibição XAML, consulte a [Amostra de gatilhos de estado](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+Você pode estender a classe [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) para criar gatilhos personalizados para uma ampla variedade de cenários. Por exemplo, você pode criar um StateTrigger para disparar estados diferentes com base no tipo de entrada e, em seguida, aumentar as margens em torno de um controle quando o tipo de entrada é toque. Ou crie um StateTrigger para aplicar estados diferentes com base na família de dispositivos em que o app está em execução. Para obter exemplos de como compilar gatilhos personalizados e usá-los para criar experiências de interface do usuário otimizadas dentro de um único modo de exibição XAML, consulte a [Amostra de gatilhos de estado](http://go.microsoft.com/fwlink/p/?LinkId=620025).
 
 ### <a name="visual-states-and-styles"></a>Estilos e estados visuais
 
@@ -378,13 +385,13 @@ Neste XAML simplificado da Amostra de gatilhos de estado, um recurso Style é ap
 
 ## <a name="tailored-layouts"></a>Layouts personalizados
 
-Ao fazer alterações significativas no layout da interface do usuário em dispositivos diferentes, talvez você considere mais prático definir um arquivo de interface do usuário separado com um layout personalizado de acordo com o dispositivo, em vez de adaptar uma única interface do usuário. Caso a funcionalidade seja a mesma em todos os dispositivos, você pode definir modos de exibição XAML separados que compartilhem o mesmo arquivo de código. Caso o modo de exibição e a funcionalidade sejam significativamente diferentes entre os dispositivos, você pode definir Pages separados e escolher para qual Page navegar quando o aplicativo for carregado.
+Ao fazer alterações significativas no layout da interface do usuário em dispositivos diferentes, talvez você considere mais prático definir um arquivo de interface do usuário separado com um layout personalizado de acordo com o dispositivo, em vez de adaptar uma única interface do usuário. Caso a funcionalidade seja a mesma em todos os dispositivos, você pode definir modos de exibição XAML separados que compartilhem o mesmo arquivo de código. Caso o modo de exibição e a funcionalidade sejam significativamente diferentes entre os dispositivos, você pode definir Pages separados e escolher para qual Page navegar quando o app for carregado.
 
 ### <a name="separate-xaml-views-per-device-family"></a>Modos de exibição XAML separados por família de dispositivos
 
-Use modos de exibição XAML para criar definições de interface do usuário diferentes que compartilhem o mesmo code-behind. Você pode fornecer uma definição de interface do usuário exclusiva para cada família de dispositivos. Siga estas etapas para adicionar um modo de exibição XAML a seu aplicativo.
+Use modos de exibição XAML para criar definições de interface do usuário diferentes que compartilhem o mesmo code-behind. Você pode fornecer uma definição de interface do usuário exclusiva para cada família de dispositivos. Siga estas etapas para adicionar um modo de exibição XAML a seu app.
 
-**Para adicionar um modo de exibição XAML a um aplicativo**
+**Para adicionar um modo de exibição XAML a um app**
 1. Selecione Projeto > Adicionar Novo Item. A caixa de diálogo Adicionar Novo Item é aberta.
     > **Dica**&nbsp;&nbsp;Verifique se uma pasta ou o projeto, e não a solução, está selecionado no Gerenciador de Soluções.
 2. Em Visual C# ou Visual Basic no painel esquerdo, selecione o tipo de modelo XAML.
@@ -392,7 +399,7 @@ Use modos de exibição XAML para criar definições de interface do usuário di
 4. Insira o nome do modo de exibição. O modo de exibição deve ser nomeado corretamente. Para obter mais informações sobre a nomenclatura, consulte o restante desta seção.
 5. Clique em Adicionar. O arquivo é adicionado ao projeto.
 
-As etapas anteriores criam apenas um arquivo XAML, mas não um arquivo code-behind associado. Em vez disso, o modo de exibição XAML é associado a um arquivo código-behind existente usando-se um qualificador "DeviceName" que faz parte do nome do arquivo ou da pasta. Esse nome de qualificador pode ser mapeado para um valor de cadeia de caracteres que representa a família de dispositivos do dispositivo em que seu aplicativo está em execução no momento, como "Desktop", "Mobile" e os nomes das outras famílias de dispositivos (consulte [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues.aspx)).
+As etapas anteriores criam apenas um arquivo XAML, mas não um arquivo code-behind associado. Em vez disso, o modo de exibição XAML é associado a um arquivo código-behind existente usando-se um qualificador "DeviceName" que faz parte do nome do arquivo ou da pasta. Esse nome de qualificador pode ser mapeado para um valor de cadeia de caracteres que representa a família de dispositivos do dispositivo em que seu app está em execução no momento, como "Desktop", "Mobile" e os nomes das outras famílias de dispositivos (consulte [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues.aspx)).
 
 Você pode adicionar o qualificador ao nome do arquivo ou adicionar o arquivo a uma pasta que tenha o nome do qualificador.
 
@@ -418,7 +425,7 @@ Em ambos os casos, um modo de exibição exclusivo é usado para dispositivos m�
 
 Para oferecer modos de exibição e funcionalidade exclusivos, você pode criar arquivos Page separados (XAML e código) e depois navegar até a página apropriada quando a página for necessária.
 
-**Para adicionar uma página XAML a um aplicativo**
+**Para adicionar uma página XAML a um app**
 1. Selecione Projeto > Adicionar Novo Item. A caixa de diálogo Adicionar Novo Item é aberta.
     > **Dica**&nbsp;&nbsp;Verifique se o projeto, e não a solução, está selecionado no Gerenciador de Soluções.
 2. Em Visual C# ou Visual Basic no painel esquerdo, selecione o tipo de modelo XAML.
@@ -426,7 +433,7 @@ Para oferecer modos de exibição e funcionalidade exclusivos, você pode criar 
 4. Insira o nome da página. Por exemplo, "MainPage_Mobile". Um MainPage_Mobile.xaml e o arquivo de código MainPage_Mobile.xaml.cs/vb/cpp são criados.
 5. Clique em Adicionar. O arquivo é adicionado ao projeto.
 
-Em tempo de execução, verifique a família de dispositivos em que o aplicativo está em execução e navegue até a página correta.
+Em tempo de execução, verifique a família de dispositivos em que o app está em execução e navegue até a página correta.
 
 ```csharp
 if (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Mobile")
@@ -444,8 +451,3 @@ Você também pode usar critérios diferentes para determinar para qual página 
 ## <a name="sample-code"></a>Código de exemplo
 *   [Exemplo de noções básicas da interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
     Veja todos os controles XAML em um formato interativo.
-
-
-<!--HONumber=Dec16_HO2-->
-
-

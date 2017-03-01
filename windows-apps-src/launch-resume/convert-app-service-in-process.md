@@ -1,20 +1,28 @@
 ---
 author: TylerMSFT
-title: "Converter um serviço de aplicativo para ser executado no mesmo processo de seu aplicativo host"
-description: "Converta o código de serviço de aplicativo executado em um processo separado em segundo plano em código que é executado no mesmo processo de seu provedor de serviços de aplicativo."
+title: "Converter um serviço de app para ser executado no mesmo processo de seu app host"
+description: "Converta o código de serviço de app executado em um processo separado em segundo plano em código que é executado no mesmo processo de seu provedor de serviços de app."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: 80402d12a51ea970f5927dc50cae587be8809b87
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1fea72237a9ac7d18fb415d5957f959542a833e8
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Converter um serviço de aplicativo para ser executado no mesmo processo de seu aplicativo host
+# <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Converter um serviço de app para ser executado no mesmo processo de seu app host
 
-Um [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) permite que outro aplicativo ative seu aplicativo em segundo plano e inicie uma linha direta de comunicação com ele.
+Um [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) permite que outro app ative seu app em segundo plano e inicie uma linha direta de comunicação com ele.
 
-Com a introdução dos serviços de aplicativo no processo, dois aplicativos em primeiro plano em execução podem ter uma linha direta de comunicação por meio de uma conexão de serviço de aplicativo. Serviços de aplicativo agora podem ser executados no mesmo processo que o aplicativo em primeiro plano, o que torna a comunicação entre aplicativos muito mais fácil e elimina a necessidade de separar o código de serviço em um projeto separado.
+Com a introdução dos serviços de app no processo, dois apps em primeiro plano em execução podem ter uma linha direta de comunicação por meio de uma conexão de serviço de app. Serviços de app agora podem ser executados no mesmo processo que o app em primeiro plano, o que torna a comunicação entre apps muito mais fácil e elimina a necessidade de separar o código de serviço em um projeto separado.
 
-A transformação de um serviço de aplicativo de modelo fora do processo em um modelo no processo exige duas alterações. A primeira é uma alteração de manifesto.
+A transformação de um serviço de app de modelo fora do processo em um modelo no processo exige duas alterações. A primeira é uma alteração de manifesto.
 
 > ```xml
 >  <uap:Extension Category="windows.appService">
@@ -22,11 +30,11 @@ A transformação de um serviço de aplicativo de modelo fora do processo em um 
 >  </uap:Extension>
 > ```
 
-Remover o atributo `EntryPoint`. Agora o retorno de chamada [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) será usado como o método de retorno de chamada quando o serviço de aplicativo for invocado.
+Remover o atributo `EntryPoint`. Agora o retorno de chamada [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) será usado como o método de retorno de chamada quando o serviço de app for invocado.
 
 A segunda alteração é mover a lógica de serviço do seu projeto de tarefa em segundo plano separado para métodos que podem ser chamados de **OnBackgroundActivated()**.
 
-Agora seu aplicativo pode executar diretamente o serviço de aplicativo.  Por exemplo:
+Agora seu app pode executar diretamente o serviço de app.  Por exemplo:
 
 > ``` cs
 > private AppServiceConnection appServiceconnection;
@@ -69,14 +77,9 @@ Agora seu aplicativo pode executar diretamente o serviço de aplicativo.  Por ex
 > }
 > ```
 
-O código acima do método `OnBackgroundActivated` trata a ativação do serviço de aplicativo. Todos os eventos necessários para a comunicação por meio de um [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) são registrados, e o objeto de adiamento da tarefa é armazenado para que ele possa ser marcado como concluído quando a comunicação entre os aplicativos terminar.
+O código acima do método `OnBackgroundActivated` trata a ativação do serviço de app. Todos os eventos obrigatórios para a comunicação por meio de um [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) são registrados, e o objeto de adiamento da tarefa é armazenado para que ele possa ser marcado como concluído quando a comunicação entre os apps terminar.
 
-Quando o aplicativo recebe uma solicitação e lê o [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx) fornecido para ver se as cadeias de caracteres `Key` e `Value` estão presentes. Se eles estiverem presentes, o serviço de aplicativo retornará um par de valores de cadeias `Response` e `True` para o aplicativo do outro lado do **AppServiceConnection**.
+Quando o app recebe uma solicitação e lê o [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx) fornecido para ver se as cadeias de caracteres `Key` e `Value` estão presentes. Se eles estiverem presentes, o serviço de app retornará um par de valores de cadeias `Response` e `True` para o app do outro lado do **AppServiceConnection**.
 
-Saiba mais sobre como conectar e se comunicar com outros aplicativos em [Criar e consumir um serviço de aplicativo](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service?f=255&MSPPError=-2147217396).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+Saiba mais sobre como conectar e se comunicar com outros apps em [Criar e consumir um serviço de app](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service?f=255&MSPPError=-2147217396).
 

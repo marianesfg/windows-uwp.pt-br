@@ -2,13 +2,20 @@
 author: mcleblanc
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
 title: Melhore o desempenho de coleta de lixo
-description: "Os aplicativos da Plataforma Universal do Windows (UWP) em C# e Visual Basic fazem o gerenciamento de memória automático a partir do coletor de lixo do .NET. Esta seção resume as práticas recomendadas de comportamento e desempenho para o coletor de lixo do .NET nos aplicativos UWP."
+description: "Os aplicativos da Plataforma Universal do Windows (UWP) em C# e Visual Basic fazem o gerenciamento de memória automático a partir do coletor de lixo do .NET. Esta seção resume as melhores práticas de comportamento e desempenho para o coletor de lixo .NET em aplicativos UWP."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5f9626c644315884ea8605a4e69e7e580a44010b
-ms.openlocfilehash: 32290820d4732f1a8b28fd18682514e3948e0356
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9b33388429f72dcc7acb9803d00a407ed35589a0
+ms.lasthandoff: 02/07/2017
 
 ---
-# Melhorar o desempenho da coleta de lixo
+# <a name="improve-garbage-collection-performance"></a>Melhore o desempenho de coleta de lixo
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -26,13 +33,13 @@ O coletor de lixo determina quando deve ser executado, equilibrando o consumo de
 
 É possível medir o desempenho do coletor de lixo em 2 aspectos: o tempo que ele leva para fazer a coleta de lixo e o consumo de memória do heap gerenciado. Se você tiver um aplicativo pequeno com um tamanho de heap inferior a 100 MB, concentre-se na redução do consumo de memória. Se você tem um aplicativo com um heap gerenciado maior que 100 MB, concentre-se apenas em reduzir o tempo da coleta de lixo. Consulte aqui como você pode ajudar o coletor de lixo .NET a ter um desempenho melhor.
 
-## Reduzir o consumo de memória
+## <a name="reduce-memory-consumption"></a>Reduzir o consumo de memória
 
-### Referências de versão
+### <a name="release-references"></a>Referências de versão
 
 Uma referência a um objeto em seu aplicativo impede que o objeto, e todos os objetos que ele referencia, seja coletado. O compilador .NET faz um bom trabalho de detecção de quando uma variável não está mais em uso, de forma que os objetos mantidos por ela se tornem qualificados para a coleta. Mas em alguns casos pode não ser óbvio que alguns objetos façam referência a outros objetos porque parte do elemento gráfico do objeto pode ser de propriedade de bibliotecas usadas por seu aplicativo. Para aprender sobre as ferramentas e técnicas para descobrir quais objetos sobrevivem a uma coleta de lixo, consulte [Coleta de lixo e desempenho](https://msdn.microsoft.com/library/windows/apps/xaml/ee851764.aspx).
 
-### Induzir uma coleta de lixo se ela for útil
+### <a name="induce-a-garbage-collection-if-its-useful"></a>Induzir uma coleta de lixo se ela for útil
 
 Induza uma coleta de lixo somente depois de medir o desempenho de seu aplicativo e determinar que a indução de uma coleta melhorará esse desempenho.
 
@@ -42,7 +49,7 @@ Induza uma coleta de lixo somente depois de medir o desempenho de seu aplicativo
  
 Para evitar a indução inadvertida de coletas de lixo em excesso, é possível definir [**GCCollectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/bb495757.aspx) como **Optimized**. Esse recurso instrui o coletor de lixo a iniciar a coleta somente se ele determinar que a coleta será produtiva o bastante para ser justificada.
 
-## Reduzir o tempo de coleta de lixo
+## <a name="reduce-garbage-collection-time"></a>Reduzir o tempo de coleta de lixo
 
 Esta seção se aplica se você tiver analisado seu aplicativo e observado tempos de coleta de lixo longos. Os tempos de pausa relacionados à coleta de lixo incluem: o tempo levado na execução de uma única passagem de coleta de lixo e o tempo total gasto por seu aplicativo em coletas de lixo. O tempo que uma coleta demora depende da quantidade de dados ao vivo o coletor precisa analisar. A geração 0 e a geração 1 são limitadas por tamanho, mas a geração 2 continua a crescer à medida que objetos de vida longa estejam ativos em seu aplicativo. Isso significa que os tempos de coleta para a geração 0 e a geração 1 são limitados, enquanto que as coletas de geração 2 podem demorar mais. A frequência em que coletas de lixo serão executadas dependerá muito da quantidade de memória alocada, uma vez que uma coleta de lixo libera memória para satisfazer solicitações de alocação.
 
@@ -50,13 +57,13 @@ Ocasionalmente, o coletor de lixo pausa seu aplicativo para executar trabalho, m
 
 Coletas de lixo frequentes podem contribuir para maior consumo de CPU (e, portanto, de energia), tempos de carregamento maiores ou taxas de quadro menores em seu aplicativo. A seguir, algumas técnicas que você pode usar para reduzir o tempo de coleta de lixo e as pausas relacionadas à coleta em seu aplicativo UWP gerenciado.
 
-### Reduzir as alocações de memória
+### <a name="reduce-memory-allocations"></a>Reduzir as alocações de memória
 
 Se você não alocar qualquer objeto, o coletor de lixo não será executado, a menos que haja uma condição de pouca memória no sistema. A redução da quantidade de memória alocada se traduz diretamente em coleta de lixo menos frequentes.
 
 Se, em algumas seções de seu aplicativo, as pausas forem totalmente indesejáveis, você poderá pré-alocar os objetos necessários com antecedência durante um período de desempenho menos crítico. Por exemplo, um jogo poderia alocar todos os objetos necessários para jogar durante a tela de carregamento de um nível e não fazer alocações ao jogar. Isso evita pausas enquanto o usuário está jogando e pode resultar em uma taxa de quadros maior e mais consistente.
 
-### Reduza as coletas da geração 2 evitando objetos com tempo médio de vida
+### <a name="reduce-generation-2-collections-by-avoiding-objects-with-a-medium-length-lifetime"></a>Reduza as coletas da geração 2 evitando objetos com tempo médio de vida
 
 As coletas de lixo geracionais são melhor executadas quando você tem objetos com vida realmente curta ou realmente longa em seu aplicativo. Os objetos com vida curta são coletados nas coletas de geração 0 e geração 1 mais baratas e os objetos com vida longa são promovidos para a geração 2, que é coletada com menos frequência. Os objetos de vida longa são aqueles que estão em uso por toda a duração de seu aplicativo ou durante um período significativo de seu aplicativo, como durante uma página ou um nível de jogo específico.
 
@@ -64,11 +71,11 @@ Se você criar objetos com frequência com uma vida útil temporária, mas longa
 
 Um exemplo comum de objetos com vida útil de médio prazo contém objetos usados para a exibição de itens em uma lista que pode ser rolada pelo usuário. Se objetos forem criados quando itens da lista forem rolados para exibição e não forem mais referenciados à medida que itens da lista forem rolados para fora da exibição, tipicamente seu aplicativo terá um grande número de coletas de geração 2. Em situações como essa, você pode pré-alocar e reutilizar um conjunto de objetos para os dados que são ativamente mostrados ao usuário e usar objetos de vida curta para carregar informações à medida que os itens da lista forem exibidos.
 
-### Reduza as coletas da geração 2 evitando objetos grandes com tempo curto de vida
+### <a name="reduce-generation-2-collections-by-avoiding-large-sized-objects-with-short-lifetimes"></a>Reduza as coletas da geração 2 evitando objetos grandes com tempo curto de vida
 
 Qualquer objeto com 85 KB ou mais é alocado na pilha de objetos grandes (LOH) e é coletado como parte da geração 2. Se você tiver variáveis temporárias, como buffers, com mais de 85 KB, uma coleta de geração 2 as limpará. Limitar as variáveis temporárias a menos de 85 KB reduz o número de coletas de geração 2 em seu aplicativo. Uma técnica comum é criar um pool de buffers de reutilizar objetos do pool para evitar alocações temporárias grandes.
 
-### Evitar objetos com muitas referências
+### <a name="avoid-reference-rich-objects"></a>Evitar objetos com muitas referências
 
 O coletor de lixo determina quais objetos estão vivos seguindo referências entre objetos, começando das raiz de seu aplicativo. Para obter mais informações, consulte [O que acontece durante a coleta de lixo](https://msdn.microsoft.com/library/windows/apps/xaml/ee787088.aspx#what-happens-during-a-garbage-collection). Se um objeto contiver muitas referências, haverá mais trabalho para o coletor de lixo. Uma técnica comum (especialmente com objetos grandes) é converter objetos com muitas referências em objetos sem referências (por exemplo, em vez de armazenar uma referência, armazenar um índice). É claro que essa técnica só funciona quando for logicamente possível fazer isso.
 
@@ -80,10 +87,5 @@ Substituir referências de objeto por índices pode ser uma alteração prejudic
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

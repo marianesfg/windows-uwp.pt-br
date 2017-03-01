@@ -3,31 +3,38 @@ author: jwmsft
 description: "Fornece um valor para qualquer atributo XAML avaliando uma referência a um recurso, com lógica do sistema adicional que recupera diferentes recursos, dependendo do tema ativo no momento."
 title: "Extensão de marcação ThemeResource"
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9c657f906e6dedb259b8a98373f56ac5a63bd845
-ms.openlocfilehash: 803c62987c3a019fc576c6f1d0c343e042ba947b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9175c998aa0dffb861697c2206c4202193b9bd9f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Extensão de marcação {ThemeResource}
+# <a name="themeresource-markup-extension"></a>Extensão de marcação {ThemeResource}
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Fornece um valor para qualquer atributo XAML avaliando uma referência a um recurso, com lógica do sistema adicional que recupera diferentes recursos, dependendo do tema ativo no momento. Assim como a [extensão de marcação {StaticResource}](staticresource-markup-extension.md), os recursos são definidos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) e o uso de **ThemeResource** faz referência à chave desse recurso no **ResourceDictionary**.
 
-## Uso do atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
 ``` syntax
 <object property="{ThemeResource key}" .../>
 ```
 
-## Valores XAML
+## <a name="xaml-values"></a>Valores XAML
 
 | Termo | Descrição |
 |------|-------------|
 | chave | A chave para o recurso solicitado. Essa chave é inicialmente atribuída pelo [ **ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794). Uma chave de recurso pode ser qualquer cadeia de caracteres definida na gramática de XamlName. |
  
-## Comentários
+## <a name="remarks"></a>Comentários
 
 A **ThemeResource** é uma técnica para obtenção de valores referentes a um atributo XAML definidos em outro lugar em um dicionário de recursos XAML. Essa extensão de marcação tem a mesma finalidade básica que a [extensão de marcação StaticResource](staticresource-markup-extension.md). A diferença de comportamento em relação à extensão de marcação {StaticResource} é que uma referência **ThemeResource** pode usar dinamicamente diferentes dicionários como o local de pesquisa principal, dependendo do tema atualmente utilizado pelo sistema.
 
@@ -46,7 +53,7 @@ Na implementação do processador XAML do Windows Runtime, não há uma represen
 
 **ThemeResource** é uma extensão de marcação. As extensões de marcação geralmente são implementadas quando é necessário efetuar um escape de valores de atributo para que sejam diferentes de valores literais ou nomes de manipulador e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em XAML usam os caracteres "{" e "}" na sintaxe de atributo, sendo esta a convenção pela qual um processador XAML reconhece que uma extensão de marcação deve processar o atributo.
 
-### Quando e como usar {ThemeResource} em vez de {StaticResource}
+### <a name="when-and-how-to-use-themeresource-rather-than-staticresource"></a>Quando e como usar {ThemeResource} em vez de {StaticResource}
 
 As regras pelas quais **ThemeResource** é resolvido para um item em um dicionário de recursos costumam ser as mesmas de **StaticResource**. Uma pesquisa de **ThemeResource** pode ser estendida para os arquivos do [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) que são referenciados em uma coleção de [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807), mas um **StaticResource** também pode fazer isso. A diferença é que um **ThemeResource** pode ser reavaliado no tempo de execução e um **StaticResource** não.
 
@@ -66,15 +73,15 @@ As definições XAML de estados visuais em um modelo de controle devem usar refe
 
 O uso de **ThemeResource** pode ser visto em uma série de valores dependentes. Por exemplo, um valor [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) usado por um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) que também é um recurso de chave pode usar uma referência **ThemeResource**. Mas quaisquer propriedades de interface do usuário que usem o recurso de chave **SolidColorBrush** também deverão usar uma referência **ThemeResource**, para que cada propriedade de tipo de [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) que esteja ativando um valor dinâmico mude quando o tema mudar.
 
-**Observação**  `{ThemeResource}` e a avaliação de recurso do tempo de execução durante a alteração de tema têm suporte no Windows 8.1 XAML, mas não no XAML para aplicativos do Windows8.
+**Observação**  `{ThemeResource}` e a avaliação de recurso do tempo de execução durante a alteração de tema têm suporte no Windows 8.1 XAML, mas não no XAML para aplicativos do Windows 8.
 
-### Recursos do sistema
+### <a name="system-resources"></a>Recursos do sistema
 
 Alguns recursos do sistema fazem referência a valores de recursos do sistema como um subvalor adjacente. Um recurso do sistema é um valor de recurso especial que não pode ser encontrado em nenhum dicionário de recursos XAML. Esses valores se baseiam no comportamento de suporte ao XAML do Windows Runtime para encaminhar os valores do próprio sistema e representá-los de uma forma que um recurso XAML possa fazer referência. Por exemplo, há um recurso do sistema denominado "SystemColorButtonFaceColor" que representa uma cor RGB. Essa cor é proveniente de aspectos de cores e temas do sistema que não são simplesmente específicos do Windows Runtime e de seus respectivos aplicativos.
 
 Os recursos do sistema costumam ser valores subjacentes para um tema em alto contraste. O usuário controla as opções de cores do tema em alto contraste e o usuário faz essas escolhas usando recursos do sistema que também não são específicos dos aplicativos do Windows Runtime. Quando é feita referência aos recursos do sistema como referências **ThemeResource**, o comportamento padrão dos temas em alto contraste dos aplicativos do Windows Runtime pode usar esses valores específicos do tema que são controlados pelo usuário e apresentados pelo sistema. Além disso, as referências agora são marcadas para reavaliação quando o sistema detecta uma alteração de tema de tempo de execução.
 
-### Exemplo de uso de {ThemeResource}
+### <a name="an-example-themeresource-usage"></a>Exemplo de uso de {ThemeResource}
 
 Veja a seguir alguns exemplos de XAML extraídos dos arquivos padrão generic.xaml e themeresources.xaml para ilustrar como usar **ThemeResource**. Vamos analisar apenas um modelo (o [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) padrão) e como duas propriedades são declaradas ([**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) e [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414)) para serem responsivas às alterações de temas.
 
@@ -135,27 +142,22 @@ Depois, os pincéis de cada um dos outros dicionários de temas também são def
 
 Aqui o valor [**Color**](https://msdn.microsoft.com/library/windows/apps/br242963) é outra referência **ThemeResource** a um recurso do sistema. Se você fizer referência a um recurso do sistema e quiser que ele mude em resposta a uma alteração de tema, você deverá usar **ThemeResource** para fazer a referência.
 
-## Comportamento do Windows 8
+## <a name="windows-8-behavior"></a>Comportamento do Windows 8
 
-O Windows8 não dava suporte à extensão de marcação **ThemeResource**, ela está disponível a partir do Windows8.1. Além disso, o Windows8 não dava suporte à alternância dinâmica dos recursos relacionados ao tema de um aplicativo do Windows Runtime. O aplicativo tinha que ser reiniciado para selecionar a alteração de tema dos modelos e estilos XAML. Essa não é uma boa experiência de usuário, portanto, os aplicativos devem ser recompilados e visar o Windows8.1 de forma que possam usar estilos com usos **ThemeResource** e possam alternar dinamicamente os temas quando o usuário o faz. Os aplicativos que foram compilados para Windows 8, mas estão sendo executados no Windows 8.1, continuam a adotar o comportamento do Windows 8.
+O Windows 8 não dava suporte à extensão de marcação **ThemeResource**, ela está disponível a partir do Windows 8.1. Além disso, o Windows 8 não dava suporte à alternância dinâmica dos recursos relacionados ao tema de um aplicativo do Windows Runtime. O aplicativo tinha que ser reiniciado para selecionar a alteração de tema dos modelos e estilos XAML. Essa não é uma boa experiência de usuário, portanto, os aplicativos devem ser recompilados e visar o Windows 8.1 de forma que possam usar estilos com usos **ThemeResource** e possam alternar dinamicamente os temas quando o usuário o faz. Os aplicativos que foram compilados para Windows 8, mas estão sendo executados no Windows 8.1, continuam a adotar o comportamento do Windows 8.
 
-## As ferramentas de tempo de design têm suporte para a extensão de marcação **{ThemeResource}**
+## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>As ferramentas de tempo de design têm suporte para a extensão de marcação **{ThemeResource}**
 
-O Microsoft Visual Studio2013 pode incluir valores-chave possíveis nos menus suspensos do Microsoft IntelliSense quando você usa a extensão de marcação **{ThemeResource}** em uma página XAML. Por exemplo, assim que você digita "{ThemeResource", todas as chaves de recurso dos [recursos de tema XAML](https://msdn.microsoft.com/library/windows/apps/mt187274) são exibidas.
+O Microsoft Visual Studio 2013 pode incluir valores-chave possíveis nos menus suspensos do Microsoft IntelliSense quando você usa a extensão de marcação **{ThemeResource}** em uma página XAML. Por exemplo, assim que você digita "{ThemeResource", todas as chaves de recurso dos [recursos de tema XAML](https://msdn.microsoft.com/library/windows/apps/mt187274) são exibidas.
 
 Quando uma chave de recurso existe como parte de qualquer uso **{ThemeResource}**, o recurso **Ir para Definição** (F12) pode resolver esse recurso e mostrar a você o generic.xaml do tempo de design, em que o recurso do tema é definido. Como os recursos do tema são definidos mais de uma vez (por tema), **Ir para Definição** leva você à primeira definição encontrada no arquivo, que é a definição de **Padrão**. Se você desejar obter as outras definições, poderá procurar o nome da chave no arquivo e localizar as definições dos outros temas.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Referências de recursos de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
 * [Recursos de temas XAML](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
 * [atributo x:Key](x-key-attribute.md)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Use este método na API de envio da Windows Store para atualizar um envio de aplicativo existente."
 title: Atualizar um envio de aplicativo usando a API de envio da Windows Store
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, API de envio da Windows Store, envio de aplicativo, atualização"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: ec533c5a021d006787a7d217fa7f5eb98835fdd3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: df52b5de7751d8428a92bd3892f91159c5fdd518
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -288,9 +295,4 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 * [Confirmar um envio de aplicativo](commit-an-app-submission.md)
 * [Excluir um envio de aplicativo](delete-an-app-submission.md)
 * [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

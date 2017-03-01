@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: 039B8810-5C9E-4DB9-A6AF-33E7401311FF
 description: "Use este método na API de envio da Windows Store para obter o status de um envio de aplicativo."
 title: Obter o status de um envio de aplicativo usando a API de envio da Windows Store
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, API de envio da Windows Store, criar envio de aplicativo, status
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: f93b26201ea45dc456013737fef0382aadb56e7f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 757a5e0d09cc7c8c6838b595dba34670d93a8536
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obter o status de um envio de aplicativo usando a API de envio da Windows Store
+# <a name="get-the-status-of-an-app-submission-using-the-windows-store-submission-api"></a>Obter o status de um envio de aplicativo usando a API de envio da Windows Store
 
 
 
 
 Use este método na API de envio da Windows Store para obter o status de um envio de aplicativo. Para obter mais informações sobre o processo de criação de um envio de aplicativo, usando a API de envio da Windows Store, consulte [Gerenciar envios de aplicativo](manage-app-submissions.md).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este método, primeiro você precisa do seguinte:
 
@@ -25,7 +32,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Solicitação
+## <a name="request"></a>Solicitação
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
@@ -36,7 +43,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 <span/>
  
 
-### Cabeçalho da solicitação
+### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -44,7 +51,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Parâmetros solicitados
+### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -53,11 +60,11 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Corpo da solicitação
+### <a name="request-body"></a>Corpo da solicitação
 
 Não forneça um corpo da solicitação para esse método.
 
-### Exemplo de solicitação
+### <a name="request-example"></a>Exemplo de solicitação
 
 O exemplo a seguir demonstra como obter o status de um envio de aplicativo.
 
@@ -66,7 +73,7 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/sub
 Authorization: Bearer <your access token>
 ```
 
-## Resposta
+## <a name="response"></a>Resposta
 
 O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. O corpo da resposta contém informações sobre o envio especificado. Para obter mais detalhes sobre os valores no corpo da resposta, veja as seções a seguir.
 
@@ -81,16 +88,16 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 }
 ```
 
-### Corpo da resposta
+### <a name="response-body"></a>Corpo da resposta
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | string  | O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
+| status           | string  | O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  Contém detalhes adicionais sobre o status do envio, incluindo informações sobre os erros. Para obter mais informações, consulte [Recurso de detalhes sobre o status](manage-app-submissions.md#status-details-object). |
 
 <span/>
 
-## Códigos de erro
+## <a name="error-codes"></a>Códigos de erro
 
 Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
@@ -102,7 +109,7 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 <span/>
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obter um envio de aplicativo](get-an-app-submission.md)
@@ -110,9 +117,4 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 * [Confirmar um envio de aplicativo](commit-an-app-submission.md)
 * [Atualizar um envio de aplicativo](update-an-app-submission.md)
 * [Excluir um envio de aplicativo](delete-an-app-submission.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

@@ -3,13 +3,20 @@ author: mtoepke
 title: Suporte a mapas de sombra em diversos hardwares
 description: "Renderize sombras de alta fidelidade em dispositivos mais rápidos e sombras mais velozes em dispositivos com menor desempenho."
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, mapas de sombra, directx
 translationtype: Human Translation
-ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
-ms.openlocfilehash: a2e2ed02025352bd5583abeed8856a216eab4ead
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e4cffcf1e9655d5bc5dacbfc17cb64b5671d7551
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Suporte a mapas de sombra em diversos hardwares
+# <a name="support-shadow-maps-on-a-range-of-hardware"></a>Suporte a mapas de sombra em diversos hardwares
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -17,7 +24,7 @@ ms.openlocfilehash: a2e2ed02025352bd5583abeed8856a216eab4ead
 
 Renderize sombras de alta fidelidade em dispositivos mais rápidos e sombras mais velozes em dispositivos com menor desempenho. Parte 4 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
-## Tipos de filtro de comparação
+## <a name="comparison-filter-types"></a>Tipos de filtro de comparação
 
 
 Use filtragem linear somente se o dispositivo puder lidar com a perda de desempenho. Geralmente, dispositivos Direct3D com nível de recursos 9\_1 não têm capacidade suficiente para utilizar filtragem linear em sombras. Nesses dispositivos, use a filtragem por pontos. Ao usar a filtragem linear, ajuste o sombreador de pixel de modo a mesclar as bordas da sombra.
@@ -102,17 +109,17 @@ float3 shadow = (1.0f - lighting) * ambient;
 return float4(input.color * (light + shadow), 1.f);
 ```
 
-## Tamanho do buffer de sombra
+## <a name="shadow-buffer-size"></a>Tamanho do buffer de sombra
 
 
 Os mapas de sombra maiores não terão tantos blocos, mas ocuparão mais espaço na memória gráfica. Experimente mapas de sombra com tamanhos diferentes em seu jogo e observe os resultados em tipos de dispositivos e tamanhos de exibição distintos. Pense em uma otimização como mapas de sombra em cascata para obter resultados melhores consumindo menos memória gráfica. Consulte [Técnicas comuns para aprimorar os mapas de profundidade de sombra](https://msdn.microsoft.com/library/windows/desktop/ee416324).
 
-## Profundidade do buffer de sombra
+## <a name="shadow-buffer-depth"></a>Profundidade do buffer de sombra
 
 
 Um buffer de sombra mais preciso gera resultados melhores nos testes de profundidade, o que o ajuda a evitar problemas como conflitos no buffer z. Mas assim como mapas de sombra maiores, o aumento de precisão leva a um maior consumo de memória. Experimente tipos de precisão de profundidade diferentes em seu jogo - DXGI\_FORMAT\_R24G8\_TYPELESS comparado a DXGI\_FORMAT\_R16\_TYPELESS e observe a velocidade e qualidade em níveis de recursos diferentes.
 
-## Otimizando sombreadores pré-compilados
+## <a name="optimizing-precompiled-shaders"></a>Otimizando sombreadores pré-compilados
 
 
 Os aplicativos da Plataforma Universal do Windows (UWP) podem usar a compilação de sombreador dinâmico, mas é mais rápido usar a associação de sombreador dinâmico. Use também diretivas de compilador e blocos de `#ifdef` para criar versões diferentes de sombreadores. Faça isso abrindo o arquivo de projeto do Visual Studio em um editor de texto e adicionando várias entradas `<FxcCompiler>` ao HLSL (cada uma com as definições corretas de pré-processador). Observe que isso precisa de nomes de arquivo diferentes. Nesse caso, o Visual Studio adiciona \_point e \_linear às versões diferentes do sombreador.
@@ -175,10 +182,5 @@ A entrada do arquivo de projeto para a versão com filtragem linear do sombreado
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

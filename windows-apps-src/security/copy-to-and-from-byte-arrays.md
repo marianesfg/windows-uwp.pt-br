@@ -1,20 +1,27 @@
 ---
 title: Copiar de e para matrizes de bytes
-description: "Este exemplo de código mostra como copiar de e para matrizes de bytes em um aplicativo da Plataforma Universal do Windows (UWP)."
+description: "Este exemplo de código mostra como copiar de e para matrizes de bytes em um app da Plataforma Universal do Windows (UWP)."
 ms.assetid: C343B08C-1FA1-40FD-8CA5-7FC9B707C5E3
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: f700d3d9c09424ef8fffd73a08e12563acbbc497
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9183ca237709100e16afd9ce2f8387ff464021ce
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Copiar de e para matrizes de bytes
+# <a name="copy-to-and-from-byte-arrays"></a>Copiar de e para matrizes de bytes
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este exemplo de código mostra como copiar de e para matrizes de bytes em um aplicativo da Plataforma Universal do Windows (UWP).
+Este exemplo de código mostra como copiar de e para matrizes de bytes em um app da Plataforma Universal do Windows (UWP).
 
 ```cs
 public void ByteArrayCopy()
@@ -33,8 +40,3 @@ public void ByteArrayCopy()
     CryptographicBuffer.CopyToByteArray(buffer, out newByteArray);
 }
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

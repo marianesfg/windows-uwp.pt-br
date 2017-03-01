@@ -2,17 +2,26 @@
 author: mcleanbyron
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: "Use este método na API de análise da Windows Store para obter dados de opinião para um determinado intervalo de datas e outros filtros opcionais."
-title: "Obter avaliações de app"
+title: "Obter avaliações de aplicativo"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, análises"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: 49d3f3cb608f3207306af443c67b684a0ae9f319
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 68ad995341d0d4bedbe566e8a491a80b9b0a8ed2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="get-app-reviews"></a>Obter avaliações de app
+# <a name="get-app-reviews"></a>Obter avaliações de aplicativo
 
 
 Use este método na API de análise da Windows Store para obter dados de opinião em formato JSON para um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de análises](../publish/reviews-report.md) no painel do Centro de Desenvolvimento do Windows.
+
+Depois que você recuperar críticas, você pode usar os métodos [obter as informações de resposta para avaliações de aplicativo](get-response-info-for-app-reviews.md) e [enviar respostas às críticas do aplicativo](submit-responses-to-app-reviews.md) na API de análises da Windows Store para responder às análises de forma programática.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -82,7 +91,7 @@ Para obter uma lista dos campos com suporte e os operadores de suporte para cada
 | notHelpfulCount  | eq, ne  | O número de vezes que a análise foi marcada como não útil.  |
 | responseDate  | eq, ne  | A data em que a resposta foi enviada.  |
 | responseText  | eq, ne, contains  | O conteúdo de texto da resposta.  |
-
+| id  | eq, ne  | A ID da revisão (este é um GUID).        |
 
 <span/> 
 
@@ -138,7 +147,8 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | helpfulCount           | number  | O número de vezes que a análise foi marcada como útil.     |
 | notHelpfulCount        | number  | O número de vezes que a análise foi marcada como não útil.               |
 | responseDate           | string  | A data em que uma resposta foi enviada.                 |
-| responseText           | string  | O conteúdo de texto da resposta.        |
+| responseText           | cadeia  | O conteúdo de texto da resposta.        |
+| id                     | cadeia  | A ID da revisão (este é um GUID). Você pode usar essa ID nos métodos [obter as informações de resposta para avaliações de aplicativo](get-response-info-for-app-reviews.md) e [enviar respostas às críticas do aplicativo](submit-responses-to-app-reviews.md).       |
 
 <span/> 
 
@@ -171,7 +181,8 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
       "helpfulCount": 0,
       "notHelpfulCount": 0,
       "responseDate": "2015-08-07T01:50:22.9874488Z",
-      "responseText": "1"
+      "responseText": "1",
+      "id": "6be543ff-1c9c-4534-aced-af8b4fbe0316"
     }
   ],
   "@nextLink": null,
@@ -183,13 +194,10 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 * [Relatório de avaliações](../publish/reviews-report.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
-* [Obter aquisições de app](get-app-acquisitions.md)
+* [Obter informações de resposta para análises de aplicativo](get-response-info-for-app-reviews.md)
+* [Enviar respostas às críticas do aplicativo](submit-responses-to-app-reviews.md)
+* [Obter aquisições de aplicativo](get-app-acquisitions.md)
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)
-* [Obter dados de relatório de erros](get-error-reporting-data.md)
+* [Obter dados de relatórios de erros](get-error-reporting-data.md)
 * [Obter classificações de aplicativos](get-app-ratings.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

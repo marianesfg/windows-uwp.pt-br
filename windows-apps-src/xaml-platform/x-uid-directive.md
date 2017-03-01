@@ -3,31 +3,38 @@ author: jwmsft
 description: "Fornece um identificador exclusivo para elementos de marcação. Para o XAML da UWP (Plataforma Universal do Windows), este identificador exclusivo é usado por processos e ferramentas de localização XAML, como o uso de recursos de um arquivo de recursos .resw."
 title: Diretiva xUid
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c94db1dc1095f53dc836f78768ecc826470343d5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3fa6cf80bf569703a7fbbc532c9114bee89c7403
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Diretiva x:Uid
+# <a name="xuid-directive"></a>Diretiva x:Uid
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Fornece um identificador exclusivo para elementos de marcação. Para o XAML da UWP (Plataforma Universal do Windows), este identificador exclusivo é usado por processos e ferramentas de localização XAML, como o uso de recursos de um arquivo de recursos .resw.
 
-## Uso do atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
 ``` syntax
 <object x:Uid="stringID".../>
 ```
 
-## Valores XAML
+## <a name="xaml-values"></a>Valores XAML
 
 | Termo | Descrição |
 |------|-------------|
 | stringID | Uma cadeia de caracteres que identifica um elemento XAML em um aplicativo e torna-se parte do caminho do recurso em um arquivo de recurso. Veja os comentários.| 
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Use **x:Uid** para identificar um elemento de objeto em seu XAML. Normalmente, esse elemento de objeto é uma instância de uma classe de controle ou outro elemento exibido em uma interface do usuário. A relação entre a cadeia de caracteres que você usa em **X:UID** e as cadeias de caracteres que você usa em um arquivo de recursos é que as cadeias de caracteres do arquivo de recurso são o **X:UID** seguido por um ponto (.) e, em seguida, pelo nome de uma propriedade específica do elemento que está sendo localizada. Considere este exemplo:
 
@@ -46,10 +53,5 @@ A linguagem XAML da UWP tem regras um pouco diferentes de exclusividade **x:Uid*
 Em alguns casos, você usará um caminho de recurso, em vez de funcionalidade interna do sistema PRI (índice de recursos de pacote). Qualquer cadeia de caracteres usada como um valor **x:Uid** define um caminho de recurso que começa com ms-resource:///Resources/ e inclui a cadeia de caracteres **x:Uid**. O caminho é completado pelos nomes das propriedades que você especifica em um arquivo de recursos ou de outro modo está direcionando.
 
 Não coloque **x:Uid** em elementos de propriedade, o que não é permitido no XAML do Windows Runtime.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

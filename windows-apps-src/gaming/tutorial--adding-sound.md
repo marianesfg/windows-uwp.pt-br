@@ -3,20 +3,27 @@ author: mtoepke
 title: Adicionar som
 description: "Nesta etapa, examinaremos como o exemplo de jogo de tiro cria um objeto para reprodução de som usando as APIs XAudio2."
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, sons
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: e44bc1046310b57cffa3eb4009e91885c61470eb
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11553a22274a36094a3e839e8fda648f78cfaaf8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Adicionar som
+# <a name="add-sound"></a>Adicionar som
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Nesta etapa, examinaremos como o exemplo de jogo de tiro cria um objeto para reprodução de som usando as APIs [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Adicionar saída de som usando [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
@@ -27,7 +34,7 @@ No exemplo de jogo, os objetos de áudio e os comportamentos são definidos em t
 -   **MediaReader.h/.cpp**. Esse código define os métodos para ler arquivos .wav de áudio do armazenamento local.
 -   **SoundEffect.h/.cpp**. Esse código define um objeto para reprodução de som no jogo.
 
-## Definindo o mecanismo de áudio
+## <a name="defining-the-audio-engine"></a>Definindo o mecanismo de áudio
 
 
 Ao ser iniciado, o exemplo de jogo cria um objeto **Audio** que aloca os recursos de áudio para o jogo. O código que declara esse objeto é semelhante a este:
@@ -54,7 +61,7 @@ protected:
 
 Os métodos **Audio::MusicEngine** e **Audio::SoundEffectEngine** retornam referências a objetos [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) que definem a voz de masterização para cada tipo de áudio. Voz de masterização é o dispositivo de áudio usado para a reprodução. Os buffers de dados de áudio não podem ser enviados diretamente para as vozes de masterização, mas os dados enviados para outros tipos de vozes devem ser direcionados à voz de masterização para serem ouvidos.
 
-## Inicializando os recursos de áudio
+## <a name="initializing-the-audio-resources"></a>Inicializando os recursos de áudio
 
 
 No exemplo, os objetos [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) são inicializados para os mecanismos de música e efeitos sonoros por meio de chamadas a [**XAudio2Create**](https://msdn.microsoft.com/library/windows/desktop/ee419212). Depois de criar instâncias dos mecanismos, ele cria uma voz de masterização para cada um com chamadas a [**IXAudio2::CreateMasteringVoice**](https://msdn.microsoft.com/library/windows/desktop/hh405048), como aqui:
@@ -91,7 +98,7 @@ void Audio::CreateDeviceIndependentResources()
 
 Quando um arquivo de áudio contendo música ou efeitos sonoros é carregado, esse método chama [**IXAudio2::CreateSourceVoice**](https://msdn.microsoft.com/library/windows/desktop/ee418607) na voz de masterização, que cria uma instância de uma voz de origem para reprodução. O código usado para isso será examinado depois que terminarmos de descrever como o exemplo de jogo carrega arquivos de áudio.
 
-## Lendo um arquivo de áudio
+## <a name="reading-an-audio-file"></a>Lendo um arquivo de áudio
 
 
 No exemplo de jogo, o código para a leitura de arquivos em formato de áudio é definido em **MediaReader.cpp**. O método específico que lê um arquivo de áudio .wav codificado, **MediaReader::LoadMedia**, é semelhante a isto:
@@ -264,7 +271,7 @@ myTarget->HitSound()->Initialize(
 
 Agora que o exemplo de jogo já tem um arquivo de áudio na memória, veremos como ele é reproduzido durante a execução do jogo.
 
-## Reproduzindo um arquivo de áudio
+## <a name="playing-back-an-audio-file"></a>Reproduzindo um arquivo de áudio
 
 
 ```cpp
@@ -306,14 +313,14 @@ Para reproduzir o som, esse método usa o objeto de voz de origem **m\_sourceVoi
 
 Agora, sempre que ocorre uma colisão entre a munição e um alvo, uma chamada para **SoundEffect::PlaySound** provoca a reprodução de um ruído.
 
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 
 Esse foi um tour rápido pelo desenvolvimento de jogos DirectX da Plataforma Universal do Windows (UWP). Neste ponto, você já tem uma ideia do que é necessário para transformar seu jogo para Windows 8 em uma ótima experiência. Lembre-se de que o jogo pode ser executado em uma ampla variedade de dispositivos e plataformas Windows 8 e, portanto, seus componentes – elementos gráficos, controles, interface do usuário e áudio devem ser projetados para o conjunto de configurações mais diversificado possível.
 
 Para saber mais sobre maneiras de modificar o exemplo de jogo fornecido nestes documentos, consulte [Estendendo o exemplo de jogo](tutorial-resources.md).
 
-## Código de exemplo completo desta seção
+## <a name="complete-sample-code-for-this-section"></a>Código de exemplo completo desta seção
 
 
 Audio.h
@@ -560,10 +567,5 @@ void SoundEffect::PlaySound(_In_ float volume)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,17 +3,24 @@ author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: "Introdução aos controles comuns"
 title: "Introdução aos controles comuns"
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2cd4b7344074c795f14a56cddbe7807c9ffefafe
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 91ea875987d5e1659fff337f95f790ef59286d03
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introdução: controles comuns
+# <a name="getting-started-common-controls"></a>Introdução: controles comuns
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Lista de controles comuns
+## <a name="common-controls-list"></a>Lista de controles comuns
 
 Na seção anterior, você trabalhou com apenas dois controles: botões e blocos de texto. Evidentemente, há muito mais controles disponíveis. Aqui estão alguns controles comuns que você usará em seus aplicativos e seus equivalentes do iOS. Os controles de iOS estão listados em ordem alfabética, perto dos controles da Plataforma Universal do Windows (UWP) mais similares.
 
@@ -22,7 +29,7 @@ O que há de mais inteligente com relação aos controles UWP é que eles podem 
 | Controle iOS (classe/protocolo) | Controle de aplicativo da Windows Store equivalente |
 |------------------------------|--------------------------------------|
 | Indicador de atividade (**UIActivityIndicatorView**) | [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> Consulte também [Guia de início rápido: adicionando controles de progresso](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) |
-| Visualização da barra de notificação de anúncio (**ADBannerView**) e representante de visualização da barra de notificação de anúncio (**ADBannerViewDelegate**) | Consulte [Microsoft Advertising SDK](http://go.microsoft.com/fwlink/p/?LinkId=263494) |
+| Visualização da barra de notificação de anúncio (**ADBannerView**) e representante de visualização da barra de notificação de anúncio (**ADBannerViewDelegate**) | [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) <br/> Consulte também [exibir anúncios em seu aplicativo](../monetize/display-ads-in-your-app.md) |
 | Botão (UIButton) | [Botão](https://msdn.microsoft.com/library/windows/apps/br209265) <br/> Consulte também [Guia de início rápido: adicionando controles de botão](https://msdn.microsoft.com/library/windows/apps/xaml/jj153346) |
 | Seletor de data (UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
 | Visualização de imagem (UIImageView) | [Imagem](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Consulte também [Image and ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
@@ -50,18 +57,13 @@ Para ainda mais controles, consulte [Lista de controles](https://msdn.microsoft.
 
 **Observação**  Para uma lista de controles para aplicativos da Windows Store usando JavaScript e HTML, consulte [Lista de controles](https://msdn.microsoft.com/library/windows/apps/hh465453).
 
-### Próxima etapa
+### <a name="next-step"></a>Próxima etapa
 
 [Introdução: navegação](getting-started-navigation.md)
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Compilação 2014: e quanto a IU XAML e controles?](http://go.microsoft.com/fwlink/p/?LinkID=397897)
 * [Compilação 2014: desenvolvendo aplicativos usando a estrutura da IU XAML comum](http://go.microsoft.com/fwlink/p/?LinkID=397898)
 * [build 2014: usando o Visual Studio para compilar aplicativos convergidos para XAML](http://go.microsoft.com/fwlink/p/?LinkID=397876)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

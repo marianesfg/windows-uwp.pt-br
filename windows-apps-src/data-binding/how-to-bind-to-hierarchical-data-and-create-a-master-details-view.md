@@ -3,12 +3,19 @@ author: mcleblanc
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
 title: "Associar dados hierárquicos e criar um modo de exibição mestre/detalhes"
 description: "Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias CollectionViewSource que são associadas em uma cadeia."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 91786a785eece1448a36ebf48b8c8ef5c131e609
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 107d4a9778b377370632b6e8d37ad3216858d251
+ms.lasthandoff: 02/07/2017
 
 ---
-# Associar dados hierárquicos e criar um modo de exibição mestre/detalhes
+# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Associar dados hierárquicos e criar um modo de exibição mestre/detalhes
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -23,15 +30,15 @@ Criaremos um modo de exibição de hierarquia de esportes em equipe que é organ
 
 ![modo de exibição mestre/detalhado de uma hierarquia de esportes](images/xaml-masterdetails.png)
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este tópico pressupõe que você saiba como criar um aplicativo UWP básico. Para obter instruções para criar seu primeiro aplicativo UWP, consulte [Criar seu primeiro aplicativo UWP em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/Hh974581).
 
-## Criar o projeto
+## <a name="create-the-project"></a>Criar o projeto
 
 Crie um novo projeto **Aplicativo em branco (universal do Windows)**. Chame-o de "MasterDetailsBinding".
 
-## Criar o modelo de dados
+## <a name="create-the-data-model"></a>Criar o modelo de dados
 
 Adicione uma nova classe a seu projeto, chame-a de ViewModel.cs e adicione este código a ela. Esta será sua classe de origem de associação.
 
@@ -104,7 +111,7 @@ namespace MasterDetailsBinding
 }
 ```
 
-## Criar o modo de exibição
+## <a name="create-the-view"></a>Criar o modo de exibição
 
 Em seguida, exponha a classe de origem de associação na classe que representa a página de marcação. Fazemos isso adicionando uma propriedade do tipo **LeagueList** a **MainPage**.
 
@@ -221,10 +228,5 @@ Observe que ao associar diretamente o [**CollectionViewSource**](https://msdn.mi
  
 
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

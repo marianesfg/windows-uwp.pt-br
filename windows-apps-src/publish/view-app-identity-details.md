@@ -3,13 +3,20 @@ author: jnHs
 Description: "Ao trabalhar com um aplicativo no painel do Centro de Desenvolvimento do Windows, você pode exibir detalhes relacionados à identidade exclusiva atribuída a ele pela Windows Store e obter um link para os detalhes do seu aplicativo na Loja."
 title: Exibir detalhes de identidade do aplicativo
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a25d87556bb85718f818af5b586f54e6985aaaa4
-ms.openlocfilehash: dc61971865a05e1de17cdcf55ab495fee4917b74
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b9cbe976eb5aece26cac54f7ae8693aef5009ca3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Exibir detalhes de identidade do aplicativo
+# <a name="view-app-identity-details"></a>Exibir detalhes de identidade do aplicativo
 
 
 Ao trabalhar com um aplicativo no painel do Centro de Desenvolvimento do Windows, você pode exibir detalhes relacionados à identidade exclusiva atribuída a ele pela Windows Store e obter um link para os detalhes do seu aplicativo na Loja.
@@ -18,7 +25,7 @@ Para encontrar essas informações, navegue para um dos seus aplicativos, depois
 
 > **Observação** você precisa ter um [nome reservado](create-your-app-by-reserving-a-name.md) para o seu aplicativo para ver a maioria desses detalhes de identidade.
 
-## Valores a serem incluídos no manifesto appx
+## <a name="values-to-include-in-your-appx-manifest"></a>Valores a serem incluídos no manifesto appx
 
 
 Os seguintes valores devem ser incluídos em seu manifesto appx. Se você estiver usando o Microsoft Visual Studio para criar seus pacotes, e está conectado com a mesma conta da Microsoft que você associou com sua conta de desenvolvedor, esses detalhes serão incluídos automaticamente. Se você estiver criando o pacote manualmente, precisará adicioná-los.
@@ -30,7 +37,7 @@ Para saber mais, consulte [**Identity**](https://msdn.microsoft.com/library/wind
 
 Juntos, esses elementos declaram a identidade do seu aplicativo, estabelecendo a "família do pacote" a qual todos os seus pacotes pertencem. Pacotes individuais terão detalhes adicionais, como arquitetura e versão.
 
-## Valores adicionais de família de pacote
+## <a name="additional-values-for-package-family"></a>Valores adicionais de família de pacote
 
 
 Os valores seguintes são valores adicionais que se referem à família de pacote do seu aplicativo, mas que não estão incluídos em seu manifesto.
@@ -38,7 +45,7 @@ Os valores seguintes são valores adicionais que se referem à família de pacot
 -   **Nome da Família de Pacotes (PFN)**: esse valor é usado com determinadas APIs do Windows.
 -   **SID de pacote**: você precisará desse valor para enviar notificações do WNS para seu aplicativo. Para saber mais, consulte a [Visão geral do WNS (Serviços de Notificação por Push do Windows)](https://msdn.microsoft.com/library/windows/apps/mt187203).
 
-## Link com os detalhes do seu aplicativo
+## <a name="link-to-your-apps-listing"></a>Link com os detalhes do seu aplicativo
 
 O link para a página do seu aplicativo pode ser compartilhado para ajudar os clientes a encontrar o aplicativo na Loja. Este link está no formato **`https://www.microsoft.com/store/apps/<your app's Store ID>`**.
 
@@ -54,10 +61,5 @@ O **ID da Loja** de seu aplicativo também é mostrado nesta seção. Esse ID da
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

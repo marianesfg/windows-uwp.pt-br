@@ -1,21 +1,27 @@
 ---
 author: mcleanbyron
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
-description: "Saiba como adicionar valores de ID da unidade de anúncios e do aplicativo do painel do Centro de Desenvolvimento do Windows ao seu aplicativo antes de enviá-lo para a Loja."
+description: "Confira como adicionar valores de ID da unidade de anúncios e do aplicativo do painel do Centro de Desenvolvimento do Windows ao seu aplicativo antes de enviá-lo para a Loja."
 title: "Configurar unidades de anúncios em seu aplicativo"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anúncios, publicidade, unidades de anúncio"
 translationtype: Human Translation
-ms.sourcegitcommit: c6e0cf98c6eb2cdc656d5b4555d794ff6a94d2bc
-ms.openlocfilehash: 705955faf7ddd67f80098f8c3ac7b2844553de95
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 32a934f1d113d561c72ab3ac48a8ef3d0820c176
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Configurar unidades de anúncios em seu aplicativo
+# <a name="set-up-ad-units-in-your-app"></a>Configurar unidades de anúncios em seu aplicativo
 
 
 
 
-Quando você usa um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) ou [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) para exibir anúncios em seu aplicativo, você deve especificar um ID do aplicativo e de unidade de anúncios. Enquanto você estiver desenvolvendo seu aplicativo, use os valores de [ID do aplicativo de teste e ID da unidade de anúncios](test-mode-values.md) para ver como seu aplicativo renderiza anúncios durante o teste.
+Ao usar um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) ou [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) para exibir anúncios em seu aplicativo, você deve especificar um ID do aplicativo e de unidade de anúncios. Enquanto você estiver desenvolvendo seu aplicativo, use os valores de [ID do aplicativo de teste e ID da unidade de anúncios](test-mode-values.md) para ver como seu aplicativo renderiza anúncios durante o teste.
 
 Depois que você terminar o teste de seu aplicativo e estiver pronto para enviá-lo para o Centro de Desenvolvimento do Windows, atualize o código do aplicativo para usar os valores de ID do aplicativo e ID da unidade de anúncios do [painel do Centro de Desenvolvimento do Windows](https://msdn.microsoft.com/library/windows/apps/mt170658.aspx). Se você tentar usar valores de teste em seu aplicativo dinâmico, seu aplicativo não receberá anúncios ativos.
 
@@ -32,7 +38,7 @@ Para configurar as unidades de anúncios e ID do aplicativo para o seu aplicativ
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 [Valores de modo de teste](test-mode-values.md)
 
@@ -40,9 +46,4 @@ Para configurar as unidades de anúncios e ID do aplicativo para o seu aplicativ
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

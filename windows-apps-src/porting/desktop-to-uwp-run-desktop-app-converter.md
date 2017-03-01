@@ -1,11 +1,19 @@
 ---
 author: awkoren
-Description: "Execute o conversor de aplicativos da área de trabalho para converter um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms) em um aplicativo UWP (Plataforma Universal do Windows)."
+Description: "Execute o Desktop Converter App para converter um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms) em um aplicativo UWP (Plataforma Universal do Windows)."
 Search.Product: eADQiWindows 10XVcnh
 title: Desktop App Converter
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 translationtype: Human Translation
-ms.sourcegitcommit: bf6da2f4d780774819fe7a4abf6367345304767c
-ms.openlocfilehash: 3ffd664892fe5ee589d3bf5704e2eeed178bf5f3
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 046a3b474aa281b1b09002a922dc2acdb7833599
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -17,76 +25,15 @@ O Desktop App Converter (DAC) é uma ferramenta que permite converter seus aplic
 
 O Desktop App Converter está disponível agora na [Windows Store](https://aka.ms/converter).
 
-O conversor executa o instalador da área de trabalho em um ambiente isolado do Windows usando uma imagem de base limpa fornecida como parte do download do conversor. Ele captura qualquer E/S do registro e do sistema de arquivos feita pelo instalador da área de trabalho e a empacota como parte da saída. O conversor gera um AppX com identificador de pacote e a capacidade para chamar uma variedade maior de APIs do WinRT.
+O conversor executa o instalador da área de trabalho em um ambiente isolado do Windows usando uma imagem de base limpa fornecida como parte do download do conversor. Ele captura qualquer E/S do registro e do sistema de arquivos feita pelo instalador da área de trabalho e a empacota como parte da saída. O conversor gera um AppX com identificador de pacote e a capacidade para chamar uma grande variedade de APIs do WinRT.
 
 ## <a name="whats-new"></a>Novidades
 
-Esta seção descreve as mudanças entre versões do Desktop App Converter. 
+A versão mais recente do DAC é v1.0.6.0. Novo nesta atualização:
 
-### <a name="12142016-v104"></a>14/12/2016 (v1.0.4)
-
-* Aprimorada a validação da imagem base para verificar se há arquivos .wim inválidos. 
-* Correção do bug para caracteres especiais no parâmetro ```-Publisher```. 
-* Ativos atualizados.
-
-### <a name="1122016-v101"></a>2/11/2016 (v 1.0.1)
-
-* Aprimorada a validação de esquema de manifesto. 
-* Aprimoradas as mensagens de erro. 
-* Adicionada a validação de versões do Windows com suporte. 
-* Correções de bugs para testes de filtro do Registro.
-
-### <a name="9142016-v10"></a>14/9/2016 (v1.0)
-
-* O Desktop App Converter já está disponível para download na [Windows Store](https://aka.ms/converter)! 
-* Pegue as últimas Imagens de Base do Windows 10 (.wim) no [Centro de Download](https://aka.ms/converterimages) para uso com o DAC.
-* Com o aplicativo da loja, agora você pode usar o novo ponto inicial *DesktopAppConverter.exe <arguments>* para executar o conversor de qualquer lugar em um prompt de comando com privilégios elevados ou a janela do PowerShell.  
-
-
-### <a name="922016-v0125"></a>2/9/2016 (v0.1.25)
-
-* Integrado ao pacote dotnet computervirtualization do NuGet mais recente.
-* Adicionado as dependências novas no common.dll.
-* Várias correções de bugs.
-
-### <a name="842016-v0124"></a>4/8/2016 (v0.1.24)
-
-* Adicionado suporte à assinatura automática para aplicativos convertidos produzidos pela DAC para fins de teste. Confira o sinalizador ```–Sign``` para experimentá-lo. 
-* Adicionado avisos se qualquer um dos registros COM no hive do registro virtual não é suportado dentro do pacote AppX.  
-* Adicionado suporte para detecção automática de dependências do aplicativo em bibliotecas de VC++ e, em seguida, convertê-los para dependências de manifesto do AppX. Observe que a fim de fazer o sideload e testes dos aplicativos em tempo de execução do VC++, você precisará baixar os pacotes de estruturas VCLib conforme descrito na postagem do blog [Usando o Tempo de Execução do Microsoft Visual C++ em um projeto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project). Localize os pacotes sob a pasta ```Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop``` no seu computador, navegue até a versão dependente (por exemplo, 11.0, 12.0, 14.0) e clique duas vezes no pacote de arquitetura apropriado (x64, x86) para instalá-lo.
-* Atualizado os esquemas de manifesto para se alinhar com a Atualização de Aniversário do Windows 10 (10.0.14393.0). 
-* Várias correções de bugs e layout de saída aprimorado. 
-
-### <a name="772016-v0122"></a>7/7/2016 (v0.1.22)
-
-* Suporte adicionado para detecção automática de extensões do shell do seu aplicativo da área de trabalho e declaração delas no AppXManifest de seu pacote UWP. Para saber mais sobre as extensões de área de trabalho, consulte [**Extensões de aplicativo da área de trabalho convertido**](desktop-to-uwp-extensions.md). 
-* Detecção de AppExecutable aprimorada para um grande conjunto de aplicativos. 
-
-### <a name="6162016-v0120"></a>16/6/2016 (v0.1.20)
-
-* Corrige problemas de bloqueio de conversões em compilações mais recentes do Windows 10 Insider Preview. 
-* Substituído o ```–CreateX86Package``` pelo ```–PackageArch```, o que permite que você especifique a arquitetura para o pacote gerado. 
-
-### <a name="682016"></a>8/6/2016
-
-* Adicionado o suporte para a geração de pacotes appx x86 em computadores host AMD64 que executam o conversor.
-* Uso de espaço em disco reduzido pela remoção de todas as imagens base expandidas anteriormente.
-* Adicionado o suporte para a limpeza dos arquivos temporários e as imagens de base desnecessárias.
-* Suporte aprimorado para a detecção de associações de protocolo e tipo de arquivo.
-* Lógica aprimorada para detectar a propriedade AppExecutable para um conjunto grande de aplicativos.
-* Adicionado o suporte para fornecer – InstallerArguments adicionais para instaladores com base em MSI.
-* Correções de erros PathTooLongException durante o processo de conversão.
-
-### <a name="5122016"></a>12/5/2016
-
-- Restaurado o suporte para a edição Pro do Windows. 
-- O sinalizador ```-Setup``` do conversor agora habilita o recurso Contêineres do Windows e lida com a expansão de imagem de base. Execute o seguinte em um prompt do PowerShell com privilégios elevados para fazer uma instalação única: ```PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage BaseImage-12345.wim -Verbose```
-- Adicionada a detecção automática do caminho de instalação do aplicativo e movida a raiz do aplicativo para fora do VFS para reduzir redirecionamentos de sistema de arquivos desnecessários no tempo de execução.
-- Adicionada a detecção automática da imagem de base expandida como parte do processo de conversão.
-- Adicionada a detecção automática de associações de tipos de arquivos e protocolos.
-- Lógica aprimorada para detectar o atalho do Menu Iniciar.
-- Filtragem de sistema de arquivo aprimorada para reter os arquivos MUI instalados do aplicativo.
-- Atualizada a versão de área de trabalho com suporte mínimo (10.0.14342.0) no manifesto.
+* Extração de ícone: O DAC usa ícones em seu aplicativo da área de trabalho para gerar ativos visuais usados por seu pacote de aplicativo convertido.
+* Limpeza aprimorada de imagens de base expandidas, arquivos temporários e rede de contêiner e funcionalidade.
+* Várias correções de bugs. 
 
 ## <a name="system-requirements"></a>Requisitos do sistema
 
@@ -108,11 +55,11 @@ Esta seção descreve as mudanças entre versões do Desktop App Converter.
 
 O Desktop App Converter depende dos recursos mais recentes do Windows 10. Certifique-se de que você esteja usando a Atualização de Aniversário do Windows 10 (14393.0) ou builds posteriores.
 
-1.  Baixe o [DesktopAppConverter na Windows Store](https://aka.ms/converter) e o [arquivo .wim de imagem base correspondente à compilação](https://aka.ms/converterimages).  
-2.  Execute o DesktopAppConverter como administrador. Você pode fazer isso no menu Iniciar clicando com o botão direito do mouse no bloco e selecionando *Executar como administrador* em *Mais* ou, na barra de tarefas, clicando com o botão direito do mouse no bloco, clicando uma segunda vez no nome do aplicativo exibido e selecionando *Executar como administrador*.
-3.  Na janela de console do aplicativo, execute ```Set-ExecutionPolicy bypass```.
-4.  Configure o conversor executando ```DesktopAppConverter.exe -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose``` na janela de console do aplicativo.
-5.  Se a execução do comando anterior exigir uma reinicialização, reinicie o computador.
+1.    Baixe o [DesktopAppConverter na Windows Store](https://aka.ms/converter) e o [arquivo .wim de imagem base correspondente à compilação](https://aka.ms/converterimages).  
+2.    Execute o DesktopAppConverter como administrador. Você pode fazer isso no menu Iniciar clicando com o botão direito do mouse no bloco e selecionando *Executar como administrador* em *Mais* ou, na barra de tarefas, clicando com o botão direito do mouse no bloco, clicando uma segunda vez no nome do aplicativo exibido e selecionando *Executar como administrador*.
+3.    Na janela de console do aplicativo, execute ```Set-ExecutionPolicy bypass```.
+4.    Configure o conversor executando ```DesktopAppConverter.exe -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose``` na janela de console do aplicativo.
+5.    Se a execução do comando anterior exigir uma reinicialização, reinicie o computador.
 
 ## <a name="run-the-desktop-app-converter"></a>Executar o Desktop App Converter
 
@@ -308,8 +255,3 @@ O Desktop App Converter não possui suporte para Unicode, assim, não podem ser 
 
 + [Transformando aplicativos da área de trabalho em UWP usando o Desktop App Converter](https://channel9.msdn.com/events/Build/2016/P504)
 + [Projeto Centennial: trazendo aplicativos da área de trabalho existentes para a Plataforma Universal do Windows](https://channel9.msdn.com/events/Build/2016/B829)  
-
-
-<!--HONumber=Dec16_HO3-->
-
-

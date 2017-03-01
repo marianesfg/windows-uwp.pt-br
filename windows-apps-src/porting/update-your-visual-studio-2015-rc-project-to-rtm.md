@@ -1,21 +1,28 @@
 ---
 author: mcleblanc
 description: "Se você tiver um projeto do Windows 10 criado com o Microsoft Visual Studio 2015 RC, terá duas opções de atualização dos arquivos de projeto para o formato adequado para Visual Studio 2015 RTM."
-title: Atualizar seu projeto do Microsoft Visual Studio 2015 RC para RTM na UWP
+title: Atualizar seu projeto UWP do Microsoft Visual Studio 2015 RC para RTM
 ms.assetid: 104E36CE-36DE-4E9C-A944-711C200B44EF
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 10c65c359f3a0791ba03288a745bc732b94251b7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ad7754a55a34ba3921d9455209cc76ab8ae0757b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Atualizar seu projeto do Microsoft Visual Studio 2015 RC para RTM na UWP
+# <a name="update-your-uwp-microsoft-visual-studio-2015-rc-project-to-rtm"></a>Atualizar seu projeto UWP do Microsoft Visual Studio 2015 RC para RTM
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Se você tiver um projeto do Windows 10 criado com o Microsoft Visual Studio 2015 RC, terá duas opções de atualização dos arquivos de projeto para o formato adequado para Visual Studio 2015 RTM. O método recomendado é criar um novo projeto do Windows 10 no Visual Studio 2015 RTM e copiar seus arquivos para ele. Como alternativa, você pode seguir a documentação avançada para editar seus arquivos de projeto existentes e transferi-los para o novo formato.
 
-## O que você vê quando abre um projeto do Windows 10Visual Studio 2015 RC no Visual Studio 2015 RTM
+## <a name="what-you-see-when-you-open-a-windows-10visual-studio-2015-rc-project-in-visual-studio-2015-rtm"></a>O que você vê quando abre um projeto do Windows 10Visual Studio 2015 RC no Visual Studio 2015 RTM
 
 Quando você abrir um projeto do Windows 10Visual Studio 2015 RC no Visual Studio 2015 RTM, você verá uma mensagem de "atualização necessária" no **Gerenciador de Soluções**.
 
@@ -25,7 +32,7 @@ Se você acessar o menu de contexto do projeto no **Gerenciador de Soluções** 
 
 ![atualização do visual studio necessária](images/vsrc-to-rtm/reload-project.png)
 
-## Crie um novo projeto e copie os arquivos nele
+## <a name="create-a-new-project-and-copy-files-into-it"></a>Crie um novo projeto e copie os arquivos nele
 
 1.  Inicie o Microsoft Visual Studio 2015 RTM e crie um novo projeto Aplicativo em Branco (Windows Universal). Lembre-se de que, por padrão, o novo projeto cria um pacote do aplicativo (um arquivo appx) direcionado à família de dispositivos Universal. Altere isto se você está direcionando uma ou mais famílias de dispositivos específicos.
 2.  No seu projeto do Visual Studio 2015 RC, identifique todos os arquivos de código-fonte e arquivos de ativo visual que você deseja copiar. Usando o Explorador de Arquivos, copie modelos de dados, modelos de exibição, ativos visuais, Dicionários de Recursos, estrutura de pastas e qualquer outra coisa de que precise (inclusive AssemblyInfo.cs) para seu novo projeto. Copie ou crie subpastas no disco conforme necessário.
@@ -33,15 +40,10 @@ Se você acessar o menu de contexto do projeto no **Gerenciador de Soluções** 
 4.  No **Gerenciador de Soluções**, verifique se **Mostrar Todos os Arquivos** está ativado. Selecione os arquivos copiados, clique neles com o botão direito do mouse e clique em **Incluir no Projeto**. Isso incluirá automaticamente suas pastas continentes. Em seguida, você pode desativar **Mostrar Todos os Arquivos**, se desejar. Um fluxo de trabalho alternativo, se preferir, é usar o comando **Adicionar Item Existente**, tendo criado qualquer subpasta necessária no **Gerenciador de Soluções** do Visual Studio. Verifique se os ativos visuais têm **Ação de Compilação** definida como **Conteúdo** e **Copiar para Diretório de Saída** definida como **Não Copiar**.
 5.  Adicione referências a qualquer extensão SDKs que você mencionou em seu projeto RC, e copie quaisquer alterações de seu Package.appxmanifest anterior (por exemplo, quaisquer recursos declarados) para aquela no novo projeto RTM.
 
-## Avançadas: Editar seus arquivos de projeto existentes
+## <a name="advanced-edit-your-existing-project-files"></a>Avançadas: Editar seus arquivos de projeto existentes
 
 Uma diferença significativa entre o formato do projeto Windows 10 do Visual Studio 2015 RC e do Visual Studio 2015 RTM é que o formato RTM utiliza [NuGet](http://docs.nuget.org/) versão 3. Mantenha esta diferença em mente se você pretende atualizar manualmente seu projeto.
 
 Se você deseja atualizar manualmente seu projeto, ou se você estiver interessado em conhecer as diferenças entre os formatos de projeto do Visual Studio 2015 RC e do Visual Studio 2015 RTM, consulte [Migrar aplicativos para UWP (Plataforma Universal do Windows)](http://msdn.microsoft.com/library/mt148501.aspx).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

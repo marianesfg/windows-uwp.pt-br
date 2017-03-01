@@ -3,16 +3,23 @@ author: mtoepke
 title: Criar sombreadores e desenhando primitivas
 description: "Aqui, mostramos a você como usar arquivos de origem HLSL para compilar e criar sombreadores que você pode usar para desenhar primitivas no monitor."
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, sombreadores, primitivas, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 36ce1c3c0df0dd9dd4f5cf3d31282d5b15050f5c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 62f4b9b641a3c365659e44893a8a7801f2c1f6c0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Criar sombreadores e desenhando primitivas
+# <a name="create-shaders-and-drawing-primitives"></a>Criar sombreadores e desenhando primitivas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aqui, mostramos a você como usar arquivos de origem HLSL para compilar e criar sombreadores que você pode usar para desenhar primitivas no monitor.
 
@@ -20,7 +27,7 @@ Podemos criar e desenhar um triângulo amarelo usando sombreadores de vértice e
 
 **Objetivo:** criar sombreadores e desenhar primitivas.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Partimos do princípio de que você conhece C++. Você também precisa ter experiência básica com conceitos de programação de elementos gráficos.
@@ -29,9 +36,9 @@ Também supomos que você leu [Guia de início rápido: configurando recursos Di
 
 **Tempo para concluir:** 20 minutos.
 
-## Instruções
+## <a name="instructions"></a>Instruções
 
-### 1. Compilar arquivos de origem HLSL
+### <a name="1-compiling-hlsl-source-files"></a>1. Compilar arquivos de origem HLSL
 
 O Microsoft Visual Studio usa o compilador de código HLSL [fxc.exe](https://msdn.microsoft.com/library/windows/desktop/bb232919) para compilar os arquivos-fonte .hlsl (SimpleVertexShader.hlsl e SimplePixelShader.hlsl) nos arquivos de objeto de sombreador binário .cso (SimpleVertexShader.cso e SimplePixelShader.cso). Para saber mais sobre o compilador de código HLSL, consulte a Ferramenta Compilador de Efeitos. Para saber mais sobre o código de sombreador de compilação, consulte [Compilando sombreadores](https://msdn.microsoft.com/library/windows/desktop/bb509633).
 
@@ -74,11 +81,11 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 }
 ```
 
-### 2. Ler dados do disco
+### <a name="2-reading-data-from-disk"></a>2. Ler dados do disco
 
-Usamos a função DX::ReadDataAsync do DirectXHelper.h no modelo de aplicativo do DirectX 11 (Windows Universal) para ler dados de forma assíncrona em um arquivo no disco.
+Usamos a função DX::ReadDataAsync do DirectXHelper.h no modelo de app do DirectX 11 (Windows Universal) para ler dados de forma assíncrona em um arquivo no disco.
 
-### 3. Criar sombreadores de vértice e de pixel
+### <a name="3-creating-vertex-and-pixel-shaders"></a>3. Criar sombreadores de vértice e de pixel
 
 Lemos os dados do arquivo SimpleVertexShader.cso e atribuímos os dados à matriz de bytes *vertexShaderBytecode*. Chamamos [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) com a matriz de bytes para criar o sombreador de vértice ([**ID3D11VertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476641)). Definimos o valor de profundidade de vértice como 0,5 na origem SimpleVertexShader.hlsl para garantir que nosso triângulo seja desenhado. Populamos uma matriz de estruturas [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) para descrever o layout do código de sombreador de vértice e chamar [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) para criar o layout. A matriz tem um elemento de layout que define a posição do vértice. Lemos os dados do arquivo SimplePixelShader.cso e atribuímos os dados à matriz de bytes *pixelShaderBytecode*. Chamamos [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) com a matriz de bytes para criar o sombreador de vértice ([**ID3D11PixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476576)). Definimos o valor de pixel como (1,1,1,1) na origem SimplePixelShader.hlsl para fazer nosso triângulo ficar amarelo. Você pode alterar a cor alterando este valor.
 
@@ -197,7 +204,7 @@ Podemos criar buffers de vértice e de índice que definem um triângulo simples
 
 Usamos os sombreadores de vértice e de índice, o layout de sombreador de vértice e os buffers de vértice e de índice para desenhar um triângulo amarelo.
 
-### 4. Desenhar o triângulo e apresentar a imagem renderizada
+### <a name="4-drawing-the-triangle-and-presenting-the-rendered-image"></a>4. Desenhar o triângulo e apresentar a imagem renderizada
 
 Entramos em um loop infinito para processar e exibir a cena continuamente. Chamamos [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar o destino de renderização como o destino de saída. Chamamos [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) com { 0.071f, 0.04f, 0.561f, 1.0f } para limpar o destino de renderização para uma cor azul sólida.
 
@@ -277,7 +284,7 @@ Como nos tutoriais anteriores, chamamos [**IDXGISwapChain::Present**](https://ms
                 );
 ```
 
-## Resumo e próximas etapas
+## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
 
 Criamos e desenhamos um triângulo amarelo usando sombreadores de vértice e de pixel.
@@ -292,10 +299,5 @@ Em seguida, criamos um cubo 3D em órbita e aplicamos os efeitos de iluminação
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

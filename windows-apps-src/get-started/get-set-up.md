@@ -3,20 +3,23 @@ author: GrantMeStrength
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: "Prepare-se para começar"
 description: "É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10."
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 75c036fc934a8071f17a8690a22a03e10c4fe1d4
-ms.openlocfilehash: 729c71fbe0db202bd4f5ce15bea87caa973adf80
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 96b6b477efd42b46b8aaf553de2482e1946c9cd7
+ms.lasthandoff: 02/07/2017
 
 ---
-# Prepare-se para começar
+# <a name="get-set-up"></a>Faça a configuração
 
 É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
 
-> [!NOTE]
-> Você é um usuário do Mac? Ou talvez você não queira instalar nada em seu computador ainda? Experimente as [máquinas virtuais baseadas na Web configuradas para desafios de codificação do Build2016](https://developer.microsoft.com/windows/projects/events/build2016/all/codingchallenges).
-
-
-## 1. Obtenha o Windows 10
+## <a name="1-get-windows-10"></a>1. Obtenha o Windows 10
 
 Para desenvolver aplicativos UWP, você precisará da versão mais recente do Windows.
 
@@ -28,7 +31,7 @@ Você é assinante do MSDN? É possível obter os downloads ISO aqui:
 
 
 
-## 2. Baixe ou atualize o Visual Studio
+## <a name="2-download-or-update-visual-studio"></a>2. Baixe ou atualize o Visual Studio
 
 O Microsoft Visual Studio 2015 ajuda você a projetar, codificar, testar e depurar seus aplicativos.
 
@@ -40,31 +43,28 @@ Quando você instalar o Visual Studio, use a opção personalizada e verifique s
 
 ![Ferramentas do Visual Studio para UWP](images/vs-2015-community-setup.png)
 
-## 3. Habilitar seu dispositivo para desenvolvimento
+Alguns de ajuda com o Visual Studio? Consulte [introdução ao Visual Studio](https://www.visualstudio.com/vs/getting-started).
+
+## <a name="3-enable-your-device-for-development"></a>3. Habilitar seu dispositivo para desenvolvimento
 
 É importante testar os aplicativos UWP em computadores e telefones reais. Antes de implantar aplicativos em seu PC ou Windows Phone, você precisa habilitá-lo para desenvolvimento.
 
 -   Para instruções detalhadas, consulte [Enable your device for development](enable-your-device-for-development.md).
 
-## 4. Registrar como um desenvolvedor de aplicativo
+## <a name="4-register-as-an-app-developer"></a>4. Registrar como um desenvolvedor de aplicativo
 
 Você pode começar a desenvolver aplicativos agora, mas antes de enviá-los para a loja, você precisa de uma conta de desenvolvedor.
 
 -   Para obter uma conta de desenvolvedor, acesse a página [Inscrever-se](sign-up.md).
 
-## O que vem em seguida?
+## <a name="whats-next"></a>O que vem em seguida?
 
 Após instalar as ferramentas e obtido uma licença de desenvolvedor ou uma conta de desenvolvedor, use o nosso tutorial para criar seu primeiro aplicativo:
 
 -   Tutoriais para [Criar seu primeiro aplicativo](your-first-app.md)
 
-## Deseja mais ferramentas e downloads?
+## <a name="want-more-tools-and-downloads"></a>Deseja mais ferramentas e downloads?
 
 Para obter a lista completa de ferramentas e downloads, consulte [Downloads](http://go.microsoft.com/fwlink/p/?linkid=285935).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

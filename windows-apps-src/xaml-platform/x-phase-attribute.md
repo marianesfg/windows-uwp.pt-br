@@ -3,39 +3,46 @@ author: jwmsft
 title: Atributo xPhase
 description: "Use xPhase com a extensão de marcação xBind para renderizar os itens ListView e GridView de maneira incremental e melhorar a experiência de movimento panorâmico."
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: c6100f59bb91bc3c6451fc2167d914b0a4a36ded
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 873da2adeea277e0f8f869703aac782c21b0419e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# atributo x:Phase
+# <a name="xphase-attribute"></a>atributo x:Phase
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use **x:Phase** com a [extensão de marcação {x:Bind}](x-bind-markup-extension.md) para renderizar os itens [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) de maneira incremental e melhorar a experiência de movimento panorâmico. **x:Phase** oferece uma maneira declarativa de conseguir o mesmo efeito que o uso do evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) para controlar manualmente a renderização de itens de lista. Consulte também [Atualizar os itens GridView e ListView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
-## Uso do atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
 
 ``` syntax
 <object x:Phase="PhaseValue".../>
 ```
 
-## Valores XAML
+## <a name="xaml-values"></a>Valores XAML
 
 
 | Termo | Descrição |
 |------|-------------|
 | PhaseValue | Um número que indica a fase em que o elemento será processado. O valor padrão é 0. | 
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Se uma lista é girada rapidamente com toque ou usando a roda do mouse, então, dependendo da complexidade do modelo de dados, a lista pode não ser capaz de renderizar itens suficientemente rápido para se manter atualizada com a velocidade de rolagem. Isso é especialmente verdadeiro para um dispositivo portátil com uma CPU de baixo consumo de energia, como um telefone ou um tablet.
 
 O atributo Phase permite renderização incremental do modelo de dados, de modo que os conteúdos possam ser priorizados e os elementos mais importantes processados primeiro. Isso permite que a lista mostre algum conteúdo para cada item se o movimento panorâmico for rápido, e renderizará mais elementos de cada modelo se houver tempo suficiente.
 
-## Exemplo
+## <a name="example"></a>Exemplo
 
 ```xml
 <DataTemplate x:Key="PhasedFileTemplate" x:DataType="model:FileItem">
@@ -77,10 +84,5 @@ Números de fase não precisam ser contíguos e são os mesmos do valor de [**Co
 O atributo Phase afeta apenas associações [{x: Bind}](x-bind-markup-extension.md), não associações [{Binding}](binding-markup-extension.md).
 
 O atributo Phase será aplicado somente quando o modelo de item for renderizado, usando um controle que está ciente do atributo Phase. Para o Windows 10, isso significa [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). O atributo Phase não será aplicado aos modelos de dados usados em outros controles de item, ou para outros cenários, como as seções [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) ou [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843), nesses casos, todos os elementos de interface do usuário serão dados associados ao mesmo tempo.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

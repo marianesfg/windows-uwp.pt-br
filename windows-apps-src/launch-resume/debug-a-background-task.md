@@ -1,11 +1,18 @@
 ---
 author: TylerMSFT
 title: Depurar uma tarefa em segundo plano
-description: "Aprenda a depurar uma tarefa em segundo plano, incluindo ativação e rastreamento de depuração de tarefas em seguindo plano no log de eventos do Windows."
+description: "Aprenda a depurar uma tarefa em segundo plano, incluindo ativação e rastreamento de depuração de tarefas em segundo plano no log de eventos do Windows."
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: 6e1184729af929b771f21112083593e321cacc38
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6200a8363c8a638f2ee44bdad6902748fb9adf45
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -42,7 +49,7 @@ As tarefas em segundo plano podem ser ativadas manualmente por meio do Microsoft
     Para que isso funcione, a tarefa em segundo plano já deve ter sido registrada e ainda deve estar aguardando ser acionada. Por exemplo, se a tarefa em segundo plano foi registrada com um TimeTrigger único e esse gatilho já tiver sido disparado, iniciar a tarefa através do Visual Studio não produzirá nenhum efeito.
 
 > [!Note]
-> Tarefas em segundo plano usando os seguintes gatilhos não podem ser ativadas desta maneira: [**Gatilho de aplicativo**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.applicationtrigger.aspx), [**Gatilho MediaProcessing**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.mediaprocessingtrigger.aspx),  [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032),  [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) e tarefas em segundo plano usando um [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) com o tipo de gatilho [**SmsReceived**](https://msdn.microsoft.com/library/windows/apps/br224839).  
+> Tarefas em segundo plano usando os seguintes gatilhos não podem ser ativadas desta maneira: [**Gatilho de aplicativo**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.applicationtrigger.aspx), [**Gatilho MediaProcessing**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.mediaprocessingtrigger.aspx),  [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032),  [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) e tarefas em segundo plano usando um [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) com o tipo de gatilho [**SmsReceived**](https://msdn.microsoft.com/library/windows/apps/br224839).  
 > O **Gatilho de aplicativo** e o **MediaProcessingTrigger** podem ser sinalizados manualmente no código com `trigger.RequestAsync()`.     
 
     ![debugging background tasks](images/debugging-activation.png)
@@ -113,9 +120,4 @@ Para obter mais informações sobre como usar o VS para depurar uma tarefa em se
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

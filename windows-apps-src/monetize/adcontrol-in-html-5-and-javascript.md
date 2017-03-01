@@ -1,24 +1,31 @@
 ---
 author: mcleanbyron
 ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
-description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo JavaScript/HTML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1."
+description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um app JavaScript/HTML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1."
 title: AdControl em HTML 5 e JavaScript
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anúncios, publicidade, AdControl, javascript, HTML"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: 509cfe00050c5b5b3997af0e2906676f946d9278
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cda74aaf6301f0cc04c5a9ae5c2aad5cf43d8b7e
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="adcontrol-in-html-5-and-javascript"></a>AdControl em HTML 5 e JavaScript
 
-Este guia passo a passo mostra como usar a classe [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para exibir anúncios em faixa em um aplicativo JavaScript/HTML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1. Este guia passo a passo não usa o **AdMediatorControl** nem a mediação de anúncios.
+Este guia passo a passo mostra como usar a classe [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para exibir anúncios em faixa em um app JavaScript/HTML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1. Este guia passo a passo não usa o **AdMediatorControl** nem a mediação de anúncios.
 
-Para um projeto de exemplo completo que demonstra como adicionar anúncios em faixa a um aplicativo JavaScript/HTML, consulte os [Exemplos de publicidade no GitHub](http://aka.ms/githubads).
+Para um projeto de exemplo completo que demonstra como adicionar anúncios em faixa a um app JavaScript/HTML, consulte os [Exemplos de publicidade no GitHub](http://aka.ms/githubads).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 
-* Para aplicativos UWP: instale o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) com o Visual Studio 2015.
+* Para apps UWP: instale o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) com o Visual Studio 2015.
 * Em aplicativos do Windows 8.1 ou Windows Phone 8.1: instale o [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk) com o Visual Studio 2015 ou o Visual Studio 2013.
 
 > **Observação**&nbsp;&nbsp;Se você instalou a Compilação 14295 do Windows 10 Anniversary SDK Preview ou superior com o Visual Studio 2015, também deverá instalar a biblioteca WinJS. Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows para Windows 10, mas a partir da Compilação do 14295 Windows 10 Anniversary SDK Preview, ela deve ser instalada separadamente. Para instalar o WinJS, consulte [Baixar o WinJS](http://try.buildwinjs.com/download/GetWinJS/).
@@ -41,7 +48,7 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 
     ![javascriptaddreference](images/13-f7f6d6a6-161e-4f17-995d-1236d0b5d9f2.png)
 
-    > **Observação**&nbsp;&nbsp;Esta imagem é do Visual Studio 2015 compilando um projeto UWP para Windows 10. Se você estiver compilando um app do Windows 8.1 ou Windows Phone 8.1 ou usando o Visual Studio 2013, sua tela terá uma aparência diferente.
+    > **Observação**&nbsp;&nbsp;Esta imagem é do Visual Studio 2015 compilando um projeto UWP para Windows 10. Se você estiver compilando um aplicativo do Windows 8.1 ou Windows Phone 8.1 ou usando o Visual Studio 2013, sua tela terá uma aparência diferente.
 
 5.  No **Gerenciador de Referências**, clique em OK.
 
@@ -70,7 +77,7 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 
 8.  Modifique a seção **&lt;body&gt;** no arquivo default.html (ou outro arquivo html apropriado para o seu projeto) para incluir o elemento div do **AdControl**. Atribua as propriedades **applicationId** e **adUnitId** no **AdControl** para testar os valores fornecidos em [Valores de modo de teste](test-mode-values.md), e ajuste a altura e a largura do controle para que ele fique com um dos [tamanhos de anúncio compatíveis com anúncios em faixa](supported-ad-sizes-for-banner-ads.md).
 
-  > **Observação**&nbsp;&nbsp;Você substituirá os valores de teste **applicationId** e **adUnitId** por valores dinâmicos antes de enviar seu aplicativo.
+  > **Observação**&nbsp;&nbsp;Você substituirá os valores de teste **applicationId** e **adUnitId** por valores dinâmicos antes de enviar seu app.
 
   > [!div class="tabbedCodeSnippets"]
   ``` html
@@ -80,16 +87,16 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
   </div>
   ```
 
-9.  Compile e execute o aplicativo para vê-lo com um anúncio.
+9.  Compile e execute o app para vê-lo com um anúncio.
 
-## <a name="release-your-app-with-live-ads-using-windows-dev-center"></a>Lançar seu aplicativo com anúncios dinâmicos usando o Centro de Desenvolvimento do Windows
+## <a name="release-your-app-with-live-ads-using-windows-dev-center"></a>Lançar seu app com anúncios dinâmicos usando o Centro de Desenvolvimento do Windows
 
 
-1.  No painel do Centro de Desenvolvimento, vá para a página **Monetização** &gt; **Monetizar com anúncios** para seu aplicativo e [crie uma unidade autônoma do Microsoft Advertising](../publish/monetize-with-ads.md). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote o ID da unidade de anúncio e o ID do aplicativo.
+1.  No painel do Centro de Desenvolvimento, vá para a página **Monetização** &gt; **Monetizar com anúncios** para seu app e [crie uma unidade autônoma do Microsoft Advertising](../publish/monetize-with-ads.md). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote o ID da unidade de anúncio e o ID do app.
 
 2.  Em seu código, substitua os valores da unidade de anúncio de teste (**applicationId** e **adUnitId**) pelos valores dinâmicos gerados no Centro de Desenvolvimento.
 
-3.  [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento.
+3.  [Envie seu app](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento.
 
 4.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento.
 
@@ -128,9 +135,4 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

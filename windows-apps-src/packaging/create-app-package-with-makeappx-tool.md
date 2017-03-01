@@ -1,22 +1,30 @@
 ---
 author: laurenhughes
-title: Criar um pacote de aplicativo com a ferramenta MakeAppx.exe
-description: A MakeAppx.exe cria, criptografa, descriptografa e extrai arquivos de pacotes e lotes de aplicativos.
+title: Criar um pacote do app com a ferramenta MakeAppx.exe
+description: A MakeAppx.exe cria, criptografa, descriptografa e extrai arquivos de pacotes e lotes de apps.
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 translationtype: Human Translation
-ms.sourcegitcommit: 28cd2b2a922a20e0b9ffc4d1ca65f6a55e92aa8f
-ms.openlocfilehash: c99c76fac9303e174b5d804c2f1b99856be25006
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 616340bcc5159dce12d3b888697ac4f60d30f175
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Criar um pacote de aplicativo com a ferramenta MakeAppx.exe
+# <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Criar um pacote do app com a ferramenta MakeAppx.exe
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-A **MakeAppx.exe** cria pacotes e lotes de aplicativos. Além disso, a **MakeAppx.exe** extrai arquivos de um pacote ou lote de aplicativo e criptografa ou descriptografa pacotes e lotes de aplicativos. Essa ferramenta está incluída no SDK do Windows 10 e pode ser usada em um prompt de comando ou um arquivo de script.
+A **MakeAppx.exe** cria pacotes e lotes de apps. Além disso, a **MakeAppx.exe** extrai arquivos de um pacote ou lote de app e criptografa ou descriptografa pacotes e lotes de apps. Essa ferramenta está incluída no SDK do Windows 10 e pode ser usada em um prompt de comando ou um arquivo de script.
 
-Se desejar usar o assistente do Microsoft Visual Studio para criar um pacote de aplicativo, ou se quiser um guia completo sobre como configurar, criar e testar o pacote de aplicativo para a Loja, consulte [Empacotando aplicativos UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
+Se desejar usar o assistente do Microsoft Visual Studio para criar um pacote de app, ou se quiser um guia completo sobre como configurar, criar e testar o pacote de app para a Loja, consulte [Empacotando apps UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-Observe que a **MakeAppx.exe** não cria um arquivo .appxupload. O arquivo .appxupload é criado como parte do processo de empacotamento do Visual Studio e contém dois outros arquivos: .appx e .appxsym. O arquivo .appxsym é um arquivo .pdb compactado que contém símbolos públicos do aplicativo usados para a [análise de falhas](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/) no Centro de Desenvolvimento do Windows. Um arquivo .appx comum também pode ser enviado, mas não haverá informações de análise de falhas ou de depuração disponíveis. Para obter mais informações sobre o envio de pacotes à Loja, consulte [Carregar pacotes de aplicativos](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages). 
+Observe que a **MakeAppx.exe** não cria um arquivo .appxupload. O arquivo .appxupload é criado como parte do processo de empacotamento do Visual Studio e contém dois outros arquivos: .appx e .appxsym. O arquivo .appxsym é um arquivo .pdb compactado que contém símbolos públicos do app usados para a [análise de falhas](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/) no Centro de Desenvolvimento do Windows. Um arquivo .appx comum também pode ser enviado, mas não haverá informações de análise de falhas ou de depuração disponíveis. Para obter mais informações sobre o envio de pacotes à Loja, consulte [Carregar pacotes de apps](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages). 
 
 Para criar manualmente um arquivo .appxupload:
 - Coloque os arquivos .appx e .appxsym em uma pasta
@@ -47,8 +55,8 @@ A tabela a seguir descreve os comandos da **MakeAppx.exe**.
 | unpack        | Extrai todos os arquivos do pacote especificado para o diretório de saída especificado. |
 | bundle        | Cria um pacote.                     |
 | unbundle      | Descompacta todos os pacotes em um subdiretório no caminho de saída especificado nomeado de acordo com o nome completo do pacote. |
-| encrypt       | Cria um pacote ou lote de aplicativo criptografado a partir do pacote/lote de entrada no pacote/lote de saída especificado. |
-| decrypt       | Cria um pacote ou lote de aplicativo descriptografado a partir do pacote/lote de aplicativo de entrada no pacote/lote de saída especificado. |
+| encrypt       | Cria um pacote ou lote de app criptografado a partir do pacote/lote de entrada no pacote/lote de saída especificado. |
+| decrypt       | Cria um pacote ou lote de app descriptografado a partir do pacote/lote de app de entrada no pacote/lote de saída especificado. |
 
 
 Esta lista de opções se aplica a todos os comandos:
@@ -62,7 +70,7 @@ Esta lista de opções se aplica a todos os comandos:
 | /no           | Impede uma substituição do arquivo de saída, se houver. Se você não especificar essa opção ou a opção /o, será perguntado ao usuário se ele deseja substituir o arquivo. |
 | /nv           | Ignora a validação semântica. Se você não especificar essa opção, a ferramenta executará uma validação completa do pacote. |
 | /o            | Substitui o arquivo de saída, se houver. Se você não especificar essa opção ou a opção /no, será perguntado ao usuário se ele deseja substituir o arquivo. |
-| /p            | Especifica o pacote ou lote de aplicativo.  |
+| /p            | Especifica o pacote ou lote de app.  |
 | /v            | Habilita a saída do log detalhado no console. |
 | /?            | Exibe o texto da Ajuda.                   |
 
@@ -79,16 +87,16 @@ A lista a seguir contém argumentos possíveis:
 | &lt;encrypted output bundle name&gt;  | O nome do lote criptografado criado. Esse é o nome do arquivo acrescentando .eappxbundle. |
 | &lt;input bundle name&gt;             | O nome do lote. Esse é o nome do arquivo acrescentando .appxbundle. |
 | &lt;encrypted input bundle name&gt;   | O nome do lote criptografado. Esse é o nome do arquivo acrescentando .eappxbundle. |
-| &lt;content directory&gt;             | Caminho do conteúdo do pacote ou lote de aplicativo. |
+| &lt;content directory&gt;             | Caminho do conteúdo do pacote ou lote de app. |
 | &lt;mapping file&gt;                  | Nome do arquivo que especifica a origem e o destino do pacote. |
 | &lt;output directory&gt;              | Caminho do diretório de pacotes e lotes de saída. |
 | &lt;key file&gt;                      | Nome do arquivo que contém uma chave de criptografia ou descriptografia. |
 | &lt;algorithm ID&gt;                  | Algoritmos usados durante a criação de um mapa de blocos. Os algoritmos válidos incluem: SHA256 (padrão), SHA384, SHA512. |
 
 
-### <a name="create-an-app-package"></a>Criar um pacote de aplicativo
+### <a name="create-an-app-package"></a>Criar um pacote de app
 
-Um pacote de aplicativo é um conjunto completo dos arquivos do aplicativo reunidos em um arquivo de pacote .appx. Para criar um pacote de aplicativo usando o comando **pack**, você deve informar um diretório de conteúdo ou um arquivo de mapeamento para o local do pacote. Você também pode criptografar um pacote ao criá-lo. Se desejar criptografar o pacote, você deverá usar /ep e especificar se está usando um arquivo de chave (/kf) ou a tecla de teste global (/kt). Para obter mais informações sobre como criar um pacote criptografado, consulte [Criptografar ou descriptografar um pacote ou um lote](#encrypt-or-decrypt-a-package-or-bundle).
+Um pacote de app é um conjunto completo dos arquivos do app reunidos em um arquivo de pacote .appx. Para criar um pacote de app usando o comando **pack**, você deve informar um diretório de conteúdo ou um arquivo de mapeamento para o local do pacote. Você também pode criptografar um pacote ao criá-lo. Se desejar criptografar o pacote, você deverá usar /ep e especificar se está usando um arquivo de chave (/kf) ou a tecla de teste global (/kt). Para obter mais informações sobre como criar um pacote criptografado, consulte [Criptografar ou descriptografar um pacote ou um lote](#encrypt-or-decrypt-a-package-or-bundle).
 
 Opções específicas ao comando **pack**:
 
@@ -96,7 +104,7 @@ Opções específicas ao comando **pack**:
 |---------------|---------------------------------------|
 | /f            | Especifica o arquivo de mapeamento.           |
 | /h            | Especifica o algoritmo de hash a ser usado ao criar o mapa de blocos. Isso pode ser usado apenas com o comando pack. Os algoritmos válidos incluem: SHA256 (padrão), SHA384, SHA512. |
-| /m            | Especifica o caminho de um manifesto de aplicativo de entrada que será usado como base para gerar o pacote de aplicativo de saída ou o manifesto do pacote de recursos.  Ao usar essa opção, você também deve usar /f e incluir uma seção [ResourceMetadata] no arquivo de mapeamento para especificar as dimensões do recurso a serem incluídas no manifesto gerado.|
+| /m            | Especifica o caminho de um manifesto de app de entrada que será usado como base para gerar o pacote de app de saída ou o manifesto do pacote de recursos.  Ao usar essa opção, você também deve usar /f e incluir uma seção [ResourceMetadata] no arquivo de mapeamento para especificar as dimensões do recurso a serem incluídas no manifesto gerado.|
 | /nc           | Impede a compactação dos arquivos do pacote. Por padrão, os arquivos são compactados com base no tipo de arquivo detectado. |
 | /r            | Cria um pacote de recursos. Isso deve ser usado com /m e implica o uso da opção /l. |  
 
@@ -123,9 +131,9 @@ MakeAppx pack /v /h SHA256 /d "C:\My Files" /ep MyPackage.eappx /kf MyKeyFile.tx
 MakeAppx pack /v /h SHA256 /d "C:\My Files" /ep MyPackage.eappx /kt
 ```
 
-### <a name="create-an-app-bundle"></a>Criar um lote de aplicativo
+### <a name="create-an-app-bundle"></a>Criar um lote de app
 
-Um lote de aplicativo é semelhante a um pacote de aplicativo, mas um lote pode reduzir o tamanho do app que os usuários baixam. Os lotes de aplicativos são úteis para ativos específicos ao idioma, ativos de escala de imagem variáveis ou recursos que se aplicam a versões específicas do Microsoft DirectX, por exemplo. Semelhante à criação de um pacote de aplicativo criptografado, também é possível criptografar o lote de aplicativo ao agrupá-lo. Para criptografar o lote de aplicativo, use a opção /ep e especifique se está usando um arquivo de chave (/kf) ou a tecla de teste global (/kt). Para obter mais informações sobre como criar um lote criptografado, consulte [Criptografar ou descriptografar um pacote ou um lote](#encrypt-or-decrypt-a-package-or-bundle).
+Um lote de app é semelhante a um pacote de app, mas um lote pode reduzir o tamanho do app que os usuários baixam. Os lotes de apps são úteis para ativos específicos ao idioma, ativos de escala de imagem variáveis ou recursos que se aplicam a versões específicas do Microsoft DirectX, por exemplo. Semelhante à criação de um pacote de app criptografado, também é possível criptografar o lote de app ao agrupá-lo. Para criptografar o lote de app, use a opção /ep e especifique se está usando um arquivo de chave (/kf) ou a tecla de teste global (/kt). Para obter mais informações sobre como criar um lote criptografado, consulte [Criptografar ou descriptografar um pacote ou um lote](#encrypt-or-decrypt-a-package-or-bundle).
 
 Opções específicas ao comando **bundle**:
 
@@ -198,7 +206,7 @@ Opções específicas aos comandos **encrypt** e **decrypt**:
 
 | **Opção**    | **Descrição**                       |
 |---------------|---------------------------------------|
-| /ep           | Especifica um pacote ou lote de aplicativo criptografado. |
+| /ep           | Especifica um pacote ou lote de app criptografado. |
 
 Os exemplos de uso a seguir mostram algumas opções de sintaxe possíveis para os comandos **encrypt** e **decrypt**:
 
@@ -245,7 +253,7 @@ Exemplo de um arquivo de mapeamento (sem a opção /m):
 "CustomManifest.xml"                    "AppxManifest.xml"
 ``` 
 
-Ao usar um arquivo de mapeamento, você poderá escolher se deseja usar a opção /m. A opção /m permite que o usuário especifique os metadados do recurso no arquivo de mapeamento a serem incluídos no manifesto gerado. Se você usar a opção /m, o arquivo de mapeamento deverá conter uma seção que inicia com a linha "[ResourceMetadata]", seguida por linhas que especificam "ResourceDimensions" e "ResourceId". É possível que um pacote de aplicativo contenha várias "ResourceDimensions", mas só pode haver uma "ResourceId".
+Ao usar um arquivo de mapeamento, você poderá escolher se deseja usar a opção /m. A opção /m permite que o usuário especifique os metadados do recurso no arquivo de mapeamento a serem incluídos no manifesto gerado. Se você usar a opção /m, o arquivo de mapeamento deverá conter uma seção que inicia com a linha "[ResourceMetadata]", seguida por linhas que especificam "ResourceDimensions" e "ResourceId". É possível que um pacote de app contenha várias "ResourceDimensions", mas só pode haver uma "ResourceId".
 
 Exemplo de um arquivo de mapeamento (com a opção /m):
 
@@ -261,16 +269,11 @@ Exemplo de um arquivo de mapeamento (com a opção /m):
 
 ## <a name="semantic-validation-performed-by-makeappxexe"></a>Validação semântica realizada por MakeAppx.exe
 
-A **MakeAppx.exe** realiza a validação semântica limitada, que é projetada para capturar os erros mais comuns de implantação e ajudar a garantir que o pacote de aplicativo seja válido. Consulte a opção /nv se desejar ignorar a validação ao usar a **MakeAppx.exe**. 
+A **MakeAppx.exe** realiza a validação semântica limitada, que é projetada para capturar os erros mais comuns de implantação e ajudar a garantir que o pacote de app seja válido. Consulte a opção /nv se desejar ignorar a validação ao usar a **MakeAppx.exe**. 
 
 Essa validação garante que:
-- Todos os arquivos referenciados no manifesto do pacote sejam incluídos no pacote de aplicativo.
+- Todos os arquivos referenciados no manifesto do pacote sejam incluídos no pacote de app.
 - Um app não tenha duas chaves idênticas.
 - Um app não seja registrado para um protocolo proibido desta lista: SMB, FILE, MS-WWA-WEB, MS-WWA. 
 
 Essa não é uma validação semântica completa, já que é projetada apenas para capturar erros comuns. Os pacotes compilados pela **MakeAppx.exe** não são garantidos como instaláveis.
-
-
-<!--HONumber=Dec16_HO1-->
-
-

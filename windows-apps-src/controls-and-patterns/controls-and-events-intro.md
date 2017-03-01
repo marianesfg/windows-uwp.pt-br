@@ -1,41 +1,48 @@
 ---
 author: Jwmsft
-Description: "Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário. Mostramos aqui como adicionar controles ao seu aplicativo."
+Description: "Crie a interface do usuário do seu app usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário. Mostramos aqui como adicionar controles ao seu app."
 title: "Introdução a controles e padrões"
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and patterns
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 8a9a9009574b46ff3ae5b05569fb871a49e2f1ea
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 93297899c341366788f1d7dfa06507c1f3003884
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introdução a controles e padrões
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-No desenvolvimento de aplicativos UWP, um *controle* é um elemento de interface do usuário que exibe conteúdo ou permite interação. Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário.
+No desenvolvimento de apps UWP, um *controle* é um elemento de interface do usuário que exibe conteúdo ou permite interação. Crie a interface do usuário do seu app usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário.
 
-Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o padrão de [painel de navegação](nav-pane.md) é uma maneira pela qual você pode usar um controle [SplitView](split-view.md) de navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um controle [Pivô](tabs-pivot.md) para implementar o padrão de guia.
+Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o padrão de [painel de navegação](nav-pane.md) é uma maneira pela qual você pode usar um controle [SplitView](split-view.md) de navegação do app. Da mesma forma, você pode personalizar o modelo de um controle [Pivô](tabs-pivot.md) para implementar o padrão de guia.
 
 Em muitos casos, você pode usar um controle da forma como ele se apresenta. No entanto, os controles XAML separam a função da estrutura e aparência para que você possa fazer vários níveis de modificação para torná-los adequados às suas necessidades. Na seção [Estilo](../style/index.md), você pode aprender a usar [estilos XAML](xaml-styles.md) e [modelos de controle](control-templates.md) para modificar um controle.
 
-Nesta seção, fornecemos diretrizes para cada um dos controles XAML que você pode usar para criar sua interface do usuário do aplicativo. Para começar, este artigo mostra como adicionar controles ao seu aplicativo. Há 3 etapas principais para usar controles em seu aplicativo: 
+Nesta seção, fornecemos diretrizes para cada um dos controles XAML que você pode usar para criar sua interface do usuário do app. Para começar, este artigo mostra como adicionar controles ao seu app. Há 3 etapas principais para usar controles em seu app: 
 
-- Adicione um controle à interface do usuário de seu aplicativo. 
+- Adicione um controle à interface do usuário de seu app. 
 - Defina as propriedades no controle, como largura, altura e cor de primeiro plano. 
 - Adicione código aos manipuladores de evento do controle para que ele faça algo. 
 
 ## <a name="add-a-control"></a>Adiciona um controle
-=Você pode adicionar um controle a um aplicativo de várias maneiras:
+=Você pode adicionar um controle a um app de várias maneiras:
  
 - Use uma ferramenta de design, como o Blend para Visual Studio ou o designer XAML (Extensible Application Markup Language) do Microsoft Visual Studio. 
 - Adicione o controle à marcação XAML no editor XAML do Visual Studio. 
-- Adicione o controle usando código. Os controles adicionados ao código ficam visíveis quando o aplicativo é executado, mas não no designer XAML do Visual Studio.
+- Adicione o controle usando código. Os controles adicionados ao código ficam visíveis quando o app é executado, mas não no designer XAML do Visual Studio.
 
-No Visual Studio, quando você adiciona e manipula controles no seu aplicativo, você pode usar muitos dos recursos do programa, incluindo a Caixa de Ferramentas, o designer XAML, o editor XAML e a janela Propriedades. 
+No Visual Studio, quando você adiciona e manipula controles no seu app, você pode usar muitos dos recursos do programa, incluindo a Caixa de Ferramentas, o designer XAML, o editor XAML e a janela Propriedades. 
 
-A Caixa de Ferramentas do Visual Studio exibe muitos dos controles que você pode usar no seu aplicativo. Para adicionar um controle ao aplicativo, clique duas vezes nele na Caixa de Ferramentas. Por exemplo, quando você clica duas vezes no controle TextBox, a linguagem XAML é adicionada ao modo de exibição XAML. 
+A Caixa de Ferramentas do Visual Studio exibe muitos dos controles que você pode usar no seu app. Para adicionar um controle ao app, clique duas vezes nele na Caixa de Ferramentas. Por exemplo, quando você clica duas vezes no controle TextBox, a linguagem XAML é adicionada ao modo de exibição XAML. 
 
 ```xaml
 <TextBox HorizontalAlignment="Left" Text="TextBox" VerticalAlignment="Top"/>
@@ -100,13 +107,13 @@ Button1.Foreground = new SolidColorBrush(Windows.UI.Colors.Beige);
 
 ## <a name="create-an-event-handler"></a>Criar um manipulador de eventos 
 
-Todos os controles possuem eventos que permitem que você responda a ações de seu usuário ou a outras mudanças em seu aplicativo. Por exemplo, um controle de Botão fornece um evento Clicar que é gerado quando um usuário clica no Botão. Crie um método, chamado manipulador de eventos, para manipular o evento. Você pode associar o evento de um controle a um método de manipulador de eventos na janela Propriedades, em XAML ou em código. Para saber mais sobre eventos, veja [Visão geral de eventos e eventos roteados](../xaml-platform/events-and-routed-events-overview.md).
+Todos os controles possuem eventos que permitem que você responda a ações de seu usuário ou a outras mudanças em seu app. Por exemplo, um controle de Botão fornece um evento Clicar que é gerado quando um usuário clica no Botão. Crie um método, chamado manipulador de eventos, para tratar o evento. Você pode associar o evento de um controle a um método de manipulador de eventos na janela Propriedades, em XAML ou em código. Para saber mais sobre eventos, veja [Visão geral de eventos e eventos roteados](../xaml-platform/events-and-routed-events-overview.md).
 
 Para criar um manipulador de eventos, selecione o controle e clique na guia Eventos, na parte superior da janela Propriedades. A janela Propriedades lista todos os eventos disponíveis para esse controle. Veja alguns dos eventos para um Botão.
 
 ![Lista de eventos do Visual Studio](images/add-controls-add-event-designer.png)
 
-Para criar um manipulador de eventos com o nome padrão, clique duas vezes na caixa de texto ao lado do nome do evento na janela Propriedades. Para criar um manipulador de eventos com um nome personalizado, digite o nome de sua escolha na caixa de texto e pressione Enter. O manipulador de eventos é criado e o arquivo code-behind é aberto no editor de código. O método de manipulador de eventos tem dois parâmetros. O primeiro é `sender`, que é uma referência ao objeto ao qual o manipulador está anexado. O parâmetro `sender` é um tipo **Object**. Geralmente, você converte `sender` em um tipo mais preciso se espera verificar ou alterar o estado no próprio objeto `sender`. Com base no design do seu próprio aplicativo, você espera um tipo que seja seguro no qual converter o `sender`, com base no local onde o manipulador foi anexado. O segundo valor são dados de evento. Esse valor geralmente aparece em assinaturas como o parâmetro `e` ou `args`.
+Para criar um manipulador de eventos com o nome padrão, clique duas vezes na caixa de texto ao lado do nome do evento na janela Propriedades. Para criar um manipulador de eventos com um nome personalizado, digite o nome de sua escolha na caixa de texto e pressione Enter. O manipulador de eventos é criado e o arquivo code-behind é aberto no editor de código. O método de manipulador de eventos tem dois parâmetros. O primeiro é `sender`, que é uma referência ao objeto ao qual o manipulador está anexado. O parâmetro `sender` é um tipo **Object**. Geralmente, você converte `sender` em um tipo mais preciso se espera verificar ou alterar o estado no próprio objeto `sender`. Com base no design do seu próprio app, você espera um tipo que seja seguro no qual converter o `sender`, com base no local onde o manipulador foi anexado. O segundo valor são dados de evento. Esse valor geralmente aparece em assinaturas como o parâmetro `e` ou `args`.
 
 Aqui está o código que manipula o evento Clicar de um Botão nomeado `Button1`. Quando você clica no botão, a propriedade Foreground do Botão em que você clicou é definida para a cor a azul. 
 
@@ -118,7 +125,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Você também pode associar um manipulador de eventos em XAML. No editor XAML, digite o nome do evento que deseja manipular. O Visual Studio mostra uma janela IntelliSense quando você começa a digitar. Depois de especificar o evento, você pode clicar duas vezes em `<New Event Handler>` na janela IntelliSense para criar um novo manipulador de eventos com o nome padrão, ou selecionar um manipulador de eventos existente na lista. 
+Você também pode associar um manipulador de eventos em XAML. No editor XAML, digite o nome do evento que deseja tratar. O Visual Studio mostra uma janela IntelliSense quando você começa a digitar. Depois de especificar o evento, você pode clicar duas vezes em `<New Event Handler>` na janela IntelliSense para criar um novo manipulador de eventos com o nome padrão, ou selecionar um manipulador de eventos existente na lista. 
 
 Aqui está a janela IntelliSense que é exibida. Ela ajuda você a criar um novo manipulador de eventos ou selecionar um manipulador de eventos existente.
 
@@ -138,14 +145,9 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
--   [Índice de controles por função](controls-by-function.md)
--   [Namespace Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
--   [Layout](../layout/index.md)
--   [Estilo](../style/index.md)
--   [Usabilidade](../usability/index.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
+-     [Índice de controles por função](controls-by-function.md)
+-     [Namespace Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+-     [Layout](../layout/index.md)
+-     [Estilo](../style/index.md)
+-     [Usabilidade](../usability/index.md)
 

@@ -1,6 +1,6 @@
 ---
-description: Saiba como usar cores, tipografia e movimentos para definir a personalidade do seu aplicativo UWP com o guia de estilo UWP do Centro de Desenvolvimento do Windows.
-keywords: guia de estilo da UWP, diretrizes de design, tipografia, movimento, som, movimento, desenvolvimento de aplicativos
+description: Saiba como usar cores, tipografia e movimentos para definir a personalidade do seu app UWP com o guia de estilo UWP do Centro de Desenvolvimento do Windows.
+keywords: guia de estilo da UWP, diretrizes de design, tipografia, movimento, som, movimento, desenvolvimento de apps
 title: "Guia de estilo da UWP – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
 label: Style
@@ -10,9 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
+ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 488eac85e7ab724dd3dbc6d5972cd330d972134b
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: dcd97e72520b4e814c665dc72b36c895cd8fe2b2
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="uwp-style-guide"></a>Guia de estilo da UWP
@@ -22,7 +24,7 @@ ms.openlocfilehash: 488eac85e7ab724dd3dbc6d5972cd330d972134b
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  <p>Diretrizes de design e exemplos de código que ensinam como definir a personalidade de seu aplicativo UWP por meio de cores, tipografia e movimento.</p>
+  <p>Diretrizes de design e exemplos de código que ensinam como definir a personalidade de seu app UWP por meio de cores, tipografia e movimento.</p>
   </div>
   <div class="side-by-side-content-right">
     ![Diretrizes de cores, ícone, movimento, som e tipografia](images/style-header-v2.png)
@@ -35,7 +37,7 @@ ms.openlocfilehash: 488eac85e7ab724dd3dbc6d5972cd330d972134b
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
    <p><b>[Cor](color.md)</b><br/>
-As cores tornam a orientação intuitiva por meio de vários níveis de informações de um aplicativo e são uma ferramenta essencial para reforçar o modelo de interação.</p>
+As cores tornam a orientação intuitiva por meio de vários níveis de informações de um app e são uma ferramenta essencial para reforçar o modelo de interação.</p>
   </div>
   <div class="side-by-side-content-right">
    <p><b>[Ícones](icons.md)</b><br/>
@@ -48,11 +50,11 @@ As cores tornam a orientação intuitiva por meio de vários níveis de informa�
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
    <p><b>[Movimento](motion.md)</b><br/>
-Animações significativas e bem desenvolvidas dão vida aos aplicativos e tornam a experiência avançada e refinada. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais.</p>
+Animações significativas e bem desenvolvidas dão vida aos apps e tornam a experiência avançada e refinada. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais.</p>
   </div>
   <div class="side-by-side-content-right">
    <p><b>[Som](sound.md)</b><br/>
-O som ajuda a completar a experiência do usuário do aplicativo e dá a eles aquele toque extra de áudio para combinar com a personalidade do Windows em todas as plataformas.</p>
+O som ajuda a completar a experiência do usuário do app e dá a eles aquele toque extra de áudio para combinar com a personalidade do Windows em todas as plataformas.</p>
   </div>
 </div>
 </div>
@@ -73,14 +75,9 @@ Como a representação visual da linguagem, a tarefa principal da tipografia é 
   
   <div class="side-by-side-content-right">
    <p><b>[Aplicando estilos a controles](../controls-and-patterns/styling-controls.md)</b><br/>
-É possível personalizar a aparência de seus aplicativos de muitas formas usando a estrutura XAML. Os estilos permitem definir propriedades de controle e reutilizar essas configurações para criar uma aparência consistente em vários controles.</p>
+É possível personalizar a aparência de seus apps de muitas formas usando a estrutura XAML. Os estilos permitem definir propriedades de controle e reutilizar essas configurações para criar uma aparência consistente em vários controles.</p>
   </div>
 </div>
 </div>
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

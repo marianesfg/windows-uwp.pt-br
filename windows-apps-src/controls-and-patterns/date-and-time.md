@@ -5,16 +5,23 @@ title: Diretrizes para os controles de data e hora
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
 label: Calendar, date, and time controls
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: bb881fb0120401047c77a2d1e64a1e1555a9ced0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 127bf79ebe17e6156a95d4aae168e42b7ff53aa1
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="calendar-date-and-time-controls"></a>Controles de calendário, data e hora
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Os controles de data e hora oferecem formas padrão e localizadas para permitir que um usuário exiba e defina valores de data e hora em seu aplicativo. Este artigo fornece diretrizes de design e ajuda você a escolher o controle correto.
+Os controles de data e hora oferecem formas padrão e localizadas para permitir que um usuário visualize e defina valores de data e hora em seu aplicativo. Este artigo fornece diretrizes de design e ajuda você a escolher o controle correto.
 
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
@@ -120,9 +127,4 @@ O .NET também dá suporte a um tipo chamado [**DateTime**](https://msdn.microso
 - [**Classe CalendarDatePicker**](https://msdn.microsoft.com/library/windows/apps/dn950083)
 - [**Classe DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584)
 - [**Classe TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

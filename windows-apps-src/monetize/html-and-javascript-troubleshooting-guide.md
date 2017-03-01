@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: "Leia sobre soluções para problemas comuns de desenvolvimento com as bibliotecas do Microsoft Advertising em aplicativos JavaScript/HTML."
 title: "Guia de solução de problemas em HTML e JavaScript"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anúncios, publicidade, AdControl, solução de problemas, HTML, javascript"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: 4bb959174ec158e7852cd447d9cd164ec2cd5bff
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fe06749583dc42ec84dc4acd876ea96c70c916db
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -342,7 +349,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 1.  Verifique se a propriedade [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) do **AdControl** está definida como false. Por padrão, essa propriedade opcional é definida como **true**. Quando definida como **false**, o método **Refresh** deve ser usado para recuperar outro anúncio.
 
-2.  Verifique as chamadas ao método [Refresh](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx). Quando se usa a atualização automática (**IsAutoRefreshEnabled** definido como **true**), não é possível usar **Refresh** para recuperar outro anúncio. Quando se usar a atualização manual (**IsAutoRefreshEnabled** definido como **false**), **Refresh** só deverá ser chamado depois de um intervalo mínimo de 30 a 60 segundos dependendo da conexão de dados atual do dispositivo.
+2.  Verifique as chamadas para o método [Refresh](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx). Ao usar a atualização automática (**IsAutoRefreshEnabled** definido como **true**), não é possível usar **Refresh** para recuperar outro anúncio. Quando se usar a atualização manual (**IsAutoRefreshEnabled** definido como **false**), **Refresh** só deverá ser chamado depois de um intervalo mínimo de 30 a 60 segundos dependendo da conexão de dados atual do dispositivo.
 
     Este exemplo demonstra como criar o **div** para o **AdControl**.
 
@@ -380,9 +387,4 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

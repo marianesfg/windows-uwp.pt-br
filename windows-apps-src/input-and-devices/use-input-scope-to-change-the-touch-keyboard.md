@@ -14,8 +14,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
-ms.openlocfilehash: caaa6228f2d5b2bb6566ccb285d90a396a1caf01
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 43cbc8999d21d0534c4b6e557822345a69f66007
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -262,9 +263,4 @@ Inclui a tecla **=**.
 |------------------------------------------------------------|------------------------------------------------------------------|
 | ![Teclado virtual padrão do Windows](images/input-scopes/kbdpcdefault.png)<br>Layout igual a **Padrão**.| ![Teclado virtual do Windows Phone para nome ou número de telefone](images/input-scopes/kbdwpnameorphonenumber.png)<br>Inclui as teclas **;** e **@**. A tecla **&amp;123** é substituída pela tecla **123**, que abre o teclado do telefone (consulte **TelephoneNumber**).|
 |Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre habilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> | Disponibilidade de recursos:<ul><li>Verificação ortográfica: desativada por padrão, pode ser habilitada</li><li>Correção automática: desativada por padrão, pode ser habilitada</li><li>Capitalização automática: desativada por padrão, pode ser habilitada. A primeira letra de cada palavra é capitalizada.</li><li>Previsão de texto: desativada por padrão, pode ser habilitada</li></ul> |
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

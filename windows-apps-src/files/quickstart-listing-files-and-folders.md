@@ -3,29 +3,36 @@ author: laurenhughes
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar e consultar arquivos e pastas
 description: "Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: def5e4e75f4208eb91f129160807728e57322064
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Enumerar e consultar arquivos e pastas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Acesse arquivos e pastas que estão em uma pasta, biblioteca, dispositivo ou local de rede. Você também pode consultar arquivos e pastas em um local por meio de consultas de arquivo e pasta.
 
-Para obter orientações detalhadas sobre como armazenar dados de seu aplicativo da Plataforma Universal do Windows, consulte a classe [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx).
+Para obter orientações detalhadas sobre como armazenar dados de seu app da Plataforma Universal do Windows, consulte a classe [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx).
 
 **Observação**  Consulte também a [Amostra de enumeração de pastas](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
  
 ## <a name="prerequisites"></a>Pré-requisitos
 
--   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
+-   **Entender a programação assíncrona para apps da Plataforma Universal do Windows (UWP)**
 
-    Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
+    Você pode aprender a escrever apps assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever apps assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
 -   **Acessar permissões ao local**
 
@@ -323,9 +330,4 @@ July ‎2015 (2)
    MyImage1.png
    MyImage2.png
 ```
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

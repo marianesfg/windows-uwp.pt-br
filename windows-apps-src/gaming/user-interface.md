@@ -3,27 +3,34 @@ author: mtoepke
 title: Modelos de projeto de jogo DirectX
 description: Saiba mais sobre os modelos para criar um jogo da Plataforma Universal do Windows (UWP) e DirectX.
 ms.assetid: 41b6cd76-5c9a-e2b7-ef6f-bfbf6ef7331d
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, directx, modelos
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1e91814825a0944f9a70fdc7bbc6e8ef78215f29
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b25dcd0de8d82e8bf8b6bf651ac6c264ade48c9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Modelos de projeto de jogo DirectX
+# <a name="directx-game-project-templates"></a>Modelos de projeto de jogo DirectX
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Os modelos DirectX e UWP (Plataforma Universal do Windows) permitem criar rapidamente um projeto como ponto de partida para seu jogo.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Para criar o projeto, você precisa:
 
 -   [Baixar o Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions). O Visual Studio 2015 possui ferramentas de programação gráfica, como ferramentas de depuração. Para uma visão geral dos recursos e das ferramentas de elementos gráficos e jogos em DirectX, veja [Ferramentas do Visual Studio para desenvolvimento de jogos em DirectX](set-up-visual-studio-for-game-development.md).
 
-## Escolhendo um modelo
+## <a name="choosing-a-template"></a>Escolhendo um modelo
 
 
 O Visual Studio 2015 inclui três modelos DirectX e UWP:
@@ -34,7 +41,7 @@ O Visual Studio 2015 inclui três modelos DirectX e UWP:
 
 O modelo escolhido depende do desempenho e das tecnologias que você deseja usar.
 
-## Estrutura do modelo
+## <a name="template-structure"></a>Estrutura do modelo
 
 
 Os modelos DirectX universais do Windows contêm os seguintes arquivos:
@@ -60,7 +67,7 @@ Os modelos DirectX universais do Windows contêm os seguintes arquivos:
     -   d3dx12.h – contém a biblioteca de utilitários D3DX12. Esse arquivo aparece apenas no aplicativo DirectX 12 (Universal Windows).
 -   Ativos – imagens de logotipo e splashscreen usadas pelo aplicativo.
 
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 
 Agora que você tem um ponto de partida, adicione essas informações para criar seus próprios conhecimentos e habilidades de desenvolvimento de jogos da Windows Store.
@@ -86,10 +93,5 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

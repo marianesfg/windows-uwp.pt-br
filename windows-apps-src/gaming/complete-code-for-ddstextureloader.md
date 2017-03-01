@@ -1,20 +1,27 @@
 ---
 author: mtoepke
 title: "Concluir código para DDSTextureLoader"
-description: "Conclua código para a classe e o método que carrega uma textura DDS da memória."
+description: "Conclua o código para a classe e o método que carrega uma textura DDS da memória."
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, ddstextureloader
 translationtype: Human Translation
-ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: edcddb162d58b5f05248c7cd94b6079207e4a318
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7daf10ad577b2b67c6ca5554f6555deb89f16229
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Concluir código para DDSTextureLoader
+# <a name="complete-code-for-ddstextureloader"></a>Concluir código para DDSTextureLoader
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Conclua código para a classe e o método que carrega uma textura DDS da memória.
+Conclua o código para a classe e o método que carrega uma textura DDS da memória.
 
 Este tópico contém estas seções:
 
@@ -23,27 +30,27 @@ Este tópico contém estas seções:
 -   [Exibir o código (C++)](#view-the-code-c)
 
 
-## Local de download
+## <a name="download-location"></a>Local de download
 
 
 Este exemplo não está disponível para download.
 
-## Tecnologias
+## <a name="technologies"></a>Tecnologias
 
 **Linguagens de programação** - C++    
 **Modelos de programação** -Windows Runtime
 
-## Requisitos
+## <a name="requirements"></a>Requisitos
 
 **Cliente mínimo com suporte** - Windows 10                               
 **Servidor mínimo com suporte** - Windows Server 2016 Technical Preview
 
 
 
-## Exibir o código (C++)
+## <a name="view-the-code-c"></a>Exibir o código (C++)
 
 
-## DDSTextureLoader.h
+## <a name="ddstextureloaderh"></a>DDSTextureLoader.h
 
 
 ```cpp
@@ -76,7 +83,7 @@ void CreateDDSTextureFromMemory(
     );
 ```
 
-## DDSTextureLoader.cpp
+## <a name="ddstextureloadercpp"></a>DDSTextureLoader.cpp
 
 
 ```cpp
@@ -1222,10 +1229,5 @@ void CreateDDSTextureFromMemory(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

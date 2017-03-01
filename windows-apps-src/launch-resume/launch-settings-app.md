@@ -1,17 +1,24 @@
 ---
 author: TylerMSFT
 title: "Iniciar o app Configurações do Windows"
-description: "Saiba como iniciar o aplicativo Configurações do Windows a partir de seu aplicativo. Este tópico descreve o esquema de URI ms-settings. Use esse esquema de URI para iniciar o app Configurações do Windows para páginas de configurações específicas."
+description: "Saiba como iniciar o app Configurações do Windows a partir de seu app. Este tópico descreve o esquema de URI ms-settings. Use esse esquema de URI para iniciar o app Configurações do Windows para páginas de configurações específicas."
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 1135feec72510e6cbe955161ac169158a71097b9
-ms.openlocfilehash: f762d7eb70a0e9119f32350a815691109f994c75
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e4cc17bf268ddb470c3c64dfe3e471053d8fca55
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="launch-the-windows-settings-app"></a>Iniciar o app Configurações do Windows
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs importantes**
 
@@ -19,13 +26,13 @@ ms.openlocfilehash: f762d7eb70a0e9119f32350a815691109f994c75
 -   [**PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482)
 -   [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)
 
-Saiba como iniciar o aplicativo Configurações do Windows a partir de seu aplicativo. Este tópico descreve o esquema de URI **ms-settings:**. Use esse esquema de URI para iniciar o app Configurações do Windows para páginas de configurações específicas.
+Saiba como iniciar o app Configurações do Windows a partir de seu app. Este tópico descreve o esquema de URI **ms-settings:**. Use esse esquema de URI para iniciar o app Configurações do Windows para páginas de configurações específicas.
 
-A inicialização do aplicativo Configurações é uma parte importante da escrita de um aplicativo com detecção de privacidade. Se seu aplicativo não pode acessar um recurso confidencial, é recomendável fornecer ao usuário um link conveniente para as configurações de privacidade desse recurso. Para obter mais informações, consulte [Diretrizes para aplicativos com detecção de privacidade](https://msdn.microsoft.com/library/windows/apps/hh768223).
+A inicialização do app Configurações é uma parte importante da escrita de um app com detecção de privacidade. Se seu app não pode acessar um recurso confidencial, é recomendável fornecer ao usuário um link conveniente para as configurações de privacidade desse recurso. Para obter mais informações, consulte [Diretrizes para apps com detecção de privacidade](https://msdn.microsoft.com/library/windows/apps/hh768223).
 
-## <a name="how-to-launch-the-settings-app"></a>Como iniciar o aplicativo Configurações
+## <a name="how-to-launch-the-settings-app"></a>Como iniciar o app Configurações
 
-Para iniciar o aplicativo **Configurações**, use o esquema de URI `ms-settings:`, como mostrado nos exemplos a seguir.
+Para iniciar o app **Configurações**, use o esquema de URI `ms-settings:`, como mostrado nos exemplos a seguir.
 
 Neste exemplo, um controle de hiperlink XAML é usado para iniciar a página de configurações de privacidade do microfone usando o URI `ms-settings:privacy-microphone`.
 
@@ -41,7 +48,7 @@ Neste exemplo, um controle de hiperlink XAML é usado para iniciar a página de 
 </TextBlock>
 ```
 
-Como alternativa, seu aplicativo pode chamar o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar o aplicativo **Configurações** do código. Este exemplo mostra como iniciar a página de configurações de privacidade da câmera usando o URI `ms-settings:privacy-webcam`.
+Como alternativa, seu app pode chamar o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar o app **Configurações** do código. Este exemplo mostra como iniciar a página de configurações de privacidade da câmera usando o URI `ms-settings:privacy-webcam`.
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-webcam"));
@@ -51,11 +58,11 @@ O código acima inicia a página de configurações de privacidade da câmera:
 
 ![configurações de privacidade da câmera.](images/privacyawarenesssettingsapp.png)
 
-Para obter mais informações como URIs de inicialização, consulte [Iniciar o aplicativo padrão para um URI](launch-default-app.md).
+Para obter mais informações como URIs de inicialização, consulte [Iniciar o app padrão de um URI](launch-default-app.md).
 
 ## <a name="ms-settings-uri-scheme-reference"></a>Referência de esquema de URI ms-settings:
 
-Use os seguintes URIs para abrir várias páginas do aplicativo Configurações. A coluna SKUs compatíveis indica se a página de configurações existe no Windows 10 para edições desktop (Home, Pro, Enterprise e Education), no Windows 10 Mobile ou em ambos.
+Use os seguintes URIs para abrir várias páginas do app Configurações. A coluna SKUs compatíveis indica se a página de configurações existe no Windows 10 para edições desktop (Home, Pro, Enterprise e Education), no Windows 10 Mobile ou em ambos.
 
 <table border="1">
     <tr>
@@ -217,7 +224,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
         <td>ms-settings:workplace</td>
     </tr>
     <tr>
-        <td>Contas de email e aplicativo</td>
+        <td>Contas de email e app</td>
         <td>Ambos</td>
         <td>ms-settings:emailandaccounts</td>
     </tr>
@@ -376,9 +383,4 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
         <td>ms-settings:developers</td>
     </tr>
 </table><br/>
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

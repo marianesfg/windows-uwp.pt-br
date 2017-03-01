@@ -1,20 +1,28 @@
 ---
 author: PatrickFarley
 title: Iniciar um app com um URI
-description: "Esta seção descreve como usar um URI (Uniform Resource Identifier) para iniciar um app a partir de outro app."
+description: "Esta seção descreve como usar um URI (Uniform Resource Identifier) para iniciar um app a partir de outro."
+ms.assetid: a40c4ce2-4f41-4a55-aeb3-1beb3e84e839
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: dfbfe75d19c08e549263b97350dfca1dbfb96447
-ms.openlocfilehash: e4b070db5180538732e08b10ace1aaa196ae5eaa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6dceda60b60b29f772ec4fab8b142b45cc387e75
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="launch-an-app-with-a-uri"></a>Iniciar um app com um URI
 
-Esta seção descreve como usar um URI (Uniform Resource Identifier) para iniciar um app a partir de outro app, habilitando cenários úteis entre apps.
+Esta seção descreve como usar um URI (Uniform Resource Identifier) para iniciar um app a partir de outro, habilitando cenários úteis entre apps.
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Iniciar o app padrão para um URI](launch-default-app.md) | Saiba como iniciar o app padrão para um URI (Uniform Resource Identifier). Os URIs permitem iniciar outro aplicativo para realizar uma tarefa específica. Este tópico também apresenta uma visão geral dos muitos esquemas de URI compilados no Windows. |
+| [Iniciar o app padrão de um URI](launch-default-app.md) | Saiba como iniciar o app padrão para um URI (Uniform Resource Identifier). Os URIs permitem iniciar outro app para realizar uma tarefa específica. Este tópico também apresenta uma visão geral dos muitos esquemas de URI compilados no Windows. |
 | [Tratar a ativação do URI](handle-uri-activation.md) | Saiba como registrar um app para ser o manipulador padrão de um nome de esquema de URI (Uniform Resource Identifier). |
 | [Iniciar um app para obter resultados](how-to-launch-an-app-for-results.md) | Saiba como iniciar um app a partir de outro app e trocar dados entre os dois. Isso é chamado de "iniciar" um app para obter resultados. |
 | [Escolher e salvar tons usando o esquema de URI ms-tonepicker](launch-ringtone-picker.md) | Este tópico descreve o esquema de URI ms-tonepicker e como usá-lo para exibir um seletor de tom para selecionar e salvar um tom e obter o nome amigável para ele. |
@@ -26,8 +34,3 @@ Esta seção descreve como usar um URI (Uniform Resource Identifier) para inicia
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Iniciar um app em um dispositivo remoto](launch-a-remote-app.md)
-
-
-<!--HONumber=Dec16_HO1-->
-
-

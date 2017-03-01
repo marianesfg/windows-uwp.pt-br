@@ -3,9 +3,16 @@ author: mcleblanc
 description: "A prática de definição da interface do usuário na forma de marcação XAML declarativa é convertida extremamente bem dos aplicativos Windows Phone Silverlight para aplicativos UWP (Plataforma Universal do Windows)."
 title: "Fazendo a portabilidade de XAML e da interface do usuário do Windows Phone Silverlight para a UWP"
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 3aa68943724c008e18df63d8b0ae20f448146303
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1ec72aec1e94ff92ef30fcc206456c7614107c98
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -238,7 +245,7 @@ A maneira mais simples de portar isso para um aplicativo UWP é usar um [**Bitma
     <BitmapIcon UriSource="Assets/winrt_check.png" Width="21" Height="21"/>
 ```
 
-Aqui, winrt\_check.png é uma máscara alfa na forma de um bitmap, assim como wpsl\_check.png, e pode muito bem ser o mesmo arquivo. No entanto, você pode querer fornecer vários tamanhos diferentes de winrt\_check.png a ser usado para diferentes fatores de dimensionamento. Para saber mais sobre isso e para obter uma explicação sobre as alterações nos valores **Largura** e **Altura**, veja [Pixels de exibição/efetivos, distância de exibição e fatores de escala](#view-effective-pixels-viewing-distance-and-scale-factors) neste tópico.
+Aqui, winrt\_check.png é uma máscara alfa na forma de um bitmap, assim como wpsl\_check.png, e pode muito bem ser o mesmo arquivo. No entanto, você pode querer fornecer vários tamanhos diferentes de winrt\_check.png a ser usado para diferentes fatores de dimensionamento. Para saber mais sobre isso e para obter uma explicação sobre as alterações nos valores **Largura** e **Altura**, veja [Pixels de exibição ou efetivos, distância de exibição e fatores de escala](#view-or-effective-pixels-viewing-distance-and-scale-factors) neste tópico.
 
 Uma abordagem mais geral, que é apropriada caso haja diferenças entre o formulário de temas claro e escuro de um bitmap, é usar dois ativos de imagem - um com um primeiro plano escuro (para tema claro) e um com um primeiro plano claro (para tema escuro). Para obter mais detalhes sobre como nomear esse conjunto de ativos de bitmap, consulte [Como nomear recursos usando qualificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324). Depois que um conjunto de arquivos de imagem for nomeado corretamente, você poderá se referir a eles no resumo usando o nome raiz deles, desta forma:
 
@@ -355,7 +362,7 @@ O código que exibe uma notificação do sistema com a classe **Microsoft.Phone.
 
 Consulte [Trabalhando com blocos, selos e notificações do sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259).
 
-## <a name="vieweffective-pixels-viewing-distance-and-scale-factors"></a>Pixels de exibição/efetivos, distância de exibição e fatores de escala
+## <a name="view-or-effective-pixels-viewing-distance-and-scale-factors"></a>Pixels de exibição ou efetivos, distância de exibição e fatores de escala
 
 Aplicativos Windows Phone Silverlight e aplicativos do Windows 10 são diferentes na forma como abstraem o tamanho e o layout de elementos da interface do usuário do tamanho físico e da resolução reais de dispositivos. Um aplicativo Windows Phone Silverlight usa pixels de exibição para fazer isso. Com o Windows 10, o conceito de pixels de exibição foi refinado para o conceito de pixels efetivos. Aqui está uma explicação sobre esse termo, seu significado, e o valor extra que ele oferece.
 
@@ -391,10 +398,5 @@ O próximo tópico é [Portabilidade para E/S, dispositivo e modelo de aplicativ
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Mapeamentos de namespace e de classe](wpsl-to-uwp-namespace-and-class-mappings.md)
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

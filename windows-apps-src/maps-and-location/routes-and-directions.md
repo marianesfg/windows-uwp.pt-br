@@ -3,13 +3,20 @@ author: msatranjr
 title: Exibir rotas e trajetos em um mapa
 description: Solicite rotas e trajeto e os exiba no aplicativo.
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, rota, mapa, localização, direções"
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: eb3596236e7de29473635b26f48f0c7e4fa1d49f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11519df0c6655d663b31759e9064337a706bbc53
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Exibir rotas e trajetos em um mapa
+# <a name="display-routes-and-directions-on-a-map"></a>Exibir rotas e trajetos em um mapa
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -25,7 +32,7 @@ Solicite rotas e trajeto e os exiba no aplicativo.
 
  
 
-## Uma introdução aos resultados de MapRouteFinder
+## <a name="an-intro-to-maproutefinder-results"></a>Uma introdução aos resultados de MapRouteFinder
 
 
 Aqui está como as classes de rotas e sentidos estão relacionadas:
@@ -36,7 +43,7 @@ Aqui está como as classes de rotas e sentidos estão relacionadas:
 -   [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) contém uma coleção de objetos [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955). Acesse essa coleção por meio da propriedade [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) do **MapRoute**.
 -   Cada [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) contém uma coleção de objetos [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961). Acesse essa coleção por meio da propriedade [**Maneuvers**](https://msdn.microsoft.com/library/windows/apps/dn636959) do **MapRouteLeg**.
 
-## Exibir trajetos
+## <a name="display-directions"></a>Exibir trajetos
 
 
 Obtenha rotas e trajetos ao dirigir ou caminhar chamando os métodos da classe [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938), por exemplo, [**GetDrivingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636943) ou [**GetWalkingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636953). O objeto [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) contém um objeto [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) que você pode acessar por meio da propriedade [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940).
@@ -126,7 +133,7 @@ Turn right onto James St.
 You have reached your destination.
 ```
 
-## Exibir rotas
+## <a name="display-routes"></a>Exibir rotas
 
 
 Para exibir um [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) em um [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), construa um [**MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122) com o **MapRoute**. Em seguida, adicione o **MapRouteView** à coleção [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047) do **MapControl**.
@@ -184,17 +191,11 @@ Esse exemplo exibe o seguinte em um [**MapControl**](https://msdn.microsoft.com/
 
 ![controle de mapa com rota exibida.](images/routeonmap.png)
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Exemplo do aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

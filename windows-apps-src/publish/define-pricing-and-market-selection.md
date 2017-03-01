@@ -3,13 +3,20 @@ author: jnHs
 Description: "A Windows Store abrange clientes em mais de 200 países e regiões em todo o mundo."
 title: "Definir preço e seleção de mercado"
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
-ms.openlocfilehash: 3fb8594748d303216a4437983604b5d78c993934
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: acf14f886f36d74941769954041325514a386e86
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Definir preço e seleção de mercado
+# <a name="define-pricing-and-market-selection"></a>Definir preço e seleção de mercado
 
 
 A Windows Store abrange clientes em mais de 200 países e regiões em todo o mundo. Você pode escolher os mercados em que gostaria de oferecer seu aplicativo, e pode determinar o preço para cobrar os clientes, com a opção de personalizar preços por mercado.
@@ -18,12 +25,12 @@ A Windows Store abrange clientes em mais de 200 países e regiões em todo o mun
 
  
 
-## Preço base
+## <a name="base-price"></a>Preço base
 
 
 Quando você seleciona o **Preço base** do seu aplicativo, esse preço será usado em todos os mercados em que o aplicativo é vendido, a menos que você especifique um preço personalizado para um mercado específico.
 
-Você pode definir o **Preço base** como **Grátis**, ou pode escolher uma faixa de preço disponíveis. o que define o preço de venda em todos os países/regiões em que você decidir distribuir seu aplicativo. As faixas de preço começam em 0,99 USD, com incrementos adicionais (1,29 USD, 1,49 USD, 1,99 USD, e assim por diante). Esses incrementos aumentam conforme o preço fica mais alto.
+Você pode definir o **Preço base** como **Grátis**, ou pode escolher uma faixa de preço disponíveis. o que define o preço de venda em todos os países/regiões em que você decidir distribuir seu aplicativo. Faixas de preço começam em USD 0,99, com níveis adicionais disponíveis em incrementos crescentes (USD 1,10, USD 1,29 e assim por diante). Esses incrementos geralmente aumentam conforme o preço fica mais alto.
 
 > **Observação**  Essas faixas de preço também se aplicam aos [complementos](add-on-submissions.md).
 
@@ -31,7 +38,7 @@ Cada faixa de preço tem um valor correspondente em cada uma das mais de 60 moed
 
 Lembre-se de que a faixa de preço que você seleciona pode incluir impostos sobre vendas ou valor agregado que os seus clientes devem pagar. Para saber mais sobre as implicações fiscais do seu aplicativo nos mercados selecionados, consulte [Detalhes fiscais para aplicativos pagos](tax-details-for-paid-apps.md). Consulte também as [considerações de preço para mercados específicos](#price-considerations-for-specific-markets) abaixo.
 
-## Mercados e preços personalizados
+## <a name="markets-and-custom-prices"></a>Mercados e preços personalizados
 
 
 Por padrão, seu aplicativo será listado em todos os mercados possíveis, incluindo quaisquer mercados futuros que poderemos adicionar mais tarde, com o preço base.
@@ -50,7 +57,7 @@ Tenha em mente que mesmo se você selecionar todos os mercados, leis locais e re
 
  
 
-## Mercados de consumidor da Windows Store
+## <a name="windows-store-consumer-markets"></a>Mercados de consumidor da Windows Store
 
 
 Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos mercados a seguir.
@@ -298,7 +305,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
 -   Zâmbia
 -   Zimbábue
 
-## Considerações sobre preço para mercados específicos
+## <a name="price-considerations-for-specific-markets"></a>Considerações sobre preço para mercados específicos
 
 
 Métodos de pagamento como cartões-presente e cobrança da operadora móvel podem ajudar a aumentar as vendas de aplicativos pagos e itens comprados nos aplicativos. Devido aos custos mais altos para habilitar tais métodos de pagamento, um Ajuste de Expansão do Comércio é acrescido à Taxa da Loja deduzida dos Recebimentos Líquidos para calcular a Receita do Aplicativo devidas para aplicativos pagos e transações de compra no aplicativo nos países/regiões e utilizando os métodos de pagamento nas tabelas abaixo. Você pode considerar se o Ajuste de Expansão do Comércio se aplica a um país/região onde seu aplicativo está disponível e fatorá-lo em sua estratégia de preço de mercado. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio, consulte o [Contrato do Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058).
@@ -375,7 +382,7 @@ O Ajuste de Expansão do Comércio será aplicado a todas as transações proces
 
  
 
-## Mercados "Resto do mundo" para Windows 8.x
+## <a name="rest-of-world-markets-for-windows-8x"></a>Mercados "Resto do mundo" para Windows 8.x
 
 
 Se o seu aplicativo inclui pacotes para o Windows 8.x, é importante estar ciente de que uma série de mercados é tratada como um único mercado "Resto do mundo" para os clientes que usam a Loja no Windows 8.x, mesmo que eles agora sejam mostrados como mercados individuais no painel do Centro de Desenvolvimento do Windows (em vez do Painel da Windows Store anterior, onde havia uma opção de mercado "Resto do mundo" selecionável).
@@ -552,9 +559,4 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
 -   Zimbábue
 
 > **Observação**  Para uma lista de países e regiões em que você pode registrar uma conta de desenvolvedor, consulte [Tipos de conta, locais e tarifas](https://msdn.microsoft.com/library/windows/apps/jj863494).
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

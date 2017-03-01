@@ -5,9 +5,16 @@ title: "Colocar cadeias de caracteres da interface do usuário em recursos"
 ms.assetid: E420B9BB-C0F6-4EC0-BA3A-BA2875B69722
 label: Put UI strings into resources
 template: detail.hbs
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: dff1e6df480a1ffc0e2441c78b942ccd0ee2126c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7f10efbf452510e783a646f4c868b65f49e00c15
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -25,7 +32,7 @@ Coloque recursos de cadeia de caracteres da interface do usuário em arquivos de
 </div>
 
 
-Este tópico mostra as etapas para adicionar vários recursos de cadeia de caracteres de idiomas ao seu aplicativo Universal do Windows e como testá-lo rapidamente.
+Este tópico mostra as etapas para adicionar vários recursos de cadeia de caracteres de idiomas ao seu aplicativo universal do Windows e como testá-lo rapidamente.
 
 ## <a name="put-strings-into-resource-files-instead-of-putting-them-directly-in-code-or-markup"></a>Coloque as cadeias de caracteres em arquivos de recurso em vez de colocá-las diretamente no código ou na marcação.
 
@@ -33,7 +40,7 @@ Este tópico mostra as etapas para adicionar vários recursos de cadeia de carac
 1.  Abra sua solução (ou crie uma nova) no Visual Studio.
 
 2.  Abra package.appxmanifest no Visual Studio, vá até a guia **Aplicativo** e (para este exemplo) defina o idioma Padrão como "en-US". Se houver vários arquivos package.appxmanifest em sua solução, faça isso para cada um deles.
-    <br>**Observação**  Isso especifica o idioma padrão do projeto. Os recursos de idioma padrão serão usados se o idioma de preferência do usuário ou os idiomas de exibição não corresponderem aos recursos de idioma fornecidos no aplicativo.
+    <br>**Observação**  Isso especifica o idioma padrão do projeto. Os recursos de idioma padrão serão usados se o idioma de preferência do usuário ou os idiomas de exibição não corresponderem aos recursos de idioma fornecidos no app.
 3.  Crie uma pasta para conter os arquivos de recursos.
     1.  No Gerenciador de Soluções, clique com o botão direito no projeto (o projeto Compartilhado se sua solução contiver vários projetos) e selecione **Adicionar** &gt; **Nova Pasta**.
     2.  Dê o nome "Cadeias de caracteres" à nova pasta.
@@ -44,7 +51,7 @@ Este tópico mostra as etapas para adicionar vários recursos de cadeia de carac
     2.  Clique com o botão direito do mouse na pasta en-US e selecione **Adicionar** &gt; **Novo Item…**.
     3.  Selecione "Arquivo de recursos (.resw)".
 
-    4.  Clique em **Adicionar**. Isso adiciona um arquivo de recursos com o nome padrão "Resources.resw". Recomendamos que você use esse nome de arquivo padrão. Os aplicativos podem particionar seus recursos em outros arquivos, mas você deve ter cuidado de fazer a referência a eles corretamente (veja [Como carregar recursos de cadeias de caracteres](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)).
+    4.  Clique em **Adicionar**. Isso adiciona um arquivo de recursos com o nome padrão "Resources.resw". Recomendamos que você use esse nome de arquivo padrão. Os apps podem particionar seus recursos em outros arquivos, mas você deve ter cuidado de fazer a referência a eles corretamente (veja [Como carregar recursos de cadeias de caracteres](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)).
     5.  Se você tiver arquivos .resx apenas com recursos de sequência de caracteres de projetos .NET, selecione **Adicionar** &gt; **Item existente…**, adicione o arquivo .resx e renomeie-o para .resw.
     6.  Abra o arquivo e use o editor para adicionar estes recursos:
 
@@ -99,23 +106,23 @@ auto str = loader->GetString("Farewell");
 
     strings/fr-FR/Resources.resw ![adicionar recursos, francês](images/addresource-fr-fr.png)
 
-## <a name="build-and-run-the-app"></a>Compile e execute o aplicativo.
+## <a name="build-and-run-the-app"></a>Compile e execute o app.
 
 
-Teste o aplicativo no idioma de exibição padrão.
+Teste o app no idioma de exibição padrão.
 
-1.  Pressione F5 para compilar e executar o aplicativo.
+1.  Pressione F5 para compilar e executar o app.
 2.  Os itens greeting e farewell são exibidos no idioma de preferência do usuário.
-3.  Saia do aplicativo.
+3.  Saia do app.
 
-Teste o aplicativo nos outros idiomas.
+Teste o app nos outros idiomas.
 
 1.  Ative as **Configurações** em seu dispositivo.
 2.  Selecione **Hora e Idioma**.
 3.  Selecione **Região e Idioma** (ou em um telefone ou emulador de telefone, **Idioma**).
-4.  Observe que o idioma exibido quando você executa o aplicativo corresponde ao primeiro da lista (inglês, alemão ou francês). Se o seu idioma principal não for nenhum desses três, o aplicativo utilizará o próximo da lista de opções compatíveis.
+4.  Observe que o idioma exibido quando você executa o app corresponde ao primeiro da lista (inglês, alemão ou francês). Se o seu idioma principal não for nenhum desses três, o app utilizará o próximo da lista de opções compatíveis.
 5.  Caso nenhum desses três idiomas estejam presentes em seu computador, adicione os que estiverem faltando. Para isto, clique em **Adicionar um idioma** e adicione-os à lista.
-6.  Para testar o aplicativo em outro idioma, selecione o idioma na lista e clique em **Definir como padrão** (ou em um telefone ou emulador de telefone, toque e segure o idioma na lista e, em seguida, toque em **Mover para cima** até que ele esteja na parte superior). Em seguida, execute o aplicativo.
+6.  Para testar o app em outro idioma, selecione o idioma na lista e clique em **Definir como padrão** (ou em um telefone ou emulador de telefone, toque e segure o idioma na lista e, em seguida, toque em **Mover para cima** até que ele esteja na parte superior). Em seguida, execute o app.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -128,10 +135,5 @@ Teste o aplicativo nos outros idiomas.
  
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

@@ -6,9 +6,16 @@ ms.assetid: BF42E810-CDC8-47D2-9C30-BAA19DCBE2DA
 label: Screen sizes and break points
 template: detail.hbs
 op-migration-status: ready
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 7189987209e894d81b2574aff576c64fb5f7a97a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7c992aa651069f6876aa920da88ada659480132e
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -100,9 +107,4 @@ Esta tabela descreve as classes de tamanho diferentes e fornece recomendações 
 
 Com o [**Continuum para Telefones**](http://go.microsoft.com/fwlink/p/?LinkID=699431), uma nova experiência para dispositivos móveis compatíveis com o Windows 10, os usuários podem conectar seus telefones a um mouse e um teclado para fazê-los funcionar como laptops. Mantenha essa nova funcionalidade em mente ao criar designs para pontos de interrupção específicos - um telefone móvel não permanecerá sempre na classe de tamanho pequeno.
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

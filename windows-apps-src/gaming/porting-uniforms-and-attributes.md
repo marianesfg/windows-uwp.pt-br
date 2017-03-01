@@ -1,18 +1,25 @@
 ---
 author: mtoepke
-title: "Comparação de buffers, uniformes e atributos de vértice do OpenGL ES 2.0 com os do Direct3D"
-description: "Durante o processo de portabilidade do OpenGL ES 2.0 para Direct3D 11, você deve alterar a sintaxe e o comportamento da API para passar dados entre o aplicativo e os programas de sombreador."
+title: "Comparar buffers, uniformes e atributos de vértice do OpenGL ES 2.0 com os do Direct3D"
+description: "Durante o processo de compatibilização para o Direct3D 11 a partir do OpenGL ES 2.0, você deve mudar a sintaxe e o comportamento de API para passar dados entre o app e os programas sombreadores."
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, opengl, direct3d, buffers, uniformes, atributos de vértice"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d3a1c0d3a37f24bdf4dfec1118aa206dfd6b9ac1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 43b568b046246931e24ded5f40f56d3f24d1b05a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Comparação de buffers, uniformes e atributos de vértice do OpenGL ES 2.0 com os do Direct3D
+# <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Comparar buffers, uniformes e atributos de vértice do OpenGL ES 2.0 com os do Direct3D
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -21,7 +28,7 @@ ms.openlocfilehash: d3a1c0d3a37f24bdf4dfec1118aa206dfd6b9ac1
 -   [**ID3D11Device1::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512)
 -   [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)
 
-Durante o processo de compatibilização para o Direct3D 11 a partir do OpenGL ES 2.0, você deve mudar a sintaxe e o comportamento de API para passar dados entre o aplicativo e os programas sombreadores.
+Durante o processo de compatibilização para o Direct3D 11 a partir do OpenGL ES 2.0, você deve mudar a sintaxe e o comportamento de API para passar dados entre o app e os programas sombreadores.
 
 No OpenGL ES 2.0, os dados são passados de e para programas de sombreador de três maneiras: como uniformes para dados constantes; como atributos para dados de vértice; como objetos de para outros dados de recursos (como texturas). No Direct3D 11, eles correspondem, em linhas gerais, a buffers constantes, buffers de vértice e sub-recursos. Apesar da aparente semelhança, o uso é bastante diferente.
 
@@ -37,7 +44,7 @@ Este é o mapeamento básico:
 
  
 
-## Compatibilizar buffers
+## <a name="port-buffers"></a>Compatibilizar buffers
 
 
 No OpenGL ES 2.0, o processo de criação e associação de qualquer tipo de buffer costuma seguir este padrão
@@ -119,12 +126,12 @@ m_d3dDevice->CreateRenderTargetView(
   &m_d3dRenderTargetViewWin);
 ```
 
-## Alterar uniformes e objetos de buffer de uniformes para buffers constantes Direct3D
+## <a name="change-uniforms-and-uniform-buffer-objects-to-direct3d-constant-buffers"></a>Alterar uniformes e objetos de buffer de uniformes para buffers constantes Direct3D
 
 
 No Open GL ES 2.0, os uniformes constituem o mecanismo que fornece dados constantes a programas de sombreador individuais. Esses dados não podem ser alterados pelos sombreadores.
 
-Definir um uniforme costuma envolver o fornecimento de um dos métodos glUniform\* com a localização de carregamento na GPU junto com um ponteiro para os dados na memória de aplicativo. Depois que o método ithe glUniform\* é executado, os dados de uniforme ficam na memória da GPU acessíveis aos sombreadores que declararam tal uniforme. Você deve garantir o empacotamento dos dados de modo que o sombreador possa interpretá-los com base na declaração do uniforme no sombreador (usando tipos compatíveis).
+Definir um uniforme costuma envolver o fornecimento de um dos métodos glUniform\* com a localização de carregamento na GPU junto com um ponteiro para os dados na memória de app. Depois que o método ithe glUniform\* é executado, os dados de uniforme ficam na memória da GPU acessíveis aos sombreadores que declararam tal uniforme. Você deve garantir o empacotamento dos dados de modo que o sombreador possa interpretá-los com base na declaração do uniforme no sombreador (usando tipos compatíveis).
 
 OpenGL ES 2.0: criando um uniforme e carregando dados nele
 
@@ -184,7 +191,7 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 
 Lembre-se de que deve haver a declaração de um Registro para cada buffer constante. Níveis diferentes de recursos Direct3D têm um número máximo de Registros disponíveis distinto. Por isso, não exceda o número do nível de recursos mais baixo usado.
 
-## Fazer a portabilidade de atributos de vértice para layouts de uma entrada Direct3D e semântica HLSL
+## <a name="port-vertex-attributes-to-a-direct3d-input-layouts-and-hlsl-semantics"></a>Fazer a portabilidade de atributos de vértice para layouts de uma entrada Direct3D e semântica HLSL
 
 
 Como os dados de vértice podem ser modificados pelo pipeline de sombreador, o OpenGL ES 2.0 requer a especificação deles como "atributos" em vez de "uniformes" (Isso mudou em versões mais recentes do OpenGL e GLSL.) Dados específicos de vértice, como a posição do vértice, normais, tangentes e valores de cor, são fornecidos aos sombreadores como valores de atributo. Esses valores correspondem a deslocamentos específicos para cada elemento nos dados de vértice; por exemplo, o primeiro atributo pode apontar para o componente de posição de um vértice individual, o segundo para a normal, e assim por diante.
@@ -298,10 +305,5 @@ struct VertexShaderInput
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

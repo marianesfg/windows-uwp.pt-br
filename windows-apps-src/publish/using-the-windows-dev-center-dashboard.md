@@ -3,13 +3,20 @@ author: jnHs
 Description: "O painel do Centro de Desenvolvimento do Windows permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um único local."
 title: Usando o painel do Centro de Desenvolvimento do Windows
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
-ms.openlocfilehash: 2ccec6e85666ef328f4aa0baa8ba6a705986a4c4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a4dfc6003c681bb0379f25d94bb144940467d15e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Usando o painel do Centro de Desenvolvimento do Windows
+# <a name="using-the-windows-dev-center-dashboard"></a>Usando o painel do Centro de Desenvolvimento do Windows
 
 
 O painel do Centro de Desenvolvimento do Windows permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um único local.
@@ -22,7 +29,7 @@ Os complementos (produtos no aplicativo) são gerenciados independentemente do e
 
 O painel do Centro de Desenvolvimento também oferece recursos para [serviços de gerenciamento e configuração de aplicativos](app-management-and-services.md), [revisão de dados analíticos](analytics.md), [relatório de pagamento](payout-summary.md), [promoção e compromisso do cliente](app-promotion-and-customer-engagement.md), [teste beta](beta-testing-and-targeted-distribution.md), [distribuição de aplicativos LOB a empresas](distribute-lob-apps-to-enterprises.md) e muito mais.
 
-## Dicas para usar o painel unificado
+## <a name="tips-for-using-the-unified-dashboard"></a>Dicas para usar o painel unificado
 
 Se você anteriormente publicou aplicativos para Windows 8.1, Windows Phone 8.1 e versões anteriores de sistemas operacionais, verifique [Como seu aplicativo aparece na Loja para clientes do Windows 10](how-your-app-appears-in-the-store-for-windows-10-customers.md) para saber mais sobre algumas das mudanças nos detalhes do aplicativo para clientes do Windows 10, além de como categorizar informações do seu aplicativo no novo painel.
 
@@ -34,10 +41,5 @@ Os aplicativos que foram vinculados para compartilhar a identidade no Centro de 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

@@ -3,22 +3,29 @@ author: TylerMSFT
 ms.assetid: 95CF7F3D-9E3A-40AC-A083-D8A375272181
 title: "Práticas recomendadas para usar o pool de threads"
 description: "Este tópico descreve práticas recomendadas para trabalhar com o pool de threads."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, thread, pool de threads
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 796625fe5c1892ac99195a4920dbc7e539aebf76
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d3b45da6a11bab926812682c209207bbbb436bf1
+ms.lasthandoff: 02/07/2017
 
 ---
-# Práticas recomendadas para usar o pool de threads
+# <a name="best-practices-for-using-the-thread-pool"></a>Práticas recomendadas para usar o pool de threads
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tópico descreve práticas recomendadas para trabalhar com o pool de threads.
 
-## Fazer
+## <a name="dos"></a>Fazer
 
 
--   Use o pool de threads para realizar trabalho em paralelo em seu aplicativo.
+-   Use o pool de threads para realizar trabalho em paralelo em seu app.
 
 -   Use os itens de trabalho para realizar tarefas estendidas sem bloquear o thread de interface do usuário.
 
@@ -34,7 +41,7 @@ Este tópico descreve práticas recomendadas para trabalhar com o pool de thread
 
 -   Use itens de trabalho pré-alocados quando não puder tolerar uma falha de alocação de recursos em tempo de uso.
 
-## Não faça
+## <a name="donts"></a>Não faça
 
 
 -   Não crie temporizadores periódicos com um valor de *período* de &lt;1 milissegundo (incluindo 0). Isso fará com que o item de trabalho se comporte como um temporizador de disparo único.
@@ -47,16 +54,10 @@ Este tópico descreve práticas recomendadas para trabalhar com o pool de thread
 
 -   Não tente executar um item de trabalho pré-alocado mais de uma vez sem reiniciá-lo. [Criar um item de trabalho periódico](create-a-periodic-work-item.md)
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Criar um item de trabalho periódico](create-a-periodic-work-item.md)
 * [Enviar um item de trabalho ao pool de threads](submit-a-work-item-to-the-thread-pool.md)
 * [Usar um temporizador para enviar um item de trabalho](use-a-timer-to-submit-a-work-item.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 
